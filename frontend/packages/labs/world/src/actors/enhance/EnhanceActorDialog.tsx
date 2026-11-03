@@ -74,7 +74,7 @@ export const EnhanceActorDialog = ({
       // actor enhancement writes into that actor, a game's into its Main
       // Screen.
       description={`Tick what it should be able to do. This writes into ${
-        target.kind === 'world' ? 'the Main Screen' : "the actor's own file"
+        target.kind === 'game' ? 'the Main Screen' : "the actor's own file"
       }, and you can open it afterwards and change anything you like.`}
       onClose={onCancel}
       closeLabel="Close"

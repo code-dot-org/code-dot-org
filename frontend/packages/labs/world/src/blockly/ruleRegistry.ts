@@ -192,9 +192,9 @@ const ruleByBlockType = new Map<string, string>();
  *
  * IT TAKES THE REF RATHER THAN A NAME, because there is one way to get this
  * wrong and taking a string made it available to every caller. An OWN member —
- * one an `.actor` or a `.world` declares for itself — carries a `ruleName` too,
- * and it is the ACTOR's name, kept so the palette can label the drawer it goes
- * in. Registered as a rule, it is a rule the project will never have: the
+ * one an `.actor` or a `.screen` declares for itself — carries a `ruleName`
+ * too, and it is the ACTOR's name, kept so the palette can label the drawer it
+ * goes in. Registered as a rule, it is a rule the project will never have: the
  * warning below then fires on every own event and never stops, saying the
  * project no longer has "Text Input".
  *

@@ -217,7 +217,7 @@ export const BlocklyFileEditor = ({
   // can be given.
   const {getActorInfo, hasCompiled} = useWorldRuntime();
 
-  // Populate the project-derived dropdowns (actors/worlds/animations) BEFORE the
+  // Populate the project-derived dropdowns (actors/animations) BEFORE the
   // workspace deserializes below: a dropdown drops a serialized value that isn't
   // among its options, so the registry must be current first. This runs during
   // render, ahead of the workspace's load effect. (WorldRuntimeContext also
@@ -362,7 +362,7 @@ export const BlocklyFileEditor = ({
    * the React tree — so they are pushed into a registry the field reads
    * (`blockly/actorThumbnails`), the same way the project dropdowns are fed.
    *
-   * Once per world file, after the first compile: the manifest build is cached,
+   * Once per file, after the first compile: the manifest build is cached,
    * and an actor dropdown with names instead of pictures is usable but not
    * much fun.
    */
@@ -448,7 +448,7 @@ export const BlocklyFileEditor = ({
   const ownActorProperties = useMemo(() => projectOwnMetas(files), [files]);
 
   // What kind of file this is, where that decides what may be placed in it — a
-  // world event's hat needs a `world` at module scope and only a `.world` has
+  // world event's hat needs a `world` at module scope and only a `.screen` has
   // one, and a definition root decides what the file COMPILES to (`eventHats`,
   // `ROOT_HOMES`). Read through the same `fileKindOf` the generator routes on,
   // so the palette and the compiler cannot disagree about what a file is.
@@ -1112,9 +1112,7 @@ export const BlocklyFileEditor = ({
   useEffect(() => {
     if (workspaceRef.current) {
       setEditingActor(workspaceRef.current, ownActorModule);
-      // …and which FILE it is at all, which is what an act on the file needs:
-      // a world's own `define actor` can be enhanced, and the patch lands in
-      // the world (`extensions/enhanceButton`).
+      // …and which FILE it is at all (`editingRule.setEditingFile`).
       setEditingFile(
         workspaceRef.current,
         filePath(currentSources.source, fileId)?.replace(/\.[^./]+$/, ''),

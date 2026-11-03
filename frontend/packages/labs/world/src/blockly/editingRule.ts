@@ -56,9 +56,8 @@ export function editingActorModule(
  *
  * The two tags above answer questions about a file's own subject — which rule
  * may not use itself, which actor `this actor` means. This one answers "where
- * am I", which is what an act on the file needs: the wand on `define actor`
- * enhances an actor a WORLD defines, and to write anything at all it has to
- * know which world (`blockly/extensions/enhanceButton`).
+ * am I": which map's layers a block may name (`layers`), and which file's own
+ * properties a hat may be about (`eventSubject`).
  */
 export function setEditingFile(
   workspace: Blockly.Workspace,

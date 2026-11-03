@@ -128,7 +128,7 @@ export const actorInputExtension: Extension = defineExtension(
  *
  * `set look offset of ⟨…⟩` belongs to a camera, so the answer to "whose?" is
  * `this camera` and never `this actor`. Seeded with the wrong one it read as a
- * sentence about an actor in a world file, where there is none.
+ * sentence about an actor in a screen's code, where there is none.
  *
  * Chosen from the member's SCOPE, which is a fact about where it was declared
  * (`MemberScope`) and so is known when the block is defined.

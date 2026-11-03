@@ -16,7 +16,7 @@ import {stockActorById} from '../../stock';
 import {collectsEnhancement} from '../collects';
 import {boardPath, scoreboardEnhancement} from '../scoreboard';
 
-const GAME = {kind: 'world' as const, path: 'screens/main', name: 'My Game'};
+const GAME = {kind: 'game' as const, path: 'screens/main', name: 'My Game'};
 const PLAYER = {
   kind: 'actor' as const,
   path: 'actors/player',
@@ -93,7 +93,9 @@ describe('the scoreboard enhancement, as edits', () => {
     expect(scoreboardEnhancement.applied(once, GAME)).toBe(true);
 
     const twice = scoreboardEnhancement.apply(once, GAME);
-    expect(at(twice, 'worlds/main.world')).toBe(at(once, 'worlds/main.world'));
+    expect(at(twice, 'screens/main.screen')).toBe(
+      at(once, 'screens/main.screen'),
+    );
     expect(at(twice, `${boardPath}.actor`)).toBe(
       at(once, `${boardPath}.actor`),
     );

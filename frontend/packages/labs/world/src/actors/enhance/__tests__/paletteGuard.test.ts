@@ -14,10 +14,9 @@
 // rather than the source, because a row imports the rules whose blocks it then
 // writes.
 //
-// Two targets, because there are two kinds of address (specs/ENHANCEMENTS.md):
-// an actor with a file of its own, and one a world defines for itself. The
-// body of a patch is the same either way and the hat's subject is not, so
-// both are walked.
+// Two kinds of target (specs/ENHANCEMENTS.md): an actor, and the game on its
+// Main Screen. The body of a patch is the same either way and the hat's
+// subject is not, so both are walked.
 //
 // What this cannot see is a block that exists but has changed shape — a
 // socket renamed under a type still holding the old name. That fails quietly
@@ -223,14 +222,10 @@ describe('the enhancement shelf', () => {
 
   describe('on the Main Screen', () => {
     const base = withActors('coin', 'player', 'ground');
-    const WORLD = {
-      kind: 'world' as const,
-      path: 'screens/main',
-      name: 'Main',
-    };
+    const GAME = {kind: 'game' as const, path: 'screens/main', name: 'Main'};
 
     it('names only blocks that exist', () => {
-      const {missing, wroteNothing, skipped} = checkShelf(base, WORLD);
+      const {missing, wroteNothing, skipped} = checkShelf(base, GAME);
       expect(missing).toEqual([]);
       expect(wroteNothing).toEqual([]);
       expect(skipped).toEqual([]);
@@ -244,7 +239,7 @@ describe('the enhancement shelf', () => {
       ENHANCEMENTS.filter(one => one.subject === 'actor').length,
     ).toBeGreaterThan(20);
     expect(
-      ENHANCEMENTS.filter(one => one.subject === 'world').length,
+      ENHANCEMENTS.filter(one => one.subject === 'game').length,
     ).toBeGreaterThan(1);
   });
 });

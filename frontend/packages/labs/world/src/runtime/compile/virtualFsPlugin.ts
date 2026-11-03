@@ -3,7 +3,7 @@
 //
 // `world-lab` and `phaser` are marked external — the preview supplies them.
 // Everything else resolves against the in-memory file map, honoring relative
-// (`./x`, `../x`) and project-root-relative (`worlds/x`) specifiers, with
+// (`./x`, `../x`) and project-root-relative (`screens/x`) specifiers, with
 // extension inference, and loads `.ts` / `.js` / `.json` (and `.png` as a data
 // URL so the engine can hand it to Phaser's loader without a network fetch).
 
@@ -52,7 +52,7 @@ function resolveInProject(
     const dir = importer.includes('/') ? importer.replace(/\/[^/]+$/, '') : '';
     base = normalize(`${dir}/${spec}`);
   } else {
-    base = normalize(spec); // project-root-relative, e.g. worlds/platform
+    base = normalize(spec); // project-root-relative, e.g. screens/main
   }
   for (const ext of EXT_ORDER) {
     const candidate = `${base}${ext}`;

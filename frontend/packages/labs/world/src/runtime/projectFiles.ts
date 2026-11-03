@@ -23,7 +23,7 @@ function folderPath(source: MultiFileSource, folderId: string): string {
   return segments.length ? `${segments.join('/')}/` : '';
 }
 
-/** Project as `path -> source text`, e.g. `worlds/main.world` -> "…". */
+/** Project as `path -> source text`, e.g. `screens/main.screen` -> "…". */
 /**
  * One file's folder-prefixed path (`rules/gravity.rule`), or undefined if the
  * id is unknown. The same path {@link projectFiles} keys by, for a caller that

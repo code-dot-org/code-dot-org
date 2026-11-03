@@ -38,7 +38,7 @@ import {SUBJECT_FIELD, subjectPropertyOf} from './eventSubject';
 import {NAME_FIELD, NAMED} from './extensions/addActorName';
 import {addOnChange, isStructuralChange} from './extensions/onChange';
 import {DEFINE_TWEEN, PLAY_TWEEN_HERE} from './tweens';
-import {definesWorld} from './workspaceRoots';
+import {holdsGameCode} from './workspaceRoots';
 
 /** How big the picture is drawn on a block, square. */
 const PICTURE = 20;
@@ -119,7 +119,7 @@ const subjectOf = (hat: Surroundings): ActorAbout | undefined =>
 
 /** Whether the code is the game's own, where a kind's hat binds `this actor`. */
 const inGameCode = (block: Surroundings): boolean =>
-  Boolean(block.workspace && definesWorld(block.workspace as never));
+  Boolean(block.workspace && holdsGameCode(block.workspace as never));
 
 /**
  * The kind of actor a block is about, or nothing when nothing says.

@@ -2,7 +2,7 @@
 // (specs/LAZY_WORKSPACE_PLAN.md, "Jumping to a section").
 //
 // A section is named by how its header reads: `when this actor starts
-// falling`, `define world named Platform World with 11 rules`. Read off the
+// falling`, `define actor named Coin`. Read off the
 // built block, since what a header says is its fields and what sits in its
 // sockets — a dropdown's shown text, not its stored value — and only the
 // renderer's own field objects know that.

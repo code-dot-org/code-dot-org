@@ -59,7 +59,7 @@ const fileOf = (kind: FileKind): Blockly.Workspace => {
   return workspace;
 };
 
-/** The world's own hat, which an actor file is not offered. */
+/** A world event's hat, which an actor file is not offered. */
 const WORLD_HAT = 'world_on_Input_IsPressedEvent';
 /** An actor's hat, offered to both. */
 const ACTOR_HAT = 'world_on_Input_PressesEvent';
@@ -75,9 +75,9 @@ describe('typesOffered', () => {
 });
 
 describe('a definition with a home elsewhere', () => {
-  it('is an orphan in a world, saying where it belongs', () => {
-    const world = fileOf('world');
-    const actor = world.newBlock('world_actor');
+  it('is an orphan in a screen, saying where it belongs', () => {
+    const screen = fileOf('screen');
+    const actor = screen.newBlock('world_actor');
 
     expect(misplacementOf(actor)).toMatch(/belongs in an actor file/);
     review(actor);
@@ -95,17 +95,17 @@ describe('a definition with a home elsewhere', () => {
   });
 
   it('takes its rows down with it, and back up', () => {
-    const world = fileOf('world');
-    const actor = world.newBlock('world_actor');
-    const row = world.newBlock('world_set_sprite');
+    const screen = fileOf('screen');
+    const actor = screen.newBlock('world_actor');
+    const row = screen.newBlock('world_set_sprite');
     actor.nextConnection!.connect(row.previousConnection!);
 
     review(actor);
     expect(row.hasDisabledReason(MISPLACED)).toBe(true);
 
-    // Moved to where it may be: a world file told it is an actor file is the
+    // Moved to where it may be: a screen told it is an actor file is the
     // cheapest way to say so without a second workspace.
-    setFileContext(world, {kind: 'actor', offered: holds('actor')});
+    setFileContext(screen, {kind: 'actor', offered: holds('actor')});
     expect(actor.hasDisabledReason(MISPLACED)).toBe(false);
     expect(row.hasDisabledReason(MISPLACED)).toBe(false);
   });
@@ -114,7 +114,7 @@ describe('a definition with a home elsewhere', () => {
 describe('what a file may hold, against what its toolbox shows', () => {
   // A lesson's shelf leaves out what the learner has not been given. Checked
   // against THAT toolbox, a file's own rows read as blocks it cannot hold, and
-  // were disabled — a world that once compiled to `export default world` and
+  // were disabled — a game that once compiled to `export default world` and
   // nothing else. So the check is made against the whole palette for the kind
   // of file (`BlocklyFileEditor`, `holdable`), and the shelf is only advice.
   it('keeps a row the shelf has not got to', () => {
@@ -144,7 +144,7 @@ describe('a root no drawer here offers', () => {
   });
 
   it('is left to the orphan plugin when it is a row, not a root', () => {
-    const file = fileOf('world');
+    const file = fileOf('screen');
     const row = file.newBlock('world_trait_step');
 
     expect(misplacementOf(row)).toBeUndefined();
@@ -159,18 +159,18 @@ describe('whose event a handler is, by file', () => {
     return hat;
   };
 
-  it('is an orphan in a world until it names a kind', () => {
-    const world = fileOf('world');
-    const hat = hatAbout(world, '');
+  it('is an orphan in a screen until it names a kind', () => {
+    const screen = fileOf('screen');
+    const hat = hatAbout(screen, '');
 
     expect(misplacementOf(hat)).toMatch(/pick one/);
     review(hat);
     expect(hat.hasDisabledReason(MISPLACED)).toBe(true);
   });
 
-  it('is fine about a kind, which is what a world’s handler is', () => {
+  it('is fine about a kind, which is what a screen’s handler is', () => {
     expect(
-      misplacementOf(hatAbout(fileOf('world'), 'actors/coin')),
+      misplacementOf(hatAbout(fileOf('screen'), 'actors/coin')),
     ).toBeUndefined();
   });
 
@@ -179,7 +179,7 @@ describe('whose event a handler is, by file', () => {
   });
 
   it('is an orphan in an actor file when it names a kind', () => {
-    // Pasted from a world: the actor's own handler is about this actor.
+    // Pasted from a screen: the actor's own handler is about this actor.
     expect(misplacementOf(hatAbout(fileOf('actor'), 'actors/coin'))).toMatch(
       /this actor/,
     );
@@ -192,9 +192,9 @@ describe('whose event a handler is, by file', () => {
       name: 'current player',
     } as Parameters<typeof registerSubjectProperty>[1]);
 
-    it('is fine in a world, which holds the property', () => {
+    it('is fine in a screen, which holds the property', () => {
       expect(
-        misplacementOf(hatAbout(fileOf('world'), PROPERTY)),
+        misplacementOf(hatAbout(fileOf('screen'), PROPERTY)),
       ).toBeUndefined();
     });
 
@@ -238,24 +238,24 @@ describe('whose event a handler is, by file', () => {
 });
 
 describe('the change handler', () => {
-  let world: Blockly.Workspace;
+  let screen: Blockly.Workspace;
   beforeEach(() => {
-    world = fileOf('world');
+    screen = fileOf('screen');
   });
 
   it('reviews the root a created block belongs to', () => {
-    const actor = world.newBlock('world_actor');
+    const actor = screen.newBlock('world_actor');
     onMisplacedChange({
       type: Blockly.Events.BLOCK_CREATE,
       blockId: actor.id,
-      workspaceId: world.id,
+      workspaceId: screen.id,
     } as unknown as Blockly.Events.Abstract);
 
     expect(actor.hasDisabledReason(MISPLACED)).toBe(true);
   });
 
   it('asks again when the subject changes, which is how one gets fixed', () => {
-    const hat = world.newBlock(ACTOR_HAT);
+    const hat = screen.newBlock(ACTOR_HAT);
     hat.setFieldValue('', SUBJECT_FIELD);
     review(hat);
     expect(hat.hasDisabledReason(MISPLACED)).toBe(true);
@@ -264,7 +264,7 @@ describe('the change handler', () => {
     onMisplacedChange({
       type: Blockly.Events.BLOCK_CHANGE,
       blockId: hat.id,
-      workspaceId: world.id,
+      workspaceId: screen.id,
     } as unknown as Blockly.Events.Abstract);
 
     expect(hat.hasDisabledReason(MISPLACED)).toBe(false);

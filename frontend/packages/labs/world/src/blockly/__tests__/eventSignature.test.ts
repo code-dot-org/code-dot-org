@@ -228,7 +228,7 @@ describe('raising an event that carries a choice', () => {
 
 describe('where a world event\u2019s hat may be placed', () => {
   // It generates `world.on(…)` at the top of the module it sits in, and only a
-  // `.world` binds `world` there — it is the builder. An `.actor` module is
+  // `.screen` binds `world` there — it is the builder. An `.actor` module is
   // `const actor = …` and nothing else, so the same hat is a ReferenceError as
   // soon as the file is imported: the whole project stops running, over one
   // block dragged out of a category that offered it.
@@ -236,7 +236,7 @@ describe('where a world event\u2019s hat may be placed', () => {
   /** The blocks a rule's own toolbox category lists, for a given file kind. */
   const offered = (
     meta: ReturnType<typeof ruleWithEvent>,
-    fileKind?: 'actor' | 'world' | 'rule',
+    fileKind?: 'actor' | 'screen' | 'rule',
   ): string[] => {
     const {toolbox} = paletteFor([meta], {fileKind});
     const category = (toolbox as Array<{name: string; blocks?: string[]}>).find(
@@ -248,7 +248,7 @@ describe('where a world event\u2019s hat may be placed', () => {
   /** Every block the palette DEFINES, offered or not. */
   const defined = (
     meta: ReturnType<typeof ruleWithEvent>,
-    fileKind?: 'actor' | 'world' | 'rule',
+    fileKind?: 'actor' | 'screen' | 'rule',
   ): string[] => paletteFor([meta], {fileKind}).blocks.map(block => block.type);
 
   it('is not an actor file, for an event the rule declares', () => {
@@ -256,7 +256,7 @@ describe('where a world event\u2019s hat may be placed', () => {
     const meta = ruleWithEvent(PRESSED, KEY_VAR);
     const hat = 'world_on_Keys_IsPressedEvent';
 
-    expect(offered(meta, 'world')).toContain(hat);
+    expect(offered(meta, 'screen')).toContain(hat);
     expect(offered(meta, 'actor')).not.toContain(hat);
   });
 
@@ -297,7 +297,7 @@ describe('an actor event\u2019s hat, in the same rule', () => {
   const input = parseRuleMeta('rules/input', inputRule)!;
 
   const offered = (
-    fileKind?: 'actor' | 'world' | 'rule',
+    fileKind?: 'actor' | 'screen' | 'rule',
     ownRuleModule?: string,
   ) => {
     const {toolbox} = paletteFor([input], {fileKind, ownRuleModule});
@@ -316,11 +316,11 @@ describe('an actor event\u2019s hat, in the same rule', () => {
     expect(inActor).not.toContain('world_on_Input_IsReleasedEvent');
   });
 
-  it('and a world file gets both', () => {
-    const inWorld = offered('world');
+  it('and a screen gets both', () => {
+    const inScreen = offered('screen');
 
-    expect(inWorld).toContain('world_on_Input_PressesEvent');
-    expect(inWorld).toContain('world_on_Input_IsPressedEvent');
+    expect(inScreen).toContain('world_on_Input_PressesEvent');
+    expect(inScreen).toContain('world_on_Input_IsPressedEvent');
   });
 
   it('and a rule file gets neither, but keeps the blocks that RAISE them', () => {

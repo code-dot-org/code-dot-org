@@ -67,10 +67,10 @@ describe('what App Builder names', () => {
     );
   });
 
-  it('hides blocks the world’s or a map’s toolbox actually lists', () => {
+  it('hides blocks a screen’s or a map’s toolbox actually lists', () => {
     // A layer is a map's, so the blocks naming one are in a map's palette.
     const listed = new Set(
-      (['world', 'map'] as const).flatMap(fileKind =>
+      (['screen', 'map'] as const).flatMap(fileKind =>
         (
           buildDomainPalette([], {fileKind}).toolbox as Array<{
             blocks?: unknown[];

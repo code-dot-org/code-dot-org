@@ -5,8 +5,8 @@
 // `actor` is the live `Actor` the event fired for. The two objects share a name
 // and only part of a surface, so a block whose method lives on only one of them
 // generates fine and then throws "actor.useTraits is not a function" when the
-// game runs. `world` has the same split — `WorldBuilder` under `define world`,
-// the live `World` in a handler or a rule step.
+// game runs. `world` has the same split — `WorldBuilder` under `when this
+// screen loads`, the live `World` in a handler or a rule step.
 //
 // Only blocks whose method is genuinely one-sided need a guard, and the surface
 // they share keeps growing:

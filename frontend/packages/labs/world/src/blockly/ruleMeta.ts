@@ -3,7 +3,7 @@
 // queries and events, and how to reference each in generated code. Built-in
 // rules derive it from their live `Rule` objects ({@link builtinRuleMeta});
 // project `.rule` files parse it from their workspace JSON (a later step, the
-// same way `.actor`/`.world` files are read). So the block generator and the
+// same way `.actor` files are read). So the block generator and the
 // trait dropdown can be driven by BOTH sources without importing the engine's
 // rule objects directly — the seam that lets rules live in the project.
 

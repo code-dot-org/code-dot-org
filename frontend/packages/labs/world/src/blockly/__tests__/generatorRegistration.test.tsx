@@ -69,7 +69,7 @@ describe('generating while an actor file is open', () => {
     // answers differently is a type whose definition depends on which file
     // happens to be open.
     const shapes = new Map<string, string>();
-    for (const fileKind of ['actor', 'rule', 'world'] as const) {
+    for (const fileKind of ['actor', 'rule', 'screen'] as const) {
       for (const block of buildDomainPalette([], {fileKind}).blocks) {
         const shape = JSON.stringify([
           Boolean((block as {previousStatement?: unknown}).previousStatement),

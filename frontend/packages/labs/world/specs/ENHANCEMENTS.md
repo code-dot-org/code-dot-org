@@ -31,9 +31,9 @@ test:
 An enhancement has a SUBJECT: the thing whose files it edits, and so the thing
 it is asked for from. "Health and a bar above it" is an ACTOR's — the trait,
 the property and both handlers land in that actor, and the bar it places is a
-companion the actor makes for itself. "A camera that follows an actor" is a
-WORLD's: it defines a camera in the world and looks through it, and the actor
-appears in it as a value.
+companion the actor makes for itself. "A camera that follows an actor" is the
+GAME's: it aims the camera of the Viewport the Main Screen shows its level
+through, and the actor appears in it as a value.
 
 Reading the camera as an actor enhancement was wrong in the way that matters,
 and it took building it to see. It was offered from the actor's own wand — "the
@@ -131,9 +131,10 @@ lesson.
 It is the nearer of the two routes: a learner looking at an actor's blocks and
 wanting it to have health is already pointing at the actor.
 
-**And on `define world`**, which is the same button on the other kind of
-subject. A world enhancement is asked for from the world, for the same reason
-an actor's is asked for from the actor.
+**And on the Main Screen's inspector**, with nothing selected, which is the
+same button on the other kind of subject (`mapEditor/MapEditor`). A game
+enhancement is asked for from the game, for the same reason an actor's is
+asked for from the actor.
 
 It is not built on a read-only workspace, and that is where it parts company
 with the open button and the mortarboard beside it: those two READ — a version being
@@ -193,7 +194,7 @@ bar. The bar is the actor's CHILD now — specs/PARENTING.md — which is what
 makes it ride along and what removes it with the actor, and the rule is
 gone.)
 
-**No world is touched, and the first draft's mistake is why that matters.** It
+**No screen is touched, and the first draft's mistake is why that matters.** It
 placed the bar in every `.world` and pointed it with `any ⟨kind⟩`, which was
 wrong twice. Giving one actor a bar meant editing files about LEVELS — an
 enhancement that says it edits an actor should edit an actor — and two of that
@@ -243,32 +244,31 @@ read (specs/PARENTING.md).
 
 A level bigger than the screen is the commonest thing a learner builds and the
 commonest one they cannot finish — the player walks off the right-hand side and
-the game goes on without them. The answer is the world's MAIN camera, given
-`Follows` and told whom to follow, and none of it is anywhere near the actor.
-It is kept on the world's main map as the map editor's camera inspector keeps
-it (`placementCameras`), so the inspector shows it as the main camera's traits
-and fields and the code editor shows nothing:
+the game goes on without them. The answer is the camera of the Viewport the
+Main Screen shows its level through, given `Follows` and told whom to follow,
+and none of it is anywhere near the actor. It is kept on the Viewport's
+placement as its camera inspector keeps it (`placementCameras`), so the
+inspector shows it as that camera's traits and fields and the code editor
+shows nothing:
 
-    worlds/*.world    map.mainCamera:
-                        traits  Camera Follow#Follows
-                        values  actor to follow = any ⟨target⟩
+    screens/main.screen    the Game Viewport's camera:
+                             traits  Camera Follow#Follows
+                             values  actor to follow = any ⟨target⟩
 
-**It is the WORLD's**, and it is the counter-example to the Health Bar rather
-than a repeat of its bug. Which camera a world looks through, and what that
-camera is aimed at, are facts about the world's view; a camera is not an actor
-and an actor cannot hold one. So the subject is the world, the actor is the
-ANSWER to the question it asks, and one world is patched — the one whose wand
-was clicked, which is also right for a project with two levels, since each
-world wants its own camera.
+**It is the GAME's**, and it is the counter-example to the Health Bar rather
+than a repeat of its bug. Which camera the game looks through, and what that
+camera is aimed at, are facts about the game's view; a camera is not an actor
+and an actor cannot hold one. So the subject is the game, and the actor is the
+ANSWER to the question it asks.
 
-**One view per world**, so asking again REPOINTS the main camera rather than
-adding a rival: a second answer is a learner changing their mind. Whatever else
-the main camera elects is left as it was.
+**One camera per Viewport**, so asking again REPOINTS it rather than adding a
+rival: a second answer is a learner changing their mind. Whatever else the
+camera elects is left as it was.
 
 It used to write a `define camera ⟨Follow Camera⟩` and a `look through camera`
 at the end of the world, after `load map`, because `any ⟨Player⟩` is read where
 the camera is declared and one declared earlier sits still for the whole game.
-A stored camera is declared after the world's rows whatever they hold, so that
+A stored camera is declared after the screen's rows whatever they hold, so that
 ordering is no longer something to get right.
 
 ## The pair: collecting, and the number it adds up to
@@ -292,22 +292,21 @@ the line between them belongs to the project.
 block in the learner's file that they can read and change. A shelf that stopped
 to ask would be asking about the one thing already in front of them.
 
-**A scoreboard** (a world's):
+**A scoreboard** (the game's):
 
-    actors/scoreboard.actor  (new) the stock Label, renamed, plus
-                                   use trait ⟨Scoring#Watches the Score⟩
-                                   when ⟨this actor⟩ sees the score change:
-                                     set text to join ⟨"SCORE "⟩ ⟨the score⟩
+    actors/scoreboard.actor  (new) Scoreboard, acting like the Label
+                                   trait  Scoring#Watches the Score
+                                   text   ⟨"SCORE 0"⟩
+                                 when ⟨this actor⟩ sees the score change:
+                                   set text to join ⟨"SCORE "⟩ ⟨the score⟩
 
-    worlds/<world>.world           define layer ⟨Interface⟩ do:
-                                     this layer ⟨fixed⟩
-                                     add actor ⟨Scoreboard⟩ do:
-                                       set position ⟨48, 16⟩
+    screens/main.screen      Scoreboard placed, docked in a bar a tile
+                               high above the Game Viewport
 
 **A kind of its own, rather than the stock Label placed and pointed at.** A hat
 names a KIND, so one on `any ⟨Label⟩` would rewrite every label in the project
 — including the ones the learner put there to say something else. So the
-scoreboard is a Label whose name is Scoreboard, which is exactly what the
+scoreboard is a kind that ACTS LIKE a Label, which is exactly what the
 starter's own `scoreboard.actor` is.
 
 **The trait is what makes the hat fire.** "Sees the score change" is an actor's
@@ -315,11 +314,11 @@ event and an actor hears it because it elected to watch. Without that row the
 board draws its seeded text for the rest of the game, which is what this looked
 like before the row was there.
 
-**And it goes on a fixed layer**, which is the piece a learner finds last and
-by accident: a world-space score sits where it was placed and slides off the
-screen the moment anything moves the camera. Written even in a project with no
-camera, because the camera is one wand away and nothing about the scoreboard
-should need revisiting when it arrives.
+**And it goes on the screen**, beside the Viewport rather than in the level it
+shows, which is the piece a learner finds last and by accident: a score in the
+level sits where it was placed and slides off the screen the moment anything
+moves the camera. Docked, so it takes its share of any window
+(specs/DOCKING_PLAN.md).
 
 ## The one that was a rule: typing out what it says
 

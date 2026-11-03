@@ -11,8 +11,8 @@ actor kinds and places kinds declared elsewhere.
 
 ## What is true today
 
-`define event` is legal in a `.rule`, an `.actor` and a `.map`, and not in a
-`.world` (`blockly/fileKind`, ROOT_HOMES). A map's event is world-scoped and
+`define event` is legal in a `.rule`, an `.actor` and a `.map`; a screen
+declares its events as data. A map's event is world-scoped and
 carries no subject: the map raises it, the world hears it with a hat, and
 every file that declares anything of its own gets a drawer in the toolbox
 (`domainBlocks`, `ownProperties`).

@@ -194,7 +194,7 @@ vi.mock('../../runtime/WorldRuntimeContext', () => ({
 }));
 
 const {MapEditor} = await import('../MapEditor');
-const {screenFileDocument} = await import('../worldDocument');
+const {screenFileDocument} = await import('../mapDocument');
 
 /** A map with two actors in it, at the size every map used to be. */
 const CONTENTS = JSON.stringify({

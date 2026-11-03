@@ -2,11 +2,10 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {mapFileDocument} from '../worldDocument';
+import {mapFileDocument} from '../mapDocument';
 
 describe('mapFileDocument', () => {
-  it('names the map’s module, and has a map script of its own', () => {
+  it('names the map’s module', () => {
     expect(mapFileDocument.modulePath('maps/level1.map')).toBe('maps/level1');
-    expect(mapFileDocument.hasMapScript).toBe(true);
   });
 });

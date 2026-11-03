@@ -1284,11 +1284,11 @@ export class World {
    * Place an actor, or make one from a template and place that.
    *
    * TWO shapes because one BLOCK reaches both. `add actor` generates
-   * `world.addActor(Template, id, type, layer)`, and under `define world` that
-   * lands on `WorldBuilder`; in a rule step or an event handler — spawning a
-   * bullet, splitting an asteroid — it lands here. A method that existed on one
-   * of them only is a crash carrying the block's own name at the moment a
-   * learner runs their game (`builderSurface.test`), so the two agree.
+   * `world.addActor(Template, id, type, layer)`, and under `when this screen
+   * loads` that lands on `WorldBuilder`; in a rule step or an event handler —
+   * spawning a bullet, splitting an asteroid — it lands here. A method that
+   * existed on one of them only is a crash carrying the block's own name at the
+   * moment a learner runs their game (`builderSurface.test`), so the two agree.
    *
    * The template form is told apart by duck-typing rather than by importing
    * `ActorBuilder` for an `instanceof`: that import would be a cycle, and the

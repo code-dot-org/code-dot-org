@@ -4,6 +4,11 @@
 import {describe, expect, it} from 'vitest';
 
 import {
+  mapFileDocument,
+  screenDocumentFor,
+  screenFileDocument,
+} from '../mapDocument';
+import {
   addScreenProperty,
   readScreenHeader,
   writeScreenName,
@@ -11,11 +16,6 @@ import {
   writeScreenRuleValue,
   writeScreenTheme,
 } from '../screenProperties';
-import {
-  mapFileDocument,
-  screenDocumentFor,
-  screenFileDocument,
-} from '../worldDocument';
 import type {WorldRuleProperty} from '../worldProperties';
 
 const SCREEN = JSON.stringify({

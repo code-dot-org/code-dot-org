@@ -1,9 +1,8 @@
-// Discovers a project's actor and world modules by directory convention — actor
-// templates live under `actors/`, worlds under `worlds/` (the lab's directory
-// layout, GLOSSARY.md). The `world_add_actor` dropdown lists these as
-// `[label, path]`: the label is the module's *authored* name (an
-// ActorBuilder/WorldBuilder `name`, or a Blockly actor's NAME field) so a
-// learner sees "Coin", not the file stem "coin"; the value is the
+// Discovers a project's actor modules by directory convention — actor templates
+// live under `actors/` (the lab's directory layout, GLOSSARY.md). The
+// `world_add_actor` dropdown lists these as `[label, path]`: the label is the
+// module's *authored* name (an ActorBuilder `name`, or a Blockly actor's NAME
+// field) so a learner sees "Coin", not the file stem "coin"; the value is the
 // extension-less module path the generated world imports (`actors/coin`).
 
 import {isBackgroundPath} from '../appearance/backgroundsFolder';

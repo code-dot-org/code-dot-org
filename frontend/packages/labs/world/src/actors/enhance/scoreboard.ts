@@ -187,7 +187,7 @@ export const scoreboardEnhancement: Enhancement = {
   // The GAME's: what is on the screen while it is played, and where it sits,
   // are the Main Screen's business — and the score it shows is the game's
   // number.
-  subject: 'world',
+  subject: 'game',
   name: 'A scoreboard',
   description:
     'Puts the score on the screen and keeps it there: a Scoreboard actor in a bar above the game, which stays put when the view moves, saying what the score is whenever it changes.',

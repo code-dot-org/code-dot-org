@@ -843,7 +843,8 @@ the way it is pointing.
 const BALL = {traits: ['Physics#CanMoveTrait'], sprite: 'ball.png'};
 
 /**
- * `when ⟨any Ball⟩ hears ⟨key⟩ pressed`, as a root beside the `define world`.
+ * `when ⟨any Ball⟩ hears ⟨key⟩ pressed`, as a root beside `when this screen
+ * loads`.
  *
  * The subject is the KIND rather than `this actor`: a handler written beside a
  * definition is about that definition, and one written in the world has to say

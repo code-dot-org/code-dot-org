@@ -123,7 +123,7 @@ export const cameraFollowEnhancement: Enhancement = {
   id: 'cameraFollow',
   // The GAME's: a camera is the Viewport's the game is shown through, and
   // aimed at an actor it names. Nothing lands in the actor's file.
-  subject: 'world',
+  subject: 'game',
   name: 'A camera that follows an actor',
   description:
     'Makes the camera the game is shown through keep one actor on screen, so a level can be bigger than the window. A game has one view, so asking again points the same camera at something else.',

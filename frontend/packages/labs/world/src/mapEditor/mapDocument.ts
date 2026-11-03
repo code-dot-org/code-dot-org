@@ -28,8 +28,6 @@ export interface MapDocumentAdapter {
   write(contents: string, doc: MapDoc): string;
   /** The module the map's scripts belong to, from the file's path. */
   modulePath(path: string): string;
-  /** Whether the map has a workspace of its own to open. */
-  hasMapScript: boolean;
   /**
    * What the document's own workspace is, when it has one: a map's, or a
    * screen's, which holds the game's hats rather than the map hats.
@@ -70,7 +68,6 @@ export const mapFileDocument: MapDocumentAdapter = {
   read: parseMap,
   write: (_contents, doc) => JSON.stringify(doc, null, 2),
   modulePath: path => path.replace(/\.map$/, ''),
-  hasMapScript: true,
 };
 
 /** The keys of a screen that are not its map's, kept through a map edit. */
@@ -105,7 +102,6 @@ export const screenFileDocument: MapDocumentAdapter = {
     return JSON.stringify({...kept, ...doc}, null, 2);
   },
   modulePath: path => path.replace(/\.screen$/, ''),
-  hasMapScript: true,
   scriptKind: 'screen',
   world: {
     title: 'Main Screen',

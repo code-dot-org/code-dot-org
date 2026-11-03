@@ -202,7 +202,7 @@ describe('an actor that declares its own event', () => {
   /** The Beacon's drawer, as the palette of some file builds it. */
   const beaconDrawer = (editing?: string) => {
     const {toolbox, rootTypes} = buildDomainPalette([], {
-      fileKind: editing ? 'actor' : 'world',
+      fileKind: editing ? 'actor' : 'screen',
       ownProperties: projectOwnMetas({
         'actors/beacon.actor': project['actors/beacon.actor'],
       }),
@@ -234,10 +234,10 @@ describe('an actor that declares its own event', () => {
 
   it('offers only the hat everywhere else', () => {
     // The drawer is in every file's toolbox, because an event exists to be
-    // HEARD somewhere else — a world that wants to know the beacon flashed is
+    // HEARD somewhere else — a screen that wants to know the beacon flashed is
     // the whole point of declaring one. Raising it is the opposite: only the
     // kind that declared the event knows when it happened, so an `emit` in a
-    // world would be that world forging the actor's own notifications.
+    // screen would be that screen forging the actor's own notifications.
     const {blocks} = beaconDrawer(undefined);
 
     expect(blocks).toContain('world_on_ActorsBeacon_FlashesEvent');

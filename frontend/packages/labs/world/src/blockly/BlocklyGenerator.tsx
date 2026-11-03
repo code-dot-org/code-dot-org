@@ -542,8 +542,9 @@ function generateMainScreen(
   const load = generateLoad(generator, workspace, map, modulePath, rootTypes);
 
   workspace.clear();
-  // The screen's own code is a world's, though no root says so; its placements' code, generated above, is each placement's.
-  markCode(workspace, 'world');
+  // No root says this is the game's code; its placements' code, generated
+  // above, is each placement's.
+  markCode(workspace, 'game');
   Blockly.serialization.workspaces.load(blocks ?? {}, workspace);
   const topBlocks = workspace
     .getTopBlocks(true)

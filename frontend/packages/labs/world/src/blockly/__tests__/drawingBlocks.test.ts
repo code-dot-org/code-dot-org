@@ -22,7 +22,7 @@ type Generated = {
   };
 };
 
-const palette = (fileKind?: 'actor' | 'world' | 'rule') =>
+const palette = (fileKind?: 'actor' | 'screen' | 'rule') =>
   buildDomainPalette([], fileKind ? {fileKind} : {});
 
 const blockNamed = (type: string): Generated =>
@@ -107,7 +107,7 @@ describe('define drawing', () => {
       return matches[0];
     };
 
-    for (const kind of ['actor', 'world'] as const) {
+    for (const kind of ['actor', 'screen'] as const) {
       expect(shapeIn(kind).previousStatement).toBe(true);
       expect(shapeIn(kind).nextStatement).toBe(true);
     }
@@ -310,9 +310,9 @@ describe('the Drawing category', () => {
 
   it('is not shown anywhere else, pen and all', () => {
     // Filtering by `ROOT_HOMES` alone would drop `define drawing` and leave the
-    // pen behind — ten blocks in a `.world` file that could only ever wear a
+    // pen behind — ten blocks in a `.screen` that could only ever wear a
     // warning saying there is nothing to draw on.
-    for (const kind of ['world', 'rule'] as const) {
+    for (const kind of ['screen', 'rule'] as const) {
       const categories = palette(kind).toolbox as Array<{
         name?: string;
         blocks?: unknown[];

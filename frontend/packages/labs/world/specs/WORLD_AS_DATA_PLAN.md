@@ -79,7 +79,7 @@ color` and a `set` row per rule setting, loads them into the headless
    and the entries that named them (`ROOT_HOMES`, `DEFINING_ROOTS`, the
    pinned and named roots, `worldContext`, `addActorName`, the Declarations
    drawer). A workspace is the game's code by its mark
-   alone (`workspaceRoots.definesWorld`); a file with no path compiles as
+   alone (`workspaceRoots.holdsGameCode`); a file with no path compiles as
    an actor's. The tests of the blocks went; the tests of what they did
    read a screen's data (`screenOwnMeta`) or the prologue
    (`worldModulePrologue`). `making/property` grants `rule-properties`.
@@ -96,6 +96,13 @@ color` and a `set` row per rule setting, loads them into the headless
    holding the three literal labels; the score label, which code names,
    is in the default layer, which looks the same since Tapper's camera
    does not move. `place/layers` grants `all actors in layer`.
+9. **The `.world` kind goes. BUILT.** `FileKind` has no `world`: the Main
+   Screen's code is kind `screen`, and its workspace is marked as the
+   game's (`markCode(…, 'game')`, `holdsGameCode`). An enhancement's
+   subject is an actor or the game, and the game's is asked for from the
+   Main Screen's inspector. Nothing recognizes a `worlds/` module path;
+   `ownWorldModule`, the map editor's `hasMapScript` and
+   `onOpenMapScript`, and the sparkles button's file module went with it.
 
 Steps 2 and 3 change no output.
 

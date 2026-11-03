@@ -75,6 +75,7 @@ import {
   withoutWornPicture,
   type LocalPicture,
 } from './localPictures';
+import {mapFileDocument, type MapDocumentAdapter} from './mapDocument';
 import styles from './mapEditor.module.css';
 import {
   clampTiles,
@@ -88,7 +89,6 @@ import {MapStage} from './MapStage';
 import {PlaceHeading} from './PlaceHeading';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
 import {withPlacePicture} from './placePicture';
-import {mapFileDocument, type MapDocumentAdapter} from './worldDocument';
 import type {WorldProperty} from './worldProperties';
 import {cameraTraitChoices, worldRuleProperties} from './worldRuleProperties';
 
@@ -102,16 +102,11 @@ const VIEWPORT_TRAIT_REF = 'Viewport#ViewportTrait';
 
 export interface MapEditorProps extends CustomEditorProps {
   /**
-   * What the file is: a `.map`, or a `.world` holding a map beside its
-   * blocks (specs/MAIN_MAP_PLAN.md). Decides how the map is read out of the
-   * contents and written back, and what owns its scripts.
+   * What the file is: a `.map`, or a `.screen` holding a map beside the
+   * game's values. Decides how the map is read out of the contents and
+   * written back, and what owns its scripts.
    */
   document?: MapDocumentAdapter;
-  /**
-   * What "Map script" opens when the document's map has no workspace of its
-   * own — a world's is its World view.
-   */
-  onOpenMapScript?: () => void;
 }
 
 /** What the shelf may withhold in the map editor, each asked for by name. */
@@ -149,7 +144,6 @@ export const MapEditor = ({
   isReadOnly,
   onChange,
   document = mapFileDocument,
-  onOpenMapScript,
 }: MapEditorProps) => {
   const {getActorInfo, hasCompiled} = useWorldRuntime();
   const {currentSources, sourcesEpoch, updateSources} =
@@ -649,7 +643,7 @@ export const MapEditor = ({
             ? {
                 onEnhance: () =>
                   void requestActorEnhance({
-                    kind: 'world',
+                    kind: 'game',
                     path: MAIN_SCREEN_PATH,
                     name: worldHeader.name,
                   }),
@@ -961,13 +955,9 @@ export const MapEditor = ({
             '.screen',
           )}
           onEditScript={id => {
-            if (id !== undefined) {
-              setScript({kind: 'placement', id});
-            } else if (document.hasMapScript) {
-              setScript({kind: 'map'});
-            } else {
-              onOpenMapScript?.();
-            }
+            setScript(
+              id !== undefined ? {kind: 'placement', id} : {kind: 'map'},
+            );
           }}
           withheld={withheld}
           appBuilder={appBuilder}
@@ -976,11 +966,7 @@ export const MapEditor = ({
           onEnhanceKind={enhanceKind}
           onOpenKind={openKind}
           mapScriptLabel={
-            document.scriptKind === 'screen'
-              ? 'Screen code'
-              : document.hasMapScript
-                ? 'Map code'
-                : 'World code'
+            document.scriptKind === 'screen' ? 'Screen code' : 'Map code'
           }
           screenCode={isMainScreen}
           world={worldInspector}

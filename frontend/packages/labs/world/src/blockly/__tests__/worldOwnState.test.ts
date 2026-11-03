@@ -28,7 +28,7 @@ const screen = (
   properties: ScreenProperty[] = [],
   events: ScreenEvent[] = [],
   name = 'Tapper',
-) => screenOwnMeta('worlds/main', {name, properties, events});
+) => screenOwnMeta('screens/main', {name, properties, events});
 
 const COUNT: ScreenProperty = {name: 'score', type: 'number', value: '0'};
 
@@ -87,16 +87,18 @@ describe('a Main Screen’s own properties', () => {
     // A world's property has nobody to name, which is what makes `set score to`
     // read the way it does — the same shape a rule's world-scoped property has.
     const {blocks} = buildDomainPalette([], {
-      fileKind: 'world',
+      fileKind: 'screen',
       ownProperties: [screen([COUNT])],
     });
     const getter = blocks.find(
-      block => block.type === 'world_get_WorldsMain_ScoreProperty',
+      block => block.type === 'world_get_ScreensMain_ScoreProperty',
     ) as {message0: string} | undefined;
 
     expect(getter?.message0).toBe('get score');
     expect(
-      blocks.some(block => block.type === 'world_set_WorldsMain_ScoreProperty'),
+      blocks.some(
+        block => block.type === 'world_set_ScreensMain_ScoreProperty',
+      ),
     ).toBe(true);
   });
 });
@@ -128,8 +130,8 @@ describe('a Main Screen’s own EVENTS', () => {
       .filter(type => type.includes('LevelComplete'));
 
     expect(types.sort()).toEqual([
-      'world_emit_WorldsMain_LevelCompleteEvent',
-      'world_on_WorldsMain_LevelCompleteEvent',
+      'world_emit_ScreensMain_LevelCompleteEvent',
+      'world_on_ScreensMain_LevelCompleteEvent',
     ]);
   });
 
@@ -141,7 +143,7 @@ describe('a Main Screen’s own EVENTS', () => {
     // (specs/MAP_EVENTS_PLAN.md).
     expect(worldOwnPropertyDeclarations(screen([], [DONE]))).toBe(
       'export const LevelCompleteEvent = {id: "level_complete", ' +
-        'name: "level complete", ownerId: "worlds/main"};\n' +
+        'name: "level complete", ownerId: "screens/main"};\n' +
         'world.defineEvent("level complete", LevelCompleteEvent);\n',
     );
   });
@@ -156,7 +158,7 @@ describe('a Main Screen’s own EVENTS', () => {
       ownMapModule: 'maps/level',
     });
     // Named for the world, as every own-declaration drawer is — while the
-    // block TYPES are namespaced by the module, which is `worlds/main`.
+    // block TYPES are namespaced by the module, which is `screens/main`.
     const drawer = (
       palette.toolbox as Array<{name?: string; blocks?: unknown[]}>
     ).find(one => one.name === 'Tapper');
@@ -164,10 +166,10 @@ describe('a Main Screen’s own EVENTS', () => {
       (drawer?.blocks ?? []).map(one =>
         typeof one === 'string' ? one : (one as {type: string}).type,
       ),
-    ).toContain('world_emit_WorldsMain_LevelCompleteEvent');
+    ).toContain('world_emit_ScreensMain_LevelCompleteEvent');
 
     const emit = palette.blocks.find(
-      one => one.type === 'world_emit_WorldsMain_LevelCompleteEvent',
+      one => one.type === 'world_emit_ScreensMain_LevelCompleteEvent',
     ) as unknown as {
       generator: {javascript: (block: unknown, generator: unknown) => unknown};
     };
@@ -252,8 +254,8 @@ describe('renaming', () => {
     // DECLARING NAME, so renaming ⟨Tapper⟩ to ⟨Coins⟩ re-minted every block as
     // `world_get_Coins_…`; the saved ones matched nothing, became stand-ins,
     // and told the learner their project no longer had a RULE called Tapper.
-    expect(typesFor('screen', 'Coins', 'worlds/main')).toEqual(
-      typesFor('screen', 'Tapper', 'worlds/main'),
+    expect(typesFor('screen', 'Coins', 'screens/main')).toEqual(
+      typesFor('screen', 'Tapper', 'screens/main'),
     );
   });
 

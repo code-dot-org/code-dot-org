@@ -4,10 +4,10 @@
 // connection — a row with nothing above it — with a reason, and a disabled
 // block generates nothing. This is the same plugin for a second shape of
 // mistake: a block that is a ROOT in the right sense and still cannot be held
-// by this kind of file. A `define actor` in a world, a world's hat in an
-// actor file, a hat about `this actor` in a world. Each is legal somewhere
-// and nowhere here, and the way one arrives is a paste from another tab
-// (specs/PASTE.md), or a file edited by hand.
+// by this kind of file. A `define actor` in a screen, a screen's hat in an
+// actor file, a hat about `this actor` in the Main Screen's code. Each is legal
+// somewhere and nowhere here, and the way one arrives is a paste from another
+// tab (specs/PASTE.md), or a file edited by hand.
 //
 // THREE QUESTIONS, asked of a root whenever it is created, moved or changed:
 //
@@ -15,10 +15,10 @@
 //     of file may hold `define actor`, `define map` and the rest.
 //   - Is it offered to this kind of file at all? The palette is built per
 //     kind, and its toolbox is the set of what may be placed here. A hat the
-//     world hears and an actor cannot is in no drawer of an actor file.
-//   - Is its subject the other kind of file's? A world binds no `actor`, so
-//     a world's handler about `this actor` would compile to a name nothing
-//     declares and the module would throw as it loaded; a world's handler is
+//     game hears and an actor cannot is in no drawer of an actor file.
+//   - Is its subject the other kind of file's? A screen binds no `actor`, so
+//     a screen's handler about `this actor` would compile to a name nothing
+//     declares and the module would throw as it loaded; a screen's handler is
 //     about `any ⟨kind⟩`. Anywhere else a handler is about the actor the code
 //     is for, and only that. The fix is the dropdown, not the tab.
 //
@@ -26,7 +26,7 @@
 // which is what a learner sees, and nothing generated, which is what the
 // project sees. A disabled DEFINITION also has to be one the generator's
 // file-kind check overlooks, or a grey `define actor` would still stop a
-// world compiling; `BlocklyGenerator` skips disabled roots for that reason.
+// screen compiling; `BlocklyGenerator` skips disabled roots for that reason.
 //
 // WHAT A WORKSPACE KNOWS is told to it by the editor (`setFileContext`),
 // after the workspace exists — which is after its file has loaded, so the
@@ -100,7 +100,6 @@ export const typesOffered = (toolbox: unknown): Set<string> => {
 /** How a kind of file reads in a reason. */
 const A_FILE: Record<FileKind, string> = {
   actor: 'an actor file',
-  world: 'a world',
   rule: 'a rule',
   map: 'a map',
   placement: 'a placed actor',
@@ -132,15 +131,13 @@ export const misplacementOf = (block: Blockly.Block): string | undefined => {
       c.toUpperCase(),
     );
   }
-  // WHOSE EVENT (`eventSubject`): a world's handler is about a kind, and
+  // WHOSE EVENT (`eventSubject`): a screen's handler is about a kind, and
   // anywhere else about this actor. Either arrives in the other kind of file
   // by a paste, and the dropdown on the block is how it is put right.
   if (block.type.startsWith('world_on_') && block.getField(SUBJECT_FIELD)) {
     const subject = block.getFieldValue(SUBJECT_FIELD) as string | null;
-    // A screen's code is the game's, as a world's was.
-    const game = context.kind === 'world' || context.kind === 'screen';
-    if (game && !subject) {
-      return 'A world’s handler is about a kind of actor: pick one after “any”.';
+    if (context.kind === 'screen' && !subject) {
+      return 'A screen’s handler is about a kind of actor: pick one after “any”.';
     }
     // An actor file's handler is about this actor or its own property.
     if (context.kind === 'actor' && subjectKindOf(block)) {

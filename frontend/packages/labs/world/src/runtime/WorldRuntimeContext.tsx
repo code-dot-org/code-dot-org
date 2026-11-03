@@ -54,7 +54,7 @@ import {manifestFiles, thumbnailManifest} from './thumbnailManifest';
 import {getAssetBaseUrl, getSandboxUrl} from './worldConfig';
 
 /**
- * A Blockly-authored file (.rule/.actor/.world) needs generation.
+ * A Blockly-authored file (.rule/.actor/.map/.screen) needs generation.
  *
  * Asked through `fileKindOf` so this list cannot drift from the one the
  * generator routes on: a file sent for generation whose kind that cannot name

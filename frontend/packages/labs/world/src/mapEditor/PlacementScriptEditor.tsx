@@ -286,11 +286,11 @@ export const PlacementScriptEditor = ({
             key={isReadOnly ? 'read-only' : 'editable'}
             className={styles.scriptWorkspace}
             onInject={workspace => {
-              // The Main Screen's code is a world's (`markCode`).
+              // The Main Screen's code is the game's (`markCode`).
               markCode(
                 workspace,
                 kind === 'screen' && mapModule === MAIN_SCREEN_PATH
-                  ? 'world'
+                  ? 'game'
                   : undefined,
               );
               // Which file this is, and which actor a placement's code is

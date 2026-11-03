@@ -1,7 +1,7 @@
 // What a demo world IS.
 //
 // A function from the compiled rule modules to a running world, and nothing
-// else — no project, no `.world` file, no compile. A demo is OUR code rather
+// else — no project, no screen, no compile. A demo is OUR code rather
 // than a learner's, so it needs none of the machinery that exists to run theirs
 // safely, and building one with the engine directly is a great deal less to
 // carry than authoring a project in block JSON.

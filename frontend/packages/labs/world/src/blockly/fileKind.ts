@@ -7,17 +7,8 @@
 // disagree, a file is offered a block that then changes what the file IS. So
 // both ask here.
 
-/**
- * Which kind of file this is. `world` is no file's: it is the Main Screen's
- * code, the game's own, and the hats a palette offers it.
- */
-export type FileKind =
-  | 'actor'
-  | 'world'
-  | 'rule'
-  | 'map'
-  | 'placement'
-  | 'screen';
+/** Which kind of file this is. */
+export type FileKind = 'actor' | 'rule' | 'map' | 'placement' | 'screen';
 
 /**
  * A Blockly file's kind, from its path — the one place the extensions are read.
@@ -75,10 +66,10 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // A ROW under `define actor`, so this entry says which files may hold one
   // rather than which give it a root's shape (`domainBlocks.worldDefineDrawing`).
   ['world_define_drawing', new Set<FileKind>(['actor'])],
-  // A tween is defined where it is used — an actor's in its own file, a
-  // world's in the world — and referenced by the defining block's id. A file
+  // A tween is defined where it is used — an actor's in its own file, the
+  // game's on a screen — and referenced by the defining block's id. A file
   // of shared ones is the same axis an actor sits on and is not built yet.
-  ['world_define_tween', new Set<FileKind>(['actor', 'world'])],
+  ['world_define_tween', new Set<FileKind>(['actor', 'screen'])],
   // A map's own blocks (specs/MAP_FIRST.md): naming another placement and
   // unloading the map belong to the map and its placements; hearing the map
   // load and unload belongs to the map's own workspace alone.
@@ -118,9 +109,9 @@ export type ModuleShape = FileKind;
  * What a file compiles to — and a refusal if a block would decide that instead
  * of the file's own name.
  *
- * Generation used to pick the shape by looking for `world_world` and
- * `world_rule`, so a `define world` dragged into an `.actor` did not fail: it
- * compiled that actor into a world, and the actor stopped existing. Nothing
+ * Generation used to pick the shape by looking for defining roots, so a
+ * `define world` dragged into an `.actor` did not fail: it compiled that
+ * actor into a world, and the actor stopped existing. Nothing
  * said so. The complaint surfaced wherever something later tried to place the
  * actor, which is nowhere near the mistake, and reads as the world being
  * broken rather than one block being in the wrong file.

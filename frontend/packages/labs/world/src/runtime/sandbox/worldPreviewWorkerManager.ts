@@ -168,7 +168,7 @@ interface ThumbnailManifest {
   };
 }
 
-/** The shape the compiled entry module (`worlds/main`) default-exports. */
+/** The shape the compiled entry module (`screens/main`) default-exports. */
 interface EntryModule {
   default?: {getWorld: () => World};
 }

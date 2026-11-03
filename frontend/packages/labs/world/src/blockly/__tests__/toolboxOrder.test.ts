@@ -194,11 +194,10 @@ describe('the drawer for the file being edited', () => {
     expect(rows.filter(row => row === 'Health Bar')).toHaveLength(1);
   });
 
-  it('is nothing at all for a world that declares no state of its own', () => {
-    // The starter's world remembers nothing, so it has no drawer to hoist —
-    // and neither has the headless generator, which has no one file.
+  it('is nothing at all for a screen that declares no state of its own', () => {
+    // The headless generator has no one file, so it has no drawer to hoist.
     const rows = shape(
-      buildDomainPalette(rules, {fileKind: 'world', ownProperties: own})
+      buildDomainPalette(rules, {fileKind: 'screen', ownProperties: own})
         .toolbox,
     );
 
@@ -206,26 +205,26 @@ describe('the drawer for the file being edited', () => {
     expect(rows).toContain('— Rules —');
   });
 
-  it('is the world’s own drawer when the world is what is open', () => {
-    // A world that remembers a number gets a drawer for it exactly as an actor
-    // does (specs/WORLD_STATE.md) — and both arrive in `ownProperties`, so it
-    // used to land under the Actors heading, which a world is not. Open, it is
-    // the drawer being worked in.
-    const world = screenOwnMeta('worlds/main', {
+  it('is the screen’s own drawer when the screen is what is open', () => {
+    // A screen that remembers a number gets a drawer for it exactly as an
+    // actor does (specs/WORLD_STATE.md) — and both arrive in `ownProperties`,
+    // so it used to land under the Actors heading, which a screen is not.
+    // Open, it is the drawer being worked in.
+    const screen = screenOwnMeta('screens/main', {
       name: 'Tapper',
       properties: [{name: 'score', type: 'number', value: '0'}],
     });
     const rows = shape(
       buildDomainPalette(rules, {
-        fileKind: 'world',
+        fileKind: 'screen',
         // Replacing the starter's own entry for that module, not sitting
         // beside it: two metas for one path are two drawers reading one
         // declaration list, which is not a shape a project can be in.
         ownProperties: [
-          ...own.filter(meta => meta.modulePath !== 'worlds/main'),
-          world,
+          ...own.filter(meta => meta.modulePath !== 'screens/main'),
+          screen,
         ],
-        ownWorldModule: 'worlds/main',
+        ownMapModule: 'screens/main',
       }).toolbox,
     );
 

@@ -13,16 +13,14 @@ import {enhanceTarget, type EnhanceContext} from '../enhanceButton';
 /** A `define actor` in an actor's own file. */
 const inFile: EnhanceContext = {
   actorModule: 'actors/player',
-  fileModule: 'actors/player',
   name: 'Platformer Player',
   flyout: false,
   readOnly: false,
 };
 
 /** …and a `define actor` anywhere else, which is about nobody. */
-const inWorld: EnhanceContext = {
+const elsewhere: EnhanceContext = {
   actorModule: undefined,
-  fileModule: 'screens/main',
   name: 'Ball',
   flyout: false,
   readOnly: false,
@@ -39,23 +37,14 @@ describe('the wand on define actor', () => {
 
   it('is not offered on a define actor outside an actor file', () => {
     // Every actor is a file; a `define actor` anywhere else defines nothing.
-    expect(enhanceTarget(inWorld)).toBeUndefined();
-  });
-
-  it('is not offered where the file is neither', () => {
-    // A `.rule` has no actor for this to be about, and a workspace the editor
-    // has not told anything is one it cannot write into.
-    expect(
-      enhanceTarget({...inWorld, fileModule: 'rules/gravity'}),
-    ).toBeUndefined();
-    expect(enhanceTarget({...inWorld, fileModule: undefined})).toBeUndefined();
+    expect(enhanceTarget(elsewhere)).toBeUndefined();
   });
 
   it('is not offered on a preview in the toolbox', () => {
     // A flyout block is a picture of one you might drag out. Clicking a wand
     // there would enhance an actor that is not in the file yet.
     expect(enhanceTarget({...inFile, flyout: true})).toBeUndefined();
-    expect(enhanceTarget({...inWorld, flyout: true})).toBeUndefined();
+    expect(enhanceTarget({...elsewhere, flyout: true})).toBeUndefined();
   });
 
   it('is not offered where nothing can be edited', () => {
@@ -63,6 +52,6 @@ describe('the wand on define actor', () => {
     // two READ, and a version being previewed can still be looked into. This
     // one writes.
     expect(enhanceTarget({...inFile, readOnly: true})).toBeUndefined();
-    expect(enhanceTarget({...inWorld, readOnly: true})).toBeUndefined();
+    expect(enhanceTarget({...elsewhere, readOnly: true})).toBeUndefined();
   });
 });

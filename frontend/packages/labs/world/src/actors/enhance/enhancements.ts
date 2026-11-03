@@ -105,10 +105,10 @@ export interface Enhancement {
   id: string;
   /**
    * WHOSE it is: the thing whose files this edits, and so where it is asked
-   * for. An actor's sparkles offer the actor ones; a world's offers the world
-   * ones.
+   * for. An actor's sparkles offer the actor ones; the Main Screen's offers
+   * the game's.
    */
-  subject: 'actor' | 'world';
+  subject: 'actor' | 'game';
   /** What it is called, on the shelf — a sentence about the thing, not a file. */
   name: string;
   /**
@@ -200,15 +200,15 @@ export interface EnhanceChoice {
 }
 
 /**
- * The actor an enhancement is being given to, or the world, named by the
+ * The actor an enhancement is being given to, or the game, named by the
  * module path of its file.
  */
 export interface EnhanceTarget {
   /** Which kind of thing this is, and so which enhancements are on offer. */
-  kind: 'actor' | 'world';
+  kind: 'actor' | 'game';
   /**
-   * The module path of the FILE it lives in: `actors/player` for an actor with
-   * a file, `worlds/main` for a world or for an actor that world defines.
+   * The module path of the FILE it lives in: `actors/player` for an actor,
+   * `screens/main` for the game.
    */
   path: string;
   /** What it calls itself, for the words on the dialog. */
@@ -342,7 +342,7 @@ const AS_WRITTEN: readonly EnhancementGroup[] = [
     ],
   },
   {
-    // …and last, what the screen says about all of it. Both are the world's.
+    // …and last, what the screen says about all of it. Both are the game's.
     name: 'What the screen shows',
     members: [cameraFollowEnhancement, scoreboardEnhancement],
   },
@@ -419,7 +419,7 @@ export const enhancementsFor = (
 /**
  * …and the same in groups, with the empty headings left out.
  *
- * A world's shelf holds two rows and an actor's holds ten, so a heading with
+ * The game's shelf holds two rows and an actor's holds ten, so a heading with
  * nothing under it is what filtering by subject would otherwise leave behind.
  */
 export const groupsFor = (target: EnhanceTarget): readonly EnhancementGroup[] =>

@@ -12,7 +12,7 @@ import {describe, expect, it} from 'vitest';
 import {buildDomainPalette, heldNotOffered} from '../domainBlocks';
 import {fileKindOf, moduleShape, ROOT_HOMES, type FileKind} from '../fileKind';
 
-const KINDS: FileKind[] = ['actor', 'world', 'rule', 'map', 'placement'];
+const KINDS: FileKind[] = ['actor', 'screen', 'rule', 'map', 'placement'];
 
 /** Every block type a file kind's toolbox lists, categories flattened. */
 const offeredTypes = (fileKind?: FileKind): string[] => {
@@ -61,28 +61,27 @@ describe('which definition roots a file may hold', () => {
       expect(offeredTypes(kind)).not.toContain('world_actor');
     }
     expect(heldNotOffered('actor')).toContain('world_actor');
-    expect(heldNotOffered('world')).not.toContain('world_actor');
+    expect(heldNotOffered('screen')).not.toContain('world_actor');
   });
 
   it('gives the Rule category to a rule alone', () => {
     expect(categoryNames('rule')).toContain('Rule');
     expect(categoryNames('actor')).not.toContain('Rule');
-    expect(categoryNames('world')).not.toContain('Rule');
+    expect(categoryNames('screen')).not.toContain('Rule');
   });
 
   it('offers `each frame` wherever there is an owner to name', () => {
     // Two readings, both the same sentence about whoever owns it: a trait's
-    // member in a `.rule`, and a kind's own work in an `.actor`. A world
-    // once had a third, for the actors it defined itself, and has nothing
-    // for a step to be about now.
+    // member in a `.rule`, and a kind's own work in an `.actor`. A screen
+    // has nothing for a step to be about.
     expect(offeredTypes('actor')).toContain('world_trait_step');
     expect(offeredTypes('rule')).toContain('world_trait_step');
-    expect(offeredTypes('world')).not.toContain('world_trait_step');
+    expect(offeredTypes('screen')).not.toContain('world_trait_step');
   });
 
   it('offers `define drawing` to an actor file alone', () => {
     expect(offeredTypes('actor')).toContain('world_define_drawing');
-    expect(offeredTypes('world')).not.toContain('world_define_drawing');
+    expect(offeredTypes('screen')).not.toContain('world_define_drawing');
     expect(offeredTypes('rule')).not.toContain('world_define_drawing');
   });
 
@@ -92,7 +91,7 @@ describe('which definition roots a file may hold', () => {
     // an orphan and grays it out along with everything under it — so an
     // `.actor` file got a rootless `each frame` and every other file got the
     // chaining one. It is a ROW under `define actor` now, in an `.actor` file
-    // as in a world, so there is nothing left to vary.
+    // as anywhere, so there is nothing left to vary.
     const shapeIn = (fileKind: FileKind) => {
       const matches = buildDomainPalette([], {fileKind}).blocks.filter(
         block => block.type === 'world_trait_step',
@@ -105,7 +104,7 @@ describe('which definition roots a file may hold', () => {
 
     expect(shapeIn('actor')).toBe(true);
     expect(shapeIn('rule')).toBe(true);
-    expect(shapeIn('world')).toBe(true);
+    expect(shapeIn('screen')).toBe(true);
   });
 
   it('gives `define drawing` one shape too, in every kind of file', () => {
@@ -124,15 +123,15 @@ describe('which definition roots a file may hold', () => {
 
     expect(shapeIn('actor')).toBe(true);
     expect(shapeIn('rule')).toBe(true);
-    expect(shapeIn('world')).toBe(true);
+    expect(shapeIn('screen')).toBe(true);
   });
 
-  it('does not offer `use rule` to a world', () => {
-    // A world runs the rules the project holds (blockly/projectModules), so
+  it('does not offer `use rule` to a screen', () => {
+    // A game runs the rules the project holds (blockly/projectModules), so
     // the block would be a row that does nothing. It is still OFFERED to a
     // rule, where it declares a dependency and means something, and still
     // REGISTERED everywhere so a project saved with one keeps loading.
-    expect(offeredTypes('world')).not.toContain('world_use_rule');
+    expect(offeredTypes('screen')).not.toContain('world_use_rule');
     // …and a rule's are its data, chosen on its view.
     expect(offeredTypes('rule')).not.toContain('world_use_rule');
   });

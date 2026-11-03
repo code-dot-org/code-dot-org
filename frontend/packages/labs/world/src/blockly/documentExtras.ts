@@ -1,12 +1,11 @@
 // What a Blockly-authored file holds BESIDE its workspace.
 //
-// A `.world` carries its main map under `map`, next to `blocks`
-// (specs/MAIN_MAP_PLAN.md). Blockly's workspace loader reads only the keys it
-// has a serializer for and leaves the rest, so the map costs the workspace
-// nothing on the way in; on the way out `workspaces.save` writes only what
-// Blockly owns, and a save that forgot the map would be a level lost on the
-// first edit to a hat. So the file editor keeps the other keys and puts them
-// back on every save.
+// An `.actor` carries its data next to `blocks` (`actors/actorPurpose`).
+// Blockly's workspace loader reads only the keys it has a serializer for and
+// leaves the rest, so the data costs the workspace nothing on the way in; on
+// the way out `workspaces.save` writes only what Blockly owns, and a save that
+// forgot the rest would lose it on the first edit to a hat. So the file editor
+// keeps the other keys and puts them back on every save.
 
 /** The keys Blockly's own serializers own; everything else is the file's. */
 export const WORKSPACE_KEYS: ReadonlySet<string> = new Set([

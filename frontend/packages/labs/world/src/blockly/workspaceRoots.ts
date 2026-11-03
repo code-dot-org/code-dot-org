@@ -5,10 +5,6 @@
 // workspace rather than off the file's name, so a flyout's preview and a file
 // that has not been saved yet answer the same as one that has. The last
 // finds the `define actor` a block sits under, which is what `acts like` asks.
-//
-// This file held the world-defined actor, a `define actor` among a world's
-// own roots, until every actor became a file; what is left is the part that
-// was never about that.
 
 import type {Blockly} from '@code-dot-org/blockly';
 
@@ -20,7 +16,7 @@ const DEFINE_ACTOR = 'world_actor';
  * page or bodies hold no `define rule`, and the Main Screen's code no root
  * at all (`markCode`).
  */
-type MarkedWorkspace = {holdsCodeOf?: 'rule' | 'world'};
+type MarkedWorkspace = {holdsCodeOf?: 'rule' | 'game'};
 
 const markOf = (workspace: Blockly.Workspace | undefined) =>
   (workspace as MarkedWorkspace | undefined)?.holdsCodeOf;
@@ -34,10 +30,10 @@ export const definesRule = (
   workspace: Blockly.Workspace | undefined,
 ): boolean => markOf(workspace) === 'rule';
 
-/** Marks a workspace as the code of a rule or a world, or of neither. */
+/** Marks a workspace as the code of a rule or of the game, or of neither. */
 export const markCode = (
   workspace: Blockly.Workspace,
-  of: 'rule' | 'world' | undefined,
+  of: 'rule' | 'game' | undefined,
 ): void => {
   (workspace as MarkedWorkspace).holdsCodeOf = of;
 };
@@ -67,9 +63,9 @@ export const workspaceOfBlock = (
  * Whether this workspace is the game's own code — the Main Screen's, which
  * is marked so (`markCode`).
  */
-export const definesWorld = (
+export const holdsGameCode = (
   workspace: Blockly.Workspace | undefined,
-): boolean => markOf(workspace) === 'world';
+): boolean => markOf(workspace) === 'game';
 
 /**
  * The `define actor` root a block sits under, if it is in one.

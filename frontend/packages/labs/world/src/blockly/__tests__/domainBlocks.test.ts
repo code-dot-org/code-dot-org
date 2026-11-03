@@ -2872,7 +2872,7 @@ describe('what an actor list’s source socket wears', () => {
   const workspaceWith = (type: string) => {
     const workspace = {getTopBlocks: () => (type === 'world' ? [] : [{type}])};
     if (type === 'world') {
-      markCode(workspace as never, 'world');
+      markCode(workspace as never, 'game');
     }
     return workspace as never;
   };

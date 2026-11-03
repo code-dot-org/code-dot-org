@@ -277,8 +277,8 @@ const offeredAt = (id: TileId): Set<string> => {
   // map editor's Script view has a palette of its own, and only such a
   // lesson sends anybody there.
   const onTheMap = LESSONS[id]!.levelData?.worldView === 'map';
-  const kinds: Array<'world' | 'actor' | 'placement'> = [
-    'world',
+  const kinds: Array<'screen' | 'actor' | 'placement'> = [
+    'screen',
     'actor',
     ...(onTheMap ? (['placement'] as const) : []),
   ];
@@ -495,10 +495,10 @@ describe('a property the learner just declared', () => {
     return offeredIn(id, files);
   };
 
-  /** What the world's palette offers, with the run-up to this lesson done. */
+  /** What the Main Screen's palette offers, with this lesson's run-up done. */
   const offeredIn = (id: TileId, files: Record<string, string>) => {
     const {toolbox} = buildDomainPalette(projectRuleMetas(files), {
-      fileKind: 'world',
+      fileKind: 'screen',
       ownProperties: projectOwnMetas(files),
     });
     // The run-up done, and this lesson open — which is what lends a learner

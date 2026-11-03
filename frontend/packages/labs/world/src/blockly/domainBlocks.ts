@@ -1211,13 +1211,6 @@ const onHandler = (
   `${body}});\n`;
 
 /**
- * The same for an event that is about the WORLD.
- *
- * Registered on `world` and handed no actor, because there is none — the event
- * happened to the world. `world` is bound at module scope in a `.world` file
- * (it is the builder), which is where such a handler belongs.
- */
-/**
  * Which shadow a MEMBER's subject socket is seeded with.
  *
  * The scope is where the member was declared: a trait a camera elects gives
@@ -1809,10 +1802,7 @@ const defineEmitBlock = (event: EventMeta) => {
           return '';
         }
         const owner = refModule(event.ref);
-        if (
-          inMap &&
-          (owner?.startsWith('worlds/') || owner?.startsWith('screens/'))
-        ) {
+        if (inMap && owner?.startsWith('screens/')) {
           return `world.emitNamed(${str(event.name)}${values});\n`;
         }
         // `refCode` resolves a project event to the bare local name when the
@@ -4734,8 +4724,9 @@ const worldThisCamera = defineBlock({
  * (`eventSubject`). This block was that once, plugged into a socket the
  * event block no longer has.
  *
- * Under `define world` this is FINE, and used to warn. The builder now hands
- * back the actors of the world it is describing (`WorldBuilder.actors`), so
+ * Under `when this screen loads` this is FINE, and used to warn. The builder
+ * now hands back the actors of the world it is describing
+ * (`WorldBuilder.actors`), so
  * `load map` followed by `first actor of type ⟨Player⟩` reads the actors the
  * map just placed. Read before anything is placed it finds none, which is the
  * truth about that point in the program rather than an error.
@@ -6588,13 +6579,13 @@ const worldIsA = defineBlock({
 });
 
 // ── Placing actors ───────────────────────────────────────────────────────────
-// `world_add_actor` and `world_load_map` chain under a `.world` file's root and
-// PLACE actors in it. An `add` block binds `const actor = world.addActor(
-// Template, <id>)` in its own block scope, so the very same `set`-style body
-// blocks that target `actor` in an actor definition compose here unchanged
-// (only the pure `actor.set(...)` ones — `set position` — are valid on a live
-// instance; trait/appearance blocks belong to the template). The instance id is
-// the Blockly block's own id, which is stable across edits.
+// `world_add_actor` and `world_load_map` chain under a screen's `when this
+// screen loads` and PLACE actors in the game. An `add` block binds `const actor
+// = world.addActor( Template, <id>)` in its own block scope, so the very same
+// `set`-style body blocks that target `actor` in an actor definition compose
+// here unchanged (only the pure `actor.set(...)` ones — `set position` — are
+// valid on a live instance; trait/appearance blocks belong to the template).
+// The instance id is the Blockly block's own id, which is stable across edits.
 
 /** A JS import identifier for a project module path (`actors/coin` → `Coin`). */
 export const importVar = (path: string): string =>
@@ -6674,7 +6665,7 @@ const worldAddActor = defineBlock({
       // Named, so the placed actor is a variable and `actor` is left alone —
       // the body's `this actor` goes on meaning whatever encloses this block.
       // Unnamed, `const actor` shadows as it always has, which is the reading
-      // a `.world` file needs and every saved project already relies on.
+      // a screen's code needs.
       const binding = namesPlacedActor(block)
         ? generator.getVariableName(block.getFieldValue('VAR'))
         : 'actor';
@@ -6688,21 +6679,12 @@ const worldAddActor = defineBlock({
 });
 
 /**
- * Place many actors of one kind, arranged on the map (MAPS.md).
- *
- * The arrangement lives in the block (`mapPlacements`), so it is part of the
- * `.world` file — which is what lets a world place its OWN actors this way, the
- * ones no file can name. `edit…` opens the map canvas on them.
- *
- * Sugar over `add actor`, in the same sense a map file is: twenty `add actor`
- * stacks is not an arrangement, it is a wall of blocks.
- */
-/**
  * Take an actor out of the world, while the game is running.
  *
  * The other half of `add actor`, and the one a learner reaches for first: when
  * the player touches a coin, the coin goes. Runtime-only — there is nothing to
- * un-place under `define world`, where the actor has not been placed yet.
+ * un-place under `when this screen loads`, where the actor has not been placed
+ * yet.
  *
  * The subject is a socket rather than a dropdown because what is removed is an
  * INSTANCE, not a kind: the coin that was touched, the actor a loop is looking
@@ -7256,7 +7238,8 @@ export const GENERATED_WORLD_CALLS: string[] = [
   // A world ACTION, declared here because `defineActionBlock` writes
   // `${subject}.act(…)` and the scan looks for the literal `world.act(`. The
   // same blind spot the slot factories below have — and the one that let every
-  // rule's world actions be offered under `define world` for as long as
+  // rule's world actions be offered under `when this screen loads` for as long
+  // as
   // `WorldBuilder` had no `act` for them to land on.
   'act',
 ];
@@ -7289,10 +7272,10 @@ const defineSlotBlocks = (slot: {
     ],
     previousStatement: true,
     nextStatement: true,
-    // Chained under `define world` it is the image from the start; in a handler
-    // or a rule step it changes it mid-game. Both engine objects have the
-    // method, so there is no context guard. The options extension first, then
-    // the import one, so the latter wraps that validator rather than being
+    // Chained under `when this screen loads` it is the image from the start; in
+    // a handler or a rule step it changes it mid-game. Both engine objects have
+    // the method, so there is no context guard. The options extension first,
+    // then the import one, so the latter wraps that validator rather than being
     // wrapped by it (see appearanceImportField).
     extensions: [
       backgroundOptionsExtension,
@@ -7501,7 +7484,7 @@ const defineEffectBlocks = (owner: {
     ],
     previousStatement: true,
     nextStatement: true,
-    // Valid wherever `world` is bound, `define world` included. It used to be
+    // Valid wherever `world` is bound, a screen's setup included. It used to be
     // guarded there on the grounds that un-declaring something described once
     // has no meaning — true of a builder that accumulated state, false of one
     // that records calls: `add effect` then `remove effect` is a sequence, and
@@ -7608,10 +7591,8 @@ const noGenerator = {javascript: () => ''};
  * `define map ⟨Write⟩` — the root a map's workspace never had.
  *
  * EVERY OTHER BLOCKLY FILE OPENS WITH A DECLARATION. A `.rule` has `define
- * rule`, an `.actor` has `define actor`, a `.world` has `define world` — and a
- * `.map`'s workspace was bare hats floating on a canvas, which is a good part
- * of why a map and a world felt like the same kind of thing edited two ways
- * (specs/MAP_EVENTS_PLAN.md).
+ * rule` and an `.actor` has `define actor` — and a `.map`'s workspace was bare
+ * hats floating on a canvas (specs/MAP_EVENTS_PLAN.md).
  *
  * It buys three things. A map can NAME itself, where the name was read off the
  * file stem while every other kind declares its own. Its hats hang under
@@ -7913,11 +7894,11 @@ const worldDefineDrawing = defineBlock({
     'the actor, so two of one kind may be two sizes.',
   generator: {
     javascript(block, generator) {
-      // WHAT IT IS CHAINED UNDER DECIDES WHETHER IT IS ANYTHING, the same
-      // test `each frame` makes (`worldTraitStep`). A drawing belongs to a
-      // `define actor`; one chained under `define world`, or left unattached
-      // at the top of a file, would emit a call on an `actor` that is not
-      // bound and the module would throw as it loaded.
+      // WHAT IT IS CHAINED UNDER DECIDES WHETHER IT IS ANYTHING, the same test
+      // `each frame` makes (`worldTraitStep`). A drawing belongs to a `define
+      // actor`; one chained under `when this screen loads`, or left unattached
+      // at the top of a file, would emit a call on an `actor` that is not bound
+      // and the module would throw as it loaded.
       if (!definesActorFile(block)) {
         return '';
       }
@@ -10050,7 +10031,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_add_effect',
       'world_remove_effect',
       'world_this_actor',
-      // The 'any of this kind' counterpart, for a world file naming several.
+      // The 'any of this kind' counterpart, for a screen naming several.
       'world_actor_kind',
       'world_all_actors',
       // …and the one filter written more often than every other put together
@@ -10120,7 +10101,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     ],
   },
   // THE WORLD'S BLOCKS, BY TOPIC. One drawer held all of these, sixty-odd
-  // blocks from `define world` to the background's effects, and a learner
+  // blocks from setup rows to the background's effects, and a learner
   // looking for `set background` read past cameras, layers, tweens and
   // saving to find it. Each topic is a drawer of its own now, so a drawer's
   // name says what is in it, and a level or a profile can leave out a whole
@@ -10156,7 +10137,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // listening for typing hears them (specs/KEYBOARD_PLAN.md).
       'world_type',
       'world_press_key',
-      // Here as well as in Actor, because this is the category a world file is
+      // Here as well as in Actor, because this is the category a screen is
       // built from and `any ⟨Coin⟩` is what its blocks take as a subject. It is
       // also how "remove every coin" is written: `remove actor` over a value
       // holding several broadcasts, so the two blocks together are the bulk
@@ -10174,7 +10155,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
   {
     // Everything about maps: loading one, and — in a map's own workspaces,
     // where `ROOT_HOMES` lets them in — the blocks a map is written with
-    // (specs/MAP_FIRST.md). A world file sees the loading half only.
+    // (specs/MAP_FIRST.md). A screen sees the loading half only.
     name: 'Map',
     blocks: [
       // The World's map, replaced (specs/ONE_WORLD_PLAN.md).
@@ -10279,12 +10260,12 @@ const BUILTIN_RULE_CATEGORIES: ToolboxCategory[] = AUTHORING_RULES.map(
 /**
  * Blocks that reach into the engine, offered ONLY while editing a `.rule`.
  *
- * These are the primitives a rule needs to do what the engine used to do for it,
- * and that nothing else has any business with: the keyboard's frame boundary is
- * how the input rule turns held keys into press and release events, and a
- * `.world` or `.actor` that reached for it would be writing a rule in the wrong
- * file. Keeping them out of the everyday palette is also what lets the everyday
- * palette stay short.
+ * These are the primitives a rule needs to do what the engine used to do for
+ * it, and that nothing else has any business with: the keyboard's frame
+ * boundary is how the input rule turns held keys into press and release events,
+ * and a `.screen` or `.actor` that reached for it would be writing a rule in
+ * the wrong file. Keeping them out of the everyday palette is also what lets
+ * the everyday palette stay short.
  *
  * They are always REGISTERED (a file that uses one has to load anywhere); this
  * is only about what the toolbox lists.
@@ -10737,7 +10718,7 @@ function generateRulePalette(
    *
    * Raising an event is a rule-authoring act: an event is a rule's own
    * vocabulary, and the code that decides the moment it happened is the rule's
-   * — gravity is what knows a fall started. An `.actor` or a `.world` firing
+   * — gravity is what knows a fall started. An `.actor` or a `.screen` firing
    * one is announcing something it is not the authority on, and every listener
    * then believes it. So the blocks are offered while a `.rule` is being
    * edited, and nowhere else.
@@ -10752,8 +10733,8 @@ function generateRulePalette(
    * Which event hats to LIST, which is a question about what the file the
    * palette is for BINDS at the top of the module it generates.
    *
-   * - `all`: a `.world`. It binds `world` (it is the builder) and can reach any
-   *   actor through it, so both kinds of hat run.
+   * - `all`: a `.screen`. It binds `world` (it is the builder) and can reach
+   * any actor through it, so both kinds of hat run.
    * - `actorOnly`: an `.actor`. The module is `const actor = …` and nothing
    *   else, so a WORLD event's hat — which generates `world.on(…)` — is a
    *   ReferenceError the moment the file is imported, and the whole project
@@ -10971,16 +10952,6 @@ export function buildDomainPalette(
      * drawer is hoisted under `Current`.
      */
     ownActorModule?: string;
-    /**
-     * The `.world` module being edited, when one is — `worlds/main`.
-     *
-     * ONLY the hoist asks, which is why it is separate from the actor's above
-     * rather than folded into it: a world declaring state of its own gets a
-     * drawer for it exactly as an actor does (`screenOwnMeta`, and both
-     * arrive in `ownProperties`), and while that world is open, that drawer is
-     * the one being worked in. Nothing else about the palette turns on it.
-     */
-    ownWorldModule?: string;
     /**
      * The map whose workspace this palette is for — a placement's or the
      * map's own (specs/MAP_FIRST.md). Its drawer is hoisted, and its `emit`
@@ -11211,8 +11182,7 @@ export function buildDomainPalette(
       // The Main Screen's too, which holds the same vocabulary as data
       // (specs/SCREEN_MAP_PLAN.md, step 4).
       (options.ownMapModule !== undefined &&
-        (actor.modulePath.startsWith('worlds/') ||
-          actor.modulePath.startsWith('screens/')));
+        actor.modulePath.startsWith('screens/'));
     const blocks: string[] = [];
     const seen = new Set<string>();
     for (
@@ -11239,9 +11209,8 @@ export function buildDomainPalette(
    *
    * By NAME, because that is what a category is keyed by here — the rule's or
    * the actor's, matched to the module the editor said it has open. A file
-   * that declares nothing has no drawer to lift, and a `.world` (and the
-   * headless generator, which has no one file) names neither module, so both
-   * fall through with nothing hoisted.
+   * that declares nothing has no drawer to lift, and the headless generator,
+   * which has no one file, names neither module and hoists nothing.
    */
   const hoist = (
     categories: ToolboxCategory[],
@@ -11259,10 +11228,9 @@ export function buildDomainPalette(
         };
   };
 
-  // An actor's drawer, or a world's own state — the two kinds of thing
+  // An actor's drawer, or a screen's own state — the two kinds of thing
   // `ownProperties` holds, and a file is at most one of them.
-  const ownModule =
-    options.ownActorModule ?? options.ownWorldModule ?? options.ownMapModule;
+  const ownModule = options.ownActorModule ?? options.ownMapModule;
   const {rest: otherActors, current: currentActor} = hoist(
     actorCategories,
     ownModule === undefined

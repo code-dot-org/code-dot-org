@@ -75,7 +75,7 @@ const aWorld = () => {
   ];
   return {
     // The game's own code (`markCode`), where a kind's hat binds `this actor`.
-    holdsCodeOf: 'world',
+    holdsCodeOf: 'game',
     getTopBlocks: () => blocks,
     getBlockById: (wanted: string) =>
       blocks.find(block => block.id === wanted) ?? null,

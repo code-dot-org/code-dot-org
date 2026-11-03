@@ -3,7 +3,7 @@
 import * as Blockly from 'blockly/core';
 import {describe, expect, it} from 'vitest';
 
-import {definesRule, definesWorld, markCode} from '../workspaceRoots';
+import {definesRule, holdsGameCode, markCode} from '../workspaceRoots';
 
 describe('a rule’s workspace', () => {
   it('is one a body of a rule is written on, with no `define rule` in it', () => {
@@ -20,13 +20,12 @@ describe('a rule’s workspace', () => {
 });
 
 describe('the Main Screen’s code', () => {
-  it('is a world’s, with no `define world` in it', () => {
-    // So a hat there starts on a kind, as one in a world does
-    // (`eventSubject`).
+  it('is the game’s, though no root says so', () => {
+    // So a hat there starts on a kind (`eventSubject`).
     const workspace = new Blockly.Workspace();
-    expect(definesWorld(workspace)).toBe(false);
-    markCode(workspace, 'world');
-    expect(definesWorld(workspace)).toBe(true);
+    expect(holdsGameCode(workspace)).toBe(false);
+    markCode(workspace, 'game');
+    expect(holdsGameCode(workspace)).toBe(true);
     expect(definesRule(workspace)).toBe(false);
     workspace.dispose();
   });

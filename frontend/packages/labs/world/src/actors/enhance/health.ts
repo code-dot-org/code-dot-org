@@ -33,13 +33,13 @@
 // is a block scope visible in the `add actor` body and nowhere else. A
 // property is what an actor has that outlives a statement.
 //
-// NO WORLD IS TOUCHED, and that is the whole of the second draft. The first one
-// placed the bar in every `.world` and pointed it with `any ⟨kind⟩`, which was
-// wrong twice: giving one actor a bar meant editing files about levels, and two
-// of that actor shared one bar between them, because "any" is one actor however
-// many there are. An actor that hears its own creation adds its own bar, so a
-// crawler and a player and six more crawlers each get one and no world knows
-// anything about it.
+// NO SCREEN IS TOUCHED, and that is the whole of the second draft. The first
+// one placed the bar in every `.world` and pointed it with `any ⟨kind⟩`, which
+// was wrong twice: giving one actor a bar meant editing files about levels, and
+// two of that actor shared one bar between them, because "any" is one actor
+// however many there are. An actor that hears its own creation adds its own
+// bar, so a crawler and a player and six more crawlers each get one and no
+// world knows anything about it.
 //
 // That needed an event the engine did not raise: `is created`, on the Space
 // rule, queued like every other so a handler adding an actor is not growing a

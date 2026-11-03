@@ -102,7 +102,7 @@ describe('an actor’s own properties', () => {
 
     const drawer = (editing?: string) => {
       const {toolbox} = buildDomainPalette([], {
-        fileKind: editing ? 'actor' : 'world',
+        fileKind: editing ? 'actor' : 'screen',
         ownProperties: [meta],
         ownActorModule: editing,
       });

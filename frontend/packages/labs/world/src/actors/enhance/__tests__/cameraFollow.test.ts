@@ -17,7 +17,7 @@ import {stockActorById} from '../../stock';
 import {cameraFollowEnhancement, followedIn} from '../cameraFollow';
 
 /** The game being enhanced, and the two answers the project can give. */
-const GAME = {kind: 'world' as const, path: 'screens/main', name: 'My Game'};
+const GAME = {kind: 'game' as const, path: 'screens/main', name: 'My Game'};
 const PLAYER = 'actors/player';
 const GROUND = 'actors/ground';
 

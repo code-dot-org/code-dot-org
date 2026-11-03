@@ -40,7 +40,7 @@ const within = (...types: string[]): never => {
 /** A file's workspace: the game's own code, or one whose root is `root`. */
 const fileOf = (root: string) =>
   root === 'world'
-    ? {holdsCodeOf: 'world', getTopBlocks: () => []}
+    ? {holdsCodeOf: 'game', getTopBlocks: () => []}
     : {getTopBlocks: () => [{type: root}]};
 
 /** The fake block, in the game's code or an actor's file. */

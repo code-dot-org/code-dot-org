@@ -266,8 +266,8 @@ export class WorldBuilder {
   /**
    * Perform a world action. See {@link World.act}.
    *
-   * THE METHOD THAT WAS NOT HERE, and the reason `add ⟨1⟩ to the score` under
-   * `define world` died at run time with `world.act is not a function`: a world
+   * THE METHOD THAT WAS NOT HERE, and the reason `add ⟨1⟩ to the score` in a
+   * screen's setup died at run time with `world.act is not a function`: a world
    * action generates `world.act(…)`, `world` is this builder in the Main
    * Screen's setup, and `worldContextExtension` saw a bound `world` and said
    * nothing. The palette offered a block that could not run where it offered it
@@ -436,8 +436,8 @@ export class WorldBuilder {
 
   /**
    * Pause, resume, and ask — the world's own (`World.pause`), reachable from
-   * the builder because a block may say them under `define world` as well as
-   * in a handler: a world that opens on its title screen starts paused.
+   * the builder because a block may say them under `when this screen loads` as
+   * well as in a handler: a world that opens on its title screen starts paused.
    */
   pause(): this {
     this.getWorld().pause();
@@ -454,10 +454,11 @@ export class WorldBuilder {
   }
 
   /**
-   * The world's spaces, forwarded (specs/VIEWPORT_PLAN.md): a map registered
-   * by path, a map loaded into a Viewport or taken out of it, and the actor
-   * in hand a generated loop keeps. All of them are said in handlers, where
-   * `world` is the live World, and under `define world`, where it is this.
+   * The world's spaces, forwarded (specs/VIEWPORT_PLAN.md): a map registered by
+   * path, a map loaded into a Viewport or taken out of it, and the actor in
+   * hand a generated loop keeps. All of them are said in handlers, where
+   * `world` is the live World, and under `when this screen loads`, where it is
+   * this.
    */
   defineMap(path: string, map: WorldMap): this {
     // Declarative, like `define`: recorded, and handed over with the
@@ -655,7 +656,7 @@ export class WorldBuilder {
    * answerable while it runs as while it is described, so `set size of map`
    * generates one call that works either side of the seam. A builder-only name
    * would have made the block throw the moment it appeared anywhere but a
-   * `define world` body.
+   * screen's setup.
    *
    * Deferred, like every other statement about the world rather than about its
    * construction, so it replays into a world rebuilt from this description.
@@ -760,7 +761,8 @@ export class WorldBuilder {
    * Place the actors a Map describes. See {@link World.loadMap}.
    *
    * Named as the World names it, because one block calls whichever object it
-   * lands on: `load map` means the same under `define world` and in a handler. What this adds is the REGISTRY — a builder's
+   * lands on: `load map` means the same under `when this screen loads` and in a
+   * handler. What this adds is the REGISTRY — a builder's
    * `define` records templates before there is a world to record them in, so
    * they are handed over here, on the way past.
    */
@@ -894,8 +896,8 @@ export class WorldBuilder {
       ownProperties: this.own,
     });
     // What was recorded before it existed — every template, every map — so a
-    // Viewport placed under `define world` finds its map registered on the
-    // first tick (`World.showHeldMap`).
+    // Viewport placed under `when this screen loads` finds its map registered
+    // on the first tick (`World.showHeldMap`).
     //
     // BEFORE THE LOG, which is the whole of why this is here rather than
     // around the call that builds the world. A deferred call may NEED one of

@@ -14,11 +14,6 @@
 // looking at an actor's blocks and wanting it to have health is already
 // pointing at the actor.
 //
-// AND ON THE WORLD, because not every enhancement is an actor's. A camera that
-// follows an actor is defined in a world and looked through by a world; the
-// actor appears in it as a value. The shelf shows what suits whichever was
-// clicked (`actors/enhance/enhancements`).
-//
 // IT KNOWS WHICH ACTOR. An actor is named by its file, which the workspace
 // was told when it opened (`editingRule`); a `define actor` in a workspace
 // that is not editing an actor file is about nobody, and gets no button.
@@ -38,7 +33,7 @@ import {FieldButton} from '@code-dot-org/blockly/fields/fieldButton';
 
 import {requestActorEnhance} from '../../actors/enhance/actorEnhance';
 import type {EnhanceTarget} from '../../actors/enhance/enhancements';
-import {editingActorModule, editingFileModule} from '../editingRule';
+import {editingActorModule} from '../editingRule';
 
 import {glyphIcon} from './glyphIcon';
 import {addOnChange} from './onChange';
@@ -70,8 +65,6 @@ const SPARKLES_FREE = '';
 export interface EnhanceContext {
   /** The `.actor` this workspace is editing, if it is editing one. */
   actorModule?: string;
-  /** The file it is editing, whatever kind. */
-  fileModule?: string;
   /** What the block calls the actor, which is what the dialog's title says. */
   name: string;
   /** Whether the block is a preview in a flyout rather than in the file. */
@@ -105,7 +98,6 @@ function contextOf(block: Block): EnhanceContext {
   const workspace = block.workspace as WorkspaceSvg | undefined;
   return {
     actorModule: editingActorModule(block),
-    fileModule: editingFileModule(block),
     // Read at click time as well as here: the field is editable, and the name
     // on screen is the one the learner means.
     name: String(block.getFieldValue('NAME') ?? '').trim(),

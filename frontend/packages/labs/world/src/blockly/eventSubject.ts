@@ -1,16 +1,16 @@
 // Whose event a handler is (specs/EVENTS.md, "Whose event").
 //
-// An actor's event block says whose event it hears in words, not in a
-// socket. In an actor file, and in the code one placed actor carries on a
-// map, it is always the actor the code is about: `when this actor starts
-// falling`. In a world file it is every actor of a kind: `when any ⟨Coin▾⟩
-// is clicked`, registered on the kind so that it reaches the coins placed
-// later too.
+// An actor's event block says whose event it hears in words, not in a socket.
+// In an actor file, and in the code one placed actor carries on a map, it is
+// always the actor the code is about: `when this actor starts falling`. In the
+// game's code, the Main Screen's, it is every actor of a kind: `when any
+// ⟨Coin▾⟩ is clicked`, registered on the kind so that it reaches the coins
+// placed later too.
 //
-// THE SOCKET THIS REPLACES took any actor value, and in every project the
-// lab has it held exactly one of those two, by file. What else it would take
-// meant nothing useful — an actor in a variable, read once when the world is
-// built — and one thing broken: `this actor` in a world, which names an actor
+// THE SOCKET THIS REPLACES took any actor value, and in every project the lab
+// has it held exactly one of those two, by file. What else it would take meant
+// nothing useful — an actor in a variable, read once when the world is built —
+// and one thing broken: `this actor` in the game's code, which names an actor
 // nobody declared there and stopped the project as it loaded.
 //
 // ONE STORED FIELD, `SUBJECT`: empty means this actor, a kind's module path
@@ -42,7 +42,7 @@ import {
 } from './moduleOptions';
 import type {PropertyMeta} from './ruleMeta';
 import {refModule} from './ruleRegistry';
-import {definesWorld, workspaceOfBlock} from './workspaceRoots';
+import {holdsGameCode, workspaceOfBlock} from './workspaceRoots';
 
 /** The stored field: empty for this actor, a kind's module path otherwise. */
 export const SUBJECT_FIELD = 'SUBJECT';
@@ -81,20 +81,20 @@ export const subjectKindOf = (block: Block): string | undefined => {
   return value && !subjectProperties.has(value) ? value : undefined;
 };
 
-/** Whether the block sits in a world file, asking through a flyout. */
-const inWorld = (block: Block): boolean =>
-  definesWorld(workspaceOfBlock(block));
+/** Whether the block is in the game's code, asking through a flyout. */
+const inGameCode = (block: Block): boolean =>
+  holdsGameCode(workspaceOfBlock(block));
 
 /**
- * What the dropdown offers: the project's kinds, after an entry for the
- * empty value — `this actor` where that is the answer, and a prompt to pick
- * one in a world, where it is not. The empty value is always listed, so the
- * dropdown can name it, and so a handler pasted from one kind of file into
- * the other can be set right from the menu.
+ * What the dropdown offers: the project's kinds, after an entry for the empty
+ * value — `this actor` where that is the answer, and a prompt to pick one in
+ * the game's code, where it is not. The empty value is always listed, so the
+ * dropdown can name it, and so a handler pasted from one kind of file into the
+ * other can be set right from the menu.
  */
 export const subjectOptions = (field?: FieldDropdown): DropdownOptions => {
   const block = field?.getSourceBlock();
-  const empty = block && inWorld(block) ? '(pick a kind)' : 'this actor';
+  const empty = block && inGameCode(block) ? '(pick a kind)' : 'this actor';
   return [
     [translate(empty), ''],
     // `actorFieldOptions` says "(no actors yet)" with the empty value when
@@ -148,8 +148,8 @@ const setVisible = (block: Block, input: string, visible: boolean) => {
 };
 
 /**
- * Show the words that say what is stored: `this actor`, or `any` and the
- * kind. The kind also shows for an empty value in a world, where the empty
+ * Show the words that say what is stored: `this actor`, or `any` and the kind.
+ * The kind also shows for an empty value in the game's code, where the empty
  * value is a mistake and the dropdown is how it is put right.
  *
  * WHOLE INPUTS, not fields: Blockly lays out a hidden field's spacing as
@@ -162,15 +162,15 @@ export function syncSubject(block: Block): void {
   }
   const kind = subjectKindOf(block) ?? subjectPropertyOf(block)?.name;
   // The menu, for `this actor` too, once there is a property to change it to.
-  const picking = !kind && (inWorld(block) || offersProperty(block));
+  const picking = !kind && (inGameCode(block) || offersProperty(block));
   setVisible(block, THIS_INPUT, !kind && !picking);
   setVisible(block, ANY_INPUT, Boolean(kind) || picking);
   // `any` before a kind, and nothing before a property, which names one, or
-  // before `this actor` outside a world.
+  // before `this actor` outside the game's code.
   block
     .getField(ANY_FIELD)
     ?.setValue(
-      subjectPropertyOf(block) || (picking && !inWorld(block))
+      subjectPropertyOf(block) || (picking && !inGameCode(block))
         ? ''
         : translate('any'),
     );
@@ -178,9 +178,9 @@ export function syncSubject(block: Block): void {
 }
 
 /**
- * On every actor event block: the live list of kinds, the words in the
- * reader's language, and the starting subject for where it is made — a kind
- * in a world, this actor anywhere else. Loading a block sets its fields AFTER
+ * On every actor event block: the live list of kinds, the words in the reader's
+ * language, and the starting subject for where it is made — a kind in the
+ * game's code, this actor anywhere else. Loading a block sets its fields AFTER
  * this runs, so a stored subject replaces the starting one.
  */
 export const eventSubjectExtension: Extension = defineExtension(
@@ -195,7 +195,7 @@ export const eventSubjectExtension: Extension = defineExtension(
       this.getField(THIS_FIELD)?.setValue(translate('this actor'));
       this.getField(ANY_FIELD)?.setValue(translate('any'));
       const kinds = actorFieldOptions().filter(([, value]) => value !== '');
-      subject.setValue(inWorld(this) ? (kinds[0]?.[1] ?? '') : '');
+      subject.setValue(inGameCode(this) ? (kinds[0]?.[1] ?? '') : '');
       // Whatever sets the value — the menu, a load, an undo — the words
       // follow it.
       const field = subject as unknown as {

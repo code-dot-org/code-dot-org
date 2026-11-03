@@ -118,12 +118,8 @@ const place = (
 });
 
 /**
- * The main map's shape: the placements, and no workspace.
- *
- * A `.map` has a workspace of its own, opening with its `define map` root, and
- * a world's map does not, because the world's workspace IS its workspace
- * (`mapEditor/worldDocument`, `hasMapScript`). So home has nothing to declare
- * and its button goes to the write screen itself.
+ * The main map's shape: the placements, and no workspace. Home has nothing
+ * to declare, and its button goes to the write screen itself.
  */
 const mainMap = (actors: object[]) => ({
   type: 'map' as const,

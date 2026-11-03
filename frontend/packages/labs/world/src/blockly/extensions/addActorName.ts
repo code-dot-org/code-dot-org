@@ -1,8 +1,8 @@
 // Naming the actor `add actor` places, where there is another actor to shadow.
 //
 // `add actor` compiles to a block scope with its own `const actor`, so inside
-// its body `this actor` is the NEW actor. That is the only reading a `.world`
-// file needs — there is no other actor to mean — but in an `.actor` file it
+// its body `this actor` is the NEW actor. That is the only reading a screen's
+// code needs — there is no other actor to mean — but in an `.actor` file it
 // shadows the one whose blocks these are, and "put an energy ball in front of
 // me" cannot be written at all: both `this actor`s are the ball, and the
 // arithmetic silently reads the ball's own position twice.

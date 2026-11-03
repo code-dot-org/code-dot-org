@@ -11,8 +11,8 @@ import {useSources} from '@code-dot-org/lab/contexts';
 
 import {filePath} from '../runtime/projectFiles';
 
+import {screenDocumentFor} from './mapDocument';
 import {MapEditor} from './MapEditor';
-import {screenDocumentFor} from './worldDocument';
 
 export const ScreenEditor = (props: CustomEditorProps) => {
   const {currentSources} = useSources<MultiFileSource>();

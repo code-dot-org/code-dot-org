@@ -416,12 +416,13 @@ class ToolboxHeading extends Blockly.ToolboxItem {
 // that first injection is text nobody reads.
 //
 // The plugin's `initialize` runs when a workspace that lists it is built, which
-// is when a `.rule` / `.actor` / `.world` file is opened — and by then the
-// lab has already injected a workspace: `BlocklyGenerator` mounts an offscreen
-// one for code generation as soon as the lab loads, whatever file the learner
-// happens to be looking at. Open the lab on a Blockly file and the two arrive
-// close enough together that the styling landed; open it on the map editor,
-// then click through to a rule, and the toolbox came up in Blockly's own gray.
+// is when a `.rule` / `.actor` / `.map` / `.screen` file is opened — and by
+// then the lab has already injected a workspace: `BlocklyGenerator` mounts an
+// offscreen one for code generation as soon as the lab loads, whatever file the
+// learner happens to be looking at. Open the lab on a Blockly file and the two
+// arrive close enough together that the styling landed; open it on the map
+// editor, then click through to a rule, and the toolbox came up in Blockly's
+// own gray.
 //
 // So the registration happens when this module is loaded, which `config.ts`
 // does at app load through `BlocklyFileEditor` — before anything can inject.

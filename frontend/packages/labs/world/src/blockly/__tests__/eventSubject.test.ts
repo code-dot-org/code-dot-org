@@ -58,7 +58,7 @@ beforeAll(() => {
 const handlerIn = (root: string, saved?: object) => {
   const workspace = new Blockly.Workspace();
   if (root === 'world') {
-    markCode(workspace, 'world');
+    markCode(workspace, 'game');
   } else {
     workspace.newBlock(root);
   }

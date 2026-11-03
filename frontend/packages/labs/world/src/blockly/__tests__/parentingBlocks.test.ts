@@ -100,8 +100,8 @@ describe('the palette', () => {
     );
   };
 
-  it('offers parenting under Space, in an actor file and in a world', () => {
-    for (const kind of ['actor', 'world'] as const) {
+  it('offers parenting under Space, in an actor file and in a screen', () => {
+    for (const kind of ['actor', 'screen'] as const) {
       const offered = spaceBlocks(kind);
       for (const type of [
         'world_set_Space_ParentProperty',
