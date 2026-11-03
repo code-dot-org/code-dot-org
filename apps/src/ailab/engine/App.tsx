@@ -243,7 +243,7 @@ export interface AppProps {
   onTrained?: (accuracy: number) => void;
   /** Optional callback invoked with whether the lab is loading its dataset, a saved project, or a pretrained model. */
   onLoadingChange?: (isLoading: boolean) => void;
-  /** Saves a PNG of the decision tree under a name built from `baseName`. Without it, the tree can only be downloaded. */
+  /** Without it, the decision tree image can only be downloaded. */
   saveImageToBackpack?: SaveImageToBackpack;
 }
 

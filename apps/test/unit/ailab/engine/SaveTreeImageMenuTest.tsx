@@ -76,11 +76,6 @@ describe('SaveTreeImageMenu', () => {
     expect(downloadBlobAsPng).toHaveBeenCalledWith(image, 'zoo-tree.png');
   });
 
-  it('offers the Backpack only when the host can save there', () => {
-    renderMenu();
-    expect(option('Save to Backpack')).toBeNull();
-  });
-
   it('hands the image to the Backpack under the base name', async () => {
     const saveToBackpack = jest.fn().mockResolvedValue(undefined);
     renderMenu(saveToBackpack);

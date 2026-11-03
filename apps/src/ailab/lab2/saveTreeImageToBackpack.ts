@@ -33,7 +33,6 @@ const saveUnderFreeName = async (
     return;
   }
 
-  // Never replaces a file: a student comparing trees keeps every one they save.
   const fileName = uniqueFileName(`${baseName}.png`, takenNames);
   notifySaving(notify, fileName);
   try {

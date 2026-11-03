@@ -16,7 +16,6 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
 
 type SaveOutcome = 'success' | 'error' | 'reject';
 
-// Stand-in for saveBlobFile, which reports through callbacks.
 const saveBlobFileMock = (outcome: SaveOutcome) =>
   jest.fn(
     async (
