@@ -57,9 +57,6 @@ class AskAiTimeoutError extends Error {
   }
 }
 
-/**
- * What to show a student when askAiText rejects.
- */
 export function askAiErrorMessage(error: unknown): string {
   if (error instanceof AskAiError) {
     return error.phase === 'prompt'

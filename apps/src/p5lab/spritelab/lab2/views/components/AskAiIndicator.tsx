@@ -19,7 +19,7 @@ interface AskAiIndicatorProps {
 }
 
 /**
- * Renders a spinner for an in-flight AI request, and a transient failure message
+ * Renders a spinner for an in-flight AI request, or a transient failure message
  * if a request fails.
  */
 const AskAiIndicator: React.FunctionComponent<AskAiIndicatorProps> = ({
