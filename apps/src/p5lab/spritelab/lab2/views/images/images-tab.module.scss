@@ -259,8 +259,11 @@ $pad: 16px;
   object-fit: contain;
 }
 
+// Never squeezed: the frame is sized from this slot's height, so a slot
+// that gave way would let its contents run off the column's bottom.
 .under {
   display: flex;
+  flex: none;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
