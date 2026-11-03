@@ -37,6 +37,30 @@ $list-share: 0.2;
   container-type: inline-size;
 }
 
+// A tip over the frame's bottom part while a picture is made; the frame
+// clips it to its corners.
+.frameNote {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background-color: rgb(0 0 0 / 65%);
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.frameNoteIcon {
+  flex: none;
+  font-size: 22px;
+}
+
 // The pane's header, the strip's twin, across the top of the pane column.
 .panelHeader {
   position: absolute;

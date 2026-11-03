@@ -41,6 +41,7 @@ import StripFrame from '../StripFrame';
 
 import AlternativeThumbs from './AlternativeThumbs';
 import GeneratingSteps from './GeneratingSteps';
+import {pickTip} from './generationTips';
 import {PixelReveal, SparkleBurst} from './PixelReveal';
 import SentenceReadOnly from './SentenceReadOnly';
 import {
@@ -121,6 +122,9 @@ export interface SentenceSceneParts {
   error: React.ReactNode;
   /** The model's steps, while generating. */
   progress: React.ReactNode;
+  /** A tip about how AI makes pictures, while generating; one per picture,
+      never the one before. */
+  tip: string | null;
   /** The rating: offered while a fresh picture (or, when the level rates
       every one, any picture) is in the frame. */
   rating: {
@@ -224,6 +228,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const makesSet = canAnimate && animated && !typedPrompt;
 
   const [mode, setMode] = useState<Mode>('edit');
+  const [tip, setTip] = useState<string | null>(null);
   // The picture made last, showing in the frame; it is the image.
   const [chosenPicture, setChosenPicture] = useState<GeneratedPicture | null>(
     null
@@ -282,6 +287,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     );
     onGenerateStart?.();
     setMode('generating');
+    setTip(current => pickTip(current));
     setSettling(false);
     setVerdict(null);
     setRatingDismissed(false);
@@ -616,6 +622,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         animatedChoice: animatedChoiceNode,
         error: errorLine,
         progress: progressNode,
+        tip: generating ? tip : null,
         rating: {
           offered: ratingOffered,
           required: ratingRequired,

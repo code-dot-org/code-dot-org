@@ -2,6 +2,7 @@
 // about to be made, with the session's other pictures down its left and
 // the way behind the scenes under it.
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
@@ -30,6 +31,8 @@ interface ImageFrameProps {
   above?: React.ReactNode;
   /** Over the frame, positioned by its own class. */
   overlay?: React.ReactNode;
+  /** A line over the frame's bottom part: a tip while a picture is made. */
+  note?: React.ReactNode;
   /** Under the frame. */
   under?: React.ReactNode;
 }
@@ -45,6 +48,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   workspaceClassName,
   above,
   overlay,
+  note,
   under,
 }) => {
   // The frame is a square as large as the column allows, which a flex
@@ -134,6 +138,16 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
                 ) : null)}
             </div>
             {overlay}
+            {note && (
+              <aside className={styles.frameNote} aria-label="Did you know?">
+                <FontAwesomeV6Icon
+                  iconName="lightbulb"
+                  className={styles.frameNoteIcon}
+                  aria-hidden
+                />
+                <span>{note}</span>
+              </aside>
+            )}
           </div>
         </div>
         <div ref={underRef} className={styles.under}>
