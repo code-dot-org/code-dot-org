@@ -469,7 +469,9 @@ describe('StepPlayer', () => {
           <PathwayContext.Provider
             value={
               {
+                pathway: {checkpoints: []},
                 progress,
+                statusMap: {},
                 checkpoint: planned,
                 buildRequested,
                 setBuildRequested,

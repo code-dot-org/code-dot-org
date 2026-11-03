@@ -1,13 +1,14 @@
-// The map screen: a bar with the pathway's title, and under it the
-// checkpoint map with a side panel that shows the project card, or the
-// focused checkpoint's card.
+// The map screen: a bar with the pathway's title, and under it the labs'
+// resource rail, the checkpoint map and a side panel that shows the project
+// card, or the focused checkpoint's card.
 
-import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import {LevelProperties} from '@cdo/apps/lab2/types';
+import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 import {sendAdaptiveEvent} from '../metricsHelpers';
@@ -41,13 +42,10 @@ import {tryGetLocalStorage} from '@cdo/apps/utils';
 // Percentages of the size at which the whole map fits.
 const ZOOM_PERCENTAGES = [100, 150, 200, 300];
 
-const THEME_ITEMS = [
-  {value: 'Light', text: 'Light'},
-  {value: 'Dark', text: 'Dark'},
-];
-
 interface MapScreenProps {
   pathway: Pathway;
+  /** The adaptive level's own properties, which the resource rail reads. */
+  levelProperties: LevelProperties;
   statusMap: CheckpointStatusMap;
   /** What the student has shown, for explaining a skipped checkpoint. */
   evidence: PathwayEvidence;
@@ -61,6 +59,7 @@ interface MapScreenProps {
 
 const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   pathway,
+  levelProperties,
   statusMap,
   evidence,
   focusId,
@@ -69,7 +68,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   onWorkOnProject,
   hasSkippedCheckpoints,
 }) => {
-  const {theme, setTheme} = useTheme();
+  const themeSetting = useThemeSetting('adaptive');
   // The project manager lives only while the map shows, so it never races a
   // step's manager on the same channel.
   const projectState = usePathwayProject(pathway);
@@ -205,6 +204,15 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
         <MuiTypography variant="strong">{pathway.title}</MuiTypography>
       </header>
       <div className={styles.mapBody}>
+        <ResourcePanel
+          levelProperties={levelProperties}
+          hasRun={false}
+          hasEdited={false}
+          isRunning={false}
+          // Only the rail shows, so the state above does not matter.
+          sidebarOnly
+          settings={[themeSetting]}
+        />
         <div
           id="adaptive-tour-map"
           className={styles.mapArea}
@@ -281,17 +289,6 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               onWorkOnProject={onWorkOnProject}
             />
           )}
-          <div className={styles.sideFooter}>
-            <SimpleDropdown
-              name="adaptive-theme"
-              labelText="Theme"
-              isLabelVisible={false}
-              items={THEME_ITEMS}
-              selectedValue={theme}
-              onChange={e => setTheme(e.target.value as Theme)}
-              size="s"
-            />
-          </div>
         </aside>
       </div>
     </div>
