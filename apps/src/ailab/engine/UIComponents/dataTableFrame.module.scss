@@ -29,6 +29,8 @@ $visible-table-height: ($visible-rows + 1) * mixins.$data-table-row-height;
 
 // Basis 0, not flex: 1's 0%, so the frame's minimum is the action row at any height plus this min-height.
 .scroller {
+  @include mixins.data-table-flush-edges;
+
   flex: 1 1 0;
   min-height: ($min-visible-rows + 1) * mixins.$data-table-row-height;
   overflow: auto;
