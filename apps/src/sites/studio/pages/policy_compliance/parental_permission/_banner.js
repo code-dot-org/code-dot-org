@@ -11,9 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <Provider store={getStore()}>
       <ParentalPermissionBanner lockoutDate={getScriptData('lockoutDate')} />
     </Provider>,
-    document.getElementById('parental-permission-banner-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('parental-permission-banner-container')
   );
 });

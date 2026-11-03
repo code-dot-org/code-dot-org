@@ -1,0 +1,12 @@
+name 'aif-y2-natural-language-processing-lesson9-level1-v2-2026'
+display_name 'Computing Bigrams'
+description 'Choose a context in which to create bigrams.'
+
+sublevels
+level 'aif-y2-natural-language-processing-lesson9-level1-choice1-2026'
+level 'aif-y2-natural-language-processing-lesson9-level1-choice2-2026'
+level 'aif-y2-natural-language-processing-lesson9-level1-choice3-2026'
+
+uses_lab2
+
+navigation_type 'next_level'

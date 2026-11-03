@@ -2,6 +2,7 @@ import category from '@cdo/apps/blockly/blockDefinitions/category';
 import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import askAi from './askAi';
 import beginsBehavior from './beginsBehavior';
 import burst from './burst';
 import goToExternalScene from './goToExternalScene';
@@ -16,6 +17,7 @@ import patrollingLeftRight from './patrollingLeftRight';
 import placeholder from './placeholder';
 import playMusic from './playMusic';
 import playSound from './playSound';
+import playSoundEffect from './playSoundEffect';
 import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
@@ -35,6 +37,7 @@ const labBlockDefinitions: {
   goToScene,
   playMusic,
   playSound,
+  playSoundEffect,
   whenRun,
   whenPlayer,
   goToExternalScene,
@@ -53,6 +56,7 @@ const labBlockDefinitions: {
   setWeather,
   burst,
   thePlayer,
+  askAi,
   placeholder,
   // Toolbox edit mode's category marker blocks.
   category,

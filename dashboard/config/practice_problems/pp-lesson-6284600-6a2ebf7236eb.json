@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-6284600-6a2ebf7236eb",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms related to decomposition with their correct descriptions.",
+  "solution": [
+    {
+      "option": "Decomposition",
+      "correct": "Breaking a complex problem into smaller parts"
+    },
+    {
+      "option": "Pseudocode",
+      "correct": "Informal high-level description of a program's logic"
+    },
+    {
+      "option": "Function",
+      "correct": "A reusable block of code that performs a specific task"
+    },
+    {
+      "option": "Revision",
+      "correct": "The process of improving code based on feedback"
+    }
+  ],
+  "objective_keys": [
+    "cd84edd2-ccda-477d-a7ca-3c26489d40ca",
+    "8e34ee97-6ee5-4e56-99ea-926819fff5bb"
+  ]
+}

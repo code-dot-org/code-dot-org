@@ -91,20 +91,27 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     const state = this.store.getState();
     const candidate = this.candidateFor(hyperparameters);
 
-    if (
-      candidate === undefined ||
-      !this.candidates(state).includes(candidate)
-    ) {
+    if (candidate === undefined) {
       return undefined;
     }
 
-    const model = this.buildModel(state, candidate);
+    try {
+      const model = this.buildModel(state, candidate);
 
-    return this.recordModel({
-      model,
-      predictedLabels: this.predictRows(model, state.accuracyCheckExamples),
-      candidate,
-    });
+      return this.recordModel({
+        model,
+        predictedLabels: this.predictRows(model, state.accuracyCheckExamples),
+        candidate,
+      });
+    } catch (error) {
+      /*
+        A saved run describes a model this trainer built once, which is no
+        promise it can be built again: the dataset may have changed under it,
+        or the file may have been edited by hand.
+      */
+      console.error('AI Lab could not rebuild a saved model.', error);
+      return undefined;
+    }
   }
 
   // Stores what grading a model needs, then describes the run it belongs to.

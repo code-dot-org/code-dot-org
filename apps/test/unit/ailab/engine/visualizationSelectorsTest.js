@@ -13,8 +13,10 @@ import {
 
 import {
   allNumericalState,
+  allNumericalRows,
   allNumericalProject,
   classificationState,
+  classificationRows,
   classificationProject,
 } from './testData';
 
@@ -46,7 +48,7 @@ describe('getScatterPlotData', () => {
       labelColumnIsNumerical,
       allNumericalState.currentColumn,
       currentColumnIsNumerical,
-      allNumericalState.data
+      allNumericalRows
     );
     expect(expected).toEqual(scatterPlotData);
   });
@@ -64,7 +66,7 @@ describe('getCrossTabData', () => {
       labelColumnIsCategorical,
       classificationState.currentColumn,
       currentColumnIsCategorical,
-      classificationState.data,
+      classificationRows,
       getUniqueOptionsLabelColumn
     );
     expect(crossTabData.labelName).toEqual('play');
@@ -77,7 +79,7 @@ describe('getting category options', () => {
   test('gets unique options label column', async () => {
     const uniqueOptions = getUniqueOptionsLabelColumn.resultFunc(
       classificationProject.labelColumn,
-      classificationState.data
+      classificationRows
     );
     expect(uniqueOptions).toEqual(['no', 'yes']);
   });

@@ -2,7 +2,11 @@
 // step. Pure: the step passes the result to the lab as the level's system
 // prompt, ahead of the lab's own tutor prompt.
 
-import {CheckpointStatus, CheckpointStatusMap} from '../progress/model';
+import {
+  CheckpointStatus,
+  CheckpointStatusMap,
+  ValidationAttempt,
+} from '../progress/model';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
 
 export interface TutorContextInput {
@@ -13,6 +17,8 @@ export interface TutorContextInput {
   statusMap: CheckpointStatusMap;
   /** The student's project, when the step edits it. */
   project?: PathwayProjectInfo;
+  /** The latest check of the student's work on this step, when one has run. */
+  latestValidationAttempt?: ValidationAttempt;
 }
 
 const STATUS_HEADINGS: {[status in CheckpointStatus]: string} = {
@@ -105,6 +111,24 @@ function projectSection(project: TutorContextInput['project']): string {
     .join('\n');
 }
 
+function validationSection(
+  latestValidationAttempt: TutorContextInput['latestValidationAttempt']
+): string {
+  if (!latestValidationAttempt) return '';
+  return [
+    `The latest check of the student's work on this step ${
+      latestValidationAttempt.pass
+        ? "met the step's goal"
+        : "did not meet the step's goal yet"
+    }. They were told: "${latestValidationAttempt.reason}"`,
+    latestValidationAttempt.pass
+      ? ''
+      : 'Help them get there without doing the step for them.',
+  ]
+    .filter(Boolean)
+    .join('\n');
+}
+
 /** The tutor's briefing on the pathway around a step, as one system prompt. */
 export function buildTutorContext({
   pathway,
@@ -112,6 +136,7 @@ export function buildTutorContext({
   step,
   statusMap,
   project,
+  latestValidationAttempt,
 }: TutorContextInput): string {
   return [
     'The student is working through an adaptive pathway. Keep help tied to the current checkpoint and the pathway objective.',
@@ -119,6 +144,7 @@ export function buildTutorContext({
     checkpointSection(pathway, checkpoint, step),
     progressSection(pathway, statusMap),
     projectSection(project),
+    validationSection(latestValidationAttempt),
   ]
     .filter(Boolean)
     .join('\n\n');

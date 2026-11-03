@@ -14,6 +14,7 @@ export {ProjectProvider} from './ProjectContext';
 export {TrainingDataProvider} from './TrainingDataContext';
 
 export {defaultProject} from './types';
+export {isValidHyperparameter} from './helpers/utils';
 export type {AilabProject, HistoricResult, Hyperparameters} from './types';
 
 export type {

@@ -3,11 +3,11 @@ import React, {useEffect, useRef, useState} from 'react';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
+import ObjectivesList from '@cdo/apps/lab2/views/components/Instructions/ObjectivesList';
 
 import {isFreeplayMode, LevelMode} from '../levelMode';
 import {SpriteLab2LevelProperties} from '../types';
 
-import ObjectivesList from './components/ObjectivesList';
 import {showTtsFor} from './showTts';
 import {ObjectivesState} from './useObjectives';
 

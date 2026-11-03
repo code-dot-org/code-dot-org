@@ -10,6 +10,7 @@ import {createSelector} from 'reselect';
 
 import {ResultsGrades, REGRESSION_ERROR_TOLERANCE, MLTypes} from '../constants';
 import type {RootState} from '../redux';
+import {getData} from '../selectors';
 import type {AilabProject, ResultsData, DataRow} from '../types';
 
 import {getExtrema, isRegression} from './columnDetails';
@@ -27,7 +28,7 @@ function accuracyCheckDatasetRows(
   if (!project.accuracyCheckRowIndices) {
     return [];
   }
-  return splitRowIndices(state.data.length, project.accuracyCheckRowIndices)
+  return splitRowIndices(getData(state).length, project.accuracyCheckRowIndices)
     .accuracyCheck;
 }
 
@@ -178,7 +179,7 @@ function regressionTolerance(data: DataRow[], labelColumn: string): number {
 export const getGradeOptions = createSelector(
   [
     isRegression,
-    (state: RootState) => state.data,
+    getData,
     (_state: RootState, project: AilabProject) => project.labelColumn,
   ],
   (regression, data, labelColumn): AccuracyGradeOptions =>
@@ -209,7 +210,7 @@ export function getAccuracyRegression(
   return gradeAccuracy(
     state.accuracyCheckPredictedLabels,
     state.accuracyCheckLabels,
-    {tolerance: regressionTolerance(state.data, project.labelColumn!)}
+    {tolerance: regressionTolerance(getData(state), project.labelColumn!)}
   );
 }
 

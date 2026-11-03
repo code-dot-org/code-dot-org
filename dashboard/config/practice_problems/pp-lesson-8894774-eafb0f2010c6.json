@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894774-eafb0f2010c6",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are benefits of using a pre-trained model in your Book Recommendation app?",
+  "solution": [
+    {
+      "option": "Saves time in development",
+      "correct": true
+    },
+    {
+      "option": "Increases the complexity of your app",
+      "correct": false
+    },
+    {
+      "option": "Improves the accuracy of recommendations",
+      "correct": true
+    },
+    {
+      "option": "Requires extensive machine learning knowledge",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "cdf0806f-77ab-430a-b089-fe9eb5816ae0"
+  ]
+}

@@ -103,6 +103,14 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
     end
   end
 
+  test 'export puts the session id on every span' do
+    _url, _options, body = capture_export(session_id: 'adaptive-1-2-3')
+
+    spans_from(body).each do |span|
+      assert_equal 'adaptive-1-2-3', attributes_of(span)['langfuse.session.id']
+    end
+  end
+
   test 'export stamps every span with the rack environment' do
     CDO.stubs(:rack_env).returns(:staging)
     _url, _options, body = capture_export
@@ -151,6 +159,7 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
 
     attributes = attributes_of(generation)
     refute attributes.key?('langfuse.user.id')
+    refute attributes.key?('langfuse.session.id')
     refute attributes.key?('langfuse.trace.tags')
     refute attributes.key?('langfuse.observation.prompt.name')
     refute attributes.key?('langfuse.observation.prompt.version')

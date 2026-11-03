@@ -7,6 +7,7 @@ import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {replayTraining, setCurrentPanel} from '../redux';
+import {getDatasetId} from '../selectors';
 import {
   getDisplayTree,
   getDisplayTreeCounts,
@@ -30,7 +31,7 @@ const TrainingResultCard = () => {
   const counts = useAppSelector(state =>
     getDisplayTreeCounts(state, project, trainedModel)
   );
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const isReplaying = useAppSelector(state => state.isTrainingReplay);
   const pretrained = useAppSelector(state => !!state.mode?.pretrained);
   const testButton = useRef<HTMLButtonElement>(null);

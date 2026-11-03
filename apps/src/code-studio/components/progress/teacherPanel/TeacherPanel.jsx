@@ -5,6 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {sendTaEvent} from '@cdo/apps/aiTeacherDrawer/analytics';
+import {noteDrawerReopenNav} from '@cdo/apps/aiTeacherDrawer/drawerReopen';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import TeacherPanelContainer from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanelContainer';
@@ -147,6 +148,11 @@ class TeacherPanel extends React.Component {
       this.props.isCurrentLevelLab2 ||
       this.props.pageType === pageTypes.scriptOverview;
     if (this.props.inTaDrawer) {
+      // An async selection updates in place; the others reload the page, which
+      // would otherwise drop the teacher back to a closed drawer.
+      if (!isAsync) {
+        noteDrawerReopenNav('Roster');
+      }
       sendTaEvent(
         source === 'iterator'
           ? EVENTS.AI_TA_ROSTER_STUDENT_NAVIGATED

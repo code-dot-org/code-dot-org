@@ -1,0 +1,10 @@
+name 'data-makes-ai-lesson7-ai-studio5'
+display_name 'Add a New Feature'
+description 'Choose the feature that you want to add to your dataset to improve the accuracy of your model'
+
+sublevels
+level 'data-makes-ai-lesson7-ai-studio5a'
+level 'data-makes-ai-lesson7-ai-studio5b'
+level 'data-makes-ai-lesson7-ai-studio5c'
+
+uses_lab2

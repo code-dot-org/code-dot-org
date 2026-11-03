@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, {type ReactNode} from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getColumnRole, isRegression} from '../helpers/columnDetails';
@@ -22,11 +22,17 @@ interface ResultsTableProps {
   results: ResultsData;
   columns: string[];
   view: TableView;
+  actionRow: ReactNode;
 }
 
 const labelCell = classNames(tableStyles.bodyCell, tableStyles.bodyCellLabel);
 
-const ResultsTable = ({results, columns, view}: ResultsTableProps) => {
+const ResultsTable = ({
+  results,
+  columns,
+  view,
+  actionRow,
+}: ResultsTableProps) => {
   const {project} = useProject();
   const isRegressionMode = useAppSelector(state =>
     isRegression(state, project)
@@ -40,7 +46,7 @@ const ResultsTable = ({results, columns, view}: ResultsTableProps) => {
           Predictions are +/- {REGRESSION_ERROR_TOLERANCE}% of range
         </p>
       )}
-      <DataTableFrame label="Results">
+      <DataTableFrame label="Results" actionRow={actionRow}>
         <table className={tableStyles.table}>
           <thead>
             <RowsTableHeader columns={columns} view={view} showPrediction />

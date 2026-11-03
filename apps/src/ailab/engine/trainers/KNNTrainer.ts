@@ -4,7 +4,9 @@ https://github.com/mljs/knn */
 import KNN from 'ml-knn';
 
 import {isRegression} from '../helpers/columnDetails';
+import {isValidHyperparameter} from '../helpers/utils';
 import type {RootState} from '../redux';
+import {getData} from '../selectors';
 import type {Hyperparameters, TrainedModel} from '../types';
 
 import BaseTrainer from './BaseTrainer';
@@ -30,11 +32,15 @@ export default class KNNTrainer extends BaseTrainer<number> {
   }
 
   protected candidateFor(hyperparameters: Hyperparameters): number | undefined {
-    return 'k' in hyperparameters ? hyperparameters.k : undefined;
+    if (!('k' in hyperparameters)) {
+      return undefined;
+    }
+    const {k} = hyperparameters;
+    return isValidHyperparameter(k) ? k : undefined;
   }
 
   possibleKValues(state: RootState): number[] {
-    const datasetSize = state.data.length;
+    const datasetSize = getData(state).length;
     const smallDatasetSize = 10;
     const mediumDatasetSize = 100;
 
@@ -68,7 +74,7 @@ export default class KNNTrainer extends BaseTrainer<number> {
   }
 
   calculatePotentialKValues(state: RootState): number[] {
-    const datasetSize = state.data.length;
+    const datasetSize = getData(state).length;
     const trainingExamplesSize = state.trainingExamples.length;
     const possibleKValues = [1, 3, 5, 7, 17, 31, 45, 61];
     const heuristicK = Math.round(Math.sqrt(datasetSize));

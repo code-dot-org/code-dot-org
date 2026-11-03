@@ -72,10 +72,10 @@ function inputs(over: Partial<ObjectiveInputs> = {}): ObjectiveInputs {
     images: {sprite: 0, background: 0, block: 0},
     grid: undefined,
     baselineGrid: undefined,
-    imageForRole: {hero: 'Sprite 1', treasure: 'Sprite 3'},
+    imagesForRole: {hero: ['Sprite 1'], treasure: ['Sprite 3']},
     source,
-    activeTab: 'Code',
     everPlayed: false,
+    rated: false,
     runtime: EMPTY_RUNTIME,
     ...over,
   };
@@ -114,9 +114,6 @@ describe('checkObjective', () => {
     expect(checkObjective({kind: 'image', imageType: 'background'}, made)).toBe(
       false
     );
-    expect(
-      checkObjective({kind: 'image', imageType: 'sprite', count: 2}, made)
-    ).toBe(false);
   });
 
   it('finds a real block under a hat, not a shadow or a stray', () => {
@@ -162,23 +159,7 @@ describe('checkObjective', () => {
     ).toBe(false);
   });
 
-  it('requires a contained block when asked', () => {
-    const behavior = {
-      kind: 'block',
-      type: 'gamelab_addBehaviorSimple',
-    } as const;
-    expect(
-      checkObjective(
-        {...behavior, contains: 'spritelab2_patrollingOnBlocks'},
-        inputs()
-      )
-    ).toBe(true);
-    expect(
-      checkObjective({...behavior, contains: 'spritelab2_movingLeft'}, inputs())
-    ).toBe(false);
-  });
-
-  it('reads the world by role, by kind and count, and by change', () => {
+  it('reads the world by role, by any cell, and by change', () => {
     const placed = grid([
       [7, 4, hero],
       [8, 0, block],
@@ -187,12 +168,10 @@ describe('checkObjective', () => {
     const base = inputs({grid: placed, baselineGrid: placed});
     expect(checkObjective({kind: 'world', role: 'hero'}, base)).toBe(true);
     expect(checkObjective({kind: 'world', role: 'treasure'}, base)).toBe(false);
-    expect(
-      checkObjective({kind: 'world', cellKind: 'block', count: 2}, base)
-    ).toBe(true);
-    expect(
-      checkObjective({kind: 'world', cellKind: 'sprite', count: 2}, base)
-    ).toBe(false);
+    expect(checkObjective({kind: 'world'}, base)).toBe(true);
+    expect(checkObjective({kind: 'world'}, inputs({grid: grid([])}))).toBe(
+      false
+    );
     expect(checkObjective({kind: 'world', changed: true}, base)).toBe(false);
     const edited = inputs({
       grid: grid([[7, 4, hero]]),
@@ -204,26 +183,20 @@ describe('checkObjective', () => {
     expect(checkObjective({kind: 'world', changed: true}, fresh)).toBe(false);
   });
 
-  it('reads play, run length, touches, height, scenes and the tab', () => {
+  it('reads play, touches, moves and scenes', () => {
     const runtime = {
-      longestRunSeconds: 4,
       touched: new Set(['Sprite 3']),
-      highest: 0.8,
       farthest: 50,
       risen: 0,
       scenesLanded: new Set(['platform-scene']),
     };
-    const played = inputs({everPlayed: true, runtime, activeTab: 'Play'});
+    const played = inputs({everPlayed: true, runtime});
     expect(checkObjective({kind: 'play'}, played)).toBe(true);
     expect(checkObjective({kind: 'play'}, inputs())).toBe(false);
-    expect(checkObjective({kind: 'play', seconds: 3}, played)).toBe(true);
-    expect(checkObjective({kind: 'play', seconds: 6}, played)).toBe(false);
     expect(checkObjective({kind: 'reach', role: 'treasure'}, played)).toBe(
       true
     );
     expect(checkObjective({kind: 'reach', role: 'hero'}, played)).toBe(false);
-    expect(checkObjective({kind: 'reach', height: 0.75}, played)).toBe(true);
-    expect(checkObjective({kind: 'reach', height: 0.9}, played)).toBe(false);
     expect(checkObjective({kind: 'reach', moved: true}, played)).toBe(true);
     const jumped = inputs({
       everPlayed: true,
@@ -241,12 +214,12 @@ describe('checkObjective', () => {
     expect(checkObjective({kind: 'scene', id: 'story-scene'}, played)).toBe(
       false
     );
-    expect(checkObjective({kind: 'tab', name: 'Play'}, played)).toBe(true);
-    expect(checkObjective({kind: 'tab', name: 'World'}, played)).toBe(false);
+    expect(checkObjective({kind: 'rated'}, played)).toBe(false);
+    expect(checkObjective({kind: 'rated'}, inputs({rated: true}))).toBe(true);
   });
 
   it('never matches a role the project has no image for', () => {
-    const none = inputs({imageForRole: {}, grid: grid([[7, 4, hero]])});
+    const none = inputs({imagesForRole: {}, grid: grid([[7, 4, hero]])});
     expect(checkObjective({kind: 'world', role: 'hero'}, none)).toBe(false);
     expect(checkObjective({kind: 'reach', role: 'hero'}, none)).toBe(false);
   });
@@ -254,12 +227,7 @@ describe('checkObjective', () => {
 
 describe('runtimeNeeds', () => {
   it('names the reports the checklist reads', () => {
-    expect(runtimeNeeds(undefined)).toEqual({
-      seconds: false,
-      touch: false,
-      height: false,
-      move: false,
-    });
+    expect(runtimeNeeds(undefined)).toEqual({touch: false, move: false});
     expect(
       runtimeNeeds({
         items: [
@@ -267,17 +235,9 @@ describe('runtimeNeeds', () => {
           {text: '', check: {kind: 'reach', role: 'treasure'}},
         ],
       })
-    ).toEqual({seconds: false, touch: true, height: false, move: false});
-    expect(
-      runtimeNeeds({
-        items: [
-          {text: '', check: {kind: 'play', seconds: 5}},
-          {text: '', check: {kind: 'reach', height: 0.7}},
-        ],
-      })
-    ).toEqual({seconds: true, touch: false, height: true, move: false});
+    ).toEqual({touch: true, move: false});
     expect(
       runtimeNeeds({items: [{text: '', check: {kind: 'reach', moved: true}}]})
-    ).toEqual({seconds: false, touch: false, height: false, move: true});
+    ).toEqual({touch: false, move: true});
   });
 });

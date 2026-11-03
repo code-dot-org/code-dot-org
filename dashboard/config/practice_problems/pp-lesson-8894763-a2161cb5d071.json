@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894763-a2161cb5d071",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all statements that are true regarding privacy risks when sharing information online.",
+  "solution": [
+    {
+      "option": "Posting your vacation plans can alert burglars.",
+      "correct": true
+    },
+    {
+      "option": "Sharing your favorite food has no privacy risks.",
+      "correct": true
+    },
+    {
+      "option": "Using a nickname online is always safe.",
+      "correct": false
+    },
+    {
+      "option": "Revealing your workplace can lead to targeted scams.",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "576c1cc0-5b8f-4628-ba33-6e4c6a208f37"
+  ]
+}

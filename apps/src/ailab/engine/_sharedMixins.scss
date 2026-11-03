@@ -42,6 +42,7 @@
 }
 
 $data-table-row-height: 28px;
+$table-action-row-height: 33px;
 
 @mixin data-table-empty-note {
   margin: 0;
@@ -61,12 +62,6 @@ $data-table-row-height: 28px;
   line-height: 22px;
   white-space: nowrap;
   color: var(--text-neutral-primary);
-}
-
-@mixin summary-divider {
-  width: 1px;
-  height: 10px;
-  background-color: var(--border-neutral-primary);
 }
 
 $modal-max-width: 800px;

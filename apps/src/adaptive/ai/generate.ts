@@ -2,12 +2,14 @@
 // output through the AI gateway, under its own client type, off until a DCDO
 // flag opts in, and never an exception to the caller. Every feature built on
 // it has a no-AI result it falls back to. Every call, however it ends, is
-// traced to Langfuse under an id the caller gets back.
+// traced to Langfuse under an id the caller gets back. Beside it, the check
+// that text a student wrote may go to a model at all.
 
 import {Output} from 'ai';
 import {z} from 'zod';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
+import {isTextSafe} from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
@@ -101,6 +103,29 @@ export async function generate<T>({
     report('Adaptive AI generation failed', error);
     trace.end({outcome: 'error', errorMessage: errorMessage(error)});
     return {traceId};
+  }
+}
+
+export type ModerationResult = 'ok' | 'flagged' | 'error';
+
+/**
+ * Whether text a student wrote may go to a model. A check that fails or
+ * times out counts against the text, never for it. Not gated by the DCDO
+ * flag; callers that are off never ask.
+ */
+export async function moderateInput(
+  text: string,
+  context: AichatContext
+): Promise<ModerationResult> {
+  try {
+    const safe = await withTimeout(
+      isTextSafe(text, 'input_filter', undefined, context),
+      TIMEOUT_MS
+    );
+    return safe ? 'ok' : 'flagged';
+  } catch (error) {
+    report('Adaptive input moderation failed', error);
+    return 'error';
   }
 }
 

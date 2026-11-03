@@ -1,0 +1,42 @@
+name 'pl-aif-y2-u1-l6-decision-trees'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Decision Trees: Conditionals as Decision Logic
+
+Lesson 11 opens with a partner game: one person thinks of an item in the room, the other asks up to 10 yes-or-no questions to guess it. That's the whole concept, branching questions narrowing toward an answer, before it ever has a name.
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Decision tree:</strong> a branching series of questions that leads to a conclusion.
+  </div>
+</div>
+
+The lesson's running example: a patient named Hao calls his doctor with a fever. The doctor asks a few questions, then gives advice based on the answers, exactly a decision tree, just not written in code yet.
+
+Here's that same logic as a decision tree, then as Python:
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+if fever:<br>
+&nbsp;&nbsp;if cough:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return "Visit clinic"<br>
+&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return "Get rest"<br>
+else:<br>
+&nbsp;&nbsp;if cough:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return "Take cough medicine"<br>
+&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return "Hydrate"
+  </div>
+</div>
+
+Each branch of the tree, fever or not, cough or not, becomes a nested <code style="font-size:16px;">if</code>/<code style="font-size:16px;">else</code>. Four possible paths through the questions, four <code style="font-size:16px;">return</code> statements, one for each possible conclusion.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> this is a natural moment to connect back to Defining Functions. Each <code style="font-size:16px;">return</code> here works exactly like the return values students already practiced, a decision tree function hands back one of several possible conclusions instead of a single calculation.
+  </div>
+</div>
+MARKDOWN

@@ -11,6 +11,7 @@
   "skills": {
     "build": {
       "id": "build",
+      "icon": "wand-magic-sparkles",
       "title": "Build with AI",
       "description": "Steering AI toward what you intend, and deciding what to do with what comes back.",
       "evidenceLevels": {
@@ -21,6 +22,7 @@
     },
     "language": {
       "id": "language",
+      "icon": "message-code",
       "title": "Language of web dev",
       "description": "Naming the parts of a page and understanding how they work.",
       "evidenceLevels": {
@@ -32,6 +34,7 @@
     },
     "debug": {
       "id": "debug",
+      "icon": "bug",
       "title": "Debug with AI",
       "description": "Describing a problem so AI can help, and checking that the fix worked.",
       "evidenceLevels": {
@@ -48,6 +51,9 @@
       "title": "Intro",
       "description": "Intro panels",
       "routeAfterCompletion": true,
+      "plan": {
+        "template": "Build me a site about {topic} for {audience} that should feel {style}. What it should do: {purpose}"
+      },
       "steps": [
         {
           "id": "intro-panels",
@@ -87,32 +93,218 @@
           "level": "adaptive-HoAI26-intro-four-ways-there"
         },
         {
-          "id": "intro-second-look",
-          "title": "Second Look",
-          "kind": "level",
-          "level": "adaptive-HoAI26-intro-second-look"
-        },
-        {
-          "id": "intro-schedule-snap",
-          "title": "Schedule Snap",
-          "kind": "level",
-          "level": "adaptive-HoAI26-intro-schedule-snap"
-        },
-        {
-          "id": "intro-plan",
-          "title": "Plan your website",
+          "id": "intro-interest",
+          "title": "What are you into?",
           "kind": "questions",
+          "description": "Pick one, or type your own.",
           "questions": [
             {
-              "id": 101,
-              "type": "freeResponse",
-              "text": "Explain a website you would like to make in this activity. What is the topic or theme of the site? Who is it for?"
+              "id": 201,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-interest",
+              "questionTitle": "What are you into?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "Music and art"
+                },
+                {
+                  "id": "b",
+                  "text": "Sports and fitness"
+                },
+                {
+                  "id": "c",
+                  "text": "Food and cooking"
+                },
+                {
+                  "id": "d",
+                  "text": "Gaming"
+                },
+                {
+                  "id": "e",
+                  "text": "School and education"
+                },
+                {
+                  "id": "f",
+                  "text": "Animals and nature"
+                },
+                {
+                  "id": "g",
+                  "text": "Fashion and style"
+                },
+                {
+                  "id": "h",
+                  "text": "Friends and community"
+                }
+              ],
+              "allowOther": {
+                "placeholder": "Or type your own interest"
+              },
+              "plan": "topic"
             }
           ]
         },
         {
-          "id": "intro-web-dev",
-          "title": "Intro - Diagnostic for web dev",
+          "id": "intro-purpose",
+          "title": "What should your site do?",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 202,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-purpose",
+              "questionTitle": "What should your site do?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "Share a message"
+                },
+                {
+                  "id": "b",
+                  "text": "Help them decide or plan"
+                },
+                {
+                  "id": "c",
+                  "text": "Bring people together"
+                },
+                {
+                  "id": "d",
+                  "text": "Let them play or try something"
+                }
+              ],
+              "allowOther": {
+                "placeholder": "Or something else"
+              },
+              "plan": "purpose"
+            }
+          ]
+        },
+        {
+          "id": "intro-website",
+          "title": "Your website",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 211,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-audience",
+              "questionTitle": "Who is the website for?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "My friends and family"
+                },
+                {
+                  "id": "b",
+                  "text": "My class or school"
+                },
+                {
+                  "id": "c",
+                  "text": "People into the same topic"
+                },
+                {
+                  "id": "d",
+                  "text": "My team or club"
+                },
+                {
+                  "id": "e",
+                  "text": "Just me"
+                }
+              ],
+              "allowOther": {
+                "placeholder": "Or type your own"
+              },
+              "plan": "audience"
+            },
+            {
+              "id": 212,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-feel",
+              "questionTitle": "How should it feel?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "Calm and clean"
+                },
+                {
+                  "id": "b",
+                  "text": "Bold and energetic"
+                },
+                {
+                  "id": "c",
+                  "text": "Playful and fun"
+                },
+                {
+                  "id": "d",
+                  "text": "Cozy and friendly"
+                }
+              ],
+              "plan": "style"
+            }
+          ]
+        },
+        {
+          "id": "intro-review",
+          "title": "Your plan",
+          "kind": "review",
+          "description": "Build a first version with AI, or start from a blank page.",
+          "questionId": 214,
+          "buildLabel": "Build with AI",
+          "skipLabel": "Start from a blank page"
+        },
+        {
+          "id": "intro-starter",
+          "title": "Your starter site",
+          "kind": "level",
+          "level": "adaptive-HoAI26-intro-starter",
+          "project": true,
+          "instructions": "This is your site. Look it over, change anything you like, then continue.",
+          "projectPrompt": "The first version of the student's website, built from their plan: a hero with a headline that says what the site is for, one or two sections that fit the topic, and a call-to-action. Keep the look and feel simple, but appropriate for their given topic. It should feel clean but not overly polished."
+        }
+      ]
+    },
+    {
+      "id": "skill-check",
+      "title": "Skill Check",
+      "description": "A few quick questions to find your starting point. Not graded.",
+      "requires": ["intro"],
+      "routeAfterCompletion": true,
+      "steps": [
+        {
+          "id": "skill-check-experience",
+          "title": "Your experience",
+          "kind": "questions",
+          "description": "Pick the closest one. These questions find your starting point. They are not graded.",
+          "questions": [
+            {
+              "id": 213,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "skill-check-experience",
+              "questionTitle": "Have you worked on a website before?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "No, this is new to me"
+                },
+                {
+                  "id": "b",
+                  "text": "I have used a website builder or a template"
+                },
+                {
+                  "id": "c",
+                  "text": "I have changed code (HTML, CSS or JavaScript) before"
+                },
+                {
+                  "id": "d",
+                  "text": "I have built websites on my own"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "skill-check-web-dev",
+          "title": "Skill Check",
           "kind": "questions",
           "questions": [
             {
@@ -178,7 +370,7 @@
       "title": "Steer It",
       "description": "Writes a prompt with 2 or more specific details, or a follow-up that changes one thing.",
       "skillIds": ["build"],
-      "requires": ["intro"],
+      "requires": ["skill-check"],
       "targetEvidenceLevels": {
         "build": 2
       },
@@ -237,7 +429,7 @@
       "title": "Use the Lingo",
       "description": "Names a block of their page and what it is for.",
       "skillIds": ["language"],
-      "requires": ["intro"],
+      "requires": ["skill-check"],
       "targetEvidenceLevels": {
         "language": 2
       },
@@ -257,28 +449,28 @@
             },
             {
               "key": "adaptive-HoAI26-use-the-lingo-4-d0f02545-840a-4370-95c5-1425103a1f5d",
-              "imageUrl": "https://images.code.org/5c00eed0ca6469f72220f1d45b76daa3-panda-panel-1-smooth.gif",
+              "imageUrl": "https://images.code.org/6e27590f581e1959b18f5a8ea039ff1e-panda1.png",
               "text": "###Hero Banner\n\nThe **hero** section introduces your page.",
               "layout": "text-bottom-right",
               "fadeInOverPrevious": true
             },
             {
               "key": "adaptive-HoAI26-use-the-lingo-4-1774d6c3-2655-47d6-a5f8-adc23ff053d4",
-              "imageUrl": "https://images.code.org/4cbf36ea81de2d406284648987c85cb2-panda-panel-2-smooth.gif",
+              "imageUrl": "https://images.code.org/52e6642b23f6181e5df952febf841421-row-09-PAN-2-refined.png",
               "text": "###Feature Cards\n\nSmaller 'feature cards' show key info or options.",
               "layout": "text-bottom-right",
               "fadeInOverPrevious": true
             },
             {
               "key": "adaptive-HoAI26-use-the-lingo-4-7cf960b2-c941-4a0e-b99a-620e481caad4",
-              "imageUrl": "https://images.code.org/f86e7d22373a481729d0274ee6031e16-panda-panel-3-drag-bamboo.gif",
+              "imageUrl": "https://images.code.org/b28e0cbb266cd58f7823fe3a7231b354-row-10-PAN-3-refined.png",
               "text": "###Interactive Canvas\nAn 'interactive canvas' lets users play or create.",
               "layout": "text-bottom-right",
               "fadeInOverPrevious": true
             },
             {
               "key": "adaptive-HoAI26-use-the-lingo-4-72392717-95fb-44d8-82e3-9599f4c8b802",
-              "imageUrl": "https://images.code.org/e9f7ceb739176bd901c6e1c77c5b2693-panda-panel-4-smooth.gif",
+              "imageUrl": "https://images.code.org/951d163dd70c6a286be2faf6a9343312-row-11-PAN-4-refined.png",
               "text": "###Call-to-action\nA 'call-to-action' button guides you to the next step.",
               "layout": "text-bottom-right",
               "fadeInOverPrevious": true
@@ -297,6 +489,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-use-the-lingo-6",
           "project": true,
+          "validation": {
+            "condition": "A prompt asked for a change by naming one part of the page and saying what that part is for.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Ask the AI for a change that names one block of their page and says what it is for.\nOutline: Prompt: \"Pick one part of your page and ask for a change. Name it and say its job.\"\nEvidence: a prompt that names a block and its job."
         }
       ]
@@ -363,7 +559,7 @@
       "title": "Give Context",
       "description": "Reports a problem with what was expected, what happened and where.",
       "skillIds": ["debug"],
-      "requires": ["intro"],
+      "requires": ["skill-check"],
       "targetEvidenceLevels": {
         "debug": 2
       },
@@ -523,6 +719,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-a-list-and-a-random-pick-18",
           "project": true,
+          "validation": {
+            "condition": "The student told the AI what the options are and that the page picks one of them from the list by chance.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Tell the AI what the options are and how the page should pick one.\nOutline: Prompt: \"What are your options, and how should the page choose one?\"\nEvidence: explains that the page picks one item from a list by chance."
         }
       ]
@@ -658,6 +858,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-remember-and-show-25",
           "project": true,
+          "validation": {
+            "condition": "The student told the AI what the page should remember and what should change on screen when it does.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Tell the AI what the page should remember and what should show right away.\nOutline: Prompt: \"What should your page remember, and what should show when it does?\"\nEvidence: names what is remembered and what changes on screen."
         }
       ]
@@ -727,6 +931,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-layout-and-spacing-28",
           "project": true,
+          "validation": {
+            "condition": "A prompt named the blocks that need more room or a different order and said how they should be arranged.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Ask the AI for a layout change that names the blocks and how they should be arranged.\nOutline: Prompt: \"Which blocks need more room or a different order? Say how they should be arranged.\"\nEvidence: a prompt that names blocks and says how they should be arranged."
         }
       ]
@@ -851,6 +1059,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-readable-and-clear-34",
           "project": true,
+          "validation": {
+            "condition": "A prompt named a block that is hard to read and asked for a size, contrast or wording change to it.",
+            "measures": { "skillId": "build" }
+          },
           "instructionsPrompt": "Task: Pick a block that is hard to read and ask for a size, contrast or wording change.\nOutline: Prompt: \"Which block is hardest to read? Ask for a change.\"\nEvidence: a prompt that names a block and a readability change."
         }
       ]
@@ -984,6 +1196,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-lead-with-the-point-40",
           "project": true,
+          "validation": {
+            "condition": "The headline now says what the site is for, whether a prompt asked for it or the student edited it by hand.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Ask the AI to change the headline and first line, or edit them by hand.\nOutline: Prompt: \"What is your site for? Make the headline say it.\"\nEvidence: a prompt or edit that states the site's purpose in the headline."
         }
       ]
@@ -1042,6 +1258,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-make-the-ask-clear-43",
           "project": true,
+          "validation": {
+            "condition": "The call-to-action now has a clear verb and a next step, whether a prompt asked for it or the student edited it by hand.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Ask for a call-to-action with a clear verb and next step, or edit it by hand.\nOutline: Prompt: \"What should a visitor do next? Make the button say it.\"\nEvidence: a call-to-action with a clear verb and next step."
         }
       ]
@@ -1168,6 +1388,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-find-it-in-the-code-49",
           "project": true,
+          "validation": {
+            "condition": "The student pointed to the line or rule in the code for a block they named.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Find the line for one named block in their code.\nOutline: Prompt: \"Pick a block and find its line in your code.\"\nEvidence: points to the line or rule for a named block."
         }
       ]

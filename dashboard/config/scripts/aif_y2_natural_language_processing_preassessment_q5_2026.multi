@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q5-2026'
+
+right '`{"one": 2, "step": 2, "forward": 1, "back": 1}`'
+wrong '`{"one": 1, "step": 1, "forward": 1, "back": 1}`'
+wrong '`{"one step": 2, "forward": 1, "back": 1}`'
+wrong '`{"one": 2, "step": 2, "forward": 2, "back": 2}`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A program counts how often each word appears in the sentence "One step forward, one step back." Which dictionary shows the result?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Frequency Analysis
+MARKDOWN

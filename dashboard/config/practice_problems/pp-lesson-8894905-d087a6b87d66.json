@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894905-d087a6b87d66",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following statements best describes an AI's hallucination?",
+  "solution": [
+    {
+      "option": "An AI creates believable but false information.",
+      "correct": true
+    },
+    {
+      "option": "An AI generates accurate and factual data.",
+      "correct": false
+    },
+    {
+      "option": "An AI retrieves information from a database.",
+      "correct": false
+    },
+    {
+      "option": "An AI is incapable of generating text.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "e495badb-34e7-43d0-9609-3eed16edef96"
+  ]
+}

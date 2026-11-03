@@ -1,33 +1,38 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Tooltip} from '@mui/material';
+import {Button} from '@mui/material';
 import React from 'react';
+
+import styles from './columnsButton.module.scss';
 
 interface ColumnsButtonProps {
   showAllColumns: boolean;
   onToggle: () => void;
 }
 
-const ColumnsButton = ({showAllColumns, onToggle}: ColumnsButtonProps) => {
-  const label = showAllColumns
-    ? 'Show only features and label'
-    : 'Show all columns';
-
-  return (
-    <Tooltip title={label}>
-      <IconButton
-        aria-label={label}
-        onClick={onToggle}
-        size="extraSmall"
-        color="tertiary"
-        variant="outlined"
-      >
+const ColumnsButton = ({showAllColumns, onToggle}: ColumnsButtonProps) => (
+  <Button
+    variant="outlined"
+    color="tertiary"
+    size="extraSmall"
+    className={styles.button}
+    startIcon={
+      showAllColumns ? (
+        <FontAwesomeV6Icon
+          iconName="arrows-to-line"
+          className="fa-rotate-90"
+          aria-hidden="true"
+        />
+      ) : (
         <FontAwesomeV6Icon
           iconName="arrows-left-right-to-line"
           aria-hidden="true"
         />
-      </IconButton>
-    </Tooltip>
-  );
-};
+      )
+    }
+    onClick={onToggle}
+  >
+    {showAllColumns ? 'Collapse columns' : 'Expand columns'}
+  </Button>
+);
 
 export default ColumnsButton;

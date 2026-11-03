@@ -5,6 +5,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # This script will send reminder emails for parent permission requests that
 # haven't been granted yet. Intended for Colorado Privacy Act compliance.
 
+require 'active_support'
 require 'active_support/core_ext/numeric/time'
 require 'date'
 require 'optparse'

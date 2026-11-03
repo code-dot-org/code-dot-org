@@ -25,7 +25,9 @@ import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLess
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import type ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import type {ProjectSources} from '@cdo/apps/lab2/types';
-import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import ResourcePanel, {
+  type BackpackProps,
+} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -38,6 +40,18 @@ import {AilabLevelProperties} from '../types';
 
 import styles from './ailab-view.module.scss';
 
+// AI Lab takes no files from the Backpack; the tab shows the files a student saved.
+const BACKPACK_PROPS: BackpackProps = {
+  validateFileName: fileName => ({
+    isSupportFileName: false,
+    newFileName: fileName,
+  }),
+  saveFileToProject: () => {},
+  createNewProjectFile: () => {},
+  findIdForFileName: () => undefined,
+  supportedFileTypes: [],
+};
+
 interface AilabWorkspaceProps {
   levelProperties: AilabLevelProperties;
   hasEdited: boolean;
@@ -45,6 +59,7 @@ interface AilabWorkspaceProps {
   save: (project: AilabProject) => void;
   startOver: () => void;
   projectManager: ProjectManager | null;
+  onLoadingChange: (isLoading: boolean) => void;
 }
 
 const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
@@ -54,6 +69,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   save,
   startOver,
   projectManager,
+  onLoadingChange,
 }) => {
   // Read once: the sources change with every save, but the project the lab
   // opens with is the one this level was loaded with.
@@ -161,6 +177,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
             : undefined
         }
         dynamicInstructions={dynamicInstructionsContent}
+        backpackProps={BACKPACK_PROPS}
       />
       <div className={styles.divider} />
       <div className={styles.workspace}>
@@ -180,6 +197,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
                   saveTrainedModel={saveTrainedModel}
                   logMetric={logMetric}
                   onStartOver={onStartOver}
+                  onLoadingChange={onLoadingChange}
                 />
               </TrainingDataProvider>
             </ProjectProvider>

@@ -82,74 +82,6 @@ namespace :seed do
   # Every unit the UI tests need now lives in the UI test curriculum tree.
   UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
 
-  # To improve adhoc start time, we only seed the most recent year of our common curriculum
-  # Each year we should update this list and :courses_adhoc
-  MOST_RECENT_ADHOC_SCRIPTS = %w(
-    coursea-2024
-    courseb-2024
-    coursec-2024
-    coursed-2024
-    coursee-2024
-    coursef-2024
-    csd1-2024
-    csd2-2024
-    csd3-2024
-    csd4-2024
-    csd5-2024
-    csd6a-2024
-    csd6b-2024
-    csd7-2024
-    csd-post-survey-2024
-    interactive-games-animations-2024
-    focus-on-creativity3-2024
-    focus-on-coding3-2024
-    csp1-2024
-    csp2-2024
-    csp3-2024
-    csp4-2024
-    csp5-2024
-    csp6-2024
-    csp7-2024
-    csp8-2024
-    csp9-2024
-    csp10-2024
-    csp-post-survey-2024
-    csa1-2024
-    csa2-2024
-    csa3-2024
-    csa4-2024
-    csa5-2024
-    csa6-2024
-    csa7-2024
-    csa8-2024
-    csa9-2024
-    csa-postap-se-and-computer-vision-2024
-  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
-  ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
-    allthehiddenthings
-    allthelessonplans
-    alltheplcthings
-    alltheselfpacedplthings
-    allthethings
-    allthettsthings
-    artist
-    dance
-    events
-    flappy
-    frozen
-    hero
-    hourofcode
-    infinity
-    mc
-    minecraft
-    playlab
-    starwars
-    starwarsblocks
-    step
-    oceans
-    sports
-  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
-
   # Update scripts in the database from their file definitions.
   #
   # @param [Hash] opts the options to update the scripts with.
@@ -175,23 +107,49 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [
-    :environment,
-    :check_migrations,
-    :games,
-    :deprecated_blockly_levels,
-    :child_dsls,
-    :quiz_questions,
-    :custom_levels,
-    :parent_dsls,
-    :code_docs,
-    :blocks,
-    :standards,
-    :shared_blockly_functions,
-    :libraries,
-    :course_offerings,
-    :jit_pl_concepts
-  ].freeze
+  # The tasks to run before seeding the units of the given partition
+  # (:production_curriculum or :ui_test_curriculum); see
+  # dashboard/config/PARTITIONS.md. The order follows from these dependencies:
+  #
+  # - standalone_project_levels must run after games, but does not have an
+  #   ordering dependency on production or ui test levels because there are no
+  #   parent/child level relationships across partitions.
+  # - quiz_questions must run before custom levels, because Quiz levels are
+  #   custom levels and depend on quiz_questions.
+  # - code_docs, blocks, standards, shared_blockly_functions and libraries have
+  #   no ordering constraint against the content tasks in either direction.
+  # - jit_pl_concepts must run after course_offerings, because loading the JIT
+  #   PL course also writes that course's offering file in levelbuilder mode.
+  #   If the two run in the other order, the seed can overwrite
+  #   course_offerings/just-in-time-pl.json with the database's stale copy
+  #   before course_offerings ever reads the file.
+  def get_scripts_dependencies(partition: :production_curriculum)
+    content_dependencies =
+      case partition
+      when :production_curriculum
+        [:child_dsls, :custom_levels, :parent_dsls, :course_offerings]
+      when :ui_test_curriculum
+        [:child_dsls_ui_tests, :custom_levels_ui_tests, :parent_dsls_ui_tests, :course_offerings_ui_tests]
+      else
+        raise "Unknown partition: #{partition}"
+      end
+
+    [
+      :environment,
+      :check_migrations,
+      :games,
+      :deprecated_blockly_levels,
+      :quiz_questions,
+      :standalone_project_levels,
+      :code_docs,
+      :blocks,
+      :standards,
+      :shared_blockly_functions,
+      :libraries,
+      *content_dependencies,
+      :jit_pl_concepts
+    ]
+  end
 
   # Do the minimum amount of work to seed a single script or glob, without
   # seeding levels or other dependencies. For use in development. Examples:
@@ -206,24 +164,11 @@ namespace :seed do
     update_scripts(script_files: script_files)
   end
 
-  timed_task_with_logging scripts: SCRIPTS_DEPENDENCIES do
+  timed_task_with_logging scripts: get_scripts_dependencies do
     update_scripts(incremental: true)
   end
 
-  # Moved course offerings ui test seed after regular course offerings are seeded
-  # because the regular course offerings seed task removes any course_offerings records
-  # left in the database that do not have a corresponding json file in config/course_offerings.
-  # The ui test course offerings must be seeded after so they are not accidentally removed.
-  # UI test scripts also need the "UI Test " levels, seeded after the normal
-  # level tasks in SCRIPTS_DEPENDENCIES; see dashboard/test/ui/config/README.md.
-  UI_TEST_SCRIPTS_DEPENDENCIES = SCRIPTS_DEPENDENCIES + [
-    :child_dsls_ui_tests,
-    :custom_levels_ui_tests,
-    :parent_dsls_ui_tests,
-    :course_offerings_ui_tests,
-  ].freeze
-
-  timed_task_with_logging scripts_ui_tests: UI_TEST_SCRIPTS_DEPENDENCIES do
+  timed_task_with_logging scripts_ui_tests: get_scripts_dependencies(partition: :ui_test_curriculum) do
     update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
   end
 
@@ -233,10 +178,6 @@ namespace :seed do
   # https://github.com/code-dot-org/code-dot-org/pull/64792
   timed_task_with_logging reseed_scripts_ui_tests: :environment do
     update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
-  end
-
-  timed_task_with_logging scripts_adhoc: SCRIPTS_DEPENDENCIES do
-    update_scripts(script_files: ADHOC_SCRIPTS)
   end
 
   timed_task_with_logging courses: :environment do
@@ -249,19 +190,6 @@ namespace :seed do
     # Every course the UI tests need now lives in the UI test curriculum tree.
     Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/*.course").sort.each do |path|
       UnitGroup.load_from_path(path)
-    end
-  end
-
-  timed_task_with_logging courses_adhoc: :environment do
-    # seed those courses that are best to test on adhoc for the most current year
-    %w(
-      allthethingscourse
-      csp-2024
-      csd-2024
-      csa-2024
-      original-allthethings-course
-    ).each do |course_name|
-      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
   end
 
@@ -304,7 +232,7 @@ namespace :seed do
   end
 
   timed_task_with_logging custom_levels_ui_tests: :environment do
-    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, tree: :ui_test)
+    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, partition: :ui_test_curriculum)
   end
 
   timed_task_with_logging parent_dsls_ui_tests: :environment do
@@ -313,12 +241,24 @@ namespace :seed do
     end
   end
 
+  # The levels behind /projects/<key> and their sublevels, seeded in every
+  # environment. .level files first so the BubbleChoice finds its sublevels.
+  # See dashboard/config/standalone_projects/README.md.
+  STANDALONE_PROJECT_PARENT_DSL_FILES = dsl_files('config/standalone_projects/scripts', PARENT_DSL_TYPES).freeze
+
+  timed_task_with_logging standalone_project_levels: :environment do
+    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, partition: :standalone_projects)
+    DSLDefined.transaction do
+      parse_dsl_files(STANDALONE_PROJECT_PARENT_DSL_FILES, PARENT_DSL_TYPES)
+    end
+  end
+
   # Allow developers to seed just one dsl-defined level, e.g.
   # rake seed:single_dsl DSL_FILENAME=k-1_Artistloops_multi1.multi
   # rake seed:single_dsl DSL_FILENAME=csa_unit_6_assessment_2023.level_group
   timed_task_with_logging single_dsl: :environment do
     DSLDefined.transaction do
-      dsl_files = %w(config/scripts test/ui/config/scripts).flat_map do |scripts_dir|
+      dsl_files = %w(config/scripts test/ui/config/scripts config/standalone_projects/scripts).flat_map do |scripts_dir|
         Dir.glob("#{CURRICULUM_CONTENT_DIR}/#{scripts_dir}/**/#{ENV.fetch('DSL_FILENAME', nil)}")
       end
 
@@ -345,12 +285,13 @@ namespace :seed do
         md5 = Digest::MD5.hexdigest(contents)
         data, _i18n = dsl_class.parse(contents, filename)
 
-        # A file must sit in the tree its level name selects, or seeding the
-        # other tree would quietly pick it up; see
-        # dashboard/test/ui/config/README.md.
-        if Policies::LevelFiles.tree_for_name(data[:name]) != Policies::LevelFiles.tree_for_path(filename)
+        # A file must sit in the tree its level name selects, or seeding
+        # another tree would quietly pick it up; see
+        # dashboard/config/PARTITIONS.md.
+        if Policies::LevelFiles.partition_for_name(data[:name]) != Policies::LevelFiles.partition_for_path(filename)
           raise "level #{data[:name].dump} does not belong in #{filename}: \"UI Test \" levels " \
-            "live under test/ui/config/scripts, all others under config/scripts"
+            "live under test/ui/config/scripts, standalone project levels (\"New ... Project\", " \
+            "\"... Subproject\") under config/standalone_projects/scripts, all others under config/scripts"
         end
 
         # Skip any files which have not been updated since last seed. To force a
@@ -398,9 +339,10 @@ namespace :seed do
   # the UI test seed needs its own callout pass, after those units exist.
   #
   # It is a separate task name rather than reusing :callouts because rake runs a
-  # task once per process, at the first position it appears in: when development
-  # seeds both lists, reusing :callouts here would deduplicate to its earlier
-  # FULL_SEED_TASKS position, ahead of the units.
+  # task once per process, at the first position it appears in: a process that
+  # seeds both lists, such as `rake seed:production seed:ui_test`, would
+  # otherwise run :callouts only at its earlier PRODUCTION_SEED_TASKS position,
+  # ahead of the units.
   timed_task_with_logging callouts_ui_tests: :environment do
     Callout.seed_all
   end
@@ -412,12 +354,6 @@ namespace :seed do
   timed_task_with_logging course_offerings_ui_tests: :environment do
     Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/course_offerings/*.json").each do |path|
       CourseOffering.seed_record(path)
-    end
-  end
-
-  timed_task_with_logging course_offerings_adhoc: :environment do
-    %w(csp csa csd coursea courseb coursec coursed coursee coursef).each do |course_offering_name|
-      CourseOffering.seed_record("#{CURRICULUM_CONTENT_DIR}/config/course_offerings/#{course_offering_name}.json")
     end
   end
 
@@ -568,29 +504,21 @@ namespace :seed do
     AiRubricConfig.validate_ai_config
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
+  PRODUCTION_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :json_videos_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
-  ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
 
-  # Development seeds the UI test tree on top of production content, so that a
-  # development machine can run UI tests without a separate manual seed. Rake
-  # runs each task once per process, so the two lists' shared tasks are seeded
-  # once and only the UI test tasks are added; see callouts_ui_tests for the one
-  # task that has to run in both lists.
-  DEFAULT_SEED_TASKS =
-    case rack_env
-    when :test then UI_TEST_SEED_TASKS
-    when :adhoc then ADHOC_SEED_TASKS
-    when :development then FULL_SEED_TASKS + UI_TEST_SEED_TASKS
-    else FULL_SEED_TASKS
-    end
+  # Only the environments that serve production curriculum seed it. The rest
+  # seed the UI test partition, which is enough to run the UI tests and the
+  # labs, and get production content on demand from `rake seed:production`.
+  DEFAULT_SEED_TASKS = [:staging, :levelbuilder, :production].include?(rack_env) ? PRODUCTION_SEED_TASKS : UI_TEST_SEED_TASKS
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
-  desc "seed all dashboard data"
-  timed_task_with_logging all: FULL_SEED_TASKS
+  desc "seed all production curriculum content"
+  timed_task_with_logging production: PRODUCTION_SEED_TASKS
+  desc "seed only content needed for UI tests"
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
-  desc "seed only dashboard data required for tests"
-  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
+  desc "seed only dashboard data required for unit tests"
+  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :standalone_project_levels, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
 end

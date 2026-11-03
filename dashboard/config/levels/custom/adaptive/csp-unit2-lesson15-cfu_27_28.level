@@ -1,0 +1,13 @@
+<Adaptive>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 77,
+  "created_at": "2026-11-02T19:16:00.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "adaptive_id": "sample"
+  }
+}]]></config>
+</Adaptive>

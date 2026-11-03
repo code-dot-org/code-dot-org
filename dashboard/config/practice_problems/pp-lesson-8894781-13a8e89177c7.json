@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894781-13a8e89177c7",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the ethical issue with its potential impact on society.",
+  "solution": [
+    {
+      "option": "Bias in AI algorithms",
+      "correct": "Discrimination against certain groups"
+    },
+    {
+      "option": "Privacy concerns",
+      "correct": "Invasion of personal space"
+    },
+    {
+      "option": "Lack of transparency",
+      "correct": "Erosion of trust in technology"
+    },
+    {
+      "option": "Job displacement",
+      "correct": "Increased unemployment rates"
+    }
+  ],
+  "objective_keys": [
+    "d999b4cd-40a5-4363-982e-b60155777f62"
+  ]
+}

@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
@@ -56,4 +55,4 @@ class InlineFeedback extends Component {
   }
 }
 
-export default Radium(InlineFeedback);
+export default InlineFeedback;

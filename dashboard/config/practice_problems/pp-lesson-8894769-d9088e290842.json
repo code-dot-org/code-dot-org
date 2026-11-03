@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894769-d9088e290842",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all characteristics that belong to unsupervised learning.",
+  "solution": [
+    {
+      "option": "It involves labeled data",
+      "correct": false
+    },
+    {
+      "option": "It finds patterns in data",
+      "correct": true
+    },
+    {
+      "option": "It does not require human intervention",
+      "correct": true
+    },
+    {
+      "option": "It uses features to create labels",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "c461e742-fa08-4eae-a42e-78e870b79683"
+  ]
+}

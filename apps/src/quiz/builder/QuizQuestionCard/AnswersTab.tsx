@@ -1,7 +1,7 @@
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import React from 'react';
 
-import {QuizQuestionDraft} from '../types';
+import {isChoiceQuestionDraft, isMatchDraft, QuizQuestionDraft} from '../types';
 
 import ChoicesEditor from './ChoicesEditor';
 import PairsEditor from './PairsEditor';
@@ -20,14 +20,19 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
   disabled,
 }) => (
   <div className={builderCommonStyles.section}>
-    {draft.type === 'MultipleChoiceQuestion' && (
+    {isChoiceQuestionDraft(draft) && (
       <ChoicesEditor draft={draft} onChange={onChange} disabled={disabled} />
     )}
-    {draft.type === 'MatchQuestion' && (
+    {isMatchDraft(draft) && (
       <PairsEditor draft={draft} onChange={onChange} disabled={disabled} />
     )}
 
-    <FormFieldWrapper label="Answer explanation (optional)">
+    <FormFieldWrapper
+      label="Answer explanation (optional)"
+      size="s"
+      color="gray"
+      className={builderCommonStyles.fullWidthField}
+    >
       <textarea
         className={builderCommonStyles.textarea}
         name="explanation"

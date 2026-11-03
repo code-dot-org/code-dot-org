@@ -53,9 +53,6 @@ window.addEventListener('DOMContentLoaded', function () {
         />
       </Provider>
     </ThemeProvider>,
-    mountPoint,
-    {
-      legacyReactDomRender: true,
-    }
+    mountPoint
   );
 });

@@ -6,15 +6,22 @@ import {
 import I18n from '@cdo/apps/ailab/engine/i18n';
 
 const initialState = {
-  data: [],
+  dataset: undefined,
   accuracyCheckExamples: [],
   saveStatus: 'notStarted',
   trainedModelDetails: {},
 };
 
+const datasetOf = rows => ({
+  rows,
+  metadata: {card: {}},
+  columnsByDataType: {},
+  removedRowsCount: 0,
+});
+
 const dataUploadedState = {
   ...initialState,
-  data: [
+  dataset: datasetOf([
     {
       name: 'Hermione',
       isEvil: false,
@@ -30,7 +37,7 @@ const dataUploadedState = {
       isEvil: true,
       house: 'Slytherin',
     },
-  ],
+  ]),
 };
 
 const resultsState = {

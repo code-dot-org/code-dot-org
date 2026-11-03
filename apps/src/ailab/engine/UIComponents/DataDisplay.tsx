@@ -5,9 +5,10 @@ import React, {useMemo} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {withIdColumnFirst} from '../helpers/columnDetails';
+import {rowCountText} from '../helpers/utils';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setDatasetLayout} from '../redux';
-import {getIdColumn} from '../selectors';
+import {getData, getIdColumn} from '../selectors';
 import {useDatasetTableView} from '../useDatasetTableView';
 
 import DatasetCardDeck from './DatasetCardDeck';
@@ -18,7 +19,7 @@ import styles from './dataDisplay.module.scss';
 
 const DataDisplay = () => {
   const dispatch = useAppDispatch();
-  const data = useAppSelector(state => state.data);
+  const data = useAppSelector(getData);
   const datasetName = useAppSelector(state => state.name);
   const datasetLayout = useAppSelector(state => state.datasetLayout);
   const idColumn = useAppSelector(getIdColumn);
@@ -36,13 +37,11 @@ const DataDisplay = () => {
 
   const isTable = datasetLayout === 'table';
   const shownCount = tableView.rows.length;
-  const totalText = `${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`;
-  const rowCountText =
-    shownCount === rowCount ? totalText : `${shownCount} of ${totalText}`;
+  const shownText = rowCountText(shownCount, rowCount);
   const rowCountMessage =
     isTable && shownCount > DATA_TABLE_ROW_LIMIT
-      ? `${rowCountText} (Showing first ${DATA_TABLE_ROW_LIMIT})`
-      : rowCountText;
+      ? `${shownText} (Showing first ${DATA_TABLE_ROW_LIMIT})`
+      : shownText;
 
   const onLayoutChange = (value: string) => {
     if (value === 'table' || value === 'cards') {

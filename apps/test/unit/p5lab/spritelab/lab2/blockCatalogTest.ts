@@ -1,9 +1,13 @@
 import {
   catalogEntries,
   heldBackBlockTypes,
+  newBlockTypes,
+  offeredBlockTypes,
+  requiredBlockTypes,
   withoutBlockTypes,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockCatalog';
 import {BLOCK_HELP} from '@cdo/apps/p5lab/spritelab/lab2/blockHelp/blockHelpContent';
+import {SpriteLab2LevelProperties} from '@cdo/apps/p5lab/spritelab/lab2/types';
 
 const WITH_HELP = Object.keys(BLOCK_HELP)[0];
 
@@ -16,21 +20,6 @@ describe('catalogEntries', () => {
 
   it('is empty without new blocks', () => {
     expect(catalogEntries(undefined)).toEqual([]);
-  });
-
-  it('names the scene type whose toolbox category offers the block', () => {
-    const toolbox = {
-      kind: 'categoryToolbox',
-      contents: [
-        {
-          kind: 'category',
-          name: 'Platform',
-          contents: [{kind: 'block', type: WITH_HELP}],
-        },
-      ],
-    };
-    expect(catalogEntries([WITH_HELP], toolbox)[0].sceneType).toBe('platform');
-    expect(catalogEntries([WITH_HELP])[0].sceneType).toBeUndefined();
   });
 });
 
@@ -96,5 +85,175 @@ describe('withoutBlockTypes', () => {
 
   it('returns the toolbox itself when nothing is hidden', () => {
     expect(withoutBlockTypes(toolbox, new Set())).toBe(toolbox);
+  });
+});
+
+const toolbox = (...types: string[]) =>
+  ({
+    kind: 'categoryToolbox',
+    contents: [
+      {
+        kind: 'category',
+        name: 'Platform',
+        contents: types.map(type => ({
+          kind: 'block',
+          type,
+          inputs: {
+            SPRITE: {shadow: {type: 'gamelab_allSpritesWithAnimation'}},
+          },
+        })),
+      },
+    ],
+  } as SpriteLab2LevelProperties['toolboxDefinition']);
+const level = (
+  props: Partial<SpriteLab2LevelProperties>
+): SpriteLab2LevelProperties =>
+  ({
+    id: 1,
+    name: 'level',
+    appName: 'spritelab',
+    ...props,
+  } as SpriteLab2LevelProperties);
+
+describe('offeredBlockTypes', () => {
+  it('is the toolbox blocks, not their shadows or categories', () => {
+    expect(
+      offeredBlockTypes(
+        level({
+          toolboxDefinition: toolbox('gamelab_spriteSay', 'spritelab2_burst'),
+        })
+      )
+    ).toEqual(['gamelab_spriteSay', 'spritelab2_burst']);
+  });
+
+  it('counts the blocks add_blocks places, not their placeholders', () => {
+    expect(
+      offeredBlockTypes(
+        level({
+          toolboxDefinition: toolbox('spritelab2_burst'),
+          addBlocks: [
+            {
+              type: 'gamelab_atTime',
+              next: {shadow: {type: 'spritelab2_placeholder'}},
+            },
+            {
+              attachTo: 'spritelab2_whenRun',
+              shadow: {type: 'spritelab2_placeholder'},
+            },
+          ],
+        })
+      )
+    ).toEqual(['spritelab2_burst', 'gamelab_atTime']);
+  });
+
+  it('does not take a type inside a field or extra state for a block', () => {
+    expect(
+      offeredBlockTypes(
+        level({
+          toolboxDefinition: {
+            kind: 'flyoutToolbox',
+            contents: [
+              {
+                kind: 'block',
+                type: 'gamelab_setProp',
+                fields: {PROP: '"type"'},
+              },
+              {
+                kind: 'block',
+                type: 'spritelab2_placeholder',
+                extraState: {like: {type: 'gamelab_spriteSay'}},
+              },
+            ],
+          } as SpriteLab2LevelProperties['toolboxDefinition'],
+        })
+      )
+    ).toEqual(['gamelab_setProp', 'spritelab2_placeholder']);
+  });
+
+  it('is empty without a toolbox', () => {
+    expect(offeredBlockTypes(level({}))).toEqual([]);
+  });
+});
+
+describe('newBlockTypes', () => {
+  it('requires what a checklist item names, hangs under or placed, not any-of options', () => {
+    const required = requiredBlockTypes(
+      level({
+        objectives: {
+          items: [
+            {
+              text: 'say',
+              check: {
+                kind: 'block',
+                type: 'gamelab_spriteSay',
+                under: 'spritelab2_whenRun',
+              },
+            },
+            {
+              text: 'any',
+              check: {
+                kind: 'block',
+                type: ['spritelab2_burst', 'spritelab2_setCameraZoom'],
+              },
+            },
+            {text: 'play', check: {kind: 'play'}},
+          ],
+        },
+        addBlocks: [
+          {type: 'gamelab_checkTouching', data: 'treasure'},
+          {
+            attachTo: 'spritelab2_whenRun',
+            shadow: {type: 'spritelab2_placeholder'},
+          },
+        ],
+      })
+    );
+    expect(required).toEqual([
+      'gamelab_spriteSay',
+      'spritelab2_whenRun',
+      'gamelab_checkTouching',
+    ]);
+  });
+
+  it('is what no earlier level required, in toolbox order', () => {
+    const first = level({
+      toolboxDefinition: toolbox('gamelab_spriteSay'),
+      objectives: {
+        items: [
+          {text: 'say', check: {kind: 'block', type: 'gamelab_spriteSay'}},
+        ],
+      },
+    });
+    // Offered, with the checklist taking either: neither is required.
+    const second = level({
+      toolboxDefinition: toolbox(
+        'spritelab2_burst',
+        'spritelab2_setCameraZoom'
+      ),
+      objectives: {
+        items: [
+          {
+            text: 'any',
+            check: {
+              kind: 'block',
+              type: ['spritelab2_burst', 'spritelab2_setCameraZoom'],
+            },
+          },
+        ],
+      },
+    });
+    const last = level({
+      toolboxDefinition: toolbox(
+        'gamelab_spriteSay',
+        'spritelab2_burst',
+        'spritelab2_setCameraZoom',
+        'spritelab2_setWeather'
+      ),
+    });
+    expect(newBlockTypes(last, [first, second])).toEqual([
+      'spritelab2_burst',
+      'spritelab2_setCameraZoom',
+      'spritelab2_setWeather',
+    ]);
   });
 });

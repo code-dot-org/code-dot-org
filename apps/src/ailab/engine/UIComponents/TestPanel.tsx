@@ -13,6 +13,7 @@ import {useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getPredictAvailable, setTestData, setTestDataValues} from '../redux';
 import {
+  getDatasetId,
   getDecimalPlacesByColumn,
   getExtremaByColumn,
   getSelectedCategoricalFeatures,
@@ -28,7 +29,7 @@ import styles from './testPanel.module.scss';
 
 const TestPanel = () => {
   const dispatch = useAppDispatch();
-  const datasetId = useAppSelector(state => state.metadata?.name || '');
+  const datasetId = useAppSelector(state => getDatasetId(state) || '');
   const {project} = useProject();
   const selectedFeatures = project.selectedFeatures;
   const testData = useAppSelector(state => state.testData);
@@ -83,6 +84,7 @@ const TestPanel = () => {
       return (
         <TextField
           key={feature}
+          color="gray"
           name={name}
           label={label}
           inputType="number"
@@ -107,6 +109,7 @@ const TestPanel = () => {
     return (
       <SimpleDropdown
         key={feature}
+        color="gray"
         name={name}
         labelText={label}
         dropdownTextThickness="thin"

@@ -1,0 +1,27 @@
+name 'pl-aif-y2-u1-l5-for-loop-demo'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Stepping Through a For Loop
+
+You just saw the for loop's syntax and output side by side. Now watch it execute one step at a time, the exact same trace your students will follow in Lesson 7. Click Next to step forward, Back to reverse, and notice what happens right at the end, when the loop checks range(5) one more time and finds nothing left.
+
+---
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-1/for-loop-step-through.html"
+    width="100%"
+    height="1050"
+    frameborder="0"
+    scrolling="no"
+    title="Stepping Through a For Loop: click Next to trace execution one step at a time"
+    style="display:block; border-radius:10px;">
+  </iframe>
+</div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

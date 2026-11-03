@@ -1,0 +1,24 @@
+{
+  "key": "pp-lesson-8894914-9273101e936f",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match each term with its correct definition.",
+  "solution": [
+    {
+      "option": "Evaluate AI outputs",
+      "correct": "Assessing the relevance and accuracy of AI-generated data."
+    },
+    {
+      "option": "Refine predictions",
+      "correct": "Improving forecasts by adjusting prompts and applying human reasoning."
+    },
+    {
+      "option": "Combine research with AI",
+      "correct": "Integrating factual data with AI insights for better predictions."
+    }
+  ],
+  "objective_keys": [
+    "2773ac04-48bb-41c3-83d8-055a75b508ab",
+    "93016fc4-fc05-4994-8f58-45ccbc44c679"
+  ]
+}

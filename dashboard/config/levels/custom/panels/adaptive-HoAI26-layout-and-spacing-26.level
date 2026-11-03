@@ -11,25 +11,25 @@
         "key": "adaptive-HoAI26-layout-and-spacing-26-b8561ce0-5788-4c6f-bb4d-15242c2f59cd",
         "text": "### Crowded?\nWhen everything competes for attention, it’s hard to know where to look.",
         "imageUrl": "https://images.code.org/ce2860098c51fd223e70317d971825ff-exec-fe26a9ce-3913-46f6-a827-825eaf85fe44.png",
-        "layout": "text-top-left"
+        "layout": "text-top-right"
       },
       {
         "key": "adaptive-HoAI26-layout-and-spacing-26-c5d19123-347f-4907-9eea-f01b4a70c5cb",
         "text": "### Give each part room.\nAsk AI to add **spacing** so each section is easier to scan.",
         "imageUrl": "https://images.code.org/d4d89e11cad248d1f6b64c9ecc49af24-exec-bb553cd5-1d63-46cf-b593-25c9355f15bc.png",
-        "layout": "text-top-left"
+        "layout": "text-top-right"
       },
       {
         "key": "adaptive-HoAI26-layout-and-spacing-26-cd11d90c-e2d0-4105-ab67-d3a54d1b88a4",
         "text": "### Guide the eye.\nPut the main idea first. Use **order** to lead visitors toward the next step.",
         "imageUrl": "https://images.code.org/9802e2dccac9604194848285962c0cc2-exec-e9e426a5-7613-47f3-b7e2-ee6c9b094648.png",
-        "layout": "text-top-left"
+        "layout": "text-top-right"
       },
       {
         "key": "adaptive-HoAI26-layout-and-spacing-26-6b38049a-14c4-4738-a592-7119c11ccfea",
         "text": "Order guides the eye.",
         "imageUrl": "https://images.code.org/06d52b077194cea6cf18de551ed109c8-exec-cd0ffc20-ba9e-4074-be21-5125bdf75ea3.png",
-        "layout": "text-top-left"
+        "layout": "text-top-right"
       }
     ],
     "generate_outline": "Understand the importance of space, alignment, and order in web design. Learn how proper spacing gives elements room, alignment creates tidiness, and clear order guides the user's eye on a page.",
@@ -37,6 +37,6 @@
     "offer_browser_tts": "false",
     "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-16 21:37:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:37:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 02:26:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:37:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:37:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 02:26:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-27 05:14:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

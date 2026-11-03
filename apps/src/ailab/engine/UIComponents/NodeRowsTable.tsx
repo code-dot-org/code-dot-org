@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {type ReactNode} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {getColumnRole} from '../helpers/columnDetails';
@@ -8,7 +8,7 @@ import {displayValue} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {getIdColumn} from '../selectors';
+import {getData, getDatasetId, getIdColumn} from '../selectors';
 import type {DatasetTableView} from '../types';
 
 import CellText from './CellText';
@@ -27,6 +27,7 @@ interface NodeRowsTableProps {
   emphasizedColumn?: string;
   emptyText: string;
   prediction?: string | number;
+  actionRow: ReactNode;
 }
 
 const NodeRowsTable = ({
@@ -35,18 +36,19 @@ const NodeRowsTable = ({
   emphasizedColumn,
   emptyText,
   prediction,
+  actionRow,
 }: NodeRowsTableProps) => {
   const {columns} = view;
   const {project} = useProject();
-  const data = useAppSelector(state => state.data);
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const data = useAppSelector(getData);
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const idColumn = useAppSelector(getIdColumn);
   const showPrediction = prediction !== undefined;
   const shownRows = view.rows.slice(0, DATA_TABLE_ROW_LIMIT);
 
   return (
     <>
-      <DataTableFrame labelId={labelId}>
+      <DataTableFrame labelId={labelId} actionRow={actionRow}>
         <table className={tableStyles.table}>
           <thead>
             <RowsTableHeader

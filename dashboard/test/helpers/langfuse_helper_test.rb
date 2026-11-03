@@ -51,6 +51,12 @@ class LangfuseHelperTest < ActiveSupport::TestCase
     assert_nil opts[:status_message]
   end
 
+  test 'adaptive trace passes the session id through' do
+    opts = capture_trace(session_id: 'adaptive-1-2-42')
+
+    assert_equal 'adaptive-1-2-42', opts[:session_id]
+  end
+
   test 'adaptive trace marks a failed generation as an error observation' do
     opts = capture_trace(outcome: 'error', output: nil, usage: nil, error_message: 'timed out')
 

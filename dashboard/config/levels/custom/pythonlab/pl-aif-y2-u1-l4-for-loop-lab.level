@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-10-26T18:42:28.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Simulating a Viral Post",
+    "long_instructions": "In Lesson 7, students complete this exact task: writing a loop that simulates a post going viral over several days, printing each day's view count as it grows, the same \"Day {i}\" print pattern from the syntax you just saw.\r\n\r\n**☑️ Do This:**\r\n\r\n- Complete `simulate` to simulate a viral post over any number of days.\r\n- Ensure that, for each day, `simulate` prints a message in the format: `\"Day {day}: {views} views\"`. Start with day 0.\r\n- Choose the starting conditions for your post and call `simulate`.\r\n\r\n**💻 Coding Tip:**\r\n\r\nRemember that Python's for loop can repeat code a certain number of times.\r\n\r\n\r\nFor example:\r\n```python\r\niterations = 10\r\n for i in range(iterations):\r\n    print(i)\r\n```\r\n\r\n---\r\n\r\nReflection: What might your students find challenging about this task, writing the loop itself, getting the f-string format exactly right, or deciding how views should grow each day?\r\n\r\n---\r\n\r\n\r\n**☑️ Do This:**",
+    "bubble_choice_description": "Simulate a social media post going viral.",
+    "thumbnail_url": "https://images.code.org/558691af594f6b55c7bba3df10a8f1e0-viral.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def simulate(views, growth, days):\n  print(f\"Day 0: {views} views\")\n  views = views + views * growth\n  \n  print(f\"Day 1: {views} views\")\n  views = views + views * growth\n\n  print(f\"Day 2: {views} views\")\n  views = views + views * growth\n\n\nsimulate(100, 1, 3)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpMqxdx5qVZiyE2\ndxsCP727xN4WwB2W9PAFljJEwkI7yg/qq3pqJ1XDUivkceMkzSho3D4B3PMZ\nPNchoW13KpBHgdyXwG2oKJ3Rk44FTp5z7chWSLNU71cTx1QTdO9blPV+PNvQ\nGfIvlc4kPGvaqnOoUBVg9ZgIvFVOmgio4BwAXlQfoGBFzbJLQaCyRdeMC7iV\nxKHhudoQI7Jm82n3UElt2q2wSaqXIqLqwzpyH1Fh2T11dTBpqzcUzQ2Ph9g7\nwwM/9ePPmpMrs0WAEBBeDPbGM7d01vnYygvxinUkzQU66zCEl+lbhWVFh2UP\nr61Ugba37JBqUs+ivErKmuot9mFA\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-26T18:42:28.564+00:00\",\"changed\":[\"cloned from \\\"aif-y2-logic-based-ai-lesson7-level2-choice1-2026\\\"\"],\"cloned_from\":\"aif-y2-logic-based-ai-lesson7-level2-choice1-2026\"},{\"changed_at\":\"2026-10-26 19:39:09 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-26 19:43:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-26 19:49:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Pythonlab>

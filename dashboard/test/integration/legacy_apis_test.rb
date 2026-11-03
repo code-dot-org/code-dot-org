@@ -27,25 +27,42 @@ class LegacyAPIsTest < ActionDispatch::IntegrationTest
         must_respond_with :success
       end
 
-      it 'preserves session data between requests' do
+      it 'preserves storage ID and anon_user_id between requests' do
         get '/v3/channels'
 
         init_storage_id = get_storage_id
-        init_statsig_stable_id = request.statsig_stable_id
         init_anon_user_id = request.anon_user_id
 
         _(init_storage_id).wont_be_nil
-        _(init_statsig_stable_id).wont_be_nil
         _(init_anon_user_id).wont_be_nil
 
         get '/v3/channels'
 
         _(get_storage_id).must_equal init_storage_id
-        _(request.statsig_stable_id).must_equal init_statsig_stable_id
         _(request.anon_user_id).must_equal init_anon_user_id
       end
 
-      it 'records Statsig cookie as anon_user_id without creating session' do
+      it 'records anon_user_id cookie without creating session' do
+        anon_user_id = Cdo::AnonUserId.generate
+        cookies[Cdo::AnonUserId::KEY] = anon_user_id
+
+        get '/v3/channels'
+
+        must_respond_with :success
+        _(user_storage_ids_table.where(anon_user_id:).count).must_equal 1
+        _(response.headers['Set-Cookie'].to_s).wont_include '_learn_session_test='
+      end
+
+      it 'sets anon_user_id cookie without creating session' do
+        get '/v3/channels'
+
+        must_respond_with :success
+        _(user_storage_ids_table.where(anon_user_id: cookies[Cdo::AnonUserId::KEY]).count).must_equal 1
+        _(response.headers['Set-Cookie'].to_s).must_include "#{Cdo::AnonUserId::KEY}="
+        _(response.headers['Set-Cookie'].to_s).wont_include '_learn_session_test='
+      end
+
+      it 'records Statsig stable ID as anon_user_id without anon_user_id cookie' do
         stable_id = SecureRandom.uuid
         cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = stable_id
 
@@ -53,7 +70,31 @@ class LegacyAPIsTest < ActionDispatch::IntegrationTest
 
         must_respond_with :success
         _(user_storage_ids_table.where(anon_user_id: stable_id).count).must_equal 1
-        _(response.headers['Set-Cookie'].to_s).wont_include '_learn_session_test='
+        _(cookies[Cdo::AnonUserId::KEY]).must_equal stable_id
+      end
+
+      it 'records anon_user_id cookie over Statsig stable ID' do
+        anon_user_id = Cdo::AnonUserId.generate
+        stable_id = SecureRandom.uuid
+        cookies[Cdo::AnonUserId::KEY] = anon_user_id
+        cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = stable_id
+
+        get '/v3/channels'
+
+        must_respond_with :success
+        _(user_storage_ids_table.where(anon_user_id:).count).must_equal 1
+        _(user_storage_ids_table.where(anon_user_id: stable_id).count).must_equal 0
+      end
+    end
+
+    describe 'POST /v3/channels' do
+      it 'stores new anon_user_id in cookie jar of project owner' do
+        post '/v3/channels', params: {hello: 'world'}.to_json, headers: {'CONTENT_TYPE' => 'application/json;charset=utf-8'}
+
+        anon_user_id = cookies[Cdo::AnonUserId::KEY]
+        _(anon_user_id).must_match Cdo::AnonUserId::FORMAT
+        _(response.headers['Set-Cookie'].to_s).must_match(/#{Cdo::AnonUserId::KEY}=#{anon_user_id}; .*HttpOnly; SameSite=Lax/)
+        _(user_storage_ids_table.where(id: get_storage_id).get(:anon_user_id)).must_equal anon_user_id
       end
     end
   end

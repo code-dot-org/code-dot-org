@@ -6,6 +6,7 @@ import {flushSync} from 'react-dom';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
+import {getDatasetId} from '../selectors';
 import type {ColumnId, TableView} from '../types';
 
 import {PREDICTION_COLUMN_NAME} from './RowsTableHeader';
@@ -16,10 +17,11 @@ import styles from './tableFilter.module.scss';
 
 interface TableFilterProps {
   view: TableView;
+  menuAlign?: 'left' | 'right';
 }
 
-const TableFilter = ({view}: TableFilterProps) => {
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+const TableFilter = ({view, menuAlign = 'right'}: TableFilterProps) => {
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const anchorRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const doneRef = useRef<HTMLButtonElement>(null);
@@ -134,8 +136,8 @@ const TableFilter = ({view}: TableFilterProps) => {
         anchorEl={() => anchorRef.current!}
         onClose={closeMenu}
         disableRestoreFocus
-        anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
-        transformOrigin={{vertical: 'top', horizontal: 'right'}}
+        anchorOrigin={{vertical: 'bottom', horizontal: menuAlign}}
+        transformOrigin={{vertical: 'top', horizontal: menuAlign}}
         slotProps={{
           paper: {
             role: 'dialog',

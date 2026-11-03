@@ -929,6 +929,23 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_equal 'Write some code.', response_data['instructions']
   end
 
+  test "student_code endpoint returns null studentCode when the student's code is missing from S3" do
+    pythonlab_level = create(:pythonlab, name: 'Test Pythonlab Level', long_instructions: 'Write some code.')
+    create(:script_level, script: @unit, lesson: @lesson1, levels: [pythonlab_level])
+
+    student = create(:student)
+    create(:follower, user: @teacher, student_user: student, section: @section)
+
+    @controller.stubs(:get_student_code).returns(nil)
+
+    get :student_code, params: {lesson_id: @lesson1.id, student_id: student.id, unit_id: @unit.id}
+
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    assert_nil response_data['studentCode']
+    assert_equal 'Write some code.', response_data['instructions']
+  end
+
   test "exemplar_code endpoint returns exemplar source and instructions" do
     stub_encryption_key = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
     CDO.stubs(:properties_encryption_key).returns(stub_encryption_key)

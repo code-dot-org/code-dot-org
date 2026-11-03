@@ -6,6 +6,7 @@ import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {useProject} from '../ProjectContext';
+import {getData, getDatasetId} from '../selectors';
 
 import styles from './statement.module.scss';
 import shared from '../shared.module.scss';
@@ -156,14 +157,12 @@ const Statement = ({
 
 // Store-connected container: the default export used in the live panels.
 const ConnectedStatement = () => {
-  const shouldShow = useAppSelector(state => state.data.length !== 0);
+  const shouldShow = useAppSelector(state => getData(state).length !== 0);
   const currentPanel = useAppSelector(state => state.currentPanel);
   const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const {project, setLabelColumn, removeSelectedFeature} = useProject();
   const {labelColumn, selectedFeatures} = project;
-  const datasetId = useAppSelector(
-    state => state.metadata && state.metadata.name
-  );
+  const datasetId = useAppSelector(getDatasetId);
 
   return (
     <Statement

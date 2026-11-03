@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894908-0ee6c467a58c",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following statements best describes an AI hallucination?",
+  "solution": [
+    {
+      "option": "An AI's ability to create images based on user prompts.",
+      "correct": false
+    },
+    {
+      "option": "An AI generating information that is false or misleading.",
+      "correct": true
+    },
+    {
+      "option": "An AI's process of learning from large datasets.",
+      "correct": false
+    },
+    {
+      "option": "An AI's capacity to perform complex calculations.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "3cc18eaf-53fc-4073-aa36-f6420e0ad764"
+  ]
+}

@@ -4,14 +4,12 @@ import {createStore} from 'redux';
 
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import rootReducer, {
-  setImportedData,
-  setImportedMetadata,
   setSelectedCSV,
   setSelectedName,
 } from '@cdo/apps/ailab/engine/redux';
 import DataCard from '@cdo/apps/ailab/engine/UIComponents/DataCard';
 
-import {ANIMALS} from './levelStore';
+import {ANIMAL_COLUMNS, ANIMALS, seedDataset} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 const CARD = {
@@ -35,7 +33,7 @@ function renderCard(setUp = () => {}) {
 
 const upload = store => {
   store.dispatch(setSelectedCSV(new File([''], 'animals.csv')));
-  store.dispatch(setImportedData(ANIMALS, true));
+  seedDataset(store, ANIMALS, ANIMAL_COLUMNS);
 };
 
 const useButton = () => screen.getByRole('button', {name: 'Use this dataset'});
@@ -69,8 +67,10 @@ describe('DataCard', () => {
   test('describes a curated dataset from its card', () => {
     renderCard(store => {
       selectCurated(store);
-      store.dispatch(setImportedData(ANIMALS, false));
-      store.dispatch(setImportedMetadata({name: 'animals', card: CARD}));
+      seedDataset(store, ANIMALS, ANIMAL_COLUMNS, {
+        name: 'animals',
+        card: CARD,
+      });
     });
     screen.getByRole('heading', {level: 4, name: 'Animals'});
     screen.getByRole('heading', {level: 5, name: 'Rows'});
@@ -79,14 +79,6 @@ describe('DataCard', () => {
     screen.getByText(CARD.source);
     screen.getByText(CARD.context.potentialUses);
     screen.getByText(CARD.context.potentialMisuses);
-    expect(screen.queryByText('Sample row')).toBeNull();
-  });
-
-  test('omits the sample row while curated metadata loads', () => {
-    renderCard(store => {
-      selectCurated(store);
-      store.dispatch(setImportedData(ANIMALS, false));
-    });
     expect(screen.queryByText('Sample row')).toBeNull();
   });
 

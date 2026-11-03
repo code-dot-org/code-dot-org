@@ -8,6 +8,7 @@ import {
   isPendingQuestionId,
   QuizBuilderQuestion,
   QuizQuestionDraft,
+  QuizQuestionPayload,
 } from '../types';
 
 import AnswersTab from './AnswersTab';
@@ -23,9 +24,10 @@ interface QuizQuestionCardProps {
   error?: string | null;
   onSave: (
     id: number,
-    payload: QuizQuestionDraft
+    payload: QuizQuestionPayload
   ) => Promise<number | undefined>;
   onRemove: (id: number) => Promise<boolean>;
+  onDirtyChange?: (id: number, isDirty: boolean) => void;
 }
 
 function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
@@ -41,12 +43,38 @@ function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
         ...shared,
         type: question.type,
         choices: question.choices,
-        correctChoiceId: question.correctChoiceId,
+        correctChoiceIds:
+          question.correctChoiceId === null ? [] : [question.correctChoiceId],
+      };
+    case 'MultipleSelectQuestion':
+      return {
+        ...shared,
+        type: question.type,
+        choices: question.choices,
+        correctChoiceIds: question.correctChoiceIds,
       };
     case 'FreeResponseQuestion':
       return {...shared, type: question.type};
     case 'MatchQuestion':
       return {...shared, type: question.type, pairs: question.pairs};
+  }
+}
+
+function toPayload(draft: QuizQuestionDraft): QuizQuestionPayload {
+  switch (draft.type) {
+    case 'MultipleChoiceQuestion': {
+      const {correctChoiceIds, ...rest} = draft;
+      return {
+        ...rest,
+        type: draft.type,
+        correctChoiceId: correctChoiceIds[0] ?? null,
+      };
+    }
+    case 'MultipleSelectQuestion':
+      return {...draft, type: draft.type};
+    case 'FreeResponseQuestion':
+    case 'MatchQuestion':
+      return draft;
   }
 }
 
@@ -60,6 +88,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   error,
   onSave,
   onRemove,
+  onDirtyChange,
 }) => {
   const [draft, setDraft] = useState(() => toDraft(question));
   const [isSaving, setIsSaving] = useState(false);
@@ -89,14 +118,24 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
     setDraft(toDraft(question));
   }, [question]);
 
+  useEffect(() => {
+    if (!isDirty || !onDirtyChange) {
+      return;
+    }
+    onDirtyChange(question.id, true);
+    return () => onDirtyChange(question.id, false);
+  }, [onDirtyChange, question.id, isDirty]);
+
   const handleSave = async () => {
     setIsSaving(true);
-    const updatedId = await onSave(question.id, draft);
+    const updatedId = await onSave(question.id, toPayload(draft));
     setIsSaving(false);
     if (updatedId !== undefined) {
       onExpandedChange(false);
     }
   };
+
+  const neverSaved = isPendingQuestionId(question.id);
 
   const handleDiscard = () => {
     setDraft(toDraft(question));
@@ -110,7 +149,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
 
   return (
     <BuilderCard
-      iconName={QUESTION_TYPE_LABELS_ICONS[question.type].iconName}
+      iconName={QUESTION_TYPE_LABELS_ICONS[draft.type].iconName}
       name={draft.questionName}
       preview={draft.questionTitle}
       itemLabel="question"
@@ -123,6 +162,8 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
       onSave={handleSave}
       onDiscard={handleDiscard}
       onRemove={handleRemove}
+      nested
+      neverSaved={neverSaved}
     >
       <Tabs
         name={`question-${question.id}-tabs`}

@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894770-e262f42e9da0",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following is a positive impact of Artificial Intelligence on society?",
+  "solution": [
+    {
+      "option": "Improving healthcare through prediction tools",
+      "correct": true
+    },
+    {
+      "option": "Reinforcing biases in decision-making",
+      "correct": false
+    },
+    {
+      "option": "Increasing unemployment rates across all areas",
+      "correct": false
+    },
+    {
+      "option": "Creating more complex problems than it solves",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "ee24455c-f121-4590-9546-3aed9f487b17"
+  ]
+}

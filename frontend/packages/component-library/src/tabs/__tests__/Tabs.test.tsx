@@ -229,4 +229,18 @@ describe('Design System - Tabs', () => {
       expect(container).toHaveClass(moduleStyles.tabs);
     });
   });
+
+  it('names the tab list when asked', () => {
+    renderTabs({
+      defaultSelectedTabValue: 'tab1',
+      tabs: [
+        {text: 'tab1', value: 'tab1', tabContent: null},
+        {text: 'tab2', value: 'tab2', tabContent: null},
+      ],
+      onChange: () => {},
+      name: 'named',
+      tabListAriaLabel: 'Which words',
+    });
+    expect(screen.getByRole('tablist', {name: 'Which words'})).toBeTruthy();
+  });
 });

@@ -1,5 +1,3 @@
-@use '../sharedMixins' as mixins;
-
 .panel {
   display: flex;
   flex: 1;
@@ -9,29 +7,13 @@
   padding-top: 10px;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
 .text {
   margin: 0;
   color: var(--text-neutral-primary);
 }
 
-.actions {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  gap: 10px;
-}
-
-.divider {
-  @include mixins.summary-divider;
-}
-
-.actionGroup {
-  @include mixins.action-group;
+.rowCount {
+  padding-inline-end: 4px;
+  white-space: nowrap;
+  color: var(--text-neutral-primary);
 }

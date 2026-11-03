@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894759-9fcaf08cb55c",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is the primary role of training data in AI development?",
+  "solution": [
+    {
+      "option": "It helps AI recognize patterns and make predictions.",
+      "correct": true
+    },
+    {
+      "option": "It provides a user interface for the chatbot.",
+      "correct": false
+    },
+    {
+      "option": "It generates random responses.",
+      "correct": false
+    },
+    {
+      "option": "It acts as a database for storing user queries.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "09979de0-7ee5-4aab-b721-0b99aaf30cab"
+  ]
+}

@@ -1,0 +1,55 @@
+name 'pl-aif-y2-u1-l7-project-pipeline'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Project Pipeline
+
+One example runs through Lesson 13's own teaching materials, used to demonstrate each step of the pipeline: a conversational AI that recommends a class to take, based on a student's answers. Your students will each choose their own topic, this is just the example the lesson itself uses to walk through how the pipeline works.
+
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Conversational AI:</strong> a technology that lets users communicate with software through natural language.
+  </div>
+</div>
+
+## 1. Choose a Topic
+
+Students brainstorm what their conversational AI could help someone decide, then narrow to specific decisions it could suggest. The running example: "Do you like sea animals?" leads to Marine Biology, "Do you like music more than acting?" branches to Orchestra or Theater.
+
+## 2. Draw a Decision Tree
+
+Before writing any code, students draft their tree by hand in the Project Planning Guide, same skill as Section 6's Decision Trees lesson, just applied to their own topic now.
+
+## 3. Implement in Python
+
+Here's where the one new piece of syntax shows up:
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+if ask("Do you like sea animals?"):<br>
+&nbsp;&nbsp;print("Try a Marine Biology class!")<br>
+else:<br>
+&nbsp;&nbsp;print("Try a Chemistry class!")
+  </div>
+</div>
+
+<code style="font-size:16px;">ask()</code> hasn't appeared anywhere else in this unit. It asks the user a yes/no question and returns the answer, used directly as the condition in an <code style="font-size:16px;">if</code> statement. Functionally, it works exactly like any other condition students have already written, it's just new vocabulary for how the question gets asked.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> don't assume students will intuit what <code>ask()</code> does from context alone. A thirty-second explanation up front, "it asks a yes-or-no question and gives you back the answer," saves confusion later.
+  </div>
+</div>
+
+## 4. Written Reflection
+
+Each project day ends with a reflection section in the Planning Guide, Day 1, Day 2, and a final End-of-Project Reflection on Day 3. This isn't a bolt-on, it's built into the pacing itself.
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Partner feedback is built in too:</strong> Day 2 has students share decision tree diagrams for feedback before coding, and Day 3 has them test each other's finished projects. This isn't a solo project start to finish.
+  </div>
+</div>
+MARKDOWN

@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894906-22aa69d7b7ee",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is a contradiction in the context of AI responses?",
+  "solution": [
+    {
+      "option": "When an AI generates answers that are both correct at the same time.",
+      "correct": false
+    },
+    {
+      "option": "When an AI provides conflicting answers based on similar inputs.",
+      "correct": true
+    },
+    {
+      "option": "When an AI produces a single answer without any uncertainty.",
+      "correct": false
+    },
+    {
+      "option": "When an AI refuses to answer a question.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "aa84046f-f43f-45a1-8563-83426f470007"
+  ]
+}

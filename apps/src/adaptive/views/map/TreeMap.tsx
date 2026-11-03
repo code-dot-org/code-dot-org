@@ -1,6 +1,7 @@
 import {Typography as MuiTypography} from '@mui/material';
 import React, {useMemo} from 'react';
 
+import {checkpointIcon} from './checkpointIcon';
 import {DrawnEdge} from './layout/busRoutes';
 import {layoutCheckpoints} from './layout/tree';
 import {NODE_RADIUS} from './layout/types';
@@ -20,11 +21,30 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
   pathway,
   statusMap,
   focusId,
+  fit,
   onSelect,
+  tourFocusIds,
 }) => {
   const layout = useMemo(
     () => layoutCheckpoints(pathway.checkpoints),
     [pathway]
+  );
+  const tourFocus = useMemo(() => {
+    if (!tourFocusIds?.length) return undefined;
+    const positions = tourFocusIds.map(id => layout.nodes[id]).filter(Boolean);
+    if (!positions.length) return undefined;
+    return {
+      x: positions.reduce((s, p) => s + p.x, 0) / positions.length,
+      // Shift up by half the label height so the title above each circle
+      // is included in the zoomed view, not cropped at the top.
+      y:
+        positions.reduce((s, p) => s + p.y, 0) / positions.length -
+        LABEL_HEIGHT / 2,
+    };
+  }, [tourFocusIds, layout.nodes]);
+  const firstSkippedId = useMemo(
+    () => pathway.checkpoints.find(c => statusMap[c.id] === 'skipped')?.id,
+    [pathway.checkpoints, statusMap]
   );
   const lines = useMemo(
     (): DrawnEdge[] =>
@@ -48,6 +68,8 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
       lines={lines}
       statusMap={statusMap}
       focus={focusId ? layout.nodes[focusId] : undefined}
+      fit={fit}
+      tourFocus={tourFocus}
     >
       {pathway.checkpoints.map(checkpoint => (
         <MapNode
@@ -55,6 +77,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
           checkpoint={checkpoint}
           position={layout.nodes[checkpoint.id]}
           status={statusMap[checkpoint.id]}
+          icon={checkpointIcon(pathway, checkpoint)}
           focusId={focusId}
           circleTop={NODE_RADIUS + LABEL_HEIGHT}
           width={NODE_WIDTH}
@@ -64,6 +87,11 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
             </MuiTypography>
           }
           onSelect={onSelect}
+          tourId={
+            checkpoint.id === firstSkippedId
+              ? 'adaptive-tour-first-available'
+              : undefined
+          }
         />
       ))}
     </MapBoard>
