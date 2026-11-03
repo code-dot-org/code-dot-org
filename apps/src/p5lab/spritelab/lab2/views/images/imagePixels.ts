@@ -9,7 +9,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {MODEL_OUTPUT_PX} from '../../ai/images/modelHelpers';
-import {AnimationPoses, stripCellOrigin} from '../../characterAnimations';
+import {AnimationPoses, drawStripCell} from '../../characterAnimations';
 
 import {ImageProps} from './projectImages';
 
@@ -34,20 +34,9 @@ async function cropStandingFrame(
   poses?: AnimationPoses
 ): Promise<string> {
   const img = await toImage(dataURI);
-  const canvas = document.createElement('canvas');
-  canvas.width = frameSize.x;
-  canvas.height = frameSize.y;
-  const ctx = canvas.getContext('2d');
-  if (!ctx) {
-    return dataURI;
-  }
-  const origin = stripCellOrigin(
-    img.naturalWidth,
-    frameSize,
-    standingFrameIndex(poses)
+  return drawStripCell(img, frameSize, standingFrameIndex(poses)).toDataURL(
+    'image/png'
   );
-  ctx.drawImage(img, -origin.x, -origin.y);
-  return canvas.toDataURL('image/png');
 }
 
 /** The image's current pixels for the model, or null when they cannot be
