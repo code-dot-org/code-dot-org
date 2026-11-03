@@ -676,7 +676,7 @@ describe('ImagesTab', () => {
     jest.useFakeTimers();
     renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     acceptGenerated.mockImplementation(async () => {
       propsByKey.k2 = {name: 'Sprite 1', categories: [], role: 'hero'};
       return 'k2';
@@ -718,7 +718,7 @@ describe('ImagesTab', () => {
       imageRole: 'hero',
     });
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Character'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     acceptGenerated.mockImplementation(async () => {
       propsByKey.k2 = {name: 'Sprite 1', categories: [], role: 'hero'};
       return 'k2';
