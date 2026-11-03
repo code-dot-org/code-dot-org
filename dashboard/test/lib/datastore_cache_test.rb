@@ -146,6 +146,16 @@ class DatastoreCacheTest < ActiveSupport::TestCase
     @datastore_cache.set('whatever', 'yo')
   end
 
+  test 'set reads back from the datastore with a consistent read' do
+    @data_adapter.expects(:all).with(consistent_read: true).returns({}).once
+    @datastore_cache.set('key', 'value')
+  end
+
+  test 'init reads from the datastore without a consistent read' do
+    @data_adapter.expects(:all).with(consistent_read: false).returns({}).once
+    DatastoreCache.new @data_adapter, 'test initialization'
+  end
+
   test 'seeding data on init' do
     k = 'yo'
     v = 'dude'
