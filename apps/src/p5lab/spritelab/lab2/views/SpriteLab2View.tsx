@@ -569,13 +569,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useEffect(() => {
     setPicturesOpen(activeTab === 'Images');
   }, [activeTab, setPicturesOpen]);
-  // The pane slides between the column's edge and the full width as its
-  // tab comes and goes.
-  const picturesSlide = usePaneSlide(
-    guideUnderPreview && activeTab === 'Images',
-    previewWidth,
-    pictures.sheetRef
-  );
+  // The room the editors keep clear of the preview's column, at the right.
+  const clearOfPreview = {right: previewWidth};
   // The Images tab's pane column, headed AI, at the right, is as wide as
   // the preview column is or would be, which the playspace reports whether
   // or not its preview shows.
@@ -596,8 +591,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setIsStandaloneCollapsed(false));
     };
   }, [freeplayLevel, levelProperties.id, dispatch]);
-  // The room the editors keep clear of the preview's column, at the right.
-  const clearOfPreview = {right: previewWidth};
   // The workspace does not notice its container changing size.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as
