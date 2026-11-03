@@ -360,6 +360,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     },
     [images]
   );
+  // Once the tools have their own copy, the decoded picture is let go.
+  const dropPicture = useCallback(() => {
+    setDrawing(d => (d?.picture ? {...d, picture: undefined} : d));
+  }, []);
   const noteStroke = useCallback(() => {
     dirtyRef.current = true;
     clearIdleTimer();
@@ -722,6 +726,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
               return (
                 <PixelEditor
                   imageUrl={drawing.imageUrl}
+                  onReady={dropPicture}
                   knownPixelGrid={drawing.pixelGridSize}
                   initialRecentColors={drawing.recentColors}
                   opaqueGround={
