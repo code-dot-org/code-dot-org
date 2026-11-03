@@ -20,10 +20,10 @@ import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generatin
 import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
 
 import {
-  CHARACTER_SET_PICTURE_COUNT,
   CharacterSetProgress,
   generateCharacterSet,
 } from '../ai/images/characterSet';
+import {CHARACTER_SET_PICTURE_COUNT} from '../ai/images/characterSetPrompts';
 import {
   GeneratedImageResult,
   generateImage,

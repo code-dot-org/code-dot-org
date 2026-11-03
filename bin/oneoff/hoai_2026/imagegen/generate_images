@@ -1,0 +1,759 @@
+#!/usr/bin/env ruby
+
+# This script pre-generates the images for the Hour of AI 2026 Sprite Lab
+# image levels, for the lab's image cache (imageCache.ts in apps/).
+#
+# A student describes an image by filling a sentence with words: "A
+# [adjective] [creature] wearing a [clothing]". This script draws every way
+# each sentence can be filled, VARIANTS times, checks each drawing with the
+# same moderation the lab applies to a live one, and publishes the ones that
+# pass to the tree the lab reads from.
+#
+# PROMPTS:
+#
+# The prompts are not built here. dump_prompts.ts imports the lab's prompt
+# builders and prints one job per filled sentence; this script runs it via
+# `npx tsx`, so the words the model gets are the lab's. It needs Node 18 or
+# newer. The words come from sentences.json beside this script, a pinned
+# copy of the lab's: see README.md.
+#
+# MODERATION:
+#
+# The lab runs no safety check on a cached image, so this script is the only
+# one an image gets. Azure AI Content Safety checks every frame, always;
+# --judge adds aichat's LLM judges, on every frame and every prompt. A
+# flagged variant is redrawn up to MAX_REDRAWS times, then left out. Nothing
+# without a passing verdict is published.
+#
+# USAGE:
+#
+# See the words, and the size of a run:
+#
+# ./bin/oneoff/hoai_2026/imagegen/generate_images --list-words
+# ./bin/oneoff/hoai_2026/imagegen/generate_images --list-sentences
+#
+# Draw and check everything not yet drawn (thousands of requests):
+#
+# ./bin/oneoff/hoai_2026/imagegen/generate_images
+#
+# Review with review_images, then publish: --no-dry-run to the devel
+# bucket, then --no-dry-run --production, which publishes only variants
+# approved in review.
+#
+# Nothing in this script deletes an image. A variant that is redrawn, after
+# moderation flags it or review rejects it, moves to image_attic first.
+
+# First: sets up bundler, so the gems below resolve from the Gemfile.
+require_relative '../../../../deployment'
+require 'cdo/aws/s3'
+
+require 'base64'
+require 'benchmark'
+require 'httparty'
+require 'optparse'
+require 'parallel'
+require 'ruby-progressbar'
+
+require_relative 'google'
+require_relative 'imagegen'
+require_relative 'image_validation'
+require_relative 'moderation'
+require_relative 'review_publish'
+
+options = {
+  allow_gaps: false,
+  choices: {},
+  dry_run: true,
+  filter: '',
+  ids: [],
+  jobs: JOBS,
+  judge: false,
+  just_save_prompt: false,
+  just_upload: false,
+  key_name: nil,
+  limit: nil,
+  list_sentences: false,
+  list_words: false,
+  model: nil,
+  moderation: true,
+  production: false,
+  provider: DEFAULT_PROVIDER,
+  publish_review: false,
+  quality: QUALITY,
+  redraw_abandoned: false,
+  sentences: nil,
+  temperature: TEMPERATURE,
+  transparent: false,
+  unreviewed: !REQUIRE_REVIEW,
+  variants: VARIANTS,
+}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    Draws every way the Hour of AI Sprite Lab sentences can be filled,
+    moderates each drawing, and publishes the ones that pass to the lab's
+    image cache.
+
+    Options:
+  BANNER
+
+  opts.on('--list-words', 'Lists every sentence with the words each slot offers, and exits.') do
+    options[:list_words] = true
+  end
+
+  opts.on('--list-sentences', 'Lists every sentence (after filtering) with its job and image counts, and exits.') do
+    options[:list_sentences] = true
+  end
+
+  opts.on('-i', '--id SENTENCE', 'Adds a sentence id (e.g. character) to draw. Repeatable; all by default.') do |id|
+    options[:ids] << id
+  end
+
+  opts.on('-f', '--filter FILTER', 'Keeps only sentence ids containing the given string.') do |filter|
+    options[:filter] = filter
+  end
+
+  opts.on('-c', '--choice SLOT=WORD',
+          "Pins one slot to one word id, e.g. --choice adjective=brave (#{EMPTY_WORD_ID} for an empty optional slot). Repeatable; see --list-words."
+         ) do |choice|
+    slot, word = choice.split('=', 2)
+    raise "Error: --choice needs SLOT=WORD, got '#{choice}'" if word.nil? || word.empty?
+    options[:choices][slot] = word
+  end
+
+  opts.on('-v', '--variants VARIANTS', "How many variants to draw per filling. Defaults to #{VARIANTS}, all the lab reads.") do |variants|
+    options[:variants] = variants.to_i
+  end
+
+  opts.on('--limit LIMIT', 'Draws at most this many variants, for trying things out.') do |limit|
+    options[:limit] = limit.to_i
+  end
+
+  opts.on('-p', '--provider PROVIDER', "Which image service to ask: #{PROVIDERS.join(' or ')}. Defaults to #{DEFAULT_PROVIDER}.") do |provider|
+    options[:provider] = provider
+  end
+
+  opts.on('-m', '--model MODEL', "Sets the image model. Defaults to #{DEFAULT_MODELS.map {|p, m| "#{m} for #{p}"}.join(', ')}.") do |model|
+    options[:model] = model
+  end
+
+  opts.on('--key NAME', "Sets the config key the image service's credentials come from. Defaults to #{API_KEY_NAMES.map {|p, k| "#{k} for #{p}"}.join(', ')}.") do |key_name|
+    options[:key_name] = key_name
+  end
+
+  opts.on('--temperature TEMPERATURE', "Sampling wildness, for a provider that takes one. Defaults to #{TEMPERATURE}.") do |temperature|
+    options[:temperature] = temperature.to_f
+  end
+
+  opts.on('-q', '--quality QUALITY', 'OpenAI rendering quality (low, medium, high, auto). Omitted by default.') do |quality|
+    options[:quality] = quality
+  end
+
+  opts.on('--transparent', 'Asks OpenAI for a transparent background. The lab keys a cached set on its key colour, so the published tree should not use this.') do
+    options[:transparent] = true
+  end
+
+  opts.on('--judge', "Also runs aichat's LLM safety judges, on every frame and every prompt.") do
+    options[:judge] = true
+  end
+
+  opts.on('--no-moderation', 'Skips Azure moderation. Nothing unmoderated is published; a later run without this flag checks what was skipped.') do
+    options[:moderation] = false
+  end
+
+  opts.on('--redraw-abandoned', "Tries again the variants moderation flagged #{MAX_REDRAWS + 1} times in a row.") do
+    options[:redraw_abandoned] = true
+  end
+
+  opts.on('-j', '--jobs JOBS', "Sets the number of concurrent requests. Defaults to #{JOBS}.") do |jobs|
+    options[:jobs] = jobs.to_i
+  end
+
+  opts.on('--sentences FILE', 'Reads the words from FILE instead of the pinned sentences.json.') do |file|
+    options[:sentences] = File.expand_path(file)
+  end
+
+  opts.on('--just-save-prompt', "Writes each variant's record, prompts included, without drawing.") do
+    options[:just_save_prompt] = true
+  end
+
+  opts.on('--just-upload', 'Skips drawing and moderation and just uploads.') do
+    options[:just_upload] = true
+  end
+
+  opts.on('--no-dry-run', 'Disables the read-only mode where nothing is written to S3.') do
+    options[:dry_run] = false
+  end
+
+  opts.on('--production', 'Publishes to the production bucket, approved variants only.') do
+    options[:production] = true
+  end
+
+  opts.on('--unreviewed', "With --production, also publishes variants review has not approved.#{REQUIRE_REVIEW ? '' : ' The default for now (REQUIRE_REVIEW).'}") do
+    options[:unreviewed] = true
+  end
+
+  opts.on('--require-review', "With --production, publishes only variants approved in review.#{REQUIRE_REVIEW ? ' The default (REQUIRE_REVIEW).' : ''}") do
+    options[:unreviewed] = false
+  end
+
+  opts.on('--publish-review',
+          "Also publishes, under #{REVIEW_PATH}, every flagged or rejected drawing, held-back current ones, and a manifest per sentence, for a preview. With --no-dry-run it uploads; without, it only writes the manifests to #{REVIEW_MANIFESTS_DIRECTORY}/."
+         ) do
+    options[:publish_review] = true
+  end
+
+  opts.on('--allow-gaps', 'With --production, publishes even when a filling has no publishable variant.') do
+    options[:allow_gaps] = true
+  end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+
+raise "Error: unknown provider '#{options[:provider]}'. Choices: #{PROVIDERS.join(', ')}" unless PROVIDERS.include?(options[:provider])
+
+options[:model] ||= DEFAULT_MODELS[options[:provider]]
+options[:key_name] ||= API_KEY_NAMES[options[:provider]]
+
+if options[:transparent] && !TRANSPARENT_PROVIDERS.include?(options[:provider])
+  puts
+  puts "Note: #{options[:provider]} cannot return a transparent background; ignoring --transparent."
+  options[:transparent] = false
+end
+
+if options[:variants] > VARIANTS
+  puts
+  puts "Note: the lab reads only variants 00 to #{variant_name(VARIANTS - 1)}; the rest are drawn for review only."
+end
+
+options[:choices].transform_values! {|word| word == 'none' ? EMPTY_WORD_ID : word}
+dumper_args = options[:sentences] ? ['--sentences', options[:sentences]] : []
+
+def wanted?(options, entry)
+  return false unless options[:ids].empty? || options[:ids].include?(entry['sentenceId'])
+  options[:filter].empty? || entry['sentenceId'].include?(options[:filter])
+end
+
+if options[:list_words]
+  run_dumper('--catalog', *dumper_args).lines.each do |line|
+    entry = JSON.parse(line)
+    next unless wanted?(options, entry)
+
+    kind = [entry['imageType'], entry['subject']].compact.join('/')
+    puts
+    puts "#{entry['sentenceId']} (#{kind}#{entry['animated'] ? ', animated' : ''}): #{entry['example']}"
+    entry['slots'].each do |slot|
+      words = slot['words'].map do |word|
+        word['id'] == word['text'] ? word['id'] : "#{word['id']} (#{word['text']})"
+      end
+      words.unshift(EMPTY_WORD_ID) unless slot['required']
+      shown = slot['label'] == slot['id'] ? '' : " (shown as \"#{slot['label']}\")"
+      puts "  #{slot['id']}#{shown}, #{words.length} choices: #{words.join(', ')}"
+    end
+  end
+  exit
+end
+
+puts
+puts "Building prompts with dump_prompts.ts..."
+jobs = load_jobs(*dumper_args)
+all_jobs = jobs
+
+unknown_ids = options[:ids] - jobs.map {|job| job['sentenceId']}.uniq
+raise "Error: unknown sentence(s): #{unknown_ids.join(', ')}. See --list-words." if unknown_ids.any?
+
+jobs = jobs.filter {|job| wanted?(options, job)}
+
+# A slot or word nobody offers is a typo, not an empty batch.
+unless options[:choices].empty?
+  offered = jobs.flat_map {|job| job['slots'].zip(job['wordIds'])}.group_by(&:first)
+  options[:choices].each do |slot, word|
+    pairs = offered[slot]
+    raise "Error: no slot '#{slot}' in the chosen sentences. See --list-words." if pairs.nil?
+    words = pairs.map(&:last).uniq
+    raise "Error: slot '#{slot}' has no '#{word}'. Choices: #{words.sort.join(', ')}" unless words.include?(word)
+  end
+  jobs = jobs.filter do |job|
+    picked = job['slots'].zip(job['wordIds']).to_h
+    options[:choices].all? {|slot, word| picked[slot] == word}
+  end
+end
+
+variants = options[:variants]
+
+if options[:list_sentences]
+  puts
+  puts "Listing sentences (#{variants} variants each):"
+  jobs.group_by {|job| job['sentenceId']}.each do |id, sentence_jobs|
+    job = sentence_jobs.first
+    images = sentence_jobs.sum {|j| j['frames'].length} * variants
+    puts " - #{id}: #{job['slots'].join(' x ')}, #{sentence_jobs.length} fillings, #{sentence_jobs.length * variants} variants, #{images} images"
+  end
+  puts
+  puts "Total: #{jobs.length} fillings, #{jobs.length * variants} variants, #{jobs.sum {|j| j['frames'].length} * variants} images"
+  exit
+end
+
+objects = jobs.flat_map do |job|
+  Array.new(variants) {|variant| {job: job, variant: variant}}
+end
+objects = objects.first(options[:limit]) if options[:limit]
+
+# An API key, or for Vertex a service account key.
+def credential(key_name)
+  key = CDO.send(key_name)
+  raise "Error: config key '#{key_name}' is not set" if key.nil? || key.to_s.empty?
+  key
+end
+
+def transparent?(options, job)
+  options[:transparent] && job['transparent']
+end
+
+def frame_prompt(options, job, frame)
+  transparent?(options, job) ? frame['transparentPrompt'] : frame['prompt']
+end
+
+# generateCharacterSet() gives the base the set's seed and each posed frame
+# the seed plus its index, so alike prompts don't collapse into alike
+# drawings. Only Gemini takes a seed.
+def frame_seed(seed, job, frame)
+  return nil unless seed
+  frame['reference'] ? seed + job['frames'].index(frame) : seed
+end
+
+# Raises for a bad response; returns the image bytes for a good one.
+def image_from(response)
+  if response.code == 429 || response.code >= 500
+    raise RetryableImageRequestError, "HTTP #{response.code}: #{response.body.to_s[0, 200]}"
+  end
+  unless response.success?
+    message = response.parsed_response.is_a?(Hash) ? response.parsed_response.dig('error', 'message') : nil
+    raise ImageRequestError, "HTTP #{response.code}: #{message || response.body.to_s[0, 200]}"
+  end
+
+  b64 = yield(response.parsed_response)
+  raise ImageRequestError, 'No image in the response' unless b64
+  Base64.decode64(b64)
+end
+
+def request_openai_image(options, job, frame, reference)
+  headers = {'Authorization' => "Bearer #{credential(options[:key_name])}"}
+  params = {
+    model: options[:model],
+    prompt: frame_prompt(options, job, frame),
+    size: SIZE,
+    n: 1,
+    quality: options[:quality],
+  }.compact
+  if transparent?(options, job)
+    params[:background] = 'transparent'
+    params[:output_format] = 'png'
+  end
+
+  response =
+    if reference
+      io = StringIO.new(reference)
+      def io.path
+        'reference.png'
+      end
+      HTTParty.post(OPENAI_EDITS_URL, headers: headers, multipart: true, body: params.merge(image: io), timeout: 300)
+    else
+      HTTParty.post(OPENAI_GENERATIONS_URL, headers: headers.merge('Content-Type' => 'application/json'), body: JSON.generate(params), timeout: 300)
+    end
+
+  image_from(response) {|body| body.dig('data', 0, 'b64_json')}
+end
+
+# One Gemini generateContent call, on Vertex or the Gemini API. A reference
+# image goes ahead of the text, as requestImage() in imageGeneration.ts
+# sends it.
+def request_google_image(options, job, frame, reference, seed)
+  parts = []
+  if reference
+    mime = reference.b.start_with?(PNG_SIGNATURE) ? 'image/png' : 'image/jpeg'
+    parts << {inlineData: {mimeType: mime, data: Base64.strict_encode64(reference)}}
+  end
+  parts << {text: frame_prompt(options, job, frame)}
+
+  body = {
+    contents: [{role: 'user', parts: parts}],
+    generationConfig: {
+      responseModalities: ['IMAGE'],
+      imageConfig: {aspectRatio: '1:1', imageSize: GEMINI_IMAGE_SIZE},
+      seed: seed,
+      temperature: options[:temperature],
+    }.compact,
+  }
+
+  response = options[:google].generate_content(options[:model], body, timeout: 300)
+
+  # A thinking image model emits interim drafts ahead of the final render,
+  # so the last image part is the one to keep (imageGeneration.ts does the
+  # same with the SDK's files).
+  image_from(response) do |parsed|
+    images = parsed.dig('candidates', 0, 'content', 'parts')&.filter_map do |part|
+      part.dig('inlineData', 'data') || part.dig('inline_data', 'data')
+    end
+    images&.last
+  end
+end
+
+def request_image(options, job, frame, reference, seed)
+  attempts = 0
+  begin
+    attempts += 1
+    if GOOGLE_PROVIDERS.include?(options[:provider])
+      request_google_image(options, job, frame, reference, seed)
+    else
+      request_openai_image(options, job, frame, reference)
+    end
+  rescue Net::ReadTimeout, Net::OpenTimeout, Errno::ECONNRESET, Errno::EPIPE, EOFError, RetryableImageRequestError => exception
+    raise ImageRequestError, exception.message if attempts >= MAX_ATTEMPTS
+    sleep(3 * attempts)
+    retry
+  end
+end
+
+# The record a variant starts with: what it is and how it is to be drawn.
+def fresh_record(options, job, variant)
+  {
+    'sentenceId' => job['sentenceId'],
+    'slots' => job['slots'],
+    'wordIds' => job['wordIds'],
+    'variant' => variant,
+    'prompt' => job['prompt'],
+    'style' => job['style'],
+    'imageType' => job['imageType'],
+    'subject' => job['subject'],
+    'animated' => job['animated'],
+    'bodyPlan' => job['bodyPlan'],
+    'keyColor' => transparent?(options, job) ? nil : job['keyColor'],
+    'transparent' => transparent?(options, job),
+    'provider' => options[:provider],
+    'model' => options[:model],
+    'quality' => options[:quality],
+    'project' => options[:project],
+    'temperature' => GOOGLE_PROVIDERS.include?(options[:provider]) ? options[:temperature] : nil,
+    'frames' => job['frames'].map do |frame|
+      {'name' => frame['name'], 'file' => frame_file(job, variant, frame['name']), 'prompt' => frame_prompt(options, job, frame)}
+    end,
+    'history' => [],
+  }.compact
+end
+
+# Whether the frames on disk were drawn from words other than this run
+# would send: a word's text, the sentence, or the lab's prompt builders
+# changed under an unchanged path.
+def prompts_changed?(options, job, record)
+  drawn = (record['frames'] || []).to_h {|frame| [frame['name'], frame['prompt']]}
+  return false if drawn.empty?
+  job['frames'].any? {|frame| drawn[frame['name']] != frame_prompt(options, job, frame)}
+end
+
+# Moves the variant's frames to the attic and starts its record over,
+# keeping what happened in its history.
+def retire(options, job, variant, record, reason)
+  moved = move_to_attic(job, variant)
+  history = (record['history'] || []) << {
+    'at' => Time.now.utc.iso8601,
+    'reason' => reason,
+    'seed' => record['seed'],
+    'provider' => record['provider'],
+    'model' => record['model'],
+    'review' => record['review'],
+    'checks' => record['frames']&.to_h {|frame| [frame['name'], frame['checks']]},
+    'movedTo' => moved,
+  }.compact
+  fresh_record(options, job, variant).merge('history' => history, 'redraws' => record['redraws'].to_i)
+end
+
+# The checks a frame still needs: missing ones, and ones whose service
+# failed last time.
+def needs_check?(frame, name)
+  frame.dig('checks', name).nil? || frame.dig('checks', name, 'verdict') == 'error'
+end
+
+# Draws what a variant lacks, moderates it, redraws what moderation flags,
+# and returns how it ended: :complete, :drawn, :checked, :prompt_only,
+# :abandoned, or an error message.
+def process_variant(options, moderator, prompt_checks, job, variant)
+  record = read_record(job, variant)
+  present = frames_present(job, variant)
+
+  if record&.dig('abandoned') && !options[:redraw_abandoned]
+    return :abandoned
+  end
+
+  record ||= fresh_record(options, job, variant)
+  record.delete('abandoned')
+  if present.any? && review_verdict(record) == 'rejected'
+    record = retire(options, job, variant, record, 'rejected in review')
+  elsif present.any? && !!record['transparent'] != !!transparent?(options, job)
+    record = retire(options, job, variant, record, 'drawn with the other background')
+  elsif present.any? && prompts_changed?(options, job, record)
+    record = retire(options, job, variant, record, 'prompt changed')
+  end
+  record['promptCheck'] = prompt_checks[job['prompt']] if prompt_checks[job['prompt']]
+
+  if options[:just_save_prompt]
+    write_record(job, variant, record)
+    return :prompt_only
+  end
+
+  outcome = :complete
+  loop do
+    missing = job['frames'].reject {|frame| frame_exists?(job, variant, frame['name'])}
+    if missing.any?
+      outcome = :drawn
+      if missing.length == job['frames'].length
+        record = fresh_record(options, job, variant).merge(record.slice('history', 'redraws', 'promptCheck'))
+        record['seed'] = rand(2**31) if GOOGLE_PROVIDERS.include?(options[:provider])
+      end
+      # A pose drawn in this run is referenced by the base as the model
+      # returned it, as generateCharacterSet() does; a base from an earlier
+      # run, by its stored PNG.
+      drawn = {}
+      missing.each do |frame|
+        reference = nil
+        if frame['reference']
+          reference = drawn[frame['reference']] ||
+            File.binread(File.join(output_path, frame_path(job, variant, frame['reference'])))
+        end
+        raw = request_image(options, job, frame, reference, frame_seed(record['seed'], job, frame))
+        drawn[frame['name']] = raw
+        path = File.join(output_path, frame_path(job, variant, frame['name']))
+        FileUtils.mkdir_p(File.dirname(path))
+        File.binwrite(path, to_png(raw))
+        entry = record['frames'].find {|f| f['name'] == frame['name']}
+        entry['seed'] = frame_seed(record['seed'], job, frame) if record['seed']
+        entry.delete('checks')
+      end
+      record['drawnAt'] = Time.now.utc.iso8601(3)
+    end
+
+    if options[:moderation]
+      record['frames'].each do |entry|
+        png = nil
+        load_png = -> {png ||= File.binread(File.join(output_path, frame_path(job, variant, entry['name'])))}
+        entry['checks'] ||= {}
+        if needs_check?(entry, 'azure')
+          outcome = :checked if outcome == :complete
+          entry['checks']['azure'] = moderator.azure(load_png.call)
+        end
+        if options[:judge] && needs_check?(entry, 'judge')
+          outcome = :checked if outcome == :complete
+          entry['checks']['judge'] = moderator.judge_image(load_png.call)
+        end
+      end
+    end
+
+    break unless moderation_summary(record, require_judge: options[:judge]) == 'flagged'
+    redraws = record['redraws'].to_i
+    if redraws >= MAX_REDRAWS
+      record = retire(options, job, variant, record, 'flagged by moderation')
+      record['abandoned'] = {'at' => Time.now.utc.iso8601, 'after' => redraws + 1}
+      write_record(job, variant, record)
+      return :abandoned
+    end
+    record = retire(options, job, variant, record, 'flagged by moderation')
+    record['redraws'] = redraws + 1
+  end
+
+  write_record(job, variant, record)
+  outcome
+rescue ImageRequestError, Magick::ImageMagickError => exception
+  write_record(job, variant, record) if record
+  "#{record_path(job, variant)}: #{exception.message}"
+end
+
+# Credentials are read only by a run that draws or judges; listing and
+# publishing need none.
+drawing = !options[:just_upload] && !options[:just_save_prompt]
+if drawing && GOOGLE_PROVIDERS.include?(options[:provider])
+  options[:google] = GoogleGenerative.new(options[:provider], credential(options[:key_name]))
+  options[:project] = options[:google].project
+end
+if drawing
+  puts
+  puts "Drawing with #{options[:model]} on #{options[:project] ? "Vertex AI project #{options[:project]}" : options[:provider]}."
+end
+
+# Azure has its own credentials; the judges run on Gemini, on the drawing
+# provider's route when it is Google's.
+judge_google = nil
+if options[:judge] && !options[:just_upload]
+  judge_google = options[:google] ||
+    GoogleGenerative.new(DEFAULT_JUDGE_PROVIDER, credential(API_KEY_NAMES[DEFAULT_JUDGE_PROVIDER]))
+end
+moderator = Moderator.new(judge_google)
+
+# Each distinct prompt is judged once, and a flagged one is never drawn or
+# published. Verdicts already on file apply to every run, judged or not:
+# --judge only decides whether new prompts get judged.
+verdicts_path = File.join(SCRIPT_PATH, PROMPT_VERDICTS_FILE)
+verdicts = File.exist?(verdicts_path) ? JSON.parse(File.read(verdicts_path)) : {}
+verdict_for = ->(prompt) {verdicts["#{JUDGE_MODEL}\t#{prompt}"]}
+prompts = objects.map {|object| object[:job]['prompt']}.uniq
+if options[:judge] && !options[:just_upload]
+  unjudged = prompts.reject {|prompt| verdict_for.call(prompt) && verdict_for.call(prompt)['verdict'] != 'error'}
+  puts
+  puts "Judging #{unjudged.length} of #{prompts.length} prompts..."
+  judged = Parallel.map(unjudged, in_threads: options[:jobs]) do |prompt|
+    [prompt, moderator.judge_prompt(prompt)]
+  end
+  judged.each {|prompt, verdict| verdicts["#{JUDGE_MODEL}\t#{prompt}"] = verdict}
+  File.write(verdicts_path, JSON.pretty_generate(verdicts)) if judged.any?
+end
+prompt_checks = prompts.filter_map {|prompt| [prompt, verdict_for.call(prompt)] if verdict_for.call(prompt)}.to_h
+
+blocked = prompts.select do |prompt|
+  verdict = prompt_checks.dig(prompt, 'verdict')
+  verdict == 'flagged' || (options[:judge] && verdict != 'ok')
+end
+if blocked.any?
+  puts
+  puts "Not drawing or publishing #{blocked.length} prompt(s) the judge did not pass:"
+  blocked.each {|prompt| puts "  #{prompt_checks.dig(prompt, 'verdict')}: #{prompt}"}
+  objects = objects.reject {|object| blocked.include?(object[:job]['prompt'])}
+end
+
+tally = Hash.new(0)
+failures = []
+
+if options[:just_upload]
+  puts "Note: Not drawing. Just using the content in the '#{OUTPUT_DIRECTORY}' directory."
+else
+  puts
+  puts "Processing #{objects.length} variants (#{objects.sum {|o| o[:job]['frames'].length}} images at most)..."
+  progress = ProgressBar.create(total: objects.size)
+  Parallel.map(objects, in_threads: options[:jobs], finish: lambda do |_, _, result|
+    result.is_a?(String) ? failures << result : tally[result] += 1
+    progress&.increment
+  end
+  ) do |object|
+    process_variant(options, moderator, prompt_checks, object[:job], object[:variant])
+  end
+  progress&.finish
+
+  puts
+  {
+    complete: 'already drawn and checked',
+    drawn: 'drawn',
+    checked: 'checked only',
+    prompt_only: 'records written, not drawn',
+    abandoned: "left out after #{MAX_REDRAWS + 1} flagged drawings (--redraw-abandoned tries again)",
+  }.each {|key, label| puts "#{tally[key].to_s.rjust(6)} #{label}" if tally[key] > 0}
+  if failures.any?
+    puts
+    puts "#{failures.length} variant(s) failed; run again to retry them:"
+    failures.each {|failure| puts "  #{failure}"}
+  end
+end
+
+exit if options[:just_save_prompt]
+
+# Publishing. A variant is published whole or not at all: the lab finds a
+# variant by its first frame, and a set missing a pose after that is an
+# error to it, not a fallback.
+def publishable(options, job, variant)
+  record = read_record(job, variant)
+  return 'not drawn' unless record
+  return 'abandoned' if record['abandoned']
+
+  missing = job['frames'].reject {|frame| frame_exists?(job, variant, frame['name'])}
+  return "#{missing.length} frame(s) missing" if missing.any?
+
+  job['frames'].each do |frame|
+    error = validate_image(
+      File.join(output_path, frame_path(job, variant, frame['name'])),
+      image_type: job['imageType'],
+      transparent: record['transparent']
+    )
+    return "#{frame['name']}: #{error}" if error
+  end
+
+  summary = moderation_summary(record, require_judge: options[:judge])
+  return "moderation #{summary}" unless summary == 'pass'
+  return 'rejected in review' if review_verdict(record) == 'rejected'
+  return nil unless options[:production] && !options[:unreviewed]
+  return 'not approved in review' unless review_verdict(record) == 'approved'
+  # An approval belongs to the drawing it was given to.
+  return 'approved for an earlier drawing' unless record.dig('review', 'drawnAt') == record['drawnAt']
+  nil
+end
+
+bucket_name = "#{BUCKET_NAME}#{options[:production] ? '' : '-devel'}"
+
+puts
+puts "Checking #{objects.length} variants for s3://#{bucket_name}/#{BUCKET_PATH}/..."
+
+reasons = Hash.new(0)
+ready = objects.select do |object|
+  reason = publishable(options, object[:job], object[:variant])
+  reasons[reason] += 1 if reason
+  reason.nil?
+end
+
+gaps = objects.group_by {|object| object[:job]}.select do |_, job_objects|
+  (job_objects & ready).empty?
+end.keys
+
+puts "#{ready.length.to_s.rjust(6)} ready to publish"
+reasons.sort_by {|_, count| -count}.each {|reason, count| puts "#{count.to_s.rjust(6)} held back: #{reason}"}
+if gaps.any?
+  puts
+  puts "#{gaps.length} filling(s) have no publishable variant; the lab treats a missing filling as an error:"
+  gaps.first(10).each {|job| puts "  #{job_folder(job)}"}
+  puts "  ..." if gaps.length > 10
+  if options[:production] && !options[:allow_gaps]
+    puts
+    puts 'Not publishing to production with gaps. Fill them, or pass --allow-gaps.'
+    exit 1
+  end
+end
+
+puts
+if options[:dry_run]
+  puts 'Note: Dry run. Not uploading. Specify --no-dry-run to upload.'
+else
+  puts 'Note: Development bucket. Specify --production to publish for live use.' unless options[:production]
+
+  # Each file with the drawing it holds, so the review manifests know which
+  # current drawings the lab's tree has.
+  ledger = UploadLedger.new(bucket_name)
+  files = ready.flat_map do |object|
+    drawn_at = read_record(object[:job], object[:variant])['drawnAt']
+    object[:job]['frames'].map {|frame| [frame_path(object[:job], object[:variant], frame['name']), drawn_at]}
+  end
+  progress = ProgressBar.create(total: files.size)
+  Parallel.each(files, in_threads: options[:jobs], finish: ->(_, _, _) {progress&.increment}) do |path, drawn_at|
+    AWS::S3.upload_to_bucket(
+      bucket_name,
+      File.join(BUCKET_PATH, path),
+      File.binread(File.join(output_path, path)),
+      acl: 'public-read',
+      no_random: true,
+      content_type: 'image/png'
+    )
+    ledger.record(File.join(BUCKET_PATH, path), drawn_at)
+  end
+  progress&.finish
+  ledger.save
+  puts "Uploaded #{files.length} files for #{ready.length} variants."
+end
+
+if options[:publish_review]
+  catalog = run_dumper('--catalog', *dumper_args).lines.map {|line| JSON.parse(line)}
+  # Every filling of each chosen sentence, whatever --choice or --limit
+  # narrowed this run to: a manifest describes a whole sentence.
+  sentences = all_jobs.filter {|job| wanted?(options, job)}.group_by {|job| job['sentenceId']}
+  status_for = ->(job, variant) {publishable(options, job, variant)}
+  ReviewPublisher.new(options, bucket_name, catalog, status_for).
+    publish(sentences, all_jobs.map {|job| job['sentenceId']}.uniq)
+  puts 'Note: the devel bucket sends no CORS headers; a page elsewhere loads its manifests through manifest.js.' unless options[:production]
+end

@@ -1,0 +1,101 @@
+#!/usr/bin/env ruby
+
+# This script checks what generate_images has drawn: that every frame in the
+# published tree is a square PNG with a record beside it, and where each
+# variant stands in moderation and review.
+#
+# You can specify --attic to move invalid frames out of the published tree
+# into image_attic; generate_images then draws them again. Nothing is
+# deleted.
+
+# First: sets up bundler, so the gems below resolve from the Gemfile.
+require_relative '../../../../deployment'
+
+require 'optparse'
+
+require_relative 'imagegen'
+require_relative 'image_validation'
+
+options = {
+  attic: false,
+  filter: '',
+  judge: false,
+}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    Validates the images produced by the `generate_images` script.
+
+    Options:
+  BANNER
+
+  opts.on('--attic', 'Moves invalid frames into image_attic, so generate_images draws them again.') do
+    options[:attic] = true
+  end
+
+  opts.on('-f', '--filter FILTER', 'Checks only sentences whose id contains the given string.') do |filter|
+    options[:filter] = filter
+  end
+
+  opts.on('--judge', 'Counts a variant as passing only once the LLM judges have passed it too.') do
+    options[:judge] = true
+  end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+
+tree = File.join(output_path, CACHE_VERSION)
+good = 0
+count = 0
+summaries = Hash.new(0)
+reviews = Hash.new(0)
+
+Dir.glob(File.join(records_path, CACHE_VERSION, '**', '*.json')) do |record_file|
+  record = JSON.parse(File.read(record_file))
+  next unless record['sentenceId'].to_s.include?(options[:filter])
+
+  folder = File.dirname(record_file).delete_prefix("#{records_path}/")
+  summaries[moderation_summary(record, require_judge: options[:judge])] += 1 unless record['abandoned']
+  summaries['abandoned'] += 1 if record['abandoned']
+  reviews[review_verdict(record) || 'unreviewed'] += 1
+
+  (record['frames'] || []).each do |frame|
+    path = File.join(output_path, folder, frame['file'])
+    next unless File.exist?(path)
+
+    count += 1
+    error = validate_image(path, image_type: record['imageType'], transparent: record['transparent'])
+    unless error
+      good += 1
+      next
+    end
+
+    puts "#{path.delete_prefix("#{output_path}/")}: #{error}"
+    next unless options[:attic]
+    destination = File.join(attic_path, folder, frame['file'].sub(/\.png\z/, ".invalid-#{Time.now.utc.strftime('%Y%m%dT%H%M%S')}.png"))
+    FileUtils.mkdir_p(File.dirname(destination))
+    File.rename(path, destination)
+    puts "  moved to #{destination.delete_prefix("#{SCRIPT_PATH}/")}"
+  end
+end
+
+# A frame the tree holds with no record cannot be traced to a prompt.
+orphans = Dir.glob(File.join(tree, '**', '*.png')).reject do |png|
+  relative = png.delete_prefix("#{output_path}/")
+  stem = File.basename(relative, '.png').split('-').first
+  File.exist?(File.join(records_path, File.dirname(relative), "#{stem}.json"))
+end
+orphans.select! {|png| png.delete_prefix("#{tree}/").include?(options[:filter])}
+orphans.each {|png| puts "#{png.delete_prefix("#{output_path}/")}: no record"}
+
+puts
+puts "Frames valid: #{good}/#{count}"
+puts "Frames with no record: #{orphans.length}" if orphans.any?
+puts "Moderation: #{summaries.map {|key, value| "#{value} #{key}"}.join(', ')}" if summaries.any?
+puts "Review: #{reviews.map {|key, value| "#{value} #{key}"}.join(', ')}" if reviews.any?
+puts
+puts "Done."
