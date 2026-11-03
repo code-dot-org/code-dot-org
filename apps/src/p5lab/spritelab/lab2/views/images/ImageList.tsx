@@ -200,7 +200,8 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               anchorEl={menuButton}
               open={!!menuButton}
               onClose={() => setMenuButton(null)}
-              anchorOrigin={{vertical: 'bottom', horizontal: 'left'}}
+              anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
+              transformOrigin={{vertical: 'top', horizontal: 'right'}}
             >
               {NEW_KINDS.map(({label, iconName, kind}) => (
                 <MuiMenuItem
