@@ -19,7 +19,7 @@
 
 import {actorDocument} from '../actorDocument';
 
-import {drawingRow, fill, rectangle, swatch} from './workspace';
+import {drawing, fill, rectangle, swatch} from './workspace';
 
 /** How long a shot lives, in seconds. Long enough to cross a screen. */
 const LIFETIME = 3;
@@ -39,11 +39,9 @@ export const shotActor = actorDocument({
       value: LIFETIME,
     },
   ],
-  code: [
-    drawingRow({
-      width: 8,
-      height: 8,
-      commands: [fill(swatch('#ffd23f')), rectangle(0, 0, 8, 8)],
-    }),
-  ],
+  drawing: drawing({
+    width: 8,
+    height: 8,
+    commands: [fill(swatch('#ffd23f')), rectangle(0, 0, 8, 8)],
+  }),
 });

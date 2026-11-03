@@ -78,7 +78,7 @@ import {
   block,
   chain,
   corner,
-  drawingRow,
+  drawing,
   drawParagraph,
   event,
   fill,
@@ -617,49 +617,49 @@ export const textAreaActor = actorDocument({
     }),
     event('changed'),
   ],
-  code: [
-    drawingRow({
-      width: width(),
-      height: height(),
-      commands: [
-        fill(swatch(LOOK.field)),
-        outline(swatch(LOOK.primaryStrong), BORDER),
-        corner(RADIUS_TIGHT),
-        useStyle('field'),
-        rectangle(0, 0, width(), height()),
-        noOutline(),
-        // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
-        // its own look and then offers to be overruled, and the caption was the one
-        // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
-        // pen alone when no theme defines one. So in a project with NO theme the
-        // caption inherited whatever the FACE had just set, and a Button drew its
-        // words in the button colour: invisible (specs/STYLES_PLAN.md).
-        fill(swatch(LOOK.ink)),
-        useStyle('caption'),
-        fill(textOf('TextColorProperty')),
-        // From the corner, breaking on newlines only: a column of zero is
-        // `draw paragraph`'s "do not wrap".
-        //
-        // LESS THE SCROLL, which is the whole of the scrolling: a drawing is
-        // rasterised at the actor's own size, so what is laid above the top
-        // or below the bottom is clipped by the texture and nothing else has
-        // to be worked out (specs/DRAWING.md).
-        drawParagraph(
-          sum('MINUS', num(PAD), slid()),
-          sum('MINUS', num(PAD), scroll()),
-          0,
+  drawing: drawing({
+    width: width(),
+    height: height(),
+    commands: [
+      fill(swatch(LOOK.field)),
+      outline(swatch(LOOK.primaryStrong), BORDER),
+      corner(RADIUS_TIGHT),
+      useStyle('field'),
+      rectangle(0, 0, width(), height()),
+      noOutline(),
+      // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
+      // its own look and then offers to be overruled, and the caption was the one
+      // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
+      // pen alone when no theme defines one. So in a project with NO theme the
+      // caption inherited whatever the FACE had just set, and a Button drew its
+      // words in the button colour: invisible (specs/STYLES_PLAN.md).
+      fill(swatch(LOOK.ink)),
+      useStyle('caption'),
+      fill(textOf('TextColorProperty')),
+      // From the corner, breaking on newlines only: a column of zero is
+      // `draw paragraph`'s "do not wrap".
+      //
+      // LESS THE SCROLL, which is the whole of the scrolling: a drawing is
+      // rasterised at the actor's own size, so what is laid above the top
+      // or below the bottom is clipped by the texture and nothing else has
+      // to be worked out (specs/DRAWING.md).
+      drawParagraph(
+        sum('MINUS', num(PAD), slid()),
+        sum('MINUS', num(PAD), scroll()),
+        0,
+      ),
+      // The bar, on the caret's line and after its prefix, blinking.
+      onlyIf(blinking(), [
+        rectangle(
+          sum('MINUS', sum('ADD', num(PAD), caretAcross()), slid()),
+          sum('MINUS', sum('ADD', num(PAD), lineTop(line())), scroll()),
+          num(CARET_WIDTH),
+          atSize(),
         ),
-        // The bar, on the caret's line and after its prefix, blinking.
-        onlyIf(blinking(), [
-          rectangle(
-            sum('MINUS', sum('ADD', num(PAD), caretAcross()), slid()),
-            sum('MINUS', sum('ADD', num(PAD), lineTop(line())), scroll()),
-            num(CARET_WIDTH),
-            atSize(),
-          ),
-        ]),
-      ],
-    }),
+      ]),
+    ],
+  }),
+  code: [
     // The wheel, which reads the words without moving the bar — the one
     // way to look further down a paragraph than you are typing in.
     {

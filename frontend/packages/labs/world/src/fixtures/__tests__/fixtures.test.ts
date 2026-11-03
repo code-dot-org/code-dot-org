@@ -250,7 +250,7 @@ describe('the scenario catalogue', () => {
     expect(main).toContain('world_count_with');
 
     const crosshair = files.find(file => file.name === 'crosshair.actor')!;
-    expect(crosshair.contents).toContain('world_trait_step');
+    expect(JSON.parse(crosshair.contents).steps).toHaveLength(1);
     expect(crosshair.contents).toContain('world_mouse_position');
   });
 

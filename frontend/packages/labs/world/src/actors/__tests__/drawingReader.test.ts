@@ -7,6 +7,7 @@ import {describe, expect, it} from 'vitest';
 import type {DrawCommand} from '../../engine/core/drawing';
 import {STOCK_RULES} from '../../rules/stock';
 import {STOCK_STYLES} from '../../styles/stock';
+import type {Block} from '../actorData';
 import {actorDocument} from '../actorDocument';
 import {
   ancestry,
@@ -35,16 +36,11 @@ const drawnActor = (
 ): string =>
   actorDocument({
     name,
-    code: [
-      {
-        type: 'world_define_drawing',
-        inputs: {
-          WIDTH: {block: {type: 'math_number', fields: {NUM: size[0]}}},
-          HEIGHT: {block: {type: 'math_number', fields: {NUM: size[1]}}},
-          DO: {block: chain(rows)},
-        },
-      },
-    ],
+    drawing: {
+      width: {block: {type: 'math_number', fields: {NUM: size[0]}}},
+      height: {block: {type: 'math_number', fields: {NUM: size[1]}}},
+      body: chain(rows) as Block,
+    },
   });
 
 const num = (value: number) => ({

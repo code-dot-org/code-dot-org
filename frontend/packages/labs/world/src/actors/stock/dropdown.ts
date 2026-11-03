@@ -49,7 +49,7 @@ import {
   alongY,
   chain,
   corner,
-  drawingRow,
+  drawing,
   event,
   fill,
   labelValue,
@@ -319,86 +319,86 @@ export const dropdownActor = actorDocument({
     labelValue('TextProperty', {type: 'string', value: 'ONE'}),
   ],
   members: [event('chosen')],
-  code: [
-    drawingRow({
-      width: width(),
-      height: height(),
-      commands: [
-        // The face: a box, the chosen word, and a caret.
-        fill(swatch(LOOK.primary)),
-        outline(swatch(LOOK.primaryStrong), BORDER),
+  drawing: drawing({
+    width: width(),
+    height: height(),
+    commands: [
+      // The face: a box, the chosen word, and a caret.
+      fill(swatch(LOOK.primary)),
+      outline(swatch(LOOK.primaryStrong), BORDER),
+      corner(RADIUS),
+      useStyle('surface'),
+      rectangle(0, 0, width(), ROW),
+      noOutline(),
+      // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
+      // its own look and then offers to be overruled, and the caption was the one
+      // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
+      // pen alone when no theme defines one. So in a project with NO theme the
+      // caption inherited whatever the FACE had just set, and a Button drew its
+      // words in the button colour: invisible (specs/STYLES_PLAN.md).
+      fill(swatch(LOOK.ink)),
+      useStyle('caption'),
+      fill(textOf('TextColorProperty')),
+      drawWords(textOf('TextProperty'), num(ROW / 2)),
+      ...circleArrow(),
+      // …and the rows, when it is open: a darker sheet, the highlighted
+      // row lit, and one word per row.
+      either(open(), [
+        // AN OPEN MENU IS OVER THE PAGE, and a menu with no shadow reads as
+        // part of it — which is the clearest case for elevation in the whole
+        // kit (specs/STYLES_PLAN.md).
+        fill(swatch(LOOK.primaryLight)),
         corner(RADIUS),
-        useStyle('surface'),
-        rectangle(0, 0, width(), ROW),
-        noOutline(),
-        // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
-        // its own look and then offers to be overruled, and the caption was the one
-        // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
-        // pen alone when no theme defines one. So in a project with NO theme the
-        // caption inherited whatever the FACE had just set, and a Button drew its
-        // words in the button colour: invisible (specs/STYLES_PLAN.md).
-        fill(swatch(LOOK.ink)),
-        useStyle('caption'),
-        fill(textOf('TextColorProperty')),
-        drawWords(textOf('TextProperty'), num(ROW / 2)),
-        ...circleArrow(),
-        // …and the rows, when it is open: a darker sheet, the highlighted
-        // row lit, and one word per row.
-        either(open(), [
-          // AN OPEN MENU IS OVER THE PAGE, and a menu with no shadow reads as
-          // part of it — which is the clearest case for elevation in the whole
-          // kit (specs/STYLES_PLAN.md).
-          fill(swatch(LOOK.primaryLight)),
-          corner(RADIUS),
-          shadow(SHADOW_OVER),
-          useStyle('floating'),
-          rectangle(0, ROW, width(), arithmetic('MINUS', height(), num(ROW))),
-          // The rows inside it are flat: a shadow under each would be a stack
-          // of cards rather than a list.
-          noShadow(),
-          {
-            type: 'world_count_with',
-            fields: {VAR: ROW_VARIABLE},
-            inputs: {
-              FROM: num(1),
-              TO: count(),
-              BY: num(1),
-              DO: {
-                block: chain([
-                  either(compare('EQ', row(), highlighted()), [
-                    fill(swatch(LOOK.accentLight)),
-                    useStyle('chosen'),
-                    rectangle(
-                      num(0),
-                      arithmetic('MINUS', rowMiddle(row()), num(ROW / 2)),
-                      width(),
-                      ROW,
-                    ),
-                  ]),
-                  fill(swatch(LOOK.ink)),
-                  useStyle('caption'),
-                  fill(textOf('TextColorProperty')),
-                  drawWords(choice(row()), rowMiddle(row())),
+        shadow(SHADOW_OVER),
+        useStyle('floating'),
+        rectangle(0, ROW, width(), arithmetic('MINUS', height(), num(ROW))),
+        // The rows inside it are flat: a shadow under each would be a stack
+        // of cards rather than a list.
+        noShadow(),
+        {
+          type: 'world_count_with',
+          fields: {VAR: ROW_VARIABLE},
+          inputs: {
+            FROM: num(1),
+            TO: count(),
+            BY: num(1),
+            DO: {
+              block: chain([
+                either(compare('EQ', row(), highlighted()), [
+                  fill(swatch(LOOK.accentLight)),
+                  useStyle('chosen'),
+                  rectangle(
+                    num(0),
+                    arithmetic('MINUS', rowMiddle(row()), num(ROW / 2)),
+                    width(),
+                    ROW,
+                  ),
                 ]),
-              },
+                fill(swatch(LOOK.ink)),
+                useStyle('caption'),
+                fill(textOf('TextColorProperty')),
+                drawWords(choice(row()), rowMiddle(row())),
+              ]),
             },
           },
-        ]),
-        // …and the ring, when the keyboard is on this one.
-        either(focused(), [
-          noFill(),
-          outline(swatch(LOOK.focus), RING_WIDTH),
-          corner(ringRadius(RADIUS)),
-          useStyle('ring'),
-          rectangle(
-            num(RING_INSET),
-            num(RING_INSET),
-            arithmetic('MINUS', width(), num(RING_INSET * 2)),
-            arithmetic('MINUS', height(), num(RING_INSET * 2)),
-          ),
-        ]),
-      ],
-    }),
+        },
+      ]),
+      // …and the ring, when the keyboard is on this one.
+      either(focused(), [
+        noFill(),
+        outline(swatch(LOOK.focus), RING_WIDTH),
+        corner(ringRadius(RADIUS)),
+        useStyle('ring'),
+        rectangle(
+          num(RING_INSET),
+          num(RING_INSET),
+          arithmetic('MINUS', width(), num(RING_INSET * 2)),
+          arithmetic('MINUS', height(), num(RING_INSET * 2)),
+        ),
+      ]),
+    ],
+  }),
+  code: [
     // A click: on a row, that is the choice and the menu closes; on the
     // face, it opens or closes. The keyboard comes here either way.
     {

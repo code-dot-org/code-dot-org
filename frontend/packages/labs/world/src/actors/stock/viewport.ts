@@ -18,7 +18,7 @@ import {labelSizeOf} from './label';
 import {BORDER, LOOK, RADIUS_TIGHT} from './look';
 import {
   corner,
-  drawingRow,
+  drawing,
   fill,
   labelValue,
   outline,
@@ -46,17 +46,15 @@ export const viewportActor = actorDocument({
     {setter: 'world_set_Boxed_HeightProperty', type: 'number', value: HEIGHT},
     labelValue('TextProperty', {type: 'string', value: ''}),
   ],
-  code: [
-    drawingRow({
-      width: width(),
-      height: height(),
-      commands: [
-        fill(swatch(LOOK.field)),
-        outline(swatch(LOOK.primaryStrong), BORDER),
-        corner(RADIUS_TIGHT),
-        useStyle('inset'),
-        rectangle(0, 0, width(), height()),
-      ],
-    }),
-  ],
+  drawing: drawing({
+    width: width(),
+    height: height(),
+    commands: [
+      fill(swatch(LOOK.field)),
+      outline(swatch(LOOK.primaryStrong), BORDER),
+      corner(RADIUS_TIGHT),
+      useStyle('inset'),
+      rectangle(0, 0, width(), height()),
+    ],
+  }),
 });

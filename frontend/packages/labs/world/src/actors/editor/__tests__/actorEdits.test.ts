@@ -246,6 +246,24 @@ describe('its animations', () => {
     expect(renameAnimation(BOBBER, 'Nope', 'Jump')).toBe(BOBBER);
   });
 
+  it('are followed into its blocks’ bodies, its drawing and its steps', () => {
+    const renamed = renameAnimation(
+      {
+        ...BOBBER,
+        members: [
+          {id: 'b', kind: 'block', parts: [], body: play('Hop') as never},
+        ],
+        drawing: {width: {}, height: {}, body: play('Hop') as never},
+        steps: [{name: 'hop', body: play('Hop') as never}],
+      },
+      'Hop',
+      'Jump',
+    );
+    const code = JSON.stringify({...renamed, animations: undefined});
+    expect(code).not.toContain('"Hop"');
+    expect(code.match(/"ANIMATION":"Jump"/g)).toHaveLength(4);
+  });
+
   it('are deleted, and the key with the last of them', () => {
     expect(Object.keys(removeAnimation(BOBBER, 'Hop').animations!)).toEqual([
       'Main',

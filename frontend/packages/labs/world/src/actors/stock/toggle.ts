@@ -28,7 +28,7 @@ import {LOOK, RADIUS, RING_INSET, RING_WIDTH, ringRadius} from './look';
 import {
   chain,
   corner,
-  drawingRow,
+  drawing,
   drawParagraph,
   event,
   fill,
@@ -111,80 +111,74 @@ export const toggleActor = actorDocument({
     labelValue('TextProperty', {type: 'string', value: 'Toggle'}),
   ],
   members: [event('turned on'), event('turned off')],
-  code: [
-    drawingRow({
-      width: width(),
-      height: height(),
-      commands: [
-        // The caption, in the Label's own words and colour.
-        noOutline(),
-        // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
-        // its own look and then offers to be overruled, and the caption was the one
-        // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
-        // pen alone when no theme defines one. So in a project with NO theme the
-        // caption inherited whatever the FACE had just set, and a Button drew its
-        // words in the button colour: invisible (specs/STYLES_PLAN.md).
-        fill(swatch(LOOK.ink)),
-        useStyle('caption'),
-        fill(textOf('TextColorProperty')),
-        drawParagraph(
-          num(4),
-          labelHalf(height()),
-          less(width(), TRACK_WIDTH + 8),
-        ),
-        // The track: green when on, grey when off.
-        // A PILL, which is what a switch is everywhere. Half the track's
-        // height of corner is as round as a rectangle goes — the engine
-        // clamps anything more to exactly this (`CommandPen.rectangle`).
-        corner(TRACK_HEIGHT / 2),
-        // NO `pressed` HERE, though a Toggle acts like a Button and so has
-        // `Takes Gestures` along with everything else. `pressed` says a FILL,
-        // and this track's fill is the whole of what `on` and `off` mean — a
-        // switch that looked the same pressed as it does off would be saying
-        // the wrong thing rather than an extra thing. A switch that wants
-        // press feedback wants a class of its own, and nobody has asked
-        // (specs/STYLES_PLAN.md).
-        either(
-          on(),
-          [fill(swatch(LOOK.positive)), useStyle('on')],
-          [fill(swatch(LOOK.secondary)), useStyle('off')],
-        ),
+  drawing: drawing({
+    width: width(),
+    height: height(),
+    commands: [
+      // The caption, in the Label's own words and colour.
+      noOutline(),
+      // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
+      // its own look and then offers to be overruled, and the caption was the one
+      // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
+      // pen alone when no theme defines one. So in a project with NO theme the
+      // caption inherited whatever the FACE had just set, and a Button drew its
+      // words in the button colour: invisible (specs/STYLES_PLAN.md).
+      fill(swatch(LOOK.ink)),
+      useStyle('caption'),
+      fill(textOf('TextColorProperty')),
+      drawParagraph(
+        num(4),
+        labelHalf(height()),
+        less(width(), TRACK_WIDTH + 8),
+      ),
+      // The track: green when on, grey when off.
+      // A PILL, which is what a switch is everywhere. Half the track's
+      // height of corner is as round as a rectangle goes — the engine
+      // clamps anything more to exactly this (`CommandPen.rectangle`).
+      corner(TRACK_HEIGHT / 2),
+      // NO `pressed` HERE, though a Toggle acts like a Button and so has
+      // `Takes Gestures` along with everything else. `pressed` says a FILL,
+      // and this track's fill is the whole of what `on` and `off` mean — a
+      // switch that looked the same pressed as it does off would be saying
+      // the wrong thing rather than an extra thing. A switch that wants
+      // press feedback wants a class of its own, and nobody has asked
+      // (specs/STYLES_PLAN.md).
+      either(
+        on(),
+        [fill(swatch(LOOK.positive)), useStyle('on')],
+        [fill(swatch(LOOK.secondary)), useStyle('off')],
+      ),
+      rectangle(
+        less(width(), TRACK_WIDTH + 2),
+        less(labelHalf(height()), TRACK_HEIGHT / 2),
+        TRACK_WIDTH,
+        TRACK_HEIGHT,
+      ),
+      // The knob, at whichever end `on` says.
+      fill(swatch(LOOK.ink)),
+      useStyle('knob'),
+      either(
+        on(),
+        [circle(less(width(), KNOB + 4), labelHalf(height()), KNOB)],
+        [circle(less(width(), TRACK_WIDTH - KNOB), labelHalf(height()), KNOB)],
+      ),
+      // …and the ring, when the keyboard is on this one — inside the face,
+      // as the Button's is, since anything past the edge is clipped away.
+      either(focused(), [
+        noFill(),
+        outline(swatch(LOOK.focus), RING_WIDTH),
+        corner(ringRadius(RADIUS)),
+        useStyle('ring'),
         rectangle(
-          less(width(), TRACK_WIDTH + 2),
-          less(labelHalf(height()), TRACK_HEIGHT / 2),
-          TRACK_WIDTH,
-          TRACK_HEIGHT,
+          num(RING_INSET),
+          num(RING_INSET),
+          less(width(), RING_INSET * 2),
+          less(height(), RING_INSET * 2),
         ),
-        // The knob, at whichever end `on` says.
-        fill(swatch(LOOK.ink)),
-        useStyle('knob'),
-        either(
-          on(),
-          [circle(less(width(), KNOB + 4), labelHalf(height()), KNOB)],
-          [
-            circle(
-              less(width(), TRACK_WIDTH - KNOB),
-              labelHalf(height()),
-              KNOB,
-            ),
-          ],
-        ),
-        // …and the ring, when the keyboard is on this one — inside the face,
-        // as the Button's is, since anything past the edge is clipped away.
-        either(focused(), [
-          noFill(),
-          outline(swatch(LOOK.focus), RING_WIDTH),
-          corner(ringRadius(RADIUS)),
-          useStyle('ring'),
-          rectangle(
-            num(RING_INSET),
-            num(RING_INSET),
-            less(width(), RING_INSET * 2),
-            less(height(), RING_INSET * 2),
-          ),
-        ]),
-      ],
-    }),
+      ]),
+    ],
+  }),
+  code: [
     // The click the Button raises — from the mouse, or from Enter — flips
     // the property and says which way it went. The Button's own handlers
     // came across with `acts like`, so nothing here takes the focus or

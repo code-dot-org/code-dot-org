@@ -34,7 +34,7 @@ import {
   alongX,
   chain,
   corner,
-  drawingRow,
+  drawing,
   event,
   fill,
   me,
@@ -195,47 +195,47 @@ export const sliderActor = actorDocument({
     {setter: `world_set_${BAR}_FractionProperty`, type: 'number', value: 0.5},
   ],
   members: [event('changed')],
+  drawing: drawing({
+    width: width(),
+    height: height(),
+    commands: [
+      noOutline(),
+      // The track, inset by the knob so the knob never leaves the canvas.
+      fill(read(BAR, 'TrackColorProperty')),
+      rectangle(
+        num(KNOB),
+        less(half(height()), TRACK_HEIGHT / 2),
+        less(width(), KNOB * 2),
+        TRACK_HEIGHT,
+      ),
+      // …filled as far as the knob.
+      fill(read(BAR, 'BarColorProperty')),
+      rectangle(
+        num(KNOB),
+        less(half(height()), TRACK_HEIGHT / 2),
+        less(knobX(), KNOB),
+        TRACK_HEIGHT,
+      ),
+      // The knob.
+      fill(swatch(LOOK.ink)),
+      useStyle('knob'),
+      circle(knobX(), half(height()), KNOB),
+      // …and the ring, when the keyboard is on this one.
+      either(focused(), [
+        noFill(),
+        outline(swatch(LOOK.focus), RING_WIDTH),
+        corner(ringRadius(RADIUS_BAR)),
+        useStyle('ring'),
+        rectangle(
+          num(RING_INSET),
+          num(RING_INSET),
+          less(width(), RING_INSET * 2),
+          less(height(), RING_INSET * 2),
+        ),
+      ]),
+    ],
+  }),
   code: [
-    drawingRow({
-      width: width(),
-      height: height(),
-      commands: [
-        noOutline(),
-        // The track, inset by the knob so the knob never leaves the canvas.
-        fill(read(BAR, 'TrackColorProperty')),
-        rectangle(
-          num(KNOB),
-          less(half(height()), TRACK_HEIGHT / 2),
-          less(width(), KNOB * 2),
-          TRACK_HEIGHT,
-        ),
-        // …filled as far as the knob.
-        fill(read(BAR, 'BarColorProperty')),
-        rectangle(
-          num(KNOB),
-          less(half(height()), TRACK_HEIGHT / 2),
-          less(knobX(), KNOB),
-          TRACK_HEIGHT,
-        ),
-        // The knob.
-        fill(swatch(LOOK.ink)),
-        useStyle('knob'),
-        circle(knobX(), half(height()), KNOB),
-        // …and the ring, when the keyboard is on this one.
-        either(focused(), [
-          noFill(),
-          outline(swatch(LOOK.focus), RING_WIDTH),
-          corner(ringRadius(RADIUS_BAR)),
-          useStyle('ring'),
-          rectangle(
-            num(RING_INSET),
-            num(RING_INSET),
-            less(width(), RING_INSET * 2),
-            less(height(), RING_INSET * 2),
-          ),
-        ]),
-      ],
-    }),
     // A press on it: the keyboard comes here, and the fraction jumps to
     // where the press landed.
     {

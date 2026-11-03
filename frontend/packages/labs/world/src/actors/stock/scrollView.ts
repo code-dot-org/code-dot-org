@@ -31,7 +31,7 @@ import {BORDER, LOOK, RADIUS_BAR, RADIUS_TIGHT} from './look';
 import {
   chain,
   corner,
-  drawingRow,
+  drawing,
   fill,
   labelValue,
   me,
@@ -162,40 +162,40 @@ export const scrollViewActor = actorDocument({
     boxValue('Height', HEIGHT),
     labelValue('TextProperty', {type: 'string', value: ''}),
   ],
+  drawing: drawing({
+    width: width(),
+    height: height(),
+    commands: [
+      fill(swatch(LOOK.field)),
+      outline(swatch(LOOK.primaryStrong), BORDER),
+      corner(RADIUS_TIGHT),
+      useStyle('inset'),
+      rectangle(0, 0, width(), height()),
+      // The bar, down the right edge, over the face and under the content.
+      noOutline(),
+      // The bar is rounder than the box it is in, which is what a scrollbar
+      // looks like everywhere: at three pixels of corner on a six-wide bar
+      // it is a lozenge.
+      corner(RADIUS_BAR),
+      fill(swatch(LOOK.secondary)),
+      useStyle('track'),
+      rectangle(
+        maths(width(), 'MINUS', num(BAR_WIDTH + BAR_INSET)),
+        num(BAR_INSET),
+        num(BAR_WIDTH),
+        maths(height(), 'MINUS', num(BAR_INSET * 2)),
+      ),
+      fill(swatch(LOOK.primaryStrong)),
+      useStyle('knob'),
+      rectangle(
+        maths(width(), 'MINUS', num(BAR_WIDTH + BAR_INSET)),
+        thumbTop(),
+        num(BAR_WIDTH),
+        thumbHeight(),
+      ),
+    ],
+  }),
   code: [
-    drawingRow({
-      width: width(),
-      height: height(),
-      commands: [
-        fill(swatch(LOOK.field)),
-        outline(swatch(LOOK.primaryStrong), BORDER),
-        corner(RADIUS_TIGHT),
-        useStyle('inset'),
-        rectangle(0, 0, width(), height()),
-        // The bar, down the right edge, over the face and under the content.
-        noOutline(),
-        // The bar is rounder than the box it is in, which is what a scrollbar
-        // looks like everywhere: at three pixels of corner on a six-wide bar
-        // it is a lozenge.
-        corner(RADIUS_BAR),
-        fill(swatch(LOOK.secondary)),
-        useStyle('track'),
-        rectangle(
-          maths(width(), 'MINUS', num(BAR_WIDTH + BAR_INSET)),
-          num(BAR_INSET),
-          num(BAR_WIDTH),
-          maths(height(), 'MINUS', num(BAR_INSET * 2)),
-        ),
-        fill(swatch(LOOK.primaryStrong)),
-        useStyle('knob'),
-        rectangle(
-          maths(width(), 'MINUS', num(BAR_WIDTH + BAR_INSET)),
-          thumbTop(),
-          num(BAR_WIDTH),
-          thumbHeight(),
-        ),
-      ],
-    }),
     // Clicking it brings the keyboard, so the arrows move THIS rather than
     // whatever had the focus before.
     {

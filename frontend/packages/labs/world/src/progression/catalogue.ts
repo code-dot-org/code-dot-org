@@ -50,7 +50,7 @@
 // `requires` names a neighbor, that no two tiles share a cell, that every tile
 // is reachable from Origin, and that a region's tiles touch each other.
 
-import {actorDataOf} from '../actors/actorData';
+import {actorDataOf, type ActorStep} from '../actors/actorData';
 import {isRuleData, type RuleData} from '../rules/ruleData';
 import {resolveRuleContents} from '../rules/ruleReference';
 import {stockRule} from '../rules/stock';
@@ -157,7 +157,7 @@ export const TILES: readonly Tile[] = [
       kind: 'outcome',
       says: 'With right held for a second the actor’s x rises; with down held, its y.',
       falsePass:
-        'Moving the actor with a per-frame `set position` instead of the trait — caught by also asserting the workspace has no `each frame`.',
+        'Moving the actor with a per-frame `set position` instead of the trait — caught by also asserting no step of the actor’s sets its position.',
       run: {
         probes: {hero: {kind: 'positions', of: 'Hero'}},
         trace: [
@@ -317,18 +317,11 @@ export const TILES: readonly Tile[] = [
       // the lesson that way has done the lesson. What the lesson replaces is
       // moving by PLACE — so that is what the shape half looks for.
       //
-      // NOT "no `set position` anywhere", either, which is what this said while
-      // a lesson had a file per actor: placing the Hero to begin with is a
-      // `set position`, and it lives in the same file now that a lesson is one
-      // file. What the lesson replaces is a `set position` INSIDE an `each
-      // frame`, and saying exactly that is what stays true either way.
-      //
-      // In the learner's own files: Physics moves a body that way itself.
+      // Not "no `set position` anywhere": placing the Hero to begin with is
+      // one. What the lesson replaces is a `set position` in an actor's step.
       inspect: files =>
-        !nestedIn(
-          withoutRules(files),
-          'world_trait_step',
-          'world_set_position',
+        !actorSteps(files).some(step =>
+          JSON.stringify(step.body ?? {}).includes('"world_set_position"'),
         ),
     },
   },
@@ -3647,7 +3640,7 @@ export const TILES: readonly Tile[] = [
       kind: 'outcome',
       says: 'Both still bob, and neither of them carries a copy of the bobbing any more.',
       falsePass:
-        'A rule written and used by one of them, with the other left as it was — which bobs, and is the duplication the lesson is about. The shape half asks that NO actor holds an `each frame` of its own, so one copy left behind is one too many.',
+        'A rule written and used by one of them, with the other left as it was — which bobs, and is the duplication the lesson is about. The shape half asks that NO actor holds a step of its own, so one copy left behind is one too many.',
       run: {
         probes: {
           fish: {kind: 'positions', of: 'Fish'},
@@ -3666,12 +3659,7 @@ export const TILES: readonly Tile[] = [
               trait => (trait.steps ?? []).length > 0,
             ),
         );
-        // Each `define actor` is a file of its own, so a copy left in either
-        // of them is a `world_trait_step` still sitting in an actor file.
-        const copies = Object.entries(files).some(
-          ([path, contents]) =>
-            path.endsWith('.actor') && contents.includes('world_trait_step'),
-        );
+        const copies = actorSteps(files).length > 0;
         return shared && !copies;
       },
       passes: ({samples}) => {
@@ -3750,57 +3738,15 @@ interface Point {
   y: number;
 }
 
-/**
- * The last sample a probe took — where the world ended up.
- *
- * Two, not one with an overload: a probe answers with a count or with a list,
- * and a caller always knows which it asked for. An absent sample reads as -1 or
- * as nothing rather than as `undefined`, so a comparison against it is false
- * instead of a thrown error inside somebody's lesson.
- */
-/**
- * Whether any block of one type holds a block of another, anywhere below it.
- *
- * A shape half often means "this, inside that" — a `set position` inside an
- * `each frame` — and a file read as one string cannot tell the two apart. So
- * this walks the workspace: find the outer block, then look for the inner one
- * in everything hanging off it.
- *
- * An unparseable file is skipped rather than thrown on: a check runs against
- * whatever the learner has, and a file mid-edit is not a failed lesson.
- */
-function nestedIn(
-  files: Record<string, string>,
-  outer: string,
-  inner: string,
-): boolean {
-  const holds = (node: unknown): boolean => {
-    if (Array.isArray(node)) {
-      return node.some(holds);
+/** Every step of every actor the project holds; a file mid-edit holds none. */
+function actorSteps(files: Record<string, string>): ActorStep[] {
+  return Object.entries(files).flatMap(([path, contents]) => {
+    if (!path.endsWith('.actor')) {
+      return [];
     }
-    if (typeof node !== 'object' || node === null) {
-      return false;
-    }
-    const block = node as {type?: unknown};
-    if (block.type === outer && JSON.stringify(node).includes(`"${inner}"`)) {
-      return true;
-    }
-    return Object.values(node).some(holds);
-  };
-  return Object.values(files).some(contents => {
-    try {
-      return holds(JSON.parse(contents));
-    } catch {
-      return false;
-    }
+    return actorDataOf(contents)?.steps ?? [];
   });
 }
-
-/** The project's files less its rules, which are not the learner's work. */
-const withoutRules = (files: Record<string, string>): Record<string, string> =>
-  Object.fromEntries(
-    Object.entries(files).filter(([path]) => !path.endsWith('.rule')),
-  );
 
 /**
  * The level a lesson arranges: `maps/main.map`, or the Main Screen where
@@ -3897,6 +3843,14 @@ function ruleIn(
   }
 }
 
+/**
+ * The last sample a probe took — where the world ended up.
+ *
+ * Two, not one with an overload: a probe answers with a count or with a list,
+ * and a caller always knows which it asked for. An absent sample reads as -1 or
+ * as nothing rather than as `undefined`, so a comparison against it is false
+ * instead of a thrown error inside somebody's lesson.
+ */
 const lastNumber = (samples: unknown[] | undefined): number => {
   const value = samples?.[samples.length - 1];
   return typeof value === 'number' ? value : -1;

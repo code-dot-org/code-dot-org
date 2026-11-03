@@ -32,7 +32,7 @@ import {actorDocument} from '../actorDocument';
 
 import {boxValue} from './label';
 import {PORTRAIT_SPRITE} from './portrait';
-import {drawingRow, me, num, property} from './workspace';
+import {drawing, me, num, property} from './workspace';
 
 /** How big an Image is unless a project says otherwise. */
 const WIDTH = 64;
@@ -95,21 +95,19 @@ export const imageActor = actorDocument({
     property('boolean', 'stretches', 'FALSE'),
   ],
   values: [boxValue('Width', WIDTH), boxValue('Height', HEIGHT)],
-  code: [
-    drawingRow({
-      width: box('Width'),
-      height: box('Height'),
-      commands: [
-        {
-          type: 'controls_if',
-          extraState: {hasElse: true},
-          inputs: {
-            IF0: stretches(),
-            DO0: {block: drawn('stretch')},
-            ELSE: {block: drawn('fit')},
-          },
+  drawing: drawing({
+    width: box('Width'),
+    height: box('Height'),
+    commands: [
+      {
+        type: 'controls_if',
+        extraState: {hasElse: true},
+        inputs: {
+          IF0: stretches(),
+          DO0: {block: drawn('stretch')},
+          ELSE: {block: drawn('fit')},
         },
-      ],
-    }),
-  ],
+      },
+    ],
+  }),
 });

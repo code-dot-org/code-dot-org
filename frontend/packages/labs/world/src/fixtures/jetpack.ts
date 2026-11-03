@@ -92,6 +92,7 @@
 // WHAT IT IS NOT: there is no second level for the door to lead to (JETPACK.md,
 // phases 4 to 7). It is the smallest thing that plays.
 
+import type {Block} from '../actors/actorData';
 import {actorDocument} from '../actors/actorDocument';
 import {climbArrowsHandlers} from '../actors/enhance/climbArrows';
 import {labelActor} from '../actors/stock/label';
@@ -688,7 +689,7 @@ const PILOT_ACTOR = actorDocument({
     // which would leave the first two cans as scenery.
     {setter: 'world_set_Jetpack_FuelProperty', type: 'number', value: 50},
   ],
-  code: [
+  steps: [
     // THE SHOVEL: `z` held, and whichever arrow is held with it — which is
     // what JETPACK.md asks for ("in the direction they are also holding").
     // With no arrow at all the direction is nothing, the aimed-at point is
@@ -699,40 +700,38 @@ const PILOT_ACTOR = actorDocument({
     // moment; and polling costs nothing, since digging a block that is
     // already a hole does nothing (`rules/digging`).
     {
-      type: 'world_trait_step',
-      fields: {PHASE: 'touch', NAME: 'dig where it is pointing'},
-      inputs: {
-        DO: {
-          block: onlyIf(
-            {block: {type: 'world_is_key_down', fields: {KEY: 'z'}}},
-            {
-              type: 'world_do_Digging_DigTowardsAction',
-              inputs: {
-                ACTOR: me(),
-                VALUE: {
-                  block: {
-                    type: 'world_vector_of',
-                    inputs: {
-                      X: {
-                        block: {
-                          type: 'math_arithmetic',
-                          fields: {OP: 'MINUS'},
-                          inputs: {
-                            A: keyAsNumber('right arrow'),
-                            B: keyAsNumber('left arrow'),
-                          },
-                        },
+      name: 'dig where it is pointing',
+      phase: 'touch',
+      body: onlyIf(
+        {block: {type: 'world_is_key_down', fields: {KEY: 'z'}}},
+        {
+          type: 'world_do_Digging_DigTowardsAction',
+          inputs: {
+            ACTOR: me(),
+            VALUE: {
+              block: {
+                type: 'world_vector_of',
+                inputs: {
+                  X: {
+                    block: {
+                      type: 'math_arithmetic',
+                      fields: {OP: 'MINUS'},
+                      inputs: {
+                        A: keyAsNumber('right arrow'),
+                        B: keyAsNumber('left arrow'),
                       },
-                      Y: keyAsNumber('down arrow'),
                     },
                   },
+                  Y: keyAsNumber('down arrow'),
                 },
               },
             },
-          ),
+          },
         },
-      },
+      ),
     },
+  ],
+  code: [
     // THE LADDER, as four moments rather than a poll: up and down each
     // start a climb, and letting either go ends it. The same blocks
     // `actors/enhance/climbArrows` writes for a learner — shared rather than
@@ -1148,51 +1147,42 @@ const switchedWallActor = (name: string, color: string) =>
         value: color,
       },
     ],
-    code: [
+    drawing: {
+      width: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+      height: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+      body: stack([
+        fill({
+          block: {
+            type: 'world_get_Switches_WallColorProperty',
+            inputs: {ACTOR: me()},
+          },
+        }),
+        rectangle(0, 0, 32, 32),
+      ]) as Block,
+    },
+    steps: [
       {
-        type: 'world_trait_step',
-        fields: {PHASE: 'react', NAME: 'look like what it is'},
-        inputs: {
-          DO: {
-            block: {
-              type: 'world_set_Appearance_OpacityProperty',
-              inputs: {
-                ACTOR: me(),
-                VALUE: {
-                  block: {
-                    type: 'logic_ternary',
-                    inputs: {
-                      IF: {
-                        block: {
-                          type: 'world_get_Collisions_PassesThroughThingsProperty',
-                          inputs: {ACTOR: me()},
-                        },
-                      },
-                      THEN: number(0.25),
-                      ELSE: number(1),
+        name: 'look like what it is',
+        phase: 'react',
+        body: {
+          type: 'world_set_Appearance_OpacityProperty',
+          inputs: {
+            ACTOR: me(),
+            VALUE: {
+              block: {
+                type: 'logic_ternary',
+                inputs: {
+                  IF: {
+                    block: {
+                      type: 'world_get_Collisions_PassesThroughThingsProperty',
+                      inputs: {ACTOR: me()},
                     },
                   },
+                  THEN: number(0.25),
+                  ELSE: number(1),
                 },
               },
             },
-          },
-        },
-      },
-      {
-        type: 'world_define_drawing',
-        inputs: {
-          WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-          HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-          DO: {
-            block: stack([
-              fill({
-                block: {
-                  type: 'world_get_Switches_WallColorProperty',
-                  inputs: {ACTOR: me()},
-                },
-              }),
-              rectangle(0, 0, 32, 32),
-            ]),
           },
         },
       },
@@ -1210,26 +1200,19 @@ const switchActor = (name: string, color: string) =>
         value: color,
       },
     ],
-    code: [
-      {
-        type: 'world_define_drawing',
-        inputs: {
-          WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-          HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-          DO: {
-            block: stack([
-              fill({
-                block: {
-                  type: 'world_get_Switches_SwitchColorProperty',
-                  inputs: {ACTOR: me()},
-                },
-              }),
-              rectangle(4, 20, 24, 12),
-            ]),
+    drawing: {
+      width: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+      height: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+      body: stack([
+        fill({
+          block: {
+            type: 'world_get_Switches_SwitchColorProperty',
+            inputs: {ACTOR: me()},
           },
-        },
-      },
-    ],
+        }),
+        rectangle(4, 20, 24, 12),
+      ]) as Block,
+    },
   });
 
 /**
@@ -1261,25 +1244,20 @@ const padActor = (seconds: number) =>
   actorDocument({
     name: 'Pad',
     traits: ['Teleport#IsATeleportPadTrait'],
-    code: [
-      {
-        type: 'world_define_drawing',
-        inputs: {
-          WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-          HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-          DO: {
-            block: stack([
-              fill({
-                block: {
-                  type: 'world_get_Teleport_PadColorProperty',
-                  inputs: {ACTOR: me()},
-                },
-              }),
-              rectangle(0, 22, 32, 10),
-            ]),
+    drawing: {
+      width: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+      height: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+      body: stack([
+        fill({
+          block: {
+            type: 'world_get_Teleport_PadColorProperty',
+            inputs: {ACTOR: me()},
           },
-        },
-      },
+        }),
+        rectangle(0, 22, 32, 10),
+      ]) as Block,
+    },
+    code: [
       {
         type: 'world_define_tween',
         id: 'padFadeOut',
@@ -1486,33 +1464,29 @@ const shurikenActor = () =>
         value: 2,
       },
     ],
-    code: [
+    steps: [
       // THE SPIN, which is the level's and not the rule's: `points where it
       // goes` would aim it, and a shuriken does not point anywhere. Turning
       // the drawing a little every frame is all a spin is.
       {
-        type: 'world_trait_step',
-        fields: {PHASE: 'react', NAME: 'spin'},
-        inputs: {
-          DO: {
-            block: {
-              type: 'world_set_Space_RotationProperty',
-              inputs: {
-                ACTOR: me(),
-                VALUE: {
-                  block: {
-                    type: 'math_arithmetic',
-                    fields: {OP: 'ADD'},
-                    inputs: {
-                      A: {
-                        block: {
-                          type: 'world_get_Space_RotationProperty',
-                          inputs: {ACTOR: me()},
-                        },
-                      },
-                      B: number(9),
+        name: 'spin',
+        phase: 'react',
+        body: {
+          type: 'world_set_Space_RotationProperty',
+          inputs: {
+            ACTOR: me(),
+            VALUE: {
+              block: {
+                type: 'math_arithmetic',
+                fields: {OP: 'ADD'},
+                inputs: {
+                  A: {
+                    block: {
+                      type: 'world_get_Space_RotationProperty',
+                      inputs: {ACTOR: me()},
                     },
                   },
+                  B: number(9),
                 },
               },
             },
@@ -1732,19 +1706,15 @@ const DOOR_ACTOR = actorDocument({
   name: 'Door',
   sprite: 'door.png',
   traits: ['Collisions#CanCollideTrait'],
-  code: [
+  steps: [
     {
-      type: 'world_trait_step',
-      fields: {PHASE: 'react', NAME: 'open when the gems are gone'},
-      inputs: {
-        DO: {
-          block: onlyIf(noneLeft('actors/gem'), {
-            type: 'world_set_sprite',
-            fields: {SPRITE: 'doorOpen.png'},
-            inputs: {ACTOR: me()},
-          }),
-        },
-      },
+      name: 'open when the gems are gone',
+      phase: 'react',
+      body: onlyIf(noneLeft('actors/gem'), {
+        type: 'world_set_sprite',
+        fields: {SPRITE: 'doorOpen.png'},
+        inputs: {ACTOR: me()},
+      }),
     },
   ],
 });
@@ -1774,25 +1744,20 @@ const SCOREBOARD_ACTOR = actorDocument({
     // until the score moves reads as a broken board.
     labelValue('TextProperty', {type: 'string', value: 'COINS 0'}),
   ],
-  code: [
-    {
-      type: 'world_define_drawing',
-      inputs: {
-        WIDTH: {shadow: {type: 'math_number', fields: {NUM: 96}}},
-        HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 24}}},
-        DO: {
-          block: stack([
-            fill({
-              block: {
-                type: 'world_get_ActorsLabel_TextColorProperty',
-                inputs: {ACTOR: me()},
-              },
-            }),
-            drawText(48, 12),
-          ]),
+  drawing: {
+    width: {shadow: {type: 'math_number', fields: {NUM: 96}}},
+    height: {shadow: {type: 'math_number', fields: {NUM: 24}}},
+    body: stack([
+      fill({
+        block: {
+          type: 'world_get_ActorsLabel_TextColorProperty',
+          inputs: {ACTOR: me()},
         },
-      },
-    },
+      }),
+      drawText(48, 12),
+    ]) as Block,
+  },
+  code: [
     {
       type: 'world_on_Scoring_SeesTheScoreChangeEvent',
       next: {
@@ -1874,26 +1839,22 @@ const FUEL_BAR_ACTOR = actorDocument({
       value: {x: 1.5, y: 2},
     },
   ],
-  code: [
+  steps: [
     {
-      type: 'world_trait_step',
-      fields: {PHASE: 'react', NAME: 'follow the tank'},
-      inputs: {
-        DO: {
-          block: {
-            type: 'world_set_ActorsProgressBar_FractionProperty',
-            inputs: {
-              ACTOR: me(),
-              VALUE: {
-                block: {
-                  type: 'world_query_Jetpack_FuelFractionQuery',
-                  inputs: {
-                    ACTOR: {
-                      block: {
-                        type: 'world_first_actor',
-                        inputs: {SOURCE: kind('actors/pilot')},
-                      },
-                    },
+      name: 'follow the tank',
+      phase: 'react',
+      body: {
+        type: 'world_set_ActorsProgressBar_FractionProperty',
+        inputs: {
+          ACTOR: me(),
+          VALUE: {
+            block: {
+              type: 'world_query_Jetpack_FuelFractionQuery',
+              inputs: {
+                ACTOR: {
+                  block: {
+                    type: 'world_first_actor',
+                    inputs: {SOURCE: kind('actors/pilot')},
                   },
                 },
               },

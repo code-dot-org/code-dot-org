@@ -38,7 +38,7 @@ import {LOOK, RADIUS, RING_INSET, RING_WIDTH, ringRadius, SHADOW} from './look';
 import {
   chain,
   corner,
-  drawingRow,
+  drawing,
   drawParagraph,
   fill,
   labelValue,
@@ -123,74 +123,74 @@ export const buttonActor = actorDocument({
     boxValue('Height', HEIGHT),
     labelValue('TextProperty', {type: 'string', value: 'Button'}),
   ],
+  drawing: drawing({
+    width: width(),
+    height: height(),
+    commands: [
+      // A RAISED SHEET IN THE ONE COLOUR THAT MEANS "PRESS THIS", and no
+      // edge at all. It had a white 2px outline, which was the loudest
+      // thing in the kit and was doing the job a shadow does better: saying
+      // the face is above the page rather than drawn on it
+      // (specs/STYLES_PLAN.md).
+      noOutline(),
+      fill(swatch(LOOK.accent)),
+      corner(RADIUS),
+      shadow(SHADOW),
+      useStyle('button'),
+      // …and pressed while it is held. A CLASS ON TOP OF A CLASS, and it
+      // is the clearest demonstration of why a style field has three
+      // states rather than two: Modern's `pressed` SAYS a lifted fill, says
+      // `null` to the shadow — so a raised button sinks into the page while
+      // you hold it — and says NOTHING about the corner, which therefore
+      // stays exactly as the face set it. Mention, clear, and leave alone
+      // (specs/STYLES_PLAN.md).
+      onlyIf(beingPressed(), [useStyle('pressed')]),
+      rectangle(0, 0, width(), height()),
+      // Nothing after the face is raised — a shadow under the caption would
+      // be a drop-shadowed word, which is a different decade.
+      noShadow(),
+      // …and the caption is BOLD, which is the one thing that tells a
+      // control you press from a label that describes it, when everything
+      // in the kit is one family at one size.
+      weight('bold'),
+      // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
+      // its own look and then offers to be overruled, and the caption was the one
+      // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
+      // pen alone when no theme defines one. So in a project with NO theme the
+      // caption inherited whatever the FACE had just set, and a Button drew its
+      // words in the button colour: invisible (specs/STYLES_PLAN.md).
+      fill(swatch(LOOK.ink)),
+      useStyle('caption'),
+      fill(textOf('TextColorProperty')),
+      drawParagraph(labelHalf(width()), labelHalf(height()), width()),
+      // …AND THE RING, when the keyboard is on this one. Drawn INSIDE the
+      // face rather than around it, which is where a focus ring usually
+      // goes: the canvas is exactly the actor's size, so anything outside it
+      // is clipped away and would simply not appear.
+      //
+      // Last, so it is over the word rather than under it, and in a color
+      // that is nothing else on the face — a thicker white edge would read
+      // as a rounding artifact rather than as an answer.
+      onlyIf(focused(), [
+        // AN OUTLINE AND NOTHING ELSE. The pen is still carrying the word's
+        // fill at this point, and a filled ring is a rectangle painted over
+        // the word.
+        noFill(),
+        outline(swatch(LOOK.focus), RING_WIDTH),
+        // …and it follows the corner it is inset from. A square ring inside
+        // a rounded face reads as a mistake rather than as an answer.
+        corner(ringRadius(RADIUS)),
+        useStyle('ring'),
+        rectangle(
+          num(RING_INSET),
+          num(RING_INSET),
+          less(width(), RING_INSET * 2),
+          less(height(), RING_INSET * 2),
+        ),
+      ]),
+    ],
+  }),
   code: [
-    drawingRow({
-      width: width(),
-      height: height(),
-      commands: [
-        // A RAISED SHEET IN THE ONE COLOUR THAT MEANS "PRESS THIS", and no
-        // edge at all. It had a white 2px outline, which was the loudest
-        // thing in the kit and was doing the job a shadow does better: saying
-        // the face is above the page rather than drawn on it
-        // (specs/STYLES_PLAN.md).
-        noOutline(),
-        fill(swatch(LOOK.accent)),
-        corner(RADIUS),
-        shadow(SHADOW),
-        useStyle('button'),
-        // …and pressed while it is held. A CLASS ON TOP OF A CLASS, and it
-        // is the clearest demonstration of why a style field has three
-        // states rather than two: Modern's `pressed` SAYS a lifted fill, says
-        // `null` to the shadow — so a raised button sinks into the page while
-        // you hold it — and says NOTHING about the corner, which therefore
-        // stays exactly as the face set it. Mention, clear, and leave alone
-        // (specs/STYLES_PLAN.md).
-        onlyIf(beingPressed(), [useStyle('pressed')]),
-        rectangle(0, 0, width(), height()),
-        // Nothing after the face is raised — a shadow under the caption would
-        // be a drop-shadowed word, which is a different decade.
-        noShadow(),
-        // …and the caption is BOLD, which is the one thing that tells a
-        // control you press from a label that describes it, when everything
-        // in the kit is one family at one size.
-        weight('bold'),
-        // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
-        // its own look and then offers to be overruled, and the caption was the one
-        // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
-        // pen alone when no theme defines one. So in a project with NO theme the
-        // caption inherited whatever the FACE had just set, and a Button drew its
-        // words in the button colour: invisible (specs/STYLES_PLAN.md).
-        fill(swatch(LOOK.ink)),
-        useStyle('caption'),
-        fill(textOf('TextColorProperty')),
-        drawParagraph(labelHalf(width()), labelHalf(height()), width()),
-        // …AND THE RING, when the keyboard is on this one. Drawn INSIDE the
-        // face rather than around it, which is where a focus ring usually
-        // goes: the canvas is exactly the actor's size, so anything outside it
-        // is clipped away and would simply not appear.
-        //
-        // Last, so it is over the word rather than under it, and in a color
-        // that is nothing else on the face — a thicker white edge would read
-        // as a rounding artifact rather than as an answer.
-        onlyIf(focused(), [
-          // AN OUTLINE AND NOTHING ELSE. The pen is still carrying the word's
-          // fill at this point, and a filled ring is a rectangle painted over
-          // the word.
-          noFill(),
-          outline(swatch(LOOK.focus), RING_WIDTH),
-          // …and it follows the corner it is inset from. A square ring inside
-          // a rounded face reads as a mistake rather than as an answer.
-          corner(ringRadius(RADIUS)),
-          useStyle('ring'),
-          rectangle(
-            num(RING_INSET),
-            num(RING_INSET),
-            less(width(), RING_INSET * 2),
-            less(height(), RING_INSET * 2),
-          ),
-        ]),
-      ],
-    }),
     // A click brings the keyboard here, the way clicking a button on a page
     // does. `take the focus` releases whoever had it and does nothing when
     // this actor already has it, so the click that presses a focused button

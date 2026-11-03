@@ -20,8 +20,10 @@ export type ScriptStep =
   /** …from a trait, when a rule's: the trail goes back to it. */
   | {kind: 'member'; id: string; trait?: string}
   | {kind: 'trait'; id: string}
-  /** …and one of a rule's steps, by its owner and place (`ruleSteps`). */
-  | {kind: 'step'; id: string; trait?: string};
+  /** …and a step, a rule's by its owner and place (`ruleSteps`), an actor's by its place (`actorSteps`). */
+  | {kind: 'step'; id: string; trait?: string}
+  /** An actor's drawing (`actorDrawing`). */
+  | {kind: 'drawing'};
 
 /** One step: a file, or a script open within it. */
 export interface TrailStep {

@@ -34,15 +34,7 @@ import {actorDocument} from '../actorDocument';
 
 import {boxValue} from './label';
 import {RADIUS_BAR} from './look';
-import {
-  corner,
-  drawingRow,
-  useStyle,
-  property,
-  fill,
-  me,
-  num,
-} from './workspace';
+import {corner, drawing, useStyle, property, fill, me, num} from './workspace';
 
 /** How big a bar is unless a project says otherwise. */
 const WIDTH = 64;
@@ -165,5 +157,5 @@ export const progressBarActor = actorDocument({
     'Styled#HasAStyleTrait',
   ],
   values: [boxValue('Width', WIDTH), boxValue('Height', HEIGHT)],
-  code: [drawingRow(progressBarDrawing())],
+  drawing: drawing(progressBarDrawing()),
 });

@@ -1,4 +1,4 @@
-import type {JavascriptGenerator} from 'blockly/javascript';
+import {Order, type JavascriptGenerator} from 'blockly/javascript';
 import {
   forwardRef,
   useCallback,
@@ -29,7 +29,7 @@ import {
   type GeneratedBlock,
 } from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
-import {MEMBER_HEAD} from './bodySurfaces';
+import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from './bodySurfaces';
 import {
   actsLikeCode,
   animationsCode,
@@ -372,6 +372,13 @@ const SCREEN_KEYS: ReadonlySet<string> = new Set([
  * and rule settings are `set` rows (`screenSetupRows`); and its own
  * workspace holds the hats (`assembleWorldModule`).
  */
+/** The heads a page writes a body under, which compile through their owner. */
+const HEADS: ReadonlySet<string> = new Set([
+  MEMBER_HEAD,
+  STEP_HEAD,
+  DRAWING_HEAD,
+]);
+
 /**
  * An actor from its data: each row loaded under its `define actor` generated
  * where it stands, and the rest said here (`actorSheet`).
@@ -395,6 +402,16 @@ function actorCode(
     `const actor = new WorldLab.ActorBuilder({id: ${JSON.stringify(
       slug(name),
     )}, name: ${JSON.stringify(name)}})` + ';\n';
+  /** What hangs below a page's head, generated and indented as a body. */
+  const bodyBelow = (head: string): string => {
+    const first = workspace.getBlockById(head)?.getNextBlock();
+    return first
+      ? generator.prefixLines(
+          asString(generator.blockToCode(first)),
+          generator.INDENT,
+        )
+      : '';
+  };
   // The rows left in the chain are the `row` pieces, in order.
   let row = root.getNextBlock();
   for (const piece of pieces) {
@@ -417,6 +434,23 @@ function actorCode(
         ? `export const ${pascal(named)}Event = actor.defineEvent(` +
           `${JSON.stringify(slug(named))}, {name: ${JSON.stringify(named)}});\n`
         : '';
+    } else if (piece.kind === 'drawing') {
+      const head = workspace.getBlockById(piece.head);
+      if (!head) {
+        continue;
+      }
+      // `world` is bound for a size as for the drawing: a box that fits its
+      // words asks the world how wide words are (`World.textWidth`).
+      const measure = (name: string): string =>
+        `(actor, world) => ${generator.valueToCode(head, name, Order.NONE) || '1'}`;
+      code +=
+        `actor.defineDrawing(${measure('WIDTH')}, ${measure('HEIGHT')}, ` +
+        `(actor, pen, world) => {\n${bodyBelow(piece.head)}});\n`;
+    } else if (piece.kind === 'step') {
+      code +=
+        `actor.defineStep(${JSON.stringify(slug(piece.name || 'do something'))}, ` +
+        `${JSON.stringify(piece.phase || 'decide')}, ` +
+        `(actor, world, delta) => {\n${bodyBelow(piece.head)}});\n`;
     } else {
       const named = designedName(piece.parts);
       const first = piece.head
@@ -850,7 +884,7 @@ export const BlocklyGenerator = forwardRef<
         // `define actor` in a world must not stop the world compiling either.
         const topBlocks = workspace
           .getTopBlocks(true)
-          .filter(block => block.isEnabled() && block.type !== MEMBER_HEAD);
+          .filter(block => block.isEnabled() && !HEADS.has(block.type));
         // What this file compiles to, decided by its NAME — a file's kind is a
         // property of the file, and no block may change it. Throws if one that
         // would is present (`fileKind`).

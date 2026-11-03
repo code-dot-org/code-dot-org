@@ -13,7 +13,7 @@ import type {Block} from 'blockly';
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
-import {MEMBER_HEAD, STEP_HEAD} from '../bodySurfaces';
+import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from '../bodySurfaces';
 import {localizeText} from '../localizeBlocks';
 
 import {addOnChange} from './onChange';
@@ -44,6 +44,7 @@ export function inWorldContext(block: Block): boolean {
       // A drawing's closure is `(actor, pen, world)`. It reads and never
       // writes, which is what a drawing is; asking the world is reading.
       parent.type === 'world_define_drawing' ||
+      parent.type === DRAWING_HEAD ||
       parent.type.startsWith('world_on_')
     ) {
       return true;

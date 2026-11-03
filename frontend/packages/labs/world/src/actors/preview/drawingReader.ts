@@ -43,7 +43,13 @@ import {
 } from '../../engine/core/theme';
 import {STYLED} from '../../engine/rules/styled';
 import {MAIN_SCREEN_PATH} from '../../mainWorld';
-import {isActorData, writeValue, type ActorData} from '../actorData';
+import {
+  isActorData,
+  writeValue,
+  type ActorData,
+  type ActorDrawing,
+  type Socket,
+} from '../actorData';
 
 /** A block as it sits in a saved workspace — only what is read here. */
 export interface Node {
@@ -180,11 +186,12 @@ function actorIn(contents: string | undefined): ActorData | undefined {
   }
 }
 
-/** The actor's `define drawing`, a root of its code, if it has one. */
-const drawingOf = (data: ActorData | undefined): Node | undefined =>
-  ((data?.blocks?.blocks?.blocks ?? []) as Node[]).find(
-    root => root.type === 'world_define_drawing',
-  );
+const drawingOf = (data: ActorData | undefined): ActorDrawing | undefined =>
+  data?.drawing;
+
+/** What a size socket holds, as a block reads it. */
+const held = (size: Socket): Node | undefined =>
+  (size.block ?? size.shadow) as Node | undefined;
 
 /**
  * This actor and everything it acts like, nearest first, as module paths.
@@ -529,8 +536,8 @@ export function readDrawing(
     .map(one => actorIn(files[`${one}.actor`]))
     .filter((data): data is ActorData => data !== undefined);
   // The NEAREST drawing wins, which is what the builder does: a child's own
-  // `define drawing` replaces an inherited picture, and one that says
-  // nothing keeps it (specs/DRAWING.md).
+  // drawing replaces an inherited picture, and one that says nothing keeps
+  // it (specs/DRAWING.md).
   const drawing = actors.map(drawingOf).find(root => root !== undefined);
   if (!actors.length || !drawing) {
     return undefined;
@@ -786,14 +793,14 @@ export function readDrawing(
       }
     }
   };
-  run(chain(socket(drawing, 'DO')));
+  run(chain(drawing.body as Node | undefined));
 
   // THE SIZE IS A SOCKET, like everything else this reads: an interface
   // actor's is `⟨width⟩ of ⟨this actor⟩`, resolved against the same values
   // as the colors and the words — a placement's own width included.
   return {
-    width: number(drawing, 'WIDTH', 32),
-    height: number(drawing, 'HEIGHT', 32),
+    width: reading.number(held(drawing.width), 32),
+    height: reading.number(held(drawing.height), 32),
     commands,
     complete: reading.complete,
   };

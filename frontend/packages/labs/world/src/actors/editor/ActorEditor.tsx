@@ -59,6 +59,7 @@ import {useScriptStep} from '../../layout/TrailContext';
 import {showsRuleSource, type WorldLevelProperties} from '../../levelData';
 import {gameModuleOf} from '../../mainWorld';
 import {useAfterImport} from '../../mapEditor/useAfterImport';
+import {StepPageView} from '../../rules/editor/StepPage';
 import {
   filePath,
   projectFiles,
@@ -74,6 +75,18 @@ import {
   type ActorData,
   type ActorMember,
 } from '../actorData';
+import {drawOwn, inheritedDrawing} from '../actorDrawing';
+import {
+  ACTOR_PHASES,
+  actorStepAt,
+  actorStepDocument,
+  actorStepId,
+  actorStepProblem,
+  addActorStep,
+  removeActorStep,
+  setActorStep,
+  withActorStepDocument,
+} from '../actorSteps';
 import {requestActorEnhance} from '../enhance/actorEnhance';
 
 import styles from './actorEditor.module.css';
@@ -110,6 +123,7 @@ import {
 import {ActorIconPicker} from './ActorIconPicker';
 import {AddFramesDialog} from './AddFramesDialog';
 import {AnimationRow} from './AnimationRow';
+import {DrawingPage} from './DrawingPage';
 import {addMember, newMember, removeMember} from './memberEdits';
 import {MemberPage} from './MemberPage';
 import {memberReading} from './memberPalette';
@@ -357,10 +371,15 @@ export const ActorEditor = (props: CustomEditorProps) => {
         .sort(),
     [currentSources],
   );
+  /** The drawing it draws with when it has none of its own, and whose it is. */
+  const inherited = useMemo(
+    () => inheritedDrawing(files, modulePath),
+    [files, modulePath],
+  );
   const lookValue = animated ? ANIMATED : look ? `sprite:${look.sprite}` : '';
   const looks = useMemo(() => {
     const items = [
-      {value: '', text: '(drawn by its code)'},
+      {value: '', text: '(a drawing)'},
       ...pictureNames.map(sprite => ({
         value: `sprite:${sprite}`,
         text: sprite,
@@ -531,6 +550,77 @@ export const ActorEditor = (props: CustomEditorProps) => {
     setReturnTo(next?.id ?? `new-${member.kind}`);
   };
 
+  const deleteStep = async (at: number) => {
+    const step = data?.steps?.[at];
+    if (
+      !data ||
+      !step ||
+      !(await confirm({
+        title: 'Delete step',
+        message: `Delete “${step.name}”? ${data.name} stops doing it every frame.`,
+      }))
+    ) {
+      return;
+    }
+    const left = (data.steps ?? []).length - 1;
+    edit(removeActorStep(data, at));
+    setReturnTo(left ? `step-${Math.min(at, left - 1)}` : 'new-step');
+  };
+
+  /** Its own drawing, opened: a copy of the one it inherits, or a blank one. */
+  const drawItsOwn = () => {
+    if (data) {
+      edit(drawOwn(setLook(data, undefined), inherited));
+      setScript({kind: 'drawing'});
+    }
+  };
+  /**
+   * A picture, or none, in place of what it looked like: its own drawing
+   * goes, since the drawing is what the engine would draw.
+   */
+  const pictureInstead = async (sprite: string) => {
+    if (!data) {
+      return;
+    }
+    if (
+      sprite &&
+      data.drawing?.body &&
+      !(await confirm({
+        title: 'Use a picture',
+        message: `Show ${sprite} instead? ${data.name}’s drawing is deleted.`,
+      }))
+    ) {
+      return;
+    }
+    const next = setLook(data, sprite ? {sprite} : undefined);
+    if (sprite && next.drawing) {
+      const rest = {...next};
+      delete rest.drawing;
+      edit(rest);
+      return;
+    }
+    edit(next);
+  };
+
+  /** Back to drawing as the actor it acts like, its own given up. */
+  const dropOwnDrawing = async () => {
+    if (
+      !data?.drawing ||
+      !inherited ||
+      !(await confirm({
+        title: 'Use the inherited drawing',
+        message:
+          `Draw ${data.name} as a ${inherited.name} is? ` +
+          `${data.name}’s own drawing is deleted.`,
+      }))
+    ) {
+      return;
+    }
+    const rest = {...data};
+    delete rest.drawing;
+    edit(rest);
+  };
+
   const removeOne = async (name: string) => {
     if (
       data &&
@@ -551,6 +641,55 @@ export const ActorEditor = (props: CustomEditorProps) => {
   const others = useMemo(
     () => projectActorOptions(files).filter(([, path]) => path !== modulePath),
     [files, modulePath],
+  );
+
+  /** What draws it, and the way to that drawing, on the Look tab. */
+  const drawingControls = data && (
+    <div className={styles.lookActions}>
+      {data.drawing ? (
+        <>
+          <Button
+            variant="text"
+            size="small"
+            startIcon={
+              <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="solid" />
+            }
+            onClick={() => setScript({kind: 'drawing'})}
+          >
+            Edit drawing
+          </Button>
+          {inherited && !isReadOnly && (
+            <Button
+              variant="text"
+              size="small"
+              onClick={() => void dropOwnDrawing()}
+            >
+              Draw as a {inherited.name}
+            </Button>
+          )}
+        </>
+      ) : (
+        <>
+          {inherited && (
+            <Typography variant="body3" className={styles.note}>
+              Drawn as a {inherited.name} is.
+            </Typography>
+          )}
+          {!isReadOnly && (
+            <Button
+              variant="text"
+              size="small"
+              startIcon={
+                <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="solid" />
+              }
+              onClick={drawItsOwn}
+            >
+              {inherited ? 'Draw its own' : 'Draw it'}
+            </Button>
+          )}
+        </>
+      )}
+    </div>
   );
 
   const lookAct = (act: () => void) => () => {
@@ -601,6 +740,71 @@ export const ActorEditor = (props: CustomEditorProps) => {
               replaceSources({...now, source});
             }
           }}
+        />
+      </div>
+    );
+  }
+
+  const backToActor = !onTrail && (
+    <div className={styles.codeHeader}>
+      <Button
+        variant="text"
+        size="extraSmall"
+        startIcon={
+          <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
+        }
+        onClick={() => setScript(null)}
+      >
+        Actor
+      </Button>
+    </div>
+  );
+
+  if (data?.drawing && script?.kind === 'drawing') {
+    return (
+      <div className={styles.code}>
+        {backToActor}
+        <DrawingPage
+          data={data}
+          fileId={fileId}
+          isReadOnly={isReadOnly}
+          onUpdate={update}
+        />
+      </div>
+    );
+  }
+
+  const stepAt =
+    data && script?.kind === 'step' ? actorStepAt(data, script.id) : undefined;
+  const step = stepAt === undefined ? undefined : data?.steps?.[stepAt];
+  if (data && step && stepAt !== undefined) {
+    return (
+      <div className={styles.code}>
+        {backToActor}
+        <StepPageView
+          name={step.name}
+          phase={step.phase}
+          phases={ACTOR_PHASES}
+          everyTick={false}
+          problem={name => actorStepProblem(data, stepAt, name)}
+          fileId={fileId}
+          language="actor"
+          isReadOnly={isReadOnly}
+          editorKey={`${stepAt}:${step.phase ?? ''}`}
+          document={actorStepDocument(data, stepAt)}
+          onRename={name =>
+            update(now => setActorStep(now, stepAt, one => ({...one, name})))
+          }
+          onPhase={phase =>
+            update(now =>
+              setActorStep(now, stepAt, one =>
+                phase === undefined ? one : {...one, phase},
+              ),
+            )
+          }
+          onDocument={saved =>
+            update(now => withActorStepDocument(now, stepAt, saved))
+          }
         />
       </div>
     );
@@ -1179,6 +1383,17 @@ export const ActorEditor = (props: CustomEditorProps) => {
                   setFresh(member.id);
                   openMember(member.id);
                 }}
+                onEditStep={at => {
+                  setReturnTo(`step-${at}`);
+                  setScript({kind: 'step', id: actorStepId(at)});
+                }}
+                onDeleteStep={at => void deleteStep(at)}
+                onNewStep={() => {
+                  const made = addActorStep(data);
+                  edit(made.data);
+                  setReturnTo(`step-${made.at}`);
+                  setScript({kind: 'step', id: actorStepId(made.at)});
+                }}
                 focusEdit={returnTo}
                 onFocused={() => setReturnTo(null)}
               />
@@ -1227,11 +1442,14 @@ export const ActorEditor = (props: CustomEditorProps) => {
                     {isInterface ? (
                       // Drawn, and shown by its icon (specs/ACTORS_AS_DATA_PLAN.md,
                       // step 3): no pictures to choose.
-                      <ActorIconPicker
-                        selected={data.icon}
-                        onChange={icon => edit(setIcon(data, icon))}
-                        isReadOnly={isReadOnly}
-                      />
+                      <>
+                        <ActorIconPicker
+                          selected={data.icon}
+                          onChange={icon => edit(setIcon(data, icon))}
+                          isReadOnly={isReadOnly}
+                        />
+                        {drawingControls}
+                      </>
                     ) : (
                       <>
                         <SimpleDropdown
@@ -1253,14 +1471,14 @@ export const ActorEditor = (props: CustomEditorProps) => {
                               /^sprite:/,
                               '',
                             );
-                            edit(
-                              setLook(
-                                data,
-                                value ? {sprite: value} : undefined,
-                              ),
-                            );
+                            if (!value && !data.drawing && !inherited) {
+                              drawItsOwn();
+                              return;
+                            }
+                            void pictureInstead(value);
                           }}
                         />
+                        {!lookValue && drawingControls}
                         {/* THE WAY TO ITS PICTURES, where the picture is
                     (specs/SHELL_FINISH_PLAN.md, step 4): Edit opens the one it
                     looks like, as a step on the trail; the menu makes, brings in,

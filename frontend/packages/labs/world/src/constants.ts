@@ -5,6 +5,7 @@ import type {
   ProjectSources,
 } from '@code-dot-org/core/api';
 
+import type {Block} from './actors/actorData';
 import {actorDocument} from './actors/actorDocument';
 import {withPurpose} from './actors/actorPurpose';
 import {importStockActor} from './actors/importStockActor';
@@ -625,42 +626,31 @@ const SCOREBOARD_ACTOR = actorDocument({
     // scoreboard rather than a score of nothing.
     labelValue('TextProperty', {type: 'string', value: 'SCORE 0'}),
   ],
-  code: [
-    // THE DRAWING, and without it this actor is a plain rectangle.
-    //
-    // `Shows Text` has no steps and draws nothing: it declares what an
-    // actor's words ARE and leaves the drawing to the actor that elects it
-    // (specs/DRAWING.md). An actor with the trait, the text and no drawing
-    // is an actor nothing knows how to paint, so the driver paints the
-    // fallback box — which is exactly what this shipped as at first.
-    //
-    // Two commands, the same two `actors/stock/label` uses: ink of
-    // whatever color the actor carries, then the words at the middle of
-    // the canvas. Every part of the text is READ off the actor rather than
-    // typed here, which is what makes the trait worth having.
-    {
-      type: 'world_define_drawing',
-      inputs: {
-        WIDTH: {
-          shadow: {
-            type: 'math_number',
-            fields: {NUM: SCOREBOARD_WIDTH},
-          },
-        },
-        HEIGHT: {
-          shadow: {
-            type: 'math_number',
-            fields: {NUM: SCOREBOARD_HEIGHT},
-          },
-        },
-        DO: {
-          block: stack([
-            fill(textOf('TextColorProperty')),
-            drawText(SCOREBOARD_WIDTH / 2, SCOREBOARD_HEIGHT / 2),
-          ]),
-        },
-      },
+  // THE DRAWING, and without it this actor is a plain rectangle.
+  //
+  // `Shows Text` has no steps and draws nothing: it declares what an
+  // actor's words ARE and leaves the drawing to the actor that elects it
+  // (specs/DRAWING.md). An actor with the trait, the text and no drawing
+  // is an actor nothing knows how to paint, so the driver paints the
+  // fallback box — which is exactly what this shipped as at first.
+  //
+  // Two commands, the same two `actors/stock/label` uses: ink of
+  // whatever color the actor carries, then the words at the middle of
+  // the canvas. Every part of the text is READ off the actor rather than
+  // typed here, which is what makes the trait worth having.
+  drawing: {
+    width: {
+      shadow: {type: 'math_number', fields: {NUM: SCOREBOARD_WIDTH}},
     },
+    height: {
+      shadow: {type: 'math_number', fields: {NUM: SCOREBOARD_HEIGHT}},
+    },
+    body: stack([
+      fill(textOf('TextColorProperty')),
+      drawText(SCOREBOARD_WIDTH / 2, SCOREBOARD_HEIGHT / 2),
+    ]) as Block,
+  },
+  code: [
     {
       type: 'world_on_Scoring_SeesTheScoreChangeEvent',
       next: {

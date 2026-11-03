@@ -40,11 +40,12 @@ import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 import {actorPictureExtension, registerKindFilter} from './actorAbout';
 import {actorInputExtension, cameraInputExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
-import {MEMBER_HEAD, STEP_HEAD} from './bodySurfaces';
+import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from './bodySurfaces';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
 import {END_ROW, ROW_PART, settledParts} from './designParts';
+import {drawingHead} from './drawingHead';
 import {
   allEnums,
   BUTTON_ENUM,
@@ -9857,6 +9858,7 @@ export const DOMAIN_BLOCKS = [
   worldLoadMap,
   memberHead,
   stepHead,
+  drawingHead,
   worldDoc,
   worldReturn,
   worldTraitStep,
@@ -10883,6 +10885,7 @@ export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_layer_parallax',
   MEMBER_HEAD,
   STEP_HEAD,
+  DRAWING_HEAD,
 ]);
 
 /**

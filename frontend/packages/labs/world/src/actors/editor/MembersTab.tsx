@@ -1,6 +1,6 @@
 // The Actor Editor's Blocks tab: the events and blocks an actor adds to the
 // language, each drawn as the block it makes (specs/ACTOR_BLOCKS_PLAN.md,
-// step 2).
+// step 2), and what it does every frame (specs/DRAWING_PAGE_PLAN.md).
 
 import {Button, Typography} from '@mui/material';
 import {useEffect, useMemo, useRef} from 'react';
@@ -8,6 +8,7 @@ import {useEffect, useMemo, useRef} from 'react';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import type {ActorData, ActorMember} from '../actorData';
+import {actorMoment} from '../actorSteps';
 
 import styles from './actorEditor.module.css';
 import {
@@ -26,10 +27,13 @@ export interface MembersTabProps {
   onEdit?: (member: ActorMember) => void;
   onDelete?: (member: ActorMember) => void;
   onNew?: (kind: ActorMember['kind']) => void;
+  onEditStep?: (at: number) => void;
+  onDeleteStep?: (at: number) => void;
+  onNewStep?: () => void;
   /**
    * The member whose Edit takes focus, coming back from its page or after
    * the one before it was deleted; `new-event` or `new-block` for that
-   * button.
+   * button; `step-⟨at⟩` or `new-step` for a step's.
    */
   focusEdit?: string | null;
   onFocused?: () => void;
@@ -67,6 +71,9 @@ export const MembersTab = ({
   onEdit,
   onDelete,
   onNew,
+  onEditStep,
+  onDeleteStep,
+  onNewStep,
   focusEdit,
   onFocused,
 }: MembersTabProps) => {
@@ -79,6 +86,8 @@ export const MembersTab = ({
     }
   }, [focusEdit, onFocused]);
   const members = data.members ?? [];
+  const steps = data.steps ?? [];
+  const stepsHeading = `${modulePath}-steps-heading`;
   // By the file's text: the data is parsed afresh on every render, and
   // minting a palette is not cheap.
   const palette = useMemo(
@@ -146,6 +155,81 @@ export const MembersTab = ({
           </section>
         );
       })}
+      <section className={styles.memberGroup} aria-labelledby={stepsHeading}>
+        <Typography variant="h5" component="h3" id={stepsHeading}>
+          Every frame
+        </Typography>
+        {steps.length === 0 ? (
+          <Typography variant="body3" component="p" className={styles.note}>
+            Nothing yet. A step is work every {data.name} does once a frame, in
+            the moment it names.
+          </Typography>
+        ) : (
+          <ul className={styles.memberList}>
+            {steps.map((step, at) => (
+              <li key={`${at}:${step.name}`} className={styles.memberRow}>
+                <Typography variant="body2" component="p">
+                  {step.name}
+                </Typography>
+                <Typography
+                  variant="body3"
+                  component="p"
+                  className={styles.note}
+                >
+                  {actorMoment(step)}
+                </Typography>
+                {!isReadOnly && (onEditStep || onDeleteStep) && (
+                  <div className={styles.memberActions}>
+                    {onEditStep && (
+                      <Button
+                        ref={element => {
+                          if (element) {
+                            edits.current.set(`step-${at}`, element);
+                          } else {
+                            edits.current.delete(`step-${at}`);
+                          }
+                        }}
+                        variant="text"
+                        size="small"
+                        aria-label={`Edit ${step.name}`}
+                        onClick={() => onEditStep(at)}
+                      >
+                        Edit
+                      </Button>
+                    )}
+                    {onDeleteStep && (
+                      <Button
+                        variant="text"
+                        size="small"
+                        aria-label={`Delete ${step.name}`}
+                        onClick={() => onDeleteStep(at)}
+                      >
+                        Delete
+                      </Button>
+                    )}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+        {onNewStep && !isReadOnly && (
+          <Button
+            ref={element => {
+              if (element) {
+                edits.current.set('new-step', element);
+              }
+            }}
+            variant="text"
+            size="small"
+            className={styles.memberNew}
+            startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+            onClick={onNewStep}
+          >
+            New step
+          </Button>
+        )}
+      </section>
     </div>
   );
 };

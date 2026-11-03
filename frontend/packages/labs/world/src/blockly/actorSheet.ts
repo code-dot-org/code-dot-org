@@ -6,8 +6,8 @@
 // data (`BlocklyGenerator.actorCode`). What generates as code is loaded as
 // blocks: its still picture, the values set on it, its effects and its code
 // rows, chained under a `define actor` root where `actor` is the builder;
-// its handlers beside it; and each block's body under its page's head
-// (`memberHead`).
+// its handlers beside it; and each block's body, its drawing and each of its
+// steps under its page's head (`memberHead`, `drawingHead`, `stepHead`).
 
 import {
   CODE_ROWS,
@@ -20,7 +20,7 @@ import {
 } from '../actors/actorData';
 import type {Timeline} from '../engine/core/keyframes';
 
-import {MEMBER_HEAD} from './bodySurfaces';
+import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from './bodySurfaces';
 
 const ROOT = 'world_actor';
 
@@ -34,7 +34,9 @@ export type ActorPiece =
   | {kind: 'animations'; animations: Record<string, Timeline>}
   | {kind: 'trait'; trait: string}
   | {kind: 'event'; parts: Part[]}
-  | {kind: 'block'; parts: Part[]; returns?: string; head?: string};
+  | {kind: 'block'; parts: Part[]; returns?: string; head?: string}
+  | {kind: 'drawing'; head: string}
+  | {kind: 'step'; name: string; phase?: string; head: string};
 
 export interface ActorSheet {
   /** What is loaded: the root and its rows, the handlers, and the heads. */
@@ -106,6 +108,34 @@ export function actorSheet(data: ActorData): ActorSheet {
       parts,
       ...(member.returns === undefined ? {} : {returns: member.returns}),
       ...(head ? {head} : {}),
+    });
+  }
+  if (data.drawing) {
+    const head = `head-${heads.length}`;
+    heads.push({
+      type: DRAWING_HEAD,
+      id: head,
+      x: 20,
+      y: 20,
+      inputs: {WIDTH: data.drawing.width, HEIGHT: data.drawing.height},
+      ...(data.drawing.body ? {next: {block: data.drawing.body}} : {}),
+    });
+    pieces.push({kind: 'drawing', head});
+  }
+  for (const step of data.steps ?? []) {
+    const head = `head-${heads.length}`;
+    heads.push({
+      type: STEP_HEAD,
+      id: head,
+      x: 20,
+      y: 20,
+      ...(step.body ? {next: {block: step.body}} : {}),
+    });
+    pieces.push({
+      kind: 'step',
+      name: step.name,
+      ...(step.phase === undefined ? {} : {phase: step.phase}),
+      head,
     });
   }
   const roots = (data.blocks?.blocks?.blocks ?? []) as Block[];

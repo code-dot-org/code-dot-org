@@ -26,20 +26,12 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import type {ActorData, ActorValue} from '../actorData';
+import type {ActorData, ActorStep, ActorValue} from '../actorData';
 
 import {actorChoices, targetOf} from './actorChoices';
 import {actorAt, editActor, importRules, me} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {
-  addRoot,
-  electTraits,
-  hasRoot,
-  wears,
-  withValue,
-  withVariable,
-  type BlockJson,
-} from './patch';
+import {addRoot, electTraits, wears, withValue, withVariable} from './patch';
 import {
   MAKE_ZAP,
   resend,
@@ -51,12 +43,11 @@ import {
 } from './shoots';
 
 const RECHARGE = 'world_set_Zapping_RechargeTimeProperty';
-const STEP = 'world_trait_step';
 
 /** Seconds between shots. Slow enough to be dodged, which is the game. */
 const RECHARGE_TIME = 1.5;
 
-/** What the `each frame` is called, which is how it is found again. */
+/** What the step is called, which is how it is found again. */
 const STEP_NAME = 'fire when ready';
 
 /** `set recharge time of ⟨me⟩ to ⟨1.5⟩`. */
@@ -67,15 +58,15 @@ const recharge = (): ActorValue => ({
 });
 
 /** `each frame: make ⟨me⟩ zap` — the asking, which the recharge answers. */
-const firing = (): BlockJson => ({
-  type: STEP,
-  fields: {PHASE: 'decide', NAME: STEP_NAME},
-  inputs: {DO: {block: {type: MAKE_ZAP, inputs: {VALUE: me()}}}},
+const firing = (): ActorStep => ({
+  name: STEP_NAME,
+  phase: 'decide',
+  body: {type: MAKE_ZAP, inputs: {VALUE: me()}},
 });
 
-/** Whether the actor already fires: the `each frame` this row names. */
+/** Whether the actor already fires: the step this row names. */
 const fires = (data: ActorData | undefined) =>
-  hasRoot(data, row => row.type === STEP && row.fields?.NAME === STEP_NAME);
+  (data?.steps ?? []).some(step => step.name === STEP_NAME);
 
 export const shootsAtEnhancement: Enhancement = {
   id: 'shoots-at',
@@ -112,7 +103,8 @@ export const shootsAtEnhancement: Enhancement = {
     current = editActor(current, target, data => {
       let next = withVariable(electTraits(data, [ZAPS]), SHOT_VAR);
       if (!fires(next)) {
-        next = addRoot(withValue(next, recharge()), firing());
+        next = withValue(next, recharge());
+        next = {...next, steps: [...(next.steps ?? []), firing()]};
       }
       return sends(next, target) === undefined
         ? addRoot(next, sending(target, answer))

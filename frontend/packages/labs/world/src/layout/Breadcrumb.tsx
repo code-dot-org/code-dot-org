@@ -9,7 +9,8 @@ import {useCodebridgeConfig} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
-import {memberName} from '../actors/actorData';
+import {actorDataOf, memberName} from '../actors/actorData';
+import {actorStepAt} from '../actors/actorSteps';
 import {ruleDataOf} from '../rules/ruleEdits';
 import {ruleMemberName} from '../rules/ruleMembers';
 import {stepAtOf, stepOf} from '../rules/ruleSteps';
@@ -33,6 +34,14 @@ export const Breadcrumb = () => {
    */
   const nameOf = (step: TrailStep): string => {
     const file = currentSources.source.files[step.fileId];
+    if (step.script?.kind === 'drawing') {
+      return 'Drawing';
+    }
+    if (step.script?.kind === 'step' && file?.name.endsWith('.actor')) {
+      const data = actorDataOf(file.contents ?? '');
+      const at = data && actorStepAt(data, step.script.id);
+      return (at !== undefined && data?.steps?.[at]?.name) || 'Step';
+    }
     if (step.script?.kind === 'step') {
       const data = ruleDataOf(file?.contents ?? '');
       const place = data && stepAtOf(data, step.script.id);

@@ -13,6 +13,7 @@ import type {Block} from 'blockly';
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
+import {DRAWING_HEAD} from '../bodySurfaces';
 import {localizeText} from '../localizeBlocks';
 
 import {addOnChange} from './onChange';
@@ -29,7 +30,7 @@ const WARNING_ID = 'drawingContext';
 /** Whether `pen` is in scope for `block` — that is, whether it is in a drawing. */
 export function inDrawingContext(block: Block): boolean {
   for (let parent = block.getParent(); parent; parent = parent.getParent()) {
-    if (parent.type === DEFINE_DRAWING) {
+    if (parent.type === DEFINE_DRAWING || parent.type === DRAWING_HEAD) {
       return true;
     }
   }

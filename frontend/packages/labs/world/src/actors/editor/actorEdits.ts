@@ -353,7 +353,8 @@ export const addAnimation = (data: ActorData, name: string): ActorData => ({
 
 /**
  * The data with an animation renamed, in its place in the file, and every
- * `play animation` in the actor's own code that named it naming it still.
+ * `play animation` in the actor's own code — its handlers, its blocks'
+ * bodies, its drawing and its steps — that named it naming it still.
  *
  * Only its own code: a block in another file playing it on this kind names
  * it too, and is not followed here.
@@ -390,13 +391,7 @@ export function renameAnimation(
     }
     return next;
   };
-  return {
-    ...data,
-    animations,
-    ...(data.blocks
-      ? {blocks: renamed(data.blocks) as ActorData['blocks']}
-      : {}),
-  };
+  return {...(renamed(data) as ActorData), animations};
 }
 
 /** The data without an animation. */

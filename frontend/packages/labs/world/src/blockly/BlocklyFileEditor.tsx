@@ -181,8 +181,9 @@ export interface BlocklyFileEditorProps extends CustomEditorProps {
    * 6): the contents are its head with what it does below it. A member's
    * head is the block being made (`memberHead`), and its design is the
    * page's, handed to the head as `parts`; a step's (`stepHead`) has none.
+   * A drawing's page (`drawingHead`) is the one with the Drawing drawer.
    */
-  memberHead?: {parts?: readonly BlockPart[]};
+  memberHead?: {parts?: readonly BlockPart[]; drawing?: boolean};
 }
 
 export const BlocklyFileEditor = ({
@@ -197,6 +198,7 @@ export const BlocklyFileEditor = ({
   const memberHeadRef = useRef(memberHead);
   memberHeadRef.current = memberHead;
   const isMemberPage = Boolean(memberHead);
+  const drawingPage = Boolean(memberHead?.drawing);
   // What this file SAYS, which is not always what it holds.
   //
   // A rule the learner has not edited is stored as a reference to the
@@ -782,9 +784,10 @@ export const BlocklyFileEditor = ({
     () =>
       toolboxForSurface(
         toolbox,
-        editing?.kind ?? (isMemberPage ? 'body' : 'interface'),
+        editing?.kind ??
+          (isMemberPage ? (drawingPage ? 'drawing' : 'body') : 'interface'),
       ),
-    [toolbox, editing, isMemberPage],
+    [toolbox, editing, isMemberPage, drawingPage],
   );
   surfaceToolboxRef.current = surfaceToolbox;
 

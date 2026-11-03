@@ -75,6 +75,15 @@ export const STEP_HEAD = 'world_step_head';
 export const STEP_HEAD_ID = 'step-head';
 
 /**
+ * An actor's drawing on its page: the size it is drawn at, with the pen and
+ * shapes below it (`drawingHead`).
+ */
+export const DRAWING_HEAD = 'world_drawing_head';
+
+/** The one drawing head on the page. */
+export const DRAWING_HEAD_ID = 'drawing-head';
+
+/**
  * What a body surface's head owns, by the id of the block it stands in for.
  *
  * The head draws `returns` and the `arguments` stack — the interface draws

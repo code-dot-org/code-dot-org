@@ -39,7 +39,7 @@ import {
   type BlockParam,
   chain,
   corner,
-  drawingRow,
+  drawing,
   event,
   fill,
   labelValue,
@@ -496,68 +496,68 @@ export const listActor = actorDocument({
     event('is chosen', WORD, 'at', PLACE),
     event('loses', WORD, 'at', PLACE),
   ],
-  code: [
-    drawingRow({
-      width: width(),
-      height: height(),
-      commands: [
-        // The box.
-        fill(swatch(LOOK.primary)),
-        outline(swatch(LOOK.primaryStrong), BORDER),
-        corner(RADIUS),
-        useStyle('surface'),
-        rectangle(0, 0, width(), height()),
-        noOutline(),
-        // …and the rows that show, which is a window over the list rather
-        // than the whole of it.
-        {
-          type: 'world_count_with',
-          fields: {VAR: ROW_VARIABLE},
-          inputs: {
-            FROM: firstShown(),
-            TO: lastShown(),
-            BY: num(1),
-            DO: {
-              block: chain([
-                either(compare('EQ', row(), highlighted()), [
-                  fill(swatch(LOOK.accentLight)),
-                  useStyle('chosen'),
-                  rectangle(
-                    num(0),
-                    arithmetic('MINUS', rowMiddle(row()), num(ROW / 2)),
-                    width(),
-                    ROW,
-                  ),
-                ]),
-                // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
-                // its own look and then offers to be overruled, and the caption was the one
-                // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
-                // pen alone when no theme defines one. So in a project with NO theme the
-                // caption inherited whatever the FACE had just set, and a Button drew its
-                // words in the button colour: invisible (specs/STYLES_PLAN.md).
-                fill(swatch(LOOK.ink)),
-                useStyle('caption'),
-                fill(textOf('TextColorProperty')),
-                drawWords(item(row()), rowMiddle(row())),
+  drawing: drawing({
+    width: width(),
+    height: height(),
+    commands: [
+      // The box.
+      fill(swatch(LOOK.primary)),
+      outline(swatch(LOOK.primaryStrong), BORDER),
+      corner(RADIUS),
+      useStyle('surface'),
+      rectangle(0, 0, width(), height()),
+      noOutline(),
+      // …and the rows that show, which is a window over the list rather
+      // than the whole of it.
+      {
+        type: 'world_count_with',
+        fields: {VAR: ROW_VARIABLE},
+        inputs: {
+          FROM: firstShown(),
+          TO: lastShown(),
+          BY: num(1),
+          DO: {
+            block: chain([
+              either(compare('EQ', row(), highlighted()), [
+                fill(swatch(LOOK.accentLight)),
+                useStyle('chosen'),
+                rectangle(
+                  num(0),
+                  arithmetic('MINUS', rowMiddle(row()), num(ROW / 2)),
+                  width(),
+                  ROW,
+                ),
               ]),
-            },
+              // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
+              // its own look and then offers to be overruled, and the caption was the one
+              // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
+              // pen alone when no theme defines one. So in a project with NO theme the
+              // caption inherited whatever the FACE had just set, and a Button drew its
+              // words in the button colour: invisible (specs/STYLES_PLAN.md).
+              fill(swatch(LOOK.ink)),
+              useStyle('caption'),
+              fill(textOf('TextColorProperty')),
+              drawWords(item(row()), rowMiddle(row())),
+            ]),
           },
         },
-        // …and the ring, when the keyboard is on this one.
-        either(focused(), [
-          noFill(),
-          outline(swatch(LOOK.focus), RING_WIDTH),
-          corner(ringRadius(RADIUS)),
-          useStyle('ring'),
-          rectangle(
-            num(RING_INSET),
-            num(RING_INSET),
-            arithmetic('MINUS', width(), num(RING_INSET * 2)),
-            arithmetic('MINUS', height(), num(RING_INSET * 2)),
-          ),
-        ]),
-      ],
-    }),
+      },
+      // …and the ring, when the keyboard is on this one.
+      either(focused(), [
+        noFill(),
+        outline(swatch(LOOK.focus), RING_WIDTH),
+        corner(ringRadius(RADIUS)),
+        useStyle('ring'),
+        rectangle(
+          num(RING_INSET),
+          num(RING_INSET),
+          arithmetic('MINUS', width(), num(RING_INSET * 2)),
+          arithmetic('MINUS', height(), num(RING_INSET * 2)),
+        ),
+      ]),
+    ],
+  }),
+  code: [
     // A click chooses the row it landed on, and brings the keyboard here.
     {
       type: 'world_on_Mouse_IsClickedWithEvent',

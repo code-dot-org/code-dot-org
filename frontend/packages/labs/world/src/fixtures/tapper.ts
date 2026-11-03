@@ -288,23 +288,19 @@ const CROSSHAIR_ACTOR = actorDocument({
     // that asks for it.
     'Spin#SpinTrait',
   ],
-  code: [
+  steps: [
+    // In `sense`, the first moment of the frame: the crosshair is reading
+    // the world rather than deciding anything, and everything that runs
+    // afterwards sees it where the pointer is.
     {
-      // In `sense`, the first moment of the frame: the crosshair is reading
-      // the world rather than deciding anything, and everything that runs
-      // afterwards sees it where the pointer is.
-      type: 'world_trait_step',
-      fields: {PHASE: 'sense', NAME: 'follow the pointer'},
-      inputs: {
-        DO: {
-          block: {
-            type: 'world_set_position',
-            inputs: {
-              ACTOR: me(),
-              X: mouseAxis('x'),
-              Y: mouseAxis('y'),
-            },
-          },
+      name: 'follow the pointer',
+      phase: 'sense',
+      body: {
+        type: 'world_set_position',
+        inputs: {
+          ACTOR: me(),
+          X: mouseAxis('x'),
+          Y: mouseAxis('y'),
         },
       },
     },

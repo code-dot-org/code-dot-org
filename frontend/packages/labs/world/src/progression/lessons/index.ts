@@ -23,7 +23,8 @@ import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
 import {LABEL_PROPERTIES} from '../../actors/stock/label';
 import {
   chain as chainRows,
-  drawingRow,
+  drawing as actorDrawing,
+  everyFrame,
   drawText,
   fill,
   labelValue,
@@ -209,44 +210,40 @@ const speed: WorldScenario = {
           id: 'hero',
           name: 'Hero',
           sprite: 'player.png',
-          code: [
+          steps: [
+            // In `move`, the moment of the frame when things go somewhere —
+            // which is exactly the moment the Physics rule would have done this
+            // for it, and is the point of the lesson.
             {
-              // In `move`, the moment of the frame when things go somewhere —
-              // which is exactly the moment the Physics rule would have done this
-              // for it, and is the point of the lesson.
-              type: 'world_trait_step',
-              fields: {PHASE: 'move', NAME: 'shuffle right'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'world_set_position',
-                    inputs: {
-                      ACTOR: {block: {type: 'world_this_actor'}},
-                      X: {
-                        block: {
-                          type: 'math_arithmetic',
-                          fields: {OP: 'ADD'},
-                          inputs: {
-                            A: {
-                              block: {
-                                type: 'world_get_Space_PositionProperty',
-                                fields: {COMPONENT: 'x'},
-                                inputs: {
-                                  ACTOR: {block: {type: 'world_this_actor'}},
-                                },
-                              },
+              name: 'shuffle right',
+              phase: 'move',
+              body: {
+                type: 'world_set_position',
+                inputs: {
+                  ACTOR: {block: {type: 'world_this_actor'}},
+                  X: {
+                    block: {
+                      type: 'math_arithmetic',
+                      fields: {OP: 'ADD'},
+                      inputs: {
+                        A: {
+                          block: {
+                            type: 'world_get_Space_PositionProperty',
+                            fields: {COMPONENT: 'x'},
+                            inputs: {
+                              ACTOR: {block: {type: 'world_this_actor'}},
                             },
-                            B: num(2),
                           },
                         },
+                        B: num(2),
                       },
-                      Y: {
-                        block: {
-                          type: 'world_get_Space_PositionProperty',
-                          fields: {COMPONENT: 'y'},
-                          inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
-                        },
-                      },
+                    },
+                  },
+                  Y: {
+                    block: {
+                      type: 'world_get_Space_PositionProperty',
+                      fields: {COMPONENT: 'y'},
+                      inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
                     },
                   },
                 },
@@ -264,8 +261,8 @@ const speed: WorldScenario = {
 
 The Hero crosses the screen, and it does it the way everybody writes first:
 **every frame, put it two pixels further right**. Press
-[Open Hero](#clickable=map.openKind:Hero), press **Code**, and read its
-\`each frame\`, which is the whole of how it does it.
+[Open Hero](#clickable=map.openKind:Hero), open its **Blocks** tab, and **Edit**
+its step under **Every frame**, which is the whole of how it does it.
 
 That works, and it is not how things move. It ties the speed to the frame rate,
 it cannot be pushed, and nothing else can affect it.
@@ -277,7 +274,7 @@ it cannot be pushed, and nothing else can affect it.
 2. Go back to [main.map](#clickable=level) and click the Hero. It has a
    **Can Move** group in its properties now, with a **Velocity** in it. Open
    the Velocity and put **2** in the first box.
-3. **Delete the whole \`each frame\`** in the Hero's code. It should still
+3. **Delete that step** on the Hero's Blocks tab. It should still
    cross the screen.
 
 Nothing is moving it now. It has a speed, and having a speed is what moving is.
@@ -369,13 +366,11 @@ const sprite: WorldScenario = {
         {
           id: 'hero',
           name: 'Hero',
-          code: [
-            drawingRow({
-              width: 24,
-              height: 24,
-              commands: [fill(swatch('#8d8d99')), rectangle(0, 0, 24, 24)],
-            }),
-          ],
+          drawing: actorDrawing({
+            width: 24,
+            height: 24,
+            commands: [fill(swatch('#8d8d99')), rectangle(0, 0, 24, 24)],
+          }),
         },
       ],
     }),
@@ -436,20 +431,18 @@ const drawing: WorldScenario = {
           // two Bars draw differently is something each Bar HOLDS, and holding
           // a number is what `define property` is.
           properties: [property('number', 'fraction', '1')],
-          code: [
-            drawingRow({
-              width: 96,
-              height: 12,
-              commands: [
-                fill(swatch('#3d3d47')),
-                bar(num(96)),
-                fill(swatch('#4caf50')),
-                // The number this lesson is about: the green bar is as wide as
-                // the track, whatever the Bar it is drawn for happens to hold.
-                bar(num(96)),
-              ],
-            }),
-          ],
+          drawing: actorDrawing({
+            width: 96,
+            height: 12,
+            commands: [
+              fill(swatch('#3d3d47')),
+              bar(num(96)),
+              fill(swatch('#4caf50')),
+              // The number this lesson is about: the green bar is as wide as
+              // the track, whatever the Bar it is drawn for happens to hold.
+              bar(num(96)),
+            ],
+          }),
         },
       ],
     }),
@@ -460,15 +453,15 @@ const drawing: WorldScenario = {
 Two Bars. One is set to **1** and one to **0.35**, and both are drawn full,
 because the green rectangle is 96 wide — a number somebody typed.
 
-An actor with no picture paints itself. \`define drawing\` is a pen and a few
-shapes, and it is what every meter, bar and box in this lab is made of. It runs
-**for each actor of that kind**, so anything it reads off the actor is that
-actor's own.
+An actor with no picture paints itself. Its drawing is a pen and a few shapes,
+and it is what every meter, bar and box in this lab is made of. It runs **for
+each actor of that kind**, so anything it reads off the actor is that actor's
+own.
 
 ### What you do
 
-1. Open the Bar and press **Code**, then the pencil on its drawing, and find
-   the second **draw rectangle** — the green one.
+1. Open the Bar and press **Edit drawing** on its Look tab, and find the
+   second **draw rectangle** — the green one.
 2. Put **96 × ⟨fraction of ⟨this actor⟩⟩** in its **size** where the 96 is.
 3. Run it. One Bar is full and one is a third full, from one drawing.
 4. Change the track color, or add an outline. It is your picture.
@@ -1111,8 +1104,8 @@ the other. The question here is "am I past the middle?" — the middle of a worl
 
 ### What you do
 
-1. Give the Ball an **each frame** handler.
-2. Inside it, put an **if**, and ask whether **⟨get position x of this actor⟩**
+1. Open the Ball, and on its **Blocks** tab press **New step**.
+2. Under the step's head, put an **if**, and ask whether **⟨get position x of this actor⟩**
    is greater than **160**.
 3. When it is, **set its speed to 0**. The Ball rolls to the middle and waits
    there.
@@ -1195,38 +1188,34 @@ const andOr: WorldScenario = {
           id: 'ball',
           name: 'Ball',
           ...BALL,
-          code: [
+          steps: [
             {
-              type: 'world_trait_step',
-              fields: {PHASE: 'decide', NAME: 'stop in the middle'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'controls_if',
-                    inputs: {
-                      IF0: {
-                        block: {
-                          type: 'logic_compare',
-                          fields: {OP: 'GT'},
-                          inputs: {
-                            A: myPosition('x'),
-                            B: {
-                              shadow: {type: 'math_number', fields: {NUM: 192}},
-                            },
-                          },
+              name: 'stop in the middle',
+              phase: 'decide',
+              body: {
+                type: 'controls_if',
+                inputs: {
+                  IF0: {
+                    block: {
+                      type: 'logic_compare',
+                      fields: {OP: 'GT'},
+                      inputs: {
+                        A: myPosition('x'),
+                        B: {
+                          shadow: {type: 'math_number', fields: {NUM: 192}},
                         },
                       },
-                      DO0: {
-                        block: {
-                          type: 'world_set_Physics_VelocityProperty',
-                          inputs: {
-                            ACTOR: {block: {type: 'world_this_actor'}},
-                            VALUE: {
-                              block: {
-                                type: 'world_vector',
-                                fields: {VECTOR: {x: 0, y: 0}},
-                              },
-                            },
+                    },
+                  },
+                  DO0: {
+                    block: {
+                      type: 'world_set_Physics_VelocityProperty',
+                      inputs: {
+                        ACTOR: {block: {type: 'world_this_actor'}},
+                        VALUE: {
+                          block: {
+                            type: 'world_vector',
+                            fields: {VECTOR: {x: 0, y: 0}},
                           },
                         },
                       },
@@ -1256,8 +1245,8 @@ The world is 320 pixels down, so halfway down is 160.
 
 ### What you do
 
-1. Open the Ball and press **Code**, and find the **if** in its
-   \`each frame\`.
+1. Open the Ball, **Edit** its step on the **Blocks** tab, and find the
+   **if** in it.
 2. Wrap its question in an **and**, and add a second question: is
    **⟨get position y of this actor⟩** greater than **160**?
 3. Run it. The low Ball stops in the middle; the high one carries on and leaves.
@@ -1609,21 +1598,16 @@ const layers: WorldScenario = {
               SCORE_OWNER,
             ),
           ],
-          code: [
-            drawingRow({
-              width: 96,
-              height: 24,
-              // The MIDDLE of the canvas, as the stock Label and Button draw
-              // theirs: the text is placed with whatever anchor the actor
-              // carries, and the default centers it — so drawn at x=0 half of
-              // "SCORE 0" fell off the left of its own 96-pixel canvas and the
-              // world showed "RE 0".
-              commands: [
-                fill(swatch('#f2f2f7')),
-                drawText(48, 12, SCORE_OWNER),
-              ],
-            }),
-          ],
+          drawing: actorDrawing({
+            width: 96,
+            height: 24,
+            // The MIDDLE of the canvas, as the stock Label and Button draw
+            // theirs: the text is placed with whatever anchor the actor
+            // carries, and the default centers it — so drawn at x=0 half of
+            // "SCORE 0" fell off the left of its own 96-pixel canvas and the
+            // world showed "RE 0".
+            commands: [fill(swatch('#f2f2f7')), drawText(48, 12, SCORE_OWNER)],
+          }),
         },
       ],
     }),
@@ -2169,32 +2153,27 @@ const pads: WorldScenario = {
             // anywhere to go, which is the lesson.
             'Teleport#UsesTeleportPadsTrait',
           ],
-          code: [
-            // The key, as a step rather than a hat: an actor definition holds
-            // rows, and a hat is a root of its own. Polling costs nothing
+          steps: [
+            // The key, as a step rather than a hat. Polling costs nothing
             // here — `use the pad` does nothing off a pad, mid-trip, or on
             // the pad it just arrived at, so holding the key down is one trip
             // and not sixty.
             {
-              type: 'world_trait_step',
-              fields: {PHASE: 'touch', NAME: 'use a pad when asked'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'controls_if',
-                    inputs: {
-                      IF0: {
-                        block: {
-                          type: 'world_is_key_down',
-                          fields: {KEY: 'down arrow'},
-                        },
-                      },
-                      DO0: {
-                        block: {
-                          type: 'world_do_Teleport_UseThePadAction',
-                          inputs: {ACTOR: me()},
-                        },
-                      },
+              name: 'use a pad when asked',
+              phase: 'touch',
+              body: {
+                type: 'controls_if',
+                inputs: {
+                  IF0: {
+                    block: {
+                      type: 'world_is_key_down',
+                      fields: {KEY: 'down arrow'},
+                    },
+                  },
+                  DO0: {
+                    block: {
+                      type: 'world_do_Teleport_UseThePadAction',
+                      inputs: {ACTOR: me()},
                     },
                   },
                 },
@@ -2222,13 +2201,11 @@ const pads: WorldScenario = {
               value: '#e0484a',
             },
           ],
-          code: [
-            drawingRow({
-              width: 32,
-              height: 32,
-              commands: [padFill(), rectangle(0, 22, 32, 10)],
-            }),
-          ],
+          drawing: actorDrawing({
+            width: 32,
+            height: 32,
+            commands: [padFill(), rectangle(0, 22, 32, 10)],
+          }),
         },
         {
           id: 'there',
@@ -2241,13 +2218,11 @@ const pads: WorldScenario = {
               value: '#3f7fe0',
             },
           ],
-          code: [
-            drawingRow({
-              width: 32,
-              height: 32,
-              commands: [padFill(), rectangle(0, 22, 32, 10)],
-            }),
-          ],
+          drawing: actorDrawing({
+            width: 32,
+            height: 32,
+            commands: [padFill(), rectangle(0, 22, 32, 10)],
+          }),
         },
       ],
     }),
@@ -2304,52 +2279,48 @@ const switchedWall = (color: string): ActorSpec => ({
       value: color,
     },
   ],
-  code: [
+  drawing: actorDrawing({
+    width: 32,
+    height: 32,
+    commands: [
+      fill({
+        block: {
+          type: 'world_get_Switches_WallColorProperty',
+          inputs: {ACTOR: me()},
+        },
+      }),
+      rectangle(0, 0, 32, 32),
+    ],
+  }),
+  steps: [
     // FAINT WHEN IT IS NOT THERE. A wall that goes on looking like a wall
     // while you walk through it teaches the wrong thing twice: that it is
     // still in the way, and that the rule did nothing.
     {
-      type: 'world_trait_step',
-      fields: {PHASE: 'react', NAME: 'look like what it is'},
-      inputs: {
-        DO: {
-          block: {
-            type: 'world_set_Appearance_OpacityProperty',
-            inputs: {
-              ACTOR: me(),
-              VALUE: {
-                block: {
-                  type: 'logic_ternary',
-                  inputs: {
-                    IF: {
-                      block: {
-                        type: 'world_get_Collisions_PassesThroughThingsProperty',
-                        inputs: {ACTOR: me()},
-                      },
-                    },
-                    THEN: {block: {type: 'math_number', fields: {NUM: 0.25}}},
-                    ELSE: {block: {type: 'math_number', fields: {NUM: 1}}},
+      name: 'look like what it is',
+      phase: 'react',
+      body: {
+        type: 'world_set_Appearance_OpacityProperty',
+        inputs: {
+          ACTOR: me(),
+          VALUE: {
+            block: {
+              type: 'logic_ternary',
+              inputs: {
+                IF: {
+                  block: {
+                    type: 'world_get_Collisions_PassesThroughThingsProperty',
+                    inputs: {ACTOR: me()},
                   },
                 },
+                THEN: {block: {type: 'math_number', fields: {NUM: 0.25}}},
+                ELSE: {block: {type: 'math_number', fields: {NUM: 1}}},
               },
             },
           },
         },
       },
     },
-    drawingRow({
-      width: 32,
-      height: 32,
-      commands: [
-        fill({
-          block: {
-            type: 'world_get_Switches_WallColorProperty',
-            inputs: {ACTOR: me()},
-          },
-        }),
-        rectangle(0, 0, 32, 32),
-      ],
-    }),
   ],
 });
 
@@ -2398,21 +2369,19 @@ const walls: WorldScenario = {
               value: '#3fbf6a',
             },
           ],
-          code: [
-            drawingRow({
-              width: 32,
-              height: 32,
-              commands: [
-                fill({
-                  block: {
-                    type: 'world_get_Switches_SwitchColorProperty',
-                    inputs: {ACTOR: me()},
-                  },
-                }),
-                rectangle(0, 22, 32, 10),
-              ],
-            }),
-          ],
+          drawing: actorDrawing({
+            width: 32,
+            height: 32,
+            commands: [
+              fill({
+                block: {
+                  type: 'world_get_Switches_SwitchColorProperty',
+                  inputs: {ACTOR: me()},
+                },
+              }),
+              rectangle(0, 22, 32, 10),
+            ],
+          }),
         },
         switchedWall('#e0484a'),
       ],
@@ -2483,42 +2452,38 @@ const digging: WorldScenario = {
             'Arrow Keys#MovesAcrossTrait',
             'Digging#DigsTrait',
           ],
-          code: [
+          steps: [
             {
-              type: 'world_trait_step',
-              fields: {PHASE: 'touch', NAME: 'dig when asked'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'controls_if',
-                    inputs: {
-                      IF0: {
-                        block: {
-                          type: 'world_is_key_down',
-                          fields: {KEY: 'down arrow'},
-                        },
-                      },
-                      DO0: {
-                        block: {
-                          type: 'world_do_Digging_DigTowardsAction',
-                          inputs: {
-                            ACTOR: me(),
-                            VALUE: {
-                              block: {
-                                type: 'world_vector_of',
-                                inputs: {
-                                  X: {
-                                    block: {
-                                      type: 'math_number',
-                                      fields: {NUM: 0},
-                                    },
-                                  },
-                                  Y: {
-                                    block: {
-                                      type: 'math_number',
-                                      fields: {NUM: 1},
-                                    },
-                                  },
+              name: 'dig when asked',
+              phase: 'touch',
+              body: {
+                type: 'controls_if',
+                inputs: {
+                  IF0: {
+                    block: {
+                      type: 'world_is_key_down',
+                      fields: {KEY: 'down arrow'},
+                    },
+                  },
+                  DO0: {
+                    block: {
+                      type: 'world_do_Digging_DigTowardsAction',
+                      inputs: {
+                        ACTOR: me(),
+                        VALUE: {
+                          block: {
+                            type: 'world_vector_of',
+                            inputs: {
+                              X: {
+                                block: {
+                                  type: 'math_number',
+                                  fields: {NUM: 0},
+                                },
+                              },
+                              Y: {
+                                block: {
+                                  type: 'math_number',
+                                  fields: {NUM: 1},
                                 },
                               },
                             },
@@ -2782,7 +2747,7 @@ const hunter: WorldScenario = {
             'Boundaries#StaysAcrossTrait',
             'Steering#ChasesTrait',
           ],
-          code: [
+          steps: [
             // WHO IT IS AFTER, in a step of the Robot's own.
             //
             // Not a row beside the traits: a row under `define actor` is a
@@ -2792,20 +2757,16 @@ const hunter: WorldScenario = {
             // world and runs after everything is in it, and re-answering the
             // same question every frame costs nothing worth counting.
             {
-              type: 'world_trait_step',
-              fields: {PHASE: 'sense', NAME: 'know who to chase'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'world_set_Steering_ActorToChaseProperty',
-                    inputs: {
-                      ACTOR: me(),
-                      VALUE: {
-                        block: {
-                          type: 'world_first_actor',
-                          inputs: {SOURCE: anyKind('hero')},
-                        },
-                      },
+              name: 'know who to chase',
+              phase: 'sense',
+              body: {
+                type: 'world_set_Steering_ActorToChaseProperty',
+                inputs: {
+                  ACTOR: me(),
+                  VALUE: {
+                    block: {
+                      type: 'world_first_actor',
+                      inputs: {SOURCE: anyKind('hero')},
                     },
                   },
                 },
@@ -2914,22 +2875,18 @@ const flier: WorldScenario = {
           // the fix means anything.
           sprite: 'bat.png',
           traits: ['Steering#ChasesTrait'],
-          code: [
+          steps: [
             {
-              type: 'world_trait_step',
-              fields: {PHASE: 'sense', NAME: 'know who to hunt'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'world_set_Steering_ActorToChaseProperty',
-                    inputs: {
-                      ACTOR: me(),
-                      VALUE: {
-                        block: {
-                          type: 'world_first_actor',
-                          inputs: {SOURCE: anyKind('hero')},
-                        },
-                      },
+              name: 'know who to hunt',
+              phase: 'sense',
+              body: {
+                type: 'world_set_Steering_ActorToChaseProperty',
+                inputs: {
+                  ACTOR: me(),
+                  VALUE: {
+                    block: {
+                      type: 'world_first_actor',
+                      inputs: {SOURCE: anyKind('hero')},
                     },
                   },
                 },
@@ -3326,40 +3283,36 @@ const paddle: WorldScenario = {
           id: 'paddle',
           name: 'Paddle',
           traits: ['Arrow Keys#MovesAcrossTrait'],
-          code: [
+          drawing: actorDrawing({
+            width: 96,
+            height: 16,
+            commands: [fill(swatch('#5b8def')), rectangle(0, 0, 96, 16)],
+          }),
+          steps: [
             // The hand-written fence: keep the paddle's POSITION on screen,
             // which is not the same as keeping the paddle on screen.
             {
-              type: 'world_trait_step',
-              fields: {PHASE: 'decide', NAME: 'keep it on screen'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'controls_if',
-                    inputs: {
-                      IF0: {
-                        block: {
-                          type: 'logic_compare',
-                          fields: {OP: 'LT'},
-                          inputs: {A: myX(), B: num(0)},
-                        },
-                      },
-                      DO0: {
-                        block: {
-                          type: 'world_set_position',
-                          inputs: {ACTOR: me(), X: num(0), Y: num(280)},
-                        },
-                      },
+              name: 'keep it on screen',
+              phase: 'decide',
+              body: {
+                type: 'controls_if',
+                inputs: {
+                  IF0: {
+                    block: {
+                      type: 'logic_compare',
+                      fields: {OP: 'LT'},
+                      inputs: {A: myX(), B: num(0)},
+                    },
+                  },
+                  DO0: {
+                    block: {
+                      type: 'world_set_position',
+                      inputs: {ACTOR: me(), X: num(0), Y: num(280)},
                     },
                   },
                 },
               },
             },
-            drawingRow({
-              width: 96,
-              height: 16,
-              commands: [fill(swatch('#5b8def')), rectangle(0, 0, 96, 16)],
-            }),
           ],
         },
       ],
@@ -3378,9 +3331,9 @@ number if the Paddle ever changes size. Or you could say what you actually mean.
 
 ### What you do
 
-1. Delete the whole \`each frame\` handler. The Paddle now walks off the screen
-   entirely, which is honest.
-2. Open it and give it **Stays Across** from **Enhance Actor**. Hold left
+1. Open the Paddle and delete its step on the **Blocks** tab. It now walks
+   off the screen entirely, which is honest.
+2. Give it **Stays Across** from **Enhance Actor**. Hold left
    again: it stops with its EDGE against the side, and nothing anywhere says
    48.
 3. Make the drawing wider and run it again. It still stops at the edge — the
@@ -3517,7 +3470,8 @@ actors**. Ask it after each one goes, and the answer is eventually zero.
 
 ### What you do
 
-1. Give the Ball an **each frame during ⟨decide⟩**, and ask in it
+1. Give the Ball a **New step** on its **Blocks** tab, running **during
+   decide**, and ask in it
    **if ⟨how many ⟨Brick⟩ in ⟨all actors⟩⟩ = ⟨0⟩**.
 2. Inside that, set **cleared** to true and print something.
 3. Run it. Nothing is said for the first two Bricks, and one thing is said
@@ -3552,13 +3506,11 @@ const waves: WorldScenario = {
           name: 'Spawner',
           icon: 'text',
           traits: ['Time#HasATimerTrait'],
-          code: [
-            drawingRow({
-              width: 32,
-              height: 16,
-              commands: [fill(swatch('#8d8d99')), rectangle(0, 0, 32, 16)],
-            }),
-          ],
+          drawing: actorDrawing({
+            width: 32,
+            height: 16,
+            commands: [fill(swatch('#8d8d99')), rectangle(0, 0, 32, 16)],
+          }),
         },
         {
           id: 'rock',
@@ -4861,47 +4813,43 @@ other.
 
 /** The bob written out by hand, which both actors have a copy of. */
 const bobStep = () => ({
-  type: 'world_trait_step',
-  fields: {PHASE: 'move', NAME: 'bob'},
-  inputs: {
-    DO: {
-      block: {
-        type: 'world_set_position',
-        inputs: {
-          ACTOR: me(),
-          X: heldPosition('x'),
-          Y: {
-            block: {
-              type: 'math_arithmetic',
-              fields: {OP: 'ADD'},
-              inputs: {
-                A: heldPosition('y'),
-                B: {
-                  block: {
-                    // `math_trig`, not `math_single`: SIN is not one of
-                    // `math_single`'s options (it holds abs, root, ln and
-                    // friends), and a block saved claiming it is loads with
-                    // the dropdown's first option instead — a square root,
-                    // which never comes back down, so both actors sank off the
-                    // bottom of the world and the lesson showed nothing.
-                    type: 'math_trig',
-                    fields: {OP: 'SIN'},
-                    inputs: {
-                      NUM: {
-                        block: {
-                          type: 'math_arithmetic',
-                          fields: {OP: 'MULTIPLY'},
-                          inputs: {
-                            A: {block: {type: 'world_time'}},
-                            // Half a turn a second, in DEGREES — the unit
-                            // `math_trig` and every angle in this lab work in
-                            // — so a whole bob takes two seconds. The steps ADD
-                            // their answer up rather than setting it, which
-                            // makes the bob's size the wave's size over its
-                            // rate: fast and small, or slow and wide.
-                            B: num(180),
-                          },
-                        },
+  name: 'bob',
+  phase: 'move',
+  body: {
+    type: 'world_set_position',
+    inputs: {
+      ACTOR: me(),
+      X: heldPosition('x'),
+      Y: {
+        block: {
+          type: 'math_arithmetic',
+          fields: {OP: 'ADD'},
+          inputs: {
+            A: heldPosition('y'),
+            B: {
+              block: {
+                // `math_trig`, not `math_single`: SIN is not one of
+                // `math_single`'s options (it holds abs, root, ln and
+                // friends), and a block saved claiming it is loads with
+                // the dropdown's first option instead — a square root,
+                // which never comes back down, so both actors sank off the
+                // bottom of the world and the lesson showed nothing.
+                type: 'math_trig',
+                fields: {OP: 'SIN'},
+                inputs: {
+                  NUM: {
+                    block: {
+                      type: 'math_arithmetic',
+                      fields: {OP: 'MULTIPLY'},
+                      inputs: {
+                        A: {block: {type: 'world_time'}},
+                        // Half a turn a second, in DEGREES — the unit
+                        // `math_trig` and every angle in this lab work in
+                        // — so a whole bob takes two seconds. The steps ADD
+                        // their answer up rather than setting it, which
+                        // makes the bob's size the wave's size over its
+                        // rate: fast and small, or slow and wide.
+                        B: num(180),
                       },
                     },
                   },
@@ -4930,13 +4878,13 @@ const ownRule: WorldScenario = {
           id: 'fish',
           name: 'Fish',
           sprite: 'coin.png',
-          code: [bobStep()],
+          steps: [bobStep()],
         },
         {
           id: 'bird',
           name: 'Bird',
           sprite: 'ball.png',
-          code: [bobStep()],
+          steps: [bobStep()],
         },
       ],
     }),
@@ -4968,7 +4916,7 @@ what is left to you is what the step does.
    something** under it.
 2. Open **Bob**, **Edit** the step, set it to run **during move**, and move
    the bobbing into it.
-3. Take the \`each frame\` out of both actors' code and give each **Bob**
+3. Delete the step on both actors' **Blocks** tabs and give each **Bob**
    from **Enhance Actor** instead.
 4. Change the bob once. Both change.
 `.trim(),
@@ -5724,54 +5672,42 @@ const emergent: WorldScenario = {
             'Screen Wrap#WrapsAcrossTrait',
             'Screen Wrap#WrapsDownTrait',
           ],
-          code: [
+          steps: [
             // Keep apart: the one of the three that is written for you.
-            {
-              type: 'world_trait_step',
-              fields: {PHASE: 'decide', NAME: 'flock'},
-              inputs: {
-                DO: {
-                  block: chainRows([
-                    forEachNear('crowding', 30, [
-                      nudge(
-                        toward(held('crowding'), {type: 'world_this_actor'}),
-                        0.05,
-                      ),
-                    ]),
-                    forEachNear('other', 80, []),
-                  ]),
-                },
-              },
-            },
+            everyFrame('flock', 'decide', [
+              forEachNear('crowding', 30, [
+                nudge(
+                  toward(held('crowding'), {type: 'world_this_actor'}),
+                  0.05,
+                ),
+              ]),
+              forEachNear('other', 80, []),
+            ]),
             // Always the same speed, so the only thing that can differ between
             // two Boids is which way they are pointing. Given, not written: it
             // is what keeps the sums from running away, and it is not what the
             // lesson is about.
             {
-              type: 'world_trait_step',
-              fields: {PHASE: 'push', NAME: 'keep flying'},
-              inputs: {
-                DO: {
-                  block: setVelocityTo({
-                    type: 'world_vector_from_angle',
-                    inputs: {
-                      LENGTH: {
-                        shadow: {type: 'math_number', fields: {NUM: 0.6}},
-                      },
-                      DEGREES: {
-                        block: {
-                          type: 'world_vector_direction',
-                          inputs: {
-                            VECTOR: {
-                              block: velocityOf({type: 'world_this_actor'}),
-                            },
-                          },
+              name: 'keep flying',
+              phase: 'push',
+              body: setVelocityTo({
+                type: 'world_vector_from_angle',
+                inputs: {
+                  LENGTH: {
+                    shadow: {type: 'math_number', fields: {NUM: 0.6}},
+                  },
+                  DEGREES: {
+                    block: {
+                      type: 'world_vector_direction',
+                      inputs: {
+                        VECTOR: {
+                          block: velocityOf({type: 'world_this_actor'}),
                         },
                       },
                     },
-                  }),
+                  },
                 },
-              },
+              }),
             },
           ],
         },
@@ -5847,49 +5783,37 @@ const dials: WorldScenario = {
             'Screen Wrap#WrapsAcrossTrait',
             'Screen Wrap#WrapsDownTrait',
           ],
-          code: [
+          steps: [
+            everyFrame('flock', 'decide', [
+              forEachNear('crowding', 30, [
+                nudge(
+                  toward(held('crowding'), {type: 'world_this_actor'}),
+                  0.05,
+                ),
+              ]),
+              forEachNear('other', 80, [alignmentRule(), cohesionRule()]),
+            ]),
             {
-              type: 'world_trait_step',
-              fields: {PHASE: 'decide', NAME: 'flock'},
-              inputs: {
-                DO: {
-                  block: chainRows([
-                    forEachNear('crowding', 30, [
-                      nudge(
-                        toward(held('crowding'), {type: 'world_this_actor'}),
-                        0.05,
-                      ),
-                    ]),
-                    forEachNear('other', 80, [alignmentRule(), cohesionRule()]),
-                  ]),
-                },
-              },
-            },
-            {
-              type: 'world_trait_step',
-              fields: {PHASE: 'push', NAME: 'keep flying'},
-              inputs: {
-                DO: {
-                  block: setVelocityTo({
-                    type: 'world_vector_from_angle',
-                    inputs: {
-                      LENGTH: {
-                        shadow: {type: 'math_number', fields: {NUM: 0.6}},
-                      },
-                      DEGREES: {
-                        block: {
-                          type: 'world_vector_direction',
-                          inputs: {
-                            VECTOR: {
-                              block: velocityOf({type: 'world_this_actor'}),
-                            },
-                          },
+              name: 'keep flying',
+              phase: 'push',
+              body: setVelocityTo({
+                type: 'world_vector_from_angle',
+                inputs: {
+                  LENGTH: {
+                    shadow: {type: 'math_number', fields: {NUM: 0.6}},
+                  },
+                  DEGREES: {
+                    block: {
+                      type: 'world_vector_direction',
+                      inputs: {
+                        VECTOR: {
+                          block: velocityOf({type: 'world_this_actor'}),
                         },
                       },
                     },
-                  }),
+                  },
                 },
-              },
+              }),
             },
           ],
         },
@@ -5992,22 +5916,14 @@ const neighbors: WorldScenario = {
             // a patch that has already gone past is a patch nobody saw.
             'Screen Wrap#WrapsAcrossTrait',
           ],
-          code: [
-            {
-              type: 'world_trait_step',
-              fields: {PHASE: 'decide', NAME: 'look around'},
-              inputs: {
-                DO: {
-                  block: chainRows([
-                    // Every frame, all of them dim and then some light up.
-                    // Without the first loop a Dot walked past stays lit, and
-                    // the picture is a trail rather than a neighborhood.
-                    paint('dot', anyKind('dot').block, 'box.png'),
-                    paint('near', anyKind('dot').block, 'coin.png'),
-                  ]),
-                },
-              },
-            },
+          steps: [
+            everyFrame('look around', 'decide', [
+              // Every frame, all of them dim and then some light up.
+              // Without the first loop a Dot walked past stays lit, and
+              // the picture is a trail rather than a neighborhood.
+              paint('dot', anyKind('dot').block, 'box.png'),
+              paint('near', anyKind('dot').block, 'coin.png'),
+            ]),
           ],
         },
       ],
@@ -6431,13 +6347,11 @@ const actorState: WorldScenario = {
         name: 'Lamp',
         actsLike: 'actors/label',
         icon: 'text',
-        code: [
-          drawingRow({
-            width: 96,
-            height: 24,
-            commands: [fill(swatch('#ffcc66')), drawText(48, 12)],
-          }),
-        ],
+        drawing: actorDrawing({
+          width: 96,
+          height: 24,
+          commands: [fill(swatch('#ffcc66')), drawText(48, 12)],
+        }),
       }),
     },
     // The Label the Lamp ACTS LIKE, which is where its words come from.

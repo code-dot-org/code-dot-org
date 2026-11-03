@@ -17,7 +17,6 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import {
-  CODE_ROWS,
   CREATED_HAT,
   isActorData,
   readMember,
@@ -28,7 +27,9 @@ import {
   type ActorData,
   type ActorMember,
   type ActorProperty,
+  type ActorStep,
   type Block,
+  type Socket,
 } from '../../actors/actorData';
 import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
 import {enhanceWith} from '../../actors/enhance/enhancements';
@@ -139,6 +140,57 @@ const FROM = '__from';
 /** An actor's data, held on its `define actor` while it is edited. */
 const DATA = '__data';
 
+/**
+ * How the view shows an actor's drawing and its steps: as the rows they were
+ * written as before they were data, chained under its `define actor`, which
+ * is where the edits here reach for them.
+ */
+const DRAWING_ROW = 'world_define_drawing';
+const STEP_ROW = 'world_trait_step';
+
+/** An actor's drawing and steps as the view's rows. */
+const codeRowsOf = (data: ActorData): Row[] =>
+  [
+    ...(data.drawing
+      ? [
+          {
+            type: DRAWING_ROW,
+            inputs: {
+              WIDTH: data.drawing.width,
+              HEIGHT: data.drawing.height,
+              ...(data.drawing.body ? {DO: {block: data.drawing.body}} : {}),
+            },
+          },
+        ]
+      : []),
+    ...(data.steps ?? []).map(step => ({
+      type: STEP_ROW,
+      fields: {PHASE: step.phase ?? 'decide', NAME: step.name},
+      ...(step.body ? {inputs: {DO: {block: step.body}}} : {}),
+    })),
+  ] as unknown as Row[];
+
+/** …and back. */
+const fromCodeRow = (data: ActorData, row: Row): ActorData => {
+  const body = row.inputs?.DO?.block as Block | undefined;
+  if (row.type === DRAWING_ROW) {
+    return {
+      ...data,
+      drawing: {
+        width: (row.inputs?.WIDTH ?? {}) as Socket,
+        height: (row.inputs?.HEIGHT ?? {}) as Socket,
+        ...(body ? {body} : {}),
+      },
+    };
+  }
+  const step: ActorStep = {
+    name: String(row.fields?.NAME ?? ''),
+    phase: String(row.fields?.PHASE ?? 'decide'),
+    ...(body ? {body} : {}),
+  };
+  return {...data, steps: [...(data.steps ?? []), step]};
+};
+
 /** Rows chained under a root, as its `next`. */
 const chainOf = (rows: readonly Row[]): {next?: {block: Row}} => {
   const first = rows.reduceRight<Row | undefined>(
@@ -163,14 +215,15 @@ const withoutPlace = (row: Row): Row =>
  * (`place`) and any other row under it code.
  */
 const dataOf = (root: Row, handlers: readonly Row[]): ActorData => {
-  let data = {
+  let data: ActorData = {
     ...((root as Record<string, unknown>)[DATA] as ActorData),
     name: String(root.fields?.NAME ?? ''),
   };
-  const code: Row[] = [];
+  delete data.drawing;
+  delete data.steps;
   for (let at = root.next?.block; at; at = at.next?.block) {
-    if (CODE_ROWS.has(at.type ?? '')) {
-      code.push(withoutPlace(at));
+    if (at.type === DRAWING_ROW || at.type === STEP_ROW) {
+      data = fromCodeRow(data, withoutPlace(at));
     } else {
       data = place(data, withoutPlace(at), 'last');
     }
@@ -181,7 +234,7 @@ const dataOf = (root: Row, handlers: readonly Row[]): ActorData => {
       ...data.blocks,
       blocks: {
         languageVersion: 0,
-        blocks: [...code, ...handlers].map((one, at) => ({
+        blocks: handlers.map((one, at) => ({
           ...one,
           x: 20,
           y: 20 + at * 40,
@@ -302,18 +355,15 @@ const editingGame = (
   for (const [id, file] of actors) {
     const data = JSON.parse(file.contents) as ActorData;
     const roots = (data.blocks?.blocks?.blocks ?? []) as Row[];
-    const actorCode = roots.filter(root => CODE_ROWS.has(root.type ?? ''));
     view.blocks.blocks.push(
       {
         type: 'world_actor',
         fields: {NAME: data.name},
         [FROM]: id,
         [DATA]: data,
-        ...chainOf(actorCode),
+        ...chainOf(codeRowsOf(data)),
       } as Row,
-      ...roots
-        .filter(root => !actorCode.includes(root))
-        .map(root => ({...root, [FROM]: id}) as Row),
+      ...roots.map(root => ({...root, [FROM]: id}) as Row),
     );
   }
 
@@ -439,7 +489,7 @@ const actorIn = (workspace: {blocks: {blocks: Row[]}}, name: string): Row => {
  */
 const under = (actor: Row, row: Row): void => {
   const held = actor as Record<string, unknown>;
-  if (held[DATA] && !CODE_ROWS.has(row.type ?? '')) {
+  if (held[DATA] && row.type !== DRAWING_ROW && row.type !== STEP_ROW) {
     held[DATA] = place(held[DATA] as ActorData, row, 'first');
     return;
   }

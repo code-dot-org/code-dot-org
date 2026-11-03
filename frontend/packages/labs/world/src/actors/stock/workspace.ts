@@ -15,11 +15,14 @@ import {pathSlug} from '../../blockly/ruleRegistry';
 import type {Timeline} from '../../engine/core/keyframes';
 import {MAIN_SCREEN_PATH} from '../../mainWorld';
 import {
+  type ActorDrawing,
   type ActorLiteral,
   type ActorMember,
+  type ActorStep,
   type ActorProperty,
   type ActorValue,
   type Block,
+  type Socket,
 } from '../actorData';
 
 /** Chain statement blocks, first at the top. */
@@ -184,27 +187,33 @@ export const paramValue = (param: BlockParam) => ({
 });
 
 /**
- * `define drawing ⟨w⟩ by ⟨h⟩` — the row that says what a kind looks like.
- *
- * The size is SOCKETS rather than fields (`domainBlocks.worldDefineDrawing`),
- * so a fixed one is a number shadow in each and an interface actor may plug in
- * `⟨width⟩ of ⟨this actor⟩` instead. Written once here because every stock
- * actor, fixture and lesson that draws emits the same row, and a shape spelled
- * out in eight places is eight places to fix.
+ * What a kind looks like, as data (specs/DRAWING_PAGE_PLAN.md): a number is
+ * a fixed size, and anything else is what the size socket holds, which is
+ * nearly always a question about the actor.
  */
-export const drawingRow = (drawing: {
+export const drawing = (spec: {
   width: number | object;
   height: number | object;
   commands: object[];
-}) => ({
-  type: 'world_define_drawing',
-  inputs: {
-    WIDTH:
-      typeof drawing.width === 'number' ? num(drawing.width) : drawing.width,
-    HEIGHT:
-      typeof drawing.height === 'number' ? num(drawing.height) : drawing.height,
-    DO: {block: chain(drawing.commands)},
-  },
+}): ActorDrawing => ({
+  width: (typeof spec.width === 'number'
+    ? num(spec.width)
+    : spec.width) as Socket,
+  height: (typeof spec.height === 'number'
+    ? num(spec.height)
+    : spec.height) as Socket,
+  ...(spec.commands.length ? {body: chain(spec.commands) as Block} : {}),
+});
+
+/** What a kind does every frame, in the moment named, as data. */
+export const everyFrame = (
+  name: string,
+  phase: string,
+  commands: object[],
+): ActorStep => ({
+  name,
+  phase,
+  ...(commands.length ? {body: chain(commands) as Block} : {}),
 });
 
 /**

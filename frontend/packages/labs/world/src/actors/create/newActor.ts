@@ -13,7 +13,7 @@ import {boxValue, labelSizeOf} from '../stock/label';
 import {BORDER, LOOK, RADIUS_TIGHT} from '../stock/look';
 import {
   corner,
-  drawingRow,
+  drawing,
   fill,
   outline,
   rectangle,
@@ -38,17 +38,15 @@ export function newActorFile(name: string, purpose: PaletteTab): string {
       boxValue('Width', NEW_INTERFACE_BOX.width),
       boxValue('Height', NEW_INTERFACE_BOX.height),
     ],
-    code: [
-      drawingRow({
-        width: width(),
-        height: height(),
-        commands: [
-          fill(swatch(LOOK.field)),
-          outline(swatch(LOOK.primaryStrong), BORDER),
-          corner(RADIUS_TIGHT),
-          rectangle(0, 0, width(), height()),
-        ],
-      }),
-    ],
+    drawing: drawing({
+      width: width(),
+      height: height(),
+      commands: [
+        fill(swatch(LOOK.field)),
+        outline(swatch(LOOK.primaryStrong), BORDER),
+        corner(RADIUS_TIGHT),
+        rectangle(0, 0, width(), height()),
+      ],
+    }),
   });
 }

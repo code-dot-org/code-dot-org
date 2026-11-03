@@ -59,6 +59,26 @@ describe('standInBlocks', () => {
     expect(made).toContain('world_do_Gravity_FallAction');
   });
 
+  it('finds a gone type in an actor’s drawing and steps', () => {
+    const actor = JSON.stringify({
+      type: 'actor',
+      name: 'Gauge',
+      drawing: {
+        width: {block: {type: 'world_get_Gone_WidthProperty'}},
+        height: {shadow: {type: 'math_number', fields: {NUM: 8}}},
+        body: {type: 'world_pen_gone'},
+      },
+      steps: [{name: 'tick', body: {type: 'world_do_Gone_TickAction'}}],
+    });
+    const made = standInBlocks([actor], new Set(['math_number']));
+    const byType = new Map(made.map(block => [block.type, block]));
+
+    // A size is a value, as it sits in the head's socket.
+    expect(byType.get('world_get_Gone_WidthProperty')?.output).toBeNull();
+    expect(byType.get('world_pen_gone')?.previousStatement).toBe(true);
+    expect(byType.has('world_do_Gone_TickAction')).toBe(true);
+  });
+
   it('leaves Blockly’s own blocks alone', () => {
     // The bug this caught in the browser: `defined` is what the PALETTE mints,
     // and `controls_if` is not in it — Blockly registers its own. A stand-in

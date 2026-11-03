@@ -30,6 +30,7 @@
 // designed by dragging is already aligned with the only movement this game
 // has. Nothing had to be taught to agree.
 
+import type {Block} from '../actors/actorData';
 import {actorDocument} from '../actors/actorDocument';
 import {
   buildProject,
@@ -272,44 +273,39 @@ const CRATE_ACTOR = actorDocument({
     'Grid#FillsATileTrait',
     'Grid#CanBePushedTrait',
   ],
-  code: [
-    {
-      type: 'world_define_drawing',
-      inputs: {
-        WIDTH: {
-          shadow: {type: 'math_number', fields: {NUM: TILE_SIZE}},
-        },
-        HEIGHT: {
-          shadow: {type: 'math_number', fields: {NUM: TILE_SIZE}},
-        },
-        DO: {
-          block: stack([
-            {
-              type: 'world_pen_fill',
-              inputs: {
-                COLOR: {
-                  block: {
-                    type: 'colour_picker',
-                    fields: {COLOUR: '#d8a032'},
-                  },
-                },
-              },
+  drawing: {
+    width: {
+      shadow: {type: 'math_number', fields: {NUM: TILE_SIZE}},
+    },
+    height: {
+      shadow: {type: 'math_number', fields: {NUM: TILE_SIZE}},
+    },
+    body: stack([
+      {
+        type: 'world_pen_fill',
+        inputs: {
+          COLOR: {
+            block: {
+              type: 'colour_picker',
+              fields: {COLOUR: '#d8a032'},
             },
-            // Centred in the tile and small enough that a crate standing on
-            // one plainly covers it, which is how the board says "done".
-            {
-              type: 'world_draw_rectangle',
-              inputs: {
-                X: number(TILE_SIZE / 2 - 6),
-                Y: number(TILE_SIZE / 2 - 6),
-                WIDTH: number(12),
-                HEIGHT: number(12),
-              },
-            },
-          ]),
+          },
         },
       },
-    },
+      // Centred in the tile and small enough that a crate standing on
+      // one plainly covers it, which is how the board says "done".
+      {
+        type: 'world_draw_rectangle',
+        inputs: {
+          X: number(TILE_SIZE / 2 - 6),
+          Y: number(TILE_SIZE / 2 - 6),
+          WIDTH: number(12),
+          HEIGHT: number(12),
+        },
+      },
+    ]) as Block,
+  },
+  code: [
     // The win, checked when a crate lands — the only moment the answer can
     // change. Counting what is WRONG rather than what is right: zero crates
     // off target is the finish line, and it needs no total to compare with.
@@ -350,9 +346,7 @@ const CRATE_ACTOR = actorDocument({
  * one whole is drawing all six frames at once.
  *
  * Nothing in the stock sprites is a goal mark, and a mark is four numbers and
- * a color, so the actor draws its own — which is what `define drawing` is
- * for. A second root, beside the definition rather than chained under it: a
- * drawing takes no previous connection (specs/DRAWING.md).
+ * a color, so the actor draws its own.
  */
 const TARGET_ACTOR = actorDocument({
   name: 'Target',

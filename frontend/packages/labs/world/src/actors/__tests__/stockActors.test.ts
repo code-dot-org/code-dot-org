@@ -22,11 +22,20 @@ import {progressBarActor as progressBar} from '../stock/progressBar';
 
 /**
  * An actor as every block it names: its keys as the blocks they stand for
- * (`keyRows`), and its code.
+ * (`keyRows`), its drawing, its steps and its code.
  */
 const asBlocks = (contents: string): string => {
   const data = JSON.parse(contents) as ActorData;
-  return JSON.stringify({...keyRows(data), code: data.blocks}, null, 2);
+  return JSON.stringify(
+    {
+      ...keyRows(data),
+      drawing: data.drawing,
+      steps: data.steps,
+      code: data.blocks,
+    },
+    null,
+    2,
+  );
 };
 
 const STOCK_ACTORS = SHELF.map(actor => ({
@@ -51,17 +60,15 @@ const types = (contents: string): string[] =>
 
 describe('every stock actor', () => {
   it('is data, and paints itself only if it has no picture', () => {
-    // Its code is roots, a drawing among them, before its handlers
-    // (specs/DRAWING.md); no `define actor`.
+    // Its code is its handlers: no `define actor`, and no drawing or step,
+    // which are data (specs/DRAWING_PAGE_PLAN.md).
     for (const actor of STOCK_ACTORS) {
       const found = roots(actor.data);
       expect(found).not.toContain('world_actor');
-      const code = found.map(type => CODE_ROWS.has(type ?? ''));
       expect(
-        code.indexOf(false) < 0 ||
-          !code.slice(code.indexOf(false)).includes(true),
+        found.filter(type => CODE_ROWS.has(type ?? '')),
         actor.id,
-      ).toBe(true);
+      ).toEqual([]);
 
       // An actor either has a picture or draws one, and never both: an
       // interface actor looks like whatever it says and must paint itself; a
@@ -73,7 +80,7 @@ describe('every stock actor', () => {
       // and saying it twice is somewhere for the two to disagree
       // (`ActorBuilder.actsLike`).
       const blocks = types(actor.contents);
-      const paints = blocks.includes('world_define_drawing');
+      const paints = Boolean((JSON.parse(actor.data) as ActorData).drawing);
       // A still picture, or its own animations (specs/ANIMATION_PLAN.md).
       const pictured =
         blocks.includes('world_actor_animations') ||
@@ -393,13 +400,13 @@ describe('Health Bar', () => {
     expect(held).toContain('world_get_Health_HealthProperty');
     expect(held).toContain('world_get_Health_MostHealthProperty');
     expect(held).toContain('world_set_ActorsProgressBar_FractionProperty');
-    expect(held).not.toContain('world_trait_step');
+    expect(JSON.parse(healthBar)).not.toHaveProperty('steps');
     // …and NOT the picture, which is the Progress Bar's along with the colors
     // it reads. A second copy of the track, the fill and the expression
     // between them would be somewhere for the two to disagree — this file
     // says `acts like` instead, in a row a learner can read.
     expect(held).toContain('world_acts_like');
-    expect(held).not.toContain('world_define_drawing');
+    expect(JSON.parse(healthBar)).not.toHaveProperty('drawing');
     expect(held).not.toContain('world_get_Progress_BarColorProperty');
   });
 

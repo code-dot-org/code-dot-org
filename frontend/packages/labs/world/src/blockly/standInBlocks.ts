@@ -39,6 +39,7 @@ import {Blockly, defineBlock} from '@code-dot-org/blockly';
 import {isActorData, writeEffect, writeValue} from '../actors/actorData';
 import {isRuleData, ruleBodies} from '../rules/ruleData';
 
+import {DRAWING_HEAD} from './bodySurfaces';
 import {missingRuleExtension} from './extensions/missingRule';
 import {registerStandInRule} from './ruleRegistry';
 
@@ -189,14 +190,32 @@ export function standInBlocks(
   for (const source of contents) {
     try {
       const parsed = JSON.parse(source) as {blocks?: {blocks?: BlockState[]}};
-      // An actor names blocks in its code, its values' setters, its effects
-      // and its blocks' bodies.
+      // An actor names blocks in its code, its values' setters, its effects,
+      // its blocks' bodies, its drawing and its steps.
       const roots = isActorData(parsed)
         ? ([
             ...(parsed.blocks?.blocks?.blocks ?? []),
             ...(parsed.values ?? []).map(writeValue),
             ...(parsed.effects ?? []).map(writeEffect),
             ...(parsed.members ?? []).flatMap(one =>
+              one.body ? [one.body] : [],
+            ),
+            // The head, so a size is visited as the value it is.
+            ...(parsed.drawing
+              ? [
+                  {
+                    type: DRAWING_HEAD,
+                    inputs: {
+                      WIDTH: parsed.drawing.width,
+                      HEIGHT: parsed.drawing.height,
+                    },
+                    ...(parsed.drawing.body
+                      ? {next: {block: parsed.drawing.body}}
+                      : {}),
+                  },
+                ]
+              : []),
+            ...(parsed.steps ?? []).flatMap(one =>
               one.body ? [one.body] : [],
             ),
           ] as BlockState[])

@@ -724,7 +724,8 @@ export const MapEditor = ({
    */
   const [step, setScript, onTrail] = useScriptStep(fileId);
   // A map's are a placement's code and its own; an actor's is not one here.
-  const script = step?.kind === 'code' ? null : step;
+  const script =
+    step?.kind === 'code' || step?.kind === 'drawing' ? null : step;
   // A level whose work is in blocks opens the Main Screen on its code, as it
   // opened a world on its World view (`levelData.worldOpensOn`).
   const level = useMaybeLevelProperties<WorldLevelProperties>();

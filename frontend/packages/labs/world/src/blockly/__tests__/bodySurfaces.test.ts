@@ -6,6 +6,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import type {ActorData} from '../../actors/actorData';
 import {STOCK_ACTORS} from '../../actors/stock';
 import {
   BODY_OWNER_ID,
@@ -207,28 +208,53 @@ describe('reap', () => {
   });
 });
 
+/**
+ * A stock actor's drawing, steps and handlers as roots of one workspace: the
+ * blocks the surfaces were written for, which are data in the file now
+ * (specs/DRAWING_PAGE_PLAN.md).
+ */
+const rootsOfActor = (contents: string): unknown[] => {
+  const data = JSON.parse(contents) as ActorData;
+  return [
+    ...(data.drawing
+      ? [
+          {
+            type: 'world_define_drawing',
+            inputs: {
+              WIDTH: data.drawing.width,
+              HEIGHT: data.drawing.height,
+              ...(data.drawing.body ? {DO: {block: data.drawing.body}} : {}),
+            },
+          },
+        ]
+      : []),
+    ...(data.steps ?? []).map(step => ({
+      type: 'world_trait_step',
+      fields: {PHASE: step.phase ?? 'decide', NAME: step.name},
+      ...(step.body ? {inputs: {DO: {block: step.body}}} : {}),
+    })),
+    ...(data.blocks?.blocks?.blocks ?? []),
+  ];
+};
+
 /** Every stock actor's code as one workspace: drawings, steps and handlers. */
 const EVERY_ACTORS_CODE = {
   blocks: {
     languageVersion: 0,
-    blocks: STOCK_ACTORS.flatMap(
-      actor =>
-        (
-          JSON.parse(actor.contents) as {
-            blocks?: {blocks?: {blocks?: unknown[]}};
-          }
-        ).blocks?.blocks?.blocks ?? [],
-    ),
+    blocks: STOCK_ACTORS.flatMap(actor => rootsOfActor(actor.contents)),
   },
 } as never;
 
 /** A stock actor's code, as the editor opens it. */
 const codeOf = (id: string) =>
-  (
-    JSON.parse(STOCK_ACTORS.find(actor => actor.id === id)!.contents) as {
-      blocks: unknown;
-    }
-  ).blocks as never;
+  ({
+    blocks: {
+      languageVersion: 0,
+      blocks: rootsOfActor(
+        STOCK_ACTORS.find(actor => actor.id === id)!.contents,
+      ),
+    },
+  }) as never;
 
 describe('every stock actor’s code survives the round trip', () => {
   // THE ONE THAT MATTERS. A merge that drops a body does not throw; it writes

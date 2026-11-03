@@ -74,7 +74,7 @@ import {
   alongX,
   chain,
   corner,
-  drawingRow,
+  drawing,
   drawParagraph,
   event,
   fill,
@@ -470,37 +470,33 @@ const caretWidth = () => widthTo(caretAt());
  * the bar goes), and a value the actor CARRIES is one an inspector can show.
  */
 const slidesToShowTheCaret = () => ({
-  type: 'world_trait_step',
-  fields: {PHASE: 'react', NAME: 'keep the caret in the box'},
-  inputs: {
-    DO: {
-      block: {
-        type: 'controls_if',
-        extraState: {elseIfCount: 2},
-        inputs: {
-          // Off the left: the words have been pushed further than the bar.
-          IF0: compare('LT', caretWidth(), scrolled()),
-          DO0: {block: setScroll(caretWidth())},
-          // Off the right: past the far edge of the room the words have.
-          IF1: compare('GT', sum('MINUS', caretWidth(), scrolled()), column()),
-          DO1: {block: setScroll(sum('MINUS', caretWidth(), column()))},
-          // …and slack, which is the case that lets a shortened line come
-          // back. Nothing to come back to when the whole line fits, so the
-          // answer is zero rather than a negative push.
-          IF2: compare('LT', sum('MINUS', shown(), scrolled()), column()),
-          DO2: {
-            block: setScroll({
-              block: {
-                type: 'logic_ternary',
-                inputs: {
-                  IF: compare('GT', shown(), column()),
-                  THEN: sum('MINUS', shown(), column()),
-                  ELSE: {block: {type: 'math_number', fields: {NUM: 0}}},
-                },
-              },
-            }),
+  name: 'keep the caret in the box',
+  phase: 'react',
+  body: {
+    type: 'controls_if',
+    extraState: {elseIfCount: 2},
+    inputs: {
+      // Off the left: the words have been pushed further than the bar.
+      IF0: compare('LT', caretWidth(), scrolled()),
+      DO0: {block: setScroll(caretWidth())},
+      // Off the right: past the far edge of the room the words have.
+      IF1: compare('GT', sum('MINUS', caretWidth(), scrolled()), column()),
+      DO1: {block: setScroll(sum('MINUS', caretWidth(), column()))},
+      // …and slack, which is the case that lets a shortened line come
+      // back. Nothing to come back to when the whole line fits, so the
+      // answer is zero rather than a negative push.
+      IF2: compare('LT', sum('MINUS', shown(), scrolled()), column()),
+      DO2: {
+        block: setScroll({
+          block: {
+            type: 'logic_ternary',
+            inputs: {
+              IF: compare('GT', shown(), column()),
+              THEN: sum('MINUS', shown(), column()),
+              ELSE: {block: {type: 'math_number', fields: {NUM: 0}}},
+            },
           },
-        },
+        }),
       },
     },
   },
@@ -576,67 +572,67 @@ export const textInputActor = actorDocument({
     // keyboard half of the button beside it.
     event('is done'),
   ],
-  code: [
-    slidesToShowTheCaret(),
-    drawingRow({
-      width: width(),
-      height: height(),
-      commands: [
-        // The field: dark, with an edge that says whether it is listening —
-        // and RED when a project has called the answer wrong, which is the
-        // one thing about a field a form needs to be able to show
-        // (specs/FIELDS_PLAN.md).
-        fill(swatch(LOOK.field)),
-        outline(swatch(LOOK.primaryStrong), BORDER),
-        corner(RADIUS_TIGHT),
-        useStyle('field'),
+  drawing: drawing({
+    width: width(),
+    height: height(),
+    commands: [
+      // The field: dark, with an edge that says whether it is listening —
+      // and RED when a project has called the answer wrong, which is the
+      // one thing about a field a form needs to be able to show
+      // (specs/FIELDS_PLAN.md).
+      fill(swatch(LOOK.field)),
+      outline(swatch(LOOK.primaryStrong), BORDER),
+      corner(RADIUS_TIGHT),
+      useStyle('field'),
+      rectangle(0, 0, width(), height()),
+      onlyIf(looksWrong(), [
+        // The wrong edge is drawn THICKER as well as red, so that the one
+        // thing a form must be able to shout is not said in colour alone.
+        outline(swatch(LOOK.danger), BORDER + 1),
+        useStyle('wrong'),
         rectangle(0, 0, width(), height()),
-        onlyIf(looksWrong(), [
-          // The wrong edge is drawn THICKER as well as red, so that the one
-          // thing a form must be able to shout is not said in colour alone.
-          outline(swatch(LOOK.danger), BORDER + 1),
-          useStyle('wrong'),
-          rectangle(0, 0, width(), height()),
-        ]),
-        noOutline(),
-        // …and the hint, while there is nothing in it. Dimmed, so it reads as
-        // a label for the box rather than as something somebody typed, and
-        // drawn instead of the words rather than under them — an empty field
-        // has no words to be under.
-        onlyIf(isEmpty(), [
-          fill(swatch(LOOK.inkLight)),
-          useStyle('hint'),
-          drawWords(hint(), num(PAD), labelHalf(height())),
-        ]),
-        // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
-        // its own look and then offers to be overruled, and the caption was the one
-        // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
-        // pen alone when no theme defines one. So in a project with NO theme the
-        // caption inherited whatever the FACE had just set, and a Button drew its
-        // words in the button colour: invisible (specs/STYLES_PLAN.md).
-        fill(swatch(LOOK.ink)),
-        useStyle('caption'),
-        fill(textOf('TextColorProperty')),
-        // Inset from the left edge, since the words are anchored there — less
-        // however far they have slid to keep the caret in view.
-        //
-        // IN A COLUMN OF ZERO, which is `draw paragraph`'s way of saying "do
-        // not wrap": a field is one line however much is typed into it, and a
-        // second line in a 28-pixel box is half of a word hanging out of the
-        // bottom. What runs past the right edge is clipped by the actor's own
-        // canvas, which is what a field looks like everywhere.
-        drawParagraph(textLeft(), labelHalf(height()), 0),
-        // …and the caret, straight after the words, for half of every second.
-        onlyIf(blinking(), [
-          rectangle(
-            caretLeft(),
-            num(CARET_INSET),
-            num(CARET_WIDTH),
-            sum('MINUS', height(), num(2 * CARET_INSET)),
-          ),
-        ]),
-      ],
-    }),
+      ]),
+      noOutline(),
+      // …and the hint, while there is nothing in it. Dimmed, so it reads as
+      // a label for the box rather than as something somebody typed, and
+      // drawn instead of the words rather than under them — an empty field
+      // has no words to be under.
+      onlyIf(isEmpty(), [
+        fill(swatch(LOOK.inkLight)),
+        useStyle('hint'),
+        drawWords(hint(), num(PAD), labelHalf(height())),
+      ]),
+      // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
+      // its own look and then offers to be overruled, and the caption was the one
+      // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
+      // pen alone when no theme defines one. So in a project with NO theme the
+      // caption inherited whatever the FACE had just set, and a Button drew its
+      // words in the button colour: invisible (specs/STYLES_PLAN.md).
+      fill(swatch(LOOK.ink)),
+      useStyle('caption'),
+      fill(textOf('TextColorProperty')),
+      // Inset from the left edge, since the words are anchored there — less
+      // however far they have slid to keep the caret in view.
+      //
+      // IN A COLUMN OF ZERO, which is `draw paragraph`'s way of saying "do
+      // not wrap": a field is one line however much is typed into it, and a
+      // second line in a 28-pixel box is half of a word hanging out of the
+      // bottom. What runs past the right edge is clipped by the actor's own
+      // canvas, which is what a field looks like everywhere.
+      drawParagraph(textLeft(), labelHalf(height()), 0),
+      // …and the caret, straight after the words, for half of every second.
+      onlyIf(blinking(), [
+        rectangle(
+          caretLeft(),
+          num(CARET_INSET),
+          num(CARET_WIDTH),
+          sum('MINUS', height(), num(2 * CARET_INSET)),
+        ),
+      ]),
+    ],
+  }),
+  steps: [slidesToShowTheCaret()],
+  code: [
     // A click chooses this field AND says where in it. Two statements for
     // two questions: which control the keyboard goes to, and where in this
     // one the next letter lands.

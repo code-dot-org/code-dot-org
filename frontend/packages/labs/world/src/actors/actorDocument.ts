@@ -8,9 +8,11 @@ import {
   MAIN_ANIMATION,
   stillAnimation,
   type ActorData,
+  type ActorDrawing,
   type ActorEffect,
   type ActorMember,
   type ActorProperty,
+  type ActorStep,
   type ActorValue,
   type Block,
 } from './actorData';
@@ -31,7 +33,9 @@ export interface ActorSpec {
   /** A still picture: its Main animation, one sprite. */
   sprite?: string;
   animations?: Record<string, Timeline>;
-  /** Its code's roots — a drawing, each frame, the handlers — in reading order. */
+  drawing?: ActorDrawing;
+  steps?: ActorStep[];
+  /** Its handlers, in reading order. */
   code?: Block[];
   /** The variables its code's blocks name. */
   variables?: ReadonlyArray<{id: string; name: string; type: string}>;

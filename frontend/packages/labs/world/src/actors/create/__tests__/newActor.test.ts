@@ -30,14 +30,9 @@ describe('an actor made from nothing', () => {
         value: NEW_INTERFACE_BOX.height,
       },
     ]);
-    // The drawing is a root of its code, sized by the box rather than by
-    // two numbers.
-    const [drawing] = data.blocks.blocks.blocks;
-    expect(drawing.type).toBe('world_define_drawing');
-    expect(drawing.inputs.WIDTH.block.type).toBe(
-      'world_get_Boxed_WidthProperty',
-    );
-    expect(drawing.inputs.HEIGHT.block.type).toBe(
+    // The drawing is sized by the box rather than by two numbers.
+    expect(data.drawing.width.block.type).toBe('world_get_Boxed_WidthProperty');
+    expect(data.drawing.height.block.type).toBe(
       'world_get_Boxed_HeightProperty',
     );
   });

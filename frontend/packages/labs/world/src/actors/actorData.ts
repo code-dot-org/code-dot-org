@@ -116,12 +116,39 @@ export interface ActorData {
   effects?: ActorEffect[];
   /** The blocks and events it adds to the language (specs/ACTOR_BLOCKS_PLAN.md). */
   members?: ActorMember[];
+  /** What it looks like, when it draws itself (specs/DRAWING_PAGE_PLAN.md). */
+  drawing?: ActorDrawing;
+  /** What it does every frame. */
+  steps?: ActorStep[];
   /** The handlers and the code, as roots of the workspace. */
   blocks?: SavedWorkspace;
   [key: string]: unknown;
 }
 
 export type Block = Record<string, unknown> & {type?: string};
+
+/** A value socket as it is saved: a shadow, and the block over it if any. */
+export interface Socket {
+  block?: Block;
+  shadow?: Block;
+}
+
+/**
+ * How the actor draws itself: the size it is drawn at, which is also its
+ * size for clicks and collisions, and the pen and shapes that draw it.
+ */
+export interface ActorDrawing {
+  width: Socket;
+  height: Socket;
+  body?: Block;
+}
+
+/** Work the actor does every frame, in one moment of it (`engine/core/phases`). */
+export interface ActorStep {
+  name: string;
+  phase?: string;
+  body?: Block;
+}
 
 /**
  * One piece of a member's design: a word, a value, or a line break. The

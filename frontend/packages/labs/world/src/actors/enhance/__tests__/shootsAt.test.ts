@@ -48,7 +48,9 @@ describe('the shoots-whenever row, as edits', () => {
     expect(coin).toContain('Zapping#ZapsTrait');
     expect(coin).not.toContain('Input#TakesKeyboardInputTrait');
     expect(coin).toContain('world_set_Zapping_RechargeTimeProperty');
-    expect(coin).toContain('world_trait_step');
+    expect(JSON.parse(coin).steps).toEqual([
+      expect.objectContaining({name: 'fire when ready', phase: 'decide'}),
+    ]);
     expect(coin).toContain('world_do_Zapping_MakeZapAction');
     expect(coin).toContain('world_on_Zapping_ZapsEvent');
     expect(coin).toContain('"ACTOR": "actors/shot"');
@@ -76,7 +78,7 @@ describe('the shoots-whenever row, as edits', () => {
     const coin = at(again, 'actors/coin.actor')!;
 
     expect(coin.match(/world_on_Zapping_ZapsEvent/g)).toHaveLength(1);
-    expect(coin.match(/world_trait_step/g)).toHaveLength(1);
+    expect(JSON.parse(coin).steps).toHaveLength(1);
     expect(coin).toContain('"ACTOR": "actors/ground"');
     expect(shootsAt.applied(again, COIN, 'actors/shot')).toBe(false);
     expect(shootsAt.applied(again, COIN, 'actors/ground')).toBe(true);

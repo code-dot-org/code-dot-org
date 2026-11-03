@@ -34,7 +34,7 @@ import {actorDocument} from '../actorDocument';
 
 import {LOOK} from './look';
 import {
-  drawingRow,
+  drawing,
   labelValue,
   property,
   drawParagraph,
@@ -143,27 +143,25 @@ export const labelActor = actorDocument({
     // typed anything into it — and so the picker has a picture to show.
     labelValue('TextProperty', {type: 'string', value: 'Label'}),
   ],
-  code: [
-    drawingRow({
-      width: labelSizeOf('Width'),
-      height: labelSizeOf('Height'),
-      commands: [
-        // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
-        // its own look and then offers to be overruled, and the caption was the one
-        // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
-        // pen alone when no theme defines one. So in a project with NO theme the
-        // caption inherited whatever the FACE had just set, and a Button drew its
-        // words in the button colour: invisible (specs/STYLES_PLAN.md).
-        fill(swatch(LOOK.ink)),
-        useStyle('caption'),
-        fill(textOf('TextColorProperty')),
-        // The column is the whole box, so the words wrap where the box ends.
-        drawParagraph(
-          labelHalf(labelSizeOf('Width')),
-          labelHalf(labelSizeOf('Height')),
-          labelSizeOf('Width'),
-        ),
-      ],
-    }),
-  ],
+  drawing: drawing({
+    width: labelSizeOf('Width'),
+    height: labelSizeOf('Height'),
+    commands: [
+      // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
+      // its own look and then offers to be overruled, and the caption was the one
+      // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
+      // pen alone when no theme defines one. So in a project with NO theme the
+      // caption inherited whatever the FACE had just set, and a Button drew its
+      // words in the button colour: invisible (specs/STYLES_PLAN.md).
+      fill(swatch(LOOK.ink)),
+      useStyle('caption'),
+      fill(textOf('TextColorProperty')),
+      // The column is the whole box, so the words wrap where the box ends.
+      drawParagraph(
+        labelHalf(labelSizeOf('Width')),
+        labelHalf(labelSizeOf('Height')),
+        labelSizeOf('Width'),
+      ),
+    ],
+  }),
 });
