@@ -551,6 +551,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   ) : (
                     under || parts.underFrame || reopenedBehindTheScenes
                   )
+                  generating
+                    ? undefined
+                    : under ?? (parts.underFrame || reopenedBehindTheScenes)
                 }
                 overlay={
                   parts.rating.offered && (
