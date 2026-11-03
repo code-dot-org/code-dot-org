@@ -1,11 +1,10 @@
 // A workspace holds an interface; its bodies are kept beside it.
 //
-// specs/NEXT.md §8. A rule arrives as one workspace of everything it is —
-// `solid` is 473 blocks — and nine tenths of that is implementation nobody
-// opened. Splitting the document lets the editor build the twenty-odd blocks
-// that say what the rule OFFERS and build a body only when somebody asks for
-// it, which is 147ms against 8.6ms for `solid` in a real browser
-// (`spikes/rule-surfaces/FINDINGS.md`).
+// specs/NEXT.md §8. A workspace of code is mostly implementation nobody
+// opened: a drawing's twelve pen blocks, an `each frame`'s work. Splitting the
+// document lets the editor build the blocks that say what the code OFFERS and
+// build a body only when somebody asks for it (`spikes/rule-surfaces/
+// FINDINGS.md`).
 //
 // THE FILE DOES NOT CHANGE. What splits is what the editor renders: `split`
 // takes a saved document and hands back an interface plus a table of bodies,
@@ -13,18 +12,13 @@
 // nothing downstream — the generator, the compiler, a diff — knows this
 // happened.
 //
-// A BODY HANGS OFF TWO DIFFERENT PLACES and the difference is not cosmetic. A
-// hat's body is the chain that FOLLOWS it (`next`); a member's is the `DO`
-// input it holds. The same `next` on `define rule` and `define trait` is
-// their member list, which is interface and stays. Reading `next` as "body"
-// everywhere empties the file; reading only `DO` as "body" leaves every
-// rule-level step behind. The spike's first draft did the second and hid
-// almost nothing in the rules that needed it most.
+// A body is the `DO` input of a block that has one (`hasBody`). A hat's body,
+// the chain that follows it, is the handler itself and stays on the surface.
 //
 // KEYED BY BLOCK ID, which is safe because Blockly emits an id for every
-// block it saves and keeps it across a reload — measured, not assumed. The
-// generated stock rules carry none, so `split` mints them; from the first
-// save onwards they are the file's own.
+// block it saves and keeps it across a reload — measured, not assumed. A
+// generated file carries none, so `split` mints them; from the first save
+// onwards they are the file's own.
 
 import {type BlocklySerialization} from '@code-dot-org/blockly';
 
@@ -38,53 +32,14 @@ interface SavedBlock {
 }
 
 /**
- * Members whose `DO` input is what they run.
- *
- * `world_trait_step` is `each frame` in all three of its homes — a trait's
- * member, an `.actor` file's own per-frame work, and the same inside a
- * world's `define actor` — so an actor file splits on the same rule a rule
- * file does, which is the point (§8, "Not only rules").
+ * Blocks whose `DO` input is what they run: `each frame`, an actor's per-frame
+ * work, and `define drawing`, whose pen and shapes are an implementation like
+ * any other (specs/DRAWING.md).
  */
-const BODY_IN_DO = new Set([
-  'world_rule_block',
-  'world_trait_step',
-  // …and what a kind LOOKS like. The pen and the shapes are an implementation
-  // like any other: a drawing's block says how big the picture is, and the
-  // twelve blocks that paint it are behind the pencil (specs/DRAWING.md).
-  'world_define_drawing',
-  // The rule-level steps. They were roots with the body chained below, which
-  // is why the split had a second shape to know about; now they are members
-  // everything else, and a member's `next` is the member after it.
-  'world_rule_step_in',
-  'world_rule_step_tick',
-]);
+const BODY_IN_DO = new Set(['world_trait_step', 'world_define_drawing']);
 
-/** Whether this block keeps an implementation somewhere. */
+/** Whether this block keeps an implementation somewhere, which a pencil opens. */
 export const hasBody = (type: string): boolean => BODY_IN_DO.has(type);
-
-/**
- * Blocks with a surface of their own but NOTHING to take off them.
- *
- * `define event` is a declaration: it makes a hat, and the blocks that run for
- * it live under that hat in whatever file cares. So there is no body to split
- * out — and it must never be treated as if there were, because an event's
- * `next` is the member chain, and reading that as a body would move the rest
- * of the rule into it.
- *
- * What it does have is a signature, which is edited exactly the way a `define
- * block`'s is. So it earns a pencil and a surface; the surface simply holds
- * the head and no body.
- */
-const SURFACE_WITHOUT_BODY = new Set(['world_rule_event']);
-
-/**
- * Whether a pencil opens something for this block.
- *
- * Wider than `hasBody`, and deliberately a different question: `split` asks
- * what to take OUT of the document, and this asks what a learner can open.
- */
-export const hasSurface = (type: string): boolean =>
-  hasBody(type) || SURFACE_WITHOUT_BODY.has(type);
 
 /**
  * The id the owner block wears while its own body is the surface.
@@ -239,7 +194,7 @@ const mergeBlock = (
  * The file: what the editor is showing, with its bodies put back.
  *
  * Every path that writes the file goes through this. A save that skipped it
- * would not throw — it would write a rule whose steps are empty, which is why
+ * would not throw — it would write steps and drawings that are empty, which is why
  * the editor should have no other way to serialize.
  */
 export function merge(
@@ -344,11 +299,10 @@ export interface BodySeam {
 /**
  * Whether the EDITOR hides a body, as opposed to whether it can.
  *
- * ON: `solid.rule` opens with fourteen blocks rather than four hundred and
- * seventy-three, and the pencil on each `define …` opens the rest. The first
- * attempt turned this on before the pencil existed, which left a `define
- * block` whose `do` was empty and had no door — a broken-looking rule, worse
- * than a long workspace. The button is what earns the flag.
+ * ON: a drawing opens as its one `define drawing` block, and the pencil on it
+ * opens the rest. The first attempt turned this on before the pencil existed,
+ * which left a block whose `do` was empty and had no door — broken-looking,
+ * and worse than a long workspace. The button is what earns the flag.
  *
  * Read by `BlocklyFileEditor` and by nothing here: a seam that sometimes did
  * not split would be a seam whose `read` puts stale bodies back over live
@@ -379,15 +333,12 @@ export function createBodySeam(): BodySeam {
       return merge(saved, bodies, heads);
     },
     bodyOf(id, shown) {
-      // The member's own block heads the surface, the way `define rule` heads
-      // a rule file: something to attach to, and a statement of what is being
-      // implemented. A chain floating in an empty workspace said neither, and
-      // an empty body said nothing at all.
+      // The block's own head heads the surface: something to attach to, and a
+      // statement of what is being implemented. A chain floating in an empty
+      // workspace said neither, and an empty body said nothing at all.
       //
-      // Its `next` is the BODY here. On the interface that same `next` is the
-      // member chain — what the rule declares after this one — so it is
-      // dropped first; the interface keeps it, and `merge` puts the body back
-      // wherever the file format holds it.
+      // Whatever follows it on the interface stays there, and `merge` puts
+      // the body back where the file holds it.
       const body = bodies[id];
       const owner = findById(shown, id);
       // THE FILE'S VARIABLES COME TOO. A parameter is a variable, and the body
@@ -421,9 +372,9 @@ export function createBodySeam(): BodySeam {
       };
       delete head.next;
       // Where it sat on the interface means nothing here — it is the only
-      // root on this surface. Carried over, it put the head wherever that
-      // member happened to be in a long rule, which on `solid` is off the
-      // side of the screen. Dropped outright it landed in the corner, so it
+      // root on this surface. Carried over, it put the head wherever the
+      // block happened to be in a long workspace, often off the side of the
+      // screen. Dropped outright it landed in the corner, so it
       // is placed where every other workspace in the lab puts its root.
       head.x = ROOT_X;
       head.y = ROOT_Y;

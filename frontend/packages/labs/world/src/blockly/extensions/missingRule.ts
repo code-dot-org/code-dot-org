@@ -2,10 +2,10 @@
 //
 // A dead reference is a thing a project can hold now that removing a rule
 // deletes its file (rules/removeRule): delete `rules/gravity.rule` and every
-// `use trait Affected by Gravity` in the project is a row pointing at nothing.
+// block naming Affected by Gravity in the project points at nothing.
 //
-// The generator's half is to write nothing for such a row, so the project still
-// compiles and runs without that trait (domainBlocks, `world_use_trait`). That
+// The generator's half is to write nothing for such a reference, so the project
+// still compiles and runs without that trait. That
 // is the right behavior and, on its own, a silent one — the actor quietly
 // stops falling and there is nothing anywhere saying why. This is the other
 // half: the block that has stopped meaning anything says so, on its own face,
@@ -37,8 +37,8 @@ export const MISSING_RULE_EXTENSION = 'world_missing_rule_warning';
  * The rule this block depends on and the project has not got, if any.
  *
  * Two ways to be one, because there are two ways a block names a member. A
- * `use trait` says which trait in a FIELD, so the answer is in the value it
- * holds. Every other member block — a hat, a query, a getter, an action — is a
+ * A block that names a trait — `has ⟨trait⟩` — says which in a FIELD, so the
+ * answer is in the value it holds. Every other member block — a hat, a query, a getter, an action — is a
  * block type minted for one member, so the answer is a fact about the type
  * (`registerMemberBlockType`).
  */

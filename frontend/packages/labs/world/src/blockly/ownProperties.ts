@@ -21,12 +21,9 @@
 // takes them through `ActorBuilder.defineProperty`, which makes the property
 // and seeds its slot through the overrides every instance is built with.
 //
-// The declaration block is `world_rule_property`, the same one a rule and a
-// trait use, deliberately. That block already takes its meaning from where it
-// sits — at rule level it is world-scoped, inside a trait it is actor-scoped
-// (see `parseRuleMeta`) — so a third site is what it was already built for. A
-// separate near-identical block would invite exactly the confusion of trying
-// the familiar one here and finding it inert.
+// A declaration is data, the same shape a rule's and a trait's take
+// (`ActorProperty`, `RuleProperty`): at rule level it is world-scoped, on a
+// trait it is actor-scoped, and on an actor it is that kind's.
 //
 // SCOPE IS THE DECLARING FILE. These properties exist in `player.actor` and
 // nowhere else: no other file's palette offers them, and nothing imports them.

@@ -154,9 +154,8 @@ const ruleOfTrait = (value: unknown): string | undefined => {
  * everything. Both are "no rules found", and only the second is a reason not
  * to narrow.
  *
- * `use trait` counts even here, where the file is a `.rule`: a trait may
- * require another rule's trait, and that is a dependency written exactly the
- * way an actor's election is.
+ * A trait's `uses` count: a trait may require another rule's trait, and that
+ * is a dependency written exactly the way an actor's election is.
  */
 function rulesNamedIn(
   contents: string,
@@ -181,12 +180,6 @@ function rulesNamedIn(
     }
   }
   for (const block of everyBlock(document)) {
-    if (block.type === 'world_use_trait') {
-      const rule = ruleOfTrait(block.fields?.TRAIT);
-      if (rule) {
-        named.push(rule);
-      }
-    }
     const owner = block.type ? owners.get(block.type) : undefined;
     if (owner) {
       named.push(owner);

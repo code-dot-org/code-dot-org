@@ -53,23 +53,15 @@ export const isMapKind = (kind: FileKind | undefined): boolean =>
  *
  * `world_actor` belongs to an `.actor` file alone; every actor is a file.
  *
- * `world_rule` names only `rule`, and the rest of a rule's definition blocks
- * are not listed at all: the palette drops that whole category outside a
- * `.rule`, and the ones not listed here are inert rather than destructive in
- * the wrong file — no walk in the generator matches them, so they and whatever
- * hangs off them generate nothing, exactly as a misplaced event hat does.
  *
  * A type absent from this map is offered everywhere. Most blocks are neither
  * roots nor file-bound.
  */
 export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_actor', new Set<FileKind>(['actor'])],
-  // `each frame` reads two ways, and both are the same sentence about
-  // whoever owns it: chained under a `define trait` it is one of that trait's
-  // members; chained under an `.actor` file's `define actor` it is work that
-  // kind of actor does.
+  // `each frame` is work a kind of actor does, under its `define actor`.
   //
-  // IT MUST BE INSIDE A `define actor` in the second, and its generator
+  // IT MUST BE INSIDE A `define actor`, and its generator
   // writes nothing when it is not (`worldTraitStep`); an unattached step is
   // grayed by `DisableOrphansPlugin` rather than quietly compiled from
   // nowhere. Not a world: it was offered there for the actors a world once

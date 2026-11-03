@@ -1,9 +1,7 @@
-// The `world_use_trait` dropdown lists the traits an actor may take — a trait is
-// available only when a rule that provides it is in play: attached to some
-// `.world` file in the project, or required (transitively) by one. The rules are
-// described as `RuleMeta` (the built-in library now; project `.rule` files join
-// the same set later), so this reads metadata rather than the engine's rule
-// objects directly — the seam that lets project rules contribute traits.
+// The traits an actor may take: a trait is available only when a rule that
+// provides it is in play. The rules are described as `RuleMeta`, so this reads
+// metadata rather than the engine's rule objects directly — the seam that lets
+// project rules contribute traits.
 
 // For the side effect: importing it is what registers the built-in rules, and
 // `ruleByName` below resolves nothing without them. It used to come in with

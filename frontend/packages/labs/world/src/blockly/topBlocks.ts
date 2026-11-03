@@ -39,21 +39,11 @@ export const topBlocksOf = (parsed: unknown): TopBlock[] => {
 };
 
 /**
- * The root block types whose NAME field names a Blockly-authored file.
- *
- * Rules among them, which they were not: a `.rule`'s options list fell through
- * to the file's stem, and every caller that wanted "Has Gravity" got it from
- * the rule REGISTRY instead. That is still where a `use rule` dropdown reads
- * it; this is for everything that has only the file (`files/itemName`).
- *
- * A map among them since `define map`: a `.map` used to declare no name at all
- * (specs/MAP_EVENTS_PLAN.md).
+ * The root block types whose NAME field names a Blockly-authored file: a
+ * map's `define map` (specs/MAP_EVENTS_PLAN.md). An actor and a rule are
+ * data, and name themselves under `name`.
  */
-const NAMED_ROOTS: readonly string[] = [
-  'world_actor',
-  'world_rule',
-  'world_map',
-];
+const NAMED_ROOTS: readonly string[] = ['world_map'];
 
 /**
  * The block a file takes its name from, if it has one.

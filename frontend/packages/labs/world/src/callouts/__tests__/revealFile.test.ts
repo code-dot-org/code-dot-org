@@ -5,12 +5,10 @@ import {describe, expect, it} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {actorDocument} from '../../actors/actorDocument';
 import {fileToReveal} from '../revealFile';
 
-const actor = (name: string) =>
-  JSON.stringify({
-    blocks: {blocks: [{type: 'world_actor', fields: {NAME: name}}]},
-  });
+const actor = (name: string) => actorDocument({name});
 
 const SOURCE: MultiFileSource = {
   folders: {

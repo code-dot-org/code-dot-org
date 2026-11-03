@@ -10,6 +10,7 @@ import {beforeEach, describe, expect, it, vi, type Mock} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {actorDocument} from '../../actors/actorDocument';
 import {referenceToStock} from '../../rules/ruleReference';
 
 const newFile = vi.fn();
@@ -48,10 +49,12 @@ const SOURCE: MultiFileSource = {
       id: 'a',
       name: 'gravity.rule',
       language: 'rule',
-      // What the file DECLARES, which is what its row shows — the same root a
-      // `use rule` dropdown reads (`blockly/projectModules`).
+      // What the file DECLARES, which is what its row shows
+      // (`blockly/projectModules`).
       contents: JSON.stringify({
-        blocks: {blocks: [{type: 'world_rule', fields: {NAME: 'Has Gravity'}}]},
+        type: 'rule',
+        name: 'Has Gravity',
+        ability: 'Has Gravity',
       }),
       folderId: 'f1',
       open: true,
@@ -89,9 +92,7 @@ const SOURCE: MultiFileSource = {
       // reachable from here.
       name: 'coin.actor',
       language: 'actor',
-      contents: JSON.stringify({
-        blocks: {blocks: [{type: 'world_actor', fields: {NAME: 'Coin'}}]},
-      }),
+      contents: actorDocument({name: 'Coin'}),
       folderId: 'f2',
     },
     e: {
@@ -282,9 +283,7 @@ describe('the file acts, as each door asks them', () => {
     // …and beside the one it came from, since a clone is another of the same
     // kind of thing.
     expect(written.folderId).toBe('f1');
-    expect(JSON.parse(written.contents).blocks.blocks[0].fields.NAME).toBe(
-      'Has Heavy Gravity',
-    );
+    expect(JSON.parse(written.contents).name).toBe('Has Heavy Gravity');
   });
 
   it('renames the THING, and moves its file to match', async () => {
@@ -300,9 +299,9 @@ describe('the file acts, as each door asks them', () => {
       source: {files: Record<string, {name: string; contents: string}>};
     };
     expect(written.source.files.a.name).toBe('hasHeavyGravity.rule');
-    expect(
-      JSON.parse(written.source.files.a.contents).blocks.blocks[0].fields.NAME,
-    ).toBe('Has Heavy Gravity');
+    expect(JSON.parse(written.source.files.a.contents).name).toBe(
+      'Has Heavy Gravity',
+    );
   });
 
   it('REPLACES the sources, so an open workspace re-seeds', async () => {
@@ -408,7 +407,7 @@ describe('the file acts, as each door asks them', () => {
     // A NEW file, and the one that was there left alone.
     expect(fileName).toBe('goldPiece.actor');
     expect(source.files.f.name).toBe('coin.actor');
-    expect(source.files.f.contents).toContain('"NAME":"Coin"');
+    expect(JSON.parse(source.files.f.contents).name).toBe('Coin');
   });
 
   it('will not let the copy take a name that is taken', async () => {

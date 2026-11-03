@@ -188,12 +188,12 @@ export function setProjectEffectFiles(options: Array<[string, string]>): void {
   projectEffectFiles = options;
 }
 
-/** Replace the project rule modules the `use rule` dropdown offers (paths). */
+/** Replace the project's rule modules (paths). */
 export function setProjectRuleModules(options: Array<[string, string]>): void {
   projectRuleModules = options;
 }
 
-/** The project's own rule modules (`[label, path]`), for `world_use_rule`. */
+/** The project's own rule modules (`[label, path]`), which every world runs. */
 export function ruleModuleOptions(): Array<[string, string]> {
   return projectRuleModules;
 }

@@ -188,9 +188,9 @@ export function actorAbout(
       }
       return fileActor(block);
     }
-    // A rule says nothing about who elects it, and never can: `this actor` in a
-    // trait step is whatever holds the trait, in this project and the next.
-    if (type.startsWith('world_rule') || type === 'world_trait_step') {
+    // A step says nothing about who elects it, and never can: `this actor` in
+    // a trait's step is whatever holds the trait, in this project and the next.
+    if (type === 'world_trait_step') {
       return undefined;
     }
     // A TWEEN IS A FUNCTION OF THE ACTOR IT IS PLAYED ON, not of the actor

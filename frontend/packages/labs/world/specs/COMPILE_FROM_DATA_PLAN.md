@@ -377,6 +377,14 @@ the data. In order, each its own commit:
    refuses one written in rows. The tutor is told a rule's shape, which it
    was never shown.
 
+What only a rule in rows needed went after: the editor's body seam hides
+the bodies of `each frame` and `define drawing` and nothing of a rule's
+rows; a file is named by `define map` alone among roots, an actor and a
+rule by their `name`; `rulesInScope` no longer looks for a `use trait`
+row; and `actorAbout` no longer knows a rule's rows. The rows an actor's
+and a rule's keys are walked as (`keyRows`, `ruleKeyRows`) keep their
+types, which no file holds.
+
 ## Open
 
 - **A world's properties** were the last declarations written as blocks.

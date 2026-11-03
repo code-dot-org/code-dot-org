@@ -4,6 +4,8 @@ import {describe, expect, it} from 'vitest';
 
 import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
+import type {ActorData} from '../../actors/actorData';
+import {actorDocument} from '../../actors/actorDocument';
 import {renameThing} from '../renameThing';
 
 const file = (over: Partial<ProjectFile> & {id: string}): ProjectFile => ({
@@ -25,9 +27,7 @@ const project = (): MultiFileSource => ({
     a: file({
       id: 'a',
       name: 'player.actor',
-      contents: JSON.stringify({
-        blocks: {blocks: [{type: 'world_actor', fields: {NAME: 'Player'}}]},
-      }),
+      contents: actorDocument({name: 'Player'}),
     }),
     w: file({
       id: 'w',
@@ -95,9 +95,7 @@ describe('renaming an actor', () => {
 
     expect(refusal).toBeUndefined();
     expect(next.files.a.name).toBe('hero.actor');
-    expect(JSON.parse(read(next, 'a')).blocks.blocks[0].fields.NAME).toBe(
-      'Hero',
-    );
+    expect(JSON.parse(read(next, 'a')).name).toBe('Hero');
   });
 
   it('carries every reference to where the file went', () => {
@@ -270,33 +268,18 @@ describe('renaming a rule', () => {
         language: 'rule',
         folderId: 'rules',
         contents: JSON.stringify({
-          blocks: {blocks: [{type: 'world_rule', fields: {NAME: 'Gravity'}}]},
+          type: 'rule',
+          name: 'Gravity',
+          ability: 'Has Gravity',
         }),
       }),
       a: file({
         id: 'a',
         name: 'player.actor',
-        contents: JSON.stringify({
-          blocks: {
-            blocks: [
-              {
-                type: 'world_actor',
-                fields: {NAME: 'Player'},
-                next: {
-                  block: {
-                    type: 'world_use_trait',
-                    fields: {TRAIT: 'Gravity#AffectedByGravityTrait'},
-                    next: {
-                      block: {
-                        type: 'world_get_Gravity_StrengthProperty',
-                        fields: {},
-                      },
-                    },
-                  },
-                },
-              },
-            ],
-          },
+        contents: actorDocument({
+          name: 'Player',
+          traits: ['Gravity#AffectedByGravityTrait'],
+          code: [{type: 'world_get_Gravity_StrengthProperty', fields: {}}],
         }),
       }),
     },
@@ -310,17 +293,17 @@ describe('renaming a rule', () => {
     const source = rules();
 
     const {source: next} = renameThing(source, source.files.r, 'Heavy Air');
-    const actor = JSON.parse(next.files.a.contents).blocks.blocks[0].next.block;
+    const actor = JSON.parse(next.files.a.contents) as ActorData;
 
     // The trait carries the rule's name AS WRITTEN — `Solid Bodies#SolidTrait`
     // is how every shipped file says one — while the block type carries the
     // slug, which is the same name with the spaces taken out.
-    expect(actor.fields.TRAIT).toBe('Heavy Air#AffectedByGravityTrait');
-    expect(actor.next.block.type).toBe('world_get_HeavyAir_StrengthProperty');
+    expect(actor.traits).toEqual(['Heavy Air#AffectedByGravityTrait']);
+    expect(actor.blocks?.blocks?.blocks?.[0].type).toBe(
+      'world_get_HeavyAir_StrengthProperty',
+    );
     // …and the rule says its own new name, in the file that moved with it.
     expect(next.files.r.name).toBe('heavyAir.rule');
-    expect(JSON.parse(next.files.r.contents).blocks.blocks[0].fields.NAME).toBe(
-      'Heavy Air',
-    );
+    expect(JSON.parse(next.files.r.contents).name).toBe('Heavy Air');
   });
 });

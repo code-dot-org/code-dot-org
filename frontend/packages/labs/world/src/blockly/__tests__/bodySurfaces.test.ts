@@ -1,8 +1,8 @@
 // Splitting a workspace from its bodies, and putting them back.
 //
-// The failure this guards is silent: a merge that drops a body writes a rule
-// whose steps are empty, and nothing throws. So the test that matters is the
-// last one — every stock rule, split and merged, byte for byte what it was.
+// The failure this guards is silent: a merge that drops a body writes steps
+// and drawings that are empty, and nothing throws. So the test that matters is
+// every stock actor's code, split and merged, byte for byte what it was.
 
 import {describe, expect, it} from 'vitest';
 
@@ -11,25 +11,23 @@ import {
   BODY_OWNER_ID,
   createBodySeam,
   hasBody,
-  hasSurface,
   merge,
   reap,
   split,
 } from '../bodySurfaces';
 
-/** A rule-level step, whose body is its `DO` mouth like every member's. */
+/** `each frame`, whose body is its `DO` mouth. */
 const ruleStep = (id: string, body: unknown) => ({
-  type: 'world_rule_step_in',
+  type: 'world_trait_step',
   id,
   fields: {NAME: 'applyVelocity', PHASE: 'push'},
   inputs: {DO: {block: body}},
 });
 
-/** A designed block, whose body is its `DO` socket. */
+/** `define drawing`, whose body is its `DO` socket too. */
 const designed = (id: string, body: unknown) => ({
-  type: 'world_rule_block',
+  type: 'world_define_drawing',
   id,
-  fields: {RETURNS: 'none'},
   inputs: {DO: {block: body}},
 });
 
@@ -60,7 +58,7 @@ const surface = (body?: unknown, fields?: Record<string, unknown>) =>
       languageVersion: 0,
       blocks: [
         {
-          type: 'world_rule_block',
+          type: 'world_define_drawing',
           id: BODY_OWNER_ID,
           ...(fields ? {fields} : {}),
           ...(body ? {next: {block: body}} : {}),
@@ -74,57 +72,11 @@ const bodyOn = (document: unknown): unknown =>
   rootsOf(document)[0]?.next?.block;
 
 describe('hasBody', () => {
-  it('knows the two shapes a body takes, and nothing else', () => {
-    expect(hasBody('world_rule_step_in')).toBe(true);
-    expect(hasBody('world_rule_step_tick')).toBe(true);
-    expect(hasBody('world_rule_block')).toBe(true);
+  it('knows the two blocks a body hangs off, and nothing else', () => {
     expect(hasBody('world_trait_step')).toBe(true);
-    // A rule's and a trait's `next` is their MEMBER list, not a body.
-    expect(hasBody('world_rule')).toBe(false);
-    expect(hasBody('world_rule_trait')).toBe(false);
-    expect(hasBody('world_rule_property')).toBe(false);
-  });
-});
-
-describe('hasSurface', () => {
-  it('opens for a `define event`, which has no body at all', () => {
-    // The two questions are different: `split` asks what to take OUT of the
-    // document, and this asks what a learner can open. An event is a
-    // declaration — the blocks that run for it live under the hat it makes,
-    // in whatever file cares — so there is nothing to take, and its surface
-    // holds a signature and no body.
-    expect(hasSurface('world_rule_event')).toBe(true);
-    expect(hasBody('world_rule_event')).toBe(false);
-  });
-
-  it('never lets an event be split, which would eat the rule', () => {
-    // THE ONE THAT MATTERS. `world_rule_event`'s `next` is the member chain —
-    // what the rule declares after it. Read as a body, the rest of the rule
-    // moves inside the event and the next save writes it there.
-    const shown = split(
-      doc({
-        type: 'world_rule_event',
-        id: 'e1',
-        next: {block: {type: 'world_rule_property', id: 'p1'}},
-      }),
-    );
-
-    expect(rootsOf(shown.shown)[0].next?.block.type).toBe(
-      'world_rule_property',
-    );
-    expect(shown.bodies).toEqual({});
-  });
-
-  it('agrees with hasBody everywhere else', () => {
-    for (const type of [
-      'world_rule_step_in',
-      'world_rule_step_tick',
-      'world_rule_block',
-      'world_trait_step',
-    ]) {
-      expect(hasSurface(type), type).toBe(true);
-    }
-    expect(hasSurface('world_rule_property')).toBe(false);
+    expect(hasBody('world_define_drawing')).toBe(true);
+    // A hat's `next` is the handler itself, and stays on the surface.
+    expect(hasBody('world_on_Space_CreatedEvent')).toBe(false);
   });
 });
 
@@ -143,26 +95,24 @@ describe('split', () => {
     expect(bodies.b1).toMatchObject({type: 'world_comment'});
   });
 
-  it('keeps a rule’s members, which are also a `next` chain', () => {
-    // The distinction the whole module turns on: `next` under `define rule` is
-    // what it declares, and emptying it would empty the file.
-    const rule = {
-      type: 'world_rule',
-      id: 'r1',
-      fields: {NAME: 'Gravity'},
-      next: {block: {type: 'world_rule_property', id: 'p1'}},
+  it('keeps a handler, whose `next` is the handler itself', () => {
+    // The distinction the whole module turns on: a hat's `next` is what it
+    // does, and taking it would empty the file.
+    const hat = {
+      type: 'world_on_Space_CreatedEvent',
+      id: 'h1',
+      next: {block: statement('made')},
     };
-    const {shown, bodies} = split(doc(rule));
+    const {shown, bodies} = split(doc(hat));
 
-    expect(rootsOf(shown)[0].next?.block.type).toBe('world_rule_property');
+    expect(rootsOf(shown)[0].next?.block.type).toBe('world_comment');
     expect(bodies).toEqual({});
   });
 
-  it('reaches a step nested under a trait', () => {
+  it('reaches a step chained under another block', () => {
     const trait = {
-      type: 'world_rule_trait',
+      type: 'world_on_Space_CreatedEvent',
       id: 't1',
-      fields: {NAME: 'Affected by Gravity'},
       next: {
         block: {
           type: 'world_trait_step',
@@ -178,11 +128,11 @@ describe('split', () => {
   });
 
   it('mints an id for a block that has none', () => {
-    // The generated stock rules carry no ids; a body has to be keyed by
+    // A generated file carries no ids; a body has to be keyed by
     // something, so the split is what gives them one.
     const {shown, bodies} = split(
       doc({
-        type: 'world_rule_step_in',
+        type: 'world_trait_step',
         fields: {NAME: 'x', PHASE: 'push'},
         inputs: {DO: {block: statement('work')}},
       }),
@@ -195,7 +145,7 @@ describe('split', () => {
 
   it('leaves a step that has no body alone', () => {
     const {shown, bodies} = split(
-      doc({type: 'world_rule_step_in', id: 's1', fields: {NAME: 'x'}}),
+      doc({type: 'world_trait_step', id: 's1', fields: {NAME: 'x'}}),
     );
 
     expect(bodies).toEqual({});
@@ -241,7 +191,7 @@ describe('reap', () => {
 
   it('keeps a body whose block is nested somewhere', () => {
     const trait = {
-      type: 'world_rule_trait',
+      type: 'world_on_Space_CreatedEvent',
       id: 't1',
       next: {
         block: {
@@ -401,7 +351,7 @@ describe('the editor seam', () => {
     seam.show(doc(ruleStep('s1', statement('old'))));
     const shown = seam.show(
       doc({
-        type: 'world_rule_step_in',
+        type: 'world_trait_step',
         id: 's1',
         fields: {NAME: 'applyVelocity', PHASE: 'push'},
       }),
@@ -459,7 +409,7 @@ describe('opening one member’s body', () => {
     // which member the surface belongs to.
     const seam = createBodySeam();
     const shown = seam.show(
-      doc({type: 'world_rule_step_in', id: 's1', fields: {NAME: 'x'}}),
+      doc({type: 'world_trait_step', id: 's1', fields: {NAME: 'x'}}),
     );
     const [head] = rootsOf(seam.bodyOf('s1', shown));
 
@@ -467,19 +417,17 @@ describe('opening one member’s body', () => {
     expect(head.next).toBeUndefined();
   });
 
-  it('drops the member chain, which belongs to the interface', () => {
-    // `define block`'s `next` is the member AFTER it, and the head's `next` is
-    // read back as the body. So a member with NOTHING in it is the case that
-    // tells: carry the chain over and the rest of the rule becomes this
-    // member's implementation, and the next save writes it there. With a body
-    // present the bug hides, because the body overwrites the chain.
+  it('drops what follows the block, which belongs to the interface', () => {
+    // The head's `next` is read back as the body. So a block with NOTHING in
+    // it is the case that tells: carry what follows it over and that becomes
+    // its implementation, and the next save writes it there. With a body
+    // present the bug hides, because the body overwrites it.
     const seam = createBodySeam();
     const shown = seam.show(
       doc({
-        type: 'world_rule_block',
+        type: 'world_define_drawing',
         id: 'b1',
-        fields: {RETURNS: 'none'},
-        next: {block: {type: 'world_rule_property', id: 'p1'}},
+        next: {block: statement('after')},
       }),
     );
     const [head] = rootsOf(seam.bodyOf('b1', shown));
@@ -678,17 +626,16 @@ describe('editing one body and writing the file', () => {
 });
 
 describe('a field the head owns', () => {
-  // `RETURNS` is drawn on the body surface and nowhere else — the interface
-  // stopped offering it — so a value picked there exists in one place only
-  // until the file is written. Nothing else in the lab can see it go missing:
-  // the block still renders and the rule still compiles, it just quietly says
-  // "does something" again.
+  // A field changed on the body surface exists in one place only until the
+  // file is written. Nothing else in the lab can see it go missing: the block
+  // still renders and still compiles, it just quietly says what it said
+  // before.
 
-  const ruleWith = (returns: string) =>
+  const stepWith = (returns: string) =>
     doc({
-      type: 'world_rule_block',
+      type: 'world_trait_step',
       id: 'b1',
-      fields: {RETURNS: returns, DESCRIPTION: 'how far it fell'},
+      fields: {PHASE: returns, NAME: 'how far it fell'},
       inputs: {DO: {block: statement('work')}},
     });
 
@@ -698,39 +645,39 @@ describe('a field the head owns', () => {
 
   it('reaches the file', () => {
     const seam = createBodySeam();
-    const held = seam.show(ruleWith('none'));
+    const held = seam.show(stepWith('decide'));
 
-    seam.setBody('b1', surface(statement('work'), {RETURNS: 'number'}));
+    seam.setBody('b1', surface(statement('work'), {PHASE: 'move'}));
 
     expect(
       (blockIn(seam.read(held), 'b1') as unknown as {fields: unknown}).fields,
-    ).toMatchObject({RETURNS: 'number'});
+    ).toMatchObject({PHASE: 'move'});
   });
 
   it('leaves the fields it says nothing about alone', () => {
     // The head carries every field it draws, and the merge takes them all —
     // so a field the head never had must not be wiped by the ones it did.
     const seam = createBodySeam();
-    const held = seam.show(ruleWith('none'));
+    const held = seam.show(stepWith('decide'));
 
-    seam.setBody('b1', surface(statement('work'), {RETURNS: 'number'}));
+    seam.setBody('b1', surface(statement('work'), {PHASE: 'move'}));
 
     expect(
       (blockIn(seam.read(held), 'b1') as unknown as {fields: unknown}).fields,
-    ).toMatchObject({DESCRIPTION: 'how far it fell'});
+    ).toMatchObject({NAME: 'how far it fell'});
   });
 
   it('comes back when the same body is opened again', () => {
     // The interface the editor holds was saved before the change and does not
     // draw this field, so it is the seam that has to remember.
     const seam = createBodySeam();
-    const held = seam.show(ruleWith('none'));
-    seam.setBody('b1', surface(statement('work'), {RETURNS: 'number'}));
+    const held = seam.show(stepWith('decide'));
+    seam.setBody('b1', surface(statement('work'), {PHASE: 'move'}));
 
     const [head] = rootsOf(seam.bodyOf('b1', held));
 
     expect((head as unknown as {fields: unknown}).fields).toMatchObject({
-      RETURNS: 'number',
+      PHASE: 'move',
     });
   });
 
@@ -738,39 +685,39 @@ describe('a field the head owns', () => {
     // Otherwise a head's answer follows the learner into a file it was never
     // about, and lands on whatever happens to share an id.
     const seam = createBodySeam();
-    seam.show(ruleWith('none'));
-    seam.setBody('b1', surface(statement('work'), {RETURNS: 'number'}));
+    seam.show(stepWith('decide'));
+    seam.setBody('b1', surface(statement('work'), {PHASE: 'move'}));
 
-    const held = seam.show(ruleWith('none'));
+    const held = seam.show(stepWith('decide'));
 
     expect(
       (blockIn(seam.read(held), 'b1') as unknown as {fields: unknown}).fields,
-    ).toMatchObject({RETURNS: 'none'});
+    ).toMatchObject({PHASE: 'decide'});
   });
 
-  it('does not touch a member it does not belong to', () => {
+  it('does not touch a block it does not belong to', () => {
     const seam = createBodySeam();
     const held = seam.show(
       doc({
-        type: 'world_rule_block',
+        type: 'world_trait_step',
         id: 'b1',
-        fields: {RETURNS: 'none'},
+        fields: {PHASE: 'decide'},
         inputs: {DO: {block: statement('a')}},
         next: {
           block: {
-            type: 'world_rule_block',
+            type: 'world_trait_step',
             id: 'b2',
-            fields: {RETURNS: 'none'},
+            fields: {PHASE: 'decide'},
             inputs: {DO: {block: statement('b')}},
           },
         },
       }),
     );
 
-    seam.setBody('b1', surface(statement('a'), {RETURNS: 'number'}));
+    seam.setBody('b1', surface(statement('a'), {PHASE: 'move'}));
 
     const file = seam.read(held);
     const second = rootsOf(file)[0].next?.block as unknown as {fields: unknown};
-    expect(second.fields).toMatchObject({RETURNS: 'none'});
+    expect(second.fields).toMatchObject({PHASE: 'decide'});
   });
 });

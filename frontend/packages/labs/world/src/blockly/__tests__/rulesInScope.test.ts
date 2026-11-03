@@ -203,24 +203,35 @@ describe('a rule', () => {
   it('reads what it holds however deep in the file that sits', () => {
     // Not only the rule's own chain: a trait is a root of its own, and a step's
     // body is a tree, so the walk is over the whole document.
-    const buried = ruleFile(
-      {type: 'world_rule', fields: {NAME: 'Climbing'}},
-      {
-        type: 'world_rule_trait',
-        next: {
-          block: {
-            type: 'world_use_trait',
-            fields: {TRAIT: 'Scoring#ScoresTrait'},
-          },
+    const buried = JSON.stringify({
+      type: 'rule',
+      name: 'Climbing',
+      ability: 'Climbing',
+      traits: [
+        {
+          name: 'Climbs',
+          steps: [
+            {
+              name: 'score',
+              phase: 'decide',
+              body: {
+                type: 'controls_if',
+                inputs: {
+                  DO0: {block: {type: 'world_do_Scoring_AddToTheScoreAction'}},
+                },
+              },
+            },
+          ],
         },
-      },
-    );
+      ],
+    });
 
     expect(
       named(
         rulesInScope(
           {kind: 'rule', module: 'rules/climbing', contents: buried},
           RULES,
+          OWNERS,
         ),
       ),
     ).toEqual(['Climbing', 'Gravity', 'Physics', 'Scoring']);

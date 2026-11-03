@@ -7807,17 +7807,9 @@ const worldTraitStep = defineBlock({
     'the blocks inside act on.',
   generator: {
     javascript(block, generator) {
-      // WHAT IT IS CHAINED UNDER DECIDES WHAT IT IS, which is the same
-      // bargain `world_rule_property` makes in its three homes.
-      //
-      // Under a `define trait`, this is a DECLARATION and nothing more: the
-      // rule's module is assembled from its metadata and the body is pulled
-      // out by a pass of its own (ruleMeta), so generating anything here
-      // would be writing it twice.
-      //
-      // Under a `define actor`, there is no metadata pass and nothing else to
-      // write it — so it is the whole declaration, and this is it.
-      // `defineStep` is the behavior half of `defineProperty`: work a KIND of
+      // A trait's step is generated from the rule's data (ruleMeta), never
+      // from this block; under a `define actor` nothing else writes it, so
+      // this is the whole declaration. `defineStep` is the behavior half of `defineProperty`: work a KIND of
       // actor does every frame without a rule to do it in (ActorBuilder).
       //
       // Under a `define actor`, or it is about nobody: the module being

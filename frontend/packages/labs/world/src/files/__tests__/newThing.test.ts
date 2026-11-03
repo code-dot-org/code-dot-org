@@ -76,14 +76,14 @@ describe('what a new file starts as', () => {
 });
 
 describe('renaming a copy', () => {
-  it('rewrites a Blockly root’s name', () => {
+  it('rewrites a map’s `define map` name', () => {
     const file = JSON.stringify({
-      blocks: {blocks: [{type: 'world_rule', fields: {NAME: 'Has Gravity'}}]},
+      blocks: {blocks: [{type: 'world_map', fields: {NAME: 'Cave'}}]},
     });
 
     expect(
-      JSON.parse(renamed(file, 'Heavier')).blocks.blocks[0].fields.NAME,
-    ).toBe('Heavier');
+      JSON.parse(renamed(file, 'Deeper')).blocks.blocks[0].fields.NAME,
+    ).toBe('Deeper');
   });
 
   it('rewrites a document’s own name', () => {
