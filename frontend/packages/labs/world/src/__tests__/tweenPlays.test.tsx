@@ -1,10 +1,9 @@
-// A tween DEFINED IN A FILE and played, end to end.
+// A tween an actor holds, played from another file, end to end.
 //
 // The unit tests either side of this one cover the registry and the runtime.
-// Neither can see whether the two blocks AGREE: `define tween` emits a `const`,
-// `play tween` names that same `const`, and the generator has to have put them
-// in one module in an order where the name is already bound. Real files, real
-// generator, real ticks.
+// Neither can see whether the two AGREE: the actor's module exports the
+// tween, and the Main Screen's `play tween` imports it under the name its
+// module was given. Real files, real generator, real ticks.
 
 import {describe, expect, it} from 'vitest';
 
@@ -15,42 +14,54 @@ import {projectFiles} from '../runtime/projectFiles';
 import {compileProject} from './support/compileProject';
 import {levelScreen} from './support/levelScreen';
 
-const PLAYER = actorDocument({name: 'Player'});
+const number = (n: number) => ({
+  block: {type: 'math_number', fields: {NUM: n}},
+});
+const me = {block: {type: 'world_this_actor'}};
 
 /**
- * A world that describes a fade, places a Player, and starts the fade on it.
- *
- * `define tween` is a ROOT here rather than chained under the world, which is
- * how a definition is meant to sit — the same shape `define actor` and `define
- * drawing` have, and what makes the generated `const` reachable from anywhere
- * in the module.
+ * A Player holding two tweens: a fade, and an entrance that moves and fades
+ * at once. AN ORDINARY SETTER under each head names a destination, which is
+ * what keeps a tween's vocabulary exactly the vocabulary of properties.
  */
-const world = (seconds = 1) =>
-  levelScreen({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_define_tween',
-          id: 'fadeDef',
-          x: 20,
-          y: 300,
-          fields: {NAME: 'fade out', CURVE: 'linear'},
-          inputs: {
-            SECONDS: {block: {type: 'math_number', fields: {NUM: seconds}}},
-            // AN ORDINARY SETTER, inside the mouth. The same block that writes
-            // a property elsewhere names a destination here, which is what
-            // keeps a tween's vocabulary exactly the vocabulary of properties.
-            DO: {
-              block: {
-                type: 'world_set_Appearance_OpacityProperty',
-                inputs: {
-                  ACTOR: {block: {type: 'world_this_actor'}},
-                  VALUE: {block: {type: 'math_number', fields: {NUM: 0}}},
-                },
-              },
+const player = (seconds = 1) =>
+  actorDocument({
+    name: 'Player',
+    tweens: [
+      {
+        id: 'fade-out',
+        name: 'fade out',
+        seconds: number(seconds),
+        curve: 'linear',
+        body: {
+          type: 'world_set_Appearance_OpacityProperty',
+          inputs: {ACTOR: me, VALUE: number(0)},
+        },
+      },
+      {
+        id: 'enter',
+        name: 'enter',
+        seconds: number(1),
+        curve: 'linear',
+        body: {
+          type: 'world_set_Appearance_OpacityProperty',
+          inputs: {ACTOR: me, VALUE: number(1)},
+          next: {
+            block: {
+              type: 'world_set_position',
+              inputs: {ACTOR: me, X: number(100), Y: number(0)},
             },
           },
         },
+      },
+    ],
+  });
+
+/** A world that places a Player and starts the Player's fade on it. */
+const world = () =>
+  levelScreen({
+    blocks: {
+      blocks: [
         {
           type: 'world_on_screen_loads',
           x: 20,
@@ -63,7 +74,7 @@ const world = (seconds = 1) =>
                 DO: {
                   block: {
                     type: 'world_play_tween',
-                    fields: {TWEEN: 'fadeDef'},
+                    fields: {TWEEN: 'actors/player#fade-out'},
                     inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
                   },
                 },
@@ -82,14 +93,14 @@ const project = (seconds?: number) =>
         id: 'p',
         name: 'player.actor',
         language: 'actor',
-        contents: PLAYER,
+        contents: player(seconds),
         folderId: 'actors',
       },
       w: {
         id: 'w',
         name: 'main.screen',
         language: 'screen',
-        contents: world(seconds),
+        contents: world(),
         folderId: 'screens',
       },
     },
@@ -105,25 +116,6 @@ const broadcastWorld = levelScreen({
   blocks: {
     blocks: [
       {
-        type: 'world_define_tween',
-        id: 'fadeDef',
-        x: 20,
-        y: 300,
-        fields: {NAME: 'fade out', CURVE: 'linear'},
-        inputs: {
-          SECONDS: {block: {type: 'math_number', fields: {NUM: 1}}},
-          DO: {
-            block: {
-              type: 'world_set_Appearance_OpacityProperty',
-              inputs: {
-                ACTOR: {block: {type: 'world_this_actor'}},
-                VALUE: {block: {type: 'math_number', fields: {NUM: 0}}},
-              },
-            },
-          },
-        },
-      },
-      {
         type: 'world_on_screen_loads',
         x: 20,
         y: 20,
@@ -138,7 +130,7 @@ const broadcastWorld = levelScreen({
                 next: {
                   block: {
                     type: 'world_play_tween',
-                    fields: {TWEEN: 'fadeDef'},
+                    fields: {TWEEN: 'actors/player#fade-out'},
                     inputs: {
                       ACTOR: {
                         block: {
@@ -165,7 +157,7 @@ const broadcast = () =>
         id: 'p',
         name: 'player.actor',
         language: 'actor',
-        contents: PLAYER,
+        contents: player(),
         folderId: 'actors',
       },
       w: {
@@ -209,8 +201,8 @@ describe('a tween played on several actors at once', () => {
   });
 });
 
-describe('a tween defined in a file and played', () => {
-  it('compiles — the play block names a const the definition bound', async () => {
+describe('an actor’s tween, played from the Main Screen', () => {
+  it('compiles — the play block imports what the actor exports', async () => {
     // The agreement the unit tests cannot see. A mismatch here is a
     // ReferenceError at module scope, which takes the whole world with it.
     await expect(compileProject(project())).resolves.toBeDefined();
@@ -253,45 +245,11 @@ describe('a tween defined in a file and played', () => {
   });
 });
 
-// TWO properties in one tween, which is what the mouth is for.
-//
-// A character entering a scene moves and fades at once. Before the mouth this
-// was two tweens with two names and two `finishes` events, and a handler
-// waiting for "the entrance is over" had to guess which one to listen to.
+// TWO properties in one tween. A character entering a scene moves and fades
+// at once, and one tween is one `finishes` to wait for.
 const enterWorld = levelScreen({
   blocks: {
     blocks: [
-      {
-        type: 'world_define_tween',
-        id: 'enterDef',
-        x: 20,
-        y: 300,
-        fields: {NAME: 'enter', CURVE: 'linear'},
-        inputs: {
-          SECONDS: {block: {type: 'math_number', fields: {NUM: 1}}},
-          DO: {
-            block: {
-              type: 'world_set_Appearance_OpacityProperty',
-              inputs: {
-                ACTOR: {block: {type: 'world_this_actor'}},
-                VALUE: {block: {type: 'math_number', fields: {NUM: 1}}},
-              },
-              // Chained, so the mouth holds two rows — which is the entire
-              // point of it being a mouth rather than one dropdown.
-              next: {
-                block: {
-                  type: 'world_set_position',
-                  inputs: {
-                    ACTOR: {block: {type: 'world_this_actor'}},
-                    X: {block: {type: 'math_number', fields: {NUM: 100}}},
-                    Y: {block: {type: 'math_number', fields: {NUM: 0}}},
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
       {
         type: 'world_on_screen_loads',
         x: 20,
@@ -311,7 +269,7 @@ const enterWorld = levelScreen({
                   next: {
                     block: {
                       type: 'world_play_tween',
-                      fields: {TWEEN: 'enterDef'},
+                      fields: {TWEEN: 'actors/player#enter'},
                       inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
                     },
                   },
@@ -332,7 +290,7 @@ const entering = () =>
         id: 'p',
         name: 'player.actor',
         language: 'actor',
-        contents: PLAYER,
+        contents: player(),
         folderId: 'actors',
       },
       w: {
@@ -455,7 +413,7 @@ const inline = () =>
         id: 'p',
         name: 'player.actor',
         language: 'actor',
-        contents: PLAYER,
+        contents: player(),
         folderId: 'actors',
       },
       w: {

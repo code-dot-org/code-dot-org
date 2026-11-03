@@ -160,7 +160,7 @@ import {
   spriteOptions,
 } from './moduleOptions';
 import {type OwnMeta} from './ownProperties';
-import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from './pageHeads';
+import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD, TWEEN_HEAD} from './pageHeads';
 import {inHand} from './ruleMeta';
 import type {
   ActionMeta,
@@ -191,15 +191,16 @@ import {
   cameraTraitOptions,
   cameraTraitOptionsExtension,
 } from './traitOptions';
+import {tweenHead} from './tweenHead';
 import {
-  DEFINE_TWEEN,
+  CURVE_OPTIONS,
   inTweenBody,
+  projectTween,
+  tweenExport,
   PLAY_TWEEN_HERE,
   tweenStepCode,
   tweenOptions,
   tweenOptionsExtension,
-  tweensIn,
-  tweenVar,
 } from './tweens';
 import {
   ActorVariable,
@@ -1855,9 +1856,6 @@ const EVENT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
 export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   ...EVENT_BLOCKS.map(block => block.type),
   'world_actor',
-  // A tween's definition, for both of the reasons above: it declares rather
-  // than does, and a chained one would be an orphan at the top level.
-  'world_define_tween',
   // A map's own hats (specs/MAP_FIRST.md): the body chains below them.
   'world_on_map_loads',
   'world_on_map_unloads',
@@ -9264,83 +9262,10 @@ const RUNTIME_TRAIT_NOTE =
   'values it had then.';
 
 /**
- * `define tween ⟨name⟩` — a movement of one property, named and reusable.
- *
- * A DEFINITION ROOT, like `define actor`: it declares
- * something and generates a `const`, and playing it is a separate block. The
- * alternative — one block that both describes and starts the movement — cannot
- * be reused, and a game fades a dozen things the same way.
- *
- * NO `from`. A tween starts wherever the property already is, captured when it
- * is played (`engine/core/tween`): "fade out" means from however visible you
- * are now, and a definition that fixed the start would snap before it moved.
- */
-const worldDefineTween = defineBlock({
-  type: DEFINE_TWEEN,
-  message0: 'define tween %1',
-  args0: [{type: 'field_input', name: 'NAME', text: 'fade out'}],
-  message1: 'over %1 seconds, %2',
-  args1: [
-    {type: 'input_value', name: 'SECONDS', check: 'Number'},
-    {
-      type: 'field_dropdown',
-      name: 'CURVE',
-      options: [
-        ['steadily', 'linear'],
-        ['starting slowly', 'ease-in'],
-        ['ending slowly', 'ease-out'],
-        ['slow at both ends', 'ease-in-out'],
-      ],
-    },
-  ],
-  message2: 'move %1',
-  args2: [{type: 'input_statement', name: 'DO'}],
-  // A ROOT, with no connections, for two reasons. It declares something
-  // rather than doing something, so there is no moment for it to happen AT;
-  // and a top-level block that has a previous connection is disabled as an
-  // orphan by `DisableOrphansPlugin`, along with everything below it.
-  extensions: [valueShadowExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'Describe a movement over time. Put ordinary `set` blocks inside it — ' +
-    'each one is a destination rather than a write. Nothing happens until ' +
-    'something plays it.',
-  generator: {
-    javascript(block, generator) {
-      const name = String(block.getFieldValue('NAME') ?? 'tween');
-      const seconds =
-        generator.valueToCode(block, 'SECONDS', Order.NONE) || '0';
-      // A FUNCTION OF THE ACTOR, not a record.
-      //
-      // This is what lets an ordinary `set` block live inside: the body can
-      // then say `this actor`, read another property off it, or compute a
-      // destination from where it is now — none of which a `const` evaluated
-      // once at module scope could do. `play tween` calls it with whoever the
-      // tween is played on.
-      const destinations = generator.statementToCode(block, 'DO') || '';
-      return (
-        `const ${tweenVar(name, block.id)} = (actor) => ({` +
-        `id: ${str(name)}, duration: ${seconds}, ` +
-        `curve: ${str(String(block.getFieldValue('CURVE') ?? 'linear'))}, ` +
-        `steps: [\n${destinations}]});\n`
-      );
-    },
-  },
-});
-
-// A second, not nothing. An empty socket generates `0`, and a tween of no
-// length lands on its destinations the frame it starts — which looks exactly
-// like a tween that did not run, and is the first thing anybody dragging this
-// block out would see.
-registerValueShadows(DEFINE_TWEEN, [
-  {name: 'SECONDS', shadow: {type: 'math_number', fields: {NUM: 1}}},
-]);
-
-/**
  * `play a tween on ⟨…⟩` — a tween with no name, written where it is used.
  *
- * The named pair — `define tween` and `play tween` — is what a movement several
- * things share wants: describe it once, play it wherever. Most tweens are not
+ * A tween an actor holds, and `play tween`, is what a movement several things
+ * share wants: describe it once, play it wherever. Most tweens are not
  * that. A door that slides open once, a title that fades on the way to the
  * menu: putting each in a definition somewhere else, to name it and then name
  * it again, is ceremony for a thing used in one place.
@@ -9358,16 +9283,7 @@ const worldPlayTweenHere = defineBlock({
   message1: 'over %1 seconds, %2',
   args1: [
     {type: 'input_value', name: 'SECONDS', check: 'Number'},
-    {
-      type: 'field_dropdown',
-      name: 'CURVE',
-      options: [
-        ['steadily', 'linear'],
-        ['starting slowly', 'ease-in'],
-        ['ending slowly', 'ease-out'],
-        ['slow at both ends', 'ease-in-out'],
-      ],
-    },
+    {type: 'field_dropdown', name: 'CURVE', options: CURVE_OPTIONS},
   ],
   message2: 'move %1',
   args2: [{type: 'input_statement', name: 'DO'}],
@@ -9426,7 +9342,7 @@ const worldPlayTween = defineBlock({
   extensions: [actorInputExtension, tweenOptionsExtension],
   style: 'behavior_blocks',
   tooltip:
-    'Start a movement this file describes. It carries on by itself; a ' +
+    'Start a movement an actor describes. It carries on by itself; a ' +
     '“tween finishes” handler is how to hear about the end.',
   generator: {
     javascript(block, generator) {
@@ -9437,24 +9353,35 @@ const worldPlayTween = defineBlock({
         // generate nothing rather than a name with nothing behind it.
         return '';
       }
-      const defined = tweensIn(block.workspace).find(
-        held => held.blockId === chosen,
-      );
-      if (!defined) {
-        // The definition was deleted and this still names it.
+      const tween = projectTween(chosen);
+      if (!tween) {
+        // The tween, or the actor that held it, was deleted and this still
+        // names it.
         return '';
       }
-      const held = tweenVar(defined.name, defined.blockId);
-      // CALLED with the actor, because the definition is a function of one —
-      // that is what lets a `set` block inside it say `this actor`.
+      // The actor's own, by its exported name; another's, imported under its
+      // actor's slug, as a member's call is (`refCode`).
+      const exported = tweenExport(tween.id);
+      const own =
+        tween.module === (generator as {__ruleModule?: string}).__ruleModule;
+      const local = own ? exported : `${pathSlug(tween.module)}_${exported}`;
+      if (!own) {
+        addImport(
+          generator,
+          `named:${tween.module}:${exported}`,
+          `import {${exported} as ${local}} from ${str(tween.module)};`,
+        );
+      }
+      // CALLED with the actor, because the tween is a function of one —
+      // that is what lets a `set` row inside it say `this actor`.
       //
-      // `from` is read HERE, not in the definition: a destination is a fact
+      // `from` is read HERE, not in the tween: a destination is a fact
       // about where to go, and where you started is a fact about the moment
       // you set off.
       return forEachActor(
         actorTarget(block, generator),
         who =>
-          `${who}.startTween(WorldLab.beginTween(${held}(${who}), ${who}), ` +
+          `${who}.startTween(WorldLab.beginTween(${local}(${who}), ${who}), ` +
           `WorldLab.tweenDisplaced)`,
       );
     },
@@ -9518,7 +9445,6 @@ export const DOMAIN_BLOCKS = [
   worldType,
   worldPressKey,
   worldKeyboardArrived,
-  worldDefineTween,
   worldPlayTween,
   worldPlayTweenHere,
   worldAddTrait,
@@ -9627,6 +9553,7 @@ export const DOMAIN_BLOCKS = [
   memberHead,
   stepHead,
   drawingHead,
+  tweenHead,
   worldDoc,
   worldReturn,
   worldCountWith,
@@ -9880,8 +9807,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_pause_game',
       'world_resume_game',
       'world_game_is_paused',
-      // Movement over time: described once, played wherever.
-      'world_define_tween',
+      // Movement over time: an actor's, played wherever.
       'world_play_tween',
       // …and the same movement written where it is used, for the one that is
       // not shared and has nobody waiting to hear it end.
@@ -10638,6 +10564,7 @@ export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   MEMBER_HEAD,
   STEP_HEAD,
   DRAWING_HEAD,
+  TWEEN_HEAD,
 ]);
 
 /**

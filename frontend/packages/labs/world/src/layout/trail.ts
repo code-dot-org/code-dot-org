@@ -23,7 +23,9 @@ export type ScriptStep =
   /** …and a step, a rule's by its owner and place (`ruleSteps`), an actor's by its place (`actorSteps`). */
   | {kind: 'step'; id: string; trait?: string}
   /** An actor's drawing (`actorDrawing`). */
-  | {kind: 'drawing'};
+  | {kind: 'drawing'}
+  /** …and one of its tweens, by id (`actorTweens`). */
+  | {kind: 'tween'; id: string};
 
 /** One step: a file, or a script open within it. */
 export interface TrailStep {

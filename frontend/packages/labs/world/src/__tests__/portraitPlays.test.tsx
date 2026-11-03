@@ -13,6 +13,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import type {ActorData} from '../actors/actorData';
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
 import {OpacityProperty} from '../engine';
@@ -82,13 +83,11 @@ describe('a Portrait', () => {
     expect(actor.get(OpacityProperty)).toBe(0);
   });
 
-  it('defines no tween, because nothing outside this file could play one', () => {
-    // Recorded as a test because `enters` is the obvious thing to add here and
-    // reads as an improvement. A `play tween` names a definition in its OWN
-    // workspace, so one written here is reachable only from a handler here —
-    // and when the character comes on is the scene's call, not the portrait's.
-    expect(stockActorById('portrait')!.contents).not.toContain(
-      'world_define_tween',
-    );
+  it('ships its entrance and its exit, and plays neither', () => {
+    // When the character comes on is the scene's call, so the scene plays
+    // them (`play tween ⟨Portrait: enters⟩`, as the Novel does).
+    const data = JSON.parse(stockActorById('portrait')!.contents) as ActorData;
+    expect(data.tweens?.map(tween => tween.id)).toEqual(['enters', 'leaves']);
+    expect(JSON.stringify(data.blocks)).not.toContain('world_play_tween');
   });
 });

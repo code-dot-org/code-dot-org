@@ -120,6 +120,8 @@ export interface ActorData {
   drawing?: ActorDrawing;
   /** What it does every frame. */
   steps?: ActorStep[];
+  /** Movements it can be given, played by `play tween` (specs/TWEENS_AS_DATA_PLAN.md). */
+  tweens?: ActorTween[];
   /** The handlers and the code, as roots of the workspace. */
   blocks?: SavedWorkspace;
   [key: string]: unknown;
@@ -140,6 +142,19 @@ export interface Socket {
 export interface ActorDrawing {
   width: Socket;
   height: Socket;
+  body?: Block;
+}
+
+/**
+ * A movement over time: how long, on what curve, and the `set` rows that say
+ * where each property ends up. `id` is what `play tween` names, and outlives
+ * a rename.
+ */
+export interface ActorTween {
+  id: string;
+  name: string;
+  seconds: Socket;
+  curve: string;
   body?: Block;
 }
 

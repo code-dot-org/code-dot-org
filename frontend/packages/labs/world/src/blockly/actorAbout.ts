@@ -37,7 +37,8 @@ import {editingActorModule} from './editingRule';
 import {SUBJECT_FIELD, subjectPropertyOf} from './eventSubject';
 import {NAME_FIELD, NAMED} from './extensions/addActorName';
 import {addOnChange, isStructuralChange} from './extensions/onChange';
-import {DEFINE_TWEEN, PLAY_TWEEN_HERE} from './tweens';
+import {TWEEN_HEAD} from './pageHeads';
+import {PLAY_TWEEN_HERE} from './tweens';
 import {holdsGameCode} from './workspaceRoots';
 
 /** How big the picture is drawn on a block, square. */
@@ -197,7 +198,7 @@ export function actorAbout(
     // the Pad is where it read as one: its tweens fade whatever steps on it,
     // played on `object actor` from the pad's own handlers, and every `this
     // actor` inside them wore a picture of the pad.
-    if (type === DEFINE_TWEEN || type === PLAY_TWEEN_HERE) {
+    if (type === TWEEN_HEAD || type === PLAY_TWEEN_HERE) {
       return undefined;
     }
   }

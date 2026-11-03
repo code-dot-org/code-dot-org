@@ -49,7 +49,7 @@ import {
   parseActorOwnMeta,
   type OwnMeta,
 } from './ownProperties';
-import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from './pageHeads';
+import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD, TWEEN_HEAD} from './pageHeads';
 import {
   CAMERA_SETTINGS_ID,
   withCameraSettings,
@@ -75,6 +75,7 @@ import {
 } from './screenData';
 import {standInBlocks} from './standInBlocks';
 import {traitSubjectOfValue} from './traitOptions';
+import {tweenExport} from './tweens';
 import {markCode} from './workspaceRoots';
 
 // Headless Blockly → world-lab code generation for `.rule`/`.actor` files
@@ -377,6 +378,7 @@ const HEADS: ReadonlySet<string> = new Set([
   MEMBER_HEAD,
   STEP_HEAD,
   DRAWING_HEAD,
+  TWEEN_HEAD,
 ]);
 
 /**
@@ -446,6 +448,19 @@ function actorCode(
       code +=
         `actor.defineDrawing(${measure('WIDTH')}, ${measure('HEIGHT')}, ` +
         `(actor, pen, world) => {\n${bodyBelow(piece.head)}});\n`;
+    } else if (piece.kind === 'tween') {
+      const head = workspace.getBlockById(piece.head);
+      if (!head) {
+        continue;
+      }
+      // A FUNCTION OF THE ACTOR it is played on, so a destination may read
+      // it; exported, so another file may play it (`play tween`).
+      const seconds = generator.valueToCode(head, 'SECONDS', Order.NONE) || '0';
+      code +=
+        `export const ${tweenExport(piece.id)} = (actor) => ({` +
+        `id: ${JSON.stringify(piece.name)}, duration: ${seconds}, ` +
+        `curve: ${JSON.stringify(String(head.getFieldValue('CURVE') ?? 'linear'))}, ` +
+        `steps: [\n${bodyBelow(piece.head)}]});\n`;
     } else if (piece.kind === 'step') {
       code +=
         `actor.defineStep(${JSON.stringify(slug(piece.name || 'do something'))}, ` +

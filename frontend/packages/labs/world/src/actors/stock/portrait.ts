@@ -7,22 +7,13 @@
 // one field anybody can fill in; knowing to start at nothing is the part
 // learned by getting it wrong.
 //
-// IT SHIPS NO TWEENS, AND THE REASON IS WORTH WRITING DOWN, because `enters`
-// and `leaves` are the obvious things to put here and were here until they
-// were found to be unreachable. A `play tween` names its definition by the
-// DEFINING BLOCK'S ID and the dropdown is built from the blocks in its own
-// workspace (`tweensIn`), so a definition in this file can only ever be played
-// by a handler in this file — and a portrait's entrance is the SCENE's
-// decision, not the portrait's. There is no handler to write here that would
-// not be guessing when the story wants it.
-//
-// So a project fades it where the fade belongs, with `play tween … do` at the
-// line that brings the character on — which is what `src/fixtures/novel.ts`
-// does. A shipped `enters` becomes possible when tweens can live in a file of
-// their own, shared across files the way an actor is; until then, one written
-// here is a definition nothing can name.
+// IT SHIPS ITS ENTRANCE AND ITS EXIT, `enters` and `leaves`, and plays
+// neither: when a character comes on is the scene's decision, so the scene
+// plays them (`play tween ⟨Portrait: enters⟩`, as `fixtures/novel` does).
 
 import {actorDocument} from '../actorDocument';
+
+import {opacityTo, tween} from './workspace';
 
 /** The picture it shows until a project gives it a face of its own. */
 export const PORTRAIT_SPRITE = 'player';
@@ -37,5 +28,9 @@ export const portraitActor = actorDocument({
   values: [
     // Off screen until it is asked for.
     {setter: 'world_set_Appearance_OpacityProperty', type: 'number', value: 0},
+  ],
+  tweens: [
+    tween('enters', 'enters', 0.4, 'ease-out', [opacityTo(1)]),
+    tween('leaves', 'leaves', 0.4, 'ease-in', [opacityTo(0)]),
   ],
 });

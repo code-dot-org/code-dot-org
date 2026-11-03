@@ -394,14 +394,14 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Foundation: Motion
 
-| Tile             | The lesson                                                                                                         | Unlocks                              | Check                                                                   |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------- |
-| `motion/speed`   | Setting a position every frame is not how things move. Elect Can Move, and give that one actor a speed of its own. | Physics rule; `Can Move`             | `[o]` position changes with no per-frame block in the workspace         |
-| `motion/units`   | A speed is units per second and a unit is 100 pixels. Make an actor cross the screen in exactly two seconds.       | `pixels per unit`; the vector blocks | `[o]` the crossing takes 2s ± 0.2s on the scripted clock                |
-| `motion/force`   | A shove changes a speed; a speed changes a place. Push the actor with a force and watch the two steps.             | `apply force`                        | `[o]` velocity after the shove is within tolerance of the expected      |
-| `motion/drag`    | Nothing in space stops. Add Drag and turn a spaceship into a car.                                                  | Drag rule                            | `[o]` speed decays below a tenth within the scripted window             |
-| `motion/gravity` | Down. Two ticks in Enhance and a painted floor; then a hat, to hear it land.                                       | Gravity rule; `Acts as Ground`       | `[o]` y rises then holds at the ground; `[t]` "stops falling" fired     |
-| `motion/tween`   | Movement described once and played wherever: a door that opens, a platform that slides.                            | `define tween`, `play tween`         | `[o]` the actor is at the tween's end position when it reports finished |
+| Tile             | The lesson                                                                                                         | Unlocks                                 | Check                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------- | ----------------------------------------------------------------------- |
+| `motion/speed`   | Setting a position every frame is not how things move. Elect Can Move, and give that one actor a speed of its own. | Physics rule; `Can Move`                | `[o]` position changes with no per-frame block in the workspace         |
+| `motion/units`   | A speed is units per second and a unit is 100 pixels. Make an actor cross the screen in exactly two seconds.       | `pixels per unit`; the vector blocks    | `[o]` the crossing takes 2s ± 0.2s on the scripted clock                |
+| `motion/force`   | A shove changes a speed; a speed changes a place. Push the actor with a force and watch the two steps.             | `apply force`                           | `[o]` velocity after the shove is within tolerance of the expected      |
+| `motion/drag`    | Nothing in space stops. Add Drag and turn a spaceship into a car.                                                  | Drag rule                               | `[o]` speed decays below a tenth within the scripted window             |
+| `motion/gravity` | Down. Two ticks in Enhance and a painted floor; then a hat, to hear it land.                                       | Gravity rule; `Acts as Ground`          | `[o]` y rises then holds at the ground; `[t]` "stops falling" fired     |
+| `motion/tween`   | Movement described once and played wherever: a door that opens, a platform that slides.                            | a tween on the Blocks tab, `play tween` | `[o]` the actor is at the tween's end position when it reports finished |
 
 ### Foundation: Logic
 

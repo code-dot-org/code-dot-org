@@ -101,9 +101,11 @@ import {
   drawText,
   fill,
   labelValue,
+  opacityTo,
   rectangle,
   setText,
   stockAnimations,
+  tween,
 } from '../actors/stock/workspace';
 import {
   gameScreen,
@@ -873,47 +875,23 @@ const diggableLedgeActor = (name: string, sprite: string) =>
         value: 3,
       },
     ],
+    // A HOLE HAS TO LOOK LIKE ONE, which is the half this was missing:
+    // `passes through things` is invisible, so a dug ledge went on looking
+    // like solid floor while the Pilot fell through it, and the mechanic
+    // read as a bug. Faded rather than switched, because the moment a
+    // block gives way is the moment worth seeing — and the two events the
+    // rule already raises are exactly the two ends of it.
+    tweens: [
+      tween('give-way', 'give way', 0.25, 'linear', [opacityTo(0.25)]),
+      tween('come-back', 'come back', 0.25, 'linear', [opacityTo(1)]),
+    ],
     code: [
-      // A HOLE HAS TO LOOK LIKE ONE, which is the half this was missing:
-      // `passes through things` is invisible, so a dug ledge went on looking
-      // like solid floor while the Pilot fell through it, and the mechanic
-      // read as a bug. Faded rather than switched, because the moment a
-      // block gives way is the moment worth seeing — and the two events the
-      // rule already raises are exactly the two ends of it.
-      {
-        type: 'world_define_tween',
-        id: 'ledgeGiveWay',
-        fields: {NAME: 'give way', CURVE: 'linear'},
-        inputs: {
-          SECONDS: number(0.25),
-          DO: {
-            block: {
-              type: 'world_set_Appearance_OpacityProperty',
-              inputs: {ACTOR: me(), VALUE: number(0.25)},
-            },
-          },
-        },
-      },
-      {
-        type: 'world_define_tween',
-        id: 'ledgeComeBack',
-        fields: {NAME: 'come back', CURVE: 'linear'},
-        inputs: {
-          SECONDS: number(0.25),
-          DO: {
-            block: {
-              type: 'world_set_Appearance_OpacityProperty',
-              inputs: {ACTOR: me(), VALUE: number(1)},
-            },
-          },
-        },
-      },
       {
         type: 'world_on_Digging_IsDugEvent',
         next: {
           block: {
             type: 'world_play_tween',
-            fields: {TWEEN: 'ledgeGiveWay'},
+            fields: {TWEEN: 'actors/ledge#give-way'},
             inputs: {ACTOR: me()},
           },
         },
@@ -924,7 +902,7 @@ const diggableLedgeActor = (name: string, sprite: string) =>
           block: stack([
             {
               type: 'world_play_tween',
-              fields: {TWEEN: 'ledgeComeBack'},
+              fields: {TWEEN: 'actors/ledge#come-back'},
               inputs: {ACTOR: me()},
             },
             onlyIf(
@@ -1236,9 +1214,9 @@ const switchActor = (name: string, color: string) =>
  * beside the traveler's `starts traveling` and `arrives`. The traveler
  * reaches this handler as `object actor`.
  *
- * A TWEEN IS A FUNCTION OF ONE ACTOR, defined in the file that holds it and
- * called with whoever it is played on — so the pad's `fade out` runs on the
- * traveler without the traveler defining anything.
+ * A TWEEN IS A FUNCTION OF ONE ACTOR, called with whoever it is played on —
+ * so the pad's `fade out` runs on the traveler without the traveler holding
+ * anything.
  */
 const padActor = (seconds: number) =>
   actorDocument({
@@ -1257,41 +1235,17 @@ const padActor = (seconds: number) =>
         rectangle(0, 22, 32, 10),
       ]) as Block,
     },
+    tweens: [
+      tween('fade-out', 'fade out', seconds, 'linear', [opacityTo(0)]),
+      tween('fade-in', 'fade in', seconds, 'linear', [opacityTo(1)]),
+    ],
     code: [
-      {
-        type: 'world_define_tween',
-        id: 'padFadeOut',
-        fields: {NAME: 'fade out', CURVE: 'linear'},
-        inputs: {
-          SECONDS: number(seconds),
-          DO: {
-            block: {
-              type: 'world_set_Appearance_OpacityProperty',
-              inputs: {ACTOR: me(), VALUE: number(0)},
-            },
-          },
-        },
-      },
-      {
-        type: 'world_define_tween',
-        id: 'padFadeIn',
-        fields: {NAME: 'fade in', CURVE: 'linear'},
-        inputs: {
-          SECONDS: number(seconds),
-          DO: {
-            block: {
-              type: 'world_set_Appearance_OpacityProperty',
-              inputs: {ACTOR: me(), VALUE: number(1)},
-            },
-          },
-        },
-      },
       {
         type: 'world_on_Teleport_SendsEvent',
         next: {
           block: {
             type: 'world_play_tween',
-            fields: {TWEEN: 'padFadeOut'},
+            fields: {TWEEN: 'actors/pad#fade-out'},
             inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
           },
         },
@@ -1301,7 +1255,7 @@ const padActor = (seconds: number) =>
         next: {
           block: {
             type: 'world_play_tween',
-            fields: {TWEEN: 'padFadeIn'},
+            fields: {TWEEN: 'actors/pad#fade-in'},
             inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
           },
         },

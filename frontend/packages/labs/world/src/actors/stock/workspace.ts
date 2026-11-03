@@ -19,6 +19,7 @@ import {
   type ActorLiteral,
   type ActorMember,
   type ActorStep,
+  type ActorTween,
   type ActorProperty,
   type ActorValue,
   type Block,
@@ -203,6 +204,27 @@ export const drawing = (spec: {
     ? num(spec.height)
     : spec.height) as Socket,
   ...(spec.commands.length ? {body: chain(spec.commands) as Block} : {}),
+});
+
+/** `set opacity of ⟨this actor⟩ to ⟨n⟩`: in a tween, how solid it ends up. */
+export const opacityTo = (value: number) => ({
+  type: 'world_set_Appearance_OpacityProperty',
+  inputs: {ACTOR: me(), VALUE: num(value)},
+});
+
+/** A movement a kind can be given, as data: its destinations are `set` rows. */
+export const tween = (
+  id: string,
+  name: string,
+  seconds: number,
+  curve: string,
+  destinations: object[],
+): ActorTween => ({
+  id,
+  name,
+  seconds: num(seconds) as Socket,
+  curve,
+  ...(destinations.length ? {body: chain(destinations) as Block} : {}),
 });
 
 /** What a kind does every frame, in the moment named, as data. */

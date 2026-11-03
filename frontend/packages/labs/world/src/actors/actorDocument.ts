@@ -13,6 +13,7 @@ import {
   type ActorMember,
   type ActorProperty,
   type ActorStep,
+  type ActorTween,
   type ActorValue,
   type Block,
 } from './actorData';
@@ -35,6 +36,7 @@ export interface ActorSpec {
   animations?: Record<string, Timeline>;
   drawing?: ActorDrawing;
   steps?: ActorStep[];
+  tweens?: ActorTween[];
   /** Its handlers, in reading order. */
   code?: Block[];
   /** The variables its code's blocks name. */

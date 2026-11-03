@@ -1057,10 +1057,11 @@ until something plays it.
    the Post's place. Run it: the Door travels there.
 3. Change the curve from **steadily** to **slow at both ends** and watch the
    difference.
-4. Now do it the other way. **define tween** at the top of the file describes
-   the same journey once, under a name; **play tween** plays it on anything.
-   A movement several things share belongs in a definition; a movement one
-   thing does belongs where it happens.
+4. Now do it the other way. Open the Door, press **New tween** on its
+   **Blocks** tab, and describe the same journey once, under a name; **play
+   tween** plays it on anything, from any file. A movement several things
+   share belongs to an actor; a movement one thing does belongs where it
+   happens.
 `.trim(),
 };
 

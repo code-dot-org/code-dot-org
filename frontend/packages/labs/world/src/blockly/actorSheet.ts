@@ -7,7 +7,8 @@
 // blocks: its still picture, the values set on it and its effects, chained
 // under a `define actor` root where `actor` is the builder;
 // its handlers beside it; and each block's body, its drawing and each of its
-// steps under its page's head (`memberHead`, `drawingHead`, `stepHead`).
+// steps and its tweens under its page's head (`memberHead`, `drawingHead`,
+// `stepHead`, `tweenHead`).
 
 import {
   MAIN_ANIMATION,
@@ -19,7 +20,7 @@ import {
 } from '../actors/actorData';
 import type {Timeline} from '../engine/core/keyframes';
 
-import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD} from './pageHeads';
+import {DRAWING_HEAD, MEMBER_HEAD, STEP_HEAD, TWEEN_HEAD} from './pageHeads';
 
 const ROOT = 'world_actor';
 
@@ -35,7 +36,8 @@ export type ActorPiece =
   | {kind: 'event'; parts: Part[]}
   | {kind: 'block'; parts: Part[]; returns?: string; head?: string}
   | {kind: 'drawing'; head: string}
-  | {kind: 'step'; name: string; phase?: string; head: string};
+  | {kind: 'step'; name: string; phase?: string; head: string}
+  | {kind: 'tween'; id: string; name: string; head: string};
 
 export interface ActorSheet {
   /** What is loaded: the root and its rows, the handlers, and the heads. */
@@ -136,6 +138,19 @@ export function actorSheet(data: ActorData): ActorSheet {
       ...(step.phase === undefined ? {} : {phase: step.phase}),
       head,
     });
+  }
+  for (const tween of data.tweens ?? []) {
+    const head = `head-${heads.length}`;
+    heads.push({
+      type: TWEEN_HEAD,
+      id: head,
+      x: 20,
+      y: 20,
+      fields: {NAME: tween.name, CURVE: tween.curve},
+      inputs: {SECONDS: tween.seconds},
+      ...(tween.body ? {next: {block: tween.body}} : {}),
+    });
+    pieces.push({kind: 'tween', id: tween.id, name: tween.name, head});
   }
   const roots = (data.blocks?.blocks?.blocks ?? []) as Block[];
 

@@ -11,6 +11,7 @@ import {useSources} from '@code-dot-org/lab/contexts';
 
 import {actorDataOf, memberName} from '../actors/actorData';
 import {actorStepAt} from '../actors/actorSteps';
+import {actorTweenAt} from '../actors/actorTweens';
 import {ruleDataOf} from '../rules/ruleEdits';
 import {ruleMemberName} from '../rules/ruleMembers';
 import {stepAtOf, stepOf} from '../rules/ruleSteps';
@@ -36,6 +37,12 @@ export const Breadcrumb = () => {
     const file = currentSources.source.files[step.fileId];
     if (step.script?.kind === 'drawing') {
       return 'Drawing';
+    }
+    if (step.script?.kind === 'tween') {
+      const data = actorDataOf(file?.contents ?? '');
+      return (
+        (data && actorTweenAt(data, step.script.id)?.tween.name) || 'Tween'
+      );
     }
     if (step.script?.kind === 'step' && file?.name.endsWith('.actor')) {
       const data = actorDataOf(file.contents ?? '');

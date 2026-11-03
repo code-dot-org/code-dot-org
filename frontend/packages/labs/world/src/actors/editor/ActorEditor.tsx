@@ -86,6 +86,12 @@ import {
   setActorStep,
   withActorStepDocument,
 } from '../actorSteps';
+import {
+  actorTweenAt,
+  addActorTween,
+  removeActorTween,
+  tweenUses,
+} from '../actorTweens';
 import {requestActorEnhance} from '../enhance/actorEnhance';
 
 import styles from './actorEditor.module.css';
@@ -131,6 +137,7 @@ import {MembersTab} from './MembersTab';
 import {MomentPanel} from './MomentPanel';
 import {SelfProperty} from './SelfProperty';
 import {TimelineStrip} from './TimelineStrip';
+import {TweenPage} from './TweenPage';
 import {ValueField} from './ValueField';
 
 const parse = (contents: string): ActorData | undefined => {
@@ -563,6 +570,31 @@ export const ActorEditor = (props: CustomEditorProps) => {
     setReturnTo(left ? `step-${Math.min(at, left - 1)}` : 'new-step');
   };
 
+  const deleteTween = async (id: string) => {
+    const found = data && actorTweenAt(data, id);
+    if (!data || !found) {
+      return;
+    }
+    const uses = tweenUses(currentSources.source, modulePath, id).map(one =>
+      fileLabel(currentSources.source.files[one]),
+    );
+    if (
+      !(await confirm({
+        title: 'Delete tween',
+        message: uses.length
+          ? `Delete “${found.tween.name}”? The code in ${uses.join(', ')} ` +
+            'plays it, and will play nothing where it does.'
+          : `Delete “${found.tween.name}”? No code plays it.`,
+      }))
+    ) {
+      return;
+    }
+    const left = (data.tweens ?? []).filter(one => one.id !== id);
+    edit(removeActorTween(data, id));
+    const next = left[Math.min(found.at, left.length - 1)];
+    setReturnTo(next ? `tween-${next.id}` : 'new-tween');
+  };
+
   /** Its own drawing, opened: a copy of the one it inherits, or a blank one. */
   const drawItsOwn = () => {
     if (data) {
@@ -762,6 +794,25 @@ export const ActorEditor = (props: CustomEditorProps) => {
         {backToActor}
         <DrawingPage
           data={data}
+          fileId={fileId}
+          isReadOnly={isReadOnly}
+          onUpdate={update}
+        />
+      </div>
+    );
+  }
+
+  const tweenOpen =
+    data && script?.kind === 'tween'
+      ? actorTweenAt(data, script.id)
+      : undefined;
+  if (data && tweenOpen) {
+    return (
+      <div className={styles.code}>
+        {backToActor}
+        <TweenPage
+          data={data}
+          tween={tweenOpen.tween}
           fileId={fileId}
           isReadOnly={isReadOnly}
           onUpdate={update}
@@ -1382,6 +1433,17 @@ export const ActorEditor = (props: CustomEditorProps) => {
                   setScript({kind: 'step', id: actorStepId(at)});
                 }}
                 onDeleteStep={at => void deleteStep(at)}
+                onEditTween={id => {
+                  setReturnTo(`tween-${id}`);
+                  setScript({kind: 'tween', id});
+                }}
+                onDeleteTween={id => void deleteTween(id)}
+                onNewTween={() => {
+                  const made = addActorTween(data);
+                  edit(made.data);
+                  setReturnTo(`tween-${made.id}`);
+                  setScript({kind: 'tween', id: made.id});
+                }}
                 onNewStep={() => {
                   const made = addActorStep(data);
                   edit(made.data);

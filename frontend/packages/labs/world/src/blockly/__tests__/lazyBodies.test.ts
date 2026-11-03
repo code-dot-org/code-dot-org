@@ -26,9 +26,9 @@ import {
   type UnbuiltBodies,
 } from '../workspaceIndex';
 
-/** `define tween` is the one top block with a mouth; the rest chain on. */
+/** `mouthed` is the one top block with a mouth; the rest chain on. */
 const mouths = statementInputsOf([
-  {type: 'world_define_tween', args0: [{type: 'input_statement', name: 'DO'}]},
+  {type: 'mouthed', args0: [{type: 'input_statement', name: 'DO'}]},
   {
     type: 'world_on_screen_loads',
     args0: [{type: 'input_value', name: 'NOT_A_MOUTH'}],
@@ -54,7 +54,7 @@ const DOCUMENT: Document = {
       },
       {type: 'hat', id: 'hat', next: {block: row('c')}},
       {
-        type: 'world_define_tween',
+        type: 'mouthed',
         id: 'tween',
         inputs: {DO: {block: row('d')}},
       },
@@ -165,7 +165,7 @@ describe('collapsing and expanding a live workspace', () => {
         nextStatement: null,
       },
       {
-        type: 'world_define_tween',
+        type: 'mouthed',
         message0: 'tween %1',
         args0: [{type: 'input_statement', name: 'DO'}],
       },

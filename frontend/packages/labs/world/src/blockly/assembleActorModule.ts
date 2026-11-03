@@ -10,7 +10,6 @@
 // the exported instance.
 
 /** A top-level block's type and its already-generated code. */
-import {DEFINE_TWEEN} from './tweens';
 
 export interface GeneratedBlock {
   type: string;
@@ -32,13 +31,7 @@ export function assembleActorModule(
   declarations = '',
 ): string {
   const actor = blocks.find(block => block.type === 'world_actor');
-  // A tween's definition is a `const` a handler reads, so it has to be bound
-  // before one runs — the same temporal-dead-zone hazard a world's local
-  // actors have, and the same answer.
-  const tweens = blocks.filter(block => block.type === DEFINE_TWEEN);
-  const events = blocks.filter(
-    block => block !== actor && !tweens.includes(block),
-  );
+  const events = blocks.filter(block => block !== actor);
   // THE DECLARATIONS GO INSIDE the actor block's code, straight after
   // `const actor = …`, and not after the whole of it.
   //
@@ -57,9 +50,8 @@ export function assembleActorModule(
   const actorCode = actor
     ? actor.code.slice(0, opened) + declarations + actor.code.slice(opened)
     : declarations;
-  const tweensCode = tweens.map(block => block.code).join('');
   const eventsCode = events.map(block => block.code).join('');
-  return `${actorCode}${tweensCode}${eventsCode}export default actor;\n`;
+  return `${actorCode}${eventsCode}export default actor;\n`;
 }
 
 /**
@@ -81,11 +73,6 @@ export function assembleWorldModule(
    */
   worldEventTypes: ReadonlySet<string> = new Set(),
 ): string {
-  // Tween definitions, hoisted for exactly the reason local actors are: they
-  // are `const`s the world's own body reads — `add actor … do play tween …` —
-  // and `rest` is emitted AFTER the world's code, so left there the name is in
-  // its temporal dead zone and the module throws as it is imported.
-  const tweens = blocks.filter(block => block.type === DEFINE_TWEEN);
   // Event handlers are REGISTRATIONS, and the two kinds have OPPOSITE
   // constraints — which is why they are split rather than kept together.
   //
@@ -107,13 +94,8 @@ export function assembleWorldModule(
     worldEventTypes.has(block.type) || block.code.startsWith('world.');
   const onActors = handlers.filter(block => !heldByWorld(block));
   const onWorld = handlers.filter(heldByWorld);
-  const rest = blocks.filter(
-    block => !tweens.includes(block) && !handlers.includes(block),
-  );
-  const actorsCode = tweens
-    .map(block => block.code)
-    .concat(onActors.map(block => block.code))
-    .join('');
+  const rest = blocks.filter(block => !handlers.includes(block));
+  const actorsCode = onActors.map(block => block.code).join('');
   const worldCode = world + onWorld.map(block => block.code).join('');
   const restCode = rest.map(block => block.code).join('');
   return `${actorsCode}${worldCode}${restCode}export default world;\n`;

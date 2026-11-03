@@ -489,7 +489,6 @@ export const TILES: readonly Tile[] = [
     requires: ['motion/units'],
     unlocks: [
       {kind: 'block', type: 'world_play_tween_here'},
-      {kind: 'block', type: 'world_define_tween'},
       {kind: 'block', type: 'world_play_tween'},
     ],
     check: {

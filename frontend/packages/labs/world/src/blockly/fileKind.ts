@@ -50,10 +50,6 @@ export const isMapKind = (kind: FileKind | undefined): boolean =>
  */
 export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_actor', new Set<FileKind>(['actor'])],
-  // A tween is defined where it is used — an actor's in its own file, the
-  // game's on a screen — and referenced by the defining block's id. A file
-  // of shared ones is the same axis an actor sits on and is not built yet.
-  ['world_define_tween', new Set<FileKind>(['actor', 'screen'])],
   // A map's own blocks (specs/MAP_FIRST.md): naming another placement and
   // unloading the map belong to the map and its placements; hearing the map
   // load and unload belongs to the map's own workspace alone.

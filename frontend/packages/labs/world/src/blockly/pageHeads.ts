@@ -33,3 +33,12 @@ export const DRAWING_HEAD = 'world_drawing_head';
 
 /** The one drawing head on the page. */
 export const DRAWING_HEAD_ID = 'drawing-head';
+
+/**
+ * An actor's tween on its page: how long, on what curve, with its
+ * destinations below it (`tweenHead`).
+ */
+export const TWEEN_HEAD = 'world_tween_head';
+
+/** The one tween head on the page. */
+export const TWEEN_HEAD_ID = 'tween-head';

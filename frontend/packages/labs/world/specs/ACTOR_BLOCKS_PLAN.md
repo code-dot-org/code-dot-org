@@ -375,7 +375,8 @@ before the page can be reached headless.
 ## Not in this phase
 
 - `define drawing`: done, with `each frame` (DRAWING_PAGE_PLAN.md).
-- `define tween` (2): the animation timeline.
+- `define tween` (2): done, as data on the Blocks tab, not the animation
+  timeline (TWEENS_AS_DATA_PLAN.md).
 - The world file as data, retiring `define world`: done
   (WORLD_AS_DATA_PLAN.md).
 - A Screen's events, which are data already (`ScreenEvent`) and would take

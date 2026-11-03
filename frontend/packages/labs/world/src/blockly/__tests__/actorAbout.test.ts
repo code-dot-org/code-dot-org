@@ -15,6 +15,7 @@ import {inputRule} from '../../rules/stock/input';
 import {actorAbout, kindFilterField, registerKindFilter} from '../actorAbout';
 import {buildDomainPalette} from '../domainBlocks';
 import {setEditingActor} from '../editingRule';
+import {TWEEN_HEAD} from '../pageHeads';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 
@@ -171,30 +172,26 @@ describe('what `this actor` is about', () => {
     // THE PAD IS WHY. Its tweens fade whatever steps on it — they are played
     // on `object actor` from the pad's own handlers — and every `this actor`
     // inside them wore a picture of the pad, which is a picture of the wrong
-    // actor. A tween is a function of the actor it is played on
-    // (`domainBlocks`, the `define tween` generator says so outright), so at
-    // edit time there is nobody to draw.
+    // actor. A tween is a function of the actor it is played on, so at edit
+    // time there is nobody to draw.
     //
-    // THE DEFINITION IS PUT ABOVE IT ON PURPOSE. Without it the walk would run
-    // out of ancestors and answer "nobody" for having found nothing, which is
-    // the right answer for the wrong reason and would go on passing with this
-    // rule deleted.
-    const {workspace, definition} = actorFileWith('actors/pad', 'Pad');
-    const tween = {type: 'world_define_tween', parent: definition, workspace};
+    // The control is the same block with no head above it, which in an actor
+    // file IS the actor.
+    const {workspace} = actorFileWith('actors/pad', 'Pad');
+    const head = {type: TWEEN_HEAD, workspace};
 
-    // The control: the same chain without the tween in it IS the pad.
+    expect(actorAbout(asBlock({workspace}), 'this')).toEqual({
+      type: 'actors/pad',
+      name: 'Pad',
+    });
     expect(
-      actorAbout(asBlock({parent: definition, workspace}), 'this'),
-    ).toEqual({type: 'actors/pad', name: 'Pad'});
-    expect(
-      actorAbout(asBlock({parent: tween, workspace}), 'this'),
+      actorAbout(asBlock({parent: head, workspace}), 'this'),
     ).toBeUndefined();
   });
 
   it('is nobody inside an unnamed tween either', () => {
-    // `play tween here` rebinds the actor around its destinations exactly as a
-    // named tween's definition does, and says so in its generator — so the two
-    // blocks cannot disagree about what `this actor` means inside them.
+    // `play a tween on` rebinds the actor around its destinations exactly as
+    // an actor's tween does.
     const workspace = aScreen();
     const definition = {type: 'world_actor', id: 'pad1', workspace};
     const here = {

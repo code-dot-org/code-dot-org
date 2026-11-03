@@ -92,26 +92,11 @@ const say = (words: string, who: object = box()) => ({
  */
 const TITLE = 'The Hall. Press SPACE to begin.';
 
-/**
- * A fade, written where it is used.
- *
- * The Portrait ships none of its own, and this is why: a definition is
- * reachable only from the file it sits in, and WHEN a character comes on is
- * the scene's decision. So the fade lives on the line that causes it.
- */
-const fade = (who: object, to: number, seconds: number) => ({
-  type: 'world_play_tween_here',
-  fields: {CURVE: 'ending slowly'},
-  inputs: {
-    ACTOR: who,
-    SECONDS: number(seconds),
-    DO: {
-      block: {
-        type: 'world_set_Appearance_OpacityProperty',
-        inputs: {ACTOR: me(), VALUE: number(to)},
-      },
-    },
-  },
+/** One of the Portrait's own tweens, played on it: its entrance or exit. */
+const portraitTween = (id: 'enters' | 'leaves') => ({
+  type: 'world_play_tween',
+  fields: {TWEEN: `actors/portrait#${id}`},
+  inputs: {ACTOR: portrait()},
 });
 
 /** One `if` per line: what this line SAYS, and anything else it does. */
@@ -121,10 +106,10 @@ const scriptFor = (): object => {
     if (at === 0) {
       // The portrait arrives with the first line, and not before: it starts
       // invisible so that its own entrance can be seen.
-      body.push(fade(portrait(), 1, 0.4));
+      body.push(portraitTween('enters'));
     }
     if (at === LINES.length - 1) {
-      body.push(fade(portrait(), 0, 0.3));
+      body.push(portraitTween('leaves'));
     }
     return {test: isLine(at + 1), body};
   });

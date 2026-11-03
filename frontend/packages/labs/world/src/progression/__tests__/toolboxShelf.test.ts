@@ -54,7 +54,6 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'motion/tween': [
     'world_play_tween_here',
     'world_set_position',
-    'world_define_tween',
     'world_play_tween',
   ],
   'logic/if': [

@@ -46,9 +46,8 @@ Three things about that state matter for a paste that lands in another file:
 
 - **Ids are kept, unless taken.** A block is created with the id it was saved
   with if the destination has no block by that id, and a fresh one otherwise
-  (`Block`'s constructor). So a `define tween` pasted along with the `play
-tween` that names it by id keeps the pair intact, and a paste into the same
-  file gets fresh ids as it always did.
+  (`Block`'s constructor), and a paste into the same file gets fresh ids as
+  it always did.
 - **Variables come with the block.** Blockly's serializer does full
   serialization by default, so a variable field carries `{id, name, type}` and
   not the id alone, and loading one calls `getOrCreateVariablePackage` on the
@@ -191,11 +190,10 @@ question a test should answer once, so the answers do not drift.
   Blockly's own variable field and once with the lab's typed one.
 - **Ids.** A block pasted into a file with no block by its id keeps it;
   into a file that already holds it, gets a fresh one. That is Blockly's, and
-  pinned so an upgrade that changed it would say so. What is NOT built is
-  the consequence for a pair: a `define tween` renumbered on paste leaves the
-  `play tween` beside it naming the old id, and it plays nothing, silently.
-  A fourth question for the plugin — a `play tween` whose tween is not in
-  the file — is the answer, and it is not written.
+  pinned so an upgrade that changed it would say so. (A `play tween` named
+  a `define tween` by block id, so a renumbered pair broke; a tween is an
+  actor's data now, named by path and id, and a paste cannot renumber it:
+  specs/TWEENS_AS_DATA_PLAN.md.)
 - **The orphan reasons.** For each of the three questions in piece 2, a
   workspace of the wrong kind, a created block, and the reason on it; and for
   the defining root, a project that still compiles with the block disabled.

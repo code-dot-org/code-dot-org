@@ -1,13 +1,14 @@
 // The Actor Editor's Blocks tab: the events and blocks an actor adds to the
 // language, each drawn as the block it makes (specs/ACTOR_BLOCKS_PLAN.md,
-// step 2), and what it does every frame (specs/DRAWING_PAGE_PLAN.md).
+// step 2), what it does every frame (specs/DRAWING_PAGE_PLAN.md), and the
+// movements it can be given (specs/TWEENS_AS_DATA_PLAN.md).
 
 import {Button, Typography} from '@mui/material';
 import {useEffect, useMemo, useRef} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import type {ActorData, ActorMember} from '../actorData';
+import type {ActorData, ActorMember, ActorTween} from '../actorData';
 import {actorMoment} from '../actorSteps';
 
 import styles from './actorEditor.module.css';
@@ -30,10 +31,14 @@ export interface MembersTabProps {
   onEditStep?: (at: number) => void;
   onDeleteStep?: (at: number) => void;
   onNewStep?: () => void;
+  onEditTween?: (id: string) => void;
+  onDeleteTween?: (id: string) => void;
+  onNewTween?: () => void;
   /**
    * The member whose Edit takes focus, coming back from its page or after
    * the one before it was deleted; `new-event` or `new-block` for that
-   * button; `step-⟨at⟩` or `new-step` for a step's.
+   * button; `step-⟨at⟩` or `new-step` for a step's, `tween-⟨id⟩` or
+   * `new-tween` for a tween's.
    */
   focusEdit?: string | null;
   onFocused?: () => void;
@@ -74,6 +79,9 @@ export const MembersTab = ({
   onEditStep,
   onDeleteStep,
   onNewStep,
+  onEditTween,
+  onDeleteTween,
+  onNewTween,
   focusEdit,
   onFocused,
 }: MembersTabProps) => {
@@ -87,7 +95,7 @@ export const MembersTab = ({
   }, [focusEdit, onFocused]);
   const members = data.members ?? [];
   const steps = data.steps ?? [];
-  const stepsHeading = `${modulePath}-steps-heading`;
+  const tweens = data.tweens ?? [];
   // By the file's text: the data is parsed afresh on every render, and
   // minting a palette is not cheap.
   const palette = useMemo(
@@ -155,81 +163,46 @@ export const MembersTab = ({
           </section>
         );
       })}
-      <section className={styles.memberGroup} aria-labelledby={stepsHeading}>
-        <Typography variant="h5" component="h3" id={stepsHeading}>
-          Every frame
-        </Typography>
-        {steps.length === 0 ? (
-          <Typography variant="body3" component="p" className={styles.note}>
-            Nothing yet. A step is work every {data.name} does once a frame, in
-            the moment it names.
-          </Typography>
-        ) : (
-          <ul className={styles.memberList}>
-            {steps.map((step, at) => (
-              <li key={`${at}:${step.name}`} className={styles.memberRow}>
-                <Typography variant="body2" component="p">
-                  {step.name}
-                </Typography>
-                <Typography
-                  variant="body3"
-                  component="p"
-                  className={styles.note}
-                >
-                  {actorMoment(step)}
-                </Typography>
-                {!isReadOnly && (onEditStep || onDeleteStep) && (
-                  <div className={styles.memberActions}>
-                    {onEditStep && (
-                      <Button
-                        ref={element => {
-                          if (element) {
-                            edits.current.set(`step-${at}`, element);
-                          } else {
-                            edits.current.delete(`step-${at}`);
-                          }
-                        }}
-                        variant="text"
-                        size="small"
-                        aria-label={`Edit ${step.name}`}
-                        onClick={() => onEditStep(at)}
-                      >
-                        Edit
-                      </Button>
-                    )}
-                    {onDeleteStep && (
-                      <Button
-                        variant="text"
-                        size="small"
-                        aria-label={`Delete ${step.name}`}
-                        onClick={() => onDeleteStep(at)}
-                      >
-                        Delete
-                      </Button>
-                    )}
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
-        )}
-        {onNewStep && !isReadOnly && (
-          <Button
-            ref={element => {
-              if (element) {
-                edits.current.set('new-step', element);
-              }
-            }}
-            variant="text"
-            size="small"
-            className={styles.memberNew}
-            startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
-            onClick={onNewStep}
-          >
-            New step
-          </Button>
-        )}
-      </section>
+      <NamedList
+        heading="Every frame"
+        headingId={`${modulePath}-steps-heading`}
+        empty={`Nothing yet. A step is work every ${data.name} does once a frame, in the moment it names.`}
+        rows={steps.map((step, at) => ({
+          key: `${at}:${step.name}`,
+          name: step.name,
+          detail: actorMoment(step),
+          focus: `step-${at}`,
+          edit: onEditStep && (() => onEditStep(at)),
+          remove: onDeleteStep && (() => onDeleteStep(at)),
+        }))}
+        add={
+          onNewStep && {label: 'New step', focus: 'new-step', act: onNewStep}
+        }
+        isReadOnly={isReadOnly}
+        refs={edits.current}
+      />
+      <NamedList
+        heading="Tweens"
+        headingId={`${modulePath}-tweens-heading`}
+        empty={`No tweens yet. A tween is a movement over time — a fade, a slide — that code anywhere can play on a ${data.name}, or on anything else.`}
+        rows={tweens.map(tween => ({
+          key: tween.id,
+          name: tween.name,
+          detail: `over ${secondsOf(tween)}`,
+          focus: `tween-${tween.id}`,
+          edit: onEditTween && (() => onEditTween(tween.id)),
+          remove: onDeleteTween && (() => onDeleteTween(tween.id)),
+        }))}
+        add={
+          onNewTween && {
+            label: 'New tween',
+            focus: 'new-tween',
+            act: onNewTween,
+          }
+        }
+        isReadOnly={isReadOnly}
+        refs={edits.current}
+      />
     </div>
   );
 };
@@ -304,3 +277,114 @@ const MemberRow = ({
     </li>
   );
 };
+
+/** How long a tween takes, as its socket holds a number; "a while" otherwise. */
+function secondsOf(tween: ActorTween): string {
+  const held = (tween.seconds.block ?? tween.seconds.shadow) as
+    | {type?: string; fields?: {NUM?: unknown}}
+    | undefined;
+  const n = held?.type === 'math_number' ? Number(held.fields?.NUM) : NaN;
+  return Number.isFinite(n)
+    ? `${n} ${n === 1 ? 'second' : 'seconds'}`
+    : 'a time it works out';
+}
+
+interface NamedRow {
+  key: string;
+  name: string;
+  detail: string;
+  /** The key its Edit is focused by (`focusEdit`). */
+  focus: string;
+  edit?: () => void;
+  remove?: () => void;
+}
+
+/** A heading and the named things under it — steps, tweens — each opened by Edit. */
+const NamedList = ({
+  heading,
+  headingId,
+  empty,
+  rows,
+  add,
+  isReadOnly,
+  refs,
+}: {
+  heading: string;
+  headingId: string;
+  empty: string;
+  rows: readonly NamedRow[];
+  add?: {label: string; focus: string; act: () => void};
+  isReadOnly: boolean;
+  refs: Map<string, HTMLButtonElement>;
+}) => (
+  <section className={styles.memberGroup} aria-labelledby={headingId}>
+    <Typography variant="h5" component="h3" id={headingId}>
+      {heading}
+    </Typography>
+    {rows.length === 0 ? (
+      <Typography variant="body3" component="p" className={styles.note}>
+        {empty}
+      </Typography>
+    ) : (
+      <ul className={styles.memberList}>
+        {rows.map(row => (
+          <li key={row.key} className={styles.memberRow}>
+            <Typography variant="body2" component="p">
+              {row.name}
+            </Typography>
+            <Typography variant="body3" component="p" className={styles.note}>
+              {row.detail}
+            </Typography>
+            {!isReadOnly && (row.edit || row.remove) && (
+              <div className={styles.memberActions}>
+                {row.edit && (
+                  <Button
+                    ref={element => {
+                      if (element) {
+                        refs.set(row.focus, element);
+                      } else {
+                        refs.delete(row.focus);
+                      }
+                    }}
+                    variant="text"
+                    size="small"
+                    aria-label={`Edit ${row.name}`}
+                    onClick={row.edit}
+                  >
+                    Edit
+                  </Button>
+                )}
+                {row.remove && (
+                  <Button
+                    variant="text"
+                    size="small"
+                    aria-label={`Delete ${row.name}`}
+                    onClick={row.remove}
+                  >
+                    Delete
+                  </Button>
+                )}
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+    )}
+    {add && !isReadOnly && (
+      <Button
+        ref={element => {
+          if (element) {
+            refs.set(add.focus, element);
+          }
+        }}
+        variant="text"
+        size="small"
+        className={styles.memberNew}
+        startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+        onClick={add.act}
+      >
+        {add.label}
+      </Button>
+    )}
+  </section>
+);

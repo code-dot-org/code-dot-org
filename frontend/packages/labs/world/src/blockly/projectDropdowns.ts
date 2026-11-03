@@ -13,6 +13,7 @@
 // `runtime/generatedFiles` for what went wrong without it.
 
 import {
+  actorDataOf,
   isDataShaped,
   MAIN_ANIMATION,
   type ActorData,
@@ -57,6 +58,7 @@ import {
 import {duplicateRuleNames, registerProjectRules} from './ruleRegistry';
 import {measuredImages, setProjectGrids} from './spriteCells';
 import {setProjectRuleMeta, setProjectRules} from './traitOptions';
+import {setProjectTweens, type ProjectTween} from './tweens';
 
 /** Extensions a module path can resolve to — what a block may open. */
 // What the open button can open. A `.map` is not a module the compiler resolves — a
@@ -107,6 +109,8 @@ export function refreshProjectDropdowns(
   // …and each data-shaped actor's own, by its module path.
   const kindAnimations = kindAnimationNames(files);
   setKindAnimations(kindAnimations);
+  // …and their tweens, which `play tween` may name from any file.
+  setProjectTweens(projectTweensIn(files));
   // The images a `set sprite` block may name: the project's own, and nothing
   // else — a game draws what its project holds.
   const sprites = projectSpriteOptions(files, images);
@@ -239,6 +243,19 @@ function warnAboutDuplicateNames(): void {
  * path (specs/ANIMATION_PLAN.md). Main first, since it is the one an actor
  * plays when it is made.
  */
+/** Every tween the project's actors hold, in file order. */
+function projectTweensIn(files: Record<string, string>): ProjectTween[] {
+  return Object.entries(files).flatMap(([path, contents]) => {
+    const data = path.endsWith('.actor') ? actorDataOf(contents) : undefined;
+    return (data?.tweens ?? []).map(tween => ({
+      module: path.replace(/\.actor$/, ''),
+      id: tween.id,
+      name: tween.name,
+      actor: data!.name,
+    }));
+  });
+}
+
 function kindAnimationNames(
   files: Record<string, string>,
 ): Record<string, string[]> {
