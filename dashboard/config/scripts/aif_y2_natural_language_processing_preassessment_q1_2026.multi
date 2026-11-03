@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q1-2026'
+
+right 'The same words and sounds can carry several meanings'
+wrong 'There are too many English words for a program to store'
+wrong 'Computers cannot tell one letter from another'
+wrong 'English grammar has no rules a program could follow'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Why can English be hard for a computer to process?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: What is Natural Language Processing?
+MARKDOWN

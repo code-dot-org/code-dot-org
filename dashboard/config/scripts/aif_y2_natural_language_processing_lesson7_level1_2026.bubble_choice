@@ -1,0 +1,10 @@
+name 'aif-y2-natural-language-processing-lesson7-level1-2026'
+display_name 'Implement Bag of Words'
+description 'Choose a classifier to build with a bag of words model'
+
+sublevels
+level 'aif-y2-natural-language-processing-lesson7-level1-choice1-2026'
+level 'aif-y2-natural-language-processing-lesson7-level1-choice2-2026'
+level 'aif-y2-natural-language-processing-lesson7-level1-choice3-2026'
+
+uses_lab2

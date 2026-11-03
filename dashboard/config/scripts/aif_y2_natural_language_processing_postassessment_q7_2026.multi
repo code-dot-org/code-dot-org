@@ -1,0 +1,20 @@
+name 'aif-y2-natural-language-processing-postassessment-q7-2026'
+
+wrong '`{"exclamation_count": 1, "dollar_sign_count": 1, "all_caps_words": 2}`'
+right '`{"exclamation_count": 3, "dollar_sign_count": 1, "all_caps_words": 2}`'
+wrong '`{"exclamation_count": 3, "dollar_sign_count": 1, "all_caps_words": 3}`'
+wrong '`{"exclamation_count": 3, "dollar_sign_count": 0, "all_caps_words": 2}`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+`get_features` counts a message's exclamation points, dollar signs and all-caps words (words with more than one letter, all uppercase). What does it return for this message?
+
+```python
+"I WON a FREE $500 phone!!!"
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Text Classifiers
+MARKDOWN

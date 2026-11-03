@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q13-2026'
+
+right 'Only the word it produced most recently'
+wrong 'Every word it has produced so far'
+wrong 'The first word of the sentence'
+wrong 'The meaning of the sentence so far'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A Markov chain generates text one word at a time. What does it look at when it chooses the next word?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Markov Chains
+MARKDOWN

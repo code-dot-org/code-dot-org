@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-11-03T01:11:19.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "Name the style of your site in three words, like calm, clean, rounded.",
+    "placeholder": "Type your three words here...",
+    "encrypted_solution": "tgaYac6x/Z3WKTKy/l9MOePCSdQAhjmlBGBV8vkPE4sJS78OkROI8nX05f+7\nv0sQVl3hZEB8kF+LnkomCJO7ojNWnAaq2TdUKgUNMsbj72dzT5lUdDydRsBR\nUyYkUTemFZDeE1fSHgpO86XI/NxTPCLv22oRBRIDpAojYY/5StDLbx37svzr\nyszXXKMNQuIzSiOnYBG9rT6vuOvsIu6xedj3s8B+HDmVvz2w/2neBXQ=\n",
+    "generate_outline": "Prompt: Name the style of your site in three words, like calm, clean, rounded."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:11:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:11:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:11:24 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:11:24 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</FreeResponse>

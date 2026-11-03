@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284602-3dbbc32b85d9",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following best describes the role of computational thinking in the Pixels of Me project?",
+  "solution": [
+    {
+      "option": "It helps break down complex problems into manageable parts.",
+      "correct": true
+    },
+    {
+      "option": "It focuses only on the artistic aspects of the project.",
+      "correct": false
+    },
+    {
+      "option": "It eliminates the need for coding.",
+      "correct": false
+    },
+    {
+      "option": "It is only useful for large programming projects.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "09301977-9520-4f8f-a00e-8816eadd84de"
+  ]
+}

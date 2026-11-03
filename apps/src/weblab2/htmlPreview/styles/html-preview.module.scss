@@ -10,19 +10,15 @@
   grid-template-rows: 40px 1fr;
 }
 
-// Styles applied when in full screen view mode
+// Fixed, not absolute: an ancestor that clips its overflow would cut off the
+// header and its exit button.
 .fullScreenPanelContainer {
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: fixed;
+  inset: 0;
   z-index: variables.$z-index-fullscreen;
-  width: 100vw;
-  height: 100vh;
   color: var(--text-neutral-primary);
 
   .fullScreenPreviewContainer {
-    position: absolute;
-    top: -50px; // Account for header height
     background: var(--neutral-black-alpha-80);
     padding: 1rem;
 

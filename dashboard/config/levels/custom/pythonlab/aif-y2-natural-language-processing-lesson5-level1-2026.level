@@ -1,0 +1,37 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T00:06:18.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson5-2026 + template",
+    "long_instructions": "You work on the search team of a video website. You’re given a program that should find a good keyword for each video on a cooking channel. The program scores every word of a transcript; a higher score means a better keyword. Right now a word’s score is its term frequency, and the function that counts it is not written yet.\r\n\r\n**☑️ Do This:**\r\n- Complete TODO 1 in `term_frequency`. Given a term and a list of tokens, it should return how many times the term appears in the list. TODO 2 and TODO 3 wait for Level 2.\r\n- Run the program and read the keyword it prints for each video.\r\n\r\n**💻 Coding Tip**\r\n\r\nStart a count at 0, loop over the tokens, and add 1 each time a token equals the term. A check such as `if token == \"pan\":` compares one token with one word; your function compares each token with `term`.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\naAyGLiOgeLdiAegTQygILW6SygFD2Q6dPHcj\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 00:09:41 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:10:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:10:11 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

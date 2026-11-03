@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894762-1abc737fe3b4",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Why is it essential to verify AI outputs before using them?",
+  "solution": [
+    {
+      "option": "AI can produce outputs that sound correct but may be false.",
+      "correct": true
+    },
+    {
+      "option": "AI always provides accurate and reliable information.",
+      "correct": false
+    },
+    {
+      "option": "AI outputs are always verified by humans.",
+      "correct": false
+    },
+    {
+      "option": "Verifying AI outputs is not necessary for everyday tasks.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "eb549fc1-f0f5-4724-a1f0-636116232599"
+  ]
+}

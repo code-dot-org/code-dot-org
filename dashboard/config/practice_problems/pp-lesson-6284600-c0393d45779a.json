@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284600-c0393d45779a",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all the benefits of revising pseudocode based on peer feedback.",
+  "solution": [
+    {
+      "option": "Improves clarity and understanding",
+      "correct": true
+    },
+    {
+      "option": "Increases the number of errors in the code",
+      "correct": false
+    },
+    {
+      "option": "Encourages collaboration and learning",
+      "correct": true
+    },
+    {
+      "option": "Eliminates the need to write code",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "8e34ee97-6ee5-4e56-99ea-926819fff5bb"
+  ]
+}
