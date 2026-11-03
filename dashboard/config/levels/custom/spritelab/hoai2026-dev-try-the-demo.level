@@ -167,6 +167,22 @@
                           "type": "spritelab2_setAsPlatformPlayer",
                           "fields": {
                             "ANIMATION_NAME": "\"Blob\""
+                          },
+                          "next": {
+                            "block": {
+                              "type": "spritelab2_setCameraZoom",
+                              "fields": {
+                                "ZOOM": 1.1
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "spritelab2_setWeather",
+                                  "fields": {
+                                    "WEATHER": "rain"
+                                  }
+                                }
+                              }
+                            }
                           }
                         }
                       }
@@ -208,11 +224,108 @@
                       },
                       "next": {
                         "block": {
-                          "type": "spritelab2_playSound",
+                          "type": "spritelab2_playSoundEffect",
                           "fields": {
-                            "SOUND": "sound://category_achievements/melodic_win_1.mp3"
+                            "WAVE": "bell",
+                            "PITCH": "high",
+                            "LENGTH": "long",
+                            "PATTERN": "run up"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "spritelab2_setWeather",
+                              "fields": {
+                                "WEATHER": "none"
+                              }
+                            }
                           }
                         }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenPlayer",
+                  "x": 20,
+                  "y": 400,
+                  "fields": {
+                    "ACTION": "walk"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_playSoundEffect",
+                      "fields": {
+                        "WAVE": "triangle",
+                        "PITCH": "middle",
+                        "LENGTH": "medium",
+                        "PATTERN": "steady"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenPlayer",
+                  "x": 20,
+                  "y": 520,
+                  "fields": {
+                    "ACTION": "jump"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_playSoundEffect",
+                      "fields": {
+                        "WAVE": "square",
+                        "PITCH": "high",
+                        "LENGTH": "short",
+                        "PATTERN": "slide up"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenPlayer",
+                  "x": 20,
+                  "y": 640,
+                  "fields": {
+                    "ACTION": "land"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_burst",
+                      "fields": {
+                        "COUNT": 12,
+                        "LOOK": "dust",
+                        "ORIGIN": "\"Blob\""
+                      },
+                      "next": {
+                        "block": {
+                          "type": "spritelab2_playSoundEffect",
+                          "fields": {
+                            "WAVE": "triangle",
+                            "PITCH": "low",
+                            "LENGTH": "short",
+                            "PATTERN": "slide down"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenPlayer",
+                  "x": 20,
+                  "y": 760,
+                  "fields": {
+                    "ACTION": "bump"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_playSoundEffect",
+                      "fields": {
+                        "WAVE": "sawtooth",
+                        "PITCH": "middle",
+                        "LENGTH": "short",
+                        "PATTERN": "wobble"
                       }
                     }
                   }
