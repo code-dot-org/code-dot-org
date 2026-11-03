@@ -239,7 +239,9 @@ $overlay-float-min-width: 600px;
 }
 
 .gradeIcon {
-  font-size: var(--tree-grade-icon-size);
+  flex-shrink: 0;
+  width: var(--tree-grade-icon-size);
+  height: var(--tree-grade-icon-size);
 }
 
 .correct {

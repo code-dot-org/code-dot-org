@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# test the seed:all rake task (mostly that it is idempotent)
+# test the seed:production rake task (mostly that it is idempotent)
 
 SQL="select id, \`key\` from videos; \
      select id, name, video_key from concepts; \
@@ -13,9 +13,9 @@ SQL="select id, \`key\` from videos; \
 
 #echo "$SQL"
 mysql -uroot dashboard_$RAILS_ENV -e "$SQL" > 1.txt
-bundle exec rake seed:all
+bundle exec rake seed:production
 mysql -uroot dashboard_$RAILS_ENV -e "$SQL" > 2.txt
-bundle exec rake seed:all
+bundle exec rake seed:production
 mysql -uroot dashboard_$RAILS_ENV -e "$SQL" > 3.txt
 diff -du 1.txt 2.txt
 diff -du 2.txt 3.txt

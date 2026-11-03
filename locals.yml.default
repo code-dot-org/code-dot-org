@@ -61,13 +61,6 @@ use_my_studio: true
 #lazy_load_i18n: true
 
 
-# Whether to skip the slow `rake seed:all` command during `rake build`.
-# Until you manually run `rake seed:all` or disable this flag, you won't
-# see changes to: videos, concepts, levels, scripts, trophies, prize providers,
-# callouts, hints, secret words, or secret pictures.
-#skip_seed_all: true
-
-
 # Whether to store sprocket asset cache on disk or in memory. Setting this to
 # false reduces memory usage, but significantly slows down dev server startup.
 #cache_assets_in_memory: false

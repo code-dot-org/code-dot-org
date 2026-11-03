@@ -15,6 +15,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
     DCDO.stubs(:get).with('lesson-deep-dive-enabled', true).returns(true)
+    DCDO.stubs(:get).with('spritelab-lab2-ask-ai-enabled', true).returns(true)
     stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
     stub_environment_key_enabled(false)
     @params = {
@@ -78,6 +79,34 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
 
       assert_response expected_response, "access level #{access_level}"
     end
+  end
+
+  test 'the Sprite Lab ask AI block mints a token only for a levelbuilder' do
+    ask_ai_params = {
+      aichatContext: {
+        clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI],
+        currentLevelId: @level.id,
+        scriptId: @script.id,
+        channelId: 'test',
+      },
+    }
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    # The signing key is only configured outside the test environment.
+    OpenSSL::PKey::RSA.stubs(:new).returns(OpenSSL::PKey::RSA.generate(2048))
+    JWT.stubs(:encode).returns('fake.jwt.token')
+
+    # A teacher who would otherwise be allowed is refused without the permission.
+    sign_in(@authorized_teacher)
+    post :get_access_token, params: ask_ai_params, as: :json
+    assert_response :forbidden
+
+    sign_in(@student)
+    post :get_access_token, params: ask_ai_params, as: :json
+    assert_response :forbidden
+
+    sign_in(create(:levelbuilder))
+    post :get_access_token, params: ask_ai_params, as: :json
+    assert_response :success
   end
 
   test 'sends the log token rather than the raw user id' do

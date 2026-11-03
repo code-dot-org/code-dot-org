@@ -103,16 +103,11 @@ namespace :build do
           # rubocop:enable Style/SoleNestedConditional
         end
 
-        # Allow developers to skip the time-consuming step of seeding the dashboard DB.
-        # Additionally allow skipping when running in CI, as it will be seeded during `rake install`
-        if (rack_env?(:development) || ENV.fetch('CI', nil)) && CDO.skip_seed_all
-          ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n" \
-              "Until you manually run 'rake seed:default' or disable this flag, you won't\n" \
-              "see changes to: videos, concepts, levels, scripts, prize providers, \n " \
-              "callouts, hints, secret words, or secret pictures."
+        # CI seeds in its own step; see seed_ui_test in lib/rake/ci.rake.
+        if ENV.fetch('CI', nil)
+          ChatClient.log 'Not seeding <b>dashboard</b> in CI...'
         else
           ChatClient.log 'Seeding <b>dashboard</b>...'
-          ChatClient.log 'consider setting "skip_seed_all" in locals.yml if this is taking too long' if rack_env?(:development)
           RakeUtils.rake_stream_output 'seed:default', (rack_env?(:test) ? '--trace' : nil)
         end
 
