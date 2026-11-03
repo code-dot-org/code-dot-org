@@ -1,8 +1,10 @@
 # Choices, and events that filter on them
 
-A rule's own `define choices` is not read since rules became data
-(COMPILE_FROM_DATA_PLAN.md, step 5c): the data has no place for one. The
-engine's choices — keys, buttons, directions — are as described here.
+RETIRED IN PART, November 2026. A rule's own `define choices` is gone: no
+rule used it, and the data has no place for one. Choices are a property's
+type, so if a rule earns its own they are made where its property is made,
+in the Rule Editor. The engine's choices — keys, buttons, directions — are
+as described here, and what follows about a rule's own is a record.
 
 ## The problem
 

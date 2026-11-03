@@ -476,7 +476,7 @@ const defineEnumValueBlock = (meta: EnumMeta) => {
   });
 };
 
-/** The engine's enums as blocks; a project's follow with its rules (step 3). */
+/** The engine's enums, each as its value block. */
 const ENUM_VALUE_BLOCKS = ENGINE_ENUMS.map(defineEnumValueBlock);
 
 /** The toolbox/registry type for the block that handles `event`. */
@@ -2254,10 +2254,8 @@ const typedValueInputs = (
   // is genuinely wanted (a comparison, an `emit … with`) is what the enum's own
   // chip block is for.
   //
-  // Live options, so a `define choices` edited a moment ago reaches the blocks
-  // built from it — and so a stored word the set no longer offers is KEPT and
-  // shown as itself rather than silently becoming the first option
-  // (`liveDropdown`).
+  // Live options, so a stored word the set no longer offers is KEPT and shown
+  // as itself rather than silently becoming the first option (`liveDropdown`).
   // WHAT THE AUTHOR BUILT WINS, whatever the type would have chosen.
   //
   // A default used to be a value a field could hold, so the shapes below chose

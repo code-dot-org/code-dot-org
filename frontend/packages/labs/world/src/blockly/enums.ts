@@ -13,7 +13,8 @@
 //
 // The engine's are the only ones: `Key` is the list `world_key` has always
 // carried, given a name so a rule can point at it instead of rebuilding it. A
-// rule's own `define choices` waits on a place in the rule's data.
+// rule's own choices would be made with its property, when one needs them
+// (specs/ENUMS.md).
 
 import type {ArgType} from '../engine';
 import {KEY_CHOICES} from '../engine/core/keys';
@@ -21,13 +22,7 @@ import {BUTTON_CHOICES, DIRECTION_CHOICES} from '../engine/core/pointer';
 
 /** A named set of string choices. */
 export interface EnumMeta {
-  /**
-   * Who declares it — `Engine`, or a rule's NAME.
-   *
-   * A name rather than a path, like every other reference in the language, so
-   * the rule that owns an enum can be renamed or moved and the blocks that use
-   * it still resolve (ruleRegistry).
-   */
+  /** Who declares it: `Engine`, the one owner there is. */
   readonly owner: string;
   /** What it is called — `Key`. */
   readonly name: string;
@@ -35,8 +30,7 @@ export interface EnumMeta {
    * The choices: what a learner reads, and what the block emits.
    *
    * They differ, and have to. The keyboard's space bar reads `space` and is
-   * the string `" "`; its arrows read `up arrow` and are `"ArrowUp"`. A
-   * learner-authored enum would normally have the two the same.
+   * the string `" "`; its arrows read `up arrow` and are `"ArrowUp"`.
    */
   readonly options: ReadonlyArray<readonly [label: string, value: string]>;
 }

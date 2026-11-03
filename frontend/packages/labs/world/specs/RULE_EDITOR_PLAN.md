@@ -15,7 +15,7 @@ A `.rule` file is one workspace. `define rule` (`world_rule`) is a root
 whose chain holds the rule's own declarations; each `define trait`
 (`world_rule_trait`) is a root of its own whose chain holds the trait's.
 Nothing else stands in either chain: no stray block, and no stock rule
-declares choices of its own (`define choices`).
+declares choices of its own.
 
 Across the 46 stock rules and their 67 traits:
 
@@ -304,12 +304,11 @@ What stays for now:
 - **Body surfaces.** Gone: an actor's drawing and steps are data, each on
   a page of its own, and the pencil and its surfaces are deleted
   (DRAWING_PAGE_PLAN.md).
-- **The lessons.** Five lessons in Making unlock define blocks no drawer
-  holds, and their tasks say to write rules in blocks. Their checks read a
-  rule's view, so they still pass; their words need writing again for the
+- **The lessons.** Done: the Making lessons' tasks are written for the
   Rule Editor.
-- **Choices.** `define choices` is not part of a rule's data, and no stock
-  rule has one; a rule holding one cannot be read.
+- **Choices.** Dropped, November 2026: no rule had its own, and a rule's
+  choices belong with the property they type, made in the side panel if
+  one earns them (specs/ENUMS.md).
 
 In the browser: Gravity's member and step pages; the game plays; the Health
 Bar's `each frame` opens on its surface from its pencil.

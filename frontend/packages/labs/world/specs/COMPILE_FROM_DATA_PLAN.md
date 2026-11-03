@@ -174,8 +174,8 @@ it is stored in (`ruleIn`).
 What a Making lesson grants is now an affordance of the Rule Editor —
 `rule-new`, `rule-properties`, `rule-traits`, `rule-blocks`, `rule-steps`
 — and nothing withholds them yet. Which of them a gated lab holds back is
-the progression's to decide. `define choices` is granted by nothing: it
-is not data yet, and the Rule Editor cannot make one.
+the progression's to decide. A rule's own choices are dropped
+(specs/ENUMS.md).
 
 The "allowed in" tables (`fileKind`) stay. They say where a row may sit in
 the workspaces the compiler reads, which 5c removes.

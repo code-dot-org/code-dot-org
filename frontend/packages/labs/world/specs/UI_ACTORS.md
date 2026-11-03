@@ -1069,7 +1069,8 @@ like` hands a drawing down. Focus is a rule with Tab, Enter and a read-only
 `mouse position` and `mouse button ⟨left⟩ is down`; typed characters arrive in
 a queue. Lists exist as a drawer, without `item ⟨n⟩ of` and without a
 list-typed property on an actor (specs/LISTS.md). A world keeps state of its
-own, and `define choices` names a closed set of words (specs/ENUMS.md).
+own, and the engine's choices name closed sets of words: keys, buttons,
+directions (specs/ENUMS.md).
 
 Two of those are the gaps the harder rows fall into, and they are named below
 where they bite.
