@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284590-092f0ea0feb1",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the career with its corresponding category of work.",
+  "solution": [
+    {
+      "option": "Software Developer",
+      "correct": "Technical"
+    },
+    {
+      "option": "Project Manager",
+      "correct": "Management"
+    },
+    {
+      "option": "UX Designer",
+      "correct": "Creative"
+    },
+    {
+      "option": "Data Analyst",
+      "correct": "Analytical"
+    }
+  ],
+  "objective_keys": [
+    "c4417034-94f5-48a6-8804-9bec0b900467"
+  ]
+}

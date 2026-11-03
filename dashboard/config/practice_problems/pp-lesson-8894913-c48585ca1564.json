@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894913-c48585ca1564",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all the statements that correctly describe responsible AI implementation.",
+  "solution": [
+    {
+      "option": "AI systems should be transparent and explainable.",
+      "correct": true
+    },
+    {
+      "option": "AI should only benefit a select group of individuals.",
+      "correct": false
+    },
+    {
+      "option": "Data used for AI should be inclusive and representative.",
+      "correct": true
+    },
+    {
+      "option": "AI should be developed without community input.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "34471d3c-923b-48c0-b641-fab6ac9fab30"
+  ]
+}

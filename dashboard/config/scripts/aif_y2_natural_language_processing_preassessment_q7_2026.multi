@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q7-2026'
+
+wrong 'The message itself, exactly as the sender typed it'
+wrong 'A one-sentence summary of the message written by a person'
+wrong 'The message with all of its punctuation and capital letters stripped out'
+right 'Numbers computed from the message, such as its exclamation point count'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+If you were building a classifier to tell spam text messages from ordinary ones, what form could its input features take?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Text Classifiers
+MARKDOWN

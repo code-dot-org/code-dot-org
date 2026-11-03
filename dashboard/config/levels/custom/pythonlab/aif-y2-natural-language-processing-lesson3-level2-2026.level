@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T00:44:27.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Implement the second normalization rule: removing punctuation.\r\n- Test your program. It should count five unique entries.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember you can find the word tokens (excluding punctuation) in a string with:\r\n\r\n```python\r\nwords = re.findall(r\"\\w+\", text)\r\n```\r\n\r\nIf you have a list of words, you can join the words back together into a single string with:\r\n\r\n```python\r\n\" \".join(words)\r\n```\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "example",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import re\n\nentries = [\n  \"Volcanoes\",\n  \"The Volcano Book\",\n  \"volcanoes of the world.\",\n  \"VOLCANOES!\",\n  \"Volcanic Eruptions\",\n  \"volcano book\",\n  \"Volcanoes of the World\",\n  \"volcanoes\",\n  \"VOLCANOES OF THE WORLD\",\n]\n\nSTOP_WORDS = [\"a\", \"an\", \"the\", \"of\", \"and\", \"in\", \"to\"]\n\n\ndef normalize(text):\n  text = text.lower()\n\n  # TODO: Tokenize and remove punctuation\n  \n  return text\n\n\n# Count unique entries\nuniques = []\nfor entry in entries:\n  form = normalize(entry)\n  if form not in uniques:\n    uniques.append(form)\n\nprint(\"Entries:\", len(entries))\nprint(\"Unique entries:\", len(uniques))",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrmvL/gAVSq4T0A\n3dFvfrmko51NpD4LkDom2zFwIHSNZ2hOZvhd8Gjg+QTtIPcf06vZ0kIO1PGe\n6i0kcYEu64qHh2lGq/+5TzGs+T1baUajNhI56rEjg0ceat8e5t9UCylFu37u\njwZ3/i6kP1Upn0z86AwkKMdAawteO0r3nsZoqnfXwRnON0B8VoaOR2Pmagm6\n4wsQFchWe3z9wE3auvL1EjUSc/hb9hAvz/7EzLLt7x24fcHhDxwxZPohsA1F\nuerRcoT6MZnCHjxGkuD8tKjJQ8GTb9S3czJKVYpQ+yLTGTmdx+8R0KeKtXqH\nptoSZuu0bZSmtGjkoCdKWEdrBmsKsxW5SaQph+aRHfs+dAo9wjaNKHQxOJrU\nZ49P/urLGLgyrJLHBXlSEgC5KLXj3cDeQpc2P9MDGb1AxypCBr+7TCBvd5sF\nzLyHD+/FeaCZ8GzM45wdMwZMTxIN9M3O4ApZuHu/g7+yGRpaHiGRrFfvlM3Y\nZMBp8Vhov8qrtg6IF/R6smse0nV6g1En/TQN928iq17lfUHk0/sKikAGh1iN\nEiMYC9u7TnDeiInm8YPrNZ66ETZsYnffhHnGd/sKa931lIuBQkTx27sx4lN6\n/AfolLEyIIu39/z4x+e1xarpNsANgNMvmPhK4WOuCvALan0eQRNqRJoxy8EF\nproha4CAFcragMZvidbeLzksg8l6jF1ZGYtYVWBYoBcBg47V43z0yJynxAy9\nL3P8t/VOALm2b/MztgHKkQSQvQHxmNcBAig6BUf3Gy8L3DbBt3lFPM80qb2k\n8pBv7UjSXQBwCk4yYaxbtZ1WivYmHY7NyVpkspjCVZiYr4+pXVuMh1PQxBCX\nrBZ6iQ+bJ47aAbfs/mapu418TnWfqoqSR4VnEdxrutF9Yr1NXM8UpyvCwO9H\ny6AY\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 00:44:34 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-03 00:44:43 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

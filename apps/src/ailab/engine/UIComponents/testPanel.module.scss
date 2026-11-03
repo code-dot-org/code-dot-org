@@ -9,6 +9,9 @@
   padding: 8px 8px 12px;
   box-sizing: border-box;
   font-family: var(--font-family-main);
+
+  // Matches the side panel's border.
+  border-left: 1px solid transparent;
 }
 
 .card {
@@ -28,6 +31,10 @@
 
 .fields .field {
   @include mixins.full-width-field;
+
+  input {
+    width: 100%;
+  }
 }
 
 .actionRow {

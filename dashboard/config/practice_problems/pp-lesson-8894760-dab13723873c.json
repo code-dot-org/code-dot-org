@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894760-dab13723873c",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Why is it important to consider the assumptions encoded in AI-generated images?",
+  "solution": [
+    {
+      "option": "They can lead to biased representations that impact real people's perceptions.",
+      "correct": true
+    },
+    {
+      "option": "They ensure that all cultures are fully represented.",
+      "correct": false
+    },
+    {
+      "option": "They make AI-generated images faster to produce.",
+      "correct": false
+    },
+    {
+      "option": "They are irrelevant for understanding AI technology.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "a27a2703-9d59-4a4e-8b99-86fb1cbb9d04"
+  ]
+}

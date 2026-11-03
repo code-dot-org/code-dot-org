@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-11-03T01:29:44.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "What is your site, who is it for, and what are you proudest of?",
+    "placeholder": "Describe your site and what you achieved.",
+    "encrypted_solution": "5kfD68o7FApIy8nmaJM2KR/oHAt+Fru2glv7n2stug4J9/Z2z6Cx21CB90jv\nhq40gL1h4TsFopA5jYN6erFmIuTXBx02lX6I74pz2uhPupmYvr//YilQdfP8\nk5A+EaizJeEXx/eD3QWxoJyAuc8pjiXe+pVmKq1lTje/NogIt22BMWeiIgoK\ngULjfMHXFaNRxUB95OZgpu1wWFkvhzOxaHa19UaPkGtRgIHiTsbKUDTiplbY\nh6sLPpOUdmFiA+6T+r3hsESW0iu7GHwGJDrLh+4MWeSN5sSc7niTNJvHabfn\nvFfNgzx568/bOM/UJfKKa+nKFteOeHvVkvKvV5iL7ZuZotQyCVGVeTplWo7F\nNqCwKB4S5q6OIwqueNs5bRtzrLTt5cvgCSSwEm5BYLoPZv+WaKfaIFkHP7ao\n+FKwUho=\n",
+    "generate_outline": "Prompt: What is your site, who is it for, and what are you proudest of?"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:29:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:29:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:29:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:29:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</FreeResponse>

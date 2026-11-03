@@ -1,0 +1,27 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-11-03T04:18:21.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-less-checkpoints-skill-check-learn-60807e67-6964-43c3-ab7e-497261d32117",
+        "text": "This map shows the skills you will learn and use.",
+        "imageUrl": "https://images.code.org/88b9c322c7725d9393f6858eaa1ca778-adaptive-less-checkpoints-skill-check-learn-panel-1-8f14b452-9fa1-4cec-a450-2c51755f6aa0.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "adaptive-less-checkpoints-skill-check-learn-c0eda26c-9442-4968-a1de-987387c356ab",
+        "text": "The Skill Check finds the right support for you, not to pass or fail.",
+        "imageUrl": "https://images.code.org/dc9f27868dce880da08d4b3540741e2f-adaptive-less-checkpoints-skill-check-learn-panel-2-575f9299-c7c1-4acd-97ab-c3ab9a0f7af4.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "View a skills map outlining the abilities you will develop. This skill check helps tailor support to your needs without judgment."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:18:45 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:18:45 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

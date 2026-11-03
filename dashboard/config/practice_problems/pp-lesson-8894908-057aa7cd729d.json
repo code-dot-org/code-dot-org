@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894908-057aa7cd729d",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is one potential consequence of relying on AI-generated content that may include hallucinations?",
+  "solution": [
+    {
+      "option": "Misinformation can lead to poor decision-making.",
+      "correct": true
+    },
+    {
+      "option": "AI will always produce accurate results.",
+      "correct": false
+    },
+    {
+      "option": "Hallucinations can enhance creativity.",
+      "correct": false
+    },
+    {
+      "option": "AI hallucinations are harmless.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "2388f0dd-1c66-4df3-b4bc-2a109deb77ff"
+  ]
+}
