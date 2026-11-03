@@ -201,3 +201,61 @@
   align-items: center;
   justify-content: flex-end;
 }
+
+// Stats step
+
+.statsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+  padding: 32px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-primary);
+  text-align: center;
+
+  h1:focus {
+    outline: none;
+  }
+}
+
+.statsList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 48px;
+  margin: 16px 0 0;
+}
+
+.statsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  dd {
+    margin: 0;
+  }
+}
+
+.statsRings {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+// Modal step
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalImage {
+  width: 100%;
+  max-height: 200px;
+  border-radius: var(--shape-lg);
+  object-fit: cover;
+}

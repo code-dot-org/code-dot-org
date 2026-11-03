@@ -16,7 +16,7 @@ import {
   CheckpointStatus,
   EMPTY_PROGRESS,
   GeneratedContent,
-  PROJECT_STEP_ID,
+  isLocalStep,
   Progress,
   StepProgress,
   ValidationAttempt,
@@ -127,7 +127,7 @@ export function useProgress(
 
   const startStep = useCallback(
     (step: Step) => {
-      if (step.id === PROJECT_STEP_ID) return;
+      if (isLocalStep(step.id)) return;
       reportStepProgress(
         step,
         entry => ({
@@ -143,7 +143,7 @@ export function useProgress(
 
   const completeStep = useCallback(
     (step: Step, timeMs: number) => {
-      if (step.id === PROJECT_STEP_ID) return;
+      if (isLocalStep(step.id)) return;
       reportStepProgress(
         step,
         entry => ({
@@ -160,7 +160,7 @@ export function useProgress(
   /** Records the time on a step the student leaves without finishing it. */
   const leaveStep = useCallback(
     (step: Step, timeMs: number) => {
-      if (step.id === PROJECT_STEP_ID) return;
+      if (isLocalStep(step.id)) return;
       reportStepProgress(
         step,
         entry => ({

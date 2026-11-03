@@ -5,6 +5,7 @@
 
 import {z} from 'zod';
 
+import {FINISH_STEP_IDS, PROJECT_STEP_ID} from '../../progress/model';
 import {pathwaySchema, pathwaySourceSchema} from '../pathway';
 import {planTemplateSlots} from '../planTemplate';
 import {OTHER_CHOICE_ID} from '../question';
@@ -389,9 +390,11 @@ function findCheckpointProblems(pathway: Pathway): string[] {
   if (new Set(stepIds).size !== stepIds.length) {
     problems.push(`${where}: step ids must be unique across checkpoints`);
   }
-  // The project screen plays a step of its own under this id.
-  if (stepIds.includes('project')) {
-    problems.push(`${where}: step id 'project' is reserved`);
+  // The project screen and the wrap-up flow play steps of their own.
+  for (const id of [PROJECT_STEP_ID, ...Object.values(FINISH_STEP_IDS)]) {
+    if (stepIds.includes(id)) {
+      problems.push(`${where}: step id '${id}' is reserved`);
+    }
   }
   return problems;
 }

@@ -3,7 +3,10 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import {
   EMPTY_PROGRESS,
   Progress,
+  FINISH_STEP_IDS,
+  PROJECT_STEP_ID,
   isComplete,
+  isLocalStep,
   latestValidation,
   stepIdToResume,
   totalTimeSpent,
@@ -103,6 +106,15 @@ describe('routeStatusMap without evidence', () => {
       steps: {'intro-step': {timeSpent: 0, generatedInstructions}},
     };
     expect(statusMapOf(pathway, progress).intro).toBe('available');
+  });
+});
+
+describe('isLocalStep', () => {
+  it('names the project and wrap-up steps, which record no progress', () => {
+    expect(isLocalStep(PROJECT_STEP_ID)).toBe(true);
+    expect(isLocalStep(FINISH_STEP_IDS.stats)).toBe(true);
+    expect(isLocalStep(FINISH_STEP_IDS.challenge)).toBe(true);
+    expect(isLocalStep('intro-step')).toBe(false);
   });
 });
 

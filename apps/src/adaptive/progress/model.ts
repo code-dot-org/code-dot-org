@@ -72,6 +72,22 @@ export function latestValidation(
 /** Id of the project screen's step, which records no progress. */
 export const PROJECT_STEP_ID = 'project';
 
+/** Ids of the wrap-up flow's checkpoint and steps, which record no progress. */
+export const FINISH_CHECKPOINT_ID = 'finish';
+export const FINISH_STEP_IDS = {
+  stats: 'finish-stats',
+  project: 'finish-project',
+  challenge: 'finish-challenge',
+} as const;
+
+const LOCAL_STEP_IDS: ReadonlySet<string> = new Set([
+  PROJECT_STEP_ID,
+  ...Object.values(FINISH_STEP_IDS),
+]);
+
+/** Whether a step is one the app makes itself, outside the content, whose progress is not kept. */
+export const isLocalStep = (stepId: string) => LOCAL_STEP_IDS.has(stepId);
+
 /** A step's state; a level step's comes from its level's own progress. */
 export interface StepProgress {
   status?: 'started' | 'complete';

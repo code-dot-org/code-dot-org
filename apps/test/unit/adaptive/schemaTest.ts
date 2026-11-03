@@ -242,6 +242,31 @@ describe('parsePathway', () => {
     expect(problemsOf(raw)).toHaveLength(1);
   });
 
+  it('accepts a stats step and a modal step', () => {
+    const raw = served();
+    raw.checkpoints[0].steps.push(
+      {id: 'so-far', title: 'So far', kind: 'stats', heading: 'Great job!'},
+      {
+        id: 'next',
+        title: 'Next',
+        kind: 'modal',
+        heading: 'What next?',
+        markdown: 'Keep going.',
+        link: {label: 'Learn more', href: 'https://code.org'},
+        continueLabel: 'Done',
+      }
+    );
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it("flags an authored step that takes a wrap-up step's id", () => {
+    const raw = served();
+    raw.checkpoints[0].steps.push({...panels('finish-stats')});
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints: step id 'finish-stats' is reserved",
+    ]);
+  });
+
   it('accepts a markdown step with its own button label', () => {
     const raw = served();
     raw.checkpoints[0].steps.push({

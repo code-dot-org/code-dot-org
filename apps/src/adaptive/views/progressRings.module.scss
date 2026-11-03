@@ -1,3 +1,5 @@
+@use './map/destinationColors' as colors;
+
 .rings {
   display: flex;
   gap: 8px;
@@ -7,8 +9,12 @@
 }
 
 // A conic fill behind a smaller disc leaves a ring; the fill's share grows
-// with progress, and a complete group fills the disc too.
+// with progress, and a complete group fills the disc too. The color classes
+// below recolor a ring; purple is the default.
 .ring {
+  --destination-color: var(--borders-brand-purple-primary);
+  --destination-accent: var(--text-brand-purple-primary);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,10 +22,12 @@
   height: 32px;
   border-radius: 50%;
   background: conic-gradient(
-    var(--borders-brand-purple-primary) calc(var(--share) * 100%),
+    var(--destination-color) calc(var(--share) * 100%),
     var(--borders-neutral-primary) 0
   );
 }
+
+@include colors.destination-colors;
 
 .inner {
   display: flex;
@@ -29,7 +37,7 @@
   height: 26px;
   border-radius: 50%;
   background: var(--background-neutral-secondary);
-  color: var(--text-brand-purple-primary);
+  color: var(--destination-accent);
   font-size: 12px;
 }
 
@@ -38,6 +46,6 @@
 }
 
 .complete .inner {
-  background: var(--borders-brand-purple-primary);
+  background: var(--destination-color);
   color: var(--text-neutral-white-fixed);
 }
