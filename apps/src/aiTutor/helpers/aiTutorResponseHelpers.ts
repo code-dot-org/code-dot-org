@@ -189,7 +189,8 @@ export const getMergedAiTutorCodeWithSource = (
       const aiTutorVersionFile: ProjectFile = {
         ...updatedSource.files[activeFile.id],
         contents: aiFile.contents,
-        // Otherwise a file loaded from a URL keeps running its old contents.
+        // Files with a url run from it, not contents; clear it so AI tutor's
+        // content always 'wins'.
         url: undefined,
         isAiTutorVersionUpdated: true,
       };
