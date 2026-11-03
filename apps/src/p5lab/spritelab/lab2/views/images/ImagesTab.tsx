@@ -523,7 +523,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     : live ?? (parts.frameFilled ? parts.frame : undefined)
                 }
                 generating={generating}
-                note={generating ? parts.tip : undefined}
+                tip={generating ? parts.tip : undefined}
                 under={generating ? undefined : under}
                 overlay={
                   parts.rating.offered && (
@@ -566,7 +566,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                         the scene's for a picture made this session, one
                         rebuilt from the stored generation record for a
                         reopened image. */}
-                    {!parts.underFrame && chosenImage && (
+                    {!parts.behindTheScenes && chosenImage && (
                       <ReopenedBehindTheScenes
                         image={chosenImage}
                         disabled={busy}
