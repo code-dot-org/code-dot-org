@@ -558,8 +558,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     ],
     [tabs, enabledTabs, picturesOffered]
   );
-  // The panel carries the instructions, and offers no other tab while it
-  // does.
+  // hideNonInstructionTabs: the instructions panel shows only its
+  // instructions tab on this lab.
   const panelLevelProperties = useMemo(
     () => ({...levelProperties, hideNonInstructionTabs: true}),
     [levelProperties]
@@ -570,7 +570,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useEffect(() => {
     setPicturesOpen(activeTab === 'Images');
   }, [activeTab, setPicturesOpen]);
-  // The room the editors keep clear of the preview's column, at the right.
+  // The right-hand inset the editors leave empty for the preview column.
   const clearOfPreview = {right: previewWidth};
   // The Images tab's pane column, headed AI, at the right, is as wide as
   // the preview column is or would be, which the playspace reports whether
@@ -1061,9 +1061,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // reseed-triggered run happens immediately, but reseeded entries carry
   // only a sourceUrl (dataURIs load async) and the engine can't draw
   // unloaded images (costume/background commands no-op on unknown names —
-  // a blank playspace until the next run). Thumbnails self-heal without
-  // this: the Images tab re-trims on every list change. Kept in a ref
-  // (not effect cleanup): the reseed effect's deps churn on every animation
+  // a blank playspace until the next run). Kept in a ref (not effect
+  // cleanup): the reseed effect's deps churn on every animation
   // write, which would cancel a pending watcher mid-load.
   const cancelRerunWatchRef = useRef<() => void>();
   // Latest restart-scene handler, for the watcher's async callback.
@@ -2308,7 +2307,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           instructionsCollapsed && moduleStyles.instructionsCollapsed
         )}
         collapsible={freeplayLevel || undefined}
-        // The checklist and the Continue gate ride in the panel.
+        // The objectives checklist, and the Continue button it enables,
+        // render inside the instructions panel.
         objectives={objectives.active ? objectives : undefined}
         hideContinueIfDisabled
         footerButtons={

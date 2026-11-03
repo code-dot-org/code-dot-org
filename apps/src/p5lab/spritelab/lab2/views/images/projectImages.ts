@@ -57,8 +57,9 @@ export function listProjectImages(list: AnimationListState): ProjectImage[] {
         props,
         name: props.name || 'image',
         imageType,
-        // A set is a character whatever its metadata says; a plain sprite
-        // keeps the subject it was made with, if any.
+        // An image with poses is a character set, so its subject is
+        // 'character' regardless of stored metadata; a single-frame sprite
+        // keeps its stored subject, when there is one.
         subject:
           imageType !== 'sprite'
             ? undefined

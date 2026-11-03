@@ -31,7 +31,7 @@ interface WordMenusProps {
   choices: Choices;
   onChange: (choices: Choices) => void;
   disabled?: boolean;
-  /** The carousel, moving sideways, unless given. */
+  /** Defaults to 'carousel': one slot's words at a time, moving sideways. */
   layout?: WordLayout;
 }
 
@@ -313,7 +313,7 @@ export function useWordMenus({
               key={set.id}
               role="group"
               aria-label={`${set.label}${set.required ? ' (pick one)' : ''}`}
-              className={classNames(styles.cluster)}
+              className={styles.cluster}
             >
               <div className={styles.words}>{renderWords(set)}</div>
             </div>
