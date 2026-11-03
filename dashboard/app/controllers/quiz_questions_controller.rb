@@ -126,11 +126,7 @@ class QuizQuestionsController < ApplicationController
           question.standards
         end
 
-      if placement
-        placement.quiz_question = target if should_fork
-        placement.page = quiz_question_params[:page] if quiz_question_params[:page].present?
-        placement.save!
-      end
+      placement&.update!(quiz_question: target) if should_fork
 
       question.destroy! if type_changed && !question.referenced?
     end

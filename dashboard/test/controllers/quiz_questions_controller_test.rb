@@ -237,6 +237,17 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     refute QuizQuestionPlacement.exists?(level: @quiz, quiz_question: unplaced)
   end
 
+  test "update leaves the placement's page alone; Save quiz sets pages" do
+    put :update, as: :json, params: {
+      id: @question.id, quizLevelId: @quiz.id, page: 3,
+      questionName: 'Renamed', questionTitle: 'Pick one',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+    }
+
+    assert_response :success
+    assert_equal 1, @placement.reload.page
+  end
+
   test "update changes the type of a question not yet placed, deleting the unreferenced original" do
     unplaced = create(:multiple_choice_question)
 
