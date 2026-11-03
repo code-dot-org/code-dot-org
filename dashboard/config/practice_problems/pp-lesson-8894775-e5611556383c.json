@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894775-e5611556383c",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following aspects can be included in a Model Card? (Select all that apply)",
+  "solution": [
+    {
+      "option": "Model architecture details",
+      "correct": true
+    },
+    {
+      "option": "Training data sources",
+      "correct": true
+    },
+    {
+      "option": "User testimonials",
+      "correct": false
+    },
+    {
+      "option": "Potential biases identified",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "3a931d77-c596-44fa-9c59-e1d12784020e"
+  ]
+}

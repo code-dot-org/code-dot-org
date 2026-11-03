@@ -9,3 +9,7 @@ export const QUESTION_TYPE_LABELS_ICONS: Record<
   FreeResponseQuestion: {label: 'Free response', iconName: 'pen-field'},
   MatchQuestion: {label: 'Matching', iconName: 'diagram-next'},
 };
+
+export const UNSAVED_QUESTION_REASON =
+  'Save or remove your new question first.';
+export const EMPTY_PAGE_REASON = 'Create a question on the empty page first.';

@@ -577,10 +577,13 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt_and_stub(payload)
     user = create_preexisting_user(payload)
     previous_stable_id = SecureRandom.uuid
+    previous_anon_user_id = Cdo::AnonUserId.generate
 
     sign_in create(:student)
     # As set by apps/src/metrics/statsigHelpers.js.
     cookies.merge("#{SharedConstants::STATSIG_STABLE_ID_KEY}=#{previous_stable_id}; domain=.code.org; path=/")
+    # As set by Cdo::RequestExtension#anon_user_id.
+    cookies.merge("#{Cdo::AnonUserId::KEY}=#{previous_anon_user_id}; domain=code.org; path=/")
 
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
@@ -588,7 +591,9 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_equal user.id, signed_in_user_id
     assert_equal response.location, session[:user_return_to]
     assert_empty cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
-    refute_equal previous_stable_id, SignIn.where(user: user).last.anon_user_id
+    assert_match Cdo::AnonUserId::FORMAT, cookies[Cdo::AnonUserId::KEY]
+    refute_equal previous_anon_user_id, cookies[Cdo::AnonUserId::KEY]
+    assert_equal cookies[Cdo::AnonUserId::KEY], SignIn.where(user: user).last.anon_user_id
   end
 
   test 'auth - given target_link_uri with existing query params, redirect preserves and merges params' do

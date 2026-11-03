@@ -387,6 +387,9 @@ GEM
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
     date (3.3.3)
+    debug (1.11.1)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
     declarative (0.0.20)
     delayed_job (4.1.11)
       activesupport (>= 3.0, < 8.0)
@@ -1268,6 +1271,7 @@ DEPENDENCIES
   dalli
   dalli-elasticache
   database_cleaner-active_record (~> 2.1.0)
+  debug (>= 1.0.0)
   delayed_job_active_record (~> 4.1)
   devise (~> 4.9.0)
   devise_invitable (~> 2.0.12)

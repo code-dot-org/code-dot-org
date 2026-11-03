@@ -1,0 +1,48 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-02T17:49:05.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Investigate & Tinker\r\n\r\n**Do This:** \r\n1. Using the program from the last level, discuss with your partner: \r\n   - Which line sets the starting value?\r\n   - Which line checks the condition?\r\n   - Which line updates the variable?\r\n2. Then **tinker**: change the starting value of `steps` to `2` and run it. What changes? \r\n3. Change it back, then change `steps < 4` to `steps < 2`. What changes now?",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "steps = 0\nwhile steps < 4:\n\tprint(\"Step \" + str(steps))\n\tsteps = steps + 1\nprint(\"Done\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "teacher_markdown": "Expected observations (not a single fixed answer, since this is open tinkering): \r\n- Starting at 2 means only two passes print (steps 2 and 3).\r\n- Changing the condition to steps < 2 means only two passes print as well (steps 0 and 1) — a good moment to notice that changing either the start value or the condition changes how many times the loop runs, even though they’re different parts of the loop."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-02T17:49:05.742+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson15-predict-console_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson15-predict-console_27_28\"},{\"changed_at\":\"2026-11-02 17:50:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 17:52:03 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

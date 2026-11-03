@@ -79,6 +79,16 @@
         },
         {
           "kind": "block",
+          "type": "spritelab2_playSoundEffect",
+          "fields": {
+            "WAVE": "square",
+            "PITCH": "high",
+            "LENGTH": "short",
+            "PATTERN": "slide up"
+          }
+        },
+        {
+          "kind": "block",
           "type": "spritelab2_playMusic"
         },
         {

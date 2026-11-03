@@ -1,0 +1,14 @@
+name 'adaptive-less-checkpoints-look-under-hood-practice'
+title 'TODO: title'
+description ''
+question 'A button on a sample page picks a random place to eat. Which line of JavaScript does the picking?'
+wrong 'The line that sets the page title text.'
+right 'The line that picks from the list.'
+wrong 'The line that sets the button\'s color.'
+wrong 'The line that adds a heading above it.'
+
+markdown <<MARKDOWN
+A button on a sample page picks a random place to eat. Which line of JavaScript does the picking?
+MARKDOWN
+
+allow_multiple_attempts true

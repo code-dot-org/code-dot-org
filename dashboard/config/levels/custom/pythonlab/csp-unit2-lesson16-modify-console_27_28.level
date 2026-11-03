@@ -1,0 +1,48 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-02T20:13:22.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Investigate & Modify\r\n\r\n**Do This:** \r\n\r\n1. Modify this program so it counts up to 10 instead of 4.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "count = 0\n\nwhile count < 4:  \n\tprint(count)\n\tcount = count + 1",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrytMpbDCt0pyHP\nJH3I+oQoh16VzKvb0bXOMkbAzCN04iOAgZ8feFAUZtIIrWiNmHPOKYah4j0m\nuibcyjGY1Y41mpbhh4rMe7/cKTAo4B1CXSrEzHv/vJS9DkQGaFLl54Z4VOzs\n6kXrOTZbP4mKeyvqdUS9GeRSifJTIqEYPug9GgWwjp86QETv+XWvTBLVvu1B\n3rFQKrvoXicZv3Jim+Ak\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-02T20:13:22.031+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson16-modify-theater_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson16-modify-theater_27_28\"},{\"changed_at\":\"2026-11-02 20:13:36 +0000\",\"changed\":[\"long_instructions\",\"mini_app\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:13:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:14:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:14:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

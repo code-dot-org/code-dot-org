@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T04:19:10.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "219ee1a0-303d-4d4a-acde-a272cfb4151a": {
+          "id": "219ee1a0-303d-4d4a-acde-a272cfb4151a",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Sample Broken Page</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <h1>Discover the Mysteries!</h1>\n    <p id=\"mysteryText\">This text holds a secret. Click the button to reveal it!</p>\n    <button id=\"revealButton\">Reveal Secret</button>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "0597f7ca-9bf0-4529-8374-6ffdc9245a69": {
+          "id": "0597f7ca-9bf0-4529-8374-6ffdc9245a69",
+          "name": "style.css",
+          "contents": "body {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    text-align: center;\n    margin-top: 50px;\n    background-color: #f4f4f4;\n    color: #333;\n}\nh1 {\n    color: #0056b3;\n}\np {\n    margin-top: 20px;\n    font-size: 1.2em;\n    color: #cc0000; /* Intentionally red to hint at a problem */\n}\nbutton {\n    background-color: #007bff;\n    color: white;\n    padding: 10px 20px;\n    border: none;\n    border-radius: 5px;\n    font-size: 1em;\n    cursor: pointer;\n    margin-top: 30px;\n}\nbutton:hover {\n    background-color: #0056b3;\n}",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "1e7ef55b-8d9d-4712-8e61-72d3de1d53d8": {
+          "id": "1e7ef55b-8d9d-4712-8e61-72d3de1d53d8",
+          "name": "script.js",
+          "contents": "document.getElementById('revealButton').addEventListener('click', function() {\n    // This script tries to find an element with ID 'secretMessage',\n    // but in index.html, the ID is 'mysteryText'. This is the bug!\n    const messageElement = document.getElementById('secretMessage');\n    if (messageElement) {\n        messageElement.textContent = 'The secret is... AI helps you build amazing things!';\n        messageElement.style.color = '#008000'; // Green for revealed secret\n    } else {\n        console.error('Bug detected: Target element for message not found. Expected: secretMessage, Found: mysteryText');\n    }\n});",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "219ee1a0-303d-4d4a-acde-a272cfb4151a",
+        "0597f7ca-9bf0-4529-8374-6ffdc9245a69",
+        "1e7ef55b-8d9d-4712-8e61-72d3de1d53d8"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Identify the element that seems broken on the sample page.\r\n- Think about what you expected to happen when you clicked the button.\r\n- Note what actually happened (or didn't happen) when you clicked it.\r\n- Pinpoint the exact location on the page where the issue occurs.\r\n- Combine these three details to form a clear bug report.",
+    "encrypted_exemplar_sources": "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\n",
+    "generate_outline": "Learn how to write a clear bug report by identifying what you expected, what actually happened, and where the issue occurred on a sample broken page."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:19:20 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:19:21 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:19:27 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:19:28 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

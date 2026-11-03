@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894909-fc2ef9a62f0c",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all the benefits of prompt refinement that can lead to improved AI outputs.",
+  "solution": [
+    {
+      "option": "Increased clarity in responses.",
+      "correct": true
+    },
+    {
+      "option": "More accurate answers to user requests.",
+      "correct": true
+    },
+    {
+      "option": "Longer responses with unnecessary information.",
+      "correct": false
+    },
+    {
+      "option": "Enhanced engagement with users.",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "6083d9c4-3131-4f49-bc59-d4165c735e33"
+  ]
+}

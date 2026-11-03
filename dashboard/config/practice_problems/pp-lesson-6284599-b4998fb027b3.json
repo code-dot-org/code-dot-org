@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-6284599-b4998fb027b3",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all the ways an algorithm can be improved to consider ethical implications.",
+  "solution": [
+    {
+      "option": "Incorporating feedback from a diverse group of users",
+      "correct": true
+    },
+    {
+      "option": "Using only data from the most successful users",
+      "correct": false
+    },
+    {
+      "option": "Regularly auditing the algorithm for bias",
+      "correct": true
+    },
+    {
+      "option": "Restricting access to the algorithm's decision-making process",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "233ee134-89b8-444f-9983-5a48efade3e6",
+    "118fb7bc-d8fb-4af2-b93b-82136de8daaf"
+  ]
+}

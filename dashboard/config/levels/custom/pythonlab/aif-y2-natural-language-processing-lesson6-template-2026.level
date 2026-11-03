@@ -1,0 +1,66 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T01:32:41.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "example",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\n\nfrom helpers import visualize_model\n\n\n# Compute the features for one message\ndef get_features(message):\n  # TODO 1: Compute a value for exclamation_count\n  exclamation_count = 0\n\n  # TODO 2: Compute a value for dollar_sign_count\n  dollar_sign_count = 0\n\n  # TODO 3: Compute a value for all_caps_words\n  all_caps_words = 0\n\n  return {\n    \"exclamation_count\": exclamation_count,\n    \"has_dollar_sign\": dollar_sign_count,\n    \"all_caps_words\": all_caps_words,\n  }\n\n\n# Read data from CSV file\nf = open(\"messages.csv\")\nmessages = list(csv.DictReader(f))\nf.close()\n\n# Convert data into inputs (features) and outputs (labels)\nmessage_features = [get_features(row[\"message\"]) for row in messages]\nfeature_names = list(message_features[0].keys())\ninputs = [[features[name] for name in feature_names] for features in message_features]\noutputs = [row[\"label\"] for row in messages]\n\n# Split data into training and testing sets\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n  inputs, outputs, test_size=0.25\n)\n\n# Train model\nmodel = DecisionTreeClassifier()\nmodel.fit(train_inputs, train_outputs)\n\n# Visualize decision tree\nvisualize_model(model, feature_names)\n\n# Test model\nmodel_score = model.score(test_inputs, test_outputs)\nprint(\"Model score on test data:\", model_score)",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "messages.csv",
+          "contents": "message,label\nCONGRATULATIONS!!! You've been selected to receive a $500 gift card. Reply CLAIM to redeem.,spam\nFREE IN-GAME COINS!!! 50000 coins in 2 minutes. Just send your username and password,spam\nYour music streaming account has been suspended. Tap the link in our bio to restore access.,spam\nYou have 1 package waiting. A $2.99 delivery fee is required. Reply PAY to release it.,spam\nWINNER! Your number was drawn for 2 free concert tickets. Text WIN in the next 10 minutes.,spam\nHi! Earn $400 a week as a brand ambassador just by posting on your story. Reply YES,spam\nURGENT: your student account will be deleted in 24 hours. Reply ACTIVATE to keep it.,spam\n\"Get 10,000 followers TODAY for only $4.99! Limited spots left!!! Reply GROW\",spam\nYour streaming subscription payment did not go through. Reply with your card number to update it.,spam\n\"FREE GAME CREDITS!!! No survey, no verification. Text CREDITS now!!!\",spam\nYou have been chosen as a mystery shopper! Earn $250 per store visit. Reply SHOP to start.,spam\nALERT: someone tried to log into your social media account from a new device. Reply SECURE with your password.,spam\n\"Dear student, you qualify for a $5,000 scholarship. No application needed! Reply INFO\",spam\nLAST CHANCE!!! 90% OFF all sneakers. Drop ends at midnight. Reply DROP,spam\nYour phone account has been locked for security reasons. Click the link to unlock it.,spam\nCongratulations!! You are our 1000th visitor today and you WON a new phone!,spam\nmake $300 a day from your phone. Only 1 hour of work! DM me the word MONEY,spam\nYour order of $249.99 has shipped. If you did not make this purchase reply CANCEL.,spam\nFREE PIZZA for the first 50 students who reply! Text PIZZA now!!!,spam\nWe are casting teen actors for a national commercial! $2000 per shoot. Reply CAST for details.,spam\nYour phone bill is 3 days overdue. Service ends TONIGHT. Reply PAY to avoid disconnection.,spam\nClaim your free $50 food delivery credit before it expires! Link below,spam\nATTENTION ALL STUDENTS: your school email password expires today. Reply RESET with your current password.,spam\nYou've been pre-approved for a FREE gaming laptop! Just pay $9.99 shipping. Reply SHIP,spam\nflip $20 into $200 in one hour. Guaranteed! I've helped 300 students. Reply CASH,spam\nYour video account has been flagged for review. Reply APPEAL with your login to avoid deletion.,spam\nGIVEAWAY WINNER!!! You won a pair of wireless earbuds. Reply ADDRESS to claim your prize.,spam\nOnly 3 spots left for our exclusive summer program! $99 deposit due today. Reply HOLD,spam\nhey! Want to earn $75 filling out surveys? Reply START,spam\nYour student meal account has a balance error. Reply FIX with your ID number to correct it.,spam\nFINAL NOTICE: unpaid parking ticket of $85. Reply PAY now to avoid a late fee.,spam\nYou have WON a free trip for 2!!! Reply TRIP before this offer expires.,spam\nDouble your money in 24 hours. Minimum $25. 200% returns guaranteed. Reply COIN,spam\nYour package could not be delivered due to an incorrect address. Click the link to reschedule.,spam\nExclusive offer for teens! Get a FREE ring light when you sign up today. Reply RING,spam\nURGENT: your game account will be banned in 1 hour. Reply APPEAL with your username and password.,spam\n60% OFF prom dresses this weekend ONLY!!! Tap our link to shop before sizes sell out.,spam\nYou have 1 unread message from a classmate. Sign in with your school password to read it.,spam\nYou won! Reply CLAIM to get your prize.,spam\nFREE COINS!!! Text NOW,spam\nYour account is locked. Click the link.,spam\nClaim your $100 gift card today!,spam\nURGENT: verify your password now.,spam\n50% OFF everything!!! Tap our link.,spam\nYou have 1 unclaimed prize. Reply YES,spam\nEarn $500 weekly from home. Reply INFO,spam\nPackage on hold. Reply PAY to release.,spam\nYour subscription expires TODAY. Reply KEEP,spam\n\"hey i'm running late, start without me!\",not spam\n\"practice moved to 4:30 today, coach said bring water\",not spam\ndid you finish the bio worksheet?,not spam\n\"mom says dinner is at 7, don't be late\",not spam\nhappy birthday!! see you at lunch,not spam\nCan you send me the notes from chem today?,not spam\ni think i left my hoodie in your car,not spam\nwe lost 3-1 but honestly the field was soaked,not spam\nlong weekend!! wanna get food,not spam\ni won my tennis match!! finally,not spam\nCan you pick me up at 5?,not spam\nmy brother ate the last waffle and now we're not speaking,not spam\nthe sub gave us no homework LETS GO,not spam\nwait is the quiz friday or monday?,not spam\nbring $5 tomorrow for the field trip,not spam\n\"sorry just saw this, my phone was dead\",not spam\nare you going to the game friday?,not spam\nno way that didn't actually happen,not spam\ncoach hasn't posted the lineup yet right?,not spam\ncan i copy your calc notes from 3rd period,not spam\n\"running to the store, need anything?\",not spam\n\"the bus is 20 minutes late again, i'm so done\",not spam\nok but that movie wasn't even good lol,not spam\nlet's meet at the flagpole after 6th,not spam\n\"i finished the essay, it's 4 pages\",not spam\n\"i still can't find my charger, do you have it\",not spam\nmy mom said yes! what time should i come over?,not spam\nTest got pushed to next week IM SO HAPPY,not spam\ni'll be there in 10,not spam\ncan you ask mr. diaz if we need the textbook?,not spam\n\"it's raining, bring an umbrella\",not spam\nCongratulations!! so proud of you,not spam\n\"i owe you $12 for the pizza, right?\",not spam\nmy dad says he can drive us both on saturday,not spam\n\"grandma called, she says hi and wants pictures\",not spam\ni got the job at the smoothie place!!! i start monday,not spam\nAnnouncement: all after-school activities are cancelled today due to weather.,not spam\nYour library book is due Friday. Reply RENEW to extend it for 2 weeks.,not spam\nReminder: dentist appointment tomorrow at 3:15. Reply C to confirm or R to reschedule.,not spam\nYour order has shipped and will arrive Thursday. Track it in the app.,not spam\nYour verification code is 482915. Do not share this code with anyone.,not spam\nShift reminder: you are scheduled Saturday 11-4. Reply OK to confirm.,not spam\nhey so my mom said she can drive us to the game but we have to leave at like 5:15,not spam\ni talked to mr. diaz after class and he said the lab report isn't due until next thursday so we're fine,not spam\n\"can you tell coach i'll be like 15 minutes late to practice, i have to pick up my sister first\",not spam\nthe group chat decided we're doing the project on renewable energy so can you start the slides for part 2,not spam\n\"i finished my part of the essay and sent it to you, let me know if the intro sounds weird\",not spam\nBus announcement: buses 12 and 14 will run 20 minutes late this afternoon due to construction on Oak Street.,not spam\nReminder from the counseling office: senior portrait retakes are next Tuesday during lunch in the library.,not spam\nYour appointment with the athletic trainer is confirmed for Thursday at 2:45 in the training room.,not spam",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "helpers.py",
+          "contents": "def visualize_model(model, feature_names=None, decimals=2):\n    \"\"\"Pretty-print the questions a fitted DecisionTreeClassifier asks.\"\"\"\n    tree = model.tree_\n\n    if feature_names is None:\n        n = getattr(model, \"n_features_in_\", None) or tree.n_features\n        feature_names = [\"feature_\" + str(i) for i in range(n)]\n\n    TEE, ELBOW, BAR, ARROW = \"├─\", \"└─\", \"│\", \"→\"\n    LABELS = (\"YES\", \"NO \")\n    STEM = len(TEE) + 1 + len(LABELS[0]) + 1 + len(ARROW) + 1\n\n    def number(x):\n        text = \"{:.{}f}\".format(x, decimals)\n        return text.rstrip(\"0\").rstrip(\".\") if \".\" in text else text\n\n    def class_counts(node):\n        raw = list(tree.value[node][0])\n        total = tree.n_node_samples[node]\n        if abs(sum(raw) - total) > 1e-6:  # sklearn >= 1.4 stores proportions\n            raw = [p * total for p in raw]\n        return [int(round(c)) for c in raw], total\n\n    def is_leaf(node):\n        return tree.children_left[node] == -1\n\n    def describe_leaf(node):\n        counts, total = class_counts(node)\n        best = max(range(len(counts)), key=lambda i: counts[i])\n        answer = str(model.classes_[best])\n        if counts[best] == total:\n            plural = \"\" if total == 1 else \"s\"\n            return \"{}  ({} example{})\".format(answer, total, plural)\n        order = sorted(range(len(counts)), key=lambda i: -counts[i])\n        mix = \", \".join(\n            \"{} {}\".format(counts[i], model.classes_[i]) for i in order if counts[i] > 0\n        )\n        return \"{}  ({})\".format(answer, mix)\n\n    def question(node):\n        return \"Is {} <= {}?\".format(\n            feature_names[tree.feature[node]],\n            number(float(tree.threshold[node])),\n        )\n\n    def describe(node):\n        return describe_leaf(node) if is_leaf(node) else question(node)\n\n    def walk(node, prefix):\n        children = (tree.children_left[node], tree.children_right[node])\n        for i, child in enumerate(children):\n            last = i == len(children) - 1\n            connector = ELBOW if last else TEE\n            print(\n                \"{}{} {} {} {}\".format(\n                    prefix, connector, LABELS[i], ARROW, describe(child)\n                )\n            )\n            if not is_leaf(child):\n                spacer = \" \" if last else BAR\n                walk(child, prefix + spacer + \" \" * (STEM - len(spacer)))\n\n    print(describe(0))\n    if not is_leaf(0):\n        walk(0, \"\")\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:34:41 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

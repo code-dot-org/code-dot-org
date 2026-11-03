@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q3-2026'
+
+wrong 'A regular expression runs faster than split on long texts'
+wrong 'A regular expression removes stop words as it splits'
+wrong 'A regular expression lowercases the text as it splits'
+right 'A regular expression can describe more specific patterns for tokens'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Splitting text on spaces gives tokens such as `"Way."`, with the period attached. Why would a program tokenize with a regular expression instead?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Tokenization
+MARKDOWN

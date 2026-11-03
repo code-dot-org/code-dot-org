@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-6284595-c373b93f83f3",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the common function-related errors with their descriptions.",
+  "solution": [
+    {
+      "option": "Missing parentheses",
+      "correct": "The function cannot be called correctly."
+    },
+    {
+      "option": "Incorrect function name",
+      "correct": "The function cannot be found."
+    },
+    {
+      "option": "Not defining the function",
+      "correct": "The function will raise an error when called."
+    }
+  ],
+  "objective_keys": [
+    "e311a6a0-3b32-4c32-baa3-c0c17f0dc025"
+  ]
+}
