@@ -17,7 +17,7 @@ jest.mock('@cdo/apps/imageUtils', () => ({downloadBlobAsPng: jest.fn()}));
 const mockCapture = jest.mocked(captureTreeImage);
 const image = new Blob(['png'], {type: 'image/png'});
 
-function renderMenu({onKeyDown = jest.fn()} = {}) {
+function renderMenu() {
   const treeRef = createRef<HTMLDivElement>();
   render(
     withTheme(
@@ -36,9 +36,7 @@ function renderMenu({onKeyDown = jest.fn()} = {}) {
           ]}
           triggerButtonProps={{}}
         />
-        <div onKeyDown={onKeyDown}>
-          <SaveTreeImageMenu treeRef={treeRef} baseName="zoo-tree" tabbable />
-        </div>
+        <SaveTreeImageMenu treeRef={treeRef} baseName="zoo-tree" tabbable />
       </ToastProvider>
     )
   );
@@ -97,27 +95,6 @@ describe('SaveTreeImageMenu', () => {
     fireEvent.pointerDown(option('Other option')!);
 
     expect(otherTrigger).toHaveAttribute('data-force-hover');
-  });
-
-  it('keeps Escape in the menu from leaving the tree', () => {
-    const onKeyDown = jest.fn();
-    renderMenu({onKeyDown});
-    fireEvent.click(trigger());
-
-    fireEvent.keyDown(option('Save to device')!, {key: 'Escape'});
-
-    expect(isOpen()).toBe(false);
-    expect(trigger()).toHaveFocus();
-    expect(onKeyDown).not.toHaveBeenCalled();
-  });
-
-  it('lets Escape on its button leave the tree', () => {
-    const onKeyDown = jest.fn();
-    renderMenu({onKeyDown});
-
-    fireEvent.keyDown(trigger(), {key: 'Escape'});
-
-    expect(onKeyDown).toHaveBeenCalled();
   });
 
   it('says so when the image cannot be made', async () => {

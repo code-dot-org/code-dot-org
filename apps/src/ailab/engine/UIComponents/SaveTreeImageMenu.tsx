@@ -5,12 +5,7 @@ import {
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useToast} from '@code-dot-org/component-library/toast';
 import {Tooltip} from '@mui/material';
-import React, {
-  type KeyboardEvent,
-  type RefObject,
-  useEffect,
-  useRef,
-} from 'react';
+import React, {type RefObject, useEffect, useRef} from 'react';
 
 import {downloadBlobAsPng} from '@cdo/apps/imageUtils';
 
@@ -18,13 +13,6 @@ import {captureTreeImage} from '../helpers/treeImage';
 
 const LABEL = 'Save image';
 const SAVE_ERROR = "Couldn't save an image of your tree. Please try again.";
-
-// A body mousedown would close every open CustomDropdown, not just this one.
-const closeMenu = (trigger: HTMLButtonElement) => {
-  if (trigger.hasAttribute('data-force-hover')) {
-    trigger.click();
-  }
-};
 
 interface SaveTreeImageMenuProps {
   treeRef: RefObject<HTMLElement>;
@@ -41,11 +29,13 @@ const SaveTreeImageMenu = ({
   const menuRef = useRef<HTMLSpanElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
-  // d3-zoom stops mousedown on the tree.
+  // d3-zoom stops mousedown on the tree, so CustomDropdown never hears a press there.
   useEffect(() => {
     const closeOnPressOutside = ({target}: PointerEvent) => {
-      if (!menuRef.current!.contains(target as Node)) {
-        closeMenu(triggerRef.current!);
+      const trigger = triggerRef.current!;
+      const open = trigger.hasAttribute('data-force-hover');
+      if (open && !menuRef.current!.contains(target as Node)) {
+        trigger.click();
       }
     };
     document.addEventListener('pointerdown', closeOnPressOutside);
@@ -53,20 +43,9 @@ const SaveTreeImageMenu = ({
       document.removeEventListener('pointerdown', closeOnPressOutside);
   }, []);
 
-  const closeOnEscape = (event: KeyboardEvent) => {
-    if (event.key !== 'Escape') {
-      return;
-    }
-    closeMenu(triggerRef.current!);
-    const fromMenu = event.target !== triggerRef.current;
-    if (fromMenu) {
-      event.stopPropagation();
-      triggerRef.current!.focus();
-    }
-  };
-
   const saveImage = async (save: (image: Blob) => void | Promise<void>) => {
-    closeMenu(triggerRef.current!);
+    // ActionDropdown's own close never reaches the menu's private state.
+    triggerRef.current!.click();
     triggerRef.current!.focus();
     try {
       await save(await captureTreeImage(treeRef.current!));
@@ -88,7 +67,7 @@ const SaveTreeImageMenu = ({
 
   return (
     <Tooltip title={LABEL} placement="right">
-      <span ref={menuRef} onKeyDown={closeOnEscape}>
+      <span ref={menuRef}>
         <ActionDropdown
           name="ailab-save-tree-image"
           labelText={LABEL}

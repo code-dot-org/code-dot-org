@@ -24,7 +24,7 @@ export const treePixelRatio = (width: number, height: number): number =>
     Math.sqrt(IOS_SAFARI_MAX_CANVAS_PIXELS / (width * height))
   );
 
-const drawTree = async (tree: HTMLElement): Promise<Blob> => {
+export const captureTreeImage = async (tree: HTMLElement): Promise<Blob> => {
   const width = tree.offsetWidth + 2 * PADDING_PX;
   const height = tree.offsetHeight + 2 * PADDING_PX;
   const fontEmbedCSS = await getFontEmbedCss(tree);
@@ -48,13 +48,4 @@ const drawTree = async (tree: HTMLElement): Promise<Blob> => {
   } finally {
     restoreSvgStyles();
   }
-};
-
-let lastCapture: Promise<unknown> = Promise.resolve();
-
-// Overlapping captures would each restore the other's temporary styles as originals.
-export const captureTreeImage = (tree: HTMLElement): Promise<Blob> => {
-  const capture = lastCapture.then(() => drawTree(tree));
-  lastCapture = capture.catch(() => {});
-  return capture;
 };
