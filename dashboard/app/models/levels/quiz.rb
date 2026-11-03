@@ -93,15 +93,13 @@ class Quiz < Level
 
   # Sets this quiz's placements to the given questions, in the order given,
   # with pages and positions renumbered from 1. Questions in delete_question_ids
-  # are deleted if nothing else uses them.
+  # are deleted if nothing else uses them, including ones never placed here.
   def replace_placements!(entries, delete_question_ids: [])
     builder_question_ids = entries.pluck(:quiz_question_id)
     raise ArgumentError, 'a question is listed more than once' if builder_question_ids.uniq.size != builder_question_ids.size
     valid_question_ids = QuizQuestion.where(type: QuizQuestion::TYPES, id: builder_question_ids).pluck(:id)
     raise ArgumentError, "unknown quiz question ids: #{(builder_question_ids - valid_question_ids).sort.join(', ')}" if valid_question_ids.size != builder_question_ids.size
-    saved_question_ids = placements.pluck(:quiz_question_id)
-    removed_ids = saved_question_ids - builder_question_ids
-    raise ArgumentError, 'only questions removed from this quiz can be deleted' unless (delete_question_ids - removed_ids).empty?
+    raise ArgumentError, "a question can't be both kept and deleted" if delete_question_ids.intersect?(builder_question_ids)
 
     # Maps each page sent to 1..N in the same order, e.g. pages 4, 9 => {4 => 1, 9 => 2}.
     page_numbers = entries.pluck(:page).uniq.sort.each_with_index.to_h {|page, i| [page, i + 1]}

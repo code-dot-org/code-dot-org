@@ -311,6 +311,18 @@ class QuizzesControllerTest < ActionController::TestCase
     assert QuizQuestion.exists?(question.id)
   end
 
+  test "update deletes a question created and deleted before it was ever placed" do
+    unplaced = create(:multiple_choice_question)
+
+    put :update, as: :json, params: {
+      level_id: @quiz.id, version: @quiz.reload.updated_at.to_i,
+      placements: [], deleteQuestionIds: [unplaced.id]
+    }
+
+    assert_response :success
+    refute QuizQuestion.exists?(unplaced.id)
+  end
+
   test "update returns conflict and changes nothing when the version is stale" do
     question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 1)
