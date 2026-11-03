@@ -203,7 +203,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Animated is on until the student turns it off, and stays as they left
   // it from image to image; no image or level turns it off for them.
   const [animated, setAnimated] = useState(true);
-  const learning = useLearningStory({active, lockedImageType});
+  const {story, offerStory, handleAsking, endStory} = useLearningStory({
+    active,
+    lockedImageType,
+  });
   // Once per picture: a verdict's second keep must not tell it again.
   const keptRef = useRef<string | null>(null);
   const handleKeep = useCallback(
@@ -217,10 +220,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       keptRef.current = result.filename;
       await land(target, () => writer.acceptGenerated(target, result));
       if (firstKeep) {
-        learning.offerStory(result);
+        offerStory(result);
       }
     },
-    [writer, land, learning]
+    [writer, land, offerStory]
   );
 
   const tools = useDrawing({
@@ -462,7 +465,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                       verdict={parts.rating.verdict}
                       onJudge={parts.rating.judge}
                       onReasons={parts.rating.explain}
-                      onAsking={learning.handleAsking}
+                      onAsking={handleAsking}
                       disabled={parts.busy}
                     />
                   )
@@ -603,11 +606,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           </section>
         </>
       )}
-      {learning.story && (
+      {story && (
         <LearningDialog
-          picture={learning.story.picture}
-          prompt={learning.story.prompt}
-          onDone={learning.endStory}
+          picture={story.picture}
+          prompt={story.prompt}
+          onDone={endStory}
         />
       )}
     </div>
