@@ -9,8 +9,9 @@ ARG DEPS_IMAGE=ghcr.io/code-dot-org/cdo-deps:latest
 FROM ${DEPS_IMAGE}
 
 # Temporarily remove engines because `cdo-deps` already included engine gemspecs.
-# This prevents an engine file that was deleted from being re-added later on.
-# The COPY command below restores engines, preventing the conflict.
+# COPY merges on top of the parent image and never deletes, so an engine file
+# that was deleted in this checkout would otherwise survive from `cdo-deps`.
+# The COPY command below restores engines from this checkout.
 RUN rm -rf dashboard/engines
 
 # The source slice is defined by Dockerfile.dockerignore.

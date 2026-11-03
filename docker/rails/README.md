@@ -88,7 +88,9 @@ Two suites, in increasing cost.
 
 `smoke-test.sh` is database-free. It runs the image with a series of one-off
 commands and asserts the slice is what it should be: `bundle check` passes,
-`deployment.rb` ensures that Rails is able to load during a deployment.
+`deployment.rb` loads (this ensures the CDO config and `lib/` work without
+Rails), the staging gem set loads, the kept paths above are present, and no
+build toolchain came along.
 
 ```
 ./docker/rails/smoke-test.sh cdo-rails:test docker
