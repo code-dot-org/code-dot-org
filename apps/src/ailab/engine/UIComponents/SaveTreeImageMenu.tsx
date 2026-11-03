@@ -14,6 +14,11 @@ import {captureTreeImage} from '../helpers/treeImage';
 const LABEL = 'Save image';
 const SAVE_ERROR = "Couldn't save an image of your tree. Please try again.";
 
+// The dropdown keeps its open state private, so we read and toggle it through its button.
+const isMenuOpen = (trigger: HTMLButtonElement) =>
+  trigger.hasAttribute('data-force-hover');
+const closeMenu = (trigger: HTMLButtonElement) => trigger.click();
+
 interface SaveTreeImageMenuProps {
   treeRef: RefObject<HTMLElement>;
   baseName: string;
@@ -29,13 +34,12 @@ const SaveTreeImageMenu = ({
   const menuRef = useRef<HTMLSpanElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
-  // d3-zoom stops mousedown on the tree, so CustomDropdown never hears a press there.
+  // The dropdown closes on a mousedown outside it, but the tree's pan and zoom swallow those.
   useEffect(() => {
     const closeOnPressOutside = ({target}: PointerEvent) => {
       const trigger = triggerRef.current!;
-      const open = trigger.hasAttribute('data-force-hover');
-      if (open && !menuRef.current!.contains(target as Node)) {
-        trigger.click();
+      if (isMenuOpen(trigger) && !menuRef.current!.contains(target as Node)) {
+        closeMenu(trigger);
       }
     };
     document.addEventListener('pointerdown', closeOnPressOutside);
@@ -44,8 +48,8 @@ const SaveTreeImageMenu = ({
   }, []);
 
   const saveImage = async (save: (image: Blob) => void | Promise<void>) => {
-    // ActionDropdown's own close never reaches the menu's private state.
-    triggerRef.current!.click();
+    // An ActionDropdown stays open after a choice.
+    closeMenu(triggerRef.current!);
     triggerRef.current!.focus();
     try {
       await save(await captureTreeImage(treeRef.current!));
