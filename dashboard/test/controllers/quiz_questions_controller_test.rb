@@ -223,11 +223,11 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test "update edits a question not yet placed on the given quiz" do
+  test "update edits a question that is on no quiz" do
     unplaced = create(:multiple_choice_question)
 
     put :update, as: :json, params: {
-      id: unplaced.id, quizLevelId: @quiz.id,
+      id: unplaced.id,
       questionName: 'Renamed', questionTitle: 'Pick one',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
     }
@@ -237,26 +237,9 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     refute QuizQuestionPlacement.exists?(level: @quiz, quiz_question: unplaced)
   end
 
-  test "update returns the quiz's new version after a fork repoints its placement" do
-    before = @quiz.reload.saved_version
-
-    travel 1.minute do
-      put :update, as: :json, params: {
-        id: @question.id, quizLevelId: @quiz.id, editMode: 'fork',
-        questionName: 'Forked', questionTitle: 'Pick one',
-        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
-      }
-
-      assert_response :success
-      quiz_version = JSON.parse(response.body)['quizVersion']
-      assert_equal @quiz.reload.saved_version, quiz_version
-      assert_operator quiz_version, :>, before
-    end
-  end
-
   test "update leaves the placement's page alone; Save quiz sets pages" do
     put :update, as: :json, params: {
-      id: @question.id, quizLevelId: @quiz.id, page: 3,
+      id: @question.id, page: 3,
       questionName: 'Renamed', questionTitle: 'Pick one',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
     }
@@ -269,7 +252,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     unplaced = create(:multiple_choice_question)
 
     put :update, as: :json, params: {
-      id: unplaced.id, quizLevelId: @quiz.id, type: 'MultipleSelectQuestion',
+      id: unplaced.id, type: 'MultipleSelectQuestion',
       questionName: 'Now multi-select', questionTitle: 'Pick both',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a', 'b']
     }
@@ -281,7 +264,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
   test "update edits the question in place when it's not used in a published unit" do
     put :update, params: {
-      id: @question.id, quizLevelId: @quiz.id,
+      id: @question.id,
       questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
     }
@@ -298,7 +281,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 2)
 
     put :update, as: :json, params: {
-      id: question.id, quizLevelId: @quiz.id,
+      id: question.id,
       questionName: 'Evens', questionTitle: 'Which are even?',
       choices: [{id: 'a', text: '2'}, {id: 'b', text: '3'}, {id: 'c', text: '4'}],
       correctChoiceIds: ['a', 'b', 'c']
@@ -335,7 +318,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     assert_difference 'QuizQuestion.count', 1 do
       put :update, params: {
-        id: @question.id, quizLevelId: @quiz.id,
+        id: @question.id,
         questionName: 'Forked name', questionTitle: 'Forked title',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
       }
@@ -352,13 +335,14 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     @question.reload
     assert_equal original_content, @question.content
 
-    assert_equal forked.id, @quiz.placements.sole.quiz_question_id
+    # Save quiz places the fork; until then the quiz keeps the original.
+    assert_equal @question.id, @quiz.placements.reload.sole.quiz_question_id
   end
 
   test "update forks when the client explicitly sends editMode: fork, even if not published" do
     assert_difference 'QuizQuestion.count', 1 do
       put :update, params: {
-        id: @question.id, quizLevelId: @quiz.id, editMode: 'fork',
+        id: @question.id, editMode: 'fork',
         questionName: 'Forked by request', questionTitle: 'Title',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
       }
@@ -375,7 +359,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     assert_no_difference 'QuizQuestion.count' do
       put :update, params: {
-        id: @question.id, quizLevelId: @quiz.id,
+        id: @question.id,
         questionName: 'Forked name', questionTitle: 'Forked title',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
         standards: [{frameworkShortcode: 'not-a-real-framework', shortcode: 'not-a-real-standard'}]
@@ -386,9 +370,9 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
   end
 
-  test "update forks a type change between choice types, repoints the placement, and deletes the unreferenced original" do
+  test "update forks a type change between choice types, leaving the placed original for Save quiz" do
     put :update, as: :json, params: {
-      id: @question.id, quizLevelId: @quiz.id, type: 'MultipleSelectQuestion',
+      id: @question.id, type: 'MultipleSelectQuestion',
       questionName: 'Now multi-select', questionTitle: 'Pick both',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a', 'b']
     }
@@ -399,29 +383,29 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal ['a', 'b'], body['correctChoiceIds']
     forked = MultipleSelectQuestion.find(body['id'])
     assert_equal @question.id, forked.fork_parent_id
-    assert_equal forked.id, @quiz.reload.placements.sole.quiz_question_id
-    refute QuizQuestion.exists?(@question.id)
+    assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
+    assert QuizQuestion.exists?(@question.id)
   end
 
   test "update keeps the original on a type change when another quiz still places it" do
     create(:quiz_question_placement, level: create(:quiz), quiz_question: @question)
 
     put :update, as: :json, params: {
-      id: @question.id, quizLevelId: @quiz.id, type: 'MultipleSelectQuestion',
+      id: @question.id, type: 'MultipleSelectQuestion',
       questionName: 'Now multi-select', questionTitle: 'Pick both',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
     }
 
     assert_response :success
     assert_instance_of MultipleChoiceQuestion, @question.reload
-    refute_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
+    assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
   end
 
   test "update keeps the original on a type change when it has responses" do
     create(:quiz_question_response, quiz_question: @question)
 
     put :update, as: :json, params: {
-      id: @question.id, quizLevelId: @quiz.id, type: 'MultipleSelectQuestion',
+      id: @question.id, type: 'MultipleSelectQuestion',
       questionName: 'Now multi-select', questionTitle: 'Pick both',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
     }
@@ -433,21 +417,8 @@ class QuizQuestionsControllerTest < ActionController::TestCase
   test "update cannot change a choice question into a free response question" do
     assert_no_difference 'QuizQuestion.count' do
       put :update, params: {
-        id: @question.id, quizLevelId: @quiz.id, type: 'FreeResponseQuestion',
+        id: @question.id, type: 'FreeResponseQuestion',
         questionName: 'Still MC', questionTitle: 'ignored'
-      }
-    end
-
-    assert_response :bad_request
-    assert_instance_of MultipleChoiceQuestion, @question.reload
-  end
-
-  test "update requires quizLevelId to change a question's type" do
-    assert_no_difference 'QuizQuestion.count' do
-      put :update, as: :json, params: {
-        id: @question.id, type: 'MultipleSelectQuestion',
-        questionName: 'Now multi-select', questionTitle: 'Pick both',
-        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
       }
     end
 
@@ -462,7 +433,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     @question.standards << standard
 
     put :update, params: {
-      id: @question.id, quizLevelId: @quiz.id,
+      id: @question.id,
       questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
     }
@@ -477,7 +448,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     @question.standards << old_standard
 
     put :update, params: {
-      id: @question.id, quizLevelId: @quiz.id,
+      id: @question.id,
       questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
       standards: [{frameworkShortcode: new_standard.framework.shortcode, shortcode: new_standard.shortcode}]
@@ -492,7 +463,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     @question.standards << standard
 
     put :update, params: {
-      id: @question.id, quizLevelId: @quiz.id,
+      id: @question.id,
       questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
       standards: []
@@ -551,7 +522,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 2)
 
     put :update, params: {
-      id: question.id, quizLevelId: @quiz.id,
+      id: question.id,
       questionName: 'Edited name', questionTitle: 'Edited title', description: 'Edited description'
     }
 
@@ -567,7 +538,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     assert_difference 'QuizQuestion.count', 1 do
       put :update, params: {
-        id: question.id, quizLevelId: @quiz.id, editMode: 'fork',
+        id: question.id, editMode: 'fork',
         questionName: 'Forked', questionTitle: 'Forked title'
       }
     end

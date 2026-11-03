@@ -12,7 +12,7 @@ class QuizQuestionsController < ApplicationController
   # Question bank browsing, scoped to quizLevelId (required). sort: 'name'
   # or 'recent' (default).
   def index
-    level = find_quiz_level(params[:quizLevelId], required: true)
+    level = find_quiz_level(params[:quizLevelId])
     standard = find_standard(params[:standardFrameworkShortcode], params[:standardShortcode])
     course_or_unit = find_course_or_unit(params[:courseOrUnitType], params[:courseOrUnitId])
     questions = QuizQuestionAutocomplete.get_search_matches(params[:search], params[:limit], params[:sort], standard&.id, course_or_unit).
@@ -88,26 +88,20 @@ class QuizQuestionsController < ApplicationController
     render status: :bad_request, json: {error: exception.message}
   end
 
-  # PUT /quiz_questions/:id?quizLevelId=
+  # PUT /quiz_questions/:id
   #
   # Content params follow the type param, or the question's own type if
   # none is given. Only choice types can switch, to each other.
   #
-  # quizLevelId's placement, if the question has one, gets repointed at the fork.
   # editMode: 'fork' forces a fork explicitly; used_in_published_unit? and a type
-  # change also forces one. A type change then deletes the original if
-  # nothing else references it.
+  # change also forces one. Placements are left alone.
+  # A type change deletes the original only if nothing references it yet.
   def update
     question = QuizQuestion.find(params[:id])
-    level = find_quiz_level(params[:quizLevelId])
-    placement = level&.placements&.find_by(quiz_question_id: question.id)
     target_class = quiz_question_params[:type].present? ? quiz_question_class : question.class
     type_changed = target_class != question.class
-    if type_changed
-      unless question.is_a?(ChoiceQuestion) && target_class.include?(ChoiceQuestion)
-        raise ArgumentError, "a #{question.type} can't become a #{target_class.name}"
-      end
-      raise ArgumentError, 'changing type requires quizLevelId' unless level
+    if type_changed && !(question.is_a?(ChoiceQuestion) && target_class.include?(ChoiceQuestion))
+      raise ArgumentError, "a #{question.type} can't become a #{target_class.name}"
     end
     should_fork = type_changed || question.used_in_published_unit? || quiz_question_params[:editMode] == 'fork'
     target = should_fork ? target_class.new(key: SecureRandom.uuid, fork_parent: question) : question
@@ -126,26 +120,16 @@ class QuizQuestionsController < ApplicationController
           question.standards
         end
 
-      placement&.update!(quiz_question: target) if should_fork
-
       question.destroy! if type_changed && !question.referenced?
     end
 
-    json = quiz_question_json(target, level: level)
-    # The quiz's version after this edit; a fork that repoints the placement advances it.
-    json[:quizVersion] = level.reload.saved_version if level
-    render json: json
+    render json: quiz_question_json(target)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
   end
 
-  # Resolves quizLevelId into its Quiz, or nil if blank.
-  private def find_quiz_level(id, required: false)
-    if id.blank?
-      raise ActiveRecord::RecordNotFound if required
-      return nil
-    end
-
+  # Resolves quizLevelId into its Quiz; raises RecordNotFound if missing.
+  private def find_quiz_level(id)
     level = Level.find(id)
     raise ActiveRecord::RecordNotFound unless level.is_a?(Quiz)
     level
