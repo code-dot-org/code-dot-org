@@ -8,7 +8,7 @@ import React, {
   useLayoutEffect,
 } from 'react';
 
-import {colors} from './constants';
+import {colors, SIDE_PANEL_WIDTH} from './constants';
 import {reportPanelView} from './helpers/metrics';
 import {
   isSaveComplete,
@@ -206,7 +206,10 @@ interface ContainerRightProps {
 
 const ContainerRight = ({children}: ContainerRightProps) => {
   return (
-    <div className={classNames(styles.column, styles.rightColumn)}>
+    <div
+      className={classNames(styles.column, styles.rightColumn)}
+      style={{width: SIDE_PANEL_WIDTH}}
+    >
       {children}
     </div>
   );

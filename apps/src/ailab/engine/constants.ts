@@ -37,7 +37,10 @@ export const DATA_TABLE_ROW_LIMIT = 100;
 // A few more rows than the training modal can show; the rest would be clipped.
 export const ANIMATION_TABLE_ROW_LIMIT = 20;
 
-export const TEST_PANEL_WIDTH = 300;
+export const SIDE_PANEL_WIDTH = 280;
+
+// Less the side panel's left border, so Test and Train cards line up.
+export const TEST_PANEL_WIDTH = SIDE_PANEL_WIDTH - 1;
 
 export function getFadeOpacity(animationProgress: number): number {
   return animationProgress > 0.95
