@@ -3,7 +3,7 @@
 // The choice is only meaningful where there is another actor to shadow, so the
 // row is built by context rather than always shown. The failure modes are
 // asymmetric and both bad: too shy and the option vanishes where it is needed,
-// which reads as broken rather than absent; too loud and every world file
+// which reads as broken rather than absent; too loud and every screen
 // carries a dropdown that can never mean anything.
 //
 // One case per site, because "is there an actor in scope here" is exactly the
@@ -72,10 +72,10 @@ const chainedAfter = (...types: Array<string | FakeBlock>): boolean =>
   );
 
 describe('where naming the placed actor is offered', () => {
-  it('is not, in a world describing its level', () => {
+  it('is not, under `when this screen loads`', () => {
     // Nothing to shadow: `this actor` in the body can only mean the new actor,
     // so a choice would be a dropdown with one real answer.
-    expect(enclosed('world_world')).toBe(false);
+    expect(enclosed('world_on_screen_loads')).toBe(false);
   });
 
   it('is not, with no parent at all — the flyout', () => {
@@ -109,7 +109,9 @@ describe('where naming the placed actor is offered', () => {
   it('is, inside an unnamed spawn — a spawn within a spawn', () => {
     // An unnamed `add actor` binds `actor` for its BODY, so a nested one has
     // something to shadow in turn.
-    expect(enclosed({type: 'world_add_actor'}, 'world_world')).toBe(true);
+    expect(enclosed({type: 'world_add_actor'}, 'world_on_screen_loads')).toBe(
+      true,
+    );
   });
 
   it('is not, merely chained after another spawn', () => {
@@ -117,18 +119,18 @@ describe('where naming the placed actor is offered', () => {
     // neither is in the other, and neither has anything to shadow — but in
     // Blockly the second's parent IS the first, so a walk that did not ask how
     // it got there offered a choice that could not mean anything.
-    expect(chainedAfter({type: 'world_add_actor'}, {type: 'world_world'})).toBe(
-      false,
-    );
+    expect(
+      chainedAfter({type: 'world_add_actor'}, {type: 'world_on_screen_loads'}),
+    ).toBe(false);
   });
 
-  it('is not, chained after a spawn that is itself inside a world', () => {
+  it('is not, chained after a spawn that is itself in a screen', () => {
     // Three in a row is the same answer, and the walk has to keep going past
     // the sibling rather than stopping at it.
     expect(
       chainedAfter(
         {type: 'world_add_actor', chained: true},
-        {type: 'world_world'},
+        {type: 'world_on_screen_loads'},
       ),
     ).toBe(false);
   });
@@ -140,13 +142,13 @@ describe('where naming the placed actor is offered', () => {
     );
   });
 
-  it('is not, inside a NAMED spawn in a world', () => {
+  it('is not, inside a NAMED spawn in a screen', () => {
     // A named one binds a variable and leaves `actor` alone, so the question
-    // passes through to whatever encloses it — here, a world with no actor.
+    // passes through to whatever encloses it — here, a screen with no actor.
     expect(
       enclosed(
         {type: 'world_add_actor', fields: {NAMED: 'named'}},
-        'world_world',
+        'world_on_screen_loads',
       ),
     ).toBe(false);
   });
@@ -163,8 +165,7 @@ describe('where naming the placed actor is offered', () => {
   });
 
   it('stops at the nearest handler, not the furthest root', () => {
-    // A world hat inside a `define actor` — which `ROOT_HOMES` allows, since a
-    // `.world` file may define actors inline. The handler rebinds, so nothing
+    // A world hat inside a `define actor`. The handler rebinds, so nothing
     // above it is in scope, and answering from the `define actor` would offer a
     // name for an actor the body cannot reach.
     expect(

@@ -339,22 +339,17 @@ describe('an actor event\u2019s hat, in the same rule', () => {
 
 describe('an event that carries an ACTOR', () => {
   // A hat for one filters by KIND, and the dropdown is built by a function
-  // that is handed the field. That handing is the whole of whether it has
-  // anything in it: a world's own `define actor` kinds are found through the
-  // field's workspace, and a world that defines its actors inline is every
-  // lesson and the starter — so the filter offered `(any)` and a placeholder,
-  // and no kinds at all, until it was passed.
+  // that is handed the field. Unhanded, it offered `(any)` and a placeholder
+  // and no kinds at all.
   const TOUCHED = {
     parts: [
       {kind: 'label', text: 'is touched by'},
       {kind: 'param', name: 'other', type: 'actor', var: 'other'},
     ],
   };
-  /** A workspace holding a world; the kinds come from the project's files. */
-  const fieldInAWorld = () => {
-    const blocks = [
-      {id: 'w1', type: 'world_world', getFieldValue: () => 'My World'},
-    ];
+  /** A screen's workspace; the kinds come from the project's files. */
+  const fieldInAScreen = () => {
+    const blocks = [{id: 's1', type: 'world_on_screen_loads'}];
     return {
       getTopBlocks: () => blocks,
       getBlockById: (id: string) => blocks.find(block => block.id === id),
@@ -375,7 +370,7 @@ describe('an event that carries an ACTOR', () => {
     const field = new Blockly.FieldDropdown(() => [['(any)', '']]);
     const block = {
       getField: (name: string) => (name === 'FILTER0' ? field : null),
-      workspace: fieldInAWorld(),
+      workspace: fieldInAScreen(),
     };
     // Stubbed rather than `setSourceBlock`, which wants a real block: what the
     // live list asks the field for is where it is (`moduleOptions.liveDropdown`).

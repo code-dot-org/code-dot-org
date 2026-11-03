@@ -1,5 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {FOUNDATION_RULE_NAMES} from '../foundation';
 import {
   projectActorOptions,
@@ -12,12 +13,8 @@ import {
 
 const FILES = {
   'maps/level1.map': '{}',
-  'worlds/platform.world': JSON.stringify({
-    blocks: {
-      blocks: [
-        {type: 'world_world', fields: {ID: 'platform', NAME: 'Platform World'}},
-      ],
-    },
+  'screens/main.screen': levelScreen({
+    blocks: {blocks: [{type: 'world_on_screen_loads'}]},
   }),
   'actors/player.actor': JSON.stringify({
     blocks: {
@@ -48,7 +45,7 @@ describe('projectModules', () => {
       ['Has Gravity', 'rules/gravity'], // from the RuleBuilder `name`
       ['Shim', 'rules/shim'], // fallback: Title-cased basename
     ]);
-    // Rules are not mistaken for actors/worlds.
+    // Rules are not mistaken for actors.
     expect(projectActorOptions(files).map(([, p]) => p)).not.toContain(
       'rules/gravity',
     );
@@ -87,17 +84,17 @@ describe('projectWorldRules', () => {
   const ruleFile = (name: string) =>
     JSON.stringify({type: 'rule', name, ability: name});
 
-  it('is every rule the project holds, whatever any world says', () => {
-    // The change this is here to pin: it used to read the `use rule` blocks.
-    // A learner who imported Gravity and went straight to their actor found
+  it('is every rule the project holds, whatever any screen says', () => {
+    // The change this is here to pin: it used to read the `use rule` blocks. A
+    // learner who imported Gravity and went straight to their actor found
     // "Affected by Gravity" missing from `use trait` until they went back and
-    // told the world as well — a second place to say what holding the file
-    // already said.
+    // told the Main Screen as well — a second place to say what holding the
+    // file already said.
     const rules = projectWorldRules({
       'rules/gravity.rule': ruleFile('Gravity'),
       'rules/wind.rule': ruleFile('Wind'),
-      'worlds/a.world': JSON.stringify({
-        blocks: {blocks: [{type: 'world_world'}]}, // names nothing at all
+      'screens/main.screen': levelScreen({
+        blocks: {blocks: [{type: 'world_on_screen_loads'}]}, // names nothing at all
       }),
     });
 
@@ -106,16 +103,16 @@ describe('projectWorldRules', () => {
     );
   });
 
-  it('ignores a rule a world names but the project has not got', () => {
+  it('ignores a rule a screen names but the project has not got', () => {
     // The other direction, and the one that used to produce a trait dropdown
     // offering things nothing could provide: a `use rule` block left behind by
     // a deleted file is now a row about nothing, rather than a claim.
     const rules = projectWorldRules({
-      'worlds/a.world': JSON.stringify({
+      'screens/main.screen': levelScreen({
         blocks: {
           blocks: [
             {
-              type: 'world_world',
+              type: 'world_on_screen_loads',
               next: {block: {type: 'world_use_rule', fields: {RULE: 'Wind'}}},
             },
           ],

@@ -5,6 +5,7 @@ import {describe, expect, it} from 'vitest';
 
 import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import type {ActorMember} from '../../actors/actorData';
 import {addMember, newMember, setMember} from '../../actors/editor/memberEdits';
 import type {RuleData} from '../ruleData';
@@ -90,22 +91,24 @@ describe('a rule’s member', () => {
   });
 
   it('takes its uses to its new words', () => {
-    const file = (contents: unknown): ProjectFile => ({
-      id: 'w',
-      name: 'main.world',
+    const file = (contents: string): ProjectFile => ({
+      id: 's',
+      name: 'main.screen',
       folderId: '0',
-      language: 'world',
-      contents: JSON.stringify(contents),
+      language: 'screen',
+      contents,
     });
     const source: MultiFileSource = {
       folders: {},
       files: {
-        w: file({
-          blocks: {
-            languageVersion: 0,
-            blocks: [{type: 'world_query_Time_IsReadyQuery'}],
-          },
-        }),
+        s: file(
+          levelScreen({
+            blocks: {
+              languageVersion: 0,
+              blocks: [{type: 'world_query_Time_IsReadyQuery'}],
+            },
+          }),
+        ),
       },
       openFiles: [],
     };
@@ -113,6 +116,6 @@ describe('a rule’s member', () => {
       ...ready,
       parts: [word('can go?')],
     });
-    expect(next.files.w.contents).toContain('world_query_Time_CanGoQuery');
+    expect(next.files.s.contents).toContain('world_query_Time_CanGoQuery');
   });
 });

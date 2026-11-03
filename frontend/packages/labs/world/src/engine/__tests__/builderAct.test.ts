@@ -1,12 +1,12 @@
 // `world.act(…)` where `world` is the DESCRIPTION rather than the game.
 //
-// A rule's world action generates `world.act(ref, …)`, and inside a `.world`
-// file that name is a `WorldBuilder`. It had no `act`, so every world action
-// every rule offers — `add ⟨1⟩ to the score`, `win the game`, `make ⟨the box⟩
-// say the next thing — was a block the palette handed over and the module threw
-// on the moment a learner ran it: `world.act is not a function`. Nothing warned,
-// because `worldContextExtension` asks whether `world` is BOUND and it is,
-// to the wrong thing (specs/PROGRESSION.md).
+// A rule's world action generates `world.act(ref, …)`, and inside a screen's
+// setup file that name is a `WorldBuilder`. It had no `act`, so every world
+// action every rule offers — `add ⟨1⟩ to the score`, `win the game`, `make ⟨the
+// box⟩ say the next thing — was a block the palette handed over and the module
+// threw on the moment a learner ran it: `world.act is not a function`. Nothing
+// warned, because `worldContextExtension` asks whether `world` is BOUND and it
+// is, to the wrong thing (specs/PROGRESSION.md).
 //
 // `builderSurface` now refuses the method being absent at all. What is here is
 // the half a surface check cannot see: WHEN an action belongs to the
@@ -43,7 +43,7 @@ describe('a world action taken while the world is described', () => {
   it('happens, rather than throwing at the block that asked', () => {
     // Deferred like every other described call, so it lands when the world it
     // describes exists — which is before anything can observe the difference,
-    // since a `define world` body has no way to look at the world it is still
+    // since a screen's setup has no way to look at the world it is still
     // describing.
     const {rule, bump, done} = countingRule();
     const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([rule]);
@@ -71,7 +71,7 @@ describe('a world action taken while the world is described', () => {
 
 describe('a world action taken while the world is running', () => {
   it('happens once and is not remembered', () => {
-    // A `.world` file's handler closes over the same builder, so `add 1 to the
+    // A screen's handler closes over the same builder, so `add 1 to the
     // score` on every click lands here. Logging those would grow the
     // description by one entry per click for the life of the game, and replay
     // every one of them into the next world made from it.

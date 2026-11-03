@@ -4,6 +4,7 @@ import {describe, expect, it} from 'vitest';
 
 import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import type {ActorData} from '../../actors/actorData';
 import {actorDocument} from '../../actors/actorDocument';
 import {renameThing} from '../renameThing';
@@ -16,11 +17,11 @@ const file = (over: Partial<ProjectFile> & {id: string}): ProjectFile => ({
   ...over,
 });
 
-/** `player.actor`, a world that places it, and a map that puts one down. */
+/** `player.actor`, the Main Screen placing it, and a map that puts one down. */
 const project = (): MultiFileSource => ({
   folders: {
     actors: {id: 'actors', name: 'actors', parentId: '0', open: true},
-    worlds: {id: 'worlds', name: 'worlds', parentId: '0', open: true},
+    screens: {id: 'screens', name: 'screens', parentId: '0', open: true},
     maps: {id: 'maps', name: 'maps', parentId: '0', open: true},
   },
   files: {
@@ -29,17 +30,16 @@ const project = (): MultiFileSource => ({
       name: 'player.actor',
       contents: actorDocument({name: 'Player'}),
     }),
-    w: file({
-      id: 'w',
-      name: 'main.world',
-      language: 'world',
-      folderId: 'worlds',
-      contents: JSON.stringify({
+    s: file({
+      id: 's',
+      name: 'main.screen',
+      language: 'screen',
+      folderId: 'screens',
+      contents: levelScreen({
         blocks: {
           blocks: [
             {
-              type: 'world_world',
-              fields: {NAME: 'My World'},
+              type: 'world_on_screen_loads',
               next: {
                 block: {
                   type: 'world_add_actor',
@@ -102,10 +102,12 @@ describe('renaming an actor', () => {
     const source = project();
 
     const {source: next} = renameThing(source, source.files.a, 'Hero');
-    const world = JSON.parse(read(next, 'w'));
+    const screen = JSON.parse(read(next, 's'));
 
     // The placement, by module path.
-    expect(world.blocks.blocks[0].next.block.fields.ACTOR).toBe('actors/hero');
+    expect(screen.blocks.blocks.blocks[0].next.block.fields.ACTOR).toBe(
+      'actors/hero',
+    );
     // …and the map, which is a document rather than a workspace.
     expect(JSON.parse(read(next, 'm')).actors[0].type).toBe('actors/hero');
   });
@@ -114,12 +116,6 @@ describe('renaming an actor', () => {
     // A screen places actors as a map does, and a map's own code and each
     // placement's are workspaces inside the document.
     const source = project();
-    source.folders.screens = {
-      id: 'screens',
-      name: 'screens',
-      parentId: '0',
-      open: true,
-    };
     source.files.s = file({
       id: 's',
       name: 'main.screen',
@@ -172,7 +168,7 @@ describe('renaming an actor', () => {
 
     const {source: next} = renameThing(source, source.files.a, 'Hero');
 
-    expect(JSON.parse(read(next, 'w')).blocks.blocks[1].type).toBe(
+    expect(JSON.parse(read(next, 's')).blocks.blocks.blocks[1].type).toBe(
       'world_get_ActorsHero_IdProperty',
     );
   });
@@ -183,8 +179,8 @@ describe('renaming an actor', () => {
     const source = project();
 
     const {source: next} = renameThing(source, source.files.a, 'Hero');
-    const said = JSON.parse(read(next, 'w')).blocks.blocks[0].next.block.next
-      .block.inputs.VALUE.shadow.fields.TEXT;
+    const said = JSON.parse(read(next, 's')).blocks.blocks.blocks[0].next.block
+      .next.block.inputs.VALUE.shadow.fields.TEXT;
 
     expect(said).toBe('actors/player');
   });
@@ -232,12 +228,6 @@ describe('renaming an actor', () => {
 describe('renaming a screen', () => {
   it('writes the Main Screen’s own name, and leaves its file where it is', () => {
     const source = project();
-    source.folders.screens = {
-      id: 'screens',
-      name: 'screens',
-      parentId: '0',
-      open: true,
-    };
     source.files.s = file({
       id: 's',
       name: 'main.screen',
@@ -255,7 +245,7 @@ describe('renaming a screen', () => {
 });
 
 describe('renaming a rule', () => {
-  /** A rule, an actor that takes its trait, and a world that uses it. */
+  /** A rule, and an actor that takes its trait. */
   const rules = (): MultiFileSource => ({
     folders: {
       rules: {id: 'rules', name: 'rules', parentId: '0', open: true},

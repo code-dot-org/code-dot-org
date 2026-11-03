@@ -167,7 +167,7 @@ describe('a world backdrop', () => {
 describe('a described backdrop', () => {
   it('says the same thing to the builder and to the live world', () => {
     // `set background to …` is one block, and `world` is the builder inside a
-    // `.world` file and the live World inside an event handler. If these two
+    // screen's setup and the live World inside an event handler. If these two
     // disagreed, where the block sat would decide whether it worked.
     const described = new WorldBuilder({id: 'w', name: 'W'})
       .setBackground('cave.png')

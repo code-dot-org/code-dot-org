@@ -2,8 +2,8 @@
 // screen's data, with the level inside a Viewport (specs/SCREEN_MAP_PLAN.md,
 // step 4).
 //
-// COMPILED AND RUN, since what is claimed is that data stands in for every
-// row `define world` held: a value declared in the screen's data has to be
+// COMPILED AND RUN, since what is claimed is that the screen's data is
+// enough: a value declared in the screen's data has to be
 // minted, emitted and given its starting value; a rule setting has to reach
 // the rule; and the level has to land in the Viewport's space rather than
 // the root's.
@@ -27,7 +27,6 @@ const ROWS = 9;
  */
 function simpleOnAScreen(screen: object = {}): Record<string, string> {
   const files = {...projectFiles(WORLD_SCENARIOS.simple.source)};
-  expect(files['worlds/main.world']).toBeUndefined();
   files['screens/main.screen'] = JSON.stringify({
     ...JSON.parse(files['screens/main.screen']),
     size: {width: COLUMNS, height: ROWS},

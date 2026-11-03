@@ -148,7 +148,7 @@ export function filesUsing(source: MultiFileSource, rule: HeldRule): string[] {
     .sort((a, b) => a.localeCompare(b));
 }
 
-const BLOCKLY_FILE = /\.(actor|world|rule)$/;
+const BLOCKLY_FILE = /\.(actor|rule|map|screen)$/;
 
 /**
  * Delete a rule's file from the project.

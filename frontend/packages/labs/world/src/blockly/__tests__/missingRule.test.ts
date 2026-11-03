@@ -80,13 +80,13 @@ describe('a world’s own property', () => {
   };
 
   it('claims no rule, so nothing says the rule is missing', () => {
-    const meta = screenOwnMeta('worlds/main', world);
+    const meta = screenOwnMeta('screens/main', world);
     buildDomainPalette([], {ownProperties: [meta]});
     expect(
-      missingRuleOfBlockType('world_get_WorldsMain_ScoreProperty'),
+      missingRuleOfBlockType('world_get_ScreensMain_ScoreProperty'),
     ).toBeUndefined();
     expect(
-      missingRuleOfBlockType('world_set_WorldsMain_ScoreProperty'),
+      missingRuleOfBlockType('world_set_ScreensMain_ScoreProperty'),
     ).toBeUndefined();
   });
 

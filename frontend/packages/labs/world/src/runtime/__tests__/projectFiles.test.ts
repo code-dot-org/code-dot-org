@@ -82,10 +82,10 @@ describe('fileIdAt', () => {
 
   it('is undefined for a path the project does not have', () => {
     // The caller pins nothing rather than pinning the wrong thing — a project
-    // whose entry world has been renamed is not a project to guess about.
+    // whose Main Screen has been renamed is not a project to guess about.
     expect(
-      fileIdAt(DEFAULT_PROJECT.source, 'worlds/nope.world'),
+      fileIdAt(DEFAULT_PROJECT.source, 'screens/nope.screen'),
     ).toBeUndefined();
-    expect(fileIdAt(undefined, 'worlds/main.world')).toBeUndefined();
+    expect(fileIdAt(undefined, 'screens/main.screen')).toBeUndefined();
   });
 });

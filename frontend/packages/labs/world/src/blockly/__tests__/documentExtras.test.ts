@@ -28,12 +28,12 @@ describe('documentExtras', () => {
 
 describe('withDocumentExtras', () => {
   it('puts the extras beside a saved workspace, the workspace winning', () => {
-    const saved = {blocks: {blocks: [{type: 'world_world'}]}};
+    const saved = {blocks: {blocks: [{type: 'world_on_screen_loads'}]}};
     expect(
       withDocumentExtras(saved, {map: {actors: []}, blocks: 'stale'}),
     ).toEqual({
       map: {actors: []},
-      blocks: {blocks: [{type: 'world_world'}]},
+      blocks: {blocks: [{type: 'world_on_screen_loads'}]},
     });
   });
 });

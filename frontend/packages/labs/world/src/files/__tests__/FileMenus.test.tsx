@@ -10,6 +10,7 @@ import {beforeEach, describe, expect, it, vi, type Mock} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {levelScreen} from '../../__tests__/support/levelScreen';
 import {actorDocument} from '../../actors/actorDocument';
 import {referenceToStock} from '../../rules/ruleReference';
 
@@ -31,17 +32,16 @@ const SOURCE: MultiFileSource = {
     f2: {id: 'f2', name: 'actors', parentId: '0', open: true},
     f3: {id: 'f3', name: 'sprites', parentId: '0', open: true},
     f4: {id: 'f4', name: 'backgrounds', parentId: '0', open: true},
-    // …and the world, which holds exactly one file and whose button opens it
-    // rather than listing it (specs/MAP_EVENTS_PLAN.md).
-    f5: {id: 'f5', name: 'worlds', parentId: '0', open: true},
+    // …and the screens, which hold the Main Screen.
+    f5: {id: 'f5', name: 'screens', parentId: '0', open: true},
   },
   files: {
-    w: {
-      id: 'w',
-      name: 'main.world',
-      language: 'world',
-      contents: JSON.stringify({
-        blocks: {blocks: [{type: 'world_world', fields: {NAME: 'My World'}}]},
+    s: {
+      id: 's',
+      name: 'main.screen',
+      language: 'screen',
+      contents: levelScreen({
+        blocks: {blocks: [{type: 'world_on_screen_loads'}]},
       }),
       folderId: 'f5',
     },

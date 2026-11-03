@@ -29,7 +29,10 @@ import {
 /** `define tween` is the one top block with a mouth; the rest chain on. */
 const mouths = statementInputsOf([
   {type: 'world_define_tween', args0: [{type: 'input_statement', name: 'DO'}]},
-  {type: 'world_world', args0: [{type: 'input_value', name: 'NOT_A_MOUTH'}]},
+  {
+    type: 'world_on_screen_loads',
+    args0: [{type: 'input_value', name: 'NOT_A_MOUTH'}],
+  },
 ]);
 
 const row = (id: string, next?: SerializedBlock): SerializedBlock => ({
@@ -38,13 +41,17 @@ const row = (id: string, next?: SerializedBlock): SerializedBlock => ({
   ...(next ? {next: {block: next}} : {}),
 });
 
-/** A world with a body, a handler with a body, a tween with a mouth. */
+/** A screen with a body, a handler with a body, a tween with a mouth. */
 const DOCUMENT: Document = {
   variables: [{id: 'v1', name: 'count', type: 'Number'}],
   blocks: {
     languageVersion: 0,
     blocks: [
-      {type: 'world_world', id: 'world', next: {block: row('a', row('b'))}},
+      {
+        type: 'world_on_screen_loads',
+        id: 'screen',
+        next: {block: row('a', row('b'))},
+      },
       {type: 'hat', id: 'hat', next: {block: row('c')}},
       {
         type: 'world_define_tween',
@@ -59,7 +66,7 @@ const DOCUMENT: Document = {
 describe('taking bodies out and putting them back', () => {
   it('puts back exactly what it took', () => {
     const {document, bodies} = stripBodies(DOCUMENT, () => true, mouths);
-    expect([...bodies.keys()]).toEqual(['world', 'hat', 'tween']);
+    expect([...bodies.keys()]).toEqual(['screen', 'hat', 'tween']);
     // What is left is the headers, and the one with nothing under it.
     expect(JSON.stringify(document)).not.toContain('"a"');
     expect(document.blocks!.blocks![2].inputs).toBeUndefined();
@@ -97,7 +104,7 @@ describe('taking bodies out and putting them back', () => {
 
   it('knows the block ids a body holds', () => {
     const {bodies} = stripBodies(DOCUMENT, () => true, mouths);
-    expect([...idsIn(bodies.get('world')!)]).toEqual(['a', 'b']);
+    expect([...idsIn(bodies.get('screen')!)]).toEqual(['a', 'b']);
   });
 });
 
@@ -145,7 +152,11 @@ describe('a variable deleted while a body is held', () => {
 describe('collapsing and expanding a live workspace', () => {
   beforeAll(() => {
     Blockly.defineBlocksWithJsonArray([
-      {type: 'world_world', message0: 'define world', nextStatement: null},
+      {
+        type: 'world_on_screen_loads',
+        message0: 'when this screen loads',
+        nextStatement: null,
+      },
       {type: 'hat', message0: 'when', nextStatement: null},
       {
         type: 'row',
@@ -178,7 +189,7 @@ describe('collapsing and expanding a live workspace', () => {
     const workspace = workspaceOf(store);
     const built = saved(workspace, store);
 
-    for (const id of ['world', 'hat', 'tween']) {
+    for (const id of ['screen', 'hat', 'tween']) {
       collapseTop(workspace, workspace.getBlockById(id)!);
     }
     // Only the top blocks are built now.
@@ -187,10 +198,10 @@ describe('collapsing and expanding a live workspace', () => {
         .getAllBlocks(false)
         .map(block => block.id)
         .sort(),
-    ).toEqual(['empty', 'hat', 'tween', 'world']);
+    ).toEqual(['empty', 'hat', 'screen', 'tween']);
     expect(saved(workspace, store)).toEqual(built);
 
-    for (const id of ['world', 'hat', 'tween']) {
+    for (const id of ['screen', 'hat', 'tween']) {
       expandTop(workspace, workspace.getBlockById(id)!);
     }
     expect(store.size).toBe(0);
@@ -202,8 +213,8 @@ describe('collapsing and expanding a live workspace', () => {
     const workspace = workspaceOf(store);
     const heard: string[] = [];
     workspace.addChangeListener(event => heard.push(event.type));
-    collapseTop(workspace, workspace.getBlockById('world')!);
-    expandTop(workspace, workspace.getBlockById('world')!);
+    collapseTop(workspace, workspace.getBlockById('screen')!);
+    expandTop(workspace, workspace.getBlockById('screen')!);
     expect(heard).toEqual([]);
     expect(workspace.getUndoStack()).toEqual([]);
   });
@@ -211,7 +222,7 @@ describe('collapsing and expanding a live workspace', () => {
   it('expands the body holding a block, for an undo about to touch it', () => {
     const store: UnbuiltBodies = new Map();
     const workspace = workspaceOf(store);
-    collapseTop(workspace, workspace.getBlockById('world')!);
+    collapseTop(workspace, workspace.getBlockById('screen')!);
     collapseTop(workspace, workspace.getBlockById('hat')!);
     expect(expandHolding(workspace, store, new Set(['b']))).toBe(true);
     expect(workspace.getBlockById('b')).not.toBeNull();

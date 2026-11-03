@@ -138,13 +138,6 @@ const SOURCE: MultiFileSource = {
       folderId: '6',
       contents: '',
     },
-    '3': {
-      id: '3',
-      name: 'main.world',
-      language: 'world',
-      folderId: '7',
-      contents: '',
-    },
     '2': {
       id: '2',
       name: 'coin.actor',
@@ -158,7 +151,6 @@ const SOURCE: MultiFileSource = {
   folders: {
     '9': {id: '9', name: 'maps', parentId: '0'},
     '8': {id: '8', name: 'actors', parentId: '0'},
-    '7': {id: '7', name: 'worlds', parentId: '0'},
     '6': {id: '6', name: 'screens', parentId: '0'},
   },
   openFiles: [],
@@ -423,7 +415,7 @@ describe('from the map to a kind', () => {
       source: MultiFileSource;
     };
     expect(written.source.files['2'].active).toBe(true);
-    expect(written.source.files['3'].active).not.toBe(true);
+    expect(written.source.files['4'].active).not.toBe(true);
   });
 });
 

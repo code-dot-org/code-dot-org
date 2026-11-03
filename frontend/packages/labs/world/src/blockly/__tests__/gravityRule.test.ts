@@ -4,7 +4,7 @@
 // It is checked here rather than left to the browser because it is the proof
 // that a `.rule` can be a real rule: parse the shipped file, and assert the
 // module that comes out declares what the built-in `GravityRule` declares.
-// Everything a `.actor` or `.world` in the same project references by name —
+// Everything a `.actor` or `.screen` in the same project references by name —
 // the traits, the properties, the events — has to survive that round trip, or
 // the default project does not load.
 

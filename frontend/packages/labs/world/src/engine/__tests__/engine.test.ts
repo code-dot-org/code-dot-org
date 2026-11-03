@@ -972,7 +972,7 @@ describe('WorldBuilder declaration order', () => {
   // The other half of the rule: a call the live world CAN answer is forwarded
   // to it rather than refused. These are the two that also exist as blocks a
   // learner may place in an event handler, where they land on the live world
-  // and mean the same thing — so where they sit inside a `.world` file must not
+  // and mean the same thing — so where they sit inside a screen must not
   // decide whether they work.
 
   it('forwards a property set to the live world', () => {

@@ -189,7 +189,7 @@ describe('an actor being created', () => {
     // Placed before there is a tick, which is where the starter's actors
     // come from: told at the first tick, if nothing drew it first.
     const {heard, template} = counter();
-    // Through the BUILDER, which is where a `.world` file's `add actor` lands
+    // Through the BUILDER, which is where a screen's `add actor` lands
     // while the world is being described — and which hands the placement
     // straight to the live world (`WorldBuilder.addActor`).
     const builder = new WorldBuilder({id: 'w', name: 'w'});

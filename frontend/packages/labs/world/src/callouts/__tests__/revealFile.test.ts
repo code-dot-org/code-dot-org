@@ -13,7 +13,6 @@ const actor = (name: string) => actorDocument({name});
 const SOURCE: MultiFileSource = {
   folders: {
     '1': {id: '1', name: 'actors', parentId: '0'},
-    '2': {id: '2', name: 'worlds', parentId: '0'},
   },
   files: {
     // The file's stem and the name it declares differ, which is the whole
@@ -31,13 +30,6 @@ const SOURCE: MultiFileSource = {
       language: 'actor',
       contents: actor('Ground'),
       folderId: '1',
-    },
-    c: {
-      id: 'c',
-      name: 'main.world',
-      language: 'world',
-      contents: JSON.stringify({blocks: {blocks: []}}),
-      folderId: '2',
     },
   },
   openFiles: [],

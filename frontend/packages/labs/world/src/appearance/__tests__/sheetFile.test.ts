@@ -57,7 +57,7 @@ describe('sheet files', () => {
           'sprites/coinSpin.png': '',
           'sprites/coinSpin.sheet': serializeSheetFile(SHEET),
           'sprites/player.png': '',
-          'worlds/main.world': '{}',
+          'screens/main.screen': '{}',
         }),
       ).toEqual({'coinSpin.png': SHEET});
     });

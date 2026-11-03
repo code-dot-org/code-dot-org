@@ -26,8 +26,7 @@ const workspace = (
   };
 };
 
-const WORLD = () =>
-  workspace([{id: 'w1', type: 'world_world', name: 'Platform World'}]);
+const SCREEN = () => workspace([{id: 's1', type: 'world_on_screen_loads'}]);
 
 /**
  * Generate the block, as plugged into `parentType`.
@@ -38,7 +37,7 @@ const WORLD = () =>
  */
 const emitValue = (
   fields: Record<string, string>,
-  space: unknown = WORLD(),
+  space: unknown = SCREEN(),
   parentType = 'world_set_position',
 ): {code: string; imports: string[]} => {
   const definition = DOMAIN_BLOCKS.find(b => b.type === 'world_actor_kind')!;
@@ -120,11 +119,15 @@ describe('an action’s ACTOR socket default', () => {
     expect(shadowIn(actorInputExtension, ACTOR_FILE())).toBe(
       'world_this_actor',
     );
-    expect(shadowIn(actorInputExtension, WORLD())).toBe('world_this_actor');
+    expect(shadowIn(actorInputExtension, SCREEN())).toBe('world_this_actor');
   });
 
   it('asks the workspace a flyout block would be dragged into', () => {
-    const flyout = {...workspace([]), isFlyout: true, targetWorkspace: WORLD()};
+    const flyout = {
+      ...workspace([]),
+      isFlyout: true,
+      targetWorkspace: SCREEN(),
+    };
 
     expect(shadowIn(actorInputExtension, flyout)).toBe('world_this_actor');
   });

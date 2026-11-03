@@ -88,7 +88,7 @@ export type RuleModule = Record<string, unknown>;
  * Turn one generated module into a value, given the ones it imports.
  *
  * Exported because compiling a whole PROJECT needs the same trick on `.actor`
- * and `.world` modules (`__tests__/support/compileProject`), and the rewrite
+ * and `.screen` modules (`__tests__/support/compileProject`), and the rewrite
  * is tied to the shape the generator emits — one copy of that coupling is
  * enough.
  */
@@ -137,7 +137,7 @@ export function evaluate(
       'const $1 = __modules["$2"].default;',
     )
     .replace(/^export default (.*);$/m, '__exports.default = $1;')
-    // `export {a, b};`, which a `.world` module emits for its local actors.
+    // `export {…};`, which a rule with nothing to read emits as `export {};`.
     // The comment above says a new form needs a line here; this is that line.
     .replace(/^export \{([^}]*)\};$/gm, (_, names: string) =>
       names
@@ -152,14 +152,14 @@ export function evaluate(
     .map(name => `__exports.${name} = ${name};`)
     .join('\n');
   // LIVE BINDINGS for what a module imports from another, which is what the
-  // real bundle gives them. An actor file that reads the world's own state
-  // imports `worlds/main`, and the world imports every actor it places: a
-  // cycle, and the actor is evaluated first. Destructured at that moment the
+  // real bundle gives them. An actor file that reads the game's own state
+  // imports `screens/main`, and the Main Screen imports every actor it places:
+  // a cycle, and the actor is evaluated first. Destructured at that moment the
   // import is `undefined` for good; read through a getter when a handler runs
-  // it is whatever the world exported. So each named import becomes a getter
-  // on a scope object, and the body runs inside `with` over it — the one
-  // construct that resolves an identifier late. `new Function` is sloppy
-  // mode, which `with` needs.
+  // it is whatever the Main Screen exported. So each named import becomes a
+  // getter on a scope object, and the body runs inside `with` over it — the one
+  // construct that resolves an identifier late. `new Function` is sloppy mode,
+  // which `with` needs.
   const imports: Record<string, unknown> = {};
   const bind = (ours: string, from: string, theirs: string) =>
     Object.defineProperty(imports, ours, {

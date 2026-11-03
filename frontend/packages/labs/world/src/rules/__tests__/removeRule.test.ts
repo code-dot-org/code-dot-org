@@ -124,7 +124,7 @@ describe('rulesRequiring', () => {
 });
 
 describe('filesUsing', () => {
-  it('names the actors and worlds that refer to the rule', () => {
+  it('names the actors that refer to the rule', () => {
     // The commoner way a rule is load-bearing, and the one the panel warns
     // about rather than blocking: an actor elects one of its traits, and
     // deleting the rule fails at compile with `cannot resolve 'rules/gravity'
@@ -151,16 +151,40 @@ describe('filesUsing', () => {
     expect(filesUsing(source, gravity)).toEqual(['player.actor']);
   });
 
+  it('names a screen whose camera elects one of its traits', () => {
+    const source = project({'gravity.rule': ruleFile('Gravity')});
+    source.files.main = {
+      id: 'main',
+      name: 'main.screen',
+      language: 'screen',
+      folderId: 's',
+      contents: JSON.stringify({
+        type: 'map',
+        name: 'Main',
+        actors: [
+          {
+            id: 'Game',
+            type: 'actors/viewport',
+            camera: {traits: ['Gravity#AffectedByGravityTrait'], values: []},
+          },
+        ],
+      }),
+    };
+    const [gravity] = heldRules(source);
+
+    expect(filesUsing(source, gravity)).toEqual(['main.screen']);
+  });
+
   it('is not fooled by a block type built from the rule’s name', () => {
     // `world_get_Gravity_AmountOfGravityProperty` is a block TYPE, not a
     // reference — a project full of them may still not name the rule. The `#`
     // is what tells the two apart.
     const source = project({'gravity.rule': ruleFile('Gravity')});
-    source.files.world = {
-      id: 'world',
-      name: 'main.world',
-      language: 'world',
-      folderId: 'w',
+    source.files.coin = {
+      id: 'coin',
+      name: 'coin.actor',
+      language: 'actor',
+      folderId: 'a',
       contents: '{"blocks":{"blocks":[{"type":"world_get_Gravity_Amount"}]}}',
     };
     const [gravity] = heldRules(source);

@@ -54,10 +54,10 @@ describe('projectImageSizes', () => {
         },
         c: {
           id: 'c',
-          name: 'main.world',
-          language: 'world',
+          name: 'main.screen',
+          language: 'screen',
           contents: '{}',
-          folderId: 'worlds',
+          folderId: 'screens',
         },
       },
       folders: {},

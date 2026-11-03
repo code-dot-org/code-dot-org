@@ -117,7 +117,7 @@ describe('rules/collect.rule', () => {
 
   it('keeps them out of the hands of everyone but its own rule', () => {
     // A push is a write, and `collected` is read-only — which means the rule
-    // that declares it owns the value. A `.world` that could add to somebody's
+    // that declares it owns the value. A screen that could add to somebody's
     // inventory would make the rule's own account of it a guess.
     const types = buildDomainPalette([meta]).blocks.map(block => block.type);
 

@@ -39,7 +39,7 @@ const files = Object.fromEntries(
 
 // The generator's palette, not an editor's: it defines every rule's blocks at
 // once, which is the widest set a shipped file may draw on — and every actor's
-// and world's OWN properties too, which is the other half of what the real
+// and screen's OWN properties too, which is the other half of what the real
 // generator is handed (BlocklyGenerator). Without those the starter's health
 // bar looks like a file naming blocks nothing mints.
 const palette = new Set(
@@ -49,7 +49,7 @@ const palette = new Set(
   }).blocks.map(block => block.type),
 );
 
-const WORKSPACE_FILE = /\.(rule|actor|world)$/;
+const WORKSPACE_FILE = /\.(rule|actor|screen)$/;
 
 /**
  * Whether a file names any block: an actor of traits and a picture names
@@ -100,7 +100,7 @@ describe('the shipped project', () => {
     for (const [path, count] of walked) {
       expect(`${path}: ${count > 0}`).toBe(`${path}: ${namesBlocks(path)}`);
     }
-    // The deep ones: gravity's steps and the world's own body.
+    // The deep one: gravity's steps.
     expect(
       typesIn(resolveRuleContents(starterFile('gravityRule').contents)).length,
     ).toBeGreaterThan(40);

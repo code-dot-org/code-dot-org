@@ -13,13 +13,13 @@ import {describe, expect, it} from 'vitest';
 import {manifestFiles, thumbnailManifest} from '../thumbnailManifest';
 
 describe('thumbnailManifest', () => {
-  it('imports the world and every actor module', () => {
+  it('imports the Main Screen and every actor module', () => {
     const code = thumbnailManifest(
       ['actors/coin', 'actors/player'],
-      'worlds/main',
+      'screens/main',
     );
 
-    expect(code).toContain('import W from "worlds/main";');
+    expect(code).toContain('import W from "screens/main";');
     expect(code).toContain('import M0 from "actors/coin";');
     expect(code).toContain('import M1 from "actors/player";');
     expect(code).toContain('{type: "actors/coin", builder: M0}');
@@ -27,7 +27,7 @@ describe('thumbnailManifest', () => {
   });
 
   it('is valid with no actor modules at all', () => {
-    const code = thumbnailManifest([], 'worlds/main');
+    const code = thumbnailManifest([], 'screens/main');
 
     expect(code).toContain('actors: []');
   });
@@ -36,7 +36,7 @@ describe('thumbnailManifest', () => {
     // Cheap syntax check: the manifest is assembled by string concatenation, so
     // a missing bracket is a real risk and a silent one until the sandbox
     // imports it.
-    const code = thumbnailManifest(['actors/coin'], 'worlds/main');
+    const code = thumbnailManifest(['actors/coin'], 'screens/main');
 
     const body = code
       .replace(/^import .*$/gm, '')
@@ -51,13 +51,11 @@ describe('manifestFiles', () => {
     // The compile is content-addressed: with the maps stubbed, a map edit
     // leaves the manifest's bundle where it was and costs no esbuild.
     const files = {
-      'worlds/main.world': '{"blocks":{}}',
       'actors/label.actor': '{"blocks":{}}',
       'maps/interface.map': '{"type":"map","actors":[{"type":"actors/label"}]}',
     };
     const stubbed = manifestFiles(files);
     expect(Object.keys(stubbed).sort()).toEqual(Object.keys(files).sort());
-    expect(stubbed['worlds/main.world']).toBe(files['worlds/main.world']);
     expect(stubbed['actors/label.actor']).toBe(files['actors/label.actor']);
     expect(JSON.parse(stubbed['maps/interface.map'])).toEqual({
       type: 'map',

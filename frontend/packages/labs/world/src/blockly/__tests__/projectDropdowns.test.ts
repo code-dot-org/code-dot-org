@@ -1,7 +1,7 @@
 // What a generator run will read besides the file it is given.
 //
-// The registries here are dropdown options AND generator input: a `define
-// world` emits `world.useRules` from the project's rule modules and
+// The registries here are dropdown options AND generator input: the Main
+// Screen's module emits `world.useRules` from the project's rule modules and
 // `world.useImageSizes` from what has been measured. Neither is written in any
 // file, so the generated-file cache has to key on them — and the two things it
 // needs from this signature are that it MOVES when one of them arrives and
@@ -17,7 +17,7 @@ import {
 import {forgetImageSizes} from '../spriteCells';
 
 const FILES = {
-  'worlds/main.world': '{}',
+  'screens/main.screen': '{}',
   'actors/player.actor': '{}',
 };
 
@@ -70,8 +70,8 @@ describe('the generation environment', () => {
 
   it('moves when the project gains a rule', () => {
     // `use rule` is emitted from the rule modules the project holds, not from
-    // anything the world file says — so a world generated before the import
-    // landed is a world with that rule missing.
+    // anything the Main Screen says — so a screen generated before the import
+    // landed is a game with that rule missing.
     refreshProjectDropdowns(FILES, [], {}, []);
     const before = generationEnvironment();
 

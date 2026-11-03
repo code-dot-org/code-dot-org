@@ -151,13 +151,31 @@ export function renameMember(
         changed = renameSockets(block.inputs, sockets) || changed;
       }
     });
-    // An actor's variables are its workspace's, under `blocks`.
-    const document = isActorData(parsed) ? parsed.blocks : parsed;
-    if (before.kind === 'event' && renamed.size && isNode(document)) {
-      changed = renameCarried(document, hat, renamed) || changed;
+    if (before.kind === 'event' && renamed.size) {
+      for (const workspace of workspacesIn(parsed)) {
+        changed = renameCarried(workspace, hat, renamed) || changed;
+      }
     }
     return changed ? JSON.stringify(parsed, null, 2) : undefined;
   });
+}
+
+/**
+ * The workspaces a file holds, each with variables of its own: an actor's
+ * under `blocks`, and a map's or a screen's under `blocks` and on each
+ * placement.
+ */
+function workspacesIn(parsed: unknown): Node[] {
+  if (isActorData(parsed)) {
+    return isNode(parsed.blocks) ? [parsed.blocks] : [];
+  }
+  if (isNode(parsed) && parsed.type === 'map') {
+    const placements = Array.isArray(parsed.actors) ? parsed.actors : [];
+    return [parsed, ...placements]
+      .map(one => (isNode(one) ? one.blocks : undefined))
+      .filter(isNode);
+  }
+  return isNode(parsed) ? [parsed] : [];
 }
 
 /** A call's or a raise's sockets, renamed after their values. */

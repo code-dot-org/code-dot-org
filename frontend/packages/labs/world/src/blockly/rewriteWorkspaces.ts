@@ -22,7 +22,7 @@ const SUBJECT_FIELD = 'SUBJECT';
  * and a screen are documents, but their own code and each placement's are
  * workspaces inside them, and the walk below finds them there.
  */
-export const WORKSPACE_FILE = /\.(rule|actor|world|map|screen)$/;
+export const WORKSPACE_FILE = /\.(rule|actor|map|screen)$/;
 
 /** How a saved workspace is rewritten: block types, and reference fields. */
 export interface Rewriter {

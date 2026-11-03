@@ -52,7 +52,7 @@ const getter = (id: string) => ({
 });
 
 /**
- * A Hero that is hurt and healed, and a world that hears the one and calls
+ * A Hero that is hurt and healed, and a screen that hears the one and calls
  * the other, reading `amount` in the handler and in a step of its own.
  */
 const project = (): MultiFileSource => ({
@@ -64,30 +64,35 @@ const project = (): MultiFileSource => ({
       members: [hurt, heal],
       blocks: {blocks: {languageVersion: 0, blocks: []}},
     }),
-    w: file('w', 'main.world', {
+    w: file('w', 'main.screen', {
+      type: 'map',
+      name: 'Main',
+      actors: [],
       blocks: {
-        languageVersion: 0,
-        blocks: [
-          {
-            type: HAT,
-            next: {
-              block: {
-                type: 'world_print',
-                inputs: {TEXT: {block: getter('v1')}},
-                next: {
-                  block: {
-                    type: EMIT,
-                    inputs: {AMOUNT: {block: getter('v1')}, WHO: {}},
+        blocks: {
+          languageVersion: 0,
+          blocks: [
+            {
+              type: HAT,
+              next: {
+                block: {
+                  type: 'world_print',
+                  inputs: {TEXT: {block: getter('v1')}},
+                  next: {
+                    block: {
+                      type: EMIT,
+                      inputs: {AMOUNT: {block: getter('v1')}, WHO: {}},
+                    },
                   },
                 },
               },
             },
-          },
-          {type: 'world_print', inputs: {TEXT: {block: getter('v1')}}},
-          {type: CALL, inputs: {VALUE: {}}},
-        ],
+            {type: 'world_print', inputs: {TEXT: {block: getter('v1')}}},
+            {type: CALL, inputs: {VALUE: {}}},
+          ],
+        },
+        variables: [{id: 'v1', name: 'amount', type: 'Number'}],
       },
-      variables: [{id: 'v1', name: 'amount', type: 'Number'}],
     }),
     o: file('o', 'other.actor', {
       blocks: {blocks: [{type: 'world_actor', fields: {NAME: 'Other'}}]},
@@ -104,11 +109,15 @@ interface Saved {
   fields: Record<string, unknown>;
 }
 
-const world = (source: MultiFileSource) =>
-  JSON.parse(source.files.w.contents) as {
-    blocks: {blocks: Saved[]};
-    variables: Array<{id: string; name: string; type: string}>;
-  };
+const screen = (source: MultiFileSource) =>
+  (
+    JSON.parse(source.files.w.contents) as {
+      blocks: {
+        blocks: {blocks: Saved[]};
+        variables: Array<{id: string; name: string; type: string}>;
+      };
+    }
+  ).blocks;
 
 describe('a member’s blocks', () => {
   it('are named after its words', () => {
@@ -140,7 +149,7 @@ describe('a member renamed', () => {
       ...heal,
       parts: [{kind: 'label', text: 'mend by'}, heal.parts[1]],
     };
-    const roots = world(
+    const roots = screen(
       renameMember(project(), actorSlug('actors/hero'), heal, after),
     ).blocks.blocks;
     expect(roots[2].type).toBe('world_do_ActorsHero_MendByAction');
@@ -155,7 +164,7 @@ describe('a member renamed', () => {
           : part,
       ),
     };
-    const next = world(
+    const next = screen(
       renameMember(project(), actorSlug('actors/hero'), hurt, after),
     );
     const [handler, step] = next.blocks.blocks;
@@ -173,7 +182,7 @@ describe('a member renamed', () => {
 
   it('leaves a value taken away to say so where it was used', () => {
     const after: ActorMember = {...hurt, parts: hurt.parts.slice(0, 3)};
-    const next = world(
+    const next = screen(
       renameMember(project(), actorSlug('actors/hero'), hurt, after),
     );
     expect(next.blocks.blocks[0].type).toBe(

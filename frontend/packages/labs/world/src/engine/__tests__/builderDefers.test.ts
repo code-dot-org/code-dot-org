@@ -1,6 +1,6 @@
 // What a world's BODY asks for, replayed onto the world it asked for it from.
 //
-// A `.world` file's rows run while the world is still being described, so the
+// A screen's setup rows run while the world is still being described, so the
 // builder records them and applies them when the world exists
 // (`WorldBuilder.defer`). What the replay needs, and did not have, is the
 // things those rows refer to: the actor TEMPLATES the builder was told about

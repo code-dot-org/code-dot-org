@@ -13,27 +13,27 @@ const compiler = new WorldCompiler();
 afterAll(() => compiler.dispose());
 
 const PROJECT: Record<string, string> = {
-  'worlds/main.ts': `
+  'screens/main.ts': `
     import {WorldBuilder} from 'world-lab';
-    import Platform from 'worlds/platform';
+    import Platform from 'screens/platform';
     import label from './label';
     const world = Platform;
     const tag: string = label;
     console.log('built', tag);
     export default world;
   `,
-  'worlds/label.ts': `export default 'v1';`,
-  'worlds/platform.js': `
+  'screens/label.ts': `export default 'v1';`,
+  'screens/platform.js': `
     import {WorldBuilder} from 'world-lab';
-    import config from 'worlds/platform.config.json';
+    import config from 'screens/platform.config.json';
     export default new WorldBuilder({id: config.id, name: config.name});
   `,
-  'worlds/platform.config.json': `{"id":"platform","name":"Platform World"}`,
+  'screens/platform.config.json': `{"id":"platform","name":"Platform World"}`,
 };
 
 describe('WorldCompiler', () => {
   it('bundles a multi-file project to one ESM module', async () => {
-    const code = await compiler.compile(PROJECT, 'worlds/main.ts');
+    const code = await compiler.compile(PROJECT, 'screens/main.ts');
     // world-lab is rewritten to its self-hosted URL (external), not bundled.
     expect(code).toMatch(/from ?["']\/vendor\/world-lab\.mjs["']/);
     expect(code).not.toContain('WorldBuilder =');
@@ -49,7 +49,7 @@ describe('WorldCompiler', () => {
     // is compiled to GLSL in the preview surface, where Phaser is — so what
     // must appear in the bundle is the document, not a shader.
     const project: Record<string, string> = {
-      'worlds/main.ts': `
+      'screens/main.ts': `
         import {WorldBuilder} from 'world-lab';
         import EffectsRipple from 'effects/ripple';
         const world = new WorldBuilder({id: 'g', name: 'G'});
@@ -58,15 +58,15 @@ describe('WorldCompiler', () => {
       `,
       'effects/ripple.effect': `{"version":1,"name":"Ripple","parameters":[],"nodes":[{"id":"sample-1","type":"sample","position":{"x":0,"y":0}}],"edges":[],"functions":[]}`,
     };
-    const code = await compiler.compile(project, 'worlds/main.ts');
+    const code = await compiler.compile(project, 'screens/main.ts');
     expect(code).toContain('name: "Ripple"');
     expect(code).toContain('type: "sample"');
   });
 
   it('reflects an edit on a subsequent (warm) rebuild', async () => {
-    await compiler.compile(PROJECT, 'worlds/main.ts');
-    const edited = {...PROJECT, 'worlds/label.ts': `export default 'v2';`};
-    const code = await compiler.compile(edited, 'worlds/main.ts');
+    await compiler.compile(PROJECT, 'screens/main.ts');
+    const edited = {...PROJECT, 'screens/label.ts': `export default 'v2';`};
+    const code = await compiler.compile(edited, 'screens/main.ts');
     expect(code).toContain('v2');
     expect(code).not.toContain("'v1'");
   });
@@ -95,15 +95,15 @@ describe('WorldCompiler', () => {
     };
 
     const before = await compiler.compile(
-      {'worlds/main.ts': main(`console.log('a');`), 'rules/thing.ts': rule},
-      'worlds/main.ts',
+      {'screens/main.ts': main(`console.log('a');`), 'rules/thing.ts': rule},
+      'screens/main.ts',
     );
     const after = await compiler.compile(
       {
-        'worlds/main.ts': main(`const speed = 99; console.log(speed);`),
+        'screens/main.ts': main(`const speed = 99; console.log(speed);`),
         'rules/thing.ts': rule,
       },
-      'worlds/main.ts',
+      'screens/main.ts',
     );
 
     expect(stepSource(before)).toContain('speed * 2');
@@ -112,13 +112,13 @@ describe('WorldCompiler', () => {
 
   it('throws a CompileError with a location for an unresolved import', async () => {
     const broken = {
-      'worlds/main.ts': `import x from 'worlds/missing'; export default x;`,
+      'screens/main.ts': `import x from 'screens/missing'; export default x;`,
     };
-    await expect(compiler.compile(broken, 'worlds/main.ts')).rejects.toThrow(
+    await expect(compiler.compile(broken, 'screens/main.ts')).rejects.toThrow(
       CompileError,
     );
-    await expect(compiler.compile(broken, 'worlds/main.ts')).rejects.toThrow(
-      /cannot resolve 'worlds\/missing'/,
+    await expect(compiler.compile(broken, 'screens/main.ts')).rejects.toThrow(
+      /cannot resolve 'screens\/missing'/,
     );
   });
 });

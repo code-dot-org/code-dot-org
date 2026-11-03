@@ -103,6 +103,11 @@ color` and a `set` row per rule setting, loads them into the headless
    Main Screen's inspector. Nothing recognizes a `worlds/` module path;
    `ownWorldModule`, the map editor's `hasMapScript` and
    `onOpenMapScript`, and the sparkles button's file module went with it.
+   Two readers still looked for `.world` and missed screens: deleting a
+   rule now names a screen or map that uses it (`removeRule.filesUsing`),
+   and renaming an event's value carries the handler's getters in each
+   workspace a screen or map holds (`memberRename`). The tests write
+   screens where they wrote worlds.
 
 Steps 2 and 3 change no output.
 

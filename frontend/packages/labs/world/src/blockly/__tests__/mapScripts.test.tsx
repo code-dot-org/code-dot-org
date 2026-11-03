@@ -87,7 +87,7 @@ const MENU = JSON.stringify({
 /**
  * Generate one map, through the generator the runtime uses, with the WORLD's
  * events in the palette as the runtime would have them — a map's `emit` names
- * one the world declared, so the world file has to be in the project.
+ * one the world declared, so the screen has to be in the project.
  */
 const generate = async (
   contents: string,

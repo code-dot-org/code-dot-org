@@ -1,10 +1,9 @@
 // A stock dialog imported into a project whose game is a Main Screen
 // (specs/SCREEN_MAP_PLAN.md, step 4).
 //
-// A stock map raises the world's events by block types minted against
-// `worlds/main`. In this shape the events are the Main Screen's, declared
-// in its data, so the import has to declare them there and rename the
-// map's blocks to match — or the dialog's buttons raise nothing at all.
+// A stock map raises the game's events, which are the Main Screen's,
+// declared in its data; the import has to declare them there, or the
+// dialog's buttons raise nothing at all.
 // PLAYED, since that is the only way to see an event arrive.
 
 import {describe, expect, it} from 'vitest';
@@ -47,7 +46,6 @@ describe('a stock dialog on a Main Screen', () => {
       file => file.name === 'confirm.screen',
     )!;
     expect(map.contents).toContain('world_emit_ScreensMain_YesEvent');
-    expect(map.contents).not.toContain('WorldsMain');
   });
 
   it('raises them on the screen when its buttons are pressed', async () => {

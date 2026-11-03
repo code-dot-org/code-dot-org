@@ -26,7 +26,11 @@ beforeAll(() => {
   Blockly.Msg.RENAME_VARIABLE = 'Rename…';
   Blockly.Msg.DELETE_VARIABLE = 'Delete %1';
   Blockly.defineBlocksWithJsonArray([
-    {type: 'world_world', message0: 'define world', nextStatement: null},
+    {
+      type: 'world_on_screen_loads',
+      message0: 'when this screen loads',
+      nextStatement: null,
+    },
     ...['world_define_layer'].map(type => ({
       type,
       message0: `${type} %1`,
@@ -72,15 +76,15 @@ const number = (value: number) => ({
   shadow: {type: 'math_number', fields: {NUM: value}},
 });
 
-/** A world whose body holds a named row, a map size and a variable. */
+/** A screen whose body holds a named row, a map size and a variable. */
 const FILE = {
   variables: [{id: 'v-count', name: 'count', type: 'Number'}],
   blocks: {
     languageVersion: 0,
     blocks: [
       {
-        type: 'world_world',
-        id: 'world',
+        type: 'world_on_screen_loads',
+        id: 'screen',
         next: {
           block: {
             type: 'world_define_layer',
@@ -113,23 +117,23 @@ const loaded = () => {
   return workspace;
 };
 
-/** Take the world's body out of the workspace and hold it as JSON. */
+/** Take the screen's body out of the workspace and hold it as JSON. */
 const unbuild = (workspace: Blockly.Workspace) => {
-  const world = workspace.getBlockById('world')!;
-  const body = world.getNextBlock()!;
+  const screen = workspace.getBlockById('screen')!;
+  const body = screen.getNextBlock()!;
   const json = Blockly.serialization.blocks.save(body, {
     addCoordinates: false,
   }) as unknown as SerializedBlock;
   body.dispose(false);
-  setUnbuiltBody(workspace, 'world', {next: json, statements: {}});
-  return world;
+  setUnbuiltBody(workspace, 'screen', {next: json, statements: {}});
+  return screen;
 };
 
 /** Every answer the moved questions give about this file. */
 const answers = (workspace: Blockly.Workspace) => {
-  const world = workspace.getBlockById('world')!;
+  const screen = workspace.getBlockById('screen')!;
   return {
-    grid: mapGridSize(world),
+    grid: mapGridSize(screen),
     bound: [...boundIds(workspace)],
   };
 };
@@ -143,7 +147,7 @@ describe('the workspace index', () => {
     const workspace = loaded();
     unbuild(workspace);
     expect(workspace.getAllBlocks(false).map(block => block.id)).toEqual([
-      'world',
+      'screen',
     ]);
     expect(answers(workspace)).toEqual(built);
   });
@@ -154,7 +158,7 @@ describe('the workspace index', () => {
     expect(hasIndexedBlock(workspace, 'sky')).toBe(true);
     expect(hasIndexedBlock(workspace, 'nowhere')).toBe(false);
     expect(indexedBlocks(workspace).map(block => block.id)).toEqual([
-      'world',
+      'screen',
       'sky',
       'size',
       // The sockets' shadows, which the file says as well.
@@ -163,8 +167,8 @@ describe('the workspace index', () => {
       'set',
     ]);
 
-    setUnbuiltBody(workspace, 'world', undefined);
-    expect(unbuiltBodyOf(workspace, 'world')).toBeUndefined();
+    setUnbuiltBody(workspace, 'screen', undefined);
+    expect(unbuiltBodyOf(workspace, 'screen')).toBeUndefined();
     expect(hasIndexedBlock(workspace, 'sky')).toBe(false);
   });
 });

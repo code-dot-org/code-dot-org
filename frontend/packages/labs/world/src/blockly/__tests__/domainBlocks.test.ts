@@ -1249,7 +1249,7 @@ describe('domain block generators', () => {
         'world_add_actor',
         // Taking actors out belongs beside putting them in.
         'world_remove_actor',
-        // The subject a world file's blocks take, and half of "remove every
+        // The subject a screen's blocks take, and half of "remove every
         // coin" — offered in the category that file is built from.
         'world_actor_kind',
       ]),
@@ -1741,14 +1741,14 @@ describe('the block that raises an event', () => {
   it('is offered only while a `.rule` is being edited', () => {
     // Raising an event is a rule-authoring act. An event is a rule's own
     // vocabulary and the rule is the authority on when it happened — gravity
-    // is what knows a fall started. An `.actor` or a `.world` firing one is
+    // is what knows a fall started. An `.actor` or a `.screen` firing one is
     // announcing something it is not the authority on, and every listener then
     // believes it. So the category carries the hat everywhere and the emit only
     // where the rule is being written.
     const hat = 'world_on_HasWind_GustedEvent';
     const raise = 'world_emit_HasWind_GustedEvent';
 
-    // The palette an `.actor` or `.world` editor gets: no ownRuleModule.
+    // The palette an `.actor` or `.screen` editor gets: no ownRuleModule.
     expect(projectCategory('Has Wind')).toContain(hat);
     expect(projectCategory('Has Wind')).not.toContain(raise);
 
@@ -2777,7 +2777,7 @@ describe('builder-context warnings', () => {
     );
   });
 
-  it('leaves `remove effect from the world` alone under `define world`', () => {
+  it('leaves `remove effect from the world` alone under `when this screen loads`', () => {
     // It was guarded there, on the grounds that un-declaring something
     // described once means nothing. That was true of a builder accumulating
     // state and false of one recording calls: `add effect` then `remove effect`
@@ -2815,7 +2815,7 @@ describe('builder-context warnings', () => {
     expect(extensionsOf('world_actor_kind')).toContain(WORLD_CONTEXT_EXTENSION);
   });
 
-  it('lets the actor-reading blocks sit under `define world`', () => {
+  it('lets the actor-reading blocks sit under `when this screen loads`', () => {
     // `load map` then `set actor to follow ⟨camera⟩` ← `first actor of type
     // ⟨Player⟩` is the program this is for. It warned before, correctly: the
     // builder had no `actors`, so the call was a TypeError. It has them now —

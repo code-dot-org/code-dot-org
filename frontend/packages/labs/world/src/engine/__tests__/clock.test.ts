@@ -106,7 +106,7 @@ describe('how old an actor is', () => {
   });
 
   it('is as old as the game for an actor placed before it started', () => {
-    // What a `.world` file describes is placed before the first tick, so
+    // What a screen describes is placed before the first tick, so
     // something that has been there the whole time is as old as the game. Zero
     // would be wrong and undefined would be worse.
     const world = makeWorld();

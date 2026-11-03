@@ -62,7 +62,7 @@ describe('projectSignature', () => {
     expect(projectSignature({...source, files: rest})).not.toBe(
       projectSignature(source),
     );
-    expect(projectSignature(withFile('main', {name: 'other.world'}))).not.toBe(
+    expect(projectSignature(withFile('main', {name: 'other.screen'}))).not.toBe(
       projectSignature(source),
     );
   });

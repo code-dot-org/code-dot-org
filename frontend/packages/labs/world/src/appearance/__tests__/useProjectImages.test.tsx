@@ -41,10 +41,10 @@ const project = (
       ),
       // Something that is not a picture, so a change to the project is not a
       // change to the pictures — which is the case that broke.
-      'world.world': {
-        id: 'w',
-        name: 'world.world',
-        language: 'world',
+      'main.screen': {
+        id: 's',
+        name: 'main.screen',
+        language: 'screen',
         contents: note,
         folderId: 'f1',
       },

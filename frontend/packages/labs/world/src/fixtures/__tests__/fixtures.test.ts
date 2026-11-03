@@ -269,19 +269,16 @@ describe('the scenario catalogue', () => {
   });
 
   it('names no rules at all — the folder is the list', () => {
-    // These worlds used to carry a `use rule` row per mechanic, and the test
-    // here pinned the form those rows took (a NAME, never a module path, since
-    // a path reads as a rule that could not be parsed). Holding the file is
-    // the whole of putting a rule in play now (blockly/projectModules), so the
-    // rows are gone from every scenario rather than left as no-ops that a
-    // reader would take for the answer.
+    // Holding the file is the whole of putting a rule in play
+    // (blockly/projectModules), so no scenario's screen carries a `use rule`
+    // row: one left as a no-op would read as the answer.
     //
     // Which rules each scenario HOLDS is checked per scenario below; this is
     // the other half, and it is what keeps a copied fixture from reintroducing
     // a second place to say it.
     for (const [tag, scenario] of Object.entries(WORLD_SCENARIOS)) {
       for (const file of Object.values(scenario.source.files)) {
-        if (file.name.endsWith('.world')) {
+        if (file.name.endsWith('.screen')) {
           expect(`${tag}: ${file.contents}`).not.toContain('world_use_rule');
         }
       }

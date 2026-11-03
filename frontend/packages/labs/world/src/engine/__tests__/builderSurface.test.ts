@@ -1,7 +1,7 @@
 // Everything the blocks call on `world` has to exist wherever that block is
 // allowed to sit.
 //
-// Inside a `.world` file the name `world` is a `WorldBuilder`; in an event
+// In a screen's setup the name `world` is a `WorldBuilder`; in an event
 // handler or a rule step it is the live `World`. One block generates one call,
 // so a method added to only one of them is a crash carrying the block's own
 // name — `world.setLayerParallax is not a function` — at the moment a learner

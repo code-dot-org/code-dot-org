@@ -273,11 +273,11 @@ describe('world effects', () => {
 
   it('is idempotent by path, exactly as on the live world', () => {
     // `add effect … to the world` is one block that lands on the builder in a
-    // `.world` file and on the live World in a handler, so the two must agree.
+    // screen's setup and on the live World in a handler, so the two must agree.
     //
     // They did not. The builder kept the FIRST spec at a path and the World
     // replaces it, so re-adding an effect with new values was ignored under
-    // `define world` and honoured in a handler — the same two blocks meaning
+    // a screen's setup and honoured in a handler — the same two blocks meaning
     // two things. Now there is one implementation (WorldBuilder records and
     // replays), so the question can only be answered once: retuning an effect
     // retunes it, and `murk` below wins.

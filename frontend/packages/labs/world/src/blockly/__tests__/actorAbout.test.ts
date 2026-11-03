@@ -68,11 +68,9 @@ const actorFileWith = (module: string, name: string) => {
   return {workspace, definition: {...definition, workspace} as Stub};
 };
 
-/** A workspace holding a world, which is what makes a hat's subject a kind. */
-const aWorld = () => {
-  const blocks = [
-    {id: 'w1', type: 'world_world', getFieldValue: () => 'My World'},
-  ];
+/** A screen's workspace, which is what makes a hat's subject a kind. */
+const aScreen = () => {
+  const blocks = [{id: 's1', type: 'world_on_screen_loads'}];
   return {
     // The game's own code (`markCode`), where a kind's hat binds `this actor`.
     holdsCodeOf: 'game',
@@ -84,7 +82,7 @@ const aWorld = () => {
 
 describe('what `this actor` is about', () => {
   it('is the kind a hat names as its subject', () => {
-    const workspace = aWorld();
+    const workspace = aScreen();
     const hat = {
       type: 'world_on_Collisions_StartsTouchingEvent',
       workspace,
@@ -110,7 +108,7 @@ describe('what `this actor` is about', () => {
     // lines are `add actor ⟨Coin⟩ do: set position of ⟨this actor⟩ …`, and
     // that block was showing the bare word while the identical one under
     // `define actor` showed a picture.
-    const workspace = aWorld();
+    const workspace = aScreen();
     const body: Stub = {type: 'world_set_position', id: 'body1', workspace};
     const add = {
       type: 'world_add_actor',
@@ -131,7 +129,7 @@ describe('what `this actor` is about', () => {
     // Two `add actor`s in a row: the second is a `getParent` child of the
     // first and is in nobody's scope. Its own body is its own kind, which is
     // the case above; what it is not is a Coin.
-    const workspace = aWorld();
+    const workspace = aScreen();
     const first = {
       type: 'world_add_actor',
       id: 'add1',
@@ -147,7 +145,7 @@ describe('what `this actor` is about', () => {
   it('is nobody in the body of an `add actor` that took a name', () => {
     // `as ⟨placed⟩` exists so a body can still say `this actor` and mean the
     // actor whose file it is — a picture of the Bullet there would be a lie.
-    const workspace = aWorld();
+    const workspace = aScreen();
     const body: Stub = {type: 'world_set_position', id: 'body1', workspace};
     const add = {
       type: 'world_add_actor',
@@ -197,7 +195,7 @@ describe('what `this actor` is about', () => {
     // `play tween here` rebinds the actor around its destinations exactly as a
     // named tween's definition does, and says so in its generator — so the two
     // blocks cannot disagree about what `this actor` means inside them.
-    const workspace = aWorld();
+    const workspace = aScreen();
     const definition = {type: 'world_actor', id: 'pad1', workspace};
     const here = {
       type: 'world_play_tween_here',
@@ -217,7 +215,7 @@ describe('what `this actor` is about', () => {
 
 describe('what `object actor` is about', () => {
   it('is the kind the hat is filtered to', () => {
-    const workspace = aWorld();
+    const workspace = aScreen();
     const hat = {
       type: 'world_on_Collisions_StartsTouchingEvent',
       workspace,
@@ -244,7 +242,7 @@ describe('what `object actor` is about', () => {
   it("is still the hat's, inside an `add actor` body under it", () => {
     // `add actor` binds a subject, not an event: what the hat heard is the
     // same block-for-block wherever in the handler you stand.
-    const workspace = aWorld();
+    const workspace = aScreen();
     const hat = {
       type: 'world_on_Collisions_StartsTouchingEvent',
       id: 'hat1',

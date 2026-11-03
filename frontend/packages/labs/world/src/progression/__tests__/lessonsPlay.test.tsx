@@ -257,7 +257,7 @@ describe('what a lesson starts out doing', () => {
 // it, the switcher for a map.
 
 /** A path a learner would once have used the file browser to reach. */
-const PATHS = /`(actors|rules|sprites|worlds|backgrounds|maps|effects)\//;
+const PATHS = /`(actors|rules|sprites|screens|backgrounds|maps|effects)\//;
 
 /** The ways in a lesson may name instead. */
 const DOORS =
@@ -310,12 +310,11 @@ describe('a lesson that names a file', () => {
 
 describe('every lesson', () => {
   it('is a Main Screen, and defines no actor in it', () => {
-    // An actor is a file. A `define actor` among a world's own roots was the
-    // old way of keeping a lesson to one file, and nothing reads it now; and
-    // a lesson is a screen, as a game is (specs/LESSONS_AS_SCREENS_PLAN.md).
+    // An actor is a file, and nothing reads a `define actor` among a
+    // screen's roots; a lesson is a screen, as a game is
+    // (specs/LESSONS_AS_SCREENS_PLAN.md).
     for (const id of ids) {
       const files = projectFiles(LESSONS[id].source);
-      expect(files['worlds/main.world'], id).toBeUndefined();
       expect(files['screens/main.screen'], id).not.toContain(
         '"type": "world_actor"',
       );

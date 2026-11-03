@@ -1197,7 +1197,7 @@ describe('a level, with nothing selected', () => {
   });
 
   it('never offers that on a world’s main map, which has nothing under it', () => {
-    // A main map lives inside the `.world` file, so `load map` cannot name it
+    // A main map lives inside the screen, so `load map` cannot name it
     // and nothing can ever be loaded over it — the flag could only ever be a
     // field nothing reads. It is absent by being in the MAP inspector: a main
     // map shows the world's instead.

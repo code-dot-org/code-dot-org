@@ -10,7 +10,7 @@ import {describe, expect, it, vi} from 'vitest';
 import {createGeneratedFileCache} from '../generatedFiles';
 
 const isBlockly = (path: string) => path.endsWith('.rule');
-const isWorld = (path: string) => path.endsWith('.world');
+const isScreen = (path: string) => path.endsWith('.screen');
 
 /** A generator that says which file it was asked about, and counts the asking. */
 const generator = () => {
@@ -137,22 +137,27 @@ describe('the generated-file cache', () => {
   });
 
   it('regenerates when the environment the generator reads has changed', () => {
-    // The bug this exists to stop. A `define world` emits `world.useImageSizes`
-    // from what the editor has MEASURED, and an image served from the assets
-    // backend is measured only once it has decoded — a render in which no file
-    // changed at all. Keyed on the files alone, the recompile that arrival
-    // triggers was a cache hit, and the world went on running with actors the
-    // engine sized as the fallback 32-by-32 box.
+    // The bug this exists to stop. The Main Screen's module emits
+    // `world.useImageSizes` from what the editor has MEASURED, and an image
+    // served from the assets backend is measured only once it has decoded — a
+    // render in which no file changed at all. Keyed on the files alone, the
+    // recompile that arrival triggers was a cache hit, and the world went on
+    // running with actors the engine sized as the fallback 32-by-32 box.
     const cache = createGeneratedFileCache();
     const generate = generator();
-    const files = {'worlds/main.world': 'W'};
-    cache.generateAll(files, isWorld, generate, 'no sizes yet');
+    const files = {'screens/main.screen': 'S'};
+    cache.generateAll(files, isScreen, generate, 'no sizes yet');
     generate.mockClear();
 
-    const out = cache.generateAll(files, isWorld, generate, 'ground.png 64x16');
+    const out = cache.generateAll(
+      files,
+      isScreen,
+      generate,
+      'ground.png 64x16',
+    );
 
     expect(generate).toHaveBeenCalledTimes(1);
-    expect(out['worlds/main.world']).toBe('// worlds/main.world\nW');
+    expect(out['screens/main.screen']).toBe('// screens/main.screen\nS');
   });
 
   it('keeps its entries while the environment holds still', () => {

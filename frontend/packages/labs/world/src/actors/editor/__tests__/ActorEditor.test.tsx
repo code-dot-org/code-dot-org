@@ -11,6 +11,7 @@ import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {levelScreen} from '../../../__tests__/support/levelScreen';
 import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
 
 // The starter's project and its Player.
@@ -701,8 +702,8 @@ describe('an event or block of its own (specs/ACTOR_BLOCKS_PLAN.md, step 3)', ()
     fireEvent.change(screen.getByRole('textbox', {name: 'Word, part 1'}), {
       target: {value: 'is hurt'},
     });
-    // A world that heard the event by its first words.
-    const worldId = 'heard';
+    // A screen that heard the event by its first words.
+    const screenId = 'heard';
     const before = SOURCE;
     SOURCE = {
       ...SOURCE,
@@ -712,12 +713,12 @@ describe('an event or block of its own (specs/ACTOR_BLOCKS_PLAN.md, step 3)', ()
           ...SOURCE.files[PLAYER_ID],
           contents: JSON.stringify(written()),
         },
-        [worldId]: {
-          id: worldId,
-          name: 'heard.world',
+        [screenId]: {
+          id: screenId,
+          name: 'heard.screen',
           folderId: '0',
-          language: 'world',
-          contents: JSON.stringify({
+          language: 'screen',
+          contents: levelScreen({
             blocks: {
               languageVersion: 0,
               blocks: [{type: 'world_on_ActorsPlayer_HappensEvent'}],
@@ -730,8 +731,8 @@ describe('an event or block of its own (specs/ACTOR_BLOCKS_PLAN.md, step 3)', ()
 
     try {
       fireEvent.click(screen.getByRole('button', {name: 'Actor'}));
-      const renamed = replaceSources.mock.calls[0][0].source.files[worldId];
-      expect(JSON.parse(renamed.contents).blocks.blocks[0].type).toBe(
+      const renamed = replaceSources.mock.calls[0][0].source.files[screenId];
+      expect(JSON.parse(renamed.contents).blocks.blocks.blocks[0].type).toBe(
         'world_on_ActorsPlayer_IsHurtEvent',
       );
     } finally {
