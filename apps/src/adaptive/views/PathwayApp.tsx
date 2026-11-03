@@ -28,6 +28,7 @@ import {
   PROJECT_STEP_ID,
   CheckpointStatus,
   Progress,
+  isComplete,
   stepIdToResume,
   useProgress,
   visibleSteps,
@@ -35,7 +36,7 @@ import {
 import {ProgressKey} from '../progress/progressStore';
 import {nextCheckpoint} from '../routing/route';
 import {findCheckpoint} from '../schema/helpers';
-import {Checkpoint, Pathway} from '../types';
+import {Checkpoint, Pathway, Step} from '../types';
 
 import AdaptiveHeader from './AdaptiveHeader';
 import AdaptiveTabBar from './AdaptiveTabBar';
@@ -217,14 +218,15 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       : {kind: 'map'}
   );
 
+  const hasReportedInitialLoad = useRef(false);
   useEffect(() => {
+    if (hasReportedInitialLoad.current) return;
+    hasReportedInitialLoad.current = true;
     sendAdaptiveEvent(EVENTS.ADAPTIVE_PATHWAY_LOADED, {
       isFirstVisit,
       ...statusCounts(statusMap),
     });
-    // Once per load.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [isFirstVisit, statusMap]);
 
   const onMap = view.kind === 'map';
   useEffect(() => {
@@ -253,30 +255,17 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     });
   }, [openedId, pathway, statusMap]);
 
+  // Skips come out of routing on any change to progress, so there is no one
+  // action to send them from.
   const previousStatusMap = useRef(statusMap);
   useEffect(() => {
     const before = previousStatusMap.current;
     if (before === statusMap) return;
     previousStatusMap.current = statusMap;
-    const entered = (status: CheckpointStatus) =>
-      Object.keys(statusMap).filter(
-        id => statusMap[id] === status && before[id] !== status
-      );
-    for (const id of entered('complete')) {
-      const checkpoint = pathway.checkpoints.find(c => c.id === id);
-      if (!checkpoint) continue;
-      const steps = visibleSteps(checkpoint, progress);
-      sendAdaptiveEvent(EVENTS.ADAPTIVE_CHECKPOINT_COMPLETED, {
-        checkpointId: id,
-        totalTimeSeconds: steps.reduce(
-          (sum, s) => sum + (progress.steps[s.id]?.timeSpent ?? 0),
-          0
-        ),
-        stepsVisible: steps.length,
-        routeAfterCompletion: !!checkpoint.routeAfterCompletion,
-      });
-    }
-    for (const id of entered('skipped')) {
+    const newlySkipped = Object.keys(statusMap).filter(
+      id => statusMap[id] === 'skipped' && before[id] !== 'skipped'
+    );
+    for (const id of newlySkipped) {
       const checkpoint = pathway.checkpoints.find(c => c.id === id);
       const skillIds = checkpoint?.skillIds ?? [];
       sendAdaptiveEvent(EVENTS.ADAPTIVE_ROUTING_SKIPPED_CHECKPOINT, {
@@ -288,7 +277,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         triggeredByCheckpointId: lastPlayedId.current,
       });
     }
-  }, [statusMap, pathway, progress, evidence]);
+  }, [statusMap, pathway, evidence]);
 
   // Handle browser back/forward at the checkpoint level.
   useEffect(() => {
@@ -408,6 +397,22 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   if (pathwayContext) {
     const isProject = view.kind === 'project';
     const {checkpoint} = pathwayContext;
+    const completeStepInCheckpoint = (step: Step, timeMs: number) => {
+      completeStep(step, timeMs);
+      if (isProject || isComplete(checkpoint, progress)) return;
+      const steps = visibleSteps(checkpoint, progress);
+      if (steps.at(-1)?.id !== step.id) return;
+      const priorSeconds = steps.reduce(
+        (sum, s) => sum + (progress.steps[s.id]?.timeSpent ?? 0),
+        0
+      );
+      sendAdaptiveEvent(EVENTS.ADAPTIVE_CHECKPOINT_COMPLETED, {
+        checkpointId: checkpoint.id,
+        totalTimeSeconds: priorSeconds + Math.ceil(timeMs / 1000),
+        stepsVisible: steps.length,
+        routeAfterCompletion: !!checkpoint.routeAfterCompletion,
+      });
+    };
     const isFinish = checkpoint === finishCheckpoint;
     const goToMap = () => {
       clearUrl();
@@ -423,7 +428,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             headerTitle={isProject || isFinish ? checkpoint.title : undefined}
             initialStepId={view.kind === 'step' ? view.stepId : undefined}
             onStartStep={startStep}
-            onCompleteStep={completeStep}
+            onCompleteStep={completeStepInCheckpoint}
             onLeaveStep={leaveStep}
             onSaveAnswers={saveAnswers}
             onExit={goToMap}
