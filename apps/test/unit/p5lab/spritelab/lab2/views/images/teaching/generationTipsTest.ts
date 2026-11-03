@@ -1,7 +1,7 @@
 import {
   GENERATION_TIPS,
   pickTip,
-} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/generationTips';
+} from '@cdo/apps/p5lab/spritelab/lab2/views/images/teaching/generationTips';
 
 describe('generationTips', () => {
   it('picks a tip from the list', () => {

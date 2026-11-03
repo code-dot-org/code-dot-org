@@ -3,10 +3,11 @@
 
 import React from 'react';
 
-import BehindTheScenes from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/BehindTheScenes';
 import {sentPromptsFor} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentPrompts';
 
-import {ProjectImage} from './projectImages';
+import {ProjectImage} from '../projectImages';
+
+import BehindTheScenes from './BehindTheScenes';
 
 interface ReopenedBehindTheScenesProps {
   image: ProjectImage;

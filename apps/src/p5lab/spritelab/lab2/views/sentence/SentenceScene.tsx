@@ -30,11 +30,9 @@ import {
 
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 import BehindTheScenes from '../images/teaching/BehindTheScenes';
+import {pickTip} from '../images/teaching/generationTips';
 import StripFrame from '../StripFrame';
 
-import AlternativeThumbs from './AlternativeThumbs';
-import GeneratingSteps from './GeneratingSteps';
-import {pickTip} from './generationTips';
 import {PixelReveal, SparkleBurst} from './PixelReveal';
 import SentenceReadOnly from './SentenceReadOnly';
 import {
