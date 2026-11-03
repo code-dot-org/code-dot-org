@@ -1,5 +1,7 @@
 import {
   findPartner,
+  markPairs,
+  pairStatus,
   pairTogether,
   unpairItem,
 } from '@cdo/apps/quiz/attempt/match/utils';
@@ -48,5 +50,57 @@ describe('findPartner', () => {
 
   it('is undefined for an unpaired item', () => {
     expect(findPartner(pairs, 'b')).toBeUndefined();
+  });
+});
+
+describe('pairStatus', () => {
+  const correctPairs: [string, string][] = [
+    ['a', 'x'],
+    ['b', 'y'],
+  ];
+
+  it('is correct for a pair in the key, in either order', () => {
+    expect(pairStatus(correctPairs, ['a', 'x'])).toBe('correct');
+    expect(pairStatus(correctPairs, ['x', 'a'])).toBe('correct');
+  });
+
+  it('is incorrect for a pair not in the key', () => {
+    expect(pairStatus(correctPairs, ['a', 'y'])).toBe('incorrect');
+  });
+});
+
+describe('markPairs', () => {
+  const correctPairs: [string, string][] = [
+    ['a', 'x'],
+    ['b', 'y'],
+  ];
+
+  it('marks each pair against the key', () => {
+    expect(
+      markPairs(
+        [
+          ['a', 'x'],
+          ['b', 'z'],
+        ],
+        correctPairs,
+        false
+      )
+    ).toEqual([
+      {ids: ['a', 'x'], status: 'correct'},
+      {ids: ['b', 'z'], status: 'incorrect'},
+    ]);
+  });
+
+  it('marks every pair of the answer key correct', () => {
+    expect(markPairs(correctPairs, undefined, true)).toEqual([
+      {ids: ['a', 'x'], status: 'correct'},
+      {ids: ['b', 'y'], status: 'correct'},
+    ]);
+  });
+
+  it('leaves pairs unmarked without a key', () => {
+    expect(markPairs([['a', 'x']], undefined, false)).toEqual([
+      {ids: ['a', 'x'], status: undefined},
+    ]);
   });
 });

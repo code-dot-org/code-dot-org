@@ -1,19 +1,38 @@
-import React, {useLayoutEffect, useRef, useState} from 'react';
+import classNames from 'classnames';
+import React, {useLayoutEffect, useMemo, useRef, useState} from 'react';
 
 import MatchColumn from './MatchColumn';
-import {MatchPairs, MatchSelection, MatchSets, MatchSide} from './types';
+import {
+  MatchPairs,
+  MatchSelection,
+  MatchSets,
+  MatchSide,
+  PairStatus,
+} from './types';
+import {markPairs} from './utils';
 
 import styles from './match-question-container.module.scss';
 
 export interface MatchBoardProps {
   matchSets: MatchSets;
   pairs: MatchPairs;
-  label: string;
+  // One of label or labelledBy names the board.
+  label?: string;
+  labelledBy?: string;
   // Omit for a read-only board, as in results.
   onClickItem?: (side: MatchSide, id: string) => void;
   selection?: MatchSelection;
   disabled?: boolean;
+  // Marks each pair in pairs as correct or incorrect.
+  correctPairs?: MatchPairs;
+  isAnswerKey?: boolean;
   describedBy?: string;
+}
+
+interface Line {
+  key: string;
+  path: string;
+  status?: PairStatus;
 }
 
 interface Point {
@@ -38,12 +57,20 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
   onClickItem,
   selection = {},
   disabled,
+  correctPairs,
+  isAnswerKey,
   label,
+  labelledBy,
   describedBy,
 }) => {
-  const [linePaths, setLinePaths] = useState<string[]>([]);
+  const [lines, setLines] = useState<Line[]>([]);
   const boardRef = useRef<HTMLDivElement>(null);
   const dotRefs = useRef(new Map<string, HTMLElement>());
+  // Memoized, since the line measurement below reruns when it changes.
+  const markedPairs = useMemo(
+    () => markPairs(pairs, correctPairs, isAnswerKey),
+    [pairs, correctPairs, isAnswerKey]
+  );
 
   // Measured after layout, and again whenever a card changes size, since
   // the line endpoints are wherever the dots actually render.
@@ -63,11 +90,19 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
             }
           : null;
       };
-      setLinePaths(
-        pairs.flatMap(([startId, endId]) => {
+      setLines(
+        markedPairs.flatMap(({ids: [startId, endId], status}) => {
           const start = centerOf(startId);
           const end = centerOf(endId);
-          return start && end ? [curvePath(start, end)] : [];
+          return start && end
+            ? [
+                {
+                  key: `${startId}:${endId}`,
+                  path: curvePath(start, end),
+                  status,
+                },
+              ]
+            : [];
         })
       );
     };
@@ -81,7 +116,7 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
       .querySelectorAll(`.${styles.card}`)
       .forEach(card => observer.observe(card));
     return () => observer.disconnect();
-  }, [pairs, matchSets]);
+  }, [markedPairs, matchSets]);
 
   const dotRef = (id: string, element: HTMLElement | null) => {
     if (element) {
@@ -97,11 +132,19 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
       className={styles.board}
       role="group"
       aria-label={label}
+      aria-labelledby={labelledBy}
       aria-describedby={describedBy}
     >
       <svg className={styles.lines} aria-hidden="true">
-        {linePaths.map(path => (
-          <path key={path} d={path} className={styles.line} />
+        {lines.map(({key, path, status}) => (
+          <path
+            key={key}
+            d={path}
+            className={classNames(styles.line, {
+              [styles.lineCorrect]: status === 'correct',
+              [styles.lineIncorrect]: status === 'incorrect',
+            })}
+          />
         ))}
       </svg>
       {(['start', 'end'] as const).map(side => (
@@ -109,11 +152,12 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
           key={side}
           matchSets={matchSets}
           side={side}
-          pairs={pairs}
+          pairs={markedPairs}
           selectedId={selection[side]}
           onClickItem={onClickItem && (id => onClickItem(side, id))}
           dotRef={dotRef}
           disabled={disabled}
+          isAnswerKey={isAnswerKey}
         />
       ))}
     </div>
