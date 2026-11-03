@@ -19,7 +19,6 @@ import {pascal} from '../blockly/ruleMeta';
 import {ruleSlug} from '../blockly/ruleRegistry';
 
 import {
-  asRuleData,
   isRuleData,
   type RuleData,
   type RuleProperty,
@@ -335,7 +334,7 @@ export function renameProperty(
   const file = source.files[fileId];
   let data: unknown;
   try {
-    data = JSON.parse(asRuleData(resolveRuleContents(file?.contents ?? '')));
+    data = JSON.parse(resolveRuleContents(file?.contents ?? ''));
   } catch {
     return source;
   }
@@ -593,7 +592,7 @@ export const removeUse = (
 /** The data as the file holds it, or nothing for one that is not a rule. */
 export function ruleDataOf(contents: string): RuleData | undefined {
   try {
-    const parsed = JSON.parse(asRuleData(resolveRuleContents(contents)));
+    const parsed = JSON.parse(resolveRuleContents(contents)) as unknown;
     return isRuleData(parsed) ? parsed : undefined;
   } catch {
     return undefined;

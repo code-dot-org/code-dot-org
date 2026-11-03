@@ -21,7 +21,6 @@ import type {
   WorldQuery,
 } from '../engine';
 import {
-  foldRule,
   isRuleData,
   type RuleData,
   type RuleProperty,
@@ -614,8 +613,7 @@ export const propertyDefault = (
  * generated code imports the rule and its members from (`rules/wind`); the
  * declared members become `project` refs into that module.
  *
- * Read from the rule's data. A file written as a `define rule` workspace is
- * folded first, and one the data cannot say whole is not a rule.
+ * Read from the rule's data; a file that is not a rule's data is not a rule.
  */
 export function parseRuleMeta(
   modulePath: string,
@@ -627,8 +625,7 @@ export function parseRuleMeta(
   } catch {
     return undefined;
   }
-  const data = isRuleData(parsed) ? parsed : foldRule(parsed);
-  return data && ruleMetaOf(modulePath, data);
+  return isRuleData(parsed) ? ruleMetaOf(modulePath, parsed) : undefined;
 }
 
 /** {@link parseRuleMeta}, of the data itself. */

@@ -6,8 +6,6 @@ import {beforeEach, describe, expect, it, vi} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
-import {ruleView, type RuleData} from '../../ruleData';
-import {resolveRuleContents} from '../../ruleReference';
 
 // The starter's project, whose Gravity is the library's, held by reference.
 const SOURCE: MultiFileSource = WORLD_SCENARIOS.simple.source;
@@ -167,12 +165,12 @@ describe('the Rule Editor', () => {
     expect(written().uses).not.toContain('Solid Bodies');
   });
 
-  it('says so of a rule the data cannot say, and never opens it in blocks', () => {
-    const view = ruleView(
-      JSON.parse(resolveRuleContents(GRAVITY.contents)) as RuleData,
-    ) as {blocks: {blocks: unknown[]}};
-    view.blocks.blocks.push({type: 'world_print'});
-    open(JSON.stringify(view));
+  it('says so of a rule in define rule rows, and never opens it in blocks', () => {
+    open(
+      JSON.stringify({
+        blocks: {blocks: [{type: 'world_rule', fields: {NAME: 'Gravity'}}]},
+      }),
+    );
     expect(screen.getByText(/cannot be read/)).toBeInTheDocument();
     expect(screen.queryByTestId('blocks')).toBeNull();
     expect(screen.queryByRole('button', {name: 'Code'})).toBeNull();

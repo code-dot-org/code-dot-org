@@ -26,12 +26,10 @@ const rule = (modulePath: string, name: string) =>
   parseRuleMeta(
     modulePath,
     JSON.stringify({
-      blocks: {
-        blocks: [
-          {type: 'world_rule', fields: {NAME: name, ABILITY: `Has ${name}`}},
-          {type: 'world_rule_trait', fields: {NAME: 'Windblown'}},
-        ],
-      },
+      type: 'rule',
+      name,
+      ability: `Has ${name}`,
+      traits: [{name: 'Windblown'}],
     }),
   )!;
 

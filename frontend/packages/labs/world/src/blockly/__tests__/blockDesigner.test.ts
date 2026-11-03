@@ -32,22 +32,19 @@ const designed = (
   parseRuleMeta(
     'rules/push',
     JSON.stringify({
+      type: 'rule',
+      name: 'Push',
+      ability: 'Has Push',
+      members: [
+        {
+          id: 'block-0',
+          kind: 'block',
+          parts,
+          ...(description ? {description} : {}),
+          ...(returns !== 'none' ? {returns} : {}),
+        },
+      ],
       variables,
-      blocks: {
-        blocks: [
-          {
-            type: 'world_rule',
-            fields: {NAME: 'Push', ABILITY: 'Has Push'},
-            next: {
-              block: {
-                type: 'world_rule_block',
-                fields: {RETURNS: returns, DESCRIPTION: description},
-                extraState: {parts},
-              },
-            },
-          },
-        ],
-      },
     }),
   )!;
 
@@ -79,7 +76,7 @@ describe('a designed block', () => {
     ]);
   });
 
-  it('is an action or a query, by its RETURNS field alone', () => {
+  it('is an action or a query, by what it returns alone', () => {
     // The one thing `define action` and `define query` differed in.
     expect(designed(PUSH_PARTS, 'none', PUSH_VARS).queries).toHaveLength(0);
     const asQuery = designed(PUSH_PARTS, 'boolean', PUSH_VARS);
@@ -339,25 +336,23 @@ describe('a designed block', () => {
     const meta = parseRuleMeta(
       'rules/push',
       JSON.stringify({
-        variables: [],
-        blocks: {
-          blocks: [
-            {type: 'world_rule', fields: {NAME: 'Push', ABILITY: 'Has Push'}},
-            {
-              type: 'world_rule_trait',
-              fields: {NAME: 'Pushable'},
-              next: {
-                block: {
-                  type: 'world_rule_block',
-                  fields: {RETURNS: 'boolean'},
-                  extraState: {
-                    parts: [{kind: 'label', text: 'is on the ground?'}],
-                  },
-                },
+        type: 'rule',
+        name: 'Push',
+        ability: 'Has Push',
+        traits: [
+          {
+            name: 'Pushable',
+            members: [
+              {
+                id: 'block-0',
+                kind: 'block',
+                parts: [{kind: 'label', text: 'is on the ground?'}],
+                returns: 'boolean',
               },
-            },
-          ],
-        },
+            ],
+          },
+        ],
+        variables: [],
       }),
     )!;
     const {blocks} = paletteFor(meta);

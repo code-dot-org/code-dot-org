@@ -23,17 +23,18 @@ import {describe, expect, it} from 'vitest';
 import {typesIn} from '../../__tests__/support/blockTypes';
 import {isActorData} from '../../actors/actorData';
 import {DEFAULT_PROJECT, starterFile} from '../../constants';
+import {isRuleData, ruleBodies} from '../../rules/ruleData';
+import {resolveRuleContents} from '../../rules/ruleReference';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette} from '../domainBlocks';
 import {projectOwnMetas, projectRuleMetas} from '../projectModules';
-import {workspaceViewOf} from '../rewriteWorkspaces';
 import {VIEW_ROWS} from '../viewRows';
 
-// Each rule as the blocks it stands for (`workspaceViewOf`); an actor is read
-// as its data (`typesIn`).
+// Each actor and rule as its data (`typesIn`), a rule held as a reference
+// resolved to the rule it names.
 const files = Object.fromEntries(
   Object.entries(projectFiles(DEFAULT_PROJECT.source)).map(
-    ([path, contents]) => [path, workspaceViewOf(contents)],
+    ([path, contents]) => [path, resolveRuleContents(contents)],
   ),
 );
 
@@ -51,9 +52,15 @@ const palette = new Set(
 
 const WORKSPACE_FILE = /\.(rule|actor|world)$/;
 
-/** Whether a file names any block: an actor of traits and a picture names none. */
+/**
+ * Whether a file names any block: an actor of traits and a picture names
+ * none, and nor does a rule that only declares.
+ */
 const namesBlocks = (path: string): boolean => {
   const held = JSON.parse(files[path]) as unknown;
+  if (isRuleData(held)) {
+    return ruleBodies(held).length > 0;
+  }
   if (!isActorData(held)) {
     return true;
   }
@@ -100,7 +107,7 @@ describe('the shipped project', () => {
     }
     // The deep ones: gravity's steps and the world's own body.
     expect(
-      typesIn(workspaceViewOf(starterFile('gravityRule').contents)).length,
+      typesIn(resolveRuleContents(starterFile('gravityRule').contents)).length,
     ).toBeGreaterThan(40);
   });
 });

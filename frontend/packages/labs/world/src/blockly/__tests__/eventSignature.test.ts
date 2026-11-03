@@ -57,21 +57,11 @@ const ruleWithEvent = (
   parseRuleMeta(
     'rules/keys',
     JSON.stringify({
+      type: 'rule',
+      name: 'Keys',
+      ability: 'Responds to Keys',
+      members: [{id: 'event-0', kind: 'event', parts: event.parts}],
       variables,
-      blocks: {
-        blocks: [
-          {
-            type: 'world_rule',
-            fields: {NAME: 'Keys', ABILITY: 'Responds to Keys'},
-            next: {
-              block: {
-                type: 'world_rule_event',
-                extraState: {parts: event.parts},
-              },
-            },
-          },
-        ],
-      },
     }),
   )!;
 

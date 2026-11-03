@@ -12,7 +12,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {whyKeepFile} from '../deleteGuard';
 import {filesUsing, heldRules, removeRule, rulesRequiring} from '../removeRule';
 
-/** A `.rule` workspace declaring a name, an ability, traits and dependencies. */
+/** A `.rule` declaring a name, an ability, traits and dependencies. */
 const ruleFile = (
   name: string,
   {
@@ -22,32 +22,11 @@ const ruleFile = (
   }: {ability?: string; requires?: string[]; traits?: string[]} = {},
 ) =>
   JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_rule',
-          fields: {NAME: name, ...(ability ? {ABILITY: ability} : {})},
-          ...(requires.length
-            ? {
-                next: {
-                  block: requires.reduceRight<object | undefined>(
-                    (next, dep) => ({
-                      type: 'world_use_rule',
-                      fields: {RULE: dep},
-                      ...(next ? {next: {block: next}} : {}),
-                    }),
-                    undefined,
-                  ) as object,
-                },
-              }
-            : {}),
-        },
-        ...traits.map(trait => ({
-          type: 'world_rule_trait',
-          fields: {NAME: trait},
-        })),
-      ],
-    },
+    type: 'rule',
+    name,
+    ability: ability ?? name,
+    ...(requires.length ? {uses: requires} : {}),
+    ...(traits.length ? {traits: traits.map(trait => ({name: trait}))} : {}),
   });
 
 /** A project with a `rules/` folder holding the given files. */

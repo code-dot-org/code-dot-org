@@ -83,11 +83,9 @@ describe('projectMapActorTypes', () => {
 });
 
 describe('projectWorldRules', () => {
-  /** A `.rule` file, as the project holds it: a `define rule` naming itself. */
+  /** A `.rule` file, as the project holds it: data naming itself. */
   const ruleFile = (name: string) =>
-    JSON.stringify({
-      blocks: {blocks: [{type: 'world_rule', fields: {NAME: name}}]},
-    });
+    JSON.stringify({type: 'rule', name, ability: name});
 
   it('is every rule the project holds, whatever any world says', () => {
     // The change this is here to pin: it used to read the `use rule` blocks.

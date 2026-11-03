@@ -51,7 +51,7 @@
 // is reachable from Origin, and that a region's tiles touch each other.
 
 import {actorDataOf} from '../actors/actorData';
-import {asRuleData, isRuleData, type RuleData} from '../rules/ruleData';
+import {isRuleData, type RuleData} from '../rules/ruleData';
 import {resolveRuleContents} from '../rules/ruleReference';
 import {stockRule} from '../rules/stock';
 
@@ -3882,14 +3882,14 @@ function screenPlacementKinds(files: Record<string, string>): string[] {
   }
 }
 
-/** A rule file as data, whatever shape it is stored in. */
+/** A rule file's data. */
 function ruleIn(
   files: Record<string, string>,
   path: string,
 ): RuleData | undefined {
   try {
     const parsed = JSON.parse(
-      asRuleData(resolveRuleContents(files[path] ?? '')),
+      resolveRuleContents(files[path] ?? ''),
     ) as unknown;
     return isRuleData(parsed) ? parsed : undefined;
   } catch {

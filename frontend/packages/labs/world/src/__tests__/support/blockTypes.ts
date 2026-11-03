@@ -13,6 +13,7 @@ import {
   writeValue,
   type ActorData,
 } from '../../actors/actorData';
+import {isRuleData, ruleBodies} from '../../rules/ruleData';
 
 /** A saved block, as much of one as a walk needs to see. */
 interface SavedBlock {
@@ -28,7 +29,8 @@ interface SavedBlock {
  * a parameter's type is `type` too (`enum:Engine#Key`, `vector`), and so is a
  * variable's, and neither is a block. Contents that are not a workspace at
  * all — an image, a map — walk as nothing. An actor's data names blocks in
- * its code, its values' setters, its effects and its blocks' bodies.
+ * its code, its values' setters, its effects and its blocks' bodies; a
+ * rule's, in its bodies.
  */
 export function typesIn(contents: string): string[] {
   let parsed: {blocks?: {blocks?: SavedBlock[]}};
@@ -60,6 +62,11 @@ export function typesIn(contents: string): string[] {
       ...(data.effects ?? []).map(writeEffect),
       ...(data.members ?? []).flatMap(one => (one.body ? [one.body] : [])),
     ].forEach(block => visit(block as SavedBlock));
+    return found;
+  }
+  // …and a rule in the bodies of its blocks and steps.
+  if (isRuleData(parsed)) {
+    ruleBodies(parsed).forEach(block => visit(block as SavedBlock));
     return found;
   }
   (parsed.blocks?.blocks ?? []).forEach(visit);

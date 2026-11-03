@@ -29,12 +29,10 @@ import {
 const wind = parseRuleMeta(
   'rules/wind',
   JSON.stringify({
-    blocks: {
-      blocks: [
-        {type: 'world_rule', fields: {NAME: 'Wind', ABILITY: 'Has Wind'}},
-        {type: 'world_rule_trait', fields: {NAME: 'Windblown'}},
-      ],
-    },
+    type: 'rule',
+    name: 'Wind',
+    ability: 'Has Wind',
+    traits: [{name: 'Windblown'}],
   }),
 )!;
 
@@ -98,25 +96,12 @@ describe('a world’s own property', () => {
     const gusty = parseRuleMeta(
       'rules/wind',
       JSON.stringify({
-        blocks: {
-          blocks: [
-            {
-              type: 'world_rule',
-              fields: {NAME: 'Wind', ABILITY: 'Has Wind'},
-              next: {
-                block: {
-                  type: 'world_rule_property',
-                  fields: {
-                    TYPE: 'number',
-                    ACCESS: 'writable',
-                    NAME: 'strength',
-                    DEFAULT: '1',
-                  },
-                },
-              },
-            },
-          ],
-        },
+        type: 'rule',
+        name: 'Wind',
+        ability: 'Has Wind',
+        properties: [
+          {name: 'strength', type: 'number', access: 'writable', value: '1'},
+        ],
       }),
     )!;
     buildDomainPalette([gusty]);

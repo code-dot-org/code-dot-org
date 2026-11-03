@@ -6,8 +6,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {ruleViewOf} from '../../rules/ruleData';
-import {STOCK_RULES} from '../../rules/stock';
+import {STOCK_ACTORS} from '../../actors/stock';
 import {
   BODY_OWNER_ID,
   createBodySeam,
@@ -258,19 +257,40 @@ describe('reap', () => {
   });
 });
 
-describe('every stock rule survives the round trip', () => {
+/** Every stock actor's code as one workspace: drawings, steps and handlers. */
+const EVERY_ACTORS_CODE = {
+  blocks: {
+    languageVersion: 0,
+    blocks: STOCK_ACTORS.flatMap(
+      actor =>
+        (
+          JSON.parse(actor.contents) as {
+            blocks?: {blocks?: {blocks?: unknown[]}};
+          }
+        ).blocks?.blocks?.blocks ?? [],
+    ),
+  },
+} as never;
+
+/** A stock actor's code, as the editor opens it. */
+const codeOf = (id: string) =>
+  (
+    JSON.parse(STOCK_ACTORS.find(actor => actor.id === id)!.contents) as {
+      blocks: unknown;
+    }
+  ).blocks as never;
+
+describe('every stock actor’s code survives the round trip', () => {
   // THE ONE THAT MATTERS. A merge that drops a body does not throw; it writes
-  // a rule whose steps are empty and a game that quietly stops working. Forty-
-  // seven rules, split and put back, compared against what went in.
-  it.each(STOCK_RULES.map(rule => rule.id))('%s', id => {
-    const before = JSON.parse(
-      ruleViewOf(STOCK_RULES.find(rule => rule.id === id)!.contents),
-    );
+  // a handler that does nothing and a game that quietly stops working. Every
+  // stock actor's code, split and put back, compared against what went in.
+  it.each(STOCK_ACTORS.map(actor => actor.id))('%s', id => {
+    const before = codeOf(id);
     const {shown, bodies} = split(before);
     const after = merge(shown, bodies);
 
     // Ids are the one difference the split is allowed to make: the stock
-    // rules carry none and a body has to be keyed by something.
+    // actors carry none and a body has to be keyed by something.
     const withoutIds = (node: unknown): unknown => {
       if (Array.isArray(node)) {
         return node.map(withoutIds);
@@ -287,12 +307,10 @@ describe('every stock rule survives the round trip', () => {
     expect(withoutIds(after)).toEqual(withoutIds(before));
   });
 
-  it('actually hides something in the rules that matter', () => {
+  it('actually hides something in the actors that matter', () => {
     // A round trip that split nothing would pass every test above.
-    const solid = JSON.parse(
-      ruleViewOf(STOCK_RULES.find(rule => rule.id === 'solid')!.contents),
-    );
-    const {shown, bodies} = split(solid);
+    const area = EVERY_ACTORS_CODE;
+    const {shown, bodies} = split(area);
     const count = (document: {blocks?: {blocks?: unknown[]}}): number => {
       const one = (node: Record<string, unknown>): number => {
         let n = 1;
@@ -315,8 +333,8 @@ describe('every stock rule survives the round trip', () => {
       );
     };
 
-    expect(count(solid)).toBeGreaterThan(400);
-    expect(count(shown)).toBeLessThan(30);
+    // Handlers stay on the surface; drawings and steps go behind the pencil.
+    expect(count(shown)).toBeLessThan(count(area) * 0.8);
     expect(Object.keys(bodies).length).toBeGreaterThan(0);
   });
 });
@@ -340,18 +358,16 @@ describe('the editor seam', () => {
     expect(seam.read(asSaved(shown))).toEqual(before);
   });
 
-  it('keeps every body through a real rule', () => {
-    const solid = JSON.parse(
-      ruleViewOf(STOCK_RULES.find(rule => rule.id === 'solid')!.contents),
-    );
+  it('keeps every body through every stock actor’s code', () => {
+    const code = JSON.parse(JSON.stringify(EVERY_ACTORS_CODE));
     const seam = createBodySeam();
 
-    const shown = seam.show(solid);
+    const shown = seam.show(code);
     const read = seam.read(asSaved(shown));
 
     expect(rootsOf(read)).toEqual(rootsOf(seam.read(asSaved(shown))));
     expect(JSON.stringify(read).length).toBeGreaterThan(
-      JSON.stringify(shown).length * 5,
+      JSON.stringify(shown).length,
     );
   });
 
@@ -399,17 +415,14 @@ describe('opening one member’s body', () => {
   it('hands back what the split took from that block', () => {
     // What the pencil does: the id comes off a block in the workspace, which
     // is a block the split put there, so the two have to agree.
-    const solid = JSON.parse(
-      ruleViewOf(STOCK_RULES.find(rule => rule.id === 'solid')!.contents),
-    );
+    const code = JSON.parse(JSON.stringify(EVERY_ACTORS_CODE));
     const seam = createBodySeam();
-    const shown = seam.show(solid);
+    const shown = seam.show(code);
 
-    // Steps are MEMBERS now, chained under `define rule` rather than standing
-    // beside it, so this looks through the document rather than at its roots.
+    // Everything with a body, wherever it sits in the document.
     const steps: Saved[] = [];
     const walk = (block: Saved): void => {
-      if (block.type === 'world_rule_step_in') {
+      if (block.id && hasBody(block.type)) {
         steps.push(block);
       }
       for (const socket of Object.values(block.inputs ?? {})) {
@@ -476,8 +489,8 @@ describe('opening one member’s body', () => {
   });
 
   it('places the head where every workspace puts its root', () => {
-    // Not where the member sat on the interface, which for a rule as long as
-    // `solid` is somewhere off the side, and not at the origin either — the
+    // Not where the member sat on the interface, which in a long workspace
+    // is somewhere off the side, and not at the origin either — the
     // lab's own starter files all put a root at 20,20 (`constants.ts`), and a
     // head in the corner is the one workspace that looks wrong.
     const seam = createBodySeam();
@@ -552,10 +565,7 @@ describe('editing one body and writing the file', () => {
     return block?.inputs?.DO?.block ?? block?.next?.block;
   };
 
-  const solidDocument = () =>
-    JSON.parse(
-      ruleViewOf(STOCK_RULES.find(rule => rule.id === 'solid')!.contents),
-    );
+  const codeDocument = () => JSON.parse(JSON.stringify(EVERY_ACTORS_CODE));
 
   /** Every block the split took a body from. */
   const owners = (shown: unknown): string[] => {
@@ -578,10 +588,10 @@ describe('editing one body and writing the file', () => {
   };
 
   it('puts the edit in the file and leaves every other body whole', () => {
-    const solid = solidDocument();
+    const code = codeDocument();
     const seam = createBodySeam();
     // What the editor holds while a body is open: the interface, saved.
-    const held = seam.show(solid);
+    const held = seam.show(code);
     const ids = owners(held);
     expect(ids.length).toBeGreaterThan(1);
 
@@ -606,7 +616,7 @@ describe('editing one body and writing the file', () => {
     // once but could not be re-split would strand every body on the next
     // load, which is the same loss one save later.
     const seam = createBodySeam();
-    const held = seam.show(solidDocument());
+    const held = seam.show(codeDocument());
     const [first] = owners(held);
     seam.setBody(first, surface(statement('again')));
 

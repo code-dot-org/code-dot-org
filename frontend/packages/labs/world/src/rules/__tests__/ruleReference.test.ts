@@ -12,7 +12,6 @@ import {renameRuleInSource} from '../../blockly/renameRule';
 import {parseRuleMeta} from '../../blockly/ruleMeta';
 import {DEFAULT_PROJECT, starterFile} from '../../constants';
 import {projectFiles} from '../../runtime/projectFiles';
-import {ruleViewOf} from '../ruleData';
 import {
   isRuleReference,
   parseRuleReference,
@@ -83,8 +82,6 @@ describe('what a reference resolves to', () => {
     // project on every read.
     for (const rule of STOCK_RULES.slice(0, 5)) {
       expect(resolveRuleContents(rule.contents)).toBe(rule.contents);
-      const view = ruleViewOf(rule.contents);
-      expect(resolveRuleContents(view)).toBe(view);
     }
   });
 

@@ -4,6 +4,7 @@ import {describe, expect, it} from 'vitest';
 // code. The fixtures the engine's own tests drive are still the richest examples
 // of a rule's shape — traits, world and actor members, events, ordered steps —
 // which is what this file describes, so it reads them from there.
+import type {ActorMember} from '../../actors/actorData';
 import * as WorldLab from '../../engine';
 import * as CollisionFixture from '../../engine/__tests__/fixtures/collisionRule';
 import {CollisionRule} from '../../engine/__tests__/fixtures/collisionRule';
@@ -11,6 +12,7 @@ import * as GravityFixture from '../../engine/__tests__/fixtures/gravityRule';
 import {GravityRule} from '../../engine/__tests__/fixtures/gravityRule';
 import * as MotionFixture from '../../engine/__tests__/fixtures/motionRule';
 import {MotionRule} from '../../engine/__tests__/fixtures/motionRule';
+import type {RuleData, RuleProperty, RuleStep} from '../../rules/ruleData';
 import {BUILTIN_RULE_META} from '../builtinMeta';
 import {
   builtinRuleMeta,
@@ -163,92 +165,101 @@ describe('builtinRuleMeta', () => {
   });
 });
 
-// Build a `.rule` workspace (Blockly JSON): a `define rule` root chaining its
-// world-scoped members, plus one TOP BLOCK per `define trait`, each chaining
-// its own. A trait is a definition beside the rule, not inside it.
-const chain = (blocks: object[]): object | undefined =>
-  blocks.reduceRight<object | undefined>(
-    (next, block) => ({...block, ...(next ? {next: {block: next}} : {})}),
-    undefined,
-  );
-/**
- * A member that is its own TOP BLOCK — a trait or a step. `ruleFile` lifts these
- * out beside the rule rather than chaining them inside it.
- */
-interface DefinitionRoot {
-  __root: object;
-}
-const isRoot = (member: object): member is DefinitionRoot => '__root' in member;
+// Build a `.rule` as data: what the rule declares, and its traits with theirs.
+// Each helper below is one thing a definition declares; `ruleFile` sorts them
+// into the keys the data keeps them under.
+type Declared =
+  | {use: string}
+  | {property: RuleProperty}
+  | {member: Omit<ActorMember, 'id'>}
+  | {step: RuleStep}
+  | {trait: {name: string; subject?: 'camera'; declared: Declared[]}};
 
-const ruleFile = (name: string, ...members: object[]): string => {
-  const body = chain(members.filter(m => !isRoot(m)));
-  return JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_rule',
-          fields: {NAME: name},
-          ...(body ? {next: {block: body}} : {}),
-        },
-        ...members.filter(isRoot).map(m => m.__root),
-      ],
-    },
-  });
+/** The keys a definition's declarations take, members numbered from `made`. */
+const listed = (declared: Declared[], made: {count: number}) => {
+  const uses = declared.flatMap(one => ('use' in one ? [one.use] : []));
+  const properties = declared.flatMap(one =>
+    'property' in one ? [one.property] : [],
+  );
+  const members = declared.flatMap(one =>
+    'member' in one
+      ? [{id: `${one.member.kind}-${made.count++}`, ...one.member}]
+      : [],
+  );
+  const steps = declared.flatMap(one => ('step' in one ? [one.step] : []));
+  return {
+    ...(uses.length ? {uses} : {}),
+    ...(properties.length ? {properties} : {}),
+    ...(members.length ? {members} : {}),
+    ...(steps.length ? {steps} : {}),
+  };
 };
-// A vector's default is one field holding both axes; every other type here is
-// one value. A point would be two fields, `DEFAULT` and `DEFAULT_Y`.
-const prop = (type: string, name: string, def: unknown): object => ({
-  type: 'world_rule_property',
-  fields: {TYPE: type, NAME: name, DEFAULT: def},
+
+const ruleFile = (name: string, ...declared: Declared[]): string => {
+  const made = {count: 0};
+  const own = listed(
+    declared.filter(one => !('trait' in one)),
+    made,
+  );
+  const traits = declared.flatMap(one =>
+    'trait' in one
+      ? [
+          {
+            name: one.trait.name,
+            ...(one.trait.subject ? {subject: one.trait.subject} : {}),
+            ...listed(one.trait.declared, made),
+          },
+        ]
+      : [],
+  );
+  const data: RuleData = {
+    type: 'rule',
+    name,
+    ability: name,
+    ...own,
+    ...(traits.length ? {traits} : {}),
+  };
+  return JSON.stringify(data);
+};
+// A vector's default is one value holding both axes; every other type here is
+// one value. A point would be two, `value` and `valueY`.
+const prop = (type: string, name: string, def: unknown): Declared => ({
+  property: {name, type, access: 'writable', value: def},
 });
 // An event's wording is its designed phrasing — labels, and the choices a
 // handler filters on (specs/ENUMS.md). A plain one is a single label.
-const event = (name: string): object => ({
-  type: 'world_rule_event',
-  extraState: {parts: [{kind: 'label', text: name}]},
+const event = (name: string): Declared => ({
+  member: {kind: 'event', parts: [{kind: 'label', text: name}]},
 });
-const trait = (name: string, ...body: object[]): object =>
+const trait = (name: string, ...body: Declared[]): Declared =>
   subjectTrait(name, 'actor', ...body);
 
-/** A trait declaring what elects it — an actor, or a camera. */
-/**
- * `during ⟨phase⟩ do ⟨name⟩` — a member of the rule, no subject, every moment
- * offered.
- *
- * Chained like the rest of them. It stood beside the rule while its body was
- * the chain below it, which is what a step had to be when that body was
- * hundreds of blocks long; the body is on its own surface now.
- */
-const stepIn = (name: string, phase: string): object => ({
-  type: 'world_rule_step_in',
-  fields: {NAME: name, PHASE: phase},
+/** Work the rule does each frame, in a phase: no subject, every moment offered. */
+const stepIn = (name: string, phase: string): Declared => ({
+  step: {name, phase},
 });
 
-/** `each frame in ⟨phase⟩ do ⟨name⟩`, chained under a `define trait`. */
-const traitStep = (name: string, phase: string): object => ({
-  type: 'world_trait_step',
-  fields: {NAME: name, PHASE: phase},
+/** Work a trait does each frame, for each subject that has it. */
+const traitStep = (name: string, phase: string): Declared => ({
+  step: {name, phase},
 });
 
 /** A trait declaring what elects it — an actor, or a camera. */
 const subjectTrait = (
   name: string,
   subject: 'actor' | 'camera',
-  ...body: object[]
-): object => {
-  const inner = chain(body);
-  return {
-    __root: {
-      type: 'world_rule_trait',
-      fields: {NAME: name, SUBJECT: subject},
-      ...(inner ? {next: {block: inner}} : {}),
-    },
-  };
-};
-// `define block`: the imperative-body member, an action or a query by its
-// RETURNS field alone. Its name is the wording of its labels, and its `do` body
-// is not read by `parseRuleMeta` (metadata is static), so these fixtures leave
-// it empty — the bodies are `rules/ruleBodies`'.
+  ...body: Declared[]
+): Declared => ({
+  trait: {
+    name,
+    ...(subject === 'camera' ? {subject} : {}),
+    declared: body,
+  },
+});
+// A block of the rule's: an action or a query by what it returns alone. Its
+// name is the wording of its labels, and its body is not read by
+// `parseRuleMeta` (metadata is static), so these fixtures leave it empty —
+// the bodies are `rules/ruleBodies`'.
 const designed = (
   name: string,
   returns = 'none',
@@ -259,26 +270,19 @@ const designed = (
     default?: unknown;
   }> = [],
   description = '',
-): object => ({
-  type: 'world_rule_block',
-  fields: {
-    RETURNS: returns,
-    ...(description ? {DESCRIPTION: description} : {}),
-  },
-  extraState: {
+): Declared => ({
+  member: {
+    kind: 'block',
     parts: [
       {kind: 'label', text: name},
-      ...params.map(param => ({kind: 'param', ...param})),
+      ...params.map(param => ({kind: 'param' as const, ...param})),
     ],
+    ...(description ? {description} : {}),
+    ...(returns !== 'none' ? {returns} : {}),
   },
 });
-const action = (name: string): object => designed(name);
-const query = (type: string, name: string): object => designed(name, type);
-// `define step`: NAME, ORDER (free/before/after), and STEP (the anchor value,
-// `<owner>#<stepId>`) when ordered.
-// `define step`: an event hat per ordering kind. Its NAME names the step; the
-// anchor dropdown is only on the ordered two. Lifted to its own top block by
-// `ruleFile`, like a trait — its body is the chain below it.
+const action = (name: string): Declared => designed(name);
+const query = (type: string, name: string): Declared => designed(name, type);
 describe('a trait for a camera', () => {
   // The engine's `Trait` knows nothing of this. A trait is a trait; the subject
   // decides what a generated body calls its argument, and which dropdown offers
@@ -346,17 +350,11 @@ describe('a trait for a camera', () => {
     expect(module_).not.toContain('const world = actor.world;');
   });
 
-  it('reads a trait saved before the field existed as an actor’s', () => {
-    // The field is absent in every `.rule` written so far, and those files must
-    // keep meaning what they meant.
+  it('reads a trait that names no subject as an actor’s', () => {
+    // Absent on every actor's trait, which is what most traits are.
     const older = parseRuleMeta(
       'rules/wind',
-      ruleFile('Has Wind', {
-        __root: {
-          type: 'world_rule_trait',
-          fields: {NAME: 'Windblown'},
-        },
-      }),
+      ruleFile('Has Wind', {trait: {name: 'Windblown', declared: []}}),
     );
 
     expect(older?.traits[0].subject).toBe('actor');
@@ -364,7 +362,7 @@ describe('a trait for a camera', () => {
 });
 
 describe('parseRuleMeta', () => {
-  it('reads a nested `.rule` workspace into RuleMeta (scope by nesting)', () => {
+  it('reads a `.rule` into RuleMeta (scope by nesting)', () => {
     const meta = parseRuleMeta(
       'rules/wind',
       ruleFile(
@@ -401,8 +399,7 @@ describe('parseRuleMeta', () => {
           modulePath: 'rules/wind',
         },
         requires: [],
-        // Absent on a workspace saved before the field existed, which reads as
-        // `actor` — the behavior those files already had.
+        // Absent from the data, which reads as `actor`.
         subject: 'actor',
       },
     ]);
@@ -515,20 +512,13 @@ describe('ruleMetaToModule', () => {
 });
 
 describe('rule + trait dependencies (use rule / use trait)', () => {
-  const useRule = (value: string): object => ({
-    type: 'world_use_rule',
-    fields: {RULE: value},
-  });
-  const useTrait = (value: string): object => ({
-    type: 'world_use_trait',
-    fields: {TRAIT: value},
-  });
+  const useRule = (value: string): Declared => ({use: value});
+  const useTrait = (value: string): Declared => ({use: value});
 
   // Every dependency is a NAME — the rule's, and `<Rule>#<Trait>` for a trait —
   // and which rule a name means is the registry's answer. So the project this
   // rule is written against is registered first, exactly as the editor and the
-  // generator register the project's parsed `.rule` files before reading a
-  // workspace.
+  // generator register the project's parsed `.rule` files before reading one.
   const other = parseRuleMeta('rules/other', ruleFile('Other', trait('Some')))!;
   const motion = parseRuleMeta('rules/motion', ruleFile('Motion'))!;
   registerProjectRules([other, motion]);
@@ -637,7 +627,7 @@ describe('rule + trait dependencies (use rule / use trait)', () => {
   });
 
   it('follows a rule that has moved, without touching what refers to it', () => {
-    // The point of naming rather than locating: the same workspace, generated
+    // The point of naming rather than locating: the same rule, generated
     // against a project where `Motion` now lives somewhere else, imports it from
     // where it is now. Nothing stored changed — nothing stored says where.
     const moved = parseRuleMeta('mechanics/movement', ruleFile('Motion'))!;
@@ -776,29 +766,23 @@ describe('actions and queries (imperative members)', () => {
 });
 
 describe('designed block parameters', () => {
-  // The designer stores the signature in the block's `extraState`
-  // (`{parts: [...]}`); a parameter part's `var` is a variable id whose name the
-  // variable map carries. A rule with one action taking (number amount, actor
+  // A member's signature is its parts; a parameter part's `var` is a variable
+  // id whose name the variable map carries. A rule with one action taking (number amount, actor
   // target).
   const ruleWithParams = JSON.stringify({
+    ...JSON.parse(
+      ruleFile(
+        'Has Wind',
+        designed('Nudge', 'none', [
+          {type: 'number', var: 'v1'},
+          {type: 'actor', var: 'v2'},
+        ]),
+      ),
+    ),
     variables: [
       {id: 'v1', name: 'amount', type: 'Number'},
       {id: 'v2', name: 'target', type: 'Actor'},
     ],
-    blocks: {
-      blocks: [
-        {
-          type: 'world_rule',
-          fields: {NAME: 'Has Wind'},
-          next: {
-            block: designed('Nudge', 'none', [
-              {type: 'number', var: 'v1'},
-              {type: 'actor', var: 'v2'},
-            ]),
-          },
-        },
-      ],
-    },
   });
 
   it('parses params (name from the variable map, type from the block)', () => {
@@ -837,24 +821,11 @@ describe('a rule that refers to itself', () => {
     // "The symbol \"CanCollideTrait\" has already been declared".
     const meta = parseRuleMeta(
       'rules/collision',
-      JSON.stringify({
-        blocks: {
-          blocks: [
-            {type: 'world_rule', fields: {NAME: 'Has Collisions'}},
-            {type: 'world_rule_trait', fields: {NAME: 'Can Collide'}},
-            {
-              type: 'world_rule_trait',
-              fields: {NAME: 'Solid'},
-              next: {
-                block: {
-                  type: 'world_use_trait',
-                  fields: {TRAIT: 'Has Collisions#CanCollideTrait'},
-                },
-              },
-            },
-          ],
-        },
-      }),
+      ruleFile(
+        'Has Collisions',
+        trait('Can Collide'),
+        trait('Solid', {use: 'Has Collisions#CanCollideTrait'}),
+      ),
     )!;
     const code = ruleMetaToModule(meta);
     expect(code).toContain('SolidTrait.requires([CanCollideTrait]);');
@@ -995,7 +966,7 @@ describe('a step declared under a trait', () => {
 });
 
 describe('an argument’s default value', () => {
-  // Written on a `define block`'s `argument` row, and spent at every call
+  // Written on a block's parameter, and spent at every call
   // site: `EditorParam.default` is what seeds the shadow block on the socket
   // (`typedValueInputs`). If it stopped here the block would still render and
   // still compile — the socket would just come up empty, or zero.
@@ -1043,12 +1014,8 @@ describe('an argument’s default value', () => {
 
 describe('a block’s description', () => {
   // It is the tooltip of the block being DEFINED — the sentence someone reads
-  // when they hover it in the toolbox months later. It is written on the body
-  // surface now and drawn nowhere else, which is the reason to guard it here:
-  // the field is HIDDEN on the interface rather than removed, because a field
-  // taken off a block is a field Blockly does not save, and the interface is
-  // what writes the file. Remove it instead of hiding it and every tooltip in
-  // every rule goes quiet, with nothing else to show for it.
+  // when they hover it in the toolbox months later — and is drawn nowhere
+  // else, which is the reason to guard it here.
   it('survives into the metadata a call site is built from', () => {
     const meta = parseRuleMeta(
       'rules/described',

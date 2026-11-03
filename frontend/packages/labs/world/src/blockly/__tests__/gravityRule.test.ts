@@ -11,8 +11,9 @@
 import {describe, expect, it} from 'vitest';
 
 import {starterFile} from '../../constants';
+import type {RuleData} from '../../rules/ruleData';
+import {resolveRuleContents} from '../../rules/ruleReference';
 import {buildDomainPalette} from '../domainBlocks';
-import {workspaceViewOf} from '../rewriteWorkspaces';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
 import {registerDefaultProjectRules} from './defaultProjectRules';
@@ -25,7 +26,7 @@ registerDefaultProjectRules();
 // REFERENCE to the library's rule, not a copy of it (rules/ruleReference,
 // specs/NEXT.md §2), and `projectFiles` is what resolves one everywhere
 // else. What is asserted below is the rule, either way.
-const source = workspaceViewOf(starterFile('gravityRule').contents);
+const source = resolveRuleContents(starterFile('gravityRule').contents);
 const meta = parseRuleMeta('rules/gravity', source)!;
 const module_ = ruleMetaToModule(meta);
 
@@ -240,86 +241,31 @@ describe('rules/gravity.rule', () => {
 
   const AFFECTED = 'Affected by Gravity';
 
-  /**
-   * A definition's members: the chain hanging off `define rule`, or off the
-   * `define trait` with this name.
-   */
-  type Member = {
-    type: string;
-    fields?: Record<string, string>;
-    inputs?: Record<string, {block?: unknown}>;
-  };
-  const members = (json: string, trait?: string): Member[] => {
-    const doc = JSON.parse(json) as {
-      blocks: {blocks: Array<Record<string, unknown>>};
-    };
-    const rule = doc.blocks.blocks.find(b =>
-      trait
-        ? b.type === 'world_rule_trait' &&
-          (b.fields as {NAME?: string})?.NAME === trait
-        : b.type === 'world_rule',
-    );
-    const out: Member[] = [];
-    let at = (rule?.next as {block?: Record<string, unknown>})?.block;
-    while (at) {
-      out.push(at as unknown as Member);
-      at = (at.next as {block?: Record<string, unknown>})?.block;
-    }
-    return out;
-  };
+  const data = JSON.parse(source) as RuleData;
+  const affected = () => data.traits!.find(trait => trait.name === AFFECTED)!;
 
-  it('declares its traits as top blocks and its steps as their members', () => {
-    // A trait is a definition of its own — a separate stack a learner can move
-    // and read alone. Its steps are rows among its members, and each runs once
-    // for every actor that has the trait, which is all gravity's ever did.
-    const doc = JSON.parse(source) as {
-      blocks: {blocks: Array<{type: string}>};
-    };
-
-    expect(doc.blocks.blocks.map(b => b.type)).toEqual([
-      'world_rule',
-      'world_rule_trait',
-      'world_rule_trait',
-    ]);
-    expect(members(source).map(b => b.type)).not.toContain(
-      'world_rule_step_in',
-    );
-    expect(members(source, AFFECTED).map(b => b.type)).toContain(
-      'world_trait_step',
-    );
+  it('declares its traits, and its steps as theirs', () => {
+    // Its steps are its traits', and each runs once for every actor that has
+    // the trait, which is all gravity's ever did.
+    expect(data.traits).toHaveLength(2);
+    expect(data.steps).toBeUndefined();
+    expect(affected().steps?.length).toBeGreaterThan(0);
   });
 
   it('names each step’s phase, and nothing else about its order', () => {
-    const steps = members(source, AFFECTED).filter(
-      b => b.type === 'world_trait_step',
-    );
-
-    expect(steps.map(b => b.fields?.PHASE)).toEqual(['push', 'react']);
-    expect(steps[0].fields?.STEP).toBeUndefined();
-    expect(steps[0].fields?.ORDER).toBeUndefined();
+    expect(affected().steps!.map(step => step.phase)).toEqual([
+      'push',
+      'react',
+    ]);
+    expect(Object.keys(affected().steps![0]).sort()).toEqual([
+      'body',
+      'name',
+      'phase',
+    ]);
   });
 
-  it('puts a step’s body in its mouth, not the chain below it', () => {
-    // The chain below a member is the member AFTER it. Reading it as the body
-    // would put the rest of the rule inside the step.
-    const [step] = members(source, AFFECTED).filter(
-      b => b.type === 'world_trait_step',
-    );
-
-    expect(step.inputs?.DO?.block).toBeTruthy();
-  });
-
-  it('chains a trait’s members below it, not inside a `do`', () => {
-    const tops = (
-      JSON.parse(source) as {
-        blocks: {
-          blocks: Array<{type: string; next?: unknown; inputs?: unknown}>;
-        };
-      }
-    ).blocks.blocks;
-    const trait = tops.find(b => b.type === 'world_rule_trait')!;
-    expect(trait.next).toBeDefined();
-    expect(trait.inputs).toBeUndefined();
+  it('gives each step a body', () => {
+    expect(affected().steps!.every(step => step.body)).toBe(true);
   });
 
   it('asks Collisions what it is touching, rather than scanning the world', () => {

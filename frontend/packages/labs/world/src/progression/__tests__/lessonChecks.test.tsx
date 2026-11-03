@@ -26,6 +26,7 @@ import {
   stillAnimation,
   withMainAnimation,
   type ActorData,
+  type ActorMember,
   type Block,
 } from '../../actors/actorData';
 import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
@@ -41,12 +42,7 @@ import {importStockEffect} from '../../effect/importStockEffect';
 import {stockEffect} from '../../effect/stock';
 import {seedFor} from '../../files/newThing';
 import {importStockRule} from '../../rules/importStockRule';
-import {
-  asRuleData,
-  isRuleData,
-  ruleViewOf,
-  type RuleData,
-} from '../../rules/ruleData';
+import {isRuleData, type RuleData} from '../../rules/ruleData';
 import {ruleDataOf, setPropertyDefault} from '../../rules/ruleEdits';
 import {resolveRuleContents} from '../../rules/ruleReference';
 import {stockRule} from '../../rules/stock';
@@ -113,21 +109,15 @@ const editing = (
   }
   const [id, file] = entry;
   // Resolved first, the way the editor resolves one to put it on screen: a
-  // rule the learner has not touched is stored as a reference to the library's
-  // (rules/ruleReference, specs/NEXT.md §2), and there is nothing in a
-  // reference to edit. Edited as the `define rule` rows it stands for and
-  // written back as data, which is what the Rule Editor saves — including the
-  // part where editing a rule makes it theirs.
+  // rule the learner has not touched is stored as a reference to the
+  // library's (rules/ruleReference, specs/NEXT.md §2), and there is nothing
+  // in a reference to edit. Edited as data, which is what the Rule Editor
+  // saves — including the part where editing a rule makes it theirs.
   return {
     ...source,
     files: {
       ...source.files,
-      [id]: {
-        ...file,
-        contents: asRuleData(
-          change(ruleViewOf(resolveRuleContents(file.contents))),
-        ),
-      },
+      [id]: {...file, contents: change(resolveRuleContents(file.contents))},
     },
   };
 };
@@ -3962,23 +3952,13 @@ describe('the rule-property lesson’s check', () => {
   /** Editing the RULE, which is what this lesson is: a file, not a world. */
   const declaring = (options: {reading: boolean; setting: boolean}) => {
     const declared = editing(lesson.source, 'wind.rule', contents => {
-      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const trait = workspace.blocks.blocks.find(
-        block => block.type === 'world_rule_trait',
-      )!;
-      // Declared INSIDE the trait, which is what makes it each actor's own.
-      trait.next = {
-        block: {
-          type: 'world_rule_property',
-          fields: {
-            TYPE: 'number',
-            ACCESS: 'writable',
-            NAME: 'strength',
-            DEFAULT: '1',
-          },
-          next: trait.next,
-        },
-      };
+      const workspace = JSON.parse(contents) as RuleData;
+      const [trait] = workspace.traits!;
+      // Declared on the trait, which is what makes it each actor's own.
+      trait.properties = [
+        {name: 'strength', type: 'number', access: 'writable', value: '1'},
+        ...(trait.properties ?? []),
+      ];
       if (options.reading) {
         const find = (node: unknown): Row | undefined => {
           if (Array.isArray(node)) {
@@ -4286,7 +4266,7 @@ describe('the change lesson’s check', () => {
 
   it('accepts the number changed in the file', async () => {
     const solved = editing(lesson.source, 'patrol.rule', contents =>
-      contents.replace('"DEFAULT": "1.5"', '"DEFAULT": "0.5"'),
+      contents.replace('"value": "1.5"', '"value": "0.5"'),
     );
     const {passes, result} = await check('making/change', solved);
     expect(result.error).toBeUndefined();
@@ -4338,51 +4318,37 @@ describe('the own-trait lesson’s check', () => {
       },
     });
     const declared = editing(lesson.source, 'weather.rule', contents => {
-      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      workspace.blocks.blocks.push({
-        type: 'world_rule_trait',
-        x: 420,
-        y: 160,
-        fields: {NAME: 'Sinks'},
-        next: {
-          block: {
-            type: 'world_use_trait',
-            fields: {TRAIT: 'Space#PositionalTrait'},
-            next: {
-              block: {
-                type: 'world_trait_step',
-                fields: {PHASE: 'move', NAME: 'sink'},
+      const workspace = JSON.parse(contents) as RuleData;
+      workspace.traits = [
+        ...(workspace.traits ?? []),
+        {
+          name: 'Sinks',
+          uses: ['Space#PositionalTrait'],
+          steps: [
+            {
+              name: 'sink',
+              phase: 'move',
+              body: {
+                type: 'world_set_position',
                 inputs: {
-                  DO: {
+                  ACTOR: me(),
+                  X: position('x'),
+                  Y: {
                     block: {
-                      type: 'world_set_position',
+                      type: 'math_arithmetic',
+                      fields: {OP: 'ADD'},
                       inputs: {
-                        ACTOR: me(),
-                        X: position('x'),
-                        Y: {
-                          block: {
-                            type: 'math_arithmetic',
-                            fields: {OP: 'ADD'},
-                            inputs: {
-                              A: position('y'),
-                              B: {
-                                shadow: {
-                                  type: 'math_number',
-                                  fields: {NUM: 2},
-                                },
-                              },
-                            },
-                          },
-                        },
+                        A: position('y'),
+                        B: {shadow: {type: 'math_number', fields: {NUM: 2}}},
                       },
                     },
                   },
                 },
               },
             },
-          },
+          ],
         },
-      } as unknown as Row);
+      ];
       return JSON.stringify(workspace);
     });
     const solved = editing(declared, 'main.world', contents => {
@@ -4426,28 +4392,25 @@ describe('the own-rule lesson’s check', () => {
       }
       return JSON.stringify(workspace);
     });
-    // The shape `New rule` seeds: the rule, a trait beside it, and the step
-    // chained under the trait — here the very step lifted out of the actor,
-    // bob and all.
+    // A rule with a trait of its name, and the step under the trait — here
+    // the very step lifted out of the actor, bob and all.
     const rule = JSON.stringify({
-      blocks: {
-        blocks: [
-          {
-            type: 'world_rule',
-            x: 20,
-            y: 20,
-            fields: {NAME: 'Bob', ABILITY: 'Bob'},
-          },
-          {
-            type: 'world_rule_trait',
-            x: 20,
-            y: 120,
-            fields: {NAME: 'Bob', SUBJECT: 'actor'},
-            next: {block: step!},
-          },
-        ],
-      },
-    });
+      type: 'rule',
+      name: 'Bob',
+      ability: 'Bob',
+      traits: [
+        {
+          name: 'Bob',
+          steps: [
+            {
+              name: String(step!.fields?.NAME),
+              phase: String(step!.fields?.PHASE),
+              body: inSocket(step, 'DO') as Block,
+            },
+          ],
+        },
+      ],
+    } satisfies RuleData);
     return {
       ...world,
       files: {
@@ -4485,8 +4448,8 @@ describe('the own-rule lesson’s check', () => {
     const both = shared(true);
     const lifted = JSON.parse(
       (both.files.rule as {contents: string}).contents,
-    ) as {blocks: {blocks: Row[]}};
-    const step = (lifted.blocks.blocks[1].next as {block: Row}).block;
+    ) as RuleData;
+    const body = lifted.traits![0].steps![0].body!;
     const seeded = JSON.parse(
       (seedFor('rule', 'Bob') as {contents: string}).contents,
     ) as RuleData;
@@ -4499,7 +4462,7 @@ describe('the own-rule lesson’s check', () => {
             {
               name: 'do something',
               phase: 'move',
-              body: (step.inputs as {DO: {block: Block}}).DO.block,
+              body,
             },
           ],
         },
@@ -4631,7 +4594,7 @@ describe('the read lesson’s check', () => {
   it('follows the rule when the rule is changed', async () => {
     const changed = editing(answering('4'), 'gravity.rule', contents =>
       contents.replace(
-        /("NAME": "amount of gravity",\s*"DEFAULT": ")[^"]*/,
+        /("name": "amount of gravity",[^}]*"value": ")[^"]*/,
         '$14',
       ),
     );
@@ -4663,7 +4626,7 @@ describe('the own-block lesson’s check', () => {
   /** The sum given a name, with a parameter or without one. */
   const named = (withParameter: boolean) =>
     editing(lesson.source, 'bobbing.rule', contents => {
-      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const workspace = JSON.parse(contents) as RuleData;
       const wave = (amount: Row): Row => ({
         type: 'math_arithmetic',
         fields: {OP: 'MULTIPLY'},
@@ -4693,47 +4656,40 @@ describe('the own-block lesson’s check', () => {
         type: 'variables_get_Number',
         fields: {VAR: {id: 'Bobbing_amount', name: 'amount'}},
       };
-      let last = workspace.blocks.blocks[0];
-      while (last.next?.block) {
-        last = last.next.block;
-      }
-      last.next = {
-        block: {
-          type: 'world_rule_block',
-          fields: {RETURNS: 'number', DESCRIPTION: 'A wave, by however much.'},
-          extraState: {
-            parts: [
-              {kind: 'label', text: withParameter ? 'bob by' : 'a bob'},
-              ...(withParameter
-                ? [
-                    {
-                      kind: 'param',
-                      type: 'number',
-                      var: 'Bobbing_amount',
-                      name: 'amount',
-                    },
-                  ]
-                : []),
-            ],
-          },
-          inputs: {
-            DO: {
-              block: {
-                type: 'world_return',
-                inputs: {
-                  VALUE: {
-                    block: wave(
-                      withParameter
-                        ? parameter
-                        : {type: 'math_number', fields: {NUM: 1}},
-                    ),
+      workspace.members = [
+        ...(workspace.members ?? []),
+        {
+          id: 'block-0',
+          kind: 'block',
+          description: 'A wave, by however much.',
+          returns: 'number',
+          parts: [
+            {kind: 'label', text: withParameter ? 'bob by' : 'a bob'},
+            ...(withParameter
+              ? [
+                  {
+                    kind: 'param',
+                    type: 'number',
+                    var: 'Bobbing_amount',
+                    name: 'amount',
                   },
-                },
+                ]
+              : []),
+          ],
+          body: {
+            type: 'world_return',
+            inputs: {
+              VALUE: {
+                block: wave(
+                  withParameter
+                    ? parameter
+                    : {type: 'math_number', fields: {NUM: 1}},
+                ),
               },
             },
           },
-        } as unknown as Row,
-      };
+        } as ActorMember,
+      ];
       // …and both steps say it instead of spelling it out.
       const call = (amount: number): Row => ({
         type: withParameter
@@ -4747,14 +4703,10 @@ describe('the own-block lesson’s check', () => {
             }
           : {}),
       });
-      workspace.blocks.blocks
-        .filter(block => block.type === 'world_rule_trait')
-        .forEach((trait, index) => {
-          const step = trait.next!.block!.next!.block!;
-          inSocket(inSocket(step, 'DO')!, 'Y')!.inputs!.B = {
-            block: call(index === 0 ? 1 : 4),
-          };
-        });
+      (workspace.traits ?? []).forEach((trait, index) => {
+        const body = trait.steps![0].body as Row;
+        inSocket(body, 'Y')!.inputs!.B = {block: call(index === 0 ? 1 : 4)};
+      });
       return JSON.stringify(workspace);
     });
 

@@ -12,6 +12,7 @@
 import * as Blockly from 'blockly';
 import {describe, expect, it} from 'vitest';
 
+import {typesIn} from '../../__tests__/support/blockTypes';
 import {
   ACTOR_INPUT_EXTENSION,
   CAMERA_INPUT_EXTENSION,
@@ -24,53 +25,13 @@ import {
 } from '../../blockly/ruleMeta';
 import {VIEW_ROWS} from '../../blockly/viewRows';
 import {PHASES} from '../../engine/core/phases';
-import {ruleViewOf} from '../ruleData';
-import {cameraRule as cameraData} from '../stock/camera';
-import {cameraConfinedRule as cameraConfinedData} from '../stock/cameraConfined';
-import {cameraDeadzoneRule as cameraDeadzoneData} from '../stock/cameraDeadzone';
-import {cameraEaseRule as cameraEaseData} from '../stock/cameraEase';
-import {cameraFollowRule as cameraFollowData} from '../stock/cameraFollow';
-import {gravityRule as gravityData} from '../stock/gravity';
-import {inputRule as inputData} from '../stock/input';
-
-// Read as the `define rule` rows they stand for: what these check is the
-// blocks a rule is made of.
-const cameraRule = ruleViewOf(cameraData);
-const cameraConfinedRule = ruleViewOf(cameraConfinedData);
-const cameraDeadzoneRule = ruleViewOf(cameraDeadzoneData);
-const cameraEaseRule = ruleViewOf(cameraEaseData);
-const cameraFollowRule = ruleViewOf(cameraFollowData);
-const gravityRule = ruleViewOf(gravityData);
-const inputRule = ruleViewOf(inputData);
-
-/** A saved block, as much of one as this needs to walk it. */
-interface SavedBlock {
-  type?: string;
-  inputs?: Record<string, {block?: SavedBlock; shadow?: SavedBlock}>;
-  next?: {block?: SavedBlock; shadow?: SavedBlock};
-}
-
-/** Every block type a saved workspace names. */
-function typesIn(contents: string): string[] {
-  const parsed = JSON.parse(contents) as {blocks?: {blocks?: SavedBlock[]}};
-  const found: string[] = [];
-  const visit = (block: SavedBlock | undefined): void => {
-    if (!block) {
-      return;
-    }
-    if (block.type) {
-      found.push(block.type);
-    }
-    for (const input of Object.values(block.inputs ?? {})) {
-      visit(input.block);
-      visit(input.shadow);
-    }
-    visit(block.next?.block);
-    visit(block.next?.shadow);
-  };
-  (parsed.blocks?.blocks ?? []).forEach(visit);
-  return found;
-}
+import {cameraRule} from '../stock/camera';
+import {cameraConfinedRule} from '../stock/cameraConfined';
+import {cameraDeadzoneRule} from '../stock/cameraDeadzone';
+import {cameraEaseRule} from '../stock/cameraEase';
+import {cameraFollowRule} from '../stock/cameraFollow';
+import {gravityRule} from '../stock/gravity';
+import {inputRule} from '../stock/input';
 
 const camera = () => parseRuleMeta('rules/camera', cameraRule)!;
 const follow = () => parseRuleMeta('rules/cameraFollow', cameraFollowRule)!;
@@ -139,7 +100,7 @@ describe('Camera Follow — the first rule built on it', () => {
     // position at the end, so everything downstream reads the point actually
     // being framed: a deadzone measures its slack against that point, and
     // `confine` keeps THAT inside the map rather than the actor.
-    // Read off the shipped workspace rather than the parsed metadata, which
+    // Read off the shipped rule rather than the parsed metadata, which
     // carries declarations and not bodies: what has to be true is that the aim
     // step reads the property, and the serialized blocks are where that is.
     expect(cameraFollowRule).toContain(
@@ -401,9 +362,7 @@ describe('a camera that has elected Follows but been given nothing', () => {
   it('asks before it reads, not after', () => {
     // The order matters and a set of block types cannot see it: the check has
     // to be the `if`'s condition, with the read inside its body.
-    const parsed = JSON.parse(cameraFollowRule) as {
-      blocks: {blocks: Array<Record<string, unknown>>};
-    };
+    const parsed = JSON.parse(cameraFollowRule) as unknown;
     const find = (
       node: unknown,
       type: string,
@@ -427,7 +386,7 @@ describe('a camera that has elected Follows but been given nothing', () => {
       return undefined;
     };
 
-    const guard = find(parsed.blocks.blocks, 'controls_if')!;
+    const guard = find(parsed, 'controls_if')!;
     const inputs = guard.inputs as Record<string, {block?: {type?: string}}>;
 
     expect(inputs.IF0?.block?.type).toBe('world_any_actors');

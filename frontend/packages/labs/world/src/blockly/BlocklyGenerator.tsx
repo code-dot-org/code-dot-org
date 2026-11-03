@@ -17,7 +17,7 @@ import {
 
 import {actorDataOf} from '../actors/actorData';
 import {ruleBodySheet} from '../rules/ruleBodies';
-import {asRuleData, isRuleData} from '../rules/ruleData';
+import {isRuleData} from '../rules/ruleData';
 import {TILE_SIZE} from '../runtime/viewport';
 
 import {actorSheet, type ActorPiece} from './actorSheet';
@@ -477,9 +477,13 @@ function generateRule(
   const modulePath = path.replace(/\.rule$/, '');
   let data: unknown;
   try {
-    data = JSON.parse(asRuleData(contents));
+    data = contents.trim() ? JSON.parse(contents) : undefined;
   } catch {
     data = undefined;
+  }
+  // A rule is its data; a file in `define rule` rows cannot be read.
+  if (data !== undefined && !isRuleData(data)) {
+    throw new Error(`${path} is not a rule's data`);
   }
   const meta = isRuleData(data) ? parseRuleMeta(modulePath, contents) : null;
   if (!meta || !isRuleData(data)) {

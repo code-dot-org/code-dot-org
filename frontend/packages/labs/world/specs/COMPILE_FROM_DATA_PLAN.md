@@ -88,7 +88,8 @@ list socket there defaults to `all actors`, as on the Rule Editor's pages.
 
 `generateRule` folds what it is handed to data (`asRuleData`), generates
 each body below its head, and assembles the module from the data's
-metadata as before. A rule the data cannot say compiles to nothing.
+metadata as before. A rule the data cannot say compiles to nothing. It
+takes data only since, and refuses a rule in rows (5e).
 Checked against the old path on all 397 rules in the stock shelf, the
 scenarios and the lessons: the same code, but for the order of the names on
 the first `var` line in 105, which follows the order the blocks load in.
@@ -363,10 +364,18 @@ the data. In order, each its own commit:
    (`ruleBodies`). `parseRuleMeta`, the generator, `ruleDataOf` and
    `catalogue` read the data already, and fold only a rule in rows, which
    step 5 takes away.
-4. The tests and the lesson checks write rules as data.
-5. The tutor proposes a rule as data. Then `foldRule`, `ruleView`,
-   `ruleViewOf`, `asRuleData`, `workspaceViewOf` and the rest of
-   `VIEW_ROWS` go, and a rule in rows is one that cannot be read.
+4. BUILT, November 2026, with step 5, which needed it. The tests and the
+   lesson checks write rules as data; the lesson checks edit a rule's
+   data where a learner uses the Rule Editor. The round trip through the
+   editor's body seam is checked on every stock actor's code, which is
+   what the seam still splits, rather than on a rule's view.
+5. BUILT, November 2026. One form. `foldRule`, `ruleView`, `ruleViewOf`,
+   `asRuleData` and `workspaceViewOf` are gone, and `VIEW_ROWS` holds only
+   `define world`, which the world converter reads. `parseRuleMeta`,
+   `ruleDataOf` and `catalogue` read data and nothing else, and the
+   generator refuses a rule file that is not data, so the tutor's gate
+   refuses one written in rows. The tutor is told a rule's shape, which it
+   was never shown.
 
 ## Open
 

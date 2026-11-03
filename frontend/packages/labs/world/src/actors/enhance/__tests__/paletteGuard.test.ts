@@ -32,9 +32,9 @@ import {
   projectOwnMetas,
   projectRuleMetas,
 } from '../../../blockly/projectModules';
-import {workspaceViewOf} from '../../../blockly/rewriteWorkspaces';
 import {VIEW_ROWS} from '../../../blockly/viewRows';
 import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
+import {resolveRuleContents} from '../../../rules/ruleReference';
 import {projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -68,7 +68,7 @@ const namedTypes = (source: Source): Map<string, string[]> => {
   const found = new Map<string, string[]>();
   for (const [path, contents] of Object.entries(projectFiles(source))) {
     if (WORKSPACE_FILE.test(path)) {
-      found.set(path, typesIn(workspaceViewOf(contents)));
+      found.set(path, typesIn(resolveRuleContents(contents)));
     }
   }
   return found;

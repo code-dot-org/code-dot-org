@@ -4,6 +4,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import type {RuleProperty} from '../../rules/ruleData';
 import {buildDomainPalette, propertyShape} from '../domainBlocks';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
@@ -19,34 +20,32 @@ const shapeOf = (over: Partial<Parameters<typeof propertyShape>[0]> = {}) =>
 
 /** A `.rule` declaring one property, at rule level or inside a trait. */
 const ruleWith = (
-  fields: Record<string, unknown>,
+  declared: Partial<RuleProperty> & {name: string},
   inTrait?: 'actor' | 'camera',
 ) => {
-  const property = {
-    type: 'world_rule_property',
-    fields: {TYPE: 'number', ACCESS: 'writable', DEFAULT: '0', ...fields},
+  const property: RuleProperty = {
+    type: 'number',
+    access: 'writable',
+    value: '0',
+    ...declared,
   };
   return parseRuleMeta(
     'rules/vitality',
     JSON.stringify({
-      blocks: {
-        blocks: [
-          {
-            type: 'world_rule',
-            fields: {NAME: 'Vitality', ABILITY: 'Has Vitality'},
-            ...(inTrait ? {} : {next: {block: property}}),
-          },
-          ...(inTrait
-            ? [
-                {
-                  type: 'world_rule_trait',
-                  fields: {NAME: 'Alive', SUBJECT: inTrait},
-                  next: {block: property},
-                },
-              ]
-            : []),
-        ],
-      },
+      type: 'rule',
+      name: 'Vitality',
+      ability: 'Has Vitality',
+      ...(inTrait
+        ? {
+            traits: [
+              {
+                name: 'Alive',
+                ...(inTrait === 'camera' ? {subject: 'camera'} : {}),
+                properties: [property],
+              },
+            ],
+          }
+        : {properties: [property]}),
     }),
   )!;
 };
@@ -125,7 +124,7 @@ describe('the shape a property makes', () => {
 
 describe('the blocks a property really makes', () => {
   it('reads exactly as the shape says a world property will', () => {
-    const {blocks} = paletteFor(ruleWith({NAME: 'score', DEFAULT: '5'}));
+    const {blocks} = paletteFor(ruleWith({name: 'score', value: '5'}));
     const shape = propertyShape({
       name: 'score',
       type: 'number',
@@ -141,7 +140,7 @@ describe('the blocks a property really makes', () => {
 
   it('reads exactly as the shape says an actor property will', () => {
     const {blocks} = paletteFor(
-      ruleWith({NAME: 'health', DEFAULT: '100'}, 'actor'),
+      ruleWith({name: 'health', value: '100'}, 'actor'),
     );
     const shape = propertyShape({
       name: 'health',
@@ -157,13 +156,11 @@ describe('the blocks a property really makes', () => {
     ).toBe(shape.get.message0);
   });
 
-  it('still hears "read-only" from the eye’s field', () => {
-    // The dropdown that said it became a button, and kept the field name and
-    // both of its values so that every rule already written still loads.
+  it('hears "read-only" from its access', () => {
     expect(
-      ruleWith({NAME: 'falling', ACCESS: 'readonly'}).properties[0],
+      ruleWith({name: 'falling', access: 'readonly'}).properties[0],
     ).toMatchObject({name: 'falling', readonly: true});
-    expect(ruleWith({NAME: 'falling'}).properties[0]).toMatchObject({
+    expect(ruleWith({name: 'falling'}).properties[0]).toMatchObject({
       readonly: false,
     });
   });
@@ -171,18 +168,17 @@ describe('the blocks a property really makes', () => {
 
 describe('the default a declaration holds', () => {
   // It used to be a string for these two — `"0,1"` — split on the comma when it
-  // was read. `define property` puts the real editor in the slot now, so the
-  // value arrives in the shape the editor holds it in.
-  it('reads a vector out of the one field that edits both axes', () => {
+  // was read. The value arrives in the shape the editor holds it in.
+  it('reads a vector out of the one value that holds both axes', () => {
     expect(
-      ruleWith({NAME: 'gust', TYPE: 'vector', DEFAULT: {x: 3, y: -4}})
+      ruleWith({name: 'gust', type: 'vector', value: {x: 3, y: -4}})
         .properties[0].default,
     ).toEqual({x: 3, y: -4});
   });
 
-  it('reads a point out of the two number fields that edit it', () => {
+  it('reads a point out of the two numbers that hold it', () => {
     expect(
-      ruleWith({NAME: 'slack', TYPE: 'point', DEFAULT: 48, DEFAULT_Y: 32})
+      ruleWith({name: 'slack', type: 'point', value: 48, valueY: 32})
         .properties[0].default,
     ).toEqual({x: 48, y: 32});
   });
@@ -203,13 +199,11 @@ describe('the default a declaration holds', () => {
 
   it('has none at all for an actor or a list, whatever is written down', () => {
     // These start empty and there is no other sensible starting value for a
-    // set a rule works out each tick, so `define property` does not ask — the
-    // row ends after the name — and a stale answer in an older file is ignored
-    // rather than believed.
+    // set a rule works out each tick, so the editor does not ask, and a stale
+    // answer in an older file is ignored rather than believed.
     for (const type of ['actor', 'actors', 'numbers', 'words', 'vectors']) {
       expect(
-        ruleWith({NAME: 'contacts', TYPE: type, DEFAULT: '7'}).properties[0]
-          .default,
+        ruleWith({name: 'contacts', type, value: '7'}).properties[0].default,
       ).toEqual([]);
     }
   });

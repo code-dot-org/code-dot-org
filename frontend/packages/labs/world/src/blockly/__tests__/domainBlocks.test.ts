@@ -43,60 +43,39 @@ import {markCode} from '../workspaceRoots';
 const PROJECT_RULE = parseRuleMeta(
   'rules/wind',
   JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_rule',
-          fields: {NAME: 'Has Wind'},
-          next: {
-            block: {
-              type: 'world_rule_property',
-              fields: {TYPE: 'number', NAME: 'strength', DEFAULT: '900'},
-              next: {
-                block: {
-                  type: 'world_rule_property',
-                  fields: {
-                    TYPE: 'vector',
-                    NAME: 'direction',
-                    DEFAULT: {x: 0, y: 1},
-                  },
-                  next: {
-                    block: {
-                      type: 'world_rule_block',
-                      fields: {RETURNS: 'none'},
-                      extraState: {
-                        parts: [{kind: 'label', text: 'Invert'}],
-                      },
-                    },
-                  },
-                },
-              },
-            },
+    type: 'rule',
+    name: 'Has Wind',
+    ability: 'Has Wind',
+    properties: [
+      {name: 'strength', type: 'number', access: 'writable', value: '900'},
+      {
+        name: 'direction',
+        type: 'vector',
+        access: 'writable',
+        value: {x: 0, y: 1},
+      },
+    ],
+    members: [
+      {id: 'block-0', kind: 'block', parts: [{kind: 'label', text: 'Invert'}]},
+    ],
+    traits: [
+      {
+        name: 'Windblown',
+        members: [
+          {
+            id: 'block-1',
+            kind: 'block',
+            parts: [{kind: 'label', text: 'is gusting'}],
+            returns: 'boolean',
           },
-        },
-        // A trait is a TOP BLOCK beside the rule, with its members chained
-        // below it — not a `do` mouth nested inside the rule.
-        {
-          type: 'world_rule_trait',
-          fields: {NAME: 'Windblown'},
-          next: {
-            block: {
-              type: 'world_rule_block',
-              fields: {RETURNS: 'boolean'},
-              extraState: {
-                parts: [{kind: 'label', text: 'is gusting'}],
-              },
-              next: {
-                block: {
-                  type: 'world_rule_event',
-                  extraState: {parts: [{kind: 'label', text: 'gusted'}]},
-                },
-              },
-            },
+          {
+            id: 'event-2',
+            kind: 'event',
+            parts: [{kind: 'label', text: 'gusted'}],
           },
-        },
-      ],
-    },
+        ],
+      },
+    ],
   }),
 )!;
 
@@ -464,26 +443,18 @@ describe('domain block generators', () => {
     const followRule = parseRuleMeta(
       'rules/follow',
       JSON.stringify({
-        blocks: {
-          languageVersion: 0,
-          blocks: [
-            {type: 'world_rule', fields: {NAME: 'Camera Follow'}},
-            {
-              type: 'world_rule_trait',
-              fields: {NAME: 'Follows', SUBJECT: 'camera'},
-              next: {
-                block: {
-                  type: 'world_rule_property',
-                  fields: {
-                    TYPE: 'actors',
-                    ACCESS: 'writable',
-                    NAME: 'actor to follow',
-                  },
-                },
-              },
-            },
-          ],
-        },
+        type: 'rule',
+        name: 'Camera Follow',
+        ability: 'Camera Follow',
+        traits: [
+          {
+            name: 'Follows',
+            subject: 'camera',
+            properties: [
+              {name: 'actor to follow', type: 'actors', access: 'writable'},
+            ],
+          },
+        ],
       }),
     )!;
     const palette = buildDomainPalette([followRule]);
@@ -2563,37 +2534,29 @@ describe('world_load_map generator', () => {
 });
 
 describe('buildDomainPalette (project rule blocks)', () => {
-  // A declarative project rule: a world `strength` property + a `gusted` event.
-  // define rule Has Wind → world property `strength`; a `Windblown` trait whose
-  // `do` holds an event. (Events nest inside a trait.)
+  // A declarative project rule: a world `strength` property, and a
+  // `Windblown` trait with a `gusted` event.
   const wind = parseRuleMeta(
     'rules/wind',
     JSON.stringify({
-      blocks: {
-        blocks: [
-          {
-            type: 'world_rule',
-            fields: {NAME: 'Has Wind'},
-            next: {
-              block: {
-                type: 'world_rule_property',
-                fields: {TYPE: 'number', NAME: 'strength', DEFAULT: '0'},
-              },
+      type: 'rule',
+      name: 'Has Wind',
+      ability: 'Has Wind',
+      properties: [
+        {name: 'strength', type: 'number', access: 'writable', value: '0'},
+      ],
+      traits: [
+        {
+          name: 'Windblown',
+          members: [
+            {
+              id: 'event-0',
+              kind: 'event',
+              parts: [{kind: 'label', text: 'gusted'}],
             },
-          },
-          // The trait, beside the rule.
-          {
-            type: 'world_rule_trait',
-            fields: {NAME: 'Windblown'},
-            next: {
-              block: {
-                type: 'world_rule_event',
-                extraState: {parts: [{kind: 'label', text: 'gusted'}]},
-              },
-            },
-          },
-        ],
-      },
+          ],
+        },
+      ],
     }),
   )!;
 
@@ -2652,44 +2615,36 @@ describe('buildDomainPalette (project rule blocks)', () => {
         {id: 'b', name: 'push', type: 'Vector'},
         {id: 'c', name: 'other', type: 'Actor'},
       ],
-      blocks: {
-        blocks: [
-          {
-            type: 'world_rule',
-            fields: {NAME: 'Pushes'},
-            next: {
-              block: {
-                type: 'world_rule_block',
-                fields: {RETURNS: 'none'},
-                extraState: {
-                  parts: [
-                    {kind: 'label', text: 'Nudge'},
-                    {kind: 'param', type: 'number', var: 'a'},
-                    {kind: 'param', type: 'vector', var: 'b'},
-                  ],
-                },
-              },
+      type: 'rule',
+      name: 'Pushes',
+      ability: 'Pushes',
+      members: [
+        {
+          id: 'block-0',
+          kind: 'block',
+          parts: [
+            {kind: 'label', text: 'Nudge'},
+            {kind: 'param', type: 'number', var: 'a'},
+            {kind: 'param', type: 'vector', var: 'b'},
+          ],
+        },
+      ],
+      traits: [
+        {
+          name: 'Pushable',
+          members: [
+            {
+              id: 'block-1',
+              kind: 'block',
+              parts: [
+                {kind: 'label', text: 'Near'},
+                {kind: 'param', type: 'actor', var: 'c'},
+              ],
+              returns: 'boolean',
             },
-          },
-          // The trait, beside the rule.
-          {
-            type: 'world_rule_trait',
-            fields: {NAME: 'Pushable'},
-            next: {
-              block: {
-                type: 'world_rule_block',
-                fields: {RETURNS: 'boolean'},
-                extraState: {
-                  parts: [
-                    {kind: 'label', text: 'Near'},
-                    {kind: 'param', type: 'actor', var: 'c'},
-                  ],
-                },
-              },
-            },
-          },
-        ],
-      },
+          ],
+        },
+      ],
     }),
   )!;
 

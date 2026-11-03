@@ -10,19 +10,14 @@ import {describe, expect, it, beforeEach} from 'vitest';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 
-/** A `.rule` naming itself in a `use rule`, as a workspace could already hold. */
+/** A `.rule` naming itself among the rules it uses, as a file could already hold. */
 const selfUsing = parseRuleMeta(
   'rules/wind',
   JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_rule',
-          fields: {NAME: 'Wind', ABILITY: 'Has Wind'},
-          next: {block: {type: 'world_use_rule', fields: {RULE: 'Wind'}}},
-        },
-      ],
-    },
+    type: 'rule',
+    name: 'Wind',
+    ability: 'Has Wind',
+    uses: ['Wind'],
   }),
 )!;
 

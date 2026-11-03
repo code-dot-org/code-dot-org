@@ -212,6 +212,21 @@ describe('the offer itself', () => {
   });
 });
 
+describe('a rule the tutor writes in rows', () => {
+  it('does not compile, so the offer is refused', async () => {
+    const rows = JSON.stringify({
+      blocks: {blocks: [{type: 'world_rule', fields: {NAME: 'Keys'}}]},
+    });
+    const {source} = proposedProject(withAPlayer(), [
+      {path: 'rules/keys.rule', contents: rows},
+    ]);
+
+    await expect(compileProject(projectFiles(source))).rejects.toThrow(
+      /not a rule's data/,
+    );
+  });
+});
+
 describe('an actor the tutor writes in rows', () => {
   it('does not compile, so the offer is refused', async () => {
     // An actor is data; one written as `define actor` blocks is a file the

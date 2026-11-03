@@ -46,28 +46,17 @@ describe('the traits in play', () => {
   });
 
   it('follows a project rule’s `use rule` dependency to the required rule’s traits', () => {
-    // Has Wind requires AnimationRule (a `use rule` in its body) and provides a
+    // Has Wind requires AnimationRule (among the rules it uses) and provides a
     // Windblown trait. Attaching it should surface both its own trait and the
     // required rule's (transitively, Collision → Motion → Space).
     const wind = parseRuleMeta(
       'rules/wind',
       JSON.stringify({
-        blocks: {
-          blocks: [
-            {
-              type: 'world_rule',
-              fields: {NAME: 'Has Wind'},
-              next: {
-                block: {
-                  type: 'world_use_rule',
-                  fields: {RULE: 'Appearance'},
-                },
-              },
-            },
-            // A trait is a top block beside the rule.
-            {type: 'world_rule_trait', fields: {NAME: 'Windblown'}},
-          ],
-        },
+        type: 'rule',
+        name: 'Has Wind',
+        ability: 'Has Wind',
+        uses: ['Appearance'],
+        traits: [{name: 'Windblown'}],
       }),
     );
     project(wind);
@@ -85,15 +74,10 @@ describe('the traits in play', () => {
     const wind = parseRuleMeta(
       'rules/wind',
       JSON.stringify({
-        blocks: {
-          blocks: [
-            {
-              type: 'world_rule',
-              fields: {NAME: 'Has Wind'},
-            },
-            {type: 'world_rule_trait', fields: {NAME: 'Windblown'}},
-          ],
-        },
+        type: 'rule',
+        name: 'Has Wind',
+        ability: 'Has Wind',
+        traits: [{name: 'Windblown'}],
       }),
     );
     project(wind);

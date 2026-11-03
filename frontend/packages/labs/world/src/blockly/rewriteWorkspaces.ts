@@ -10,12 +10,7 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {isActorData, keyRows, withKeyRows} from '../actors/actorData';
-import {
-  isRuleData,
-  ruleKeyRows,
-  ruleViewOf,
-  withRuleKeyRows,
-} from '../rules/ruleData';
+import {isRuleData, ruleKeyRows, withRuleKeyRows} from '../rules/ruleData';
 import {resolveRuleContents} from '../rules/ruleReference';
 
 /** A hat's subject field (`eventSubject.SUBJECT_FIELD`), named here so this
@@ -106,13 +101,6 @@ export function rewriteWorkspace(
     ? undefined
     : JSON.stringify(parsed, null, 2);
 }
-
-/**
- * A workspace file's contents as a walk reads them: a reference as the rule
- * it names, and a rule's data as its view.
- */
-export const workspaceViewOf = (contents: string): string =>
-  ruleViewOf(resolveRuleContents(contents));
 
 /**
  * Apply a per-file rewrite to every saved workspace in the project.

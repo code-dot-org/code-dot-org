@@ -410,28 +410,15 @@ describe('a property whose value is actors', () => {
   const meta = parseRuleMeta(
     'rules/touch',
     JSON.stringify({
-      blocks: {
-        blocks: [
-          {
-            type: 'world_rule',
-            fields: {NAME: 'Touching', ABILITY: 'Has Touching'},
-          },
-          {
-            type: 'world_rule_trait',
-            fields: {NAME: 'Can Touch'},
-            next: {
-              block: {
-                type: 'world_rule_property',
-                fields: {
-                  TYPE: 'actors',
-                  ACCESS: 'writable',
-                  NAME: 'contacts',
-                },
-              },
-            },
-          },
-        ],
-      },
+      type: 'rule',
+      name: 'Touching',
+      ability: 'Has Touching',
+      traits: [
+        {
+          name: 'Can Touch',
+          properties: [{name: 'contacts', type: 'actors', access: 'writable'}],
+        },
+      ],
     }),
   )!;
   const {blocks} = buildDomainPalette([meta]);

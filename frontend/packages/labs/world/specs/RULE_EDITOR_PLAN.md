@@ -93,7 +93,9 @@ run after every step of a frame (`World.tick`), so a step moved from
   step, its name and phase in the design above.
 - **The file is data; the compiler reads a view.** As `actorView` writes
   the `define actor` workspace an actor's data stands for, `ruleView`
-  writes the `define rule` one, and nothing downstream changes.
+  writes the `define rule` one, and nothing downstream changes. Both views
+  are gone since: the compiler and every reader take the data
+  (COMPILE_FROM_DATA_PLAN.md, 5d and 5e).
 - **No migration.** World Lab has not shipped
   (`world-lab-no-migrations`); the stock rules are rewritten in place.
 
@@ -130,6 +132,8 @@ The safety net: every stock rule folds, its view is the rule again (where
 its roots stand, and a member's id and open eye, aside), the view folds to
 the same data, `parseRuleMeta` reads the two alike, and the generator writes
 the same code for both, byte for byte (`ruleData`, `ruleDataCompiles`).
+The fold and the view were deleted once nothing read rows
+(COMPILE_FROM_DATA_PLAN.md, 5e).
 
 Four stock chains interleaved their kinds and three carried a second note,
 so their scripts were put in that order and the notes folded into the
