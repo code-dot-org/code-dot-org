@@ -151,6 +151,15 @@ $pad: 16px;
   &:hover:not(:disabled) {
     transform: scale(1.06);
   }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+// Off for the level's sake: where it keeps the choice on one image.
+.tileOff {
+  opacity: 0.45;
 }
 
 // Each tile sits in a slot of its own size; the slot wears the chosen

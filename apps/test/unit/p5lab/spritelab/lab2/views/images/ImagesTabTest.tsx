@@ -149,6 +149,11 @@ describe('ImagesTab', () => {
     renderTab({lockedImageType: 'sprite', imageRole: 'friend'});
     expect(pressed()).toEqual(['Sprite 2']);
     expect(screen.getByRole('button', {name: /^land sprite/})).toBeTruthy();
+    // The choice stays there: the project's other images are off.
+    expect(screen.getByRole('button', {name: 'Sprite 1'})).toBeDisabled();
+    expect(screen.getByRole('button', {name: 'Sprite 2'})).toBeEnabled();
+    fireEvent.click(screen.getByRole('button', {name: 'Sprite 1'}));
+    expect(pressed()).toEqual(['Sprite 2']);
   });
 
   it('adds a draft of the kind picked under the plus, one session per image', () => {

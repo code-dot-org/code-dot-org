@@ -170,6 +170,24 @@ describe('ImageList', () => {
     expect(document.querySelector('[class~="open"]')).toBeNull();
   });
 
+  it('keeps the choice where the level put it', () => {
+    const onChoose = jest.fn();
+    render(
+      <ImageList
+        images={images}
+        draft={null}
+        chosenId="a"
+        onChoose={onChoose}
+        chooseOffered={false}
+      />
+    );
+    expect(screen.getByRole('button', {name: 'Sprite 1'})).toBeEnabled();
+    expect(screen.getByRole('button', {name: 'Sprite 2'})).toBeDisabled();
+    expect(screen.getByRole('button', {name: 'Background 1'})).toBeDisabled();
+    fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
+    expect(onChoose).not.toHaveBeenCalled();
+  });
+
   it("turns every kind but the level's off in the menu", () => {
     render(
       <ImageList

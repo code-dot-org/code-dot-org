@@ -203,6 +203,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       }
     : undefined;
   const newOffered = !!editingOffered || (!!lockedKind && !ownImage);
+  // A level about one image keeps the choice on that image, or on the
+  // slot it will take: the project's other images are shown but off.
+  const chooseOffered = !lockedKind;
   const lockedKindLabel = lockedKind
     ? imageKindLabel(lockedKind.imageType, lockedKind.subject).toLowerCase()
     : '';
@@ -233,6 +236,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             ? kind => startDraft(kind.imageType, kind.subject)
             : undefined
         }
+        chooseOffered={chooseOffered}
         newKind={lockedKind}
         onDelete={deleteOffered ? writer.deleteImage : undefined}
       />

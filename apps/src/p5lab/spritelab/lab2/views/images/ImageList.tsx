@@ -76,6 +76,9 @@ interface ImageListProps {
   /** The chosen image's key, or the draft's id. */
   chosenId: string | null;
   onChoose: (id: string) => void;
+  /** Whether the choice may move to another image.  A level about one
+      image keeps it where it is: the other tiles are shown but off. */
+  chooseOffered?: boolean;
   /** The plus: a new image of the kind picked under it, offered where the
       level lets students add. */
   onNew?: (kind: NewImageKind) => void;
@@ -91,6 +94,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   draft,
   chosenId,
   onChoose,
+  chooseOffered = true,
   onNew,
   newKind,
   onDelete,
@@ -233,6 +237,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               )}
               {own.map(image => {
                 const chosen = image.key === chosenId;
+                const off = !chooseOffered && !chosen;
                 return (
                   <div
                     key={image.key}
@@ -243,9 +248,10 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                   >
                     <button
                       type="button"
-                      className={styles.tile}
+                      className={classNames(styles.tile, off && styles.tileOff)}
                       aria-pressed={chosen}
                       aria-label={image.name || 'image'}
+                      disabled={off}
                       onClick={() => onChoose(image.key)}
                     >
                       {image.thumb && (
