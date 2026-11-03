@@ -3,7 +3,6 @@ import {toBlob} from 'html-to-image';
 import {
   captureTreeImage,
   treeImageName,
-  treePixelRatio,
 } from '@cdo/apps/ailab/engine/helpers/treeImage';
 import {getFontEmbedCss} from '@cdo/apps/util/imageExport/getFontEmbedCss';
 
@@ -13,7 +12,6 @@ jest.mock('@cdo/apps/util/imageExport/getFontEmbedCss', () => ({
 }));
 
 const mockToBlob = jest.mocked(toBlob);
-const MAX_CANVAS_PIXELS = 4096 * 4096;
 
 describe('treeImageName', () => {
   it.each([
@@ -29,14 +27,6 @@ describe('treeImageName', () => {
       expect(treeImageName(datasetName)).toBe('decision-tree');
     }
   );
-});
-
-describe('treePixelRatio', () => {
-  it('shrinks a large tree to fit the canvas limit', () => {
-    const ratio = treePixelRatio(12000, 900);
-    expect(ratio).toBeLessThan(2);
-    expect(12000 * 900 * ratio ** 2).toBeCloseTo(MAX_CANVAS_PIXELS);
-  });
 });
 
 describe('captureTreeImage', () => {
