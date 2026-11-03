@@ -1,0 +1,258 @@
+#!/usr/bin/env ruby
+#
+# Measures how often a forked child process inherits a locked glibc mutex that
+# permanently breaks hostname lookups in that child. This is the failure behind
+# the puma backlog alarms of 2026-09-01 and 2026-09-08, where one worker stopped
+# serving, grew an unbounded request backlog, and burned about five CPU cores.
+#
+# The short version: getaddrinfo() takes a process-wide mutex while it asks the
+# kernel about local interface addresses, fork() copies a locked mutex without
+# the thread that would unlock it, and glibc does not repair this particular one
+# in the child. Every multi-address lookup in that child then blocks forever, and
+# Timeout cannot break it because Ruby cannot interrupt a blocked C call. The
+# full root-cause writeup, including the gdb and perf evidence, is in the pull
+# request that added this script.
+#
+# Linux/glibc only: macOS and musl have no equivalent of glibc's __check_pf().
+#
+# Usage. On a production instance, run it with SETUP_HOSTS=1:
+#
+#   SETUP_HOSTS=1 bin/ops/dns-deadlock-after-fork
+#
+# That adds a two-address name to /etc/hosts, runs, and removes it again. Needs
+# passwordless sudo, and it is opt-in because it mutates a shared system file.
+# It cleans up on normal exit and on Ctrl-C, but nothing survives SIGKILL, so it
+# prints the manual cleanup command when it starts.
+#
+# A name out of /etc/hosts is both the highest-signal option -- the looping
+# thread does no DNS I/O, so it spends nearly all its time holding the mutex
+# under test -- and the network-safe one. Without SETUP_HOSTS the default target
+# is s3.amazonaws.com, which resolves for real on every iteration: that reports a
+# lower rate (raise FORKS to compensate) and, more importantly, aims a tight
+# resolution loop at the VPC resolver, whose per-ENI packet limit is shared with
+# everything else on the instance. Prefer SETUP_HOSTS=1 on any host serving
+# traffic.
+#
+# Env: SETUP_HOSTS, HOST, FORKS, TIMEOUT, DUMP=1 (gdb backtrace of the first
+# stuck child, needs passwordless sudo), DUMP_TO.
+#
+# Design notes:
+#
+#   - The name must resolve to more than one address. glibc only takes the mutex
+#     when it has several addresses to sort, so a single-address name -- or a
+#     numeric literal, which is why MySQL through ProxySQL on 127.0.0.1 was
+#     unaffected in production -- never reaches it. The preflight enforces this
+#     rather than silently reporting 0%.
+#   - sudo is unavoidable, because /etc/hosts is root-owned. Every subprocess
+#     here is invoked as an argument array rather than a shell string, and the
+#     file content and line filtering are composed in Ruby, so nothing depends
+#     on shell or regex quoting.
+#   - Cleanup deletes only lines carrying this script's marker comment, so it
+#     cannot remove a real /etc/hosts entry even if the file changed underneath
+#     it. It refuses to start if the name is already present, which would
+#     otherwise let one run's cleanup strip another's entry.
+#   - Timing lives in the parent rather than in a watchdog thread inside each
+#     child, so a poisoned child is killed instead of left blocked forever.
+#     Timeout.timeout could not do this job in any case: its failure to fire is
+#     the bug under test.
+#   - The reported percentage is this script's duty cycle, not a production
+#     probability. The looping thread resolves continuously; the puma parent
+#     resolves every second or two.
+#   - The rate will not change on Ruby 3.3+. The stuck mutex is a glibc problem;
+#     Ruby 3.3 changes only whether a lookup carrying a deadline can be
+#     abandoned.
+
+require 'socket'
+
+# Unbuffered so stdout and stderr interleave correctly when the run is piped to
+# a file, and so an interrupted run keeps its progress line.
+$stdout.sync = true
+
+SETUP_HOSTS = ENV['SETUP_HOSTS'] == '1'
+DUMMY_HOST  = 'dns-deadlock.invalid'
+HOSTS_FILE  = '/etc/hosts'
+
+# Every line this script adds carries the marker, so cleanup deletes only its own
+# lines and can never match a real entry.
+HOSTS_MARKER = '# added by dns-deadlock-after-fork'
+HOSTS_LINES  = ["192.0.2.1 #{DUMMY_HOST} #{HOSTS_MARKER}", "2001:db8::1 #{DUMMY_HOST} #{HOSTS_MARKER}"]
+
+HOST    = ENV.fetch('HOST') {SETUP_HOSTS ? DUMMY_HOST : 's3.amazonaws.com'}
+FORKS   = Integer(ENV.fetch('FORKS', '200'))
+TIMEOUT = Float(ENV.fetch('TIMEOUT', '1.0'))
+DUMP    = ENV['DUMP'] == '1'
+DUMP_TO = ENV.fetch('DUMP_TO', '/tmp/dns_deadlock_after_fork.txt')
+
+# Children inherit at_exit handlers and signal traps, and a Ctrl-C reaches the
+# whole process group, so cleanup has to be confined to the process that added
+# the entry.
+PARENT_PID = Process.pid
+
+def mono
+  Process.clock_gettime(Process::CLOCK_MONOTONIC)
+end
+
+def unique_addrs(host)
+  Socket.getaddrinfo(host, 80, nil, Socket::SOCK_STREAM).map {|a| a[3]}.uniq
+end
+
+def capture(*cmd)
+  IO.popen(cmd, err: File::NULL, &:read).to_s.strip
+rescue SystemCallError
+  ''
+end
+
+def hosts_entry_present?
+  File.read(HOSTS_FILE).include?(DUMMY_HOST)
+rescue StandardError
+  false
+end
+
+# sudo is the only reason a subprocess is involved at all: /etc/hosts is
+# root-owned, so an unprivileged process cannot write it.
+def write_as_root(path, content, append: false)
+  argv = ['sudo', 'tee']
+  argv << '-a' if append
+  argv << path
+  IO.popen(argv, 'w', out: File::NULL) {|io| io.write(content)}
+  $?.success?
+end
+
+def add_hosts_entry
+  content = HOSTS_LINES.map {|line| "#{line}\n"}.join
+  abort "could not append to #{HOSTS_FILE}" unless write_as_root(HOSTS_FILE, content, append: true)
+end
+
+def remove_hosts_entry
+  return unless Process.pid == PARENT_PID
+
+  kept = File.readlines(HOSTS_FILE).reject {|line| line.include?(HOSTS_MARKER)}
+
+  # Removal rewrites the whole file, so bail out rather than risk leaving an
+  # instance with no localhost entry.
+  unless kept.any? {|line| line.include?('localhost')}
+    warn "refusing to rewrite #{HOSTS_FILE}: no localhost entry would remain"
+    warn "  remove the added lines by hand: sudo sed -i '/#{HOSTS_MARKER}/d' #{HOSTS_FILE}"
+    return
+  end
+
+  unless write_as_root(HOSTS_FILE, kept.join)
+    warn "could not rewrite #{HOSTS_FILE}"
+    return
+  end
+
+  # Confirmed by re-reading rather than assumed, so the run itself reports
+  # whether it left the file clean.
+  if hosts_entry_present?
+    warn "FAILED to remove #{DUMMY_HOST} from #{HOSTS_FILE} -- remove it by hand"
+  else
+    warn "removed #{DUMMY_HOST} from #{HOSTS_FILE}"
+  end
+end
+
+# Kernel wait state per thread: "futex_wait_queue" is a thread blocked on a
+# mutex, an empty value means it is on-CPU.
+def wchans(pid)
+  Dir["/proc/#{pid}/task/*"].map do |t|
+    "#{File.read("#{t}/comm").strip}=#{File.read("#{t}/wchan").strip}"
+  end.join(' ')
+rescue StandardError
+  '(unreadable)'
+end
+
+# nil means the child was still running at the deadline. Timing lives in the
+# parent so a poisoned child gets killed rather than left behind.
+def wait_until(pid, deadline)
+  loop do
+    got, status = Process.waitpid2(pid, Process::WNOHANG)
+    return status if got
+    return nil if mono > deadline
+    sleep 0.01
+  end
+end
+
+can_sudo = system('sudo', '-n', 'true', out: File::NULL, err: File::NULL)
+warn 'DUMP=1 needs passwordless sudo for gdb; skipping dump' if DUMP && !can_sudo
+
+if SETUP_HOSTS
+  abort "SETUP_HOSTS=1 edits #{HOSTS_FILE} and needs passwordless sudo" unless can_sudo
+
+  if hosts_entry_present?
+    abort "#{DUMMY_HOST} is already in #{HOSTS_FILE}; another run may be active"
+  end
+
+  add_hosts_entry
+
+  # at_exit covers normal exit, abort, and an exception propagating out. HUP is
+  # in the trap list because closing an ssh session is the likely way a run on a
+  # remote host dies.
+  at_exit {remove_hosts_entry}
+  # exit! rather than exit so cleanup runs once here instead of again in at_exit.
+  %w[INT TERM HUP QUIT].each do |sig|
+    Signal.trap(sig) {remove_hosts_entry; exit!(128 + Signal.list.fetch(sig))}
+  end
+
+  # SIGKILL runs none of the above.
+  warn "added #{DUMMY_HOST} to #{HOSTS_FILE}; if this process is killed with -9, remove it with:"
+  warn "  sudo sed -i '/#{HOSTS_MARKER}/d' #{HOSTS_FILE}"
+end
+
+puts "glibc:   #{capture('ldd', '--version').lines.first.to_s.strip}"
+puts "nscd:    #{capture('systemctl', 'is-active', 'nscd').then {|s| s.empty? ? 'absent' : s}}"
+puts "resolv:  #{begin; File.realpath('/etc/resolv.conf'); rescue StandardError; '?'; end}"
+
+addrs = begin
+  unique_addrs(HOST)
+rescue SocketError => exception
+  abort "cannot resolve #{HOST}: #{exception.message}"
+end
+puts "target:  #{HOST} -> #{addrs.size} unique address(es)"
+
+if addrs.size < 2
+  abort <<~MSG
+
+    #{HOST} yields one address, so glibc skips the address-sorting path and never
+    calls __check_pf. Rerun with SETUP_HOSTS=1, or name a multi-address target.
+  MSG
+end
+
+hammer = Thread.new do
+  loop do
+    Socket.getaddrinfo(HOST, 80)
+  rescue SocketError
+    nil
+  end
+end
+
+stuck = 0
+dumped = false
+started = mono
+
+FORKS.times do |i|
+  pid = fork do
+    Socket.getaddrinfo(HOST, 80)
+    exit! 0
+  end
+
+  if wait_until(pid, mono + TIMEOUT).nil?
+    stuck += 1
+    puts "\rfork ##{i}: child #{pid} blocked >#{TIMEOUT}s  [#{wchans(pid)}]"
+
+    if DUMP && can_sudo && !dumped
+      system('sudo', 'gdb', '-p', pid.to_s, '-batch', '-ex', 'thread apply all bt',
+             out: DUMP_TO, err: [:child, :out]
+)
+      dumped = true
+      puts "  gdb backtrace written to #{DUMP_TO}"
+    end
+
+    Process.kill('KILL', pid)
+    Process.waitpid(pid)
+  end
+
+  print "\rforks #{i + 1}/#{FORKS}  deadlocked #{stuck}" if (i % 20).zero?
+end
+
+hammer.kill
+puts
+puts format('%d/%d children deadlocked (%.2f%%) in %.1fs', stuck, FORKS, 100.0 * stuck / FORKS, mono - started)
