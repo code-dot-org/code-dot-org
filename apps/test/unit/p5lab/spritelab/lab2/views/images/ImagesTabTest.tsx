@@ -322,6 +322,27 @@ describe('ImagesTab', () => {
     expect(tile.disabled).toBe(false);
   });
 
+  it('closes the tools on a deleted image without saving it', async () => {
+    delete params['images-edited'];
+    propsByKey.k1 = {name: 'Sprite 1', categories: [], sourceUrl: 'one.png'};
+    propsByKey.k2 = {name: 'Sprite 2', categories: [], sourceUrl: 'two.png'};
+    const {rerender} = renderTab({editingOffered: true});
+    expect(await screen.findByText('canvas')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
+    deleteImage.mockImplementation(() => delete propsByKey.k1);
+    fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
+    await act(async () => {
+      rerender(
+        <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
+      );
+    });
+    expect(pressed()).toEqual(['Sprite 2']);
+    // The next image's tools open; the deleted image's pixels never went up.
+    expect(await screen.findByText('canvas')).toBeTruthy();
+    expect(saveEdited).not.toHaveBeenCalled();
+  });
+
   it('deletes through the list and moves on to the next image', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     propsByKey.k2 = {name: 'Sprite 2', categories: []};
@@ -361,7 +382,7 @@ describe('ImagesTab', () => {
       {key: null, imageType: 'sprite', subject: 'character'},
       'data:png',
       {pixelGridSize: 1},
-      {upload: true}
+      expect.objectContaining({upload: true})
     );
     expect(screen.queryByText('canvas')).toBeNull();
     expect(pressed()).toEqual(['Sprite 1']);
@@ -392,7 +413,7 @@ describe('ImagesTab', () => {
       imageType: 'sprite',
       subject: 'character',
     });
-    expect(saveEdited.mock.calls[0][3]).toEqual({upload: true});
+    expect(saveEdited.mock.calls[0][3]).toMatchObject({upload: true});
     expect(onImageLanded).not.toHaveBeenCalled();
     expect(screen.getByText('canvas')).toBeTruthy();
     expect(pressed()).toEqual(['Sprite 1']);
@@ -407,13 +428,13 @@ describe('ImagesTab', () => {
       imageType: 'sprite',
       subject: 'character',
     });
-    expect(saveEdited.mock.calls[1][3]).toEqual({upload: false});
+    expect(saveEdited.mock.calls[1][3]).toMatchObject({upload: false});
     // Done sends the file those pixels are owed.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
     });
     expect(saveEdited).toHaveBeenCalledTimes(3);
-    expect(saveEdited.mock.calls[2][3]).toEqual({upload: true});
+    expect(saveEdited.mock.calls[2][3]).toMatchObject({upload: true});
     expect(onImageLanded).not.toHaveBeenCalled();
     expect(screen.queryByText('canvas')).toBeNull();
     jest.useRealTimers();
@@ -540,7 +561,7 @@ describe('ImagesTab', () => {
       imageType: 'sprite',
       subject: undefined,
     });
-    expect(saveEdited.mock.calls[0][3]).toEqual({upload: true});
+    expect(saveEdited.mock.calls[0][3]).toMatchObject({upload: true});
     expect(pressed()).toEqual(['Sprite 2']);
     finishFirst('k1');
   });

@@ -153,6 +153,21 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
+  it('drops an edit no longer wanted once its file is up', async () => {
+    propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+    const {writer, uploadImage} = renderWriter();
+    await act(async () => {
+      await writer().saveEdited(
+        {key: 'k1', imageType: 'sprite'},
+        'data:image/png;base64,iVBORw0KGgo=',
+        {pixelGridSize: 1, recentColors: []},
+        {stillWanted: () => false}
+      );
+    });
+    expect(uploadImage).toHaveBeenCalledTimes(1);
+    expect(repointAnimation).not.toHaveBeenCalled();
+  });
+
   it('makes nothing of a save for an image deleted meanwhile', async () => {
     const {writer} = renderWriter();
     await act(async () => {

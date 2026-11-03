@@ -70,12 +70,14 @@ export interface ImageWriter {
   /** Stores drawn pixels as the target image's pixels and resolves with
       its key, as acceptGenerated does. With `upload` false the pixels are
       stored in the project only and no file is uploaded; a new image is
-      always uploaded, since it has no file yet. */
+      always uploaded, since it has no file yet. `stillWanted`, when given,
+      is called after the upload and before the image is updated; returning
+      false abandons the save, for a drawing a picture replaced meanwhile. */
   saveEdited: (
     target: ImageTarget,
     dataURI: string,
     meta: PixelEditorSaveMeta,
-    options?: {upload?: boolean}
+    options?: {upload?: boolean; stillWanted?: () => boolean}
   ) => Promise<string>;
   deleteImage: (key: string) => void;
   /** Deletes the session's uploaded files that no image points at any
@@ -185,7 +187,10 @@ export default function useImageWriter({
       target: ImageTarget,
       dataURI: string,
       meta: PixelEditorSaveMeta,
-      {upload = true}: {upload?: boolean} = {}
+      {
+        upload = true,
+        stillWanted,
+      }: {upload?: boolean; stillWanted?: () => boolean} = {}
     ) => {
       const existing = target.key ? propsOf(target.key) : undefined;
       const safeName = (existing?.name || 'image')
@@ -203,6 +208,9 @@ export default function useImageWriter({
           : undefined;
       recordSessionUrl(sourceUrl);
       const frameSize = await measuredSize(dataURI);
+      if (stillWanted && !stillWanted()) {
+        return target.key ?? '';
+      }
       // Keep the subject: the edit clears `generation`, where an older image
       // stored it.
       const subject =

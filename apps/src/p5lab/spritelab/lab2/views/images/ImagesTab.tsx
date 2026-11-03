@@ -190,19 +190,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     setChosenId(openOnRef.current?.key ?? null);
   }, []);
 
-  // A chosen image that is gone (deleted) gives way to the first image
-  // left, or to nothing.
-  useEffect(() => {
-    if (
-      chosenId === null ||
-      (chosenId === DRAFT_ID && draft) ||
-      images.some(image => image.key === chosenId)
-    ) {
-      return;
-    }
-    startSession(images[0]?.key ?? null);
-  }, [chosenId, draft, images, startSession]);
-
   const chosenImage: ProjectImage | null =
     images.find(image => image.key === chosenId) ?? null;
   const chosenDraft = chosenId === DRAFT_ID ? draft : null;
@@ -269,6 +256,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const [drawing, setDrawing] = useState<Drawing | null>(null);
   const drawingRef = useRef(drawing);
   drawingRef.current = drawing;
+  // The drawing a landing picture replaced: a save of it still in flight
+  // must not repoint the image back to the drawn pixels.
+  const abandonedRef = useRef<number | null>(null);
   // Strokes since the last save, and the save the editor hands out.
   const dirtyRef = useRef(false);
   const saveRef = useRef<(() => void) | null>(null);
@@ -302,6 +292,22 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     setDrawing(null);
   }, []);
   useEffect(() => clearIdleTimer, []);
+  // A chosen image that is gone (deleted) gives way to the first image
+  // left, or to nothing; tools open on it close without saving, since a
+  // save would make a new image of the deleted pixels.
+  useEffect(() => {
+    if (
+      chosenId === null ||
+      (chosenId === DRAFT_ID && draft) ||
+      images.some(image => image.key === chosenId)
+    ) {
+      return;
+    }
+    if (drawingRef.current?.target.key === chosenId) {
+      stopDrawing();
+    }
+    startSession(images[0]?.key ?? null);
+  }, [chosenId, draft, images, startSession, stopDrawing]);
   // Leaving the level mid-drawing (the panel's Continue, or navigation)
   // unmounts the tab with no Done: whatever the picture is owed goes up
   // now, from the editor's canvas while it still exists.
@@ -348,6 +354,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         // decoded; decoded here first, the frame shows it from its first
         // paint, so a switch shows the picture, not white.
         const picture = await warmImage(existing.src);
+        if (id !== drawingIdRef.current) {
+          return;
+        }
         setDrawing({
           id,
           target,
@@ -400,6 +409,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       current: Drawing,
       final: boolean
     ) => {
+      if (abandonedRef.current === current.id) {
+        pendingRef.current = null;
+        return;
+      }
       inFlightRef.current = true;
       let saved = current;
       try {
@@ -411,9 +424,16 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           Date.now() - lastUploadRef.current >= UPLOAD_GAP_MS;
         const key = await land(
           current.target,
-          () => writer.saveEdited(current.target, dataURI, meta, {upload}),
+          () =>
+            writer.saveEdited(current.target, dataURI, meta, {
+              upload,
+              stillWanted: () => abandonedRef.current !== current.id,
+            }),
           false
         );
+        if (abandonedRef.current === current.id) {
+          return;
+        }
         if (upload) {
           lastUploadRef.current = Date.now();
         }
@@ -578,6 +598,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     (drawing.target.key === chosenImage.key || drawing.target.key === null);
   useEffect(() => {
     if (landedOverPainting) {
+      abandonedRef.current = drawingRef.current?.id ?? null;
       stopDrawing();
     }
   }, [landedOverPainting, stopDrawing]);
