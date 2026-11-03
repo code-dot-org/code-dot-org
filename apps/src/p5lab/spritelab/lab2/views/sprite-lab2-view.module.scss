@@ -28,6 +28,12 @@
   min-width: 280px;
 }
 
+// Collapsed to its tab rail.
+.instructionsCollapsed {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
 .divider {
   width: 1px;
   height: 100%;

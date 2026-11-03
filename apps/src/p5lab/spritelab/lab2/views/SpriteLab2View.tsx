@@ -22,6 +22,7 @@ import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
@@ -610,6 +611,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [previewColumnWidth, setPreviewColumnWidth] = useState(0);
   const paneWidthPx = previewColumnWidth || DEFAULT_PANE_WIDTH;
   const clearOfPane = {right: paneWidthPx};
+  // Free play keeps the instructions out of the way: the panel starts
+  // collapsed to its tab, which expands it again.
+  const freeplayLevel = isFreeplayMode(levelProperties.levelMode);
+  const instructionsCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
+  useEffect(() => {
+    dispatch(setIsStandaloneCollapsed(freeplayLevel));
+    // Another lab's view may follow in the same page.
+    return () => {
+      dispatch(setIsStandaloneCollapsed(false));
+    };
+  }, [freeplayLevel, dispatch]);
   // The workspace does not notice its container changing size.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as
@@ -618,7 +632,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (workspace) {
       Blockly.svgResize(workspace);
     }
-  }, [previewWidth, editorsShown]);
+  }, [previewWidth, editorsShown, instructionsCollapsed]);
   useEffect(() => {
     if (activeTab === 'World' && !enabledTabs.includes('World')) {
       dispatch(
@@ -2354,9 +2368,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             (guideUnderPreview
               ? moduleStyles.instructionsArea
               : moduleStyles.instructionsColumn),
+          !panelIsSidebar &&
+            instructionsCollapsed &&
+            moduleStyles.instructionsCollapsed,
           panelIsSidebar && moduleStyles.resourceSidebar
         )}
         sidebarOnly={panelIsSidebar}
+        collapsible={freeplayLevel || undefined}
         // The checklist and the Continue gate ride in the panel unless
         // the guide carries them.
         objectives={
