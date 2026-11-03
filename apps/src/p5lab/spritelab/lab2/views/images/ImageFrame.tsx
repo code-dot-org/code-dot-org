@@ -1,6 +1,6 @@
-// The tab's middle: the chosen image large, or the empty frame of the one
-// about to be made, with the session's other pictures down its left and
-// the way behind the scenes under it.
+// The tab's middle column: the chosen image at full size, or the empty
+// frame of the one about to be made, with an optional toolbar above and a
+// row of frames below.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
@@ -18,11 +18,11 @@ interface ImageFrameProps {
   image: ProjectImage | null;
   /** Which frame of a character set shows; the standing frame when unset. */
   frame?: number;
-  /** The scene's own frame contents, which win while a picture is being
-      made or has just been made. */
+  /** Content from the sentence scene that replaces the stored image while
+      a picture is generating or a generated one is showing. */
   live?: React.ReactNode;
-  /** A picture is being made: the frame is the plain box around the
-      making, not a picture's checkerboard. */
+  /** While a picture is being generated the frame is a plain box, without
+      the transparency checkerboard a finished picture gets. */
   generating?: boolean;
   /** The frame holds something to work on, not a picture to look at: no
       image role, and its own class. */
@@ -31,14 +31,16 @@ interface ImageFrameProps {
   above?: React.ReactNode;
   /** Over the frame, positioned by its own class. */
   overlay?: React.ReactNode;
-  /** A line over the frame's bottom part: a tip while a picture is made. */
-  note?: React.ReactNode;
+  /** A tip shown over the frame's bottom part while a picture is made. */
+  tip?: React.ReactNode;
   /** Under the frame. */
   under?: React.ReactNode;
 }
 
-// Under the frame when nothing is there yet: a row's worth.
-const UNDER_MIN_PX = 48;
+// The height the row under the frame keeps while nothing is rendered there
+// (.under's min-height plus its padding), subtracted from the column height
+// before the square side is computed.
+const UNDER_MIN_PX = Number(styles.underMinPx);
 
 const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   image,
@@ -48,22 +50,23 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   workspaceClassName,
   above,
   overlay,
-  note,
+  tip,
   under,
 }) => {
-  // The frame is a square as large as the column allows, which a flex
-  // item's percentage height cannot give before layout.
+  // The frame is a square as large as the column allows. CSS alone cannot
+  // size it: a flex item's percentage height is undefined until the column
+  // is laid out, so the side is measured.
   const columnRef = useRef<HTMLDivElement>(null);
   const aboveRef = useRef<HTMLDivElement>(null);
   const underRef = useRef<HTMLDivElement>(null);
-  const [side, setSide] = useState<number>();
+  const [frameSide, setFrameSide] = useState<number>();
   useLayoutEffect(() => {
     const column = columnRef.current;
-    if (!column || typeof ResizeObserver !== 'function') {
+    if (!column) {
       return;
     }
     const measure = () =>
-      setSide(
+      setFrameSide(
         Math.max(
           0,
           Math.min(
@@ -90,21 +93,26 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
     <div className={styles.frameWell}>
       <div ref={columnRef} className={styles.frameColumn}>
         {above && (
-          <div ref={aboveRef} className={styles.above} style={{width: side}}>
+          <div
+            ref={aboveRef}
+            className={styles.above}
+            style={{width: frameSide}}
+          >
             {above}
           </div>
         )}
-        <div className={styles.frameRow} style={{height: side}}>
+        <div className={styles.frameRow} style={{height: frameSide}}>
           <div
             className={classNames(
               styles.frame,
               filled && styles.frameFilled,
               workspaceClassName
             )}
-            style={{width: side, height: side}}
+            style={{width: frameSide, height: frameSide}}
           >
-            {/* The picture alone is the image to assistive tech; anything
-                else the frame holds stays reachable. */}
+            {/* role="img" is on the picture's own box, not the frame, so
+                controls the frame holds are not hidden from assistive
+                tech. */}
             <div
               className={styles.picture}
               role={workspaceClassName ? undefined : 'img'}
@@ -138,15 +146,18 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
                 ) : null)}
             </div>
             {overlay}
-            {note && (
-              <aside className={styles.frameNote} aria-label="Did you know?">
+            {/* A live region, so a screen reader hears each tip as it
+                changes. */}
+            {tip && (
+              <p className={styles.frameTip} role="status">
                 <FontAwesomeV6Icon
                   iconName="lightbulb"
-                  className={styles.frameNoteIcon}
+                  className={styles.frameTipIcon}
                   aria-hidden
                 />
-                <span>{note}</span>
-              </aside>
+                <span className={styles.srOnly}>Did you know? </span>
+                <span>{tip}</span>
+              </p>
             )}
           </div>
         </div>

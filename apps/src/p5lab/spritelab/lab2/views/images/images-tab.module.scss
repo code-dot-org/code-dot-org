@@ -39,7 +39,7 @@ $list-share: 0.2;
 
 // A tip over the frame's bottom part while a picture is made; the frame
 // clips it to its corners.
-.frameNote {
+.frameTip {
   position: absolute;
   left: 0;
   right: 0;
@@ -48,15 +48,20 @@ $list-share: 0.2;
   display: flex;
   align-items: center;
   gap: 12px;
+  margin: 0;
   padding: 12px 14px;
-  background-color: rgb(0 0 0 / 65%);
-  color: #fff;
+  background-color: color-mix(
+    in srgb,
+    var(--neutral-base-true-black) 65%,
+    transparent
+  );
+  color: var(--text-neutral-white-fixed);
   font-size: 14px;
   line-height: 1.35;
   text-align: left;
 }
 
-.frameNoteIcon {
+.frameTipIcon {
   flex: none;
   font-size: 22px;
 }
@@ -361,16 +366,25 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   pointer-events: none;
 }
 
+// The row under the frame keeps this height while nothing is rendered
+// there; ImageFrame reads it to size the frame.
+$under-min-height: 48px;
+$under-padding-top: 8px;
+
+:export {
+  underMinPx: math.div($under-min-height + $under-padding-top, 1px);
+}
+
 .under {
-  // Never squeezed: the frame is sized from this slot's height, so a slot
-  // that gave way would let its contents run off the column's bottom.
+  // flex: none: the frame's side is computed assuming this row keeps its
+  // full height; a shorter row would let its contents overflow the column.
   display: flex;
   flex: none;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  min-height: 48px;
-  padding-top: 8px;
+  min-height: $under-min-height;
+  padding-top: $under-padding-top;
   // Pinned to the column's foot; the spare height goes above it.
   margin-top: auto;
 }
@@ -433,9 +447,13 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   line-height: 1.4;
 }
 
-.typeChoice {
-  display: inline-block;
-  vertical-align: middle;
+// Under the drawing tools when a pause-save failed.
+.saveNotice {
+  margin: 4px 0 0;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-neutral-primary);
 }
 
 .verdict {
