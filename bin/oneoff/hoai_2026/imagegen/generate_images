@@ -58,6 +58,7 @@ require_relative 'google'
 require_relative 'imagegen'
 require_relative 'image_validation'
 require_relative 'moderation'
+require_relative 'review_publish'
 
 options = {
   allow_gaps: false,
@@ -77,6 +78,7 @@ options = {
   moderation: true,
   production: false,
   provider: DEFAULT_PROVIDER,
+  publish_review: false,
   quality: QUALITY,
   redraw_abandoned: false,
   sentences: nil,
@@ -192,6 +194,12 @@ OptionParser.new do |opts|
     options[:unreviewed] = true
   end
 
+  opts.on('--publish-review',
+          "Also publishes, under #{REVIEW_PATH}, every flagged or rejected drawing, held-back current ones, and a manifest per sentence, for a preview. With --no-dry-run it uploads; without, it only writes the manifests to #{REVIEW_MANIFESTS_DIRECTORY}/."
+         ) do
+    options[:publish_review] = true
+  end
+
   opts.on('--allow-gaps', 'With --production, publishes even when a filling has no publishable variant.') do
     options[:allow_gaps] = true
   end
@@ -249,6 +257,7 @@ end
 puts
 puts "Building prompts with dump_prompts.ts..."
 jobs = load_jobs(*dumper_args)
+all_jobs = jobs
 
 unknown_ids = options[:ids] - jobs.map {|job| job['sentenceId']}.uniq
 raise "Error: unknown sentence(s): #{unknown_ids.join(', ')}. See --list-words." if unknown_ids.any?
@@ -520,7 +529,7 @@ def process_variant(options, moderator, prompt_checks, job, variant)
         entry['seed'] = frame_seed(record['seed'], job, frame) if record['seed']
         entry.delete('checks')
       end
-      record['drawnAt'] = Time.now.utc.iso8601
+      record['drawnAt'] = Time.now.utc.iso8601(3)
     end
 
     if options[:moderation]
@@ -707,23 +716,40 @@ end
 puts
 if options[:dry_run]
   puts 'Note: Dry run. Not uploading. Specify --no-dry-run to upload.'
-  exit
-end
-puts 'Note: Development bucket. Specify --production to publish for live use.' unless options[:production]
+else
+  puts 'Note: Development bucket. Specify --production to publish for live use.' unless options[:production]
 
-files = ready.flat_map do |object|
-  object[:job]['frames'].map {|frame| frame_path(object[:job], object[:variant], frame['name'])}
+  # Each file with the drawing it holds, so the review manifests know which
+  # current drawings the lab's tree has.
+  ledger = UploadLedger.new(bucket_name)
+  files = ready.flat_map do |object|
+    drawn_at = read_record(object[:job], object[:variant])['drawnAt']
+    object[:job]['frames'].map {|frame| [frame_path(object[:job], object[:variant], frame['name']), drawn_at]}
+  end
+  progress = ProgressBar.create(total: files.size)
+  Parallel.each(files, in_threads: options[:jobs], finish: ->(_, _, _) {progress&.increment}) do |path, drawn_at|
+    AWS::S3.upload_to_bucket(
+      bucket_name,
+      File.join(BUCKET_PATH, path),
+      File.binread(File.join(output_path, path)),
+      acl: 'public-read',
+      no_random: true,
+      content_type: 'image/png'
+    )
+    ledger.record(File.join(BUCKET_PATH, path), drawn_at)
+  end
+  progress&.finish
+  ledger.save
+  puts "Uploaded #{files.length} files for #{ready.length} variants."
 end
-progress = ProgressBar.create(total: files.size)
-Parallel.each(files, in_threads: options[:jobs], finish: ->(_, _, _) {progress&.increment}) do |path|
-  AWS::S3.upload_to_bucket(
-    bucket_name,
-    File.join(BUCKET_PATH, path),
-    File.binread(File.join(output_path, path)),
-    acl: 'public-read',
-    no_random: true,
-    content_type: 'image/png'
-  )
+
+if options[:publish_review]
+  catalog = run_dumper('--catalog', *dumper_args).lines.map {|line| JSON.parse(line)}
+  # Every filling of each chosen sentence, whatever --choice or --limit
+  # narrowed this run to: a manifest describes a whole sentence.
+  sentences = all_jobs.filter {|job| wanted?(options, job)}.group_by {|job| job['sentenceId']}
+  status_for = ->(job, variant) {publishable(options, job, variant)}
+  ReviewPublisher.new(options, bucket_name, catalog, status_for).
+    publish(sentences, all_jobs.map {|job| job['sentenceId']}.uniq)
+  puts 'Note: the devel bucket sends no CORS headers; a page elsewhere loads its manifests through manifest.js.' unless options[:production]
 end
-progress&.finish
-puts "Uploaded #{files.length} files for #{ready.length} variants."

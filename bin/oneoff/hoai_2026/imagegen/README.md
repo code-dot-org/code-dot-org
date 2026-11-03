@@ -164,6 +164,49 @@ variant rejected after publishing stays published until it is redrawn and
 uploaded again; and CloudFront may serve a replaced production file for a
 while after the upload.
 
+## Publishing for a preview
+
+`--publish-review` also publishes what the lab's tree leaves out, for a
+preview application: every drawing moderation flagged or review rejected,
+the current drawing of any variant held back from the tree, and a manifest
+per sentence describing all of it. It goes to the same bucket as the run,
+under a prefix beside the lab's, so none of it can reach the tree the lab
+reads:
+
+```
+media/spritelab/generate/review/v1/index.json                  the sentences, with counts
+media/spritelab/generate/review/v1/<sentence>/manifest.json    every filling and variant
+media/spritelab/generate/review/v1/<sentence>/manifest.js      the same, for a <script> tag
+media/spritelab/generate/review/v1/<sentence>/<words>/pixel/00.20261103T075626659.png
+```
+
+A manifest lists, for each filling, its prompt and words, and for each
+variant its status (`published`, `ready`, `held back: <why>`, `abandoned`
+or `not drawn`), its current drawing with its moderation results and
+review, and every earlier drawing that left the tree, with the reason.
+Each file is a path relative to `media/spritelab/generate/`; a manifest's
+`bases` gives the URL for each bucket. A published drawing points into the
+lab's `images/` tree; everything else points into `review/`.
+
+Every file under `review/` is named for the moment it was drawn, so a file
+is never replaced, never cached stale, and is uploaded once:
+`upload_ledger.json` remembers what each bucket holds. A manifest always
+covers every filling of its sentence, whatever `--choice` or `--limit`
+narrowed the run to. A dry run writes the manifests to `review_manifests/`
+and uploads nothing.
+
+```
+./bin/oneoff/hoai_2026/imagegen/generate_images --just-upload --publish-review --no-dry-run
+```
+
+The production bucket (`curriculum.code.org`) sends `Access-Control-Allow-Origin: *`,
+so a page anywhere can fetch its `manifest.json`. The devel bucket sends no
+CORS headers at all: a page elsewhere can show its images but cannot fetch
+its JSON, so it loads `manifest.js` with a `<script>` tag instead, which
+sets `window.__imagegenReview[<sentence>]` (and `.index`). The same limit
+means the lab itself cannot read a cache from the devel bucket, since it
+fetches each picture.
+
 ## Files
 
 ```
@@ -171,6 +214,8 @@ image_output/v1/<sentence>/<word>/<word>/pixel/NN.png        the published tree,
 image_output/v1/<sentence>/<word>/<word>/pixel/NN-base.png   a set's frames: base, idling, ...
 image_records/v1/<sentence>/<word>/<word>/pixel/NN.json      prompts, seed, verdicts, review
 image_attic/...                                              every image a redraw replaced
+review_manifests/v1/...                                      the manifests --publish-review uploads
+upload_ledger.json                                           what each bucket holds
 ```
 
 Words are in the order the sentence reads them, and `_` is an optional slot
