@@ -312,6 +312,13 @@ function readTrait(root: Block, made: {count: number}): RuleTrait | undefined {
   };
 }
 
+/** The code a rule holds: each block's and each step's body, the rule's and its traits'. */
+export const ruleBodies = (data: RuleData): Block[] =>
+  [data, ...(data.traits ?? [])].flatMap(definition => [
+    ...(definition.members ?? []).flatMap(one => (one.body ? [one.body] : [])),
+    ...(definition.steps ?? []).flatMap(one => (one.body ? [one.body] : [])),
+  ]);
+
 /** A definition's keys that name something, each as the block it stands for. */
 interface DefinitionRows {
   uses: Block[];

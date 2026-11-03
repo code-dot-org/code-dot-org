@@ -48,7 +48,7 @@
 // the category back, which is the loop this is meant to have: say what you
 // depend on, and its blocks appear.
 
-import {ruleViewOf} from '../rules/ruleData';
+import {isRuleData} from '../rules/ruleData';
 
 import type {RuleMeta} from './ruleMeta';
 
@@ -169,6 +169,17 @@ function rulesNamedIn(
     return undefined;
   }
   const named: string[] = [];
+  // A rule's traits name what they need as data (`rules/ruleData`).
+  if (isRuleData(document)) {
+    for (const trait of document.traits ?? []) {
+      for (const used of trait.uses ?? []) {
+        const rule = ruleOfTrait(used);
+        if (rule) {
+          named.push(rule);
+        }
+      }
+    }
+  }
   for (const block of everyBlock(document)) {
     if (block.type === 'world_use_trait') {
       const rule = ruleOfTrait(block.fields?.TRAIT);
@@ -223,7 +234,7 @@ export function rulesInScope(
   const named =
     file.contents === undefined
       ? undefined
-      : rulesNamedIn(ruleViewOf(file.contents), owners);
+      : rulesNamedIn(file.contents, owners);
   if (!named) {
     return undefined;
   }

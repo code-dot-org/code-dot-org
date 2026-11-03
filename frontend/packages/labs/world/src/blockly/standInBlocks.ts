@@ -37,7 +37,7 @@ import type {BlockArgDefinition, BlockDefinition} from '@code-dot-org/blockly';
 import {Blockly, defineBlock} from '@code-dot-org/blockly';
 
 import {isActorData, writeEffect, writeValue} from '../actors/actorData';
-import {ruleViewOf} from '../rules/ruleData';
+import {isRuleData, ruleBodies} from '../rules/ruleData';
 
 import {missingRuleExtension} from './extensions/missingRule';
 import {registerStandInRule} from './ruleRegistry';
@@ -171,9 +171,6 @@ export function standInBlocks(
   contents: readonly string[],
   defined: ReadonlySet<string>,
 ): BlockDefinition[] {
-  // A rule held as data names its blocks as data; its view names them as
-  // blocks (`rules/ruleData`).
-  contents = contents.map(one => ruleViewOf(one));
   // A view's own rows are not blocks a file holds (`viewRows`).
   const known = (type: string): boolean =>
     defined.has(type) || type in Blockly.Blocks || VIEW_ROWS.has(type);
@@ -205,7 +202,10 @@ export function standInBlocks(
               one.body ? [one.body] : [],
             ),
           ] as BlockState[])
-        : parsed.blocks?.blocks;
+        : // …and a rule in the bodies of its blocks and steps.
+          isRuleData(parsed)
+          ? (ruleBodies(parsed) as BlockState[])
+          : parsed.blocks?.blocks;
       for (const root of roots ?? []) {
         // A top-level block is a statement: a hat, or a stack somebody moved
         // aside. Nothing is a value at the root of a workspace.

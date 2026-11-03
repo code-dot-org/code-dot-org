@@ -113,6 +113,28 @@ describe('a rule', () => {
     ).toEqual(['Scoring']);
   });
 
+  it('keeps the rules its data names: a trait it needs, a block it calls', () => {
+    const data = JSON.stringify({
+      type: 'rule',
+      name: 'Climbing',
+      ability: 'Climbs',
+      steps: [
+        {name: 'score', body: {type: 'world_do_Scoring_AddToTheScoreAction'}},
+      ],
+      traits: [{name: 'Climbs', uses: ['Physics#CanMoveTrait']}],
+    });
+
+    expect(
+      named(
+        rulesInScope(
+          {kind: 'rule', module: 'rules/climbing', contents: data},
+          [rule('Climbing'), ...RULES.slice(1)],
+          OWNERS,
+        ),
+      ),
+    ).toEqual(['Climbing', 'Physics', 'Scoring']);
+  });
+
   it('keeps a rule whose block it already holds, declared or not', () => {
     // The one property worth having unconditionally: the toolbox cannot hide a
     // block that is on the screen. Such a rule is broken — an undeclared

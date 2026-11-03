@@ -357,8 +357,12 @@ the data. In order, each its own commit:
    data, and the searches for what uses a member or a property read it
    so. A test reads every rule the repository builds back from its rows
    unchanged; others rename a rule it uses and its own name.
-3. Readers read the data: `parseRuleMeta`, the generator, `ruleDataOf`,
-   `rulesInScope`, `standInBlocks`, `catalogue`.
+3. BUILT, November 2026. Readers read the data. What a rule may reach
+   for takes its traits' `uses` and the blocks in its bodies
+   (`rulesInScope`); `standInBlocks` stands in for blocks in its bodies
+   (`ruleBodies`). `parseRuleMeta`, the generator, `ruleDataOf` and
+   `catalogue` read the data already, and fold only a rule in rows, which
+   step 5 takes away.
 4. The tests and the lesson checks write rules as data.
 5. The tutor proposes a rule as data. Then `foldRule`, `ruleView`,
    `ruleViewOf`, `asRuleData`, `workspaceViewOf` and the rest of
