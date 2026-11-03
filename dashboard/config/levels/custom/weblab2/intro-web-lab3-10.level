@@ -1,0 +1,71 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-16T16:17:11.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Debug the Gap: Maya's Rainbow Page\r\n\r\nMaya wrote this vision:\r\n\r\n> *\"I want a page for my school's photography club. Make it colorful so it stands out and gets people excited to join. The page should have the club name at the top, a short description of what the club does, and a list of upcoming meeting times.\"*\r\n\r\nAnd here's her reaction to what AI built:\r\n\r\n*\"I asked for a colorful page but it looks like a rainbow exploded! Every single thing is a different color. That's not what I meant at all. I wanted it to feel fun and bright, not chaotic.\"*\r\n\r\n**Do This:**\r\n1. **Diagnose:** Compare Maya's vision to the page. What did AI *think* \"colorful\" meant? What did Maya actually mean?\r\n2. **Fix it by talking to AI Tutor.** You can restate the vision more precisely (\"colorful means 2-3 bright colors that go together, not a different color for everything\"), or direct specific changes step by step - or both.\r\n3. **Judge each change** against Maya's wish before accepting.\r\n\r\nWhen the page feels fun and bright - not chaotic - click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- Do NOT create a style.css file - put all css in a `<style>` tag in the head of the index.html file\n- Generate both HTML and CSS at the same time\n- Do NOT use IDs or classes on elements\n- Do NOT generate links or buttons\n- Do NOT generate `<script>` tags\n- Never generate placeholder images. If the student implies they want a new image, explain that images must be uploaded to the project first.\n- The student is looking at the page preview, not the code. Describe your changes in terms of what changed on the page (\"the heading is now dark blue\"), never in terms of HTML tags or CSS properties.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITIES**\n- Your only source of requirements is the student's messages in the chat - ONLY respond to requests the student has explicitly made\n- Do not make any additional assumptions or decisions about the webpage.",
+        "buildHTML": "- Do NOT create a style.css file - put all css in a `<style>` tag in the head of the index.html file\n- Generate both HTML and CSS at the same time\n- Do NOT use IDs or classes on elements\n- Do NOT generate links or buttons\n- Do NOT generate `<script>` tags\n- Never generate placeholder images. If the student implies they want a new image, explain that images must be uploaded to the project first.\n- The student is looking at the page preview, not the code. Describe your changes in terms of what changed on the page (\"the heading is now dark blue\"), never in terms of HTML tags or CSS properties.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITIES**\n- Your only source of requirements is the student's messages in the chat - ONLY respond to requests the student has explicitly made\n- Do not make any additional assumptions or decisions about the webpage.",
+        "explainCode": "- The student is looking at the page preview, not the code. Explain in terms of what appears on the page, not tags or properties.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "hint": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Debug the Gap: Maya's Page",
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      h1 { \n        color: #ff0000;\n        background-color: #0000ff;\n      }\n      h2 { \n        color: #ff6600;\n        background-color: #ab11ab;\n      }\n      p { \n        color: #9900cc; \n        background-color: #00ffff;\n      }\n      li { \n        color: #0000ff; \n        background-color: #000000;\n      }\n      body { \n        background-color: #ffff00; \n      }\n    </style>\n  </head>\n  <body>\n    <h1>Photography Club</h1>\n    <p>We are a group of students who love taking photos. We explore different styles of photography, edit our work, and share it with the school community. Everyone is welcome — no experience needed!</p>\n\n    <h2>Upcoming Meetings</h2>\n    <ul>\n      <li>Monday, March 10 — Room 204, 3:30pm</li>\n      <li>Monday, March 17 — Room 204, 3:30pm</li>\n      <li>Monday, March 24 — Room 204, 3:30pm</li>\n    </ul>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "vision.md",
+          "contents": "I want a page for my school's photography club. Make it colorful so it stands out and gets people excited to join.\n\nThe page should have the club name at the top, a short description of what the club does, and a list of upcoming meeting times.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    },
+    "offer_browser_tts": "true",
+    "teacher_markdown": "**Intent:** Diagnosis and repair of an over-interpretation failure - AI took \"colorful\" literally and maximally. The skill: articulate what the vague word actually meant, then say it precisely. Students fix it entirely through conversation; the page's vision is quoted in the instructions so nothing requires opening files.\r\n\r\n**Circulation questions:**\r\n\r\n- \"In one sentence: what went wrong between Maya's vision and this page?\"\r\n- \"What did you say to AI that Maya didn't?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may fix symptoms one element at a time without naming the root cause - ask them to define what Maya meant by 'colorful' first\r\n- Students may over-correct to a boring page - re-read Maya's wish: fun and bright, not plain\r\n",
+    "require_edit_to_continue": "true"
+  },
+  "audit_log": "[{\"changed_at\": \"2026-07-03T00:00:00.000+00:00\", \"changed\": [\"cloned from \\\"hoai-web-design-v2-12a_pilot2_launch\\\" for intro-to-web-lab3\"], \"cloned_from\": \"hoai-web-design-v2-12a_pilot2_launch\"}]"
+}]]></config>
+</Weblab2>

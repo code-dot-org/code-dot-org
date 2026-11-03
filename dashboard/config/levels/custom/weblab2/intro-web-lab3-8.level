@@ -1,0 +1,63 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-16T16:17:11.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Brainstorm Before You Build\r\n\r\nAI isn't just a builder - it's also a good brainstorming partner. When you know the *feeling* you want but not the *look*, ask for ideas first.\r\n\r\nEli made this page about his favorite book series, and he has a wish:\r\n\r\n*\"I wanted it to feel like the book - dark and mysterious with a bit of magic to it. It just looks like a default webpage right now.\"*\r\n\r\n**Do This:**\r\n1. **Ask for ideas, not changes:** Tell AI Tutor about Eli's wish and ask for **three different style directions**, described in words.\r\n2. **Pick your favorite** (or mix two!).\r\n3. **Ask AI to apply it.** Then judge the preview against Eli's wish and Accept or Reject.\r\n\r\n> **Notice:** Brainstorming first means you choose the direction - instead of AI choosing for you.\r\n\r\nOnce the page feels dark, mysterious, and a bit magical, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "documentation",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- Do NOT create a style.css file - put all css in a `<style>` tag in the head of the index.html file\n- Generate both HTML and CSS at the same time\n- Do NOT use IDs or classes on elements\n- Do NOT generate links or buttons\n- Do NOT generate `<script>` tags\n- Never generate placeholder images. If the student implies they want a new image, explain that images must be uploaded to the project first.\n- The student is looking at the page preview, not the code. Describe your changes in terms of what changed on the page (\"the heading is now dark blue\"), never in terms of HTML tags or CSS properties.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITY**\n- If the student asks for ideas, options, or brainstorming: respond with 2-3 clearly named style directions described in plain, vivid language (colors, mood, feel). Do NOT generate or change any code until the student explicitly picks a direction and asks you to apply it.",
+        "buildHTML": "- Do NOT create a style.css file - put all css in a `<style>` tag in the head of the index.html file\n- Generate both HTML and CSS at the same time\n- Do NOT use IDs or classes on elements\n- Do NOT generate links or buttons\n- Do NOT generate `<script>` tags\n- Never generate placeholder images. If the student implies they want a new image, explain that images must be uploaded to the project first.\n- The student is looking at the page preview, not the code. Describe your changes in terms of what changed on the page (\"the heading is now dark blue\"), never in terms of HTML tags or CSS properties.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITY**\n- If the student asks for ideas, options, or brainstorming: respond with 2-3 clearly named style directions described in plain, vivid language. Do NOT generate or change any code until the student explicitly picks a direction and asks you to apply it.",
+        "documentation": "- When asked for ideas, give 2-3 clearly named style directions in plain, vivid language. No code.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "hint": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Brainstorm Before You Build",
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        font-family: sans-serif;\n        padding: 10px;\n        background-color: #ffffff;\n        color: #000000;\n      }\n      h1 {\n        font-size: 20px;\n      }\n      h2 {\n        font-size: 15px;\n      }\n      p {\n        font-size: 12px;\n      }\n      ol {\n        padding: 10px;\n      }\n      li {\n        margin: 5px;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Percy Jackson and the Olympians</h1>\n    <p>Percy Jackson and the Olympians is a fantasy series by Rick Riordan. It follows Percy Jackson, a twelve-year-old who discovers he is the son of a Greek god. I like it because I get to learn about Greek mythology but it's still funny and I like the characters.</p>\n    <h2>Books in the Series</h2>\n    <ol>\n      <li>The Lightning Thief</li>\n      <li>The Sea of Monsters</li>\n      <li>The Titan's Curse</li>\n      <li>The Battle of the Labyrinth</li>\n      <li>The Last Olympian</li>\n    </ol>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "offer_browser_tts": "true",
+    "teacher_markdown": "**Intent:** AI as ideation partner, not just code generator. When a student has a feeling (\"dark and mysterious\") but no concrete design, the strong move is to ask for options in words first, then choose. This keeps the student in the director's chair. The AI is configured to describe options without changing anything until the student picks one.\r\n\r\n**Circulation questions:**\r\n\r\n- \"What three directions did AI offer? Which did you pick, and why?\"\r\n- \"How is asking for ideas different from asking for a change?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may skip straight to \"make it dark and mysterious\" - that works, but ask them what they gave up (the choice between directions)\r\n- Students may treat AI's first idea as the only answer - remind them they can ask for three more\r\n",
+    "require_edit_to_continue": "true"
+  },
+  "audit_log": "[{\"changed_at\": \"2026-07-03T00:00:00.000+00:00\", \"changed\": [\"cloned from \\\"hoai-web-design-v2-12b_pilot2_launch\\\" for intro-to-web-lab3\"], \"cloned_from\": \"hoai-web-design-v2-12b_pilot2_launch\"}]"
+}]]></config>
+</Weblab2>
