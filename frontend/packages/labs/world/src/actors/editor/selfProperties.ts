@@ -16,7 +16,6 @@ import {
   mapWorkspaces,
   rewriteWorkspace,
   WORKSPACE_FILE,
-  workspaceViewOf,
 } from '../../blockly/rewriteWorkspaces';
 import {pascal} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
@@ -25,6 +24,7 @@ import {
   forgetPlacedProperty,
   renamePlacedProperty,
 } from '../../rules/rulePlacements';
+import {resolveRuleContents} from '../../rules/ruleReference';
 import {isActorData, type ActorData} from '../actorData';
 
 /** What a property's blocks are named by: `lives` → `LivesProperty`. */
@@ -49,7 +49,7 @@ export function propertyUses(
     .filter(([, file]) => WORKSPACE_FILE.test(file.name))
     .filter(([, file]) => {
       let uses = false;
-      rewriteWorkspace(workspaceViewOf(file.contents ?? ''), {
+      rewriteWorkspace(resolveRuleContents(file.contents ?? ''), {
         type(type) {
           // Its own `set` rows are the values it starts at, not uses.
           if (

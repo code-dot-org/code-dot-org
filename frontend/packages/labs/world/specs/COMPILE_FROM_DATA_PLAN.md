@@ -348,9 +348,15 @@ the data. In order, each its own commit:
    the same file as before, and the build no longer imports the lab. The
    DSL's `doc` for a second page of prose, which nothing called and the
    data has no place for, is gone, and so is its layout of the roots.
-2. Renames walk the data: a rule's keys that name something — its uses,
-   its traits' uses, its properties and its members — as the blocks they
-   stand for, beside the bodies, as an actor's are (`keyRows`).
+2. BUILT, November 2026. Renames walk the data. `rewriteWorkspace` walks
+   a rule's keys that name something — its name and ability, its uses,
+   properties, members and steps, and each trait's name, description and
+   theirs — as the blocks they stand for, the bodies among them
+   (`ruleKeyRows`), and reads them back (`withRuleKeyRows`), as it does an
+   actor's. `mapWorkspaces` and a rename hand a rule to the walk as its
+   data, and the searches for what uses a member or a property read it
+   so. A test reads every rule the repository builds back from its rows
+   unchanged; others rename a rule it uses and its own name.
 3. Readers read the data: `parseRuleMeta`, the generator, `ruleDataOf`,
    `rulesInScope`, `standInBlocks`, `catalogue`.
 4. The tests and the lesson checks write rules as data.

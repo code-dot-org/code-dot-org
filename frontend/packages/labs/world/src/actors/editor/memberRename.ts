@@ -16,13 +16,10 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {
-  mapWorkspaces,
-  WORKSPACE_FILE,
-  workspaceViewOf,
-} from '../../blockly/rewriteWorkspaces';
+import {mapWorkspaces, WORKSPACE_FILE} from '../../blockly/rewriteWorkspaces';
 import {designedName, pascal} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
+import {resolveRuleContents} from '../../rules/ruleReference';
 import {isActorData, type ActorMember} from '../actorData';
 
 /** What a member's blocks are named by: `heal by` → `HealByAction`. */
@@ -79,7 +76,7 @@ export function memberUses(
     .filter(([, file]) => {
       let parsed: unknown;
       try {
-        parsed = JSON.parse(workspaceViewOf(file.contents ?? ''));
+        parsed = JSON.parse(resolveRuleContents(file.contents ?? ''));
       } catch {
         return false;
       }

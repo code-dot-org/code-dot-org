@@ -9,11 +9,8 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {pathSlug} from '../blockly/domainBlocks';
-import {
-  rewriteWorkspace,
-  WORKSPACE_FILE,
-  workspaceViewOf,
-} from '../blockly/rewriteWorkspaces';
+import {rewriteWorkspace, WORKSPACE_FILE} from '../blockly/rewriteWorkspaces';
+import {resolveRuleContents} from '../rules/ruleReference';
 
 import {MEMBER_TYPE, SAYS_WORDS} from './renameThing';
 
@@ -59,7 +56,7 @@ export function actorUses(source: MultiFileSource, path: string): ActorUses {
     let names = false;
     // The rename's walk, asked without rewriting: it reports, and the
     // contents it would write are thrown away.
-    rewriteWorkspace(workspaceViewOf(file.contents ?? ''), {
+    rewriteWorkspace(resolveRuleContents(file.contents ?? ''), {
       type(type) {
         names ||= MEMBER_TYPE.exec(type)?.[2] === slug;
         return type;

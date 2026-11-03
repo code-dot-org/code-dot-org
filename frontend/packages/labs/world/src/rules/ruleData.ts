@@ -312,6 +312,114 @@ function readTrait(root: Block, made: {count: number}): RuleTrait | undefined {
   };
 }
 
+/** A definition's keys that name something, each as the block it stands for. */
+interface DefinitionRows {
+  uses: Block[];
+  properties: Block[];
+  members: Block[];
+  steps: Block[];
+}
+
+/**
+ * A rule's keys that name something — its name, its uses, properties,
+ * members and steps, and its traits with theirs — each as the block that
+ * says it, for a walk that knows a reference by a block's type and fields
+ * (`blockly/rewriteWorkspaces`), as an actor's are (`actorData.keyRows`).
+ * `withRuleKeyRows` reads them back.
+ */
+export interface RuleKeyRows extends DefinitionRows {
+  rule: Block;
+  traits: Array<DefinitionRows & {trait: Block}>;
+}
+
+const definitionRows = (
+  definition: Pick<RuleTrait, 'uses' | 'properties' | 'members' | 'steps'>,
+  trait: boolean,
+): DefinitionRows => ({
+  uses: (definition.uses ?? []).map(used =>
+    trait
+      ? {type: USE_TRAIT, fields: {TRAIT: used}}
+      : {type: USE_RULE, fields: {RULE: used}},
+  ),
+  properties: (definition.properties ?? []).map(writeProperty),
+  members: (definition.members ?? []).map(writeMember),
+  steps: (definition.steps ?? []).map(step => writeStep(step, trait)),
+});
+
+export const ruleKeyRows = (data: RuleData): RuleKeyRows => ({
+  rule: {type: RULE, fields: {NAME: data.name, ABILITY: data.ability}},
+  ...definitionRows(data, false),
+  traits: (data.traits ?? []).map(trait => ({
+    trait: {
+      type: TRAIT,
+      fields: {
+        NAME: trait.name,
+        ...(trait.description === undefined
+          ? {}
+          : {DESCRIPTION: trait.description}),
+      },
+    },
+    ...definitionRows(trait, true),
+  })),
+});
+
+/** A definition with what its rows now say; a row it cannot read keeps its key. */
+function withDefinitionRows(
+  definition: Pick<RuleTrait, 'uses' | 'properties' | 'members' | 'steps'>,
+  rows: DefinitionRows,
+  trait: boolean,
+): Pick<RuleTrait, 'uses' | 'properties' | 'members' | 'steps'> {
+  const next = {...definition};
+  if (definition.uses) {
+    next.uses = definition.uses.map(
+      (used, at) => oneField(rows.uses[at], trait ? 'TRAIT' : 'RULE') ?? used,
+    );
+  }
+  if (definition.properties) {
+    next.properties = definition.properties.map(
+      (property, at) => readProperty(rows.properties[at]) ?? property,
+    );
+  }
+  if (definition.members) {
+    next.members = definition.members.map(
+      (member, at) =>
+        readMember(rows.members[at], at, {reports: true}) ?? member,
+    );
+  }
+  if (definition.steps) {
+    next.steps = definition.steps.map(
+      (step, at) => readStep(rows.steps[at], trait) ?? step,
+    );
+  }
+  return next;
+}
+
+export function withRuleKeyRows(data: RuleData, rows: RuleKeyRows): RuleData {
+  const name = fieldsOf(rows.rule).NAME;
+  const ability = fieldsOf(rows.rule).ABILITY;
+  return {
+    ...data,
+    ...withDefinitionRows(data, rows, false),
+    name: typeof name === 'string' ? name : data.name,
+    ability: typeof ability === 'string' ? ability : data.ability,
+    ...(data.traits
+      ? {
+          traits: data.traits.map((trait, at) => {
+            const held = rows.traits[at];
+            const named = fieldsOf(held.trait).NAME;
+            const said = fieldsOf(held.trait).DESCRIPTION;
+            return {
+              ...trait,
+              ...withDefinitionRows(trait, held, true),
+              name: typeof named === 'string' ? named : trait.name,
+              ...(typeof said === 'string' ? {description: said} : {}),
+            };
+          }),
+        }
+      : {}),
+  };
+}
+
 /**
  * A `define rule` workspace as data, or nothing for one the data cannot
  * say whole: anything but one `define rule` and its traits at the top, a

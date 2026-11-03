@@ -10,7 +10,12 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {isActorData, keyRows, withKeyRows} from '../actors/actorData';
-import {asRuleData, ruleViewOf} from '../rules/ruleData';
+import {
+  isRuleData,
+  ruleKeyRows,
+  ruleViewOf,
+  withRuleKeyRows,
+} from '../rules/ruleData';
 import {resolveRuleContents} from '../rules/ruleReference';
 
 /** A hat's subject field (`eventSubject.SUBJECT_FIELD`), named here so this
@@ -82,12 +87,17 @@ export function rewriteWorkspace(
     }
   };
   // An actor's own keys name things too, and are walked as the blocks they
-  // stand for (`actorData.keyRows`).
+  // stand for (`actorData.keyRows`), and so do a rule's, whose bodies are
+  // among them (`ruleData.ruleKeyRows`).
   if (isActorData(parsed)) {
     const rows = keyRows(parsed);
     walk(parsed.blocks);
     walk(rows);
     parsed = withKeyRows(parsed, rows);
+  } else if (isRuleData(parsed)) {
+    const rows = ruleKeyRows(parsed);
+    walk(rows);
+    parsed = withRuleKeyRows(parsed, rows);
   } else {
     walk(parsed);
   }
@@ -133,17 +143,9 @@ export function mapWorkspaces(
     if (!WORKSPACE_FILE.test(file.name)) {
       continue;
     }
-    const held = resolveRuleContents(file.contents);
-    // A rule held as data, or as a reference, is read as its view and written
-    // back as data (`rules/ruleData`); one written in blocks stays in blocks.
-    const ruleView = file.name.endsWith('.rule') ? ruleViewOf(held) : held;
-    const ruleData = ruleView !== held;
-    const renamed = rewrite(ruleView);
+    const renamed = rewrite(resolveRuleContents(file.contents));
     if (renamed !== undefined) {
-      files[id] = {
-        ...file,
-        contents: ruleData ? asRuleData(renamed) : renamed,
-      };
+      files[id] = {...file, contents: renamed};
       changed = true;
     }
   }

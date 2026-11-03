@@ -168,7 +168,8 @@ Three readers had to learn the data shape on the way. `parseRuleMeta`
 reads a data-shaped rule through its view. A rewrite across the project
 (`mapWorkspaces`) and a rename (`renameThing`) write a rule they found as
 data, or as a reference, back as data; one written in blocks stays in
-blocks.
+blocks. Both walk the data itself since (COMPILE_FROM_DATA_PLAN.md, 5e,
+step 2).
 
 In the browser: the starter's Gravity opens from Rules in Play; its trait
 opens with focus on its heading and the trail says so, and back puts focus

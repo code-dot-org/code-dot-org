@@ -8,6 +8,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import type {ActorData} from '../../actors/actorData';
 import {actorDocument} from '../../actors/actorDocument';
 import {renameReferences} from '../../files/renameThing';
+import type {RuleData} from '../../rules/ruleData';
 import {renameRuleInSource} from '../renameRule';
 import {rewriteWorkspace} from '../rewriteWorkspaces';
 
@@ -128,5 +129,58 @@ describe('an actor’s own keys, renamed', () => {
     expect(
       renameReferences(source, {from: 'actors/coin', to: 'actors/gem'}),
     ).toBe(source);
+  });
+});
+
+describe('a rule’s own keys, renamed', () => {
+  const KEYS: RuleData = {
+    type: 'rule',
+    name: 'Keys',
+    ability: 'Has Keys',
+    uses: ['Gravity'],
+    steps: [
+      {
+        name: 'fall',
+        phase: 'move',
+        body: {
+          type: 'world_set_Gravity_StrengthProperty',
+          inputs: {
+            VALUE: {shadow: {type: 'math_number', fields: {NUM: 2}}},
+          },
+        },
+      },
+    ],
+    traits: [{name: 'Opens', uses: ['Gravity#AffectedByGravityTrait']}],
+  };
+  const project = (): MultiFileSource => ({
+    folders: {f: {id: 'f', name: 'rules', parentId: '0', open: true}},
+    files: {
+      keys: {
+        id: 'keys',
+        name: 'keys.rule',
+        language: 'rule',
+        folderId: 'f',
+        contents: JSON.stringify(KEYS),
+      },
+    },
+    openFiles: [],
+  });
+  const keysIn = (source: MultiFileSource): RuleData =>
+    JSON.parse(source.files.keys.contents) as RuleData;
+
+  it('follows a rule it uses: the use, a trait’s use and a body', () => {
+    const keys = keysIn(renameRuleInSource(project(), 'Gravity', 'Weight'));
+
+    expect(keys.uses).toEqual(['Weight']);
+    expect(keys.traits?.[0].uses).toEqual(['Weight#AffectedByGravityTrait']);
+    expect(keys.steps?.[0].body?.type).toBe(
+      'world_set_Weight_StrengthProperty',
+    );
+  });
+
+  it('follows its own name', () => {
+    expect(keysIn(renameRuleInSource(project(), 'Keys', 'Locks')).name).toBe(
+      'Locks',
+    );
   });
 });
