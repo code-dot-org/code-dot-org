@@ -146,7 +146,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
       {confirming && (
         <MuiDialog
           title="Replace this image?"
-          description="A new picture takes its place. Your game keeps using the image by its name."
+          description="A new picture takes its place."
           onClose={() => setConfirming(false)}
           secondaryButtonProps={{
             children: 'Cancel',
