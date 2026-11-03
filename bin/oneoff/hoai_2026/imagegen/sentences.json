@@ -205,19 +205,12 @@
     ],
     "placeMoods": [
       {
-        "id": "sunny",
-        "text": "sunny",
-        "emoji": "☀️"
+        "id": "underwater",
+        "text": "underwater"
       },
       {
-        "id": "misty",
-        "text": "misty",
-        "emoji": "🌫️"
-      },
-      {
-        "id": "frozen",
-        "text": "frozen",
-        "emoji": "❄️"
+        "id": "futuristic",
+        "text": "futuristic"
       },
       {
         "id": "spooky",
@@ -225,26 +218,61 @@
         "emoji": "👻"
       },
       {
-        "id": "peaceful",
-        "text": "peaceful",
-        "emoji": "🕊️"
+        "id": "snowy",
+        "text": "snowy"
+      },
+      {
+        "id": "outerspace",
+        "text": "outer space"
+      },
+      {
+        "id": "tropical",
+        "text": "tropical"
+      },
+      {
+        "id": "frozen",
+        "text": "frozen",
+        "emoji": "❄️"
+      },
+      {
+        "id": "misty",
+        "text": "misty",
+        "emoji": "🌫️"
+      },
+      {
+        "id": "overgrown",
+        "text": "overgrown"
+      },
+      {
+        "id": "ancient",
+        "text": "ancient"
+      },
+      {
+        "id": "cheerful",
+        "text": "cheerful"
       }
     ],
     "places": [
       {
-        "id": "forest",
-        "text": "forest",
-        "emoji": "🌲"
+        "id": "city",
+        "text": "city",
+        "emoji": "🏙️"
       },
       {
-        "id": "cave",
-        "text": "cave",
-        "emoji": "🕳️"
+        "id": "clouds",
+        "text": "clouds"
       },
       {
-        "id": "beach",
-        "text": "beach",
-        "emoji": "🏖️"
+        "id": "candyland",
+        "text": "candyland"
+      },
+      {
+        "id": "planet",
+        "text": "planet"
+      },
+      {
+        "id": "village",
+        "text": "village"
       },
       {
         "id": "castle",
@@ -252,14 +280,52 @@
         "emoji": "🏰"
       },
       {
-        "id": "city",
-        "text": "city",
-        "emoji": "🏙️"
+        "id": "cave",
+        "text": "cave",
+        "emoji": "🕳️"
       },
       {
-        "id": "jungle",
-        "text": "jungle",
-        "emoji": "🌴"
+        "id": "volcano",
+        "text": "volcano"
+      },
+      {
+        "id": "field",
+        "text": "field"
+      },
+      {
+        "id": "swamp",
+        "text": "swamp"
+      },
+      {
+        "id": "island",
+        "text": "island"
+      },
+      {
+        "id": "forest",
+        "text": "forest",
+        "emoji": "🌲"
+      },
+      {
+        "id": "mountains",
+        "text": "mountains"
+      }
+    ],
+    "placeViews": [
+      {
+        "id": "outside",
+        "text": "outside"
+      },
+      {
+        "id": "inside",
+        "text": "inside"
+      },
+      {
+        "id": "faraway",
+        "text": "faraway"
+      },
+      {
+        "id": "closeup",
+        "text": "close up"
       }
     ],
     "expressions": [
@@ -602,6 +668,16 @@
         },
         {
           "slot": "place"
+        },
+        {
+          "phrase": [
+            {
+              "text": ", seen from "
+            },
+            {
+              "slot": "view"
+            }
+          ]
         }
       ],
       "slots": {
@@ -613,6 +689,10 @@
           "label": "place",
           "words": "places",
           "required": true
+        },
+        "view": {
+          "label": "view",
+          "words": "placeViews"
         }
       }
     },
