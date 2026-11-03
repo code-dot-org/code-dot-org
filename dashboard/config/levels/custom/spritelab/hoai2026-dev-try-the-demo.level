@@ -256,9 +256,9 @@
                       "type": "spritelab2_playSoundEffect",
                       "fields": {
                         "WAVE": "triangle",
-                        "PITCH": "middle",
-                        "LENGTH": "medium",
-                        "PATTERN": "steady"
+                        "PITCH": "low",
+                        "LENGTH": "short",
+                        "PATTERN": "wobble"
                       }
                     }
                   }
@@ -274,9 +274,9 @@
                     "block": {
                       "type": "spritelab2_playSoundEffect",
                       "fields": {
-                        "WAVE": "square",
-                        "PITCH": "high",
-                        "LENGTH": "short",
+                        "WAVE": "double",
+                        "PITCH": "low",
+                        "LENGTH": "medium",
                         "PATTERN": "slide up"
                       }
                     }
@@ -301,7 +301,7 @@
                         "block": {
                           "type": "spritelab2_playSoundEffect",
                           "fields": {
-                            "WAVE": "triangle",
+                            "WAVE": "square",
                             "PITCH": "low",
                             "LENGTH": "short",
                             "PATTERN": "slide down"
@@ -322,10 +322,10 @@
                     "block": {
                       "type": "spritelab2_playSoundEffect",
                       "fields": {
-                        "WAVE": "sawtooth",
-                        "PITCH": "middle",
-                        "LENGTH": "short",
-                        "PATTERN": "wobble"
+                        "WAVE": "sine",
+                        "PITCH": "low",
+                        "LENGTH": "medium",
+                        "PATTERN": "slide down"
                       }
                     }
                   }
