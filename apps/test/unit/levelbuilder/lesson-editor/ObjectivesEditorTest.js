@@ -105,10 +105,6 @@ describe('ObjectivesEditor', () => {
         scriptLevels={[{id: '5', label: '1. level one'}]}
       />
     );
-    wrapper
-      .find('button')
-      .filterWhere(b => b.text() === 'Tag levels')
-      .simulate('click');
     wrapper.find('input[type="checkbox"]').simulate('change');
     expect(updateObjectives).toHaveBeenCalledWith([
       {key: '1', description: 'description', scriptLevelIds: ['5']},
