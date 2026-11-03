@@ -610,11 +610,12 @@ $frame-tile-pad: 4px;
 $frame-tile-border: 2px;
 $frame-tile-gap: 6px;
 $frame-group-gap: 14px;
-// A character set's five tiles side by side.
+// A character set's tiles side by side, as many as its frames.
+$strip-frames: 5;
 $frame-tile-edge: $frame-tile-pad + $frame-tile-border;
 $frame-tile-width: $frame-tile-canvas + 2 * $frame-tile-edge;
 $frame-strip-gaps: 2 * $frame-tile-gap + 2 * $frame-group-gap;
-$frame-strip-width: 5 * $frame-tile-width + $frame-strip-gaps;
+$frame-strip-width: $strip-frames * $frame-tile-width + $frame-strip-gaps;
 
 .frameStrip {
   display: flex;

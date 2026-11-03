@@ -5,11 +5,7 @@
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {toImage} from '@cdo/apps/imageUtils';
-import {
-  AnimationPoses,
-  FrameSize,
-  standingFrameIndex,
-} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import {standingFrameIndex} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {DEFAULT_IMAGE_STYLE} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
 import {blankPaintImage} from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
 import {EditHistory} from '@cdo/apps/p5lab/spritelab/lab2/views/components/EditorStrip';
@@ -44,13 +40,7 @@ export interface Drawing {
   pixelGridSize?: number;
   recentColors?: PixelEditorSaveMeta['recentColors'];
   /** A character set: the frame on the canvas is one cell of this strip. */
-  sheet?: {
-    src: string;
-    frameSize: FrameSize;
-    poses: AnimationPoses;
-    index: number;
-    count: number;
-  };
+  sheet?: NonNullable<ProjectImage['sheet']> & {index: number; count: number};
 }
 
 /** The parts of the pixel editor this hook uses. */

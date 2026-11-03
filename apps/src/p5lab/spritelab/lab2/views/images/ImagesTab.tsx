@@ -273,10 +273,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const ownWorkPane = ownWork && !wordsAsked && editedMode() === 'pane';
   // The frame of a character set picked in the row under the frame; the
   // tools open on it, and a pick while they are open is kept for after.
-  const [restFrame, setRestFrame] = useState<number | null>(null);
-  useEffect(() => {
-    setRestFrame(null);
-  }, [chosenId]);
+  const [restPick, setRestPick] = useState<{
+    key: string;
+    index: number;
+  } | null>(null);
+  const restFrame =
+    restPick && restPick.key === chosenImage?.key ? restPick.index : null;
   const restFrameRef = useRef(restFrame);
   restFrameRef.current = restFrame;
   // Free play paints every image in place, with the words beside the
@@ -487,7 +489,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 count={sheetCount}
                 selected={shownFrame}
                 onSelect={index => {
-                  setRestFrame(index);
+                  if (chosenImage) {
+                    setRestPick({key: chosenImage.key, index});
+                  }
                   if (drawingSheet) {
                     tools.selectFrame(index);
                   }

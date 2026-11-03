@@ -22,11 +22,7 @@ import {
   ImageSubject,
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
-import {
-  AnimationPoses,
-  FrameSize,
-  PoseKey,
-} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import {PoseKey} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import AnimatedSheetPreview from '@cdo/apps/p5lab/spritelab/lab2/views/AnimatedSheetPreview';
 
 import {ProjectImage} from './projectImages';
@@ -110,7 +106,7 @@ interface ImageListProps {
       frames image as it is now (the tools' copy while they are open). */
   playing?: {
     key: string;
-    sheet: {src: string; frameSize: FrameSize; poses: AnimationPoses};
+    sheet: NonNullable<ProjectImage['sheet']>;
     only: PoseKey;
   };
 }
