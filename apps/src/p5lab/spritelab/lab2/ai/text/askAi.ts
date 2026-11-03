@@ -57,6 +57,22 @@ class AskAiTimeoutError extends Error {
   }
 }
 
+/**
+ * What to show a student when askAiText rejects. Lives here because the
+ * error types it reads are private to this module.
+ */
+export function askAiErrorMessage(error: unknown): string {
+  if (error instanceof AskAiError) {
+    return error.phase === 'prompt'
+      ? 'That question is not allowed. Try asking something else.'
+      : 'That answer is not allowed. Try asking something else.';
+  }
+  if (error instanceof AskAiTimeoutError) {
+    return 'The AI took too long to answer. Try again.';
+  }
+  return 'The AI could not answer. Try again.';
+}
+
 function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   let timer: number;
   const deadline = new Promise<never>((_, reject) => {

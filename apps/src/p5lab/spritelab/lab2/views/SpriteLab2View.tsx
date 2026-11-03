@@ -111,6 +111,7 @@ import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
 import spriteLab2Reducer, {
+  clearAskAi,
   ExternalSceneOption,
   MusicProjectOption,
   resetSpriteLab2,
@@ -151,6 +152,7 @@ import {useWorldStartPattern} from '../worldStartPattern';
 
 import BlockCatalogDialog from './BlockCatalogDialog';
 import {isPointerClick} from './blurAfterPointerClick';
+import AskAiIndicator from './components/AskAiIndicator';
 import Callout from './components/Callout';
 import EditorStrip from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
@@ -1287,6 +1289,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [dispatch, getCode, requestThumbnail]);
 
   const activePrompt = useAppSelector(state => state.spriteLab2.prompt);
+  const askAiStatus = useAppSelector(state => state.spriteLab2.askAi);
+  const handleAskAiExpired = useCallback(
+    () => dispatch(clearAskAi()),
+    [dispatch]
+  );
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -2541,15 +2548,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               />
             }
             playBar={
-              <PlayBar
-                playing={activeTab === 'Play'}
-                arrows={arrowSet}
-                onPlay={handlePlayClick}
-                onStop={stopTab ? handleStopClick : undefined}
-                // A level pinned to one scene has one Play, for that scene.
-                onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
-                playSceneHidden={activeScene.id === scenes[0].id}
-              />
+              <>
+                <PlayBar
+                  playing={activeTab === 'Play'}
+                  arrows={arrowSet}
+                  onPlay={handlePlayClick}
+                  onStop={stopTab ? handleStopClick : undefined}
+                  // A level pinned to one scene has one Play, for that scene.
+                  onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
+                  playSceneHidden={activeScene.id === scenes[0].id}
+                />
+                <AskAiIndicator
+                  status={askAiStatus}
+                  onFailureExpired={handleAskAiExpired}
+                />
+              </>
             }
             below={
               panelIsSidebar ? (

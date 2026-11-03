@@ -1,0 +1,20 @@
+// Pinned to the right end of the play bar rather than placed in its flex
+// row, so appearing mid-game cannot shift the buttons under a finger.
+// Nothing here is clickable, so it leaves the bar's pointer-events alone:
+// the Blockly workspace sits under that strip.
+.askAiIndicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 50%;
+  color: var(--text-neutral-primary);
+}
+
+// The spinner and its label stay on one line; the bar is too short to grow.
+.pending {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
