@@ -110,8 +110,11 @@ export default function useImageWriter({
 
   const write = useCallback(
     (target: ImageTarget, patch: AnimationPatch): string => {
-      if (target.key && propsOf(target.key)) {
-        noteUrl(repointAnimation(dispatch, target.key, patch));
+      if (target.key) {
+        // An image deleted while its save was out stays deleted.
+        if (propsOf(target.key)) {
+          noteUrl(repointAnimation(dispatch, target.key, patch));
+        }
         return target.key;
       }
       const name = nextImageName(

@@ -153,6 +153,18 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
+  it('makes nothing of a save for an image deleted meanwhile', async () => {
+    const {writer} = renderWriter();
+    await act(async () => {
+      await writer().acceptGenerated(
+        {key: 'gone', imageType: 'sprite'},
+        result('late.png')
+      );
+    });
+    expect(repointAnimation).not.toHaveBeenCalled();
+    expect(createNamedAnimation).not.toHaveBeenCalled();
+  });
+
   it('reclaims the session uploads nothing points at when it ends', async () => {
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer} = renderWriter();
