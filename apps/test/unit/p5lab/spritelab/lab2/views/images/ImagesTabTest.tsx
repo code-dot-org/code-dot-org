@@ -123,6 +123,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
           toolbar: <span>toolbar</span>,
           canvas: <span>canvas</span>,
           save: () => onSave('data:png', {pixelGridSize: 1}),
+          snapshot: () => null,
           canSave: true,
           edited,
         })}

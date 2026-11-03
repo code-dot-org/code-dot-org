@@ -122,6 +122,9 @@ interface PixelEditorParts {
   canSave: boolean;
   /** A stroke has landed since the image opened. */
   edited: boolean;
+  /** A copy of the display canvas as it is now, checkerboard included, or
+      null before it exists. */
+  snapshot: () => HTMLCanvasElement | null;
 }
 
 /** Undo and redo as a host's own buttons need them. */
@@ -1461,6 +1464,18 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     canSave: loaded,
     edited: canUndo,
     save: handleSave,
+    snapshot: () => {
+      const display = displayRef.current;
+      const copy = display && document.createElement('canvas');
+      const context = copy?.getContext('2d');
+      if (!display || !copy || !context) {
+        return null;
+      }
+      copy.width = display.width;
+      copy.height = display.height;
+      context.drawImage(display, 0, 0);
+      return copy;
+    },
     toolbar: (
       <div
         data-pixel-editor=""

@@ -6,10 +6,7 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {toImage} from '@cdo/apps/imageUtils';
-import PixelEditor, {
-  PixelEditorSaveMeta,
-} from '@cdo/apps/pixelEditor/PixelEditor';
+import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
@@ -18,9 +15,7 @@ import {
 } from '../../ai/images/imageGeneration';
 import {imageKindLabel, ImageSubject, ImageType} from '../../ai/images/types';
 import {onTrimsUpdated, trimAnimationListImages} from '../../imageTrim';
-import {DEFAULT_IMAGE_STYLE} from '../../levelMode';
-import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
-import EditorStrip from '../components/EditorStrip';
+import {BACKGROUND_GROUND_COLOR} from '../../paintBlank';
 import EditorStrip, {EditHistory} from '../components/EditorStrip';
 import {
   FREEPLAY_BRUSH_SIZES,
@@ -41,8 +36,9 @@ import ImageList, {DraftEntry, NewImageKind} from './ImageList';
 import MakePane from './MakePane';
 import OwnWorkPane from './OwnWorkPane';
 import PaintPlaceholder from './PaintPlaceholder';
-import {ImageProps, listProjectImages, ProjectImage} from './projectImages';
+import {listProjectImages, ProjectImage} from './projectImages';
 import BehindTheScenes from './teaching/BehindTheScenes';
+import useDrawing from './useDrawing';
 import useImageWriter, {ImageTarget} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
@@ -77,29 +73,9 @@ interface ImagesTabProps {
   onDrawingHistory?: (history: EditHistory | null) => void;
 }
 
-/** Loads and decodes a picture, for the frame to paint at once; a failure
-    is left for the editor, which loads the same picture, to report. */
-async function warmImage(src: string): Promise<HTMLImageElement | undefined> {
-  try {
-    const image = await toImage(src);
-    await image.decode?.();
-    return image;
-  } catch {
-    return undefined;
-  }
-}
-
 const DRAFT_ID = 'draft';
 // The pane's width before the preview column has reported its own.
 export const DEFAULT_PANE_WIDTH = 280;
-// A pause this long after a stroke saves what is drawn, so the image is the
-// project's as it is drawn: the list's tile, the World palette and the next
-// run all follow it.
-const STROKE_SAVE_MS = 800;
-// A pause's save writes the pixels into the project; the file behind them
-// goes up at most this often, and when the drawing is done. The project's
-// own saving has a throttle of its own.
-const UPLOAD_GAP_MS = 5000;
 
 /** How an image the student drew on is shown. By default it opens in the
     paint tools, as the work it is, with Replace image the way to the
@@ -110,20 +86,6 @@ type EditedMode = 'paint' | 'pane' | 'generate';
 function editedMode(): EditedMode {
   const value = queryParams('images-edited');
   return value === 'pane' || value === 'generate' ? value : 'paint';
-}
-
-/** A drawing in progress: what it writes to, and what the editor opened. */
-interface Drawing {
-  /** Tells a save in flight which drawing it belongs to; a later drawing
-      is left alone. */
-  id: number;
-  target: ImageTarget;
-  imageUrl: string;
-  /** The picture decoded ahead, shown over the canvas until the tools
-      have their own copy. */
-  picture?: HTMLImageElement;
-  pixelGridSize?: number;
-  recentColors?: PixelEditorSaveMeta['recentColors'];
 }
 
 const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
@@ -250,48 +212,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     [writer, land]
   );
 
-  // Drawing: the pixel editor in the frame, on the image or a blank. The
-  // drawing saves itself a pause after each stroke, on Done, and when the
-  // tab is left; a blank with no stroke yet is nothing to save.
-  const [drawing, setDrawing] = useState<Drawing | null>(null);
-  const drawingRef = useRef(drawing);
-  drawingRef.current = drawing;
-  // The drawing a landing picture replaced: a save of it still in flight
-  // must not repoint the image back to the drawn pixels.
-  const abandonedRef = useRef<number | null>(null);
-  // Strokes since the last save, and the save the editor hands out.
-  const dirtyRef = useRef(false);
-  const saveRef = useRef<(() => void) | null>(null);
-  const idleTimerRef = useRef<number>();
-  // One save in flight at a time. A save asked for meanwhile waits as the
-  // pending one; each carries the whole picture, so only the latest matters.
-  const inFlightRef = useRef(false);
-  const pendingRef = useRef<{
-    dataURI: string;
-    meta: PixelEditorSaveMeta;
-    current: Drawing;
-    final: boolean;
-  } | null>(null);
-  // When the drawing's file last went up, and whether pixels saved since
-  // are still owed to it.
-  const lastUploadRef = useRef(0);
-  const uploadOwedRef = useRef(false);
-  const leaveAfterSaveRef = useRef(false);
-  const clearIdleTimer = () => {
-    window.clearTimeout(idleTimerRef.current);
-    idleTimerRef.current = undefined;
-  };
-  const stopDrawing = useCallback(() => {
-    clearIdleTimer();
-    dirtyRef.current = false;
-    pendingRef.current = null;
-    lastUploadRef.current = 0;
-    uploadOwedRef.current = false;
-    saveRef.current = null;
-    leaveAfterSaveRef.current = false;
-    setDrawing(null);
-  }, []);
-  useEffect(() => clearIdleTimer, []);
+  const tools = useDrawing({
+    images,
+    saveEdited: writer.saveEdited,
+    storePicture: land,
+    active,
+    onDrawingHistory,
+  });
+  const {drawing, startDrawing, leaveDrawing, finishDrawing, stopDrawing} =
+    tools;
   // A chosen image that is gone (deleted) gives way to the first image
   // left, or to nothing; tools open on it close without saving, since a
   // save would make a new image of the deleted pixels.
@@ -303,241 +232,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     ) {
       return;
     }
-    if (drawingRef.current?.target.key === chosenId) {
+    if (drawing?.target.key === chosenId) {
       stopDrawing();
     }
     startSession(images[0]?.key ?? null);
-  }, [chosenId, draft, images, startSession, stopDrawing]);
-  // Leaving the level mid-drawing (the panel's Continue, or navigation)
-  // unmounts the tab with no Done: whatever the picture is owed goes up
-  // now, from the editor's canvas while it still exists.
-  useEffect(
-    () => () => {
-      if (drawingRef.current && (dirtyRef.current || uploadOwedRef.current)) {
-        leaveAfterSaveRef.current = true;
-        saveRef.current?.();
-      }
-    },
-    []
-  );
-  // The host's undo and redo go once the drawing ends, or the tab goes; a
-  // change of picture within one drawing keeps them.
+  }, [chosenId, draft, images, startSession, stopDrawing, drawing]);
   const drawingOpen = !!drawing;
-  useEffect(() => {
-    if (!drawingOpen) {
-      return;
-    }
-    return () => onDrawingHistory?.(null);
-  }, [drawingOpen, onDrawingHistory]);
-  // The making the image had when the tools opened: a different one
-  // arriving means a picture landed over the painting.
-  const drawingGenerationRef = useRef<ImageProps['generation']>();
-  const drawingIdRef = useRef(0);
-  // The canvas as it was when its image was left for another, checker and
-  // all, shown until the next image's tools have painted; a fresh editor's
-  // canvas is empty, and the frame's own bright checker would show through
-  // the picture's transparent pixels. Remembers which drawing it left.
-  const paintStackRef = useRef<HTMLDivElement>(null);
-  const leftCanvasRef = useRef<{canvas: HTMLCanvasElement; id: number} | null>(
-    null
-  );
-  const startDrawing = useCallback(
-    async (target: ImageTarget) => {
-      const existing = target.key
-        ? images.find(image => image.key === target.key)
-        : undefined;
-      drawingGenerationRef.current = existing?.props.generation;
-      leaveAfterSaveRef.current = false;
-      const id = ++drawingIdRef.current;
-      if (existing?.src) {
-        // The tools paint nothing until their own copy of the picture is
-        // decoded; decoded here first, the frame shows it from its first
-        // paint, so a switch shows the picture, not white.
-        const picture = await warmImage(existing.src);
-        if (id !== drawingIdRef.current) {
-          return;
-        }
-        setDrawing({
-          id,
-          target,
-          imageUrl: existing.src,
-          picture,
-          pixelGridSize: existing.props.pixelGridSize,
-          recentColors: existing.props.recentColors,
-        });
-        return;
-      }
-      const blank = blankPaintImage(target.imageType, DEFAULT_IMAGE_STYLE);
-      setDrawing({
-        id,
-        target,
-        imageUrl: blank.dataURI,
-        pixelGridSize: blank.pixelGridSize,
-      });
-    },
-    [images]
-  );
-  // Once the tools have their own copy, the decoded picture is let go, and
-  // so is the canvas left behind, once the tools painted a later drawing.
-  const dropPicture = useCallback(() => {
-    setDrawing(d => {
-      if (d && leftCanvasRef.current && leftCanvasRef.current.id !== d.id) {
-        leftCanvasRef.current = null;
-      }
-      return d?.picture ? {...d, picture: undefined} : d;
-    });
-  }, []);
-  const noteStroke = useCallback(() => {
-    dirtyRef.current = true;
-    clearIdleTimer();
-    idleTimerRef.current = window.setTimeout(() => {
-      if (dirtyRef.current) {
-        saveRef.current?.();
-      }
-    }, STROKE_SAVE_MS);
-  }, []);
-  // `current` is the drawing as the save knows it: the state, or for a
-  // pending save what the save before it made, since React may not have
-  // rendered that yet.
-  // `final`: the drawing's last save (Done, the tab or another image), so
-  // the file goes up and, if the drawing is still the open one, the tools
-  // close after it.
-  const runSave = useCallback(
-    async (
-      dataURI: string,
-      meta: PixelEditorSaveMeta,
-      current: Drawing,
-      final: boolean
-    ) => {
-      if (abandonedRef.current === current.id) {
-        pendingRef.current = null;
-        return;
-      }
-      inFlightRef.current = true;
-      let saved = current;
-      try {
-        // A new image needs its file; after that the file follows every few
-        // seconds, and when the drawing is done.
-        const upload =
-          !current.target.key ||
-          final ||
-          Date.now() - lastUploadRef.current >= UPLOAD_GAP_MS;
-        const key = await land(
-          current.target,
-          () =>
-            writer.saveEdited(current.target, dataURI, meta, {
-              upload,
-              stillWanted: () => abandonedRef.current !== current.id,
-            }),
-          false
-        );
-        if (abandonedRef.current === current.id) {
-          return;
-        }
-        if (upload) {
-          lastUploadRef.current = Date.now();
-        }
-        if (drawingRef.current?.id === current.id) {
-          uploadOwedRef.current = !upload;
-        }
-        // A blank that was saved is an image now: later saves replace it.
-        saved = {...current, target: {...current.target, key}};
-        setDrawing(d =>
-          d && d.id === current.id ? {...d, target: {...d.target, key}} : d
-        );
-      } catch {
-        // The picture is still on the canvas. It is marked unsaved, so the
-        // next pause, Done or leaving the tab tries again from the canvas
-        // as it is then; a pending save would only carry older pixels.
-        dirtyRef.current = true;
-        uploadOwedRef.current = true;
-        pendingRef.current = null;
-        leaveAfterSaveRef.current = false;
-        inFlightRef.current = false;
-        return;
-      } finally {
-        inFlightRef.current = false;
-      }
-      const pending = pendingRef.current;
-      if (pending) {
-        pendingRef.current = null;
-        // The pending save's drawing, as this save left it if it is the
-        // same one.
-        await runSave(
-          pending.dataURI,
-          pending.meta,
-          pending.current.id === saved.id ? saved : pending.current,
-          pending.final
-        );
-      } else if (final && drawingRef.current?.id === saved.id) {
-        stopDrawing();
-      }
-    },
-    [land, writer, stopDrawing]
-  );
-  const handleDrawingSave = useCallback(
-    (dataURI: string, meta: PixelEditorSaveMeta) => {
-      const current = drawingRef.current;
-      if (!current) {
-        return;
-      }
-      clearIdleTimer();
-      dirtyRef.current = false;
-      const final = leaveAfterSaveRef.current;
-      if (inFlightRef.current) {
-        pendingRef.current = {dataURI, meta, current, final};
-        return;
-      }
-      runSave(dataURI, meta, current, final);
-    },
-    [runSave]
-  );
-  // Another image, or a new slot, while a drawing is open: its last pixels
-  // go up in the background and the tools close at once, so what comes
-  // next shows without waiting on that save.
-  // `keep`: the next image's tools are about to take the canvas over, so
-  // the old one stays up until they do, instead of the frame showing the
-  // resting preview for the frames it takes to cut a set's standing frame.
-  // Nothing drawn in that moment is saved: the save hook is gone.
-  const leaveDrawing = useCallback((keep = false) => {
-    if (dirtyRef.current || uploadOwedRef.current) {
-      leaveAfterSaveRef.current = true;
-      saveRef.current?.();
-    }
-    clearIdleTimer();
-    dirtyRef.current = false;
-    uploadOwedRef.current = false;
-    leaveAfterSaveRef.current = false;
-    saveRef.current = null;
-    if (!keep) {
-      setDrawing(null);
-      return;
-    }
-    const shown = paintStackRef.current?.querySelector('canvas');
-    const copy = shown && document.createElement('canvas');
-    const context = copy?.getContext('2d');
-    if (shown && copy && context) {
-      copy.width = shown.width;
-      copy.height = shown.height;
-      context.drawImage(shown, 0, 0);
-      leftCanvasRef.current = {canvas: copy, id: drawingIdRef.current};
-    }
-  }, []);
-  // Done: what is drawn goes up, including pixels a pause's save kept local.
-  const finishDrawing = useCallback(() => {
-    if (dirtyRef.current || uploadOwedRef.current) {
-      leaveAfterSaveRef.current = true;
-      saveRef.current?.();
-    } else {
-      stopDrawing();
-    }
-  }, [stopDrawing]);
-  // Leaving the tab is Done: what was drawn is saved and the tools close.
-  useEffect(() => {
-    if (!active && drawingRef.current) {
-      finishDrawing();
-    }
-  }, [active, finishDrawing]);
   // Free play has every tool; a level before it keeps the few that draw.
   const limitedTools = !editingOffered;
   // Character sets are sheets of frames; the editor paints one image.
@@ -594,14 +294,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     editedMode() === 'paint' &&
     !!editingOffered &&
     !!chosenImage?.props.generation &&
-    chosenImage.props.generation !== drawingGenerationRef.current &&
+    chosenImage.props.generation !== tools.openedOnGeneration &&
     (drawing.target.key === chosenImage.key || drawing.target.key === null);
+  const {abandonDrawing} = tools;
   useEffect(() => {
     if (landedOverPainting) {
-      abandonedRef.current = drawingRef.current?.id ?? null;
-      stopDrawing();
+      abandonDrawing();
     }
-  }, [landedOverPainting, stopDrawing]);
+  }, [landedOverPainting, abandonDrawing]);
 
   const deleteOffered = !!editingOffered;
   // A level about one image offers the plus until that image exists, with
@@ -771,7 +471,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
               return (
                 <PixelEditor
                   imageUrl={drawing.imageUrl}
-                  onReady={dropPicture}
+                  onReady={tools.releasePlaceholder}
                   knownPixelGrid={drawing.pixelGridSize}
                   initialRecentColors={drawing.recentColors}
                   opaqueGround={
@@ -792,18 +492,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   hostUndoRedo
                   onHistoryChange={onDrawingHistory}
                   canvasClassName={styles.paintCanvas}
-                  onEdit={noteStroke}
-                  onSave={handleDrawingSave}
+                  onEdit={tools.scheduleStrokeSave}
+                  onSave={tools.handleSave}
                 >
                   {editor => {
-                    saveRef.current = editor.save;
+                    tools.attachEditor(editor);
                     return (
                       <>
                         {frame(
-                          <div
-                            ref={paintStackRef}
-                            className={styles.paintStack}
-                          >
+                          <div className={styles.paintStack}>
                             {editor.canvas}
                             {/* The canvas being left, or the frame's own
                                 picture, covers the canvas until the editor
@@ -811,10 +508,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                                 blank. */}
                             {!editor.ready && (
                               <PaintPlaceholder
-                                picture={
-                                  leftCanvasRef.current?.canvas ??
-                                  drawing.picture
-                                }
+                                picture={tools.placeholderPicture}
                                 src={drawing.imageUrl}
                                 pixelated={!!drawing.pixelGridSize}
                               />
