@@ -38,34 +38,29 @@ const AskAiIndicator: React.FunctionComponent<AskAiIndicatorProps> = ({
   if (!status) {
     return null;
   }
-  if (status.state === 'failed') {
-    return (
-      <Alert
-        className={styles.askAiIndicator}
-        type="danger"
-        size="xs"
-        text={status.message}
-      />
-    );
-  }
   return (
-    <Alert
-      className={styles.askAiIndicator}
-      type="gray"
-      size="xs"
-      // A wait is advisory, so role="status" rather than role="alert".
-      isImmediateImportance={false}
-      text={
-        <span className={styles.pending}>
-          <CircularProgress
-            className={styles.spinner}
-            size={SPINNER_PX}
-            aria-hidden
-          />
-          {PENDING_TEXT}
-        </span>
-      }
-    />
+    <div className={styles.askAiSlot}>
+      {status.state === 'failed' ? (
+        <Alert type="danger" size="xs" text={status.message} />
+      ) : (
+        <Alert
+          type="gray"
+          size="xs"
+          // A wait is advisory, so role="status" rather than role="alert".
+          isImmediateImportance={false}
+          text={
+            <span className={styles.pending}>
+              <CircularProgress
+                className={styles.spinner}
+                size={SPINNER_PX}
+                aria-hidden
+              />
+              {PENDING_TEXT}
+            </span>
+          }
+        />
+      )}
+    </div>
   );
 };
 

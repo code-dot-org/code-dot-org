@@ -1,9 +1,12 @@
-// Fills the play bar's right-hand column, which the bar holds open whether
-// or not this is here. Nothing in it is clickable, so it leaves the bar's
-// pointer-events alone: the Blockly workspace sits under that strip.
-.askAiIndicator {
+.askAiSlot {
+  display: flex;
   grid-column: 3;
-  justify-self: end;
+  // pin to the top of the footer, so it won't overflow the preview.
+  align-self: start;
+  justify-content: flex-end;
+  align-items: flex-start;
+  // max-height 0 so the preview doesn't shift when the alert appears.
+  max-height: 0;
   color: var(--text-neutral-primary);
 }
 
