@@ -9,7 +9,7 @@ import React, {useLayoutEffect, useRef, useState} from 'react';
 
 import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 
-import {POSE_MARK, SentPrompts} from './sentPrompts';
+import {POSE_MARK, SentPrompts} from '../../sentence/sentPrompts';
 
 import styles from './behind-the-scenes.module.scss';
 

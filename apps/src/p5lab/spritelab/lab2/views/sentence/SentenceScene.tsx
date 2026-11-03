@@ -44,9 +44,9 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import characterOutline from '@cdo/static/spritelab_lab2/character-outline.svg';
 
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
+import BehindTheScenes from '../images/teaching/BehindTheScenes';
 
 import AlternativeThumbs from './AlternativeThumbs';
-import BehindTheScenes from './BehindTheScenes';
 import GeneratingSteps from './GeneratingSteps';
 import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
 import ResultActions, {

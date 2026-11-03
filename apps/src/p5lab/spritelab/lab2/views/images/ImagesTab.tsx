@@ -17,7 +17,6 @@ import {onTrimsUpdated, trimAnimationListImages} from '../../imageTrim';
 import {DEFAULT_IMAGE_STYLE} from '../../levelMode';
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
 import EditorStrip from '../components/EditorStrip';
-import BehindTheScenes from '../sentence/BehindTheScenes';
 import SentenceScene from '../sentence/SentenceScene';
 import {sentPromptsFor} from '../sentence/sentPrompts';
 import {readWordLayout} from '../sentence/wordLayout';
@@ -26,6 +25,7 @@ import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
 import MakePane from './MakePane';
 import {listProjectImages, ProjectImage} from './projectImages';
+import BehindTheScenes from './teaching/BehindTheScenes';
 import useImageWriter, {ImageTarget} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
