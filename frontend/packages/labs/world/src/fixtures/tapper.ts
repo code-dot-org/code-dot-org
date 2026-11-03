@@ -5,8 +5,8 @@
 // click is a moment AND a place, and that is the whole of what this exists to
 // show. Click a coin and it goes; click the floor and nothing does.
 //
-// AND THE SCORE, which is what all of that was for. `define property ⟨score⟩`
-// sits in `define world` (specs/WORLD_STATE.md), so the count outlives the coin
+// AND THE SCORE, which is what all of that was for. `score` is the Main
+// Screen's own property (specs/WORLD_STATE.md), so the count outlives the coin
 // that raised the event — and a Label on the Main Screen draws it, so the game
 // says it to the player rather than to the console. The coin raises `scored`,
 // and the Label's own code answers it: events are how the game talks to its
@@ -38,6 +38,8 @@
 // what makes a game feel aimed rather than merely clicked at.
 
 import {actorDocument} from '../actors/actorDocument';
+import {importStockActor} from '../actors/importStockActor';
+import {stockActorById} from '../actors/stock';
 import {labelActor} from '../actors/stock/label';
 import {emitWorldEvent, hearWorldEvent} from '../actors/stock/workspace';
 import {
@@ -46,7 +48,7 @@ import {
   starterSprites,
   type ProjectSpec,
 } from '../constants';
-import {asScreenProject} from '../progression/lessons/asScreen';
+import {placeInMap, screenFile} from '../progression/lessons/worlds';
 import type {RuleData} from '../rules/ruleData';
 import {referenceToStock} from '../rules/ruleReference';
 
@@ -57,15 +59,14 @@ const COIN = 'actors/coin';
 const SCOREBOARD = 'actors/scoreboard';
 
 /**
- * `get score` — the world's own, with no subject to name.
+ * `get score` — the game's own, with no subject to name.
  *
- * Named for the FILE and not for the world (`Tapper`): a name is a label
- * here, and renaming the world must not turn every block that reads its state
- * into a stand-in (`memberKey`, specs/WORLD_STATE.md). The world's code says
- * `worlds/main`, which the converter renames; the screen's is said as it is.
+ * Named for the FILE and not for the game (`Tapper`): a name is a label
+ * here, and renaming the game must not turn every block that reads its state
+ * into a stand-in (`memberKey`, specs/WORLD_STATE.md).
  */
-const score = (file = 'WorldsMain') => ({
-  block: {type: `world_get_${file}_ScoreProperty`},
+const score = () => ({
+  block: {type: 'world_get_ScreensMain_ScoreProperty'},
 });
 
 /** `set text of ⟨who⟩ to ⟨join "Score: " ⟨score⟩⟩`, on the Main Screen. */
@@ -81,7 +82,7 @@ const scoreText = (who: object) => ({
           ADD: {
             block: {
               type: 'world_as_text',
-              inputs: {VALUE: score('ScreensMain')},
+              inputs: {VALUE: score()},
             },
           },
         },
@@ -397,116 +398,95 @@ const SPIN_RULE = JSON.stringify(
   2,
 );
 
-const MAIN_WORLD = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Tapper'},
-        next: {
-          block: stack([
-            // THE SCORE. A world's own state, declared where it is used and
-            // belonging to no rule (specs/WORLD_STATE.md) — which is what was
-            // missing when this scenario could only log `Got one!`.
-            {
-              type: 'world_rule_property',
-              fields: {
-                TYPE: 'number',
-                ACCESS: 'writable',
-                NAME: 'score',
-                DEFAULT: '0',
-              },
-            },
-            // THE GAME. Its interface is the Main Screen's (`INTERFACE`).
-            COIN_GRID,
-            {
-              type: 'world_add_actor',
-              fields: {ACTOR: SCOREBOARD},
-            },
-            {
-              type: 'world_add_actor',
-              fields: {ACTOR: 'actors/crosshair'},
-            },
-          ]),
+const MAIN = screenFile({
+  name: 'Tapper',
+  // THE SCORE. The game's own state, belonging to no rule
+  // (specs/WORLD_STATE.md) — which is what was missing when this scenario
+  // could only log `Got one!`.
+  properties: [{name: 'score', type: 'number', value: '0'}],
+  // …and the event that tells the screen, which is how its Label hears.
+  events: [{name: 'scored'}],
+  // THE GAME. Its interface is the Main Screen's (`INTERFACE`).
+  placed: [
+    placeInMap(SCOREBOARD, [{id: 'scoreboard'}]),
+    placeInMap('actors/crosshair', [{id: 'crosshair'}]),
+  ],
+  loads: [COIN_GRID],
+  handlers: [
+    // THE WORLD'S TELLING. Raised once, about nobody — so a handler that
+    // wants to know where it landed has to ask, and `mouse position` is the
+    // asking. Every press prints a point, including the ones that hit
+    // nothing, which is exactly what "about nobody" means.
+    {
+      type: 'world_on_Mouse_IsPressedEvent',
+      fields: {FILTER0: 'left'},
+      next: {
+        block: {
+          type: 'world_print',
+          inputs: {VALUE: {block: {type: 'world_mouse_position'}}},
         },
       },
-      // THE WORLD'S TELLING. Raised once, about nobody — so a handler that
-      // wants to know where it landed has to ask, and `mouse position` is the
-      // asking. Every press prints a point, including the ones that hit
-      // nothing, which is exactly what "about nobody" means.
-      {
-        type: 'world_on_Mouse_IsPressedEvent',
-        fields: {FILTER0: 'left'},
-        x: 20,
-        y: 700,
-        next: {
-          block: {
-            type: 'world_print',
-            inputs: {VALUE: {block: {type: 'world_mouse_position'}}},
-          },
-        },
-      },
-      // THE COIN'S. The same press, told to the one actor it landed on, and
-      // the handler does no hit-testing of its own: `this actor` IS the coin
-      // that was clicked, so taking it out of the world is one block.
-      {
-        type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: '', SUBJECT: COIN},
-        x: 520,
-        y: 700,
-        next: {
-          block: stack([
-            // The world remembers. Before this there was nowhere to put a
-            // count that outlives the coin raising the event, so the game
-            // could only say `Got one!` and forget.
-            {
-              type: 'world_set_WorldsMain_ScoreProperty',
-              inputs: {
-                VALUE: {
-                  block: {
-                    type: 'math_arithmetic',
-                    fields: {OP: 'ADD'},
-                    inputs: {A: score(), B: number(1)},
-                  },
+    },
+    // THE COIN'S. The same press, told to the one actor it landed on, and
+    // the handler does no hit-testing of its own: `this actor` IS the coin
+    // that was clicked, so taking it out of the world is one block.
+    {
+      type: 'world_on_Mouse_IsClickedWithEvent',
+      fields: {FILTER0: '', SUBJECT: COIN},
+      next: {
+        block: stack([
+          // The game remembers. Before this there was nowhere to put a
+          // count that outlives the coin raising the event, so the game
+          // could only say `Got one!` and forget.
+          {
+            type: 'world_set_ScreensMain_ScoreProperty',
+            inputs: {
+              VALUE: {
+                block: {
+                  type: 'math_arithmetic',
+                  fields: {OP: 'ADD'},
+                  inputs: {A: score(), B: number(1)},
                 },
               },
             },
-            // …and the screen is told, which is how its Label hears.
-            emitWorldEvent('scored'),
-            {type: 'world_remove_actor', inputs: {ACTOR: me()}},
-          ]),
-        },
-      },
-      // AND THE SCOREBOARD'S. It elected `Takes Mouse Input`, so it hears
-      // every press wherever it landed — the coins it missed included.
-      // `(any)` hears both buttons, and the value says which.
-      {
-        type: 'world_on_Mouse_PressesMouseButtonEvent',
-        fields: {FILTER0: '', SUBJECT: SCOREBOARD},
-        x: 520,
-        y: 880,
-        next: {
-          block: {
-            type: 'world_print',
-            inputs: {VALUE: {block: {type: 'world_event_value'}}},
           },
+          emitWorldEvent('scored'),
+          {type: 'world_remove_actor', inputs: {ACTOR: me()}},
+        ]),
+      },
+    },
+    // AND THE SCOREBOARD'S. It elected `Takes Mouse Input`, so it hears
+    // every press wherever it landed — the coins it missed included.
+    // `(any)` hears both buttons, and the value says which.
+    {
+      type: 'world_on_Mouse_PressesMouseButtonEvent',
+      fields: {FILTER0: '', SUBJECT: SCOREBOARD},
+      next: {
+        block: {
+          type: 'world_print',
+          inputs: {VALUE: {block: {type: 'world_event_value'}}},
         },
       },
-    ],
-  },
+    },
+  ],
 });
 
 export const TAPPER_SPEC: ProjectSpec = {
   folders: ['actors', 'rules', 'screens', 'maps', 'sprites'],
   files: {
     main: {
-      name: 'main.world',
-      language: 'world',
-      contents: MAIN_WORLD,
+      name: 'main.screen',
+      language: 'screen',
+      contents: MAIN.screen,
       folderId: 'screens',
       active: true,
+      open: true,
+    },
+    level: {
+      name: 'main.map',
+      language: 'map',
+      contents: MAIN.map,
+      folderId: 'maps',
       open: true,
     },
     spinRule: {
@@ -549,23 +529,23 @@ export const TAPPER_SPEC: ProjectSpec = {
     },
     ...starterSprites(['coin', 'switch']),
   },
-  open: ['main'],
+  open: ['main', 'level'],
 };
 
+// The Viewport the Main Screen places.
 const built = buildProject(TAPPER_SPEC);
-const converted = asScreenProject(built.source);
+const withViewport = importStockActor(
+  built.source,
+  stockActorById('viewport')!,
+).source;
 
-/**
- * Written as a world, and a game as a Main Screen showing its map
- * (`asScreen`, specs/LESSONS_AS_SCREENS_PLAN.md), with its interface and the
- * event that keeps it current added to that screen.
- */
+/** The game, with its interface beside the Viewport on the Main Screen. */
 export const TAPPER_PROJECT = {
   ...built,
   source: {
-    ...converted,
+    ...withViewport,
     files: Object.fromEntries(
-      Object.entries(converted.files).map(([id, file]) => {
+      Object.entries(withViewport.files).map(([id, file]) => {
         if (file.name !== 'main.screen') {
           return [id, file];
         }
@@ -577,11 +557,7 @@ export const TAPPER_PROJECT = {
           {
             ...file,
             contents: JSON.stringify(
-              {
-                ...screen,
-                events: [{name: 'scored'}],
-                actors: [...screen.actors, ...INTERFACE],
-              },
+              {...screen, actors: [...screen.actors, ...INTERFACE]},
               null,
               2,
             ),

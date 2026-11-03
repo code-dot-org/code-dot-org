@@ -1,7 +1,7 @@
 // A game written under `define world`, as a Main Screen whose Viewport shows
-// `main.map`. Lessons are written as screens (`worlds.screenFile`); tapper,
-// novel and the tests are still converted here until they are too
-// (specs/COMPILE_FROM_DATA_PLAN.md, step 5f).
+// `main.map`. Lessons and games are written as screens (`worlds.screenFile`);
+// what still writes a world is a test, converted here until it writes a
+// screen too (specs/COMPILE_FROM_DATA_PLAN.md, step 5f).
 //
 // Each row of `define world` goes where a screen keeps it. An `add actor`
 // whose body says only literals is a placement, and its `set`s that
@@ -16,8 +16,6 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {importStockActor} from '../../actors/importStockActor';
-import {stockActorById} from '../../actors/stock';
 import type {BlockParam} from '../../actors/stock/workspace';
 import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
@@ -25,7 +23,6 @@ import {slug} from '../../blockly/ruleMeta';
 import {memberLocalName} from '../../blockly/ruleRegistry';
 import type {ScreenEvent} from '../../blockly/screenData';
 import {gameScreen} from '../../constants';
-import {renameReferences} from '../../files/renameThing';
 import {projectFiles} from '../../runtime/projectFiles';
 import {TILE_SIZE} from '../../runtime/viewport';
 
@@ -508,60 +505,3 @@ const withoutViewportMaps = (placements: Placement[]): string | undefined => {
   }
   return first;
 };
-
-/**
- * The project with its `main.world` a `main.screen` and a `main.map`, the
- * screen active where the world was, and the Viewport the screen places.
- */
-export function asScreenProject(source: MultiFileSource): MultiFileSource {
-  const world = Object.values(source.files).find(
-    file => file.name === 'main.world',
-  );
-  if (!world) {
-    return source;
-  }
-  const folderOf = (name: string) => {
-    const folder = Object.values(source.folders).find(one => one.name === name);
-    if (!folder) {
-      throw new Error(`a lesson with no ${name} folder`);
-    }
-    return folder.id;
-  };
-  const viewport = stockActorById('viewport');
-  let next = viewport ? importStockActor(source, viewport).source : source;
-  const {screen, map} = screenOfWorld(world.contents ?? '', next);
-  const mapId = String(
-    Math.max(...Object.keys(next.files).map(Number).filter(Number.isFinite)) +
-      1,
-  );
-  next = {
-    ...next,
-    files: {
-      ...next.files,
-      [world.id]: {
-        ...next.files[world.id],
-        name: 'main.screen',
-        language: 'screen',
-        folderId: folderOf('screens'),
-        contents: screen,
-      },
-      ...(map
-        ? {
-            [mapId]: {
-              id: mapId,
-              name: 'main.map',
-              language: 'map',
-              folderId: folderOf('maps'),
-              contents: map,
-            },
-          }
-        : {}),
-    },
-    // The level a tab beside the screen: the screen draws it, but only as a
-    // picture (`MapStage`).
-    openFiles: map ? [...(next.openFiles ?? []), mapId] : next.openFiles,
-  };
-  // What the world declared for itself is the screen's now, and its blocks
-  // are named by the file that declares them.
-  return renameReferences(next, {from: 'worlds/main', to: 'screens/main'});
-}

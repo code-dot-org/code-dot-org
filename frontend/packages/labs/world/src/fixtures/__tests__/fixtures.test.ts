@@ -217,7 +217,7 @@ describe('the scenario catalogue', () => {
       files.find(file => file.name === name)!.contents;
     expect(actor('coin.actor')).toContain('Mouse#CanBeClickedTrait');
     expect(actor('scoreboard.actor')).toContain('Mouse#TakesMouseInputTrait');
-    // …and the count, which is the world's own state (specs/WORLD_STATE.md).
+    // …and the count, which is the game's own state (specs/WORLD_STATE.md).
     // The scenario logged `Got one!` for as long as there was nowhere to put a
     // number that outlives the coin raising the event.
     expect(main).toContain('"properties"');

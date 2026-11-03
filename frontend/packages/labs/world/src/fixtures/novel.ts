@@ -15,6 +15,8 @@
 // Six lines and it is already the fiddliest block in the file; that is the
 // argument for a `.dialogue` file, made by writing one without.
 
+import {importStockActor} from '../actors/importStockActor';
+import {stockActorById} from '../actors/stock';
 import {imageActor} from '../actors/stock/image';
 import {labelActor} from '../actors/stock/label';
 import {portraitActor} from '../actors/stock/portrait';
@@ -25,7 +27,7 @@ import {
   starterSprites,
   type ProjectSpec,
 } from '../constants';
-import {asScreenProject} from '../progression/lessons/asScreen';
+import {placedAt, screenFile} from '../progression/lessons/worlds';
 import {referenceToStock} from '../rules/ruleReference';
 
 import {me, number} from './meteors';
@@ -171,147 +173,131 @@ const goTo = (which: number) => ({
   inputs: {WHO: box(), WHICH: number(which)},
 });
 
-const MAIN_WORLD = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'The Hall'},
-        next: {
+const MAIN = screenFile({
+  name: 'The Hall',
+  tiles: [10, 10],
+  placed: [placedAt('actors/portrait', 'portrait', 160, 110)],
+  // Code, not a placement: a trait it adds is elected after a placement's
+  // values are set, and would lose the number of lines.
+  loads: [
+    {
+      type: 'world_add_actor',
+      fields: {ACTOR: 'actors/speechBox'},
+      inputs: {
+        DO: {
           block: stack([
             {
-              type: 'world_set_map_size',
-              inputs: {X: number(10), Y: number(10)},
+              type: 'world_set_position',
+              inputs: {ACTOR: me(), X: number(160), Y: number(250)},
+            },
+            // The ability that makes it a talking box rather than a
+            // panel with words on it: `Conversation` keeps the place
+            // in the script. Typing the line out is the box's own
+            // (`actors/stock/speechBox`).
+            {
+              type: 'world_add_trait',
+              fields: {TRAIT: 'Conversation#HasAConversationTrait'},
+              inputs: {ACTOR: me()},
             },
             {
-              type: 'world_add_actor',
-              fields: {ACTOR: 'actors/portrait'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'world_set_position',
-                    inputs: {ACTOR: me(), X: number(160), Y: number(110)},
-                  },
-                },
-              },
+              type: 'world_set_Conversation_HowManyLinesProperty',
+              inputs: {ACTOR: me(), VALUE: number(LINES.length)},
             },
-            {
-              type: 'world_add_actor',
-              fields: {ACTOR: 'actors/speechBox'},
-              inputs: {
-                DO: {
-                  block: stack([
-                    {
-                      type: 'world_set_position',
-                      inputs: {ACTOR: me(), X: number(160), Y: number(250)},
-                    },
-                    // The ability that makes it a talking box rather than a
-                    // panel with words on it: `Conversation` keeps the place
-                    // in the script. Typing the line out is the box's own
-                    // (`actors/stock/speechBox`).
-                    {
-                      type: 'world_add_trait',
-                      fields: {TRAIT: 'Conversation#HasAConversationTrait'},
-                      inputs: {ACTOR: me()},
-                    },
-                    {
-                      type: 'world_set_Conversation_HowManyLinesProperty',
-                      inputs: {ACTOR: me(), VALUE: number(LINES.length)},
-                    },
-                    // On `me()` and not on `the ⟨Speech Box⟩`: the box being
-                    // dressed is not in the world yet, so a lookup by kind has
-                    // nothing to find. Everything else in this body says the
-                    // same thing.
-                    say(TITLE, me()),
-                  ]),
-                },
-              },
-            },
+            // On `me()` and not on `the ⟨Speech Box⟩`: the box being
+            // dressed is not in the world yet, so a lookup by kind has
+            // nothing to find. Everything else in this body says the
+            // same thing.
+            say(TITLE, me()),
           ]),
         },
       },
-      // The script: one branch per line, answering the move.
+    },
+  ],
+  handlers: [
+    // The script: one branch per line, answering the move.
+    {
+      type: 'world_on_Conversation_MovesToALineEvent',
+      fields: {SUBJECT: 'actors/speechBox'},
+      next: {block: scriptFor()},
+    },
+    // Space begins it, and then moves it on.
+    //
+    // BEGINNING IS THE PLAYER'S. The screen's load code can act now
+    // (`WorldBuilder.act`), so `make ⟨…⟩ start talking` up there would work
+    // — and a scene that has already spoken its first line before anybody
+    // has touched a key is not a scene you can open. So the box is handed a
+    // title card instead, and the first press starts the talk.
+    controls('space', 60, [
       {
-        type: 'world_on_Conversation_MovesToALineEvent',
-        x: 20,
-        y: 320,
-        fields: {SUBJECT: 'actors/speechBox'},
-        next: {block: scriptFor()},
-      },
-      // Space begins it, and then moves it on.
-      //
-      // BEGINNING IS THE PLAYER'S. A world's setup can act now
-      // (`WorldBuilder.act`), so `make ⟨…⟩ start talking` up there would work
-      // — and a scene that has already spoken its first line before anybody
-      // has touched a key is not a scene you can open. So the box is handed a
-      // title card instead, and the first press starts the talk.
-      controls('space', 60, [
-        {
-          type: 'controls_if',
-          extraState: {hasElse: true},
-          inputs: {
-            IF0: {
-              block: {
-                type: 'world_query_Conversation_IsTalkingQuery',
-                inputs: {ACTOR: box()},
-              },
+        type: 'controls_if',
+        extraState: {hasElse: true},
+        inputs: {
+          IF0: {
+            block: {
+              type: 'world_query_Conversation_IsTalkingQuery',
+              inputs: {ACTOR: box()},
             },
-            DO0: {
-              block: {
-                type: 'controls_if',
-                extraState: {hasElse: true},
-                inputs: {
-                  // Where converging branches cost something: the line after
-                  // the yes-answer is the no-answer, so rejoining is a jump.
-                  IF0: {
-                    block: {
-                      type: 'logic_operation',
-                      fields: {OP: 'OR'},
-                      inputs: {A: isLine(4), B: isLine(5)},
-                    },
+          },
+          DO0: {
+            block: {
+              type: 'controls_if',
+              extraState: {hasElse: true},
+              inputs: {
+                // Where converging branches cost something: the line after
+                // the yes-answer is the no-answer, so rejoining is a jump.
+                IF0: {
+                  block: {
+                    type: 'logic_operation',
+                    fields: {OP: 'OR'},
+                    inputs: {A: isLine(4), B: isLine(5)},
                   },
-                  DO0: {block: goTo(ENDING)},
-                  ELSE: {block: sayNext()},
                 },
-              },
-            },
-            ELSE: {
-              block: {
-                type: 'world_do_Conversation_MakeStartTalkingAction',
-                inputs: {VALUE: box()},
+                DO0: {block: goTo(ENDING)},
+                ELSE: {block: sayNext()},
               },
             },
           },
+          ELSE: {
+            block: {
+              type: 'world_do_Conversation_MakeStartTalkingAction',
+              inputs: {VALUE: box()},
+            },
+          },
         },
-      ]),
-      // The choice, which is the whole of branching: a key moves the cursor.
-      controls('left arrow', 260, [
-        {
-          type: 'controls_if',
-          inputs: {IF0: isLine(3), DO0: {block: goTo(4)}},
-        },
-      ]),
-      controls('right arrow', 420, [
-        {
-          type: 'controls_if',
-          inputs: {IF0: isLine(3), DO0: {block: goTo(5)}},
-        },
-      ]),
-    ],
-  },
+      },
+    ]),
+    // The choice, which is the whole of branching: a key moves the cursor.
+    controls('left arrow', 260, [
+      {
+        type: 'controls_if',
+        inputs: {IF0: isLine(3), DO0: {block: goTo(4)}},
+      },
+    ]),
+    controls('right arrow', 420, [
+      {
+        type: 'controls_if',
+        inputs: {IF0: isLine(3), DO0: {block: goTo(5)}},
+      },
+    ]),
+  ],
 });
 
 const SPEC: ProjectSpec = {
   folders: ['screens', 'maps', 'actors', 'rules', 'sprites'],
   files: {
     main: {
-      name: 'main.world',
-      language: 'world',
-      contents: MAIN_WORLD,
+      name: 'main.screen',
+      language: 'screen',
+      contents: MAIN.screen,
       folderId: 'screens',
       active: true,
+      open: true,
+    },
+    level: {
+      name: 'main.map',
+      language: 'map',
+      contents: MAIN.map,
+      folderId: 'maps',
       open: true,
     },
     // The Label the Speech Box ACTS LIKE. `acts like` names a module path, and
@@ -362,14 +348,14 @@ const SPEC: ProjectSpec = {
     },
     ...starterSprites(['player']),
   },
-  open: ['main'],
+  open: ['main', 'level'],
 };
 
 const built = buildProject(SPEC);
 
-/**
- * Written as a world, and a game as a Main Screen showing its map
- * (`asScreen`, specs/LESSONS_AS_SCREENS_PLAN.md).
- */
-export const NOVEL = {...built, source: asScreenProject(built.source)};
+/** The game, with the Viewport its Main Screen places. */
+export const NOVEL = {
+  ...built,
+  source: importStockActor(built.source, stockActorById('viewport')!).source,
+};
 export const NOVEL_LINES = LINES;

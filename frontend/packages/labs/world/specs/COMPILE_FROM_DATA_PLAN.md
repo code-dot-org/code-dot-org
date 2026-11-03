@@ -411,12 +411,15 @@ In order, each its own commit:
    body does makes that actor in code. An edit that changes nothing
    now throws, which caught a check that had been passing on an edit
    to a number no longer in the file.
-2. The stock games written as worlds, tapper and novel, and the empty
-   world of the scenarios and the actor-demo recorder, written as
-   screens.
-3. The tests. A test writes the screen and map it means; the converter
-   in test support (`worldAsScreen`) and the checks' world view go, and
-   the checks edit the screen, the map and the actor files.
+2. BUILT, November 2026. Tapper and novel are written with `screenFile`
+   and import the Viewport, and are the same files as before.
+   `asScreenProject` is gone; the converter is called only from test
+   support.
+3. The tests. A test writes the screen and map it means, and so does the
+   empty project tests start from (`EMPTY_WORLD_SPEC`) and the actor-demo
+   recorder; the converter in test support (`worldAsScreen`) and the
+   checks' world view go, and the checks edit the screen, the map and the
+   actor files.
 4. The converter goes: `asScreen`, `VIEW_ROWS`, and the `define world`
    rows the world view writes (`world_rule_property`, `world_rule_event`
    among them).
