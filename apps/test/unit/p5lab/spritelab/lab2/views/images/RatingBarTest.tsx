@@ -4,6 +4,22 @@ import React from 'react';
 import RatingBar from '@cdo/apps/p5lab/spritelab/lab2/views/images/RatingBar';
 
 describe('RatingBar', () => {
+  it('says the question is closed when it goes away with the question open', () => {
+    const onAsking = jest.fn();
+    const {unmount} = render(
+      <RatingBar
+        verdict={null}
+        onJudge={jest.fn()}
+        onReasons={jest.fn()}
+        onAsking={onAsking}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Not so good'}));
+    expect(onAsking).toHaveBeenLastCalledWith(true);
+    unmount();
+    expect(onAsking).toHaveBeenLastCalledWith(false);
+  });
+
   it('asks why after a thumb, takes any reasons, and is done on Done alone', () => {
     const onJudge = jest.fn();
     const onReasons = jest.fn();

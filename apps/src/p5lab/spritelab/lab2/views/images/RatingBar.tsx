@@ -5,7 +5,7 @@ import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {Verdict} from '../sentence/ResultActions';
 
@@ -53,11 +53,15 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
   onAsking,
   disabled,
 }) => {
-  // The question opens with the thumb and closes with Done.
+  // The question opens with the thumb and closes with Done. Done may also
+  // take the bar away in the same render, so leaving says closed too.
   const [asking, setAsking] = useState<Verdict | null>(null);
+  const onAskingRef = useRef(onAsking);
+  onAskingRef.current = onAsking;
   useEffect(() => {
     onAsking?.(!!asking);
   }, [asking, onAsking]);
+  useEffect(() => () => onAskingRef.current?.(false), []);
   const [picked, setPicked] = useState<string[]>([]);
   const judge = (next: Verdict) => {
     onJudge(next);
