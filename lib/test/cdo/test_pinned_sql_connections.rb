@@ -118,7 +118,7 @@ class PinnedSqlConnectionsTest < Minitest::Test
     assert_equal 0, connection.disconnect_count
   end
 
-  def test_throttle_budget_is_scoped_to_the_instance
+  def test_throttle_budget_is_scoped_to_the_host
     assert_includes Cdo::PinnedSqlConnections.throttle_id, Socket.gethostname
   end
 end

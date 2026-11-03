@@ -8,8 +8,8 @@ module Cdo
   module PinnedSqlConnections
     ENABLED_KEY = 'close_sql_connections_pinned_by_rds_proxy'.freeze
 
-    # Reconnects allowed per EC2 Instance per period. Scoped per instance so that a storm on one host cannot spend the
-    # budget the rest of the fleet needs to close its own pinned connections.
+    # Reconnects allowed per host per period, so that a storm on one host cannot spend the budget the rest of the
+    # fleet needs to close its own pinned connections.
     CLOSE_LIMIT = 60
     CLOSE_PERIOD = 60
 
@@ -66,9 +66,11 @@ module Cdo
       CDO.log.error("event=close_pinned_sql_connection_failed error=#{exception.message.inspect}")
     end
 
-    # One budget per EC2 Instance, shared by every reason a connection on it gets closed.
+    # One budget per host, shared by every reason a connection on it gets closed. `gethostname` names the unit that
+    # owns the connection pool in every environment we deploy to: the EC2 instance, the Kubernetes pod, the container
+    # under Docker and continuous integration, the workstation in development.
     def self.throttle_id
-      "close_pinned_sql_connections/#{Socket.gethostname}"
+      @throttle_id ||= "close_pinned_sql_connections/#{Socket.gethostname}"
     end
   end
 end
