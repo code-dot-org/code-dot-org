@@ -29,10 +29,7 @@ export function renderTeacherPanel(
         />
       </InstructorsOnly>
     </Provider>,
-    div,
-    {
-      legacyReactDomRender: true,
-    }
+    div
   );
   document.body.appendChild(div);
 }
@@ -48,8 +45,7 @@ export function renderTeacherPanelHandle(store) {
     <Provider store={store}>
       <TeacherPanelHandle />
     </Provider>,
-    div,
-    {legacyReactDomRender: true}
+    div
   );
   document.body.appendChild(div);
 }

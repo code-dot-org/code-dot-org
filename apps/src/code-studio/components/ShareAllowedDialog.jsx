@@ -99,6 +99,9 @@ class ShareAllowedDialog extends React.Component {
   };
 
   componentDidMount() {
+    if (this.props.isOpen) {
+      this.onOpen();
+    }
     if (this.props.canShareSocial) {
       // check if twitter and facebook are actually available
       // and not blocked by network firewall
@@ -115,12 +118,16 @@ class ShareAllowedDialog extends React.Component {
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
-      recordShare('SHARING_DIALOG_OPEN', this.props.appType);
-      this.setState({copiedAt: null});
+      this.onOpen();
+    }
+  }
 
-      if (this.sharingDisallowedWhileSignedIn()) {
-        this.setState({showSharingDisallowedDialog: true});
-      }
+  onOpen() {
+    recordShare('SHARING_DIALOG_OPEN', this.props.appType);
+    this.setState({copiedAt: null});
+
+    if (this.sharingDisallowedWhileSignedIn()) {
+      this.setState({showSharingDisallowedDialog: true});
     }
   }
 
