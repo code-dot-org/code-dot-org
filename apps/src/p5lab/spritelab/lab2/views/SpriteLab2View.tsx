@@ -2402,10 +2402,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               className={classNames(
                 moduleStyles.codeTabWrapper,
                 moduleStyles.picturesEditor,
-                (guideUnderPreview
-                  ? picturesSlide.parked
-                  : activeTab !== 'Images') && moduleStyles.picturesEditorParked
-                editorsShown && moduleStyles.underEditorStrip,
                 activeTab !== 'Images' && moduleStyles.picturesEditorParked
               )}
             >
