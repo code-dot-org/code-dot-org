@@ -58,8 +58,7 @@ class AskAiTimeoutError extends Error {
 }
 
 /**
- * What to show a student when askAiText rejects. Lives here because the
- * error types it reads are private to this module.
+ * What to show a student when askAiText rejects.
  */
 export function askAiErrorMessage(error: unknown): string {
   if (error instanceof AskAiError) {

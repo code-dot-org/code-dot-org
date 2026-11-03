@@ -715,8 +715,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // One request per variable at a time, to avoid a flood of requests at once.
     const pending = (this.aiPending_ = new Set());
     getStore().dispatch(clearAskAi());
-    // A late answer from an earlier run must not move this run's indicator.
-    const current = () => !this.destroyed_ && runId === this.runId_;
+    const isCurrentRun = () => !this.destroyed_ && runId === this.runId_;
     library.commands.askAI = (promptText, variableName, setterCallback) => {
       if (!this.canAskAi_() || pending.has(variableName)) {
         return;
@@ -727,13 +726,13 @@ export default class SpriteLab2Engine extends SpriteLab {
       askAiText(String(promptText ?? ''))
         .then(
           text => {
-            if (!current()) {
+            if (!isCurrentRun()) {
               return;
             }
             this.deliverAiAnswer_(library, variableName, text);
           },
           error => {
-            if (!current()) {
+            if (!isCurrentRun()) {
               return;
             }
             getStore().dispatch(askAiFailed(askAiErrorMessage(error)));
@@ -746,7 +745,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         )
         .finally(() => {
           pending.delete(variableName);
-          if (!pending.size && current()) {
+          if (!pending.size && isCurrentRun()) {
             getStore().dispatch(askAiAnswered());
           }
         });

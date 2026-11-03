@@ -41,7 +41,6 @@ export interface ActivePrompt {
   choices?: string[];
 }
 
-/** What the ask AI block is doing, shown under the playspace. */
 export type AskAiStatus =
   | {state: 'pending'}
   | {state: 'failed'; message: string};
@@ -100,8 +99,8 @@ const spriteLab2Slice = createSlice({
     askAiFailed: (state, action: PayloadAction<string>) => {
       state.askAi = {state: 'failed', message: action.payload};
     },
-    // An answer takes down the spinner, but never a failure that replaced it:
-    // one request can fail while another is still running.
+    // An answer takes down the spinner, but not a failure message,
+    // as the failure message could be from another request.
     askAiAnswered: state => {
       if (state.askAi?.state === 'pending') {
         state.askAi = null;

@@ -15,13 +15,12 @@ export const FAILURE_VISIBLE_MS = 10000;
 
 interface AskAiIndicatorProps {
   status: AskAiStatus | null;
-  /** Called once a failure has been on screen long enough to read. */
   onFailureExpired: () => void;
 }
 
 /**
- * What the ask AI block is doing, shown in the bar under the playspace: a
- * spinner while a request is out, then a failure message for ten seconds.
+ * Renders a spinner for an in-flight AI request, and a transient failure message
+ * if a request fails.
  */
 const AskAiIndicator: React.FunctionComponent<AskAiIndicatorProps> = ({
   status,
@@ -34,12 +33,13 @@ const AskAiIndicator: React.FunctionComponent<AskAiIndicatorProps> = ({
     }
     const timer = window.setTimeout(onFailureExpired, FAILURE_VISIBLE_MS);
     return () => window.clearTimeout(timer);
-    // A fresh failure is a new status object, which restarts the countdown.
   }, [status, failed, onFailureExpired]);
 
-  let alert = null;
-  if (status?.state === 'failed') {
-    alert = (
+  if (!status) {
+    return null;
+  }
+  if (status.state === 'failed') {
+    return (
       <Alert
         className={styles.askAiIndicator}
         type="danger"
@@ -47,31 +47,26 @@ const AskAiIndicator: React.FunctionComponent<AskAiIndicatorProps> = ({
         text={status.message}
       />
     );
-  } else if (status?.state === 'pending') {
-    alert = (
-      <Alert
-        className={styles.askAiIndicator}
-        type="gray"
-        size="xs"
-        // A wait is advisory, so role="status" rather than role="alert".
-        isImmediateImportance={false}
-        text={
-          <span className={styles.pending}>
-            <CircularProgress
-              className={styles.spinner}
-              size={SPINNER_PX}
-              aria-hidden
-            />
-            {PENDING_TEXT}
-          </span>
-        }
-      />
-    );
   }
-
-  // The slot is rendered even when empty: it is the play bar's right-hand
-  // column, and the bar's left spacer sizes itself against it.
-  return <div className={styles.askAiSlot}>{alert}</div>;
+  return (
+    <Alert
+      className={styles.askAiIndicator}
+      type="gray"
+      size="xs"
+      // A wait is advisory, so role="status" rather than role="alert".
+      isImmediateImportance={false}
+      text={
+        <span className={styles.pending}>
+          <CircularProgress
+            className={styles.spinner}
+            size={SPINNER_PX}
+            aria-hidden
+          />
+          {PENDING_TEXT}
+        </span>
+      }
+    />
+  );
 };
 
 export default AskAiIndicator;

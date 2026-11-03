@@ -2549,15 +2549,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }
             playBar={
               <>
-                <PlayBar
-                  playing={activeTab === 'Play'}
-                  arrows={arrowSet}
-                  onPlay={handlePlayClick}
-                  onStop={stopTab ? handleStopClick : undefined}
-                  // A level pinned to one scene has one Play, for that scene.
-                  onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
-                  playSceneHidden={activeScene.id === scenes[0].id}
-                />
+                <div className={moduleStyles.playBarButtons}>
+                  <PlayBar
+                    playing={activeTab === 'Play'}
+                    arrows={arrowSet}
+                    onPlay={handlePlayClick}
+                    onStop={stopTab ? handleStopClick : undefined}
+                    // A level pinned to one scene has one Play, for that scene.
+                    onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
+                    playSceneHidden={activeScene.id === scenes[0].id}
+                  />
+                </div>
                 <AskAiIndicator
                   status={askAiStatus}
                   onFailureExpired={handleAskAiExpired}

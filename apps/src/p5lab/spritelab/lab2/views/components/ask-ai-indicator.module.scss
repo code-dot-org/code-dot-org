@@ -1,18 +1,9 @@
-// The play bar's right-hand column. It shares the bar's spare width evenly
-// with the empty column opposite, which keeps the buttons centered; a
-// message too wide for that share grows this column and moves the buttons
-// over rather than being covered by them. No min-width: 0 here, or the
-// column would shrink under its message instead of claiming the room.
-.askAiSlot {
-  display: flex;
-  flex: 1 1 0;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-// Nothing here is clickable, so it leaves the bar's pointer-events alone:
-// the Blockly workspace sits under that strip.
+// Fills the play bar's right-hand column, which the bar holds open whether
+// or not this is here. Nothing in it is clickable, so it leaves the bar's
+// pointer-events alone: the Blockly workspace sits under that strip.
 .askAiIndicator {
+  grid-column: 3;
+  justify-self: end;
   color: var(--text-neutral-primary);
 }
 

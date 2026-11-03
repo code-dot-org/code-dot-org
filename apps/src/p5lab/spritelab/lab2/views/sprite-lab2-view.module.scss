@@ -749,28 +749,18 @@ $z-over-blockly: 71;
   }
 }
 
-// The Play/Stop and arrow bar under the playspace box. Only its buttons
-// take pointer events: the bar spans the box's width, and over the corner
+// The Play/Stop and arrow bar under the playspace box, along with an optional AI status indicator. 
+// Only its buttons take pointer events: the bar spans the box's width, and over the corner
 // preview that strip would otherwise sit on the Blockly workspace.
 .playBar {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  // Each button keeps its own height, so a wrapped message in the ask AI
-  // slot makes the row taller without stretching the buttons with it.
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: center;
   gap: 16px;
   pointer-events: none;
-
-  // An empty column matching the ask AI slot that ends the bar, so the
-  // buttons sit centered while that slot is idle or narrow and give way
-  // only when its message needs the width.
-  &::before {
-    content: '';
-    flex: 1 1 0;
-  }
 
   // On a narrow column a button's text wraps; the button grows with it
   // and the bar's measured height makes room.
@@ -782,6 +772,14 @@ $z-over-blockly: 71;
     line-height: 1.25;
     text-align: center;
   }
+}
+
+.playBarButtons {
+  grid-column: 2;
+  display: flex;
+  // Stretch keeps the buttons a shared height when one of them wraps to two lines.
+  align-items: stretch;
+  gap: 16px;
 }
 
 .arrowKeys {
