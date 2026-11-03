@@ -157,11 +157,6 @@ $pad: 16px;
   }
 }
 
-// Off for the level's sake: where it keeps the choice on one image.
-.tileOff {
-  opacity: 0.45;
-}
-
 // Each tile sits in a slot of its own size; the slot wears the chosen
 // ring, so the ring holds still while the tile grows inside it.
 .tileSlot {

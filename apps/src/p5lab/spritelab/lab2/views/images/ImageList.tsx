@@ -248,7 +248,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                   >
                     <button
                       type="button"
-                      className={classNames(styles.tile, off && styles.tileOff)}
+                      className={styles.tile}
                       aria-pressed={chosen}
                       aria-label={image.name || 'image'}
                       disabled={off}
