@@ -1,5 +1,6 @@
 import {
   DISPLAY_TREE_ROOT_ID,
+  getAnswerIndices,
   getChildNodeId,
   type DisplayTreeBranch,
   type DisplayTreeNode,
@@ -118,7 +119,7 @@ export function layoutDisplayTree(
   };
 
   const nodes: PlacedTreeNode[] = [];
-  let answerCount = 0;
+  const answerIndices = getAnswerIndices(root);
   let maxDepth = 0;
 
   const place = (
@@ -145,8 +146,7 @@ export function layoutDisplayTree(
     maxDepth = Math.max(maxDepth, depth);
 
     if (node.type === 'answer') {
-      placed.answerIndex = answerCount;
-      answerCount++;
+      placed.answerIndex = answerIndices.get(id);
     } else {
       placed.children = node.branches.map((childBranch, index) =>
         place(

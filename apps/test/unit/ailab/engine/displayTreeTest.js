@@ -1,5 +1,6 @@
 import {
   buildDisplayTree,
+  getAnswerIndices,
   getChildNodeId,
   getDisplayTreePath,
   thresholdText,
@@ -65,6 +66,28 @@ describe('getDisplayTree on shipped datasets', () => {
 });
 
 // Hand-built trees cover cases ml-cart produces only by chance.
+describe('getAnswerIndices', () => {
+  const answer = prediction => ({type: 'answer', prediction});
+  const question = (left, right) => ({
+    type: 'question',
+    column: 'c',
+    branches: [
+      {kind: 'values', values: ['a'], child: left},
+      {kind: 'values', values: ['b'], child: right},
+    ],
+  });
+
+  test('numbers answers from left to right by node id', () => {
+    const tree = question(question(answer(1), answer(2)), answer(3));
+
+    expect([...getAnswerIndices(tree)]).toEqual([
+      ['0.0.0', 0],
+      ['0.0.1', 1],
+      ['0.1', 2],
+    ]);
+  });
+});
+
 describe('buildDisplayTree', () => {
   const legsContext = {
     features: ['Legs'],

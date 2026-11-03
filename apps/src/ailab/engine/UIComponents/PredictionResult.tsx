@@ -13,11 +13,13 @@ import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getDatasetId} from '../selectors';
 import {
+  getPredictionAnswerIndex,
   getPredictionStep,
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
 import {useTrainingData} from '../TrainingDataContext';
 
+import {leafColorStyle} from './leafColors';
 import TraceStepper from './TraceStepper';
 
 import styles from './predictionResult.module.scss';
@@ -36,6 +38,9 @@ const PredictionResult = () => {
   );
   const currentStep = useAppSelector(state =>
     getPredictionStep(state, project, trainedModel)
+  );
+  const answerIndex = useAppSelector(state =>
+    getPredictionAnswerIndex(state, project, trainedModel)
   );
   const steppedByHand = useAppSelector(state => state.predictionStepByHand);
   const predictionCount = useAppSelector(state => state.predictionCount);
@@ -116,7 +121,20 @@ const PredictionResult = () => {
                       {index + 1}
                     </Typography>
                     <Typography variant="body3" component="span">
-                      {column} is <strong>{condition}</strong>
+                      {column} is{' '}
+                      {index === steps.length - 1 &&
+                      answerIndex !== undefined ? (
+                        <span className={styles.answer}>
+                          <span
+                            aria-hidden="true"
+                            className={styles.answerDot}
+                            style={leafColorStyle(answerIndex)}
+                          />
+                          <strong>{condition}</strong>
+                        </span>
+                      ) : (
+                        <strong>{condition}</strong>
+                      )}
                     </Typography>
                   </li>
                 ))}
