@@ -51,11 +51,12 @@ class User
     # High Risk is admins in Prod/Levelbuilder, and levelbuilders on levelbuilder, other
     # admins and levelbuilders get a longer inactivity period.
     private def inactivity_period(privilege)
-      high_risk = false;
+      high_risk = false
       if privilege == ADMIN
         high_risk = rack_env?(:production, :levelbuilder)
-      elsif privilege == LEVELBUILDER
+      elsif privilege == UserPermission::LEVELBUILDER
         high_risk = rack_env?(:levelbuilder)
+      end
 
       high_risk ? 90.days : 1.year
     end
