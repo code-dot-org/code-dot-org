@@ -1,7 +1,6 @@
+import {Button} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
-
-import {Button} from '@/button';
 
 import Popover, {PopoverProps, WithPopover} from '../index';
 
@@ -48,14 +47,16 @@ const MultipleTemplate: StoryFn<{
             }}
           >
             <Button
-              text={componentArg.title}
+              variant="contained"
               onClick={() =>
                 setShowPopoverMap({
                   ...showPopoverMap,
                   [componentArg.title]: !showPopoverMap[componentArg.title],
                 })
               }
-            />
+            >
+              {componentArg.title}
+            </Button>
           </WithPopover>
         );
       })}
@@ -72,12 +73,15 @@ DefaultPopover.args = {
   buttons: (
     <>
       <Button
-        type="secondary"
-        color="black"
-        text="Cancel"
+        variant="outlined"
+        color="secondary"
         onClick={() => console.log('Cancel Clicked')}
-      />
-      <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
+      >
+        Cancel
+      </Button>
+      <Button variant="contained" onClick={() => console.log('Ok Clicked')}>
+        Ok
+      </Button>
     </>
   ),
 };
@@ -95,12 +99,15 @@ WithImagePopover.args = {
   buttons: (
     <>
       <Button
-        type="secondary"
-        color="black"
-        text="Cancel"
+        variant="outlined"
+        color="secondary"
         onClick={() => console.log('Cancel Clicked')}
-      />
-      <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
+      >
+        Cancel
+      </Button>
+      <Button variant="contained" onClick={() => console.log('Ok Clicked')}>
+        Ok
+      </Button>
     </>
   ),
 };
@@ -115,12 +122,15 @@ WithIconPopover.args = {
   buttons: (
     <>
       <Button
-        type="secondary"
-        color="black"
-        text="Cancel"
+        variant="outlined"
+        color="secondary"
         onClick={() => console.log('Cancel Clicked')}
-      />
-      <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
+      >
+        Cancel
+      </Button>
+      <Button variant="contained" onClick={() => console.log('Ok Clicked')}>
+        Ok
+      </Button>
     </>
   ),
 };
@@ -136,12 +146,15 @@ NoneDirectionPopover.args = {
   buttons: (
     <>
       <Button
-        type="secondary"
-        color="black"
-        text="Cancel"
+        variant="outlined"
+        color="secondary"
         onClick={() => console.log('Cancel Clicked')}
-      />
-      <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
+      >
+        Cancel
+      </Button>
+      <Button variant="contained" onClick={() => console.log('Ok Clicked')}>
+        Ok
+      </Button>
     </>
   ),
 };

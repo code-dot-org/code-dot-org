@@ -1,6 +1,7 @@
 import {act, fireEvent, render, screen} from '@testing-library/react';
-import React from 'react';
+import React, {useState} from 'react';
 
+import {Progress} from '@cdo/apps/adaptive/progress';
 import {Checkpoint, Step} from '@cdo/apps/adaptive/types';
 import {
   PathwayContext,
@@ -256,6 +257,124 @@ describe('StepPlayer', () => {
       expect(screen.getByText('header: Basics: one')).toBeTruthy();
       // URL already correct → no duplicate history entry added.
       expect(pushState).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('with branching steps', () => {
+    const ask: Step = {
+      id: 'ask',
+      title: 'Ask',
+      kind: 'questions',
+      questions: [
+        {
+          id: 1,
+          type: 'MultipleChoiceQuestion',
+          questionName: 'ask',
+          questionTitle: 'Which?',
+          choices: [
+            {id: 'a', text: 'Choice A'},
+            {id: 'b', text: 'Choice B'},
+          ],
+        },
+      ],
+    };
+    const branched: Checkpoint = {
+      ...checkpoint,
+      steps: [
+        ask,
+        {
+          ...placeholder('if-a'),
+          showIf: {stepId: 'ask', questionId: 1, choiceId: 'a'},
+        },
+        {
+          ...placeholder('if-b'),
+          showIf: {stepId: 'ask', questionId: 1, choiceId: 'b'},
+        },
+        placeholder('after'),
+      ],
+    };
+
+    // Holds progress as PathwayApp does, so a saved answer reveals its branch.
+    const renderBranched = (
+      initial: Progress = {steps: {}},
+      initialStepId?: string
+    ) => {
+      const onFinish = jest.fn();
+      const Host = () => {
+        const [progress, setProgress] = useState(initial);
+        return (
+          <PathwayContext.Provider
+            value={{progress} as unknown as PathwayContextValue}
+          >
+            <StepPlayer
+              checkpoint={branched}
+              initialStepId={initialStepId}
+              onStartStep={jest.fn()}
+              onCompleteStep={jest.fn()}
+              onLeaveStep={jest.fn()}
+              onSaveAnswers={(step, questionId, list) =>
+                setProgress(p => ({
+                  steps: {
+                    ...p.steps,
+                    [step.id]: {
+                      timeSpent: 0,
+                      answers: {
+                        ...p.steps[step.id]?.answers,
+                        [questionId]: list,
+                      },
+                    },
+                  },
+                }))
+              }
+              onExit={jest.fn()}
+              onFinish={onFinish}
+            />
+          </PathwayContext.Provider>
+        );
+      };
+      render(<Host />);
+      return {onFinish};
+    };
+
+    it('goes to the branch the answer reveals, skipping the others', () => {
+      const {onFinish} = renderBranched();
+      expect(screen.getByText('header: Basics: Ask')).toBeInTheDocument();
+
+      fireEvent.click(screen.getByRole('radio', {name: /Choice B/}));
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(screen.getByText('header: Basics: if-b')).toBeInTheDocument();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('header: Basics: after')).toBeInTheDocument();
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Complete checkpoint'})
+      );
+      expect(onFinish).toHaveBeenCalled();
+    });
+
+    it('falls back to the first step when asked to start on a hidden branch', () => {
+      renderBranched({steps: {}}, 'if-a');
+      expect(screen.getByText('header: Basics: Ask')).toBeInTheDocument();
+    });
+
+    it('counts the last visible step as the finish', () => {
+      const {onFinish} = renderBranched({
+        steps: {
+          ask: {
+            timeSpent: 0,
+            status: 'complete',
+            answers: {1: [{answerId: 'a'}]},
+          },
+        },
+      });
+      fireEvent.click(screen.getByRole('radio', {name: /Choice A/}));
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(screen.getByText('header: Basics: if-a')).toBeInTheDocument();
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Complete checkpoint'})
+      );
+      expect(onFinish).toHaveBeenCalledTimes(1);
     });
   });
 });
