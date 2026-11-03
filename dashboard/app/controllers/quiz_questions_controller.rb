@@ -131,7 +131,10 @@ class QuizQuestionsController < ApplicationController
       question.destroy! if type_changed && !question.referenced?
     end
 
-    render json: quiz_question_json(target, level: level)
+    json = quiz_question_json(target, level: level)
+    # The quiz's version after this edit; a fork that repoints the placement advances it.
+    json[:quizVersion] = level.reload.saved_version if level
+    render json: json
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
   end

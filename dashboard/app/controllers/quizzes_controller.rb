@@ -22,7 +22,7 @@ class QuizzesController < ApplicationController
     published_usage = QuizQuestion.published_unit_usage(question_ids)
 
     render json: quiz_configuration_json(@level).merge(
-      version: quiz_version(@level),
+      version: @level.saved_version,
       usedInPublishedUnit: @level.used_in_published_unit?,
       questions: placements.map do |placement|
         question = placement.quiz_question
@@ -53,16 +53,15 @@ class QuizzesController < ApplicationController
     # one, so a failed save would not roll back.
     @level.with_lock(requires_new: true) do
       if params.key?(:placements)
-        raise StaleQuizError unless params[:version].to_s == quiz_version(@level).to_s
+        raise StaleQuizError unless params[:version].to_s == @level.saved_version.to_s
         @level.replace_placements!(placement_params, delete_question_ids: delete_question_ids_param)
       end
       @level.assign_attributes(present_configuration_updates)
-      # Whole seconds, matching the column, so the version returned is the one stored.
-      @level.updated_at = Time.current.change(usec: 0)
+      @level.advance_saved_version
       @level.save!
     end
 
-    json = quiz_configuration_json(@level).merge(version: quiz_version(@level))
+    json = quiz_configuration_json(@level).merge(version: @level.saved_version)
     if params.key?(:placements)
       json[:placements] = @level.placements.map {|p| {quizQuestionId: p.quiz_question_id, page: p.page, position: p.position}}
     end
@@ -104,10 +103,6 @@ class QuizzesController < ApplicationController
       next unless quiz_configuration_params.key?(wire_key)
       updates[attr] = caster.call(quiz_configuration_params[wire_key])
     end
-  end
-
-  private def quiz_version(quiz)
-    quiz.updated_at.to_i
   end
 
   # Raises on a missing or non-integer field, which update reports as 400.

@@ -137,6 +137,14 @@ class Quiz < Level
     true
   end
 
+  def saved_version
+    updated_at.to_i
+  end
+
+  def advance_saved_version
+    self.updated_at = Time.current.change(usec: 0)
+  end
+
   # Whether a unit using this quiz is launched or sunsetting.
   def used_in_published_unit?
     script_levels.any? do |sl|

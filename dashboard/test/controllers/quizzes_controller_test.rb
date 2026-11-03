@@ -325,6 +325,25 @@ class QuizzesControllerTest < ActionController::TestCase
     refute_equal 'Not saved', @quiz.reload.display_name
   end
 
+  test "update returns conflict when another endpoint changed the placements since load" do
+    question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 1)
+    version = @quiz.reload.saved_version
+
+    travel 1.minute do
+      attached = create(:multiple_choice_question)
+      create(:quiz_question_placement, level: @quiz, quiz_question: attached, page: 1, position: 2)
+
+      put :update, as: :json, params: {
+        level_id: @quiz.id, version: version,
+        placements: [{quizQuestionId: question.id, page: 1, position: 1}]
+      }
+
+      assert_response :conflict
+      assert_includes @quiz.placements.reload.map(&:quiz_question_id), attached.id
+    end
+  end
+
   test "update returns bad_request and changes nothing for an unknown question id" do
     put :update, as: :json, params: {
       level_id: @quiz.id, version: @quiz.reload.updated_at.to_i,

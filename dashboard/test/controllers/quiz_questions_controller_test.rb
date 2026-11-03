@@ -237,6 +237,23 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     refute QuizQuestionPlacement.exists?(level: @quiz, quiz_question: unplaced)
   end
 
+  test "update returns the quiz's new version after a fork repoints its placement" do
+    before = @quiz.reload.saved_version
+
+    travel 1.minute do
+      put :update, as: :json, params: {
+        id: @question.id, quizLevelId: @quiz.id, editMode: 'fork',
+        questionName: 'Forked', questionTitle: 'Pick one',
+        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+      }
+
+      assert_response :success
+      quiz_version = JSON.parse(response.body)['quizVersion']
+      assert_equal @quiz.reload.saved_version, quiz_version
+      assert_operator quiz_version, :>, before
+    end
+  end
+
   test "update leaves the placement's page alone; Save quiz sets pages" do
     put :update, as: :json, params: {
       id: @question.id, quizLevelId: @quiz.id, page: 3,
