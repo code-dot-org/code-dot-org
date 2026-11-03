@@ -6,17 +6,21 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 
-import {imageKindLabel} from '../../ai/images/types';
-import {SentenceSceneParts} from '../sentence/SentenceScene';
+import {
+  imageKindNoun,
+  imageKindPhrase,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {SentenceSceneParts} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
 
 import styles from './images-tab.module.scss';
 
 interface MakePaneProps {
   parts: SentenceSceneParts;
-  /** The pane's width, px: the preview column's. */
+  /** Width in px; it equals the preview column's width so the pane sits
+      under that column's header. */
   width: number;
   /** An image stands in the frame; a new picture would take its place, so
-      Generate asks first. */
+      Generate asks for confirmation first. */
   replaces?: boolean;
   /** Open the drawing tools; absent where drawing is not offered. */
   onDraw?: () => void;
@@ -24,7 +28,8 @@ interface MakePaneProps {
   drawLabel?: string;
   /** The image was made by AI and is unedited: generating makes it again. */
   regenerate?: boolean;
-  /** More for the header, after the way behind the scenes. */
+  /** Extra controls for the header, placed after the Behind the scenes
+      button. */
   extra?: React.ReactNode;
 }
 
@@ -40,13 +45,14 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
   const [confirming, setConfirming] = useState(false);
   const result = parts.mode === 'result';
   const generating = parts.mode === 'generating';
-  const kindLabel = imageKindLabel(
+  const kindNoun = imageKindNoun(parts.draft.imageType, parts.draft.subject);
+  const kindPhrase = imageKindPhrase(
     parts.draft.imageType,
     parts.draft.subject
-  ).toLowerCase();
-  const article = /^[aeiou]/.test(kindLabel) ? 'an' : 'a';
-  // The first generation over an existing image asks; once a picture has
-  // landed in this sitting, the next one just replaces it.
+  );
+  // The first generation over an existing image asks for confirmation;
+  // after a picture has been generated in this session the next one
+  // replaces it without asking.
   const asksFirst = !!replaces && !parts.frameFilled;
   const generate = () => {
     if (asksFirst) {
@@ -67,29 +73,20 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
       {!generating && (
         <div className={styles.paneHeader}>
           <p className={styles.headline}>
-            {result || regenerate ? (
-              `Regenerate this ${kindLabel}`
-            ) : (
-              <>
-                Generate {article}{' '}
-                {parts.typeChoice ? (
-                  <span className={styles.typeChoice}>{parts.typeChoice}</span>
-                ) : (
-                  kindLabel
-                )}
-              </>
-            )}
+            {result || regenerate
+              ? `Regenerate this ${kindNoun}`
+              : `Generate ${kindPhrase}`}
           </p>
-          <span className={styles.paneHeaderTools}>
-            {parts.underFrame}
+          <div className={styles.paneHeaderTools}>
+            {parts.behindTheScenes}
             {extra}
-          </span>
+          </div>
         </div>
       )}
       <div className={styles.sentencePanel}>{parts.sentence}</div>
-      {/* The words scroll in a frame of their own between the pinned
+      {/* The word menus scroll in a box of their own between the pinned
           sentence and the Animated switch; while a picture is made there
-          are no words to show, so no frame either. */}
+          are no words to show, so no box either. */}
       {!generating && (
         <div className={styles.paneScroll}>
           {parts.wordChooser}

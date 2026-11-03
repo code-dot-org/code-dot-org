@@ -44,15 +44,13 @@ const RESULT = {
 const layout = (parts: SentenceSceneParts) => (
   <div>
     <div>{parts.frame}</div>
-    {parts.underFrame}
+    {parts.behindTheScenes}
     <section ref={parts.panelRef} tabIndex={-1} aria-label="Make your picture">
       {parts.status}
-      {parts.typeChoice}
       {parts.sentence}
       {parts.wordChooser}
       {parts.animatedChoice}
       {parts.error}
-      {parts.progress}
       {parts.rating.offered && (
         <div role="group" aria-label="How did the AI do?">
           <button type="button" onClick={() => parts.rating.judge('up')}>
@@ -104,9 +102,6 @@ const pickCreature = () => {
   fireEvent.click(screen.getByRole('button', {name: 'cat'}));
 };
 
-// The last step's tick shows this long before the picture replaces it.
-const SETTLE_MS = 500;
-
 // A generation that waits for the test to finish it.
 const pendingGeneration = () => {
   let finish: (value: typeof RESULT) => void = () => {};
@@ -118,13 +113,10 @@ const pendingGeneration = () => {
   return (value: typeof RESULT) => finish(value);
 };
 
-// Presses Generate and waits out the settle.
+// Presses Generate and lets the picture land.
 const generate = async () => {
   await act(async () => {
     fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-  });
-  await act(async () => {
-    jest.advanceTimersByTime(SETTLE_MS);
   });
 };
 
@@ -249,15 +241,9 @@ describe('SentenceScene', () => {
     pickCreature();
     fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     expect(screen.getByRole('status').textContent).toBe('Making your picture…');
-    expect(
-      screen.getByRole('list', {name: 'What the AI is doing'})
-    ).toBeTruthy();
     expect(screen.queryByRole('button', {name: 'cat'})).toBeNull();
     await act(async () => {
       finish(RESULT);
-    });
-    await act(async () => {
-      jest.advanceTimersByTime(SETTLE_MS);
     });
     expect(screen.getByText('Your picture is ready.')).toBeTruthy();
     expect(screen.getByRole('img', {name: 'A cat'})).toBeTruthy();

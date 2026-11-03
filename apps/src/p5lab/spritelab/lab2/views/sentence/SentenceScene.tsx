@@ -1,8 +1,6 @@
 // Making a picture from a sentence of word chips: the words, the model's
-// run, the pictures it made, and the rating. A host lays the parts out.
+// run, the picture it made, and the rating. A host lays the parts out.
 
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Toggle from '@code-dot-org/component-library/toggle';
 import {Typography as MuiTypography} from '@mui/material';
@@ -18,14 +16,9 @@ import {
   generateImage,
   GenerateImageOptions,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
-import {
-  IMAGE_KINDS,
-  imageKindFor,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageKinds';
 import {ImageSafetyError} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety';
 import {defaultPixelGrid} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/modelHelpers';
 import {
-  imageKindLabel,
   ImageStyle,
   ImageSubject,
   ImageType,
@@ -65,8 +58,6 @@ import styles from './sentence-scene.module.scss';
 const STYLE: ImageStyle = 'pixel';
 // The service's middle temperature.
 const TEMPERATURE = 1;
-// The last step's tick shows this long before the picture replaces it.
-const SETTLE_MS = 500;
 
 export type Mode = 'edit' | 'generating' | 'result';
 
@@ -75,17 +66,18 @@ interface GeneratedPicture {
   id: string;
   result: GeneratedImageResult;
   dataURI: string;
-  /** The student's words. */
+  /** The prompt the student built. */
   prompt: string;
   /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
 }
 
-/** Knobs behind the advanced switch: a typed prompt in place of the words,
-    a coarser pixel grid, and the current picture as the starting point. */
+/** Settings from the Advanced popover: a typed prompt that replaces the
+    chosen words, a coarser pixel grid, and the current picture as the
+    model's input image. */
 export interface AdvancedOptions {
-  /** Typed text wins over the words while present, and makes one still
-      picture. */
+  /** When set, the typed text is sent instead of the chosen words, and the
+      result is always a single still picture, never a character set. */
   prompt?: string;
   /** Divides the kind's default pixel grid: 1 is the default. */
   pixelScale?: number;
@@ -101,16 +93,15 @@ export interface SentenceSceneParts {
   /** Every word the sentence needs is chosen, or a prompt is typed. */
   complete: boolean;
   panelRef: React.RefObject<HTMLElement>;
-  /** The picture, the making of it, or nothing. */
+  /** The frame's contents: the generated picture, the spinner while
+      generating, or null before the first generation. */
   frame: React.ReactNode;
   /** A made picture is showing in the frame. */
   frameFilled: boolean;
-  /** Behind the scenes, once there is a picture. */
-  underFrame: React.ReactNode;
+  /** The Behind the scenes button, once there is a picture. */
+  behindTheScenes: React.ReactNode;
   /** The screen reader's status line. */
   status: React.ReactNode;
-  /** The Type dropdown, when the host offers the choice. */
-  typeChoice: React.ReactNode;
   /** The sentence line: its word chips, or the sentence read back while
       busy. */
   sentence: React.ReactNode;
@@ -120,10 +111,8 @@ export interface SentenceSceneParts {
   /** The Animated checkbox, for a character. */
   animatedChoice: React.ReactNode;
   error: React.ReactNode;
-  /** The model's steps, while generating. */
-  progress: React.ReactNode;
-  /** A tip about how AI makes pictures, while generating; one per picture,
-      never the one before. */
+  /** A tip about how image-making AI works, shown while generating; a new
+      one per generation, always different from the previous one. */
   tip: string | null;
   /** The rating: offered while a fresh picture (or, when the level rates
       every one, any picture) is in the frame. */
@@ -134,7 +123,8 @@ export interface SentenceSceneParts {
     verdict: Verdict | null;
     judge: (verdict: Verdict) => void;
     explain: (reasons: string[]) => void;
-    /** Put the rating away unanswered, for this picture. */
+    /** Hides the rating strip for this picture without recording a
+        verdict. */
     dismiss: () => void;
   };
   /** The level's generations are used up: Generate stays off. */
@@ -149,24 +139,20 @@ interface SentenceSceneProps {
   stillFrame?: number;
   imageType: ImageType;
   imageSubject?: ImageSubject;
-  /** The sentence to build, by id; the image type's own when unset. */
-  sentenceId?: string;
   /** Generations the student has left; Generate goes off at none. */
   generationsLeft?: number;
-  /** Offer the Type dropdown; imageType and imageSubject are then where it
-      starts. */
-  typeChoice?: boolean;
   /** The words the image was made with, put back as far as the sentence
       still holds them. */
   initialChoices?: SavedChoices;
-  /** Where the Animated box starts; ticked unless given. */
+  /** Where the Animated switch starts; on unless given. */
   initialAnimated?: boolean;
-  /** The student ticked or unticked Animated. */
+  /** The student turned Animated on or off. */
   onAnimatedChange?: (animated: boolean) => void;
-  /** Every picture that lands in the frame is kept at once, and again with
-      its rating when one is given. */
+  /** Called with each generated picture as soon as it is shown, and again
+      with the verdict added to its generation metadata when the student
+      rates it. */
   onKeep: (result: GeneratedImageResult) => Promise<void> | void;
-  /** A generation request is leaving. */
+  /** Called when a generation request is sent to the model. */
   onGenerateStart?: () => void;
   /** The scene is making or keeping a picture, or has stopped; a host can
       hold its other controls still meanwhile. */
@@ -179,8 +165,6 @@ interface SentenceSceneProps {
   layout: (parts: SentenceSceneParts) => React.ReactNode;
   /** How the word menus lay their words out; the carousel unless given. */
   wordLayout?: WordLayout;
-  /** The model's steps one at a time, each replacing the last. */
-  singleStep?: boolean;
   /** Behind the scenes as an icon alone, for a host's header. */
   compactBehindTheScenes?: boolean;
   advanced?: AdvancedOptions;
@@ -188,11 +172,9 @@ interface SentenceSceneProps {
 
 const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   stillFrame,
-  imageType: initialImageType,
-  imageSubject: initialImageSubject,
-  sentenceId,
+  imageType,
+  imageSubject,
   generationsLeft,
-  typeChoice,
   initialChoices,
   initialAnimated = true,
   onAnimatedChange,
@@ -203,33 +185,27 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   method = 'scene',
   layout,
   wordLayout,
-  singleStep,
   compactBehindTheScenes,
   advanced,
 }) => {
-  const {theme} = useTheme();
   const style = STYLE;
-  const [kind, setKind] = useState(
-    () => imageKindFor(initialImageType, initialImageSubject).value
-  );
-  const {imageType, subject: imageSubject} = typeChoice
-    ? IMAGE_KINDS.find(k => k.value === kind) ?? IMAGE_KINDS[0]
-    : {imageType: initialImageType, subject: initialImageSubject};
-  const sentence = sentenceFor(imageType, imageSubject, sentenceId);
+  const sentence = sentenceFor(imageType, imageSubject);
   const [choices, setChoices] = useState<Choices>(() =>
     restoreChoices(sentence, initialChoices)
   );
   const typedPrompt = advanced?.prompt?.trim() || '';
   const complete = !!typedPrompt || isComplete(sentence, choices);
-  // A character can be animated, and is unless the box is unticked; an
-  // object, a background or a typed prompt is one picture.
+  // A character can be animated, and is unless Animated is turned off; an
+  // object, a background or a typed prompt always produces a single still
+  // picture.
   const canAnimate = imageType === 'sprite' && imageSubject !== 'object';
   const [animated, setAnimated] = useState(initialAnimated);
-  const makesSet = canAnimate && animated && !typedPrompt;
+  const generatesCharacterSet = canAnimate && animated && !typedPrompt;
 
   const [mode, setMode] = useState<Mode>('edit');
   const [tip, setTip] = useState<string | null>(null);
-  // The picture made last, showing in the frame; it is the image.
+  // The most recent generated picture, shown in the frame; the host has
+  // already stored it as the project's image.
   const [chosenPicture, setChosenPicture] = useState<GeneratedPicture | null>(
     null
   );
@@ -237,8 +213,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const [ratingDismissed, setRatingDismissed] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
-  // The picture is back and the last step's tick is showing.
-  const [settling, setSettling] = useState(false);
   // Counts runs; a superseded run's result is dropped.
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
@@ -288,7 +262,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     onGenerateStart?.();
     setMode('generating');
     setTip(current => pickTip(current));
-    setSettling(false);
     setVerdict(null);
     setRatingDismissed(false);
     setError(null);
@@ -318,10 +291,10 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         prompt,
         options,
         style,
-        makesSet,
+        generatesCharacterSet,
         bodyPlan
       );
-      const result = makesSet
+      const result = generatesCharacterSet
         ? await generateCharacterSet(prompt, {
             style,
             temperature: TEMPERATURE,
@@ -332,13 +305,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       if (run !== runRef.current) {
         return;
       }
-      setSettling(true);
-      await new Promise(resolve => setTimeout(resolve, SETTLE_MS));
-      if (run !== runRef.current) {
-        return;
-      }
-      // The words go on the image, so a return to it can put them back; a
-      // typed prompt has none.
+      // The chosen words are stored in the image's generation metadata so
+      // the sentence can be refilled when the image is reopened; a typed
+      // prompt has no words to store.
       const chosenWords = typedPrompt
         ? undefined
         : Object.fromEntries(
@@ -389,7 +358,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     imageType,
     imageSubject,
     style,
-    makesSet,
+    generatesCharacterSet,
     method,
     onGenerateStart,
     exhausted,
@@ -417,7 +386,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     [chosenPicture, imageType, persist]
   );
 
-  // The reasons end the rating: the strip goes once they are given.
+  // Giving reasons finishes the rating; the rating strip is hidden
+  // afterwards.
   const explain = useCallback(
     (reasons: string[]) => {
       setRatingDismissed(true);
@@ -479,33 +449,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         }
       : null;
 
-  const typeChoiceNode = typeChoice ? (
-    <SimpleDropdown
-      name="sentence-type"
-      labelText="Type"
-      isLabelVisible={false}
-      size="s"
-      color={theme === 'Dark' ? 'white' : 'black'}
-      items={IMAGE_KINDS.map(k => ({
-        value: k.value,
-        text: imageKindLabel(k.imageType, k.subject),
-      }))}
-      selectedValue={kind}
-      disabled={busy}
-      onChange={e => {
-        setKind(e.target.value);
-        // A new sentence takes new words.
-        setChoices({});
-      }}
-    />
-  ) : null;
   const statusNode = (
     <div className={styles.srOnly} role="status">
       {status}
     </div>
   );
-  // The words stay open under a made picture, so Regenerate can take new
-  // ones or the same ones.
+  // The word chooser stays usable after a picture is made, so Regenerate
+  // can run with changed or unchanged words.
   const sentenceOpen = !generating;
   const sentenceNode = sentenceOpen ? (
     menus.sentence
@@ -513,7 +463,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     <SentenceReadOnly sentence={sentence} choices={choices} />
   );
   const wordChooserNode = sentenceOpen ? menus.chooser : null;
-  // The caption at the left, the switch at the right edge.
   const animatedChoiceNode = canAnimate && !typedPrompt && !generating && (
     <div className={styles.animatedRow}>
       <Toggle
@@ -530,10 +479,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       />
     </div>
   );
-  const progressNode = generating && (
-    <GeneratingSteps done={settling} single={singleStep} />
-  );
-
   // A set's frames arrive one by one; none shows until all have.
   const frame = generating ? (
     <div className={styles.generating}>
@@ -590,7 +535,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     </>
   ) : null;
 
-  const underFrame = showingResult && chosenPicture && (
+  const behindTheScenes = showingResult && chosenPicture && (
     <BehindTheScenes
       sent={chosenPicture.sent}
       picture={{
@@ -614,14 +559,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         panelRef,
         frame,
         frameFilled: !!chosenPicture && !generating,
-        underFrame,
+        behindTheScenes,
         status: statusNode,
-        typeChoice: typeChoiceNode,
         sentence: sentenceNode,
         wordChooser: wordChooserNode,
         animatedChoice: animatedChoiceNode,
         error: errorLine,
-        progress: progressNode,
         tip: generating ? tip : null,
         rating: {
           offered: ratingOffered,
