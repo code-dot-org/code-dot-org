@@ -48,26 +48,25 @@ class User
       end
     end
 
-    # Short where the privilege is most dangerous: admin on production or the
-    # levelbuilder server, and levelbuilder on the levelbuilder server, where
-    # saving a level runs its text as Ruby.
+    # High Risk is admins in Prod/Levelbuilder, and levelbuilders on levelbuilder, other
+    # admins and levelbuilders get a longer inactivity period.
     private def inactivity_period(privilege)
-      high_risk =
-        case privilege
-        when ADMIN then rack_env?(:production, :levelbuilder)
-        when UserPermission::LEVELBUILDER then rack_env?(:levelbuilder)
-        else false
-        end
+      high_risk = false;
+      if privilege == ADMIN
+        high_risk = rack_env?(:production, :levelbuilder)
+      elsif privilege == LEVELBUILDER
+        high_risk = rack_env?(:levelbuilder)
+
       high_risk ? 90.days : 1.year
     end
 
+    # Devise sets last_sign_in_at to the previous sign-in, so current_sign_in_at is the latest.
     private def inactive_users(cutoff)
       User.
         where(created_at: ...cutoff).
         where('users.current_sign_in_at IS NULL OR users.current_sign_in_at < ?', cutoff)
     end
 
-    # Devise sets last_sign_in_at to the previous sign-in, so current_sign_in_at is the latest.
     private def inactive_admins(cutoff)
       inactive_users(cutoff).where(admin: true)
     end
