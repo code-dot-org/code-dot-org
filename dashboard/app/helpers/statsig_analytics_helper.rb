@@ -11,7 +11,6 @@ module StatsigAnalyticsHelper
   end
 
   def analytics_config
-    # Rides beside provider so a disabled page still describes itself.
     enabled = DCDO.get('statsig-enabled', true)
     # Set in production, on the managed test server, and in locals.yml for local work.
     client_key = CDO.safe_statsig_api_client_key

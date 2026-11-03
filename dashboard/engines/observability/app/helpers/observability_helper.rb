@@ -8,11 +8,11 @@ module ObservabilityHelper
   # dsn - the Sentry DSN for the specific frontend project (e.g.
   #       CDO.frontend_studio_sentry_dsn or CDO.frontend_apps_sentry_dsn).
   def observability_config(dsn)
-    {observability: observability_section(dsn)}.to_json
+    {observability: observability_app_config_entry(dsn)}.to_json
   end
 
-  # The section alone, for pages whose app-config carries other sections.
-  def observability_section(dsn)
+  # The `observability` key of the app-config meta, for pages that compose several keys.
+  def observability_app_config_entry(dsn)
     use_sentry = CDO.enable_sentry && dsn.present?
     observability = use_sentry ? {provider: 'sentry', sentry: {dsn: dsn}} : {provider: 'none'}
 
