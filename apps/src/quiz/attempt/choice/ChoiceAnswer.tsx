@@ -2,8 +2,9 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React from 'react';
 
+import {ChoiceResultStatus} from '../types';
+
 import ChoiceLabel from './ChoiceLabel';
-import {ChoiceResultStatus} from './types';
 
 import styles from './choice-answer.module.scss';
 

@@ -1,22 +1,22 @@
 import {Typography} from '@mui/material';
 import React from 'react';
 
-import {QuizQuestionSummary} from '../types';
-
-import AttemptCard from './AttemptCard';
-import FreeResponseAnswer from './FreeResponseAnswer';
-import MatchAnswer from './match/MatchAnswer';
-import MultipleChoiceAnswer from './MultipleChoiceAnswer';
-import MultipleSelectAnswer from './MultipleSelectAnswer';
-import QuestionDescription from './QuestionDescription';
-import ResultTag, {ResultTagStatus} from './ResultTag';
+import {QuizQuestionSummary} from '../../types';
+import AttemptCard from '../AttemptCard';
+import MultipleChoiceAnswer from '../choice/MultipleChoiceAnswer';
+import MultipleSelectAnswer from '../choice/MultipleSelectAnswer';
+import FreeResponseAnswer from '../freeResponse/FreeResponseAnswer';
+import MatchAnswer from '../match/MatchAnswer';
+import QuestionDescription from '../QuestionDescription';
 import {
   isFreeResponseResponse,
   isMatchResponse,
   isMultipleChoiceResponse,
   isMultipleSelectResponse,
   QuizQuestionResult,
-} from './types';
+} from '../types';
+
+import ResultTag, {ResultTagStatus} from './ResultTag';
 
 import styles from './question-result-card.module.scss';
 

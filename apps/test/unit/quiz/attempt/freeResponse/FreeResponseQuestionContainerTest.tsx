@@ -2,7 +2,7 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import FreeResponseQuestionContainer from '@cdo/apps/quiz/attempt/FreeResponseQuestionContainer';
+import FreeResponseQuestionContainer from '@cdo/apps/quiz/attempt/freeResponse/FreeResponseQuestionContainer';
 import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
 const QUESTION: QuizQuestionSummary = {

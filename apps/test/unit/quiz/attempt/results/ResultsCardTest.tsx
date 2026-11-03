@@ -4,7 +4,7 @@ import React from 'react';
 
 import ResultsCard, {
   ResultsCardProps,
-} from '@cdo/apps/quiz/attempt/ResultsCard';
+} from '@cdo/apps/quiz/attempt/results/ResultsCard';
 
 const renderCard = (props: Partial<ResultsCardProps> = {}) =>
   render(

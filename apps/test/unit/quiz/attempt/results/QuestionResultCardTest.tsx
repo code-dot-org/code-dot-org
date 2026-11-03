@@ -4,7 +4,7 @@ import React from 'react';
 
 import QuestionResultCard, {
   QuestionResultCardProps,
-} from '@cdo/apps/quiz/attempt/QuestionResultCard';
+} from '@cdo/apps/quiz/attempt/results/QuestionResultCard';
 import {QuizQuestionResult} from '@cdo/apps/quiz/attempt/types';
 import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 

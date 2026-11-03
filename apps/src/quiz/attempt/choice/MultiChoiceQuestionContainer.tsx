@@ -3,11 +3,11 @@ import RadioButton from '@code-dot-org/component-library/radioButton';
 import classNames from 'classnames';
 import React from 'react';
 
-import {QuizQuestionSummary} from '../types';
+import {QuizQuestionSummary} from '../../types';
+import AttemptCard from '../AttemptCard';
+import QuestionDescription from '../QuestionDescription';
 
-import AttemptCard from './AttemptCard';
 import ChoiceLabel from './ChoiceLabel';
-import QuestionDescription from './QuestionDescription';
 
 import styles from './choice-question-container.module.scss';
 

@@ -1,7 +1,7 @@
 import {Typography} from '@mui/material';
 import React from 'react';
 
-import {selectedAnswerLabel} from '../utils';
+import {selectedAnswerLabel} from '../../utils';
 
 import styles from './free-response-answer.module.scss';
 

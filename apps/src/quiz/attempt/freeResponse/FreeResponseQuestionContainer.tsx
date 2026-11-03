@@ -1,9 +1,8 @@
 import React from 'react';
 
-import {QuizQuestionSummary} from '../types';
-
-import AttemptCard from './AttemptCard';
-import QuestionDescription from './QuestionDescription';
+import {QuizQuestionSummary} from '../../types';
+import AttemptCard from '../AttemptCard';
+import QuestionDescription from '../QuestionDescription';
 
 import styles from './free-response-question-container.module.scss';
 
