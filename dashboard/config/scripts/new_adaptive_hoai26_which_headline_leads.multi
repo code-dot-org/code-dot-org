@@ -1,0 +1,14 @@
+name 'new-adaptive-HoAI26-which-headline-leads'
+title 'TODO: title'
+description ''
+question 'Which headline tells a new student what the site is for?'
+wrong 'Welcome to the school clubs site!'
+right 'Find a club that fits you.'
+wrong 'Our school, our story, our clubs.'
+wrong 'Click here to learn more today.'
+
+markdown <<MARKDOWN
+Which headline tells a new student what the site is for?
+MARKDOWN
+
+allow_multiple_attempts true

@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q6-2026'
+
+wrong 'The word is misspelled in that document'
+right 'The word is a good keyword for that document'
+wrong 'The word is a stop word'
+wrong 'The word is the most common word in the collection'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+In a collection of documents, one word appears many times in a single document and almost never in the others. What does that suggest?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Keyword Extraction
+MARKDOWN

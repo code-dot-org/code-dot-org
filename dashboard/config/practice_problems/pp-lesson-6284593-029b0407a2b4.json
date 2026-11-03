@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284593-029b0407a2b4",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following statements correctly describe debugging? (Select all that apply)",
+  "solution": [
+    {
+      "option": "It involves finding errors in code.",
+      "correct": true
+    },
+    {
+      "option": "It requires rewriting the entire program.",
+      "correct": false
+    },
+    {
+      "option": "It helps ensure the program runs as expected.",
+      "correct": true
+    },
+    {
+      "option": "It only focuses on syntax errors.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "8d35be5c-c242-4e33-98fa-c426dc17c516"
+  ]
+}

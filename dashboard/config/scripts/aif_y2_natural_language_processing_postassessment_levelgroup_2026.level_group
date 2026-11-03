@@ -1,0 +1,27 @@
+name 'aif-y2-natural-language-processing-postassessment-levelgroup-2026'
+title 'Natural Language Processing Post-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'aif-y2-natural-language-processing-postassessment-intro-2026'
+level 'aif-y2-natural-language-processing-postassessment-q1-2026'
+level 'aif-y2-natural-language-processing-postassessment-q2-2026'
+level 'aif-y2-natural-language-processing-postassessment-q3-2026'
+level 'aif-y2-natural-language-processing-postassessment-q4-2026'
+level 'aif-y2-natural-language-processing-postassessment-q5-2026'
+
+page
+level 'aif-y2-natural-language-processing-postassessment-q6-2026'
+level 'aif-y2-natural-language-processing-postassessment-q7-2026'
+level 'aif-y2-natural-language-processing-postassessment-q8-2026'
+level 'aif-y2-natural-language-processing-postassessment-q9-2026'
+level 'aif-y2-natural-language-processing-postassessment-q10-2026'
+
+page
+level 'aif-y2-natural-language-processing-postassessment-q11-2026'
+level 'aif-y2-natural-language-processing-postassessment-q12-2026'
+level 'aif-y2-natural-language-processing-postassessment-q13-2026'
+level 'aif-y2-natural-language-processing-postassessment-q14-2026'
+level 'aif-y2-natural-language-processing-postassessment-q15-2026'

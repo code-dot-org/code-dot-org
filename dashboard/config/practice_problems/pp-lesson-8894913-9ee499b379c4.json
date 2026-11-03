@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894913-9ee499b379c4",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select the environmental costs associated with AI usage.",
+  "solution": [
+    {
+      "option": "Increased energy consumption",
+      "correct": true
+    },
+    {
+      "option": "Decreased carbon emissions",
+      "correct": false
+    },
+    {
+      "option": "E-waste generation",
+      "correct": true
+    },
+    {
+      "option": "Improved air quality",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "ed23ec90-7c9d-4eda-b04b-fe1ebdbd6729"
+  ]
+}

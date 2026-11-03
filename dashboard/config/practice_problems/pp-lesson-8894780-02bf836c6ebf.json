@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-8894780-02bf836c6ebf",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms with their correct actions in a machine learning app.",
+  "solution": [
+    {
+      "option": "Creating new input elements",
+      "correct": "Using the Model Card"
+    },
+    {
+      "option": "Updating model code",
+      "correct": "Integrating new inputs"
+    },
+    {
+      "option": "Testing the app",
+      "correct": "Ensuring functionality after customization"
+    },
+    {
+      "option": "Deploying the app",
+      "correct": "Making it available for users"
+    }
+  ],
+  "objective_keys": [
+    "1dadb202-da7e-4b38-ae06-1d0c528a70b5",
+    "b02f1166-2c1c-4170-b4de-c47e7c879e26"
+  ]
+}

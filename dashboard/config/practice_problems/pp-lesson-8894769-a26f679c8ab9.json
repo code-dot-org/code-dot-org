@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894769-a26f679c8ab9",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following best describes supervised learning?",
+  "solution": [
+    {
+      "option": "A model learns from labeled examples provided by a human.",
+      "correct": true
+    },
+    {
+      "option": "A model finds patterns in data without any labels.",
+      "correct": false
+    },
+    {
+      "option": "A model is trained without any human intervention.",
+      "correct": false
+    },
+    {
+      "option": "A model predicts future data based on historical data only.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "c461e742-fa08-4eae-a42e-78e870b79683"
+  ]
+}

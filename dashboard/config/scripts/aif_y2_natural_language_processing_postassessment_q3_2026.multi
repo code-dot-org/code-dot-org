@@ -1,0 +1,21 @@
+name 'aif-y2-natural-language-processing-postassessment-q3-2026'
+
+wrong '`["more", "than", "100,000", "light-years"]`'
+right '`["more", "than", "100", "000", "light", "years"]`'
+wrong '`["more", "than", "100", ",", "000", "light", "-", "years"]`'
+wrong '`["more", "than", "100,000", "light", "years"]`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is the value of `tokens` after these lines run, using a regular expression to capture alphabetic and numeric characters?
+
+```python
+import re
+tokens = re.findall(r"\w+", "more than 100,000 light-years")
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Tokenization
+MARKDOWN

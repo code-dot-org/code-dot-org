@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894768-836e18117839",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following best describes Machine Learning?",
+  "solution": [
+    {
+      "option": "A way for computers to learn from data and make decisions.",
+      "correct": true
+    },
+    {
+      "option": "A programming method where every step is manually coded.",
+      "correct": false
+    },
+    {
+      "option": "A method of cleaning up the ocean.",
+      "correct": false
+    },
+    {
+      "option": "A type of database management.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "f8c2d4bf-f3fb-4fba-8c66-7a590c29b8cf"
+  ]
+}

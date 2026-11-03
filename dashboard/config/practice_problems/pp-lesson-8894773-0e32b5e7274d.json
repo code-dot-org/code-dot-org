@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894773-0e32b5e7274d",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is the primary purpose of using AI Lab in the context of machine learning?",
+  "solution": [
+    {
+      "option": "To create visual art.",
+      "correct": false
+    },
+    {
+      "option": "To train machine learning models.",
+      "correct": true
+    },
+    {
+      "option": "To play video games.",
+      "correct": false
+    },
+    {
+      "option": "To write essays.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "fb5879b1-b229-413f-b21b-b08e438f4ba0"
+  ]
+}

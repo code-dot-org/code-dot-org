@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-8894763-176b0e8abb2f",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the type of data with its definition.",
+  "solution": [
+    {
+      "option": "Public Data",
+      "correct": "Information that is intentionally made available for everyone to see"
+    },
+    {
+      "option": "Private Data",
+      "correct": "Information that is meant only for specific people or organizations"
+    },
+    {
+      "option": "Sensitive Data",
+      "correct": "Information that can lead to serious problems if it is compromised"
+    }
+  ],
+  "objective_keys": [
+    "35b23546-6e0f-46d8-9d65-ac99ee2db06e"
+  ]
+}

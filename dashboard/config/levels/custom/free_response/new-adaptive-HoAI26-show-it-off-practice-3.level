@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-11-03T03:35:24.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "What is your site, who is it for, and what are you proudest of?",
+    "placeholder": "Describe your site and what you're proud of.",
+    "encrypted_solution": "jys7wJQLAzkCNVnCRElYJwF/2BxP2w4yzGfJZIeksDHG/1ZTFDEBq2kxyY/p\nfYxo3B2tDdcR6ffgNS2w6/v2W9L68fGnAX7SY9l1/gJQis8NHIgQp2CrKosc\n8MMV3MAjKkhhkveJRjX32iBzQmHkJ7Yn6IZ5Z5K9w+GMzPR/sdjkQHaXplRI\nGA+Cr61jOxu9WfPnpOuvw5dIGpqeZSWCsUZU25+gyLK83dhTKoBYzNAU6YQ2\nZS6BgT8ilFsYVqjXih5FfoqHedZD1DJWmbw1DdNZ/OnuSVT6SUg2RTtT4Zw+\npNw0dKl8fyIfyc6w70xF4e10M0JEgrlqX3lSc5AGrNN0q/SZbq2XrF23flbh\nmTehK7dt+/eFPistkC1+/SbNMpTrYAfa5aKoDXM/m/9NgySlhZpHL5pajakQ\n6hUSJFlhFDIYTCghNZIcDnRKdeT1fqqQbbOqmJg+ZB0nZLk7/ysZcgp12jF/\ncVne/cI20Nl2vrvxWhjVBsOS4LMWVqshRYmCuEAAbkzumn/357QAPg==\n",
+    "generate_outline": "Write one or two sentences about your site: what it is, who it's for, and what you're proudest of."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 03:35:28 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:35:28 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:35:29 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:35:29 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</FreeResponse>
