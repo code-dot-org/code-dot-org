@@ -289,10 +289,7 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   // pixels wide. image-rendering: pixelated keeps the scaled-up pixels
   // sharp.
   canvas {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    image-rendering: pixelated;
+    @include fills-box;
   }
 }
 

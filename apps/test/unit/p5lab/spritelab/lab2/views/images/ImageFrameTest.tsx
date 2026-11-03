@@ -1,8 +1,15 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {toImage} from '@cdo/apps/imageUtils';
+import {CHARACTER_STRIP_POSES} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import ImageFrame from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImageFrame';
 import {ProjectImage} from '@cdo/apps/p5lab/spritelab/lab2/views/images/projectImages';
+
+// The frame's picture never arrives; the frame is tested for what it holds.
+jest.mock('@cdo/apps/imageUtils', () => ({
+  toImage: jest.fn(() => new Promise(() => undefined)),
+}));
 
 const image: ProjectImage = {
   key: 'a',
@@ -18,6 +25,24 @@ describe('ImageFrame', () => {
   it('shows the chosen image as the one image, named for it', () => {
     render(<ImageFrame image={image} />);
     expect(screen.getByRole('img', {name: 'Sprite 1'})).toBeTruthy();
+  });
+
+  it('shows one frame of a character set, still: the standing one unless told', () => {
+    const set: ProjectImage = {
+      ...image,
+      sheet: {
+        src: 'data:sheet',
+        frameSize: {x: 64, y: 64},
+        poses: CHARACTER_STRIP_POSES,
+      },
+    };
+    const {rerender} = render(<ImageFrame image={set} />);
+    expect(toImage).toHaveBeenCalledWith('data:sheet');
+    const picture = screen.getByRole('img', {name: 'Sprite 1'});
+    expect(picture.querySelector('canvas')).toBeTruthy();
+    expect(picture.querySelector('canvas[aria-label]')).toBeNull();
+    rerender(<ImageFrame image={set} frame={3} />);
+    expect(picture.querySelector('canvas')).toBeTruthy();
   });
 
   it("names an empty frame, and the scene's own picture", () => {

@@ -1,7 +1,7 @@
 @use "checkerboard";
-// One look for image tiles — the Images tab's gallery and the image
-// dialog's Alternatives strip. Colors read the dialog chrome's variables
-// where present and fall back to the gallery's own.
+// One look for image tiles: the Images tab's list and the scenes gallery.
+// Colors read the dialog chrome's variables where present and fall back
+// to the list's own.
 
 @mixin image-tile($size) {
   display: flex;

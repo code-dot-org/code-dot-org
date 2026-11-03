@@ -855,6 +855,7 @@ describe('ImagesTab', () => {
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: /^Done/}));
     });
+    expect(screen.queryByText('Edit the jump up frame.')).toBeNull();
     expect(screen.getByRole('button', {name: 'Jump up'})).toHaveAttribute(
       'aria-pressed',
       'true'
