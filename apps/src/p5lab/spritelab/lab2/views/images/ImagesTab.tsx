@@ -433,22 +433,23 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     setWordsAsked(false);
   }, [chosenId, active]);
   const ownWorkPane = ownWork && !wordsAsked && editedMode() === 'pane';
-  // Free play paints own work in place, with the words beside the tools;
-  // a level about one image keeps Edit this image and Done.
-  const paintsOwnWork =
-    ownWork && !wordsAsked && editedMode() === 'paint' && !!editingOffered;
+  // Free play paints every image in place, with the words beside the
+  // tools, so the student can draw on it or make a picture over it; a
+  // level about one image keeps Edit this image and Done.
+  const paintsChosen =
+    !!chosenImage && editedMode() === 'paint' && !!editingOffered;
   const drawOffered = !!kind && !chosenImage?.sheet && !drawing;
-  // Own work opens in the paint tools by itself, and again on return to
-  // the tab.
+  // The chosen image opens in the paint tools by itself, again on return
+  // to the tab, and again once a picture has landed over it.
   const chosenKey = chosenImage?.key;
   const chosenHasSrc = !!chosenImage?.src && !chosenImage.sheet;
   const kindType = kind?.imageType;
   const kindSubject = kind?.subject;
   useEffect(() => {
     if (
-      paintsOwnWork &&
+      paintsChosen &&
       active &&
-      !drawingRef.current &&
+      !drawingOpen &&
       chosenKey &&
       chosenHasSrc &&
       kindType
@@ -456,8 +457,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       startDrawing({key: chosenKey, imageType: kindType, subject: kindSubject});
     }
   }, [
-    paintsOwnWork,
+    paintsChosen,
     active,
+    drawingOpen,
     chosenKey,
     chosenHasSrc,
     kindType,
@@ -588,7 +590,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 image={chosenImage}
                 workspaceClassName={live ? styles.paintFrame : undefined}
                 above={above}
-                live={generating || parts.frameFilled ? parts.frame : live}
+                live={
+                  generating
+                    ? parts.frame
+                    : live ?? (parts.frameFilled ? parts.frame : undefined)
+                }
                 generating={generating}
                 beside={parts.alternatives}
                 under={

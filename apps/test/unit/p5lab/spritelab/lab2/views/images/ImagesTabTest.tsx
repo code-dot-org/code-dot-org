@@ -482,7 +482,7 @@ describe('ImagesTab', () => {
     expect(screen.getByText('Your edited image')).toBeTruthy();
   });
 
-  it('paints own work in place in free play, the words beside the tools', async () => {
+  it('paints every image in place in free play, the words beside the tools', async () => {
     delete params['images-edited'];
     propsByKey.k1 = {
       name: 'Sprite 1',
@@ -493,6 +493,7 @@ describe('ImagesTab', () => {
     propsByKey.k2 = {
       name: 'Sprite 2',
       categories: [],
+      sourceUrl: 'sprite2.png',
       generation: {imageType: 'sprite', prompt: 'A cat'},
     };
     renderTab({editingOffered: true});
@@ -502,29 +503,14 @@ describe('ImagesTab', () => {
     expect(screen.getByText('words')).toBeTruthy();
     expect(screen.queryByRole('button', {name: /^Done/})).toBeNull();
     expect(screen.queryByRole('button', {name: 'Edit this image'})).toBeNull();
-    // The made image is a picture with its words, as before.
+    // So does the made one: the student can draw on it or make a picture
+    // over it.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
     });
-    expect(screen.queryByText('canvas')).toBeNull();
-    expect(screen.getByText('words')).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'Edit this image'})).toBeTruthy();
-  });
-
-  it('opens the tools on an AI-made picture in free play with Edit this image', () => {
-    delete params['images-edited'];
-    propsByKey.k1 = {
-      name: 'Sprite 1',
-      categories: [],
-      sourceUrl: 'sprite1.png',
-      generation: {imageType: 'sprite', prompt: 'A cat'},
-    };
-    renderTab({editingOffered: true});
-    expect(screen.queryByText('canvas')).toBeNull();
-    fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
-    // The tools stay open: the picture's making is the one they opened on.
     expect(screen.getByText('canvas')).toBeTruthy();
     expect(screen.getByText('words')).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'Edit this image'})).toBeNull();
   });
 
   it('keeps the tools and the words open while a blank is drawn in free play', () => {
