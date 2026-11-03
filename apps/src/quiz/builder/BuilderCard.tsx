@@ -158,7 +158,7 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
                 type="button"
                 disabled={isBusy || !isDirty}
                 loading={neverSaved ? isRemoving : false}
-                onClick={onDiscard}
+                onClick={neverSaved ? onRemove : onDiscard}
               >
                 {neverSaved ? 'Discard' : 'Discard changes'}
               </Button>

@@ -160,7 +160,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
       isRemoving={isRemoving}
       error={error}
       onSave={handleSave}
-      onDiscard={neverSaved ? handleRemove : handleDiscard}
+      onDiscard={handleDiscard}
       onRemove={handleRemove}
       nested
       neverSaved={neverSaved}

@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useRef, useState} from 'react';
+import React, {useId, useRef, useState} from 'react';
 
 import {QuizQuestionType} from '../types';
 import {pluralize} from '../utils';
@@ -34,8 +34,8 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
   const toggleRef = useRef<HTMLButtonElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
   const pageTitle = `Page ${page}`;
-  const titleId = `quiz-page-${page}-title`;
-  const bodyId = `quiz-page-${page}-body`;
+  const titleId = useId();
+  const bodyId = useId();
 
   const toggleCollapsed = () => {
     // [hidden] drops a focused control from the tab order, so move focus out first.
