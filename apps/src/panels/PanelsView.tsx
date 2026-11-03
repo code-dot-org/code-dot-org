@@ -70,6 +70,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     number | undefined
   >(undefined);
   const [typingDone, setTypingDone] = useState(false);
+  const [buttonVisible, setButtonVisible] = useState(false);
   const {cancel} = useBrowserTextToSpeech();
 
   const contentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
@@ -99,6 +100,11 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   );
 
   const handleButtonClick = useCallback(() => {
+    // The button's fade-in blocks pointer events only, so a keypress could
+    // otherwise activate it while it is still invisible.
+    if (!buttonVisible) {
+      return;
+    }
     // In link mode the button leaves the level; between-panel navigation
     // goes through links only.
     if (!useLinks && currentPanelIndex < panels.length - 1) {
@@ -113,6 +119,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       onContinue(panels[currentPanelIndex].nextUrl);
     }
   }, [
+    buttonVisible,
     useLinks,
     changePanel,
     panels,
@@ -167,6 +174,12 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     setTypingDone(false);
   }, [currentPanelIndex, setTypingDone]);
 
+  // Must change only when the container's key does, so the button remounts
+  // and its fade-in replays to set this again.
+  useEffect(() => {
+    setButtonVisible(false);
+  }, [currentPanelIndex, levelId]);
+
   const panel = panels[currentPanelIndex];
   const showTyping =
     panel?.typing || queryParams('panels-show-typing') === 'true';
@@ -178,10 +191,10 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const showButton = (!showTyping || typingDone) && buttonEligible;
 
   useEffect(() => {
-    if (showButton) {
+    if (showButton && buttonVisible) {
       nextButtonRef.current?.focus();
     }
-  }, [showButton, currentPanelIndex]);
+  }, [showButton, buttonVisible, currentPanelIndex]);
 
   if (!panel) {
     return null;
@@ -317,6 +330,11 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             )}
             id="panels-button"
             onClick={handleButtonClick}
+            onAnimationEnd={event => {
+              if (event.target === event.currentTarget) {
+                setButtonVisible(true);
+              }
+            }}
             type="button"
             ref={nextButtonRef}
             key={`button-${currentPanelIndex}`}
