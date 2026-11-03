@@ -135,6 +135,11 @@ AZURE_BLOCKED_SEVERITY = {
   'Violence' => 2,
 }.freeze
 
+# Whether --production publishes only variants approved in review. Off for
+# now: everything that passed moderation and was not rejected is published.
+# --require-review turns it on for one run.
+REQUIRE_REVIEW = false
+
 # Times a flagged variant is redrawn before it is left out.
 MAX_REDRAWS = 2
 
