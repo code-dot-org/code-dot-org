@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import Chips from '@code-dot-org/component-library/chips';
+import {MuiChips as Chips} from '@code-dot-org/component-library/chips';
 import TextField from '@code-dot-org/component-library/textField';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
@@ -83,7 +83,7 @@ describe('SingleSectionSetUp', () => {
       />
     );
 
-    expect(wrapper.find('Chips').length).toBe(0);
+    expect(wrapper.find(Chips).length).toBe(0);
   });
 
   it('calls updateSection when grade selection is updated', () => {

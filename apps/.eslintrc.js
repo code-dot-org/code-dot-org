@@ -210,6 +210,12 @@ module.exports = {
             message:
               'DSCO Dialog is deprecated. Import MuiDialog / MuiCustomDialog (and MuiDialogProps / MuiCustomDialogProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/dialog-to-mui-dialog.ts; see codemods/README.md there',
           },
+          {
+            name: '@code-dot-org/component-library/chips',
+            importNames: ['Chips', 'ChipsProps', 'default'],
+            message:
+              'DSCO Chips is deprecated. Import MuiChips (and MuiChipsProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/chips-to-mui-chips.ts; see codemods/README.md there',
+          },
         ],
         patterns: [
           {
