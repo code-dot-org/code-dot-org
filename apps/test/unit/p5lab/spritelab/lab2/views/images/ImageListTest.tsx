@@ -1,4 +1,4 @@
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 
 import ImageList from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImageList';
@@ -38,28 +38,27 @@ describe('ImageList', () => {
     // The count leaves the draft out.
     expect(screen.getByText('3 images')).toBeTruthy();
     const list = screen.getByRole('region', {name: 'Your images'});
-    const order = [...list.querySelectorAll('h4, button[aria-label]')].map(
-      el => el.getAttribute('aria-label') ?? el.textContent
-    );
-    expect(order).toEqual([
-      'Characters',
+    const tiles = within(list)
+      .getAllByRole('button')
+      .filter(button => button.hasAttribute('aria-pressed'))
+      .map(tile => tile.getAttribute('aria-label'));
+    expect(tiles).toEqual([
       'Sprite 1',
       'Sprite 2',
-      'Backgrounds',
       'Background 1',
-      'Objects',
       'New object',
     ]);
   });
 
   it('scrolls the tiles so a new slot shows whole, smoothly', () => {
     jest.useFakeTimers();
-    const scrollTo = jest.fn();
     // The tiles box is 300px tall and scrolled to 0; the slot lands at 400.
+    // The slot is told from the box by its first child, the pressed tile.
     jest
       .spyOn(HTMLElement.prototype, 'getBoundingClientRect')
       .mockImplementation(function (this: HTMLElement) {
-        const slot = this.getAttribute('class')?.includes('tileSlot');
+        const slot =
+          this.firstElementChild?.getAttribute('aria-pressed') === 'true';
         return (
           slot
             ? {top: 400, bottom: 488, left: 0, right: 88, width: 88, height: 88}
@@ -73,12 +72,10 @@ describe('ImageList', () => {
               }
         ) as DOMRect;
       });
-    Object.defineProperty(HTMLElement.prototype, 'clientHeight', {
-      configurable: true,
-      get: () => 300,
-    });
-    HTMLElement.prototype.scrollTo =
-      scrollTo as unknown as typeof HTMLElement.prototype.scrollTo;
+    jest
+      .spyOn(HTMLElement.prototype, 'clientHeight', 'get')
+      .mockReturnValue(300);
+    const scrollTo = jest.spyOn(Element.prototype, 'scrollTo');
     const {rerender} = render(
       <ImageList
         images={[]}
@@ -166,7 +163,8 @@ describe('ImageList', () => {
       imageType: 'sprite',
       subject: 'object',
     });
-    // The pick closes the menu.
+    // The pick closes the menu. The library marks an open dropdown only by
+    // its class; it sets no aria-expanded.
     expect(document.querySelector('[class~="open"]')).toBeNull();
   });
 
@@ -225,7 +223,10 @@ describe('ImageList', () => {
     expect(onDelete).not.toHaveBeenCalled();
     // The dialog shows which image, by its picture.
     const dialog = screen.getByRole('alertdialog');
-    expect(dialog.querySelector('img')?.getAttribute('src')).toBe('data:b');
+    expect(within(dialog).getByRole('img', {name: 'Sprite 2'})).toHaveAttribute(
+      'src',
+      'data:b'
+    );
     fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
     expect(screen.queryByRole('alertdialog')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
