@@ -524,8 +524,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     <div className={styles.underSteps}>{parts.progress}</div>
                   ) : (
                     parts.underFrame || reopenedBehindTheScenes
-                  parts.mode === 'generating' && (
-                    <div className={styles.underSteps}>{parts.progress}</div>
                   )
                 }
                 overlay={
