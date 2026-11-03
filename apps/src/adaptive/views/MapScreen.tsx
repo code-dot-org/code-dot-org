@@ -9,14 +9,12 @@ import {Button as MuiButton} from '@mui/material';
 import React, {useMemo, useRef, useState} from 'react';
 
 import {CheckpointStatusMap} from '../progress';
-import {usePathwayProject} from '../project/usePathwayProject';
 import {PathwayEvidence} from '../routing/evidence';
 import {Pathway} from '../types';
 
 import CheckpointCard from './CheckpointCard';
 import {resolveMapSettings} from './map/mapSettings';
 import MapView from './map/MapView';
-import ProjectCard from './ProjectCard';
 
 import styles from './mapScreen.module.scss';
 
@@ -48,7 +46,6 @@ interface MapScreenProps {
   focusId?: string;
   onFocus: (id: string | undefined) => void;
   onStart: (checkpointId: string) => void;
-  onWorkOnProject: () => void;
   hasSkippedCheckpoints: boolean;
 }
 
@@ -59,13 +56,9 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   focusId,
   onFocus,
   onStart,
-  onWorkOnProject,
   hasSkippedCheckpoints,
 }) => {
   const {theme, setTheme} = useTheme();
-  // The project manager lives only while the map shows, so it never races a
-  // step's manager on the same channel.
-  const projectState = usePathwayProject(pathway);
   // During the tour, show CheckpointCard for the user-selected checkpoint
   // without zooming the map. A zoomed map shifts the highlighted node away from
   // where IntroJS measured it, so we keep the map at its fit view.
@@ -210,7 +203,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
           />
         </div>
         <aside id="adaptive-tour-side" className={styles.side}>
-          {focused ? (
+          {focused && (
             <CheckpointCard
               pathway={pathway}
               checkpoint={focused}
@@ -222,12 +215,6 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
                 onStart(focused.id);
               }}
               onSelectCheckpoint={onFocus}
-            />
-          ) : (
-            <ProjectCard
-              pathway={pathway}
-              {...projectState}
-              onWorkOnProject={onWorkOnProject}
             />
           )}
           <div className={styles.sideFooter}>

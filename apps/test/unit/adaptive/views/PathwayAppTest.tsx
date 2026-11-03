@@ -10,11 +10,9 @@ jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
   default: ({
     onStart,
     focusId,
-    onWorkOnProject,
   }: {
     onStart: (id: string) => void;
     focusId?: string;
-    onWorkOnProject: () => void;
   }) => (
     <>
       <button type="button" onClick={() => onStart('intro')}>
@@ -23,9 +21,7 @@ jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
       <button type="button" onClick={() => onStart('multi')}>
         start multi
       </button>
-      <button type="button" onClick={onWorkOnProject}>
-        map screen{focusId ? ` focused on ${focusId}` : ''}
-      </button>
+      <span>map screen{focusId ? ` focused on ${focusId}` : ''}</span>
     </>
   ),
 }));
@@ -47,12 +43,15 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveTabBar', () => ({
   default: ({
     activeTab,
     onTabChange,
+    projectName,
   }: {
     activeTab: string;
     onTabChange: (tab: string) => void;
+    projectName?: string;
   }) => (
     <div>
       tabs: {activeTab}
+      {projectName && <span>tab project: {projectName}</span>}
       <button type="button" onClick={() => onTabChange('project')}>
         My project tab
       </button>
@@ -74,6 +73,7 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
     onFinishPathway,
     activeTab,
     onTabChange,
+    projectName,
   }: {
     checkpoint: {title: string; steps: unknown[]};
     initialStepId?: string;
@@ -83,11 +83,13 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
     onFinishPathway?: () => void;
     activeTab?: string;
     onTabChange?: (tab: string) => void;
+    projectName?: string;
   }) => (
     <div>
       playing {checkpoint.title}
       {initialStepId ? ` at ${initialStepId}` : ''}
       {activeTab && <span>step-tab: {activeTab}</span>}
+      {projectName && <span>step project: {projectName}</span>}
       <button type="button" onClick={onExit}>
         exit
       </button>
@@ -124,9 +126,13 @@ jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
   isAdaptiveAiEnabled: () => false,
 }));
 const mockDispatch = jest.fn();
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const mockUseAppSelector = jest.fn<any, [any]>();
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   ...jest.requireActual('@cdo/apps/util/reduxHooks'),
   useAppDispatch: () => mockDispatch,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  useAppSelector: (sel: any) => mockUseAppSelector(sel),
 }));
 jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
   sendAdaptiveStepReport: jest.fn(),
@@ -184,6 +190,7 @@ describe('PathwayApp', () => {
   beforeEach(() => {
     mockDispatch.mockClear();
     mockLoad.mockResolvedValue(EMPTY_PROGRESS);
+    mockUseAppSelector.mockReturnValue(undefined);
     window.history.replaceState({}, '', '/');
   });
 
@@ -231,10 +238,6 @@ describe('PathwayApp', () => {
     await renderSettled();
 
     expect(screen.getByText('map screen')).toBeTruthy();
-    expect(mockDispatch).not.toHaveBeenCalled();
-
-    act(() => screen.getByText('map screen').click());
-    expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
   });
 
   it('resumes at the first incomplete step when opening an in-progress checkpoint', async () => {
@@ -513,10 +516,12 @@ describe('PathwayApp', () => {
         steps: {'intro-step': {status: 'started', timeSpent: 0}},
       });
       await renderSettled();
+      mockDispatch.mockClear();
 
       act(() => screen.getByRole('button', {name: 'My project tab'}).click());
 
       expect(screen.getByText('playing My Project')).toBeTruthy();
+      expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
     });
 
     it('passes the project tab as active to StepPlayer in project view', async () => {
@@ -548,6 +553,37 @@ describe('PathwayApp', () => {
       // Auto-started into a checkpoint step, not the map.
       expect(screen.getByText(/playing Intro/)).toBeTruthy();
       expect(screen.queryByText(/tabs:/)).toBeNull();
+    });
+
+    it('passes the channel name to the tab bar as projectName', async () => {
+      mockUseAppSelector.mockReturnValue('Cool Website');
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.getByText('tab project: Cool Website')).toBeTruthy();
+    });
+
+    it('passes the channel name through StepPlayer to the tab bar in project view', async () => {
+      mockUseAppSelector.mockReturnValue('Cool Website');
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+
+      expect(screen.getByText('step project: Cool Website')).toBeTruthy();
+    });
+
+    it('shows no project name when the channel has no name', async () => {
+      mockUseAppSelector.mockReturnValue(undefined);
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.queryByText(/tab project:/)).toBeNull();
     });
   });
 });

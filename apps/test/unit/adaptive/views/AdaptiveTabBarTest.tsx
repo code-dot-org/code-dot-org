@@ -51,4 +51,21 @@ describe('AdaptiveTabBar', () => {
 
     expect(onTabChange).not.toHaveBeenCalled();
   });
+
+  it('shows the project name in the project tab when projectName is given', () => {
+    render(
+      <AdaptiveTabBar
+        activeTab="map"
+        onTabChange={jest.fn()}
+        projectName="Cool Website"
+      />
+    );
+    expect(screen.getByRole('tab', {name: /Cool Website/})).toBeTruthy();
+    expect(screen.queryByRole('tab', {name: /My project/})).toBeNull();
+  });
+
+  it('falls back to "My project" when projectName is not given', () => {
+    render(<AdaptiveTabBar activeTab="map" onTabChange={jest.fn()} />);
+    expect(screen.getByRole('tab', {name: /My project/})).toBeTruthy();
+  });
 });

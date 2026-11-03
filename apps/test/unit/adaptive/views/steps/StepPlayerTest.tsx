@@ -42,12 +42,15 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveTabBar', () => ({
   default: ({
     activeTab,
     onTabChange,
+    projectName,
   }: {
     activeTab: string;
     onTabChange: (tab: string) => void;
+    projectName?: string;
   }) => (
     <div>
       tab bar: {activeTab}
+      {projectName && <span>tab project: {projectName}</span>}
       <button type="button" onClick={() => onTabChange('map')}>
         go to map tab
       </button>
@@ -207,6 +210,16 @@ describe('StepPlayer', () => {
 
       expect(calls).toContainEqual(['leave', checkpoint.steps[0], 2000]);
       expect(onTabChange).toHaveBeenCalledWith('map');
+    });
+
+    it('passes projectName through to the tab bar', () => {
+      const onTabChange = jest.fn();
+      renderPlayer({
+        activeTab: 'project',
+        onTabChange,
+        projectName: 'Cool Website',
+      });
+      expect(screen.getByText('tab project: Cool Website')).toBeTruthy();
     });
   });
 

@@ -12,16 +12,18 @@ type TabValue = 'map' | 'project';
 interface AdaptiveTabBarProps {
   activeTab: TabValue;
   onTabChange: (tab: TabValue) => void;
+  projectName?: string;
 }
 
 const AdaptiveTabBar: React.FunctionComponent<AdaptiveTabBarProps> = ({
   activeTab,
   onTabChange,
+  projectName,
 }) => (
   <div className={styles.tabBar}>
     <MuiTabs value={activeTab} onChange={(_, v: TabValue) => onTabChange(v)}>
       <MuiTab
-        label="My project"
+        label={projectName || 'My project'}
         value="project"
         icon={<FontAwesomeV6Icon iconName="laptop-code" />}
         iconPosition="start"

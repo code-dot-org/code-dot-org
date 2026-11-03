@@ -10,7 +10,7 @@ import {
   sendStartedReportIfNotStarted,
 } from '@cdo/apps/code-studio/progressRedux';
 import Loading from '@cdo/apps/lab2/views/Loading';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {isAdaptiveAiEnabled} from '../ai/generate';
@@ -167,6 +167,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   saveAnswers,
 }) => {
   const dispatch = useAppDispatch();
+  const projectName = useAppSelector(
+    state => state.lab.channel?.name || undefined
+  );
   const [view, setView] = useState<View>(
     initialCheckpointId
       ? {kind: 'step', checkpointId: initialCheckpointId, stepId: initialStepId}
@@ -295,6 +298,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
                   }
                 : undefined
             }
+            projectName={isProject ? projectName : undefined}
           />
         </PathwayContext.Provider>
       </div>
@@ -316,6 +320,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         onTabChange={tab => {
           if (tab === 'project') openProject();
         }}
+        projectName={projectName}
       />
       <MapScreen
         pathway={pathway}
@@ -332,7 +337,6 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             stepId: cp ? stepIdToResume(cp, progress) : undefined,
           });
         }}
-        onWorkOnProject={openProject}
         hasSkippedCheckpoints={hasSkippedCheckpoints}
       />
     </div>
