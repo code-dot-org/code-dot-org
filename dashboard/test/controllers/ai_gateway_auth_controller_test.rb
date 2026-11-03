@@ -15,6 +15,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
     stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
+    stub_access_token_reuse(AiGatewayAuthController::ACCESS_TOKEN_REUSE_DEFAULT)
     @params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB],
@@ -153,6 +154,22 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
       assert_equal 'disabled', claims[:turnstile_enforcement_mode], "claim for #{stored.inspect}"
       assert_equal 'disabled', JSON.parse(response.body)['turnstileEnforcementMode'], "response field for #{stored.inspect}"
     end
+  end
+
+  test 'tells the browser it may reuse the token only when DCDO holds a literal true' do
+    [[true, true], [false, false], ['true', false], [nil, false], [1, false]].each do |stored, expected|
+      stub_access_token_reuse(stored)
+
+      mint_and_capture_claims
+
+      assert_equal expected, JSON.parse(response.body)['reusable'], "for #{stored.inspect}"
+    end
+  end
+
+  private def stub_access_token_reuse(value)
+    DCDO.stubs(:get).
+      with(AiGatewayAuthController::ACCESS_TOKEN_REUSE_DCDO_KEY, AiGatewayAuthController::ACCESS_TOKEN_REUSE_DEFAULT).
+      returns(value)
   end
 
   private def stub_turnstile_enforcement_mode(value)

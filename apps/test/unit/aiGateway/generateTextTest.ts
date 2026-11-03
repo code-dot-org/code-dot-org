@@ -55,7 +55,13 @@ describe('generateTextThroughGateway access tokens', () => {
     mockPost.mockImplementation(async (url: string) => {
       if (url === '/ai_gateway/access_token') {
         const token = `token-${++issued}`;
-        return {json: async () => ({token, turnstileEnforcementMode: 'off'})};
+        return {
+          json: async () => ({
+            token,
+            turnstileEnforcementMode: 'off',
+            reusable: true,
+          }),
+        };
       }
       if (url === AI_GATEWAY_URL && gatewayStatus !== 200) {
         throw new NetworkError(`${gatewayStatus}`, {

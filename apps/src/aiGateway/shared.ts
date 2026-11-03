@@ -20,6 +20,8 @@ export interface GatewayAccessToken {
    * worker's enforcement always come from the same value.
    */
   turnstileEnforcementMode: TurnstileEnforcementMode;
+  /** Whether the server allows this token to be reused until it expires. */
+  reusable: boolean;
 }
 
 // Use the provided AichatContext or fall back to the default context.
@@ -40,12 +42,14 @@ export async function fetchAccessToken(
   const value = (await response.json()) as {
     token: string;
     turnstileEnforcementMode?: unknown;
+    reusable?: unknown;
   };
   return {
     token: value.token,
     turnstileEnforcementMode: parseTurnstileEnforcementMode(
       value.turnstileEnforcementMode
     ),
+    reusable: value.reusable === true,
   };
 }
 
@@ -69,7 +73,8 @@ export function getModelString(model: unknown) {
   return modelString;
 }
 
-interface CachedAccessToken extends GatewayAccessToken {
+interface CachedAccessToken {
+  accessToken: GatewayAccessToken;
   expiresAtLocal: number;
 }
 
@@ -92,10 +97,12 @@ async function fetchAndCacheAccessToken(
   // Read before the request: the token is issued later, so its expiry is never overestimated.
   const requestedAt = Date.now();
   const accessToken = await fetchAccessToken(aichatContext);
-  cachedAccessTokens.set(key, {
-    ...accessToken,
-    expiresAtLocal: requestedAt + AiGatewayAccessTokenLifetimeSeconds * 1000,
-  });
+  if (accessToken.reusable) {
+    cachedAccessTokens.set(key, {
+      accessToken,
+      expiresAtLocal: requestedAt + AiGatewayAccessTokenLifetimeSeconds * 1000,
+    });
+  }
   return accessToken;
 }
 
@@ -107,10 +114,7 @@ export function getAccessToken(
   const cached = cachedAccessTokens.get(key);
   if (cached) {
     if (Date.now() < cached.expiresAtLocal - ACCESS_TOKEN_REUSE_MARGIN_MS) {
-      return Promise.resolve({
-        token: cached.token,
-        turnstileEnforcementMode: cached.turnstileEnforcementMode,
-      });
+      return Promise.resolve(cached.accessToken);
     }
     cachedAccessTokens.delete(key);
   }
@@ -134,7 +138,7 @@ export function invalidateAccessToken(
   token: string
 ) {
   const key = accessTokenCacheKey(aichatContext);
-  if (cachedAccessTokens.get(key)?.token === token) {
+  if (cachedAccessTokens.get(key)?.accessToken.token === token) {
     cachedAccessTokens.delete(key);
   }
 }

@@ -45,7 +45,16 @@ describe('fetchAccessToken', () => {
     expect(result).toEqual({
       token: 'jwt',
       turnstileEnforcementMode: 'disabled',
+      reusable: false,
     });
+  });
+
+  it('reports the token reusable only when the server says so', async () => {
+    mockPost.mockResolvedValue({
+      json: async () => ({token: 'jwt', reusable: true}),
+    });
+
+    expect((await fetchAccessToken()).reusable).toBe(true);
   });
 
   it('sends the given context instead when a caller passes one', async () => {
@@ -64,8 +73,8 @@ describe('fetchAccessToken', () => {
   });
 });
 
-const tokenResponse = (token: string) => ({
-  json: async () => ({token, turnstileEnforcementMode: 'disabled'}),
+const tokenResponse = (token: string, reusable = true) => ({
+  json: async () => ({token, turnstileEnforcementMode: 'disabled', reusable}),
 });
 
 describe('getAccessToken', () => {
@@ -109,6 +118,17 @@ describe('getAccessToken', () => {
     });
 
     expect(mockPost).toHaveBeenCalledTimes(1);
+  });
+
+  it('fetches every time while the server disallows reuse', async () => {
+    mockPost.mockImplementation(async () =>
+      tokenResponse(`token-${++issued}`, false)
+    );
+
+    await getAccessToken(tutorContext);
+    await getAccessToken(tutorContext);
+
+    expect(mockPost).toHaveBeenCalledTimes(2);
   });
 
   it('fetches a new token for a different context', async () => {
