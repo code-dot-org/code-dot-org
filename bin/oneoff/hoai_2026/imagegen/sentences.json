@@ -348,16 +348,58 @@
         "emoji": "🌁"
       }
     ],
+    "blockAdjectives": [
+      {
+        "id": "light",
+        "text": "light"
+      },
+      {
+        "id": "dark",
+        "text": "dark"
+      },
+      {
+        "id": "simple",
+        "text": "simple"
+      },
+      {
+        "id": "detailed",
+        "text": "detailed"
+      },
+      {
+        "id": "crystal",
+        "text": "crystal"
+      },
+      {
+        "id": "magical",
+        "text": "magical"
+      },
+      {
+        "id": "ancient",
+        "text": "ancient"
+      },
+      {
+        "id": "shiny",
+        "text": "shiny"
+      },
+      {
+        "id": "fiery",
+        "text": "fiery"
+      }
+    ],
     "blockMaterials": [
+      {
+        "id": "bubbles",
+        "text": "bubbles"
+      },
+      {
+        "id": "grass",
+        "text": "grass",
+        "emoji": "🌿"
+      },
       {
         "id": "stone",
         "text": "stone",
         "emoji": "🪨"
-      },
-      {
-        "id": "wood",
-        "text": "wood",
-        "emoji": "🪵"
       },
       {
         "id": "ice",
@@ -365,46 +407,30 @@
         "emoji": "🧊"
       },
       {
-        "id": "gold",
-        "text": "gold",
-        "emoji": "🪙"
-      },
-      {
         "id": "lava",
         "text": "lava",
         "emoji": "🌋"
       },
       {
-        "id": "grass",
-        "text": "grass",
-        "emoji": "🌿"
-      }
-    ],
-    "blockDetails": [
-      {
-        "id": "cracks",
-        "text": "glowing cracks",
-        "emoji": "✨"
+        "id": "cloud",
+        "text": "cloud"
       },
       {
-        "id": "gems",
-        "text": "tiny gems",
-        "emoji": "💎"
+        "id": "brick",
+        "text": "brick"
       },
       {
-        "id": "moss",
-        "text": "moss on top",
-        "emoji": "🍀"
+        "id": "flowers",
+        "text": "flowers"
       },
       {
-        "id": "bolts",
-        "text": "metal bolts",
-        "emoji": "🔩"
+        "id": "metal",
+        "text": "metal"
       },
       {
-        "id": "patterns",
-        "text": "carved patterns",
-        "emoji": "🔷"
+        "id": "wood",
+        "text": "wood",
+        "emoji": "🪵"
       }
     ],
     "treasureLooks": [
@@ -716,31 +742,27 @@
     "block": {
       "segments": [
         {
-          "text": "A block of "
+          "text": "A "
+        },
+        {
+          "slot": "adjective"
+        },
+        {
+          "text": " block of "
         },
         {
           "slot": "material"
-        },
-        {
-          "phrase": [
-            {
-              "text": " with "
-            },
-            {
-              "slot": "detail"
-            }
-          ]
         }
       ],
       "slots": {
+        "adjective": {
+          "label": "adjective",
+          "words": "blockAdjectives"
+        },
         "material": {
           "label": "material",
           "words": "blockMaterials",
           "required": true
-        },
-        "detail": {
-          "label": "detail",
-          "words": "blockDetails"
         }
       }
     },
