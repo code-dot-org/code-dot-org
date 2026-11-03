@@ -196,6 +196,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     aichatContext: aiContext,
     chat,
     recordValidation: recordStepValidation,
+    priorAttempts: progress.steps[step.id]?.validationHistory?.length ?? 0,
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share

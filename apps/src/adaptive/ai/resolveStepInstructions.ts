@@ -5,7 +5,9 @@
 
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {ProjectSources} from '@cdo/apps/lab2/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
+import {sendAdaptiveEvent, stepProperties} from '../metricsHelpers';
 import {GeneratedContent, generateInputsHash} from '../progress/model';
 import {summarizeProjectFiles} from '../project/summarizeProjectFiles';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
@@ -63,9 +65,21 @@ export async function resolveStepInstructions({
     fallback: authoredInstructions,
   });
   const inputsHash = generateInputsHash(prompt);
-  if (generatedInstructions?.inputsHash === inputsHash)
+  const sendGenerated = (result: {
+    cacheHit: boolean;
+    success: boolean;
+    latencyMs?: number;
+  }) =>
+    sendAdaptiveEvent(EVENTS.ADAPTIVE_INSTRUCTIONS_GENERATED, {
+      ...stepProperties(checkpoint, step),
+      ...result,
+    });
+  if (generatedInstructions?.inputsHash === inputsHash) {
+    sendGenerated({cacheHit: true, success: true});
     return generatedInstructions.instructions;
+  }
 
+  const startedAt = Date.now();
   const {output, traceId} = await generate({
     schema: generatedInstructionsSchema,
     prompt,
@@ -80,6 +94,11 @@ export async function resolveStepInstructions({
         promptVersion: INSTRUCTIONS_PROMPT_VERSION,
       },
     },
+  });
+  sendGenerated({
+    cacheHit: false,
+    success: !!output,
+    latencyMs: Date.now() - startedAt,
   });
   if (!output) return authoredInstructions;
   saveGeneratedInstructions(step.id, {

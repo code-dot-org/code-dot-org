@@ -6,8 +6,11 @@ import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import React, {useMemo, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+
+import {sendAdaptiveEvent} from '../metricsHelpers';
 import {CheckpointStatusMap} from '../progress';
 import {usePathwayProject} from '../project/usePathwayProject';
 import {PathwayEvidence} from '../routing/evidence';
@@ -87,6 +90,8 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     [pathway]
   );
 
+  const tourEnded = useRef(false);
+
   const [tourEnabled, setTourEnabled] = useState(
     () => !tryGetLocalStorage(SKILL_MAP_TOUR_STORAGE_KEY, '0')
   );
@@ -100,14 +105,32 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     [hasSkippedCheckpoints]
   );
 
+  useEffect(() => {
+    if (tourEnabled)
+      sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_STARTED, {
+        hasSkippedCheckpoints,
+      });
+    // Once per map visit.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const dismissTour = () => {
-    localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
-    setTourEnabled(false);
-    setTourCheckpointId(undefined);
-    document.body.classList.remove(
-      'adaptive-tour-step-select',
-      'adaptive-tour-no-next'
-    );
+    if (!tourEnded.current) {
+      tourEnded.current = true;
+      if (tourStep >= tourStepIndices.sidebar)
+        sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_COMPLETED);
+      else
+        sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_DISMISSED, {
+          stepIndex: tourStep,
+        });
+      localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
+      setTourEnabled(false);
+      setTourCheckpointId(undefined);
+      document.body.classList.remove(
+        'adaptive-tour-step-select',
+        'adaptive-tour-no-next'
+      );
+    }
   };
 
   // During the "pick" step, zoom to the centroid of all open checkpoints.
@@ -213,16 +236,25 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               focusId={focusId}
               tourFocusIds={tourFocusIds}
               onSelect={id => {
+                const sendSelected = () =>
+                  sendAdaptiveEvent(
+                    EVENTS.ADAPTIVE_SKILL_MAP_CHECKPOINT_SELECTED,
+                    {checkpointId: id, status: statusMap[id]}
+                  );
                 if (
                   tourEnabled &&
                   tourStep === tourStepIndices.pickCheckpoint
                 ) {
                   if (statusMap[id] !== 'locked') {
+                    sendSelected();
                     setTourCheckpointId(id);
                     stepsRef.current?.introJs?.nextStep();
                   }
+                } else if (id === focusId) {
+                  onFocus(undefined);
                 } else {
-                  onFocus(id === focusId ? undefined : id);
+                  sendSelected();
+                  onFocus(id);
                 }
               }}
             />
