@@ -104,6 +104,19 @@ describe('ImageList', () => {
       top: 488 + 8 - 300,
       behavior: 'smooth',
     });
+    // Another slot under the same id, for another kind, scrolls again.
+    rerender(
+      <ImageList
+        images={[]}
+        draft={{id: 'draft', imageType: 'block'}}
+        chosenId="draft"
+        onChoose={jest.fn()}
+      />
+    );
+    act(() => {
+      jest.runOnlyPendingTimers();
+    });
+    expect(scrollTo).toHaveBeenCalledTimes(2);
     jest.restoreAllMocks();
     jest.useRealTimers();
   });

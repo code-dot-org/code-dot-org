@@ -104,12 +104,13 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   // A new slot may land below the fold of a long list: scroll the tiles
   // so the whole slot shows, ring and all, smoothly unless the student
   // asked for less motion. A frame after it mounts, so the list has
-  // settled and nothing jumps the scroll back.
+  // settled and nothing jumps the scroll back. Every draft is its own
+  // object under one id, so the scroll follows each new slot, not only
+  // the first after none.
   const tilesRef = useRef<HTMLDivElement>(null);
   const draftRef = useRef<HTMLDivElement>(null);
-  const draftId = draft?.id;
   useEffect(() => {
-    if (!draftId) {
+    if (!draft) {
       return;
     }
     const frame = window.requestAnimationFrame(() => {
@@ -139,7 +140,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
       tiles.scrollTo({top: target, behavior: reduced ? 'auto' : 'smooth'});
     });
     return () => window.cancelAnimationFrame(frame);
-  }, [draftId]);
+  }, [draft]);
   const chosenImage = images.find(image => image.key === chosenId);
   const deletable = !!onDelete && !!chosenImage;
   return (
