@@ -433,6 +433,15 @@ def fresh_record(options, job, variant)
   }.compact
 end
 
+# Whether the frames on disk were drawn from words other than this run
+# would send: a word's text, the sentence, or the lab's prompt builders
+# changed under an unchanged path.
+def prompts_changed?(options, job, record)
+  drawn = (record['frames'] || []).to_h {|frame| [frame['name'], frame['prompt']]}
+  return false if drawn.empty?
+  job['frames'].any? {|frame| drawn[frame['name']] != frame_prompt(options, job, frame)}
+end
+
 # Moves the variant's frames to the attic and starts its record over,
 # keeping what happened in its history.
 def retire(options, job, variant, record, reason)
@@ -473,6 +482,8 @@ def process_variant(options, moderator, prompt_checks, job, variant)
     record = retire(options, job, variant, record, 'rejected in review')
   elsif present.any? && !!record['transparent'] != !!transparent?(options, job)
     record = retire(options, job, variant, record, 'drawn with the other background')
+  elsif present.any? && prompts_changed?(options, job, record)
+    record = retire(options, job, variant, record, 'prompt changed')
   end
   record['promptCheck'] = prompt_checks[job['prompt']] if prompt_checks[job['prompt']]
 
