@@ -10,7 +10,8 @@ import animThePlayer from '@cdo/static/spritelab_lab2/block-help/the-player.gif'
 import animWhenClicked from '@cdo/static/spritelab_lab2/block-help/when-clicked.gif';
 
 import {MAX_ZOOM, MIN_ZOOM} from '../camera';
-import {PLATFORM_GRAVITY} from '../platformPhysics';
+
+const DEFAULT_GRAVITY_STRENGTH = 10;
 
 /**
  * What the new-block catalog says about a block: a `summary` sentence, then
@@ -34,8 +35,8 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     animation: {src: animSetGravity, alt: 'The set gravity block in action.'},
     summary: 'Changes how hard everything falls.',
     body:
-      `**${PLATFORM_GRAVITY}** is normal; smaller numbers float, and a ` +
-      'negative number flips the world upside down.',
+      `**${DEFAULT_GRAVITY_STRENGTH}** is Earth-like gravity; **0** is ` +
+      'weightless, and **25** is Jupiter-like gravity.',
   },
   spritelab2_setCameraZoom: {
     title: 'Set zoom',
