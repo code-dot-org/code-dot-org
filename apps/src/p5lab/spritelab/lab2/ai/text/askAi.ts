@@ -65,7 +65,7 @@ export function askAiErrorMessage(error: unknown): string {
   if (error instanceof AskAiError) {
     return error.phase === 'prompt'
       ? "That prompt isn't appropriate for class."
-      : "The AI's answer didn't pass our safety checks.";
+      : "The AI's answer failed our safety checks.";
   }
   if (error instanceof AskAiTimeoutError) {
     return 'The AI took too long to answer. Try again.';
