@@ -199,19 +199,18 @@ module ActiveJobMetrics
       metrics.concat(overall_metrics)
 
       jobs = job_class.pending_jobs
-      # The boundary matches the Kubernetes worker's priorityMode filters.
-      bands = {
+      priorities = {
         'high' => jobs.where('priority < 10'),
         'low' => jobs.where('priority >= 10'),
       }
       timestamp = Time.now
-      bands.each do |band, band_jobs|
+      priorities.each do |priority, priority_jobs|
         metrics << {
           metric_name: 'PendingJobCount',
-          value: band_jobs.count,
+          value: priority_jobs.count,
           unit: 'Count',
           timestamp: timestamp,
-          dimensions: dimensions + [{name: 'PriorityBand', value: band}],
+          dimensions: dimensions + [{name: 'Priority', value: priority}],
         }
       end
     end

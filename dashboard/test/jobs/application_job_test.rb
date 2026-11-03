@@ -126,7 +126,7 @@ class ApplicationJobTest < ActiveJob::TestCase
       assert_equal @expected_my_running_count, running_metric[:value]
       assert_nil worker_metric
       assert_nil idle_workers_percent_metric
-      assert(metrics.none? {|metric| metric[:dimensions].any? {|dimension| dimension[:name] == 'PriorityBand'}})
+      assert(metrics.none? {|metric| metric[:dimensions].any? {|dimension| dimension[:name] == 'Priority'}})
     end
 
     ActiveJobMetrics.report_metrics(ApplicationJob.new, dimensions: [{name: 'Environment', value: CDO.rack_env}, {name: 'JobName', value: 'ApplicationJob'}])
@@ -156,7 +156,7 @@ class ApplicationJobTest < ActiveJob::TestCase
       assert_equal 3, pending.length
       environment = [{name: 'Environment', value: CDO.rack_env}]
       {nil => 5, 'high' => 2, 'low' => 3}.each do |band, count|
-        dimensions = band ? environment + [{name: 'PriorityBand', value: band}] : environment
+        dimensions = band ? environment + [{name: 'Priority', value: band}] : environment
         metric = pending.find {|candidate| candidate[:dimensions] == dimensions}
         assert_equal count, metric.fetch(:value)
         assert_equal 'Count', metric.fetch(:unit)
@@ -175,7 +175,7 @@ class ApplicationJobTest < ActiveJob::TestCase
     Cdo::Metrics.expects(:push).twice.with do |namespace, metrics|
       assert_equal ActiveJobMetrics::METRICS_NAMESPACE, namespace
       published_metrics << metrics.select do |metric|
-        metric[:metric_name] == 'PendingJobCount' && metric[:dimensions].any? {|dimension| dimension[:name] == 'PriorityBand'}
+        metric[:metric_name] == 'PendingJobCount' && metric[:dimensions].any? {|dimension| dimension[:name] == 'Priority'}
       end
       true
     end
