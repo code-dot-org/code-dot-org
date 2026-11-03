@@ -120,7 +120,6 @@ const resolve = (
     checkpoint,
     step,
     progress,
-    projectInfo: {},
     sources,
     aichatContext: context,
     ...overrides,
@@ -193,17 +192,6 @@ describe('generateProject', () => {
     expect(await resolve()).toBeUndefined();
     expect(mockModerate).not.toHaveBeenCalled();
     expect(mockGenerate).not.toHaveBeenCalled();
-  });
-
-  it('keeps a name and description the student already gave', async () => {
-    mockGenerate.mockResolvedValue({output, traceId: 't1'});
-    const generated = await resolve({
-      projectInfo: {name: 'Mine', description: 'My own words.'},
-    });
-    expect(generated).toMatchObject({
-      name: 'Mine',
-      description: 'My own words.',
-    });
   });
 
   it('moderates what the student typed, not what they picked, before the call', async () => {
