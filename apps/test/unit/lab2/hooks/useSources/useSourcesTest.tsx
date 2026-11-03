@@ -135,6 +135,7 @@ describe('useSources', () => {
       expect(result.current.channel).toEqual(OWNED_CHANNEL);
       expect(result.current.isEditable).toBe(true);
       expect(result.current.hasEdited).toBe(false);
+      expect(result.current.hasSavedSources).toBe(true);
     });
 
     it('publishes the channel to redux on load (transition bridge)', async () => {
@@ -165,14 +166,17 @@ describe('useSources', () => {
       await flush();
 
       expect(result.current.currentSources).toEqual(DEFAULT_SOURCES);
+      expect(result.current.hasSavedSources).toBe(false);
     });
 
-    it('does not load when the level does not use projects', async () => {
+    it('loads nothing for a level without a project', async () => {
       const {result} = renderUseSources({...LEVEL_ONE, usesProjects: false});
       await flush();
 
       expect(mockGetProjectManagerForLevel).not.toHaveBeenCalled();
+      expect(result.current.projectManager).toBeNull();
       expect(result.current.currentSources).toBeUndefined();
+      expect(result.current.isEditable).toBe(false);
     });
 
     it('surfaces load errors', async () => {
@@ -225,6 +229,27 @@ describe('useSources', () => {
         source: 'edited',
         extra: 'kept',
       });
+    });
+
+    it('drops an update that lands while a reload has cleared the sources', async () => {
+      const {result, rerender} = renderUseSources();
+      await flush();
+      expect(result.current.currentSources).toEqual(SAVED_SOURCES);
+
+      // The next level's load never settles; its start has already
+      // cleared the sources, as it does before the old view unmounts.
+      (fakeManager.load as jest.Mock).mockReturnValue(new Promise(() => {}));
+      rerender({levelProperties: LEVEL_TWO});
+      await flush();
+      expect(result.current.currentSources).toBeUndefined();
+
+      expect(() =>
+        act(() => {
+          result.current.updateSources(prev => ({...prev, source: 'late'}));
+        })
+      ).not.toThrow();
+      expect(fakeManager.save).not.toHaveBeenCalled();
+      expect(result.current.currentSources).toBeUndefined();
     });
 
     it('ignores updates when the viewer is not the project owner', async () => {

@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-8894908-f9d19c3baf71",
+  "problem_type": "scramble",
+  "active": true,
+  "problem_text": "Arrange the steps involved in identifying an AI hallucination from first to last.",
+  "solution": [
+    {
+      "option": "Fact-check the information provided by the AI.",
+      "correct": 0
+    },
+    {
+      "option": "Identify the source of the AI’s data.",
+      "correct": 1
+    },
+    {
+      "option": "Cross-reference with reliable sources.",
+      "correct": 2
+    },
+    {
+      "option": "Assess the context in which information is used.",
+      "correct": 3
+    }
+  ],
+  "objective_keys": [
+    "281c3a05-dbea-489c-b485-2a9cee46a1e7",
+    "bc93eee0-d7fd-43c8-838e-e14489b53d4e"
+  ]
+}

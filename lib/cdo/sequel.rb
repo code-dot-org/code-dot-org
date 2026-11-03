@@ -89,8 +89,10 @@ module Cdo
         write_timeout: 5
       }
 
-      # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
-      db_options[:reconnect] = true if DCDO.get('enable_mysql_client_reconnect', true)
+      # `MYSQL_OPT_RECONNECT` is deprecated in 8.0, although it still remains
+      # valid in 8.4. We do unfortunately still rely on it.
+      # See: https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
+      db_options[:reconnect] = true
 
       if query_timeout
         db_options[:read_timeout] = query_timeout

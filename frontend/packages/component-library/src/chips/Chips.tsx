@@ -10,7 +10,7 @@ import moduleStyles from './chip.module.scss';
 
 /**
  * @deprecated Use `MuiChipsProps` from `@code-dot-org/component-library/chips`.
- * Codemod: `yarn codemod:chips` in `frontend/packages/component-library`.
+ * Codemod: `codemods/chips-to-mui-chips.ts` in `frontend/packages/component-library`.
  */
 export interface ChipsProps {
   /** Chips group label */
@@ -53,7 +53,7 @@ export interface ChipsProps {
  * Can be used to render chips or as a part of bigger/more complex components (e.g. forms).
  *
  * @deprecated Use `MuiChips` from `@code-dot-org/component-library/chips`; it takes the same props.
- * Codemod: `yarn codemod:chips` in `frontend/packages/component-library`.
+ * Codemod: `codemods/chips-to-mui-chips.ts` in `frontend/packages/component-library`.
  * See `src/chips/CHIPS_MIGRATION_TO_MUI.md`.
  */
 const Chips: React.FunctionComponent<ChipsProps> = ({

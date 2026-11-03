@@ -14,8 +14,12 @@ describe('camelize', () => {
       image_role_defaults: 'imageRoleDefaults',
       level_mode: 'levelMode',
       pinned_scene: 'pinnedScene',
+      extra_scene: 'extraScene',
       add_blocks: 'addBlocks',
       world_start_pattern: 'worldStartPattern',
+      starter_images: 'starterImages',
+      callouts: 'callouts',
+      no_project: 'noProject',
     };
     expect(Object.keys(expected).sort()).toEqual(
       [...RAW_EDITABLE_PROPERTIES].sort()

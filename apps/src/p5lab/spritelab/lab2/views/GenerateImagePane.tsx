@@ -177,6 +177,8 @@ interface GenerateImagePaneProps {
   onGenerate?: () => void;
   /** No paint entry points anywhere in the dialog. */
   paintDisabled?: boolean;
+  /** The level requires a rating on every generated picture. */
+  verdictRequired?: boolean;
   /** A picture asked for from a block or the world palette: opens the
       new-image dialog on its kind. A new object each time. */
   pickRequest?: PictureRequest | null;
@@ -246,6 +248,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   onImageCreated,
   onPickCancel,
   jumboSide,
+  verdictRequired,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -268,7 +271,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // Gallery thumbnails prefer the border-trimmed image (backgrounds aren't
   // trimmed and fall through). Trims land as the engine preloads; re-render
   // when they do.
-  const [, setTrimVersion] = useState(0);
+  const [trimVersion, setTrimVersion] = useState(0);
   useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
 
   // Compute trims for images added after the initial load (a fresh
@@ -851,7 +854,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       });
     });
     return [...byId.values()].filter(group => group.pictures.length > 0);
-  }, [images]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [images, trimVersion]);
 
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of
@@ -925,6 +929,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           defaultStyle={defaultStyle}
           generationsLeft={generationsLeft}
           paintDisabled={paintDisabled}
+          verdictRequired={verdictRequired}
           pixelated={!!(targetProps?.pixelGridSize ?? detectedGridSize)}
           // A sheet's resolution is its frame: the image the pane shows.
           resolution={creating ? undefined : targetProps?.frameSize}

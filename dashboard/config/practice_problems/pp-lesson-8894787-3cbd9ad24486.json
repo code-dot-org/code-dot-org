@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894787-3cbd9ad24486",
+  "problem_type": "sort",
+  "active": true,
+  "problem_text": "Sort the following actions in the order they should be performed to successfully create the Club Recommender app.",
+  "solution": [
+    {
+      "option": "Train the machine learning model",
+      "correct": "Step 1"
+    },
+    {
+      "option": "Import the model into App Lab",
+      "correct": "Step 2"
+    },
+    {
+      "option": "Build the app interface",
+      "correct": "Step 3"
+    },
+    {
+      "option": "Test the app functionality",
+      "correct": "Step 4"
+    }
+  ],
+  "objective_keys": [
+    "90e6cc77-3995-4239-bd6a-cd630dd1b82c"
+  ]
+}

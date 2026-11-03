@@ -1,0 +1,37 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T01:04:49.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson10-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n- Read the program given to you. Ask AI Tutor to explain parts you aren’t sure about.\r\n- Complete the `learn` function. It should add tokens and their followers to `model`. Specifically:\r\n  - The keys of `model` should be individual tokens.\r\n  - Each key’s value should be a list of tokens that could come right after it.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember that, to iterate over pairs of tokens, you can use a `for` loop, similar to how you did in the previous lesson.\r\n\r\n```\r\nfor i in range(len(tokens) - 1):\r\n  token = tokens[i]\r\n  follower = tokens[i + 1]\r\n```\r\n\r\nIf a token is already a key in `model`, you’ll want to add to its followers list. If a token isn’t already a key, you’ll want to start a new list. To check, use a conditional.\r\n\r\n```\r\nif token in model:\r\n  # Add to an existing list\r\nelse:\r\n  # Start a new list\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY6lZ4iR93XtBhHt\n9tR3Rfkh3+2yqePWrCcdq9qikqTQWWwjcAurXFY6St2b1wZFQ01orxTC5bZX\nsWuHs+1js6fOxvuxrx6KzuBlUZal5rR/rMEFK1SzTppwDeidXiio4HMpQJHu\nG264yULl6CaktZQ6fuoCqIpQD6hTefCU0Lw/3bJ4kNMcUWPx7j9RdteJEpRU\nrxtrFF6grl2O5XAN5zHgV8kHn5mmI3IOcWh+6MzGcQnVD8rX0SFBn5Zx2oGO\n1rDP2ASuGfbmMcCHBugNCI+vom+KO4aR3tpOjp1WvhcXvUrqyJbURLMHEeAd\ncMTyowbF6FqfkOP0Nwn+2YHQ2mg5hXOOc7nl/yyx+z878Rf4EtLJpmQlLAvh\n+qnc0ed3kIIBK9dJv2fUHWhT1x9XsuyUxhTKkJlRfhz0hoC5UTISuZu/tF3M\nr++eeButDafidUWLBj3N6XdJuuwifM3KwXdquVTbkVk/tiXyE4CmsBjkTCkQ\nTvsoOFiJfjMpB1q3qWATc2dOhmB3VitfKvKEEvHtC5RsoITrk1Chzhnk50/Z\nde9Fv22S8D/Jr8RtoAslOiCZt0nJT4WmjhFaS4gUHSwGFUp6LZV09mH9zM5m\nEQRKZfy60Az+hMR60Zj7cs3tAqTsOw/pX5Beau2hQOwoqUYkaP3CrG8o4KVr\n7dbLXRdwjolhjWj6W6hEh52/iHkXX3JZDTEqYxiPyhaybCREBE13jBN8JKw4\niYYdjYpvQiYMR6/S2XyqkT3Rzm6cphobH9v7adTeHzYrGRbShjVdFlRMhKR5\noLraKWR2tEv9bVPSFLcXIt03uaoWDbCe536CwoFd+1sk9tb+6axaKJAt+TZ3\nD8uMctdRc5HysNEzoxuDAzRfo4rh7ceLHxv17+gU8SZmzCqddBEH8NkbwP4A\nPMbwcSF0knenuiN1f4e2+17WHMPxY7b7w/GkXY+YdAcHccxklb5zrT2CDOGG\nyMhhqxiNo3DMgb/iqnWE+O/QnuPT4sOj533o0XHiDrRR3MeQKPajl95X2+2o\nyOUNCa5XGaYrZRsGTv/Sv2P+opgScP4wvAYWSnuYKO6vkTGmJ+ouAji4pivk\nTpYZoFVgJ16/PZJqlwdy9E7zerF2Fx1vm1+hxo3yXmToYGbLvaJryDLeNjtQ\nNoHp6wENJPuHfan1p8Rdztypnp3+4EbFhKgpQ1Nmrk2zizITtsoi6/MefIWM\nKv5hnO1BKtUwWKXqAI+gmD+kkdblJ2T2CGO9xAU56Bu16+VCVpFIV2Bh9z8h\nN+Ar94NaA3BkdVZMIs9ZvWoEuvU+YfqqggfsBJMOXg/aIP7tyBVOFN/+zT3A\nmyppfDcT4mTW95Utx+DJ6mxuEWyO7ig2fQzZ+cvQDvfMnUdh2VVSf514ZWq6\nc+G2Lc33LyC0TrBueof/7nsemf1WhB+n8e28oK9Fo8x9jZzPVimaGz/h8P4u\n8VZr6M2mkxYPHCpmqeE0EIsdj6OkT6g5iqhi/1fR0fQPvDj4odAKPy9Wu8mB\nnQ+DSoJL3JnrDBoSRlD6F9eGeO2aVE5XdhEYDXQl1P6RAAWxs9EAiOAki32e\ncinTsAg6GfAC43hirPZSCyrYx+4efH/f4eMEvVvk6MsaupDpXLFk9919Z4O/\nm588ITGTlQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:07:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 01:07:55 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

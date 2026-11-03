@@ -1,0 +1,72 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '../sentence/sr-only' as *;
+
+.srOnly {
+  @include sr-only;
+}
+
+.promptBar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  column-gap: 8px;
+  row-gap: 8px;
+  margin: 0;
+  padding: 8px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  background: color-mix(
+    in srgb,
+    var(--background-neutral-secondary) 75%,
+    transparent
+  );
+  backdrop-filter: blur(4px);
+}
+
+// Matches a small TextField's own label.
+.question {
+  @include mixins.label-three;
+  grid-column: 1 / -1;
+  margin: 0 0 0 2px;
+  color: var(--text-neutral-primary);
+}
+
+.promptBar .answerField {
+  min-width: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    // The design system's brand caret vanishes on a dark input.
+    caret-color: var(--text-neutral-primary);
+  }
+}
+
+.submitButton {
+  margin: 0;
+}
+
+.choices {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+.choiceButton {
+  min-width: 0;
+  margin: 0;
+}
+
+.choiceLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Keep disabled button text visible, as buttons are disabled
+// while in preview mode.
+.promptBar .submitButton:disabled,
+.promptBar .choiceButton:disabled {
+  color: var(--text-neutral-tertiary);
+}

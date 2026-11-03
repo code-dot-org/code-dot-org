@@ -35,12 +35,19 @@ export interface MusicProjectOption {
   unavailable?: boolean;
 }
 
+export interface ActivePrompt {
+  promptText: string;
+  variableName: string;
+  choices?: string[];
+}
+
 export interface SpriteLab2State {
   activeTab: Tab;
   hasRun: boolean;
   scenes: SceneMetadata[];
   externalScenes: ExternalSceneOption[];
   musicProjects: MusicProjectOption[];
+  prompt: ActivePrompt | null;
 }
 
 const initialState: SpriteLab2State = {
@@ -49,6 +56,7 @@ const initialState: SpriteLab2State = {
   scenes: [],
   externalScenes: [],
   musicProjects: [],
+  prompt: null,
 };
 
 const spriteLab2Slice = createSlice({
@@ -73,6 +81,12 @@ const spriteLab2Slice = createSlice({
     setMusicProjects: (state, action: PayloadAction<MusicProjectOption[]>) => {
       state.musicProjects = action.payload;
     },
+    showPrompt: (state, action: PayloadAction<ActivePrompt>) => {
+      state.prompt = action.payload;
+    },
+    clearPrompt: state => {
+      state.prompt = null;
+    },
     resetSpriteLab2: () => initialState,
   },
 });
@@ -83,6 +97,8 @@ export const {
   setScenes,
   setExternalScenes,
   setMusicProjects,
+  showPrompt,
+  clearPrompt,
   resetSpriteLab2,
 } = spriteLab2Slice.actions;
 

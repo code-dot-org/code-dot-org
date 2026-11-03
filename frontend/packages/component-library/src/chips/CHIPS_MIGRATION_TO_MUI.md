@@ -43,7 +43,7 @@ Files (Execute):
 | `__tests__/MuiChips.test.tsx`                                      | Legacy tests ported, plus the pins listed below                    |
 | `index.ts`                                                         | Adds the new exports; legacy lines unchanged                       |
 | `Chips.tsx`                                                        | `@deprecated` JSDoc only                                           |
-| `codemods/chips-to-mui-chips.ts`, `package.json` (`codemod:chips`) | The codemod                                                        |
+| `codemods/chips-to-mui-chips.ts`                                   | The codemod                                                        |
 
 MUI parts used, from `@mui/material`:
 
@@ -159,7 +159,7 @@ is idempotent, so it can be re-run when staging gains consumers while the
 PRs are open. Build it from `codemods/dialog-to-mui-dialog.ts` with the
 source and the rename tables swapped.
 
-Script: `codemods/chips-to-mui-chips.ts`, run as `yarn codemod:chips`.
+Script: `codemods/chips-to-mui-chips.ts`, run with `yarn jscodeshift`.
 
 Transforms:
 
@@ -212,8 +212,11 @@ How to run (build the package first; apps resolves it to `dist/`):
 ```bash
 cd frontend/packages/component-library
 yarn build
-yarn codemod:chips --dry ../../../apps/src ../../../apps/test/unit
-yarn codemod:chips \
+TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/chips-to-mui-chips.ts \
+  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register \
+  --dry ../../../apps/src ../../../apps/test/unit
+TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/chips-to-mui-chips.ts \
+  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register \
   ../../../apps/src/levelbuilder/unit-editor/UnitEditor.jsx \
   ../../../apps/src/templates/sections/SectionSignIn.jsx \
   ../../../apps/src/templates/sectionsRefresh/GradeLevelChips.jsx \
@@ -396,14 +399,15 @@ Apps parity sample:
 Execute:
 
 - `@deprecated` JSDoc on legacy `Chips`, `ChipsProps` and the default
-  export, naming `MuiChips` / `MuiChipsProps` and `yarn codemod:chips`.
+  export, naming `MuiChips` / `MuiChipsProps` and the codemod.
 - `src/chips/README.md`: rewrite. It still describes `Chip` and
   `ChipsGroup` and links a radio-button story. Document both APIs, the
   import lines, the form contract (real checkboxes named `<name>[]`,
   `data-testid`), `required` and the message, sizes, colors and thickness,
   and why the MUI `Chip` is never clickable.
 - `codemods/README.md`: a section for the chips codemod.
-- `package.json`: `"codemod:chips"`, shaped like `codemod:dialog`.
+- The codemod has no `package.json` script. It runs through
+  `yarn jscodeshift`, not `npx`, per `frontend/AGENTS.md`.
 - `MIGRATION_STATUS.md`: the `chips` row becomes In Progress, "wrapper, no
   override", pointing at this plan.
 

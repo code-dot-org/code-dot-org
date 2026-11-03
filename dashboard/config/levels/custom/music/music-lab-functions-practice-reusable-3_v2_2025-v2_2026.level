@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2026-05-06T17:04:59.000Z",
   "level_num": "custom",
@@ -20,7 +21,8 @@
             "play_sound_at_current_location_simple2"
           ],
           "Control": [
-            "play_sounds_together"
+            "play_sounds_together",
+            "play_sounds_sequential"
           ]
         },
         "addFunctionDefinition": true,
@@ -431,30 +433,6 @@
           "drum_beat_sync",
           "drum_beat_tom"
         ]
-      },
-      "toolboxDefinition": {
-        "contents": [
-          {
-            "kind": "block",
-            "type": "play_sound_at_current_location_simple2",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "fields": {
-              "sound": "electro/drum_beat_cowbell"
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "play_sounds_together",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "enabled": true
-          }
-        ],
-        "kind": "flyoutToolbox"
       }
     },
     "exemplar_settings": {
@@ -538,10 +516,12 @@
     },
     "name_suffix": "_2026",
     "ai_tutor_available": "true",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_version_history": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-06T17:04:59.123+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-reusable-3_v2_2025-v2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-reusable-3_v2_2025-v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-06T17:04:59.123+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-reusable-3_v2_2025-v2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-reusable-3_v2_2025-v2\"},{\"changed_at\":\"2026-11-02 16:36:58 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

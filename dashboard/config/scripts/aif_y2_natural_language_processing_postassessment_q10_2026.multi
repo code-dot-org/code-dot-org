@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-postassessment-q10-2026'
+
+right 'Its words appear about equally often in positive and in negative reviews'
+wrong 'It has far more words than any review the classifier was trained on'
+wrong 'Every one of its words is spelled with a capital letter at the start'
+wrong 'The classifier was trained on too many reviews to be sure about any one of them'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A Naive Bayes classifier reads a new review and reports: positive 52%, negative 48%. What about the review best explains the result?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Naive Bayes
+MARKDOWN

@@ -159,22 +159,7 @@ describe('SentenceScene', () => {
     expect(screen.queryByRole('application')).toBeNull();
   });
 
-  it('reads the paint instructions in place of the level instructions while drawing', () => {
-    renderScene({
-      instructions: 'Prompt AI to make some treasure.',
-      paintInstructions: 'Draw some treasure.',
-    });
-    fireEvent.click(screen.getByRole('button', {name: "I'll draw it myself"}));
-    const panel = screen.getByRole('region', {name: 'Draw your picture'});
-    expect(panel.textContent).toMatch(/^Draw some treasure\./);
-    expect(panel.textContent).not.toMatch(/Prompt AI/);
-    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
-    expect(
-      screen.getByRole('region', {name: 'Make your picture'}).textContent
-    ).toMatch(/^Prompt AI to make some treasure\./);
-  });
-
-  it('drops the level instructions while drawing when the level gives none for it', () => {
+  it('drops the level instructions while drawing', () => {
     renderScene({instructions: 'Prompt AI to make some treasure.'});
     fireEvent.click(screen.getByRole('button', {name: "I'll draw it myself"}));
     expect(
@@ -443,6 +428,50 @@ describe('SentenceScene', () => {
       RESULT,
       expect.anything()
     );
+  });
+
+  it('holds Continue until the picture has its thumb when the level asks', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    const onAwaitingVerdict = jest.fn();
+    renderScene({verdictRequired: true, onAwaitingVerdict});
+    pickCreature();
+    expect(onAwaitingVerdict).toHaveBeenLastCalledWith(false);
+    await generate();
+    expect(onAwaitingVerdict).toHaveBeenLastCalledWith(true);
+    const next = screen.getByRole('button', {
+      name: 'Continue',
+    }) as HTMLButtonElement;
+    expect(next.disabled).toBe(true);
+    fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    expect(onAwaitingVerdict).toHaveBeenLastCalledWith(false);
+    expect(next.disabled).toBe(false);
+  });
+
+  it('asks about an earlier picture brought back when the level rates every one', async () => {
+    const SECOND = {
+      ...RESULT,
+      filename: 'cat2.png',
+      generation: {...RESULT.generation, prompt: 'A cat'},
+    };
+    generateCharacterSet
+      .mockResolvedValueOnce(RESULT)
+      .mockResolvedValueOnce(SECOND);
+    renderScene({verdictRequired: true});
+    pickCreature();
+    await generate();
+    fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    await generate('Regenerate');
+    fireEvent.click(screen.getByRole('button', {name: 'Picture 1: A cat'}));
+    // The first picture is back, and the question with it.
+    expect(
+      screen.getByRole('group', {name: 'How did the AI do?'})
+    ).toBeTruthy();
+    const next = screen.getByRole('button', {
+      name: 'Continue',
+    }) as HTMLButtonElement;
+    expect(next.disabled).toBe(true);
+    fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    expect(next.disabled).toBe(false);
   });
 
   it('keeps the picture and moves on with Continue', async () => {
