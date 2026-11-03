@@ -11,6 +11,24 @@ PUBLIC_URLS = {
   'devel' => "https://#{BUCKET_NAME}-devel.s3.amazonaws.com/#{BUCKET_PATH}/",
 }.freeze
 
+# Everything a preview needs beyond the lab's tree: the drawings moderation
+# flagged or review rejected, held-back current ones, and a manifest per
+# sentence. A sibling of BUCKET_PATH, so none of it can land in the tree
+# the lab reads. Paths in a manifest are relative to GENERATE_PATH.
+GENERATE_PATH = 'media/spritelab/generate'
+REVIEW_PATH = "#{GENERATE_PATH}/review"
+PUBLIC_GENERATE_URLS = {
+  'production' => "https://curriculum.code.org/#{GENERATE_PATH}/",
+  'devel' => "https://#{BUCKET_NAME}-devel.s3.amazonaws.com/#{GENERATE_PATH}/",
+}.freeze
+
+# What has been uploaded, per bucket, so a review file goes up once.
+UPLOAD_LEDGER_FILE = 'upload_ledger.json'
+
+# Where --publish-review writes the manifests it uploads, for reading
+# locally; a dry run writes them here too.
+REVIEW_MANIFESTS_DIRECTORY = 'review_manifests'
+
 # The tree's version, a folder above everything else. Matches
 # IMAGE_CACHE_VERSION in apps/src/p5lab/spritelab/lab2/ai/images/imageCache.ts:
 # bump both when the words or the prompts change, so a browser holding the

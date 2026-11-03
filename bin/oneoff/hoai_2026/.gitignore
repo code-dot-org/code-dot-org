@@ -1,5 +1,7 @@
 image_output
 image_records
 image_attic
+review_manifests
 prompts.jsonl
 prompt_verdicts.json
+upload_ledger.json
