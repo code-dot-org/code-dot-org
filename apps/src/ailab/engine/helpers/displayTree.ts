@@ -53,7 +53,7 @@ export function getChildNodeId(parentId: string, branchIndex: number): string {
   return `${parentId}.${branchIndex}`;
 }
 
-// Numbers the answer nodes in preorder, the order their leaf colors cycle in.
+// Numbers the answer nodes left to right, the order leaf colors cycle in.
 export function getAnswerIndices(root: DisplayTreeNode): Map<string, number> {
   const indices = new Map<string, number>();
   const visit = (node: DisplayTreeNode, id: string) => {

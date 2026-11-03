@@ -103,41 +103,45 @@ const PredictionResult = () => {
             <>
               {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips VoiceOver's list semantics */}
               <ol role="list" className={styles.steps}>
-                {steps.map(({column, condition}, index) => (
-                  <li
-                    key={index}
-                    aria-current={index === currentStep ? 'step' : undefined}
-                    className={classNames(styles.step, {
-                      [styles.pastStep]: index < currentStep,
-                      [styles.currentStep]: index === currentStep,
-                    })}
-                  >
-                    <Typography
-                      variant="body4"
-                      component="span"
-                      aria-hidden="true"
-                      className={styles.stepNumber}
+                {steps.map(({column, condition}, index) => {
+                  const isAnswerStep =
+                    index === steps.length - 1 && answerIndex !== undefined;
+                  const conditionText = <strong>{condition}</strong>;
+                  return (
+                    <li
+                      key={index}
+                      aria-current={index === currentStep ? 'step' : undefined}
+                      className={classNames(styles.step, {
+                        [styles.pastStep]: index < currentStep,
+                        [styles.currentStep]: index === currentStep,
+                      })}
                     >
-                      {index + 1}
-                    </Typography>
-                    <Typography variant="body3" component="span">
-                      {column} is{' '}
-                      {index === steps.length - 1 &&
-                      answerIndex !== undefined ? (
-                        <span className={styles.answer}>
-                          <span
-                            aria-hidden="true"
-                            className={styles.answerDot}
-                            style={leafColorStyle(answerIndex)}
-                          />
-                          <strong>{condition}</strong>
-                        </span>
-                      ) : (
-                        <strong>{condition}</strong>
-                      )}
-                    </Typography>
-                  </li>
-                ))}
+                      <Typography
+                        variant="body4"
+                        component="span"
+                        aria-hidden="true"
+                        className={styles.stepNumber}
+                      >
+                        {index + 1}
+                      </Typography>
+                      <Typography variant="body3" component="span">
+                        {column} is{' '}
+                        {isAnswerStep ? (
+                          <span className={styles.answer}>
+                            <span
+                              aria-hidden="true"
+                              className={styles.answerDot}
+                              style={leafColorStyle(answerIndex)}
+                            />
+                            {conditionText}
+                          </span>
+                        ) : (
+                          conditionText
+                        )}
+                      </Typography>
+                    </li>
+                  );
+                })}
               </ol>
               <TraceStepper
                 key={predictionCount}
