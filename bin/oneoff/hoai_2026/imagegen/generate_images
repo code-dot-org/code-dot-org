@@ -84,7 +84,7 @@ options = {
   sentences: nil,
   temperature: TEMPERATURE,
   transparent: false,
-  unreviewed: false,
+  unreviewed: !REQUIRE_REVIEW,
   variants: VARIANTS,
 }
 OptionParser.new do |opts|
@@ -190,8 +190,12 @@ OptionParser.new do |opts|
     options[:production] = true
   end
 
-  opts.on('--unreviewed', 'With --production, also publishes variants review has not approved.') do
+  opts.on('--unreviewed', "With --production, also publishes variants review has not approved.#{REQUIRE_REVIEW ? '' : ' The default for now (REQUIRE_REVIEW).'}") do
     options[:unreviewed] = true
+  end
+
+  opts.on('--require-review', "With --production, publishes only variants approved in review.#{REQUIRE_REVIEW ? ' The default (REQUIRE_REVIEW).' : ''}") do
+    options[:unreviewed] = false
   end
 
   opts.on('--publish-review',

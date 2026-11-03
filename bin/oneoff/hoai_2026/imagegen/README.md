@@ -151,7 +151,10 @@ again, and the page says when a verdict is of an earlier drawing.
 `--dry-run` is the default: a run reports what it would publish, and why
 anything is held back, and uploads nothing. `--no-dry-run` uploads to
 `cdo-curriculum-devel`; adding `--production` uploads to `cdo-curriculum`
-and publishes only variants approved in review (`--unreviewed` overrides).
+and, with `REQUIRE_REVIEW` on in `constants.rb` or `--require-review`
+given, only variants approved in review. `REQUIRE_REVIEW` is off for now,
+so production publishes every variant that passed moderation and was not
+rejected (`--unreviewed` says so explicitly).
 `--just-upload` skips drawing.
 
 A variant is published whole or not at all: the lab finds a variant by its
