@@ -225,18 +225,18 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
 
   test 'privileged_sign_in_expired? is true for an admin or levelbuilder with an old sign-in' do
     [create(:admin), create(:levelbuilder)].each do |user|
-      user.update_columns(current_sign_in_at: 31.days.ago)
+      user.update_columns(current_sign_in_at: 2.days.ago)
       assert user.privileged_sign_in_expired?, user.inspect
     end
   end
 
   test 'privileged_sign_in_expired? is false for a recent sign-in' do
-    user = create(:levelbuilder, current_sign_in_at: 29.days.ago)
+    user = create(:levelbuilder, current_sign_in_at: 12.hours.ago)
     refute user.privileged_sign_in_expired?
   end
 
   test 'privileged_sign_in_expired? is false without a privilege' do
-    user = create(:teacher, current_sign_in_at: 31.days.ago)
+    user = create(:teacher, current_sign_in_at: 2.days.ago)
     refute user.privileged_sign_in_expired?
   end
 

@@ -251,7 +251,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     before do
       sign_in user
       get api_v1_users_current_path
-      user.update_columns(current_sign_in_at: 31.days.ago)
+      user.update_columns(current_sign_in_at: 2.days.ago)
     end
 
     it 'signs out a levelbuilder on a page load' do
@@ -272,7 +272,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
 
     it 'keeps a recent sign-in' do
-      user.update_columns(current_sign_in_at: 29.days.ago)
+      user.update_columns(current_sign_in_at: 12.hours.ago)
       get root_path, headers: page_load
       refute_redirect_to new_user_session_path
     end

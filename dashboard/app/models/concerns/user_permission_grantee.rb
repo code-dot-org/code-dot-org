@@ -39,7 +39,7 @@ module UserPermissionGrantee
 
   # Sessions slide forward on each request, so without this an active privileged
   # user never signs in again and current_sign_in_at stops measuring activity.
-  PRIVILEGED_SIGN_IN_MAX_AGE = 30.days
+  PRIVILEGED_SIGN_IN_MAX_AGE = 1.day
 
   # Nil means the session was started with bypass_sign_in, which does not track sign-ins.
   def privileged_sign_in_expired?
