@@ -23,6 +23,12 @@ describe('SpriteLab2 characterSet', () => {
     expect(text).toContain('No writing');
   });
 
+  it('the base prompt asks for the character drawn once, not as a sheet', () => {
+    expect(basePrompt('A friendly witch', 'pixel', key, 16)).toMatch(
+      /Draw it once: a single figure, not a sprite sheet/
+    );
+  });
+
   it('a pose prompt holds the character to its size and position', () => {
     const text = posePrompt(
       'a knight',
@@ -40,7 +46,7 @@ describe('SpriteLab2 characterSet', () => {
 
   it('passes a chosen pixel block into both frame prompts', () => {
     expect(basePrompt('a knight', 'pixel', key, 32)).toContain(
-      '32x32 pixel grid'
+      '32x32 logical pixels'
     );
     expect(
       posePrompt(
@@ -50,7 +56,7 @@ describe('SpriteLab2 characterSet', () => {
         key,
         32
       )
-    ).toContain('32x32 pixel grid');
+    ).toContain('32x32 logical pixels');
   });
 
   it('draws an animal on four legs when the body plan says so', () => {

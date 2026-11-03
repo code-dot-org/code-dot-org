@@ -152,7 +152,28 @@ describe('generateImage', () => {
       subject: 'object',
     });
     expect(object).not.toContain('faces to the right');
-    expect(object).toContain('plain solid background');
+    expect(object).toContain('flat background');
+  });
+
+  it('names the key color, green when the subject sounds pink', () => {
+    const sprite = fullPromptFor('a chest', {imageType: 'sprite'});
+    expect(sprite).toContain('pure magenta (#FF00FF)');
+    expect(sprite).toContain('no pure magenta');
+    expect(sprite).not.toContain('clothes');
+    // A character hears which of its parts must not wear the key.
+    expect(
+      fullPromptFor('a knight', {imageType: 'sprite', subject: 'character'})
+    ).toContain('clothes');
+    const pink = fullPromptFor('a pink unicorn', {imageType: 'sprite'});
+    expect(pink).toContain('pure bright green (#00FF00)');
+    expect(pink).not.toContain('magenta');
+    // A green subject keeps the magenta key.
+    const block = fullPromptFor('a block of grass', {imageType: 'block'});
+    expect(block).toContain('pure magenta (#FF00FF)');
+    expect(block).toContain('exactly one such square');
+    expect(fullPromptFor('a beach', {imageType: 'background'})).not.toContain(
+      'magenta'
+    );
   });
 
   it('asks every kind of image for no writing', () => {
@@ -168,7 +189,7 @@ describe('generateImage', () => {
     expect(content).toContain('Do not frame the picture');
   });
 
-  it('asks for the pixel grid of the image type', async () => {
+  it('asks for the logical resolution of the image type', async () => {
     // Sprites and blocks read at 64x64; a background carries a whole scene,
     // so its grid is finer.
     expect(styleClause('pixel', pixelBlockFor('sprite'))).toContain('64x64');
@@ -181,12 +202,12 @@ describe('generateImage', () => {
     );
     await generateImage('a beach', {imageType: 'background', style: 'smooth'});
     const content = mockGenerateText.mock.calls[0][0].messages[0].content;
-    expect(content).not.toContain('pixel grid');
+    expect(content).not.toContain('logical pixels');
   });
 
-  it('a chosen pixel grid overrides the default in the prompt', async () => {
-    expect(styleClause('pixel', 32)).toContain('32x32 pixel grid');
-    expect(styleClause('pixel', 64)).toContain('16x16 pixel grid');
+  it('a chosen pixel resolution overrides the default in the prompt', async () => {
+    expect(styleClause('pixel', 32)).toContain('32x32 logical pixels');
+    expect(styleClause('pixel', 64)).toContain('16x16 logical pixels');
     expect(styleClause('pixel', 64)).toContain('64x64 block');
     // End to end: the request carries the chosen grid. Post-processing needs
     // a real canvas and throws in jsdom, after the request has been sent.
@@ -196,7 +217,7 @@ describe('generateImage', () => {
       pixelGrid: 64,
     }).catch(() => {});
     const content = mockGenerateText.mock.calls[0][0].messages[0].content;
-    expect(content).toContain('64x64 pixel grid');
+    expect(content).toContain('64x64 logical pixels');
     expect(content).toContain('16x16 block');
   });
 });

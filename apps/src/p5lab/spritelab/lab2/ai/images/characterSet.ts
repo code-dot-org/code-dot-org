@@ -6,7 +6,7 @@
 // The strip is assembled here, never asked of the model: the base frame is
 // one ordinary generation, and each other frame is an edit request that
 // passes the base picture back, so the character stays itself. Every frame
-// is drawn on a key colour we name (keyColor.ts) and keyed out afterwards.
+// is drawn on a key color we name (keyColor.ts) and keyed out afterwards.
 
 import {
   AnimationPoses,
@@ -17,6 +17,7 @@ import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI} from './encoding';
+import {drawnCenter, isMirrored} from './frameFacing';
 import {
   GeneratedImageResult,
   logicalGridFor,
@@ -28,16 +29,19 @@ import {
   styleClause,
 } from './imageGeneration';
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
-import {chooseKeyColor, KeyColor} from './keyColor';
+import {chooseKeyColor, keyClause, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
   getCharacterSetImageModel,
 } from './modelHelpers';
 import {
+  canvasFromBlob,
   canvasToBlob,
   loadImageFromBlob,
   removeKeyColor,
 } from './removeBackground';
+import {findFigureCells, keepLargestFigure} from './singleFigure';
+import {clearMinorComponents} from './specks';
 import {BodyPlan, ImageGenerationMetadata, ImageStyle} from './types';
 
 /** One frame of the strip after the base: its label and pose description. */
@@ -150,12 +154,13 @@ export const CHARACTER_SET_PICTURE_COUNT = 1 + POSED_FRAMES.upright.length;
 // Each frame is drawn on its own, so a companion or prop the model adds to
 // one frame has no reason to recur in the next.
 const ONLY_THIS_CHARACTER =
-  'Only this one character, alone: no other creatures, people, pets, objects or companions, and nothing added that is not part of the character itself.';
+  'Only this one character, alone: no other creatures, people, pets, objects or companions, and nothing added that is not part of the character itself. Draw it once: a single figure, not a sprite sheet and not a row or grid of poses.';
 
-/** The one flat colour every frame is drawn on, keyed out afterwards. */
-function keyClause(key: KeyColor): string {
-  return `Use a plain, solid, flat background of exactly one color, ${key.name} (${key.hex}), filling the image to every edge — no gradient, no scenery, no ground, and no shadow under the character. Only the character on that flat ${key.name}. The character itself must contain no ${key.name} or anything close to it anywhere — not on clothes, hat, hair, skin or accessories; choose other colors for those.`;
-}
+// Pressed on the second try for a base that came back as a sheet.
+const ONE_FIGURE_RETRY =
+  'Exactly one figure, drawn a single time, large in the middle of the image.';
+// Far from the first seed and the posed frames' offsets.
+const RETRY_SEED_OFFSET = 7919;
 
 /**
  * The prompt for the base frame: the whole character, standing, facing
@@ -259,8 +264,13 @@ async function composeStrip(
     const ctx = canvas.getContext('2d')!;
     ctx.imageSmoothingEnabled = style === 'smooth';
     ctx.drawImage(img, 0, 0, width, height);
-    const {data} = ctx.getImageData(0, 0, width, height);
-    return {canvas, bounds: findOpaqueBounds(data, width, height, SOLID_ALPHA)};
+    // A stray mark at the frame's edge would pin the crop to the full cell.
+    const counted = ctx.getImageData(0, 0, width, height).data;
+    clearMinorComponents(counted, width, height, SOLID_ALPHA);
+    return {
+      canvas,
+      bounds: findOpaqueBounds(counted, width, height, SOLID_ALPHA),
+    };
   });
 
   const boxes = rasters
@@ -313,6 +323,70 @@ async function composeStrip(
     );
   });
   return canvasToBlob(strip);
+}
+
+/** A blob's pixels, for comparing frames. */
+async function rasterOf(blob: Blob): Promise<ImageData> {
+  const {canvas, ctx} = await canvasFromBlob(blob);
+  return ctx.getImageData(0, 0, canvas.width, canvas.height);
+}
+
+/**
+ * The keyed frame, flipped about its figure when it came back as a mirror
+ * image of the base (frameFacing.ts), so the figure keeps its place. A
+ * frame of another size is left as it is.
+ */
+async function faceLikeBase(keyed: Blob, base: ImageData): Promise<Blob> {
+  const frame = await rasterOf(keyed);
+  const center = drawnCenter(frame.data, frame.width, frame.height);
+  if (
+    !center ||
+    frame.width !== base.width ||
+    frame.height !== base.height ||
+    !isMirrored(frame.data, base.data, frame.width, frame.height)
+  ) {
+    return keyed;
+  }
+  const upright = document.createElement('canvas');
+  upright.width = frame.width;
+  upright.height = frame.height;
+  upright.getContext('2d')!.putImageData(frame, 0, 0);
+  const canvas = document.createElement('canvas');
+  canvas.width = frame.width;
+  canvas.height = frame.height;
+  const ctx = canvas.getContext('2d')!;
+  ctx.translate(frame.width, 0);
+  ctx.scale(-1, 1);
+  ctx.drawImage(upright, frame.width - 1 - 2 * center.x, 0);
+  return canvasToBlob(canvas);
+}
+
+// A keyed frame as one figure: how many it held, and the frame cut down to
+// the largest when it held more (see singleFigure.ts).
+async function oneFigure(keyed: Blob): Promise<{figures: number; blob: Blob}> {
+  const {canvas, ctx} = await canvasFromBlob(keyed);
+  const image = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const cells = findFigureCells(
+    image.data,
+    canvas.width,
+    canvas.height,
+    SOLID_ALPHA
+  );
+  if (cells.length <= 1) {
+    return {figures: cells.length, blob: keyed};
+  }
+  keepLargestFigure(image.data, canvas.width, canvas.height, cells);
+  ctx.putImageData(image, 0, 0);
+  return {figures: cells.length, blob: await canvasToBlob(canvas)};
+}
+
+// A keyed frame back on its flat key color, as the model drew it.
+async function onKeyColor(keyed: Blob, key: KeyColor): Promise<Blob> {
+  const {canvas, ctx} = await canvasFromBlob(keyed);
+  ctx.globalCompositeOperation = 'destination-over';
+  ctx.fillStyle = key.hex;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  return canvasToBlob(canvas);
 }
 
 // One pause-and-retry per frame: a transient failure gets one more try
@@ -386,23 +460,57 @@ export async function generateCharacterSet(
   const judgeFrame = (raw: RawImage): Promise<void> =>
     markHandled(checkImageSafety(raw));
 
-  onProgress?.({done: 0, total, label: 'the character'});
-  const base = await requestFrameWithRetry(
-    basePrompt(prompt, options.style, key, pixelBlock, options.bodyPlan),
-    {
-      seed,
-      temperature: options.temperature,
-      imageSize: CHARACTER_SET_IMAGE_SIZE,
-      model: getCharacterSetImageModel(),
-    }
+  const basePromptText = basePrompt(
+    prompt,
+    options.style,
+    key,
+    pixelBlock,
+    options.bodyPlan
   );
+  const baseRequest = (baseSeed: number) => ({
+    seed: baseSeed,
+    temperature: options.temperature,
+    imageSize: CHARACTER_SET_IMAGE_SIZE,
+    model: getCharacterSetImageModel(),
+  });
+  onProgress?.({done: 0, total, label: 'the character'});
+  const base = await requestFrameWithRetry(basePromptText, baseRequest(seed));
   await promptVerdict;
   const baseVerdict = judgeFrame(base);
-  const baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
-  const baseKeyed = await keyFrame(base);
+  let baseKeyed = await keyFrame(base);
   // Also gates the posed frames: a flagged base costs one generation, not
   // five.
   await baseVerdict;
+  // The posed frames are drawn as edits of this picture.
+  let baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
+
+  // The model sometimes draws the character as a sheet of copies, which
+  // the posed frames would inherit.
+  let single = await oneFigure(baseKeyed);
+  if (single.figures > 1) {
+    onProgress?.({done: 0, total, label: 'the character, once more'});
+    try {
+      const again = await requestFrameWithRetry(
+        `${basePromptText} ${ONE_FIGURE_RETRY}`,
+        baseRequest((seed + RETRY_SEED_OFFSET) % 2 ** 31)
+      );
+      const againVerdict = judgeFrame(again);
+      const againKeyed = await keyFrame(again);
+      await againVerdict;
+      const againSingle = await oneFigure(againKeyed);
+      // Taken up together, once every step of the second try has passed.
+      baseURI = bytesToDataURI(again.uint8Array, again.mediaType);
+      single = againSingle;
+    } catch {
+      // A failed or flagged second try: the first base, cut down, still
+      // makes a set.
+    }
+    baseKeyed = single.blob;
+    if (single.figures > 1) {
+      baseURI = await previewURI(await onKeyColor(baseKeyed, key));
+    }
+  }
+  const baseRaster = await rasterOf(baseKeyed);
   let done = 1;
   let preview = await previewURI(baseKeyed);
   onProgress?.({done, total, label: 'the character', preview});
@@ -422,7 +530,12 @@ export async function generateCharacterSet(
         }
       );
       const verdict = judgeFrame(raw);
-      const keyed = await keyFrame(raw);
+      const keyed = await faceLikeBase(
+        (
+          await oneFigure(await keyFrame(raw))
+        ).blob,
+        baseRaster
+      );
       await verdict;
       done++;
       preview = await previewURI(keyed);
