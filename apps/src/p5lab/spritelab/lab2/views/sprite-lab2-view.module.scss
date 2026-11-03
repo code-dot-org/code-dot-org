@@ -111,6 +111,13 @@ $z-over-blockly: 71;
   border-top: none;
 }
 
+// The editors' strip: a column header beside it draws the line between
+// them, down its own body too, so this strip keeps only its bottom edge.
+.editorStripEditors {
+  border-left: none;
+  border-right: none;
+}
+
 // Every cell names its row: auto-placement would otherwise start a new row
 // for a cell that comes after one in a later column.
 .editorStripTitle {
