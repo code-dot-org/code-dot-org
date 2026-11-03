@@ -90,6 +90,7 @@ import Chips from '@code-dot-org/component-library/chips';
 ```
 
 Same props and behavior as above, without the group name and with
-`nowrap` chips. Do not add new call sites; run `yarn codemod:chips` on
-existing ones. These names resolve until the legacy source is deleted, at
-which point they re-export `MuiChips`.
+`nowrap` chips. Do not add new call sites; run
+`codemods/chips-to-mui-chips.ts` on existing ones. These names resolve
+until the legacy source is deleted, at which point they re-export
+`MuiChips`.

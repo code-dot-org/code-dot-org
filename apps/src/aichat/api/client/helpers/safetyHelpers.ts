@@ -1,6 +1,7 @@
 import {type GeneratedFile, type ModelMessage, Output} from 'ai';
 import z from 'zod/v3';
 
+import {AichatContext} from '@cdo/apps/aichat/types';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -56,12 +57,14 @@ export function isOutputImageLlmSafetyJudgeEnabled(): boolean {
 }
 
 /**
- * Invokes an LLM to determine if the given text is safe.
+ * Invokes an LLM to determine if the given text is safe. A caller outside a
+ * chat passes its own context; otherwise the current chat's is used.
  */
 export async function isTextSafe(
   text: string,
   phase?: 'input_filter' | 'output_filter',
-  customSafetyConfig?: Partial<SafetyConfig>
+  customSafetyConfig?: Partial<SafetyConfig>,
+  aichatContext?: AichatContext
 ): Promise<boolean> {
   const safetyConfig = {
     ...DEFAULT_SAFETY_CONFIG,
@@ -74,7 +77,7 @@ export async function isTextSafe(
       output: outputSchema,
       model: getModel(safetyConfig.modelId),
     },
-    {phase: phase}
+    {phase, aichatContext}
   );
 
   return isValidAndPassingClassification(response.output?.classification);

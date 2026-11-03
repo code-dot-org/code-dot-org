@@ -186,10 +186,10 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
-  /** The scene playing now is a platformer, so the controls apply. */
-  platformScene?: boolean;
   // Over the play area's corner, outside the box so they keep their size.
   controls?: React.ReactNode;
+  // Over the box's bottom edge, unscaled.
+  prompt?: React.ReactNode;
   // Under the box, which is placed to leave it room.
   playBar?: React.ReactNode;
   // Across the top of the column in preview; the box is placed under it.
@@ -218,8 +218,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
-  platformScene = false,
   controls,
+  prompt,
   playBar,
   columnHeader,
   below,
@@ -540,8 +540,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     return () => window.clearTimeout(timer);
   }, [mode]);
   const visible = measured && !settledHidden;
-  // The bar waits unseen at its destination and fades in once the box arrives.
+
   const barRef = useRef<HTMLDivElement>(null);
+  const promptRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const bar = barRef.current;
     if (!bar || typeof ResizeObserver !== 'function') {
@@ -555,20 +556,26 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     // The bar's node comes and goes with the prop, not with its contents.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [!!playBar]);
+
+  // Fade in the play bar and the prompt bar so they don't render incorrectly
+  // while switching modes.
   useLayoutEffect(() => {
     if (animate) {
-      barRef.current?.animate?.(
-        [
-          {opacity: 0},
-          {opacity: 0, offset: SLIDE_MS / (SLIDE_MS + FADE_MS)},
-          {opacity: 1},
-        ],
-        {duration: SLIDE_MS + FADE_MS, easing: 'ease-in'}
+      [barRef, promptRef].forEach(ref =>
+        ref.current?.animate?.(
+          [
+            {opacity: 0},
+            {opacity: 0, offset: SLIDE_MS / (SLIDE_MS + FADE_MS)},
+            {opacity: 1},
+          ],
+          {duration: SLIDE_MS + FADE_MS, easing: 'ease-in'}
+        )
       );
     }
     // Only a mode change moves the bar; animate is derived for that render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
+
   // The card fades between its two sizes rather than sliding, which would
   // reflow its text: a copy at the old size fades out.
   const cardRef = useRef<HTMLDivElement>(null);
@@ -642,9 +649,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         // keystrokes through to the game.
         role={mode === 'play' ? 'application' : undefined}
         aria-label={mode === 'play' ? 'Game playspace' : undefined}
-        aria-describedby={
-          mode === 'play' && platformScene ? CONTROLS_HELP_ID : undefined
-        }
+        aria-describedby={mode === 'play' ? CONTROLS_HELP_ID : undefined}
         tabIndex={mode === 'play' ? 0 : undefined}
         style={{
           transform,
@@ -735,7 +740,25 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       </div>
       {/* Outside the box: role="application" hides what is inside it from
           screen readers, so anything to be read must sit beside it. */}
-      {mode === 'play' && platformScene && (
+      {prompt && (
+        <div
+          ref={promptRef}
+          className={moduleStyles.playspacePrompt}
+          style={{
+            left: x,
+            top: y + boxSide,
+            width: boxSide,
+            opacity: visible ? 1 : 0,
+            transition: `opacity ${FADE_MS}ms ease-in`,
+            // Only clickable in Play; in preview, clicks reach the box beneath
+            // to enable things like the location picker.
+            pointerEvents: mode === 'play' ? 'auto' : 'none',
+          }}
+        >
+          {prompt}
+        </div>
+      )}
+      {mode === 'play' && (
         <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
           Left and right arrows move. Space or up arrow jumps. In zero gravity,
           up and down steer. Navigation sounds can be turned on in Settings:

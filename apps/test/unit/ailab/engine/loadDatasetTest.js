@@ -150,12 +150,12 @@ describe('loadDataset', () => {
 });
 
 describe('a dataset that will not load', () => {
-  test('reports a failure when the rows cannot be read', async () => {
+  test('reports a short table as a failed load, not a bad upload', async () => {
     fetchCsv.mockResolvedValue({ok: false, reason: 'tooFewRows'});
 
     await loadDataset('animals.csv', 'animals.json');
 
-    expect(store.getState().invalidData).toBe('tooFewRows');
+    expect(store.getState().invalidData).toBe('loadFailed');
     expect(store.getState().dataset).toBeUndefined();
   });
 

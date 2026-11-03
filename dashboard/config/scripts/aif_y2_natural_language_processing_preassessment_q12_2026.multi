@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q12-2026'
+
+wrong 'A dictionary of words in the language, in alphabetical order'
+wrong 'Rules of grammar that the programmers wrote by hand'
+right 'Patterns in text data describing which words tend to follow which'
+wrong 'A list of the most common words in the language'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+You type a few words and autocomplete suggests the next one. Where do its suggestions come from?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Markov Chains
+MARKDOWN

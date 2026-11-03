@@ -11,6 +11,7 @@
   "skills": {
     "build": {
       "id": "build",
+      "icon": "wand-magic-sparkles",
       "title": "Build with AI",
       "description": "Steering AI toward what you intend, and deciding what to do with what comes back.",
       "evidenceLevels": {
@@ -21,6 +22,7 @@
     },
     "language": {
       "id": "language",
+      "icon": "message-code",
       "title": "Language of web dev",
       "description": "Naming the parts of a page and understanding how they work.",
       "evidenceLevels": {
@@ -32,6 +34,7 @@
     },
     "debug": {
       "id": "debug",
+      "icon": "bug",
       "title": "Debug with AI",
       "description": "Describing a problem so AI can help, and checking that the fix worked.",
       "evidenceLevels": {
@@ -97,6 +100,15 @@
               "text": "Explain a website you would like to make in this activity. What is the topic or theme of the site? Who is it for?"
             }
           ]
+        },
+        {
+          "id": "intro-starter",
+          "title": "Your starter site",
+          "kind": "level",
+          "level": "adaptive-HoAI26-intro-starter",
+          "project": true,
+          "instructions": "Here is a first version of your site, built from your plan. Look it over, then continue.",
+          "projectPrompt": "The first version of the student's website, built from their plan: a hero with a headline that says what the site is for, one or two sections that fit the topic, and a call-to-action. Keep the look and feel simple, but appropriate for their given topic. It should feel clean but not overly polished."
         },
         {
           "id": "intro-web-dev",

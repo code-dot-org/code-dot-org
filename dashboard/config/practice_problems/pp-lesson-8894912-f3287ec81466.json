@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894912-f3287ec81466",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following best describes the ethical consideration of attribution when using AI in creative work?",
+  "solution": [
+    {
+      "option": "Attribution is not necessary when using AI.",
+      "correct": false
+    },
+    {
+      "option": "Attribution is only important for human creators.",
+      "correct": false
+    },
+    {
+      "option": "Attribution is crucial to give credit to original creators whose work is used by AI.",
+      "correct": true
+    },
+    {
+      "option": "Attribution is only required if the AI-generated work is sold.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "d43f71d6-32d2-478c-bf6a-5b68e9f00c31"
+  ]
+}

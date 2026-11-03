@@ -876,6 +876,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 !isProjectLevel && (
                   <NavigationArea
                     {...instructionsProps}
+                    objectivesDone={
+                      instructionsProps.objectives &&
+                      instructionsProps.objectives.allDone
+                    }
                     styleAsBubble={styleNavigationAsBubble}
                     className={styles.navigationFooter}
                   />

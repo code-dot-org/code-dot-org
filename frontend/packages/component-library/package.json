@@ -68,15 +68,6 @@
       "import": "./dist/breadcrumbs/index.mjs",
       "require": "./dist/breadcrumbs/index.js"
     },
-    "./button": {
-      "types": {
-        "import": "./dist/button/index.d.ts",
-        "require": "./dist/button/index.d.ts"
-      },
-      "import": "./dist/button/index.mjs",
-      "require": "./dist/button/index.js"
-    },
-    "./button/index.css": "./dist/button/index.css",
     "./carousel": {
       "types": {
         "import": "./dist/carousel/index.d.ts",
@@ -419,9 +410,6 @@
   "scripts": {
     "build": "vite build",
     "clean": "rimraf dist .turbo",
-    "codemod:buttons": "TS_NODE_TRANSPILE_ONLY=true npx jscodeshift -t ./codemods/button-to-mui-button.ts --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register",
-    "codemod:chips": "TS_NODE_TRANSPILE_ONLY=true jscodeshift -t ./codemods/chips-to-mui-chips.ts --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register",
-    "codemod:dialog": "TS_NODE_TRANSPILE_ONLY=true jscodeshift -t ./codemods/dialog-to-mui-dialog.ts --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register",
     "dev": "vite build --watch",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

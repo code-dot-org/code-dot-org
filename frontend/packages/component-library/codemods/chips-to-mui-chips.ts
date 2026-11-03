@@ -8,7 +8,8 @@
  * rewrite are reported per file for hand work. See codemods/README.md.
  *
  *   cd frontend/packages/component-library
- *   yarn codemod:chips [--dry --print] <paths...>
+ *   TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/chips-to-mui-chips.ts \
+ *     --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register [--dry --print] <paths...>
  */
 
 import type {
@@ -24,6 +25,7 @@ import type {
 const SOURCE = '@code-dot-org/component-library/chips';
 
 const RENAMES: Record<string, string> = {
+  default: 'MuiChips',
   Chips: 'MuiChips',
   ChipsProps: 'MuiChipsProps',
 };
@@ -32,6 +34,15 @@ const MOCK_KEYS: Record<string, string> = {
   default: 'MuiChips',
   Chips: 'MuiChips',
 };
+
+const MOCKERS = new Set(['jest.mock', 'jest.doMock', 'vi.mock', 'vi.doMock']);
+
+// Mock values that can be written twice: evaluating them again has no effect and records no calls.
+const COPYABLE = new Set([
+  'Identifier',
+  'ArrowFunctionExpression',
+  'FunctionExpression',
+]);
 
 const DISPLAY_NAMES: Record<string, string> = {
   Chips: 'MuiChips',
@@ -104,24 +115,29 @@ function transformer(file: FileInfo, api: API) {
     api.report(`line ${node.loc?.start.line ?? '?'}: ${message}`);
   let changed = false;
 
-  // Enzyme matches a string selector against the display name, which becomes MuiChips.
-  root.find(j.CallExpression).forEach(path => {
-    const {callee, arguments: args} = path.value;
-    if (callee.type !== 'MemberExpression') return;
+  // Enzyme matches a selector's type part against the display name, which becomes MuiChips.
+  const reportSelector = (node: CallExpression) => {
+    const {callee, arguments: args} = node;
+    if (
+      callee.type !== 'MemberExpression' &&
+      callee.type !== 'OptionalMemberExpression'
+    ) {
+      return;
+    }
     const method = nameOf(callee.property);
     const selector = stringOf(args[0]);
-    if (
-      method &&
-      ENZYME_SELECTOR_METHODS.has(method) &&
-      selector &&
-      selector in DISPLAY_NAMES
-    ) {
+    const legacy = Object.keys(DISPLAY_NAMES).find(name =>
+      new RegExp(`(^|[\\s>+~,(])${name}(?![\\w-])`).test(selector ?? ''),
+    );
+    if (method && ENZYME_SELECTOR_METHODS.has(method) && legacy) {
       report(
-        path.value,
-        `.${method}('${selector}'): the display name is now ${DISPLAY_NAMES[selector]}; pass the imported component instead of the string.`,
+        node,
+        `.${method}('${selector}'): the display name is now ${DISPLAY_NAMES[legacy]}; pass the imported component instead of the string.`,
       );
     }
-  });
+  };
+  // Also visits optional calls (`w?.find(...)`): ast-types makes them CallExpression subtypes.
+  root.find(j.CallExpression).forEach(path => reportSelector(path.value));
 
   const sourceImports = root.find(j.ImportDeclaration, {
     source: {value: SOURCE},
@@ -155,8 +171,10 @@ function transformer(file: FileInfo, api: API) {
       rest.length === 0
         ? sourceImports
             .filter(
+              // An import merged and removed earlier in this loop has no value.
               other =>
                 other !== path &&
+                !!other.value &&
                 isValueImport(other.value) === isValueImport(decl) &&
                 (other.value.specifiers ?? []).some(
                   s => s.type === 'ImportSpecifier',
@@ -177,16 +195,16 @@ function transformer(file: FileInfo, api: API) {
     j(path).remove();
   });
 
-  // Transform 4: jest.mock factories that return an object literal.
+  // Transform 4: jest.mock, jest.doMock, vi.mock and vi.doMock factories that return an object literal.
+  const mockerOf = ({callee}: CallExpression) =>
+    callee.type === 'MemberExpression'
+      ? `${nameOf(callee.object)}.${nameOf(callee.property)}`
+      : '';
   root
-    .find(j.CallExpression, {
-      callee: {
-        type: 'MemberExpression',
-        object: {name: 'jest'},
-        property: {name: 'mock'},
-      },
-    })
+    .find(j.CallExpression)
+    .filter(path => MOCKERS.has(mockerOf(path.value)))
     .forEach((path: ASTPath<CallExpression>) => {
+      const mocker = mockerOf(path.value);
       const [moduleName, factory] = path.value.arguments;
       if (stringOf(moduleName) !== SOURCE || !factory) return;
       let returned: unknown;
@@ -199,8 +217,20 @@ function transformer(file: FileInfo, api: API) {
           const returns = factory.body.body.filter(
             statement => statement.type === 'ReturnStatement',
           );
+          // A return inside a branch would go unpatched; a nested function's returns are its own.
+          const allReturns = j(factory.body)
+            .find(j.ReturnStatement)
+            .filter(path => {
+              for (let up = path.parent; up; up = up.parent) {
+                if (j.Function.check(up.value)) return false;
+              }
+              return true;
+            })
+            .size();
           returned =
-            returns.length === 1 && returns[0].type === 'ReturnStatement'
+            returns.length === 1 &&
+            allReturns === 1 &&
+            returns[0].type === 'ReturnStatement'
               ? returns[0].argument
               : undefined;
         }
@@ -208,12 +238,20 @@ function transformer(file: FileInfo, api: API) {
       if ((returned as {type?: string})?.type !== 'ObjectExpression') {
         report(
           path.value,
-          'jest.mock factory does not return an object literal; add the MuiChips key by hand.',
+          `${mocker} factory does not return one object literal; add the MuiChips key by hand.`,
         );
         return;
       }
       const object = returned as ObjectExpression;
       const keys = new Set(object.properties.map(keyOf));
+      // Both keys map to MuiChips, and only the file's own import says which value to keep.
+      if (keys.has('default') && keys.has('Chips') && !keys.has('MuiChips')) {
+        report(
+          path.value,
+          `${mocker} has both 'default' and 'Chips'; add 'MuiChips' by hand with the value this file imports.`,
+        );
+        return;
+      }
       const properties: Property[] = [];
       for (const property of object.properties) {
         properties.push(property);
@@ -225,7 +263,15 @@ function transformer(file: FileInfo, api: API) {
         ) {
           report(
             property,
-            `jest.mock key '${key}' is a method; add '${MOCK_KEYS[key]}' by hand.`,
+            `${mocker} key '${key}' is a method; add '${MOCK_KEYS[key]}' by hand.`,
+          );
+          continue;
+        }
+        // A copied `jest.fn()` would be a second mock that sees none of the first one's calls.
+        if (!COPYABLE.has(property.value.type)) {
+          report(
+            property,
+            `${mocker} key '${key}' is neither a name nor a function; bind its value to a const in the factory and give '${key}' and '${MOCK_KEYS[key]}' that const by hand.`,
           );
           continue;
         }

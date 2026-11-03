@@ -199,11 +199,6 @@ module.exports = {
               'DSCO Typography is deprecated. Use MUI Typography from @mui/material instead. From the apps directory (cd apps), run: npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src" --parser=tsx --extensions=tsx,ts,jsx,js',
           },
           {
-            name: '@code-dot-org/component-library/button',
-            message:
-              'DSCO Button is deprecated. Use MUI Button from @mui/material instead. Codemod available: cd frontend/packages/component-library && yarn codemod:buttons <path>',
-          },
-          {
             name: '@code-dot-org/component-library/dialog',
             importNames: [
               'Dialog',
@@ -213,13 +208,13 @@ module.exports = {
               'CustomDialogProps',
             ],
             message:
-              'DSCO Dialog is deprecated. Import MuiDialog / MuiCustomDialog (and MuiDialogProps / MuiCustomDialogProps) from the same path instead. Codemod available: cd frontend/packages/component-library && yarn codemod:dialog <path>',
+              'DSCO Dialog is deprecated. Import MuiDialog / MuiCustomDialog (and MuiDialogProps / MuiCustomDialogProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/dialog-to-mui-dialog.ts; see codemods/README.md there',
           },
           {
             name: '@code-dot-org/component-library/chips',
             importNames: ['Chips', 'ChipsProps', 'default'],
             message:
-              'DSCO Chips is deprecated. Import MuiChips (and MuiChipsProps) from the same path instead. Codemod available: cd frontend/packages/component-library && yarn codemod:chips <path>',
+              'DSCO Chips is deprecated. Import MuiChips (and MuiChipsProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/chips-to-mui-chips.ts; see codemods/README.md there',
           },
         ],
         patterns: [

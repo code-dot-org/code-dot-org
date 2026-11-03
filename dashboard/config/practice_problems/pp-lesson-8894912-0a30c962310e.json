@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894912-0a30c962310e",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the terms with their definitions: 1. Copyright  2. Transparency  3. Ethics  4. Attribution",
+  "solution": [
+    {
+      "option": "Copyright",
+      "correct": "legal right granted to the creator of an original work"
+    },
+    {
+      "option": "Transparency",
+      "correct": "practice of openly disclosing how something works"
+    },
+    {
+      "option": "Ethics",
+      "correct": "guide for responsible choices about emerging technologies"
+    },
+    {
+      "option": "Attribution",
+      "correct": "act of giving credit to the original creator"
+    }
+  ],
+  "objective_keys": [
+    "b5b85cdf-ce92-4741-a6e3-374d94b28434"
+  ]
+}

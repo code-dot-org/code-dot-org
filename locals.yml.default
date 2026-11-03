@@ -21,6 +21,9 @@
 #ai_gateway_auth_key: localoverride
 #ai_gateway_auth_public_key: localoverride
 #ai_gateway_auth_key_passphrase: localoverride
+#ai_gateway_jwt_auth_key: localoverride
+#ai_gateway_jwt_auth_public_key: localoverride
+#ai_gateway_jwt_auth_key_passphrase: localoverride
 #google_vertex_ai_tutor_service_account_key: localoverride
 #google_vertex_ai_chat_service_account_key: localoverride
 #azure_ai_content_safety_key: localoverride

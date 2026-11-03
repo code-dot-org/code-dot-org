@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894774-de08460d03a6",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following steps of importing a model with their descriptions.",
+  "solution": [
+    {
+      "option": "Select Model",
+      "correct": "Choose the appropriate model for your app"
+    },
+    {
+      "option": "Import Model",
+      "correct": "Bring the model into your project"
+    },
+    {
+      "option": "Connect with Data",
+      "correct": "Link the model to your recommendation data"
+    },
+    {
+      "option": "Test Model",
+      "correct": "Verify that the model works as intended"
+    }
+  ],
+  "objective_keys": [
+    "cdf0806f-77ab-430a-b089-fe9eb5816ae0"
+  ]
+}

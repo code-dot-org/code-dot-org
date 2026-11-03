@@ -252,7 +252,17 @@ describe('Design System - MuiChips', () => {
 
     it('clears the custom message on change', async () => {
       const user = userEvent.setup();
-      render(<TestChips required requiredMessageText="Pick a grade" />);
+      // A setValues that never updates state, so no re-render runs the reset effect.
+      render(
+        <MuiChips
+          name="test-chips"
+          values={[]}
+          setValues={vi.fn()}
+          options={options}
+          required
+          requiredMessageText="Pick a grade"
+        />,
+      );
       const chip1 = getInput('Chip1');
 
       chip1.checkValidity();
@@ -261,6 +271,23 @@ describe('Design System - MuiChips', () => {
       await user.click(chip1);
 
       expect(chip1.validity.customError).toBe(false);
+    });
+
+    it('clears the custom message when required turns off without a click', () => {
+      const {rerender} = render(
+        <TestChips required requiredMessageText="Pick a grade" />,
+      );
+      const chip1 = getInput('Chip1');
+
+      chip1.checkValidity();
+      expect(chip1.validity.customError).toBe(true);
+
+      rerender(
+        <TestChips required={false} requiredMessageText="Pick a grade" />,
+      );
+
+      expect(chip1.validity.customError).toBe(false);
+      expect(chip1.checkValidity()).toBe(true);
     });
   });
 
@@ -535,6 +562,24 @@ describe('muiChips.module.scss', () => {
       'overflow-wrap': 'anywhere',
     });
     expect(source).not.toMatch(/white-space:\s*nowrap/);
+  });
+
+  it('fills a checked chip and rings a focused one', () => {
+    expect(
+      declsOf(".chips fieldset .chip:has(input[type='checkbox']:checked)"),
+    ).toEqual({
+      border: '1px solid var(--borders-brand-teal-primary)',
+      'background-color': 'var(--background-brand-teal-primary)',
+      color: 'var(--text-neutral-white-fixed)',
+    });
+    expect(
+      declsOf(
+        ".chips fieldset .chip:has(input[type='checkbox']:focus-visible)",
+      ),
+    ).toEqual({
+      outline: '2px solid var(--borders-brand-teal-primary)',
+      'outline-offset': '2px',
+    });
   });
 
   it('ports the codeai-next brand block', () => {

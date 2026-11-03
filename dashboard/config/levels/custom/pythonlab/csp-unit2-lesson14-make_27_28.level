@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-02T08:40:02.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Weekend Recommender\n# Sunny: $50 or more is Theme park day, $20 to $49 is Mini golf, under $20 is Park picnic.\n# Rainy: $20 or more is Movie theater, under $20 is Library game afternoon.\n\nweather = input(\"Will it be sunny or rainy? \")\nmoney = int(input(\"How much can you spend? \"))\n\n# Your code goes below",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqwfpqFy8FcAfAm\nk8yfYrQnHrbSTQ5FfF4ahVq/FaTglrK/JBmjmZLg3w8POACyvsgRs+Z7u8X8\nK+I+s4xWaD1A9CXTyOVjDYQvtaIeBlqUCpVYRnokPJn++2s/qJ69y1HXsyQB\n844KyQHDo90a1jQdqCCFslHICPF9sfruwBuwDhu/17WU3KxHr2CMVDSQA3Hm\nUt3HWmLCv0N43Q1DWk/y/K669CbEGg9e3xbGI6/aeW1nccZlquM4ItjWvjnj\nEpR8Lt1M26PcPPgESEMJHF0JzK6vu5wf9l0uWp7d70NIGIrlLAlyox4491f5\nFQp8OpWAhAR91kkOwfGDS6+mTZ5V3irw3QtrTVZKcjFd5MxQXdNt/Mp9igSn\nD0JW03iJAkMc2lReXJB6epkGBl6cw3xYCuYaKabJwpX/A22S8rHRJJjxN2E+\n7hQwQotSjRKWjMDhp57xS5V5ycPbnuRISA0c77nleYtQhBXh73s3CXch7u6b\nIRwSnAVz8thyYw/FNv5TPy1A8cLAArvrcKR4kc54+fhpjn7mpbq9q8aY3NZ5\nQyOJo0AsQj3ApZ07yHb9h8SgJZB0qVUMNzCV3tsjcbN4CEB4O9HwDKDaMOAQ\nOlp0w2FVzac9ivngxDSMDKyrIfFVnmjcSC8vvftiGyOP6DcKUA91K4zNW31y\nL6eG06lgVmyElZophfvPE0xqE6Ys+KKOowO2sLovQHHNCca+OkfUFqTVTwTM\nmCwcErAJSVAqK+RH+ZpcxtRKn4a/ZsCepFogAOIWH+2/WlIUusRWCZbSE3v8\nj96OXfE5M9r3RsK766vVSlDdBH52oCsK+SEwpmvw+9Es/GQZ9PijvAxjeYgI\noKAjkp4pOnX6ECbHqZSI88ImEK7CYxSU3iRr3DEy9snkLvRZUINYtwYhUzPB\n8o1fpLbuEqpR0BSSxUsH6KYgUTYCltUmRwWSStFfuqdhjsfFvwjI9TdhMfgQ\nPqXO4EYlgn4IxssH0Hf1lWxIcD7gYlh2BR78MJc7UQiGR8ca7MBuE3PH+SMV\nEU7E2pc0rS2i03Gtmy8M9jmx+5juEam7qiLLD76hpnCc1UCHARmnYb+PrF7l\ndLcq+R5/1VGik01iWO836Njey4RLsY3U5ax009vSmNvzb28n/RgoYhfLcHqy\nrBYpQyziBGJ18/b1rD/n\n",
+    "teacher_markdown": "Misconceptions and what to test for:\r\n\r\n- The weather question comes first, and the money question is only asked after the weather is known. The inner decision is an if indented inside the outer one. Ask: \"Which question depends on the other one?\"\r\n- A flat version with and (if weather == \"sunny\" and money >= 50:) gives correct plans, but it does not nest. Validate asks for a decision inside a decision. Ask: \"What would change if you added a third weather?\"\r\n- Money first, then weather, is also a nested tree and gives the same plans. Accept it, and ask: \"Which question did you choose to ask first, and why? How many times did you have to check the weather?\"\r\n- The sunny tiers are exclusive answers to one question, so a chain of elif fits. Order matters, because the chain checks top-down and stops at the first True. A student who checks money >= 20 before money >= 50 sends every big spender to Mini golf. Validate hints at the order.\r\n- Separate ifs (a default plan, then a later if that overrides it) also work, and they are the pattern from the Museum Ticket Generator. Accept them, and ask students to compare it with the chain.\r\n- else with an if inside it can collapse into elif. Students who write else: followed by only an if can try elif and see that nothing changes.\r\n- Boundaries: $50 and $20 belong to the higher plan. > instead of >= sends exactly 50 to Mini golf. The two choose-your-own rows in Test My Recommender should be boundary amounts.\r\n- The program only recognizes the exact word sunny. Anything else, including Sunny, goes to the rainy path. That is why the instructions say to type lowercase. Ask: \"What happened when you typed Sunny?\"\r\n- Forgetting int() around the money causes a TypeError when money is compared to a number.\r\n- If a student stores the plan in a variable that is never set on some path, the print causes a NameError. Validate reports it as a stopped program.\r\n- Check My Tree is the 2.3.A echo. The partner works only from the drawn tree. A mismatch means the tree and the code disagree, so ask which one is wrong.\r\n- My Reflection covers objective 2. A strong answer nests a decision that only makes sense on one path, and chains options that are exclusive answers to one question. Validate cannot check it, so read a few, and use the rubric on page 3 of the activity guide.\r\n- Use this level with the rubric to check the first and third objectives, and use Check My Tree and My Reflection to check the second. The two rubric lines that matter most are the nested decision (the money question is asked only after the weather is known) and the justification in My Reflection.\r\n- If a student uses Build Python, they still own the program. Ask them to explain which decision is nested and why.\r\n\r\nValidation runs the program with nine input pairs: sunny with 60, 50, 30, 20, and 19, and rainy with 25, 20, 19, and 5. It checks that the program has an indented if, and that each input recommends the expected plan. It looks for the plan name anywhere in what the program prints, so any wording works.",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import io\nimport re\nfrom contextlib import redirect_stdout\nfrom unittest import TestCase\n\nPLANS = [\"Theme park day\", \"Mini golf\", \"Park picnic\", \"Movie theater\", \"Library game afternoon\"]\n\n\ndef read_code():\n    with open('main.py') as main_file:\n        return main_file.read()\n\n\ndef run_with(weather, money):\n    \"\"\"Run the student's main.py as if the user typed these two answers.\"\"\"\n    code = read_code()\n    answers = iter([weather, str(money)])\n    output = io.StringIO()\n    error = None\n    fake_globals = {'input': lambda prompt='': next(answers), '__name__': '__main__'}\n    try:\n        with redirect_stdout(output):\n            exec(code, fake_globals)\n    except Exception as e:\n        error = e\n    text = \" \".join(line.strip() for line in output.getvalue().splitlines() if line.strip())\n    return text, error\n\n\nclass TestWeekendRecommender(TestCase):\n    def check_cases(self, weather, cases):\n        for money, expected in cases:\n            text, error = run_with(weather, money)\n            if error:\n                self.fail(\n                    f\"Your program stopped with a {type(error).__name__} when the weather was {weather} and the money was {money}. \"\n                    \"Check that you used int() on the money, that each if line ends with a colon, and that every path recommends a plan.\"\n                )\n            if [p for p in PLANS if p in text] != [expected]:\n                shown = text if text else \"nothing\"\n                self.fail(\n                    f\"With {weather} and {money} dollars, your program should recommend {expected}. \"\n                    f\"It printed: {shown}. Check the order of your checks and whether you used >= or >.\"\n                )\n\n    def test_1_nested_decision(self):\n        \"\"\"Your program has a decision inside a decision\"\"\"\n        if not re.search(r'^[ \\t]+if\\b', read_code(), re.MULTILINE):\n            self.fail(\"Check the weather first, then check the money on each path. The money decision should be an if indented inside the weather decision.\")\n\n    def test_2_sunny_plans(self):\n        \"\"\"Sunny days give the right plans\"\"\"\n        self.check_cases(\"sunny\", [(60, \"Theme park day\"), (50, \"Theme park day\"), (30, \"Mini golf\"), (20, \"Mini golf\"), (19, \"Park picnic\")])\n\n    def test_3_rainy_plans(self):\n        \"\"\"Rainy days give the right plans\"\"\"\n        self.check_cases(\"rainy\", [(25, \"Movie theater\"), (20, \"Movie theater\"), (19, \"Library game afternoon\"), (5, \"Library game afternoon\")])",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "long_instructions": "# Make: Build a Weekend Recommender\r\n\r\nYour Task: Write a program that asks about the weather and your budget, then recommends one weekend plan. The rules are on page 1 of your activity guide.\r\n\r\nYour program should:\r\n\r\n- Check the weather first. Then check the money on each path.\r\n- Put a comment above each decision that says what it checks.\r\n- Print the plan you recommend.\r\n\r\nChallenge: Add a third kind of weather, or print a reason along with the plan.\r\n\r\nDo This:\r\n\r\n1. Review the rubric on page 3 of your activity guide.\r\n2. Plan your decision tree on page 1.\r\n3. Write your program in `main.py`, then use Validate. Type the weather in lowercase, like `sunny`.\r\n4. Predict the plan for each input on page 2, then run your program and record the results.\r\n5. Trade only your decision tree with a partner. Your partner predicts two plans from the tree alone. Record it in Check My Tree.\r\n6. Fill out My Reflection."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-02T08:40:02.634+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson10-debug-console_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson10-debug-console_27_28\"},{\"changed_at\":\"2026-11-02 08:50:23 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-02 08:51:00 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-02 08:51:22 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-03 03:22:17 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-03 03:22:39 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-03 03:24:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-03 03:31:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-03 03:39:31 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-03 03:57:50 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-03 03:58:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-03 06:45:01 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

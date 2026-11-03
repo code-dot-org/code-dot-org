@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284601-268982277a68",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following scenarios would be best suited for an if/else statement? Select all that apply.",
+  "solution": [
+    {
+      "option": "A program that checks if a user is logged in or not.",
+      "correct": true
+    },
+    {
+      "option": "A program that counts from 1 to 10.",
+      "correct": false
+    },
+    {
+      "option": "A program that determines if a number is even or odd.",
+      "correct": true
+    },
+    {
+      "option": "A program that displays a list of items.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "999b2cbc-4fea-4f97-b3af-c057c579187a"
+  ]
+}

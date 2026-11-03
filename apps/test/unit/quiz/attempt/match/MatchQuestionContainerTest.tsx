@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import React, {useState} from 'react';
 
 import MatchQuestionContainer from '@cdo/apps/quiz/attempt/match/MatchQuestionContainer';
-import {MatchPairs, MatchSets} from '@cdo/apps/quiz/attempt/match/types';
+import {MatchSets, MatchPairs} from '@cdo/apps/quiz/attempt/match/types';
 
 const MATCH_SETS: MatchSets = [
   [
@@ -28,8 +28,8 @@ function renderContainer(initialPairs: MatchPairs = []) {
           type: 'MatchQuestion',
           questionName: 'Sums',
           questionTitle: 'Match each expression to its value.',
+          matchSets: MATCH_SETS,
         }}
-        matchSets={MATCH_SETS}
         pairs={pairs}
         onChangePairs={newPairs => {
           onChangePairs(newPairs);

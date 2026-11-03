@@ -43,7 +43,7 @@ Files (Execute):
 | `__tests__/MuiChips.test.tsx`                                      | Legacy tests ported, plus the pins listed below                    |
 | `index.ts`                                                         | Adds the new exports; legacy lines unchanged                       |
 | `Chips.tsx`                                                        | `@deprecated` JSDoc only                                           |
-| `codemods/chips-to-mui-chips.ts`, `package.json` (`codemod:chips`) | The codemod                                                        |
+| `codemods/chips-to-mui-chips.ts`                                   | The codemod                                                        |
 
 MUI parts used, from `@mui/material`:
 
@@ -159,7 +159,7 @@ is idempotent, so it can be re-run when staging gains consumers while the
 PRs are open. Build it from `codemods/dialog-to-mui-dialog.ts` with the
 source and the rename tables swapped.
 
-Script: `codemods/chips-to-mui-chips.ts`, run as `yarn codemod:chips`.
+Script: `codemods/chips-to-mui-chips.ts`, run with `yarn jscodeshift`.
 
 Transforms:
 
@@ -167,19 +167,25 @@ Transforms:
    `import {MuiChips as L} from '@code-dot-org/component-library/chips'`
    (no `as` when `L` is `MuiChips`). It merges into an existing named
    value import from the same source.
-2. The named value specifier `Chips`, under any local name `L`, becomes
-   `MuiChips as L`. Local bindings, JSX and identifier references
+2. The named value specifier `Chips` or `default`, under any local name
+   `L`, becomes `MuiChips as L`. Local bindings, JSX and identifier references
    (`find(Chips)`) are left as written.
 3. The named type specifier `ChipsProps` becomes `MuiChipsProps as L`.
    `import type` and inline `type` modifiers are kept.
-4. `jest.mock('@code-dot-org/component-library/chips', factory)` where the
-   factory returns an object literal: for each `default` or `Chips` key, add
-   a `MuiChips` key with the same value unless one is already there.
+4. `jest.mock`, `jest.doMock`, `vi.mock` or `vi.doMock` of the entry point
+   where the factory returns one object literal (a return inside a branch is
+   reported): for a `default` or `Chips` key whose value is a name or a
+   function, add a `MuiChips` key with the same value unless one is already
+   there. Any other value is reported: a copied `jest.fn()` would be a second mock
+   that records none of the first one's calls. A factory with both keys is
+   reported instead: only the file's import says which value `MuiChips`
+   should take.
 5. Files without the source are untouched. Specifiers already on `Mui`
    names are left alone. No prop is renamed or dropped, so no call site is
    skipped.
 6. Reported per file for hand work, not rewritten: enzyme string selectors
-   `'Chips'` passed to `find`, `filter`, `closest`, `children`, `parents`,
+   that name `Chips` as a type (`'Chips'`, `'.x Chips'`, `'Chips[name]'`),
+   also through `?.`, passed to `find`, `filter`, `closest`, `children`, `parents`,
    `exists`, `is`, `not`, `some` or `every`; namespace imports; re-exports;
    `require()` / `import()` of the entry point.
 7. `.ts` files are parsed with the `ts` parser, others with `tsx`.
@@ -206,8 +212,11 @@ How to run (build the package first; apps resolves it to `dist/`):
 ```bash
 cd frontend/packages/component-library
 yarn build
-yarn codemod:chips --dry ../../../apps/src ../../../apps/test/unit
-yarn codemod:chips \
+TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/chips-to-mui-chips.ts \
+  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register \
+  --dry ../../../apps/src ../../../apps/test/unit
+TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/chips-to-mui-chips.ts \
+  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register \
   ../../../apps/src/levelbuilder/unit-editor/UnitEditor.jsx \
   ../../../apps/src/templates/sections/SectionSignIn.jsx \
   ../../../apps/src/templates/sectionsRefresh/GradeLevelChips.jsx \
@@ -309,13 +318,15 @@ The wrapper keeps these legacy behaviors so the migration changes no
 UI-test hook and no eyes baseline. Each row is one later PR, after lifecycle
 step 4 deletes the legacy source. A PR deletes its row when it lands; the
 status row becomes **Migrated** when the table is empty.
+RE-221 deletes the legacy source and adds the Story gaps stories; every
+row waits on it, and the After column orders the rest.
 
 | Behavior                   | Legacy today                                                                                                                                                                                                                        | With MUI                                                                                                                                                                                                                           | UI tests at risk                                                                                                                                                                                                                                                                     | After                      | Moves DOM | Ticket |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------- | --------- | ------ |
-| Group label color          | The heading sets no color and inherits: #333 from the page on dashboard, CssBaseline's text color in Storybook. On a Dark surface it is near black on dark (Storybook Dark: "Chips label", "Thick Chips", "Black Chips", "Chips L") | `color: var(--text-neutral-primary)`, as the theme gives every `Typography`, following `data-theme`                                                                                                                                | `sign_up.feature:25` (eyes "Finish Sign Up Teacher" captures the "What grade(s) do you teach?\*" heading)                                                                                                                                                                            |                            | yes       |        |
-| Group container and legend | Plain `fieldset` named through `aria-labelledby` by a `<label>` heading; `FormGroup row` holds the chips                                                                                                                            | `FormControl component="fieldset"` + `FormLabel component="legend"`: a native group name, and `disabled`/`required`/`error` handed to children. Needs overrides for `inline-flex`/`min-width: 0` and Bootstrap 3's `legend` styles | `signUpFlowStyles.module.scss:39` `.gradeSelectChips label` and `:33`/`:47` `label` rules stop reaching the heading; `sign_up.feature:25` eyes                                                                                                                                       | Group label color          | yes       |        |
-| Required error display     | Native validation: each unchecked input is `required` while none is checked; `onInvalid` sets the custom message (English fallback); the browser bubble shows on the first chip                                                     | `FormControl error` + `FormHelperText`: an inline, persistent message tied to the group by `aria-describedby`; the wrapper sets it on `invalid` and keeps native `required` so submit still blocks                                 | `apps/test/unit/templates/sectionsRefresh/SingleSectionSetUpTest.jsx:97` (stub `setCustomValidity` target)                                                                                                                                                                           | Group container and legend | yes       |        |
-| Hidden input hit target    | The checkbox is `position: absolute; opacity: 0` at its static spot, at its UA size, with no positioned ancestor in the chip; it can poke out of the chip and add scroll in a positioned scroller                                   | MUI's SwitchBase input: root `position: relative`, input `inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: inherit; z-index: 1`, so the whole chip is the input's box                                           | WebDriver native clicks on `input[name='grades[]']`, whose box moves: `sign_up.feature:24`, `section_management_steps.rb:19`, `section_management_steps.rb:82`, `course_overview.feature:21`, `assessment_feedback_download.feature:32`, `teacher_dashboard_local_nav_v2.feature:23` |                            | yes       |        |
+| Group label color          | The heading sets no color and inherits: #333 from the page on dashboard, CssBaseline's text color in Storybook. On a Dark surface it is near black on dark (Storybook Dark: "Chips label", "Thick Chips", "Black Chips", "Chips L") | `color: var(--text-neutral-primary)`, as the theme gives every `Typography`, following `data-theme`                                                                                                                                | `sign_up.feature:25` (eyes "Finish Sign Up Teacher" captures the "What grade(s) do you teach?\*" heading)                                                                                                                                                                            |                            | yes       | RE-222 |
+| Group container and legend | Plain `fieldset` named through `aria-labelledby` by a `<label>` heading; `FormGroup row` holds the chips                                                                                                                            | `FormControl component="fieldset"` + `FormLabel component="legend"`: a native group name, and `disabled`/`required`/`error` handed to children. Needs overrides for `inline-flex`/`min-width: 0` and Bootstrap 3's `legend` styles | `signUpFlowStyles.module.scss:39` `.gradeSelectChips label` and `:33`/`:47` `label` rules stop reaching the heading; `sign_up.feature:25` eyes                                                                                                                                       | Group label color          | yes       | RE-225 |
+| Required error display     | Native validation: each unchecked input is `required` while none is checked; `onInvalid` sets the custom message (English fallback); the browser bubble shows on the first chip                                                     | `FormControl error` + `FormHelperText`: an inline, persistent message tied to the group by `aria-describedby`; the wrapper sets it on `invalid` and keeps native `required` so submit still blocks                                 | `apps/test/unit/templates/sectionsRefresh/SingleSectionSetUpTest.jsx:97` (stub `setCustomValidity` target)                                                                                                                                                                           | Group container and legend | yes       | RE-226 |
+| Hidden input hit target    | The checkbox is `position: absolute; opacity: 0` at its static spot, at its UA size, with no positioned ancestor in the chip; it can poke out of the chip and add scroll in a positioned scroller                                   | MUI's SwitchBase input: root `position: relative`, input `inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: inherit; z-index: 1`, so the whole chip is the input's box                                           | WebDriver native clicks on `input[name='grades[]']`, whose box moves: `sign_up.feature:24`, `section_management_steps.rb:19`, `section_management_steps.rb:82`, `course_overview.feature:21`, `assessment_feedback_download.feature:32`, `teacher_dashboard_local_nav_v2.feature:23` |                            | yes       | RE-223 |
 
 ## Story gaps
 
@@ -328,6 +339,28 @@ workflow adds each as an MUI story when it deletes the legacy source.
 | Focus-visible (Tab onto a chip in a play function)                     | MUI's root sets `outline: 0`; the ring comes only from the module's `:has(input:focus-visible)` rule, and a specificity slip removes it unseen                                                   |
 | Hover and pressed, unchecked and checked                               | MUI's root `transition` and `background-color` sit under these rules; needs a pseudo-state tool or an interaction test                                                                           |
 | A chip wider than its row (long label, narrow container)               | Shows the wrapping fix; the legacy chip overflows the row, so no DSCO twin can exist                                                                                                             |
+
+## Follow-ups
+
+New features, not part of the migration. They do not gate **Migrated**.
+
+**Icons.** Neither `Chips` nor `MuiChips` can show an icon: an option is
+`{value, label}`, and `MuiChipOption` puts only the input and the text in
+MUI's `label` slot. The Figma chip has a start and an end icon, either or
+both. The shape is open; candidates:
+
+- `iconLeft?` and `iconRight?: FontAwesomeV6IconProps` on each option, as
+  `Button` takes them, drawn inside the `<label>` beside the text. The whole
+  chip stays the click target and the spacing stays in `muiChips.module.scss`.
+- MUI `Chip`'s `icon` prop for the start icon. It renders outside the label
+  content, so the click target and spacing need checking, and `Chip` has no
+  end slot but `deleteIcon`, which belongs to `onDelete`.
+- `label: ReactNode`, leaving icons to the caller. Most flexible, but no
+  longer one size and color rule per chip size and state.
+
+Needs from Figma: icon size per chip size (xs to l), and color in the checked
+and disabled states. Lands after lifecycle step 4 (RE-221), so it is
+built in `MuiChips` alone. Ticket: RE-224.
 
 ## Consumer chunks
 
@@ -366,14 +399,15 @@ Apps parity sample:
 Execute:
 
 - `@deprecated` JSDoc on legacy `Chips`, `ChipsProps` and the default
-  export, naming `MuiChips` / `MuiChipsProps` and `yarn codemod:chips`.
+  export, naming `MuiChips` / `MuiChipsProps` and the codemod.
 - `src/chips/README.md`: rewrite. It still describes `Chip` and
   `ChipsGroup` and links a radio-button story. Document both APIs, the
   import lines, the form contract (real checkboxes named `<name>[]`,
   `data-testid`), `required` and the message, sizes, colors and thickness,
   and why the MUI `Chip` is never clickable.
 - `codemods/README.md`: a section for the chips codemod.
-- `package.json`: `"codemod:chips"`, shaped like `codemod:dialog`.
+- The codemod has no `package.json` script. It runs through
+  `yarn jscodeshift`, not `npx`, per `frontend/AGENTS.md`.
 - `MIGRATION_STATUS.md`: the `chips` row becomes In Progress, "wrapper, no
   override", pointing at this plan.
 
@@ -441,6 +475,9 @@ Execute departed from the plan as follows. None changes a twin's render.
 
 ## Outcome
 
+The result of the whole stack, as it stands once the consumer PR (#76496)
+lands; this branch alone carries the package side.
+
 Consumers: all six files in the PR 1 scope moved (`UnitEditor.jsx`,
 `SectionSignIn.jsx`, `GradeLevelChips.jsx`, `SingleSectionSetUp.jsx`,
 `StudentSelector.jsx`, `SingleSectionSetUpTest.jsx`), in one PR stacked on
@@ -453,14 +490,16 @@ export of `@code-dot-org/component-library/chips`; the ESLint rule in
 Parity: the five twins carry the Execute PR's Storybook gate; the sweep
 changed no package source, so it was not rerun.
 
-Apps parity: not sampled. No local studio was reachable during the run, so
-the three samples above are still owed before the consumer PR leaves draft.
+Apps parity: sampled after the run on a local studio (webpack dev server).
+The three samples above, in eight states, are pixel-identical before and
+after the consumer PR, and each consumer's behavior was checked there; see
+#76496.
 
 Codemod: rewrote the five source files, each to
 `import {MuiChips as Chips} from '@code-dot-org/component-library/chips'`,
-with no hand edits after. It left `SingleSectionSetUpTest.jsx` untouched;
-that file was moved by hand (the import, and `find('Chips')` to
-`find(Chips)`, without which a `toBe(0)` assertion passed vacuously). Jest:
+with no hand edits after. In `SingleSectionSetUpTest.jsx` it rewrites the
+import and reports `find('Chips')`, which was changed by hand to
+`find(Chips)`; without that, a `toBe(0)` assertion passed vacuously. Jest:
 `StudentSelectorTest`, `PairingDialogTest`, `UnitEditorTest`,
 `SectionSignInTest`, `FinishTeacherAccountTest` and
 `SingleSectionSetUpTest`, 6 suites, 67 tests, all pass.

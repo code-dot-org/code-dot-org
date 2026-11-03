@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284590-eb355a0dcf24",
+  "problem_type": "sort",
+  "active": true,
+  "problem_text": "Sort these emerging technologies based on their application in business.",
+  "solution": [
+    {
+      "option": "Blockchain",
+      "correct": "Financial Services"
+    },
+    {
+      "option": "Robotics",
+      "correct": "Manufacturing"
+    },
+    {
+      "option": "Augmented Reality",
+      "correct": "Retail"
+    },
+    {
+      "option": "AI",
+      "correct": "Customer Service"
+    }
+  ],
+  "objective_keys": [
+    "62446c4a-b5f1-432e-a43e-7977261e776b"
+  ]
+}

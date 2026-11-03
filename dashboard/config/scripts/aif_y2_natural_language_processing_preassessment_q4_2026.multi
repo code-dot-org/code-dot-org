@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q4-2026'
+
+wrong 'To correct grammatical mistakes in the text before counting'
+wrong 'To make the text shorter so that programs run faster'
+right 'So entries that differ only in capitals, punctuation or filler words match'
+wrong 'To translate the text into a single language before counting'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Why do programs normalize text before comparing or counting it?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Cleaning Text
+MARKDOWN

@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894907-ac868a4e41d5",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are strategies for reducing bias in AI systems? Select all that apply.",
+  "solution": [
+    {
+      "option": "Using diverse training data",
+      "correct": true
+    },
+    {
+      "option": "Ignoring user feedback",
+      "correct": false
+    },
+    {
+      "option": "Regularly auditing AI outputs",
+      "correct": true
+    },
+    {
+      "option": "Ensuring transparency in AI algorithms",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "b38c8248-55e2-4eac-9f3a-b527f1cdff7b"
+  ]
+}

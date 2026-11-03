@@ -18,7 +18,7 @@ type ExtendedIconButtonProps = Partial<
   }
 >;
 
-// Size specifications for icon-only buttons matching genericButton.module.scss
+// Size specifications for icon-only buttons, from the DSCO button
 const ICON_BUTTON_SIZE_SPECS = {
   xs: {
     padding: '0.25rem',
@@ -53,7 +53,7 @@ const ICON_BUTTON_SIZE_SPECS = {
 // Create variants with proper typing
 // Using satisfies to validate structure without type assertions
 const iconButtonVariants = [
-  // Size variants - matching genericButton.module.scss icon-only styles
+  // Size variants, from the DSCO button's icon-only styles
   {
     props: {size: 'extraSmall'},
     style: {

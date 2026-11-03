@@ -1,7 +1,7 @@
 name 'aif-y2-making-predictions-postassessment-intro-2026'
 title 'Making Predictions Post-Assessment'
 markdown <<MARKDOWN
-Now that you've completed the unit, this assessment will measure your understanding of concepts, including data analysis, data visualization, and data transformation.
+Now that you've completed the unit, this assessment will measure your understanding of concepts, including machine learning models, classification, and regression.
 
 - Read each question carefully and **apply what you've learned** to choose the best answer.
 - Some questions involve **code snippets**! Make sure to analyze them before selecting your response.
