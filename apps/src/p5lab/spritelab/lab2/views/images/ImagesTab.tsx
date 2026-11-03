@@ -327,6 +327,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // arriving means a picture landed over the painting.
   const drawingGenerationRef = useRef<ImageProps['generation']>();
   const drawingIdRef = useRef(0);
+  // The canvas as it was when its image was left for another, checker and
+  // all, shown until the next image's tools have painted; a fresh editor's
+  // canvas is empty, and the frame's own bright checker would show through
+  // the picture's transparent pixels. Remembers which drawing it left.
+  const paintStackRef = useRef<HTMLDivElement>(null);
+  const leftCanvasRef = useRef<{canvas: HTMLCanvasElement; id: number} | null>(
+    null
+  );
   const startDrawing = useCallback(
     async (target: ImageTarget) => {
       const existing = target.key
@@ -360,9 +368,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     },
     [images]
   );
-  // Once the tools have their own copy, the decoded picture is let go.
+  // Once the tools have their own copy, the decoded picture is let go, and
+  // so is the canvas left behind, once the tools painted a later drawing.
   const dropPicture = useCallback(() => {
-    setDrawing(d => (d?.picture ? {...d, picture: undefined} : d));
+    setDrawing(d => {
+      if (d && leftCanvasRef.current && leftCanvasRef.current.id !== d.id) {
+        leftCanvasRef.current = null;
+      }
+      return d?.picture ? {...d, picture: undefined} : d;
+    });
   }, []);
   const noteStroke = useCallback(() => {
     dirtyRef.current = true;
@@ -477,6 +491,16 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     saveRef.current = null;
     if (!keep) {
       setDrawing(null);
+      return;
+    }
+    const shown = paintStackRef.current?.querySelector('canvas');
+    const copy = shown && document.createElement('canvas');
+    const context = copy?.getContext('2d');
+    if (shown && copy && context) {
+      copy.width = shown.width;
+      copy.height = shown.height;
+      context.drawImage(shown, 0, 0);
+      leftCanvasRef.current = {canvas: copy, id: drawingIdRef.current};
     }
   }, []);
   // Done: what is drawn goes up, including pixels a pause's save kept local.
@@ -755,14 +779,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     return (
                       <>
                         {frame(
-                          <div className={styles.paintStack}>
+                          <div
+                            ref={paintStackRef}
+                            className={styles.paintStack}
+                          >
                             {editor.canvas}
-                            {/* The frame's own picture covers the canvas
-                                until the editor has decoded it, so a
-                                switch never shows a blank. */}
+                            {/* The canvas being left, or the frame's own
+                                picture, covers the canvas until the editor
+                                has decoded it, so a switch never shows a
+                                blank. */}
                             {!editor.ready && (
                               <PaintPlaceholder
-                                picture={drawing.picture}
+                                picture={
+                                  leftCanvasRef.current?.canvas ??
+                                  drawing.picture
+                                }
                                 src={drawing.imageUrl}
                                 pixelated={!!drawing.pixelGridSize}
                               />

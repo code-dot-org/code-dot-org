@@ -4,10 +4,10 @@ import React, {useLayoutEffect, useRef} from 'react';
 import styles from './images-tab.module.scss';
 
 interface PaintPlaceholderProps {
-  /** The picture, decoded ahead, painted before the first frame; an
-      <img> of the URL would take a frame to show, which reads as a flash
-      of the empty frame. */
-  picture?: HTMLImageElement;
+  /** The picture, decoded ahead, or a copy of the canvas being left,
+      painted before the first frame; an <img> of the URL would take a
+      frame to show, which reads as a flash of the empty frame. */
+  picture?: HTMLImageElement | HTMLCanvasElement;
   src: string;
   pixelated?: boolean;
 }
@@ -25,8 +25,9 @@ const PaintPlaceholder: React.FunctionComponent<PaintPlaceholderProps> = ({
     if (!canvas || !picture) {
       return;
     }
-    canvas.width = picture.naturalWidth;
-    canvas.height = picture.naturalHeight;
+    const image = 'naturalWidth' in picture;
+    canvas.width = image ? picture.naturalWidth : picture.width;
+    canvas.height = image ? picture.naturalHeight : picture.height;
     canvas.getContext('2d')?.drawImage(picture, 0, 0);
   }, [picture]);
   const className = classNames(

@@ -22,6 +22,23 @@ describe('PaintPlaceholder', () => {
     expect(document.querySelector('img')).toBeNull();
   });
 
+  it('paints a canvas left behind at its own size', () => {
+    const drawImage = jest.fn();
+    let sized: [number, number] | null = null;
+    jest
+      .spyOn(HTMLCanvasElement.prototype, 'getContext')
+      .mockImplementation(function (this: HTMLCanvasElement) {
+        sized = [this.width, this.height];
+        return {drawImage} as unknown as CanvasRenderingContext2D;
+      } as unknown as typeof HTMLCanvasElement.prototype.getContext);
+    const left = document.createElement('canvas');
+    left.width = 640;
+    left.height = 640;
+    render(<PaintPlaceholder picture={left} src="data:one" />);
+    expect(sized).toEqual([640, 640]);
+    expect(drawImage).toHaveBeenCalledWith(left, 0, 0);
+  });
+
   it('falls back to loading the URL where nothing was decoded ahead', () => {
     const getContext = jest.spyOn(HTMLCanvasElement.prototype, 'getContext');
     render(<PaintPlaceholder src="data:one" />);
