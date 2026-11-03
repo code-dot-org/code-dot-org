@@ -107,7 +107,7 @@ export interface PixelEditorSaveMeta {
   recentColors?: RGBA[];
 }
 
-interface PixelEditorParts {
+export interface PixelEditorParts {
   /** True once the image decoded or failed; a host that must not show an
       empty panel renders nothing before this. */
   ready: boolean;

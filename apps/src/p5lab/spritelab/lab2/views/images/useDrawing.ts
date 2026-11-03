@@ -8,7 +8,10 @@ import {toImage} from '@cdo/apps/imageUtils';
 import {DEFAULT_IMAGE_STYLE} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
 import {blankPaintImage} from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
 import {EditHistory} from '@cdo/apps/p5lab/spritelab/lab2/views/components/EditorStrip';
-import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
+import {
+  PixelEditorParts,
+  PixelEditorSaveMeta,
+} from '@cdo/apps/pixelEditor/PixelEditor';
 
 import {ImageProps, ProjectImage} from './projectImages';
 import {ImageTarget, ImageWriter} from './useImageWriter';
@@ -36,17 +39,14 @@ export interface Drawing {
   recentColors?: PixelEditorSaveMeta['recentColors'];
 }
 
-/** What the pixel editor hands its host each render, as this hook needs
-    it. */
-export interface DrawingEditor {
-  save: () => void;
-  snapshot: () => HTMLCanvasElement | null;
-}
+/** The parts of the pixel editor this hook uses. */
+export type DrawingEditor = Pick<PixelEditorParts, 'save' | 'snapshot'>;
 
 interface UseDrawingOptions {
   images: ProjectImage[];
   saveEdited: ImageWriter['saveEdited'];
-  /** Stores a picture on its target image; see ImagesTab. */
+  /** Writes a picture to its target image, a new image when the target
+      has no key yet, and resolves to the image's key. */
   storePicture: (
     target: ImageTarget,
     write: () => Promise<string>,
@@ -68,10 +68,8 @@ export interface DrawingTools {
   startDrawing: (target: ImageTarget) => Promise<void>;
   /** Leaves the drawing for another image or a new draft: unsaved pixels
       are saved in the background and the tools close at once. With
-      `keepCanvasUp` the current canvas stays on screen until the next
-      image's editor has painted, so the frame does not show the resting
-      preview for the few animation frames a set's standing frame takes to
-      cut. Strokes made in that moment are not saved. */
+      `keepCanvasUp` a copy of the canvas stays on screen until the next
+      image's editor has painted. */
   leaveDrawing: (keepCanvasUp?: boolean) => void;
   /** Done: what is drawn is saved, including pixels a pause's save stored
       without uploading, and the tools close. */
@@ -87,7 +85,8 @@ export interface DrawingTools {
   handleSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
   /** The editor has painted its own copy of the picture. */
   releasePlaceholder: () => void;
-  /** Called each render with the editor's parts. */
+  /** Takes the editor's save and snapshot, for the saves and the copy of
+      the canvas this hook makes. */
   attachEditor: (editor: DrawingEditor) => void;
 }
 
