@@ -156,7 +156,7 @@ import PromptBar from './components/PromptBar';
 import Sheet from './components/Sheet';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
-import ImagesTab, {DEFAULT_PANE_WIDTH} from './images/ImagesTab';
+import ImagesTab from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
@@ -203,6 +203,7 @@ const LOCKED_REASON = 'Unlocks later in the lesson.';
 const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
+const DEFAULT_PANE_WIDTH = 280;
 const DEFAULT_SCENE_ID = 'scene-1';
 const NO_IMAGES: ImageCounts = {sprite: 0, background: 0, block: 0};
 

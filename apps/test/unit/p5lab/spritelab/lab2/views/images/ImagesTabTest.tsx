@@ -3,6 +3,7 @@ import React from 'react';
 
 import {CHARACTER_STRIP_POSES} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import ImagesTab from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImagesTab';
+import type {SentenceSceneParts} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
 
 // The scene is stood in for: a button that lands a picture of the kind it
 // was given, so the tab's own moves can be watched.
@@ -16,7 +17,6 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
   const SentenceSceneStub = ({
     imageType,
     imageSubject,
-    typeChoice,
     initialAnimated,
     onAnimatedChange,
     onBusyChange,
@@ -25,7 +25,6 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
   }: {
     imageType: string;
     imageSubject?: string;
-    typeChoice?: boolean;
     initialAnimated?: boolean;
     onAnimatedChange?: (animated: boolean) => void;
     onBusyChange?: (busy: boolean) => void;
@@ -63,7 +62,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
             })
           }
         >
-          land {imageType} {imageSubject ?? ''} {typeChoice ? 'choice' : ''}
+          land {imageType} {imageSubject ?? ''}
         </button>
         {layout({
           mode: generating ? 'generating' : 'edit',
@@ -72,14 +71,13 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           panelRef: {current: null},
           frame: generating ? <span>spinner</span> : null,
           frameFilled: false,
-          underFrame: null,
+          behindTheScenes: null,
           status: null,
-          typeChoice: null,
           sentence: <span>words</span>,
+          wordChooser: null,
+          animatedChoice: null,
           error: null,
-          progress: null,
-          fact: null,
-          verdict: null,
+          tip: null,
           rating: {
             offered: false,
             required: false,
@@ -88,12 +86,10 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
             explain: jest.fn(),
             dismiss: jest.fn(),
           },
-          awaitingVerdict: false,
           exhausted: false,
           generate: jest.fn(),
-          keep: jest.fn(),
           draft: {imageType, subject: imageSubject, style: 'pixel'},
-        })}
+        } as SentenceSceneParts)}
       </div>
     );
   };
@@ -296,7 +292,7 @@ describe('ImagesTab', () => {
     expect(pressed()).toEqual(['Sprite 1']);
     fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     expect(pressed()).toEqual(['New character']);
-    // The kind is settled by the pick: no Type choice in the scene.
+    // The kind is set by the pick.
     expect(
       screen.getByRole('button', {name: 'land sprite character'})
     ).toBeTruthy();
