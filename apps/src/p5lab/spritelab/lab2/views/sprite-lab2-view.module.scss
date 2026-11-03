@@ -776,6 +776,7 @@ $z-over-blockly: 71;
 .playBarButtons {
   grid-column: 2;
   display: flex;
+  min-width: 0;
   // Stretch keeps the buttons a shared height when one of them wraps to two lines.
   align-items: stretch;
   gap: 16px;
