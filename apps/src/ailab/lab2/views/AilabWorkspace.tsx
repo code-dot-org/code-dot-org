@@ -40,7 +40,7 @@ import {AilabLevelProperties} from '../types';
 
 import styles from './ailab-view.module.scss';
 
-// AI Lab takes no files from the Backpack; the tab shows the trees a student saved.
+// AI Lab takes no files from the Backpack; the tab shows the files a student saved.
 const BACKPACK_PROPS: BackpackProps = {
   validateFileName: fileName => ({
     isSupportFileName: false,
