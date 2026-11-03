@@ -585,9 +585,12 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   gap: 8px;
 }
 
-// A set's frames under the one being drawn.
+// A set's frames under the one being drawn, centered under the preview:
+// the strip spans the slot (which otherwise keeps to the right) and
+// centers its tiles.
 .frameStrip {
   display: flex;
+  flex: 1 1 auto;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
