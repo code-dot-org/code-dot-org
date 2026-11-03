@@ -225,6 +225,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     aichatContext: aiContext,
     chat,
     recordValidation: recordStepValidation,
+    priorAttempts: progress.steps[step.id]?.validationHistory?.length ?? 0,
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share
@@ -284,8 +285,14 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
         : 'Continue unlocks once your work on this step meets its goal.',
       endIcon: <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />,
       onContinue: onComplete,
+      prompt: step.project
+        ? {
+            heading: 'Stuck or want to get better at something?',
+            body: 'Practice a skill on your skill map, then come back.',
+          }
+        : undefined,
     }),
-    [continueLabel, checked, onComplete]
+    [continueLabel, checked, onComplete, step.project]
   );
 
   // Stands in for ProjectContainer's level-change reset, which steps bypass.

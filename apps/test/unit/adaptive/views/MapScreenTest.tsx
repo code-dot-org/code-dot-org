@@ -57,10 +57,6 @@ jest.mock('intro.js-react', () => {
   return {Steps};
 });
 
-jest.mock('@cdo/apps/adaptive/project/usePathwayProject', () => ({
-  usePathwayProject: () => ({isLoading: false}),
-}));
-
 // MapView mock exposes onSelect so tests can simulate a checkpoint click.
 jest.mock('@cdo/apps/adaptive/views/map/MapView', () => ({
   __esModule: true,
@@ -76,10 +72,6 @@ jest.mock('@cdo/apps/adaptive/views/map/MapView', () => ({
   ),
 }));
 
-jest.mock('@cdo/apps/adaptive/views/ProjectCard', () => ({
-  __esModule: true,
-  default: () => <div>project card</div>,
-}));
 jest.mock('@cdo/apps/adaptive/views/map/mapSettings', () => ({
   resolveMapSettings: () => ({}),
 }));
@@ -156,7 +148,6 @@ function renderMapScreen(
       evidence={{}}
       onFocus={jest.fn()}
       onStart={jest.fn()}
-      onWorkOnProject={jest.fn()}
       hasSkippedCheckpoints={false}
       {...overrides}
     />
@@ -202,19 +193,8 @@ describe('MapScreen tour', () => {
   });
 
   describe('step transitions', () => {
-    it('shows ProjectCard before any interaction', () => {
+    it('shows nothing in the sidebar before any interaction', () => {
       renderMapScreen();
-      expect(screen.getByText('project card')).toBeTruthy();
-      expect(screen.queryByText('First Checkpoint')).toBeNull();
-    });
-
-    it('still shows ProjectCard after advancing to step 2 without a map click', () => {
-      // Advancing no longer auto-selects a checkpoint — user must click the map.
-      renderMapScreen();
-      act(() => {
-        fireEvent.click(screen.getByText('advance'));
-      });
-      expect(screen.getByText('project card')).toBeTruthy();
       expect(screen.queryByText('First Checkpoint')).toBeNull();
     });
 
@@ -227,7 +207,6 @@ describe('MapScreen tour', () => {
         fireEvent.click(screen.getByText('select cp-1'));
       });
       expect(screen.getByText('First Checkpoint')).toBeTruthy();
-      expect(screen.queryByText('project card')).toBeNull();
     });
 
     it('ignores map clicks on locked checkpoints during the select step', () => {
@@ -238,7 +217,6 @@ describe('MapScreen tour', () => {
       act(() => {
         fireEvent.click(screen.getByText('select cp-2')); // cp-2 is locked
       });
-      expect(screen.getByText('project card')).toBeTruthy();
       expect(screen.queryByText('Second Checkpoint')).toBeNull();
     });
 
@@ -253,7 +231,6 @@ describe('MapScreen tour', () => {
       act(() => {
         fireEvent.click(screen.getByText('back')); // step 0
       });
-      expect(screen.getByText('project card')).toBeTruthy();
       expect(screen.queryByText('First Checkpoint')).toBeNull();
     });
 

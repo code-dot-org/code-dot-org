@@ -3,15 +3,16 @@
 // card, or the focused checkpoint's card.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import React, {useMemo, useRef, useState} from 'react';
+import {Button as MuiButton} from '@mui/material';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
+import {sendAdaptiveEvent} from '../metricsHelpers';
 import {CheckpointStatusMap} from '../progress';
-import {usePathwayProject} from '../project/usePathwayProject';
 import {PathwayEvidence} from '../routing/evidence';
 import {Pathway} from '../types';
 
@@ -19,7 +20,6 @@ import CheckpointCard from './CheckpointCard';
 import {resolveMapSettings} from './map/mapSettings';
 import MapView from './map/MapView';
 import MapZoom from './map/MapZoom';
-import ProjectCard from './ProjectCard';
 
 import styles from './mapScreen.module.scss';
 
@@ -51,7 +51,6 @@ interface MapScreenProps {
   focusId?: string;
   onFocus: (id: string | undefined) => void;
   onStart: (checkpointId: string) => void;
-  onWorkOnProject: () => void;
   hasSkippedCheckpoints: boolean;
 }
 
@@ -63,13 +62,9 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   focusId,
   onFocus,
   onStart,
-  onWorkOnProject,
   hasSkippedCheckpoints,
 }) => {
   const themeSetting = useThemeSetting('adaptive');
-  // The project manager lives only while the map shows, so it never races a
-  // step's manager on the same channel.
-  const projectState = usePathwayProject(pathway);
   // During the tour, show CheckpointCard for the user-selected checkpoint
   // without zooming the map. A zoomed map shifts the highlighted node away from
   // where IntroJS measured it, so we keep the map at its fit view.
@@ -87,6 +82,8 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     [pathway]
   );
 
+  const tourEnded = useRef(false);
+
   const [tourEnabled, setTourEnabled] = useState(
     () => !tryGetLocalStorage(SKILL_MAP_TOUR_STORAGE_KEY, '0')
   );
@@ -100,14 +97,32 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     [hasSkippedCheckpoints]
   );
 
+  useEffect(() => {
+    if (tourEnabled)
+      sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_STARTED, {
+        hasSkippedCheckpoints,
+      });
+    // Once per map visit.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const dismissTour = () => {
-    localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
-    setTourEnabled(false);
-    setTourCheckpointId(undefined);
-    document.body.classList.remove(
-      'adaptive-tour-step-select',
-      'adaptive-tour-no-next'
-    );
+    if (!tourEnded.current) {
+      tourEnded.current = true;
+      if (tourStep >= tourStepIndices.sidebar)
+        sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_COMPLETED);
+      else
+        sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_DISMISSED, {
+          stepIndex: tourStep,
+        });
+      localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
+      setTourEnabled(false);
+      setTourCheckpointId(undefined);
+      document.body.classList.remove(
+        'adaptive-tour-step-select',
+        'adaptive-tour-no-next'
+      );
+    }
   };
 
   // During the "pick" step, zoom to the centroid of all open checkpoints.
@@ -178,9 +193,6 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
           showStepNumbers: true,
         }}
       />
-      <header className={styles.mapBar}>
-        <MuiTypography variant="strong">{pathway.title}</MuiTypography>
-      </header>
       <div className={styles.mapBody}>
         <ResourcePanel
           levelProperties={levelProperties}
@@ -222,23 +234,32 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               focusId={focusId}
               tourFocusIds={tourFocusIds}
               onSelect={id => {
+                const sendSelected = () =>
+                  sendAdaptiveEvent(
+                    EVENTS.ADAPTIVE_SKILL_MAP_CHECKPOINT_SELECTED,
+                    {checkpointId: id, status: statusMap[id]}
+                  );
                 if (
                   tourEnabled &&
                   tourStep === tourStepIndices.pickCheckpoint
                 ) {
                   if (statusMap[id] !== 'locked') {
+                    sendSelected();
                     setTourCheckpointId(id);
                     stepsRef.current?.introJs?.nextStep();
                   }
+                } else if (id === focusId) {
+                  onFocus(undefined);
                 } else {
-                  onFocus(id === focusId ? undefined : id);
+                  sendSelected();
+                  onFocus(id);
                 }
               }}
             />
           </MapZoom>
         </div>
         <aside id="adaptive-tour-side" className={styles.side}>
-          {focused ? (
+          {focused && (
             <CheckpointCard
               pathway={pathway}
               checkpoint={focused}
@@ -250,12 +271,6 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
                 onStart(focused.id);
               }}
               onSelectCheckpoint={onFocus}
-            />
-          ) : (
-            <ProjectCard
-              pathway={pathway}
-              {...projectState}
-              onWorkOnProject={onWorkOnProject}
             />
           )}
         </aside>
