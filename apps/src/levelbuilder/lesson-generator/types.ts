@@ -7,6 +7,7 @@ export const SUPPORTED_LAB_TYPES = [
   'ailab',
   'aichat',
   'sketchlab',
+  'external',
   'multi',
   'match',
   'freeResponse',
@@ -23,6 +24,7 @@ export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   ailab: 'Ailab',
   aichat: 'Aichat',
   sketchlab: 'Sketchlab',
+  external: 'External',
   multi: 'Multi',
   match: 'Match',
   freeResponse: 'FreeResponse',
@@ -37,6 +39,7 @@ export const LAB_LABELS = {
   ailab: 'AI Lab',
   aichat: 'AI Chat',
   sketchlab: 'Sketch Lab',
+  external: 'Markdown',
   multi: 'Multiple Choice',
   match: 'Matching',
   freeResponse: 'Free Response',
@@ -46,6 +49,7 @@ export const LAB_LABELS = {
 // Lab types saved as parsed DSL text (dsl_text) rather than serialized
 // JSON properties; createOrFindLevel and updateLevelProperty branch on this.
 export const DSL_LAB_TYPES: readonly LabType[] = [
+  'external',
   'multi',
   'match',
   'bubbleChoice',
@@ -138,6 +142,17 @@ export const LAB_TYPE_INFO: Record<LabType, LabTypePromptInfo> = {
     ],
     chooseFor: 'drawing / annotation exercises',
   },
+  external: {
+    promptLabel: 'External',
+    promptDescription: [
+      'a standalone markdown page the student reads — narrative, framing,',
+      'reference material, or a wrap-up. One scrolling page of prose with',
+      'no interaction. Prefer Panels when illustrations carry the story;',
+      'prefer External for reading, or where the author will embed a video',
+      'or article.',
+    ],
+    chooseFor: 'standalone reading pages',
+  },
   multi: {
     promptLabel: 'Multi',
     promptDescription: [
@@ -223,6 +238,8 @@ export interface LevelSpec {
   // Set when this card is a level already in the lesson; restores it to
   // the same activity/section on save.
   existing?: ExistingLevelRef;
+  // Sublevels only: the level's own name (they have no script_level ref).
+  existingName?: string;
   // Set when the lab type is unsupported: card renders read-only so the
   // user can still see and reorder around it.
   unsupportedType?: string;
