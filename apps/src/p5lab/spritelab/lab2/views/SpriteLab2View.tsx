@@ -604,9 +604,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The room the editors keep clear of the column, on its side.
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
-  // The Images tab's pane column, headed AI, at the right: the preview
-  // column's width where one has been measured, else the pane's own.
-  const paneWidthPx = previewWidth || DEFAULT_PANE_WIDTH;
+  // The Images tab's pane column, headed AI, at the right, is as wide as
+  // the preview column is or would be, which the playspace reports whether
+  // or not its preview shows.
+  const [previewColumnWidth, setPreviewColumnWidth] = useState(0);
+  const paneWidthPx = previewColumnWidth || DEFAULT_PANE_WIDTH;
   const clearOfPane = {right: paneWidthPx};
   // The workspace does not notice its container changing size.
   useEffect(() => {
@@ -2476,7 +2478,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   onGenerate={countGeneration}
                   editingOffered={isFreeplayMode(levelProperties.levelMode)}
                   verdictRequired={imagePaneProps.verdictRequired}
-                  paneWidth={previewWidth}
+                  paneWidth={paneWidthPx}
                 />
               )}
             </div>
@@ -2518,6 +2520,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             mode={playspaceMode}
             columnHeader={<EditorStrip title="Preview" />}
             onPreviewWidth={setPreviewWidth}
+            onColumnWidth={setPreviewColumnWidth}
             side={previewSide}
             columnShare={previewShare}
             controls={
