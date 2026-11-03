@@ -21,11 +21,11 @@ const ASK_AI_METRIC = 'spritelab-lab2.ask_ai';
 
 export const ASK_AI_TIMEOUT_MS = 15000;
 
-export const MAX_PROMPT_CHARACTERS = 1000;
+const MAX_PROMPT_CHARACTERS = 1000;
 
 // The say bubble limits to 150 characters, which is the most common
 // place to put the answer.
-export const MAX_ANSWER_CHARACTERS = 150;
+const MAX_ANSWER_CHARACTERS = 150;
 
 export const SYSTEM_PROMPT = `You answer questions for a student building a game in a block-based programming class.
 
@@ -50,14 +50,14 @@ export class AskAiError extends Error {
   }
 }
 
-export class AskAiTimeoutError extends Error {
+class AskAiTimeoutError extends Error {
   constructor() {
     super('The AI took too long to answer.');
     this.name = 'AskAiTimeoutError';
   }
 }
 
-export function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
+function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   let timer: number;
   const deadline = new Promise<never>((_, reject) => {
     timer = window.setTimeout(() => reject(new AskAiTimeoutError()), ms);
@@ -101,7 +101,6 @@ async function requestAnswer(prompt: string): Promise<string> {
   );
   return text;
 }
-
 /**
  * Ask the model a student's question. Rejects with AskAiError when either
  * safety judge flags, and with a plain Error on timeout or a failed call.

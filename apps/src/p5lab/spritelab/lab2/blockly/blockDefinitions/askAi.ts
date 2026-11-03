@@ -20,8 +20,6 @@ const definition: BlockJson = {
     '"when ... answered" block to do something with it.',
 };
 
-// The variable socket yields a setter rather than a value, the way the
-// classic prompt block does: askAI fills it in once the answer lands.
 const generator: GeneratorFunction = (block, javascript) => {
   const target = block.getInput('VAR')?.connection?.targetBlock();
   if (!target || target.type !== 'variables_get') {
