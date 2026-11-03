@@ -1,4 +1,5 @@
 import React from 'react';
+import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
@@ -321,31 +322,31 @@ Javalab.prototype.init = function (config) {
     method: 'GET',
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
-  createReactRoot(
-    <Provider store={getStore()}>
-      <BackpackAPIContext.Provider value={backpackApi}>
-        <JavalabView
-          onMount={onMount}
-          onRun={onRun}
-          onStop={onStop}
-          onTest={onTest}
-          onContinue={onContinue}
-          onCommitCode={onCommitCode}
-          onInputMessage={onInputMessage}
-          visualization={this.visualization}
-          viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
-          isProjectTemplateLevel={!!this.level.projectTemplateLevelName}
-          handleClearPuzzle={() => {
-            return this.studioApp_.handleClearPuzzle(config);
-          }}
-          onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
-        />
-      </BackpackAPIContext.Provider>
-    </Provider>,
-    document.getElementById(config.containerId),
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: onMount initializes the app before init returns.
+  flushSync(() =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <BackpackAPIContext.Provider value={backpackApi}>
+          <JavalabView
+            onMount={onMount}
+            onRun={onRun}
+            onStop={onStop}
+            onTest={onTest}
+            onContinue={onContinue}
+            onCommitCode={onCommitCode}
+            onInputMessage={onInputMessage}
+            visualization={this.visualization}
+            viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
+            isProjectTemplateLevel={!!this.level.projectTemplateLevelName}
+            handleClearPuzzle={() => {
+              return this.studioApp_.handleClearPuzzle(config);
+            }}
+            onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
+          />
+        </BackpackAPIContext.Provider>
+      </Provider>,
+      document.getElementById(config.containerId)
+    )
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));

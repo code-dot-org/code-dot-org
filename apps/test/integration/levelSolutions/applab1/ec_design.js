@@ -2,7 +2,19 @@ import {TestResults} from '@cdo/apps/constants';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 var $ = require('jquery');
+var {flushSync} = require('react-dom');
 var ReactTestUtils = require('react-dom/test-utils');
+
+// Simulate is not a browser event, so createRoot would defer its updates.
+function simulate(eventName, ...args) {
+  flushSync(() => ReactTestUtils.Simulate[eventName](...args));
+}
+
+// createRoot applies a click's updates once the event has returned, which
+// a test that asserts right after clicking never lets happen.
+function clickAndFlush(selector) {
+  flushSync(() => $(selector).click());
+}
 
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
@@ -139,7 +151,7 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
 
         testUtils.dragToVisualization('BUTTON', 10, 20);
 
@@ -152,7 +164,7 @@ module.exports = {
 
         var buttonElement = $('#design_button1')[0];
 
-        ReactTestUtils.Simulate.change(imageInput, {
+        simulate('change', imageInput, {
           target: {value: assetUrl},
         });
 
@@ -173,7 +185,7 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
 
         testUtils.dragToVisualization('BUTTON', 10, 20);
 
@@ -194,7 +206,7 @@ module.exports = {
           });
         };
 
-        ReactTestUtils.Simulate.change(imageInput, {
+        simulate('change', imageInput, {
           target: {value: assetUrl},
         });
 
@@ -228,7 +240,7 @@ module.exports = {
       assetPathPrefix: '/base/test/integration/assets/',
       xml: '',
       runBeforeClick: function (assert) {
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
 
         testUtils.dragToVisualization('BUTTON', 10, 20);
 
@@ -245,7 +257,7 @@ module.exports = {
         var originalButtonWidth = buttonElement.style.width;
         var originalButtonHeight = buttonElement.style.height;
 
-        ReactTestUtils.Simulate.change(imageInput, {
+        simulate('change', imageInput, {
           target: {value: assetUrl},
         });
 
@@ -350,15 +362,15 @@ module.exports = {
           assert.equal(button.prop('tagName'), 'BUTTON');
         };
 
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         testUtils.dragToVisualization('BUTTON', 10, 20);
         shouldBeResizable();
 
-        $('#codeModeButton').click();
+        clickAndFlush('#codeModeButton');
         assert.equal($('#design-properties').is(':visible'), false);
         shouldNotBeResizable();
 
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         shouldBeResizable();
 
         $('#runButton').click();
@@ -380,7 +392,7 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         testUtils.dragToVisualization('BUTTON', 10, 20);
         assertPropertyRowValue(0, 'id', 'button1', assert);
         assertPropertyRowValue(2, 'width (px)', 100, assert);
@@ -409,7 +421,7 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         testUtils.dragToVisualization('BUTTON', 10, 20);
         assertPropertyRowValue(0, 'id', 'button1', assert);
         assertPropertyRowValue(2, 'width (px)', 100, assert);
@@ -438,7 +450,7 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         testUtils.dragToVisualization('BUTTON', 10, 10);
         assertPropertyRowValue(0, 'id', 'button1', assert);
         var toggleHidden = $('#propertyRowContainer input[type="checkbox"]')[0];
@@ -446,19 +458,19 @@ module.exports = {
         assert.equal(isFaded('#design_button1'), false);
         assert.equal(isHidden('#button1'), false);
 
-        ReactTestUtils.Simulate.change(toggleHidden);
+        simulate('change', toggleHidden);
 
         assert.equal(toggleHidden.checked, true);
         assert.equal(isFaded('#design_button1'), true);
         assert.equal(isHidden('#button1'), false);
 
         // Enter code mode
-        $('#codeModeButton').click();
+        clickAndFlush('#codeModeButton');
         assert.equal(isFaded('#design_button1'), false);
         assert.equal(isHidden('#button1'), true);
 
         // Back to design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         assert.equal(isFaded('#design_button1'), true);
         assert.equal(isHidden('#button1'), false);
 
@@ -487,7 +499,7 @@ module.exports = {
         tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal($('#my_button').length, 1);
 
-          $('#designModeButton').click();
+          clickAndFlush('#designModeButton');
 
           assert.equal(
             $('#my_button').length,
@@ -524,7 +536,7 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         assert.equal(
           $('#design-mode-dimmed').length,
           0,
@@ -573,14 +585,14 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         assert.equal(
           $('#design-mode-versions-header').is(':visible'),
           true,
           'version history button is visible'
         );
 
-        $('#design-mode-versions-header').click();
+        clickAndFlush('#design-mode-versions-header');
         assert.equal(
           $('[role="dialog"]:visible h3').first().text(),
           'Version History',
@@ -637,11 +649,11 @@ module.exports = {
         assert.isFalse(isFaded('#design_chart1'));
         assert.isFalse(isHidden('#chart1'));
 
-        ReactTestUtils.Simulate.change(toggleHidden);
+        simulate('change', toggleHidden);
         assert.isTrue(isFaded('#design_chart1'));
         assert.isFalse(isHidden('#chart1'));
 
-        ReactTestUtils.Simulate.change(toggleHidden);
+        simulate('change', toggleHidden);
         assert.isFalse(isFaded('#design_chart1'));
         assert.isFalse(isHidden('#chart1'));
 
@@ -649,7 +661,7 @@ module.exports = {
         var deleteButton = $('#designWorkspaceBody').find(
           'button:contains(Delete)'
         )[0];
-        ReactTestUtils.Simulate.click(deleteButton);
+        simulate('click', deleteButton);
         assert.equal(designModeViz.find('.chart').length, 0);
 
         Applab.onPuzzleComplete();
@@ -666,7 +678,7 @@ module.exports = {
       xml: '',
 
       runBeforeClick: function (assert) {
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
 
         testUtils.dragToVisualization('TEXT_AREA', 0, 0);
 
@@ -699,7 +711,7 @@ module.exports = {
         );
 
         textArea = $('#propertyRowContainer textarea').first()[0];
-        ReactTestUtils.Simulate.change(textArea, {target: {value: 'Text 1'}});
+        simulate('change', textArea, {target: {value: 'Text 1'}});
 
         assert.equal(
           $('#propertyRowContainer textarea').first().val(),
@@ -722,7 +734,7 @@ module.exports = {
           'should have one line of text'
         );
 
-        ReactTestUtils.Simulate.change(textArea, {
+        simulate('change', textArea, {
           target: {value: 'Text1\nText2\nText3'},
         });
 
@@ -731,7 +743,7 @@ module.exports = {
           'Text1<div>Text2</div><div>Text3</div>'
         );
 
-        ReactTestUtils.Simulate.change(textArea, {
+        simulate('change', textArea, {
           target: {value: 'Text1\n\nText2'},
         });
 
@@ -760,7 +772,7 @@ module.exports = {
         // Reacquire reference to textArea, since it was unmounted when we
         // selected the screen.
         textArea = $('#propertyRowContainer textarea').first()[0];
-        ReactTestUtils.Simulate.change(textArea, {
+        simulate('change', textArea, {
           target: {value: "I said hey-hey-hey-hey\nWhat's going on?"},
         });
         assert.equal(
@@ -821,11 +833,11 @@ module.exports = {
         assert.isFalse(isFaded('#design_image1'));
         assert.isFalse(isHidden('#image1'));
 
-        ReactTestUtils.Simulate.change(toggleHidden);
+        simulate('change', toggleHidden);
         assert.isTrue(isFaded('#design_image1'));
         assert.isFalse(isHidden('#image1'));
 
-        ReactTestUtils.Simulate.change(toggleHidden);
+        simulate('change', toggleHidden);
         assert.isFalse(isFaded('#design_image1'));
         assert.isFalse(isHidden('#image1'));
 
@@ -833,7 +845,7 @@ module.exports = {
         var deleteButton = $('#designWorkspaceBody').find(
           'button:contains(Delete)'
         )[0];
-        ReactTestUtils.Simulate.click(deleteButton);
+        simulate('click', deleteButton);
         assert.equal(designModeViz.find('img').length, 0);
 
         Applab.onPuzzleComplete();
@@ -863,7 +875,7 @@ module.exports = {
         var imageDuplicateButton = $('#designWorkspaceBody').find(
           'button:contains(Duplicate)'
         )[0];
-        ReactTestUtils.Simulate.click(imageDuplicateButton);
+        simulate('click', imageDuplicateButton);
 
         // Assert position and ID
         var images = designModeViz.find('img');
@@ -882,7 +894,7 @@ module.exports = {
         var chartDuplicateButton = $('#designWorkspaceBody').find(
           'button:contains(Duplicate)'
         )[0];
-        ReactTestUtils.Simulate.click(chartDuplicateButton);
+        simulate('click', chartDuplicateButton);
         assert.equal(designModeViz.find('.chart').length, 2);
 
         // Assert position and ID
@@ -907,7 +919,7 @@ module.exports = {
         var buttonDuplicateButton = $('#designWorkspaceBody').find(
           'button:contains(Duplicate)'
         )[0];
-        ReactTestUtils.Simulate.click(buttonDuplicateButton);
+        simulate('click', buttonDuplicateButton);
         assert.equal(designModeViz.find('button[id^="design_"]').length, 2);
 
         // Test containment in design mode area by asserting position and ID
@@ -1213,7 +1225,7 @@ module.exports = {
         );
 
         // Enter design mode, and select image
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         $('#design_image1').click();
 
         assertPropertyRowExists(5, 'image', assert);
@@ -1228,7 +1240,7 @@ module.exports = {
           'flappy_promo.png'
         );
 
-        ReactTestUtils.Simulate.change(input, {target: {value: ''}});
+        simulate('change', input, {target: {value: ''}});
         assert.equal(input.value, '');
 
         assert(/1x1.gif$/.test(designImage.src), 'src became 1x1.gif');
@@ -1443,7 +1455,7 @@ module.exports = {
 
         // Renaming to 'button' succeeds.
         var idInput = $('#propertyRowContainer input')[0];
-        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button'}});
+        simulate('change', idInput, {target: {value: 'button'}});
         assert.equal(
           targetButton.id,
           'design_button',
@@ -1455,7 +1467,7 @@ module.exports = {
         );
 
         // Renaming to button3 succeeds.
-        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button3'}});
+        simulate('change', idInput, {target: {value: 'button3'}});
         assert.equal(
           targetButton.id,
           'design_button3',
@@ -1471,7 +1483,7 @@ module.exports = {
           $('#divApplab #button2'),
           'button2 still appears inside divApplab'
         );
-        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button2'}});
+        simulate('change', idInput, {target: {value: 'button2'}});
         assert.equal(
           targetButton.id,
           'design_button2',
@@ -1483,7 +1495,7 @@ module.exports = {
         );
 
         // Renaming to duplicate id 'button1' fails.
-        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button1'}});
+        simulate('change', idInput, {target: {value: 'button1'}});
         assert.equal(
           targetButton.id,
           'design_button2',
@@ -1496,7 +1508,7 @@ module.exports = {
         );
 
         // idInput reverts to previous value on blur.
-        ReactTestUtils.Simulate.blur(idInput);
+        simulate('blur', idInput);
         assert.equal(idInput.value, 'button2', "id input reverts to 'button2'");
         assert(
           idInput.getAttribute('aria-invalid') !== 'true',
@@ -1504,7 +1516,7 @@ module.exports = {
         );
 
         // Renaming to button4 succeeds.
-        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button4'}});
+        simulate('change', idInput, {target: {value: 'button4'}});
         assert.equal(
           targetButton.id,
           'design_button4',
@@ -1516,7 +1528,7 @@ module.exports = {
         );
 
         // Renaming to divApplab fails.
-        ReactTestUtils.Simulate.change(idInput, {target: {value: 'divApplab'}});
+        simulate('change', idInput, {target: {value: 'divApplab'}});
         assert.equal(
           targetButton.id,
           'design_button4',
@@ -1529,7 +1541,7 @@ module.exports = {
         );
 
         // Renaming to button5 succeeds.
-        ReactTestUtils.Simulate.change(idInput, {target: {value: 'button5'}});
+        simulate('change', idInput, {target: {value: 'button5'}});
         assert.equal(
           targetButton.id,
           'design_button5',
@@ -1541,7 +1553,7 @@ module.exports = {
         );
 
         // Renaming to runButton fails.
-        ReactTestUtils.Simulate.change(idInput, {target: {value: 'runButton'}});
+        simulate('change', idInput, {target: {value: 'runButton'}});
         assert.equal(
           targetButton.id,
           'design_button5',
@@ -1554,7 +1566,7 @@ module.exports = {
         );
 
         // Renaming to something with the 'design_' prefix fails.
-        ReactTestUtils.Simulate.change(idInput, {
+        simulate('change', idInput, {
           target: {value: 'design_button'},
         });
         assert.equal(
@@ -1569,7 +1581,7 @@ module.exports = {
         );
 
         // Renaming to a blacklisted element id fails.
-        ReactTestUtils.Simulate.change(idInput, {
+        simulate('change', idInput, {
           target: {value: 'submitButton'},
         });
         assert.equal(
@@ -1602,7 +1614,7 @@ module.exports = {
 
         // Renaming to duplicate id 'screen1' fails.
         idInput = $('#propertyRowContainer input')[0];
-        ReactTestUtils.Simulate.change(idInput, {target: {value: 'screen1'}});
+        simulate('change', idInput, {target: {value: 'screen1'}});
         assert.equal(
           targetScreen.id,
           'design_screen2',
@@ -1644,7 +1656,7 @@ module.exports = {
         assertPropertyRowValue(0, 'id', 'screen1', assert);
 
         function selectElementAndValidate(id) {
-          ReactTestUtils.Simulate.change(elementSelect, {
+          simulate('change', elementSelect, {
             target: {value: id},
           });
           assertPropertyRowValue(0, 'id', id, assert);
@@ -1667,7 +1679,7 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // Switch to design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
 
         // Add first radio button
         testUtils.dragToVisualization('RADIO_BUTTON', 0, 0);
@@ -1736,7 +1748,7 @@ module.exports = {
         $.fx.off = true;
 
         // Switch to design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         var designModeViz = $('#designModeViz');
 
         // Add a bunch of elements
