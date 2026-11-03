@@ -55,20 +55,25 @@ export const CHARACTER_STRIP_POSES: AnimationPoses = {
 
 export const CHARACTER_STRIP_FRAME_COUNT = 5;
 
-/** The strip's standing frame: the base picture every posed frame was drawn
-    from, so the one editing opens on and the one a tile shows for the set. */
+/** The standing frame is the base picture the other poses were drawn
+    from. */
 export const CHARACTER_STRIP_BASE_FRAME =
   CHARACTER_STRIP_POSES['stand-right']!.start +
   CHARACTER_STRIP_POSES['stand-right']!.count -
   1;
 
-/** Where frame `index` of a strip sits: cells row by row, wrapping at the
-    image width, as the engine cuts them. Every reader of a strip (the
-    frame row, the tile, the editor, the model's start image) cuts through
-    here, so they agree. */
+/** The size of one frame of a strip, in image pixels. */
+export interface FrameSize {
+  x: number;
+  y: number;
+}
+
+/** The top-left corner of frame `index`. Frames fill a row left to right
+    and wrap to the next row at the image width, the same way the engine
+    reads a sheet. */
 export function stripCellOrigin(
   imageWidth: number,
-  frameSize: {x: number; y: number},
+  frameSize: FrameSize,
   index: number
 ): {x: number; y: number} {
   const columns = Math.max(1, Math.floor(imageWidth / frameSize.x));
@@ -78,18 +83,18 @@ export function stripCellOrigin(
   };
 }
 
-/** Frame `index` of a strip drawn into `into`, a canvas of one cell: the
-    one place a cell is cut, so every reader gets the same pixels. */
+/** Copies frame `index` of `image` into a canvas sized to one frame. Pass a
+    canvas to draw into an existing one. */
 export function drawStripCell(
   image: HTMLImageElement,
-  frameSize: {x: number; y: number},
+  frameSize: FrameSize,
   index: number,
-  into: HTMLCanvasElement = document.createElement('canvas')
+  canvas: HTMLCanvasElement = document.createElement('canvas')
 ): HTMLCanvasElement {
-  into.width = frameSize.x;
-  into.height = frameSize.y;
+  canvas.width = frameSize.x;
+  canvas.height = frameSize.y;
   const {x, y} = stripCellOrigin(image.naturalWidth, frameSize, index);
-  into
+  canvas
     .getContext('2d')
     ?.drawImage(
       image,
@@ -102,7 +107,7 @@ export function drawStripCell(
       frameSize.x,
       frameSize.y
     );
-  return into;
+  return canvas;
 }
 
 /** Right first: the left-facing frames are mirrored from the right ones. */

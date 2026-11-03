@@ -267,8 +267,8 @@ export function loadedAnimations(
 }
 
 /**
- * The first frame of a sprite sheet as a dataURI, for thumbnails. Cached by
- * source.
+ * Frame `index` of a sprite sheet as a dataURI, for thumbnails. Cached by
+ * frame and source.
  */
 function frameThumbnail(
   source: string,
@@ -405,8 +405,9 @@ export async function trimAnimationListImages(
       const isSheet = props.frameCount > 1 && !!props.frameSize;
       // An image cropped at save time (props.trimmed) skips the pixel scan
       // and re-encode; its stored dataURI is already what trimming makes.
-      // A character set's tile shows its standing frame, the one it was
-      // drawn from and the one editing opens on; any other sheet its first.
+      // A character set's thumbnail is its standing frame, the picture its
+      // other poses were drawn from. Any other sheet's thumbnail is its
+      // first frame.
       const trimmed = isSheet
         ? await frameThumbnail(
             props.dataURI,

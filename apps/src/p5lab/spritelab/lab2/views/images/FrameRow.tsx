@@ -1,12 +1,16 @@
-// A character set's frames in a row, each named for its pose, the one
-// being drawn marked; clicking another opens it.
+// A character set's frames as a row of toggle buttons, each named for its
+// pose; the one being drawn is pressed.
 
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
-import {drawStripCell} from '../../characterAnimations';
+import {toImage} from '@cdo/apps/imageUtils';
+import {
+  drawStripCell,
+  FrameSize,
+} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
-import {FRAME_LABELS, FRAME_ROW_ORDER, FrameSize} from './frames';
+import {FRAME_LABELS, FRAME_ROW_ORDER} from './frames';
 
 import styles from './images-tab.module.scss';
 
@@ -19,7 +23,6 @@ interface FrameRowProps {
   disabled?: boolean;
 }
 
-// Draws one frame of the sheet into its tile.
 const FrameTile: React.FunctionComponent<{
   sheetSrc: string;
   frameSize: FrameSize;
@@ -32,18 +35,15 @@ const FrameTile: React.FunctionComponent<{
       return;
     }
     let cancelled = false;
-    const image = new Image();
-    image.onload = () => {
-      if (cancelled) {
-        return;
+    toImage(sheetSrc).then(image => {
+      if (!cancelled) {
+        drawStripCell(image, frameSize, index, canvas);
       }
-      drawStripCell(image, {x: frameSize.x, y: frameSize.y}, index, canvas);
-    };
-    image.src = sheetSrc;
+    });
     return () => {
       cancelled = true;
     };
-  }, [sheetSrc, frameSize.x, frameSize.y, index]);
+  }, [sheetSrc, frameSize, index]);
   return <canvas ref={canvasRef} className={styles.frameTileCanvas} />;
 };
 

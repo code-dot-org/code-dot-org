@@ -5,6 +5,10 @@
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {toImage} from '@cdo/apps/imageUtils';
+import {
+  CHARACTER_STRIP_BASE_FRAME,
+  FrameSize,
+} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {DEFAULT_IMAGE_STYLE} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
 import {blankPaintImage} from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
 import {EditHistory} from '@cdo/apps/p5lab/spritelab/lab2/views/components/EditorStrip';
@@ -13,13 +17,7 @@ import {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditor';
 
-import {
-  BASE_FRAME,
-  cutFrame,
-  frameCount,
-  FrameSize,
-  replaceFrame,
-} from './frames';
+import {cutFrame, frameCount, replaceFrame} from './frames';
 import {ImageProps, ProjectImage} from './projectImages';
 import {ImageTarget, ImageWriter} from './useImageWriter';
 
@@ -216,7 +214,11 @@ export default function useDrawing({
       if (existing?.sheet) {
         const {src, frameSize} = existing.sheet;
         const sheetImage = await toImage(src);
-        const imageUrl = await cutFrame(src, frameSize, BASE_FRAME);
+        const imageUrl = await cutFrame(
+          src,
+          frameSize,
+          CHARACTER_STRIP_BASE_FRAME
+        );
         const picture = await decodeImage(imageUrl);
         // A later start owns the tools now.
         if (id !== drawingIdRef.current) {
@@ -232,8 +234,8 @@ export default function useDrawing({
           sheet: {
             src,
             frameSize,
-            index: BASE_FRAME,
-            count: frameCount(sheetImage, frameSize),
+            index: CHARACTER_STRIP_BASE_FRAME,
+            count: frameCount(sheetImage.naturalWidth, frameSize),
           },
         });
         return;

@@ -1,14 +1,15 @@
-// A character set's strip, frame by frame: what each frame is, cutting one
-// out to draw on, and putting the drawn frame back.
+// A character set is stored as one image: a strip of five frames side by
+// side. This module names the frames, cuts one out to draw on, and puts
+// the drawn frame back.
 
 import {toImage} from '@cdo/apps/imageUtils';
-
 import {
   CHARACTER_STRIP_BASE_FRAME,
   CHARACTER_STRIP_FRAME_COUNT,
   drawStripCell,
+  FrameSize,
   stripCellOrigin,
-} from '../../characterAnimations';
+} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
 /** What each frame of the strip shows, in strip order (see
     CHARACTER_STRIP_POSES). */
@@ -20,25 +21,14 @@ export const FRAME_LABELS: readonly string[] = [
   'Jump down',
 ];
 
-/** The frame a set is drawn from, and so the one editing opens on. */
-export const BASE_FRAME = CHARACTER_STRIP_BASE_FRAME;
-/** The frames as the row shows them: the standing frame first, since it is
-    the one the set was drawn from and the one editing opens on, then the
-    strip's order. */
-export const FRAME_ROW_ORDER: readonly number[] = [1, 0, 2, 3, 4];
-
-export interface FrameSize {
-  x: number;
-  y: number;
-}
-
-function cellOrigin(
-  image: HTMLImageElement,
-  frameSize: FrameSize,
-  index: number
-): {x: number; y: number} {
-  return stripCellOrigin(image.naturalWidth, frameSize, index);
-}
+/** The frames as the row shows them: the standing frame first, then the
+    rest in strip order. */
+export const FRAME_ROW_ORDER: readonly number[] = [
+  CHARACTER_STRIP_BASE_FRAME,
+  ...Array.from({length: CHARACTER_STRIP_FRAME_COUNT}, (_, i) => i).filter(
+    i => i !== CHARACTER_STRIP_BASE_FRAME
+  ),
+];
 
 /** One frame of the strip as a PNG data URI. */
 export async function cutFrame(
@@ -70,21 +60,18 @@ export async function replaceFrame(
     throw new Error('No canvas context');
   }
   ctx.drawImage(sheet, 0, 0);
-  const {x, y} = cellOrigin(sheet, frameSize, index);
+  const {x, y} = stripCellOrigin(sheet.naturalWidth, frameSize, index);
   ctx.clearRect(x, y, frameSize.x, frameSize.y);
   ctx.imageSmoothingEnabled = false;
   ctx.drawImage(frame, x, y, frameSize.x, frameSize.y);
   return canvas.toDataURL('image/png');
 }
 
-/** How many frames a strip of this size holds, at most the set's five. */
-export function frameCount(
-  sheet: {naturalWidth: number} | {width: number},
-  frameSize: FrameSize
-): number {
-  const width = 'naturalWidth' in sheet ? sheet.naturalWidth : sheet.width;
+/** How many frames a strip `imageWidth` wide holds, at most the set's
+    five. */
+export function frameCount(imageWidth: number, frameSize: FrameSize): number {
   return Math.min(
     CHARACTER_STRIP_FRAME_COUNT,
-    Math.max(1, Math.floor(width / frameSize.x))
+    Math.max(1, Math.floor(imageWidth / frameSize.x))
   );
 }

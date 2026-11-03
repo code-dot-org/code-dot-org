@@ -3,6 +3,11 @@ import React from 'react';
 
 import FrameRow from '@cdo/apps/p5lab/spritelab/lab2/views/images/FrameRow';
 
+// The tiles' pictures never arrive: the row is tested for its buttons.
+jest.mock('@cdo/apps/imageUtils', () => ({
+  toImage: () => new Promise(() => undefined),
+}));
+
 describe('FrameRow', () => {
   it('names each frame for its pose, marks the one being drawn, and opens another on click', () => {
     const onSelect = jest.fn();

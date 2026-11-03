@@ -144,8 +144,14 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
   };
   return {__esModule: true, default: PixelEditorStub};
 });
+// A real image element, since the frame row draws it onto a canvas.
 jest.mock('@cdo/apps/imageUtils', () => ({
-  toImage: async () => ({naturalWidth: 320, naturalHeight: 64}),
+  toImage: async () => {
+    const image = document.createElement('img');
+    Object.defineProperty(image, 'naturalWidth', {value: 320});
+    Object.defineProperty(image, 'naturalHeight', {value: 64});
+    return image;
+  },
 }));
 
 let made = 0;
@@ -165,10 +171,6 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/frames', () => ({
   replaceFrame: (...args: unknown[]) =>
     replaceFrame(...(args as [string, unknown, number, string])),
 }));
-jest.mock('@cdo/apps/imageUtils', () => ({
-  toImage: async () => ({naturalWidth: 320, naturalHeight: 64}),
-}));
-
 const propsByKey: Record<string, Record<string, unknown>> = {};
 const animationList = () => ({
   orderedKeys: Object.keys(propsByKey),
