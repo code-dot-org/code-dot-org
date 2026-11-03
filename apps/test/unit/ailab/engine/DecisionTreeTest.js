@@ -6,7 +6,6 @@ import I18n from '@cdo/apps/ailab/engine/i18n';
 import {
   playPredictionStep,
   setPredictionPlaying,
-  setSelectedCSV,
   setTestData,
 } from '@cdo/apps/ailab/engine/redux';
 import train from '@cdo/apps/ailab/engine/train';
@@ -27,12 +26,9 @@ function predictSnake({store, project, trainedModel}) {
   });
 }
 
-function renderTrainedTree(props = {}, csvfile = undefined) {
+function renderTrainedTree(props = {}) {
   I18n.initI18n();
   const store = levelStore({trainer: 'decisionTree'});
-  if (csvfile) {
-    store.dispatch(setSelectedCSV(csvfile));
-  }
   const project = levelProject();
   const trainingRun = runTraining(store, project);
   renderWithProviders(createElement(DecisionTree, props), {
@@ -498,23 +494,12 @@ describe('DecisionTree', () => {
 });
 
 describe('DecisionTree image menu', () => {
-  const saveImageToBackpack = jest.fn();
-  const backpackOption = () =>
-    screen.queryByRole('button', {name: 'Save to Backpack'});
-
   afterEach(() => I18n.reset());
 
-  it('offers the Backpack for a curated dataset', () => {
-    renderTrainedTree({saveImageToBackpack});
-    expect(backpackOption()).not.toBeNull();
-  });
-
-  it('keeps an uploaded dataset out of the Backpack', () => {
-    renderTrainedTree(
-      {saveImageToBackpack},
-      new File(['animal,legs'], 'animals.csv')
-    );
-    expect(backpackOption()).toBeNull();
-    expect(screen.getByRole('button', {name: 'Save to device'})).toBeVisible();
+  it('offers the Backpack when the host can save there', () => {
+    renderTrainedTree({saveImageToBackpack: jest.fn()});
+    expect(
+      screen.queryByRole('button', {name: 'Save to Backpack'})
+    ).not.toBeNull();
   });
 });

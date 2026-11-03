@@ -15,10 +15,7 @@ import React, {
 
 import {RIGHT_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
-import {
-  getUploadedFileName,
-  isUserUploadedDataset,
-} from '../helpers/datasetDetails';
+import {getUploadedFileName} from '../helpers/datasetDetails';
 import {
   DISPLAY_TREE_ROOT_ID,
   type DisplayTreeNode,
@@ -198,8 +195,6 @@ const DecisionTree = ({overlay, saveImageToBackpack}: DecisionTreeProps) => {
   const imageName = useAppSelector(state =>
     treeImageName(getDatasetId(state) ?? getUploadedFileName(state))
   );
-  // Uploaded text is unmoderated, and Backpack files can be shared in other projects.
-  const isUserUploaded = useAppSelector(isUserUploadedDataset);
   const layout = useMemo(
     () =>
       tree
@@ -322,7 +317,7 @@ const DecisionTree = ({overlay, saveImageToBackpack}: DecisionTreeProps) => {
             <SaveTreeImageMenu
               treeRef={treeRef}
               baseName={imageName}
-              saveToBackpack={isUserUploaded ? undefined : saveImageToBackpack}
+              saveToBackpack={saveImageToBackpack}
               tabbable={entered}
             />
           }
