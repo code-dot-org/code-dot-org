@@ -118,11 +118,12 @@
   // The vertical margin is the room between the sentence's lines.
   margin: 6px 2px;
   padding: 4px 26px 4px 6px;
-  border: 1px solid var(--borders-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
   border-radius: 999px;
   font-weight: 600;
   line-height: 1.4;
-  // The page's ground and text, whatever the slot: no colors of its own.
+  // The page's background and text colors for every slot; a chip carries
+  // no slot-specific color.
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   vertical-align: middle;
@@ -182,14 +183,14 @@ button.chipWord {
   padding-right: 14px;
 }
 
-// Where the word from the set on show would land.
-// The blank: a dashed white outline over a lighter wash of the panel.
+// The empty slot where the next chosen word will go: a dashed white outline
+// over a translucent white wash.
 .placeholder {
   min-width: 80px;
   min-height: 1.5em;
   padding-right: 14px;
   background: var(--neutral-white-alpha-20);
-  border: 2px dashed var(--neutral-base-white);
+  border: 2px dashed var(--border-neutral-white-fixed);
   box-shadow: none;
   opacity: 0.9;
   animation: slot-pulse 1.6s ease-in-out infinite;
@@ -212,7 +213,7 @@ button.chipWord {
 .dropTarget {
   opacity: 1;
   transform: scale(1.08);
-  box-shadow: 0 0 0 3px var(--borders-neutral-strong);
+  box-shadow: 0 0 0 3px var(--border-neutral-secondary);
 }
 
 .placeholder.dropTarget {
@@ -284,9 +285,9 @@ button.chipWord {
   }
 }
 
-// Every open set at once, one cluster of words per set down the pane; the
-// set the sentence's blank stands at is marked.
-// The clusters stack with a rule between each pair.
+// Every open set at once, one cluster of words per set down the pane, with
+// a rule between each pair; the set the sentence's blank stands at is
+// marked.
 .clusters {
   display: flex;
   flex-direction: column;
@@ -307,8 +308,8 @@ button.chipWord {
   margin: 0;
 }
 
-// All sets share one grid cell, so the stack is as tall as the tallest set.
-// The set on show scrolls here while the arrows at the edges stay put.
+// All sets share one grid cell, so the stack is as tall as the tallest set;
+// the set on show scrolls here while the arrows at the edges stay put.
 .sets {
   flex: 1 1 auto;
   min-width: 0;
@@ -395,9 +396,8 @@ button.chipWord {
   // Its own stacking context: the browser paints a drag ghost from the
   // dragged element's nearest stacking context, clipped to the element's
   // box, so without this the ghost carries the word box's white corners.
-  // The hover lift's transform used to do this by accident.
   isolation: isolate;
-  border: 1px solid var(--borders-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
   border-radius: 999px;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
@@ -416,7 +416,7 @@ button.chipWord {
 
   &:hover:not(:disabled, .chosen) {
     background: var(--background-neutral-secondary);
-    border-color: var(--borders-neutral-strong);
+    border-color: var(--border-neutral-secondary);
   }
 
   &:disabled {

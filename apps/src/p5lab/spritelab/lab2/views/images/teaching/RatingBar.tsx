@@ -125,7 +125,7 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
         {onDismiss && (
           <MuiIconButton
             aria-label="Dismiss"
-            className={styles.thumb}
+            className={styles.dismiss}
             disabled={disabled}
             onClick={onDismiss}
           >

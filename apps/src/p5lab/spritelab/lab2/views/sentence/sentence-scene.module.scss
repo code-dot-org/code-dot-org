@@ -16,7 +16,7 @@
   object-fit: contain;
 }
 
-// The making of a picture, filling the frame.
+// The in-progress state: a centered spinner filling the frame.
 .generating {
   display: flex;
   flex-direction: column;
@@ -28,7 +28,6 @@
   box-sizing: border-box;
 }
 
-// The spinner shown while the picture is made.
 .spinner {
   font-size: 48px;
   color: var(--text-neutral-quaternary);

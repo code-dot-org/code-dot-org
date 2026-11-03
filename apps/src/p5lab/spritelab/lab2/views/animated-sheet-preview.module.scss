@@ -1,6 +1,6 @@
-// A character set plays one pose at a time at full size (the canvas takes
-// its host's img/canvas sizing), named in a pill in the host's top left
-// corner; the host supplies the positioned box.
+// The preview canvas fills its host's box (absolute; the host must be
+// positioned) and inherits the host's img/canvas sizing rules. The current
+// pose's name sits in a small pill at the top left.
 .sheetPreview {
   display: flex;
   align-items: center;
