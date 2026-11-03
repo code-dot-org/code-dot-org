@@ -1,37 +1,29 @@
-// The chosen image's pixels as the model should see them: a data URI at
-// the model's size, one frame of a character set.
+// Reads the chosen image into the form the model takes as an input image: a
+// PNG data URI at the model's output size; for a character set, only its
+// standing frame.
 
-import {toImage} from '@cdo/apps/imageUtils';
+import {blobToDataURI, toImage} from '@cdo/apps/imageUtils';
+import {MODEL_OUTPUT_PX} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/modelHelpers';
+import {
+  drawStripCell,
+  FrameSize,
+  standingFrameIndex,
+} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {
   NATIVE_PIXEL_GRID,
   upscaleImageNearest,
 } from '@cdo/apps/pixelEditor/pixelArt';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {MODEL_OUTPUT_PX} from '../../ai/images/modelHelpers';
-import {AnimationPoses, drawStripCell} from '../../characterAnimations';
-
 import {ImageProps} from './projectImages';
 
 const readAsDataURL = (blob: Blob) =>
-  new Promise<string>((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result as string);
-    reader.onerror = reject;
-    reader.readAsDataURL(blob);
-  });
-
-/** Where a strip's standing frame sits: the base picture the set was drawn
-    from, the last frame of the stand range. */
-function standingFrameIndex(poses?: AnimationPoses): number {
-  const stand = poses?.['stand-right'];
-  return stand ? stand.start + stand.count - 1 : 0;
-}
+  new Promise<string>(resolve => blobToDataURI(blob, resolve));
 
 async function cropStandingFrame(
   dataURI: string,
-  frameSize: {x: number; y: number},
-  poses?: AnimationPoses
+  frameSize: FrameSize,
+  poses: NonNullable<ImageProps['poses']>
 ): Promise<string> {
   const img = await toImage(dataURI);
   return drawStripCell(img, frameSize, standingFrameIndex(poses)).toDataURL(
@@ -45,6 +37,8 @@ export async function currentPixels(props: ImageProps): Promise<string | null> {
   let dataURI = props.dataURI ?? null;
   try {
     if (dataURI?.startsWith('blob:')) {
+      // A blob URL is read by the browser itself; HttpClient is for the
+      // server.
       dataURI = await readAsDataURL(await (await fetch(dataURI)).blob());
     } else if (!dataURI && props.sourceUrl) {
       dataURI = await readAsDataURL(
@@ -57,8 +51,9 @@ export async function currentPixels(props: ImageProps): Promise<string | null> {
     if (props.poses && props.frameSize) {
       dataURI = await cropStandingFrame(dataURI, props.frameSize, props.poses);
     }
-    // Pixel art is stored at its logical size; the model drew it at its
-    // own, and sees it there again.
+    // Pixel art is stored at one image pixel per art pixel. The model works
+    // at MODEL_OUTPUT_PX, so the picture is scaled back up, nearest
+    // neighbor, to that size before it is sent.
     if (props.pixelGridSize === NATIVE_PIXEL_GRID) {
       dataURI = (
         await upscaleImageNearest(dataURI, (width, height) =>
