@@ -2,12 +2,13 @@
 import {DropdownProviderWrapper} from '@code-dot-org/component-library/common/contexts';
 import CheckboxDropdown from '@code-dot-org/component-library/dropdown/checkboxDropdown';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
-import {Button, Typography} from '@mui/material';
+import {Button, CircularProgress, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {type ChangeEvent} from 'react';
+import React, {type ChangeEvent, useEffect, useState} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
+import {afterNextPaint} from '../helpers/utils';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {readyToTrain, setTrainingModalStep} from '../redux';
@@ -38,6 +39,19 @@ const TrainPanel = () => {
   const canTrain = readyToTrain(project);
   const hasTrainingResult = hasCurrentTrainingResult(project);
   const {beginRun} = useTrainingRun();
+  const [isStartingTraining, setIsStartingTraining] = useState(false);
+
+  // Training blocks the page, so let the button's spinner paint first.
+  useEffect(() => {
+    if (!isStartingTraining) {
+      return;
+    }
+    return afterNextPaint(() => {
+      beginRun();
+      dispatch(setTrainingModalStep('training'));
+      setIsStartingTraining(false);
+    });
+  }, [isStartingTraining, beginRun, dispatch]);
 
   const columnName = (column: string) =>
     getLocalizedColumnName(datasetId, column);
@@ -78,11 +92,6 @@ const TrainPanel = () => {
     setSelectedFeatures([]);
   };
 
-  const onTrain = () => {
-    beginRun();
-    dispatch(setTrainingModalStep('training'));
-  };
-
   const featuresSummary =
     selectedFeatures.length > 0
       ? `${selectedFeatures.length} selected`
@@ -105,6 +114,7 @@ const TrainPanel = () => {
               />
               <SimpleDropdown
                 name="ailab-label"
+                color="gray"
                 labelText="Predict"
                 isLabelVisible={false}
                 dropdownTextThickness="thin"
@@ -124,6 +134,7 @@ const TrainPanel = () => {
               <DropdownProviderWrapper>
                 <CheckboxDropdown
                   name="ailab-features"
+                  color="gray"
                   labelText={featuresSummary}
                   aria-label={`Using, ${featuresSummary}`}
                   labelType="thin"
@@ -155,9 +166,19 @@ const TrainPanel = () => {
                 size="small"
                 fullWidth
                 disabled={!canTrain}
-                onClick={onTrain}
+                loading={isStartingTraining}
+                loadingPosition="start"
+                loadingIndicator={
+                  <CircularProgress
+                    color="inherit"
+                    size={16}
+                    disableShrink
+                    aria-label="Training"
+                  />
+                }
+                onClick={() => setIsStartingTraining(true)}
               >
-                Train model
+                {isStartingTraining ? 'Training…' : 'Train model'}
               </Button>
             </div>
           )}

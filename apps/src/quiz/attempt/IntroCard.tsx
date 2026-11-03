@@ -4,6 +4,8 @@ import React from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
+import QuizMetadataList from '../QuizMetadataList';
+
 import AttemptCard from './AttemptCard';
 
 import styles from './intro-card.module.scss';
@@ -19,9 +21,6 @@ export interface IntroCardProps {
   headingRef?: React.Ref<HTMLHeadingElement>;
 }
 
-const pluralize = (count: number, noun: string) =>
-  `${count} ${noun}${count === 1 ? '' : 's'}`;
-
 // Shown before an attempt begins - what the quiz is and what to expect.
 const IntroCard: React.FunctionComponent<IntroCardProps> = ({
   title,
@@ -32,17 +31,6 @@ const IntroCard: React.FunctionComponent<IntroCardProps> = ({
   onBegin,
   headingRef,
 }) => {
-  const metadata = [
-    {icon: 'circle-question', text: pluralize(questionCount, 'question')},
-    ...(timeLimitMinutes
-      ? [{icon: 'clock', text: pluralize(timeLimitMinutes, 'minute')}]
-      : []),
-    {
-      icon: 'bullseye-arrow',
-      text: allowMultipleAttempts ? 'Unlimited attempts' : '1 attempt',
-    },
-  ];
-
   return (
     <AttemptCard
       label="Before you begin"
@@ -61,16 +49,11 @@ const IntroCard: React.FunctionComponent<IntroCardProps> = ({
       }
       footer={
         <>
-          <ul className={styles.metadata}>
-            {metadata.map(({icon, text}) => (
-              <li key={icon} className={styles.metadataItem}>
-                <FontAwesomeV6Icon iconName={icon} />
-                <Typography variant="body3" component="span">
-                  {text}
-                </Typography>
-              </li>
-            ))}
-          </ul>
+          <QuizMetadataList
+            questionCount={questionCount}
+            timeLimitMinutes={timeLimitMinutes}
+            allowMultipleAttempts={allowMultipleAttempts}
+          />
           <MuiButton
             variant="contained"
             color="primary"

@@ -1,9 +1,14 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button} from '@mui/material';
 import classNames from 'classnames';
-import React, {type CSSProperties, type ReactNode, useEffect} from 'react';
+import React, {
+  type CSSProperties,
+  type ReactNode,
+  useEffect,
+  useLayoutEffect,
+} from 'react';
 
-import {colors} from './constants';
+import {colors, RIGHT_PANEL_WIDTH} from './constants';
 import {reportPanelView} from './helpers/metrics';
 import {
   isSaveComplete,
@@ -201,7 +206,10 @@ interface ContainerRightProps {
 
 const ContainerRight = ({children}: ContainerRightProps) => {
   return (
-    <div className={classNames(styles.column, styles.rightColumn)}>
+    <div
+      className={classNames(styles.column, styles.rightColumn)}
+      style={{width: RIGHT_PANEL_WIDTH}}
+    >
       {children}
     </div>
   );
@@ -232,6 +240,8 @@ export interface AppProps {
   onStartOver?: () => void;
   /** Optional callback invoked with the accuracy of each newly trained model. */
   onTrained?: (accuracy: number) => void;
+  /** Optional callback invoked with whether the lab is loading its dataset, a saved project, or a pretrained model. */
+  onLoadingChange?: (isLoading: boolean) => void;
 }
 
 // getPanelButtons builds a fresh {prev, next} each call (and reads I18n for
@@ -246,6 +256,7 @@ const App = ({
   setInstructionsKey,
   onStartOver,
   onTrained,
+  onLoadingChange,
 }: AppProps) => {
   const dispatch = useAppDispatch();
   const {project, isProjectLoading} = useProject();
@@ -266,7 +277,7 @@ const App = ({
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   const restoringModel = useRestoreModel();
-  usePretrainOnLoad(restoringModel);
+  const pretraining = usePretrainOnLoad(restoringModel);
 
   const datasetPending = useAppSelector(
     state =>
@@ -285,6 +296,11 @@ const App = ({
       state.currentPanel !== 'selectDataset' &&
       state.invalidData === 'loadFailed'
   );
+
+  // A layout effect, so the consumer's overlay is up before the browser paints.
+  useLayoutEffect(() => {
+    onLoadingChange?.(loading || pretraining);
+  }, [onLoadingChange, loading, pretraining]);
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {

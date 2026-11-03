@@ -3,14 +3,20 @@ import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {ActivePrompt} from '../../redux/spriteLab2Redux';
+import {isPointerClick} from '../blurAfterPointerClick';
 
 import styles from './prompt-bar.module.scss';
 
 const ANSWER_ID = 'spritelab2-prompt-answer';
+const QUESTION_ID = 'spritelab2-prompt-question';
 
 interface PromptBarProps {
   prompt: ActivePrompt | null;
-  onAnswer: (variableName: string, value: string) => void;
+  onAnswer: (
+    variableName: string,
+    value: string,
+    fromKeyboard: boolean
+  ) => void;
   disabled?: boolean;
 }
 
@@ -21,6 +27,7 @@ const PromptBar: React.FunctionComponent<PromptBarProps> = ({
 }) => {
   const [answer, setAnswer] = useState('');
   const lastPrompt = useRef(prompt);
+  const sentByPointer = useRef(false);
 
   // Clear the answer if the prompt changes to a different question or variable.
   useEffect(() => {
@@ -42,7 +49,7 @@ const PromptBar: React.FunctionComponent<PromptBarProps> = ({
     if (!prompt || disabled) {
       return;
     }
-    onAnswer(prompt.variableName, answer);
+    onAnswer(prompt.variableName, answer, !sentByPointer.current);
     setAnswer('');
   };
 
@@ -53,7 +60,37 @@ const PromptBar: React.FunctionComponent<PromptBarProps> = ({
       <span className={styles.srOnly} aria-live="polite">
         {prompt?.promptText}
       </span>
-      {prompt && (
+      {prompt?.choices && (
+        <div
+          role="group"
+          aria-labelledby={QUESTION_ID}
+          className={styles.promptBar}
+        >
+          <span id={QUESTION_ID} className={styles.question}>
+            {prompt.promptText}
+          </span>
+          <div className={styles.choices}>
+            {prompt.choices.map((choice, index) => (
+              <MuiButton
+                key={`${index}-${choice}`}
+                type="button"
+                variant="contained"
+                color="primary"
+                size="small"
+                className={styles.choiceButton}
+                title={choice}
+                disabled={disabled}
+                onClick={event =>
+                  onAnswer(prompt.variableName, choice, !isPointerClick(event))
+                }
+              >
+                <span className={styles.choiceLabel}>{choice}</span>
+              </MuiButton>
+            ))}
+          </div>
+        </div>
+      )}
+      {prompt && !prompt.choices && (
         <form className={styles.promptBar} onSubmit={handleSubmit}>
           {/* Use a manual label here so it doesn't get greyed out while disabled. */}
           <label htmlFor={ANSWER_ID} className={styles.question}>
@@ -76,6 +113,10 @@ const PromptBar: React.FunctionComponent<PromptBarProps> = ({
             size="small"
             className={styles.submitButton}
             disabled={disabled}
+            // Enter in the field submits through a click here too, with no pointer.
+            onClick={event => {
+              sentByPointer.current = isPointerClick(event);
+            }}
           >
             Send
           </MuiButton>

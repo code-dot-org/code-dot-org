@@ -1,9 +1,13 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, IconButton, Tooltip, Typography} from '@mui/material';
+import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
+import UnsavedBadge from './UnsavedBadge';
+
 import styles from './builder-card.module.scss';
+import rowStyles from './outline-row.module.scss';
 
 export interface BuilderCardProps {
   iconName: string;
@@ -22,6 +26,9 @@ export interface BuilderCardProps {
   onRemove: () => void;
   // When set, Remove looks disabled but stays focusable to show this tooltip.
   cannotRemoveReason?: string;
+  // A question inside a page: tighter corners and a clamped name.
+  nested?: boolean;
+  neverSaved?: boolean;
   children: React.ReactNode;
 }
 
@@ -40,6 +47,8 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
   onDiscard,
   onRemove,
   cannotRemoveReason,
+  nested = false,
+  neverSaved = false,
   children,
 }) => {
   const isBusy = isSaving || isRemoving;
@@ -58,47 +67,56 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
   }, [isExpanded]);
 
   return (
-    <div className={styles.card}>
-      <div className={styles.header}>
-        <div className={styles.headerPreview}>
-          <FontAwesomeV6Icon iconName={iconName} className={styles.typeIcon} />
-          <Typography variant="strong" component="span">
-            {name}
-          </Typography>
-          <Typography
-            variant="body3"
-            component="span"
-            className={styles.preview}
-          >
-            {preview}
-          </Typography>
+    <div className={classNames(styles.card, nested && styles.cardNested)}>
+      <div className={classNames(rowStyles.header, styles.header)}>
+        <div className={styles.leading}>
+          <span className={styles.typeIcon} aria-hidden>
+            <FontAwesomeV6Icon iconName={iconName} />
+          </span>
+          <div className={rowStyles.summary}>
+            <Typography
+              variant="body3"
+              component="span"
+              className={classNames(
+                rowStyles.title,
+                nested && styles.nameClamp
+              )}
+            >
+              {name}
+            </Typography>
+            {preview ? (
+              <>
+                <span className={rowStyles.dot} aria-hidden />
+                <Typography
+                  variant="body3"
+                  component="span"
+                  className={rowStyles.detail}
+                >
+                  {preview}
+                </Typography>
+              </>
+            ) : null}
+          </div>
         </div>
-        {isDirty && (
-          <Tooltip title="Unsaved changes">
-            <div className={styles.unsavedBadge} aria-label="Unsaved changes">
-              <FontAwesomeV6Icon
-                iconName="triangle-exclamation"
-                iconStyle="solid"
-              />
-            </div>
-          </Tooltip>
-        )}
-        <IconButton
-          ref={toggleButtonRef}
-          aria-label={
-            isExpanded ? `Collapse ${itemLabel}` : `Edit ${itemLabel}`
-          }
-          aria-expanded={isExpanded}
-          size="extraSmall"
-          variant="outlined"
-          color="secondary"
-          type="button"
-          onClick={() => onExpandedChange(!isExpanded)}
-        >
-          <FontAwesomeV6Icon
-            iconName={isExpanded ? 'chevron-up' : 'pen-to-square'}
-          />
-        </IconButton>
+        <div className={rowStyles.actions}>
+          {isDirty && <UnsavedBadge label="Unsaved changes" />}
+          <IconButton
+            ref={toggleButtonRef}
+            aria-label={
+              isExpanded ? `Collapse ${itemLabel}` : `Edit ${itemLabel}`
+            }
+            aria-expanded={isExpanded}
+            size="extraSmall"
+            variant="outlined"
+            color="tertiary"
+            type="button"
+            onClick={() => onExpandedChange(!isExpanded)}
+          >
+            <FontAwesomeV6Icon
+              iconName={isExpanded ? 'chevron-up' : 'pen-to-square'}
+            />
+          </IconButton>
+        </div>
       </div>
 
       {isExpanded && (
@@ -115,31 +133,34 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
           )}
 
           <div className={styles.footer}>
-            <Tooltip describeChild title={cannotRemoveReason ?? ''}>
-              <Button
-                variant="outlined"
-                color="error"
-                size="extraSmall"
-                type="button"
-                className={styles.ariaDisabled}
-                disabled={isBusy}
-                aria-disabled={!!cannotRemoveReason}
-                loading={isRemoving}
-                onClick={() => !cannotRemoveReason && onRemove()}
-              >
-                Remove from quiz
-              </Button>
-            </Tooltip>
+            {!neverSaved && (
+              <Tooltip describeChild title={cannotRemoveReason ?? ''}>
+                <Button
+                  variant="outlined"
+                  color="error"
+                  size="extraSmall"
+                  type="button"
+                  className={styles.ariaDisabled}
+                  disabled={isBusy}
+                  aria-disabled={!!cannotRemoveReason}
+                  loading={isRemoving}
+                  onClick={() => !cannotRemoveReason && onRemove()}
+                >
+                  Remove from quiz
+                </Button>
+              </Tooltip>
+            )}
             <div className={styles.footerActions}>
               <Button
                 variant="outlined"
-                color="secondary"
+                color={neverSaved ? 'error' : 'secondary'}
                 size="extraSmall"
                 type="button"
                 disabled={isBusy || !isDirty}
-                onClick={onDiscard}
+                loading={neverSaved ? isRemoving : false}
+                onClick={neverSaved ? onRemove : onDiscard}
               >
-                Discard changes
+                {neverSaved ? 'Discard' : 'Discard changes'}
               </Button>
               <Button
                 variant="contained"
@@ -150,7 +171,9 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
                 loading={isSaving}
                 onClick={onSave}
                 startIcon={
-                  <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
+                  isSaving ? undefined : (
+                    <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
+                  )
                 }
               >
                 Save

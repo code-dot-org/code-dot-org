@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284593-d2d5a7fbcbea",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the operations with their descriptions.",
+  "solution": [
+    {
+      "option": "+",
+      "correct": "Addition"
+    },
+    {
+      "option": "-",
+      "correct": "Subtraction"
+    },
+    {
+      "option": "*",
+      "correct": "Multiplication"
+    },
+    {
+      "option": "/",
+      "correct": "Division"
+    }
+  ],
+  "objective_keys": [
+    "1f3abedc-7143-45a9-b7ca-a2fc93209950"
+  ]
+}

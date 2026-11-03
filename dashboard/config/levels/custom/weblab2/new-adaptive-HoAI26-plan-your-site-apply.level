@@ -1,0 +1,17 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T03:18:04.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "long_instructions": "TODOs:\r\n- Recall the idea for your site from the planning you did in Level 6.\r\n- Formulate a prompt describing your planned website in your own words.\r\n- Include details about what your site will cover and what it helps people do.\r\n- Submit your prompt to the AI to generate the first version of your site.",
+    "project_template_level_name": "new-adaptive-HoAI26-template-main-project",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMpKrVKRLJ+AVTeI1j0V\n3gboT0vwlbHFIDeZ/omeL1MYgtLhl4z2fd5t9vY+36TKG87zq6z0NMn26FcA\nWkPwcWWtI8zBHc2eoGguvCVLvh8FjXk6uiYCk/9v0mR9qMCi2wa2o1qAPFlr\n6lMj6YlQjgrABrfXXjyTYNxf/pdo8i7EdbqweoZwtXNy/2Ct4CwIrnNRpP8b\nAW/E5DuyKrcMEO8IYZBKyaNIvRBmfeCQbh8O7MSpNiRC8Kpub9fgcj/+A/qJ\nAHSVGA6YM0h9tmo9NvZqkLX4N2W9hehSqpb/LBPG0tZFEThiZHkly2i+hI6l\nRN57UGzH1tTJgszyFscV97KidFm57ckey+fs5aq9rp53ou/rXvGYfGRiiVX4\nSP3rC/Vp3KY9T0JCGG/mTkAyoy70c8PDF5uFm9AM34dMCJ5EBRg7lA9y6yyp\n+VjzGQ4bxPzeHLOevcIJTJy1SDF69hJi/JWwVVqi8ofhuLIt1u1wnfwLRZrA\nC21RTg7zROIYTjrDrz8P8dA33uCQz+ISG7psX+gssoXZBBGvAUFpA+vID78p\nez1l7WD7FwkS63nSASYFBcDVrBeiJja7kIBeav3RzLXwdbvPeLgHiyuLNRYq\nj+WSPc5T5C7A2G3zWfw/ohtuTgt3SQjBjJrsCdeDGbhJvC+iOLKcNXQEES/l\nclc0GHSp9ZxoHTUTSQVNxv48KXwZ3zIKXQxNjyKzks+Lu4jpCOmr9hBP5KI1\n2qCxU/4Uf126bSNoo58X9DR3qxdpXNocbcKaa8nipAfUbtlG4y5AeMArjkpx\nHItcwveKwTcWHdjAmZ89lPNkvWsSGWo3KV1XM0h63dmk76vHh5I07AGiulAX\nso11ofZX70shdrf3ewTMpJ2Fav+SLeYsoaFMiis3oxzekBHLQNgFbIAYLG5K\nY8xSPdLFL8kec7g9aLJpN2jbliPL7SNOP9w0t3naO8xAjIEezvse7hhoSK4/\nD0yk8ngqK+qF0GZa4mADi3SjtEZLcSt9Ex3uL+w5OFzhp2RkF0wNy8ylP4DM\nXgrSRM78gnYXfuqL+PiQPJ0VKathL4TI0D7ROtNbOFE9I4uhC9mJF4K4sF+m\nRstWn7B7w1Z7HJq0lGqaidRkEK++NrtljG/9RcgM09M8tcELUV5BgUOCyUX1\nTo+skP312Y49PXjAnvdesC3pGKr7xT0i1UjjC5F+26jBa1oWAevdcPt1Ju4t\nGpDtg9W6xHVLPnhxr2ZSlOmNNHM7FZklj3L6IDYnyRxaplvBapymU9McyXnM\n/OQVbFErZ4xLDEsxYbogIpQ69NCW1d7iBbObTXaaaHvEuVkexaNQ1qNphxJD\nUzKNLi/FheX5eInCrfnNScW60I1ZbJYcvm7ZDytUXwuNru8HMP8qTz9o6K7T\nLYwoaeStjPbN7A5OCaREI8qHATvUmasNJgYzc9eG7g7N8+hn4Z/FgsqKDmWM\nyLICV+ZBDAK6XUDwAQ7kkdXyB1CkTSWyZASelZvh+rHkzMSO0hRi8hRo87nJ\n0Sa5utyPawvozlw3emWjM0U5rHZK7QUTLYvUC/AVppMJxvOIWtkXV4r3cX1Q\nOaYESH6wPgGTz6aWzfB5rLZ/GyluuDZ8kT6/k7plzJ2xTpBMi2hE4fmBbaL9\n3hMP19F+Ax0Z4Kdu4T9yxiSy0ymwTBk0Boa5CfuiGHXkAOIX5wNbvQmig9pA\n3flgpj5kyRGVs5r9tG+HolTqIAxvf6Lckhdd4trB9Y0JVml+ybtv5L2Q54nl\nPlTt3UfYSQgLwEmMDDER6zR6Sq15crGOVOY/qyyOORzS4jmajGOzWvHy0vZ3\nvmVBjk5d5xbQcbzvBQtxAm9LD5zIzsWLPg44vZc=\n",
+    "generate_outline": "Write your first prompt. Describe the site you planned in your own words."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 03:18:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:18:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:18:12 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:18:12 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

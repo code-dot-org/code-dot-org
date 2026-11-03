@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-10-28T00:00:00.000Z",
+  "created_at": "2026-10-30T09:28:03.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -64,7 +64,7 @@
       "title": "**What are they doing?**",
       "items": [
         {
-          "text": "Drag **begins** onto the dotted outline and choose what they do.",
+          "text": "Drag **begins** onto the dotted outline and choose what the new character will do.",
           "check": {
             "kind": "block",
             "type": "spritelab2_beginsBehavior",
@@ -79,8 +79,36 @@
         }
       ]
     },
-    "long_instructions": "# What are they doing?\nDrag **begins** onto the dotted outline and choose what they do. Then click **Play** and watch them go.",
-    "header_label": "What are they doing?"
+    "long_instructions": "# What are they doing?\r\nA **behavior** tells a sprite what to do on its own.\r\n",
+    "header_label": "What are they doing?",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-01 18:33:06 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 18:33:20 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
+  <blocks/>
 </GamelabJr>

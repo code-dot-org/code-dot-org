@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894773-4005fe90d199",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are data visualization tools that can help decide which features to include when training a model? Select all that apply.",
+  "solution": [
+    {
+      "option": "Graphs",
+      "correct": true
+    },
+    {
+      "option": "Tables",
+      "correct": true
+    },
+    {
+      "option": "Text documents",
+      "correct": false
+    },
+    {
+      "option": "Charts",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "5d8f63b0-71fa-4623-b10e-85bb0b670371"
+  ]
+}

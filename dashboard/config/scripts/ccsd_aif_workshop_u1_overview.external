@@ -1,3 +1,39 @@
 name 'ccsd-aif-workshop-u1-overview'
-title 'title'
+title 'AI Foundations: Course Overview'
 description 'description here'
+
+markdown <<MARKDOWN
+<div style="background:#4C42CF;color:#fff;padding:26px 30px;border-radius:14px;">
+  <h1 style="margin:0 0 6px;color:#fff;">AI Foundations</h1>
+  <p style="margin:0 0 16px;font-size:1.15em;">A free, year-long high school course. Students learn how AI works, then build with it.</p>
+  <a href="https://studio.code.org/courses/ai-foundations-year1-2026" style="background:#fff;color:#1F1976;padding:10px 18px;border-radius:8px;font-weight:bold;text-decoration:none;">Open the full course →</a>
+</div>
+
+<h2 style="color:#1F1976;margin-top:28px;">Semester 1: Exploring AI &amp; CS</h2>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+  <div style="background:#E4E2F8;border-radius:10px;padding:14px;"><b style="color:#4C42CF;">UNIT 1</b><br><b>Problem Solving with AI</b><br>Learn how AI predicts text, then test its limits.</div>
+  <div style="background:#E4E2F8;border-radius:10px;padding:14px;"><b style="color:#4C42CF;">UNIT 2</b><br><b>AI and the Systems That Power It</b><br>See how hardware and software work together.</div>
+  <div style="background:#E4E2F8;border-radius:10px;padding:14px;"><b style="color:#4C42CF;">UNIT 3</b><br><b>The Fabric of the Internet and AI</b><br>Follow data across a network. Who gets left out?</div>
+  <div style="background:#E4E2F8;border-radius:10px;padding:14px;"><b style="color:#4C42CF;">UNIT 4</b><br><b>AI-Powered Threats and Defenses</b><br>Study phishing, encryption and privacy.</div>
+  <div style="background:#E4E2F8;border-radius:10px;padding:14px;"><b style="color:#4C42CF;">UNIT 5</b><br><b>Insights from Data and AI</b><br>Ask a data question and tell its story.</div>
+  <div style="background:#E4E2F8;border-radius:10px;padding:14px;"><b style="color:#4C42CF;">UNIT 6</b><br><b>AI-Generated Design</b><br>Design a multi-page web app.</div>
+</div>
+
+<h2 style="color:#1F1976;margin-top:28px;">Semester 2: Designing &amp; Building with AI</h2>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+  <div style="background:#D9ECFB;border-radius:10px;padding:14px;"><b style="color:#1F1976;">UNIT 7</b><br><b>AI and Algorithmic Decisions</b><br>Make the app respond with JavaScript.</div>
+  <div style="background:#D9ECFB;border-radius:10px;padding:14px;"><b style="color:#1F1976;">UNIT 8</b><br><b>Building Data-Driven Systems with AI</b><br>Run the app on real data.</div>
+  <div style="background:#D9ECFB;border-radius:10px;padding:14px;"><b style="color:#1F1976;">UNIT 9</b><br><b>Iterating with AI</b><br>Let users filter and search.</div>
+  <div style="background:#D9ECFB;border-radius:10px;padding:14px;"><b style="color:#1F1976;">UNIT 10</b><br><b>Designing Reliable Apps with AI and APIs</b><br>Pull in live data.</div>
+  <div style="background:#D9ECFB;border-radius:10px;padding:14px;"><b style="color:#1F1976;">UNIT 11</b><br><b>Web Apps with AI Capstone Project</b><br>Build an app of your own design.</div>
+</div>
+
+<h2 style="color:#1F1976;margin-top:28px;">Resources</h2>
+<div style="border-left:6px solid #4C42CF;background:#F6F5FC;padding:14px 18px;border-radius:6px;">
+  <p style="margin:0 0 8px;"><b>Free:</b> lesson plans, slides, activity guides and rubrics for every lesson.</p>
+  <p style="margin:0 0 8px;"><b>Answer keys and exemplars:</b> for verified teachers. <a href="https://form.jotform.com/240863841362155">Apply to get verified</a>, or attend our professional development.</p>
+    <p style="margin:0 0 8px;"><b>Self-paced professional learning:</b> <a href="https://studio.code.org/courses/teaching-ai-foundations-year1-2026">Teaching AI Foundations</a>, for teachers teaching the course.</p>
+  <p style="margin:0 0 8px;"><b>Your state:</b> see how it lines up at <a href="https://courseinfo.code.org/">courseinfo.code.org</a>.</p>
+
+</div>
+MARKDOWN

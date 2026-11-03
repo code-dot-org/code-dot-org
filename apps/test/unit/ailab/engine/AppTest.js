@@ -1,9 +1,11 @@
-import {act, screen} from '@testing-library/react';
+import {act, render, screen} from '@testing-library/react';
 import {createElement} from 'react';
+import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
 import App from '@cdo/apps/ailab/engine/App';
 import I18n from '@cdo/apps/ailab/engine/i18n';
+import {ProjectProvider} from '@cdo/apps/ailab/engine/ProjectContext';
 import rootReducer, {
   resetState,
   setCurrentPanel,
@@ -13,9 +15,10 @@ import rootReducer, {
   setSelectedCSV,
 } from '@cdo/apps/ailab/engine/redux';
 import {store as storeSingleton} from '@cdo/apps/ailab/engine/store';
+import {TrainingDataProvider} from '@cdo/apps/ailab/engine/TrainingDataContext';
 
 import {levelProject, levelStore, seedLevel} from './levelStore';
-import {renderWithProviders} from './renderWithProviders';
+import {renderWithProviders, withTheme} from './renderWithProviders';
 
 function renderApp(mode) {
   const store = levelStore(mode);
@@ -75,7 +78,13 @@ describe('a level that hides the testing view', () => {
 });
 
 describe('a pretrained level', () => {
-  beforeEach(() => I18n.initI18n());
+  beforeEach(() => {
+    I18n.initI18n();
+    jest.useFakeTimers();
+  });
+  afterEach(() => jest.useRealTimers());
+
+  const paintFrame = () => act(() => jest.runAllTimers());
 
   const PRETRAINED = {
     trainer: 'decisionTree',
@@ -89,16 +98,19 @@ describe('a pretrained level', () => {
     storeSingleton.dispatch(resetState());
     seedLevel(storeSingleton, mode);
     const onTrained = jest.fn();
+    const onLoadingChange = jest.fn();
     const {trainingData} = renderWithProviders(
       createElement(App, {
         onContinue: () => {},
         saveTrainedModel: () => {},
         onStartOver: () => {},
         onTrained,
+        onLoadingChange,
       }),
       {store: storeSingleton, project: levelProject()}
     );
-    return {onTrained, trainingData};
+    paintFrame();
+    return {onTrained, onLoadingChange, trainingData};
   }
 
   test('trains once on load, without the training modal', () => {
@@ -124,6 +136,67 @@ describe('a pretrained level', () => {
         setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']})
       );
     });
+    paintFrame();
+    expect(onTrained.mock.calls).toEqual([[100]]);
+  });
+
+  test('reports it is loading until the model is trained', () => {
+    const {onLoadingChange, trainingData} = renderLevel({
+      trainer: 'decisionTree',
+    });
+
+    act(() => {
+      storeSingleton.dispatch(resetState());
+      seedLevel(storeSingleton, PRETRAINED);
+    });
+    expect(onLoadingChange).toHaveBeenLastCalledWith(true);
+    onLoadingChange.mockClear();
+
+    act(() => {
+      storeSingleton.dispatch(
+        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']})
+      );
+    });
+    expect(onLoadingChange).not.toHaveBeenCalledWith(false);
+    expect(trainingData().trainedModel).toBeUndefined();
+
+    paintFrame();
+    expect(onLoadingChange).toHaveBeenLastCalledWith(false);
+    expect(trainingData().trainedModel).toBeDefined();
+  });
+
+  test('reports it has loaded when its saved label is a locked feature', () => {
+    const {onLoadingChange, trainingData} = renderLevel({
+      trainer: 'decisionTree',
+    });
+
+    act(() => {
+      storeSingleton.dispatch(
+        setMode({trainer: 'decisionTree', pretrained: true, lockFeatures: true})
+      );
+      storeSingleton.dispatch(
+        setPresetColumns({labelColumn: 'legs', selectedFeatures: ['animal']})
+      );
+    });
+    paintFrame();
+    expect(onLoadingChange).toHaveBeenLastCalledWith(false);
+    expect(trainingData().trainedModel).toBeUndefined();
+  });
+
+  test('trains on its saved features when the mode presets only a label', () => {
+    const {onTrained} = renderLevel({trainer: 'decisionTree'});
+
+    act(() => {
+      storeSingleton.dispatch(
+        setMode({
+          trainer: 'decisionTree',
+          pretrained: true,
+          hideSelectLabel: true,
+        })
+      );
+      storeSingleton.dispatch(setPresetColumns({labelColumn: 'animal'}));
+    });
+    paintFrame();
     expect(onTrained.mock.calls).toEqual([[100]]);
   });
 
@@ -149,6 +222,7 @@ describe('a pretrained level', () => {
         setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']})
       );
     });
+    paintFrame();
     expect(storeSingleton.getState().currentPanel).toBe('results');
   });
 
@@ -187,6 +261,56 @@ describe('a level whose only dataset fails to load', () => {
       expect(screen.queryByRole('heading', {name: 'Train'})).toBeNull();
     }
   );
+});
+
+describe('opening a level', () => {
+  beforeEach(() => I18n.initI18n());
+
+  // Unlike renderWithProviders, renders App before the project has opened.
+  function renderOpening() {
+    const onLoadingChange = jest.fn();
+    const store = createStore(rootReducer);
+    store.dispatch(setMode({}));
+    store.dispatch(setCurrentPanel('datasetView'));
+    store.dispatch(setSelectedCSV('animals.csv'));
+    render(
+      withTheme(
+        createElement(
+          Provider,
+          {store},
+          createElement(
+            ProjectProvider,
+            {initialProject: levelProject()},
+            createElement(
+              TrainingDataProvider,
+              null,
+              createElement(App, {
+                onContinue: () => {},
+                saveTrainedModel: () => {},
+                onLoadingChange,
+              })
+            )
+          )
+        )
+      )
+    );
+    return {store, onLoadingChange};
+  }
+
+  test('reports it is loading while the dataset is on its way', () => {
+    const {onLoadingChange} = renderOpening();
+    expect(onLoadingChange).toHaveBeenLastCalledWith(true);
+  });
+
+  test('reports it has loaded once the dataset is in', () => {
+    const {store, onLoadingChange} = renderOpening();
+
+    act(() => {
+      seedLevel(store, {});
+    });
+    expect(onLoadingChange).toHaveBeenLastCalledWith(false);
+    expect(screen.getByRole('table')).toBeTruthy();
+  });
 });
 
 describe('choosing a dataset', () => {

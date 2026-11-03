@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894778-4b1df27a8ae9",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following statements best explains how computers can help us decide the safest areas based on zombie data?",
+  "solution": [
+    {
+      "option": "Computers can analyze patterns in the data to identify areas with fewer zombies.",
+      "correct": true
+    },
+    {
+      "option": "Computers can only provide random guesses about zombie locations.",
+      "correct": false
+    },
+    {
+      "option": "Computers can only work with categorical data, not numerical data.",
+      "correct": false
+    },
+    {
+      "option": "Computers cannot compare data effectively to make decisions.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "380a97b1-e575-46a5-980f-3156a408590c"
+  ]
+}

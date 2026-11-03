@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-6284592-a3d306f71122",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the components of an algorithm with their definitions.",
+  "solution": [
+    {
+      "option": "Sequencing",
+      "correct": "The order in which instructions are executed."
+    },
+    {
+      "option": "Selection",
+      "correct": "Making choices based on conditions."
+    },
+    {
+      "option": "Iteration",
+      "correct": "Repeating a set of instructions."
+    }
+  ],
+  "objective_keys": [
+    "d6223620-43fd-43bb-9eb1-1a6eb17b69d8"
+  ]
+}

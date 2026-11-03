@@ -39,11 +39,11 @@ class MatchQuestionTest < ActiveSupport::TestCase
     assert_equal({score: 0, max_score: 1}, question.grade('pairs' => [['a', 'x', 'b'], ['b', 'y'], ['c', 'z']]))
   end
 
-  test "answered? is true only when at least one pair is given" do
+  test "response_answered? is true only when at least one pair is given" do
     question = build(:match_question)
-    assert question.answered?({'pairs' => [['a', 'x']]})
-    refute question.answered?({'pairs' => []})
-    refute question.answered?({})
+    assert question.response_answered?({'pairs' => [['a', 'x']]})
+    refute question.response_answered?({'pairs' => []})
+    refute question.response_answered?({})
   end
 
   test "attempt_content_json splits the pairs into two sets and omits the answer key" do

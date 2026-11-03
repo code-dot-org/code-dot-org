@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-8894787-d75beab43cd6",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following components with their roles in the app development process.",
+  "solution": [
+    {
+      "option": "Machine Learning Model",
+      "correct": "Provides recommendations"
+    },
+    {
+      "option": "User Interface",
+      "correct": "Displays the app to users"
+    },
+    {
+      "option": "App Lab",
+      "correct": "Environment for building the app"
+    }
+  ],
+  "objective_keys": [
+    "90e6cc77-3995-4239-bd6a-cd630dd1b82c"
+  ]
+}

@@ -15,16 +15,16 @@ import {QuizQuestionSummary} from '../types';
 import {groupByPage, toBool} from '../utils';
 
 import AttemptCard from './AttemptCard';
-import FreeResponseQuestionContainer from './FreeResponseQuestionContainer';
+import MultiChoiceQuestionContainer from './choice/MultiChoiceQuestionContainer';
+import MultipleSelectQuestionContainer from './choice/MultipleSelectQuestionContainer';
+import FreeResponseQuestionContainer from './freeResponse/FreeResponseQuestionContainer';
 import IntroCard from './IntroCard';
 import MatchQuestionContainer from './match/MatchQuestionContainer';
 import {MatchPairs} from './match/types';
-import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
-import MultipleSelectQuestionContainer from './MultipleSelectQuestionContainer';
 import PageDivider from './PageDivider';
-import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
-import ResultsCard from './ResultsCard';
+import QuestionResultCard from './results/QuestionResultCard';
+import ResultsCard from './results/ResultsCard';
 import {
   isFreeResponseResponse,
   isMatchResponse,
@@ -522,7 +522,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
   };
 
-  const renderQuestionResults = (results: QuizQuestionResult[]) =>
+  const renderQuestionResults = (
+    results: QuizQuestionResult[],
+    isSubmitted: boolean
+  ) =>
     resultPages.map(
       (
         {page, questions, firstQuestionNumber, lastQuestionNumber},
@@ -555,6 +558,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                   revealAnswerExplanation={
                     isViewingStudent || toBool(revealAnswerExplanation)
                   }
+                  isSubmitted={isSubmitted}
+                  showCorrectness={isViewingStudent || toBool(showCorrectness)}
                   isViewingStudent={isViewingStudent}
                 />
               )
@@ -605,7 +610,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                   correct: null,
                   explanation: null,
                   correctChoiceId: null,
-                }))
+                })),
+                false
               )}
           </div>
         ) : isIntroOpen ? (
@@ -652,7 +658,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               onNextLevel={handleNextLevel}
             />
             {(isViewingStudent || toBool(showQuestionsAfterSubmit)) &&
-              renderQuestionResults(attempt.questionResults ?? [])}
+              renderQuestionResults(attempt.questionResults ?? [], true)}
           </div>
         ) : (
           <div className={styles.questions}>

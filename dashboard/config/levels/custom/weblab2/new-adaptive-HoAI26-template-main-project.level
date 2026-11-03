@@ -1,0 +1,48 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T03:17:26.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "d8b7814a-efd9-4e31-b4f3-1c68d31fbdc9": {
+          "id": "d8b7814a-efd9-4e31-b4f3-1c68d31fbdc9",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>My Awesome Site</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <h1>Welcome to My Site!</h1>\n    <p>This is a starting point for your web project.</p>\n\n    <script src=\"script.js\" defer></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "1d279bad-f7dd-44d8-be91-03a9d1c1df76": {
+          "id": "1d279bad-f7dd-44d8-be91-03a9d1c1df76",
+          "name": "style.css",
+          "contents": "/* Add your styles here */\nbody {\n    font-family: sans-serif;\n    margin: 20px;\n    background-color: #f4f4f4;\n    color: #333;\n}\n\nh1 {\n    color: #0056b3;\n}",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "d593ddda-3446-478a-8a91-2db571b3e7e9": {
+          "id": "d593ddda-3446-478a-8a91-2db571b3e7e9",
+          "name": "script.js",
+          "contents": "// Add your JavaScript here\nconsole.log(\"Script loaded!\");",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "d8b7814a-efd9-4e31-b4f3-1c68d31fbdc9",
+        "1d279bad-f7dd-44d8-be91-03a9d1c1df76",
+        "d593ddda-3446-478a-8a91-2db571b3e7e9"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 03:17:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -23,6 +23,8 @@ export interface ValidateStepOptions {
   projectInfo: PathwayProjectInfo;
   /** The instructions the student saw, generated or authored. */
   instructions: string | undefined;
+  /** The trace that generated `instructions`; absent when they are authored. */
+  instructionsTraceId?: string;
   work: StepWork;
   /** The shell's own context, not the mounted chat's. */
   aichatContext: AichatContext;
@@ -42,6 +44,7 @@ export async function validateStep({
   step,
   projectInfo,
   instructions,
+  instructionsTraceId,
   work,
   aichatContext,
   onJudging,
@@ -75,6 +78,7 @@ export async function validateStep({
         checkpointId: checkpoint.id,
         stepId: step.id,
         workAt: work.at,
+        instructionsTraceId,
         promptVersion: VALIDATION_PROMPT_VERSION,
       },
     },
