@@ -15,6 +15,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
     DCDO.stubs(:get).with('lesson-deep-dive-enabled', true).returns(true)
+    DCDO.stubs(:get).with('spritelab-lab2-ask-ai-enabled', true).returns(true)
     stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
     stub_environment_key_enabled(false)
     @params = {
