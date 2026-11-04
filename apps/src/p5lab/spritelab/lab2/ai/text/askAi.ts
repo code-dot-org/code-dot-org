@@ -73,8 +73,8 @@ class AskAiTimeoutError extends Error {
 }
 
 const STUDENT_SAFETY_MESSAGES: Record<AskAiError['phase'], string> = {
-  prompt: "That prompt isn't appropriate for class.",
-  system_prompt: "That system prompt isn't appropriate for class.",
+  prompt: "That prompt isn't allowed.",
+  system_prompt: "That system prompt isn't allowed.",
   answer: "The AI's answer failed our safety checks.",
 };
 

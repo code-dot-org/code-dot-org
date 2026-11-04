@@ -205,7 +205,7 @@ describe('askAiText', () => {
 describe('askAiErrorMessage', () => {
   it('names the system prompt when it is the flagged text', () => {
     expect(askAiErrorMessage(new AskAiError('system_prompt'))).toBe(
-      "That system prompt isn't appropriate for class."
+      "That system prompt isn't allowed."
     );
   });
 });

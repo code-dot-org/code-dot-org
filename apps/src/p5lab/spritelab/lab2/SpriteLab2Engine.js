@@ -718,7 +718,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     const isCurrentRun = () => !this.destroyed_ && runId === this.runId_;
     let systemPrompt = '';
     library.commands.setSystemPrompt = promptText => {
-      systemPrompt = promptText;
+      if (this.canAskAi_()) {
+        systemPrompt = promptText;
+      }
     };
     library.commands.askAI = (promptText, variableName, setterCallback) => {
       if (!this.canAskAi_() || pending.has(variableName)) {
