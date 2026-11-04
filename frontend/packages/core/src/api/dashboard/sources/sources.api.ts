@@ -29,9 +29,11 @@ export function createSourcesApi(transport: Transport) {
         url: `/v3/sources/${channelId}/${sourceFile}${versionId ? `?version=${versionId}` : ''}`,
       });
 
-      // Pull out the S3 version id
+      // The S3 version id. The transport lowercases header names
+      // (`kyTransport.extractMeta`), so the mixed-case name never matched and
+      // every load reported 'unknown'.
       const newVersionId =
-        versionId || resp.meta.headers['S3-Version-Id'] || 'unknown';
+        versionId || resp.meta.headers['s3-version-id'] || 'unknown';
 
       return {
         sources: ProjectSourcesSchema.parse(resp.data),
