@@ -25,7 +25,8 @@
       "kind": "code",
       "imageType": "background",
       "imageRole": "platform-background",
-      "imageFirst": true
+      "imageFirst": true,
+      "learning": true
     },
     "pinned_scene": {
       "id": "scene-1",

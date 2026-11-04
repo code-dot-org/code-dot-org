@@ -67,6 +67,7 @@ import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
+import {withStarterBlocks} from '../extraSceneStarter';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
 import {
   removeImageReferences,
@@ -519,7 +520,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         },
         ...(extraScene ? [extraScene] : []),
       ].filter(scene => !existing.some(s => s.id === scene.id));
-      if (!wanted.length) {
+      // An extra scene the project already has keeps the student's work
+      // but gets the starter blocks it lacks.
+      const kept = existing.map(scene =>
+        extraScene && scene.id === extraScene.id
+          ? withStarterBlocks(scene, extraScene.source)
+          : scene
+      );
+      const changed = kept.some((scene, i) => scene !== existing[i]);
+      if (!wanted.length && !changed) {
         return prev;
       }
       const added: Scene[] = wanted.map(scene => ({
@@ -527,7 +536,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         name: scene.name,
         source: scene.source ?? DEFAULT_SCENE_SOURCE,
       }));
-      return {...prev, scenes: [...existing, ...added]};
+      return {...prev, scenes: [...kept, ...added]};
     });
   }, [
     pinnedSceneId,
@@ -2412,6 +2421,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 lockedImageType={levelProperties.levelMode?.imageType}
                 lockedImageSubject={levelProperties.levelMode?.imageSubject}
                 imageRole={levelProperties.levelMode?.imageRole}
+                ownImageMade={
+                  !!levelProperties.levelMode?.imageType &&
+                  objectiveImages[levelProperties.levelMode.imageType] >= 1
+                }
+                learning={levelProperties.levelMode?.learning}
+                levelId={levelProperties.id}
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}
                 editingOffered={isFreeplayMode(levelProperties.levelMode)}
