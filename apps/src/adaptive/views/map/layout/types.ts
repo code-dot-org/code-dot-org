@@ -14,7 +14,8 @@ export interface Edge {
 
 /** The checkpoints that share a `destination`, in authored order. */
 export interface DestinationGroup {
-  title: string;
+  /** The checkpoints' `destination` value: an id or, with no declared destinations, the title. */
+  key: string;
   ids: string[];
 }
 

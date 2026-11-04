@@ -1,7 +1,7 @@
 @use "checkerboard";
-// One look for image tiles — the Images tab's gallery and the image
-// dialog's Alternatives strip. Colors read the dialog chrome's variables
-// where present and fall back to the gallery's own.
+// One look for image tiles: the Images tab's list and the scenes gallery.
+// Colors read the dialog chrome's variables where present and fall back
+// to the list's own.
 
 @mixin image-tile($size) {
   display: flex;
@@ -16,10 +16,11 @@
   box-shadow: none;
   cursor: pointer;
   border: 1px solid var(--dialog-control-border, var(--borders-neutral-primary));
-  // Grow subtly on hover instead of the page's global image dimming.
+  // Grow subtly on hover instead of the page's global image dimming; a
+  // tile that cannot be pressed holds still.
   transition: transform 0.15s ease;
 
-  &:hover {
+  &:hover:not(:disabled) {
     z-index: 1;
     transform: scale(1.12);
   }

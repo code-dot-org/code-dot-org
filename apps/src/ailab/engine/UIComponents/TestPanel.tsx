@@ -84,6 +84,7 @@ const TestPanel = () => {
       return (
         <TextField
           key={feature}
+          color="gray"
           name={name}
           label={label}
           inputType="number"
@@ -108,6 +109,7 @@ const TestPanel = () => {
     return (
       <SimpleDropdown
         key={feature}
+        color="gray"
         name={name}
         labelText={label}
         dropdownTextThickness="thin"

@@ -1,19 +1,17 @@
 import {Typography as MuiTypography} from '@mui/material';
+import classNames from 'classnames';
 import React, {useRef} from 'react';
 
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
+import {PixelEditorHistory} from '@cdo/apps/pixelEditor/PixelEditor';
 
 import EditorSwitch, {Editor} from './EditorSwitch';
 
 import moduleStyles from '../sprite-lab2-view.module.scss';
 
-/** The workspace's undo and redo, offered across from the switch. */
-interface EditHistory {
-  canUndo: boolean;
-  canRedo: boolean;
-  undo: () => void;
-  redo: () => void;
-}
+/** The open editor's undo and redo, offered across from the switch: the
+    shape the pixel editor reports, which the Code tab fills from Blockly. */
+export type EditHistory = PixelEditorHistory;
 
 interface EditorStripProps {
   /** The open editor; with onChange, the switch shows too. */
@@ -90,7 +88,13 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
     />
   );
   return (
-    <div className={moduleStyles.editorStrip} style={style}>
+    <div
+      className={classNames(
+        moduleStyles.editorStrip,
+        onChange && moduleStyles.editorStripEditors
+      )}
+      style={style}
+    >
       <div className={moduleStyles.editorStripStart}>
         {switchAtStart ? switchNode : historyNode}
       </div>
