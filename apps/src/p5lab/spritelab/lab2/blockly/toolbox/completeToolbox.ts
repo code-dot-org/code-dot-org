@@ -12,6 +12,7 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
 import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
 import {PLAY_SOUND_EFFECT_BLOCK_TYPE} from '../blockDefinitions/playSoundEffect';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
+import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockDefinitions/setSystemPrompt';
 import {SET_WEATHER_BLOCK_TYPE} from '../blockDefinitions/setWeather';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
@@ -50,7 +51,7 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_setPlatformGravity',
     'spritelab2_setCameraZoom',
   ],
-  AI: [ASK_AI_BLOCK_TYPE],
+  AI: [ASK_AI_BLOCK_TYPE, SET_SYSTEM_PROMPT_BLOCK_TYPE],
 };
 
 // Blocks registered outside the DB block pool (Blockly core, blocksCommon,
@@ -85,12 +86,8 @@ const COMMON_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
 };
 
 /**
- * Every available block sorted by category: the supported part of the
- * level's DB block pool (supportedSharedBlocks.ts) plus the lab-owned and
- * common blocks. Toolbox editing leads with the category marker blocks;
- * start mode appends the dynamic Variables/Functions categories instead.
- * Behaviors stays static: the dynamic flyout can't read static contents
- * from JSON toolboxes yet (getLevelToolboxBlocks/CT-8).
+ * Returns the complete toolbox definition for the given shared blocks and mode.
+ * Filters out any shared blocks that are not supported by Sprite Lab in lab2.
  */
 export function getCompleteToolboxDefinition(
   sharedBlocksByCategory: {[category: string]: string[]},

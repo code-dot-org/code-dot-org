@@ -1,9 +1,6 @@
-// Sprite Lab 2 runs only some of the blocks in the pools a level loads
-// (GamelabJr, GameDev), so the complete toolbox offers the types listed
-// here and drops the rest.
-//
-// Blocks a level already uses still install,
-// and still render — this only decides what the toolbox offers.
+// Filter the shared blocks to only those supported by Sprite Lab in lab2.
+// If existing blocks from the shared pools become supported by Sprite Lab,
+// they should be added here.
 
 export const SUPPORTED_SHARED_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'gamelab_setBackground',
