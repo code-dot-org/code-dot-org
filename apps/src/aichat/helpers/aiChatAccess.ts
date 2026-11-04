@@ -26,8 +26,7 @@ export const AI_GATEWAY_FALLBACK_DCDO_KEY = 'ai_gateway_fallback_is_enabled';
 
 /**
  * Returns true if the AI gateway serves a model from a blocked provider by
- * falling back to another provider. Only requests routed through the gateway
- * benefit; Rails refuses blocked models outright.
+ * falling back to another provider.
  */
 export const isAiGatewayFallbackEnabled = (): boolean =>
   !!DCDO.get(AI_GATEWAY_FALLBACK_DCDO_KEY, false);
