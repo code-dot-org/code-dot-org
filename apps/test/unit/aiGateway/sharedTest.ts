@@ -1,6 +1,7 @@
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {
+  ACCESS_TOKEN_REUSE_MARGIN_MS,
   clearAccessTokenCache,
   fetchAccessToken,
   getAccessToken,
@@ -45,25 +46,21 @@ describe('fetchAccessToken', () => {
       token: 'jwt',
       turnstileEnforcementMode: 'disabled',
       reusable: false,
-      reuseMarginSeconds: 0,
     });
   });
 
-  it('reports the token reusable only with a usable margin', async () => {
-    const cases: [Record<string, unknown>, boolean][] = [
-      [{reusable: true, reuseMarginSeconds: 15}, true],
-      [{reusable: true, reuseMarginSeconds: 0}, true],
-      [{reusable: true}, false],
-      [{reusable: true, reuseMarginSeconds: -1}, false],
-      [{reusable: true, reuseMarginSeconds: '15'}, false],
-      [{reusable: 'true', reuseMarginSeconds: 15}, false],
+  it('reports the token reusable only for a literal true', async () => {
+    const cases: [unknown, boolean][] = [
+      [true, true],
+      ['true', false],
+      [1, false],
     ];
-    for (const [fields, reusable] of cases) {
+    for (const [reusable, expected] of cases) {
       mockPost.mockResolvedValue({
-        json: async () => ({token: 'jwt', ...fields}),
+        json: async () => ({token: 'jwt', reusable}),
       });
 
-      expect((await fetchAccessToken()).reusable).toBe(reusable);
+      expect((await fetchAccessToken()).reusable).toBe(expected);
     }
   });
 
@@ -83,19 +80,8 @@ describe('fetchAccessToken', () => {
   });
 });
 
-const REUSE_MARGIN_SECONDS = 15;
-
-const tokenResponse = (
-  token: string,
-  reusable = true,
-  reuseMarginSeconds = REUSE_MARGIN_SECONDS
-) => ({
-  json: async () => ({
-    token,
-    turnstileEnforcementMode: 'disabled',
-    reusable,
-    reuseMarginSeconds,
-  }),
+const tokenResponse = (token: string, reusable = true) => ({
+  json: async () => ({token, turnstileEnforcementMode: 'disabled', reusable}),
 });
 
 describe('getAccessToken', () => {
@@ -166,7 +152,7 @@ describe('getAccessToken', () => {
 
   it('fetches a new token once the reuse margin is reached', async () => {
     const reuseMs =
-      (AiGatewayAccessTokenLifetimeSeconds - REUSE_MARGIN_SECONDS) * 1000;
+      AiGatewayAccessTokenLifetimeSeconds * 1000 - ACCESS_TOKEN_REUSE_MARGIN_MS;
     await getAccessToken(tutorContext);
 
     jest.advanceTimersByTime(reuseMs - 1);
@@ -175,18 +161,6 @@ describe('getAccessToken', () => {
 
     jest.advanceTimersByTime(1);
     await getAccessToken(tutorContext);
-    expect(mockPost).toHaveBeenCalledTimes(2);
-  });
-
-  it('applies the margin the server sent with the token', async () => {
-    mockPost.mockImplementation(async () =>
-      tokenResponse(`token-${++issued}`, true, 30)
-    );
-    await getAccessToken(tutorContext);
-
-    jest.advanceTimersByTime((AiGatewayAccessTokenLifetimeSeconds - 30) * 1000);
-    await getAccessToken(tutorContext);
-
     expect(mockPost).toHaveBeenCalledTimes(2);
   });
 

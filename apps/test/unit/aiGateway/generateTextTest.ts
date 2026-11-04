@@ -65,7 +65,6 @@ describe('generateTextThroughGateway access tokens', () => {
             token,
             turnstileEnforcementMode: 'off',
             reusable,
-            reuseMarginSeconds: 15,
           }),
         };
       }

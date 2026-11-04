@@ -22,8 +22,6 @@ export interface GatewayAccessToken {
   turnstileEnforcementMode: TurnstileEnforcementMode;
   /** Whether the server allows this token to be reused for later requests. */
   reusable: boolean;
-  /** How many seconds before expiry reuse stops. Meaningful only when `reusable`. */
-  reuseMarginSeconds: number;
 }
 
 // Use the provided AichatContext or fall back to the default context.
@@ -45,20 +43,13 @@ export async function fetchAccessToken(
     token: string;
     turnstileEnforcementMode?: unknown;
     reusable?: unknown;
-    reuseMarginSeconds?: unknown;
   };
-  const reuseMarginSeconds =
-    typeof value.reuseMarginSeconds === 'number' &&
-    value.reuseMarginSeconds >= 0
-      ? value.reuseMarginSeconds
-      : undefined;
   return {
     token: value.token,
     turnstileEnforcementMode: parseTurnstileEnforcementMode(
       value.turnstileEnforcementMode
     ),
-    reusable: value.reusable === true && reuseMarginSeconds !== undefined,
-    reuseMarginSeconds: reuseMarginSeconds ?? 0,
+    reusable: value.reusable === true,
   };
 }
 
@@ -91,6 +82,10 @@ interface CachedAccessToken {
 const cachedAccessTokens = new Map<string, CachedAccessToken>();
 const pendingAccessTokens = new Map<string, Promise<GatewayAccessToken>>();
 
+// The worker checks expiry once, when a request arrives, so this covers only the time
+// from cache to worker; callers re-check after anything slow, like a Turnstile challenge.
+export const ACCESS_TOKEN_REUSE_MARGIN_MS = 15_000;
+
 // Every field is sent to Rails, so any of them may become a claim.
 function accessTokenCacheKey(aichatContext: AichatContext): string {
   return JSON.stringify(aichatContext, Object.keys(aichatContext).sort());
@@ -108,16 +103,14 @@ async function fetchAndCacheAccessToken(
       accessToken,
       reusableUntilLocal:
         requestedAt +
-        (AiGatewayAccessTokenLifetimeSeconds - accessToken.reuseMarginSeconds) *
-          1000,
+        AiGatewayAccessTokenLifetimeSeconds * 1000 -
+        ACCESS_TOKEN_REUSE_MARGIN_MS,
     });
   }
   return accessToken;
 }
 
 // Concurrent callers with the same context share one request; failures are not cached.
-// The worker checks expiry once, when a request arrives, so the margin covers only the
-// time from here to there; callers re-check after anything slow, like a Turnstile challenge.
 export function getAccessToken(
   aichatContext: AichatContext = AichatContextManager.getContext()
 ): Promise<GatewayAccessToken> {
