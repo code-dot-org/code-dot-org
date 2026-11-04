@@ -13,22 +13,27 @@ const ruleTester = new RuleTester({
 ruleTester.run('error-subclass-prototype', rule, {
   valid: [
     {
-      code: `class A extends Error {
-  constructor() {
-    super('x');
-    Object.setPrototypeOf(this, A.prototype);
-  }
-}`,
-    },
-    {
       code: `class A extends TypeError {
-  constructor(message) {
+  constructor(message?: string) {
     super(message);
     Object.setPrototypeOf(this, new.target.prototype);
   }
 }`,
     },
-    // A subclass of a fixed class needs nothing of its own.
+    // The restore may sit inside a block.
+    {
+      code: `class A extends Error {
+  constructor() {
+    try {
+      super('x');
+      Object.setPrototypeOf(this, new.target.prototype);
+    } finally {
+      log();
+    }
+  }
+}`,
+    },
+    // A subclass of a fixed class inherits the new.target restore.
     {code: `class B extends A {}`},
     // A local binding named Error is not the built-in.
     {
@@ -38,16 +43,15 @@ class A extends Error {}`,
   ],
   invalid: [
     {
-      filename: 'a.ts',
       code: `export class A extends Error {
   constructor(public readonly phase: string) {
-    super('x');
+    super('x'); // keep
     this.name = 'A';
   }
 }`,
       output: `export class A extends Error {
   constructor(public readonly phase: string) {
-    super('x');
+    super('x'); // keep
     ${COMMENT}
     Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'A';
@@ -56,56 +60,72 @@ class A extends Error {}`,
       errors: 1,
     },
     {
-      filename: 'a.ts',
       code: `class A extends Error {}`,
       output: `class A extends Error {
-  constructor(message?: string) {
-    super(message);
+  constructor(...args: ConstructorParameters<typeof Error>) {
+    super(...args);
     ${COMMENT}
     Object.setPrototypeOf(this, new.target.prototype);
   }
 }`,
       errors: 1,
     },
+    // A non-empty body gets no blank line after the new constructor.
     {
-      filename: 'a.js',
-      code: `class A extends RangeError {}`,
-      output: `class A extends RangeError {
-  constructor(message) {
-    super(message);
-    ${COMMENT}
-    Object.setPrototypeOf(this, new.target.prototype);
+      code: `function f() {
+  class A extends AggregateError {
+    foo() {}
+  }
+}`,
+      output: `function f() {
+  class A extends AggregateError {
+    constructor(...args: ConstructorParameters<typeof AggregateError>) {
+      super(...args);
+      ${COMMENT}
+      Object.setPrototypeOf(this, new.target.prototype);
+    }
+    foo() {}
   }
 }`,
       errors: 1,
     },
-    // Restoring some other class's prototype does not count.
+    // The class-name form breaks subclasses; it is rewritten in place.
     {
       code: `class A extends Error {
   constructor() {
     super();
-    Object.setPrototypeOf(this, B.prototype);
+    Object.setPrototypeOf(this, A.prototype);
   }
 }`,
       output: `class A extends Error {
   constructor() {
     super();
-    ${COMMENT}
     Object.setPrototypeOf(this, new.target.prototype);
-    Object.setPrototypeOf(this, B.prototype);
   }
 }`,
       errors: 1,
     },
-    // No fix without a plain super() statement to anchor on.
+    // So is a restore of some other class's prototype.
+    {
+      code: `const A = class extends Error {
+  constructor() {
+    super();
+    Object.setPrototypeOf(this, B.prototype);
+  }
+};`,
+      output: `const A = class extends Error {
+  constructor() {
+    super();
+    Object.setPrototypeOf(this, new.target.prototype);
+  }
+};`,
+      errors: 1,
+    },
+    // No fix without a super() statement to anchor on.
     {
       code: `class A extends Error {
   constructor(flag) {
-    if (flag) {
-      super('a');
-    } else {
-      super('b');
-    }
+    flag ? super('a') : super('b');
   }
 }`,
       output: null,

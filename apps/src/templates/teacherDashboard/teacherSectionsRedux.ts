@@ -106,7 +106,7 @@ export class DemoSectionCreationError extends Error {
   constructor(public errorType: 'conflict' | 'generic', message: string) {
     super(message);
     this.name = 'DemoSectionCreationError';
-    Object.setPrototypeOf(this, DemoSectionCreationError.prototype);
+    Object.setPrototypeOf(this, new.target.prototype);
   }
 }
 
@@ -1094,7 +1094,7 @@ export class RosterRequestError extends Error {
 
     // Needed for TypeScript to register this class correctly in ES5
     // https://github.com/Microsoft/TypeScript/wiki/Breaking-Changes#extending-built-ins-like-error-array-and-map-may-no-longer-work
-    Object.setPrototypeOf(this, RosterRequestError.prototype);
+    Object.setPrototypeOf(this, new.target.prototype);
   }
 }
 

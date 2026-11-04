@@ -100,7 +100,6 @@ module.exports = {
     ...rulesToEventuallyReenable,
     'babel/semi': 'error', // autofixable
     'cdo-custom-rules/style-blocks-below-class': 'error',
-    'cdo-custom-rules/error-subclass-prototype': 'error',
     'mocha/no-exclusive-tests': 'error',
     'jsx-a11y/label-has-associated-control': [
       'error',
@@ -247,6 +246,9 @@ module.exports = {
       plugins: ['@typescript-eslint'],
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
+        // ts-loader's ES5 output drops the prototype of an Error subclass;
+        // Babel wraps native constructors, so JavaScript is unaffected.
+        'cdo-custom-rules/error-subclass-prototype': 'error',
         // We can rely on typescript types instead of prop types
         'react/prop-types': 'off',
         '@typescript-eslint/no-unused-vars': ['error', {args: 'none'}],
