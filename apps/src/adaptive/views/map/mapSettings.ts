@@ -9,12 +9,15 @@ export interface MapSettings {
   layout: MapLayoutMode;
   /** Quarter turns clockwise from the authored orientation. */
   turns: number;
+  /** Leaves the title bar's totals out, for a screenshot or a demo. */
+  hideStats: boolean;
 }
 
 /**
  * How to draw a pathway's map: the URL's `mapLayout` and `mapOrientation`
  * when present and valid, so a layout can be tried without editing content,
- * else the pathway's `map`, else the tree facing north.
+ * else the pathway's `map`, else the tree facing north. The URL alone can
+ * hide the title bar's totals, with `hide-adaptive-stats=true`.
  */
 export function resolveMapSettings(
   pathway: Pathway,
@@ -33,5 +36,9 @@ export function resolveMapSettings(
     pick(params.get('mapOrientation'), ORIENTATIONS) ??
     pick(pathway.map?.orientation, ORIENTATIONS) ??
     'n';
-  return {layout, turns: ORIENTATIONS.indexOf(orientation)};
+  return {
+    layout,
+    turns: ORIENTATIONS.indexOf(orientation),
+    hideStats: params.get('hide-adaptive-stats') === 'true',
+  };
 }

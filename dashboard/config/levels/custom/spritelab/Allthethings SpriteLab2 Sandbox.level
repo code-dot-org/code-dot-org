@@ -429,6 +429,20 @@
           "contents": [
             {
               "kind": "block",
+              "type": "spritelab2_setSystemPrompt",
+              "inputs": {
+                "PROMPT": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
               "type": "spritelab2_askAI",
               "inputs": {
                 "PROMPT": {

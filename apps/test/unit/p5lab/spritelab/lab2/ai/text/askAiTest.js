@@ -7,8 +7,11 @@ import {
   ASK_AI_TIMEOUT_MS,
   askAiText,
   AskAiError,
+  askAiErrorMessage,
+  buildSystemPrompt,
   cleanAnswer,
   isAskAiEnabled,
+  SYSTEM_PROMPT,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/text/askAi';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -146,6 +149,64 @@ describe('askAiText', () => {
   it('truncates a very long question', async () => {
     await askAiText('x'.repeat(5000));
     expect(generateText.mock.calls[0][0].prompt).toHaveLength(1000);
+  });
+
+  it("uses the lab's system prompt alone when the student set none", async () => {
+    await askAiText('hello');
+    expect(generateText.mock.calls[0][0].system).toBe(SYSTEM_PROMPT);
+  });
+
+  it("adds the student's system prompt after the lab's rules", async () => {
+    await askAiText('hello', 'Talk like a pirate.');
+    const {system} = generateText.mock.calls[0][0];
+    expect(system.startsWith(SYSTEM_PROMPT)).toBe(true);
+    expect(system.endsWith('Talk like a pirate.')).toBe(true);
+  });
+
+  // Judged together, a long system prompt could bury a bad question.
+  it("judges the student's system prompt apart from the question", async () => {
+    await askAiText('hello', 'Talk like a parrot.');
+    const inputs = isTextSafe.mock.calls
+      .filter(([, filter]) => filter === 'input_filter')
+      .map(([text]) => text);
+    expect(inputs).toEqual(['hello', 'Talk like a parrot.']);
+  });
+
+  it('judges a system prompt once across questions', async () => {
+    await askAiText('hello', 'Talk like a robot.');
+    await askAiText('goodbye', 'Talk like a robot.');
+    const judged = isTextSafe.mock.calls.filter(
+      ([text]) => text === 'Talk like a robot.'
+    );
+    expect(judged).toHaveLength(1);
+  });
+
+  it('throws with the system prompt phase when it is flagged', async () => {
+    isTextSafe.mockImplementation(async text => text !== 'something awful');
+    await expect(askAiText('hello', 'something awful')).rejects.toMatchObject({
+      name: 'AskAiError',
+      phase: 'system_prompt',
+    });
+    expect(Observability.metrics.count).toHaveBeenCalledWith(
+      expect.any(String),
+      1,
+      {result: 'system_prompt_flagged'}
+    );
+  });
+
+  it('truncates a very long system prompt', async () => {
+    await askAiText('hello', 'x'.repeat(5000));
+    expect(generateText.mock.calls[0][0].system).toBe(
+      buildSystemPrompt('x'.repeat(1000))
+    );
+  });
+});
+
+describe('askAiErrorMessage', () => {
+  it('names the system prompt when it is the flagged text', () => {
+    expect(askAiErrorMessage(new AskAiError('system_prompt'))).toBe(
+      "That system prompt isn't allowed."
+    );
   });
 });
 
