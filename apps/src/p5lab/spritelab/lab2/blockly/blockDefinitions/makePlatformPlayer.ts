@@ -26,7 +26,7 @@ const generator: GeneratorFunction = block =>
   )}, ` + `${JSON.stringify(block.getFieldValue('GRID'))});\n`;
 
 // A player sprite at the marked grid cell, plus arrow movement and a jump
-// on space or up. Assumes the zGameDev helper library (per-tick gravity,
+// on space or the arrow opposite gravity. Assumes the zGameDev helper library (per-tick gravity,
 // player/wall collisions, cell-sized sprites). Keyed to the 'players'
 // group, not the costume, so a label that fails to round-trip can't orphan
 // the player from its physics. Movement reads the sprite's own speed so
@@ -58,7 +58,12 @@ const helperCode = [
   '    }',
   '  });',
   "  keyPressed('when', 'up', function () {",
-  '    if (platformGravity() !== 0) {',
+  '    if (platformGravity() > 0) {',
+  `      platformJump(${JUMP_SPEED});`,
+  '    }',
+  '  });',
+  "  keyPressed('when', 'down', function () {",
+  '    if (platformGravity() < 0) {',
   `      platformJump(${JUMP_SPEED});`,
   '    }',
   '  });',
