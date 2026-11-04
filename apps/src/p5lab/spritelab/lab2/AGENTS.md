@@ -26,6 +26,17 @@ classic behavior identical: a new knob defaults to the old behavior, or the
 override goes through `SpriteLab2Engine`'s `createLibrary`. A change that
 alters classic behavior is its own PR with its own safety analysis.
 
+## Two customers
+
+The Hour of AI unit drove most of the lab, but it is not the only user. The
+prompt bar (`views/components/PromptBar.tsx`, the prompt-for-a-variable and
+prompt-with-choices blocks) and the Ask AI block (`ai/text/askAi.ts`) are
+curriculum work, reached from the sandbox level and not from any level of
+the unit. A change to shared code (`SpriteLab2Engine.js`, the view, the
+toolbox) keeps them working even though the unit never exercises them, and a
+unit convention (objectives, `level_mode`, the free-play toolbox) is not
+assumed to hold for a level that uses them.
+
 ## Level properties and content
 
 - Three places must agree when a level property changes:
