@@ -1,4 +1,15 @@
-import {createContext, useContext, useState, ReactNode} from 'react';
+import {useTheme as useEmotionTheme} from '@emotion/react';
+import {
+  ThemeProvider as MuiThemeProvider,
+  type Theme as MuiTheme,
+} from '@mui/material/styles';
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useState,
+  ReactNode,
+} from 'react';
 
 export type Theme = 'Light' | 'Dark';
 
@@ -68,6 +79,45 @@ export function useTheme(
   return context;
 }
 
+/** Tooltip, Popper, Popover and Menu portal to <body>, outside the data-theme div. */
+const PortalThemeProvider = ({
+  theme,
+  children,
+}: {
+  theme: Theme;
+  children: ReactNode;
+}) => {
+  // MUI's own useTheme falls back to a default theme; emotion's yields {}.
+  const hasMuiTheme = 'palette' in useEmotionTheme();
+  const extendTheme = useCallback(
+    (outer: MuiTheme): MuiTheme => ({
+      ...outer,
+      components: {
+        ...outer.components,
+        MuiPopper: withDataTheme(outer.components?.MuiPopper, theme),
+        MuiPopover: withDataTheme(outer.components?.MuiPopover, theme),
+      },
+    }),
+    [theme],
+  );
+
+  // A function theme with no outer theme to extend logs an error.
+  if (!hasMuiTheme) {
+    return <>{children}</>;
+  }
+  return <MuiThemeProvider theme={extendTheme}>{children}</MuiThemeProvider>;
+};
+
+function withDataTheme<T extends {defaultProps?: object}>(
+  entry: T | undefined,
+  theme: Theme,
+): T {
+  return {
+    ...entry,
+    defaultProps: {...entry?.defaultProps, 'data-theme': theme},
+  } as T;
+}
+
 /**
  * Provides code with theme context. Can be used on the higher level (e.g. React app entry point)
  * or on any level you need.
@@ -95,7 +145,9 @@ export const ThemeProvider = ({children}: {children: ReactNode}) => {
    * */
   return (
     <ThemeContext.Provider value={{theme, toggleTheme, setTheme}}>
-      <div data-theme={theme}>{children}</div>
+      <PortalThemeProvider theme={theme}>
+        <div data-theme={theme}>{children}</div>
+      </PortalThemeProvider>
     </ThemeContext.Provider>
   );
 };
