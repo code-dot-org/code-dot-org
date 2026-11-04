@@ -8,6 +8,7 @@ import type {ApiClient, QueryClient} from '@code-dot-org/core/api';
 
 import LabMetricsReporter from '../LabMetricsReporter';
 import {ChannelsStore} from './ChannelsStore';
+import type {LocalCopyStore} from './localCopy';
 import ProjectManager from './ProjectManager';
 import {SourcesStore} from './SourcesStore';
 
@@ -28,6 +29,7 @@ export default class ProjectManagerFactory {
     isStandaloneProjectLevel: boolean,
     isShareView: boolean = false,
     metricsReporter: LabMetricsReporter = defaultMetricsReporter,
+    localCopy?: LocalCopyStore,
   ): ProjectManager {
     return new ProjectManager({
       apiClient,
@@ -39,6 +41,7 @@ export default class ProjectManagerFactory {
       isShareView,
       isStandaloneProjectLevel,
       metricsReporter,
+      localCopy,
     });
   }
 
@@ -59,6 +62,7 @@ export default class ProjectManagerFactory {
     userId?: number,
     scriptId?: number,
     metricsReporter: LabMetricsReporter = defaultMetricsReporter,
+    localCopy?: LocalCopyStore,
   ): Promise<ProjectManager | null> {
     const channelsStore = new ChannelsStore();
     let channelId: string | undefined = undefined;
@@ -91,6 +95,7 @@ export default class ProjectManagerFactory {
       reduceChannelUpdates,
       isStandaloneProjectLevel,
       metricsReporter,
+      localCopy,
     });
   }
 }

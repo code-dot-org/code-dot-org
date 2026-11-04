@@ -27,6 +27,10 @@ export const EDIT_EXEMPLAR = 'edit_exemplar';
 
 export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab'];
 
+// Labs whose unsaved work is kept in the browser until a save lands
+// (projects/localCopy).
+export const LABS_KEEPING_LOCAL_COPY: readonly string[] = ['world'];
+
 // Text-based labs that are currently supported by lab2.
 export const TEXT_BASED_LABS: ProjectType[] = [
   'aichat',

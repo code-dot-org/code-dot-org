@@ -24,10 +24,13 @@ import {
 } from '../projects';
 import {CourseRoles, currentUserActions} from '@code-dot-org/users';
 
+import {LABS_KEEPING_LOCAL_COPY} from '../constants';
 import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';
 import type {RootState, AppDispatch} from '../redux/store';
 import {queryParams, updateQueryParam} from '../utils/queryParams';
+
+import {browserLocalCopy} from '../projects/localCopy';
 
 import {setProjectTooLarge} from './labProjectSlice';
 
@@ -331,6 +334,10 @@ export const loadLab = createAsyncThunk<
     // Create a new project manager. If we have a channel id,
     // default to loading the project for that channel. Otherwise
     // create a project manager for the given level and script id.
+    // Labs that keep unsaved work in the browser between saves (`localCopy`).
+    const localCopy = LABS_KEEPING_LOCAL_COPY.includes(levelProperties.appName)
+      ? browserLocalCopy
+      : undefined;
     const projectManager = payload.channelId
       ? ProjectManagerFactory.getProjectManager(
           apiClient,
@@ -339,6 +346,7 @@ export const loadLab = createAsyncThunk<
           levelProperties.isProjectLevel || false,
           thunkAPI.getState().lab.isShareView,
           LabRegistry.metricsReporter,
+          localCopy,
         )
       : await ProjectManagerFactory.getProjectManagerForLevel(
           payload.apiClient,
@@ -347,6 +355,8 @@ export const loadLab = createAsyncThunk<
           levelProperties.isProjectLevel || false,
           payload.userId,
           payload.scriptId,
+          undefined,
+          localCopy,
         );
 
     // Only set the project manager and initiate load

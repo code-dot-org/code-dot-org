@@ -20,6 +20,7 @@ import type {
 import {ApiError, ValidationError} from '@code-dot-org/core/api';
 
 import {ChannelsStore} from './ChannelsStore';
+import type {LocalCopyStore} from './localCopy';
 import {SourcesStore} from './SourcesStore';
 
 import type LabMetricsReporter from '../LabMetricsReporter';
@@ -61,6 +62,12 @@ export default class ProjectManager {
   private thumbnailPngBlob: Blob | undefined;
   private forceNewVersion: boolean = false;
   private isStandaloneProjectLevel: boolean = false;
+  // Where unsaved sources are kept between edits and the save that writes
+  // them (`localCopy`). Absent, a lab keeps none.
+  private readonly localCopy: LocalCopyStore | undefined;
+  private localCopyTimeoutId: number | undefined;
+  // How long after the last edit the copy is written.
+  private readonly localCopyDelay = 2 * 1000;
 
   constructor({
     apiClient,
@@ -72,6 +79,7 @@ export default class ProjectManager {
     isStandaloneProjectLevel,
     isShareView = false,
     metricsReporter,
+    localCopy,
   }: {
     apiClient: ApiClient;
     queryClient: QueryClient;
@@ -82,7 +90,9 @@ export default class ProjectManager {
     reduceChannelUpdates: boolean;
     isStandaloneProjectLevel: boolean;
     isShareView?: boolean;
+    localCopy?: LocalCopyStore;
   }) {
+    this.localCopy = localCopy;
     this.apiClient = apiClient;
     this.queryClient = queryClient;
     this.channelId = channelId;
@@ -128,6 +138,8 @@ export default class ProjectManager {
       return; // a `visibilitychange` back to the foreground
     }
     if (this.hasUnsavedChanges()) {
+      // The copy first: it is synchronous, and the save may be cancelled.
+      this.writeLocalCopy();
       // Not awaited: an unload gives no time to wait, and the request is
       // already on its way by the time the page goes.
       void this.flushSave();
@@ -153,7 +165,11 @@ export default class ProjectManager {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
-    const sources = resetSource ? undefined : await this.loadAndStoreSources();
+    if (resetSource) {
+      this.localCopy?.clear(this.channelId);
+    }
+    const loaded = resetSource ? undefined : await this.loadAndStoreSources();
+    const sources = resetSource ? undefined : this.restoreLocalCopy(loaded);
 
     let channel: Channel;
     try {
@@ -167,6 +183,10 @@ export default class ProjectManager {
     }
 
     this.lastChannel = channel;
+    if (this.sourcesToSave && !this.isShareView) {
+      // A restored copy is unsaved work: saved on the usual interval.
+      void this.enqueueSaveOrSave(false, false);
+    }
     await this.initializeForceNewVersionState();
     const abuseScore = await this.channelsStore.getAbuseScore(
       this.apiClient,
@@ -201,6 +221,7 @@ export default class ProjectManager {
     }
     // Flush the enqueued save, if it exists, before restoring.
     await this.flushSave();
+    this.localCopy?.clear(this.channelId);
     try {
       await this.sourcesStore.restore(
         this.apiClient,
@@ -261,12 +282,15 @@ export default class ProjectManager {
   // and stop listening for the page going away.
   destroy(): void {
     this.resetSaveState();
+    window.clearTimeout(this.localCopyTimeoutId);
     this.stopListeningForLeaving();
     this.destroyed = true;
   }
 
   // Save any enqueued unsaved changes, then destroy the project manager.
   async cleanUp() {
+    // Before the save, which an unload may cancel (`beforeunload` lands here).
+    this.writeLocalCopy();
     if (this.sourcesToSave) {
       await this.save(this.sourcesToSave, true);
     }
@@ -293,6 +317,7 @@ export default class ProjectManager {
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.sourcesToSave = sources;
+    this.scheduleLocalCopy();
     return await this.enqueueSaveOrSave(forceSave, forceNewVersion);
   }
 
@@ -675,6 +700,12 @@ export default class ProjectManager {
     if (!newerEditArrived) {
       this.sourcesToSave = undefined;
     }
+    // Rewritten against the version just saved, or gone with nothing left.
+    if (newerEditArrived) {
+      this.writeLocalCopy();
+    } else {
+      this.clearLocalCopy();
+    }
     this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
     if (newerEditArrived && !this.destroyed) {
@@ -842,6 +873,67 @@ export default class ProjectManager {
    * @param versionId Optional version id to load. If not provided, the latest version is loaded.
    * @returns sources for the project.
    */
+  /**
+   * The local copy in place of what the server holds, when there is one made
+   * on the server's latest version: pending, and so saved. Any other copy is
+   * cleared.
+   */
+  private restoreLocalCopy(
+    loaded: ProjectSources | undefined,
+  ): ProjectSources | undefined {
+    const copy = this.localCopy?.read(this.channelId);
+    if (!copy) {
+      return loaded;
+    }
+    const latest = this.sourcesStore.getCurrentVersionId();
+    if (
+      this.isShareView ||
+      copy.base !== latest ||
+      JSON.stringify(copy.sources) === this.lastSource
+    ) {
+      this.clearLocalCopy();
+      return loaded;
+    }
+    this.sourcesToSave = copy.sources;
+    return copy.sources;
+  }
+
+  /** Write the copy a moment after the last edit, not on every one. */
+  private scheduleLocalCopy(): void {
+    if (!this.localCopy) {
+      return;
+    }
+    window.clearTimeout(this.localCopyTimeoutId);
+    this.localCopyTimeoutId = window.setTimeout(
+      () => this.writeLocalCopy(),
+      this.localCopyDelay,
+    );
+  }
+
+  private writeLocalCopy(): void {
+    window.clearTimeout(this.localCopyTimeoutId);
+    this.localCopyTimeoutId = undefined;
+    if (
+      !this.localCopy ||
+      this.isShareView ||
+      this.lastChannel?.isOwner === false ||
+      !this.sourcesToSave ||
+      !this.sourceChanged()
+    ) {
+      return;
+    }
+    this.localCopy.write(this.channelId, {
+      base: this.sourcesStore.getCurrentVersionId(),
+      sources: this.sourcesToSave,
+    });
+  }
+
+  private clearLocalCopy(): void {
+    window.clearTimeout(this.localCopyTimeoutId);
+    this.localCopyTimeoutId = undefined;
+    this.localCopy?.clear(this.channelId);
+  }
+
   private async loadAndStoreSources(versionId?: string) {
     const sources = await this.loadSources(versionId);
     this.lastSource = JSON.stringify(sources);
