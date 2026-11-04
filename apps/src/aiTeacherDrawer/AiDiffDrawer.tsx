@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import Drawer from '@mui/material/Drawer';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
@@ -233,21 +234,22 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     // reflowing on every frame of the transition.
     //
     // The drawer's colors are its own, not the host page's: a dark Lab2 lab
-    // wraps its tree in data-theme="Dark", and inline we sit inside that
-    // wrapper rather than portaling to <body> past it. Light is the default
-    // theme (see colors_codeAi.css), so this is the appearance the drawer has
-    // everywhere else.
+    // wraps its tree in a Dark ThemeProvider, and inline we sit inside it
+    // rather than portaling to <body> past it. Light is the default theme
+    // (see colors_codeAi.css), so this is the appearance the drawer has
+    // everywhere else. The pin also reaches the drawer's tooltips.
     return (
-      <div
-        data-theme="Light"
-        className={style.inlineDrawer}
-        style={{width: chatIsOpen ? drawerWidth : 0}}
-        aria-hidden={!chatIsOpen}
-      >
-        <div className={style.inlineDrawerPanel} style={{width: drawerWidth}}>
-          {panel}
+      <ThemeProvider theme="Light">
+        <div
+          className={style.inlineDrawer}
+          style={{width: chatIsOpen ? drawerWidth : 0}}
+          aria-hidden={!chatIsOpen}
+        >
+          <div className={style.inlineDrawerPanel} style={{width: drawerWidth}}>
+            {panel}
+          </div>
         </div>
-      </div>
+      </ThemeProvider>
     );
   }
 
