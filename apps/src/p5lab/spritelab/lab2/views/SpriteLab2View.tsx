@@ -63,6 +63,7 @@ import {
   setSceneMenuActiveId,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
+import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockly/blockDefinitions/setSystemPrompt';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {activeCallout, calloutSelector} from '../callouts';
@@ -202,7 +203,7 @@ const PREVIEW_SHARE = 0.22;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 
-const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE];
+const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE, SET_SYSTEM_PROMPT_BLOCK_TYPE];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_PANE_WIDTH = 280;
