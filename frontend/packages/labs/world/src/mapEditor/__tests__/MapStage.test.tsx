@@ -18,6 +18,7 @@
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import {
   afterAll,
+  afterEach,
   beforeAll,
   beforeEach,
   describe,
@@ -482,6 +483,19 @@ describe('removing and placing', () => {
       expect(said()).toMatch(/^Took away a .* at column 5, row 2$/);
     });
 
+    it('puts the kind in hand down on Escape, and says so', () => {
+      const map = doc();
+      const onPutDown = vi.fn();
+      const {canvas, onDocChange} = mount(map, {
+        placing: 'actors/coin',
+        onPutDown,
+      });
+      fireEvent.keyDown(canvas, {key: 'Escape'});
+      expect(onPutDown).toHaveBeenCalledTimes(1);
+      expect(said()).toMatch(/^Put down /);
+      expect(onDocChange).not.toHaveBeenCalled();
+    });
+
     it('does nothing on Enter before the cursor is anywhere', () => {
       const map = doc();
       const {canvas, onDocChange} = mount(map, {placing: 'actors/coin'});
@@ -768,6 +782,14 @@ describe('a placement with a script', () => {
 });
 
 describe('the world, with nothing selected', () => {
+  // Unfolded, as a learner leaves it once they have opened it.
+  beforeEach(() => {
+    localStorage.setItem('world.mapInspectorFolded', 'false');
+  });
+  afterEach(() => {
+    localStorage.clear();
+  });
+
   const header = {
     name: 'Tapper',
     properties: [
@@ -1078,7 +1100,56 @@ describe('the camera list', () => {
   });
 });
 
+describe('the inspector with nothing selected, folded', () => {
+  afterEach(() => {
+    localStorage.clear();
+  });
+
+  it('starts folded to its head, and stays as it is left', () => {
+    const view = mount(doc());
+    expect(view.queryByTestId('map-inspector')).toBeNull();
+    fireEvent.click(view.getByRole('button', {name: 'Show Map properties'}));
+    expect(view.getByTestId('map-inspector')).toBeInTheDocument();
+    view.unmount();
+
+    const again = mount(doc());
+    expect(again.getByTestId('map-inspector')).toBeInTheDocument();
+    fireEvent.click(again.getByRole('button', {name: 'Hide Map properties'}));
+    expect(again.queryByTestId('map-inspector')).toBeNull();
+    expect(localStorage.getItem('world.mapInspectorFolded')).toBe('true');
+  });
+
+  it('is unfolded by a lesson pointing at the game’s properties', () => {
+    const view = mount(doc(), {
+      world: {
+        header: {name: 'Tapper', properties: []},
+        title: 'Main Screen',
+        onRename: vi.fn(),
+        onSetDefault: vi.fn(),
+      },
+    });
+    expect(view.getByTestId('folded-inspector')).toHaveAttribute(
+      'data-callout',
+      'world.properties',
+    );
+    let answer: unknown;
+    act(() => {
+      answer = reveal({kind: 'mapPanel', panel: 'inspector'});
+    });
+    expect(answer).toBe(true);
+    expect(view.getByTestId('world-inspector')).toBeInTheDocument();
+  });
+});
+
 describe('a level, with nothing selected', () => {
+  // Unfolded, as a learner leaves it once they have opened it.
+  beforeEach(() => {
+    localStorage.setItem('world.mapInspectorFolded', 'false');
+  });
+  afterEach(() => {
+    localStorage.clear();
+  });
+
   it('says nothing about a camera, because a map does not decide that', () => {
     // The field was "Camera follows", a dropdown of this map's placements. It is
     // gone: a map is data and where the view looks is logic, so a Viewport

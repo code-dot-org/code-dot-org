@@ -198,6 +198,12 @@
   color: var(--text-neutral-primary);
 }
 
+/* Folded down to its head: as wide as its words, so the map shows beside it. */
+.inspectorFolded {
+  width: auto;
+  align-self: flex-start;
+}
+
 .inspectorHead {
   display: flex;
   align-items: center;

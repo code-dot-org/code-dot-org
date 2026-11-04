@@ -184,6 +184,25 @@ type Picture = HTMLImageElement | HTMLCanvasElement;
  * owner about all of them instead of knowing which kind is which
  * (specs/BOXES_PLAN.md).
  */
+const INSPECTOR_FOLDED_KEY = 'world.mapInspectorFolded';
+
+/** Whether the map's own inspector starts folded; it does, unless unfolded. */
+const readInspectorFolded = (): boolean => {
+  try {
+    return localStorage.getItem(INSPECTOR_FOLDED_KEY) !== 'false';
+  } catch {
+    return true;
+  }
+};
+
+const keepInspectorFolded = (folded: boolean) => {
+  try {
+    localStorage.setItem(INSPECTOR_FOLDED_KEY, String(folded));
+  } catch {
+    // Kept for this visit only.
+  }
+};
+
 const BOX_OWNER = 'hasABox';
 /** Small enough to grab again, which is the only floor a box needs. */
 const MIN_BOX = 8;
@@ -309,6 +328,8 @@ export interface MapStageProps {
    * Undo and redo, which the editor keeps (`editHistory`); asked for by the
    * usual keys while the stage has focus.
    */
+  /** Escape on the stage puts the kind in hand back, as its palette tile does. */
+  onPutDown?: () => void;
   onUndo?: () => void;
   /**
    * The place's picture, painted plain a while after it last changed, for
@@ -520,6 +541,7 @@ export const MapStage = ({
   onDocChange,
   onDocPreview,
   onEditScript,
+  onPutDown,
   onUndo,
   onRedo,
   canDock = false,
@@ -861,6 +883,15 @@ export const MapStage = ({
   // (`callouts/places`, `map.layers`). The cameras were the other such
   // panel; a Viewport's camera is a row of its own inspector now.
   const [panels, setPanels] = useState({layers: false});
+  // Folded at first: open, it covers half a narrow stage, and what a learner
+  // came to the map for is on the map. Kept per browser once changed.
+  const [inspectorFolded, setInspectorFolded] = useState(readInspectorFolded);
+  /** What the folded inspector's head says: the open one's own title. */
+  const inspectorTitle = world ? (world.title ?? 'World') : mapTitle;
+  const foldInspector = (folded: boolean) => {
+    setInspectorFolded(folded);
+    keepInspectorFolded(folded);
+  };
   const togglePanel = (panel: 'layers') =>
     setPanels(open => ({...open, [panel]: !open[panel]}));
   /**
@@ -1044,6 +1075,10 @@ export const MapStage = ({
 
   useEffect(() => {
     setRevealer('mapPanel', ({panel}) => {
+      if (panel === 'inspector') {
+        setInspectorFolded(false);
+        return true;
+      }
       // An app has neither panel, so there is nothing to open.
       if (appBuilder) {
         return false;
@@ -2492,6 +2527,14 @@ export const MapStage = ({
       setPicking(null);
       return;
     }
+    // …then puts down the kind in hand, else a click on one already placed
+    // erases it…
+    if (event.key === 'Escape' && selected && onPutDown) {
+      event.preventDefault();
+      onPutDown();
+      say(`Put down ${kinds?.[selected]?.name ?? kindName(selected)}`);
+      return;
+    }
     // …and then closes an opened Scroll View.
     if (event.key === 'Escape' && openedScroll && !selected) {
       event.preventDefault();
@@ -3795,6 +3838,29 @@ export const MapStage = ({
         {!selectedActor &&
           !(inspectingLayer && inspectedLayer) &&
           !inspectedCamera &&
+          inspectorFolded && (
+            <div
+              className={`${styles.inspector} ${styles.inspectorFolded}`}
+              data-testid="folded-inspector"
+              {...(world ? {'data-callout': 'world.properties'} : {})}
+            >
+              <div className={styles.inspectorHead}>
+                <Typography variant="subtitle2" component="span">
+                  {inspectorTitle}
+                </Typography>
+                <IconAction
+                  label={`Show ${inspectorTitle} properties`}
+                  icon="chevron-up"
+                  aria-expanded={false}
+                  onClick={() => foldInspector(false)}
+                />
+              </div>
+            </div>
+          )}
+        {!selectedActor &&
+          !(inspectingLayer && inspectedLayer) &&
+          !inspectedCamera &&
+          !inspectorFolded &&
           world && (
             <WorldInspector
               // NOT re-keyed on the header, though that is the obvious way to
@@ -3809,11 +3875,13 @@ export const MapStage = ({
               onTheme={path => world.onTheme?.(path)}
               {...backgroundProps}
               isReadOnly={isReadOnly}
+              onFold={() => foldInspector(true)}
             />
           )}
         {!selectedActor &&
           !(inspectingLayer && inspectedLayer) &&
           !inspectedCamera &&
+          !inspectorFolded &&
           !world && (
             <MapInspector
               title={mapTitle}
@@ -3832,6 +3900,7 @@ export const MapStage = ({
               onTheme={path => commit({...mapRef.current, theme: path})}
               {...backgroundProps}
               isReadOnly={isReadOnly}
+              onFold={() => foldInspector(true)}
             />
           )}
         {/* `fields.narrow` below is what makes the design system's form widths

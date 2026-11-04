@@ -19,6 +19,7 @@ import {Typography} from '@mui/material';
 import fields from '../formFields.module.css';
 
 import {BackgroundColorField, BackgroundField} from './BackgroundField';
+import {IconAction} from './IconAction';
 import styles from './mapEditor.module.css';
 import type {MapSlotDoc} from './mapModel';
 import {ThemeField} from './ThemeField';
@@ -43,6 +44,8 @@ export interface MapInspectorProps {
   backgrounds?: readonly string[];
   onBackground?: (change: Partial<MapSlotDoc>) => void;
   isReadOnly: boolean;
+  /** Folds it down to its head, uncovering the map (`MapStage`). */
+  onFold?: () => void;
 }
 
 export const MapInspector = ({
@@ -56,6 +59,7 @@ export const MapInspector = ({
   backgrounds = [],
   onBackground,
   isReadOnly,
+  onFold,
 }: MapInspectorProps) => (
   <div
     className={`${styles.inspector} ${fields.narrow}`}
@@ -65,6 +69,14 @@ export const MapInspector = ({
       <Typography variant="subtitle2" component="span">
         {title}
       </Typography>
+      {onFold && (
+        <IconAction
+          label={`Hide ${title} properties`}
+          icon="chevron-down"
+          aria-expanded
+          onClick={onFold}
+        />
+      )}
     </div>
     {onBackground && (
       <BackgroundField

@@ -22,6 +22,7 @@ import fields from '../formFields.module.css';
 
 import {AngleInput} from './AngleInput';
 import {BackgroundColorField, BackgroundField} from './BackgroundField';
+import {IconAction} from './IconAction';
 import styles from './mapEditor.module.css';
 import type {MapSlotDoc} from './mapModel';
 import {countText} from './ruleCount';
@@ -90,6 +91,8 @@ export interface WorldInspectorProps {
    */
   onEnhance?: () => void;
   isReadOnly: boolean;
+  /** Folds it down to its head, uncovering the map (`MapStage`). */
+  onFold?: () => void;
 }
 
 const capitalize = (text: string) =>
@@ -132,6 +135,7 @@ export const WorldInspector = ({
   cameras,
   onEnhance,
   isReadOnly,
+  onFold,
 }: WorldInspectorProps) => {
   // What is being typed, committed on blur or Enter as a placement's fields
   // are.
@@ -372,6 +376,14 @@ export const WorldInspector = ({
         <Typography variant="subtitle2" component="span">
           {title}
         </Typography>
+        {onFold && (
+          <IconAction
+            label={`Hide ${title} properties`}
+            icon="chevron-down"
+            aria-expanded
+            onClick={onFold}
+          />
+        )}
       </div>
       <TextField
         name="world-name"

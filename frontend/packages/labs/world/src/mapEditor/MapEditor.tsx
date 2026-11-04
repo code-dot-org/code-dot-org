@@ -954,6 +954,7 @@ export const MapEditor = ({
           onDocChange={commit}
           onDocPreview={setLiveMap}
           placing={selected}
+          onPutDown={() => setSelected(null)}
           thumbnails={thumbnails}
           pictures={shown.pictures}
           schemas={shownSchemas}

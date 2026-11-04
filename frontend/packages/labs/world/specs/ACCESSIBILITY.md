@@ -382,6 +382,22 @@ below, and are listed last.
   never on screen together.
 - **Untested**: no screen reader; seen by mouse and a headless browser.
 
+### Putting a kind down, and folding the inspector
+
+- **Escape puts down the kind in hand**, from its tile or from the stage,
+  where it is said ("Put down Coin"). Before, only a second press on the
+  tile did, and the stage's Escape fell through to nothing.
+- **The inspector with nothing selected starts folded** to a head naming
+  what it is for (Main Screen, Map, Screen) and a button, "Show ⟨it⟩
+  properties", with `aria-expanded`. Open, the same place holds "Hide ⟨it⟩
+  properties". The choice is kept in the browser. A lesson's link to the
+  game's properties unfolds it.
+- **Folded, its fields are not in the page at all**, so a screen reader
+  walking the stage meets one button where it met the form. Whether that
+  reads as a disclosure is untested.
+- **Untested**: no screen reader; seen by keyboard in unit tests and by
+  mouse in a headless browser.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

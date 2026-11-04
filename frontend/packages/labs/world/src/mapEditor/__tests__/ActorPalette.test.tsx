@@ -71,6 +71,14 @@ describe('the Actor Palette', () => {
     expect(screen.getAllByRole('button', {name: 'Open'})).toHaveLength(1);
   });
 
+  it('puts it down on Escape', () => {
+    const props = renderPalette({selected: 'actors/player'});
+    fireEvent.keyDown(screen.getByRole('button', {name: 'Player'}), {
+      key: 'Escape',
+    });
+    expect(props.onSelect).toHaveBeenLastCalledWith(null);
+  });
+
   it('ends with Add New Actor', () => {
     const props = renderPalette();
     fireEvent.click(screen.getByRole('button', {name: 'Add New Actor'}));

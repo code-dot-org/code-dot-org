@@ -29,7 +29,7 @@ export type Reveal =
   /** A placement selected on the map, of a kind by name or any (`MapStage`). */
   | {kind: 'placement'; named?: string}
   /** The map's panel that starts hidden behind a button (`MapStage`). */
-  | {kind: 'mapPanel'; panel: 'layers'}
+  | {kind: 'mapPanel'; panel: 'layers' | 'inspector'}
   /** A toolbox drawer open, on a block or by name (`BlocklyFileEditor`). */
   | {kind: 'toolbox'; block?: string; drawer?: string};
 
@@ -124,7 +124,7 @@ const PLACES: Readonly<Record<string, PlaceOf>> = {
   ),
   'world.properties': () => ({
     mark: 'world.properties',
-    reveals: [theScreen],
+    reveals: [theScreen, {kind: 'mapPanel', panel: 'inspector'}],
     says:
       'The game’s own properties are beside the Main Screen, with nothing ' +
       'selected on it.',

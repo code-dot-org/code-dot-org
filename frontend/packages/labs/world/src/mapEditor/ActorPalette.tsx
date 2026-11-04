@@ -101,6 +101,12 @@ export const ActorPalette = ({
                 type="button"
                 className={styles.actor}
                 onClick={() => onSelect(inHand ? null : actor.path)}
+                onKeyDown={event => {
+                  if (event.key === 'Escape' && selected) {
+                    event.preventDefault();
+                    onSelect(null);
+                  }
+                }}
                 {...(onDragOut &&
                 !isReadOnly &&
                 isUnder(actor.purpose, 'interface')

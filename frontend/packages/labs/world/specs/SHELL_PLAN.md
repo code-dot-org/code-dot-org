@@ -102,8 +102,10 @@ The actor strip becomes a column down the left of the map editor:
   which files name it);
 - **Add New Actor** fixed at the bottom, opening the wizard.
 
-A second click on the actor in hand puts it down. The map's size moves to
-the toolbar (step 4).
+A second click on the actor in hand puts it down, and so does Escape, on
+its tile or on the stage. In hand, a click on a placement of the same kind
+takes it away, so a brush nobody can put down is an eraser waiting. The
+map's size moves to the toolbar (step 4).
 
 The tabs need to know what each actor is for. A stock actor says so
 (`StockActor.for`: `game`, `interface` or `both`), and importing one writes
