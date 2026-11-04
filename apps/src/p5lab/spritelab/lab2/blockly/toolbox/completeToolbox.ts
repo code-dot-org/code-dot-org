@@ -10,6 +10,7 @@ import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 
+import {filterToSupportedSharedBlocks} from './supportedSharedBlocks';
 import {ToolboxInfo} from './types';
 
 // Where the lab-owned blocks live in the complete toolbox.
@@ -69,11 +70,12 @@ const COMMON_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
 };
 
 /**
- * Every available block sorted by category: the level's DB block pool plus
- * the lab-owned and common blocks. Toolbox editing leads with the category
- * marker blocks; start mode appends the dynamic Variables/Functions
- * categories instead. Behaviors stays static: the dynamic flyout can't read
- * static contents from JSON toolboxes yet (getLevelToolboxBlocks/CT-8).
+ * Every available block sorted by category: the supported part of the
+ * level's DB block pool (supportedSharedBlocks.ts) plus the lab-owned and
+ * common blocks. Toolbox editing leads with the category marker blocks;
+ * start mode appends the dynamic Variables/Functions categories instead.
+ * Behaviors stays static: the dynamic flyout can't read static contents
+ * from JSON toolboxes yet (getLevelToolboxBlocks/CT-8).
  */
 export function getCompleteToolboxDefinition(
   sharedBlocksByCategory: {[category: string]: string[]},
@@ -83,7 +85,7 @@ export function getCompleteToolboxDefinition(
     ...(forToolboxEditing
       ? {Categories: [BLOCK_TYPES.category, BLOCK_TYPES.categoryDynamic]}
       : {}),
-    ...sharedBlocksByCategory,
+    ...filterToSupportedSharedBlocks(sharedBlocksByCategory),
   };
   [LAB_BLOCKS_BY_CATEGORY, COMMON_BLOCKS_BY_CATEGORY].forEach(byCategory =>
     Object.entries(byCategory).forEach(([name, types]) => {
