@@ -83,7 +83,7 @@ interface CachedAccessToken {
   reusableUntilLocal: number;
 }
 
-// Relies on the worker accepting an access token more than once before it expires; remove if it starts rejecting a reused token_id.
+// Relies on the worker accepting an access token more than once before it expires
 const cachedAccessTokens = new Map<string, CachedAccessToken>();
 const pendingAccessTokens = new Map<string, Promise<GatewayAccessToken>>();
 // Once Rails refuses reuse, concurrent callers stop sharing a fetch too, so each
@@ -94,7 +94,6 @@ let reuseRefusedByServer = false;
 // from cache to worker; callers re-check after anything slow, like a Turnstile challenge.
 export const ACCESS_TOKEN_REUSE_MARGIN_MS = 15_000;
 
-// Every field is sent to Rails, so any of them may become a claim.
 function accessTokenCacheKey(aichatContext: AichatContext): string {
   return JSON.stringify(aichatContext, Object.keys(aichatContext).sort());
 }
@@ -103,7 +102,6 @@ async function fetchAndCacheAccessToken(
   key: string,
   aichatContext: AichatContext
 ): Promise<GatewayAccessToken> {
-  // Read before the request: the access token is issued later, so its expiry is never overestimated.
   const requestedAt = Date.now();
   const accessToken = await fetchAccessToken(aichatContext);
   reuseRefusedByServer = !accessToken.reusable;
@@ -119,8 +117,8 @@ async function fetchAndCacheAccessToken(
   return accessToken;
 }
 
-// Concurrent callers with the same context share one request until Rails refuses
-// reuse; failures are not cached.
+// Concurrent callers with the same context share one request unless tokens become single-use again;
+// failures are not cached.
 export function getAccessToken(
   aichatContext: AichatContext = AichatContextManager.getContext()
 ): Promise<GatewayAccessToken> {

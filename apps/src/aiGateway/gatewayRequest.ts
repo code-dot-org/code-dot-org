@@ -12,10 +12,8 @@ import {fetchTurnstileToken} from './turnstile';
 const MAX_ATTEMPTS = 2;
 
 /**
- * Issues the access token, solves Turnstile under its mode, and calls `send`.
- * A reusable access token the worker rejects is replaced and the request sent
- * once more: the worker rejects an access token before it calls the model, so
- * resending duplicates nothing.
+ * Issues the access token, solves Turnstile, and calls `send`.
+ * Does one retry with a fresh access token if a reusable access token gets rejected.
  */
 export async function sendGatewayRequest(
   aichatContext: AichatContext,
@@ -31,8 +29,6 @@ export async function sendGatewayRequest(
     });
 
   for (let attempt = 1; ; attempt++) {
-    // Serialized, not parallel: the access token response carries the Turnstile mode
-    // that decides whether a challenge is needed at all.
     const issued = await issueAccessToken();
     const turnstileToken = await fetchTurnstileToken(
       issued.turnstileEnforcementMode
@@ -53,7 +49,7 @@ export async function sendGatewayRequest(
         throw error;
       }
       invalidateAccessToken(aichatContext, accessToken);
-      // Only an access token that may have come from the cache is worth a second try.
+      // The retry is just for reusable tokens since they risk being stale.
       if (!reusable || attempt === MAX_ATTEMPTS) {
         throw error;
       }
