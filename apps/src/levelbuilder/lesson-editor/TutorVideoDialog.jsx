@@ -1,4 +1,4 @@
-import {Accordion} from '@code-dot-org/component-library/accordion';
+import {MuiAccordion as Accordion} from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 import {Typography, Button as MuiButton} from '@mui/material';
