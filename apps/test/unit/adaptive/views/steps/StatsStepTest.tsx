@@ -9,12 +9,13 @@ import {
 import StatsStep from '@cdo/apps/adaptive/views/steps/StatsStep';
 
 const pathway = {
+  project: {templateLevel: 'tmpl', description: 'A site.'},
   skills: {build: {id: 'build', title: 'Build', description: 'B.'}},
   destinations: {north: {title: 'North', icon: 'wrench', color: 'orange'}},
   checkpoints: [
-    {id: 'a', skillIds: ['build']},
-    {id: 'n1', destination: 'north', skillIds: ['build']},
-    {id: 'n2', destination: 'north'},
+    {id: 'a', skillIds: ['build'], steps: []},
+    {id: 'n1', destination: 'north', skillIds: ['build'], steps: []},
+    {id: 'n2', destination: 'north', steps: []},
   ],
 } as unknown as Pathway;
 

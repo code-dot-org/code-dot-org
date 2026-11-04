@@ -4,7 +4,8 @@
 
 import {hashString} from '@cdo/apps/utils';
 
-import {Checkpoint} from '../types';
+import {allCheckpoints} from '../schema/helpers';
+import {Checkpoint, Pathway} from '../types';
 
 export type CheckpointStatus =
   | 'locked'
@@ -118,12 +119,34 @@ export function stepIdToResume(
   )?.id;
 }
 
-/** Seconds the student has spent on steps, over every step with progress. */
-export function totalTimeSpent(progress: Progress): number {
-  return Object.values(progress.steps).reduce(
-    (sum, step) => sum + (step.timeSpent ?? 0),
-    0
-  );
+/**
+ * Seconds the student has spent on steps. A level step's time is its
+ * level's, so steps that play the same level, as the project screen and a
+ * finish checkpoint's look at the project do, count it once.
+ */
+export function totalTimeSpent(progress: Progress, pathway: Pathway): number {
+  const levelOf = new Map<string, number>();
+  for (const checkpoint of allCheckpoints(pathway)) {
+    for (const step of checkpoint.steps) {
+      if (step.kind === 'level' && step.levelProperties) {
+        levelOf.set(step.id, step.levelProperties.id);
+      }
+    }
+  }
+  const template = pathway.project.levelProperties?.id;
+  if (template !== undefined) levelOf.set(PROJECT_STEP_ID, template);
+
+  const counted = new Set<number>();
+  let total = 0;
+  for (const [stepId, step] of Object.entries(progress.steps)) {
+    const level = levelOf.get(stepId);
+    if (level !== undefined) {
+      if (counted.has(level)) continue;
+      counted.add(level);
+    }
+    total += step.timeSpent ?? 0;
+  }
+  return total;
 }
 
 /** Whether the student finished the checkpoint: its last visible step is complete. */

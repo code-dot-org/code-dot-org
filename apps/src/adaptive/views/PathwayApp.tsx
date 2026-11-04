@@ -121,7 +121,10 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   } else {
     // No URL checkpoint: auto-start only when the student hasn't begun yet.
     // A step with generatedInstructions but no status doesn't count as started.
-    const hasProgress = Object.values(progress.steps).some(s => s.status);
+    // Only a checkpoint's steps count; time on the project screen does not.
+    const hasProgress = pathway.checkpoints.some(c =>
+      c.steps.some(s => progress.steps[s.id]?.status)
+    );
     if (!hasProgress) {
       const firstCp = pathway.checkpoints.find(
         c => statusMap[c.id] === 'available'
@@ -361,7 +364,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             stepId: cp ? stepIdToResume(cp, progress) : undefined,
           });
         }}
-        timeSpentSeconds={totalTimeSpent(progress)}
+        timeSpentSeconds={totalTimeSpent(progress, pathway)}
         onWorkOnProject={openProject}
         hasSkippedCheckpoints={hasSkippedCheckpoints}
       />

@@ -107,16 +107,53 @@ describe('routeStatusMap without evidence', () => {
 });
 
 describe('totalTimeSpent', () => {
+  const level = (id: string, levelId: number) => ({
+    id,
+    title: id,
+    kind: 'level',
+    level: `level-${levelId}`,
+    levelProperties: {id: levelId, appName: 'weblab2'},
+  });
+  const pathway = {
+    project: {
+      templateLevel: 'tmpl',
+      levelProperties: {id: 7, appName: 'weblab2'},
+    },
+    checkpoints: [
+      {id: 'intro', steps: [panels('a'), panels('b'), level('try', 42)]},
+    ],
+    finish: {checkpoint: {id: 'wrap-up', steps: [level('showcase', 7)]}},
+  } as unknown as Pathway;
+
   it('sums the time on every step', () => {
-    expect(totalTimeSpent(EMPTY_PROGRESS)).toBe(0);
+    expect(totalTimeSpent(EMPTY_PROGRESS, pathway)).toBe(0);
     expect(
-      totalTimeSpent({
-        steps: {
-          a: {timeSpent: 90, status: 'complete'},
-          b: {timeSpent: 30, status: 'started'},
+      totalTimeSpent(
+        {
+          steps: {
+            a: {timeSpent: 90, status: 'complete'},
+            b: {timeSpent: 30, status: 'started'},
+            try: {timeSpent: 10, status: 'started'},
+          },
         },
-      })
-    ).toBe(120);
+        pathway
+      )
+    ).toBe(130);
+  });
+
+  it('counts a level once when more than one step plays it', () => {
+    expect(
+      totalTimeSpent(
+        {
+          steps: {
+            a: {timeSpent: 90, status: 'complete'},
+            project: {timeSpent: 600, status: 'started'},
+            showcase: {timeSpent: 600, status: 'complete'},
+          },
+        },
+        pathway
+      )
+    ).toBe(690);
   });
 });
 
@@ -429,15 +466,13 @@ describe('useProgress', () => {
     expect(reportLevelStep).not.toHaveBeenCalled();
   });
 
-  it("reports level steps on their level and never the project screen's", async () => {
+  it('reports level steps on their level', async () => {
     const store = fakeStore();
     const {result, reportLevelStep} = await renderProgress(store);
 
     act(() => result.current.startStep(sandbox));
     act(() => result.current.leaveStep(sandbox, 2000));
     act(() => result.current.completeStep(sandbox, 500));
-    act(() => result.current.startStep(project));
-    act(() => result.current.completeStep(project, 500));
 
     expect(reportLevelStep.mock.calls).toEqual([
       [42, 'weblab2', TestResults.LEVEL_STARTED, 0],
@@ -447,7 +482,25 @@ describe('useProgress', () => {
     expect(store.saveStep).not.toHaveBeenCalled();
     expect(result.current.statusMap.intro).toBe('complete');
     expect(result.current.progress?.steps.try.timeSpent).toBe(3);
-    expect(result.current.progress?.steps.project).toBeUndefined();
+  });
+
+  it("keeps the project screen's time on its level, never a start or a pass", async () => {
+    const store = fakeStore();
+    const {result, reportLevelStep} = await renderProgress(store);
+
+    act(() => result.current.startStep(project));
+    act(() => result.current.leaveStep(project, 2000));
+    act(() => result.current.completeStep(project, 500));
+
+    expect(reportLevelStep.mock.calls).toEqual([
+      [42, 'weblab2', TestResults.LEVEL_STARTED, 2000],
+      [42, 'weblab2', TestResults.LEVEL_STARTED, 500],
+    ]);
+    expect(store.saveStep).not.toHaveBeenCalled();
+    expect(result.current.progress?.steps.project).toEqual({
+      status: 'started',
+      timeSpent: 3,
+    });
   });
 
   it('logs a failed level report', async () => {

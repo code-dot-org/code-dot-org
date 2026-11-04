@@ -80,8 +80,10 @@ jest.mock('@cdo/apps/adaptive/views/ProjectCard', () => ({
   __esModule: true,
   default: () => <div>project card</div>,
 }));
+// The URL may hide the title bar's totals; one test sets it.
+let mockHideStats = false;
 jest.mock('@cdo/apps/adaptive/views/map/mapSettings', () => ({
-  resolveMapSettings: () => ({}),
+  resolveMapSettings: () => ({hideStats: mockHideStats}),
 }));
 jest.mock('@cdo/apps/lab2/hooks/useThemeSetting', () => ({
   __esModule: true,
@@ -298,13 +300,24 @@ describe('MapScreen tour', () => {
 
   describe('title bar totals', () => {
     beforeEach(() => localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1'));
+    afterEach(() => {
+      mockHideStats = false;
+    });
+
+    it('leaves them out when the URL asks', () => {
+      mockHideStats = true;
+      renderMapScreen({timeSpentSeconds: 250});
+      expect(screen.queryByLabelText('Time spent: 4m')).toBeNull();
+    });
 
     it('shows the time spent in minutes, with hours once past one', () => {
       const {unmount} = renderMapScreen({timeSpentSeconds: 250});
-      expect(screen.getByLabelText('Time spent: 4m')).toBeTruthy();
+      expect(screen.getByRole('button', {name: 'Time spent: 4m'})).toBeTruthy();
       unmount();
       renderMapScreen({timeSpentSeconds: 3900});
-      expect(screen.getByLabelText('Time spent: 1h05m')).toBeTruthy();
+      expect(
+        screen.getByRole('button', {name: 'Time spent: 1h05m'})
+      ).toBeTruthy();
     });
 
     it('shows a ring per skill with its progress', () => {
@@ -327,7 +340,7 @@ describe('MapScreen tour', () => {
         statusMap: {'cp-1': 'complete', 'cp-2': 'locked'},
       });
       expect(
-        screen.getByLabelText('Build: 1 of 2 checkpoints complete')
+        screen.getByRole('button', {name: 'Build: 1 of 2 checkpoints complete'})
       ).toBeTruthy();
     });
   });
