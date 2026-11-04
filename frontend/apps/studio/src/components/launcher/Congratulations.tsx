@@ -1,6 +1,6 @@
 import {Button, Typography} from '@mui/material';
 import classNames from 'classnames';
-import {useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
@@ -25,6 +25,11 @@ export default function Congratulations({
   onChooseAnother,
 }: CongratulationsProps) {
   const [imageFailed, setImageFailed] = useState(false);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+
+  // The screen replaces the launcher within the same page, so nothing
+  // announces it unless focus moves to it.
+  useEffect(() => headingRef.current?.focus(), []);
 
   return (
     <div className={screen.page}>
@@ -44,7 +49,13 @@ export default function Congratulations({
             />
           </div>
         )}
-        <Typography variant="h2" component="h1" className={styles.heading}>
+        <Typography
+          ref={headingRef}
+          variant="h2"
+          component="h1"
+          tabIndex={-1}
+          className={styles.heading}
+        >
           Congratulations!
         </Typography>
         <Typography variant="body1" className={styles.message}>

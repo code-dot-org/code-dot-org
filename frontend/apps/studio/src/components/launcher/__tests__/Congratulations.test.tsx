@@ -36,6 +36,19 @@ describe('Congratulations', () => {
     expect(onChooseAnother).toHaveBeenCalledTimes(1);
   });
 
+  it('moves focus to its heading', () => {
+    render(
+      <Congratulations
+        curriculum={oceans}
+        onTryAgain={vi.fn()}
+        onChooseAnother={vi.fn()}
+      />,
+    );
+    expect(
+      screen.getByRole('heading', {level: 1, name: 'Congratulations!'}),
+    ).toHaveFocus();
+  });
+
   it('leaves privacy policy to launcher and offline headers', () => {
     render(
       <Congratulations

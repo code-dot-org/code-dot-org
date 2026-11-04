@@ -213,10 +213,20 @@ class MainActivity : BridgeActivity() {
                     view.post { resetCourse(course, next) }
                     return true
                 }
+                // A link in another site's iframe can navigate the page too,
+                // so the congratulations, whose Try again resets a course,
+                // opens only for a page load the page started itself.
                 if (SitePolicy.isCertificatePage(url)) {
-                    pendingLandingUrl =
-                        "${bridge.appUrl}$FINISHED_FRAGMENT${SitePolicy.finishedCourse(url)}"
-                    view.post { goHome() }
+                    val landing = "${bridge.appUrl}$FINISHED_FRAGMENT${SitePolicy.finishedCourse(url)}"
+                    val check = startedNavigationCheck(url.toString(), request.isRedirect)
+                    view.post {
+                        view.evaluateJavascript(check) { started ->
+                            if (started == "true") {
+                                pendingLandingUrl = landing
+                                goHome()
+                            }
+                        }
+                    }
                     return true
                 }
                 // A curriculum opened from the landing page can take a while
@@ -510,6 +520,18 @@ class MainActivity : BridgeActivity() {
         CookieManager.getInstance().flush()
     }
 
+    // Takes the page script's record of the last page load the page started:
+    // [target] itself, or the page in front, a redirect stub that led to it,
+    // or for a server redirect any. A WebView without the Navigation API
+    // keeps no record and is trusted.
+    private fun startedNavigationCheck(target: String, redirect: Boolean): String =
+        "(function () {" +
+            "var key = 'codeai_started_navigation', started = null;" +
+            "try { started = sessionStorage.getItem(key); sessionStorage.removeItem(key); } catch (e) {}" +
+            "return !window.navigation || started === ${JSONObject.quote(target)}" +
+            " || started === location.href || ($redirect && started !== null);" +
+            "})()"
+
     private fun rememberPage(url: String?) {
         if (url == null) {
             return
@@ -519,7 +541,11 @@ class MainActivity : BridgeActivity() {
             return
         }
         if (isBundledPage(url)) {
-            prefs.edit { remove(LAST_PAGE_KEY) }
+            // On a fresh start the landing page loads first, under the page
+            // it then reopens; the saved page stays until that one commits.
+            if (resumeUrl == null) {
+                prefs.edit { remove(LAST_PAGE_KEY) }
+            }
         } else if (SitePolicy.isSitePage(url) && url != HOME_URL) {
             prefs.edit { putString(LAST_PAGE_KEY, url) }
             SitePolicy.projectEditorLab(url)?.let { lab ->

@@ -87,6 +87,18 @@ export default function App() {
   const router = useRouter();
   const finishedCourse = finishedCourseIn(hash);
   const [iconsLoaded, setIconsLoaded] = useState(false);
+  // On leaving the congratulations, by its button or by Back, focus returns
+  // to the finished curriculum's card, or the first card when it is unknown.
+  const [shownCourse, setShownCourse] = useState(finishedCourse);
+  const [focusedCurriculumId, setFocusedCurriculumId] = useState<string>();
+  if (finishedCourse !== shownCourse) {
+    setShownCourse(finishedCourse);
+    setFocusedCurriculumId(
+      finishedCourse === null && shownCourse !== null
+        ? (curriculumForCourse(shownCourse) ?? CURRICULA[0]).id
+        : undefined,
+    );
+  }
 
   useEffect(() => {
     let mounted = true;
@@ -114,7 +126,13 @@ export default function App() {
       />
     );
   }
-  return <Launcher curricula={CURRICULA} onOpen={openCurriculum} />;
+  return (
+    <Launcher
+      curricula={CURRICULA}
+      onOpen={openCurriculum}
+      focusedCurriculumId={focusedCurriculumId}
+    />
+  );
 }
 
 export const Route = createFileRoute('/launcher')({

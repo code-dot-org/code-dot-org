@@ -64,6 +64,13 @@ class PageInjectorTest {
     }
 
     @Test
+    fun redirectStub_turnsAwayPageScript() {
+        server.enqueue(MockResponse().setResponseCode(302).setHeader("Location", "/congrats/oceans"))
+        val body = bodyOf(injector.intercept(request("$origin/api/hour/finish/oceans")))
+        assertTrue(body, body.contains("window.__codeaiHideSiteChrome = true;"))
+    }
+
+    @Test
     fun redirectOffTheSite_isLeftToTheWebView() {
         server.enqueue(MockResponse().setResponseCode(302).setHeader("Location", "https://example.com/"))
         assertNull(injector.intercept(request("$origin/out")))

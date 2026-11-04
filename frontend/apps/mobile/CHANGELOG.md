@@ -54,6 +54,8 @@ opens each in one WebView on studio.code.org.
 
 - Signed-out progress survives app restarts and updates, and a fresh start
   reopens the last page shown, from which Back returns to the landing page.
+  The app forgets that page only once another has opened, so closing it
+  during a fresh start keeps it.
   Free-play labs reopen the last project.
 - Opening a curriculum that starts on a level (Flappy Bird Code, Code with
   Anna and Elsa, Minecraft's Hero Journey) continues at the first level not
@@ -77,10 +79,13 @@ opens each in one WebView on studio.code.org.
 
 - While the loading screen shows, screen readers and keyboards reach only it,
   starting on its home control, not the page underneath.
+- The congratulations take focus at their heading, and the list gives it
+  back to the curriculum's Try Now.
 - Try Now's accessible name keeps its visible label, as in "Try Now: AI for
   Oceans".
 - Only the page itself, not an iframe, can go home or finish a curriculum,
-  and only the landing page can reset one or show its congratulations. A
+  and only the landing page can reset one or show its congratulations, which
+  open only for a certificate page the page itself went to. A
   form, or a redirect after one, cannot take the page to another site either,
   and a studio.code.org address on another port counts as another site.
 - Pages get no camera, microphone or location, and a file input opens

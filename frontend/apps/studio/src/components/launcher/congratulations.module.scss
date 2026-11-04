@@ -25,6 +25,11 @@
 
 .heading {
   margin: 0 0 0.25em;
+
+  // Focused only to announce the screen; it takes no input.
+  &:focus {
+    outline: none;
+  }
 }
 
 .message {

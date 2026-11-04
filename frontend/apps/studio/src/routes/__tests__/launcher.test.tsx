@@ -83,7 +83,28 @@ describe('/launcher in the mobile build', () => {
     expect(
       await screen.findByRole('heading', {level: 1, name: 'CodeAI'}),
     ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Try Now: AI for Oceans'}),
+    ).toHaveFocus();
     expect(fetchAuthOutcome).not.toHaveBeenCalled();
+  });
+
+  it('should focus first card on return from unknown curriculum', async () => {
+    renderApp(['/launcher', '/launcher#finished=']);
+    await userEvent.click(
+      await screen.findByRole('button', {name: 'Choose another curriculum'}),
+    );
+    expect(
+      await screen.findByRole('button', {
+        name: 'Try Now: Pre-Reader Express Course',
+      }),
+    ).toHaveFocus();
+  });
+
+  it('should leave focus alone on a fresh launcher', async () => {
+    renderApp(['/launcher']);
+    await screen.findByRole('heading', {level: 1, name: 'CodeAI'});
+    expect(document.body).toHaveFocus();
   });
 });
 

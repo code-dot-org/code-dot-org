@@ -115,7 +115,10 @@ internal class PageInjector(
     }
 
     private fun replaceWith(url: String, target: String): WebResourceResponse {
-        val html = "<!DOCTYPE html><script>location.replace(${JSONObject.quote(target)});</script>"
+        // Set as the page script's guard: a stub has no site chrome, and the
+        // script would drop the record of the page load that led to it.
+        val html = "<!DOCTYPE html><script>window.__codeaiHideSiteChrome = true;" +
+            "location.replace(${JSONObject.quote(target)});</script>"
         redirectStubs.add(url)
         return WebResourceResponse(
             "text/html",

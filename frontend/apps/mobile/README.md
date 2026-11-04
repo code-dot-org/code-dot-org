@@ -73,6 +73,16 @@ Try again, which forgets that curriculum's progress (below) and opens its
 first level, and Choose another curriculum, which returns to the list. The app opens the fragment itself
 rather than the page pushing it, because Chromium's Back skips history
 entries a page adds without a tap, and Back would then leave the app.
+Focus moves to the congratulations heading, and back to the curriculum's Try
+Now on return to the list.
+
+A link in another site's iframe can take the page to a certificate page too,
+so the app congratulates only when the page started that load itself. The
+page script records each page load its page starts, as the Navigation API's
+`navigate` event reports it, which never fires for a load another site's
+iframe starts, and `MainActivity.kt` checks the record before going on: it
+must name the certificate page, or the page that redirected to it. A
+WebView without the Navigation API keeps no record and is trusted.
 
 `PageInjector.kt` fetches each studio.code.org page for the WebView and puts
 the script at the top of `<head>`, the way content blockers apply cosmetic
