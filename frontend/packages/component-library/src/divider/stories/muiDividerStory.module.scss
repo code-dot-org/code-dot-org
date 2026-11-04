@@ -1,0 +1,11 @@
+// Layout boxes the legacy stories set through style; the twins must render the same boxes.
+.dividerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+// No token equals the legacy story's gray, and the twins must match its pixels.
+.marginBox {
+  background: #646464;
+}
