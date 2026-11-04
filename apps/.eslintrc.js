@@ -100,6 +100,7 @@ module.exports = {
     ...rulesToEventuallyReenable,
     'babel/semi': 'error', // autofixable
     'cdo-custom-rules/style-blocks-below-class': 'error',
+    'cdo-custom-rules/error-subclass-prototype': 'error',
     'mocha/no-exclusive-tests': 'error',
     'jsx-a11y/label-has-associated-control': [
       'error',

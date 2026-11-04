@@ -46,6 +46,8 @@ export class AskAiError extends Error {
         ? 'The question failed the safety check'
         : 'The answer failed the safety check'
     );
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'AskAiError';
   }
 }
@@ -53,6 +55,8 @@ export class AskAiError extends Error {
 class AskAiTimeoutError extends Error {
   constructor() {
     super('The AI took too long to answer.');
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'AskAiTimeoutError';
   }
 }

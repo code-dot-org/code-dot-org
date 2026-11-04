@@ -1,5 +1,6 @@
 module.exports = {
   rules: {
+    'error-subclass-prototype': require('./rules/error-subclass-prototype'),
     'style-blocks-below-class': {
       meta: {
         fixable: 'code',
