@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T15:21:41.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Sayings",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Read the starter code provided to you. Ask AI Tutor to explain any parts you don’t yet understand.\r\n- Complete the `tokenize` function to tokenize the text in your corpus. Treat words and punctuation as separate tokens.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember that `r\"\\w+|[^\\w\\s]\"` is a regular expression that can tokenize both words and punctuation separately. Ask AI Tutor if you need to remember how to use it.\r\n",
+    "bubble_choice_description": "A collection of short sayings that express some truth.",
+    "thumbnail_url": "https://images.code.org/78e6d7abca76be9df4234d830f8a6240-sayings.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+        "hint": "If a student is wondering how to tokenize words using a regular expression, suggest `re.findall` as opposed to other methods. They have only learned to use `re.findall`."
+      }
+    },
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson13-choice1-2026 + template",
+    "encrypted_exemplar_sources": "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\nm3aWnP8GErfrPolfK0GZM+Y5VA==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 15:24:09 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:26:43 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:27:25 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
