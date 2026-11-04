@@ -182,7 +182,6 @@ const baseComponents = (
   em: muiText('em', 'em'),
   a: makeLink(bodyVariant),
   p: makeParagraph(bodyVariant),
-  // `---` renders as the design-system MUI divider.
   hr: ({className, style}) => <Divider className={className} style={style} />,
 });
 
