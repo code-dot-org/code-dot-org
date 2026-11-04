@@ -63,6 +63,9 @@ below, and are listed last.
   its row for a field or a question in place; where focus goes when the
   row comes back, and after the property is gone, is not managed.
   (2.4.3 Focus Order.)
+  CLOSED: Rename puts focus in the name field and Delete on Cancel; backing
+  out returns it to the button pressed. A saved rename brings focus to the
+  row under its new name, and a delete to New property.
 - **The preview is a picture with a name**, and says nothing of what the
   actor looks like beyond it.
 - **The "+" between sections**, which is now how an actor's drawing, its own
@@ -104,6 +107,8 @@ below, and are listed last.
   reader is not told; nor is it told how many the box is hiding.
   (4.1.3 Status Messages.) Wanted: the box's label, or a line beside it,
   saying how many more it shows.
+  CLOSED: its label ends with the count ("(30 more)"), and ticking or
+  clearing it says "30 more shown" or "30 hidden".
 - **The fold is not redone.** The checklist decides which groups are shut
   when it first draws; "Show everything" then adds up to 29 rows open,
   which is a long walk by Tab.

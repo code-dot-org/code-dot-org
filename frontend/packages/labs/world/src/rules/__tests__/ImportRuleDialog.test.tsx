@@ -284,8 +284,19 @@ describe('the shelf opened for a purpose', () => {
     expect(tile('health')).toBe(1);
     expect(tile('gravity')).toBe(0);
 
-    fireEvent.click(screen.getByRole('checkbox', {name: /Show everything/}));
+    // How many more it shows is in its name, and said when it is ticked.
+    const box = screen.getByRole('checkbox', {
+      name: /Show everything.*\(\d+ more\)/,
+    }) as HTMLInputElement;
+    const count = Number(
+      /\((\d+) more\)/.exec(box.labels?.[0]?.textContent ?? '')?.[1],
+    );
+    expect(count).toBeGreaterThan(0);
+    const before = screen.getAllByRole('button').length;
+    fireEvent.click(box);
     expect(tile('gravity')).toBe(1);
+    expect(screen.getAllByRole('button').length - before).toBe(count);
+    expect(screen.getByRole('status')).toHaveTextContent(`${count} more shown`);
   });
 
   it('lists everything, and has no box, when opened for nothing', () => {

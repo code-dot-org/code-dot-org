@@ -7,7 +7,13 @@
 // name nothing afterwards.
 
 import {Button, Typography} from '@mui/material';
-import {useState, type ChangeEvent, type KeyboardEvent} from 'react';
+import {
+  useEffect,
+  useRef,
+  useState,
+  type ChangeEvent,
+  type KeyboardEvent,
+} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
@@ -38,6 +44,11 @@ export interface SelfPropertyProps {
   isReadOnly: boolean;
   /** The project's pictures, for a picture property's default. */
   pictures?: readonly string[];
+  /**
+   * The row is going: renamed, so it comes back under another name, or
+   * deleted. Where focus goes next is the caller's, which outlives it.
+   */
+  onGone?: (renamedTo?: string) => void;
 }
 
 const capitalize = (text: string) =>
@@ -53,8 +64,23 @@ export const SelfProperty = ({
   onProject,
   isReadOnly,
   pictures,
+  onGone,
 }: SelfPropertyProps) => {
   const [mode, setMode] = useState<'show' | 'rename' | 'delete'>('show');
+  // Each mode draws the row anew, so focus is put where it belongs after:
+  // into the name field, on Cancel, or back on the button that was pressed.
+  const root = useRef<HTMLDivElement>(null);
+  const [focus, setFocus] = useState<string>();
+  useEffect(() => {
+    if (focus) {
+      root.current?.querySelector<HTMLElement>(focus)?.focus();
+      setFocus(undefined);
+    }
+  }, [focus]);
+  const back = (from: 'rename' | 'delete') => {
+    setMode('show');
+    setFocus(`[data-act="${from}"]`);
+  };
   const [draft, setDraft] = useState(property.name);
   const problem =
     draft.trim() === property.name
@@ -67,11 +93,14 @@ export const SelfProperty = ({
         onProject(
           renameProperty(source, fileId, modulePath, property.name, draft),
         );
+        setMode('show');
+        onGone?.(draft.trim());
+        return;
       }
-      setMode('show');
+      back('rename');
     };
     return (
-      <div className={styles.add}>
+      <div ref={root} className={styles.add}>
         <TextField
           name={`self-${property.name}-rename`}
           label={`Rename ${property.name}`}
@@ -84,7 +113,7 @@ export const SelfProperty = ({
             if (event.key === 'Enter') {
               save();
             } else if (event.key === 'Escape') {
-              setMode('show');
+              back('rename');
             }
           }}
           errorMessage={problem}
@@ -99,7 +128,7 @@ export const SelfProperty = ({
           >
             Save name
           </Button>
-          <Button variant="text" size="small" onClick={() => setMode('show')}>
+          <Button variant="text" size="small" onClick={() => back('rename')}>
             Cancel
           </Button>
         </div>
@@ -113,6 +142,7 @@ export const SelfProperty = ({
     );
     return (
       <div
+        ref={root}
         className={styles.add}
         role="group"
         aria-label={`Delete ${property.name}`}
@@ -128,7 +158,7 @@ export const SelfProperty = ({
             color="secondary"
             size="small"
             onClick={() => {
-              setMode('show');
+              onGone?.();
               onProject(
                 deletePropertyInProject(
                   source,
@@ -141,7 +171,12 @@ export const SelfProperty = ({
           >
             Delete
           </Button>
-          <Button variant="text" size="small" onClick={() => setMode('show')}>
+          <Button
+            variant="text"
+            size="small"
+            data-cancel
+            onClick={() => back('delete')}
+          >
             Cancel
           </Button>
         </div>
@@ -150,7 +185,7 @@ export const SelfProperty = ({
   }
 
   return (
-    <div className={styles.property}>
+    <div ref={root} className={styles.property}>
       <ValueField
         name={`self-${property.name}`}
         label={capitalize(property.name)}
@@ -170,9 +205,11 @@ export const SelfProperty = ({
             variant="text"
             size="extraSmall"
             aria-label={`Rename ${property.name}`}
+            data-act="rename"
             onClick={() => {
               setDraft(property.name);
               setMode('rename');
+              setFocus('input');
             }}
           >
             Rename
@@ -181,7 +218,11 @@ export const SelfProperty = ({
             variant="text"
             size="extraSmall"
             aria-label={`Delete ${property.name}`}
-            onClick={() => setMode('delete')}
+            data-act="delete"
+            onClick={() => {
+              setMode('delete');
+              setFocus('[data-cancel]');
+            }}
           >
             Delete
           </Button>

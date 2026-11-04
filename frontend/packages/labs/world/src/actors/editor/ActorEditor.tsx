@@ -268,6 +268,28 @@ export const ActorEditor = (props: CustomEditorProps) => {
   const {promptForName, confirm} = usePrompts();
   const [effectAt, setEffectAt] = useState<HTMLElement | null>(null);
   const [newName, setNewName] = useState('');
+  // A property row gone from under focus: renamed, focus goes to the row
+  // under its new name; deleted, to New property. Waited for until the
+  // project has changed, which is the edit arriving.
+  const selfGroup = useRef<HTMLElement>(null);
+  const [selfFocus, setSelfFocus] = useState<{
+    renamedTo?: string;
+    on: string;
+  }>();
+  useEffect(() => {
+    if (!selfFocus || selfFocus.on === contents) {
+      return;
+    }
+    const target = selfFocus.renamedTo
+      ? selfGroup.current?.querySelector<HTMLElement>(
+          `[aria-label="Rename ${CSS.escape(selfFocus.renamedTo)}"]`,
+        )
+      : selfGroup.current?.querySelector<HTMLElement>(
+          'input[name="self-new-name"]',
+        );
+    target?.focus();
+    setSelfFocus(undefined);
+  }, [selfFocus, contents]);
   const [newType, setNewType] = useState('number');
 
   const choices = useMemo(() => actorTraitChoices(files), [files]);
@@ -1098,7 +1120,11 @@ export const ActorEditor = (props: CustomEditorProps) => {
                   A record is fields to keep and find, with nowhere to be drawn.
                 </Typography>
               </section>
-              <section className={styles.group} aria-label="Self">
+              <section
+                ref={selfGroup}
+                className={styles.group}
+                aria-label="Self"
+              >
                 <Typography variant="body2" component="h3">
                   Self
                 </Typography>
@@ -1118,6 +1144,9 @@ export const ActorEditor = (props: CustomEditorProps) => {
                       replaceSources({...currentSources, source})
                     }
                     isReadOnly={isReadOnly}
+                    onGone={renamedTo =>
+                      setSelfFocus({renamedTo, on: contents})
+                    }
                   />
                 ))}
                 {!isReadOnly && (

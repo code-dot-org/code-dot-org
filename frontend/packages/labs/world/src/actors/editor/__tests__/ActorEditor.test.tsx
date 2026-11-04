@@ -408,6 +408,71 @@ describe('the Actor Editor', () => {
     SOURCE = shipped;
   });
 
+  it('keeps focus with a property through a rename and a delete', () => {
+    const withProperties = (...names: string[]) =>
+      JSON.stringify({
+        ...JSON.parse(PLAYER),
+        properties: names.map(name => ({
+          name,
+          type: 'number',
+          access: 'writable',
+        })),
+      });
+    const shipped = SOURCE;
+    SOURCE = {
+      ...SOURCE,
+      files: {
+        ...SOURCE.files,
+        [PLAYER_ID]: {
+          ...SOURCE.files[PLAYER_ID],
+          contents: withProperties('lives'),
+        },
+      },
+    };
+    const view = open(withProperties('lives'));
+    const reopen = (contents: string) =>
+      view.rerender(
+        <ActorFileEditor
+          fileId={PLAYER_ID}
+          initialContents={contents}
+          language="actor"
+          isReadOnly={false}
+          onChange={onChange}
+        />,
+      );
+
+    // In place: the field, then back on Rename; Cancel, then back on Delete.
+    fireEvent.click(screen.getByRole('button', {name: 'Rename lives'}));
+    expect(screen.getByLabelText('Rename lives')).toHaveFocus();
+    fireEvent.keyDown(screen.getByLabelText('Rename lives'), {key: 'Escape'});
+    expect(screen.getByRole('button', {name: 'Rename lives'})).toHaveFocus();
+    fireEvent.click(screen.getByRole('button', {name: 'Delete lives'}));
+    expect(screen.getByRole('button', {name: 'Cancel'})).toHaveFocus();
+    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+    expect(screen.getByRole('button', {name: 'Delete lives'})).toHaveFocus();
+
+    // Renamed, the row comes back under its new name, and focus with it.
+    fireEvent.click(screen.getByRole('button', {name: 'Rename lives'}));
+    fireEvent.change(screen.getByLabelText('Rename lives'), {
+      target: {value: 'hearts'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Save name'}));
+    reopen(withProperties('hearts'));
+    expect(screen.getByRole('button', {name: 'Rename hearts'})).toHaveFocus();
+
+    // Deleted, focus goes to New property.
+    fireEvent.click(screen.getByRole('button', {name: 'Delete hearts'}));
+    fireEvent.click(
+      within(screen.getByRole('group', {name: 'Delete hearts'})).getByRole(
+        'button',
+        {name: 'Delete'},
+      ),
+    );
+    reopen(withProperties());
+    expect(screen.getByLabelText('New property')).toHaveFocus();
+    SOURCE = shipped;
+  });
+
   it('shows each trait with what can be set on it, and takes one away', () => {
     open();
     const jumps = screen.getByRole('region', {name: 'Jumps'});
