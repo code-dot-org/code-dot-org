@@ -1,6 +1,6 @@
 # Plan: Place and Memory onto the map (CANVAS_FIRST.md, step 4)
 
-STATUS: BUILT, pending a look in the browser. The last two foundation regions
+STATUS: BUILT, and seen in the browser in November 2026. The last two foundation regions
 of specs/CANVAS_FIRST.md's step 4, after Look (specs/LOOK_PLAN.md). The
 working record, as before.
 

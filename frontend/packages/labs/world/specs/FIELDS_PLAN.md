@@ -1,6 +1,6 @@
 # Plan: a field you can build a form out of (APPS.md, missing thing 6)
 
-STATUS: BUILT, not yet seen in the browser. The last of the six things specs/APPS.md says an app
+STATUS: BUILT, and seen in the browser in November 2026. The last of the six things specs/APPS.md says an app
 wants. The working record, as the other plans are.
 
 ## What the Text Input is, and what a form asks of it

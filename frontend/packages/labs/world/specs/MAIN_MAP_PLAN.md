@@ -1,7 +1,8 @@
 # Plan: the main map (MAP_FIRST.md, step 2)
 
-STATUS: BUILT, pending a look in the browser, less the migration of
-`create actor in map` and the starter's level. The second build step of
+STATUS: BUILT, less the migration of `create actor in map` and the starter's
+level, and seen in the browser in November 2026, where what still holds
+worked; the rest is superseded (WORLD_AS_DATA_PLAN.md). The second build step of
 specs/MAP_FIRST.md, after specs/MAP_SCRIPTS_PLAN.md: every world has a main
 map, held in its own file; opening a world opens the map editor on it, with
 the world's workspace one switch away; the world's properties are set with

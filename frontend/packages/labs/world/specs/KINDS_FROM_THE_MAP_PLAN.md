@@ -1,6 +1,6 @@
 # Plan: from a placement to its kind (CANVAS_FIRST.md, step 2)
 
-STATUS: BUILT, pending a look in the browser. The second build step of
+STATUS: BUILT, and seen in the browser in November 2026. The second build step of
 specs/CANVAS_FIRST.md. The working record, as before.
 
 ## The problem

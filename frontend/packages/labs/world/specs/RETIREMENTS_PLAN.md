@@ -1,6 +1,6 @@
 # Plan: the retirements (MAP_FIRST.md, step 5)
 
-STATUS: BUILT, pending a look in the browser. The fifth build step of
+STATUS: BUILT, and seen in the browser in November 2026. The fifth build step of
 specs/MAP_FIRST.md: what the first four steps made unnecessary comes out,
 and the content that still leans on it moves onto what replaced it. The
 working record, as before.

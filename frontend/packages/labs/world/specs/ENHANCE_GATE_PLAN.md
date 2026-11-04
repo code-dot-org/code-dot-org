@@ -1,6 +1,7 @@
 # Plan: Enhance behind the shelf
 
-STATUS: BUILT, pending a look in the browser. The last of the gaps
+STATUS: BUILT, and seen in the browser in November 2026. The gate holds, and
+found a lesson it locks out of its own step (PILOT_PLAN.md). The last of the gaps
 specs/KINDS_FROM_THE_MAP_PLAN.md recorded: the Enhance checklist offers every
 ability whatever a gated lab has unlocked, so a tick can bring in a rule no
 lesson has granted. The working record, as before.

@@ -1,6 +1,7 @@
 # Plan: the finger (APPS.md, missing thing 1)
 
-STATUS: BUILT, not yet seen in the browser. The first of the six things specs/APPS.md says an app
+STATUS: BUILT, and seen in the browser in November 2026 with a mouse: the
+Slider's drag and a flick's swipe. Touch is not tried. The first of the six things specs/APPS.md says an app
 wants and this lab does not have, and the one it says blocks the rest: "a
 control that cannot be dragged cannot be a list that scrolls". The working
 record, as the other plans are.

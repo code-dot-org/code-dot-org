@@ -1,6 +1,6 @@
 # Plan: map scripts (MAP_FIRST.md, step 1)
 
-STATUS: BUILT, pending a look in the browser. The first build step of
+STATUS: BUILT, and seen in the browser in November 2026. The first build step of
 specs/MAP_FIRST.md: a placed
 actor gets a workspace of its own in the map editor, a map gets one for its
 own events, and the pause menu becomes a scripted map. This file is the

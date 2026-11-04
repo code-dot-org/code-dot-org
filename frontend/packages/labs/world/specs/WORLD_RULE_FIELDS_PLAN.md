@@ -1,6 +1,6 @@
 # Plan: a rule's world properties in the world inspector
 
-STATUS: BUILT, pending a look in the browser. The one sentence of
+STATUS: BUILT, and seen in the browser in November 2026. The one sentence of
 specs/MAP_FIRST.md that was never built, found again by
 specs/PLACE_MEMORY_PLAN.md when `memory/score` could not move. The working
 record, as before.

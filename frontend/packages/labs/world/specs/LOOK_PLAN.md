@@ -1,6 +1,8 @@
 # Plan: Look onto the map (CANVAS_FIRST.md, step 4)
 
-STATUS: BUILT, pending a look in the browser. The third region of
+STATUS: BUILT, and seen in the browser in November 2026. One thing failed:
+`look/background`'s colour is the Main Screen's, and the Game Viewport's
+face covers it, so the sky is never seen. The third region of
 specs/CANVAS_FIRST.md's step 4, after Input and Motion
 (specs/INPUT_MOTION_PLAN.md). The working record, as before.
 

@@ -1,6 +1,9 @@
 # Plan: data that survives (APPS.md, missing thing 4)
 
-STATUS: BUILT, not yet seen in the browser. The fourth of the six things specs/APPS.md says an app
+STATUS: BUILT, and seen in the browser in November 2026. One thing failed:
+`load`, `save` or `forget` under `when this screen loads` throws as the
+game is built (`world.forget is not a function`), with no warning on the
+block. The fourth of the six things specs/APPS.md says an app
 wants, and the one it puts most bluntly: "a note-taking app that forgets
 is a drawing of a note-taking app". The working record, as the other plans
 are.

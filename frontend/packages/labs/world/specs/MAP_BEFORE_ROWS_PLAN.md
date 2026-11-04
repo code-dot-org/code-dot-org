@@ -1,6 +1,6 @@
 # Plan: the main map loads before the rows (CANVAS_FIRST.md, step 1)
 
-STATUS: BUILT, pending a look in the browser. The first build step of
+STATUS: BUILT, and seen in the browser in November 2026. The first build step of
 specs/CANVAS_FIRST.md. The working record, as the MAP_FIRST.md plans were.
 
 ## The problem
