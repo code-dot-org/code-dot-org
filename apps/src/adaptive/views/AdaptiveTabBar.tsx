@@ -1,8 +1,7 @@
 // Full-width tab strip that sits between the page header and the main content,
 // letting students switch between their project and the practice skill map.
 
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Tab as MuiTab, Tabs as MuiTabs} from '@mui/material';
+import Tabs from '@code-dot-org/component-library/tabs';
 import React from 'react';
 
 import styles from './adaptiveTabBar.module.scss';
@@ -21,22 +20,29 @@ const AdaptiveTabBar: React.FunctionComponent<AdaptiveTabBarProps> = ({
   projectName,
 }) => (
   <div className={styles.tabBar}>
-    <MuiTabs value={activeTab} onChange={(_, v: TabValue) => onTabChange(v)}>
-      <MuiTab
-        label={projectName || 'My project'}
-        value="project"
-        icon={<FontAwesomeV6Icon iconName="laptop-code" />}
-        iconPosition="start"
-        className={styles.tab}
-      />
-      <MuiTab
-        label="Practice skills"
-        value="map"
-        icon={<FontAwesomeV6Icon iconName="sitemap" />}
-        iconPosition="start"
-        className={styles.tab}
-      />
-    </MuiTabs>
+    <Tabs
+      name="adaptive-view"
+      defaultSelectedTabValue={activeTab}
+      onChange={value => {
+        if (value !== activeTab) onTabChange(value as TabValue);
+      }}
+      hidePanels
+      tabListAriaLabel="View"
+      tabs={[
+        {
+          value: 'project',
+          text: projectName || 'My project',
+          iconLeft: {iconName: 'laptop-code'},
+          tabContent: null,
+        },
+        {
+          value: 'map',
+          text: 'Practice skills',
+          iconLeft: {iconName: 'sitemap'},
+          tabContent: null,
+        },
+      ]}
+    />
   </div>
 );
 
