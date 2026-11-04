@@ -42,7 +42,7 @@ Files (Execute):
 | `muiDivider.module.scss`              | `divider.module.scss` ported at two classes per selector           |
 | `stories/MuiDivider.story.tsx`        | Twins (see Parity)                                                 |
 | `stories/muiDividerStory.module.scss` | The twins' layout boxes, in place of the DSCO story's `style`      |
-| `__tests__/MuiDivider.test.tsx`       | Legacy tests ported, plus the pins listed under Parity             |
+| `__tests__/MuiDivider.test.tsx`       | Legacy tests ported, plus the checks listed under Deviations       |
 | `index.ts`                            | Adds the new exports; legacy lines unchanged                       |
 | `Divider.tsx`                         | `@deprecated` JSDoc only                                           |
 | `codemods/divider-to-mui-divider.ts`  | The codemod                                                        |
@@ -223,7 +223,8 @@ the quiz chunk loads lazily, which can reverse the order. A one-class module
 rule passes the gate and loses in apps. Every selector in
 `muiDivider.module.scss` carries two classes, so it wins in both hosts.
 
-Tests that pin the contract (Execute, in `__tests__/MuiDivider.test.tsx`):
+Tests planned to pin the contract (superseded: see Deviations for what
+`__tests__/MuiDivider.test.tsx` checks):
 
 - One `separator`; it is an `HR` with no `role`, `aria-orientation` or `id`
   attribute.
@@ -358,7 +359,7 @@ which would restyle the nine `@mui/material` call sites, is for the Figma run.
 
 - Emotion precedence differs between Storybook and apps (see Parity). A
   module rule that loses to emotion only in apps passes the gate. Keep every
-  selector at two classes; the postcss test pins it.
+  selector at two classes. No test pins it; apps sample 1 checks it.
 - A consumer `className` can no longer override border, margin, width or
   `flex-shrink` with one class; under legacy it could, by load order. Neither
   consumer depends on it (see Codemod residue), and Markdown's `style` is
