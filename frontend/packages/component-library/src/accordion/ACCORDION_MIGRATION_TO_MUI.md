@@ -500,3 +500,52 @@ Execute records here every place the code departs from this plan.
 - Codemod transform 4 also rewrites a named `default` specifier from
   `.../accordion/faqAccordion` (`{default as L}`), as transform 2 does for
   `.../accordion`.
+
+## Outcome
+
+This section records the whole stack: this PR and the one consumer PR. On
+this PR alone no consumer has moved, and the status row reads In Progress.
+
+Consumers: the one consumer moved, none left on the legacy names. After the
+sweep the only file in `apps/` or `frontend/apps/` that imports
+`@code-dot-org/component-library/accordion` is
+`apps/src/levelbuilder/lesson-editor/TutorVideoDialog.jsx`, and it imports
+`MuiAccordion`. Nothing imports the `faqAccordion` path. The legacy sources
+and exports still ship, `@deprecated`, until step 4 deletes them, and the
+READMEs keep their legacy sections until then.
+
+| PR  | Scope                                  | Files |
+| --- | -------------------------------------- | ----- |
+| 1   | `apps/src/levelbuilder/lesson-editor/` | 1     |
+
+Codemod: it rewrote one file, `TutorVideoDialog.jsx`, changing only the
+import to `import {MuiAccordion as Accordion} from
+'@code-dot-org/component-library/accordion';`. It left
+`TutorDeepDiveEditorTest.jsx` untouched: the test mounts the dialog through
+`TutorDeepDiveEditor` and imports nothing from the entry point. A dry run
+over both files after the sweep reports 2 unmodified, so the tree is at the
+codemod's fixed point. There was no hand residue: no JSX, SCSS, snapshot or
+selector needed an edit.
+
+Verify: green. ESLint over both files passes. Jest over
+`TutorDeepDiveEditorTest.jsx` passes, 9 of 9. In the worktree the run
+needed a scratch config that maps the gitignored generated modules
+(`@cdo/generated-scripts/*` and friends) to another checkout's copies;
+the accordion itself resolved to this branch's `dist/`.
+
+Parity, Storybook: the Execute PR passed the gate; the measurements are
+under Deviations.
+
+Parity, apps: not run (`appsParity` off, because the local studio served a
+different checkout). The sample under Consumer chunks is unverified and
+must be checked by hand before the consumer PR merges: the example `<pre>`
+now takes `--text-neutral-primary`; the summary is a `<button>` under
+dashboard's global `button` rules; closed content stays mounted under
+`visibility: hidden`.
+
+Docs, on the consumer PR: `MIGRATION_STATUS.md` marks `accordion` as
+Migrated, behavior pending, and links Deferred changes. The skill lists
+Accordion under "Use MUI" and gives the wrapper's import.
+`apps/.eslintrc.js` bans the legacy names at
+`@code-dot-org/component-library/accordion` and at its `faqAccordion` path
+through `importNames`, because the `Mui` names ship at the same paths.
