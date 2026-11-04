@@ -218,7 +218,6 @@ module.exports = {
               'AccordionProps',
               'FAQAccordion',
               'FAQAccordionProps',
-              'FAQAccordionItem',
             ],
             message:
               'DSCO Accordion is deprecated. Import MuiAccordion / MuiFAQAccordion (and MuiAccordionProps / MuiAccordionItem / MuiFAQAccordionProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/accordion-to-mui.ts; see codemods/README.md there',
