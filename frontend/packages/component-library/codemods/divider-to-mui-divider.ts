@@ -38,6 +38,7 @@ import type {
 const SOURCE = '@code-dot-org/component-library/divider';
 
 const RENAMES: Record<string, string> = {
+  default: 'MuiDivider',
   Divider: 'MuiDivider',
   DividerProps: 'MuiDividerProps',
 };
