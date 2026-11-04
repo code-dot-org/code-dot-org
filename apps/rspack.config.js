@@ -265,6 +265,7 @@ function createRspackConfig({
         ...LOCALE_ALIASES,
         serialport: false,
         '@mui/material': p('node_modules/@mui/material'),
+        '@emotion/react': p('node_modules/@emotion/react'),
       },
     },
     module: {
