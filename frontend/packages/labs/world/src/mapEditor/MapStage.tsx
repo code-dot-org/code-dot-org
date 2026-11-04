@@ -334,6 +334,8 @@ export interface MapStageProps {
   eventsFor?: (kind: string) => readonly EventChoice[];
   /** What the toolbar's way into the map's own workspace says. */
   mapScriptLabel?: string;
+  /** …and what the inspector with nothing selected is headed. */
+  mapTitle?: string;
   /** Whether the code button opens the Main Screen's code, which is never locked. */
   screenCode?: boolean;
   /**
@@ -531,6 +533,7 @@ export const MapStage = ({
   onEnhanceKind,
   onOpenKind,
   mapScriptLabel = 'Map code',
+  mapTitle = 'Map',
   screenCode = false,
   world,
   heldMaps,
@@ -2764,7 +2767,8 @@ export const MapStage = ({
   // Draw the scene through the camera transform: the outside fill, then (in world
   // space) the map region, grid, its border, the placed actors, and the ghost.
   /** What the map region is painted with, under its layers' images. */
-  const skyColor = world?.header.backgroundColor?.color ?? MAP_BG;
+  const skyColor =
+    map.backgroundColor ?? world?.header.backgroundColor?.color ?? MAP_BG;
   /**
    * Paint the scene onto `canvas` through `view`. DECORATED, it is the
    * stage: the grid, the border, the selection, the marks and the ghosts.
@@ -2799,8 +2803,8 @@ export const MapStage = ({
     const s = view.scale * dpr;
     ctx.setTransform(s, 0, 0, s, view.x * dpr, view.y * dpr);
 
-    // The world's background color where it sets one, as the game paints
-    // behind everything; the editor's own dark otherwise.
+    // The map's own color, or the world's where it sets one, as the game
+    // paints behind everything; the editor's own dark otherwise.
     ctx.fillStyle = skyColor;
     ctx.fillRect(0, 0, extent.w, extent.h);
 
@@ -3812,6 +3816,17 @@ export const MapStage = ({
           !inspectedCamera &&
           !world && (
             <MapInspector
+              title={mapTitle}
+              backgroundColor={map.backgroundColor}
+              onBackgroundColor={color => {
+                const next = {...mapRef.current};
+                if (color) {
+                  next.backgroundColor = color;
+                } else {
+                  delete next.backgroundColor;
+                }
+                commit(next);
+              }}
               theme={map.theme}
               themeOptions={themeOptions}
               onTheme={path => commit({...mapRef.current, theme: path})}

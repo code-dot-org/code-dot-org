@@ -75,6 +75,7 @@ interface ReconcilableWorld {
   setBackgroundOffset(offset: {x: number; y: number}, layer?: string): unknown;
   setBackgroundRepeat(repeat: boolean, layer?: string): unknown;
   setBackgroundColor(color: readonly number[]): unknown;
+  clearBackgroundColor(): unknown;
   setScreenBackground(sprite: string | undefined): unknown;
   setScreenBackgroundOffset(offset: {x: number; y: number}): unknown;
   setScreenBackgroundRepeat(repeat: boolean): unknown;
@@ -261,6 +262,8 @@ export function reconcile(
     // (World.setBackgroundColor).
     if (snapshot.clearColor) {
       running.setBackgroundColor(snapshot.clearColor);
+    } else {
+      running.clearBackgroundColor();
     }
     running.setScreenColor(snapshot.screenColor);
     // …and one track. Written unconditionally like the rest of the values here:

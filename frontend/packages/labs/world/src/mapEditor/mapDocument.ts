@@ -122,9 +122,14 @@ export const screenFileDocument: MapDocumentAdapter = {
 
 /**
  * The adapter for a `.screen` at `path`. The Main Screen is the game, and
- * shows the game's values; any other screen is a map the game loads.
+ * shows the game's values; any other screen is laid out as a map is, and its
+ * code is a screen's: `when this screen loads`, not the map's hats.
  */
 export const screenDocumentFor = (path: string): MapDocumentAdapter =>
   path === `${MAIN_SCREEN_PATH}.screen`
     ? screenFileDocument
-    : {...mapFileDocument, modulePath: screenFileDocument.modulePath};
+    : {
+        ...mapFileDocument,
+        modulePath: screenFileDocument.modulePath,
+        scriptKind: 'screen',
+      };

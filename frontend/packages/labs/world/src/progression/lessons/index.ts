@@ -483,7 +483,7 @@ const background: WorldScenario = {
     screen: screenFile({
       name: 'My World',
       placed: [placeInMap(actorPath('hero'), [placed('Hero', 160, 200)])],
-      backgroundColor: '#7ec8e3',
+      mapColor: '#7ec8e3',
       actors: [
         {
           id: 'hero',
@@ -497,9 +497,10 @@ const background: WorldScenario = {
   instructions: `
 ## Behind everything
 
-A flat blue sky, and a Hero standing on nothing. The blue is the world's
-**background color** — one color behind everything, which is what a world
-draws when nobody has given it a picture.
+A flat blue sky, and a Hero standing on nothing. The blue is the map's
+**background color**: one color behind everything on it, which is what a map
+shows when nobody has given it a picture. Click the map where nothing is, and
+it is **Background color** in the map's properties.
 
 A **backdrop** is that picture. It is not an actor: it has no position, nothing
 can touch it, and no rule can reach it. It is what is behind the game.
@@ -585,7 +586,7 @@ const effect: WorldScenario = {
         placedAt(actorPath('hero'), 'hero', 120, 160),
         placedAt(actorPath('coin'), 'coin', 220, 160),
       ],
-      backgroundColor: '#1b2530',
+      mapColor: '#1b2530',
       actors: [
         {
           id: 'hero',
@@ -4063,7 +4064,7 @@ const scene: WorldScenario = {
     screen: screenFile({
       name: 'My World',
       placed: [placedAt('actors/portrait', 'portrait', 80, 120)],
-      backgroundColor: '#2b2b33',
+      mapColor: '#2b2b33',
       loads: [
         addActor('actors/speechBox', [
           // The MIDDLE of the world, because a drawing is centered on the actor
@@ -4939,7 +4940,7 @@ const bigWorld: WorldScenario = {
         placeInMap(actorPath('ground'), floorAcross(30)),
         placedAt(actorPath('walker'), 'walker', 60, 272),
       ],
-      backgroundColor: '#101822',
+      mapColor: '#101822',
       actors: [
         {
           id: 'walker',

@@ -18,12 +18,17 @@ import {Typography} from '@mui/material';
 
 import fields from '../formFields.module.css';
 
-import {BackgroundField} from './BackgroundField';
+import {BackgroundColorField, BackgroundField} from './BackgroundField';
 import styles from './mapEditor.module.css';
 import type {MapSlotDoc} from './mapModel';
 import {ThemeField} from './ThemeField';
 
 export interface MapInspectorProps {
+  /** What the head says: `Map`, or `Screen` for a screen the game shows. */
+  title?: string;
+  /** The color behind the map's placements; absent shows what is under it. */
+  backgroundColor?: string;
+  onBackgroundColor?: (color: string | undefined) => void;
   /** The theme everything this map places is painted out of; absent inherits. */
   theme: string | undefined;
   /** The project's themes, as `[label, path]`. */
@@ -31,7 +36,7 @@ export interface MapInspectorProps {
   onTheme: (path: string | undefined) => void;
   /**
    * The background image of the map's back layer, the one `set background
-   * to` sets. A map has no background COLOR of its own: that is the world's.
+   * to` sets.
    */
   background?: MapSlotDoc;
   /** The project's backgrounds, by file name. */
@@ -41,6 +46,9 @@ export interface MapInspectorProps {
 }
 
 export const MapInspector = ({
+  title = 'Map',
+  backgroundColor,
+  onBackgroundColor,
   theme,
   themeOptions,
   onTheme,
@@ -55,7 +63,7 @@ export const MapInspector = ({
   >
     <div className={styles.inspectorHead}>
       <Typography variant="subtitle2" component="span">
-        Map
+        {title}
       </Typography>
     </div>
     {onBackground && (
@@ -65,6 +73,18 @@ export const MapInspector = ({
         slot={background}
         backgrounds={backgrounds}
         onChange={onBackground}
+        isReadOnly={isReadOnly}
+      />
+    )}
+    {onBackgroundColor && (
+      <BackgroundColorField
+        key={backgroundColor ?? ''}
+        name="map-background-color"
+        color={backgroundColor}
+        fallback="#000000"
+        inCode={false}
+        onChange={onBackgroundColor}
+        onClear={() => onBackgroundColor(undefined)}
         isReadOnly={isReadOnly}
       />
     )}

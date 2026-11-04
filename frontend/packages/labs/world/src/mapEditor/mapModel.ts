@@ -347,6 +347,13 @@ export interface MapDoc {
    */
   theme?: string;
   /**
+   * The color behind the map's placements, as `#rrggbb` or `#rrggbbaa`.
+   * Loaded into the World it is the sky every Viewport showing it paints;
+   * shown as a screen, it is that screen's (`WorldMap.backgroundColor`).
+   * Absent, what is under the map shows through.
+   */
+  backgroundColor?: string;
+  /**
    * The map's own workspace: its `define map` root, and the two map hats.
    * Optional because a map written before the root existed has none
    * (specs/MAP_EVENTS_PLAN.md).
@@ -439,6 +446,9 @@ export function mapFromRaw(raw: Partial<MapDoc>): MapDoc {
     // map back without them, so a theme went back to the world's.
     ...(isLayout(raw.layout) ? {layout: raw.layout} : {}),
     ...(typeof raw.theme === 'string' && raw.theme ? {theme: raw.theme} : {}),
+    ...(typeof raw.backgroundColor === 'string' && raw.backgroundColor
+      ? {backgroundColor: raw.backgroundColor}
+      : {}),
   };
 }
 

@@ -108,7 +108,10 @@ export interface ScreenSpec {
   events?: ScreenEvent[];
   /** Rule settings that differ from the rules' own. */
   rules?: ScreenRuleSetting[];
+  /** The screen's color, behind the Game Viewport. */
   backgroundColor?: string;
+  /** `main.map`'s own color, which the Game Viewport paints behind it. */
+  mapColor?: string;
   /**
    * Code under `when this screen loads`, which is always there, empty or not:
    * it is where a lesson's once-only code is written.
@@ -170,6 +173,7 @@ export const screenFile = ({
   events,
   rules,
   backgroundColor,
+  mapColor,
   loads,
   handlers,
   actors,
@@ -215,6 +219,7 @@ export const screenFile = ({
               tile: {width: TILE_SIZE, height: TILE_SIZE},
             }
           : {}),
+        ...(mapColor ? {backgroundColor: mapColor} : {}),
         actors: placements,
       },
       null,

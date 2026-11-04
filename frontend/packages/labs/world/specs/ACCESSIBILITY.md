@@ -372,6 +372,16 @@ below, and are listed last.
   from is gone.
 - **Untested**: no screen reader; seen by mouse and a headless browser.
 
+### A map's background color (LOOK_PLAN.md)
+
+- **The same field the Main Screen's color is**, a text field labelled
+  Background color and a swatch beside it. Emptying the field takes the
+  color away; its placeholder says None.
+- **Both swatches are named "pick background color"**, so a screen reader
+  cannot tell the map's from the screen's by the swatch alone; they are
+  never on screen together.
+- **Untested**: no screen reader; seen by mouse and a headless browser.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

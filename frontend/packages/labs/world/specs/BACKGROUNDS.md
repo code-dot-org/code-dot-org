@@ -52,6 +52,11 @@ The world holds `backdrops: Backdrop[]`, and every block written today addresses
 index 0. The color is the world's, not a layer's: there is one sky behind
 everything, and a per-layer color would only ever be visible on the bottom one.
 
+A MAP brings its own sky. Its `backgroundColor`, set in the Map inspector, is
+the World's while the map is loaded (`World.loadWorldMap`), and a map with
+none leaves each Viewport showing its own face. The Main Screen's color is a
+different thing: the screen's, behind the Viewport.
+
 ## 3. Blocks
 
 Five blocks, each shaped like one that exists.

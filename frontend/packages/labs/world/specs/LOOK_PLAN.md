@@ -1,8 +1,11 @@
 # Plan: Look onto the map (CANVAS_FIRST.md, step 4)
 
-STATUS: BUILT, and seen in the browser in November 2026. One thing failed:
-`look/background`'s colour is the Main Screen's, and the Game Viewport's
-face covers it, so the sky is never seen. The third region of
+STATUS: BUILT, and seen in the browser in November 2026. One thing failed
+and is fixed: `look/background`'s colour was the Main Screen's, which the
+Game Viewport's face covers. A map now has a background color of its own
+(the Map inspector's field, `MapDoc.backgroundColor`); loaded into the
+World it is the sky every Viewport paints, and the lesson sets it there.
+The third region of
 specs/CANVAS_FIRST.md's step 4, after Input and Motion
 (specs/INPUT_MOTION_PLAN.md). The working record, as before.
 

@@ -171,9 +171,12 @@ export interface WorldMap {
   size?: {width: number; height: number};
   tile?: {width: number; height: number};
   /**
-   * A screen's color, behind its placements (specs/SCREEN_STACK_PLAN.md).
-   * Opaque, it covers the screens under it, which are not drawn; partly
-   * clear, they show through. Read when the map is shown as a screen.
+   * The color behind the map's placements. Shown as a screen
+   * (specs/SCREEN_STACK_PLAN.md), it is that screen's: opaque, it covers the
+   * screens under it, which are not drawn; partly clear, they show through.
+   * Loaded into the World (`loadWorldMap`), it is the World's sky, which
+   * every Viewport showing the World paints. Absent there, a Viewport shows
+   * its own face.
    */
   backgroundColor?: ColorValue;
   /**
@@ -2514,6 +2517,12 @@ export class World {
         space.camera.position = new Vector(view.x / 2, view.y / 2);
       }
     }
+    // The sky is the map's, set before its script runs so the script may
+    // change it.
+    world.clearColor =
+      held?.backgroundColor !== undefined
+        ? rgba(held.backgroundColor)
+        : undefined;
     if (!held) {
       return [];
     }
@@ -4780,6 +4789,19 @@ export class World {
       this.clearColor = rgba(color);
     } else {
       space.clearColor = rgba(color);
+    }
+    return this;
+  }
+
+  /**
+   * Take a Viewport's sky away, so it shows its own face again: what a map
+   * with no color of its own leaves (`loadWorldMap`). The screen always has
+   * a color, so there this does nothing.
+   */
+  clearBackgroundColor(): this {
+    const {space} = this.here();
+    if (space !== this.rootSpace) {
+      space.clearColor = undefined;
     }
     return this;
   }

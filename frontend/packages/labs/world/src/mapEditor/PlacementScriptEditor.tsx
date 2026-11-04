@@ -105,6 +105,8 @@ export interface PlacementScriptEditorProps {
   onChange: (next: BlocklySerialization) => void;
   /** The way back to the map, when no breadcrumb above says it. */
   onBack?: () => void;
+  /** What the way back says: the map, or the screen. */
+  backLabel?: string;
   isReadOnly: boolean;
 }
 
@@ -119,6 +121,7 @@ export const PlacementScriptEditor = ({
   contents,
   onChange,
   onBack,
+  backLabel = 'Map',
   isReadOnly,
 }: PlacementScriptEditorProps) => {
   const {currentSources} = useSources<MultiFileSource>();
@@ -269,7 +272,7 @@ export const PlacementScriptEditor = ({
             }
             onClick={onBack}
           >
-            Map
+            {backLabel}
           </Button>
         )}
         <Typography component="span" variant="label2">

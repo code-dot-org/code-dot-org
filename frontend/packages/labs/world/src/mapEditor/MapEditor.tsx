@@ -820,6 +820,7 @@ export const MapEditor = ({
         contents={scripted ? scripted.blocks : map.blocks}
         onChange={writeScript}
         onBack={onTrail ? undefined : () => setScript(null)}
+        backLabel={document.scriptKind === 'screen' ? 'Screen' : 'Map'}
         isReadOnly={isReadOnly}
       />
     );
@@ -984,6 +985,7 @@ export const MapEditor = ({
           mapScriptLabel={
             document.scriptKind === 'screen' ? 'Screen code' : 'Map code'
           }
+          mapTitle={document.scriptKind === 'screen' ? 'Screen' : 'Map'}
           screenCode={isMainScreen}
           world={worldInspector}
           cameraChoices={cameraChoices}

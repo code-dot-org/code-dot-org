@@ -288,6 +288,13 @@ export interface BackgroundColorFieldProps {
   /** The world sets it to more than a swatch, which a field cannot show. */
   inCode: boolean;
   onChange: (color: string) => void;
+  /**
+   * Take the color away, where having none means something: a map with none
+   * shows what is under it. Without this an emptied field puts the color back.
+   */
+  onClear?: () => void;
+  /** The field's name, and the swatch's after it. */
+  name?: string;
   isReadOnly: boolean;
 }
 
@@ -308,10 +315,18 @@ export const BackgroundColorField = ({
   fallback,
   inCode,
   onChange,
+  onClear,
+  name = 'world-background-color',
   isReadOnly,
 }: BackgroundColorFieldProps) => {
-  const [typed, setTyped] = useState(color ?? fallback);
+  const [typed, setTyped] = useState(color ?? (onClear ? '' : fallback));
   const commit = (next: string) => {
+    if (!next && onClear) {
+      if (color !== undefined) {
+        onClear();
+      }
+      return;
+    }
     if (HEX.test(next) && next.toLowerCase() !== (color ?? '').toLowerCase()) {
       onChange(next.toLowerCase());
     }
@@ -330,8 +345,9 @@ export const BackgroundColorField = ({
   return (
     <div className={styles.inspectorColor}>
       <TextField
-        name="world-background-color"
+        name={name}
         label="Background color"
+        placeholder={onClear ? 'None' : undefined}
         size="s"
         value={typed}
         disabled={isReadOnly}
@@ -348,7 +364,7 @@ export const BackgroundColorField = ({
       <input
         type="color"
         className={fields.swatch}
-        name="world-background-color-swatch"
+        name={`${name}-swatch`}
         aria-label="pick background color"
         value={HEX.test(typed) ? typed : fallback}
         disabled={isReadOnly}
