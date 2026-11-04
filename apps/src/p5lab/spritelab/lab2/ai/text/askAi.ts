@@ -152,7 +152,7 @@ async function isSystemPromptSafe(systemPrompt: string): Promise<boolean> {
 }
 
 function clipQuestion(prompt: string): string {
-  return String(prompt ?? '').slice(0, MAX_PROMPT_CHARACTERS);
+  return prompt.slice(0, MAX_PROMPT_CHARACTERS);
 }
 
 async function requestAnswer(
@@ -173,23 +173,26 @@ async function requestAnswer(
 
 async function requestChoice(
   prompt: string,
-  choices: [string, ...string[]]
+  choiceByLabel: Map<string, string>
 ): Promise<string> {
+  const labels = [...choiceByLabel.keys()] as [string, ...string[]];
   const {output} = await generateText(
     {
       model: getModel(AiChatModelIds.GEMINI_2_5_FLASH),
       system: CHOICE_SYSTEM_PROMPT,
       prompt,
-      output: Output.object({schema: z.object({answer: z.enum(choices)})}),
-      temperature: 1,
+      output: Output.object({schema: z.object({answer: z.enum(labels)})}),
+      temperature: 0,
     },
     {phase: 'generation', aichatContext: aichatContext()}
   );
   const answer: unknown = output?.answer;
-  if (typeof answer !== 'string' || !choices.includes(answer)) {
+  const choice =
+    typeof answer === 'string' ? choiceByLabel.get(answer) : undefined;
+  if (choice === undefined) {
     throw new Error('The AI answered with something other than a choice.');
   }
-  return answer;
+  return choice;
 }
 
 /**
@@ -202,7 +205,7 @@ async function ask(
   question: string,
   studentSystemPrompt: string,
   generate: () => Promise<string>,
-  judgeAnswer: boolean
+  {judgeAnswer}: {judgeAnswer: boolean}
 ): Promise<string> {
   const count = (result: string) =>
     Observability.metrics.count(metric, 1, {result});
@@ -277,7 +280,7 @@ export function askAiText(prompt: string, systemPrompt = ''): Promise<string> {
     question,
     studentSystemPrompt,
     () => requestAnswer(question, studentSystemPrompt),
-    true
+    {judgeAnswer: true}
   );
 }
 
@@ -286,15 +289,25 @@ export function askAiChoice(
   prompt: string,
   choices: [string, ...string[]]
 ): Promise<string> {
-  const options = [...new Set(choices)] as [string, ...string[]];
+  const choiceByLabel = new Map<string, string>();
+  for (const choice of choices) {
+    const label = choice.slice(0, MAX_ANSWER_CHARACTERS);
+    if (!choiceByLabel.has(label)) {
+      choiceByLabel.set(label, choice);
+    }
+  }
+  if (choiceByLabel.size === 1) {
+    return Promise.resolve(choices[0]);
+  }
+  const labels = [...choiceByLabel.keys()];
   const question =
     `Question: ${clipQuestion(prompt)}\n` +
-    `Answer choices:\n${options.map(option => `- ${option}`).join('\n')}`;
+    `Answer choices:\n${labels.map(label => `- ${label}`).join('\n')}`;
   return ask(
     ASK_AI_CHOICE_METRIC,
     question,
     '',
-    () => requestChoice(question, options),
-    false
+    () => requestChoice(question, choiceByLabel),
+    {judgeAnswer: false}
   );
 }

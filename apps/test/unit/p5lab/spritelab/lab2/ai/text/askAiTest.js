@@ -272,10 +272,25 @@ describe('askAiChoice', () => {
   });
 
   it('truncates a very long question', async () => {
-    await askAiChoice('x'.repeat(5000), ['no']);
+    await askAiChoice('x'.repeat(5000), ['yes', 'no']);
     expect(generateText.mock.calls[0][0].prompt).toBe(
-      `Question: ${'x'.repeat(1000)}\nAnswer choices:\n- no`
+      `Question: ${'x'.repeat(1000)}\nAnswer choices:\n- yes\n- no`
     );
+  });
+
+  it('shows the model a long choice cut short, but answers in full', async () => {
+    const long = 'y'.repeat(500);
+    generateText.mockResolvedValue({output: {answer: 'y'.repeat(150)}});
+    await expect(askAiChoice('pick one', [long, 'no'])).resolves.toBe(long);
+    expect(generateText.mock.calls[0][0].prompt).toBe(
+      `Question: pick one\nAnswer choices:\n- ${'y'.repeat(150)}\n- no`
+    );
+  });
+
+  it('answers with a lone choice without asking the model', async () => {
+    await expect(askAiChoice('pick one', ['yes', 'yes'])).resolves.toBe('yes');
+    expect(generateText).not.toHaveBeenCalled();
+    expect(isTextSafe).not.toHaveBeenCalled();
   });
 });
 

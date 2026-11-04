@@ -71,7 +71,8 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     summary:
       'Asks the AI a question and puts the choice it picks in a variable.',
     body:
-      'Empty choices are left out. Use **when ... answered** to do ' +
+      'Empty choices are left out, and with no choices at all the AI ' +
+      'answers in its own words. Use **when ... answered** to do ' +
       'something with the answer once it arrives.',
   },
   spritelab2_playSound: {

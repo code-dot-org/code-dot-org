@@ -3,6 +3,8 @@ import {Order} from 'blockly/javascript';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import {answerVariable} from './askAi';
+
 export const ASK_AI_WITH_CHOICES_BLOCK_TYPE = 'spritelab2_askAIWithChoices';
 
 const CHOICE_INPUTS = ['CHOICE1', 'CHOICE2', 'CHOICE3'];
@@ -30,18 +32,16 @@ const definition: BlockJson = {
 };
 
 const generator: GeneratorFunction = (block, javascript) => {
-  const target = block.getInput('VAR')?.connection?.targetBlock();
-  if (!target || target.type !== 'variables_get') {
+  const answer = answerVariable(block, javascript);
+  if (!answer) {
     return '';
   }
-  const varName = javascript.blockToCode(target)[0];
   const [prompt, ...choices] = ['PROMPT', ...CHOICE_INPUTS].map(
     name => javascript.valueToCode(block, name, Order.COMMA) || "''"
   );
-  const param = varName === 'val' ? '__val' : 'val';
   return (
-    `askAIWithChoices(${prompt}, '${varName}', ${choices.join(', ')}, ` +
-    `function (${param}) {${varName} = ${param};});\n`
+    `askAIWithChoices(${prompt}, '${answer.varName}', ` +
+    `${choices.join(', ')}, ${answer.setter});\n`
   );
 };
 
