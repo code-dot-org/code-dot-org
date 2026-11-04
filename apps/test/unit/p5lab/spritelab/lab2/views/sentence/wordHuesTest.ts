@@ -15,10 +15,10 @@ describe('wordHues', () => {
     expect(new Set(hues).size).toBe(hues.length);
   });
 
-  it('colors by position, so one word set differs between sentences', () => {
-    const treasure = sentenceFor('sprite', 'object', 'treasure');
-    expect(hueFor(treasure, 'treasure')).toBe('blue');
-    expect(hueFor(treasure, 'look')).toBe('yellow');
-    expect(hueFor(treasure, 'detail')).toBe('pink');
+  it('colors by position, so the required word is blue in every sentence', () => {
+    const place = sentenceFor('background');
+    expect(hueFor(place, 'place')).toBe('blue');
+    expect(hueFor(place, 'adjective')).toBe('yellow');
+    expect(hueFor(place, 'from')).toBe('pink');
   });
 });
