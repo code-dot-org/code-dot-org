@@ -20,7 +20,6 @@ const definition: BlockJson = {
     '"when ... answered" block to do something with it.',
 };
 
-/** The VAR socket's variable and a setter for it, or null without one. */
 export function answerVariable(
   block: Parameters<GeneratorFunction>[0],
   javascript: Parameters<GeneratorFunction>[1]

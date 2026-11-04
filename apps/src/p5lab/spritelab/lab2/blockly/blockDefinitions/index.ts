@@ -59,8 +59,8 @@ const labBlockDefinitions: {
   burst,
   thePlayer,
   askAi,
-  setSystemPrompt,
   askAiWithChoices,
+  setSystemPrompt,
   placeholder,
   // Toolbox edit mode's category marker blocks.
   category,

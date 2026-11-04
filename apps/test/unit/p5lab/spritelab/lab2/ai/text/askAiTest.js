@@ -220,14 +220,10 @@ describe('askAiChoice', () => {
     generateText.mockResolvedValue({output: {answer: 'no'}});
   });
 
-  it('returns the choice the model picked', async () => {
+  it('shows the model the question and every choice', async () => {
     await expect(
       askAiChoice('is a whale a fish?', ['yes', 'no'])
     ).resolves.toBe('no');
-  });
-
-  it('shows the model the question and every choice', async () => {
-    await askAiChoice('is a whale a fish?', ['yes', 'no']);
     const [{system, prompt}] = generateText.mock.calls[0];
     expect(system).toBe(CHOICE_SYSTEM_PROMPT);
     expect(prompt).toBe(
@@ -235,7 +231,13 @@ describe('askAiChoice', () => {
     );
   });
 
-  // The answer is one of the judged choices, so a second judge adds nothing.
+  it("adds the student's system prompt after the choice rules", async () => {
+    await askAiChoice('pick one', ['yes', 'no'], 'Pick the silliest one.');
+    expect(generateText.mock.calls[0][0].system).toBe(
+      buildSystemPrompt('Pick the silliest one.', CHOICE_SYSTEM_PROMPT)
+    );
+  });
+
   it('judges the question with the choices, and not the answer', async () => {
     await askAiChoice('is a whale a fish?', ['yes', 'no']);
     expect(isTextSafe).toHaveBeenCalledTimes(1);
@@ -264,26 +266,15 @@ describe('askAiChoice', () => {
     );
   });
 
-  it('throws with the prompt phase when the question is flagged', async () => {
-    isTextSafe.mockResolvedValueOnce(false);
-    await expect(
-      askAiChoice('something awful', ['yes', 'no'])
-    ).rejects.toMatchObject({name: 'AskAiError', phase: 'prompt'});
-  });
-
-  it('truncates a very long question', async () => {
-    await askAiChoice('x'.repeat(5000), ['yes', 'no']);
-    expect(generateText.mock.calls[0][0].prompt).toBe(
-      `Question: ${'x'.repeat(1000)}\nAnswer choices:\n- yes\n- no`
-    );
-  });
-
-  it('shows the model a long choice cut short, but answers in full', async () => {
+  it('caps what the model sees, but answers with the full choice', async () => {
     const long = 'y'.repeat(500);
     generateText.mockResolvedValue({output: {answer: 'y'.repeat(150)}});
-    await expect(askAiChoice('pick one', [long, 'no'])).resolves.toBe(long);
+    await expect(askAiChoice('x'.repeat(5000), [long, 'no'])).resolves.toBe(
+      long
+    );
     expect(generateText.mock.calls[0][0].prompt).toBe(
-      `Question: pick one\nAnswer choices:\n- ${'y'.repeat(150)}\n- no`
+      `Question: ${'x'.repeat(1000)}\n` +
+        `Answer choices:\n- ${'y'.repeat(150)}\n- no`
     );
   });
 

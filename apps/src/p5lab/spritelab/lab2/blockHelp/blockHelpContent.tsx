@@ -59,13 +59,6 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       'The answer takes a moment to arrive, so the variable stays empty ' +
       'until it does. Use **when ... answered** to do something with it.',
   },
-  spritelab2_setSystemPrompt: {
-    title: 'Set system prompt',
-    summary: 'Tells the AI how to answer every question after it.',
-    body:
-      'Try a personality, like **Talk like a pirate.** Put it before any ' +
-      '**ask AI** blocks.',
-  },
   spritelab2_askAIWithChoices: {
     title: 'Ask AI with answer choices',
     summary:
@@ -74,6 +67,13 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       'Empty choices are left out, and with no choices at all the AI ' +
       'answers in its own words. Use **when ... answered** to do ' +
       'something with the answer once it arrives.',
+  },
+  spritelab2_setSystemPrompt: {
+    title: 'Set system prompt',
+    summary: 'Tells the AI how to answer every question after it.',
+    body:
+      'Try a personality, like **Talk like a pirate.** Put it before any ' +
+      '**ask AI** blocks.',
   },
   spritelab2_playSound: {
     title: 'Play sound',

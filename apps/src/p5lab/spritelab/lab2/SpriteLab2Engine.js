@@ -722,7 +722,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     let systemPrompt = '';
     library.commands.setSystemPrompt = promptText => {
       if (this.canAskAi_()) {
-        systemPrompt = promptText;
+        systemPrompt = String(promptText ?? '');
       }
     };
     const askAi = (variableName, setterCallback, request) => {
@@ -774,7 +774,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       const question = String(promptText ?? '');
       const choices = toChoices(choice1, choice2, choice3);
       askAi(variableName, setterCallback, () =>
-        choices.length ? askAiChoice(question, choices) : askAiText(question)
+        choices.length
+          ? askAiChoice(question, choices, systemPrompt)
+          : askAiText(question, systemPrompt)
       );
     };
     return library;

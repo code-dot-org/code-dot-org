@@ -19,8 +19,8 @@ describe('BLOCK_HELP', () => {
     'gamelab_atTime',
     'spritelab2_whenPlayer',
     'spritelab2_askAI',
-    'spritelab2_setSystemPrompt',
     'spritelab2_askAIWithChoices',
+    'spritelab2_setSystemPrompt',
   ]);
 
   it('gives every entry an animation, or is known to be waiting for one', () => {
