@@ -189,7 +189,12 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
       />
       <header className={styles.mapBar}>
         <MuiTypography variant="strong">{pathway.title}</MuiTypography>
-        <MapStats skills={skillProgress} timeSpentSeconds={timeSpentSeconds} />
+        {!mapSettings.hideStats && (
+          <MapStats
+            skills={skillProgress}
+            timeSpentSeconds={timeSpentSeconds}
+          />
+        )}
       </header>
       <div className={styles.mapBody}>
         <ResourcePanel
