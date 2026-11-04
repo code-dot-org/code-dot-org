@@ -26,6 +26,9 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 
 let mockEngineContexts: {project?: object; trainingData?: object} = {};
 
@@ -126,7 +129,7 @@ describe('AilabWorkspace', () => {
     jest.clearAllMocks();
     mockEngineContexts = {};
     stubRedux();
-    registerReducers({progress, lab});
+    registerReducers({progress, lab, currentUser});
     store = getStore();
     store.dispatch(
       initProgress({lessons: []} as unknown as Parameters<
@@ -171,6 +174,21 @@ describe('AilabWorkspace', () => {
       mockedAilab.AilabEngine.mock.lastCall?.[0].onLoadingChange?.(true)
     );
     expect(onLoadingChange).toHaveBeenLastCalledWith(true);
+  });
+
+  it('lets a signed-in student save the tree to the Backpack', () => {
+    store.dispatch(setInitialData({id: 1}));
+    renderLevel('3');
+    expect(
+      mockedAilab.AilabEngine.mock.lastCall?.[0].saveImageToBackpack
+    ).toBeInstanceOf(Function);
+  });
+
+  it('offers no Backpack save to a signed-out student', () => {
+    renderLevel('3');
+    expect(
+      mockedAilab.AilabEngine.mock.lastCall?.[0].saveImageToBackpack
+    ).toBeUndefined();
   });
 
   it('shows no message until a training run misses the minimum', () => {
@@ -231,5 +249,12 @@ describe('AilabWorkspace', () => {
     expect(jest.mocked(ResourcePanel).mock.lastCall?.[0]).toMatchObject({
       validationTooltip: 'Train a model with at least 70% accuracy',
     });
+  });
+
+  it('shows a Backpack that takes no files into the lab', () => {
+    renderLevel('3');
+    expect(
+      jest.mocked(ResourcePanel).mock.lastCall?.[0].backpackProps
+    ).toMatchObject({supportedFileTypes: []});
   });
 });

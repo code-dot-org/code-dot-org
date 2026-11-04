@@ -1977,6 +1977,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal expected, hidden
   end
 
+  test "student cannot open a lesson hidden in their section when an archived section has the same unit" do
+    teacher = create(:teacher)
+    student = create(:student)
+    active_section = put_participant_in_section(student, teacher, @custom_script)
+    archived_section = put_participant_in_section(student, teacher, @custom_script)
+    archived_section.update!(hidden: true)
+    SectionHiddenLesson.create!(section_id: active_section.id, stage_id: @custom_lesson_1.id)
+
+    sign_in student
+    get_show_script_level_page(@custom_s1_l1)
+    assert_response :success
+    # The level page also renders #hidden-lesson, but with display: none.
+    assert_select '#hidden-lesson'
+    assert_select '#hidden-lesson[style*="display: none"]', false
+  end
+
   def  put_participant_in_section(student, teacher, script)
     section = create(:section, user_id: teacher.id, script_id: script.id, course_id: script.original_unit_group_id)
     Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)

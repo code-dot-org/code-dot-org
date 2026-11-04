@@ -31,6 +31,24 @@
     "extra_scene": {
       "id": "second-scene",
       "name": "Scene 2",
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "spritelab2_setAsPlatformPlayer"
+                }
+              }
+            }
+          ]
+        }
+      },
       "worldStartPattern": [
         "..........",
         "..........",
