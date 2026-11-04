@@ -413,6 +413,28 @@ below, and are listed last.
   in the column beside the map."
 - **Untested**: no screen reader; the announcements are seen in unit tests.
 
+### A dark-theme and keyboard pass over the shell (November 2026)
+
+Seen in a headless browser at 1500 by 1000, in the Dark theme, and walked
+by Tab and the stage's keys. Not seen with a screen reader.
+
+- **Dark theme:** the Actors bar, the column inspector, the folded
+  inspector's head, the palette's ring on the kind in hand and the brush's
+  ghost all read. The inspector over the map was 92% opaque, and the map's
+  words showed through its fields; it is opaque now.
+- **The dock-zone tint is faint on the dark stage.** The band a drag would
+  dock into is visible, and only just; not measured against 1.4.11
+  Non-text Contrast.
+- **Tab order** from the size fields: the palette's tabs, its tiles, Add New
+  Actor, the map, the map's toolbar, the folded inspector's Show button,
+  then the preview. With a placement selected, I on the map reaches Back to
+  the actors, and Tab goes through the inspector's actions, its fields,
+  Dock and Undock, the Camera section and each trait group in turn, then
+  back to the map. Focus is visible throughout.
+- **The trait groups arrive after the rest of the inspector**, once the
+  game has described the kind. Tabbing in before then passes over them;
+  nothing says they are coming.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

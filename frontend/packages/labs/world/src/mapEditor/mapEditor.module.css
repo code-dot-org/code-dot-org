@@ -189,11 +189,8 @@
   pointer-events: auto;
   padding: 0.6rem;
   border-radius: 6px;
-  background: color-mix(
-    in srgb,
-    var(--background-neutral-primary) 92%,
-    transparent
-  );
+  /* Opaque: see-through, the map's words showed behind its fields. */
+  background: var(--background-neutral-primary);
   border: var(--lab-border-default);
   color: var(--text-neutral-primary);
 }
