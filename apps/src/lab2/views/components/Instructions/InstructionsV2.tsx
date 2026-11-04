@@ -1,4 +1,8 @@
-import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
+import {
+  Theme,
+  ThemeProvider,
+  useTheme,
+} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import React, {
   useRef,
@@ -114,95 +118,99 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const checklist = objectives?.items.length ? objectives.items : undefined;
 
   return (
-    <div
-      id="instructions"
-      className={classNames(
-        moduleStyles.instructions,
-        fixedDarkBackground
-          ? moduleStyles.fixedDarkBackground
-          : moduleStyles.standardBackground,
-        'instructions'
-      )}
-      data-theme={overrideTheme || defaultTheme}
-    >
+    <ThemeProvider theme={overrideTheme || defaultTheme}>
       <div
-        id="instructions-panel"
-        aria-live="polite"
-        className={classNames(moduleStyles.item)}
+        id="instructions"
+        className={classNames(
+          moduleStyles.instructions,
+          fixedDarkBackground
+            ? moduleStyles.fixedDarkBackground
+            : moduleStyles.standardBackground,
+          'instructions'
+        )}
       >
         <div
-          key={displayInstructions}
-          id="instructions-text"
-          className={classNames(moduleStyles.bubble, moduleStyles.textContent)}
+          id="instructions-panel"
+          aria-live="polite"
+          className={classNames(moduleStyles.item)}
         >
-          {/* eslint-disable jsx-a11y/no-noninteractive-tabindex -- scrollable region requires keyboard access per WCAG 2.1 SC 2.1.1 */}
           <div
-            className={moduleStyles.scrollingContent}
-            ref={scrollRef}
-            tabIndex={isScrollable ? 0 : undefined}
-            aria-label={isScrollable ? 'Instructions' : undefined}
+            key={displayInstructions}
+            id="instructions-text"
+            className={classNames(
+              moduleStyles.bubble,
+              moduleStyles.textContent
+            )}
           >
-            {/* One element holds the text and the checklist, so read-aloud
-                covers both. */}
-            <div ref={ref}>
-              <MainInstructionsContent
-                instructionsText={displayInstructions}
-                handleInstructionsTextClick={handleInstructionsTextClick}
-              />
-              {checklist && (
-                <ObjectivesList
-                  items={checklist}
-                  onItemHover={onObjectiveHover}
-                  onItemClick={onObjectiveClick}
+            {/* eslint-disable jsx-a11y/no-noninteractive-tabindex -- scrollable region requires keyboard access per WCAG 2.1 SC 2.1.1 */}
+            <div
+              className={moduleStyles.scrollingContent}
+              ref={scrollRef}
+              tabIndex={isScrollable ? 0 : undefined}
+              aria-label={isScrollable ? 'Instructions' : undefined}
+            >
+              {/* One element holds the text and the checklist, so read-aloud
+                  covers both. */}
+              <div ref={ref}>
+                <MainInstructionsContent
+                  instructionsText={displayInstructions}
+                  handleInstructionsTextClick={handleInstructionsTextClick}
                 />
-              )}
+                {checklist && (
+                  <ObjectivesList
+                    items={checklist}
+                    onItemHover={onObjectiveHover}
+                    onItemClick={onObjectiveClick}
+                  />
+                )}
+              </div>
+              <PredictQuestion
+                levelProperties={levelProperties}
+                className={moduleStyles.predictQuestion}
+                showJavascriptWarning={appName === 'weblab2'}
+                showSubmitButton={appName === 'weblab2'}
+              />
             </div>
-            <PredictQuestion
-              levelProperties={levelProperties}
-              className={moduleStyles.predictQuestion}
-              showJavascriptWarning={appName === 'weblab2'}
-              showSubmitButton={appName === 'weblab2'}
-            />
+            {showTts && (
+              <div className={moduleStyles.ttsContainer}>
+                <TextToSpeech contentRef={ref} />
+              </div>
+            )}
+            {bottomComponent && (
+              <div className={moduleStyles.bottomComponent}>
+                {bottomComponent}
+              </div>
+            )}
           </div>
-          {showTts && (
-            <div className={moduleStyles.ttsContainer}>
-              <TextToSpeech contentRef={ref} />
-            </div>
+          {isPredictLevel && (
+            <>
+              <InstructorsOnly>
+                <div
+                  className={classNames(
+                    moduleStyles.bubble,
+                    moduleStyles.predictSummaryBubble
+                  )}
+                >
+                  <PredictSummary />
+                </div>
+              </InstructorsOnly>
+              <PredictQuestionRunPrompt appName={appName} />
+            </>
           )}
-          {bottomComponent && (
-            <div className={moduleStyles.bottomComponent}>
-              {bottomComponent}
-            </div>
+          {!hideNavigation && (
+            <NavigationArea
+              objectivesDone={objectives && objectives.allDone}
+              {...feedbackProps}
+              overrideTheme={overrideTheme}
+              levelProperties={levelProperties}
+              handleInstructionsTextClick={handleInstructionsTextClick}
+              hideContinueIfDisabled={hideContinueIfDisabled}
+              styleAsBubble
+            />
           )}
         </div>
-        {isPredictLevel && (
-          <>
-            <InstructorsOnly>
-              <div
-                className={classNames(
-                  moduleStyles.bubble,
-                  moduleStyles.predictSummaryBubble
-                )}
-              >
-                <PredictSummary />
-              </div>
-            </InstructorsOnly>
-            <PredictQuestionRunPrompt appName={appName} />
-          </>
-        )}
-        {!hideNavigation && (
-          <NavigationArea
-            objectivesDone={objectives && objectives.allDone}
-            {...feedbackProps}
-            overrideTheme={overrideTheme}
-            levelProperties={levelProperties}
-            handleInstructionsTextClick={handleInstructionsTextClick}
-            hideContinueIfDisabled={hideContinueIfDisabled}
-            styleAsBubble
-          />
-        )}
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 export default memo(Instructions);

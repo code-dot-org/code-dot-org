@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import React, {useEffect, useMemo} from 'react';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
@@ -106,19 +107,21 @@ const RubricFABContainer: React.FC = () => {
 
   return (
     // Force light mode for the rubric FAB and dialog as they are not fully themed currently.
-    <div data-theme="Light">
-      <RubricFloatingActionButton
-        rubric={rubric}
-        studentLevelInfo={studentLevelInfo}
-        reportingData={reportingData}
-        currentLevelName={levelName}
-        aiEnabled={rubric.learningGoals?.some(lg => lg?.aiEnabled)}
-        canShowTaScoresAlert={canShowTaScoresAlert}
-        reloadOnStudentChange={false}
-        parentLevelName={parentLevelName}
-        levelType={type}
-      />
-    </div>
+    <ThemeProvider theme="Light">
+      <div>
+        <RubricFloatingActionButton
+          rubric={rubric}
+          studentLevelInfo={studentLevelInfo}
+          reportingData={reportingData}
+          currentLevelName={levelName}
+          aiEnabled={rubric.learningGoals?.some(lg => lg?.aiEnabled)}
+          canShowTaScoresAlert={canShowTaScoresAlert}
+          reloadOnStudentChange={false}
+          parentLevelName={parentLevelName}
+          levelType={type}
+        />
+      </div>
+    </ThemeProvider>
   );
 };
 
