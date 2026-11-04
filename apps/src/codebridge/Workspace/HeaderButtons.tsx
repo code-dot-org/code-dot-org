@@ -25,6 +25,10 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
+  // Switching project type would replace the project mid-review.
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
 
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
@@ -65,6 +69,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           color="secondary"
           size="extraSmall"
           onClick={projectPickerSettings.showProjectTypePicker}
+          disabled={isAiTutorVersion}
           aria-label={codebridgeI18n.projectPickerAriaLabel()}
           type="button"
           endIcon={<FontAwesomeV6Icon iconName="rotate" />}

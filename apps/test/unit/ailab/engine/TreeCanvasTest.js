@@ -6,6 +6,8 @@ import TreeCanvas from '@cdo/apps/ailab/engine/UIComponents/TreeCanvas';
 import {withTheme} from './renderWithProviders';
 import './stubPseudoClasses';
 
+import moduleStyles from '@cdo/apps/ailab/engine/UIComponents/treeCanvas.module.scss';
+
 const TOOLBAR_LEFT = 8;
 const TOOLBAR_WIDTH = 40;
 
@@ -137,12 +139,14 @@ describe('TreeCanvas', () => {
     jest
       .spyOn(HTMLElement.prototype, 'offsetLeft', 'get')
       .mockImplementation(function () {
-        return this.getAttribute('role') === 'group' ? TOOLBAR_LEFT : 0;
+        return this.classList.contains(moduleStyles.toolbar) ? TOOLBAR_LEFT : 0;
       });
     jest
       .spyOn(HTMLElement.prototype, 'offsetWidth', 'get')
       .mockImplementation(function () {
-        return this.getAttribute('role') === 'group' ? TOOLBAR_WIDTH : 0;
+        return this.classList.contains(moduleStyles.toolbar)
+          ? TOOLBAR_WIDTH
+          : 0;
       });
   });
   afterEach(() => jest.restoreAllMocks());

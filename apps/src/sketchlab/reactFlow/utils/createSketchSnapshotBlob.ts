@@ -2,6 +2,7 @@ import {type ReactFlowInstance} from '@xyflow/react';
 import {toBlob} from 'html-to-image';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {capExportPixelRatio} from '@cdo/apps/util/imageExport/capExportPixelRatio';
 import {getExportStyleProperties} from '@cdo/apps/util/imageExport/getExportStyleProperties';
 import {getFontEmbedCss} from '@cdo/apps/util/imageExport/getFontEmbedCss';
 import {inlineSvgStylesForExport} from '@cdo/apps/util/imageExport/inlineSvgStylesForExport';
@@ -18,8 +19,6 @@ const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
-// iOS Safari draws nothing on a canvas bigger than this.
-const MAX_EXPORT_CANVAS_PIXELS = 16_777_216;
 export const CAPTURE_ERROR = 'Could not capture your sketch. Please try again.';
 // html-to-image never resolves if the browser loads an image but cannot decode it.
 export const CAPTURE_TIMEOUT_MS = 30_000;
@@ -84,9 +83,10 @@ const captureSketch = async (
 
   // html-to-image multiplies the output by the device pixel ratio. Keep that
   // detail, but not past our max canvas size.
-  const pixelRatio = Math.min(
+  const pixelRatio = capExportPixelRatio(
     Math.max(window.devicePixelRatio || 1, 1),
-    Math.sqrt(MAX_EXPORT_CANVAS_PIXELS / (imageWidth * imageHeight))
+    imageWidth,
+    imageHeight
   );
 
   const renderBlob = async () => {
