@@ -96,7 +96,7 @@ function MoreOptionsDropdown({
                 {
                   value: 'reset-progress',
                   label: i18n.resetProgress(),
-                  tag: i18n.beta().toUpperCase(),
+                  tag: i18n.betaTag(),
                   icon: {iconName: 'rotate-left', iconStyle: 'solid'},
                   onClick: () => setShowResetProgressDialog(true),
                 },

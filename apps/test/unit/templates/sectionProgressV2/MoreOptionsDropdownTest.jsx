@@ -106,7 +106,7 @@ describe('MoreOptionsDropdown', () => {
     fireEvent.click(trigger);
     fireEvent.click(
       screen.getByRole('button', {
-        name: `${i18n.resetProgress()} ${i18n.beta()}`,
+        name: `${i18n.resetProgress()} ${i18n.betaTag()}`,
       })
     );
 
