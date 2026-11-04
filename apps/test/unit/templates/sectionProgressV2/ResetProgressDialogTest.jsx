@@ -67,9 +67,11 @@ describe('ResetProgressDialog', () => {
     fireEvent.click(screen.getByLabelText('Student1 Familyone'));
     fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
 
-    expect(
-      screen.getByText(i18n.resetProgressConfirmWarning({unitName: 'Course A'}))
-    ).toBeTruthy();
+    expect(screen.getByRole('dialog')).toHaveAccessibleDescription(
+      `${i18n.resetProgressConfirmWarning({
+        unitName: 'Course A',
+      })} ${i18n.resetProgressCannotBeUndone()}`
+    );
   });
 
   it('renders a checkbox for every student and disables Next until one is selected', () => {
@@ -115,9 +117,11 @@ describe('ResetProgressDialog', () => {
     fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
 
     expect(screen.getByText(i18n.resetProgressConfirmTitle())).toBeTruthy();
-    expect(
-      screen.getByText(i18n.resetProgressConfirmWarning({unitName: 'Course A'}))
-    ).toBeTruthy();
+    expect(screen.getByRole('dialog')).toHaveAccessibleDescription(
+      `${i18n.resetProgressConfirmWarning({
+        unitName: 'Course A',
+      })} ${i18n.resetProgressCannotBeUndone()}`
+    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
