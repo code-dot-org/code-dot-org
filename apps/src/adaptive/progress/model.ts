@@ -4,18 +4,24 @@
 
 import {hashString} from '@cdo/apps/utils';
 
-import {Checkpoint, Pathway} from '../types';
+import {Checkpoint} from '../types';
 
 export type CheckpointStatus =
   | 'locked'
   | 'available'
   | 'inProgress'
-  | 'complete';
+  | 'complete'
+  /** Demonstrated by the student's evidence and skippable, so passed without being played. */
+  | 'skipped';
 
 /** Each checkpoint's status, by checkpoint id. */
 export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 
-/** One submitted answer. isCorrect is absent for a survey question; text is set for free-response questions. */
+/**
+ * One submitted answer. isCorrect is absent for a survey question; text is
+ * set for a free response question and for a typed answer to a multiple
+ * choice question, whose answerId is then OTHER_CHOICE_ID.
+ */
 export interface Answer {
   answerId: string;
   isCorrect?: boolean;
@@ -33,12 +39,6 @@ export interface GeneratedContent {
   traceId?: string;
 }
 
-/** What a step has accumulated for a student, by concern. */
-export interface StepContext {
-  generated?: GeneratedContent;
-  answers?: StepAnswers;
-}
-
 /**
  * Keys generated content to the full prompt it was made from, so a change
  * to any input, the brief, the project, the authored text or our wording,
@@ -48,18 +48,42 @@ export function generateInputsHash(prompt: string): string {
   return hashString(prompt);
 }
 
+/** One check of a project step's work, as the judge reported it. */
+export interface ValidationAttempt {
+  /** When the server recorded it. */
+  at: string;
+  pass: boolean;
+  /** On the evidence levels of the skill the step measures. */
+  evidenceLevel: number;
+  /** Addressed to the student. */
+  reason: string;
+  /** The Langfuse trace the judge ran under. */
+  traceId?: string;
+}
+
+/** The verdict in force on a step; undefined before its first check. */
+export function latestValidation(
+  entry: StepProgress | undefined
+): ValidationAttempt | undefined {
+  const history = entry?.validationHistory;
+  return history?.[history.length - 1];
+}
+
 /** Id of the project screen's step, which records no progress. */
 export const PROJECT_STEP_ID = 'project';
 
 /** A step's state; a level step's comes from its level's own progress. */
 export interface StepProgress {
-  status: 'started' | 'complete';
+  status?: 'started' | 'complete';
   /** Seconds on screen, summed across visits. */
   timeSpent: number;
   startedAt?: string;
   completedAt?: string;
   submitted?: boolean;
   answers?: StepAnswers;
+  generatedInstructions?: GeneratedContent;
+  /** Every check of a project step's work, oldest first. */
+  validationHistory?: ValidationAttempt[];
 }
 
 export interface Progress {
@@ -68,33 +92,38 @@ export interface Progress {
 
 export const EMPTY_PROGRESS: Progress = {steps: {}};
 
-const isComplete = (checkpoint: Checkpoint, progress: Progress) => {
-  const last = checkpoint.steps[checkpoint.steps.length - 1];
+/**
+ * The checkpoint's steps the student plays: every step without a showIf,
+ * and a step with one only while its choice is the latest answer.
+ */
+export function visibleSteps(checkpoint: Checkpoint, progress: Progress) {
+  return checkpoint.steps.filter(step => {
+    if (!step.showIf) return true;
+    const {stepId, questionId, choiceId} = step.showIf;
+    const latest = progress.steps[stepId]?.answers?.[questionId]?.at(-1);
+    return latest?.answerId === choiceId;
+  });
+}
+
+/**
+ * The step id to resume in a checkpoint: the first visible step that is not
+ * yet complete. Returns undefined when all steps are complete.
+ */
+export function stepIdToResume(
+  checkpoint: Checkpoint,
+  progress: Progress
+): string | undefined {
+  return visibleSteps(checkpoint, progress).find(
+    step => progress.steps[step.id]?.status !== 'complete'
+  )?.id;
+}
+
+/** Whether the student finished the checkpoint: its last visible step is complete. */
+export const isComplete = (checkpoint: Checkpoint, progress: Progress) => {
+  const last = visibleSteps(checkpoint, progress).at(-1);
   return !!last && progress.steps[last.id]?.status === 'complete';
 };
 
-/** Started by any step, complete with its last, unlocked by its requires. */
-export function checkpointStatus(
-  checkpoint: Checkpoint,
-  pathway: Pathway,
-  progress: Progress
-): CheckpointStatus {
-  if (isComplete(checkpoint, progress)) return 'complete';
-  const unlocked = (checkpoint.requires || []).every(r => {
-    const required = pathway.checkpoints.find(c => c.id === r);
-    return !!required && isComplete(required, progress);
-  });
-  if (!unlocked) return 'locked';
-  return checkpoint.steps.some(s => progress.steps[s.id]?.status)
-    ? 'inProgress'
-    : 'available';
-}
-
-export function getStatusMap(
-  pathway: Pathway,
-  progress: Progress
-): CheckpointStatusMap {
-  return Object.fromEntries(
-    pathway.checkpoints.map(c => [c.id, checkpointStatus(c, pathway, progress)])
-  );
-}
+/** Whether the student has opened the checkpoint: any step has a status. */
+export const isStarted = (checkpoint: Checkpoint, progress: Progress) =>
+  checkpoint.steps.some(s => progress.steps[s.id]?.status);

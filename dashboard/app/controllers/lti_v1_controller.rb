@@ -151,6 +151,11 @@ class LtiV1Controller < ApplicationController
       end
 
       user = Queries::Lti.get_user(decoded_jwt)
+
+      # sign_in would keep the previous student's session and cookies;
+      # signing out clears the session, so it goes first.
+      sign_out if current_user && current_user != user
+
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
       launch_context = decoded_jwt[Policies::Lti::LTI_CONTEXT_CLAIM]
       nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM]&.[](:context_memberships_url)

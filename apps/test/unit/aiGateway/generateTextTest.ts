@@ -10,6 +10,8 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@code-dot-org/core/plugins/observability', () => ({
   startSpan: (_options: unknown, callback: () => unknown) => callback(),
+  recordError: jest.fn(),
+  metrics: {count: jest.fn()},
 }));
 
 jest.mock('@cdo/apps/aiGateway/logHelper', () => ({
@@ -64,6 +66,7 @@ describe('generateTextThroughGateway access tokens', () => {
           json: async () => ({
             token,
             turnstileEnforcementMode: 'off',
+            signingKey: 'legacy_shared_key',
             reusable,
           }),
         };

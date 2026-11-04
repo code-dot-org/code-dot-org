@@ -33,7 +33,7 @@
       "type": "story"
     },
     "objectives": {
-      "title": "**Add your character.**",
+      "title": "**Add your character**",
       "items": [
         {
           "text": "Drag **make new sprite** onto the dotted outline.",

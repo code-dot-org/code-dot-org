@@ -102,6 +102,29 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, student
     end
 
+    test "student sign-in signs out previous student" do
+      auth_hash = mock_oauth user_type: User::TYPE_STUDENT
+      student = create(:student, :clever_sso_provider, uid: auth_hash.uid)
+      previous_stable_id = SecureRandom.uuid
+      previous_anon_user_id = Cdo::AnonUserId.generate
+
+      sign_in create(:student)
+      # As set by apps/src/metrics/statsigHelpers.js.
+      cookies.merge("#{SharedConstants::STATSIG_STABLE_ID_KEY}=#{previous_stable_id}; domain=.code.org; path=/")
+      # As set by Cdo::RequestExtension#anon_user_id.
+      cookies.merge("#{Cdo::AnonUserId::KEY}=#{previous_anon_user_id}; domain=code.org; path=/")
+
+      sign_in_through_clever
+      assert_redirected_to '/'
+      assert_equal I18n.t('auth.signed_in'), flash[:notice]
+
+      assert_equal student.id, signed_in_user_id
+      assert_empty cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+      assert_match Cdo::AnonUserId::FORMAT, cookies[Cdo::AnonUserId::KEY]
+      refute_equal previous_anon_user_id, cookies[Cdo::AnonUserId::KEY]
+      assert_equal cookies[Cdo::AnonUserId::KEY], SignIn.where(user: student).last.anon_user_id
+    end
+
     test "teacher sign-in" do
       auth_hash = mock_oauth user_type: User::TYPE_TEACHER
 

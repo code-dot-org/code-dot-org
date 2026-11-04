@@ -35,7 +35,7 @@
       "type": "platform"
     },
     "objectives": {
-      "title": "**Put your treasure in the world.**",
+      "title": "**Put your treasure in the world**",
       "items": [
         {
           "text": "Click a square your player can reach to put your treasure there.",

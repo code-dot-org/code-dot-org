@@ -34,11 +34,16 @@ class MultipleSelectQuestionTest < ActiveSupport::TestCase
     assert_equal({score: 0, max_score: 1}, question.grade('selectedChoiceIds' => 'a'))
   end
 
-  test "answered? is true only when at least one choice is selected" do
+  test "grade scores a selection with a repeated choice as incorrect" do
+    question = create(:multiple_select_question)
+    assert_equal({score: 0, max_score: 1}, question.grade('selectedChoiceIds' => ['a', 'a', 'c']))
+  end
+
+  test "response_answered? is true only when at least one choice is selected" do
     question = build(:multiple_select_question)
-    assert question.answered?({'selectedChoiceIds' => ['a']})
-    refute question.answered?({'selectedChoiceIds' => []})
-    refute question.answered?({})
+    assert question.response_answered?({'selectedChoiceIds' => ['a']})
+    refute question.response_answered?({'selectedChoiceIds' => []})
+    refute question.response_answered?({})
   end
 
   test "attempt_content_json omits the answer key" do

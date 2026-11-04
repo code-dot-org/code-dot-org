@@ -19,41 +19,47 @@ export interface LevelMode {
       is the image_role_defaults level property (imageRoleDefaults.ts), which code
       and world levels use to open their dropdowns on an image by role. */
   imageRole?: string;
-  /** A world level that places one thing: no Erase, the image goes on an
-      empty cell, and choosing another cell moves it. */
-  placeOne?: boolean;
-  /** Which scene tabs a pinned level shows: its own scene's (the default),
-      or every scene's, the others locked, where a level first shows the
-      student the scenes they have. */
-  sceneTabs?: 'pinned' | 'all';
-  /** The sentence scene's sentence, by id in sentences.json; the
-      image type's own sentence when unset. */
-  sentence?: string;
+  /** The World palette offers the images in these roles, of any kind,
+      instead of the level's one image. */
+  paletteRoles?: string[];
+  /** The level opens on the Images tab to make its image, then goes on to
+      its own tabs. */
+  imageFirst?: boolean;
 }
 
-/** The style every generate form starts on; students can still switch. */
+/** Generations a level before free play allows; free play has no limit. */
+export const GENERATION_LIMIT = 5;
+
+/** The style the advanced generate form starts on; the student form is
+    pixel art only. */
 export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
 
-/** The tabs a kind shows, the first being where the level opens. An image
-    level has none: its panel replaces the tab shell. */
+/** The tabs a kind shows, the first being where the level opens. */
 const TABS: Record<LevelModeKind, Tab[]> = {
   code: ['Code', 'Play'],
   world: ['World', 'Play'],
   play: ['Play'],
-  image: [],
+  image: ['Images'],
   freeplay: ['Code', 'Images', 'World', 'Play'],
 };
 
+/** The tabs a level shows; undefined, for the lab's default, when the kind
+    is not one the lab knows. */
 export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
-  return mode ? TABS[mode.kind] : undefined;
+  const own = mode && TABS[mode.kind];
+  if (!own) {
+    return undefined;
+  }
+  return mode.imageFirst && !own.includes('Images') ? ['Images', ...own] : own;
 }
 
-/** The image panel is the whole level, in place of the tabs and the stage. */
-export function isImageMode(mode: LevelMode | undefined): boolean {
-  return mode?.kind === 'image';
+/** Whether the level is a world level: its work is placing images on the
+    World grid. */
+export function editsWorld(mode: LevelMode | undefined): boolean {
+  return mode?.kind === 'world';
 }
 
-/** The only mode offering the prompt box and the paint tools. */
+/** The only mode where students add images and draw on them. */
 export function isFreeplayMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'freeplay';
 }

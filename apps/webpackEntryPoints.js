@@ -156,6 +156,7 @@ const INTERNAL_ENTRIES = {
   'lessons/slides/show': './src/sites/studio/pages/lessons/slides/show.js',
   'lessons/slides/edit': './src/sites/studio/pages/lessons/slides/edit.js',
   'levelbuilder': './src/sites/studio/pages/levelbuilder.js',
+  'levels/editors/_adaptive': './src/sites/studio/pages/levels/editors/_adaptive.js',
   'levels/editors/_applab': './src/sites/studio/pages/levels/editors/_applab.js',
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
   'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',

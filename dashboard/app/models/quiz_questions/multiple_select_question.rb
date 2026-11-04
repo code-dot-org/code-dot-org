@@ -37,14 +37,16 @@ class MultipleSelectQuestion < QuizQuestion
   end
 
   # response_data shape: {"selectedChoiceIds" => ["0", "2"]}
-  def answered?(response_data)
+  def response_answered?(response_data)
     response_data['selectedChoiceIds'].is_a?(Array) && response_data['selectedChoiceIds'].any?
   end
 
   # All or nothing: correct only if exactly the correct choices are selected.
+  # A repeated id is never correct; a set comparison alone would ignore it.
   def grade(response_data)
     selected = response_data.is_a?(Hash) ? response_data['selectedChoiceIds'] : nil
-    correct = selected.is_a?(Array) && selected.to_set == content['correct_choice_ids'].to_set
+    correct = selected.is_a?(Array) && selected.uniq.length == selected.length &&
+      selected.to_set == content['correct_choice_ids'].to_set
     {score: correct ? 1 : 0, max_score: 1}
   end
 

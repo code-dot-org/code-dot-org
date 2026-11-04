@@ -41,6 +41,15 @@ module AdaptiveContent
     pathway.merge('skills' => skills.transform_values {|skill| with_resolved_standards(skill)})
   end
 
+  # Returns false, writing nothing, when the file already holds the normalized text.
+  def self.write(id, text)
+    file = path(id)
+    normalized = "#{text.gsub("\r\n", "\n").rstrip}\n"
+    return false if File.file?(file) && File.read(file) == normalized
+    File.atomic_write(file) {|temp| temp.write(normalized)}
+    true
+  end
+
   def self.reset_cache!
     @cache.clear
   end

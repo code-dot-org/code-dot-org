@@ -33,7 +33,7 @@ describe('PlayBar', () => {
     expect(onPlayGame).toHaveBeenCalled();
   });
 
-  it("keeps Play scene's room but shows only Play game on the start scene", () => {
+  it('shows one Play on the start scene, which plays the game', () => {
     const onPlayGame = jest.fn();
     render(
       <PlayBar
@@ -44,13 +44,9 @@ describe('PlayBar', () => {
         playSceneHidden
       />
     );
-    expect(names()).toEqual(['Play game']);
-    const away = screen
-      .getByText('Play scene')
-      .closest('button') as HTMLElement;
-    expect(away.style.visibility).toBe('hidden');
-    expect(away.getAttribute('aria-hidden')).toBe('true');
-    screen.getByRole('button', {name: 'Play game'}).click();
+    expect(names()).toEqual(['Play']);
+    expect(screen.queryByText('Play scene')).toBeNull();
+    screen.getByRole('button', {name: 'Play'}).click();
     expect(onPlayGame).toHaveBeenCalled();
   });
 

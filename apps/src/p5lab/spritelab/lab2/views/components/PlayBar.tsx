@@ -149,15 +149,11 @@ interface PlayBarProps {
   onPlay: (event: React.MouseEvent<HTMLElement>) => void;
   /** Absent when there is no editing view to return to. */
   onStop?: (event: React.MouseEvent<HTMLElement>) => void;
-  /** Plays from the start scene, offered beside Play scene. */
+  /** Plays from the start scene, offered beside Play scene; absent on a
+      level that keeps to one scene, whose one Play plays that scene. */
   onPlayGame?: (event: React.MouseEvent<HTMLElement>) => void;
-  /** Play game shown but disabled, with the reason on hover: a level
-      that keeps to one scene still shows the button. */
-  playGameDisabled?: boolean;
-  playGameReason?: string;
-  /** On the start scene Play scene and Play game are the same thing: Play
-      scene keeps its room but is not shown, and Play game is the one
-      button. */
+  /** On the start scene Play scene and Play game are the same thing: one
+      button, Play, which plays the game. */
   playSceneHidden?: boolean;
 }
 
@@ -172,8 +168,6 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
   onPlay,
   onStop,
   onPlayGame,
-  playGameDisabled = false,
-  playGameReason,
   playSceneHidden = false,
 }) => {
   const setupBlockColor = useSetupBlockColor();
@@ -181,35 +175,33 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
     const playSceneAway = !!onPlayGame && playSceneHidden;
     return (
       <>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="small"
-          sx={getRunButtonSx(setupBlockColor)}
-          style={playSceneAway ? {visibility: 'hidden'} : undefined}
-          aria-hidden={playSceneAway || undefined}
-          tabIndex={playSceneAway ? -1 : undefined}
-          startIcon={<FontAwesomeV6Icon iconName="play" />}
-          onClick={onPlay}
-        >
-          {onPlayGame ? 'Play scene' : 'Play'}
-        </MuiButton>
+        {!playSceneAway && (
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
+            sx={getRunButtonSx(setupBlockColor)}
+            startIcon={<FontAwesomeV6Icon iconName="play" />}
+            onClick={onPlay}
+          >
+            {onPlayGame ? 'Play scene' : 'Play'}
+          </MuiButton>
+        )}
         {onPlayGame && (
-          // A disabled button takes no pointer events, so the title sits on
-          // a wrapper.
-          <span title={playGameDisabled ? playGameReason : undefined}>
-            <MuiButton
-              variant={playSceneAway ? 'contained' : 'outlined'}
-              color={playSceneAway ? 'primary' : 'secondary'}
-              size="small"
-              sx={playSceneAway ? getRunButtonSx(setupBlockColor) : undefined}
-              disabled={playGameDisabled}
-              startIcon={<FontAwesomeV6Icon iconName="flag-checkered" />}
-              onClick={onPlayGame}
-            >
-              Play game
-            </MuiButton>
-          </span>
+          <MuiButton
+            variant={playSceneAway ? 'contained' : 'outlined'}
+            color={playSceneAway ? 'primary' : 'secondary'}
+            size="small"
+            sx={playSceneAway ? getRunButtonSx(setupBlockColor) : undefined}
+            startIcon={
+              <FontAwesomeV6Icon
+                iconName={playSceneAway ? 'play' : 'flag-checkered'}
+              />
+            }
+            onClick={onPlayGame}
+          >
+            {playSceneAway ? 'Play' : 'Play game'}
+          </MuiButton>
         )}
       </>
     );

@@ -581,6 +581,7 @@ describe('QuizAttemptWorkspace', () => {
               quizQuestionId: 1,
               questionType: 'MultipleChoiceQuestion',
               responseData: {selectedChoiceId: 'a'},
+              answered: true,
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
@@ -589,6 +590,7 @@ describe('QuizAttemptWorkspace', () => {
               quizQuestionId: 2,
               questionType: 'MultipleChoiceQuestion',
               responseData: {selectedChoiceId: 'b'},
+              answered: true,
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -872,6 +874,7 @@ describe('QuizAttemptWorkspace', () => {
           quizQuestionId: 1,
           questionType: 'MultipleChoiceQuestion',
           responseData: {selectedChoiceId: 'b'},
+          answered: true,
           correct: true,
           explanation: 'Because 3 + 5 = 8.',
           correctChoiceId: 'b',
@@ -934,6 +937,7 @@ describe('QuizAttemptWorkspace', () => {
 
       expect(screen.getByText('What is the value of x?')).toBeInTheDocument();
       expect(screen.getByText('What is the value of y?')).toBeInTheDocument();
+      expect(screen.queryByText('Skipped')).not.toBeInTheDocument();
       expect(screen.queryByRole('radio')).not.toBeInTheDocument();
       expect(
         screen.queryByRole('button', {name: /Next|Submit|Finish|Begin/})
@@ -954,7 +958,7 @@ describe('QuizAttemptWorkspace', () => {
             ],
           },
         },
-        quizQuestions: [question({id: 1})],
+        quizQuestions: [question({id: 1}), question({id: 2, page: 2})],
         viewAsUserId: 99,
       });
 
@@ -962,6 +966,7 @@ describe('QuizAttemptWorkspace', () => {
       expect(alert).toHaveTextContent(
         'Aisha Khan is still working on this assessment.'
       );
+      expect(screen.queryByText('Skipped')).not.toBeInTheDocument();
       expect(alert).toHaveAttribute('data-type', 'warning');
       expect(screen.queryByRole('radio')).not.toBeInTheDocument();
       expect(
@@ -969,7 +974,7 @@ describe('QuizAttemptWorkspace', () => {
       ).not.toBeInTheDocument();
     });
 
-    it('shows score, question results, and the explanation even when the quiz hides them, without Try again', () => {
+    it('shows score, question results, result tags, and the explanation even when the quiz hides them, without Try again', () => {
       renderWorkspace({
         hookState: {attempt: SUBMITTED},
         quizQuestions: [question({id: 1})],
@@ -984,6 +989,7 @@ describe('QuizAttemptWorkspace', () => {
       );
       expect(alert).toHaveAttribute('data-type', 'info');
       expect(screen.getByText('100%')).toBeInTheDocument();
+      expect(screen.getByText('Correct')).toBeInTheDocument();
       expect(screen.getByText('Because 3 + 5 = 8.')).toBeInTheDocument();
       expect(
         screen.queryByRole('button', {name: 'Try again'})
@@ -1153,6 +1159,7 @@ describe('QuizAttemptWorkspace', () => {
                 quizQuestionId: 1,
                 questionType: 'MultipleChoiceQuestion',
                 responseData: {selectedChoiceId: 'a'},
+                answered: true,
                 correct: true,
                 explanation: null,
                 correctChoiceId: 'a',
@@ -1161,6 +1168,7 @@ describe('QuizAttemptWorkspace', () => {
                 quizQuestionId: 2,
                 questionType: 'MultipleChoiceQuestion',
                 responseData: {selectedChoiceId: 'b'},
+                answered: true,
                 correct: false,
                 explanation: null,
                 correctChoiceId: 'a',
@@ -1178,6 +1186,63 @@ describe('QuizAttemptWorkspace', () => {
       ).toBeInTheDocument();
       expect(screen.getByText('Question 1 of 2')).toBeInTheDocument();
       expect(screen.getByText('Question 2 of 2')).toBeInTheDocument();
+    });
+  });
+
+  describe('multiple select questions', () => {
+    const MULTIPLE_SELECT = question({
+      id: 6,
+      type: 'MultipleSelectQuestion',
+      questionTitle: 'Which are even?',
+      choices: [
+        {id: 'a', text: '2'},
+        {id: 'b', text: '3'},
+        {id: 'c', text: '4'},
+      ],
+    });
+
+    it('restores every selected choice of an in-progress answer', () => {
+      renderWorkspace({
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            questionResultsInProgress: [
+              {
+                quizQuestionId: 6,
+                questionType: 'MultipleSelectQuestion',
+                responseData: {selectedChoiceIds: ['a', 'c']},
+              },
+            ],
+          },
+        },
+        quizQuestions: [MULTIPLE_SELECT],
+      });
+
+      expect(screen.getByRole('checkbox', {name: /A\. 2/})).toBeChecked();
+      expect(screen.getByRole('checkbox', {name: /B\. 3/})).not.toBeChecked();
+      expect(screen.getByRole('checkbox', {name: /C\. 4/})).toBeChecked();
+    });
+
+    it('saves the full selection each time a choice is checked or unchecked', async () => {
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [MULTIPLE_SELECT],
+      });
+
+      fireEvent.click(screen.getByRole('checkbox', {name: /A\. 2/}));
+      fireEvent.click(screen.getByRole('checkbox', {name: /C\. 4/}));
+      fireEvent.click(screen.getByRole('checkbox', {name: /A\. 2/}));
+
+      expect(screen.getByRole('checkbox', {name: /A\. 2/})).not.toBeChecked();
+      expect(screen.getByRole('checkbox', {name: /C\. 4/})).toBeChecked();
+      await waitFor(() =>
+        expect(submitQuestionResponse.mock.calls).toEqual([
+          [6, {selectedChoiceIds: ['a']}],
+          [6, {selectedChoiceIds: ['a', 'c']}],
+          [6, {selectedChoiceIds: ['c']}],
+        ])
+      );
     });
   });
 
@@ -1393,6 +1458,7 @@ describe('QuizAttemptWorkspace', () => {
                 quizQuestionId: 9,
                 questionType: 'FreeResponseQuestion',
                 responseData: {answerText: 'x > 3'},
+                answered: true,
                 correct: null,
                 explanation: null,
                 correctChoiceId: null,

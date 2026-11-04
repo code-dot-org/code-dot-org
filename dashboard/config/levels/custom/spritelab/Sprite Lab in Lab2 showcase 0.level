@@ -1574,7 +1574,10 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_patrollingOnBlocks"
+              "type": "spritelab2_beginsBehavior",
+              "fields": {
+                "BEHAVIOR": "patrollingOnBlocks"
+              }
             }
           ],
           "id": "Behaviors"

@@ -12,7 +12,7 @@ module Api
     #
     # @see apps/src/metrics/statsigHelpers.js
     def stable_id
-      render plain: request.existing_statsig_stable_id || Cdo::AnonUserId.generate
+      render plain: request.existing_statsig_stable_id || SecureRandom.uuid
     end
   end
 end

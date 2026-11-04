@@ -1,0 +1,34 @@
+name 'pl-aif-y2-u1-l7-pacing-notes'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pacing the Three-Day Project
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Day 1:</strong> brainstorm topics and decisions, read the project requirements and rubric, draft a decision tree, complete the Day 1 Reflection</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Day 2:</strong> partners share and give feedback on each other's tree diagrams, revise the tree, begin coding (Level 2, start Level 3), complete the Day 2 Reflection</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Day 3:</strong> finish coding, partners test each other's finished projects and give feedback, complete the End-of-Project Reflection (Level 4)</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> the revision step on Day 2 isn't optional padding, it's where the exemplar's own tree visibly improved, "Do you like photography?" became "Are you a visual person?", a more general question that captures the same intent more cleanly. If a student skips revision, they skip the step most likely to turn a Limited tree into a Convincing one.
+  </div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; If a student falls behind:</strong> the tightest place to compress is Day 3's partner-testing step, not the coding time itself. A student who's behind still needs the actual implementation time more than the feedback round.
+  </div>
+</div>
+MARKDOWN

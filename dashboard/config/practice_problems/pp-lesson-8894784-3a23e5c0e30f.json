@@ -1,0 +1,19 @@
+{
+  "key": "pp-lesson-8894784-3a23e5c0e30f",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the survey question type with its purpose: 'Multiple Choice', 'Open-Ended'.",
+  "solution": [
+    {
+      "option": "Multiple Choice",
+      "correct": "To collect specific information that can be measured or counted."
+    },
+    {
+      "option": "Open-Ended",
+      "correct": "To allow for detailed responses and insights."
+    }
+  ],
+  "objective_keys": [
+    "6595b472-6d61-43c7-8d54-726da6e15db8"
+  ]
+}

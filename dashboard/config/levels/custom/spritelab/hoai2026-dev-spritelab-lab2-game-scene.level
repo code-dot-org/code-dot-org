@@ -33,10 +33,10 @@
       "type": "platform"
     },
     "objectives": {
-      "title": "**Add the background to your game.**",
+      "title": "**Add the background to your game**",
       "items": [
         {
-          "text": "Drag **set background** onto the dotted outline.",
+          "text": "Put **set background** under **when run**.",
           "check": {
             "kind": "block",
             "type": "gamelab_setBackgroundImageAs",
@@ -51,7 +51,7 @@
         }
       ]
     },
-    "long_instructions": "# Add the background to your game\nDrag **set background** onto the dotted outline.",
+    "long_instructions": "# Add the background to your game\nPut **set background** under **when run** and pick your game background.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -69,7 +69,8 @@
           "extraState": {
             "like": {
               "type": "gamelab_setBackgroundImageAs"
-            }
+            },
+            "blank": true
           }
         }
       }

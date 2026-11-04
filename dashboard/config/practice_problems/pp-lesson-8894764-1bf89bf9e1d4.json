@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894764-1bf89bf9e1d4",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following is an essential element to include in a personal statement about responsible AI use?",
+  "solution": [
+    {
+      "option": "Personal experiences with AI tools",
+      "correct": true
+    },
+    {
+      "option": "General opinions from others",
+      "correct": false
+    },
+    {
+      "option": "Statistics about AI usage",
+      "correct": false
+    },
+    {
+      "option": "Historical facts about AI development",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "7ad545f1-8124-4538-bdf6-e15bf3d9de85"
+  ]
+}

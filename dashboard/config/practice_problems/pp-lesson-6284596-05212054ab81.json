@@ -1,0 +1,29 @@
+{
+  "key": "pp-lesson-6284596-05212054ab81",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following statements are true regarding the use of parameters in functions? Select all that apply.",
+  "solution": [
+    {
+      "option": "Parameters can be used to accept user input.",
+      "correct": true
+    },
+    {
+      "option": "A function without parameters cannot be reused.",
+      "correct": false
+    },
+    {
+      "option": "Using parameters makes functions more versatile.",
+      "correct": true
+    },
+    {
+      "option": "Parameters must always be of the same data type.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "f6424eab-71c9-4cfa-a85f-7b428c44bb09",
+    "714dd803-6137-42ad-97ff-6b09f16627e9",
+    "adff6d11-ce11-4a61-b9a0-1201cd41fd96"
+  ]
+}

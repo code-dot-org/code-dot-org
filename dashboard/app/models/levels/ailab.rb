@@ -34,12 +34,12 @@ class Ailab < Level
     uses_lab2
   )
 
-  DATASETS_MANIFEST_PATH = frontend_dir('packages', 'labs', 'ailab', 'src', 'datasets-manifest.json')
-  LAB2_INSTRUCTIONS_PATH = frontend_dir('packages', 'labs', 'ailab', 'src', 'lab2-instructions.json')
+  DATASETS_MANIFEST_PATH = apps_dir('src', 'ailab', 'engine', 'datasets-manifest.json')
+  LAB2_INSTRUCTIONS_PATH = apps_dir('src', 'ailab', 'engine', 'lab2-instructions.json')
 
   REQUIRE_ACCURACY_RANGE = (0..100)
 
-  DATASET_COLUMN_MODE_KEYS = %w(label features hideSelectLabel lockFeatures pretrained).freeze
+  DATASET_COLUMN_MODE_KEYS = %w(label features hideSelectLabel lockFeatures pretrained idColumn).freeze
 
   validate :validate_lab2_mode
 
@@ -224,6 +224,11 @@ class Ailab < Level
       errors.add(:mode, 'must select no more than one known dataset.')
     elsif datasets.empty? && DATASET_COLUMN_MODE_KEYS.any? {|key| parsed_mode[key].present?}
       errors.add(:mode, 'must select a dataset to choose, lock, or pretrain on its columns.')
+    end
+
+    id_column = parsed_mode['idColumn']
+    if id_column.present? && (id_column == parsed_mode['label'] || Array(parsed_mode['features']).include?(id_column))
+      errors.add(:mode, 'cannot use the id column as the label or a feature.')
     end
 
     if parsed_mode.key?('requireAccuracy')

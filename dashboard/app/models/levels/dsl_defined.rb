@@ -148,9 +148,15 @@ class DSLDefined < Level
     existing_filename.presence || canonical_filename
   end
 
-  # See dashboard/test/ui/config/README.md.
+  # See dashboard/config/PARTITIONS.md.
+  SCRIPTS_DIRS = {
+    production_curriculum: 'config/scripts',
+    ui_test_curriculum: 'test/ui/config/scripts',
+    standalone_projects: 'config/standalone_projects/scripts',
+  }.freeze
+
   def scripts_dir
-    ui_test? ? 'test/ui/config/scripts' : 'config/scripts'
+    SCRIPTS_DIRS.fetch(Policies::LevelFiles.partition_for_name(name))
   end
 
   def existing_filename

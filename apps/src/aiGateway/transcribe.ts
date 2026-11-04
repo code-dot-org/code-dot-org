@@ -15,6 +15,11 @@ import {
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
 import {
+  recordGatewayRequestError,
+  recordGatewayRequestOk,
+  recordTokenNotIssued,
+} from './requestMetric';
+import {
   AI_GATEWAY_URL,
   getAccessToken,
   getModelString,
@@ -44,13 +49,18 @@ async function transcribeThroughGateway(
     try {
       // Serialized, not parallel: the access token response carries the
       // Turnstile mode that decides whether a challenge is needed at all.
-      const accessToken = await getAccessToken(aichatContext);
+      const issueToken = () =>
+        getAccessToken(aichatContext).catch((error: unknown) => {
+          recordTokenNotIssued();
+          throw error;
+        });
+      const accessToken = await issueToken();
       const turnstileToken = await fetchTurnstileToken(
         accessToken.turnstileEnforcementMode
       );
       // A challenge can outlast the reuse window, so a reusable token is re-checked after it.
-      const {token} = accessToken.reusable
-        ? await getAccessToken(aichatContext)
+      const {token, signingKey} = accessToken.reusable
+        ? await issueToken()
         : accessToken;
 
       const formData = new FormData();
@@ -72,13 +82,15 @@ async function transcribeThroughGateway(
           'x-ai-gateway-phase': 'transcription',
           ...turnstileHeaders(turnstileToken),
         }
-      ).catch((error: unknown) => {
+      ).catch(async (error: unknown) => {
         // The worker answers 401 to an expired or otherwise invalid token.
         if (isNetworkError(error) && error.response.status === 401) {
           invalidateAccessToken(aichatContext, token);
         }
+        await recordGatewayRequestError(signingKey, error);
         throw error;
       });
+      recordGatewayRequestOk(signingKey);
 
       const rawResponse = await response.json();
       const parseResult =

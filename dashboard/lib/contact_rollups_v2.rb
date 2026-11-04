@@ -7,7 +7,6 @@ class ContactRollupsV2
 
   DASHBOARD_DB_WRITER = Cdo::Sequel.database_connection_pool(
     CDO.dashboard_db_writer,
-    CDO.dashboard_db_reader,
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
@@ -27,7 +26,6 @@ class ContactRollupsV2
   # large SELECT statements instead of loading the writer, which otherwise
   # carries the entire nightly job.
   DASHBOARD_REPORTING_DB = Cdo::Sequel.database_connection_pool(
-    REPORTING_DB_URI,
     REPORTING_DB_URI,
     query_timeout: MAX_EXECUTION_TIME_SEC
   )

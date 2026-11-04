@@ -279,7 +279,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
 
   context 'on lab page' do
     let!(:spritelab) do
-      spritelab_name = ProjectsController::STANDALONE_PROJECTS[:spritelab][:name]
+      spritelab_name = Policies::StandaloneProjects.all[:spritelab][:name]
       Level.find_by_name(spritelab_name) || create(:spritelab, name: spritelab_name)
     end
 

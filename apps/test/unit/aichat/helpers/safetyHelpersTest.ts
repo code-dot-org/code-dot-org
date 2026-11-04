@@ -91,6 +91,23 @@ describe('safetyHelpers', () => {
       await expect(isTextSafe('bad text')).resolves.toBe(false);
     });
 
+    it('passes a caller-provided context to the gateway', async () => {
+      mockClassification('OK');
+      const aichatContext = {
+        clientType: 'adaptive',
+        currentLevelId: 7,
+        scriptId: null,
+        channelId: undefined,
+      } as Parameters<typeof isTextSafe>[3];
+
+      await isTextSafe('hello class', 'input_filter', undefined, aichatContext);
+
+      expect(mockGenerateText).toHaveBeenCalledWith(expect.anything(), {
+        phase: 'input_filter',
+        aichatContext,
+      });
+    });
+
     it('throws when the classifier returns an invalid value', async () => {
       mockClassification('UNEXPECTED');
 

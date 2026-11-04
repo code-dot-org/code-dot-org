@@ -1,0 +1,47 @@
+name 'pl-aif-y2-u1-l5-while-loop'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# While Loops: Conditions
+
+In 2022, Lionel Messi's post celebrating the World Cup win reached 10 million likes in just 39 minutes. Lesson 8 uses that real event to introduce a different kind of loop.
+
+The "Time to 10 Million" simulation starts a post at 1 like, growing by a factor of 10 every minute, 1, 10, 100, 1,000, and so on, until it crosses 10 million. Notice the difference from Lesson 7: there, you knew exactly how many days to simulate. Here, you don't know how many minutes it'll take, you just know you want to keep going until you hit the target.
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; While loop:</strong> a loop that repeats code while a condition is true.
+  </div>
+</div>
+
+Here's the exact code from the lesson:
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+i = 0<br>
+while i &lt; 3:<br>
+&nbsp;&nbsp;print(i)<br>
+&nbsp;&nbsp;i += 1
+  </div>
+  <div style="background-color: #E4E2F8; padding: 10px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976; line-height: 1.7;">
+0<br>
+1<br>
+2
+  </div>
+</div>
+
+Before every iteration, Python checks the condition, <code style="font-size:16px;">i &lt; 3</code>. If it's true, the indented lines run and <code style="font-size:16px;">i</code> updates. The moment the condition is false, 3 &lt; 3 is false, the loop stops, no more and no fewer iterations than the condition allows.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> the real distinction to give students isn't "for is simpler" or "while is harder," it's this: use a for loop when you know the number of repetitions in advance, use a while loop when you're repeating until something becomes true. Lesson 7's days were known in advance. Lesson 8's minutes-to-10-million weren't.
+  </div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Keep this in mind:</strong> that <code style="font-size:16px;">i += 1</code> line isn't optional decoration, it's what eventually makes the condition false. Hold onto that thought, it matters a lot in a few levels.
+  </div>
+</div>
+MARKDOWN

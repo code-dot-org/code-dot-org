@@ -41,9 +41,6 @@ $(document).ready(() => {
         originalJsonVideos={json_videos || []}
       />
     </Provider>,
-    document.getElementById('edit-jit-pl-concept'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('edit-jit-pl-concept')
   );
 });

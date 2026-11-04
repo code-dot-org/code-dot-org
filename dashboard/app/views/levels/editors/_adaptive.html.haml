@@ -6,6 +6,20 @@
     = f.label :adaptive_id, 'Content ID'
     = f.select :adaptive_id, AdaptiveContent.ids, {include_blank: true}, class: 'form-control'
     %p.help-block
-      Picks the content file under dashboard/config/level_content/adaptive. Currently these must be authored directly in the repo. Authoring tools coming soon!
+      Picks the content file under dashboard/config/level_content/adaptive. New content files must be added in the repo.
+
+  - if @level.persisted? && AdaptiveContent.exist?(@level.adaptive_id)
+    .form-group
+      %label= "Pathway (#{@level.adaptive_id}.json)"
+      %p.help-block
+        Save pathway writes this JSON to
+        %code= "dashboard/config/level_content/adaptive/#{@level.adaptive_id}.json"
+        on its own; saving the level does not.
+      %p.help-block
+        This file is shared by:
+        = safe_join(@level.sharing_levels.map {|level| link_to level.name, edit_level_path(level)}, ', ')
+      #adaptive-pathway-editor{data: {pathway_id: @level.adaptive_id}}
 
 = render partial: 'levels/editors/fields/audit_log', locals: {f: f}
+
+%script{src: webpack_asset_path('js/levels/editors/_adaptive.js')}

@@ -6,13 +6,16 @@ import {
   checkpointSchema,
   freeResponseQuestionSchema,
   levelStepSchema,
+  markdownStepSchema,
   multipleChoiceDiagnosticQuestionSchema,
   panelsStepSchema,
   pathwaySchema,
   questionSchema,
   questionsStepSchema,
+  reviewStepSchema,
   skillSchema,
   stepSchema,
+  videoStepSchema,
 } from './schema';
 
 export type Pathway = z.infer<typeof pathwaySchema>;
@@ -21,7 +24,10 @@ export type Skill = z.infer<typeof skillSchema>;
 export type Step = z.infer<typeof stepSchema>;
 export type PanelsStep = z.infer<typeof panelsStepSchema>;
 export type LevelStep = z.infer<typeof levelStepSchema>;
+export type MarkdownStep = z.infer<typeof markdownStepSchema>;
 export type QuestionsStep = z.infer<typeof questionsStepSchema>;
+export type ReviewStep = z.infer<typeof reviewStepSchema>;
+export type VideoStep = z.infer<typeof videoStepSchema>;
 export type Question = z.infer<typeof questionSchema>;
 export type MultipleChoiceDiagnosticQuestion = z.infer<
   typeof multipleChoiceDiagnosticQuestionSchema

@@ -1,0 +1,20 @@
+name 'aif-y2-natural-language-processing-postassessment-q5-2026'
+
+wrong 'The text is about coal mining, since "black" appears four times in it'
+wrong 'The text is about golf courses, since "holes" appears four times and "the" three'
+right 'The text is about black holes, since "black", "holes" and "space" appear'
+wrong 'Nothing can be concluded, because the most frequent word is "and"'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A program counts the words of a text and returns this dictionary. Which conclusion do the counts best support?
+
+```python
+{"and": 5, "holes": 4, "black": 4, "the": 3, "massive": 2, "space": 2, "galaxies": 2}
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Frequency Analysis
+MARKDOWN

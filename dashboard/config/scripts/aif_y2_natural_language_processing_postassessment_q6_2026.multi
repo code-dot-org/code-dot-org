@@ -1,0 +1,23 @@
+name 'aif-y2-natural-language-processing-postassessment-q6-2026'
+
+right '"pancakes", because it is frequent in Chapter 3 and rare in the rest of the book'
+wrong '"butter", because it appears more often in Chapter 3'
+wrong '"butter", because a keyword should appear in every chapter'
+wrong 'Neither word, because a keyword always has to be the most frequent word in its chapter'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+An author is picking a keyword for Chapter 3 of a ten-chapter cookbook.
+
+| Word | Times in Chapter 3 | Chapters it appears in |
+|---|---|---|
+| butter | 6 | 10 |
+| pancakes | 3 | 1 |
+
+Which word is the better keyword for Chapter 3, and why?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Keyword Extraction
+MARKDOWN

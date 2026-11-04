@@ -885,10 +885,24 @@ module SharedConstants
     AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
   ].freeze
 
-  # Models only available to users in the US
-  # (see User::AiAccessible#can_use_aichat_model?). Kept separate from the list
-  # above, which is about which provider serves a model.
-  AI_CHAT_US_ONLY_MODEL_IDS = AI_CHAT_GEMINI_MODEL_IDS
+  AI_CHAT_PROVIDERS = {
+    GOOGLE: "google",
+    OPENAI: "openai",
+  }
+
+  # Models absent here (Mistral, served from SageMaker) are never blocked.
+  AI_CHAT_PROVIDER_BY_MODEL_ID = AI_CHAT_GEMINI_MODEL_IDS.to_h {|id| [id, AI_CHAT_PROVIDERS[:GOOGLE]]}.
+    merge(AI_CHAT_MODEL_IDS[:CHATGPT] => AI_CHAT_PROVIDERS[:OPENAI]).
+    freeze
+
+  # Unavailable to users outside the US
+  AI_CHAT_US_ONLY_PROVIDERS = [AI_CHAT_PROVIDERS[:GOOGLE]].freeze
+
+  # For Level's SQL scope, which matches on model id.
+  AI_CHAT_US_ONLY_MODEL_IDS = AI_CHAT_PROVIDER_BY_MODEL_ID.
+    select {|_, provider| AI_CHAT_US_ONLY_PROVIDERS.include?(provider)}.
+    keys.
+    freeze
 
   AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: "ai-chat-lab",
@@ -900,6 +914,10 @@ module SharedConstants
     ADAPTIVE: "adaptive",
     # Spoken descriptions of Python Lab theater output, for screen reader users.
     THEATER_DESCRIPTION: "theater-description",
+    # Levelbuilder curriculum generator pages (lessons/:id/generate and the unit scope).
+    CURRICULUM_GENERATOR: "curriculum-generator",
+    # The Sprite Lab 2 "ask AI" block. Levelbuilders only for now.
+    SPRITELAB_ASK_AI: "spritelab-ask-ai",
   }
 
   AI_CHAT_READ_TIMEOUTS = {
@@ -909,6 +927,8 @@ module SharedConstants
     AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] => 60,
     AI_CHAT_CLIENT_TYPES[:ADAPTIVE] => 30,
     AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION] => 30,
+    AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR] => 30,
+    AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] => 30,
   }
 
   # The browser reuses an AI Gateway access token until shortly before this elapses.

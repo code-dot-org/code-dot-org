@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894773-2f6bfc0a8d89",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following features with their descriptions: 1. Color 2. Size 3. Shape 4. Texture",
+  "solution": [
+    {
+      "option": "Color",
+      "correct": "Visual attribute that can affect recognition."
+    },
+    {
+      "option": "Size",
+      "correct": "Dimension measurement of an object."
+    },
+    {
+      "option": "Shape",
+      "correct": "Geometric form of an object."
+    },
+    {
+      "option": "Texture",
+      "correct": "Surface quality of an object."
+    }
+  ],
+  "objective_keys": [
+    "fb5879b1-b229-413f-b21b-b08e438f4ba0"
+  ]
+}

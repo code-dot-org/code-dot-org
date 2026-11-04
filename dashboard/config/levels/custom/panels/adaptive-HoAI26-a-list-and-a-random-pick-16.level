@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-10-16T21:31:49.000Z",
   "level_num": "custom",
@@ -8,26 +9,28 @@
     "panels": [
       {
         "key": "adaptive-HoAI26-a-list-and-a-random-pick-16-985cb86f-2041-43cb-b46f-bc7e42276b04",
-        "text": "A list holds multiple options.",
-        "imageUrl": "https://images.code.org/6163cf795632996e153c4deb51dd244d-adaptive-HoAI26-a-list-and-a-random-pick-16-panel-1-9c495e5a-3369-44f1-8a02-5e0ec7e88134.png",
-        "layout": "text-top-left"
+        "text": "###A list holds the options.\nAsk AI to store your lunch choices in a **list**, so your website can use them.",
+        "imageUrl": "https://images.code.org/1cd0aa02fc4d84dac6ab68bc2cbd9d1d-panel-1-options-compact.gif",
+        "layout": "text-top-right"
       },
       {
         "key": "adaptive-HoAI26-a-list-and-a-random-pick-16-3be0c95d-6b6f-4966-a2b7-26df6e11886e",
-        "text": "A random pick chooses one by chance.",
-        "imageUrl": "https://images.code.org/c43684cce762ecfbb06cffd400f85a9f-adaptive-HoAI26-a-list-and-a-random-pick-16-panel-2-20296735-b45d-44f9-89c4-6b96abb72838.png",
-        "layout": "text-top-left"
+        "text": "####A random pick chooses one by chance.\nAsk AI to make the button randomly select one item from your list when clicked.",
+        "imageUrl": "https://images.code.org/5a3e5e587fd1a043fdb2a3676ea2bb22-panel-2-gentle-random-pick.gif",
+        "layout": "text-top-right"
       },
       {
         "key": "adaptive-HoAI26-a-list-and-a-random-pick-16-3c876579-7669-4811-8c2f-96dd4256a84e",
-        "text": "The spinning is just how it looks.",
-        "imageUrl": "https://images.code.org/bff9a89ec8d6836afbbc416ae75f5362-adaptive-HoAI26-a-list-and-a-random-pick-16-panel-3-955a2251-695e-472f-b657-3cd9b4ac5b2a.png",
-        "layout": "text-top-left"
+        "text": "####An animation shows the action.\nAsk AI to add a spinning animation that ends on the selected item. The random pick decides the result; the animation reveals it.",
+        "imageUrl": "https://images.code.org/67316089bddc74a3a5ce74d24d2aa9f4-panel-3-spin-stop-pizza.gif",
+        "layout": "text-top-right"
       }
     ],
-    "generate_outline": "Learn about lists and random picks. Understand that a list holds options, a random pick chooses one by chance, and visual effects like spinning wheels are just for appearance."
+    "generate_outline": "Learn about lists and random picks. Understand that a list holds options, a random pick chooses one by chance, and visual effects like spinning wheels are just for appearance.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-16 21:32:16 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:32:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:32:16 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:32:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 21:32:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 21:33:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 21:55:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 22:30:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

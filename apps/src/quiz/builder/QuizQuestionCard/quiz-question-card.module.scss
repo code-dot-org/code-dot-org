@@ -1,5 +1,6 @@
 .tabsRow {
   padding: 0 10px;
+  background: var(--background-neutral-secondary);
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
@@ -7,48 +8,127 @@
   background: var(--background-neutral-primary);
 }
 
+.optionsField {
+  align-self: stretch;
+
+  > * {
+    align-self: stretch;
+  }
+}
+
 .optionsList {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .optionRow {
   display: flex;
   align-items: center;
   gap: 6px;
+  width: 100%;
   padding: 8px;
   border: 1px solid var(--border-neutral-primary);
-  border-radius: var(--shape-sm);
+  border-radius: var(--shape-md);
   background: var(--background-neutral-secondary);
 }
 
-.correctToggle {
-  background: var(--background-neutral-primary);
-  border: 1px solid var(--border-neutral-secondary);
-  color: var(--text-neutral-primary);
-}
+// The correct-answer marker sits in a box joined to the left of the text input.
+.optionInput {
+  display: flex;
+  flex: 1 0 0;
+  align-items: stretch;
+  min-width: 0;
 
-.correctToggleSelected {
-  background: var(--background-selected-primary);
-  border-color: var(--background-selected-primary);
-  color: var(--text-selected-primary);
-
-  &:hover {
-    background: var(--background-selected-primary);
+  .optionText input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
 
-// FormFieldWrapper aligns its children to flex-start, so the input needs its own width.
-.fullWidthField {
-  width: 100%;
+.correctMarker {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  margin-right: -1px;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-sm) 0 0 var(--shape-sm);
 
-  input {
-    width: 100%;
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  // DSCO radios/checkboxes offset the glyph for labeled rows; this slot has no label.
+  i {
+    margin-top: 0 !important;
   }
 }
 
 .optionText {
   flex: 1 0 0;
   min-width: 0;
+}
+
+.pairRow {
+  // A pair's two fields grow independently, so their heights can differ.
+  align-items: flex-start;
+
+  :global(.MuiIconButton-root) {
+    align-self: center;
+  }
+}
+
+.pairText {
+  flex: 1 0 0;
+  min-width: 0;
+
+  &::placeholder {
+    color: var(--text-neutral-placeholder);
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.fieldGroupLabel {
+  display: flex;
+  width: auto;
+  margin: 0 0 2px;
+  padding: 0;
+  border: 0;
+  color: inherit;
+}
+
+.fieldHelp {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin: 0;
+  color: var(--text-neutral-tertiary);
+}
+
+.fieldHelpIcon {
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
 }

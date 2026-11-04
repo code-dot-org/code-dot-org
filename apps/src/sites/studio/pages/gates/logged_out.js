@@ -6,9 +6,6 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 document.addEventListener('DOMContentLoaded', function () {
   createReactRoot(
     <LinkAccountPage />,
-    document.getElementById('logged-out-page'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('logged-out-page')
   );
 });

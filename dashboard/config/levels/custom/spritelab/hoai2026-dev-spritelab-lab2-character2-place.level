@@ -33,7 +33,7 @@
       "type": "story"
     },
     "objectives": {
-      "title": "**Add them on the right.**",
+      "title": "**Add them on the right**",
       "items": [
         {
           "text": "Drag **make new sprite** onto the dotted outline.",

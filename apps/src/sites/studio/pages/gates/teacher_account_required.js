@@ -6,9 +6,6 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 document.addEventListener('DOMContentLoaded', function () {
   createReactRoot(
     <TeacherAccountRequiredPage />,
-    document.getElementById('teacher-account-required-page'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('teacher-account-required-page')
   );
 });

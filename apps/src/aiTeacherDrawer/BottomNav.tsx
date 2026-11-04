@@ -3,6 +3,10 @@ import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+
+import {sendTaEvent} from './analytics';
+
 import style from './bottom-nav.module.scss';
 
 interface NavItem {
@@ -53,7 +57,18 @@ const BottomNav: React.FC<BottomNavProps> = ({
             key={label}
             type="button"
             className={style.item}
-            onClick={() => onNavChange(label)}
+            onClick={() => {
+              sendTaEvent(
+                EVENTS.AI_TA_TAB_CLICKED,
+                {
+                  to_tab: label,
+                  from_tab: activeLabel,
+                  alert_badge_count: unreadNotificationCount,
+                },
+                label
+              );
+              onNavChange(label);
+            }}
           >
             <div
               className={classNames(style.itemContent, active && style.active)}

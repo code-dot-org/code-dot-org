@@ -10,21 +10,34 @@ import useRequiredContext from '@cdo/apps/util/hooks/useRequiredContext';
 import {
   CheckpointStatusMap,
   GeneratedContent,
-  StepContext,
+  Progress,
+  ValidationAttempt,
 } from '../progress/model';
-import {Checkpoint, Pathway} from '../types';
+import {Checkpoint, Pathway, Step} from '../types';
 
 export interface PathwayContextValue {
   pathway: Pathway;
   checkpoint: Checkpoint;
   statusMap: CheckpointStatusMap;
-  stepContextMap: {[stepId: string]: StepContext};
+  progress: Progress;
   saveGeneratedInstructions: (
     stepId: string,
     content: GeneratedContent
   ) => void;
+  /** Records one check of a project step's work. */
+  recordValidation: (
+    step: Step,
+    attempt: Omit<ValidationAttempt, 'at'>
+  ) => void;
   /** What the shell's own AI calls present for an access token. */
   aiContext: AichatContext;
+  /**
+   * Whether the student asked, on a review step, for the project to be
+   * built at the next project step with a prompt. The review sets it, that
+   * step spends it, and leaving the checkpoint drops it.
+   */
+  buildRequested: boolean;
+  setBuildRequested: (requested: boolean) => void;
 }
 
 export const PathwayContext = createContext<PathwayContextValue | null>(null);

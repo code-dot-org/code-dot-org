@@ -11,7 +11,7 @@ describe('EditorStrip', () => {
     );
     expect(screen.getByRole('heading', {name: 'Workspace'})).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'World'}));
-    expect(onChange).toHaveBeenCalledWith('World', expect.anything());
+    expect(onChange).toHaveBeenCalledWith('World');
     rerender(<EditorStrip editor="World" onChange={onChange} />);
     expect(screen.getByRole('heading', {name: 'World'})).toBeTruthy();
   });
@@ -23,7 +23,10 @@ describe('EditorStrip', () => {
     unmount();
     render(<EditorStrip editor="Code" onChange={jest.fn()} switchAtStart />);
     const heading = screen.getByRole('heading', {name: 'Workspace'});
-    expect(heading.parentElement!.firstElementChild).toBe(heading);
+    const strip = heading.parentElement!;
+    expect(strip.firstElementChild).toBe(
+      screen.getByRole('group', {name: 'Edit'}).parentElement
+    );
   });
 
   it('offers undo and redo across from the switch, each live only with history', () => {

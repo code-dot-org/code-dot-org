@@ -1,7 +1,7 @@
 {
   "key": "devices",
   "display_name": "Creating Apps with Devices (Circuit Playground)",
-  "is_featured": false,
+  "is_featured": true,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": "AID",

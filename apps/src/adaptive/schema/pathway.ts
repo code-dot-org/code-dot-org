@@ -1,8 +1,24 @@
 import {z} from 'zod';
 
 import {checkpointSchema, checkpointSourceSchema} from './checkpoint';
+import {destinationSchema} from './destination';
 import {projectSchema, projectSourceSchema} from './project';
 import {skillSchema, skillSourceSchema} from './skill';
+
+/** The map's layout and which way it faces. */
+const mapSchema = z.strictObject({
+  /**
+   * `tree`, the default: rows by dependency depth. `destinations`: checkpoints
+   * with a `destination` stacked around the outside, the rest fanning out
+   * from the root at the center.
+   */
+  layout: z.enum(['tree', 'destinations']).optional(),
+  /**
+   * The compass direction the layout's top faces: `n` as authored, `e` a
+   * quarter turn clockwise, `s` a half turn, `w` three quarters.
+   */
+  orientation: z.enum(['n', 'e', 's', 'w']).optional(),
+});
 
 /**
  * Full adaptive pathway schema, as authored in dashboard/config/level_content/adaptive.
@@ -19,6 +35,13 @@ export const pathwaySourceSchema = z.strictObject({
   // A pathway's standards are its skills' standards; see pathwayStandards().
   skills: z.record(z.string(), skillSourceSchema),
   checkpoints: z.array(checkpointSourceSchema).min(1),
+  /**
+   * The map's destinations by id, which checkpoints name in `destination`.
+   * Without this map a checkpoint's `destination` is the title itself.
+   */
+  destinations: z.record(z.string().min(1), destinationSchema).optional(),
+  /** How the map is drawn, unless a URL parameter says otherwise. */
+  map: mapSchema.optional(),
 });
 
 /**

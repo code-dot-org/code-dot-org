@@ -25,6 +25,18 @@ class UserAdaptiveStepTest < ActiveSupport::TestCase
     assert_equal '2026-10-08T17:00:00Z', intro.reload.progress['startedAt']
   end
 
+  test "validation attempts append in order and only the last are kept" do
+    row = UserAdaptiveStep.create!(user_level: @user_level, step_id: 'build')
+    (UserAdaptiveStep::MAX_VALIDATION_ATTEMPTS + 2).times do |i|
+      row.record_validation!({'pass' => false, 'evidenceLevel' => 0, 'reason' => "Try #{i}"})
+    end
+
+    history = row.reload.validation_history
+    assert_equal UserAdaptiveStep::MAX_VALIDATION_ATTEMPTS, history.length
+    assert_equal 'Try 2', history.first['reason']
+    assert_equal "Try #{UserAdaptiveStep::MAX_VALIDATION_ATTEMPTS + 1}", history.last['reason']
+  end
+
   test "soft-deleting the user level deletes its steps" do
     UserAdaptiveStep.create!(user_level: @user_level, step_id: 'intro')
 

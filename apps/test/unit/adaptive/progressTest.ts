@@ -3,14 +3,15 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import {
   EMPTY_PROGRESS,
   Progress,
-  checkpointStatus,
-  getStatusMap,
+  isComplete,
+  latestValidation,
+  stepIdToResume,
   useProgress,
+  visibleSteps,
 } from '@cdo/apps/adaptive/progress';
-import {
-  GeneratedInstructions,
-  ProgressStore,
-} from '@cdo/apps/adaptive/progress/progressStore';
+import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
+import {computeEvidence} from '@cdo/apps/adaptive/routing/evidence';
+import {routeStatusMap} from '@cdo/apps/adaptive/routing/route';
 import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
 import {TestResults} from '@cdo/apps/constants';
 
@@ -55,9 +56,12 @@ const pathway = {
   ],
 } as Pathway;
 
-describe('checkpointStatus', () => {
+const statusMapOf = (p: Pathway, progress: Progress) =>
+  routeStatusMap(p, progress, computeEvidence(p, progress));
+
+describe('routeStatusMap without evidence', () => {
   const status = (index: number, progress: Progress) =>
-    checkpointStatus(pathway.checkpoints[index], pathway, progress);
+    statusMapOf(pathway, progress)[pathway.checkpoints[index].id];
 
   it('is available with no requires, locked until requires are complete', () => {
     const progress = progressOf([], []);
@@ -82,7 +86,7 @@ describe('checkpointStatus', () => {
     const multi = checkpoint('multi', undefined, [panels('one'), level]);
     const twoStep = {checkpoints: [multi]} as Pathway;
     const statusOf = (steps: Progress['steps']) =>
-      checkpointStatus(multi, twoStep, {steps});
+      statusMapOf(twoStep, {steps}).multi;
 
     expect(statusOf({one: {status: 'complete', timeSpent: 3}})).toBe(
       'inProgress'
@@ -91,11 +95,227 @@ describe('checkpointStatus', () => {
       'complete'
     );
   });
+
+  it('is not started by a step that holds only generated instructions', () => {
+    const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
+    const progress = {
+      steps: {'intro-step': {timeSpent: 0, generatedInstructions}},
+    };
+    expect(statusMapOf(pathway, progress).intro).toBe('available');
+  });
 });
 
-describe('getStatusMap', () => {
+describe('stepIdToResume', () => {
+  const level: Step = {id: 'try', title: 'Try', kind: 'level', level: 'x'};
+  const multi = checkpoint('multi', undefined, [
+    panels('one'),
+    panels('two'),
+    level,
+  ]);
+
+  const resume = (steps: Progress['steps']) => stepIdToResume(multi, {steps});
+
+  it('returns the first step when none are complete', () => {
+    expect(resume({})).toBe('one');
+    expect(resume({one: {status: 'started', timeSpent: 0}})).toBe('one');
+  });
+
+  it('returns the first incomplete step', () => {
+    expect(resume({one: {status: 'complete', timeSpent: 1}})).toBe('two');
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'complete', timeSpent: 2},
+      })
+    ).toBe('try');
+  });
+
+  it('returns undefined when all steps are complete', () => {
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'complete', timeSpent: 2},
+        try: {status: 'complete', timeSpent: 3},
+      })
+    ).toBeUndefined();
+  });
+
+  it('returns a started step as the next step to complete', () => {
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'started', timeSpent: 0},
+      })
+    ).toBe('two');
+  });
+});
+
+describe('visibleSteps', () => {
+  const ask: Step = {
+    id: 'ask',
+    title: 'Ask',
+    kind: 'questions',
+    questions: [
+      {
+        id: 1,
+        type: 'MultipleChoiceQuestion',
+        questionName: 'ask',
+        questionTitle: 'Which?',
+        choices: [
+          {id: 'a', text: 'A'},
+          {id: 'b', text: 'B'},
+        ],
+        allowOther: {},
+      },
+    ],
+  };
+  const branch = (id: string, choiceId: string): Step => ({
+    ...panels(id),
+    showIf: {stepId: 'ask', questionId: 1, choiceId},
+  });
+  const cp = checkpoint('branchy', undefined, [
+    ask,
+    branch('if-a', 'a'),
+    branch('if-b', 'b'),
+    branch('if-other', 'other'),
+    panels('after'),
+  ]);
+  const answered = (...answers: {answerId: string; text?: string}[]) => ({
+    steps: {ask: {timeSpent: 0, answers: {1: answers}}},
+  });
+  const ids = (progress: Progress) => visibleSteps(cp, progress).map(s => s.id);
+
+  it('hides every branch until its question is answered', () => {
+    expect(ids(EMPTY_PROGRESS)).toEqual(['ask', 'after']);
+  });
+
+  it('shows the branch of the latest answer, typed answers included', () => {
+    expect(ids(answered({answerId: 'a'}))).toEqual(['ask', 'if-a', 'after']);
+    expect(ids(answered({answerId: 'a'}, {answerId: 'b'}))).toEqual([
+      'ask',
+      'if-b',
+      'after',
+    ]);
+    expect(ids(answered({answerId: 'other', text: 'C'}))).toEqual([
+      'ask',
+      'if-other',
+      'after',
+    ]);
+  });
+
+  it('resumes and completes over visible steps only', () => {
+    const done = {status: 'complete' as const, timeSpent: 1};
+    expect(
+      stepIdToResume(cp, {
+        steps: {
+          ...answered({answerId: 'b'}).steps,
+          ask: {...done, answers: {1: [{answerId: 'b'}]}},
+        },
+      })
+    ).toBe('if-b');
+    const last = checkpoint('tail', undefined, [ask, branch('if-a', 'a')]);
+    expect(isComplete(last, {steps: {ask: done}})).toBe(true);
+    expect(
+      isComplete(last, {
+        steps: {ask: {...done, answers: {1: [{answerId: 'a'}]}}},
+      })
+    ).toBe(false);
+  });
+});
+
+describe('routeStatusMap from progress', () => {
+  it('skips a demonstrated skippable checkpoint and un-skips it once started', () => {
+    const routed = {
+      checkpoints: [
+        checkpoint('intro', undefined, [
+          {
+            id: 'check',
+            title: 'Check',
+            kind: 'questions',
+            questions: [
+              {
+                id: 1,
+                type: 'MultipleChoiceQuestion',
+                questionName: 'q1',
+                questionTitle: 'Q1',
+                choices: [
+                  {id: 'a', text: 'A'},
+                  {id: 'b', text: 'B'},
+                ],
+                measures: {skillId: 'build', evidenceLevels: {a: 0, b: 1}},
+              },
+            ],
+          } as unknown as Step,
+        ]),
+        {...checkpoint('a', ['intro']), skillIds: ['build'], skippable: true},
+        checkpoint('b', ['a']),
+      ],
+    } as unknown as Pathway;
+    const answered: Progress = {
+      steps: {
+        check: {
+          status: 'complete',
+          timeSpent: 1,
+          answers: {1: [{answerId: 'b'}]},
+        },
+      },
+    };
+    expect(statusMapOf(routed, answered)).toEqual({
+      intro: 'complete',
+      a: 'skipped',
+      b: 'available',
+    });
+    const reopened: Progress = {
+      steps: {...answered.steps, 'a-step': {status: 'started', timeSpent: 0}},
+    };
+    expect(statusMapOf(routed, reopened).a).toBe('inProgress');
+  });
+
+  it("skips a demonstrated skippable checkpoint once a project step's check shows the skill", () => {
+    const routed = {
+      checkpoints: [
+        checkpoint('intro', undefined, [
+          {
+            id: 'build-page',
+            title: 'Build',
+            kind: 'level',
+            level: 'x',
+            project: true,
+            validation: {
+              condition: 'Adds a heading.',
+              measures: {skillId: 'build'},
+            },
+          } as unknown as Step,
+        ]),
+        {
+          ...checkpoint('a', ['intro']),
+          skillIds: ['build'],
+          skippable: true,
+          targetEvidenceLevels: {build: 2},
+        },
+      ],
+    } as unknown as Pathway;
+    const checkedAt2: Progress = {
+      steps: {
+        'build-page': {
+          status: 'complete',
+          timeSpent: 1,
+          validationHistory: [
+            {
+              at: '2026-10-22T10:00:00Z',
+              pass: true,
+              evidenceLevel: 2,
+              reason: 'Done.',
+            },
+          ],
+        },
+      },
+    };
+    expect(statusMapOf(routed, checkedAt2).a).toBe('skipped');
+  });
+
   it('maps every checkpoint id to its status', () => {
-    expect(getStatusMap(pathway, progressOf(['intro', 'a'], []))).toEqual({
+    expect(statusMapOf(pathway, progressOf(['intro', 'a'], []))).toEqual({
       intro: 'complete',
       a: 'complete',
       b: 'available',
@@ -120,7 +340,6 @@ describe('useProgress', () => {
   } as unknown as Step;
   const read = panels('read');
   const hookPathway = {
-    id: 'p',
     checkpoints: [
       checkpoint('intro', undefined, [read, sandbox]),
       checkpoint('basics', ['intro'], [quiz]),
@@ -132,27 +351,18 @@ describe('useProgress', () => {
     const store = {
       load: jest.fn().mockResolvedValue(loaded),
       saveStep: jest.fn().mockResolvedValue(undefined),
+      saveInstructions: jest.fn().mockResolvedValue(undefined),
+      saveValidation: jest.fn().mockResolvedValue(undefined),
     };
     return store as typeof store & ProgressStore;
   };
 
-  const fakeGeneratedStore = (loaded?: GeneratedInstructions) => ({
-    load: jest.fn().mockResolvedValue(loaded),
-    save: jest.fn().mockResolvedValue(undefined),
-  });
-
   const renderProgress = async (
     store: ProgressStore,
-    reportLevelStep = jest.fn().mockResolvedValue(undefined),
-    generatedStore = fakeGeneratedStore()
+    reportLevelStep = jest.fn().mockResolvedValue(undefined)
   ) => {
     const hook = renderHook(() =>
-      useProgress(hookPathway, key, {
-        store,
-        generatedStore,
-        userId: 7,
-        reportLevelStep,
-      })
+      useProgress(hookPathway, key, {store, reportLevelStep})
     );
     await hook.waitForNextUpdate();
     return {...hook, reportLevelStep};
@@ -252,45 +462,66 @@ describe('useProgress', () => {
       timeSpent: 1,
       answers: {1: [wrong, right], 2: [right]},
     });
-    expect(result.current.stepContextMap.quiz).toEqual({
-      answers: {1: [wrong, right], 2: [right]},
-    });
     expect(store.saveStep).toHaveBeenLastCalledWith(key, 'quiz', {
       answers: {questionId: 1, list: [wrong, right]},
       timeSinceLastSave: 0,
     });
   });
 
-  it('saves generated instructions locally, not to the server', async () => {
+  it('saves generated instructions with the step without starting it', async () => {
     const store = fakeStore();
-    const generatedStore = fakeGeneratedStore();
-    const {result} = await renderProgress(store, undefined, generatedStore);
-    const generated = {instructions: 'Hi', inputsHash: 'ab'};
+    const {result} = await renderProgress(store);
+    const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
 
-    act(() => result.current.saveGeneratedInstructions('try', generated));
-
-    expect(result.current.stepContextMap).toEqual({try: {generated}});
-    expect(generatedStore.save).toHaveBeenLastCalledWith(
-      {userId: 7, ...key, pathwayId: 'p'},
-      {try: generated}
+    act(() =>
+      result.current.saveGeneratedInstructions('try', generatedInstructions)
     );
-    expect(store.saveStep).not.toHaveBeenCalled();
+
+    expect(result.current.progress?.steps.try.generatedInstructions).toEqual(
+      generatedInstructions
+    );
+    expect(result.current.statusMap.intro).toBe('available');
+    expect(store.saveInstructions).toHaveBeenCalledWith(
+      key,
+      'try',
+      generatedInstructions
+    );
   });
 
-  it('merges locally saved instructions with server answers', async () => {
-    const generated = {instructions: 'Hi', inputsHash: 'ab'};
-    const answers = {1: [{answerId: 'a', isCorrect: true}]};
-    const store = fakeStore({
-      steps: {quiz: {status: 'started', timeSpent: 0, answers}},
-    });
-    const {result} = await renderProgress(
-      store,
-      undefined,
-      fakeGeneratedStore({quiz: generated})
+  it('appends a validation attempt, dated, without starting the step', async () => {
+    const store = fakeStore();
+    const {result, reportLevelStep} = await renderProgress(store);
+    const attempt = {pass: false, evidenceLevel: 1, reason: 'Not yet.'};
+
+    act(() => result.current.recordValidation(sandbox, attempt));
+    act(() =>
+      result.current.recordValidation(sandbox, {...attempt, pass: true})
     );
 
-    expect(result.current.stepContextMap).toEqual({
-      quiz: {answers, generated},
+    const history = result.current.progress?.steps.try.validationHistory;
+    expect(history).toHaveLength(2);
+    expect(history?.[0]).toMatchObject(attempt);
+    expect(latestValidation(result.current.progress?.steps.try)?.pass).toBe(
+      true
+    );
+    expect(typeof history?.[1].at).toBe('string');
+    expect(result.current.statusMap.intro).toBe('available');
+    expect(store.saveValidation).toHaveBeenLastCalledWith(key, 'try', {
+      ...attempt,
+      pass: true,
     });
+    expect(reportLevelStep).not.toHaveBeenCalled();
+  });
+
+  it('restores loaded generated instructions', async () => {
+    const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
+    const store = fakeStore({
+      steps: {project: {timeSpent: 0, generatedInstructions}},
+    });
+    const {result} = await renderProgress(store);
+
+    expect(
+      result.current.progress?.steps.project.generatedInstructions
+    ).toEqual(generatedInstructions);
   });
 });

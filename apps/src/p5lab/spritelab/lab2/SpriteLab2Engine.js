@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
+import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {
@@ -12,6 +13,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
+import {askAiText, AskAiError, isAskAiEnabled} from './ai/text/askAi';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {burstBoxes} from './bursts';
 import {
@@ -51,6 +53,14 @@ import {
   wallBox,
 } from './platformPhysics';
 import {createPlayerActionTracker, isPlayerAction} from './playerActions';
+import {clearPrompt, showPrompt} from './redux/spriteLab2Redux';
+import {
+  asSoundEffect,
+  playPreset,
+  playSoundEffect,
+  stopSoundEffects,
+  synthPresetOf,
+} from './soundEffects';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 // A burst from the player starts at its take-off spot this many frames
@@ -66,17 +76,11 @@ const NOOP = () => {};
 // the stragglers.
 const IMAGE_LOAD_GRACE_MS = 10000;
 
-// Default sprite size for non-platformer scenes on platform-pool levels;
-// platformer scenes use CELL_SIZE (one grid cell). A later World-tab UI may
-// let the user pick these per scene.
-const STORY_SCENE_SPRITE_SIZE = 300;
-
-// The position block's three lanes. Sized under STORY_SCENE_SPRITE_SIZE so a
-// left and a right character stand in one scene; y puts feet near the story
-// ground line.
+// The three positions of the story position block. Sized so a left and a
+// right character fit in one scene; y puts their feet near the ground line.
 const STORY_LANE_X = {left: 100, center: 200, right: 300};
 const STORY_LANE_Y = 270;
-const STORY_LANE_SPRITE_SIZE = STORY_SCENE_SPRITE_SIZE * 0.7;
+const STORY_LANE_SPRITE_SIZE = 210;
 
 // Extra canvas density beyond the device pixel ratio: the canvas is 400
 // logical px and the Playspace transform-scales it to ~900 CSS px on the
@@ -92,18 +96,6 @@ const PLAYER_ACTION_EVENT = 'playerAction';
 // How much a platform scene dims its background, so the blocks and the
 // player read against it: the alpha of a black fill over it.
 const PLATFORM_BACKGROUND_DIM = 0.25;
-
-// Markers in a scene's compiled program that make it a platformer: the
-// platform composites and player setup from the toolbox, or the world
-// prelude's wall spawns.
-// Legacy fallback for scenes with no declared type: read the program for
-// blocks only a platformer has. Scenes created since carry `type`.
-const PLATFORM_SCENE_MARKERS = [
-  'makePlatformPlayer(',
-  'makePlatformBlocks(',
-  'setAsPlatformPlayer(',
-  "'walls'",
-];
 
 /**
  * Stand-in for the StudioApp singleton: exactly the members the classic
@@ -158,6 +150,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     // frame of the next run is drawn (see onP5Setup and the draw loops).
     this.frameCaptureWaiters_ = [];
     this.frameCaptureArmed_ = false;
+    // A preview run draws its first frame and holds there: the clock and
+    // the loop stop, so the frame shows what the program sets up and no
+    // event fires until Play.
+    this.holdFirstFrame_ = false;
+    this.held_ = false;
+    this.firstFrameDue_ = false;
     this.isBlockly = true;
     this.studioApp_ = makeStudioAppStub(this);
     this.mobileControls = NOOP_MOBILE_CONTROLS;
@@ -204,6 +202,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // behind must not start a program in it.
     this.destroyed_ = false;
     this.rerunAfterExecute_ = false;
+    this.runId_ = 0;
+    this.aiSetters_ = new Map();
+    this.aiPending_ = new Set();
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
     this.sceneJumpInFlight_ = false;
@@ -315,7 +316,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     const now = new Date().getTime();
-    if (this.drawPaused_) {
+    if (this.drawPaused_ || this.held_) {
       if (this.library && !this.library.currentPauseStartTime) {
         this.library.startPause(now);
       }
@@ -340,7 +341,7 @@ export default class SpriteLab2Engine extends SpriteLab {
   createLibrary(args) {
     const library = super.createLibrary(args);
     // Fixed for the run: the scene type is set before the run begins.
-    const dimBackground = this.isPlatformScene();
+    const dimBackground = this.usesPlatformPhysics_;
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
     // classic's ~400px library art: resize once to the canvas's physical
     // resolution instead of CoreLibrary's logical 400. A frame (from the
@@ -417,14 +418,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       });
     };
     if (this.usesPlatformPhysics_) {
-      // Sized per SCENE, not per level: one project holds both a platformer
-      // scene (one-cell sprites) and a story scene (large characters).
       // One cell at the default playfield size. A scene with a world
       // overrides this from the prelude with its own cell size, and the
       // grid blocks size their sprites from their own bitmaps.
-      library.defaultSpriteSize = this.isPlatformScene()
-        ? cellSize(DEFAULT_SCENE_GRID_SIZE)
-        : STORY_SCENE_SPRITE_SIZE;
+      library.defaultSpriteSize = cellSize(DEFAULT_SCENE_GRID_SIZE);
       // Landings carry sub-pixel float noise; the classic footing command
       // must not compare contact exactly.
       library.contactEpsilon = CONTACT_EPSILON;
@@ -470,6 +467,13 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (engine.frameCaptureArmed_) {
         engine.frameCaptureArmed_ = false;
         engine.settleFrameCaptures_(this.p5.canvas);
+      }
+      if (engine.firstFrameDue_) {
+        engine.firstFrameDue_ = false;
+        if (engine.holdFirstFrame_) {
+          engine.held_ = true;
+          engine.applyDrawPaused_();
+        }
       }
     };
     // Story lanes: placement by name instead of coordinates, sized so two
@@ -550,6 +554,13 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.__slab2Body = true;
       });
     };
+    // A behavior marks its sprite for one frame, and the wall collision
+    // leaves it alone.
+    library.commands.passThroughWalls = spriteArg => {
+      library.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.__slab2PassWalls = true;
+      });
+    };
     library.commands.platformGravity = () => this.platformGravity_;
     library.commands.platformGrounded = spriteArg =>
       footing(spriteArg, isSupported);
@@ -557,6 +568,22 @@ export default class SpriteLab2Engine extends SpriteLab {
       footing(spriteArg, (sprite, walls, view, gravity) =>
         hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
       );
+    const playSoundFile = library.commands.playSound;
+    library.commands.playSound = function (url) {
+      const preset = synthPresetOf(url);
+      if (preset) {
+        library.soundLog.push(url);
+        playPreset(preset);
+        return;
+      }
+      return playSoundFile.call(this, url);
+    };
+    library.commands.playSoundEffect = (wave, pitch, length, pattern) => {
+      const effect = asSoundEffect(wave, pitch, length, pattern);
+      if (effect) {
+        playSoundEffect(effect);
+      }
+    };
     // The physics pass records the player's actions; the events that fire
     // on them run one frame later.
     this.playerActionTracker_ = createPlayerActionTracker();
@@ -637,7 +664,110 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.goToExternalScene = sceneKey => {
       this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
     };
+    getStore().dispatch(clearPrompt());
+    const promptUser = (promptText, variableName, setterCallback, choices) => {
+      library.registerPrompt(promptText, variableName, setterCallback);
+      // Last prompt always wins, so we only ever have 1 active prompt unlike legacy.
+      library.numActivePrompts = 1;
+      getStore().dispatch(
+        showPrompt({
+          promptText: String(promptText ?? ''),
+          variableName,
+          choices,
+        })
+      );
+    };
+    library.commands.setPrompt = (promptText, variableName, setterCallback) =>
+      promptUser(promptText, variableName, setterCallback);
+    library.commands.setPromptWithChoices = (
+      promptText,
+      variableName,
+      choice1,
+      choice2,
+      choice3,
+      setterCallback
+    ) => {
+      const choices = [choice1, choice2, choice3]
+        .filter(choice => choice !== undefined && choice !== null)
+        .map(String)
+        .filter(choice => choice !== '');
+      promptUser(
+        promptText,
+        variableName,
+        setterCallback,
+        choices.length ? choices : undefined
+      );
+    };
+    const runId = ++this.runId_;
+    this.aiSetters_ = new Map();
+    // One request per variable at a time, to avoid a flood of requests at once.
+    const pending = (this.aiPending_ = new Set());
+    library.commands.askAI = (promptText, variableName, setterCallback) => {
+      if (!this.canAskAi_() || pending.has(variableName)) {
+        return;
+      }
+      pending.add(variableName);
+      this.registerAiAnswer_(library, variableName, setterCallback);
+      askAiText(String(promptText ?? ''))
+        .then(
+          text => {
+            if (this.destroyed_ || runId !== this.runId_) {
+              return;
+            }
+            this.deliverAiAnswer_(library, variableName, text);
+          },
+          error => {
+            if (this.destroyed_ || runId !== this.runId_) {
+              return;
+            }
+            console.warn(
+              error instanceof AskAiError
+                ? `SpriteLab2: the ask AI block's ${error.phase} did not pass the safety check.`
+                : `SpriteLab2: the ask AI block got no answer (${error.message}).`
+            );
+          }
+        )
+        .finally(() => pending.delete(variableName));
+    };
     return library;
+  }
+
+  registerAiAnswer_(library, variableName, setterCallback) {
+    if (!variableName) {
+      return;
+    }
+    if (library.promptVars[variableName] === undefined) {
+      library.promptVars[variableName] = null;
+    }
+    this.aiSetters_.set(variableName, setterCallback);
+  }
+
+  deliverAiAnswer_(library, variableName, text) {
+    library.promptVars[variableName] = text;
+    this.aiSetters_.get(variableName)?.(text);
+    library.userInputEventCallbacks[variableName]?.userCallbacks.forEach(
+      callback => callback()
+    );
+  }
+
+  // Mirrors the gateway's own check (User::AiAccessible), so a request it
+  // would refuse never leaves the browser.
+  canAskAi_() {
+    if (!isAskAiEnabled()) {
+      console.warn('SpriteLab2: the ask AI block is turned off.');
+      return false;
+    }
+    const permissions = getStore().getState().lab?.permissions;
+    if (!permissions?.includes(PERMISSIONS.LEVELBUILDER)) {
+      console.warn('SpriteLab2: the ask AI block needs levelbuilder access.');
+      return false;
+    }
+    return true;
+  }
+
+  onPromptAnswer(variableName, value) {
+    getStore().dispatch(clearPrompt());
+    this.library?.onPromptAnswer(variableName, value);
   }
 
   // Off the interpreter's step: the handler tears down the interpreter this
@@ -758,20 +888,10 @@ export default class SpriteLab2Engine extends SpriteLab {
   notifyControlsChange_() {
     if (this.onControlsChange) {
       this.onControlsChange({
-        platformer: this.usesPlatformPhysics_ && this.isPlatformScene(),
+        platformer: this.usesPlatformPhysics_,
         gravity: this.platformGravity_,
       });
     }
-  }
-
-  /** Whether the running scene is a platformer: by its type, or by platform
-      blocks in a scene made before scene types. */
-  isPlatformScene() {
-    if (this.sceneType_) {
-      return this.sceneType_ === 'platform';
-    }
-    const code = this.userCode || '';
-    return PLATFORM_SCENE_MARKERS.some(marker => code.includes(marker));
   }
 
   /** Run the given compiled JS program from scratch (creates/recreates p5). */
@@ -787,11 +907,11 @@ export default class SpriteLab2Engine extends SpriteLab {
    * via execute(); after that it re-runs inside the existing p5 — recreating
    * p5 per edit flickers and races its own async preload callbacks.
    */
-  runProgram(code, referencedImages, sceneType) {
+  runProgram(code, referencedImages, {holdFirstFrame = false} = {}) {
     if (this.destroyed_) {
       return;
     }
-    this.sceneType_ = sceneType;
+    this.holdFirstFrame_ = holdFirstFrame;
     if (code !== undefined) {
       this.setCode(code, referencedImages);
     }
@@ -848,6 +968,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     super.onP5Setup();
     // A run has begun: the next frame drawn is its first.
     this.frameCaptureArmed_ = this.frameCaptureWaiters_.length > 0;
+    this.firstFrameDue_ = true;
+    this.held_ = false;
     const p5 = this.p5Wrapper.p5;
     const density = Math.ceil(
       CANVAS_DENSITY_FACTOR * (window.devicePixelRatio || 1)
@@ -877,6 +999,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.destroyed_) {
       return;
     }
+    stopSoundEffects();
     const p5 = this.p5Wrapper.p5;
     if (!p5) {
       this.execute();
@@ -925,7 +1048,9 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   destroy() {
     this.destroyed_ = true;
+    stopSoundEffects();
     this.reset();
+    getStore().dispatch(clearPrompt());
     this.stopTickTimer();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();
@@ -1046,6 +1171,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         await trimAnimationListImages(scoped, {
           keepNames: animationNames(animationList),
           thumbnails: !external,
+          upscalePixelArt: true,
         })
       ),
       {multiFrame: true}
@@ -1094,6 +1220,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         await trimAnimationListImages(single, {
           keepNames: animationNames(list),
           thumbnails: !this.isExternalList_(list),
+          upscalePixelArt: true,
         })
       ),
       {multiFrame: true}
@@ -1242,14 +1369,16 @@ export default class SpriteLab2Engine extends SpriteLab {
     const bodyUpright = this.bodyGravity_() < 0 ? -1 : 1;
     bodies.forEach(({sprite}) => sprite.mirrorY(bodyUpright));
     // Other sprites keep the stock resolver; running it pre-paint means
-    // props draw already resolved.
-    this.library.commands.collide.call(
-      this.library,
-      'collide',
-      {group: ''},
-      {group: 'walls'}
-    );
+    // props draw already resolved. A sprite marked as passing through walls
+    // this frame is left where its behavior put it.
     const walls = this.library.getSpriteArray({group: 'walls'});
+    this.library.getSpriteArray({group: ''}).forEach(sprite => {
+      const passing = sprite.__slab2PassWalls;
+      sprite.__slab2PassWalls = false;
+      if (!passing) {
+        walls.forEach(wall => sprite.collide(wall));
+      }
+    });
     const view = {width: p5.width, height: p5.height};
     resolvePlatformPhysics(players, walls, view, this.platformGravity_);
     if (bodies.length) {
@@ -1312,6 +1441,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onPlayerProgress({
       touching,
       height: Math.max(0, Math.min(1, (view.height - feet) / view.height)),
+      x: player.position.x,
+      speed: player.speed,
     });
   }
 

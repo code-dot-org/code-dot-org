@@ -1,0 +1,15 @@
+<Ailab>
+  <config><![CDATA[{
+  "game_id": 67,
+  "created_at": "2026-10-21T16:15:28.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "mode": "{\r\n  \"datasets\": [\r\n    \"zoo\"\r\n  ],\r\n  \"hideSelectLabel\": false,\r\n  \"hideSave\": true,\r\n  \"hideInstructionsOverlay\": false\r\n}",
+    "dynamic_instructions": "{\r\n  \"selectDataset\": \"TODO: Select the Zoo dataset from the list.\",\r\n  \"datasetView\": \"TODO: Examine the columns to understand the different animal attributes available.\",\r\n  \"results\": \"TODO: Analyze your model's performance and see how well it classified different animals.\",\r\n  \"saveModel\": \"\",\r\n  \"modelSummary\": \"TODO: Train the model and observe the model summary.\",\r\n  \"uploadedDataset\": \"\",\r\n  \"selectedDataset\": \"TODO: Select 'class_type' as the label. Then, choose the features you think will best help the model classify animals as Mammals, Fish, Reptiles, etc.\"\r\n}",
+    "uses_lab2": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-21 16:15:39 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 16:15:39 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 16:15:39 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 16:18:04 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

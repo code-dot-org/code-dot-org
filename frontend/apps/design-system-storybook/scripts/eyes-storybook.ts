@@ -14,6 +14,14 @@ exec('yarn dotenv-run -- eyes-storybook', (error, stdout) => {
   const testsSuccessful =
     error == null && stdout.includes('No differences were found!');
 
+  // Mirrors playwright-support: pull requests only report a difference, pushes fail on it.
+  if (
+    !testsSuccessful &&
+    process.env.APPLITOOLS_SHOULD_REPORT_FAILURE !== 'false'
+  ) {
+    process.exitCode = 1;
+  }
+
   if (!eyesFailureLink || process.env.CI !== 'true') {
     console.log(stdout);
     console.log(error);

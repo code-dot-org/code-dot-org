@@ -289,4 +289,21 @@ class TextToSpeechTest < ActiveSupport::TestCase
     assert_equal(expected_tts_url, @level_with_instructions.tts_url(@level_with_instructions.tts_short_instructions_text, :'en-US'))
     DCDO.unstub(:get)
   end
+
+  test 'tts_upload_to_s3 does not call Acapela when the DCDO flag is off' do
+    DCDO.stubs(:get).with(TextToSpeech::ACAPELA_GENERATION_DCDO_KEY, false).returns(false)
+    AWS::S3.expects(:cached_exists_in_bucket?).never
+    Acapela.expects(:text_to_audio_url).never
+
+    TextToSpeech.tts_upload_to_s3('some text', 'short_instructions', 'level-name', 'some/path.mp3')
+  end
+
+  test 'tts_upload_to_s3 calls Acapela when the DCDO flag is on' do
+    DCDO.stubs(:get).with(TextToSpeech::ACAPELA_GENERATION_DCDO_KEY, false).returns(true)
+    CDO.stubs(acapela_login: 'login', acapela_storage_app: 'app', acapela_storage_password: 'password')
+    AWS::S3.stubs(:cached_exists_in_bucket?).returns(false)
+    Acapela.expects(:text_to_audio_url).once.returns(nil)
+
+    TextToSpeech.tts_upload_to_s3('some text', 'short_instructions', 'level-name', 'some/path.mp3')
+  end
 end

@@ -71,10 +71,21 @@ class AilabTest < ActiveSupport::TestCase
   end
 
   test 'lab2 level without a dataset cannot set its columns' do
-    [{label: 'animal'}, {datasets: [], features: ['legs']}, {hideSelectLabel: true}, {lockFeatures: true}].each do |mode|
+    [{label: 'animal'}, {datasets: [], features: ['legs']}, {hideSelectLabel: true}, {lockFeatures: true}, {idColumn: 'name'}].each do |mode|
       level = build(:ailab, uses_lab2: 'true', mode: mode.to_json)
       refute level.valid?, "expected mode #{mode.inspect} to be invalid"
       assert_equal ['must select a dataset to choose, lock, or pretrain on its columns.'], level.errors[:mode]
+    end
+  end
+
+  test 'lab2 level keeps its id column out of the label and features' do
+    id_column_mode = {datasets: ['zoo'], idColumn: 'Animal Name'}
+    assert build(:ailab, uses_lab2: 'true', mode: id_column_mode.merge(label: 'Class', features: ['Legs']).to_json).valid?
+
+    [{label: 'Animal Name'}, {features: ['Legs', 'Animal Name']}].each do |change|
+      level = build(:ailab, uses_lab2: 'true', mode: id_column_mode.merge(change).to_json)
+      refute level.valid?, "expected #{change.inspect} with the id column to be invalid"
+      assert_equal ['cannot use the id column as the label or a feature.'], level.errors[:mode]
     end
   end
 

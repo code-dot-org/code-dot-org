@@ -34,7 +34,7 @@ The build context is the repo root, and the Dockerfile is selected with `-f`.
 first and name it:
 
 ```
-docker build -t cdo-build:test docker/build/
+docker build -f docker/build/Dockerfile -t cdo-build:test .
 docker build -f docker/deps/Dockerfile \
   --build-arg BUILD_IMAGE=cdo-build:test \
   -t cdo-deps:test .
@@ -108,6 +108,7 @@ pyproject.toml
 uv.lock
 docker/build/Dockerfile
 docker/deps/Dockerfile
+docker/scripts/install-node.sh
 ```
 
 The key is `bundle-<sha256>` over the concatenated *contents* of those files in
@@ -140,7 +141,7 @@ out why a keyed tag did not resolve — reproduce it in a shell:
 ```
 key="bundle-$(cat .ruby-version Gemfile Gemfile.lock .python-version \
   pyproject.toml uv.lock docker/build/Dockerfile docker/deps/Dockerfile \
-  | sha256sum | cut -d' ' -f1)"
+  docker/scripts/install-node.sh | sha256sum | cut -d' ' -f1)"
 echo "$key"
 ```
 
@@ -174,9 +175,9 @@ just shipped and a failed base rebuilds nothing.
 ## Things that will bite
 
 **The Ruby ABI path is hardcoded.** The `bundle install` cache mount targets
-`/usr/local/bundle/ruby/3.2.0/cache` literally, because buildah at the
+`/usr/local/bundle/ruby/3.3.0/cache` literally, because buildah at the
 supported floor cannot expand a variable in a mount target. The build guards
-this: it asserts the interpreter's ABI directory is `3.2.0` and that
+this: it asserts the interpreter's ABI directory is `3.3.0` and that
 `.ruby-version` matches `RUBY_VERSION`. A Ruby minor bump must edit the mount
 target as well as `.ruby-version`.
 

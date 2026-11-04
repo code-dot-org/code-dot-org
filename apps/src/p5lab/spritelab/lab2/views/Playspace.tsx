@@ -65,6 +65,9 @@ const PLAY_CARD_WIDTH_PX = BESIDE_TEXT_MIN_PX;
 // appears in place.
 const SLIDE_MS = 450;
 const FADE_MS = 180;
+// The whole overlay's fade as the Images editor takes the width and
+// gives it back; the editor's slide takes as long (PANE_SLIDE_MS).
+const HIDE_MS = 300;
 
 interface Size {
   w: number;
@@ -183,10 +186,10 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
-  /** The scene playing now is a platformer, so the controls apply. */
-  platformScene?: boolean;
   // Over the play area's corner, outside the box so they keep their size.
   controls?: React.ReactNode;
+  // Over the box's bottom edge, unscaled.
+  prompt?: React.ReactNode;
   // Under the box, which is placed to leave it room.
   playBar?: React.ReactNode;
   // Across the top of the column in preview; the box is placed under it.
@@ -195,8 +198,13 @@ interface PlayspaceProps {
   below?: React.ReactNode;
   /** Which edge the preview column sits at; the code keeps the rest. */
   side?: 'left' | 'right';
+  /** The column's share of the browser's width; PREVIEW_WIDTH_SHARE
+      unless given. */
+  columnShare?: number;
   // The preview column's width, which the code keeps clear of.
   onPreviewWidth?: (width: number) => void;
+  /** The width of the preview column, reported in every mode. */
+  onColumnWidth?: (width: number) => void;
 }
 
 /**
@@ -212,13 +220,15 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
-  platformScene = false,
   controls,
+  prompt,
   playBar,
   columnHeader,
   below,
   side = 'right',
+  columnShare = PREVIEW_WIDTH_SHARE,
   onPreviewWidth,
+  onColumnWidth,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -227,6 +237,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const [size, setSize] = useState({w: 0, h: 0});
   // The height the docked instructions need, from their content.
   const [belowNeed, setBelowNeed] = useState(0);
+  // The bar's height, measured: one row of small buttons until it wraps.
+  const [barHeight, setBarHeight] = useState(SMALL_BUTTON_PX);
   const belowObserver = useRef<ResizeObserver | null>(null);
   const belowContentRef = useCallback((el: HTMLDivElement | null) => {
     belowObserver.current?.disconnect();
@@ -396,10 +408,12 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   // editing view gave it. The browser's width, not the playspace's: the
   // panels left of the workspace count against the code, not the preview.
   const browserWidth = window.innerWidth || size.w;
-  const share = Math.round(browserWidth * PREVIEW_WIDTH_SHARE);
-  // The room under the box: the bar, the gap and the card.
+  const share = Math.round(browserWidth * columnShare);
+  // The room under the box: the bar, the gap and the card. The bar's
+  // buttons wrap on a narrow column, so its room follows its height.
+  const barRoom = playBar ? barHeight + BAR_GAP : 0;
   const belowRoomFor = (card: number) =>
-    (playBar ? BAR_ROOM : 0) + (below ? CARD_GAP + card : 0);
+    barRoom + (below ? CARD_GAP + card : 0);
   // A taller need shrinks the box, never widens the column, which would
   // reflow the text taller again.
   let columnWidth = share;
@@ -425,7 +439,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   if (below && boxWidth < PREVIEW_MIN_PX) {
     const maxColumn = Math.round(browserWidth * PREVIEW_WIDTH_MAX_SHARE);
     const besideWidth = Math.min(
-      size.h - topRoom - 2 * CARD_GAP - (playBar ? BAR_ROOM : 0),
+      size.h - topRoom - 2 * CARD_GAP - barRoom,
       maxColumn - BESIDE_TEXT_MIN_PX - 3 * CARD_GAP
     );
     if (besideWidth > boxWidth && besideWidth >= BESIDE_BOX_MIN_PX) {
@@ -451,8 +465,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     beside && side === 'left'
       ? previewPlacement.x + previewBoxSide + CARD_GAP
       : columnLeft + CARD_GAP;
-  const belowRoomTop =
-    previewPlacement.y + previewBoxSide + BAR_ROOM + CARD_GAP;
+  const belowRoomTop = previewPlacement.y + previewBoxSide + barRoom + CARD_GAP;
   const belowRoom = size.h - belowRoomTop - CARD_GAP;
   const belowHeight = Math.min(belowNeed + 2 * CARD_BORDER_PX, belowRoom);
   const belowCard: React.CSSProperties = beside
@@ -500,7 +513,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
 
   const placement: Placement =
     mode === 'play'
-      ? playPlacement(size, cardGuide, playBar ? BAR_ROOM : 0, 0, side)
+      ? playPlacement(size, cardGuide, barRoom, 0, side)
       : previewPlacement;
   const {x, y, scale} = placement;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
@@ -512,6 +525,12 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   useEffect(() => {
     reportPreviewWidth.current?.(previewWidth);
   }, [previewWidth]);
+  const reportColumnWidth = useRef(onColumnWidth);
+  reportColumnWidth.current = onColumnWidth;
+  const measuredColumnWidth = measured ? columnWidth : 0;
+  useEffect(() => {
+    reportColumnWidth.current?.(measuredColumnWidth);
+  }, [measuredColumnWidth]);
   // Under the box, unscaled; at the column's width under a stacked
   // preview, so a shrunk box never wraps the buttons.
   const barLeft = previewWidth > 0 && !beside ? columnLeft + CARD_GAP : x;
@@ -519,23 +538,53 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     previewWidth > 0 && !beside ? previewWidth - 2 * CARD_GAP : boxSide;
   const barTransform = `translate(${barLeft}px, ${y + boxSide + BAR_GAP}px)`;
   const compact = size.h < COMPACT_BELOW_PX;
-  const visible = measured && mode !== 'hidden';
-  // The bar waits unseen at its destination and fades in once the box arrives.
+  // Hidden settles after the fade, so the card and the bar stay through it.
+  const [settledHidden, setSettledHidden] = useState(mode === 'hidden');
+  useEffect(() => {
+    if (mode !== 'hidden') {
+      setSettledHidden(false);
+      return;
+    }
+    const timer = window.setTimeout(() => setSettledHidden(true), HIDE_MS);
+    return () => window.clearTimeout(timer);
+  }, [mode]);
+  const visible = measured && !settledHidden;
+
   const barRef = useRef<HTMLDivElement>(null);
+  const promptRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const bar = barRef.current;
+    if (!bar || typeof ResizeObserver !== 'function') {
+      return;
+    }
+    const observer = new ResizeObserver(() =>
+      setBarHeight(Math.max(SMALL_BUTTON_PX, Math.round(bar.offsetHeight)))
+    );
+    observer.observe(bar);
+    return () => observer.disconnect();
+    // The bar's node comes and goes with the prop, not with its contents.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [!!playBar]);
+
+  // Fade in the play bar and the prompt bar so they don't render incorrectly
+  // while switching modes.
   useLayoutEffect(() => {
     if (animate) {
-      barRef.current?.animate?.(
-        [
-          {opacity: 0},
-          {opacity: 0, offset: SLIDE_MS / (SLIDE_MS + FADE_MS)},
-          {opacity: 1},
-        ],
-        {duration: SLIDE_MS + FADE_MS, easing: 'ease-in'}
+      [barRef, promptRef].forEach(ref =>
+        ref.current?.animate?.(
+          [
+            {opacity: 0},
+            {opacity: 0, offset: SLIDE_MS / (SLIDE_MS + FADE_MS)},
+            {opacity: 1},
+          ],
+          {duration: SLIDE_MS + FADE_MS, easing: 'ease-in'}
+        )
       );
     }
     // Only a mode change moves the bar; animate is derived for that render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
+
   // The card fades between its two sizes rather than sliding, which would
   // reflow its text: a copy at the old size fades out.
   const cardRef = useRef<HTMLDivElement>(null);
@@ -584,7 +633,11 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       // Use visibility (not display:none) so the overlay keeps its layout size
       // while hidden. Otherwise it measures 0 and, on reappearing, the box is
       // first placed with a stale size and then animates into the right spot.
-      style={{visibility: mode === 'hidden' ? 'hidden' : 'visible'}}
+      style={{
+        visibility: settledHidden ? 'hidden' : 'visible',
+        opacity: mode === 'hidden' ? 0 : 1,
+        transition: `opacity ${HIDE_MS}ms ease`,
+      }}
     >
       {previewWidth > 0 && (
         <div
@@ -605,9 +658,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         // keystrokes through to the game.
         role={mode === 'play' ? 'application' : undefined}
         aria-label={mode === 'play' ? 'Game playspace' : undefined}
-        aria-describedby={
-          mode === 'play' && platformScene ? CONTROLS_HELP_ID : undefined
-        }
+        aria-describedby={mode === 'play' ? CONTROLS_HELP_ID : undefined}
         tabIndex={mode === 'play' ? 0 : undefined}
         style={{
           transform,
@@ -698,7 +749,25 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       </div>
       {/* Outside the box: role="application" hides what is inside it from
           screen readers, so anything to be read must sit beside it. */}
-      {mode === 'play' && platformScene && (
+      {prompt && (
+        <div
+          ref={promptRef}
+          className={moduleStyles.playspacePrompt}
+          style={{
+            left: x,
+            top: y + boxSide,
+            width: boxSide,
+            opacity: visible ? 1 : 0,
+            transition: `opacity ${FADE_MS}ms ease-in`,
+            // Only clickable in Play; in preview, clicks reach the box beneath
+            // to enable things like the location picker.
+            pointerEvents: mode === 'play' ? 'auto' : 'none',
+          }}
+        >
+          {prompt}
+        </div>
+      )}
+      {mode === 'play' && (
         <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
           Left and right arrows move. Space or up arrow jumps. In zero gravity,
           up and down steer. Navigation sounds can be turned on in Settings:

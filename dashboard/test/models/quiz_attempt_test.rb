@@ -125,6 +125,21 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_equal({correctChoiceId: 'b'}, result[:answer_key])
   end
 
+  test "question_results reports whether each response was answered" do
+    quiz = create(:quiz)
+    answered_question = create(:multiple_choice_question)
+    skipped_question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: answered_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: skipped_question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    create(:quiz_question_response, quiz_attempt: attempt, quiz_question: answered_question, response_data: {'selectedChoiceId' => 'b'})
+    create(:quiz_question_response, quiz_attempt: attempt, quiz_question: skipped_question, response_data: {'selectedChoiceIds' => []})
+
+    results = attempt.question_results.index_by {|result| result[:quiz_question_id]}
+    assert results[answered_question.id][:answered]
+    refute results[skipped_question.id][:answered]
+  end
+
   test "question_results overrides can reveal correctness/explanation regardless of the quiz's own settings" do
     quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
     question = create(:multiple_choice_question, explanation: 'because math')
@@ -152,7 +167,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
 
   test "question_results reports correct as nil for a pending/ungraded response, even with show_correctness on" do
     quiz = create(:quiz, show_correctness: true)
-    question = create(:quiz_question)
+    question = create(:free_response_question)
     create(:quiz_question_placement, level: quiz, quiz_question: question)
     attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
     create(
@@ -216,6 +231,33 @@ class QuizAttemptTest < ActiveSupport::TestCase
     result = attempt.reload.question_results.first
     assert result[:correct]
     assert_equal({correctChoiceIds: ['a', 'c']}, result[:answer_key])
+  end
+
+  test "question_results reveals a match question's correct pairs only per the quiz's settings" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:match_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    response_data = {'pairs' => [['a', 'x'], ['b', 'y'], ['c', 'z']]}
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: response_data,
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+
+    result = attempt.question_results.first
+    assert_equal 'MatchQuestion', result[:quiz_question_type]
+    assert_equal response_data, result[:response_data]
+    assert_equal({correctPairs: nil}, result[:answer_key])
+
+    quiz.update!(show_correctness: true, reveal_answer_explanation: true, show_questions_after_submit: true)
+    result = attempt.reload.question_results.first
+    assert result[:correct]
+    assert_equal({correctPairs: [['a', 'x'], ['b', 'y'], ['c', 'z']]}, result[:answer_key])
   end
 
   test "question_results_in_progress is nil once the attempt is submitted" do

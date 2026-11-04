@@ -33,7 +33,7 @@
       "type": "story"
     },
     "objectives": {
-      "title": "**Make them talk.**",
+      "title": "**Make them talk**",
       "items": [
         {
           "text": "Drag a **say** block onto the dotted outline.",

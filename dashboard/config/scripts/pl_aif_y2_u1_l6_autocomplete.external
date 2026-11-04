@@ -1,0 +1,53 @@
+name 'pl-aif-y2-u1-l6-autocomplete'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Autocomplete: Prefix Matching, Objects, and Methods
+
+Lesson 10 covers how autocomplete predicts words, then just enough about Python objects and methods to fix a real bug students will hit immediately.
+
+## Prefix Matching
+
+Autocomplete often works by finding words that begin with what's already been typed. Type "re," and valid predictions include "red," "read," "rent," anything starting with those exact letters.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> students write a simple version of this themselves (Lesson 10, Levels 1-2), checking whether a prediction starts with a given fragment.
+  </div>
+</div>
+
+## The Bug That Motivates Objects
+
+Here's the moment this lesson is actually built around: a student runs their program with fragment "re" and prediction "Read," capital R, and it fails. "Read" does start with "re," so why didn't it work?
+
+The answer is case sensitivity: Python treats "Read" and "read" as completely different strings. Fixing this requires comparing them in a consistent case, which means learning what a string actually is.
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Object:</strong> a value that bundles data with functions that act on it.
+  </div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Method:</strong> a function that belongs to an object.
+  </div>
+</div>
+
+A string is an object. <code style="font-size:16px;">.upper()</code> and <code style="font-size:16px;">.lower()</code> are two of its methods:
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+prediction = "Read"<br>
+print(prediction.upper())<br>
+print(prediction.lower())
+  </div>
+  <div style="background-color: #E4E2F8; padding: 10px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976; line-height: 1.7;">
+READ<br>
+read
+  </div>
+</div>
+
+Comparing both sides with <code style="font-size:16px;">.lower()</code> applied fixes the original bug, "re" and "read" now compare correctly regardless of how the user capitalized their input. Students apply this fix in Lesson 10, Levels 3-4.
+MARKDOWN

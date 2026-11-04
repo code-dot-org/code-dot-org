@@ -25,6 +25,7 @@ recaptcha_secret_key: !Secret
 
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
 db_cluster_id: !StackSecret
+db_proxy: !StackSecret
 db_endpoint_writer: !StackSecret
 db_endpoint_proxy_writer: !StackSecret
 db_endpoint_proxy_reader: !StackSecret
@@ -40,4 +41,3 @@ openai_student_learning_api_key: !Secret
 
 contentful_api_key: !Secret
 contentful_hour_of_ai_access_token: !Secret
-contentful_cs_for_all_access_token: !Secret

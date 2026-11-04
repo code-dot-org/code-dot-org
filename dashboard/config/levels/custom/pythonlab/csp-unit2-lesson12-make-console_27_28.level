@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-23T05:15:55.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Museum Ticket Generator\n# Prices: under 5 free, under 18 pays $8, 65 and up pays $10, everyone else $15\n\nage = int(input(\"How old is the visitor? \"))",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqkrm3Yac+kGAcB\nDDLcuF0nOnXWG0gd88RLDly2DaXinyN4h/p8fZnPI2s2gHgTlyJmbwgp2PtP\nMjILDTAkluUkTMLYCdx8L8RiYNhg8Uhxe/N9kn6H7CG53wCN621/Q1ttdLP9\njxYu2ylJ6lY8p84cEbVmB0YowzB96JUNpLmc/tzilxyb/nlLC01ol16G/WH+\n9g9fzSDZ14vSe8i236HmIYHKShly7rhLZWELgwYVCheaK/22Rfe4QJpcj+O6\n/1dDigxhHqJgbwPVR3sfERrlYY+SPAaNSFsTuXv8AuAnsrtrVFFOhvh1jOLh\nLQl9iy8BxVR5Rj+WTwm7LtXPQRwfq703/wKmrmSWYOigQmjMahMTvQ0w3ymr\n2+vRUycRrBcys9+3XZ0NSwWIJhLF093S0gL8TcLfBgrW0XcZSRlyeHCy5q2l\nktjnubuoRcFvN5iq5RQc7A2qqFtALSVce4mT5bUjjczgmlAXsbUWygXTfFUv\nR7QqiJ9RD7I5rLYVN98xf7SV5j9d6DcF+qDohRhZe44LvAofPREsIPJuqB+y\nqWNXiTsSOdqLFEMN2pEcC7LjE5uJeckOIaCywXDb6HNkJY0SSSTDhnZqCHDY\n6q7MshITQ363ZqX30mbsLi+4EOVTg17gLw6J+Z8ZBwVGR43sQujdAWzN9V0x\nBBlesgUa5FcDrRFoHS1kkuhwsGcZwPBzTY13pMBkkCIM84KobJS4F9gVaQkd\ncz+vGE+ZTPoiEqzh795NRNal24QOf+laME3BxKHwS/bl9Soe0gxI0nN6LUUf\nxnRXaghyn3PUsNBtiXhdjlzrcGn80QzXpZ4yjZVCJfz9MAmmjWgduwjUJfyH\nNuwFYf/G0HEZsU3WE27yEhkNWBtxJd9qSPpJm/bLfAPJClEYm0PwOxnWBZPo\nWn5+TUCeDeQpaUTRsObFYAmrMw==\n",
+    "teacher_markdown": "Misconceptions and what to test for:\r\n\r\n- Museum Ticket is a fresh context on purpose. L10 and L11 stayed inside the movies and Painter examples, and Make is where students apply the pattern somewhere new.\r\n- Rule order is the lesson. A student who puts the under-5 rule before the youth rule gives a 3-year-old $8, because both blocks run and the later one overwrites the earlier. Ages 3 and 4 are the only inputs where two `if` blocks both run (2.3.B.7).\r\n- Boundaries: `<` vs `<=`. Age 5 should pay $8, not $0. Age 18 should pay $15, and age 65 should pay $10.\r\n- Setting `price = 15` after the `if` statements resets every visitor to $15. The default has to come first.\r\n- Forgetting `int()` around `input()` causes a TypeError when `age` is compared to a number. Forgetting `str()` when printing the price causes the same error (L25 pattern).\r\n- Hardcoding an age (like `age = 3`) instead of reading it with `input()` fails most checks, because Validate runs the program with many ages.\r\n- Comments that restate the code (\"set price to 8\") instead of explaining purpose (\"the youth price\"). The comment swap in Level 2 addresses this.\r\n- Accept a correct `elif` chain if students bring one in from outside the lesson. It is not yet taught, so don't require it.\r\n- If a student uses Build Python, they still own the program. Ask them to explain each rule aloud, or use Explain Code on a line they didn't write. The comment swap in Level 2 also checks this, because a partner has to predict prices from the comments alone.\r\n\r\nExpected prices: ages 3 and 4 pay $0. Ages 5, 12, and 17 pay $8. Ages 18, 40, and 64 pay $15. Ages 65 and 70 pay $10.\r\n\r\nValidation runs the program with ages 3, 4, 5, 12, 17, 18, 40, 64, 65, and 70. It reads the number after the word \"price\" in the last line that contains it, so a message with another number after \"price\" can be misread.\r\n\r\nTeaching Tip: if a student's price is wrong, suggest printing `price` after each rule so they can see where it changes.",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import io\nimport re\nfrom contextlib import redirect_stdout\nfrom unittest import TestCase\n\n\ndef run_with_age(age):\n    \"\"\"Run the student's main.py as if the visitor typed this age.\"\"\"\n    with open('main.py') as main_file:\n        code = main_file.read()\n    output = io.StringIO()\n    error = None\n    fake_globals = {'input': lambda prompt='': str(age), '__name__': '__main__'}\n    try:\n        with redirect_stdout(output):\n            exec(code, fake_globals)\n    except Exception as e:\n        error = e\n    return output.getvalue().splitlines(), error\n\n\ndef get_price(lines):\n    \"\"\"Find the number after the word 'price' in the last line that has it.\"\"\"\n    for line in reversed(lines):\n        match = re.search(r\"price\\D*(\\d+)\", line.lower())\n        if match:\n            return int(match.group(1))\n    return None\n\n\nclass TestMuseumTicket(TestCase):\n    def check_prices(self, cases, rule_hint):\n        for age, expected in cases:\n            lines, error = run_with_age(age)\n            if error:\n                self.fail(\n                    f\"Your program stopped with a {type(error).__name__} when the visitor's age was {age}. \"\n                    \"Fix that error first. Common causes: leaving out int() around input(), or leaving out str() when you print the price.\"\n                )\n            price = get_price(lines)\n            if price is None:\n                self.skipTest(\"We didn't find a ticket price printed, so we can't check this yet.\")\n            if price != expected:\n                self.fail(f\"With age = {age}, your program printed a price of {price}, but it should be {expected}. {rule_hint}\")\n\n    def test_prints_price(self):\n        \"\"\"Your program prints a ticket price\"\"\"\n        lines, error = run_with_age(40)\n        if error:\n            self.fail(\n                f\"Your program stopped with a {type(error).__name__}. Fix that error first. \"\n                \"Common causes: leaving out int() around input(), or leaving out str() when you print the price.\"\n            )\n        if get_price(lines) is None:\n            self.fail(\"We didn't find a ticket price printed. Print a message that starts with \\\"Ticket price:\\\" followed by the price.\")\n\n    def test_free_rule(self):\n        \"\"\"Kids under 5 get in free\"\"\"\n        self.check_prices([(3, 0), (4, 0)],\n            \"Check the order of your rules: the free rule has to come after the youth rule, so it can override it.\")\n\n    def test_youth_rule(self):\n        \"\"\"Visitors under 18 pay the youth price\"\"\"\n        self.check_prices([(5, 8), (12, 8), (17, 8)],\n            \"Check your youth rule's comparison, and check that the free rule only applies to kids under 5.\")\n\n    def test_senior_rule(self):\n        \"\"\"Visitors 65 and up pay the senior price\"\"\"\n        self.check_prices([(65, 10), (70, 10)],\n            \"Check your senior rule's comparison. A visitor who is exactly 65 counts as 65 and up.\")\n\n    def test_adult_price(self):\n        \"\"\"Everyone else pays the standard adult price\"\"\"\n        self.check_prices([(18, 15), (40, 15), (64, 15)],\n            \"Check that price starts at the adult price, and that your youth and senior rules don't apply to this age.\")",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "long_instructions": "# Make\r\n\r\nBuild the Museum Ticket Generator. Your program asks for a visitor's age, figures out the ticket price, and prints it.\r\n\r\nUse these pricing rules:\r\n\r\n1. Every visitor starts at the standard adult price of $15.\r\n2. Visitors under 18 pay $8 instead.\r\n3. Visitors 65 and up pay $10 instead.\r\n4. Kids under 5 get in free. This rule goes last because it beats every other rule.\r\n\r\nYour program should:\r\n\r\n- Store the condition for rules 2, 3, and 4 in variables with clear names, like `is_youth`.\r\n- Use an `if` statement for each of those rules.\r\n- Put a comment above each rule that explains its purpose.\r\n- Print a message that starts with `Ticket price:` followed by the price.\r\n\r\nPlan on your Activity Guide first. Run your program with a few different ages, then use Validate to check your work."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-23T05:15:55.173+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson8-make-console_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson8-make-console_27_28\"},{\"changed_at\":\"2026-10-23 05:17:09 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\",\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-23 05:34:19 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-23 05:39:41 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-23 05:42:41 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-23 05:43:03 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

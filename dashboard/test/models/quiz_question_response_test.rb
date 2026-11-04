@@ -23,6 +23,12 @@ class QuizQuestionResponseTest < ActiveSupport::TestCase
     assert response.valid?
   end
 
+  test "answered? is true only when response_data holds an answer for its question" do
+    question = create(:multiple_choice_question)
+    assert build(:quiz_question_response, quiz_question: question, response_data: {'selectedChoiceId' => 'b'}).answered?
+    refute build(:quiz_question_response, quiz_question: question, response_data: {}).answered?
+  end
+
   test "a quiz_question cannot have two responses within the same attempt" do
     attempt = create(:quiz_attempt)
     question = create(:quiz_question)

@@ -1,0 +1,18 @@
+name 'data-makes-ai-lesson2-vocab-matching'
+display_name 'Practice with Lesson Vocabulary'
+height '80'
+
+question 'Label'
+answer 'The answer or category you are trying to predict.'
+question 'Node'
+answer 'One of the boxes or questions on a decision tree.'
+question 'Prediction'
+answer 'The best guess about which category something belongs to.'
+
+markdown <<MARKDOWN
+Match the vocabulary words with their correct definitions.
+Drag each term to its explanation.
+Test your knowledge!
+MARKDOWN
+
+allow_multiple_attempts true
