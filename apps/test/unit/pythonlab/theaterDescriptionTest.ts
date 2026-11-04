@@ -1,4 +1,6 @@
+import {AI_GATEWAY_FALLBACK_DCDO_KEY} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {generateText} from '@cdo/apps/aiGateway';
+import DCDO from '@cdo/apps/dcdo';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {
   MAX_CODE_CHARACTERS,
@@ -56,6 +58,7 @@ const file = (
 describe('theaterDescription', () => {
   describe('canRequestTheaterDescription', () => {
     afterEach(() => {
+      DCDO.reset();
       Object.assign(mockCurrentUser, {
         blockedAichatProviders: [],
         aiChatAccessLevel: 'enabled',
@@ -74,6 +77,12 @@ describe('theaterDescription', () => {
     it('refuses a user blocked from the description model provider', () => {
       mockCurrentUser.blockedAichatProviders = [AiChatProviders.GOOGLE];
       expect(canRequestTheaterDescription()).toBe(false);
+    });
+
+    it('allows a blocked user when the gateway fallback is enabled', () => {
+      DCDO.set(AI_GATEWAY_FALLBACK_DCDO_KEY, true);
+      mockCurrentUser.blockedAichatProviders = [AiChatProviders.GOOGLE];
+      expect(canRequestTheaterDescription()).toBe(true);
     });
   });
 

@@ -7,6 +7,7 @@ import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
 import {
   areAiChatToolsEnabled,
   isAiChatModelBlocked,
+  isAiGatewayFallbackEnabled,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
@@ -79,10 +80,11 @@ export function canRequestTheaterDescription(): boolean {
   const appName = lab.levelProperties?.appName;
   return (
     !!appName &&
-    !isAiChatModelBlocked(
-      THEATER_DESCRIPTIONS_MODEL_ID,
-      currentUser.blockedAichatProviders
-    ) &&
+    (isAiGatewayFallbackEnabled() ||
+      !isAiChatModelBlocked(
+        THEATER_DESCRIPTIONS_MODEL_ID,
+        currentUser.blockedAichatProviders
+      )) &&
     areAiChatToolsEnabled({
       appName,
       aiChatAccessLevel: currentUser.aiChatAccessLevel,
