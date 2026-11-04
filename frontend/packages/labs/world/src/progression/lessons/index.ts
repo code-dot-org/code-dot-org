@@ -116,25 +116,26 @@ const firstWorld: WorldScenario = {
 
 Press **Run**. There is a world, and there is one thing in it.
 
-What you are looking at is the game's **map**, \`main.map\`: what is on it is
-what the game starts with, where you see it. The strip along the top is every kind
+What you are looking at is the game's **map**, **Main**: what is on it is
+what the game starts with, where you see it. The column beside it is every kind
 of thing this project has. It has one, the **Hero**.
 
 ### What you do
 
-1. Click [Hero](#clickable=map.palette:Hero) in the strip, then click
+1. Click [Hero](#clickable=map.palette:Hero) in the column, then click
    somewhere on the map the first Hero is not. That is a second Hero. Drag either of them about.
 2. Run it. Two Heroes, from one kind: the map says how many there are and
    where, and nothing on the map says what a Hero IS.
 3. Click a Hero on the map and press
    [Open Hero](#clickable=map.openKind:Hero). This is the answer: a Hero, which
    looks like one picture and does nothing else.
-4. Change the picture with **set sprite**, go back to the \`main.map\` tab
-   and run it again. Both change, because both are Heroes.
+4. Change the picture with **set sprite**, go back to
+   [Main](#clickable=level) and run it again. Both change, because both are
+   Heroes.
 
-The \`main.screen\` tab beside [main.map](#clickable=level) is the game
-itself: a window onto the map. Its [Screen code](#clickable=screen.code) is
-where the game's own blocks go. There is not much in it yet. Look whenever
+**My World**, before Main in the trail above the map, is the game itself: a
+window onto the map. Its [Screen code](#clickable=screen.code) is where the
+game's own blocks go. There is not much in it yet. Look whenever
 you like.
 
 Anything underlined with dots, like those two, is a **Show me**: press it and the lab
@@ -182,12 +183,12 @@ by itself: an actor has to *elect* what it offers.
 2. Run it. It walks in every direction — which is what a game seen from above
    wants and a platformer does not.
 3. Now see what the tick did. Press
-   [Open Hero](#clickable=map.openKind:Hero): among its traits there are new
-   ones, and two of them are **Moves Across** and **Moves Down**. That is
-   electing, and it is all the tick was.
-4. Pull the **Moves Down** row out of the stack — drag it aside, do not throw
-   it away — and run it. Left and right work; up and down do not. Snap it
-   back.
+   [Open Hero](#clickable=map.openKind:Hero): it has two new traits, **Moves
+   Across** and **Moves Down**. That is electing, and it is all the tick
+   was.
+4. Press **Remove** on **Moves Down** and run it. Left and right work; up
+   and down do not. Put it back by ticking **Moves in all four directions**
+   again.
 5. Find the speed the trait gave the Hero, and change it.
 `.trim(),
 };
@@ -331,7 +332,7 @@ and nothing has elected it.
    [Enhance Ground…](#clickable=map.enhance:Ground), and tick **Holds things
    up**. Now it lands.
 3. One tile is not much of a floor. Click
-   [Ground](#clickable=map.palette:Ground) in the strip along the top and
+   [Ground](#clickable=map.palette:Ground) in the column beside the map and
    paint a few more along the bottom.
 4. Falling and landing are things that HAPPEN, and saying what to do when
    something happens is what blocks are for. Press
@@ -388,8 +389,8 @@ like everything else.
 
 ### What you do
 
-1. Press [Open Hero](#clickable=map.openKind:Hero) and add **set sprite**, using
-   the \`(import…)\` row on its dropdown to bring a picture in. It lands in
+1. Press [Open Hero](#clickable=map.openKind:Hero) and add **set sprite**.
+   Click its picture, and press **Import** to bring a picture in. It lands in
    \`sprites/\`, and it is yours, not a link to the library's.
 2. Run it. The sprite wins; the drawing underneath is what an actor does when it
    has no picture.
@@ -509,7 +510,7 @@ them.
 
 ### What you do
 
-1. Click **main** in the Layers list. Its **Background** is (none): choose
+1. Click **Main** in the Layers list. Its **Background** is (none): choose
    \`(import…)\` and bring a backdrop in from the library.
 2. Run it. It is stretched to fill the view — one copy, whatever shape it is.
 3. Tick **Tiled**. Now it repeats instead of stretching, which is what a
@@ -670,12 +671,12 @@ down.
 
 1. On the map, drag one Marker to the **top left** corner and another to the
    **bottom right**. Leave the third in the middle.
-2. Click each one and read its **Pos X** and **Pos Y**. Dragging and typing
+2. Click each one and read its **Position X** and **Position Y**. Dragging and typing
    are the same thing said two ways; type an exact number into one and watch
    it move.
 3. Put a fourth somewhere **random**. That one is a block, in the Main
-   Screen's [Screen code](#clickable=screen.code), inside **in the map
-   ⟨Game⟩ shows**: a random place is worked out as the game starts, and
+   Screen's [Screen code](#clickable=screen.code), inside **when this screen
+   loads**: a random place is worked out as the game starts, and
    there is nothing to type.
 `.trim(),
 };
@@ -1377,7 +1378,7 @@ once; the arrangement says where they are.
 ### What you do
 
 1. Open the world. It opens on its map: the three tiles are there already.
-2. Pick **Ground** from the strip along the top, and paint a floor along the
+2. Pick **Ground** from the column beside the map, and paint a floor along the
    bottom of the room and walls up both sides.
 3. Run it. Every tile you painted is a Ground, and you wrote no block.
 4. Paint some more, and run it again. You never opened the Ground — what a
@@ -3898,8 +3899,9 @@ nothing on screen says so, or says how to carry on.
 
 A **screen** is put on top of what is showing, and taken off again. Only the
 screen on top takes clicks and keys, so the game under it waits for an
-answer. This project already has one: open **screens/pauseMenu.screen** to
-see it, a panel with a Resume and a Quit button.
+answer. This project already has one, the **Pause Menu**: press **My World**
+above the map and pick it from the screens, to see a panel with a Resume and
+a Quit button.
 
 ### What you do
 
@@ -5836,7 +5838,7 @@ restarts, the Boids stay where they are, and what changes is what happens next.
 
 ### What you do
 
-1. On the **Map**, with nothing selected, add a **New value** called
+1. On **My World**, with nothing selected, add a **New value** called
    **too close**, a **number**, with **Add value**, and set it to 30.
 2. Put **get too close** into the first loop's **within** socket, where the 30
    is now.
@@ -6243,8 +6245,8 @@ A **loop** is one instruction that reaches all of them. It walks a LIST, and
 
 ### What you do
 
-1. Add **for each actor ⟨coin⟩ in ⟨all actors⟩** to the end of **in the map
-   ⟨Game⟩ shows**, in the Main Screen's code.
+1. Add **for each actor ⟨coin⟩ in ⟨all actors⟩** to the end of **when this
+   screen loads**, in the Main Screen's code.
 2. Inside it, **set sprite of ⟨coin⟩** to the coin picture.
 3. Run it. All six change, from one block.
 4. Add a seventh Coin to the world, above the loop, and run it again. You did
@@ -6288,14 +6290,14 @@ thing that can happen.
 
 ### What you do
 
-1. On the **Map**, with nothing selected, add a **New value** called
+1. On **My World**, with nothing selected, add a **New value** called
    **lives**, a **number**, with **Add value**, and set it to 3.
 2. Set each Label's text to **join ⟨"Lives: "⟩ ⟨lives⟩** — the *lives* block
-   is in the Actor drawer, and it appeared the moment you declared it.
+   is in the My World drawer, and it appeared the moment you declared it.
 3. Run it. Both say the same thing.
 4. Change the default to **5**. Both change, because there is one number now.
 
-The default has a field of its own: on the **Map** tab, with nothing selected,
+The default has a field of its own: on **My World**, with nothing selected,
 [the world's properties](#clickable=world.properties) are listed beside it and
 **lives** is one of them. Typing there and editing the block are the same
 edit — it is the world's one number either way.
@@ -6517,17 +6519,17 @@ What it cannot do is say when the count is **enough**. A tally is a number; a
 game wants the moment — the click that wins — and that moment is not in the
 number. You would have to test for it everywhere you counted.
 
-The **Scoring** rule is this counter, written by somebody else, with the moment
+The **Keeps Score** rule is this counter, written by somebody else, with the moment
 already in it.
 
 ### What you do
 
-1. Add a rule, and pick **Scoring**. Read the row before you take it.
+1. Add a rule, and pick **Keeps Score**. Read the row before you take it.
 2. In the handler, use **add ⟨1⟩ to the score** instead of setting
    \`counted\`, and delete the \`print\` under it.
-3. Delete \`define number counted\` — nothing needs it now.
-4. Set the **target score** to 5. It is Scoring's number rather than yours,
-   so it has a field of its own: on the **Map** tab with nothing selected,
+3. Nothing reads \`counted\` now. It stays among the world's values, unused.
+4. Set the **target score** to 5. It is the rule's number rather than yours,
+   so it has a field of its own: on **My World** with nothing selected,
    [the world's properties](#clickable=world.properties) hold it under
    **Scoring**, as **Target score**. Then add the handler **when the target
    is

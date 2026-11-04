@@ -223,8 +223,8 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'the Main Screen: select it there to see which map it holds\n' +
       '- Press P to pause: the stock Pause Menu screen is shown over the ' +
       'game, which stops moving and shows dimmed behind it. Resume goes ' +
-      'back; Quit loads the level into the World again. Open ' +
-      '`screens/pauseMenu.screen` to move it\n' +
+      'back; Quit loads the level into the World again. Pick Pause Menu ' +
+      'from the screens under My World, above the map, to move it\n' +
       '- Try a bouncier ball, a wider paddle, or a third row of bricks',
   },
   meteors: {
@@ -413,10 +413,10 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '(specs/APPS.md)\n' +
       '- NEW NOTE is `show screen`, which puts the write screen on top of ' +
       'home; SAVE and CANCEL are `go back`, which takes it off\n' +
-      '- The notes are a game-wide value, kept in the Main Screen, so ' +
-      '`save what the world remembers` is one block and not a format. ' +
-      'Reload the preview and ' +
-      'they come back, because `when ⟨…⟩ is created` does the `load`\n' +
+      '- The notes are Note actors, so `remember ⟨…⟩ as ⟨notes⟩` keeps ' +
+      'them in one block and not a format. Reload the preview and they ' +
+      'come back, because `when ⟨…⟩ is created` does the ' +
+      '`bring back what was remembered`\n' +
       '- The Main Screen is home: the header holds the TOP and the button holds ' +
       'the BOTTOM, so the list takes whatever room is left on a window that ' +
       'is not the shape this was drawn at\n' +

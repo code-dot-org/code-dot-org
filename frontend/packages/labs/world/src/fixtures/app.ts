@@ -18,7 +18,8 @@
 // a list of its own, a Text Input that adds to it, `save what the world
 // remembers as ⟨notes⟩` after each change, and `when ⟨…⟩ is created` doing the
 // `load`." Written there as a thing to look at in a browser, and now a thing a
-// test can play.
+// test can play. Its notes have since become Note actors, kept with
+// `remember ⟨…⟩ as ⟨notes⟩` (specs/RECORDS_PLAN.md).
 //
 // THE BUTTONS SPEAK THROUGH THE GAME'S EVENTS, which is the pattern the pause
 // menu established (specs/UI_ACTORS.md) and the only one available here: `the

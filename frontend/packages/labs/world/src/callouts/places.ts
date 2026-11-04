@@ -86,7 +86,7 @@ const inProperties =
 const PLACES: Readonly<Record<string, PlaceOf>> = {
   level: () => ({
     reveals: [onTheMap],
-    says: 'The level is main.map, the tab beside the Main Screen.',
+    says: 'The level is the map after My World in the trail above it.',
   }),
   'screen.code': () => ({
     mark: 'screen.code',
@@ -99,13 +99,13 @@ const PLACES: Readonly<Record<string, PlaceOf>> = {
     mark: named ? `map.palette:${named}` : 'map.palette',
     reveals: [onTheMap],
     says: named
-      ? `${named} is in the strip of kinds along the top of the map.`
-      : 'The strip of kinds runs along the top of the map.',
+      ? `${named} is in the column of kinds beside the map.`
+      : 'The column of kinds is beside the map.',
   }),
   'map.newActor': () => ({
     mark: 'map.newActor',
     reveals: [onTheMap],
-    says: 'New actor is the last tile in the strip along the top of the map.',
+    says: 'Add New Actor is at the foot of the column of kinds beside the map.',
   }),
   'map.enhance': inProperties(
     'map.enhance',
@@ -138,11 +138,11 @@ const PLACES: Readonly<Record<string, PlaceOf>> = {
   }),
   'actor.blocks': actor => ({
     reveals: [{kind: 'file', actor}],
-    says: `${actor ?? 'The actor'}'s blocks are the tab of its own name.`,
+    says: `${actor ?? 'The actor'}'s blocks are on its Blocks tab.`,
   }),
   'screen.blocks': () => ({
     reveals: [...theScreenCode],
-    says: 'The Main Screen’s blocks are behind Screen code, above the screen.',
+    says: 'The Main Screen’s blocks are behind Screen code, above the map.',
   }),
   'toolbox.drawer': argument => {
     const {wanted, reveals} = inFile(argument);
