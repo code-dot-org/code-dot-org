@@ -22,6 +22,7 @@ import {
   setupSpriteLab2BlocklyEnvironment,
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
+import {animationListFrom} from '../migrateSources';
 import {unpackSources} from '../packedWorld';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
@@ -122,7 +123,16 @@ const SpriteLab2Container: React.FunctionComponent<
   // an updater builds on, so the rest of the lab only sees the grid.
   const currentSources = useMemo(() => {
     const sources = readOnlyLevel ? levelSources : storedForLevel;
-    return sources && unpackSources(sources);
+    if (!sources) {
+      return sources;
+    }
+    // A project stored with a malformed or missing animation list (a
+    // project file from another lab under this channel, say) opens with an
+    // empty one instead of failing to open at all.
+    return {
+      ...unpackSources(sources),
+      animations: animationListFrom(sources.animations),
+    };
   }, [readOnlyLevel, levelSources, storedForLevel]);
   const updateSources = useCallback<typeof updateStoredSources>(
     (next, forceSave) => {

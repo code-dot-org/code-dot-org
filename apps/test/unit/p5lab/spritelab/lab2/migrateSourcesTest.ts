@@ -1,4 +1,5 @@
 import {
+  animationListFrom,
   migrateAnimationList,
   migrateBlockTypes,
   migrateScenes,
@@ -88,5 +89,34 @@ describe('migrateAnimationList', () => {
     ];
     expect(migrateScenes(scenes as never)).toBe(true);
     expect(scenes[0].source.blocks.blocks[0].type).toBe('spritelab2_whenRun');
+  });
+});
+
+describe('animationListFrom', () => {
+  const sprite = {name: 'Sprite 1', categories: []};
+
+  it('passes a well-formed list through', () => {
+    const list = {orderedKeys: ['a'], propsByKey: {a: sprite}};
+    expect(animationListFrom(list)).toEqual(list);
+  });
+
+  it('lists what a list stored without its order holds', () => {
+    expect(animationListFrom({propsByKey: {a: sprite, b: sprite}})).toEqual({
+      orderedKeys: ['a', 'b'],
+      propsByKey: {a: sprite, b: sprite},
+    });
+  });
+
+  it('drops an ordered key with no image behind it', () => {
+    expect(
+      animationListFrom({orderedKeys: ['a', 'gone'], propsByKey: {a: sprite}})
+    ).toEqual({orderedKeys: ['a'], propsByKey: {a: sprite}});
+  });
+
+  it('reads an empty object, a string or nothing as an empty list', () => {
+    const empty = {orderedKeys: [], propsByKey: {}};
+    expect(animationListFrom({})).toEqual(empty);
+    expect(animationListFrom('write(1);')).toEqual(empty);
+    expect(animationListFrom(undefined)).toEqual(empty);
   });
 });

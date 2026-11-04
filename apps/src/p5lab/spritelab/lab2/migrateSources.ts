@@ -62,3 +62,24 @@ export function migrateAnimationList(
   }
   return changed;
 }
+
+/** The animation list a project holds, in the shape the lab reads: both of
+    its parts present, with the order listing only images that exist. A
+    stored list missing its order lists what it holds; a value that is not
+    a list at all is an empty one. */
+export function animationListFrom(
+  animations: unknown
+): SerializedAnimationList {
+  const stored =
+    animations && typeof animations === 'object'
+      ? (animations as Partial<SerializedAnimationList>)
+      : {};
+  const propsByKey =
+    stored.propsByKey && typeof stored.propsByKey === 'object'
+      ? stored.propsByKey
+      : {};
+  const orderedKeys = Array.isArray(stored.orderedKeys)
+    ? stored.orderedKeys.filter(key => key in propsByKey)
+    : Object.keys(propsByKey);
+  return {orderedKeys, propsByKey};
+}
