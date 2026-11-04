@@ -4,6 +4,7 @@ import React from 'react';
 import {EMPTY_PROGRESS, Progress} from '@cdo/apps/adaptive/progress';
 import {Pathway} from '@cdo/apps/adaptive/types';
 import PathwayApp from '@cdo/apps/adaptive/views/PathwayApp';
+import {LevelProperties} from '@cdo/apps/lab2/types';
 
 jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
   __esModule: true,
@@ -161,10 +162,22 @@ describe('PathwayApp', () => {
     window.history.replaceState({}, '', originalUrl);
   });
 
+  const levelProperties = {
+    id: 1,
+    name: 'adaptive',
+    appName: 'adaptive',
+  } as unknown as LevelProperties;
+
   // Progress loads from a promise, so the first render settles after a tick.
   const renderSettled = async () => {
     await act(async () => {
-      render(<PathwayApp pathway={pathway} progressKey={progressKey} />);
+      render(
+        <PathwayApp
+          pathway={pathway}
+          progressKey={progressKey}
+          levelProperties={levelProperties}
+        />
+      );
     });
     await act(async () => {
       await Promise.resolve();
@@ -417,7 +430,13 @@ describe('PathwayApp', () => {
       },
     });
     await act(async () => {
-      render(<PathwayApp pathway={routing} progressKey={progressKey} />);
+      render(
+        <PathwayApp
+          pathway={routing}
+          progressKey={progressKey}
+          levelProperties={levelProperties}
+        />
+      );
     });
     await act(async () => {
       await Promise.resolve();
@@ -433,7 +452,13 @@ describe('PathwayApp', () => {
 
   it('returns to the map unfocused after a checkpoint that does not route', async () => {
     await act(async () => {
-      render(<PathwayApp pathway={pathway} progressKey={progressKey} />);
+      render(
+        <PathwayApp
+          pathway={pathway}
+          progressKey={progressKey}
+          levelProperties={levelProperties}
+        />
+      );
     });
     await act(async () => {
       await Promise.resolve();
