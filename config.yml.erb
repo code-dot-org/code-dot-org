@@ -235,6 +235,11 @@ enable_opentelemetry: false
 enable_sentry: false
 # DSN for the Dashboard Rails backend Sentry project.
 dashboard_sentry_dsn: !Secret
+# Sentry Data Source Name (DSN) for the Cronjobs project.
+# See https://docs.sentry.io/concepts/key-terms/dsn-explainer/
+cronjobs_sentry_dsn: !Secret
+# DSN for the ActiveJob workers Sentry project. Not read yet.
+activejobs_sentry_dsn: !Secret
 # DSN for the apps/ webpack bundle Sentry project.
 frontend_apps_sentry_dsn: !Secret
 # DSN for the frontend/apps/studio Vite app Sentry project.
@@ -407,12 +412,6 @@ optimize_rails_assets: true
 # Improves local environment load time by loading only the i18n data for the current locale.
 # Note: Not intended for production use.
 lazy_load_i18n: false
-
-# Whether to skip the slow `rake seed:all` command during `rake build`.
-# Until you manually run `rake seed:all` or disable this flag, you won't
-# see changes to: videos, concepts, levels, scripts, trophies, prize providers,
-# callouts, hints, secret words, or secret pictures.
-skip_seed_all:
 
 # Whether to store sprocket asset cache on disk or in memory. Setting this to
 # false reduces memory usage, but significantly slows down dev server startup.

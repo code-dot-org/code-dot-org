@@ -79,8 +79,30 @@ jest.mock('@cdo/apps/adaptive/views/map/MapView', () => ({
 jest.mock('@cdo/apps/adaptive/views/map/mapSettings', () => ({
   resolveMapSettings: () => ({}),
 }));
-jest.mock('@code-dot-org/component-library/common/contexts', () => ({
-  useTheme: () => ({theme: 'Light', setTheme: jest.fn()}),
+jest.mock('@cdo/apps/lab2/hooks/useThemeSetting', () => ({
+  __esModule: true,
+  default: () => ({
+    id: 'theme',
+    label: 'Theme',
+    options: [],
+    selectedValue: 'Light',
+    onChange: jest.fn(),
+  }),
+}));
+jest.mock('@cdo/apps/lab2/views/components/Instructions/ResourcePanel', () => ({
+  __esModule: true,
+  default: ({
+    sidebarOnly,
+    settings,
+  }: {
+    sidebarOnly?: boolean;
+    settings?: {id: string}[];
+  }) => (
+    <div>
+      resource rail{sidebarOnly ? ' (sidebar only)' : ''}: settings{' '}
+      {settings?.map(s => s.id).join(',')}
+    </div>
+  ),
 }));
 
 const step = (id: string) => ({
@@ -125,6 +147,7 @@ function renderMapScreen(
   return render(
     <MapScreen
       pathway={pathway}
+      levelProperties={{id: 1, name: 'adaptive', appName: 'adaptive'}}
       statusMap={statusMap}
       evidence={{}}
       onFocus={jest.fn()}
@@ -262,5 +285,16 @@ describe('MapScreen tour', () => {
       renderMapScreen({hasSkippedCheckpoints: true});
       expect(screen.getByRole('dialog', {name: 'tour'})).toBeTruthy();
     });
+  });
+});
+
+describe('MapScreen resource rail', () => {
+  it("shows the labs' rail beside the map with the theme setting", () => {
+    localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
+    renderMapScreen();
+    expect(
+      screen.getByText('resource rail (sidebar only): settings theme')
+    ).toBeTruthy();
+    localStorage.clear();
   });
 });

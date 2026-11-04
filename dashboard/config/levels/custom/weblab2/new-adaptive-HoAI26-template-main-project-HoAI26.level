@@ -1,0 +1,48 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T01:04:17.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "56dd71c7-45ba-40a1-bc37-6693f3e8cb29": {
+          "id": "56dd71c7-45ba-40a1-bc37-6693f3e8cb29",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>My Awesome Site</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <header>\n    <h1>Welcome to My Site</h1>\n  </header>\n  <main>\n    <p>This is a starting point for your web project.</p>\n  </main>\n  <footer>\n    <p>&copy; 2023</p>\n  </footer>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "ab7def23-7936-42f8-9c83-60c3c66612fa": {
+          "id": "ab7def23-7936-42f8-9c83-60c3c66612fa",
+          "name": "style.css",
+          "contents": "body {\n  font-family: sans-serif;\n  margin: 0;\n  padding: 20px;\n  background-color: #f4f4f4;\n  color: #333;\n}\n\nh1 {\n  color: #0056b3;\n}\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "3c351dfb-c65b-4171-8807-e4e14cc0df28": {
+          "id": "3c351dfb-c65b-4171-8807-e4e14cc0df28",
+          "name": "script.js",
+          "contents": "// Your JavaScript code goes here\n// For example, you can add interactivity like this:\n// console.log(\"Script loaded!\");",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "56dd71c7-45ba-40a1-bc37-6693f3e8cb29",
+        "ab7def23-7936-42f8-9c83-60c3c66612fa",
+        "3c351dfb-c65b-4171-8807-e4e14cc0df28"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:04:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 01:30:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

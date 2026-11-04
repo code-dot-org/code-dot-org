@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284590-28047eb191fe",
+  "problem_type": "scramble",
+  "active": true,
+  "problem_text": "Put these traits in the order of their importance for a successful career in software engineering.",
+  "solution": [
+    {
+      "option": "Problem-solving skills",
+      "correct": 0
+    },
+    {
+      "option": "Attention to detail",
+      "correct": 1
+    },
+    {
+      "option": "Creativity",
+      "correct": 2
+    },
+    {
+      "option": "Team collaboration",
+      "correct": 3
+    }
+  ],
+  "objective_keys": [
+    "fe082c57-149f-4b9d-b7b2-aca7d2851cc2"
+  ]
+}

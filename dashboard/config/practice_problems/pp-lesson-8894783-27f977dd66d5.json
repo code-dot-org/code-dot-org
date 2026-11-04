@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894783-27f977dd66d5",
+  "problem_type": "sort",
+  "active": true,
+  "problem_text": "Sort the following statements into 'Problem Observations' and 'Core Issues'.",
+  "solution": [
+    {
+      "option": "Many families lack access to healthy food",
+      "correct": "Problem Observation"
+    },
+    {
+      "option": "Food insecurity in the community",
+      "correct": "Core Issue"
+    },
+    {
+      "option": "High rates of obesity among children",
+      "correct": "Core Issue"
+    },
+    {
+      "option": "Limited availability of grocery stores",
+      "correct": "Problem Observation"
+    }
+  ],
+  "objective_keys": [
+    "e0113438-48de-41de-a347-11974399f172"
+  ]
+}

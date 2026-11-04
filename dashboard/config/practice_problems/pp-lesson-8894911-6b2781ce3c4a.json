@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-8894911-6b2781ce3c4a",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following statements are true regarding human creativity and AI-assisted content generation? (Select all that apply)",
+  "solution": [
+    {
+      "option": "AI can help refine human ideas.",
+      "correct": true
+    },
+    {
+      "option": "Human creativity is irrelevant in AI processes.",
+      "correct": false
+    },
+    {
+      "option": "Generative AI can produce unexpected results that inspire human creators.",
+      "correct": true
+    },
+    {
+      "option": "AI is always more creative than humans.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "6a3cfa37-8150-49ee-998d-5016fe73b662",
+    "34a3bc0f-97e9-4805-96b0-b58b1a2f5401"
+  ]
+}

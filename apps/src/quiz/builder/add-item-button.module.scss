@@ -1,7 +1,11 @@
 .addItem {
+  box-sizing: border-box;
+  display: flex;
   width: 100%;
-
-  &:global(.MuiButton-outlined) {
-    border-style: dashed;
-  }
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+  border: 1px dashed var(--border-neutral-primary);
+  border-radius: var(--shape-sm);
+  background: transparent;
 }

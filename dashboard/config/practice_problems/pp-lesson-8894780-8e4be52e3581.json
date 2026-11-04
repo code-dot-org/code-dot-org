@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894780-8e4be52e3581",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are considerations when using the Model Card to create new input elements? (Select all that apply)",
+  "solution": [
+    {
+      "option": "The type of data the app will collect.",
+      "correct": true
+    },
+    {
+      "option": "The programming language used for the app.",
+      "correct": false
+    },
+    {
+      "option": "The user experience when interacting with the inputs.",
+      "correct": true
+    },
+    {
+      "option": "The storage capacity of the device running the app.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "1dadb202-da7e-4b38-ae06-1d0c528a70b5"
+  ]
+}

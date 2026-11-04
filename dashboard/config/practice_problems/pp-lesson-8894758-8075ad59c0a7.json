@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-8894758-8075ad59c0a7",
+  "problem_type": "sort",
+  "active": true,
+  "problem_text": "Sort the steps involved in evaluating an AI's output for usefulness.",
+  "solution": [
+    {
+      "option": "Determine the intended purpose of the output.",
+      "correct": "Step 1"
+    },
+    {
+      "option": "Review the AI's output critically.",
+      "correct": "Step 2"
+    },
+    {
+      "option": "Decide if the output meets that purpose.",
+      "correct": "Step 3"
+    }
+  ],
+  "objective_keys": [
+    "ab3a91f1-e3f3-4654-8257-5236e3f26d3e"
+  ]
+}

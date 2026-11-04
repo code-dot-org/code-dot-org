@@ -13,10 +13,7 @@ import {ImageType} from '../ai/images/types';
 import {noteImageFieldValue} from '../imageReferences';
 import {defaultImageName, ImageSlot} from '../imageRoleDefaults';
 import {getImageThumbnail} from '../imageTrim';
-import {requestPicture} from '../picturePicker';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
-
-import moduleStyles from './image-dropdown.module.scss';
 
 export const FIELD_COSTUME_TYPE = 'field_spritelab2_costume';
 export const FIELD_BLOCK_IMAGE_TYPE = 'field_spritelab2_block_image';
@@ -41,22 +38,6 @@ const EMPTY_IMAGE_OPTION: [string, string][] = [
     'null',
   ],
 ];
-
-// Asks for a new picture of the field's kind, which lands in the field
-// once made; also the empty state's affordance.
-function makeImageButtons(field: () => Lab2AnimationDropdown) {
-  return [
-    {
-      text: 'Make an image',
-      action: () =>
-        requestPicture({
-          imageType: IMAGE_TYPE_OF[field().kind],
-          onPicked: name => field().setValue(`"${name}"`),
-        }),
-      className: moduleStyles.makeImageButton,
-    },
-  ];
-}
 
 type AnimationKind = 'costume' | 'background' | 'block';
 
@@ -205,14 +186,14 @@ function animationDropdown(
     () => animationOptions(kind),
     THUMBNAIL_SIZE[kind],
     THUMBNAIL_SIZE[kind],
-    makeImageButtons(() => field)
+    undefined
   );
   field.kind = kind;
   return field;
 }
 
 // The classic costumePicker/backgroundPicker input types, with lab2's empty
-// state and Images-tab button. (The classic animation-mode buttons don't
+// state. (The classic animation-mode buttons don't
 // apply here — this lab has no AnimationTab.)
 export function animationPicker(kind: AnimationKind) {
   return {

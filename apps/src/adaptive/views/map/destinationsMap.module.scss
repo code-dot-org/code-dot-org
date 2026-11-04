@@ -1,5 +1,10 @@
+@use './destinationColors' as colors;
+
 // A destination group's box, its title in the top corner on the outer side.
+// A declared color tints the title's icon; the border stays neutral.
 .destination {
+  --destination-accent: var(--text-neutral-secondary);
+
   position: absolute;
   z-index: 0;
   border: 1px solid var(--borders-neutral-primary);
@@ -7,14 +12,23 @@
   background: var(--background-neutral-primary);
 }
 
+@include colors.destination-colors;
+
 .destinationTitle {
   position: absolute;
   top: 10px;
   left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: var(--text-neutral-primary);
   font-size: 13px;
   font-weight: 600;
   white-space: nowrap;
+}
+
+.destinationIcon {
+  color: var(--destination-accent);
 }
 
 .destinationRight .destinationTitle {
