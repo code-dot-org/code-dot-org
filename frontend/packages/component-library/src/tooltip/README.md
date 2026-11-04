@@ -86,12 +86,27 @@ and those haven't been checked in RTL yet.
 
 ### `data-theme`
 
-MUI renders the tooltip in a portal on `document.body`, so it doesn't inherit a
-surrounding `data-theme` subtree. Pass it through `slotProps` when needed:
+MUI renders the tooltip in a portal on `document.body`, outside any
+`data-theme` subtree. Inside the component library's `ThemeProvider`
+(`@code-dot-org/component-library/common/contexts`, which wraps every Lab2
+lab) nothing needs doing: the provider sets `data-theme` on the popper of every
+MUI `Tooltip`, `Popper`, `Popover`, `Menu`, `Select` menu and `Autocomplete`
+list beneath it, matching its own theme. A nested provider wins over an outer
+one.
+
+The provider does this by extending the surrounding MUI theme with
+`MuiPopper` and `MuiPopover` default props, so it needs `CdoTheme` (or another
+MUI theme) above it; every `createReactRoot` tree has one. Without an outer MUI
+theme it leaves the portals alone.
+
+Two cases still need `slotProps`. A tooltip under a bare `data-theme`
+attribute, not a `ThemeProvider`, does not see it; and a tooltip whose bubble
+must differ from the surrounding theme sets its own:
 
 ```tsx
 <Tooltip title="…" slotProps={{tooltip: {'data-theme': 'Dark'}}}>
 ```
 
-(Or, as a follow-up, the bubble could use `-fixed` tokens and stop caring about
-the surrounding theme at all.)
+The bubble attribute is closer than the popper's, so it wins. `Dialog`,
+`Drawer` and other `Modal`s are not covered; they set `data-theme` on their
+content as before.

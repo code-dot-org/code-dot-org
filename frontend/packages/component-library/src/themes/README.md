@@ -188,6 +188,8 @@ Provides:
 
 The provider renders a `<div data-theme="Light|Dark">` wrapper. CSS variables inside that subtree automatically resolve to the correct mode's values.
 
+MUI portals `Tooltip`, `Popper`, `Popover` and `Menu` to `<body>`, outside that wrapper. The provider extends the surrounding MUI theme with `MuiPopper` and `MuiPopover` default props that put the same `data-theme` on those portals, so they follow the provider without call-site work. This needs an MUI theme above the provider; without one it leaves the portals alone. `Modal`-based surfaces (`Dialog`, `Drawer`) are not covered.
+
 ### Where ThemeProvider is mounted
 
 `ThemeProvider` is mounted inside specific app trees that support dark mode, not globally. Currently used in:
@@ -218,7 +220,7 @@ const MyComponent = () => {
 };
 ```
 
-For components that may render outside a `ThemeProvider` (e.g. portals/tooltips), use the optional form:
+For components that may render outside a `ThemeProvider`, use the optional form:
 
 ```tsx
 const {theme} = useTheme(true); // theme may be undefined
