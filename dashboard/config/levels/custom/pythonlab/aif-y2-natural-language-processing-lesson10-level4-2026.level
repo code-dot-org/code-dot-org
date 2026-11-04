@@ -1,0 +1,37 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T01:08:54.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson10-2026 + template",
+    "long_instructions": "`predict` returns a list of tokens, like this:\r\n\r\n```\r\n[\"students\", \"the\", \"cafeteria\", \"will\", \"be\"]\r\n```\r\n\r\nTo print it as a single string, you need to turn the list back into a single string. The `detokenize` function should do just that.\r\n\r\n**☑️ Do This:**\r\n\r\n- Complete the `detokenize` function.\r\n  - Join the tokens in `tokens` into a single string, with a space between each token.\r\n  - Return the resulting string.\r\n\r\n**💻 Coding Tip**\r\n\r\n`\" \".join` combines a list of strings into one string, with a space between each item.\r\n\r\n```\r\n\" \".join([\"students\", \"the\", \"cafeteria\", \"will\", \"be\"]) # \"students the cafeteria will be\"\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:13:17 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 01:13:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -27,6 +27,7 @@ interface QuizQuestionCardProps {
     payload: QuizQuestionPayload
   ) => Promise<number | undefined>;
   onRemove: (id: number) => Promise<boolean>;
+  onDirtyChange?: (id: number, isDirty: boolean) => void;
 }
 
 function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
@@ -87,6 +88,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   error,
   onSave,
   onRemove,
+  onDirtyChange,
 }) => {
   const [draft, setDraft] = useState(() => toDraft(question));
   const [isSaving, setIsSaving] = useState(false);
@@ -116,6 +118,14 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
     setDraft(toDraft(question));
   }, [question]);
 
+  useEffect(() => {
+    if (!isDirty || !onDirtyChange) {
+      return;
+    }
+    onDirtyChange(question.id, true);
+    return () => onDirtyChange(question.id, false);
+  }, [onDirtyChange, question.id, isDirty]);
+
   const handleSave = async () => {
     setIsSaving(true);
     const updatedId = await onSave(question.id, toPayload(draft));
@@ -124,6 +134,8 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
       onExpandedChange(false);
     }
   };
+
+  const neverSaved = isPendingQuestionId(question.id);
 
   const handleDiscard = () => {
     setDraft(toDraft(question));
@@ -150,6 +162,8 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
       onSave={handleSave}
       onDiscard={handleDiscard}
       onRemove={handleRemove}
+      nested
+      neverSaved={neverSaved}
     >
       <Tabs
         name={`question-${question.id}-tabs`}

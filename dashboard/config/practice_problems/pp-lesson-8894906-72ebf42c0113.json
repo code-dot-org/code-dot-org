@@ -1,0 +1,20 @@
+{
+  "key": "pp-lesson-8894906-72ebf42c0113",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms with their explanations: 1. Probability-based models 2. Implications of contradictions.",
+  "solution": [
+    {
+      "option": "Probability-based models",
+      "correct": "They can lead to different outcomes based on varying input data."
+    },
+    {
+      "option": "Implications of contradictions",
+      "correct": "They can affect decision-making processes in real-world scenarios."
+    }
+  ],
+  "objective_keys": [
+    "26cc455f-c95a-4ee2-ada0-4ffc24f8b47d",
+    "8109e34b-1763-4092-856f-524a05ac1b2a"
+  ]
+}

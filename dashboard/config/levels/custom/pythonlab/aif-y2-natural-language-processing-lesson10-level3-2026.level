@@ -1,0 +1,37 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T01:08:51.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson10-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Update the `predict` function. Given a `token`, it should return a list of up to five tokens. Each token in the list should be a random follower of the token before it.\r\n\r\n**💻 Coding Tip**\r\n\r\nRecall you can use a `for` loop to iterate five times.\r\n\r\n```\r\nfor i in range(5):\r\n  ...\r\n```\r\n\r\nConsider still checking if a token is in `model` before retrieving its follower. But this time, if a token isn’t in `model`, just stop early.\r\n\r\n```\r\nif token in model:\r\n  # Add to list of followers\r\nelse:\r\n  break\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 01:11:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 01:12:06 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-postassessment-q14-2026'
+
+wrong 'It was trained on a corpus that was made up entirely of false statements'
+right 'It predicts likely words from patterns in text, not from a record of the facts'
+wrong 'It was programmed by its developers to invent headlines whenever it has no data'
+wrong 'It cannot process English well enough to form a complete sentence on its own'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A language model writes a confident news headline about an event that never happened. Why can a language model do this?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Limits of Natural Language Processing
+MARKDOWN

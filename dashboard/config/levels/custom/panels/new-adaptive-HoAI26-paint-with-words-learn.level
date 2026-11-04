@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-11-03T03:20:09.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "new-adaptive-HoAI26-paint-with-words-learn-61a4679f-0884-44d2-b0a1-b8a95819af3e",
+        "text": "A vague order will make a plain gray page.",
+        "imageUrl": "https://images.code.org/e593995cd9883c552a4359085ce5b5f4-new-adaptive-HoAI26-paint-with-words-learn-panel-1-257b2616-9544-4e9a-ae87-99e635b16dcb.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "new-adaptive-HoAI26-paint-with-words-learn-dd610fd5-fd8e-4cf0-a2a8-f4b38a282786",
+        "text": "Naming colors, type, and layout creates the look you pictured.",
+        "imageUrl": "https://images.code.org/921b6c25bac46154a12742d51b310e80-new-adaptive-HoAI26-paint-with-words-learn-panel-2-e92aed00-cd49-44f4-add9-1560877bc926.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "new-adaptive-HoAI26-paint-with-words-learn-7d28d153-97ec-4820-add9-b39beb5a0d57",
+        "text": "Add details or change one thing, saying what to keep.",
+        "imageUrl": "https://images.code.org/077146e979cde0886dfb4e0c3c1b8d04-new-adaptive-HoAI26-paint-with-words-learn-panel-3-9dcbff4e-ee0a-4b45-97b0-12812b4d6c84.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Learn to describe how your page should look. Naming colors, type, and layout gets the look you pictured, unlike vague orders."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 03:20:41 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:20:41 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

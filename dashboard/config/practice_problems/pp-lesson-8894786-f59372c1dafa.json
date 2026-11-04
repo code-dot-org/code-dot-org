@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894786-f59372c1dafa",
+  "problem_type": "scramble",
+  "active": true,
+  "problem_text": "Put the steps of an effective data collection process in the correct order.",
+  "solution": [
+    {
+      "option": "Define the objective of data collection.",
+      "correct": 0
+    },
+    {
+      "option": "Select a diverse and adequate sample.",
+      "correct": 1
+    },
+    {
+      "option": "Design clear and relevant survey questions.",
+      "correct": 2
+    },
+    {
+      "option": "Collect and analyze the data.",
+      "correct": 3
+    }
+  ],
+  "objective_keys": [
+    "31d897b0-58ed-48ca-8bf5-699b2d6fee00"
+  ]
+}

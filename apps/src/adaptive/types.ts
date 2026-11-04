@@ -12,6 +12,7 @@ import {
   pathwaySchema,
   questionSchema,
   questionsStepSchema,
+  reviewStepSchema,
   skillSchema,
   stepSchema,
   videoStepSchema,
@@ -25,6 +26,7 @@ export type PanelsStep = z.infer<typeof panelsStepSchema>;
 export type LevelStep = z.infer<typeof levelStepSchema>;
 export type MarkdownStep = z.infer<typeof markdownStepSchema>;
 export type QuestionsStep = z.infer<typeof questionsStepSchema>;
+export type ReviewStep = z.infer<typeof reviewStepSchema>;
 export type VideoStep = z.infer<typeof videoStepSchema>;
 export type Question = z.infer<typeof questionSchema>;
 export type MultipleChoiceDiagnosticQuestion = z.infer<

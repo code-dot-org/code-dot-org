@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284595-72e70da42c77",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is the primary purpose of defining a function in programming?",
+  "solution": [
+    {
+      "option": "To organize and reuse repeated code.",
+      "correct": true
+    },
+    {
+      "option": "To make the code run faster.",
+      "correct": false
+    },
+    {
+      "option": "To store data permanently.",
+      "correct": false
+    },
+    {
+      "option": "To create user interfaces.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "1b5f5a68-d8ff-448d-bde7-b8f3dd938072"
+  ]
+}

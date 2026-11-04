@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894778-94316334499b",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all the factors that contribute to the accuracy of predictions made from numerical data regarding zombie locations.",
+  "solution": [
+    {
+      "option": "The number of data points collected",
+      "correct": true
+    },
+    {
+      "option": "The quality of the data collected",
+      "correct": true
+    },
+    {
+      "option": "The color of the map used to display results",
+      "correct": false
+    },
+    {
+      "option": "The time of day the data was collected",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "83cad7ca-e4d9-4f0b-b9d5-c68c1b7178d6"
+  ]
+}

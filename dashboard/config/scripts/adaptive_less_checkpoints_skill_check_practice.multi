@@ -1,0 +1,14 @@
+name 'adaptive-less-checkpoints-skill-check-practice'
+title 'TODO: title'
+description ''
+question 'You want to build a website with AI. How do you feel about starting?'
+wrong 'Excited to try new tools.'
+right 'A bit unsure, but ready to learn.'
+wrong 'Nervous, I don\'t know much about AI.'
+wrong 'I\'d rather have someone else do it for me.'
+
+markdown <<MARKDOWN
+You want to build a website with AI. How do you feel about starting?
+MARKDOWN
+
+allow_multiple_attempts true

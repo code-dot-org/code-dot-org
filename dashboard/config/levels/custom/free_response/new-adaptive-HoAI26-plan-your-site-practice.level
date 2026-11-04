@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-11-03T03:17:58.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "Describe your idea for a website. What topic will it cover, or what will it help people do?",
+    "placeholder": "My website idea is...",
+    "encrypted_solution": "WbAV6wxBgxGytUCAu0lwuniR4HqpzyK0KvwbzCefESgxZGNLJPAZUKaWlUGf\ngTqyzx8JAUzCJC6BT+Vdo1NUGFDQtGsEKb7yD5digdMGQBuedfQK0dHt4UIu\nWEoD6zuTRk4VTH/XIdrIssKx0V09KXO7zyQQB79h13GK2Q1cwmlwI07+X/Js\ng28AJYkuFkSIUbYxpDuPqFMHbJ2/BuGfXSBzKsRZUO0SgeWwXKoelOdMXp9W\nIHHOFhJajY4Eg4e2arRLe6b5ESK2UkMEn6n1nRDAAz6N1BKy4thV/ZjM33Tq\nsD3Q7EMBI9ndnQ5cdA1/\n",
+    "generate_outline": "Answer four questions to plan your site: idea, audience, purpose, and style. Each page asks one question."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 03:18:02 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:18:03 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:18:03 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:18:03 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</FreeResponse>

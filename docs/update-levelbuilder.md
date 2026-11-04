@@ -19,7 +19,7 @@ This .md file should only contain information which is specific to Code.org engi
 ## Open issues and workarounds:
 
 - Updating English-language strings from .script file doesn't automatically update localized strings ([#82514628](https://www.pivotaltracker.com/story/show/82514628)). Workarounds:
- 1. After updating the description in the .script file, delete the entry for the script in scripts/en.yml, then run rake seed:scripts (or rake seed:all.
+ 1. After updating the description in the .script file, delete the entry for the script in scripts/en.yml, then run rake seed:scripts (or rake seed:production).
  1. Modify the entry in scripts/en.yml directly to update description text (you don't even need to modify the text in the .script file).
 - Renaming a level in LB keeps the old .level file around ([#78597388](https://www.pivotaltracker.com/story/show/78597388)). Workaround: Manually delete the old level after rename.
 
@@ -45,7 +45,7 @@ To fix:
 ````
 > cd dashboard
 > rm config/scripts/.seeded
-> rake seed:all
+> rake seed:production
 ````
 
 ### you just pulled .level and .script files that were created by a different levelbuilder
@@ -59,7 +59,7 @@ To fix:
 
 ````
 > cd dashboard
-> rake seed:all FORCE_CUSTOM_LEVELS=1
+> rake seed:production FORCE_CUSTOM_LEVELS=1
 ````
 
 If you also need to rebuild levelbuilder:

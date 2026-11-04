@@ -10,6 +10,37 @@ import {
 import StepPlayer from '@cdo/apps/adaptive/views/steps/StepPlayer';
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 
+jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
+  isAdaptiveAiEnabled: () => true,
+}));
+
+// Reports whether a build is requested of it when it mounts.
+jest.mock('@cdo/apps/adaptive/views/steps/LevelStep', () => {
+  const React = require('react');
+  const {
+    usePathwayContext,
+  } = require('@cdo/apps/adaptive/views/PathwayContext');
+  function FakeLevelStep({
+    step,
+    onComplete,
+  }: {
+    step: {id: string};
+    onComplete: () => void;
+  }) {
+    const {buildRequested} = usePathwayContext();
+    const [build] = React.useState(buildRequested);
+    return (
+      <div>
+        level: {step.id} build: {String(build)}
+        <button type="button" onClick={onComplete}>
+          Continue
+        </button>
+      </div>
+    );
+  }
+  return {__esModule: true, default: FakeLevelStep};
+});
+
 jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
   __esModule: true,
   default: ({
@@ -375,6 +406,125 @@ describe('StepPlayer', () => {
         screen.getByRole('button', {name: 'Complete checkpoint'})
       );
       expect(onFinish).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('with a review step', () => {
+    const planned: Checkpoint = {
+      ...checkpoint,
+      plan: {template: 'A site that is {feel}.'},
+      steps: [
+        {
+          id: 'ask',
+          title: 'Ask',
+          kind: 'questions',
+          questions: [
+            {
+              id: 1,
+              type: 'MultipleChoiceQuestion',
+              questionName: 'feel',
+              questionTitle: 'How should it feel?',
+              choices: [
+                {id: 'a', text: 'Calm'},
+                {id: 'b', text: 'Bold'},
+              ],
+              plan: 'feel',
+            },
+          ],
+        },
+        {id: 'review', title: 'Review', kind: 'review', questionId: 2},
+        placeholder('between'),
+        {
+          id: 'starter',
+          title: 'Starter',
+          kind: 'level',
+          level: 'starter',
+          project: true,
+          projectPrompt: 'A first version.',
+        },
+      ],
+    };
+    const answered: Progress = {
+      steps: {ask: {timeSpent: 0, answers: {1: [{answerId: 'b'}]}}},
+    };
+
+    const renderReview = () => {
+      const calls: unknown[][] = [];
+      const Host = () => {
+        const [progress, setProgress] = useState(answered);
+        const [buildRequested, setBuildRequested] = useState(false);
+        return (
+          <PathwayContext.Provider
+            value={
+              {
+                progress,
+                checkpoint: planned,
+                buildRequested,
+                setBuildRequested,
+              } as unknown as PathwayContextValue
+            }
+          >
+            <StepPlayer
+              checkpoint={planned}
+              initialStepId="review"
+              onStartStep={jest.fn()}
+              onCompleteStep={jest.fn()}
+              onLeaveStep={jest.fn()}
+              onSaveAnswers={(step, questionId, list) => {
+                calls.push([step.id, questionId, list]);
+                setProgress(p => ({
+                  steps: {
+                    ...p.steps,
+                    [step.id]: {
+                      timeSpent: 0,
+                      answers: {
+                        ...p.steps[step.id]?.answers,
+                        [questionId]: list,
+                      },
+                    },
+                  },
+                }));
+              }}
+              onExit={jest.fn()}
+              onFinish={jest.fn()}
+            />
+          </PathwayContext.Provider>
+        );
+      };
+      render(<Host />);
+      return {calls};
+    };
+
+    it('shows the plan filled from the answers', () => {
+      renderReview();
+      expect(screen.getByText('A site that is', {exact: false})).toBeTruthy();
+      expect(screen.getByText('Bold', {selector: 'strong'})).toBeTruthy();
+    });
+
+    it('saves a build decision and asks the next project step to build', () => {
+      const {calls} = renderReview();
+      fireEvent.click(screen.getByRole('button', {name: 'Build site'}));
+      expect(calls).toEqual([['review', 2, [{answerId: 'build'}]]]);
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('level: starter build: true')).toBeTruthy();
+    });
+
+    it('saves a skip and loads the project step as it is', () => {
+      const {calls} = renderReview();
+      fireEvent.click(screen.getByRole('button', {name: 'Skip'}));
+      expect(calls).toEqual([['review', 2, [{answerId: 'skip'}]]]);
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('level: starter build: false')).toBeTruthy();
+    });
+
+    it('drops the build when the student goes back before the project step', () => {
+      renderReview();
+      fireEvent.click(screen.getByRole('button', {name: 'Build site'}));
+      window.history.replaceState({}, '', '?checkpoint=basics&step=review');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+      fireEvent.click(screen.getByRole('button', {name: 'Skip'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('level: starter build: false')).toBeTruthy();
     });
   });
 });

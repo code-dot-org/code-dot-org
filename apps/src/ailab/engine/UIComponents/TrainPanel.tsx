@@ -114,6 +114,7 @@ const TrainPanel = () => {
               />
               <SimpleDropdown
                 name="ailab-label"
+                color="gray"
                 labelText="Predict"
                 isLabelVisible={false}
                 dropdownTextThickness="thin"
@@ -133,6 +134,7 @@ const TrainPanel = () => {
               <DropdownProviderWrapper>
                 <CheckboxDropdown
                   name="ailab-features"
+                  color="gray"
                   labelText={featuresSummary}
                   aria-label={`Using, ${featuresSummary}`}
                   labelType="thin"

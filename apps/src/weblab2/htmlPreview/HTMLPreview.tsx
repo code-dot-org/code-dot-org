@@ -69,6 +69,8 @@ export const HTMLPreview: React.FC = () => {
     codebridgeContext.levelProperties as Weblab2LevelProperties;
   const levelId = levelProperties.id;
   const widget2 = levelProperties.widget2;
+  // widget2 hides the header, which holds the only exit control.
+  const isFullScreen = !!isFullScreenView && !widget2;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
@@ -263,6 +265,27 @@ export const HTMLPreview: React.FC = () => {
     dispatch(setIsFullScreenView(!isFullScreenView));
   };
 
+  useEffect(() => {
+    if (!isFullScreen) {
+      return;
+    }
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && !event.defaultPrevented) {
+        dispatch(setIsFullScreenView(false));
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [isFullScreen, dispatch]);
+
+  // Clear the lab-wide flag on unmount so it does not leak into the next level.
+  useEffect(
+    () => () => {
+      dispatch(setIsFullScreenView(false));
+    },
+    [dispatch]
+  );
+
   const addToNavigationHistory = (
     filePath: string,
     navigationHistoryIndex: number,
@@ -316,6 +339,7 @@ export const HTMLPreview: React.FC = () => {
     setIsIframeLoaded(false);
     dispatch(clearRequests());
     dispatch(clearConsoleLogs());
+    dispatch(setIsFullScreenView(false));
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -515,13 +539,13 @@ export const HTMLPreview: React.FC = () => {
       headerContent={codebridgeI18n.preview()}
       hideHeaders
       className={classNames(
-        isFullScreenView && moduleStyles.fullScreenPanelContainer
+        isFullScreen && moduleStyles.fullScreenPanelContainer
       )}
     >
       <div
         className={classNames(
           moduleStyles.previewContainer,
-          isFullScreenView && moduleStyles.fullScreenPreviewContainer
+          isFullScreen && moduleStyles.fullScreenPreviewContainer
         )}
       >
         {!widget2 && (
