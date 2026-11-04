@@ -57,6 +57,8 @@ export interface ActorPaletteProps {
    * carries only when it is dropped.
    */
   onDragOut?: (path: string | null) => void;
+  /** Kept, not unmounted, while an inspector has its column: the tab stays. */
+  hidden?: boolean;
 }
 
 export const ActorPalette = ({
@@ -70,12 +72,13 @@ export const ActorPalette = ({
   newWithheld,
   isReadOnly,
   onDragOut,
+  hidden,
 }: ActorPaletteProps) => {
   const [tab, setTab] = useState<PaletteTab>(startTab);
   const shown = actors.filter(actor => isUnder(actor.purpose, tab));
 
   return (
-    <div className={styles.palette} data-callout="map.palette">
+    <div className={styles.palette} data-callout="map.palette" hidden={hidden}>
       <div className={styles.tabs}>
         <SegmentedButtons
           size="xs"

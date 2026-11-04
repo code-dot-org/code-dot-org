@@ -346,6 +346,13 @@ export const MapEditor = ({
     actorIconImage(icons[path] ?? '') ?? thumbnails[path];
   // The picker template to PLACE; null is the stage's select mode.
   const [selected, setSelected] = useState<string | null>(null);
+  // A selection's inspector takes the palette's column while it is open: the
+  // palette has nothing to do then, and over the map it covered what it was
+  // about.
+  const [inspectorSlot, setInspectorSlot] = useState<HTMLDivElement | null>(
+    null,
+  );
+  const [inspecting, setInspecting] = useState(false);
   /**
    * The place's picture, written beside it when it is new or different
    * (`placePicture`). Through a ref, since it is asked a while after the
@@ -946,8 +953,16 @@ export const MapEditor = ({
           newWithheld={withheld.has('map-new-actor')}
           isReadOnly={isReadOnly}
           onDragOut={setIncoming}
+          hidden={inspecting}
+        />
+        <div
+          ref={setInspectorSlot}
+          className={styles.inspectorColumn}
+          hidden={!inspecting}
         />
         <MapStage
+          inspectorSlot={inspectorSlot}
+          onInspecting={setInspecting}
           incoming={incoming}
           onPicture={isReadOnly ? undefined : keepPicture}
           doc={map}

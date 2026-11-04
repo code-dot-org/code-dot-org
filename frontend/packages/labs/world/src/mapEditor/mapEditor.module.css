@@ -198,6 +198,43 @@
   color: var(--text-neutral-primary);
 }
 
+/* The palette's column, holding a selection's inspector in its place. */
+.inspectorColumn {
+  display: flex;
+  flex-direction: column;
+  width: 13.5rem; /* the palette's, so the map does not move */
+  flex-shrink: 0;
+  min-height: 0;
+  border-right: var(--lab-border-default);
+}
+
+.inspectorColumn[hidden] {
+  display: none;
+}
+
+.columnInspector {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.columnBack {
+  flex-shrink: 0;
+  padding: 0.25rem 0.5rem;
+  border-bottom: var(--lab-border-default);
+}
+
+/* In the column it is the column's whole height, and nothing to float. */
+.columnInspector .inspector {
+  flex: 1;
+  width: auto;
+  margin-top: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+
 /* Folded down to its head: as wide as its words, so the map shows beside it. */
 .inspectorFolded {
   width: auto;

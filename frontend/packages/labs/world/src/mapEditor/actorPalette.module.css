@@ -10,6 +10,10 @@
   font-family: var(--font-family-main, sans-serif);
 }
 
+.palette[hidden] {
+  display: none;
+}
+
 .tabs {
   display: flex;
   justify-content: center;

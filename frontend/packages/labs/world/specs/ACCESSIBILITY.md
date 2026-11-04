@@ -398,6 +398,18 @@ below, and are listed last.
 - **Untested**: no screen reader; seen by keyboard in unit tests and by
   mouse in a headless browser.
 
+### A selection's inspector in the palette's column (SHELL_PLAN.md, step 2)
+
+- **The column is before the map in the page**, so Tab from the map goes
+  away from the inspector. I on the map moves focus to its first button,
+  Back to the actors, and the canvas's name says so.
+- **Back to the actors returns focus to the map**, where the selection
+  was; Escape on the map does the same without moving it.
+- **The palette is hidden, not removed**, so its tab is kept; while it is
+  hidden its tiles are out of the tab order.
+- **Untested**: no screen reader. Whether the swap of the column is
+  heard at all is open: nothing announces it.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

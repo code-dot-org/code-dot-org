@@ -33,6 +33,7 @@ import type {
   PointerEvent as ReactPointerEvent,
 } from 'react';
 import {useEffect, useRef, useState} from 'react';
+import {createPortal} from 'react-dom';
 
 import Accordion from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
@@ -330,6 +331,14 @@ export interface MapStageProps {
    */
   /** Escape on the stage puts the kind in hand back, as its palette tile does. */
   onPutDown?: () => void;
+  /**
+   * Where a selection's inspector goes instead of over the map: the Actor
+   * Palette's column, which has nothing to do while something is selected.
+   * Without one it floats at the foot of the stage, as alone in a test.
+   */
+  inspectorSlot?: HTMLElement | null;
+  /** Told whether a selection's inspector is showing, so the column can swap. */
+  onInspecting?: (inspecting: boolean) => void;
   onUndo?: () => void;
   /**
    * The place's picture, painted plain a while after it last changed, for
@@ -542,6 +551,8 @@ export const MapStage = ({
   onDocPreview,
   onEditScript,
   onPutDown,
+  inspectorSlot,
+  onInspecting,
   onUndo,
   onRedo,
   canDock = false,
@@ -681,6 +692,8 @@ export const MapStage = ({
 
   const stageRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  /** The selection's inspector in the palette's column, when it is there. */
+  const columnRef = useRef<HTMLDivElement>(null);
   // Latest map, for gesture handlers that commit once at the end (a drag mutates
   // it live for feedback but writes `onChange` only on release).
   const mapRef = useRef(map);
@@ -1077,6 +1090,12 @@ export const MapStage = ({
     setRevealer('mapPanel', ({panel}) => {
       if (panel === 'inspector') {
         setInspectorFolded(false);
+        return true;
+      }
+      if (panel === 'palette') {
+        setSelectedId(null);
+        setInspectingLayer(false);
+        setInspectingCamera(false);
         return true;
       }
       // An app has neither panel, so there is nothing to open.
@@ -2541,6 +2560,26 @@ export const MapStage = ({
       closeScroll();
       return;
     }
+    // …and last lets go of the selection, which gives the palette back.
+    if (event.key === 'Escape' && inspecting) {
+      event.preventDefault();
+      backToActors();
+      return;
+    }
+    // The column's inspector is before the canvas in the page, so Tab goes
+    // the wrong way to reach it.
+    if (
+      event.key.toLowerCase() === 'i' &&
+      inspectorSlot &&
+      inspecting &&
+      !event.ctrlKey &&
+      !event.metaKey &&
+      !event.altKey
+    ) {
+      event.preventDefault();
+      columnRef.current?.querySelector<HTMLElement>('button')?.focus();
+      return;
+    }
     // WITH AN ACTOR IN HAND the arrows move a cursor cell — the ghost, where
     // a press would leave one — and Enter or Space does there what a press
     // does: places one, or takes away the one of that kind already there.
@@ -3549,6 +3588,19 @@ export const MapStage = ({
         })()
       : undefined;
   const inspectedCamera = Boolean(cameraEditor && inspectingCamera);
+  const inspecting = Boolean(
+    selectedActor || inspectedCamera || (inspectingLayer && inspectedLayer),
+  );
+  useEffect(() => {
+    onInspecting?.(inspecting);
+  }, [inspecting, onInspecting]);
+  /** Out of the column's inspector, back to the palette and the map. */
+  const backToActors = () => {
+    setSelectedId(null);
+    setInspectingLayer(false);
+    setInspectingCamera(false);
+    canvasRef.current?.focus();
+  };
 
   /** Open a Scroll View, so what it holds is arranged at its full height. */
   const openScroll = (id: string) => {
@@ -3608,6 +3660,375 @@ export const MapStage = ({
       </section>
     ) : null;
 
+  /** The inspectors of a selection: a placement's, its camera's, a layer's. */
+  const selectionInspectors = (
+    <>
+      {inspectedCamera && cameraEditor && (
+        <CameraInspector
+          // Re-keyed on whose camera it is, so another Viewport's opens
+          // with its own fields.
+          key={selectedActor?.id}
+          traits={cameraEditor.traits}
+          choices={cameraEditor.choices}
+          valueOf={cameraEditor.valueOf}
+          kinds={Object.entries(kinds ?? {})
+            .map(([path, kind]) => [kind.name, path] as const)
+            .sort(([a], [b]) => a.localeCompare(b))}
+          onTrait={cameraEditor.setTrait}
+          onValue={cameraEditor.setValue}
+          zoom={cameraEditor.zoom}
+          onZoom={cameraEditor.setZoom}
+          onClose={() => setInspectingCamera(false)}
+          isReadOnly={isReadOnly}
+        />
+      )}
+      {!selectedActor && inspectingLayer && inspectedLayer && (
+        <LayerInspector
+          // Re-keyed on what the document says, so a change from outside —
+          // and a different layer — is what the fields show.
+          key={JSON.stringify(inspectedLayer)}
+          layer={inspectedLayer}
+          backgrounds={backgroundChoices ?? []}
+          onChange={change =>
+            commit(withLayer(mapRef.current, inspectedLayer.id, change))
+          }
+          onBackground={change =>
+            commit(withBackground(mapRef.current, inspectedLayer.id, change))
+          }
+          onClose={() => setInspectingLayer(false)}
+          isReadOnly={isReadOnly}
+        />
+      )}
+      {/* `fields.narrow` below is what makes the design system's form widths
+          fit a panel this size — see `formFields.module.css`, which says what
+          the overrides are for and what each one was found by. */}
+      {selectedActor && !inspectedCamera && (
+        <div className={`${styles.inspector} ${fields.narrow}`}>
+          <div className={styles.inspectorHead}>
+            <Typography variant="subtitle2" component="span">
+              {selectedActor.type.split('/').pop()}
+            </Typography>
+            {/* The four things to do from here, as the icons they wear
+                elsewhere (`IconAction`). This placement's own code first;
+                then the two about its KIND, whose words still say which kind,
+                since a tick in Enhance or a block in its file changes every
+                one of them; and Delete last, apart. */}
+            <div className={styles.inspectorActions}>
+              {onEditScript && (
+                <IconAction
+                  label="Code"
+                  icon="puzzle-piece"
+                  className={withheldClass('map-scripts')}
+                  data-callout="map.script"
+                  {...orWithheld('map-scripts', 'inspector', () =>
+                    onEditScript(selectedActor.id),
+                  )}
+                />
+              )}
+              {canOpenScript && eventsFor && (
+                // A section for THIS actor, started from the event it
+                // answers: the quick way to its own code, for the events
+                // its kind can actually hear (`blockly/eventChoices`).
+                <IconAction
+                  label="Add an event"
+                  icon="bolt"
+                  onClick={event => setEventMenu(event.currentTarget)}
+                />
+              )}
+              {selectedKind && onEnhanceKind && (
+                <IconAction
+                  label={`Enhance ${selectedKind.name}…`}
+                  icon="sparkles"
+                  disabled={isReadOnly}
+                  className={withheldClass('map-enhance')}
+                  data-callout="map.enhance"
+                  {...orWithheld('map-enhance', 'inspector', () =>
+                    onEnhanceKind(selectedActor.type),
+                  )}
+                />
+              )}
+              {selectedKind && onOpenKind && (
+                <IconAction
+                  label={`Open ${selectedKind.name}`}
+                  icon="arrow-up-right-from-square"
+                  className={withheldClass('map-open-kind')}
+                  data-callout="map.openKind"
+                  {...orWithheld('map-open-kind', 'inspector', () =>
+                    onOpenKind(selectedActor.type),
+                  )}
+                />
+              )}
+              <IconAction
+                label="Delete"
+                icon="trash"
+                className={styles.inspectorDelete}
+                onClick={() => deleteActor(selectedActor.id)}
+                disabled={isReadOnly}
+              />
+              {eventMenu && eventsFor && selectedActor && (
+                <Menu
+                  open
+                  anchorEl={eventMenu}
+                  onClose={() => setEventMenu(null)}
+                  slotProps={{paper: {style: {maxHeight: 420}}}}
+                >
+                  {eventRows(eventsFor(selectedActor.type), type => {
+                    setEventMenu(null);
+                    commit({
+                      ...mapRef.current,
+                      actors: mapRef.current.actors.map(actor =>
+                        actor.id === selectedActor.id
+                          ? withEventHandler(actor, type)
+                          : actor,
+                      ),
+                    });
+                    onEditScript?.(selectedActor.id);
+                  })}
+                </Menu>
+              )}
+            </div>
+          </div>
+          {/* What a withheld one says about the lesson that brings it, under
+              the row rather than inside it. */}
+          {onEditScript && note('map-scripts', 'inspector')}
+          {selectedKind && onEnhanceKind && note('map-enhance', 'inspector')}
+          {selectedKind && onOpenKind && note('map-open-kind', 'inspector')}
+          <TextField
+            name="actor-id"
+            label="ID"
+            size="s"
+            value={draft.id ?? ''}
+            disabled={isReadOnly}
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              editId(event.target.value)
+            }
+            onBlur={applyRename}
+            onKeyDown={blurOnEnter}
+          />
+          {/*
+           * WHICH EDGE IT KEEPS ITS DISTANCE FROM, when this map is loaded
+           * into a window that is not its own shape — a menu over a square
+           * level and over a phone-shaped one (specs/ANCHORS_PLAN.md).
+           * Beside the layer dropdown because it is the same kind of fact:
+           * not what the thing IS, but where in an arrangement it sits.
+           *
+           * "Anchored to" rather than "Holds on to", which was oblique out of
+           * context and was the one place in the lab not using the word the
+           * spec, the engine and the property all use.
+           */}
+          {canDock &&
+            !isReadOnly &&
+            (() => {
+              // DOCK WITHOUT A DRAG: the zones a drag offers, as a menu —
+              // the screen's edges and the sides of what is docked already
+              // — each doing what a drop there does (specs/PURPOSE_PLAN.md,
+              // step 5; ACCESSIBILITY.md, "Docking").
+              const choices = dockChoices(map, selectedActor.id);
+              if (choices.length === 0) {
+                return null;
+              }
+              const rows: JSX.Element[] = [];
+              let group = '';
+              for (const choice of choices) {
+                const heading = choice.target
+                  ? `Beside ${choice.target}`
+                  : 'The screen';
+                if (heading !== group) {
+                  group = heading;
+                  rows.push(
+                    <ListSubheader key={`group:${heading}`}>
+                      {heading}
+                    </ListSubheader>,
+                  );
+                }
+                rows.push(
+                  <MenuItem
+                    key={`${choice.target ?? ''}:${choice.side}`}
+                    dense
+                    onClick={() => {
+                      setDockMenu(null);
+                      commit(
+                        dockedAt(
+                          mapRef.current,
+                          selectedActor.id,
+                          choice.target,
+                          choice.side,
+                        ),
+                      );
+                      say(`${selectedActor.id} docked: ${choice.label}`);
+                    }}
+                  >
+                    {choice.label}
+                  </MenuItem>,
+                );
+              }
+              return (
+                <>
+                  <Button
+                    variant="text"
+                    size="extraSmall"
+                    aria-haspopup="menu"
+                    aria-expanded={dockMenu !== null}
+                    onClick={event => setDockMenu(event.currentTarget)}
+                  >
+                    {isDocked(map, selectedActor.id)
+                      ? 'Dock somewhere else…'
+                      : 'Dock…'}
+                  </Button>
+                  {dockMenu && (
+                    <Menu
+                      open
+                      anchorEl={dockMenu}
+                      onClose={() => setDockMenu(null)}
+                      slotProps={{paper: {style: {maxHeight: 420}}}}
+                    >
+                      {rows}
+                    </Menu>
+                  )}
+                </>
+              );
+            })()}
+          {canDock && isDocked(map, selectedActor.id) && (
+            // Docked: it fills its region of the screen, and Undock lets
+            // it float again where it is (specs/DOCKING_PLAN.md).
+            <div className={styles.inspectorDocked}>
+              <Typography variant="body3" component="span">
+                Docked
+              </Typography>
+              {!isReadOnly && (
+                <Button
+                  variant="text"
+                  size="extraSmall"
+                  onClick={() =>
+                    commit(
+                      withLayout(
+                        mapRef.current,
+                        undock(mapRef.current.layout, selectedActor.id),
+                      ),
+                    )
+                  }
+                >
+                  Undock
+                </Button>
+              )}
+            </div>
+          )}
+          {canDock &&
+            (() => {
+              const fixed = fixedSideOf(map.layout, selectedActor.id);
+              return fixed ? (
+                // The side it fixes, as a number: the same thing the line
+                // beside it is dragged to change.
+                <DockSizeField
+                  split={fixed.split}
+                  size={fixed.size}
+                  isReadOnly={isReadOnly}
+                  onSize={size =>
+                    commit(
+                      withLayout(
+                        mapRef.current,
+                        resize(mapRef.current.layout, fixed.path, size),
+                      ),
+                    )
+                  }
+                />
+              ) : null;
+            })()}
+          <SimpleDropdown
+            name="actor-anchor"
+            labelText="Anchored to"
+            size="s"
+            className={styles.inspectorDropdown}
+            disabled={isReadOnly}
+            selectedValue={selectedActor.anchor ?? ''}
+            items={[
+              {value: '', text: 'nothing'},
+              ...ANCHORS.map(anchor => ({value: anchor, text: anchor})),
+            ]}
+            onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+              commit({
+                ...mapRef.current,
+                actors: mapRef.current.actors.map(actor =>
+                  actor.id === selectedActor.id
+                    ? withPlacementAnchor(actor, event.target.value)
+                    : actor,
+                ),
+              })
+            }
+          />
+          {!appBuilder && !locked('map-layers') && layersOf(map).length > 1 && (
+            <SimpleDropdown
+              name="actor-layer"
+              labelText="Layer"
+              size="s"
+              className={styles.inspectorDropdown}
+              disabled={isReadOnly}
+              selectedValue={layerOfPlacement(selectedActor)}
+              items={[...layersOf(map)].reverse().map(layer => ({
+                value: layer.id,
+                text: layerName(layer),
+              }))}
+              onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+                commit({
+                  ...mapRef.current,
+                  actors: mapRef.current.actors.map(actor =>
+                    actor.id === selectedActor.id
+                      ? withPlacementLayer(actor, event.target.value)
+                      : actor,
+                  ),
+                })
+              }
+            />
+          )}
+          {cameraSection}
+          {scrollSection}
+          {settable.length > 0 && (
+            <Accordion
+              className={styles.inspectorAccordion}
+              items={settable.map(group => ({
+                id: group.trait,
+                label: group.traitName,
+                content: (
+                  <div className={styles.inspectorGroup}>
+                    {/* What the trait is FOR: a name like "Slows" says
+                        little, and this is where its settings are. */}
+                    {group.traitDescription && (
+                      <Typography
+                        variant="body3"
+                        component="p"
+                        className={styles.inspectorNote}
+                      >
+                        {group.traitDescription}
+                      </Typography>
+                    )}
+                    {selectedDocked &&
+                      group.props.some(prop =>
+                        SET_BY_DOCK.some(
+                          one =>
+                            one.owner === prop.ownerId &&
+                            one.prop === prop.propId,
+                        ),
+                      ) && (
+                        <Typography
+                          variant="body3"
+                          component="p"
+                          className={styles.inspectorNote}
+                        >
+                          Its place, size and turn are set by where it is
+                          docked.
+                        </Typography>
+                      )}
+                    {group.props.map(prop => renderProp(selectedActor, prop))}
+                  </div>
+                ),
+              }))}
+            />
+          )}
+        </div>
+      )}
+    </>
+  );
+
   return (
     <div className={styles.stage} ref={stageRef}>
       <canvas
@@ -3643,7 +4064,10 @@ export const MapStage = ({
             : 'Map. Arrow keys move between the actors on it. Shift and an ' +
               'arrow moves the selected one, Alt and an arrow resizes it, and ' +
               'the square brackets turn it. Enter opens its code, and Delete ' +
-              'removes it.'
+              'removes it.' +
+              (inspectorSlot
+                ? ' I goes to its properties, and Escape lets go of it.'
+                : '')
         }
       />
       <div
@@ -3799,42 +4223,7 @@ export const MapStage = ({
             nameOf={kindName}
           />
         </div>
-        {inspectedCamera && cameraEditor && (
-          <CameraInspector
-            // Re-keyed on whose camera it is, so another Viewport's opens
-            // with its own fields.
-            key={selectedActor?.id}
-            traits={cameraEditor.traits}
-            choices={cameraEditor.choices}
-            valueOf={cameraEditor.valueOf}
-            kinds={Object.entries(kinds ?? {})
-              .map(([path, kind]) => [kind.name, path] as const)
-              .sort(([a], [b]) => a.localeCompare(b))}
-            onTrait={cameraEditor.setTrait}
-            onValue={cameraEditor.setValue}
-            zoom={cameraEditor.zoom}
-            onZoom={cameraEditor.setZoom}
-            onClose={() => setInspectingCamera(false)}
-            isReadOnly={isReadOnly}
-          />
-        )}
-        {!selectedActor && inspectingLayer && inspectedLayer && (
-          <LayerInspector
-            // Re-keyed on what the document says, so a change from outside —
-            // and a different layer — is what the fields show.
-            key={JSON.stringify(inspectedLayer)}
-            layer={inspectedLayer}
-            backgrounds={backgroundChoices ?? []}
-            onChange={change =>
-              commit(withLayer(mapRef.current, inspectedLayer.id, change))
-            }
-            onBackground={change =>
-              commit(withBackground(mapRef.current, inspectedLayer.id, change))
-            }
-            onClose={() => setInspectingLayer(false)}
-            isReadOnly={isReadOnly}
-          />
-        )}
+        {!inspectorSlot && selectionInspectors}
         {!selectedActor &&
           !(inspectingLayer && inspectedLayer) &&
           !inspectedCamera &&
@@ -3903,336 +4292,30 @@ export const MapStage = ({
               onFold={() => foldInspector(true)}
             />
           )}
-        {/* `fields.narrow` below is what makes the design system's form widths
-          fit a panel this size — see `formFields.module.css`, which says what
-          the overrides are for and what each one was found by. */}
-        {selectedActor && !inspectedCamera && (
-          <div className={`${styles.inspector} ${fields.narrow}`}>
-            <div className={styles.inspectorHead}>
-              <Typography variant="subtitle2" component="span">
-                {selectedActor.type.split('/').pop()}
-              </Typography>
-              {/* The four things to do from here, as the icons they wear
-                elsewhere (`IconAction`). This placement's own code first;
-                then the two about its KIND, whose words still say which kind,
-                since a tick in Enhance or a block in its file changes every
-                one of them; and Delete last, apart. */}
-              <div className={styles.inspectorActions}>
-                {onEditScript && (
-                  <IconAction
-                    label="Code"
-                    icon="puzzle-piece"
-                    className={withheldClass('map-scripts')}
-                    data-callout="map.script"
-                    {...orWithheld('map-scripts', 'inspector', () =>
-                      onEditScript(selectedActor.id),
-                    )}
-                  />
-                )}
-                {canOpenScript && eventsFor && (
-                  // A section for THIS actor, started from the event it
-                  // answers: the quick way to its own code, for the events
-                  // its kind can actually hear (`blockly/eventChoices`).
-                  <IconAction
-                    label="Add an event"
-                    icon="bolt"
-                    onClick={event => setEventMenu(event.currentTarget)}
-                  />
-                )}
-                {selectedKind && onEnhanceKind && (
-                  <IconAction
-                    label={`Enhance ${selectedKind.name}…`}
-                    icon="sparkles"
-                    disabled={isReadOnly}
-                    className={withheldClass('map-enhance')}
-                    data-callout="map.enhance"
-                    {...orWithheld('map-enhance', 'inspector', () =>
-                      onEnhanceKind(selectedActor.type),
-                    )}
-                  />
-                )}
-                {selectedKind && onOpenKind && (
-                  <IconAction
-                    label={`Open ${selectedKind.name}`}
-                    icon="arrow-up-right-from-square"
-                    className={withheldClass('map-open-kind')}
-                    data-callout="map.openKind"
-                    {...orWithheld('map-open-kind', 'inspector', () =>
-                      onOpenKind(selectedActor.type),
-                    )}
-                  />
-                )}
-                <IconAction
-                  label="Delete"
-                  icon="trash"
-                  className={styles.inspectorDelete}
-                  onClick={() => deleteActor(selectedActor.id)}
-                  disabled={isReadOnly}
-                />
-                {eventMenu && eventsFor && selectedActor && (
-                  <Menu
-                    open
-                    anchorEl={eventMenu}
-                    onClose={() => setEventMenu(null)}
-                    slotProps={{paper: {style: {maxHeight: 420}}}}
-                  >
-                    {eventRows(eventsFor(selectedActor.type), type => {
-                      setEventMenu(null);
-                      commit({
-                        ...mapRef.current,
-                        actors: mapRef.current.actors.map(actor =>
-                          actor.id === selectedActor.id
-                            ? withEventHandler(actor, type)
-                            : actor,
-                        ),
-                      });
-                      onEditScript?.(selectedActor.id);
-                    })}
-                  </Menu>
-                )}
-              </div>
-            </div>
-            {/* What a withheld one says about the lesson that brings it, under
-              the row rather than inside it. */}
-            {onEditScript && note('map-scripts', 'inspector')}
-            {selectedKind && onEnhanceKind && note('map-enhance', 'inspector')}
-            {selectedKind && onOpenKind && note('map-open-kind', 'inspector')}
-            <TextField
-              name="actor-id"
-              label="ID"
-              size="s"
-              value={draft.id ?? ''}
-              disabled={isReadOnly}
-              onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                editId(event.target.value)
-              }
-              onBlur={applyRename}
-              onKeyDown={blurOnEnter}
-            />
-            {/*
-             * WHICH EDGE IT KEEPS ITS DISTANCE FROM, when this map is loaded
-             * into a window that is not its own shape — a menu over a square
-             * level and over a phone-shaped one (specs/ANCHORS_PLAN.md).
-             * Beside the layer dropdown because it is the same kind of fact:
-             * not what the thing IS, but where in an arrangement it sits.
-             *
-             * "Anchored to" rather than "Holds on to", which was oblique out of
-             * context and was the one place in the lab not using the word the
-             * spec, the engine and the property all use.
-             */}
-            {canDock &&
-              !isReadOnly &&
-              (() => {
-                // DOCK WITHOUT A DRAG: the zones a drag offers, as a menu —
-                // the screen's edges and the sides of what is docked already
-                // — each doing what a drop there does (specs/PURPOSE_PLAN.md,
-                // step 5; ACCESSIBILITY.md, "Docking").
-                const choices = dockChoices(map, selectedActor.id);
-                if (choices.length === 0) {
-                  return null;
-                }
-                const rows: JSX.Element[] = [];
-                let group = '';
-                for (const choice of choices) {
-                  const heading = choice.target
-                    ? `Beside ${choice.target}`
-                    : 'The screen';
-                  if (heading !== group) {
-                    group = heading;
-                    rows.push(
-                      <ListSubheader key={`group:${heading}`}>
-                        {heading}
-                      </ListSubheader>,
-                    );
-                  }
-                  rows.push(
-                    <MenuItem
-                      key={`${choice.target ?? ''}:${choice.side}`}
-                      dense
-                      onClick={() => {
-                        setDockMenu(null);
-                        commit(
-                          dockedAt(
-                            mapRef.current,
-                            selectedActor.id,
-                            choice.target,
-                            choice.side,
-                          ),
-                        );
-                        say(`${selectedActor.id} docked: ${choice.label}`);
-                      }}
-                    >
-                      {choice.label}
-                    </MenuItem>,
-                  );
-                }
-                return (
-                  <>
-                    <Button
-                      variant="text"
-                      size="extraSmall"
-                      aria-haspopup="menu"
-                      aria-expanded={dockMenu !== null}
-                      onClick={event => setDockMenu(event.currentTarget)}
-                    >
-                      {isDocked(map, selectedActor.id)
-                        ? 'Dock somewhere else…'
-                        : 'Dock…'}
-                    </Button>
-                    {dockMenu && (
-                      <Menu
-                        open
-                        anchorEl={dockMenu}
-                        onClose={() => setDockMenu(null)}
-                        slotProps={{paper: {style: {maxHeight: 420}}}}
-                      >
-                        {rows}
-                      </Menu>
-                    )}
-                  </>
-                );
-              })()}
-            {canDock && isDocked(map, selectedActor.id) && (
-              // Docked: it fills its region of the screen, and Undock lets
-              // it float again where it is (specs/DOCKING_PLAN.md).
-              <div className={styles.inspectorDocked}>
-                <Typography variant="body3" component="span">
-                  Docked
-                </Typography>
-                {!isReadOnly && (
-                  <Button
-                    variant="text"
-                    size="extraSmall"
-                    onClick={() =>
-                      commit(
-                        withLayout(
-                          mapRef.current,
-                          undock(mapRef.current.layout, selectedActor.id),
-                        ),
-                      )
-                    }
-                  >
-                    Undock
-                  </Button>
-                )}
-              </div>
-            )}
-            {canDock &&
-              (() => {
-                const fixed = fixedSideOf(map.layout, selectedActor.id);
-                return fixed ? (
-                  // The side it fixes, as a number: the same thing the line
-                  // beside it is dragged to change.
-                  <DockSizeField
-                    split={fixed.split}
-                    size={fixed.size}
-                    isReadOnly={isReadOnly}
-                    onSize={size =>
-                      commit(
-                        withLayout(
-                          mapRef.current,
-                          resize(mapRef.current.layout, fixed.path, size),
-                        ),
-                      )
-                    }
-                  />
-                ) : null;
-              })()}
-            <SimpleDropdown
-              name="actor-anchor"
-              labelText="Anchored to"
-              size="s"
-              className={styles.inspectorDropdown}
-              disabled={isReadOnly}
-              selectedValue={selectedActor.anchor ?? ''}
-              items={[
-                {value: '', text: 'nothing'},
-                ...ANCHORS.map(anchor => ({value: anchor, text: anchor})),
-              ]}
-              onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-                commit({
-                  ...mapRef.current,
-                  actors: mapRef.current.actors.map(actor =>
-                    actor.id === selectedActor.id
-                      ? withPlacementAnchor(actor, event.target.value)
-                      : actor,
-                  ),
-                })
-              }
-            />
-            {!appBuilder &&
-              !locked('map-layers') &&
-              layersOf(map).length > 1 && (
-                <SimpleDropdown
-                  name="actor-layer"
-                  labelText="Layer"
-                  size="s"
-                  className={styles.inspectorDropdown}
-                  disabled={isReadOnly}
-                  selectedValue={layerOfPlacement(selectedActor)}
-                  items={[...layersOf(map)].reverse().map(layer => ({
-                    value: layer.id,
-                    text: layerName(layer),
-                  }))}
-                  onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-                    commit({
-                      ...mapRef.current,
-                      actors: mapRef.current.actors.map(actor =>
-                        actor.id === selectedActor.id
-                          ? withPlacementLayer(actor, event.target.value)
-                          : actor,
-                      ),
-                    })
-                  }
-                />
-              )}
-            {cameraSection}
-            {scrollSection}
-            {settable.length > 0 && (
-              <Accordion
-                className={styles.inspectorAccordion}
-                items={settable.map(group => ({
-                  id: group.trait,
-                  label: group.traitName,
-                  content: (
-                    <div className={styles.inspectorGroup}>
-                      {/* What the trait is FOR: a name like "Slows" says
-                        little, and this is where its settings are. */}
-                      {group.traitDescription && (
-                        <Typography
-                          variant="body3"
-                          component="p"
-                          className={styles.inspectorNote}
-                        >
-                          {group.traitDescription}
-                        </Typography>
-                      )}
-                      {selectedDocked &&
-                        group.props.some(prop =>
-                          SET_BY_DOCK.some(
-                            one =>
-                              one.owner === prop.ownerId &&
-                              one.prop === prop.propId,
-                          ),
-                        ) && (
-                          <Typography
-                            variant="body3"
-                            component="p"
-                            className={styles.inspectorNote}
-                          >
-                            Its place, size and turn are set by where it is
-                            docked.
-                          </Typography>
-                        )}
-                      {group.props.map(prop => renderProp(selectedActor, prop))}
-                    </div>
-                  ),
-                }))}
-              />
-            )}
-          </div>
-        )}
       </div>
+      {inspectorSlot &&
+        inspecting &&
+        createPortal(
+          <div
+            ref={columnRef}
+            className={styles.columnInspector}
+            data-testid="column-inspector"
+          >
+            <div className={styles.columnBack}>
+              <Button
+                variant="text"
+                size="small"
+                aria-label="Back to the actors"
+                startIcon={<FontAwesomeV6Icon iconName="arrow-left" />}
+                onClick={backToActors}
+              >
+                Actors
+              </Button>
+            </div>
+            {selectionInspectors}
+          </div>,
+          inspectorSlot,
+        )}
     </div>
   );
 };

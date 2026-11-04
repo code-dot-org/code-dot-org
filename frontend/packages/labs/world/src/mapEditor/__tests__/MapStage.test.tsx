@@ -1100,6 +1100,56 @@ describe('the camera list', () => {
   });
 });
 
+describe('a selection’s inspector in the palette’s column', () => {
+  const inColumn = (map: MapDoc) => {
+    const slot = document.createElement('div');
+    document.body.appendChild(slot);
+    const onInspecting = vi.fn();
+    const view = mount(map, {inspectorSlot: slot, onInspecting});
+    pointer(view.canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(view.canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    return {slot, onInspecting, ...view};
+  };
+  afterEach(() => {
+    document.body.innerHTML = '';
+  });
+
+  it('goes in the column, not over the map', () => {
+    const {slot, onInspecting, container} = inColumn(doc());
+    expect(slot.querySelector('input[name="actor-id"]')).not.toBeNull();
+    expect(container.querySelector('input[name="actor-id"]')).toBeNull();
+    expect(onInspecting).toHaveBeenLastCalledWith(true);
+  });
+
+  it('gives the column back on Actors, with the map focused', () => {
+    const view = inColumn(doc());
+    fireEvent.click(view.getByRole('button', {name: 'Back to the actors'}));
+    expect(view.slot.childElementCount).toBe(0);
+    expect(view.onInspecting).toHaveBeenLastCalledWith(false);
+    expect(document.activeElement).toBe(view.canvas);
+  });
+
+  it('is let go of by Escape on the map, and reached by I', () => {
+    const view = inColumn(doc());
+    fireEvent.keyDown(view.canvas, {key: 'i'});
+    expect(document.activeElement).toBe(
+      view.getByRole('button', {name: 'Back to the actors'}),
+    );
+    fireEvent.keyDown(view.canvas, {key: 'Escape'});
+    expect(view.onInspecting).toHaveBeenLastCalledWith(false);
+  });
+
+  it('is let go of by a lesson pointing at the palette', () => {
+    const view = inColumn(doc());
+    let answer: unknown;
+    act(() => {
+      answer = reveal({kind: 'mapPanel', panel: 'palette'});
+    });
+    expect(answer).toBe(true);
+    expect(view.onInspecting).toHaveBeenLastCalledWith(false);
+  });
+});
+
 describe('the inspector with nothing selected, folded', () => {
   afterEach(() => {
     localStorage.clear();

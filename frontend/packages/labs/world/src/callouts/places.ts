@@ -29,7 +29,7 @@ export type Reveal =
   /** A placement selected on the map, of a kind by name or any (`MapStage`). */
   | {kind: 'placement'; named?: string}
   /** The map's panel that starts hidden behind a button (`MapStage`). */
-  | {kind: 'mapPanel'; panel: 'layers' | 'inspector'}
+  | {kind: 'mapPanel'; panel: 'layers' | 'inspector' | 'palette'}
   /** A toolbox drawer open, on a block or by name (`BlocklyFileEditor`). */
   | {kind: 'toolbox'; block?: string; drawer?: string};
 
@@ -52,6 +52,8 @@ type PlaceOf = (argument: string | undefined) => Place;
 const onTheMap: Reveal = {kind: 'file', level: true};
 const theScreen: Reveal = {kind: 'file', screen: true};
 const theScreenCode: readonly Reveal[] = [theScreen, {kind: 'code'}];
+/** The palette, which a selection's inspector stands in for (`MapEditor`). */
+const thePalette: Reveal = {kind: 'mapPanel', panel: 'palette'};
 
 /**
  * A block or a drawer may say WHICH FILE'S toolbox, after an `@`:
@@ -97,14 +99,14 @@ const PLACES: Readonly<Record<string, PlaceOf>> = {
   }),
   'map.palette': named => ({
     mark: named ? `map.palette:${named}` : 'map.palette',
-    reveals: [onTheMap],
+    reveals: [onTheMap, thePalette],
     says: named
       ? `${named} is in the column of kinds beside the map.`
       : 'The column of kinds is beside the map.',
   }),
   'map.newActor': () => ({
     mark: 'map.newActor',
-    reveals: [onTheMap],
+    reveals: [onTheMap, thePalette],
     says: 'Add New Actor is at the foot of the column of kinds beside the map.',
   }),
   'map.enhance': inProperties(

@@ -107,6 +107,14 @@ its tile or on the stage. In hand, a click on a placement of the same kind
 takes it away, so a brush nobody can put down is an eraser waiting. The
 map's size moves to the toolbar (step 4).
 
+While something is selected (a placement, its camera, a layer) its
+inspector takes the palette's column, which has nothing to do then; over
+the map it covered what it was about. The column keeps the palette's
+width, so the map does not move. **Actors** at its top, Escape on the map,
+or a click at nothing lets go and gives the palette back, and a lesson's
+link to a palette tile does the same. The inspector shown with nothing
+selected stays on the map, folded (`MapStage.inspectorSlot`).
+
 The tabs need to know what each actor is for. A stock actor says so
 (`StockActor.for`: `game`, `interface` or `both`), and importing one writes
 it into the actor file as a top-level key, beside the workspace. An actor

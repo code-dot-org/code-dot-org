@@ -331,9 +331,10 @@ and nothing has elected it.
 2. Click the Ground, press
    [Enhance Ground…](#clickable=map.enhance:Ground), and tick **Holds things
    up**. Now it lands.
-3. One tile is not much of a floor. Click
-   [Ground](#clickable=map.palette:Ground) in the column beside the map and
-   paint a few more along the bottom.
+3. One tile is not much of a floor. Press **Actors** above the Ground's
+   properties, or click an empty part of the map, and the column beside the
+   map holds the kinds again. Click [Ground](#clickable=map.palette:Ground)
+   there and paint a few more along the bottom.
 4. Falling and landing are things that HAPPEN, and saying what to do when
    something happens is what blocks are for. Press
    [Open Hero](#clickable=map.openKind:Hero), add
