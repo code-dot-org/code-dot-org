@@ -30,8 +30,7 @@ function isGlobal(sourceCode, identifier) {
   return true;
 }
 
-// Every statement in a block, including those nested in blocks, try
-// statements and if statements, in source order.
+// The block's statements and those of its nested blocks, in source order.
 function* statementsIn(block) {
   for (const statement of block.body) {
     yield statement;
@@ -108,8 +107,7 @@ function indentOf(sourceCode, node) {
   return line.slice(0, line.length - line.trimStart().length);
 }
 
-// The last token or comment on the statement's line, so an insertion
-// after it keeps a trailing comment where it was.
+// Last token or comment on the statement's line: keeps a trailing comment put.
 function endOfLine(sourceCode, statement) {
   let last = statement;
   for (;;) {
