@@ -67,6 +67,7 @@ import {CameraInspector} from './CameraInspector';
 import {
   dividerAt,
   dockChoices,
+  zoneWords,
   dockedAt,
   dockedBox,
   dockedEdges,
@@ -2039,7 +2040,17 @@ export const MapStage = ({
       // Commit ONCE, and only if the actor actually moved — writing the `.map`
       // recompiles the game, so a bare select (down-up, no move) must not.
       if (drag.moved) {
+        const wasDocked = isDocked(mapRef.current, drag.id);
+        const zone =
+          canDock && drag.last
+            ? zoneAt(dockZones(mapRef.current, drag.id), drag.last)
+            : undefined;
         commit(docked(mapRef.current, drag.id, drag.last));
+        if (zone) {
+          say(`${drag.id} docked: ${zoneWords(zone)}`);
+        } else if (canDock && wasDocked) {
+          say(`${drag.id} undocked, floating where it was let go`);
+        }
       }
       setDockZone(null);
       // Reflect the dragged position in the inspector fields.
@@ -2808,16 +2819,7 @@ export const MapStage = ({
     commit(next);
     setSelectedId(id);
     canvasRef.current?.focus();
-    say(
-      zone
-        ? `Docked a ${named}: ${
-            dockChoices(next, id).find(
-              choice =>
-                choice.target === zone.target && choice.side === zone.side,
-            )?.label ?? zone.side
-          }`
-        : `Placed a ${named}`,
-    );
+    say(zone ? `Docked a ${named}: ${zoneWords(zone)}` : `Placed a ${named}`);
   };
 
   const handleClick = (event: ReactMouseEvent) => {
@@ -3618,6 +3620,13 @@ export const MapStage = ({
       pendingFor.current = null;
     }
   }, [traitsPending, selectedId]);
+  // Entering a zone while dragging is said, as the zone's tint is shown.
+  const zoneSaid = dockZone ? zoneWords(dockZone) : '';
+  useEffect(() => {
+    if (zoneSaid) {
+      say(`Let go to dock: ${zoneSaid}`);
+    }
+  }, [zoneSaid]);
   const wasInspecting = useRef(inspecting);
   useEffect(() => {
     onInspecting?.(inspecting);

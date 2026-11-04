@@ -2663,8 +2663,13 @@ describe('docking on a Screen', () => {
 
   it('docks a placement let go at the screen’s top edge', () => {
     const map = screenDoc();
-    const {canvas, written} = mount(map, {canDock: true});
-    drag(canvas, map, {x: 160, y: 120}, {x: 160, y: 4});
+    const {canvas, written, getByTestId} = mount(map, {canDock: true});
+    const said = () => getByTestId('stage-announcer').textContent;
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 160, y: 120}));
+    pointer(canvas, 'pointermove', screenPoint(map, {x: 160, y: 4}));
+    expect(said()).toBe('Let go to dock: Along the top of the screen');
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 160, y: 4}));
+    expect(said()).toBe('hud docked: Along the top of the screen');
 
     expect(written().layout).toEqual({
       split: 'down',
@@ -2687,10 +2692,13 @@ describe('docking on a Screen', () => {
         second: {dock: 'game'},
       },
     });
-    const {canvas, written} = mount(map, {canDock: true});
+    const {canvas, written, getByTestId} = mount(map, {canDock: true});
     // From the bar to the middle of the screen, which is no zone.
     drag(canvas, map, {x: 160, y: 20}, {x: 160, y: 160});
     expect(written().layout).toEqual({dock: 'game'});
+    expect(getByTestId('stage-announcer').textContent).toBe(
+      'hud undocked, floating where it was let go',
+    );
   });
 
   it('docks nothing in a level, however a placement is dragged', () => {

@@ -80,6 +80,9 @@ below, and are listed last.
 - **A zone is shown only by a tint**, and nothing is said when one is
   entered or when a placement docks. (1.4.1 Use of Color, for the tint
   alone; 4.1.3 Status Messages.)
+  CLOSED: a zone is outlined as well as tinted, and the stage's announcer
+  says "Let go to dock: …" on entering one, in the Dock… menu's words, then
+  what the drop did: docked there, or undocked and floating.
 - **Dragging an Interface Actor out of the palette** (step 9) places and
   docks one in a single gesture. Its keyboard route is two acts: the
   brush and Enter, then Dock…. Both exist, so 2.1.1 holds; the drag is the
@@ -440,10 +443,38 @@ by Tab and the stage's keys. Not seen with a screen reader.
   have come. A kind the game cannot describe stays undescribed
   (`MapEditor`'s `withAnswers`), so it says it is loading until it can.
 
+### A keyboard pass over the rest of the editor (November 2026)
+
+Walked by Tab, the arrows and Escape in a headless browser, in both
+themes. Not seen with a screen reader.
+
+- **The Actor Editor** has a stop for every control, in reading order, from
+  Rename through the traits, the Look tab and the animation's keys to the
+  preview, and focus is visible at each. The timeline's ring is drawn on
+  the strip round the ruler that is the slider.
+- **Look and Blocks are two tab stops**, not one moved between by the
+  arrows as a tab list is meant to be: the design system's `Tabs`, so its
+  fix is there.
+- **The Pictures, Backgrounds and Themes menus** open on Enter with focus
+  on the first item, move by the arrows, wrap, and give focus back to
+  their button on Escape. The item with focus is marked by a 12% gray,
+  about 1.3:1 against the menu. That is visible, which 2.4.7 asks, and
+  short of the 3:1 that 2.4.13 Focus Appearance (AAA) would.
+- **Every MUI menu is white in the Dark theme**: the brand's MUI theme has
+  no dark palette (`getMuiThemeForBrand`), so it is the design system's
+  in every package, not World's alone.
+- **Rules in Play** holds focus inside, and gives it back to the Rules
+  button on Escape. Each Remove now names its rule, as Open and More did;
+  pressing it puts focus on Cancel, the safe answer, and Cancel puts it
+  back on Remove. Before, both buttons were taken from under focus.
+- **The sound library** opens on Upload a sound…, and each sound is two
+  stops, Play and the sound's name, which chooses it. The name alone does
+  not say that it chooses.
+
 ## Not yet done for any phase
 
-- A keyboard-only pass through the shell: the breadcrumb, the palette, the
-  switcher, the toolbar, the Actor Editor, docking, and the doors to each
-  kind of file (the Pictures, Backgrounds and Themes menus, Rules in Play,
-  the sound shelf).
-- A screen-reader pass through the same.
+- A screen-reader pass through the shell: the breadcrumb, the palette,
+  the switcher, the toolbar, the Actor Editor, docking, and the doors to
+  each kind of file.
+- Keyboard focus coming back from the sound library to the block whose
+  dropdown opened it, which the pass above could not reach.

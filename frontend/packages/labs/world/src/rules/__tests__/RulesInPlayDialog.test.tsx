@@ -50,13 +50,28 @@ describe('the Rules in Play panel', () => {
     expect(handlers.onNew).toHaveBeenCalled();
   });
 
+  it('names whose Remove it is, and asks with focus on Cancel', () => {
+    const handlers = mount(true);
+    const remove = screen
+      .getAllByRole('button', {name: /^Remove /})
+      .find(button => !(button as HTMLButtonElement).disabled)!;
+    const named = remove.getAttribute('aria-label')!.replace(/^Remove /, '');
+    fireEvent.click(remove);
+    expect(screen.getByRole('button', {name: 'Cancel'})).toHaveFocus();
+    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+    expect(screen.getByRole('button', {name: `Remove ${named}`})).toHaveFocus();
+    fireEvent.click(screen.getByRole('button', {name: `Remove ${named}`}));
+    fireEvent.click(screen.getByRole('button', {name: `Delete ${named}`}));
+    expect(handlers.onRemove).toHaveBeenCalled();
+  });
+
   it('opens a rule in a project handed out to read, and changes nothing', () => {
     const handlers = mount(false);
     expect(
       screen.queryByRole('button', {name: 'Write a new rule…'}),
     ).toBeNull();
     expect(screen.queryByRole('button', {name: /^More for/})).toBeNull();
-    expect(screen.queryByRole('button', {name: 'Remove'})).toBeNull();
+    expect(screen.queryByRole('button', {name: /^Remove /})).toBeNull();
     fireEvent.click(screen.getAllByRole('button', {name: /^Open /})[0]);
     expect(handlers.onOpen).toHaveBeenCalled();
   });

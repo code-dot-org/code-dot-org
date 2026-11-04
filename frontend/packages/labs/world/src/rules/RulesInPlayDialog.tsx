@@ -44,7 +44,7 @@
 // into a sentence that is.
 
 import {Button, ListItemText, Menu, MenuItem, Typography} from '@mui/material';
-import {useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 import type {MultiFileSource} from '@code-dot-org/core/api';
@@ -105,6 +105,21 @@ export const RulesInPlayDialog = ({
   // Which row is asking to be sure. One at a time, and cleared by any answer:
   // the question is about a specific rule and reads as noise anywhere else.
   const [confirming, setConfirming] = useState<string | null>(null);
+  // The rule whose Remove takes focus back from a cancelled question.
+  const [returnTo, setReturnTo] = useState<string | null>(null);
+  const list = useRef<HTMLUListElement>(null);
+  // The safe choice has focus while a question is open, and Remove has it
+  // back after; the button pressed is gone from under it either way.
+  useEffect(() => {
+    const at = confirming
+      ? list.current?.querySelector<HTMLElement>('[data-cancel]')
+      : returnTo
+        ? list.current?.querySelector<HTMLElement>(
+            `[data-remove="${CSS.escape(returnTo)}"]`,
+          )
+        : null;
+    at?.focus();
+  }, [confirming, returnTo]);
   const rules = heldRules(source);
 
   return (
@@ -139,7 +154,7 @@ export const RulesInPlayDialog = ({
               Write a new rule…
             </Button>
           )}
-          <ul className={styles.list}>
+          <ul ref={list} className={styles.list}>
             {/* The engine's own, first and always: they are what everything else
               is built on, and a panel that started at "Has Gravity" would read
               as though being somewhere were a mechanic too. */}
@@ -244,6 +259,7 @@ export const RulesInPlayDialog = ({
                           variant="contained"
                           color="error"
                           size="small"
+                          aria-label={`Delete ${rule.ability ?? rule.name}`}
                           onClick={() => {
                             setConfirming(null);
                             onRemove(rule);
@@ -255,7 +271,11 @@ export const RulesInPlayDialog = ({
                           variant="outlined"
                           color="secondary"
                           size="small"
-                          onClick={() => setConfirming(null)}
+                          data-cancel
+                          onClick={() => {
+                            setConfirming(null);
+                            setReturnTo(rule.path);
+                          }}
                         >
                           Cancel
                         </Button>
@@ -278,7 +298,12 @@ export const RulesInPlayDialog = ({
                           color="secondary"
                           size="small"
                           disabled={needed.length > 0}
-                          onClick={() => setConfirming(rule.path)}
+                          aria-label={`Remove ${rule.ability ?? rule.name}`}
+                          data-remove={rule.path}
+                          onClick={() => {
+                            setReturnTo(null);
+                            setConfirming(rule.path);
+                          }}
                         >
                           Remove
                         </Button>

@@ -237,19 +237,19 @@ const SIDES: readonly Side[] = ['top', 'bottom', 'left', 'right'];
  * edges, then the four sides of every other docked placement. Nothing for a
  * placement inside another, which a drag cannot dock either.
  */
+/** Where a zone docks, in the words the Dock… menu uses. */
+export const zoneWords = ({target, side}: {target?: string; side: Side}) =>
+  target === undefined ? EDGE_WORDS[side] : `${BESIDE_WORDS[side]} ${target}`;
+
 export function dockChoices(doc: MapDoc, id: string): DockChoice[] {
   if (!dockable(doc)(id)) {
     return [];
   }
   const others = dockedIds(undock(doc.layout, id)).filter(dockable(doc));
   return [
-    ...SIDES.map(side => ({side, label: EDGE_WORDS[side]})),
+    ...SIDES.map(side => ({side, label: zoneWords({side})})),
     ...others.flatMap(target =>
-      SIDES.map(side => ({
-        target,
-        side,
-        label: `${BESIDE_WORDS[side]} ${target}`,
-      })),
+      SIDES.map(side => ({target, side, label: zoneWords({target, side})})),
     ),
   ];
 }
