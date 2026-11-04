@@ -7,8 +7,10 @@ import {
   ASK_AI_TIMEOUT_MS,
   askAiText,
   AskAiError,
+  buildSystemPrompt,
   cleanAnswer,
   isAskAiEnabled,
+  SYSTEM_PROMPT,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/text/askAi';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -146,6 +148,39 @@ describe('askAiText', () => {
   it('truncates a very long question', async () => {
     await askAiText('x'.repeat(5000));
     expect(generateText.mock.calls[0][0].prompt).toHaveLength(1000);
+  });
+
+  it("uses the lab's system prompt alone when the student set none", async () => {
+    await askAiText('hello');
+    expect(generateText.mock.calls[0][0].system).toBe(SYSTEM_PROMPT);
+  });
+
+  it("adds the student's system prompt after the lab's rules", async () => {
+    await askAiText('hello', 'Talk like a pirate.');
+    const {system} = generateText.mock.calls[0][0];
+    expect(system.startsWith(SYSTEM_PROMPT)).toBe(true);
+    expect(system.endsWith('Talk like a pirate.')).toBe(true);
+  });
+
+  // Unjudged, a system prompt could steer the model past the input filter.
+  it("judges the student's system prompt along with the question", async () => {
+    await askAiText('hello', 'Talk like a pirate.');
+    expect(isTextSafe.mock.calls[0][0]).toBe('Talk like a pirate.\n\nhello');
+  });
+
+  it('throws with the prompt phase when the system prompt is flagged', async () => {
+    isTextSafe.mockResolvedValueOnce(false);
+    await expect(askAiText('hello', 'something awful')).rejects.toMatchObject({
+      name: 'AskAiError',
+      phase: 'prompt',
+    });
+  });
+
+  it('truncates a very long system prompt', async () => {
+    await askAiText('hello', 'x'.repeat(5000));
+    expect(generateText.mock.calls[0][0].system).toBe(
+      buildSystemPrompt('x'.repeat(1000))
+    );
   });
 });
 
