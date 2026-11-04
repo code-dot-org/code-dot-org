@@ -4,7 +4,7 @@ import {
   Experimental_TranscriptionResult as TranscriptionResult,
 } from 'ai';
 
-import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import AichatContextManager from '../aichat/aichatContextManager';
 
@@ -13,23 +13,10 @@ import {
   CurrentGatewayTranscribeResponseSchema,
   type CurrentGatewayTranscribeResponse,
 } from './contract/gatewaySchemas';
+import {sendGatewayRequest} from './gatewayRequest';
 import {reportGatewayError} from './logHelper';
-import {
-  recordGatewayRequestError,
-  recordGatewayRequestOk,
-  recordTokenNotIssued,
-} from './requestMetric';
-import {
-  AI_GATEWAY_URL,
-  getAccessToken,
-  getModelString,
-  invalidateAccessToken,
-} from './shared';
-import {
-  fetchTurnstileToken,
-  turnstileErrorTags,
-  turnstileHeaders,
-} from './turnstile';
+import {AI_GATEWAY_URL, getModelString} from './shared';
+import {turnstileErrorTags, turnstileHeaders} from './turnstile';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -47,51 +34,30 @@ async function transcribeThroughGateway(
   let schemaErrorReported = false;
   const execute = async (): Promise<TranscriptionResult> => {
     try {
-      // Serialized, not parallel: the access token response carries the
-      // Turnstile mode that decides whether a challenge is needed at all.
-      const issueToken = () =>
-        getAccessToken(aichatContext).catch((error: unknown) => {
-          recordTokenNotIssued();
-          throw error;
-        });
-      const accessToken = await issueToken();
-      const turnstileToken = await fetchTurnstileToken(
-        accessToken.turnstileEnforcementMode
-      );
+      // Built before the token is issued: a URL input downloads here.
       const audioBlob = await audioToBlob(audio);
-      // A challenge or a URL download can outlast the reuse window, so a
-      // reusable token is re-checked after both.
-      const {token, signingKey} = accessToken.reusable
-        ? await issueToken()
-        : accessToken;
-
-      const formData = new FormData();
-      formData.append('token', token);
-      formData.append('audio', audioBlob, 'audio');
-      formData.append('model', getModelString(model));
-
-      for (const [key, value] of Object.entries(restOptions)) {
-        formData.append(key, String(value));
-      }
-
-      const response = await HttpClient.post(
-        `${AI_GATEWAY_URL}/transcribe`,
-        formData,
-        false,
-        {
-          'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
-          'x-ai-gateway-phase': 'transcription',
-          ...turnstileHeaders(turnstileToken),
+      const response = await sendGatewayRequest(
+        aichatContext,
+        (token, turnstileToken) => {
+          const formData = new FormData();
+          formData.append('token', token);
+          formData.append('audio', audioBlob, 'audio');
+          formData.append('model', getModelString(model));
+          for (const [key, value] of Object.entries(restOptions)) {
+            formData.append(key, String(value));
+          }
+          return HttpClient.post(
+            `${AI_GATEWAY_URL}/transcribe`,
+            formData,
+            false,
+            {
+              'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
+              'x-ai-gateway-phase': 'transcription',
+              ...turnstileHeaders(turnstileToken),
+            }
+          );
         }
-      ).catch(async (error: unknown) => {
-        // The worker answers 401 to an expired or otherwise invalid token.
-        if (isNetworkError(error) && error.response.status === 401) {
-          invalidateAccessToken(aichatContext, token);
-        }
-        await recordGatewayRequestError(signingKey, error);
-        throw error;
-      });
-      recordGatewayRequestOk(signingKey);
+      );
 
       const rawResponse = await response.json();
       const parseResult =

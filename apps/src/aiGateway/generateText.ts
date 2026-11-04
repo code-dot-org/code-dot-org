@@ -1,7 +1,7 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
 import {generateText, type GenerateTextResult} from 'ai';
 
-import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import AichatContextManager from '../aichat/aichatContextManager';
 import {AichatContext} from '../aichat/types';
@@ -11,23 +11,10 @@ import {
   CurrentGatewayGenerateTextResponseSchema,
   type CurrentGatewayGenerateTextResponse,
 } from './contract/gatewaySchemas';
+import {sendGatewayRequest} from './gatewayRequest';
 import {reportGatewayError} from './logHelper';
-import {
-  recordGatewayRequestError,
-  recordGatewayRequestOk,
-  recordTokenNotIssued,
-} from './requestMetric';
-import {
-  AI_GATEWAY_URL,
-  getAccessToken,
-  getModelString,
-  invalidateAccessToken,
-} from './shared';
-import {
-  fetchTurnstileToken,
-  turnstileErrorTags,
-  turnstileHeaders,
-} from './turnstile';
+import {AI_GATEWAY_URL, getModelString} from './shared';
+import {turnstileErrorTags, turnstileHeaders} from './turnstile';
 
 export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
 
@@ -134,45 +121,21 @@ const generateTextThroughGateway = async <
         output: serializedOutput,
       };
 
-      // Serialized, not parallel: the access token response carries the
-      // Turnstile mode that decides whether a challenge is needed at all. The
-      // manager pre-fetches a token after every delivery, so only the first
-      // call of a session waits on a challenge here.
-      const issueToken = () =>
-        getAccessToken(aichatContext).catch((error: unknown) => {
-          recordTokenNotIssued();
-          throw error;
-        });
-      const accessToken = await issueToken();
-      const turnstileToken = await fetchTurnstileToken(
-        accessToken.turnstileEnforcementMode
+      const response = await sendGatewayRequest(
+        aichatContext,
+        (token, turnstileToken) =>
+          HttpClient.post(
+            AI_GATEWAY_URL,
+            JSON.stringify({...payload, token}),
+            false,
+            {
+              'Content-Type': 'application/json',
+              'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
+              ...turnstileHeaders(turnstileToken),
+              ...(phase && {'x-ai-gateway-phase': phase}),
+            }
+          )
       );
-      // A challenge can outlast the reuse window, so a reusable token is re-checked after it.
-      const {token, signingKey} = accessToken.reusable
-        ? await issueToken()
-        : accessToken;
-
-      const headers = {
-        'Content-Type': 'application/json',
-        'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
-        ...turnstileHeaders(turnstileToken),
-        ...(phase && {'x-ai-gateway-phase': phase}),
-      };
-
-      const response = await HttpClient.post(
-        AI_GATEWAY_URL,
-        JSON.stringify({...payload, token}),
-        false,
-        headers
-      ).catch(async (error: unknown) => {
-        // The worker answers 401 to an expired or otherwise invalid token.
-        if (isNetworkError(error) && error.response.status === 401) {
-          invalidateAccessToken(aichatContext, token);
-        }
-        await recordGatewayRequestError(signingKey, error);
-        throw error;
-      });
-      recordGatewayRequestOk(signingKey);
 
       const rawResponse = await response.json();
       const parseResult =

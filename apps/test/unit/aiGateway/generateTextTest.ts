@@ -50,13 +50,14 @@ const tokenRequests = () =>
   mockPost.mock.calls.filter(([url]) => url === '/ai_gateway/access_token');
 
 describe('generateTextThroughGateway access tokens', () => {
-  let gatewayStatus: number;
+  // Statuses the gateway answers with, one per request, before succeeding.
+  let gatewayFailures: number[];
   let reusable: boolean;
 
   beforeEach(() => {
     jest.useFakeTimers();
     clearAccessTokenCache();
-    gatewayStatus = 200;
+    gatewayFailures = [];
     reusable = true;
     let issued = 0;
     mockPost.mockImplementation(async (url: string) => {
@@ -71,10 +72,9 @@ describe('generateTextThroughGateway access tokens', () => {
           }),
         };
       }
-      if (url === AI_GATEWAY_URL && gatewayStatus !== 200) {
-        throw new NetworkError(`${gatewayStatus}`, {
-          status: gatewayStatus,
-        } as Response);
+      if (url === AI_GATEWAY_URL && gatewayFailures.length) {
+        const status = gatewayFailures.shift();
+        throw new NetworkError(`${status}`, {status} as Response);
       }
       return {json: async () => ({text: 'hi'})};
     });
@@ -123,21 +123,19 @@ describe('generateTextThroughGateway access tokens', () => {
     expect(new Set(sentTokens()).size).toBe(1);
   });
 
-  it('fetches a new token after the gateway rejects one with 401', async () => {
-    gatewayStatus = 401;
-    await expect(generate()).rejects.toBeInstanceOf(NetworkError);
+  it('resends with a fresh token after the gateway rejects one with 401', async () => {
+    gatewayFailures = [401];
 
-    gatewayStatus = 200;
     await generate();
 
     expect(tokenRequests()).toHaveLength(2);
+    expect(sentTokens()).toEqual(['token-1', 'token-2']);
   });
 
   it('keeps the token after a gateway error other than 401', async () => {
-    gatewayStatus = 429;
+    gatewayFailures = [429];
     await expect(generate()).rejects.toBeInstanceOf(NetworkError);
 
-    gatewayStatus = 200;
     await generate();
 
     expect(tokenRequests()).toHaveLength(1);
