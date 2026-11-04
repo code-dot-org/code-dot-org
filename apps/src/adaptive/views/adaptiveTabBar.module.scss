@@ -5,27 +5,31 @@
   background: var(--background-neutral-primary);
   padding-inline: 16px;
 
-  // Remove the gap DSCO puts between primary tabs.
-  ul {
-    gap: 0 !important;
-  }
+  // &.tabBar repeats the class to give our nested selectors one extra
+  // class-level unit of specificity, outranking DSCO's compound selectors
+  // without !important.
+  &.tabBar {
+    .tabsContainer {
+      ul {
+        gap: 0;
+      }
 
-  // Override DSCO primary-light indicator and text colors to match the
-  // brand-primary (indigo) spec requested for this surface.
-  button[role='tab'] {
-    color: var(--text-neutral-secondary) !important;
-    // Enough vertical padding to reach ~44px total tab height.
-    padding-block: 10px !important;
-    padding-inline: 14px !important;
+      ul li button[role='tab'] {
+        color: var(--text-neutral-secondary);
+        // Enough vertical padding to reach ~44px total tab height.
+        padding-block: 10px;
+        padding-inline: 14px;
 
-    &:hover:not([aria-selected='true']) {
-      color: var(--text-neutral-primary) !important;
-      border-bottom: none !important;
-    }
+        &:hover:not([aria-selected='true']) {
+          color: var(--text-neutral-primary);
+          border-bottom: none;
+        }
 
-    &[aria-selected='true'] {
-      color: var(--text-neutral-secondary) !important;
-      border-bottom-color: var(--border-brand-primary) !important;
+        &[aria-selected='true'] {
+          color: var(--text-neutral-secondary);
+          border-bottom-color: var(--border-brand-primary);
+        }
+      }
     }
   }
 }

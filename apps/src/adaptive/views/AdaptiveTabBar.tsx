@@ -22,6 +22,7 @@ const AdaptiveTabBar: React.FunctionComponent<AdaptiveTabBarProps> = ({
   <div className={styles.tabBar}>
     <Tabs
       name="adaptive-view"
+      tabsContainerClassName={styles.tabsContainer}
       defaultSelectedTabValue={activeTab}
       onChange={value => {
         if (value !== activeTab) onTabChange(value as TabValue);
