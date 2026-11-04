@@ -163,9 +163,9 @@
         "icon": "glasses"
       },
       {
-        "id": "helmet",
-        "text": "helmet",
-        "icon": "helmet-battle"
+        "id": "cape",
+        "text": "cape",
+        "icon": "hood-cloak"
       }
     ],
     "objectLooks": [
