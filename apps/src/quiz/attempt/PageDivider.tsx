@@ -1,4 +1,4 @@
-import Divider from '@code-dot-org/component-library/divider';
+import {MuiDivider as Divider} from '@code-dot-org/component-library/divider';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React from 'react';

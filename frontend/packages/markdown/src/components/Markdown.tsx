@@ -21,7 +21,7 @@ import {
   componentSizeToBodyTextSizeMap,
   type BodyTextSizeVariant,
 } from '@code-dot-org/component-library/common/constants';
-import Divider from '@code-dot-org/component-library/divider';
+import {MuiDivider as Divider} from '@code-dot-org/component-library/divider';
 import Link from '@code-dot-org/component-library/link';
 
 import {
@@ -182,8 +182,7 @@ const baseComponents = (
   em: muiText('em', 'em'),
   a: makeLink(bodyVariant),
   p: makeParagraph(bodyVariant),
-  // `---` renders as a themed design-system divider. (Divider is not yet
-  // MUI-migrated, so the DSCO component is the design-system component here.)
+  // `---` renders as the design-system MUI divider.
   hr: ({className, style}) => <Divider className={className} style={style} />,
 });
 
