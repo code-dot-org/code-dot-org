@@ -67,6 +67,9 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert_equal 'weblab2', try['levelProperties'][:appName]
     refute ghost.key?('levelProperties'), 'an unknown level name passes through unresolved'
     refute read.key?('levelProperties'), 'only level steps are resolved'
+    so_far, showcase = pathway['finish']['checkpoint']['steps']
+    assert_equal template.id, showcase['levelProperties'][:id], "the finish checkpoint's levels resolve too"
+    refute so_far.key?('levelProperties')
   end
 
   test "resolving levels leaves the cached pathway untouched" do
@@ -119,6 +122,7 @@ class AdaptiveTest < ActiveSupport::TestCase
 
     assert_equal 'level', level.find_step('try')['kind']
     assert_equal 'panels', level.find_step('read')['kind']
+    assert_equal 'stats', level.find_step('so-far')['kind'], "the finish checkpoint's steps are found"
     project = level.find_step('project')
     assert_equal 'level', project['kind']
     assert_equal 'adaptive-test-template', project['level']
@@ -131,7 +135,7 @@ class AdaptiveTest < ActiveSupport::TestCase
     write_levels_pathway
     level = create(:adaptive, adaptive_id: 'levels')
 
-    assert_equal({'try' => sandbox, 'project' => template}, level.step_levels)
+    assert_equal({'try' => sandbox, 'showcase' => template, 'project' => template}, level.step_levels)
   end
 
   test "lookups are empty without content" do
@@ -161,6 +165,15 @@ class AdaptiveTest < ActiveSupport::TestCase
           {'id' => 'read', 'kind' => 'panels', 'panels' => []},
         ],
       }],
+      'finish' => {
+        'checkpoint' => {
+          'id' => 'wrap-up',
+          'steps' => [
+            {'id' => 'so-far', 'kind' => 'stats'},
+            {'id' => 'showcase', 'kind' => 'level', 'level' => 'adaptive-test-template', 'project' => true},
+          ],
+        },
+      },
     }.to_json
 )
     AdaptiveContent.reset_cache!
