@@ -46,6 +46,7 @@ import com.getcapacitor.WebViewListener
 import org.codeai.SitePolicy.HOME_URL
 import org.codeai.SitePolicy.SITE_ORIGIN
 import org.json.JSONObject
+import java.util.UUID
 
 /**
  * Hosts the landing page and the curricula it opens in one WebView. The
@@ -73,6 +74,9 @@ class MainActivity : BridgeActivity() {
     // return to: a load the cover's logo cancelled, which can stay in
     // history even ahead of the landing page, or a page Back left.
     private var clearHistoryOnLanding = false
+    // Known only to the app and the page script it puts in studio.code.org
+    // pages; another site's frame cannot read it.
+    private val resetToken = UUID.randomUUID().toString()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Before super.onCreate creates the WebView, which takes Accept-Language
@@ -127,10 +131,11 @@ class MainActivity : BridgeActivity() {
             showLoadingCover()
         }
 
-        // The page script offers zoom in debug builds only, and gives the
-        // site's Statsig stable ID cookie this device's value.
+        // The page script offers zoom in debug builds only, gives the site's
+        // Statsig stable ID cookie this device's value, and signs its resets.
         hideSiteChrome = "var codeaiDebugBuild = ${BuildConfig.DEBUG};\n" +
             "var codeaiStableId = ${JSONObject.quote(deviceStableId() ?: "")};\n" +
+            "var codeaiResetToken = ${JSONObject.quote(resetToken)};\n" +
             resources.openRawResource(R.raw.hide_site_chrome)
                 .use { it.readBytes().toString(Charsets.UTF_8) }
         val pageInjector = PageInjector(
@@ -155,6 +160,11 @@ class MainActivity : BridgeActivity() {
                 if (SitePolicy.isBlockedHost(request.url)) {
                     return PageInjector.forbidden()
                 }
+                // shouldOverrideUrlLoading never sees a POST, such as a form
+                // sent to another site.
+                if (request.isForMainFrame && !isAppPage(request.url)) {
+                    return PageInjector.noContent()
+                }
                 return assetCache.intercept(request)
                     ?: pageInjector.intercept(request)
                     ?: super.shouldInterceptRequest(view, request)
@@ -174,6 +184,12 @@ class MainActivity : BridgeActivity() {
                     return true
                 }
                 if (SitePolicy.isResetUrl(url)) {
+                    // A link in another site's iframe can navigate the page
+                    // too, so a reset comes only from the landing page, which
+                    // has no iframes, or carries the page script's token.
+                    if (!isLandingPage(view.url) && url.getQueryParameter("token") != resetToken) {
+                        return true
+                    }
                     val next = url.getQueryParameter("next")?.takeIf(SitePolicy::isSitePage)
                     if (next != null) {
                         showLoadingCover()
@@ -373,7 +389,6 @@ class MainActivity : BridgeActivity() {
             webView.isFocusable = true
         }
     }
-
 
     // The cover's logo, like the site's, returns to the landing page: the
     // page loading underneath and any page queued after it are dropped. The

@@ -79,9 +79,10 @@ opens each in one WebView on studio.code.org.
   starting on its home control, not the page underneath.
 - Try Now's accessible name keeps its visible label, as in "Try Now: AI for
   Oceans".
-- Only the page itself, not an iframe, can go home, reset or finish a
-  curriculum, and a studio.code.org address on another port counts as
-  another site.
+- Only the page itself, not an iframe, can go home or finish a curriculum,
+  and only the landing page and the app's page script can reset one. A form
+  cannot take the page to another site either, and a studio.code.org address
+  on another port counts as another site.
 - Pages get no camera, microphone or location, and a file input opens
   nothing. The app asks for no permission beyond the network.
 - Nothing the app keeps is backed up or moved to another device.

@@ -17,7 +17,8 @@ HD 10 shows the same screen larger, as the design does. Tapping a card
 navigates the app's WebView to that curriculum's studio.code.org URL.
 Only studio.code.org, the one host in `server.allowNavigation`
 (`capacitor.config.ts`), opens inside the app. `MainActivity.kt` ignores
-links to any other host, support.code.org and code.org included, because
+links to any other host, support.code.org and code.org included, and stops
+any other page load to another host, such as a form sent there, because
 Amazon Kids+ allows no links that lead outside its environment, and the page
 script hides every `http`, `https` and `//` link to another host, such as
 Get help and Report a problem, so none is left to do nothing when tapped;
@@ -139,7 +140,11 @@ the site's scripts read them. Other courses and projects stay. The same link
 without `course` resets everything: it erases every cookie except the
 language and zoom, all site storage, and the remembered page and projects,
 and a cookie the reset changes tells the next page to empty sessionStorage,
-which outlives the reset in the WebView.
+which outlives the reset in the WebView. A link in another site's iframe can
+navigate the whole page too, so `MainActivity.kt` honors a reset only from
+the landing page, which has no iframes, or with `token=` set to a value it
+makes at each start and gives only the page script, which no other site's
+frame can read.
 
 A signed-out child's progress is only in sessionStorage, so the server's
 next-level route (`script_levels#next`, behind Continue on a unit's overview)

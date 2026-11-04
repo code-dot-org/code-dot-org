@@ -175,6 +175,11 @@ internal class PageInjector(
             "text/plain", "utf-8", 403, "Forbidden", null, ByteArrayInputStream(ByteArray(0)),
         )
 
+        /** The answer for a page load the app refuses: a 204 leaves the current page. */
+        fun noContent() = WebResourceResponse(
+            "text/plain", "utf-8", 204, "No Content", null, ByteArrayInputStream(ByteArray(0)),
+        )
+
         // The WebView ignores Set-Cookie on intercepted responses. A language_
         // cookie other than en-US (Rails sets one for ?lang=) is dropped.
         private fun storeCookies(connection: HttpURLConnection, url: String) {

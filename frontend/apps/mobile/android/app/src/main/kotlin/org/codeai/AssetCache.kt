@@ -5,6 +5,8 @@ import android.webkit.WebResourceResponse
 import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
+import java.io.InputStream
+import java.io.OutputStream
 import java.net.HttpURLConnection
 import java.net.URL
 import java.security.MessageDigest
@@ -77,12 +79,12 @@ internal class AssetCache(
                 return false
             }
             // Written aside and renamed, so a reader never sees half a file.
-            val download = File.createTempFile("download", null, dir)
+            val download = File.createTempFile(TEMP_PREFIX, null, dir)
             partial = download
-            connection.inputStream.use { input ->
-                download.outputStream().use { input.copyTo(it) }
+            val complete = connection.inputStream.use { input ->
+                download.outputStream().use { copyAtMost(input, it, MAX_FILE_BYTES) }
             }
-            download.renameTo(file).also { if (it) trim() }
+            complete && download.renameTo(file).also { if (it) trim() }
         } catch (e: IOException) {
             false
         } finally {
@@ -91,8 +93,11 @@ internal class AssetCache(
         }
     }
 
+    // Other requests' downloads in progress are theirs to delete.
     private fun trim() {
-        val files = dir.listFiles()?.sortedByDescending { it.lastModified() } ?: return
+        val files = dir.listFiles { file -> !file.name.startsWith(TEMP_PREFIX) }
+            ?.sortedByDescending { it.lastModified() }
+            ?: return
         var total = 0L
         for (file in files) {
             total += file.length()
@@ -111,6 +116,7 @@ internal class AssetCache(
         const val READ_TIMEOUT_MS = 30_000
         const val MAX_FILE_BYTES = 5L * 1024 * 1024
         const val MAX_BYTES = 32L * 1024 * 1024
+        const val TEMP_PREFIX = "download"
 
         fun key(url: String): String =
             MessageDigest.getInstance("SHA-256")
@@ -131,5 +137,25 @@ internal class AssetCache(
                 "ttf" -> "font/ttf"
                 else -> "application/octet-stream"
             }
+    }
+}
+
+/**
+ * Copies input to output, or stops and returns false once more than limit
+ * bytes arrive: a chunked response gives no length to check beforehand.
+ */
+internal fun copyAtMost(input: InputStream, output: OutputStream, limit: Long): Boolean {
+    val buffer = ByteArray(DEFAULT_BUFFER_SIZE)
+    var total = 0L
+    while (true) {
+        val read = input.read(buffer)
+        if (read < 0) {
+            return true
+        }
+        total += read
+        if (total > limit) {
+            return false
+        }
+        output.write(buffer, 0, read)
     }
 }

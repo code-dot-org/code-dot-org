@@ -881,7 +881,8 @@
   }
 
   // Forgets this course's progress and reopens its first level, as Try
-  // again on the landing page does; MainActivity.kt handles the link.
+  // again on the landing page does; MainActivity.kt handles the link, and
+  // honors it only with the token it gave this script.
   function resetCourseButton(page) {
     var button = document.createElement('button');
     button.type = 'button';
@@ -895,7 +896,9 @@
         '/codeai-app/reset?course=' +
         encodeURIComponent(page.course) +
         '&next=' +
-        encodeURIComponent(window.location.origin + page.start);
+        encodeURIComponent(window.location.origin + page.start) +
+        '&token=' +
+        encodeURIComponent(window.codeaiResetToken);
     });
     return button;
   }
