@@ -1,4 +1,5 @@
 import {fireEvent, render, screen, within} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React, {useState} from 'react';
 
 import {
@@ -142,22 +143,32 @@ describe('WordMenus', () => {
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
   });
 
-  it('moves focus to the new set by arrow or chip, onto its chosen word', () => {
+  it('moves focus to the new set by arrow or chip, onto its chosen word', async () => {
+    const user = userEvent.setup();
     render(<Harness initial={{creature: 'cat'}} />);
-    next();
+    const press = async (name: string) => {
+      screen.getByRole('button', {name}).focus();
+      await user.keyboard('{Enter}');
+    };
+    await press('Next words');
     const adjective = screen.getByRole('group', {name: 'adjective'});
     expect(document.activeElement).toBe(
       within(adjective).getAllByRole('button')[0]
     );
-    fireEvent.click(screen.getByRole('button', {name: 'Previous words'}));
+    await press('cat. Show creature words');
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'cat'})
+    );
+    await press('Next words');
+    await press('Previous words');
     expect(document.activeElement).toBe(
       screen.getByRole('button', {name: 'cat'})
     );
     // A dot is a tab; focus stays on it.
-    const dot = screen.getByRole('button', {name: 'clothing words'});
-    dot.focus();
-    fireEvent.click(dot);
-    expect(document.activeElement).toBe(dot);
+    await press('clothing words');
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'clothing words'})
+    );
   });
 
   it('shows a chip as plain text while the creature is missing', () => {

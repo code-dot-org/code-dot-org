@@ -67,19 +67,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     show(next);
     playSound('flip');
   };
-  // Arrows and chips take focus to the new set's chosen or first word.
-  const focusTarget = useRef<HTMLButtonElement>(null);
-  const focusWords = useRef(false);
-  const goToWords = (next: number) => {
-    focusWords.current = next !== index;
-    goTo(next);
-  };
-  useEffect(() => {
-    if (focusWords.current) {
-      focusWords.current = false;
-      focusTarget.current?.focus();
-    }
-  }, [moveCount]);
 
   const chained = chainedSlotIds(sentence);
   // The reserved sets each filled with their longest word, by text width.
@@ -92,6 +79,21 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
       ])
   );
   const filled = (id: string) => !!wordFor(sentence, id, choices[id]);
+
+  // Arrows and chips take focus to the new set's chosen or first word.
+  const focusTarget = useRef<HTMLButtonElement>(null);
+  const focusWords = useRef(false);
+  const focusId = filled(slot.id) ? choices[slot.id] : slot.words[0].id;
+  const goToWords = (next: number) => {
+    focusWords.current = next !== index;
+    goTo(next);
+  };
+  useEffect(() => {
+    if (focusWords.current) {
+      focusWords.current = false;
+      focusTarget.current?.focus();
+    }
+  }, [moveCount]);
 
   const choose = (slotId: string, wordId: string | undefined) => {
     const next = {...choices, [slotId]: wordId};
@@ -301,9 +303,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
           <div className={styles.sets}>
             {slots.map((set, i) => {
               const shown = i === index;
-              const targetId = filled(set.id)
-                ? choices[set.id]
-                : set.words[0].id;
               return (
                 <div
                   // Remounted on each arrival so the entrance replays.
@@ -329,7 +328,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                         <button
                           key={word.id}
                           ref={
-                            shown && word.id === targetId
+                            shown && word.id === focusId
                               ? focusTarget
                               : undefined
                           }
