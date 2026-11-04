@@ -17,6 +17,20 @@ Moves `Dialog` and `CustomDialog` imports from `@code-dot-org/component-library/
 
 Build the package first with `yarn build`, then run it as shown under Usage.
 
+### `accordion-to-mui.ts`
+
+Moves `Accordion` and `FAQAccordion` imports from `@code-dot-org/component-library/accordion` and `.../accordion/faqAccordion` to `MuiAccordion` and `MuiFAQAccordion`. The props are unchanged, so only imports and mock factories change. See `src/accordion/ACCORDION_MIGRATION_TO_MUI.md`.
+
+- Rewrites default and named imports, including the `*Props` and `*Item` types, keeping local names
+- Adds the `Mui` keys to `jest.mock` and `vi.mock` factories
+- Reports Enzyme string selectors, mock keys and import shapes it cannot rewrite
+- Idempotent; parses `.ts` files with the `ts` parser
+
+```bash
+TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/accordion-to-mui.ts \
+  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register <path>
+```
+
 ## Usage
 
 Codemods are one-off migration scripts. Run `jscodeshift` from the `component-library` package directory.
