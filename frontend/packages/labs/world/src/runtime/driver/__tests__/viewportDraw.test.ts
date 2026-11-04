@@ -431,6 +431,7 @@ const world = (held: {
       held.screen ? [{id: 7, color: [0, 0, 0, 0.5], first: SCORE.id}] : [],
     mapBounds: () => ({x: 320, y: 320}),
     viewSize: () => ({x: 320, y: 320}),
+    screenSize: () => ({x: 320, y: 320}),
     screenLayerSnapshot: () => [
       {
         id: 'main',

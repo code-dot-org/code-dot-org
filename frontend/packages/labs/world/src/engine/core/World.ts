@@ -2279,6 +2279,14 @@ export class World {
       : window;
   }
 
+  /**
+   * The screen's own size, in pixels: what the canvas is. Not `viewSize()`,
+   * which with nothing in hand is the World's window, a docked Viewport's.
+   */
+  screenSize(): Vector {
+    return new Vector(this.view.x, this.view.y);
+  }
+
   /** The rectangle a subject's view is drawn into, in screen pixels. */
   private windowSize(subject: Actor | Camera | Space | undefined): Vector {
     // A camera a Viewport owns is seen through that Viewport's window, and for

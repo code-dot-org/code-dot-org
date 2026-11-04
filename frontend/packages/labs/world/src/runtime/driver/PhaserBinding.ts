@@ -712,7 +712,9 @@ export class PhaserBinding {
       // Read every frame like the camera is, and for the same reason: a world
       // may resize its view while it runs, and the backdrops have to be drawn
       // against the window as it is now rather than as it started.
-      const viewSize = world.viewSize();
+      // The screen's, since these cameras are; `viewSize()` would be a docked
+      // Viewport's window, and the layers would slide by the difference.
+      const viewSize = world.screenSize();
       const offset = cameraOffset(view, viewSize);
       /**
        * How far the camera has slid one layer's container, in screen pixels.
@@ -814,7 +816,7 @@ export class PhaserBinding {
 
     let shown = {x: VIEW_WIDTH, y: VIEW_HEIGHT};
     const syncViewSize = (scene: Phaser.Scene) => {
-      const view = world.viewSize();
+      const view = world.screenSize();
       if (view.x === shown.x && view.y === shown.y) {
         return;
       }
@@ -966,7 +968,7 @@ export class PhaserBinding {
         return;
       }
       const container = containerFor(scene, 0);
-      const view = world.viewSize();
+      const view = world.screenSize();
       const byte = (channel: number) => Math.round(channel * 255);
       for (const fill of fills) {
         const [r, g, b, a] = fill.color;
@@ -1682,7 +1684,7 @@ export class PhaserBinding {
           useScene(this);
           // Before the first `sync`: `syncViewSize` only re-fits when the view
           // has CHANGED, and a world that keeps the default never changes it.
-          fitCamera(this, world.viewSize());
+          fitCamera(this, world.screenSize());
           // A game may want the right button, and the browser's answer to one
           // is a context menu over the canvas. Turned off here rather than in
           // the page, because it is the GAME's claim on the button.

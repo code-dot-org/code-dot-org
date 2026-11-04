@@ -283,6 +283,7 @@ const world = (
     // …and the window itself, which a world states for itself. The standard
     // one here, so these expectations mean what they always did.
     viewSize: () => ({x: 320, y: 320}),
+    screenSize: () => ({x: 320, y: 320}),
     screenLayerSnapshot: () =>
       backdrops.map((_, index) => ({
         id: index === 0 ? 'main' : `layer${index}`,

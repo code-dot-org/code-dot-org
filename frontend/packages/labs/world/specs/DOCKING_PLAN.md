@@ -170,6 +170,12 @@ handlers on the game's `current player`, specs/PROPERTY_SUBJECTS_PLAN.md.
 A placement value naming a kind still resolves as above; the stock Health
 Bar placed by the Health enhancement uses it.)
 
+(Since: the driver sized its canvas, and offset the screen's layers, by
+`World.viewSize()`, which with nothing in hand is the World's window: the
+docked Viewport's 320 by 320, not the screen's 320 by 352. So the canvas
+came out square and the bar lost its top half. Both now read
+`World.screenSize()`.)
+
 ### 7. Documents and the browser
 
 BUILT. SIMPLE_INTERFACE.md names this plan; ANCHORS_PLAN.md's "no
