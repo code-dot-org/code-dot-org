@@ -47,6 +47,7 @@ import type {
   Rule,
   WorldAction,
   WorldEventHandler,
+  WorldStorage,
 } from '../core/types';
 import type {Vector} from '../core/Vector';
 import {World, type WorldMap} from '../core/World';
@@ -110,6 +111,19 @@ type OpCall<K extends WorldOp = WorldOp> = K extends WorldOp
   : never;
 
 export class WorldBuilder {
+  /**
+   * Storage lent to every world a builder makes from here on.
+   *
+   * Static because a learner's module runs `when this screen loads` as it is
+   * imported, before anything holds the builder it exports; the preview lends
+   * this before the import (specs/SAVING_PLAN.md).
+   */
+  private static storage: WorldStorage | undefined;
+
+  static lendStorage(storage: WorldStorage | undefined): void {
+    WorldBuilder.storage = storage;
+  }
+
   private readonly id: string;
   private readonly name: string;
   private rules: Rule[] = [];
@@ -451,6 +465,31 @@ export class WorldBuilder {
 
   isPaused(): boolean {
     return this.getWorld().isPaused();
+  }
+
+  /**
+   * The world's memory (`World.save` and the rest), straight through: each
+   * answers something a block under `when this screen loads` may branch on,
+   * and a logged call has no answer to give.
+   */
+  save(name: string): boolean {
+    return this.getWorld().save(name);
+  }
+
+  recall(name: string): boolean {
+    return this.getWorld().recall(name);
+  }
+
+  forget(name: string): boolean {
+    return this.getWorld().forget(name);
+  }
+
+  rememberActors(actors: Iterable<Actor>, name: string): boolean {
+    return this.getWorld().rememberActors(actors, name);
+  }
+
+  recallActors(name: string, layer?: string): Actor[] {
+    return this.getWorld().recallActors(name, layer);
   }
 
   /**
@@ -895,6 +934,9 @@ export class WorldBuilder {
       layers: this.layers.map(layer => ({...layer})),
       ownProperties: this.own,
     });
+    if (WorldBuilder.storage) {
+      world.useStorage(WorldBuilder.storage);
+    }
     // What was recorded before it existed — every template, every map — so a
     // Viewport placed under `when this screen loads` finds its map registered
     // on the first tick (`World.showHeldMap`).

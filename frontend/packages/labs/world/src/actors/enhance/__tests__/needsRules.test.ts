@@ -37,12 +37,11 @@ describe('rulesAddedBy', () => {
   });
 
   it('names the ones those pull in behind them', () => {
-    // Arrow Keys reads the keyboard and moves things: three files land for
-    // one tick, and a gate that knew only the first would let two through.
+    // Arrow Keys moves things through Motion: two files land for one tick,
+    // and a gate that knew only the first would let the second through.
     const added = rulesAddedBy(source, HERO, row('top-down-controls'));
     expect(added).toContain('arrows');
-    expect(added).toContain('input');
-    expect(added.length).toBeGreaterThan(2);
+    expect(added).toContain('motion');
   });
 
   it('names nothing for a rule the project already holds', () => {

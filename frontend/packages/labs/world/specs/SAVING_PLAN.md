@@ -1,9 +1,8 @@
 # Plan: data that survives (APPS.md, missing thing 4)
 
-STATUS: BUILT, and seen in the browser in November 2026. One thing failed:
-`load`, `save` or `forget` under `when this screen loads` throws as the
-game is built (`world.forget is not a function`), with no warning on the
-block. The fourth of the six things specs/APPS.md says an app
+STATUS: BUILT, and seen in the browser in November 2026. The one failure
+seen there, the memory blocks throwing under `when this screen loads`, is
+fixed; see "Learned while building". The fourth of the six things specs/APPS.md says an app
 wants, and the one it puts most bluntly: "a note-taking app that forgets
 is a drawing of a note-taking app". The working record, as the other plans
 are.
@@ -103,16 +102,13 @@ behind it should do.
 
 ## Learned while building
 
-- **Restoring belongs in a handler, not in a world's body**, and a test
-  said so before any browser could. The storage is lent once the world
-  EXISTS, and a world's body runs while it is still being described — so
-  `load what the world remembered` written there would answer false every
-  time. `when ⟨…⟩ is created` runs on the first tick, which is after, and
-  is where an app should put it.
-- **The check that caught it is the builder-surface one**, which asks that
-  every `world.<call>` a block can emit either exists on the builder or is
-  written down as runtime-only with a reason. Three new calls, three
-  reasons, and the reason turned out to be the design note above.
+- **A Main Screen's `when this screen loads` needs the storage too.**
+  It runs as the learner's module is imported, against the builder, so
+  the five memory calls were once runtime-only and threw there
+  (`world.forget is not a function`). The builder now forwards them to its
+  world, and the preview lends the storage to the engine before importing
+  the game (`WorldBuilder.lendStorage`), one import at a time, so a check
+  is never lent any and cannot read or change what the learner saved.
 - **Reading `localStorage` can throw**, not merely answer nothing, where a
   browser has site data blocked. So the driver's test is an access in a
   `try` rather than a property check, and every operation answers false

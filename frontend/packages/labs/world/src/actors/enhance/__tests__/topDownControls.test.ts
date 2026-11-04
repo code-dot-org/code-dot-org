@@ -44,9 +44,18 @@ describe('moving in all four directions', () => {
 
     expect(actor).toContain('Arrow Keys#MovesAcrossTrait');
     expect(actor).toContain('Arrow Keys#MovesDownTrait');
-    expect(actor).toContain('Input#TakesKeyboardInputTrait');
     expect(at(after, 'rules/arrows.rule')).toBeTruthy();
-    expect(at(after, 'rules/input.rule')).toBeTruthy();
+  });
+
+  it('does not take the keyboard trait, which nothing here hears', () => {
+    // Input is unlocked by `input/press`, after `input/arrows` uses this
+    // row; electing its trait made that lesson unfinishable in a gated lab.
+    const after = topDownControlsEnhancement.apply(withActors('coin'), COIN);
+
+    expect(at(after, 'actors/coin.actor')).not.toContain(
+      'Input#TakesKeyboardInputTrait',
+    );
+    expect(at(after, 'rules/input.rule')).toBeFalsy();
   });
 
   it('pulls the actor nowhere', () => {

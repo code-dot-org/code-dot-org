@@ -15,8 +15,10 @@ import type {
   WorldSnapshot,
 } from 'world-lab';
 
+import type {WorldStorage} from '../../engine/core/types';
 import {checkModuleUrl} from '../checkModuleUrl';
 import type {CheckResult} from '../checks';
+import {browserStorage} from '../driver/browserStorage';
 import {drawingThumbnail, frameThumbnail} from '../driver/frameThumbnail';
 import {PhaserBinding} from '../driver/PhaserBinding';
 import {reconcile} from '../driver/reconcile';
@@ -206,6 +208,42 @@ export async function start(): Promise<void> {
   // rebuild is not enough to notice one. See `texturesChanged`.
   let runningTextures = '';
 
+  /**
+   * Import a module and build its world with `storage` lent, one import at a
+   * time (`WorldBuilder.lendStorage`).
+   *
+   * A Main Screen's `when this screen loads` runs as its module is evaluated,
+   * so its `load what the world remembered` needs storage then. Only the game
+   * is lent any: a check must not read or write what the learner saved, and
+   * the lending is engine-wide, so imports may not overlap.
+   */
+  let importing: Promise<unknown> = Promise.resolve();
+  // The engine the learner's modules import (`esbuildCompiler` externals): the
+  // same URL is the same instance, so lending to it reaches their builders.
+  const engine: Promise<{WorldBuilder?: typeof WorldBuilder} | undefined> =
+    import(/* @vite-ignore */ `${assetBase}world-lab.mjs`).catch(
+      () => undefined,
+    );
+  const importLent = <T>(
+    url: string,
+    storage: WorldStorage | undefined,
+    build: (mod: T) => void = () => {},
+  ): Promise<T> => {
+    const next = importing.then(async () => {
+      const Lender = (await engine)?.WorldBuilder;
+      Lender?.lendStorage(storage);
+      try {
+        const mod: T = await import(/* @vite-ignore */ url);
+        build(mod);
+        return mod;
+      } finally {
+        Lender?.lendStorage(undefined);
+      }
+    });
+    importing = next.catch(() => {});
+    return next;
+  };
+
   window.addEventListener('message', event => {
     if (!parentOrigin || event.origin !== parentOrigin) {
       return;
@@ -258,8 +296,10 @@ export async function start(): Promise<void> {
       // again; the build worker serves by path, so it is the same bundle.
       // Not `instantiate()`, which places nothing, nor the game's `getWorld()`,
       // which is the world the learner has been playing.
-      const mod: {default?: WorldBuilder} = await import(
-        /* @vite-ignore */ checkModuleUrl(moduleUrl, id)
+      const mod = await importLent<{default?: WorldBuilder}>(
+        checkModuleUrl(moduleUrl, id),
+        undefined,
+        built => built.default?.getWorld?.(),
       );
       const builder = mod.default;
       if (!builder || typeof builder.getWorld !== 'function') {
@@ -315,7 +355,7 @@ export async function start(): Promise<void> {
     // for exactly the placements that have a key.
     const placementSizes: Record<string, {width: number; height: number}> = {};
     try {
-      const mod: ThumbnailManifest = await import(/* @vite-ignore */ moduleUrl);
+      const mod = await importLent<ThumbnailManifest>(moduleUrl, undefined);
       const manifest = mod.default;
       if (manifest) {
         const world = manifest.world.instantiate();
@@ -475,7 +515,11 @@ export async function start(): Promise<void> {
   async function load({id, moduleUrl, assets}: LoadMessage) {
     lastAssets = assets ?? {};
     try {
-      const mod: EntryModule = await import(/* @vite-ignore */ moduleUrl);
+      const mod = await importLent<EntryModule>(
+        moduleUrl,
+        browserStorage(),
+        built => built.default?.getWorld?.(),
+      );
       const entry = mod.default;
       if (!entry || typeof entry.getWorld !== 'function') {
         throw new Error(

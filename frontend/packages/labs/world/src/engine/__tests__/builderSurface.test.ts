@@ -70,25 +70,11 @@ const RUNTIME_ONLY: Record<string, string> = {
   releaseKey: 'the same, at the other end',
   keyboardJustArrived:
     'a world being described is not on a screen anybody could have tabbed onto',
-  save:
-    'the storage is lent by the driver, once the world exists — a world still ' +
-    'being described has nowhere to write (specs/SAVING_PLAN.md)',
-  recall:
-    'the same, and why restoring belongs in a handler rather than in a ' +
-    'world\u2019s body: `when \u27e8…\u27e9 is created` runs before the actor ' +
-    'is first drawn, which is after the driver has lent the storage',
-  forget: 'the same again',
   valueNamed:
     'read by name from a map or another screen, whose code runs once the ' +
     'world is built and the screen is shown (specs/SCREEN_STACK_PLAN.md)',
   setValueNamed: 'the same, to write one',
-  rememberActors:
-    'the storage is lent once the world exists, and there are no actors to ' +
-    'keep while it is still being described (specs/RECORDS_PLAN.md)',
-  recallActors:
-    'the same, and bringing records back belongs in a handler for the same ' +
-    'reason restoring a world\u2019s own memory does',
-  useChannel: 'which project this is arrives with the driver, like the storage',
+  useChannel: 'which project this is arrives with the driver',
   type:
     'typing is read by the frame after the one that typed it, and a world ' +
     'still being described has no frames at all (specs/KEYBOARD_PLAN.md)',

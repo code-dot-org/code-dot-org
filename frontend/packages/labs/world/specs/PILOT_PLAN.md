@@ -1,8 +1,9 @@
 # Plan: a pilot of three lessons on the map (CANVAS_FIRST.md, step 3)
 
-STATUS: BUILT, and seen in the browser in November 2026. One thing failed:
-in `input/arrows`, Moves in all four directions brings the Input rule,
-which only `input/press`, the lesson after it, grants. The third build step of
+STATUS: BUILT, and seen in the browser in November 2026. One thing failed
+and is fixed: in `input/arrows`, Moves in all four directions brought the
+Input rule, which only `input/press`, the lesson after it, grants. The row
+no longer takes `Takes Keyboard Input`, which nothing it does hears. The third build step of
 specs/CANVAS_FIRST.md: three lessons retold on the map, one of each kind the
 proposal's rule makes, to be seen in the browser before the other fifteen
 follow. The working record, as before.

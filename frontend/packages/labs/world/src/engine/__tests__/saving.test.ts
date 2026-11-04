@@ -174,3 +174,36 @@ describe('a world lent somewhere to remember', () => {
     expect(world.forget('notes')).toBe(false);
   });
 });
+
+describe('a screen that loads what it remembered', () => {
+  it('reads it through the builder, before the game starts', () => {
+    // `when this screen loads` on the Main Screen runs as the module is
+    // imported, where `world` is the builder; it once threw
+    // `world.recall is not a function`.
+    const store = held();
+    WorldBuilder.lendStorage(store);
+    try {
+      const first = noting();
+      first.world.useStorage(store);
+      first.world.set(first.count, 4);
+      first.world.save('notes');
+
+      const Rule = new RuleBuilder({id: 'noting', name: 'Noting'}).build();
+      const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([Rule]);
+      const count = builder.defineProperty('count', 'number', 0);
+      builder.defineProperty('notes', 'words', [] as string[]);
+
+      expect(builder.recall('notes')).toBe(true);
+      expect(builder.getWorld().get(count)).toBe(4);
+      expect(builder.forget('notes')).toBe(true);
+      expect(builder.recall('notes')).toBe(false);
+    } finally {
+      WorldBuilder.lendStorage(undefined);
+    }
+  });
+
+  it('lends nothing to a world made while nothing is lent', () => {
+    const {world} = noting();
+    expect(world.save('notes')).toBe(false);
+  });
+});

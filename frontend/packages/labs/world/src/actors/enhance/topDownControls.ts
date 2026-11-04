@@ -21,7 +21,10 @@
 // NO HANDLER EITHER, unlike the platformer's, which binds space to a jump. The
 // arrow keys are the rule's own business — `Moves Across` and `Moves Down` read
 // them directly — so this row is three `use trait` lines and the rules they
-// come from, and there is nothing to check but whether they are worn.
+// come from, and there is nothing to check but whether they are worn. Nor does
+// it take `Takes Keyboard Input`: that trait only raises press and release
+// events, and nothing here hears one. Taking it would also import Input, which
+// a gated lab unlocks only in `input/press`, after this row's own lesson.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -31,11 +34,9 @@ import {electTraits, wears} from './patch';
 
 const ACROSS = 'Arrow Keys#MovesAcrossTrait';
 const DOWN = 'Arrow Keys#MovesDownTrait';
-/** The same keyboard trait the platformer's controls take, for one reason. */
-const KEYBOARD = 'Input#TakesKeyboardInputTrait';
 
-const TRAITS = [ACROSS, DOWN, KEYBOARD];
-const RULES = ['Arrow Keys', 'Input'];
+const TRAITS = [ACROSS, DOWN];
+const RULES = ['Arrow Keys'];
 
 export const topDownControlsEnhancement: Enhancement = {
   id: 'top-down-controls',
@@ -43,7 +44,7 @@ export const topDownControlsEnhancement: Enhancement = {
   name: 'Moves in all four directions',
   description:
     'Gives this actor the controls a game seen from above wants: the left and right arrows move it across, and the up and down arrows move it up and down the screen. Nothing pulls it anywhere — there is no floor in a game seen from above — so an actor with these walks where it is told and stays there. How fast it goes is a block in its file. An actor in a side-on game wants “Walks and jumps like a platformer” instead.',
-  brings: ['Moves Across', 'Moves Down', 'Reads the Keyboard'],
+  brings: ['Moves Across', 'Moves Down'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
     const actor = actorAt(source, target);
     return TRAITS.every(trait => wears(actor, trait));
