@@ -1,0 +1,97 @@
+// The tab's middle: the chosen image large, or the empty frame of the one
+// about to be made, with the session's other pictures down its left and
+// the way behind the scenes under it.
+
+import classNames from 'classnames';
+import React, {useLayoutEffect, useRef, useState} from 'react';
+
+import AnimatedSheetPreview from '../AnimatedSheetPreview';
+
+import {ProjectImage} from './projectImages';
+
+import styles from './images-tab.module.scss';
+
+interface ImageFrameProps {
+  /** The chosen image, when it exists. */
+  image: ProjectImage | null;
+  /** The scene's own frame contents, which win while a picture is being
+      made or has just been made. */
+  live?: React.ReactNode;
+  /** Down the frame's left. */
+  beside?: React.ReactNode;
+  /** Under the frame. */
+  under?: React.ReactNode;
+}
+
+// Under the frame: the row the behind-the-scenes button takes.
+const UNDER_PX = 56;
+
+const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
+  image,
+  live,
+  beside,
+  under,
+}) => {
+  // The frame is a square as large as the column allows, which a flex
+  // item's percentage height cannot give before layout.
+  const columnRef = useRef<HTMLDivElement>(null);
+  const [side, setSide] = useState<number>();
+  useLayoutEffect(() => {
+    const column = columnRef.current;
+    if (!column || typeof ResizeObserver !== 'function') {
+      return;
+    }
+    const measure = () =>
+      setSide(
+        Math.max(
+          0,
+          Math.min(column.clientWidth, column.clientHeight - UNDER_PX)
+        )
+      );
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(column);
+    return () => observer.disconnect();
+  }, []);
+  const filled = !!live || !!image;
+  return (
+    <div className={styles.frameWell}>
+      <div ref={columnRef} className={styles.frameColumn}>
+        <div className={styles.frameRow} style={{height: side}}>
+          {beside && <div className={styles.beside}>{beside}</div>}
+          <div
+            className={classNames(styles.frame, filled && styles.frameFilled)}
+            style={{width: side, height: side}}
+          >
+            {/* The picture alone is the image to assistive tech; anything
+                else the frame holds stays reachable. */}
+            <div
+              className={styles.picture}
+              role="img"
+              aria-label={
+                live ? 'Your picture' : image ? image.name : 'No picture yet'
+              }
+            >
+              {live ??
+                (image?.sheet ? (
+                  <AnimatedSheetPreview {...image.sheet} />
+                ) : image?.src ? (
+                  <img
+                    src={image.src}
+                    alt=""
+                    className={classNames(
+                      styles.preview,
+                      image.pixelated && styles.pixelArt
+                    )}
+                  />
+                ) : null)}
+            </div>
+          </div>
+        </div>
+        <div className={styles.under}>{under}</div>
+      </div>
+    </div>
+  );
+};
+
+export default ImageFrame;

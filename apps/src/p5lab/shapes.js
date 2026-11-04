@@ -136,6 +136,7 @@ function getSerializedAnimationProps(animation) {
     'version',
     'categories',
     'role',
+    'subject',
     'pixelGridSize',
     'recentColors',
     'trimmed',

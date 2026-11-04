@@ -1,6 +1,7 @@
 @use './imageTile' as tile;
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+@use './editor-strip' as strip;
 
 .labRow {
   display: flex;
@@ -25,6 +26,12 @@
 .instructionsColumn {
   flex: 0 0 280px;
   min-width: 280px;
+}
+
+// Collapsed to its tab rail.
+.instructionsCollapsed {
+  flex: 0 0 auto;
+  min-width: 0;
 }
 
 .divider {
@@ -83,7 +90,7 @@ $tab-item-height: 34px;
 }
 
 // The editors start under the strip.
-$editor-strip-height: 41px;
+$editor-strip-height: strip.$height;
 // Above Blockly's category list (z 70) and flyout (z 20), so a menu from a
 // bar opens over them; below its block drag surface (z 80).
 $z-over-blockly: 71;
@@ -108,6 +115,13 @@ $z-over-blockly: 71;
   color: var(--text-neutral-quaternary);
   border: 1px solid var(--borders-neutral-primary);
   border-top: none;
+}
+
+// The editors' strip: a column header beside it draws the line between
+// them, down its own body too, so this strip keeps only its bottom edge.
+.editorStripEditors {
+  border-left: none;
+  border-right: none;
 }
 
 // Every cell names its row: auto-placement would otherwise start a new row
@@ -318,11 +332,14 @@ $z-over-blockly: 71;
 }
 
 // After .codeTabWrapper too: the Images pane off to the right while
-// another editor shows, as a closed sheet waits.
+// another editor shows, as a closed sheet waits. Hidden as well: off to the
+// right is where the page's own drawer opens, and the pane would paint over
+// it.
 .picturesEditorParked {
   left: 110%;
   right: auto;
   width: 100%;
+  visibility: hidden;
 }
 
 .blocklyDiv {

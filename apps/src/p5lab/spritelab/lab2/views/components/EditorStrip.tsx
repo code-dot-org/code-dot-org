@@ -1,4 +1,5 @@
 import {Typography as MuiTypography} from '@mui/material';
+import classNames from 'classnames';
 import React, {useRef} from 'react';
 
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
@@ -90,7 +91,13 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
     />
   );
   return (
-    <div className={moduleStyles.editorStrip} style={style}>
+    <div
+      className={classNames(
+        moduleStyles.editorStrip,
+        onChange && moduleStyles.editorStripEditors
+      )}
+      style={style}
+    >
       <div className={moduleStyles.editorStripStart}>
         {switchAtStart ? switchNode : historyNode}
       </div>
