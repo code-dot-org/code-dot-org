@@ -44,6 +44,21 @@
   background: var(--background-neutral-secondary);
 }
 
+.sideNoSelection {
+  background: var(--background-neutral-primary);
+}
+
+.sideEmptyPrompt {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideEmptyText {
+  color: var(--text-neutral-secondary);
+}
+
 .sideFooter {
   display: flex;
   align-items: center;

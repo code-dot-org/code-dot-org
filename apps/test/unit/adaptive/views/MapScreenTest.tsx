@@ -170,8 +170,9 @@ describe('MapScreen tour', () => {
   });
 
   describe('step transitions', () => {
-    it('shows nothing in the sidebar before any interaction', () => {
+    it('shows "Select a checkpoint" prompt before any interaction', () => {
       renderMapScreen();
+      expect(screen.getByText('Select a checkpoint')).toBeTruthy();
       expect(screen.queryByText('First Checkpoint')).toBeNull();
     });
 
@@ -184,6 +185,7 @@ describe('MapScreen tour', () => {
         fireEvent.click(screen.getByText('select cp-1'));
       });
       expect(screen.getByText('First Checkpoint')).toBeTruthy();
+      expect(screen.queryByText('Select a checkpoint')).toBeNull();
     });
 
     it('ignores map clicks on locked checkpoints during the select step', () => {
@@ -195,9 +197,10 @@ describe('MapScreen tour', () => {
         fireEvent.click(screen.getByText('select cp-2')); // cp-2 is locked
       });
       expect(screen.queryByText('Second Checkpoint')).toBeNull();
+      expect(screen.getByText('Select a checkpoint')).toBeTruthy();
     });
 
-    it('clears CheckpointCard when navigating back to step 1', () => {
+    it('shows the prompt again when navigating back to step 1', () => {
       renderMapScreen();
       act(() => {
         fireEvent.click(screen.getByText('advance')); // step 1
@@ -209,6 +212,7 @@ describe('MapScreen tour', () => {
         fireEvent.click(screen.getByText('back')); // step 0
       });
       expect(screen.queryByText('First Checkpoint')).toBeNull();
+      expect(screen.getByText('Select a checkpoint')).toBeTruthy();
     });
 
     it('sets body classes correctly across step transitions', () => {

@@ -5,7 +5,7 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useMemo, useRef, useState} from 'react';
 
 import {CheckpointStatusMap} from '../progress';
@@ -202,8 +202,13 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
             }}
           />
         </div>
-        <aside id="adaptive-tour-side" className={styles.side}>
-          {focused && (
+        <aside
+          id="adaptive-tour-side"
+          className={`${styles.side}${
+            focused ? '' : ` ${styles.sideNoSelection}`
+          }`}
+        >
+          {focused ? (
             <CheckpointCard
               pathway={pathway}
               checkpoint={focused}
@@ -216,6 +221,12 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               }}
               onSelectCheckpoint={onFocus}
             />
+          ) : (
+            <div className={styles.sideEmptyPrompt}>
+              <MuiTypography variant="body2" className={styles.sideEmptyText}>
+                Select a checkpoint
+              </MuiTypography>
+            </div>
           )}
           <div className={styles.sideFooter}>
             <SimpleDropdown
