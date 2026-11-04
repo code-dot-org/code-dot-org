@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T16:18:16.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Sayings",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson13-choice1-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n- Run your program to generate a sentence with your model.\r\n- Evaluate this sentence in a row of the table under **Step 5: Evaluate Your Model** in your Project Planning Guide.\r\n- Repeat until you’ve evaluated at least five different sentences.\r\n",
+    "bubble_choice_description": "A collection of short sayings that express some truth.",
+    "thumbnail_url": "https://images.code.org/78e6d7abca76be9df4234d830f8a6240-sayings.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY4FDJh0/iJzTxyf\nwFH5+5xm5ZyUWZePiRAc1pGsYDPDal64OSsdn6GQga22rsjhS/VTZmDg6rsg\nREPc6xHu/yYl4oEcqmHeHFzsupYMFpsWJQUyEnlNmJHtafMXnMOOuHo49c3g\nzZSp7je/iwgwR5UMGpjOlDvWT4nqVQMq5ucERGNlZ6d1CQ1/USTzafgdoKPS\nJeuSYpUiepSsDDefPw9KWt/cKMvrCyAKuLoJo1vJ0uVvyQ/mXILLbB0tNt3Y\n4sPBT2HQpE5K6syk/gX+o3qA4eeOoWWOsuW+x2M95gxh+EbAnW/FZ53jLPrz\n82EpxhbYXVMldYtWCQSBE88IH5P/0cP5cZlojDwZp2m2cYvAYxpQp5RS9Xl0\nhaXZXzXMhEyFyBoK+Js4RwxCOtxUj8Lzh9Y2PD3Hq9LiNIKUBzs4F/56vDpY\nECqVNxOZMmM+F9OdDzGnNuPdwuxQveWysUu6vV0bIBMPLpBZN6GUxF8z+Mjs\nihhHLoo7LWIWJgicv8bU2pB5J601xejTl+qySGm9gSv1biHePUgF/DJWFtXm\nJ31eLysvcBxhVF+7JupVjCCByR6UabRrCh/Z/zWLBsWYgRtwwxn24e9pF3cf\nsG97I9BkE+Jc8jyDEfkr+p3ufzbg4p25VCnEbSO7r6r8JJVPhJVE2sMn4xWL\n1h0wCa6MhdwzyNqRvR/K6tnuc/hpKfqRVKP3CGmR3XohwP8dJaqbX+VWHx3h\nQai5/6V/XBFVDL8reGEyZBEbLeweJnuTxXyYR7/bczSPn1zw6CoV6TLnABPo\nR7KaObHkUuP4mmakef/CKYbzLE/tyZq8Do4BgjbVhQsuXHnRIWhPA+EnnRh4\nhG8eTVlJt/DVpQSKmALqRt2loEwDfeHvK1QFrLH5P1kBfiYRrJRjierhLmtQ\ngTu/SL27bTYMUNEjtCGbRDFmf9ogUXS1immNk8rQ2nH727AbORvVppaHlQUq\ntYdZKAU7sgApDVsKjC4VM/JqaEV6eiwvmHeg5z8Tx2pAPT/PCMIWKnrHFm7w\n59yzuKstzJeLqGnk23Od+PqlDzi9ERvTHHsG+mfb4d9KjEt1Y6ARHfVko1pT\nByiJAoX0+6jeYyg356wtpC7vPGt9rsql2b0zS6ALlOwyNVr/KuG/lLiXStme\ngIQIGJfgF9T8oj9EUIBBsvHAtlX4ZFq6omhZD/YNYHl222hahzfkyRpuRrBj\nlfoyocmOx4bF1L78YX37puqu3l+SiTxRF8I+8Q2cfx+bIwiXEi+CMDsDnieh\ni7pcClwTJDzidWrkWUSp52m6DIblXywYVmfHaQy22u9a/yrZrkUY22osKpMo\ntkV3XeCE3o+C6DTdDVnIlH+TFj6LsmCptlM4U///HpPzp6VxdP53HbGhwHR/\nI4WWoCae5kkV6jMuqj4BHjlte0KgFsbJJTZDXdMKFJydqsbaDgYGVTtm+I1+\nLDCfjTXpeoEfgYOTbzMusD2SHkhrxyaI/D21MzZvu36GtM11PhPcH9EjRXeN\nZqpq8WJbUC6D1oCKBU07ThwjLIgwdbzB2MejbiNSER4m5QU28w/DYOSQUiGk\noidjy7//a/OuMfa9WPVUETk2wstoIMuGYgWKlneo7Oge8KTvdWGm25K20SHW\nFwxxZPmu6j2DHbw9YjV5jnKzXROFUOipQ/jZNag79uzfgXrOXJ42JowO1kkk\nMtnw1oz/fWYaZ5vV6ekMx5PYL/4xkAFs2CeboFGQBjbqfCNsZ3p8SXRQ/IhP\nw66klYDUw0blPPkwMzkxmwUdgAjHSJcj+Av94nMxJP3Dt+bFZzhP93n6ctuf\nV2DMNVJetpJYSh1BTdbasj4I+7tx5nk2lasJLgIMp42Jyz4JM0pzWSRBvKoy\nc+Yqfd/jzLol/DWpVx85Qv1ttBZmL4PuripTHubsGFKpKfMssYD7HM/2M0Z/\nqxSEJD7lDvNkNBnK/8z7GC4gO9hdc0e6Fjh3Dhr23xYIN7KAm/7QH/fshIM5\nrcXSYJYFE8KckQSKAcLTqVO3g1WDsJjgSutpG5F7LV2mNZSM51oPWGtz0p4a\nt/guKIVsWNl9IfvVy38xBnj3q/8FUjIp8UpNuuJMA5DARZw8pHUp7STZ5bVE\nwjw68He0qT2OUBM2R87wA2hmtD0ct860Q0x3+qGGOPjT+Kn7qWM7nRWAxDRY\nAhFDH0icq35DJHM1t+lKCsgyP4GAitn8v4Hs7Ins24SvYJ61Y/Gknh/Yac2M\ngD13osVAWsQQIMjyljtIsBFrCbJ00H0tyRx4ie21z4soWJ96jObLxiYq7dos\nx08AhMUyUpbGXcUTkgDto1XpzI5UmeSfT2jw1jESWlPEVa8909L21Tbh6g+R\ndRR9odqERPN/ugZXhePWdeLuGT6crGrES2DK\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 16:20:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 16:22:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
