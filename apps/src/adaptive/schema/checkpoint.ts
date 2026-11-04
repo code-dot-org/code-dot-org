@@ -35,8 +35,10 @@ export const checkpointSourceSchema = z.strictObject({
    */
   routeAfterCompletion: z.boolean().optional(),
   /**
-   * The map destination this checkpoint belongs to. Only a terminal (leaf)
-   * checkpoint, one that no other checkpoint requires, can have one.
+   * The map destination this checkpoint belongs to: an id in the pathway's
+   * `destinations`, or the title itself when the pathway declares none.
+   * Only a terminal (leaf) checkpoint, one that no other checkpoint
+   * requires, can have one.
    */
   destination: z.string().min(1).optional(),
   /**
