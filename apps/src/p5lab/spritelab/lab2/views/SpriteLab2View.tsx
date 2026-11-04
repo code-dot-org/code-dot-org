@@ -9,7 +9,6 @@ import {AnyAction, Reducer} from 'redux';
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
-import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/getCode';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -65,6 +64,7 @@ import {
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {getCodeFromSceneSource} from '../blockly/sceneCode';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
 import {withStarterBlocks} from '../extraSceneStarter';
@@ -1318,9 +1318,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           const live = scene.id === activeSceneId ? getCode() : null;
           code =
             live ??
-            getCodeFromSerializedWorkspace(
-              scene.source ?? DEFAULT_SCENE_SOURCE
-            );
+            getCodeFromSceneSource(scene.source ?? DEFAULT_SCENE_SOURCE);
         } catch (e) {
           // A scene that fails to compile shouldn't kill the jump
           // entirely; run it as an empty scene.
@@ -1397,9 +1395,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ])
       );
       try {
-        return getCodeFromSerializedWorkspace(
-          scene.source ?? DEFAULT_SCENE_SOURCE
-        );
+        return getCodeFromSceneSource(scene.source ?? DEFAULT_SCENE_SOURCE);
       } finally {
         dispatch({
           type: SET_INITIAL_ANIMATION_LIST,
