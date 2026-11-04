@@ -368,7 +368,8 @@ export const AiChatClientTypes = {
   "LESSON_DEEP_DIVE": "lesson-deep-dive",
   "ADAPTIVE": "adaptive",
   "THEATER_DESCRIPTION": "theater-description",
-  "CURRICULUM_GENERATOR": "curriculum-generator"
+  "CURRICULUM_GENERATOR": "curriculum-generator",
+  "SPRITELAB_ASK_AI": "spritelab-ask-ai"
 } as const;
 
 export const AiChatReadTimeouts = {
@@ -378,7 +379,8 @@ export const AiChatReadTimeouts = {
   "lesson-deep-dive": 60,
   "adaptive": 30,
   "theater-description": 30,
-  "curriculum-generator": 30
+  "curriculum-generator": 30,
+  "spritelab-ask-ai": 30
 } as const;
 
 export const AiChatTeacherFeedback = {

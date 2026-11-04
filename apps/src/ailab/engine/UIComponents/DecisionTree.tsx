@@ -1,4 +1,5 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {faCircleCheck} from '@fortawesome/free-solid-svg-icons/faCircleCheck';
+import {faCircleXmark} from '@fortawesome/free-solid-svg-icons/faCircleXmark';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {
@@ -14,6 +15,7 @@ import React, {
 
 import {RIGHT_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getUploadedFileName} from '../helpers/datasetDetails';
 import {
   DISPLAY_TREE_ROOT_ID,
   type DisplayTreeNode,
@@ -44,6 +46,7 @@ import {
   type Grade,
 } from '../helpers/displayTreeNodeContent';
 import type {DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
+import {treeImageName} from '../helpers/treeImage';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setPredictionPlaying} from '../redux';
@@ -59,6 +62,7 @@ import {useTrainingData} from '../TrainingDataContext';
 import FullTextTooltip from './FullTextTooltip';
 import {leafColorStyle} from './leafColors';
 import NodeModal from './NodeModal';
+import SaveTreeImageMenu from './SaveTreeImageMenu';
 import TreeCanvas from './TreeCanvas';
 
 import styles from './decisionTree.module.scss';
@@ -107,9 +111,23 @@ const KeyHint = ({id, shown, children}: KeyHintProps) => (
   </Typography>
 );
 
-const GRADE_ICONS: Record<Grade, string> = {
-  correct: 'circle-check',
-  incorrect: 'circle-xmark',
+const GRADE_ICONS = {
+  correct: faCircleCheck,
+  incorrect: faCircleXmark,
+};
+
+// SVG rather than the icon font: a saved image of the tree cannot load fonts.
+const GradeIcon = ({grade}: {grade: Grade}) => {
+  const [width, height, , , path] = GRADE_ICONS[grade].icon;
+  return (
+    <svg
+      viewBox={`0 0 ${width} ${height}`}
+      aria-hidden="true"
+      className={styles.gradeIcon}
+    >
+      <path fill="currentColor" d={path as string} />
+    </svg>
+  );
 };
 
 interface GradeCountProps {
@@ -119,12 +137,7 @@ interface GradeCountProps {
 
 const GradeCount = ({grade, count}: GradeCountProps) => (
   <span className={styles[grade]}>
-    <FontAwesomeV6Icon
-      iconName={GRADE_ICONS[grade]}
-      iconStyle="solid"
-      className={styles.gradeIcon}
-      aria-hidden="true"
-    />
+    <GradeIcon grade={grade} />
     {count}
     <span className={appStyles.visuallyHidden}> {grade} </span>
   </span>
@@ -178,6 +191,9 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     getDisplayTreeCounts(state, project, trainedModel)
   );
   const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
+  const imageName = useAppSelector(state =>
+    treeImageName(getDatasetId(state) ?? getUploadedFileName(state))
+  );
   const layout = useMemo(
     () =>
       tree
@@ -193,6 +209,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const currentId = trace?.path[step];
   const nextId = trace?.path[step + 1];
   const overlayRef = useRef<HTMLDivElement>(null);
+  const treeRef = useRef<HTMLDivElement>(null);
   const enterHintId = useId();
   const keysHintId = useId();
   const nameId = useId();
@@ -295,6 +312,13 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           followId={isStepping && currentId ? itemId(currentId) : undefined}
           overlayRef={overlayRef}
           toolbarTabbable={entered}
+          tools={
+            <SaveTreeImageMenu
+              treeRef={treeRef}
+              baseName={imageName}
+              tabbable={entered}
+            />
+          }
           hints={
             <span className={styles.hints}>
               <KeyHint id={enterHintId} shown={!entered}>
@@ -322,6 +346,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           className={styles.canvasGroup}
         >
           <div
+            ref={treeRef}
             role="tree"
             aria-label={TREE_NAME}
             aria-describedby={keysHintId}

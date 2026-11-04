@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
+import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {
@@ -12,6 +13,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
+import {askAiText, AskAiError, isAskAiEnabled} from './ai/text/askAi';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {burstBoxes} from './bursts';
 import {
@@ -200,6 +202,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // behind must not start a program in it.
     this.destroyed_ = false;
     this.rerunAfterExecute_ = false;
+    this.runId_ = 0;
+    this.aiSetters_ = new Map();
+    this.aiPending_ = new Set();
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
     this.sceneJumpInFlight_ = false;
@@ -693,7 +698,71 @@ export default class SpriteLab2Engine extends SpriteLab {
         choices.length ? choices : undefined
       );
     };
+    const runId = ++this.runId_;
+    this.aiSetters_ = new Map();
+    // One request per variable at a time, to avoid a flood of requests at once.
+    const pending = (this.aiPending_ = new Set());
+    library.commands.askAI = (promptText, variableName, setterCallback) => {
+      if (!this.canAskAi_() || pending.has(variableName)) {
+        return;
+      }
+      pending.add(variableName);
+      this.registerAiAnswer_(library, variableName, setterCallback);
+      askAiText(String(promptText ?? ''))
+        .then(
+          text => {
+            if (this.destroyed_ || runId !== this.runId_) {
+              return;
+            }
+            this.deliverAiAnswer_(library, variableName, text);
+          },
+          error => {
+            if (this.destroyed_ || runId !== this.runId_) {
+              return;
+            }
+            console.warn(
+              error instanceof AskAiError
+                ? `SpriteLab2: the ask AI block's ${error.phase} did not pass the safety check.`
+                : `SpriteLab2: the ask AI block got no answer (${error.message}).`
+            );
+          }
+        )
+        .finally(() => pending.delete(variableName));
+    };
     return library;
+  }
+
+  registerAiAnswer_(library, variableName, setterCallback) {
+    if (!variableName) {
+      return;
+    }
+    if (library.promptVars[variableName] === undefined) {
+      library.promptVars[variableName] = null;
+    }
+    this.aiSetters_.set(variableName, setterCallback);
+  }
+
+  deliverAiAnswer_(library, variableName, text) {
+    library.promptVars[variableName] = text;
+    this.aiSetters_.get(variableName)?.(text);
+    library.userInputEventCallbacks[variableName]?.userCallbacks.forEach(
+      callback => callback()
+    );
+  }
+
+  // Mirrors the gateway's own check (User::AiAccessible), so a request it
+  // would refuse never leaves the browser.
+  canAskAi_() {
+    if (!isAskAiEnabled()) {
+      console.warn('SpriteLab2: the ask AI block is turned off.');
+      return false;
+    }
+    const permissions = getStore().getState().lab?.permissions;
+    if (!permissions?.includes(PERMISSIONS.LEVELBUILDER)) {
+      console.warn('SpriteLab2: the ask AI block needs levelbuilder access.');
+      return false;
+    }
+    return true;
   }
 
   onPromptAnswer(variableName, value) {

@@ -14,15 +14,22 @@ to users.
 
 ## Seeding
 
-`rake seed:ui_test` seeds this tree, and is the default seed in the test
-environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`. It
-seeds UI test levels, needed by ui-test- units, and standalone project levels,
-which back urls like https://test-studio.code.org/projects/applab/.
+`rake seed:ui_test` seeds this tree, and is the default seed in the test,
+development and adhoc environments; see `DEFAULT_SEED_TASKS` in
+`dashboard/lib/tasks/seed.rake`. It seeds UI test levels, needed by ui-test-
+units, and standalone project levels, which back urls like
+https://test-studio.code.org/projects/applab/.
 
 Seeding this tree omits production course offerings, courses, units, and levels,
 with the exception of deprecated blockly levels and standalone project levels
 which are seeded in every environment. Omitting production levels in particular
 saves considerable seed time in test environments.
+
+The same applies to developers: a level you want to try out locally or on an
+adhoc belongs in a ui-test- unit, so that it is seeded everywhere without
+production content. When you do need production courses, seed them on top with
+`cd dashboard && bundle exec rake seed:production`, and rerun it to pick up
+content changes, since the default seed does not touch that partition.
 
 ## Cached units
 
