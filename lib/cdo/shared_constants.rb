@@ -931,7 +931,6 @@ module SharedConstants
     AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] => 30,
   }
 
-  # The browser reuses an AI Gateway access token until shortly before this elapses.
   AI_GATEWAY_ACCESS_TOKEN_LIFETIME_SECONDS = 60
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze

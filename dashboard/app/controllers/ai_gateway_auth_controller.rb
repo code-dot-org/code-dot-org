@@ -111,7 +111,6 @@ class AiGatewayAuthController < ApplicationController
     TURNSTILE_ENFORCEMENT_MODES.include?(mode) ? mode : TURNSTILE_ENFORCEMENT_MODE_DEFAULT
   end
 
-  # Only a literal true turns reuse on, so a mistyped DCDO value fails toward the slower path.
   private def access_token_reusable?
     DCDO.get(ACCESS_TOKEN_REUSE_DCDO_KEY, ACCESS_TOKEN_REUSE_DEFAULT) == true
   end
