@@ -76,6 +76,7 @@ import {
   withoutWornPicture,
   type LocalPicture,
 } from './localPictures';
+import {mapChange} from './mapChange';
 import {mapFileDocument, type MapDocumentAdapter} from './mapDocument';
 import styles from './mapEditor.module.css';
 import {
@@ -573,11 +574,23 @@ export const MapEditor = ({
     setFileText(written);
     onChange(written);
   };
+  // What the last undo or redo changed, said beside its buttons: the map
+  // changing under focus says nothing by itself.
+  const [historySaid, setHistorySaid] = useState('');
   /** The file as a step of the history left it, put back in front. */
-  const restore = (step: {contents: string; history: History} | undefined) => {
+  const restore = (
+    step: {contents: string; history: History} | undefined,
+    verb: 'Undid' | 'Redid',
+  ) => {
     if (!step) {
       return;
     }
+    setHistorySaid(
+      `${verb}: ${mapChange(
+        document.read(contentsRef.current),
+        document.read(step.contents),
+      )}`,
+    );
     historyRef.current = step.history;
     setHistory(step.history);
     contentsRef.current = step.contents;
@@ -585,9 +598,10 @@ export const MapEditor = ({
     setMap(asShown(document.read(step.contents)));
     onChange(step.contents);
   };
-  const undoEdit = () => restore(undo(historyRef.current, contentsRef.current));
+  const undoEdit = () =>
+    restore(undo(historyRef.current, contentsRef.current), 'Undid');
   const redoEdit = () =>
-    restore(redo(historyRef.current, contentsRef.current, Date.now()));
+    restore(redo(historyRef.current, contentsRef.current, Date.now()), 'Redid');
   /** The project's backgrounds by file name, for a layer's two slots. */
   const backgroundChoices = useMemo(
     () =>
@@ -958,6 +972,14 @@ export const MapEditor = ({
             >
               <FontAwesomeV6Icon iconName="rotate-right" iconStyle="solid" />
             </IconButton>
+            <div
+              className={styles.announcer}
+              role="status"
+              aria-live="polite"
+              data-testid="history-announcer"
+            >
+              {historySaid}
+            </div>
           </div>
         )}
         {/*

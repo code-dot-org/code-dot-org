@@ -45,6 +45,9 @@ below, and are listed last.
 - **Undo says nothing.** The buttons and the keys work, but what was undone
   is not announced, and the stage's region says only what the keyboard
   moved. (4.1.3 Status Messages.)
+  CLOSED: an undo or a redo says what it changed ("Undid: moved Score"),
+  found by comparing the map before and after (`mapChange`), since the
+  history keeps whole files and no names for its steps.
 - **The keys are found only by hovering**, in the buttons' titles. Nothing
   lists them.
 
@@ -165,8 +168,11 @@ below, and are listed last.
 - **Each key is a button** named for its track and time and pressed when
   chosen, so the keys a screen reader could not find on the strip are in
   the tab order, one stop each; Alt and an arrow move one, Delete removes
-  it. Dragging is never the only way. Not done: a key moved or removed is
-  not announced, and focus is lost with a deleted key.
+  it. Dragging is never the only way. A key moved or removed is said
+  ("Scale key moved to 0.4 s"); focus stays on a moved key, and goes to
+  the next key on its track after a delete, or to the timeline when none
+  is left. Times are named to the hundredth: at a sheet's 7 frames a
+  second, two keys at the same tenth had one name.
 - **The values at the playhead are labelled fields**, and one not keyed
   there says so in words ("Between keys", "Held from the last key"), not
   only in italics. The section is named for the time.

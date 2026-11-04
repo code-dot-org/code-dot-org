@@ -307,6 +307,9 @@ describe('MapEditor size controls', () => {
 
     fireEvent.click(undo);
     expect(screen.getByTestId('stage')).toHaveAttribute('data-size', '12x10');
+    expect(screen.getByTestId('history-announcer')).toHaveTextContent(
+      'Undid: changed the size',
+    );
     fireEvent.click(undo);
     expect(written(onChange).size).toEqual({
       width: VIEWPORT_TILES,
@@ -315,6 +318,9 @@ describe('MapEditor size controls', () => {
     expect(undo).toBeDisabled();
 
     fireEvent.click(redo);
+    expect(screen.getByTestId('history-announcer')).toHaveTextContent(
+      'Redid: changed the size',
+    );
     fireEvent.click(redo);
     expect(written(onChange).size).toEqual({width: 12, height: 4});
     expect(redo).toBeDisabled();

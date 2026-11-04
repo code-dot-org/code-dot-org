@@ -134,6 +134,91 @@ describe('the timeline', () => {
     expect(onDeleteKey).toHaveBeenCalledWith('drawnOffset', 0.5);
   });
 
+  it('keeps focus on a key it moves, and says so', () => {
+    const view = show();
+    screen.getByRole('button', {name: 'Offset key at 0.5 s'}).focus();
+    fireEvent.keyDown(
+      screen.getByRole('button', {name: 'Offset key at 0.5 s'}),
+      {
+        key: 'ArrowRight',
+        altKey: true,
+      },
+    );
+    // The parent writes the move, and the key comes back at its new time.
+    const moved: Timeline = {
+      tracks: {
+        ...HOP.tracks,
+        drawnOffset: HOP.tracks.drawnOffset.map(one =>
+          one.at === 0.5 ? {...one, at: 0.6} : one,
+        ),
+      },
+    };
+    view.rerender(
+      <TimelineStrip
+        name="Hop"
+        timeline={moved}
+        time={0.6}
+        onTime={vi.fn()}
+        onMoveKey={vi.fn()}
+      />,
+    );
+    expect(
+      screen.getByRole('button', {name: 'Offset key at 0.6 s'}),
+    ).toHaveFocus();
+    expect(screen.getByRole('status')).toHaveTextContent(
+      'Offset key moved to 0.6 s',
+    );
+  });
+
+  it('gives focus to the next key after a delete, or to the ruler', () => {
+    const view = show();
+    fireEvent.keyDown(
+      screen.getByRole('button', {name: 'Offset key at 0.5 s'}),
+      {
+        key: 'Delete',
+      },
+    );
+    const without = (property: string, at: number): Timeline => ({
+      tracks: Object.fromEntries(
+        Object.entries(HOP.tracks)
+          .map(([name, track]) => [
+            name,
+            name === property ? track.filter(one => one.at !== at) : track,
+          ])
+          .filter(([, track]) => (track as unknown[]).length > 0),
+      ),
+    });
+    const lessOffset = without('drawnOffset', 0.5);
+    view.rerender(
+      <TimelineStrip
+        name="Hop"
+        timeline={lessOffset}
+        time={0}
+        onTime={vi.fn()}
+        onDeleteKey={vi.fn()}
+      />,
+    );
+    expect(
+      screen.getByRole('button', {name: 'Offset key at 1 s'}),
+    ).toHaveFocus();
+    expect(screen.getByRole('status')).toHaveTextContent(
+      'Offset key at 0.5 s deleted',
+    );
+
+    const glow = screen.getAllByRole('button', {name: /key at 0.5 s$/})[0];
+    fireEvent.keyDown(glow, {key: 'Delete'});
+    view.rerender(
+      <TimelineStrip
+        name="Hop"
+        timeline={{tracks: {drawnOffset: lessOffset.tracks.drawnOffset}}}
+        time={0}
+        onTime={vi.fn()}
+        onDeleteKey={vi.fn()}
+      />,
+    );
+    expect(screen.getByRole('slider')).toHaveFocus();
+  });
+
   it('has a button to add frames, when it may', () => {
     const onAddFrames = vi.fn();
     render(

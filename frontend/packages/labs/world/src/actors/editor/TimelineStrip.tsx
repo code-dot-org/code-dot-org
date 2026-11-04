@@ -65,8 +65,12 @@ export const drawnLength = (timeline: Timeline): number => {
   return end > 0 ? Math.max(1, Math.ceil(end)) : DEFAULT_LENGTH;
 };
 
-/** The time as a person reads it: "1.2 s". */
-const seconds = (t: number) => `${Math.round(t * 10) / 10} s`;
+/**
+ * The time as a person reads it: "1.2 s", or "0.43 s" — to the hundredth,
+ * because a sheet's frames at 7 a second put keys 0.14 s apart, and two at
+ * the same tenth were two buttons with one name.
+ */
+const seconds = (t: number) => `${Math.round(t * 100) / 100} s`;
 
 export interface TimelineStripProps {
   /** The animation's name, for what the strip is called. */
@@ -177,6 +181,45 @@ export const TimelineStrip = ({
     from: number;
     to: number;
   }>();
+  // A key is keyed by its time, so moving one makes a new button and
+  // deleting one takes its button away: focus goes where this says once
+  // the strip has drawn again, the ruler when no key is named.
+  const [focusTo, setFocusTo] = useState<
+    {property: string; at: number} | 'ruler'
+  >();
+  const ruler = useRef<HTMLDivElement>(null);
+  // The timeline the edit was made on: the key is waited for until the
+  // timeline changes, which is the edit arriving, and no longer.
+  const askedOn = useRef<Timeline>();
+  useEffect(() => {
+    if (!focusTo) {
+      return;
+    }
+    const target =
+      focusTo === 'ruler'
+        ? ruler.current
+        : strip.current?.querySelector<HTMLElement>(
+            `[data-track="${CSS.escape(focusTo.property)}"][data-at="${focusTo.at}"]`,
+          );
+    if (target) {
+      target.focus();
+    } else if (askedOn.current === timeline) {
+      return;
+    }
+    setFocusTo(undefined);
+  }, [focusTo, timeline]);
+  const focusAfter = (to: {property: string; at: number} | 'ruler') => {
+    askedOn.current = timeline;
+    setFocusTo(to);
+  };
+  // …and what happened, which nothing on the strip says to a screen reader.
+  const [said, setSaid] = useState('');
+  const moveKey = (property: string, from: number, to: number) => {
+    onMoveKey?.(property, from, to);
+    onSelectKey?.({property, at: to});
+    onTime(to);
+    setSaid(`${trackName(property, effectName)} key moved to ${seconds(to)}`);
+  };
   const keyDown = (
     event: KeyboardEvent<HTMLButtonElement>,
     property: string,
@@ -186,6 +229,14 @@ export const TimelineStrip = ({
       event.preventDefault();
       onDeleteKey?.(property, at);
       onSelectKey?.(undefined);
+      const rest = (timeline.tracks[property] ?? [])
+        .map(one => one.at)
+        .filter(t => t !== at);
+      const next = rest.find(t => t > at) ?? rest.at(-1);
+      focusAfter(next === undefined ? 'ruler' : {property, at: next});
+      setSaid(
+        `${trackName(property, effectName)} key at ${seconds(at)} deleted`,
+      );
       return;
     }
     const by =
@@ -193,9 +244,8 @@ export const TimelineStrip = ({
     if (by && event.altKey && onMoveKey) {
       event.preventDefault();
       const to = toTick(Math.min(length, Math.max(0, at + by)));
-      onMoveKey(property, at, to);
-      onSelectKey?.({property, at: to});
-      onTime(to);
+      moveKey(property, at, to);
+      focusAfter({property, at: to});
     }
   };
 
@@ -272,6 +322,7 @@ export const TimelineStrip = ({
           onPointerMove={drag}
         >
           <div
+            ref={ruler}
             className={styles.ruler}
             role="slider"
             tabIndex={0}
@@ -317,6 +368,8 @@ export const TimelineStrip = ({
                     style={{left: place(shownAt)}}
                     aria-label={`${trackName(property, effectName)} key at ${seconds(one.at)}`}
                     aria-pressed={chosen}
+                    data-track={property}
+                    data-at={one.at}
                     // A key is pressed, not the strip under it.
                     onPointerDown={event => {
                       event.stopPropagation();
@@ -339,13 +392,11 @@ export const TimelineStrip = ({
                     onPointerUp={event => {
                       event.stopPropagation();
                       if (dragging && dragging.to !== dragging.from) {
-                        onMoveKey?.(
-                          dragging.property,
-                          dragging.from,
-                          dragging.to,
-                        );
-                        onSelectKey?.({property, at: dragging.to});
-                        onTime(dragging.to);
+                        moveKey(dragging.property, dragging.from, dragging.to);
+                        focusAfter({
+                          property: dragging.property,
+                          at: dragging.to,
+                        });
                       }
                       setDragging(undefined);
                     }}
@@ -364,6 +415,9 @@ export const TimelineStrip = ({
             aria-hidden="true"
           />
         </div>
+      </div>
+      <div className={styles.announcer} role="status" aria-live="polite">
+        {said}
       </div>
       {tracks.length === 0 && (
         <Typography variant="body3" component="p" className={styles.note}>
