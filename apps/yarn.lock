@@ -16361,8 +16361,8 @@ canvg@gabelerner/canvg:
 
 "eslint-plugin-cdo-custom-rules@file:./eslint::locator=blockly-mooc%40workspace%3A.":
   version: 1.0.0
-  resolution: "eslint-plugin-cdo-custom-rules@file:./eslint#./eslint::hash=bcc468&locator=blockly-mooc%40workspace%3A."
-  checksum: 10/e1f02c9e8ebade02051740dc3253d38b04abec13fefcb6d702fcf8692f5cfb2eb7cfef7b98ed6e83a81599c02883e186d3d44b760096fb4d4558cdbbe3a9910a
+  resolution: "eslint-plugin-cdo-custom-rules@file:./eslint#./eslint::hash=42dd06&locator=blockly-mooc%40workspace%3A."
+  checksum: 10/821dae668ac0abfba4f5924dfbdce0c6ae5786b169f382ca0477876b25e180e0dbe57ea578dce9a583c277edb3b2272ce67c0b9f6e9cceea03c533eddd7b25a1
   languageName: node
   linkType: hard
 

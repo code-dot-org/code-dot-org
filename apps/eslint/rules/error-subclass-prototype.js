@@ -107,7 +107,8 @@ function indentOf(sourceCode, node) {
   return line.slice(0, line.length - line.trimStart().length);
 }
 
-// Last token or comment on the statement's line: keeps a trailing comment put.
+// The last token or comment on the statement's line, so an insertion
+// after it keeps a trailing comment where it was.
 function endOfLine(sourceCode, statement) {
   let last = statement;
   for (;;) {
