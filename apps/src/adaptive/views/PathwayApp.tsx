@@ -9,6 +9,7 @@ import {
   sendAdaptiveStepReport,
   sendStartedReportIfNotStarted,
 } from '@cdo/apps/code-studio/progressRedux';
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -40,6 +41,8 @@ type View =
 interface PathwayAppProps {
   pathway: Pathway;
   progressKey: ProgressKey;
+  /** The adaptive level's own properties, for the map's resource rail. */
+  levelProperties: LevelProperties;
 }
 
 /**
@@ -69,6 +72,7 @@ function projectCheckpoint(pathway: Pathway): Checkpoint {
 const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   pathway,
   progressKey,
+  levelProperties,
 }) => {
   const dispatch = useAppDispatch();
   const reportLevelStep = useCallback(
@@ -128,6 +132,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     <LoadedPathwayApp
       pathway={pathway}
       progressKey={progressKey}
+      levelProperties={levelProperties}
       progress={progress}
       statusMap={statusMap}
       initialCheckpointId={initialCheckpointId}
@@ -153,6 +158,7 @@ type LoadedPathwayAppProps = PathwayAppProps &
 const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   pathway,
   progressKey,
+  levelProperties,
   progress,
   statusMap,
   initialCheckpointId,
@@ -199,8 +205,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     window.addEventListener('popstate', handler);
     return () => window.removeEventListener('popstate', handler);
   }, [pathway.checkpoints, progress, statusMap]);
-  // After a routing checkpoint, the map focuses the next open checkpoint,
-  // read once the finish's step completion and answers are in the status map.
+  // After a routing checkpoint, zoom the map to the next suggested checkpoint.
   useEffect(() => {
     if (view.kind === 'map' && view.focusNext) {
       setView({kind: 'map', focusId: nextCheckpoint(pathway, statusMap)});
@@ -226,6 +231,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       ? pathway.checkpoints.find(c => c.id === view.checkpointId)
       : undefined;
   const playing = view.kind === 'project' ? project : checkpoint;
+  // A review's build request is for the checkpoint it was made in.
+  const [buildRequested, setBuildRequested] = useState(false);
+  useEffect(() => setBuildRequested(false), [playing]);
   // The shell's AI calls run as the adaptive level, not the step's level.
   const aiContext = useMemo<AichatContext>(
     () => ({
@@ -246,6 +254,8 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         saveGeneratedInstructions,
         recordValidation,
         aiContext,
+        buildRequested,
+        setBuildRequested,
       },
     [
       pathway,
@@ -255,6 +265,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       saveGeneratedInstructions,
       recordValidation,
       aiContext,
+      buildRequested,
     ]
   );
 
@@ -265,6 +276,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       <div className={styles.app}>
         <PathwayContext.Provider value={pathwayContext}>
           <StepPlayer
+            key={checkpoint.id}
             checkpoint={checkpoint}
             finishLabel={isProject ? 'Back to map' : undefined}
             headerTitle={isProject ? checkpoint.title : undefined}
@@ -275,10 +287,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             onSaveAnswers={saveAnswers}
             onExit={() => {
               clearUrl();
-              setView({
-                kind: 'map',
-                focusId: isProject ? undefined : checkpoint.id,
-              });
+              setView({kind: 'map'});
             }}
             onFinish={() => {
               clearUrl();
@@ -294,6 +303,10 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     );
   }
 
+  const hasSkippedCheckpoints = Object.values(statusMap).some(
+    s => s === 'skipped'
+  );
+
   return (
     <div className={styles.app}>
       <AdaptiveHeader
@@ -302,6 +315,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       />
       <MapScreen
         pathway={pathway}
+        levelProperties={levelProperties}
         statusMap={statusMap}
         evidence={evidence}
         focusId={view.kind === 'map' ? view.focusId : undefined}
@@ -316,6 +330,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           });
         }}
         onWorkOnProject={openProject}
+        hasSkippedCheckpoints={hasSkippedCheckpoints}
       />
     </div>
   );

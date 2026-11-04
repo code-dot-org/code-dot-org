@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-8894785-6e97d16b806c",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are important tasks when managing survey data before using it in AI Lab? (Select all that apply)",
+  "solution": [
+    {
+      "option": "Uploading the data to AI Lab",
+      "correct": true
+    },
+    {
+      "option": "Cleaning the data for inconsistencies",
+      "correct": true
+    },
+    {
+      "option": "Creating a presentation about the data",
+      "correct": false
+    },
+    {
+      "option": "Downloading the data from Google Sheets",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "95f617bc-90da-49fa-bc90-e74bf31257a8",
+    "ed494d05-e2f5-4f17-b838-30298f23e684"
+  ]
+}

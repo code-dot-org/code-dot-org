@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894776-307199108f72",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is the purpose of a Model Card in AI Lab?",
+  "solution": [
+    {
+      "option": "To document the performance and details of a machine learning model.",
+      "correct": true
+    },
+    {
+      "option": "To create a user interface for an app.",
+      "correct": false
+    },
+    {
+      "option": "To visualize data used for training.",
+      "correct": false
+    },
+    {
+      "option": "To connect models to external databases.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "caba020f-2495-4cc1-accb-a1b4957c506c"
+  ]
+}

@@ -1,4 +1,5 @@
 require 'cdo/shared_constants'
+require 'cdo/anon_user_id'
 require 'omni_auth/strategies/google_oauth2_without_tokeninfo'
 
 # Use this hook to configure devise mailer, warden hooks and so forth.
@@ -352,6 +353,10 @@ Devise.setup do |config|
     # The same request may sign in another user, who must not read the old ID from the incoming cookie/session.
     auth.request.cookies.delete(SharedConstants::STATSIG_STABLE_ID_KEY)
     auth.raw_session.delete(SharedConstants::STATSIG_STABLE_ID_KEY)
+
+    # The next user in this browser gets a new one.
+    auth.cookies.delete(Cdo::AnonUserId::KEY, domain: auth.request.shared_cookie_domain)
+    auth.request.cookies.delete(Cdo::AnonUserId::KEY)
 
     # These marketing cookies are set in the home_controller in init_homepage. When the user logs out, we
     # remove these cookies because they are user-specific. The cookies are set in init_homepage instead of after_set_user

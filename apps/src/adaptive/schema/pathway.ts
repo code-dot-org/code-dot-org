@@ -1,6 +1,7 @@
 import {z} from 'zod';
 
 import {checkpointSchema, checkpointSourceSchema} from './checkpoint';
+import {destinationSchema} from './destination';
 import {projectSchema, projectSourceSchema} from './project';
 import {skillSchema, skillSourceSchema} from './skill';
 
@@ -34,6 +35,11 @@ export const pathwaySourceSchema = z.strictObject({
   // A pathway's standards are its skills' standards; see pathwayStandards().
   skills: z.record(z.string(), skillSourceSchema),
   checkpoints: z.array(checkpointSourceSchema).min(1),
+  /**
+   * The map's destinations by id, which checkpoints name in `destination`.
+   * Without this map a checkpoint's `destination` is the title itself.
+   */
+  destinations: z.record(z.string().min(1), destinationSchema).optional(),
   /** How the map is drawn, unless a URL parameter says otherwise. */
   map: mapSchema.optional(),
 });

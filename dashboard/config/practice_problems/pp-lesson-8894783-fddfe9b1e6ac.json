@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894783-fddfe9b1e6ac",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following best represents a core issue derived from the problem observation 'many students are struggling with remote learning'?",
+  "solution": [
+    {
+      "option": "Lack of access to technology",
+      "correct": true
+    },
+    {
+      "option": "Students are not motivated",
+      "correct": false
+    },
+    {
+      "option": "Teachers are not available",
+      "correct": false
+    },
+    {
+      "option": "Remote learning is boring",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "e0113438-48de-41de-a347-11974399f172"
+  ]
+}

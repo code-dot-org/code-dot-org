@@ -16,6 +16,13 @@
   gap: 12px;
 }
 
+// A carousel takes the room its host gives, so the set scrolls between
+// arrows that stay put; the clusters grow and let the host scroll.
+.menusFill {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
 .srOnly {
   @include sr-only.sr-only;
 }
@@ -36,9 +43,9 @@
 
 .sentence {
   margin: 0;
-  min-height: 48px;
-  font-size: 22px;
-  line-height: 2;
+  min-height: 44px;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--text-neutral-primary);
 }
 
@@ -108,13 +115,17 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin: 0 2px;
-  padding: 3px 24px 3px 4px;
+  // The vertical margin is the room between the sentence's lines.
+  margin: 6px 2px;
+  padding: 4px 26px 4px 6px;
+  border: 1px solid var(--border-neutral-primary);
   border-radius: 999px;
+  font-weight: 600;
   line-height: 1.4;
-  background-color: var(--hue);
-  color: var(--hue-text);
-  box-shadow: 0 2px 0 var(--hue-dark);
+  // The page's background and text colors for every slot; a chip carries
+  // no slot-specific color.
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
   vertical-align: middle;
   animation: chip-land 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -130,16 +141,19 @@
   }
 }
 
-.emojiBadge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.5em;
-  height: 1.5em;
+// The icon beside a word, in the word's own color; a plain color is a dot.
+.wordIcon {
+  flex: none;
+  width: 1.25em;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.colorDot {
+  flex: none;
+  width: 0.9em;
+  height: 0.9em;
   border-radius: 50%;
-  background: var(--neutral-white-alpha-80);
-  font-size: 0.85em;
-  line-height: 1;
 }
 
 .keepTogether {
@@ -169,15 +183,16 @@ button.chipWord {
   padding-right: 14px;
 }
 
-// Where the word from the set on show would land.
+// The empty slot where the next chosen word will go: a dashed white outline
+// over a translucent white wash.
 .placeholder {
   min-width: 80px;
   min-height: 1.5em;
   padding-right: 14px;
-  background: transparent;
-  border: 2px dashed var(--hue-line);
+  background: var(--neutral-white-alpha-20);
+  border: 2px dashed var(--border-neutral-white-fixed);
   box-shadow: none;
-  opacity: 0.8;
+  opacity: 0.9;
   animation: slot-pulse 1.6s ease-in-out infinite;
 }
 
@@ -198,7 +213,7 @@ button.chipWord {
 .dropTarget {
   opacity: 1;
   transform: scale(1.08);
-  box-shadow: 0 0 0 4px var(--hue);
+  box-shadow: 0 0 0 3px var(--border-neutral-secondary);
 }
 
 .placeholder.dropTarget {
@@ -209,34 +224,31 @@ button.chipWord {
   opacity: 0.5;
 }
 
-// The chip's corner badge. Nested under the chip to outrank the button's
-// own shape.
+// The chip's corner badge, a true circle. Nested under the chip to outrank
+// the button's own shape and padding.
 .chip .remove {
   position: absolute;
   top: -12px;
   right: -12px;
+  width: 24px;
+  height: 24px;
+  min-width: 0;
+  padding: 0;
   border: 2px solid var(--background-neutral-primary);
   border-radius: 50%;
 }
 
+// No frame of its own: the pane frames the whole word area.
 .carouselBox {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   gap: 2px;
+  min-height: 0;
   padding: 8px 6px 8px;
-  border-radius: 16px;
-  border: 1px solid var(--border-neutral-secondary);
-  background-color: var(--background-neutral-primary);
-  box-shadow: 0 4px 0 var(--neutral-black-alpha-30);
 }
 
 @media (max-height: 800px) {
-  .sentence {
-    min-height: 40px;
-    font-size: 19px;
-    line-height: 1.9;
-  }
-
   .carouselBox {
     gap: 0;
     padding: 4px 4px 6px;
@@ -246,46 +258,73 @@ button.chipWord {
 // One slot's words at a time, between the arrows.
 .carousel {
   display: flex;
+  flex: 1 1 auto;
   align-items: stretch;
   gap: 4px;
+  min-height: 0;
 }
 
-// The arrows and dots fade in once there is a second set to go to.
-.arrow,
-.dots {
-  transition: opacity 0.3s ease-out;
+// The arrows above and below the set instead of beside it.
+.carouselVertical {
+  flex-direction: column;
+  align-items: stretch;
+
+  .arrow {
+    align-self: center;
+  }
 }
 
-.dots.navHidden {
-  opacity: 0;
-  visibility: hidden;
+// Closer rows and a shorter set, for a narrow pane.
+.carouselTight {
+  gap: 0;
+  padding: 4px 4px 6px;
+
+  .set {
+    min-height: 72px;
+    padding: 4px;
+  }
 }
 
+// Every open set at once, one cluster of words per set down the pane, with
+// a rule between each pair; the set the sentence's blank stands at is
+// marked.
+.clusters {
+  display: flex;
+  flex-direction: column;
+}
+
+.cluster {
+  padding: 14px 0;
+
+  & + & {
+    border-top: 1px solid var(--border-neutral-secondary);
+  }
+}
+
+// The arrows are always there; one with nowhere to go is disabled.
 .arrow {
   flex: none;
   align-self: center;
   margin: 0;
-
-  // Doubled to outrank the component's disabled look.
-  &.navHidden.navHidden {
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
-// All sets share one grid cell, so the stack is as tall as the tallest set.
+// All sets share one grid cell, so the stack is as tall as the tallest set;
+// the set on show scrolls here while the arrows at the edges stay put.
 .sets {
   flex: 1 1 auto;
   min-width: 0;
+  min-height: 0;
   display: grid;
+  overflow-y: auto;
 }
 
+// The words sit mid-height in a short set; a tall set scrolls from its
+// top (auto margins center without clipping, where align-items would).
 .set {
   grid-area: 1 / 1;
   min-width: 0;
   min-height: 108px;
   display: flex;
-  align-items: center;
   padding: 6px 4px;
 }
 
@@ -338,75 +377,14 @@ button.chipWord {
   }
 }
 
-// The page gives every button a 5px margin; the chips, dots and arrows
+// The page gives every button a 5px margin; the chips and arrows
 // zero it so these gaps are the whole gap.
 .words {
   display: flex;
+  flex: 1 1 auto;
   flex-wrap: wrap;
   gap: 6px;
-}
-
-.dotsRow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 32px;
-}
-
-.dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-
-// A 24px button around a 12px dot: a neutral ring until the set has its
-// word (a hue ring fails contrast on one theme's tray or the other), filled
-// with the set's color once it does, and ringed darker while on show.
-.dot {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  animation: dot-in 0.3s ease-out;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 6px;
-    border-radius: 50%;
-    border: 2px solid var(--text-neutral-secondary);
-  }
-}
-
-@keyframes dot-in {
-  from {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .dot {
-    animation: none;
-  }
-}
-
-.dotFilled::before {
-  background-color: var(--hue);
-}
-
-.dotCurrent::before {
-  background-color: var(--hue);
-  border-color: var(--text-neutral-primary);
-  transform: scale(1.25);
+  margin: auto 0;
 }
 
 .word {
@@ -414,38 +392,31 @@ button.chipWord {
   align-items: center;
   gap: 8px;
   margin: 0;
-  min-height: 44px;
-  border: 2px solid var(--hue-line);
+  min-height: 40px;
+  // Its own stacking context: the browser paints a drag ghost from the
+  // dragged element's nearest stacking context, clipped to the element's
+  // box, so without this the ghost carries the word box's white corners.
+  isolation: isolate;
+  border: 1px solid var(--border-neutral-primary);
   border-radius: 999px;
-  background: var(--background-neutral-secondary);
+  background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   font: inherit;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
-  padding: 4px 16px 4px 6px;
-  box-shadow: 0 3px 0 var(--hue-dark);
+  padding: 4px 16px 4px 10px;
   cursor: grab;
   transition:
-    transform 0.12s ease-out,
-    box-shadow 0.12s ease-out;
+    background-color 0.12s ease-out,
+    border-color 0.12s ease-out;
   // Backwards only: a fill after the end would hold the pop's transform
   // over the hover and press ones.
   animation: word-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
   animation-delay: calc(var(--i) * 35ms);
 
-  .emojiBadge {
-    background: var(--hue);
-    color: var(--hue-text);
-  }
-
   &:hover:not(:disabled, .chosen) {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 0 var(--hue-dark);
-  }
-
-  &:active:not(:disabled) {
-    transform: translateY(3px);
-    box-shadow: 0 0 0 var(--hue-dark);
+    background: var(--background-neutral-secondary);
+    border-color: var(--border-neutral-secondary);
   }
 
   &:disabled {
@@ -464,14 +435,10 @@ button.chipWord {
   }
 }
 
-// Outranks the hover above.
+// Outranks the hover above: the picked word is dimmed in the list, as if
+// used up, though a press still takes it back out of the sentence.
 .word.chosen {
-  background-color: var(--hue);
-  color: var(--hue-text);
-
-  .emojiBadge {
-    background: var(--neutral-white-alpha-80);
-  }
+  opacity: 0.4;
 }
 
 @media (prefers-reduced-motion: reduce) {

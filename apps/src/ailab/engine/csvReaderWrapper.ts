@@ -1,5 +1,7 @@
 import Papa, {type ParseResult} from 'papaparse';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 import {ColumnTypes} from './constants';
 import {containsOnlyNumbers} from './helpers/columnDetails';
 import type {DataRow, DatasetError} from './types';
@@ -11,20 +13,18 @@ export type CsvResult =
   | {ok: true; rows: DataRow[]; removedRowsCount: number}
   | {ok: false; reason: DatasetError};
 
-/* Parses CSV text, only used for tests. */
 export const parseCsvText = (csv: string): CsvResult =>
   readRows(Papa.parse<Record<string, string>>(csv, PARSE_OPTIONS));
 
-/* Fetches a csv we own. Resolves even when the fetch fails. */
-export const fetchCsv = (url: string): Promise<CsvResult> =>
-  new Promise(resolve =>
-    Papa.parse(url, {
-      ...PARSE_OPTIONS,
-      download: true,
-      complete: completeWith(resolve),
-      error: failWith(resolve),
-    })
-  );
+// Fetches a csv we own. Resolves even when the fetch fails.
+export const fetchCsv = async (url: string): Promise<CsvResult> => {
+  try {
+    const response = await HttpClient.get(url);
+    return parseCsvText(await response.text());
+  } catch {
+    return LOAD_FAILED;
+  }
+};
 
 /* Parses a CSV the student uploaded. */
 export const parseCsvFile = (file: File): Promise<CsvResult> =>
@@ -46,8 +46,9 @@ const completeWith =
   (resolve: Resolve) => (result: ParseResult<Record<string, string>>) =>
     resolve(readRows(result));
 
-const failWith = (resolve: Resolve) => () =>
-  resolve({ok: false, reason: 'loadFailed'});
+const LOAD_FAILED: CsvResult = {ok: false, reason: 'loadFailed'};
+
+const failWith = (resolve: Resolve) => () => resolve(LOAD_FAILED);
 
 export const inferColumnTypes = (rows: DataRow[]): Record<string, string> =>
   Object.fromEntries(

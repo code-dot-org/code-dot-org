@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-8894907-42956e0ab314",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms to their correct definitions.",
+  "solution": [
+    {
+      "option": "Alignment",
+      "correct": "Ensuring AI goals match human values."
+    },
+    {
+      "option": "AI bias",
+      "correct": "Favoring certain information in AI outputs."
+    },
+    {
+      "option": "Training data",
+      "correct": "Data used to teach an AI system."
+    }
+  ],
+  "objective_keys": [
+    "74197709-735f-44be-85ac-92805b1575ba"
+  ]
+}

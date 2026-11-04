@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-8894771-50ac97138af5",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Select all methods that can be used to help computers make decisions based on data.",
+  "solution": [
+    {
+      "option": "Using a decision tree",
+      "correct": true
+    },
+    {
+      "option": "Random selection",
+      "correct": true
+    },
+    {
+      "option": "Ignoring data completely",
+      "correct": false
+    },
+    {
+      "option": "Analyzing patterns in the data",
+      "correct": true
+    }
+  ],
+  "objective_keys": [
+    "24940293-596a-4574-8258-70308014b542",
+    "a16f6adb-5245-453e-87a7-29d19c0ae9fa"
+  ]
+}

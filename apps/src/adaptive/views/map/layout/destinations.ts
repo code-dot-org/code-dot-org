@@ -179,9 +179,9 @@ function destinationGroups(checkpoints: Checkpoint[]): DestinationGroup[] {
   const groups: DestinationGroup[] = [];
   for (const c of checkpoints) {
     if (!c.destination) continue;
-    const group = groups.find(g => g.title === c.destination);
+    const group = groups.find(g => g.key === c.destination);
     if (group) group.ids.push(c.id);
-    else groups.push({title: c.destination, ids: [c.id]});
+    else groups.push({key: c.destination, ids: [c.id]});
   }
   return groups;
 }

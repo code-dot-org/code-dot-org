@@ -1,0 +1,26 @@
+{
+  "formatVersion": 4,
+  "id": "ai-makerspace-2026",
+  "title": "AI Makerspace 2026",
+  "objective": "Placeholder until the AI Makerspace 2026 pathway is authored.",
+  "project": {
+    "templateLevel": "adaptive-HoAI26-template-main-project",
+    "description": "Work on your final project here!"
+  },
+  "skills": {},
+  "checkpoints": [
+    {
+      "id": "intro",
+      "title": "Intro",
+      "description": "Placeholder checkpoint.",
+      "steps": [
+        {
+          "id": "intro-placeholder",
+          "kind": "markdown",
+          "title": "Coming soon",
+          "markdown": "This pathway is under construction."
+        }
+      ]
+    }
+  ]
+}

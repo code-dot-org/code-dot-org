@@ -231,33 +231,11 @@ export function isNameUnique(name, animationListProps) {
  * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
  */
 function generateAnimationName(baseName, animationList) {
-  let unavailableNumbers = [];
-  // Match names with the form baseName_#
-  for (let animation in animationList) {
-    let animationName = animationList[animation].name;
-    if (
-      animationName &&
-      animationName.substring(0, baseName.length) === baseName
-    ) {
-      animationName = animationName.replace(baseName, '');
-      if (animationName[0] === '_') {
-        const brokenUpString = animationName.split('_');
-        // TODO: Address the fragility here if animationName includes multiple underscores.
-        const number = parseInt(brokenUpString.pop());
-        unavailableNumbers.push(number);
-      }
-    }
+  let number = 1;
+  while (!isNameUnique(`${baseName}_${number}`, animationList)) {
+    number++;
   }
-  unavailableNumbers.sort((a, b) => a - b);
-  let availableNumber = 1;
-  for (let i = 0; i < unavailableNumbers.length; i++) {
-    if (availableNumber === unavailableNumbers[i]) {
-      availableNumber++;
-    } else {
-      break;
-    }
-  }
-  return baseName + '_' + availableNumber.toString();
+  return `${baseName}_${number}`;
 }
 
 /**

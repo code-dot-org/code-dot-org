@@ -75,6 +75,8 @@ class DCDO < DynamicConfigBase
       # Controls whether Sprite Lab in Lab2's image generation runs the prompt and
       # picture LLM safety judges. Azure image moderation still runs when this is false.
       'spritelab-lab2-image-safety-enabled': DCDO.get('spritelab-lab2-image-safety-enabled', true),
+      # Sprite Lab in Lab2's "ask AI" block; also gates the access token server-side.
+      'spritelab-lab2-ask-ai-enabled': DCDO.get('spritelab-lab2-ask-ai-enabled', true),
       'frontend-observability-enabled': DCDO.get('frontend-observability-enabled', false),
       'browser-events-enabled': DCDO.get('browser-events-enabled', true),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
@@ -84,7 +86,10 @@ class DCDO < DynamicConfigBase
       # AI descriptions of Python Lab theater output; also gates the access token server-side.
       'theater-ai-descriptions-enabled': DCDO.get('theater-ai-descriptions-enabled', false),
       # Kill switch for Tutor+ (lesson deep dive); also gates its endpoints and chat server-side.
-      'lesson-deep-dive-enabled': DCDO.get('lesson-deep-dive-enabled', true)
+      'lesson-deep-dive-enabled': DCDO.get('lesson-deep-dive-enabled', true),
+      # Whether the AI gateway serves users with blocked providers from another provider;
+      # also lets dashboard mint gateway tokens for those users.
+      ai_gateway_fallback_is_enabled: DCDO.get('ai_gateway_fallback_is_enabled', false)
     }
   end
 end

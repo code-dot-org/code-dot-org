@@ -38,6 +38,7 @@ import {projectInfoFromChannel} from '../../project/projectInfo';
 import {LevelStep as LevelStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
 
+import {useGenerateProject} from './useGenerateProject';
 import {useStepInstructions} from './useStepInstructions';
 import {useStepValidation} from './useStepValidation';
 
@@ -100,6 +101,15 @@ type LevelPlayerProps = LevelStepProps & {
   View: Lab2EntryPoint['view'];
 };
 
+/** The project template's start sources as the level carries them, if any. */
+function templateStartSources(
+  levelProperties: LevelProperties
+): ProjectSources | undefined {
+  const sources = levelProperties.templateSources;
+  if (!sources) return undefined;
+  return 'source' in sources ? sources : {source: sources};
+}
+
 /** Loads the level's project, then mounts the lab view over it. */
 const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   step,
@@ -108,7 +118,15 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   onComplete,
 }) => {
   const {levelProperties} = step;
-  const {currentSources, channel, projectManager, loadError} = useSources({
+  const {
+    currentSources,
+    channel,
+    projectManager,
+    loadError,
+    isLoading,
+    isEditable,
+    updateSources,
+  } = useSources({
     levelProperties,
     defaultSources: EMPTY_SOURCES,
   });
@@ -121,23 +139,64 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     saveGeneratedInstructions,
     recordValidation,
     aiContext,
+    buildRequested,
+    setBuildRequested,
   } = usePathwayContext();
   // Read on mount, before StepPlayer's start of this visit gives it a status.
   const [firstVisit] = useState(() => !progress.steps[step.id]?.status);
+  // A review's build request is for the first project step with a prompt
+  // after it, so this step takes it on mount and spends it.
+  const [buildProject] = useState(
+    () => !!step.project && !!step.projectPrompt && buildRequested
+  );
+  useEffect(() => {
+    if (buildProject) setBuildRequested(false);
+  }, [buildProject, setBuildRequested]);
   // Keyed on the project's strings, not the channel, which changes on every save.
   const {name: projectName, description: projectDescription} =
     projectInfoFromChannel(step.project ? channel : undefined);
+  // A step with a project prompt rebuilds the owner's project from their
+  // plan when they asked for that on the review step before it, before
+  // anything else reads it. Opening it any other way loads what is there.
+  // Unknown until loaded.
+  const isProjectLoaded =
+    !isLoading && currentSources !== undefined && !!channel && !!projectManager;
+  const shouldGenerateProject =
+    !step.project || !step.projectPrompt || !buildProject
+      ? false
+      : !isProjectLoaded
+      ? undefined
+      : isEditable;
+  // Built over the template's start sources, not the project as it stands,
+  // so a rebuild does not inherit the site it replaces.
+  const templateSources = useMemo(
+    () => templateStartSources(levelProperties),
+    [levelProperties]
+  );
+  const {isResolved: projectReady} = useGenerateProject({
+    shouldGenerate: shouldGenerateProject,
+    pathway,
+    checkpoint,
+    step,
+    progress,
+    aichatContext: aiContext,
+    sources: templateSources ?? currentSources,
+    channel,
+    projectManager,
+    updateSources,
+  });
   // Instructions: the step's own or the level's, or for a project step with
   // a prompt, generated around the student's project. The lab waits until
   // they are resolved, so it never mounts with text that is about to change.
-  const {instructions, isResolved} = useStepInstructions({
+  const generatedInstructions = progress.steps[step.id]?.generatedInstructions;
+  const {instructions, isResolved: instructionsReady} = useStepInstructions({
     pathway,
     checkpoint,
     step,
     projectInfo: {name: projectName, description: projectDescription},
-    sources: currentSources,
+    sources: projectReady ? currentSources : undefined,
     authoredInstructions: step.instructions ?? levelProperties.longInstructions,
-    generatedInstructions: progress.steps[step.id]?.generatedInstructions,
+    generatedInstructions,
     saveGeneratedInstructions,
     aichatContext: aiContext,
   });
@@ -158,6 +217,11 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     step,
     projectInfo: {name: projectName, description: projectDescription},
     instructions,
+    // A failed regeneration shows authored text but leaves older generated text saved.
+    instructionsTraceId:
+      generatedInstructions?.instructions === instructions
+        ? generatedInstructions?.traceId
+        : undefined,
     aichatContext: aiContext,
     chat,
     recordValidation: recordStepValidation,
@@ -261,10 +325,12 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   const ready =
     currentSources !== undefined &&
     (!projectManager || registered) &&
-    isResolved;
-  // Resolving instructions can take a model call; say so instead of "slow".
+    projectReady &&
+    instructionsReady;
+  // The project and the instructions can each take a model call; say so
+  // instead of "slow".
   const loadingText =
-    currentSources !== undefined && !isResolved
+    currentSources !== undefined && !(projectReady && instructionsReady)
       ? 'Preparing your workspace...'
       : undefined;
   return (

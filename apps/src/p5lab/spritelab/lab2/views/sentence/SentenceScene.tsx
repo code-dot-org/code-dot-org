@@ -1,16 +1,12 @@
-// An image level laid out as two halves: the picture on the left, the
-// controls on the right. A host with its own chrome (the image dialog)
-// passes a layout that places the same parts itself.
+// Making a picture from a sentence of word chips: the words, the model's
+// run, the picture it made, and the rating. A host lays the parts out.
 
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import Toggle from '@code-dot-org/component-library/toggle';
+import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {generateCharacterSet} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
@@ -19,54 +15,40 @@ import {
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
-  UploadImageFunction,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
-import {
-  IMAGE_KINDS,
-  imageKindFor,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageKinds';
 import {ImageSafetyError} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety';
 import {defaultPixelGrid} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/modelHelpers';
 import {
-  imageKindLabel,
   ImageStyle,
   ImageSubject,
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import {
-  BACKGROUND_GROUND_COLOR,
-  blankPaintImage,
-} from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
-import PixelEditor, {PaletteColor} from '@cdo/apps/pixelEditor/PixelEditor';
-import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import characterOutline from '@cdo/static/spritelab_lab2/character-outline.svg';
+  CHARACTER_STRIP_FRAME_COUNT,
+  stripCellOrigin,
+} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
+import BehindTheScenes from '../images/teaching/BehindTheScenes';
+import {pickTip} from '../images/teaching/generationTips';
+import StripFrame from '../StripFrame';
 
-import AlternativeThumbs from './AlternativeThumbs';
-import BehindTheScenes from './BehindTheScenes';
-import GeneratingSteps from './GeneratingSteps';
-import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
-import ResultActions, {
-  Verdict,
-  VerdictReason,
-  VerdictRow,
-} from './ResultActions';
-import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
-import {pickFact} from './sentenceFacts';
+import {PixelReveal, SparkleBurst} from './PixelReveal';
 import SentenceReadOnly from './SentenceReadOnly';
 import {
   Choices,
   chosenBodyPlan,
   isComplete,
   promptText,
+  restoreChoices,
+  SavedChoices,
   sentenceFor,
 } from './sentences';
-import SentenceSceneLayout from './SentenceSceneLayout';
 import {playSound} from './sentenceSounds';
 import {SentPrompts, sentPromptsFor} from './sentPrompts';
-import WordMenus from './WordMenus';
+import {Verdict} from './verdict';
+import {WordLayout} from './wordLayout';
+import {useWordMenus} from './WordMenus';
 
 import styles from './sentence-scene.module.scss';
 
@@ -74,30 +56,31 @@ import styles from './sentence-scene.module.scss';
 const STYLE: ImageStyle = 'pixel';
 // The service's middle temperature.
 const TEMPERATURE = 1;
-// The last step's tick shows this long before the picture replaces it.
-const SETTLE_MS = 500;
 
-export type Mode = 'edit' | 'generating' | 'result' | 'paint';
+export type Mode = 'edit' | 'generating' | 'result';
 
-const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'bucket', 'eraser'];
-// The pixel editor's own starting blue, then black and white.
-const PAINT_COLORS: readonly PaletteColor[] = [
-  {name: 'Blue', rgba: [0, 155, 233, 255]},
-  {name: 'Black', rgba: [34, 34, 34, 255]},
-  {name: 'White', rgba: [255, 255, 255, 255]},
-];
-// One brush, the finest on the pixel grid.
-const PAINT_BRUSH_SIZES: readonly number[] = [1];
-
-interface Made {
+interface GeneratedPicture {
   /** The result's filename, unique per generation. */
   id: string;
   result: GeneratedImageResult;
   dataURI: string;
-  /** The student's sentence. */
+  /** The prompt the student built. */
   prompt: string;
   /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
+}
+
+/** Settings from the Advanced popover: a typed prompt that replaces the
+    chosen words, a coarser pixel grid, and the current picture as the
+    model's input image. */
+export interface AdvancedOptions {
+  /** When set, the typed text is sent instead of the chosen words, and the
+      result is always a single still picture, never a character set. */
+  prompt?: string;
+  /** Divides the kind's default pixel grid: 1 is the default. */
+  pixelScale?: number;
+  /** The current picture's pixels, which the prompt then modifies. */
+  startFrom?: () => Promise<string | null>;
 }
 
 /** What a host lays out. The nodes are ready to place; the callbacks and
@@ -105,178 +88,211 @@ interface Made {
 export interface SentenceSceneParts {
   mode: Mode;
   busy: boolean;
-  /** Every word the sentence needs is chosen. */
+  /** Every word the sentence needs is chosen, or a prompt is typed. */
   complete: boolean;
   panelRef: React.RefObject<HTMLElement>;
-  /** The picture, the spinner, or nothing. */
+  /** The frame's contents: the generated picture, the spinner while
+      generating, or null before the first generation. */
   frame: React.ReactNode;
   /** A made picture is showing in the frame. */
   frameFilled: boolean;
-  /** Behind the scenes, once there is a picture. */
-  underFrame: React.ReactNode;
-  /** The session's pictures as a column of tiles down the frame's left,
-      the one in the frame marked. */
-  alternatives: React.ReactNode;
+  /** The Behind the scenes button, once there is a picture. */
+  behindTheScenes: React.ReactNode;
   /** The screen reader's status line. */
   status: React.ReactNode;
-  /** The Type dropdown, when the host offers the choice. */
-  typeChoice: React.ReactNode;
-  /** The word menus, or the sentence read back while busy. */
+  /** The sentence line: its word chips, or the sentence read back while
+      busy. */
   sentence: React.ReactNode;
+  /** The words to choose from; the picture made from them stays in the
+      frame until the next generation. */
+  wordChooser: React.ReactNode;
+  /** The Animated checkbox, for a character. */
+  animatedChoice: React.ReactNode;
   error: React.ReactNode;
-  /** The model's steps, while generating. */
-  progress: React.ReactNode;
-  fact: React.ReactNode;
-  /** The question and the thumbs, once there is a picture. */
-  verdict: React.ReactNode;
+  /** A tip about how image-making AI works, shown while generating; a new
+      one per generation, always different from the previous one. */
+  tip: string | null;
+  /** The rating: offered while a fresh picture (or, when the level rates
+      every one, any picture) is in the frame. */
+  rating: {
+    offered: boolean;
+    /** The level checks for a rating: the host offers no way to dismiss. */
+    required: boolean;
+    verdict: Verdict | null;
+    judge: (verdict: Verdict) => void;
+    explain: (reasons: string[]) => void;
+    /** Hides the rating strip for this picture without recording a
+        verdict. */
+    dismiss: () => void;
+  };
   /** The level's generations are used up: Generate stays off. */
   exhausted: boolean;
   generate: () => void;
-  changeWords: () => void;
-  keep: () => void;
   /** The style and the kind the host's own paint entry would start from. */
   draft: {imageType: ImageType; subject?: ImageSubject; style: ImageStyle};
 }
 
 interface SentenceSceneProps {
+  /** A character set shows this frame, still, instead of playing. */
+  stillFrame?: number;
   imageType: ImageType;
   imageSubject?: ImageSubject;
-  /** The sentence to build, by id; the image type's own when unset. */
-  sentenceId?: string;
-  /** Recorded on the saved image. */
-  imageRole?: string;
-  uploadImage?: UploadImageFunction;
-  /** The level's instructions, markdown, read at the top of the panel. */
-  instructions?: string;
-  /** What the panel reads instead once a picture is made. */
-  resultInstructions?: string;
-  /** Instructions while the student draws, in place of `instructions`,
-      which never shows then. */
-  paintInstructions?: string;
   /** Generations the student has left; Generate goes off at none. */
   generationsLeft?: number;
-  /** Offer the read-aloud button on the instructions. */
-  showTts?: boolean;
-  /** Offer the Type dropdown; imageType and imageSubject are then where it
-      starts. */
-  typeChoice?: boolean;
-  /** Keep a made picture; the level's own saving when unset. */
-  onKeep?: (result: GeneratedImageResult) => Promise<void> | void;
-  /** A generation request is leaving. */
+  /** The words the image was made with, put back as far as the sentence
+      still holds them. */
+  initialChoices?: SavedChoices;
+  /** Where the Animated switch starts; on unless given. */
+  initialAnimated?: boolean;
+  /** The student turned Animated on or off. */
+  onAnimatedChange?: (animated: boolean) => void;
+  /** Called with each generated picture as soon as it is shown, and again
+      with the verdict added to its generation metadata when the student
+      rates it. */
+  onKeep: (result: GeneratedImageResult) => Promise<void> | void;
+  /** Called when a generation request is sent to the model. */
   onGenerateStart?: () => void;
+  /** The scene is making or keeping a picture, or has stopped; a host can
+      hold its other controls still meanwhile. */
+  onBusyChange?: (busy: boolean) => void;
+  /** The level checks that the picture was rated. */
+  ratingRequired?: boolean;
   /** Analytics: which surface generated. */
   method?: string;
-  /** Lay the parts out instead of the level's two halves. */
-  layout?: (parts: SentenceSceneParts) => React.ReactNode;
+  /** Lays the parts out. */
+  layout: (parts: SentenceSceneParts) => React.ReactNode;
+  /** How the word menus lay their words out; the carousel unless given. */
+  wordLayout?: WordLayout;
+  /** Behind the scenes as an icon alone, for a host's header. */
+  compactBehindTheScenes?: boolean;
+  advanced?: AdvancedOptions;
 }
 
 const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
-  imageType: initialImageType,
-  imageSubject: initialImageSubject,
-  sentenceId,
-  imageRole,
-  uploadImage,
-  instructions,
-  resultInstructions,
-  paintInstructions,
+  stillFrame,
+  imageType,
+  imageSubject,
   generationsLeft,
-  showTts,
-  typeChoice,
+  initialChoices,
+  initialAnimated = true,
+  onAnimatedChange,
   onKeep,
   onGenerateStart,
+  onBusyChange,
+  ratingRequired = false,
   method = 'scene',
   layout,
+  wordLayout,
+  compactBehindTheScenes,
+  advanced,
 }) => {
-  const dispatch = useAppDispatch();
-  const {theme} = useTheme();
   const style = STYLE;
-  const [kind, setKind] = useState(
-    () => imageKindFor(initialImageType, initialImageSubject).value
+  const sentence = sentenceFor(imageType, imageSubject);
+  const [choices, setChoices] = useState<Choices>(() =>
+    restoreChoices(sentence, initialChoices)
   );
-  const {imageType, subject: imageSubject} = typeChoice
-    ? IMAGE_KINDS.find(k => k.value === kind) ?? IMAGE_KINDS[0]
-    : {imageType: initialImageType, subject: initialImageSubject};
-  const sentence = sentenceFor(imageType, imageSubject, sentenceId);
-  const [choices, setChoices] = useState<Choices>({});
-  const complete = isComplete(sentence, choices);
-  // Every character is animated; an object or a background is one picture.
+  const typedPrompt = advanced?.prompt?.trim() || '';
+  const complete = !!typedPrompt || isComplete(sentence, choices);
+  // A character can be animated, and is unless Animated is turned off; an
+  // object, a background or a typed prompt always produces a single still
+  // picture.
   const canAnimate = imageType === 'sprite' && imageSubject !== 'object';
+  const [animated, setAnimated] = useState(initialAnimated);
+  const generatesCharacterSet = canAnimate && animated && !typedPrompt;
 
   const [mode, setMode] = useState<Mode>('edit');
-  // Every picture made this session; the chosen one shows in the frame
-  // and is what Keep saves.
-  const [history, setHistory] = useState<Made[]>([]);
-  const [chosenId, setChosenId] = useState<string | null>(null);
-  const made = history.find(m => m.id === chosenId) ?? null;
-  // The picture just made plays the reveal and takes the question about
-  // it; one swapped back in does neither.
-  const [freshId, setFreshId] = useState<string | null>(null);
+  const [tip, setTip] = useState<string | null>(null);
+  // The most recent generated picture, shown in the frame; the host has
+  // already stored it as the project's image.
+  const [chosenPicture, setChosenPicture] = useState<GeneratedPicture | null>(
+    null
+  );
   const [verdict, setVerdict] = useState<Verdict | null>(null);
-  const [reason, setReason] = useState<VerdictReason | null>(null);
+  const [ratingDismissed, setRatingDismissed] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [fact, setFact] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
-  // The picture is back and the last step's tick is showing.
-  const [settling, setSettling] = useState(false);
-  // The blank the student draws on, sized for the style.
-  const [paintFrom, setPaintFrom] = useState<{
-    dataURI: string;
-    pixelGridSize?: number;
-  } | null>(null);
   // Counts runs; a superseded run's result is dropped.
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
   const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
+
+  const persist = useCallback(
+    async (picture: GeneratedPicture, pictureVerdict: Verdict | null) => {
+      setSaving(true);
+      // A verdict, when given, is saved in the image's generation metadata,
+      // which travels with the project.
+      const result = pictureVerdict
+        ? {
+            ...picture.result,
+            generation: {...picture.result.generation, verdict: pictureVerdict},
+          }
+        : picture.result;
+      try {
+        await onKeep(result);
+      } catch (e) {
+        console.error('Saving the image failed:', e);
+        setError("Couldn't save the picture. Try again.");
+      } finally {
+        setSaving(false);
+      }
+    },
+    [onKeep]
+  );
 
   const generate = useCallback(async () => {
     if (exhausted) {
       return;
     }
     const run = ++runRef.current;
-    const prompt = promptText(sentence, choices);
+    const prompt = typedPrompt || promptText(sentence, choices);
     // true attaches the project context for per-level breakdowns.
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
         promptText: prompt,
-        method,
+        method: typedPrompt ? 'freeText' : method,
         imageType,
-        sentenceId: sentence.id,
-        choices,
+        ...(typedPrompt ? {} : {sentenceId: sentence.id, choices}),
         style,
       },
       true
     );
     onGenerateStart?.();
     setMode('generating');
-    setSettling(false);
+    setTip(current => pickTip(current));
     setVerdict(null);
-    setReason(null);
+    setRatingDismissed(false);
     setError(null);
-    setFact(current =>
-      pickFact(
-        {animated: canAnimate, pixel: style === 'pixel'},
-        current ?? undefined
-      )
-    );
     playSound('go');
     try {
+      const pixelScale = advanced?.pixelScale || 1;
       const options: GenerateImageOptions = {
         imageType,
         ...(imageType === 'sprite' && {subject: imageSubject ?? 'character'}),
         style,
         temperature: TEMPERATURE,
-        ...(style === 'pixel' && {pixelGrid: defaultPixelGrid(imageType)}),
+        ...(style === 'pixel' && {
+          pixelGrid: defaultPixelGrid(imageType) / pixelScale,
+        }),
       };
-      const bodyPlan = chosenBodyPlan(sentence, choices);
+      if (advanced?.startFrom) {
+        const dataURI = await advanced.startFrom();
+        if (!dataURI) {
+          throw new Error("Couldn't read the current image.");
+        }
+        options.inputImageDataURI = dataURI;
+      }
+      const bodyPlan = typedPrompt
+        ? undefined
+        : chosenBodyPlan(sentence, choices);
       const sent: SentPrompts = sentPromptsFor(
         prompt,
         options,
         style,
-        canAnimate,
+        generatesCharacterSet,
         bodyPlan
       );
-      const result = canAnimate
+      const result = generatesCharacterSet
         ? await generateCharacterSet(prompt, {
             style,
             temperature: TEMPERATURE,
@@ -287,23 +303,36 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       if (run !== runRef.current) {
         return;
       }
-      setSettling(true);
-      await new Promise(resolve => setTimeout(resolve, SETTLE_MS));
-      if (run !== runRef.current) {
-        return;
-      }
-      const entry: Made = {
+      // The chosen words are stored in the image's generation metadata so
+      // the sentence can be refilled when the image is reopened; a typed
+      // prompt has no words to store.
+      const chosenWords = typedPrompt
+        ? undefined
+        : Object.fromEntries(
+            Object.entries(choices).filter(
+              (pair): pair is [string, string] => typeof pair[1] === 'string'
+            )
+          );
+      const entry: GeneratedPicture = {
         id: result.filename,
-        result,
+        result: chosenWords
+          ? {
+              ...result,
+              generation: {
+                ...result.generation,
+                sentenceId: sentence.id,
+                choices: chosenWords,
+              },
+            }
+          : result,
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
         prompt,
         sent,
       };
-      setHistory(current => [...current, entry]);
-      setChosenId(entry.id);
-      setFreshId(entry.id);
+      setChosenPicture(entry);
       setMode('result');
       playSound('reveal');
+      await persist(entry, null);
     } catch (e) {
       if (run !== runRef.current) {
         return;
@@ -323,122 +352,69 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   }, [
     sentence,
     choices,
+    typedPrompt,
     imageType,
     imageSubject,
     style,
-    canAnimate,
+    generatesCharacterSet,
     method,
     onGenerateStart,
     exhausted,
+    advanced,
+    persist,
   ]);
-
-  const keep = useCallback(async () => {
-    if (!made) {
-      return;
-    }
-    setSaving(true);
-    try {
-      if (onKeep) {
-        await onKeep(made.result);
-      } else {
-        await saveGeneratedImage(dispatch, made.result, {
-          uploadImage,
-          imageType,
-          imageRole,
-        });
-        dispatch(continueOrFinishLesson());
-      }
-    } catch (e) {
-      console.error('Saving the image failed:', e);
-      setError("Couldn't save the picture. Try again.");
-    } finally {
-      // On the last level with no finish URL, the lesson does not move on.
-      setSaving(false);
-    }
-  }, [made, onKeep, dispatch, uploadImage, imageType, imageRole]);
-
-  const startPaint = useCallback(() => {
-    setError(null);
-    setPaintFrom(blankPaintImage(imageType, style));
-    setMode('paint');
-  }, [imageType, style]);
-
-  const cancelPaint = useCallback(() => {
-    setPaintFrom(null);
-    setMode('edit');
-  }, []);
-
-  const savePaint = useCallback(
-    async (dataURI: string, meta: {pixelGridSize?: number}) => {
-      setSaving(true);
-      try {
-        await savePaintedImage(dispatch, dataURI, meta.pixelGridSize, {
-          uploadImage,
-          imageType,
-          imageRole,
-        });
-        dispatch(continueOrFinishLesson());
-      } catch (e) {
-        console.error('Saving the drawing failed:', e);
-        setError("Couldn't save the drawing. Try again.");
-      } finally {
-        setSaving(false);
-      }
-    },
-    [dispatch, uploadImage, imageType, imageRole]
-  );
-
-  // Back to the words with the picture still showing; the next Generate
-  // replaces it.
-  const changeWords = useCallback(() => {
-    setMode('edit');
-  }, []);
 
   const judge = useCallback(
     (next: Verdict) => {
       setVerdict(next);
-      setReason(null);
       playSound(next === 'up' ? 'cheer' : 'hmm');
+      if (chosenPicture) {
+        persist(chosenPicture, next);
+      }
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT,
         {
           verdict: next,
-          promptText: made ? promptText(sentence, choices) : undefined,
+          promptText: chosenPicture?.prompt,
           imageType,
         },
         true
       );
     },
-    [made, sentence, choices, imageType]
+    [chosenPicture, imageType, persist]
   );
 
+  // Giving reasons finishes the rating; the rating strip is hidden
+  // afterwards.
   const explain = useCallback(
-    (next: VerdictReason) => {
-      setReason(next);
+    (reasons: string[]) => {
+      setRatingDismissed(true);
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT_REASON,
         {
-          reason: next,
-          promptText: made ? promptText(sentence, choices) : undefined,
+          reasons,
+          promptText: chosenPicture?.prompt,
           imageType,
         },
         true
       );
     },
-    [made, sentence, choices, imageType]
+    [chosenPicture, imageType]
   );
-
-  // Another picture into the frame; a swap plays no reveal and ends the
-  // question.
-  const choosePicture = useCallback((id: string) => {
-    setChosenId(id);
-    setFreshId(null);
-  }, []);
 
   const generating = mode === 'generating';
   const busy = generating || saving;
-  const showingResult = mode === 'result' && !!made;
-  const canGenerate = complete && !busy && !exhausted;
+  useEffect(() => {
+    onBusyChange?.(busy);
+  }, [busy, onBusyChange]);
+  const menus = useWordMenus({
+    sentence,
+    choices,
+    onChange: setChoices,
+    disabled: busy,
+    layout: wordLayout,
+  });
+  const showingResult = mode === 'result' && !!chosenPicture;
 
   // The control that changed the mode unmounts with it, so focus moves to
   // the panel; not on the first render, which is the level opening.
@@ -457,331 +433,151 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     ? 'Your picture is ready.'
     : '';
 
-  // The steps have the panel while a picture is made, and the level's
-  // instructions ask for a prompt, so drawing shows its own or none.
-  const instructionsText = generating
-    ? undefined
-    : mode === 'paint'
-    ? paintInstructions
-    : showingResult && resultInstructions
-    ? resultInstructions
-    : instructions;
-  const instructionsBlock = instructionsText && (
-    <MainInstructionsContent
-      instructionsText={instructionsText}
-      markdownClassName={styles.instructions}
-      showTts={showTts}
-    />
-  );
   const errorLine = error && (
     <MuiTypography variant="body2" className={styles.error} role="alert">
       {error}
     </MuiTypography>
   );
   const sheet =
-    made?.result.frames?.poses && made.result.frames
+    chosenPicture?.result.frames?.poses && chosenPicture.result.frames
       ? {
-          src: made.dataURI,
-          frameSize: made.result.frames.frameSize,
-          poses: made.result.frames.poses,
+          src: chosenPicture.dataURI,
+          frameSize: chosenPicture.result.frames.frameSize,
+          poses: chosenPicture.result.frames.poses,
         }
       : null;
 
-  if (mode === 'paint' && paintFrom) {
-    return (
-      <PixelEditor
-        imageUrl={paintFrom.dataURI}
-        knownPixelGrid={paintFrom.pixelGridSize}
-        tools={PAINT_TOOLS}
-        palette={PAINT_COLORS}
-        brushSizes={PAINT_BRUSH_SIZES}
-        fit="container"
-        toolbarLayout="row"
-        canvasClassName={styles.paintCanvas}
-        opaqueGround={
-          imageType === 'background' ? BACKGROUND_GROUND_COLOR : undefined
-        }
-        onSave={savePaint}
-      >
-        {parts => (
-          <SentenceSceneLayout
-            frameClassName={styles.paintFrame}
-            frame={
-              canAnimate ? (
-                // A dotted figure to draw over, gone at the first stroke.
-                <div className={styles.paintStack}>
-                  {parts.canvas}
-                  <img
-                    src={characterOutline}
-                    alt=""
-                    className={classNames(
-                      styles.paintOutline,
-                      parts.edited && styles.paintOutlineGone
-                    )}
-                  />
-                </div>
-              ) : (
-                parts.canvas
-              )
-            }
-            frameAriaLabel="Your drawing"
-            panelAriaLabel="Draw your picture"
-            panelRef={panelRef}
-            fillFrameHeight
-          >
-            {instructionsBlock}
-            {parts.toolbar}
-            {errorLine}
-            <div className={classNames(styles.paintActions, styles.bottomRow)}>
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                disabled={saving}
-                onClick={cancelPaint}
-              >
-                Cancel
-              </MuiButton>
-              <MuiButton
-                variant="contained"
-                color="primary"
-                disabled={!parts.canSave || saving}
-                onClick={parts.save}
-              >
-                Save
-              </MuiButton>
-            </div>
-          </SentenceSceneLayout>
-        )}
-      </PixelEditor>
-    );
-  }
-
-  const typeChoiceNode = typeChoice ? (
-    <SimpleDropdown
-      name="sentence-type"
-      labelText="Type"
-      isLabelVisible={false}
-      size="s"
-      color={theme === 'Dark' ? 'white' : 'black'}
-      items={IMAGE_KINDS.map(k => ({
-        value: k.value,
-        text: imageKindLabel(k.imageType, k.subject),
-      }))}
-      selectedValue={kind}
-      disabled={busy}
-      onChange={e => {
-        setKind(e.target.value);
-        // A new sentence takes new words.
-        setChoices({});
-      }}
-    />
-  ) : null;
   const statusNode = (
     <div className={styles.srOnly} role="status">
       {status}
     </div>
   );
-  const sentenceNode =
-    showingResult || generating ? (
-      <SentenceReadOnly sentence={sentence} choices={choices} />
-    ) : (
-      <WordMenus
-        sentence={sentence}
-        choices={choices}
-        onChange={setChoices}
-        disabled={busy}
-      />
-    );
-  const progressNode = generating && <GeneratingSteps done={settling} />;
-  const factNode = generating && fact && (
-    <aside
-      className={classNames(styles.factBox, styles.bottomRow)}
-      aria-label="Did you know?"
-    >
-      <FontAwesomeV6Icon
-        iconName="lightbulb"
-        className={styles.factIcon}
-        aria-hidden
-      />
-      <MuiTypography variant="body2">{fact}</MuiTypography>
-    </aside>
+  // The word chooser stays usable after a picture is made, so Regenerate
+  // can run with changed or unchanged words.
+  const sentenceOpen = !generating;
+  const sentenceNode = sentenceOpen ? (
+    menus.sentence
+  ) : (
+    <SentenceReadOnly sentence={sentence} choices={choices} />
   );
-
+  const wordChooserNode = sentenceOpen ? menus.chooser : null;
+  const animatedChoiceNode = canAnimate && !typedPrompt && !generating && (
+    <div className={styles.animatedRow}>
+      <Toggle
+        label="Animated"
+        name="sentence-animated"
+        position="right"
+        size="s"
+        checked={animated}
+        disabled={busy}
+        onChange={e => {
+          setAnimated(e.target.checked);
+          onAnimatedChange?.(e.target.checked);
+        }}
+      />
+    </div>
+  );
   // A set's frames arrive one by one; none shows until all have.
   const frame = generating ? (
     <div className={styles.generating}>
-      <PixelShuffle />
+      <FontAwesomeV6Icon
+        iconName="spinner"
+        animationType="spin"
+        className={styles.spinner}
+        aria-hidden
+      />
     </div>
-  ) : made ? (
+  ) : chosenPicture ? (
     <>
-      {sheet ? (
+      {sheet && stillFrame !== undefined ? (
+        <StripFrame
+          sheetSrc={sheet.src}
+          frameSize={sheet.frameSize}
+          index={stillFrame}
+          className={styles.preview}
+          label={chosenPicture.prompt}
+        />
+      ) : sheet ? (
         <AnimatedSheetPreview {...sheet} />
       ) : (
         <img
-          src={made.dataURI}
-          alt={made.prompt}
+          src={chosenPicture.dataURI}
+          alt={chosenPicture.prompt}
           className={classNames(
             styles.preview,
-            made.result.pixelGridSize && styles.pixelArt
+            chosenPicture.result.pixelGridSize && styles.pixelArt
           )}
         />
       )}
       {/* Keyed by picture, so each new one remounts and plays the reveal
           once. */}
-      {made.id === freshId && (
-        <>
-          <PixelReveal
-            key={`reveal-${made.id}`}
-            src={made.dataURI}
-            crop={
-              sheet
-                ? {
-                    x: 0,
-                    y: 0,
-                    width: sheet.frameSize.x,
-                    height: sheet.frameSize.y,
-                  }
-                : undefined
-            }
-          />
-          <SparkleBurst key={`burst-${made.id}`} />
-        </>
-      )}
+      <PixelReveal
+        key={`reveal-${chosenPicture.id}`}
+        src={chosenPicture.dataURI}
+        crop={
+          sheet
+            ? {
+                // A generated set's frames stand in one row.
+                ...stripCellOrigin(
+                  CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
+                  sheet.frameSize,
+                  stillFrame ?? 0
+                ),
+                width: sheet.frameSize.x,
+                height: sheet.frameSize.y,
+              }
+            : undefined
+        }
+      />
+      <SparkleBurst key={`burst-${chosenPicture.id}`} />
     </>
   ) : null;
 
-  const underFrame = showingResult && made && (
-    <BehindTheScenes sent={made.sent} disabled={busy} />
-  );
-  // Stays through editing and generating, so the frame does not shift.
-  const alternativesNode = mode !== 'paint' && history.length > 1 && (
-    <AlternativeThumbs
-      thumbs={history.map(m => ({
-        id: m.id,
-        src: m.dataURI,
-        prompt: m.prompt,
-        crop: m.result.frames?.poses
-          ? {
-              width: m.result.frames.frameSize.x,
-              height: m.result.frames.frameSize.y,
-            }
-          : undefined,
-        pixelArt: !!m.result.pixelGridSize,
-      }))}
-      chosenId={chosenId}
-      onChoose={choosePicture}
+  const behindTheScenes = showingResult && chosenPicture && (
+    <BehindTheScenes
+      sent={chosenPicture.sent}
+      picture={{
+        src: chosenPicture.dataURI,
+        pixelated: !!chosenPicture.result.pixelGridSize,
+        sheet: sheet && {frameSize: sheet.frameSize},
+        name: chosenPicture.prompt,
+      }}
       disabled={busy}
+      compact={compactBehindTheScenes}
     />
   );
-  // Asked of the picture just made, while it is in the frame; boxed in a
-  // host's own panel, plain among the level's buttons.
-  const verdictRow = (boxed: boolean) =>
-    showingResult &&
-    made &&
-    made.id === freshId && (
-      <VerdictRow
-        verdict={verdict}
-        onJudge={judge}
-        reason={reason}
-        onReason={explain}
-        disabled={busy}
-        boxed={boxed}
-      />
-    );
-  // Under the frame: the way to draw instead, while the words are open.
-  const drawButton = mode === 'edit' && (
-    <div className={styles.underFrameRow}>
-      <MuiButton
-        variant="outlined"
-        color="secondary"
-        className={styles.drawButton}
-        startIcon={<FontAwesomeV6Icon iconName="pen" aria-hidden />}
-        onClick={startPaint}
-      >
-        I'll draw it myself
-      </MuiButton>
-    </div>
-  );
-
-  if (layout) {
-    return (
-      <>
-        {layout({
-          mode,
-          busy,
-          complete,
-          panelRef,
-          frame,
-          frameFilled: !!made && !generating,
-          underFrame,
-          alternatives: alternativesNode,
-          status: statusNode,
-          typeChoice: typeChoiceNode,
-          sentence: sentenceNode,
-          error: errorLine,
-          progress: progressNode,
-          fact: factNode,
-          verdict: verdictRow(true),
-          exhausted,
-          generate,
-          changeWords,
-          keep,
-          draft: {imageType, subject: imageSubject, style},
-        })}
-      </>
-    );
-  }
+  const ratingOffered = showingResult && !!chosenPicture && !ratingDismissed;
+  const dismissRating = useCallback(() => setRatingDismissed(true), []);
 
   return (
-    <SentenceSceneLayout
-      frameClassName={classNames(
-        made && !generating && styles.imageFrameFilled
-      )}
-      beside={alternativesNode}
-      frame={frame}
-      underFrame={underFrame || drawButton}
-      frameAriaLabel="Your picture"
-      panelAriaLabel="Make your picture"
-      panelRef={panelRef}
-      fillFrameHeight={!showingResult}
-    >
-      {statusNode}
-      {instructionsBlock}
-      {sentenceNode}
-      {showingResult && made ? (
-        <ResultActions
-          verdict={verdictRow(false)}
-          onChangeWords={changeWords}
-          onGenerateAgain={generate}
-          onContinue={keep}
-          disabled={busy}
-          regenerateDisabled={exhausted}
-        />
-      ) : generating ? (
-        <div className={styles.generatingSpace}>{progressNode}</div>
-      ) : (
-        // Held at the panel's bottom, even with the frame's; an error reads
-        // above the button.
-        <div className={styles.bottomRow}>
-          {errorLine}
-          <MuiButton
-            className={classNames(
-              styles.generateButton,
-              canGenerate && styles.generateReady
-            )}
-            variant="contained"
-            color="primary"
-            startIcon={<FontAwesomeV6Icon iconName="sparkles" aria-hidden />}
-            disabled={!canGenerate}
-            onClick={generate}
-          >
-            Generate
-          </MuiButton>
-        </div>
-      )}
-      {mode !== 'edit' && errorLine}
-      {factNode}
-    </SentenceSceneLayout>
+    <>
+      {layout({
+        mode,
+        busy,
+        complete,
+        panelRef,
+        frame,
+        frameFilled: !!chosenPicture && !generating,
+        behindTheScenes,
+        status: statusNode,
+        sentence: sentenceNode,
+        wordChooser: wordChooserNode,
+        animatedChoice: animatedChoiceNode,
+        error: errorLine,
+        tip: generating ? tip : null,
+        rating: {
+          offered: ratingOffered,
+          required: ratingRequired,
+          verdict,
+          judge,
+          explain,
+          dismiss: dismissRating,
+        },
+        exhausted,
+        generate,
+        draft: {imageType, subject: imageSubject, style},
+      })}
+    </>
   );
 };
 

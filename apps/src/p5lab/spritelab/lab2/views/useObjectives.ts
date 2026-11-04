@@ -15,7 +15,6 @@ import {
   WorkspaceSource,
 } from '../objectives';
 import {ImageCounts} from '../projectCounts';
-import {Tab} from '../redux/spriteLab2Redux';
 import {WorldCell} from '../world';
 
 export type ObjectiveItemState = ObjectiveItem;
@@ -42,13 +41,13 @@ export interface PlayerProgressReport {
 }
 
 /**
- * The running game's progress for the checklist: touches and height from
- * the engine, scene landings, and the longest run so far. Each only grows
- * while the level stays open. The engine also reports during the Code
- * tab's preview; those are dropped, since only a run the student started
- * with Play should count, and Play respawns the player. Reports the level
- * never reads are not kept, since each one re-renders the view; the
- * engine's callback is null when nothing wants it.
+ * The running game's progress for the checklist: touches and moves from
+ * the engine, and scene landings. Each only grows while the level stays
+ * open. The engine also reports during the Code tab's preview; those are
+ * dropped, since only a run the student started with Play should count,
+ * and Play respawns the player. Reports the level never reads are not
+ * kept, since each one re-renders the view; the engine's callback is null
+ * when nothing wants it.
  */
 export function usePlayProgress(
   playing: boolean,
@@ -60,7 +59,6 @@ export function usePlayProgress(
   onSceneLanded: (sceneId: string) => void;
 } {
   const [touched, setTouched] = useState<ReadonlySet<string>>(new Set());
-  const [highest, setHighest] = useState(0);
   const [farthest, setFarthest] = useState(0);
   const [risen, setRisen] = useState(0);
   // The run's start x, the last x seen, and the lowest the feet have been.
@@ -70,7 +68,6 @@ export function usePlayProgress(
   const [scenesLanded, setScenesLanded] = useState<ReadonlySet<string>>(
     new Set()
   );
-  const [longestRunSeconds, setLongestRunSeconds] = useState(0);
   const [everPlayed, setEverPlayed] = useState(false);
   const playingRef = useRef(playing);
   playingRef.current = playing;
@@ -81,22 +78,9 @@ export function usePlayProgress(
       return;
     }
     setEverPlayed(true);
-    if (!needs.seconds) {
-      return;
-    }
-    const startedAt = Date.now();
-    const tick = () =>
-      setLongestRunSeconds(longest =>
-        Math.max(longest, (Date.now() - startedAt) / 1000)
-      );
-    const timer = window.setInterval(tick, 500);
-    return () => {
-      window.clearInterval(timer);
-      tick();
-    };
-  }, [playing, needs.seconds]);
+  }, [playing]);
 
-  const wantsPlayer = needs.touch || needs.height || needs.move;
+  const wantsPlayer = needs.touch || needs.move;
   const onPlayerProgress = useCallback(
     (report: PlayerProgressReport) => {
       if (!playingRef.current) {
@@ -109,9 +93,6 @@ export function usePlayProgress(
           }
           return new Set([...current, ...report.touching]);
         });
-      }
-      if (needs.height) {
-        setHighest(current => Math.max(current, report.height));
       }
       if (needs.move) {
         let run = runRef.current;
@@ -132,7 +113,7 @@ export function usePlayProgress(
         setRisen(current => Math.max(current, rise));
       }
     },
-    [needs.touch, needs.height, needs.move]
+    [needs.touch, needs.move]
   );
 
   const onSceneLanded = useCallback((sceneId: string) => {
@@ -142,15 +123,8 @@ export function usePlayProgress(
   }, []);
 
   const runtime = useMemo(
-    () => ({
-      longestRunSeconds,
-      touched,
-      highest,
-      farthest,
-      risen,
-      scenesLanded,
-    }),
-    [longestRunSeconds, touched, highest, farthest, risen, scenesLanded]
+    () => ({touched, farthest, risen, scenesLanded}),
+    [touched, farthest, risen, scenesLanded]
   );
   return {
     runtime,
@@ -170,20 +144,20 @@ export function useObjectives({
   images,
   grid,
   baselineGrid,
-  imageForRole,
+  imagesForRole,
   source,
-  activeTab,
   everPlayed,
+  rated,
   runtime,
 }: {
   objectives: Objectives | undefined;
   images: ImageCounts;
   grid?: (WorldCell | null)[][];
   baselineGrid?: (WorldCell | null)[][];
-  imageForRole: Record<string, string | undefined>;
+  imagesForRole: Record<string, readonly string[] | undefined>;
   source?: WorkspaceSource;
-  activeTab: Tab;
   everPlayed: boolean;
+  rated: boolean;
   runtime: RuntimeProgress;
 }): ObjectivesState {
   const [earned, setEarned] = useState<ReadonlySet<number>>(new Set());
@@ -192,37 +166,40 @@ export function useObjectives({
       images,
       grid,
       baselineGrid,
-      imageForRole,
+      imagesForRole,
       source,
-      activeTab,
       everPlayed,
+      rated,
       runtime: runtime ?? EMPTY_RUNTIME,
     }),
     [
       images,
       grid,
       baselineGrid,
-      imageForRole,
+      imagesForRole,
       source,
-      activeTab,
       everPlayed,
+      rated,
       runtime,
     ]
   );
   const items = objectives?.items;
+  const earnedRef = useRef(earned);
+  earnedRef.current = earned;
   useEffect(() => {
     if (!items?.length) {
       return;
     }
-    setEarned(current => {
-      const next = new Set(current);
-      items.forEach((item, index) => {
-        if (!next.has(index) && checkObjective(item.check, inputs)) {
-          next.add(index);
-        }
-      });
-      return next.size === current.size ? current : next;
-    });
+    const held = earnedRef.current;
+    const newly = items.flatMap((item, index) =>
+      !held.has(index) && checkObjective(item.check, inputs) ? [index] : []
+    );
+    // No update when nothing new holds: an input rebuilt every render would
+    // otherwise re-run this effect without end.
+    if (!newly.length) {
+      return;
+    }
+    setEarned(new Set([...held, ...newly]));
   }, [items, inputs]);
 
   // One object per change: the panel it feeds is memoized on it.

@@ -1,4 +1,10 @@
-import {type VocabularyItem} from '@code-dot-org/lesson-deep-dive';
+import {
+  type MatchSolution,
+  type MultiSolution,
+  type PracticeProblem,
+  type ScrambleSolution,
+  type VocabularyItem,
+} from '@code-dot-org/lesson-deep-dive';
 
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
@@ -48,29 +54,6 @@ export type LessonDeepDiveData = {
   timeSpentSeconds: number;
   unitLabel: string | null;
   nextLessonUrl: string | null;
-};
-
-export type MultiSolution = {
-  option: string;
-  correct: boolean;
-};
-
-export type ScrambleSolution = {
-  option: string;
-  correct: number;
-};
-
-export type MatchSolution = {
-  option: string;
-  correct: string;
-};
-
-export type PracticeProblem = {
-  id: number;
-  type: string;
-  active: boolean;
-  problem_text: string;
-  solution: (MultiSolution | ScrambleSolution | MatchSolution)[];
 };
 
 type ServerPracticeProblem = {

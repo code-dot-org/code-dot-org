@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-31T21:52:23.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**AI learned from examples**\n\nDuring **training**, the AI learned patterns from pictures and their descriptions.",
+        "imageUrl": "https://images.code.org/a72d7ec5a0b79c2bd5214798ca283106-01-training-pictures.png",
+        "key": "HoAI26-How-it-was-made-78ee9aae-3acf-4a21-9cab-5a3b723caa44"
+      },
+      {
+        "text": "**Your words guide the image**\n\nThis AI started with some instructions, then added your words. Your prompt helps guide what the AI makes.",
+        "imageUrl": "https://images.code.org/3f1f7b14411154ae53f9e9e750055777-02-words-steer.png",
+        "key": "HoAI26-How-it-was-made-3c54033c-bf11-4782-af0b-f045173629b2"
+      },
+      {
+        "text": "**From noise to picture **\n\nThe AI starts with random dots and colors, then changes them step by step, guided by your words.\n",
+        "imageUrl": "https://images.code.org/9e1fc4e683965b441f26e73306ef6816-03-noise-to-picture.png",
+        "key": "HoAI26-How-it-was-made-30a7570c-df6c-44e9-9ace-1ffb8fc53cbb"
+      },
+      {
+        "text": "**Try another version**\n\nClick Generate again. The result can be different, even with the same prompt.",
+        "imageUrl": "https://images.code.org/69f076c2a5a127251dfb275f2e5b5ca1-04-new-guess.png",
+        "key": "HoAI26-How-it-was-made-4ea083a6-5ba7-4661-8437-d43542533bd5"
+      },
+      {
+        "text": "**Evaluate what the AI made**\n\nDoes the result match your prompt? Look closely, then rate it.\n\n",
+        "imageUrl": "https://images.code.org/5e01580230219d80cc2b4607a5935394-05-check-and-rate.png",
+        "key": "HoAI26-How-it-was-made-d59cfeb3-e77e-40bf-9d5b-2e9873b8763a"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-31 21:57:15 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-31 22:22:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 16:13:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 16:40:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:20:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

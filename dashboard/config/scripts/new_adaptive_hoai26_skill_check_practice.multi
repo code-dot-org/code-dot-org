@@ -1,0 +1,14 @@
+name 'new-adaptive-HoAI26-skill-check-practice'
+title 'TODO: title'
+description ''
+question 'You want to add an image to your website. How much help do you need?'
+right 'Show me exactly how to do it, step by step.'
+wrong 'Give me an example, and I\'ll figure it out.'
+wrong 'Just tell me the HTML tag to use.'
+wrong 'I can do it, I just need to find the image file.'
+
+markdown <<MARKDOWN
+You want to add an image to your website. How much help do you need?
+MARKDOWN
+
+allow_multiple_attempts true
