@@ -361,6 +361,17 @@ below, and are listed last.
 - **Untested**: no screen reader; the keys only by tests and a headless
   browser.
 
+### Deleting a game-wide value (the Main Screen's inspector)
+
+- **Each value has a Delete**, named "Delete ⟨value⟩" for a screen
+  reader; its visible word is the start of that name.
+- **The confirm is inline**, a group named the same, saying which files'
+  code uses the value. Focus moves to Cancel, so Enter on a stray Delete
+  deletes nothing.
+- **After Delete, focus moves to New value**, since the field it came
+  from is gone.
+- **Untested**: no screen reader; seen by mouse and a headless browser.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

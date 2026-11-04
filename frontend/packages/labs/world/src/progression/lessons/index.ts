@@ -6527,7 +6527,8 @@ already in it.
 1. Add a rule, and pick **Keeps Score**. Read the row before you take it.
 2. In the handler, use **add ⟨1⟩ to the score** instead of setting
    \`counted\`, and delete the \`print\` under it.
-3. Nothing reads \`counted\` now. It stays among the world's values, unused.
+3. Delete \`counted\`, which nothing needs now: on **My World**, with nothing
+   selected, press **Delete** under it.
 4. Set the **target score** to 5. It is the rule's number rather than yours,
    so it has a field of its own: on **My World** with nothing selected,
    [the world's properties](#clickable=world.properties) hold it under

@@ -255,6 +255,17 @@
   min-width: 0;
 }
 
+/* A game-wide value's field, with its Delete below it on the right. */
+.inspectorValue {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.inspectorValue > button {
+  align-self: flex-end;
+}
+
 /* One trait's property fields, inside its accordion panel. */
 .inspectorGroup {
   display: flex;

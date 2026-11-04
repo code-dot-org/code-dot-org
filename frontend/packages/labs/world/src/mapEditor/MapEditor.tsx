@@ -50,6 +50,7 @@ import {
 } from '../blockly/projectModules';
 import {parseScreenData} from '../blockly/screenData';
 import {setRevealer} from '../callouts/reveal';
+import {fileLabel} from '../files/fileLabel';
 import fields from '../formFields.module.css';
 import {useScriptStep} from '../layout/TrailContext';
 import {worldOpensOn, type WorldLevelProperties} from '../levelData';
@@ -89,6 +90,7 @@ import {MapStage} from './MapStage';
 import {PlaceHeading} from './PlaceHeading';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
 import {withPlacePicture} from './placePicture';
+import {screenPropertyUses} from './screenProperties';
 import type {WorldProperty} from './worldProperties';
 import {cameraTraitChoices, worldRuleProperties} from './worldRuleProperties';
 
@@ -700,6 +702,17 @@ export const MapEditor = ({
                   document.world!.addProperty!(contentsRef.current, name, type),
                 )
             : undefined,
+          // …and one taken away, naming the files whose code uses it first.
+          onRemoveProperty: document.world.removeProperty
+            ? (name: string) =>
+                writeFile(
+                  document.world!.removeProperty!(contentsRef.current, name),
+                )
+            : undefined,
+          propertyUses: (name: string) =>
+            screenPropertyUses(currentSources.source, mapModule, name).map(id =>
+              fileLabel(currentSources.source.files[id]),
+            ),
           // …and the map the World starts with.
           mapChoices,
           onWorldMap: (path: string | undefined) =>

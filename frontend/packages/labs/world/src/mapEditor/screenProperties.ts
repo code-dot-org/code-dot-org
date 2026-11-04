@@ -6,6 +6,10 @@
 // only the five keys `blockly/screenData` describes. Each write changes one
 // key and leaves the rest of the file as it was.
 
+import type {MultiFileSource} from '@code-dot-org/core/api';
+
+import {pascal} from '../blockly/ruleMeta';
+import {pathSlug} from '../blockly/ruleRegistry';
 import {
   DEFAULT_SCREEN_NAME,
   literalBlock,
@@ -207,3 +211,37 @@ export const addScreenProperty = (
     return true;
   });
 };
+
+/** The file without the game-wide value of that name, or as it was. */
+export const removeScreenProperty = (contents: string, name: string): string =>
+  rewrite(contents, data => {
+    const held = list<ScreenProperty>(data.properties);
+    const kept = held.filter(each => each.name !== name);
+    if (kept.length === held.length) {
+      return false;
+    }
+    if (kept.length) {
+      data.properties = kept;
+    } else {
+      delete data.properties;
+    }
+    return true;
+  });
+
+/**
+ * The ids of the files whose blocks read or write the game-wide value
+ * `name` of the screen at `modulePath`. Its blocks are keyed by the file,
+ * not the screen's name (`domainBlocks.memberKey`).
+ */
+export function screenPropertyUses(
+  source: MultiFileSource,
+  modulePath: string,
+  name: string,
+): string[] {
+  const block = new RegExp(
+    `"world_[a-z]+_${pathSlug(modulePath)}_${pascal(name)}Property"`,
+  );
+  return Object.entries(source.files)
+    .filter(([, file]) => block.test(file.contents ?? ''))
+    .map(([id]) => id);
+}

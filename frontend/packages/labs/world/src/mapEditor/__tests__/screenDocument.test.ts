@@ -11,6 +11,8 @@ import {
 import {
   addScreenProperty,
   readScreenHeader,
+  removeScreenProperty,
+  screenPropertyUses,
   writeScreenName,
   writeScreenPropertyDefault,
   writeScreenRuleValue,
@@ -153,5 +155,36 @@ describe('the Main Screen header', () => {
     ]);
     expect(addScreenProperty(SCREEN, 'score', 'number')).toBe(SCREEN);
     expect(addScreenProperty(SCREEN, '  ', 'number')).toBe(SCREEN);
+  });
+});
+
+describe('taking a value away', () => {
+  it('removes it, and the key with the last one', () => {
+    const removed = JSON.parse(removeScreenProperty(SCREEN, 'score'));
+    expect(removed.properties).toBeUndefined();
+    expect(removed.events).toEqual([{name: 'quit'}]);
+    expect(removeScreenProperty(SCREEN, 'lives')).toBe(SCREEN);
+  });
+
+  it('names the files whose blocks read or write it', () => {
+    // Keyed by the screen's file, not its name, as the blocks are.
+    const file = (contents: unknown) => ({
+      name: 'x',
+      language: 'json',
+      contents: JSON.stringify(contents),
+    });
+    const source = {
+      files: {
+        reads: file({type: 'world_get_ScreensMain_ScoreProperty'}),
+        adds: file({type: 'world_push_ScreensMain_ScoreProperty'}),
+        other: file({type: 'world_get_ScreensMain_ScoreboardProperty'}),
+        elsewhere: file({type: 'world_get_ActorsHero_ScoreProperty'}),
+      },
+      folders: {},
+    };
+
+    expect(
+      screenPropertyUses(source as never, 'screens/main', 'score'),
+    ).toEqual(['reads', 'adds']);
   });
 });

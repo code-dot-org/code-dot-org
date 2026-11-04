@@ -11,6 +11,7 @@ import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {parseMap, type MapDoc} from './mapModel';
 import {
   addScreenProperty,
+  removeScreenProperty,
   readScreenHeader,
   writeScreenBackgroundColor,
   writeScreenName,
@@ -60,6 +61,8 @@ export interface MapDocumentAdapter {
     title: string;
     /** A new value of the game's own. */
     addProperty?(contents: string, name: string, type: string): string;
+    /** …and one taken away. */
+    removeProperty?(contents: string, name: string): string;
   };
 }
 
@@ -113,6 +116,7 @@ export const screenFileDocument: MapDocumentAdapter = {
     writeTheme: writeScreenTheme,
     writeWorldMap: writeScreenWorldMap,
     addProperty: addScreenProperty,
+    removeProperty: removeScreenProperty,
   },
 };
 

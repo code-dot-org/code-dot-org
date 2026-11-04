@@ -869,7 +869,7 @@ export const TILES: readonly Tile[] = [
     title: 'Somebody already counted',
     teaches:
       'Recognising your own hand-rolled thing in a library, and what you get for swapping.',
-    task: 'Replace the counter you wrote with Scoring, and get "the target is reached" for nothing.',
+    task: 'Replace the counter you wrote with Keeps Score, and get "the target is reached" for nothing.',
     requires: ['memory/many'],
     unlocks: [{kind: 'rule', id: 'score'}],
     // The rule's own blocks arrive with the rule and are never gated. What the

@@ -43,6 +43,10 @@ export interface WorldInspectorProps {
    * Main Screen's; a world's are `define property` rows in its code.
    */
   onAddProperty?: (name: string, type: string) => void;
+  /** …and take one away. Only where `onAddProperty` is. */
+  onRemoveProperty?: (name: string) => void;
+  /** The files whose code uses a value of the game's own, by label. */
+  propertyUses?: (name: string) => string[];
   onRename: (name: string) => void;
   /**
    * Set one property's starting value. What that MEANS differs by where the
@@ -111,6 +115,8 @@ export const WorldInspector = ({
   header,
   title = 'World',
   onAddProperty,
+  onRemoveProperty,
+  propertyUses,
   onRename,
   onSetDefault,
   theme,
@@ -133,6 +139,25 @@ export const WorldInspector = ({
   // A value being added: its name as typed, and its kind.
   const [newName, setNewName] = useState('');
   const [newType, setNewType] = useState<string>('number');
+  // The value whose delete is being confirmed, and the files that use it.
+  const [deleting, setDeleting] = useState<
+    {name: string; uses: string[]} | undefined
+  >();
+  const root = useRef<HTMLDivElement>(null);
+  const cancel = useRef<HTMLButtonElement>(null);
+  // Where focus goes once the confirm closes: Cancel while it is open, and
+  // New value after a delete took the field it came from.
+  const [refocus, setRefocus] = useState<'cancel' | 'new' | undefined>();
+  useEffect(() => {
+    if (refocus === 'cancel') {
+      cancel.current?.focus();
+    } else if (refocus === 'new') {
+      root.current
+        ?.querySelector<HTMLInputElement>('[name="world-new-value"]')
+        ?.focus();
+    }
+    setRefocus(undefined);
+  }, [refocus]);
   // Keyed by the SETTER where there is one: two rules may each have a
   // property called `strength`, and the world's own may too.
   const keyOf = (property: WorldProperty) => property.setter ?? property.name;
@@ -338,6 +363,7 @@ export const WorldInspector = ({
 
   return (
     <div
+      ref={root}
       className={`${styles.inspector} ${fields.narrow}`}
       data-testid="world-inspector"
       data-callout="world.properties"
@@ -392,7 +418,64 @@ export const WorldInspector = ({
         </FormFieldWrapper>
       )}
       {own.length > 0 && (
-        <div className={styles.inspectorGroup}>{own.map(renderField)}</div>
+        <div className={styles.inspectorGroup}>
+          {own.map(property =>
+            deleting?.name === property.name ? (
+              <div
+                key={keyOf(property)}
+                role="group"
+                aria-label={`Delete ${property.name}`}
+                className={styles.inspectorGroup}
+              >
+                <Typography variant="body3" component="p">
+                  {deleting.uses.length
+                    ? `Delete ${property.name}? The code in ${deleting.uses.join(', ')} uses it, and will stop working where it does.`
+                    : `Delete ${property.name}? No code uses it.`}
+                </Typography>
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
+                  onClick={() => {
+                    setDeleting(undefined);
+                    setRefocus('new');
+                    onRemoveProperty?.(property.name);
+                  }}
+                >
+                  Delete
+                </Button>
+                <Button
+                  variant="text"
+                  size="small"
+                  ref={cancel}
+                  onClick={() => setDeleting(undefined)}
+                >
+                  Cancel
+                </Button>
+              </div>
+            ) : (
+              <div key={keyOf(property)} className={styles.inspectorValue}>
+                {renderField(property)}
+                {onRemoveProperty && !isReadOnly && (
+                  <Button
+                    variant="text"
+                    size="small"
+                    aria-label={`Delete ${property.name}`}
+                    onClick={() => {
+                      setDeleting({
+                        name: property.name,
+                        uses: propertyUses?.(property.name) ?? [],
+                      });
+                      setRefocus('cancel');
+                    }}
+                  >
+                    Delete
+                  </Button>
+                )}
+              </div>
+            ),
+          )}
+        </div>
       )}
       {onAddProperty && !isReadOnly && (
         // A new value the whole game keeps — a score, lives — named and
