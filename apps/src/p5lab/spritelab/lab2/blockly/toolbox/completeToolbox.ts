@@ -4,6 +4,7 @@ import {
   makeDynamicCategory,
 } from '@cdo/apps/blockly/utils/toolbox';
 
+import {ASK_AI_BLOCK_TYPE} from '../blockDefinitions/askAi';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
@@ -33,6 +34,7 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_setPlatformGravity',
     'spritelab2_setCameraZoom',
   ],
+  AI: [ASK_AI_BLOCK_TYPE],
 };
 
 // Blocks registered outside the DB block pool (Blockly core, blocksCommon,
