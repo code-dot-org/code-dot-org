@@ -210,6 +210,30 @@ module.exports = {
             message:
               'DSCO Dialog is deprecated. Import MuiDialog / MuiCustomDialog (and MuiDialogProps / MuiCustomDialogProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/dialog-to-mui-dialog.ts; see codemods/README.md there',
           },
+          {
+            name: '@code-dot-org/component-library/accordion',
+            importNames: [
+              'default',
+              'Accordion',
+              'AccordionProps',
+              'FAQAccordion',
+              'FAQAccordionProps',
+              'FAQAccordionItem',
+            ],
+            message:
+              'DSCO Accordion is deprecated. Import MuiAccordion / MuiFAQAccordion (and MuiAccordionProps / MuiAccordionItem / MuiFAQAccordionProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/accordion-to-mui.ts; see codemods/README.md there',
+          },
+          {
+            name: '@code-dot-org/component-library/accordion/faqAccordion',
+            importNames: [
+              'default',
+              'FAQAccordion',
+              'FAQAccordionProps',
+              'FAQAccordionItem',
+            ],
+            message:
+              'DSCO FAQAccordion is deprecated. Import MuiFAQAccordion (and MuiFAQAccordionProps / MuiFAQAccordionItem) from the same path instead. Codemod available: frontend/packages/component-library/codemods/accordion-to-mui.ts; see codemods/README.md there',
+          },
         ],
         patterns: [
           {
