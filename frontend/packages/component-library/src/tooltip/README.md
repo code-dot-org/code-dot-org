@@ -94,19 +94,21 @@ MUI `Tooltip`, `Popper`, `Popover`, `Menu`, `Select` menu and `Autocomplete`
 list beneath it, matching its own theme. A nested provider wins over an outer
 one.
 
-The provider does this by extending the surrounding MUI theme with
-`MuiPopper` and `MuiPopover` default props, so it needs `CdoTheme` (or another
-MUI theme) above it; every `createReactRoot` tree has one. Without an outer MUI
-theme it leaves the portals alone.
+To keep a section in one theme whatever the surrounding one, pin it with
+`<ThemeProvider theme="Light">`. Its portals follow the pin; a bare
+`data-theme` attribute on the section does not reach them. The pinned wrapper
+is `display: contents`, so it adds no layout box.
 
-Two cases still need `slotProps`. A tooltip under a bare `data-theme`
-attribute, not a `ThemeProvider`, does not see it; and a tooltip whose bubble
-must differ from the surrounding theme sets its own:
+The provider does this with an MUI `DefaultPropsProvider` that adds
+`data-theme` to the surrounding theme's `MuiPopper` and `MuiPopover` default
+props. It works with or without an outer MUI theme.
+
+A tooltip whose bubble must differ from the surrounding theme sets its own:
 
 ```tsx
 <Tooltip title="…" slotProps={{tooltip: {'data-theme': 'Dark'}}}>
 ```
 
 The bubble attribute is closer than the popper's, so it wins. `Dialog`,
-`Drawer` and other `Modal`s are not covered; they set `data-theme` on their
-content as before.
+`Drawer` and other `Modal`s are not covered yet; they set `data-theme` on
+their content as before.

@@ -1,8 +1,7 @@
 import {Button, IconButton, Tooltip} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
-import {useEffect} from 'react';
 
-import {ThemeProvider, useTheme} from '@/common/contexts';
+import {ThemeProvider} from '@/common/contexts';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 import {keyboardOnlyTooltipProps} from '../index';
@@ -126,12 +125,6 @@ export const KeyboardOnly: StoryFn = () => (
   </>
 );
 
-const ForceDark = () => {
-  const {setTheme} = useTheme();
-  useEffect(() => setTheme('Dark'), [setTheme]);
-  return null;
-};
-
 const darkPanel = {
   display: 'flex',
   gap: '2rem',
@@ -141,17 +134,24 @@ const darkPanel = {
 };
 
 /**
- * `ThemeProvider` hands its theme to the portaled bubble. A bare `data-theme`
- * attribute is not seen; the bubble there needs `slotProps`.
+ * `ThemeProvider` hands its theme to the portaled bubble, and a pinned
+ * provider keeps its section's theme. A bare `data-theme` attribute is not
+ * seen; the bubble there needs `slotProps`.
  */
 export const InsideDarkTheme: StoryFn = () => (
   <>
-    <ThemeProvider>
-      <ForceDark />
+    <ThemeProvider initialTheme="Dark">
       <div style={darkPanel}>
         <Tooltip title="Follows ThemeProvider">
           <Button variant="contained">inside ThemeProvider</Button>
         </Tooltip>
+        <ThemeProvider theme="Light">
+          <div style={darkPanel}>
+            <Tooltip title="Follows the pinned section">
+              <Button variant="contained">pinned Light</Button>
+            </Tooltip>
+          </div>
+        </ThemeProvider>
       </div>
     </ThemeProvider>
     <div data-theme="Dark" style={{...darkPanel, marginTop: '1rem'}}>

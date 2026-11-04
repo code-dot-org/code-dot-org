@@ -1,12 +1,10 @@
-import {useTheme as useEmotionTheme} from '@emotion/react';
+import DefaultPropsProvider from '@mui/material/DefaultPropsProvider';
+import {useTheme as useMuiTheme} from '@mui/material/styles';
 import {
-  ThemeProvider as MuiThemeProvider,
-  type Theme as MuiTheme,
-} from '@mui/material/styles';
-import {
+  ComponentProps,
   createContext,
-  useCallback,
   useContext,
+  useMemo,
   useState,
   ReactNode,
 } from 'react';
@@ -79,6 +77,8 @@ export function useTheme(
   return context;
 }
 
+type DefaultProps = ComponentProps<typeof DefaultPropsProvider>['value'];
+
 /** Tooltip, Popper, Popover and Menu portal to <body>, outside the data-theme div. */
 const PortalThemeProvider = ({
   theme,
@@ -87,35 +87,41 @@ const PortalThemeProvider = ({
   theme: Theme;
   children: ReactNode;
 }) => {
-  // MUI's own useTheme falls back to a default theme; emotion's yields {}.
-  const hasMuiTheme = 'palette' in useEmotionTheme();
-  const extendTheme = useCallback(
-    (outer: MuiTheme): MuiTheme => ({
-      ...outer,
-      components: {
-        ...outer.components,
-        MuiPopper: withDataTheme(outer.components?.MuiPopper, theme),
-        MuiPopover: withDataTheme(outer.components?.MuiPopover, theme),
-      },
-    }),
-    [theme],
+  // MUI's ThemeProvider feeds DefaultPropsProvider from these; this one replaces it.
+  const outer = useMuiTheme().components;
+  const value = useMemo(
+    () =>
+      ({
+        ...outer,
+        MuiPopper: withDataTheme(outer?.MuiPopper, theme),
+        MuiPopover: withDataTheme(outer?.MuiPopover, theme),
+      }) as DefaultProps,
+    [outer, theme],
   );
-
-  // A function theme with no outer theme to extend logs an error.
-  if (!hasMuiTheme) {
-    return <>{children}</>;
-  }
-  return <MuiThemeProvider theme={extendTheme}>{children}</MuiThemeProvider>;
+  return <DefaultPropsProvider value={value}>{children}</DefaultPropsProvider>;
 };
 
 function withDataTheme<T extends {defaultProps?: object}>(
   entry: T | undefined,
   theme: Theme,
-): T {
+) {
   return {
     ...entry,
     defaultProps: {...entry?.defaultProps, 'data-theme': theme},
-  } as T;
+  };
+}
+
+const noop = () => {};
+
+interface ThemeProviderProps {
+  children: ReactNode;
+  /**
+   * Pins the subtree to this theme. setTheme and toggleTheme then act on the
+   * enclosing provider, and the pinned subtree keeps its theme.
+   */
+  theme?: Theme;
+  /** Starting theme of an unpinned provider. */
+  initialTheme?: Theme;
 }
 
 /**
@@ -131,22 +137,53 @@ function withDataTheme<T extends {defaultProps?: object}>(
  *  <ThemeProvider>
  *    <Alert {...args} />
  *  </ThemeProvider>
+ *
+ * To keep a section in one theme regardless of the surrounding one, pin it:
+ *  <ThemeProvider theme="Light">
+ *    <Drawer />
+ *  </ThemeProvider>
+ *
+ * Prefer this over a bare data-theme attribute, which MUI portals do not see.
  * */
-export const ThemeProvider = ({children}: {children: ReactNode}) => {
-  const [theme, setTheme] = useState<Theme>('Light');
+export const ThemeProvider = ({
+  children,
+  theme: pinnedTheme,
+  initialTheme = 'Light',
+}: ThemeProviderProps) => {
+  const enclosing = useContext(ThemeContext);
+  const [ownTheme, setOwnTheme] = useState<Theme>(initialTheme);
+  const theme = pinnedTheme ?? ownTheme;
 
-  const toggleTheme = () => {
-    setTheme(prevTheme => (prevTheme === 'Light' ? 'Dark' : 'Light'));
-  };
+  const value = useMemo<ThemeContextProps>(() => {
+    if (pinnedTheme) {
+      return {
+        theme: pinnedTheme,
+        setTheme: enclosing?.setTheme ?? noop,
+        toggleTheme: enclosing?.toggleTheme ?? noop,
+      };
+    }
+    return {
+      theme: ownTheme,
+      setTheme: setOwnTheme,
+      toggleTheme: () =>
+        setOwnTheme(prevTheme => (prevTheme === 'Light' ? 'Dark' : 'Light')),
+    };
+  }, [pinnedTheme, ownTheme, enclosing?.setTheme, enclosing?.toggleTheme]);
 
   /**
    * We're adding data-theme attribute to a html element to be able to access current theme value in styles
    * (scss/css files) via selectors(e.g. [data-theme='Light']). (See: ./../styles/colors.css)
    * */
   return (
-    <ThemeContext.Provider value={{theme, toggleTheme, setTheme}}>
+    <ThemeContext.Provider value={value}>
       <PortalThemeProvider theme={theme}>
-        <div data-theme={theme}>{children}</div>
+        {/* A pinned section wraps existing markup; it must not add a box. */}
+        <div
+          data-theme={theme}
+          style={pinnedTheme ? {display: 'contents'} : undefined}
+        >
+          {children}
+        </div>
       </PortalThemeProvider>
     </ThemeContext.Provider>
   );
