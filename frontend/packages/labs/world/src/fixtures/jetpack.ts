@@ -5,7 +5,7 @@
 //
 // A ROOM RATHER THAN A CORRIDOR. Every level in the library is ten tiles
 // square (one screen) or wide and short with a camera chasing along it. This
-// one is 26 by 16 and says so — `set size of view` — so the whole level is on
+// one is 26 by 16, and so is its Main Screen, so the whole level is on
 // screen at once and there is no camera in the project at all. That is the
 // other kind of level: a room you can see the shape of, where the puzzle is
 // getting to a place rather than surviving what is coming.

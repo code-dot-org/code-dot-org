@@ -27,8 +27,8 @@ graph. What follows from it is most of an app builder already:
 - **The map editor is a layout canvas.** Place, drag, and a field for every
   property of every trait a kind elects — which is how a control is
   configured.
-- **A phone shape already runs.** `set size of view to x ⟨10⟩ y ⟨18⟩ tiles`
-  is a block, and `src/fixtures/interfaceKit.ts` is that shape.
+- **A phone shape already runs.** A Main Screen 10 by 18 tiles is that
+  shape, and `src/fixtures/interfaceKit.ts` is one.
 - **Focus and tab order are a rule** (`tabNavigation`), with Escape
   reserved, so keyboard access was designed in rather than bolted on.
 

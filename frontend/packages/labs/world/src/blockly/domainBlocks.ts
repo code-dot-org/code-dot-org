@@ -5088,62 +5088,11 @@ registerValueShadows('world_set_map_size', [
 ]);
 
 /**
- * Say how much of the world is on screen at once — the setter to `view size`.
- *
- * The view was a constant: ten tiles square, the size the first levels were
- * built at, and the size every camera rule was written against. What it could
- * not say was the other kind of level — a room 26 by 16 meant to be taken in
- * at a glance, where a camera panning over it hides the puzzle instead of
- * following the action.
- *
- * IT IS THE NATIVE RESOLUTION, not a zoom: the driver sizes its canvas to this
- * and the pane scales that up, so a bigger view is MORE WORLD at the same tile
- * size rather than the same world drawn smaller.
- *
- * A camera still resting where it was declared moves to the middle of the new
- * view, so a world that says this and nothing else is framed exactly as a
- * smaller one was (`World.setViewSize`).
- */
-const worldSetViewSize = defineBlock({
-  type: 'world_set_view_size',
-  message0: 'set size of view to x %1  y %2  tiles',
-  args0: [
-    {type: 'input_value', name: 'X', check: 'Number'},
-    {type: 'input_value', name: 'Y', check: 'Number'},
-  ],
-  inputsInline: true,
-  previousStatement: true,
-  nextStatement: true,
-  // `worldContext` like the map's setter beside it: the live World answers
-  // this too, so a game that changes what it shows mid-play is a thing to
-  // write rather than a mistake to warn about.
-  extensions: [worldContextExtension, valueShadowExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'How much of the world is on screen at once, in tiles. Bigger shows more ' +
-    'of the level at the same tile size; the map may still be bigger than ' +
-    'this, which is what gives a camera somewhere to go.',
-  generator: {
-    javascript(block, generator) {
-      const x =
-        generator.valueToCode(block, 'X', Order.NONE) || String(VIEWPORT_TILES);
-      const y =
-        generator.valueToCode(block, 'Y', Order.NONE) || String(VIEWPORT_TILES);
-      return `world.setViewSize(${x}, ${y});\n`;
-    },
-  },
-});
-registerValueShadows('world_set_view_size', [
-  {name: 'X', shadow: {type: 'math_number', fields: {NUM: VIEWPORT_TILES}}},
-  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: VIEWPORT_TILES}}},
-]);
-
-/**
  * How big the VIEW is, in world pixels — the window onto the world.
  *
- * The standard ten tiles square until a world says otherwise with `set size of
- * view`, and a block rather than a number a learner types for two reasons: the
- * number is no longer a constant they could look up, and the one thing that
+ * The Main Screen's size, fixed while the game runs, and a block rather than a
+ * number a learner types for two reasons: the number is the project's rather
+ * than a constant they could look up, and the one thing that
  * needs it needs half of it — a camera's position is the middle of the view, so
  * keeping the view inside the map means keeping the position half a screen in
  * from each edge.
@@ -9519,7 +9468,6 @@ export const DOMAIN_BLOCKS = [
   worldThisCamera,
   worldMapSize,
   worldSetMapSize,
-  worldSetViewSize,
   worldActorAge,
   worldRandomPlace,
   worldSign,
@@ -10557,7 +10505,6 @@ function generateRulePalette(
 export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_actor',
   'world_set_map_size',
-  'world_set_view_size',
   'world_layer_parallax',
   MEMBER_HEAD,
   STEP_HEAD,

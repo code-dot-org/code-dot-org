@@ -1,9 +1,5 @@
-// How much of the world is on screen at once.
-//
-// It was a constant — ten tiles square — and every camera rule was written
-// against it. A world states it now, because the other kind of level is a room
-// meant to be taken in at a glance, and a camera panning over one of those
-// hides the puzzle rather than following the action.
+// How much of the world is on screen at once: the Main Screen's size, which
+// its module says before the game starts, and which is fixed once it has.
 
 import {describe, expect, it} from 'vitest';
 
@@ -47,5 +43,17 @@ describe('a world that says how much of it is on screen', () => {
     builder.setViewSize(26, 16);
 
     expect(builder.instantiate().viewSize().x).toBe(26 * 32);
+  });
+
+  it('is fixed once the game has run a frame', () => {
+    // Every screen, anchor and layout is arranged against it, and a screen
+    // that changed size under them would be a game rearranging itself.
+    const builder = new WorldBuilder({id: 'w', name: 'w'});
+    const world = builder.getWorld();
+    world.setViewSize(26, 16);
+    world.tick(1 / 60);
+
+    expect(() => world.setViewSize(10, 10)).toThrow(/Main Screen/);
+    expect(world.viewSize().x).toBe(26 * 32);
   });
 });

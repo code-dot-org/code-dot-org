@@ -683,15 +683,13 @@ scrolls the score off the screen.
 ## Viewport size
 
 A Main Screen's size is the view's (specs/SCREEN_MAP_PLAN.md): its compiled
-module sets the view and the root's bounds to the screen's extent, which is
-what `set size of view` said in a world. The DEFERRED part below — the size
-changing while the game runs — still stands.
-
-Finally, we will add a few direct Viewport manipulations. Advanced creators will
-have the `set viewport width <x> and height <y>` and associated `get` blocks
-which command the size of the screen. These will have sensible limits and error
-when the numbers are too large. This will allow students to create experiences
-that cover the entire screen or target mobile dimensions.
+module sets the view and the root's bounds to the screen's extent before
+anything loads, and the size is FIXED once the game runs. `World.setViewSize`
+throws after the first frame, and `set size of view`, the block a world once
+said it with, is gone. Every screen is shown at this size, and its anchors
+and docking are arranged against it (specs/ANCHORS_PLAN.md); a screen that
+changed size under them would be a game rearranging itself. `view size`
+still reads it.
 
 DEFERRED, and worth knowing why it is not the cheap one it looks like.
 `VIEWPORT_WIDTH` and `VIEWPORT_HEIGHT` are constants today, and `viewport.ts`

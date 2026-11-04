@@ -59,9 +59,8 @@ import {browserTextMetrics} from './textMetrics';
 
 const ACTOR_SIZE = 24;
 // How much WORLD is on screen at startup, before the world has been built and
-// can say how much of itself it wants (`World.setViewSize`, `set size of view`,
-// and `syncViewSize` below). A world that says nothing keeps this, which is the
-// ten-tile square every existing project was authored against.
+// says its Main Screen's size (`World.setViewSize`, and `syncViewSize` below).
+// A world that says nothing keeps this, the ten-tile square.
 const VIEW_WIDTH = VIEWPORT_WIDTH;
 const VIEW_HEIGHT = VIEWPORT_HEIGHT;
 
@@ -777,10 +776,10 @@ export class PhaserBinding {
     /**
      * The canvas is the WORLD's size, which the world may state for itself.
      *
-     * Ten tiles square unless a world says otherwise (`World.setViewSize`), and
-     * a world that says so does it while it is being described — so this asks
-     * every frame and resizes when the answer changes, rather than reading once
-     * before there is a world to ask.
+     * The Main Screen's size (`World.setViewSize`), said while the world is
+     * being described and fixed once it runs — so this asks every frame and
+     * resizes when the answer changes, rather than reading once before there
+     * is a world to ask.
      *
      * FIT then scales that into the `#game` box, and the box is told the shape
      * to be. Without the second half the box keeps whatever shape the page gave

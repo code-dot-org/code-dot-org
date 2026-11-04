@@ -539,6 +539,8 @@ export interface WorldSnapshot {
   clearColor: Rgba | undefined;
   /** The color behind the screen. */
   screenColor: Rgba;
+  /** The screen's size, in pixels: fixed for a run, so a change restarts. */
+  screenSize: {x: number; y: number};
   /** World-scoped property values, by `${ruleId}.${propId}`. */
   world: Record<string, unknown>;
   /** Per-actor property values, by actor id then `${traitId}.${propId}`. */
@@ -2716,6 +2718,9 @@ export class World {
     ];
   }
 
+  /** Whether the game has run a frame, after which its size is fixed. */
+  private ticked = false;
+
   /**
    * Say how much of the world is on screen at once, in TILES.
    *
@@ -2735,6 +2740,14 @@ export class World {
    * the same tile size rather than the same world drawn smaller.
    */
   setViewSize(columns: number, rows: number): void {
+    // The Main Screen's size, said once by its module before the game runs
+    // (`BlocklyGenerator.screenSize`). A game's screen does not change size
+    // under it: every screen, anchor and layout is arranged against this.
+    if (this.ticked) {
+      throw new Error(
+        'The screen is the Main Screen’s size, set before the game starts.',
+      );
+    }
     const was = this.view;
     this.view = new Vector(
       Math.max(0, Math.round(columns)) * TILE_SIZE || VIEWPORT_WIDTH,
@@ -2757,14 +2770,10 @@ export class World {
   /**
    * Place every anchored placement again, against the window as it is now.
    *
-   * ANCHORS WERE MEASURED ONCE, AT LOAD, and a world's main map is loaded
-   * between its prologue and its rows so that a row can name what the map
-   * placed (specs/MAP_BEFORE_ROWS_PLAN.md). So `set view size` in a world's
-   * body runs AFTER the load: the placements had already been fitted to the
-   * default window and were never fitted again. Notes met it — NEW NOTE is
-   * anchored to the bottom of a 320x576 map, was placed against the default
-   * 320x320 window at y=264, and stayed there when the body made the window
-   * 576 tall, which is the middle of it.
+   * ANCHORS ARE MEASURED AT LOAD, so a size said after a load would leave
+   * them fitted to the old one. The Main Screen's module says its size first,
+   * and nothing may say it once the game runs (`setViewSize`); this is for a
+   * world described in another order before its first frame.
    *
    * ONE THAT HAS BEEN MOVED IS LEFT WHERE IT WAS PUT, which is the rule the
    * cameras above already follow through a resize. A placement a program has
@@ -4508,6 +4517,7 @@ export class World {
 
   /** Advance the simulation by `delta` seconds. */
   tick(delta: number): void {
+    this.ticked = true;
     this.inTick = true;
     // A placement pointed at a kind that had nothing in it when its map
     // loaded is pointed now, if there is one (`kindRefs`).
@@ -5507,6 +5517,7 @@ export class World {
         ? ([...this.worldSpace.clearColor] as Rgba)
         : undefined,
       screenColor: [...this.clearColor] as Rgba,
+      screenSize: {x: this.view.x, y: this.view.y},
       // The track, and not the one-shots: what is playing is state a patch can
       // set, what already played is a moment (specs/SOUND.md).
       ...(this.track === undefined ? {} : {music: this.track}),

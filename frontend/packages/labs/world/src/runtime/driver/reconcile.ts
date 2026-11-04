@@ -62,6 +62,8 @@ interface ReconcilableWorld {
     clearColor: [number, number, number, number] | undefined;
     /** …and the color behind the screen. */
     screenColor: [number, number, number, number];
+    /** The screen's size, fixed for a run (`World.setViewSize`). */
+    screenSize: {x: number; y: number};
     /** The track playing, or undefined for silence (specs/SOUND.md). */
     music?: string;
     world: Record<string, unknown>;
@@ -142,6 +144,9 @@ export function reconcile(
     // Which cameras exist is structural for the reason layers are: a viewport
     // is built to draw through one. Where they LOOK is a value, patched below.
     stable(previous.cameras) === stable(snapshot.cameras) &&
+    // The screen's size is fixed while the game runs, and what is arranged on
+    // it was arranged at the new one: a change is a new game.
+    stable(previous.screenSize) === stable(snapshot.screenSize) &&
     stable(previous.handlerIds) === stable(snapshot.handlerIds) &&
     // A `use trait` row added or removed. Structural for the reason handlers
     // are: the running actors were MADE with the traits they have, and a trait

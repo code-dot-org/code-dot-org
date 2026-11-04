@@ -438,7 +438,7 @@ export interface MapStageProps {
    * The window this map will be seen through, in pixels — see the guide below.
    *
    * Given by the caller rather than read from the constant, because a world
-   * says how much of itself is on screen (`set size of view`) and a map drawn
+   * is shown at its Main Screen's size, and a map drawn
    * against somebody else's window shows a dashed rectangle in the wrong
    * place. Absent is the standard window, which is what every map had.
    */

@@ -153,7 +153,9 @@ Screen moves its own anchored placements the same way, from where they were
 before the typing began.
 
 `reanchor` measures against the screen's size (`World.screenSize`), not
-`viewSize()`, which with a docked Viewport is that Viewport's window.
+`viewSize()`, which with a docked Viewport is that Viewport's window. Since,
+the screen's size is fixed once the game runs (specs/VIEWPORT.md), so what
+the editor draws is what the game shows.
 
 ## Not built, and known
 
@@ -163,8 +165,6 @@ before the typing began.
   the window" that this does not invent. Docking is that vocabulary for a Screen: a
   docked placement fills its region of the window, size and all
   (specs/DOCKING_PLAN.md).
-- **A screen whose size changes while it runs** (`set size of view`) is
-  not previewed in the editor; the Main Screen's size is what is drawn.
 - **Nothing anchors to another PLACEMENT.** Beside, above, after — that
   is a layout engine, and parenting answers the part of it worth having.
 - **A map with no size anchors nothing**, which is every map a `map`

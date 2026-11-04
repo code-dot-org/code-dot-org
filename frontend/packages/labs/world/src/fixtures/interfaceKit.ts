@@ -34,10 +34,9 @@
 //
 // ON A PHONE-SHAPED SCREEN. An interface is the one kind of world whose
 // shape is not a level's, and a form on a square window looks like a game
-// with a form in it. The world says `set size of view` (specs/VIEWPORT.md)
-// and the pane takes that shape — which is also the one place in the library
-// a world declares a view that is not the default, so the map editor, the
-// backdrop and the driver all get exercised on a window that is not square.
+// with a form in it. Its Main Screen is that shape (specs/VIEWPORT.md), and
+// the pane takes it, so the map editor, the backdrop and the driver are
+// exercised on a window taller than it is wide.
 //
 // The width is kept at the standard ten tiles and only the height grows,
 // because that is what the actors were sized to: a Speech Box is 280 wide

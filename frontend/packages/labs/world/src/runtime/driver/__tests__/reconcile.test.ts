@@ -140,6 +140,18 @@ describe('reconcile', () => {
     expect(running.snapshot().world['gravity.strength']).toBe(1500);
   });
 
+  it('restarts when the screen is another size', () => {
+    // The size is fixed for a run (`World.setViewSize`), and what is arranged
+    // on the screen was arranged at the new one: patching the positions into
+    // the old size put a docked bar half off the edge.
+    const running = makeWorld(900);
+    const baseline = running.snapshot();
+    const incoming = makeWorld(900);
+    incoming.setViewSize(14, 11);
+
+    expect(reconcile(running, incoming, baseline).mode).toBe('restarted');
+  });
+
   it('patches an actor value the learner changed', () => {
     // A start position nudged on the `.actor` file reaches the game that is
     // running, rather than restarting it (specs/QUALITY_OF_LIFE.md §1).
