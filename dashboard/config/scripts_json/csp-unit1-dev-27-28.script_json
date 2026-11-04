@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-27 23:02:32 UTC",
+    "serialized_at": "2026-11-04 05:25:16 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -221,6 +221,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "**How do machines learn from examples?**\n\nIn this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
+        "preparation": "- Review and complete the online tutorial yourself. If you are not going to use AI for Oceans, explore the other options listed in the first teaching tip below.",
+        "student_overview": "**How do machines learn from examples?**\n\nStart by writing rules for a computer and finding where they break, then try a different approach: training an AI yourself. Using AI for Oceans, you'll label images to teach an AI to tell fish from trash, then to recognize other sea creatures that belong in the water, and finally to learn a word you choose. Along the way, you'll define AI systems and models, compare rules-based and learned behavior, and investigate how your own choices and opinions shape what an AI learns."
       },
       "seeding_key": {
         "lesson.key": "lesson-26",
@@ -236,6 +239,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "**How does AI create, and when should we trust it?**\n\nThe lesson opens with a game that hides its own punchline: students predict the next word in a sentence, without realizing they're modeling exactly how a large language model works. From there, they vote on whether disclosure is required across a mix of AI-generated and human-made media, investigate what a badge like \"Made with AI\" does and doesn't tell them, and finally decide whether a deepfake, an AI-written paragraph, or a licensed infographic is ready to publish. The mechanics of generative AI are simple; the real thinking happens in the judgment calls around trust, attribution, and harm.",
+        "preparation": "- Print and cut Human Autocomplete Sentence Starter Cards (1 set per pair / group)\n- Print copies of the Media Investigation and Publication Decision Guides (1 of each per pair / group)",
+        "student_overview": "**How does AI create, and when should we trust it?**\n\nHave you ever guessed what someone was about to say before they finished their sentence? Today you're going to do exactly that, and it turns out you already think a lot like an AI language model. From there, you'll step into the role of a content reviewer, deciding whether a video, a photo, or a piece of writing is actually ready to publish. Not because it looks real, but because of what you know about how it was made. Being fooled isn't the goal here. Knowing what to ask is."
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -266,6 +272,9 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "overview": "**What does it take to keep an AI system trustworthy?**\n\nThis lesson formalizes what students discover firsthand in the Auto-Mod Review Queue warm-up — that an AI system can seem confident and still be wrong once the world it operates in shifts. Direct instruction names model drift and introduces four ways a system can go wrong along with four possible human responses, then \"Keep It Running\" puts pairs in charge of a live system through a year of decisions and consequences. The lesson closes with a class debrief connecting those decisions back to the standard, followed by a check for understanding that assesses transfer to a new scenario.",
+        "purpose": "- (Optional) If you want students to turn in evidence of their Keep It Running results, provide copies of the Keep It Running Activity Guide (one per pair).",
+        "student_overview": "**What does it take to keep an AI system trustworthy?**\n\nYou take charge of an AI system for its first year, deciding how to respond as new problems come up and keeping its transparency statement honest along the way. Every choice you make shapes whether people can still trust the system by the end."
       },
       "seeding_key": {
         "lesson.key": "lesson-21",
@@ -655,6 +664,18 @@
       "seeding_key": {
         "lesson_activity.key": "76bd3f09-94ae-4289-b746-88a469e1c594",
         "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "c6094a87-79fb-4e2d-9fb3-f192dada6fea",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c6094a87-79fb-4e2d-9fb3-f192dada6fea",
+        "lesson.key": "lesson-14",
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28"
       }
@@ -1301,6 +1322,16 @@
       "seeding_key": {
         "activity_section.key": "1b44f67c-f546-4dd3-9bcc-2d39a5d72ec4",
         "lesson_activity.key": "76bd3f09-94ae-4289-b746-88a469e1c594"
+      }
+    },
+    {
+      "key": "569da64d-71a1-41c6-98ea-fcebd1e119b2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "569da64d-71a1-41c6-98ea-fcebd1e119b2",
+        "lesson_activity.key": "c6094a87-79fb-4e2d-9fb3-f192dada6fea"
       }
     },
     {
@@ -5291,6 +5322,34 @@
   ],
   "resources": [
     {
+      "name": "AI: Impact on Society",
+      "url": "https://www.youtube.com/watch?v=ng4c1g3COfs&t=1s",
+      "key": "ai_impact_on_society",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ai_impact_on_society"
+      }
+    },
+    {
+      "name": "AI: Training Data & Bias",
+      "url": "https://www.youtube.com/watch?v=x2mRoFNm22g&t=1s",
+      "key": "ai_training_data_bias",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ai_training_data_bias"
+      }
+    },
+    {
       "name": "ASCII Student Reference",
       "url": "https://docs.google.com/document/d/1_UW60GD6xJ861MK5Yf1X5DuCukBpnhz3Xlsvo_zOYag/",
       "key": "ascii_student_reference",
@@ -5499,6 +5558,20 @@
       }
     },
     {
+      "name": "Generative AI and LLMs",
+      "url": "https://docs.google.com/presentation/d/1rdUD7ECAkE7lpDsIgKycnJZ4PvYUDRmk03gdUuoIatY/",
+      "key": "generative_ai_and_llms",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "generative_ai_and_llms"
+      }
+    },
+    {
       "name": "Handle an Edge Case",
       "url": "https://docs.google.com/document/d/1HwKzdnoaC-yRy-Zz8CZm7REMwpyAgLTW7zHj9fpZTaM/",
       "key": "handle_an_edge_case",
@@ -5541,6 +5614,20 @@
       }
     },
     {
+      "name": "How I'm fighting bias in algorithms ",
+      "url": "https://www.youtube.com/watch?v=UG_X_7g63rY&t=1s",
+      "key": "how_i_m_fighting_bias_in_algorithms",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_i_m_fighting_bias_in_algorithms"
+      }
+    },
+    {
       "name": "How to Make a Flippy Do",
       "url": "https://docs.google.com/document/d/1Uz9VuRyIonpl9EYb06egRVSkuvjLCymOJLpIP4BXyPk/",
       "key": "how_to_make_a_flippy_do",
@@ -5552,6 +5639,20 @@
       },
       "seeding_key": {
         "resource.key": "how_to_make_a_flippy_do"
+      }
+    },
+    {
+      "name": "Human Autocomplete Sentence Starter Cards",
+      "url": "https://docs.google.com/document/d/17iz2dieD49V1tlu6MuG3nLbRR8Fl2tc0qdoY2sU2oQo/",
+      "key": "human_autocomplete_sentence_starter_cards",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "human_autocomplete_sentence_starter_cards"
       }
     },
     {
@@ -5583,6 +5684,48 @@
       }
     },
     {
+      "name": "Machine Learning",
+      "url": "https://docs.google.com/presentation/d/1QDAdkUBITp-01LX6ik2VqJ2nOguVzDxl3eZJDyZXpBY/",
+      "key": "machine_learning_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "machine_learning_1"
+      }
+    },
+    {
+      "name": "Media Investigation Guide",
+      "url": "https://docs.google.com/document/d/19SpxZD33BhSov2t-nvaKDyzR0J5D8I_m3hv3rB4oF0M/",
+      "key": "media_investigation_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "media_investigation_guide"
+      }
+    },
+    {
+      "name": "Media Investigation Guide",
+      "url": "https://docs.google.com/document/d/1tvoRTWnrucCSaIWLv72eI7dRxdw5GaB5P9TSQ_Td_Uc/",
+      "key": "media_investigation_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "media_investigation_guide_1"
+      }
+    },
+    {
       "name": "Overflow and Rounding",
       "url": "https://docs.google.com/presentation/d/1YDfg7sLHtTaWFaTW7XrVGiqX-ogc_xvh-ARReLzKHBs/",
       "key": "overflow_and_rounding",
@@ -5594,6 +5737,34 @@
       },
       "seeding_key": {
         "resource.key": "overflow_and_rounding"
+      }
+    },
+    {
+      "name": "Publication Decision Guide",
+      "url": "https://docs.google.com/document/d/1Ml75aY2etpuuQOtDCv_yCnnoZwWCdKx6dQfum3BDmWU/",
+      "key": "publication_decision_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "publication_decision_guide"
+      }
+    },
+    {
+      "name": "Publication Decision Guide",
+      "url": "https://docs.google.com/document/d/1MRXIVdM9zrmhHbypJNLMfbgtS8eNViqtWBYNsjJ6o_8",
+      "key": "publication_decision_guide_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "publication_decision_guide_1"
       }
     },
     {
@@ -5678,6 +5849,62 @@
       },
       "seeding_key": {
         "resource.key": "unit_1_unit_guide_10"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/",
+      "key": "unit_1_unit_guide_11",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_11"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA/edit?tab=t.0#heading=h.r54qsm37nw2",
+      "key": "unit_1_unit_guide_12",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_12"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/",
+      "key": "unit_1_unit_guide_13",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_13"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA/edit?tab=t.0#heading=h.65duwoybt6d0",
+      "key": "unit_1_unit_guide_14",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_14"
       }
     },
     {
@@ -5808,6 +6035,54 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "generative_ai_and_llms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "human_autocomplete_sentence_starter_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "media_investigation_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "media_investigation_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "publication_decision_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "publication_decision_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_1_unit_guide_13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_1_unit_guide_14"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-15",
@@ -6008,6 +6283,42 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-26",
+        "resource.key": "ai_impact_on_society"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "resource.key": "ai_training_data_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "resource.key": "how_i_m_fighting_bias_in_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "resource.key": "machine_learning_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "resource.key": "unit_1_unit_guide_11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "resource.key": "unit_1_unit_guide_12"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-31",
         "resource.key": "how_computers_work"
       }
@@ -6046,6 +6357,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "key": "ai_system",
+      "word": "AI System",
+      "definition": "a computer system that takes in data, uses a model to find patterns, and produces an output such as a prediction, recommendation, decision, or new content.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ai_system"
+      }
+    },
+    {
+      "key": "attribution",
+      "word": "Attribution",
+      "definition": "Giving credit to the original creator of content when required.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "attribution"
       }
     },
     {
@@ -6099,6 +6430,26 @@
       }
     },
     {
+      "key": "deepfake",
+      "word": "Deepfake",
+      "definition": "A realistic AI-generated image, audio, or video that may be mistaken for authentic media.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "deepfake"
+      }
+    },
+    {
+      "key": "disclosure",
+      "word": "Disclosure",
+      "definition": "Letting people know when AI was used to create or change content, so they can decide how much to trust it.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "disclosure"
+      }
+    },
+    {
       "key": "edge_case",
       "word": "Edge Case",
       "definition": "an unusual or unexpected situation that an app must still handle correctly, such as losing an internet connection.",
@@ -6106,6 +6457,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "edge_case"
+      }
+    },
+    {
+      "key": "generative_ai",
+      "word": "Generative AI",
+      "definition": "A type of AI that creates new content, like text, images, music, or code, based on patterns it has learned from examples.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "generative_ai"
       }
     },
     {
@@ -6126,6 +6487,46 @@
       },
       "seeding_key": {
         "vocabulary.key": "input"
+      }
+    },
+    {
+      "key": "license",
+      "word": "License",
+      "definition": "The permissions and rules that govern how content can be used or shared.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "license"
+      }
+    },
+    {
+      "key": "llm_large_language_model_",
+      "word": "LLM (large language model)",
+      "definition": "A generative AI tool that creates text by predicting likely sequences of words, based on patterns learned from large amounts of text.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "llm_large_language_model_"
+      }
+    },
+    {
+      "key": "model",
+      "word": "Model",
+      "definition": "the part of an AI system that turns inputs into outputs. A model can follow rules people write, or learn patterns from data.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "model"
+      }
+    },
+    {
+      "key": "model_drift",
+      "word": "Model Drift",
+      "definition": "when a model's performance changes over time because the world it's used in changes, but the model doesn't.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "model_drift"
       }
     },
     {
@@ -6159,6 +6560,16 @@
       }
     },
     {
+      "key": "transparency_statement",
+      "word": "Transparency Statement",
+      "definition": "describes a system's purpose, training data, and known limits, so users can decide when to trust it.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "transparency_statement"
+      }
+    },
+    {
       "key": "user_input",
       "word": "User Input",
       "definition": "information a user intentionally provides to a device, such as by typing, tapping, or speaking.",
@@ -6170,6 +6581,42 @@
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "vocabulary.key": "attribution"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "vocabulary.key": "deepfake"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "vocabulary.key": "disclosure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "vocabulary.key": "generative_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "vocabulary.key": "license"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "vocabulary.key": "llm_large_language_model_"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-16",
@@ -6220,6 +6667,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-21",
+        "vocabulary.key": "model_drift"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "vocabulary.key": "transparency_statement"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-22",
         "vocabulary.key": "overflow_error"
       }
@@ -6234,6 +6693,18 @@
       "seeding_key": {
         "lesson.key": "lesson-23",
         "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "vocabulary.key": "ai_system"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "vocabulary.key": "model"
       }
     },
     {
@@ -6271,6 +6742,16 @@
       "seeding_key": {
         "lesson.key": "lesson-15",
         "objective.key": "0f09a691-3d05-4a2f-9997-4d829fc6ff11"
+      }
+    },
+    {
+      "key": "1063c371-fd1b-4be0-b18c-bfae9f7c0045",
+      "properties": {
+        "description": "Credit reused code, including AI-generated code, in a comment."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "objective.key": "1063c371-fd1b-4be0-b18c-bfae9f7c0045"
       }
     },
     {
@@ -6314,6 +6795,26 @@
       }
     },
     {
+      "key": "357f1e59-e13d-45a6-89fb-c6d79fa15719",
+      "properties": {
+        "description": "Describe appropriate attribution and licensing when using AI-created content."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "357f1e59-e13d-45a6-89fb-c6d79fa15719"
+      }
+    },
+    {
+      "key": "3588168b-67c6-40a5-8e72-daa42ff48cfe",
+      "properties": {
+        "description": "Explain model drift and why humans monitor, update data, and retrain models."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "objective.key": "3588168b-67c6-40a5-8e72-daa42ff48cfe"
+      }
+    },
+    {
       "key": "3f54f837-118a-4a53-b953-2f1804677b44",
       "properties": {
         "description": "Explain that some languages, like Python, grow integers without overflow"
@@ -6344,6 +6845,16 @@
       }
     },
     {
+      "key": "66ef587e-b3d1-4259-baf9-34454e688303",
+      "properties": {
+        "description": "Explain how generative AI and large language models create content by predicting patterns."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "66ef587e-b3d1-4259-baf9-34454e688303"
+      }
+    },
+    {
       "key": "71d5ba75-3d8c-42bd-8e2e-6476a4bb6541",
       "properties": {
         "description": "Explain how users learn an app's purpose and behavior by using and observing it"
@@ -6351,6 +6862,16 @@
       "seeding_key": {
         "lesson.key": "lesson-31",
         "objective.key": "71d5ba75-3d8c-42bd-8e2e-6476a4bb6541"
+      }
+    },
+    {
+      "key": "7a1ac0bd-226e-4f53-8a7e-8e8026e23bf8",
+      "properties": {
+        "description": "Describe deepfakes and safeguards including disclosure, verification, and responsible sharing."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "7a1ac0bd-226e-4f53-8a7e-8e8026e23bf8"
       }
     },
     {
@@ -6384,6 +6905,26 @@
       }
     },
     {
+      "key": "8b6f84f6-b42a-4420-b59e-0ebf50e21f3c",
+      "properties": {
+        "description": "Modify a loop written by someone else to produce a new result."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "objective.key": "8b6f84f6-b42a-4420-b59e-0ebf50e21f3c"
+      }
+    },
+    {
+      "key": "8efc712d-76c4-4b88-9980-46c4b4d307b1",
+      "properties": {
+        "description": "Determine when it is appropriate to reuse, cite, and share code."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "objective.key": "8efc712d-76c4-4b88-9980-46c4b4d307b1"
+      }
+    },
+    {
       "key": "91b971d8-e18b-473a-9346-0b39ad545544",
       "properties": {
         "description": "Explain why an app should behave as intended across a range of conditions "
@@ -6394,6 +6935,16 @@
       }
     },
     {
+      "key": "9203383a-2561-425c-b21a-09b528bcc1fb",
+      "properties": {
+        "description": "Describe a model's purpose, training, limits, and appropriate uses in a transparency statement."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "objective.key": "9203383a-2561-425c-b21a-09b528bcc1fb"
+      }
+    },
+    {
       "key": "99556a73-cec3-4f51-8fc9-c36c16f4ae24",
       "properties": {
         "description": "Use patterns to represent information"
@@ -6401,6 +6952,16 @@
       "seeding_key": {
         "lesson.key": "lesson-17",
         "objective.key": "99556a73-cec3-4f51-8fc9-c36c16f4ae24"
+      }
+    },
+    {
+      "key": "dcc54d2a-97a4-4e04-97a1-a8b1656ea3f4",
+      "properties": {
+        "description": "Explain when humans should trust, act on, or review AI output."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "objective.key": "dcc54d2a-97a4-4e04-97a1-a8b1656ea3f4"
       }
     },
     {
