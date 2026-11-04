@@ -133,12 +133,14 @@ const generateTextThroughGateway = async <
       // Turnstile mode that decides whether a challenge is needed at all. The
       // manager pre-fetches a token after every delivery, so only the first
       // call of a session waits on a challenge here.
-      const {token, turnstileEnforcementMode} = await getAccessToken(
-        aichatContext
-      );
+      const accessToken = await getAccessToken(aichatContext);
       const turnstileToken = await fetchTurnstileToken(
-        turnstileEnforcementMode
+        accessToken.turnstileEnforcementMode
       );
+      // A challenge can outlast the reuse window, so a reusable token is re-checked after it.
+      const {token} = accessToken.reusable
+        ? await getAccessToken(aichatContext)
+        : accessToken;
 
       const headers = {
         'Content-Type': 'application/json',

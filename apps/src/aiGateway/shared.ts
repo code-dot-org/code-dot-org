@@ -20,8 +20,10 @@ export interface GatewayAccessToken {
    * worker's enforcement always come from the same value.
    */
   turnstileEnforcementMode: TurnstileEnforcementMode;
-  /** Whether the server allows this token to be reused until it expires. */
+  /** Whether the server allows this token to be reused for later requests. */
   reusable: boolean;
+  /** How many seconds before expiry reuse stops. Meaningful only when `reusable`. */
+  reuseMarginSeconds: number;
 }
 
 // Use the provided AichatContext or fall back to the default context.
@@ -43,13 +45,20 @@ export async function fetchAccessToken(
     token: string;
     turnstileEnforcementMode?: unknown;
     reusable?: unknown;
+    reuseMarginSeconds?: unknown;
   };
+  const reuseMarginSeconds =
+    typeof value.reuseMarginSeconds === 'number' &&
+    value.reuseMarginSeconds >= 0
+      ? value.reuseMarginSeconds
+      : undefined;
   return {
     token: value.token,
     turnstileEnforcementMode: parseTurnstileEnforcementMode(
       value.turnstileEnforcementMode
     ),
-    reusable: value.reusable === true,
+    reusable: value.reusable === true && reuseMarginSeconds !== undefined,
+    reuseMarginSeconds: reuseMarginSeconds ?? 0,
   };
 }
 
@@ -75,15 +84,12 @@ export function getModelString(model: unknown) {
 
 interface CachedAccessToken {
   accessToken: GatewayAccessToken;
-  expiresAtLocal: number;
+  reusableUntilLocal: number;
 }
 
 // Relies on the worker accepting a token more than once before it expires; remove if it starts rejecting a reused token_id.
 const cachedAccessTokens = new Map<string, CachedAccessToken>();
 const pendingAccessTokens = new Map<string, Promise<GatewayAccessToken>>();
-
-// A token must outlive the request that carries it, which can be a long generation.
-export const ACCESS_TOKEN_REUSE_MARGIN_MS = 15_000;
 
 // Every field is sent to Rails, so any of them may become a claim.
 function accessTokenCacheKey(aichatContext: AichatContext): string {
@@ -100,20 +106,25 @@ async function fetchAndCacheAccessToken(
   if (accessToken.reusable) {
     cachedAccessTokens.set(key, {
       accessToken,
-      expiresAtLocal: requestedAt + AiGatewayAccessTokenLifetimeSeconds * 1000,
+      reusableUntilLocal:
+        requestedAt +
+        (AiGatewayAccessTokenLifetimeSeconds - accessToken.reuseMarginSeconds) *
+          1000,
     });
   }
   return accessToken;
 }
 
 // Concurrent callers with the same context share one request; failures are not cached.
+// The worker checks expiry once, when a request arrives, so the margin covers only the
+// time from here to there; callers re-check after anything slow, like a Turnstile challenge.
 export function getAccessToken(
   aichatContext: AichatContext = AichatContextManager.getContext()
 ): Promise<GatewayAccessToken> {
   const key = accessTokenCacheKey(aichatContext);
   const cached = cachedAccessTokens.get(key);
   if (cached) {
-    if (Date.now() < cached.expiresAtLocal - ACCESS_TOKEN_REUSE_MARGIN_MS) {
+    if (Date.now() < cached.reusableUntilLocal) {
       return Promise.resolve(cached.accessToken);
     }
     cachedAccessTokens.delete(key);

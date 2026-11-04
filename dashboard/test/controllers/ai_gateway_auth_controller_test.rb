@@ -16,6 +16,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
     stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
     stub_access_token_reuse(AiGatewayAuthController::ACCESS_TOKEN_REUSE_DEFAULT)
+    stub_access_token_reuse_margin(AiGatewayAuthController::ACCESS_TOKEN_REUSE_MARGIN_DEFAULT)
     @params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB],
@@ -164,6 +165,22 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
 
       assert_equal expected, JSON.parse(response.body)['reusable'], "for #{stored.inspect}"
     end
+  end
+
+  test 'publishes the reuse margin, falling back to the default for a value DCDO cannot be trusted to hold' do
+    [[15, 15], [30, 30], [0, 0], [2.5, 2.5], [-1, 15], ['30', 15], [nil, 15], [true, 15]].each do |stored, expected|
+      stub_access_token_reuse_margin(stored)
+
+      mint_and_capture_claims
+
+      assert_equal expected, JSON.parse(response.body)['reuseMarginSeconds'], "for #{stored.inspect}"
+    end
+  end
+
+  private def stub_access_token_reuse_margin(value)
+    DCDO.stubs(:get).
+      with(AiGatewayAuthController::ACCESS_TOKEN_REUSE_MARGIN_DCDO_KEY, AiGatewayAuthController::ACCESS_TOKEN_REUSE_MARGIN_DEFAULT).
+      returns(value)
   end
 
   private def stub_access_token_reuse(value)

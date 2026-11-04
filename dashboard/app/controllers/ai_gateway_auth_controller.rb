@@ -23,10 +23,13 @@ class AiGatewayAuthController < ApplicationController
   TURNSTILE_ENFORCEMENT_MODES = %w[disabled monitor enforce].freeze
   TURNSTILE_ENFORCEMENT_MODE_DEFAULT = 'disabled'.freeze
 
-  # Whether the browser may reuse a token for later gateway requests until it
-  # expires. Off, every gateway request fetches a fresh token.
+  # Whether the browser may reuse a token for later gateway requests, and how
+  # many seconds before expiry it stops. Reuse off, every gateway request
+  # fetches a fresh token; a margin at or above the token lifetime does the same.
   ACCESS_TOKEN_REUSE_DCDO_KEY = 'ai-gateway-access-token-reuse-enabled'.freeze
   ACCESS_TOKEN_REUSE_DEFAULT = true
+  ACCESS_TOKEN_REUSE_MARGIN_DCDO_KEY = 'ai-gateway-access-token-reuse-margin-seconds'.freeze
+  ACCESS_TOKEN_REUSE_MARGIN_DEFAULT = 15
 
   rescue_from CanCan::AccessDenied do
     render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
@@ -79,7 +82,12 @@ class AiGatewayAuthController < ApplicationController
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE),
       'RS256'
     )
-    render json: {token: token, turnstileEnforcementMode: enforcement_mode, reusable: access_token_reusable?}
+    render json: {
+      token: token,
+      turnstileEnforcementMode: enforcement_mode,
+      reusable: access_token_reusable?,
+      reuseMarginSeconds: access_token_reuse_margin_seconds,
+    }
   end
 
   # DCDO stores arbitrary JSON, so the value here may be any type. A YAML-loaded
@@ -94,5 +102,10 @@ class AiGatewayAuthController < ApplicationController
   # Only a literal true turns reuse on, so a mistyped DCDO value fails toward the slower path.
   private def access_token_reusable?
     DCDO.get(ACCESS_TOKEN_REUSE_DCDO_KEY, ACCESS_TOKEN_REUSE_DEFAULT) == true
+  end
+
+  private def access_token_reuse_margin_seconds
+    margin = DCDO.get(ACCESS_TOKEN_REUSE_MARGIN_DCDO_KEY, ACCESS_TOKEN_REUSE_MARGIN_DEFAULT)
+    margin.is_a?(Numeric) && margin >= 0 ? margin : ACCESS_TOKEN_REUSE_MARGIN_DEFAULT
   end
 end

@@ -44,12 +44,14 @@ async function transcribeThroughGateway(
     try {
       // Serialized, not parallel: the access token response carries the
       // Turnstile mode that decides whether a challenge is needed at all.
-      const {token, turnstileEnforcementMode} = await getAccessToken(
-        aichatContext
-      );
+      const accessToken = await getAccessToken(aichatContext);
       const turnstileToken = await fetchTurnstileToken(
-        turnstileEnforcementMode
+        accessToken.turnstileEnforcementMode
       );
+      // A challenge can outlast the reuse window, so a reusable token is re-checked after it.
+      const {token} = accessToken.reusable
+        ? await getAccessToken(aichatContext)
+        : accessToken;
 
       const formData = new FormData();
       formData.append('token', token);
