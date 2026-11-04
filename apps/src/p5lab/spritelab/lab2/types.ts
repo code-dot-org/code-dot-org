@@ -23,6 +23,9 @@ export interface SerializedAnimationProps {
   name: string;
   sourceUrl?: string;
   frameSize: {x: number; y: number};
+  /** The size of the whole stored image: the full strip for a sheet, the
+      same as frameSize for a single-frame image. */
+  sourceSize?: {x: number; y: number};
   frameCount: number;
   looping: boolean;
   frameDelay: number;

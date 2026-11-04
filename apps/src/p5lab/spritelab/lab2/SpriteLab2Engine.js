@@ -1171,6 +1171,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         await trimAnimationListImages(scoped, {
           keepNames: animationNames(animationList),
           thumbnails: !external,
+          upscalePixelArt: true,
         })
       ),
       {multiFrame: true}
@@ -1219,6 +1220,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         await trimAnimationListImages(single, {
           keepNames: animationNames(list),
           thumbnails: !this.isExternalList_(list),
+          upscalePixelArt: true,
         })
       ),
       {multiFrame: true}
