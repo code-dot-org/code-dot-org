@@ -398,3 +398,33 @@ which would restyle the nine `@mui/material` call sites, is for the Figma run.
   checked by the twins' play functions and the pixel diff. Nothing automated
   guards the two-class rule: Storybook layers emotion, so a one-class selector
   would lose only in apps, where the Migrate samples check it.
+
+## Outcome
+
+Consumers: both moved, in one stacked PR (`apps/src/quiz/attempt`,
+`frontend/packages/markdown`). None is left on the legacy names, and a grep
+finds no legacy import of `@code-dot-org/component-library/divider` in
+`apps/` or `frontend/packages` outside `src/divider` itself.
+
+Verify: green. `yarn test src/__tests__/Markdown.test.tsx` in
+`frontend/packages/markdown` passed 117 of 117; jest for
+`apps/test/unit/quiz/attempt/QuizAttemptWorkspaceTest.tsx` passed 64 of 64;
+eslint was clean on the four consumer files.
+
+Parity: all three twins pixel-identical to their DSCO stories in Light and
+Dark (mismatch ratio 0.0000 for each of the six pairs; see the Execute PR).
+
+Apps parity: not run. No local studio was reachable during the sweep, so
+neither sample was captured. Sample 1 is the only check of the two-class
+rule against `.rule` in `page-divider.module.scss`; run it before the
+consumer PR merges.
+
+Codemod: rewrote 2 files, the import line of `PageDivider.tsx` and of
+`Markdown.tsx`, both to `{MuiDivider as Divider}`. Untouched: everything
+else in the scanned trees. In `Markdown.tsx` it also parenthesized the JSX
+body of `makeLink`, a reprint artifact that was reverted by hand. Hand
+residue, as predicted: the stale comment in `Markdown.tsx` and the
+`Markdown.test.tsx` assertion, which now matches `MuiDivider-root` on the
+`<hr>`. `page-divider.module.scss` is unchanged. The markdown package's
+`dist/` was not rebuilt; apps renders `---` with the legacy `Divider` until
+it is.
