@@ -15,8 +15,10 @@ import manifestJson from '@cdo/static/spritelab_lab2/sentences.json';
 export interface Word {
   id: string;
   text: string;
-  /** Shown on the word's chip beside the text; decoration, not read aloud. */
-  emoji?: string;
+  /** A Font Awesome icon shown beside the text; decoration, not read aloud. */
+  icon?: string;
+  /** A plain color, shown as a dot beside the text in place of an icon. */
+  color?: string;
   /** How a creature is built, for the character-set poses. */
   bodyPlan?: BodyPlan;
 }

@@ -48,4 +48,22 @@ describe('RatingBar', () => {
         .getAttribute('aria-pressed')
     ).toBe('true');
   });
+
+  it('offers Dismiss only when the host gives it one', () => {
+    const onDismiss = jest.fn();
+    const {rerender} = render(
+      <RatingBar verdict={null} onJudge={jest.fn()} onReasons={jest.fn()} />
+    );
+    expect(screen.queryByRole('button', {name: 'Dismiss'})).toBeNull();
+    rerender(
+      <RatingBar
+        verdict={null}
+        onJudge={jest.fn()}
+        onReasons={jest.fn()}
+        onDismiss={onDismiss}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Dismiss'}));
+    expect(onDismiss).toHaveBeenCalled();
+  });
 });

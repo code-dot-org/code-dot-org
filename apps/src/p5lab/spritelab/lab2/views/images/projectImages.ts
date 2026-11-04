@@ -1,4 +1,4 @@
-// The project's images as the Images tab lists them, read from the classic
+// The project's images as the Images tab lists them, read from the
 // animation-list store.
 
 import {
@@ -57,10 +57,15 @@ export function listProjectImages(list: AnimationListState): ProjectImage[] {
         props,
         name: props.name || 'image',
         imageType,
+        // An image with poses is a character set, so its subject is
+        // 'character' regardless of stored metadata; a single-frame sprite
+        // keeps its stored subject, when there is one.
         subject:
-          imageType === 'sprite'
-            ? props.subject ?? props.generation?.subject
-            : undefined,
+          imageType !== 'sprite'
+            ? undefined
+            : props.poses
+            ? 'character'
+            : props.subject ?? props.generation?.subject,
         thumb: getImageThumbnail(props.name ?? '') || src,
         src,
         pixelated: !!props.pixelGridSize,

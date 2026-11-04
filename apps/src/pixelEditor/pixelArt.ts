@@ -765,32 +765,6 @@ export function loadImage(source: string): Promise<HTMLImageElement> {
 }
 
 /**
- * The detected physical px per art pixel of an image — its first frame when
- * frameSize is given — or null when no convincing grid exists. May be
- * fractional (see PixelGrid.sizeX), and is harmonized with the cell count
- * downsampling would produce, so rounding a stored dimension divided by
- * this value gives the paint editor's actual grid. Detection only, pixels
- * untouched: reports the grid a non-normalized image (a pixel-style
- * character sheet, or one saved before normalization) would be treated as.
- */
-export async function detectImageGridSize(
-  source: string,
-  frameSize?: {x: number; y: number}
-): Promise<number | null> {
-  const img = await loadImage(source);
-  const width = frameSize?.x ?? img.naturalWidth;
-  const height = frameSize?.y ?? img.naturalHeight;
-  const raster = rasterFromImage(img, width, height);
-  const grid = raster && detectPixelGrid(raster);
-  if (!grid) {
-    return null;
-  }
-  const cols = cellBounds(width, grid.sizeX, grid.offsetX).length - 1;
-  const rows = cellBounds(height, grid.sizeY, grid.offsetY).length - 1;
-  return (width / cols + height / rows) / 2;
-}
-
-/**
  * Normalize a blob the user declared to be pixel art: find its grid (best
  * attempt — the style choice is the classifier, so this never bails) and
  * downsample to logical resolution, one image pixel per art pixel.

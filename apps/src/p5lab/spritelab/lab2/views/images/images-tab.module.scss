@@ -3,7 +3,6 @@
 @use '../imageTile' as tile;
 @use '../editor-strip' as strip;
 @use '../sentence/sr-only';
-@use '../../../../../pixelEditor/dialogChrome' as chrome;
 
 // A frame of a set on a canvas, scaled to its box with its pixels sharp.
 @mixin fills-box {
@@ -22,6 +21,9 @@ $column-gap: 20px;
 $pad: 16px;
 // The list's share of the tab's width.
 $list-share: 0.2;
+// The frame's rounded corners, and the border inside them.
+$frame-radius: 12px;
+$frame-border: 2px;
 
 // The tab starts at the top of the editors' strip, which lies over its
 // first two columns; the pane column carries its own header there.
@@ -37,7 +39,37 @@ $list-share: 0.2;
   container-type: inline-size;
 }
 
-// The pane's header, the strip's twin, across the top of the pane column.
+// A tip over the frame's bottom part while a picture is made; the frame
+// clips it to its corners.
+.frameTip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 12px 14px;
+  background-color: color-mix(
+    in srgb,
+    var(--neutral-base-true-black) 65%,
+    transparent
+  );
+  color: var(--text-neutral-white-fixed);
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.frameTipIcon {
+  flex: none;
+  font-size: 22px;
+}
+
+// The pane's header, the same height as the editors' strip, across the top
+// of the pane column.
 .panelHeader {
   position: absolute;
   top: 0;
@@ -106,20 +138,17 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   font-size: 20px;
 }
 
-// The trash can, in a row pinned to the column's bottom; the question
-// takes the row over while it is asked.
+// The trash can, in a row pinned to the column's bottom.
 .listFooter {
   display: flex;
   flex: none;
   margin-top: auto;
   align-items: center;
   justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 4px;
   min-height: 36px;
 }
 
-// The image about to go, small, beside the asking dialog's words.
+// Thumbnail of the image to be deleted, beside the dialog's text.
 .deleteLead {
   display: flex;
   align-items: center;
@@ -147,8 +176,8 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   align-content: start;
   min-height: 0;
   overflow-y: auto;
-  // Room inside the scroll box for a hovered tile's growth and the chosen
-  // tile's ring, grown with it.
+  // Space inside the scroll box so a hovered tile's growth and the chosen
+  // slot's ring are not clipped.
   margin: 0 -12px;
   padding: 8px 12px 12px;
 }
@@ -176,9 +205,8 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
     @include fills-box;
   }
 
-  // The whole tile grows a little, frame, checker and picture together,
-  // to just inside where the chosen ring stands; nothing is cropped, and
-  // the ring, on the slot, stays put.
+  // A hovered tile scales by 6%, about 2.6px per side, inside the ring's
+  // 3px offset; the ring is on the slot and does not move.
   &:hover:not(:disabled) {
     transform: scale(1.06);
   }
@@ -188,8 +216,8 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   }
 }
 
-// Each tile sits in a slot of its own size; the slot wears the chosen
-// ring, so the ring holds still while the tile grows inside it.
+// Each tile sits in a slot of its own size. The ring is drawn on the slot,
+// not the tile, so it does not scale with a hovered tile.
 .tileSlot {
   width: $tile-px;
   height: $tile-px;
@@ -197,13 +225,13 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 }
 
 .tileSlotChosen {
-  outline: 2px solid var(--borders-brand-teal-primary);
+  outline: 2px solid var(--border-brand-primary);
   outline-offset: 3px;
 }
 
 // The image not made yet: an empty dotted box where its tile will be.
 .tileDraft {
-  border: 2px dotted var(--borders-neutral-primary);
+  border: 2px dotted var(--border-neutral-primary);
   background: transparent;
 }
 
@@ -211,9 +239,9 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   image-rendering: pixelated;
 }
 
-// The middle column is a grey well, set off from the list and the pane,
-// running the full height of the tab: it takes back the tab's own
-// top and bottom padding and keeps the frame where it was.
+// The middle column is a gray well, set off from the list and the pane,
+// running the full height of the tab: it takes back the tab's own top and
+// bottom padding and keeps the frame where it was.
 .frameWell {
   display: flex;
   flex: 1 1 0;
@@ -236,19 +264,12 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   container-type: inline-size;
 }
 
-// The frame and, at its left, the session's other pictures.
 .frameRow {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 12px;
   width: 100%;
-}
-
-.beside {
-  flex: none;
-  display: flex;
-  max-height: 100%;
 }
 
 .frame {
@@ -258,19 +279,17 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  border: 2px dashed var(--borders-neutral-primary);
-  border-radius: 12px;
+  border: $frame-border dashed var(--border-neutral-primary);
+  border-radius: $frame-radius;
   background-color: var(--background-neutral-primary);
   overflow: hidden;
 
   // The sheet preview's canvas holds one frame at its stored size, scaled
   // to the frame either way: a pixel-art set's frame is a few dozen art
-  // pixels wide. Hard edges keep crisp frames crisp.
+  // pixels wide. image-rendering: pixelated keeps the scaled-up pixels
+  // sharp.
   canvas {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    image-rendering: pixelated;
+    @include fills-box;
   }
 }
 
@@ -285,8 +304,8 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   );
 }
 
-// Fills the frame even when the stored image is smaller than it.
-// The picture's own box, the frame's full size, centered like the frame.
+// The picture's box is the frame's full size, so a stored image smaller
+// than the frame is scaled up to fill it.
 .picture {
   display: flex;
   align-items: center;
@@ -301,14 +320,6 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   object-fit: contain;
 }
 
-// The model's steps, one at a time, centered under the frame while a
-// picture is made.
-.underSteps {
-  display: flex;
-  flex: 1 1 auto;
-  justify-content: center;
-}
-
 // The drawing tools, across the frame's top.
 .above {
   display: flex;
@@ -316,10 +327,10 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   padding-bottom: 8px;
 }
 
-// The editor's canvas fills the frame; its own border and ground go.
-// The frame's bright checker stays out from under the tools: their canvas
-// paints its own, and before it has, a quiet ground shows through the
-// picture's transparent pixels instead.
+// The editor's canvas fills the frame, so the editor's own border and
+// background are removed. The frame's checkerboard is hidden under the
+// tools: the editor's canvas paints its own, and until it has, a plain
+// neutral background shows through transparent pixels.
 .paintFrame {
   border-style: solid;
   background-image: none;
@@ -330,11 +341,11 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   width: 100%;
   height: 100%;
   border: 0;
-  border-radius: 10px;
+  border-radius: $frame-radius - $frame-border;
   background-color: transparent;
 }
 
-// The canvas with the frame's picture laid over it while the editor loads.
+// The canvas with a placeholder laid over it while the editor loads.
 .paintStack {
   position: relative;
   width: 100%;
@@ -350,16 +361,25 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   pointer-events: none;
 }
 
+// The row under the frame keeps this height while nothing is rendered
+// there; ImageFrame reads it to size the frame.
+$under-min-height: 48px;
+$under-padding-top: 8px;
+
+:export {
+  underMinPx: math.div($under-min-height + $under-padding-top, 1px);
+}
+
 .under {
-  // Never squeezed: the frame is sized from this slot's height, so a slot
-  // that gave way would let its contents run off the column's bottom.
+  // flex: none: the frame's side is computed assuming this row keeps its
+  // full height; a shorter row would let its contents overflow the column.
   display: flex;
   flex: none;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  min-height: 48px;
-  padding-top: 8px;
+  min-height: $under-min-height;
+  padding-top: $under-padding-top;
   // Pinned to the column's foot; the spare height goes above it.
   margin-top: auto;
 }
@@ -375,18 +395,19 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   min-height: 0;
   margin: (-$pad) (-$pad) (-$pad) 0;
   padding: 16px;
-  border-left: 1px solid var(--borders-neutral-primary);
+  border-left: 1px solid var(--border-neutral-primary);
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
 
-  // Focus lands here on a mode change; the pane's edge is not the cue.
-  &:focus {
+  // The scene moves focus here on a mode change and announces it; no
+  // outline is drawn around the whole pane for that programmatic focus.
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 }
 
-// What sits between the pinned headline and the pinned buttons, scrolling
-// when it runs past the room.
+// The word list, between the pinned sentence and the pinned buttons: one
+// rounded box whose contents scroll when they run past the space.
 .paneScroll {
   display: flex;
   flex: 1 1 auto;
@@ -394,9 +415,24 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   gap: 16px;
   min-height: 0;
   overflow-y: auto;
-  // Room for a hovered word's lift and the focus ring at the edges.
-  margin: 0 -8px;
-  padding: 4px 8px;
+  box-sizing: border-box;
+  // Room for the focus ring at the edges.
+  padding: 8px;
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: 12px;
+  background-color: var(--background-neutral-primary);
+}
+
+// The sentence on a brand panel, its text white on the brand color.
+.sentencePanel {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background-color: var(--background-brand-primary);
+  color: var(--text-neutral-white-fixed);
+
+  p {
+    color: inherit;
+  }
 }
 
 .headline {
@@ -406,19 +442,17 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   line-height: 1.4;
 }
 
-.typeChoice {
-  display: inline-block;
-  vertical-align: middle;
+// Under the drawing tools when a pause-save failed.
+.saveNotice {
+  margin: 4px 0 0;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-neutral-primary);
 }
 
-.verdict {
-  display: flex;
-  flex-direction: column;
-}
-
-// Pinned at the pane's bottom.
+// Pinned to the pane's foot, however little stands above it.
 .paneBottom {
-  // Pinned to the pane's foot, however little stands above it.
   margin-top: auto;
   display: flex;
   flex: none;
@@ -426,58 +460,11 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   gap: 10px;
 }
 
-.confirm {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 14px;
-}
-
-.confirmButtons {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-// Doubled to outrank the button's own padding and radius.
-.generateButton.generateButton {
-  min-height: 44px;
-  border-radius: 999px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.ready {
-  animation: ready-rock 2.4s ease-in-out infinite;
-
-  &:active {
-    animation: none;
-  }
-}
-
-@keyframes ready-rock {
-  0%,
-  70%,
-  100% {
-    transform: scale(1) rotate(0);
-  }
-  78% {
-    transform: scale(1.04) rotate(-2deg);
-  }
-  86% {
-    transform: scale(1.04) rotate(2deg);
-  }
-  94% {
-    transform: scale(1) rotate(0);
-  }
-}
-
-// The quieter neutral: Generate is the main call to action.
-.drawButton.drawButton {
+// The quieter neutral: Generate is the main call to action. Nested under
+// the pane to outrank the library button's own colors.
+.pane .drawButton {
   border-color: var(--border-neutral-secondary);
   color: var(--text-neutral-secondary);
-  font-size: 13px;
-  font-weight: 500;
 
   &:hover {
     border-color: var(--text-neutral-primary);
@@ -485,14 +472,8 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .ready {
-    animation: none;
-  }
-}
-
 // The question and the thumbs float over the frame's bottom edge, dark on
-// any theme, as a strip of their own.
+// any theme, as a floating bar.
 .ratingBar {
   position: absolute;
   bottom: 16px;
@@ -503,9 +484,9 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   gap: 4px;
   padding: 6px 10px 6px 18px;
   border-radius: 12px;
-  background-color: var(--neutral-gray-95);
-  color: var(--neutral-base-white);
-  box-shadow: 0 2px 8px var(--neutral-black-alpha-30);
+  background-color: var(--background-neutral-primary-inverse);
+  color: var(--text-neutral-primary-inverse);
+  box-shadow: 0 2px 8px var(--background-neutral-alpha-30);
   white-space: nowrap;
 }
 
@@ -516,19 +497,21 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   user-select: none;
 }
 
-// Doubled to outrank the button's own colors.
-.thumb.thumb {
-  color: var(--neutral-base-white);
+// Nested under the bar to outrank the library button's own colors.
+.ratingBar .thumb,
+.ratingBar .dismiss {
+  color: var(--text-neutral-primary-inverse);
   font-size: 20px;
 
   &:hover {
+    // A light wash on the dark bar; the alpha tokens are all black-based.
     background-color: var(--neutral-white-alpha-20);
   }
 }
 
-.thumb.thumbChosen {
-  background-color: var(--neutral-base-white);
-  color: var(--neutral-gray-95);
+.ratingBar .thumbChosen {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
 }
 
 // The question: the design-system dialog, its content a line with the
@@ -550,11 +533,11 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 }
 
 .ratingPromptUp {
-  color: var(--sentiment-success-70);
+  color: var(--text-success-primary);
 }
 
 .ratingPromptDown {
-  color: var(--brand-orange-50);
+  color: var(--text-accent-orange-primary);
 }
 
 // Full width: the dialog centers its content otherwise.
@@ -568,14 +551,15 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 
 // A row is the design system's checkbox label, full width, with a tint
 // and a brand border when picked. Its own box and label text stay; the
-// row only changes what surrounds them.
-.reasonRow.reasonRow {
+// row only changes what surrounds them. Nested under the list to outrank
+// the library's own label styles.
+.reasonList .reasonRow {
   display: flex;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
   padding: 14px 16px;
-  border: 1px solid var(--borders-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
   border-radius: 8px;
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
@@ -585,20 +569,21 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   user-select: none;
 
   &:hover {
-    border-color: var(--borders-neutral-strong);
+    border-color: var(--border-neutral-secondary);
   }
 }
 
-.reasonRowPicked.reasonRowPicked {
-  border-color: var(--borders-brand-teal-primary);
+.reasonList .reasonRowPicked {
+  border-color: var(--border-brand-primary);
   background-color: var(--background-brand-light);
   color: var(--text-brand-primary);
 }
 
-// The pane's first row: the headline, and the way behind the scenes.
+// The pane's first row: the headline at the left, the Behind the scenes and
+// Advanced buttons at the right.
 .paneHeader {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 8px;
 }
@@ -648,7 +633,7 @@ $frame-strip-width: $strip-frames * $frame-tile-width + $frame-strip-gaps;
   display: flex;
   margin: 0;
   padding: $frame-tile-pad;
-  border: $frame-tile-border solid var(--borders-neutral-primary);
+  border: $frame-tile-border solid var(--border-neutral-primary);
   border-radius: 8px;
   background: transparent;
   color: var(--text-neutral-secondary);
@@ -665,7 +650,7 @@ $frame-strip-width: $strip-frames * $frame-tile-width + $frame-strip-gaps;
 .frameTileChosen {
   padding: $frame-tile-pad - 1px;
   border-width: $frame-tile-border + 1px;
-  border-color: var(--borders-brand-teal-primary);
+  border-color: var(--border-brand-primary);
   background: var(--background-neutral-secondary);
 }
 
@@ -702,6 +687,61 @@ $frame-strip-width: $strip-frames * $frame-tile-width + $frame-strip-gaps;
     width: 38px;
     height: 38px;
   }
+}
+
+// Positioning context for the Advanced popover, which is placed relative
+// to its button.
+.advancedHost {
+  position: relative;
+}
+
+// Placed below its button and right-aligned to it, so it stays inside the
+// pane when the pane is at the window's right edge. The library positions
+// the popover relative to the viewport; this overrides that to position it
+// within .advancedHost.
+.advancedHost .advancedPopover {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  width: 320px;
+  margin-top: 8px;
+  transform: none;
+  z-index: 2;
+}
+
+// Nested under the popover to outrank the library's own label styles.
+.advancedPopover .advancedField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+// The checkbox row: the design system's label, box and text in a row.
+.advancedPopover .advancedField:has(input[type='checkbox']) {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.advancedPrompt {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: 6px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font: inherit;
+  resize: vertical;
+}
+
+.paneHeaderTools {
+  display: flex;
+  flex: none;
+  align-items: center;
 }
 
 .srOnly {

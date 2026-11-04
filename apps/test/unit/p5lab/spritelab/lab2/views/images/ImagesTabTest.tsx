@@ -3,6 +3,7 @@ import React from 'react';
 
 import {CHARACTER_STRIP_POSES} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import ImagesTab from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImagesTab';
+import type {SentenceSceneParts} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
 
 // The scene is stood in for: a button that lands a picture of the kind it
 // was given, so the tab's own moves can be watched.
@@ -16,7 +17,6 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
   const SentenceSceneStub = ({
     imageType,
     imageSubject,
-    typeChoice,
     initialAnimated,
     onAnimatedChange,
     onBusyChange,
@@ -25,7 +25,6 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
   }: {
     imageType: string;
     imageSubject?: string;
-    typeChoice?: boolean;
     initialAnimated?: boolean;
     onAnimatedChange?: (animated: boolean) => void;
     onBusyChange?: (busy: boolean) => void;
@@ -56,14 +55,14 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           onClick={() =>
             onKeep({
               // Unique per picture, as the generator's are.
-              filename: `made-${++made}.png`,
+              filename: `made-${++picturesMade}.png`,
               uint8Array: new Uint8Array([137, 80, 78, 71]),
               mediaType: 'image/png',
               generation: {imageType, subject: imageSubject, prompt: 'A cat'},
             })
           }
         >
-          land {imageType} {imageSubject ?? ''} {typeChoice ? 'choice' : ''}
+          land {imageType} {imageSubject ?? ''}
         </button>
         {layout({
           mode: generating ? 'generating' : 'edit',
@@ -72,28 +71,25 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           panelRef: {current: null},
           frame: generating ? <span>spinner</span> : null,
           frameFilled: false,
-          underFrame: null,
-          alternatives: null,
+          behindTheScenes: null,
           status: null,
-          typeChoice: null,
           sentence: <span>words</span>,
+          wordChooser: null,
+          animatedChoice: null,
           error: null,
-          progress: null,
-          fact: null,
-          verdict: null,
+          tip: null,
           rating: {
             offered: false,
+            required: false,
             verdict: null,
             judge: jest.fn(),
             explain: jest.fn(),
+            dismiss: jest.fn(),
           },
-          awaitingVerdict: false,
           exhausted: false,
           generate: jest.fn(),
-          changeWords: jest.fn(),
-          keep: jest.fn(),
           draft: {imageType, subject: imageSubject, style: 'pixel'},
-        })}
+        } as SentenceSceneParts)}
       </div>
     );
   };
@@ -161,7 +157,7 @@ jest.mock('@cdo/apps/imageUtils', () => ({
   },
 }));
 
-let made = 0;
+let picturesMade = 0;
 // Frames are cut and put back without a canvas: the strip is named for
 // what happened to it.
 const cutFrame = jest.fn(
@@ -229,8 +225,8 @@ describe('ImagesTab', () => {
   beforeEach(() => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
     Object.keys(params).forEach(key => delete params[key]);
-    // The older own-work pane, which most of these tests were written
-    // against; the paint-first default has tests of its own.
+    // These tests use the `pane` presentation of an edited image; the
+    // paint-first default has tests of its own below.
     params['images-edited'] = 'pane';
     acceptGenerated.mockReset();
     saveEdited.mockReset();
@@ -296,7 +292,7 @@ describe('ImagesTab', () => {
     expect(pressed()).toEqual(['Sprite 1']);
     fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     expect(pressed()).toEqual(['New character']);
-    // The kind is settled by the pick: no Type choice in the scene.
+    // The kind is set by the pick.
     expect(
       screen.getByRole('button', {name: 'land sprite character'})
     ).toBeTruthy();
@@ -859,11 +855,35 @@ describe('ImagesTab', () => {
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: /^Done/}));
     });
+    expect(screen.queryByText('Edit the jump up frame.')).toBeNull();
     expect(screen.getByRole('button', {name: 'Jump up'})).toHaveAttribute(
       'aria-pressed',
       'true'
     );
     expect(playing()).toBe('jump-right');
+  });
+
+  it('opens an AI-made set in the tools on the picked frame too', async () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      role: 'hero',
+      sourceUrl: 'sheet.png',
+      frameSize: {x: 64, y: 64},
+      pixelGridSize: 1,
+      poses: CHARACTER_STRIP_POSES,
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    fireEvent.click(screen.getByRole('button', {name: 'Jump down'}));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
+    });
+    expect(cutFrame).toHaveBeenCalledWith('sheet.png', {x: 64, y: 64}, 4);
+    expect(screen.getByRole('button', {name: 'Jump down'})).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
   });
 
   it('edits a character set one frame at a time, opening on the standing frame', async () => {

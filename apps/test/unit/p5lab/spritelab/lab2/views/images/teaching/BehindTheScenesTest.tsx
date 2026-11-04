@@ -1,4 +1,5 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 
 import BehindTheScenes from '@cdo/apps/p5lab/spritelab/lab2/views/images/teaching/BehindTheScenes';
@@ -6,59 +7,62 @@ import {sentPromptsFor} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sent
 
 const OPTIONS = {imageType: 'sprite', style: 'pixel', pixelGrid: 64} as const;
 
+const renderBehind = (props: React.ComponentProps<typeof BehindTheScenes>) =>
+  render(
+    <ThemeProvider>
+      <BehindTheScenes {...props} />
+    </ThemeProvider>
+  );
+
 describe('BehindTheScenes', () => {
-  it('shows the prompt as sent behind the link, and closes', () => {
-    render(
-      <BehindTheScenes
-        sent={sentPromptsFor('A cat', OPTIONS, 'pixel', false)}
-      />
-    );
-    const info = screen.getByRole('button', {name: 'Behind the scenes'});
-    expect(info.getAttribute('aria-expanded')).toBe('false');
-    expect(screen.queryByText(/^A cat\. /)).toBeNull();
-    fireEvent.click(info);
-    expect(info.getAttribute('aria-expanded')).toBe('true');
-    const sent = screen.getByText(/^A cat\. /);
-    expect(sent.textContent).toContain('pixel');
-    // One picture: plain text, not a tab panel.
-    expect(sent.getAttribute('role')).toBeNull();
-    fireEvent.click(screen.getByRole('button', {name: 'Close'}));
-    expect(screen.queryByText(/^A cat\. /)).toBeNull();
+  it('opens a dialog with the picture and the words as sent, and Got it closes it', () => {
+    renderBehind({
+      sent: sentPromptsFor('A cat', OPTIONS, 'pixel', false),
+      picture: {src: 'data:image/png;base64,AA==', pixelated: true},
+    });
+    expect(screen.queryByRole('dialog')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
+    const dialog = screen.getByRole('alertdialog');
+    expect(dialog.textContent).toContain('Behind the scenes');
+    expect(screen.getByText(/^A cat\. /).textContent).toContain('pixel');
+    expect(
+      within(dialog).getByRole('img', {name: 'Your picture'}).style
+        .backgroundImage
+    ).toContain('data:image/png;base64,AA==');
+    // One picture: no second view to switch to.
+    expect(screen.queryByRole('button', {name: 'Other poses'})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
+    expect(screen.queryByRole('alertdialog')).toBeNull();
   });
 
-  it("shows a set's first-picture words and the shared pose words in two tabs", () => {
-    render(
-      <BehindTheScenes
-        sent={sentPromptsFor('A dragon', OPTIONS, 'pixel', true, 'quadruped')}
-      />
-    );
+  it('closes on the corner x as well', () => {
+    renderBehind({sent: sentPromptsFor('A cat', OPTIONS, 'pixel', false)});
     fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
-    expect(screen.getByRole('tab', {name: 'First picture'})).toBeTruthy();
-    expect(screen.getByRole('tabpanel').textContent).toMatch(
-      /^A dragon\. Show the whole character/
-    );
-    fireEvent.click(screen.getByRole('tab', {name: 'Other poses'}));
-    const panel = screen.getByRole('tabpanel');
-    expect(panel.textContent).toContain('[pose]');
-    expect(panel.textContent).toContain('standing:');
-    expect(panel.textContent).toContain('walking:');
-    expect(panel.querySelectorAll('li')).toHaveLength(4);
+    fireEvent.click(screen.getByRole('button', {name: 'Close dialog'}));
+    expect(screen.queryByRole('alertdialog')).toBeNull();
   });
 
-  it('moves between the tabs with the arrow keys', () => {
-    render(
-      <BehindTheScenes
-        sent={sentPromptsFor('A dragon', OPTIONS, 'pixel', true, 'quadruped')}
-      />
-    );
+  it("switches between a set's first-picture words and the shared pose words", () => {
+    renderBehind({
+      sent: sentPromptsFor('A dragon', OPTIONS, 'pixel', true, 'quadruped'),
+    });
     fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
-    const first = screen.getByRole('tab', {name: 'First picture'});
-    expect(document.activeElement).toBe(first);
-    fireEvent.keyDown(first, {key: 'ArrowRight'});
     expect(
       screen
-        .getByRole('tab', {name: 'Other poses'})
-        .getAttribute('aria-selected')
+        .getByRole('button', {name: 'First picture'})
+        .getAttribute('aria-pressed')
     ).toBe('true');
+    expect(
+      screen.getByText(/^A dragon\. Show the whole character/)
+    ).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Other poses'}));
+    const poses = screen.getAllByRole('listitem');
+    expect(poses).toHaveLength(4);
+    expect(poses.map(pose => pose.textContent)).toEqual(
+      expect.arrayContaining([
+        expect.stringContaining('standing:'),
+        expect.stringContaining('walking:'),
+      ])
+    );
   });
 });

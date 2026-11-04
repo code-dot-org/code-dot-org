@@ -31,14 +31,14 @@ interface WordMenusProps {
   choices: Choices;
   onChange: (choices: Choices) => void;
   disabled?: boolean;
-  /** The carousel, moving sideways, unless given. */
+  /** Defaults to 'carousel': one slot's words at a time, moving sideways. */
   layout?: WordLayout;
 }
 
-// An emoji is about this many letters wide.
-const EMOJI_WIDTH_IN_LETTERS = 2;
+// An icon or a color dot is about this many letters wide.
+const ICON_WIDTH_IN_LETTERS = 2;
 const wordWidth = (w: Word) =>
-  w.text.length + (w.emoji ? EMOJI_WIDTH_IN_LETTERS : 0);
+  w.text.length + (w.icon || w.color ? ICON_WIDTH_IN_LETTERS : 0);
 
 // How many sets, in carousel order, the sentence keeps height for.
 const RESERVED_SETS = 4;
@@ -162,8 +162,6 @@ export function useWordMenus({
     (last, s, i) => (isAvailable(s) ? i : last),
     0
   );
-  // With one set to show, there is nowhere to go: no arrows, no dots.
-  const oneSet = lastAvailable === 0;
   // If the set on show becomes unavailable, move to the last available one.
   useEffect(() => {
     if (index > lastAvailable) {
@@ -315,10 +313,7 @@ export function useWordMenus({
               key={set.id}
               role="group"
               aria-label={`${set.label}${set.required ? ' (pick one)' : ''}`}
-              className={classNames(
-                styles.cluster,
-                set.id === slot.id && styles.clusterCurrent
-              )}
+              className={styles.cluster}
             >
               <div className={styles.words}>{renderWords(set)}</div>
             </div>
@@ -368,7 +363,7 @@ export function useWordMenus({
                 variant="text"
                 color="tertiary"
                 size="medium"
-                className={classNames(styles.arrow, oneSet && styles.navHidden)}
+                className={styles.arrow}
                 aria-label="Previous words"
                 disabled={!canMove || index === 0}
                 onClick={() => goTo(Math.max(0, index - 1))}
@@ -410,7 +405,7 @@ export function useWordMenus({
                 variant="text"
                 color="tertiary"
                 size="medium"
-                className={classNames(styles.arrow, oneSet && styles.navHidden)}
+                className={styles.arrow}
                 aria-label="Next words"
                 disabled={!canMove || index >= lastAvailable}
                 onClick={() => goTo(Math.min(lastAvailable, index + 1))}
@@ -420,36 +415,6 @@ export function useWordMenus({
                   aria-hidden
                 />
               </MuiIconButton>
-            </div>
-            <div className={styles.dotsRow}>
-              <div
-                className={classNames(styles.dots, oneSet && styles.navHidden)}
-              >
-                {slots.map((s, i) =>
-                  isAvailable(s) ? (
-                    <button
-                      key={s.id}
-                      type="button"
-                      className={classNames(
-                        styles.dot,
-                        hueClass(sentence, s.id),
-                        i === index && styles.dotCurrent,
-                        filled(s.id) && styles.dotFilled
-                      )}
-                      aria-label={`${s.label} words${
-                        filled(s.id)
-                          ? `, ${
-                              wordFor(sentence, s.id, choices[s.id])?.text
-                            } chosen`
-                          : ''
-                      }`}
-                      aria-current={i === index ? 'true' : undefined}
-                      disabled={!canMove}
-                      onClick={() => goTo(i)}
-                    />
-                  ) : null
-                )}
-              </div>
             </div>
           </div>
         )}
@@ -462,7 +427,12 @@ export function useWordMenus({
 const WordMenus: React.FunctionComponent<WordMenusProps> = props => {
   const parts = useWordMenus(props);
   return (
-    <div className={styles.menus}>
+    <div
+      className={classNames(
+        styles.menus,
+        props.layout !== 'clusters' && styles.menusFill
+      )}
+    >
       {parts.sentence}
       {parts.chooser}
     </div>

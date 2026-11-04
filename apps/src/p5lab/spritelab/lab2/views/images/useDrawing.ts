@@ -69,6 +69,9 @@ export interface DrawingTools {
       painted: a copy of the previous drawing's canvas, or the picture
       decoded ahead. */
   placeholderPicture: HTMLImageElement | HTMLCanvasElement | undefined;
+  /** The last pause-save failed; it is tried again at the next pause,
+      Done or tab change. */
+  saveFailed: boolean;
   /** Opens `target` in the tools, a set on `frame` or its standing frame. */
   startDrawing: (target: ImageTarget, frame?: number) => Promise<void>;
   /** Leaves the drawing for another image or a new draft: unsaved pixels
@@ -120,6 +123,7 @@ export default function useDrawing({
   const [drawing, setDrawing] = useState<Drawing | null>(null);
   const drawingRef = useRef(drawing);
   drawingRef.current = drawing;
+  const [saveFailed, setSaveFailed] = useState(false);
   // The drawing that a generated picture replaced while a save of it was
   // still in flight; that save must not set the image's pixels back to the
   // drawing.
@@ -168,6 +172,7 @@ export default function useDrawing({
     uploadPendingRef.current = false;
     editorRef.current = null;
     leaveAfterSaveRef.current = false;
+    setSaveFailed(false);
     setDrawing(null);
   }, []);
 
@@ -350,6 +355,7 @@ export default function useDrawing({
         if (drawingRef.current?.id === drawingToSave.id) {
           uploadPendingRef.current = !upload;
         }
+        setSaveFailed(false);
         // A blank that was saved is an image now: later saves replace it;
         // a saved strip is what the next frame is cut from.
         saved = {
@@ -378,6 +384,7 @@ export default function useDrawing({
         leaveAfterSaveRef.current = false;
         nextFrameRef.current = null;
         inFlightRef.current = false;
+        setSaveFailed(true);
         return;
       } finally {
         inFlightRef.current = false;
@@ -457,6 +464,7 @@ export default function useDrawing({
     leaveAfterSaveRef.current = false;
     const copy = keepCanvasUp ? editorRef.current?.snapshot() : null;
     editorRef.current = null;
+    setSaveFailed(false);
     if (!keepCanvasUp) {
       setDrawing(null);
       return;
@@ -490,6 +498,7 @@ export default function useDrawing({
     drawing,
     openedOnGeneration: openedOnGenerationRef.current,
     placeholderPicture: previousCanvasRef.current?.canvas ?? drawing?.picture,
+    saveFailed,
     startDrawing,
     leaveDrawing,
     finishDrawing,

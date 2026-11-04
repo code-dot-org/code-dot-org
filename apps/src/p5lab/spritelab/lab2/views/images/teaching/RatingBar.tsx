@@ -7,7 +7,7 @@ import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useId, useRef, useState} from 'react';
 
-import {Verdict} from '../../sentence/ResultActions';
+import {Verdict} from '../../sentence/verdict';
 
 import ReasonOptions, {ReasonOption} from './ReasonOptions';
 
@@ -21,6 +21,8 @@ interface RatingBarProps {
   /** Called with true when the reasons dialog opens and false when it
       closes. */
   onAsking?: (open: boolean) => void;
+  /** Put the strip away without a thumb; absent where a rating is required. */
+  onDismiss?: () => void;
   disabled?: boolean;
 }
 
@@ -52,6 +54,7 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
   onJudge,
   onReasons,
   onAsking,
+  onDismiss,
   disabled,
 }) => {
   // Done can unmount this bar in the same render that closes the dialog,
@@ -119,6 +122,16 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
             aria-hidden
           />
         </MuiIconButton>
+        {onDismiss && (
+          <MuiIconButton
+            aria-label="Dismiss"
+            className={styles.dismiss}
+            disabled={disabled}
+            onClick={onDismiss}
+          >
+            <FontAwesomeV6Icon iconName="xmark" aria-hidden />
+          </MuiIconButton>
+        )}
       </div>
       {question && asking && (
         <MuiDialog
