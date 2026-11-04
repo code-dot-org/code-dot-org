@@ -291,9 +291,50 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   justify-content: center;
 }
 
-// Never squeezed: the frame is sized from this slot's height, so a slot
-// that gave way would let its contents run off the column's bottom.
+// The drawing tools, across the frame's top.
+.above {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+// The editor's canvas fills the frame; its own border and ground go.
+// The frame's bright checker stays out from under the tools: their canvas
+// paints its own, and before it has, a quiet ground shows through the
+// picture's transparent pixels instead.
+.paintFrame {
+  border-style: solid;
+  background-image: none;
+  background-color: var(--background-neutral-secondary);
+}
+
+.paintCanvas {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+// The canvas with the frame's picture laid over it while the editor loads.
+.paintStack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.paintPlaceholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
 .under {
+  // Never squeezed: the frame is sized from this slot's height, so a slot
+  // that gave way would let its contents run off the column's bottom.
   display: flex;
   flex: none;
   justify-content: flex-end;

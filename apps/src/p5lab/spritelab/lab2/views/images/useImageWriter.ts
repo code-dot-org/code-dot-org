@@ -60,6 +60,15 @@ interface WriterOptions {
   onDeleteImage: (name: string) => void;
 }
 
+export interface SaveEditedOptions {
+  /** False stores the pixels in the project without uploading the file;
+      a new image is always uploaded, since it has no file yet. */
+  upload?: boolean;
+  /** Called after the upload and before the image is updated; returning
+      false abandons the save, for a drawing a picture replaced meanwhile. */
+  stillWanted?: () => boolean;
+}
+
 export interface ImageWriter {
   /** Stores a generated picture as the target image's pixels and resolves
       with the image's key, a new key for a new image. */
@@ -72,7 +81,8 @@ export interface ImageWriter {
   saveEdited: (
     target: ImageTarget,
     dataURI: string,
-    meta: PixelEditorSaveMeta
+    meta: PixelEditorSaveMeta,
+    options?: SaveEditedOptions
   ) => Promise<string>;
   deleteImage: (key: string) => void;
   /** Deletes the session's uploaded files that no image points at any
@@ -171,32 +181,44 @@ export default function useImageWriter({
         pixelGridSize: result.pixelGridSize,
         trimmed: !!result.trimmed,
         generation: result.generation,
+        edited: false,
       });
     },
     [uploadImage, write]
   );
 
   const saveEdited = useCallback(
-    async (target: ImageTarget, dataURI: string, meta: PixelEditorSaveMeta) => {
+    async (
+      target: ImageTarget,
+      dataURI: string,
+      meta: PixelEditorSaveMeta,
+      {upload = true, stillWanted}: SaveEditedOptions = {}
+    ) => {
       const existing = target.key ? propsOf(target.key) : undefined;
       const safeName = (existing?.name || 'image')
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '_');
-      const sourceUrl = await uploadOrEmbed(
-        uploadImage,
-        `${safeName}_${Date.now()}.png`,
-        dataURIToBytes(dataURI),
-        'image/png',
-        dataURI
-      );
+      const sourceUrl =
+        upload || !existing
+          ? await uploadOrEmbed(
+              uploadImage,
+              `${safeName}_${Date.now()}.png`,
+              dataURIToBytes(dataURI),
+              'image/png',
+              dataURI
+            )
+          : undefined;
       recordSessionUrl(sourceUrl);
       const frameSize = await measuredSize(dataURI);
+      if (stillWanted && !stillWanted()) {
+        return target.key ?? '';
+      }
       // Keep the subject: the edit clears `generation`, where an older image
       // stored it.
       const subject =
         existing?.subject ?? existing?.generation?.subject ?? target.subject;
       return write(target, {
-        sourceUrl,
+        ...(sourceUrl && {sourceUrl}),
         dataURI,
         ...(subject && {subject}),
         // An edited character set keeps its frame grid (the editor hands
@@ -208,6 +230,7 @@ export default function useImageWriter({
         trimmed: false,
         // Hand-edited pixels are not the prompt's output anymore.
         generation: undefined,
+        edited: true,
         recentColors: meta.recentColors,
       });
     },

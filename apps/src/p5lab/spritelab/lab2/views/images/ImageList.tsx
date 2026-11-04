@@ -17,6 +17,7 @@ import classNames from 'classnames';
 import React, {useEffect, useId, useRef, useState} from 'react';
 
 import {
+  ImageKind,
   imageKindNoun,
   ImageSubject,
   ImageType,
@@ -27,10 +28,7 @@ import {ProjectImage} from './projectImages';
 import styles from './images-tab.module.scss';
 
 /** A new image's kind, picked from the plus button's menu. */
-export interface NewImageKind {
-  imageType: ImageType;
-  subject?: ImageSubject;
-}
+export type NewImageKind = ImageKind;
 
 /** Two kinds match when they would make the same kind of image: the subject
     matters only for sprites, and a sprite with no subject is a character. */

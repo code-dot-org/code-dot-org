@@ -5,7 +5,8 @@
 
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
-import PixelEditorModal from '@cdo/apps/pixelEditor/PixelEditorModal';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
@@ -14,18 +15,30 @@ import {
 } from '../../ai/images/imageGeneration';
 import {imageKindLabel, ImageSubject, ImageType} from '../../ai/images/types';
 import {onTrimsUpdated, trimAnimationListImages} from '../../imageTrim';
-import {DEFAULT_IMAGE_STYLE} from '../../levelMode';
-import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
-import EditorStrip from '../components/EditorStrip';
+import {BACKGROUND_GROUND_COLOR} from '../../paintBlank';
+import EditorStrip, {EditHistory} from '../components/EditorStrip';
+import {
+  FREEPLAY_BRUSH_SIZES,
+  FREEPLAY_TOOLBAR,
+  FREEPLAY_TOOLS,
+  PAINT_BRUSH_SIZES,
+  PAINT_COLORS,
+  PAINT_TOOLBAR,
+  PAINT_TOOLS,
+} from '../sentence/paintTools';
 import SentenceScene from '../sentence/SentenceScene';
 import {sentPromptsFor} from '../sentence/sentPrompts';
 import {readWordLayout} from '../sentence/wordLayout';
 
+import DrawPane from './DrawPane';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
 import MakePane from './MakePane';
+import OwnWorkPane from './OwnWorkPane';
+import PaintPlaceholder from './PaintPlaceholder';
 import {listProjectImages, ProjectImage} from './projectImages';
 import BehindTheScenes from './teaching/BehindTheScenes';
+import useDrawing from './useDrawing';
 import useImageWriter, {ImageTarget} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
@@ -53,11 +66,27 @@ interface ImagesTabProps {
   paneWidth: number;
   /** A picture became an image: the project should save now. */
   onImageLanded?: () => void;
+  /** The tab is the one showing; a drawing saves itself when it is not. */
+  active?: boolean;
+  /** The drawing's undo and redo, for the host's own buttons; null once
+      nothing is being drawn. */
+  onDrawingHistory?: (history: EditHistory | null) => void;
 }
 
 const DRAFT_ID = 'draft';
 // The pane's width before the preview column has reported its own.
 export const DEFAULT_PANE_WIDTH = 280;
+
+/** How an image the student drew on is shown. By default it opens in the
+    paint tools, as the work it is, with Replace image the way to the
+    words. `?images-edited=pane` shows a pane with Replace image and Edit
+    this image instead; `?images-edited=generate` keeps the words under
+    it, as before either. */
+type EditedMode = 'paint' | 'pane' | 'generate';
+function editedMode(): EditedMode {
+  const value = queryParams('images-edited');
+  return value === 'pane' || value === 'generate' ? value : 'paint';
+}
 
 const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   uploadImage,
@@ -71,6 +100,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   verdictRequired,
   paneWidth,
   onImageLanded,
+  active = true,
+  onDrawingHistory,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails land as the engine trims; re-list when they do.
@@ -121,19 +152,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     setChosenId(openOnRef.current?.key ?? null);
   }, []);
 
-  // A chosen image that is gone (deleted) gives way to the first image
-  // left, or to nothing.
-  useEffect(() => {
-    if (
-      chosenId === null ||
-      (chosenId === DRAFT_ID && draft) ||
-      images.some(image => image.key === chosenId)
-    ) {
-      return;
-    }
-    startSession(images[0]?.key ?? null);
-  }, [chosenId, draft, images, startSession]);
-
   const chosenImage: ProjectImage | null =
     images.find(image => image.key === chosenId) ?? null;
   const chosenDraft = chosenId === DRAFT_ID ? draft : null;
@@ -150,8 +168,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   chosenKeyRef.current = chosenImage?.key ?? null;
   const landedRef = useRef(onImageLanded);
   landedRef.current = onImageLanded;
+  // `saveNow`: a made picture is worth a project save of its own; a
+  // drawing's saves leave that to the project's own clock.
   const land = useCallback(
-    async (target: ImageTarget, write: () => Promise<string>) => {
+    async (
+      target: ImageTarget,
+      write: () => Promise<string>,
+      saveNow = true
+    ) => {
       const key = await write();
       if (!target.key) {
         // The student may have moved to another image while the write was
@@ -161,7 +185,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         setChosenId(id => (id === DRAFT_ID ? key : id));
         setDraft(null);
       }
-      landedRef.current?.();
+      if (saveNow) {
+        landedRef.current?.();
+      }
+      return key;
     },
     []
   );
@@ -174,41 +201,107 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // it from image to image; no image or level turns it off for them.
   const [animated, setAnimated] = useState(true);
   const handleKeep = useCallback(
-    (result: GeneratedImageResult) => {
+    async (result: GeneratedImageResult) => {
       const target: ImageTarget = {
         key: chosenKeyRef.current,
         imageType: result.generation.imageType,
         subject: result.generation.subject,
       };
-      return land(target, () => writer.acceptGenerated(target, result));
+      await land(target, () => writer.acceptGenerated(target, result));
     },
     [writer, land]
   );
 
-  // Drawing: the pixel editor over the tab, on the image or a blank.
-  const [painting, setPainting] = useState<ImageTarget | null>(null);
-  const paintSource = useMemo(() => {
-    if (!painting) {
-      return null;
+  const tools = useDrawing({
+    images,
+    saveEdited: writer.saveEdited,
+    storePicture: land,
+    active,
+    onDrawingHistory,
+  });
+  const {drawing, startDrawing, leaveDrawing, finishDrawing, stopDrawing} =
+    tools;
+  // A chosen image that is gone (deleted) gives way to the first image
+  // left, or to nothing; tools open on it close without saving, since a
+  // save would make a new image of the deleted pixels.
+  useEffect(() => {
+    if (
+      chosenId === null ||
+      (chosenId === DRAFT_ID && draft) ||
+      images.some(image => image.key === chosenId)
+    ) {
+      return;
     }
-    const existing = painting.key
-      ? images.find(image => image.key === painting.key)
-      : undefined;
-    if (existing?.src) {
-      return {
-        imageUrl: existing.src,
-        pixelGridSize: existing.props.pixelGridSize,
-        recentColors: existing.props.recentColors,
-      };
+    if (drawing?.target.key === chosenId) {
+      stopDrawing();
     }
-    const blank = blankPaintImage(painting.imageType, DEFAULT_IMAGE_STYLE);
-    return {imageUrl: blank.dataURI, pixelGridSize: blank.pixelGridSize};
-    // The editor's source is fixed when it opens.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [painting]);
+    startSession(images[0]?.key ?? null);
+  }, [chosenId, draft, images, startSession, stopDrawing, drawing]);
+  const drawingOpen = !!drawing;
+  // Free play has every tool; a level before it keeps the few that draw.
+  const limitedTools = !editingOffered;
   // Character sets are sheets of frames; the editor paints one image.
+  // An image that is the student's own work (no prompt made its pixels)
+  // keeps the words that would replace it out of the way until Replace
+  // image asks for them; the choice is per image.
+  const ownWork = !!chosenImage && !chosenImage.props.generation;
+  // Another image, or another tab, puts the guard back.
+  const [wordsAsked, setWordsAsked] = useState(false);
+  useEffect(() => {
+    setWordsAsked(false);
+  }, [chosenId, active]);
+  const ownWorkPane = ownWork && !wordsAsked && editedMode() === 'pane';
+  // Free play paints every image in place, with the words beside the
+  // tools, so the student can draw on it or make a picture over it; a
+  // level about one image keeps Edit this image and Done.
+  const paintsChosen =
+    !!chosenImage && editedMode() === 'paint' && !!editingOffered;
+  // Where the tools open by themselves, no button offers them.
   const drawOffered =
-    !!editingOffered && !!kind && !chosenImage?.sheet && !painting;
+    !!kind && !chosenImage?.sheet && !drawing && !paintsChosen;
+  // The chosen image opens in the paint tools by itself, again on return
+  // to the tab, and again once a picture has landed over it.
+  const chosenKey = chosenImage?.key;
+  const chosenHasSrc = !!chosenImage?.src && !chosenImage.sheet;
+  const kindType = kind?.imageType;
+  const kindSubject = kind?.subject;
+  useEffect(() => {
+    if (
+      paintsChosen &&
+      active &&
+      !drawingOpen &&
+      chosenKey &&
+      chosenHasSrc &&
+      kindType
+    ) {
+      startDrawing({key: chosenKey, imageType: kindType, subject: kindSubject});
+    }
+  }, [
+    paintsChosen,
+    active,
+    drawingOpen,
+    chosenKey,
+    chosenHasSrc,
+    kindType,
+    kindSubject,
+    startDrawing,
+  ]);
+  // A picture landing over what is being painted (the image, or a blank)
+  // makes the picture the pixels; the tools close without saving the old
+  // ones over it.
+  const landedOverPainting =
+    !!drawing &&
+    editedMode() === 'paint' &&
+    !!editingOffered &&
+    !!chosenImage?.props.generation &&
+    chosenImage.props.generation !== tools.openedOnGeneration &&
+    (drawing.target.key === chosenImage.key || drawing.target.key === null);
+  const {abandonDrawing} = tools;
+  useEffect(() => {
+    if (landedOverPainting) {
+      abandonDrawing();
+    }
+  }, [landedOverPainting, abandonDrawing]);
 
   const deleteOffered = !!editingOffered;
   // A level about one image offers the plus until that image exists, with
@@ -265,15 +358,42 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           if (id === chosenId) {
             return;
           }
+          // Where the tools open by themselves, open them with the image,
+          // so no frame shows it without them.
+          const next = images.find(image => image.key === id);
+          const drawsNext =
+            !!next?.src &&
+            !next.sheet &&
+            editedMode() === 'paint' &&
+            !!editingOffered;
+          if (drawing) {
+            leaveDrawing(drawsNext);
+          }
           // A draft left for an image holds nothing worth keeping.
           if (id !== DRAFT_ID) {
             setDraft(null);
           }
           startSession(id);
+          if (next && drawsNext) {
+            startDrawing({
+              key: id,
+              imageType: next.imageType,
+              subject:
+                next.subject ??
+                (next.imageType === lockedImageType
+                  ? lockedImageSubject
+                  : undefined),
+            });
+          }
         }}
         onNew={
           newOffered
-            ? kind => startDraft(kind.imageType, kind.subject)
+            ? kind => {
+                if (drawing) {
+                  leaveDrawing();
+                }
+                startDraft(kind.imageType, kind.subject);
+              }
             : undefined
         }
         chooseOffered={chooseOffered}
@@ -303,25 +423,30 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           wordLayout={wordLayout}
           singleStep
           method="tab"
-          layout={parts => (
-            <>
+          layout={parts => {
+            const generating = parts.mode === 'generating';
+            const frame = (live?: React.ReactNode, above?: React.ReactNode) => (
               <ImageFrame
                 image={chosenImage}
+                workspaceClassName={live ? styles.paintFrame : undefined}
+                above={above}
                 live={
-                  parts.mode === 'generating' || parts.frameFilled
+                  generating
                     ? parts.frame
-                    : undefined
+                    : live ?? (parts.frameFilled ? parts.frame : undefined)
                 }
-                generating={parts.mode === 'generating'}
+                generating={generating}
                 beside={parts.alternatives}
                 under={
-                  parts.mode === 'generating' ? (
+                  generating ? (
                     <div className={styles.underSteps}>{parts.progress}</div>
                   ) : (
                     parts.underFrame || reopenedBehindTheScenes
                   )
                 }
               />
+            );
+            const words = (
               <MakePane
                 parts={parts}
                 width={paneWidthPx}
@@ -329,18 +454,113 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 regenerate={!!chosenImage?.props.generation}
                 onDraw={
                   drawOffered
-                    ? () =>
-                        setPainting({
+                    ? () => {
+                        setWordsAsked(false);
+                        startDrawing({
                           key: chosenImage?.key ?? null,
                           imageType: parts.draft.imageType,
                           subject: parts.draft.subject,
-                        })
+                        });
+                      }
                     : undefined
                 }
                 drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}
               />
-            </>
-          )}
+            );
+            if (drawing) {
+              return (
+                <PixelEditor
+                  imageUrl={drawing.imageUrl}
+                  onReady={tools.releasePlaceholder}
+                  knownPixelGrid={drawing.pixelGridSize}
+                  initialRecentColors={drawing.recentColors}
+                  opaqueGround={
+                    drawing.target.imageType === 'background'
+                      ? BACKGROUND_GROUND_COLOR
+                      : undefined
+                  }
+                  tools={limitedTools ? PAINT_TOOLS : FREEPLAY_TOOLS}
+                  palette={limitedTools ? PAINT_COLORS : undefined}
+                  brushSizes={
+                    limitedTools ? PAINT_BRUSH_SIZES : FREEPLAY_BRUSH_SIZES
+                  }
+                  toolbarGroups={
+                    limitedTools ? PAINT_TOOLBAR : FREEPLAY_TOOLBAR
+                  }
+                  fit="container"
+                  toolbarLayout="row"
+                  hostUndoRedo
+                  onHistoryChange={onDrawingHistory}
+                  canvasClassName={styles.paintCanvas}
+                  onEdit={tools.scheduleStrokeSave}
+                  onSave={tools.handleSave}
+                >
+                  {editor => {
+                    tools.attachEditor(editor);
+                    return (
+                      <>
+                        {frame(
+                          <div className={styles.paintStack}>
+                            {editor.canvas}
+                            {/* The canvas being left, or the frame's own
+                                picture, covers the canvas until the editor
+                                has decoded it, so a switch never shows a
+                                blank. */}
+                            {!editor.ready && (
+                              <PaintPlaceholder
+                                picture={tools.placeholderPicture}
+                                src={drawing.imageUrl}
+                                pixelated={!!drawing.pixelGridSize}
+                              />
+                            )}
+                          </div>,
+                          // The tools stay mounted with their drawing while
+                          // a picture is made over it, out of sight.
+                          generating ? undefined : editor.toolbar
+                        )}
+                        {editingOffered && editedMode() === 'paint' ? (
+                          words
+                        ) : (
+                          <DrawPane
+                            width={paneWidthPx}
+                            kind={kind}
+                            editing={!!drawing.target.key}
+                            edited={editor.edited}
+                            onDone={finishDrawing}
+                          />
+                        )}
+                      </>
+                    );
+                  }}
+                </PixelEditor>
+              );
+            }
+            return (
+              <>
+                {frame()}
+                {ownWorkPane && chosenImage ? (
+                  <OwnWorkPane
+                    width={paneWidthPx}
+                    edited={!!chosenImage.props.edited}
+                    disabled={parts.busy}
+                    onGenerate={() => setWordsAsked(true)}
+                    onDraw={
+                      drawOffered
+                        ? () =>
+                            startDrawing({
+                              key: chosenImage.key,
+                              imageType: parts.draft.imageType,
+                              subject: parts.draft.subject,
+                            })
+                        : undefined
+                    }
+                  />
+                ) : (
+                  words
+                )}
+              </>
+            );
+          }}
         />
       ) : (
         <>
@@ -359,25 +579,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             </p>
           </section>
         </>
-      )}
-      {painting && paintSource && (
-        <PixelEditorModal
-          title={painting.key ? 'Edit image' : 'Draw image'}
-          imageUrl={paintSource.imageUrl}
-          knownPixelGrid={paintSource.pixelGridSize}
-          initialRecentColors={paintSource.recentColors}
-          opaqueGround={
-            painting.imageType === 'background'
-              ? BACKGROUND_GROUND_COLOR
-              : undefined
-          }
-          onSave={async (dataURI, meta) => {
-            const target = painting;
-            setPainting(null);
-            await land(target, () => writer.saveEdited(target, dataURI, meta));
-          }}
-          onCancel={() => setPainting(null)}
-        />
       )}
     </div>
   );

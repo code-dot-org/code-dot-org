@@ -33,6 +33,12 @@ export const IMAGE_STYLE_LABELS: Record<ImageStyle, string> = {
   pixel: 'Pixel art',
 };
 
+/** An image's kind: its type, and for a sprite what it depicts. */
+export interface ImageKind {
+  imageType: ImageType;
+  subject?: ImageSubject;
+}
+
 /** What the dialog calls an image: a sprite by its subject, else its type. */
 export function imageKindLabel(
   imageType: ImageType,

@@ -153,6 +153,21 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
+  it('drops an edit no longer wanted once its file is up', async () => {
+    propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+    const {writer, uploadImage} = renderWriter();
+    await act(async () => {
+      await writer().saveEdited(
+        {key: 'k1', imageType: 'sprite'},
+        'data:image/png;base64,iVBORw0KGgo=',
+        {pixelGridSize: 1, recentColors: []},
+        {stillWanted: () => false}
+      );
+    });
+    expect(uploadImage).toHaveBeenCalledTimes(1);
+    expect(repointAnimation).not.toHaveBeenCalled();
+  });
+
   it('makes nothing of a save for an image deleted meanwhile', async () => {
     const {writer} = renderWriter();
     await act(async () => {
@@ -181,6 +196,92 @@ describe('useImageWriter', () => {
       '/v3/assets/chan/old.png',
       '/v3/assets/chan/one.png',
     ]);
+  });
+
+  it('saves drawn pixels onto an image, uploading only when asked', async () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      sourceUrl: '/v3/assets/chan/old.png',
+      generation: {prompt: 'a cat'},
+    };
+    const {writer, uploadImage} = renderWriter();
+    const target = {key: 'k1', imageType: 'sprite' as const};
+    await act(async () => {
+      await writer().saveEdited(
+        target,
+        'data:image/png;base64,AA',
+        {},
+        {
+          upload: false,
+        }
+      );
+    });
+    expect(uploadImage).not.toHaveBeenCalled();
+    expect(repointAnimation).toHaveBeenCalledTimes(1);
+    const quiet = repointAnimation.mock.calls[0][2] as Record<string, unknown>;
+    // The pixels go in; the file behind the image waits, and the pixels
+    // are no longer the prompt's.
+    expect(quiet).toMatchObject({
+      dataURI: 'data:image/png;base64,AA',
+      generation: undefined,
+      edited: true,
+      trimmed: false,
+    });
+    expect(quiet).not.toHaveProperty('sourceUrl');
+    await act(async () => {
+      await writer().saveEdited(target, 'data:image/png;base64,AB', {});
+    });
+    expect(uploadImage).toHaveBeenCalledTimes(1);
+    const loud = repointAnimation.mock.calls[1][2] as Record<string, unknown>;
+    expect(loud.sourceUrl).toMatch(/^\/v3\/assets\/chan\/sprite_1_/);
+  });
+
+  it('gives a drawn blank its file whether or not an upload was asked for', async () => {
+    const {writer, uploadImage} = renderWriter();
+    await act(async () => {
+      await writer().saveEdited(
+        {key: null, imageType: 'sprite'},
+        'data:image/png;base64,AA',
+        {pixelGridSize: 1},
+        {upload: false}
+      );
+    });
+    expect(uploadImage).toHaveBeenCalledTimes(1);
+    expect(createNamedAnimation).toHaveBeenCalledTimes(1);
+    const patch = createNamedAnimation.mock.calls[0][2] as Record<
+      string,
+      unknown
+    >;
+    expect(patch).toMatchObject({
+      pixelGridSize: 1,
+      edited: true,
+      frameCount: 1,
+      role: 'hero',
+    });
+    expect(patch.sourceUrl).toMatch(/^\/v3\/assets\/chan\/image_/);
+  });
+
+  it('keeps a character set its frames when a frame is drawn on', async () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      sourceUrl: '/v3/assets/chan/old.png',
+      frameSize: {x: 64, y: 64},
+      frameCount: 5,
+      poses: {'stand-right': {start: 0, count: 2, frameDelay: 20}},
+    };
+    const {writer} = renderWriter();
+    await act(async () => {
+      await writer().saveEdited(
+        {key: 'k1', imageType: 'sprite'},
+        'data:image/png;base64,AA',
+        {}
+      );
+    });
+    const patch = repointAnimation.mock.calls[0][2] as Record<string, unknown>;
+    // The strip's grid is the set's own; the patch leaves it alone.
+    expect(patch).not.toHaveProperty('frameSize');
+    expect(patch).not.toHaveProperty('frameCount');
+    expect(patch).not.toHaveProperty('poses');
   });
 
   it('deletes an image and drops its references', () => {

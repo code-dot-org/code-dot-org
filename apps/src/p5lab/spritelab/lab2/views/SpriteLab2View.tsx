@@ -152,7 +152,7 @@ import {useWorldStartPattern} from '../worldStartPattern';
 import BlockCatalogDialog from './BlockCatalogDialog';
 import {isPointerClick} from './blurAfterPointerClick';
 import Callout from './components/Callout';
-import EditorStrip from './components/EditorStrip';
+import EditorStrip, {EditHistory} from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
@@ -2084,6 +2084,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // Set once the audio hook below exists; the handler is defined first.
   const unlockGameAudioRef = useRef<() => void>(() => undefined);
+  // The Images tab's drawing, while there is one, for the strip's undo
+  // and redo.
+  const [drawingHistory, setDrawingHistory] = useState<EditHistory | null>(
+    null
+  );
   const handleEditorChange = useCallback(
     (editor: Editor) => dispatch(setActiveTab(editor)),
     [dispatch]
@@ -2446,6 +2451,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 history={
                   activeTab === 'Code'
                     ? {canUndo, canRedo, undo, redo}
+                    : activeTab === 'Images'
+                    ? drawingHistory ?? undefined
                     : undefined
                 }
                 style={activeTab === 'Images' ? clearOfPane : clearOfPreview}
@@ -2512,6 +2519,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   verdictRequired={imagePaneProps.verdictRequired}
                   paneWidth={paneWidthPx}
                   onImageLanded={saveImagesNow}
+                  active={activeTab === 'Images'}
+                  onDrawingHistory={setDrawingHistory}
                 />
               )}
             </div>

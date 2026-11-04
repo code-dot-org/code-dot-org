@@ -107,7 +107,7 @@ export interface PixelEditorSaveMeta {
   recentColors?: RGBA[];
 }
 
-interface PixelEditorParts {
+export interface PixelEditorParts {
   /** True once the image decoded or failed; a host that must not show an
       empty panel renders nothing before this. */
   ready: boolean;
@@ -122,6 +122,17 @@ interface PixelEditorParts {
   canSave: boolean;
   /** A stroke has landed since the image opened. */
   edited: boolean;
+  /** A copy of the display canvas as it is now, checkerboard included, or
+      null before it exists. */
+  snapshot: () => HTMLCanvasElement | null;
+}
+
+/** Undo and redo as a host's own buttons need them. */
+export interface PixelEditorHistory {
+  canUndo: boolean;
+  canRedo: boolean;
+  undo: () => void;
+  redo: () => void;
 }
 
 /** One color of a fixed palette, named for the screen reader. */
@@ -129,6 +140,9 @@ export interface PaletteColor {
   name: string;
   rgba: RGBA;
 }
+
+/** One place in a host's toolbar layout. */
+export type ToolbarItem = PixelTool | 'sizes' | 'color';
 
 export interface PixelEditorProps {
   // The image to edit (dataURI or URL; must be canvas-readable).
@@ -149,6 +163,9 @@ export interface PixelEditorProps {
   // to avoid a scrim gap.
   onReady?: () => void;
   onSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
+  // Fires whenever the picture's pixels change: each stamp of a stroke as
+  // it is dragged, a fill, a shape, an undo or a redo.
+  onEdit?: () => void;
   // The tools to offer, in TOOLS order; all of them when absent. Shortcuts
   // for tools left out do nothing.
   tools?: readonly PixelTool[];
@@ -157,6 +174,11 @@ export interface PixelEditorProps {
   fit?: 'viewport' | 'container';
   // The toolbar as the modal's two-column strip, or as one row.
   toolbarLayout?: 'column' | 'row';
+  // The host draws undo and redo itself; the toolbar leaves its own out.
+  hostUndoRedo?: boolean;
+  // Fires with undo and redo whenever what they can do changes, for a host
+  // drawing its own buttons.
+  onHistoryChange?: (history: PixelEditorHistory) => void;
   // Added to the canvas box, e.g. to drop its border inside a host's frame.
   canvasClassName?: string;
   // One round swatch each, in place of the spectrum picker; the first is
@@ -165,6 +187,10 @@ export interface PixelEditorProps {
   // The brush sizes to offer, in BRUSH_SIZES order; all four when absent.
   // The editor opens on the first; one alone shows no size buttons.
   brushSizes?: readonly number[];
+  // The toolbar as the host lays it out: groups of tool ids, 'sizes' (the
+  // brush sizes) and 'color' (the swatches or the picker), a divider
+  // between groups. Absent, the toolbar is the editor's own arrangement.
+  toolbarGroups?: readonly (readonly ToolbarItem[])[];
   // The host lays the parts out, inside the editor's theme host.
   children: (parts: PixelEditorParts) => React.ReactNode;
 }
@@ -185,12 +211,16 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   opaqueGround,
   onReady,
   onSave,
+  onEdit,
   tools,
   fit = 'viewport',
   toolbarLayout = 'column',
+  hostUndoRedo = false,
+  onHistoryChange,
   canvasClassName,
   palette,
   brushSizes,
+  toolbarGroups,
   children,
 }) => {
   const themeMode = useThemeMode();
@@ -225,6 +255,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     () => palette?.[0]?.rgba ?? DEFAULT_COLOR
   );
   const [loaded, setLoaded] = useState(false);
+  // Bumped as each picture lands, so a new picture given to a mounted
+  // editor is sized and painted in place; the old one stays up until then.
+  const [loadVersion, setLoadVersion] = useState(0);
   const [loadError, setLoadError] = useState(false);
   // See the onReady prop; by ref so a changing identity can't re-fire it.
   const onReadyRef = useRef(onReady);
@@ -292,6 +325,8 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   const undoStackRef = useRef<Uint8ClampedArray[]>([]);
   const redoStackRef = useRef<Uint8ClampedArray[]>([]);
   const [historyVersion, setHistoryVersion] = useState(0);
+  const onEditRef = useRef(onEdit);
+  onEditRef.current = onEdit;
 
   // Recently used colors, in first-seen order (transparent excluded: it has
   // a permanent swatch of its own in the picker). Handed back on save for the
@@ -353,6 +388,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       0,
       0
     );
+    onEditRef.current?.();
   }, []);
 
   const currentPixels = useCallback(() => {
@@ -553,6 +589,11 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
         1,
         Math.floor(MAX_DISPLAY_SIZE / Math.max(backing.width, backing.height))
       );
+      // A new picture is a new history.
+      undoStackRef.current = [];
+      redoStackRef.current = [];
+      setHistoryVersion(v => v + 1);
+      setLoadVersion(v => v + 1);
       setLoaded(true);
     };
     const loadViaImage = () => {
@@ -693,7 +734,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     const observer = new ResizeObserver(size);
     observer.observe(area);
     return () => observer.disconnect();
-  }, [loaded, repaint, fit]);
+  }, [loaded, loadVersion, repaint, fit]);
 
   // Map a pointer event to backing-canvas pixel coordinates.
   const toPixel = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
@@ -764,6 +805,11 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       op(imageData);
       ctx.putImageData(imageData, 0, 0);
       repaint();
+      // Every tool writes the picture through here; the preview canvas is
+      // not the picture.
+      if (target === backingRef.current) {
+        onEditRef.current?.();
+      }
     },
     [repaint]
   );
@@ -1345,6 +1391,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   // stacks themselves live in refs.
   const canUndo = historyVersion >= 0 && undoStackRef.current.length > 0;
   const canRedo = historyVersion >= 0 && redoStackRef.current.length > 0;
+  useEffect(() => {
+    onHistoryChange?.({canUndo, canRedo, undo, redo});
+  }, [onHistoryChange, canUndo, canRedo, undo, redo]);
 
   const colorControl = palette ? (
     <PaletteSwatches palette={palette} color={color} onChange={setColor} />
@@ -1356,6 +1405,58 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     />
   );
 
+  const toolButton = (t: (typeof TOOLS)[number], index: number) => (
+    <PixelTooltip
+      key={t.id}
+      tooltipId={`pixel-tool-${t.id}-tooltip`}
+      text={toolTitle(t)}
+      fromLeftColumn={column && index % 2 === 0}
+    >
+      <button
+        type="button"
+        aria-label={toolTitle(t)}
+        aria-pressed={tool === t.id}
+        className={classNames(
+          moduleStyles.toolButton,
+          tool === t.id && moduleStyles.toolActive
+        )}
+        onClick={() => setTool(t.id)}
+      >
+        {t.icon}
+      </button>
+    </PixelTooltip>
+  );
+  const sizeButton = (size: number, index: number) => (
+    <PixelTooltip
+      key={size}
+      tooltipId={`pixel-brush-${size}-tooltip`}
+      text={`Brush size ${size} (${index + 1})`}
+      fromLeftColumn={column && index % 2 === 0}
+    >
+      <button
+        type="button"
+        aria-label={`Brush size ${size} (${index + 1})`}
+        aria-pressed={brushSize === size}
+        className={classNames(
+          moduleStyles.toolButton,
+          brushSize === size && moduleStyles.toolActive
+        )}
+        onClick={() => setBrushSize(size)}
+      >
+        <span
+          className={classNames(
+            moduleStyles.brushDot,
+            pixelMode && moduleStyles.brushDotSquare
+          )}
+          style={{
+            width: brushDotPx(size),
+            height: brushDotPx(size),
+          }}
+        />
+      </button>
+    </PixelTooltip>
+  );
+
   const parts: PixelEditorParts = {
     themeMode,
     ready: loaded || loadError,
@@ -1363,6 +1464,18 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     canSave: loaded,
     edited: canUndo,
     save: handleSave,
+    snapshot: () => {
+      const display = displayRef.current;
+      const copy = display && document.createElement('canvas');
+      const context = copy?.getContext('2d');
+      if (!display || !copy || !context) {
+        return null;
+      }
+      copy.width = display.width;
+      copy.height = display.height;
+      context.drawImage(display, 0, 0);
+      return copy;
+    },
     toolbar: (
       <div
         data-pixel-editor=""
@@ -1371,99 +1484,79 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
           !column && moduleStyles.toolbarRow
         )}
       >
-        <div className={moduleStyles.toolGrid}>
-          {shownTools.map((t, index) => (
+        {toolbarGroups ? (
+          <div className={moduleStyles.toolGrid}>
+            {toolbarGroups.map((group, g) => (
+              <React.Fragment key={g}>
+                {g > 0 && <div className={moduleStyles.toolbarDivider} />}
+                {group.map(item => {
+                  if (item === 'sizes') {
+                    return brushChoice ? shownBrushSizes.map(sizeButton) : null;
+                  }
+                  if (item === 'color') {
+                    return (
+                      <div key="color" className={moduleStyles.colorInline}>
+                        {colorControl}
+                      </div>
+                    );
+                  }
+                  const index = shownTools.findIndex(t => t.id === item);
+                  return index < 0
+                    ? null
+                    : toolButton(shownTools[index], index);
+                })}
+              </React.Fragment>
+            ))}
+          </div>
+        ) : (
+          <div className={moduleStyles.toolGrid}>
+            {shownTools.map(toolButton)}
+            {brushChoice && <div className={moduleStyles.toolbarDivider} />}
+            {brushChoice && shownBrushSizes.map(sizeButton)}
+            {column && (
+              <>
+                <div className={moduleStyles.toolbarDivider} />
+                {colorControl}
+              </>
+            )}
+          </div>
+        )}
+        {!hostUndoRedo && (
+          <div className={moduleStyles.historyRow}>
             <PixelTooltip
-              key={t.id}
-              tooltipId={`pixel-tool-${t.id}-tooltip`}
-              text={toolTitle(t)}
-              fromLeftColumn={column && index % 2 === 0}
+              tooltipId="pixel-undo-tooltip"
+              text="Undo (Ctrl+Z)"
+              fromLeftColumn={column}
             >
               <button
                 type="button"
-                aria-label={toolTitle(t)}
-                aria-pressed={tool === t.id}
-                className={classNames(
-                  moduleStyles.toolButton,
-                  tool === t.id && moduleStyles.toolActive
-                )}
-                onClick={() => setTool(t.id)}
+                aria-label="Undo (Ctrl+Z)"
+                className={moduleStyles.toolButton}
+                disabled={!canUndo}
+                onClick={undo}
               >
-                {t.icon}
+                <FontAwesomeV6Icon iconName="rotate-left" />
               </button>
             </PixelTooltip>
-          ))}
-          {brushChoice && <div className={moduleStyles.toolbarDivider} />}
-          {brushChoice &&
-            shownBrushSizes.map((size, index) => (
-              <PixelTooltip
-                key={size}
-                tooltipId={`pixel-brush-${size}-tooltip`}
-                text={`Brush size ${size} (${index + 1})`}
-                fromLeftColumn={column && index % 2 === 0}
+            <PixelTooltip
+              tooltipId="pixel-redo-tooltip"
+              text="Redo (Ctrl+Shift+Z)"
+            >
+              <button
+                type="button"
+                aria-label="Redo (Ctrl+Shift+Z)"
+                className={moduleStyles.toolButton}
+                disabled={!canRedo}
+                onClick={redo}
               >
-                <button
-                  type="button"
-                  aria-label={`Brush size ${size} (${index + 1})`}
-                  aria-pressed={brushSize === size}
-                  className={classNames(
-                    moduleStyles.toolButton,
-                    brushSize === size && moduleStyles.toolActive
-                  )}
-                  onClick={() => setBrushSize(size)}
-                >
-                  <span
-                    className={classNames(
-                      moduleStyles.brushDot,
-                      pixelMode && moduleStyles.brushDotSquare
-                    )}
-                    style={{
-                      width: brushDotPx(size),
-                      height: brushDotPx(size),
-                    }}
-                  />
-                </button>
-              </PixelTooltip>
-            ))}
-          {column && (
-            <>
-              <div className={moduleStyles.toolbarDivider} />
-              {colorControl}
-            </>
-          )}
-        </div>
-        <div className={moduleStyles.historyRow}>
-          <PixelTooltip
-            tooltipId="pixel-undo-tooltip"
-            text="Undo (Ctrl+Z)"
-            fromLeftColumn={column}
-          >
-            <button
-              type="button"
-              aria-label="Undo (Ctrl+Z)"
-              className={moduleStyles.toolButton}
-              disabled={!canUndo}
-              onClick={undo}
-            >
-              <FontAwesomeV6Icon iconName="rotate-left" />
-            </button>
-          </PixelTooltip>
-          <PixelTooltip
-            tooltipId="pixel-redo-tooltip"
-            text="Redo (Ctrl+Shift+Z)"
-          >
-            <button
-              type="button"
-              aria-label="Redo (Ctrl+Shift+Z)"
-              className={moduleStyles.toolButton}
-              disabled={!canRedo}
-              onClick={redo}
-            >
-              <FontAwesomeV6Icon iconName="rotate-right" />
-            </button>
-          </PixelTooltip>
-        </div>
-        {!column && <div className={moduleStyles.colorRow}>{colorControl}</div>}
+                <FontAwesomeV6Icon iconName="rotate-right" />
+              </button>
+            </PixelTooltip>
+          </div>
+        )}
+        {!column && !toolbarGroups && (
+          <div className={moduleStyles.colorRow}>{colorControl}</div>
+        )}
       </div>
     ),
     canvas: (
