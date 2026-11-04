@@ -31,8 +31,13 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // R8 drops the library code the app never calls, about three
+            // quarters of the APK. Capacitor ships the keep rules for the
+            // classes it reaches by reflection, and the default file keeps
+            // its @JavascriptInterface methods.
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }

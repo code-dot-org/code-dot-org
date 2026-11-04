@@ -225,6 +225,11 @@ cd android && ./gradlew testDebugUnitTest   # SitePolicy and PageInjector, on th
 yarn android:open     # or open the project in Android Studio
 ```
 
+The release build is shrunk with R8, which drops the library code the app
+never calls: the APK is about 2 MB rather than 9. Each release build writes
+`app/build/outputs/mapping/release/mapping.txt`, which turns its crash stack
+traces back into the original names; keep the one for every APK submitted.
+
 `yarn dev` serves the landing page in a browser.
 
 [CHANGELOG.md](CHANGELOG.md) lists what changed in each version.

@@ -98,7 +98,8 @@ opens each in one WebView on studio.code.org.
 - Targets Android 16 (API 36) and runs from Fire OS 7 (API 28), on 64-bit
   ARM, and installs to external storage where the tablet has it, as Amazon
   Kids+ requires.
-- The release APK is named "CodeAI - Amazon Kids+ Edition.apk".
+- The release APK is named "CodeAI - Amazon Kids+ Edition.apk", and is
+  shrunk with R8 to about 2 MB.
 
 ### Debug builds
 
