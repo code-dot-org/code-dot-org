@@ -19,20 +19,18 @@ internal object SitePolicy {
     // https navigation reaches shouldOverrideUrlLoading.
     const val HOME_URL = "$SITE_ORIGIN/codeai-app/home"
     // The header's Reset button and the landing page's Try again link here,
-    // handled like HOME_URL; ?next= names a studio.code.org page to open after.
-    // With ?course=, only that course's progress is forgotten.
+    // handled like HOME_URL: ?course= names the course whose progress is
+    // forgotten, and ?next= a studio.code.org page to open after.
     private const val RESET_PATH = "/codeai-app/reset"
+    // The landing page opens its congratulations at #finished=<course>, with
+    // the course empty when unknown. Keep in step with launcher.tsx.
+    private const val FINISHED_KEY = "finished="
+    const val FINISHED_FRAGMENT = "#$FINISHED_KEY"
 
-    // Set by the page script and kept across a reset: the child's page zoom.
-    const val ZOOM_COOKIE_NAME = "codeai_zoom"
-    // Changed by every reset; the page script then clears sessionStorage,
-    // which lives in the WebView rather than on disk.
-    const val RESET_COOKIE_NAME = "codeai_reset"
     // Names the course whose progress the next page's script clears, then
     // deletes; it lasts minutes, in case no page loads.
     const val RESET_COURSE_COOKIE_NAME = "codeai_reset_course"
     const val RESET_COURSE_COOKIE_ATTRIBUTES = "Path=/; Max-Age=600; Secure; SameSite=Lax"
-    const val COOKIE_ATTRIBUTES = "Path=/; Max-Age=315569520; Secure; SameSite=Lax"
 
     // Appended to the WebView's User-Agent, so the server can tell every
     // request from the app (pages, API calls, iframes) from a browser's,
@@ -77,6 +75,9 @@ internal object SitePolicy {
     // The site's Statsig stable ID cookie (statsigHelpers.js in apps/), set
     // with the site's own domain and path so it is the same cookie.
     const val STABLE_ID_COOKIE_NAME = "statsig_stable_id"
+    // Where the site's scripts ask for a stable ID when the cookie has none
+    // (api_statsig_stable_id_url in apps/).
+    private const val STABLE_ID_PATH = "/api/stable_id"
 
     // OneTrust's saved choice, and the category Statsig's cookie needs:
     // performance (C0002), as consentAllowsStatsigCookie() in
@@ -93,6 +94,8 @@ internal object SitePolicy {
             ?: return false
         return groups.split(',').any { it.trim() == STATSIG_CONSENT_GROUP }
     }
+
+    fun isStableIdRequest(url: Uri): Boolean = origin(url) == SITE_ORIGIN && url.path == STABLE_ID_PATH
 
     fun stableIdCookie(id: String): String =
         "$STABLE_ID_COOKIE_NAME=$id; Domain=.code.org; Path=/; Max-Age=31536000; Secure; SameSite=Lax"
@@ -131,10 +134,27 @@ internal object SitePolicy {
         return BLOCKED_HOSTS.any { host == it || host.endsWith(".$it") }
     }
 
+    /** Whether [url] is one of the app's own pages, which Capacitor serves at [localUrl]. */
+    fun isBundledPage(url: Uri, localUrl: String): Boolean = origin(url) == localUrl
+
+    /** Whether [url] opens the landing page's congratulations, whose Try again resets a course. */
+    fun isFinishedScreen(url: Uri, localUrl: String): Boolean =
+        isBundledPage(url, localUrl) && url.fragment?.startsWith(FINISHED_KEY) == true
+
     fun isResetUrl(url: Uri): Boolean = origin(url) == SITE_ORIGIN && url.path == RESET_PATH
 
     /** The course a reset link names, or null when it names none or a malformed one. */
     fun resetCourse(url: Uri): String? = url.getQueryParameter("course")?.takeIf { COURSE_NAME.matches(it) }
+
+    /**
+     * Whether the reset link [url] may run while [pageUrl] shows. A link in
+     * another site's iframe can navigate the whole page, so a reset comes only
+     * from the landing page [appUrl], which has no iframes, or carries [token],
+     * which only the app's page script holds; null accepts no token.
+     */
+    fun mayReset(url: Uri, pageUrl: String?, appUrl: String, token: String?): Boolean =
+        pageUrl?.substringBefore('#') == appUrl
+            || (token != null && url.getQueryParameter("token") == token)
 
     fun isHomeLink(url: Uri): Boolean = url.toString() == HOME_URL
 

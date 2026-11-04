@@ -3,6 +3,7 @@ package org.codeai
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
 import android.content.res.Configuration
+import android.graphics.Bitmap
 import android.graphics.Color
 import android.media.AudioManager
 import android.net.ConnectivityManager
@@ -14,6 +15,7 @@ import android.provider.Settings
 import android.view.ActionMode
 import android.view.View
 import android.view.ViewGroup
+import android.view.accessibility.AccessibilityNodeInfo
 import android.view.textclassifier.TextClassifier
 import android.webkit.CookieManager
 import android.webkit.GeolocationPermissions
@@ -23,7 +25,6 @@ import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebResourceResponse
 import android.webkit.WebSettings
-import android.webkit.WebStorage
 import android.webkit.WebView
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.SystemBarStyle
@@ -43,6 +44,7 @@ import com.getcapacitor.BridgeActivity
 import com.getcapacitor.BridgeWebChromeClient
 import com.getcapacitor.BridgeWebViewClient
 import com.getcapacitor.WebViewListener
+import org.codeai.SitePolicy.FINISHED_FRAGMENT
 import org.codeai.SitePolicy.HOME_URL
 import org.codeai.SitePolicy.SITE_ORIGIN
 import org.json.JSONObject
@@ -75,8 +77,9 @@ class MainActivity : BridgeActivity() {
     // history even ahead of the landing page, or a page Back left.
     private var clearHistoryOnLanding = false
     // Known only to the app and the page script it puts in studio.code.org
-    // pages; another site's frame cannot read it.
-    private val resetToken = UUID.randomUUID().toString()
+    // pages, for the debug build's Reset course; another site's frame cannot
+    // read it, but the site's own third-party scripts could.
+    private val resetToken = if (BuildConfig.DEBUG) UUID.randomUUID().toString() else null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Before super.onCreate creates the WebView, which takes Accept-Language
@@ -132,10 +135,12 @@ class MainActivity : BridgeActivity() {
         }
 
         // The page script offers zoom in debug builds only, gives the site's
-        // Statsig stable ID cookie this device's value, and signs its resets.
+        // Statsig stable ID cookie this device's value, and, in debug builds,
+        // signs its resets.
+        val stableId = deviceStableId()
         hideSiteChrome = "var codeaiDebugBuild = ${BuildConfig.DEBUG};\n" +
-            "var codeaiStableId = ${JSONObject.quote(deviceStableId() ?: "")};\n" +
-            "var codeaiResetToken = ${JSONObject.quote(resetToken)};\n" +
+            "var codeaiStableId = ${JSONObject.quote(stableId ?: "")};\n" +
+            "var codeaiResetToken = ${JSONObject.quote(resetToken ?: "")};\n" +
             resources.openRawResource(R.raw.hide_site_chrome)
                 .use { it.readBytes().toString(Charsets.UTF_8) }
         val pageInjector = PageInjector(
@@ -165,6 +170,14 @@ class MainActivity : BridgeActivity() {
                 if (request.isForMainFrame && !isAppPage(request.url)) {
                     return PageInjector.noContent()
                 }
+                // The site's scripts use the ID they fetch, not the device's
+                // that the page script then stores in the cookie in its place.
+                if (stableId != null
+                    && request.method.equals("GET", ignoreCase = true)
+                    && SitePolicy.isStableIdRequest(request.url)
+                ) {
+                    return PageInjector.plainText(stableId)
+                }
                 return assetCache.intercept(request)
                     ?: pageInjector.intercept(request)
                     ?: super.shouldInterceptRequest(view, request)
@@ -183,21 +196,21 @@ class MainActivity : BridgeActivity() {
                     view.post { goHome() }
                     return true
                 }
+                // Only the app opens it, so a link cannot put Try again
+                // under the child's finger.
+                if (SitePolicy.isFinishedScreen(url, bridge.localUrl)) {
+                    return true
+                }
                 if (SitePolicy.isResetUrl(url)) {
-                    // A link in another site's iframe can navigate the page
-                    // too, so a reset comes only from the landing page, which
-                    // has no iframes, or carries the page script's token.
-                    if (!isLandingPage(view.url) && url.getQueryParameter("token") != resetToken) {
+                    val course = SitePolicy.resetCourse(url)
+                    if (course == null || !SitePolicy.mayReset(url, view.url, bridge.appUrl, resetToken)) {
                         return true
                     }
                     val next = url.getQueryParameter("next")?.takeIf(SitePolicy::isSitePage)
                     if (next != null) {
                         showLoadingCover()
                     }
-                    val course = SitePolicy.resetCourse(url)
-                    view.post {
-                        if (course != null) resetCourse(course, next) else resetSession(next)
-                    }
+                    view.post { resetCourse(course, next) }
                     return true
                 }
                 if (SitePolicy.isCertificatePage(url)) {
@@ -209,7 +222,7 @@ class MainActivity : BridgeActivity() {
                 // A curriculum opened from the landing page can take a while
                 // on a slow tablet; answer the tap at once.
                 if (request.isForMainFrame
-                    && isLandingPage(view.url)
+                    && isBundledPage(view.url)
                     && SitePolicy.isSitePage(url.toString())
                 ) {
                     showLoadingCover()
@@ -231,13 +244,23 @@ class MainActivity : BridgeActivity() {
                 return true
             }
 
+            // A last check: a WebView may follow a redirect after a POST, which
+            // shouldOverrideUrlLoading never sees, to another site.
+            override fun onPageStarted(view: WebView, url: String?, favicon: Bitmap?) {
+                super.onPageStarted(view, url, favicon)
+                if (url != null && !isAppPage(url.toUri())) {
+                    view.stopLoading()
+                    view.post { goBack() }
+                }
+            }
+
             // Also called for history.pushState, so in-page navigation counts.
             override fun doUpdateVisitedHistory(view: WebView, url: String?, isReload: Boolean) {
                 super.doUpdateVisitedHistory(view, url, isReload)
                 rememberPage(url)
                 val pending = pendingLandingUrl
                 // Back, or no page left to wait for.
-                if (isLandingPage(url) && pending == null && resumeUrl == null) {
+                if (isBundledPage(url) && pending == null && resumeUrl == null) {
                     hideLoadingCover()
                     if (clearHistoryOnLanding) {
                         clearHistoryOnLanding = false
@@ -245,7 +268,7 @@ class MainActivity : BridgeActivity() {
                         view.post { view.clearHistory() }
                     }
                 }
-                if (pending != null && isLandingPage(url)) {
+                if (pending != null && isBundledPage(url)) {
                     // Loaded by the app, not pushed by the page: Chromium's
                     // Back skips entries a page adds without a tap, which
                     // would make Back here leave the app.
@@ -287,7 +310,7 @@ class MainActivity : BridgeActivity() {
         bridge.addWebViewListener(object : WebViewListener() {
             override fun onPageLoaded(webView: WebView) {
                 val url = resumeUrl
-                if (url != null && isLandingPage(webView.url)) {
+                if (url != null && isBundledPage(webView.url)) {
                     resumeUrl = null
                     webView.loadUrl(url)
                 }
@@ -334,6 +357,7 @@ class MainActivity : BridgeActivity() {
     // remembered page and a tap on a curriculum shows at once. The WebView
     // stays visible underneath: a hidden one would tell its pages they are in
     // the background.
+    @SuppressLint("AccessibilityFocus")
     private fun showLoadingCover() {
         if (loadingCover != null) {
             return
@@ -347,9 +371,12 @@ class MainActivity : BridgeActivity() {
         root.addView(cover)
         loadingCover = cover
         setPageCovered(true)
-        // Keyboard focus starts on the home control; screen readers move into
-        // the cover's pane on their own, the page having left their reach.
-        home.post { home.requestFocus() }
+        // Keyboard and screen reader focus start on the home control; the
+        // node a screen reader had focused may have left with the page.
+        home.post {
+            home.requestFocus()
+            home.performAccessibilityAction(AccessibilityNodeInfo.ACTION_ACCESSIBILITY_FOCUS, null)
+        }
         cover.postDelayed({ hideLoadingCover(cover) }, LOADING_COVER_TIMEOUT_MS)
     }
 
@@ -488,10 +515,10 @@ class MainActivity : BridgeActivity() {
             return
         }
         // Keeps the page it stands in for, so a restart retries it.
-        if (url.toUri().path == OFFLINE_PATH && isLandingPage(url)) {
+        if (url.toUri().path == OFFLINE_PATH && isBundledPage(url)) {
             return
         }
-        if (isLandingPage(url)) {
+        if (isBundledPage(url)) {
             prefs.edit { remove(LAST_PAGE_KEY) }
         } else if (SitePolicy.isSitePage(url) && url != HOME_URL) {
             prefs.edit { putString(LAST_PAGE_KEY, url) }
@@ -519,37 +546,6 @@ class MainActivity : BridgeActivity() {
         bridge.webView.post { goHome() }
     }
 
-    /**
-     * Forgets everything the site keeps for this signed-out child, then
-     * returns to the landing page, or opens [next] above it. Progress and
-     * projects belong to the session cookie, the storage_id cookie and site
-     * storage; the remembered pages are in prefs. Only the zoom and the
-     * device's stable ID are kept.
-     */
-    private fun resetSession(next: String?) {
-        val cookies = CookieManager.getInstance()
-        val zoom = SitePolicy.cookieValue(cookies.getCookie(SITE_ORIGIN), SitePolicy.ZOOM_COOKIE_NAME)
-        cookies.removeAllCookies {
-            cookies.setCookie(SITE_ORIGIN, SitePolicy.LOCALE_COOKIE)
-            setStableIdCookie()
-            zoom?.let {
-                cookies.setCookie(
-                    SITE_ORIGIN,
-                    "${SitePolicy.ZOOM_COOKIE_NAME}=$it; ${SitePolicy.COOKIE_ATTRIBUTES}",
-                )
-            }
-            cookies.setCookie(
-                SITE_ORIGIN,
-                "${SitePolicy.RESET_COOKIE_NAME}=${System.currentTimeMillis()}; ${SitePolicy.COOKIE_ATTRIBUTES}",
-            )
-            cookies.flush()
-            WebStorage.getInstance().deleteAllData()
-            prefs.edit { clear() }
-            pendingLandingUrl = next
-            bridge.webView.post { goHome() }
-        }
-    }
-
     private fun goBack() {
         val webView = bridge.webView
         when {
@@ -569,7 +565,7 @@ class MainActivity : BridgeActivity() {
         val webView = bridge.webView
         val history = webView.copyBackForwardList()
         val index = history.currentIndex
-        if (index > 0 && isLandingPage(history.getItemAtIndex(0).url)) {
+        if (index > 0 && isBundledPage(history.getItemAtIndex(0).url)) {
             // Traversed from the page: right after a tap, a lab page can drop
             // goBackOrForward() but not its own history.go().
             webView.evaluateJavascript("history.go(-$index)", null)
@@ -579,16 +575,10 @@ class MainActivity : BridgeActivity() {
     }
 
     private fun isAppPage(url: Uri): Boolean =
-        SitePolicy.isAllowedOrigin(url) || isLandingPage(url.toString())
+        SitePolicy.isAllowedOrigin(url) || SitePolicy.isBundledPage(url, bridge.localUrl)
 
-    private fun isLandingPage(url: String?): Boolean {
-        if (url == null) {
-            return false
-        }
-        val localHost = bridge.localUrl.toUri().host
-        return localHost != null && localHost == url.toUri().host
-    }
-
+    private fun isBundledPage(url: String?): Boolean =
+        url != null && SitePolicy.isBundledPage(url.toUri(), bridge.localUrl)
 
     // Names the app in the WebView's brand list too (navigator.userAgentData
     // and the Sec-CH-UA headers), as a browser built on Chromium names itself.
@@ -613,9 +603,6 @@ class MainActivity : BridgeActivity() {
     }
 
     companion object {
-        // The landing page opens its congratulations at #finished=<course>,
-        // with the course empty when unknown. Keep in step with launcher.tsx.
-        private const val FINISHED_FRAGMENT = "#finished="
         // The landing page's offline screen. Keep in step with routes/offline.tsx
         // in apps/studio.
         private const val OFFLINE_PATH = "/offline"

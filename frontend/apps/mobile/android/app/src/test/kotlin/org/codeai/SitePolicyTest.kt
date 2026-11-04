@@ -62,6 +62,40 @@ class SitePolicyTest {
     }
 
     @Test
+    fun mayReset_onlyFromLandingPageOrWithToken() {
+        val reset = "https://studio.code.org/codeai-app/reset?course=oceans"
+        val appUrl = "https://localhost/launcher"
+        assertTrue(SitePolicy.mayReset(uri(reset), appUrl, appUrl, null))
+        assertTrue(SitePolicy.mayReset(uri(reset), "$appUrl#finished=oceans", appUrl, null))
+        assertFalse(SitePolicy.mayReset(uri(reset), "https://localhost/offline?url=x", appUrl, null))
+        assertFalse(SitePolicy.mayReset(uri(reset), "https://studio.code.org/flappy/1", appUrl, null))
+        assertFalse(SitePolicy.mayReset(uri(reset), null, appUrl, null))
+        assertTrue(SitePolicy.mayReset(uri("$reset&token=t1"), "https://studio.code.org/flappy/1", appUrl, "t1"))
+        assertFalse(SitePolicy.mayReset(uri("$reset&token=t2"), "https://studio.code.org/flappy/1", appUrl, "t1"))
+        assertFalse(SitePolicy.mayReset(uri("$reset&token="), "https://studio.code.org/flappy/1", appUrl, null))
+    }
+
+    @Test
+    fun isBundledPage_onlyLocalOrigin() {
+        val localUrl = "https://localhost"
+        assertTrue(SitePolicy.isBundledPage(uri("https://localhost/launcher"), localUrl))
+        assertTrue(SitePolicy.isBundledPage(uri("https://localhost/offline?url=x"), localUrl))
+        assertFalse(SitePolicy.isBundledPage(uri("http://localhost/launcher"), localUrl))
+        assertFalse(SitePolicy.isBundledPage(uri("https://localhost:8080/launcher"), localUrl))
+        assertFalse(SitePolicy.isBundledPage(uri("https://localhost.example.com/launcher"), localUrl))
+        assertFalse(SitePolicy.isBundledPage(uri("https://studio.code.org/launcher"), localUrl))
+    }
+
+    @Test
+    fun isFinishedScreen_onlyBundledPageWithFinishedFragment() {
+        val localUrl = "https://localhost"
+        assertTrue(SitePolicy.isFinishedScreen(uri("https://localhost/launcher#finished=oceans"), localUrl))
+        assertFalse(SitePolicy.isFinishedScreen(uri("https://localhost/launcher"), localUrl))
+        assertFalse(SitePolicy.isFinishedScreen(uri("https://localhost/launcher#other"), localUrl))
+        assertFalse(SitePolicy.isFinishedScreen(uri("https://studio.code.org/launcher#finished=oceans"), localUrl))
+    }
+
+    @Test
     fun deviceStableId_sameForSameDevice() {
         assertEquals(SitePolicy.deviceStableId("9774d56d682e549c"), SitePolicy.deviceStableId("9774d56d682e549c"))
     }
@@ -76,6 +110,13 @@ class SitePolicyTest {
         val pattern = Regex("[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}")
         assertTrue(pattern.matches(SitePolicy.deviceStableId("9774d56d682e549c")))
         assertFalse(SitePolicy.deviceStableId("9774d56d682e549c").contains("9774d56d682e549c"))
+    }
+
+    @Test
+    fun isStableIdRequest_onlySiteStableIdPath() {
+        assertTrue(SitePolicy.isStableIdRequest(uri("https://studio.code.org/api/stable_id")))
+        assertFalse(SitePolicy.isStableIdRequest(uri("https://code.org/api/stable_id")))
+        assertFalse(SitePolicy.isStableIdRequest(uri("https://studio.code.org/api/stable_id/more")))
     }
 
     @Test

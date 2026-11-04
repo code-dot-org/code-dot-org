@@ -18,7 +18,8 @@ navigates the app's WebView to that curriculum's studio.code.org URL.
 Only studio.code.org, the one host in `server.allowNavigation`
 (`capacitor.config.ts`), opens inside the app. `MainActivity.kt` ignores
 links to any other host, support.code.org and code.org included, and stops
-any other page load to another host, such as a form sent there, because
+any other page load to another host, such as a form sent there or a
+studio.code.org redirect after a form, because
 Amazon Kids+ allows no links that lead outside its environment, and the page
 script hides every `http`, `https` and `//` link to another host, such as
 Get help and Report a problem, so none is left to do nothing when tapped;
@@ -136,15 +137,14 @@ handles by setting a short-lived `codeai_reset_course` cookie, and the next
 page's script removes that course's entries from what `clientState.js` keeps
 in sessionStorage (`progress` and `source_<course>_<level>`) and from the
 `progress` cookie of `ClientState` (`dashboard/lib/client_state.rb`), before
-the site's scripts read them. Other courses and projects stay. The same link
-without `course` resets everything: it erases every cookie except the
-language and zoom, all site storage, and the remembered page and projects,
-and a cookie the reset changes tells the next page to empty sessionStorage,
-which outlives the reset in the WebView. A link in another site's iframe can
-navigate the whole page too, so `MainActivity.kt` honors a reset only from
-the landing page, which has no iframes, or with `token=` set to a value it
-makes at each start and gives only the page script, which no other site's
-frame can read.
+the site's scripts read them. Other courses and projects stay. A link in
+another site's iframe can navigate the whole page too, so `MainActivity.kt`
+honors a reset only from the landing page itself, which has no iframes, not
+its offline screen, and opens the congratulations, whose Try again resets a
+course, only itself. Debug builds' Reset course instead passes `token=`, set
+to a value the app makes at each start and gives only the page script, which
+no other site's frame can read; release builds make none, since the site's
+own third-party scripts could.
 
 A signed-out child's progress is only in sessionStorage, so the server's
 next-level route (`script_levels#next`, behind Continue on a unit's overview)
@@ -198,7 +198,9 @@ saved consent (`OptanonConsent`) allows performance cookies, it sets the
 `statsig_stable_id` cookie to that ID before any page loads; with no saved
 choice yet, or a refusal, the cookie is left to the site, which creates it
 only with consent. The page script gives every write of the cookie the
-device's value and a year's lifetime. The ID lasts across updates,
+device's value and a year's lifetime, and the app answers the site's request
+for an ID, `/api/stable_id`, with it, so the site's scripts use the value the
+cookie ends up holding. The ID lasts across updates,
 reinstalls signed with the same key and resets, until a factory reset.
 
 The native code in `android/app/src/main/kotlin` is Kotlin.

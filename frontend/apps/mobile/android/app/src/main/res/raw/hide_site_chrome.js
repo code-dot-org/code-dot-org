@@ -222,11 +222,8 @@
 
   // Signed-out progress and level code live in sessionStorage, which the
   // WebView forgets when the app's process ends; a copy in localStorage
-  // restores it after a restart. A reset (MainActivity.kt) deletes the copy
-  // and changes the codeai_reset cookie; a page that sees a new value starts
-  // with empty sessionStorage too, since the WebView's copy outlives the reset.
+  // restores it after a restart.
   var SESSION_COPY_KEY = 'codeai_session';
-  var RESET_KEY = 'codeai_reset';
   // Try again resets one course: MainActivity.kt names it in this cookie.
   var RESET_COURSE_COOKIE = 'codeai_reset_course';
   var storageMethods = Storage.prototype;
@@ -313,11 +310,6 @@
       Object.keys(saved).forEach(function (key) {
         originalSetItem.call(session, key, saved[key]);
       });
-    }
-    var resetMark = cookieValue('codeai_reset') || '';
-    if (session.getItem(RESET_KEY) !== resetMark) {
-      originalClear.call(session);
-      originalSetItem.call(session, RESET_KEY, resetMark);
     }
     var resetCourseName = cookieValue(RESET_COURSE_COOKIE);
     if (resetCourseName) {
