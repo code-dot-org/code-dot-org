@@ -186,6 +186,7 @@ export const SoundLibraryDialog = ({
                             ? `${styles.choose} ${styles.chosen}`
                             : styles.choose
                         }
+                        aria-label={`Choose ${sound.name}`}
                         aria-pressed={key === chosen}
                         onClick={() => setChosen(key)}
                       >
@@ -264,6 +265,8 @@ export const SoundLibraryDialog = ({
                           ? `${styles.choose} ${styles.chosen}`
                           : styles.choose
                       }
+                      // Chosen, then used: the name alone said neither.
+                      aria-label={`Choose ${sound.name}`}
                       aria-pressed={sound.id === chosen}
                       onClick={() => setChosen(sound.id)}
                       onDoubleClick={() => !busy && choose(sound)}

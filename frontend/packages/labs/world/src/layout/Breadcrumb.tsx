@@ -3,7 +3,7 @@
 // where the file tabs stood.
 
 import {Button, Typography} from '@mui/material';
-import {Fragment} from 'react';
+import {Fragment, useEffect, useRef} from 'react';
 
 import {useCodebridgeConfig} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
@@ -24,6 +24,19 @@ export const Breadcrumb = () => {
   const trail = useTrail();
   const {currentSources} = useSources<MultiFileSource>();
   const config = useCodebridgeConfig();
+  // FOCUS FOLLOWS WHAT OPENS. Whatever opened it — Open, an Edit, a New, a
+  // step back along the trail — was in the page that went, and focus would be
+  // left on nothing. Not on the first page, which nobody opened.
+  const here = useRef<HTMLSpanElement>(null);
+  const tip = trail?.trail.at(-1);
+  const tipKey = tip ? `${trail?.trail.length}:${JSON.stringify(tip)}` : '';
+  const seen = useRef(tipKey);
+  useEffect(() => {
+    if (seen.current !== tipKey) {
+      seen.current = tipKey;
+      here.current?.focus();
+    }
+  }, [tipKey]);
   if (!trail?.trail.length) {
     return null;
   }
@@ -86,6 +99,8 @@ export const Breadcrumb = () => {
                     variant="label2"
                     aria-current="page"
                     className={styles.here}
+                    ref={here}
+                    tabIndex={-1}
                   >
                     {nameOf(step)}
                   </Typography>

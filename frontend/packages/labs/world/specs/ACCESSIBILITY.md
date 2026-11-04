@@ -135,6 +135,9 @@ below, and are listed last.
   that opens what it made put another editor in front, and focus stays on
   the page rather than moving into it or to its breadcrumb. Nothing is
   said, either; the breadcrumb changing is the only sign.
+  CLOSED: whenever the breadcrumb's last step changes, focus goes to it,
+  the name of what is now open, marked as the current page; going back
+  along the trail does the same. Tab from there goes into the page.
 - **The effect row's More and the sound shelf's Rename and Delete are
   small text buttons in a dense row**; their names say whose they are
   ("More for Glow", "Rename coin.mp3"), but their targets are under 24
@@ -468,8 +471,8 @@ themes. Not seen with a screen reader.
   pressing it puts focus on Cancel, the safe answer, and Cancel puts it
   back on Remove. Before, both buttons were taken from under focus.
 - **The sound library** opens on Upload a sound…, and each sound is two
-  stops, Play and the sound's name, which chooses it. The name alone does
-  not say that it chooses.
+  stops: Play, and Choose, a toggle that Use this sound then takes. Choose
+  was named only for the sound, and said nothing of choosing.
 
 ## Not yet done for any phase
 

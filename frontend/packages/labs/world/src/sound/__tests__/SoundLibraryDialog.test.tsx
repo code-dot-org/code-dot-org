@@ -38,8 +38,12 @@ describe('SoundLibraryDialog', () => {
   it('lists the shelf by name', () => {
     open();
 
-    expect(screen.getByRole('button', {name: 'coin'})).toBeInTheDocument();
-    expect(screen.getByRole('button', {name: 'big jump'})).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Choose coin'}),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Choose big jump'}),
+    ).toBeInTheDocument();
   });
 
   it('waits for the button rather than importing on a click', () => {
@@ -48,10 +52,10 @@ describe('SoundLibraryDialog', () => {
     const onImport = vi.fn();
     open({onImport});
 
-    fireEvent.click(screen.getByRole('button', {name: 'coin'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Choose coin'}));
 
     expect(onImport).not.toHaveBeenCalled();
-    expect(screen.getByRole('button', {name: 'coin'})).toHaveAttribute(
+    expect(screen.getByRole('button', {name: 'Choose coin'})).toHaveAttribute(
       'aria-pressed',
       'true',
     );
@@ -60,7 +64,7 @@ describe('SoundLibraryDialog', () => {
   it('imports the selected one when the button is pressed', () => {
     const onImport = vi.fn();
     open({onImport});
-    fireEvent.click(screen.getByRole('button', {name: 'coin'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Choose coin'}));
 
     fireEvent.click(screen.getByRole('button', {name: 'Use this sound'}));
 
@@ -124,7 +128,7 @@ describe('SoundLibraryDialog', () => {
     const {make, stopped} = recorder();
     open({makePlayer: make, onImport: vi.fn()});
     fireEvent.click(screen.getByRole('button', {name: 'Play coin'}));
-    fireEvent.click(screen.getByRole('button', {name: 'coin'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Choose coin'}));
 
     fireEvent.click(screen.getByRole('button', {name: 'Use this sound'}));
 
@@ -178,7 +182,7 @@ describe('SoundLibraryDialog', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Play roar.mp3'}));
     expect(played).toEqual(['data:audio/mpeg,roar']);
 
-    fireEvent.click(screen.getByRole('button', {name: 'roar.mp3'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Choose roar.mp3'}));
     fireEvent.click(screen.getByRole('button', {name: 'Use this sound'}));
     expect(handlers.onUseOwn).toHaveBeenCalledWith('roar.mp3');
 
