@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T15:04:35.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Before you build your model, understand the corpus it will use.\r\n\r\n**☑️ Do This:**\r\n- Read the sentences in `sayings.csv`, your corpus.\r\n- In your Project Planning Guide, describe the patterns you see under **Step 3: Contribute to the Corpus**.\r\n- Following these patterns, add at least five more sentences to your corpus. Choose words or topics you’d like to see when your model generates text.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "true",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson13-choice1-2026 + template",
+    "encrypted_exemplar_sources": "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\nc1uPT1aWptn0JNr4Xz8Chp2S+RmPCKtuqw==\n",
+    "display_name": "Sayings",
+    "bubble_choice_description": "A collection of short sayings that express some truth.",
+    "thumbnail_url": "https://images.code.org/78e6d7abca76be9df4234d830f8a6240-sayings.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 15:06:56 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:07:41 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:09:11 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:12:46 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:13:22 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:18:12 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

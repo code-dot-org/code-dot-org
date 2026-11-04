@@ -17,9 +17,13 @@ import {
 let mockProgress: {steps: {[stepId: string]: {status?: string}}} = {
   steps: {},
 };
+let mockBuildRequested = false;
+const mockSetBuildRequested = jest.fn();
 
 jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
   usePathwayContext: () => ({
+    buildRequested: mockBuildRequested,
+    setBuildRequested: mockSetBuildRequested,
     pathway: {
       id: 'test-pathway',
       title: 'Test',
@@ -53,7 +57,6 @@ const sourcesState = {
   isLoading: false,
   isEditable: true,
   hasEdited: false,
-  hasSavedSources: false,
   currentSources: {source: ''},
   channel: undefined as unknown,
   projectManager: null as unknown,
@@ -66,10 +69,19 @@ jest.mock('@cdo/apps/lab2/hooks/useSources', () => ({
   default: () => sourcesState,
 }));
 
-const generateCalls: {shouldGenerate: boolean | undefined}[] = [];
+const generateCalls: {
+  shouldGenerate: boolean | undefined;
+  sources?: unknown;
+}[] = [];
 jest.mock('@cdo/apps/adaptive/views/steps/useGenerateProject', () => ({
-  useGenerateProject: (options: {shouldGenerate: boolean | undefined}) => {
-    generateCalls.push({shouldGenerate: options.shouldGenerate});
+  useGenerateProject: (options: {
+    shouldGenerate: boolean | undefined;
+    sources?: unknown;
+  }) => {
+    generateCalls.push({
+      shouldGenerate: options.shouldGenerate,
+      sources: options.sources,
+    });
     return {isResolved: options.shouldGenerate === false};
   },
 }));
@@ -158,13 +170,15 @@ describe('LevelStep (LevelPlayer)', () => {
 
   afterEach(() => {
     mockProgress = {steps: {}};
+    mockBuildRequested = false;
     restoreRedux();
     jest.clearAllMocks();
     Object.assign(sourcesState, baseSourcesState);
     generateCalls.length = 0;
   });
 
-  function renderStep(step = makeLevelStep()) {
+  function renderStep(step = makeLevelStep(), buildRequested = false) {
+    mockBuildRequested = buildRequested;
     return render(
       <Provider store={store}>
         <LevelStep
@@ -205,47 +219,73 @@ describe('LevelStep (LevelPlayer)', () => {
       sourcesState.projectManager = {};
     };
 
-    it('never generates on a step without a project prompt', () => {
-      renderStep();
-      expect(lastDecision()).toEqual({shouldGenerate: false});
+    it('never generates on a step without a project prompt, and leaves a build request for the step that has one', () => {
+      renderStep(makeLevelStep(), true);
+      expect(lastDecision()).toMatchObject({shouldGenerate: false});
+      expect(mockSetBuildRequested).not.toHaveBeenCalled();
       expect(screen.getByText('hide tabs: true')).toBeInTheDocument();
+    });
+
+    it('does not generate when the student did not ask for a build', () => {
+      loaded();
+      renderStep(projectStep());
+      expect(lastDecision()).toMatchObject({shouldGenerate: false});
+      expect(mockSetBuildRequested).not.toHaveBeenCalled();
+    });
+
+    it('spends the build request it takes', () => {
+      loaded();
+      renderStep(projectStep(), true);
+      expect(lastDecision()).toMatchObject({shouldGenerate: true});
+      expect(mockSetBuildRequested).toHaveBeenCalledWith(false);
     });
 
     it('does not decide until the project has loaded, and waits for it', () => {
       sourcesState.isLoading = true;
-      renderStep(projectStep());
-      expect(lastDecision()).toEqual({shouldGenerate: undefined});
+      renderStep(projectStep(), true);
+      expect(lastDecision()).toMatchObject({shouldGenerate: undefined});
       expect(screen.getByText('Loading...')).toBeInTheDocument();
     });
 
-    it('generates for the owner on a project with nothing saved and nothing generated', () => {
+    it('generates for the owner once the project has loaded, over the project when the level has no template', () => {
       loaded();
-      renderStep(projectStep());
-      expect(lastDecision()).toEqual({shouldGenerate: true});
+      renderStep(projectStep(), true);
+      expect(lastDecision()).toEqual({
+        shouldGenerate: true,
+        sources: sourcesState.currentSources,
+      });
     });
 
-    it('does not generate over saved work', () => {
+    it("builds over the template's start sources, not the project as it stands", () => {
       loaded();
-      sourcesState.hasSavedSources = true;
-      renderStep(projectStep());
-      expect(lastDecision()).toEqual({shouldGenerate: false});
+      const template = {files: {}, folders: {}};
+      const step = projectStep();
+      step.levelProperties = {
+        ...step.levelProperties,
+        templateSources: template,
+      } as LevelProperties;
+      renderStep(step, true);
+      expect(lastDecision()).toEqual({
+        shouldGenerate: true,
+        sources: {source: template},
+      });
     });
 
-    it('does not generate twice', () => {
+    it('generates again over saved work and after an earlier generation', () => {
       loaded();
       sourcesState.channel = {
         id: 'c',
         labConfig: {adaptive: {generationTraceId: 'ab'.repeat(16)}},
       };
-      renderStep(projectStep());
-      expect(lastDecision()).toEqual({shouldGenerate: false});
+      renderStep(projectStep(), true);
+      expect(lastDecision()).toMatchObject({shouldGenerate: true});
     });
 
     it('does not generate for anyone but the owner', () => {
       loaded();
       sourcesState.isEditable = false;
-      renderStep(projectStep());
-      expect(lastDecision()).toEqual({shouldGenerate: false});
+      renderStep(projectStep(), true);
+      expect(lastDecision()).toMatchObject({shouldGenerate: false});
     });
   });
 });

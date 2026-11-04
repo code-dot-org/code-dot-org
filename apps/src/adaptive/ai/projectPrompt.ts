@@ -7,7 +7,7 @@ import {z} from 'zod';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 
 import {CheckpointPlan} from '../project/plan';
-import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
+import {Checkpoint, LevelStep, Pathway} from '../types';
 
 import {labEnvironment} from './labEnvironments';
 
@@ -35,8 +35,6 @@ export interface ProjectPromptInput {
   step: LevelStep;
   /** The checkpoint's plan: the answers, and the sentence they fill once complete. */
   plan: CheckpointPlan;
-  /** What the student has already called the project, if anything. */
-  project: PathwayProjectInfo;
   /** The template's editable files, the only ones the model may rewrite. */
   files: ProjectFile[];
 }
@@ -46,17 +44,9 @@ export function buildProjectPrompt({
   checkpoint,
   step,
   plan,
-  project,
   files,
 }: ProjectPromptInput): string {
   const environment = labEnvironment(pathway);
-  const named = project.name
-    ? `The student has already named the project "${project.name}".${
-        project.description
-          ? ` They describe it as: ${project.description}`
-          : ''
-      }`
-    : '';
   return [
     "You build the first version of a student's project in a project-based learning pathway. The student has said what they want to make; turn that into a working starting point they will keep building on, by rewriting the template files below.",
     environment ? `How the student works in this lab:\n${environment}` : '',
@@ -72,7 +62,6 @@ export function buildProjectPrompt({
         ({question, answer}) => `Q: ${question}\nA: ${answer}`
       ),
     ].join('\n\n'),
-    named,
     [
       'TEMPLATE FILES. These are the only files, and the only ones that may be rewritten:',
       ...files.map(

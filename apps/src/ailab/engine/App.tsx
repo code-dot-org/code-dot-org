@@ -8,7 +8,7 @@ import React, {
   useLayoutEffect,
 } from 'react';
 
-import {colors} from './constants';
+import {colors, RIGHT_PANEL_WIDTH} from './constants';
 import {reportPanelView} from './helpers/metrics';
 import {
   isSaveComplete,
@@ -40,6 +40,7 @@ import EmptyState from './UIComponents/EmptyState';
 import ModelCard from './UIComponents/ModelCard';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
+import type {SaveImageToBackpack} from './UIComponents/SaveTreeImageMenu';
 import SelectDataset from './UIComponents/SelectDataset';
 import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
@@ -206,7 +207,10 @@ interface ContainerRightProps {
 
 const ContainerRight = ({children}: ContainerRightProps) => {
   return (
-    <div className={classNames(styles.column, styles.rightColumn)}>
+    <div
+      className={classNames(styles.column, styles.rightColumn)}
+      style={{width: RIGHT_PANEL_WIDTH}}
+    >
       {children}
     </div>
   );
@@ -239,6 +243,7 @@ export interface AppProps {
   onTrained?: (accuracy: number) => void;
   /** Optional callback invoked with whether the lab is loading its dataset, a saved project, or a pretrained model. */
   onLoadingChange?: (isLoading: boolean) => void;
+  saveImageToBackpack?: SaveImageToBackpack;
 }
 
 // getPanelButtons builds a fresh {prev, next} each call (and reads I18n for
@@ -254,6 +259,7 @@ const App = ({
   onStartOver,
   onTrained,
   onLoadingChange,
+  saveImageToBackpack,
 }: AppProps) => {
   const dispatch = useAppDispatch();
   const {project, isProjectLoading} = useProject();
@@ -389,7 +395,7 @@ const App = ({
       {currentPanel === 'results' && (
         <BodyContainer flush>
           <ContainerFullWidth>
-            <Results />
+            <Results saveImageToBackpack={saveImageToBackpack} />
           </ContainerFullWidth>
         </BodyContainer>
       )}

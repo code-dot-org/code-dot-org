@@ -34,7 +34,7 @@
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "include_shared_functions": "false",
     "free_play": "false",
@@ -46,6 +46,9 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "enable_big_playspace": "false",
+    "level_mode": {
+      "kind": "freeplay"
+    },
     "toolbox_definition": {
       "kind": "categoryToolbox",
       "contents": [
@@ -417,6 +420,52 @@
                     "fields": {
                       "VAR": {
                         "name": "answer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "AI",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_askAI",
+              "inputs": {
+                "PROMPT": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "fields": {
+                      "VAR": {
+                        "name": "AI answer"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_whenPromptAnswered",
+              "inputs": {
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "fields": {
+                      "VAR": {
+                        "name": "AI answer"
                       }
                     }
                   }

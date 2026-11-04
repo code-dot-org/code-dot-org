@@ -79,7 +79,13 @@ const AdaptiveView: React.FunctionComponent<
     );
   }
 
-  return <PathwayApp pathway={parsed.pathway} progressKey={progressKey} />;
+  return (
+    <PathwayApp
+      pathway={parsed.pathway}
+      progressKey={progressKey}
+      levelProperties={levelProperties}
+    />
+  );
 };
 
 export default AdaptiveView;

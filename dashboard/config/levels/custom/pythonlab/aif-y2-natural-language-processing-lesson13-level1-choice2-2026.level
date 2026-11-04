@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T15:04:38.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Before you build your model, understand the corpus it will use.\r\n\r\n**☑️ Do This:**\r\n- Read the questions in `curiosities.csv`, your corpus.\r\n- In your Project Planning Guide, describe the patterns you see under **Step 3: Contribute to the Corpus**.\r\n- Following these patterns, add at least five more questions to your corpus. Choose words or topics you’d like to see when your model generates text.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "true",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson13-choice2-2026 + template",
+    "encrypted_exemplar_sources": "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\nZ38XYR3EOyIz1cku3esnZ0SXqfQ=\n",
+    "display_name": "Curiosities",
+    "bubble_choice_description": "A collection of curious questions about astronomy.",
+    "thumbnail_url": "https://images.code.org/66e12643e21f09882edcfa73d19df1a7-curiosities.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 15:06:59 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:07:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:10:53 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:12:45 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:13:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:18:11 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
