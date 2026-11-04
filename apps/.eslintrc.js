@@ -210,6 +210,12 @@ module.exports = {
             message:
               'DSCO Dialog is deprecated. Import MuiDialog / MuiCustomDialog (and MuiDialogProps / MuiCustomDialogProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/dialog-to-mui-dialog.ts; see codemods/README.md there',
           },
+          {
+            name: '@code-dot-org/component-library/divider',
+            importNames: ['Divider', 'DividerProps', 'default'],
+            message:
+              'DSCO Divider is deprecated. Import MuiDivider (and MuiDividerProps) from the same path instead; keep Divider from @mui/material for vertical and flex-item separators. Codemod available: frontend/packages/component-library/codemods/divider-to-mui-divider.ts; see codemods/README.md there',
+          },
         ],
         patterns: [
           {
