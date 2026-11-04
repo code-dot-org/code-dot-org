@@ -118,7 +118,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const checklist = objectives?.items.length ? objectives.items : undefined;
 
   return (
-    <ThemeProvider theme={overrideTheme || defaultTheme}>
+    <PinTheme theme={overrideTheme}>
       <div
         id="instructions"
         className={classNames(
@@ -128,6 +128,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             : moduleStyles.standardBackground,
           'instructions'
         )}
+        data-theme={overrideTheme || defaultTheme}
       >
         <div
           id="instructions-panel"
@@ -210,7 +211,18 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
           )}
         </div>
       </div>
-    </ThemeProvider>
+    </PinTheme>
   );
 };
+// Pinning only on override keeps popups in step with the panel at no cost otherwise.
+const PinTheme: React.FC<{theme?: Theme; children: React.ReactNode}> = ({
+  theme,
+  children,
+}) =>
+  theme ? (
+    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  ) : (
+    <>{children}</>
+  );
+
 export default memo(Instructions);

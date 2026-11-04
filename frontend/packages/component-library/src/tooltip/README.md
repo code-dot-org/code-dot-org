@@ -101,7 +101,9 @@ is `display: contents`, so it adds no layout box.
 
 The provider does this with an MUI `DefaultPropsProvider` that adds
 `data-theme` to the surrounding theme's `MuiPopper` and `MuiPopover` default
-props. It works with or without an outer MUI theme.
+props. It works with or without an outer MUI theme. An MUI `ThemeProvider`
+nested inside it installs its own default props and drops these; nest it
+outside, as `WhiteboardChallenge` does.
 
 A tooltip whose bubble must differ from the surrounding theme sets its own:
 

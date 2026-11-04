@@ -234,10 +234,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     // reflowing on every frame of the transition.
     //
     // The drawer's colors are its own, not the host page's: a dark Lab2 lab
-    // wraps its tree in a Dark ThemeProvider, and inline we sit inside it
-    // rather than portaling to <body> past it. Light is the default theme
-    // (see colors_codeAi.css), so this is the appearance the drawer has
-    // everywhere else. The pin also reaches the drawer's tooltips.
+    // wraps its tree in data-theme="Dark", and inline we sit inside that
+    // wrapper rather than portaling to <body> past it. Light is the default
+    // theme (see colors_codeAi.css), so this is the appearance the drawer has
+    // everywhere else.
     return (
       <ThemeProvider theme="Light">
         <div
