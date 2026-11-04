@@ -4,29 +4,30 @@ import {
   MenuItem,
   ThemeProvider as MuiThemeProvider,
   Popover,
+  Popper,
   TextField,
   Tooltip,
 } from '@mui/material';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import {ReactNode, useEffect} from 'react';
+import {ReactNode} from 'react';
 
 import CdoTheme from '@/themes/code.org';
 
 import {Theme, ThemeProvider, useTheme} from '../ThemeContext';
 
-const ForceTheme = ({theme}: {theme: Theme}) => {
-  const {setTheme} = useTheme();
-  useEffect(() => setTheme(theme), [setTheme, theme]);
-  return null;
-};
-
 const InTheme = ({theme, children}: {theme: Theme; children: ReactNode}) => (
-  <ThemeProvider>
-    <ForceTheme theme={theme} />
-    {children}
-  </ThemeProvider>
+  <ThemeProvider initialTheme={theme}>{children}</ThemeProvider>
 );
+
+const ThemeReadout = () => {
+  const {theme, toggleTheme} = useTheme();
+  return (
+    <button type="button" onClick={toggleTheme}>
+      {theme}
+    </button>
+  );
+};
 
 const renderInMui = (ui: ReactNode) =>
   render(<MuiThemeProvider theme={CdoTheme}>{ui}</MuiThemeProvider>);
@@ -178,7 +179,7 @@ describe('ThemeProvider and portaled MUI surfaces', () => {
     expect(await openTooltip()).not.toHaveAttribute('data-theme');
   });
 
-  it('renders without an outer MUI theme and logs nothing', async () => {
+  it('works without an outer MUI theme and logs nothing', async () => {
     const error = vi.spyOn(console, 'error').mockImplementation(() => {});
     render(
       <InTheme theme="Dark">
@@ -188,8 +189,102 @@ describe('ThemeProvider and portaled MUI surfaces', () => {
       </InTheme>,
     );
 
-    expect(await openTooltip()).not.toHaveAttribute('data-theme');
+    expect(await openTooltip()).toHaveAttribute('data-theme', 'Dark');
     expect(error).not.toHaveBeenCalled();
     error.mockRestore();
+  });
+
+  it('keeps the subtree mounted across a theme change', async () => {
+    renderInMui(
+      <ThemeProvider>
+        <ThemeReadout />
+      </ThemeProvider>,
+    );
+
+    const button = screen.getByRole('button');
+    await user.click(button);
+    expect(screen.getByRole('button')).toBe(button);
+    expect(button).toHaveTextContent('Dark');
+  });
+});
+
+describe('pinned ThemeProvider', () => {
+  let user: ReturnType<typeof userEvent.setup>;
+  beforeEach(() => {
+    user = userEvent.setup();
+  });
+
+  it('pins portaled surfaces inside a differently themed provider', async () => {
+    renderInMui(
+      <InTheme theme="Dark">
+        <ThemeProvider theme="Light">
+          <Tooltip title="tip">
+            <button type="button">trigger</button>
+          </Tooltip>
+        </ThemeProvider>
+      </InTheme>,
+    );
+
+    await user.hover(screen.getByRole('button'));
+    expect(await screen.findByRole('tooltip')).toHaveAttribute(
+      'data-theme',
+      'Light',
+    );
+  });
+
+  it('pins an unportaled popper to the section', () => {
+    renderInMui(
+      <InTheme theme="Dark">
+        <ThemeProvider theme="Light">
+          <Popper open anchorEl={anchor} disablePortal>
+            <p>content</p>
+          </Popper>
+        </ThemeProvider>
+      </InTheme>,
+    );
+
+    expect(screen.getByText('content').closest('[data-theme]')).toHaveAttribute(
+      'data-theme',
+      'Light',
+    );
+  });
+
+  it('adds no layout box', () => {
+    renderInMui(
+      <ThemeProvider theme="Dark">
+        <p>content</p>
+      </ThemeProvider>,
+    );
+
+    const wrapper = screen.getByText('content').parentElement;
+    expect(wrapper).toHaveAttribute('data-theme', 'Dark');
+    expect(wrapper).toHaveStyle({display: 'contents'});
+  });
+
+  it('reports the pinned theme and toggles the enclosing provider', async () => {
+    renderInMui(
+      <ThemeProvider>
+        <ThemeProvider theme="Light">
+          <ThemeReadout />
+        </ThemeProvider>
+        <ThemeReadout />
+      </ThemeProvider>,
+    );
+
+    const [pinned, outer] = screen.getAllByRole('button');
+    await user.click(pinned);
+    expect(pinned).toHaveTextContent('Light');
+    expect(outer).toHaveTextContent('Dark');
+  });
+
+  it('ignores toggles with no enclosing provider', async () => {
+    renderInMui(
+      <ThemeProvider theme="Dark">
+        <ThemeReadout />
+      </ThemeProvider>,
+    );
+
+    await user.click(screen.getByRole('button'));
+    expect(screen.getByRole('button')).toHaveTextContent('Dark');
   });
 });
