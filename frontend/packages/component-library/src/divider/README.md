@@ -1,8 +1,9 @@
 # `componentLibrary/divider`
 
 [MuiDivider](MuiDivider.tsx) is the MUI version of the deprecated DSCO
-[Divider](Divider.tsx). It takes the same props, so moving a call site over
-changes only its import.
+[Divider](Divider.tsx). It takes the same props, less `children`, which React
+already rejects on an `<hr>`, so moving a call site over changes only its
+import.
 
 ```javascript
 import {MuiDivider} from '@code-dot-org/component-library/divider';
