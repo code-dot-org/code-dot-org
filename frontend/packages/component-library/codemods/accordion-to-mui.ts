@@ -219,9 +219,11 @@ function transformer(file: FileInfo, api: API) {
       changed = true;
 
       // A default-only import merges into another named import of the same kind, if one exists.
+      // Re-queried: an earlier merge may have removed a declaration sourceImports still holds.
       const target =
         rest.length === 0
-          ? sourceImports
+          ? root
+              .find(j.ImportDeclaration, {source: {value: source}})
               .filter(
                 other =>
                   other !== path &&

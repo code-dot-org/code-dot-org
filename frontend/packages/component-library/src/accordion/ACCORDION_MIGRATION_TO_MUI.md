@@ -316,7 +316,9 @@ Behavior differences accepted, not deferred:
   on drag.
 - Chrome expands a closed `<details>` when find-in-page matches its text.
   MUI's closed panel is `visibility: hidden`, so a closed answer no longer
-  matches. React 18 cannot render `hidden="until-found"`.
+  matches. React 18 cannot render `hidden="until-found"`. For the same
+  reason a `#fragment` link to an element inside a closed answer no longer
+  opens it; legacy did, in Chrome and Safari.
 - An `<i>` inside a ReactNode label no longer takes the chevron's color and
   flip; legacy styled every `summary i`. No story or consumer has one.
 
@@ -383,11 +385,11 @@ becomes **Migrated** when the table is empty. No UI-test file selects on
 this component, so none is at risk; the risk is page CSS and screen-reader
 output.
 
-| Behavior             | Legacy today                                                      | With MUI                                                                                                                             | UI tests at risk | After | Moves DOM | Ticket |
-| -------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ----- | --------- | ------ |
-| Heading              | No heading; `slotProps.heading.component: 'div'`                  | The summary sits in an `<h3>` (`all: unset`); a heading per item in the page outline. A page rule such as `.x h3` outranks the reset | None             |       | yes       |        |
-| Region               | No `role="region"`, no ids; `slotProps.region.role: undefined`    | `role="region"` on the panel, labelled by the summary through a `useId` id and `aria-controls`; each open panel becomes a landmark   | None             |       | no        |        |
-| Open/close animation | Instant, as native `<details>`; `slotProps.transition.timeout: 0` | `Collapse` animates height (`timeout: 'auto'`); a capture or assertion right after a click must wait for the transition              | None             |       | yes       |        |
+| Behavior             | Legacy today                                                      | With MUI                                                                                                                                                                                                         | UI tests at risk | After | Moves DOM | Ticket |
+| -------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----- | --------- | ------ |
+| Heading              | No heading; `slotProps.heading.component: 'div'`                  | The summary sits in an `<h3>` (`all: unset`); a heading per item in the page outline. A page rule such as `.x h3` outranks the reset                                                                             | None             |       | yes       |        |
+| Region               | No `role="region"`, no ids; `slotProps.region.role: undefined`    | `role="region"` on the panel; each open panel becomes a landmark. MUI labels it only from the summary's `id` and `aria-controls` props, so the wrapper must generate both with `useId`, or the region is unnamed | None             |       | no        |        |
+| Open/close animation | Instant, as native `<details>`; `slotProps.transition.timeout: 0` | `Collapse` animates height (`timeout: 'auto'`); a capture or assertion right after a click must wait for the transition                                                                                          | None             |       | yes       |        |
 
 ## Story gaps
 
@@ -400,6 +402,7 @@ workflow adds each as an MUI story when it deletes the legacy source.
 | Hover on a summary                                      | The hover background and chevron color sit over MUI's `transition` and background rules; a lost override passes every closed capture                                  |
 | Focus-visible (Tab onto a summary in a play function)   | The ring comes only from the root's `:has(.Mui-focusVisible)` rule, and MUI's own focus background must stay cancelled                                                |
 | A ReactNode label                                       | `font: inherit` on the `<button>` decides its font; every story uses string labels, which set their own                                                               |
+| A label that wraps to two lines                         | Only then does the summary's `alignItems: 'center'` show: without it the chevron sits at the top; every story label fits one line                                     |
 
 ## Consumer chunks
 
@@ -470,7 +473,11 @@ Migrate (only when the consumer is moved):
   emotion off the root.
 - The close is asynchronous by one macrotask. A test or play function that
   asserts hidden content right after a click must use `waitFor`.
-- Find-in-page no longer reaches closed content (see Parity).
+- Find-in-page and `#fragment` links no longer reach closed content (see
+  Parity).
+- Unit tests run without the code.org theme, so they pin behavior only.
+  The overrides in `styleOverrides/accordion.ts` are guarded by Storybook
+  and Eyes; a renamed MUI class passes every unit test.
 - A global override restyles every MUI `Accordion` that ever appears. None
   exists today; a later one gets the DSCO look unless it overrides.
 - `dist/` is gitignored and can hold another branch's build. Rebuild before
