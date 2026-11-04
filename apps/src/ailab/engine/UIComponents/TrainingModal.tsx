@@ -1,4 +1,5 @@
 /* Modal that animates training, then testing, a newly trained model. */
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
@@ -18,6 +19,7 @@ import appStyles from '../app.module.scss';
 const TITLE_ID = 'training-modal-title';
 
 const TrainingModal = () => {
+  const {theme} = useTheme(true);
   const dispatch = useAppDispatch();
   const step = useAppSelector(state => state.trainingModalStep);
   const isReplay = useAppSelector(state => state.isTrainingReplay);
@@ -49,6 +51,8 @@ const TrainingModal = () => {
 
   return (
     <MuiCustomDialog
+      // The dialog is portaled outside the lab's theme wrapper.
+      data-theme={theme}
       className={styles.dialog}
       aria-labelledby={TITLE_ID}
       onClose={closeModal}
