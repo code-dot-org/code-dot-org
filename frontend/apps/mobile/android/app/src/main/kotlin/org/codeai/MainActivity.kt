@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.graphics.Color
+import android.media.AudioManager
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.Uri
@@ -15,6 +16,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.textclassifier.TextClassifier
 import android.webkit.CookieManager
+import android.webkit.GeolocationPermissions
+import android.webkit.PermissionRequest
+import android.webkit.ValueCallback
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebResourceResponse
@@ -36,6 +40,7 @@ import androidx.webkit.UserAgentMetadata
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
 import com.getcapacitor.BridgeActivity
+import com.getcapacitor.BridgeWebChromeClient
 import com.getcapacitor.BridgeWebViewClient
 import com.getcapacitor.WebViewListener
 import org.codeai.SitePolicy.HOME_URL
@@ -64,8 +69,9 @@ class MainActivity : BridgeActivity() {
 
         override fun onLost(network: Network) = setNetworkAvailable(false)
     }
-    // Set when the cover's logo cancels a load, which can leave the cancelled
-    // page in history, even ahead of the landing page.
+    // Set when the app loads the landing page over pages Back must not
+    // return to: a load the cover's logo cancelled, which can stay in
+    // history even ahead of the landing page, or a page Back left.
     private var clearHistoryOnLanding = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -93,6 +99,27 @@ class MainActivity : BridgeActivity() {
         // The page script zooms studio.code.org pages by setting their
         // viewport, which the WebView ignores outside wide-viewport mode.
         settings.useWideViewPort = true
+        // Amazon Kids+ allows no camera, microphone or location access, and
+        // no file picker, which would leave the app.
+        webView.webChromeClient = object : BridgeWebChromeClient(bridge) {
+            override fun onPermissionRequest(request: PermissionRequest) = request.deny()
+
+            override fun onGeolocationPermissionsShowPrompt(
+                origin: String,
+                callback: GeolocationPermissions.Callback,
+            ) = callback.invoke(origin, false, false)
+
+            override fun onShowFileChooser(
+                webView: WebView,
+                filePathCallback: ValueCallback<Array<Uri>>,
+                fileChooserParams: FileChooserParams,
+            ): Boolean {
+                filePathCallback.onReceiveValue(null)
+                return true
+            }
+        }
+        // The volume keys set the volume of the WebView's sound, not the ringer.
+        volumeControlStream = AudioManager.STREAM_MUSIC
 
         prefs = getSharedPreferences(PREFS, MODE_PRIVATE)
         resumeUrl = prefs.getString(LAST_PAGE_KEY, null)?.takeIf(SitePolicy::isSitePage)
@@ -510,10 +537,16 @@ class MainActivity : BridgeActivity() {
 
     private fun goBack() {
         val webView = bridge.webView
-        if (webView.canGoBack()) {
-            webView.goBack()
-        } else {
-            finish()
+        when {
+            webView.canGoBack() -> webView.goBack()
+            // Chromium's Back, and history.go() from the page, skip the
+            // landing page under a page the app reopened on a fresh start,
+            // since nothing on it was tapped.
+            webView.url?.substringBefore('#') != bridge.appUrl -> {
+                clearHistoryOnLanding = true
+                webView.loadUrl(bridge.appUrl)
+            }
+            else -> finish()
         }
     }
 

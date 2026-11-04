@@ -4,7 +4,11 @@ What changed in each version of the CodeAI Android app. The version is
 `versionName` in `android/app/build.gradle` and `version` in `package.json`;
 `versionCode` rises by one with each.
 
-## 0.3.0 (2026-11-02)
+## 1.0.0 (2026-11-04)
+
+The first release: a Capacitor app for Amazon Fire tablets (Amazon Kids+)
+that lists the ten curricula of the Amazon Fire Kids Content Library and
+opens each in one WebView on studio.code.org.
 
 ### Screens
 
@@ -14,23 +18,55 @@ What changed in each version of the CodeAI Android app. The version is
   the design.
 - On landscape tablets wider than a Fire HD 8, the screens grow with the
   screen, as the design's Fire HD 10 frames do.
-- The status bar is hidden; a swipe from the top edge shows it.
-- The header is shorter and centers the privacy policy beside the logo; the
-  privacy policy shows on the landing page and the offline screen only.
-- The loading screen shows the wordmark and a spinner on the landing page's
-  grey background.
-- The offline screen's title is larger, and its text reads "Check that the
-  Wi-Fi is on, or ask a grown-up for help."
-- Headings and card titles use Space Grotesk, now bundled with the app.
+- The app stays in landscape and hides the status bar; a swipe from the top
+  edge shows it.
+- The header gives the privacy policy, centered beside the logo, as text a
+  parent can copy rather than a link, on the landing page and the offline
+  screen.
+- A loading screen, the wordmark and a spinner on the landing page's grey
+  background, covers the WebView while a page loads. Its logo returns to the
+  landing page.
+- Finishing a curriculum leads to a congratulations screen instead of the
+  certificate page, offering Try again and Choose another curriculum.
+- An offline screen replaces pages that cannot load. It reads "Check that the
+  Wi-Fi is on, or ask a grown-up for help.", retries when the tablet
+  reconnects, and offers a way back to the curricula.
+- Headings and card titles use Space Grotesk. The landing page bundles only
+  the fonts it uses, and its build carries none of the labs' code.
+
+### Site pages
+
+- Links that lead off studio.code.org are blocked and hidden, and YouTube is
+  unreachable, so video levels use Code.org's own player. Selected text
+  offers only Copy and Select All.
+- The page script hides the site's header links, menus, footers, sharing,
+  certificates, cookie banner, "Need help?" videos, the "You are not signed
+  in" callout and the unsupported-browser warning, before anything is drawn.
+- The app is English only, whatever the device language.
+- Pages style correctly on Fire OS 7, whose WebView predates CSS cascade
+  layers, and Music Lab and Dance Party load on WebViews before Chromium 103.
+- Google's tag scripts start only once a page has settled, bringing a level's
+  load event about two seconds sooner.
+- images.code.org images and Font Awesome files are kept after their first
+  load, so the landing page's images and icons never wait on the network.
 
 ### Progress
 
-- Try again on the congratulations screen forgets only that curriculum's
-  progress; other curricula and projects stay. Before, it erased everything.
+- Signed-out progress survives app restarts and updates, and a fresh start
+  reopens the last page shown, from which Back returns to the landing page.
+  Free-play labs reopen the last project.
 - Opening a curriculum that starts on a level (Flappy Bird Code, Code with
   Anna and Elsa, Minecraft's Hero Journey) continues at the first level not
-  yet passed, and so does Continue on a unit's overview. Before, both opened
-  the first level.
+  yet passed, and so does Continue on a unit's overview.
+- Try again on the congratulations screen forgets only that curriculum's
+  progress; other curricula and projects stay.
+
+### Identification
+
+- The app names itself in the User-Agent, as
+  `CodeAIApp/<version> (android; Amazon Kids+ Edition)`, and, where the
+  WebView supports it, in `navigator.userAgentData` and the `Sec-CH-UA`
+  headers.
 - The Statsig stable ID, which is also the anonymous user ID, is derived from
   `ANDROID_ID`. Where the saved consent allows performance cookies, the app
   sets it before the first page loads; otherwise the cookie is left to the
@@ -46,52 +82,23 @@ What changed in each version of the CodeAI Android app. The version is
 - Only the page itself, not an iframe, can go home, reset or finish a
   curriculum, and a studio.code.org address on another port counts as
   another site.
+- Pages get no camera, microphone or location, and a file input opens
+  nothing. The app asks for no permission beyond the network.
+- Nothing the app keeps is backed up or moved to another device.
+- The volume keys set the volume of the app's sound.
 
-### Site pages
+### Packaging
 
-- The "You are not signed in" callout is hidden.
-- The app names itself in `navigator.userAgentData` and the `Sec-CH-UA`
-  headers as well as in the User-Agent.
+- Targets Android 16 (API 36) and runs from Fire OS 7 (API 28), on 64-bit
+  ARM, and installs to external storage where the tablet has it, as Amazon
+  Kids+ requires.
+- The release APK is named "CodeAI - Amazon Kids+ Edition.apk".
 
 ### Debug builds
 
-- Reset course, on course pages, forgets that course's progress and reopens
-  its first level.
-- Show hidden elements outlines and shows everything the app hides; a
-  floating button hides them again.
-- The zoom level shows between the zoom buttons when it is not 100%.
-- The header controls end as far from the right edge as the logo starts from
-  the left, evenly spaced.
-
-## 0.2.0 (2026-10-21)
-
-Aligns the app with the Amazon Kids+ submission guidelines.
-
-- Links that lead off studio.code.org are blocked and hidden; the privacy
-  policy is text a parent can copy rather than a link.
-- An offline screen replaces pages that cannot load, retries when the tablet
-  reconnects, and offers a way back to the curricula.
-- The landing page lists the ten curricula of the Amazon Fire Kids Content
-  Library.
-- The app stays in landscape.
-- A loading screen covers the WebView while a page loads; Google's tag
-  scripts start only once the page has settled.
-- The unsupported-browser warning is hidden.
-- The landing page's build no longer carries the labs' code, and bundles
-  only the fonts it uses.
-- Pages style correctly on Fire OS 7, whose WebView predates CSS cascade
-  layers.
-- Kotlin unit tests cover the site policy and page injection.
-
-## 0.1.0 (2026-10-09)
-
-The first prototype.
-
-- A Capacitor app whose landing page lists the curricula and opens each in
-  one WebView on studio.code.org.
-- The page script hides the site's header links, menus, footers, sharing and
-  certificates; finishing a curriculum returns to a congratulations screen.
-- Signed-out progress survives app restarts, and free-play labs reopen the
-  last project.
-- The app is English only, whatever the device language.
-- Debug builds can zoom site pages.
+- Header controls, as far from the right edge as the logo starts from the
+  left and evenly spaced: Reset course, on course pages, which forgets that
+  course's progress and reopens its first level; Show hidden elements, which
+  outlines and shows everything the app hides, with a floating button to hide
+  them again; and zoom out and zoom in, with the level between them when it
+  is not 100%.

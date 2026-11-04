@@ -33,9 +33,15 @@ web. YouTube is unreachable so that video levels use Code.org's own player,
 which has no "Watch on YouTube" link. Android Back steps back through page
 history and exits from the landing page.
 
+Pages get no camera, microphone or location, and a file input opens
+nothing: Amazon Kids+ allows none of these, and a file picker would leave the
+app. The volume keys set the volume of the app's sound. Nothing the app keeps
+is backed up or moved to another device.
+
 The app runs in landscape only (`screenOrientation` in `AndroidManifest.xml`)
 and hides the status bar, as the design does; a swipe from the top edge shows
-it for a moment.
+it for a moment. Android 16 ignores a fixed orientation on tablets unless the
+app opts out, which it can only while it targets API 36.
 
 `res/raw/hide_site_chrome.js` runs in every studio.code.org page the app loads
 and applies "Elements to Hide in the Wrapper", whose item numbers its comments
@@ -86,7 +92,9 @@ twice per tab.
 
 A fresh start reopens the last studio.code.org page shown, on top of the
 landing page, so a child continues where they left off; returning to the
-landing page clears it.
+landing page clears it. Chromium's Back skips the landing page under it,
+since nothing there was tapped, so Back from a page with nothing behind it
+returns to the landing page itself.
 
 While a page loads, a loading screen covers the window: the wordmark and a
 spinner on the landing page's grey background. It shows on a fresh start that resumes a page, when a curriculum is
@@ -171,9 +179,9 @@ It also waits, for at most a second, for the Font Awesome icon font, so its
 text and icons appear together.
 Site pages use the site's own fonts, which the WebView caches.
 
-The app appends `CodeAIApp/<version> (android; amazon-kids)` to the WebView's
-User-Agent, so every request it makes to studio.code.org — pages, API calls
-and iframes — identifies the app. Rails can test for it with
+The app appends `CodeAIApp/<version> (android; Amazon Kids+ Edition)` to
+the WebView's User-Agent, so every request it makes to studio.code.org —
+pages, API calls and iframes — identifies the app. Rails can test for it with
 `request.user_agent.to_s.include?('CodeAIApp/')` to choose a mobile layout.
 Where the WebView supports it, the app also adds a `CodeAIApp` brand to
 `navigator.userAgentData` and the `Sec-CH-UA` headers.
@@ -194,8 +202,9 @@ Kotlin compiler. From this directory:
 
 ```bash
 yarn android:sync     # build Studio's mobile output and copy it into android/
-cd android && ./gradlew assembleDebug   # app/build/outputs/apk/debug/codeai-0.3.0-debug.apk
-cd android && ./gradlew testDebugUnitTest   # SitePolicy, PageInjector and the launcher scale, on the JVM with Robolectric
+cd android && ./gradlew assembleDebug   # app/build/outputs/apk/debug/codeai-1.0.0-debug.apk
+cd android && ./gradlew assembleRelease   # app/build/outputs/apk/release/CodeAI - Amazon Kids+ Edition.apk, unsigned
+cd android && ./gradlew testDebugUnitTest   # SitePolicy and PageInjector, on the JVM with Robolectric
 yarn android:open     # or open the project in Android Studio
 ```
 

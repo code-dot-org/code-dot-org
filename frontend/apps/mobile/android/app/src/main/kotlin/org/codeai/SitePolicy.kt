@@ -36,10 +36,11 @@ internal object SitePolicy {
 
     // Appended to the WebView's User-Agent, so the server can tell every
     // request from the app (pages, API calls, iframes) from a browser's,
-    // e.g. "CodeAIApp/0.2.0 (android; amazon-kids)".
+    // e.g. "CodeAIApp/1.0.0 (android; Amazon Kids+ Edition)", the edition named
+    // as Amazon names it; a product name cannot hold spaces.
     const val USER_AGENT_PRODUCT = "CodeAIApp"
     const val PLATFORM = "android"
-    const val EDITION = "amazon-kids"
+    const val EDITION = "Amazon Kids+ Edition"
 
     // Item 3 of "Elements to Hide in the Wrapper": YouTube's player offers
     // "Watch on YouTube", which leaves the app. With these hosts unreachable,

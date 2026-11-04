@@ -25,7 +25,7 @@ class Metrics::EventsTest < ActiveSupport::TestCase
     end
 
     it 'logs user agent of request as custom property' do
-      user_agent = 'Mozilla/5.0 (Linux; Android 11; KFRAPWI; wv) CodeAIApp/0.2.0 (android; amazon-kids)'
+      user_agent = 'Mozilla/5.0 (Linux; Android 11; KFRAPWI; wv) CodeAIApp/1.0.0 (android; Amazon Kids+ Edition)'
       request = stub(statsig_stable_id: stable_id, user_agent:)
       Statsig.expects(:log_event).with {|statsig_user| statsig_user.custom['userAgent'] == user_agent}
 

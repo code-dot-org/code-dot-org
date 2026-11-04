@@ -8,8 +8,8 @@ android {
         applicationId "org.codeai"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
-        versionName "0.3.0"
+        versionCode 1
+        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         // Amazon Kids+ requires 64-bit ARM for its Android 16 tablets. The app
         // ships no native code of its own; this filters bundled libraries.
@@ -38,9 +38,19 @@ android {
 }
 
 // Names the build output codeai-<version>-<build type>.apk, e.g.
-// codeai-0.3.0-debug.apk. Follows android {}, which sets the version.
+// codeai-1.0.0-debug.apk. Follows android {}, which sets the version.
 base {
     archivesName = "codeai-${android.defaultConfig.versionName}"
+}
+
+// Amazon Kids+ asks for the submitted APK to be named
+// "<App name> - Amazon Kids+ Edition.apk".
+android.applicationVariants.configureEach { variant ->
+    if (variant.buildType.name == 'release') {
+        variant.outputs.configureEach {
+            outputFileName = 'CodeAI - Amazon Kids+ Edition.apk'
+        }
+    }
 }
 
 repositories {
@@ -59,7 +69,7 @@ dependencies {
     testImplementation "junit:junit:$junitVersion"
     // Runs SitePolicy and PageInjector, which use android.net and android.webkit, on the JVM.
     testImplementation "org.robolectric:robolectric:4.17"
-    testImplementation "com.squareup.okhttp3:mockwebserver:5.5.0"
+    testImplementation "com.squareup.okhttp3:mockwebserver:5.5.1"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')
