@@ -107,7 +107,6 @@ namespace :build do
           ChatClient.log "Not seeding <b>dashboard</b> because skip_seed is set. Run 'rake seed:default' to pick up changes to seeded content."
         else
           ChatClient.log 'Seeding <b>dashboard</b>...'
-          ChatClient.log 'consider setting "skip_seed" in locals.yml if this is taking too long' if rack_env?(:development)
           RakeUtils.rake_stream_output 'seed:default', (rack_env?(:test) ? '--trace' : nil)
         end
 
