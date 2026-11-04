@@ -1989,14 +1989,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     sceneLoadsRef.current++;
-    // Before free play, blocks built on an earlier level cannot be deleted.
-    // This level's own stacks, added by it or built from its toolbox, stay
-    // deletable.
+    // On a level that asks, blocks built on an earlier level cannot be
+    // deleted. The stacks this level added and the blocks its toolbox
+    // offers stay deletable.
     loadCode(source, {
-      lock: !isLevelEditMode && !isFreeplayMode(levelProperties.levelMode),
-      isOwnStack: top =>
-        ownsTop(levelProperties.addBlocks ?? [], top) ||
-        ownToolboxTypes.has(top.type),
+      lock: !isLevelEditMode && !!levelProperties.lockEarlierBlocks,
+      isOwn: block =>
+        ownsTop(levelProperties.addBlocks ?? [], block.getRootBlock()) ||
+        ownToolboxTypes.has(block.type),
     });
     runLocalScene(activeScene);
     // After the load, so the blocks sit below what the workspace holds.
@@ -2005,6 +2005,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     addLevelBlocks,
     animationsSeeded,
     levelProperties.addBlocks,
+    levelProperties.lockEarlierBlocks,
     ownToolboxTypes,
     activeScene,
     currentSources.source,

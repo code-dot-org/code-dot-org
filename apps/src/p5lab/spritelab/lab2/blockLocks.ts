@@ -1,8 +1,9 @@
-// Blocks a student built on an earlier level cannot be deleted on later
-// levels: a stack deleted by accident would leave the student with no way to
-// continue. They can still be moved. The locks belong to the level, are set
-// as the scene loads and are never saved, so free play loads the same
-// project with every block deletable again.
+// On a level that opts in (lock_earlier_blocks), blocks a student built on
+// an earlier level cannot be deleted: a stack deleted by accident would
+// leave the student with no way to continue. They can still be moved. The
+// locks belong to the level, are set as the scene loads and are never
+// saved, so a later level without the property loads the same project with
+// every block deletable again.
 
 import * as BlocklyCore from 'blockly/core';
 
@@ -31,18 +32,17 @@ export function toolboxBlockTypes(
   return types;
 }
 
-/** Make every real block in the workspace undeletable, except the stacks
-    `isOwnStack` claims as the level's own. */
+/** Make every real block in the workspace undeletable, except the blocks
+    `isOwn` claims as the level's own. A block the level's toolbox offers is
+    one of those: the student may have dragged it out on this level and
+    reloaded, and a stack built here stays as deletable as its blocks. */
 export function lockBlocks(
   workspace: BlocklyCore.Workspace,
-  isOwnStack: (top: BlocklyCore.Block) => boolean = () => false
+  isOwn: (block: BlocklyCore.Block) => boolean = () => false
 ): void {
   workspace.getTopBlocks(false).forEach(top => {
-    if (isOwnStack(top)) {
-      return;
-    }
     top.getDescendants(false).forEach(block => {
-      if (!block.isShadow()) {
+      if (!block.isShadow() && !isOwn(block)) {
         block.setDeletable(false);
       }
     });

@@ -153,6 +153,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
+  /** Blocks built on earlier levels cannot be deleted here (blockLocks.ts);
+      the blocks this level's toolbox offers and the stacks it adds can. */
+  lockEarlierBlocks?: boolean;
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;
