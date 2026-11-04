@@ -933,6 +933,19 @@ class LessonTest < ActiveSupport::TestCase
     assert_nil classic.get_background_for_user(@student)
   end
 
+  test 'get_background_for_user returns user preference for an AI Lab in Lab2 lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, background: 'dark', script: script)
+    level = create(:ailab, uses_lab2: true)
+    create(:script_level, lesson: lesson, levels: [level], script: script)
+    assert_equal 'light', lesson.get_background_for_user(@student)
+    # Classic AI Lab has no theme preference.
+    classic = create(:lesson, script: script)
+    create(:script_level, lesson: classic, levels: [create(:ailab)], script: script)
+    assert_nil classic.get_background_for_user(@student)
+  end
+
   test 'get_background_for_user returns default for music lesson' do
     UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
     script = create(:script, :in_single_unit_course)

@@ -21,6 +21,7 @@ import {
   TrainingDataProvider,
 } from '@cdo/apps/ailab/engine';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import type ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
@@ -76,6 +77,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   const [initialProject] = useState(() => sourceToProject(savedSource));
   const dispatch = useAppDispatch();
   const {showDialog} = useDialogControl();
+  const themeSetting = useThemeSetting('ailab');
   const progressManager = useContext(ProgressManagerContext);
   const [validator] = useState(() => new AccuracyValidator());
   const [dynamicInstructionsKey, setDynamicInstructionsKey] =
@@ -178,6 +180,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
         }
         dynamicInstructions={dynamicInstructionsContent}
         backpackProps={BACKPACK_PROPS}
+        settings={[themeSetting]}
       />
       <div className={styles.divider} />
       <div className={styles.workspace}>
