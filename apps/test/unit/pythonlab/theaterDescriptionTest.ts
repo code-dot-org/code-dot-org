@@ -1,4 +1,6 @@
+import {AI_GATEWAY_FALLBACK_DCDO_KEY} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {generateText} from '@cdo/apps/aiGateway';
+import DCDO from '@cdo/apps/dcdo';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {
   MAX_CODE_CHARACTERS,
@@ -10,6 +12,7 @@ import {
   requestTheaterDescription,
   withTimeout,
 } from '@cdo/apps/pythonlab/theaterDescription';
+import {AiChatProviders} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aiGateway', () => ({generateText: jest.fn()}));
 jest.mock('@cdo/apps/aichat/api/client/helpers/modelHelpers', () => ({
@@ -25,7 +28,7 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   },
 }));
 const mockCurrentUser = {
-  usOnlyAichatModelsDisabled: false,
+  blockedAichatProviders: [] as string[],
   aiChatAccessLevel: 'enabled',
 };
 jest.mock('@cdo/apps/redux', () => ({
@@ -55,8 +58,9 @@ const file = (
 describe('theaterDescription', () => {
   describe('canRequestTheaterDescription', () => {
     afterEach(() => {
+      DCDO.reset();
       Object.assign(mockCurrentUser, {
-        usOnlyAichatModelsDisabled: false,
+        blockedAichatProviders: [],
         aiChatAccessLevel: 'enabled',
       });
     });
@@ -70,9 +74,15 @@ describe('theaterDescription', () => {
       expect(canRequestTheaterDescription()).toBe(false);
     });
 
-    it('refuses a user blocked from US-only models', () => {
-      mockCurrentUser.usOnlyAichatModelsDisabled = true;
+    it('refuses a user blocked from the description model provider', () => {
+      mockCurrentUser.blockedAichatProviders = [AiChatProviders.GOOGLE];
       expect(canRequestTheaterDescription()).toBe(false);
+    });
+
+    it('allows a blocked user when the gateway fallback is enabled', () => {
+      DCDO.set(AI_GATEWAY_FALLBACK_DCDO_KEY, true);
+      mockCurrentUser.blockedAichatProviders = [AiChatProviders.GOOGLE];
+      expect(canRequestTheaterDescription()).toBe(true);
     });
   });
 

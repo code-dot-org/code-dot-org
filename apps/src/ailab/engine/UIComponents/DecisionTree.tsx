@@ -62,7 +62,7 @@ import {useTrainingData} from '../TrainingDataContext';
 import FullTextTooltip from './FullTextTooltip';
 import {leafColorStyle} from './leafColors';
 import NodeModal from './NodeModal';
-import SaveTreeImageMenu from './SaveTreeImageMenu';
+import SaveTreeImageMenu, {type SaveImageToBackpack} from './SaveTreeImageMenu';
 import TreeCanvas from './TreeCanvas';
 
 import styles from './decisionTree.module.scss';
@@ -169,9 +169,10 @@ const NodeCounts = ({id, node, counts}: NodeCountsProps) => {
 
 interface DecisionTreeProps {
   overlay?: ReactNode;
+  saveImageToBackpack?: SaveImageToBackpack;
 }
 
-const DecisionTree = ({overlay}: DecisionTreeProps) => {
+const DecisionTree = ({overlay, saveImageToBackpack}: DecisionTreeProps) => {
   const dispatch = useAppDispatch();
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
@@ -316,6 +317,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
             <SaveTreeImageMenu
               treeRef={treeRef}
               baseName={imageName}
+              saveToBackpack={saveImageToBackpack}
               tabbable={entered}
             />
           }

@@ -1,5 +1,6 @@
 import {useMemo} from 'react';
 
+import shouldUseAiGateway from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import {
   AI_SETTINGS_SUPPORT_LINK,
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
@@ -12,7 +13,8 @@ import {
 } from '@cdo/apps/aichat/constants';
 import {
   areAiChatToolsEnabled,
-  isUsOnlyModelId,
+  isAiChatModelBlocked,
+  isAiGatewayFallbackEnabled,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
 import type {AiChatClientType} from '@cdo/apps/aichat/types/context';
@@ -48,7 +50,9 @@ interface UseAiChatDisabledStateParams {
  * Computes whether AI chat is disabled and what message to show, consolidating:
  * - which aiChatAccessLevel applies (section override for teachers, or user's own)
  * - whether the access level permits chat for the current app & access level
- * - blocking of US only models (pass selectedModelId to enable)
+ * - models whose provider is blocked for this user, e.g. Google outside the US,
+ *   unless the gateway serves the request with a fallback provider
+ *   (pass selectedModelId to enable)
  * - predict level gating
  * - teacher vs. student messaging
  */
@@ -66,8 +70,8 @@ export function useAiChatDisabledState({
   const userAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
-  const usOnlyAichatModelsDisabled = useAppSelector(
-    state => state.currentUser.usOnlyAichatModelsDisabled
+  const blockedAichatProviders = useAppSelector(
+    state => state.currentUser.blockedAichatProviders
   );
   const isLevelbuilder = useAppSelector(
     state => state.currentUser.isLevelbuilder
@@ -97,8 +101,8 @@ export function useAiChatDisabledState({
 
     if (
       selectedModelId &&
-      usOnlyAichatModelsDisabled &&
-      isUsOnlyModelId(selectedModelId)
+      isAiChatModelBlocked(selectedModelId, blockedAichatProviders) &&
+      !(isAiGatewayFallbackEnabled() && shouldUseAiGateway(selectedModelId))
     ) {
       if (!isTeacher) {
         return {
@@ -172,7 +176,7 @@ export function useAiChatDisabledState({
     enabledForUser,
     sectionAccessLevel,
     isLevelbuilder,
-    usOnlyAichatModelsDisabled,
+    blockedAichatProviders,
   ]);
 
   return disabledState;

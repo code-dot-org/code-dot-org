@@ -5,17 +5,31 @@ import {
 import DCDO from '@cdo/apps/dcdo';
 import {
   AiChatAccessLevels,
+  AiChatProviderByModelId,
   AiChatToolsDependency,
-  AiChatUsOnlyModelIds,
 } from '@cdo/generated-scripts/sharedConstants';
 
 /**
- * Returns true if the model is unavailable outside the US. Pair with
- * currentUser.usOnlyAichatModelsDisabled, which says whether this user should
- * have such models blocked.
+ * Returns true if the provider serving modelId is among blockedProviders
+ * (currentUser.blockedAichatProviders).
  */
-export const isUsOnlyModelId = (modelId: string): boolean =>
-  (AiChatUsOnlyModelIds as readonly string[]).includes(modelId);
+export const isAiChatModelBlocked = (
+  modelId: string,
+  blockedProviders: readonly string[]
+): boolean => {
+  const provider = (AiChatProviderByModelId as Record<string, string>)[modelId];
+  return !!provider && blockedProviders.includes(provider);
+};
+
+// Also lets AiGatewayAuthController mint tokens for users with blocked providers.
+export const AI_GATEWAY_FALLBACK_DCDO_KEY = 'ai_gateway_fallback_is_enabled';
+
+/**
+ * Returns true if the AI gateway serves a model from a blocked provider by
+ * falling back to another provider.
+ */
+export const isAiGatewayFallbackEnabled = (): boolean =>
+  !!DCDO.get(AI_GATEWAY_FALLBACK_DCDO_KEY, false);
 
 // A list of app names for which AI Chat tools (tutor or chat in ai chat lab) are considered essential to the app experience.
 // but can still be disabled by teachers through the access controls in the teacher dashboard (see ai_chat_access_level)
