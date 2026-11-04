@@ -296,10 +296,7 @@ class CourseVersionTest < ActiveSupport::TestCase
     end
   end
 
-  test "courses_for_unit_selector doesn't use an excessive number of queries" do
-    # This query can easily get out of control when considering a unit with a
-    # large number of versioned unit groups (ie, ui-test-shared-unit), so make
-    # sure we are avoiding N+1 queries.
+  test "courses_for_unit_selector avoids N+1 queries" do
     student_unit_ids = [
       @unit_in_course.id,
       @unit_teacher_to_students.id,
@@ -312,7 +309,7 @@ class CourseVersionTest < ActiveSupport::TestCase
     ]
 
     # This would take 50 queries without `includes`
-    assert_queries(37) do
+    assert_queries(33) do
       CourseVersion.courses_for_unit_selector(student_unit_ids, @teacher)
     end
   end
