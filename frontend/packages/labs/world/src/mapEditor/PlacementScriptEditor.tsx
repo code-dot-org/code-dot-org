@@ -169,7 +169,9 @@ export const PlacementScriptEditor = ({
     return {
       blocks: [
         ...palette.blocks,
-        ...standInBlocks(Object.values(files), known),
+        ...standInBlocks(Object.values(files), known, {
+          paths: Object.keys(files),
+        }),
       ],
       toolbox: withAddRules(
         withoutEmptyHeadings(

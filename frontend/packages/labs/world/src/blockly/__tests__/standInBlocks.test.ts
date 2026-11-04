@@ -292,4 +292,18 @@ describe('standInBlocks, in a screen', () => {
     ).toContain('world_set_ScreensMain_HardProperty');
     delete Blockly.Blocks['world_set_ScreensMain_HardProperty'];
   });
+
+  it("stands in for a file's own member still registered, in an editor too", () => {
+    // Every palette mints every own member, so the editor's lacking one means
+    // it was deleted, and the open file must show it as gone.
+    Blockly.common.defineBlocksWithJsonArray([
+      {type: 'world_set_ScreensMain_HardProperty', message0: 'old'},
+    ]);
+    expect(
+      standInBlocks([SCREEN], KNOWN, {paths: ['screens/main.screen']}).map(
+        block => block.type,
+      ),
+    ).toContain('world_set_ScreensMain_HardProperty');
+    delete Blockly.Blocks['world_set_ScreensMain_HardProperty'];
+  });
 });

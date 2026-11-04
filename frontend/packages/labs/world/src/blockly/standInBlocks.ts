@@ -193,9 +193,11 @@ const shapeInInput = (name: string, child: BlockState | undefined): Shape =>
  * has, so a member type it lacks is dead even while a definition from before
  * the deletion is still registered, and that one generates a reference to a
  * declaration that is gone. An editor's palette is scoped to its file, so it
- * cannot say that and leaves `complete` off.
+ * cannot say that of a rule's members and leaves `complete` off.
  *
  * `paths`, the project's module paths, tell a file's own member from a rule's.
+ * Every palette mints every file's own members, so one of those it lacks is
+ * dead whether or not `complete` is given.
  */
 export function standInBlocks(
   contents: readonly string[],
@@ -208,9 +210,12 @@ export function standInBlocks(
   const fileSlugs = new Set(
     paths.map(path => pathSlug(path.replace(/\.[^./]+$/, ''))),
   );
+  const dead = (type: string): boolean => {
+    const slug = MEMBER_TYPE.exec(type)?.[1];
+    return slug !== undefined && (complete || fileSlugs.has(slug));
+  };
   const known = (type: string): boolean =>
-    defined.has(type) ||
-    (type in Blockly.Blocks && !(complete && MEMBER_TYPE.test(type)));
+    defined.has(type) || (type in Blockly.Blocks && !dead(type));
   const wanted = new Map<string, {state: BlockState; shape: Shape}>();
   const visit = (block: BlockState | undefined, shape: Shape): void => {
     if (!block?.type) {
