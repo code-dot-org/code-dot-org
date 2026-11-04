@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
@@ -73,7 +72,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   );
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
-  const {theme} = useTheme();
   const dialogControl = useDialogControl();
   const inReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isFileSupported = isFileTypeSupported(fileName, supportedFileTypes);
@@ -246,8 +244,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
               title={`Saved from ${sourceDisplayName}`}
               placement="top"
               describeChild={false}
-              // We need to apply the theme because the tooltip is in a portal.
-              slotProps={{tooltip: {'data-theme': theme}}}
             >
               <button
                 type="button"

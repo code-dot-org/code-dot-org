@@ -1,4 +1,4 @@
-import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
+import {Theme} from '@code-dot-org/component-library/common/contexts';
 import {muiPlacementFor} from '@code-dot-org/component-library/common/helpers';
 import {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
@@ -26,6 +26,7 @@ interface IconButtonWithTooltipProps {
   onClick?: () => void;
   containerRef?: React.RefObject<HTMLDivElement>;
   className?: string;
+  /** Pins the bubble's theme; otherwise the enclosing ThemeProvider sets it. */
   theme?: Theme;
   href?: string;
   target?: string;
@@ -46,14 +47,10 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
       onClick,
       containerRef,
       className,
-      theme: themeOverride,
+      theme,
       href,
       target = '_blank',
     }) => {
-      // The bubble portals to <body>, so it cannot inherit data-theme.
-      const {theme: contextTheme} = useTheme(true);
-      const theme = themeOverride ?? contextTheme;
-
       // Controlled so a click can force the tooltip shut.
       const [open, setOpen] = useState(false);
 

@@ -1,4 +1,3 @@
-import {Theme} from '@code-dot-org/component-library/common/contexts';
 import Modal from '@code-dot-org/component-library/modal';
 import React, {useMemo, useState} from 'react';
 
@@ -11,13 +10,7 @@ import styles from './disclaimer.module.scss';
 const LEARN_MORE_URL =
   'https://support.code.org/hc/en-us/articles/40542019587213-AI-Tutor-FAQ';
 
-interface DisclaimerProps {
-  theme: Theme;
-}
-
-const DisclaimerButton: React.FunctionComponent<DisclaimerProps> = ({
-  theme,
-}) => {
+const DisclaimerButton: React.FunctionComponent = () => {
   const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
   const innerDialog = useMemo(
     () =>
@@ -45,7 +38,6 @@ const DisclaimerButton: React.FunctionComponent<DisclaimerProps> = ({
     <ButtonWithDialog
       text={lab2I18n.aiTutorDisclaimerShort()}
       id={'disclaimer'}
-      theme={theme}
       Dialog={innerDialog}
       iconName={'shield-exclamation'}
       setIsDialogOpen={setIsDisclaimerOpen}
