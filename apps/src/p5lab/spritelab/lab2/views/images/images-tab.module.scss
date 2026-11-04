@@ -2,6 +2,8 @@
 @use '../checkerboard';
 @use '../imageTile' as tile;
 @use '../editor-strip' as strip;
+@use '../sentence/sr-only';
+@use '../../../../../pixelEditor/dialogChrome' as chrome;
 
 // Three columns: the list, the frame, the pane. The pane's width is set
 // inline to the preview column's; the list takes one to three tiles; the
@@ -469,4 +471,120 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   .ready {
     animation: none;
   }
+}
+
+// The question and the thumbs float over the frame's bottom edge, dark on
+// any theme, as a strip of their own.
+.ratingBar {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px 6px 18px;
+  border-radius: 12px;
+  background-color: var(--neutral-gray-95);
+  color: var(--neutral-base-white);
+  box-shadow: 0 2px 8px var(--neutral-black-alpha-30);
+  white-space: nowrap;
+}
+
+.ratingQuestion {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  user-select: none;
+}
+
+// Doubled to outrank the button's own colors.
+.thumb.thumb {
+  color: var(--neutral-base-white);
+  font-size: 20px;
+
+  &:hover {
+    background-color: var(--neutral-white-alpha-20);
+  }
+}
+
+.thumb.thumbChosen {
+  background-color: var(--neutral-base-white);
+  color: var(--neutral-gray-95);
+}
+
+// The question: the design-system dialog, its content a line with the
+// thumb and the reasons as rows.
+.ratingDialog {
+  width: 520px;
+}
+
+.ratingPrompt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.ratingPromptIcon {
+  font-size: 20px;
+}
+
+.ratingPromptUp {
+  color: var(--sentiment-success-70);
+}
+
+.ratingPromptDown {
+  color: var(--brand-orange-50);
+}
+
+// Full width: the dialog centers its content otherwise.
+.reasonList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+}
+
+// A row is the design system's checkbox label, full width, with a tint
+// and a brand border when picked. Its own box and label text stay; the
+// row only changes what surrounds them.
+.reasonRow.reasonRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    border-color: var(--borders-neutral-strong);
+  }
+}
+
+.reasonRowPicked.reasonRowPicked {
+  border-color: var(--borders-brand-teal-primary);
+  background-color: var(--background-brand-light);
+  color: var(--text-brand-primary);
+}
+
+// The pane's first row: the headline, and the way behind the scenes.
+.paneHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.srOnly {
+  @include sr-only.sr-only;
 }

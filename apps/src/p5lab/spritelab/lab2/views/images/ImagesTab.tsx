@@ -38,6 +38,9 @@ import OwnWorkPane from './OwnWorkPane';
 import PaintPlaceholder from './PaintPlaceholder';
 import {listProjectImages, ProjectImage} from './projectImages';
 import BehindTheScenes from './teaching/BehindTheScenes';
+import LearningDialog from './teaching/LearningDialog';
+import RatingBar from './teaching/RatingBar';
+import useLearningStory from './teaching/useLearningStory';
 import useDrawing from './useDrawing';
 import useImageWriter, {ImageTarget} from './useImageWriter';
 
@@ -200,6 +203,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Animated is on until the student turns it off, and stays as they left
   // it from image to image; no image or level turns it off for them.
   const [animated, setAnimated] = useState(true);
+  const {story, offerStory, handleAsking, endStory} = useLearningStory({
+    active,
+    lockedImageType,
+  });
+  // Once per picture: a verdict's second keep must not tell it again.
+  const keptRef = useRef<string | null>(null);
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
       const target: ImageTarget = {
@@ -207,9 +216,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         imageType: result.generation.imageType,
         subject: result.generation.subject,
       };
+      const firstKeep = keptRef.current !== result.filename;
+      keptRef.current = result.filename;
       await land(target, () => writer.acceptGenerated(target, result));
+      if (firstKeep) {
+        offerStory(result);
+      }
     },
-    [writer, land]
+    [writer, land, offerStory]
   );
 
   const tools = useDrawing({
@@ -422,6 +436,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           keepOnResult
           wordLayout={wordLayout}
           singleStep
+          compactBehindTheScenes
           method="tab"
           layout={parts => {
             const generating = parts.mode === 'generating';
@@ -442,6 +457,17 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     <div className={styles.underSteps}>{parts.progress}</div>
                   ) : (
                     parts.underFrame || reopenedBehindTheScenes
+                  )
+                }
+                overlay={
+                  parts.rating.offered && (
+                    <RatingBar
+                      verdict={parts.rating.verdict}
+                      onJudge={parts.rating.judge}
+                      onReasons={parts.rating.explain}
+                      onAsking={handleAsking}
+                      disabled={parts.busy}
+                    />
                   )
                 }
               />
@@ -579,6 +605,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             </p>
           </section>
         </>
+      )}
+      {story && (
+        <LearningDialog
+          picture={story.picture}
+          prompt={story.prompt}
+          onDone={endStory}
+        />
       )}
     </div>
   );
