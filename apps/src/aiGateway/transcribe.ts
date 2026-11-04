@@ -38,9 +38,9 @@ async function transcribeThroughGateway(
       const audioBlob = await audioToBlob(audio);
       const response = await sendGatewayRequest(
         aichatContext,
-        (token, turnstileToken) => {
+        (accessToken, turnstileToken) => {
           const formData = new FormData();
-          formData.append('token', token);
+          formData.append('token', accessToken);
           formData.append('audio', audioBlob, 'audio');
           formData.append('model', getModelString(model));
           for (const [key, value] of Object.entries(restOptions)) {

@@ -123,10 +123,10 @@ const generateTextThroughGateway = async <
 
       const response = await sendGatewayRequest(
         aichatContext,
-        (token, turnstileToken) =>
+        (accessToken, turnstileToken) =>
           HttpClient.post(
             AI_GATEWAY_URL,
-            JSON.stringify({...payload, token}),
+            JSON.stringify({...payload, token: accessToken}),
             false,
             {
               'Content-Type': 'application/json',

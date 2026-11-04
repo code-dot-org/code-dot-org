@@ -55,9 +55,10 @@ describe('sendGatewayRequest', () => {
     send = jest.fn(async () => ({ok: true} as Response));
   });
 
-  const sentTokens = () => send.mock.calls.map(([token]) => token);
+  const sentAccessTokens = () =>
+    send.mock.calls.map(([accessToken]) => accessToken);
 
-  it('sends the issued token with the Turnstile token for its mode', async () => {
+  it('sends the issued access token with the Turnstile token for its mode', async () => {
     const response = await sendGatewayRequest(aichatContext, send);
 
     expect(response).toEqual({ok: true});
@@ -65,12 +66,12 @@ describe('sendGatewayRequest', () => {
     expect(mockFetchTurnstileToken).toHaveBeenCalledWith('enforce');
   });
 
-  it('resends once with a fresh token and challenge after a rejected reusable token', async () => {
+  it('resends once with a fresh access token and challenge after a rejected reusable one', async () => {
     send.mockRejectedValueOnce(unauthorized());
 
     await sendGatewayRequest(aichatContext, send);
 
-    expect(sentTokens()).toEqual(['token-1', 'token-2']);
+    expect(sentAccessTokens()).toEqual(['token-1', 'token-2']);
     expect(mockFetchTurnstileToken).toHaveBeenCalledTimes(2);
   });
 
@@ -79,7 +80,7 @@ describe('sendGatewayRequest', () => {
     send.mockRejectedValue(error);
 
     await expect(sendGatewayRequest(aichatContext, send)).rejects.toBe(error);
-    expect(sentTokens()).toEqual(['token-1', 'token-2']);
+    expect(sentAccessTokens()).toEqual(['token-1', 'token-2']);
   });
 
   it('does not retry when the server disallows reuse', async () => {
@@ -88,7 +89,7 @@ describe('sendGatewayRequest', () => {
     send.mockRejectedValueOnce(error);
 
     await expect(sendGatewayRequest(aichatContext, send)).rejects.toBe(error);
-    expect(sentTokens()).toEqual(['token-1']);
+    expect(sentAccessTokens()).toEqual(['token-1']);
   });
 
   it('does not retry a Turnstile rejection', async () => {
@@ -96,7 +97,7 @@ describe('sendGatewayRequest', () => {
     send.mockRejectedValueOnce(error);
 
     await expect(sendGatewayRequest(aichatContext, send)).rejects.toBe(error);
-    expect(sentTokens()).toEqual(['token-1']);
+    expect(sentAccessTokens()).toEqual(['token-1']);
   });
 
   it('does not retry an error other than 401', async () => {
@@ -104,10 +105,10 @@ describe('sendGatewayRequest', () => {
     send.mockRejectedValueOnce(error);
 
     await expect(sendGatewayRequest(aichatContext, send)).rejects.toBe(error);
-    expect(sentTokens()).toEqual(['token-1']);
+    expect(sentAccessTokens()).toEqual(['token-1']);
   });
 
-  it('drops the rejected token so the next request fetches a new one', async () => {
+  it('drops the rejected access token so the next request fetches a new one', async () => {
     reusable = false;
     send.mockRejectedValueOnce(unauthorized());
     await expect(sendGatewayRequest(aichatContext, send)).rejects.toBeTruthy();
@@ -116,6 +117,6 @@ describe('sendGatewayRequest', () => {
     await sendGatewayRequest(aichatContext, send);
     await sendGatewayRequest(aichatContext, send);
 
-    expect(sentTokens()).toEqual(['token-1', 'token-2', 'token-2']);
+    expect(sentAccessTokens()).toEqual(['token-1', 'token-2', 'token-2']);
   });
 });

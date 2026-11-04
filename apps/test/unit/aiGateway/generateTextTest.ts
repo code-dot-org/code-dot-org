@@ -46,7 +46,7 @@ const generate = () =>
     {aichatContext, phase: 'generation'}
   );
 
-const tokenRequests = () =>
+const accessTokenRequests = () =>
   mockPost.mock.calls.filter(([url]) => url === '/ai_gateway/access_token');
 
 describe('generateTextThroughGateway access tokens', () => {
@@ -84,60 +84,60 @@ describe('generateTextThroughGateway access tokens', () => {
     jest.useRealTimers();
   });
 
-  const sentTokens = () =>
+  const sentAccessTokens = () =>
     mockPost.mock.calls
       .filter(([url]) => url === AI_GATEWAY_URL)
       .map(([, body]) => JSON.parse(body).token);
 
-  // Stands in for a challenge that runs past the token's reuse window.
+  // Stands in for a challenge that runs past the access token's reuse window.
   const slowTurnstileOnce = () =>
     mockFetchTurnstileToken.mockImplementationOnce(async () => {
       jest.advanceTimersByTime(50_000);
       return undefined;
     });
 
-  it('fetches a fresh token when a Turnstile challenge outlasts the reuse window', async () => {
+  it('fetches a fresh access token when a Turnstile challenge outlasts the reuse window', async () => {
     await generate();
     slowTurnstileOnce();
     await generate();
 
-    expect(tokenRequests()).toHaveLength(2);
-    expect(sentTokens()).toEqual(['token-1', 'token-2']);
+    expect(accessTokenRequests()).toHaveLength(2);
+    expect(sentAccessTokens()).toEqual(['token-1', 'token-2']);
   });
 
-  it('does not re-check the token when the server disallows reuse', async () => {
+  it('does not re-check the access token when the server disallows reuse', async () => {
     reusable = false;
     slowTurnstileOnce();
     await generate();
 
-    expect(tokenRequests()).toHaveLength(1);
-    expect(sentTokens()).toEqual(['token-1']);
+    expect(accessTokenRequests()).toHaveLength(1);
+    expect(sentAccessTokens()).toEqual(['token-1']);
   });
 
-  it('fetches one token for consecutive gateway requests', async () => {
+  it('fetches one access token for consecutive gateway requests', async () => {
     await generate();
     await generate();
     await generate();
 
-    expect(tokenRequests()).toHaveLength(1);
-    expect(new Set(sentTokens()).size).toBe(1);
+    expect(accessTokenRequests()).toHaveLength(1);
+    expect(new Set(sentAccessTokens()).size).toBe(1);
   });
 
-  it('resends with a fresh token after the gateway rejects one with 401', async () => {
+  it('resends with a fresh access token after the gateway rejects one with 401', async () => {
     gatewayFailures = [401];
 
     await generate();
 
-    expect(tokenRequests()).toHaveLength(2);
-    expect(sentTokens()).toEqual(['token-1', 'token-2']);
+    expect(accessTokenRequests()).toHaveLength(2);
+    expect(sentAccessTokens()).toEqual(['token-1', 'token-2']);
   });
 
-  it('keeps the token after a gateway error other than 401', async () => {
+  it('keeps the access token after a gateway error other than 401', async () => {
     gatewayFailures = [429];
     await expect(generate()).rejects.toBeInstanceOf(NetworkError);
 
     await generate();
 
-    expect(tokenRequests()).toHaveLength(1);
+    expect(accessTokenRequests()).toHaveLength(1);
   });
 });

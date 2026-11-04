@@ -21,7 +21,7 @@ export interface GatewayAccessToken {
    * worker's enforcement always come from the same value.
    */
   turnstileEnforcementMode: TurnstileEnforcementMode;
-  /** Whether the server allows this token to be reused for later requests. */
+  /** Whether the server allows this access token to be reused for later requests. */
   reusable: boolean;
   /** The key Rails signed `token` with, chosen by a DCDO flag during the initial rollout. */
   signingKey: SigningKey | undefined;
@@ -83,11 +83,11 @@ interface CachedAccessToken {
   reusableUntilLocal: number;
 }
 
-// Relies on the worker accepting a token more than once before it expires; remove if it starts rejecting a reused token_id.
+// Relies on the worker accepting an access token more than once before it expires; remove if it starts rejecting a reused token_id.
 const cachedAccessTokens = new Map<string, CachedAccessToken>();
 const pendingAccessTokens = new Map<string, Promise<GatewayAccessToken>>();
 // Once Rails refuses reuse, concurrent callers stop sharing a fetch too, so each
-// gateway request carries its own token exactly as before the cache existed.
+// gateway request carries its own access token exactly as before the cache existed.
 let reuseRefusedByServer = false;
 
 // The worker checks expiry once, when a request arrives, so this covers only the time
@@ -103,7 +103,7 @@ async function fetchAndCacheAccessToken(
   key: string,
   aichatContext: AichatContext
 ): Promise<GatewayAccessToken> {
-  // Read before the request: the token is issued later, so its expiry is never overestimated.
+  // Read before the request: the access token is issued later, so its expiry is never overestimated.
   const requestedAt = Date.now();
   const accessToken = await fetchAccessToken(aichatContext);
   reuseRefusedByServer = !accessToken.reusable;
@@ -149,7 +149,7 @@ export function getAccessToken(
   return fetching;
 }
 
-// Matches on the token so a rejection of an old token cannot evict a newer one.
+// Matches on the access token so a rejection of an old one cannot evict a newer one.
 export function invalidateAccessToken(
   aichatContext: AichatContext,
   token: string
