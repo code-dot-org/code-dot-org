@@ -5,23 +5,38 @@ import {
 } from '@cdo/apps/blockly/utils/toolbox';
 
 import {ASK_AI_BLOCK_TYPE} from '../blockDefinitions/askAi';
+import {BURST_BLOCK_TYPE} from '../blockDefinitions/burst';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
+import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
+import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
+import {PLAY_SOUND_EFFECT_BLOCK_TYPE} from '../blockDefinitions/playSoundEffect';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
+import {SET_WEATHER_BLOCK_TYPE} from '../blockDefinitions/setWeather';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
+import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 
 import {filterToSupportedSharedBlocks} from './supportedSharedBlocks';
 import {ToolboxInfo} from './types';
 
 // Where the lab-owned blocks live in the complete toolbox.
 const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
+  World: [
+    SET_WEATHER_BLOCK_TYPE,
+    BURST_BLOCK_TYPE,
+    PLAY_SOUND_BLOCK_TYPE,
+    PLAY_SOUND_EFFECT_BLOCK_TYPE,
+    PLAY_MUSIC_BLOCK_TYPE,
+  ],
   Sprites: [
     'spritelab2_makePlatformPlayer',
     'spritelab2_makePlatformBlocks',
     'spritelab2_makeSpriteAtGrid',
+    'spritelab2_makeSpriteAtPosition',
     'spritelab2_setAsPlatformPlayer',
     THE_PLAYER_BLOCK_TYPE,
   ],
+  Events: [WHEN_PLAYER_BLOCK_TYPE],
   Behaviors: [
     'spritelab2_beginsBehavior',
     'spritelab2_movingLeft',
