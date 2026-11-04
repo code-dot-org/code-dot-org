@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import React, {useState} from 'react';
@@ -17,9 +16,6 @@ const CopyButton: React.FC<{copyText: string; usage: string}> = ({
 }) => {
   const [showCopyConfirmation, setShowCopyConfirmation] = useState(false);
 
-  // Undefined outside a ThemeProvider; the slot prop is then omitted.
-  const {theme} = useTheme(true);
-
   const dispatch = useAppDispatch();
 
   return (
@@ -31,7 +27,6 @@ const CopyButton: React.FC<{copyText: string; usage: string}> = ({
           {showCopyConfirmation ? i18n.copied() : i18n.copy()}
         </>
       }
-      slotProps={theme ? {tooltip: {'data-theme': theme}} : undefined}
     >
       <MuiIconButton
         variant="text"

@@ -1,4 +1,3 @@
-import {Theme} from '@code-dot-org/component-library/common/contexts';
 import React, {useMemo, useState} from 'react';
 
 import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog';
@@ -6,13 +5,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 
 import ButtonWithDialog from './ButtonWithDialog';
 
-interface CopyrightButtonProps {
-  theme: Theme;
-}
-
-const CopyrightButton: React.FunctionComponent<CopyrightButtonProps> = ({
-  theme,
-}) => {
+const CopyrightButton: React.FunctionComponent = () => {
   const [isCopyrightOpen, setIsCopyrightOpen] = useState(false);
   const innerDialog = useMemo(
     () => (
@@ -29,7 +22,6 @@ const CopyrightButton: React.FunctionComponent<CopyrightButtonProps> = ({
     <ButtonWithDialog
       text={commonI18n.copyright()}
       id={'copyright'}
-      theme={theme}
       Dialog={innerDialog}
       iconName={'copyright'}
       setIsDialogOpen={setIsCopyrightOpen}

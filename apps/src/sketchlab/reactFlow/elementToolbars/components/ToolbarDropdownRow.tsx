@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Popover, Typography} from '@mui/material';
 import classNames from 'classnames';
@@ -37,7 +36,6 @@ export default function ToolbarDropdownRow({
   const labelId = useId();
   const valueId = useId();
   const popoverId = useId();
-  const {theme} = useTheme();
   const {setPopoverOpen} = useToolbarVisibility();
   const triggerRef = useRef<HTMLButtonElement>(null);
   const wasOpenRef = useRef(false);
@@ -165,10 +163,8 @@ export default function ToolbarDropdownRow({
           },
         }}
       >
-        {/* Re-apply data-theme; the portal escapes ThemeProvider. */}
         <div
           id={popoverId}
-          data-theme={theme}
           role={popoverRole === 'dialog' ? 'dialog' : undefined}
           aria-label={
             popoverRole === 'dialog' ? popoverAriaLabel ?? label : undefined

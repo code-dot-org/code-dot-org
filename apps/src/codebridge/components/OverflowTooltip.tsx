@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Tooltip, TooltipProps} from '@mui/material';
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
@@ -31,7 +30,6 @@ const OverflowTooltip: React.FunctionComponent<OverflowTooltipProps> = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isOverflowing, setIsOverflowing] = useState(false);
-  const {theme} = useTheme();
 
   useLayoutEffect(() => {
     const el = containerRef.current;
@@ -52,10 +50,6 @@ const OverflowTooltip: React.FunctionComponent<OverflowTooltipProps> = ({
       placement={placement}
       // Default describeChild would overwrite the row's dnd-kit aria-describedby.
       describeChild={false}
-      slotProps={{
-        popper: {'data-theme': theme},
-        tooltip: {'data-theme': theme},
-      }}
     >
       <div ref={containerRef} className={moduleStyles.anchor}>
         {children}
