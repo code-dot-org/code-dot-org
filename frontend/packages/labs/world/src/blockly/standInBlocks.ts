@@ -41,7 +41,7 @@ import {isRuleData, ruleBodies} from '../rules/ruleData';
 
 import {missingRuleExtension} from './extensions/missingRule';
 import {DRAWING_HEAD} from './pageHeads';
-import {registerStandInRule} from './ruleRegistry';
+import {pathSlug, registerStandInRule} from './ruleRegistry';
 
 /** A block as it appears in a serialized workspace — only what is read here. */
 interface BlockState {
@@ -50,6 +50,10 @@ interface BlockState {
   inputs?: Record<string, {block?: BlockState; shadow?: BlockState}>;
   next?: {block?: BlockState; shadow?: BlockState};
 }
+
+/** A member block's type: `world_<kind>_<slug>_<Member>`. */
+const MEMBER_TYPE =
+  /^world_(?:on|emit|do|query|get|set|push|drop)_([A-Za-z0-9]+)_/;
 
 /** Where a block sits, which is the only thing that says what SHAPE it is. */
 type Shape = 'value' | 'statement';
@@ -64,8 +68,7 @@ type Shape = 'value' | 'statement';
  * warning, and "Arrow Keys" is what it needs to say.
  */
 function ruleNameOfType(type: string): string | undefined {
-  const match =
-    /^world_(?:on|emit|do|query|get|set|push|drop)_([A-Za-z0-9]+)_/.exec(type);
+  const match = MEMBER_TYPE.exec(type);
   if (!match) {
     return undefined;
   }
@@ -95,7 +98,12 @@ function memberWordsOfType(type: string): string {
  * own authoring blocks (which do have statement inputs) are built in and never
  * go missing.
  */
-function standInFor(type: string, state: BlockState, shape: Shape) {
+function standInFor(
+  type: string,
+  state: BlockState,
+  shape: Shape,
+  fileSlugs: ReadonlySet<string>,
+) {
   const fields = Object.keys(state.fields ?? {});
   const inputs = Object.keys(state.inputs ?? {});
   let message0 = memberWordsOfType(type);
@@ -108,8 +116,13 @@ function standInFor(type: string, state: BlockState, shape: Shape) {
     args0.push({type: 'input_value', name});
     message0 += ` %${args0.length}`;
   }
-  const rule = ruleNameOfType(type);
-  registerStandInRule(type, rule);
+  // A file's own member is keyed by the FILE, which is still there: what is
+  // missing is the member, and the warning names that instead.
+  const own = fileSlugs.has(MEMBER_TYPE.exec(type)?.[1] ?? '');
+  registerStandInRule(
+    type,
+    own ? memberWordsOfType(type) : ruleNameOfType(type),
+  );
   return defineBlock({
     type,
     message0: message0.trim() || type,
@@ -124,9 +137,11 @@ function standInFor(type: string, state: BlockState, shape: Shape) {
       : {previousStatement: true, nextStatement: true}),
     extensions: [missingRuleExtension],
     style: 'default',
-    tooltip:
-      'This block belongs to a rule your project no longer has. It is kept ' +
-      'so nothing in this file is lost.',
+    tooltip: own
+      ? 'This block names something its file no longer declares. It is ' +
+        'kept so nothing in this file is lost.'
+      : 'This block belongs to a rule your project no longer has. It is kept ' +
+        'so nothing in this file is lost.',
     generator: {
       // Nothing, on the same terms as every other dead reference: a rule that
       // is not there cannot be asked anything. A value one has to report
@@ -153,6 +168,13 @@ function standInFor(type: string, state: BlockState, shape: Shape) {
  * of being wrong is one block refusing to connect, in a file that opens.
  */
 const STATEMENT_INPUT = /^(DO\d*|ELSE|STACK|BODY)$/;
+
+/** The top-level blocks of a serialized workspace, or none. */
+const rootsOf = (state: unknown): BlockState[] => {
+  const roots = (state as {blocks?: {blocks?: unknown}} | undefined)?.blocks
+    ?.blocks;
+  return Array.isArray(roots) ? (roots as BlockState[]) : [];
+};
 const shapeInInput = (name: string, child: BlockState | undefined): Shape =>
   child?.next || STATEMENT_INPUT.test(name) ? 'statement' : 'value';
 
@@ -166,13 +188,29 @@ const shapeInInput = (name: string, child: BlockState | undefined): Shape =>
  * otherwise be stood in for. A stand-in for `controls_if` gets a VALUE socket
  * where its `DO0` should be, and the first statement inside it refuses to
  * connect: "is missing a(n) output connection".
+ *
+ * …UNLESS `complete`: the generator's palette mints every member the project
+ * has, so a member type it lacks is dead even while a definition from before
+ * the deletion is still registered, and that one generates a reference to a
+ * declaration that is gone. An editor's palette is scoped to its file, so it
+ * cannot say that and leaves `complete` off.
+ *
+ * `paths`, the project's module paths, tell a file's own member from a rule's.
  */
 export function standInBlocks(
   contents: readonly string[],
   defined: ReadonlySet<string>,
+  {
+    complete = false,
+    paths = [],
+  }: {complete?: boolean; paths?: readonly string[]} = {},
 ): BlockDefinition[] {
+  const fileSlugs = new Set(
+    paths.map(path => pathSlug(path.replace(/\.[^./]+$/, ''))),
+  );
   const known = (type: string): boolean =>
-    defined.has(type) || type in Blockly.Blocks;
+    defined.has(type) ||
+    (type in Blockly.Blocks && !(complete && MEMBER_TYPE.test(type)));
   const wanted = new Map<string, {state: BlockState; shape: Shape}>();
   const visit = (block: BlockState | undefined, shape: Shape): void => {
     if (!block?.type) {
@@ -189,12 +227,15 @@ export function standInBlocks(
   };
   for (const source of contents) {
     try {
-      const parsed = JSON.parse(source) as {blocks?: {blocks?: BlockState[]}};
+      const parsed = JSON.parse(source) as {
+        blocks?: unknown;
+        actors?: Array<{blocks?: unknown} | undefined>;
+      };
       // An actor names blocks in its code, its values' setters, its effects,
       // its blocks' bodies, its drawing and its steps.
       const roots = isActorData(parsed)
         ? ([
-            ...(parsed.blocks?.blocks?.blocks ?? []),
+            ...rootsOf(parsed.blocks),
             ...(parsed.values ?? []).map(writeValue),
             ...(parsed.effects ?? []).map(writeEffect),
             ...(parsed.members ?? []).flatMap(one =>
@@ -222,7 +263,15 @@ export function standInBlocks(
         : // …and a rule in the bodies of its blocks and steps.
           isRuleData(parsed)
           ? (ruleBodies(parsed) as BlockState[])
-          : parsed.blocks?.blocks;
+          : // A workspace on its own, or a map's or a screen's: its own and
+            // each placement's, which are whole workspaces one level down.
+            [
+              ...rootsOf(parsed),
+              ...rootsOf(parsed.blocks),
+              ...(Array.isArray(parsed.actors)
+                ? parsed.actors.flatMap(one => rootsOf(one?.blocks))
+                : []),
+            ];
       for (const root of roots ?? []) {
         // A top-level block is a statement: a hat, or a stack somebody moved
         // aside. Nothing is a value at the root of a workspace.
@@ -233,6 +282,6 @@ export function standInBlocks(
     }
   }
   return [...wanted].map(([type, {state, shape}]) =>
-    standInFor(type, state, shape),
+    standInFor(type, state, shape, fileSlugs),
   );
 }

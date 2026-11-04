@@ -790,7 +790,10 @@ export const BlocklyGenerator = forwardRef<
       ...palette,
       blocks: [
         ...palette.blocks,
-        ...standInBlocks(Object.values(blocklyFiles ?? {}), known),
+        ...standInBlocks(Object.values(blocklyFiles ?? {}), known, {
+          complete: true,
+          paths: Object.keys(blocklyFiles ?? {}),
+        }),
       ],
     };
   }, [projectRules, ownProperties, blocklyFiles]);

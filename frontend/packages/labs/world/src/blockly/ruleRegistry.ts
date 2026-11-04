@@ -174,6 +174,13 @@ export function refResolves(ref: MemberRef): boolean {
   return !ref.ruleName || ruleByName(ref.ruleName) !== undefined;
 }
 
+// A stand-in's rule, which is known LESS precisely: it was read back out of
+// the block type, where the name has had its punctuation taken out and been
+// guessed at again (standInBlocks). Kept apart from the real map so that
+// registering the rule again overwrites the guess with the rule's own name,
+// rather than the guess shadowing it.
+const standInRuleByBlockType = new Map<string, string>();
+
 // Which rule each MEMBER block belongs to, by block type.
 //
 // A `use trait` block names its trait in a field, so what it refers to can be
@@ -206,17 +213,12 @@ export function registerMemberBlockType(
   blockType: string,
   ref: MemberRef,
 ): void {
+  // A real definition: whatever a stand-in guessed for this type is over.
+  standInRuleByBlockType.delete(blockType);
   if (!ref.own && ref.ruleName) {
     ruleByBlockType.set(blockType, ref.ruleName);
   }
 }
-
-// A stand-in's rule, which is known LESS precisely: it was read back out of
-// the block type, where the name has had its punctuation taken out and been
-// guessed at again (standInBlocks). Kept apart from the real map so that
-// registering the rule again overwrites the guess with the rule's own name,
-// rather than the guess shadowing it.
-const standInRuleByBlockType = new Map<string, string>();
 
 /** Record the rule a synthesised stand-in stands in for. */
 export function registerStandInRule(

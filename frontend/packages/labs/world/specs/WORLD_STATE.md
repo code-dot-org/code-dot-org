@@ -193,6 +193,23 @@ told the learner their project no longer had a RULE of that name and to add it
 back. The sentence now says "add it back", which is true whether the thing was a
 rule or a file.
 
+**A deleted value broke the whole project.** The Main Screen's inspector
+deletes a value whose blocks are still in use, after saying where. Two faults
+made that worse than a dead block:
+
+- `standInBlocks` read a screen's code as an actor's, one level too shallow,
+  and its guard for half-typed JSON swallowed the error. A screen or map got
+  no stand-ins, so the next load failed to compile over one block. This held
+  for a deleted rule used in Main Screen code too.
+- In the session that deleted it, the value's old definitions were still
+  registered (`Driver` adds and replaces, never removes), so no stand-in was
+  made and the block generated a reference to a declaration that was gone,
+  which threw on first use. The generator's palette is the whole project's,
+  so it now stands in for any member type it does not mint (`complete`).
+
+The warning names the value ("score"), not the file that declared it, and
+goes once the value is declared again (`__tests__/deletedValue`).
+
 **`WorldBuilder` needed `get`, and a `set` that does not accumulate.** `world`
 in a `.world` file IS the builder, including inside the handlers written there,
 so `get score` landed on it and threw. And the builder's deferred `set` logs

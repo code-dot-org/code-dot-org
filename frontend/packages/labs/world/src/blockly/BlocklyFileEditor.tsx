@@ -503,7 +503,9 @@ export const BlocklyFileEditor = ({
     return {
       blocks: [
         ...palette.blocks,
-        ...standInBlocks(Object.values(files), known),
+        ...standInBlocks(Object.values(files), known, {
+          paths: Object.keys(files),
+        }),
       ],
       // …and LAST, after everything that can empty a group: the headings were
       // decided while the toolbox was built, and any of the three filters

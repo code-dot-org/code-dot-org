@@ -12,6 +12,7 @@
 import * as Blockly from 'blockly/core';
 import {describe, expect, it} from 'vitest';
 
+import {missingRuleOfBlockType, registerMemberBlockType} from '../ruleRegistry';
 import {standInBlocks} from '../standInBlocks';
 
 /** A `.actor` holding a hat from a rule that is gone, with a body under it. */
@@ -223,5 +224,72 @@ describe('standInBlocks', () => {
     });
 
     expect(placed).toEqual(JSON.parse(FILE).blocks.blocks);
+  });
+});
+
+// A screen or a map holds its code as whole workspaces, its own and one per
+// placement, a level down from where a `.actor`'s are. Read as a `.actor`'s,
+// the list was an object, the walk threw, and the guard for half-typed JSON
+// swallowed it: no stand-ins, and the project failed to compile over one dead
+// block in its Main Screen.
+describe('standInBlocks, in a screen', () => {
+  const workspace = (...blocks: object[]) => ({
+    blocks: {languageVersion: 0, blocks},
+  });
+  const SCREEN = JSON.stringify({
+    type: 'map',
+    blocks: workspace({type: 'world_set_ScreensMain_HardProperty', id: 'a'}),
+    actors: [
+      {
+        type: 'actors/label',
+        id: 'Score',
+        blocks: workspace({type: 'world_on_Gravity_LandsEvent', id: 'b'}),
+      },
+    ],
+  });
+
+  it('finds a gone type in its own code and in a placement’s', () => {
+    const made = standInBlocks([SCREEN], KNOWN).map(block => block.type);
+    expect(made.sort()).toEqual([
+      'world_on_Gravity_LandsEvent',
+      'world_set_ScreensMain_HardProperty',
+    ]);
+  });
+
+  it('names a deleted value, not the file that held it', () => {
+    standInBlocks([SCREEN], KNOWN, {paths: ['screens/main.screen']});
+    expect(missingRuleOfBlockType('world_set_ScreensMain_HardProperty')).toBe(
+      'hard',
+    );
+    // …and a rule's member still names its rule.
+    expect(missingRuleOfBlockType('world_on_Gravity_LandsEvent')).toBe(
+      'Gravity',
+    );
+  });
+
+  it('stops warning once the value is declared again', () => {
+    standInBlocks([SCREEN], KNOWN, {paths: ['screens/main.screen']});
+    registerMemberBlockType('world_set_ScreensMain_HardProperty', {
+      own: true,
+      ruleName: 'Game',
+    } as never);
+    expect(
+      missingRuleOfBlockType('world_set_ScreensMain_HardProperty'),
+    ).toBeUndefined();
+  });
+
+  it('stands in for a member still registered, when the palette is complete', () => {
+    // A value deleted this session: its old definition is still in Blockly,
+    // and would generate a reference to a declaration that is gone.
+    Blockly.common.defineBlocksWithJsonArray([
+      {type: 'world_set_ScreensMain_HardProperty', message0: 'old'},
+    ]);
+    expect(standInBlocks([SCREEN], KNOWN).map(block => block.type)).toEqual([
+      'world_on_Gravity_LandsEvent',
+    ]);
+    expect(
+      standInBlocks([SCREEN], KNOWN, {complete: true}).map(block => block.type),
+    ).toContain('world_set_ScreensMain_HardProperty');
+    delete Blockly.Blocks['world_set_ScreensMain_HardProperty'];
   });
 });
