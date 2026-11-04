@@ -161,8 +161,6 @@ const WEBPACK_BASE_CONFIG = {
       // Without this, the portal-linked component-library resolves to its
       // own node_modules/@mui/material (a different React context).
       '@mui/material': p('node_modules/@mui/material'),
-      // Same for emotion: component-library reads the theme context MUI writes.
-      '@emotion/react': p('node_modules/@emotion/react'),
     },
   },
   module: {

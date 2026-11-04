@@ -188,7 +188,9 @@ Provides:
 
 The provider renders a `<div data-theme="Light|Dark">` wrapper. CSS variables inside that subtree automatically resolve to the correct mode's values.
 
-MUI portals `Tooltip`, `Popper`, `Popover` and `Menu` to `<body>`, outside that wrapper. The provider extends the surrounding MUI theme with `MuiPopper` and `MuiPopover` default props that put the same `data-theme` on those portals, so they follow the provider without call-site work. This needs an MUI theme above the provider; without one it leaves the portals alone. `Modal`-based surfaces (`Dialog`, `Drawer`) are not covered.
+MUI portals `Tooltip`, `Popper`, `Popover` and `Menu` to `<body>`, outside that wrapper. The provider adds `data-theme` to the `MuiPopper` and `MuiPopover` default props through an MUI `DefaultPropsProvider`, so those portals follow the provider without call-site work. `Modal`-based surfaces (`Dialog`, `Drawer`) are not covered yet.
+
+To keep a section in one theme whatever the surrounding one, pin it: `<ThemeProvider theme="Light">`. The pinned section's portals follow the pin, and its wrapper is `display: contents`, so it adds no layout box. `setTheme` and `toggleTheme` inside it act on the enclosing provider. Prefer this to a bare `data-theme` attribute, which portals do not see. `initialTheme` sets an unpinned provider's starting theme.
 
 ### Where ThemeProvider is mounted
 
