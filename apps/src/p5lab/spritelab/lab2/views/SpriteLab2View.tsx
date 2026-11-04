@@ -44,7 +44,7 @@ import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {addMissingBlocks, ownsTop} from '../addBlocks';
+import {addMissingBlocks, isAttachment, ownsTop} from '../addBlocks';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -647,13 +647,26 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [scenes, animationList]
   );
 
-  // Keep activeSceneId pointing at a real scene: locked to the pin once the
-  // ensure effect lands it, otherwise reset to the first scene when the
-  // active one disappears (e.g. code cleared via start over).
+  // The scenes the student may open on this level: on a pinned level the
+  // pin and, when the level says so, its extra scene; otherwise every
+  // scene.
+  const openableSceneIds = useMemo(
+    () =>
+      pinnedSceneId
+        ? [
+            pinnedSceneId,
+            ...(extraScene?.editable ? [extraScene.id] : []),
+          ].filter(id => scenes.some(s => s.id === id))
+        : scenes.map(s => s.id),
+    [pinnedSceneId, extraScene, scenes]
+  );
+  // Keep activeSceneId pointing at a real scene: locked to the pin's scenes
+  // once the ensure effect lands them, otherwise reset to the first scene
+  // when the active one disappears (e.g. code cleared via start over).
   useEffect(() => {
     if (pinnedSceneId) {
       if (
-        activeSceneId !== pinnedSceneId &&
+        !openableSceneIds.includes(activeSceneId ?? '') &&
         scenes.some(s => s.id === pinnedSceneId)
       ) {
         setActiveSceneId(pinnedSceneId);
@@ -663,7 +676,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (!scenes.some(s => s.id === activeSceneId)) {
       setActiveSceneId(scenes[0].id);
     }
-  }, [scenes, activeSceneId, pinnedSceneId]);
+  }, [scenes, activeSceneId, pinnedSceneId, openableSceneIds]);
 
   // Premade world, when the level authors one.
   const paintedWorld = useWorldStartPattern({
@@ -809,6 +822,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return !!props?.generation?.verdict && !before.has(props.name);
     });
   }, [animationList, initialSources]);
+  const sceneSources = useMemo(
+    () =>
+      Object.fromEntries(
+        scenes.map(scene => [
+          scene.id,
+          scene.source as WorkspaceSource | undefined,
+        ])
+      ),
+    [scenes]
+  );
   const objectives = useObjectives({
     objectives: levelProperties.objectives,
     images: objectiveImages,
@@ -816,6 +839,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     baselineGrid,
     imagesForRole,
     source: activeScene.source as WorkspaceSource | undefined,
+    sceneSources,
+    editingSceneId: activeScene.id,
     everPlayed: playProgress.everPlayed,
     rated,
     runtime: playProgress.runtime,
@@ -830,6 +855,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const callout = activeCallout(levelProperties.callouts, {
     done: calloutDone,
     tab: activeTab,
+    scene: activeScene.id,
   });
 
   // The World palette selection lives here so it survives leaving the tab
@@ -1927,13 +1953,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // in page loads nothing, so arriving runs it; a load puts the view back
   // wherever the workspace was, so a load runs it too and brings the
   // level's outline back on screen.
+  // An attachment names the scene it belongs to; every other entry is the
+  // pinned scene's.
+  const sceneAddBlocks = useMemo(
+    () =>
+      (levelProperties.addBlocks ?? []).filter(
+        entry =>
+          (isAttachment(entry)
+            ? entry.scene ?? pinnedSceneId
+            : pinnedSceneId) === activeScene.id
+      ),
+    [levelProperties.addBlocks, pinnedSceneId, activeScene.id]
+  );
   const addLevelBlocks = useCallback(() => {
-    if (
-      !animationsSeeded ||
-      isToolboxMode ||
-      !levelProperties.addBlocks ||
-      activeScene.id !== pinnedSceneId
-    ) {
+    if (!animationsSeeded || isToolboxMode || !sceneAddBlocks.length) {
       return;
     }
     const key = [
@@ -1956,13 +1989,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
-    addMissingBlocks(workspace, levelProperties.addBlocks);
+    addMissingBlocks(workspace, sceneAddBlocks);
   }, [
     animationsSeeded,
     levelProperties.id,
-    levelProperties.addBlocks,
-    activeScene.id,
-    pinnedSceneId,
+    sceneAddBlocks,
     sourcesReinitializedCount,
     workspaceVersion,
   ]);
@@ -2119,9 +2150,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     [dispatch]
   );
+  // A pinned level's one Play plays the game from its scene, whichever
+  // scene is open.
   const handlePreviewClick = useCallback(
-    () => playFrom(activeSceneId === defaultPlaySceneId ? null : activeSceneId),
-    [playFrom, activeSceneId, defaultPlaySceneId]
+    () =>
+      playFrom(
+        pinnedSceneId || activeSceneId === defaultPlaySceneId
+          ? null
+          : activeSceneId
+      ),
+    [playFrom, pinnedSceneId, activeSceneId, defaultPlaySceneId]
   );
   // Focus must not stay on a play button (see handOffControlFocus), and
   // the playspace is only focusable once Play has rendered, so a keyboard
@@ -2253,9 +2291,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The scene controls for the scene row or the workspace bar. A pinned
   // level shows only its own scene.
   const sceneControls = {
-    scenes: pinnedSceneId
-      ? sceneMetadata.filter(scene => scene.id === pinnedSceneId)
-      : sceneMetadata,
+    scenes: sceneMetadata.filter(scene => openableSceneIds.includes(scene.id)),
     activeSceneId,
     locked: !!pinnedSceneId,
     lockedReason: LOCKED_REASON,
@@ -2300,8 +2336,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       )}
       {callout && !isLevelEditMode && (
         <Callout
-          selector={calloutSelector(callout.target)}
+          selector={calloutSelector(callout)}
           direction={callout.direction}
+          fallback={
+            callout.fallback && {
+              selector: calloutSelector(callout.fallback),
+              direction: callout.fallback.direction,
+            }
+          }
         />
       )}
       {showBlockCatalog && (

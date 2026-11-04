@@ -26,7 +26,13 @@ export type AddBlock = BlocklyCore.serialization.blocks.State;
 export interface AttachShadow {
   /** The type of the stack's top block. */
   attachTo: string;
+  /** The tag the top block must carry, when one stack of the type is
+      meant: the `data` of the level's own entry for it. */
+  data?: string;
   shadow: BlocklyCore.serialization.blocks.State;
+  /** The scene whose workspace gets it, by id; the pinned scene when
+      unset. */
+  scene?: string;
 }
 
 /**
@@ -41,6 +47,9 @@ export interface AttachRoom {
       meant: the `data` of the level's own entry for it. */
   data?: string;
   room: {type: string};
+  /** The scene whose workspace gets it, by id; the pinned scene when
+      unset. */
+  scene?: string;
 }
 
 export type AddBlockEntry = AddBlock | AttachShadow | AttachRoom;
@@ -74,6 +83,17 @@ export interface PresentBlock {
 export function matchesEntry(present: PresentBlock, entry: AddBlock): boolean {
   return (
     present.type === entry.type && (!entry.data || present.data === entry.data)
+  );
+}
+
+/** Whether a stack is the one an attachment hangs on: its top block's type,
+    and its tag when the entry names one. */
+export function attachesTo(
+  entry: AttachShadow | AttachRoom,
+  top: PresentBlock
+): boolean {
+  return (
+    top.type === entry.attachTo && (!entry.data || top.data === entry.data)
   );
 }
 
@@ -206,7 +226,7 @@ export function unfilledOutlines(
     for (const top of tops) {
       const end = trailingShadow(top);
       const matches = isAttachment(entry)
-        ? top.type === entry.attachTo
+        ? attachesTo(entry, top)
         : matchesEntry(top, entry);
       if (
         end &&
@@ -227,7 +247,7 @@ export function attachShadow(
   entry: AttachShadow
 ): BlocklyCore.BlockSvg | null {
   for (const top of workspace.getTopBlocks(false)) {
-    if (top.type !== entry.attachTo) {
+    if (!attachesTo(entry, top)) {
       continue;
     }
     const connection = freeStackEnd(top, entry.shadow);

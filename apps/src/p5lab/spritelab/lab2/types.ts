@@ -141,6 +141,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     name: string;
     source?: WorkspaceSerialization;
     worldStartPattern?: string[];
+    /** The student can open this scene in the editor beside the pinned
+        one; Play still starts the game from the pinned scene. */
+    editable?: boolean;
   };
   /** The level's objectives (objectives.ts): the Guide's text, checklist
       and Continue gate. */

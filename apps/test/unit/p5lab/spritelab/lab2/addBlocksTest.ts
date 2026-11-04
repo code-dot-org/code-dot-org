@@ -262,6 +262,25 @@ describe('addBlocks', () => {
       ).toEqual([]);
     });
 
+    it('a tagged attachment waits only on the stack with its tag', () => {
+      const ends: End[] = [{shadow: GO_TO_SCENE, next: true}, {isShadow: true}];
+      const treasure = top('gamelab_checkTouching', ends, {data: 'treasure'});
+      const patrol = top('gamelab_checkTouching', ends, {data: 'patrol'});
+      const onTreasure = {
+        attachTo: 'gamelab_checkTouching',
+        data: 'treasure',
+        shadow: GO_TO_SCENE,
+      };
+      expect(
+        unfilledOutlines(workspace(patrol, treasure), [onTreasure])
+      ).toEqual([treasure]);
+      expect(
+        unfilledOutlines(workspace(patrol, treasure), [
+          {attachTo: 'gamelab_checkTouching', shadow: GO_TO_SCENE},
+        ])
+      ).toEqual([patrol, treasure]);
+    });
+
     it('lists a stack once when two entries point at it', () => {
       const waiting = top('spritelab2_whenRun', [
         {shadow: SAY, next: true},
