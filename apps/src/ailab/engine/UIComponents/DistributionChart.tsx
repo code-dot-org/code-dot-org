@@ -71,7 +71,7 @@ const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
                 tooltip: {
                   className: styles.tooltip,
                   // The bubble is portaled outside the lab's theme wrapper.
-                  ...(theme ? {'data-theme': theme} : {}),
+                  'data-theme': theme,
                 },
               }}
               title={

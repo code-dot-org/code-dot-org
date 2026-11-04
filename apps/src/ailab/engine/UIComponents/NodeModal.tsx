@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import Tabs from '@code-dot-org/component-library/tabs';
 import {Button, Typography} from '@mui/material';
@@ -27,7 +26,6 @@ interface NodeModalProps {
 }
 
 const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
-  const {theme} = useTheme(true);
   const titleId = useId();
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
@@ -50,8 +48,6 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
 
   return (
     <MuiCustomDialog
-      // The dialog is portaled outside the lab's theme wrapper.
-      data-theme={theme}
       aria-labelledby={titleId}
       closeLabel="Close node details"
       className={styles.dialog}

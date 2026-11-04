@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import Tabs from '@code-dot-org/component-library/tabs';
 import {Button, Typography} from '@mui/material';
@@ -18,7 +17,6 @@ interface ResultsModalProps {
 }
 
 const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
-  const {theme} = useTheme(true);
   const titleId = useId();
   const titleRowRef = useRef<HTMLDivElement>(null);
 
@@ -32,8 +30,6 @@ const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
 
   return (
     <MuiCustomDialog
-      // The dialog is portaled outside the lab's theme wrapper.
-      data-theme={theme}
       aria-labelledby={titleId}
       closeLabel="Close results"
       className={styles.dialog}
