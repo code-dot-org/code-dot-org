@@ -3818,17 +3818,6 @@ export const MapStage = ({
             onBlur={applyRename}
             onKeyDown={blurOnEnter}
           />
-          {/*
-           * WHICH EDGE IT KEEPS ITS DISTANCE FROM, when this map is loaded
-           * into a window that is not its own shape — a menu over a square
-           * level and over a phone-shaped one (specs/ANCHORS_PLAN.md).
-           * Beside the layer dropdown because it is the same kind of fact:
-           * not what the thing IS, but where in an arrangement it sits.
-           *
-           * "Anchored to" rather than "Holds on to", which was oblique out of
-           * context and was the one place in the lab not using the word the
-           * spec, the engine and the property all use.
-           */}
           {canDock &&
             !isReadOnly &&
             (() => {
@@ -3947,28 +3936,38 @@ export const MapStage = ({
                 />
               ) : null;
             })()}
-          <SimpleDropdown
-            name="actor-anchor"
-            labelText="Anchored to"
-            size="s"
-            className={styles.inspectorDropdown}
-            disabled={isReadOnly}
-            selectedValue={selectedActor.anchor ?? ''}
-            items={[
-              {value: '', text: 'nothing'},
-              ...ANCHORS.map(anchor => ({value: anchor, text: anchor})),
-            ]}
-            onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-              commit({
-                ...mapRef.current,
-                actors: mapRef.current.actors.map(actor =>
-                  actor.id === selectedActor.id
-                    ? withPlacementAnchor(actor, event.target.value)
-                    : actor,
-                ),
-              })
-            }
-          />
+          {/*
+           * WHICH EDGE IT KEEPS ITS DISTANCE FROM when the screen is another
+           * size, measured within the docked region it sits over
+           * (specs/ANCHORS_PLAN.md). Only on a screen: a level's placements
+           * are in the World, where a corner of the window is no place. Not
+           * on a docked placement, which its region places, nor on a child,
+           * which its parent carries.
+           */}
+          {canDock && !selectedDocked && !parentIdOf(selectedActor) && (
+            <SimpleDropdown
+              name="actor-anchor"
+              labelText="Anchored to"
+              size="s"
+              className={styles.inspectorDropdown}
+              disabled={isReadOnly}
+              selectedValue={selectedActor.anchor ?? ''}
+              items={[
+                {value: '', text: 'nothing'},
+                ...ANCHORS.map(anchor => ({value: anchor, text: anchor})),
+              ]}
+              onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+                commit({
+                  ...mapRef.current,
+                  actors: mapRef.current.actors.map(actor =>
+                    actor.id === selectedActor.id
+                      ? withPlacementAnchor(actor, event.target.value)
+                      : actor,
+                  ),
+                })
+              }
+            />
+          )}
           {!appBuilder && !locked('map-layers') && layersOf(map).length > 1 && (
             <SimpleDropdown
               name="actor-layer"

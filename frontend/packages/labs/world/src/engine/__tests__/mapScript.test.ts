@@ -212,6 +212,49 @@ describe('an anchored placement', () => {
     expect(placed(world)).toMatchObject({x: 10, y: 10});
   });
 
+  it('anchors nothing in a level, whose camera scrolls', () => {
+    // A level's placements are in the World, where a corner of the window
+    // is no place at all.
+    const world = makeWorld();
+    world.setViewSize(20, 10);
+
+    world.loadWorldMap(cornered('bottom right') as never);
+
+    expect(placed(world)).toMatchObject({x: 300, y: 300});
+  });
+
+  it('holds within the docked region it sits over, through a resize', () => {
+    // Over a bar docked a tile high across the top, held to its right: the
+    // screen grows, and it stays in the bar.
+    const world = makeWorld();
+    world.setViewSize(10, 11);
+    world.loadScreen({
+      size: {width: 10, height: 11},
+      tile: {width: 32, height: 32},
+      layout: {
+        split: 'down',
+        fixed: 'first',
+        size: 32,
+        first: {dock: 'bar'},
+        second: {dock: 'game'},
+      },
+      actors: [
+        {type: 'actors/button', id: 'bar'},
+        {type: 'actors/button', id: 'game'},
+        {
+          type: 'actors/button',
+          id: 'card',
+          anchor: 'right',
+          properties: {positional: {position: {x: 300, y: 16}}},
+        },
+      ],
+    } as never);
+
+    world.setViewSize(20, 13);
+
+    expect(placed(world)).toMatchObject({x: 620, y: 16});
+  });
+
   it('ignores an anchor it does not know', () => {
     // A map is JSON and may say anything. A word nothing recognises has to
     // mean "not anchored" rather than take the whole level away.

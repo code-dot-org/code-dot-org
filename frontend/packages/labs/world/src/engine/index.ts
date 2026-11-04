@@ -93,6 +93,7 @@ export {
 export {
   ANCHORS,
   anchored,
+  anchoredIn,
   anchorPoint,
   isAnchor,
   type Anchor,

@@ -68,7 +68,7 @@ import {
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import {ActorPalette, type PaletteActor} from './ActorPalette';
-import {fitLayout} from './docking';
+import {atSize, fitLayout} from './docking';
 import {EMPTY_HISTORY, record, redo, undo, type History} from './editHistory';
 import {
   drawsItself,
@@ -286,16 +286,28 @@ export const MapEditor = ({
     [files],
   );
 
-  // Read with its docked placements in their regions, so the stage draws
-  // and finds them where the game will (`docking.fitLayout`).
-  const [map, setMap] = useState(() =>
-    fitLayout(document.read(initialContents)),
+  // A screen other than the Main Screen is shown at the Main Screen's size,
+  // since that is the only size the game shows it at. Its `size` is kept as
+  // the size it was last arranged at, which the engine measures its anchors
+  // from (`World.applyAnchors`); written back, it is the Main Screen's.
+  const mainSize = useMemo(
+    () => parseMap(files[`${MAIN_SCREEN_PATH}.screen`] ?? '').size,
+    [files],
   );
+  const otherScreen =
+    document.scriptKind === 'screen' &&
+    filePath(currentSources.source, fileId) !== `${MAIN_SCREEN_PATH}.screen`;
+  /** The document as the stage shows it (`docking.fitLayout`, `atSize`). */
+  const asShown = (doc: MapDoc) =>
+    fitLayout(otherScreen ? atSize(doc, mainSize) : doc);
+  const [map, setMap] = useState(() => asShown(document.read(initialContents)));
   // The file as last known — what a write is made from, so a world's blocks
   // come through a map edit untouched. A ref for writing, since several
   // commits may land in one tick, and a state beside it for what is drawn
   // from the file itself (the world's header).
   const contentsRef = useRef(initialContents);
+  /** The document when a size field took focus (`resize`). */
+  const sizedFrom = useRef<MapDoc | null>(null);
   const [fileText, setFileText] = useState(initialContents);
   // Re-seed when the lab is handed a different document — the project
   // loading, a version restored, a start-over. `sourcesEpoch` counts exactly
@@ -310,7 +322,7 @@ export const MapEditor = ({
     setHistory(EMPTY_HISTORY);
     contentsRef.current = initialContents;
     setFileText(initialContents);
-    setMap(fitLayout(document.read(initialContents)));
+    setMap(asShown(document.read(initialContents)));
   }, [sourcesEpoch, initialContents, document]);
 
   const [thumbnails, setThumbnails] = useState<Record<string, string>>({});
@@ -570,7 +582,7 @@ export const MapEditor = ({
     setHistory(step.history);
     contentsRef.current = step.contents;
     setFileText(step.contents);
-    setMap(fitLayout(document.read(step.contents)));
+    setMap(asShown(document.read(step.contents)));
     onChange(step.contents);
   };
   const undoEdit = () => restore(undo(historyRef.current, contentsRef.current));
@@ -847,8 +859,24 @@ export const MapEditor = ({
     if (tiles === undefined) {
       return; // mid-edit: an emptied field is not a size
     }
-    // Each keystroke is a write, and the typing one step.
-    commit({...map, size: {...map.size, [axis]: tiles}}, `size:${axis}`);
+    const size = {...map.size, [axis]: tiles};
+    // Each keystroke is a write, and the typing one step. A screen's anchored
+    // placements are moved from where they were before the typing began, so
+    // the sizes typed on the way to the one meant (a 1 on the way to 16) do
+    // not move them for good.
+    const from = sizedFrom.current ?? map;
+    commit(
+      document.scriptKind === 'screen' ? atSize(from, size) : {...map, size},
+      `size:${axis}`,
+    );
+  };
+  const sizeFieldFocus = {
+    onFocus: () => {
+      sizedFrom.current = map;
+    },
+    onBlur: () => {
+      sizedFrom.current = null;
+    },
   };
 
   /** The kinds, as the palette draws them, each with what it is for. */
@@ -863,45 +891,53 @@ export const MapEditor = ({
     <div className={styles.editor}>
       <div className={styles.picker}>
         <PlaceHeading fileId={fileId} isReadOnly={isReadOnly} />
-        <div className={`${styles.sizeField} ${fields.narrow}`}>
-          <TextField
-            name="map-width"
-            label="Width"
-            inputType="number"
-            size="s"
-            min={MIN_MAP_TILES}
-            max={MAX_MAP_TILES}
-            step={1}
-            value={map.size.width}
-            disabled={isReadOnly}
-            onChange={(event: ChangeEvent<HTMLInputElement>) =>
-              resize('width', event.target.value)
-            }
-          />
-        </div>
-        <div className={`${styles.sizeField} ${fields.narrow}`}>
-          <TextField
-            name="map-height"
-            label="Height"
-            inputType="number"
-            size="s"
-            min={MIN_MAP_TILES}
-            max={MAX_MAP_TILES}
-            step={1}
-            value={map.size.height}
-            disabled={isReadOnly}
-            onChange={(event: ChangeEvent<HTMLInputElement>) =>
-              resize('height', event.target.value)
-            }
-          />
-        </div>
-        <Typography
-          variant="body4"
-          component="span"
-          className={styles.sizeUnit}
-        >
-          tiles
-        </Typography>
+        {/* The Main Screen's size is the game's; another screen is shown at
+            it, and a level's is how far its camera can scroll. */}
+        {!otherScreen && (
+          <>
+            <div className={`${styles.sizeField} ${fields.narrow}`}>
+              <TextField
+                name="map-width"
+                label="Width"
+                inputType="number"
+                size="s"
+                min={MIN_MAP_TILES}
+                max={MAX_MAP_TILES}
+                step={1}
+                value={map.size.width}
+                disabled={isReadOnly}
+                {...sizeFieldFocus}
+                onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                  resize('width', event.target.value)
+                }
+              />
+            </div>
+            <div className={`${styles.sizeField} ${fields.narrow}`}>
+              <TextField
+                name="map-height"
+                label="Height"
+                inputType="number"
+                size="s"
+                min={MIN_MAP_TILES}
+                max={MAX_MAP_TILES}
+                step={1}
+                value={map.size.height}
+                disabled={isReadOnly}
+                {...sizeFieldFocus}
+                onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                  resize('height', event.target.value)
+                }
+              />
+            </div>
+            <Typography
+              variant="body4"
+              component="span"
+              className={styles.sizeUnit}
+            >
+              tiles
+            </Typography>
+          </>
+        )}
         {!isReadOnly && (
           <div className={styles.history}>
             <IconButton

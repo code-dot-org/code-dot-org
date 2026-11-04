@@ -5,6 +5,11 @@
 // over a phone-shaped one (specs/ANCHORS_PLAN.md). An anchored placement keeps
 // its distance from a named edge instead of its distance from the origin.
 //
+// THE EDGE IS THE REGION'S, not the screen's, when the screen is docked: a
+// pause button anchored top right of a Game Viewport under a HUD bar stays
+// below the bar. The region is the docked one the placement sits over, as
+// GridBagLayout anchors a component in its cell (specs/ANCHORS_PLAN.md).
+//
 // THE OFFSET IS MEASURED, NOT AUTHORED. A learner drags a thing into the
 // corner of the map and says "bottom right"; how far from the corner that was
 // is arithmetic, and asking them for it as a number would be asking them to
@@ -14,6 +19,7 @@
 // the engine's arithmetic is: it can be tested without a world, and the one
 // caller is a loader that has quite enough to do.
 
+import {type LayoutNode, layoutBoxes} from './layout';
 import {Vector} from './Vector';
 
 /** The nine places a placement may be anchored to. */
@@ -68,4 +74,38 @@ export function anchored(
   const from = anchorPoint(map, anchor);
   const to = anchorPoint(view, anchor);
   return new Vector(at.x - from.x + to.x, at.y - from.y + to.y);
+}
+
+/**
+ * `anchored`, within the docked region `at` sits over in a screen `from`
+ * big, carried to that region in a screen `to` big. With no layout, or over
+ * no region, the region is the whole screen.
+ */
+export function anchoredIn(
+  at: Vector,
+  anchor: Anchor,
+  from: Vector,
+  to: Vector,
+  layout?: LayoutNode,
+  present: (id: string) => boolean = () => true,
+): Vector {
+  const was = [...layoutBoxes(layout, from.x, from.y, present)].find(
+    ([, box]) =>
+      at.x >= box.x &&
+      at.x < box.x + box.width &&
+      at.y >= box.y &&
+      at.y < box.y + box.height,
+  );
+  const now = was && layoutBoxes(layout, to.x, to.y, present).get(was[0]);
+  if (!was || !now) {
+    return anchored(at, anchor, from, to);
+  }
+  const box = was[1];
+  const moved = anchored(
+    new Vector(at.x - box.x, at.y - box.y),
+    anchor,
+    new Vector(box.width, box.height),
+    new Vector(now.width, now.height),
+  );
+  return new Vector(moved.x + now.x, moved.y + now.y);
 }

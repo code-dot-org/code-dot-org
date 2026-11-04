@@ -15,7 +15,7 @@ import {ViewportShowsMapEvent, ViewportTrait} from '../rules/viewport';
 
 import type {Actor} from './Actor';
 import {all, type ActorValue} from './actorValue';
-import {anchored, isAnchor, type Anchor} from './anchors';
+import {anchoredIn, isAnchor, type Anchor} from './anchors';
 import type {FrameState} from './animationTypes';
 import {DEFAULT_CAMERA_ID, makeCamera, Camera, validZoom} from './Camera';
 import {
@@ -46,7 +46,7 @@ import {
   type LayerSlot,
   type MapLayer,
 } from './Layer';
-import {isLayout, layoutBoxes, type LayoutNode} from './layout';
+import {dockedIds, isLayout, layoutBoxes, type LayoutNode} from './layout';
 import {asList, isListType} from './lists';
 import {parentingKeys} from './parenting';
 import {phaseIndex} from './phases';
@@ -2771,26 +2771,33 @@ export class World {
    * dragged somewhere is somewhere for a reason, and shifting it back would
    * undo the program.
    *
-   * Only the placements in a space the WORLD's window sizes. A Viewport's
-   * space is sized by the Viewport (`viewSizeOf`), and nothing here changed
-   * that.
+   * Only the screen's placements are anchored (`applyAnchors`), and they
+   * are measured against the SCREEN, not `viewSize()`, which with a docked
+   * Viewport is that Viewport's window.
    */
   private reanchor(): void {
     const property = this.positionalProperty(SPATIAL.position);
     if (!property) {
       return;
     }
-    const view = this.viewSize();
+    const view = this.screenSize();
     for (const actor of this.actorList) {
       const hold = this.anchorHolds.get(actor);
-      if (!hold || hold.space !== this.rootSpace || actor.parent()) {
+      if (!hold || actor.parent()) {
         continue;
       }
       const at = actor.get(property) as Vector;
       if (at.x !== hold.put.x || at.y !== hold.put.y) {
         continue; // moved since; it is where it was put on purpose
       }
-      const put = anchored(hold.at, hold.anchor, hold.drawn, view);
+      const put = anchoredIn(
+        hold.at,
+        hold.anchor,
+        hold.drawn,
+        view,
+        hold.layout,
+        hold.present,
+      );
       actor.set(property, put);
       hold.put = put;
     }
@@ -2807,7 +2814,6 @@ export class World {
   private readonly anchorHolds = new WeakMap<
     Actor,
     {
-      readonly space: Space;
       readonly anchor: Anchor;
       /** Where the MAP put it — what the offset is measured from. */
       readonly at: Vector;
@@ -2815,6 +2821,9 @@ export class World {
       readonly drawn: Vector;
       /** Where this last put it; a position that differs was set elsewhere. */
       put: Vector;
+      /** The screen's docking, whose regions the offset is measured in. */
+      readonly layout?: LayoutNode;
+      readonly present: (id: string) => boolean;
     }
   >();
 
@@ -2878,6 +2887,11 @@ export class World {
    * and a synthesised map — one a `map` block builds out of blocks — has
    * none.
    *
+   * ONLY ON THE SCREEN. A level's placements live in the World and its camera
+   * scrolls, so a corner of the window is no place in it. A docked placement
+   * is the layout's to place, and the distance is measured within the docked
+   * region the placement sits over (`anchoredIn`).
+   *
    * A CHILD IS LEFT ALONE. A parented placement's position is its local one,
    * measured from its parent rather than from the map, so an anchor on one
    * would move it by the distance between two things it is not between. The
@@ -2887,10 +2901,23 @@ export class World {
     space: Space,
     map: WorldMap,
     anchoring: ReadonlyArray<[Actor, Anchor]>,
+    placed: ReadonlyMap<string, Actor>,
   ): void {
-    if (anchoring.length === 0 || !map.size || !map.tile) {
+    if (
+      anchoring.length === 0 ||
+      space !== this.rootSpace ||
+      !map.size ||
+      !map.tile
+    ) {
       return;
     }
+    const layout = isLayout(map.layout) ? map.layout : undefined;
+    const docked = new Set(
+      dockedIds(layout)
+        .map(id => placed.get(id))
+        .filter(Boolean),
+    );
+    const present = (id: string) => placed.get(id)?.world === this;
     const property = this.positionalProperty(SPATIAL.position);
     if (!property) {
       return;
@@ -2901,15 +2928,15 @@ export class World {
     );
     const view = this.windowOf(space);
     for (const [actor, anchor] of anchoring) {
-      if (actor.parent()) {
+      if (actor.parent() || docked.has(actor)) {
         continue;
       }
       const at = actor.get(property) as Vector;
-      const put = anchored(at, anchor, drawn, view);
+      const put = anchoredIn(at, anchor, drawn, view, layout, present);
       actor.set(property, put);
       // Kept, so that a window resized afterwards can measure again from the
       // MAP's position rather than from this one (`reanchor`).
-      this.anchorHolds.set(actor, {space, anchor, at, drawn, put});
+      this.anchorHolds.set(actor, {anchor, at, drawn, put, layout, present});
     }
   }
 
@@ -3268,7 +3295,7 @@ export class World {
     // …and the anchored ones moved to where they belong in THIS window,
     // after the references are followed so a parent is known, and before the
     // script runs so it sees final positions (specs/ANCHORS_PLAN.md).
-    this.applyAnchors(space, map, anchoring);
+    this.applyAnchors(space, map, anchoring, placed);
     // …and the docked ones fitted to their regions, for the same reasons at
     // the same moment (specs/DOCKING_PLAN.md).
     this.applyLayout(space, map, placed);

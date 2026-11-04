@@ -9,6 +9,7 @@
 //
 // Pure: the stage asks it while a placement is dragged and when it is let go.
 
+import {anchoredIn, isAnchor} from '../engine/core/anchors';
 import {
   dividers,
   dock,
@@ -22,8 +23,16 @@ import {
   type LayoutNode,
   type Side,
 } from '../engine/core/layout';
+import {Vector} from '../engine/core/Vector';
 
-import {extentOf, parentIdOf, type MapDoc, type Placement} from './mapModel';
+import {
+  extentOf,
+  parentIdOf,
+  positionOf,
+  withProperty,
+  type MapDoc,
+  type Placement,
+} from './mapModel';
 
 /** Where a placement docks if it is let go here. */
 export interface DockZone {
@@ -48,6 +57,51 @@ const dockable = (doc: MapDoc) => {
 /** A placement's box override, or nothing. */
 const boxOf = (placement: Placement): {width?: number; height?: number} =>
   (placement.properties?.hasABox ?? {}) as {width?: number; height?: number};
+
+/**
+ * A screen at `size` tiles, each anchored placement moved as the game would
+ * move it (`anchoredIn`): within the docked region it sits over. Docked ones
+ * are `fitLayout`'s, and a child goes with its parent.
+ */
+export function atSize(
+  doc: MapDoc,
+  size: {width: number; height: number},
+): MapDoc {
+  if (doc.size.width === size.width && doc.size.height === size.height) {
+    return doc;
+  }
+  const next = {...doc, size: {width: size.width, height: size.height}};
+  const from = extentOf(doc);
+  const to = extentOf(next);
+  const docked = new Set(dockedIds(doc.layout));
+  const present = dockable(doc);
+  return {
+    ...next,
+    actors: doc.actors.map(actor => {
+      const at = positionOf(actor);
+      if (
+        !at ||
+        !isAnchor(actor.anchor) ||
+        docked.has(actor.id) ||
+        parentIdOf(actor)
+      ) {
+        return actor;
+      }
+      const put = anchoredIn(
+        new Vector(at.x, at.y),
+        actor.anchor,
+        new Vector(from.w, from.h),
+        new Vector(to.w, to.h),
+        doc.layout,
+        present,
+      );
+      return withProperty(actor, 'positional', 'position', {
+        x: put.x,
+        y: put.y,
+      });
+    }),
+  };
+}
 
 /**
  * The document with each docked placement's position and box its region's,

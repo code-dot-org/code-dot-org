@@ -3,6 +3,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {
+  atSize,
   dividerAt,
   dockChoices,
   dockedAt,
@@ -242,5 +243,68 @@ describe('a docked placement that was turned', () => {
     // …and a floating one keeps its turn.
     turned.actors[1].properties!.positional!.rotation = 15;
     expect(props(fitLayout(turned), 'hud')?.positional?.rotation).toBe(15);
+  });
+});
+
+describe('a screen at another size', () => {
+  /**
+   * 320 by 352: a bar a tile high docked across the top, the game under it,
+   * and a card floating over the bar.
+   */
+  const hud = (anchor?: string, barAnchor?: string): MapDoc => ({
+    type: 'map',
+    size: {width: 10, height: 11},
+    tile: {width: 32, height: 32},
+    layout: {
+      split: 'down',
+      fixed: 'first',
+      size: 32,
+      first: {dock: 'bar'},
+      second: {dock: 'game'},
+    },
+    actors: [
+      {
+        type: 'actors/panel',
+        id: 'bar',
+        ...(barAnchor ? {anchor: barAnchor} : {}),
+        properties: {positional: {position: {x: 160, y: 16}}},
+      },
+      {
+        type: 'actors/viewport',
+        id: 'game',
+        properties: {positional: {position: {x: 160, y: 192}}},
+      },
+      {
+        type: 'actors/button',
+        id: 'card',
+        ...(anchor ? {anchor} : {}),
+        properties: {positional: {position: {x: 300, y: 16}}},
+      },
+    ],
+  });
+  const at = (doc: MapDoc, id: string) => props(doc, id)?.positional?.position;
+
+  it('moves an anchored placement within the region it sits over', () => {
+    const bigger = atSize(hud('right'), {width: 20, height: 13});
+    expect(bigger.size).toEqual({width: 20, height: 13});
+    expect(at(bigger, 'card')).toEqual({x: 620, y: 16});
+  });
+
+  it('leaves one that is not anchored where it is', () => {
+    expect(at(atSize(hud(), {width: 20, height: 13}), 'card')).toEqual({
+      x: 300,
+      y: 16,
+    });
+  });
+
+  it('leaves a docked one to its region', () => {
+    expect(
+      at(atSize(hud(undefined, 'right'), {width: 20, height: 13}), 'bar'),
+    ).toEqual({x: 160, y: 16});
+  });
+
+  it('is the same document at its own size', () => {
+    const doc = hud('right');
+    expect(atSize(doc, {width: 10, height: 11})).toBe(doc);
   });
 });

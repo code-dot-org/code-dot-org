@@ -3,7 +3,14 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {anchored, anchorPoint, ANCHORS, isAnchor} from '../core/anchors';
+import {
+  anchored,
+  anchoredIn,
+  anchorPoint,
+  ANCHORS,
+  isAnchor,
+} from '../core/anchors';
+import type {LayoutNode} from '../core/layout';
 import {Vector} from '../core/Vector';
 
 const at = (x: number, y: number) => new Vector(x, y);
@@ -59,6 +66,50 @@ describe('anchored', () => {
     expect(anchored(at(100, 12), 'top', at(200, 100), at(400, 900))).toEqual(
       at(200, 12),
     );
+  });
+});
+
+describe('anchoredIn', () => {
+  /** A bar a tile high across the top, and the game under it. */
+  const HUD: LayoutNode = {
+    split: 'down',
+    fixed: 'first',
+    size: 32,
+    first: {dock: 'Bar'},
+    second: {dock: 'Game'},
+  };
+
+  it('measures within the docked region it sits over', () => {
+    // Over the bar, held to its right: wider, it follows the right edge;
+    // taller, it stays in the bar, where the screen's middle would have
+    // taken it down by half of what was added.
+    expect(
+      anchoredIn(at(300, 16), 'right', at(320, 352), at(640, 416), HUD),
+    ).toEqual(at(620, 16));
+    expect(anchored(at(300, 16), 'right', at(320, 352), at(640, 416))).toEqual(
+      at(620, 48),
+    );
+  });
+
+  it('is `anchored` with no layout', () => {
+    expect(
+      anchoredIn(at(184, 84), 'bottom right', at(200, 100), at(300, 400)),
+    ).toEqual(at(284, 384));
+  });
+
+  it('measures in what is left when a region’s placement is gone', () => {
+    // The bar deleted: the game takes the whole screen, as the layout closes
+    // over the hole (`layoutBoxes`).
+    expect(
+      anchoredIn(
+        at(300, 16),
+        'right',
+        at(320, 352),
+        at(640, 416),
+        HUD,
+        id => id !== 'Bar',
+      ),
+    ).toEqual(at(620, 48));
   });
 });
 

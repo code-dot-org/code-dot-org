@@ -127,6 +127,34 @@ Every test of this had called `setViewSize` before `loadMap`, which is the
 order nothing actually runs in. Two now do it the other way round
 (`engine/mapScript.test`), and `appPlays` pins the button itself.
 
+## Since: on a screen only, within its docked region
+
+A level's placements are in the World and its camera scrolls, so a corner
+of the window is no place in one; anchoring there moved a placement to a
+window-relative point in the World that the camera then scrolled away
+from. Only a screen's placements are anchored now (`World.applyAnchors`
+skips any space but the root), and the inspector offers "Anchored to" only
+on a screen, and not on a docked placement or a child.
+
+The distance is measured within the DOCKED REGION the placement sits over,
+as GridBagLayout anchors a component in its cell (`anchors.anchoredIn`). A
+button over a HUD bar held to the bar's right stays in the bar when the
+screen grows taller; measured against the whole screen it slid down by
+half of what was added. With no docking the region is the screen.
+
+EVERY SCREEN IS THE MAIN SCREEN'S SIZE. The game shows any screen at the
+Main Screen's size (`World.loadScreen`), so another screen has no Width and
+Height of its own: the editor draws it at the Main Screen's, with its
+anchored placements moved there (`docking.atSize`), and writes it so. Its
+`size` stays in the file as the size it was last arranged at, which is what
+the engine measures from when a screen has not been opened since the Main
+Screen changed, or comes from the shelf at another size. Resizing the Main
+Screen moves its own anchored placements the same way, from where they were
+before the typing began.
+
+`reanchor` measures against the screen's size (`World.screenSize`), not
+`viewSize()`, which with a docked Viewport is that Viewport's window.
+
 ## Not built, and known
 
 - **No scaling, only placing.** A panel 200 wide is 200 wide in a window
@@ -135,10 +163,8 @@ order nothing actually runs in. Two now do it the other way round
   the window" that this does not invent. Docking is that vocabulary for a Screen: a
   docked placement fills its region of the window, size and all
   (specs/DOCKING_PLAN.md).
-- **The editor draws the map's own shape**, which is the arrangement at
-  the map's size. What a placement does in a window of another shape is
-  not previewed, and the honest way to see it is to load the map into a
-  world of that shape.
+- **A screen whose size changes while it runs** (`set size of view`) is
+  not previewed in the editor; the Main Screen's size is what is drawn.
 - **Nothing anchors to another PLACEMENT.** Beside, above, after — that
   is a layout engine, and parenting answers the part of it worth having.
 - **A map with no size anchors nothing**, which is every map a `map`
@@ -151,7 +177,7 @@ this, the panel sat in the middle of a square world and off to one side of
 a phone-shaped one. It should be in the middle of each now, with its title
 and buttons where they were relative to it.
 
-Then a map of your own: put a Label hard in a corner, set "Holds on to" to
-that corner, and load the map into a wider world. It should be the same
+Then a screen of your own: put a Label hard in a corner, set "Anchored to"
+to that corner, and widen the Main Screen. It should be the same
 distance from the corner rather than adrift in the middle. Set it back to
 "nothing" and it should go back to being a plain position.

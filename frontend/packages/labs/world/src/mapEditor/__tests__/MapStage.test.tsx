@@ -1519,12 +1519,11 @@ describe('what a gated lab withholds', () => {
   });
 
   it('offers where a placement holds on, and writes the choice', () => {
-    // The trigger the interface spec named: one map, two windows of
-    // different shapes (specs/ANCHORS_PLAN.md). Holding on to nothing is
-    // said by saying nothing, so the field goes rather than being written
-    // empty.
+    // On a screen, which may be another size than it was arranged at
+    // (specs/ANCHORS_PLAN.md). Holding on to nothing is said by saying
+    // nothing, so the field goes rather than being written empty.
     const map = layered();
-    const {canvas, onDocChange, ...view} = mount(map);
+    const {canvas, onDocChange, ...view} = mount(map, {canDock: true});
     select(canvas, map);
     const anchor = () =>
       view.container.querySelector(
@@ -1542,6 +1541,48 @@ describe('what a gated lab withholds', () => {
     fireEvent.change(anchor(), {target: {value: ''}});
     const cleared = onDocChange.mock.calls.at(-1)?.[0] as MapDoc;
     expect('anchor' in cleared.actors[0]).toBe(false);
+  });
+
+  it('offers no anchor on a child, which its parent carries', () => {
+    const map = layered();
+    const [parent, child] = map.actors;
+    const view = mount(
+      {
+        ...map,
+        actors: [
+          parent,
+          {
+            ...child,
+            properties: {
+              ...child.properties,
+              positional: {
+                ...child.properties?.positional,
+                parent: parent.id,
+              },
+            },
+          },
+        ],
+      },
+      {canDock: true},
+    );
+    act(() => {
+      void reveal({kind: 'placement', named: child.id});
+    });
+    expect(view.container.querySelector('input[name="actor-id"]')).toHaveValue(
+      child.id,
+    );
+    expect(
+      view.container.querySelector('select[name="actor-anchor"]'),
+    ).toBeNull();
+  });
+
+  it('offers no anchor on a level, where a corner of the window is no place', () => {
+    const map = layered();
+    const {canvas, ...view} = mount(map);
+    select(canvas, map);
+    expect(
+      view.container.querySelector('select[name="actor-anchor"]'),
+    ).toBeNull();
   });
 
   it('keeps the strip’s place when layers are withheld, and leaves the map as it is', () => {

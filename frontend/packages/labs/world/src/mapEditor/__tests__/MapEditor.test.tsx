@@ -36,6 +36,9 @@ vi.mock('../MapStage', () => ({
       data-testid="stage"
       data-size={`${props.doc.size.width}x${props.doc.size.height}`}
       data-actors={props.doc.actors.length}
+      data-first-at={JSON.stringify(
+        props.doc.actors[0]?.properties?.positional?.position ?? null,
+      )}
       data-withheld={[...(props.withheld ?? [])].sort().join(' ')}
       data-kinds={Object.entries(props.kinds ?? {})
         .map(([type, kind]) => `${type}=${kind.name}`)
@@ -138,6 +141,13 @@ const SOURCE: MultiFileSource = {
       folderId: '6',
       contents: '',
     },
+    '5': {
+      id: '5',
+      name: 'pause.screen',
+      language: 'screen',
+      folderId: '6',
+      contents: '',
+    },
     '2': {
       id: '2',
       name: 'coin.actor',
@@ -186,7 +196,7 @@ vi.mock('../../runtime/WorldRuntimeContext', () => ({
 }));
 
 const {MapEditor} = await import('../MapEditor');
-const {screenFileDocument} = await import('../mapDocument');
+const {screenDocumentFor, screenFileDocument} = await import('../mapDocument');
 
 /** A map with two actors in it, at the size every map used to be. */
 const CONTENTS = JSON.stringify({
@@ -218,6 +228,45 @@ const written = (onChange: ReturnType<typeof vi.fn>): MapDoc =>
   JSON.parse(onChange.mock.calls.at(-1)![0] as string) as MapDoc;
 
 describe('MapEditor size controls', () => {
+  it('shows another screen at the Main Screen’s size, with no size of its own', () => {
+    // Arranged at 8 by 8, with a panel held in the middle: the game shows
+    // every screen at the Main Screen's size (`World.loadScreen`), so that is
+    // where it is drawn, and where its anchors put things.
+    render(
+      <MapEditor
+        fileId="5"
+        initialContents={JSON.stringify({
+          type: 'map',
+          size: {width: 8, height: 8},
+          tile: {width: 32, height: 32},
+          actors: [
+            {
+              type: 'actors/panel',
+              id: 'Pause',
+              anchor: 'center',
+              properties: {positional: {position: {x: 128, y: 128}}},
+            },
+          ],
+        })}
+        language="screen"
+        document={screenDocumentFor('screens/pause.screen')}
+        isReadOnly={false}
+        onChange={vi.fn()}
+      />,
+    );
+
+    expect(screen.queryByLabelText('Width')).toBeNull();
+    const stage = screen.getByTestId('stage');
+    expect(stage).toHaveAttribute(
+      'data-size',
+      `${VIEWPORT_TILES}x${VIEWPORT_TILES}`,
+    );
+    expect(stage).toHaveAttribute(
+      'data-first-at',
+      JSON.stringify({x: VIEWPORT_TILES * 16, y: VIEWPORT_TILES * 16}),
+    );
+  });
+
   it('opens at the size the map states', () => {
     open();
 
