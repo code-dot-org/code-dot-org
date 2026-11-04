@@ -10,6 +10,7 @@
 
 import {
   AnimationPoses,
+  CHARACTER_STRIP_BASE_FRAME,
   CHARACTER_STRIP_FRAME_COUNT,
   CHARACTER_STRIP_POSES,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
@@ -309,13 +310,9 @@ async function composeStrip(
   return canvasToBlob(strip);
 }
 
-// Where the standing frame sits in the strip. It is the base picture the
-// other poses were edited from, so its block size is the one the whole set
-// shares.
-const BASE_FRAME_INDEX =
-  CHARACTER_STRIP_POSES['stand-right']!.start +
-  CHARACTER_STRIP_POSES['stand-right']!.count -
-  1;
+// The standing frame is the base picture the other poses were edited from,
+// so its block size is the one the whole set shares.
+const BASE_FRAME_INDEX = CHARACTER_STRIP_BASE_FRAME;
 
 type Bounds = NonNullable<ReturnType<typeof findOpaqueBounds>>;
 

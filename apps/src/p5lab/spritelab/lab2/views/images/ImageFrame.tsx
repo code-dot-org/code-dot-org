@@ -5,7 +5,8 @@
 import classNames from 'classnames';
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
-import AnimatedSheetPreview from '../AnimatedSheetPreview';
+import {standingFrameIndex} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import StripFrame from '@cdo/apps/p5lab/spritelab/lab2/views/StripFrame';
 
 import {ProjectImage} from './projectImages';
 
@@ -14,6 +15,8 @@ import styles from './images-tab.module.scss';
 interface ImageFrameProps {
   /** The chosen image, when it exists. */
   image: ProjectImage | null;
+  /** Which frame of a character set shows; the standing frame when unset. */
+  frame?: number;
   /** The scene's own frame contents, which win while a picture is being
       made or has just been made. */
   live?: React.ReactNode;
@@ -33,11 +36,12 @@ interface ImageFrameProps {
   under?: React.ReactNode;
 }
 
-// Under the frame: the row the behind-the-scenes button takes.
-const UNDER_PX = 56;
+// Under the frame when nothing is there yet: a row's worth.
+const UNDER_MIN_PX = 48;
 
 const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   image,
+  frame,
   live,
   generating,
   workspaceClassName,
@@ -50,6 +54,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   // item's percentage height cannot give before layout.
   const columnRef = useRef<HTMLDivElement>(null);
   const aboveRef = useRef<HTMLDivElement>(null);
+  const underRef = useRef<HTMLDivElement>(null);
   const [side, setSide] = useState<number>();
   useLayoutEffect(() => {
     const column = columnRef.current;
@@ -63,7 +68,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
           Math.min(
             column.clientWidth,
             column.clientHeight -
-              UNDER_PX -
+              Math.max(UNDER_MIN_PX, underRef.current?.offsetHeight ?? 0) -
               (aboveRef.current?.offsetHeight ?? 0)
           )
         )
@@ -73,6 +78,9 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
     observer.observe(column);
     if (aboveRef.current) {
       observer.observe(aboveRef.current);
+    }
+    if (underRef.current) {
+      observer.observe(underRef.current);
     }
     return () => observer.disconnect();
   }, []);
@@ -112,7 +120,12 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
             >
               {live ??
                 (image?.sheet ? (
-                  <AnimatedSheetPreview {...image.sheet} />
+                  <StripFrame
+                    sheetSrc={image.sheet.src}
+                    frameSize={image.sheet.frameSize}
+                    index={frame ?? standingFrameIndex(image.sheet.poses)}
+                    className={styles.preview}
+                  />
                 ) : image?.src ? (
                   <img
                     src={image.src}
@@ -127,7 +140,9 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
             {overlay}
           </div>
         </div>
-        <div className={styles.under}>{under}</div>
+        <div ref={underRef} className={styles.under}>
+          {under}
+        </div>
       </div>
     </div>
   );

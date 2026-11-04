@@ -22,6 +22,8 @@ import {
   ImageSubject,
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {PoseKey} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import AnimatedSheetPreview from '@cdo/apps/p5lab/spritelab/lab2/views/AnimatedSheetPreview';
 
 import {ProjectImage} from './projectImages';
 
@@ -100,6 +102,13 @@ interface ImageListProps {
   /** Hold the list still, while a picture is being made: choosing another
       image then would throw the picture away. */
   disabled?: boolean;
+  /** The chosen character set's tile plays one of its poses, from its
+      frames image as it is now (the tools' copy while they are open). */
+  playing?: {
+    key: string;
+    sheet: NonNullable<ProjectImage['sheet']>;
+    only: PoseKey;
+  };
 }
 
 const ImageList: React.FunctionComponent<ImageListProps> = ({
@@ -112,6 +121,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   newKind,
   onDelete,
   disabled,
+  playing,
 }) => {
   // The delete confirmation is open; changing the chosen image closes it.
   const [confirming, setConfirming] = useState(false);
@@ -288,14 +298,21 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                       disabled={disabled || choiceLocked}
                       onClick={() => onChoose(image.key)}
                     >
-                      {image.thumb && (
-                        <img
-                          src={image.thumb}
-                          alt=""
-                          className={classNames(
-                            image.pixelated && styles.pixelArt
-                          )}
+                      {playing?.key === image.key ? (
+                        <AnimatedSheetPreview
+                          {...playing.sheet}
+                          only={playing.only}
                         />
+                      ) : (
+                        image.thumb && (
+                          <img
+                            src={image.thumb}
+                            alt=""
+                            className={classNames(
+                              image.pixelated && styles.pixelArt
+                            )}
+                          />
+                        )
                       )}
                     </button>
                   </div>

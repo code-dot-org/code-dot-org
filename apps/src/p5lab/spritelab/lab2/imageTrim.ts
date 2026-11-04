@@ -10,6 +10,7 @@ import {
   upscaleImageNearest,
 } from '@cdo/apps/pixelEditor/pixelArt';
 
+import {CHARACTER_STRIP_BASE_FRAME, drawStripCell} from './characterAnimations';
 import {
   BACKGROUNDS_CATEGORY,
   RuntimeAnimationList,
@@ -266,36 +267,22 @@ export function loadedAnimations(
 }
 
 /**
- * The first frame of a sprite sheet as a dataURI, for thumbnails. Cached by
- * source.
+ * Frame `index` of a sprite sheet as a dataURI, for thumbnails. Cached by
+ * frame and source.
  */
-function firstFrameThumbnail(
+function frameThumbnail(
   source: string,
-  frameSize: {x: number; y: number}
+  frameSize: {x: number; y: number},
+  index: number
 ): Promise<string> {
-  let cached = frameThumbCache.get(source);
+  const cacheKey = `${index}:${source}`;
+  let cached = frameThumbCache.get(cacheKey);
   if (!cached) {
     cached = new Promise<string>(resolve => {
       const img = new Image();
       img.onload = () => {
         try {
-          const canvas = document.createElement('canvas');
-          canvas.width = frameSize.x;
-          canvas.height = frameSize.y;
-          canvas
-            .getContext('2d')
-            ?.drawImage(
-              img,
-              0,
-              0,
-              frameSize.x,
-              frameSize.y,
-              0,
-              0,
-              frameSize.x,
-              frameSize.y
-            );
-          resolve(canvas.toDataURL('image/png'));
+          resolve(drawStripCell(img, frameSize, index).toDataURL('image/png'));
         } catch (e) {
           resolve(source);
         }
@@ -306,7 +293,7 @@ function firstFrameThumbnail(
     while (frameThumbCache.size >= FRAME_CACHE_LIMIT) {
       frameThumbCache.delete(frameThumbCache.keys().next().value as string);
     }
-    frameThumbCache.set(source, cached);
+    frameThumbCache.set(cacheKey, cached);
   }
   return cached;
 }
@@ -418,8 +405,15 @@ export async function trimAnimationListImages(
       const isSheet = props.frameCount > 1 && !!props.frameSize;
       // An image cropped at save time (props.trimmed) skips the pixel scan
       // and re-encode; its stored dataURI is already what trimming makes.
+      // A character set's thumbnail is its standing frame, the picture its
+      // other poses were drawn from. Any other sheet's thumbnail is its
+      // first frame.
       const trimmed = isSheet
-        ? await firstFrameThumbnail(props.dataURI, props.frameSize)
+        ? await frameThumbnail(
+            props.dataURI,
+            props.frameSize,
+            props.poses ? CHARACTER_STRIP_BASE_FRAME : 0
+          )
         : props.trimmed
         ? props.dataURI
         : await trimTransparentBorder(props.dataURI);

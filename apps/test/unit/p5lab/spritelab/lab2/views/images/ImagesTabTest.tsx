@@ -1,10 +1,17 @@
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {CHARACTER_STRIP_POSES} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import ImagesTab from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImagesTab';
 
 // The scene is stood in for: a button that lands a picture of the kind it
 // was given, so the tab's own moves can be watched.
+// The player is a canvas that says which pose it plays.
+jest.mock(
+  '@cdo/apps/p5lab/spritelab/lab2/views/AnimatedSheetPreview',
+  () => (props: {only?: string}) =>
+    <canvas aria-label="Animation preview" data-only={props.only} />
+);
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
   const SentenceSceneStub = ({
     imageType,
@@ -98,12 +105,14 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
 jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
   const PixelEditorStub = ({
     tools,
+    knownPixelGrid,
     onEdit,
     onSave,
     onHistoryChange,
     children,
   }: {
     tools?: readonly string[];
+    knownPixelGrid?: number;
     onEdit?: () => void;
     onSave: (dataURI: string, meta: {pixelGridSize?: number}) => void;
     onHistoryChange?: (history: {canUndo: boolean}) => void;
@@ -125,6 +134,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
           stroke
         </button>
         <span>{tools ? `${tools.length} tools` : 'all tools'}</span>
+        <span>grid {knownPixelGrid ?? 'none'}</span>
         {children({
           ready: true,
           loadError: false,
@@ -141,11 +151,33 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
   };
   return {__esModule: true, default: PixelEditorStub};
 });
+// A real image element, since the frame row draws it onto a canvas.
 jest.mock('@cdo/apps/imageUtils', () => ({
-  toImage: async () => ({naturalWidth: 320, naturalHeight: 64}),
+  toImage: async () => {
+    const image = document.createElement('img');
+    Object.defineProperty(image, 'naturalWidth', {value: 320});
+    Object.defineProperty(image, 'naturalHeight', {value: 64});
+    return image;
+  },
 }));
 
 let made = 0;
+// Frames are cut and put back without a canvas: the strip is named for
+// what happened to it.
+const cutFrame = jest.fn(
+  async (src: string, _size: unknown, index: number) => `${src}#frame${index}`
+);
+const replaceFrame = jest.fn(
+  async (src: string, _size: unknown, index: number, frame: string) =>
+    `${src}+${index}:${frame}`
+);
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/frames', () => ({
+  ...jest.requireActual('@cdo/apps/p5lab/spritelab/lab2/views/images/frames'),
+  cutFrame: (...args: unknown[]) =>
+    cutFrame(...(args as [string, unknown, number])),
+  replaceFrame: (...args: unknown[]) =>
+    replaceFrame(...(args as [string, unknown, number, string])),
+}));
 const propsByKey: Record<string, Record<string, unknown>> = {};
 const animationList = () => ({
   orderedKeys: Object.keys(propsByKey),
@@ -773,5 +805,107 @@ describe('ImagesTab', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
     }
     jest.useRealTimers();
+  });
+
+  it("shows a character set's frames before editing, and opens the tools on the picked one", async () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      role: 'hero',
+      sourceUrl: 'sheet.png',
+      frameSize: {x: 64, y: 64},
+      pixelGridSize: 1,
+      poses: CHARACTER_STRIP_POSES,
+    };
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    // The row stands under the frame with the standing frame chosen.
+    expect(screen.getByRole('group', {name: 'Frames'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Standing'})).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    // The set's tile in the list plays the chosen frame's pose; no frame
+    // tile plays.
+    const playing = () =>
+      screen
+        .getByRole('button', {name: 'Sprite 1'})
+        .querySelector('canvas[aria-label="Animation preview"]')
+        ?.getAttribute('data-only');
+    expect(playing()).toBe('stand-right');
+    expect(
+      screen
+        .getByRole('group', {name: 'Frames'})
+        .querySelector('canvas[aria-label="Animation preview"]')
+    ).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Walk'}));
+    expect(screen.getByRole('button', {name: 'Walk'})).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    expect(playing()).toBe('walk-right');
+    expect(cutFrame).not.toHaveBeenCalled();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
+    });
+    expect(cutFrame).toHaveBeenCalledWith('sheet.png', {x: 64, y: 64}, 2);
+    expect(screen.getByRole('button', {name: 'Walk'})).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    // A frame picked while the tools are open stays picked after Done.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Jump up'}));
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^Done/}));
+    });
+    expect(screen.getByRole('button', {name: 'Jump up'})).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    expect(playing()).toBe('jump-right');
+  });
+
+  it('edits a character set one frame at a time, opening on the standing frame', async () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      role: 'hero',
+      sourceUrl: 'sheet.png',
+      frameSize: {x: 64, y: 64},
+      pixelGridSize: 1,
+      poses: CHARACTER_STRIP_POSES,
+    };
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
+    });
+    expect(cutFrame).toHaveBeenCalledWith('sheet.png', {x: 64, y: 64}, 1);
+    expect(screen.getByText('grid 1')).toBeTruthy();
+    expect(screen.getByRole('group', {name: 'Frames'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Standing'})).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    expect(screen.getByText('Edit the standing frame.')).toBeTruthy();
+    // A stroke, then another frame: the drawn frame goes back first.
+    fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
+    saveEdited.mockResolvedValue('k1');
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Walk'}));
+    });
+    expect(replaceFrame).toHaveBeenCalledWith(
+      'sheet.png',
+      {x: 64, y: 64},
+      1,
+      'data:png'
+    );
+    expect(saveEdited.mock.calls[0][1]).toBe('sheet.png+1:data:png');
+    expect(screen.getByText('Edit the walk frame.')).toBeTruthy();
+    expect(cutFrame).toHaveBeenLastCalledWith(
+      'sheet.png+1:data:png',
+      {x: 64, y: 64},
+      2
+    );
   });
 });
