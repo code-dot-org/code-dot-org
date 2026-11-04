@@ -138,6 +138,32 @@ describe('getAccessToken', () => {
     expect(mockPost).toHaveBeenCalledTimes(2);
   });
 
+  it('stops sharing fetches among concurrent callers once the server disallows reuse', async () => {
+    mockPost.mockImplementation(async () =>
+      tokenResponse(`token-${++issued}`, false)
+    );
+    await getAccessToken(tutorContext);
+
+    const results = await Promise.all([
+      getAccessToken(tutorContext),
+      getAccessToken(tutorContext),
+      getAccessToken(tutorContext),
+    ]);
+
+    expect(mockPost).toHaveBeenCalledTimes(4);
+    expect(new Set(results.map(result => result.token)).size).toBe(3);
+
+    // Sharing resumes once the server allows reuse again.
+    mockPost.mockImplementation(async () => tokenResponse(`token-${++issued}`));
+    await getAccessToken(tutorContext);
+    await Promise.all([
+      getAccessToken(tutorContext),
+      getAccessToken(tutorContext),
+    ]);
+
+    expect(mockPost).toHaveBeenCalledTimes(5);
+  });
+
   it('fetches a new token for a different context', async () => {
     const first = await getAccessToken(tutorContext);
     const second = await getAccessToken({...tutorContext, currentLevelId: 2});
