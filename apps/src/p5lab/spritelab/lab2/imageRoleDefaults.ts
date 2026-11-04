@@ -47,6 +47,13 @@ export function defaultRole(
   return typeof forKind === 'string' ? forKind : undefined;
 }
 
+// The keys of the images carrying the role, newest first.
+function keysInRole(list: RuntimeAnimationList, role: string): string[] {
+  return (list.orderedKeys || []).filter(
+    k => list.propsByKey[k]?.role === role
+  );
+}
+
 /** Every image of the kind carrying the role, by name, newest first. */
 export function imagesNamedForRole(
   list: RuntimeAnimationList,
@@ -56,14 +63,10 @@ export function imagesNamedForRole(
   if (!role) {
     return [];
   }
-  return (list.orderedKeys || [])
-    .filter(k => {
-      const props = list.propsByKey[k];
-      return (
-        props?.role === role &&
-        imageTypeFromCategories(props.categories) === kind
-      );
-    })
+  return keysInRole(list, role)
+    .filter(
+      k => imageTypeFromCategories(list.propsByKey[k].categories) === kind
+    )
     .map(k => list.propsByKey[k].name);
 }
 
@@ -72,9 +75,7 @@ export function imagesNamedInRole(
   list: RuntimeAnimationList,
   role: string
 ): string[] {
-  return (list.orderedKeys || [])
-    .filter(k => list.propsByKey[k]?.role === role)
-    .map(k => list.propsByKey[k].name);
+  return keysInRole(list, role).map(k => list.propsByKey[k].name);
 }
 
 /** The newest image of the kind carrying the role, by name. */

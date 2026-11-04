@@ -183,15 +183,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   );
 
   // On a level whose task is one image: the newest such image, when one
-  // exists, as the dropdowns' role defaults pick it.
+  // exists (the list is newest first), as the dropdowns' role defaults
+  // pick it.
   const ownImage = lockedImageType
-    ? [...images]
-        .reverse()
-        .find(image =>
-          imageRole
-            ? image.props.role === imageRole
-            : image.imageType === lockedImageType
-        )
+    ? images.find(image =>
+        imageRole
+          ? image.props.role === imageRole
+          : image.imageType === lockedImageType
+      )
     : undefined;
   // The opening choice is read once at mount; a later change to the list
   // must not move the choice.

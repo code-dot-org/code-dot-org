@@ -42,10 +42,13 @@ export function getCodeFromBlockXmlSource(blockXmlString: string) {
 /**
  * Compiles a serialized (JSON) workspace to executable code on a throwaway
  * headless workspace. The JSON equivalent of getCodeFromBlockXmlSource.
- * Returns '' for a missing serialization.
+ * Returns '' for a missing serialization. `prepare` runs on the loaded
+ * workspace before code is generated, for what rendering would otherwise
+ * have done to the blocks.
  */
 export function getCodeFromSerializedWorkspace(
-  source: object | undefined
+  source: object | undefined,
+  prepare?: (workspace: BlocklyCore.Workspace) => void
 ): string {
   if (!source) {
     return '';
@@ -53,6 +56,7 @@ export function getCodeFromSerializedWorkspace(
   const workspace = new Blockly.Workspace();
   try {
     Blockly.serialization.workspaces.load(source, workspace);
+    prepare?.(workspace);
     return Blockly.JavaScript.workspaceToCode(workspace);
   } finally {
     workspace.dispose();

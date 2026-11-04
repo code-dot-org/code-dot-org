@@ -93,21 +93,22 @@
   opacity: 0.5;
 }
 
-// The guess from noise through three stages, side by side.
+// The guess from noise through three stages, side by side: four squares
+// that fit the dialog's 552px of content with room to spare.
 .stages {
   display: flex;
   align-items: center;
   gap: 12px;
 
   .chunky {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
   }
 }
 
 .noise {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 8px;
   image-rendering: pixelated;
 }

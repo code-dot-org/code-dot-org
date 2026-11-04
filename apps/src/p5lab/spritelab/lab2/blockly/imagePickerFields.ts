@@ -142,8 +142,8 @@ export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
   }
 
   /** A field no saved value reached takes the level default. Rendering
-      does this in init; a headless workspace never renders, so a scene
-      compiled from saved sources calls it instead (sceneCode.ts). */
+      does this in init; a headless workspace never renders, so code built
+      from one applies it by hand (applyLevelDefaults). */
   applyLevelDefaultUnlessLoaded() {
     if (!this.valueLoaded) {
       this.applyLevelDefault();

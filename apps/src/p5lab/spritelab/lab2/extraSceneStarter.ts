@@ -24,11 +24,23 @@ function chainUnder(top: JsonBlockConfig): JsonBlockConfig[] {
   return chain;
 }
 
+/** The types of every real block in the tree: the chain and every input,
+    but not shadows. */
+function typesIn(block: JsonBlockConfig | undefined, into: Set<string>): void {
+  for (let current = block; current; current = current.next?.block) {
+    into.add(current.type);
+    Object.values(current.inputs ?? {}).forEach(input =>
+      typesIn(input.block, into)
+    );
+  }
+}
+
 /**
  * The scene with the starter's when-run blocks it lacks, inserted under its
  * own when run in the starter's order; the same scene object when it has
  * them all. A scene with no when run takes the starter whole. Blocks are
- * matched by type, so one the student moved or edited still counts.
+ * matched by type anywhere in the scene, so one the student moved or
+ * edited still counts.
  */
 export function withStarterBlocks(
   scene: Scene,
@@ -38,27 +50,34 @@ export function withStarterBlocks(
   if (!starterRun) {
     return scene;
   }
-  const tops = topBlocks(scene.source);
+  const source = scene.source;
+  const tops = topBlocks(source);
   const runIndex = tops.findIndex(block => block.type === WHEN_RUN);
-  if (runIndex === -1) {
+  if (runIndex === -1 || !source || !('blocks' in source)) {
     return tops.length ? scene : {...scene, source: starter};
   }
-  const run = tops[runIndex];
-  const held = new Set(chainUnder(run).map(block => block.type));
+  const held = new Set<string>();
+  tops.forEach(top => typesIn(top, held));
   const missing = chainUnder(starterRun).filter(block => !held.has(block.type));
   if (!missing.length) {
     return scene;
   }
   // Each missing block is a copy without its own `next`, chained in front
-  // of what the when run already holds.
+  // of what the when run already holds. Its id is dropped: the load gives
+  // it one that no other block in the project has.
+  const run = tops[runIndex];
   let next = run.next;
   for (let i = missing.length - 1; i >= 0; i--) {
     const block = {...missing[i]};
     delete block.next;
+    delete block.id;
     next = {block: {...block, ...(next ? {next} : {})}};
   }
   const repaired = tops.map((block, i) =>
     i === runIndex ? {...run, next} : block
   );
-  return {...scene, source: {...scene.source, blocks: {blocks: repaired}}};
+  return {
+    ...scene,
+    source: {...source, blocks: {...source.blocks, blocks: repaired}},
+  };
 }

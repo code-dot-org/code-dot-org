@@ -5,6 +5,7 @@ import {Scene} from '@cdo/apps/p5lab/spritelab/lab2/types';
 const WHEN_RUN = 'spritelab2_whenRun';
 const SET_PLAYER = 'spritelab2_setAsPlatformPlayer';
 const SAY = 'gamelab_spriteSay';
+const TOUCH = 'gamelab_checkTouching';
 
 const starter: WorkspaceSerialization = {
   blocks: {
@@ -15,11 +16,13 @@ const starter: WorkspaceSerialization = {
         y: 20,
         deletable: false,
         movable: false,
-        next: {block: {type: SET_PLAYER}},
+        next: {block: {type: SET_PLAYER, id: 'starter-player'}},
       },
     ],
   },
 };
+
+type Blocks = {blocks: {blocks: {id?: string; x?: number}[]}};
 
 const chain = (scene: Scene): string[] => {
   const source = scene.source;
@@ -41,31 +44,38 @@ const scene = (source?: WorkspaceSerialization): Scene => ({
 });
 
 describe('withStarterBlocks', () => {
-  it('gives a bare when run the starter block, keeping the when run itself', () => {
+  it('gives a bare when run the starter block, keeping the when run and the rest of the source', () => {
     const before = scene({
-      blocks: {blocks: [{type: WHEN_RUN, x: 5, y: 5, deletable: false}]},
-    });
+      blocks: {
+        languageVersion: 0,
+        blocks: [{type: WHEN_RUN, x: 5, y: 5, deletable: false}],
+      },
+    } as WorkspaceSerialization);
     const after = withStarterBlocks(before, starter);
     expect(chain(after)).toEqual([SET_PLAYER]);
-    const run = (after.source as {blocks: {blocks: {x?: number}[]}}).blocks
-      .blocks[0];
-    expect(run.x).toBe(5);
+    const blocks = after.source as unknown as Blocks & {
+      blocks: {languageVersion: number};
+    };
+    expect(blocks.blocks.blocks[0].x).toBe(5);
+    expect(blocks.blocks.languageVersion).toBe(0);
   });
 
-  it("puts the starter block ahead of the student's own", () => {
+  it("puts the starter block ahead of the student's own, with no id of its own", () => {
     const before = scene({
       blocks: {
         blocks: [{type: WHEN_RUN, next: {block: {type: SAY}}}],
       },
     });
-    expect(chain(withStarterBlocks(before, starter))).toEqual([
-      SET_PLAYER,
-      SAY,
-    ]);
+    const after = withStarterBlocks(before, starter);
+    expect(chain(after)).toEqual([SET_PLAYER, SAY]);
+    const run = (after.source as Blocks).blocks.blocks[0] as {
+      next?: {block?: {id?: string}};
+    };
+    expect(run.next?.block?.id).toBeUndefined();
   });
 
   it('is the same scene when the block is already there, wherever it is', () => {
-    const before = scene({
+    const underRun = scene({
       blocks: {
         blocks: [
           {
@@ -75,7 +85,17 @@ describe('withStarterBlocks', () => {
         ],
       },
     });
-    expect(withStarterBlocks(before, starter)).toBe(before);
+    expect(withStarterBlocks(underRun, starter)).toBe(underRun);
+    // Moved to another stack by the student.
+    const elsewhere = scene({
+      blocks: {
+        blocks: [
+          {type: WHEN_RUN},
+          {type: TOUCH, next: {block: {type: SET_PLAYER}}},
+        ],
+      },
+    });
+    expect(withStarterBlocks(elsewhere, starter)).toBe(elsewhere);
   });
 
   it('takes the starter whole for an empty scene, and leaves one with no when run', () => {
