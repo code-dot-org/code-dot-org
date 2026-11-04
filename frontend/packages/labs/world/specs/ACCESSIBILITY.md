@@ -422,9 +422,12 @@ by Tab and the stage's keys. Not seen with a screen reader.
   inspector's head, the palette's ring on the kind in hand and the brush's
   ghost all read. The inspector over the map was 92% opaque, and the map's
   words showed through its fields; it is opaque now.
-- **The dock-zone tint is faint on the dark stage.** The band a drag would
-  dock into is visible, and only just; not measured against 1.4.11
-  Non-text Contrast.
+- **The dock zone has an edge.** Its tint alone measured 1.9:1 against the
+  stage, under 1.4.11 Non-text Contrast's 3:1, and a screen's background
+  may be any color. It is outlined blue inside near-black, so one of the two
+  lines clears 3:1 against any background. The divider between docked sides
+  measured 6.6:1, and the palette's ring 4.2:1 on dark and 4.5:1 on light
+  (3.2:1 against its own fill).
 - **Tab order** from the size fields: the palette's tabs, its tiles, Add New
   Actor, the map, the map's toolbar, the folded inspector's Show button,
   then the preview. With a placement selected, I on the map reaches Back to
@@ -432,8 +435,10 @@ by Tab and the stage's keys. Not seen with a screen reader.
   Dock and Undock, the Camera section and each trait group in turn, then
   back to the map. Focus is visible throughout.
 - **The trait groups arrive after the rest of the inspector**, once the
-  game has described the kind. Tabbing in before then passes over them;
-  nothing says they are coming.
+  game has described the kind. Until then the inspector says "Loading its
+  traits…" where they will be, and the stage's announcer says when they
+  have come. A kind the game cannot describe stays undescribed
+  (`MapEditor`'s `withAnswers`), so it says it is loading until it can.
 
 ## Not yet done for any phase
 
@@ -442,5 +447,3 @@ by Tab and the stage's keys. Not seen with a screen reader.
   kind of file (the Pictures, Backgrounds and Themes menus, Rules in Play,
   the sound shelf).
 - A screen-reader pass through the same.
-- Contrast of the drop-zone tint, the divider and the palette's ring
-  against both themes.

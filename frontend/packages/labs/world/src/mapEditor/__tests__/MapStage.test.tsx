@@ -1100,6 +1100,39 @@ describe('the camera list', () => {
   });
 });
 
+describe('trait groups that have not arrived', () => {
+  it('says they are coming, and says when they come', () => {
+    const map = doc();
+    const view = mount(map);
+    pointer(view.canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(view.canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    expect(view.getByText('Loading its traits…')).toBeInTheDocument();
+
+    const schemas: Record<string, ActorSchema> = {
+      'actors/coin': [
+        {
+          trait: 'spin',
+          traitName: 'Spins',
+          props: [
+            {
+              ownerId: 'spin',
+              propId: 'speed',
+              name: 'speed',
+              type: 'number',
+              default: 1,
+            },
+          ],
+        },
+      ],
+    };
+    view.rerender(<MapStage {...stageProps(map, {schemas})} />);
+    expect(view.queryByText('Loading its traits…')).toBeNull();
+    expect(view.getByTestId('stage-announcer').textContent).toBe(
+      'Its traits have loaded, below its other properties.',
+    );
+  });
+});
+
 describe('a selection’s inspector in the palette’s column', () => {
   const inColumn = (map: MapDoc) => {
     const slot = document.createElement('div');

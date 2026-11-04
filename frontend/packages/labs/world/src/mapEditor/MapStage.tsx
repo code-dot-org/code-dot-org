@@ -236,6 +236,11 @@ const HOVER = 'rgba(77, 159, 255, 0.45)'; // lighter outline for the hovered act
 const REFERENCE = '#ffb454';
 /** The zone a dragged placement would dock in: the selection's blue, faint. */
 const DOCK_ZONE = 'rgba(77, 159, 255, 0.35)';
+/**
+ * …and its edge, blue inside dark: the fill alone is 1.9:1 on the stage, and
+ * a screen's background may be any color, which one line cannot clear.
+ */
+const DOCK_ZONE_EDGE = [OUTSIDE_BG, SELECT] as const;
 /** The line between docked sides. */
 const DIVIDER = '#4d9fff';
 /** How near a divider a press grabs it, in screen pixels. */
@@ -3383,13 +3388,20 @@ export const MapStage = ({
     }
     // Where a dragged placement would dock if let go now.
     if (dockZone) {
+      const {x, y, width, height} = dockZone.box;
       ctx.fillStyle = DOCK_ZONE;
-      ctx.fillRect(
-        dockZone.box.x,
-        dockZone.box.y,
-        dockZone.box.width,
-        dockZone.box.height,
-      );
+      ctx.fillRect(x, y, width, height);
+      const inset = 1 / view.scale;
+      DOCK_ZONE_EDGE.forEach((color, i) => {
+        ctx.strokeStyle = color;
+        ctx.lineWidth = (i === 0 ? 4 : 2) / view.scale;
+        ctx.strokeRect(
+          x + inset,
+          y + inset,
+          width - 2 * inset,
+          height - 2 * inset,
+        );
+      });
     }
     if (selected && hover) {
       drawSprite(
@@ -3591,6 +3603,21 @@ export const MapStage = ({
   const inspecting = Boolean(
     selectedActor || inspectedCamera || (inspectingLayer && inspectedLayer),
   );
+  // A kind the game has not described yet has no trait groups to show, and
+  // tabbing through before they come passes over them.
+  const traitsPending =
+    selectedActor !== null && schemas[selectedActor.type] === undefined;
+  const pendingFor = useRef<string | null>(null);
+  useEffect(() => {
+    if (traitsPending) {
+      pendingFor.current = selectedId;
+    } else {
+      if (pendingFor.current !== null && pendingFor.current === selectedId) {
+        say('Its traits have loaded, below its other properties.');
+      }
+      pendingFor.current = null;
+    }
+  }, [traitsPending, selectedId]);
   const wasInspecting = useRef(inspecting);
   useEffect(() => {
     onInspecting?.(inspecting);
@@ -3994,6 +4021,15 @@ export const MapStage = ({
           )}
           {cameraSection}
           {scrollSection}
+          {traitsPending && (
+            <Typography
+              variant="body3"
+              component="p"
+              className={styles.inspectorNote}
+            >
+              Loading its traits…
+            </Typography>
+          )}
           {settable.length > 0 && (
             <Accordion
               className={styles.inspectorAccordion}
