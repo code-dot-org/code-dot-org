@@ -31,6 +31,7 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
     RESTART_SCENE_BLOCK_TYPE,
     'spritelab2_setPlatformGravity',
+    'spritelab2_setPlatformGravityDirection',
     'spritelab2_setCameraZoom',
   ],
 };

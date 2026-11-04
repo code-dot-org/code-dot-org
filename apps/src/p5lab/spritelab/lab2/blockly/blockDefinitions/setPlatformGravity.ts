@@ -4,7 +4,7 @@ import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 import {PLATFORM_GRAVITY} from '../../platformPhysics';
 
 const MIN_GRAVITY_STRENGTH = 0;
-const MAX_GRAVITY_STRENGTH = 25;
+const MAX_GRAVITY_STRENGTH = 10;
 const DEFAULT_GRAVITY_STRENGTH = 10;
 
 /**

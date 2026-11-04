@@ -94,6 +94,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     name: 'Platform',
     types: [
       'spritelab2_setPlatformGravity',
+      'spritelab2_setPlatformGravityDirection',
       'spritelab2_setCameraZoom',
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
