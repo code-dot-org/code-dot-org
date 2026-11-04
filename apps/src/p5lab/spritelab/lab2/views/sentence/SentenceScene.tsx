@@ -47,8 +47,8 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import characterOutline from '@cdo/static/spritelab_lab2/character-outline.svg';
 
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
-import StripFrame from '../StripFrame';
 import BehindTheScenes from '../images/teaching/BehindTheScenes';
+import StripFrame from '../StripFrame';
 
 import AlternativeThumbs from './AlternativeThumbs';
 import GeneratingSteps from './GeneratingSteps';
