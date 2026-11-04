@@ -42,6 +42,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('aichat_polling_backoff_rate', anything).returns(AichatRequestsController::DEFAULT_POLLING_BACKOFF_RATE)
     DCDO.stubs(:get).with('throttle_time_default', anything).returns(60)
     DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
+    DCDO.stubs(:get).with('ai_gateway_fallback_is_enabled', anything).returns(false)
   end
 
   # start_chat_completion tests
@@ -116,7 +117,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'start_chat_completion returns an error for a US only model when US only models are blocked' do
     sign_in(@authorized_teacher1)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
     us_only_params = @valid_params_chat_completion.merge(
       modelParameters: @default_model_customizations.merge('selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH])
     )
@@ -131,9 +132,37 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'start_chat_completion allows a model available outside the US when US only models are blocked' do
     sign_in(@authorized_teacher1)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
     # @valid_params_chat_completion uses gpt-4o-mini.
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :success
+  end
+
+  test 'start_chat_completion still refuses a US only model when the gateway fallback is enabled' do
+    sign_in(@authorized_teacher1)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+    DCDO.stubs(:get).with('ai_gateway_fallback_is_enabled', anything).returns(true)
+    post :start_chat_completion, params: us_only_chat_completion_params, as: :json
+    assert_response :forbidden
+    assert_equal AichatRequestsController::MODEL_REGION_BLOCKED_ERROR, JSON.parse(response.body)['error']
+  end
+
+  # create tests
+  test 'create refuses a US only model when US only models are blocked' do
+    sign_in(@authorized_teacher1)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+    post :create, params: us_only_chat_completion_params, as: :json
+    assert_response :forbidden
+    assert_equal AichatRequestsController::MODEL_REGION_BLOCKED_ERROR, JSON.parse(response.body)['error']
+  end
+
+  test 'create records a US only model request when the gateway fallback is enabled' do
+    sign_in(@authorized_teacher1)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+    DCDO.stubs(:get).with('ai_gateway_fallback_is_enabled', anything).returns(true)
+    assert_difference('AichatRequest.count', 1) do
+      post :create, params: us_only_chat_completion_params, as: :json
+    end
     assert_response :success
   end
 
@@ -236,5 +265,11 @@ class AichatRequestsControllerTest < ActionController::TestCase
     assert_equal json_response.keys, ['executionStatus', 'response']
     assert_equal json_response['executionStatus'], execution_status
     assert_equal json_response['response'], response
+  end
+
+  private def us_only_chat_completion_params
+    @valid_params_chat_completion.merge(
+      modelParameters: @default_model_customizations.merge('selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH])
+    )
   end
 end
