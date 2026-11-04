@@ -243,7 +243,6 @@ export interface AppProps {
   onTrained?: (accuracy: number) => void;
   /** Optional callback invoked with whether the lab is loading its dataset, a saved project, or a pretrained model. */
   onLoadingChange?: (isLoading: boolean) => void;
-  /** Without it, the decision tree image can only be downloaded. */
   saveImageToBackpack?: SaveImageToBackpack;
 }
 

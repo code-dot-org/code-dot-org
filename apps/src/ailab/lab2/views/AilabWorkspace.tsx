@@ -94,9 +94,9 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   );
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const showToast = useToast();
-  // The Backpack API redirects signed-out users to sign in.
   const saveImageToBackpack: AilabEngineProps['saveImageToBackpack'] = useMemo(
     () =>
+      // The Backpack API redirects signed-out users to sign in.
       currentUserId
         ? (image, baseName) =>
             saveTreeImageToBackpack(
