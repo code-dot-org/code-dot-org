@@ -58,14 +58,15 @@ async function transcribeThroughGateway(
       const turnstileToken = await fetchTurnstileToken(
         accessToken.turnstileEnforcementMode
       );
-      // A challenge can outlast the reuse window, so a reusable token is re-checked after it.
+      const audioBlob = await audioToBlob(audio);
+      // A challenge or a URL download can outlast the reuse window, so a
+      // reusable token is re-checked after both.
       const {token, signingKey} = accessToken.reusable
         ? await issueToken()
         : accessToken;
 
       const formData = new FormData();
       formData.append('token', token);
-      const audioBlob = await audioToBlob(audio);
       formData.append('audio', audioBlob, 'audio');
       formData.append('model', getModelString(model));
 
