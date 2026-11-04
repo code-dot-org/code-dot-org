@@ -86,13 +86,13 @@ export function lessonIsLockedForAllStudents(lessonId, state) {
  *   current user.
  */
 export function lessonLocked(levels) {
-  // For lockable lessons, there is a requirement that they have exactly one LevelGroup,
-  // and that it be the last level in the lesson. Because LevelGroup's can have
-  // multiple "pages", and single LevelGroup might appear as multiple levels/bubbles
+  // For lockable lessons, there is a requirement that the last level in the
+  // lesson be an assessment LevelGroup or Quiz. A LevelGroup can have multiple
+  // "pages", so a single LevelGroup might appear as multiple levels/bubbles
   // on the client. However, it is the case that each page in the LG should have
   // an identical locked/unlocked state.
   // Given this, we should be able to look at the last level in our collection
-  // to determine whether the LG (and thus the lesson) should be considered locked.
+  // to determine whether the assessment (and thus the lesson) should be considered locked.
   return !!levels[levels.length - 1].isLocked;
 }
 
