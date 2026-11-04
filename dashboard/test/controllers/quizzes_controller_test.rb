@@ -83,6 +83,23 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_equal 2, questions.last['page']
   end
 
+  test "show marks a question deletable only when no other quiz uses it and no student has answered it" do
+    only_here = create(:multiple_choice_question)
+    shared = create(:multiple_choice_question)
+    answered = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: only_here, page: 1, position: 1)
+    create(:quiz_question_placement, level: @quiz, quiz_question: shared, page: 1, position: 2)
+    create(:quiz_question_placement, level: @quiz, quiz_question: answered, page: 1, position: 3)
+    create(:quiz_question_placement, level: create(:quiz), quiz_question: shared, page: 1, position: 1)
+    create(:quiz_question_response, quiz_question: answered)
+
+    get :show, params: {level_id: @quiz.id}
+
+    assert_response :success
+    deletable = JSON.parse(response.body)['questions'].to_h {|q| [q['id'], q['deletable']]}
+    assert_equal({only_here.id => true, shared.id => false, answered.id => false}, deletable)
+  end
+
   test "show flags a question used in a published unit" do
     question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 1)

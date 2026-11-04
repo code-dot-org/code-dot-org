@@ -26,6 +26,7 @@ class QuizQuestionsController < ApplicationController
       reorder(nil).distinct.pluck(:quiz_question_id).to_set
     published_usage = QuizQuestion.published_unit_usage(question_ids)
     pages_by_question_id = level.placements.where(quiz_question_id: question_ids).pluck(:quiz_question_id, :page).to_h
+    answered_ids = answered_question_ids(question_ids)
 
     result = questions.map do |question|
       quiz_question_json(
@@ -33,7 +34,8 @@ class QuizQuestionsController < ApplicationController
         level: level,
         attached_to_other_quizzes: other_quiz_ids.include?(question.id),
         used_in_published_unit: published_usage.fetch(question.id, false),
-        page: pages_by_question_id[question.id]
+        page: pages_by_question_id[question.id],
+        answered: answered_ids.include?(question.id)
       ).merge(attached: attached_ids.include?(question.id))
     end
     render json: result

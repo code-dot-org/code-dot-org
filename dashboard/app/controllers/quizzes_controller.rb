@@ -20,6 +20,7 @@ class QuizzesController < ApplicationController
     question_ids_attached_to_other_quizzes = QuizQuestionPlacement.where(quiz_question_id: question_ids).where.not(level_id: @level.id).
       pluck(:quiz_question_id).to_set
     published_usage = QuizQuestion.published_unit_usage(question_ids)
+    answered_ids = answered_question_ids(question_ids)
 
     render json: quiz_configuration_json(@level).merge(
       version: @level.saved_version,
@@ -31,7 +32,8 @@ class QuizzesController < ApplicationController
           level: @level,
           attached_to_other_quizzes: question_ids_attached_to_other_quizzes.include?(question.id),
           used_in_published_unit: published_usage.fetch(question.id, false),
-          page: placement.page
+          page: placement.page,
+          answered: answered_ids.include?(question.id)
         )
       end
     )
