@@ -9,6 +9,7 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useMemo, useRef, useState} from 'react';
 
 import {CheckpointStatusMap} from '../progress';
+import {usePathwayProject} from '../project/usePathwayProject';
 import {PathwayEvidence} from '../routing/evidence';
 import {Pathway} from '../types';
 
@@ -59,6 +60,10 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   hasSkippedCheckpoints,
 }) => {
   const {theme, setTheme} = useTheme();
+  // Load the project channel into Redux so PathwayApp can read its name for
+  // the tab label. The manager lives only while the map shows, so it never
+  // races a step's manager on the same channel.
+  usePathwayProject(pathway);
   // During the tour, show CheckpointCard for the user-selected checkpoint
   // without zooming the map. A zoomed map shifts the highlighted node away from
   // where IntroJS measured it, so we keep the map at its fit view.

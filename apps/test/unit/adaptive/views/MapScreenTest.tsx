@@ -57,6 +57,10 @@ jest.mock('intro.js-react', () => {
   return {Steps};
 });
 
+jest.mock('@cdo/apps/adaptive/project/usePathwayProject', () => ({
+  usePathwayProject: () => ({isLoading: false}),
+}));
+
 // MapView mock exposes onSelect so tests can simulate a checkpoint click.
 jest.mock('@cdo/apps/adaptive/views/map/MapView', () => ({
   __esModule: true,
