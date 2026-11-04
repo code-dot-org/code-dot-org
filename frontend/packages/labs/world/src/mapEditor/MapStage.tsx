@@ -3591,8 +3591,21 @@ export const MapStage = ({
   const inspecting = Boolean(
     selectedActor || inspectedCamera || (inspectingLayer && inspectedLayer),
   );
+  const wasInspecting = useRef(inspecting);
   useEffect(() => {
     onInspecting?.(inspecting);
+    // The column changing is a change nobody looking at the map sees, and a
+    // screen reader is not told of by anything else.
+    if (inspectorSlot && inspecting !== wasInspecting.current) {
+      const box = inspecting && selectedId ? announceBox(selectedId) : '';
+      say(
+        inspecting
+          ? `${box ? `${box}. ` : ''}Its properties are in the column beside ` +
+              'the map. I goes there, and Escape lets go.'
+          : 'The actors are back in the column beside the map.',
+      );
+    }
+    wasInspecting.current = inspecting;
   }, [inspecting, onInspecting]);
   /** Out of the column's inspector, back to the palette and the map. */
   const backToActors = () => {

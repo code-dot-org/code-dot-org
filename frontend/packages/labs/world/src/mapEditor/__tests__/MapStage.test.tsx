@@ -1121,6 +1121,14 @@ describe('a selection’s inspector in the palette’s column', () => {
     expect(onInspecting).toHaveBeenLastCalledWith(true);
   });
 
+  it('says so, both ways', () => {
+    const view = inColumn(doc());
+    const said = () => screen.getByTestId('stage-announcer').textContent;
+    expect(said()).toMatch(/Its properties are in the column beside the map/);
+    fireEvent.keyDown(view.canvas, {key: 'Escape'});
+    expect(said()).toBe('The actors are back in the column beside the map.');
+  });
+
   it('gives the column back on Actors, with the map focused', () => {
     const view = inColumn(doc());
     fireEvent.click(view.getByRole('button', {name: 'Back to the actors'}));

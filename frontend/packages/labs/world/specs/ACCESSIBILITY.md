@@ -407,8 +407,11 @@ below, and are listed last.
   was; Escape on the map does the same without moving it.
 - **The palette is hidden, not removed**, so its tab is kept; while it is
   hidden its tiles are out of the tab order.
-- **Untested**: no screen reader. Whether the swap of the column is
-  heard at all is open: nothing announces it.
+- **The swap is announced** through the map's live region: on selecting,
+  the box as before and "Its properties are in the column beside the map.
+  I goes there, and Escape lets go."; on letting go, "The actors are back
+  in the column beside the map."
+- **Untested**: no screen reader; the announcements are seen in unit tests.
 
 ## Not yet done for any phase
 
