@@ -158,6 +158,13 @@ $border-subtle: chrome.$border-subtle;
     margin-top: 8px;
   }
 
+  // The color control in a host's group, beside the tools.
+  .colorInline {
+    display: flex;
+    align-items: center;
+    margin: 0 2px;
+  }
+
   .colorPicker {
     width: 64px;
   }

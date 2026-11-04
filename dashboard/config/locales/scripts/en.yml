@@ -30533,6 +30533,8 @@ en:
               name: 'Lesson 16: While Loops Day 2'
             lesson-17:
               name: 'Lesson 17: While Loops Day 3'
+            lesson-18:
+              name: Lesson 13 Nested Conditionals - Day 1
           lesson_groups: {}
           name: csp-unit2-dev-27-28
           title: Unit 2 - Building Solutions Using Selection and Iteration
@@ -31258,3 +31260,6 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ai-makerspace1-2026:
+          lessons: {}
+          lesson_groups: {}
