@@ -78,6 +78,7 @@ import {
   defaultImageName,
   defaultRole,
   imagesNamedForRole,
+  imagesNamedInRole,
 } from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
 import {
@@ -736,8 +737,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       Object.fromEntries(
         objectiveRoles.map(role => [
           role,
-          // World cells and touched sprites are sprite images.
-          imagesNamedForRole(animationList, 'sprite', role),
+          // World cells hold sprites and blocks alike.
+          imagesNamedInRole(animationList, role),
         ])
       ),
     [objectiveRoles, animationList]

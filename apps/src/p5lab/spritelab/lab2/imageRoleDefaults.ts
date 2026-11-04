@@ -67,6 +67,16 @@ export function imagesNamedForRole(
     .map(k => list.propsByKey[k].name);
 }
 
+/** Every image carrying the role, of any kind, by name, newest first. */
+export function imagesNamedInRole(
+  list: RuntimeAnimationList,
+  role: string
+): string[] {
+  return (list.orderedKeys || [])
+    .filter(k => list.propsByKey[k]?.role === role)
+    .map(k => list.propsByKey[k].name);
+}
+
 /** The newest image of the kind carrying the role, by name. */
 export function imageNamedForRole(
   list: RuntimeAnimationList,
