@@ -7,6 +7,7 @@ import {
   ASK_AI_TIMEOUT_MS,
   askAiText,
   AskAiError,
+  askAiErrorMessage,
   buildSystemPrompt,
   cleanAnswer,
   isAskAiEnabled,
@@ -197,6 +198,14 @@ describe('askAiText', () => {
     await askAiText('hello', 'x'.repeat(5000));
     expect(generateText.mock.calls[0][0].system).toBe(
       buildSystemPrompt('x'.repeat(1000))
+    );
+  });
+});
+
+describe('askAiErrorMessage', () => {
+  it('names the system prompt when it is the flagged text', () => {
+    expect(askAiErrorMessage(new AskAiError('system_prompt'))).toBe(
+      "That system prompt isn't appropriate for class."
     );
   });
 });

@@ -69,6 +69,22 @@ class AskAiTimeoutError extends Error {
   }
 }
 
+const STUDENT_SAFETY_MESSAGES: Record<AskAiError['phase'], string> = {
+  prompt: "That prompt isn't appropriate for class.",
+  system_prompt: "That system prompt isn't appropriate for class.",
+  answer: "The AI's answer failed our safety checks.",
+};
+
+export function askAiErrorMessage(error: unknown): string {
+  if (error instanceof AskAiError) {
+    return STUDENT_SAFETY_MESSAGES[error.phase];
+  }
+  if (error instanceof AskAiTimeoutError) {
+    return 'The AI took too long to answer. Try again.';
+  }
+  return 'The AI could not answer. Try again.';
+}
+
 function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   let timer: number;
   const deadline = new Promise<never>((_, reject) => {
