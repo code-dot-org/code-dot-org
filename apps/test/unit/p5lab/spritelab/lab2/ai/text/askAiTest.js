@@ -162,18 +162,35 @@ describe('askAiText', () => {
     expect(system.endsWith('Talk like a pirate.')).toBe(true);
   });
 
-  // Unjudged, a system prompt could steer the model past the input filter.
-  it("judges the student's system prompt along with the question", async () => {
-    await askAiText('hello', 'Talk like a pirate.');
-    expect(isTextSafe.mock.calls[0][0]).toBe('Talk like a pirate.\n\nhello');
+  // Judged together, a long system prompt could bury a bad question.
+  it("judges the student's system prompt apart from the question", async () => {
+    await askAiText('hello', 'Talk like a parrot.');
+    const inputs = isTextSafe.mock.calls
+      .filter(([, filter]) => filter === 'input_filter')
+      .map(([text]) => text);
+    expect(inputs).toEqual(['hello', 'Talk like a parrot.']);
   });
 
-  it('throws with the prompt phase when the system prompt is flagged', async () => {
-    isTextSafe.mockResolvedValueOnce(false);
+  it('judges a system prompt once across questions', async () => {
+    await askAiText('hello', 'Talk like a robot.');
+    await askAiText('goodbye', 'Talk like a robot.');
+    const judged = isTextSafe.mock.calls.filter(
+      ([text]) => text === 'Talk like a robot.'
+    );
+    expect(judged).toHaveLength(1);
+  });
+
+  it('throws with the system prompt phase when it is flagged', async () => {
+    isTextSafe.mockImplementation(async text => text !== 'something awful');
     await expect(askAiText('hello', 'something awful')).rejects.toMatchObject({
       name: 'AskAiError',
-      phase: 'prompt',
+      phase: 'system_prompt',
     });
+    expect(Observability.metrics.count).toHaveBeenCalledWith(
+      expect.any(String),
+      1,
+      {result: 'system_prompt_flagged'}
+    );
   });
 
   it('truncates a very long system prompt', async () => {

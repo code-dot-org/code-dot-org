@@ -704,7 +704,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     const pending = (this.aiPending_ = new Set());
     let systemPrompt = '';
     library.commands.setSystemPrompt = promptText => {
-      systemPrompt = String(promptText ?? '');
+      systemPrompt = promptText;
     };
     library.commands.askAI = (promptText, variableName, setterCallback) => {
       if (!this.canAskAi_() || pending.has(variableName)) {
@@ -712,7 +712,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       pending.add(variableName);
       this.registerAiAnswer_(library, variableName, setterCallback);
-      askAiText(String(promptText ?? ''), systemPrompt)
+      askAiText(promptText, systemPrompt)
         .then(
           text => {
             if (this.destroyed_ || runId !== this.runId_) {
@@ -726,7 +726,7 @@ export default class SpriteLab2Engine extends SpriteLab {
             }
             console.warn(
               error instanceof AskAiError
-                ? `SpriteLab2: the ask AI block's ${error.phase} did not pass the safety check.`
+                ? `SpriteLab2: ${error.message}.`
                 : `SpriteLab2: the ask AI block got no answer (${error.message}).`
             );
           }
