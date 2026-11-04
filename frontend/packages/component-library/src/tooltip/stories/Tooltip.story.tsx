@@ -125,7 +125,7 @@ export const KeyboardOnly: StoryFn = () => (
   </>
 );
 
-const darkPanel = {
+const panel = {
   display: 'flex',
   gap: '2rem',
   padding: '1.5rem',
@@ -141,12 +141,12 @@ const darkPanel = {
 export const InsideDarkTheme: StoryFn = () => (
   <>
     <ThemeProvider initialTheme="Dark">
-      <div style={darkPanel}>
+      <div style={panel}>
         <Tooltip title="Follows ThemeProvider">
           <Button variant="contained">inside ThemeProvider</Button>
         </Tooltip>
         <ThemeProvider theme="Light">
-          <div style={darkPanel}>
+          <div style={panel}>
             <Tooltip title="Follows the pinned section">
               <Button variant="contained">pinned Light</Button>
             </Tooltip>
@@ -154,7 +154,7 @@ export const InsideDarkTheme: StoryFn = () => (
         </ThemeProvider>
       </div>
     </ThemeProvider>
-    <div data-theme="Dark" style={{...darkPanel, marginTop: '1rem'}}>
+    <div data-theme="Dark" style={{...panel, marginTop: '1rem'}}>
       <Tooltip
         title="Themed through slotProps"
         slotProps={{tooltip: {'data-theme': 'Dark'}}}
