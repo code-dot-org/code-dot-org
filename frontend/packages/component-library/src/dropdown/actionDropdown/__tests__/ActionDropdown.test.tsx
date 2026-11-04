@@ -161,7 +161,9 @@ describe('Design System - Action Dropdown Component', () => {
       />,
     );
 
-    expect(screen.getByRole('button', {name: 'option1 Beta'})).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'option1 Beta'}),
+    ).toBeInTheDocument();
     expect(screen.getByRole('button', {name: 'option2'})).toBeInTheDocument();
   });
 });
