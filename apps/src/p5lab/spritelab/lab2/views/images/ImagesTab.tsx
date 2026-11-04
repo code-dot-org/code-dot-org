@@ -18,11 +18,14 @@ import {DEFAULT_IMAGE_STYLE} from '../../levelMode';
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
 import EditorStrip from '../components/EditorStrip';
 import SentenceScene from '../sentence/SentenceScene';
+import {sentPromptsFor} from '../sentence/sentPrompts';
+import {readWordLayout} from '../sentence/wordLayout';
 
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry, NewImageKind} from './ImageList';
 import MakePane from './MakePane';
 import {listProjectImages, ProjectImage} from './projectImages';
+import BehindTheScenes from './teaching/BehindTheScenes';
 import useImageWriter, {ImageTarget} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
@@ -48,6 +51,8 @@ interface ImagesTabProps {
   verdictRequired?: boolean;
   /** The right pane's width, px: the preview column's. */
   paneWidth: number;
+  /** A picture became an image: the project should save now. */
+  onImageLanded?: () => void;
 }
 
 const DRAFT_ID = 'draft';
@@ -65,6 +70,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   editingOffered,
   verdictRequired,
   paneWidth,
+  onImageLanded,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails land as the engine trims; re-list when they do.
@@ -142,6 +148,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // picture's kind. A ref, so a slow upload lands where it was aimed.
   const chosenKeyRef = useRef(chosenId);
   chosenKeyRef.current = chosenImage?.key ?? null;
+  const landedRef = useRef(onImageLanded);
+  landedRef.current = onImageLanded;
   const land = useCallback(
     async (target: ImageTarget, write: () => Promise<string>) => {
       const key = await write();
@@ -153,9 +161,18 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         setChosenId(id => (id === DRAFT_ID ? key : id));
         setDraft(null);
       }
+      landedRef.current?.();
     },
     []
   );
+  const wordLayout = useMemo(() => readWordLayout(), []);
+  // While a picture is being made the list holds still: choosing another
+  // image would unmount the scene and throw the picture away, after it has
+  // been counted against the level's limit.
+  const [busy, setBusy] = useState(false);
+  // Animated is on until the student turns it off, and stays as they left
+  // it from image to image; no image or level turns it off for them.
+  const [animated, setAnimated] = useState(true);
   const handleKeep = useCallback(
     (result: GeneratedImageResult) => {
       const target: ImageTarget = {
@@ -211,6 +228,28 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     : '';
   const kindArticle = /^[aeiou]/.test(lockedKindLabel) ? 'an' : 'a';
   const paneWidthPx = paneWidth || DEFAULT_PANE_WIDTH;
+  // An AI-made image opened again offers the way behind the scenes too,
+  // rebuilt from what the image remembers of its making.
+  const generation = chosenImage?.props.generation;
+  const reopenedBehindTheScenes = generation && (
+    <BehindTheScenes
+      sent={sentPromptsFor(
+        generation.prompt,
+        {
+          imageType: generation.imageType,
+          subject: generation.subject,
+          style: generation.style,
+          seed: generation.seed,
+          temperature: generation.temperature,
+          pixelGrid: generation.pixelGrid,
+        },
+        generation.style,
+        !!chosenImage?.sheet,
+        generation.bodyPlan
+      )}
+      disabled={busy}
+    />
+  );
 
   return (
     <div className={styles.tab}>
@@ -218,6 +257,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         <EditorStrip title="AI" />
       </div>
       <ImageList
+        disabled={busy}
         images={images}
         draft={draft}
         chosenId={chosenId}
@@ -246,11 +286,22 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           imageType={kind.imageType}
           imageSubject={kind.subject}
           typeChoice={false}
+          initialChoices={
+            chosenImage?.props.generation?.choices && {
+              sentenceId: chosenImage.props.generation.sentenceId,
+              choices: chosenImage.props.generation.choices,
+            }
+          }
+          initialAnimated={animated}
+          onAnimatedChange={setAnimated}
           generationsLeft={generationsLeft}
           verdictRequired={verdictRequired}
           onGenerateStart={onGenerate}
+          onBusyChange={setBusy}
           onKeep={handleKeep}
           keepOnResult
+          wordLayout={wordLayout}
+          singleStep
           method="tab"
           layout={parts => (
             <>
@@ -261,13 +312,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     ? parts.frame
                     : undefined
                 }
+                generating={parts.mode === 'generating'}
                 beside={parts.alternatives}
-                under={parts.underFrame}
+                under={
+                  parts.mode === 'generating' ? (
+                    <div className={styles.underSteps}>{parts.progress}</div>
+                  ) : (
+                    parts.underFrame || reopenedBehindTheScenes
+                  )
+                }
               />
               <MakePane
                 parts={parts}
                 width={paneWidthPx}
-                overwriteWarns={!!chosenImage && !chosenImage.props.generation}
+                replaces={!!chosenImage}
+                regenerate={!!chosenImage?.props.generation}
                 onDraw={
                   drawOffered
                     ? () =>

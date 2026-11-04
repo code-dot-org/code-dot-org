@@ -188,7 +188,9 @@ describe('SentenceDialogBody', () => {
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Keep'}));
     });
-    expect(onKeep).toHaveBeenCalledWith(RESULT);
+    expect(onKeep).toHaveBeenCalledWith(
+      expect.objectContaining({filename: RESULT.filename})
+    );
   });
 
   it('holds Cancel while Keep is saving, so the picture cannot be discarded mid-save', async () => {

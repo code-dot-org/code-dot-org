@@ -39,10 +39,16 @@ const CHAINED_SENTENCE: Sentence = {
 const Harness: React.FunctionComponent<{
   initial?: Choices;
   sentence?: Sentence;
-}> = ({initial = {}, sentence = CHARACTER_SENTENCE}) => {
+  layout?: React.ComponentProps<typeof WordMenus>['layout'];
+}> = ({initial = {}, sentence = CHARACTER_SENTENCE, layout}) => {
   const [choices, setChoices] = useState<Choices>(initial);
   return (
-    <WordMenus sentence={sentence} choices={choices} onChange={setChoices} />
+    <WordMenus
+      sentence={sentence}
+      choices={choices}
+      onChange={setChoices}
+      layout={layout}
+    />
   );
 };
 
@@ -246,5 +252,27 @@ describe('WordMenus', () => {
     ) as HTMLElement;
     fireEvent.drop(blank, {dataTransfer});
     expect(sentenceText()).toBe('A grumpy cat.');
+  });
+
+  it('lays every open set out at once in clusters, the blank at the first unfilled', () => {
+    render(<Harness layout="clusters" />);
+    expect(screen.queryByRole('button', {name: 'Next words'})).toBeNull();
+    expect(
+      screen.getByRole('group', {name: 'creature (pick one)'})
+    ).toBeTruthy();
+    expect(screen.queryByRole('group', {name: 'adjective'})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'cat'}));
+    expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
+    expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'sparkly'})).toBeTruthy();
+    expect(placeholderShown()).toBe(true);
+    expect(sentenceText()).toBe('A cat.');
+  });
+
+  it('moves up and down in the vertical carousel', () => {
+    render(<Harness initial={{creature: 'cat'}} layout="vcarousel" />);
+    expect(screen.getByRole('button', {name: 'Next words'})).toBeTruthy();
+    next();
+    expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
   });
 });

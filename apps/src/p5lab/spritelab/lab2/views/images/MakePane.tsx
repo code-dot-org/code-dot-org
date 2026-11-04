@@ -1,6 +1,7 @@
 // The tab's right column: the sentence scene's controls, laid out as a thin
 // pane beside the frame.
 
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
@@ -15,21 +16,24 @@ interface MakePaneProps {
   parts: SentenceSceneParts;
   /** The pane's width, px: the preview column's. */
   width: number;
-  /** The image has pixels no prompt made, which a generation would replace;
+  /** An image stands in the frame; a new picture would take its place, so
       Generate asks first. */
-  overwriteWarns?: boolean;
+  replaces?: boolean;
   /** Open the drawing tools; absent where drawing is not offered. */
   onDraw?: () => void;
   /** The drawing button's text. */
   drawLabel?: string;
+  /** The image was made by AI and is unedited: generating makes it again. */
+  regenerate?: boolean;
 }
 
 const MakePane: React.FunctionComponent<MakePaneProps> = ({
   parts,
   width,
-  overwriteWarns,
+  replaces,
   onDraw,
   drawLabel = 'Draw my own',
+  regenerate,
 }) => {
   const [confirming, setConfirming] = useState(false);
   const result = parts.mode === 'result';
@@ -39,9 +43,9 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
     parts.draft.subject
   ).toLowerCase();
   const article = /^[aeiou]/.test(kindLabel) ? 'an' : 'a';
-  // The first generation over hand-drawn pixels asks; once a picture has
-  // landed, the pixels are the prompt's and the next one just replaces it.
-  const asksFirst = !!overwriteWarns && !parts.frameFilled;
+  // The first generation over an existing image asks; once a picture has
+  // landed in this sitting, the next one just replaces it.
+  const asksFirst = !!replaces && !parts.frameFilled;
   const generate = () => {
     if (asksFirst) {
       setConfirming(true);
@@ -74,40 +78,16 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
           )}
         </p>
       )}
-      {/* The words scroll between the pinned headline and buttons. */}
+      {parts.sentence}
+      {/* The words scroll between the pinned sentence and buttons. */}
       <div className={styles.paneScroll}>
-        {parts.sentence}
+        {parts.wordChooser}
+        {parts.animatedChoice}
         {parts.error}
-        {parts.progress}
         {parts.verdict && <div className={styles.verdict}>{parts.verdict}</div>}
       </div>
       <div className={styles.paneBottom}>
-        {confirming ? (
-          <div className={styles.confirm} role="group" aria-label="Replace">
-            <span>Replace your drawing with a new picture?</span>
-            <div className={styles.confirmButtons}>
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                size="small"
-                onClick={() => setConfirming(false)}
-              >
-                Keep drawing
-              </MuiButton>
-              <MuiButton
-                variant="contained"
-                color="primary"
-                size="small"
-                onClick={() => {
-                  setConfirming(false);
-                  parts.generate();
-                }}
-              >
-                Replace
-              </MuiButton>
-            </div>
-          </div>
-        ) : result ? (
+        {result ? (
           <>
             <MuiButton
               variant="outlined"
@@ -118,29 +98,36 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
               Change words
             </MuiButton>
             <MuiButton
-              variant="contained"
+              variant="outlined"
               color="primary"
-              className={styles.generateButton}
               startIcon={<FontAwesomeV6Icon iconName="sparkles" aria-hidden />}
               disabled={parts.busy || parts.exhausted}
               onClick={generate}
             >
-              Generate again
+              Regenerate
             </MuiButton>
           </>
         ) : (
           <MuiButton
-            variant="contained"
+            variant={regenerate ? 'outlined' : 'contained'}
             color="primary"
             className={classNames(
-              styles.generateButton,
-              parts.complete && !parts.busy && !parts.exhausted && styles.ready
+              !regenerate && styles.generateButton,
+              !regenerate &&
+                parts.complete &&
+                !parts.busy &&
+                !parts.exhausted &&
+                styles.ready
             )}
             startIcon={<FontAwesomeV6Icon iconName="sparkles" aria-hidden />}
             disabled={!parts.complete || parts.busy || parts.exhausted}
             onClick={generate}
           >
-            {generating ? 'Generating…' : 'Generate'}
+            {generating
+              ? 'Generating…'
+              : regenerate
+              ? 'Regenerate'
+              : 'Generate'}
           </MuiButton>
         )}
         {onDraw && !generating && !confirming && (
@@ -156,6 +143,24 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
           </MuiButton>
         )}
       </div>
+      {confirming && (
+        <MuiDialog
+          title="Replace this image?"
+          description="A new picture takes its place."
+          onClose={() => setConfirming(false)}
+          secondaryButtonProps={{
+            children: 'Cancel',
+            onClick: () => setConfirming(false),
+          }}
+          primaryButtonProps={{
+            children: 'Replace',
+            onClick: () => {
+              setConfirming(false);
+              parts.generate();
+            },
+          }}
+        />
+      )}
     </section>
   );
 };

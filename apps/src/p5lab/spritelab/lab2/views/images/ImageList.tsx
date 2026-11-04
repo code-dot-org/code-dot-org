@@ -99,6 +99,9 @@ interface ImageListProps {
   newKind?: NewImageKind;
   /** Delete the chosen image; absent where images cannot be deleted. */
   onDelete?: (key: string) => void;
+  /** Hold the list still, while a picture is being made: choosing another
+      image then would throw the picture away. */
+  disabled?: boolean;
 }
 
 const ImageList: React.FunctionComponent<ImageListProps> = ({
@@ -110,6 +113,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   onNew,
   newKind,
   onDelete,
+  disabled,
 }) => {
   // The delete confirmation is open; changing the chosen image closes it.
   const [confirming, setConfirming] = useState(false);
@@ -185,6 +189,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               color="primary"
               className={styles.newButton}
               aria-label="New image"
+              disabled={disabled}
               aria-haspopup="menu"
               aria-expanded={!!menuButton}
               aria-controls={menuButton ? menuId : undefined}
@@ -257,6 +262,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                     type="button"
                     className={classNames(styles.tile, styles.tileDraft)}
                     aria-pressed={kindDraft.id === chosenId}
+                    disabled={disabled}
                     aria-label={`New ${imageKindNoun(
                       kindDraft.imageType,
                       kindDraft.subject
@@ -281,7 +287,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                       className={styles.tile}
                       aria-pressed={chosen}
                       aria-label={image.name}
-                      disabled={choiceLocked}
+                      disabled={disabled || choiceLocked}
                       onClick={() => onChoose(image.key)}
                     >
                       {image.thumb && (
@@ -308,6 +314,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
             color="tertiary"
             size="small"
             aria-label="Delete image"
+            disabled={disabled}
             onClick={() => setConfirming(true)}
           >
             <FontAwesomeV6Icon iconName="trash-can" />

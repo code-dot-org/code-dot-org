@@ -191,6 +191,63 @@ describe('SentenceScene', () => {
     });
   });
 
+  it('offers Animated to a host that lays the parts out, and unticked makes one picture', async () => {
+    generateImage.mockResolvedValue(RESULT);
+    renderScene({
+      layout: (parts: {
+        sentence: React.ReactNode;
+        wordChooser: React.ReactNode;
+        animatedChoice: React.ReactNode;
+        generate: () => void;
+      }) => (
+        <div>
+          {parts.sentence}
+          {parts.wordChooser}
+          {parts.animatedChoice}
+          <button type="button" onClick={parts.generate}>
+            Generate
+          </button>
+        </div>
+      ),
+    });
+    const box = screen.getByRole('checkbox', {name: 'Animated'});
+    expect((box as HTMLInputElement).checked).toBe(true);
+    fireEvent.click(box);
+    pickCreature();
+    await generate();
+    expect(generateCharacterSet).not.toHaveBeenCalled();
+    expect(generateImage).toHaveBeenCalledTimes(1);
+  });
+
+  it('records the words on the picture, and puts saved words back', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    const onKeep = jest.fn();
+    renderScene({
+      onKeep,
+      keepOnResult: true,
+      initialChoices: {
+        sentenceId: 'character',
+        choices: {creature: 'dragon', adjective: 'gigantic'},
+      },
+      layout: (parts: {sentence: React.ReactNode; generate: () => void}) => (
+        <div>
+          {parts.sentence}
+          <button type="button" onClick={parts.generate}>
+            Generate
+          </button>
+        </div>
+      ),
+    });
+    // The dragon is back; the adjective the list no longer has is not.
+    expect(screen.getByRole('button', {name: 'Remove dragon'})).toBeTruthy();
+    expect(screen.queryByText('gigantic')).toBeNull();
+    await generate();
+    expect(onKeep.mock.calls[0][0].generation).toMatchObject({
+      sentenceId: 'character',
+      choices: {creature: 'dragon'},
+    });
+  });
+
   it('shows the steps and a fact while making the picture, then the two choices', async () => {
     const finish = pendingGeneration();
     renderScene();
@@ -425,7 +482,7 @@ describe('SentenceScene', () => {
     });
     expect(saveGeneratedImage).toHaveBeenCalledWith(
       expect.any(Function),
-      RESULT,
+      expect.objectContaining({filename: RESULT.filename}),
       expect.anything()
     );
   });
@@ -485,7 +542,7 @@ describe('SentenceScene', () => {
     });
     expect(saveGeneratedImage).toHaveBeenCalledWith(
       expect.any(Function),
-      RESULT,
+      expect.objectContaining({filename: RESULT.filename}),
       expect.objectContaining({imageType: 'sprite', imageRole: 'hero'})
     );
     expect(continueOrFinishLesson).toHaveBeenCalled();

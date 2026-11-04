@@ -88,4 +88,8 @@ export interface ImageGenerationMetadata {
   /** The stance a character set's prompts were written for; absent on one
       picture, and on sets made before plans existed (upright). */
   bodyPlan?: BodyPlan;
+  /** The sentence the words came from, and the word chosen for each of its
+      slots, so the words can be put back; absent on a typed prompt. */
+  sentenceId?: string;
+  choices?: Record<string, string>;
 }
