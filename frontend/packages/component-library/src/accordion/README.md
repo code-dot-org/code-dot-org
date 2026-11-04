@@ -28,6 +28,8 @@ Pass the chevron as its `expandIcon`; the theme colors and flips it:
 ```tsx
 <Accordion>
   <AccordionSummary
+    id="faq-1-summary"
+    aria-controls="faq-1-panel"
     expandIcon={
       <FontAwesomeV6Icon iconName="chevron-down" aria-hidden="true" />
     }
@@ -43,7 +45,8 @@ Pass the chevron as its `expandIcon`; the theme colors and flips it:
 ```
 
 The bare one keeps MUI's own `<h3>`, `role="region"` and height animation,
-which `MuiAccordion` turns off. See
+which `MuiAccordion` turns off. MUI names the region only from the
+summary's `id` and `aria-controls`; without them the region is unnamed. See
 [ACCORDION_MIGRATION_TO_MUI.md](ACCORDION_MIGRATION_TO_MUI.md) for the
 migration plan and its deferred changes.
 

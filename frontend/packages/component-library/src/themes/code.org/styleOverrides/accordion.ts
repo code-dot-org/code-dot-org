@@ -43,6 +43,7 @@ export const ACCORDION_SUMMARY_OVERRIDES: Components<Theme>['MuiAccordionSummary
         minHeight: 0,
         padding: '0.75rem 1.25rem',
         gap: '0.875rem',
+        alignItems: 'center',
         justifyContent: 'space-between',
         background: 'var(--background-neutral-primary)',
         transition: 'none',
