@@ -277,8 +277,8 @@ describe('NavigationArea', () => {
       expect(screen.getByRole('button')).toHaveTextContent('Submit');
     });
 
-    describe('with a prompt box', () => {
-      const prompt = {
+    describe('with a callout box', () => {
+      const callout = {
         heading: 'Stuck or want to get better at something?',
         body: 'Practice a skill on your skill map, then come back.',
       };
@@ -288,35 +288,35 @@ describe('NavigationArea', () => {
           label: 'Practice skills',
           enabled: true,
           onContinue: jest.fn(),
-          prompt,
+          callout,
         });
-        expect(screen.getByText(prompt.heading)).toBeInTheDocument();
-        expect(screen.getByText(prompt.body)).toBeInTheDocument();
+        expect(screen.getByText(callout.heading)).toBeInTheDocument();
+        expect(screen.getByText(callout.body)).toBeInTheDocument();
       });
 
-      it('still renders the button inside the prompt box', () => {
+      it('still renders the button inside the callout box', () => {
         renderWithHost({
           label: 'Practice skills',
           enabled: true,
           onContinue: jest.fn(),
-          prompt,
+          callout,
         });
         expect(screen.getByRole('button')).toHaveTextContent('Practice skills');
       });
 
       it('calls onContinue when the button is clicked', () => {
         const onContinue = jest.fn();
-        renderWithHost({enabled: true, onContinue, prompt});
+        renderWithHost({enabled: true, onContinue, callout});
 
         fireEvent.click(screen.getByRole('button'));
 
         expect(onContinue).toHaveBeenCalledTimes(1);
       });
 
-      it('does not render heading or body text without a prompt', () => {
+      it('does not render heading or body text without a callout', () => {
         renderWithHost({enabled: true, onContinue: jest.fn()});
-        expect(screen.queryByText(prompt.heading)).toBeNull();
-        expect(screen.queryByText(prompt.body)).toBeNull();
+        expect(screen.queryByText(callout.heading)).toBeNull();
+        expect(screen.queryByText(callout.body)).toBeNull();
       });
     });
   });

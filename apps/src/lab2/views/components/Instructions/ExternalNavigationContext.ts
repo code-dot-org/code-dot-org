@@ -20,7 +20,7 @@ export interface ExternalNavigation {
    * a heading and body line above it (e.g. the adaptive project's skill-map
    * nudge box).
    */
-  prompt?: {heading: string; body: string};
+  callout?: {heading: string; body: string};
 }
 
 export const ExternalNavigationContext =
