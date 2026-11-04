@@ -84,11 +84,7 @@ class Quiz < Level
     existing = placements.map {|p| {quiz_question_id: p.quiz_question_id, page: p.page, position: p.position}}
     return if existing.sort_by {|h| h[:quiz_question_id]} == desired.sort_by {|h| h[:quiz_question_id]}
 
-    # insert_all!/delete_all bypass QuizQuestionPlacement's callbacks, avoiding
-    # the after commit hook that would otherwise circularly resave the quiz.
-    placements.delete_all
-    QuizQuestionPlacement.insert_all!(desired.map {|d| d.merge(level_id: id)}) if desired.any?
-    placements.reset
+    write_placement_rows!(desired)
   end
 
   # Sets this quiz's placements to the given questions, in the order given,
@@ -107,17 +103,14 @@ class Quiz < Level
     last_position_by_page = Hash.new(0)
     rows = entries.sort_by {|e| [e[:page], e[:position]]}.map do |entry|
       page = page_numbers[entry[:page]]
-      {level_id: id, quiz_question_id: entry[:quiz_question_id], page: page, position: last_position_by_page[page] += 1}
+      {quiz_question_id: entry[:quiz_question_id], page: page, position: last_position_by_page[page] += 1}
     end
 
-    # delete_all/insert_all! skip QuizQuestionPlacement's after_commit, which
-    # would rewrite the .level file once per placement.
-    QuizQuestionPlacement.where(level_id: id).delete_all
-    QuizQuestionPlacement.insert_all!(rows) if rows.any?
-    placements.reset
-
-    QuizQuestion.where(id: delete_question_ids).find_each do |question|
-      question.destroy! unless question.referenced?
+    transaction do
+      write_placement_rows!(rows)
+      QuizQuestion.where(id: delete_question_ids).find_each do |question|
+        question.destroy! unless question.referenced?
+      end
     end
   end
 
@@ -180,6 +173,15 @@ class Quiz < Level
       }
     end
     properties_camelized
+  end
+
+  # delete_all/insert_all! skip the per-placement after_commit that rewrites the .level file.
+  private def write_placement_rows!(rows)
+    transaction do
+      QuizQuestionPlacement.where(level_id: id).delete_all
+      QuizQuestionPlacement.insert_all!(rows.map {|row| row.merge(level_id: id)}) if rows.any?
+    end
+    placements.reset
   end
 
   private def reveal_answer_explanation_requires_show_correctness
