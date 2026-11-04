@@ -1,0 +1,49 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-10-30T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# AI Gateway\r\n\r\nSend a message to the chat bot.",
+    "system_prompt": "Deprecated",
+    "bot_title": "Deprecated",
+    "bot_description": "Deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "editable"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ]
+    }
+  },
+  "published": true
+}]]></config>
+</Aichat>

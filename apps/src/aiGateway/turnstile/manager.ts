@@ -5,12 +5,12 @@ import {
   CONTAINER_ID,
   LOG,
   TOKEN_MAX_AGE_MS,
-  TURNSTILE_SITE_KEY,
 } from './constants';
 import {debuggerWillPauseInAnonymousScope} from './debuggerProbe';
 import {type TurnstileEnforcementMode} from './enforcementMode';
 import {loadTurnstileScript} from './loadScript';
 import {recordTurnstileOutcome} from './outcome';
+import {getTurnstileSiteKey} from './siteKey';
 import {
   TokenAcquisitionMode,
   TurnstileChallengeError,
@@ -429,7 +429,7 @@ export class TurnstileManager {
       let widgetId: string;
       try {
         widgetId = window.turnstile.render(this.container, {
-          sitekey: TURNSTILE_SITE_KEY,
+          sitekey: getTurnstileSiteKey(),
           callback: (token: string) => {
             if (settled) {
               console.warn(

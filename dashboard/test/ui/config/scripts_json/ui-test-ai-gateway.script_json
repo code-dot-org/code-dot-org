@@ -1,0 +1,159 @@
+{
+  "script": {
+    "name": "ui-test-ai-gateway",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-10-30 19:28:09 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ui-test-ai-gateway"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ui-test-ai-gateway"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "AI Gateway",
+      "name": "AI Gateway",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "AI Gateway",
+        "lesson_group.key": "",
+        "script.name": "ui-test-ai-gateway"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "76ccc43a-33f7-4ab0-9566-c0edb8f6adfe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76ccc43a-33f7-4ab0-9566-c0edb8f6adfe",
+        "lesson.key": "AI Gateway",
+        "lesson_group.key": "",
+        "script.name": "ui-test-ai-gateway"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "4e4b217f-3061-41b8-9572-6e2bc5deb5a2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4e4b217f-3061-41b8-9572-6e2bc5deb5a2",
+        "lesson_activity.key": "76ccc43a-33f7-4ab0-9566-c0edb8f6adfe"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UI Test AI Gateway Chat"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test AI Gateway Chat"
+        ],
+        "lesson.key": "AI Gateway",
+        "lesson_group.key": "",
+        "script.name": "ui-test-ai-gateway",
+        "activity_section.key": "4e4b217f-3061-41b8-9572-6e2bc5deb5a2"
+      },
+      "level_keys": [
+        "UI Test AI Gateway Chat"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "UI Test AI Gateway Chat",
+        "script_level.level_keys": [
+          "UI Test AI Gateway Chat"
+        ],
+        "lesson.key": "AI Gateway",
+        "lesson_group.key": "",
+        "script.name": "ui-test-ai-gateway",
+        "activity_section.key": "4e4b217f-3061-41b8-9572-6e2bc5deb5a2"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
