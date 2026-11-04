@@ -1,3 +1,4 @@
+import {useToast} from '@code-dot-org/component-library/toast';
 import React, {
   useContext,
   useEffect,
@@ -22,6 +23,7 @@ import {
 } from '@cdo/apps/ailab/engine';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import type ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
@@ -31,11 +33,13 @@ import ResourcePanel, {
 } from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {notifyWithToast} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AccuracyValidator from '../AccuracyValidator';
 import {getDefaultInstructions} from '../defaultInstructions';
+import {saveTreeImageToBackpack} from '../saveTreeImageToBackpack';
 import {sourceToProject} from '../sources';
 import {AilabLevelProperties} from '../types';
 
@@ -89,6 +93,22 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   const dynamicInstructionsMap: {[key: string]: string} = useMemo(
     () => JSON.parse(levelProperties.dynamicInstructions || '{}'),
     [levelProperties.dynamicInstructions]
+  );
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const showToast = useToast();
+  const saveImageToBackpack: AilabEngineProps['saveImageToBackpack'] = useMemo(
+    () =>
+      // The Backpack API redirects signed-out users to sign in.
+      currentUserId
+        ? (image, baseName) =>
+            saveTreeImageToBackpack(
+              Lab2Registry.getInstance().getUnifiedBackpackApi(),
+              notifyWithToast(showToast),
+              image,
+              baseName
+            )
+        : undefined,
+    [currentUserId, showToast]
   );
 
   useEffect(() => {
@@ -201,6 +221,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
                   logMetric={logMetric}
                   onStartOver={onStartOver}
                   onLoadingChange={onLoadingChange}
+                  saveImageToBackpack={saveImageToBackpack}
                 />
               </TrainingDataProvider>
             </ProjectProvider>
