@@ -6,7 +6,7 @@
       "path": "datasets/lesson10_cafeteria_menu.csv",
       "metadataPath": "datasets/lesson10_cafeteria_menu.json",
       "isToy": true,
-      "rowCount": 83
+      "rowCount": 87
     },
     {
       "id": "lesson10_fitness_app",
