@@ -203,6 +203,8 @@ interface PlayspaceProps {
   columnShare?: number;
   // The preview column's width, which the code keeps clear of.
   onPreviewWidth?: (width: number) => void;
+  /** The width of the preview column, reported in every mode. */
+  onColumnWidth?: (width: number) => void;
 }
 
 /**
@@ -226,6 +228,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   side = 'right',
   columnShare = PREVIEW_WIDTH_SHARE,
   onPreviewWidth,
+  onColumnWidth,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -522,6 +525,12 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   useEffect(() => {
     reportPreviewWidth.current?.(previewWidth);
   }, [previewWidth]);
+  const reportColumnWidth = useRef(onColumnWidth);
+  reportColumnWidth.current = onColumnWidth;
+  const measuredColumnWidth = measured ? columnWidth : 0;
+  useEffect(() => {
+    reportColumnWidth.current?.(measuredColumnWidth);
+  }, [measuredColumnWidth]);
   // Under the box, unscaled; at the column's width under a stacked
   // preview, so a shrunk box never wraps the buttons.
   const barLeft = previewWidth > 0 && !beside ? columnLeft + CARD_GAP : x;

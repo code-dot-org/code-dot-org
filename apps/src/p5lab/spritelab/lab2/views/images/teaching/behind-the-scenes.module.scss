@@ -1,0 +1,94 @@
+.dialog {
+  width: 640px;
+  max-width: 100%;
+}
+
+// The thumbnail beside the intro, then the switch, then the words.
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lead {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.thumb {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  background-color: var(--background-neutral-secondary);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+
+// A strip is scaled to the box's height so its first frame fills the box.
+.thumbStrip {
+  background-size: auto 100%;
+}
+
+.pixelArt {
+  image-rendering: pixelated;
+}
+
+.intro {
+  margin: 0;
+}
+
+.views {
+  align-self: flex-start;
+}
+
+// The words as sent, in a rounded frame a shade up from the dialog; the
+// text scrolls inside. Only the words may be copied.
+.promptFrame {
+  max-height: 40vh;
+  overflow-y: auto;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background-color: var(--background-neutral-secondary);
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  user-select: text;
+}
+
+.promptNote {
+  margin: 0 0 10px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.promptCommon {
+  margin: 0;
+}
+
+.poseMark {
+  padding: 0 3px;
+  border-radius: 3px;
+  background-color: color-mix(
+    in srgb,
+    var(--sentiment-warning-50) 35%,
+    transparent
+  );
+  color: inherit;
+}
+
+.poseList {
+  margin: 10px 0 0;
+  padding-left: 18px;
+
+  li {
+    margin-top: 4px;
+  }
+}
+
+.poseLabel {
+  font-weight: 700;
+  text-transform: capitalize;
+}

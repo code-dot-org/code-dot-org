@@ -4,6 +4,12 @@
   "title": "Hour of AI 2026 - Adaptive",
   "objective": "Steer AI toward an intended design by writing specific prompts and refining them based on what comes back. Judge AI output against your own intent, and decide when to accept, redirect, or override it. Use the vocabulary of web design (hero, feature cards, interactive canvas, call-to-action) to analyze what makes a page effective and to describe what you want built. Describe a problem with enough context for AI to give a useful explanation and fix. Verify an AI-proposed fix before trusting it, confirming the problem is resolved and nothing new broke.",
   "map": { "layout": "destinations" },
+  "destinations": {
+    "style-design": { "title": "Style & Design", "icon": "palette", "color": "strawberry" },
+    "interactive-elements": { "title": "Interactive Elements", "icon": "arrow-pointer", "color": "green" },
+    "story-message": { "title": "Story & Message", "icon": "pencil", "color": "blue" },
+    "under-the-hood": { "title": "Under the Hood", "icon": "wrench", "color": "orange" }
+  },
   "project": {
     "templateLevel": "adaptive-HoAI26-template-main-project",
     "description": "Work on your final project here!"
@@ -51,6 +57,9 @@
       "title": "Intro",
       "description": "Intro panels",
       "routeAfterCompletion": true,
+      "plan": {
+        "template": "Build me a site about {topic} for {audience} that should feel {style}. What it should do: {purpose}"
+      },
       "steps": [
         {
           "id": "intro-panels",
@@ -90,16 +99,164 @@
           "level": "adaptive-HoAI26-intro-four-ways-there"
         },
         {
-          "id": "intro-plan",
-          "title": "Plan your website",
+          "id": "intro-interest",
+          "title": "What are you into?",
+          "kind": "questions",
+          "description": "Pick one, or type your own.",
+          "questions": [
+            {
+              "id": 201,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-interest",
+              "questionTitle": "What are you into?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "Music and art"
+                },
+                {
+                  "id": "b",
+                  "text": "Sports and fitness"
+                },
+                {
+                  "id": "c",
+                  "text": "Food and cooking"
+                },
+                {
+                  "id": "d",
+                  "text": "Gaming"
+                },
+                {
+                  "id": "e",
+                  "text": "School and education"
+                },
+                {
+                  "id": "f",
+                  "text": "Animals and nature"
+                },
+                {
+                  "id": "g",
+                  "text": "Fashion and style"
+                },
+                {
+                  "id": "h",
+                  "text": "Friends and community"
+                }
+              ],
+              "allowOther": {
+                "placeholder": "Or type your own interest"
+              },
+              "plan": "topic"
+            }
+          ]
+        },
+        {
+          "id": "intro-purpose",
+          "title": "What should your site do?",
           "kind": "questions",
           "questions": [
             {
-              "id": 101,
-              "type": "freeResponse",
-              "text": "Explain a website you would like to make in this activity. What is the topic or theme of the site? Who is it for?"
+              "id": 202,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-purpose",
+              "questionTitle": "What should your site do?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "Share a message"
+                },
+                {
+                  "id": "b",
+                  "text": "Help them decide or plan"
+                },
+                {
+                  "id": "c",
+                  "text": "Bring people together"
+                },
+                {
+                  "id": "d",
+                  "text": "Let them play or try something"
+                }
+              ],
+              "allowOther": {
+                "placeholder": "Or something else"
+              },
+              "plan": "purpose"
             }
           ]
+        },
+        {
+          "id": "intro-website",
+          "title": "Your website",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 211,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-audience",
+              "questionTitle": "Who is the website for?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "My friends and family"
+                },
+                {
+                  "id": "b",
+                  "text": "My class or school"
+                },
+                {
+                  "id": "c",
+                  "text": "People into the same topic"
+                },
+                {
+                  "id": "d",
+                  "text": "My team or club"
+                },
+                {
+                  "id": "e",
+                  "text": "Just me"
+                }
+              ],
+              "allowOther": {
+                "placeholder": "Or type your own"
+              },
+              "plan": "audience"
+            },
+            {
+              "id": 212,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-feel",
+              "questionTitle": "How should it feel?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "Calm and clean"
+                },
+                {
+                  "id": "b",
+                  "text": "Bold and energetic"
+                },
+                {
+                  "id": "c",
+                  "text": "Playful and fun"
+                },
+                {
+                  "id": "d",
+                  "text": "Cozy and friendly"
+                }
+              ],
+              "plan": "style"
+            }
+          ]
+        },
+        {
+          "id": "intro-review",
+          "title": "Your plan",
+          "kind": "review",
+          "description": "Build a first version with AI, or start from a blank page.",
+          "questionId": 214,
+          "buildLabel": "Build with AI",
+          "skipLabel": "Start from a blank page"
         },
         {
           "id": "intro-starter",
@@ -107,12 +264,53 @@
           "kind": "level",
           "level": "adaptive-HoAI26-intro-starter",
           "project": true,
-          "instructions": "Here is a first version of your site, built from your plan. Look it over, then continue.",
+          "instructions": "This is your site. Look it over, change anything you like, then continue.",
           "projectPrompt": "The first version of the student's website, built from their plan: a hero with a headline that says what the site is for, one or two sections that fit the topic, and a call-to-action. Keep the look and feel simple, but appropriate for their given topic. It should feel clean but not overly polished."
+        }
+      ]
+    },
+    {
+      "id": "skill-check",
+      "title": "Skill Check",
+      "description": "A few quick questions to find your starting point. Not graded.",
+      "requires": ["intro"],
+      "routeAfterCompletion": true,
+      "steps": [
+        {
+          "id": "skill-check-experience",
+          "title": "Your experience",
+          "kind": "questions",
+          "description": "Pick the closest one. These questions find your starting point. They are not graded.",
+          "questions": [
+            {
+              "id": 213,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "skill-check-experience",
+              "questionTitle": "Have you worked on a website before?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "No, this is new to me"
+                },
+                {
+                  "id": "b",
+                  "text": "I have used a website builder or a template"
+                },
+                {
+                  "id": "c",
+                  "text": "I have changed code (HTML, CSS or JavaScript) before"
+                },
+                {
+                  "id": "d",
+                  "text": "I have built websites on my own"
+                }
+              ]
+            }
+          ]
         },
         {
-          "id": "intro-web-dev",
-          "title": "Intro - Diagnostic for web dev",
+          "id": "skill-check-web-dev",
+          "title": "Skill Check",
           "kind": "questions",
           "questions": [
             {
@@ -178,7 +376,7 @@
       "title": "Steer It",
       "description": "Writes a prompt with 2 or more specific details, or a follow-up that changes one thing.",
       "skillIds": ["build"],
-      "requires": ["intro"],
+      "requires": ["skill-check"],
       "targetEvidenceLevels": {
         "build": 2
       },
@@ -237,7 +435,7 @@
       "title": "Use the Lingo",
       "description": "Names a block of their page and what it is for.",
       "skillIds": ["language"],
-      "requires": ["intro"],
+      "requires": ["skill-check"],
       "targetEvidenceLevels": {
         "language": 2
       },
@@ -367,7 +565,7 @@
       "title": "Give Context",
       "description": "Reports a problem with what was expected, what happened and where.",
       "skillIds": ["debug"],
-      "requires": ["intro"],
+      "requires": ["skill-check"],
       "targetEvidenceLevels": {
         "debug": 2
       },
@@ -488,7 +686,7 @@
       "description": "Describes a list of options and a random pick, using list and pick words, so the page chooses one by chance.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Interactive Elements",
+      "destination": "interactive-elements",
       "steps": [
         {
           "id": "a-list-and-a-random-pick-panels",
@@ -541,7 +739,7 @@
       "description": "Describes a number that changes and a rule that uses it.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Interactive Elements",
+      "destination": "interactive-elements",
       "steps": [
         {
           "id": "a-number-and-a-rule-video",
@@ -617,7 +815,7 @@
       "description": "Describes what the page should remember and what should show on screen.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Interactive Elements",
+      "destination": "interactive-elements",
       "steps": [
         {
           "id": "remember-and-show-panels",
@@ -680,7 +878,7 @@
       "description": "Uses layout words and block names to describe space, alignment and order.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Style & Design",
+      "destination": "style-design",
       "steps": [
         {
           "id": "layout-and-spacing-panels",
@@ -753,7 +951,7 @@
       "description": "Names a style in words and restates it across changes so the AI keeps it steady.",
       "skillIds": ["build"],
       "requires": ["steer-it"],
-      "destination": "Style & Design",
+      "destination": "style-design",
       "steps": [
         {
           "id": "style-and-consistency-video",
@@ -825,7 +1023,7 @@
       "description": "Asks for text size, contrast and wording that make a block easy to read.",
       "skillIds": ["build"],
       "requires": ["keep-or-redirect"],
-      "destination": "Style & Design",
+      "destination": "style-design",
       "steps": [
         {
           "id": "readable-and-clear-panels",
@@ -881,7 +1079,7 @@
       "description": "Names a tone in words and restates it across changes so the AI keeps it steady.",
       "skillIds": ["build"],
       "requires": ["steer-it"],
-      "destination": "Story & Message",
+      "destination": "story-message",
       "steps": [
         {
           "id": "say-it-in-your-voice-panels",
@@ -948,7 +1146,7 @@
       "description": "Uses headline words to say what the site is for in the first line.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Story & Message",
+      "destination": "story-message",
       "steps": [
         {
           "id": "lead-with-the-point-video",
@@ -1018,7 +1216,7 @@
       "description": "Writes a call-to-action with a clear verb and next step.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Story & Message",
+      "destination": "story-message",
       "steps": [
         {
           "id": "make-the-ask-clear-panels",
@@ -1080,7 +1278,7 @@
       "description": "Reads an error in the console and says where it points, so a problem report has the context the AI needs.",
       "skillIds": ["debug"],
       "requires": ["give-context"],
-      "destination": "Under the Hood",
+      "destination": "under-the-hood",
       "steps": [
         {
           "id": "read-the-console-video",
@@ -1154,7 +1352,7 @@
       "description": "Finds the line for a named block and uses its name to say where a change belongs.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Under the Hood",
+      "destination": "under-the-hood",
       "steps": [
         {
           "id": "find-it-in-the-code-panels",
@@ -1210,7 +1408,7 @@
       "description": "Undoes changes one at a time and checks after each, to verify what caused the problem.",
       "skillIds": ["debug"],
       "requires": ["check-the-fix"],
-      "destination": "Under the Hood",
+      "destination": "under-the-hood",
       "steps": [
         {
           "id": "undo-to-find-the-cause-video",
