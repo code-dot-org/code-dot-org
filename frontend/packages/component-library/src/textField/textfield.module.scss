@@ -77,6 +77,7 @@
       border-color: var(--neutral-base-white);
       background: var(--background-neutral-primary-inverse);
       color: var(--text-neutral-inverse);
+      caret-color: var(--text-neutral-inverse);
 
       &::placeholder {
         color: var(--text-neutral-placeholder);
