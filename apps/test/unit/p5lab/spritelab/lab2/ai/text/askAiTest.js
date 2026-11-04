@@ -5,10 +5,12 @@ import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import {
   ASK_AI_TIMEOUT_MS,
+  askAiChoice,
   askAiText,
   AskAiError,
   askAiErrorMessage,
   buildSystemPrompt,
+  CHOICE_SYSTEM_PROMPT,
   cleanAnswer,
   isAskAiEnabled,
   SYSTEM_PROMPT,
@@ -206,6 +208,73 @@ describe('askAiErrorMessage', () => {
   it('names the system prompt when it is the flagged text', () => {
     expect(askAiErrorMessage(new AskAiError('system_prompt'))).toBe(
       "That system prompt isn't allowed."
+    );
+  });
+});
+
+describe('askAiChoice', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    DCDO.get.mockReturnValue(true);
+    isTextSafe.mockResolvedValue(true);
+    generateText.mockResolvedValue({output: {answer: 'no'}});
+  });
+
+  it('returns the choice the model picked', async () => {
+    await expect(
+      askAiChoice('is a whale a fish?', ['yes', 'no'])
+    ).resolves.toBe('no');
+  });
+
+  it('shows the model the question and every choice', async () => {
+    await askAiChoice('is a whale a fish?', ['yes', 'no']);
+    const [{system, prompt}] = generateText.mock.calls[0];
+    expect(system).toBe(CHOICE_SYSTEM_PROMPT);
+    expect(prompt).toBe(
+      'Question: is a whale a fish?\nAnswer choices:\n- yes\n- no'
+    );
+  });
+
+  // The answer is one of the judged choices, so a second judge adds nothing.
+  it('judges the question with the choices, and not the answer', async () => {
+    await askAiChoice('is a whale a fish?', ['yes', 'no']);
+    expect(isTextSafe).toHaveBeenCalledTimes(1);
+    const [text, phase, , context] = isTextSafe.mock.calls[0];
+    expect(text).toBe(generateText.mock.calls[0][0].prompt);
+    expect(phase).toBe('input_filter');
+    expect(context.clientType).toBe(AiChatClientTypes.SPRITELAB_ASK_AI);
+  });
+
+  it('lists a repeated choice once', async () => {
+    await askAiChoice('pick one', ['no', 'no', 'yes']);
+    expect(generateText.mock.calls[0][0].prompt).toBe(
+      'Question: pick one\nAnswer choices:\n- no\n- yes'
+    );
+  });
+
+  it('rejects an answer that is not one of the choices', async () => {
+    generateText.mockResolvedValue({output: {answer: 'maybe'}});
+    await expect(askAiChoice('hello', ['yes', 'no'])).rejects.toThrow(
+      'other than a choice'
+    );
+    expect(Observability.metrics.count).toHaveBeenCalledWith(
+      'spritelab-lab2.ask_ai_choice',
+      1,
+      {result: 'error'}
+    );
+  });
+
+  it('throws with the prompt phase when the question is flagged', async () => {
+    isTextSafe.mockResolvedValueOnce(false);
+    await expect(
+      askAiChoice('something awful', ['yes', 'no'])
+    ).rejects.toMatchObject({name: 'AskAiError', phase: 'prompt'});
+  });
+
+  it('truncates a very long question', async () => {
+    await askAiChoice('x'.repeat(5000), ['no']);
+    expect(generateText.mock.calls[0][0].prompt).toBe(
+      `Question: ${'x'.repeat(1000)}\nAnswer choices:\n- no`
     );
   });
 });

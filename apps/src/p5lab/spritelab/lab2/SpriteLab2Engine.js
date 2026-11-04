@@ -14,6 +14,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import SpriteLab from '../SpriteLab';
 
 import {
+  askAiChoice,
   askAiErrorMessage,
   askAiText,
   AskAiError,
@@ -677,6 +678,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
     };
     getStore().dispatch(clearPrompt());
+    const toChoices = (...values) =>
+      values
+        .filter(choice => choice !== undefined && choice !== null)
+        .map(String)
+        .filter(choice => choice !== '');
     const promptUser = (promptText, variableName, setterCallback, choices) => {
       library.registerPrompt(promptText, variableName, setterCallback);
       // Last prompt always wins, so we only ever have 1 active prompt unlike legacy.
@@ -699,10 +705,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       choice3,
       setterCallback
     ) => {
-      const choices = [choice1, choice2, choice3]
-        .filter(choice => choice !== undefined && choice !== null)
-        .map(String)
-        .filter(choice => choice !== '');
+      const choices = toChoices(choice1, choice2, choice3);
       promptUser(
         promptText,
         variableName,
@@ -722,14 +725,14 @@ export default class SpriteLab2Engine extends SpriteLab {
         systemPrompt = promptText;
       }
     };
-    library.commands.askAI = (promptText, variableName, setterCallback) => {
+    const askAi = (variableName, setterCallback, request) => {
       if (!this.canAskAi_() || pending.has(variableName)) {
         return;
       }
       pending.add(variableName);
       this.registerAiAnswer_(library, variableName, setterCallback);
       getStore().dispatch(askAiPending());
-      askAiText(promptText, systemPrompt)
+      request()
         .then(
           text => {
             if (!isCurrentRun()) {
@@ -755,6 +758,24 @@ export default class SpriteLab2Engine extends SpriteLab {
             getStore().dispatch(askAiAnswered());
           }
         });
+    };
+    library.commands.askAI = (promptText, variableName, setterCallback) =>
+      askAi(variableName, setterCallback, () =>
+        askAiText(String(promptText ?? ''), systemPrompt)
+      );
+    library.commands.askAIWithChoices = (
+      promptText,
+      variableName,
+      choice1,
+      choice2,
+      choice3,
+      setterCallback
+    ) => {
+      const question = String(promptText ?? '');
+      const choices = toChoices(choice1, choice2, choice3);
+      askAi(variableName, setterCallback, () =>
+        choices.length ? askAiChoice(question, choices) : askAiText(question)
+      );
     };
     return library;
   }

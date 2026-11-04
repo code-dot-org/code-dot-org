@@ -66,6 +66,14 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       'Try a personality, like **Talk like a pirate.** Put it before any ' +
       '**ask AI** blocks.',
   },
+  spritelab2_askAIWithChoices: {
+    title: 'Ask AI with answer choices',
+    summary:
+      'Asks the AI a question and puts the choice it picks in a variable.',
+    body:
+      'Empty choices are left out. Use **when ... answered** to do ' +
+      'something with the answer once it arrives.',
+  },
   spritelab2_playSound: {
     title: 'Play sound',
     animation: {src: animPlaySound, alt: 'The play sound block in action.'},

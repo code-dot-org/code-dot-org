@@ -467,6 +467,54 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_askAIWithChoices",
+              "inputs": {
+                "PROMPT": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "CHOICE1": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "CHOICE2": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "CHOICE3": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "fields": {
+                      "VAR": {
+                        "name": "AI answer"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
               "type": "gamelab_whenPromptAnswered",
               "inputs": {
                 "VAR": {
