@@ -102,7 +102,7 @@ class ActivitiesController < ApplicationController
         level_id: @script_level.level.id,
         script_id: @script_level.script.id
       )
-      # For lockable lessons, the last script_level (which will be a LevelGroup) is the only one where
+      # For lockable lessons, the last script_level (a LevelGroup or Quiz) is the only one where
       # we actually prevent milestone requests. It will be have no user_level until it first gets unlocked
       # so having no user_level is equivalent to being locked
       nonsubmitted_lockable = user_level.nil? && @script_level.end_of_lesson?

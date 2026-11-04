@@ -615,7 +615,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_nil @lesson.generate_outline
   end
 
-  test 'cannot update lockable if last level is not a levelgroup and an assessment' do
+  test 'cannot update lockable if last level is not a levelgroup or quiz and an assessment' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -630,7 +630,53 @@ class LessonsControllerTest < ActionController::TestCase
       }
     end
 
-    assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup and an assessment."
+    assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup or Quiz with its Assessment checkbox checked."
+  end
+
+  test 'cannot update lockable if last level is a quiz but not an assessment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create(:script, :in_single_unit_course, :with_lessons, lessons_count: 1)
+    lesson = unit.lessons.first
+    create(
+      :script_level,
+      assessment: false,
+      activity_section: lesson.activity_sections.first,
+      levels: [create(:quiz)]
+    )
+
+    error = assert_raises RuntimeError do
+      post :update, params: {
+        id: lesson.id,
+        name: lesson.name,
+        lockable: true
+      }
+    end
+
+    assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup or Quiz with its Assessment checkbox checked."
+  end
+
+  test 'can update lockable if last level is quiz and assessment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create(:script, :in_single_unit_course, :with_lessons, lessons_count: 1)
+    lesson = unit.lessons.first
+    create(
+      :script_level,
+      assessment: true,
+      activity_section: lesson.activity_sections.first,
+      levels: [create(:quiz)]
+    )
+
+    post :update, params: {
+      id: lesson.id,
+      name: lesson.name,
+      lockable: true
+    }
+
+    assert_response :success
   end
 
   test 'can update lockable if last level is levelgroup and assessment' do

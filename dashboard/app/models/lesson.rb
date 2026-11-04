@@ -784,7 +784,7 @@ class Lesson < ApplicationRecord
   # For a given set of students, determine when the given lesson is locked for
   # each student.
   # The design of a lockable lesson is that there is (optionally) some number of
-  # non-LevelGroup levels, followed by a single LevelGroup. This last one is the
+  # other levels, followed by a single LevelGroup or Quiz. This last one is the
   # only one which is truly locked/unlocked. The lesson is considered locked if
   # and only if the final assessment level is locked. When in this state, the UI
   # will show the entire lesson as being locked, but if you know the URL of the other

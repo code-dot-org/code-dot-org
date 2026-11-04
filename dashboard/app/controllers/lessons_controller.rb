@@ -235,8 +235,9 @@ class LessonsController < ApplicationController
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
 
       if @lesson.lockable
-        msg = "The last level in a lockable lesson must be a LevelGroup and an assessment."
-        raise msg unless @lesson.script_levels.last.assessment && @lesson.script_levels.last.level.type == 'LevelGroup'
+        msg = "The last level in a lockable lesson must be a LevelGroup or Quiz with its Assessment checkbox checked."
+        last_script_level = @lesson.script_levels.last
+        raise msg unless last_script_level.assessment && %w(LevelGroup Quiz).include?(last_script_level.level.type)
       end
 
       @lesson.script.prevent_new_duplicate_levels(old_dup_level_keys)
