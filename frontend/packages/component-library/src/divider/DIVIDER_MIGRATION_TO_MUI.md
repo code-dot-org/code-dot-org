@@ -415,10 +415,14 @@ eslint was clean on the four consumer files.
 Parity: all three twins pixel-identical to their DSCO stories in Light and
 Dark (mismatch ratio 0.0000 for each of the six pairs; see the Execute PR).
 
-Apps parity: not run. No local studio was reachable during the sweep, so
-neither sample was captured. Sample 1 is the only check of the two-class
-rule against `.rule` in `page-divider.module.scss`; run it before the
-consumer PR merges.
+Apps parity: no local studio was reachable during the sweep; sample 1 was
+captured afterwards. Its results view, under Lab2's Dark theme, was
+captured at 1280px and 400px with the consumer branch's build and with the
+design-system branch's build (PageDivider still on the legacy `Divider`).
+All four `<hr>`s match in position, width, border and margin. Computed
+`flex-shrink` goes from 0 to 1 and changes nothing, because the basis is 0.
+The page and the two divider rows are pixel-identical at both widths.
+Sample 2 was not run.
 
 Codemod: rewrote 2 files, the import line of `PageDivider.tsx` and of
 `Markdown.tsx`, both to `{MuiDivider as Divider}`. Untouched: everything
