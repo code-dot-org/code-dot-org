@@ -1,11 +1,12 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-11-03T04:18:09.000Z",
   "level_num": "custom",
   "user_id": 18754,
   "properties": {
-    "require_edit_to_continue": true,
+    "require_edit_to_continue": "true",
     "start_sources": {
       "folders": {
       },
@@ -23,11 +24,44 @@
         "8d89d065-bd0b-4fd4-9747-5af853224386"
       ]
     },
-    "long_instructions": "Practice your skill at spotting what a website does here.",
+    "long_instructions": "#Spark your own ideas!.",
     "encrypted_exemplar_sources": "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\nVwHbnGOzdA==\n",
-    "generate_outline": "Explore example websites to understand their functions and how they are structured."
+    "generate_outline": "Explore example websites to understand their functions and how they are structured.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-03 04:18:14 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:18:14 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:18:20 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:18:20 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:18:14 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:18:14 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:18:20 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:18:20 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 03:04:07 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Weblab2>

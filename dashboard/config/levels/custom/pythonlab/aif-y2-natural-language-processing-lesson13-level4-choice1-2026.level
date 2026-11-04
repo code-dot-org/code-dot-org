@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T16:03:18.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Sayings",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson13-choice1-2026 + template",
+    "long_instructions": "Now that `model` is filled in, you can use it to generate new text.\r\n\r\nThe `generate` function starts from one token and keeps choosing a next token until the sentence ends.\r\n\r\nFor example, starting from \"The\", the model might build a sentence like this:\r\n\r\n```\r\n[\"The\"]\r\n[\"The\", \"proof\"]\r\n[\"The\", \"proof\", \"is\"]\r\n[\"The\", \"proof\", \"is\", \"always\"]\r\n[\"The\", \"proof\", \"is\", \"always\", \"right\"]\r\n[\"The\", \"proof\", \"is\", \"always\", \"right\", \".\"]\r\n```\r\n\r\n**☑️ Do This:**\r\n\r\n- Complete the `generate` function.\r\n  - Create a list to hold the generated tokens. Make it hold `start`—the current token.\r\n  - While a sentence is not yet complete:\r\n      - Randomly choose the next token from the current token’s list in `model`.\r\n      - Append that token to your list of tokens, and make it the current token.\r\n  - When a sentence is complete, return your list of tokens.\r\n- Answer the question under **Step 4: Build Your Model** in your Project Planning Guide.\r\n\r\n**💻 Coding Tip**\r\n\r\nA `while` loop repeats until its condition is no longer true.\r\n\r\n```\r\nwhile token != \".\":\r\n  ...\r\n```\r\n\r\n`random.choice` picks a random item from a list.\r\n\r\n```\r\ntoken = random.choice(model[token])\r\n```",
+    "bubble_choice_description": "A collection of short sayings that express some truth.",
+    "thumbnail_url": "https://images.code.org/78e6d7abca76be9df4234d830f8a6240-sayings.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY6o/UQ4bbzJ4uIo\nHXQ2A4qT29BPLjFLF2wKIGdVq8sk87pkDXaC9BOKcG/Bcmjr/ljYPoHjnM+W\n/WfpHCPY8yE9jqW9dBlkyHzw3gEnfpQdZKPsaxNvai02JqYT6jze90ZGTbWm\nadE32gBP6nZ/e22vSNLk0wALSghPrMLpcvJAmniTGipzKz8VD8v9eEZsStda\nndS06xz9gEamRczu48QfuQZBFKQogxkrckW/AOe++Gsuh2+wRZiBG0U1WuXM\nNibX6fNAZ/19uWx3Vh0I43unp2l+M6ilzjtQMc/uaFBZXRp4Dv3xQkXAMJ5j\nz0HD9RLVxHko3KA14cM8far+SZXAF5GUkD0HPJsHXwwmF+6RDVrDZ67306Ge\nOVn/kOOcjzMXI5Ld+h7e7jKG52YDGtt4w+uTTtvgNBPztzcKQiWoy5iTNccx\nH9HCBhCJdrSHQ9JYv/9bLs9qWjLNmqcvHf5M1MU+ZR7rb10b0jXf9Ue/bQsb\nG8UUvstHERJ5CT0l94DP1rptW3FJQvwCABA1SeqBwn+vqxGe8vbot/Kqtobb\nihpbiC1agF87J5CL4C27hZx4o8VyOAURN+tIxu1597feSr9ligUqGfj4Zky2\ngFw04u3vSPIGYiyCmjKkU/5zKZ5DIsF1LX//kfoBryB/QMjZQ9iCJYm6hHBt\npqX3QNXEqtvD+ljizfcwJXT/f+G8MUJc7dF33iiyJSK9oY9W2k+rwCsgaKVR\ndQaUFVVZpdkP9kl0pCuSuE9TBPG007Nl4YTiZZ30czQvYIOmc98xgc5Hk3Gq\nB3myLd+FQYVsjNSBoY4enBQO1QaODbdyTpFBzCzcGRLitxnxUdoXUWBl7Rmq\nhZs7MGegZQ8N7Q/tA5aH6ee1OEeXH3QjIl9QIluR3NEV4Pl0Rnlmw2LIb3yE\nnDJaEre8ewUY/jqCSUhcj9RS3n+DB5LrCc9w71lYvQaXwgAkzpO3bbyGekjk\nvxL/rjeZA7HjPmlsj/oSXNRnOk0nOcQqJqaqzMICR1aZVWKOaMKEmvDHTTp+\nDjykkCubpEoUxFw/fN7kahF+wePvdWdPsRD67FufkEWRPMgcglxxMROUFC2A\nL2loZA1aAllOWhD2jTmWluUQ7uN+lAyG/jlKq2Y8RJS1DY57WsHHnQwsKtbD\nNVH0ndM47AEo5NyY7u9n1WrFCOseGfNnPDqiWZva9q9oKDfAx7x8r9+p1/GZ\n8zSHuiqPDiRk/9GUMxyLBJCTjbMr9KPM833coz+IuIR5X6uuT6g1/9ddEXqx\nDTr9uepiBBCEifN9E2FyGGDOAU23JmoFAyToC61GI1zWOq2/ohxze4pAqRU3\ng4xuGno8/bEq+0RPHauL8sWjKdTBuoGiDQXhqai6yqS3Q97jbY+WqkFluZob\ng2laacM1IQ8KJs1KU2MRdUDKBsc6XZf5n34lnZ4ND95Ts4/ymaS8YUqcSEZ0\nNvtj+byBXaIRAXEFBWUS/N5UeblvKaPkXLhEmb6jsfvk0ANU2uC3jIzwPsRw\n3azBq3Cy+3LQQbtCwF43yhT4djU7OrUvFuukdeF4Nv7aVN+YiG4HtLfuPSaD\nNmK/UirAL+503a4pVpprw5ZOjLfGkn2JM255J572RTmDZc29UTegTBJbk3jS\nwL2VLCkgMxsw62nylq1k5S9U4L75832aStYHMZNZ5QqxGfxRkqAdKSo4jDR/\nJe6ARFA7qA9nExLrJZTd7Gu2Ilkl6kWYZLU4MYLcrpm3lbpu/wfLtvRUutwv\n+FrsqztQcXNXClK92lK2YufZ11PruUKVELmGZzoRXC6eo3FDgkVRKuObhNQ3\n0H255rMLGV3H+8B+PMS5mLfA+tVCE3IHOFabPu3b8omL3EXrkXmNAxb8cWMo\niVrMctBdZ5XKaJBhbmOFocfjF7+6Uoy9+CHrpPrwiR2k1cbF7Q35MutFfekW\nB1sPGFj1UcFhNpCxV1OWcTPsCO/Bo/xjF84yD82ZlqS4sMBQ246uI1yRO4To\n3WiiVDAZMfRmA5Ylw5M865mglEzGRArRIlFYN44t1Q5VyAjAlYus5CcABPwH\nqu0o6HqjxJQt4MYp+V6I8QLrGKqRq3TI0o/3zhNluy1lyYZXF+VGYuM8m9Vq\nBTc5UBPEQqeGY6HPsBMGEo0Tw1Szxc52duqeJKL97mvrejPuUuanHajF0T7M\nyg1dkKCDet+OCSIci8LZebZWa/xhWA0sQAJJN5Hg2Xy6cBV/F202ZBzNjFnT\nGtVXS/ddvjdDIzeOP8Llw5IbKjdYhs2r/112UBeYh9cChcS59ehjkWQkxS2u\nZKs7maYjt9M=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 16:07:38 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 16:08:47 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
