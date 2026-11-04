@@ -256,8 +256,6 @@ interface WorldTabProps {
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
   onSelect: (selection: PaletteSelection) => void;
-  /** Offers a New square above the palette that asks for a picture. */
-  onNewPicture?: () => void;
 }
 
 /**
@@ -282,7 +280,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   only,
   selected,
   onSelect,
-  onNewPicture,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails prefer the engine's trimmed image (a sprite sheet's is its
@@ -661,14 +658,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
 
   const cellPixels = gridPixels / sceneSize;
   // Unmeasured, the palette is one column; empty, it keeps one cell's shape.
-  // The New square takes one item's room above the palette.
-  const paletteRoom = onNewPicture
-    ? areaHeight - PALETTE_ITEM_PX - PALETTE_GAP_PX
-    : areaHeight;
   const paletteRows = Math.max(
     1,
     areaHeight
-      ? Math.min(paletteItemsPerColumn(paletteRoom), selections.length)
+      ? Math.min(paletteItemsPerColumn(areaHeight), selections.length)
       : selections.length
   );
   const paletteColumns = Math.max(
@@ -817,21 +810,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   return (
     <div className={moduleStyles.worldTab}>
       <div className={moduleStyles.worldPaletteColumn} style={paletteVars}>
-        {onNewPicture && (
-          <button
-            type="button"
-            className={classNames(
-              moduleStyles.worldPaletteItem,
-              moduleStyles.worldPaletteNew
-            )}
-            // As wide as the palette, however many columns it has.
-            style={{width: paletteWidth}}
-            onClick={onNewPicture}
-          >
-            <FontAwesomeV6Icon iconName="plus" />
-            New
-          </button>
-        )}
         <div
           role="radiogroup"
           aria-label="Items to place"

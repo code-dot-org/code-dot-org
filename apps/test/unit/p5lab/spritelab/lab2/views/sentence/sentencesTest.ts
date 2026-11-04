@@ -3,6 +3,7 @@ import {
   chosenBodyPlan,
   isComplete,
   promptText,
+  restoreChoices,
   sentenceFor,
   slotsToOffer,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
@@ -127,5 +128,46 @@ describe('sentences', () => {
         chained
       );
     }
+  });
+
+  it('puts saved words back, dropping what the sentence no longer holds', () => {
+    expect(
+      restoreChoices(CHARACTER_SENTENCE, {
+        sentenceId: 'character',
+        choices: {creature: 'cat', adjective: 'brave', clothing: 'hat'},
+      })
+    ).toEqual({creature: 'cat', adjective: 'brave', clothing: 'hat'});
+    // A word or a slot that is gone is left out; the rest survive.
+    expect(
+      restoreChoices(CHARACTER_SENTENCE, {
+        sentenceId: 'character-v1',
+        choices: {creature: 'cat', adjective: 'gigantic', mood: 'happy'},
+      })
+    ).toEqual({creature: 'cat'});
+    expect(restoreChoices(CHARACTER_SENTENCE, undefined)).toEqual({});
+  });
+
+  it('drops a phrase chain from the first word it cannot put back', () => {
+    const chained = {
+      ...CHARACTER_SENTENCE,
+      id: 'chained',
+      segments: [
+        ...CHARACTER_SENTENCE.segments,
+        {phrase: [{text: ' holding a '}, {slot: 'thing'}]},
+      ],
+      slots: {
+        ...CHARACTER_SENTENCE.slots,
+        thing: {
+          id: 'thing',
+          label: 'thing',
+          words: [{id: 'wand', text: 'wand'}],
+        },
+      },
+    };
+    expect(
+      restoreChoices(chained, {
+        choices: {creature: 'cat', clothing: 'gone', thing: 'wand'},
+      })
+    ).toEqual({creature: 'cat'});
   });
 });
