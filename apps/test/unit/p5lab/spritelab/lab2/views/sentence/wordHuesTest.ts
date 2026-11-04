@@ -20,5 +20,18 @@ describe('wordHues', () => {
     expect(hueFor(place, 'place')).toBe('blue');
     expect(hueFor(place, 'adjective')).toBe('yellow');
     expect(hueFor(place, 'from')).toBe('pink');
+    // Read second, but picked first.
+    const block = sentenceFor('block');
+    expect(hueFor(block, 'material')).toBe('blue');
+    expect(hueFor(block, 'adjective')).toBe('yellow');
+    for (const sentence of [
+      sentenceFor('sprite'),
+      sentenceFor('sprite', 'object'),
+      place,
+      block,
+    ]) {
+      const required = Object.values(sentence.slots).find(s => s.required)!;
+      expect(hueFor(sentence, required.id)).toBe('blue');
+    }
   });
 });

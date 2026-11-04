@@ -71,8 +71,7 @@
       {
         "id": "insect",
         "text": "insect",
-        "icon": "bug",
-        "bodyPlan": "quadruped"
+        "icon": "bug"
       },
       {
         "id": "axolotl",
@@ -327,7 +326,7 @@
       {
         "id": "candy",
         "text": "candy",
-        "icon": "candy-cane"
+        "icon": "candy"
       }
     ],
     "places": [
@@ -423,7 +422,7 @@
       {
         "id": "magical",
         "text": "magical",
-        "icon": "wand-sparkles"
+        "icon": "wand-magic-sparkles"
       },
       {
         "id": "golden",
@@ -443,7 +442,7 @@
       {
         "id": "overgrown",
         "text": "overgrown",
-        "icon": "leaf"
+        "icon": "seedling"
       },
       {
         "id": "slimy",
@@ -495,7 +494,7 @@
       {
         "id": "candy",
         "text": "candy",
-        "icon": "lollipop"
+        "icon": "candy"
       },
       {
         "id": "coral",
