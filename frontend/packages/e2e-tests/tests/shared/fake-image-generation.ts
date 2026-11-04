@@ -10,7 +10,9 @@ import {mockDcdo} from './dcdo';
  * the token answers with Turnstile disabled, so no challenge script loads,
  * and every generation answers with a fixed pixel-art picture. The safety
  * judges are turned off by their DCDO flag, and answered as safe if one is
- * asked anyway.
+ * asked anyway. Picture moderation (dashboard's /v3/images/moderate, which
+ * calls Azure and answers null where the key is absent, as on CI) is
+ * answered as safe, so the test never leaves the box.
  */
 
 const AI_GATEWAY_URL = 'https://ai-gateway.code.org';
@@ -99,6 +101,13 @@ function fakePicture(): string {
 
 let pictureBase64: string | undefined;
 
+/** Azure's shape for a picture with nothing to flag. */
+const SAFE_MODERATION = {
+  categoriesAnalysis: ['Hate', 'SelfHarm', 'Sexual', 'Violence'].map(
+    category => ({category, severity: 0}),
+  ),
+};
+
 /**
  * Route the gateway and its token endpoint for `page`. Call after the page
  * is on the target host, since the safety flag is a cookie on that host.
@@ -112,6 +121,9 @@ export async function fakeImageGeneration(page: Page): Promise<() => number> {
     route.fulfill({
       json: {token: 'fake-token', turnstileEnforcementMode: 'disabled'},
     }),
+  );
+  await page.route('**/v3/images/moderate', route =>
+    route.fulfill({json: SAFE_MODERATION}),
   );
   await page.route(`${AI_GATEWAY_URL}/**`, route => {
     const body = route.request().postDataJSON() as {output?: unknown} | null;
