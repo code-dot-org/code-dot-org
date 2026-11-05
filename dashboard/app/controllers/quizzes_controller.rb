@@ -43,7 +43,14 @@ class QuizzesController < ApplicationController
   # each only ever send the fields for their own tab. An explicit null
   # still clears a field.
   def update
-    @level.update!(present_configuration_updates)
+    updates = present_configuration_updates
+    # Not a Quiz validation: levels seed before units, so it would fail the
+    # level seed of a commit that makes a quiz an exam and its lesson lockable.
+    if updates[:purpose] == 'exam' && !@level.exam?
+      problems = @level.exam_placement_problems
+      raise "This quiz cannot be an exam because #{problems.join('; ')}." if problems.any?
+    end
+    @level.update!(updates)
     render json: quiz_configuration_json(@level)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
