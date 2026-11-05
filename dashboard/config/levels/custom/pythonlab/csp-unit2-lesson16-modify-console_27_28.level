@@ -20,7 +20,10 @@
     },
     "ai_tutor_prompt_settings": {
       "answerTypes": [
-
+        "documentation",
+        "example",
+        "explainCode",
+        "hint"
       ],
       "answerTypeCustomizations": {
       }
@@ -43,6 +46,6 @@
     },
     "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrytMpbDCt0pyHP\nJH3I+oQoh16VzKvb0bXOMkbAzCN04iOAgZ8feFAUZtIIrWiNmHPOKYah4j0m\nuibcyjGY1Y41mpbhh4rMe7/cKTAo4B1CXSrEzHv/vJS9DkQGaFLl54Z4VOzs\n6kXrOTZbP4mKeyvqdUS9GeRSifJTIqEYPug9GgWwjp86QETv+XWvTBLVvu1B\n3rFQKrvoXicZv3Jim+Ak\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-02T20:13:22.031+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson16-modify-theater_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson16-modify-theater_27_28\"},{\"changed_at\":\"2026-11-02 20:13:36 +0000\",\"changed\":[\"long_instructions\",\"mini_app\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:13:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:14:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:14:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-02T20:13:22.031+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson16-modify-theater_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson16-modify-theater_27_28\"},{\"changed_at\":\"2026-11-02 20:13:36 +0000\",\"changed\":[\"long_instructions\",\"mini_app\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:13:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:14:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:14:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 22:34:41 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

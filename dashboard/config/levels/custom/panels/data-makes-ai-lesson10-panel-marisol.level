@@ -1,0 +1,41 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-11-04T15:28:44.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false",
+    "display_name": "Marisol’s Fitness App",
+    "bubble_choice_description": "Marisol swims for hours, but her fitness app keeps calling it a Rest Day. Find out why her workouts don’t count.",
+    "thumbnail_url": "https://images.code.org/5d456c8b257bf58eb8d2e5f990c48a09-data-makes-ai-lesson-10-marisol-a-friendly-chest-up-portrait-of-marisol-standing-1.png",
+    "panels": [
+      {
+        "text": "\"hi so I’m on the swim team and we practice like 2 hours a day, 4 days a week. I wear my band in the pool the whole time.\"",
+        "imageUrl": "https://images.code.org/b9534dfce93a2c2cd1c203d65308a34b-data-makes-ai-lesson-10-marisol-marisol-mid-stroke-in-an-indoor-competition-pool-1.png",
+        "key": "data-makes-ai-lesson10-panel-marisol-329df2a7-6496-4af4-a1a3-93472e1ddeef",
+        "typing": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "\"Every single practice day it tells me I had a 'Rest Day.' I lost my 23 day streak because of it! Meanwhile my brother played video games all day and walked to the corner store and HE got an Active Day??\"",
+        "imageUrl": "https://images.code.org/727125e0d4b58c59b7f4193f458480d4-data-makes-ai-lesson-10-marisol-marisol-at-home-in-the-evening-hair-still-damp-h-1.png",
+        "key": "data-makes-ai-lesson10-panel-marisol-71f44839-4f09-4b75-96a6-7854a20ad28c",
+        "typing": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "\"My coach says swimming is one of the hardest workouts there is. Can you make it count swimming please? I’m not trying to be rude but it kind of makes the app feel pointless for me\"",
+        "imageUrl": "https://images.code.org/2e5c81bf9aad08cb380e55e4b4be6401-data-makes-ai-lesson-10-marisol-marisol-sitting-cross-legged-on-her-bed-typing-o-1.png",
+        "key": "data-makes-ai-lesson10-panel-marisol-c4860675-85dc-4465-ab65-7381f68a5dc2",
+        "typing": true,
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-04 15:35:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 15:47:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
