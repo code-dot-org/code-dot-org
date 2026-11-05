@@ -118,6 +118,14 @@ export function stepIdToResume(
   )?.id;
 }
 
+/** Seconds the student has spent on steps, over every step with progress. */
+export function totalTimeSpent(progress: Progress): number {
+  return Object.values(progress.steps).reduce(
+    (sum, step) => sum + (step.timeSpent ?? 0),
+    0
+  );
+}
+
 /** Whether the student finished the checkpoint: its last visible step is complete. */
 export const isComplete = (checkpoint: Checkpoint, progress: Progress) => {
   const last = visibleSteps(checkpoint, progress).at(-1);

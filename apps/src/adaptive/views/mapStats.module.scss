@@ -1,0 +1,19 @@
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+// A button in the text's own clothes.
+.time {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: default;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-purple-primary);
+    outline-offset: 2px;
+  }
+}
