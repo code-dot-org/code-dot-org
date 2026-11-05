@@ -205,7 +205,7 @@ const PREVIEW_SHARE = 0.22;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 
-// ?image-source=cached|live overrides the level's, and
+// ?image-source=live|cached overrides the level's, and
 // ?image-cache-url= reads another tree (a local one, or a version under
 // review), for internal testing.
 function getImageSourceParam(): ImageSource | undefined {

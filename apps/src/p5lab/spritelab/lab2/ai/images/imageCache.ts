@@ -17,8 +17,8 @@ import {shuffle} from 'lodash';
 import {bytesToBase64} from './encoding';
 import {ImageStyle} from './types';
 
-/** Where a level's pictures come from: the model, or the tree first and
-    the model for a picture the tree lacks. */
+/** Where a level's pictures come from: the tree first, with the model for
+    a picture the tree lacks (the default), or the model alone. */
 export const IMAGE_SOURCES = ['live', 'cached'] as const;
 export type ImageSource = (typeof IMAGE_SOURCES)[number];
 

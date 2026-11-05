@@ -55,11 +55,11 @@ describe('isFreeplayMode', () => {
 });
 
 describe('imageSourceForMode', () => {
-  it('is live unless the level names a source', () => {
-    expect(imageSourceForMode({kind: 'image'})).toBe('live');
-    expect(imageSourceForMode(undefined)).toBe('live');
-    expect(imageSourceForMode({kind: 'image', imageSource: 'cached'})).toBe(
-      'cached'
+  it('is the tree first unless the level names a source', () => {
+    expect(imageSourceForMode({kind: 'image'})).toBe('cached');
+    expect(imageSourceForMode(undefined)).toBe('cached');
+    expect(imageSourceForMode({kind: 'image', imageSource: 'live'})).toBe(
+      'live'
     );
   });
 });

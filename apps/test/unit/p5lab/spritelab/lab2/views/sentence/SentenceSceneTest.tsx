@@ -397,6 +397,15 @@ describe('SentenceScene', () => {
       warn.mockRestore();
     });
 
+    it('never looks when the level names the model', async () => {
+      generateCharacterSet.mockResolvedValue(RESULT);
+      renderScene({imageSource: 'live'});
+      pickCreature();
+      await generate();
+      expect(findCachedImage).not.toHaveBeenCalled();
+      expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+    });
+
     it('goes to the model when the advanced settings change the request', async () => {
       generateCharacterSet.mockResolvedValue(RESULT);
       renderCached({advanced: {pixelScale: 2}});

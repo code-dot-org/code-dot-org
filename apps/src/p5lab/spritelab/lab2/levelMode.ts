@@ -26,8 +26,8 @@ export interface LevelMode {
   /** The level opens on the Images tab to make its image, then goes on to
       its own tabs. */
   imageFirst?: boolean;
-  /** Where the level's pictures come from (imageCache.ts); the model when
-      unset. */
+  /** Where the level's pictures come from (imageCache.ts); the tree first
+      when unset. */
   imageSource?: ImageSource;
 }
 
@@ -68,7 +68,7 @@ export function isFreeplayMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'freeplay';
 }
 
-/** The source a mode's pictures come from: the model unless named. */
+/** The source a mode's pictures come from: the tree first unless named. */
 export function imageSourceForMode(mode: LevelMode | undefined): ImageSource {
-  return mode?.imageSource ?? 'live';
+  return mode?.imageSource ?? 'cached';
 }

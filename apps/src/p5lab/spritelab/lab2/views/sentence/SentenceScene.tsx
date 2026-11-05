@@ -178,8 +178,8 @@ interface SentenceSceneProps {
   /** Behind the scenes as an icon alone, for a host's header. */
   compactBehindTheScenes?: boolean;
   advanced?: AdvancedOptions;
-  /** Where a sentence's picture comes from: the model or the cache
-      (imageCache.ts). The model when unset, and for a typed prompt. */
+  /** Where a sentence's picture comes from (imageCache.ts); the tree first
+      when unset. A typed prompt always goes to the model. */
   imageSource?: ImageSource;
   /** Another tree to read cached pictures from (QA). */
   imageCacheUrl?: string;
@@ -202,7 +202,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   wordLayout,
   compactBehindTheScenes,
   advanced,
-  imageSource = 'live',
+  imageSource = 'cached',
   imageCacheUrl,
 }) => {
   const style = STYLE;
