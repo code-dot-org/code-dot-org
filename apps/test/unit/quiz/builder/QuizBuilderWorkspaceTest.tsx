@@ -8,6 +8,7 @@ import {
   QuizBuilderQuestionsState,
 } from '@cdo/apps/quiz/builder/types';
 import useQuizBuilderQuestions from '@cdo/apps/quiz/builder/useQuizBuilderQuestions';
+import {groupByPage} from '@cdo/apps/quiz/utils';
 
 jest.mock('@cdo/apps/quiz/builder/useQuizBuilderQuestions');
 const mockUseQuizBuilderQuestions = jest.mocked(useQuizBuilderQuestions);
@@ -27,6 +28,7 @@ const question = (
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
+  deletable: true,
   usedInPublishedUnit: false,
   page: 1,
   ...overrides,
@@ -34,12 +36,17 @@ const question = (
 
 const BASE_STATE: QuizBuilderQuestionsState = {
   questions: [],
+  pages: [],
   isLoading: false,
+  isSavingQuiz: false,
   error: null,
   errorQuestionId: null,
+  hasUnsavedLayout: false,
+  addPage: jest.fn(),
   addPendingQuestion: jest.fn(),
   saveQuestion: jest.fn(),
   removeQuestion: jest.fn(),
+  saveQuiz: jest.fn(),
   load: jest.fn(),
 };
 
@@ -57,13 +64,17 @@ function renderWorkspace(
   stateOverrides: Partial<QuizBuilderQuestionsState> = {},
   propOverrides: Partial<React.ComponentProps<typeof QuizBuilderWorkspace>> = {}
 ) {
+  // pages defaults to the questions grouped by their page, as the hook does.
+  const questions = stateOverrides.questions ?? BASE_STATE.questions;
   mockUseQuizBuilderQuestions.mockReturnValue({
     ...BASE_STATE,
+    pages: groupByPage(questions),
     ...stateOverrides,
   });
   return render(
     <QuizBuilderWorkspace
       levelId={42}
+      quizVersion={{current: 7}}
       quizTitle="AI Foundations Certification Exam"
       showIntroScreen={false}
       customIntroText=""
@@ -206,19 +217,30 @@ describe('QuizBuilderWorkspace', () => {
     );
   });
 
-  it('adds an empty page one past the last existing page without creating a question', async () => {
+  it('adds a page without creating a question', () => {
+    const addPage = jest.fn();
     const addPendingQuestion = jest.fn();
     renderWorkspace({
-      questions: [
-        question({id: 1, page: 1}),
-        question({id: 2, page: 3, questionName: 'MVC frameworks'}),
-      ],
+      questions: [question({id: 1, page: 1})],
+      addPage,
       addPendingQuestion,
     });
 
     fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
+    expect(addPage).toHaveBeenCalled();
     expect(addPendingQuestion).not.toHaveBeenCalled();
-    expect(screen.getByText('Page 4')).toBeInTheDocument();
+  });
+
+  it('shows an empty page, blocks adding another, and creates questions on it', async () => {
+    const addPendingQuestion = jest.fn();
+    const questions = [question({id: 1, page: 1})];
+    renderWorkspace({
+      questions,
+      pages: [...groupByPage(questions), {page: 2, questions: []}],
+      addPendingQuestion,
+    });
+
+    expect(screen.getByText('Page 2')).toBeInTheDocument();
     expect(screen.getByText('This page is empty')).toBeInTheDocument();
     const addPage = screen.getByRole('button', {name: 'Add page'});
     expect(addPage).toHaveAttribute('aria-disabled', 'true');
@@ -229,8 +251,8 @@ describe('QuizBuilderWorkspace', () => {
       })
     ).toBeInTheDocument();
 
-    createFromDropdown(2, 'Free response');
-    expect(addPendingQuestion).toHaveBeenCalledWith(4, 'FreeResponseQuestion');
+    createFromDropdown(1, 'Free response');
+    expect(addPendingQuestion).toHaveBeenCalledWith(2, 'FreeResponseQuestion');
   });
 
   it('hides create actions while questions are still loading', () => {

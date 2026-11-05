@@ -17,6 +17,7 @@ const QUESTION = {
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
+  deletable: true,
   usedInPublishedUnit: false,
   page: 1,
 };
@@ -25,21 +26,31 @@ describe('useQuizBuilderQuestions', () => {
   let getSpy: jest.SpyInstance;
   let postSpy: jest.SpyInstance;
   let putSpy: jest.SpyInstance;
-  let deleteSpy: jest.SpyInstance;
+  let version: {current: number | null};
 
   beforeEach(() => {
     jest.resetAllMocks();
+    version = {current: null};
     getSpy = jest.spyOn(HttpClient, 'get').mockResolvedValue({
-      json: async () => ({displayName: 'A quiz', questions: [QUESTION]}),
+      json: async () => ({
+        displayName: 'A quiz',
+        version: 5,
+        questions: [QUESTION],
+      }),
     } as Response);
     postSpy = jest.spyOn(HttpClient, 'post');
     putSpy = jest.spyOn(HttpClient, 'put');
-    deleteSpy = jest.spyOn(HttpClient, 'delete');
   });
+
+  const renderLoaded = async () => {
+    const hook = renderHook(() => useQuizBuilderQuestions(42, version));
+    await hook.waitForNextUpdate();
+    return hook;
+  };
 
   it("loads the quiz's placed questions on mount", async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42)
+      useQuizBuilderQuestions(42, version)
     );
 
     expect(result.current.isLoading).toBe(true);
@@ -48,11 +59,24 @@ describe('useQuizBuilderQuestions', () => {
     expect(getSpy).toHaveBeenCalledWith('/levels/42/quiz_configuration');
     expect(result.current.isLoading).toBe(false);
     expect(result.current.questions).toEqual([QUESTION]);
+    expect(result.current.pages).toEqual([{page: 1, questions: [QUESTION]}]);
+    expect(result.current.hasUnsavedLayout).toBe(false);
+    expect(version.current).toBe(5);
+  });
+
+  it('adds an empty page at the end', async () => {
+    const {result} = await renderLoaded();
+
+    act(() => {
+      result.current.addPage();
+    });
+
+    expect(result.current.pages.map(p => p.questions.length)).toEqual([1, 0]);
   });
 
   it('adds a placeholder question locally, with no network call', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42)
+      useQuizBuilderQuestions(42, version)
     );
     await waitForNextUpdate();
 
@@ -77,7 +101,7 @@ describe('useQuizBuilderQuestions', () => {
 
   it('adds a multiple select placeholder with the first option correct', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42)
+      useQuizBuilderQuestions(42, version)
     );
     await waitForNextUpdate();
 
@@ -97,7 +121,7 @@ describe('useQuizBuilderQuestions', () => {
 
   it('adds a match placeholder with two pairs, each id random and distinct', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42)
+      useQuizBuilderQuestions(42, version)
     );
     await waitForNextUpdate();
 
@@ -128,7 +152,7 @@ describe('useQuizBuilderQuestions', () => {
 
   it('adds the placeholder to the given page', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42)
+      useQuizBuilderQuestions(42, version)
     );
     await waitForNextUpdate();
 
@@ -141,7 +165,7 @@ describe('useQuizBuilderQuestions', () => {
 
   it('returns a negative id, distinct from any real server id', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42)
+      useQuizBuilderQuestions(42, version)
     );
     await waitForNextUpdate();
 
@@ -157,7 +181,7 @@ describe('useQuizBuilderQuestions', () => {
     getSpy.mockRejectedValue(new Error('offline'));
 
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42)
+      useQuizBuilderQuestions(42, version)
     );
     await waitForNextUpdate();
 
@@ -181,11 +205,7 @@ describe('useQuizBuilderQuestions', () => {
     it('PUTs the payload and replaces the question in place on success', async () => {
       const updated = {...QUESTION, ...PAYLOAD};
       putSpy.mockResolvedValue({json: async () => updated} as Response);
-
-      const {result, waitForNextUpdate} = renderHook(() =>
-        useQuizBuilderQuestions(42)
-      );
-      await waitForNextUpdate();
+      const {result} = await renderLoaded();
 
       let updatedId;
       await act(async () => {
@@ -193,23 +213,44 @@ describe('useQuizBuilderQuestions', () => {
       });
 
       expect(putSpy).toHaveBeenCalledWith(
-        '/quiz_questions/7?quizLevelId=42',
+        '/quiz_questions/7',
         JSON.stringify(PAYLOAD),
         true,
         {'Content-Type': 'application/json'}
       );
       expect(updatedId).toBe(QUESTION.id);
       expect(result.current.questions).toEqual([updated]);
+      expect(result.current.hasUnsavedLayout).toBe(false);
     });
 
-    it('resolves with the new id and replaces the question by it when the server forks it', async () => {
-      const forked = {...QUESTION, ...PAYLOAD, id: 123};
-      putSpy.mockResolvedValue({json: async () => forked} as Response);
+    it("keeps the load's attachedToOtherQuizzes, deletable and page, which the response can't know", async () => {
+      putSpy.mockResolvedValue({
+        json: async () => ({
+          ...QUESTION,
+          ...PAYLOAD,
+          attachedToOtherQuizzes: true,
+          deletable: false,
+          page: null,
+        }),
+      } as Response);
+      const {result} = await renderLoaded();
 
-      const {result, waitForNextUpdate} = renderHook(() =>
-        useQuizBuilderQuestions(42)
-      );
-      await waitForNextUpdate();
+      await act(async () => {
+        await result.current.saveQuestion(7, PAYLOAD);
+      });
+
+      expect(result.current.questions[0]).toMatchObject({
+        attachedToOtherQuizzes: false,
+        deletable: true,
+        page: 1,
+      });
+    });
+
+    it("puts a fork in the original's place, removing the original from the quiz on Save quiz", async () => {
+      putSpy.mockResolvedValue({
+        json: async () => ({...QUESTION, ...PAYLOAD, id: 123}),
+      } as Response);
+      const {result} = await renderLoaded();
 
       let updatedId;
       await act(async () => {
@@ -218,6 +259,38 @@ describe('useQuizBuilderQuestions', () => {
 
       expect(updatedId).toBe(123);
       expect(result.current.questions.map(q => q.id)).toEqual([123]);
+      expect(result.current.hasUnsavedLayout).toBe(true);
+    });
+
+    it('deletes the original of a type change on Save quiz', async () => {
+      const {correctChoiceId, ...rest} = PAYLOAD;
+      void correctChoiceId;
+      const switched = {
+        ...rest,
+        type: 'MultipleSelectQuestion' as const,
+        correctChoiceIds: ['b'],
+      };
+      putSpy.mockResolvedValueOnce({
+        json: async () => ({...QUESTION, ...switched, id: 123}),
+      } as Response);
+      const {result} = await renderLoaded();
+
+      await act(async () => {
+        await result.current.saveQuestion(7, switched);
+      });
+      putSpy.mockResolvedValueOnce({
+        json: async () => ({
+          version: 6,
+          placements: [{quizQuestionId: 123, page: 1, position: 1}],
+        }),
+      } as Response);
+      await act(async () => {
+        await result.current.saveQuiz();
+      });
+
+      expect(JSON.parse(putSpy.mock.calls[1][1] as string)).toMatchObject({
+        deleteQuestionIds: [7],
+      });
     });
 
     it('surfaces the server error message and leaves questions untouched on failure', async () => {
@@ -226,11 +299,7 @@ describe('useQuizBuilderQuestions', () => {
           json: async () => ({error: 'question title cannot be blank'}),
         } as Response)
       );
-
-      const {result, waitForNextUpdate} = renderHook(() =>
-        useQuizBuilderQuestions(42)
-      );
-      await waitForNextUpdate();
+      const {result} = await renderLoaded();
 
       let updatedId;
       await act(async () => {
@@ -243,22 +312,18 @@ describe('useQuizBuilderQuestions', () => {
       expect(result.current.errorQuestionId).toBe(7);
     });
 
-    it("POSTs a pending question's first save instead of PUTing it", async () => {
-      const {result, waitForNextUpdate} = renderHook(() =>
-        useQuizBuilderQuestions(42)
-      );
-      await waitForNextUpdate();
-
+    it("POSTs a pending question's first save to /quiz_questions, keeping it on its page", async () => {
+      const {result} = await renderLoaded();
       let pendingId: number | undefined;
       act(() => {
         pendingId = result.current.addPendingQuestion(
-          1,
+          2,
           'MultipleChoiceQuestion'
         );
       });
-
-      const created = {...QUESTION, ...PAYLOAD, id: 99};
-      postSpy.mockResolvedValue({json: async () => created} as Response);
+      postSpy.mockResolvedValue({
+        json: async () => ({...QUESTION, ...PAYLOAD, id: 99, page: null}),
+      } as Response);
 
       let updatedId;
       await act(async () => {
@@ -267,25 +332,20 @@ describe('useQuizBuilderQuestions', () => {
 
       expect(putSpy).not.toHaveBeenCalled();
       expect(postSpy).toHaveBeenCalledWith(
-        '/levels/42/quiz_question_placements',
-        JSON.stringify({
-          ...PAYLOAD,
-          type: 'MultipleChoiceQuestion',
-          page: 1,
-        }),
+        '/quiz_questions',
+        JSON.stringify(PAYLOAD),
         true,
         {'Content-Type': 'application/json'}
       );
       expect(updatedId).toBe(99);
-      expect(result.current.questions.map(q => q.id)).toEqual([7, 99]);
+      expect(result.current.pages.map(p => p.questions.map(q => q.id))).toEqual(
+        [[7], [99]]
+      );
+      expect(result.current.hasUnsavedLayout).toBe(true);
     });
 
     it('creates a pending question as the type it was switched to before its first save', async () => {
-      const {result, waitForNextUpdate} = renderHook(() =>
-        useQuizBuilderQuestions(42)
-      );
-      await waitForNextUpdate();
-
+      const {result} = await renderLoaded();
       let pendingId: number | undefined;
       act(() => {
         pendingId = result.current.addPendingQuestion(
@@ -314,48 +374,11 @@ describe('useQuizBuilderQuestions', () => {
         correctChoiceIds: ['a', 'b'],
       });
     });
-
-    it("posts the pending question's own page, not always page 1", async () => {
-      const {result, waitForNextUpdate} = renderHook(() =>
-        useQuizBuilderQuestions(42)
-      );
-      await waitForNextUpdate();
-
-      let pendingId: number | undefined;
-      act(() => {
-        pendingId = result.current.addPendingQuestion(
-          2,
-          'MultipleChoiceQuestion'
-        );
-      });
-
-      const created = {...QUESTION, ...PAYLOAD, id: 99, page: 2};
-      postSpy.mockResolvedValue({json: async () => created} as Response);
-
-      await act(async () => {
-        await result.current.saveQuestion(pendingId!, PAYLOAD);
-      });
-
-      expect(postSpy).toHaveBeenCalledWith(
-        '/levels/42/quiz_question_placements',
-        JSON.stringify({
-          ...PAYLOAD,
-          type: 'MultipleChoiceQuestion',
-          page: 2,
-        }),
-        true,
-        {'Content-Type': 'application/json'}
-      );
-    });
   });
 
   describe('removeQuestion', () => {
-    it('drops a pending question locally, with no network call', async () => {
-      const {result, waitForNextUpdate} = renderHook(() =>
-        useQuizBuilderQuestions(42)
-      );
-      await waitForNextUpdate();
-
+    it('drops a pending question locally, leaving nothing to save', async () => {
+      const {result} = await renderLoaded();
       let pendingId: number | undefined;
       act(() => {
         pendingId = result.current.addPendingQuestion(
@@ -364,60 +387,167 @@ describe('useQuizBuilderQuestions', () => {
         );
       });
 
-      let succeeded = false;
       await act(async () => {
-        succeeded = await result.current.removeQuestion(pendingId!);
+        await result.current.removeQuestion(pendingId!, {permanently: true});
       });
 
-      expect(deleteSpy).not.toHaveBeenCalled();
-      expect(succeeded).toBe(true);
       expect(result.current.questions.map(q => q.id)).toEqual([7]);
+      expect(result.current.hasUnsavedLayout).toBe(false);
     });
 
-    it('DELETEs the placement and drops the question from state on success', async () => {
-      deleteSpy.mockResolvedValue({
-        json: async () => ({destroyed: true}),
-      } as Response);
+    it('takes a question off the quiz locally, with no network call', async () => {
+      const {result} = await renderLoaded();
 
-      const {result, waitForNextUpdate} = renderHook(() =>
-        useQuizBuilderQuestions(42)
-      );
-      await waitForNextUpdate();
-
-      let succeeded = false;
       await act(async () => {
-        succeeded = await result.current.removeQuestion(7);
+        await result.current.removeQuestion(7, {permanently: false});
       });
 
-      expect(deleteSpy).toHaveBeenCalledWith(
-        '/levels/42/quiz_question_placements/7',
-        true
-      );
-      expect(succeeded).toBe(true);
+      expect(postSpy).not.toHaveBeenCalled();
+      expect(putSpy).not.toHaveBeenCalled();
       expect(result.current.questions).toEqual([]);
+      expect(result.current.hasUnsavedLayout).toBe(true);
+    });
+  });
+
+  describe('saveQuiz', () => {
+    const savedResponse = (placements: object[], newVersion = 6) =>
+      ({json: async () => ({version: newVersion, placements})} as Response);
+
+    it('sends the layout, deletions and version, then takes the saved version', async () => {
+      const {result} = await renderLoaded();
+      await act(async () => {
+        await result.current.removeQuestion(7, {permanently: true});
+      });
+      putSpy.mockResolvedValue(savedResponse([]));
+
+      let saved;
+      await act(async () => {
+        saved = await result.current.saveQuiz();
+      });
+
+      expect(putSpy).toHaveBeenCalledWith(
+        '/levels/42/quiz_configuration',
+        JSON.stringify({version: 5, placements: [], deleteQuestionIds: [7]}),
+        true,
+        {'Content-Type': 'application/json'}
+      );
+      expect(saved).toBe(true);
+      expect(version.current).toBe(6);
+      expect(result.current.hasUnsavedLayout).toBe(false);
     });
 
-    it('surfaces the server error message and leaves questions untouched on failure', async () => {
-      deleteSpy.mockRejectedValue(
-        new NetworkError('404 Not Found', {
-          json: async () => ({error: 'not found'}),
+    it('keeps a question removed from the quiz in the bank by leaving it out of deleteQuestionIds', async () => {
+      const {result} = await renderLoaded();
+      await act(async () => {
+        await result.current.removeQuestion(7, {permanently: false});
+      });
+      putSpy.mockResolvedValue(savedResponse([]));
+
+      await act(async () => {
+        await result.current.saveQuiz();
+      });
+
+      expect(JSON.parse(putSpy.mock.calls[0][1] as string)).toMatchObject({
+        placements: [],
+        deleteQuestionIds: [],
+      });
+    });
+
+    it('drops empty pages from what it sends', async () => {
+      const {result} = await renderLoaded();
+      act(() => {
+        result.current.addPage();
+      });
+      putSpy.mockResolvedValue(
+        savedResponse([{quizQuestionId: 7, page: 1, position: 1}])
+      );
+
+      await act(async () => {
+        await result.current.saveQuiz();
+      });
+
+      expect(JSON.parse(putSpy.mock.calls[0][1] as string).placements).toEqual([
+        {quizQuestionId: 7, page: 1, position: 1},
+      ]);
+    });
+
+    it('keeps a removal made during the save as unsaved', async () => {
+      const {result} = await renderLoaded();
+      let resolvePut: (response: Response) => void = () => {};
+      putSpy.mockReturnValue(
+        new Promise<Response>(resolve => {
+          resolvePut = resolve;
+        })
+      );
+
+      let saving: Promise<boolean> = Promise.resolve(false);
+      act(() => {
+        saving = result.current.saveQuiz();
+      });
+      await act(async () => {
+        await result.current.removeQuestion(7, {permanently: true});
+      });
+      await act(async () => {
+        resolvePut(savedResponse([{quizQuestionId: 7, page: 1, position: 1}]));
+        await saving;
+      });
+
+      expect(result.current.questions).toEqual([]);
+      expect(result.current.hasUnsavedLayout).toBe(true);
+
+      putSpy.mockResolvedValue(savedResponse([], 7));
+      await act(async () => {
+        await result.current.saveQuiz();
+      });
+
+      expect(JSON.parse(putSpy.mock.calls[1][1] as string)).toMatchObject({
+        version: 6,
+        placements: [],
+        deleteQuestionIds: [7],
+      });
+    });
+
+    it("surfaces the server's message and keeps the changes when the quiz changed since it loaded", async () => {
+      const {result} = await renderLoaded();
+      await act(async () => {
+        await result.current.removeQuestion(7, {permanently: false});
+      });
+      putSpy.mockRejectedValue(
+        new NetworkError('409 Conflict', {
+          json: async () => ({error: 'This quiz was changed somewhere else.'}),
         } as Response)
       );
 
-      const {result, waitForNextUpdate} = renderHook(() =>
-        useQuizBuilderQuestions(42)
-      );
-      await waitForNextUpdate();
-
-      let succeeded = true;
+      let saved;
       await act(async () => {
-        succeeded = await result.current.removeQuestion(7);
+        saved = await result.current.saveQuiz();
       });
 
-      expect(succeeded).toBe(false);
-      expect(result.current.error).toBe('not found');
-      expect(result.current.questions).toEqual([QUESTION]);
-      expect(result.current.errorQuestionId).toBe(7);
+      expect(saved).toBe(false);
+      expect(result.current.error).toBe(
+        'This quiz was changed somewhere else.'
+      );
+      expect(result.current.errorQuestionId).toBeNull();
+      expect(result.current.hasUnsavedLayout).toBe(true);
+      expect(version.current).toBe(5);
+    });
+
+    it('refuses to save while a question is still unsaved', async () => {
+      const {result} = await renderLoaded();
+      act(() => {
+        result.current.addPendingQuestion(1, 'MultipleChoiceQuestion');
+      });
+
+      let saved;
+      await act(async () => {
+        saved = await result.current.saveQuiz();
+      });
+
+      expect(saved).toBe(false);
+      expect(putSpy).not.toHaveBeenCalled();
+      expect(result.current.error).toBe(
+        'Save every question before saving the quiz.'
+      );
     });
   });
 });

@@ -19,6 +19,7 @@ const MULTIPLE_CHOICE_QUESTION: QuizBuilderQuestion = {
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
+  deletable: true,
   usedInPublishedUnit: false,
   page: 1,
 };
@@ -38,6 +39,7 @@ const MULTIPLE_SELECT_QUESTION: QuizBuilderQuestion = {
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
+  deletable: true,
   usedInPublishedUnit: false,
   page: 1,
 };
