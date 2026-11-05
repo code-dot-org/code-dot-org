@@ -17,7 +17,7 @@ class RakeTaskEventLogger
   end
 
   def initialize(_task)
-    # Object#initialize rejects the task argument, so this stays.
+    # Object#initialize rejects the task argument.
   end
 
   def start_task_logging

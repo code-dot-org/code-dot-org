@@ -8,16 +8,15 @@ require 'active_support/core_ext'
 require 'action_view'
 require 'dotiw'
 
-# Helper module for defining Rake tasks with timing and logging capabilities by
-# replacing the standard `task` command with `timed_task_with_logging`.
+# Helper module for defining Rake tasks with timing and logging capabilities.
 #
 # timed_task_with_logging records both own time (spent inside the task's own
 # block) and total time (including prerequisites). Tasks with substantial time
-# spent in prerequisites log both total and own time, while other tasks log a
-# single time. This plays out as follows:
+# spent in prerequisites log both total and own time, while other tasks log only
+# a single time. This plays out as follows:
 # - Leaf tasks and parents whose prereqs had already run show only one number.
 # - The first task to reach a prerequisite will include its time in the total.
-#   This includes :environment, which carries the Rails boot time.
+#   This includes :environment, which includes the Rails boot time.
 # - When a parent task invokes a child task directly within its own #execute
 #   block, the child's time counts toward the parent's own time.
 
