@@ -15,6 +15,10 @@ redshift_password: !Secret
 redshift_username: !Secret
 sinatra_session_secret: !Secret
 
+# Published by the autoscale-prod stack; see aws/cloudformation/components/{redis,memcached}.yml.erb.
+memcached_endpoint: !StackSecret
+redis_url: !StackSecret
+
 # In production, only the console server populates the admin credential.
 <% unless name&.include?('console') %>
 db_credential_admin: {"username":"ACCESS_DISABLED", "password":"ACCESS_DISABLED"}
