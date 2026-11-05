@@ -208,11 +208,19 @@ export function promptText(sentence: Sentence, choices: Choices): string {
     });
   };
   add(sentence.segments);
-  return parts
+  const prompt = parts
     .join('')
     .replace(/\s+/g, ' ')
     .replace(/\s+([,.])/g, '$1')
     .trim();
+
+  // Keep the mad-lib UI unchanged, but make the generated prompt describe
+  // the fixed fantasy skin color shown by the image generator.
+  if (sentence.id === 'character') {
+    return prompt.replace(/\bwitch\b/g, 'green-skinned witch');
+  }
+
+  return prompt;
 }
 
 /** The body plan of the chosen creature, when the sentence has one. */
