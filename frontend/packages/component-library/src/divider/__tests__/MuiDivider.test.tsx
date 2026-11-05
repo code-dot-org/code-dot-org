@@ -1,7 +1,3 @@
-/**
- * Every test renders a bare `Divider` from `@mui/material`; the `MuiDivider`
- * entry in styleOverrides/divider.ts (on CdoTheme) colors it.
- */
 import {Divider, DividerProps, ThemeProvider, createTheme} from '@mui/material';
 import {render, screen} from '@testing-library/react';
 
@@ -24,11 +20,12 @@ describe('Design System - Divider (theme-only)', () => {
     expect(getComputedStyle(divider).borderColor).toBe(COLOR);
   });
 
-  it('keeps the vertical layout and takes the same color', () => {
+  it('colors a vertical divider the same, with its line on the right', () => {
     renderDivider({orientation: 'vertical', flexItem: true});
     const style = getComputedStyle(screen.getByRole('separator'));
     expect(style.borderColor).toBe(COLOR);
     expect(style.borderBottomWidth).toBe('0px');
+    expect(style.borderRightWidth).toBe('thin');
   });
 
   it('gets the color from CdoTheme, not from MUI', () => {

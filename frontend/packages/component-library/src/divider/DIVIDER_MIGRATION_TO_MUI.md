@@ -23,18 +23,20 @@ Plain MUI `Divider` needs the color override. MUI's default border color is
 `palette.divider`, a 12% black that nearly vanishes on the Dark surfaces Lab2
 renders, where the quiz uses its divider.
 
-The override sets only `borderColor`. Margins, width and `flex-shrink` stay
-MUI's, so vertical and `flexItem` dividers lay out as before.
+The override sets only the border color, on the `<hr>` and on the
+`::before`/`::after` lines a labelled divider draws. Margins, width and
+`flex-shrink` stay MUI's, so vertical and `flexItem` dividers lay out as
+before. MUI's deprecated `light` prop no longer lightens the line.
 
 ## Prop map
 
-| Legacy           | MUI                                                                  |
-| ---------------- | -------------------------------------------------------------------- |
-| `color="primary"` | the theme default                                                   |
-| `color="strong"` | `sx={{borderColor: 'var(--background-neutral-senary)'}}`             |
-| `margin="none"`  | MUI's default (`margin: 0`)                                          |
-| `margin="xs"`–`l` | `sx={{my: 1}}`, `2`, `4`, `8`                                        |
-| `className`, `style`, other `<hr>` attributes | passed through unchanged                    |
+| Legacy                                        | MUI                                                      |
+| --------------------------------------------- | -------------------------------------------------------- |
+| `color="primary"`                             | the theme default                                        |
+| `color="strong"`                              | `sx={{borderColor: 'var(--background-neutral-senary)'}}` |
+| `margin="none"`                               | MUI's default (`margin: 0`)                              |
+| `margin="xs"`–`l`                             | `sx={{my: 1}}`, `2`, `4`, `8`                            |
+| `className`, `style`, other `<hr>` attributes | passed through unchanged                                 |
 
 No consumer passes `color` or `margin`.
 
@@ -42,30 +44,40 @@ No consumer passes `color` or `margin`.
 
 - The `<hr>` gains MUI's classes (`MuiDivider-root`, `MuiDivider-fullWidth`
   and an emotion class) and loses the legacy module classes.
-- Legacy set `width: 100%`, `margin-inline: auto` and `flex-shrink: 1`. MUI
-  sets `margin: 0` and `flex-shrink: 0` and leaves width to the box. Where
-  that differs:
+- Legacy drew a top border; MUI draws a bottom border on a zero-height box,
+  so the 1px line lands on the same pixel row.
+- Legacy set `width: 100%` and `margin-inline: auto` and left `flex-shrink`
+  at its default of 1. MUI sets `margin: 0` and `flex-shrink: 0` and leaves
+  width `auto`. Where that differs:
   - A divider in a flex row with no `flex` of its own collapses to zero
     width. PageDivider gives its rules `flex: 1 0 0`, so it is unaffected.
+  - A divider after a float, with no `clear`, now sits beside the float
+    instead of dropping below it. The consumer PR gives Markdown's `hr`
+    `width: 100%` to keep the legacy behavior for curriculum text beside
+    floated images.
   - A divider narrowed by an inline `width` sits at the inline-start edge
-    instead of centering. No curriculum `<hr>` in `dashboard/config` narrows
-    one; the styled ones are `clear: both` or full width.
+    instead of centering. No curriculum `<hr>` in `dashboard/config` sets a
+    narrower width; inline `width`, `margin` and `border` override both
+    implementations alike.
 - Every existing `@mui/material` divider in apps takes the new color unless
-  its own CSS sets one. AI Lab's dataset picker and Sketch Lab's toolbar and
-  canvas controls set their own; the workshop dashboard pages, the AI diff
-  chat header and the add-resource dialog do not, and change from MUI's 12%
-  black to `--background-neutral-quaternary`.
+  its own CSS sets one with more specificity. AI Lab's dataset picker does
+  (two classes). The workshop dashboard pages, the AI diff chat header and
+  the add-resource dialog set none, and change from MUI's 12% black to
+  `--background-neutral-quaternary`. Sketch Lab's toolbar and canvas controls
+  set one with a single class, which ties with MUI's emotion class; emotion
+  usually loads later in apps, so they likely change too.
 - The marketing sites are unaffected: `code-dot-org/marketing-sites` builds
   its own themes and carries its own copy of this package.
 
 ## Consumers
 
-| File                                                        | Change |
-| ----------------------------------------------------------- | ------ |
-| `apps/src/quiz/attempt/PageDivider.tsx`                     | import |
-| `frontend/packages/markdown/src/components/Markdown.tsx`    | import |
+| File                                                     | Change |
+| -------------------------------------------------------- | ------ |
+| `apps/src/quiz/attempt/PageDivider.tsx`                  | import |
+| `frontend/packages/markdown/src/components/Markdown.tsx` | import |
 
-`apps/.eslintrc.js` bans `@code-dot-org/component-library/divider` in apps.
+The consumer PR also bans `@code-dot-org/component-library/divider` in
+`apps/.eslintrc.js`.
 
 ## Parity
 
@@ -90,12 +102,12 @@ step 5.
 ## Story gaps
 
 None. The MUI stories cover the states the legacy stories lacked: a divider
-between two labels in a flex row, and one narrowed by an inline `width`.
+between two labels in a flex row, a labelled divider, one narrowed by an
+inline `width`, and a vertical one.
 
 ## Risks
 
 - The recolor of the existing `@mui/material` dividers listed above is
   visible, though slight in Light.
-- Sketch Lab's toolbar sets its color with one class, which ties with MUI's
-  emotion class whichever theme is in place. If emotion wins there today, the
-  toolbar dividers take the new color too.
+- Sketch Lab's toolbar and canvas-control dividers likely take the new
+  color (see Behavior differences); not checked in a browser.
