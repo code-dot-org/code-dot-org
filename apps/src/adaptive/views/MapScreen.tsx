@@ -180,7 +180,6 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
         options={{
           scrollToElement: false,
           exitOnOverlayClick: false,
-          hidePrev: true,
           nextLabel: 'Got it',
           doneLabel: 'Got it',
           showBullets: false,
@@ -234,7 +233,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               pathway={pathway}
               statusMap={statusMap}
               settings={mapSettings}
-              focusId={focusId}
+              focusId={tourEnabled ? undefined : focusId}
               tourFocusIds={tourFocusIds}
               onSelect={id => {
                 if (

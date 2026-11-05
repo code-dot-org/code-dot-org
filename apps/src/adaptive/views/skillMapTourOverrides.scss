@@ -91,20 +91,9 @@
   box-shadow: 0 0 0 0.2rem var(--text-neutral-tertiary);
 }
 
-.introjs-prevbutton {
-  color: var(--text-brand-purple-primary);
-  border: 1px solid var(--borders-brand-purple-primary);
-  background-color: var(--background-neutral-primary);
-
-  &:hover,
-  &:active,
-  &:focus,
-  &:visited {
-    color: var(--text-neutral-white-fixed);
-    background-color: var(--background-brand-purple-light);
-    text-decoration: none;
-    box-shadow: none;
-  }
+.introjs-prevbutton,
+.introjs-skipbutton {
+  display: none;
 }
 
 // On the "pick a checkpoint" step the user advances by clicking the map, not

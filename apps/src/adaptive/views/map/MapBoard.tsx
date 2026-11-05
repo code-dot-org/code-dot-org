@@ -12,10 +12,14 @@ import {MapZoomContext} from './MapZoom';
 
 import styles from './mapBoard.module.scss';
 
-// On-screen scale of the board when zoomed onto a checkpoint, whatever the
-// fit shrank it to, unless the viewer had already zoomed in further.
+// On-screen scale of the board when zoomed onto a single checkpoint.
 const FOCUS_SCALE = 2;
+// Maximum on-screen scale during the tour's "pick a checkpoint" step.
+// When all focus nodes fit at this scale, we use it; when they don't, we
+// zoom out just enough to fit them all.
 const TOUR_FOCUS_SCALE = 1.75;
+// Fraction of the viewport the bbox of focus nodes should fill.
+const TOUR_FOCUS_PADDING = 0.75;
 
 interface MapBoardProps {
   layout: MapLayout;
@@ -26,7 +30,8 @@ interface MapBoardProps {
   focus?: NodePosition;
   /** See MapProps. */
   fit?: MapFit;
-  tourFocus?: {x: number; y: number};
+  /** Bounding box center and size of the nodes to highlight during the tour. */
+  tourFocus?: {x: number; y: number; width: number; height: number};
   children: React.ReactNode;
 }
 
@@ -66,9 +71,22 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
     ? 0
     : Math.max(0, (spaceHeight - layout.height * fit) / 2);
   const effectiveFocus = focus ?? tourFocus;
+  // For the tour, zoom to fit the bounding box of all highlighted nodes,
+  // capped at TOUR_FOCUS_SCALE so nearby nodes don't over-zoom.
+  const tourTargetScale =
+    !focus && tourFocus && spaceWidth && spaceHeight
+      ? Math.min(
+          TOUR_FOCUS_SCALE,
+          TOUR_FOCUS_PADDING *
+            Math.min(
+              spaceWidth / tourFocus.width,
+              spaceHeight / tourFocus.height
+            )
+        )
+      : TOUR_FOCUS_SCALE;
   const focusScale = Math.max(
     1,
-    (focus ? FOCUS_SCALE : TOUR_FOCUS_SCALE) / (fit * outer.zoom)
+    (focus ? FOCUS_SCALE : tourTargetScale) / (fit * outer.zoom)
   );
   // How far, in board units, the focused point is from the center of the
   // view.
