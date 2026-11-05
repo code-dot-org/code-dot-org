@@ -333,7 +333,7 @@ describe('SentenceScene', () => {
       });
       expect(onGenerateStart).toHaveBeenCalledTimes(1);
       await act(async () => {
-        jest.advanceTimersByTime(6999);
+        jest.advanceTimersByTime(4999);
       });
       expect(screen.getByRole('status').textContent).toBe(
         'Making your picture…'
@@ -357,13 +357,13 @@ describe('SentenceScene', () => {
       pickCreature();
       await generate();
       await act(async () => {
-        jest.advanceTimersByTime(7000);
+        jest.advanceTimersByTime(5000);
       });
       await generate();
       expect(findCachedImage.mock.calls[0][0].avoidVariant).toBeUndefined();
       expect(findCachedImage.mock.calls[1][0].avoidVariant).toBe(1);
       await act(async () => {
-        jest.advanceTimersByTime(7000);
+        jest.advanceTimersByTime(5000);
       });
       fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
       await generate();
