@@ -499,6 +499,32 @@ describe('useQuizBuilderQuestions', () => {
       expect(JSON.parse(putSpy.mock.calls[0][1] as string).placements).toEqual([
         {quizQuestionId: 7, page: 1, position: 1},
       ]);
+      expect(result.current.pages.map(p => p.page)).toEqual([1]);
+    });
+
+    it('moves questions up past a page emptied before the save', async () => {
+      getSpy.mockResolvedValue({
+        json: async () => ({
+          version: 5,
+          questions: [QUESTION, {...QUESTION, id: 8, page: 2}],
+        }),
+      } as Response);
+      const {result} = await renderLoaded();
+      await act(async () => {
+        await result.current.removeQuestion(7, {permanently: false});
+      });
+      putSpy.mockResolvedValue(
+        savedResponse([{quizQuestionId: 8, page: 1, position: 1}])
+      );
+
+      await act(async () => {
+        await result.current.saveQuiz();
+      });
+
+      expect(result.current.pages).toEqual([
+        {page: 1, questions: [expect.objectContaining({id: 8})]},
+      ]);
+      expect(result.current.hasUnsavedLayout).toBe(false);
     });
 
     it('keeps a removal made during the save as unsaved', async () => {

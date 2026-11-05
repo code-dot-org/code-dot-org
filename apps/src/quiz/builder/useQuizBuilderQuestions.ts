@@ -276,6 +276,7 @@ export default function useQuizBuilderQuestions(
     setError(null);
     setErrorQuestionId(null);
     setIsSavingQuiz(true);
+    const sentLayout = layout;
     const placements = placementsFromLayout(layout);
     const sentDeleteQuestionIds = deleteQuestionIds;
     try {
@@ -291,7 +292,13 @@ export default function useQuizBuilderQuestions(
       );
       const body = await response.json();
       quizVersion.current = body.version;
-      // Edits made during the save stay unsaved, so layout is left alone.
+      // Drops the empty pages that weren't saved, unless the layout changed
+      // during the save; those edits stay unsaved.
+      setLayout(prev =>
+        prev === sentLayout
+          ? prev.filter(questionIds => questionIds.length > 0)
+          : prev
+      );
       setSavedPlacements(placements);
       setDeleteQuestionIds(prev =>
         prev.filter(id => !sentDeleteQuestionIds.includes(id))
