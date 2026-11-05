@@ -9,6 +9,7 @@
 
 import {Typography} from '@mui/material';
 import type {ChangeEvent} from 'react';
+import {useState} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
 
@@ -46,6 +47,22 @@ export const LayerPanel = ({
   isReadOnly,
 }: LayerPanelProps) => {
   const at = layers.findIndex(layer => layer.id === selected);
+  /** What the stage leaves undrawn: what is in front of the selected one. */
+  const inFront = at < 0 ? 0 : layers.length - 1 - at;
+  const layersWord = (count: number) =>
+    `${count} layer${count === 1 ? '' : 's'}`;
+  // Said on a press or a tick, not on every change the strip is shown.
+  const [said, setSaid] = useState('');
+  const pressed = (layer: MapLayerDoc, index: number) => {
+    const hides = showAll ? 0 : layers.length - 1 - index;
+    setSaid(
+      hides
+        ? `${layersWord(hides)} in front of ${layerName(layer)} hidden; ` +
+            `Show all layers brings ${hides === 1 ? 'it' : 'them'} back`
+        : '',
+    );
+    onSelect(layer.id);
+  };
   return (
     <div
       className={styles.layers}
@@ -63,29 +80,45 @@ export const LayerPanel = ({
         Click a layer to give it a background.
       </Typography>
       <ul className={styles.layerList} aria-label="Layers, front first">
-        {[...layers].reverse().map(layer => (
-          <li key={layer.id}>
-            <button
-              type="button"
-              className={styles.layerRow}
-              aria-pressed={layer.id === selected}
-              onClick={() => onSelect(layer.id)}
-            >
-              {layerName(layer)}
-            </button>
-          </li>
-        ))}
+        {layers
+          .map((layer, index) => ({layer, index}))
+          .reverse()
+          .map(({layer, index}) => (
+            <li key={layer.id}>
+              <button
+                type="button"
+                className={styles.layerRow}
+                aria-pressed={layer.id === selected}
+                onClick={() => pressed(layer, index)}
+              >
+                {layerName(layer)}
+              </button>
+            </li>
+          ))}
       </ul>
       {/* Front first, so what is hidden is what is above the pressed row. */}
       <Checkbox
         name="layers-show-all"
         size="s"
-        label="Show all layers"
-        checked={showAll}
-        onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          onShowAll(event.target.checked)
+        label={
+          inFront && !showAll
+            ? `Show all layers (${layersWord(inFront)} hidden)`
+            : 'Show all layers'
         }
+        checked={showAll}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => {
+          const shown = event.target.checked;
+          setSaid(
+            inFront
+              ? `${layersWord(inFront)} ${shown ? 'shown' : 'hidden'}`
+              : '',
+          );
+          onShowAll(shown);
+        }}
       />
+      <span className={styles.announcer} role="status">
+        {said}
+      </span>
       {/* Icons, named in words for a reader and a pointer's tooltip, as
           the inspector's actions are (`IconAction`). */}
       <div className={styles.layerActions}>

@@ -127,6 +127,10 @@ below, and are listed last.
 - **Reaching the stage from a tile is a walk by Tab** past the rest of the
   palette; taking an actor in hand does not move focus to the stage, which
   is right for a pointer and long for a keyboard.
+  CLOSED: Enter or Space on a tile takes the actor and moves focus to the
+  stage, which says where its cursor is; a click leaves focus on the tile.
+  Open and Delete under the tile are now the long walk instead: back by
+  Shift+Tab, past Add New Actor and every tile after it.
 
 ### Finishing the shell (SHELL_FINISH_PLAN.md)
 
@@ -135,6 +139,10 @@ below, and are listed last.
   What the place holds is not said.
 - **Layers in front vanish without a word** when a layer is pressed in
   the strip; only the box "Show all layers" says they can come back.
+  CLOSED: a press says what it hid ("2 layers in front of Main hidden;
+  Show all layers brings them back"), the box's label counts them
+  ("Show all layers (2 layers hidden)"), and ticking or clearing it says
+  "2 layers shown" or "2 layers hidden".
 - **A camera's inspector takes the place of its owner's, and focus is
   not moved**: pressing a row of the camera list, or Add a camera, removes
   the button that was pressed, so focus falls to the page; Close and

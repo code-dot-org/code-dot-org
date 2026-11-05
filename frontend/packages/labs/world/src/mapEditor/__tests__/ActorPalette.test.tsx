@@ -55,6 +55,17 @@ describe('the Actor Palette', () => {
     expect(props.onSelect).toHaveBeenLastCalledWith('actors/player');
   });
 
+  it('sends the keyboard on to the stage when a key takes one, and a press not', () => {
+    const onTakenByKey = vi.fn();
+    renderPalette({onTakenByKey});
+    const tile = screen.getByRole('button', {name: 'Player'});
+    fireEvent.click(tile, {detail: 1});
+    expect(onTakenByKey).not.toHaveBeenCalled();
+    // What Enter or Space on a button sends: a click with no count.
+    fireEvent.click(tile, {detail: 0});
+    expect(onTakenByKey).toHaveBeenCalledTimes(1);
+  });
+
   it('puts it down on a second press, and offers Open and Delete under it', () => {
     const props = renderPalette({selected: 'actors/player'});
     const inHand = screen.getByRole('button', {name: 'Player'});

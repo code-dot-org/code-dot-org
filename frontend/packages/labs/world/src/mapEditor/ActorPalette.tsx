@@ -57,6 +57,11 @@ export interface ActorPaletteProps {
    * carries only when it is dropped.
    */
   onDragOut?: (path: string | null) => void;
+  /**
+   * A tile was taken by Enter or Space rather than a press, so the stage,
+   * where the keyboard places it, is the next thing wanted.
+   */
+  onTakenByKey?: () => void;
   /** Kept, not unmounted, while an inspector has its column: the tab stays. */
   hidden?: boolean;
 }
@@ -72,6 +77,7 @@ export const ActorPalette = ({
   newWithheld,
   isReadOnly,
   onDragOut,
+  onTakenByKey,
   hidden,
 }: ActorPaletteProps) => {
   const [tab, setTab] = useState<PaletteTab>(startTab);
@@ -103,7 +109,13 @@ export const ActorPalette = ({
               <button
                 type="button"
                 className={styles.actor}
-                onClick={() => onSelect(inHand ? null : actor.path)}
+                onClick={event => {
+                  onSelect(inHand ? null : actor.path);
+                  // A click from a key has no pointer, so no count.
+                  if (!inHand && event.detail === 0) {
+                    onTakenByKey?.();
+                  }
+                }}
                 onKeyDown={event => {
                   if (event.key === 'Escape' && selected) {
                     event.preventDefault();

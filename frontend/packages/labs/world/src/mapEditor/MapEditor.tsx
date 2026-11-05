@@ -359,6 +359,8 @@ export const MapEditor = ({
     actorIconImage(icons[path] ?? '') ?? thumbnails[path];
   // The picker template to PLACE; null is the stage's select mode.
   const [selected, setSelected] = useState<string | null>(null);
+  /** Counts the times focus was sent to the stage (`MapStage.focusAsked`). */
+  const [stageFocus, setStageFocus] = useState(0);
   // A selection's inspector takes the palette's column while it is open: the
   // palette has nothing to do then, and over the map it covered what it was
   // about.
@@ -1011,6 +1013,7 @@ export const MapEditor = ({
           newWithheld={withheld.has('map-new-actor')}
           isReadOnly={isReadOnly}
           onDragOut={setIncoming}
+          onTakenByKey={() => setStageFocus(asked => asked + 1)}
           hidden={inspecting}
         />
         <div
@@ -1027,6 +1030,7 @@ export const MapEditor = ({
           onDocChange={commit}
           onDocPreview={setLiveMap}
           placing={selected}
+          focusAsked={stageFocus}
           onPutDown={() => setSelected(null)}
           thumbnails={thumbnails}
           pictures={shown.pictures}

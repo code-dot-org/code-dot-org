@@ -1482,7 +1482,7 @@ describe('editing one layer', () => {
     press(view.canvas, map, {x: 48, y: 48});
     expect(view.selectedId()).toBe('a');
 
-    fireEvent.click(view.getByRole('checkbox', {name: 'Show all layers'}));
+    fireEvent.click(view.getByRole('checkbox', {name: /^Show all layers/}));
     press(view.canvas, map, {x: 144, y: 48});
     expect(view.selectedId()).toBe('b');
   });

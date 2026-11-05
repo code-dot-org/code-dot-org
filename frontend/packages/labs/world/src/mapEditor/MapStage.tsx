@@ -286,6 +286,8 @@ export interface MapStageProps {
   onDocPreview?: (next: MapDoc) => void;
   /** The actor type a click places; null is select mode. */
   placing: string | null;
+  /** Focus moves to the stage each time this goes up, after `placing` has. */
+  focusAsked?: number;
   /** Sandbox-rendered thumbnails by type — what an actor is drawn as. */
   thumbnails: Record<string, string>;
   /**
@@ -579,6 +581,7 @@ export const MapStage = ({
   backgroundChoices,
   backgroundImages,
   placing,
+  focusAsked = 0,
   thumbnails,
   pictures,
   schemas,
@@ -3640,6 +3643,11 @@ export const MapStage = ({
         })()
       : undefined;
   const inspectedCamera = Boolean(cameraEditor && inspectingCamera);
+  useEffect(() => {
+    if (focusAsked) {
+      canvasRef.current?.focus();
+    }
+  }, [focusAsked]);
   useEffect(() => {
     if (!cameraFocus) {
       return;
