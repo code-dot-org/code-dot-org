@@ -9,7 +9,6 @@ jest.mock('@cdo/apps/p5lab/redux/animationList', () => ({
 }));
 
 import {
-  applyLevelDefaults,
   BlockImageField,
   CostumeField,
   refreshAnimationDropdownThumbnails,
@@ -114,60 +113,6 @@ describe('image picker fields', () => {
       animationList = {orderedKeys: [], propsByKey: {}};
       field.followList();
       expect(field.getValue()).toBe('null');
-    });
-  });
-
-  describe('level defaults off screen', () => {
-    // A costume field on a set-as-player block, never rendered.
-    const onBlock = (field: InstanceType<typeof CostumeField>) => {
-      (field as unknown as {getSourceBlock: () => unknown}).getSourceBlock =
-        () => ({
-          type: 'spritelab2_setAsPlatformPlayer',
-          outputConnection: null,
-          getParent: () => null,
-        });
-      return field;
-    };
-    beforeEach(() => {
-      animationList = {
-        orderedKeys: ['rival', 'hero'],
-        propsByKey: {
-          rival: {name: 'rival', categories: [], role: 'friend'},
-          hero: {name: 'hero', categories: [], role: 'hero'},
-        },
-      };
-      imageRoleDefaults = {sprite: 'hero'};
-    });
-    afterEach(() => {
-      animationList = fullList;
-      imageRoleDefaults = undefined;
-    });
-
-    it('takes the level default when the source saved no value', () => {
-      const field = onBlock(CostumeField.fromJson({}));
-      expect(field.getValue()).toBe('"rival"');
-      field.applyLevelDefaultUnlessLoaded();
-      expect(field.getValue()).toBe('"hero"');
-    });
-
-    it('keeps a saved value', () => {
-      const field = onBlock(CostumeField.fromJson({}));
-      field.loadState('"rival"');
-      field.applyLevelDefaultUnlessLoaded();
-      expect(field.getValue()).toBe('"rival"');
-    });
-
-    it('reaches every dropdown in a workspace', () => {
-      const fresh = onBlock(CostumeField.fromJson({}));
-      const saved = onBlock(CostumeField.fromJson({}));
-      saved.loadState('"rival"');
-      applyLevelDefaults({
-        getAllBlocks: () => [
-          {inputList: [{fieldRow: [fresh]}, {fieldRow: [saved]}]},
-        ],
-      } as never);
-      expect(fresh.getValue()).toBe('"hero"');
-      expect(saved.getValue()).toBe('"rival"');
     });
   });
 });

@@ -31,9 +31,6 @@ export interface AttachShadow {
       meant: the `data` of the level's own entry for it. */
   data?: string;
   shadow: BlocklyCore.serialization.blocks.State;
-  /** The scene whose workspace gets it, by id; the pinned scene when
-      unset. */
-  scene?: string;
 }
 
 /**
@@ -48,9 +45,6 @@ export interface AttachRoom {
       meant: the `data` of the level's own entry for it. */
   data?: string;
   room: {type: string};
-  /** The scene whose workspace gets it, by id; the pinned scene when
-      unset. */
-  scene?: string;
 }
 
 export type AddBlockEntry = AddBlock | AttachShadow | AttachRoom;

@@ -138,13 +138,6 @@ export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
 
   init() {
     super.init();
-    this.applyLevelDefaultUnlessLoaded();
-  }
-
-  /** A field no saved value reached takes the level default. Rendering
-      does this in init; a headless workspace never renders, so code built
-      from one applies it by hand (applyLevelDefaults). */
-  applyLevelDefaultUnlessLoaded() {
     if (!this.valueLoaded) {
       this.applyLevelDefault();
     }
@@ -183,22 +176,6 @@ export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
       this.setValue(`"${name}"`);
     }
   }
-}
-
-/** Gives every image dropdown in the workspace that no saved value reached
-    its level default. */
-export function applyLevelDefaults(workspace: {
-  getAllBlocks(ordered: boolean): BlocklyCore.Block[];
-}): void {
-  workspace.getAllBlocks(false).forEach(block =>
-    block.inputList.forEach(input =>
-      input.fieldRow.forEach(field => {
-        if (field instanceof Lab2AnimationDropdown) {
-          field.applyLevelDefaultUnlessLoaded();
-        }
-      })
-    )
-  );
 }
 
 function animationDropdown(

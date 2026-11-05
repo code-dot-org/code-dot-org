@@ -56,39 +56,7 @@ describe('getCode', () => {
 });
 
 describe('getCodeFromSerializedWorkspace', () => {
-  let sandbox;
-
-  beforeEach(() => {
-    sandbox = sinon.createSandbox();
-  });
-
-  afterEach(() => {
-    sandbox.restore();
-  });
-
-  it('runs prepare on the loaded workspace before generating code', () => {
-    const calls = [];
-    sandbox
-      .stub(Blockly.serialization.workspaces, 'load')
-      .callsFake(() => calls.push('load'));
-    sandbox.stub(Blockly.JavaScript, 'workspaceToCode').callsFake(() => {
-      calls.push('code');
-      return 'generated';
-    });
-    const prepare = sinon.spy(workspace => {
-      expect(workspace).to.be.an.instanceOf(Blockly.Workspace);
-      calls.push('prepare');
-    });
-
-    expect(
-      getCodeFromSerializedWorkspace({blocks: {blocks: []}}, prepare)
-    ).to.equal('generated');
-    expect(calls).to.deep.equal(['load', 'prepare', 'code']);
-  });
-
   it('is empty for no source, without touching Blockly', () => {
-    const prepare = sinon.spy();
-    expect(getCodeFromSerializedWorkspace(undefined, prepare)).to.equal('');
-    expect(prepare).not.to.have.been.called;
+    expect(getCodeFromSerializedWorkspace(undefined)).to.equal('');
   });
 });

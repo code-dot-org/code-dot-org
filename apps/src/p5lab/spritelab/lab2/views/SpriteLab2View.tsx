@@ -44,7 +44,7 @@ import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {addMissingBlocks, isAttachment, ownsTop} from '../addBlocks';
+import {addMissingBlocks, ownsTop} from '../addBlocks';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -65,13 +65,9 @@ import {
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
-import {
-  applyLevelDefaults,
-  refreshAnimationDropdownThumbnails,
-} from '../blockly/imagePickerFields';
+import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
-import {withStarterBlocks} from '../extraSceneStarter';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
 import {
   removeImageReferences,
@@ -525,15 +521,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         },
         ...(extraScene ? [extraScene] : []),
       ].filter(scene => !existing.some(s => s.id === scene.id));
-      // An extra scene the project already has keeps the student's work
-      // but gets the starter blocks it lacks.
-      const kept = existing.map(scene =>
-        extraScene && scene.id === extraScene.id
-          ? withStarterBlocks(scene, extraScene.source)
-          : scene
-      );
-      const changed = kept.some((scene, i) => scene !== existing[i]);
-      if (!wanted.length && !changed) {
+      if (!wanted.length) {
         return prev;
       }
       const added: Scene[] = wanted.map(scene => ({
@@ -541,7 +529,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         name: scene.name,
         source: scene.source ?? DEFAULT_SCENE_SOURCE,
       }));
-      return {...prev, scenes: [...kept, ...added]};
+      return {...prev, scenes: [...existing, ...added]};
     });
   }, [
     pinnedSceneId,
@@ -1350,8 +1338,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             live ??
             withSceneMenuActive(scene.id, () =>
               getCodeFromSerializedWorkspace(
-                scene.source ?? DEFAULT_SCENE_SOURCE,
-                applyLevelDefaults
+                scene.source ?? DEFAULT_SCENE_SOURCE
               )
             );
         } catch (e) {
@@ -1431,10 +1418,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       );
       try {
         return withSceneMenuActive(scene.id, () =>
-          getCodeFromSerializedWorkspace(
-            scene.source ?? DEFAULT_SCENE_SOURCE,
-            applyLevelDefaults
-          )
+          getCodeFromSerializedWorkspace(scene.source ?? DEFAULT_SCENE_SOURCE)
         );
       } finally {
         dispatch({
@@ -1958,16 +1942,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // in page loads nothing, so arriving runs it; a load puts the view back
   // wherever the workspace was, so a load runs it too and brings the
   // level's outline back on screen.
-  // An attachment names the scene it belongs to; every other entry is the
-  // pinned scene's.
+  // The level's entries belong to its pinned scene.
   const sceneAddBlocks = useMemo(
     () =>
-      (levelProperties.addBlocks ?? []).filter(
-        entry =>
-          (isAttachment(entry)
-            ? entry.scene ?? pinnedSceneId
-            : pinnedSceneId) === activeScene.id
-      ),
+      activeScene.id === pinnedSceneId ? levelProperties.addBlocks ?? [] : [],
     [levelProperties.addBlocks, pinnedSceneId, activeScene.id]
   );
   // Runs with no entries too: the pass also drops other levels' outlines.
