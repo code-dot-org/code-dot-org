@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {act, render} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -26,6 +27,9 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 
 let mockEngineContexts: {project?: object; trainingData?: object} = {};
 
@@ -54,6 +58,9 @@ jest.mock('@cdo/apps/ailab/engine', () => {
     store: jest.requireActual('@cdo/apps/ailab/engine/store').store,
     defaultProject: jest.requireActual('@cdo/apps/ailab/engine/types')
       .defaultProject,
+    LAB2_INSTRUCTIONS: jest.requireActual(
+      '@cdo/apps/ailab/engine/lab2Instructions'
+    ).LAB2_INSTRUCTIONS,
     ProjectProvider,
     useProject,
     TrainingDataProvider,
@@ -74,6 +81,14 @@ const mockedAilab = jest.mocked(ailab);
 
 const train = (accuracy: number) =>
   act(() => mockedAilab.AilabEngine.mock.lastCall?.[0].onTrained?.(accuracy));
+
+const reportScreen = () =>
+  act(() =>
+    mockedAilab.AilabEngine.mock.lastCall?.[0].setInstructionsKey?.(
+      'datasetView',
+      null
+    )
+  );
 
 const UNMET_MESSAGE = 'Train a model with at least 70% accuracy to continue.';
 
@@ -126,7 +141,7 @@ describe('AilabWorkspace', () => {
     jest.clearAllMocks();
     mockEngineContexts = {};
     stubRedux();
-    registerReducers({progress, lab});
+    registerReducers({progress, lab, currentUser});
     store = getStore();
     store.dispatch(
       initProgress({lessons: []} as unknown as Parameters<
@@ -143,11 +158,13 @@ describe('AilabWorkspace', () => {
     store.dispatch(setCurrentLevelId(levelId));
     render(
       <Provider store={store}>
-        <LevelPropertiesWrapper levelPropertiesMap={LEVELS}>
-          <ProgressContainer appType="ailab">
-            <CurrentLevel />
-          </ProgressContainer>
-        </LevelPropertiesWrapper>
+        <ThemeProvider>
+          <LevelPropertiesWrapper levelPropertiesMap={LEVELS}>
+            <ProgressContainer appType="ailab">
+              <CurrentLevel />
+            </ProgressContainer>
+          </LevelPropertiesWrapper>
+        </ThemeProvider>
       </Provider>
     );
   }
@@ -171,6 +188,21 @@ describe('AilabWorkspace', () => {
       mockedAilab.AilabEngine.mock.lastCall?.[0].onLoadingChange?.(true)
     );
     expect(onLoadingChange).toHaveBeenLastCalledWith(true);
+  });
+
+  it('lets a signed-in student save the tree to the Backpack', () => {
+    store.dispatch(setInitialData({id: 1}));
+    renderLevel('3');
+    expect(
+      mockedAilab.AilabEngine.mock.lastCall?.[0].saveImageToBackpack
+    ).toBeInstanceOf(Function);
+  });
+
+  it('offers no Backpack save to a signed-out student', () => {
+    renderLevel('3');
+    expect(
+      mockedAilab.AilabEngine.mock.lastCall?.[0].saveImageToBackpack
+    ).toBeUndefined();
   });
 
   it('shows no message until a training run misses the minimum', () => {
@@ -226,10 +258,29 @@ describe('AilabWorkspace', () => {
     });
   });
 
+  it('holds the resource panel until the engine reports its screen', () => {
+    renderLevel('3');
+    expect(ResourcePanel).not.toHaveBeenCalled();
+
+    reportScreen();
+    expect(
+      jest.mocked(ResourcePanel).mock.lastCall?.[0].dynamicInstructions
+    ).toBeTruthy();
+  });
+
   it('describes the requirement on the disabled Continue', () => {
     renderLevel('1');
+    reportScreen();
     expect(jest.mocked(ResourcePanel).mock.lastCall?.[0]).toMatchObject({
       validationTooltip: 'Train a model with at least 70% accuracy',
     });
+  });
+
+  it('shows a Backpack that takes no files into the lab', () => {
+    renderLevel('3');
+    reportScreen();
+    expect(
+      jest.mocked(ResourcePanel).mock.lastCall?.[0].backpackProps
+    ).toMatchObject({supportedFileTypes: []});
   });
 });

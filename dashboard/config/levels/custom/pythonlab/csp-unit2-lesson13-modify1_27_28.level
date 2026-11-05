@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-04T04:53:41.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "age = int(input(\"How old is the visitor? \"))\n\nif age < 5:\n    price = 0\nelse:\n    if age < 18:\n        price = 8\n    else:\n        if age >= 65:\n            price = 10\n        else:\n            price = 15\n\nprint(\"Ticket price: $\" + str(price))",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMolNiCA7k+CcnXT\nTI4sZ0nKtvndfSHIA41antNiKzY276B+Z5J4wQApP/XeAt7G+/Ibne4OnMmD\nDzJ0vU8Dvm1GY4Tnm+C37OuYuwzg4T3SzrqhQLkhUcNIxBfcm4+Bj6t3Cz5w\nxXR6HJ3tvEepY2TVfZBmToZTyu46I5P2aQjj81QjCMN1TGylDrNV0G+y4XLo\nh35wP7fHqxT5MApN7okZ8cVMjbVcv4hg+WiXIBACiBCfNMXklahlrpMrN0QI\nRdJ5oUSqhbLSItmommq0egopTnlYKpXFNPAEBXYvvqWJFPyHKorabyknqj2N\nl4djI/rYC5lUJm19ZJ/cYAQWKgdJwZBRZK9EhSlegRSnnVX8qfCZ0FLpxUuX\neKxW73mPA/bD08zrhvcaBjGtbqYRC8RM9SZfuA4t7yJWT/FXiT43mg==\n",
+    "teacher_markdown": "Misconceptions and what to test for:\r\n\r\n- An else: that holds only an if collapses into one keyword, elif. The prices should not change when students convert the program. Ask: \"What did the else and the if become? Which lines are no longer indented?\"\r\n- A chain checks from the top and stops at the first True. Only one branch runs. Ask: \"If age is 3, which conditions get checked? Which are skipped?\"\r\n- The new rule has to go after age < 18. If it goes first, elif age < 25 catches ages 5 to 17 and gives them $12. Validate says that ages 5 to 17 are being caught too early. Ask: \"Why does the order change who gets $12?\"\r\n- The new rule can be written as elif age < 25, because ages under 18 were already caught above it. It can also be elif age >= 18 and age <= 24, which works in any position after the first rule. Accept both.\r\n- Converting only some of the else: if pairs leaves a nested block inside the chain. Validate asks for every one to be an elif.\r\n- Adding the new rule as a separate if after the chain gives the right prices. Validate asks for an elif, so ask students to compare the two approaches.\r\n- Boundaries: age 18 pays $12 and age 25 pays $15. < and <= are the usual mix-up.\r\n- Keep the final else. It catches everyone the chain has not already caught, so ages 25 to 64 pay $15.\r\n- Forgetting a colon after an elif is a SyntaxError.\r\n- If a student uses Build Python, they still own the program. Ask them to explain which branch runs for age 20 and why.\r\n\r\nValidation runs the program with ages 3, 4, 5, 17, 18, 24, 25, 40, 64, 65, and 70. It checks that each age gets the right price, that no else: holds only an if, and that the chain has at least three elif lines.",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import io\nimport re\nfrom contextlib import redirect_stdout\nfrom unittest import TestCase\n\n\ndef read_code():\n    with open('main.py') as main_file:\n        return main_file.read()\n\n\ndef run_with_age(age):\n    \"\"\"Run the student's main.py as if the user typed this age.\"\"\"\n    code = read_code()\n    output = io.StringIO()\n    error = None\n    fake_globals = {'input': lambda prompt='': str(age), '__name__': '__main__'}\n    try:\n        with redirect_stdout(output):\n            exec(code, fake_globals)\n    except Exception as e:\n        error = e\n    text = \" \".join(line.strip() for line in output.getvalue().splitlines() if line.strip())\n    return text, error\n\n\ndef price_in(text):\n    match = re.search(r'price\\D*(\\d+)', text, re.IGNORECASE)\n    return int(match.group(1)) if match else None\n\n\nclass TestChainIt(TestCase):\n    def test_1_prices(self):\n        \"\"\"Every age gets the right ticket price\"\"\"\n        cases = [(3, 0), (4, 0), (5, 8), (17, 8), (18, 12), (24, 12), (25, 15), (40, 15), (64, 15), (65, 10), (70, 10)]\n        for age, expected in cases:\n            text, error = run_with_age(age)\n            if error:\n                self.fail(\n                    f\"Your program stopped with a {type(error).__name__} when the age was {age}. \"\n                    \"Check that every elif and else line ends with a colon and that the price line under each one is indented.\"\n                )\n            price = price_in(text)\n            if price != expected:\n                hint = \"Check the order of your chain: it stops at the first True.\"\n                if age in (5, 17) and price == 12:\n                    hint = \"Ages 5 to 17 should still pay $8. The new rule is catching them too early, so check where it sits in the chain.\"\n                shown = f\"${price}\" if price is not None else \"no price\"\n                self.fail(f\"With age {age}, your program printed {shown}, but the price should be ${expected}. {hint}\")\n\n    def test_2_no_else_with_only_an_if(self):\n        \"\"\"Every else that held only an if is now an elif\"\"\"\n        if re.search(r'else\\s*:\\s*\\n[ \\t]+if\\b', read_code()):\n            self.fail(\"An else: that holds only an if can be an elif. Turn each one into an elif so the decisions form one chain.\")\n\n    def test_3_chain_has_the_new_rule(self):\n        \"\"\"Your chain has an elif for the new rule\"\"\"\n        if len(re.findall(r'^\\s*elif\\b', read_code(), re.MULTILINE)) < 3:\n            self.fail(\"Your chain should have at least three elif lines, including the new rule for ages 18 to 24.\")",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "long_instructions": "# Modify: Chain It\r\n\r\nYour Task: This program finds a ticket price with decisions nested inside decisions. Rewrite it as one chain with `elif`, then add a new rule: visitors 18 to 24 pay $12.\r\n\r\nDo This:\r\n\r\n1. Run the program with a few ages. Notice that each `else:` holds only an `if`.\r\n2. Turn each `else:` that holds only an `if` into an `elif`. Run it again and check that the prices are the same.\r\n3. Add the new rule as one more `elif`. Visitors 18 to 24 pay $12.\r\n4. Test ages 17, 18, 24, and 25.\r\n5. Use Validate to check your work.\r\n\r\nCoding Tip: A chain checks from the top and stops at the first True, so where the new rule goes matters."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-04T04:53:41.337+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson13-modify2_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson13-modify2_27_28\"},{\"changed_at\":\"2026-11-04 04:54:17 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-04 04:54:33 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-04 04:54:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-04 04:55:23 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -150,7 +150,7 @@ class ScaryChangeDetector
         You changed S3_AI_RELEASE_PATH. Before merging, please validate
         the new release path against all AI-enabled rubrics:
 
-          1. Seed production courses:  cd dashboard && bundle exec rake seed:all
+          1. Seed production courses:  cd dashboard && bundle exec rake seed:production
           2. Validate AI config:       cd dashboard && bin/rails runner 'puts AiRubricConfig.validate_ai_config'
 
         This ensures that the S3 release directory contains valid config

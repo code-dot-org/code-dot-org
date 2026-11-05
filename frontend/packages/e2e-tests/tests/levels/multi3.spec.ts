@@ -6,8 +6,10 @@ test.describe('Playing multi levels 3', () => {
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/level_types/multi3.feature "Rendering in another language"
+   * Temporarily skipping while we resolve some issues with translations on the test server.
+   * See e2e-tests/tests/foundations/i18n.spec.ts for more context
    */
-  test('Rendering in another language', async ({page}) => {
+  test.fixme('Rendering in another language', async ({page}) => {
     const level = new MultiLevel(page);
 
     // original URL omits noautoplay

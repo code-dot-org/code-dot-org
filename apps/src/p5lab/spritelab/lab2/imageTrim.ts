@@ -1,8 +1,21 @@
 // Trim transparent borders off sprite images at load time, so content reaches
-// the edges of the bounding box (AI-generated images carry generous margins).
-// Saved project data is untouched.
+// the edges of the bounding box (AI-generated images carry generous margins),
+// and, for the engine, upscale pixel art stored at its logical size with hard
+// edges, since the engine draws with smoothing on and would blur it. Saved
+// project data is untouched.
 
-import {BACKGROUNDS_CATEGORY, RuntimeAnimationList} from './types';
+import {
+  NATIVE_PIXEL_GRID,
+  crispScaleFor,
+  upscaleImageNearest,
+} from '@cdo/apps/pixelEditor/pixelArt';
+
+import {CHARACTER_STRIP_BASE_FRAME, drawStripCell} from './characterAnimations';
+import {
+  BACKGROUNDS_CATEGORY,
+  RuntimeAnimationList,
+  RuntimeAnimationProps,
+} from './types';
 
 // Alpha above which a pixel counts as content: high enough to shed the soft
 // matte's near-invisible fringe (which otherwise stretches sprite bounds
@@ -71,9 +84,11 @@ export function getImageThumbnail(name: string): string | undefined {
 }
 
 /**
- * Downscale a dataURI to fit THUMB_PX, cached by source. Pixel art scales
- * with hard edges; anything else gets high-quality smoothing. Returns the
- * input on any failure.
+ * Scale a dataURI to fit THUMB_PX, cached by source: down for anything
+ * larger, and up with hard edges for pixel art, which is stored at its
+ * logical size and would otherwise blur when the tile stretches it.
+ * Anything else gets high-quality smoothing, and is never enlarged.
+ * Returns the input on any failure.
  */
 // Bounded because keys are whole source dataURIs, every edit mints a new
 // one, and module state outlives levels. The limit sits far above any
@@ -99,7 +114,7 @@ function thumbnailFromDataURI(
         try {
           const scale =
             THUMB_PX / Math.max(img.naturalWidth, img.naturalHeight);
-          if (scale >= 1) {
+          if (scale >= 1 && !pixelated) {
             return resolve(source);
           }
           const canvas = document.createElement('canvas');
@@ -197,6 +212,46 @@ function trimTransparentBorder(source: string): Promise<string> {
   });
 }
 
+/** The props with every recorded dimension multiplied by factor. Pure. */
+export function scaleAnimationGeometry(
+  props: RuntimeAnimationProps,
+  factor: number
+): RuntimeAnimationProps {
+  const scale = (size: {x: number; y: number}) => ({
+    x: size.x * factor,
+    y: size.y * factor,
+  });
+  return {
+    ...props,
+    ...(props.frameSize && {frameSize: scale(props.frameSize)}),
+    ...(props.sourceSize && {sourceSize: scale(props.sourceSize)}),
+  };
+}
+
+/**
+ * Pixel art stored at its logical size (pixelGridSize 1), upscaled with hard
+ * edges by the factor crispScaleFor picks, with frameSize and sourceSize
+ * scaled to match. Anything else is returned as it is.
+ */
+async function upscaledForDisplay(
+  props: RuntimeAnimationProps
+): Promise<RuntimeAnimationProps> {
+  if (props.pixelGridSize !== NATIVE_PIXEL_GRID || !props.dataURI) {
+    return props;
+  }
+  const {dataURI, factor} = await upscaleImageNearest(
+    props.dataURI,
+    // A sheet's factor comes from one frame, not the whole strip.
+    (width, height) =>
+      props.frameSize
+        ? crispScaleFor(props.frameSize.x, props.frameSize.y)
+        : crispScaleFor(width, height)
+  );
+  return factor > 1
+    ? {...scaleAnimationGeometry(props, factor), dataURI}
+    : props;
+}
+
 /** The animation list restricted to images whose data has arrived. */
 export function loadedAnimations(
   list: RuntimeAnimationList
@@ -212,36 +267,22 @@ export function loadedAnimations(
 }
 
 /**
- * The first frame of a sprite sheet as a dataURI, for thumbnails. Cached by
- * source.
+ * Frame `index` of a sprite sheet as a dataURI, for thumbnails. Cached by
+ * frame and source.
  */
-function firstFrameThumbnail(
+function frameThumbnail(
   source: string,
-  frameSize: {x: number; y: number}
+  frameSize: {x: number; y: number},
+  index: number
 ): Promise<string> {
-  let cached = frameThumbCache.get(source);
+  const cacheKey = `${index}:${source}`;
+  let cached = frameThumbCache.get(cacheKey);
   if (!cached) {
     cached = new Promise<string>(resolve => {
       const img = new Image();
       img.onload = () => {
         try {
-          const canvas = document.createElement('canvas');
-          canvas.width = frameSize.x;
-          canvas.height = frameSize.y;
-          canvas
-            .getContext('2d')
-            ?.drawImage(
-              img,
-              0,
-              0,
-              frameSize.x,
-              frameSize.y,
-              0,
-              0,
-              frameSize.x,
-              frameSize.y
-            );
-          resolve(canvas.toDataURL('image/png'));
+          resolve(drawStripCell(img, frameSize, index).toDataURL('image/png'));
         } catch (e) {
           resolve(source);
         }
@@ -252,7 +293,7 @@ function firstFrameThumbnail(
     while (frameThumbCache.size >= FRAME_CACHE_LIMIT) {
       frameThumbCache.delete(frameThumbCache.keys().next().value as string);
     }
-    frameThumbCache.set(source, cached);
+    frameThumbCache.set(cacheKey, cached);
   }
   return cached;
 }
@@ -303,13 +344,22 @@ export function filterAnimationsToNames(
  * by name and shows this project's images in the editor; a classmate's
  * list (an external scene) can use the same names and would overwrite
  * them.
+ *
+ * upscalePixelArt also upscales pixel art stored at its logical size.
+ * Thumbnails are made from the stored pixels either way, so a list trimmed
+ * with and without it gets the same thumbnails.
  */
 export async function trimAnimationListImages(
   list: RuntimeAnimationList,
   {
     keepNames,
     thumbnails = true,
-  }: {keepNames?: Set<string>; thumbnails?: boolean} = {}
+    upscalePixelArt = false,
+  }: {
+    keepNames?: Set<string>;
+    thumbnails?: boolean;
+    upscalePixelArt?: boolean;
+  } = {}
 ): Promise<RuntimeAnimationList> {
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   let newTrims = false;
@@ -330,6 +380,8 @@ export async function trimAnimationListImages(
       newTrims = true;
     }
   };
+  const upscaled = (props: RuntimeAnimationProps) =>
+    upscalePixelArt ? upscaledForDisplay(props) : props;
   await Promise.all(
     (list.orderedKeys || []).map(async key => {
       const props = list.propsByKey[key];
@@ -347,21 +399,30 @@ export async function trimAnimationListImages(
             await thumbnailFromDataURI(props.dataURI, pixelated)
           );
         }
-        propsByKey[key] = props;
+        propsByKey[key] = await upscaled(props);
         return;
       }
       const isSheet = props.frameCount > 1 && !!props.frameSize;
       // An image cropped at save time (props.trimmed) skips the pixel scan
       // and re-encode; its stored dataURI is already what trimming makes.
+      // A character set's thumbnail is its standing frame, the picture its
+      // other poses were drawn from. Any other sheet's thumbnail is its
+      // first frame.
       const trimmed = isSheet
-        ? await firstFrameThumbnail(props.dataURI, props.frameSize)
+        ? await frameThumbnail(
+            props.dataURI,
+            props.frameSize,
+            props.poses ? CHARACTER_STRIP_BASE_FRAME : 0
+          )
         : props.trimmed
         ? props.dataURI
         : await trimTransparentBorder(props.dataURI);
       if (thumbnails) {
         noteThumb(props.name, await thumbnailFromDataURI(trimmed, pixelated));
       }
-      propsByKey[key] = isSheet ? props : {...props, dataURI: trimmed};
+      propsByKey[key] = await upscaled(
+        isSheet ? props : {...props, dataURI: trimmed}
+      );
     })
   );
   if (newTrims) {
