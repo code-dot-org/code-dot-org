@@ -76,8 +76,9 @@ jest.mock('@cdo/apps/adaptive/views/map/MapView', () => ({
   ),
 }));
 
+let mockHideStats = false;
 jest.mock('@cdo/apps/adaptive/views/map/mapSettings', () => ({
-  resolveMapSettings: () => ({}),
+  resolveMapSettings: () => ({hideStats: mockHideStats}),
 }));
 jest.mock('@cdo/apps/lab2/hooks/useThemeSetting', () => ({
   __esModule: true,
