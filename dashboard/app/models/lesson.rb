@@ -537,6 +537,7 @@ class Lesson < ApplicationRecord
       objectives: objectives.sort_by(&:description).map(&:summarize_for_edit),
       tutorVideos: JSONVideo.joins(:objectives).where(objectives: {lesson_id: id}).distinct.map {|v| v.summarize_for_lesson_edit(self)},
       tutorPracticeProblems: PracticeProblem.joins(:objectives).where(objectives: {lesson_id: id}).distinct.map {|p| p.summarize_for_lesson_edit(self)},
+      tutorChallenges: Challenge.where(lesson_id: id).map(&:summarize_for_lesson_edit),
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
