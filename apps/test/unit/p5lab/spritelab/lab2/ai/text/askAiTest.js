@@ -217,7 +217,7 @@ describe('askAiChoice', () => {
     jest.clearAllMocks();
     DCDO.get.mockReturnValue(true);
     isTextSafe.mockResolvedValue(true);
-    generateText.mockResolvedValue({output: {answer: 'no'}});
+    generateText.mockResolvedValue({output: {answer: '2'}});
   });
 
   it('shows the model the question and every choice', async () => {
@@ -227,7 +227,7 @@ describe('askAiChoice', () => {
     const [{system, prompt}] = generateText.mock.calls[0];
     expect(system).toBe(CHOICE_SYSTEM_PROMPT);
     expect(prompt).toBe(
-      'Question: is a whale a fish?\nAnswer choices:\n- yes\n- no'
+      'Question: is a whale a fish?\nAnswer choices:\n1. yes\n2. no'
     );
   });
 
@@ -250,12 +250,12 @@ describe('askAiChoice', () => {
   it('lists a repeated choice once', async () => {
     await askAiChoice('pick one', ['no', 'no', 'yes']);
     expect(generateText.mock.calls[0][0].prompt).toBe(
-      'Question: pick one\nAnswer choices:\n- no\n- yes'
+      'Question: pick one\nAnswer choices:\n1. no\n2. yes'
     );
   });
 
   it('rejects an answer that is not one of the choices', async () => {
-    generateText.mockResolvedValue({output: {answer: 'maybe'}});
+    generateText.mockResolvedValue({output: {answer: '3'}});
     await expect(askAiChoice('hello', ['yes', 'no'])).rejects.toThrow(
       'other than a choice'
     );
@@ -268,13 +268,21 @@ describe('askAiChoice', () => {
 
   it('caps what the model sees, but answers with the full choice', async () => {
     const long = 'y'.repeat(500);
-    generateText.mockResolvedValue({output: {answer: 'y'.repeat(150)}});
+    generateText.mockResolvedValue({output: {answer: '1'}});
     await expect(askAiChoice('x'.repeat(5000), [long, 'no'])).resolves.toBe(
       long
     );
     expect(generateText.mock.calls[0][0].prompt).toBe(
       `Question: ${'x'.repeat(1000)}\n` +
-        `Answer choices:\n- ${'y'.repeat(150)}\n- no`
+        `Answer choices:\n1. ${'y'.repeat(150)}\n2. no`
+    );
+  });
+
+  it('tells apart long choices that start the same', async () => {
+    const first = `${'y'.repeat(150)} first`;
+    const second = `${'y'.repeat(150)} second`;
+    await expect(askAiChoice('pick one', [first, second])).resolves.toBe(
+      second
     );
   });
 
