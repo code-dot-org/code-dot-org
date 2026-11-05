@@ -181,10 +181,10 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
           scrollToElement: false,
           exitOnOverlayClick: false,
           hidePrev: true,
-          nextLabel: 'Next',
-          doneLabel: 'Done',
+          nextLabel: 'Got it',
+          doneLabel: 'Got it',
           showBullets: false,
-          showStepNumbers: true,
+          showStepNumbers: false,
         }}
       />
       <header className={styles.mapBar}>
