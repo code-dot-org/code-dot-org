@@ -223,7 +223,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const {theme} = useTheme();
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<string | undefined>(undefined);
-  const [preferredTab, setPreferredTab] = useState<string>(Tabs.Instructions);
   const userId = useAppSelector(state => state.currentUser.userId);
   const aiTutorDotSeenKey = userId
     ? `${AI_TUTOR_DOT_SEEN_KEY_PREFIX}_${userId}`
@@ -532,16 +531,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [isProjectLevel, hasAiTutorTab, dispatch]);
 
   useEffect(() => {
-    setCurrentTab(
-      Object.hasOwn(availableTabs, preferredTab)
-        ? preferredTab
-        : getTypedKeys(availableTabs)[0]
-    );
-  }, [preferredTab, availableTabs]);
+    if (currentTab === undefined && Object.keys(availableTabs).length > 0) {
+      setCurrentTab(getTypedKeys(availableTabs)[0]);
+    } else if (currentTab && !Object.hasOwn(availableTabs, currentTab)) {
+      setCurrentTab(getTypedKeys(availableTabs)[0]);
+    }
+  }, [currentTab, availableTabs]);
 
   useEffect(() => {
     // Reset current tab to instructions when switching levels or viewAsUserId.
-    setPreferredTab(Tabs.Instructions);
+    setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
   // Clear the dot and update storage whenever the AI Tutor tab is opened.
@@ -606,7 +605,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           resourcePanelTabClickedFrom: currentTab,
         });
       }
-      setPreferredTab(tab);
+      setCurrentTab(tab);
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
       }
