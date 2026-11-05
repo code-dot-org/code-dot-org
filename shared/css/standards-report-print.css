@@ -3,6 +3,7 @@
     font-style: normal;
     font-weight: 400;
     src: url('/fonts/Geist/Geist-Regular.woff2') format('woff2');
+    unicode-range: U+0000-036F, U+0400-1EFF, U+2000-10FFFF;
 }
 
 @media print and (color) {
