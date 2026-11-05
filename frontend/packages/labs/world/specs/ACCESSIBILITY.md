@@ -112,6 +112,9 @@ below, and are listed last.
 - **The fold is not redone.** The checklist decides which groups are shut
   when it first draws; "Show everything" then adds up to 29 rows open,
   which is a long walk by Tab.
+  CLOSED: a group that arrives later is folded by the same rule when it
+  does, so the groups "Show everything" brings to a long list come shut;
+  a group already shown keeps whatever it had.
 
 ### Placing and docking from the keyboard (PURPOSE_PLAN.md, step 5)
 
@@ -130,7 +133,9 @@ below, and are listed last.
   CLOSED: Enter or Space on a tile takes the actor and moves focus to the
   stage, which says where its cursor is; a click leaves focus on the tile.
   Open and Delete under the tile are now the long walk instead: back by
-  Shift+Tab, past Add New Actor and every tile after it.
+  Shift+Tab, past Add New Actor and every tile after it. Escape on the
+  stage brings focus back to the tile, but puts the actor down, and so
+  takes Open and Delete away with it.
 
 ### Finishing the shell (SHELL_FINISH_PLAN.md)
 

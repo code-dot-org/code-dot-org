@@ -361,6 +361,8 @@ export const MapEditor = ({
   const [selected, setSelected] = useState<string | null>(null);
   /** Counts the times focus was sent to the stage (`MapStage.focusAsked`). */
   const [stageFocus, setStageFocus] = useState(0);
+  /** The tile an actor put down on the stage came from, to go back to. */
+  const [tileFocus, setTileFocus] = useState<{path: string} | null>(null);
   // A selection's inspector takes the palette's column while it is open: the
   // palette has nothing to do then, and over the map it covered what it was
   // about.
@@ -1014,6 +1016,7 @@ export const MapEditor = ({
           isReadOnly={isReadOnly}
           onDragOut={setIncoming}
           onTakenByKey={() => setStageFocus(asked => asked + 1)}
+          focusTile={tileFocus}
           hidden={inspecting}
         />
         <div
@@ -1031,7 +1034,12 @@ export const MapEditor = ({
           onDocPreview={setLiveMap}
           placing={selected}
           focusAsked={stageFocus}
-          onPutDown={() => setSelected(null)}
+          onPutDown={() => {
+            if (selected) {
+              setTileFocus({path: selected});
+            }
+            setSelected(null);
+          }}
           thumbnails={thumbnails}
           pictures={shown.pictures}
           schemas={shownSchemas}

@@ -318,16 +318,26 @@ export const EnhancementChecklist = ({
    * step asks.
    */
   const rows = groups.reduce((count, group) => count + group.members.length, 0);
-  const [shut, setShut] = useState<readonly string[]>(() =>
+  const restsShut = (from: typeof groups) =>
     rows <= TIDY
       ? []
-      : groups
+      : from
           .filter(
             group =>
               !group.members.some(one => alreadyHas(one, source, target)),
           )
-          .map(group => group.name),
+          .map(group => group.name);
+  const [shut, setShut] = useState<readonly string[]>(() => restsShut(groups));
+  // A group that arrives later, as "Show everything" brings them, is folded
+  // by the same rule when it does; one already shown keeps what it has.
+  const [seen, setSeen] = useState<readonly string[]>(() =>
+    groups.map(group => group.name),
   );
+  const arrived = groups.filter(group => !seen.includes(group.name));
+  if (arrived.length > 0) {
+    setSeen([...seen, ...arrived.map(group => group.name)]);
+    setShut([...shut, ...restsShut(arrived)]);
+  }
 
   if (groups.length === 0) {
     // The wording every empty list in this lab uses.

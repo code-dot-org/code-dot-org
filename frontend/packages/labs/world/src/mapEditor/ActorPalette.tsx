@@ -11,7 +11,7 @@
 // does not take it as the brush. A HUD bar is placed once, not painted.
 
 import {Button} from '@mui/material';
-import {useState, type DragEvent} from 'react';
+import {useEffect, useRef, useState, type DragEvent} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
@@ -62,6 +62,8 @@ export interface ActorPaletteProps {
    * where the keyboard places it, is the next thing wanted.
    */
   onTakenByKey?: () => void;
+  /** Focus goes to this tile each time a new object is given. */
+  focusTile?: {path: string} | null;
   /** Kept, not unmounted, while an inspector has its column: the tab stays. */
   hidden?: boolean;
 }
@@ -78,10 +80,21 @@ export const ActorPalette = ({
   isReadOnly,
   onDragOut,
   onTakenByKey,
+  focusTile,
   hidden,
 }: ActorPaletteProps) => {
   const [tab, setTab] = useState<PaletteTab>(startTab);
   const shown = actors.filter(actor => isUnder(actor.purpose, tab));
+  const listRef = useRef<HTMLUListElement>(null);
+  useEffect(() => {
+    if (focusTile) {
+      listRef.current
+        ?.querySelector<HTMLElement>(
+          `[data-path="${CSS.escape(focusTile.path)}"]`,
+        )
+        ?.focus();
+    }
+  }, [focusTile]);
 
   return (
     <div className={styles.palette} data-callout="map.palette" hidden={hidden}>
@@ -96,7 +109,11 @@ export const ActorPalette = ({
           ]}
         />
       </div>
-      <ul className={styles.actors} aria-label={`${label(tab)} actors`}>
+      <ul
+        ref={listRef}
+        className={styles.actors}
+        aria-label={`${label(tab)} actors`}
+      >
         {shown.map(actor => {
           const inHand = actor.path === selected;
           return (
@@ -142,6 +159,7 @@ export const ActorPalette = ({
                   : {})}
                 aria-pressed={inHand}
                 data-callout={`map.palette:${actor.name}`}
+                data-path={actor.path}
               >
                 {/* The picker's own ground behind a transparent picture, as
                     the strip had: a white Label on nothing is an empty

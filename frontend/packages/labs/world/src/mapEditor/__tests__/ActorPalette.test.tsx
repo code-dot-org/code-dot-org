@@ -66,6 +66,11 @@ describe('the Actor Palette', () => {
     expect(onTakenByKey).toHaveBeenCalledTimes(1);
   });
 
+  it('takes focus back to a tile when asked', () => {
+    renderPalette({focusTile: {path: 'actors/player'}});
+    expect(screen.getByRole('button', {name: 'Player'})).toHaveFocus();
+  });
+
   it('puts it down on a second press, and offers Open and Delete under it', () => {
     const props = renderPalette({selected: 'actors/player'});
     const inHand = screen.getByRole('button', {name: 'Player'});

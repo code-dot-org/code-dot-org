@@ -212,6 +212,29 @@ describe('the list opened for a purpose', () => {
     expect(listed('forAGame')).toBe(true);
   });
 
+  it('folds the groups "Show everything" brings, and leaves the shown ones be', () => {
+    // Four groups for an interface, open at twelve rows; eight for a game,
+    // which make the list long when they come.
+    const forA = (purpose: 'game' | 'interface', at: number) => ({
+      name: `${purpose} ${at}`,
+      members: ['a', 'b', 'c'].map(id => ({
+        ...ability(`${purpose}${at}${id}`),
+        for: purpose,
+      })),
+    });
+    groupsFor.mockReturnValue([
+      ...[1, 2, 3, 4].map(at => forA('interface', at)),
+      ...[1, 2].map(at => forA('game', at)),
+    ]);
+    show({purpose: 'interface'});
+    expect(openness('interface 1')).toBe('true');
+
+    fireEvent.click(screen.getByRole('checkbox', {name: /Show everything/}));
+    expect(openness('game 1')).toBe('false');
+    expect(openness('game 2')).toBe('false');
+    expect(openness('interface 1')).toBe('true');
+  });
+
   it('keeps a ticked row, or it could not be unticked', () => {
     groupsFor.mockReturnValue(mixed());
     show({purpose: 'interface', picked: ['forAGame']});
