@@ -25,6 +25,9 @@ PUBLIC_GENERATE_URLS = {
 # What has been uploaded, per bucket, so a review file goes up once.
 UPLOAD_LEDGER_FILE = 'upload_ledger.json'
 
+# Held by whichever script is changing the images, so two never run at once.
+LOCK_FILE = 'imagegen.lock'
+
 # Where --publish-review writes the manifests it uploads, for reading
 # locally; a dry run writes them here too.
 REVIEW_MANIFESTS_DIRECTORY = 'review_manifests'

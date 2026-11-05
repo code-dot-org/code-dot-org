@@ -39,6 +39,23 @@ def attic_path
   File.join(SCRIPT_PATH, ATTIC_DIRECTORY)
 end
 
+# Takes the lock that keeps two scripts from changing the images at once, or
+# exits saying who holds it. The operating system lets go when the process
+# ends, however it ends, so a lock is never left behind. Keep the returned
+# file referenced for as long as the lock is needed.
+def hold_lock!(what)
+  path = File.join(SCRIPT_PATH, LOCK_FILE)
+  file = File.open(path, File::RDWR | File::CREAT, 0o644)
+  unless file.flock(File::LOCK_EX | File::LOCK_NB)
+    holder = File.read(path).strip
+    abort "Error: another script is changing the images (#{holder.empty? ? 'unknown' : holder}). Wait for it to finish."
+  end
+  file.truncate(0)
+  file.write("pid #{Process.pid}, #{what}, since #{Time.now.utc.iso8601}\n")
+  file.flush
+  file
+end
+
 def check_node!
   version = begin
     `node --version`.strip[/\d+/].to_i

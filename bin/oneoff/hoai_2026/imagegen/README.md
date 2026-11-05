@@ -70,8 +70,12 @@ changed but not its text moves to its new path with its record and attic
 files. One whose path now means other words, or whose prompt changed in
 any other way (the pixel grid, say), goes to the attic and is drawn again
 on the next run. One that used a word now gone goes to the attic with its
-record. Nothing is deleted, and nothing in S3 is touched. Do not run it
-while `generate_images` is running.
+record. Nothing is deleted, and nothing in S3 is touched.
+
+`generate_images`, `migrate_words --apply` and `validate_images --attic`
+each hold `imagegen.lock` while they change the images, so a second one
+refuses to start until the first ends. The review page does not take it,
+so reviewing during a run works.
 
 ## Prompts
 

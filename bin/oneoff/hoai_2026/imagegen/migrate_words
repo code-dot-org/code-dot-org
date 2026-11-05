@@ -185,6 +185,7 @@ unless options[:apply]
   exit
 end
 
+IMAGEGEN_LOCK = hold_lock!('migrate_words --apply')
 before = count_files
 
 plan[:move].each do |item|

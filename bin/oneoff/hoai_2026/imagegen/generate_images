@@ -306,6 +306,8 @@ if options[:list_sentences]
   exit
 end
 
+IMAGEGEN_LOCK = hold_lock!('generate_images')
+
 objects = jobs.flat_map do |job|
   Array.new(variants) {|variant| {job: job, variant: variant}}
 end

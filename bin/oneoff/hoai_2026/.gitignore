@@ -5,3 +5,4 @@ review_manifests
 prompts.jsonl
 prompt_verdicts.json
 upload_ledger.json
+imagegen.lock

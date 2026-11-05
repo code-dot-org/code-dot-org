@@ -48,6 +48,7 @@ OptionParser.new do |opts|
   end
 end.parse!
 
+IMAGEGEN_LOCK = options[:attic] ? hold_lock!('validate_images --attic') : nil
 tree = File.join(output_path, CACHE_VERSION)
 good = 0
 count = 0
