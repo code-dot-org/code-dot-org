@@ -51,7 +51,7 @@ const PURPOSE_OPTIONS = [
 ];
 
 const EXAM_REQUIREMENT_MESSAGE =
-  'An exam must be the last level of a lockable lesson.';
+  'An exam can only appear in the last level of a lockable lesson.';
 
 interface QuizConfigurableFields {
   showIntroScreen: boolean;
