@@ -1,12 +1,7 @@
 require 'benchmark'
 require 'rake/task'
-# the dotiw gem depends on ActiveSupport core extensions it never requires, and
-# patches distance_of_time_in_words only if ActionView::Helpers is already
-# defined when it loads.
-require 'active_support'
-require 'active_support/core_ext'
-require 'action_view'
-require 'dotiw'
+# dotiw/core formats durations without patching the Rails date helpers.
+require 'dotiw/core'
 
 # Helper module for defining Rake tasks with timing and logging capabilities.
 #
@@ -22,8 +17,6 @@ require 'dotiw'
 
 module CustomRake
   class TimedTaskWithLogging < Rake::Task
-    include ActionView::Helpers::DateHelper
-
     # Rake runs prerequisites and calls #execute from within this method. This
     # wrapper measures total time, and logs both total time and own time.
     def invoke_with_call_chain(task_args, invocation_chain)
@@ -62,9 +55,9 @@ module CustomRake
       "in #{total} total (#{own} excluding prerequisites)"
     end
 
-    # "1 minute and 35 seconds", "5 seconds" or "less than a second".
+    # "1m35s", "5s" or "<1s".
     private def duration_words(seconds)
-      distance_of_time_in_words(seconds, 0, include_seconds: true)
+      DOTIW.distance_of_time_in_words(seconds, 0, compact: true, include_seconds: true)
     end
   end
 end
