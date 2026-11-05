@@ -116,7 +116,7 @@ OptionParser.new do |opts|
   end
 
   opts.on('-c', '--choice SLOT=WORD',
-          "Pins one slot to one word id, e.g. --choice adjective=brave (#{EMPTY_WORD_ID} for an empty optional slot). Repeatable; see --list-words."
+          "Pins one slot to one word id, e.g. --choice adjective=cute (#{EMPTY_WORD_ID} for an empty optional slot). Repeatable; see --list-words."
          ) do |choice|
     slot, word = choice.split('=', 2)
     raise "Error: --choice needs SLOT=WORD, got '#{choice}'" if word.nil? || word.empty?

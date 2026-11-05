@@ -1,620 +1,525 @@
 {
   "wordSets": {
-    "creatures": [
+    "adjectives": [
       {
-        "id": "ghost",
-        "text": "ghost"
+        "id": "spooky",
+        "text": "spooky",
+        "icon": "ghost"
       },
+      {
+        "id": "robotic",
+        "text": "robotic",
+        "icon": "robot"
+      },
+      {
+        "id": "aquatic",
+        "text": "aquatic",
+        "icon": "water"
+      },
+      {
+        "id": "magical",
+        "text": "magical",
+        "icon": "wand-magic-sparkles"
+      },
+      {
+        "id": "cute",
+        "text": "cute",
+        "icon": "face-smile-hearts"
+      },
+      {
+        "id": "grumpy",
+        "text": "grumpy",
+        "icon": "face-angry"
+      },
+      {
+        "id": "red",
+        "text": "red",
+        "color": "#e5484d"
+      },
+      {
+        "id": "orange",
+        "text": "orange",
+        "color": "#f0883e"
+      },
+      {
+        "id": "green",
+        "text": "green",
+        "color": "#3fb950"
+      },
+      {
+        "id": "blue",
+        "text": "blue",
+        "color": "#388bfd"
+      },
+      {
+        "id": "purple",
+        "text": "purple",
+        "color": "#a371f7"
+      },
+      {
+        "id": "pink",
+        "text": "pink",
+        "color": "#f778ba"
+      }
+    ],
+    "creatures": [
       {
         "id": "robot",
         "text": "robot",
-        "emoji": "🤖"
+        "icon": "robot"
+      },
+      {
+        "id": "insect",
+        "text": "insect",
+        "icon": "bug"
       },
       {
         "id": "axolotl",
         "text": "axolotl",
+        "icon": "frog",
         "bodyPlan": "quadruped"
       },
       {
         "id": "penguin",
         "text": "penguin",
-        "emoji": "🐧",
+        "icon": "kiwi-bird",
         "bodyPlan": "bird"
       },
       {
         "id": "cat",
         "text": "cat",
-        "emoji": "🐱",
+        "icon": "cat",
         "bodyPlan": "quadruped"
       },
       {
         "id": "dog",
         "text": "dog",
+        "icon": "dog",
         "bodyPlan": "quadruped"
       },
       {
-        "id": "witch",
-        "text": "witch",
-        "emoji": "🧹"
+        "id": "fairy",
+        "text": "fairy",
+        "icon": "wand-sparkles"
       },
       {
-        "id": "wizard",
-        "text": "wizard",
-        "emoji": "🧙"
+        "id": "astronaut",
+        "text": "astronaut",
+        "icon": "user-astronaut"
       },
       {
         "id": "unicorn",
         "text": "unicorn",
+        "icon": "unicorn",
         "bodyPlan": "quadruped"
       },
       {
         "id": "dumpling",
-        "text": "dumpling"
+        "text": "dumpling",
+        "icon": "bowl-chopsticks"
       },
       {
         "id": "blob",
         "text": "blob",
-        "emoji": "🟢"
+        "icon": "splotch"
       },
       {
         "id": "dragon",
         "text": "dragon",
-        "emoji": "🐉",
+        "icon": "dragon",
         "bodyPlan": "quadruped"
       },
       {
         "id": "fox",
         "text": "fox",
+        "icon": "paw",
         "bodyPlan": "quadruped"
+      },
+      {
+        "id": "witch",
+        "text": "witch",
+        "icon": "hat-witch"
       }
     ],
-    "adjectives": [
+    "clothing": [
       {
-        "id": "robotic",
-        "text": "robotic"
+        "id": "crown",
+        "text": "crown",
+        "icon": "crown"
       },
       {
-        "id": "aquatic",
-        "text": "aquatic"
+        "id": "boots",
+        "text": "boots",
+        "icon": "boot"
       },
       {
-        "id": "magical",
-        "text": "magical"
+        "id": "hat",
+        "text": "hat",
+        "icon": "hat-cowboy"
       },
       {
-        "id": "spooky",
-        "text": "spooky"
+        "id": "glasses",
+        "text": "glasses",
+        "icon": "glasses"
       },
       {
-        "id": "cute",
-        "text": "cute",
-        "emoji": "🥰"
-      },
-      {
-        "id": "grumpy",
-        "text": "grumpy",
-        "emoji": "😠"
-      },
-      {
-        "id": "red",
-        "text": "red"
-      },
-      {
-        "id": "orange",
-        "text": "orange"
-      },
-      {
-        "id": "green",
-        "text": "green"
-      },
-      {
-        "id": "blue",
-        "text": "blue"
-      },
-      {
-        "id": "purple",
-        "text": "purple"
-      },
-      {
-        "id": "pink",
-        "text": "pink"
+        "id": "cape",
+        "text": "cape",
+        "icon": "hood-cloak"
       }
     ],
-    "objectAdjectives": [
+    "objectLooks": [
       {
         "id": "crystal",
-        "text": "crystal"
+        "text": "crystal",
+        "icon": "diamond"
       },
       {
         "id": "ancient",
-        "text": "ancient"
+        "text": "ancient",
+        "icon": "scroll-old"
       },
       {
         "id": "glowing",
-        "text": "glowing"
-      },
-      {
-        "id": "dangerous",
-        "text": "dangerous"
+        "text": "glowing",
+        "icon": "lightbulb"
       },
       {
         "id": "fiery",
-        "text": "fiery"
+        "text": "fiery",
+        "icon": "fire"
       },
       {
         "id": "metallic",
-        "text": "metallic"
+        "text": "metallic",
+        "icon": "gear"
       },
       {
-        "id": "poisonous",
-        "text": "poisonous"
-      }
-    ],
-    "characterItems": [
-      {
-        "id": "wand",
-        "text": "a wand"
-      },
-      {
-        "emoji": "👑",
-        "id": "crown",
-        "text": "a crown"
-      },
-      {
-        "emoji": "👢",
-        "id": "boots",
-        "text": "boots"
-      },
-      {
-        "emoji": "🎩",
-        "id": "hat",
-        "text": "a hat"
-      },
-      {
-        "emoji": "👓",
-        "id": "glasses",
-        "text": "glasses"
+        "id": "spiky",
+        "text": "spiky",
+        "icon": "star-sharp"
       }
     ],
     "objects": [
       {
         "id": "star",
         "text": "star",
-        "emoji": "⭐"
+        "icon": "star"
       },
       {
         "id": "gem",
         "text": "gem",
-        "emoji": "💎"
+        "icon": "gem"
       },
       {
         "id": "candy",
-        "text": "candy"
+        "text": "candy",
+        "icon": "candy"
       },
       {
         "id": "coin",
         "text": "coin",
-        "emoji": "🪙"
+        "icon": "coin"
       },
       {
         "id": "key",
         "text": "key",
-        "emoji": "🔑"
+        "icon": "key"
       },
       {
-        "id": "banana",
-        "text": "banana"
+        "id": "apple",
+        "text": "apple",
+        "icon": "apple-whole"
       },
       {
         "id": "heart",
-        "text": "heart"
+        "text": "heart",
+        "icon": "heart"
       },
       {
-        "id": "icecream",
-        "text": "ice cream"
+        "id": "ice-cream",
+        "text": "ice cream",
+        "icon": "ice-cream"
       },
       {
         "id": "flower",
-        "text": "flower"
+        "text": "flower",
+        "icon": "flower"
       },
       {
         "id": "gift",
-        "text": "gift"
+        "text": "gift",
+        "icon": "gift"
       },
       {
         "id": "flame",
-        "text": "flame"
-      },
-      {
-        "id": "spikeball",
-        "text": "spikeball"
+        "text": "flame",
+        "icon": "flame"
       },
       {
         "id": "potion",
         "text": "potion",
-        "emoji": "🧪"
+        "icon": "flask"
+      },
+      {
+        "id": "door",
+        "text": "door",
+        "icon": "door-closed"
       }
     ],
     "placeMoods": [
       {
         "id": "underwater",
-        "text": "underwater"
+        "text": "underwater",
+        "icon": "water"
       },
       {
         "id": "futuristic",
-        "text": "futuristic"
+        "text": "futuristic",
+        "icon": "rocket"
       },
       {
         "id": "spooky",
         "text": "spooky",
-        "emoji": "👻"
+        "icon": "ghost"
       },
       {
         "id": "snowy",
-        "text": "snowy"
+        "text": "snowy",
+        "icon": "snowflake"
       },
       {
-        "id": "outerspace",
-        "text": "outer space"
+        "id": "outer-space",
+        "text": "outer space",
+        "icon": "planet-ringed"
       },
       {
         "id": "tropical",
-        "text": "tropical"
+        "text": "tropical",
+        "icon": "umbrella-beach"
       },
       {
         "id": "frozen",
         "text": "frozen",
-        "emoji": "❄️"
+        "icon": "icicles"
       },
       {
         "id": "misty",
         "text": "misty",
-        "emoji": "🌫️"
+        "icon": "cloud-fog"
       },
       {
         "id": "overgrown",
-        "text": "overgrown"
+        "text": "overgrown",
+        "icon": "seedling"
       },
       {
         "id": "ancient",
-        "text": "ancient"
+        "text": "ancient",
+        "icon": "scroll-old"
       },
       {
-        "id": "cheerful",
-        "text": "cheerful"
+        "id": "cheery",
+        "text": "cheery",
+        "icon": "sun"
+      },
+      {
+        "id": "candy",
+        "text": "candy",
+        "icon": "candy"
       }
     ],
     "places": [
       {
         "id": "city",
         "text": "city",
-        "emoji": "🏙️"
+        "icon": "city"
       },
       {
         "id": "clouds",
-        "text": "clouds"
-      },
-      {
-        "id": "candyland",
-        "text": "candyland"
+        "text": "clouds",
+        "icon": "clouds"
       },
       {
         "id": "planet",
-        "text": "planet"
+        "text": "planet",
+        "icon": "planet-moon"
       },
       {
         "id": "village",
-        "text": "village"
+        "text": "village",
+        "icon": "house-chimney"
       },
       {
         "id": "castle",
         "text": "castle",
-        "emoji": "🏰"
+        "icon": "castle"
       },
       {
         "id": "cave",
         "text": "cave",
-        "emoji": "🕳️"
+        "icon": "dungeon"
       },
       {
         "id": "volcano",
-        "text": "volcano"
+        "text": "volcano",
+        "icon": "volcano"
       },
       {
         "id": "field",
-        "text": "field"
+        "text": "field",
+        "icon": "wheat-awn"
       },
       {
         "id": "swamp",
-        "text": "swamp"
+        "text": "swamp",
+        "icon": "frog"
       },
       {
         "id": "island",
-        "text": "island"
+        "text": "island",
+        "icon": "island-tropical"
       },
       {
         "id": "forest",
         "text": "forest",
-        "emoji": "🌲"
+        "icon": "trees"
       },
       {
         "id": "mountains",
-        "text": "mountains"
+        "text": "mountains",
+        "icon": "mountains"
+      },
+      {
+        "id": "room",
+        "text": "room",
+        "icon": "door-open"
       }
     ],
-    "placeViews": [
-      {
-        "id": "outside",
-        "text": "outside"
-      },
+    "viewpoints": [
       {
         "id": "inside",
-        "text": "inside"
+        "text": "inside",
+        "icon": "house"
       },
       {
-        "id": "faraway",
-        "text": "faraway"
-      },
-      {
-        "id": "closeup",
-        "text": "close up"
+        "id": "far-away",
+        "text": "far away",
+        "icon": "binoculars"
       }
     ],
-    "expressions": [
-      {
-        "id": "cheerful",
-        "text": "cheerful",
-        "emoji": "😄"
-      },
-      {
-        "id": "curious",
-        "text": "curious",
-        "emoji": "🤔"
-      },
-      {
-        "id": "surprised",
-        "text": "surprised",
-        "emoji": "😮"
-      },
-      {
-        "id": "shy",
-        "text": "shy",
-        "emoji": "😳"
-      },
-      {
-        "id": "proud",
-        "text": "proud",
-        "emoji": "😌"
-      },
-      {
-        "id": "silly",
-        "text": "silly",
-        "emoji": "🤪"
-      }
-    ],
-    "times": [
-      {
-        "id": "sunrise",
-        "text": "sunrise",
-        "emoji": "🌅"
-      },
-      {
-        "id": "noon",
-        "text": "noon",
-        "emoji": "🕛"
-      },
-      {
-        "id": "sunset",
-        "text": "sunset",
-        "emoji": "🌇"
-      },
-      {
-        "id": "night",
-        "text": "night",
-        "emoji": "🌙"
-      }
-    ],
-    "placeDetails": [
-      {
-        "id": "mushrooms",
-        "text": "glowing mushrooms",
-        "emoji": "🍄"
-      },
-      {
-        "id": "lanterns",
-        "text": "floating lanterns",
-        "emoji": "🏮"
-      },
-      {
-        "id": "mountains",
-        "text": "distant mountains",
-        "emoji": "🏔️"
-      },
-      {
-        "id": "leaves",
-        "text": "falling leaves",
-        "emoji": "🍂"
-      },
-      {
-        "id": "lights",
-        "text": "twinkling lights",
-        "emoji": "✨"
-      },
-      {
-        "id": "fog",
-        "text": "drifting fog",
-        "emoji": "🌁"
-      }
-    ],
-    "blockAdjectives": [
-      {
-        "id": "light",
-        "text": "light"
-      },
+    "blockLooks": [
       {
         "id": "dark",
-        "text": "dark"
-      },
-      {
-        "id": "simple",
-        "text": "simple"
-      },
-      {
-        "id": "detailed",
-        "text": "detailed"
+        "text": "dark",
+        "icon": "moon"
       },
       {
         "id": "crystal",
-        "text": "crystal"
+        "text": "crystal",
+        "icon": "diamond"
       },
       {
         "id": "magical",
-        "text": "magical"
+        "text": "magical",
+        "icon": "wand-magic-sparkles"
       },
       {
-        "id": "ancient",
-        "text": "ancient"
+        "id": "golden",
+        "text": "golden",
+        "color": "#e3b341"
       },
       {
-        "id": "shiny",
-        "text": "shiny"
+        "id": "electric",
+        "text": "electric",
+        "icon": "bolt"
       },
       {
-        "id": "fiery",
-        "text": "fiery"
+        "id": "crumbling",
+        "text": "crumbling",
+        "icon": "house-crack"
+      },
+      {
+        "id": "overgrown",
+        "text": "overgrown",
+        "icon": "seedling"
+      },
+      {
+        "id": "slimy",
+        "text": "slimy",
+        "icon": "droplet"
       }
     ],
     "blockMaterials": [
       {
         "id": "bubbles",
-        "text": "bubbles"
+        "text": "bubbles",
+        "icon": "soap"
       },
       {
         "id": "grass",
         "text": "grass",
-        "emoji": "🌿"
+        "icon": "seedling"
       },
       {
-        "id": "stone",
-        "text": "stone",
-        "emoji": "🪨"
+        "id": "cheese",
+        "text": "cheese",
+        "icon": "cheese"
       },
       {
         "id": "ice",
         "text": "ice",
-        "emoji": "🧊"
+        "icon": "icicles"
       },
       {
-        "id": "lava",
-        "text": "lava",
-        "emoji": "🌋"
+        "id": "magma",
+        "text": "magma",
+        "icon": "volcano"
       },
       {
         "id": "cloud",
-        "text": "cloud"
+        "text": "cloud",
+        "icon": "cloud"
       },
       {
         "id": "brick",
-        "text": "brick"
+        "text": "brick",
+        "icon": "block-brick"
       },
       {
         "id": "flowers",
-        "text": "flowers"
+        "text": "flowers",
+        "icon": "flower-tulip"
+      },
+      {
+        "id": "candy",
+        "text": "candy",
+        "icon": "candy"
+      },
+      {
+        "id": "coral",
+        "text": "coral",
+        "icon": "fish-fins"
+      },
+      {
+        "id": "stone",
+        "text": "stone",
+        "icon": "mountain"
       },
       {
         "id": "metal",
-        "text": "metal"
+        "text": "metal",
+        "icon": "cubes"
+      },
+      {
+        "id": "jelly",
+        "text": "jelly",
+        "icon": "jar"
       },
       {
         "id": "wood",
         "text": "wood",
-        "emoji": "🪵"
-      }
-    ],
-    "treasureLooks": [
-      {
-        "id": "shiny",
-        "text": "shiny",
-        "emoji": "✨"
-      },
-      {
-        "id": "glowing",
-        "text": "glowing",
-        "emoji": "🔆"
-      },
-      {
-        "id": "golden",
-        "text": "golden",
-        "emoji": "🟡"
-      },
-      {
-        "id": "ancient",
-        "text": "ancient",
-        "emoji": "🏺"
-      },
-      {
-        "id": "rainbow",
-        "text": "rainbow",
-        "emoji": "🌈"
-      },
-      {
-        "id": "tiny",
-        "text": "tiny",
-        "emoji": "🐜"
-      }
-    ],
-    "treasures": [
-      {
-        "id": "gem",
-        "text": "gem",
-        "emoji": "💎"
-      },
-      {
-        "id": "crystal",
-        "text": "crystal",
-        "emoji": "🔮"
-      },
-      {
-        "id": "coin",
-        "text": "coin",
-        "emoji": "🪙"
-      },
-      {
-        "id": "star",
-        "text": "star",
-        "emoji": "⭐"
-      },
-      {
-        "id": "key",
-        "text": "key",
-        "emoji": "🗝️"
-      },
-      {
-        "id": "crown",
-        "text": "crown",
-        "emoji": "👑"
-      }
-    ],
-    "treasureDetails": [
-      {
-        "id": "glow",
-        "text": "a glow",
-        "emoji": "💡"
-      },
-      {
-        "id": "sparkles",
-        "text": "tiny sparkles",
-        "emoji": "✨"
-      },
-      {
-        "id": "ribbon",
-        "text": "a ribbon",
-        "emoji": "🎀"
-      },
-      {
-        "id": "crack",
-        "text": "a crack",
-        "emoji": "⚡"
+        "icon": "tree"
       }
     ]
   },
@@ -636,10 +541,10 @@
         {
           "phrase": [
             {
-              "text": " with "
+              "text": " wearing a "
             },
             {
-              "slot": "item"
+              "slot": "clothing"
             }
           ]
         }
@@ -654,9 +559,9 @@
           "words": "creatures",
           "required": true
         },
-        "item": {
-          "label": "item",
-          "words": "characterItems"
+        "clothing": {
+          "label": "clothing",
+          "words": "clothing"
         }
       }
     },
@@ -678,7 +583,7 @@
       "slots": {
         "adjective": {
           "label": "adjective",
-          "words": "objectAdjectives"
+          "words": "objectLooks"
         },
         "thing": {
           "label": "thing",
@@ -704,10 +609,10 @@
         {
           "phrase": [
             {
-              "text": ", seen from "
+              "text": " from "
             },
             {
-              "slot": "view"
+              "slot": "from"
             }
           ]
         }
@@ -722,145 +627,22 @@
           "words": "places",
           "required": true
         },
-        "view": {
-          "label": "view",
-          "words": "placeViews"
-        }
-      }
-    },
-    "friend": {
-      "segments": [
-        {
-          "text": "A "
-        },
-        {
-          "slot": "adjective"
-        },
-        {
-          "text": " "
-        },
-        {
-          "slot": "creature"
-        },
-        {
-          "phrase": [
-            {
-              "text": " looking "
-            },
-            {
-              "slot": "expression"
-            }
-          ]
-        }
-      ],
-      "slots": {
-        "adjective": {
-          "label": "adjective",
-          "words": "adjectives"
-        },
-        "creature": {
-          "label": "creature",
-          "words": "creatures",
-          "required": true
-        },
-        "expression": {
-          "label": "expression",
-          "words": "expressions"
-        }
-      }
-    },
-    "place-time": {
-      "segments": [
-        {
-          "text": "A "
-        },
-        {
-          "slot": "adjective"
-        },
-        {
-          "text": " "
-        },
-        {
-          "slot": "place"
-        },
-        {
-          "phrase": [
-            {
-              "text": " at "
-            },
-            {
-              "slot": "time"
-            }
-          ]
-        }
-      ],
-      "slots": {
-        "adjective": {
-          "label": "adjective",
-          "words": "placeMoods"
-        },
-        "place": {
-          "label": "place",
-          "words": "places",
-          "required": true
-        },
-        "time": {
-          "label": "time of day",
-          "words": "times"
-        }
-      }
-    },
-    "place-detail": {
-      "segments": [
-        {
-          "text": "A "
-        },
-        {
-          "slot": "adjective"
-        },
-        {
-          "text": " "
-        },
-        {
-          "slot": "place"
-        },
-        {
-          "phrase": [
-            {
-              "text": " with "
-            },
-            {
-              "slot": "detail"
-            }
-          ]
-        }
-      ],
-      "slots": {
-        "adjective": {
-          "label": "adjective",
-          "words": "placeMoods"
-        },
-        "place": {
-          "label": "place",
-          "words": "places",
-          "required": true
-        },
-        "detail": {
-          "label": "detail",
-          "words": "placeDetails"
+        "from": {
+          "label": "from where",
+          "words": "viewpoints"
         }
       }
     },
     "block": {
       "segments": [
         {
-          "text": "A "
+          "text": "A block of "
         },
         {
           "slot": "adjective"
         },
         {
-          "text": " block of "
+          "text": " "
         },
         {
           "slot": "material"
@@ -869,53 +651,12 @@
       "slots": {
         "adjective": {
           "label": "adjective",
-          "words": "blockAdjectives"
+          "words": "blockLooks"
         },
         "material": {
           "label": "material",
           "words": "blockMaterials",
           "required": true
-        }
-      }
-    },
-    "treasure": {
-      "segments": [
-        {
-          "text": "A "
-        },
-        {
-          "slot": "look"
-        },
-        {
-          "text": " "
-        },
-        {
-          "slot": "treasure"
-        },
-        {
-          "phrase": [
-            {
-              "text": " with "
-            },
-            {
-              "slot": "detail"
-            }
-          ]
-        }
-      ],
-      "slots": {
-        "look": {
-          "label": "adjective",
-          "words": "treasureLooks"
-        },
-        "treasure": {
-          "label": "treasure",
-          "words": "treasures",
-          "required": true
-        },
-        "detail": {
-          "label": "detail",
-          "words": "treasureDetails"
         }
       }
     }

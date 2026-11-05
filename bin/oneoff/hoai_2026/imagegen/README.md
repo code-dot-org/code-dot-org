@@ -24,15 +24,14 @@ The flow is:
 The words come from `sentences.json` beside these scripts, a pinned copy of
 the lab's `apps/static/spritelab_lab2/sentences.json`. A cached picture's
 path is its word ids, so the words the tree was drawn from must not change
-under it. The copy here is taken from code-dot-org PR 75426, whose word ids
-the published paths must match. While it differs from the lab's file,
-every run says so.
+under it. The copy here matches the lab's file as of the "hoai2026: adlib
+updates" change (#76697). Whenever the two differ, every run says so.
 
-A word's id is a folder in every path, so it is lowercase letters and
-digits only: the word itself, with anything else removed (`outer space` is
-`outerspace`). The dumper refuses any other id. A word's text is what the
-prompt says and may be anything. If the lab settles on other ids for the
-same words, the drawings are still good: rename their folders.
+A word's id is a folder in every path, so it is lowercase words joined by
+single hyphens, as the lab writes them (`outer space` is `outer-space`).
+The dumper refuses any other id. A word's text is what the prompt says and
+may be anything. If the lab settles on other ids for the same words, the
+drawings are still good: rename their folders.
 
 To change the words, edit `sentences.json` here and the lab's copy
 together. Then bump `CACHE_VERSION` in `constants.rb` and
@@ -53,8 +52,8 @@ To see the words, and the size of a run:
 ./bin/oneoff/hoai_2026/imagegen/generate_images --list-sentences
 ```
 
-All of it is 568 fillings, 1,704 variants and 7,080 images. The character
-sentence is 6,720 of those images.
+All of it is 1,816 fillings, 5,448 variants and 18,552 images. The
+character sentence is 16,380 of those images.
 
 ## Prompts
 
@@ -77,11 +76,11 @@ draws and moderates every variant not yet drawn. Narrow it with
 `-i/--id SENTENCE`, `-f/--filter TEXT`, `-v/--variants N` and `--limit N`.
 `-c/--choice SLOT=WORD` pins a slot (`_` for an empty optional slot), so a
 small batch can sweep one slot and hold the rest. One character per
-creature is 8 sets of 5 pictures:
+creature is 14 sets of 5 pictures:
 
 ```
 ./bin/oneoff/hoai_2026/imagegen/generate_images -i character -v 1 \
-  -c adjective=brave -c clothing=_
+  -c adjective=cute -c clothing=_
 ```
 
 A character is five pictures, so `--first-frame` draws only each set's
@@ -91,7 +90,7 @@ page shows the set marked "first frame only" for approving or rejecting. A
 later run without the flag draws the four poses from each stored base and
 its seed; the set is the same drawing, so a review of its base still holds.
 A set with only its base is never published. Three bases per filling of
-every character is 3,042 images, against 15,210 for the full sets:
+every character is 3,276 images, against 16,380 for the full sets:
 
 ```
 ./bin/oneoff/hoai_2026/imagegen/generate_images -i character --first-frame --judge
@@ -235,7 +234,7 @@ upload_ledger.json                                           what each bucket ho
 ```
 
 Words are in the order the sentence reads them, and `_` is an optional slot
-left empty: `character/brave/dragon/_/pixel/00-base.png`. The published tree
+left empty: `character/cute/dragon/_/pixel/00-base.png`. The published tree
 holds nothing else; the lab derives everything a record holds from the level
 and the prompt. Gemini returns a JPEG as readily as a PNG, and it is
 converted on arrival: the lab's live path decodes it onto a canvas that

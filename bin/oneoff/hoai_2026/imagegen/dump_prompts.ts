@@ -117,8 +117,9 @@ function argValue(flag: string): string | undefined {
 }
 
 // A word id is a folder in every cached picture's path, so it is lowercase
-// letters and digits only: "outer space" is outerspace.
-const WORD_ID = /^[a-z0-9]+$/;
+// words joined by single hyphens, as the lab writes them: "outer space" is
+// outer-space.
+const WORD_ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
 /** Mirrors sentenceSlotIds() in sentences.ts. */
 function slotIdsInOrder(segments: Segment[]): string[] {
@@ -160,7 +161,7 @@ function sentencesFrom(manifest: Manifest): Sentence[] {
         if (bad.length) {
           throw new Error(
             `sentences.json: sentence "${id}" slot "${slotId}" has word ids ` +
-              `that are not lowercase letters and digits: ` +
+              `that are not lowercase words joined by hyphens: ` +
               bad.map(word => JSON.stringify(word.id)).join(', '),
           );
         }
