@@ -4,7 +4,7 @@ module User::AiAccessible
   include SharedConstants
 
   TEACHER_PREVERIFICATION_PILOT = 'teacher-preverification'.freeze
-  SPRITELAB2_AI_PILOT = 'spritelab2-ai-blocks'.freeze
+  SPRITELAB2_AI_PILOT = 'ai-in-your-program-pilot'.freeze
 
   # Chat apis trust the client to decide if it can access chat features
   # This allows us the flexibility to do things like experiment with new
