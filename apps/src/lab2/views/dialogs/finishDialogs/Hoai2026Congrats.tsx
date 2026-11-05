@@ -142,10 +142,8 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
               Open Sprite Lab
             </MuiButton>
           </div>
-          {/* A placeholder scene until the card's picture arrives. */}
-          <div className={styles.scene} aria-hidden="true">
-            <div className={styles.ground} />
-          </div>
+          {/* A plain box until the card's picture arrives. */}
+          <div className={styles.picture} aria-hidden="true" />
         </section>
         <section
           className={classNames(styles.card, styles.teachers)}

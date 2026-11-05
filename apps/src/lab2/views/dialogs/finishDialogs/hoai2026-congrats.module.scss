@@ -3,7 +3,9 @@
 .dialog {
   --gap: 14px;
   --card-padding: 22px 28px;
-  --scene-height: 96px;
+  --picture-height: 96px;
+  --row-padding: 14px 18px;
+  --offer-padding: 14px 20px;
 
   display: flex;
   flex-direction: column;
@@ -18,9 +20,11 @@
 
 @media (max-height: 700px) {
   .dialog {
-    --gap: 10px;
-    --card-padding: 14px 22px;
-    --scene-height: 48px;
+    --gap: 8px;
+    --card-padding: 12px 22px;
+    --picture-height: 36px;
+    --row-padding: 9px 16px;
+    --offer-padding: 10px 18px;
 
     padding: 14px 24px;
   }
@@ -101,21 +105,11 @@
   line-height: 1.2;
 }
 
-// Sky over ground, standing in for the card's picture.
-.scene {
-  position: relative;
-  height: var(--scene-height);
+.picture {
+  height: var(--picture-height);
   margin-top: auto;
   border-radius: 8px;
-  overflow: hidden;
-  background: linear-gradient(var(--brand-aqua-50), var(--brand-aqua-10));
-}
-
-.ground {
-  position: absolute;
-  inset: auto 0 0;
-  height: 28px;
-  background: var(--accent-orange-70);
+  background: var(--background-neutral-white-fixed);
 }
 
 .resources {
@@ -124,15 +118,18 @@
   gap: 12px;
 }
 
-// A white row on the dark card; the parent selector outranks the theme's
-// text-button rules.
+// A white two-line row on the dark card; the parent selector outranks the
+// theme's text-button rules, which fix a one-line height.
 .teachers .resource {
   justify-content: space-between;
   width: 100%;
-  padding: 12px 16px;
+  height: auto;
+  min-height: 0;
+  padding: var(--row-padding);
   border-radius: 8px;
   text-align: start;
   text-transform: none;
+  line-height: 1.35;
   background: var(--background-neutral-white-fixed);
   color: var(--brand-purple-50);
 
@@ -146,16 +143,17 @@
 .resourceText {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  line-height: 1.4;
+  gap: 4px;
 }
 
 .resourceGrade {
   font-size: 0.875rem;
   font-weight: 400;
+  opacity: 0.8;
 }
 
 .resourceName {
+  font-size: 1.0625rem;
   font-weight: 700;
 }
 
@@ -170,7 +168,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  padding: 14px 20px;
+  padding: var(--offer-padding);
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 12px;
 }
@@ -180,6 +178,7 @@
   align-items: center;
   gap: 10px;
   margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
   color: var(--text-neutral-primary);
 }
 
