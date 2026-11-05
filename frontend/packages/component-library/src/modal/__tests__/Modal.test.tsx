@@ -1,4 +1,4 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import {vi} from 'vitest';
 
 import Modal, {ModalProps} from './../index';
@@ -129,13 +129,15 @@ describe('Modal Component', () => {
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
-  it('should focus the first button on mount and restore focus on unmount', () => {
+  it('should focus the first button once entered and restore focus on unmount', async () => {
     const opener = document.createElement('button');
     document.body.appendChild(opener);
     opener.focus();
     const {unmount} = render(<Modal {...defaultProps} />);
-    expect(document.activeElement).toBe(
-      screen.getByRole('button', {name: 'Primary Action'}),
+    await waitFor(() =>
+      expect(
+        screen.getByRole('button', {name: 'Primary Action'}),
+      ).toHaveFocus(),
     );
     unmount();
     expect(document.activeElement).toBe(opener);

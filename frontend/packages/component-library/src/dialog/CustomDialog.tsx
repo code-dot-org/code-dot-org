@@ -1,12 +1,18 @@
 import {Dialog as MuiDialog} from '@mui/material';
 import classnames from 'classnames';
 import omit from 'lodash/omit';
-import {forwardRef, HTMLAttributes, ReactNode, useEffect, useRef} from 'react';
+import {
+  forwardRef,
+  HTMLAttributes,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useRef,
+} from 'react';
 
 import CloseButton from '@/closeButton';
 import useBodyScrollLock from '@/common/hooks/useBodyScrollLock';
 import useEscapeKeyHandler from '@/common/hooks/useEscapeKeyHandler';
-import useFocusTrap from '@/common/hooks/useFocusTrap';
 
 import moduleStyles from './customDialog.module.scss';
 
@@ -40,6 +46,12 @@ const DialogPanel = forwardRef<HTMLDivElement, PanelProps>(
   },
 );
 
+// The legacy trap's initial-focus targets, minus the ones focus() ignores: disabled controls and links without href.
+const FOCUSABLE_SELECTOR =
+  'a[href], button:not([disabled]), input:not([disabled]), ' +
+  'textarea:not([disabled]), select:not([disabled]), ' +
+  '[tabindex]:not([tabindex="-1"])';
+
 // ModalManager aria-hides its container's other children; this one has none, so the page stays exposed, as with the legacy dialog.
 let detachedContainer: HTMLDivElement | null = null;
 const getDetachedContainer = () => {
@@ -53,7 +65,7 @@ const getDetachedContainer = () => {
  * ###  Status: ```Ready for dev```
  *
  * Design System: CustomDialog on MUI `Dialog`, rendered in place (no portal).
- * Scroll lock, Escape and the focus trap come from the DSCO hooks in
+ * The focus trap is MUI's. Scroll lock and Escape come from the DSCO hooks in
  * `src/common/hooks`, not from MUI.
  */
 const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
@@ -71,8 +83,23 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   const panelRef = useRef<HTMLDivElement>(null);
 
   useBodyScrollLock(true);
-  useFocusTrap(panelRef);
   useEscapeKeyHandler(onClose);
+
+  // Runs after MUI's trap has focused its container and after mount effects; focus that anything moved since stays put.
+  const focusFirstControl = useCallback(() => {
+    const panel = panelRef.current;
+    const active = document.activeElement;
+    const untouched =
+      !active ||
+      active === document.body ||
+      active === panel?.closest('.MuiDialog-container');
+    if (!panel || !untouched) return;
+    // A match can refuse focus (a hidden input, an invisible control), so stop at the first that takes it.
+    for (const el of panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)) {
+      el.focus();
+      if (document.activeElement === el) return;
+    }
+  }, []);
 
   useEffect(() => {
     const hasDescriptionId = panelRef.current?.querySelector(
@@ -98,19 +125,19 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   return (
     <MuiDialog
       open
-      // Legacy behavior kept on purpose; see Deferred changes in DIALOG_MIGRATION_TO_MUI.md.
+      // Portal, scroll lock, Escape and the plain panel stay legacy; see Deferred changes in DIALOG_MIGRATION_TO_MUI.md.
       disablePortal
       container={getDetachedContainer}
       disableScrollLock
       disableEscapeKeyDown
-      disableAutoFocus
+      // Overlays MUI does not track (BaseDialog, persistent drawers, Bootstrap modals) open over the dialog and must keep focus; Tab still wraps.
       disableEnforceFocus
-      disableRestoreFocus
       transitionDuration={0}
       className={moduleStyles.customDialogOverlay}
       sx={zIndex === undefined ? undefined : {'--cdo-dialog-z-index': zIndex}}
       slots={{paper: DialogPanel}}
       slotProps={{
+        transition: {onEntered: focusFirstControl},
         paper: {
           ref: panelRef,
           role,
