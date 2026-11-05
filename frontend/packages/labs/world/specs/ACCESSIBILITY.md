@@ -84,9 +84,10 @@ below, and are listed last.
   `tabindex`, and Blockly's arrows walk blocks only). Each "+" is now a Tab
   stop after the workspace; Enter or Space opens its list of events,
   Escape comes back to it, and the section a choice adds takes focus.
-  Still open: each is 18 pixels across, and the one above the first
-  section is 10.8 pixels from it, under the 24 pixels 2.5.8 asks for
-  without the space around it. The others are 16.5 pixels clear.
+  Each is drawn 18 pixels across, and the one above the first section was
+  10.8 pixels from it, which 2.5.8 does not allow an 18-pixel target.
+  CLOSED: each now reaches 24 pixels across at full zoom, a transparent
+  circle behind the drawn one, so it passes whatever is beside it.
 
 ### Docking (DOCKING_PLAN.md)
 
@@ -380,6 +381,15 @@ below, and are listed last.
   value's name, so colour is not the only thing that tells it apart.
 - **Untested**: the white text's contrast on each getter colour, and what a
   screen reader says of a chip inside the hat.
+  MEASURED (November 2026), white on each getter's colour in every block
+  theme. High Contrast, Protanopia and Deuteranopia pass (4.53:1 and
+  up). The default, Modern, fails three of the five: logic 3.45:1, text
+  2.91:1, location 1.50:1; Tritanopia fails two: logic 4.11:1, location
+  3.46:1. The chip is not the cause: every block in these themes is
+  white text on its style's colour, so the getters themselves fail
+  alike, and so do other styles (an event hat's #00bc3e). The colours
+  are the shared themes' (`@code-dot-org/blockly/themes`), used by every
+  Blockly lab. Not changed here.
 
 ### An actor's drawing and steps on pages (DRAWING_PAGE_PLAN.md)
 

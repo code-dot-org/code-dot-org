@@ -12,6 +12,8 @@ import {COLUMN_X} from './tidyLayout';
 
 const CLASS = 'worldAddSection';
 const RADIUS = 9;
+/** What a press reaches: 24 pixels across at full zoom (WCAG 2.5.8). */
+const REACH = 12;
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 /** Take every "+" off the workspace. */
@@ -56,7 +58,10 @@ export function drawAddButtons(
     plus.setAttribute('stroke-linecap', 'round');
     const title = document.createElementNS(SVG_NS, 'title');
     title.textContent = 'Handle a new event here';
-    group.append(title, circle, plus);
+    const reach = document.createElementNS(SVG_NS, 'circle');
+    reach.setAttribute('r', String(REACH));
+    reach.setAttribute('fill', 'transparent');
+    group.append(title, reach, circle, plus);
     // Off Blockly's gesture handling: a press here is not the start of a
     // pan, and not a click on the workspace that would close the menu.
     group.addEventListener('pointerdown', event => event.stopPropagation());
