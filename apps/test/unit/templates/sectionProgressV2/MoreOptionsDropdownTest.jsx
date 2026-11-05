@@ -104,7 +104,11 @@ describe('MoreOptionsDropdown', () => {
       name: i18n.additionalOptions(),
     });
     fireEvent.click(trigger);
-    fireEvent.click(screen.getByText(i18n.resetProgress()));
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `${i18n.resetProgress()} ${i18n.betaTag()}`,
+      })
+    );
 
     expect(
       screen.getByText(

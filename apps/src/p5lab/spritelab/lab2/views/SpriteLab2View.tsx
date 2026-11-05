@@ -59,6 +59,7 @@ import {
 } from '../blockCatalog';
 import {toolboxBlockTypes} from '../blockLocks';
 import {ASK_AI_BLOCK_TYPE} from '../blockly/blockDefinitions/askAi';
+import {ASK_AI_WITH_CHOICES_BLOCK_TYPE} from '../blockly/blockDefinitions/askAiWithChoices';
 import {
   refreshSceneDropdowns,
   setSceneMenuActiveId,
@@ -221,7 +222,11 @@ function getImageCacheUrlParam(): string | undefined {
   return value.endsWith('/') ? value : `${value}/`;
 }
 
-const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE, SET_SYSTEM_PROMPT_BLOCK_TYPE];
+const AI_BLOCK_TYPES = [
+  ASK_AI_BLOCK_TYPE,
+  ASK_AI_WITH_CHOICES_BLOCK_TYPE,
+  SET_SYSTEM_PROMPT_BLOCK_TYPE,
+];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_PANE_WIDTH = 280;
