@@ -61,6 +61,9 @@ below, and are listed last.
 - **A button inside Blockly's tree.** It is an ordinary button reached by
   Tab, but where Tab lands relative to the tree's own arrow-key walk is
   untested.
+  CLOSED: tried in the browser. The tree is one Tab stop, walked inside by
+  the arrows; Tab from it goes to Add Rules, then Rules in Play, then the
+  workspace.
 
 ### The Actor Editor (ACTOR_EDITOR_PLAN.md)
 
@@ -77,6 +80,13 @@ below, and are listed last.
   blocks and events and its every-frame work are added, is drawn on the
   Blockly canvas; whether it is reachable from the keyboard is untested,
   and was before this phase too.
+  CLOSED for the keyboard: it was not reachable (a `role="button"` with no
+  `tabindex`, and Blockly's arrows walk blocks only). Each "+" is now a Tab
+  stop after the workspace; Enter or Space opens its list of events,
+  Escape comes back to it, and the section a choice adds takes focus.
+  Still open: each is 18 pixels across, and the one above the first
+  section is 10.8 pixels from it, under the 24 pixels 2.5.8 asks for
+  without the space around it. The others are 16.5 pixels clear.
 
 ### Docking (DOCKING_PLAN.md)
 
@@ -178,6 +188,9 @@ below, and are listed last.
   small text buttons in a dense row**; their names say whose they are
   ("More for Glow", "Rename coin.mp3"), but their targets are under 24
   pixels tall at the extra-small size.
+  WRONG, found by measuring: the design system's extra-small buttons are
+  24 pixels tall (`1.5rem`), and the effect row's Edit, Remove and More
+  measured 24 or more in the browser.
 - **No single place lists a kind's files** now the folder buttons are
   gone: pictures are reached through an actor's look or a background
   field, effects through an actor's Effects tab. A learner who knows a
@@ -187,6 +200,11 @@ below, and are listed last.
   its tooltip ("Open the file this comes from") as `use trait`'s is; it is
   reached from the keyboard only as any Blockly field is, which no pass
   here has checked.
+  CLOSED: checked on the Door's step in Jetpack. Blockly's arrows stop on
+  it and Enter opens the file. It had no name (`role="none"`, no label);
+  `FieldButton` now labels an icon-only button by its tooltip
+  (blockly specs/fields.md, FLD-18), which also names the `if` block's
+  "Add another branch" in the block's own label.
 
 ### Animations on the actor (ANIMATION_PLAN.md)
 
@@ -512,6 +530,25 @@ themes. Not seen with a screen reader.
 - **The sound library** opens on Upload a sound…, and each sound is two
   stops: Play, and Choose, a toggle that Use this sound then takes. Choose
   was named only for the sound, and said nothing of choosing.
+
+### A target-size pass (November 2026)
+
+- **Measured in the browser** against 2.5.8 Target Size (Minimum), with
+  its spacing exception: a target under 24 by 24 passes if a 24-pixel
+  circle on its centre meets no other target and no other such circle.
+  Over the Main Screen, the palette with a tile in hand, a selected
+  placement, the layer strip, the Actor Editor, and its Effects tab with
+  an effect added. Labelled checkboxes are measured with their labels;
+  links inside a sentence are exempt; Blockly's SVG is not measured.
+- **The map editor passes.** Its only small controls are labelled
+  checkboxes, and the demo's own project switcher, which a learner never
+  sees.
+- **An animation's keys were 14 pixels square**, and the key at 0 s on
+  the first track failed: the ruler above was within its circle. A key
+  is now a 24-pixel button, the track's height, with the same diamond
+  drawn in its middle.
+- **Blockly's own targets are not covered**: a block's fields are drawn
+  at the workspace's zoom.
 
 ## Not yet done for any phase
 

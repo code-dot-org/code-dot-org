@@ -41,6 +41,8 @@ export function drawAddButtons(
     group.setAttribute('transform', `translate(${COLUMN_X - 4}, ${y})`);
     group.setAttribute('role', 'button');
     group.setAttribute('aria-label', 'Handle a new event here');
+    // In the Tab order: Blockly's own arrow-key walk visits blocks only.
+    group.setAttribute('tabindex', '0');
     group.style.cursor = 'pointer';
     const circle = document.createElementNS(SVG_NS, 'circle');
     circle.setAttribute('r', String(RADIUS));
@@ -61,6 +63,15 @@ export function drawAddButtons(
     group.addEventListener('click', event => {
       event.stopPropagation();
       onPress(y, event.clientX, event.clientY);
+    });
+    // Kept from Blockly's shortcuts, which would act on the workspace.
+    group.addEventListener('keydown', event => {
+      event.stopPropagation();
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        const box = group.getBoundingClientRect();
+        onPress(y, box.left + box.width / 2, box.bottom);
+      }
     });
     canvas.appendChild(group);
   }

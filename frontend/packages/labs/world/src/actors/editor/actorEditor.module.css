@@ -310,13 +310,25 @@
   border-bottom: 1px dashed var(--borders-neutral-secondary, #ccc);
 }
 
-/* A key is a button, drawn as a diamond. */
+/* A key is a button the track's height square, the least a pointer target
+   may be (WCAG 2.5.8), with a diamond drawn in its middle. */
 .key {
   position: absolute;
   top: 50%;
   padding: 0;
   border: none;
   cursor: grab;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  transform: translate(-50%, -50%);
+}
+
+.key::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 0.6rem;
   height: 0.6rem;
   background: var(--background-brand-primary, #0093a4);
@@ -334,7 +346,7 @@
 }
 
 /* Chosen, a key is drawn larger and outlined. */
-.keyChosen {
+.keyChosen::before {
   width: 0.85rem;
   height: 0.85rem;
   outline: 2px solid var(--text-neutral-primary);
@@ -342,7 +354,7 @@
 
 .key:focus-visible {
   outline: 2px solid var(--borders-brand-primary, #0093a4);
-  outline-offset: 2px;
+  outline-offset: -2px;
 }
 
 .timelineLength {

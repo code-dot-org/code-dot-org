@@ -465,6 +465,9 @@ export function useSectionWorkspace({
           block.getBoundingRectangleWithoutChildren(),
           48,
         );
+        // The "+" pressed is redrawn by this layout, so focus would fall to
+        // the page; the new section is where it is wanted.
+        Blockly.getFocusManager().focusNode(block);
       }
     },
     [isReadOnly],

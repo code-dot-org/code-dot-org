@@ -140,6 +140,9 @@ function syncButton(block: Block): void {
     );
     const field = block.getField(FIELD_NAME);
     field?.setTooltip('Open the file this comes from');
+    // The tooltip is its name (`FieldButton.computeAriaLabel`), set after
+    // the field was labelled.
+    field?.recomputeAriaContext();
     // NOT saved. `FieldButton` sets `SERIALIZABLE = true`, so the open button was
     // written into every file that had one — and read back into blocks that do
     // not, since the button is added and removed by context rather than being
