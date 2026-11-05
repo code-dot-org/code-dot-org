@@ -57,7 +57,7 @@ const StatsStep: React.FunctionComponent<StatsStepProps> = ({
     ),
     timeSpent: (
       <MuiTypography variant="h2" component="dd">
-        {formatTimeSpent(totalTimeSpent(progress, pathway))}
+        {formatTimeSpent(totalTimeSpent(progress))}
       </MuiTypography>
     ),
   };

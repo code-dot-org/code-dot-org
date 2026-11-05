@@ -12,7 +12,7 @@ import {stepBaseSchema} from './base';
 export const markdownStepSchema = stepBaseSchema.extend({
   kind: z.literal('markdown'),
   markdown: z.string().min(1),
-  /** A link opened in a new tab, beside the button on. */
+  /** A link opened in a new tab, rendered as a secondary button action. */
   link: z
     .strictObject({label: z.string().min(1), href: z.string().min(1)})
     .optional(),

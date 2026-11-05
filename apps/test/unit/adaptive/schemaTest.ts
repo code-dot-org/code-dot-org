@@ -292,9 +292,9 @@ describe('parsePathway', () => {
             id: 'showcase',
             title: 'Showcase',
             kind: 'level',
-            level: 'web-template',
+            level: 'web-showcase',
             project: true,
-            levelProperties: levelProperties(1, 'web-template'),
+            levelProperties: levelProperties(9, 'web-showcase', 'web-template'),
           },
         ],
       },
@@ -806,7 +806,31 @@ describe('findReferenceProblems', () => {
     build.level = 'web-template';
     build.levelProperties = levelProperties(1, 'web-template');
     expect(problemsOf(raw)).toEqual([
-      "checkpoints.basics.steps.build: level 'web-template' is the project template level, which only the project view and the finish checkpoint play",
+      "checkpoints.basics.steps.build: level 'web-template' is the project template level, which only the project view plays",
+    ]);
+  });
+
+  it('flags a finish checkpoint step that plays the project template level', () => {
+    const raw = served();
+    raw.finish = {
+      checkpoint: {
+        id: 'wrap-up',
+        title: 'Wrap up',
+        description: 'The end.',
+        steps: [
+          {
+            id: 'showcase',
+            title: 'Showcase',
+            kind: 'level',
+            level: 'web-template',
+            project: true,
+            levelProperties: levelProperties(1, 'web-template'),
+          },
+        ],
+      },
+    };
+    expect(problemsOf(raw)).toEqual([
+      "finish.checkpoint.steps.showcase: level 'web-template' is the project template level, which only the project view plays",
     ]);
   });
 

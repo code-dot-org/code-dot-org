@@ -364,7 +364,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             stepId: cp ? stepIdToResume(cp, progress) : undefined,
           });
         }}
-        timeSpentSeconds={totalTimeSpent(progress, pathway)}
+        timeSpentSeconds={totalTimeSpent(progress)}
         onWorkOnProject={openProject}
         hasSkippedCheckpoints={hasSkippedCheckpoints}
       />

@@ -1602,7 +1602,7 @@
           "id": "wrap-up-showcase",
           "title": "Your final project",
           "kind": "level",
-          "level": "adaptive-HoAI26-template-main-project",
+          "level": "adaptive-HoAI26-wrap-up-showcase",
           "project": true,
           "instructions": "Look what you built! Review your final project."
         },
