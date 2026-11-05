@@ -1,0 +1,58 @@
+name 'pl-aif-y2-u2-l3-prediction-models'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Prediction Models
+
+<div style="display: flex; align-items: center; gap: 40px; margin: 20px 0;">
+  <img src="https://images.code.org/264162fee8dfe0bad4a7b7cb1d13dca1-image-1793820048098.png" alt="Icecream cone icon" width="100px" style="border-radius:10px; flex-shrink: 0;">
+  <div>
+    <p>Lesson 4 opens with a real career connection: small business owners, like Shawn Allard, who left dental consulting to run an ice cream shop that now brings in 2 million a year.</p>
+    <p>The lesson's running example is a fictional parallel: <em>Anita's Parlor</em>, an ice cream shop facing real uncertainty, how much ice cream to make, how many customers will come, whether the business will turn a profit.</p>
+  </div>
+</div>
+
+<div style="clear:both;"></div>
+
+---
+
+## Lesson Vocabulary
+
+Four terms carry this lesson, click each card to see its definition:
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/prediction-models-flip-cards.html"
+    width="100%"
+    height="500"
+    frameborder="0"
+    scrolling="no"
+    title="Prediction models vocabulary flip cards: prediction, prediction model, regression, classification">
+  </iframe>
+</div>
+
+---
+
+## Regression and Classification
+
+Regression and classification comes down to one question: ***is the output a category, or a number?*** 
+
+In the next levels you will see Anita's example for regression: 
+
+- Regression example: "Based on today's temperature, how many customers should I expect?" That's a number. 
+
+- Classification example: "Will this customer leave a positive review?" That's a category, yes or no.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> the lesson deliberately starts classification with just two categories for simplicity, worth telling students explicitly that classification can involve more than two.</div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Watch for this during the warm-up:</strong> when students brainstorm uncertainties Anita faces, some will propose business decisions ("how much should we charge?") instead of genuine prediction questions. The fix is reframing: "How many people will buy ice cream if we charge $9 per scoop?" turns a decision into something a model could actually predict.
+  </div>
+</div>
+
+
+MARKDOWN

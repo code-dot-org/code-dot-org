@@ -34,6 +34,20 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert build(:adaptive, adaptive_id: 'sample').valid?
   end
 
+  test "creating from the level builder with a name alone points at the sample content" do
+    level = Adaptive.create_from_level_builder({user: create(:levelbuilder)}, {name: 'Adaptive quick'})
+
+    assert_equal 'sample', level.adaptive_id
+    assert_equal Game.adaptive, level.game
+    assert_equal 'custom', level.level_num
+  end
+
+  test "creating from the level builder keeps a chosen content id" do
+    level = Adaptive.create_from_level_builder({user: create(:levelbuilder)}, {name: 'Adaptive chosen', adaptive_id: 'needs-skill'})
+
+    assert_equal 'needs-skill', level.adaptive_id
+  end
+
   test "lab2 properties include the parsed content" do
     level = create(:adaptive)
     script_level = create(:script_level, levels: [level])
