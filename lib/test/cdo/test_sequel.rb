@@ -63,9 +63,10 @@ class SequelTest < Minitest::Test
   end
 
   def test_database_connection_pool_accepts_a_uri_already_naming_the_adapter
-    db = Cdo::Sequel.database_connection_pool('mysql2://writer:hostname-that-ends-with-mysql:3306/dashboard_test')
+    db = Cdo::Sequel.database_connection_pool('mysql2://writer:not-a-secret@hostname-that-ends-with-mysql:3306/dashboard_test')
 
     assert_equal 'hostname-that-ends-with-mysql', db.opts[:host]
+    assert_equal 'mysql2', db.adapter_scheme.to_s
   ensure
     db&.disconnect
   end
