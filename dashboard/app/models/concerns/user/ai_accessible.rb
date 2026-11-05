@@ -70,6 +70,8 @@ module User::AiAccessible
     return false if client_type == AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR] && !levelbuilder?
     return false if client_type == AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] && !DCDO.get("spritelab-lab2-ask-ai-enabled", true)
     return false if client_type == AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] && !in_spritelab2_ai_pilot?
+    # The level id is client-supplied; an essential one must not unlock this for essential-only access.
+    return false if client_type == AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] && ai_chat_access_level != AI_CHAT_ACCESS_LEVELS[:ENABLED]
 
     has_aichat_access?(level_id) || trust_chat_client?(client_type)
   end

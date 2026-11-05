@@ -408,8 +408,18 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
 
     it 'returns true for SPRITELAB_ASK_AI in the pilot with access' do
       allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(true)
-      allow(user).to receive(:has_aichat_access?).and_return(true)
+      allow(user).to receive(:ai_chat_access_level).and_return(Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+      allow(user).to receive(:has_aichat_access?).and_call_original
       _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal true
+    end
+
+    it 'returns false for SPRITELAB_ASK_AI in the pilot with essential-only access on an essential level' do
+      allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(true)
+      allow(user).to receive(:ai_chat_access_level).and_return(Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
+      allow(user).to receive(:has_aichat_access?).and_call_original
+      essential_level = create(:aichat)
+      _(user.has_aichat_access?(essential_level.id)).must_equal true
+      _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, essential_level.id)).must_equal false
     end
 
     it 'returns false for SPRITELAB_ASK_AI in the pilot without access' do
