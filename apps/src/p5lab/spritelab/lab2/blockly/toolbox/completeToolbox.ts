@@ -21,6 +21,8 @@ import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 import {filterToSupportedSharedBlocks} from './supportedSharedBlocks';
 import {ToolboxInfo} from './types';
 
+export const AI_CATEGORY = 'AI';
+
 // Where the lab-owned blocks live in the complete toolbox.
 const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
   World: [
@@ -52,7 +54,7 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_setPlatformGravity',
     'spritelab2_setCameraZoom',
   ],
-  AI: [
+  [AI_CATEGORY]: [
     ASK_AI_BLOCK_TYPE,
     ASK_AI_WITH_CHOICES_BLOCK_TYPE,
     SET_SYSTEM_PROMPT_BLOCK_TYPE,

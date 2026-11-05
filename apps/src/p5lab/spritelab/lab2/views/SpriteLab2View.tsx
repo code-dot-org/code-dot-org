@@ -67,6 +67,8 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockly/blockDefinitions/setSystemPrompt';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {AI_CATEGORY} from '../blockly/toolbox/completeToolbox';
+import {withoutCategory} from '../blockly/toolbox/types';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
@@ -616,7 +618,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       );
     }
   }, [activeTab, enabledTabs, dispatch]);
-  const sceneToolbox = levelProperties.toolboxDefinition;
+  const authoredToolbox = levelProperties.toolboxDefinition;
+  // The whole category, since its answered block also serves prompts.
+  const sceneToolbox = useMemo(
+    () =>
+      authoredToolbox && !inAiPilot
+        ? withoutCategory(authoredToolbox, AI_CATEGORY)
+        : authoredToolbox,
+    [authoredToolbox, inAiPilot]
+  );
   // Blockly fixes a workspace's toolbox kind at injection, so reaching a
   // toolbox of the other kind takes a new workspace. Same-kind changes swap
   // in place instead, below.
