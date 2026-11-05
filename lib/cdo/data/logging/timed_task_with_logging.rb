@@ -1,21 +1,32 @@
 require 'benchmark'
 require 'rake/task'
-# dotiw 4.0.1 leans on ActiveSupport core extensions it never requires, and
+# the dotiw gem depends on ActiveSupport core extensions it never requires, and
 # patches distance_of_time_in_words only if ActionView::Helpers is already
-# defined when it loads, so both must come first. The dashboard gets this
-# order from Rails; the root and pegasus rake processes get it here.
+# defined when it loads.
 require 'active_support'
 require 'active_support/core_ext'
 require 'action_view'
 require 'dotiw'
+
+# Helper module for defining Rake tasks with timing and logging capabilities by
+# replacing the standard `task` command with `timed_task_with_logging`.
+#
+# timed_task_with_logging records both own time (spent inside the task's own
+# block) and total time (including prerequisites). Tasks with substantial time
+# spent in prerequisites log both total and own time, while other tasks log a
+# single time. This plays out as follows:
+# - Leaf tasks and parents whose prereqs had already run show only one number.
+# - The first task to reach a prerequisite will include its time in the total.
+#   This includes :environment, which carries the Rails boot time.
+# - When a parent task invokes a child task directly within its own #execute
+#   block, the child's time counts toward the parent's own time.
+
 module CustomRake
   class TimedTaskWithLogging < Rake::Task
     include ActionView::Helpers::DateHelper
 
-    # Rake runs prerequisites from here before calling #execute, so this
-    # covers them; #execute alone covers only this task's own block. Public,
-    # unlike rake's own: a plain task with a timed prerequisite calls this
-    # from Rake::Task#invoke_prerequisites, and protected rejects that caller.
+    # Rake runs prerequisites and calls #execute from within this method. This
+    # wrapper measures total time, and logs both total time and own time.
     def invoke_with_call_chain(task_args, invocation_chain)
       return super if already_invoked
       @own_seconds = nil
@@ -23,9 +34,9 @@ module CustomRake
       puts "Finished #{name} #{timing_words(total_seconds, @own_seconds)}"
     end
 
-    # The event logger blocks on CloudWatch twice per task. That is this
-    # task's own cost, so the timing covers it rather than charging it to
-    # the subtasks.
+    # Rake calls #execute to run the task's own block. This wrapper logs the
+    # time spent in the block in two ways: by logging it to CloudWatch, and by
+    # measuring it directly for local logging.
     def execute(args = nil)
       @own_seconds = Benchmark.realtime do
         logger = RakeTaskEventLogger.new(self)
@@ -43,12 +54,8 @@ module CustomRake
       end
     end
 
-    # One number unless the prerequisites cost enough to show, which rules
-    # out leaf tasks and parents whose prerequisites had already run. The
-    # difference is time in prerequisites that first ran under this task;
-    # :environment is one, so the first task to reach it carries the Rails
-    # boot. A task the block invokes itself runs inside #execute and counts
-    # as own time.
+    # Converts a duration in seconds for each input to a human-readable string.
+    # Prints one value if they appear the same, or both values if they differ.
     private def timing_words(total_seconds, own_seconds)
       total = duration_words(total_seconds)
       own = duration_words(own_seconds || total_seconds)
@@ -56,8 +63,7 @@ module CustomRake
       "in #{total} total (#{own} excluding prerequisites)"
     end
 
-    # "1 minute and 35 seconds". Without include_seconds dotiw drops the
-    # seconds once a duration reaches a minute.
+    # "1 minute and 35 seconds", "5 seconds" or "less than a second".
     private def duration_words(seconds)
       distance_of_time_in_words(seconds, 0, include_seconds: true)
     end
