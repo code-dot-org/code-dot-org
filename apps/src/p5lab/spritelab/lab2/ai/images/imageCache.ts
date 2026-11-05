@@ -1,6 +1,5 @@
-// Pre-generated images for the explore layout's sentences, served from S3
-// beside the music and dancer files Mix and Move used. A cached image is
-// the model's raw output, not a finished asset: the same local pipeline
+// Pre-generated images for the sentences, served from S3. A cached image
+// is the model's raw output, not a finished asset: the same local pipeline
 // (background removal, crop, pixel normalization, strip assembly) runs on
 // it as on a live result, so improvements to that pipeline reach cached
 // images on their next use.
@@ -11,17 +10,6 @@
 //   <base>/<version>/<sentenceId>/<word>/<word>/<word>/<style>/<NN>.png          single
 //   <base>/<version>/<sentenceId>/<word>/<word>/<word>/<style>/<NN>-base.png     set frames
 //   <base>/<version>/<sentenceId>/<word>/<word>/<word>/<style>/<NN>-walking.png  ...
-//
-// An optional slot left empty is EMPTY_WORD_ID. A generator writes this
-// tree offline, VARIANT_COUNT variants per filling, and nothing describes
-// it: whether a filling is a set or one picture, its grid and its key
-// colour follow from the level and the prompt, the same way they do for a
-// live picture. A variant is there when its first frame is; a filling the
-// tree lacks, or a variant review deleted, is found by that file missing.
-//
-// A version of the tree is drawn with the prompt builders of its day, and
-// the two move together, so the lab's own builders describe a cached
-// picture.
 
 import type {GeneratedFile} from 'ai';
 import {shuffle} from 'lodash';
@@ -61,8 +49,10 @@ export type CachedFrame = 'single' | 'base' | string;
 
 /** Thrown when a file the variant should have is not there. */
 export class ImageCacheMissError extends Error {
-  constructor(url: string, status?: number) {
+  constructor(url: string, readonly status?: number) {
     super(`Cached image missing: ${url}${status ? ` (${status})` : ''}`);
+    // The ES5 build target otherwise leaves this with Error's prototype.
+    Object.setPrototypeOf(this, ImageCacheMissError.prototype);
     this.name = 'ImageCacheMissError';
   }
 }
@@ -97,8 +87,8 @@ export function sentencePath(
   return `${sentenceId}/${wordIds.join('/')}/${style}`;
 }
 
-// A frame found missing stays missing for the page: Generate again asks
-// about the same variants, and a filling the tree lacks stays absent.
+// A file the tree lacks stays missing for the page: Generate again asks
+// about the same variants. A fetch that failed is asked again.
 const missing = new Set<string>();
 
 /** Tests: forget which frames were missing. */
@@ -179,7 +169,10 @@ export async function findCachedImage(
     let first: GeneratedFile;
     try {
       first = await fetchRaw(url);
-    } catch {
+    } catch (e) {
+      if (!(e instanceof ImageCacheMissError && e.status === 404)) {
+        throw e;
+      }
       missing.add(url);
       continue;
     }

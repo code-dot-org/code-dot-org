@@ -148,12 +148,9 @@ export function slotsToOffer(sentence: Sentence): Slot[] {
   return [...slots.filter(s => s.required), ...slots.filter(s => !s.required)];
 }
 
-/**
- * The chosen word ids in the sentence's slot order, which is how a filled
- * sentence is named outside the layout (the image cache's paths). An
- * optional slot left empty, or one in a phrase that is not filled, gives
- * EMPTY_WORD_ID, since its word is left out of the prompt either way.
- */
+/** The chosen word ids in the sentence's slot order. An optional slot left
+    empty, or one in a phrase that is not filled, gives EMPTY_WORD_ID, since
+    its word is left out of the prompt either way. */
 export function sentenceWordIds(
   sentence: Sentence,
   choices: Choices

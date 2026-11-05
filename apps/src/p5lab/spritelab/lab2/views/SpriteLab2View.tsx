@@ -215,7 +215,10 @@ function getImageSourceParam(): ImageSource | undefined {
 
 function getImageCacheUrlParam(): string | undefined {
   const value = queryParams('image-cache-url');
-  return typeof value === 'string' && value ? value : undefined;
+  if (typeof value !== 'string' || !value) {
+    return undefined;
+  }
+  return value.endsWith('/') ? value : `${value}/`;
 }
 
 const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE, SET_SYSTEM_PROMPT_BLOCK_TYPE];

@@ -14,6 +14,7 @@ import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding'
 import {
   CachedImage,
   findCachedImage,
+  sentencePath,
   ImageSource,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
@@ -62,6 +63,9 @@ import styles from './sentence-scene.module.scss';
 const STYLE: ImageStyle = 'pixel';
 // The service's middle temperature.
 const TEMPERATURE = 1;
+// The making shows at least this long on a cached level, where a picture
+// can land in well under a second.
+const MIN_CACHED_GENERATING_MS = 7000;
 
 export type Mode = 'edit' | 'generating' | 'result';
 
@@ -228,24 +232,28 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
   const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
-  // The cached variant shown last, so Generate again shows another.
-  const lastCachedVariantRef = useRef<number>();
+  // The cached variant shown last for a filling, so Generate again shows
+  // another.
+  const lastCachedRef = useRef<{path: string; variant: number}>();
 
-  // The cached picture for the sentence as filled, when the level reads
-  // from the cache and the tree has one.
+  // The cached picture for the sentence as filled, when the tree has one.
   const findCached = useCallback(async (): Promise<CachedImage | undefined> => {
-    if (imageSource === 'live') {
-      return undefined;
-    }
-    return findCachedImage({
+    const wordIds = sentenceWordIds(sentence, choices);
+    const path = sentencePath(sentence.id, wordIds, style);
+    const last = lastCachedRef.current;
+    const found = await findCachedImage({
       sentenceId: sentence.id,
-      wordIds: sentenceWordIds(sentence, choices),
+      wordIds,
       style,
       characterSet: canAnimate,
-      avoidVariant: lastCachedVariantRef.current,
+      avoidVariant: last?.path === path ? last.variant : undefined,
       baseUrl: imageCacheUrl,
     });
-  }, [imageSource, sentence, choices, style, canAnimate, imageCacheUrl]);
+    if (found) {
+      lastCachedRef.current = {path, variant: found.variant};
+    }
+    return found;
+  }, [sentence, choices, style, canAnimate, imageCacheUrl]);
 
   const persist = useCallback(
     async (picture: GeneratedPicture, pictureVerdict: Verdict | null) => {
@@ -275,17 +283,41 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       return;
     }
     const run = ++runRef.current;
+    const startedAt = Date.now();
     const prompt = typedPrompt || promptText(sentence, choices);
-    // The cache holds the sentences' pictures, not a typed prompt's. A live
-    // level never waits here: the generating state shows at once.
-    const fromCache = imageSource === 'cached' && !typedPrompt;
-    const cached = fromCache ? await findCached() : undefined;
-    if (run !== runRef.current) {
-      return;
-    }
-    if (fromCache && !cached) {
-      setError("This picture isn't ready yet. Try different words.");
-      return;
+    const pixelScale = advanced?.pixelScale || 1;
+    // The cache holds the sentences' pictures as the level draws them;
+    // whatever the advanced settings change goes to the model.
+    const customized =
+      !!typedPrompt || !!advanced?.startFrom || pixelScale !== 1;
+    const fromCache = imageSource === 'cached' && !customized;
+    setMode('generating');
+    setTip(current => pickTip(current));
+    setVerdict(null);
+    setRatingDismissed(false);
+    setError(null);
+    playSound('go');
+    let cached: CachedImage | undefined;
+    if (fromCache) {
+      try {
+        cached = await findCached();
+      } catch (e) {
+        if (run !== runRef.current) {
+          return;
+        }
+        console.error('Image cache lookup failed:', e);
+        setError("Couldn't make the picture. Try again.");
+        setMode('edit');
+        return;
+      }
+      if (run !== runRef.current) {
+        return;
+      }
+      if (!cached) {
+        setError("This picture isn't ready yet. Try different words.");
+        setMode('edit');
+        return;
+      }
     }
     // true attaches the project context for per-level breakdowns.
     analyticsReporter.sendEvent(
@@ -302,14 +334,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       true
     );
     onGenerateStart?.();
-    setMode('generating');
-    setTip(current => pickTip(current));
-    setVerdict(null);
-    setRatingDismissed(false);
-    setError(null);
-    playSound('go');
     try {
-      const pixelScale = advanced?.pixelScale || 1;
       const options: GenerateImageOptions = {
         imageType,
         ...(imageType === 'sprite' && {subject: imageSubject ?? 'character'}),
@@ -350,8 +375,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       if (run !== runRef.current) {
         return;
       }
-      if (cached) {
-        lastCachedVariantRef.current = cached.variant;
+      if (fromCache) {
+        const elapsed = Date.now() - startedAt;
+        await new Promise(resolve =>
+          setTimeout(resolve, Math.max(MIN_CACHED_GENERATING_MS - elapsed, 0))
+        );
+        if (run !== runRef.current) {
+          return;
+        }
       }
       // The chosen words are stored in the image's generation metadata so
       // the sentence can be refilled when the image is reopened; a typed

@@ -20,6 +20,11 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet', () => ({
   ),
   generateCharacterSet: (...args: unknown[]) => generateCharacterSet(...args),
 }));
+const findCachedImage = jest.fn();
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache', () => ({
+  ...jest.requireActual('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache'),
+  findCachedImage: (...args: unknown[]) => findCachedImage(...args),
+}));
 const sendEvent = jest.fn();
 jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
   __esModule: true,
@@ -125,6 +130,7 @@ describe('SentenceScene', () => {
     jest.useFakeTimers();
     generateImage.mockReset();
     generateCharacterSet.mockReset();
+    findCachedImage.mockReset();
     onKeep.mockReset();
     sendEvent.mockClear();
   });
@@ -298,5 +304,102 @@ describe('SentenceScene', () => {
       expect.objectContaining({method: 'freeText'}),
       true
     );
+  });
+
+  describe('on a cached level', () => {
+    const CACHED = {variant: 1, characterSet: true, raw: jest.fn()};
+    const onGenerateStart = jest.fn();
+    const renderCached = (props = {}) =>
+      renderScene({imageSource: 'cached', onGenerateStart, ...props});
+
+    beforeEach(() => {
+      onGenerateStart.mockReset();
+    });
+
+    it('shows the making at once, and for a while after the picture lands', async () => {
+      findCachedImage.mockResolvedValue(CACHED);
+      generateCharacterSet.mockResolvedValue(RESULT);
+      renderCached();
+      pickCreature();
+      await generate();
+      expect(screen.getByRole('status').textContent).toBe(
+        'Making your picture…'
+      );
+      expect(generateCharacterSet.mock.calls[0][1]).toMatchObject({
+        cached: CACHED,
+      });
+      expect(onGenerateStart).toHaveBeenCalledTimes(1);
+      await act(async () => {
+        jest.advanceTimersByTime(6999);
+      });
+      expect(screen.getByRole('status').textContent).toBe(
+        'Making your picture…'
+      );
+      await act(async () => {
+        jest.advanceTimersByTime(1);
+      });
+      expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+      expect(sendEvent).toHaveBeenCalledWith(
+        'hoai2026-image-prompt',
+        expect.objectContaining({imageSource: 'cached', cached: true}),
+        true
+      );
+    });
+
+    it('asks for another variant than the one shown, for the same words', async () => {
+      findCachedImage.mockResolvedValue(CACHED);
+      generateCharacterSet.mockResolvedValue(RESULT);
+      renderCached();
+      pickCreature();
+      await generate();
+      await act(async () => {
+        jest.advanceTimersByTime(7000);
+      });
+      await generate();
+      expect(findCachedImage.mock.calls[0][0].avoidVariant).toBeUndefined();
+      expect(findCachedImage.mock.calls[1][0].avoidVariant).toBe(1);
+      await act(async () => {
+        jest.advanceTimersByTime(7000);
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
+      await generate();
+      expect(findCachedImage.mock.calls[2][0].avoidVariant).toBeUndefined();
+    });
+
+    it('says so when the tree lacks the words, and counts no generation', async () => {
+      findCachedImage.mockResolvedValue(undefined);
+      renderCached();
+      pickCreature();
+      await generate();
+      expect(screen.getByRole('alert').textContent).toMatch(/isn't ready/);
+      expect(screen.getByRole('button', {name: 'cat'})).toBeTruthy();
+      expect(generateCharacterSet).not.toHaveBeenCalled();
+      expect(onGenerateStart).not.toHaveBeenCalled();
+      expect(sendEvent).not.toHaveBeenCalled();
+    });
+
+    it('lets a failed lookup be tried again', async () => {
+      findCachedImage.mockRejectedValue(new TypeError('Failed to fetch'));
+      const error = jest.spyOn(console, 'error').mockImplementation(() => {});
+      renderCached();
+      pickCreature();
+      await generate();
+      expect(screen.getByRole('alert').textContent).toMatch(/Try again/);
+      expect(
+        (screen.getByRole('button', {name: 'Generate'}) as HTMLButtonElement)
+          .disabled
+      ).toBe(false);
+      error.mockRestore();
+    });
+
+    it('goes to the model when the advanced settings change the request', async () => {
+      generateCharacterSet.mockResolvedValue(RESULT);
+      renderCached({advanced: {pixelScale: 2}});
+      pickCreature();
+      await generate();
+      expect(findCachedImage).not.toHaveBeenCalled();
+      expect(generateCharacterSet.mock.calls[0][1].cached).toBeUndefined();
+      expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+    });
   });
 });

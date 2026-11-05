@@ -100,6 +100,20 @@ describe('imageCache', () => {
     expect(calls).toHaveLength(3);
   });
 
+  it('asks again after a fetch that failed, and says so', async () => {
+    const calls = installFetch();
+    const fetchMock = (global as unknown as {fetch: jest.Mock}).fetch;
+    const working = fetchMock.getMockImplementation()!;
+    fetchMock.mockImplementationOnce(async (input: RequestInfo | URL) => {
+      calls.push(String(input));
+      throw new TypeError('Failed to fetch');
+    });
+    await expect(find()).rejects.toBeInstanceOf(TypeError);
+    fetchMock.mockImplementation(working);
+    expect((await find())!.variant).toBe(0);
+    expect(calls).toEqual([`${FOLDER}/00-base.png`, `${FOLDER}/00-base.png`]);
+  });
+
   it('has nothing for words or a style the tree lacks', async () => {
     installFetch();
     expect(await find({wordIds: ['brave', 'cat', '_']})).toBeUndefined();
