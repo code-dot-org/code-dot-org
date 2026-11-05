@@ -74,6 +74,7 @@ import {
   stopSoundEffects,
   synthPresetOf,
 } from './soundEffects';
+import {drawMono, drawStereoPair, layerShifts} from './stereo';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 // A burst from the player starts at its take-off spot this many frames
@@ -163,6 +164,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     // frame of the next run is drawn (see onP5Setup and the draw loops).
     this.frameCaptureWaiters_ = [];
     this.frameCaptureArmed_ = false;
+    // Side-by-side stereo output (setStereoOutput): the display canvas, the
+    // eye offset and the two layers each frame is split into.
+    this.stereo_ = null;
+    // A frame being drawn for a capture is drawn whole, not split.
+    this.capturing_ = false;
     // A preview run draws its first frame and holds there: the clock and
     // the loop stop, so the frame shows what the program sets up and no
     // event fires until Play.
@@ -353,6 +359,7 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
+    const engine = this;
     // Fixed for the run: the scene type is set before the run begins.
     const dimBackground = this.usesPlatformPhysics_;
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
@@ -400,8 +407,8 @@ export default class SpriteLab2Engine extends SpriteLab {
         this.p5.rect(0, 0, APP_WIDTH, APP_HEIGHT);
         this.p5.pop();
       }
+      engine.splitBackgroundLayer_(this.p5);
     };
-    const engine = this;
     // A costume name the scene-scoped preload never saw (one built
     // dynamically at runtime) decodes on demand: the sprite changes costume
     // when the decode lands, instead of p5.play throwing on the missing
@@ -477,6 +484,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     const drawLoop = library.commands.executeDrawLoopAndCallbacks;
     library.commands.executeDrawLoopAndCallbacks = function () {
       drawLoop.apply(this, arguments);
+      engine.composeStereoFrame_(this.p5);
       if (engine.frameCaptureArmed_) {
         engine.frameCaptureArmed_ = false;
         engine.settleFrameCaptures_(this.p5.canvas);
@@ -1107,6 +1115,72 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.clearLateImagesWatch_();
     this.frameCaptureArmed_ = false;
     this.settleFrameCaptures_(null);
+    this.stereo_ = null;
+  }
+
+  /**
+   * Mirror every frame onto `canvas` as a side-by-side stereo pair (null
+   * stops). `eye` is half the background's disparity in canvas px at zoom
+   * 1; see stereo.ts.
+   */
+  setStereoOutput(canvas, eye) {
+    this.stereo_ = canvas
+      ? {
+          canvas,
+          eye,
+          layers: {
+            background: document.createElement('canvas'),
+            foreground: document.createElement('canvas'),
+          },
+        }
+      : null;
+  }
+
+  // The canvas copied into the layer, at the canvas's backing size.
+  copyLayer_(layer, canvas) {
+    if (layer.width !== canvas.width || layer.height !== canvas.height) {
+      layer.width = canvas.width;
+      layer.height = canvas.height;
+    }
+    const context = layer.getContext('2d');
+    context.clearRect(0, 0, layer.width, layer.height);
+    context.drawImage(canvas, 0, 0);
+  }
+
+  // The background pass just drew: keep it as the far layer and clear the
+  // canvas, so what draws next lands on a layer of its own.
+  splitBackgroundLayer_(p5) {
+    if (!this.stereo_ || this.capturing_) {
+      return;
+    }
+    this.copyLayer_(this.stereo_.layers.background, p5.canvas);
+    p5.clear();
+  }
+
+  // The frame is drawn: keep the near layer, draw the pair, and put the
+  // plain frame back on the canvas for whoever reads it next.
+  composeStereoFrame_(p5) {
+    const stereo = this.stereo_;
+    if (!stereo || this.capturing_) {
+      return;
+    }
+    const {canvas} = p5;
+    const {width, height} = canvas;
+    this.copyLayer_(stereo.layers.foreground, canvas);
+    if (stereo.canvas.width !== 2 * width || stereo.canvas.height !== height) {
+      stereo.canvas.width = 2 * width;
+      stereo.canvas.height = height;
+    }
+    // The eye offset is in logical px; the layers are at backing size.
+    const density = width / APP_WIDTH;
+    drawStereoPair(
+      stereo.canvas.getContext('2d'),
+      stereo.layers,
+      layerShifts(stereo.eye * density, this.cameraZoom_),
+      width,
+      height
+    );
+    drawMono(p5.drawingContext, stereo.layers, width, height);
   }
 
   // Backgrounds come from the Items tab, not backgrounds.json — and the base
@@ -1323,8 +1397,10 @@ export default class SpriteLab2Engine extends SpriteLab {
         // callbacks (synchronously), then painted over by the real frame
         // below, so nothing of it reaches the screen.
         engine.frameCaptureArmed_ = false;
+        engine.capturing_ = true;
         engine.drawWorld_(this, 1, cameraFocus(1, null));
         engine.settleFrameCaptures_(p5.canvas);
+        engine.capturing_ = false;
       }
       engine.drawWorld_(this, zoom, focus);
       this.drawVariableBubbles();
