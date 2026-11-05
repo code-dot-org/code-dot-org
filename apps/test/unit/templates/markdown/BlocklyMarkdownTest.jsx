@@ -40,7 +40,7 @@ const renderInstructions = markdown =>
 
 describe('BlocklyMarkdown', () => {
   describe('base element mappings', () => {
-    it('renders --- as a design-system divider', () => {
+    it('renders --- as a separator', () => {
       renderInstructions('above\n\n---\n\nbelow');
 
       // The legacy `divider` module class and MUI's `MuiDivider-root` both match.
@@ -112,7 +112,7 @@ describe('BlocklyMarkdown', () => {
       expect(wrapper.getElementsByTagName('br')).toHaveLength(1);
     });
 
-    it('renders an <hr/> tag as the same design-system divider', () => {
+    it('renders an <hr/> tag as a separator', () => {
       renderInstructions('above\n\n<hr/>\n\nbelow');
 
       expect(screen.getByRole('separator').className).toMatch(/divider/i);

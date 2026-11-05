@@ -181,7 +181,10 @@ const baseComponents = (
   em: muiText('em', 'em'),
   a: makeLink(bodyVariant),
   p: makeParagraph(bodyVariant),
-  hr: ({className, style}) => <Divider className={className} style={style} />,
+  // Full width keeps a rule below a floated image instead of beside it.
+  hr: ({className, style}) => (
+    <Divider className={className} style={style} sx={{width: '100%'}} />
+  ),
 });
 
 const NO_EXTENSIONS: MarkdownExtension[] = [];
