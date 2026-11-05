@@ -2,8 +2,8 @@
 
 > Steps 1 to 4 are done. The sections before the closing notes are the plan as
 > written: they still name the interim `Mui` exports, the codemod's original
-> direction (legacy names to `Mui`) and the story ids of the time. The notes at
-> the end record what each step changed.
+> direction (legacy names to `Mui`) and the story ids of the time. The codemod
+> itself is deleted. The notes at the end record what each step changed.
 
 ## Summary
 
@@ -552,9 +552,10 @@ for the tests and stories). `index.ts` exports `Dialog`, `CustomDialog`,
 `DialogProps`, `CustomDialogProps` and `default` (`Dialog`), and nothing else.
 The plan kept the `Mui` names as aliases until consumers dropped them. They
 dropped them in the same change, so the aliases went too; `default` stays, as
-the policy says. The codemod now moves `Mui` names to the plain ones. One run
+the policy says. The codemod was turned to move `Mui` names to the plain ones. One run
 over the tracked `apps/` and `frontend/` files rewrote 49 files, the 48 `apps/`
 consumers and AI Lab's `TrainingModal.tsx`, and a second run rewrote none.
+With nothing left to rewrite, `codemods/dialog-to-mui-dialog.ts` was deleted.
 `Modal.tsx` imports by file path and followed the rename by hand, as did AI
 Lab's `ResultsModal.tsx`, which reached staging after the run.
 `PixelEditorModal.tsx` needed the parentheses recast added around two JSX
