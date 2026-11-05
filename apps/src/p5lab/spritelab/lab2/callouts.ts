@@ -66,6 +66,9 @@ export function calloutSelector({target, scene}: CalloutSpot): string {
     case 'scene-menu':
       return `#${sceneDropdownButtonId()}`;
     case 'scene-option':
+      if (scene === undefined) {
+        console.warn('scene-option callout names no scene');
+      }
       return `#${sceneMenuItemId(scene ?? '')}`;
   }
 }

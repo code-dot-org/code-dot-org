@@ -68,6 +68,7 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 // tick, not inside the dispatch. The spot must come from an impulse this
 // recent, or a jump the tracker saw without one would serve a stale spot.
 const JUMP_EVENT_FRAMES = 4;
+const JUMP_IMPULSE_FRAMES = 8;
 
 // What a say bubble lasts (actionCommands spriteSay), so a title and a say
 // started together go together.
@@ -75,7 +76,6 @@ const TITLE_SECONDS = 4;
 const TITLE_TEXT_PX = 48;
 const TITLE_STROKE_PX = 6;
 const TITLE_MARGIN_PX = 16;
-const JUMP_IMPULSE_FRAMES = 8;
 
 const NOOP = () => {};
 

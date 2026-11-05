@@ -31,7 +31,7 @@ interface UseLearningStoryOptions {
   active: boolean;
   /** The level tells the story (its level mode's `learning`). */
   learning?: boolean;
-  /** The level being visited; a new level is a new visit. */
+  /** The level being visited; each arrival on a level is a visit. */
   levelId?: number;
 }
 
@@ -53,9 +53,9 @@ export default function useLearningStory({
   levelId,
 }: UseLearningStoryOptions): LearningStoryTools {
   const [story, setStory] = useState<LearningStory | null>(null);
-  // The level the story was told on this visit; the tab outlives a level
-  // change, so the visit is kept by level rather than by mount.
-  const toldOnRef = useRef<number | null | undefined>(undefined);
+  // Whether the story was told this visit; the tab outlives a level
+  // change, so a level change ends the visit rather than an unmount.
+  const toldRef = useRef(false);
   const timerRef = useRef<number>();
   // The story waits for a quiet moment: this tab in view, and no rating
   // question open. Until then it is held here.
@@ -63,11 +63,12 @@ export default function useLearningStory({
   const askingRef = useRef(false);
   const heldStoryRef = useRef<(() => void) | null>(null);
   // A story still pending when the level changes belongs to the level
-  // being left.
+  // being left; a return to it is a new visit.
   useEffect(
     () => () => {
       window.clearTimeout(timerRef.current);
       heldStoryRef.current = null;
+      toldRef.current = false;
       setStory(null);
     },
     [levelId]
@@ -92,12 +93,11 @@ export default function useLearningStory({
   );
   const offerStory = useCallback(
     (result: GeneratedImageResult) => {
-      const visit = levelId ?? null;
-      const due = !!learning && toldOnRef.current !== visit;
+      const due = !!learning && !toldRef.current;
       if (!due && !learningForced()) {
         return;
       }
-      toldOnRef.current = visit;
+      toldRef.current = true;
       const src = bytesToDataURI(result.uint8Array, result.mediaType);
       const crop = result.frames
         ? {width: result.frames.frameSize.x, height: result.frames.frameSize.y}
@@ -112,7 +112,7 @@ export default function useLearningStory({
         tellHeldStory();
       }, LEARNING_DELAY_MS);
     },
-    [learning, levelId, tellHeldStory]
+    [learning, tellHeldStory]
   );
   const endStory = useCallback(() => setStory(null), []);
   return {story, offerStory, handleAsking, endStory};

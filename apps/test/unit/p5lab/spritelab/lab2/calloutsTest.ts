@@ -60,4 +60,11 @@ describe('callouts', () => {
       calloutSelector({target: 'scene-option', scene: 'second-scene'})
     ).toBe('#scene-option-second-scene');
   });
+
+  it('warns of a scene entry callout that names no scene', () => {
+    const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    calloutSelector({target: 'scene-option'});
+    expect(warn).toHaveBeenCalledWith('scene-option callout names no scene');
+    warn.mockRestore();
+  });
 });

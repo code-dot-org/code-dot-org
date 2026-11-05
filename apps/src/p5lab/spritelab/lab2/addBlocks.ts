@@ -227,11 +227,22 @@ export function dropStalePlaceholders(
       );
     });
     if (!wanted) {
-      end.connection.setShadowState(null);
+      withoutUndo(() => end.connection.setShadowState(null));
       dropped++;
     }
   }
   return dropped;
+}
+
+// A change the level makes on arriving is not the student's to undo.
+function withoutUndo(change: () => void): void {
+  const recording = BlocklyCore.Events.getRecordUndo();
+  BlocklyCore.Events.setRecordUndo(false);
+  try {
+    change();
+  } finally {
+    BlocklyCore.Events.setRecordUndo(recording);
+  }
 }
 
 /** The shadow a stack ends in, an outline still waiting for its block, with

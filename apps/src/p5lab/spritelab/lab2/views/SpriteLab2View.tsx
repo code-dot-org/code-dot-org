@@ -56,7 +56,7 @@ import {
   heldBackBlockTypes,
   newBlockTypes,
 } from '../blockCatalog';
-import {toolboxBlockTypes} from '../blockLocks';
+import {ownToolboxTypes} from '../blockLocks';
 import {ASK_AI_BLOCK_TYPE} from '../blockly/blockDefinitions/askAi';
 import {
   refreshSceneDropdowns,
@@ -1928,8 +1928,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const leavingResetRef = useRef<{level: number; reinitBefore: number}>();
   useEffect(() => {
     leavingResetRef.current = undefined;
-    // A level with no added blocks runs no add-blocks pass, which is what
-    // would otherwise drop the previous level's reserved rooms.
+    // The add-blocks pass drops them too, except on the Start Over reset it
+    // sits out.
     const workspace = Blockly.getMainWorkspace?.() as
       | BlocklyCore.WorkspaceSvg
       | undefined;
@@ -1981,9 +1981,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sourcesReinitializedCount,
     workspaceVersion,
   ]);
-  const ownToolboxTypes = useMemo(
-    () => toolboxBlockTypes(levelProperties.toolboxDefinition),
-    [levelProperties.toolboxDefinition]
+  const ownTypes = useMemo(
+    () =>
+      ownToolboxTypes(levelProperties.toolboxDefinition, earlierLevels ?? []),
+    [earlierLevels, levelProperties.toolboxDefinition]
   );
   useEffect(() => {
     if (!animationsSeeded) {
@@ -2005,13 +2006,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     sceneLoadsRef.current++;
     // On a level that asks, blocks built on an earlier level cannot be
-    // deleted. The stacks this level added and the blocks its toolbox
-    // offers stay deletable.
+    // deleted. Earlier levels built the pinned scene; an extra scene is this
+    // level's own. The stacks this level added and the toolbox blocks no
+    // earlier level required stay deletable.
     loadCode(source, {
-      lock: !isLevelEditMode && !!levelProperties.lockEarlierBlocks,
+      lock:
+        !isLevelEditMode &&
+        !!levelProperties.lockEarlierBlocks &&
+        (!pinnedSceneId || activeScene.id === pinnedSceneId),
       isOwn: block =>
         ownsTop(levelProperties.addBlocks ?? [], block.getRootBlock()) ||
-        ownToolboxTypes.has(block.type),
+        ownTypes.has(block.type),
     });
     runLocalScene(activeScene);
     // After the load, so the blocks sit below what the workspace holds.
@@ -2021,7 +2026,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     animationsSeeded,
     levelProperties.addBlocks,
     levelProperties.lockEarlierBlocks,
-    ownToolboxTypes,
+    ownTypes,
+    pinnedSceneId,
     activeScene,
     currentSources.source,
     getCurrentBlocks,

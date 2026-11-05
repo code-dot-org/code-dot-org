@@ -85,7 +85,7 @@ describe('useLearningStory', () => {
     expect(tools().story).toBeNull();
   });
 
-  it('tells the story once a visit, and again on the next level that asks', () => {
+  it('tells the story once a visit, and again on the next level or a return', () => {
     const {tools, setLevel} = setup({learning: true, levelId: 3});
     offer(tools);
     expect(tools().story).toMatchObject({prompt: 'A cat'});
@@ -94,6 +94,11 @@ describe('useLearningStory', () => {
     expect(tools().story).toBeNull();
     // The tab stays mounted across Continue; the next level is a new visit.
     setLevel(8);
+    offer(tools);
+    expect(tools().story).toMatchObject({prompt: 'A cat'});
+    act(() => tools().endStory());
+    // So is coming back.
+    setLevel(3);
     offer(tools);
     expect(tools().story).toMatchObject({prompt: 'A cat'});
   });

@@ -2,8 +2,10 @@ import * as BlocklyCore from 'blockly/core';
 
 import {
   lockBlocks,
+  ownToolboxTypes,
   withoutLocks,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockLocks';
+import {SpriteLab2LevelProperties} from '@cdo/apps/p5lab/spritelab/lab2/types';
 
 interface FakeBlock {
   type: string;
@@ -37,6 +39,46 @@ function fakeWorkspace(stacks: FakeBlock[][]): BlocklyCore.Workspace {
       stacks.map(stack => ({...stack[0], getDescendants: () => stack})),
   } as unknown as BlocklyCore.Workspace;
 }
+
+describe('ownToolboxTypes', () => {
+  const toolbox = {
+    kind: 'categoryToolbox',
+    contents: [
+      {
+        kind: 'category',
+        name: 'Sprites',
+        contents: [
+          {kind: 'block', type: 'spritelab2_setAsPlatformPlayer'},
+          {kind: 'block', type: 'spritelab2_goToScene'},
+        ],
+      },
+    ],
+  } as BlocklyCore.utils.toolbox.ToolboxInfo;
+  const earlier = {
+    objectives: {
+      items: [
+        {
+          text: 'Set the player',
+          check: {
+            kind: 'block',
+            type: 'spritelab2_setAsPlatformPlayer',
+            under: 'spritelab2_whenRun',
+          },
+        },
+      ],
+    },
+  } as unknown as SpriteLab2LevelProperties;
+
+  it('leaves out the toolbox types an earlier level required', () => {
+    expect([...ownToolboxTypes(toolbox, [earlier])]).toEqual([
+      'spritelab2_goToScene',
+    ]);
+  });
+
+  it('keeps every toolbox type when no earlier level required any', () => {
+    expect(ownToolboxTypes(toolbox, []).size).toBe(2);
+  });
+});
 
 describe('lockBlocks', () => {
   it('locks every real block the level does not own, and no shadow', () => {

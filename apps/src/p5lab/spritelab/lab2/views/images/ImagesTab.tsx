@@ -739,6 +739,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       )}
       {story && (
         <LearningDialog
+          // A new story opens on its first panel.
+          key={story.picture.src}
           picture={story.picture}
           prompt={story.prompt}
           imageType={story.imageType}

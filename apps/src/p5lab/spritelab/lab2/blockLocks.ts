@@ -1,13 +1,15 @@
 // On a level that opts in (lock_earlier_blocks), blocks a student built on
 // an earlier level cannot be deleted: a stack deleted by accident would
 // leave the student with no way to continue. They can still be moved. The
-// locks belong to the level, are set as the scene loads and are never
-// saved, so a later level without the property loads the same project with
-// every block deletable again.
+// locks belong to the level, are set as the pinned scene loads and are
+// never saved, so a later level without the property loads the same
+// project with every block deletable again.
 
 import * as BlocklyCore from 'blockly/core';
 
+import {requiredBlockTypes} from './blockCatalog';
 import {WHEN_RUN_BLOCK_TYPE} from './blockly/blockDefinitions/whenRun';
+import {SpriteLab2LevelProperties} from './types';
 
 type BlockState = BlocklyCore.serialization.blocks.State;
 
@@ -32,10 +34,23 @@ export function toolboxBlockTypes(
   return types;
 }
 
+/** The toolbox block types a student may delete on a locked level: the
+    student may have dragged one out here and reloaded. A type an earlier
+    level had them build on is left out, as its block is as likely the one
+    built there. */
+export function ownToolboxTypes(
+  toolbox: BlocklyCore.utils.toolbox.ToolboxInfo | undefined,
+  earlier: readonly SpriteLab2LevelProperties[]
+): Set<string> {
+  const required = new Set(earlier.flatMap(requiredBlockTypes));
+  return new Set(
+    [...toolboxBlockTypes(toolbox)].filter(type => !required.has(type))
+  );
+}
+
 /** Make every real block in the workspace undeletable, except the blocks
-    `isOwn` claims as the level's own. A block the level's toolbox offers is
-    one of those: the student may have dragged it out on this level and
-    reloaded, and a stack built here stays as deletable as its blocks. */
+    `isOwn` claims as the level's own; a stack built here stays as deletable
+    as its blocks. */
 export function lockBlocks(
   workspace: BlocklyCore.Workspace,
   isOwn: (block: BlocklyCore.Block) => boolean = () => false
