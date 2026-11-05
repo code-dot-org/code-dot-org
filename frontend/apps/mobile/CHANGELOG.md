@@ -47,8 +47,9 @@ opens each in one WebView on studio.code.org.
   layers, and Music Lab and Dance Party load on WebViews before Chromium 103.
 - Google's tag scripts start only once a page has settled, bringing a level's
   load event about two seconds sooner.
-- images.code.org images and Font Awesome files are kept after their first
-  load, so the landing page's images and icons never wait on the network.
+- The landing page's catalog images are bundled with the app, and
+  images.code.org images and Font Awesome files are kept after their first
+  load, so its images and icons never wait on the network.
 
 ### Progress
 

@@ -1,3 +1,12 @@
+import FlappyImage from '@/config/brand/assets/catalog/flappy.webp';
+import FrozenImage from '@/config/brand/assets/catalog/frozen.webp';
+import HelloWorldImage from '@/config/brand/assets/catalog/hello-world-animals-2021.webp';
+import HeroImage from '@/config/brand/assets/catalog/hero.webp';
+import MinecraftImage from '@/config/brand/assets/catalog/mc.webp';
+import OceansImage from '@/config/brand/assets/catalog/oceans.webp';
+import PoetryImage from '@/config/brand/assets/catalog/poetry-2023.webp';
+import PreExpressImage from '@/config/brand/assets/catalog/pre-express-2025.webp';
+import StarWarsImage from '@/config/brand/assets/catalog/starwarsblocks.webp';
 import SpriteLabIcon from '@/config/brand/assets/courses/sprite-lab-icon.webp';
 
 /** One hosted curriculum, shown as a card on the launcher. */
@@ -20,9 +29,10 @@ export interface Curriculum {
 const STUDIO = 'https://studio.code.org';
 
 // The Amazon Fire Kids Content Library, in its order. Titles, categories and
-// ages follow the "Amazon Fire Kids Screen" design in Figma; images come from
-// the course offerings behind studio.code.org/catalog
-// (dashboard/config/course_offerings). Sprite Lab, a free-play lab, has no
+// ages follow the "Amazon Fire Kids Screen" design in Figma; images are the
+// course offerings' images behind studio.code.org/catalog
+// (dashboard/config/course_offerings), bundled as WebP at quality 80 so the
+// launcher shows them at once and offline. Sprite Lab, a free-play lab, has no
 // catalog entry and uses the icon studio.code.org's header shows. The list is
 // bundled, so changing it requires a new app build and Amazon review.
 export const CURRICULA: readonly Curriculum[] = [
@@ -30,7 +40,7 @@ export const CURRICULA: readonly Curriculum[] = [
     id: 'pre-express-2025',
     title: 'Pre-Reader Express Course',
     image: {
-      src: 'https://images.code.org/cbb2fee0082642565bca8e3d917b1284-pre-express.png',
+      src: PreExpressImage,
       fit: 'cover',
     },
     category: 'Courses',
@@ -41,7 +51,7 @@ export const CURRICULA: readonly Curriculum[] = [
     id: 'oceans',
     title: 'AI for Oceans',
     image: {
-      src: 'https://images.code.org/58cc5271d85e017cf5030ea510ae2715-AI for Oceans.png',
+      src: OceansImage,
       fit: 'cover',
     },
     category: 'Hour of AI',
@@ -52,7 +62,7 @@ export const CURRICULA: readonly Curriculum[] = [
     id: 'hello-world-animals-2021',
     title: 'Hello World',
     image: {
-      src: 'https://images.code.org/c0bfe595fb60a8595467a06486c65d33-Hello World Animals Theme.png',
+      src: HelloWorldImage,
       fit: 'cover',
     },
     category: 'Hour of Code',
@@ -63,7 +73,7 @@ export const CURRICULA: readonly Curriculum[] = [
     id: 'starwarsblocks',
     title: 'Star Wars: Building a Galaxy with Code',
     image: {
-      src: 'https://images.code.org/fad4498cf3df9984efe995a92e5538d8-StarWars2.png',
+      src: StarWarsImage,
       fit: 'cover',
     },
     category: 'Hour of Code',
@@ -74,7 +84,7 @@ export const CURRICULA: readonly Curriculum[] = [
     id: 'frozen',
     title: 'Code with Anna and Elsa',
     image: {
-      src: 'https://images.code.org/f88534ee3652b3c55610069622d36b76-Frozen Tutorial.png',
+      src: FrozenImage,
       fit: 'cover',
     },
     category: 'Hour of Code',
@@ -85,7 +95,7 @@ export const CURRICULA: readonly Curriculum[] = [
     id: 'poetry-2023',
     title: 'Coding with Poetry',
     image: {
-      src: 'https://images.code.org/803a9b24caf309116f8f9652d9a3e135-Coding with Poetry.png',
+      src: PoetryImage,
       fit: 'cover',
     },
     category: 'Hour of Code',
@@ -96,7 +106,7 @@ export const CURRICULA: readonly Curriculum[] = [
     id: 'mc',
     title: 'Minecraft Adventurer',
     image: {
-      src: 'https://images.code.org/394e2f88d57df1306f95903e709a4fbf-MC HOC.png',
+      src: MinecraftImage,
       fit: 'cover',
     },
     category: 'Hour of Code',
@@ -107,7 +117,7 @@ export const CURRICULA: readonly Curriculum[] = [
     id: 'hero',
     title: "Minecraft's Hero Journey",
     image: {
-      src: 'https://images.code.org/bc18ee38884e2fcf640315516932ad20-Heros Journey.png',
+      src: HeroImage,
       fit: 'cover',
     },
     category: 'Hour of Code',
@@ -118,7 +128,7 @@ export const CURRICULA: readonly Curriculum[] = [
     id: 'flappy',
     title: 'Flappy Bird Code',
     image: {
-      src: 'https://images.code.org/25430e22ea0dcc7086ce618600498df5-flappy.png',
+      src: FlappyImage,
       fit: 'cover',
     },
     category: 'Hour of Code',

@@ -176,11 +176,12 @@ controls for one floating button that hides them again; the choice lasts
 across pages. Release builds show every page at 100%, with nothing hidden
 shown.
 
-`AssetCache.kt` keeps images.code.org images, which include the launcher's
-catalog images, and the Font Awesome files that `injectFontAwesome()` from
-`@code-dot-org/fonts` loads from dsco.code.org, in the app's cache directory
-after their first load, and serves them from there, so the launcher's images
-and icons never wait on the network or go blank offline. Both hosts put a
+The launcher's catalog images are bundled with it, as WebP at quality 80
+(`src/config/brand/assets/catalog` in studio). `AssetCache.kt` keeps
+images.code.org images and the Font Awesome files that `injectFontAwesome()`
+from `@code-dot-org/fonts` loads from dsco.code.org in the app's cache
+directory after their first load, and serves them from there, so the
+launcher's icons never wait on the network or go blank offline. Both hosts put a
 content hash or a version in every path, so a stored copy never goes stale.
 dsco.code.org allows its fonts to be used by studio.code.org but not by the
 landing page's local origin; the stored copies allow both.
