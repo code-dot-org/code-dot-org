@@ -80,7 +80,7 @@
 }
 
 .teachers {
-  background: var(--brand-purple-70);
+  background: var(--brand-purple-95);
 }
 
 .students .open {
@@ -152,8 +152,9 @@
   opacity: 0.8;
 }
 
+// Body sizes, as the 2025 dialog's text.
 .resourceName {
-  font-size: 1.0625rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 

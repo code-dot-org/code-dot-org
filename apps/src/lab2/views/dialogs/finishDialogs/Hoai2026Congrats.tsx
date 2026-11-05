@@ -107,7 +107,7 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
     <div className={styles.body}>
       <Typography
         id="dsco-dialog-description"
-        variant="body1"
+        variant="body2"
         className={styles.intro}
       >
         You made sprites with AI, built a world and coded your own game.
