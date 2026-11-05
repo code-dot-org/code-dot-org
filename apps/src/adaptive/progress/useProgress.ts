@@ -141,26 +141,13 @@ export function useProgress(
     [reportStepProgress]
   );
 
-  const completeStep = useCallback(
-    (step: Step, timeMs: number) => {
-      if (step.id === PROJECT_STEP_ID) return;
-      reportStepProgress(
-        step,
-        entry => ({
-          ...entry,
-          status: 'complete',
-          timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
-        }),
-        {completed: true, timeSinceLastSave: timeMs}
-      );
-    },
-    [reportStepProgress]
-  );
-
-  /** Records the time on a step the student leaves without finishing it. */
+  /**
+   * Records the time on a step the student leaves without finishing it. The
+   * project screen's time goes to the template level this way, and is never
+   * more than time: the screen is not a step the student completes.
+   */
   const leaveStep = useCallback(
     (step: Step, timeMs: number) => {
-      if (step.id === PROJECT_STEP_ID) return;
       reportStepProgress(
         step,
         entry => ({
@@ -172,6 +159,22 @@ export function useProgress(
       );
     },
     [reportStepProgress]
+  );
+
+  const completeStep = useCallback(
+    (step: Step, timeMs: number) => {
+      if (step.id === PROJECT_STEP_ID) return leaveStep(step, timeMs);
+      reportStepProgress(
+        step,
+        entry => ({
+          ...entry,
+          status: 'complete',
+          timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
+        }),
+        {completed: true, timeSinceLastSave: timeMs}
+      );
+    },
+    [reportStepProgress, leaveStep]
   );
 
   const saveAnswers = useCallback(

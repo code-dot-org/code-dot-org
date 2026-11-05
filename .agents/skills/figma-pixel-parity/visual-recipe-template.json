@@ -1,0 +1,94 @@
+{
+  "$schema": "../../visual-recipe.schema.json",
+  "schemaVersion": 1,
+  "component": "ComponentName",
+  "figma": {
+    "fileKey": "",
+    "publicNodeId": "0:0",
+    "componentKey": "",
+    "relatedNodeIds": [],
+    "retrievedAt": "YYYY-MM-DD",
+    "designContextCaptured": false
+  },
+  "change": {
+    "taskPath": "figma-update",
+    "previousRecipe": null,
+    "figmaChanges": []
+  },
+  "axes": {
+    "public": {},
+    "designOnly": ["state"],
+    "restrictedCombinations": []
+  },
+  "geometry": {
+    "sizes": {},
+    "layout": {
+      "padding": "",
+      "gap": "",
+      "borderWidth": "",
+      "radius": ""
+    },
+    "typography": {
+      "family": "",
+      "size": "",
+      "weight": "",
+      "lineHeight": ""
+    },
+    "icon": {
+      "family": "",
+      "size": ""
+    }
+  },
+  "recipes": [
+    {
+      "when": {
+        "variant": "default",
+        "color": "default",
+        "state": "default",
+        "mode": "Light"
+      },
+      "variables": {
+        "background": "",
+        "border": "",
+        "text": "",
+        "icon": "",
+        "focus": ""
+      },
+      "geometryOverrides": {},
+      "figmaVariant": "",
+      "notes": []
+    }
+  ],
+  "coverage": {
+    "strategy": "pairwise-plus-risk",
+    "requiredDimensions": [],
+    "cases": [
+      {
+        "id": "component-default-light",
+        "figmaNodeId": "0:0",
+        "figmaVariant": "",
+        "mode": "Light",
+        "props": {},
+        "state": "default",
+        "viewport": {
+          "width": 320,
+          "height": 160,
+          "deviceScaleFactor": 1
+        },
+        "expectedGeometry": {},
+        "expectedVariables": [],
+        "captureUrl": "",
+        "referenceScreenshot": "",
+        "browserScreenshot": "",
+        "result": "pending",
+        "mismatches": []
+      }
+    ]
+  },
+  "acceptedDifferences": [],
+  "evidence": {
+    "apiAudit": null,
+    "verify": [],
+    "correctionPasses": []
+  }
+}

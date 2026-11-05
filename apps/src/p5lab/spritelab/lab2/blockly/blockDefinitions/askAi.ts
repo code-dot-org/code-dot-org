@@ -20,16 +20,27 @@ const definition: BlockJson = {
     '"when ... answered" block to do something with it.',
 };
 
-const generator: GeneratorFunction = (block, javascript) => {
+export function answerVariable(
+  block: Parameters<GeneratorFunction>[0],
+  javascript: Parameters<GeneratorFunction>[1]
+): {varName: string; setter: string} | null {
   const target = block.getInput('VAR')?.connection?.targetBlock();
   if (!target || target.type !== 'variables_get') {
-    return '';
+    return null;
   }
   const varName = javascript.blockToCode(target)[0];
-  const prompt = javascript.valueToCode(block, 'PROMPT', Order.NONE) || "''";
   // Ensure the parameter does not shadow the student-provided variable (if it were named 'val').
   const param = varName === 'val' ? '__val' : 'val';
-  return `askAI(${prompt}, '${varName}', function (${param}) {${varName} = ${param};});\n`;
+  return {varName, setter: `function (${param}) {${varName} = ${param};}`};
+}
+
+const generator: GeneratorFunction = (block, javascript) => {
+  const answer = answerVariable(block, javascript);
+  if (!answer) {
+    return '';
+  }
+  const prompt = javascript.valueToCode(block, 'PROMPT', Order.NONE) || "''";
+  return `askAI(${prompt}, '${answer.varName}', ${answer.setter});\n`;
 };
 
 export default {definition, generator};
