@@ -1,0 +1,11 @@
+name 'data-makes-ai-lesson10-panel-choice'
+display_name 'Student Complaint Forms'
+description 'Each of these students are using apps that are run by AI models that are not treating them fairly. Read their complaint to begin your investigation.'
+
+sublevels
+level 'data-makes-ai-lesson10-panel-marisol'
+level 'data-makes-ai-lesson10-panel-andre'
+level 'data-makes-ai-lesson10-panel-jonah'
+
+uses_lab2
+navigation_type 'next_sublevel'
