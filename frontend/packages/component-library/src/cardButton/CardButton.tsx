@@ -1,0 +1,135 @@
+import ButtonBase, {ButtonBaseProps} from '@mui/material/ButtonBase';
+import classNames from 'classnames';
+import {forwardRef, ReactNode} from 'react';
+
+import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+
+import styles from './cardButton.module.scss';
+
+export type CardButtonLayout = 'horizontal' | 'vertical';
+export type CardButtonSize = 'medium' | 'small';
+
+export interface CardButtonProps
+  extends Omit<
+    ButtonBaseProps,
+    | 'children'
+    | 'title'
+    | 'centerRipple'
+    | 'disableRipple'
+    | 'disableTouchRipple'
+    | 'focusRipple'
+    | 'TouchRippleProps'
+    | 'touchRippleRef'
+  > {
+  /** `horizontal` for list rows, `vertical` for side-by-side choice tiles. */
+  layout?: CardButtonLayout;
+  size?: CardButtonSize;
+  /** Primary text. */
+  title: ReactNode;
+  /** Supporting text under the title. */
+  description?: ReactNode;
+  /** Leading icon. Solid unless `iconStyle` says otherwise. */
+  startIcon?: FontAwesomeV6IconProps;
+  /**
+   * Custom leading content in place of `startIcon`, e.g. an avatar. It is at
+   * least the icon box in size and keeps its own colors in every state.
+   */
+  startContent?: ReactNode;
+  /** Trailing icon, e.g. `chevron-right`. Horizontal layout only. */
+  endIcon?: FontAwesomeV6IconProps;
+  /**
+   * Selected chrome for a chosen option. A boolean on a button also sets
+   * `aria-pressed`; leave it undefined on plain action or navigation cards.
+   */
+  selected?: boolean;
+  /** Fill the container width instead of hugging the content. */
+  fullWidth?: boolean;
+  /** Renders the card as a link. */
+  href?: string;
+  target?: string;
+  rel?: string;
+}
+
+const renderIcon = (icon: FontAwesomeV6IconProps, className: string) => (
+  <span className={className}>
+    <FontAwesomeV6Icon iconStyle="solid" {...icon} />
+  </span>
+);
+
+/**
+ * ### Production-ready Checklist:
+ * * (?) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see ./__tests__/CardButton.test.tsx)
+ * * (✔) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Card Button Component.
+ * A clickable card for actions, navigation and choices that need more presence
+ * than a Button: a leading icon, a title, optional supporting text and an
+ * optional trailing icon. Built on MUI `ButtonBase`; pass `href` for a link.
+ */
+const CardButton = forwardRef<HTMLButtonElement, CardButtonProps>(
+  (
+    {
+      layout = 'horizontal',
+      size = 'medium',
+      title,
+      description,
+      startIcon,
+      startContent,
+      endIcon,
+      selected,
+      fullWidth = false,
+      className,
+      ...rest
+    },
+    ref,
+  ) => {
+    const isLink = rest.href !== undefined;
+    const hasStartContent =
+      startContent !== undefined &&
+      startContent !== null &&
+      startContent !== false;
+    const hasDescription =
+      description !== undefined && description !== null && description !== '';
+
+    return (
+      <ButtonBase
+        ref={ref}
+        disableRipple
+        aria-pressed={!isLink && selected !== undefined ? selected : undefined}
+        {...rest}
+        className={classNames(
+          styles.cardButton,
+          styles[`cardButton-${layout}`],
+          styles[`cardButton-${size}`],
+          selected && styles['cardButton-selected'],
+          fullWidth && styles['cardButton-fullWidth'],
+          className,
+        )}
+      >
+        {hasStartContent ? (
+          <span className={styles.startContent}>{startContent}</span>
+        ) : (
+          startIcon && renderIcon(startIcon, styles.startIcon)
+        )}
+        <span className={styles.content}>
+          <span className={styles.title}>{title}</span>
+          {hasDescription && (
+            <span className={styles.description}>{description}</span>
+          )}
+        </span>
+        {layout === 'horizontal' &&
+          endIcon &&
+          renderIcon(endIcon, styles.endIcon)}
+      </ButtonBase>
+    );
+  },
+);
+
+CardButton.displayName = 'CardButton';
+
+export default CardButton;
