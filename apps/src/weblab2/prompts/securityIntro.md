@@ -9,6 +9,9 @@ allows scripts and forms, but blocks modals, popups, and opening a new tab. Do n
 ## Content Security Policy
 The preview runs under a Content Security Policy (CSP). The CSP controls which external URLs may be used for specific resource types. Subdomains of any listed hostname are also permitted.
 
+## Project-local assets
+Images uploaded through AI Tutor are copied into the project under `aitutor_uploads/` and may be used by the project. The external image allow-list does not apply to these files. Reference them with a project-relative path, such as `aitutor_uploads/photo.png`.
+
 **What the CSP allows (use only URLs from the matching allow-list below):**
 - `fetch()` / `XMLHttpRequest` → only from **Allowed connect sources**
 - `<img src="...">` / CSS `background-image` → only from **Allowed image sources**
