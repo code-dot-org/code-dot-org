@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-postassessment-q1-2026'
+
+wrong 'A language model cannot predict the meaning of the sentence'
+wrong 'Tokenization will vary based on the regular expression used'
+right 'The sentence can have more than one possible interpretation'
+wrong 'Humans and computers will reach different conclusions about the sentence'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What does it mean for a sentence to be ambiguous?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: What is Natural Language Processing?
+MARKDOWN

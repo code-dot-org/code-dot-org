@@ -1,0 +1,85 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:25:54.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "f0ce5fe4-026a-4094-89c3-d865d9436c64": {
+          "id": "f0ce5fe4-026a-4094-89c3-d865d9436c64",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Plan vs Result Widget: Page Words</title><link rel=\"stylesheet\" href=\"style.css\"></head><body><h1>Plan versus Result: Page Words</h1><p>Compare the plan to the AI's words. Click on the parts of the result that match the plan.</p><div class=\"container\"><div class=\"panel plan\"><h2>Your Plan Note</h2><p id=\"planText\">A save-the-park page. The headline should be <strong>urgent and direct</strong>. The main paragraph should be <strong>friendly and encouraging</strong>, asking for small actions.</p></div><div class=\"panel result\"><h2>AI Result</h2><div class=\"result-display\"><h2 id=\"resultHeadline\" class=\"clickable-part\" data-feature=\"headline-tone\" data-label=\"Headline: Our Local Park is in Trouble!\">Our Local Park is in Trouble!</h2><p id=\"resultParagraph1\" class=\"clickable-part\" data-feature=\"paragraph-tone-1\" data-label=\"Paragraph 1: Importance\">This park is very important to our community. It provides green space and places to relax.</p><p id=\"resultParagraph2\" class=\"clickable-part\" data-feature=\"paragraph-tone-2\" data-label=\"Paragraph 2: Call to Action\">We should do something to help. Please consider donating your time or money.</p></div><div class=\"action-buttons\"><button id=\"keepButton\">Keep</button><button id=\"redirectButton\">Redirect</button><button id=\"rewriteButton\">Rewrite</button></div></div></div><script src=\"script.js\"></script></body></html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "4ab023b5-3e18-480c-83ac-8190fcc11e18": {
+          "id": "4ab023b5-3e18-480c-83ac-8190fcc11e18",
+          "name": "style.css",
+          "contents": "body {font-family: Arial, sans-serif;display: flex;flex-direction: column;align-items: center;padding: 20px;background-color: #f0f0f0;color: #333;}h1 {color: #333;margin-bottom: 10px;}p {margin-bottom: 20px;text-align: center;}.container {display: flex;gap: 30px;width: 90%;max-width: 1000px;margin-top: 20px;}.panel {flex: 1;border: 1px solid #ddd;border-radius: 8px;padding: 20px;background-color: #fff;box-shadow: 0 2px 4px rgba(0,0,0,0.1);}.panel h2 {margin-top: 0;color: #0056b3;}.plan p {text-align: left;line-height: 1.6;}.result-display {background-color: #fcfcfc;border: 2px dashed #ccc;padding: 15px;margin-top: 20px;min-height: 200px;display: flex;flex-direction: column;gap: 10px;}.result-display h2 {margin-top: 0;color: #333;font-size: 1.6em;text-align: center;}.result-display p {text-align: left;margin-bottom: 0;line-height: 1.5;}.clickable-part {cursor: pointer;padding: 5px;border-radius: 3px;transition: background-color 0.2s ease;}.clickable-part:hover {background-color: #e6f7ff;}.clickable-part.matched {border: 2px solid #28a745;background-color: #d4edda;box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);}.action-buttons {margin-top: 30px;display: flex;justify-content: center;gap: 15px;}.action-buttons button {padding: 10px 20px;border: none;border-radius: 5px;font-size: 1em;cursor: pointer;transition: background-color 0.3s ease;}#keepButton {background-color: #28a745;color: white;}#keepButton:hover {background-color: #218838;}#redirectButton {background-color: #ffc107;color: #333;}#redirectButton:hover {background-color: #e0a800;}#rewriteButton {background-color: #dc3545;color: white;}#rewriteButton:hover {background-color: #c82333;}",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "5d34ddc1-36e8-42da-912d-c193fcace289": {
+          "id": "5d34ddc1-36e8-42da-912d-c193fcace289",
+          "name": "script.js",
+          "contents": "document.addEventListener('DOMContentLoaded', () => {const clickableParts = document.querySelectorAll('.clickable-part');const keepButton = document.getElementById('keepButton');const redirectButton = document.getElementById('redirectButton');const rewriteButton = document.getElementById('rewriteButton');clickableParts.forEach(part => {part.addEventListener('click', () => {part.classList.toggle('matched');const label = part.dataset.label;if (part.classList.contains('matched')) {console.log(`Marked as matching: ${label}`);} else {console.log(`Unmarked: ${label}`);}});});keepButton.addEventListener('click', () => {console.log('Action: Keep - The AI result looks good!');alert('You chose to KEEP the AI\\'s text!');});redirectButton.addEventListener('click', () => {console.log('Action: Redirect - The AI result needs a new direction.');alert('You chose to REDIRECT the AI for a new attempt at the text!');});rewriteButton.addEventListener('click', () => {console.log('Action: Rewrite - The AI result needs significant changes.');alert('You chose to REWRITE the AI\\'s text!');});console.log('Page Words Plan vs Result widget loaded. Click text parts to mark them, and choose an action.');});",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "f0ce5fe4-026a-4094-89c3-d865d9436c64",
+        "4ab023b5-3e18-480c-83ac-8190fcc11e18",
+        "5d34ddc1-36e8-42da-912d-c193fcace289"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Observe the plan for the page's words and intended tone.\r\n- Examine the AI's generated headline and paragraph content.\r\n- Compare the AI's words to the planned tone and message.\r\n- Click on the parts of the AI's text that match the plan.\r\n- Decide whether to keep, redirect, or rewrite the AI's content.",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqU7qutooVwsjDgPlQ0\neU4Kg0Mbqb+n33CjlplFu4uB0/vfR/ZPHTubD4PRdOsNu+V/+qJfFa90iz+I\nhjJMrnMeWMWZ1AG8QLUS8EL/i4FrVUP28FHAKoMQK1p2+3l0dtou8RE+QNuz\nKtBDT9s1o4Tgovr6I4c4Jcca34ROpoJNcMGgPYY4qTjPoRuFmtaaLJz3ltBZ\nAT45kUJ8tABTByCBRE/pXyFUoxSnHUJVCkZZSqbZZWo7roHb/yGdX9uPTpSw\nAEYbPpfmRvhliXv3YOL3I5CIs5SXncIajjoKFptMpt/KwG/WbeB2AuRlAM39\nkESftl870pvRVmHWnsJ0pmOdJhU1Zy9x8/2EtHfBYFx12Q4JN0G1QT48UdyK\nI+miDn+eU513hJP1eqy/312/RUDhjVaGPt0+iN7HnRDpAImJ0k5rNog4+E4w\nIkOAvb3tWd3MVjuhKiv7eK5SfXaveCDvbS/OE89aQEIvDY49PnOQ0xH3owNS\n39iwsPZpRp4PprmSREsa0cHiHKhyV8qOosa6SVW1UXKpjPFmEV7El/RQVJ+7\npUwPlWkke6hGau7OzI328jK6X5wgWtMweYanDTwEjx0cpEEWTRLgC550PN+p\nB8Q6FwtbSEwARsmw4RNAEouvuSco0mXHKnDow4Kr0jI962UjKkL+4nDMOEr1\npOt86605BafsipxNjhSD1wDGehmXMU2W/NBDu8BvKi+VqANYKhVlE3WA5A/a\nwseFRKGpv0oSyuXPQ6drpuqOzyFzsI19uZiuaYmzln6yrq57zziqzQUDgj71\nCn0xo4TTKMliK1qjNxdhr4KqcoEkxS1ESPc3zGv7tJKKlI3hnWDXeZlK+G7b\nyKI/fGkvfkzLVmd4kfSpR0g3/qJWPLNydth49S5ulyrrsP7+r3KACUYikFIR\neClFn4KWrDdC1Hh3eCwxFXY6+ykOm7fPMXW662MXw002dQcHgqzHpJMHKRH+\n9jTHyv/Uduvx0PfL21daCIflm2tXx5ijxb0xi6HWUnW0XeeC1bIDTw4CdpdH\n7/vktpLH/UBMD/762VZki4LKReTvRpZLPYz4iIa87xl/yTlJshIQ1fQ5wpmK\ngjVHIfVKyz3w2NV44JoqrwAVfJgcqBUw9f9Nxt/ZDIlgY+WlHn/bW1yWVE/B\nWggNBaa12llk+VVSmoaTn3yCCgWYp/+ol7mKLsQln0rSTN2kPz72a28nFHLo\nd5CQWXM+ncpEaT+JdfHWX3OWaYM1UelCQGuYX4wtXGph7XQ9wfN3mJvYP7S2\nKQHzPuM+oqF+TBgzmtqQtzs5ZSaYAxZNMAP37RquA7NBmpaioYCoNY7wEYyL\neMahpdNTeoIVNia29w4ip2gv3r0/G9LgXOdFzsbhYa5EzgFN8BTEaOibQeT4\nq+MlC4/Sv6DwPLh+uXi1/h3prZQ1i8SLgAT4W3Wyuh90dv21jyFs17+EiG0K\nSt7YE4dU1jrV66sJ0TevFBYAMOmVihkFz1Zjnci1wf8B1ModNuo+jsRKE/zY\nX4V7lwJslwshHO8hHEgvu99yoimYYyQcnII4990HwUOD0utQdR3cLY0DHQAj\nx6dov9epHzTbp0p4WSSHznOe1hlM5c/HHj+5qDWycrJmdLj0at1zKebc7ClP\nU3lZ4y4TjiEHixXSOmEGVOgEErkXTOxHGP7hNhAafDMICSEf/9DyQ5PlNyIB\nNdwXxDjKDyztHyj/cz/j0ZnH4q9YU5O19npXPVvjdvr69z6tBkWIIOriPENQ\nTS19ixIocTNqCcDL8iJ+/HfIylNkQ57OKsgVFgo/VAcfhCg1kl6siqDfW6dS\nizhM/4IElATAY8luLBq/SF1XUmjN1OnzGrwVrXEj6JpTwgX6aWXsR1XcAV1u\ngod3Yax4H9mASfVK9S93vudBcKkUErK00w9vIcfyEG+kY/VH0/RNszNiVaCG\n2AWugjPOQA+HXJV1ZaWi8xLL+Z3RLmfxrCS3npmKmcLZcRgbXuQGnwNLVMO8\nXZ7/B0Lf09wBQMQ/j0uU3Zf/e3365yz5n5mLpn0nWyMDa1TCYVFgh5V8445O\npyl7blpXKAIsHOAhTZzbvJpnR5ybY8vnl/LeiiPX5CaDDjGYWK3vDfZcn2US\nURRlmYazjcw9nKCs08qk2k8DefiEZb8ItzxMfu1l8s5+gpNEknZdWVKCi0LK\n/KaQ7Hr3jKdZ2d9O7X5NNVrPTz1WuNig18QO+XC5lrcRO82AGNm4bNdLZZMH\ngqiVOZFxvmssxb1xHDNDeGVs3n362inOF0mErdqrjAlpH5Twg6fzXhryal+u\nq6G9ylaOt0Zueu1m7ya4i3bo9Xe/EKe7ME92frao0SfyhUCCmJ2mUTsZDbiW\n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\na5vZhxqDfWHXERylog==\n",
+    "generate_outline": "Practice comparing AI-generated text against your planned tone and message, deciding whether to keep, redirect, or rewrite the content.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:26:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:26:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:26:16 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:26:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:08:10 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

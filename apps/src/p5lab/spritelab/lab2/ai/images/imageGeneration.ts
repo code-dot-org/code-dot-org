@@ -3,7 +3,7 @@ import {type GeneratedFile} from 'ai';
 import {generateText} from '@cdo/apps/aiGateway';
 import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {
-  crispScaleFor,
+  NATIVE_PIXEL_GRID,
   normalizePixelArtBlob,
 } from '@cdo/apps/pixelEditor/pixelArt';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -90,43 +90,29 @@ const BLOCK_PROMPT_CLAUSE =
   'This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.';
 
 /**
- * Pixel-style output depicts pixel art at ~1024x1024 with one art pixel per
- * ~10-20px block (the model can't emit small canvases). Normalize: detect the
- * block grid, downsample to true logical resolution, and re-upscale
- * nearest-neighbor — uniform, edge-aligned blocks that the pixel editor can
- * edit at art-pixel granularity. Left unchanged (no grid size) when no grid
- * is detected. The returned pixelGridSize (physical pixels per art pixel) is
- * recorded on the animation so the editor never has to re-detect.
+ * The model draws pixel art at about 1024x1024, one art pixel per block of
+ * roughly 10 to 20 image pixels; it cannot emit a small canvas. This
+ * detects that block grid and downsamples so one image pixel is one art
+ * pixel, which is the size the image is stored at. When no grid can be
+ * read, the block size the prompt asked for is used instead, so pixel art
+ * is never stored at the model's size. A pixelGridSize of 1 on the
+ * animation marks it as pixel art stored at its logical size.
  */
-async function normalizeIfPixelArt(
+async function normalizePixelArt(
   blob: Blob,
   imageType: ImageType,
   fallbackBlock: number
-): Promise<{blob: Blob; pixelGridSize?: number}> {
-  const squareGrid = imageType === 'background';
-  try {
-    // A background must stay square and full-frame (it letterboxes over the
-    // stage otherwise), so its grid is pinned square to the frame instead of
-    // following a detected offset.
-    const normalized = await normalizePixelArtBlob(blob, fallbackBlock, {
-      squareGrid,
-    });
-    if (
-      !normalized ||
-      (squareGrid && normalized.logicalWidth !== normalized.logicalHeight)
-    ) {
-      return {blob};
-    }
-    return {
-      blob: normalized.blob,
-      pixelGridSize: crispScaleFor(
-        normalized.logicalWidth,
-        normalized.logicalHeight
-      ),
-    };
-  } catch {
-    return {blob};
+): Promise<{blob: Blob; pixelGridSize: number}> {
+  // A background must stay square and full-frame (it letterboxes over the
+  // stage otherwise), so its grid is pinned square to the frame instead of
+  // following a detected offset.
+  const normalized = await normalizePixelArtBlob(blob, fallbackBlock, {
+    squareGrid: imageType === 'background',
+  });
+  if (!normalized) {
+    throw new Error('The picture could not be brought to its pixel grid.');
   }
+  return {blob: normalized.blob, pixelGridSize: NATIVE_PIXEL_GRID};
 }
 
 /** What to generate; every omitted field falls back to a default. */
@@ -401,7 +387,7 @@ export async function generateImage(
   }
   let pixelGridSize: number | undefined;
   if (style === 'pixel') {
-    const normalized = await normalizeIfPixelArt(blob, imageType, pixelBlock);
+    const normalized = await normalizePixelArt(blob, imageType, pixelBlock);
     blob = normalized.blob;
     pixelGridSize = normalized.pixelGridSize;
   } else {

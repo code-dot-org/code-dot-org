@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-02T17:52:28.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Investigate & Trace\r\n\r\n**Do This:** \r\n1. Trace this program by hand.\r\n2. For each pass through the loop, write down the value of count and whether the condition is True or False.\r\n3. What is the final value of count when the loop ends?\r\n4. Add a print statement inside the loop that shows whether the condition (count < 5) is True or False on each pass. Run the program and compare the output to what you traced by hand — did it match?\r\n\r\n**Stuck? Try asking the AI Tutor how to print whether a condition is True or False inside your loop**",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "example"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "count = 0\nwhile count < 5:\n\tprint(count)\n\tcount = count + 1\nprint(\"Done\")",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "teacher_markdown": "Expected trace: \r\n\r\nPrints 0, 1, 2, 3, 4 — five passes. \r\n\r\n`count` is 5 when the loop exits, since the condition is checked one more time after the last update and found False.",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\nclass TestInvestigateTrace(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and save the results\"\"\"\n        cls.stdout = ValidationProtocol().get_stdout_logs()\n        cls.condition_lines = [line for line in cls.stdout if \"True\" in line or \"False\" in line]\n\n    def test_prints_condition_each_pass(self):\n        \"\"\"Prints True or False for count < 5 every time through the loop\"\"\"\n        if not self.condition_lines:\n            self.skipTest(\"We didn't find True or False printed anywhere. Add a print statement inside the loop that shows the result of count < 5.\")\n\n        self.assertEqual(\n            len(self.condition_lines),\n            5,\n            f\"The loop runs 5 times, so we expected to see the condition's result printed 5 times — we found it {len(self.condition_lines)} time(s). Make sure your print statement is inside the loop, not after it.\"\n        )\n\n        results = [\"True\" in line for line in self.condition_lines]\n        # Valid depending on where the print sits relative to the increment:\n        #   before incrementing count: True, True, True, True, True\n        #   after incrementing count:  True, True, True, True, False\n        valid_patterns = [\n            [True, True, True, True, True],\n            [True, True, True, True, False],\n        ]\n        self.assertIn(\n            results,\n            valid_patterns,\n            \"The pattern of True/False values doesn't match what count < 5 should actually produce. Double-check your print statement is checking count < 5, and that it's positioned consistently relative to count = count + 1.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMonwQC8AJR+P1Ve\nN4izRvmavfsGS1HZO7carPe9HyIPXaECC+yqFg9U28Y/d+kgflk+ekO2NJu1\nDVmqOUGrc8lwA8htYDP+hX/sGE055FFH3PVkxS2e2nVO9sLaJdVGaDw6fQSJ\nSrsvrZK6X/jM2V149zlytnDtiom69aqWlhuGAjMim0ApKXHr9kKqyapaYsj+\nAKSYJrsHQyHAwHqMTnFuST80j6G2Le4v2yuvKvmPzeVjNpa8HoanY5DyhIdd\nJd8=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-02T17:52:28.961+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson15-investigate-tinker_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson15-investigate-tinker_27_28\"},{\"changed_at\":\"2026-11-02 17:55:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 17:56:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 17:56:20 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 18:04:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 03:19:56 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 03:26:18 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 03:26:34 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

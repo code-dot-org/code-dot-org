@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-postassessment-q12-2026'
+
+wrong 'A process whose next step depends only on its last step'
+wrong 'A measure of how important a word is to a piece of text'
+wrong 'A collection of written material that a model is trained on before it makes predictions'
+right 'A model that predicts which word is likely to come next in a piece of text'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is a language model?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Markov Chains
+MARKDOWN

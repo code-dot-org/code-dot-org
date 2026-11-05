@@ -9,6 +9,8 @@ describe('showProjectAdmin', () => {
 
     beforeEach(() => {
       project = {
+        getCurrentId: jest.fn().mockReturnValue('channel-id'),
+        adminResetAbuseScore: jest.fn().mockResolvedValue(),
         isPublished: jest.fn(),
         isProjectLevel: jest.fn(),
         shouldHideShareAndRemix: jest.fn(),
@@ -105,6 +107,43 @@ describe('showProjectAdmin', () => {
           assertHidden('.privacy-profanity');
           assertHidden('.abusive-image');
           assertHidden('.reported-abuse');
+        });
+
+        it('shows the abuse score and resets it', async () => {
+          project.getAbuseScore.mockReturnValue(15);
+          showProjectAdmin(project);
+          const score = document.querySelector('.admin-abuse-score');
+          expect(score.textContent).toBe('15');
+          document.querySelector('#admin-abuse-reset').click();
+          await new Promise(resolve => setTimeout(resolve));
+          expect(project.adminResetAbuseScore).toHaveBeenCalled();
+          expect(score.textContent).toBe('0');
+        });
+
+        it('shows an error when the reset fails', async () => {
+          project.getAbuseScore.mockReturnValue(15);
+          project.adminResetAbuseScore.mockRejectedValue(new Error());
+          showProjectAdmin(project);
+          document.querySelector('#admin-abuse-reset').click();
+          await new Promise(resolve => setTimeout(resolve));
+          expect(document.querySelector('.admin-abuse-score').textContent).toBe(
+            'There was an error resetting abuse score to 0. Please try again.'
+          );
+        });
+      });
+
+      describe('on a level without a project', () => {
+        beforeEach(() => {
+          project.getCurrentId.mockReturnValue(undefined);
+          project.isProjectLevel.mockReturnValue(false);
+          project.shouldHideShareAndRemix.mockReturnValue(true);
+        });
+
+        it('does not show an abuse score', () => {
+          showProjectAdmin(project);
+          expect(document.querySelector('.admin-abuse-score').textContent).toBe(
+            ''
+          );
         });
       });
 

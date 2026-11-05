@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
+import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {
@@ -12,6 +13,12 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
+import {
+  askAiErrorMessage,
+  askAiText,
+  AskAiError,
+  isAskAiEnabled,
+} from './ai/text/askAi';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {burstBoxes} from './bursts';
 import {
@@ -51,7 +58,14 @@ import {
   wallBox,
 } from './platformPhysics';
 import {createPlayerActionTracker, isPlayerAction} from './playerActions';
-import {clearPrompt, showPrompt} from './redux/spriteLab2Redux';
+import {
+  askAiAnswered,
+  askAiFailed,
+  askAiPending,
+  clearAskAi,
+  clearPrompt,
+  showPrompt,
+} from './redux/spriteLab2Redux';
 import {
   asSoundEffect,
   playPreset,
@@ -200,6 +214,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // behind must not start a program in it.
     this.destroyed_ = false;
     this.rerunAfterExecute_ = false;
+    this.runId_ = 0;
+    this.aiSetters_ = new Map();
+    this.aiPending_ = new Set();
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
     this.sceneJumpInFlight_ = false;
@@ -660,15 +677,119 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
     };
     getStore().dispatch(clearPrompt());
-    library.commands.setPrompt = (promptText, variableName, setterCallback) => {
+    const promptUser = (promptText, variableName, setterCallback, choices) => {
       library.registerPrompt(promptText, variableName, setterCallback);
       // Last prompt always wins, so we only ever have 1 active prompt unlike legacy.
       library.numActivePrompts = 1;
       getStore().dispatch(
-        showPrompt({promptText: String(promptText ?? ''), variableName})
+        showPrompt({
+          promptText: String(promptText ?? ''),
+          variableName,
+          choices,
+        })
       );
     };
+    library.commands.setPrompt = (promptText, variableName, setterCallback) =>
+      promptUser(promptText, variableName, setterCallback);
+    library.commands.setPromptWithChoices = (
+      promptText,
+      variableName,
+      choice1,
+      choice2,
+      choice3,
+      setterCallback
+    ) => {
+      const choices = [choice1, choice2, choice3]
+        .filter(choice => choice !== undefined && choice !== null)
+        .map(String)
+        .filter(choice => choice !== '');
+      promptUser(
+        promptText,
+        variableName,
+        setterCallback,
+        choices.length ? choices : undefined
+      );
+    };
+    const runId = ++this.runId_;
+    this.aiSetters_ = new Map();
+    // One request per variable at a time, to avoid a flood of requests at once.
+    const pending = (this.aiPending_ = new Set());
+    getStore().dispatch(clearAskAi());
+    const isCurrentRun = () => !this.destroyed_ && runId === this.runId_;
+    let systemPrompt = '';
+    library.commands.setSystemPrompt = promptText => {
+      if (this.canAskAi_()) {
+        systemPrompt = promptText;
+      }
+    };
+    library.commands.askAI = (promptText, variableName, setterCallback) => {
+      if (!this.canAskAi_() || pending.has(variableName)) {
+        return;
+      }
+      pending.add(variableName);
+      this.registerAiAnswer_(library, variableName, setterCallback);
+      getStore().dispatch(askAiPending());
+      askAiText(promptText, systemPrompt)
+        .then(
+          text => {
+            if (!isCurrentRun()) {
+              return;
+            }
+            this.deliverAiAnswer_(library, variableName, text);
+          },
+          error => {
+            if (!isCurrentRun()) {
+              return;
+            }
+            getStore().dispatch(askAiFailed(askAiErrorMessage(error)));
+            console.warn(
+              error instanceof AskAiError
+                ? `SpriteLab2: ${error.message}.`
+                : `SpriteLab2: the ask AI block got no answer (${error.message}).`
+            );
+          }
+        )
+        .finally(() => {
+          pending.delete(variableName);
+          if (!pending.size && isCurrentRun()) {
+            getStore().dispatch(askAiAnswered());
+          }
+        });
+    };
     return library;
+  }
+
+  registerAiAnswer_(library, variableName, setterCallback) {
+    if (!variableName) {
+      return;
+    }
+    if (library.promptVars[variableName] === undefined) {
+      library.promptVars[variableName] = null;
+    }
+    this.aiSetters_.set(variableName, setterCallback);
+  }
+
+  deliverAiAnswer_(library, variableName, text) {
+    library.promptVars[variableName] = text;
+    this.aiSetters_.get(variableName)?.(text);
+    library.userInputEventCallbacks[variableName]?.userCallbacks.forEach(
+      callback => callback()
+    );
+  }
+
+  // Mirrors the gateway's own check (User::AiAccessible), so a request it
+  // would refuse never leaves the browser.
+  canAskAi_() {
+    if (!isAskAiEnabled()) {
+      console.warn('SpriteLab2: the ask AI block is turned off.');
+      return false;
+    }
+    const permissions = getStore().getState().lab?.permissions;
+    if (!permissions?.includes(PERMISSIONS.LEVELBUILDER)) {
+      console.warn('SpriteLab2: the ask AI block needs levelbuilder access.');
+      return false;
+    }
+    return true;
   }
 
   onPromptAnswer(variableName, value) {
@@ -957,6 +1078,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     stopSoundEffects();
     this.reset();
     getStore().dispatch(clearPrompt());
+    getStore().dispatch(clearAskAi());
     this.stopTickTimer();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();
@@ -1077,6 +1199,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         await trimAnimationListImages(scoped, {
           keepNames: animationNames(animationList),
           thumbnails: !external,
+          upscalePixelArt: true,
         })
       ),
       {multiFrame: true}
@@ -1125,6 +1248,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         await trimAnimationListImages(single, {
           keepNames: animationNames(list),
           thumbnails: !this.isExternalList_(list),
+          upscalePixelArt: true,
         })
       ),
       {multiFrame: true}

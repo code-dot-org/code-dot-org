@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:21:39.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "#### Change an interactive part\r\n\r\n1. Pick one interactive part of your page, like a button, and name it.\r\n2. Ask the AI for a change. Say what a visitor does and what happens.\r\n3. Try it out. If it's not what you wanted, tell the AI what to fix.\r\n\r\n*Example: “Make the Sign Up button show a thank-you message when a visitor clicks it.”*\r\n\r\n**Check your prompt:** Does it name the part, what the visitor does, and what happens?",
+    "project_template_level_name": "adaptive-less-checkpoints-template-main-website-project",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMo+w0MnCClQevqMQ6tr\nn9CnfLBGUWT7sMmUHUsnsiPLaB+CrJcEuCGimzAGtP4PnZ5bJzy8Qi7D4MKv\nGcYqNA5yProPAdncBP2mQPwgJ0kY1yK1pDhFtBUhIP2J/OUBtZWc/rwHQXVg\nKLokNU3YocDkfseIvg0eUwudsPp1uxS9pXq7yRr8ZxAjsG1ZSpW5cK2DCOwR\nAIh4hMenI0kEMZGqgXQvGP5/z1BWoBt7PkUO8zzWltakMevYhUFLm/DJHGid\nhXuOoyq89qRORSKsPpdTiLF4Ty//9FF1vbefbulBZ73QZFSPcqP+6oqiVMyv\ntaGnzLRQh9RXo3f1mfsOgw4GoabRq8ou6j7aRoofO97DLzC21DkO/uMDTOAe\nSRIjuE83FE2PSVNqQpVfpIe2FayVmOL5/Bifekv4l0StWmIsoXqhUqCiF+VA\n0oWnZEtM4R4g/xfniOZe8ASVgtY1xDVNsCioHSqh1MOHuYV83M4ob6Zm2Afc\nIDkaWZjw+232pZMo/XVzUn2OaDVHucywPWbLRHNHaonwiSrrb33UUdzFJ4nW\nl3QsJRl7oUPO+38RJ7di30XJYlyq8ix3ibb2ZHIe5A8DIvUwLWCGgMIC3q7M\n2KWIUGU4fuBoVBW+QGKMV2t7X0RUcBjtHwOB4O2rur/T/TWjly67pbFbbO9J\n53TiieF1SFvypbU4ryl0R3kLRyrHzfYD4mRUytGrB2CVkBsc/7bWyGgInu5E\n2PE6bjolghjhmS0IRq8VvGyyK0oUz+s3hf4GDu5hEramsvxE92a/o5UE3BWH\n8j5NDY/5+gXBATDGvp5/8PksH1tIs944qqar7RSINCWlnCwV/iOpAYIfvKXP\nIv0c+4gZToHuHFeWOR1B4x4+vhlZdcv98sDHxKctdUvtaIAOwBF0flbFg7lN\nxv4sZTxZtOcoBRVO7QZ+ZzbuCcSHe5TqvgjA/JQPaUG4f9Yv4n71E3RS4Iri\nXVaKC7eufFKwKju27nh/sRWnSbKOrfkvWnlo6/nMxJLKwNZ40uLZ8eoohD/2\n37OcO2OMogqww/kIxpASbbScOmXqh4eXvTs9QyBcivhyRsCtct1j7HpKvuTm\nUyM1yDLoY7FKGVHQjWd3xYo3Ju+cQTh8QAOKm/0G7rUx+KTQ9CFW++lhr1nD\nl2fV0xGLck6RGV4Eblkj16dChKZ5cYXihlnIxcd0GahALABu80xI/Z/Gbqxp\nYYw+cC8sk2S0eqZf7l43ED3dLIAeDN0BtD1lna2XTOGge674oq6a2Vig6WVy\n4mMKkirDqrp/k9oDzHprrP6nbW4u2MmgBmvVAnLbTe+461zi09zeQglmuBRU\n4SRog78aHugOAmqhMpX24R7B2N+sZCxfR+yD989Ncm3k8IFs2KEAWDHjIagp\nRNT6C16YUO42xUGeTHvA0a6tVKar+Mbx0bDqLSppks6eNbi0bb9/5loCUShT\nfDpuNfeB94/q07BX6gZrnSsrD08mIsxnCg8PFVhpMsr2t2lm3lHTE6L/fc+3\nKyg104rUiMjPpR11Abx5kIoWsO8SeBu3/C6nmvTY7R20bZly2JLkXi9QrwAL\nezCJlclYNf6CYYFc9fp1FIr9nYDN4q3SQ/3wtpF16oVLFYw+OpZY2HppUNT6\ngH3gFLztROt6loGXNDa1Wyc0SvQGboGrLM4HCk6G2QmIOU6WHqfh1reV6t79\nrU3R1CehNr/uXB0ZFxG+m2wmI5a+TmZCaITJHQsOZS8jn5W+e8VKxIvxaT2e\nUbYcPMGrpVk+IvU1WHW/38kiH8HLtOYm6lTsfgFt4CMOOtyOU9er/AQ3MIUY\nScJ18XHQddopxmShB4fEUvpYBBW3j1k2yt7hK6ZcWvjoY7o4IMkeTi+MUks0\ntCpvjc0u90qqLTUpJiwUHDKGGCrH5BZwQyMFRTuVcMwbHbd2JR8ef4HlGp+9\nZjF/QSk8NfREjQyfObOy1lPen1fu2iB0eXOOdmLjoTs3BHkHg2UJNZAEx34Q\nOcgDrUnQAORUpIXdwXGivK7ZBqrGEw23KM7PoTqG93Egr6QKF2y4PAS0wzB+\npsoeRSV3FIT/AZevlPT/4gs85nkzgfxJ+VGH1Lw/H3DXnNXCb1n8vUY9MlxQ\nj63iieh0S1LysdXpqU/BhVWEnt8Lp3hAEPsWmTLkPehxcLmPQMdaiDa4N3dg\nfEqCSjacDdhw25plQmPpYlT5/5aONw42bOjMVoBh6BpQqGtOwmSZ5H9uo8s1\nIZlmiz7Y2790AWtoSSzQHhzWH4DbE2mcq3YQbJFcllHdPUidCdnmFnRWZxKX\n2RDr8y+yGj7u1Oj60407j7MzJ+nSZV3guCULzV4J3FDxr2oUcyeigg8VaNr/\nORh7wrWRg+HMuUqaqfHpFioK2yZ4ExEGpn/9C6x1/4DqLAZue8B/cTEBf/xe\nFQqMjpEcXAeWU10+3U4tyju3uZPlr2qLbDP3w50MxeHupe8n6gup7Eeo6KLW\nMStjetTNHC6lS3HkHN6Dv3M/kVsoEitYllbChFJ2kEKAIBQeKBovloHwpzYc\nKbK7hLnOVsEybCOlkNDWP+VP9O/S7Qrbb0Rtz/rMHzB+5Y9VJ8SMk/vBgUUd\n+tXVugMA16oG9fJxeQsIwtul3nQI7mcNThlnYRQehdsqf22cK21GWoMkT84d\nxr6MfXOe1kQSD+UanQdOLzOfxi5jjBfCuwdWXA+sYSC8Md4e/euEH0iwSO3v\nSZglEuKAKfb7BQ==\n",
+    "generate_outline": "Instruct the AI to add an action to a specific part of your page and then evaluate the AI's change, deciding to keep, redirect, or edit it.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:21:44 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:21:44 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:21:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:21:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 04:31:35 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:10:55 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -36,7 +36,7 @@ This module highlights important concepts and teaching strategies, but it doesn'
   <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
     <h3>Section 3 - Python Basics</h3>
     <div style="font-size: 13px; color: #555555; margin-bottom: 6px;">Aligns to curriculum Lessons 3-5</div>
-    <div style="font-size: 16px; line-height: 1.5;">Pseudocode, variables, and functions: this is where students write their first lines of Python. You'll walk through the same syntax-error triage and defining-vs-calling distinctions students commonly need help with early on.<br><br><em>30 minutes</em></div>
+    <div style="font-size: 16px; line-height: 1.5;">Pseudocode, variables, and functions: this is where students write their first lines of Python. You'll walk through the same syntax-error triage and defining-vs-calling distinctions students commonly need help with early on.<br><br><em>20 minutes</em></div>
   </div>
 
   <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
@@ -60,14 +60,14 @@ This module highlights important concepts and teaching strategies, but it doesn'
   <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
     <h3>Section 7 - Bringing It Together</h3>
     <div style="font-size: 13px; color: #555555; margin-bottom: 6px;">Aligns to curriculum Lesson 13</div>
-    <div style="font-size: 16px; line-height: 1.5;">Students apply the whole unit in one project: choosing a topic, drawing a decision tree, then implementing it in Python. You'll preview the rubric and the most common failure mode, a working program whose decision tree doesn't reflect meaningful branching, so you're ready to coach a student through it.<br><br><em>15 minutes</em></div>
+    <div style="font-size: 16px; line-height: 1.5;">Students apply the whole unit in one project: choosing a topic, drawing a decision tree, then implementing it in Python. You'll preview the rubric and the most common failure mode, a working program whose decision tree doesn't reflect meaningful branching, so you're ready to coach a student through it.<br><br><em>10 minutes</em></div>
   </div>
 
 </div>
 
 <br>
 
-**Total suggested time:** 135 minutes
+**Total suggested time:** 120 minutes
 
 ---
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {TEST_PANEL_WIDTH} from '../constants';
+import {RIGHT_PANEL_WIDTH} from '../constants';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
@@ -8,11 +8,16 @@ import {useTrainingData} from '../TrainingDataContext';
 
 import DecisionTree from './DecisionTree';
 import ResultsBar from './ResultsBar';
+import type {SaveImageToBackpack} from './SaveTreeImageMenu';
 import TestPanel from './TestPanel';
 
 import styles from './results.module.scss';
 
-const Results = () => {
+interface ResultsProps {
+  saveImageToBackpack?: SaveImageToBackpack;
+}
+
+const Results = ({saveImageToBackpack}: ResultsProps) => {
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
   const hasTree = useAppSelector(
@@ -24,10 +29,13 @@ const Results = () => {
       <div id="results" className={styles.results}>
         <ResultsBar />
         {hasTree ? (
-          <DecisionTree overlay={<TestPanel />} />
+          <DecisionTree
+            overlay={<TestPanel />}
+            saveImageToBackpack={saveImageToBackpack}
+          />
         ) : (
           <div className={styles.emptyCanvas}>
-            <div className={styles.overlay} style={{width: TEST_PANEL_WIDTH}}>
+            <div className={styles.overlay} style={{width: RIGHT_PANEL_WIDTH}}>
               <TestPanel />
             </div>
           </div>

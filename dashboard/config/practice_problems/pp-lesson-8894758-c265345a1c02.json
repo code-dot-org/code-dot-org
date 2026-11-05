@@ -1,0 +1,20 @@
+{
+  "key": "pp-lesson-8894758-c265345a1c02",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms with their correct definitions.",
+  "solution": [
+    {
+      "option": "Large Language Model",
+      "correct": "An AI that predicts the next word in a sequence."
+    },
+    {
+      "option": "Evaluate AI output",
+      "correct": "Assessing if the generated text serves a specific purpose."
+    }
+  ],
+  "objective_keys": [
+    "b390a6d6-7f12-41e5-94df-5ab64033d684",
+    "ab3a91f1-e3f3-4654-8257-5236e3f26d3e"
+  ]
+}

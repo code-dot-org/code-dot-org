@@ -1,0 +1,15 @@
+name 'adaptive-less-checkpoints-make-point-practice'
+title 'TODO: title'
+title 'Clear headline'
+description ''
+question 'Sam is building a site to help new students find school clubs. A new student will open it on their phone and read only the headline before deciding to keep scrolling.  **Which headline tells a new student what the site is for?**'
+wrong 'Welcome to the school clubs site!'
+right 'Find a club that fits you.'
+wrong 'Our school, our story, our clubs.'
+wrong 'Click here to learn more today.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

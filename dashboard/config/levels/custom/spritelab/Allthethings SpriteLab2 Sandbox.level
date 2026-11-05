@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2026-10-29T19:30:41.000Z",
   "level_num": "custom",
@@ -24,17 +23,13 @@
     "all_animations_single_frame": "true",
     "use_modal_function_editor": "true",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "long_instructions": "This is a sandbox level containing available blocks in Sprite Lab 2 (not guaranteed to be perfectly up to date).",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "include_shared_functions": "false",
     "free_play": "false",
@@ -46,6 +41,9 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "enable_big_playspace": "false",
+    "level_mode": {
+      "kind": "freeplay"
+    },
     "toolbox_definition": {
       "kind": "categoryToolbox",
       "contents": [
@@ -97,6 +95,80 @@
                     "type": "math_number",
                     "fields": {
                       "NUM": 10
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setPrompt",
+              "inputs": {
+                "QUESTION": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "movable": false,
+                    "fields": {
+                      "VAR": {
+                        "name": "answer"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setPromptWithChoices",
+              "inputs": {
+                "QUESTION": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "movable": false,
+                    "fields": {
+                      "VAR": {
+                        "name": "answer"
+                      }
+                    }
+                  }
+                },
+                "A": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "choice 1"
+                    }
+                  }
+                },
+                "B": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "choice 2"
+                    }
+                  }
+                },
+                "C": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "choice 3"
                     }
                   }
                 }
@@ -258,6 +330,28 @@
                   }
                 }
               }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setProp",
+              "fields": {
+                "PROPERTY": "\"scale\""
+              },
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "VAL": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 100
+                    }
+                  }
+                }
+              }
             }
           ]
         },
@@ -305,6 +399,83 @@
                     "type": "math_number",
                     "fields": {
                       "NUM": 3
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_whenPromptAnswered",
+              "inputs": {
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "movable": false,
+                    "fields": {
+                      "VAR": {
+                        "name": "answer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "AI",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_setSystemPrompt",
+              "inputs": {
+                "PROMPT": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_askAI",
+              "inputs": {
+                "PROMPT": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "fields": {
+                      "VAR": {
+                        "name": "AI answer"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_whenPromptAnswered",
+              "inputs": {
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "fields": {
+                      "VAR": {
+                        "name": "AI answer"
+                      }
                     }
                   }
                 }
@@ -574,9 +745,464 @@
           "custom": "PROCEDURE"
         }
       ]
-    }
+    },
+    "start_sources": {
+      "animations": {
+        "orderedKeys": [
+          "df4fcdb2-f739-464f-bcce-aab5b8de6f43",
+          "e10dbe1b-e37e-4da6-a311-5b9b06efb4ac",
+          "9ec4ccd0-51e1-4f07-b241-fc81f7d4cb5d"
+        ],
+        "propsByKey": {
+          "df4fcdb2-f739-464f-bcce-aab5b8de6f43": {
+            "name": "Sprite 2",
+            "sourceUrl": "/level_starter_assets/Allthethings%20SpriteLab2%20Sandbox/uuid/2f54e5bf-192c-4a4d-ab6c-8dcb56955c26.png",
+            "frameSize": {
+              "x": 47,
+              "y": 47
+            },
+            "frameCount": 5,
+            "looping": true,
+            "frameDelay": 20,
+            "categories": [
+
+            ],
+            "pixelGridSize": 1,
+            "trimmed": false,
+            "generation": {
+              "prompt": "A cute cat",
+              "imageType": "sprite",
+              "style": "pixel",
+              "seed": 260963301,
+              "temperature": 1,
+              "pixelGrid": 32,
+              "bodyPlan": "quadruped",
+              "sentenceId": "character",
+              "choices": {
+                "creature": "cat",
+                "adjective": "cute"
+              }
+            },
+            "edited": false,
+            "poses": {
+              "stand-right": {
+                "start": 0,
+                "count": 2,
+                "frameDelay": 20
+              },
+              "walk-right": {
+                "start": 1,
+                "count": 2,
+                "frameDelay": 8
+              },
+              "jump-right": {
+                "start": 3,
+                "count": 2,
+                "frameDelay": 8
+              }
+            }
+          },
+          "e10dbe1b-e37e-4da6-a311-5b9b06efb4ac": {
+            "name": "Background 1",
+            "sourceUrl": "/level_starter_assets/Allthethings%20SpriteLab2%20Sandbox/uuid/d88e715b-d96c-4ee5-8d4f-23a9c896fe79.png",
+            "frameSize": {
+              "x": 200,
+              "y": 200
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+              "backgrounds"
+            ],
+            "pixelGridSize": 1,
+            "trimmed": false,
+            "generation": {
+              "prompt": "A peaceful cave",
+              "imageType": "background",
+              "style": "pixel",
+              "seed": 114468780,
+              "temperature": 1,
+              "pixelGrid": 128,
+              "sentenceId": "place",
+              "choices": {
+                "place": "cave",
+                "adjective": "peaceful"
+              }
+            },
+            "edited": false
+          },
+          "9ec4ccd0-51e1-4f07-b241-fc81f7d4cb5d": {
+            "name": "Sprite 1",
+            "sourceUrl": "/level_starter_assets/Allthethings%20SpriteLab2%20Sandbox/uuid/8db32af8-91b3-4bd3-a07f-b43f110c41d4.png",
+            "frameSize": {
+              "x": 91,
+              "y": 91
+            },
+            "frameCount": 5,
+            "looping": true,
+            "frameDelay": 20,
+            "categories": [
+
+            ],
+            "pixelGridSize": 1,
+            "trimmed": false,
+            "generation": {
+              "prompt": "A brave witch",
+              "imageType": "sprite",
+              "style": "pixel",
+              "seed": 1327414457,
+              "temperature": 1,
+              "pixelGrid": 32,
+              "sentenceId": "character",
+              "choices": {
+                "creature": "witch",
+                "adjective": "brave"
+              }
+            },
+            "edited": false,
+            "poses": {
+              "stand-right": {
+                "start": 0,
+                "count": 2,
+                "frameDelay": 20
+              },
+              "walk-right": {
+                "start": 1,
+                "count": 2,
+                "frameDelay": 8
+              },
+              "jump-right": {
+                "start": 3,
+                "count": 2,
+                "frameDelay": 8
+              }
+            }
+          }
+        }
+      },
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "scenes": [
+        {
+          "id": "scene-1",
+          "name": "Scene 1",
+          "source": {
+            "variables": [
+              {
+                "name": "answer",
+                "id": "5E6u$etG5$`GU_G;x+,x"
+              },
+              {
+                "name": "AI answer",
+                "id": "|$O)Ad+Y/VFL6~.M[^F="
+              }
+            ],
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": "Kh|^ELs,u#VAgoqha,7V",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackgroundImageAs",
+                      "id": "y[8k{n6bLctK_.ETdbap",
+                      "fields": {
+                        "IMG": "<field name=\"IMG\">\"Background 1\"</field>"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "gamelab_makeNewSpriteAnon",
+                          "id": "Xjo~*eTJ]eC5Me@~*4WJ",
+                          "fields": {
+                            "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"Sprite 1\"</field>"
+                          },
+                          "inputs": {
+                            "LOCATION": {
+                              "block": {
+                                "type": "gamelab_location_picker",
+                                "id": "j.RyiC4|FOc9iC*y8+eW",
+                                "fields": {
+                                  "LOCATION": "{\"x\":156,\"y\":244}"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "gamelab_setProp",
+                              "id": "6t0^/8kK`c%7%QMw:1?[",
+                              "fields": {
+                                "PROPERTY": "<field name=\"PROPERTY\">\"scale\"</field>"
+                              },
+                              "inputs": {
+                                "SPRITE": {
+                                  "block": {
+                                    "type": "gamelab_allSpritesWithAnimation",
+                                    "id": "YBun3CfSyCR5(6nK|CbA",
+                                    "fields": {
+                                      "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                                    }
+                                  }
+                                },
+                                "VAL": {
+                                  "block": {
+                                    "type": "math_number",
+                                    "id": "t!Gf;q7Q%%L{t}/Hg3I$",
+                                    "fields": {
+                                      "NUM": 100
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "gamelab_makeNewSpriteAnon",
+                                  "id": "UZjv}f_(_V/.B(u=U/;Z",
+                                  "fields": {
+                                    "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"Sprite 2\"</field>"
+                                  },
+                                  "inputs": {
+                                    "LOCATION": {
+                                      "block": {
+                                        "type": "gamelab_location_picker",
+                                        "id": "2D8_${mhq;2rT9,f?.tq",
+                                        "fields": {
+                                          "LOCATION": "{\"x\":94,\"y\":276}"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "gamelab_setPrompt",
+                                      "id": "E:(aAykiH1eagA^SFUOV",
+                                      "inputs": {
+                                        "QUESTION": {
+                                          "block": {
+                                            "type": "text",
+                                            "id": "{[h3xvI//aa$cv@J|oeh",
+                                            "fields": {
+                                              "TEXT": "What do you want to ask the witch?"
+                                            }
+                                          }
+                                        },
+                                        "VAR": {
+                                          "block": {
+                                            "type": "variables_get",
+                                            "id": ";[/nAPk$iLta%?H5-V1*",
+                                            "extraState": {
+                                            },
+                                            "fields": {
+                                              "VAR": {
+                                                "id": "5E6u$etG5$`GU_G;x+,x"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": ":)tytYHSO{UV1f~3XPPb",
+                  "x": 553,
+                  "y": 104,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "9Om+Oo+fi[3dz5Cm#8]5",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "5E6u$etG5$`GU_G;x+,x"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_askAI",
+                      "id": "h@~k$%0|$Ayg:y0*9]QF",
+                      "inputs": {
+                        "PROMPT": {
+                          "block": {
+                            "type": "text_join_simple",
+                            "id": "nvpSdQlPqIPT+DX^@`GL",
+                            "extraState": {
+                              "itemCount": 2
+                            },
+                            "inputs": {
+                              "ADD0": {
+                                "block": {
+                                  "type": "text",
+                                  "id": ",XiDapsXhAbzZ+JvXCqj",
+                                  "fields": {
+                                    "TEXT": "Answer the following question like a witch"
+                                  }
+                                }
+                              },
+                              "ADD1": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "DQAVm(w!WYVP}1iKtvS|",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "5E6u$etG5$`GU_G;x+,x"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "VAR": {
+                          "block": {
+                            "type": "variables_get",
+                            "id": "bNT_Uv?h:Gr.Z5e|Jwmq",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "|$O)Ad+Y/VFL6~.M[^F="
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "wCdI/z74*;b9|^n|U*g#",
+                  "x": 585,
+                  "y": 367,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "!B2j[{nS9~#^+%-}4zX8",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "|$O)Ad+Y/VFL6~.M[^F="
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setPrompt",
+                      "id": "?i2#AZFtdv{$^D=T%,|Q",
+                      "inputs": {
+                        "QUESTION": {
+                          "block": {
+                            "type": "text",
+                            "id": "5cOV2*]UI,0qdG:d6gE2",
+                            "fields": {
+                              "TEXT": "What do you want to ask the witch?"
+                            }
+                          }
+                        },
+                        "VAR": {
+                          "block": {
+                            "type": "variables_get",
+                            "id": "xQ_)HAyaqgd/jKddk{SB",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "5E6u$etG5$`GU_G;x+,x"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "gamelab_spriteSayTime",
+                          "id": "{kW=^3+Tn139KMO1j8,6",
+                          "inputs": {
+                            "SPRITE": {
+                              "block": {
+                                "type": "gamelab_allSpritesWithAnimation",
+                                "id": "iQL-67i`ae^hz;C?ZnLG",
+                                "fields": {
+                                  "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                                }
+                              }
+                            },
+                            "TEXT1": {
+                              "block": {
+                                "type": "variables_get",
+                                "id": "Gj=Mf*3).BiLHK{?Q#Ny",
+                                "extraState": {
+                                },
+                                "fields": {
+                                  "VAR": {
+                                    "id": "|$O)Ad+Y/VFL6~.M[^F="
+                                  }
+                                }
+                              }
+                            },
+                            "NUM": {
+                              "block": {
+                                "type": "math_number",
+                                "id": "~:O(v9Pa@jhA,c_XIF|D",
+                                "fields": {
+                                  "NUM": 20
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-29 12:31:19 -0700\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-29 12:31:19 -0700\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 14:17:47 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

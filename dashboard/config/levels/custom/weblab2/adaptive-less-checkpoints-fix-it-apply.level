@@ -1,0 +1,82 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:19:48.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "#### Debugging Practice\r\n\r\n1. Press each Vote button and watch the counts on this example site.\r\n2. Tell the AI what you expected, what happened instead, and where. \r\n3. Try the AI’s fix. If something is still wrong, tell the AI what to change next.\r\n\r\n**Check your prompt:** Does it say what you expected, what happened, and where?",
+    "encrypted_exemplar_sources": "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\nfyPv2TLveL0+nCaabE8v4ykFK/vk\n",
+    "generate_outline": "Apply your debugging skills by reporting a real problem to the AI and then carefully verifying that its fix works and hasn't introduced new issues.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>EXAMPLE SITE Game Night Snack Vote</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <header class=\"page-header\">\n    <h1>✨EXAMPLE SITE✨ Game Night Snack Vote</h1>\n    <p>Pick the snack you want at game night. Press Vote to add your vote.</p>\n  </header>\n\n  <main class=\"snack-list\">\n    <section class=\"snack-card\" aria-labelledby=\"popcorn-title\">\n      <h2 id=\"popcorn-title\">Popcorn</h2>\n      <p class=\"snack-note\">Buttery and easy to share.</p>\n      <p class=\"vote-row\">\n        <span class=\"vote-label\">Votes</span>\n        <span class=\"vote-count\" id=\"popcorn-count\" aria-live=\"polite\">0</span>\n      </p>\n      <button class=\"vote-button\" type=\"button\" data-snack=\"popcorn\">Vote<span class=\"visually-hidden\"> for Popcorn</span></button>\n    </section>\n\n    <section class=\"snack-card\" aria-labelledby=\"nachos-title\">\n      <h2 id=\"nachos-title\">Nachos</h2>\n      <p class=\"snack-note\">Crunchy chips with warm cheese.</p>\n      <p class=\"vote-row\">\n        <span class=\"vote-label\">Votes</span>\n        <span class=\"vote-count\" id=\"nachos-count\" aria-live=\"polite\">0</span>\n      </p>\n      <button class=\"vote-button\" type=\"button\" data-snack=\"popcorn\">Vote<span class=\"visually-hidden\"> for Nachos</span></button>\n    </section>\n\n    <section class=\"snack-card\" aria-labelledby=\"fruit-title\">\n      <h2 id=\"fruit-title\">Fruit cups</h2>\n      <p class=\"snack-note\">Cool, sweet, and no mess.</p>\n      <p class=\"vote-row\">\n        <span class=\"vote-label\">Votes</span>\n        <span class=\"vote-count\" id=\"fruit-count\" aria-live=\"polite\">0</span>\n      </p>\n      <button class=\"vote-button\" type=\"button\" data-snack=\"fruit\">Vote<span class=\"visually-hidden\"> for Fruit cups</span></button>\n    </section>\n  </main>\n\n  <script src=\"script.js\" defer></script>\n</body>\n</html>\n",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "contents": "var votes = {\n  popcorn: 0,\n  nachos: 0,\n  fruit: 0\n};\n\nfunction addVote(snack) {\n  votes[snack] = votes[snack] + 1;\n  document.getElementById(snack + '-count').textContent = votes[snack];\n}\n\ndocument.querySelectorAll('.vote-button').forEach(function (button) {\n  button.addEventListener('click', function () {\n    addVote(button.dataset.snack);\n  });\n});\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "contents": "/*\n  What is CADS, what was rebuilt, what was approximated\n\n  CADS: the color, type, spacing, shape and shadow values below are copied\n  from the CADS runtime tokens (only the ones this page uses). Every color in\n  the page styles is one of these variables.\n\n  Rebuilt by hand: the card, header band and Vote button. Web Lab cannot run\n  the CADS runtime, so these follow the CADS patterns (white bordered card,\n  light brand band, brand-filled primary button) without using its components.\n\n  Approximated: the button hover color uses --brand-purple-60 directly, since\n  CADS keeps its button hover values inside the component. Geist and Space\n  Grotesk are not loaded in Web Lab, so the font stacks fall back to system\n  fonts.\n*/\n\n:root {\n  /* CADS primitives */\n  --brand-purple-5: #e4e2f8;\n  --brand-purple-50: #4c42cf;\n  --brand-purple-60: #4238c4;\n  --brand-purple-80: #2b1e9f;\n  --neutral-base-black: #121212;\n  --neutral-base-white: #ffffff;\n  --neutral-gray-5: #f1f2f4;\n  --neutral-gray-20: #d3d6da;\n  --neutral-gray-90: #363b40;\n\n  /* CADS semantic colors */\n  --background-neutral-primary: var(--neutral-base-white);\n  --background-neutral-secondary: var(--neutral-gray-5);\n  --background-brand-primary: var(--brand-purple-50);\n  --background-brand-light: var(--brand-purple-5);\n  --border-neutral-primary: var(--neutral-gray-20);\n  --border-focused-primary: var(--brand-purple-50);\n  --text-neutral-primary: var(--neutral-base-black);\n  --text-neutral-secondary: var(--neutral-gray-90);\n  --text-neutral-white-fixed: var(--neutral-base-white);\n  --text-brand-strong: var(--brand-purple-80);\n\n  /* CADS type */\n  --font-family-main: \"Geist\", \"Noto Sans\", sans-serif;\n  --font-family-heading: \"Space Grotesk\", \"Geist\", \"Noto Sans\", sans-serif;\n  --font-weight-semi-bold: 600;\n  --text-body-md: 1rem;\n  --text-body-lg: 1.125rem;\n  --text-heading-lg: 1.75rem;\n  --text-heading-xs: 1.25rem;\n  --leading-body-md: 1.5rem;\n  --leading-heading-lg: 2.25rem;\n  --leading-heading-xs: 1.75rem;\n\n  /* CADS shape, spacing, shadow, control height */\n  --shape-sm: 0.375rem;\n  --shape-md: 0.5rem;\n  --spacing-p-xxs: 0.5rem;\n  --spacing-p-xs: 1rem;\n  --spacing-p-s: 1.5rem;\n  --spacing-p-m: 2rem;\n  --shadow-sm: 0 4px 7px rgb(0 0 0 / 7%), 0 2px 2px rgb(0 0 0 / 7%);\n  --control-height-large: 48px;\n}\n\n* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: var(--font-family-main);\n  font-size: var(--text-body-md);\n  line-height: var(--leading-body-md);\n  color: var(--text-neutral-primary);\n  background-color: var(--background-neutral-primary);\n}\n\n.visually-hidden {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  margin: -1px;\n  padding: 0;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border: 0;\n}\n\n/* Header band */\n\n.page-header {\n  padding: var(--spacing-p-m) var(--spacing-p-s);\n  background-color: var(--background-brand-light);\n  text-align: center;\n}\n\n.page-header h1 {\n  margin: 0 0 var(--spacing-p-xxs);\n  font-family: var(--font-family-heading);\n  font-size: var(--text-heading-lg);\n  line-height: var(--leading-heading-lg);\n  color: var(--text-brand-strong);\n}\n\n.page-header p {\n  margin: 0;\n  font-size: var(--text-body-lg);\n  color: var(--text-neutral-secondary);\n}\n\n/* Snack cards */\n\n.snack-list {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));\n  gap: var(--spacing-p-xs);\n  max-width: 56rem;\n  margin: 0 auto;\n  padding: var(--spacing-p-s);\n}\n\n.snack-card {\n  display: flex;\n  flex-direction: column;\n  padding: var(--spacing-p-s);\n  background-color: var(--background-neutral-primary);\n  border: 1px solid var(--border-neutral-primary);\n  border-radius: var(--shape-md);\n  box-shadow: var(--shadow-sm);\n}\n\n.snack-card h2 {\n  margin: 0 0 var(--spacing-p-xxs);\n  font-size: var(--text-heading-xs);\n  line-height: var(--leading-heading-xs);\n}\n\n.snack-note {\n  margin: 0 0 var(--spacing-p-xs);\n  color: var(--text-neutral-secondary);\n}\n\n.vote-row {\n  display: flex;\n  align-items: baseline;\n  justify-content: space-between;\n  margin: 0 0 var(--spacing-p-xs);\n  padding: var(--spacing-p-xxs) var(--spacing-p-xs);\n  background-color: var(--background-neutral-secondary);\n  border-radius: var(--shape-sm);\n}\n\n.vote-label {\n  font-weight: var(--font-weight-semi-bold);\n  color: var(--text-neutral-secondary);\n}\n\n.vote-count {\n  font-family: var(--font-family-heading);\n  font-size: var(--text-heading-lg);\n  line-height: var(--leading-heading-lg);\n  font-weight: var(--font-weight-semi-bold);\n}\n\n/* Vote button */\n\n.vote-button {\n  min-height: var(--control-height-large);\n  margin-top: auto;\n  padding: 0 var(--spacing-p-s);\n  font-family: var(--font-family-main);\n  font-size: var(--text-body-md);\n  font-weight: var(--font-weight-semi-bold);\n  color: var(--text-neutral-white-fixed);\n  background-color: var(--background-brand-primary);\n  border: 1px solid var(--background-brand-primary);\n  border-radius: var(--shape-sm);\n  cursor: pointer;\n}\n\n.vote-button:hover {\n  background-color: var(--brand-purple-60);\n  border-color: var(--brand-purple-60);\n}\n\n.vote-button:focus-visible {\n  outline: 2px solid var(--border-focused-primary);\n  outline-offset: 2px;\n}\n\n@media (prefers-reduced-motion: no-preference) {\n  .vote-button {\n    transition: background-color 0.15s ease, border-color 0.15s ease;\n  }\n}\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:19:55 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:19:55 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:20:05 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:20:06 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 18:53:05 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 18:57:53 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 18:58:19 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 18:59:41 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 18:59:59 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 19:01:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 19:02:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 19:03:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 19:04:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 20:59:55 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 21:46:24 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:11:46 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

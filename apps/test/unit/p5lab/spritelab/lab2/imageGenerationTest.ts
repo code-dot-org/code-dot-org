@@ -202,10 +202,10 @@ describe('generateImage', () => {
   });
 
   it('asks for the pixel grid of the image type', async () => {
-    // Sprites and blocks read at 64x64; a background carries a whole scene,
+    // Sprites and blocks read at 32x32; a background carries a whole scene,
     // so its grid is finer.
-    expect(styleClause('pixel', pixelBlockFor('sprite'))).toContain('64x64');
-    expect(styleClause('pixel', pixelBlockFor('block'))).toContain('64x64');
+    expect(styleClause('pixel', pixelBlockFor('sprite'))).toContain('32x32');
+    expect(styleClause('pixel', pixelBlockFor('block'))).toContain('32x32');
     expect(styleClause('pixel', pixelBlockFor('background'))).toContain(
       '128x128'
     );

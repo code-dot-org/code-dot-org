@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-02T18:05:13.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Investigate & Debug\r\n\r\n**Do This:** \r\nThis loop is supposed to print 5 numbers and then stop — but it never stops! \r\n\r\nFind the bug and fix it so the loop runs exactly 5 times.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "example"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "count = 0\nwhile count < 5:\n\tprint(count)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrJMRzih5JeWr0Y\nX3FfWCe7uwajwGd6paOOVu/GSCZkJJRzN8xY3hnhDBmQB5Kp8bMoEfOc0ip1\nCG2Zy7dHI8i2Ql49OhKuYNM6yNc06A9EXIEWUV7Jek7tKA3lBDZkmHhCkt/x\nW63t5JOF68Z0Xp1Xj5gRPUNGJZ634nAJWaMHZ95br+gvAmMTGTAmpLVjPCB5\nKPlRNLHEt/HsQqomud5C\n",
+    "teacher_markdown": "**Coding Tip:** If nothing inside the loop changes the value being checked, the condition can never become False.",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\nclass TestInvestigateDebug(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and save the results\"\"\"\n        cls.stdout = ValidationProtocol().get_stdout_logs()\n\n    def test_loop_prints_correct_sequence_and_stops(self):\n        \"\"\"Prints 0, 1, 2, 3, 4 and then stops\"\"\"\n        if not self.stdout:\n            self.skipTest(\"Nothing printed at all. Make sure print(count) is still inside the loop.\")\n        expected = [\"0\", \"1\", \"2\", \"3\", \"4\"]\n        self.assertEqual(\n            self.stdout,\n            expected,\n            f\"Expected the loop to print 0 through 4, in order, then stop — but we got {self.stdout}. \"\n            \"If the list is longer than 5 or missing, check whether count is actually being updated inside the loop.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-02T18:05:13.777+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson15-investigate-trace_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson15-investigate-trace_27_28\"},{\"changed_at\":\"2026-11-02 18:05:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 18:06:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 18:07:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 18:07:35 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 18:12:53 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 03:28:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 03:28:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 03:32:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

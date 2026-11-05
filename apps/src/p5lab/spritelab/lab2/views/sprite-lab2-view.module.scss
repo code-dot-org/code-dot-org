@@ -1,6 +1,7 @@
 @use './imageTile' as tile;
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+@use './editor-strip' as strip;
 
 .labRow {
   display: flex;
@@ -14,17 +15,17 @@
   }
 }
 
-// Instructions column width when the full panel shows (no guide).
-.instructionsArea {
-  flex: 0;
-  min-width: 25%;
-}
-
 // The panel's column in the default layout: a fixed width, so the
 // workspace keeps the room its blocks need as the window narrows.
 .instructionsColumn {
   flex: 0 0 280px;
   min-width: 280px;
+}
+
+// Collapsed to its tab rail.
+.instructionsCollapsed {
+  flex: 0 0 auto;
+  min-width: 0;
 }
 
 .divider {
@@ -83,7 +84,7 @@ $tab-item-height: 34px;
 }
 
 // The editors start under the strip.
-$editor-strip-height: 41px;
+$editor-strip-height: strip.$height;
 // Above Blockly's category list (z 70) and flyout (z 20), so a menu from a
 // bar opens over them; below its block drag surface (z 80).
 $z-over-blockly: 71;
@@ -93,9 +94,6 @@ $z-over-blockly: 71;
   top: 0;
   left: 0;
   right: 0;
-  // Slides with the column's edge as Images opens and closes
-  // (PANE_SLIDE_MS).
-  transition: left 0.3s ease;
   z-index: $z-over-blockly;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -108,6 +106,13 @@ $z-over-blockly: 71;
   color: var(--text-neutral-quaternary);
   border: 1px solid var(--borders-neutral-primary);
   border-top: none;
+}
+
+// The editors' strip: a column header beside it draws the line between
+// them, down its own body too, so this strip keeps only its bottom edge.
+.editorStripEditors {
+  border-left: none;
+  border-right: none;
 }
 
 // Every cell names its row: auto-placement would otherwise start a new row
@@ -318,80 +323,19 @@ $z-over-blockly: 71;
 }
 
 // After .codeTabWrapper too: the Images pane off to the right while
-// another editor shows, as a closed sheet waits.
+// another editor shows, as a closed sheet waits. Hidden as well: off to the
+// right is where the page's own drawer opens, and the pane would paint over
+// it.
 .picturesEditorParked {
   left: 110%;
   right: auto;
   width: 100%;
+  visibility: hidden;
 }
 
 .blocklyDiv {
   width: 100%;
   height: 100%;
-}
-
-// Sidebar-only resource panel (guide-based instructions): no instruction
-// tabs render inside the nav, so its top border would read as a stray line.
-.resourceSidebar {
-  :global(#resource-panel-tabs) {
-    border-top: 0;
-  }
-}
-
-// Full height, so the library inside can measure the pane.
-.imagesManager {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.imageGallery {
-  display: flex;
-  flex-wrap: wrap;
-  // Generous row spacing so the cards read as rows, not a dense grid; the
-  // bottom padding lets the last row scroll clear of the Guide overlay.
-  gap: 28px 14px;
-  padding: 28px 16px 220px;
-}
-
-// The trailing "new image" card: a blank tile with a plus. Same footprint as
-// a thumbnail so the gallery grid stays regular.
-.newImageCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 104px;
-  height: 104px;
-  margin: 0;
-  padding: 0;
-  gap: 2px;
-  border: 1px dashed var(--borders-neutral-primary);
-  border-radius: 4px;
-  background-color: transparent;
-  box-shadow: none;
-  color: var(--text-neutral-secondary);
-  cursor: pointer;
-  font-size: 32px;
-  line-height: 1;
-
-  &:hover {
-    background-color: var(--background-neutral-secondary);
-    color: var(--text-neutral-primary);
-  }
-}
-
-.newImageLabel {
-  font-size: 12px;
-}
-
-// Sized wrapper around .guideBody: an explicit pixel height (kept in sync
-// with the body's natural height via a ResizeObserver) is transitionable,
-// where height: auto is not. Content is clipped mid-transition.
-.guideAnimator {
-  overflow: hidden;
-  transition: height 0.25s ease;
 }
 
 // The scene dropdown, styled as the first segment of the tab group: no box
@@ -618,87 +562,6 @@ $z-over-blockly: 71;
   gap: 16px;
 }
 
-.guideBody {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 15px;
-
-  // The shared read-aloud button paints a ~17x20 icon and sets no box; WCAG
-  // 2.2 target size (SC 2.5.8) wants 24x24.
-  button[aria-pressed] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 24px;
-    min-height: 24px;
-  }
-}
-
-.guideInstructions {
-  line-height: 1.6;
-
-  // Markdown output brings document-level margins; keep it compact inside
-  // the guide, and keep links readable on the dark panel.
-  // Size and line height sit on the elements, not just the container:
-  // dashboard's scaffolds.scss styles `p, ol, ul, td` directly.
-  p,
-  ul,
-  ol {
-    margin: 0 0 10px;
-    font-size: 15px;
-    line-height: 1.6;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  // List markers need this inset back: a global reset zeroes it, this
-  // margin shorthand zeroes the compensating margin, and the outside
-  // markers then draw past the guide's overflow clip — numbered lists
-  // showed items with no numbers.
-  ul,
-  ol {
-    padding-left: 20px;
-  }
-
-  li + li {
-    margin-top: 4px;
-  }
-
-  // A leading heading sits flush with the panel's own padding; one that
-  // follows other content keeps a little separation.
-  h1,
-  h2,
-  h3,
-  h4 {
-    margin: 0 0 6px;
-
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
-  }
-
-  a {
-    color: var(--text-info-primary);
-  }
-}
-
-// The Continue button once the level's task is done.
-.guideContinue {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 4px;
-}
-
-// Room for the corner icon on its right; the collapsed panel is otherwise
-// only as wide as its button.
-.guideCollapsedText {
-  margin: 0 28px 0 0;
-  white-space: nowrap;
-}
-
 // The persistent playspace overlay; clicks fall through except over the
 // box. Over the toolbox's stacking (70), under the sheets: the box slides
 // back across the toolbox as the workspace reappears.
@@ -749,17 +612,16 @@ $z-over-blockly: 71;
   }
 }
 
-// The Play/Stop and arrow bar under the playspace box. Only its buttons
-// take pointer events: the bar spans the box's width, and over the corner
+// The Play/Stop and arrow bar under the playspace box, along with an optional AI status indicator. 
+// Only its buttons take pointer events: the bar spans the box's width, and over the corner
 // preview that strip would otherwise sit on the Blockly workspace.
 .playBar {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
   pointer-events: none;
 
   // On a narrow column a button's text wraps; the button grows with it
@@ -772,6 +634,15 @@ $z-over-blockly: 71;
     line-height: 1.25;
     text-align: center;
   }
+}
+
+.playBarButtons {
+  grid-column: 2;
+  display: flex;
+  min-width: 0;
+  // Stretch keeps the buttons a shared height when one of them wraps to two lines.
+  align-items: stretch;
+  gap: 16px;
 }
 
 .arrowKeys {
@@ -822,26 +693,6 @@ $z-over-blockly: 71;
 // cannot collapse through it and escape the measurement.
 .previewBelowContent {
   display: flow-root;
-}
-
-// The guide's body, in place rather than floating.
-.guideDocked {
-  box-sizing: border-box;
-  padding: 12px 18px;
-  color: var(--text-neutral-primary);
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-// Short windows: the blocks' smaller type, and less padding.
-.previewBelowCompact .guideDocked {
-  padding: 10px 14px;
-  font-size: 12px;
-
-  p {
-    font-size: 12px;
-    line-height: 1.4;
-  }
 }
 
 // A sheet under the scene row, over the whole area below. Closed, the

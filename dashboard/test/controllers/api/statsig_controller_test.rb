@@ -30,7 +30,9 @@ class Api::StatsigControllerTest < ActionDispatch::IntegrationTest
     end
 
     it 'returns existing session Statsig stable ID' do
-      get '/v3/channels'
+      # Logging a backend event saves a new Statsig stable ID in the session.
+      sign_in create(:student)
+      patch '/users/user_type', as: :json, params: {user: {user_type: 'teacher', email: 'statsig@example.com'}}
       session_stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
       _(session_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
 

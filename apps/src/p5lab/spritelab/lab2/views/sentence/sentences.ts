@@ -7,6 +7,7 @@
 import {EMPTY_WORD_ID} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
   BodyPlan,
+  ImageGenerationMetadata,
   ImageSubject,
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
@@ -15,8 +16,10 @@ import manifestJson from '@cdo/static/spritelab_lab2/sentences.json';
 export interface Word {
   id: string;
   text: string;
-  /** Shown on the word's chip beside the text; decoration, not read aloud. */
-  emoji?: string;
+  /** A Font Awesome icon shown beside the text; decoration, not read aloud. */
+  icon?: string;
+  /** A plain color, shown as a dot beside the text in place of an icon. */
+  color?: string;
   /** How a creature is built, for the character-set poses. */
   bodyPlan?: BodyPlan;
 }
@@ -252,6 +255,42 @@ export function promptText(sentence: Sentence, choices: Choices): string {
     .replace(/\s+/g, ' ')
     .replace(/\s+([,.])/g, '$1')
     .trim();
+}
+
+/** Choices saved on an image: the sentence they were made in, and the
+    word per slot, as the image's generation record stores them. */
+export type SavedChoices = Pick<ImageGenerationMetadata, 'sentenceId'> & {
+  choices: NonNullable<ImageGenerationMetadata['choices']>;
+};
+
+/**
+ * Saved choices as this sentence can hold them now: a slot the sentence no
+ * longer has, or a word its slot no longer offers, is dropped, and a
+ * phrase's slots after a dropped one go with it, as clearing them would.
+ * The sentence id is not checked: slots and words are matched by their
+ * own ids, so a word set shared between sentences carries over.
+ */
+export function restoreChoices(
+  sentence: Sentence,
+  saved: SavedChoices | undefined
+): Choices {
+  if (!saved) {
+    return {};
+  }
+  const restored: Choices = {};
+  Object.entries(saved.choices).forEach(([slotId, wordId]) => {
+    if (wordFor(sentence, slotId, wordId)) {
+      restored[slotId] = wordId;
+    }
+  });
+  const chained = chainedSlotIds(sentence);
+  const firstMissing = chained.findIndex(id => !restored[id]);
+  if (firstMissing >= 0) {
+    chained.slice(firstMissing).forEach(id => {
+      delete restored[id];
+    });
+  }
+  return restored;
 }
 
 /** The body plan of the chosen creature, when the sentence has one. */
