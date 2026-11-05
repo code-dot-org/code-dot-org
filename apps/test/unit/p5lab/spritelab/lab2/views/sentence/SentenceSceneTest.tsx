@@ -339,6 +339,7 @@ describe('SentenceScene', () => {
         jest.advanceTimersByTime(1);
       });
       expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+      expect(screen.getByText('cached')).toBeTruthy();
       expect(sendEvent).toHaveBeenCalledWith(
         'hoai2026-image-prompt',
         expect.objectContaining({imageSource: 'cached', cached: true}),
@@ -366,30 +367,34 @@ describe('SentenceScene', () => {
       expect(findCachedImage.mock.calls[2][0].avoidVariant).toBeUndefined();
     });
 
-    it('says so when the tree lacks the words, and counts no generation', async () => {
+    it('draws with the model when the tree lacks the words, at its own pace', async () => {
       findCachedImage.mockResolvedValue(undefined);
+      generateCharacterSet.mockResolvedValue(RESULT);
       renderCached();
       pickCreature();
       await generate();
-      expect(screen.getByRole('alert').textContent).toMatch(/isn't ready/);
-      expect(screen.getByRole('button', {name: 'cat'})).toBeTruthy();
-      expect(generateCharacterSet).not.toHaveBeenCalled();
-      expect(onGenerateStart).not.toHaveBeenCalled();
-      expect(sendEvent).not.toHaveBeenCalled();
+      expect(generateCharacterSet.mock.calls[0][1].cached).toBeUndefined();
+      expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+      expect(screen.queryByText('cached')).toBeNull();
+      expect(onGenerateStart).toHaveBeenCalledTimes(1);
+      expect(sendEvent).toHaveBeenCalledWith(
+        'hoai2026-image-prompt',
+        expect.objectContaining({imageSource: 'cached', cached: false}),
+        true
+      );
     });
 
-    it('lets a failed lookup be tried again', async () => {
+    it('draws with the model when the lookup fails', async () => {
       findCachedImage.mockRejectedValue(new TypeError('Failed to fetch'));
-      const error = jest.spyOn(console, 'error').mockImplementation(() => {});
+      generateCharacterSet.mockResolvedValue(RESULT);
+      const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
       renderCached();
       pickCreature();
       await generate();
-      expect(screen.getByRole('alert').textContent).toMatch(/Try again/);
-      expect(
-        (screen.getByRole('button', {name: 'Generate'}) as HTMLButtonElement)
-          .disabled
-      ).toBe(false);
-      error.mockRestore();
+      expect(generateCharacterSet).toHaveBeenCalledTimes(1);
+      expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+      expect(warn).toHaveBeenCalled();
+      warn.mockRestore();
     });
 
     it('goes to the model when the advanced settings change the request', async () => {

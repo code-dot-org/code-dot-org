@@ -17,8 +17,8 @@ import {shuffle} from 'lodash';
 import {bytesToBase64} from './encoding';
 import {ImageStyle} from './types';
 
-/** Where a level's pictures come from: the model, or the tree, which is
-    assumed complete. A picture the tree lacks is an error, not a fallback. */
+/** Where a level's pictures come from: the model, or the tree first and
+    the model for a picture the tree lacks. */
 export const IMAGE_SOURCES = ['live', 'cached'] as const;
 export type ImageSource = (typeof IMAGE_SOURCES)[number];
 

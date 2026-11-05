@@ -78,6 +78,8 @@ interface GeneratedPicture {
   prompt: string;
   /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
+  /** Served from the cache rather than drawn by the model. */
+  cached: boolean;
 }
 
 /** Settings from the Advanced popover: a typed prompt that replaces the
@@ -297,25 +299,15 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     setRatingDismissed(false);
     setError(null);
     playSound('go');
+    // A filling the tree lacks, or a lookup that fails, goes to the model.
     let cached: CachedImage | undefined;
     if (fromCache) {
       try {
         cached = await findCached();
       } catch (e) {
-        if (run !== runRef.current) {
-          return;
-        }
-        console.error('Image cache lookup failed:', e);
-        setError("Couldn't make the picture. Try again.");
-        setMode('edit');
-        return;
+        console.warn('Image cache lookup failed:', e);
       }
       if (run !== runRef.current) {
-        return;
-      }
-      if (!cached) {
-        setError("This picture isn't ready yet. Try different words.");
-        setMode('edit');
         return;
       }
     }
@@ -375,7 +367,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       if (run !== runRef.current) {
         return;
       }
-      if (fromCache) {
+      if (cached) {
         const elapsed = Date.now() - startedAt;
         await new Promise(resolve =>
           setTimeout(resolve, Math.max(MIN_CACHED_GENERATING_MS - elapsed, 0))
@@ -409,6 +401,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
         prompt,
         sent,
+        cached: !!cached,
       };
       setChosenPicture(entry);
       setMode('result');
@@ -591,6 +584,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
             chosenPicture.result.pixelGridSize && styles.pixelArt
           )}
         />
+      )}
+      {/* A reviewer's mark while the tree is filled in; comes out before
+          ship. Keyed like the reveal, so each picture shows it afresh. */}
+      {chosenPicture.cached && (
+        <span key={`cached-${chosenPicture.id}`} className={styles.cachedTag}>
+          cached
+        </span>
       )}
       {/* Keyed by picture, so each new one remounts and plays the reveal
           once. */}
