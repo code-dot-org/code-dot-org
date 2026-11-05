@@ -232,5 +232,3 @@ never calls: the APK is about 2 MB rather than 9. Each release build writes
 traces back into the original names; keep the one for every APK submitted.
 
 `yarn dev` serves the landing page in a browser.
-
-[CHANGELOG.md](CHANGELOG.md) lists what changed in each version.
