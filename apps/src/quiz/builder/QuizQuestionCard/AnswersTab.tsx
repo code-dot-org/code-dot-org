@@ -27,7 +27,12 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
       <PairsEditor draft={draft} onChange={onChange} disabled={disabled} />
     )}
 
-    <FormFieldWrapper label="Answer explanation (optional)">
+    <FormFieldWrapper
+      label="Answer explanation (optional)"
+      size="s"
+      color="gray"
+      className={builderCommonStyles.fullWidthField}
+    >
       <textarea
         className={builderCommonStyles.textarea}
         name="explanation"

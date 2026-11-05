@@ -1,4 +1,6 @@
 import {
+  drawStripCell,
+  stripCellOrigin,
   AnimationPoses,
   CHARACTER_POSE_ORDER,
   CHARACTER_STRIP_FRAME_COUNT,
@@ -157,6 +159,23 @@ describe('SpriteLab2 characterAnimations', () => {
     expect(jumpFrame(-3, -0.75)).toBe(1);
   });
 
+  it('cuts one cell of a strip into a canvas of its size', () => {
+    const drawImage = jest.fn();
+    const getContext = (() =>
+      ({
+        drawImage,
+      } as unknown as CanvasRenderingContext2D)) as unknown as typeof HTMLCanvasElement.prototype.getContext;
+    jest
+      .spyOn(HTMLCanvasElement.prototype, 'getContext')
+      .mockImplementation(getContext);
+    const image = {naturalWidth: 96} as HTMLImageElement;
+    const cell = drawStripCell(image, {x: 32, y: 48}, 4);
+    expect([cell.width, cell.height]).toEqual([32, 48]);
+    // Index 4 of a three-column strip: second row, second column.
+    expect(drawImage).toHaveBeenCalledWith(image, 32, 48, 32, 48, 0, 0, 32, 48);
+    jest.restoreAllMocks();
+  });
+
   it('the strip: ranges fit, and the standing frame is shared', () => {
     Object.values(CHARACTER_STRIP_POSES).forEach(range => {
       expect(range.start + range.count).toBeLessThanOrEqual(
@@ -174,5 +193,20 @@ describe('SpriteLab2 characterAnimations', () => {
     expect(CHARACTER_STRIP_POSES['jump-right']!.start).toBe(
       walk.start + walk.count
     );
+  });
+});
+
+describe('stripCellOrigin', () => {
+  const frame = {x: 64, y: 64};
+  it('walks one row of cells left to right', () => {
+    expect(stripCellOrigin(320, frame, 0)).toEqual({x: 0, y: 0});
+    expect(stripCellOrigin(320, frame, 4)).toEqual({x: 256, y: 0});
+  });
+  it('wraps to the next row at the image width', () => {
+    expect(stripCellOrigin(128, frame, 2)).toEqual({x: 0, y: 64});
+    expect(stripCellOrigin(128, frame, 3)).toEqual({x: 64, y: 64});
+  });
+  it('treats an image narrower than a cell as one column', () => {
+    expect(stripCellOrigin(32, frame, 1)).toEqual({x: 0, y: 64});
   });
 });

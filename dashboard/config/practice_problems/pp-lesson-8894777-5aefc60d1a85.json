@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894777-5aefc60d1a85",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following actions can be performed using if-statements in an app? (Select all that apply)",
+  "solution": [
+    {
+      "option": "Change the displayed message based on predictions.",
+      "correct": true
+    },
+    {
+      "option": "Control the layout of the app.",
+      "correct": false
+    },
+    {
+      "option": "Navigate to a different screen in the app.",
+      "correct": true
+    },
+    {
+      "option": "Log user input to a database.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "5f405d1d-2bcf-4b7c-82a6-af8f560ad329"
+  ]
+}

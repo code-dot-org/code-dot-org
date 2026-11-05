@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:22:19.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "#### Make your page choose, count, or remember\r\n\r\n1. Pick one idea for your page: choose from a list, count with a number, or remember something.\r\n2. Tell the AI how it should work.\r\n3. Try it out. Then tell the AI what to change or add next.\r\n\r\n*Example: “Add a button that picks a random club event from a list and shows it on the page.”*\r\n\r\n**Check your prompt:** Does it say what your page chooses, counts, or remembers, and how?",
+    "project_template_level_name": "adaptive-less-checkpoints-template-main-website-project",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrr4XSvrBGnnT0jUzxu\ntDNSPBZy8SWSxWY++Am6WcE2LTeaPeBjeZgxWe7aA+yg5VY0kCEiGn0ePO3F\nXL4T0woUFWEuM3HkA9kgjimSKF5PljX5EFF42sItIzMeTby9ScSj7VlE0qs6\nyq6xhmtMRL+ES1DHewjLglBQQOoZYqyziHxuHb1t8EAEL/YB9uWkq0qPUq+W\neFbMp1/iRimByOKxFdcx1uypQc94DaLGKJAcaePzhmCzdrTK29MTEaQx9xgs\nqMr7pfQIDNcBF6WCsA6Pj/PeA5wxsk4dVjhsIOHal9k+IOorzXMq/IPg7M2M\n6LuU5BpUc6Q0YAcrkMWP0Y8KGVHWL4aT2nZc6aDxOM1APvDZMkKIits1D+KU\nlUHLL4lT3VJ4/7+DCveuSFXY7MDSDytcReS7jj9uBY07PFDUjwxPfUswYUMg\nhfn3Qlwy1kbhVtxZWzNmvpKCbfdlobAJ8CIl76J6UtywzVU/hyV9kCz84Vj4\nTj+i+ZqZKb6XoVur7JwgHUsn7CsHiZMTs6uPCRFnYRUn7cnYhVn3SmprsGPN\nH0KQyWTy1bqFUxp38oOIE3omNQjf3ri3ERG/ALbEZ0uk32Y1W7gB0Fg9MZ2k\ndt488gMf3VzNwSUOZl8w+H5dj3O/mZrnN2y0xJtykwF6hrnsho1RDW/VaT3e\n+AOya6d7neTzROrRSDzENkx9l/AKyfQtuTMYLVOZNne87kBJK3yMhOsLnjky\nG7/Djs8Bfa57eR22mLpDwMdgZlF+W1DpLEBrCOvJ1ncM8z8tbmXUvRedPhSt\nwNs0vOXTEugoSYv/UhoGAkyRemQs8dTKoSbk/GwjIvixN7JtOGsKuPJPwiQL\n1rcs/yh8hAyXivzuo5U+kP2cxhNyJ53vdVAkZ2dWVINZOcNP0OaAHHKXzYk2\n9t9KHuzibrlfQ+Yk5jBMONCr0WakJl5q9v9ZVlUmi2Js73px4rTXpLF9aiqX\n0cU+UUkWkvOeHu0XF4CEJuOvoGrxeQo0Ru+iM+Ab7VpENS0aVIRbemtjDCCh\nocKspr8jw9oRqiNt04M1PFVG6/4kTGZov+1IHRSylSNVxT07xnlQ18o5/ZeK\nN6Qzg9gOICeENpUQ57VXzfF3DqFxiHqwGxRohgZWcg4YAkEBm8/u0+ELy4lG\nKoGdetLgssrqbJHGTgJ6oFFMuz2EegriKRLjPN1/aTXbeqxIkWL9RM8+krhO\nDuTJQujRlNkUxptji3vmQhNYGF5U6lu9TpByy0wKJiAPjC1cUXW2vTTBp4Zd\ntyqGbl1j9ptG+s56s+xiUbj8d1bwzOlmv+g4qLGlrau5dzG04NK9lBJOqFxK\nVej7vf398jws9QX5TGxSD1yPYmoYuEivYqC01GFoXK4C4Haj0e/hJ5UAmA6S\nFqY1Meg32PkVz0UD96RVlfbDUucukdQkdKvctDXISuBRTBodmdo6DYcTSIfY\nWIHUAVH5ZJEPQM6OuG1/KgrBVW316DEHAgIqxs4soD/KJ6qLPt8ERYgjKJN3\nkTG68lW8WkaZJEeMr0cmQD8iXeHuSHyzk43/M82zfzPZujE4lml8kBUj0jBo\neUYOJ6oRZKchv9sTTqPmQuDhnL7RLIGYm4Fh2r05xetldPr+xHCIS9JNOwWi\nwXe4kw3qe8ujNx2RAKiF2E6U2E6UUx453859vSdjwWBY1edif20R2aLk1IA8\nlXN8DVN22hxRdmEZG0h3tEo5dYLfr2DmwTTuaA1X9u5C6rrfvZMciAoFblm1\nMTKUbA9fZkvipahhBFqYUGLfKtqIEmOWHwnrgIa7I7GHpREHmePQ46ajraGU\ncz4veBbmZ/FKBLFRfizx2yAh7917sWAt4JjphUEvNk9k15C9Y0/VAJJWmkU8\nXGhjiFD7vc1nztyliHBFbWOQA79yyz9yQcZhSQjVMHuvga3Il0O8ZLy8j7RD\nQb/CGRMG9y92CBEdPFfoS7BjVf749cp29ZHoNHmXCts/Kx2mAQ55sdvQ/g5a\nrSUsbeK/tbzyoH/oG4HxTM67GkPkecBi3yP6fiyslahDkHecmB47SFkAPPDm\nsxQPAVQNW0vabSLL4Mpi2PDZw/XB2PjQdc7f2oeXl4a2f5o46Zpm2arPa2vX\nCliPjS5+Pa5sAQI2CLVDPPFtWC2R755wYoGY5uEgsYROjBeCmbTzsSIQGiRx\nM0dIkKhtynOljdPsZIN+L0pYCNmIMAPmgsnkWTKQjkU5fhuXE91ReeE6RCTe\nDTSoWcQfDdYkgA6toX+ZbFNJzH/MS23Bd726+mmNKq8TrH7XbS9f3zWUR2j/\nWa1YXu890cTYoeZGOtBH+V/z9GJ6CUyABc3gvvwPy8uQLcJIhnVNJxzh9nkY\nvsUYe7kl7qwnq5UnUiglWGe/O8i99AWVyjrkPER4RdZgvFKR9aSqALLrPBq9\nbcYxN4l+HEGd0X79kL+lna404AWjrsFe9tSxSHbYANomG3jPUC7125I4iQ0w\n5ot1TxI80TvppiZT+97DYGuAH8a4/lqDCqJdQBS+IFpLvSYwkLUmeMVwddA4\nXdZ+bE69qnFq8bPgqM07C3iilG07DgShde8jJCMI50Igcr+pZC4VmLsIEqWB\nCizh0v862BAF2ZGXycCGXMw8GsW9v0o3JzOnZ382aG5IboExYBpZmNsVXJ7y\nbFfeKqA8R7fa61ntJBH7AT4eihpvD93XYpEI07QlRRlBKqyyyaQBIAZh06Ju\nza7paBY4Ca3loVQ2Tv6edNXBj11oj6G8yPlDlEQVhf6ydcXksIXs69rTdPrE\nDZGfrGHax+hcvYeq5PZpz2QQM6lYhX/fMbF2ZRRB1OeEaFPLYfJFAyE16zaX\nEa4/S+7XjEcweOSF+rJNMPKhBuJfnhwFBIGhEl1vYnnXO0NqOsrDGnpyMI12\n1gIUVAb7kUa0hb9ilfsSwLG5a7s1D/Rj+n9xK0Z5mECwzOIZSImicPnggHFK\nO16v7NEnVs9o/qxpEv+zkQZ/25U0Be+KSXVIKJ6Aa37HxHzAEk9p7dsFtfMo\ni6uu7zDDYAaHB/iGsLeI6V0aFd8ZcT/lpWpDuVPIysM8mF2Dddtj/W21Jrun\nKuKsR5gKQrRD33yE07Jrdj0TXYAgWQzPU//Qx+aDEf/elJlAENykatl6YrMe\n4MK2+HCfTD7/RXjpJC8gbtaZ5h1EMTG7+P20i7lDtzSRGkGoU3spbEeYloUs\nJy4OTqUkuyLcFIdJEim33zlzn/vN/7/+GcbselK3YxqV5Sk/XpXNWLiYb1RZ\nleCPlyTk5kQzeqkYoaFcEsE7dvKkA7JaJF5bQn3uDTE/sN27O2G2KP+LfYZO\nKUtp4QlPnruxRACnASXcA63xWNnSKiZPZCQwuJ0EVYSQNenrCXPs3QZqI5ju\n/Aa7H6HX0JH3Bcq+fROHWAcwLIdXfXau4S0407Dp/Rl57ITVmdlt4cprpQjc\n9cVHVW/K90WDz2hUywbC1lIHnALv6bJNPL8/3EFdv9kCYozt3VW8kwMpv8ae\nfO2lftA6GV4Rkh+gqdEDGhsEc10z0JhhB8J0VWsbpryz8bGFV0Ycwt2LVPTh\nHwp8bmVMZn4Z/Y0T0Qx3tGcqRkczPBMUMIvSxh9HPvgMl7B7j8VtsBbm3pF2\nHYyVrEOzIEcLDPBVOa+H/IrnrVZo7J9r2TfPMb1a0ZsruVwtKmcGwWZtEzv6\nTMSqMo+WHx9ogYI2lZlAyyse6aKfswTtoeDynDyx7T0Hz19TFwNUSureohmm\nYxzFH5BR84+/S1xR7LDi2vMmZM89LE1tgEZj3RUiJYDuH5Kl5m+4/x+Fc89x\n50PVJBAsNnHoQ8iox5UC3g==\n",
+    "generate_outline": "Instruct the AI to add interactive elements to your page that involve choosing, counting, or remembering information based on your design.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:22:25 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:22:25 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:22:33 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:22:33 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 04:33:48 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:10:29 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

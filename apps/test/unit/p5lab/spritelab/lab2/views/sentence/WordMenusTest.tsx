@@ -39,14 +39,20 @@ const CHAINED_SENTENCE: Sentence = {
 const Harness: React.FunctionComponent<{
   initial?: Choices;
   sentence?: Sentence;
-}> = ({initial = {}, sentence = CHARACTER_SENTENCE}) => {
+  layout?: React.ComponentProps<typeof WordMenus>['layout'];
+}> = ({initial = {}, sentence = CHARACTER_SENTENCE, layout}) => {
   const [choices, setChoices] = useState<Choices>(initial);
   return (
-    <WordMenus sentence={sentence} choices={choices} onChange={setChoices} />
+    <WordMenus
+      sentence={sentence}
+      choices={choices}
+      onChange={setChoices}
+      layout={layout}
+    />
   );
 };
 
-// The sentence as read: without the emoji and blanks that are hidden
+// The sentence as read: without the icons and blanks that are hidden
 // from the accessible tree.
 const sentenceText = () => {
   const p = (document.querySelector('p') as HTMLElement).cloneNode(
@@ -59,6 +65,9 @@ const placeholderShown = () =>
   !!document.querySelector('p [class*="placeholder"]');
 const next = () =>
   fireEvent.click(screen.getByRole('button', {name: 'Next words'}));
+const nextDisabled = () =>
+  (screen.getByRole('button', {name: 'Next words'}) as HTMLButtonElement)
+    .disabled;
 
 describe('WordMenus', () => {
   it('holds on the required set until its word is chosen', () => {
@@ -70,15 +79,8 @@ describe('WordMenus', () => {
       name: 'Next words',
     }) as HTMLButtonElement;
     expect(nextButton.disabled).toBe(true);
-    // Only the required set's dot is out until its word is chosen.
-    expect(
-      screen.getAllByRole('button', {name: /^[a-z ]+ words/})
-    ).toHaveLength(1);
     fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
     expect(nextButton.disabled).toBe(false);
-    expect(
-      screen.getAllByRole('button', {name: /^[a-z ]+ words/})
-    ).toHaveLength(3);
   });
 
   it('returns to the required set when its word is removed elsewhere', () => {
@@ -97,7 +99,7 @@ describe('WordMenus', () => {
     expect(
       screen.getByRole('group', {name: 'creature (pick one)'})
     ).toBeTruthy();
-    expect(screen.queryByRole('button', {name: 'sparkly'})).toBeNull();
+    expect(screen.queryByRole('button', {name: 'cute'})).toBeNull();
     expect(
       (
         screen.getByRole('button', {
@@ -107,8 +109,8 @@ describe('WordMenus', () => {
     ).toBe(true);
     next();
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'sparkly'})).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', {name: 'clothing words'}));
+    expect(screen.getByRole('button', {name: 'cute'})).toBeTruthy();
+    next();
     expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
     expect(
       (screen.getByRole('button', {name: 'Next words'}) as HTMLButtonElement)
@@ -119,8 +121,9 @@ describe('WordMenus', () => {
   it('lays out a hidden longest sentence beside the real one', () => {
     render(<Harness initial={{creature: 'cat'}} />);
     const ghost = document.querySelector('p[aria-hidden]') as HTMLElement;
+    // The icons carry no text; the longest words by width are picked.
     expect(ghost.textContent?.replace(/\s+/g, ' ')).toBe(
-      'A 😊friendly 👾monster wearing a 👓glasses.'
+      'A robotic astronaut wearing a glasses.'
     );
     expect(sentenceText()).toBe('A cat.');
   });
@@ -156,24 +159,25 @@ describe('WordMenus', () => {
 
   it('opens the phrases one after another and clears them from the back', () => {
     render(<Harness initial={{creature: 'cat'}} sentence={CHAINED_SENTENCE} />);
-    // Creature, adjective and the first phrase are open; the rest wait.
-    expect(
-      screen.getAllByRole('button', {name: /^[a-z ]+ words/})
-    ).toHaveLength(3);
-    expect(screen.queryByRole('button', {name: 'thing words'})).toBeNull();
-    fireEvent.click(screen.getByRole('button', {name: 'clothing words'}));
-    fireEvent.click(screen.getByRole('button', {name: 'hat'}));
-    expect(screen.getByRole('button', {name: 'thing words'})).toBeTruthy();
-    expect(screen.queryByRole('button', {name: 'detail words'})).toBeNull();
+    // Creature, adjective and the first phrase are open; the rest wait on
+    // the phrase before them, so Next stops at the last open set.
     next();
+    next();
+    expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
+    expect(nextDisabled()).toBe(true);
+    fireEvent.click(screen.getByRole('button', {name: 'hat'}));
+    expect(nextDisabled()).toBe(false);
+    next();
+    expect(screen.getByRole('group', {name: 'thing'})).toBeTruthy();
+    expect(nextDisabled()).toBe(true);
     fireEvent.click(screen.getByRole('button', {name: 'wand'}));
-    expect(screen.getByRole('button', {name: 'detail words'})).toBeTruthy();
+    expect(nextDisabled()).toBe(false);
     expect(sentenceText()).toBe('A cat wearing a hat holding a wand.');
     // Clearing the hat takes the wand with it and closes the later sets.
     fireEvent.click(screen.getByRole('button', {name: 'Remove hat'}));
     expect(sentenceText()).toBe('A cat wearing a .');
-    expect(screen.queryByRole('button', {name: 'thing words'})).toBeNull();
     expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
+    expect(nextDisabled()).toBe(true);
   });
 
   it('shows where the set on show would land, dimmed, until a word is chosen', () => {
@@ -182,12 +186,12 @@ describe('WordMenus', () => {
     next();
     expect(placeholderShown()).toBe(true);
     expect(sentenceText()).toBe('A cat.');
-    fireEvent.click(screen.getByRole('button', {name: 'sparkly'}));
+    fireEvent.click(screen.getByRole('button', {name: 'cute'}));
     expect(placeholderShown()).toBe(false);
-    expect(sentenceText()).toBe('A sparkly cat.');
+    expect(sentenceText()).toBe('A cute cat.');
     next();
     expect(placeholderShown()).toBe(true);
-    expect(sentenceText()).toBe('A sparkly cat wearing a .');
+    expect(sentenceText()).toBe('A cute cat wearing a .');
   });
 
   it('starts as the sentence waiting for its noun, then reads as prose', () => {
@@ -198,10 +202,10 @@ describe('WordMenus', () => {
     expect(placeholderShown()).toBe(false);
     expect(sentenceText()).toBe('A dragon.');
     next();
-    fireEvent.click(screen.getByRole('button', {name: 'sparkly'}));
+    fireEvent.click(screen.getByRole('button', {name: 'cute'}));
     next();
     fireEvent.click(screen.getByRole('button', {name: 'crown'}));
-    expect(sentenceText()).toBe('A sparkly dragon wearing a crown.');
+    expect(sentenceText()).toBe('A cute dragon wearing a crown.');
   });
 
   it('clears a word on a second click or its x, the required one included', () => {
@@ -246,5 +250,27 @@ describe('WordMenus', () => {
     ) as HTMLElement;
     fireEvent.drop(blank, {dataTransfer});
     expect(sentenceText()).toBe('A grumpy cat.');
+  });
+
+  it('lays every open set out at once in clusters, the blank at the first unfilled', () => {
+    render(<Harness layout="clusters" />);
+    expect(screen.queryByRole('button', {name: 'Next words'})).toBeNull();
+    expect(
+      screen.getByRole('group', {name: 'creature (pick one)'})
+    ).toBeTruthy();
+    expect(screen.queryByRole('group', {name: 'adjective'})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'cat'}));
+    expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
+    expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'cute'})).toBeTruthy();
+    expect(placeholderShown()).toBe(true);
+    expect(sentenceText()).toBe('A cat.');
+  });
+
+  it('moves up and down in the vertical carousel', () => {
+    render(<Harness initial={{creature: 'cat'}} layout="vcarousel" />);
+    expect(screen.getByRole('button', {name: 'Next words'})).toBeTruthy();
+    next();
+    expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
   });
 });

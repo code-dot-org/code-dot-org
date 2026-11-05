@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T00:08:32.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\nimport re\n\n\ndef term_frequency(term, tokens):\n  # TODO 1: Count how many times term appears in tokens\n  return 0\n\n\ndef inverse_document_frequency(term, videos):\n  # TODO 2: Compute the inverse document frequency of term\n  return 1\n\n\ndef score(term, video, videos):\n  tf = term_frequency(term, video[\"tokens\"])\n  # TODO 3: Score the term with tf-idf instead of term frequency alone\n  return tf\n\n\n# Split text into tokens\ndef tokenize(text):\n  return re.findall(r\"\\w+\", text)\n\n\n# Drop the stop words from a list of tokens\nSTOP_WORDS = [\"a\", \"an\", \"the\", \"of\", \"and\", \"in\", \"to\"]\n\n\ndef remove_stop_words(tokens):\n  kept = []\n  for token in tokens:\n    if token.lower() not in STOP_WORDS:\n      kept.append(token)\n  return kept\n\n\n# Read the videos\nf = open(\"videos.csv\")\nvideos = list(csv.DictReader(f))\nf.close()\n\n# Normalize the transcripts\nfor video in videos:\n  video[\"tokens\"] = tokenize(video[\"transcript\"])\n  video[\"tokens\"] = remove_stop_words(video[\"tokens\"])\n\n# Score every word of every video and print its best keyword\nfor video in videos:\n  scores = {}\n  for term in set(video[\"tokens\"]):\n    scores[term] = score(term, video, videos)\n  best_keyword = max(scores, key=scores.get)\n  print(f\"{video['title']}: {best_keyword}\")",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "videos.csv",
+          "contents": "title,transcript\nFluffy Pancakes,\"Today we make pancakes from scratch. Whisk flour, milk and one egg into a smooth batter, then let the batter rest while the pan heats. Melt a little butter in the pan and pour in a ladle of batter. When bubbles cover the top, flip it. Flip the next one sooner if the pan runs hot, and wipe the pan before every pour. Stack the pancakes high.\"\nTomato Soup,\"This tomato soup needs only a few things. Warm some oil in a deep pan and cook an onion until it is soft. Add the tomatoes with a pinch of salt and let the pan simmer. Stir the tomatoes often so nothing sticks to the pan. Blend the tomatoes smooth, pour the soup back into the pan, and taste it before you serve it hot.\"\nGarlic Bread,\"This garlic bread is the easiest side dish. Mash soft butter with chopped garlic and a little salt. Split a loaf and spread the garlic butter on both halves. Heat a wide pan, lay the halves in the pan with the cut side down, and press them flat. When the pan smells toasty, lift the bread out, slice it, and wipe the pan for the next batch.\"",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 00:09:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:09:27 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:10:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:10:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

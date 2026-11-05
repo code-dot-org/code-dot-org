@@ -33,6 +33,12 @@ export const IMAGE_STYLE_LABELS: Record<ImageStyle, string> = {
   pixel: 'Pixel art',
 };
 
+/** An image's kind: its type, and for a sprite what it depicts. */
+export interface ImageKind {
+  imageType: ImageType;
+  subject?: ImageSubject;
+}
+
 /** What the dialog calls an image: a sprite by its subject, else its type. */
 export function imageKindLabel(
   imageType: ImageType,
@@ -42,6 +48,23 @@ export function imageKindLabel(
     return subject === 'object' ? 'Object' : 'Character';
   }
   return IMAGE_TYPE_LABELS[imageType];
+}
+
+/** The kind as a common noun in running text: "character", "object". */
+export function imageKindNoun(
+  imageType: ImageType,
+  subject?: ImageSubject
+): string {
+  return imageKindLabel(imageType, subject).toLowerCase();
+}
+
+/** The kind with its article: "a character", "an object". */
+export function imageKindPhrase(
+  imageType: ImageType,
+  subject?: ImageSubject
+): string {
+  const noun = imageKindNoun(imageType, subject);
+  return `${/^[aeiou]/.test(noun) ? 'an' : 'a'} ${noun}`;
 }
 
 /**
@@ -56,8 +79,9 @@ export interface ImageGenerationMetadata {
       and on other types. */
   subject?: ImageSubject;
   style: ImageStyle;
-  /** Sending the same seed and prompt again asks for the same image. */
-  seed: number;
+  /** Sending the same seed and prompt again asks for the same image.
+      Absent on a cached picture, which has no roll to replay. */
+  seed?: number;
   /** Sampling wildness the user chose; absent = the service default. */
   temperature?: number;
   /** Logical grid the pixel prompt asked for (e.g. 64 for 64x64); absent on
@@ -71,4 +95,8 @@ export interface ImageGenerationMetadata {
   /** The stance a character set's prompts were written for; absent on one
       picture, and on sets made before plans existed (upright). */
   bodyPlan?: BodyPlan;
+  /** The sentence the words came from, and the word chosen for each of its
+      slots, so the words can be put back; absent on a typed prompt. */
+  sentenceId?: string;
+  choices?: Record<string, string>;
 }

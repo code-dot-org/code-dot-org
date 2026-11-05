@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-6284596-8d0b15d8c1b6",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is the primary purpose of using parameters in a function?",
+  "solution": [
+    {
+      "option": "To create variables within the function.",
+      "correct": false
+    },
+    {
+      "option": "To allow the function to accept different values each time it is called.",
+      "correct": true
+    },
+    {
+      "option": "To define the output of the function.",
+      "correct": false
+    },
+    {
+      "option": "To make the function run faster.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "f6424eab-71c9-4cfa-a85f-7b428c44bb09",
+    "714dd803-6137-42ad-97ff-6b09f16627e9"
+  ]
+}

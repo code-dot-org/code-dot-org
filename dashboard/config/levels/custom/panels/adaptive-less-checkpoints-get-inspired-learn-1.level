@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-11-03T04:17:22.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-less-checkpoints-get-inspired-learn-1-ecc62267-a1a8-4f82-a766-109ece6a723c",
+        "text": "You will build your own website.",
+        "imageUrl": "https://images.code.org/49718bda9c2d0da1474091c5c55f8af0-adaptive-less-checkpoints-get-inspired-learn-1-panel-1-68f61f0d-1e97-406b-a5a4-10c8a99dea81.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "adaptive-less-checkpoints-get-inspired-learn-1-e60ec7bf-b4f5-4e93-aec1-9a8a950ddcf2",
+        "text": "AI will help bring your ideas to life.",
+        "imageUrl": "https://images.code.org/373f97747728371324dfe4bb78740b5f-adaptive-less-checkpoints-get-inspired-learn-1-panel-2-fe81bc6a-b5a2-4b73-8708-f6bd56f34cc8.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "adaptive-less-checkpoints-get-inspired-learn-1-eac21927-cda5-4043-aebd-74862a558f66",
+        "text": "This project takes about an hour to complete.",
+        "imageUrl": "https://images.code.org/916bc0ca04265dd0da0412195cd68fa9-adaptive-less-checkpoints-get-inspired-learn-1-panel-3-4e2fd66a-43ee-439d-b135-e4b011017f30.png",
+        "layout": "text-top-right"
+      }
+    ],
+    "generate_outline": "Introduce what students will build (a website), how AI will assist them, and the estimated time for the project (about an hour)."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:17:54 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:17:54 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

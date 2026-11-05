@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-10-28T00:00:00.000Z",
+  "created_at": "2026-10-30T09:28:03.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -31,6 +31,24 @@
     "extra_scene": {
       "id": "second-scene",
       "name": "Scene 2",
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "spritelab2_setAsPlatformPlayer"
+                }
+              }
+            }
+          ]
+        }
+      },
       "worldStartPattern": [
         "..........",
         "..........",
@@ -90,8 +108,36 @@
         }
       ]
     },
-    "long_instructions": "# A new scene\nWe made you a second scene. Drag **go to scene** under one of your **when touches** events, then click **Play** and get there.",
-    "header_label": "A new scene"
+    "long_instructions": "# A new scene\r\nA **scene** is one screen of your quest. We made you a second one!",
+    "header_label": "A new scene",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-01 18:37:41 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
+  <blocks/>
 </GamelabJr>

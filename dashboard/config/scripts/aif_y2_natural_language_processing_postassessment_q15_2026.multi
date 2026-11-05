@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-postassessment-q15-2026'
+
+right 'It will not perform well, since its training data does not include enough information to produce recipes'
+wrong 'It will perform well, because the model will search for cookbooks to gain additional information'
+wrong 'It will not perform well, since a model can only generate sentences that it has seen before'
+wrong 'It will perform well, since grammar is the same in every corpus'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+If a language model is trained only on a corpus of sports articles, what is most likely to happen if a user asks it to generate a cookie recipe?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Text Corpora
+MARKDOWN

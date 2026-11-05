@@ -1,6 +1,7 @@
 import {act, fireEvent, render, screen} from '@testing-library/react';
-import React from 'react';
+import React, {useState} from 'react';
 
+import {Progress} from '@cdo/apps/adaptive/progress';
 import {Checkpoint, Step} from '@cdo/apps/adaptive/types';
 import {
   PathwayContext,
@@ -8,6 +9,37 @@ import {
 } from '@cdo/apps/adaptive/views/PathwayContext';
 import StepPlayer from '@cdo/apps/adaptive/views/steps/StepPlayer';
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
+
+jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
+  isAdaptiveAiEnabled: () => true,
+}));
+
+// Reports whether a build is requested of it when it mounts.
+jest.mock('@cdo/apps/adaptive/views/steps/LevelStep', () => {
+  const React = require('react');
+  const {
+    usePathwayContext,
+  } = require('@cdo/apps/adaptive/views/PathwayContext');
+  function FakeLevelStep({
+    step,
+    onComplete,
+  }: {
+    step: {id: string};
+    onComplete: () => void;
+  }) {
+    const {buildRequested} = usePathwayContext();
+    const [build] = React.useState(buildRequested);
+    return (
+      <div>
+        level: {step.id} build: {String(build)}
+        <button type="button" onClick={onComplete}>
+          Continue
+        </button>
+      </div>
+    );
+  }
+  return {__esModule: true, default: FakeLevelStep};
+});
 
 jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
   __esModule: true,
@@ -256,6 +288,243 @@ describe('StepPlayer', () => {
       expect(screen.getByText('header: Basics: one')).toBeTruthy();
       // URL already correct → no duplicate history entry added.
       expect(pushState).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('with branching steps', () => {
+    const ask: Step = {
+      id: 'ask',
+      title: 'Ask',
+      kind: 'questions',
+      questions: [
+        {
+          id: 1,
+          type: 'MultipleChoiceQuestion',
+          questionName: 'ask',
+          questionTitle: 'Which?',
+          choices: [
+            {id: 'a', text: 'Choice A'},
+            {id: 'b', text: 'Choice B'},
+          ],
+        },
+      ],
+    };
+    const branched: Checkpoint = {
+      ...checkpoint,
+      steps: [
+        ask,
+        {
+          ...placeholder('if-a'),
+          showIf: {stepId: 'ask', questionId: 1, choiceId: 'a'},
+        },
+        {
+          ...placeholder('if-b'),
+          showIf: {stepId: 'ask', questionId: 1, choiceId: 'b'},
+        },
+        placeholder('after'),
+      ],
+    };
+
+    // Holds progress as PathwayApp does, so a saved answer reveals its branch.
+    const renderBranched = (
+      initial: Progress = {steps: {}},
+      initialStepId?: string
+    ) => {
+      const onFinish = jest.fn();
+      const Host = () => {
+        const [progress, setProgress] = useState(initial);
+        return (
+          <PathwayContext.Provider
+            value={{progress} as unknown as PathwayContextValue}
+          >
+            <StepPlayer
+              checkpoint={branched}
+              initialStepId={initialStepId}
+              onStartStep={jest.fn()}
+              onCompleteStep={jest.fn()}
+              onLeaveStep={jest.fn()}
+              onSaveAnswers={(step, questionId, list) =>
+                setProgress(p => ({
+                  steps: {
+                    ...p.steps,
+                    [step.id]: {
+                      timeSpent: 0,
+                      answers: {
+                        ...p.steps[step.id]?.answers,
+                        [questionId]: list,
+                      },
+                    },
+                  },
+                }))
+              }
+              onExit={jest.fn()}
+              onFinish={onFinish}
+            />
+          </PathwayContext.Provider>
+        );
+      };
+      render(<Host />);
+      return {onFinish};
+    };
+
+    it('goes to the branch the answer reveals, skipping the others', () => {
+      const {onFinish} = renderBranched();
+      expect(screen.getByText('header: Basics: Ask')).toBeInTheDocument();
+
+      fireEvent.click(screen.getByRole('radio', {name: /Choice B/}));
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(screen.getByText('header: Basics: if-b')).toBeInTheDocument();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('header: Basics: after')).toBeInTheDocument();
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Complete checkpoint'})
+      );
+      expect(onFinish).toHaveBeenCalled();
+    });
+
+    it('falls back to the first step when asked to start on a hidden branch', () => {
+      renderBranched({steps: {}}, 'if-a');
+      expect(screen.getByText('header: Basics: Ask')).toBeInTheDocument();
+    });
+
+    it('counts the last visible step as the finish', () => {
+      const {onFinish} = renderBranched({
+        steps: {
+          ask: {
+            timeSpent: 0,
+            status: 'complete',
+            answers: {1: [{answerId: 'a'}]},
+          },
+        },
+      });
+      fireEvent.click(screen.getByRole('radio', {name: /Choice A/}));
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(screen.getByText('header: Basics: if-a')).toBeInTheDocument();
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Complete checkpoint'})
+      );
+      expect(onFinish).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('with a review step', () => {
+    const planned: Checkpoint = {
+      ...checkpoint,
+      plan: {template: 'A site that is {feel}.'},
+      steps: [
+        {
+          id: 'ask',
+          title: 'Ask',
+          kind: 'questions',
+          questions: [
+            {
+              id: 1,
+              type: 'MultipleChoiceQuestion',
+              questionName: 'feel',
+              questionTitle: 'How should it feel?',
+              choices: [
+                {id: 'a', text: 'Calm'},
+                {id: 'b', text: 'Bold'},
+              ],
+              plan: 'feel',
+            },
+          ],
+        },
+        {id: 'review', title: 'Review', kind: 'review', questionId: 2},
+        placeholder('between'),
+        {
+          id: 'starter',
+          title: 'Starter',
+          kind: 'level',
+          level: 'starter',
+          project: true,
+          projectPrompt: 'A first version.',
+        },
+      ],
+    };
+    const answered: Progress = {
+      steps: {ask: {timeSpent: 0, answers: {1: [{answerId: 'b'}]}}},
+    };
+
+    const renderReview = () => {
+      const calls: unknown[][] = [];
+      const Host = () => {
+        const [progress, setProgress] = useState(answered);
+        const [buildRequested, setBuildRequested] = useState(false);
+        return (
+          <PathwayContext.Provider
+            value={
+              {
+                progress,
+                checkpoint: planned,
+                buildRequested,
+                setBuildRequested,
+              } as unknown as PathwayContextValue
+            }
+          >
+            <StepPlayer
+              checkpoint={planned}
+              initialStepId="review"
+              onStartStep={jest.fn()}
+              onCompleteStep={jest.fn()}
+              onLeaveStep={jest.fn()}
+              onSaveAnswers={(step, questionId, list) => {
+                calls.push([step.id, questionId, list]);
+                setProgress(p => ({
+                  steps: {
+                    ...p.steps,
+                    [step.id]: {
+                      timeSpent: 0,
+                      answers: {
+                        ...p.steps[step.id]?.answers,
+                        [questionId]: list,
+                      },
+                    },
+                  },
+                }));
+              }}
+              onExit={jest.fn()}
+              onFinish={jest.fn()}
+            />
+          </PathwayContext.Provider>
+        );
+      };
+      render(<Host />);
+      return {calls};
+    };
+
+    it('shows the plan filled from the answers', () => {
+      renderReview();
+      expect(screen.getByText('A site that is', {exact: false})).toBeTruthy();
+      expect(screen.getByText('Bold', {selector: 'strong'})).toBeTruthy();
+    });
+
+    it('saves a build decision and asks the next project step to build', () => {
+      const {calls} = renderReview();
+      fireEvent.click(screen.getByRole('button', {name: 'Build site'}));
+      expect(calls).toEqual([['review', 2, [{answerId: 'build'}]]]);
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('level: starter build: true')).toBeTruthy();
+    });
+
+    it('saves a skip and loads the project step as it is', () => {
+      const {calls} = renderReview();
+      fireEvent.click(screen.getByRole('button', {name: 'Skip'}));
+      expect(calls).toEqual([['review', 2, [{answerId: 'skip'}]]]);
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('level: starter build: false')).toBeTruthy();
+    });
+
+    it('drops the build when the student goes back before the project step', () => {
+      renderReview();
+      fireEvent.click(screen.getByRole('button', {name: 'Build site'}));
+      window.history.replaceState({}, '', '?checkpoint=basics&step=review');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+      fireEvent.click(screen.getByRole('button', {name: 'Skip'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('level: starter build: false')).toBeTruthy();
     });
   });
 });

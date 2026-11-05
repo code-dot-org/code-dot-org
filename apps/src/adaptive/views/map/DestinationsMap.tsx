@@ -1,6 +1,11 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
+import {DestinationColor} from '../../schema/destination';
+import {Pathway} from '../../types';
+
+import {checkpointIcon} from './checkpointIcon';
 import {busRoutes} from './layout/busRoutes';
 import {layoutDestinations} from './layout/destinations';
 import {MapLayout, NODE_RADIUS} from './layout/types';
@@ -21,7 +26,10 @@ const BOX_TITLE_ROOM = 28;
 const TRUNK_GAP = 14;
 
 interface DestinationBox {
+  key: string;
   title: string;
+  icon?: string;
+  color?: DestinationColor;
   ids: string[];
   side: 'left' | 'right';
   x: number;
@@ -33,8 +41,13 @@ interface DestinationBox {
 }
 
 /** A titled box around each destination group's circles. */
-function destinationBoxes(layout: MapLayout): DestinationBox[] {
-  return (layout.destinations || []).map(({title, ids}) => {
+function destinationBoxes(
+  layout: MapLayout,
+  pathway: Pathway
+): DestinationBox[] {
+  return (layout.destinations || []).map(({key, ids}) => {
+    const declared = pathway.destinations?.[key];
+    const title = declared?.title ?? key;
     const xs = ids.map(id => layout.nodes[id].x);
     const ys = ids.map(id => layout.nodes[id].y);
     const side = Math.min(...xs) < layout.width / 2 ? 'left' : 'right';
@@ -45,7 +58,19 @@ function destinationBoxes(layout: MapLayout): DestinationBox[] {
     const width = Math.max(...xs) + reach('right') + BOX_PADDING - x;
     const height = Math.max(...ys) + NODE_RADIUS + BOX_PADDING - y;
     const trunk = side === 'left' ? x + width + TRUNK_GAP : x - TRUNK_GAP;
-    return {title, ids, side, x, y, width, height, trunk};
+    return {
+      key,
+      title,
+      icon: declared?.icon,
+      color: declared?.color,
+      ids,
+      side,
+      x,
+      y,
+      width,
+      height,
+      trunk,
+    };
   });
 }
 
@@ -63,16 +88,34 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
   statusMap,
   turns,
   focusId,
+  fit,
   onSelect,
+  tourFocusIds,
 }) => {
   const layout = useMemo(
     () => layoutDestinations(pathway.checkpoints, turns),
     [pathway, turns]
   );
-  const boxes = useMemo(() => destinationBoxes(layout), [layout]);
+  const boxes = useMemo(
+    () => destinationBoxes(layout, pathway),
+    [layout, pathway]
+  );
   const sideOf = useMemo(
     () => new Map(boxes.flatMap(b => b.ids.map(id => [id, b.side]))),
     [boxes]
+  );
+  const tourFocus = useMemo(() => {
+    if (!tourFocusIds?.length) return undefined;
+    const positions = tourFocusIds.map(id => layout.nodes[id]).filter(Boolean);
+    if (!positions.length) return undefined;
+    return {
+      x: positions.reduce((s, p) => s + p.x, 0) / positions.length,
+      y: positions.reduce((s, p) => s + p.y, 0) / positions.length,
+    };
+  }, [tourFocusIds, layout.nodes]);
+  const firstSkippedId = useMemo(
+    () => pathway.checkpoints.find(c => statusMap[c.id] === 'skipped')?.id,
+    [pathway.checkpoints, statusMap]
   );
   const lines = useMemo(() => {
     const trunkOf = Object.fromEntries(
@@ -86,13 +129,16 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
       lines={lines}
       statusMap={statusMap}
       focus={focusId ? layout.nodes[focusId] : undefined}
+      fit={fit}
+      tourFocus={tourFocus}
     >
       {boxes.map(box => (
         <div
-          key={box.title}
+          key={box.key}
           className={classNames(
             styles.destination,
-            box.side === 'right' && styles.destinationRight
+            box.side === 'right' && styles.destinationRight,
+            box.color && styles[box.color]
           )}
           style={{
             left: box.x,
@@ -101,7 +147,15 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
             height: box.height,
           }}
         >
-          <span className={styles.destinationTitle}>{box.title}</span>
+          <span className={styles.destinationTitle}>
+            {box.icon && (
+              <FontAwesomeV6Icon
+                iconName={box.icon}
+                className={styles.destinationIcon}
+              />
+            )}
+            {box.title}
+          </span>
         </div>
       ))}
       {pathway.checkpoints.map(checkpoint => {
@@ -112,10 +166,16 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
             checkpoint={checkpoint}
             position={layout.nodes[checkpoint.id]}
             status={statusMap[checkpoint.id]}
+            icon={checkpointIcon(pathway, checkpoint)}
             focusId={focusId}
             circleTop={NODE_RADIUS}
             width={NODE_WIDTH}
             onSelect={onSelect}
+            tourId={
+              checkpoint.id === firstSkippedId
+                ? 'adaptive-tour-first-available'
+                : undefined
+            }
           >
             <span
               className={classNames(

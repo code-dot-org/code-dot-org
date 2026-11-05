@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-postassessment-q4-2026'
+
+wrong 'A unit of language, such as a word or a punctuation mark, used in natural language processing'
+wrong 'A word that is important to one document and rare in the rest of the collection'
+wrong 'The word at which a program stops splitting a text into tokens'
+right 'A common word that may be removed from text before analysis because it carries little meaning'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is a stop word?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Cleaning Text
+MARKDOWN

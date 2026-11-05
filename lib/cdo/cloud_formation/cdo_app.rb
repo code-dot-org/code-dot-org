@@ -72,6 +72,8 @@ module Cdo::CloudFormation
 
       stack_name << "-#{branch}" if stack_name == 'adhoc'
       raise "Stack name must not include 'dashboard'" if stack_name.include?('dashboard')
+      # Keeps derived S3 bucket names within the 63-character limit.
+      raise "Stack name must be at most 30 characters" if stack_name.length > 30
 
       # Use alternate legacy EC2 instance resource name for standalone-adhoc stack.
       @daemon = rack_env?(:adhoc) && !frontends ?

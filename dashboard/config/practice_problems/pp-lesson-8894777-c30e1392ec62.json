@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894777-c30e1392ec62",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is the primary purpose of a model card in an app?",
+  "solution": [
+    {
+      "option": "To display the app's user interface",
+      "correct": false
+    },
+    {
+      "option": "To inform users about the model's characteristics and limitations",
+      "correct": true
+    },
+    {
+      "option": "To collect user inputs",
+      "correct": false
+    },
+    {
+      "option": "To store data for the app",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "286ff48b-9b6a-42d2-8273-d38069ae7a46"
+  ]
+}

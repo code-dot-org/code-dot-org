@@ -52,6 +52,29 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     summary: 'Whichever sprite is the platform player right now.',
     body: 'Drop it into any block that takes a sprite.',
   },
+  spritelab2_askAI: {
+    title: 'Ask AI',
+    summary: 'Asks the AI a question and puts its answer in a variable.',
+    body:
+      'The answer takes a moment to arrive, so the variable stays empty ' +
+      'until it does. Use **when ... answered** to do something with it.',
+  },
+  spritelab2_askAIWithChoices: {
+    title: 'Ask AI with answer choices',
+    summary:
+      'Asks the AI a question and puts the choice it picks in a variable.',
+    body:
+      'Empty choices are left out, and with no choices at all the AI ' +
+      'answers in its own words. Use **when ... answered** to do ' +
+      'something with the answer once it arrives.',
+  },
+  spritelab2_setSystemPrompt: {
+    title: 'Set system prompt',
+    summary: 'Tells the AI how to answer every question after it.',
+    body:
+      'Try a personality, like **Talk like a pirate.** Put it before any ' +
+      '**ask AI** blocks.',
+  },
   spritelab2_playSound: {
     title: 'Play sound',
     animation: {src: animPlaySound, alt: 'The play sound block in action.'},
@@ -80,7 +103,7 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       'celebrate.',
   },
   spritelab2_goToExternalScene: {
-    title: 'Go to external scene',
+    title: 'Go to project',
     animation: {
       src: animGoToExternalScene,
       alt: 'An arrow from one scene to another.',

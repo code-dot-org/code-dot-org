@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894775-e6d228d06720",
+  "problem_type": "sort",
+  "active": true,
+  "problem_text": "Sort the following steps in evaluating a machine learning model using a Model Card from first to last.",
+  "solution": [
+    {
+      "option": "Identify the intended use of the model.",
+      "correct": "Step 1"
+    },
+    {
+      "option": "Review the performance metrics.",
+      "correct": "Step 2"
+    },
+    {
+      "option": "Examine any limitations stated in the Model Card.",
+      "correct": "Step 3"
+    },
+    {
+      "option": "Evaluate ethical considerations and potential biases.",
+      "correct": "Step 4"
+    }
+  ],
+  "objective_keys": [
+    "3a931d77-c596-44fa-9c59-e1d12784020e"
+  ]
+}

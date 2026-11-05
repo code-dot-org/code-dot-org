@@ -11,6 +11,9 @@ Uses GITHUB_TOKEN, or `gh auth token`, when available; without one the API
 allows 60 requests an hour, which is enough. The level index (every
 dashboard/config/levels/custom path, about 20 MB from one API call) is
 cached for an hour under ~/.cache/adaptive-level-builder/.
+
+LEVELS_SNAPSHOT=DIR reads levels from DIR/<name>.json instead, as written
+by lb_snapshot.py split; other files still come from GitHub.
 """
 import json
 import os
@@ -27,6 +30,8 @@ REF = os.environ.get('REPO_REF', 'staging')
 LEVELS_DIR = 'dashboard/config/levels/custom'
 CACHE = os.path.expanduser('~/.cache/adaptive-level-builder')
 INDEX_TTL = 3600
+SNAPSHOT = os.environ.get('LEVELS_SNAPSHOT')
+LEVELS_SOURCE = 'the levelbuilder snapshot' if SNAPSHOT else f'GitHub {REF}'
 
 
 def _token():
@@ -62,6 +67,9 @@ def ls(path):
 
 def level_index():
     """Level name -> path, for every .level under LEVELS_DIR on REF."""
+    if SNAPSHOT:
+        return {f[:-len('.json')]: os.path.join(SNAPSHOT, f)
+                for f in os.listdir(SNAPSHOT) if f.endswith('.json')}
     os.makedirs(CACHE, exist_ok=True)
     cached = os.path.join(CACHE, f'levels-{REF.replace("/", "_")}.json')
     if os.path.exists(cached) and time.time() - os.path.getmtime(cached) < INDEX_TTL:
@@ -85,6 +93,8 @@ def level_json(name, index=None):
     path = (index or level_index()).get(name)
     if not path:
         return None
+    if SNAPSHOT:
+        return json.load(open(path, encoding='utf-8'))
     m = re.search(r'<!\[CDATA\[(.*?)\]\]>', cat(path), re.S)
     return json.loads(m.group(1)) if m else {}
 
@@ -102,12 +112,12 @@ def main():
         elif cmd == 'where':
             path = level_index().get(arg)
             if not path:
-                sys.exit(f'no level named {arg} on {REF}')
+                sys.exit(f'no level named {arg} in {LEVELS_SOURCE}')
             print(path)
         else:
             data = level_json(arg)
             if data is None:
-                sys.exit(f'no level named {arg} on {REF}')
+                sys.exit(f'no level named {arg} in {LEVELS_SOURCE}')
             print(json.dumps(data, indent=2, ensure_ascii=False))
     except urllib.error.HTTPError as e:
         sys.exit(f'{e.code} {e.reason}: {e.url}')

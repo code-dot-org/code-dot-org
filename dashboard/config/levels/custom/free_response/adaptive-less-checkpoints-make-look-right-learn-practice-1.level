@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-11-03T04:24:27.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "####Advise Maya\r\n\r\nMaya needs your help. Read her situation, then give her advice.\r\n\r\n>Maya planned a calm, clean, rounded style for her Park Cleanup Club site. Then she asked the AI to make the button bigger, add an events section, and change the headline. Now her page has a dark background, sharp corners, and a neon button. She likes the events section, but the page doesn’t look like her plan anymore.\r\n\r\n**What should Maya do next to get her site back to the style she planned?**\r\n\r\n",
+    "placeholder": "Get the style back",
+    "encrypted_solution": "f1VD0lt6lH1xkl2tHnfjrMueCe+thEBPa9Vw2QhbhtQSDYY/cLBL1IHg0Dq5\nXmeVq8Q8cnuEKAQUwAQhwCYtCyAtOe9k4lJSbwnwo4oaLby1bhTQZ8tFcsFG\njVLMEED7vnSMY4mTKWxGAenovZSwpqyKt3y4Sq0EqEi3/5suFUFiHXQI/H1E\nYRJFbDKu/nQ0TVHIM4AoZm6S1Z/jDnOuKA==\n",
+    "generate_outline": "Define the overall style of your website using three descriptive words to maintain a consistent visual theme.",
+    "encrypted": "false",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:24:31 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:24:31 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:24:32 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:24:32 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 17:37:06 +0000\",\"changed\":[\"long_instructions\",\"placeholder\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:24:16.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "#### Change how a section looks\r\n\r\n1. Pick one section of your page and name it.\r\n2. Ask the AI to change its colors, type, or layout.\r\n3. Try it out. If it's not what you wanted, tell the AI what to fix.\r\n4. Want to see the code? Switch to Split Mode.\r\n\r\n*Example: “Make the Events section dark blue with bigger white headings and the cards in one row.”*\r\n\r\n**Check your prompt:** Does it name the section and say what to change?",
+    "project_template_level_name": "adaptive-less-checkpoints-template-main-website-project",
+    "encrypted_exemplar_sources": "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\nPsZOTfugGXw6Au62dDMA/V8kTl+A\n",
+    "generate_outline": "Instruct the AI to modify the visual appearance of a specific section of your page, then evaluate the change and decide whether to keep, redirect, or edit it.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:24:21 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:24:21 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:24:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:24:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 04:35:32 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:09:29 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

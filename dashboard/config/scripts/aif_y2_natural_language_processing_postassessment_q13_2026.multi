@@ -1,0 +1,20 @@
+name 'aif-y2-natural-language-processing-postassessment-q13-2026'
+
+wrong 'Always "be", the most common follower'
+wrong 'The whole list, `["be", "be", "not", "be"]`'
+right '"be" about three times in four, "not" about once in four'
+wrong '"be" and "not" equally often, since both of them are in the list'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+After learning from school announcements, a Markov chain model holds this entry. What does `predict("will")` return over many calls?
+
+```python
+model["will"] = ["be", "be", "not", "be"]
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Markov Chains
+MARKDOWN

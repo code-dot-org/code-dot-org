@@ -10671,6 +10671,10 @@ en:
               name: WebLab Adaptive
             lesson-23:
               name: Adaptive Checkpoint Steps
+            lesson-24:
+              name: Adaptive Checkpoint Steps V2
+            lesson-25:
+              name: Adaptive Less Checkpoints
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -29685,14 +29689,64 @@ en:
 
             You'll be introduced to industry-standard tools like `scikit-learn` that introduce helpful abstractions to facilitate the process of building machine learning systems. As you build your first AI systems, you'll make use of the machine learning fundamentals and data analysis skills from Unit 2 and Unit 3, writing code to split data into training and test sets, training machine learning models, and visualizing the results of your work.
         aif-year2-semester1-unit5:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+            lesson-3:
+              name: Lesson 3
+            lesson-4:
+              name: Lesson 4
+            lesson-5:
+              name: Lesson 5
+            lesson-6:
+              name: Lesson 6
+            lesson-7:
+              name: Lesson 7
+            lesson-8:
+              name: Lesson 8
+            lesson-9:
+              name: Lesson 9
+            lesson-10:
+              name: Lesson 10
+            lesson-11:
+              name: Lesson 11
+            lesson-12:
+              name: Lesson 12
+            lesson-13:
+              name: Lesson 13
+            lesson-14:
+              name: Pre-Assessment
+            lesson-15:
+              name: End of Unit Assessment
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pre-Assessment
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Assessment
           name: aif-year2-semester1-unit5
-          title: AIF Year 2 Semester 1 Unit 5
+          title: Natural Language Processing
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit introduces students to problems in the domain of natural language processing, inviting them to explore strategies computers can use to understand and generate natural language.
+
+            Students consider the problem of natural language understanding and the challenge of building computer systems that can understand the complexity and the ambiguity of natural language. They explore practical applications of natural language processing from spelling and grammar checkers to search engines to AI chatbots. As students develop comfort with analyzing text in Python, they are also introduced to machine learning techniques for working with language.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Describe the challenges associated with understanding natural language.
+            - Identify applications of natural language processing in software.
+            - Use string manipulation to process text.
+            - Write Python programs to analyze text.
+            - Use machine learning techniques with text as training data.
+            - Interpret the results of text analyses and explain how those results can be useful.
+            - Evaluate the strengths and limits of natural language processing systems.
+            - Reflect on how bias can be introduced into natural language models.
+            :::
+          student_description: This unit introduces you to problems in the domain of natural language processing, inviting you to explore strategies computers can use to understand and generate natural language.
         aif-year2-semester1-unit6:
           lessons: {}
           lesson_groups: {}
@@ -30478,6 +30532,26 @@ en:
               name: Lesson 10
             lesson-11:
               name: 'Lesson 12: Conditionals - Day 4 (Make)'
+            lesson-12:
+              name: Lesson 10 Conditionals - Day 2
+            lesson-13:
+              name: 'Lesson 13: Nested Conditionals - Day 1'
+            lesson-14:
+              name: 'Lesson 14: Iteration'
+            lesson-15:
+              name: 'Lesson 15: While Loops Day 1'
+            lesson-16:
+              name: 'Lesson 16: While Loops Day 2'
+            lesson-17:
+              name: 'Lesson 17: While Loops Day 3'
+            lesson-18:
+              name: Lesson 13 Nested Conditionals - Day 1
+            lesson-19:
+              name: 'Lesson 20: For Loops Day 1'
+            lesson-20:
+              name: 'Lesson 21: For Loops Day 2'
+            lesson-21:
+              name: 'Lesson 22: For Loops Day 3'
           lesson_groups: {}
           name: csp-unit2-dev-27-28
           title: Unit 2 - Building Solutions Using Selection and Iteration
@@ -31069,14 +31143,34 @@ en:
               name: Conversational AI Project
           lesson_groups: {}
           name: pl-sandbox-aif-year2-unit1
-          title: ''
+          title: Teaching Logic-Based AI
           description_audience: ''
           description_short: ''
           description: ''
           student_description: ''
         pl-sandbox-aif-year2-unit2:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Module Overview
+            lesson-2:
+              name: What is Maching Learning?
+            lesson-3:
+              name: Making Predictions
+            lesson-4:
+              name: Regression, Start to Finish
+            lesson-5:
+              name: Classification, Start to Finish
+            lesson-6:
+              name: 'Beyond the Basics: Sensing and Responsiblity'
+            lesson-7:
+              name: Bringing it Together
           lesson_groups: {}
+          name: pl-sandbox-aif-year2-unit2
+          title: Teaching Machine Learning Fundamentals
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         pl-sandbox-aif-year2-unit3:
           lessons: {}
           lesson_groups: {}
@@ -31168,6 +31262,28 @@ en:
               display_name: AIF
           name: ccsd-aif-workshop
           title: CCSD AIF Workshop 2026
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        kyras-playground:
+          lessons:
+            lesson-1:
+              name: AID AIYP Test
+          lesson_groups: {}
+          name: kyras-playground
+          title: Kyra's Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ai-makerspace1-2026:
+          lessons:
+            lesson-1:
+              name: Hour of AI
+          lesson_groups: {}
+          name: ai-makerspace1-2026
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

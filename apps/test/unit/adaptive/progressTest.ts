@@ -3,9 +3,12 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import {
   EMPTY_PROGRESS,
   Progress,
+  isComplete,
   latestValidation,
   stepIdToResume,
+  totalTimeSpent,
   useProgress,
+  visibleSteps,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
 import {computeEvidence} from '@cdo/apps/adaptive/routing/evidence';
@@ -103,6 +106,20 @@ describe('routeStatusMap without evidence', () => {
   });
 });
 
+describe('totalTimeSpent', () => {
+  it('sums the time on every step', () => {
+    expect(totalTimeSpent(EMPTY_PROGRESS)).toBe(0);
+    expect(
+      totalTimeSpent({
+        steps: {
+          a: {timeSpent: 90, status: 'complete'},
+          b: {timeSpent: 30, status: 'started'},
+        },
+      })
+    ).toBe(120);
+  });
+});
+
 describe('stepIdToResume', () => {
   const level: Step = {id: 'try', title: 'Try', kind: 'level', level: 'x'};
   const multi = checkpoint('multi', undefined, [
@@ -145,6 +162,79 @@ describe('stepIdToResume', () => {
         two: {status: 'started', timeSpent: 0},
       })
     ).toBe('two');
+  });
+});
+
+describe('visibleSteps', () => {
+  const ask: Step = {
+    id: 'ask',
+    title: 'Ask',
+    kind: 'questions',
+    questions: [
+      {
+        id: 1,
+        type: 'MultipleChoiceQuestion',
+        questionName: 'ask',
+        questionTitle: 'Which?',
+        choices: [
+          {id: 'a', text: 'A'},
+          {id: 'b', text: 'B'},
+        ],
+        allowOther: {},
+      },
+    ],
+  };
+  const branch = (id: string, choiceId: string): Step => ({
+    ...panels(id),
+    showIf: {stepId: 'ask', questionId: 1, choiceId},
+  });
+  const cp = checkpoint('branchy', undefined, [
+    ask,
+    branch('if-a', 'a'),
+    branch('if-b', 'b'),
+    branch('if-other', 'other'),
+    panels('after'),
+  ]);
+  const answered = (...answers: {answerId: string; text?: string}[]) => ({
+    steps: {ask: {timeSpent: 0, answers: {1: answers}}},
+  });
+  const ids = (progress: Progress) => visibleSteps(cp, progress).map(s => s.id);
+
+  it('hides every branch until its question is answered', () => {
+    expect(ids(EMPTY_PROGRESS)).toEqual(['ask', 'after']);
+  });
+
+  it('shows the branch of the latest answer, typed answers included', () => {
+    expect(ids(answered({answerId: 'a'}))).toEqual(['ask', 'if-a', 'after']);
+    expect(ids(answered({answerId: 'a'}, {answerId: 'b'}))).toEqual([
+      'ask',
+      'if-b',
+      'after',
+    ]);
+    expect(ids(answered({answerId: 'other', text: 'C'}))).toEqual([
+      'ask',
+      'if-other',
+      'after',
+    ]);
+  });
+
+  it('resumes and completes over visible steps only', () => {
+    const done = {status: 'complete' as const, timeSpent: 1};
+    expect(
+      stepIdToResume(cp, {
+        steps: {
+          ...answered({answerId: 'b'}).steps,
+          ask: {...done, answers: {1: [{answerId: 'b'}]}},
+        },
+      })
+    ).toBe('if-b');
+    const last = checkpoint('tail', undefined, [ask, branch('if-a', 'a')]);
+    expect(isComplete(last, {steps: {ask: done}})).toBe(true);
+    expect(
+      isComplete(last, {
+        steps: {ask: {...done, answers: {1: [{answerId: 'a'}]}}},
+      })
+    ).toBe(false);
   });
 });
 
@@ -339,15 +429,13 @@ describe('useProgress', () => {
     expect(reportLevelStep).not.toHaveBeenCalled();
   });
 
-  it("reports level steps on their level and never the project screen's", async () => {
+  it('reports level steps on their level', async () => {
     const store = fakeStore();
     const {result, reportLevelStep} = await renderProgress(store);
 
     act(() => result.current.startStep(sandbox));
     act(() => result.current.leaveStep(sandbox, 2000));
     act(() => result.current.completeStep(sandbox, 500));
-    act(() => result.current.startStep(project));
-    act(() => result.current.completeStep(project, 500));
 
     expect(reportLevelStep.mock.calls).toEqual([
       [42, 'weblab2', TestResults.LEVEL_STARTED, 0],
@@ -357,7 +445,25 @@ describe('useProgress', () => {
     expect(store.saveStep).not.toHaveBeenCalled();
     expect(result.current.statusMap.intro).toBe('complete');
     expect(result.current.progress?.steps.try.timeSpent).toBe(3);
-    expect(result.current.progress?.steps.project).toBeUndefined();
+  });
+
+  it("keeps the project screen's time on its level, never a start or a pass", async () => {
+    const store = fakeStore();
+    const {result, reportLevelStep} = await renderProgress(store);
+
+    act(() => result.current.startStep(project));
+    act(() => result.current.leaveStep(project, 2000));
+    act(() => result.current.completeStep(project, 500));
+
+    expect(reportLevelStep.mock.calls).toEqual([
+      [42, 'weblab2', TestResults.LEVEL_STARTED, 2000],
+      [42, 'weblab2', TestResults.LEVEL_STARTED, 500],
+    ]);
+    expect(store.saveStep).not.toHaveBeenCalled();
+    expect(result.current.progress?.steps.project).toEqual({
+      status: 'started',
+      timeSpent: 3,
+    });
   });
 
   it('logs a failed level report', async () => {

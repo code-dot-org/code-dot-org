@@ -21,17 +21,35 @@
   stroke-linecap: round;
 }
 
+.lineCorrect {
+  stroke: var(--border-success-strong);
+}
+
+// Dashed, so an incorrect pair doesn't rely on color alone.
+.lineIncorrect {
+  stroke: var(--border-error-primary);
+  stroke-dasharray: 4 5;
+}
+
 .column {
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
   gap: 10px;
   min-width: 0;
+  // A read-only column is a list.
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 // Extra padding on the dot's side keeps text clear of it.
 .card {
   position: relative;
+  // A button centers its content, but a read-only list item doesn't.
+  display: flex;
+  align-items: center;
+  justify-content: center;
   // Grow to fill a taller column, but never shrink below the text.
   flex: 1 0 auto;
   min-height: 46px;
@@ -42,13 +60,16 @@
   background: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
   text-align: center;
-  cursor: pointer;
 
   &.end {
     padding-inline: 26px 16px;
   }
 
-  &:hover:not(:disabled, .cardActive) {
+  &:enabled {
+    cursor: pointer;
+  }
+
+  &:enabled:hover:not(.cardActive) {
     border-color: var(--border-neutral-secondary);
 
     .dot {
@@ -59,10 +80,6 @@
   &:focus-visible {
     outline: 2px solid var(--border-selected-primary);
     outline-offset: 2px;
-  }
-
-  &:disabled {
-    cursor: default;
   }
 }
 
@@ -75,6 +92,28 @@
     border-color: var(--background-selected-primary);
     background: var(--background-selected-primary);
     color: var(--text-selected-primary);
+  }
+}
+
+.cardCorrect {
+  border-color: var(--border-success-mid);
+  background: var(--background-success-light);
+
+  .dot {
+    border-color: var(--background-success-primary);
+    background: var(--background-success-primary);
+    color: var(--text-neutral-white-fixed);
+  }
+}
+
+.cardIncorrect {
+  border-color: var(--border-error-mid);
+  background: var(--background-error-light);
+
+  .dot {
+    border-color: var(--background-error-primary);
+    background: var(--background-error-primary);
+    color: var(--text-neutral-white-fixed);
   }
 }
 

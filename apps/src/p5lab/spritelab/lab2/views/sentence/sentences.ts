@@ -4,8 +4,10 @@
 // or a phrase whose words show only when its slot is filled. A required
 // slot must be filled before the sentence can generate.
 
+import {EMPTY_WORD_ID} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
   BodyPlan,
+  ImageGenerationMetadata,
   ImageSubject,
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
@@ -14,8 +16,10 @@ import manifestJson from '@cdo/static/spritelab_lab2/sentences.json';
 export interface Word {
   id: string;
   text: string;
-  /** Shown on the word's chip beside the text; decoration, not read aloud. */
-  emoji?: string;
+  /** A Font Awesome icon shown beside the text; decoration, not read aloud. */
+  icon?: string;
+  /** A plain color, shown as a dot beside the text in place of an icon. */
+  color?: string;
   /** How a creature is built, for the character-set poses. */
   bodyPlan?: BodyPlan;
 }
@@ -122,9 +126,8 @@ export function sentenceFor(
   return SENTENCES.character;
 }
 
-/** The slots in carousel order: the required ones first, then the rest,
-    each group in the order the sentence reads them. */
-export function slotsToOffer(sentence: Sentence): Slot[] {
+/** The slot ids in the order the sentence reads them, phrases included. */
+export function sentenceSlotIds(sentence: Sentence): string[] {
   const ids: string[] = [];
   const walk = (segments: Segment[]) =>
     segments.forEach(segment => {
@@ -135,8 +138,44 @@ export function slotsToOffer(sentence: Sentence): Slot[] {
       }
     });
   walk(sentence.segments);
-  const slots = ids.map(id => sentence.slots[id]);
+  return ids;
+}
+
+/** The slots in carousel order: the required ones first, then the rest,
+    each group in the order the sentence reads them. */
+export function slotsToOffer(sentence: Sentence): Slot[] {
+  const slots = sentenceSlotIds(sentence).map(id => sentence.slots[id]);
   return [...slots.filter(s => s.required), ...slots.filter(s => !s.required)];
+}
+
+/** The chosen word ids in the sentence's slot order. An optional slot left
+    empty, or one in a phrase that is not filled, gives EMPTY_WORD_ID, since
+    its word is left out of the prompt either way. */
+export function sentenceWordIds(
+  sentence: Sentence,
+  choices: Choices
+): string[] {
+  const unfilledPhrases = new Set<string>();
+  const walk = (segments: Segment[]) =>
+    segments.forEach(segment => {
+      if ('phrase' in segment) {
+        if (!phraseFilled(sentence, segment.phrase, choices)) {
+          segment.phrase.forEach(inner => {
+            if ('slot' in inner) {
+              unfilledPhrases.add(inner.slot);
+            }
+          });
+        }
+        walk(segment.phrase);
+      }
+    });
+  walk(sentence.segments);
+  return sentenceSlotIds(sentence).map(id => {
+    const word = unfilledPhrases.has(id)
+      ? undefined
+      : wordFor(sentence, id, choices[id]);
+    return word ? word.id : EMPTY_WORD_ID;
+  });
 }
 
 export function wordFor(
@@ -213,6 +252,42 @@ export function promptText(sentence: Sentence, choices: Choices): string {
     .replace(/\s+/g, ' ')
     .replace(/\s+([,.])/g, '$1')
     .trim();
+}
+
+/** Choices saved on an image: the sentence they were made in, and the
+    word per slot, as the image's generation record stores them. */
+export type SavedChoices = Pick<ImageGenerationMetadata, 'sentenceId'> & {
+  choices: NonNullable<ImageGenerationMetadata['choices']>;
+};
+
+/**
+ * Saved choices as this sentence can hold them now: a slot the sentence no
+ * longer has, or a word its slot no longer offers, is dropped, and a
+ * phrase's slots after a dropped one go with it, as clearing them would.
+ * The sentence id is not checked: slots and words are matched by their
+ * own ids, so a word set shared between sentences carries over.
+ */
+export function restoreChoices(
+  sentence: Sentence,
+  saved: SavedChoices | undefined
+): Choices {
+  if (!saved) {
+    return {};
+  }
+  const restored: Choices = {};
+  Object.entries(saved.choices).forEach(([slotId, wordId]) => {
+    if (wordFor(sentence, slotId, wordId)) {
+      restored[slotId] = wordId;
+    }
+  });
+  const chained = chainedSlotIds(sentence);
+  const firstMissing = chained.findIndex(id => !restored[id]);
+  if (firstMissing >= 0) {
+    chained.slice(firstMissing).forEach(id => {
+      delete restored[id];
+    });
+  }
+  return restored;
 }
 
 /** The body plan of the chosen creature, when the sentence has one. */

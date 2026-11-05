@@ -10,10 +10,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 // chat, redux) that are irrelevant to the navigation behavior under test, so
 // each is replaced with a lightweight marker whose text we can assert on.
 jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/Challenges',
-  () => () => <div>challenge content</div>
-);
-jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/Chat',
   () => () => <div>chat content</div>
 );
@@ -27,6 +23,7 @@ jest.mock(
 );
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  Challenges: () => <div>challenge content</div>,
   VocabularyFlashcards: () => <div>flashcards content</div>,
 }));
 

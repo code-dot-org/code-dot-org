@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-postassessment-q11-2026'
+
+wrong '`[("All", "is"), ("well", "that"), ("ends", "well")]`'
+right '`[("All", "is"), ("is", "well"), ("well", "that"), ("that", "ends"), ("ends", "well")]`'
+wrong '`[("All", "is"), ("is", "well"), ("well", "that"), ("that", "ends")]`'
+wrong '`[("All", "is", "well"), ("is", "well", "that"), ("well", "that", "ends"), ("that", "ends", "well")]`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A program finds the bigrams of a sentence. Which list holds all the bigrams of "All is well that ends well"?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: N-Grams
+MARKDOWN
