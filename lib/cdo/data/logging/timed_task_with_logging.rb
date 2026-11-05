@@ -1,6 +1,5 @@
 require 'benchmark'
 require 'rake/task'
-# dotiw/core formats durations without patching the Rails date helpers.
 require 'dotiw/core'
 
 # Helper module for defining Rake tasks with timing and logging capabilities.
