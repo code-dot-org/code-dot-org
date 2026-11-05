@@ -33,12 +33,17 @@ class Adaptive < Level
 
   PROJECT_STEP_ID = 'project'.freeze
 
+  # What a level made with only a name points at, until the author picks
+  # content in the editor.
+  DEFAULT_ADAPTIVE_ID = 'sample'.freeze
+
   validates :adaptive_id, presence: true
   validate :adaptive_content_exists
 
+  # The lesson editor's quick create sends a name and a type alone.
   def self.create_from_level_builder(params, level_params)
     create!(
-      level_params.merge(
+      level_params.reverse_merge(adaptive_id: DEFAULT_ADAPTIVE_ID).merge(
         user: params[:user],
         game: Game.adaptive,
         level_num: 'custom',

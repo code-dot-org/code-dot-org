@@ -223,6 +223,7 @@ const PythonlabView: React.FunctionComponent<
       aiTutorHelper.setAiTutorContext({
         source,
         miniAppName,
+        miniAppVariant: levelProperties.miniAppVariant,
         validationFile,
         longInstructions: levelProperties.longInstructions,
         hasRun,
@@ -231,6 +232,7 @@ const PythonlabView: React.FunctionComponent<
     }
   }, [
     levelProperties.longInstructions,
+    levelProperties.miniAppVariant,
     source,
     validationFile,
     miniAppName,
