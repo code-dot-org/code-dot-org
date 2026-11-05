@@ -14,6 +14,8 @@ export type Widget2 = {
 
 export interface Weblab2LevelProperties extends LevelProperties {
   widgetView?: boolean;
+  /** Shows the student's site alone; see showcase.ts. */
+  showcase?: boolean;
   initialViewMode?: ViewMode;
   aiTutorMode?: string;
   levelSystemPrompt?: string;

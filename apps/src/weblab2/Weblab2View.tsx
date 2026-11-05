@@ -35,7 +35,8 @@ import {
   removeAiTutorAssetFromProject,
   syncAiTutorAssetToProject,
 } from './redux/syncAiTutorAssetToProject';
-import {Weblab2LevelProperties, ViewMode, AiTutorAnswerType} from './types';
+import {startingViewMode} from './showcase';
+import {Weblab2LevelProperties, AiTutorAnswerType} from './types';
 import {setViewMode} from './weblab2Redux';
 import {weblab2VideoFiles} from './weblab2Videos';
 
@@ -182,8 +183,8 @@ const Weblab2View: React.FC<
   }, [hasEdited, logLevelActivity, dispatch, levelProperties.appName]);
 
   useEffect(() => {
-    dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
-  }, [dispatch, levelProperties?.initialViewMode]);
+    dispatch(setViewMode(startingViewMode(levelProperties)));
+  }, [dispatch, levelProperties]);
 
   const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
     source,

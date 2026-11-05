@@ -1,6 +1,7 @@
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import HeaderButtons from '@codebridge/Workspace/HeaderButtons';
@@ -22,7 +23,8 @@ import {HTMLPreview} from '@cdo/apps/weblab2/htmlPreview/HTMLPreview';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
 import DebugPanel from '../debugPanel/DebugPanel';
-import {ViewMode} from '../types';
+import {hidesViewModeToggle} from '../showcase';
+import {ViewMode, Weblab2LevelProperties} from '../types';
 import {setViewMode} from '../weblab2Redux';
 
 import lab2Styles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
@@ -46,6 +48,10 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   const viewMode = useAppSelector(state => state.weblab2.viewMode);
 
   const hideWorkspaceForWidgetView = !getIsStartMode() && isWidgetView;
+  const levelProperties = useCodebridgeContext()
+    .levelProperties as Weblab2LevelProperties;
+  const hideViewModeToggle =
+    hideWorkspaceForWidgetView || hidesViewModeToggle(levelProperties);
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
@@ -200,7 +206,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             className={weblab2Styles.headerContainer}
             headerContent={<WorkspaceHeader.Content />}
             leftHeaderContent={
-              hideWorkspaceForWidgetView ? undefined : (
+              hideViewModeToggle ? undefined : (
                 <SegmentedButtons {...viewModeButtonsProps} />
               )
             }

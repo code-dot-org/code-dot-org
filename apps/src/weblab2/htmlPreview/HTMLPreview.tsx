@@ -36,6 +36,7 @@ import {
   clearRequests,
 } from '@cdo/apps/weblab2/redux/networkRedux';
 
+import {hidesPreviewHeader} from '../showcase';
 import {Weblab2LevelProperties} from '../types';
 
 import {
@@ -69,8 +70,9 @@ export const HTMLPreview: React.FC = () => {
     codebridgeContext.levelProperties as Weblab2LevelProperties;
   const levelId = levelProperties.id;
   const widget2 = levelProperties.widget2;
-  // widget2 hides the header, which holds the only exit control.
-  const isFullScreen = !!isFullScreenView && !widget2;
+  const hideHeader = hidesPreviewHeader(levelProperties);
+  // The header holds the only exit control, so no header means no full screen.
+  const isFullScreen = !!isFullScreenView && !hideHeader;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
@@ -545,10 +547,11 @@ export const HTMLPreview: React.FC = () => {
       <div
         className={classNames(
           moduleStyles.previewContainer,
+          hideHeader && moduleStyles.previewContainerNoHeader,
           isFullScreen && moduleStyles.fullScreenPreviewContainer
         )}
       >
-        {!widget2 && (
+        {!hideHeader && (
           <HTMLPreviewHeader
             value={inputValue}
             onChange={setInputValue}
