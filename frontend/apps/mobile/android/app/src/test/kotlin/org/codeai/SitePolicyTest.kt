@@ -12,6 +12,8 @@ import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
 class SitePolicyTest {
+    private val localUrl = "https://codeai-mobile-app.localhost"
+
     private fun uri(url: String) = Uri.parse(url)
 
     @Test
@@ -26,7 +28,7 @@ class SitePolicyTest {
     fun isSitePage_doesNotMatchHostsThatOnlyStartLikeStudio() {
         assertTrue(SitePolicy.isSitePage("https://studio.code.org/courses/oceans/units/1"))
         assertFalse(SitePolicy.isSitePage("https://studio.code.org.example.com/"))
-        assertFalse(SitePolicy.isSitePage("https://localhost/launcher"))
+        assertFalse(SitePolicy.isSitePage("$localUrl/launcher"))
         assertFalse(SitePolicy.isSitePage(null))
     }
 
@@ -79,10 +81,10 @@ class SitePolicyTest {
     @Test
     fun mayReset_onlyFromLandingPageOrWithToken() {
         val reset = "https://studio.code.org/codeai-app/reset?course=oceans"
-        val appUrl = "https://localhost/launcher"
+        val appUrl = "$localUrl/launcher"
         assertTrue(SitePolicy.mayReset(uri(reset), appUrl, appUrl, null))
         assertTrue(SitePolicy.mayReset(uri(reset), "$appUrl#finished=oceans", appUrl, null))
-        assertFalse(SitePolicy.mayReset(uri(reset), "https://localhost/offline?url=x", appUrl, null))
+        assertFalse(SitePolicy.mayReset(uri(reset), "$localUrl/offline?url=x", appUrl, null))
         assertFalse(SitePolicy.mayReset(uri(reset), "https://studio.code.org/flappy/1", appUrl, null))
         assertFalse(SitePolicy.mayReset(uri(reset), null, appUrl, null))
         assertTrue(SitePolicy.mayReset(uri("$reset&token=t1"), "https://studio.code.org/flappy/1", appUrl, "t1"))
@@ -92,21 +94,19 @@ class SitePolicyTest {
 
     @Test
     fun isBundledPage_onlyLocalOrigin() {
-        val localUrl = "https://localhost"
-        assertTrue(SitePolicy.isBundledPage(uri("https://localhost/launcher"), localUrl))
-        assertTrue(SitePolicy.isBundledPage(uri("https://localhost/offline?url=x"), localUrl))
-        assertFalse(SitePolicy.isBundledPage(uri("http://localhost/launcher"), localUrl))
-        assertFalse(SitePolicy.isBundledPage(uri("https://localhost:8080/launcher"), localUrl))
-        assertFalse(SitePolicy.isBundledPage(uri("https://localhost.example.com/launcher"), localUrl))
+        assertTrue(SitePolicy.isBundledPage(uri("$localUrl/launcher"), localUrl))
+        assertTrue(SitePolicy.isBundledPage(uri("$localUrl/offline?url=x"), localUrl))
+        assertFalse(SitePolicy.isBundledPage(uri("http://codeai-mobile-app.localhost/launcher"), localUrl))
+        assertFalse(SitePolicy.isBundledPage(uri("$localUrl:8080/launcher"), localUrl))
+        assertFalse(SitePolicy.isBundledPage(uri("$localUrl.example.com/launcher"), localUrl))
         assertFalse(SitePolicy.isBundledPage(uri("https://studio.code.org/launcher"), localUrl))
     }
 
     @Test
     fun isFinishedScreen_onlyBundledPageWithFinishedFragment() {
-        val localUrl = "https://localhost"
-        assertTrue(SitePolicy.isFinishedScreen(uri("https://localhost/launcher#finished=oceans"), localUrl))
-        assertFalse(SitePolicy.isFinishedScreen(uri("https://localhost/launcher"), localUrl))
-        assertFalse(SitePolicy.isFinishedScreen(uri("https://localhost/launcher#other"), localUrl))
+        assertTrue(SitePolicy.isFinishedScreen(uri("$localUrl/launcher#finished=oceans"), localUrl))
+        assertFalse(SitePolicy.isFinishedScreen(uri("$localUrl/launcher"), localUrl))
+        assertFalse(SitePolicy.isFinishedScreen(uri("$localUrl/launcher#other"), localUrl))
         assertFalse(SitePolicy.isFinishedScreen(uri("https://studio.code.org/launcher#finished=oceans"), localUrl))
     }
 

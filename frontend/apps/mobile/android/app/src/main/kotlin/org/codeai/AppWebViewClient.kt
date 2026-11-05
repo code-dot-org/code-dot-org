@@ -12,15 +12,13 @@ import org.codeai.SitePolicy.FINISHED_FRAGMENT
 import org.json.JSONObject
 
 /**
- * Decides where the app's WebView may go, and serves stored images and icon
- * fonts from disk. Where the WebView has no document-start scripts
- * ([injectOnCommit]), each studio.code.org page gets the page script
- * (PageScript.kt) when it first shows. [app] holds the navigation state and
- * acts on it.
+ * Decides where the app's WebView may go. Where the WebView has no
+ * document-start scripts ([injectOnCommit]), each studio.code.org page gets
+ * the page script (PageScript.kt) when it first shows. [app] holds the
+ * navigation state and acts on it.
  */
 internal class AppWebViewClient(
     private val app: MainActivity,
-    private val assetCache: AssetCache,
     private val pageScript: String,
     private val injectOnCommit: Boolean,
 ) : BridgeWebViewClient(app.bridge) {
@@ -42,8 +40,7 @@ internal class AppWebViewClient(
         if (request.isForMainFrame && !app.isAppPage(request.url)) {
             return WebResponses.noContent()
         }
-        return assetCache.intercept(request)
-            ?: super.shouldInterceptRequest(view, request)
+        return super.shouldInterceptRequest(view, request)
     }
 
     override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {

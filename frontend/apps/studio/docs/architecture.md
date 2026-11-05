@@ -50,7 +50,7 @@ Route files in `src/routes/` declare canonical paths (e.g. `/projects/$labType/$
 
 When a legacy Rails route eventually migrates to render the Vite shell at its canonical path, the migration will involve adding a Rails route + a separate Vite mount point under the canonical URL, not changing the basepath here.
 
-The mobile build (`vite.mobile.config.ts`, mode `mobile`, read by `src/config/buildMode.ts`) never calls Rails: the root skips auth, CSRF priming and site chrome, and `src/routes/launcher.tsx` is its home page.
+The mobile build (`vite.mobile.config.ts`, mode `mobile`, read by `src/config/buildMode.ts`) never calls Rails: the root skips auth, CSRF priming and site chrome, and `src/routes/launcher.tsx` is its home page. Its build fetches Font Awesome's solid-icon stylesheets and font from dsco.code.org into `dist-mobile`, so the offline screen draws its icons without a network; building it needs network access.
 
 ## Route tree (auto-generated)
 

@@ -23,7 +23,8 @@ import {routeTree} from '@/routeTree.gen';
  * URL when matching and to prepend it when constructing links.
  *
  * The mobile build is the exception: Capacitor serves it from the root of
- * `https://localhost`, so its routes sit at `/launcher` and `/offline`.
+ * `https://codeai-mobile-app.localhost`, so its routes sit at `/launcher` and
+ * `/offline`.
  */
 const router = createRouter({
   routeTree,

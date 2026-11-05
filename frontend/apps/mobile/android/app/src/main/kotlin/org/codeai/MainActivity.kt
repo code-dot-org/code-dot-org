@@ -84,12 +84,7 @@ class MainActivity : BridgeActivity() {
 
         val script = pageScript(resources, resetToken)
         val atDocumentStart = addPageScript(webView, script)
-        bridge.webViewClient = AppWebViewClient(
-            this,
-            AssetCache(cacheDir.resolve("assets"), webView.settings.userAgentString, setOf(bridge.localUrl, SITE_ORIGIN)),
-            script,
-            injectOnCommit = !atDocumentStart,
-        )
+        bridge.webViewClient = AppWebViewClient(this, script, injectOnCommit = !atDocumentStart)
 
         // Capacitor has started loading the landing page. Open the remembered
         // page on top of it, so Back still leads to the landing page.
