@@ -1,13 +1,29 @@
+// Sized to fit a 1024x605 window without scrolling; smaller windows scroll
+// the panel. The spacing variables shrink with the window height.
 .dialog {
+  --gap: 14px;
+  --card-padding: 22px 28px;
+  --scene-height: 96px;
+
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--gap);
   box-sizing: border-box;
   width: min(1120px, calc(100vw - 32px));
-  max-height: calc(100vh - 32px);
-  padding: 24px 32px;
+  max-height: calc(100vh - 24px);
+  padding: 20px 28px;
   border-radius: 8px;
   overflow: auto;
+}
+
+@media (max-height: 700px) {
+  .dialog {
+    --gap: 10px;
+    --card-padding: 14px 22px;
+    --scene-height: 48px;
+
+    padding: 14px 24px;
+  }
 }
 
 .title {
@@ -29,7 +45,7 @@
 .body {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--gap);
 }
 
 .intro {
@@ -40,14 +56,14 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 20px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 28px 36px;
+  gap: 12px;
+  padding: var(--card-padding);
   border-radius: 12px;
   color: var(--text-neutral-white-fixed);
 }
@@ -80,10 +96,15 @@
   color: inherit;
 }
 
+.cardTitle {
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  line-height: 1.2;
+}
+
 // Sky over ground, standing in for the card's picture.
 .scene {
   position: relative;
-  height: 112px;
+  height: var(--scene-height);
   margin-top: auto;
   border-radius: 8px;
   overflow: hidden;
@@ -141,15 +162,15 @@
 .offers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 
 .offer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
-  padding: 20px 28px;
+  gap: 6px;
+  padding: 14px 20px;
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 12px;
 }
@@ -167,7 +188,7 @@
 }
 
 .offerText {
-  margin: 0 0 8px;
+  margin: 0 0 4px;
   color: var(--text-neutral-secondary);
 }
 
