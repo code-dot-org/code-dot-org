@@ -50,12 +50,22 @@ function placementsFromLayout(layout: PageLayout): QuizPlacement[] {
     );
 }
 
+// Records a version the server returned. Overlapping saves can resolve out of
+// order, and versions only grow, so it never moves backward.
+export function advanceQuizVersion(
+  quizVersion: MutableRefObject<number | null>,
+  version: number
+) {
+  quizVersion.current = Math.max(quizVersion.current ?? 0, version);
+}
+
 // Manages a quiz's questions and its layout (which questions it has, on
 // which pages, in what order). Question content saves on its own; the layout,
 // including removals and deletions, is local until saveQuiz.
 export default function useQuizBuilderQuestions(
   levelId: number,
-  // The quiz's saved version, shared with the configuration saves that also advance it.
+  // The quiz's saved version, shared with the configuration saves that also
+  // advance it.
   quizVersion: MutableRefObject<number | null>
 ): QuizBuilderQuestionsState {
   const [questionsById, setQuestionsById] = useState<
@@ -87,7 +97,9 @@ export default function useQuizBuilderQuestions(
       );
       const body = await response.json();
       const loaded: QuizBuilderQuestion[] = body.questions ?? [];
-      quizVersion.current = body.version ?? null;
+      if (typeof body.version === 'number') {
+        advanceQuizVersion(quizVersion, body.version);
+      }
       const loadedLayout = groupByPage(loaded).map(({questions}) =>
         questions.map(q => q.id)
       );
@@ -291,7 +303,7 @@ export default function useQuizBuilderQuestions(
         JSON_HEADERS
       );
       const body = await response.json();
-      quizVersion.current = body.version;
+      advanceQuizVersion(quizVersion, body.version);
       // Drops the empty pages that weren't saved, unless the layout changed
       // during the save; those edits stay unsaved.
       setLayout(prev =>

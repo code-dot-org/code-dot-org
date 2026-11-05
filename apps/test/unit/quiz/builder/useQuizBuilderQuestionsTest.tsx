@@ -527,6 +527,22 @@ describe('useQuizBuilderQuestions', () => {
       expect(result.current.hasUnsavedLayout).toBe(false);
     });
 
+    it('keeps a newer version when its response arrives late', async () => {
+      const {result} = await renderLoaded();
+      await act(async () => {
+        await result.current.removeQuestion(7, {permanently: false});
+      });
+      // A configuration save from this tab has already recorded version 9.
+      version.current = 9;
+      putSpy.mockResolvedValue(savedResponse([], 6));
+
+      await act(async () => {
+        await result.current.saveQuiz();
+      });
+
+      expect(version.current).toBe(9);
+    });
+
     it('keeps a removal made during the save as unsaved', async () => {
       const {result} = await renderLoaded();
       let resolvePut: (response: Response) => void = () => {};

@@ -11,6 +11,7 @@ import QuizBuilderWorkspace from './QuizBuilderWorkspace';
 import QuizConfigurationPanel, {
   QuizConfigurationData,
 } from './QuizConfigurationPanel';
+import {advanceQuizVersion} from './useQuizBuilderQuestions';
 
 export default function useQuizBuilderView({
   levelProperties,
@@ -38,7 +39,7 @@ export default function useQuizBuilderView({
     updated: Partial<QuizConfigurationData>,
     version: number
   ) => {
-    quizVersion.current = version;
+    advanceQuizVersion(quizVersion, version);
     setQuizConfig(prev => ({...prev, ...updated}));
   };
 
