@@ -118,6 +118,9 @@ below, and are listed last.
 - **The cursor is found only by being moved.** It starts in the middle of
   the map on the first arrow, and nothing says where it is before then;
   Enter before any arrow does nothing, silently.
+  CLOSED: it is put in the middle when the keyboard reaches the stage, and
+  said ("Cursor at column 6, row 6. Enter or Space places a Player
+  there."); an Enter before then shows and says it, placing nothing.
 - **Placements are named by their ids** in the Dock menu ("Above
   HealthBar"), which are what the inspector shows but not always what a
   learner would call them.
@@ -138,6 +141,9 @@ below, and are listed last.
   Remove this camera do the same coming back. Focus should land on the
   camera inspector's heading going in, and on the camera's row (or Add a
   camera) coming back.
+  CLOSED: a Viewport now has one camera, opened from its Camera row and
+  left by Close; focus goes to the inspector's heading going in, and to
+  the Camera row coming back.
 - **A door that opens a file leaves focus behind**: Edit picture, Edit
   background, Edit theme, an effect's Edit, a rule's Open, and every New
   that opens what it made put another editor in front, and focus stays on

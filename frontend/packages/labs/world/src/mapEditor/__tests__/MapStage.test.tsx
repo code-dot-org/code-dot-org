@@ -496,11 +496,31 @@ describe('removing and placing', () => {
       expect(onDocChange).not.toHaveBeenCalled();
     });
 
-    it('does nothing on Enter before the cursor is anywhere', () => {
+    it('shows the cursor on an Enter before it is anywhere, placing nothing', () => {
       const map = doc();
       const {canvas, onDocChange} = mount(map, {placing: 'actors/coin'});
       fireEvent.keyDown(canvas, {key: 'Enter'});
       expect(onDocChange).not.toHaveBeenCalled();
+      expect(said()).toMatch(/^Cursor at column 6, row 6\. Enter or Space /);
+      fireEvent.keyDown(canvas, {key: 'Enter'});
+      expect(said()).toMatch(/^Placed a .* at column 6, row 6$/);
+    });
+
+    it('starts the cursor when the keyboard reaches the stage', () => {
+      const map = doc();
+      const {canvas} = mount(map, {placing: 'actors/coin'});
+      fireEvent.focus(canvas);
+      expect(said()).toMatch(/^Cursor at column 6, row 6\./);
+      fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+      expect(said()).toBe('column 7, row 6');
+    });
+
+    it('leaves the cursor to the pointer when a press focuses the stage', () => {
+      const map = doc();
+      const {canvas} = mount(map, {placing: 'actors/coin'});
+      fireEvent.pointerDown(canvas, {button: 0, clientX: 1, clientY: 1});
+      fireEvent.focus(canvas);
+      expect(said()).not.toMatch(/^Cursor/);
     });
   });
 
@@ -1330,6 +1350,8 @@ describe('a level, with nothing selected', () => {
     // In the Viewport's own inspector: its one camera.
     fireEvent.click(view.getByRole('button', {name: /^Camera/}));
     expect(view.getByTestId('camera-inspector')).toBeInTheDocument();
+    // The row pressed is gone, so focus goes to what took its place.
+    expect(document.activeElement).toHaveTextContent(/^Camera$/);
     // How much it takes in, kept on the placement; a zoom that is no zoom at
     // all is not taken.
     const zoom = view.getByLabelText('Zoom');
@@ -1346,6 +1368,9 @@ describe('a level, with nothing selected', () => {
     fireEvent.click(view.getByRole('button', {name: 'Close'}));
     expect(view.queryByTestId('camera-inspector')).toBeNull();
     expect(view.getByTestId('camera-row')).toBeInTheDocument();
+    expect(document.activeElement).toBe(
+      view.getByRole('button', {name: /^Camera/}),
+    );
   });
 
   it('gives a placement that is not a Viewport no camera section', () => {

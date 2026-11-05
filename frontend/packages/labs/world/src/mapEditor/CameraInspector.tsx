@@ -185,7 +185,12 @@ export const CameraInspector = ({
       data-testid="camera-inspector"
     >
       <div className={styles.inspectorHead}>
-        <Typography variant="subtitle2" component="span">
+        <Typography
+          variant="subtitle2"
+          component="span"
+          tabIndex={-1}
+          data-camera-heading
+        >
           Camera
         </Typography>
         <Button variant="text" size="extraSmall" onClick={onClose}>

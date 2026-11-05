@@ -148,8 +148,10 @@ somewhere else…", beside Undock and its size field.
 time, starting in the middle of the map, never off it, and a box by its
 edges (`stageGeometry.cursorStep`). Each move says the cell and whether
 one of the kind in hand is there ("column 5, row 9, a Scoreboard is
-here"). Enter or Space is the brush's press at the cursor, and says what
-it did. Escape puts the kind down and says so. The canvas's name says which keys it takes, placing or not. In
+here"). The cursor is put there, and said, when the keyboard brings focus
+to the stage, or on an Enter or Space before it is anywhere, which places
+nothing; a press that focuses the stage leaves the cursor to the pointer.
+Enter or Space is the brush's press at the cursor, and says what it did. Escape puts the kind down and says so. The canvas's name says which keys it takes, placing or not. In
 the browser, keyboard only: a Scoreboard taken from its tile with Enter,
 placed at column 5, row 9, selected by the arrows and docked along the
 bottom from the menu; the game drew it there.

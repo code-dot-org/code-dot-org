@@ -652,6 +652,11 @@ export const MapStage = ({
   const [inspectingLayer, setInspectingLayer] = useState(false);
   /** Whether the selected Viewport's camera is open in its inspector. */
   const [inspectingCamera, setInspectingCamera] = useState(false);
+  // Opening the camera's inspector removes the row pressed, and closing it
+  // removes its Close, so focus is placed on what takes their place.
+  const [cameraFocus, setCameraFocus] = useState<'inspector' | 'row' | null>(
+    null,
+  );
   /** The Scroll View opened to arrange what it holds, by id. */
   const [openedScroll, setOpenedScroll] = useState<string | null>(null);
   // A placement selected closes the layer's and the camera's inspectors, so
@@ -2065,6 +2070,7 @@ export const MapStage = ({
   };
 
   const handlePointerDown = (event: ReactPointerEvent) => {
+    pointerFocus.current = true;
     if (!view) {
       return;
     }
@@ -2377,6 +2383,33 @@ export const MapStage = ({
   const [announcement, setAnnouncement] = useState('');
   const say = (what: string) => setAnnouncement(what);
 
+  // A press focuses the canvas too, and its pointer is the cursor then.
+  const pointerFocus = useRef(false);
+  /**
+   * With an actor in hand and no cursor yet, puts it in the middle of the
+   * map and says where, so the first Enter has somewhere to act.
+   */
+  const startCursor = (): boolean => {
+    if (!selected || hover) {
+      return false;
+    }
+    const at = cursorStep(null, map.tile, extent, 0, 0, ghostBox);
+    const {column, row} = cellAt(at, map.tile, ghostBox);
+    setHover(at);
+    ensureVisible(at);
+    say(
+      `Cursor at column ${column}, row ${row}. Enter or Space places a ` +
+        `${kinds?.[selected]?.name ?? kindName(selected)} there.`,
+    );
+    return true;
+  };
+  const handleFocus = () => {
+    if (!pointerFocus.current) {
+      startCursor();
+    }
+    pointerFocus.current = false;
+  };
+
   const ARROW_STEPS: Record<string, {dx: number; dy: number}> = {
     ArrowRight: {dx: 1, dy: 0},
     ArrowLeft: {dx: -1, dy: 0},
@@ -2622,6 +2655,11 @@ export const MapStage = ({
         ensureVisible(at);
         const here = sameKindUnder(at) ? `, a ${named} is here` : '';
         say(`${where(at)}${here}`);
+        return;
+      }
+      if ((event.key === 'Enter' || event.key === ' ') && !hover) {
+        event.preventDefault();
+        startCursor();
         return;
       }
       if (
@@ -3602,6 +3640,20 @@ export const MapStage = ({
         })()
       : undefined;
   const inspectedCamera = Boolean(cameraEditor && inspectingCamera);
+  useEffect(() => {
+    if (!cameraFocus) {
+      return;
+    }
+    const target = document.querySelector<HTMLElement>(
+      cameraFocus === 'inspector'
+        ? '[data-testid="camera-inspector"] [data-camera-heading]'
+        : '[data-testid="camera-row"] button',
+    );
+    if (target) {
+      target.focus();
+      setCameraFocus(null);
+    }
+  }, [cameraFocus, inspectedCamera]);
   const inspecting = Boolean(
     selectedActor || inspectedCamera || (inspectingLayer && inspectedLayer),
   );
@@ -3694,6 +3746,7 @@ export const MapStage = ({
           onClick={() => {
             setInspectingCamera(true);
             setInspectingLayer(false);
+            setCameraFocus('inspector');
           }}
         >
           Camera
@@ -3727,7 +3780,10 @@ export const MapStage = ({
           onValue={cameraEditor.setValue}
           zoom={cameraEditor.zoom}
           onZoom={cameraEditor.setZoom}
-          onClose={() => setInspectingCamera(false)}
+          onClose={() => {
+            setInspectingCamera(false);
+            setCameraFocus('row');
+          }}
           isReadOnly={isReadOnly}
         />
       )}
@@ -4093,6 +4149,7 @@ export const MapStage = ({
         className={canvasClass}
         tabIndex={0}
         onPointerDown={handlePointerDown}
+        onFocus={handleFocus}
         onPointerMove={handlePointerMove}
         onPointerUp={endGesture}
         onPointerLeave={handlePointerLeave}
