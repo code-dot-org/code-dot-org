@@ -72,12 +72,19 @@ describe('toolboxToWorkspaceBlocks', () => {
     ]);
   });
 
-  // A name that happens to match an Object prototype member must not pass
-  // for a dynamic category key.
-  it('ignores a category name inherited from Object', () => {
+  // Saving rewrites `custom` from the block's dropdown, so trusting a label
+  // that disagrees with it would change which flyout the category opens.
+  it('keeps the flyout a mislabeled category names', () => {
     const blocks = blocksOf({
       kind: 'categoryToolbox',
-      contents: [{kind: 'category', name: 'constructor', custom: 'VARIABLE'}],
+      contents: [
+        {
+          kind: 'category',
+          name: 'Functions',
+          id: 'Functions',
+          custom: 'VARIABLE',
+        },
+      ],
     } as ToolboxInfo);
 
     expect(blocks).toEqual([
@@ -91,7 +98,11 @@ describe('toolboxToWorkspaceBlocks', () => {
     const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
     const blocks = blocksOf({
       kind: 'categoryToolbox',
-      contents: [{kind: 'category', name: 'Behaviors', custom: 'Behavior'}],
+      contents: [
+        {kind: 'category', name: 'Behaviors', custom: 'Behavior'},
+        // A supported label doesn't rescue an unsupported flyout.
+        {kind: 'category', name: 'Variables', custom: 'Behavior'},
+      ],
     } as ToolboxInfo);
 
     expect(blocks).toEqual([]);

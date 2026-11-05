@@ -7,23 +7,13 @@ import {DEFAULT_CATEGORY_NAME} from './workspaceToToolboxDefinition';
 
 /**
  * The key a dynamic category block's CUSTOM dropdown expects, which is also
- * the category's display name. Some toolboxes store it in `id`,
- * others only name the flyout they use, like "VARIABLE".
+ * the category's display name.
  */
 function dynamicCategoryKey(
   item: BlocklyCore.utils.toolbox.DynamicCategoryInfo
 ): string | undefined {
-  const named = item as BlocklyCore.utils.toolbox.DynamicCategoryInfo & {
-    name?: string;
-  };
-  const candidates = [named.id, named.name];
-  return (
-    candidates.find(
-      name => name && Object.hasOwn(DYNAMIC_CATEGORY_OPTIONS, name)
-    ) ||
-    Object.keys(DYNAMIC_CATEGORY_OPTIONS).find(
-      key => DYNAMIC_CATEGORY_OPTIONS[key] === item.custom
-    )
+  return Object.keys(DYNAMIC_CATEGORY_OPTIONS).find(
+    key => DYNAMIC_CATEGORY_OPTIONS[key] === item.custom
   );
 }
 
