@@ -55,6 +55,24 @@ To see the words, and the size of a run:
 All of it is 1,816 fillings, 5,448 variants and 18,552 images. The
 character sentence is 16,380 of those images.
 
+## Changing the words
+
+After `sentences.json` changes, `migrate_words` brings what is already drawn
+into line, so nothing is drawn twice and nothing out of date is published:
+
+```
+./bin/oneoff/hoai_2026/imagegen/migrate_words           # reports what would move
+./bin/oneoff/hoai_2026/imagegen/migrate_words --apply   # moves it
+```
+
+A variant whose prompts are still current stays. One whose word ids
+changed but not its text moves to its new path with its record and attic
+files. One whose path now means other words, or whose prompt changed in
+any other way (the pixel grid, say), goes to the attic and is drawn again
+on the next run. One that used a word now gone goes to the attic with its
+record. Nothing is deleted, and nothing in S3 is touched. Do not run it
+while `generate_images` is running.
+
 ## Prompts
 
 The prompts are not written here. `dump_prompts.ts` imports the lab's prompt
@@ -89,7 +107,9 @@ Moderation checks the base, a flagged base is redrawn alone, and the review
 page shows the set marked "first frame only" for approving or rejecting. A
 later run without the flag draws the four poses from each stored base and
 its seed; the set is the same drawing, so a review of its base still holds.
-A set with only its base is never published. Three bases per filling of
+A set with only its base is never published. The tree holds characters only
+as sets: when a student turns Animated off, the lab is to use a set's first
+frame as the single picture. Three bases per filling of
 every character is 3,276 images, against 16,380 for the full sets:
 
 ```
@@ -182,7 +202,8 @@ while after the upload.
 ## Publishing for a preview
 
 `--publish-review` also publishes what the lab's tree leaves out, for a
-preview application: every drawing moderation flagged or review rejected,
+preview application: every drawing moderation flagged or review rejected
+(not those replaced because their words or grid changed, which stay local),
 the current drawing of any variant held back from the tree, and a manifest
 per sentence describing all of it. It goes to the same bucket as the run,
 under a prefix beside the lab's, so none of it can reach the tree the lab

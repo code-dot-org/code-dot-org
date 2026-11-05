@@ -1,0 +1,248 @@
+#!/usr/bin/env ruby
+
+# This script brings what generate_images has drawn in line with the words in
+# sentences.json after they change. Each drawn variant is one of:
+#
+#   keep     its path and the prompts it was drawn from are still current.
+#   move     a word's id changed but not its text (ice cream drawn under
+#            icecream, now ice-cream): the drawing is still good, so its
+#            frames, record and attic files move to the new path.
+#   stale    its path still exists but means other words now ("with a hat"
+#            became "wearing a hat"): its frames move to the attic and
+#            generate_images draws it again.
+#   retired  a word it used is gone: its frames and its record move to the
+#            attic, and nothing draws it again.
+#
+# Nothing is deleted, and published files in S3 are left alone. Every move
+# is recorded in the variant's history.
+#
+# By default this only reports; --apply moves the files.
+
+# First: sets up bundler, so the gems below resolve from the Gemfile.
+require_relative '../../../../deployment'
+
+require 'optparse'
+
+require_relative 'imagegen'
+
+options = {apply: false, samples: 5}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    Moves what generate_images has drawn to match the current sentences.json.
+
+    Options:
+  BANNER
+
+  opts.on('--apply', 'Moves the files. Without it, only reports what would move.') do
+    options[:apply] = true
+  end
+
+  opts.on('--samples N', 'How many examples of each kind to list. Defaults to 5.') do |n|
+    options[:samples] = n.to_i
+  end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+
+puts 'Building prompts with dump_prompts.ts...'
+jobs = load_jobs
+jobs_by_path = jobs.to_h {|job| [[job['sentenceId'], job['wordIds'], job['style']], job]}
+jobs_by_prompt = jobs.to_h {|job| [[job['sentenceId'], job['prompt'], job['style']], job]}
+
+STAMP = Time.now.utc.strftime('%Y%m%dT%H%M%S%L')
+
+def count_files
+  [output_path, records_path, attic_path].sum {|dir| Dir.glob(File.join(dir, '**', '*')).count {|f| File.file?(f)}}
+end
+
+# Whether every frame was drawn from the prompt this job would send now, in
+# the background the record says it was drawn on.
+def prompts_match?(record, job)
+  drawn = (record['frames'] || []).to_h {|frame| [frame['name'], frame['prompt']]}
+  return true if drawn.empty?
+  job['frames'].all? do |frame|
+    drawn[frame['name']] == (record['transparent'] ? frame['transparentPrompt'] : frame['prompt'])
+  end
+end
+
+# The record's frames as files in the published tree, where they exist.
+def present_frames(folder, record)
+  (record['frames'] || []).filter_map do |frame|
+    path = File.join(output_path, folder, frame['file'].to_s)
+    frame['file'] && File.exist?(path) ? File.join(folder, frame['file']) : nil
+  end
+end
+
+def move_file(from, to)
+  FileUtils.mkdir_p(File.dirname(to))
+  raise "Refusing to overwrite #{to}" if File.exist?(to)
+  File.rename(from, to)
+end
+
+# Moves frames out of the published tree into the attic, as generate_images
+# does, and returns their attic paths.
+def to_attic(relatives)
+  relatives.map do |relative|
+    destination = File.join(attic_path, relative.sub(/\.png\z/, ".#{STAMP}.png"))
+    move_file(File.join(output_path, relative), destination)
+    destination.delete_prefix("#{SCRIPT_PATH}/")
+  end
+end
+
+def history_entry(record, reason, moved)
+  {
+    'at' => Time.now.utc.iso8601,
+    'reason' => reason,
+    'prompt' => record['prompt'],
+    'seed' => record['seed'],
+    'provider' => record['provider'],
+    'model' => record['model'],
+    'review' => record['review'],
+    'checks' => record['frames']&.to_h {|frame| [frame['name'], frame['checks']]},
+    'movedTo' => moved,
+  }.compact
+end
+
+plan = Hash.new {|h, k| h[k] = []}
+conflicts = []
+
+Dir.glob(File.join(records_path, CACHE_VERSION, '**', '*.json')).sort.each do |record_file|
+  relative = record_file.delete_prefix("#{records_path}/")
+  folder = File.dirname(relative)
+  record = JSON.parse(File.read(record_file))
+  sentence_id = record['sentenceId']
+  style = File.basename(folder)
+  variant = record['variant'] || File.basename(relative, '.json').to_i
+  current = jobs_by_path[[sentence_id, record['wordIds'], style]]
+
+  if current && prompts_match?(record, current)
+    plan[:keep] << {relative: relative}
+    next
+  end
+
+  target = record['prompt'] && jobs_by_prompt[[sentence_id, record['prompt'], style]]
+  if target && target['wordIds'] != record['wordIds'] && prompts_match?(record, target)
+    to_folder = job_folder(target)
+    to_record = File.join(to_folder, "#{variant_name(variant)}.json")
+    if File.exist?(File.join(records_path, to_record)) ||
+        present_frames(to_folder, record).any? {|f| File.exist?(File.join(output_path, f))}
+      conflicts << "#{relative} -> #{to_record}: the new path already holds a variant #{variant_name(variant)}"
+    else
+      plan[:move] << {relative: relative, folder: folder, record: record, to_folder: to_folder, to_record: to_record, target: target}
+    end
+    next
+  end
+
+  kind = current ? :stale : :retired
+  plan[kind] << {relative: relative, folder: folder, record: record}
+end
+
+orphans = Dir.glob(File.join(output_path, CACHE_VERSION, '**', '*.png')).reject do |png|
+  rel = png.delete_prefix("#{output_path}/")
+  File.exist?(File.join(records_path, File.dirname(rel), "#{File.basename(rel, '.png').split('-').first}.json"))
+end
+
+labels = {
+  keep: 'keep: current',
+  move: 'move: an id changed, the words did not',
+  stale: 'stale: the path now means other words; to the attic, drawn again',
+  retired: 'retired: a word is gone; to the attic with its record',
+}
+puts
+puts "Variants#{options[:apply] ? '' : ' (dry run)'}:"
+labels.each do |kind, label|
+  by_sentence = plan[kind].map {|item| item[:relative].split('/')[1]}.tally
+  puts "#{plan[kind].length.to_s.rjust(6)} #{label}  #{by_sentence.map {|s, n| "#{s} #{n}"}.join(', ')}"
+end
+%i[move stale retired].each do |kind|
+  next if plan[kind].empty? || options[:samples].zero?
+  puts
+  puts "#{kind}, for example:"
+  plan[kind].first(options[:samples]).each do |item|
+    if kind == :move
+      puts "  #{item[:folder]}/  ->  #{item[:to_folder]}/  (#{item[:record]['prompt']})"
+    else
+      puts "  #{item[:relative]}  (#{item[:record]['prompt']})"
+    end
+  end
+end
+if conflicts.any?
+  puts
+  puts "#{conflicts.length} move(s) skipped, the new path already taken:"
+  conflicts.first(options[:samples]).each {|c| puts "  #{c}"}
+end
+puts
+puts "#{orphans.length} frame(s) in the published tree have no record and are left alone; see validate_images." if orphans.any?
+
+unless options[:apply]
+  puts
+  puts 'Dry run: nothing moved. Run again with --apply to move the files.'
+  exit
+end
+
+before = count_files
+
+plan[:move].each do |item|
+  record = item[:record]
+  # Frames, then the attic files its history names, then the record, which
+  # is rewritten to its new path and words.
+  present_frames(item[:folder], record).each do |relative|
+    move_file(File.join(output_path, relative), File.join(output_path, item[:to_folder], File.basename(relative)))
+  end
+  (record['history'] || []).each do |entry|
+    entry['movedTo'] = (entry['movedTo'] || []).map do |path|
+      from = File.join(SCRIPT_PATH, path)
+      to_path = path.sub("#{ATTIC_DIRECTORY}/#{item[:folder]}/", "#{ATTIC_DIRECTORY}/#{item[:to_folder]}/")
+      move_file(from, File.join(SCRIPT_PATH, to_path)) if File.exist?(from) && to_path != path
+      to_path
+    end
+  end
+  record['wordIds'] = item[:target]['wordIds']
+  record['slots'] = item[:target]['slots']
+  record['history'] = (record['history'] || []) << {
+    'at' => Time.now.utc.iso8601, 'reason' => 'word ids changed', 'from' => item[:folder], 'to' => item[:to_folder],
+  }
+  new_path = File.join(records_path, item[:to_record])
+  FileUtils.mkdir_p(File.dirname(new_path))
+  raise "Refusing to overwrite #{new_path}" if File.exist?(new_path)
+  File.write(new_path, JSON.pretty_generate(record))
+  File.delete(File.join(records_path, item[:relative]))
+end
+
+plan[:stale].each do |item|
+  record = item[:record]
+  moved = to_attic(present_frames(item[:folder], record))
+  history = (record['history'] || []) << history_entry(record, 'prompt changed', moved)
+  # What generate_images needs to draw it again: where it is, and what
+  # happened before.
+  fresh = record.slice('sentenceId', 'slots', 'wordIds', 'variant').merge('history' => history)
+  File.write(File.join(records_path, item[:relative]), JSON.pretty_generate(fresh))
+end
+
+plan[:retired].each do |item|
+  record = item[:record]
+  moved = to_attic(present_frames(item[:folder], record))
+  record['history'] = (record['history'] || []) << history_entry(record, 'words retired', moved)
+  record['retired'] = {'at' => Time.now.utc.iso8601}
+  destination = File.join(attic_path, item[:relative].sub(/\.json\z/, ".#{STAMP}.json"))
+  FileUtils.mkdir_p(File.dirname(destination))
+  File.write(destination, JSON.pretty_generate(record))
+  File.delete(File.join(records_path, item[:relative]))
+end
+
+# Folders a move or a retirement emptied.
+[output_path, records_path].each do |root|
+  Dir.glob(File.join(root, CACHE_VERSION, '**', '*')).select {|d| File.directory?(d)}.sort_by(&:length).reverse_each do |dir|
+    Dir.rmdir(dir) if Dir.empty?(dir)
+  end
+end
+
+after = count_files
+puts
+puts "Moved: #{plan[:move].length} variants to new paths, #{plan[:stale].length} stale and #{plan[:retired].length} retired to the attic."
+puts "Files before and after, across #{OUTPUT_DIRECTORY}, #{RECORDS_DIRECTORY} and #{ATTIC_DIRECTORY}: #{before} and #{after}#{before == after ? ', none lost' : ' — THESE DIFFER'}."

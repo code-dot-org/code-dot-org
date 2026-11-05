@@ -691,6 +691,9 @@ def publishable(options, job, variant)
     return "#{frame['name']}: #{error}" if error
   end
 
+  # Drawn from words the path no longer means: never published as current.
+  return 'prompt changed; draw it again' if prompts_changed?(options, job, record)
+
   summary = moderation_summary(record, require_judge: options[:judge])
   return "moderation #{summary}" unless summary == 'pass'
   return 'rejected in review' if review_verdict(record) == 'rejected'

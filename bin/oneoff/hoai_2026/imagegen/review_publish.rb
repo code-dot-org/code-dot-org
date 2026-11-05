@@ -61,6 +61,11 @@ def frame_name_of(file)
   stem.include?('-') ? stem.split('-', 2).last : 'single'
 end
 
+# The reasons a drawing left the tree that a preview shows: moderation
+# flagged it (an abandoned variant's last drawing included), or a reviewer
+# rejected it.
+REVIEWED_REASONS = ['flagged by moderation', 'rejected in review'].freeze
+
 class ReviewPublisher
   # status_for: (job, variant) -> nil when the variant may be published,
   # else why not; the same rules the upload follows.
@@ -180,6 +185,10 @@ class ReviewPublisher
   # A drawing that left the tree: why, its checks and review, and its files,
   # which keep their attic names.
   private def rejected_entry(job, entry)
+    # Only what someone judged: a drawing replaced because its words or its
+    # grid changed was never wrong, only out of date, and stays local.
+    return nil unless REVIEWED_REASONS.include?(entry['reason'])
+
     moved = entry['movedTo'] || []
     return nil if moved.empty?
     frames = moved.to_h do |path|
