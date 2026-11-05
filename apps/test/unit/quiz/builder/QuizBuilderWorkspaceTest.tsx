@@ -174,9 +174,11 @@ describe('QuizBuilderWorkspace', () => {
     // hook's return value has to change too, so the appended question is
     // actually there for the workspace to expand.
     const addPendingQuestion = jest.fn().mockImplementation(() => {
+      const questions = [question(), question({id: -1})];
       mockUseQuizBuilderQuestions.mockReturnValue({
         ...BASE_STATE,
-        questions: [question(), question({id: -1})],
+        questions,
+        pages: groupByPage(questions),
         addPendingQuestion,
       });
       return -1;
