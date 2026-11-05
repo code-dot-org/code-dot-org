@@ -163,6 +163,21 @@ internal object SitePolicy {
     fun isHomeLink(url: Uri): Boolean = url.toString() == HOME_URL
 
     /**
+     * Whether [url] opens the landing page in place of a site page: the
+     * logo's [HOME_URL], the site's root and /home, and its account pages
+     * under /users/ (sign-in, sign-up, OAuth), which Amazon Kids+ does not
+     * allow. The root redirects signed-out visitors to sign-in.
+     */
+    fun leadsHome(url: Uri): Boolean {
+        if (isHomeLink(url)) {
+            return true
+        }
+        val path = url.path ?: ""
+        return origin(url) == SITE_ORIGIN
+            && (path in listOf("", "/", "/home", "/users") || path.startsWith("/users/"))
+    }
+
+    /**
      * The lab of /projects/<lab>, the link that starts a new project; the
      * server makes one for every visit. Null for any other URL.
      */

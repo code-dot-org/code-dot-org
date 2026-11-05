@@ -31,6 +31,21 @@ class SitePolicyTest {
     }
 
     @Test
+    fun leadsHome_rootHomeAndAccountPages() {
+        assertTrue(SitePolicy.leadsHome(uri(SitePolicy.HOME_URL)))
+        assertTrue(SitePolicy.leadsHome(uri("https://studio.code.org")))
+        assertTrue(SitePolicy.leadsHome(uri("https://studio.code.org/")))
+        assertTrue(SitePolicy.leadsHome(uri("https://studio.code.org/home")))
+        assertTrue(SitePolicy.leadsHome(uri("https://studio.code.org/users/sign_in")))
+        assertTrue(SitePolicy.leadsHome(uri("https://studio.code.org/users/sign_up/account_type")))
+        assertTrue(SitePolicy.leadsHome(uri("https://studio.code.org/users/auth/google_oauth2")))
+        assertFalse(SitePolicy.leadsHome(uri("https://studio.code.org/flappy/1")))
+        assertFalse(SitePolicy.leadsHome(uri("https://studio.code.org/usersx")))
+        assertFalse(SitePolicy.leadsHome(uri("https://studio.code.org/courses/oceans/units/1")))
+        assertFalse(SitePolicy.leadsHome(uri("https://code.org/")))
+    }
+
+    @Test
     fun isHomeLink_onlyTheExactSentinel() {
         assertTrue(SitePolicy.isHomeLink(uri(SitePolicy.HOME_URL)))
         assertFalse(SitePolicy.isHomeLink(uri("https://studio.code.org/")))

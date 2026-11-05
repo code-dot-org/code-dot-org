@@ -60,7 +60,7 @@ internal class AppWebViewClient(
         val url = request.url
         // The WebView ignores navigation started inside this callback, so go
         // home once it has returned.
-        if (SitePolicy.isHomeLink(url)) {
+        if (SitePolicy.leadsHome(url)) {
             view.post { app.goHome() }
             return true
         }
@@ -118,6 +118,10 @@ internal class AppWebViewClient(
         if (url != null && !app.isAppPage(url.toUri())) {
             view.stopLoading()
             view.post { app.goBack() }
+        } else if (url != null && SitePolicy.leadsHome(url.toUri())) {
+            // Reached by a redirect shouldOverrideUrlLoading did not see.
+            view.stopLoading()
+            view.post { app.goHome() }
         }
     }
 

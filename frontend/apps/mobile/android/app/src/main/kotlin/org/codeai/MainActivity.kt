@@ -23,7 +23,6 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.getcapacitor.BridgeActivity
 import com.getcapacitor.WebViewListener
-import org.codeai.SitePolicy.HOME_URL
 import org.codeai.SitePolicy.SITE_ORIGIN
 import java.net.URLEncoder
 import java.util.UUID
@@ -201,7 +200,7 @@ class MainActivity : BridgeActivity() {
             if (resumeUrl == null) {
                 prefs.edit { remove(LAST_PAGE_KEY) }
             }
-        } else if (SitePolicy.isSitePage(url) && url != HOME_URL) {
+        } else if (SitePolicy.isSitePage(url) && !SitePolicy.leadsHome(url.toUri())) {
             prefs.edit { putString(LAST_PAGE_KEY, url) }
             SitePolicy.projectEditorLab(url)?.let { lab ->
                 prefs.edit { putString(PROJECT_KEY_PREFIX + lab, url) }
@@ -233,6 +232,10 @@ class MainActivity : BridgeActivity() {
     internal fun goBack() {
         val webView = bridge.webView
         when {
+            // Back exits from the landing page itself, even with history
+            // behind it, such as an offline screen the app opened. Its
+            // congratulations (#finished) go back to the list instead.
+            webView.url == bridge.appUrl -> finish()
             webView.canGoBack() -> webView.goBack()
             // Chromium's Back, and history.go() from the page, skip the
             // landing page under a page the app reopened on a fresh start,
