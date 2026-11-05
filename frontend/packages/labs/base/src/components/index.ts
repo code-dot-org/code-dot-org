@@ -37,3 +37,4 @@ export {default as Panel} from './Panel';
 export * from './Layout';
 export {default as Layout} from './Layout';
 export {default as ResizeHandle} from './ResizeHandle';
+export * from './KeyboardShortcuts';

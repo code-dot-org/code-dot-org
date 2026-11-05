@@ -496,6 +496,21 @@ describe('removing and placing', () => {
       expect(onDocChange).not.toHaveBeenCalled();
     });
 
+    it('goes back to the tile first when the kind was taken by a key', () => {
+      const map = doc();
+      const onPutDown = vi.fn();
+      const onBackToTile = vi.fn();
+      const {canvas} = mount(map, {
+        placing: 'actors/coin',
+        onPutDown,
+        onBackToTile,
+      });
+      fireEvent.keyDown(canvas, {key: 'Escape'});
+      expect(onBackToTile).toHaveBeenCalledTimes(1);
+      expect(onPutDown).not.toHaveBeenCalled();
+      expect(said()).toMatch(/ still in hand\. Escape again puts it down\.$/);
+    });
+
     it('shows the cursor on an Enter before it is anywhere, placing nothing', () => {
       const map = doc();
       const {canvas, onDocChange} = mount(map, {placing: 'actors/coin'});

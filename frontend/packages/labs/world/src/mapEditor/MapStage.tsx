@@ -340,6 +340,11 @@ export interface MapStageProps {
   /** Escape on the stage puts the kind in hand back, as its palette tile does. */
   onPutDown?: () => void;
   /**
+   * Given when the kind in hand was taken by a key: Escape then goes back to
+   * its tile with it still in hand, and Escape there puts it down.
+   */
+  onBackToTile?: () => void;
+  /**
    * Where a selection's inspector goes instead of over the map: the Actor
    * Palette's column, which has nothing to do while something is selected.
    * Without one it floats at the foot of the stage, as alone in a test.
@@ -559,6 +564,7 @@ export const MapStage = ({
   onDocPreview,
   onEditScript,
   onPutDown,
+  onBackToTile,
   inspectorSlot,
   onInspecting,
   onUndo,
@@ -2600,6 +2606,15 @@ export const MapStage = ({
     }
     // …then puts down the kind in hand, else a click on one already placed
     // erases it…
+    if (event.key === 'Escape' && selected && onBackToTile) {
+      event.preventDefault();
+      onBackToTile();
+      say(
+        `${kinds?.[selected]?.name ?? kindName(selected)} still in hand. ` +
+          'Escape again puts it down.',
+      );
+      return;
+    }
     if (event.key === 'Escape' && selected && onPutDown) {
       event.preventDefault();
       onPutDown();

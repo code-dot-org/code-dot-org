@@ -19,8 +19,10 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {
+  KeyboardShortcutsDialog,
   PanelContainer,
   ResizeHandle,
+  useKeyboardShortcutsKey,
   WorkspaceHeader,
 } from '@code-dot-org/lab/components';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
@@ -46,6 +48,7 @@ import {ProgressionButton} from '../progression/ProgressionButton';
 import {fileIdAt} from '../runtime/projectFiles';
 
 import {Breadcrumb} from './Breadcrumb';
+import {ShortcutsContext} from './ShortcutsContext';
 import {
   follow,
   fromEntry,
@@ -55,6 +58,7 @@ import {
 } from './trail';
 import {TrailContext, type TrailContextValue} from './TrailContext';
 import styles from './worldLayout.module.css';
+import {WORLD_SHORTCUTS} from './worldShortcuts';
 
 const clamp = (value: number, min: number, max: number) =>
   Math.max(min, Math.min(max, value));
@@ -239,179 +243,195 @@ const WorldLayout = () => {
   const showPreview = viewMode !== ViewMode.CODE;
   const isSplit = showEditor && showPreview;
 
+  const [shortcutsOpen, setShortcutsOpen] = useState(false);
+  const openShortcuts = useCallback(() => setShortcutsOpen(true), []);
+  useKeyboardShortcutsKey(openShortcuts, !shortcutsOpen);
+
   return (
     <TrailContext.Provider value={trailContext}>
       <ShowCodeContext.Provider value={showCode}>
-        {/* The instructions width rides on a custom property so it can land on the
-        ResourcePanel itself (which takes a className but no style prop). */}
-        <div
-          className={styles.layout}
-          style={
-            {'--instructions-width': `${instructionsWidth}px`} as CSSProperties
-          }
-        >
-          <InfoPanel
-            className={styles.instructions}
-            documentationUrl="/docs/ide/world"
-            hasConsole={false}
-            // Read-only: it reads the generated code and the console, and answers
-            // in blocks. It offers no file edits, because a model cannot author a
-            // Blockly workspace safely (`aiTutor/useWorldTutor`).
-            aiTutor={aiTutor}
-            // "Show me": a link in a lesson's instructions names a place, and
-            // pressing it points there (`callouts/pointAt`).
-            onInstructionsTextClick={showMe}
-            extraSettings={[blocklyThemeSetting]}
-            // The way into the progression map, in the panel's bottom icon strip
-            // (specs/PROGRESSION_UI.md).
-            extraLinks={<ProgressionButton />}
+        <ShortcutsContext.Provider value={openShortcuts}>
+          <KeyboardShortcutsDialog
+            shortcuts={WORLD_SHORTCUTS}
+            isOpen={shortcutsOpen}
+            onClose={() => setShortcutsOpen(false)}
           />
-          {!isInstructionsCollapsed && (
-            <ResizeHandle
-              axis="x"
-              ariaLabel="Resize instructions"
-              value={instructionsWidth}
-              min={INSTRUCTIONS.min}
-              max={INSTRUCTIONS.max}
-              onDelta={dx =>
-                setInstructionsWidth(w =>
-                  clamp(w + dx, INSTRUCTIONS.min, INSTRUCTIONS.max),
-                )
-              }
-              onReset={() => setInstructionsWidth(INSTRUCTIONS.initial)}
+          {/* The instructions width rides on a custom property so it can land on the
+        ResourcePanel itself (which takes a className but no style prop). */}
+          <div
+            className={styles.layout}
+            style={
+              {
+                '--instructions-width': `${instructionsWidth}px`,
+              } as CSSProperties
+            }
+          >
+            <InfoPanel
+              className={styles.instructions}
+              documentationUrl="/docs/ide/world"
+              hasConsole={false}
+              // Read-only: it reads the generated code and the console, and answers
+              // in blocks. It offers no file edits, because a model cannot author a
+              // Blockly workspace safely (`aiTutor/useWorldTutor`).
+              aiTutor={aiTutor}
+              // "Show me": a link in a lesson's instructions names a place, and
+              // pressing it points there (`callouts/pointAt`).
+              onInstructionsTextClick={showMe}
+              extraSettings={[blocklyThemeSetting]}
+              // The way into the progression map, in the panel's bottom icon strip
+              // (specs/PROGRESSION_UI.md).
+              extraLinks={<ProgressionButton />}
             />
-          )}
+            {!isInstructionsCollapsed && (
+              <ResizeHandle
+                axis="x"
+                ariaLabel="Resize instructions"
+                value={instructionsWidth}
+                min={INSTRUCTIONS.min}
+                max={INSTRUCTIONS.max}
+                onDelta={dx =>
+                  setInstructionsWidth(w =>
+                    clamp(w + dx, INSTRUCTIONS.min, INSTRUCTIONS.max),
+                  )
+                }
+                onReset={() => setInstructionsWidth(INSTRUCTIONS.initial)}
+              />
+            )}
 
-          <div className={styles.workspaceColumn}>
-            <PanelContainer
-              id="world-workspace"
-              className={styles.workspacePanel}
-              headerContent={<WorkspaceHeader />}
-              rightHeaderContent={
-                // NOT IN PREVIEW-ONLY VIEW, where there is no editor pane to
-                // swap: a button that visibly does nothing is worse than no
-                // button.
-                //
-                // "JavaScript" and not "Show Code": the segmented buttons beside
-                // this one already call the blocks editor "Code", and a lab with
-                // two controls using that word for two different panes is a lab
-                // nobody can be told about.
-                showEditor ? (
-                  <Button
-                    variant="text"
-                    size="extraSmall"
-                    startIcon={
-                      <FontAwesomeV6Icon
-                        iconName="file-code"
-                        iconStyle="solid"
-                      />
-                    }
-                    aria-pressed={showGeneratedCode}
-                    onClick={() => setShowGeneratedCode(shown => !shown)}
-                  >
-                    JavaScript
-                  </Button>
-                ) : undefined
-              }
-              leftHeaderContent={
-                <SegmentedButtons
-                  size="xs"
-                  selectedButtonValue={viewMode}
-                  onChange={value => setViewMode(value as ViewModeType)}
-                  buttons={[
-                    {
-                      value: ViewMode.CODE,
-                      label: 'Code',
-                      ariaLabel: 'View code editor only',
-                      iconLeft: {iconName: 'code', iconStyle: 'solid'},
-                    },
-                    {
-                      value: ViewMode.PREVIEW,
-                      label: 'Preview',
-                      ariaLabel: 'View world preview only',
-                      iconLeft: {iconName: 'eye', iconStyle: 'solid'},
-                    },
-                    {
-                      value: ViewMode.SPLIT,
-                      label: 'Split View',
-                      ariaLabel: 'View code and world preview side by side',
-                      iconLeft: {iconName: 'table-columns', iconStyle: 'solid'},
-                    },
-                  ]}
-                />
-              }
-            >
-              <div className={styles.editorAndPreview}>
-                {/* The import shelves, mounted beside the workspace rather than
+            <div className={styles.workspaceColumn}>
+              <PanelContainer
+                id="world-workspace"
+                className={styles.workspacePanel}
+                headerContent={<WorkspaceHeader />}
+                rightHeaderContent={
+                  // NOT IN PREVIEW-ONLY VIEW, where there is no editor pane to
+                  // swap: a button that visibly does nothing is worse than no
+                  // button.
+                  //
+                  // "JavaScript" and not "Show Code": the segmented buttons beside
+                  // this one already call the blocks editor "Code", and a lab with
+                  // two controls using that word for two different panes is a lab
+                  // nobody can be told about.
+                  showEditor ? (
+                    <Button
+                      variant="text"
+                      size="extraSmall"
+                      startIcon={
+                        <FontAwesomeV6Icon
+                          iconName="file-code"
+                          iconStyle="solid"
+                        />
+                      }
+                      aria-pressed={showGeneratedCode}
+                      onClick={() => setShowGeneratedCode(shown => !shown)}
+                    >
+                      JavaScript
+                    </Button>
+                  ) : undefined
+                }
+                leftHeaderContent={
+                  <SegmentedButtons
+                    size="xs"
+                    selectedButtonValue={viewMode}
+                    onChange={value => setViewMode(value as ViewModeType)}
+                    buttons={[
+                      {
+                        value: ViewMode.CODE,
+                        label: 'Code',
+                        ariaLabel: 'View code editor only',
+                        iconLeft: {iconName: 'code', iconStyle: 'solid'},
+                      },
+                      {
+                        value: ViewMode.PREVIEW,
+                        label: 'Preview',
+                        ariaLabel: 'View world preview only',
+                        iconLeft: {iconName: 'eye', iconStyle: 'solid'},
+                      },
+                      {
+                        value: ViewMode.SPLIT,
+                        label: 'Split View',
+                        ariaLabel: 'View code and world preview side by side',
+                        iconLeft: {
+                          iconName: 'table-columns',
+                          iconStyle: 'solid',
+                        },
+                      },
+                    ]}
+                  />
+                }
+              >
+                <div className={styles.editorAndPreview}>
+                  {/* The import shelves, mounted beside the workspace rather than
                 inside an editor: they are asked for from a block's `(import…)`
                 row AND from the map editor and the Actor Editor, whatever is
                 open (`library/LibraryImports`). */}
-                <LibraryImports />
-                {/* Where Show me says what it pointed at, and the ring's style. */}
-                <CalloutAnnouncer />
-                {showEditor && (
-                  <div className={styles.editorPane}>
-                    <div className={styles.editorMain}>
-                      <Workspace
-                        // NO FILE TREE, and no folder buttons either: each kind
-                        // of file is reached where it is used — a picture from
-                        // the look that shows it, a rule from Rules in Play
-                        // (specs/SHELL_FINISH_PLAN.md). The tree could also do a
-                        // thing nothing here will: rename a FILE, which for an
-                        // actor leaves every reference pointing at a path that is
-                        // not there any more.
-                        hideFileBrowser
-                        // NO TABS EITHER: one place at a time, and the
-                        // breadcrumb is the way back to the ones before it
-                        // (specs/SHELL_PLAN.md).
-                        tabStrip={<Breadcrumb />}
-                        // The host of the file acts, which draws nothing of its
-                        // own: every door asks it (`files/FileMenus`). Here
-                        // because it needs what the workspace provides.
-                        tabBarStart={<FileMenus />}
-                      />
+                  <LibraryImports />
+                  {/* Where Show me says what it pointed at, and the ring's style. */}
+                  <CalloutAnnouncer />
+                  {showEditor && (
+                    <div className={styles.editorPane}>
+                      <div className={styles.editorMain}>
+                        <Workspace
+                          // NO FILE TREE, and no folder buttons either: each kind
+                          // of file is reached where it is used — a picture from
+                          // the look that shows it, a rule from Rules in Play
+                          // (specs/SHELL_FINISH_PLAN.md). The tree could also do a
+                          // thing nothing here will: rename a FILE, which for an
+                          // actor leaves every reference pointing at a path that is
+                          // not there any more.
+                          hideFileBrowser
+                          // NO TABS EITHER: one place at a time, and the
+                          // breadcrumb is the way back to the ones before it
+                          // (specs/SHELL_PLAN.md).
+                          tabStrip={<Breadcrumb />}
+                          // The host of the file acts, which draws nothing of its
+                          // own: every door asks it (`files/FileMenus`). Here
+                          // because it needs what the workspace provides.
+                          tabBarStart={<FileMenus />}
+                        />
+                      </div>
+                      {/* Code-only view: the console falls back to under the editor. */}
+                      {!showPreview && <ConsolePanel />}
                     </div>
-                    {/* Code-only view: the console falls back to under the editor. */}
-                    {!showPreview && <ConsolePanel />}
-                  </div>
-                )}
-                {isSplit && (
-                  <ResizeHandle
-                    axis="x"
-                    ariaLabel="Resize preview"
-                    value={previewWidth}
-                    min={PREVIEW.min}
-                    max={PREVIEW.max}
-                    // Dragging right shrinks the preview: it is the trailing pane,
-                    // so its width moves opposite to the pointer.
-                    onDelta={dx =>
-                      setPreviewWidth(w =>
-                        clamp(w - dx, PREVIEW.min, PREVIEW.max),
-                      )
-                    }
-                    onReset={() => setPreviewWidth(PREVIEW.initial)}
-                  />
-                )}
-                {showPreview && (
-                  // Alone, the preview takes the whole column; split, it is sized by
-                  // the divider and the editor takes what is left.
-                  <div
-                    className={
-                      isSplit
-                        ? styles.previewPane
-                        : `${styles.previewPane} ${styles.previewPaneFull}`
-                    }
-                    style={isSplit ? {width: previewWidth} : undefined}
-                  >
-                    <WorldPreview />
-                    {/* The console lives under the preview whenever it is shown. */}
-                    <ConsolePanel />
-                  </div>
-                )}
-              </div>
-            </PanelContainer>
+                  )}
+                  {isSplit && (
+                    <ResizeHandle
+                      axis="x"
+                      ariaLabel="Resize preview"
+                      value={previewWidth}
+                      min={PREVIEW.min}
+                      max={PREVIEW.max}
+                      // Dragging right shrinks the preview: it is the trailing pane,
+                      // so its width moves opposite to the pointer.
+                      onDelta={dx =>
+                        setPreviewWidth(w =>
+                          clamp(w - dx, PREVIEW.min, PREVIEW.max),
+                        )
+                      }
+                      onReset={() => setPreviewWidth(PREVIEW.initial)}
+                    />
+                  )}
+                  {showPreview && (
+                    // Alone, the preview takes the whole column; split, it is sized by
+                    // the divider and the editor takes what is left.
+                    <div
+                      className={
+                        isSplit
+                          ? styles.previewPane
+                          : `${styles.previewPane} ${styles.previewPaneFull}`
+                      }
+                      style={isSplit ? {width: previewWidth} : undefined}
+                    >
+                      <WorldPreview />
+                      {/* The console lives under the preview whenever it is shown. */}
+                      <ConsolePanel />
+                    </div>
+                  )}
+                </div>
+              </PanelContainer>
+            </div>
           </div>
-        </div>
+        </ShortcutsContext.Provider>
       </ShowCodeContext.Provider>
     </TrailContext.Provider>
   );

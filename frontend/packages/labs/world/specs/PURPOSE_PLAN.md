@@ -153,7 +153,9 @@ to the stage, or on an Enter or Space before it is anywhere, which places
 nothing; a press that focuses the stage leaves the cursor to the pointer.
 A tile taken by Enter or Space sends focus on to the stage; one taken by a
 click keeps it.
-Enter or Space is the brush's press at the cursor, and says what it did. Escape puts the kind down, says so, and sends focus back to its tile. The canvas's name says which keys it takes, placing or not. In
+Enter or Space is the brush's press at the cursor, and says what it did. Escape puts the kind down, says so, and sends focus back to its tile;
+for a kind taken by a key it goes back to the tile first, still in hand,
+and the tile's own Escape puts it down. The canvas's name says which keys it takes, placing or not. In
 the browser, keyboard only: a Scoreboard taken from its tile with Enter,
 placed at column 5, row 9, selected by the arrows and docked along the
 bottom from the menu; the game drew it there.

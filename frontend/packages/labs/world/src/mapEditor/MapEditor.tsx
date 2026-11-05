@@ -52,6 +52,7 @@ import {parseScreenData} from '../blockly/screenData';
 import {setRevealer} from '../callouts/reveal';
 import {fileLabel} from '../files/fileLabel';
 import fields from '../formFields.module.css';
+import {useOpenShortcuts} from '../layout/ShortcutsContext';
 import {useScriptStep} from '../layout/TrailContext';
 import {worldOpensOn, type WorldLevelProperties} from '../levelData';
 import {gameModuleOf, MAIN_SCREEN_PATH} from '../mainWorld';
@@ -243,6 +244,7 @@ export const MapEditor = ({
     void requestActorCreate(purpose).then(path => {
       if (path) {
         setSelected(path);
+        setTakenByKey(false);
       }
     });
   }, []);
@@ -363,6 +365,9 @@ export const MapEditor = ({
   const [stageFocus, setStageFocus] = useState(0);
   /** The tile an actor put down on the stage came from, to go back to. */
   const [tileFocus, setTileFocus] = useState<{path: string} | null>(null);
+  /** Whether the actor in hand was taken by a key (`MapStage.onBackToTile`). */
+  const [takenByKey, setTakenByKey] = useState(false);
+  const openShortcuts = useOpenShortcuts();
   // A selection's inspector takes the palette's column while it is open: the
   // palette has nothing to do then, and over the map it covered what it was
   // about.
@@ -976,6 +981,17 @@ export const MapEditor = ({
             >
               <FontAwesomeV6Icon iconName="rotate-right" iconStyle="solid" />
             </IconButton>
+            {openShortcuts && (
+              <IconButton
+                size="small"
+                aria-label="Keyboard shortcuts"
+                title="Keyboard shortcuts (/)"
+                aria-haspopup="dialog"
+                onClick={openShortcuts}
+              >
+                <FontAwesomeV6Icon iconName="keyboard" iconStyle="solid" />
+              </IconButton>
+            )}
             <div
               className={styles.announcer}
               role="status"
@@ -1008,14 +1024,20 @@ export const MapEditor = ({
           selected={selected}
           // Entering place mode clears any placed-actor selection — the
           // stage does that itself, since that selection is its state.
-          onSelect={setSelected}
+          onSelect={path => {
+            setSelected(path);
+            setTakenByKey(false);
+          }}
           onOpen={openKind}
           onDelete={deleteKind}
           onNew={newActor}
           newWithheld={withheld.has('map-new-actor')}
           isReadOnly={isReadOnly}
           onDragOut={setIncoming}
-          onTakenByKey={() => setStageFocus(asked => asked + 1)}
+          onTakenByKey={() => {
+            setTakenByKey(true);
+            setStageFocus(asked => asked + 1);
+          }}
           focusTile={tileFocus}
           hidden={inspecting}
         />
@@ -1040,6 +1062,14 @@ export const MapEditor = ({
             }
             setSelected(null);
           }}
+          onBackToTile={
+            takenByKey && selected
+              ? () => {
+                  setTileFocus({path: selected});
+                  setTakenByKey(false);
+                }
+              : undefined
+          }
           thumbnails={thumbnails}
           pictures={shown.pictures}
           schemas={shownSchemas}

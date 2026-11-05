@@ -50,6 +50,11 @@ below, and are listed last.
   history keeps whole files and no names for its steps.
 - **The keys are found only by hovering**, in the buttons' titles. Nothing
   lists them.
+  CLOSED: `/` anywhere outside a field, or the map editor's Keyboard
+  shortcuts button, opens a dialog listing the keys of the map, the
+  palette and the animation timeline (`layout/worldShortcuts`). The
+  dialog is lab2's, moved to `@code-dot-org/lab`; the listing is kept by
+  hand beside the code that handles each key.
 
 ### Add Rules in the toolbox (SHELL_PLAN.md, step 6)
 
@@ -136,6 +141,10 @@ below, and are listed last.
   Shift+Tab, past Add New Actor and every tile after it. Escape on the
   stage brings focus back to the tile, but puts the actor down, and so
   takes Open and Delete away with it.
+  CLOSED: taken by a key, the first Escape on the stage goes back to the
+  tile with the actor still in hand, so Open and Delete are the next Tab
+  stops, and says "Coin still in hand. Escape again puts it down."; Escape
+  on the tile puts it down. Taken by a click, one Escape puts it down.
 
 ### Finishing the shell (SHELL_FINISH_PLAN.md)
 
