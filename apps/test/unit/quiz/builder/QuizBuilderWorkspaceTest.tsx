@@ -497,6 +497,19 @@ describe('QuizBuilderWorkspace', () => {
       expect(event.defaultPrevented).toBe(true);
     });
 
+    it('asks before leaving with an unsaved question draft', () => {
+      renderWorkspace({questions: [question()]});
+      fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
+      fireEvent.change(
+        screen.getByDisplayValue('JavaScript variable fundamentals'),
+        {target: {value: 'Edited name'}}
+      );
+
+      const event = new Event('beforeunload', {cancelable: true});
+      window.dispatchEvent(event);
+      expect(event.defaultPrevented).toBe(true);
+    });
+
     it('lets the page close with nothing unsaved', () => {
       renderWorkspace({questions: [question()]});
       const event = new Event('beforeunload', {cancelable: true});

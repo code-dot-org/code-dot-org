@@ -106,14 +106,15 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     ? 'No changes to save'
     : undefined;
 
+  const hasUnsavedChanges = hasUnsavedLayout || dirtyIds.size > 0;
   useEffect(() => {
-    if (!hasUnsavedLayout) {
+    if (!hasUnsavedChanges) {
       return;
     }
     const warn = (event: BeforeUnloadEvent) => event.preventDefault();
     window.addEventListener('beforeunload', warn);
     return () => window.removeEventListener('beforeunload', warn);
-  }, [hasUnsavedLayout]);
+  }, [hasUnsavedChanges]);
 
   // The page header's slot; absent outside builder mode, as in unit tests.
   const [headerSlot] = useState(() =>
