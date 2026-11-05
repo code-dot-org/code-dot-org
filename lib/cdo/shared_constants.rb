@@ -871,6 +871,8 @@ module SharedConstants
     GEMINI_2_5_PRO: "gemini-2.5-pro",
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
     GEMINI_3_1_FLASH_IMAGE: "gemini-3.1-flash-image",
+    GPT_5_6_LUNA: "gpt-5.6-luna",
+    GPT_6_LUNA: "gpt-6-luna",
   }
 
   # Models served via the Google Gemini API. This is about routing — which
@@ -892,7 +894,11 @@ module SharedConstants
 
   # Models absent here (Mistral, served from SageMaker) are never blocked.
   AI_CHAT_PROVIDER_BY_MODEL_ID = AI_CHAT_GEMINI_MODEL_IDS.to_h {|id| [id, AI_CHAT_PROVIDERS[:GOOGLE]]}.
-    merge(AI_CHAT_MODEL_IDS[:CHATGPT] => AI_CHAT_PROVIDERS[:OPENAI]).
+    merge(
+      AI_CHAT_MODEL_IDS[:CHATGPT] => AI_CHAT_PROVIDERS[:OPENAI],
+      AI_CHAT_MODEL_IDS[:GPT_5_6_LUNA] => AI_CHAT_PROVIDERS[:OPENAI],
+      AI_CHAT_MODEL_IDS[:GPT_6_LUNA] => AI_CHAT_PROVIDERS[:OPENAI],
+    ).
     freeze
 
   # Unavailable to users outside the US
