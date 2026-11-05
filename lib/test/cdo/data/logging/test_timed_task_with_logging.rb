@@ -32,12 +32,12 @@ class RakeTaskEventLogger
 end
 
 class TimedTaskWithLoggingTest < Minitest::Test
-  SLEEP = 0.05
+  SHORT_SLEEP = 0.05
 
   def setup
     @previous_application = Rake.application
     Rake.application = Rake::Application.new
-    @child = CustomRake::TimedTaskWithLogging.define_task(:child) {sleep SLEEP}
+    @child = CustomRake::TimedTaskWithLogging.define_task(:child) {sleep SHORT_SLEEP}
     @parent = CustomRake::TimedTaskWithLogging.define_task(parent: :child) {}
   end
 
@@ -46,11 +46,12 @@ class TimedTaskWithLoggingTest < Minitest::Test
     RakeTaskEventLogger.delay = nil
   end
 
-  # Coarse buckets instead of words, so a short sleep registers without the
-  # test waiting a whole second for the real formatter to notice it.
-  def use_buckets(*tasks)
+  # Saves test time: with the real formatter, a difference only shows at
+  # whole seconds, so each test would have to sleep a full second to change
+  # the printed line. Two coarse buckets let a short sleep do it instead.
+  def stub_duration_words_for_short_sleep(*tasks)
     tasks.each do |task|
-      task.define_singleton_method(:duration_words) {|seconds| seconds < SLEEP / 2 ? 'none' : 'some'}
+      task.define_singleton_method(:duration_words) {|seconds| seconds < SHORT_SLEEP / 2 ? 'none' : 'some'}
     end
   end
 
@@ -78,15 +79,15 @@ class TimedTaskWithLoggingTest < Minitest::Test
   end
 
   def test_parent_line_shows_time_spent_in_prerequisites
-    use_buckets(@child, @parent)
+    stub_duration_words_for_short_sleep(@child, @parent)
     out, _err = capture_io {@parent.invoke}
     assert_equal ['Finished child in some', 'Finished parent in some total (none excluding prerequisites)'], out.lines(chomp: true)
   end
 
   def test_event_logging_counts_as_own_time
-    RakeTaskEventLogger.delay = SLEEP
+    RakeTaskEventLogger.delay = SHORT_SLEEP
     leaf = CustomRake::TimedTaskWithLogging.define_task(:leaf) {}
-    use_buckets(leaf)
+    stub_duration_words_for_short_sleep(leaf)
     out, _err = capture_io {leaf.invoke}
     assert_equal ['Finished leaf in some'], out.lines(chomp: true)
   end
@@ -98,9 +99,9 @@ class TimedTaskWithLoggingTest < Minitest::Test
   end
 
   def test_timed_task_can_invoke_a_plain_prerequisite
-    Rake::Task.define_task(:plain) {sleep SLEEP}
+    Rake::Task.define_task(:plain) {sleep SHORT_SLEEP}
     timed = CustomRake::TimedTaskWithLogging.define_task(timed: :plain) {}
-    use_buckets(timed)
+    stub_duration_words_for_short_sleep(timed)
     out, _err = capture_io {timed.invoke}
     assert_equal ['Finished timed in some total (none excluding prerequisites)'], out.lines(chomp: true)
   end
