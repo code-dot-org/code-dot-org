@@ -43,7 +43,8 @@ No consumer passes `color` or `margin`.
 ## Behavior differences
 
 - The `<hr>` gains MUI's classes (`MuiDivider-root`, `MuiDivider-fullWidth`
-  and an emotion class) and loses the legacy module classes.
+  and a generated `css-…` class that holds MUI's styles) and loses the
+  legacy module classes.
 - Legacy drew a top border; MUI draws a bottom border on a zero-height box,
   so the 1px line lands on the same pixel row.
 - Legacy set `width: 100%` and `margin-inline: auto` and left `flex-shrink`
@@ -64,8 +65,8 @@ No consumer passes `color` or `margin`.
   (two classes). The workshop dashboard pages, the AI diff chat header and
   the add-resource dialog set none, and change from MUI's 12% black to
   `--background-neutral-quaternary`. Sketch Lab's toolbar and canvas controls
-  set one with a single class, which ties with MUI's emotion class; emotion
-  usually loads later in apps, so they likely change too.
+  set one with a single class. MUI's own styles also sit on a single class,
+  and in apps they usually load later and win, so these likely change too.
 - The marketing sites are unaffected: `code-dot-org/marketing-sites` builds
   its own themes and carries its own copy of this package.
 
