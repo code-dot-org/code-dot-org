@@ -536,18 +536,23 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 tip={generating ? parts.tip : undefined}
                 under={generating ? undefined : under}
                 overlay={
-                  parts.rating.offered && (
-                    <RatingBar
-                      verdict={parts.rating.verdict}
-                      onJudge={parts.rating.judge}
-                      onReasons={parts.rating.explain}
-                      onAsking={handleAsking}
-                      onDismiss={
-                        parts.rating.required ? undefined : parts.rating.dismiss
-                      }
-                      disabled={parts.busy}
-                    />
-                  )
+                  <>
+                    {parts.cachedTag}
+                    {parts.rating.offered && (
+                      <RatingBar
+                        verdict={parts.rating.verdict}
+                        onJudge={parts.rating.judge}
+                        onReasons={parts.rating.explain}
+                        onAsking={handleAsking}
+                        onDismiss={
+                          parts.rating.required
+                            ? undefined
+                            : parts.rating.dismiss
+                        }
+                        disabled={parts.busy}
+                      />
+                    )}
+                  </>
                 }
               />
             );

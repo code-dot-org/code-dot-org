@@ -108,6 +108,9 @@ export interface SentenceSceneParts {
   frame: React.ReactNode;
   /** A made picture is showing in the frame. */
   frameFilled: boolean;
+  /** A reviewer's mark over a picture served from the tree, while the tree
+      is filled in; comes out before ship. */
+  cachedTag: React.ReactNode;
   /** The Behind the scenes button, once there is a picture. */
   behindTheScenes: React.ReactNode;
   /** The screen reader's status line. */
@@ -585,13 +588,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           )}
         />
       )}
-      {/* A reviewer's mark while the tree is filled in; comes out before
-          ship. Keyed like the reveal, so each picture shows it afresh. */}
-      {chosenPicture.cached && (
-        <span key={`cached-${chosenPicture.id}`} className={styles.cachedTag}>
-          cached
-        </span>
-      )}
       {/* Keyed by picture, so each new one remounts and plays the reveal
           once. */}
       <PixelReveal
@@ -641,6 +637,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         panelRef,
         frame,
         frameFilled: !!chosenPicture && !generating,
+        // Keyed like the reveal, so each picture shows it afresh.
+        cachedTag: chosenPicture?.cached && !generating && (
+          <span key={`cached-${chosenPicture.id}`} className={styles.cachedTag}>
+            cached
+          </span>
+        ),
         behindTheScenes,
         status: statusNode,
         sentence: sentenceNode,

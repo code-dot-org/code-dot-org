@@ -48,7 +48,10 @@ const RESULT = {
 // A host that lays every part out, with buttons for the callbacks.
 const layout = (parts: SentenceSceneParts) => (
   <div>
-    <div>{parts.frame}</div>
+    <div>
+      {parts.frame}
+      {parts.cachedTag}
+    </div>
     {parts.behindTheScenes}
     <section ref={parts.panelRef} tabIndex={-1} aria-label="Make your picture">
       {parts.status}
