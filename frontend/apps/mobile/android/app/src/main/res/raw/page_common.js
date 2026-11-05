@@ -1,7 +1,7 @@
 // The app's page script runs in every studio.code.org page the app loads.
-// PageInjector.kt puts it at the top of <head>, so it runs while the page is
-// parsed, before the site's own scripts, and its styles apply before the
-// first frame. PageScript.kt joins the page_*.js and workaround_*.js files,
+// PageScript.kt adds it as a document-start script, so it runs before the
+// site's own scripts and its styles apply before the first frame; a WebView
+// without those gets it when the page first shows. PageScript.kt joins the page_*.js and workaround_*.js files,
 // in its order, into one function, so they share one scope: this file holds
 // what several of them use. PageScript.kt also defines codeaiDebugBuild,
 // codeaiStableId and codeaiResetToken before them.

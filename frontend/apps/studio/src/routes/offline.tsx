@@ -8,8 +8,8 @@ import {isMobileBuild} from '@/config/buildMode';
 // landing page.
 const HOME_URL = 'https://studio.code.org/codeai-app/home';
 
-// PageInjector.kt sends a page it could not fetch here, with that page as
-// ?url=. Only studio.code.org pages are retried.
+// The app (AppWebViewClient.kt) sends a page that could not load here, with
+// that page as ?url=. Only studio.code.org pages are retried.
 function retryUrl(url: unknown): string | undefined {
   return typeof url === 'string' && url.startsWith('https://studio.code.org/')
     ? url

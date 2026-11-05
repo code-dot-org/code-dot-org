@@ -87,12 +87,15 @@ function scheduleCopy(storage) {
 
 try {
   var session = window.sessionStorage;
-  if (session.length === 0) {
-    var saved = JSON.parse(window.localStorage.getItem(SESSION_COPY_KEY) || '{}');
-    Object.keys(saved).forEach(function (key) {
+  // Restores each saved entry the session lacks, not only into an empty one:
+  // where this script runs late (AppWebViewClient.kt's injectOnCommit), the
+  // site's scripts may have written first.
+  var saved = JSON.parse(window.localStorage.getItem(SESSION_COPY_KEY) || '{}');
+  Object.keys(saved).forEach(function (key) {
+    if (session.getItem(key) === null) {
       originalSetItem.call(session, key, saved[key]);
-    });
-  }
+    }
+  });
   var resetCourseName = cookieValue(RESET_COURSE_COOKIE);
   if (resetCourseName) {
     resetCourse(session, resetCourseName);

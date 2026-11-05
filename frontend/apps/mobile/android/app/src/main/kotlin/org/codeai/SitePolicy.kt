@@ -50,7 +50,11 @@ internal object SitePolicy {
     // Item 6: certificate pages, which ask for a name and offer sharing.
     // Reaching one means the curriculum is done; the app congratulates the
     // child instead.
-    private val CERTIFICATE_PATHS = listOf("/congrats", "/certificates/", "/print_certificates/")
+    // /api/hour/finish/<course> redirects to /congrats, but older WebViews
+    // (Chromium 91) load a redirect's target without the app seeing it, so
+    // the app catches the finish itself.
+    private val CERTIFICATE_PATHS =
+        listOf("/congrats", "/certificates/", "/print_certificates/", "/api/hour/finish/")
     private val COURSE_NAME = Regex("[A-Za-z0-9_-]+")
     // A free-play lab's project editor, /projects/<lab>/<id>/edit.
     private val PROJECT_EDITOR =
@@ -191,14 +195,15 @@ internal object SitePolicy {
     }
 
     /**
-     * The course a certificate page is for: /congrats/<course>, or
-     * /congrats?s=<course in URL-safe Base64>, which /congrats/<course> and
-     * /api/hour/finish/<course> redirect to. Empty when unknown.
+     * The course a certificate page is for: /congrats/<course>,
+     * /api/hour/finish/<course>, or /congrats?s=<course in URL-safe Base64>,
+     * which those two redirect to. Empty when unknown.
      */
     fun finishedCourse(url: Uri): String {
         val segments = url.pathSegments
         val course = when {
             segments.size == 2 && segments[0] == "congrats" -> segments[1]
+            segments.size == 4 && segments.subList(0, 3) == listOf("api", "hour", "finish") -> segments[3]
             segments.size == 1 && segments[0] == "congrats" ->
                 url.getQueryParameter("s")?.let { encoded ->
                     try {

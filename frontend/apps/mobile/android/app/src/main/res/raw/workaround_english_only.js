@@ -4,8 +4,8 @@
 //
 // English only for now. Rails renders in the locale of ?lang=, else of the
 // language_ cookie, and saves ?lang= in the cookie; the site's own scripts
-// can change the cookie too. MainActivity.kt and PageInjector.kt set it
-// before each page. If a page still finds the cookie is not en-US, a ?lang=
+// can change the cookie too. MainActivity.kt sets it when the app starts.
+// If a page still finds the cookie is not en-US, a ?lang=
 // other than English, or itself rendered in another language, it sets the
 // cookie and reloads without ?lang=. Two tries per tab, so a cookie that
 // will not stick cannot loop the page.

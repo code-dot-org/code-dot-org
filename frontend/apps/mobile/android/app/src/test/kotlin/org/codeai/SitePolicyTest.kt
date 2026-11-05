@@ -159,6 +159,8 @@ class SitePolicyTest {
         assertTrue(SitePolicy.isCertificatePage(uri("https://studio.code.org/congrats/oceans")))
         assertTrue(SitePolicy.isCertificatePage(uri("https://studio.code.org/certificates/abc")))
         assertTrue(SitePolicy.isCertificatePage(uri("https://studio.code.org/print_certificates/abc")))
+        assertTrue(SitePolicy.isCertificatePage(uri("https://studio.code.org/api/hour/finish/flappy")))
+        assertFalse(SitePolicy.isCertificatePage(uri("https://studio.code.org/api/hour/other")))
         assertFalse(SitePolicy.isCertificatePage(uri("https://studio.code.org/congratsx")))
         assertFalse(SitePolicy.isCertificatePage(uri("https://studio.code.org/courses/oceans/units/1")))
         assertFalse(SitePolicy.isCertificatePage(uri("https://code.org/congrats")))
@@ -168,6 +170,7 @@ class SitePolicyTest {
     fun finishedCourse_fromPathOrBase64Parameter() {
         val encoded = Base64.encodeToString("oceans".toByteArray(), Base64.URL_SAFE or Base64.NO_WRAP)
         assertEquals("oceans", SitePolicy.finishedCourse(uri("https://studio.code.org/congrats/oceans")))
+        assertEquals("flappy", SitePolicy.finishedCourse(uri("https://studio.code.org/api/hour/finish/flappy")))
         assertEquals("oceans", SitePolicy.finishedCourse(uri("https://studio.code.org/congrats?s=$encoded")))
     }
 

@@ -74,7 +74,6 @@ dependencies {
     testImplementation "junit:junit:$junitVersion"
     // Runs SitePolicy and PageInjector, which use android.net and android.webkit, on the JVM.
     testImplementation "org.robolectric:robolectric:4.17"
-    testImplementation "com.squareup.okhttp3:mockwebserver:5.5.1"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')

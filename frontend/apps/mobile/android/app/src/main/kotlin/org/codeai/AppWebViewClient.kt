@@ -1,6 +1,7 @@
 package org.codeai
 
 import android.graphics.Bitmap
+import android.net.Uri
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebResourceResponse
@@ -11,16 +12,17 @@ import org.codeai.SitePolicy.FINISHED_FRAGMENT
 import org.json.JSONObject
 
 /**
- * Decides where the app's WebView may go, and serves what it fetches: stored
- * images and icon fonts from disk, and studio.code.org pages with the page
- * script (PageScript.kt) in their <head>, so the site chrome is hidden before
- * the first frame. [app] holds the navigation state and acts on it.
+ * Decides where the app's WebView may go, and serves stored images and icon
+ * fonts from disk. Where the WebView has no document-start scripts
+ * ([injectOnCommit]), each studio.code.org page gets the page script
+ * (PageScript.kt) when it first shows. [app] holds the navigation state and
+ * acts on it.
  */
 internal class AppWebViewClient(
     private val app: MainActivity,
-    private val pageInjector: PageInjector,
     private val assetCache: AssetCache,
     private val pageScript: String,
+    private val injectOnCommit: Boolean,
     private val stableId: String?,
 ) : BridgeWebViewClient(app.bridge) {
     private val bridge = app.bridge
@@ -30,12 +32,12 @@ internal class AppWebViewClient(
         request: WebResourceRequest,
     ): WebResourceResponse? {
         if (SitePolicy.isBlockedHost(request.url)) {
-            return PageInjector.forbidden()
+            return WebResponses.forbidden()
         }
         // shouldOverrideUrlLoading never sees a POST, such as a form sent to
         // another site.
         if (request.isForMainFrame && !app.isAppPage(request.url)) {
-            return PageInjector.noContent()
+            return WebResponses.noContent()
         }
         // The site's scripts use the ID they fetch, not the device's that the
         // page script then stores in the cookie in its place.
@@ -43,10 +45,9 @@ internal class AppWebViewClient(
             && request.method.equals("GET", ignoreCase = true)
             && SitePolicy.isStableIdRequest(request.url)
         ) {
-            return PageInjector.plainText(stableId)
+            return WebResponses.plainText(stableId)
         }
         return assetCache.intercept(request)
-            ?: pageInjector.intercept(request)
             ?: super.shouldInterceptRequest(view, request)
     }
 
@@ -84,16 +85,7 @@ internal class AppWebViewClient(
         // congratulations, whose Try again resets a course, opens only for a
         // page load the page started itself.
         if (SitePolicy.isCertificatePage(url)) {
-            val landing = "${bridge.appUrl}$FINISHED_FRAGMENT${SitePolicy.finishedCourse(url)}"
-            val check = startedNavigationCheck(url.toString(), request.isRedirect)
-            view.post {
-                view.evaluateJavascript(check) { started ->
-                    if (started == "true") {
-                        app.pendingLandingUrl = landing
-                        app.goHome()
-                    }
-                }
-            }
+            view.post { finishCourse(view, url, request.isRedirect) }
             return true
         }
         // A curriculum opened from the landing page can take a while on a
@@ -112,7 +104,10 @@ internal class AppWebViewClient(
             return super.shouldOverrideUrlLoading(view, request)
         }
         // Amazon Kids+ allows no links out of its environment. Capacitor would
-        // open other hosts in the system browser; ignore them instead.
+        // open other hosts in the system browser; ignore them instead. This
+        // also refuses a studio.code.org redirect to another site, such as
+        // /help to support.code.org; the page in front stays, uncovered.
+        view.post { app.loadingCover.hide() }
         return true
     }
 
@@ -130,6 +125,11 @@ internal class AppWebViewClient(
     override fun doUpdateVisitedHistory(view: WebView, url: String?, isReload: Boolean) {
         super.doUpdateVisitedHistory(view, url, isReload)
         app.rememberPage(url)
+        if (app.clearHistoryOnOffline && app.isOfflinePage(url)) {
+            app.clearHistoryOnOffline = false
+            // Drops the failed page's error entry, which Back would retry.
+            view.post { view.clearHistory() }
+        }
         val pending = app.pendingLandingUrl
         // Back, or no page left to wait for.
         if (app.isBundledPage(url) && pending == null && app.resumeUrl == null) {
@@ -149,18 +149,17 @@ internal class AppWebViewClient(
         }
     }
 
-    // Pages PageInjector hands back to the WebView get the script when they
-    // commit. The script's guard makes a second run a no-op.
+    // Later than a document-start script: the site chrome shows for a moment.
     override fun onPageCommitVisible(view: WebView, url: String?) {
         super.onPageCommitVisible(view, url)
-        if (SitePolicy.isSitePage(url)) {
+        if (injectOnCommit && SitePolicy.isSitePage(url)) {
             view.evaluateJavascript(pageScript, null)
         }
     }
 
     override fun onPageFinished(view: WebView, url: String?) {
         super.onPageFinished(view, url)
-        if (SitePolicy.isSitePage(url) && !pageInjector.wasRedirectStub(url)) {
+        if (SitePolicy.isSitePage(url)) {
             app.loadingCover.hideOnceSettled()
         }
     }
@@ -171,20 +170,41 @@ internal class AppWebViewClient(
         error: WebResourceError,
     ) {
         super.onReceivedError(view, request, error)
-        if (request.isForMainFrame) {
+        if (!request.isForMainFrame) {
+            return
+        }
+        // A studio.code.org page that cannot load, as when the tablet is
+        // offline, shows the landing page's offline screen, not the
+        // WebView's own error page.
+        val url = request.url.toString()
+        if (SitePolicy.isSitePage(url)) {
+            view.post { app.showOffline(url) }
+        } else {
             app.loadingCover.hide()
         }
     }
 
+    // Opens the landing page's congratulations for the certificate page [url]
+    // if the page in front started that load. When both callbacks report the
+    // same load, the second check finds the record taken and does nothing.
+    private fun finishCourse(view: WebView, url: Uri, redirect: Boolean) {
+        val landing = "${bridge.appUrl}$FINISHED_FRAGMENT${SitePolicy.finishedCourse(url)}"
+        view.evaluateJavascript(startedNavigationCheck(url.toString(), redirect)) { started ->
+            if (started == "true") {
+                app.pendingLandingUrl = landing
+                app.goHome()
+            }
+        }
+    }
+
     // Takes the page script's record of the last page load the page started:
-    // [target] itself, or the page in front, a redirect stub that led to it,
-    // or for a server redirect any. A WebView without the Navigation API
-    // keeps no record and is trusted.
+    // [target] itself, or for a redirect any. A WebView without the
+    // Navigation API keeps no record and is trusted.
     private fun startedNavigationCheck(target: String, redirect: Boolean): String =
         "(function () {" +
             "var key = 'codeai_started_navigation', started = null;" +
             "try { started = sessionStorage.getItem(key); sessionStorage.removeItem(key); } catch (e) {}" +
             "return !window.navigation || started === ${JSONObject.quote(target)}" +
-            " || started === location.href || ($redirect && started !== null);" +
+            " || ($redirect && started !== null);" +
             "})()"
 }

@@ -25,6 +25,7 @@ import com.getcapacitor.BridgeActivity
 import com.getcapacitor.WebViewListener
 import org.codeai.SitePolicy.HOME_URL
 import org.codeai.SitePolicy.SITE_ORIGIN
+import java.net.URLEncoder
 import java.util.UUID
 
 /**
@@ -47,6 +48,9 @@ class MainActivity : BridgeActivity() {
     // return to: a load the cover's logo cancelled, which can stay in
     // history even ahead of the landing page, or a page Back left.
     internal var clearHistoryOnLanding = false
+    // Set when the app opens the offline screen over a page that failed to
+    // load; Back from it then goes to the landing page.
+    internal var clearHistoryOnOffline = false
     // Known only to the app and the page script it puts in studio.code.org
     // pages, for the debug build's Reset course; another site's frame cannot
     // read it, but the site's own third-party scripts could.
@@ -82,12 +86,12 @@ class MainActivity : BridgeActivity() {
 
         val stableId = deviceStableId(this)
         val script = pageScript(resources, stableId, resetToken)
-        val userAgent = webView.settings.userAgentString
+        val atDocumentStart = addPageScript(webView, script)
         bridge.webViewClient = AppWebViewClient(
             this,
-            PageInjector(SITE_ORIGIN, script, userAgent, "${bridge.localUrl}$OFFLINE_PATH"),
-            AssetCache(cacheDir.resolve("assets"), userAgent, setOf(bridge.localUrl, SITE_ORIGIN)),
+            AssetCache(cacheDir.resolve("assets"), webView.settings.userAgentString, setOf(bridge.localUrl, SITE_ORIGIN)),
             script,
+            injectOnCommit = !atDocumentStart,
             stableId,
         )
 
@@ -188,7 +192,7 @@ class MainActivity : BridgeActivity() {
             return
         }
         // Keeps the page it stands in for, so a restart retries it.
-        if (url.toUri().path == OFFLINE_PATH && isBundledPage(url)) {
+        if (isOfflinePage(url)) {
             return
         }
         if (isBundledPage(url)) {
@@ -253,6 +257,17 @@ class MainActivity : BridgeActivity() {
             webView.loadUrl(bridge.appUrl)
         }
     }
+
+    /** Opens the offline screen in place of [failedUrl], which it retries. */
+    internal fun showOffline(failedUrl: String) {
+        clearHistoryOnOffline = true
+        bridge.webView.loadUrl(
+            "${bridge.localUrl}$OFFLINE_PATH?url=${URLEncoder.encode(failedUrl, "UTF-8")}",
+        )
+    }
+
+    internal fun isOfflinePage(url: String?): Boolean =
+        isBundledPage(url) && url?.toUri()?.path == OFFLINE_PATH
 
     internal fun isAppPage(url: Uri): Boolean =
         SitePolicy.isAllowedOrigin(url) || SitePolicy.isBundledPage(url, bridge.localUrl)
