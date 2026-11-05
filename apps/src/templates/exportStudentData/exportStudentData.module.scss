@@ -1,0 +1,122 @@
+.page {
+  padding: 24px;
+  color: var(--text-neutral-primary);
+  background: var(--background-neutral-primary);
+}
+
+.intro {
+  max-width: 60em;
+  margin-bottom: 24px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-neutral-primary);
+  }
+
+  th {
+    border-bottom: 1px solid var(--border-neutral-secondary);
+  }
+}
+
+.checkboxCell {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.countCell {
+  width: 1%;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.expandButton {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    color: var(--text-neutral-disabled);
+    cursor: default;
+  }
+}
+
+.disabledRow {
+  color: var(--text-neutral-placeholder);
+}
+
+.detailCell {
+  background: var(--background-neutral-secondary);
+}
+
+.fieldset {
+  margin: 0 0 16px;
+  padding: 0;
+  border: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.legend {
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.warningText {
+  margin: -4px 0 8px;
+  font-size: 0.85em;
+  font-style: italic;
+  color: var(--text-warning-primary);
+}
+
+.checkboxGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 4px 16px;
+}
+
+.noUsername {
+  color: var(--text-neutral-placeholder);
+  font-style: italic;
+}
+
+.groupHeader {
+  padding: 0;
+  font: inherit;
+  font-weight: bold;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.emptyState {
+  padding: 24px 0;
+  color: var(--text-neutral-placeholder);
+}
