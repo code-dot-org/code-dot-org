@@ -133,10 +133,13 @@ generated worker commands, and invalid values without a cluster or database.
 
 The chart can create a KEDA `ScaledObject` and `TriggerAuthentication` for the
 worker Deployment. KEDA owns the resulting HPA. Dashboard autoscaling remains
-independent. Autoscaling is disabled by default and does not install KEDA.
+independent. Autoscaling is disabled by default. The shared KEDA installation
+is deployed separately by `k8s-gitops`; this chart only supplies workload
+resources.
 
-The initial staging override, to add to `k8s-gitops` after the prerequisites
-below are deployed, is:
+The initial staging override, to add to
+`apps/codeai/envTypes/staging.values.yaml` in `k8s-gitops` after provisioning the
+KEDA operator role and verifying fresh CloudWatch samples, is:
 
 ```yaml
 activeJobWorker:
@@ -148,15 +151,16 @@ activeJobWorker:
     maxReplicas: 4
     jobsPerReplica: 1
     pollingInterval: 30
-    connectionStringSecret:
-      name: active-job-scaler-db
-      key: connectionString
+    awsRegion: us-east-1
 ```
 
 ### Demand and scaling policy
 
-The MySQL query counts nonfailed jobs whose `run_at` is due, restricted to the
-worker's `priorityMode`. Locked rows remain in the count: claiming a job does
+The CloudWatch scaler reads `PendingJobCount` from `code-dot-org/ActiveJob`.
+The `Environment` dimension comes from `activeJobWorker.RAILS_ENV`. Modes
+`high` and `low` add `Priority=high` or `Priority=low`; `both` reads the existing
+Environment-only series. The dimension name is `Priority`, not `PriorityBand`.
+ActiveJobMetrics counts nonfailed jobs whose `run_at` is due. Locked rows remain in the count: claiming a job does
 not remove demand. Future jobs and retained failures do not count. Before HPA
 stabilization and rate limits, the desired count is approximately
 `ceil(outstanding jobs / jobsPerReplica)`, bounded by the configured minimum
@@ -169,8 +173,14 @@ locks remain counted because Delayed Job can reclaim them. Legacy workers
 consuming the same priorities also contribute locked rows; finish the priority
 split before treating this metric as Kubernetes-only demand. Do not override
 worker priority limits through `locals.yml` or environment variables when using
-autoscaling: the query is derived from `priorityMode` only.
+autoscaling: the selected metric is derived from `priorityMode` only.
 
+The existing daemon cron publishes queue metrics every minute, including zero
+for empty queues. KEDA reads the latest available 60-second `Maximum` datapoint
+within a 180-second collection window. Maximum avoids summing repeated gauge
+samples from cron and enqueue callbacks. The window tolerates publication delay
+but can retain an old value for up to three minutes (plus period alignment and
+polling delay) if publication stops. An empty response is an error, not zero.
 Metrics are cached for the polling interval. The HPA may add one replica per
 minute and remove one per minute after a five-minute stabilization window.
 After repeated query errors, KEDA falls back to the greater of the current
@@ -185,34 +195,51 @@ covers the known 30-minute job cap, not every possible Delayed Job runtime.
 Terminating pods can also consume resources beyond the HPA maximum while their
 replacements start. Allow for that overlap in node capacity planning.
 
-### Infrastructure prerequisites
+### Shared KEDA installation
 
-Install and pin a compatible KEDA release in `k8s-gitops` before enabling the
-chart option. The draft uses the KEDA 2.18 API, including
-`fallback.behavior: currentReplicasIfHigher` and cached MySQL metrics. Confirm
-compatibility with the cluster's Kubernetes version and the selected KEDA
-release. Keep the operator, metrics server, webhooks, and CRDs under the
-infrastructure application's ownership, not this workload chart.
+KEDA is deployed by the `keda` Argo application in `k8s-gitops`, using
+[`apps/infra/keda/chart`](https://github.com/code-dot-org/k8s-gitops/tree/main/apps/infra/keda/chart).
+That chart pins KEDA 2.21.0, installs its CRDs, enables admission webhooks, and
+watches all namespaces (`watchNamespace: ""`). The release runs in the `keda`
+namespace. Argo manages it with server-side apply, automatic pruning, and
+self-healing.
 
-Provision the namespace-local Secret through External Secrets. Its
-`connectionString` value must be a Go MySQL driver DSN, for example:
+The operator, metrics server, webhooks, and CRDs remain infrastructure-owned.
+The worker chart needs no KEDA dependency or additional installation. Its
+`ScaledObject` and `TriggerAuthentication` belong in the worker namespace;
+authentication uses the KEDA operator's IRSA identity, not the worker's role.
+Rendered resources for all three priority modes pass validation against the
+KEDA 2.21.0 chart's CRD schemas, including the fallback and cached-metric fields.
+This checks resource shape, not admission webhooks or scaler connectivity.
 
-```text
-scaler:PASSWORD@tcp(DB_HOST:3306)/dashboard_staging?tls=true&timeout=5s&readTimeout=5s&writeTimeout=5s
-```
+### CloudWatch access and publication
 
-Use a dedicated account with SELECT access to `delayed_jobs` on the writer
-endpoint; a read replica can lag the queue. Verify the database certificate
-chain is trusted by the KEDA image. The Rails `db_writer` URL is not this DSN
-format and must not be reused verbatim. Keep credentials out of Helm values.
-KEDA needs network access to MySQL and access to this Secret; the application
-pod's IRSA role does not provide database authentication to KEDA.
+The `k8s-gitops` KEDA chart defines the `keda-cloudwatch` Crossplane Role and
+RolePolicy, following the monitoring collector's IRSA pattern. The AWS role is
+named `<cluster_name>-keda-cloudwatch` and trusts only the operator ServiceAccount
+`keda-operator-cloudwatch` in the KEDA release namespace, with audience
+`sts.amazonaws.com`. Its policy grants `cloudwatch:GetMetricData` on `*`, as
+required by that API; it does not grant publishing or database access.
 
-Run EXPLAIN for the generated COUNT query against representative queue sizes.
-Check query latency and database load before choosing a polling interval or
-adding an index. Monitor outstanding jobs and oldest eligible waiting-job age,
-scaler errors, desired/ready/terminating replicas, and database load. The
-existing ActiveJob metrics need priority filtering for this use.
+The Argo application loads the OpenTofu-generated cluster values for the OIDC
+provider and account. The wrapper chart creates the annotated ServiceAccount,
+and the upstream KEDA chart uses it for the operator and its RBAC bindings.
+Changing the operator's ServiceAccount name rolls its pods so the IRSA webhook
+can inject credentials. Metrics-server and webhook ServiceAccounts remain
+unchanged. The workload TriggerAuthentication sets `provider: aws` and
+`identityOwner: keda`; no static credentials or SQL connection Secret is needed.
+
+Deploy the operator role and ServiceAccount before enabling worker autoscaling.
+Verify fresh `PendingJobCount` samples with the exact `Environment` and
+`Priority` dimensions in `awsRegion`. Merging the publisher alone is not enough:
+the daemon running `bin/cron/report_activejob_metrics` must deploy it too.
+Keep that periodic publisher running until a Kubernetes replacement is ready;
+enqueue callbacks alone cannot report an idle queue reliably.
+
+Monitor publication gaps, scaler errors, desired/ready/terminating replicas,
+and queue wait time. Publication delay adds to scaling response time. Do not
+replace missing samples with zero. Prometheus can replace the transport later
+without changing the meaning of the demand metric.
 
 ### Replica ownership and rollout
 
@@ -222,8 +249,11 @@ reports drift on HPA-owned replicas, configure an ignore rule scoped to this
 Deployment's `/spec/replicas` with `RespectIgnoreDifferences=true`. Do not ignore
 replicas across all Deployments. There must be only one HPA for the worker.
 
-Enable staging first. Verify KEDA readiness, one idle worker, growth under a
-low-priority backlog, and no growth from high-priority, future, or failed jobs.
+After deploying the operator role and verifying metric publication, enable staging first.
+Confirm the shared `keda` Argo application is healthy before syncing workload
+resources. Verify the worker ScaledObject is ready and its generated HPA has
+valid metrics, then check one idle worker, growth under a low-priority backlog,
+and no growth from high-priority, future, or failed jobs.
 Run a long job through scale-down and confirm completion without a forced kill.
 Test an unavailable metrics source and a subsequent recovery. Sync Argo while
 scaled above one replica and confirm the count is not reset. Review queue wait
@@ -241,9 +271,9 @@ bundle exec ruby k8s/bin/verify-worker-autoscaling
 bundle exec ruby k8s/bin/verify-worker-priorities
 ```
 
-These checks cover manifest rendering, not KEDA admission, database access, or
-live scale-down. See the [MySQL scaler](https://keda.sh/docs/2.18/scalers/mysql/)
-and [ScaledObject API](https://keda.sh/docs/2.18/reference/scaledobject-spec/).
+These checks cover manifest rendering, not KEDA admission, AWS access, or
+live scale-down. See the [CloudWatch scaler](https://keda.sh/docs/2.21/scalers/aws-cloudwatch/)
+and [ScaledObject API](https://keda.sh/docs/2.21/reference/scaledobject-spec/).
 
 ## Non-local clusters
 

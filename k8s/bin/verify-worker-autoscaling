@@ -7,7 +7,7 @@ require 'yaml'
 CHART = File.expand_path('../helm', __dir__).freeze
 SCALING = {
   'autoscaling.enabled' => true,
-  'autoscaling.connectionStringSecret.name' => 'worker-scaler',
+  'RAILS_ENV' => 'staging',
 }.freeze
 
 def check(condition, message)
@@ -42,7 +42,7 @@ check(worker(render('replicas' => 0)).dig('spec', 'replicas') == 0, 'explicit ze
 docs = render({'enabled' => false})
 check(worker(docs).nil?, 'disabled worker rendered')
 
-{'both' => nil, 'high' => 'AND priority < 10', 'low' => 'AND priority >= 10'}.each do |mode, predicate|
+%w(both high low).each do |mode|
   docs = render(SCALING.merge('priorityMode' => mode))
   deployment = worker(docs)
   check(!deployment.fetch('spec').key?('replicas'), 'autoscaled worker still declares replicas')
@@ -52,14 +52,26 @@ check(worker(docs).nil?, 'disabled worker rendered')
   check(scaler.dig('scaleTargetRef', 'name') == deployment.dig('metadata', 'name'), 'wrong scale target')
   trigger = scaler.fetch('triggers').first
   check(trigger.dig('authenticationRef', 'name') == auth.dig('metadata', 'name'), 'wrong authentication reference')
-  check(auth.dig('spec', 'secretTargetRef', 0, 'name') == 'worker-scaler', 'wrong credential Secret')
+  check(auth.dig('spec', 'podIdentity') == {'provider' => 'aws', 'identityOwner' => 'keda'}, 'wrong AWS identity')
+  check(trigger['type'] == 'aws-cloudwatch', 'wrong scaler')
   check(trigger['metricType'] == 'AverageValue', 'metric does not express work per replica')
-  query = trigger.dig('metadata', 'query')
-  expected = 'SELECT COUNT(*) FROM delayed_jobs WHERE failed_at IS NULL AND run_at <= UTC_TIMESTAMP()'
-  expected += " #{predicate}" if predicate
-  check(query == expected, "incorrect #{mode} demand query: #{query}")
+  metadata = trigger.fetch('metadata')
+  check(metadata['namespace'] == 'code-dot-org/ActiveJob' && metadata['metricName'] == 'PendingJobCount', 'wrong CloudWatch metric')
+  check(metadata['dimensionName'] == (mode == 'both' ? 'Environment' : 'Environment;Priority'), 'wrong dimension names')
+  check(metadata['dimensionValue'] == (mode == 'both' ? 'staging' : "staging;#{mode}"), 'wrong priority or environment')
+  check(metadata['awsRegion'] == 'us-east-1', 'wrong default region')
+  check(metadata['targetMetricValue'] == '1', 'wrong demand target')
+  check(metadata['minMetricValue'] == '0', 'CloudWatch scaler requires minMetricValue')
+  check(metadata['metricStat'] == 'Maximum' && metadata['metricStatPeriod'] == '60', 'queue gauge must not be summed')
+  check(metadata['metricCollectionTime'] == '180' && metadata['ignoreNullValues'] == 'false', 'missing metrics must fail after a bounded lookback')
+  check(!metadata.key?('query') && !auth.fetch('spec').key?('secretTargetRef'), 'SQL credentials remain')
   check(scaler.dig('fallback', 'behavior') == 'currentReplicasIfHigher', 'metric failure can shrink the pool')
 end
+
+docs = render(SCALING.merge('RAILS_ENV' => 'production', 'priorityMode' => 'low', 'autoscaling.awsRegion' => 'us-west-2', 'autoscaling.jobsPerReplica' => 3))
+metadata = docs.find {|doc| doc['kind'] == 'ScaledObject'}.dig('spec', 'triggers', 0, 'metadata')
+check(metadata['dimensionValue'] == 'production;low', 'worker environment did not override chart RAILS_ENV')
+check(metadata['awsRegion'] == 'us-west-2' && metadata['targetMetricValue'] == '3', 'scaler overrides were lost')
 
 docs = render(SCALING, {'dashboard.enabled' => true, 'autoscaling.enabled' => true})
 check(docs.count {|doc| doc['kind'] == 'HorizontalPodAutoscaler'} == 1, 'dashboard HPA changed')
@@ -69,7 +81,7 @@ rejected({'enabled' => false}, 'requires activeJobWorker.enabled')
 rejected({'autoscaling.minReplicas' => 5}, 'must not exceed maxReplicas')
 rejected({'autoscaling.minReplicas' => 0}, 'minReplicas')
 rejected({'autoscaling.jobsPerReplica' => 0}, 'jobsPerReplica')
-rejected({'autoscaling.connectionStringSecret.name' => ''}, 'connectionStringSecret.name is required')
+rejected({'autoscaling.awsRegion' => ''}, 'awsRegion')
 rejected({'args' => ['custom']}, 'requires the generated worker command')
 rejected({'extraEnv.CDO_ACTIVE_JOB_WORKER_MAX_PRIORITY' => '9'}, 'through priorityMode only')
 rejected({'autoscaling.unknown' => true}, 'unknown')

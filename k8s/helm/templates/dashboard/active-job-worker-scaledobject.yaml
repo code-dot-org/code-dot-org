@@ -17,17 +17,16 @@
 {{- fail "activeJobWorker.autoscaling requires priority limits to be set through priorityMode only" -}}
 {{- end -}}
 {{- end -}}
-{{- $secretName := required "activeJobWorker.autoscaling.connectionStringSecret.name is required" $scaling.connectionStringSecret.name -}}
+{{- $environment := required "activeJobWorker.RAILS_ENV is required for CloudWatch dimensions" $worker.RAILS_ENV -}}
 {{- $name := include "cdo.fullname" (merge (dict "component" "active-job-worker") .) -}}
 apiVersion: keda.sh/v1alpha1
 kind: TriggerAuthentication
 metadata:
   name: {{ $name }}
 spec:
-  secretTargetRef:
-    - parameter: connectionString
-      name: {{ $secretName | quote }}
-      key: {{ $scaling.connectionStringSecret.key | quote }}
+  podIdentity:
+    provider: aws
+    identityOwner: keda
 ---
 apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
@@ -62,20 +61,27 @@ spec:
               value: 1
               periodSeconds: 60
   triggers:
-    - type: mysql
+    - type: aws-cloudwatch
       metricType: AverageValue
       useCachedMetrics: true
       metadata:
-        queryValue: {{ $scaling.jobsPerReplica | quote }}
-        # Locked rows remain demand until completion, including abandoned locks.
-        query: >-
-          SELECT COUNT(*) FROM delayed_jobs
-          WHERE failed_at IS NULL AND run_at <= UTC_TIMESTAMP()
-          {{- if eq $worker.priorityMode "low" }}
-          AND priority >= 10
-          {{- else if eq $worker.priorityMode "high" }}
-          AND priority < 10
-          {{- end }}
+        namespace: code-dot-org/ActiveJob
+        metricName: PendingJobCount
+        awsRegion: {{ $scaling.awsRegion | quote }}
+        targetMetricValue: {{ $scaling.jobsPerReplica | quote }}
+        minMetricValue: "0"
+        metricStat: Maximum
+        metricStatPeriod: "60"
+        metricCollectionTime: "180"
+        metricUnit: Count
+        ignoreNullValues: "false"
+        {{- if eq $worker.priorityMode "both" }}
+        dimensionName: Environment
+        dimensionValue: {{ $environment | quote }}
+        {{- else }}
+        dimensionName: Environment;Priority
+        dimensionValue: {{ printf "%s;%s" $environment $worker.priorityMode | quote }}
+        {{- end }}
       authenticationRef:
         name: {{ $name }}
 {{- end }}

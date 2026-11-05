@@ -70,14 +70,7 @@
             "maxReplicas": {"type": "integer", "minimum": 1},
             "jobsPerReplica": {"type": "integer", "minimum": 1},
             "pollingInterval": {"type": "integer", "minimum": 1},
-            "connectionStringSecret": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "name": {"type": "string"},
-                "key": {"type": "string", "minLength": 1}
-              }
-            }
+            "awsRegion": {"type": "string", "minLength": 1}
           }
         },
         "priorityMode": {},
