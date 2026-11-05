@@ -108,10 +108,9 @@ export default function useQuizBuilderQuestions(
 
   const pages: QuizBuilderPage[] = layout.map((questionIds, index) => ({
     page: index + 1,
-    questions: questionIds.map(id => ({
-      ...questionsById[id],
-      page: index + 1,
-    })),
+    // The same objects as in questionsById: a card resets its draft when its
+    // question object changes.
+    questions: questionIds.map(id => questionsById[id]),
   }));
   const questions = pages.flatMap(page => page.questions);
   const hasUnsavedLayout =
@@ -218,11 +217,12 @@ export default function useQuizBuilderQuestions(
           return {
             ...rest,
             [saved.id]: isFork
-              ? saved
+              ? {...saved, page: previous.page}
               : {
                   ...saved,
                   attachedToOtherQuizzes: previous.attachedToOtherQuizzes,
                   deletable: previous.deletable,
+                  page: previous.page,
                 },
           };
         });

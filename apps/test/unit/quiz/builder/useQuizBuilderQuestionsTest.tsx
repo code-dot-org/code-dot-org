@@ -22,6 +22,16 @@ const QUESTION = {
   page: 1,
 };
 
+const PAYLOAD = {
+  type: 'MultipleChoiceQuestion' as const,
+  questionName: 'Updated question',
+  questionTitle: 'What is 2 + 3?',
+  choices: QUESTION.choices,
+  correctChoiceId: 'b',
+  description: null,
+  explanation: null,
+};
+
 describe('useQuizBuilderQuestions', () => {
   let getSpy: jest.SpyInstance;
   let postSpy: jest.SpyInstance;
@@ -62,6 +72,36 @@ describe('useQuizBuilderQuestions', () => {
     expect(result.current.pages).toEqual([{page: 1, questions: [QUESTION]}]);
     expect(result.current.hasUnsavedLayout).toBe(false);
     expect(version.current).toBe(5);
+  });
+
+  it('keeps each question the same object across unrelated updates', async () => {
+    const {result} = await renderLoaded();
+    const before = result.current.pages[0].questions[0];
+
+    act(() => {
+      result.current.addPage();
+    });
+
+    expect(result.current.pages[0].questions[0]).toBe(before);
+  });
+
+  it('keeps a saved question the same object across unrelated updates', async () => {
+    const {result} = await renderLoaded();
+    // The question endpoints don't know the quiz, so they return no page.
+    putSpy.mockResolvedValue({
+      json: async () => ({...QUESTION, questionName: 'Renamed', page: null}),
+    } as Response);
+    await act(async () => {
+      await result.current.saveQuestion(7, PAYLOAD);
+    });
+    const saved = result.current.pages[0].questions[0];
+    expect(saved).toMatchObject({questionName: 'Renamed', page: 1});
+
+    act(() => {
+      result.current.addPage();
+    });
+
+    expect(result.current.pages[0].questions[0]).toBe(saved);
   });
 
   it('adds an empty page at the end', async () => {
@@ -192,16 +232,6 @@ describe('useQuizBuilderQuestions', () => {
   });
 
   describe('saveQuestion', () => {
-    const PAYLOAD = {
-      type: 'MultipleChoiceQuestion' as const,
-      questionName: 'Updated question',
-      questionTitle: 'What is 2 + 3?',
-      choices: QUESTION.choices,
-      correctChoiceId: 'b',
-      description: null,
-      explanation: null,
-    };
-
     it('PUTs the payload and replaces the question in place on success', async () => {
       const updated = {...QUESTION, ...PAYLOAD};
       putSpy.mockResolvedValue({json: async () => updated} as Response);

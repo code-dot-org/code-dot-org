@@ -192,6 +192,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
               <li key={question.id}>
                 <QuizQuestionCard
                   question={question}
+                  page={page}
                   isExpanded={question.id === expandedId}
                   onExpandedChange={expanded =>
                     setExpandedId(expanded ? question.id : null)
