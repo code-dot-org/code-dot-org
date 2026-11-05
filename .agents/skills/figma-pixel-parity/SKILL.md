@@ -60,9 +60,11 @@ Every accepted difference records: case ids, Figma behavior, code behavior, reas
 
 ## Phase 0 — classify
 
+Start the recipe by copying `visual-recipe-template.json` to `work/<Component>/recipe.json` (see `repo.md`). The template is a fill-in form: it fails `validate-recipe.mjs` until you replace the empty `fileKey` and `figmaVariant` values and the placeholder `retrievedAt` date. If `recipe.json` already exists for the component, first move it to `recipe.prev.json` so the new pull does not overwrite it.
+
 Pick one path and record it on the recipe:
 
-- **Figma update.** The usual path: an existing component is brought in line with its Figma component set. Pull a fresh recipe. If an earlier recipe for the component is still in the work directory, diff against it; otherwise diff against the current implementation. List changed axes, values, tokens, and geometry, and test the changed cases plus one regression sentinel per affected variant family.
+- **Figma update.** The usual path: an existing component is brought in line with its Figma component set. Pull a fresh recipe. If `recipe.prev.json` is in the work directory, diff against it and set `change.previousRecipe` to that path; otherwise diff against the current implementation. List changed axes, values, tokens, and geometry, and test the changed cases plus one regression sentinel per affected variant family.
 - **Code-only fix.** Still refresh design evidence for the affected cases so the fix does not contradict Figma.
 - **New component.** Rare. Write the visual recipe before implementation.
 
@@ -134,7 +136,7 @@ One pass that finds a mismatch is not done. A checklist without case ids and res
 
 ## Phase 6 — evidence summary
 
-Run the verify commands in `repo.md` and record each in `evidence.verify`. Run `validate-recipe.mjs` on the final recipe. The final message must include:
+Run the verify commands in `repo.md` and record each in `evidence.verify`. Run `validate-recipe.mjs --final` on the final recipe; it fails on any `pending` or `fail` case, an `accepted-difference` case missing from `acceptedDifferences`, or a case id that does not resolve. The final message must include:
 
 ```text
 Task path: figma-update | code-only fix | new

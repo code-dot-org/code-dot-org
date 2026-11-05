@@ -8,7 +8,7 @@ MUI’s default size, padding, radius, typography, ripple, and text transform ar
 
 ## Interactive color does not belong in inline `style`
 
-MUI’s hover and active styles override inline `backgroundColor` and `color`. Set custom properties on the element and consume them in the stylesheet, where `:hover`, `:active`, and `:focus-visible` can replace them per state.
+MUI’s hover and active styles override inline `backgroundColor` and `color`. Set the color in the component’s `.module.scss`, where `:hover`, `:active`, and `:focus-visible` can replace it per state. For a value that varies per instance, prefer a modifier class. An inline custom property (`style={{'--x': value}}`) is the one allowed inline-style exception, only for such per-instance values and only when the stylesheet consumes it. Never put the color itself, or a hover or active value, in an inline `style`.
 
 ## Dev can look right when production is wrong
 

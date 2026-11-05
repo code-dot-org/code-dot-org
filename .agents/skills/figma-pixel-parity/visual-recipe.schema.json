@@ -16,9 +16,9 @@
     "evidence"
   ],
   "properties": {
-    "$schema": { "type": "string" },
-    "schemaVersion": { "const": 1 },
-    "component": { "type": "string", "minLength": 1 },
+    "$schema": {"type": "string"},
+    "schemaVersion": {"const": 1},
+    "component": {"type": "string", "minLength": 1},
     "figma": {
       "type": "object",
       "additionalProperties": false,
@@ -30,16 +30,16 @@
         "designContextCaptured"
       ],
       "properties": {
-        "fileKey": { "type": "string", "minLength": 1 },
-        "publicNodeId": { "type": "string", "pattern": "^[0-9]+:[0-9]+$" },
-        "componentKey": { "type": "string" },
+        "fileKey": {"type": "string", "minLength": 1},
+        "publicNodeId": {"type": "string", "pattern": "^[0-9]+:[0-9]+$"},
+        "componentKey": {"type": "string"},
         "relatedNodeIds": {
           "type": "array",
-          "items": { "type": "string", "pattern": "^[0-9]+:[0-9]+$" },
+          "items": {"type": "string", "pattern": "^[0-9]+:[0-9]+$"},
           "uniqueItems": true
         },
-        "retrievedAt": { "type": "string", "format": "date" },
-        "designContextCaptured": { "type": "boolean" }
+        "retrievedAt": {"type": "string", "format": "date"},
+        "designContextCaptured": {"type": "boolean"}
       }
     },
     "change": {
@@ -50,10 +50,10 @@
         "taskPath": {
           "enum": ["new", "figma-update", "code-only-fix"]
         },
-        "previousRecipe": { "type": ["string", "null"] },
+        "previousRecipe": {"type": ["string", "null"]},
         "figmaChanges": {
           "type": "array",
-          "items": { "type": "string", "minLength": 1 }
+          "items": {"type": "string", "minLength": 1}
         }
       }
     },
@@ -66,14 +66,14 @@
           "type": "object",
           "additionalProperties": {
             "type": "array",
-            "items": { "type": ["string", "boolean", "number"] },
+            "items": {"type": ["string", "boolean", "number"]},
             "minItems": 1,
             "uniqueItems": true
           }
         },
         "designOnly": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {"type": "string"},
           "uniqueItems": true
         },
         "restrictedCombinations": {
@@ -83,8 +83,8 @@
             "required": ["when", "reason"],
             "additionalProperties": false,
             "properties": {
-              "when": { "type": "object" },
-              "reason": { "type": "string", "minLength": 1 }
+              "when": {"type": "object"},
+              "reason": {"type": "string", "minLength": 1}
             }
           }
         }
@@ -95,10 +95,10 @@
       "additionalProperties": false,
       "required": ["sizes", "layout", "typography", "icon"],
       "properties": {
-        "sizes": { "type": "object" },
-        "layout": { "type": "object" },
-        "typography": { "type": "object" },
-        "icon": { "type": "object" }
+        "sizes": {"type": "object"},
+        "layout": {"type": "object"},
+        "typography": {"type": "object"},
+        "icon": {"type": "object"}
       }
     },
     "recipes": {
@@ -115,11 +115,11 @@
           "notes"
         ],
         "properties": {
-          "when": { "type": "object", "minProperties": 1 },
-          "variables": { "type": "object", "minProperties": 1 },
-          "geometryOverrides": { "type": "object" },
-          "figmaVariant": { "type": "string" },
-          "notes": { "type": "array", "items": { "type": "string" } }
+          "when": {"type": "object", "minProperties": 1},
+          "variables": {"type": "object", "minProperties": 1},
+          "geometryOverrides": {"type": "object"},
+          "figmaVariant": {"type": "string"},
+          "notes": {"type": "array", "items": {"type": "string"}}
         }
       }
     },
@@ -128,10 +128,10 @@
       "additionalProperties": false,
       "required": ["strategy", "requiredDimensions", "cases"],
       "properties": {
-        "strategy": { "const": "pairwise-plus-risk" },
+        "strategy": {"const": "pairwise-plus-risk"},
         "requiredDimensions": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {"type": "string"},
           "uniqueItems": true
         },
         "cases": {
@@ -157,14 +157,14 @@
             "if": {
               "required": ["result"],
               "properties": {
-                "result": { "enum": ["pass", "accepted-difference"] }
+                "result": {"enum": ["pass", "accepted-difference"]}
               }
             },
             "then": {
               "required": ["referenceScreenshot", "browserScreenshot"],
               "properties": {
-                "referenceScreenshot": { "type": "string", "minLength": 1 },
-                "browserScreenshot": { "type": "string", "minLength": 1 }
+                "referenceScreenshot": {"type": "string", "minLength": 1},
+                "browserScreenshot": {"type": "string", "minLength": 1}
               }
             },
             "properties": {
@@ -176,29 +176,29 @@
                 "type": "string",
                 "pattern": "^[0-9]+:[0-9]+$"
               },
-              "figmaVariant": { "type": "string", "minLength": 1 },
-              "mode": { "enum": ["Light", "Dark"] },
-              "props": { "type": "object" },
-              "state": { "type": "string", "minLength": 1 },
+              "figmaVariant": {"type": "string", "minLength": 1},
+              "mode": {"enum": ["Light", "Dark"]},
+              "props": {"type": "object"},
+              "state": {"type": "string", "minLength": 1},
               "viewport": {
                 "type": "object",
                 "additionalProperties": false,
                 "required": ["width", "height", "deviceScaleFactor"],
                 "properties": {
-                  "width": { "type": "integer", "minimum": 1 },
-                  "height": { "type": "integer", "minimum": 1 },
-                  "deviceScaleFactor": { "type": "number", "minimum": 1 }
+                  "width": {"type": "integer", "minimum": 1},
+                  "height": {"type": "integer", "minimum": 1},
+                  "deviceScaleFactor": {"type": "number", "minimum": 1}
                 }
               },
-              "expectedGeometry": { "type": "object" },
+              "expectedGeometry": {"type": "object"},
               "expectedVariables": {
                 "type": "array",
-                "items": { "type": "string", "minLength": 1 },
+                "items": {"type": "string", "minLength": 1},
                 "uniqueItems": true
               },
-              "captureUrl": { "type": "string" },
-              "referenceScreenshot": { "type": "string" },
-              "browserScreenshot": { "type": "string" },
+              "captureUrl": {"type": "string"},
+              "referenceScreenshot": {"type": "string"},
+              "browserScreenshot": {"type": "string"},
               "result": {
                 "enum": ["pending", "pass", "fail", "accepted-difference"]
               },
@@ -220,7 +220,7 @@
                         "rendering-noise"
                       ]
                     },
-                    "description": { "type": "string", "minLength": 1 }
+                    "description": {"type": "string", "minLength": 1}
                   }
                 }
               }
@@ -244,13 +244,13 @@
         "properties": {
           "caseIds": {
             "type": "array",
-            "items": { "type": "string" },
+            "items": {"type": "string"},
             "minItems": 1
           },
-          "figmaBehavior": { "type": "string", "minLength": 1 },
-          "codeBehavior": { "type": "string", "minLength": 1 },
-          "reason": { "type": "string", "minLength": 1 },
-          "decisionSource": { "type": "string", "minLength": 1 }
+          "figmaBehavior": {"type": "string", "minLength": 1},
+          "codeBehavior": {"type": "string", "minLength": 1},
+          "reason": {"type": "string", "minLength": 1},
+          "decisionSource": {"type": "string", "minLength": 1}
         }
       }
     },
@@ -267,9 +267,9 @@
             "additionalProperties": false,
             "required": ["command", "result"],
             "properties": {
-              "command": { "type": "string", "minLength": 1 },
-              "result": { "enum": ["pass", "fail"] },
-              "notes": { "type": "string" }
+              "command": {"type": "string", "minLength": 1},
+              "result": {"enum": ["pass", "fail"]},
+              "notes": {"type": "string"}
             }
           }
         },
@@ -285,13 +285,13 @@
               "recaptured"
             ],
             "properties": {
-              "caseIds": { "type": "array", "items": { "type": "string" } },
+              "caseIds": {"type": "array", "items": {"type": "string"}},
               "mismatchesFound": {
                 "type": "array",
-                "items": { "type": "string" }
+                "items": {"type": "string"}
               },
-              "fixesMade": { "type": "array", "items": { "type": "string" } },
-              "recaptured": { "type": "boolean" }
+              "fixesMade": {"type": "array", "items": {"type": "string"}},
+              "recaptured": {"type": "boolean"}
             }
           }
         }
