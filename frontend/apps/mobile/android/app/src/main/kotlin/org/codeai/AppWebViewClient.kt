@@ -23,9 +23,12 @@ internal class AppWebViewClient(
     private val assetCache: AssetCache,
     private val pageScript: String,
     private val injectOnCommit: Boolean,
-    private val stableId: String?,
 ) : BridgeWebViewClient(app.bridge) {
     private val bridge = app.bridge
+    // The studio.code.org page that failed to load, until the offline screen
+    // shows, and whether the offline screen has been asked for.
+    private var failedPage: String? = null
+    private var offlineRequested = false
 
     override fun shouldInterceptRequest(
         view: WebView,
@@ -38,14 +41,6 @@ internal class AppWebViewClient(
         // another site.
         if (request.isForMainFrame && !app.isAppPage(request.url)) {
             return WebResponses.noContent()
-        }
-        // The site's scripts use the ID they fetch, not the device's that the
-        // page script then stores in the cookie in its place.
-        if (stableId != null
-            && request.method.equals("GET", ignoreCase = true)
-            && SitePolicy.isStableIdRequest(request.url)
-        ) {
-            return WebResponses.plainText(stableId)
         }
         return assetCache.intercept(request)
             ?: super.shouldInterceptRequest(view, request)
@@ -129,6 +124,13 @@ internal class AppWebViewClient(
     override fun doUpdateVisitedHistory(view: WebView, url: String?, isReload: Boolean) {
         super.doUpdateVisitedHistory(view, url, isReload)
         app.rememberPage(url)
+        if (app.isOfflinePage(url)) {
+            failedPage = null
+        } else if (url != null && url == failedPage && offlineRequested) {
+            // The WebView's error page committed after the app asked for the
+            // offline screen, which drops that request.
+            view.post { app.showOffline(url) }
+        }
         if (app.clearHistoryOnOffline && app.isOfflinePage(url)) {
             app.clearHistoryOnOffline = false
             // Drops the failed page's error entry, which Back would retry.
@@ -182,7 +184,14 @@ internal class AppWebViewClient(
         // WebView's own error page.
         val url = request.url.toString()
         if (SitePolicy.isSitePage(url)) {
-            view.post { app.showOffline(url) }
+            failedPage = url
+            offlineRequested = false
+            view.post {
+                if (failedPage == url) {
+                    offlineRequested = true
+                    app.showOffline(url)
+                }
+            }
         } else {
             app.loadingCover.hide()
         }

@@ -14,10 +14,4 @@ internal object WebResponses {
     fun noContent() = WebResourceResponse(
         "text/plain", "utf-8", 204, "No Content", null, ByteArrayInputStream(ByteArray(0)),
     )
-
-    /** For a request the app answers itself: [body] as plain text. */
-    fun plainText(body: String) = WebResourceResponse(
-        "text/plain", "utf-8", 200, "OK", mapOf("Cache-Control" to "no-store"),
-        ByteArrayInputStream(body.toByteArray(Charsets.UTF_8)),
-    )
 }

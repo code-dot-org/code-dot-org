@@ -16,7 +16,6 @@ internal const val PAGE_SCRIPT_GUARD = "__codeaiPageScript"
 private val PAGE_SCRIPT_FILES = listOf(
     R.raw.page_common,
     R.raw.page_settled,
-    R.raw.workaround_stable_id,
     R.raw.workaround_signed_out_progress,
     R.raw.page_started_navigation,
     R.raw.workaround_resume,
@@ -34,12 +33,11 @@ private val PAGE_SCRIPT_FILES = listOf(
  * app. It runs in the top page only; a document-start script also reaches
  * studio.code.org iframes.
  */
-internal fun pageScript(resources: Resources, stableId: String?, resetToken: String?): String {
+internal fun pageScript(resources: Resources, resetToken: String?): String {
     val files = PAGE_SCRIPT_FILES.joinToString("\n") { id ->
         resources.openRawResource(id).use { it.readBytes().toString(Charsets.UTF_8) }
     }
     return "var codeaiDebugBuild = ${BuildConfig.DEBUG};\n" +
-        "var codeaiStableId = ${JSONObject.quote(stableId ?: "")};\n" +
         "var codeaiResetToken = ${JSONObject.quote(resetToken ?: "")};\n" +
         "(function () {\n" +
         "if (window.top !== window || window.$PAGE_SCRIPT_GUARD) {\n  return;\n}\n" +

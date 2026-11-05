@@ -1,12 +1,8 @@
 package org.codeai
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.content.res.Resources
-import android.provider.Settings
 import android.view.Menu
 import android.view.textclassifier.TextClassifier
-import android.webkit.CookieManager
 import android.webkit.WebSettings
 import android.webkit.WebView
 import androidx.core.view.get
@@ -14,7 +10,6 @@ import androidx.core.view.size
 import androidx.webkit.UserAgentMetadata
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
-import org.codeai.SitePolicy.SITE_ORIGIN
 
 /** Settings the app's one WebView needs before its first page loads. */
 internal fun setUpWebView(webView: WebView) {
@@ -57,26 +52,6 @@ private fun addAppBrand(settings: WebSettings) {
             .setBrandVersionList(metadata.brandVersionList + app)
             .build(),
     )
-}
-
-// ANDROID_ID lasts until a factory reset and is this app's own (it differs
-// per signing key); only a hash of it reaches the site.
-@SuppressLint("HardwareIds")
-internal fun deviceStableId(context: Context): String? =
-    Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
-        ?.takeIf { it.isNotEmpty() }
-        ?.let(SitePolicy::deviceStableId)
-
-// Where the saved consent allows it, the first page's request and the site's
-// scripts find this device's stable ID from the start. With no saved choice
-// yet, or a refusal, the cookie is left to the site, which creates it only
-// with consent; the page script then gives it this value.
-internal fun setStableIdCookie(context: Context) {
-    val cookies = CookieManager.getInstance()
-    if (!SitePolicy.consentAllowsStableId(cookies.getCookie(SITE_ORIGIN))) {
-        return
-    }
-    deviceStableId(context)?.let { cookies.setCookie(SITE_ORIGIN, SitePolicy.stableIdCookie(it)) }
 }
 
 // Selecting text offers Share and other apps' actions, each a way out of the

@@ -111,52 +111,11 @@ class SitePolicyTest {
     }
 
     @Test
-    fun deviceStableId_sameForSameDevice() {
-        assertEquals(SitePolicy.deviceStableId("9774d56d682e549c"), SitePolicy.deviceStableId("9774d56d682e549c"))
-    }
-
-    @Test
-    fun deviceStableId_differsAcrossDevices() {
-        assertFalse(SitePolicy.deviceStableId("9774d56d682e549c") == SitePolicy.deviceStableId("9774d56d682e549d"))
-    }
-
-    @Test
-    fun deviceStableId_matchesSiteStableIdPattern() {
-        val pattern = Regex("[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}")
-        assertTrue(pattern.matches(SitePolicy.deviceStableId("9774d56d682e549c")))
-        assertFalse(SitePolicy.deviceStableId("9774d56d682e549c").contains("9774d56d682e549c"))
-    }
-
-    @Test
-    fun isStableIdRequest_onlySiteStableIdPath() {
-        assertTrue(SitePolicy.isStableIdRequest(uri("https://studio.code.org/api/stable_id")))
-        assertFalse(SitePolicy.isStableIdRequest(uri("https://code.org/api/stable_id")))
-        assertFalse(SitePolicy.isStableIdRequest(uri("https://studio.code.org/api/stable_id/more")))
-    }
-
-    @Test
-    fun stableIdCookie_usesSiteDomainAndPath() {
-        val cookie = SitePolicy.stableIdCookie("397871dc-01af-4c72-a036-ae7c0fcbc5b3")
-        assertTrue(cookie, cookie.startsWith("statsig_stable_id=397871dc-01af-4c72-a036-ae7c0fcbc5b3; "))
-        assertTrue(cookie, cookie.contains("Domain=.code.org; Path=/;"))
-    }
-
-    @Test
     fun isAllowedOrigin_onlyDefaultPort() {
         assertTrue(SitePolicy.isAllowedOrigin(uri("https://studio.code.org:443/courses/oceans")))
         assertFalse(SitePolicy.isAllowedOrigin(uri("https://studio.code.org:8443/courses/oceans")))
         assertFalse(SitePolicy.isResetUrl(uri("https://studio.code.org:8443/codeai-app/reset")))
         assertTrue(SitePolicy.isResetUrl(uri("https://studio.code.org:443/codeai-app/reset")))
-    }
-
-    @Test
-    fun consentAllowsStableId_onlyWithPerformanceConsent() {
-        val granted = "OptanonConsent=isGpcEnabled=0&datestamp=Mon+Nov+02+2026&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A0"
-        val refused = "OptanonConsent=isGpcEnabled=0&groups=C0001%3A1%2CC0002%3A0"
-        assertTrue(SitePolicy.consentAllowsStableId("a=1; $granted"))
-        assertFalse(SitePolicy.consentAllowsStableId("a=1; $refused"))
-        assertFalse(SitePolicy.consentAllowsStableId("a=1; language_=en-US"))
-        assertFalse(SitePolicy.consentAllowsStableId(null))
     }
 
     @Test
@@ -211,15 +170,6 @@ class SitePolicyTest {
         assertEquals("music", SitePolicy.projectEditorLab(editor))
         assertEquals("music", SitePolicy.projectEditorLab("$editor?x=1#y"))
         assertNull(SitePolicy.projectEditorLab("https://studio.code.org/projects/music/27ff60d4-e501/view"))
-    }
-
-    @Test
-    fun cookieValue_findsTheNamedCookie() {
-        val header = "a=1; language_=en-US; codeai_zoom=125"
-        assertEquals("en-US", SitePolicy.cookieValue(header, "language_"))
-        assertEquals("125", SitePolicy.cookieValue(header, "codeai_zoom"))
-        assertNull(SitePolicy.cookieValue(header, "zoom"))
-        assertNull(SitePolicy.cookieValue(null, "a"))
     }
 
     @Test

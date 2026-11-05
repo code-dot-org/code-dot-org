@@ -3,10 +3,7 @@ package org.codeai
 import android.net.Uri
 import android.os.LocaleList
 import android.util.Base64
-import java.net.URLDecoder
 import java.util.Locale
-import javax.crypto.Mac
-import javax.crypto.spec.SecretKeySpec
 
 /** Which studio.code.org pages the app shows and how it treats them. */
 internal object SitePolicy {
@@ -71,55 +68,6 @@ internal object SitePolicy {
 
     fun userAgentToken(versionName: String): String =
         "$USER_AGENT_PRODUCT/$versionName ($PLATFORM; $EDITION)"
-
-    // Keys the hash that turns ANDROID_ID into the site's stable ID, so the
-    // value is this app's own and does not reveal ANDROID_ID.
-    private const val STABLE_ID_KEY = "org.codeai.statsig_stable_id"
-
-    // The site's Statsig stable ID cookie (statsigHelpers.js in apps/), set
-    // with the site's own domain and path so it is the same cookie.
-    const val STABLE_ID_COOKIE_NAME = "statsig_stable_id"
-    // Where the site's scripts ask for a stable ID when the cookie has none
-    // (api_statsig_stable_id_url in apps/).
-    private const val STABLE_ID_PATH = "/api/stable_id"
-
-    // OneTrust's saved choice, and the category Statsig's cookie needs:
-    // performance (C0002), as consentAllowsStatsigCookie() in
-    // apps/src/metrics/statsigHelpers.js reads it.
-    const val CONSENT_COOKIE_NAME = "OptanonConsent"
-    private const val STATSIG_CONSENT_GROUP = "C0002:1"
-
-    /** Whether the saved consent in [cookieHeader] allows the stable ID cookie. */
-    fun consentAllowsStableId(cookieHeader: String?): Boolean {
-        val consent = cookieValue(cookieHeader, CONSENT_COOKIE_NAME) ?: return false
-        val groups = consent.split('&')
-            .firstOrNull { it.startsWith("groups=") }
-            ?.let { URLDecoder.decode(it.removePrefix("groups="), "UTF-8") }
-            ?: return false
-        return groups.split(',').any { it.trim() == STATSIG_CONSENT_GROUP }
-    }
-
-    fun isStableIdRequest(url: Uri): Boolean = origin(url) == SITE_ORIGIN && url.path == STABLE_ID_PATH
-
-    fun stableIdCookie(id: String): String =
-        "$STABLE_ID_COOKIE_NAME=$id; Domain=.code.org; Path=/; Max-Age=31536000; Secure; SameSite=Lax"
-
-    /**
-     * The device's Statsig stable ID: the same on every launch, update and
-     * reinstall signed with the same key, until a factory reset changes
-     * [androidId]. Shaped as a version 4 UUID, the only form the site and
-     * server accept (STATSIG_STABLE_ID_PATTERN in lib/cdo/shared_constants.rb).
-     */
-    fun deviceStableId(androidId: String): String {
-        val mac = Mac.getInstance("HmacSHA256")
-        mac.init(SecretKeySpec(STABLE_ID_KEY.toByteArray(), "HmacSHA256"))
-        val bytes = mac.doFinal(androidId.toByteArray()).copyOf(16)
-        bytes[6] = (bytes[6].toInt() and 0x0f or 0x40).toByte()
-        bytes[8] = (bytes[8].toInt() and 0x3f or 0x80).toByte()
-        val hex = bytes.joinToString("") { "%02x".format(it) }
-        return "${hex.substring(0, 8)}-${hex.substring(8, 12)}-${hex.substring(12, 16)}-" +
-            "${hex.substring(16, 20)}-${hex.substring(20)}"
-    }
 
     // The WebView takes Accept-Language and navigator.language from the
     // default locale when it is created, and the system resets the default
@@ -191,13 +139,6 @@ internal object SitePolicy {
     /** The lab of a project editor page; null for any other URL. */
     fun projectEditorLab(url: String): String? =
         PROJECT_EDITOR.matchEntire(url.substringBefore('?').substringBefore('#'))?.groupValues?.get(1)
-
-    /** The value of cookie [name] in a Cookie header, as CookieManager returns. */
-    fun cookieValue(header: String?, name: String): String? =
-        header?.split(';')
-            ?.map { it.trim() }
-            ?.firstOrNull { it.startsWith("$name=") }
-            ?.substringAfter('=')
 
     fun isCertificatePage(url: Uri): Boolean {
         val path = url.path

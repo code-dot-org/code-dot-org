@@ -3,8 +3,8 @@
 // site's own scripts and its styles apply before the first frame; a WebView
 // without those gets it when the page first shows. PageScript.kt joins the page_*.js and workaround_*.js files,
 // in its order, into one function, so they share one scope: this file holds
-// what several of them use. PageScript.kt also defines codeaiDebugBuild,
-// codeaiStableId and codeaiResetToken before them.
+// what several of them use. PageScript.kt also defines codeaiDebugBuild and
+// codeaiResetToken before them.
 
 var DEBUG_BUILD = window.codeaiDebugBuild === true;
 

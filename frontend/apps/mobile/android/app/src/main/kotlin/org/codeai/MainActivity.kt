@@ -69,7 +69,6 @@ class MainActivity : BridgeActivity() {
         SitePolicy.pinLocale()
         super.onCreate(savedInstanceState)
         CookieManager.getInstance().setCookie(SITE_ORIGIN, SitePolicy.LOCALE_COOKIE)
-        setStableIdCookie(this)
         val webView = bridge.webView
         setUpWebView(webView)
         webView.webChromeClient = AppChromeClient(bridge)
@@ -83,15 +82,13 @@ class MainActivity : BridgeActivity() {
             loadingCover.show()
         }
 
-        val stableId = deviceStableId(this)
-        val script = pageScript(resources, stableId, resetToken)
+        val script = pageScript(resources, resetToken)
         val atDocumentStart = addPageScript(webView, script)
         bridge.webViewClient = AppWebViewClient(
             this,
             AssetCache(cacheDir.resolve("assets"), webView.settings.userAgentString, setOf(bridge.localUrl, SITE_ORIGIN)),
             script,
             injectOnCommit = !atDocumentStart,
-            stableId,
         )
 
         // Capacitor has started loading the landing page. Open the remembered
