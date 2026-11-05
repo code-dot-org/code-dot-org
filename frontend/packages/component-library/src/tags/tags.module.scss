@@ -6,6 +6,11 @@
   display: flex;
   column-gap: 0.5em;
 
+  .tooltipAnchor {
+    position: relative;
+    width: fit-content;
+  }
+
   .tag {
     display: flex;
     align-items: baseline;
