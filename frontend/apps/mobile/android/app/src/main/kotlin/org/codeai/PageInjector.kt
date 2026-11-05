@@ -78,7 +78,7 @@ internal class PageInjector(
 
             val charset = charsetOf(contentType)
             val html = connection.inputStream.use { it.readBytes().toString(charset) }
-            val body = insertIntoHead(deferTagScripts(html)).toByteArray(charset)
+            val body = insertIntoHead(html).toByteArray(charset)
             val reason = connection.responseMessage
             WebResourceResponse(
                 "text/html",
@@ -117,7 +117,7 @@ internal class PageInjector(
     private fun replaceWith(url: String, target: String): WebResourceResponse {
         // Set as the page script's guard: a stub has no site chrome, and the
         // script would drop the record of the page load that led to it.
-        val html = "<!DOCTYPE html><script>window.__codeaiHideSiteChrome = true;" +
+        val html = "<!DOCTYPE html><script>window.$PAGE_SCRIPT_GUARD = true;" +
             "location.replace(${JSONObject.quote(target)});</script>"
         redirectStubs.add(url)
         return WebResourceResponse(
@@ -150,11 +150,6 @@ internal class PageInjector(
         cookies.getCookie(url)?.let { connection.setRequestProperty("Cookie", it) }
     }
 
-    // Google's tag scripts start once the page has settled, from
-    // hide_site_chrome.js, rather than competing with it while it loads.
-    private fun deferTagScripts(html: String): String =
-        TAG_SCRIPT_SRC.replace(html, "$1 data-codeai-deferred-src=")
-
     private fun insertIntoHead(html: String): String {
         val lower = html.lowercase(Locale.ROOT)
         val head = lower.indexOf("<head")
@@ -166,10 +161,6 @@ internal class PageInjector(
     }
 
     companion object {
-        private val TAG_SCRIPT_SRC = Regex(
-            "(<script\\b[^>]*?)\\ssrc=(?=[\"']https://www\\.googletagmanager\\.com/)",
-            RegexOption.IGNORE_CASE,
-        )
         private const val CONNECT_TIMEOUT_MS = 15_000
         private const val READ_TIMEOUT_MS = 30_000
 

@@ -25,7 +25,6 @@ import com.getcapacitor.BridgeActivity
 import com.getcapacitor.WebViewListener
 import org.codeai.SitePolicy.HOME_URL
 import org.codeai.SitePolicy.SITE_ORIGIN
-import org.json.JSONObject
 import java.util.UUID
 
 /**
@@ -81,21 +80,14 @@ class MainActivity : BridgeActivity() {
             loadingCover.show()
         }
 
-        // The page script offers zoom in debug builds only, gives the site's
-        // Statsig stable ID cookie this device's value, and, in debug builds,
-        // signs its resets.
         val stableId = deviceStableId(this)
-        val hideSiteChrome = "var codeaiDebugBuild = ${BuildConfig.DEBUG};\n" +
-            "var codeaiStableId = ${JSONObject.quote(stableId ?: "")};\n" +
-            "var codeaiResetToken = ${JSONObject.quote(resetToken ?: "")};\n" +
-            resources.openRawResource(R.raw.hide_site_chrome)
-                .use { it.readBytes().toString(Charsets.UTF_8) }
+        val script = pageScript(resources, stableId, resetToken)
         val userAgent = webView.settings.userAgentString
         bridge.webViewClient = AppWebViewClient(
             this,
-            PageInjector(SITE_ORIGIN, hideSiteChrome, userAgent, "${bridge.localUrl}$OFFLINE_PATH"),
+            PageInjector(SITE_ORIGIN, script, userAgent, "${bridge.localUrl}$OFFLINE_PATH"),
             AssetCache(cacheDir.resolve("assets"), userAgent, setOf(bridge.localUrl, SITE_ORIGIN)),
-            hideSiteChrome,
+            script,
             stableId,
         )
 

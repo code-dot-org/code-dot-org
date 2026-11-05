@@ -108,7 +108,7 @@ internal class LoadingCover(
         const val FADE_MS = 150L
         const val SETTLE_TIMEOUT_MS = 5_000L
         const val SETTLE_POLL_MS = 250L
-        // A page without hide_site_chrome.js counts as settled.
+        // A page without the page script (page_settled.js) counts as settled.
         const val SETTLED_CHECK =
             "typeof window.__codeaiSettled !== 'function' || window.__codeaiSettled()"
     }

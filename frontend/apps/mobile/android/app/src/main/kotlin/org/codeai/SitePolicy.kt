@@ -13,7 +13,7 @@ internal object SitePolicy {
     // The only site the app shows. Keep in step with server.allowNavigation in
     // capacitor.config.ts.
     const val SITE_ORIGIN = "https://studio.code.org"
-    // The site logo's link, set by hide_site_chrome.js. It is an https path
+    // The site logo's link, set by the page script (page_site_chrome.js). It is an https path
     // the site does not serve, not a custom scheme: Chromium treats unknown
     // schemes as external apps and may drop the navigation, while every
     // https navigation reaches shouldOverrideUrlLoading.

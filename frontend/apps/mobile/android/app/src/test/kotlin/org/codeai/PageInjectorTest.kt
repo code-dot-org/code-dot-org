@@ -44,16 +44,6 @@ class PageInjectorTest {
     }
 
     @Test
-    fun html_defersGooglesTagScript() {
-        server.enqueue(
-            html("<head><script async src=\"https://www.googletagmanager.com/gtag/js?id=G\"></script></head>"),
-        )
-        val body = bodyOf(injector.intercept(request("$origin/")))
-        assertTrue(body, body.contains("data-codeai-deferred-src=\"https://www.googletagmanager.com/gtag/js?id=G\""))
-        assertFalse(body, body.contains(" src=\"https://www.googletagmanager.com/"))
-    }
-
-    @Test
     fun redirectWithinTheSite_isAStubThatReplacesThePage() {
         server.enqueue(MockResponse().setResponseCode(302).setHeader("Location", "/courses/oceans/units/1"))
         val url = "$origin/s/oceans"
@@ -67,7 +57,7 @@ class PageInjectorTest {
     fun redirectStub_turnsAwayPageScript() {
         server.enqueue(MockResponse().setResponseCode(302).setHeader("Location", "/congrats/oceans"))
         val body = bodyOf(injector.intercept(request("$origin/api/hour/finish/oceans")))
-        assertTrue(body, body.contains("window.__codeaiHideSiteChrome = true;"))
+        assertTrue(body, body.contains("window.$PAGE_SCRIPT_GUARD = true;"))
     }
 
     @Test

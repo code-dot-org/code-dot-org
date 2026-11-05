@@ -12,15 +12,15 @@ import org.json.JSONObject
 
 /**
  * Decides where the app's WebView may go, and serves what it fetches: stored
- * images and icon fonts from disk, and studio.code.org pages with
- * hide_site_chrome.js in their <head>, so the site chrome is hidden before
+ * images and icon fonts from disk, and studio.code.org pages with the page
+ * script (PageScript.kt) in their <head>, so the site chrome is hidden before
  * the first frame. [app] holds the navigation state and acts on it.
  */
 internal class AppWebViewClient(
     private val app: MainActivity,
     private val pageInjector: PageInjector,
     private val assetCache: AssetCache,
-    private val hideSiteChrome: String,
+    private val pageScript: String,
     private val stableId: String?,
 ) : BridgeWebViewClient(app.bridge) {
     private val bridge = app.bridge
@@ -154,7 +154,7 @@ internal class AppWebViewClient(
     override fun onPageCommitVisible(view: WebView, url: String?) {
         super.onPageCommitVisible(view, url)
         if (SitePolicy.isSitePage(url)) {
-            view.evaluateJavascript(hideSiteChrome, null)
+            view.evaluateJavascript(pageScript, null)
         }
     }
 

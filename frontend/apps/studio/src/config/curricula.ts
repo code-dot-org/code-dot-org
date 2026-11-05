@@ -174,7 +174,7 @@ export function courseOf(curriculum: Curriculum): string | undefined {
 
 /**
  * Where the landing page opens the curriculum. One that starts on a level
- * asks the app's page script (hide_site_chrome.js) to move on to the first
+ * asks the app's page script (workaround_resume.js) to move on to the first
  * level not yet passed; one that starts on its unit overview shows progress
  * there, and a free-play lab reopens its project.
  */
