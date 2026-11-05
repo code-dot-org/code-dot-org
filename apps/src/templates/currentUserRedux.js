@@ -129,6 +129,7 @@ const initialState = {
   userSharingDisabled: false,
   hasSeenHomepageWelcome: false,
   blockedAichatProviders: [],
+  inSpritelab2AiPilot: false,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -262,6 +263,7 @@ export default function currentUser(state = initialState, action) {
       has_seen_homepage_welcome,
       ai_chat_access_level,
       blocked_aichat_providers,
+      in_spritelab2_ai_pilot,
     } = action.serverUser;
     // TODO: Once Amplitude is fully removed, the StatsigReporter class should be
     // renamed to AnalyticsReporter.
@@ -302,6 +304,7 @@ export default function currentUser(state = initialState, action) {
       hasSeenHomepageWelcome: has_seen_homepage_welcome,
       aiChatAccessLevel: ai_chat_access_level,
       blockedAichatProviders: blocked_aichat_providers ?? [],
+      inSpritelab2AiPilot: !!in_spritelab2_ai_pilot,
     };
   }
 

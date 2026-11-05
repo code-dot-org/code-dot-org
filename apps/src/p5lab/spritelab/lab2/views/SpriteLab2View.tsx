@@ -13,7 +13,7 @@ import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {PERMISSIONS, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
@@ -461,16 +461,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => heldBackBlockTypes(catalog, chosenBlocks),
     [catalog, chosenBlocks]
   );
-  const isLevelbuilder = useAppSelector(state =>
-    state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
+  const inAiPilot = useAppSelector(
+    state => state.currentUser.inSpritelab2AiPilot
   );
   // Everything the toolbox leaves out.
   const hiddenBlockTypes = useMemo(
     () =>
-      isLevelbuilder
+      inAiPilot
         ? heldBackBlocks
         : new Set([...heldBackBlocks, ...AI_BLOCK_TYPES]),
-    [heldBackBlocks, isLevelbuilder]
+    [heldBackBlocks, inAiPilot]
   );
   const [showBlockCatalog, setShowBlockCatalog] = useState(false);
   // Dismissing the catalog, not opening it, is what counts as seen: an

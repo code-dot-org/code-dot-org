@@ -4,6 +4,7 @@ module User::AiAccessible
   include SharedConstants
 
   TEACHER_PREVERIFICATION_PILOT = 'teacher-preverification'.freeze
+  SPRITELAB2_AI_PILOT = 'spritelab2-ai-blocks'.freeze
 
   # Chat apis trust the client to decide if it can access chat features
   # This allows us the flexibility to do things like experiment with new
@@ -20,6 +21,13 @@ module User::AiAccessible
 
   def can_use_ai_iteration_tools?
     levelbuilder?
+  end
+
+  # A pilot teacher's students are in the pilot too.
+  def in_spritelab2_ai_pilot?
+    levelbuilder? ||
+      has_pilot_experiment?(SPRITELAB2_AI_PILOT) ||
+      teachers.any? {|teacher| teacher.has_pilot_experiment?(SPRITELAB2_AI_PILOT)}
   end
 
   def teacher_can_access_aichat?
@@ -61,7 +69,7 @@ module User::AiAccessible
     return false if client_type == AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] && !can_use_lesson_deep_dive?
     return false if client_type == AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR] && !levelbuilder?
     return false if client_type == AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] && !DCDO.get("spritelab-lab2-ask-ai-enabled", true)
-    return false if client_type == AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] && !levelbuilder?
+    return false if client_type == AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] && !in_spritelab2_ai_pilot?
 
     has_aichat_access?(level_id) || trust_chat_client?(client_type)
   end

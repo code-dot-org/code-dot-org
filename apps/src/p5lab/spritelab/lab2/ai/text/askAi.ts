@@ -13,7 +13,9 @@ import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getStore} from '@cdo/apps/redux';
+import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {
+  AiChatAccessLevels,
   AiChatClientTypes,
   AiChatModelIds,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -61,6 +63,28 @@ ${studentSystemPrompt}`;
 
 export function isAskAiEnabled(): boolean {
   return DCDO.get(ASK_AI_DCDO_KEY, true) !== false;
+}
+
+/**
+ * Why the gateway would refuse this user an answer, or null if it would not.
+ * Mirrors User::AiAccessible, so a refused request never leaves the browser.
+ */
+export function askAiRefusal({
+  inSpritelab2AiPilot,
+  aiChatAccessLevel,
+}: Pick<CurrentUserState, 'inSpritelab2AiPilot' | 'aiChatAccessLevel'>):
+  | string
+  | null {
+  if (!isAskAiEnabled()) {
+    return 'The AI is turned off right now.';
+  }
+  if (!inSpritelab2AiPilot) {
+    return "AI blocks aren't available yet.";
+  }
+  if (aiChatAccessLevel !== AiChatAccessLevels.ENABLED) {
+    return "Your teacher hasn't turned on AI for this class.";
+  }
+  return null;
 }
 
 const SAFETY_CHECK_FAILURES = {

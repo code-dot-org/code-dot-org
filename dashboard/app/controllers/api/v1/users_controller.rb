@@ -75,6 +75,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         is_levelbuilder: current_user.levelbuilder?,
         ai_chat_access_level: current_user.ai_chat_access_level,
         blocked_aichat_providers: current_user.blocked_aichat_providers,
+        in_spritelab2_ai_pilot: current_user.in_spritelab2_ai_pilot?,
       }
     else
       render json: {

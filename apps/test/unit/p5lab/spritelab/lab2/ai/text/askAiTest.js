@@ -9,13 +9,17 @@ import {
   askAiText,
   AskAiError,
   askAiErrorMessage,
+  askAiRefusal,
   buildSystemPrompt,
   CHOICE_SYSTEM_PROMPT,
   cleanAnswer,
   isAskAiEnabled,
   SYSTEM_PROMPT,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/text/askAi';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatAccessLevels,
+  AiChatClientTypes,
+} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aichat/api/client/helpers/safetyHelpers', () => ({
   isTextSafe: jest.fn(),
@@ -299,6 +303,39 @@ describe('isAskAiEnabled', () => {
     expect(isAskAiEnabled()).toBe(true);
     DCDO.get.mockReturnValue(false);
     expect(isAskAiEnabled()).toBe(false);
+  });
+});
+
+describe('askAiRefusal', () => {
+  const allowed = {
+    inSpritelab2AiPilot: true,
+    aiChatAccessLevel: AiChatAccessLevels.ENABLED,
+  };
+
+  beforeEach(() => DCDO.get.mockReturnValue(undefined));
+
+  it('allows a pilot user with AI access', () => {
+    expect(askAiRefusal(allowed)).toBeNull();
+  });
+
+  it('refuses when the block is turned off', () => {
+    DCDO.get.mockReturnValue(false);
+    expect(askAiRefusal(allowed)).toBe('The AI is turned off right now.');
+  });
+
+  it('refuses outside the pilot', () => {
+    expect(askAiRefusal({...allowed, inSpritelab2AiPilot: false})).toBe(
+      "AI blocks aren't available yet."
+    );
+  });
+
+  it('refuses without full AI access', () => {
+    [AiChatAccessLevels.ESSENTIAL_ONLY, AiChatAccessLevels.DISABLED].forEach(
+      aiChatAccessLevel =>
+        expect(askAiRefusal({...allowed, aiChatAccessLevel})).toBe(
+          "Your teacher hasn't turned on AI for this class."
+        )
+    );
   });
 });
 

@@ -274,6 +274,25 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, response["is_verified_instructor"]
   end
 
+  test 'current reports in_spritelab2_ai_pilot for a student of a pilot teacher' do
+    teacher = create(:teacher)
+    create(:single_user_experiment, min_user_id: teacher.id, name: User::AiAccessible::SPRITELAB2_AI_PILOT)
+    student = create(:follower, section: create(:section, teacher: teacher)).student_user
+    sign_in(student)
+
+    get :current
+
+    assert_equal true, JSON.parse(@response.body)['in_spritelab2_ai_pilot']
+  end
+
+  test 'current reports in_spritelab2_ai_pilot as false outside the pilot' do
+    sign_in(@user)
+
+    get :current
+
+    assert_equal false, JSON.parse(@response.body)['in_spritelab2_ai_pilot']
+  end
+
   test "a get request to get current returns empty grades_teaching when unset" do
     teacher = create(:teacher, grades_teaching: nil)
     sign_in(teacher)
