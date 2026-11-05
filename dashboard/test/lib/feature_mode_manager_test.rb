@@ -20,43 +20,43 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   # feature mode manager knows we are in that mode.
   def test_round_trip_feature_modes
     %w{normal scale emergency}.each do |mode|
-      FeatureModeManager.set_mode(mode, Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
-      assert_equal mode, FeatureModeManager.get_mode(Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+      FeatureModeManager.set_mode(mode, HOC_UNITS, CSF_UNITS)
+      assert_equal mode, FeatureModeManager.get_mode(HOC_UNITS, CSF_UNITS)
     end
   end
 
   def test_get_mode_returns_nil_if_dcdo_property_does_not_match
-    FeatureModeManager.set_mode('normal', Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    FeatureModeManager.set_mode('normal', HOC_UNITS, CSF_UNITS)
     DCDO.set('hoc_activity_sample_weight', 2)
-    assert_nil FeatureModeManager.get_mode(Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    assert_nil FeatureModeManager.get_mode(HOC_UNITS, CSF_UNITS)
     # Set the DCDO property back to the original value and make sure we're in normal mode.
     DCDO.set('hoc_activity_sample_weight', 1)
-    assert_equal 'normal', FeatureModeManager.get_mode(Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    assert_equal 'normal', FeatureModeManager.get_mode(HOC_UNITS, CSF_UNITS)
   end
 
   def test_get_mode_returns_nil_if_hoc_gatekeeper_property_does_not_match
-    FeatureModeManager.set_mode('normal', Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    FeatureModeManager.set_mode('normal', HOC_UNITS, CSF_UNITS)
     Gatekeeper.set('postMilestone', where: {script_name: HOC_UNIT}, value: false)
-    assert_nil FeatureModeManager.get_mode(Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    assert_nil FeatureModeManager.get_mode(HOC_UNITS, CSF_UNITS)
     Gatekeeper.set('postMilestone', where: {script_name: HOC_UNIT}, value: true)
-    assert_equal 'normal', FeatureModeManager.get_mode(Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    assert_equal 'normal', FeatureModeManager.get_mode(HOC_UNITS, CSF_UNITS)
   end
 
   def test_get_mode_returns_nil_if_general_gatekeeper_property_does_not_match
-    FeatureModeManager.set_mode('normal', Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    FeatureModeManager.set_mode('normal', HOC_UNITS, CSF_UNITS)
     Gatekeeper.set('puzzle_rating', value: false)
-    assert_nil FeatureModeManager.get_mode(Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    assert_nil FeatureModeManager.get_mode(HOC_UNITS, CSF_UNITS)
     Gatekeeper.set('puzzle_rating', value: true)
-    assert_equal 'normal', FeatureModeManager.get_mode(Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    assert_equal 'normal', FeatureModeManager.get_mode(HOC_UNITS, CSF_UNITS)
 
     Gatekeeper.set('postMilestone', value: false)
-    assert_nil FeatureModeManager.get_mode(Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    assert_nil FeatureModeManager.get_mode(HOC_UNITS, CSF_UNITS)
     Gatekeeper.set('postMilestone', value: true)
-    assert_equal 'normal', FeatureModeManager.get_mode(Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    assert_equal 'normal', FeatureModeManager.get_mode(HOC_UNITS, CSF_UNITS)
   end
 
   def test_normal_mode
-    FeatureModeManager.set_mode('normal', Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    FeatureModeManager.set_mode('normal', HOC_UNITS, CSF_UNITS)
     assert Gatekeeper.allows('puzzle_rating')
     assert Gatekeeper.allows('hint_view_request')
     HOC_AND_CSF_UNITS.each do |script|
@@ -74,7 +74,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   end
 
   def test_allows
-    FeatureModeManager.set_mode('normal', Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    FeatureModeManager.set_mode('normal', HOC_UNITS, CSF_UNITS)
 
     assert FeatureModeManager.allows(Gatekeeper, 'normal', 'postMilestone', HOC_UNIT)
     assert FeatureModeManager.allows(Gatekeeper, 'normal', 'postMilestone', nil)
@@ -102,12 +102,12 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert FeatureModeManager.allows(Gatekeeper, 'normal', 'newFeature', 'script1')
 
     # Make sure the disabled features work correctly as well.
-    FeatureModeManager.set_mode('emergency', Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    FeatureModeManager.set_mode('emergency', HOC_UNITS, CSF_UNITS)
     refute FeatureModeManager.allows(Gatekeeper, 'emergency', 'postMilestone', HOC_UNIT)
   end
 
   def test_scale_mode
-    FeatureModeManager.set_mode('scale', Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    FeatureModeManager.set_mode('scale', HOC_UNITS, CSF_UNITS)
     assert Gatekeeper.allows('puzzle_rating')
     assert Gatekeeper.allows('hint_view_request')
     HOC_AND_CSF_UNITS.each do |script|
@@ -124,7 +124,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   end
 
   def test_fallback_mode
-    FeatureModeManager.set_mode('fallback', Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+    FeatureModeManager.set_mode('fallback', HOC_UNITS, CSF_UNITS)
     refute Gatekeeper.allows('puzzle_rating')
     assert Gatekeeper.allows('hint_view_request')
     HOC_UNITS.each do |script|
@@ -149,7 +149,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   def test_emergency_mode
     hoc_scripts = ScriptConfig.hoc_scripts
     csf_scripts = ScriptConfig.csf_scripts
-    FeatureModeManager.set_mode('emergency', Gatekeeper, DCDO, hoc_scripts, csf_scripts)
+    FeatureModeManager.set_mode('emergency', hoc_scripts, csf_scripts)
     refute Gatekeeper.allows('puzzle_rating')
     refute Gatekeeper.allows('hint_view_request')
     HOC_AND_CSF_UNITS.each do |script|
@@ -166,7 +166,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
 
   def test_raises_on_invalid_mode
     assert_raises RuntimeError do
-      FeatureModeManager.set_mode('invalid', Gatekeeper, DCDO, HOC_UNITS, CSF_UNITS)
+      FeatureModeManager.set_mode('invalid', HOC_UNITS, CSF_UNITS)
     end
   end
 end
