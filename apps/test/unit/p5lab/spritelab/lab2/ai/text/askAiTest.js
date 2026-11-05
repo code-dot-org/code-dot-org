@@ -308,8 +308,10 @@ describe('isAskAiEnabled', () => {
 
 describe('askAiRefusal', () => {
   const allowed = {
+    userType: 'student',
     inSpritelab2AiPilot: true,
     aiChatAccessLevel: AiChatAccessLevels.ENABLED,
+    blockedAichatProviders: [],
   };
 
   beforeEach(() => DCDO.get.mockReturnValue(undefined));
@@ -336,6 +338,31 @@ describe('askAiRefusal', () => {
           "Your teacher hasn't turned on AI for this class."
         )
     );
+  });
+
+  it('tells a teacher without AI access to verify', () => {
+    expect(
+      askAiRefusal({
+        ...allowed,
+        userType: 'teacher',
+        aiChatAccessLevel: AiChatAccessLevels.DISABLED,
+      })
+    ).toBe('AI blocks need a verified teacher account.');
+  });
+
+  it("refuses when the model's provider is blocked", () => {
+    expect(askAiRefusal({...allowed, blockedAichatProviders: ['google']})).toBe(
+      "AI blocks aren't available in your region yet."
+    );
+  });
+
+  it('allows a blocked provider once the gateway falls back', () => {
+    DCDO.get.mockImplementation(key =>
+      key === 'ai_gateway_fallback_is_enabled' ? true : undefined
+    );
+    expect(
+      askAiRefusal({...allowed, blockedAichatProviders: ['google']})
+    ).toBeNull();
   });
 });
 

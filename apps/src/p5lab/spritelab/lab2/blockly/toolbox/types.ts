@@ -14,7 +14,6 @@ export function findCategory(
   return contents.filter(isStaticCategoryInfo).find(c => c.name === name);
 }
 
-/** The toolbox less its top-level category of this name. */
 export function withoutCategory(
   toolbox: ToolboxInfo,
   name: string

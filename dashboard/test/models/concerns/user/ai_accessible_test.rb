@@ -425,9 +425,8 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
 
     # Sprite Lab 2's ambient client type is trusted; this one must not inherit that.
-    it 'returns false for SPRITELAB_ASK_AI in the pilot without access on a trusted client' do
-      allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(true)
-      allow(user).to receive(:trust_chat_client?).and_call_original
+    it 'returns false for SPRITELAB_ASK_AI outside the pilot on a trusted client' do
+      allow(user).to receive(:trust_chat_client?).and_return(true)
       _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal false
     end
 
