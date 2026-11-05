@@ -19,6 +19,7 @@ describe('BLOCK_HELP', () => {
     'gamelab_atTime',
     'spritelab2_whenPlayer',
     'spritelab2_askAI',
+    'spritelab2_askAIWithChoices',
     'spritelab2_setSystemPrompt',
   ]);
 
