@@ -120,11 +120,12 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
     [locale: string]: boolean;
   };
   private Localize: LocalizeJS | undefined;
-  private loader?: Promise<boolean>;
+  private loader: Promise<boolean> = Promise.resolve(false);
+  private source?: Promise<LocalizeJS | undefined>;
 
   /**
    * Instantiates our localization code and binds events to the LocalizeJS
-   * widget.
+   * widget if a host page has already started loading it.
    */
   constructor() {
     super();
@@ -134,51 +135,74 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
       en: true,
     };
 
-    this.loader = new Promise(resolve => {
-      if (typeof window === 'undefined') {
-        return;
-      }
+    if (typeof window !== 'undefined' && window.LocalizeLoader) {
+      this.attach(window.LocalizeLoader);
+    }
+  }
 
-      window.LocalizeLoader?.then(loadedLocalize => {
-        this.Localize = loadedLocalize;
+  /**
+   * Binds to a LocalizeJS instance once the given promise settles. A
+   * promise that rejects or yields nothing leaves the source language in
+   * place. Attaching the same promise twice is a no-op.
+   *
+   * @param source - Resolves to the loaded LocalizeJS widget.
+   * @returns Resolves true once bound, false if LocalizeJS is unavailable.
+   */
+  attach(source: Promise<LocalizeJS | undefined>): Promise<boolean> {
+    if (source === this.source) {
+      return this.loader;
+    }
+    this.source = source;
 
-        // Hook into the widget code
-        this.Localize?.on?.('initialize', options => {
-          this.options = options as LocalizeOptions;
-        });
-
-        this.Localize?.on?.('setLanguage', (data: LocalizeSetLanguageData) => {
-          // Call our own 'change' event
-          if (this.localeLoaded[data.to]) {
-            this.emit('change', {locale: data.to, rtl: this.isRTL(data.to)});
-          }
-        });
-
-        this.Localize?.on?.('dictionaryAdded', locale => {
-          // Call our own 'change' event, again, to reflect new dictionary data
-          this.localeLoaded[locale] = true;
-          if (locale === this.locale) {
-            this.emit('change', {locale: this.locale, rtl: this.rtl});
-          }
-        });
-
-        this.Localize?.getAvailableLanguages?.((_, data) => {
-          this.localeList = data.map(({name, code}) => ({
-            text: name,
-            value: code,
-            rtl: this.isRTL(code),
-          }));
-        });
-
-        resolve(true);
-      }).catch(err => {
+    this.loader = source.then(
+      loadedLocalize => {
+        if (!loadedLocalize) {
+          return false;
+        }
+        this.bind(loadedLocalize);
+        return true;
+      },
+      err => {
         // Failed to load the Localize library; report to the browser observability provider.
         Observability.recordError(err);
-      });
+        return false;
+      },
+    );
 
-      if (window.LocalizeLoader === undefined) {
-        resolve(false);
+    return this.loader;
+  }
+
+  private bind(loadedLocalize: LocalizeJS): void {
+    this.Localize = loadedLocalize;
+
+    // Hook into the widget code
+    this.Localize?.on?.('initialize', options => {
+      this.options = options as LocalizeOptions;
+    });
+
+    this.Localize?.on?.('setLanguage', (data: LocalizeSetLanguageData) => {
+      // Call our own 'change' event
+      if (this.localeLoaded[data.to]) {
+        this.emit('change', {locale: data.to, rtl: this.isRTL(data.to)});
       }
+    });
+
+    this.Localize?.on?.('dictionaryAdded', locale => {
+      // Call our own 'change' event, again, to reflect new dictionary data
+      this.localeLoaded[locale] = true;
+      if (locale === this.locale) {
+        this.emit('change', {locale: this.locale, rtl: this.rtl});
+      }
+    });
+
+    this.Localize?.getAvailableLanguages?.((_, data) => {
+      this.localeList = (data || []).map(({name, code}) => ({
+        text: name,
+        value: code,
+        rtl: this.isRTL(code),
+      }));
+      // Pickers read `locales` on change; the list can arrive after binding.
+      this.emit('change', {locale: this.locale, rtl: this.rtl});
     });
   }
 
@@ -189,12 +213,11 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
     return !!this.Localize;
   }
 
-  async waitUntilLoaded(): Promise<boolean> {
-    if (this.loader === undefined) {
-      return true;
-    }
-
-    return await this.loader;
+  /**
+   * Resolves true once LocalizeJS is bound, false if it is unavailable.
+   */
+  waitUntilLoaded(): Promise<boolean> {
+    return this.loader;
   }
 
   /**
