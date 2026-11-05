@@ -18,7 +18,9 @@ function dynamicCategoryKey(
   };
   const candidates = [named.id, named.name];
   return (
-    candidates.find(name => name && DYNAMIC_CATEGORY_OPTIONS[name]) ||
+    candidates.find(
+      name => name && Object.hasOwn(DYNAMIC_CATEGORY_OPTIONS, name)
+    ) ||
     Object.keys(DYNAMIC_CATEGORY_OPTIONS).find(
       key => DYNAMIC_CATEGORY_OPTIONS[key] === item.custom
     )
@@ -60,7 +62,7 @@ function contentsToBlocks(
         item as BlocklyCore.utils.toolbox.DynamicCategoryInfo
       );
       if (!dynamicCategoryName) {
-        console.warn('Missing dynamic category name: ', item);
+        console.warn('Unsupported dynamic category, dropped: ', item);
       } else {
         blocks.push({
           type: BLOCK_TYPES.categoryDynamic,

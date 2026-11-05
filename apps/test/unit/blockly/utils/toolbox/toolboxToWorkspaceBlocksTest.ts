@@ -72,6 +72,33 @@ describe('toolboxToWorkspaceBlocks', () => {
     ]);
   });
 
+  // A name that happens to match an Object prototype member must not pass
+  // for a dynamic category key.
+  it('ignores a category name inherited from Object', () => {
+    const blocks = blocksOf({
+      kind: 'categoryToolbox',
+      contents: [{kind: 'category', name: 'constructor', custom: 'VARIABLE'}],
+    } as ToolboxInfo);
+
+    expect(blocks).toEqual([
+      {type: BLOCK_TYPES.categoryDynamic, fields: {CUSTOM: 'Variables'}},
+    ]);
+  });
+
+  // The CUSTOM dropdown offers only Functions and Variables, so a category
+  // bound to any other flyout has no block to become.
+  it('drops a dynamic category with an unsupported flyout', () => {
+    const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    const blocks = blocksOf({
+      kind: 'categoryToolbox',
+      contents: [{kind: 'category', name: 'Behaviors', custom: 'Behavior'}],
+    } as ToolboxInfo);
+
+    expect(blocks).toEqual([]);
+    expect(warn).toHaveBeenCalled();
+    warn.mockRestore();
+  });
+
   it('skips the placeholder DEFAULT category', () => {
     const blocks = blocksOf({
       kind: 'categoryToolbox',
