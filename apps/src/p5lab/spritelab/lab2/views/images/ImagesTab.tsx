@@ -6,6 +6,7 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {ImageSource} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
   GeneratedImageResult,
   UploadImageFunction,
@@ -107,6 +108,11 @@ interface ImagesTabProps {
   /** The level checks that the picture was rated: the rating strip stays
       until a thumb is given. */
   ratingRequired?: boolean;
+  /** Where a sentence's picture comes from (imageCache.ts); the tree first
+      when unset. */
+  imageSource?: ImageSource;
+  /** Another tree to read cached pictures from (QA). */
+  imageCacheUrl?: string;
 }
 
 const DRAFT_ID = 'draft';
@@ -139,6 +145,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   onDrawingHistory,
   advancedOffered,
   ratingRequired,
+  imageSource,
+  imageCacheUrl,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // The engine trims each image after it loads and stores a thumbnail; the
@@ -489,6 +497,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onKeep={handleKeep}
           wordLayout={wordLayout}
           compactBehindTheScenes
+          imageSource={imageSource}
+          imageCacheUrl={imageCacheUrl}
           advanced={
             advancedOffered
               ? {
@@ -542,18 +552,23 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 tip={generating ? parts.tip : undefined}
                 under={generating ? undefined : under}
                 overlay={
-                  parts.rating.offered && (
-                    <RatingBar
-                      verdict={parts.rating.verdict}
-                      onJudge={parts.rating.judge}
-                      onReasons={parts.rating.explain}
-                      onAsking={handleAsking}
-                      onDismiss={
-                        parts.rating.required ? undefined : parts.rating.dismiss
-                      }
-                      disabled={parts.busy}
-                    />
-                  )
+                  <>
+                    {parts.cachedTag}
+                    {parts.rating.offered && (
+                      <RatingBar
+                        verdict={parts.rating.verdict}
+                        onJudge={parts.rating.judge}
+                        onReasons={parts.rating.explain}
+                        onAsking={handleAsking}
+                        onDismiss={
+                          parts.rating.required
+                            ? undefined
+                            : parts.rating.dismiss
+                        }
+                        disabled={parts.busy}
+                      />
+                    )}
+                  </>
                 }
               />
             );

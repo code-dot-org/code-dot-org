@@ -71,6 +71,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           panelRef: {current: null},
           frame: generating ? <span>spinner</span> : null,
           frameFilled: false,
+          cachedTag: null,
           behindTheScenes: null,
           status: null,
           sentence: <span>words</span>,
