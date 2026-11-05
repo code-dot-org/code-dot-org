@@ -536,4 +536,26 @@ describe('QuizConfigurationPanel', () => {
       (screen.getByLabelText('Show intro screen') as HTMLInputElement).checked
     ).toBe(INITIAL_VALUES.showIntroScreen);
   });
+
+  it('lists exam last, in the chooser and the dropdown', () => {
+    renderPanel({initialValues: {...INITIAL_VALUES, purpose: undefined}});
+    const names = screen
+      .getAllByRole('button')
+      .map(button => button.textContent ?? '');
+    expect(names[names.length - 1]).toMatch(/^Exam(?! simulation)/);
+  });
+
+  it('warns that an exam needs a lockable lesson only while exam is selected', () => {
+    renderPanel({initialValues: {...INITIAL_VALUES, purpose: 'exam'}});
+    const options = Array.from(
+      (screen.getByLabelText('Purpose') as HTMLSelectElement).options
+    ).map(option => option.value);
+    expect(options[options.length - 1]).toBe('exam');
+    expect(screen.getByText(/last level of a lockable lesson/)).toBeVisible();
+  });
+
+  it('does not show the exam warning for other purposes', () => {
+    renderPanel();
+    expect(screen.queryByText(/last level of a lockable lesson/)).toBeNull();
+  });
 });

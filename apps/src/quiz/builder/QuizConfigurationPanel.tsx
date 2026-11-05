@@ -37,16 +37,21 @@ const PURPOSE_OPTIONS = [
     chooserDescription: 'For building skill on the content.',
   },
   {
-    value: 'exam',
-    text: 'Exam',
-    chooserDescription: 'A formal assessment of learning.',
-  },
-  {
     value: 'exam_simulation',
     text: 'Exam simulation',
     chooserDescription: 'Cert-style timed exam practice.',
   },
+  // Last, so a hurried author does not pick it.
+  {
+    value: 'exam',
+    text: 'Exam',
+    chooserDescription:
+      'A formal assessment, locked until a teacher releases it. Only for lockable lessons.',
+  },
 ];
+
+const EXAM_REQUIREMENT_MESSAGE =
+  'An exam must be the last level of a lockable lesson.';
 
 interface QuizConfigurableFields {
   showIntroScreen: boolean;
@@ -139,6 +144,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
     !!initialValues.timeLimitMinutes && showIntroScreen;
   const introScreenLockedMessageId = useId();
   const [purpose, setPurpose] = useState(initialValues.purpose || '');
+  const examRequirementMessageId = useId();
   const [allowMultipleAttempts, setAllowMultipleAttempts] = useState(
     initialValues.allowMultipleAttempts
   );
@@ -414,9 +420,19 @@ const QuizConfigurationPanel: React.FunctionComponent<
               selectedValue={purpose}
               disabled={savingField === 'purpose'}
               onChange={handlePurposeChange}
+              aria-describedby={
+                purpose === 'exam' ? examRequirementMessageId : undefined
+              }
               styleAsFormField
               className={styles.fullWidthDropdown}
             />
+            {/* Not the dropdown's helperMessage, which renders inside its
+                label and would become part of the field's name. */}
+            {purpose === 'exam' && (
+              <Alert severity="warning" id={examRequirementMessageId}>
+                {EXAM_REQUIREMENT_MESSAGE}
+              </Alert>
+            )}
           </div>
           <ConfigCard label="content">
             <div className={styles.cardRow}>
