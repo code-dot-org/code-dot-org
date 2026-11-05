@@ -205,6 +205,9 @@ interface PlayspaceProps {
   onPreviewWidth?: (width: number) => void;
   /** The width of the preview column, reported in every mode. */
   onColumnWidth?: (width: number) => void;
+  /** Given, the game shows as a side-by-side stereo pair drawn into this
+      canvas (the engine's setStereoOutput) in place of its own canvas. */
+  stereoCanvasRef?: React.RefObject<HTMLCanvasElement>;
 }
 
 /**
@@ -229,6 +232,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   columnShare = PREVIEW_WIDTH_SHARE,
   onPreviewWidth,
   onColumnWidth,
+  stereoCanvasRef,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -650,7 +654,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       )}
       <div
         ref={boxRef}
-        className={moduleStyles.playspaceBox}
+        className={classNames(
+          moduleStyles.playspaceBox,
+          stereoCanvasRef && moduleStyles.stereoBox
+        )}
         // A keyboard stop for players: game keys arrive via window listeners
         // regardless of focus, but focus needs somewhere harmless to rest
         // after the tab-bar buttons (a focused button turns Space into its
@@ -691,8 +698,20 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         <div
           ref={canvasRef}
           id="divGameLab"
-          className={moduleStyles.playspaceCanvas}
+          className={classNames(
+            moduleStyles.playspaceCanvas,
+            stereoCanvasRef && moduleStyles.playspaceCanvasHidden
+          )}
         />
+        {stereoCanvasRef && (
+          <canvas
+            ref={stereoCanvasRef}
+            className={moduleStyles.stereoCanvas}
+            width={2 * CANVAS}
+            height={CANVAS}
+            aria-hidden="true"
+          />
+        )}
         {/* Click-to-play: a transparent catcher over the live preview so a
             click opens Play on this scene. Only in preview and never while
             picking a location; the game canvas stays non-interactive beneath. */}

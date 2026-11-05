@@ -129,6 +129,7 @@ import {
 import {sceneMetadataFor} from '../sceneThumbnails';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {clearRoom} from '../stackRoom';
+import {stereoFromQuery} from '../stereo';
 import {
   RuntimeAnimationList,
   SpriteLab2LevelProperties,
@@ -405,6 +406,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const [engineReady, setEngineReady] = useState(false);
+  // Side-by-side stereo output, asked for on the URL (stereo.ts).
+  const stereo = useMemo(() => stereoFromQuery(), []);
+  const stereoCanvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    if (engineReady && stereo) {
+      engineRef.current?.setStereoOutput(stereoCanvasRef.current, stereo.eye);
+    }
+  }, [engineReady, stereo]);
   const [animationsSeeded, setAnimationsSeeded] = useState(false);
   // Jump transition: the cover blanks the playspace while the target loads;
   // fadeTrigger increments on landing to play the fade-from-black.
@@ -2467,6 +2476,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           <Playspace
             boxRef={playspaceRef}
             mode={playspaceMode}
+            stereoCanvasRef={stereo ? stereoCanvasRef : undefined}
             columnHeader={<EditorStrip title="Preview" />}
             onPreviewWidth={setPreviewWidth}
             onColumnWidth={setPreviewColumnWidth}

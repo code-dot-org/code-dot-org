@@ -739,6 +739,25 @@ $z-over-blockly: 71;
   height: 400px;
 }
 
+// Side-by-side stereo (?stereo): the game canvas keeps drawing unseen and
+// the pair shows at half size across the box's middle, on black.
+.playspaceCanvasHidden {
+  visibility: hidden;
+}
+
+.stereoBox {
+  background: var(--background-neutral-black-fixed);
+}
+
+.stereoCanvas {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 400px;
+  height: 200px;
+  pointer-events: none;
+}
+
 // Click-to-play catcher over the live preview. Transparent until hover/focus,
 // when a faint veil + play glyph signal that clicking opens Play on this scene.
 // pointer-events: auto re-enables it over the otherwise-inert preview box.
