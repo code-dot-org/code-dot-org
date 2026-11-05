@@ -19,7 +19,6 @@ import {
   PROJECT_STEP_ID,
   Progress,
   stepIdToResume,
-  totalTimeSpent,
   useProgress,
 } from '../progress';
 import {ProgressKey} from '../progress/progressStore';
