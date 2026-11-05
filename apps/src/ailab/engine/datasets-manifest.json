@@ -1,6 +1,30 @@
 {
   "datasets": [
     {
+      "id": "lesson10_cafeteria_menu",
+      "name": "Cafeteria Menu",
+      "path": "datasets/lesson10_cafeteria_menu.csv",
+      "metadataPath": "datasets/lesson10_cafeteria_menu.json",
+      "isToy": true,
+      "rowCount": 87
+    },
+    {
+      "id": "lesson10_fitness_app",
+      "name": "Fitness App",
+      "path": "datasets/lesson10_fitness_app.csv",
+      "metadataPath": "datasets/lesson10_fitness_app.json",
+      "isToy": true,
+      "rowCount": 69
+    },
+    {
+      "id": "lesson10_homework_tracker",
+      "name": "Homework Tracker",
+      "path": "datasets/lesson10_homework_tracker.csv",
+      "metadataPath": "datasets/lesson10_homework_tracker.json",
+      "isToy": true,
+      "rowCount": 62
+    },
+    {
       "id": "SC1-L06-playlist-a-base",
       "name": "Playlist Bot A",
       "path": "datasets/SC1-L06-playlist-a-base.csv",

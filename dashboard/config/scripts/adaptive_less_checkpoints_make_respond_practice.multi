@@ -1,14 +1,12 @@
 name 'adaptive-less-checkpoints-make-respond-practice'
-title 'TODO: title'
+title 'Choose, count, remember'
 description ''
-question 'Which sentence describes a rule?'
-wrong 'The score is 7 after the third spin.'
-right 'If the score hits 10, it ends.'
-wrong 'The button is blue with white text.'
-wrong 'The page has a title at the top.'
+question 'Your page has a Pick button for club events. You want it to show how many times each event was picked, even after a reload. What else does the page need to do?'
+wrong 'Pick the same event every single time.'
+right 'Count each pick and save the totals.'
+wrong 'Add a brand new event after every pick.'
+wrong 'Hide the whole list from every visitor.'
 
-markdown <<MARKDOWN
-Which sentence describes a rule?
-MARKDOWN
+
 
 allow_multiple_attempts true

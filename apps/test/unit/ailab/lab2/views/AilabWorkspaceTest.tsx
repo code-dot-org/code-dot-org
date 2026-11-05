@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {act, render} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -146,11 +147,13 @@ describe('AilabWorkspace', () => {
     store.dispatch(setCurrentLevelId(levelId));
     render(
       <Provider store={store}>
-        <LevelPropertiesWrapper levelPropertiesMap={LEVELS}>
-          <ProgressContainer appType="ailab">
-            <CurrentLevel />
-          </ProgressContainer>
-        </LevelPropertiesWrapper>
+        <ThemeProvider>
+          <LevelPropertiesWrapper levelPropertiesMap={LEVELS}>
+            <ProgressContainer appType="ailab">
+              <CurrentLevel />
+            </ProgressContainer>
+          </LevelPropertiesWrapper>
+        </ThemeProvider>
       </Provider>
     );
   }

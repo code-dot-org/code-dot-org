@@ -156,14 +156,18 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-  # Deploys the package using its deployment script (e.g. Component Library storybook)
+  # Publishes the Component Library storybook to GitHub Pages.
   deploy:
     name: deploy
     if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
     needs: [release-dryrun, test-ui]
     runs-on: ubuntu-24.04
     permissions:
-      contents: write
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
     steps:
       - uses: actions/checkout@v4
         with:
@@ -176,15 +180,17 @@ jobs:
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup
 
-      - name: Authenticate Git for Deploys
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global url."https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
-
-      - name: Deploy
-        run: yarn turbo run deploy
+      - name: Build
+        run: yarn turbo run build --filter=@code-dot-org/design-system-storybook
         working-directory: ./frontend
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: frontend/apps/design-system-storybook/dist
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
 
   # Common teardown actions that must occur after _all_ jobs have completed.
   teardown:
