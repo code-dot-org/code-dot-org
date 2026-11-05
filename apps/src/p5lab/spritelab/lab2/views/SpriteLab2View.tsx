@@ -61,6 +61,7 @@ import {ASK_AI_BLOCK_TYPE} from '../blockly/blockDefinitions/askAi';
 import {
   refreshSceneDropdowns,
   setSceneMenuActiveId,
+  withSceneMenuActive,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
@@ -1347,9 +1348,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           const live = scene.id === activeSceneId ? getCode() : null;
           code =
             live ??
-            getCodeFromSerializedWorkspace(
-              scene.source ?? DEFAULT_SCENE_SOURCE,
-              applyLevelDefaults
+            withSceneMenuActive(scene.id, () =>
+              getCodeFromSerializedWorkspace(
+                scene.source ?? DEFAULT_SCENE_SOURCE,
+                applyLevelDefaults
+              )
             );
         } catch (e) {
           // A scene that fails to compile shouldn't kill the jump
@@ -1427,9 +1430,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ])
       );
       try {
-        return getCodeFromSerializedWorkspace(
-          scene.source ?? DEFAULT_SCENE_SOURCE,
-          applyLevelDefaults
+        return withSceneMenuActive(scene.id, () =>
+          getCodeFromSerializedWorkspace(
+            scene.source ?? DEFAULT_SCENE_SOURCE,
+            applyLevelDefaults
+          )
         );
       } finally {
         dispatch({
