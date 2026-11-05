@@ -1,30 +1,16 @@
 package org.codeai
 
-import android.annotation.SuppressLint
 import android.content.SharedPreferences
 import android.content.res.Configuration
-import android.graphics.Bitmap
 import android.graphics.Color
 import android.media.AudioManager
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.Uri
 import android.os.Bundle
-import android.os.SystemClock
-import android.provider.Settings
 import android.view.ActionMode
 import android.view.View
-import android.view.ViewGroup
-import android.view.accessibility.AccessibilityNodeInfo
-import android.view.textclassifier.TextClassifier
 import android.webkit.CookieManager
-import android.webkit.GeolocationPermissions
-import android.webkit.PermissionRequest
-import android.webkit.ValueCallback
-import android.webkit.WebResourceError
-import android.webkit.WebResourceRequest
-import android.webkit.WebResourceResponse
-import android.webkit.WebSettings
 import android.webkit.WebView
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.SystemBarStyle
@@ -35,16 +21,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.get
-import androidx.core.view.size
-import androidx.webkit.UserAgentMetadata
-import androidx.webkit.WebSettingsCompat
-import androidx.webkit.WebViewFeature
 import com.getcapacitor.BridgeActivity
-import com.getcapacitor.BridgeWebChromeClient
-import com.getcapacitor.BridgeWebViewClient
 import com.getcapacitor.WebViewListener
-import org.codeai.SitePolicy.FINISHED_FRAGMENT
 import org.codeai.SitePolicy.HOME_URL
 import org.codeai.SitePolicy.SITE_ORIGIN
 import org.json.JSONObject
@@ -53,17 +31,27 @@ import java.util.UUID
 /**
  * Hosts the landing page and the curricula it opens in one WebView. The
  * landing page is always the first history entry; curricula load on top of
- * it from studio.code.org.
+ * it from studio.code.org. [AppWebViewClient] decides where the WebView may
+ * go; this holds where it is going and acts on it.
  */
 class MainActivity : BridgeActivity() {
-    private lateinit var hideSiteChrome: String
     private lateinit var prefs: SharedPreferences
-    private var resumeUrl: String? = null
-    // The launch screen with a spinner, over the window while a page loads.
-    private var loadingCover: View? = null
+    internal lateinit var loadingCover: LoadingCover
+        private set
+    // The remembered page a fresh start reopens, until it is opened.
+    internal var resumeUrl: String? = null
+        private set
     // Opened once the landing page is back: a course's congratulations, or
     // the first level after "Try again".
-    private var pendingLandingUrl: String? = null
+    internal var pendingLandingUrl: String? = null
+    // Set when the app loads the landing page over pages Back must not
+    // return to: a load the cover's logo cancelled, which can stay in
+    // history even ahead of the landing page, or a page Back left.
+    internal var clearHistoryOnLanding = false
+    // Known only to the app and the page script it puts in studio.code.org
+    // pages, for the debug build's Reset course; another site's frame cannot
+    // read it, but the site's own third-party scripts could.
+    internal val resetToken = if (BuildConfig.DEBUG) UUID.randomUUID().toString() else null
     private lateinit var connectivity: ConnectivityManager
     // The WebView takes navigator.onLine, and fires online and offline, only
     // from the app; the offline page reloads itself on online.
@@ -72,14 +60,6 @@ class MainActivity : BridgeActivity() {
 
         override fun onLost(network: Network) = setNetworkAvailable(false)
     }
-    // Set when the app loads the landing page over pages Back must not
-    // return to: a load the cover's logo cancelled, which can stay in
-    // history even ahead of the landing page, or a page Back left.
-    private var clearHistoryOnLanding = false
-    // Known only to the app and the page script it puts in studio.code.org
-    // pages, for the debug build's Reset course; another site's frame cannot
-    // read it, but the site's own third-party scripts could.
-    private val resetToken = if (BuildConfig.DEBUG) UUID.randomUUID().toString() else null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Before super.onCreate creates the WebView, which takes Accept-Language
@@ -87,233 +67,37 @@ class MainActivity : BridgeActivity() {
         SitePolicy.pinLocale()
         super.onCreate(savedInstanceState)
         CookieManager.getInstance().setCookie(SITE_ORIGIN, SitePolicy.LOCALE_COOKIE)
-        setStableIdCookie()
+        setStableIdCookie(this)
         val webView = bridge.webView
-        // The first page is the bundled landing page, so no network request
-        // has gone out before this runs.
-        val settings = webView.settings
-        settings.userAgentString =
-            "${settings.userAgentString} ${SitePolicy.userAgentToken(BuildConfig.VERSION_NAME)}"
-        addAppBrand(settings)
-        // Every page, including window.open and target=_blank, loads in this
-        // one WebView, so sessionStorage and session cookies carry across
-        // pages. Capacitor lets scripts open windows; without multiple-window
-        // support those open here.
-        settings.setSupportMultipleWindows(false)
-        // Selected text that looks like a web address or phone number would
-        // offer to open it in another app.
-        webView.setTextClassifier(TextClassifier.NO_OP)
-        // The page script zooms studio.code.org pages by setting their
-        // viewport, which the WebView ignores outside wide-viewport mode.
-        settings.useWideViewPort = true
-        // Amazon Kids+ allows no camera, microphone or location access, and
-        // no file picker, which would leave the app.
-        webView.webChromeClient = object : BridgeWebChromeClient(bridge) {
-            override fun onPermissionRequest(request: PermissionRequest) = request.deny()
-
-            override fun onGeolocationPermissionsShowPrompt(
-                origin: String,
-                callback: GeolocationPermissions.Callback,
-            ) = callback.invoke(origin, false, false)
-
-            override fun onShowFileChooser(
-                webView: WebView,
-                filePathCallback: ValueCallback<Array<Uri>>,
-                fileChooserParams: FileChooserParams,
-            ): Boolean {
-                filePathCallback.onReceiveValue(null)
-                return true
-            }
-        }
+        setUpWebView(webView)
+        webView.webChromeClient = AppChromeClient(bridge)
         // The volume keys set the volume of the WebView's sound, not the ringer.
         volumeControlStream = AudioManager.STREAM_MUSIC
 
+        loadingCover = LoadingCover(this, webView, ::cancelLoading)
         prefs = getSharedPreferences(PREFS, MODE_PRIVATE)
         resumeUrl = prefs.getString(LAST_PAGE_KEY, null)?.takeIf(SitePolicy::isSitePage)
         if (resumeUrl != null) {
-            showLoadingCover()
+            loadingCover.show()
         }
 
         // The page script offers zoom in debug builds only, gives the site's
         // Statsig stable ID cookie this device's value, and, in debug builds,
         // signs its resets.
-        val stableId = deviceStableId()
-        hideSiteChrome = "var codeaiDebugBuild = ${BuildConfig.DEBUG};\n" +
+        val stableId = deviceStableId(this)
+        val hideSiteChrome = "var codeaiDebugBuild = ${BuildConfig.DEBUG};\n" +
             "var codeaiStableId = ${JSONObject.quote(stableId ?: "")};\n" +
             "var codeaiResetToken = ${JSONObject.quote(resetToken ?: "")};\n" +
             resources.openRawResource(R.raw.hide_site_chrome)
                 .use { it.readBytes().toString(Charsets.UTF_8) }
-        val pageInjector = PageInjector(
-            SITE_ORIGIN,
+        val userAgent = webView.settings.userAgentString
+        bridge.webViewClient = AppWebViewClient(
+            this,
+            PageInjector(SITE_ORIGIN, hideSiteChrome, userAgent, "${bridge.localUrl}$OFFLINE_PATH"),
+            AssetCache(cacheDir.resolve("assets"), userAgent, setOf(bridge.localUrl, SITE_ORIGIN)),
             hideSiteChrome,
-            settings.userAgentString,
-            "${bridge.localUrl}$OFFLINE_PATH",
+            stableId,
         )
-        val assetCache = AssetCache(
-            cacheDir.resolve("assets"),
-            settings.userAgentString,
-            setOf(bridge.localUrl, SITE_ORIGIN),
-        )
-        bridge.webViewClient = object : BridgeWebViewClient(bridge) {
-            // Serves stored images and icon fonts from disk, and puts
-            // hide_site_chrome.js into each studio.code.org page's <head> so
-            // the site chrome is hidden before the first frame.
-            override fun shouldInterceptRequest(
-                view: WebView,
-                request: WebResourceRequest,
-            ): WebResourceResponse? {
-                if (SitePolicy.isBlockedHost(request.url)) {
-                    return PageInjector.forbidden()
-                }
-                // shouldOverrideUrlLoading never sees a POST, such as a form
-                // sent to another site.
-                if (request.isForMainFrame && !isAppPage(request.url)) {
-                    return PageInjector.noContent()
-                }
-                // The site's scripts use the ID they fetch, not the device's
-                // that the page script then stores in the cookie in its place.
-                if (stableId != null
-                    && request.method.equals("GET", ignoreCase = true)
-                    && SitePolicy.isStableIdRequest(request.url)
-                ) {
-                    return PageInjector.plainText(stableId)
-                }
-                return assetCache.intercept(request)
-                    ?: pageInjector.intercept(request)
-                    ?: super.shouldInterceptRequest(view, request)
-            }
-
-            override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
-                // Only the page itself goes home, resets, finishes or leaves the
-                // site; an iframe, which may be another site's, navigates in place.
-                if (!request.isForMainFrame) {
-                    return false
-                }
-                val url = request.url
-                // The WebView ignores navigation started inside this
-                // callback, so go home once it has returned.
-                if (SitePolicy.isHomeLink(url)) {
-                    view.post { goHome() }
-                    return true
-                }
-                // Only the app opens it, so a link cannot put Try again
-                // under the child's finger.
-                if (SitePolicy.isFinishedScreen(url, bridge.localUrl)) {
-                    return true
-                }
-                if (SitePolicy.isResetUrl(url)) {
-                    val course = SitePolicy.resetCourse(url)
-                    if (course == null || !SitePolicy.mayReset(url, view.url, bridge.appUrl, resetToken)) {
-                        return true
-                    }
-                    val next = url.getQueryParameter("next")?.takeIf(SitePolicy::isSitePage)
-                    if (next != null) {
-                        showLoadingCover()
-                    }
-                    view.post { resetCourse(course, next) }
-                    return true
-                }
-                // A link in another site's iframe can navigate the page too,
-                // so the congratulations, whose Try again resets a course,
-                // opens only for a page load the page started itself.
-                if (SitePolicy.isCertificatePage(url)) {
-                    val landing = "${bridge.appUrl}$FINISHED_FRAGMENT${SitePolicy.finishedCourse(url)}"
-                    val check = startedNavigationCheck(url.toString(), request.isRedirect)
-                    view.post {
-                        view.evaluateJavascript(check) { started ->
-                            if (started == "true") {
-                                pendingLandingUrl = landing
-                                goHome()
-                            }
-                        }
-                    }
-                    return true
-                }
-                // A curriculum opened from the landing page can take a while
-                // on a slow tablet; answer the tap at once.
-                if (request.isForMainFrame
-                    && isBundledPage(view.url)
-                    && SitePolicy.isSitePage(url.toString())
-                ) {
-                    showLoadingCover()
-                }
-                // A free-play lab reopens the child's project instead of
-                // starting another.
-                val project = SitePolicy.newProjectLab(url)
-                    ?.let { prefs.getString(PROJECT_KEY_PREFIX + it, null) }
-                if (project != null) {
-                    view.post { view.loadUrl(project) }
-                    return true
-                }
-                if (isAppPage(url)) {
-                    return super.shouldOverrideUrlLoading(view, request)
-                }
-                // Amazon Kids+ allows no links out of its environment. Capacitor
-                // would open other hosts in the system browser; ignore them
-                // instead.
-                return true
-            }
-
-            // A last check: a WebView may follow a redirect after a POST, which
-            // shouldOverrideUrlLoading never sees, to another site.
-            override fun onPageStarted(view: WebView, url: String?, favicon: Bitmap?) {
-                super.onPageStarted(view, url, favicon)
-                if (url != null && !isAppPage(url.toUri())) {
-                    view.stopLoading()
-                    view.post { goBack() }
-                }
-            }
-
-            // Also called for history.pushState, so in-page navigation counts.
-            override fun doUpdateVisitedHistory(view: WebView, url: String?, isReload: Boolean) {
-                super.doUpdateVisitedHistory(view, url, isReload)
-                rememberPage(url)
-                val pending = pendingLandingUrl
-                // Back, or no page left to wait for.
-                if (isBundledPage(url) && pending == null && resumeUrl == null) {
-                    hideLoadingCover()
-                    if (clearHistoryOnLanding) {
-                        clearHistoryOnLanding = false
-                        // Once the landing page has committed.
-                        view.post { view.clearHistory() }
-                    }
-                }
-                if (pending != null && isBundledPage(url)) {
-                    // Loaded by the app, not pushed by the page: Chromium's
-                    // Back skips entries a page adds without a tap, which
-                    // would make Back here leave the app.
-                    pendingLandingUrl = null
-                    view.post { view.loadUrl(pending) }
-                }
-            }
-
-            // Pages PageInjector hands back to the WebView get the script when
-            // they commit. The script's guard makes a second run a no-op.
-            override fun onPageCommitVisible(view: WebView, url: String?) {
-                super.onPageCommitVisible(view, url)
-                if (SitePolicy.isSitePage(url)) {
-                    view.evaluateJavascript(hideSiteChrome, null)
-                }
-            }
-
-            override fun onPageFinished(view: WebView, url: String?) {
-                super.onPageFinished(view, url)
-                if (SitePolicy.isSitePage(url) && !pageInjector.wasRedirectStub(url)) {
-                    hideLoadingCoverOnceSettled(view)
-                }
-            }
-
-            override fun onReceivedError(
-                view: WebView,
-                request: WebResourceRequest,
-                error: WebResourceError,
-            ) {
-                super.onReceivedError(view, request, error)
-                if (request.isForMainFrame) {
-                    hideLoadingCover()
-                }
-            }
-        }
 
         // Capacitor has started loading the landing page. Open the remembered
         // page on top of it, so Back still leads to the landing page.
@@ -362,71 +146,6 @@ class MainActivity : BridgeActivity() {
         })
     }
 
-    // Shows the launch screen and a spinner over the whole window until a
-    // page has loaded, so a fresh start goes from it straight to the
-    // remembered page and a tap on a curriculum shows at once. The WebView
-    // stays visible underneath: a hidden one would tell its pages they are in
-    // the background.
-    @SuppressLint("AccessibilityFocus")
-    private fun showLoadingCover() {
-        if (loadingCover != null) {
-            return
-        }
-        // Inside the root's system-bar padding, so its header sits where the
-        // page's does and the bars keep the root's purple.
-        val root = findViewById<ViewGroup>(R.id.app_root)
-        val cover = layoutInflater.inflate(R.layout.loading_cover, root, false)
-        val home = cover.findViewById<View>(R.id.loading_cover_logo)
-        home.setOnClickListener { cancelLoading() }
-        root.addView(cover)
-        loadingCover = cover
-        setPageCovered(true)
-        // Keyboard and screen reader focus start on the home control; the
-        // node a screen reader had focused may have left with the page.
-        home.post {
-            home.requestFocus()
-            home.performAccessibilityAction(AccessibilityNodeInfo.ACTION_ACCESSIBILITY_FOCUS, null)
-        }
-        cover.postDelayed({ hideLoadingCover(cover) }, LOADING_COVER_TIMEOUT_MS)
-    }
-
-    // Where the saved consent allows it, the first page's request and the
-    // site's scripts find this device's stable ID from the start. With no
-    // saved choice yet, or a refusal, the cookie is left to the site, which
-    // creates it only with consent; the page script then gives it this value.
-    private fun setStableIdCookie() {
-        val cookies = CookieManager.getInstance()
-        if (!SitePolicy.consentAllowsStableId(cookies.getCookie(SITE_ORIGIN))) {
-            return
-        }
-        deviceStableId()?.let { cookies.setCookie(SITE_ORIGIN, SitePolicy.stableIdCookie(it)) }
-    }
-
-    // ANDROID_ID lasts until a factory reset and is this app's own (it differs
-    // per signing key); only a hash of it reaches the site.
-    @SuppressLint("HardwareIds")
-    private fun deviceStableId(): String? =
-        Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
-            ?.takeIf { it.isNotEmpty() }
-            ?.let(SitePolicy::deviceStableId)
-
-    // The cover takes touches, and while it shows, screen readers and
-    // keyboards reach only it too: the WebView and the page in it leave the
-    // accessibility tree and cannot take focus.
-    private fun setPageCovered(covered: Boolean) {
-        val webView = bridge.webView
-        if (covered) {
-            webView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS
-            webView.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
-            webView.isFocusable = false
-            webView.clearFocus()
-        } else {
-            webView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_AUTO
-            webView.descendantFocusability = ViewGroup.FOCUS_BEFORE_DESCENDANTS
-            webView.isFocusable = true
-        }
-    }
-
     // The cover's logo, like the site's, returns to the landing page: the
     // page loading underneath and any page queued after it are dropped. The
     // cover stays until the landing page is back.
@@ -436,44 +155,6 @@ class MainActivity : BridgeActivity() {
         clearHistoryOnLanding = true
         bridge.webView.stopLoading()
         goHome()
-    }
-
-    // Many pages fetch their content and render it after the load event, so
-    // the cover waits until the page script says the page has settled, for
-    // at most SETTLE_TIMEOUT_MS. The check runs only once the page's own
-    // scripts let it.
-    private fun hideLoadingCoverOnceSettled(view: WebView) {
-        val cover = loadingCover ?: return
-        val deadline = SystemClock.uptimeMillis() + SETTLE_TIMEOUT_MS
-        fun check() {
-            if (cover !== loadingCover) {
-                return
-            }
-            if (SystemClock.uptimeMillis() >= deadline) {
-                hideLoadingCover(cover)
-                return
-            }
-            view.evaluateJavascript(SETTLED_CHECK) { settled ->
-                if (settled == "true") {
-                    hideLoadingCover(cover)
-                } else {
-                    view.postDelayed({ check() }, SETTLE_POLL_MS)
-                }
-            }
-        }
-        check()
-    }
-
-    private fun hideLoadingCover(cover: View? = loadingCover) {
-        if (cover == null || cover !== loadingCover) {
-            return
-        }
-        loadingCover = null
-        setPageCovered(false)
-        cover.animate()
-            .alpha(0f)
-            .setDuration(LOADING_COVER_FADE_MS)
-            .withEndAction { (cover.parent as? ViewGroup)?.removeView(cover) }
     }
 
     // The system resets the default locale when the device language changes;
@@ -494,19 +175,9 @@ class MainActivity : BridgeActivity() {
         super.onDestroy()
     }
 
-    // Selecting text offers Share and other apps' actions, each a way out of
-    // the app, which Amazon Kids+ does not allow. The WebView names its own
-    // items in its package's resources, not in android.R.
     override fun onActionModeStarted(mode: ActionMode) {
         super.onActionModeStarted(mode)
-        val menu = mode.menu
-        for (i in 0 until menu.size) {
-            val item = menu[i]
-            val name = webViewResources?.let { runCatching { it.getResourceEntryName(item.itemId) }.getOrNull() }
-            if (item.intent != null || item.itemId in LEAVING_ACTIONS || name in LEAVING_WEBVIEW_ACTIONS) {
-                item.isVisible = false
-            }
-        }
+        hideLeavingActions(mode.menu, webViewResources)
     }
 
     private val webViewResources by lazy {
@@ -520,19 +191,7 @@ class MainActivity : BridgeActivity() {
         CookieManager.getInstance().flush()
     }
 
-    // Takes the page script's record of the last page load the page started:
-    // [target] itself, or the page in front, a redirect stub that led to it,
-    // or for a server redirect any. A WebView without the Navigation API
-    // keeps no record and is trusted.
-    private fun startedNavigationCheck(target: String, redirect: Boolean): String =
-        "(function () {" +
-            "var key = 'codeai_started_navigation', started = null;" +
-            "try { started = sessionStorage.getItem(key); sessionStorage.removeItem(key); } catch (e) {}" +
-            "return !window.navigation || started === ${JSONObject.quote(target)}" +
-            " || started === location.href || ($redirect && started !== null);" +
-            "})()"
-
-    private fun rememberPage(url: String?) {
+    internal fun rememberPage(url: String?) {
         if (url == null) {
             return
         }
@@ -554,6 +213,9 @@ class MainActivity : BridgeActivity() {
         }
     }
 
+    /** The project editor last shown for the free-play [lab], if any. */
+    internal fun rememberedProject(lab: String): String? = prefs.getString(PROJECT_KEY_PREFIX + lab, null)
+
     /**
      * Forgets one course's progress, as Try again asks, then opens [next]
      * above the landing page. The progress lives in sessionStorage and the
@@ -561,7 +223,7 @@ class MainActivity : BridgeActivity() {
      * the course this cookie names before the site's scripts read either.
      * Projects and other courses stay.
      */
-    private fun resetCourse(course: String, next: String?) {
+    internal fun resetCourse(course: String, next: String?) {
         val cookies = CookieManager.getInstance()
         cookies.setCookie(
             SITE_ORIGIN,
@@ -572,7 +234,7 @@ class MainActivity : BridgeActivity() {
         bridge.webView.post { goHome() }
     }
 
-    private fun goBack() {
+    internal fun goBack() {
         val webView = bridge.webView
         when {
             webView.canGoBack() -> webView.goBack()
@@ -587,7 +249,7 @@ class MainActivity : BridgeActivity() {
         }
     }
 
-    private fun goHome() {
+    internal fun goHome() {
         val webView = bridge.webView
         val history = webView.copyBackForwardList()
         val index = history.currentIndex
@@ -600,40 +262,16 @@ class MainActivity : BridgeActivity() {
         }
     }
 
-    private fun isAppPage(url: Uri): Boolean =
+    internal fun isAppPage(url: Uri): Boolean =
         SitePolicy.isAllowedOrigin(url) || SitePolicy.isBundledPage(url, bridge.localUrl)
 
-    private fun isBundledPage(url: String?): Boolean =
+    internal fun isBundledPage(url: String?): Boolean =
         url != null && SitePolicy.isBundledPage(url.toUri(), bridge.localUrl)
-
-    // Names the app in the WebView's brand list too (navigator.userAgentData
-    // and the Sec-CH-UA headers), as a browser built on Chromium names itself.
-    // Older WebViews lack the feature and keep only the User-Agent token.
-    private fun addAppBrand(settings: WebSettings) {
-        if (!WebViewFeature.isFeatureSupported(WebViewFeature.USER_AGENT_METADATA)) {
-            return
-        }
-        val metadata = WebSettingsCompat.getUserAgentMetadata(settings)
-        val version = BuildConfig.VERSION_NAME
-        val app = UserAgentMetadata.BrandVersion.Builder()
-            .setBrand(SitePolicy.USER_AGENT_PRODUCT)
-            .setMajorVersion(version.substringBefore('.'))
-            .setFullVersion(version)
-            .build()
-        WebSettingsCompat.setUserAgentMetadata(
-            settings,
-            UserAgentMetadata.Builder(metadata)
-                .setBrandVersionList(metadata.brandVersionList + app)
-                .build(),
-        )
-    }
 
     companion object {
         // The landing page's offline screen. Keep in step with routes/offline.tsx
         // in apps/studio.
         private const val OFFLINE_PATH = "/offline"
-        private val LEAVING_ACTIONS = setOf(android.R.id.shareText, android.R.id.textAssist)
-        private val LEAVING_WEBVIEW_ACTIONS = setOf("select_action_menu_share", "select_action_menu_web_search")
 
         // The last studio.code.org page shown, so a fresh start resumes there.
         // Cleared on the landing page: a child who went home starts at home.
@@ -641,15 +279,5 @@ class MainActivity : BridgeActivity() {
         private const val LAST_PAGE_KEY = "last_page_url"
         // The project editor last shown for each free-play lab.
         private const val PROJECT_KEY_PREFIX = "project_"
-
-        // Long enough for a lab to load on a slow tablet and connection;
-        // after it the page shows as far as it has come.
-        private const val LOADING_COVER_TIMEOUT_MS = 15_000L
-        private const val LOADING_COVER_FADE_MS = 150L
-        private const val SETTLE_TIMEOUT_MS = 5_000L
-        private const val SETTLE_POLL_MS = 250L
-        // A page without hide_site_chrome.js counts as settled.
-        private const val SETTLED_CHECK =
-            "typeof window.__codeaiSettled !== 'function' || window.__codeaiSettled()"
     }
 }
