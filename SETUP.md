@@ -78,8 +78,10 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     </details>
     <details>
         <summary>About the non-root <code>writer</code> and <code>reader</code> MySQL users</summary>
-        As part of <code>rake install</code>, the <code>db:provision_sql_users</code> task creates two non-root
-        application users, mirroring the ones the Custom::SQLUser CloudFormation Lambda provisions in AWS.
+        As part of <code>rake install</code>, <code>bin/provision-sql-users</code> creates two non-root application
+        users, mirroring the ones the Custom::SQLUser CloudFormation Lambda provisions in AWS. Run it again at any
+        time; it only ever grants. These users live in MySQL's internal <code>mysql</code> database, so
+        <code>rake db:reset</code> does not disturb them.
     </details>
 
 1. fix your database timezone to match our servers

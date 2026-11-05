@@ -5,7 +5,11 @@ require File.expand_path('../config/application', __FILE__)
 
 Dashboard::Application.load_tasks
 
+# Shared with the repository root's Rakefile. The writer and reader SQL users belong to the database server, not to
+# the Rails `dashboard` learning platform application.
+import deploy_dir('lib', 'rake', 'sql_users.rake')
+
 namespace :dashboard do
-  task setup_db: ['db:provision_sql_users', 'db:setup_or_migrate', 'seed:default'] do
+  task setup_db: ['sql_users:provision', 'db:setup_or_migrate', 'seed:default'] do
   end
 end
