@@ -208,32 +208,43 @@ function makeLevelProperties(
   } as LevelProperties;
 }
 
+const backpackProps = {
+  validateFileName: () => ({
+    isSupportFileName: true,
+    newFileName: 'f',
+  }),
+  saveFileToProject: jest.fn(),
+  createNewProjectFile: jest.fn(),
+  findIdForFileName: jest.fn(),
+  supportedFileTypes: [],
+};
+
+let store: Store;
+
+beforeEach(() => {
+  stubRedux();
+  registerReducers({
+    // Minimal stubs — the real reducers pull transitive deps that fail at
+    // module eval time (makeEnum, etc.). The ResourcePanel only reads a few
+    // fields; defaults here cover them all.
+    lab: (state = {}) => state,
+    lab2Project: (state = {channelId: null, projectType: 'weblab2'}) => state,
+    lab2View: (state = {}) => state,
+    predictLevel: (state = {}) => state,
+    currentUser: (
+      state = {isTeacher: false, userId: null, userType: 'student'}
+    ) => state,
+    progress: (state = {currentLessonId: 1, viewAsUserId: null}) => state,
+  });
+  store = getStore();
+});
+
+afterEach(() => {
+  restoreRedux();
+  jest.clearAllMocks();
+});
+
 describe('ResourcePanel — hideNonInstructionTabs', () => {
-  let store: Store;
-
-  beforeEach(() => {
-    stubRedux();
-    registerReducers({
-      // Minimal stubs — the real reducers pull transitive deps that fail at
-      // module eval time (makeEnum, etc.). The ResourcePanel only reads a few
-      // fields; defaults here cover them all.
-      lab: (state = {}) => state,
-      lab2Project: (state = {channelId: null, projectType: 'weblab2'}) => state,
-      lab2View: (state = {}) => state,
-      predictLevel: (state = {}) => state,
-      currentUser: (
-        state = {isTeacher: false, userId: null, userType: 'student'}
-      ) => state,
-      progress: (state = {currentLessonId: 1, viewAsUserId: null}) => state,
-    });
-    store = getStore();
-  });
-
-  afterEach(() => {
-    restoreRedux();
-    jest.clearAllMocks();
-  });
-
   function renderPanel(
     levelPropertiesOverrides: Partial<LevelProperties> = {}
   ) {
@@ -249,16 +260,7 @@ describe('ResourcePanel — hideNonInstructionTabs', () => {
             startSources: {source: ''},
             onLoadVersion: jest.fn(),
           }}
-          backpackProps={{
-            validateFileName: () => ({
-              isSupportFileName: true,
-              newFileName: 'f',
-            }),
-            saveFileToProject: jest.fn(),
-            createNewProjectFile: jest.fn(),
-            findIdForFileName: jest.fn(),
-            supportedFileTypes: [],
-          }}
+          backpackProps={backpackProps}
         />
       </Provider>
     );
@@ -287,5 +289,29 @@ describe('ResourcePanel — hideNonInstructionTabs', () => {
     expect(
       screen.getByRole('button', {name: 'Instructions'})
     ).toBeInTheDocument();
+  });
+});
+
+describe('ResourcePanel — default tab', () => {
+  function renderPanel(dynamicInstructions?: string) {
+    return (
+      <Provider store={store}>
+        <ResourcePanel
+          levelProperties={makeLevelProperties({longInstructions: undefined})}
+          isRunning={false}
+          hasRun={false}
+          hasEdited={false}
+          dynamicInstructions={dynamicInstructions}
+          backpackProps={backpackProps}
+        />
+      </Provider>
+    );
+  }
+
+  it('opens instructions that arrive after the first render', () => {
+    const {rerender} = render(renderPanel());
+    rerender(renderPanel('Label the data.'));
+    expect(screen.getByText('Instructions').parentElement?.inert).toBe(false);
+    expect(screen.getByText('Backpack Panel').parentElement?.inert).toBe(true);
   });
 });
