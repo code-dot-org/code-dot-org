@@ -1,0 +1,156 @@
+// How the picture came to be, told once over four panels after a student's
+// first picture of a kind: nothing closes it but reading to the end.
+
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography as MuiTypography} from '@mui/material';
+import classNames from 'classnames';
+import React, {useState} from 'react';
+
+import ChunkyPicture, {PictureCrop} from './ChunkyPicture';
+
+import styles from './learning-dialog.module.scss';
+
+export interface LearningPicture {
+  src: string;
+  /** Unset shows the whole image. */
+  crop?: PictureCrop;
+}
+
+interface LearningDialogProps {
+  picture: LearningPicture;
+  /** The prompt the student built. */
+  prompt: string;
+  onDone: () => void;
+}
+
+const TITLE = 'How AI made your image';
+// Cells across the picture at each stage of the guess.
+const GUESS_STAGES = [4, 12] as const;
+// Pictures in the training mosaic, and the delay between one appearing and
+// the next.
+const MOSAIC_CELLS = 12;
+const MOSAIC_STAGGER_MS = 90;
+
+interface PanelContent {
+  text: string;
+  visual: (picture: LearningPicture, prompt: string) => React.ReactNode;
+}
+
+const PANELS: PanelContent[] = [
+  {
+    text: 'First, the AI learned from millions of pictures. It noticed patterns: what cats look like, what castles look like, what pixel art looks like.',
+    visual: () => (
+      <div className={styles.mosaic} aria-hidden>
+        {Array.from({length: MOSAIC_CELLS}, (_, i) => (
+          <span
+            key={i}
+            className={styles.mosaicCell}
+            style={
+              {
+                '--cell-delay': `${i * MOSAIC_STAGGER_MS}ms`,
+              } as React.CSSProperties
+            }
+          >
+            <FontAwesomeV6Icon iconName="image" />
+          </span>
+        ))}
+      </div>
+    ),
+  },
+  {
+    text: 'Then it read your words. Every word nudges the picture one way or another.',
+    visual: (_, prompt) => (
+      <MuiTypography component="p" variant="h5" className={styles.words}>
+        <span className={styles.quote}>“</span>
+        {prompt}
+        <span className={styles.quote}>”</span>
+      </MuiTypography>
+    ),
+  },
+  {
+    text: 'It predicted the picture one pixel at a time, from a rough guess to a sharp one.',
+    visual: picture => (
+      <div className={styles.stages}>
+        {GUESS_STAGES.map(cells => (
+          <ChunkyPicture
+            key={cells}
+            src={picture.src}
+            cells={cells}
+            crop={picture.crop}
+          />
+        ))}
+        <ChunkyPicture src={picture.src} crop={picture.crop} />
+      </div>
+    ),
+  },
+  {
+    text: 'Every time you press Generate, the AI makes a new guess. The same words can give a different picture.',
+    visual: picture => (
+      <div className={styles.guess}>
+        <ChunkyPicture src={picture.src} crop={picture.crop} />
+        <FontAwesomeV6Icon
+          iconName="dice"
+          className={styles.dice}
+          aria-hidden
+        />
+      </div>
+    ),
+  },
+];
+
+const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
+  picture,
+  prompt,
+  onDone,
+}) => {
+  const [index, setIndex] = useState(0);
+  const onLastPanel = index === PANELS.length - 1;
+  const panel = PANELS[index];
+  return (
+    <MuiDialog
+      title={TITLE}
+      className={styles.dialog}
+      customContent={
+        <>
+          <span id="dsco-dialog-description" className={styles.srOnly}>
+            Four short panels on how the AI made your picture. Next moves on;
+            Got it closes.
+          </span>
+          <div key={index} className={styles.panel}>
+            <div className={styles.visual}>{panel.visual(picture, prompt)}</div>
+            <MuiTypography
+              component="p"
+              variant="body1"
+              className={styles.text}
+            >
+              {panel.text}
+            </MuiTypography>
+          </div>
+          <div className={styles.dots} aria-hidden>
+            {PANELS.map((_, i) => (
+              <span
+                key={i}
+                className={classNames(styles.dot, i === index && styles.dotNow)}
+              />
+            ))}
+          </div>
+          <span className={styles.srOnly} role="status">
+            Step {index + 1} of {PANELS.length}
+          </span>
+        </>
+      }
+      secondaryButtonProps={
+        index > 0
+          ? {children: 'Back', onClick: () => setIndex(i => i - 1)}
+          : undefined
+      }
+      primaryButtonProps={{
+        children: onLastPanel ? 'Got it' : 'Next',
+        onClick: () => (onLastPanel ? onDone() : setIndex(i => i + 1)),
+      }}
+    />
+  );
+};
+
+export default LearningDialog;

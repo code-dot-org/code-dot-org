@@ -8,6 +8,7 @@ import {z} from 'zod';
 import {pathwaySchema, pathwaySourceSchema} from '../pathway';
 import {planTemplateSlots} from '../planTemplate';
 import {OTHER_CHOICE_ID} from '../question';
+import {REVIEW_DECISIONS} from '../steps/review';
 
 // A source has no resolved levels, so its project flags go unchecked.
 type Pathway =
@@ -31,9 +32,10 @@ export function findReferenceProblems(pathway: Pathway): string[] {
 }
 
 /**
- * Detects question ids used more than once, and multiple choice questions
- * whose choice ids repeat, take the typed answer's id, or whose correct
- * choice is not among them.
+ * Detects question ids used more than once, counting a review step's
+ * decision as a question, and multiple choice questions whose choice ids
+ * repeat, take the typed answer's id, or whose correct choice is not among
+ * them.
  */
 function findQuestionProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
@@ -41,6 +43,10 @@ function findQuestionProblems(pathway: Pathway): string[] {
   const duplicates = new Set<string | number>();
   for (const checkpoint of pathway.checkpoints) {
     for (const step of checkpoint.steps) {
+      if (step.kind === 'review') {
+        if (seen.has(step.questionId)) duplicates.add(step.questionId);
+        seen.add(step.questionId);
+      }
       if (step.kind !== 'questions') continue;
       step.questions.forEach((question, index) => {
         if (seen.has(question.id)) duplicates.add(question.id);
@@ -83,7 +89,8 @@ function findQuestionProblems(pathway: Pathway): string[] {
  * Detects branch conditions that can never be met: `showIf` must name an
  * earlier questions step in the same checkpoint, a multiple choice question
  * in it, and one of that question's choices, or the typed answer where the
- * question allows one.
+ * question allows one; or an earlier review step, its question id and one
+ * of its decisions.
  */
 function findBranchProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
@@ -99,6 +106,22 @@ function findBranchProblems(pathway: Pathway): string[] {
         problems.push(
           `${where}: '${stepId}' is not an earlier step in the checkpoint`
         );
+        return;
+      }
+      if (target.kind === 'review') {
+        if (target.questionId !== questionId) {
+          problems.push(
+            `${where}: '${stepId}' saves its decision under question ${target.questionId}, not ${questionId}`
+          );
+        } else if (
+          !(REVIEW_DECISIONS as readonly string[]).includes(choiceId)
+        ) {
+          problems.push(
+            `${where}: '${choiceId}' is not a review decision (${REVIEW_DECISIONS.join(
+              ', '
+            )})`
+          );
+        }
         return;
       }
       if (target.kind !== 'questions') {
@@ -127,8 +150,9 @@ function findBranchProblems(pathway: Pathway): string[] {
 
 /**
  * Detects plan slots that do not line up: every slot a checkpoint's plan
- * template names must be filled by a plan question in the checkpoint, and
- * every plan question must fill a slot the template names.
+ * template names must be filled by a plan question in the checkpoint, every
+ * plan question must fill a slot the template names, and a review step needs
+ * the checkpoint's plan and a later project step with a prompt to build.
  */
 function findPlanProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
@@ -138,11 +162,26 @@ function findPlanProblems(pathway: Pathway): string[] {
       ? planTemplateSlots(checkpoint.plan.template)
       : [];
     const filled = new Set<string>();
-    for (const step of checkpoint.steps) {
-      if (step.kind !== 'questions') continue;
-      step.questions.forEach((question, index) => {
+    checkpoint.steps.forEach((step, index) => {
+      if (step.kind === 'review') {
+        if (!checkpoint.plan) {
+          problems.push(
+            `${where}.steps.${step.id}: a review step needs the checkpoint's plan template`
+          );
+        }
+        const builds = checkpoint.steps
+          .slice(index + 1)
+          .some(later => later.kind === 'level' && later.projectPrompt);
+        if (!builds) {
+          problems.push(
+            `${where}.steps.${step.id}: no later project step with a projectPrompt to build`
+          );
+        }
+      }
+      if (step.kind !== 'questions') return;
+      step.questions.forEach((question, qi) => {
         if (!question.plan) return;
-        const at = `${where}.steps.${step.id}.questions.${index}.plan`;
+        const at = `${where}.steps.${step.id}.questions.${qi}.plan`;
         if (!checkpoint.plan) {
           problems.push(`${at}: the checkpoint has no plan template`);
         } else if (!slots.includes(question.plan)) {
@@ -152,7 +191,7 @@ function findPlanProblems(pathway: Pathway): string[] {
         }
         filled.add(question.plan);
       });
-    }
+    });
     for (const slot of slots) {
       if (!filled.has(slot)) {
         problems.push(
@@ -268,8 +307,9 @@ function findSkillProblems(pathway: Pathway): string[] {
  * Detects and returns any problems with the checkpoint graph: ids are
  * unique, `requires` name known checkpoints, at least one checkpoint is a
  * root, every checkpoint can eventually unlock, meaning its `requires`
- * chains all lead back to a root rather than looping, and only a checkpoint
- * that no other checkpoints require has a `destination`.
+ * chains all lead back to a root rather than looping, only a checkpoint
+ * that no other checkpoints require has a `destination`, and a destination
+ * is one the pathway declares when it declares any.
  */
 function findCheckpointProblems(pathway: Pathway): string[] {
   const where = 'checkpoints';
@@ -332,6 +372,15 @@ function findCheckpointProblems(pathway: Pathway): string[] {
     if (checkpoint.destination && child) {
       problems.push(
         `${where}.${checkpoint.id}.destination: only a checkpoint that no other checkpoints require may have one but '${child}' requires it`
+      );
+    }
+    if (
+      checkpoint.destination &&
+      pathway.destinations &&
+      !pathway.destinations[checkpoint.destination]
+    ) {
+      problems.push(
+        `${where}.${checkpoint.id}.destination: unknown destination '${checkpoint.destination}'`
       );
     }
   }

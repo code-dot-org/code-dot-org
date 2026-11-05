@@ -33,6 +33,14 @@ enzyme.configure({adapter: new Adapter()});
 window.IN_UNIT_TEST = true;
 window.IN_STORYBOOK = false;
 window.scrollTo = jest.fn();
+Element.prototype.scrollTo = jest.fn();
+window.matchMedia = jest.fn(() => ({
+  matches: false,
+  addEventListener: jest.fn(),
+  removeEventListener: jest.fn(),
+  addListener: jest.fn(),
+  removeListener: jest.fn(),
+}));
 window.fetch = mockFetch;
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({

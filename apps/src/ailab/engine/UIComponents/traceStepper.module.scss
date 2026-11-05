@@ -1,7 +1,3 @@
-@use '../sharedMixins' as mixins;
-
-$dot-size: 8px;
-
 .stepper {
   display: flex;
   align-items: center;
@@ -14,55 +10,5 @@ $dot-size: 8px;
 .controls {
   display: flex;
   align-items: center;
-  gap: 6px;
-  min-width: 0;
-}
-
-.dots {
-  display: flex;
-  align-items: center;
   gap: 4px;
-}
-
-.dot {
-  box-sizing: border-box;
-  width: $dot-size;
-  height: $dot-size;
-  border: 1.5px solid var(--border-neutral-secondary);
-  border-radius: var(--shape-round);
-  transition:
-    background-color mixins.$mark-transition,
-    transform mixins.$mark-transition;
-}
-
-.reachedDot,
-.currentDot {
-  border-color: var(--border-selected-primary);
-  background-color: var(--background-selected-primary);
-}
-
-.reachedDot {
-  opacity: 0.55;
-}
-
-.currentDot {
-  transform: scale(1.25);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .dot {
-    transition: none;
-  }
-}
-
-@media (forced-colors: active) {
-  .dot {
-    forced-color-adjust: none;
-    border-color: CanvasText;
-  }
-
-  .reachedDot,
-  .currentDot {
-    background-color: CanvasText;
-  }
 }

@@ -25,13 +25,17 @@
   transform-origin: 0 0;
 }
 
+.toolbar,
+.toolGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .toolbar {
   position: absolute;
   bottom: 8px;
   left: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
   padding: 4px;
   border: 1px solid var(--border-neutral-primary, #d3d6da);
   border-radius: var(--shape-sm, 6px);

@@ -80,11 +80,35 @@ jest.mock('@cdo/apps/adaptive/views/ProjectCard', () => ({
   __esModule: true,
   default: () => <div>project card</div>,
 }));
+// The URL may hide the title bar's totals; one test sets it.
+let mockHideStats = false;
 jest.mock('@cdo/apps/adaptive/views/map/mapSettings', () => ({
-  resolveMapSettings: () => ({}),
+  resolveMapSettings: () => ({hideStats: mockHideStats}),
 }));
-jest.mock('@code-dot-org/component-library/common/contexts', () => ({
-  useTheme: () => ({theme: 'Light', setTheme: jest.fn()}),
+jest.mock('@cdo/apps/lab2/hooks/useThemeSetting', () => ({
+  __esModule: true,
+  default: () => ({
+    id: 'theme',
+    label: 'Theme',
+    options: [],
+    selectedValue: 'Light',
+    onChange: jest.fn(),
+  }),
+}));
+jest.mock('@cdo/apps/lab2/views/components/Instructions/ResourcePanel', () => ({
+  __esModule: true,
+  default: ({
+    sidebarOnly,
+    settings,
+  }: {
+    sidebarOnly?: boolean;
+    settings?: {id: string}[];
+  }) => (
+    <div>
+      resource rail{sidebarOnly ? ' (sidebar only)' : ''}: settings{' '}
+      {settings?.map(s => s.id).join(',')}
+    </div>
+  ),
 }));
 
 const step = (id: string) => ({
@@ -129,10 +153,12 @@ function renderMapScreen(
   return render(
     <MapScreen
       pathway={pathway}
+      levelProperties={{id: 1, name: 'adaptive', appName: 'adaptive'}}
       statusMap={statusMap}
       evidence={{}}
       onFocus={jest.fn()}
       onStart={jest.fn()}
+      timeSpentSeconds={0}
       onWorkOnProject={jest.fn()}
       hasSkippedCheckpoints={false}
       {...overrides}
@@ -272,10 +298,68 @@ describe('MapScreen tour', () => {
     });
   });
 
+  describe('title bar totals', () => {
+    beforeEach(() => localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1'));
+    afterEach(() => {
+      mockHideStats = false;
+    });
+
+    it('leaves them out when the URL asks', () => {
+      mockHideStats = true;
+      renderMapScreen({timeSpentSeconds: 250});
+      expect(screen.queryByLabelText('Time spent: 4m')).toBeNull();
+    });
+
+    it('shows the time spent in minutes, with hours once past one', () => {
+      const {unmount} = renderMapScreen({timeSpentSeconds: 250});
+      expect(screen.getByRole('button', {name: 'Time spent: 4m'})).toBeTruthy();
+      unmount();
+      renderMapScreen({timeSpentSeconds: 3900});
+      expect(
+        screen.getByRole('button', {name: 'Time spent: 1h05m'})
+      ).toBeTruthy();
+    });
+
+    it('shows a ring per skill with its progress', () => {
+      renderMapScreen({
+        pathway: {
+          ...pathway,
+          skills: {
+            build: {
+              id: 'build',
+              title: 'Build',
+              description: 'B.',
+              icon: 'wand',
+            },
+          },
+          checkpoints: pathway.checkpoints.map(c => ({
+            ...c,
+            skillIds: ['build'],
+          })),
+        },
+        statusMap: {'cp-1': 'complete', 'cp-2': 'locked'},
+      });
+      expect(
+        screen.getByRole('button', {name: 'Build: 1 of 2 checkpoints complete'})
+      ).toBeTruthy();
+    });
+  });
+
   describe('with hasSkippedCheckpoints', () => {
     it('does not affect the tour visibility itself', () => {
       renderMapScreen({hasSkippedCheckpoints: true});
       expect(screen.getByRole('dialog', {name: 'tour'})).toBeTruthy();
     });
+  });
+});
+
+describe('MapScreen resource rail', () => {
+  it("shows the labs' rail beside the map with the theme setting", () => {
+    localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
+    renderMapScreen();
+    expect(
+      screen.getByText('resource rail (sidebar only): settings theme')
+    ).toBeTruthy();
+    localStorage.clear();
   });
 });

@@ -150,4 +150,20 @@ describe('Design System - Action Dropdown Component', () => {
     expect(icon2).toBeInTheDocument();
     expect(icon3).toBeInTheDocument();
   });
+
+  it('renders a tag after an option label', () => {
+    render(
+      <ActionDropdown
+        name="test5-dropdown"
+        options={[{...allOptions[0], tag: 'Beta'}, allOptions[1]]}
+        labelText="Dropdown with tag"
+        triggerButtonProps={triggerButtonProps}
+      />,
+    );
+
+    expect(
+      screen.getByRole('button', {name: 'option1 Beta'}),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'option2'})).toBeInTheDocument();
+  });
 });

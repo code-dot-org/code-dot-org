@@ -104,7 +104,7 @@ class AichatRequestsController < ApplicationController
     unless current_user.can_access_aichat_chat_completion?(params[:aichatContext][:clientType], params[:aichatContext][:currentLevelId])
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
-    unless current_user.can_use_aichat_model?(params[:modelParameters][:selectedModelId])
+    unless DCDO.get('ai_gateway_fallback_is_enabled', false) || current_user.can_use_aichat_model?(params[:modelParameters][:selectedModelId])
       return render status: :forbidden, json: {user_type: current_user.user_type, error: MODEL_REGION_BLOCKED_ERROR}
     end
 

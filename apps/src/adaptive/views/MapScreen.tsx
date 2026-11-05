@@ -1,12 +1,14 @@
-// The map screen: a bar with the pathway's title, and under it the
-// checkpoint map with a side panel that shows the project card, or the
-// focused checkpoint's card.
+// The map screen: a bar with the pathway's title, and under it the labs'
+// resource rail, the checkpoint map and a side panel that shows the project
+// card, or the focused checkpoint's card.
 
-import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useMemo, useRef, useState} from 'react';
+
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import {LevelProperties} from '@cdo/apps/lab2/types';
+import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 
 import {CheckpointStatusMap} from '../progress';
 import {usePathwayProject} from '../project/usePathwayProject';
@@ -14,9 +16,11 @@ import {PathwayEvidence} from '../routing/evidence';
 import {Pathway} from '../types';
 
 import CheckpointCard from './CheckpointCard';
+import {getSkillProgress} from './map/groupProgress';
 import {resolveMapSettings} from './map/mapSettings';
 import MapView from './map/MapView';
 import MapZoom from './map/MapZoom';
+import MapStats from './MapStats';
 import ProjectCard from './ProjectCard';
 
 import styles from './mapScreen.module.scss';
@@ -38,13 +42,10 @@ import {tryGetLocalStorage} from '@cdo/apps/utils';
 // Percentages of the size at which the whole map fits.
 const ZOOM_PERCENTAGES = [100, 150, 200, 300];
 
-const THEME_ITEMS = [
-  {value: 'Light', text: 'Light'},
-  {value: 'Dark', text: 'Dark'},
-];
-
 interface MapScreenProps {
   pathway: Pathway;
+  /** The adaptive level's own properties, which the resource rail reads. */
+  levelProperties: LevelProperties;
   statusMap: CheckpointStatusMap;
   /** What the student has shown, for explaining a skipped checkpoint. */
   evidence: PathwayEvidence;
@@ -52,21 +53,29 @@ interface MapScreenProps {
   focusId?: string;
   onFocus: (id: string | undefined) => void;
   onStart: (checkpointId: string) => void;
+  /** Seconds spent on steps so far, for the title bar. */
+  timeSpentSeconds: number;
   onWorkOnProject: () => void;
   hasSkippedCheckpoints: boolean;
 }
 
 const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   pathway,
+  levelProperties,
   statusMap,
   evidence,
   focusId,
   onFocus,
   onStart,
+  timeSpentSeconds,
   onWorkOnProject,
   hasSkippedCheckpoints,
 }) => {
-  const {theme, setTheme} = useTheme();
+  const themeSetting = useThemeSetting('adaptive');
+  const skillProgress = useMemo(
+    () => getSkillProgress(pathway, statusMap),
+    [pathway, statusMap]
+  );
   // The project manager lives only while the map shows, so it never races a
   // step's manager on the same channel.
   const projectState = usePathwayProject(pathway);
@@ -180,8 +189,23 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
       />
       <header className={styles.mapBar}>
         <MuiTypography variant="strong">{pathway.title}</MuiTypography>
+        {!mapSettings.hideStats && (
+          <MapStats
+            skills={skillProgress}
+            timeSpentSeconds={timeSpentSeconds}
+          />
+        )}
       </header>
       <div className={styles.mapBody}>
+        <ResourcePanel
+          levelProperties={levelProperties}
+          hasRun={false}
+          hasEdited={false}
+          isRunning={false}
+          // Only the rail shows, so the state above does not matter.
+          sidebarOnly
+          settings={[themeSetting]}
+        />
         <div
           id="adaptive-tour-map"
           className={styles.mapArea}
@@ -249,17 +273,6 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               onWorkOnProject={onWorkOnProject}
             />
           )}
-          <div className={styles.sideFooter}>
-            <SimpleDropdown
-              name="adaptive-theme"
-              labelText="Theme"
-              isLabelVisible={false}
-              items={THEME_ITEMS}
-              selectedValue={theme}
-              onChange={e => setTheme(e.target.value as Theme)}
-              size="s"
-            />
-          </div>
         </aside>
       </div>
     </div>

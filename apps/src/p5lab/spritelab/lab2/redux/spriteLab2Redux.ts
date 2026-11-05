@@ -41,6 +41,10 @@ export interface ActivePrompt {
   choices?: string[];
 }
 
+export type AskAiStatus =
+  | {state: 'pending'}
+  | {state: 'failed'; message: string};
+
 export interface SpriteLab2State {
   activeTab: Tab;
   hasRun: boolean;
@@ -48,6 +52,7 @@ export interface SpriteLab2State {
   externalScenes: ExternalSceneOption[];
   musicProjects: MusicProjectOption[];
   prompt: ActivePrompt | null;
+  askAi: AskAiStatus | null;
 }
 
 const initialState: SpriteLab2State = {
@@ -57,6 +62,7 @@ const initialState: SpriteLab2State = {
   externalScenes: [],
   musicProjects: [],
   prompt: null,
+  askAi: null,
 };
 
 const spriteLab2Slice = createSlice({
@@ -87,6 +93,22 @@ const spriteLab2Slice = createSlice({
     clearPrompt: state => {
       state.prompt = null;
     },
+    askAiPending: state => {
+      state.askAi = {state: 'pending'};
+    },
+    askAiFailed: (state, action: PayloadAction<string>) => {
+      state.askAi = {state: 'failed', message: action.payload};
+    },
+    // An answer takes down the spinner, but not a failure message,
+    // as the failure message could be from another request.
+    askAiAnswered: state => {
+      if (state.askAi?.state === 'pending') {
+        state.askAi = null;
+      }
+    },
+    clearAskAi: state => {
+      state.askAi = null;
+    },
     resetSpriteLab2: () => initialState,
   },
 });
@@ -99,6 +121,10 @@ export const {
   setMusicProjects,
   showPrompt,
   clearPrompt,
+  askAiPending,
+  askAiFailed,
+  askAiAnswered,
+  clearAskAi,
   resetSpriteLab2,
 } = spriteLab2Slice.actions;
 
