@@ -510,6 +510,9 @@ class LessonEditor extends Component {
             initialPracticeProblems={
               this.props.initialLessonData.tutorPracticeProblems || []
             }
+            initialChallenges={
+              this.props.initialLessonData.tutorChallenges || []
+            }
           />
         </CollapsibleEditorSection>
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>

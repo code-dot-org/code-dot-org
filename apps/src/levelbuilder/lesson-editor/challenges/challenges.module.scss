@@ -1,0 +1,114 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 7px;
+    border: 1px solid var(--borders-neutral-light, #ccc);
+    text-align: left;
+    vertical-align: top;
+  }
+}
+
+.empty {
+  padding: 7px;
+  color: var(--text-neutral-secondary, #555);
+  font-style: italic;
+}
+
+.actionButton {
+  padding: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.thumbnail {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+// Matches the "Add Video" button in tutorDeepDiveEditor.module.scss.
+.addButton {
+  margin-top: 10px;
+  margin-left: 0;
+  padding: 7px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: #eee;
+  box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 80%);
+  font-size: 14px;
+  text-align: center;
+
+  i {
+    margin-right: 7px;
+  }
+}
+
+.title {
+  margin-top: 10px;
+}
+
+.field {
+  display: block;
+  margin: 12px 0;
+}
+
+.jsonInput {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--borders-neutral-light, #ccc);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.fileInput {
+  display: block;
+  margin-top: 4px;
+}
+
+.preview {
+  display: block;
+  max-width: 320px;
+  max-height: 240px;
+  margin: 12px 0;
+  border: 1px solid var(--borders-neutral-light, #ccc);
+}
+
+.example {
+  margin: 12px 0;
+}
+
+.exampleCode {
+  overflow: auto;
+  max-height: 320px;
+  margin: 0;
+  padding: 12px;
+  background: var(--background-neutral-secondary, #f5f5f5);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 12px;
+  white-space: pre;
+}
+
+.hint {
+  color: var(--text-neutral-secondary, #555);
+}
+
+.error,
+.errorList {
+  color: var(--text-error-primary, #c00);
+}
+
+.errorList {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

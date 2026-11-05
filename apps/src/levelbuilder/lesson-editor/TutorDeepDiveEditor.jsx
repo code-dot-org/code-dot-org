@@ -1,24 +1,26 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
+import ChallengesPanel from './challenges/ChallengesPanel';
 import PracticeProblemsPanel from './practiceProblems/PracticeProblemsPanel';
 import TutorVideoDialog from './TutorVideoDialog';
 
 import moduleStyles from './tutorDeepDiveEditor.module.scss';
 
-// Authoring surface for a lesson's AI Tutor "deep dive" content: videos and
-// practice problems, each in its own panel within the same collapsible
-// section.
+// Authoring surface for a lesson's AI Tutor "deep dive" content: videos,
+// practice problems and challenges, each in its own panel within the same
+// collapsible section.
 //
 // Unlike the redux-backed pickers on this page, this section saves each item
-// immediately against the /json_videos and /practice_problems endpoints rather
-// than riding the lesson SaveBar — items have a lifecycle (file upload, AI
-// generation) independent of the lesson's other fields.
+// immediately against the /json_videos, /practice_problems and /challenges
+// endpoints rather than riding the lesson SaveBar — items have a lifecycle
+// (file upload, AI generation) independent of the lesson's other fields.
 export default function TutorDeepDiveEditor({
   lessonId,
   objectives,
   initialVideos,
   initialPracticeProblems,
+  initialChallenges,
 }) {
   const [videos, setVideos] = useState(initialVideos);
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -165,6 +167,11 @@ export default function TutorDeepDiveEditor({
         objectives={objectives}
         initialProblems={initialPracticeProblems || []}
       />
+
+      <ChallengesPanel
+        lessonId={lessonId}
+        initialChallenges={initialChallenges || []}
+      />
     </div>
   );
 }
@@ -174,4 +181,5 @@ TutorDeepDiveEditor.propTypes = {
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
   initialVideos: PropTypes.arrayOf(PropTypes.object).isRequired,
   initialPracticeProblems: PropTypes.arrayOf(PropTypes.object),
+  initialChallenges: PropTypes.arrayOf(PropTypes.object),
 };
