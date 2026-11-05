@@ -212,9 +212,8 @@ module.exports = {
           },
           {
             name: '@code-dot-org/component-library/divider',
-            importNames: ['Divider', 'DividerProps', 'default'],
             message:
-              'DSCO Divider is deprecated. Import MuiDivider (and MuiDividerProps) from the same path instead; keep Divider from @mui/material for vertical and flex-item separators. Codemod available: frontend/packages/component-library/codemods/divider-to-mui-divider.ts; see codemods/README.md there',
+              'DSCO Divider is deprecated. Import Divider from @mui/material; CdoTheme colors it. See frontend/packages/component-library/src/divider/README.md for the legacy color and margin props.',
           },
         ],
         patterns: [

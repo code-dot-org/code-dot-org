@@ -43,8 +43,8 @@ describe('BlocklyMarkdown', () => {
     it('renders --- as a design-system divider', () => {
       renderInstructions('above\n\n---\n\nbelow');
 
-      // Both the legacy Divider and MuiDivider carry the `divider` module class.
-      expect(screen.getByRole('separator').className).toMatch(/divider/);
+      // The legacy `divider` module class and MUI's `MuiDivider-root` both match.
+      expect(screen.getByRole('separator').className).toMatch(/divider/i);
     });
 
     it('renders a link as a design-system link', () => {
@@ -115,7 +115,7 @@ describe('BlocklyMarkdown', () => {
     it('renders an <hr/> tag as the same design-system divider', () => {
       renderInstructions('above\n\n<hr/>\n\nbelow');
 
-      expect(screen.getByRole('separator').className).toMatch(/divider/);
+      expect(screen.getByRole('separator').className).toMatch(/divider/i);
     });
 
     it('renders an <img> tag, keeping its sizing attribute', () => {

@@ -15,13 +15,12 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import {unified} from 'unified';
 
-import {Typography, type TypographyProps} from '@mui/material';
+import {Divider, Typography, type TypographyProps} from '@mui/material';
 
 import {
   componentSizeToBodyTextSizeMap,
   type BodyTextSizeVariant,
 } from '@code-dot-org/component-library/common/constants';
-import {MuiDivider as Divider} from '@code-dot-org/component-library/divider';
 import Link from '@code-dot-org/component-library/link';
 
 import {
