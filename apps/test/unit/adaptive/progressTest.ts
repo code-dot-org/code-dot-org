@@ -6,6 +6,7 @@ import {
   isComplete,
   latestValidation,
   stepIdToResume,
+  totalTimeSpent,
   useProgress,
   visibleSteps,
 } from '@cdo/apps/adaptive/progress';
@@ -102,6 +103,20 @@ describe('routeStatusMap without evidence', () => {
       steps: {'intro-step': {timeSpent: 0, generatedInstructions}},
     };
     expect(statusMapOf(pathway, progress).intro).toBe('available');
+  });
+});
+
+describe('totalTimeSpent', () => {
+  it('sums the time on every step', () => {
+    expect(totalTimeSpent(EMPTY_PROGRESS)).toBe(0);
+    expect(
+      totalTimeSpent({
+        steps: {
+          a: {timeSpent: 90, status: 'complete'},
+          b: {timeSpent: 30, status: 'started'},
+        },
+      })
+    ).toBe(120);
   });
 });
 
@@ -414,15 +429,13 @@ describe('useProgress', () => {
     expect(reportLevelStep).not.toHaveBeenCalled();
   });
 
-  it("reports level steps on their level and never the project screen's", async () => {
+  it('reports level steps on their level', async () => {
     const store = fakeStore();
     const {result, reportLevelStep} = await renderProgress(store);
 
     act(() => result.current.startStep(sandbox));
     act(() => result.current.leaveStep(sandbox, 2000));
     act(() => result.current.completeStep(sandbox, 500));
-    act(() => result.current.startStep(project));
-    act(() => result.current.completeStep(project, 500));
 
     expect(reportLevelStep.mock.calls).toEqual([
       [42, 'weblab2', TestResults.LEVEL_STARTED, 0],
@@ -432,7 +445,25 @@ describe('useProgress', () => {
     expect(store.saveStep).not.toHaveBeenCalled();
     expect(result.current.statusMap.intro).toBe('complete');
     expect(result.current.progress?.steps.try.timeSpent).toBe(3);
-    expect(result.current.progress?.steps.project).toBeUndefined();
+  });
+
+  it("keeps the project screen's time on its level, never a start or a pass", async () => {
+    const store = fakeStore();
+    const {result, reportLevelStep} = await renderProgress(store);
+
+    act(() => result.current.startStep(project));
+    act(() => result.current.leaveStep(project, 2000));
+    act(() => result.current.completeStep(project, 500));
+
+    expect(reportLevelStep.mock.calls).toEqual([
+      [42, 'weblab2', TestResults.LEVEL_STARTED, 2000],
+      [42, 'weblab2', TestResults.LEVEL_STARTED, 500],
+    ]);
+    expect(store.saveStep).not.toHaveBeenCalled();
+    expect(result.current.progress?.steps.project).toEqual({
+      status: 'started',
+      timeSpent: 3,
+    });
   });
 
   it('logs a failed level report', async () => {

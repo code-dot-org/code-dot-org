@@ -22,6 +22,7 @@ import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
+import setSystemPrompt from './setSystemPrompt';
 import setWeather from './setWeather';
 import thePlayer from './thePlayer';
 import whenPlayer from './whenPlayer';
@@ -57,6 +58,7 @@ const labBlockDefinitions: {
   burst,
   thePlayer,
   askAi,
+  setSystemPrompt,
   placeholder,
   // Toolbox edit mode's category marker blocks.
   category,

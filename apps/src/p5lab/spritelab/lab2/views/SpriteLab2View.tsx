@@ -63,6 +63,7 @@ import {
   setSceneMenuActiveId,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
+import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockly/blockDefinitions/setSystemPrompt';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {activeCallout, calloutSelector} from '../callouts';
@@ -106,6 +107,7 @@ import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
 import spriteLab2Reducer, {
+  clearAskAi,
   ExternalSceneOption,
   MusicProjectOption,
   resetSpriteLab2,
@@ -146,6 +148,7 @@ import {useWorldStartPattern} from '../worldStartPattern';
 
 import BlockCatalogDialog from './BlockCatalogDialog';
 import {isPointerClick} from './blurAfterPointerClick';
+import AskAiIndicator from './components/AskAiIndicator';
 import Callout from './components/Callout';
 import EditorStrip, {EditHistory} from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
@@ -200,7 +203,7 @@ const PREVIEW_SHARE = 0.22;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 
-const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE];
+const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE, SET_SYSTEM_PROMPT_BLOCK_TYPE];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_PANE_WIDTH = 280;
@@ -1278,6 +1281,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [dispatch, getCode, requestThumbnail]);
 
   const activePrompt = useAppSelector(state => state.spriteLab2.prompt);
+  const askAiStatus = useAppSelector(state => state.spriteLab2.askAi);
+  const handleAskAiExpired = useCallback(
+    () => dispatch(clearAskAi()),
+    [dispatch]
+  );
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -2488,15 +2496,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               />
             }
             playBar={
-              <PlayBar
-                playing={activeTab === 'Play'}
-                arrows={arrowSet}
-                onPlay={handlePlayClick}
-                onStop={stopTab ? handleStopClick : undefined}
-                // A level pinned to one scene has one Play, for that scene.
-                onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
-                playSceneHidden={activeScene.id === scenes[0].id}
-              />
+              <>
+                <div className={moduleStyles.playBarButtons}>
+                  <PlayBar
+                    playing={activeTab === 'Play'}
+                    arrows={arrowSet}
+                    onPlay={handlePlayClick}
+                    onStop={stopTab ? handleStopClick : undefined}
+                    // A level pinned to one scene has one Play, for that scene.
+                    onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
+                    playSceneHidden={activeScene.id === scenes[0].id}
+                  />
+                </div>
+                <AskAiIndicator
+                  status={askAiStatus}
+                  onFailureExpired={handleAskAiExpired}
+                />
+              </>
             }
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
