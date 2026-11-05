@@ -1,3 +1,4 @@
+import {EMPTY_WORD_ID} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
   chainedSlotIds,
   chosenBodyPlan,
@@ -5,8 +6,11 @@ import {
   promptText,
   restoreChoices,
   sentenceFor,
+  sentenceSlotIds,
+  sentenceWordIds,
   slotsToOffer,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
+import manifest from '@cdo/static/spritelab_lab2/sentences.json';
 
 const CHARACTER_SENTENCE = sentenceFor('sprite');
 
@@ -121,6 +125,19 @@ describe('sentences', () => {
     );
   });
 
+  it('word ids are lowercase words: each is a folder in the cache', () => {
+    const words = [
+      ...Object.values(manifest.wordSets).flat(),
+      ...Object.values(manifest.sentences).flatMap(sentence =>
+        Object.values(sentence.slots).flatMap(slot =>
+          typeof slot.words === 'string' ? [] : slot.words
+        )
+      ),
+    ];
+    expect(words.length).toBeGreaterThan(0);
+    words.forEach(word => expect(word.id).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/));
+  });
+
   it("every sentence's optional slots are the ones inside phrases", () => {
     for (const [id, chained] of [
       ['character', ['clothing']],
@@ -173,5 +190,47 @@ describe('sentences', () => {
         choices: {creature: 'cat', clothing: 'gone', thing: 'wand'},
       })
     ).toEqual({creature: 'cat'});
+  });
+});
+
+// The manifest's own sentences: an optional slot before the required one,
+// and a phrase whose slot shows only once filled.
+describe('sentences word ids', () => {
+  const place = sentenceFor('background', undefined, 'place');
+
+  it('reads the slots in sentence order, phrases included', () => {
+    expect(sentenceSlotIds(place)).toEqual(['adjective', 'place', 'from']);
+    expect(slotsToOffer(place).map(s => s.id)).toEqual([
+      'place',
+      'adjective',
+      'from',
+    ]);
+  });
+
+  it('names a filled sentence by its word ids in slot order', () => {
+    const choices = {place: 'forest', adjective: 'spooky', from: 'inside'};
+    expect(sentenceWordIds(place, choices)).toEqual([
+      'spooky',
+      'forest',
+      'inside',
+    ]);
+  });
+
+  it('marks an empty optional slot, as the prompt leaves its word out', () => {
+    const choices = {place: 'forest'};
+    expect(sentenceWordIds(place, choices)).toEqual([
+      EMPTY_WORD_ID,
+      'forest',
+      EMPTY_WORD_ID,
+    ]);
+    expect(promptText(place, choices)).not.toContain('from');
+  });
+
+  it('ignores a word that is not in its slot', () => {
+    expect(sentenceWordIds(place, {place: 'forest', from: 'dragon'})).toEqual([
+      EMPTY_WORD_ID,
+      'forest',
+      EMPTY_WORD_ID,
+    ]);
   });
 });
