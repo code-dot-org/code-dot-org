@@ -7,8 +7,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import type {Curriculum} from '@/config/curricula';
 
 import AppHeader from './AppHeader';
+import styles from './congratulations.module.css';
 
-import styles from './congratulations.module.scss';
 import screen from './screen.module.scss';
 
 interface CongratulationsProps {
