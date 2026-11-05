@@ -42,6 +42,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
         LABEL_HEIGHT / 2,
     };
   }, [tourFocusIds, layout.nodes]);
+  const firstCheckpointId = pathway.checkpoints[0]?.id;
   const firstSkippedId = useMemo(
     () => pathway.checkpoints.find(c => statusMap[c.id] === 'skipped')?.id,
     [pathway.checkpoints, statusMap]
@@ -90,6 +91,8 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
           tourId={
             checkpoint.id === firstSkippedId
               ? 'adaptive-tour-first-available'
+              : checkpoint.id === firstCheckpointId
+              ? 'adaptive-tour-first-checkpoint'
               : undefined
           }
         />

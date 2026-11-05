@@ -113,6 +113,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
       y: positions.reduce((s, p) => s + p.y, 0) / positions.length,
     };
   }, [tourFocusIds, layout.nodes]);
+  const firstCheckpointId = pathway.checkpoints[0]?.id;
   const firstSkippedId = useMemo(
     () => pathway.checkpoints.find(c => statusMap[c.id] === 'skipped')?.id,
     [pathway.checkpoints, statusMap]
@@ -174,6 +175,8 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
             tourId={
               checkpoint.id === firstSkippedId
                 ? 'adaptive-tour-first-available'
+                : checkpoint.id === firstCheckpointId
+                ? 'adaptive-tour-first-checkpoint'
                 : undefined
             }
           >
