@@ -106,7 +106,7 @@ describe('QuizBuilderWorkspace', () => {
 
   it('fetches questions for the given level', () => {
     renderWorkspace();
-    expect(mockUseQuizBuilderQuestions).toHaveBeenCalledWith(42);
+    expect(mockUseQuizBuilderQuestions).toHaveBeenCalledWith(42, {current: 7});
   });
 
   it('shows a loading message while questions load', () => {
@@ -416,5 +416,90 @@ describe('QuizBuilderWorkspace', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Discard changes'}));
     fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
     expect(screen.queryByRole('img', {name: badge})).not.toBeInTheDocument();
+  });
+
+  describe('Save quiz', () => {
+    const saveButton = () => screen.getByRole('button', {name: 'Save quiz'});
+
+    it('is off with nothing to save', async () => {
+      renderWorkspace({questions: [question()]});
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {name: 'No changes to save'})
+      ).toBeInTheDocument();
+    });
+
+    it('saves the quiz when the layout has changed', () => {
+      const saveQuiz = jest.fn();
+      renderWorkspace({
+        questions: [question()],
+        hasUnsavedLayout: true,
+        saveQuiz,
+      });
+      expect(saveButton()).not.toHaveAttribute('aria-disabled');
+      fireEvent.click(saveButton());
+      expect(saveQuiz).toHaveBeenCalled();
+    });
+
+    it('is off while a new question is unsaved', async () => {
+      renderWorkspace({
+        questions: [question({id: -1})],
+        hasUnsavedLayout: true,
+      });
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {
+          name: 'Save or discard your new question first',
+        })
+      ).toBeInTheDocument();
+    });
+
+    it('is off while a question has unsaved edits', async () => {
+      const saveQuiz = jest.fn();
+      renderWorkspace({
+        questions: [question()],
+        hasUnsavedLayout: true,
+        saveQuiz,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
+      fireEvent.change(
+        screen.getByDisplayValue('JavaScript variable fundamentals'),
+        {target: {value: 'Edited name'}}
+      );
+
+      fireEvent.click(saveButton());
+      expect(saveQuiz).not.toHaveBeenCalled();
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {
+          name: 'Save or discard changes to 1 question first',
+        })
+      ).toBeInTheDocument();
+    });
+
+    it('shows that it is saving', () => {
+      renderWorkspace({
+        questions: [question()],
+        hasUnsavedLayout: true,
+        isSavingQuiz: true,
+      });
+      expect(screen.getByRole('button', {name: 'Saving…'})).toBeDisabled();
+    });
+
+    it('asks before leaving with unsaved changes', () => {
+      renderWorkspace({questions: [question()], hasUnsavedLayout: true});
+      const event = new Event('beforeunload', {cancelable: true});
+      window.dispatchEvent(event);
+      expect(event.defaultPrevented).toBe(true);
+    });
+
+    it('lets the page close with nothing unsaved', () => {
+      renderWorkspace({questions: [question()]});
+      const event = new Event('beforeunload', {cancelable: true});
+      window.dispatchEvent(event);
+      expect(event.defaultPrevented).toBe(false);
+    });
   });
 });

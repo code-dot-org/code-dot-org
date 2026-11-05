@@ -94,3 +94,23 @@
   border-radius: var(--shape-lg);
   background: var(--background-neutral-secondary);
 }
+
+// Save quiz on the brand-purple page header (Figma 1357:10599).
+.headerSaveButton:global(.MuiButton-root) {
+  border-color: var(--neutral-base-white);
+  background-color: transparent;
+  color: var(--neutral-base-white);
+
+  &:hover {
+    border-color: var(--neutral-base-white);
+    background-color: var(--neutral-white-alpha-10);
+    color: var(--neutral-base-white);
+  }
+
+  &[aria-disabled='true'],
+  &:global(.Mui-disabled) {
+    border-color: var(--neutral-white-alpha-50) !important;
+    background-color: transparent;
+    color: var(--neutral-white-alpha-50);
+  }
+}

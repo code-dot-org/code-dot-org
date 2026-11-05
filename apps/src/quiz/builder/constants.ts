@@ -13,3 +13,6 @@ export const QUESTION_TYPE_LABELS_ICONS: Record<
 export const UNSAVED_QUESTION_REASON =
   'Save or remove your new question first.';
 export const EMPTY_PAGE_REASON = 'Create a question on the empty page first.';
+
+// The header slot layouts/_header.html.haml renders in builder mode.
+export const QUIZ_BUILDER_HEADER_ID = 'quiz_builder_header';

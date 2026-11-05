@@ -1,13 +1,20 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button, Typography} from '@mui/material';
-import React, {MutableRefObject, useCallback, useState} from 'react';
+import {Button, buttonClasses, Typography} from '@mui/material';
+import classNames from 'classnames';
+import React, {MutableRefObject, useCallback, useEffect, useState} from 'react';
+import {createPortal} from 'react-dom';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import QuizMetadataList from '../QuizMetadataList';
 import {QuizQuestionType} from '../types';
+import {pluralize} from '../utils';
 
-import {EMPTY_PAGE_REASON, UNSAVED_QUESTION_REASON} from './constants';
+import {
+  EMPTY_PAGE_REASON,
+  QUIZ_BUILDER_HEADER_ID,
+  UNSAVED_QUESTION_REASON,
+} from './constants';
 import CreateQuestionDropdown from './CreateQuestionDropdown';
 import DisabledReason, {ariaDisabledProps} from './DisabledReason';
 import IntroScreenCard from './IntroScreenCard';
@@ -46,12 +53,15 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     questions,
     pages,
     isLoading,
+    isSavingQuiz,
     error,
     errorQuestionId,
+    hasUnsavedLayout,
     addPage,
     addPendingQuestion,
     saveQuestion,
     removeQuestion,
+    saveQuiz,
   } = useQuizBuilderQuestions(levelId, quizVersion);
   // Only one card is expanded at a time - opening one collapses whichever
   // was open before it. A create opens the just-created question straight
@@ -84,6 +94,52 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     (pages.some(page => page.questions.length === 0)
       ? EMPTY_PAGE_REASON
       : undefined);
+
+  const editedCount = [...dirtyIds].filter(
+    id => !isPendingQuestionId(id)
+  ).length;
+  const saveDisabledReason = hasPendingQuestion
+    ? 'Save or discard your new question first'
+    : editedCount > 0
+    ? `Save or discard changes to ${pluralize(editedCount, 'question')} first`
+    : !hasUnsavedLayout
+    ? 'No changes to save'
+    : undefined;
+
+  useEffect(() => {
+    if (!hasUnsavedLayout) {
+      return;
+    }
+    const warn = (event: BeforeUnloadEvent) => event.preventDefault();
+    window.addEventListener('beforeunload', warn);
+    return () => window.removeEventListener('beforeunload', warn);
+  }, [hasUnsavedLayout]);
+
+  // The page header's slot; absent outside builder mode, as in unit tests.
+  const [headerSlot] = useState(() =>
+    document.getElementById(QUIZ_BUILDER_HEADER_ID)
+  );
+  const saveButton = (
+    <DisabledReason reason={isSavingQuiz ? undefined : saveDisabledReason}>
+      <Button
+        variant="outlined"
+        color="secondary"
+        size="extraSmall"
+        type="button"
+        onClick={() => saveQuiz()}
+        disabled={isSavingQuiz}
+        startIcon={<FontAwesomeV6Icon iconName="floppy-disk" />}
+        {...ariaDisabledProps(isSavingQuiz ? undefined : saveDisabledReason)}
+        // After the spread, which sets its own className when disabled.
+        className={classNames(
+          headerSlot && styles.headerSaveButton,
+          saveDisabledReason && !isSavingQuiz && buttonClasses.disabled
+        )}
+      >
+        {isSavingQuiz ? 'Saving…' : 'Save quiz'}
+      </Button>
+    </DisabledReason>
+  );
 
   const handleCreate = (page: number, type: QuizQuestionType) => {
     setExpandedId(addPendingQuestion(page, type));
@@ -171,7 +227,12 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   }
 
   return (
-    <PanelContainer id="quiz-workspace" headerContent="Workspace">
+    <PanelContainer
+      id="quiz-workspace"
+      headerContent="Workspace"
+      leftHeaderContent={!headerSlot && saveButton}
+    >
+      {headerSlot && createPortal(saveButton, headerSlot)}
       <div className={styles.workspace}>
         <header className={styles.header}>
           <Typography variant="h2" component="h1" className={styles.title}>
