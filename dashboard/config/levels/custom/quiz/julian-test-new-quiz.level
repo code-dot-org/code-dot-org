@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "header_label": "AID Test Quiz ",
-    "purpose": "exam",
+    "purpose": "practice",
     "allow_multiple_attempts": true,
     "show_questions_after_submit": true,
     "show_correctness": true,
