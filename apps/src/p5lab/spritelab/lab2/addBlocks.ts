@@ -4,6 +4,7 @@
 
 import * as BlocklyCore from 'blockly/core';
 
+import {PLACEHOLDER_BLOCK_TYPE} from './blockly/blockDefinitions/placeholder';
 import {scrollIntoView} from './scrollIntoView';
 import {
   clearRoom,
@@ -186,6 +187,59 @@ export function freeStackEnd(
   }
 }
 
+/** The placeholder an entry carries: hung on a stack, or under the block
+    the entry adds. A room has none. */
+function placeholderOf(entry: AddBlockEntry): Shadow | undefined {
+  return isAttachShadow(entry)
+    ? entry.shadow
+    : isAttachRoom(entry)
+    ? undefined
+    : entry.next?.shadow;
+}
+
+/** Whether an entry's placeholder belongs on the stack with this top. */
+function entryOn(entry: AddBlockEntry, top: PresentBlock): boolean {
+  return isAttachment(entry)
+    ? attachesTo(entry, top)
+    : matchesEntry(top, entry);
+}
+
+/**
+ * Drop every placeholder showing at the end of a stack that none of the
+ * level's entries puts there. Blockly saves a placeholder with the block
+ * it hangs from, so an earlier level's outline, never filled or uncovered
+ * since, would otherwise show as this level's hint. One a real block
+ * covers is left recorded: it is how the stack remembers that its level
+ * gave it that outline already (see freeStackEnd). Returns how many were
+ * dropped.
+ */
+export function dropStalePlaceholders(
+  workspace: BlocklyCore.Workspace,
+  entries: AddBlockEntry[]
+): number {
+  let dropped = 0;
+  for (const top of workspace.getTopBlocks(false)) {
+    const end = trailingShadow(top);
+    const recorded = end?.connection.getShadowState();
+    if (!end || recorded?.type !== PLACEHOLDER_BLOCK_TYPE) {
+      continue;
+    }
+    const wanted = entries.some(entry => {
+      const placeholder = placeholderOf(entry);
+      return (
+        !!placeholder &&
+        entryOn(entry, top) &&
+        samePlaceholder(recorded, placeholder)
+      );
+    });
+    if (!wanted) {
+      end.connection.setShadowState(null);
+      dropped++;
+    }
+  }
+  return dropped;
+}
+
 /** The shadow a stack ends in, an outline still waiting for its block, with
     the connection it hangs from; null when the stack ends in a real block. */
 export function trailingShadow(top: BlocklyCore.Block): {
@@ -215,22 +269,15 @@ export function unfilledOutlines(
   const tops = workspace.getTopBlocks(false);
   const found = new Set<BlocklyCore.BlockSvg>();
   for (const entry of entries) {
-    const placeholder = isAttachShadow(entry)
-      ? entry.shadow
-      : isAttachRoom(entry)
-      ? undefined
-      : entry.next?.shadow;
+    const placeholder = placeholderOf(entry);
     if (!placeholder) {
       continue;
     }
     for (const top of tops) {
       const end = trailingShadow(top);
-      const matches = isAttachment(entry)
-        ? attachesTo(entry, top)
-        : matchesEntry(top, entry);
       if (
         end &&
-        matches &&
+        entryOn(entry, top) &&
         samePlaceholder(end.connection.getShadowState(), placeholder)
       ) {
         found.add(top);
@@ -262,11 +309,12 @@ export function attachShadow(
 
 /**
  * Add the level's blocks the workspace lacks, each placed below
- * everything already there, and hang its shadows on the stacks named for
- * them. Returns how many were added. Fires ordinary create events, so
- * the workspace saves and re-runs as after an edit. Then scrolls what was
- * added, and any outline of the level's still waiting for its block, into
- * view, so a pass with nothing to add still shows the student their task.
+ * everything already there, hang its shadows on the stacks named for
+ * them, and drop the placeholders of other levels. Returns how many were
+ * added. Fires ordinary create events, so the workspace saves and re-runs
+ * as after an edit. Then scrolls what was added, and any outline of the
+ * level's still waiting for its block, into view, so a pass with nothing
+ * to add still shows the student their task.
  */
 export async function addMissingBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
@@ -279,6 +327,7 @@ export async function addMissingBlocks(
   // Reserved rooms belong to a level and the workspace is reused across
   // levels, so the previous level's rooms are dropped first.
   clearRoom(workspace);
+  dropStalePlaceholders(workspace, entries);
   const blocks = entries.filter(
     (entry): entry is AddBlock => !isAttachment(entry)
   );

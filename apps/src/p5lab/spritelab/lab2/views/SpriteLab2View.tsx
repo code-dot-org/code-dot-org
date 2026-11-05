@@ -1965,8 +1965,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ),
     [levelProperties.addBlocks, pinnedSceneId, activeScene.id]
   );
+  // Runs with no entries too: the pass also drops other levels' outlines.
   const addLevelBlocks = useCallback(() => {
-    if (!animationsSeeded || isToolboxMode || !sceneAddBlocks.length) {
+    if (!animationsSeeded || isToolboxMode) {
       return;
     }
     const key = [
