@@ -10,7 +10,6 @@ import {
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Chat from './Chat';
@@ -88,6 +87,7 @@ interface InterventionBoxProps {
   reflectionData: ReflectionData | null;
   focusTopic?: string;
   initialSelection?: CardId | null;
+  challengeEnabled: boolean;
   onDone?: () => void;
 }
 
@@ -102,6 +102,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   reflectionData,
   focusTopic,
   initialSelection = null,
+  challengeEnabled,
   onDone,
 }) => {
   const [selected, setSelected] = useState<CardId | null>(initialSelection);
@@ -121,10 +122,6 @@ const InterventionBox: FC<InterventionBoxProps> = ({
       );
     },
     [lessonId, lessonName, userId]
-  );
-
-  const challengeEnabled = experiments.isEnabled(
-    experiments.LESSON_TUTOR_CHALLENGE
   );
 
   const showNavBar = selected !== null && REVIEW_MODALITY_IDS.has(selected);

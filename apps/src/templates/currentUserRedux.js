@@ -128,6 +128,7 @@ const initialState = {
   userCreatedAt: null,
   userSharingDisabled: false,
   hasSeenHomepageWelcome: false,
+  canUseLessonDeepDiveChallenges: false,
   blockedAichatProviders: [],
 };
 
@@ -261,6 +262,7 @@ export default function currentUser(state = initialState, action) {
       sharing_disabled,
       has_seen_homepage_welcome,
       ai_chat_access_level,
+      can_use_lesson_deep_dive_challenges,
       blocked_aichat_providers,
     } = action.serverUser;
     // TODO: Once Amplitude is fully removed, the StatsigReporter class should be
@@ -301,6 +303,8 @@ export default function currentUser(state = initialState, action) {
       userSharingDisabled: sharing_disabled,
       hasSeenHomepageWelcome: has_seen_homepage_welcome,
       aiChatAccessLevel: ai_chat_access_level,
+      canUseLessonDeepDiveChallenges:
+        can_use_lesson_deep_dive_challenges ?? false,
       blockedAichatProviders: blocked_aichat_providers ?? [],
     };
   }
