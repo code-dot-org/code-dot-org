@@ -1,21 +1,25 @@
 # `componentLibrary/divider`
 
-[MuiDivider](MuiDivider.tsx) is the MUI version of the deprecated DSCO
-[Divider](Divider.tsx). It takes the same props, less `children`, which React
-already rejects on an `<hr>`, so moving a call site over changes only its
-import.
+Use `Divider` from `@mui/material`. CdoTheme's `MuiDivider` entry
+([styleOverrides/divider.ts](../themes/code.org/styleOverrides/divider.ts))
+colors it `--background-neutral-quaternary`, the legacy `primary` color, and
+changes nothing else, so vertical and `flexItem` dividers keep MUI's layout.
 
 ```javascript
-import {MuiDivider} from '@code-dot-org/component-library/divider';
+import {Divider} from '@mui/material';
 ```
 
-It renders a horizontal `<hr>`: a full-width 1px rule. `color` picks
-`primary` (the default) or the darker `strong`; `margin` sets the space above
-and below, from `none` (the default) to `l`. For a vertical or flex-item
-separator, use `Divider` from `@mui/material`.
+The deprecated DSCO [Divider](Divider.tsx) took `color` and `margin` props.
+Plain MUI has neither; use `sx` when a call site needs them:
 
-The wrapper's rules carry two classes, so a `className` rule needs two classes
-too (or use `style`) to override border, margin, width or `flex-shrink`.
+| Legacy prop        | MUI                                                      |
+| ------------------ | -------------------------------------------------------- |
+| `color="strong"`   | `sx={{borderColor: 'var(--background-neutral-senary)'}}` |
+| `margin="xs"`–`l`  | `sx={{my: 1}}`, `2`, `4`, `8`                            |
+| `margin="none"`    | MUI's default                                            |
+
+The legacy margins were 0.5rem, 1rem, 2rem and 4rem; MUI's spacing unit is
+8px, which matches them only where the root font size is 16px.
 
 The legacy component still resolves until it is deleted:
 
@@ -23,8 +27,5 @@ The legacy component still resolves until it is deleted:
 import Divider from '@code-dot-org/component-library/divider';
 ```
 
-To move a legacy call site, use the
-[codemod](../../codemods/README.md#divider-to-mui-dividerts); see
-[DIVIDER_MIGRATION_TO_MUI.md](DIVIDER_MIGRATION_TO_MUI.md) for the plan.
-
-For props and live examples, see DesignSystem / Divider in Storybook.
+See [DIVIDER_MIGRATION_TO_MUI.md](DIVIDER_MIGRATION_TO_MUI.md) for the
+migration, and DesignSystem / Divider in Storybook for examples.

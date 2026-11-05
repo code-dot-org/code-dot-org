@@ -17,21 +17,6 @@ Moves `Dialog` and `CustomDialog` imports from `@code-dot-org/component-library/
 
 Build the package first with `yarn build`, then run it as shown under Usage.
 
-### `divider-to-mui-divider.ts`
-
-Moves `Divider` imports from `@code-dot-org/component-library/divider` to `MuiDivider`. The props are unchanged, so only imports and mock factories change. See `src/divider/DIVIDER_MIGRATION_TO_MUI.md`.
-
-- Rewrites default and named imports, including `DividerProps`, keeping local names
-- Adds a `MuiDivider` key to `jest.mock` and `vi.mock` factories
-- Reports Enzyme string selectors and import shapes it cannot rewrite
-- Idempotent; parses `.ts` files with the `ts` parser
-
-```bash
-yarn build
-TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/divider-to-mui-divider.ts \
-  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register <path>
-```
-
 ## Usage
 
 Codemods are one-off migration scripts. Run `jscodeshift` from the `component-library` package directory.
