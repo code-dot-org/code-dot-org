@@ -465,7 +465,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
 
       it 'returns the response including the evaluation, feedback, and rubric' do
         challenge_response.update!(
-          challenge: create(:challenge, :with_rubric),
+          challenge: create(:challenge),
           evaluation_result: {'level' => 2},
           student_feedback: 'Nice work!',
           evaluation_status: :success
@@ -585,7 +585,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
   end
 
   describe 'POST #evaluate' do
-    let(:challenge) {create(:challenge, :with_rubric)}
+    let(:challenge) {create(:challenge)}
     let(:challenge_response) {create(:challenge_response, challenge:, user: student, is_final: true)}
 
     context 'when signed in without lesson deep dive access' do
@@ -616,7 +616,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it 'rejects a challenge with no rubric' do
-        challenge.update!(rubric: nil)
+        challenge.update_column(:rubric, nil)
 
         assert_no_enqueued_jobs do
           post :evaluate, params: {id: challenge_response.id}

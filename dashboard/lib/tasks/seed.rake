@@ -52,6 +52,10 @@ namespace :seed do
     PracticeProblem.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
+  timed_task_with_logging challenges: :environment do
+    Challenge.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
+  end
+
   timed_task_with_logging concepts: :environment do
     Concept.setup
   end
@@ -504,7 +508,7 @@ namespace :seed do
     AiRubricConfig.validate_ai_config
   end
 
-  PRODUCTION_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
+  PRODUCTION_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :challenges, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :json_videos_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
 
   # Only the environments that serve production curriculum seed it. The rest
