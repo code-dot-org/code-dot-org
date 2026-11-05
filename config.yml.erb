@@ -413,6 +413,11 @@ optimize_rails_assets: true
 # Note: Not intended for production use.
 lazy_load_i18n: false
 
+# Whether to skip `rake seed:default` during `rake build`. Until you run
+# `rake seed:default` or disable this flag, you won't see changes to curriculum
+# data and other seeded content (see dashboard/lib/tasks/seed.rake).
+skip_seed:
+
 # Whether to store sprocket asset cache on disk or in memory. Setting this to
 # false reduces memory usage, but significantly slows down dev server startup.
 cache_assets_in_memory:
