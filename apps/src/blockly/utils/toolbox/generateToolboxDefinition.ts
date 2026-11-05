@@ -1,5 +1,7 @@
 import type * as BlocklyCore from 'blockly/core';
 
+import {makeCategory} from './factories';
+
 /**
  * Generates a toolbox definition from a map of blocks by category.
  */
@@ -11,14 +13,15 @@ export default function (
   if (kind === 'categoryToolbox') {
     return {
       kind,
-      contents: categories.map(categoryName => ({
-        kind: 'category',
-        name: categoryName,
-        contents: blocksByCategory[categoryName].map(type => ({
-          kind: 'block',
-          type,
-        })),
-      })),
+      contents: categories.map(categoryName =>
+        makeCategory(
+          categoryName,
+          blocksByCategory[categoryName].map(type => ({
+            kind: 'block',
+            type,
+          }))
+        )
+      ),
     };
   }
 
