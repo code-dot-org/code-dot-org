@@ -1,12 +1,14 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Markdown, type MarkdownExtension} from '@code-dot-org/markdown';
 import classNames from 'classnames';
 import React from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
-import {jsonVideoRehypeMap} from '@cdo/apps/jsonVideo/jsonVideoRehypeMap';
+import JsonVideoLink from '@cdo/apps/jsonVideo/JsonVideoLink';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
@@ -28,19 +30,25 @@ interface ChatMessageProps {
 const codeCopiedAnalytics = (isTA: boolean) => () =>
   getStore().dispatch(sendAnalytics(EVENTS.CODE_COPIED, {isTA: isTA}));
 
-const taRehypeMap = {
-  pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
-    <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(true)} />
-  ),
-  ...jsonVideoRehypeMap,
-};
+type MarkdownComponentProps<Tag extends 'a' | 'pre'> =
+  React.ComponentPropsWithoutRef<Tag> & {node?: unknown};
 
-const nonTaRehypeMap = {
-  pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
-    <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(false)} />
-  ),
-  ...jsonVideoRehypeMap,
-};
+const chatMarkdownExtensions = (isTA: boolean): MarkdownExtension[] => [
+  {
+    name: 'chatMessage',
+    components: {
+      pre: ({node: _node, ...props}: MarkdownComponentProps<'pre'>) => (
+        <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(isTA)} />
+      ),
+      a: ({node: _node, ...props}: MarkdownComponentProps<'a'>) => (
+        <JsonVideoLink {...props} target="_blank" rel="noopener noreferrer" />
+      ),
+    },
+  },
+];
+
+const taMarkdownExtensions = chatMarkdownExtensions(true);
+const nonTaMarkdownExtensions = chatMarkdownExtensions(false);
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
@@ -52,7 +60,9 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   isTA,
   messageStyle = 'default',
 }) => {
-  const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
+  const markdownExtensions = isTA
+    ? taMarkdownExtensions
+    : nonTaMarkdownExtensions;
 
   const isAssistant = role === Role.ASSISTANT;
 
@@ -65,22 +75,30 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       )}
     >
       <div className={moduleStyles.grid}>
-        {isAssistant && isTA && (
-          <div className={moduleStyles.botIconTAOverlayContainer}>
-            <div className={classNames(moduleStyles.botIconContainer)}>
-              <img
-                src={aiBotOutlineIcon}
-                alt={commonI18n.aiChatBotIconAlt()}
-                className={moduleStyles.botIcon}
-              />
-            </div>
-            {isTA && (
+        {isAssistant &&
+          isTA &&
+          (experiments.isEnabled('ta-teacher-panel') ? (
+            // The mark reads "TA" itself, so it needs no overlay pill.
+            <FontAwesomeV6Icon
+              iconFamily="kit"
+              iconName="ta"
+              title={commonI18n.aiChatBotIconAlt()}
+              className={moduleStyles.taDiscIcon}
+            />
+          ) : (
+            <div className={moduleStyles.botIconTAOverlayContainer}>
+              <div className={classNames(moduleStyles.botIconContainer)}>
+                <img
+                  src={aiBotOutlineIcon}
+                  alt={commonI18n.aiChatBotIconAlt()}
+                  className={moduleStyles.botIcon}
+                />
+              </div>
               <div className={moduleStyles.botOverlay}>
                 <span>{'TA'}</span>
               </div>
-            )}
-          </div>
-        )}
+            </div>
+          ))}
         <div className={moduleStyles[`message-and-header-${role}`]}>
           {header && <div className={moduleStyles.header}>{header}</div>}
           {(text || postText) && (
@@ -99,12 +117,13 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             >
               {role === Role.ASSISTANT ? (
                 <div className={moduleStyles.assistantMessageContent}>
-                  <SafeMarkdown
-                    markdown={text}
-                    rehypeMap={rehypeMap}
-                    localized={false}
-                    openExternalLinksInNewTab
-                  />
+                  <div data-notranslate>
+                    <Markdown
+                      content={text}
+                      extensions={markdownExtensions}
+                      bodyVariant="body3"
+                    />
+                  </div>
                   {postText}
                 </div>
               ) : (

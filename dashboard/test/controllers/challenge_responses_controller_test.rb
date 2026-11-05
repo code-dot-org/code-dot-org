@@ -31,10 +31,10 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
 
       it "returns only the current user's final responses, newest first" do
         other_challenge = create(:challenge)
-        older = create(:challenge_response, challenge:, user: student, is_final: true, created_at: 2.days.ago)
-        newer = create(:challenge_response, challenge: other_challenge, user: student, is_final: true, created_at: 1.day.ago)
-        create(:challenge_response, challenge:, user: student, is_final: false)
-        create(:challenge_response, challenge:, user: other_student, is_final: true)
+        older = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true, created_at: 2.days.ago)
+        newer = create(:challenge_response, :evaluated, challenge: other_challenge, user: student, is_final: true, created_at: 1.day.ago)
+        create(:challenge_response, :evaluated, challenge:, user: student, is_final: false)
+        create(:challenge_response, :evaluated, challenge:, user: other_student, is_final: true)
 
         get :index
 
@@ -43,10 +43,10 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it 'filters by lesson_id and includes asset download URLs' do
-        challenge_response = create(:challenge_response, challenge:, user: student, is_final: true)
+        challenge_response = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
         create(:challenge_response_asset, challenge_response:)
         other_lesson_challenge = create(:challenge)
-        create(:challenge_response, challenge: other_lesson_challenge, user: student, is_final: true)
+        create(:challenge_response, :evaluated, challenge: other_lesson_challenge, user: student, is_final: true)
 
         get :index, params: {lesson_id: challenge.lesson_id}
 
@@ -56,8 +56,8 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it 'filters by challenge_id' do
-        challenge_response = create(:challenge_response, challenge:, user: student, is_final: true)
-        create(:challenge_response, user: student, is_final: true)
+        challenge_response = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
+        create(:challenge_response, :evaluated, user: student, is_final: true)
 
         get :index, params: {challenge_id: challenge.id}
 
@@ -84,7 +84,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it 'labels responses with the author and lesson unit' do
-        challenge_response = create(:challenge_response, challenge:, user: student, is_final: true)
+        challenge_response = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
 
         get :index
 
@@ -92,6 +92,16 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json.first['user_name']).must_equal student.name
         _(response_json.first['unit_id']).must_equal challenge_response.challenge.lesson.script_id
         _(response_json.first['lesson_position']).must_equal challenge_response.challenge.lesson.relative_position
+      end
+
+      it 'falls back to the latest evaluated submission when a resubmission is flagged' do
+        evaluated = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
+        create(:challenge_response, challenge:, user: student, is_final: true, evaluation_status: :profanity_violation)
+
+        get :index
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}).must_equal [evaluated.id]
       end
     end
 
@@ -105,11 +115,11 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it "returns the whole section's final responses, without peers' feedback" do
-        mine = create(:challenge_response, challenge:, user: student, is_final: true, student_feedback: 'For you')
-        peers = create(:challenge_response, challenge:, user: other_student, is_final: true, student_feedback: 'Private', approved: true)
-        create(:challenge_response, challenge:, user: other_student, is_final: false)
+        mine = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true, student_feedback: 'For you')
+        peers = create(:challenge_response, :evaluated, challenge:, user: other_student, is_final: true, student_feedback: 'Private', approved: true)
+        create(:challenge_response, :evaluated, challenge:, user: other_student, is_final: false)
         outsider = create(:student)
-        create(:challenge_response, challenge:, user: outsider, is_final: true)
+        create(:challenge_response, :evaluated, challenge:, user: outsider, is_final: true)
 
         get :index, params: {section_id: section.id}
 
@@ -121,8 +131,8 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it 'hides unapproved peer responses from students but always shows their own' do
-        mine = create(:challenge_response, challenge:, user: student, is_final: true)
-        create(:challenge_response, challenge:, user: other_student, is_final: true, approved: false)
+        mine = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
+        create(:challenge_response, :evaluated, challenge:, user: other_student, is_final: true, approved: false)
 
         get :index, params: {section_id: section.id}
 
@@ -131,8 +141,8 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it 'filters by unit_id' do
-        in_unit = create(:challenge_response, challenge:, user: other_student, is_final: true, approved: true)
-        create(:challenge_response, user: other_student, is_final: true, approved: true) # different lesson/unit
+        in_unit = create(:challenge_response, :evaluated, challenge:, user: other_student, is_final: true, approved: true)
+        create(:challenge_response, :evaluated, user: other_student, is_final: true, approved: true) # different lesson/unit
 
         get :index, params: {section_id: section.id, unit_id: challenge.lesson.script_id}
 
@@ -141,9 +151,9 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it "collapses to each student's most recent submission per challenge" do
-        create(:challenge_response, challenge:, user: student, is_final: true)
-        latest = create(:challenge_response, challenge:, user: student, is_final: true)
-        peers = create(:challenge_response, challenge:, user: other_student, is_final: true, approved: true)
+        create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
+        latest = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
+        peers = create(:challenge_response, :evaluated, challenge:, user: other_student, is_final: true, approved: true)
 
         get :index, params: {section_id: section.id}
 
@@ -153,9 +163,9 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
 
       it "collapses to the caller's most recent submission per challenge in the own-work view" do
         other_challenge = create(:challenge)
-        create(:challenge_response, challenge:, user: student, is_final: true)
-        latest = create(:challenge_response, challenge:, user: student, is_final: true)
-        other = create(:challenge_response, challenge: other_challenge, user: student, is_final: true)
+        create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
+        latest = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
+        other = create(:challenge_response, :evaluated, challenge: other_challenge, user: student, is_final: true)
 
         get :index
 
@@ -164,8 +174,8 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it 'sorts oldest-first on request' do
-        older = create(:challenge_response, challenge:, user: student, is_final: true, created_at: 2.days.ago)
-        newer = create(:challenge_response, challenge:, user: other_student, is_final: true, created_at: 1.day.ago, approved: true)
+        older = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true, created_at: 2.days.ago)
+        newer = create(:challenge_response, :evaluated, challenge:, user: other_student, is_final: true, created_at: 1.day.ago, approved: true)
 
         get :index, params: {section_id: section.id, sort: 'oldest'}
 
@@ -183,13 +193,33 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it "is allowed for the section's teacher" do
-        create(:challenge_response, challenge:, user: student, is_final: true)
+        create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
         sign_in section.teacher
 
         get :index, params: {section_id: section.id}
 
         assert_response :success
         _(response_json.length).must_equal 1
+      end
+
+      it 'hides approved peer responses that were not successfully evaluated from students' do
+        create(:challenge_response, challenge:, user: other_student, is_final: true, approved: true, evaluation_status: :feedback_violation)
+
+        get :index, params: {section_id: section.id}
+
+        assert_response :success
+        _(response_json).must_be_empty
+      end
+
+      it "shows the section's teacher responses of every evaluation status" do
+        flagged = create(:challenge_response, challenge:, user: student, is_final: true, evaluation_status: :pii_violation)
+        pending = create(:challenge_response, challenge:, user: other_student, is_final: true)
+        sign_in section.teacher
+
+        get :index, params: {section_id: section.id}
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}.sort).must_equal [flagged.id, pending.id].sort
       end
     end
 
@@ -202,11 +232,11 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it "lists every one of the student's final submissions for a challenge, without collapsing" do
-        first = create(:challenge_response, challenge:, user: student, is_final: true, created_at: 2.days.ago)
-        second = create(:challenge_response, challenge:, user: student, is_final: true, created_at: 1.day.ago)
-        create(:challenge_response, challenge:, user: student, is_final: false)
-        create(:challenge_response, user: student, is_final: true) # different challenge
-        create(:challenge_response, challenge:, user: other_student, is_final: true)
+        first = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true, created_at: 2.days.ago)
+        second = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true, created_at: 1.day.ago)
+        create(:challenge_response, :evaluated, challenge:, user: student, is_final: false)
+        create(:challenge_response, :evaluated, user: student, is_final: true) # different challenge
+        create(:challenge_response, :evaluated, challenge:, user: other_student, is_final: true)
         sign_in student
 
         get :index, params: {user_id: student.id, challenge_id: challenge.id, sort: 'oldest'}
@@ -216,7 +246,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it "is allowed for the student's teacher, without the student's feedback" do
-        create(:challenge_response, challenge:, user: student, is_final: true, student_feedback: 'Private')
+        create(:challenge_response, :evaluated, challenge:, user: student, is_final: true, student_feedback: 'Private')
         sign_in section.teacher
 
         get :index, params: {user_id: student.id}
@@ -226,8 +256,30 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json.first).wont_include 'student_feedback'
       end
 
+      it "lists only the student's own successfully evaluated submissions to them" do
+        evaluated = create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
+        create(:challenge_response, challenge:, user: student, is_final: true, evaluation_status: :failure)
+        sign_in student
+
+        get :index, params: {user_id: student.id}
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}).must_equal [evaluated.id]
+      end
+
+      it "lists every evaluation status to the student's teacher" do
+        create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
+        create(:challenge_response, challenge:, user: student, is_final: true, evaluation_status: :failure)
+        sign_in section.teacher
+
+        get :index, params: {user_id: student.id}
+
+        assert_response :success
+        _(response_json.length).must_equal 2
+      end
+
       it 'is forbidden for a section peer' do
-        create(:challenge_response, challenge:, user: student, is_final: true)
+        create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
         sign_in other_student
 
         get :index, params: {user_id: student.id}
@@ -255,12 +307,12 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
     end
 
     it 'returns final submission counts grouped by unit, one per student per challenge' do
-      create(:challenge_response, challenge:, user: student, is_final: true)
-      create(:challenge_response, challenge:, user: student, is_final: true) # resubmission, not double-counted
-      create(:challenge_response, challenge:, user: other_student, is_final: true, approved: true)
-      create(:challenge_response, challenge:, user: other_student, is_final: false)
+      create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)
+      create(:challenge_response, :evaluated, challenge:, user: student, is_final: true) # resubmission, not double-counted
+      create(:challenge_response, :evaluated, challenge:, user: other_student, is_final: true, approved: true)
+      create(:challenge_response, :evaluated, challenge:, user: other_student, is_final: false)
       other_unit_challenge = create(:challenge)
-      create(:challenge_response, challenge: other_unit_challenge, user: student, is_final: true)
+      create(:challenge_response, :evaluated, challenge: other_unit_challenge, user: student, is_final: true)
 
       get :unit_counts, params: {section_id: section.id}
 
@@ -469,6 +521,14 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
 
       it 'cannot read a non-final response' do
         challenge_response.update!(is_final: false)
+
+        get :show, params: {id: challenge_response.id}
+
+        assert_response :forbidden
+      end
+
+      it 'cannot read a final response that was not successfully evaluated' do
+        challenge_response.update!(is_final: true, evaluation_status: :feedback_violation)
 
         get :show, params: {id: challenge_response.id}
 

@@ -12,9 +12,9 @@ export const BURST_LOOK_OPTIONS: [string, string][] = BURST_LOOKS.map(look => [
   look,
 ]);
 
-/** Fling sparks or confetti out from a sprite: a flourish that passes
-    through everything and is gone in under a second. A second burst from
-    the same sprite adds to the first. */
+/** Fling sparks, confetti or dust out from a sprite: a flourish that
+    passes through everything and is gone in under a second. A second burst
+    from the same sprite adds to the first. */
 const definition: BlockJson = {
   type: BURST_BLOCK_TYPE,
   message0: 'burst %1 %2 from %3',
@@ -34,7 +34,7 @@ const definition: BlockJson = {
   previousStatement: null,
   nextStatement: null,
   style: BlockStyles.DEFAULT,
-  tooltip: 'Fling sparks or confetti out from a sprite for a moment.',
+  tooltip: 'Fling sparks, confetti or dust out from a sprite for a moment.',
 };
 
 const generator: GeneratorFunction = block =>

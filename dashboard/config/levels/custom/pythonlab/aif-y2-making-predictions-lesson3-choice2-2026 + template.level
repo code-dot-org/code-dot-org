@@ -28,7 +28,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "from sklearn.linear_model import LinearRegression\nfrom sklearn.preprocessing import OneHotEncoder\n\nfrom helpers import create_matrix, print_linear_model, print_matrix\n\n# Data\ndata = [\n    {\"hours\": 6, \"rainy\": \"no\", \"location\": \"downtown\", \"sales\": 1145},\n    {\"hours\": 4, \"rainy\": \"yes\", \"location\": \"park\", \"sales\": 495},\n    {\"hours\": 8, \"rainy\": \"no\", \"location\": \"downtown\", \"sales\": 1380},\n    {\"hours\": 6, \"rainy\": \"no\", \"location\": \"campus\", \"sales\": 890},\n    {\"hours\": 5, \"rainy\": \"yes\", \"location\": \"campus\", \"sales\": 540},\n]\n\n# TODO: Encodings\nhours_encoding = []\nfor row in data:\n  hours_encoding.append(row[\"hours\"])\n\n# Inputs\nfeatures = [hours_encoding]\ninputs = create_matrix(features)\nprint_matrix(inputs)\n\n# Outputs\noutputs = []\nfor row in data:\n  outputs.append(row[\"sales\"])\n\n# Model\nmodel = LinearRegression()\nmodel.fit(inputs, outputs)\n\nprint_linear_model(model)",
+          "contents": "from sklearn.linear_model import LinearRegression\nfrom sklearn.preprocessing import OneHotEncoder\n\nfrom helpers import create_matrix, print_linear_model, print_matrix\n\n# Data\ndata = [\n  {\"hours\": 6, \"rainy\": \"no\", \"location\": \"downtown\", \"sales\": 1145},\n  {\"hours\": 4, \"rainy\": \"yes\", \"location\": \"park\", \"sales\": 495},\n  {\"hours\": 8, \"rainy\": \"no\", \"location\": \"downtown\", \"sales\": 1380},\n  {\"hours\": 6, \"rainy\": \"no\", \"location\": \"campus\", \"sales\": 890},\n  {\"hours\": 5, \"rainy\": \"yes\", \"location\": \"campus\", \"sales\": 540},\n]\n\n# TODO: Encodings\nhours_encoding = []\nfor row in data:\n  hours_encoding.append(row[\"hours\"])\n\n# Inputs\nfeatures = [hours_encoding]\ninputs = create_matrix(features)\nprint_matrix(inputs)\n\n# Outputs\noutputs = []\nfor row in data:\n  outputs.append(row[\"sales\"])\n\n# Model\nmodel = LinearRegression()\nmodel.fit(inputs, outputs)\n\nprint_linear_model(model)",
           "folderId": "0",
           "active": true
         },
@@ -50,6 +50,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-10 20:03:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 20:04:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-10 20:03:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 20:04:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-14 03:08:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

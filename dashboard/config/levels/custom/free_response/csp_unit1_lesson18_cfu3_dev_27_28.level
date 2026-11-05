@@ -1,0 +1,31 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-16T04:08:04.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reading a Flowchart",
+    "long_instructions": "![Flowchart: Start, move forward, turn left, move forward, End.](https://images.code.org/9f096f527cf0af4ff321dad14eddbfa0-Screenshot 2026-10-15 211015.png)\r\nThe robot starts on a grid facing north.\r\n1. Write the steps of this flowchart in order.\r\n2. Describe the trail the robot draws.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18935,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false",
+    "teacher_markdown": "- **Answer.**\r\n  Steps: 1. move forward, 2. turn left, 3. move forward. The robot draws an L: one square up, then one square to the left.\r\n\r\n- **Look for one step per box, in order.**\r\n  If students skip a box or combine two steps, ask them to point to each box in the flowchart as they write.\r\n\r\n- **Check the turn direction.**\r\n  If students say the trail bends right, they likely turned relative to the page instead of the robot. Ask them to turn their body to face the way the robot faces.\r\n\r\n- **Accept any clear description of the trail.**\r\n  Words (\"up one, then left one\") or a sketch both work."
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-10-16T04:08:04.889+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson4_frq_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson4_frq_dev_27_28\"},{\"changed_at\":\"2026-10-16 04:11:30 +0000\",\"changed\":[\"title\",\"placeholder\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-16 04:12:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

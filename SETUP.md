@@ -67,14 +67,20 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. `bundle exec rake install`
     <details>
-        <summary>This will take 30 minutes, or more</summary>
-        The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, <code>seed:scripts</code>, can take > 10 minutes, but it should at least print out progress as it goes.
+        <summary>Seeds only UI test courses by default, production courses on demand</summary>
+        By default, development seeds only the UI test curriculum in <code>dashboard/test/ui/config</code>, which is enough to run every lab and the UI tests. Creating and seeding the database this way takes about five minutes. Prefer a <code>ui-test-</code> course when you need a course to try something in, and put any level you want to test locally or on an adhoc into one of them.
+        If you need production courses locally, seed them on top with <code>cd dashboard && bundle exec rake seed:production</code>. That takes about an hour on the first run, and prints progress as it goes. Rerun it to pick up content changes, since <code>rake build</code> does not reseed production content in development.
     </details>
     <details>
         <summary>If <code>bundle exec rake install</code> is interrupted before finishing...</summary>
         If, for any reason, you are forced to interrupt the <code>bundle exec rake install</code> command before it completes,
         cd into dashboard and run <code>bundle exec rake db:drop</code> before trying <code>bundle exec rake install</code> again.
         <code>bundle exec rake install</code> must always be called from the local project's root directory, or it won't work.
+    </details>
+    <details>
+        <summary>About the non-root <code>writer</code> and <code>reader</code> MySQL users</summary>
+        As part of <code>rake install</code>, the <code>db:provision_sql_users</code> task creates two non-root
+        application users, mirroring the ones the Custom::SQLUser CloudFormation Lambda provisions in AWS.
     </details>
 
 1. fix your database timezone to match our servers

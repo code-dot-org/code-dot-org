@@ -1,0 +1,28 @@
+.settings {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: var(--shape-md);
+}
+
+.setting {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+}
+
+.setting + .setting {
+  border-top: 1px solid var(--borders-neutral-primary);
+}
+
+.description {
+  color: var(--text-neutral-tertiary);
+}
+
+/* DSCO Link is inline-flex; inside a sentence it must flow as text. */
+.inlineLink {
+  display: inline;
+}

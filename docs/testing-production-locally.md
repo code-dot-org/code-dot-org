@@ -9,7 +9,7 @@ Running a local production server requires a few different steps.
 1. Temporarily **comment/remove these two lines** in **both** `config/initializers/devise.rb` and `config/initializers/secret_token.rb`:
   * `unless Rails.env.production?`
   * the corresponding `end`
-1. `RAILS_ENV=production bundle exec rake db:reset seed:all assets:precompile`
+1. `RAILS_ENV=production bundle exec rake db:reset seed:production assets:precompile`
 1. `RAILS_ENV=production bundle exec rails s`
 
 ## See Also

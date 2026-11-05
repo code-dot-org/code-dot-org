@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-16T21:33:32.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-a-number-and-a-rule-19-ff36aee4-9b28-4837-a8bb-cb1fe23c8685",
+        "text": "### Keep track of the score.\nA **variable** stores the score. Collecting a jewel adds one point.",
+        "imageUrl": "https://images.code.org/650c60a6dc353e1479cc0c359507dae1-IA2-1-P1-jewel-game.gif",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "adaptive-HoAI26-a-number-and-a-rule-19-702877e1-c14a-4232-8ae3-cd5ae406db3d",
+        "text": "### Check a condition.\nA **condition** checks whether something is true, like “Has the score reached 10?”",
+        "imageUrl": "https://images.code.org/af5f22445a61179dbf99913438e141bb-IA2-1-P2-celebration.gif",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "adaptive-HoAI26-a-number-and-a-rule-19-6d6c39d0-b187-4102-a6c3-78ed9f9616c4",
+        "text": "### Give the rule an action.\nIf the score reaches 10, end the round. Tell AI both the **condition** and what happens next.",
+        "imageUrl": "https://images.code.org/227d9d3d6ac7204191b2a2936c4dca7c-IA2-1-P3-celebration.gif",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Watch a video explaining how numbers and rules work in programming. Observe a tiny game where a score changes, and a rule dictates an action based on that score, like ending a round when the score reaches a certain number.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:34:12 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:34:12 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 02:17:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 02:21:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

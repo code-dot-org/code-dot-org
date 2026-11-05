@@ -1,0 +1,10 @@
+name 'data-makes-ai-lesson8-choice'
+display_name 'Test a Fix'
+description 'Choose one change. Before you train, predict whether it will fix your clip. Train, then check the Incorrect tab'
+
+sublevels
+level 'data-makes-ai-lesson8-bts-add'
+level 'data-makes-ai-lesson8-bts-remove'
+level 'data-makes-ai-lesson8-interviews-fix-c'
+
+uses_lab2

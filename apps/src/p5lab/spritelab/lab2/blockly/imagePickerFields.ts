@@ -13,10 +13,7 @@ import {ImageType} from '../ai/images/types';
 import {noteImageFieldValue} from '../imageReferences';
 import {defaultImageName, ImageSlot} from '../imageRoleDefaults';
 import {getImageThumbnail} from '../imageTrim';
-import {setActiveTab} from '../redux/spriteLab2Redux';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
-
-import moduleStyles from './image-dropdown.module.scss';
 
 export const FIELD_COSTUME_TYPE = 'field_spritelab2_costume';
 export const FIELD_BLOCK_IMAGE_TYPE = 'field_spritelab2_block_image';
@@ -40,16 +37,6 @@ const EMPTY_IMAGE_OPTION: [string, string][] = [
       ),
     'null',
   ],
-];
-
-// One button below the image grid: jump to the Images tab, where images are
-// made. Doubles as the empty state's affordance.
-const MAKE_IMAGE_BUTTONS = [
-  {
-    text: 'Make an image',
-    action: () => getStore().dispatch(setActiveTab('Images')),
-    className: moduleStyles.makeImageButton,
-  },
 ];
 
 type AnimationKind = 'costume' | 'background' | 'block';
@@ -195,18 +182,18 @@ function animationDropdown(
   kind: AnimationKind,
   Ctor: typeof Lab2AnimationDropdown = Lab2AnimationDropdown
 ): Lab2AnimationDropdown {
-  const field = new Ctor(
+  const field: Lab2AnimationDropdown = new Ctor(
     () => animationOptions(kind),
     THUMBNAIL_SIZE[kind],
     THUMBNAIL_SIZE[kind],
-    MAKE_IMAGE_BUTTONS
+    undefined
   );
   field.kind = kind;
   return field;
 }
 
 // The classic costumePicker/backgroundPicker input types, with lab2's empty
-// state and Images-tab button. (The classic animation-mode buttons don't
+// state. (The classic animation-mode buttons don't
 // apply here — this lab has no AnimationTab.)
 export function animationPicker(kind: AnimationKind) {
   return {

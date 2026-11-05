@@ -132,6 +132,7 @@ class AichatEventsController < ApplicationController
   end
 
   private def can_log_aichat_events?(level_id, client_type)
+    return false if client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] && !current_user.can_use_lesson_deep_dive?
     current_user.has_aichat_access?(level_id) || current_user.trust_chat_client?(client_type)
   end
 

@@ -2,72 +2,95 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
   min-height: 0;
-  padding: 24px;
+  padding: 64px max(32px, calc((100% - 800px) / 2));
   overflow-y: auto;
   box-sizing: border-box;
-}
-
-.introScreen {
-  flex-shrink: 0;
+  background: var(--background-neutral-secondary);
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
-.pages {
+.title {
+  margin: 0;
+}
+
+.metaIcon {
+  color: var(--text-neutral-quaternary);
+}
+
+.outline {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.page {
+.outline > * + * {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 1px;
+    height: 16px;
+    background: var(--border-neutral-primary);
+  }
+}
+
+.emptyQuiz {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 12px;
-  border: 1px solid var(--border-neutral-primary);
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 30px 10px 32px;
+  border: 1px dashed var(--border-neutral-primary);
   border-radius: var(--shape-md);
+  text-align: center;
 }
 
-.pageHeader {
+.emptyQuizIcon {
   display: flex;
   align-items: center;
-  gap: 6px;
-  color: var(--text-neutral-tertiary);
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 14px;
+  border-radius: var(--shape-round);
+  background: var(--background-neutral-septenary);
+  color: var(--text-neutral-primary-inverse);
+  font-size: 24px;
 }
 
-.pageLabel {
+.emptyQuizTitle {
+  max-width: 370px;
+  margin: 0;
+  color: var(--text-neutral-primary);
+  font-weight: 600;
+}
+
+.emptyQuizBody {
+  max-width: 370px;
+  margin: 6px 0 16px;
   color: var(--text-neutral-secondary);
 }
 
-.pageHeaderDot {
-  font-size: 4px;
-  color: var(--background-neutral-quinary);
-  flex-shrink: 0;
-}
-
-.list {
+.addPageSlot {
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.createHint {
-  color: var(--text-neutral-tertiary);
-}
-
-.addPageButton {
-  align-self: flex-start;
-}
-
-.createButton {
-  align-self: flex-start;
+  justify-content: center;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 8px;
+  border: 1px dashed var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-secondary);
 }

@@ -41,9 +41,8 @@ build:
       - image: cdo-base
         alias: BASE_IMAGE
   - image: cdo-build
-    context: docker/build
     docker:
-      dockerfile: Dockerfile
+      dockerfile: docker/build/Dockerfile
     requires:
       - image: cdo-base
         alias: BASE_IMAGE

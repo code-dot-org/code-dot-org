@@ -1,0 +1,35 @@
+.emptyState {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--shape-round);
+  background-color: var(--background-neutral-septenary);
+  color: var(--text-neutral-primary-inverse);
+  font-size: 24px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.message {
+  color: var(--text-neutral-secondary);
+}

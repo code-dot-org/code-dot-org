@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_action :expire_privileged_sign_in, if: :current_user
   before_action :handle_cap_lockout, :assert_lms_landing_policy, if: :current_user
 
   # this is needed to avoid devise breaking on email param
@@ -24,8 +25,6 @@ class ApplicationController < ActionController::Base
   before_action :fix_crawlers_with_bad_accept_headers
 
   before_action :clear_sign_up_session_vars
-
-  before_action :initialize_statsig_stable_id
 
   before_action :persist_brand_params
 
@@ -375,6 +374,18 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # Only page loads are interrupted, so an editor's pending API calls and saves still succeed.
+  # Browsers send Accept: text/html for navigations; fetch() sends */*, and jQuery sets X-Requested-With.
+  protected def expire_privileged_sign_in
+    return if devise_controller?
+    return unless request.get? && !request.xhr? && request.headers['Accept'].to_s.include?('text/html')
+    return unless current_user.privileged_sign_in_expired?
+
+    store_location_for(:user, request.fullpath)
+    sign_out current_user
+    redirect_to new_user_session_path
+  end
+
   # Check that the user is compliant with the Child Account Policy. If they
   # are not compliant, then we need to send them to the lockout page.
   protected def handle_cap_lockout
@@ -447,10 +458,6 @@ class ApplicationController < ActionController::Base
     redirect_to lti_v1_account_linking_landing_path
   end
 
-  protected def initialize_statsig_stable_id
-    request.statsig_stable_id
-  end
-
   private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
   end
@@ -467,5 +474,13 @@ class ApplicationController < ActionController::Base
     super
     payload[:user_id] = current_user&.id
     payload[:admin_id] = session[:admin_id] if session[:assumed_identity]
+  end
+
+  # Rails' open-redirect protection only trusts the request's own host. This override
+  # allows URLs from the root code.org domain instead of just the studio subdomain.
+  private def _url_host_allowed?(url)
+    super || URI(url.to_s).host == URI(CDO.code_org_url).host
+  rescue ArgumentError, URI::Error
+    false
   end
 end

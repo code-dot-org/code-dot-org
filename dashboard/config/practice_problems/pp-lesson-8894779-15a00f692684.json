@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-8894779-15a00f692684",
+  "problem_type": "scramble",
+  "active": true,
+  "problem_text": "Arrange the steps to create a data visualization from numerical data in the correct order: 'Analyze the data', 'Choose the right type of visualization', 'Collect the numerical data'.",
+  "solution": [
+    {
+      "option": "Collect the numerical data",
+      "correct": 0
+    },
+    {
+      "option": "Analyze the data",
+      "correct": 1
+    },
+    {
+      "option": "Choose the right type of visualization",
+      "correct": 2
+    }
+  ],
+  "objective_keys": [
+    "72dd1400-28aa-4ef7-8fbe-59a08d969ddc"
+  ]
+}

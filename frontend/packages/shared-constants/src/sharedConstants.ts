@@ -352,21 +352,30 @@ export const AiChatGeminiModelIds = [
   "gemini-3.1-flash-image"
 ] as const;
 
-export const AiChatUsOnlyModelIds = [
-  "gemini-2.0-flash",
-  "gemini-2.5-flash",
-  "gemini-2.5-flash-lite",
-  "gemini-2.5-pro",
-  "gemini-2.5-flash-image",
-  "gemini-3.1-flash-image"
-] as const;
+export const AiChatProviders = {
+  "GOOGLE": "google",
+  "OPENAI": "openai"
+} as const;
+
+export const AiChatProviderByModelId = {
+  "gemini-2.0-flash": "google",
+  "gemini-2.5-flash": "google",
+  "gemini-2.5-flash-lite": "google",
+  "gemini-2.5-pro": "google",
+  "gemini-2.5-flash-image": "google",
+  "gemini-3.1-flash-image": "google",
+  "gpt-4o-mini": "openai"
+} as const;
 
 export const AiChatClientTypes = {
   "AI_CHAT_LAB": "ai-chat-lab",
   "AI_TUTOR": "ai-tutor",
   "FLOW_LAB": "flow-lab",
   "LESSON_DEEP_DIVE": "lesson-deep-dive",
-  "ADAPTIVE": "adaptive"
+  "ADAPTIVE": "adaptive",
+  "THEATER_DESCRIPTION": "theater-description",
+  "CURRICULUM_GENERATOR": "curriculum-generator",
+  "SPRITELAB_ASK_AI": "spritelab-ask-ai"
 } as const;
 
 export const AiChatReadTimeouts = {
@@ -374,7 +383,10 @@ export const AiChatReadTimeouts = {
   "ai-tutor": 30,
   "flow-lab": 60,
   "lesson-deep-dive": 60,
-  "adaptive": 30
+  "adaptive": 30,
+  "theater-description": 30,
+  "curriculum-generator": 30,
+  "spritelab-ask-ai": 30
 } as const;
 
 export const AiChatTeacherFeedback = {

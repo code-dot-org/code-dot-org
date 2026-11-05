@@ -1,0 +1,85 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:28:09.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "5c977421-8e75-45ed-bc18-8cceb6af5a1c": {
+          "id": "5c977421-8e75-45ed-bc18-8cceb6af5a1c",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Plan vs Result Widget: Code</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <h1>Plan versus Result: Code</h1>\n    <p>Compare the plan to the AI's code. Click on the lines of the code that match the plan.</p>\n\n    <div class=\"container\">\n        <div class=\"panel plan\">\n            <h2>Your Plan Note</h2>\n            <p id=\"planText\">A JavaScript function named 'calculateSum' that takes two parameters, 'x' and 'y', and returns their sum.</p>\n        </div>\n\n        <div class=\"panel result\">\n            <h2>AI Result</h2>\n            <pre><code id=\"codeResult\"></code></pre>\n            <div class=\"action-buttons\">\n                <button id=\"keepButton\">Keep</button>\n                <button id=\"redirectButton\">Redirect</button>\n                <button id=\"editLineButton\">Edit a line</button>\n            </div>\n        </div>\n    </div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "ea10ea0d-be29-4fb1-b38a-b50c4232258a": {
+          "id": "ea10ea0d-be29-4fb1-b38a-b50c4232258a",
+          "name": "style.css",
+          "contents": "body {\n    font-family: Arial, sans-serif;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    padding: 20px;\n    background-color: #f0f0f0;\n    color: #333;\n}\n\nh1 {\n    color: #333;\n    margin-bottom: 10px;\n}\n\np {\n    margin-bottom: 20px;\n    text-align: center;\n}\n\n.container {\n    display: flex;\n    gap: 30px;\n    width: 90%;\n    max-width: 1000px;\n    margin-top: 20px;\n}\n\n.panel {\n    flex: 1;\n    border: 1px solid #ddd;\n    border-radius: 8px;\n    padding: 20px;\n    background-color: #fff;\n    box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n}\n\n.panel h2 {\n    margin-top: 0;\n    color: #0056b3;\n}\n\n.plan p {\n    text-align: left;\n    line-height: 1.6;\n}\n\n.result pre {\n    background-color: #2d2d2d;\n    color: #f8f8f2;\n    padding: 15px;\n    border-radius: 5px;\n    overflow-x: auto;\n    margin-top: 20px;\n    font-size: 0.9em;\n}\n\n.code-line {\n    display: block;\n    white-space: pre;\n    cursor: pointer;\n    padding: 2px 0;\n    transition: background-color 0.2s ease, border-left-color 0.2s ease;\n    border-left: 3px solid transparent;\n}\n\n.code-line:hover {\n    background-color: #3a3a3a;\n}\n\n.code-line.matched {\n    border-left-color: #28a745;\n    background-color: #3a4a3a;\n}\n\n.action-buttons {\n    margin-top: 30px;\n    display: flex;\n    justify-content: center;\n    gap: 15px;\n}\n\n.action-buttons button {\n    padding: 10px 20px;\n    border: none;\n    border-radius: 5px;\n    font-size: 1em;\n    cursor: pointer;\n    transition: background-color 0.3s ease;\n}\n\n#keepButton {\n    background-color: #28a745;\n    color: white;\n}\n#keepButton:hover {\n    background-color: #218838;\n}\n\n#redirectButton {\n    background-color: #ffc107;\n    color: #333;\n}\n#redirectButton:hover {\n    background-color: #e0a800;\n}\n\n#editLineButton {\n    background-color: #007bff;\n    color: white;\n}\n#editLineButton:hover {\n    background-color: #0056b3;\n}",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "305e2b64-3543-491b-8102-6177ad7e19a0": {
+          "id": "305e2b64-3543-491b-8102-6177ad7e19a0",
+          "name": "script.js",
+          "contents": "document.addEventListener('DOMContentLoaded', () => {\n    const codeResult = document.getElementById('codeResult');\n    const keepButton = document.getElementById('keepButton');\n    const redirectButton = document.getElementById('redirectButton');\n    const editLineButton = document.getElementById('editLineButton');\n\n    // Simulate AI-generated code\n    const aiCodeLines = [\n        \"function calculateSum(param1, param2) {\",\n        \"  // This function is designed to add two numbers.\",\n        \"  let total = param1 + param2;\",\n        \"  return total;\",\n        \"}\"\n    ];\n\n    // Render code lines as clickable spans\n    aiCodeLines.forEach((line, index) => {\n        const span = document.createElement('span');\n        span.classList.add('code-line');\n        span.textContent = line;\n        span.dataset.lineIndex = index;\n        span.addEventListener('click', () => {\n            span.classList.toggle('matched');\n            const status = span.classList.contains('matched') ? 'matched' : 'unmatched';\n            console.log(`Line ${index + 1} (${line.trim()}): ${status}`);\n        });\n        codeResult.appendChild(span);\n    });\n\n    keepButton.addEventListener('click', () => {\n        console.log('Action: Keep - The AI code looks good!');\n        alert('You chose to KEEP the AI\\'s code!');\n    });\n\n    redirectButton.addEventListener('click', () => {\n        console.log('Action: Redirect - The AI code needs a new approach.');\n        alert('You chose to REDIRECT the AI for a new attempt at the code!');\n    });\n\n    editLineButton.addEventListener('click', () => {\n        console.log('Action: Edit a line - The AI code needs some small adjustments.');\n        alert('You chose to EDIT a line in the AI\\'s code!');\n    });\n\n    console.log('Code Plan vs Result widget loaded. Click code lines to mark them, and choose an action.');\n});",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "5c977421-8e75-45ed-bc18-8cceb6af5a1c",
+        "ea10ea0d-be29-4fb1-b38a-b50c4232258a",
+        "305e2b64-3543-491b-8102-6177ad7e19a0"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- observe the plan for the code\r\n- examine the AI's generated code\r\n- compare parts of the AI code to the plan\r\n- click on the lines of AI code that match your plan\r\n- notice how the widget highlights matching lines\r\n- decide whether to keep the code, redirect for a new approach, or edit a specific line",
+    "encrypted_exemplar_sources": "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\n",
+    "generate_outline": "Practice evaluating AI-generated code against your original plan, deciding whether to keep it, ask for a different approach, or edit a specific line.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:28:22 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:28:22 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:28:33 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:28:33 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:06:41 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

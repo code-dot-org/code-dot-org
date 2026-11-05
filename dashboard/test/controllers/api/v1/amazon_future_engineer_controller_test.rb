@@ -28,6 +28,24 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     assert_response :forbidden
   end
 
+  # The marketing site posts the form cross-origin, as a plain form submission
+  # with no CSRF token. The Sinatra apps in the middleware stack must not treat
+  # that Origin as an attack, or they clear the session and sign the teacher out.
+  test 'logged in teacher stays signed in when submitting from the code.org marketing site' do
+    Services::AFEEnrollment.expects(:submit).once
+
+    sign_in create :teacher
+
+    post '/dashboardapi/v1/amazon_future_engineer_submit',
+      params: {amazon_future_engineer: valid_params},
+      headers: {'Origin' => CDO.code_org_url('', 'https:')}
+
+    assert_response :no_content
+
+    get '/dashboardapi/v1/users/me/donor_teacher_banner_details'
+    assert_response :success
+  end
+
   test 'responds BAD REQUEST when params are malformed' do
     Services::AFEEnrollment.expects(:submit).never
 

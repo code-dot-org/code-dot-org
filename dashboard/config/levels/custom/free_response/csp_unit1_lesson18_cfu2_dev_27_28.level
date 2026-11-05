@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-15T07:23:30.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "1. In your own words, explain the difference between a problem and an algorithm.\r\n2. What does sequencing mean, and why does the order of the steps matter in an algorithm?\r\n\r\nOptional sentence frame:\r\n>A problem is ______. An algorithm is ______.\r\n>\r\n>Sequencing means ______. The order of the steps matters because ______.",
+    "stay_on_level_after_submit": "false",
+    "height": "300",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2026",
+    "teacher_markdown": "- **Look for a problem described as a general task.**\r\n  A strong response says a problem is a general description of a task, such as \"draw this trail,\" without listing steps.\r\n\r\n- **Look for an algorithm described as specific steps.**\r\n  A strong response says an algorithm is a finite set of instructions that solves the task, and that many different algorithms can solve the same problem.\r\n\r\n- **Push on why order matters.**\r\n  If students only write \"sequencing is putting steps in order,\" ask: \"What would change if you swapped two steps?\" Strong responses give an example, such as moving forward and then turning right drawing a different trail than turning right and then moving forward.\r\n\r\n- **Watch for mixed-up terms.**\r\n  If students describe a problem as a list of steps, or an algorithm as a goal, ask: \"Which one tells what to do, and which one tells how to do it?\""
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-15T07:23:30.442+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson15_cfu3_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson15_cfu3_dev_27_28\"},{\"changed_at\":\"2026-10-15 07:41:40 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

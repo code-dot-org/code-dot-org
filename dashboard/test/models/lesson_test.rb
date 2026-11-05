@@ -912,6 +912,58 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 'light', lesson.get_background_for_user(@student)
   end
 
+  test 'get_background_for_user returns user preference for a Sprite Lab in Lab2 lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, background: 'dark', script: script)
+    level = create(:spritelab, uses_lab2: true)
+    create(:script_level, lesson: lesson, levels: [level], script: script)
+    assert_equal 'light', lesson.get_background_for_user(@student)
+  end
+
+  test 'get_background_for_user falls back to the lesson background for a Sprite Lab in Lab2 lesson' do
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, background: 'dark', script: script)
+    level = create(:spritelab, uses_lab2: true)
+    create(:script_level, lesson: lesson, levels: [level], script: script)
+    assert_equal 'dark', lesson.get_background_for_user(@student)
+    # Classic Sprite Lab has no theme preference; nothing to fall back from.
+    classic = create(:lesson, script: script)
+    create(:script_level, lesson: classic, levels: [create(:spritelab)], script: script)
+    assert_nil classic.get_background_for_user(@student)
+  end
+
+  test 'get_background_for_user returns user preference for an AI Lab in Lab2 lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, background: 'dark', script: script)
+    level = create(:ailab, uses_lab2: true)
+    create(:script_level, lesson: lesson, levels: [level], script: script)
+    assert_equal 'light', lesson.get_background_for_user(@student)
+  end
+
+  test 'get_background_for_user returns default for legacy AI Lab lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, background: 'dark', script: script)
+    create(:script_level, lesson: lesson, levels: [create(:ailab)], script: script)
+    assert_equal 'dark', lesson.get_background_for_user(@student)
+    no_background = create(:lesson, script: script)
+    create(:script_level, lesson: no_background, levels: [create(:ailab)], script: script)
+    assert_nil no_background.get_background_for_user(@student)
+  end
+
+  test 'get_background_for_user falls back to the lesson background, then dark, for an AI Lab in Lab2 lesson' do
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, background: 'light', script: script)
+    create(:script_level, lesson: lesson, levels: [create(:ailab, uses_lab2: true)], script: script)
+    assert_equal 'light', lesson.get_background_for_user(@student)
+    no_background = create(:lesson, script: script)
+    create(:script_level, lesson: no_background, levels: [create(:ailab, uses_lab2: true)], script: script)
+    assert_equal 'dark', no_background.get_background_for_user(@student)
+    assert_equal 'dark', no_background.get_background_for_user(nil)
+  end
+
   test 'get_background_for_user returns default for music lesson' do
     UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
     script = create(:script, :in_single_unit_course)

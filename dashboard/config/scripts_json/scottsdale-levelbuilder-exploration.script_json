@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-16 22:34:00 UTC",
+    "serialized_at": "2026-10-19 18:10:03 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -41,6 +41,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "New Quizzes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "scottsdale-levelbuilder-exploration"
       }
     }
@@ -277,6 +289,96 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "scottsdale-levelbuilder-exploration"
       }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Erik - Quiz",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Katie - Quiz",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "Joi- Quiz",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-19",
+      "name": "Julian- Quiz",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-20",
+      "name": "Emily- Quiz",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "Angelina- Quiz",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
     }
   ],
   "lesson_activities": [
@@ -412,6 +514,79 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "scottsdale-levelbuilder-exploration"
       }
+    },
+    {
+      "key": "769a364c-fb70-481e-b8f4-8a36601e4889",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "769a364c-fb70-481e-b8f4-8a36601e4889",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "e269c7cd-75c2-4dc8-93bd-887ea84d8ae4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e269c7cd-75c2-4dc8-93bd-887ea84d8ae4",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "b41dcf59-c1f2-4867-ac24-1cfba9544486",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b41dcf59-c1f2-4867-ac24-1cfba9544486",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "9619f026-98d8-4bad-be67-e2b9fecf6ccb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9619f026-98d8-4bad-be67-e2b9fecf6ccb",
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "71dec356-b7d9-4e8d-bb3d-b4dbab508ed3",
+      "position": 1,
+      "properties": {
+        "name": "Quiz"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "71dec356-b7d9-4e8d-bb3d-b4dbab508ed3",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "cf5fe1a2-271e-47ba-a995-55fee42259b1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cf5fe1a2-271e-47ba-a995-55fee42259b1",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
     }
   ],
   "activity_sections": [
@@ -524,6 +699,68 @@
       "seeding_key": {
         "activity_section.key": "93f273da-f530-4417-8466-6ba20bb5510a",
         "lesson_activity.key": "a59c23c9-3645-474b-8fd5-0bcd7e771ec5"
+      }
+    },
+    {
+      "key": "ee76e4a5-2d36-4380-abf7-d0f66811ec96",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ee76e4a5-2d36-4380-abf7-d0f66811ec96",
+        "lesson_activity.key": "769a364c-fb70-481e-b8f4-8a36601e4889"
+      }
+    },
+    {
+      "key": "548f19d2-19f4-4ed5-8800-7db359fd144a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "548f19d2-19f4-4ed5-8800-7db359fd144a",
+        "lesson_activity.key": "e269c7cd-75c2-4dc8-93bd-887ea84d8ae4"
+      }
+    },
+    {
+      "key": "8e2172f8-3577-4646-9731-bd6410b32fc4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8e2172f8-3577-4646-9731-bd6410b32fc4",
+        "lesson_activity.key": "b41dcf59-c1f2-4867-ac24-1cfba9544486"
+      }
+    },
+    {
+      "key": "d585de12-a2eb-4763-91a9-2e6022498ef9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d585de12-a2eb-4763-91a9-2e6022498ef9",
+        "lesson_activity.key": "9619f026-98d8-4bad-be67-e2b9fecf6ccb"
+      }
+    },
+    {
+      "key": "a9aae97d-9f75-432f-bc2f-fa98dbcfc055",
+      "position": 1,
+      "properties": {
+        "name": "Quiz"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9aae97d-9f75-432f-bc2f-fa98dbcfc055",
+        "lesson_activity.key": "71dec356-b7d9-4e8d-bb3d-b4dbab508ed3"
+      }
+    },
+    {
+      "key": "a8f39459-8154-4be7-bada-3e10797361b4",
+      "position": 1,
+      "properties": {
+        "progression_name": "Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8f39459-8154-4be7-bada-3e10797361b4",
+        "lesson_activity.key": "cf5fe1a2-271e-47ba-a995-55fee42259b1"
       }
     }
   ],
@@ -1745,6 +1982,133 @@
       "level_keys": [
         "ai-and-the-systems-that-power-it-lesson5-amara2"
       ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "quiz-level-erik-test"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ee76e4a5-2d36-4380-abf7-d0f66811ec96"
+      },
+      "level_keys": [
+        "quiz-level-erik-test"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Katie-test-quizz"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "548f19d2-19f4-4ed5-8800-7db359fd144a"
+      },
+      "level_keys": [
+        "Katie-test-quizz"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-assessment-oct"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "8e2172f8-3577-4646-9731-bd6410b32fc4"
+      },
+      "level_keys": [
+        "joi-sandbox-assessment-oct"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "julian-test-new-quiz"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "d585de12-a2eb-4763-91a9-2e6022498ef9"
+      },
+      "level_keys": [
+        "julian-test-new-quiz"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emily-quiz"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "a9aae97d-9f75-432f-bc2f-fa98dbcfc055"
+      },
+      "level_keys": [
+        "emily-quiz"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ang-test1"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "a8f39459-8154-4be7-bada-3e10797361b4"
+      },
+      "level_keys": [
+        "ang-test1"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2442,6 +2806,78 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "scottsdale-levelbuilder-exploration",
         "activity_section.key": "93f273da-f530-4417-8466-6ba20bb5510a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "quiz-level-erik-test",
+        "script_level.level_keys": [
+          "quiz-level-erik-test"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ee76e4a5-2d36-4380-abf7-d0f66811ec96"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Katie-test-quizz",
+        "script_level.level_keys": [
+          "Katie-test-quizz"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "548f19d2-19f4-4ed5-8800-7db359fd144a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-assessment-oct",
+        "script_level.level_keys": [
+          "joi-sandbox-assessment-oct"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "8e2172f8-3577-4646-9731-bd6410b32fc4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "julian-test-new-quiz",
+        "script_level.level_keys": [
+          "julian-test-new-quiz"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "d585de12-a2eb-4763-91a9-2e6022498ef9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emily-quiz",
+        "script_level.level_keys": [
+          "emily-quiz"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "a9aae97d-9f75-432f-bc2f-fa98dbcfc055"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ang-test1",
+        "script_level.level_keys": [
+          "ang-test1"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "a8f39459-8154-4be7-bada-3e10797361b4"
       }
     }
   ],

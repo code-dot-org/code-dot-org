@@ -18,6 +18,8 @@ export default function LinkedAccountRow({
   name,
   email,
   learnMoreUrl,
+  note,
+  noteId,
   action,
 }: {
   credentialType: string;
@@ -27,6 +29,9 @@ export default function LinkedAccountRow({
   /** Linked rows only. */
   email?: string | null;
   learnMoreUrl?: string;
+  /** Why the action is unavailable; the action references it by noteId. */
+  note?: string;
+  noteId?: string;
   action?: ReactNode;
 }) {
   const icon = linkedAccountIcon(credentialType, lmsName);
@@ -85,6 +90,11 @@ export default function LinkedAccountRow({
         )}
         {action}
       </div>
+      {note && (
+        <Typography id={noteId} variant="body3" className={styles.note}>
+          {note}
+        </Typography>
+      )}
     </li>
   );
 }

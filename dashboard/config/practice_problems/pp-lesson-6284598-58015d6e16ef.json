@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284598-58015d6e16ef",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following best describes a conditional statement in programming?",
+  "solution": [
+    {
+      "option": "A command that always runs regardless of conditions.",
+      "correct": false
+    },
+    {
+      "option": "A command that runs only if a specific condition is True.",
+      "correct": true
+    },
+    {
+      "option": "A command that runs if any condition is False.",
+      "correct": false
+    },
+    {
+      "option": "A command that does nothing.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "d0c98176-53f4-48ac-b3d3-53daa72a0606"
+  ]
+}

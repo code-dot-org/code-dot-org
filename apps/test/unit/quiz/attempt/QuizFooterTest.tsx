@@ -128,4 +128,21 @@ describe('QuizFooter', () => {
 
     expect(screen.getByRole('button', {name: 'Submit'})).toBeInTheDocument();
   });
+
+  it('marks the finish button aria-disabled while submitting, keeping it focusable', () => {
+    render(
+      <QuizFooter
+        currentPageNumber={1}
+        totalPages={1}
+        onNavigateToPage={jest.fn()}
+        onNext={jest.fn()}
+        finishButtonLabel="Submit"
+        isSubmitting
+      />
+    );
+
+    const button = screen.getByRole('button', {name: 'Submit'});
+    expect(button).toHaveAttribute('aria-disabled', 'true');
+    expect(button).not.toBeDisabled();
+  });
 });

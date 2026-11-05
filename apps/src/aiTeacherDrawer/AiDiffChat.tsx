@@ -1,6 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
+import {flushSync} from 'react-dom';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -11,7 +12,6 @@ import {
   setThreadTitle,
   setArtifactType,
 } from '@cdo/apps/aiTeacherDrawer/redux';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
@@ -29,6 +29,7 @@ import AiDiffChatFooter from './AiDiffChatFooter';
 import AiDiffChatHeader from './AiDiffChatHeader';
 import AiDiffCreateArtifactButtons from './AiDiffCreateArtifactButtons';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
+import {sendTaEvent, truncateForStatsig} from './analytics';
 import {DEFAULT_THREAD_TITLE} from './constants';
 import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
 import {
@@ -53,6 +54,19 @@ interface AiDiffChatProps {
   onNewChat?: () => void;
   onViewThreads?: () => void;
   personalizationData?: PersonalizationData;
+}
+
+// The server does not label what kind of answer it sent, so classify it the
+// way a reader would: an artifact candidate is that artifact, anything with a
+// fenced block is code, everything else is prose.
+function classifyResponse(
+  text: string | undefined,
+  artifactCandidateType: string | undefined
+): string {
+  if (artifactCandidateType) {
+    return artifactCandidateType;
+  }
+  return text && text.includes('```') ? 'code' : 'text';
 }
 
 const AiDiffArtifactLink: React.FC<{
@@ -127,6 +141,11 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
   const dispatch = useAppDispatch();
 
+  // Which menu a block of preset chips came from, so a click on one can say
+  // so. Chips that arrived with the thread itself are in no menu and report
+  // as the default set.
+  const presetSets = useRef(new WeakMap<object, string>());
+
   const sendChatEvent = React.useCallback(
     (role: string, prompt: string, preset: boolean, thread: number) => {
       const responseEventData = {
@@ -169,11 +188,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         sendChatEvent(Role.USER, prompt, isPreset, threadId);
       }
 
-      if (
-        artifactType &&
-        experiments.isEnabled(experiments.AI_ARTIFACT) &&
-        !isPreset
-      ) {
+      if (artifactType && !isPreset) {
         sendArtifactEvent(
           threadId,
           EVENTS.AI_ARTIFACT_PROMPT_RESPONDED,
@@ -192,18 +207,33 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         presetChipText,
         ...(threadId === 0 ? {context} : {}),
         ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
-        ...(artifactType &&
-        experiments.isEnabled(experiments.AI_ARTIFACT) &&
-        !isPreset
-          ? {artifactType}
-          : {}),
+        ...(artifactType && !isPreset ? {artifactType} : {}),
       });
+
+      const requestStartedAt = Date.now();
 
       HttpClient.post(endpoint, body, true, {
         'Content-Type': 'application/json',
       })
         .then(response => response.json())
         .then(json => {
+          sendTaEvent(
+            EVENTS.AI_TA_RESPONSE_RECEIVED,
+            {
+              thread_id: json.thread_id ?? threadId,
+              latency_ms: Date.now() - requestStartedAt,
+              response_length: (json.chat_message_text ?? '').length,
+              status:
+                json.status === AiInteractionStatus.OK ? 'success' : 'error',
+              response_status: json.status,
+              response_type: classifyResponse(
+                json.chat_message_text,
+                json.artifact_candidate_type
+              ),
+            },
+            json.status === AiInteractionStatus.OK ? 'success' : 'error'
+          );
+
           const newAiMessage = {
             role: Role.ASSISTANT,
             chatMessageText: json.chat_message_text,
@@ -231,9 +261,26 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           }
           dispatch(addThreadMessage(newAiMessage));
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+          // HttpClient surfaces an aborted request as an AbortError; anything
+          // else that got this far is a transport or parse failure.
+          const status = error?.name === 'AbortError' ? 'timeout' : 'error';
+          sendTaEvent(
+            EVENTS.AI_TA_RESPONSE_RECEIVED,
+            {
+              thread_id: threadId,
+              latency_ms: Date.now() - requestStartedAt,
+              response_length: 0,
+              status,
+              error_message: truncateForStatsig(String(error?.message ?? '')),
+            },
+            status
+          );
+          console.log(error);
+        })
         .finally(() => {
-          setIsWaitingForResponse(false);
+          // Synchronous so the input is no longer disabled when focused below.
+          flushSync(() => setIsWaitingForResponse(false));
           chatResponseCallback();
           if (userMessageEditorRef && userMessageEditorRef.current) {
             userMessageEditorRef.current?.focus();
@@ -293,6 +340,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         );
       }
       if (prompt.followUpPrompts !== undefined) {
+        presetSets.current.set(prompt.followUpPrompts, 'follow_up');
         dispatch(addThreadMessage(prompt.followUpPrompts));
       }
       if (!prompt.followUpPrompts && !prompt.response) {
@@ -327,6 +375,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     const newSuggestions =
       SUGGESTED_PROMPTS_FOR_SELECTION[promptType].suggestedPrompts;
 
+    presetSets.current.set(newSuggestions, promptType);
     dispatch(addThreadMessage(aiInitialSuggestionsMessage));
     dispatch(addThreadMessage(newSuggestions));
   };
@@ -358,6 +407,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
               suggestedPrompts={item}
               isLatest={id === threadMessages.length - 1}
               onSubmit={onPromptSelect}
+              presetSet={presetSets.current.get(item) ?? 'default'}
               key={id}
             />
           ) : (

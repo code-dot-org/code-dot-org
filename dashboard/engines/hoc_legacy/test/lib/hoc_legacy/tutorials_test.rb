@@ -10,7 +10,7 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
   let(:tutorial_code) {'mc'}
 
   def tutorials_cache
-    described_class.send(:cache).read(described_class::CACHE_KEY)
+    described_class.send(:cache).read(described_class.send(:cache_key))
   end
 
   around do |test|
@@ -25,9 +25,9 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
 
     it 'returns expected Tutorial entry' do
       _get_tutorial.must_be_instance_of Contentful::Entry
-      _(get_tutorial.content_type.id).must_equal 'curriculum'
+      _(get_tutorial.content_type.id).must_equal 'activity'
       _(get_tutorial.tutorial_id).must_equal tutorial_code
-      _(get_tutorial.primary_link_ref.primary_target).must_equal '/minecraft'
+      _(get_tutorial.primary_link_ref.primary_target).must_equal 'https://code.org/minecraft'
       _(get_tutorial.secondary_link_ref.primary_target).must_equal 'https://studio.code.org/courses/mc/units/1/lessons/1'
     end
 
@@ -45,7 +45,7 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
       let(:tutorial_code) {'ui-test-artist'}
 
       it 'serves the stand-in entry without querying Contentful' do
-        expect(CdoContentful::CsForAll::Entry::Tutorial).not_to receive(:find_each)
+        expect(CdoContentful::HourOfAi::Entry::Tutorial).not_to receive(:find_each)
 
         _(get_tutorial.tutorial_id).must_equal 'ui-test-artist'
         _(get_tutorial.primary_link_ref.fields[:primary_target]).
@@ -88,19 +88,19 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
       before do
         allow(CDO).to receive(:rack_env?).and_call_original
         allow(CDO).to receive(:rack_env?).with(:development).and_return(true)
-        allow(CDO).to receive(:contentful_cs_for_all_access_token).and_return(nil)
+        allow(CDO).to receive(:contentful_hour_of_ai_access_token).and_return(nil)
       end
 
       it 'raises an actionable error instead of the opaque Contentful failure' do
         error = _ {refresh_tutorials}.must_raise RuntimeError
-        _(error.message).must_match(/contentful_cs_for_all_access_token/)
+        _(error.message).must_match(/contentful_hour_of_ai_access_token/)
         _(error.message).must_match(%r{ui-test-})
       end
     end
 
     context 'when fetching tutorials fails second time' do
       before do
-        allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_each).
+        allow(CdoContentful::HourOfAi::Entry::Tutorial).to receive(:find_each).
           with(limit: 200, order: 'fields.tutorialID', 'tutorialID[exists]': true).
           and_raise(expected_error)
       end
@@ -122,7 +122,7 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
     let(:cache_data) {Faker::Internet.unique.uuid}
 
     before do
-      described_class.send(:cache).write(described_class::CACHE_KEY, cache_data)
+      described_class.send(:cache).write(described_class.send(:cache_key), cache_data)
     end
 
     it 'deletes Tutorial entries and returns true' do

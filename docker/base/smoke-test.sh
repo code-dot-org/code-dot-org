@@ -12,7 +12,7 @@
 . "$(dirname "$0")/../smoke-harness.sh"
 
 # 1. Ruby is the pinned version.
-run "ruby 3.2.11" "3.2.11" -- ruby --version
+run "ruby 3.3.12" "3.3.12" -- ruby --version
 
 # 2a. LD_PRELOAD resolves cleanly (no ld.so error on stderr).
 run "ruby runs under LD_PRELOAD" "ok" -- ruby -e 'puts :ok'

@@ -19,9 +19,6 @@ function initPage() {
     <Provider store={store}>
       <UnitRollup objectToRollUp={'Resources'} unit={unitSummary} />
     </Provider>,
-    document.getElementById('roll_up'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('roll_up')
   );
 }

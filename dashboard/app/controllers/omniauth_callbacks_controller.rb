@@ -683,6 +683,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private def sign_in_user(user)
+    sign_out if current_user && current_user != user
+
     flash.notice = I18n.t('auth.signed_in')
 
     sign_in_and_redirect user

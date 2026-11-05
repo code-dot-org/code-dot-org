@@ -1,4 +1,5 @@
 import {
+  INSTRUCTIONS_PROMPT_VERSION,
   buildInstructionsPrompt,
   generatedInstructionsSchema,
 } from '@cdo/apps/adaptive/ai/instructionsPrompt';
@@ -29,6 +30,12 @@ const pathway: Pathway = {
   skills: {},
   checkpoints: [checkpoint],
 };
+
+describe('INSTRUCTIONS_PROMPT_VERSION', () => {
+  it('is the date the wording last changed', () => {
+    expect(INSTRUCTIONS_PROMPT_VERSION).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  });
+});
 
 describe('buildInstructionsPrompt', () => {
   it('includes the step brief, the project and the authored fallback', () => {
@@ -83,6 +90,74 @@ describe('buildInstructionsPrompt', () => {
         project: {sourceCode: ''},
       })
     ).not.toContain('How the student works in this lab');
+  });
+
+  it('gives the condition and evidence levels a checked step is judged on', () => {
+    const checked: LevelStep = {
+      ...step,
+      validation: {
+        condition: 'The header shows the site name.',
+        measures: {skillId: 'build'},
+      },
+    };
+    const skilled: Pathway = {
+      ...pathway,
+      skills: {
+        build: {
+          id: 'build',
+          title: 'Build with AI',
+          description: 'Steering AI.',
+          evidenceLevels: {'0': 'Nothing yet', '1': 'Asks for one thing'},
+        },
+      },
+    };
+    const prompt = buildInstructionsPrompt({
+      pathway: skilled,
+      checkpoint,
+      step: checked,
+      project: {sourceCode: ''},
+    });
+
+    expect(prompt).toContain(
+      'HOW THE WORK IS CHECKED\nWhen the student finishes, the change they made in this step is checked against this condition:\nThe header shows the site name.\nEVIDENCE LEVELS for the skill "Build with AI": Steering AI.\n- 0: Nothing yet\n- 1: Asks for one thing'
+    );
+    expect(prompt).toContain('exactly what the condition names');
+    expect(prompt).toContain('highest evidence level listed');
+  });
+
+  it('gives only the condition when the measured skill has no evidence levels', () => {
+    const checked: LevelStep = {
+      ...step,
+      validation: {
+        condition: 'The header shows the site name.',
+        measures: {skillId: 'build'},
+      },
+    };
+    const prompt = buildInstructionsPrompt({
+      pathway,
+      checkpoint,
+      step: checked,
+      project: {sourceCode: ''},
+    });
+
+    expect(prompt).toContain(
+      'HOW THE WORK IS CHECKED\nWhen the student finishes, the change they made in this step is checked against this condition:\nThe header shows the site name.\n\nWrite the instructions'
+    );
+    expect(prompt).not.toContain('EVIDENCE LEVELS');
+    expect(prompt).toContain('exactly what the condition names');
+    expect(prompt).not.toContain('highest evidence level listed');
+  });
+
+  it('says nothing about checking for an unchecked step', () => {
+    const prompt = buildInstructionsPrompt({
+      pathway,
+      checkpoint,
+      step,
+      project: {sourceCode: ''},
+    });
+
+    expect(prompt).not.toContain('HOW THE WORK IS CHECKED');
+    expect(prompt).not.toContain('condition');
   });
 
   it('says so when the project is unnamed and empty', () => {

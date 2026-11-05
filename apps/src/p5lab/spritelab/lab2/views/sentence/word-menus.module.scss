@@ -1,0 +1,454 @@
+@use "sr-only";
+
+// Chips and words are controls, not text to copy; the page gives p and
+// span user-select: text.
+.menus,
+.readOnly {
+  &,
+  * {
+    user-select: none;
+  }
+}
+
+.menus {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+// A carousel takes the room its host gives, so the set scrolls between
+// arrows that stay put; the clusters grow and let the host scroll.
+.menusFill {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.srOnly {
+  @include sr-only.sr-only;
+}
+
+// The sentence and its hidden longest form share one grid cell.
+.sentenceStack {
+  display: grid;
+
+  > * {
+    grid-area: 1 / 1;
+  }
+}
+
+.sentenceGhost {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.sentence {
+  margin: 0;
+  min-height: 44px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-neutral-primary);
+}
+
+// A slot's color from the palette; the text color on it (4.5:1 in both
+// themes); a darker shade for the ledge under a raised button and for
+// lines on the light tray; a lighter shade for lines on the dark tray
+// (3:1 on each).
+@mixin hue($base, $dark, $light, $text) {
+  --hue: var(#{$base});
+  --hue-dark: var(#{$dark});
+  --hue-light: var(#{$light});
+  --hue-text: var(#{$text});
+  --hue-line: var(--hue-dark);
+}
+
+:global([data-theme='Dark']) :is(.hue_blue, .hue_yellow, .hue_pink, .hue_orange, .hue_purple) {
+  --hue-line: var(--hue-light);
+}
+
+.hue_blue {
+  @include hue(
+    --sentiment-information-70,
+    --sentiment-information-90,
+    --sentiment-information-30,
+    --neutral-base-white
+  );
+}
+
+.hue_yellow {
+  @include hue(
+    --sentiment-warning-50,
+    --sentiment-warning-70,
+    --sentiment-warning-30,
+    --neutral-gray-95
+  );
+}
+
+.hue_pink {
+  @include hue(
+    --brand-pink-60,
+    --brand-pink-80,
+    --brand-pink-30,
+    --neutral-base-white
+  );
+}
+
+.hue_orange {
+  @include hue(
+    --brand-orange-50,
+    --brand-orange-70,
+    --brand-orange-30,
+    --neutral-gray-95
+  );
+}
+
+.hue_purple {
+  @include hue(
+    --brand-purple-50,
+    --brand-purple-70,
+    --brand-purple-30,
+    --neutral-base-white
+  );
+}
+
+.chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  // The vertical margin is the room between the sentence's lines.
+  margin: 6px 2px;
+  padding: 4px 26px 4px 6px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: 999px;
+  font-weight: 600;
+  line-height: 1.4;
+  // The page's background and text colors for every slot; a chip carries
+  // no slot-specific color.
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  vertical-align: middle;
+  animation: chip-land 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes chip-land {
+  from {
+    opacity: 0;
+    transform: scale(0.6) rotate(-6deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+// The icon beside a word, in the word's own color; a plain color is a dot.
+.wordIcon {
+  flex: none;
+  width: 1.25em;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.colorDot {
+  flex: none;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 50%;
+}
+
+.keepTogether {
+  white-space: nowrap;
+}
+
+// Margin 0: the page gives every button 5px, which would make the chip
+// taller than the sentence's line.
+.chipWord {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+button.chipWord {
+  cursor: pointer;
+}
+
+// No x in a read-only chip.
+.readOnly .chip {
+  padding-right: 14px;
+}
+
+// The empty slot where the next chosen word will go: a dashed white outline
+// over a translucent white wash.
+.placeholder {
+  min-width: 80px;
+  min-height: 1.5em;
+  padding-right: 14px;
+  background: var(--neutral-white-alpha-20);
+  border: 2px dashed var(--border-neutral-white-fixed);
+  box-shadow: none;
+  opacity: 0.9;
+  animation: slot-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes slot-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.95;
+  }
+}
+
+// Only the blank's pulse stops: an animation change on a filled chip would
+// replay its landing.
+.dropTarget {
+  opacity: 1;
+  transform: scale(1.08);
+  box-shadow: 0 0 0 3px var(--border-neutral-secondary);
+}
+
+.placeholder.dropTarget {
+  animation: none;
+}
+
+.dimmed {
+  opacity: 0.5;
+}
+
+// The chip's corner badge, a true circle. Nested under the chip to outrank
+// the button's own shape and padding.
+.chip .remove {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  min-width: 0;
+  padding: 0;
+  border: 2px solid var(--background-neutral-primary);
+  border-radius: 50%;
+}
+
+// No frame of its own: the pane frames the whole word area.
+.carouselBox {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 0;
+  padding: 8px 6px 8px;
+}
+
+@media (max-height: 800px) {
+  .carouselBox {
+    gap: 0;
+    padding: 4px 4px 6px;
+  }
+}
+
+// One slot's words at a time, between the arrows.
+.carousel {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: stretch;
+  gap: 4px;
+  min-height: 0;
+}
+
+// The arrows above and below the set instead of beside it.
+.carouselVertical {
+  flex-direction: column;
+  align-items: stretch;
+
+  .arrow {
+    align-self: center;
+  }
+}
+
+// Closer rows and a shorter set, for a narrow pane.
+.carouselTight {
+  gap: 0;
+  padding: 4px 4px 6px;
+
+  .set {
+    min-height: 72px;
+    padding: 4px;
+  }
+}
+
+// Every open set at once, one cluster of words per set down the pane, with
+// a rule between each pair; the set the sentence's blank stands at is
+// marked.
+.clusters {
+  display: flex;
+  flex-direction: column;
+}
+
+.cluster {
+  padding: 14px 0;
+
+  & + & {
+    border-top: 1px solid var(--border-neutral-secondary);
+  }
+}
+
+// The arrows are always there; one with nowhere to go is disabled.
+.arrow {
+  flex: none;
+  align-self: center;
+  margin: 0;
+}
+
+// All sets share one grid cell, so the stack is as tall as the tallest set;
+// the set on show scrolls here while the arrows at the edges stay put.
+.sets {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  overflow-y: auto;
+}
+
+// The words sit mid-height in a short set; a tall set scrolls from its
+// top (auto margins center without clipping, where align-items would).
+.set {
+  grid-area: 1 / 1;
+  min-width: 0;
+  min-height: 108px;
+  display: flex;
+  padding: 6px 4px;
+}
+
+@media (max-height: 800px) {
+  .set {
+    min-height: 84px;
+    padding: 4px;
+  }
+}
+
+// Laid out for height only.
+.setHidden {
+  visibility: hidden;
+}
+
+@keyframes enter-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes enter-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.enterFromRight {
+  animation: enter-from-right 0.2s ease-out;
+}
+
+.enterFromLeft {
+  animation: enter-from-left 0.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enterFromRight,
+  .enterFromLeft {
+    animation: none;
+  }
+}
+
+// The page gives every button a 5px margin; the chips and arrows
+// zero it so these gaps are the whole gap.
+.words {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: auto 0;
+}
+
+.word {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  min-height: 40px;
+  // Its own stacking context: the browser paints a drag ghost from the
+  // dragged element's nearest stacking context, clipped to the element's
+  // box, so without this the ghost carries the word box's white corners.
+  isolation: isolate;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: 999px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 4px 16px 4px 10px;
+  cursor: grab;
+  transition:
+    background-color 0.12s ease-out,
+    border-color 0.12s ease-out;
+  // Backwards only: a fill after the end would hold the pop's transform
+  // over the hover and press ones.
+  animation: word-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  animation-delay: calc(var(--i) * 35ms);
+
+  &:hover:not(:disabled, .chosen) {
+    background: var(--background-neutral-secondary);
+    border-color: var(--border-neutral-secondary);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+@keyframes word-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Outranks the hover above: the picked word is dimmed in the list, as if
+// used up, though a press still takes it back out of the sentence.
+.word.chosen {
+  opacity: 0.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip,
+  .word,
+  .placeholder {
+    animation: none;
+  }
+
+  .word {
+    transition: none;
+  }
+}

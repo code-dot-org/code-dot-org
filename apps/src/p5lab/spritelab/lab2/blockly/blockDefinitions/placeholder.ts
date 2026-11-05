@@ -14,6 +14,8 @@ export const PLACEHOLDER_MUTATOR = 'spritelab2_placeholder_like';
     the block while a dragged block hovers over its connection. */
 export const PLACEHOLDER_CLASS = 'blocklyPlaceholder';
 export const PLACEHOLDER_ACTIVE_CLASS = 'blocklyPlaceholderActive';
+/** A blank placeholder: the room without the outline. */
+export const PLACEHOLDER_BLANK_CLASS = 'blocklyPlaceholderBlank';
 
 // The block is an empty box: one transparent image gives it a size, later
 // matched to the block it stands in for (placeholders.ts).
@@ -22,22 +24,32 @@ export const PLACEHOLDER_SPACER = {width: 160, height: 24};
 const TRANSPARENT_PIXEL =
   'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
-/** A placeholder's extra state: the block it should be the size of. */
+/** The block it should be the size of; `blank` keeps the room without the outline. */
 export interface PlaceholderState {
   like?: BlocklyCore.serialization.blocks.State;
+  blank?: boolean;
 }
 
 export interface PlaceholderBlock extends BlocklyCore.Block {
   like?: BlocklyCore.serialization.blocks.State;
+  blank?: boolean;
 }
 
-/** Keeps the `like` block through save and load. */
+/** Keeps the `like` block and the blank flag through save and load. */
 export const placeholderMutator = {
   saveExtraState(this: PlaceholderBlock): PlaceholderState | null {
-    return this.like ? {like: this.like} : null;
+    const state: PlaceholderState = {};
+    if (this.like) {
+      state.like = this.like;
+    }
+    if (this.blank) {
+      state.blank = true;
+    }
+    return Object.keys(state).length ? state : null;
   },
   loadExtraState(this: PlaceholderBlock, state: PlaceholderState) {
     this.like = state.like;
+    this.blank = state.blank;
   },
 };
 

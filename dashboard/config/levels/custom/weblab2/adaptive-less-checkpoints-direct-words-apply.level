@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:26:33.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "#### Change the words and tone\r\n\r\n1. Pick a section of your site.\r\n2. Ask the AI to rewrite its words in a tone that fits your audience. Use the section's name in your prompt.\r\n3. Try it out. Then ask for a different tone, like funny, serious, or friendly, and keep the one that fits best.\r\n\r\n*Example: “Rewrite the About section to sound funny and casual, like I’m talking to a friend.”*\r\n\r\n**Check your prompt:** Does it use the section's name and the tone you want?",
+    "project_template_level_name": "adaptive-less-checkpoints-template-main-website-project",
+    "encrypted_exemplar_sources": "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\n",
+    "generate_outline": "Instruct the AI to adjust the tone and message of a specific section of your page, then evaluate the change and decide whether to keep, redirect, or rewrite it.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:26:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:26:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:26:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:26:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 17:04:36 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 17:12:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:07:44 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

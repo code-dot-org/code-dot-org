@@ -13,9 +13,6 @@ $(document).ready(() => {
       isSignedOut={isSignedOut}
       passwordMinLength={passwordMinLength}
     />,
-    document.getElementById('login-type-selection'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('login-type-selection')
   );
 });

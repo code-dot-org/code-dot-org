@@ -33,6 +33,11 @@ jest.mock('@cdo/apps/aichat/api/client', () => ({
   })),
 }));
 
+// Image moderation is WhiteboardChallenge's concern; pass every drawing here.
+jest.mock('@cdo/apps/util/moderateImage', () => ({
+  moderateImage: jest.fn(async () => 'safe'),
+}));
+
 // See the stub for what it reproduces of the real canvas, and why.
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoCanvas',
@@ -188,6 +193,73 @@ describe('ChallengeBox', () => {
       ).toBeInTheDocument()
     );
     expect(document.querySelector('svg')).toBeInTheDocument();
+  });
+
+  it('returns to composing when the submit fails', async () => {
+    snapshot.mockResolvedValue({error: 'Could not capture your drawing.'});
+
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
+    await submitWhiteboardChallenge();
+
+    await waitFor(() =>
+      expect(
+        screen.getByText('Could not capture your drawing.')
+      ).toBeInTheDocument()
+    );
+    expect(
+      screen.queryByText('Tutor is writing feedback...')
+    ).not.toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+    expect(
+      screen.getByPlaceholderText('Write your explanation here')
+    ).toBeEnabled();
+  });
+
+  it('shows a canned message and stops polling when the feedback is flagged', async () => {
+    jest.useFakeTimers();
+    fetchJson.mockResolvedValue({
+      value: fakeChallengeResponse({evaluation_status: 'feedback_violation'}),
+    });
+    snapshot.mockResolvedValue({
+      blob: new Blob(['png-bytes'], {type: 'image/png'}),
+    });
+    post.mockResolvedValue({ok: true, json: async () => createdResponse});
+    put.mockResolvedValue({});
+
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
+    await submitWhiteboardChallenge();
+    await waitFor(() =>
+      expect(
+        screen.getByText('Tutor is writing feedback...')
+      ).toBeInTheDocument()
+    );
+
+    await tick(2000);
+
+    await waitFor(() =>
+      expect(
+        screen.getByText(
+          'Sorry, my feedback was flagged by our content moderation policy. Please try submitting again.'
+        )
+      ).toBeInTheDocument()
+    );
+    expect(
+      screen.queryByText('Tutor is writing feedback...')
+    ).not.toBeInTheDocument();
+
+    jest.useRealTimers();
   });
 
   it('displays the feedback once evaluation succeeds', async () => {

@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894768-d8d115e6850f",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are benefits of using Machine Learning in recognizing fish? (Select all that apply)",
+  "solution": [
+    {
+      "option": "It can process a large amount of data quickly.",
+      "correct": true
+    },
+    {
+      "option": "It requires no initial programming.",
+      "correct": false
+    },
+    {
+      "option": "It can improve its accuracy over time.",
+      "correct": true
+    },
+    {
+      "option": "It can only recognize one type of fish.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "f8c2d4bf-f3fb-4fba-8c66-7a590c29b8cf"
+  ]
+}

@@ -203,7 +203,7 @@ class RegistrationsController < Devise::RegistrationsController
           user: current_user,
           event_name: 'lti_user_created',
           metadata: metadata,
-          session: session,
+          request: request,
         )
       end
       has_school = current_user.school_info&.school_id.present?
@@ -215,7 +215,7 @@ class RegistrationsController < Devise::RegistrationsController
         event_name: 'Sign Up Finished Backend',
         metadata: event_metadata,
         get_enabled_experiments: true,
-        session: session,
+        request: request,
       )
     end
   end
@@ -421,7 +421,7 @@ class RegistrationsController < Devise::RegistrationsController
           from_user_type: previous_user_type,
           to_user_type: current_user.user_type
         },
-        session: session
+        request: request
       )
     end
 

@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q4-2026'
+
+right 'A one-hot encoding, with one column per type'
+wrong 'A binary encoding, with 1 for cat and 0 for the others'
+wrong "The number of letters in the type's name"
+wrong 'No encoding, because the model can read the words'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A shelter's data records each animal's type as cat, dog or rabbit. Which encoding should a model use for this feature?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Encodings
+MARKDOWN

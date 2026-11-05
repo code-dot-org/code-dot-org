@@ -1,0 +1,12 @@
+name 'adaptive-less-checkpoints-make-respond-practice'
+title 'Choose, count, remember'
+description ''
+question 'Your page has a Pick button for club events. You want it to show how many times each event was picked, even after a reload. What else does the page need to do?'
+wrong 'Pick the same event every single time.'
+right 'Count each pick and save the totals.'
+wrong 'Add a brand new event after every pick.'
+wrong 'Hide the whole list from every visitor.'
+
+
+
+allow_multiple_attempts true

@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q6-2026'
+
+wrong 'The model is trained on too little data to find any pattern'
+right 'The model memorizes its training data instead of learning the pattern'
+wrong 'The model makes the same prediction for every input'
+wrong "The model's test set is larger than its training set"
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is overfitting?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Training and Test Sets
+MARKDOWN

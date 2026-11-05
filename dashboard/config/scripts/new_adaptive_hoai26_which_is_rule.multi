@@ -1,0 +1,14 @@
+name 'new-adaptive-HoAI26-which-is-rule'
+title 'TODO: title'
+description ''
+question 'Which sentence describes a rule, showing a condition and an action?'
+wrong 'The score is 7 after the third spin.'
+right 'If the score hits 10, it ends.'
+wrong 'The button is blue with white text.'
+wrong 'The page has a title at the top.'
+
+markdown <<MARKDOWN
+Which sentence describes a rule, showing a condition and an action?
+MARKDOWN
+
+allow_multiple_attempts true

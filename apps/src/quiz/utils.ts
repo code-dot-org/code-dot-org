@@ -2,6 +2,9 @@ import {QuizPage} from './types';
 
 export const toBool = (value: boolean | undefined) => value ?? false;
 
+export const pluralize = (count: number, noun: string) =>
+  `${count} ${noun}${count === 1 ? '' : 's'}`;
+
 // Groups a flat question list into pages, ascending by page number.
 export function groupByPage<T extends {page: number | null}>(
   questions: T[]
@@ -39,4 +42,9 @@ export function formatChoiceLetter(index: number): string {
     n = Math.floor((n - 1) / 26);
   }
   return label;
+}
+
+// Labels the selected answer in a submitted question's results.
+export function selectedAnswerLabel(isViewingStudent?: boolean): string {
+  return isViewingStudent ? "Student's answer" : 'Your answer';
 }

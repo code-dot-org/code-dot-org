@@ -2,11 +2,16 @@ import {type ReactFlowInstance} from '@xyflow/react';
 import {toBlob} from 'html-to-image';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {capExportPixelRatio} from '@cdo/apps/util/imageExport/capExportPixelRatio';
+import {getExportStyleProperties} from '@cdo/apps/util/imageExport/getExportStyleProperties';
+import {getFontEmbedCss} from '@cdo/apps/util/imageExport/getFontEmbedCss';
+import {inlineSvgStylesForExport} from '@cdo/apps/util/imageExport/inlineSvgStylesForExport';
 
 import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
 import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
+import {downscaleImagesForExport} from './downscaleImagesForExport';
 import {getCanvasBounds} from './getCanvasBounds';
 import {SketchCaptureError} from './SketchCaptureError';
 
@@ -15,10 +20,27 @@ const EXPORT_PADDING_PX = 10;
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
 export const CAPTURE_ERROR = 'Could not capture your sketch. Please try again.';
+// html-to-image never resolves if the browser loads an image but cannot decode it.
+export const CAPTURE_TIMEOUT_MS = 30_000;
 
-export const createSketchSnapshotBlob = async (
+type SnapshotResult = {blob?: Blob; error?: string};
+
+let captureInFlight: Promise<SnapshotResult> | undefined;
+
+// Overlapping captures would each save the other's temporary DOM edits as
+// originals, so a call made mid-capture shares the running capture's result.
+export const createSketchSnapshotBlob = (
   reactFlow: ReactFlowInstance | null
-): Promise<{blob?: Blob; error?: string}> => {
+): Promise<SnapshotResult> => {
+  captureInFlight ??= captureSketch(reactFlow).finally(() => {
+    captureInFlight = undefined;
+  });
+  return captureInFlight;
+};
+
+const captureSketch = async (
+  reactFlow: ReactFlowInstance | null
+): Promise<SnapshotResult> => {
   if (!reactFlow) {
     return {error: 'Sketch is not ready yet. Please try again.'};
   }
@@ -59,10 +81,22 @@ export const createSketchSnapshotBlob = async (
     ? getComputedStyle(canvas).backgroundColor
     : '#ffffff';
 
-  let blob: Blob | null;
-  try {
-    blob = await toBlob(viewport, {
+  // html-to-image multiplies the output by the device pixel ratio. Keep that
+  // detail, but not past our max canvas size.
+  const pixelRatio = capExportPixelRatio(
+    Math.max(window.devicePixelRatio || 1, 1),
+    imageWidth,
+    imageHeight
+  );
+
+  const renderBlob = async () => {
+    // Supplying this stops html-to-image from inlining every font the page declares.
+    const fontEmbedCSS = await getFontEmbedCss(viewport);
+    return toBlob(viewport, {
       backgroundColor,
+      fontEmbedCSS,
+      includeStyleProperties: getExportStyleProperties(),
+      pixelRatio,
       width: imageWidth,
       height: imageHeight,
       style: {
@@ -71,17 +105,44 @@ export const createSketchSnapshotBlob = async (
         transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
       },
     });
+  };
+
+  const restoreImageSources = downscaleImagesForExport(
+    viewport,
+    scale * pixelRatio
+  );
+  const restoreSvgStyles = inlineSvgStylesForExport(viewport);
+  let timer: number | undefined;
+  let blob: Blob | null;
+  try {
+    blob = await Promise.race([
+      renderBlob(),
+      new Promise<never>((_, reject) => {
+        timer = window.setTimeout(
+          () =>
+            reject(
+              new Error(`capture timed out after ${CAPTURE_TIMEOUT_MS} ms`)
+            ),
+          CAPTURE_TIMEOUT_MS
+        );
+      }),
+    ]);
   } catch (cause) {
     const captureError = new SketchCaptureError(cause, {
       elements: contentRects.length,
       images: viewport.querySelectorAll('img').length,
       imageWidth,
       imageHeight,
+      pixelRatio,
     });
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Sketch snapshot error', captureError, captureError.details);
     return {error: CAPTURE_ERROR};
+  } finally {
+    window.clearTimeout(timer);
+    restoreImageSources();
+    restoreSvgStyles();
   }
 
   if (!blob) {

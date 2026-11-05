@@ -1,0 +1,70 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-primary);
+}
+
+.cardNested {
+  border-radius: var(--shape-sm);
+}
+
+.header:not(:last-child) {
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.leading {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.typeIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 22px;
+  color: var(--text-neutral-quaternary);
+}
+
+.nameClamp {
+  max-width: 42%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.saveError {
+  padding: 8px 10px 10px;
+  background: var(--background-neutral-primary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 10px 8px 10px 10px;
+  background: var(--background-neutral-primary);
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
+// aria-disabled rather than disabled, so the button keeps focus and its tooltip.
+.footer .ariaDisabled[aria-disabled='true'] {
+  border-color: var(--borders-neutral-disabled);
+  color: var(--text-neutral-disabled);
+  background-color: var(--background-neutral-primary);
+}
+
+.footerActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}

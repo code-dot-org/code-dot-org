@@ -5,6 +5,7 @@
 dashboard_workers: 0
 
 db_cluster_id: localhost
+db_proxy: none
 db_endpoint_writer: localhost
 db_endpoint_writer_port: 3306
 db_endpoint_proxy_writer: localhost
@@ -14,9 +15,10 @@ db_endpoint_proxy_reader_port: 3306
 db_endpoint_proxy_reporting: localhost
 db_endpoint_proxy_reporting_port: 3306
 
+# Use default credentials for the admin/root user. `db:provision_sql_users` creates the `writer` and `reader` users.
 db_credential_admin: {"username":"root", "password":""}
-db_credential_writer: {"username":"root", "password":""}
-db_credential_reader: {"username":"root", "password":""}
+db_credential_writer: {"username":"writer", "password":""}
+db_credential_reader: {"username":"reader", "password":""}
 db_writer: 'mysql://root@localhost/'
 
 lint: true
@@ -79,6 +81,10 @@ azure_ai_content_safety_key: !Secret
 ai_gateway_auth_key: !Secret
 ai_gateway_auth_public_key: !Secret
 ai_gateway_auth_key_passphrase: !Secret
+# One key pair per environment; the gateway verifies a token with the public key of the environment its kid (key ID) names.
+ai_gateway_jwt_auth_key: !Secret
+ai_gateway_jwt_auth_public_key: !Secret
+ai_gateway_jwt_auth_key_passphrase: !Secret
 
 google_vertex_ai_tutor_service_account_key: !Secret
 google_vertex_ai_chat_service_account_key: !Secret
@@ -88,6 +94,8 @@ tutor_langfuse_secret_key: !Secret
 tutor_langfuse_public_key: !Secret
 ta_langfuse_secret_key: !Secret
 ta_langfuse_public_key: !Secret
+adaptive_langfuse_secret_key: !Secret
+adaptive_langfuse_public_key: !Secret
 
 # Enables DCDO settings via cookies
 use_cookie_dcdo: true

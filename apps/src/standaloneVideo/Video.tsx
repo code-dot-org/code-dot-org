@@ -1,4 +1,6 @@
-import React, {useLayoutEffect, useEffect, useState} from 'react';
+import React, {RefObject, useEffect, useRef, useState} from 'react';
+
+import useElementSize from '@cdo/apps/util/hooks/useElementSize';
 
 import standaloneVideoLocale from './locale';
 import testYouTubeAvailable from './testYouTubeAvailable';
@@ -13,24 +15,10 @@ interface VideoProps {
   src?: string;
   download?: string;
   thumbnail?: string;
-}
-
-function useWindowSize() {
-  const [size, setSize] = useState([
-    document.documentElement.clientWidth,
-    document.documentElement.clientHeight,
-  ]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      const width = document.documentElement.clientWidth;
-      const height = document.documentElement.clientHeight;
-      setSize([width, height]);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
+  // When provided, sizes the video to this element rather than the component's
+  // own container. Use when Video is embedded inside a larger layout that
+  // already owns the containing element (e.g. an adaptive step player).
+  containerRef?: RefObject<HTMLElement>;
 }
 
 /**
@@ -42,6 +30,7 @@ const Video: React.FunctionComponent<VideoProps> = ({
   src,
   download,
   thumbnail,
+  containerRef,
 }) => {
   // Leave a margin to the left and the right of the video, to the edges
   // of the screen.
@@ -58,9 +47,13 @@ const Video: React.FunctionComponent<VideoProps> = ({
   // The aspect ratio of the video.
   const videoAspectRatio = 16 / 9;
 
-  let [targetWidth, targetHeight] = useWindowSize();
-  targetWidth -= horizontalMargin * 2;
-  targetHeight -= verticalMargin * 2 + childrenAreaHeight;
+  // When no external ref is supplied, measure the component's own container.
+  const ownRef = useRef<HTMLDivElement>(null);
+  const activeRef: RefObject<HTMLElement> = containerRef ?? ownRef;
+  const [clientWidth, clientHeight] = useElementSize(activeRef);
+
+  const targetWidth = clientWidth - horizontalMargin * 2;
+  const targetHeight = clientHeight - verticalMargin * 2 - childrenAreaHeight;
 
   let width, height;
   if (targetWidth / targetHeight > videoAspectRatio) {
@@ -74,13 +67,14 @@ const Video: React.FunctionComponent<VideoProps> = ({
   const [videoChoice, setVideoChoice] = useState<VideoChoiceType>(undefined);
 
   useEffect(() => {
-    if (src) {
-      const noCookie = src.includes('youtube-nocookie.com');
-
-      testYouTubeAvailable(noCookie, available =>
-        setVideoChoice(available ? 'youtube' : 'fallback')
-      );
+    if (!src) {
+      setVideoChoice('fallback');
+      return;
     }
+    const noCookie = src.includes('youtube-nocookie.com');
+    testYouTubeAvailable(noCookie, available =>
+      setVideoChoice(available ? 'youtube' : 'fallback')
+    );
   }, [src]);
 
   const videoJsOptions = {
@@ -98,7 +92,7 @@ const Video: React.FunctionComponent<VideoProps> = ({
   };
 
   return (
-    <div id="video-container" className={styles.container}>
+    <div id="video-container" className={styles.container} ref={ownRef}>
       <div className={styles.inner} style={{width, height}}>
         <div className={styles.video}>
           {videoChoice === 'fallback' && download && (

@@ -42,8 +42,8 @@ const PROVIDERS: Record<string, LinkedAccountProvider> = {
 const CANVAS_INSTRUCTIONS_URL =
   'https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas';
 
-// Keyed by LtiIntegration#platform_name; Canvas names from legacy
-// LmsLoginTypeNames and its logo from the sign-up page (apps/src/signUpFlow/images).
+// Keyed by LtiIntegration#platform_name; the Canvas logo matches the sign-up
+// page's (apps/src/signUpFlow/images).
 // PowerSchool acquired Schoology and brands it with the PowerSchool mark.
 const LMS_PLATFORMS: Record<
   string,

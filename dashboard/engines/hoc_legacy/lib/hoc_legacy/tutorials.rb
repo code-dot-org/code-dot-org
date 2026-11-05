@@ -8,8 +8,8 @@ module HocLegacy
 
     # Stub Tutorial entries for our ui-test-* courses, keyed by tutorial_id.
     #
-    # The real tutorial store is backed by the Contentful CS-for-all space and
-    # needs CDO.contentful_cs_for_all_access_token. To let the HoC begin/finish
+    # The real tutorial store is backed by the Contentful Hour of AI space and
+    # needs CDO.contentful_hour_of_ai_access_token. To let the HoC begin/finish
     # -> congrats/certificate UI tests exercise a ui-test-* course without that
     # token, we serve these entries directly from hard-coded values in
     # development and test, without accessing Contentful.
@@ -42,12 +42,12 @@ module HocLegacy
 
       # @return [Boolean] true if the store was refreshed
       def refresh
-        cache.write(CACHE_KEY, fetch_all)
+        cache.write(cache_key, fetch_all)
       end
 
       # @return [Boolean] true if the store was cleared
       def clear
-        cache.delete(CACHE_KEY)
+        cache.delete(cache_key)
       end
 
       # Stub entries for ui-test- courses, keyed by tutorial_id. Empty
@@ -65,7 +65,11 @@ module HocLegacy
 
       # @return [Hash{String => Contentful::Entry}] a hash mapping tutorial codes to their Tutorial entries
       private def store
-        cache.fetch(CACHE_KEY, force: CDO.rack_env?(:development)) {fetch_all} || {}
+        cache.fetch(cache_key, force: CDO.rack_env?(:development)) {fetch_all} || {}
+      end
+
+      private def cache_key
+        "#{CACHE_KEY}:#{CdoContentful::HourOfAi::Client.config.space}"
       end
 
       private def cache
@@ -74,10 +78,10 @@ module HocLegacy
 
       private def require_contentful_access!
         return unless CDO.rack_env?(:development)
-        return if CDO.contentful_cs_for_all_access_token.present?
+        return if CDO.contentful_hour_of_ai_access_token.present?
 
         raise <<~MESSAGE
-          Please set contentful_cs_for_all_access_token in locals.yml to access prod courses on
+          Please set contentful_hour_of_ai_access_token in locals.yml to access prod courses on
           HoC tutorial routes, or use ui-test-artist (or other course in UI_TEST_TUTORIAL_PATHS)
           to run the HoC begin/finish -> congrats/certificate flow locally without the access token.
         MESSAGE
@@ -86,7 +90,7 @@ module HocLegacy
       private def fetch_all
         require_contentful_access!
 
-        CdoContentful::CsForAll::Entry::Tutorial.
+        CdoContentful::HourOfAi::Entry::Tutorial.
           find_each(order: FETCH_ORDER, limit: FETCH_LIMIT, 'tutorialID[exists]': true).
           with_object({}) do |tutorial, data|
             data[tutorial.tutorial_id] = tutorial

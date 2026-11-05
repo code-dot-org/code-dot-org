@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284597-673c37b2ecb5",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is the main benefit of using a loop in programming?",
+  "solution": [
+    {
+      "option": "It makes the code run faster.",
+      "correct": false
+    },
+    {
+      "option": "It allows the code to repeat instructions without duplication.",
+      "correct": true
+    },
+    {
+      "option": "It helps the computer understand programming languages.",
+      "correct": false
+    },
+    {
+      "option": "It reduces the need for conditions in code.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "7675c5c0-f57f-4b6a-adbb-912592e71b36"
+  ]
+}

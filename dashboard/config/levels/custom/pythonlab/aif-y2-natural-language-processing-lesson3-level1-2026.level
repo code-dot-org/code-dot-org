@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T00:39:44.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You are an archivist standardizing a library’s catalog.\r\n\r\nIn this program, you have an `entries` list of nine catalog entries.  Your task is to complete the `normalize` function. It should return a standardized form for each entry.\r\n\r\n\r\n**☑️ Do This:**\r\n\r\n- Run the program. How many entries does it count? How many different items?\r\n- Implement the first normalization rule: lowercasing text.\r\n- Test your program. It should count seven unique entries.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember you can lowercase `text` with `text.lower()`. Be sure to assign the result back to the `text` variable.\r\n\r\n```python\r\ntext = text.lower()\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "example",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import re\n\nentries = [\n  \"Volcanoes\",\n  \"The Volcano Book\",\n  \"volcanoes of the world.\",\n  \"VOLCANOES!\",\n  \"Volcanic Eruptions\",\n  \"volcano book\",\n  \"Volcanoes of the World\",\n  \"volcanoes\",\n  \"VOLCANOES OF THE WORLD\",\n]\n\nSTOP_WORDS = [\"a\", \"an\", \"the\", \"of\", \"and\", \"in\", \"to\"]\n\n\ndef normalize(text):\n  # TODO: Convert the text to lower case\n  return text\n\n\n# Count unique entries\nuniques = []\nfor entry in entries:\n  form = normalize(entry)\n  if form not in uniques:\n    uniques.append(form)\n\nprint(\"Entries:\", len(entries))\nprint(\"Unique entries:\", len(uniques))",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMp+W9PRG0AV42gR\nqK8fuzBV7VZd8sW+1EVEOcPX70CAewZagkExIJQOz0m2PnLECSP6o6Oqu7n6\nfwTMjL55sndvCCOebLCi5YavHpq86NDyfvmidcLj7UFoDtuViTA2AAdCTawZ\nxodAU+BH1Bcqp1Ki8ZR7+mI5BY2zzLwc0n8ks9W/+kkUtlQ07gEKibETYGJ9\nMTK9GJjG5jS+uIZFil6Zx52Of07yUfs2ocvs1/OC3xJrz6YMMqX4BVd459US\nMlpuoBiaBHYF7uyk3FoVZ4E4wplVEDRg6IHyb68jCn+ThI+qsGUsnwP5DHa4\nGhnb33T4k7LUbMwRj59y796phEbXr1A+f8dajW3IepLx5f2+Ti8r73S2w7MM\nKMEecgWP81js8E1AeOkNHkeU0OwDkMeCllt3PCA9Qg6QnQdOfKLhR55ZST64\n/PmmafR09mBFkhNEwjYQC8v/eA81v5NcZhU+YT3Hsuvt1Qlq9/2rLT4SfCSJ\nU8P2VinOTXMnPlBjIx89Dr444LkC0KykWHkpPYbxqHCm5rcelMYJd2I+21tb\n4ecIjEArFFnxDZe0zqFzabsUbfTxmfXp9UvzQD0aPbT6Iwdhcc3uiO3FJVij\nsgR1AKavGrC5HcabgLjxRyw+bKjuqCq3Nv4Er/gaS3IEv9p+L9rojhbTd98w\nY2Dsl+asgpxy/Jbo+htPmaSpv8anNey77Dc6+D2aThwXNqCrdmsKLE9msPfp\nMJeE4VfgO2PKDwUYiqyfGHq8U8dmHaifxtw6EWveKq5O/E+FzvAABOcT+oJt\nOIpue/2A9Z0bnTYIfWMf7xrRyBWAkUs3CL1lnFmnABVO4qgrKw7CWEZLggAK\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 00:40:16 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-03 00:40:33 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

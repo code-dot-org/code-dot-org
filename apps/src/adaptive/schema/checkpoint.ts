@@ -1,5 +1,6 @@
 import {z} from 'zod';
 
+import {planSchema} from './planTemplate';
 import {stepSchema, stepSourceSchema} from './steps';
 
 /**
@@ -15,6 +16,36 @@ export const checkpointSourceSchema = z.strictObject({
   skillIds: z.array(z.string().min(1)).optional(),
   /** Checkpoint ids that must be complete before this one unlocks. */
   requires: z.array(z.string().min(1)).optional(),
+  /**
+   * The evidence level, by skill in `skillIds`, at which a student has
+   * already demonstrated this checkpoint. A skill left out needs evidence
+   * level 1.
+   */
+  targetEvidenceLevels: z
+    .record(z.string().min(1), z.number().int().min(1))
+    .optional(),
+  /**
+   * Whether a student who has demonstrated this checkpoint may be placed
+   * past it. Needs `skillIds`.
+   */
+  skippable: z.boolean().optional(),
+  /**
+   * Whether finishing this checkpoint returns to the map focused on the
+   * next open checkpoint, so the student sees what their evidence skipped.
+   */
+  routeAfterCompletion: z.boolean().optional(),
+  /**
+   * The map destination this checkpoint belongs to: an id in the pathway's
+   * `destinations`, or the title itself when the pathway declares none.
+   * Only a terminal (leaf) checkpoint, one that no other checkpoint
+   * requires, can have one.
+   */
+  destination: z.string().min(1).optional(),
+  /**
+   * The project plan this checkpoint's plan questions fill. Needed by a
+   * review step, and by any question that names a plan slot.
+   */
+  plan: planSchema.optional(),
   steps: z.array(stepSourceSchema).min(1),
 });
 

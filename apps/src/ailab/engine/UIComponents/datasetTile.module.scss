@@ -1,0 +1,148 @@
+@use '../sharedMixins' as mixins;
+
+.tile {
+  @include mixins.card;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: start;
+  cursor: pointer;
+  transition:
+    border-color mixins.$mark-transition,
+    box-shadow mixins.$mark-transition,
+    scale mixins.$mark-transition;
+
+  &:hover {
+    border-color: var(--border-neutral-secondary);
+    box-shadow: var(--shadow-sm);
+  }
+
+  &:active {
+    border-color: var(--border-neutral-secondary);
+    box-shadow: none;
+    scale: 0.98;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-focused-primary);
+    outline-offset: 2px;
+    border-color: var(--border-neutral-primary);
+  }
+}
+
+.cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  background-color: var(--background-neutral-tertiary);
+}
+
+.tile:hover .cover,
+.tile:focus-visible .cover {
+  background-color: var(--background-neutral-quaternary);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholderIcon {
+  font-size: 80px;
+  color: var(--text-neutral-quaternary);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  background-color: var(--background-neutral-primary);
+  border-top: 1px solid var(--border-neutral-primary);
+  transition: border-top-color mixins.$mark-transition;
+}
+
+.tile:hover .label,
+.tile:active .label {
+  border-top-color: var(--border-neutral-secondary);
+}
+
+.rows {
+  flex-shrink: 0;
+  white-space: nowrap;
+  color: var(--text-neutral-tertiary);
+}
+
+.name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--text-neutral-primary);
+}
+
+.tile:disabled {
+  border-color: var(--border-disabled-neutral);
+  box-shadow: none;
+  scale: none;
+  cursor: default;
+
+  .cover {
+    opacity: 0.2;
+    background-color: var(--background-neutral-quaternary);
+  }
+
+  .label {
+    border-top-color: var(--border-disabled-neutral);
+  }
+
+  .name {
+    color: var(--text-disabled-neutral);
+  }
+}
+
+.selected,
+.selected:hover,
+.selected:active,
+.selected:focus-visible {
+  border-color: var(--border-selected-primary);
+
+  .label {
+    border-top-color: var(--border-selected-primary);
+  }
+
+  .name {
+    color: var(--text-selected-primary-inverse);
+  }
+}
+
+.selected .cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--background-selected-primary);
+  opacity: 0.6;
+}
+
+.selectedMark {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--shape-round);
+  background-color: var(--background-selected-primary-inverse);
+  color: var(--text-selected-primary-inverse);
+  font-size: 24px;
+}

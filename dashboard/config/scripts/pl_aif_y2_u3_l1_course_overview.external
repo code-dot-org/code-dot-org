@@ -1,0 +1,85 @@
+name 'pl-aif-y2-u3-l1-course-overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit 2 Curriculum Overview
+
+Unit 2: Machine Learning Fundamentals introduces students to the core idea that AI can learn patterns from data instead of following rules a human had to write out by hand, directly picking up where Unit 1's limits left off.
+
+They learn to read and describe data, build both regression and classification models, test those models with real evaluation metrics, and reason about the fairness, safety, and interpretability of what they've built.
+
+<div style="background: #FFFFFF; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); line-height: 1.6; max-width: 800px; margin: 20px auto;">
+  <h2>Students will:</h2>
+  <ul style="list-style-type: disc; padding-left: 20px; font-size: 16px;">
+    <li>Explain what machine learning is and how it differs from logic-based AI, then use probability to reason about uncertainty.</li><br>
+    <li>Read and interpret data, categorical vs. numerical, correlation, outliers, to decide whether a problem calls for regression or classification.</li><br>
+    <li>Build and test both regression and classification models, using loss, accuracy, recall, and precision to judge what makes one model better than another.</li><br>
+    <li>Evaluate how biased or representative data, and feature selection, shape what a model can actually learn.</li><br>
+    <li>Evaluate the real-world fairness, safety, and accountability of a machine learning model, then build and test one of their own in the unit's capstone project.</li>
+  </ul>
+</div>
+
+---
+
+## Unit Calendar
+
+Take a quick look at the lessons included in this unit using the calendar below. This unit spans 3 weeks, with the final 3 class periods of Week 3 dedicated to the capstone project.
+
+<div role="table" aria-label="Unit 2 lesson calendar across 3 weeks" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 860px; margin: 0 auto; border-radius: 10px; overflow: hidden; border: 1.5px solid #ACA8EA;">
+
+  <!-- Week 1 -->
+  <div role="row" style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div role="rowheader" style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center;">Week 1</div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 1</span>What is Machine Learning?</div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 2</span>Handling Uncertainty</div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 3</span>Describing Data</div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 4</span>Prediction Models</div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 5</span>Building Regression Models</div>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div role="row" style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div role="rowheader" style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center;">Week 2</div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 6</span>Testing Regression Models</div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 7</span>Selecting Data</div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 8</span>Building Classifiers</div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 9</span>Testing Classifiers</div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 10</span>Sensing the World</div>
+    </div>
+  </div>
+
+  <!-- Week 3 -->
+  <div role="row" style="display: flex; align-items: stretch;">
+    <div role="rowheader" style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center;">Week 3</div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 11</span>Evaluating the Impact of Models</div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 130px; min-width: 130px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:13px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 12</span>Building Models Ethically</div>
+      <div role="cell" style="background: #fff; border: 2px solid #4C42CF; border-radius: 6px; padding: 10px; flex: 3 1 340px; min-width: 300px; font-size: 16px; color: #1F1976; text-align: center; line-height: 1.4; font-weight: 600;">
+        <span style="display:block; font-size:13px; font-weight:700; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 13 &middot; Spans 3 class periods</span>Image Classifier Project</div>
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<div style="font-size: 16px; font-weight: bold; background-color: #E4E2F8; padding: 10px; border-left: 5px solid #4C42CF; border-radius: 6px; display: inline-block; color: #1F1976;">
+    &#10132; Explore the full unit curriculum <a href="PASTE_AIF_Y2_UNIT_2_COURSE_URL_HERE" target="_blank" rel="noopener noreferrer" style="text-decoration: none; font-weight: bold; color: #1F1976;">here</a>.
+</div>
+MARKDOWN

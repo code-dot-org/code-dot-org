@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-03 21:06:41 UTC",
+    "serialized_at": "2026-10-22 20:44:13 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -102,6 +102,7 @@
       "key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53",
@@ -114,6 +115,7 @@
       "key": "74bb4250-069f-476a-9e12-6a00d0811f4b",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "74bb4250-069f-476a-9e12-6a00d0811f4b",
@@ -126,6 +128,7 @@
       "key": "74e0a670-ad33-4d4e-9b3d-c5edabbd1237",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "74e0a670-ad33-4d4e-9b3d-c5edabbd1237",
@@ -138,6 +141,7 @@
       "key": "cc8f9167-f8c6-43ff-bf90-12b6d8bd10fc",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "cc8f9167-f8c6-43ff-bf90-12b6d8bd10fc",

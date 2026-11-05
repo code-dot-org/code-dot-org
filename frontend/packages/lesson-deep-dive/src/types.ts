@@ -180,3 +180,26 @@ export const challengeValidator: ResponseValidator<Challenge[]> = bodyJson => {
     whiteboard_starter_image_url: c.whiteboard_starter_image_url ?? null,
   }));
 };
+
+export type MultiSolution = {
+  option: string;
+  correct: boolean;
+};
+
+export type ScrambleSolution = {
+  option: string;
+  correct: number;
+};
+
+export type MatchSolution = {
+  option: string;
+  correct: string;
+};
+
+export type PracticeProblem = {
+  id: number;
+  type: string;
+  active: boolean;
+  problem_text: string;
+  solution: (MultiSolution | ScrambleSolution | MatchSolution)[];
+};

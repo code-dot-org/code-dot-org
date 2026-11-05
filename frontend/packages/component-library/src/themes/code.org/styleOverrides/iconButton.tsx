@@ -18,7 +18,7 @@ type ExtendedIconButtonProps = Partial<
   }
 >;
 
-// Size specifications for icon-only buttons matching genericButton.module.scss
+// Size specifications for icon-only buttons, from the DSCO button
 const ICON_BUTTON_SIZE_SPECS = {
   xs: {
     padding: '0.25rem',
@@ -53,7 +53,7 @@ const ICON_BUTTON_SIZE_SPECS = {
 // Create variants with proper typing
 // Using satisfies to validate structure without type assertions
 const iconButtonVariants = [
-  // Size variants - matching genericButton.module.scss icon-only styles
+  // Size variants, from the DSCO button's icon-only styles
   {
     props: {size: 'extraSmall'},
     style: {
@@ -558,7 +558,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
     root: () => {
       return {
         position: 'relative', // Required for absolute-positioned loadingIndicator
-        borderRadius: '0.25rem', // Force square corners (MUI defaults to circular)
+        borderRadius: 'var(--shape-sm, 0.375rem)', // MUI defaults to a circle
         transition: 'all 0.2s ease-in-out',
         boxShadow: 'none', // Remove MUI's default shadow
         minWidth: 'auto', // Remove MUI's default minWidth
@@ -578,7 +578,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
         '&:focus-visible, a&:focus-visible': {
           outline: '2px solid var(--borders-brand-teal-primary)',
           outlineOffset: '2px',
-          borderRadius: '0.375rem',
+          borderRadius: 'var(--shape-sm, 0.375rem)',
           boxShadow: 'none', // Remove shadow on focus-visible
           textDecoration: 'none',
         },

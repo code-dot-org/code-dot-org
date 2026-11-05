@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:27:20.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "#### Write a clear headline and button\r\n\r\n1. Ask the AI to make your headline say what your site is for.\r\n2. Ask the AI to make your button tell a visitor what to do next.\r\n3. Look at your page like a first-time visitor. If it's not clear what the site is for or what to do, tell the AI what to fix.\r\n\r\n*Example: “Make the headline say ‘Join the Robotics Club.’ Make the button say ‘Sign up today.’”*",
+    "project_template_level_name": "adaptive-less-checkpoints-template-main-website-project",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMpeo0PlgnA7jfwK5B6k\ne5CTq5vNkl+msN60ZatIjBq7MaRU3XgSwjyO9ERgiowFcT0VwkcSc2A/GAdI\nb0sSwJcL2BTHV9tQavjg1SSJop7c8kb0z/zzJlfjV22+wfRGWwelTg4zLw6F\n+PrIXy4coIrhVZbIom7kuCfEz3NuveT0RISVk2kLitIC5V2OtBaOq2YttwJ5\nSVN2dOkuMrVvqb08hYW3vaHLlZh1OxsyjfztGWPSYN2IuJTf+LxJSo9+/5mG\naltGP6U59hECMT7z8PnIvXAPa7S04IjN1miBXxqtSj7xHkNshPE1NnfJBXHK\nP1hbGcjcxBcyJrtT6k0URK4SADiup1CW9Bz5vrDhX6O4pZO8+gnZ2zkcaW0G\nvS/NmEEc7E/deZ8TW2b2o6WlGtJOex4WHE4E1dtWFaIMWDmvCZBXn67kSTV1\nf61byxIE2zHtaQTnRuYx+xrZhjf/w1+5ochaFkiJLA1Zhfi5WzO7EpxI88Mz\nkmXUVlP4B8duJeuoQlJXutf85/0ydPo/5Y0izuyKzmhgjlSjuIQSIWR9r2DX\n5Gw1nwLOZTCxDKB2MQkr/yxV9VCZhtBkqFKuAxppXKZHS3dUaKuPNQ64rUhL\niFs2tw5X3+UtV5GE1fh33DlXLj+ajFHee+fMMhNt7e/lC5Ij3vXiaf3y1zEL\nu/3CmEQhNH6xLIiNK9wO0dAfdDwH77lTtwkap2W+Ag0Cg788eFL4R+/3SmXh\nkPhB8dCaxR5ewXDzUPRtUJP1QOCidX+WdUaoUTZGoho/iLia5fPivmWUHmb1\naXqpl+yIwJhiEvBr6WFyxyq+rWs7N9/EZ45XJFhD1GoG1vudD7h4SJcD8Kmu\nqzFLG4PDbERwLcO8cIzqceLuCZZQQZ/R8jMivV1EIDhdVl+jXtFsNzn2gZtg\nGUfkdXv6CB3lmMhqZ8gG9ugxgrPg22obD7moiZJue8WUEh5c3U1Fgrg1b7PZ\n1AX9B/N1V2yu8XDZkdQ1OA722w43+XZtK1KyIxKLqFCvwDXfOiJRsvmdUoKI\noOTI8AdYIzXucS5OBmYfenhZiqVstu3EsRArp5yyGxo0qlf8/PayY3l9nfAO\nHD9h5K1AjTzIMTwRZG6LB/BHpiTHbTsxv/WpNJldXs+rlJeUUObyj1Bm84tq\nSolJgys8Ct/thc/dxzYHrAwgJmO2n/TvLi+Dxhkf/GkGRe8XDiQL/OOYlPiO\neSVOI+Z14wajNX8aQHMqL/wdTEY49hPWb8e4YKtIXiJPyOZOUCy/YE/G8Szw\nyUbj7qIfp/7exVCZ3+PD3dbjFSYH7u1UjYz/Xm/Mr0B8FM6R0jTEPwcJvWMq\n9vzirkomrvYtshrNVrKQtgI7WJ3dgfc/TCsTyaXNzbK4Qrgk49zAc0ZpRcaD\nBzA7gwStit5HgFW5Uk9OPsyUsZVzDs5ZzqsXP0pMZV5lBqg7BVJBPxmeuo3b\nFT24TyHTqNXj8atCbcBBBQ7XyOeLnFr5kLi0\n",
+    "generate_outline": "Apply your communication skills by instructing the AI to create a clear headline that states your site's purpose and a button that guides users on their next action.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:27:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:27:27 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:27:30 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:27:30 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 17:11:28 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:07:13 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -41,6 +41,13 @@ const panels = (id: string): Step => ({
   panels: [{key: `${id}-1`, imageUrl: 'hello.png', text: 'Hello'}],
 });
 
+const video = (id: string): Step => ({
+  id,
+  title: id,
+  kind: 'video',
+  videoKey: `${id}-key`,
+});
+
 const served = (): Raw => ({
   formatVersion: 4,
   id: 'sample',
@@ -85,6 +92,7 @@ const served = (): Raw => ({
             },
           ],
         },
+        video('intro-watch'),
       ],
     },
     {
@@ -234,6 +242,62 @@ describe('parsePathway', () => {
     expect(problemsOf(raw)).toHaveLength(1);
   });
 
+  it('accepts a markdown step with its own button label', () => {
+    const raw = served();
+    raw.checkpoints[0].steps.push({
+      id: 'card',
+      title: 'Card',
+      kind: 'markdown',
+      markdown: '## Welcome\n\nA note.',
+      continueLabel: 'Start',
+    });
+    expect(problemsOf(raw)).toEqual([]);
+    expect(parsePathway(raw).checkpoints[0].steps.at(-1)).toMatchObject({
+      kind: 'markdown',
+      continueLabel: 'Start',
+    });
+  });
+
+  it('resolves a destination through the declared destinations and flags an unknown one', () => {
+    const raw = served();
+    raw.destinations = {
+      polish: {title: 'Polish', icon: 'palette', color: 'strawberry'},
+    };
+    raw.checkpoints[2].destination = 'polish';
+    expect(problemsOf(raw)).toEqual([]);
+    raw.checkpoints[2].destination = 'shine';
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.style.destination: unknown destination 'shine'",
+    ]);
+  });
+
+  it('rejects a destination color outside the palette', () => {
+    const raw = served();
+    Object.assign(raw, {
+      destinations: {polish: {title: 'Polish', color: 'pink'}},
+    });
+    expect(problemsOf(raw)[0]).toMatch(/destinations\.polish\.color/);
+  });
+
+  it('accepts an icon on a skill', () => {
+    const raw = served();
+    raw.skills.css.icon = 'message-code';
+    expect(problemsOf(raw)).toEqual([]);
+    expect(parsePathway(raw).skills.css.icon).toBe('message-code');
+  });
+
+  it('accepts a video step with resolved URLs', () => {
+    const raw = served();
+    const watch = raw.checkpoints[0].steps[2];
+    if (watch.kind !== 'video') throw new Error('fixture changed');
+    Object.assign(watch, {
+      src: 'https://www.youtube-nocookie.com/embed/abc123',
+      download: 'https://videos.code.org/youtube/some.mp4',
+      thumbnail: 'https://videos.code.org/youtube/some.jpg',
+    });
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
   it('accepts a level step the server could not resolve', () => {
     const raw = served();
     const build = raw.checkpoints[1].steps[0];
@@ -306,6 +370,18 @@ describe('parsePathwaySource', () => {
     ]);
   });
 
+  it('rejects video URL fields in an authored file', () => {
+    const raw = source();
+    const watch = raw.checkpoints[0].steps[2];
+    if (watch.kind !== 'video') throw new Error('fixture changed');
+    Object.assign(watch, {
+      src: 'https://www.youtube-nocookie.com/embed/abc123',
+    });
+    expect(sourceProblemsOf(raw)).toEqual([
+      expect.stringMatching(/^checkpoints\.0\.steps\.2:/),
+    ]);
+  });
+
   it('does not check references', () => {
     const raw = source();
     raw.skills.prompting.standards = undefined;
@@ -367,6 +443,32 @@ describe('findReferenceProblems', () => {
     ]);
   });
 
+  it("flags an authored step that takes the project screen's id", () => {
+    const raw = served();
+    raw.checkpoints[2].steps = [panels('project')];
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints: step id 'project' is reserved",
+    ]);
+  });
+
+  it('accepts a map layout and orientation and rejects an unknown orientation', () => {
+    const raw = served();
+    raw.map = {layout: 'destinations', orientation: 'w'};
+    expect(problemsOf(raw)).toEqual([]);
+    Object.assign(raw.map, {orientation: 'nw'});
+    expect(problemsOf(raw)).toHaveLength(1);
+  });
+
+  it('accepts a destination on a checkpoint nothing requires and flags one on a checkpoint another requires', () => {
+    const raw = served();
+    raw.checkpoints[2].destination = 'Polish';
+    expect(problemsOf(raw)).toEqual([]);
+    raw.checkpoints[0].destination = 'Polish';
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.intro.destination: only a checkpoint that no other checkpoints require may have one but 'basics' requires it",
+    ]);
+  });
+
   it('flags duplicate checkpoint and step ids', () => {
     const raw = served();
     raw.checkpoints[2].id = 'basics';
@@ -387,6 +489,186 @@ describe('findReferenceProblems', () => {
     expect(problemsOf(raw)).toEqual([
       "checkpoints: question id '1' is used more than once",
     ]);
+  });
+
+  it('accepts a typed answer and a plan slot on a question', () => {
+    const raw = served();
+    raw.checkpoints[0].plan = {template: 'A site that is {which}.'};
+    Object.assign(questionOf(raw), {
+      allowOther: {placeholder: 'Or type your own'},
+      plan: 'which',
+    });
+    raw.checkpoints[2].plan = {template: 'Because {why}.'};
+    raw.checkpoints[2].steps.push({
+      id: 'why',
+      title: 'Why',
+      kind: 'questions',
+      questions: [{id: 2, type: 'freeResponse', text: 'Why?', plan: 'why'}],
+    });
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  describe('plan', () => {
+    const review = (id: string, questionId = 9): Step => ({
+      id,
+      title: id,
+      kind: 'review',
+      questionId,
+    });
+    // A plan question in the intro, then the review, then a step that builds.
+    const planned = (): Raw => {
+      const raw = served();
+      raw.checkpoints[0].plan = {template: 'A site that is {which}.'};
+      Object.assign(questionOf(raw), {plan: 'which'});
+      raw.checkpoints[0].steps.push(review('review'), {
+        id: 'starter',
+        title: 'Starter',
+        kind: 'level',
+        level: 'web-starter',
+        project: true,
+        projectPrompt: 'A first version.',
+        levelProperties: levelProperties(9, 'web-starter', 'web-template'),
+      });
+      return raw;
+    };
+
+    it('accepts a review step between plan questions and a project step with a prompt', () => {
+      expect(problemsOf(planned())).toEqual([]);
+    });
+
+    it('flags a template slot no question fills, and a question filling a slot the template lacks', () => {
+      const raw = planned();
+      raw.checkpoints[0].plan = {template: 'A {what} site that is {which}.'};
+      Object.assign(questionOf(raw), {plan: 'how'});
+      expect(problemsOf(raw)).toEqual([
+        "checkpoints.intro.steps.quiz.questions.0.plan: the plan template has no slot '{how}'",
+        "checkpoints.intro.plan.template: no plan question fills '{what}'",
+        "checkpoints.intro.plan.template: no plan question fills '{which}'",
+      ]);
+    });
+
+    it('flags a plan question and a review step in a checkpoint with no plan', () => {
+      const raw = planned();
+      delete raw.checkpoints[0].plan;
+      expect(problemsOf(raw)).toEqual([
+        'checkpoints.intro.steps.quiz.questions.0.plan: the checkpoint has no plan template',
+        "checkpoints.intro.steps.review: a review step needs the checkpoint's plan template",
+      ]);
+    });
+
+    it('flags a review step with no later project step to build', () => {
+      const raw = planned();
+      raw.checkpoints[0].steps.pop();
+      expect(problemsOf(raw)).toEqual([
+        'checkpoints.intro.steps.review: no later project step with a projectPrompt to build',
+      ]);
+    });
+
+    it("counts a review step's question id with the others", () => {
+      const raw = planned();
+      raw.checkpoints[0].steps.splice(-1, 0, review('again', 1));
+      expect(problemsOf(raw)).toEqual([
+        "checkpoints: question id '1' is used more than once",
+      ]);
+    });
+
+    it('accepts a branch on a review decision and flags any other condition on it', () => {
+      const raw = planned();
+      raw.checkpoints[0].steps.push({
+        ...panels('built'),
+        showIf: {stepId: 'review', questionId: 9, choiceId: 'build'},
+      });
+      expect(problemsOf(raw)).toEqual([]);
+
+      const where = 'checkpoints.intro.steps.built.showIf';
+      raw.checkpoints[0].steps.at(-1)!.showIf = {
+        stepId: 'review',
+        questionId: 9,
+        choiceId: 'maybe',
+      };
+      expect(problemsOf(raw)).toEqual([
+        `${where}: 'maybe' is not a review decision (build, skip)`,
+      ]);
+      raw.checkpoints[0].steps.at(-1)!.showIf = {
+        stepId: 'review',
+        questionId: 1,
+        choiceId: 'build',
+      };
+      expect(problemsOf(raw)).toEqual([
+        `${where}: 'review' saves its decision under question 9, not 1`,
+      ]);
+    });
+  });
+
+  it("flags a choice that takes the typed answer's id", () => {
+    const raw = served();
+    const question = questionOf(raw);
+    if (question.type !== 'MultipleChoiceQuestion') throw new Error();
+    question.choices.push({id: 'other', text: 'Other'});
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.intro.steps.quiz.questions.0: choice id 'other' is reserved for a typed answer",
+    ]);
+  });
+
+  describe('showIf', () => {
+    // A survey question in the intro, followed by the step under test.
+    const branched = (
+      showIf: {stepId: string; questionId: number; choiceId: string},
+      allowOther = false
+    ): Raw => {
+      const raw = served();
+      const question = questionOf(raw);
+      if (question.type !== 'MultipleChoiceQuestion') throw new Error();
+      delete question.correctChoiceId;
+      if (allowOther) question.allowOther = {};
+      raw.checkpoints[0].steps.push({...panels('branch'), showIf});
+      return raw;
+    };
+    const where = 'checkpoints.intro.steps.branch.showIf';
+
+    it('accepts a condition on an earlier choice, or the typed answer where allowed', () => {
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'b'}))
+      ).toEqual([]);
+      expect(
+        problemsOf(
+          branched({stepId: 'quiz', questionId: 1, choiceId: 'other'}, true)
+        )
+      ).toEqual([]);
+    });
+
+    it('flags a step that is not earlier in the checkpoint', () => {
+      expect(
+        problemsOf(
+          branched({stepId: 'css-intro', questionId: 1, choiceId: 'a'})
+        )
+      ).toEqual([
+        `${where}: 'css-intro' is not an earlier step in the checkpoint`,
+      ]);
+      expect(
+        problemsOf(branched({stepId: 'branch', questionId: 1, choiceId: 'a'}))
+      ).toEqual([
+        `${where}: 'branch' is not an earlier step in the checkpoint`,
+      ]);
+    });
+
+    it('flags a step with no questions and a question it does not have', () => {
+      expect(
+        problemsOf(branched({stepId: 'welcome', questionId: 1, choiceId: 'a'}))
+      ).toEqual([`${where}: 'welcome' is not a questions step`]);
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 7, choiceId: 'a'}))
+      ).toEqual([`${where}: 'quiz' has no multiple choice question 7`]);
+    });
+
+    it('flags a choice the question lacks, including a typed answer it does not allow', () => {
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'z'}))
+      ).toEqual([`${where}: 'z' is not one of question 1's choices`]);
+      expect(
+        problemsOf(branched({stepId: 'quiz', questionId: 1, choiceId: 'other'}))
+      ).toEqual([`${where}: 'other' is not one of question 1's choices`]);
+    });
   });
 
   it('flags a choice id used twice in one question, once', () => {
@@ -486,12 +768,218 @@ describe('findReferenceProblems', () => {
     expect(problemsOf(raw)).toEqual([]);
   });
 
+  it('flags a project prompt on a sandbox step', () => {
+    const raw = served();
+    const practice = raw.checkpoints[1].steps[1];
+    if (practice.kind !== 'level') throw new Error('fixture changed');
+    practice.projectPrompt = 'A one-page site.';
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.basics.steps.practice: projectPrompt builds the student's project, so the step must be marked project",
+    ]);
+  });
+
+  it('accepts a project prompt on a project step', () => {
+    const raw = served();
+    const build = raw.checkpoints[1].steps[0];
+    if (build.kind !== 'level') throw new Error('fixture changed');
+    build.projectPrompt = 'A one-page site.';
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
   it('does not check the flag on a level the server could not resolve', () => {
     const raw = served();
     const build = raw.checkpoints[1].steps[0];
     if (build.kind !== 'level') throw new Error('fixture changed');
     delete build.levelProperties;
     expect(problemsOf(raw)).toEqual([]);
+  });
+});
+
+describe('evidence fields', () => {
+  // A survey question beside the fixture's graded one, and evidence levels on both skills.
+  const withEvidence = (): Raw => {
+    const raw = served();
+    raw.skills.prompting.evidenceLevels = {
+      1: 'Asks',
+      2: 'Specifies',
+      3: 'Judges',
+    };
+    raw.skills.css.evidenceLevels = {
+      0: 'Has not styled yet',
+      1: 'Spots a rule',
+    };
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevel: 2},
+    });
+    const quiz = raw.checkpoints[0].steps[1];
+    if (quiz.kind !== 'questions') throw new Error('fixture has no quiz');
+    quiz.questions.push({
+      id: 2,
+      type: 'MultipleChoiceQuestion',
+      questionName: 'self-check',
+      questionTitle: 'Which sounds like you?',
+      choices: [
+        {id: 'a', text: 'New'},
+        {id: 'b', text: 'Some'},
+      ],
+      measures: {skillId: 'prompting', evidenceLevels: {a: 0, b: 1}},
+    });
+    raw.checkpoints[1] = {
+      ...raw.checkpoints[1],
+      skippable: true,
+      targetEvidenceLevels: {prompting: 2},
+    };
+    return raw;
+  };
+  const surveyOf = (raw: Raw) => {
+    const quiz = raw.checkpoints[0].steps[1];
+    if (quiz.kind !== 'questions') throw new Error('fixture has no quiz');
+    return quiz.questions[1];
+  };
+  const where = 'checkpoints.intro.steps.quiz.questions';
+
+  it('accepts a graded evidence level, survey evidence levels by choice, and a skippable target', () => {
+    expect(problemsOf(withEvidence())).toEqual([]);
+  });
+
+  it('rejects evidence level 0 where an evidence level is a claim', () => {
+    const raw = withEvidence();
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevel: 0},
+    });
+    expect(problemsOf(raw)).toHaveLength(1);
+    const target = withEvidence();
+    target.checkpoints[1].targetEvidenceLevels = {prompting: 0};
+    expect(problemsOf(target)).toHaveLength(1);
+  });
+
+  it('flags measures naming an unknown skill', () => {
+    const raw = withEvidence();
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'html', evidenceLevel: 1},
+    });
+    expect(problemsOf(raw)).toEqual([
+      `${where}.0.measures: unknown skill 'html'`,
+    ]);
+  });
+
+  it('flags one evidence level on a survey question and evidence levels by choice on a graded one', () => {
+    const raw = withEvidence();
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevels: {a: 1}},
+    });
+    Object.assign(surveyOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevel: 1},
+    });
+    expect(problemsOf(raw)).toEqual([
+      `${where}.0.measures: a question with a correctChoiceId measures one evidenceLevel, not evidenceLevels by choice`,
+      `${where}.1.measures: evidenceLevel needs a correctChoiceId; a survey question lists evidenceLevels by choice`,
+    ]);
+  });
+
+  it('accepts an evidence level for the typed answer only where the question allows one', () => {
+    const raw = served();
+    const question = questionOf(raw);
+    if (question.type !== 'MultipleChoiceQuestion') throw new Error();
+    delete question.correctChoiceId;
+    question.measures = {skillId: 'prompting', evidenceLevels: {other: 1}};
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.intro.steps.quiz.questions.0.measures: 'other' is not one of its choices",
+    ]);
+    question.allowOther = {};
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it('flags a choice id that is not among the choices', () => {
+    const raw = withEvidence();
+    Object.assign(surveyOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevels: {a: 0, z: 1}},
+    });
+    expect(problemsOf(raw)).toEqual([
+      `${where}.1.measures: 'z' is not one of its choices`,
+    ]);
+  });
+
+  it('flags evidence levels the skill does not describe', () => {
+    const raw = withEvidence();
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevel: 4},
+    });
+    Object.assign(surveyOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevels: {a: 0, b: 5}},
+    });
+    raw.checkpoints[2] = {
+      ...raw.checkpoints[2],
+      skippable: true,
+      targetEvidenceLevels: {css: 2},
+    };
+    expect(problemsOf(raw)).toEqual([
+      `${where}.0.measures: skill 'prompting' describes no evidence level 4`,
+      `${where}.1.measures.b: skill 'prompting' describes no evidence level 5`,
+      "checkpoints.style.targetEvidenceLevels.css: skill 'css' describes no evidence level 2",
+    ]);
+  });
+
+  it('rejects an evidence level key that is not a whole number', () => {
+    const raw = withEvidence();
+    raw.skills.css.evidenceLevels = {'1.5': 'Half', '-1': 'Less'};
+    expect(problemsOf(raw)).toHaveLength(2);
+  });
+
+  it('does not bound evidence levels for a skill with no described evidence levels', () => {
+    const raw = withEvidence();
+    delete raw.skills.prompting.evidenceLevels;
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevel: 9},
+    });
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it('flags a target for a skill the checkpoint does not develop', () => {
+    const raw = withEvidence();
+    raw.checkpoints[1].targetEvidenceLevels = {css: 1};
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.basics.targetEvidenceLevels: 'css' is not in skillIds",
+    ]);
+  });
+
+  it('accepts validation on a project step measuring a checkpoint skill with evidence levels', () => {
+    const raw = withEvidence();
+    Object.assign(raw.checkpoints[1].steps[0], {
+      validation: {
+        condition: 'Adds a heading.',
+        measures: {skillId: 'prompting'},
+      },
+    });
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it('flags validation on a sandbox step, on a skill the checkpoint lacks, and on a skill with no evidence levels', () => {
+    const raw = withEvidence();
+    const validation = {
+      condition: 'Adds a heading.',
+      measures: {skillId: 'css'},
+    };
+    Object.assign(raw.checkpoints[1].steps[1], {validation});
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.basics.steps.practice: validation judges the student's project, so the step must be marked project",
+      "checkpoints.basics.steps.practice.validation.measures: 'css' is not in skillIds",
+    ]);
+    delete raw.skills.prompting.evidenceLevels;
+    Object.assign(raw.checkpoints[1].steps[1], {
+      validation: {...validation, measures: {skillId: 'prompting'}},
+    });
+    expect(problemsOf(raw)).toContain(
+      "checkpoints.basics.steps.practice.validation.measures: skill 'prompting' describes no evidence levels to rate on"
+    );
+  });
+
+  it('flags skippable on a checkpoint with no skills', () => {
+    const raw = withEvidence();
+    raw.checkpoints[0] = {...raw.checkpoints[0], skippable: true};
+    expect(problemsOf(raw)).toEqual([
+      'checkpoints.intro: skippable needs skillIds',
+    ]);
   });
 });
 

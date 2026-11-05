@@ -1,5 +1,6 @@
 import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tags from '@code-dot-org/component-library/tags';
 import {Typography, Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
@@ -371,7 +372,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   };
 
   const renderCustomResources = () => {
-    if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
+    if (
+      selectedLesson &&
+      experiments.isEnabled(experiments.AI_DIFFERENTIATION)
+    ) {
       return (
         <CustomLessonResources
           unitId={selectedUnitId}
@@ -539,10 +543,29 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             )}
           </div>
           <div className={styles.poweredByAITANote}>
-            <img src={AIBotTAIcon} alt="" />
-            <Typography variant="body4" gutterBottom>
-              {i18n.poweredByAITA()}
-            </Typography>
+            {experiments.isEnabled('ta-teacher-panel') ? (
+              <Tags
+                size="s"
+                tagsList={[
+                  {
+                    label: i18n.createdByTeachingAssistant(),
+                    color: 'pink',
+                    icon: {
+                      iconName: 'ta',
+                      iconFamily: 'kit',
+                      placement: 'left',
+                    },
+                  },
+                ]}
+              />
+            ) : (
+              <>
+                <img src={AIBotTAIcon} alt="" />
+                <Typography variant="body4" gutterBottom>
+                  {i18n.poweredByAITA()}
+                </Typography>
+              </>
+            )}
           </div>
         </div>
       </>

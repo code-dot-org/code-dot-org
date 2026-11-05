@@ -22,21 +22,19 @@ test.describe('Statsig stable ID', {tag: ['@no_mobile', '@chrome']}, () => {
   });
 
   /**
-   * Migration status: COMPLETED
-   * Source: dashboard/test/ui/features/platform/statsig_stable_id.feature
-   * "The stable ID persists through consent changes and cookie recovery"
+   * "The stable ID is stored only in the cookie, and only with consent"
    */
-  test('The stable ID persists through consent changes and cookie recovery', async ({
+  test('The stable ID is stored only in the cookie, and only with consent', async ({
     page,
   }) => {
     const oneTrust = new OneTrustComponent(page);
 
-    // The server binds an ID to the session but does not set the cookie.
-    let stableId = await fetchStableId(page);
-    expect(stableId).toMatch(STABLE_ID_FORMAT);
-    expect(await stableIdCookie(page)).toBeUndefined();
-
-    expect(await fetchStableId(page)).toBe(stableId);
+    // Without a cookie the server returns a fresh ID each time and saves none.
+    const firstStableId = await fetchStableId(page);
+    const secondStableId = await fetchStableId(page);
+    expect(firstStableId).toMatch(STABLE_ID_FORMAT);
+    expect(secondStableId).toMatch(STABLE_ID_FORMAT);
+    expect(secondStableId).not.toBe(firstStableId);
     expect(await stableIdCookie(page)).toBeUndefined();
 
     // Without performance consent the client must not write the cookie.
@@ -49,36 +47,37 @@ test.describe('Statsig stable ID', {tag: ['@no_mobile', '@chrome']}, () => {
     expect(await oneTrust.activeGroups()).not.toContain('C0002');
     expect(await stableIdCookie(page)).toBeUndefined();
 
-    // With consent, the client adopts the server's ID rather than minting one.
+    // With consent, the sign-in page stores a third, new ID in the cookie.
     await oneTrust.openPreferenceCenter('/users/sign_in', {geo: 'es'});
     await oneTrust.savePerformanceConsent(true);
     await page.reload();
     await expect
       .poll(() => oneTrust.activeGroups())
       .toEqual(expect.arrayContaining(['C0001', 'C0002']));
-    await expect.poll(() => stableIdCookie(page)).toBe(stableId);
+    await expect.poll(() => stableIdCookie(page)).toMatch(STABLE_ID_FORMAT);
+    const stableId = await stableIdCookie(page);
+    expect(stableId).not.toBe(firstStableId);
+    expect(stableId).not.toBe(secondStableId);
+    expect(await fetchStableId(page)).toBe(stableId);
 
-    // A lost cookie is recovered from the session.
+    // The session holds no copy, so a lost cookie is replaced with a new ID.
     await deleteStableIdCookie(page);
     expect(await stableIdCookie(page)).toBeUndefined();
-    await page.reload();
+    await page.goto('/users/sign_in');
     await expect
       .poll(() => oneTrust.activeGroups())
       .toEqual(expect.arrayContaining(['C0001', 'C0002']));
-    await expect.poll(() => stableIdCookie(page)).toBe(stableId);
-
-    // An existing cookie wins over the session and becomes the session's ID.
-    await setCookie(page, STATSIG_STABLE_ID_COOKIE, FORCED_STABLE_ID);
+    await expect.poll(() => stableIdCookie(page)).toMatch(STABLE_ID_FORMAT);
     expect(await stableIdCookie(page)).not.toBe(stableId);
-    stableId = await fetchStableId(page);
-    expect(stableId).toBe(FORCED_STABLE_ID);
+
+    // An existing cookie wins and is kept.
+    await setCookie(page, STATSIG_STABLE_ID_COOKIE, FORCED_STABLE_ID);
+    expect(await fetchStableId(page)).toBe(FORCED_STABLE_ID);
     await page.goto('/users/sign_in');
-    await expect.poll(() => stableIdCookie(page)).toBe(stableId);
+    await expect.poll(() => stableIdCookie(page)).toBe(FORCED_STABLE_ID);
   });
 
   /**
-   * Migration status: COMPLETED
-   * Source: dashboard/test/ui/features/platform/statsig_stable_id.feature
    * "The stable ID persists through sign-in and changes after sign-out"
    */
   test('The stable ID persists through sign-in and changes after sign-out', async ({
@@ -92,14 +91,14 @@ test.describe('Statsig stable ID', {tag: ['@no_mobile', '@chrome']}, () => {
     const student2 = await createStudent(page, {name: 'Student2'});
     await signOut(page);
 
-    const stableId = await fetchStableId(page);
-    expect(stableId).toMatch(STABLE_ID_FORMAT);
+    expect(await fetchStableId(page)).toMatch(STABLE_ID_FORMAT);
     expect(await stableIdCookie(page)).toBeUndefined();
 
     await oneTrust.openPreferenceCenter('/users/sign_in', {geo: 'es'});
     await oneTrust.savePerformanceConsent(true);
     await page.reload();
-    await expect.poll(() => stableIdCookie(page)).toBe(stableId);
+    await expect.poll(() => stableIdCookie(page)).toMatch(STABLE_ID_FORMAT);
+    const stableId = await stableIdCookie(page);
 
     // Signing in keeps the anonymous ID.
     await signInPage.waitForForm();

@@ -4,10 +4,22 @@ import React, {useState} from 'react';
 
 import {Answer, StepAnswers} from '@cdo/apps/adaptive/progress';
 import {
+  FreeResponseQuestion,
   MultipleChoiceDiagnosticQuestion,
   QuestionsStep as Step,
 } from '@cdo/apps/adaptive/types';
 import QuestionsStep from '@cdo/apps/adaptive/views/steps/QuestionsStep';
+
+const frQuestion = (
+  id: number,
+  text: string,
+  placeholder?: string
+): FreeResponseQuestion => ({
+  id,
+  type: 'freeResponse',
+  text,
+  placeholder,
+});
 
 const question = (
   id: number,
@@ -41,6 +53,21 @@ const twoQuestionStep: Step = {
   questions: [
     {...question(1, 'First question'), correctChoiceId: 'a'},
     question(2, 'Second question'),
+  ],
+};
+
+const freeResponseStep: Step = {
+  id: 'reflect',
+  title: 'Reflection',
+  kind: 'questions',
+  questions: [frQuestion(1, 'What did you learn?', 'Type here...')],
+};
+
+const mixedStep: Step = {
+  ...step,
+  questions: [
+    question(1, 'First question'),
+    frQuestion(2, 'What did you learn?'),
   ],
 };
 
@@ -128,6 +155,25 @@ describe('QuestionsStep', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
       expect(onComplete).toHaveBeenCalledTimes(1);
     });
+
+    it('focuses the step title on the first question', () => {
+      renderStep({}, twoQuestionStep);
+      expect(
+        screen.getByRole('heading', {name: 'Quick questions'})
+      ).toHaveFocus();
+    });
+
+    it("focuses each later question's heading once it is reached", () => {
+      renderStep({}, twoQuestionStep);
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
+      fireEvent.click(screen.getByRole('button', {name: /Next/}));
+      act(() => {
+        jest.runAllTimers();
+      });
+      expect(
+        screen.getByRole('heading', {name: 'Second question'})
+      ).toHaveFocus();
+    });
   });
 
   describe('with a graded question', () => {
@@ -175,6 +221,138 @@ describe('QuestionsStep', () => {
         [1, [wrong]],
         [1, [wrong, right]],
       ]);
+    });
+  });
+
+  describe('with a question that allows a typed answer', () => {
+    const otherStep: Step = {
+      ...step,
+      questions: [
+        {
+          ...question(1, 'What are you into?'),
+          allowOther: {placeholder: 'Or type your own'},
+        },
+      ],
+    };
+    const typed = () => screen.getByRole('textbox', {name: 'Or type your own'});
+
+    it('offers an Other option after the choices', () => {
+      renderStep({}, otherStep);
+      expect(screen.getByRole('radio', {name: /Other/})).toBeInTheDocument();
+      expect(typed()).toBeInTheDocument();
+    });
+
+    it('picks Other when the student types, and saves the text under the other id', () => {
+      const {saved, onComplete} = renderStep({}, otherStep);
+      fireEvent.change(typed(), {target: {value: 'Rockets'}});
+      expect(screen.getByRole('radio', {name: /Other/})).toBeChecked();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(saved).toEqual([[1, [{answerId: 'other', text: 'Rockets'}]]]);
+      expect(onComplete).toHaveBeenCalledTimes(1);
+    });
+
+    it('keeps Submit disabled while Other is picked with nothing typed', () => {
+      renderStep({}, otherStep);
+      fireEvent.click(screen.getByRole('radio', {name: /Other/}));
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+      fireEvent.change(typed(), {target: {value: '  '}});
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+    });
+
+    it('restores a typed answer, which resubmitted is not a new save', () => {
+      const {saved, onComplete} = renderStep(
+        {1: [{answerId: 'other', text: 'Rockets'}]},
+        otherStep
+      );
+      expect(screen.getByRole('radio', {name: /Other/})).toBeChecked();
+      expect(typed()).toHaveValue('Rockets');
+
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(saved).toEqual([]);
+      expect(onComplete).toHaveBeenCalledTimes(1);
+    });
+
+    it('saves a changed typed answer as new', () => {
+      const {saved} = renderStep(
+        {1: [{answerId: 'other', text: 'Rockets'}]},
+        otherStep
+      );
+      fireEvent.change(typed(), {target: {value: 'Rockets and robots'}});
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(saved).toEqual([
+        [1, [{answerId: 'other', text: 'Rockets and robots'}]],
+      ]);
+    });
+
+    it('saves a picked choice without the typed text', () => {
+      const {saved} = renderStep({}, otherStep);
+      fireEvent.change(typed(), {target: {value: 'Rockets'}});
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(saved).toEqual([[1, [{answerId: 'a'}]]]);
+    });
+  });
+
+  describe('with a free response question', () => {
+    it('renders a textarea with the configured placeholder', () => {
+      renderStep({}, freeResponseStep);
+      expect(screen.getByRole('textbox')).toHaveAttribute(
+        'placeholder',
+        'Type here...'
+      );
+    });
+
+    it('disables Submit when the textarea is empty', () => {
+      renderStep({}, freeResponseStep);
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+    });
+
+    it('enables Submit once text is entered', () => {
+      renderStep({}, freeResponseStep);
+      fireEvent.change(screen.getByRole('textbox'), {
+        target: {value: 'Some reflection.'},
+      });
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+    });
+
+    it('saves the answer and completes the step on submit', () => {
+      const {onComplete, saved} = renderStep({}, freeResponseStep);
+      fireEvent.change(screen.getByRole('textbox'), {
+        target: {value: 'My answer.'},
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(saved).toEqual([[1, [{answerId: '', text: 'My answer.'}]]]);
+      expect(onComplete).toHaveBeenCalledTimes(1);
+    });
+
+    it('restores a saved response from answers', () => {
+      renderStep(
+        {1: [{answerId: '', text: 'Previous answer.'}]},
+        freeResponseStep
+      );
+      expect(screen.getByRole('textbox')).toHaveValue('Previous answer.');
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+    });
+
+    it('shows no question count for a lone free response question', () => {
+      renderStep({}, freeResponseStep);
+      expect(screen.queryByText(/\d+\/\d+ questions/)).not.toBeInTheDocument();
+    });
+  });
+
+  describe('with mixed question types', () => {
+    it('shows a question count across all question types', () => {
+      renderStep({}, mixedStep);
+      expect(screen.getByText('1/2 questions')).toBeInTheDocument();
+    });
+
+    it('advances from MC to FR question', () => {
+      renderStep({}, mixedStep);
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
+      fireEvent.click(screen.getByRole('button', {name: /Next/}));
+      expect(screen.getByRole('textbox')).toBeInTheDocument();
+      expect(screen.getByText('2/2 questions')).toBeInTheDocument();
     });
   });
 });

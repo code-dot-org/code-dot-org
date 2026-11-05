@@ -1,0 +1,85 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:23:12.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "ef0fd888-bb0f-4e88-9f74-7bcebea833d8": {
+          "id": "ef0fd888-bb0f-4e88-9f74-7bcebea833d8",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Plan vs Result Widget: Club Page</title><link rel=\"stylesheet\" href=\"style.css\"></head><body><h1>Plan versus Result: Club Page</h1><p>Compare the plan to the AI's result. Click on the parts of the result that match the plan.</p><div class=\"container\"><div class=\"panel plan\"><h2>Your Plan Note</h2><p id=\"planText\">A club page for a <strong>coding club</strong>. It needs a <strong>bold blue header</strong>, exactly <strong>three feature cards</strong> for activities, and a <strong>light gray background</strong>.</p></div><div class=\"panel result\"><h2>AI Result</h2><div class=\"result-display\"><header id=\"clubHeader\" class=\"clickable-part\" data-feature=\"header-style\" data-label=\"Club Header\"><h1 style=\"color: purple; font-weight: bold;\">Join Our Awesome Club!</h1></header><div id=\"featureCardsContainer\"><div class=\"feature-card clickable-part\" data-feature=\"card-1\" data-label=\"Feature Card 1: Learn\"><h3>Learn New Skills</h3><p>Dive into coding, design, and more.</p></div><div class=\"feature-card clickable-part\" data-feature=\"card-2\" data-label=\"Feature Card 2: Create\"><h3>Create Projects</h3><p>Build exciting things with friends.</p></div><div class=\"feature-card clickable-part\" data-feature=\"card-3\" data-label=\"Feature Card 3: Compete\"><h3>Compete & Share</h3><p>Showcase your work in our events.</p></div><div class=\"feature-card extra-card clickable-part\" data-feature=\"card-4\" data-label=\"Feature Card 4: Extra\"><h3>Explore & Discover</h3><p>Find your passion in tech.</p></div></div></div><div class=\"action-buttons\"><button id=\"keepButton\">Keep</button><button id=\"redirectButton\">Redirect</button><button id=\"editButton\">Edit</button></div></div></div><script src=\"script.js\"></script></body></html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "08a87c44-91b9-4cdf-836e-e535775f5761": {
+          "id": "08a87c44-91b9-4cdf-836e-e535775f5761",
+          "name": "style.css",
+          "contents": "body {font-family: Arial, sans-serif;display: flex;flex-direction: column;align-items: center;padding: 20px;background-color: #f0f0f0;color: #333;}h1 {color: #333;margin-bottom: 10px;}p {margin-bottom: 20px;text-align: center;}.container {display: flex;gap: 30px;width: 90%;max-width: 1000px;margin-top: 20px;}.panel {flex: 1;border: 1px solid #ddd;border-radius: 8px;padding: 20px;background-color: #fff;box-shadow: 0 2px 4px rgba(0,0,0,0.1);}.panel h2 {margin-top: 0;color: #0056b3;}.plan p {text-align: left;line-height: 1.6;}.result-display {background-color: #e0f2f7; /* Light blue, not light gray */border: 2px dashed #ccc;padding: 15px;margin-top: 20px;min-height: 300px;display: flex;flex-direction: column;gap: 15px;}.result-display header {padding: 10px;background-color: #f8f8f8;text-align: center;}.result-display header h1 {margin: 0;}.result-display #featureCardsContainer {display: grid;grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));gap: 10px;}.feature-card {border: 1px solid #eee;padding: 10px;background-color: #fdfdfd;text-align: center;border-radius: 5px;}.clickable-part {cursor: pointer;transition: transform 0.2s ease, box-shadow 0.2s ease;}.clickable-part:hover {transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.2);}.clickable-part.matched {border: 3px solid #28a745;box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);}.action-buttons {margin-top: 30px;display: flex;justify-content: center;gap: 15px;}.action-buttons button {padding: 10px 20px;border: none;border-radius: 5px;font-size: 1em;cursor: pointer;transition: background-color 0.3s ease;}#keepButton {background-color: #28a745;color: white;}#keepButton:hover {background-color: #218838;}#redirectButton {background-color: #ffc107;color: #333;}#redirectButton:hover {background-color: #e0a800;}#editButton {background-color: #007bff;color: white;}#editButton:hover {background-color: #0056b3;}",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "501d49b8-b2a4-4c88-99b0-2be38c48b43b": {
+          "id": "501d49b8-b2a4-4c88-99b0-2be38c48b43b",
+          "name": "script.js",
+          "contents": "document.addEventListener('DOMContentLoaded', () => {const clickableParts = document.querySelectorAll('.clickable-part');const keepButton = document.getElementById('keepButton');const redirectButton = document.getElementById('redirectButton');const editButton = document.getElementById('editButton');clickableParts.forEach(part => {part.addEventListener('click', () => {part.classList.toggle('matched');const label = part.dataset.label;if (part.classList.contains('matched')) {console.log(`Marked as matching: ${label}`);} else {console.log(`Unmarked: ${label}`);}});});keepButton.addEventListener('click', () => {console.log('Action: Keep - The AI result looks good!');alert('You chose to KEEP the AI\\'s club page design!');});redirectButton.addEventListener('click', () => {console.log('Action: Redirect - The AI result needs a new direction.');alert('You chose to REDIRECT the AI for a new attempt at the club page design!');});editButton.addEventListener('click', () => {console.log('Action: Edit - The AI result needs some small changes.');alert('You chose to EDIT the AI\\'s club page design to fix small issues!');});console.log('Club Page Plan vs Result widget loaded. Click design parts to mark them, and choose an action.');});",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "ef0fd888-bb0f-4e88-9f74-7bcebea833d8",
+        "08a87c44-91b9-4cdf-836e-e535775f5761",
+        "501d49b8-b2a4-4c88-99b0-2be38c48b43b"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- observe the plan for a club page design\r\n- examine the AI's generated club page design\r\n- compare visual elements of the AI page to the plan's description\r\n- click on the parts of the AI page that match details in the plan\r\n- decide whether to keep, redirect, or edit the AI's design based on the match",
+    "encrypted_exemplar_sources": "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\nIdVXtDZdpA==\n",
+    "generate_outline": "Practice evaluating AI-generated page designs against your original visual plan, deciding whether to accept, adjust, or completely change the result.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:23:31 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:23:31 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:23:50 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:23:50 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:09:58 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

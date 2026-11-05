@@ -1,0 +1,38 @@
+@use '../sharedMixins' as mixins;
+
+$content-height: 416px;
+
+.dialog {
+  @include mixins.modal;
+}
+
+.titleRow {
+  @include mixins.modal-title-row;
+}
+
+.tabRow {
+  @include mixins.modal-tabs;
+
+  padding: 10px 14px 0;
+  background-color: var(--background-neutral-secondary);
+  box-shadow: inset 0 -1px 0 var(--border-neutral-primary);
+}
+
+.panels {
+  display: flex;
+  flex: 0 1 $content-height;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+
+  > [role='tabpanel']:not([hidden]) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+  }
+}
+
+.actionRow {
+  @include mixins.modal-action-row;
+}

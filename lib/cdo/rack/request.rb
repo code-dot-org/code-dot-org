@@ -99,32 +99,54 @@ module Cdo
       env[:splat_path_info]
     end
 
+    # Statsig stable ID from the cookie or the session, without generating one.
+    #
+    # @return [String, nil] the anonymous (signed-out) user ID in UUID v4 format
+    def existing_statsig_stable_id
+      # This cookie is used by the Statsig SDK for backend, frontend, and Marketing site
+      # See: apps/src/metrics/statsigHelpers.js
+      cookies_stable_id = cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+      return cookies_stable_id if STATSIG_STABLE_ID_FORMAT.match?(cookies_stable_id)
+
+      session_stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
+      return session_stable_id if session_stable_id.is_a?(String) && STATSIG_STABLE_ID_FORMAT.match?(session_stable_id)
+
+      nil
+    end
+
     # Statsig stable ID for use of anonymous (signed-out) user tracking.
     #
     # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def statsig_stable_id
-      @statsig_stable_id ||= begin
-        storage_key = SharedConstants::STATSIG_STABLE_ID_KEY
-
-        stable_id =
-          # This cookie is used by the Statsig SDK for backend, frontend, and Marketing site
-          # See: apps/src/metrics/statsigHelpers.js
-          if cookies[storage_key].is_a?(String) && STATSIG_STABLE_ID_FORMAT.match?(cookies[storage_key])
-            cookies[storage_key]
-          elsif session[storage_key].is_a?(String) && STATSIG_STABLE_ID_FORMAT.match?(session[storage_key])
-            session[storage_key]
-          else
-            Cdo::AnonUserId.generate
-          end
-
-        session[storage_key] = stable_id unless session[storage_key] == stable_id
-
-        session[storage_key]
-      end
+      existing_statsig_stable_id || (session[SharedConstants::STATSIG_STABLE_ID_KEY] = SecureRandom.uuid)
     end
 
+    # Anonymous (signed-out) user ID for our own records, such as anonymous level progress.
+    #
+    # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def anon_user_id
-      @anon_user_id ||= Cdo::AnonUserId.valid_value(statsig_stable_id)
+      anon_user_id = cookies[Cdo::AnonUserId::KEY]
+      return anon_user_id if Cdo::AnonUserId.valid?(anon_user_id)
+
+      # The Statsig stable ID used to be the anonymous user ID, so reusing an existing one keeps
+      # the visitor's earlier anonymous records linked to them instead of starting a new user.
+      anon_user_id = existing_statsig_stable_id
+      anon_user_id = Cdo::AnonUserId.generate unless Cdo::AnonUserId.valid?(anon_user_id)
+
+      # Rails keeps one cookie jar per request in env, and ActionDispatch::Cookies writes it to the response,
+      # also for the legacy Rack APIs. Standalone Rack apps, such as the legacy API tests, have no jar.
+      if defined?(ActionDispatch::Cookies)
+        ActionDispatch::Request.new(env).cookie_jar[Cdo::AnonUserId::KEY] = {
+          value: anon_user_id,
+          domain: shared_cookie_domain,
+          path: '/',
+          same_site: :lax,
+          secure: ssl?,
+          httponly: true,
+        }
+      end
+
+      cookies[Cdo::AnonUserId::KEY] = anon_user_id
     end
 
     def user

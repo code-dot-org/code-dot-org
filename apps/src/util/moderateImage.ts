@@ -18,6 +18,7 @@ const LABS_WITH_IMAGE_MODERATION = [
   'weblab',
   'javalab',
   'pythonlab',
+  'lesson-deep-dive',
 ];
 
 const MODERATION_SPAN_OP = 'image.moderate';

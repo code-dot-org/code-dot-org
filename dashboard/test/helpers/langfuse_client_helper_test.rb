@@ -103,6 +103,14 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
     end
   end
 
+  test 'export puts the session id on every span' do
+    _url, _options, body = capture_export(session_id: 'adaptive-1-2-3')
+
+    spans_from(body).each do |span|
+      assert_equal 'adaptive-1-2-3', attributes_of(span)['langfuse.session.id']
+    end
+  end
+
   test 'export stamps every span with the rack environment' do
     CDO.stubs(:rack_env).returns(:staging)
     _url, _options, body = capture_export
@@ -151,10 +159,36 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
 
     attributes = attributes_of(generation)
     refute attributes.key?('langfuse.user.id')
+    refute attributes.key?('langfuse.session.id')
     refute attributes.key?('langfuse.trace.tags')
     refute attributes.key?('langfuse.observation.prompt.name')
     refute attributes.key?('langfuse.observation.prompt.version')
     refute attributes.key?('langfuse.observation.usage_details')
+  end
+
+  test 'export uses a caller-supplied trace id' do
+    _url, _options, body = capture_export(trace_id: 'ab' * 16)
+
+    spans_from(body).each do |span|
+      assert_equal 'ab' * 16, span['traceId']
+    end
+  end
+
+  test 'export marks the generation only with level and status message' do
+    _url, _options, body = capture_export(level: 'ERROR', status_message: 'timed out')
+    root, generation = spans_from(body)
+
+    assert_equal 'ERROR', attributes_of(generation)['langfuse.observation.level']
+    assert_equal 'timed out', attributes_of(generation)['langfuse.observation.status_message']
+    refute attributes_of(root).key?('langfuse.observation.level')
+  end
+
+  test 'export omits level and status message by default' do
+    _url, _options, body = capture_export
+    _root, generation = spans_from(body)
+
+    refute attributes_of(generation).key?('langfuse.observation.level')
+    refute attributes_of(generation).key?('langfuse.observation.status_message')
   end
 
   test 'export swallows transport failures' do

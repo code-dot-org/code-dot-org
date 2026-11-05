@@ -1,0 +1,89 @@
+@use '../sharedMixins' as mixins;
+
+$step-gap: 6px;
+// Typography body3's line height, so each number centers on its step's first line.
+$step-line-height: calc(0.875rem * 1.57);
+$step-number-size: 18px;
+$step-number-top: calc(($step-line-height - $step-number-size) / 2);
+$connector-gap: 2px;
+
+.card {
+  @include mixins.card;
+
+  box-shadow: var(--shadow-sm);
+}
+
+// Two classes, to outrank the theme's Typography color.
+.card .header {
+  padding: 7px 10px;
+  color: var(--text-neutral-quaternary);
+
+  strong {
+    font-weight: 600;
+    color: var(--text-neutral-primary);
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: $step-gap;
+  margin: 0;
+  padding: 8px 10px 10px;
+  border-top: 1px solid var(--border-neutral-primary);
+  list-style: none;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+// Joins this step's number to the next one's, however many lines each wraps to.
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: calc($step-number-top + $step-number-size + $connector-gap);
+  bottom: calc($connector-gap - $step-gap - $step-number-top);
+  left: calc($step-number-size / 2 - 0.5px);
+  border-left: 1px solid var(--border-neutral-primary);
+}
+
+// Two classes, to outrank the theme's Typography margin and color.
+.step .stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: $step-number-size;
+  height: $step-number-size;
+  margin-top: $step-number-top;
+  border-radius: var(--shape-round);
+  font-weight: 600;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-quaternary);
+  transition:
+    background-color mixins.$mark-transition,
+    color mixins.$mark-transition;
+}
+
+.pastStep .stepNumber {
+  color: var(--text-neutral-tertiary);
+}
+
+.currentStep .stepNumber {
+  background-color: var(--background-neutral-septenary);
+  color: var(--text-neutral-primary-inverse);
+}
+
+@media (forced-colors: active) {
+  .currentStep .stepNumber {
+    outline: 2px solid;
+  }
+}

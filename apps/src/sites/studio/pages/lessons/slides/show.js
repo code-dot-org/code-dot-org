@@ -9,9 +9,6 @@ $(document).ready(function () {
 
   createReactRoot(
     <SlidesViewer panels={data.panels} />,
-    document.getElementById('slides-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('slides-container')
   );
 });

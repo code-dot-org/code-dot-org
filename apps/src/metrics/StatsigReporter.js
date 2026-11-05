@@ -134,9 +134,9 @@ class StatsigReporter {
     }
   }
 
-  sendEvent(eventName, payload) {
+  sendEvent(eventName, payload, value) {
     if (!this.ready) {
-      this.readyPromise.then(() => this.sendEvent(eventName, payload));
+      this.readyPromise.then(() => this.sendEvent(eventName, payload, value));
       return;
     }
     if (this.shouldPutRecord(ALWAYS_SEND)) {
@@ -149,11 +149,11 @@ class StatsigReporter {
         );
         this.statsigClient.logEvent(NO_EVENT_NAME, NO_EVENT_NAME, payload);
       } else {
-        // Statsig expects a name, value and data. Because we are unifying this
-        // with our Amplitude logging, we are bypassing the 'value' and sending
-        // event name twice. If we want to use this field moving forward, we
-        // will need to refactor all AnalyticsReporting event calls accordingly.
-        this.statsigClient.logEvent(eventName, eventName, payload);
+        // Statsig expects a name, value and data. Most of our events were
+        // unified with Amplitude logging, which has no value field, so they
+        // send the event name twice; a caller that passes an explicit value
+        // gets it instead.
+        this.statsigClient.logEvent(eventName, value ?? eventName, payload);
       }
     } else {
       this.log(

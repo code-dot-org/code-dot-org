@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-8894911-980f397fe137",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following strengths and limitations of generative AI.",
+  "solution": [
+    {
+      "option": "Strength: Generates content quickly",
+      "correct": "Limitation: Lacks true understanding"
+    },
+    {
+      "option": "Strength: Can remix existing ideas",
+      "correct": "Limitation: May produce generic outputs"
+    },
+    {
+      "option": "Strength: Accessible to many users",
+      "correct": "Limitation: May perpetuate biases"
+    }
+  ],
+  "objective_keys": [
+    "34a3bc0f-97e9-4805-96b0-b58b1a2f5401"
+  ]
+}

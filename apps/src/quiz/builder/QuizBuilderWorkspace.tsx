@@ -1,14 +1,19 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
-import React, {useMemo, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
+import QuizMetadataList from '../QuizMetadataList';
+import {QuizQuestionType} from '../types';
 import {groupByPage} from '../utils';
 
-import AddItemButton from './AddItemButton';
+import {EMPTY_PAGE_REASON, UNSAVED_QUESTION_REASON} from './constants';
+import CreateQuestionDropdown from './CreateQuestionDropdown';
+import DisabledReason, {ariaDisabledProps} from './DisabledReason';
 import IntroScreenCard from './IntroScreenCard';
 import {QuizConfigurationData} from './QuizConfigurationPanel';
+import QuizPageBlock from './QuizPageBlock';
 import QuizQuestionCard from './QuizQuestionCard';
 import {isPendingQuestionId} from './types';
 import useQuizBuilderQuestions from './useQuizBuilderQuestions';
@@ -20,12 +25,11 @@ interface QuizBuilderWorkspaceProps {
   quizTitle: string;
   showIntroScreen: boolean;
   customIntroText: string;
-  hasTimeLimit: boolean;
+  timeLimitMinutes?: number;
+  allowMultipleAttempts: boolean;
   onSaveQuizConfig: (fields: Partial<QuizConfigurationData>) => Promise<void>;
 }
 
-// The center column: the quiz's question outline plus a create action.
-// Each row is a QuizQuestionCard, expandable in place for editing.
 const QuizBuilderWorkspace: React.FunctionComponent<
   QuizBuilderWorkspaceProps
 > = ({
@@ -33,7 +37,8 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   quizTitle,
   showIntroScreen,
   customIntroText,
-  hasTimeLimit,
+  timeLimitMinutes,
+  allowMultipleAttempts,
   onSaveQuizConfig,
 }) => {
   const {
@@ -49,93 +54,125 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   // was open before it. A create opens the just-created question straight
   // into editing.
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [dirtyIds, setDirtyIds] = useState<ReadonlySet<number>>(new Set());
+  const setQuestionDirty = useCallback((id: number, isDirty: boolean) => {
+    setDirtyIds(prev => {
+      if (prev.has(id) === isDirty) {
+        return prev;
+      }
+      const next = new Set(prev);
+      if (isDirty) {
+        next.add(id);
+      } else {
+        next.delete(id);
+      }
+      return next;
+    });
+  }, []);
   const hasPendingQuestion = questions.some(question =>
     isPendingQuestionId(question.id)
   );
-  const pages = useMemo(() => groupByPage(questions), [questions]);
+  // Pages aren't stored separately - each question's placement has a page number.
+  // "Add page" keeps the new, still-empty page in local state until a question is created on it.
+  const [addedEmptyPage, setAddedEmptyPage] = useState<number | null>(null);
+  const pages = useMemo(() => {
+    const pagesWithQuestions = groupByPage(questions);
+    return addedEmptyPage === null
+      ? pagesWithQuestions
+      : [...pagesWithQuestions, {page: addedEmptyPage, questions: []}];
+  }, [questions, addedEmptyPage]);
+  const isEmptyQuiz = questions.length === 0 && addedEmptyPage === null;
+  const createDisabledReason = hasPendingQuestion
+    ? UNSAVED_QUESTION_REASON
+    : undefined;
+  const addPageDisabledReason =
+    createDisabledReason ??
+    (addedEmptyPage !== null ? EMPTY_PAGE_REASON : undefined);
 
-  const handleCreate = (page: number) => {
-    setExpandedId(addPendingQuestion(page));
+  const handleCreate = (page: number, type: QuizQuestionType) => {
+    setExpandedId(addPendingQuestion(page, type));
+    if (page === addedEmptyPage) {
+      setAddedEmptyPage(null);
+    }
   };
 
   let outline: React.ReactNode;
   if (isLoading) {
     outline = <Typography variant="body2">Loading questions…</Typography>;
-  } else if (questions.length === 0) {
+  } else if (isEmptyQuiz) {
     outline = (
-      <Typography variant="body2">This quiz has no questions yet.</Typography>
+      <div className={styles.emptyQuiz}>
+        <span className={styles.emptyQuizIcon} aria-hidden>
+          <FontAwesomeV6Icon iconName="clipboard-question" iconStyle="solid" />
+        </span>
+        <Typography
+          variant="body1"
+          component="h2"
+          className={styles.emptyQuizTitle}
+        >
+          This quiz is empty
+        </Typography>
+        <Typography
+          variant="body3"
+          component="p"
+          className={styles.emptyQuizBody}
+        >
+          Start by creating a new question.
+        </Typography>
+        <CreateQuestionDropdown
+          name="create-question-empty"
+          onCreate={type => handleCreate(1, type)}
+        />
+      </div>
     );
   } else {
     const nextPage = pages[pages.length - 1].page + 1;
     outline = (
-      <div className={styles.pages}>
-        {pages.map(({page, questions: pageQuestions}) => {
-          const pageHasPendingQuestion = pageQuestions.some(question =>
-            isPendingQuestionId(question.id)
-          );
-          return (
-            <div key={page} className={styles.page}>
-              <div className={styles.pageHeader}>
-                <Typography variant="overline2" className={styles.pageLabel}>
-                  Page {page}
-                </Typography>
-                <FontAwesomeV6Icon
-                  iconName="circle"
-                  iconStyle="solid"
-                  className={styles.pageHeaderDot}
-                />
-                <Typography variant="body4" component="span">
-                  {questionCountLabel(pageQuestions.length)}
-                </Typography>
-              </div>
-              <ol className={styles.list}>
-                {pageQuestions.map(question => (
-                  <li key={question.id}>
-                    <QuizQuestionCard
-                      question={question}
-                      isExpanded={question.id === expandedId}
-                      onExpandedChange={expanded =>
-                        setExpandedId(expanded ? question.id : null)
-                      }
-                      error={question.id === errorQuestionId ? error : null}
-                      onSave={saveQuestion}
-                      onRemove={removeQuestion}
-                    />
-                  </li>
-                ))}
-              </ol>
-              <AddItemButton
-                label="Create question"
-                onClick={() => handleCreate(page)}
-                disabled={hasPendingQuestion}
-              />
-              {pageHasPendingQuestion && (
-                <Typography variant="body3" className={styles.createHint}>
-                  Save or remove your new question before creating another.
-                </Typography>
-              )}
-            </div>
-          );
-        })}
-        <Button
-          className={styles.addPageButton}
-          variant="text"
-          color="secondary"
-          size="extraSmall"
-          type="button"
-          disabled={hasPendingQuestion}
-          onClick={() => handleCreate(nextPage)}
-          startIcon={<FontAwesomeV6Icon iconName="plus" />}
-        >
-          <Typography
-            variant="overline2"
-            component="span"
-            className={styles.pageLabel}
+      <>
+        {pages.map(({page, questions: pageQuestions}) => (
+          <QuizPageBlock
+            key={page}
+            page={page}
+            questionCount={pageQuestions.length}
+            onCreate={type => handleCreate(page, type)}
+            createDisabledReason={createDisabledReason}
+            hasUnsavedQuestion={pageQuestions.some(question =>
+              dirtyIds.has(question.id)
+            )}
           >
-            Add page
-          </Typography>
-        </Button>
-      </div>
+            {pageQuestions.map(question => (
+              <li key={question.id}>
+                <QuizQuestionCard
+                  question={question}
+                  isExpanded={question.id === expandedId}
+                  onExpandedChange={expanded =>
+                    setExpandedId(expanded ? question.id : null)
+                  }
+                  error={question.id === errorQuestionId ? error : null}
+                  onSave={saveQuestion}
+                  onRemove={removeQuestion}
+                  onDirtyChange={setQuestionDirty}
+                />
+              </li>
+            ))}
+          </QuizPageBlock>
+        ))}
+        <div className={styles.addPageSlot}>
+          <DisabledReason reason={addPageDisabledReason}>
+            <Button
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
+              type="button"
+              onClick={() => setAddedEmptyPage(nextPage)}
+              startIcon={<FontAwesomeV6Icon iconName="plus" />}
+              {...ariaDisabledProps(addPageDisabledReason)}
+            >
+              Add page
+            </Button>
+          </DisabledReason>
+        </div>
+      </>
     );
   }
 
@@ -143,12 +180,15 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     <PanelContainer id="quiz-workspace" headerContent="Workspace">
       <div className={styles.workspace}>
         <header className={styles.header}>
-          <Typography variant="h5" component="h1">
+          <Typography variant="h2" component="h1" className={styles.title}>
             {quizTitle || 'Untitled quiz'}
           </Typography>
-          <Typography variant="body3">
-            {questionCountLabel(questions.length)}
-          </Typography>
+          <QuizMetadataList
+            questionCount={questions.length}
+            timeLimitMinutes={timeLimitMinutes}
+            allowMultipleAttempts={allowMultipleAttempts}
+            iconClassName={styles.metaIcon}
+          />
         </header>
 
         {/* A question-specific error shows on that question's card instead - see error prop below. */}
@@ -158,37 +198,19 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           </Typography>
         )}
 
-        {showIntroScreen && (
-          <div className={styles.introScreen}>
+        <section className={styles.outline} aria-label="Quiz outline">
+          {showIntroScreen && (
             <IntroScreenCard
               customIntroText={customIntroText}
-              hasTimeLimit={hasTimeLimit}
+              hasTimeLimit={!!timeLimitMinutes}
               onSave={onSaveQuizConfig}
             />
-          </div>
-        )}
-
-        {outline}
-
-        {questions.length === 0 && (
-          <Button
-            className={styles.createButton}
-            variant="contained"
-            color="primary"
-            type="button"
-            disabled={isLoading}
-            onClick={() => handleCreate(1)}
-          >
-            + Create question
-          </Button>
-        )}
+          )}
+          {outline}
+        </section>
       </div>
     </PanelContainer>
   );
 };
-
-function questionCountLabel(count: number): string {
-  return count === 1 ? '1 question' : `${count} questions`;
-}
 
 export default QuizBuilderWorkspace;
