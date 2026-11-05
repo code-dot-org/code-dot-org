@@ -7,8 +7,8 @@ import {DEFAULT_CATEGORY_NAME} from './workspaceToToolboxDefinition';
 
 /**
  * The key a dynamic category block's CUSTOM dropdown expects, which is also
- * the category's display name. Toolboxes written by factories.ts carry it as
- * `id`; others only name the flyout they use, like "VARIABLE".
+ * the category's display name. Some toolboxes store it in `id`,
+ * others only name the flyout they use, like "VARIABLE".
  */
 function dynamicCategoryKey(
   item: BlocklyCore.utils.toolbox.DynamicCategoryInfo
