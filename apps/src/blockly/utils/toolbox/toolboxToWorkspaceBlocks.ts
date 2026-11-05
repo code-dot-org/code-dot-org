@@ -1,9 +1,29 @@
 import type * as BlocklyCore from 'blockly/core';
 
-import {BLOCK_TYPES} from '../../constants';
+import {BLOCK_TYPES, DYNAMIC_CATEGORY_OPTIONS} from '../../constants';
 import {JsonBlockConfig} from '../../types';
 
 import {DEFAULT_CATEGORY_NAME} from './workspaceToToolboxDefinition';
+
+/**
+ * The key a dynamic category block's CUSTOM dropdown expects, which is also
+ * the category's display name. Toolboxes written by factories.ts carry it as
+ * `id`; others only name the flyout they use, like "VARIABLE".
+ */
+function dynamicCategoryKey(
+  item: BlocklyCore.utils.toolbox.DynamicCategoryInfo
+): string | undefined {
+  const named = item as BlocklyCore.utils.toolbox.DynamicCategoryInfo & {
+    name?: string;
+  };
+  const candidates = [named.id, named.name];
+  return (
+    candidates.find(name => name && DYNAMIC_CATEGORY_OPTIONS[name]) ||
+    Object.keys(DYNAMIC_CATEGORY_OPTIONS).find(
+      key => DYNAMIC_CATEGORY_OPTIONS[key] === item.custom
+    )
+  );
+}
 
 /**
  * Converts a toolbox definition into workspace blocks for toolbox editing mode.
@@ -36,9 +56,9 @@ function contentsToBlocks(
       }
     } else if (item.kind === 'category' && 'custom' in item) {
       // For dynamic categories, create a custom category block..
-      const dynamicCategoryName = (
+      const dynamicCategoryName = dynamicCategoryKey(
         item as BlocklyCore.utils.toolbox.DynamicCategoryInfo
-      ).id;
+      );
       if (!dynamicCategoryName) {
         console.warn('Missing dynamic category name: ', item);
       } else {
@@ -52,7 +72,8 @@ function contentsToBlocks(
     } else if (item.kind === 'category') {
       const categoryInfo = item as BlocklyCore.utils.toolbox.StaticCategoryInfo;
       // For a localized category, like "Sounds", get the category type, like "Play".
-      const categoryName = categoryInfo.id;
+      // A hand-authored toolbox may carry only the name.
+      const categoryName = categoryInfo.id || categoryInfo.name;
       // 'DEFAULT' categories are intentionally skipped.
       if (categoryName && categoryName !== DEFAULT_CATEGORY_NAME) {
         blocks.push({
