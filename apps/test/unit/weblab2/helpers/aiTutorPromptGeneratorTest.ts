@@ -98,9 +98,7 @@ describe('generateAiTutorPrompt', () => {
     it('explains how to use project-local AI Tutor uploads', () => {
       const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
       expect(result).toContain('aitutor_uploads/');
-      expect(result).toContain(
-        'The external image allow-list does not apply'
-      );
+      expect(result).toContain('The external image allow-list does not apply');
     });
 
     it('includes allowed connect sources from sharedConstants', () => {
