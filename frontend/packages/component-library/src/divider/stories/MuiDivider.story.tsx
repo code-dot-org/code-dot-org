@@ -1,112 +1,85 @@
+import {Divider} from '@mui/material';
 import type {Meta, StoryObj} from '@storybook/react-vite';
-import {within, expect} from 'storybook/test';
+import {expect, within} from 'storybook/test';
 
-import {MuiDivider, MuiDividerProps} from '../index';
-
-import styles from './muiDividerStory.module.scss';
-
+/**
+ * Every story renders `Divider` straight from `@mui/material`; the color
+ * comes from the `MuiDivider` theme entry.
+ */
 export default {
   title: 'DesignSystem/Divider/MuiDivider',
-  component: MuiDivider,
+  component: Divider,
+  parameters: {
+    componentSubtitle: 'Bare MUI Divider, colored by CdoTheme.',
+  },
 } as Meta;
-type Story = StoryObj<typeof MuiDivider>;
+type Story = StoryObj<typeof Divider>;
 
-//
-// TEMPLATE
-//
+const tokenColor = () =>
+  window
+    .getComputedStyle(document.body)
+    .getPropertyValue('--background-neutral-quaternary');
+
 export const DefaultDivider: Story = {
-  args: {
-    color: 'primary',
-  },
   play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const divider = canvas.getByRole('separator');
-    const expectedColor = window
-      .getComputedStyle(document.body)
-      .getPropertyValue('--background-neutral-quaternary');
-
-    // applies the primary color class by default
-    expect(divider).toHaveStyle(`border-top-color: ${expectedColor};`);
-
-    // applies the no margin class by default
-    expect(divider).toHaveStyle('margin: 0');
+    const divider = within(canvasElement).getByRole('separator');
+    await expect(divider).toHaveStyle(`border-bottom-color: ${tokenColor()};`);
+    await expect(divider).toHaveStyle('margin: 0');
   },
 };
 
-const MultipleTemplate: StoryObj<{
-  components: MuiDividerProps[];
-}> = {
-  render: args => (
-    <>
-      <div className={styles.dividerColumn}>
-        {args.components?.map((componentArg, index) => (
-          <div
-            key={index}
-            className={componentArg.margin ? styles.marginBox : undefined}
-          >
-            <MuiDivider {...componentArg} />
-          </div>
-        ))}
-      </div>
-    </>
+export const BetweenLabels: Story = {
+  render: () => (
+    <div style={{display: 'flex', alignItems: 'center', gap: '0.75rem'}}>
+      <span>Page 1 of 2</span>
+      <Divider sx={{flex: '1 0 0'}} />
+      <span>Questions 1–3</span>
+    </div>
   ),
-};
-
-export const GroupOfDividers: StoryObj<{
-  components: MuiDividerProps[];
-}> = {
-  ...MultipleTemplate,
-  args: {
-    components: [{color: 'primary'}, {color: 'strong'}],
-  },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const dividers = canvas.getAllByRole('separator');
-    const getComputedStyleValue = (property: string) =>
-      window.getComputedStyle(document.body).getPropertyValue(property);
-
-    const primary = getComputedStyleValue('--background-neutral-quaternary');
-    const strong = getComputedStyleValue('--background-neutral-senary');
-
-    expect(dividers[0]).toHaveStyle(`border-top-color: ${primary};`);
-    expect(dividers[1]).toHaveStyle(`border-top-color: ${strong};`);
-  },
-};
-
-export const GroupOfDividersWithMargin: StoryObj<{
-  components: MuiDividerProps[];
-}> = {
-  ...MultipleTemplate,
-  args: {
-    components: [
-      {color: 'primary', margin: 'none'},
-      {color: 'primary', margin: 'xs'},
-      {color: 'primary', margin: 's'},
-      {color: 'primary', margin: 'm'},
-      {color: 'primary', margin: 'l'},
-    ],
-  },
   parameters: {
     docs: {
       description: {
-        story:
-          'Gray background exists to show margin, it will not appear with component.',
+        story: 'A horizontal rule that fills the space between two labels.',
       },
     },
   },
   play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const dividers = await canvas.getAllByRole('separator');
-    const expectedColor = window
-      .getComputedStyle(document.body)
-      .getPropertyValue('--background-neutral-quaternary');
-    dividers.forEach(divider => {
-      // applies the primary color class by default
-      expect(divider).toHaveStyle(`border-top-color: ${expectedColor};`);
-      // applies a margin
-      if (dividers.indexOf(divider) !== 0) {
-        expect(divider).not.toHaveStyle('margin: 0');
-      }
-    });
+    const divider = within(canvasElement).getByRole('separator');
+    await expect(divider).toHaveStyle(`border-bottom-color: ${tokenColor()};`);
+    await expect(divider.getBoundingClientRect().width).toBeGreaterThan(0);
+  },
+};
+
+export const NarrowedByStyle: Story = {
+  render: () => (
+    <div style={{width: '400px'}}>
+      <Divider style={{width: '50%'}} />
+    </div>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Curriculum `<hr style="width: 50%">` reaches Divider through Markdown as an inline style.',
+      },
+    },
+  },
+  play: async ({canvasElement}) => {
+    const divider = within(canvasElement).getByRole('separator');
+    await expect(divider.getBoundingClientRect().width).toBe(200);
+  },
+};
+
+export const Vertical: Story = {
+  render: () => (
+    <div style={{display: 'flex', alignItems: 'center', gap: '0.75rem'}}>
+      <span>Left</span>
+      <Divider orientation="vertical" flexItem />
+      <span>Right</span>
+    </div>
+  ),
+  play: async ({canvasElement}) => {
+    const divider = within(canvasElement).getByRole('separator');
+    await expect(divider).toHaveStyle(`border-right-color: ${tokenColor()};`);
   },
 };
