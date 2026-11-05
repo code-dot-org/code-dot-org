@@ -58,6 +58,7 @@ import {
 } from '../blockCatalog';
 import {toolboxBlockTypes} from '../blockLocks';
 import {ASK_AI_BLOCK_TYPE} from '../blockly/blockDefinitions/askAi';
+import {ASK_AI_WITH_CHOICES_BLOCK_TYPE} from '../blockly/blockDefinitions/askAiWithChoices';
 import {
   refreshSceneDropdowns,
   setSceneMenuActiveId,
@@ -203,7 +204,11 @@ const PREVIEW_SHARE = 0.22;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 
-const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE, SET_SYSTEM_PROMPT_BLOCK_TYPE];
+const AI_BLOCK_TYPES = [
+  ASK_AI_BLOCK_TYPE,
+  ASK_AI_WITH_CHOICES_BLOCK_TYPE,
+  SET_SYSTEM_PROMPT_BLOCK_TYPE,
+];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_PANE_WIDTH = 280;

@@ -5,6 +5,7 @@ import {
 } from '@cdo/apps/blockly/utils/toolbox';
 
 import {ASK_AI_BLOCK_TYPE} from '../blockDefinitions/askAi';
+import {ASK_AI_WITH_CHOICES_BLOCK_TYPE} from '../blockDefinitions/askAiWithChoices';
 import {BURST_BLOCK_TYPE} from '../blockDefinitions/burst';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
@@ -51,7 +52,11 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_setPlatformGravity',
     'spritelab2_setCameraZoom',
   ],
-  AI: [ASK_AI_BLOCK_TYPE, SET_SYSTEM_PROMPT_BLOCK_TYPE],
+  AI: [
+    ASK_AI_BLOCK_TYPE,
+    ASK_AI_WITH_CHOICES_BLOCK_TYPE,
+    SET_SYSTEM_PROMPT_BLOCK_TYPE,
+  ],
 };
 
 // Blocks registered outside the DB block pool (Blockly core, blocksCommon,
