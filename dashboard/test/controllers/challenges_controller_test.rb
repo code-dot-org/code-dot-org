@@ -74,6 +74,7 @@ class ChallengesControllerTest < ActionController::TestCase
           lesson:,
           question: 'What is 2 + 2?',
           default_modality: 'whiteboard',
+          whiteboard_starter_image_key: 'grid',
           whiteboard_starter_image_alt_text: 'a number grid',
         )
         get :index, params: {lesson_id: lesson.id}
@@ -84,7 +85,6 @@ class ChallengesControllerTest < ActionController::TestCase
         _(entry['question']).must_equal 'What is 2 + 2?'
         _(entry['default_modality']).must_equal 'whiteboard'
         _(entry['whiteboard_starter_image_alt_text']).must_equal 'a number grid'
-        # Alt text present => the same-origin starter-image URL is served.
         _(entry['whiteboard_starter_image_url']).must_equal "/challenges/#{detailed.id}/starter_image"
       end
 
@@ -110,9 +110,9 @@ class ChallengesControllerTest < ActionController::TestCase
       before {sign_in user}
 
       it 'streams the starter image bytes as a PNG' do
-        AWS::S3.stubs(:user_content_bucket).returns('test-user-content')
+        challenge.update!(whiteboard_starter_image_key: 'grid', whiteboard_starter_image_alt_text: 'a grid')
         AWS::S3.stubs(:download_from_bucket).
-          with('test-user-content', "challenge_starter_images/#{challenge.id}.png").
+          with('images.code.org', 'challenge_starter_images/grid.png').
           returns('png-bytes')
 
         get :starter_image, params: {id: challenge.id}
@@ -122,8 +122,16 @@ class ChallengesControllerTest < ActionController::TestCase
         _(response.body).must_equal 'png-bytes'
       end
 
-      it 'returns 404 when no starter image was uploaded' do
-        AWS::S3.stubs(:user_content_bucket).returns('test-user-content')
+      it 'returns 404 when the challenge has no starter image' do
+        AWS::S3.expects(:download_from_bucket).never
+
+        get :starter_image, params: {id: challenge.id}
+
+        assert_response :not_found
+      end
+
+      it 'returns 404 when the starter image object is missing' do
+        challenge.update!(whiteboard_starter_image_key: 'grid', whiteboard_starter_image_alt_text: 'a grid')
         AWS::S3.stubs(:download_from_bucket).raises(AWS::S3::NoSuchKey.new('missing'))
 
         get :starter_image, params: {id: challenge.id}
@@ -149,6 +157,171 @@ class ChallengesControllerTest < ActionController::TestCase
 
         assert_response :success
         _(response_json['id']).must_equal challenge.id
+      end
+    end
+  end
+
+  describe 'authoring' do
+    let(:png_bytes) {'png-bytes'.b}
+    let(:challenge_input) do
+      {
+        question: 'Draw a cat.',
+        default_modality: 'whiteboard',
+        rubric: [{level: 0, description: 'No cat'}, {level: 1, description: 'A cat'}],
+        whiteboard_starter_image_alt_text: 'an empty box',
+      }
+    end
+
+    def upload(bytes, content_type: 'image/png')
+      file = Tempfile.new(['starter', '.png'])
+      file.binmode
+      file.write(bytes)
+      file.rewind
+      Rack::Test::UploadedFile.new(file.path, content_type, true)
+    end
+
+    context 'as a student' do
+      before {sign_in user}
+
+      it 'cannot create' do
+        post :create, params: {lesson_id: lesson.id, challenge_json: challenge_input.to_json}
+        assert_response :forbidden
+      end
+    end
+
+    context 'as a levelbuilder' do
+      before {sign_in create(:levelbuilder)}
+
+      describe 'POST #create' do
+        it 'creates a challenge with a generated key and uploads the starter image' do
+          AWS::S3.expects(:upload_to_bucket).with(
+            'images.code.org',
+            regexp_matches(%r{\Achallenge_starter_images/challenge-lesson-#{lesson.id}-\h+-\h+\.png\z}),
+            png_bytes,
+            has_entries(no_random: true, acl: 'public-read')
+          )
+
+          post :create, params: {lesson_id: lesson.id, challenge_json: challenge_input.to_json, starter_image: upload(png_bytes)}
+
+          assert_response :success
+          created = Challenge.find(response_json['id'])
+          _(created.key).must_match(/\Achallenge-lesson-#{lesson.id}-\h+\z/)
+          _(created.lesson).must_equal lesson
+          _(created.rubric).must_equal [{'level' => 0, 'description' => 'No cat'}, {'level' => 1, 'description' => 'A cat'}]
+          _(created.whiteboard_starter_image_key).must_match(/\A#{created.key}-\h+\z/)
+          _(response_json['whiteboardStarterImageUrl']).must_equal "/challenges/#{created.id}/starter_image"
+        end
+
+        it 'creates a challenge without a starter image' do
+          AWS::S3.expects(:upload_to_bucket).never
+
+          post :create, params: {lesson_id: lesson.id, challenge_json: challenge_input.except(:whiteboard_starter_image_alt_text).to_json}
+
+          assert_response :success
+          _(Challenge.find(response_json['id']).whiteboard_starter_image_key).must_be_nil
+        end
+
+        it 'rejects invalid JSON' do
+          post :create, params: {lesson_id: lesson.id, challenge_json: '{not json'}
+          assert_response :bad_request
+        end
+
+        it 'rejects fields outside the editable set, including a key' do
+          assert_no_difference 'Challenge.count' do
+            post :create, params: {lesson_id: lesson.id, challenge_json: challenge_input.merge(key: '../../evil').to_json}
+          end
+          assert_response :bad_request
+          _(response.body).must_include 'key'
+        end
+
+        it 'rejects an unknown modality' do
+          post :create, params: {lesson_id: lesson.id, challenge_json: challenge_input.merge(default_modality: 'interpretive-dance').to_json}
+          assert_response :bad_request
+        end
+
+        it 'does not upload when the challenge is invalid' do
+          AWS::S3.expects(:upload_to_bucket).never
+
+          post :create, params: {lesson_id: lesson.id, challenge_json: challenge_input.merge(rubric: []).to_json, starter_image: upload(png_bytes)}
+
+          assert_response :bad_request
+        end
+
+        it 'rejects a starter image that is not a PNG' do
+          AWS::S3.expects(:upload_to_bucket).never
+
+          post :create, params: {lesson_id: lesson.id, challenge_json: challenge_input.to_json, starter_image: upload('GIF89a'.b, content_type: 'image/gif')}
+
+          assert_response :unsupported_media_type
+        end
+
+        it 'rejects a starter image larger than 2MB' do
+          AWS::S3.expects(:upload_to_bucket).never
+
+          post :create, params: {lesson_id: lesson.id, challenge_json: challenge_input.to_json, starter_image: upload(png_bytes + ('x' * 2.megabytes).b)}
+
+          assert_response :payload_too_large
+        end
+      end
+
+      describe 'PATCH #update' do
+        let(:imaged) do
+          create(:challenge, lesson:, whiteboard_starter_image_key: 'old', whiteboard_starter_image_alt_text: 'old')
+        end
+
+        it 'updates the fields and keeps the key and image' do
+          patch :update, params: {id: imaged.id, challenge_json: challenge_input.merge(question: 'Draw a dog.').to_json}
+
+          assert_response :success
+          imaged.reload
+          _(imaged.question).must_equal 'Draw a dog.'
+          _(imaged.key).must_equal response_json['key']
+          _(imaged.whiteboard_starter_image_key).must_equal 'old'
+        end
+
+        it 'stores a replacement image under a new key' do
+          AWS::S3.expects(:upload_to_bucket).once
+
+          patch :update, params: {id: imaged.id, challenge_json: challenge_input.to_json, starter_image: upload(png_bytes)}
+
+          assert_response :success
+          _(imaged.reload.whiteboard_starter_image_key).wont_equal 'old'
+        end
+
+        it 'removes the starter image' do
+          patch :update, params: {id: imaged.id, challenge_json: challenge_input.to_json, remove_starter_image: '1'}
+
+          assert_response :success
+          imaged.reload
+          _(imaged.whiteboard_starter_image_key).must_be_nil
+          _(imaged.whiteboard_starter_image_alt_text).must_be_nil
+        end
+
+        it 'rejects a key in the JSON' do
+          patch :update, params: {id: imaged.id, challenge_json: challenge_input.merge(key: 'other').to_json}
+
+          assert_response :bad_request
+          _(imaged.reload.key).wont_equal 'other'
+        end
+      end
+
+      describe 'DELETE #destroy' do
+        it 'deletes a challenge without responses' do
+          delete :destroy, params: {id: challenge.id}
+
+          assert_response :success
+          _(response_json['deleted']).must_equal true
+          _(Challenge.exists?(challenge.id)).must_equal false
+        end
+
+        it 'refuses to delete a challenge with responses' do
+          create(:challenge_response, challenge:)
+
+          delete :destroy, params: {id: challenge.id}
+
+          assert_response :conflict
+          _(Challenge.exists?(challenge.id)).must_equal true
+        end
       end
     end
   end

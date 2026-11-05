@@ -511,6 +511,7 @@ class Ability
         JitPlTeachingTip,
         JSONVideo,
         PracticeProblem,
+        Challenge,
         CourseOffering,
         UnitGroup,
         Resource,
