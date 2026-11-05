@@ -14,7 +14,16 @@ import moduleStyles from './share-dialog.module.scss';
 export const CopyToClipboardButton: React.FunctionComponent<{
   shareUrl: string;
   projectType: ProjectType;
-}> = ({shareUrl, projectType}) => {
+  /** The button's text, "Copy link to project" by default. */
+  label?: string;
+  /** The icon before the text until the link is copied. */
+  iconName?: string;
+}> = ({
+  shareUrl,
+  projectType,
+  label = i18n.copyLinkToProject(),
+  iconName = 'clipboard',
+}) => {
   const [copiedAt, setCopiedAt] = useState<number | null>(null);
 
   const handleCopyToClipboard = useCallback(() => {
@@ -45,15 +54,14 @@ export const CopyToClipboardButton: React.FunctionComponent<{
         size="medium"
         className={moduleStyles.shareDialogButton}
         onClick={handleCopyToClipboard}
-        aria-label={i18n.copyLinkToProject()}
         type="button"
         startIcon={
           <FontAwesomeV6Icon
-            iconName={copiedAt ? 'clipboard-check' : 'clipboard'}
+            iconName={copiedAt ? 'clipboard-check' : iconName}
           />
         }
       >
-        {i18n.copyLinkToProject()}
+        {label}
       </MuiButton>
     </CopiedTooltip>
   );

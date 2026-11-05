@@ -7,6 +7,10 @@ import {
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {shareLab2Project} from '@cdo/apps/lab2/header/lab2HeaderShare';
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {
+  isFinishDialogId,
+  showFinishDialog,
+} from '@cdo/apps/lab2/views/dialogs/finishDialogs/showFinishDialog';
 import {RootState} from '@cdo/apps/types/redux';
 
 /**
@@ -67,6 +71,11 @@ function handleNavigation(
   }
 
   const {finishUrl, finishDialog} = levelProperties;
+  // A finish dialog of its own keeps the student on the level.
+  if (isFinishDialogId(finishDialog)) {
+    showFinishDialog(finishDialog);
+    return;
+  }
   // If we have a finish URL, show the finish dialog if present, or redirect to the finish URL.
   if (finishUrl) {
     if (finishDialog) {
