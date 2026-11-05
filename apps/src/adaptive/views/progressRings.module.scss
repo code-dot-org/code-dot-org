@@ -1,0 +1,52 @@
+.rings {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// A conic fill behind a smaller disc leaves a ring; the fill's share grows
+// with progress, and a complete group fills the disc too. The ring is a
+// button, so its own padding and border go.
+.ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--borders-brand-purple-primary) calc(var(--share) * 100%),
+    var(--borders-neutral-primary) 0
+  );
+  cursor: default;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-purple-primary);
+    outline-offset: 2px;
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--background-neutral-secondary);
+  color: var(--text-brand-purple-primary);
+  font-size: 12px;
+}
+
+.untouched .inner {
+  color: var(--text-neutral-disabled);
+}
+
+.complete .inner {
+  background: var(--borders-brand-purple-primary);
+  color: var(--text-neutral-white-fixed);
+}

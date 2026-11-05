@@ -13,7 +13,13 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
-import {askAiText, AskAiError, isAskAiEnabled} from './ai/text/askAi';
+import {
+  askAiChoice,
+  askAiErrorMessage,
+  askAiText,
+  AskAiError,
+  isAskAiEnabled,
+} from './ai/text/askAi';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {burstBoxes} from './bursts';
 import {
@@ -53,7 +59,14 @@ import {
   wallBox,
 } from './platformPhysics';
 import {createPlayerActionTracker, isPlayerAction} from './playerActions';
-import {clearPrompt, showPrompt} from './redux/spriteLab2Redux';
+import {
+  askAiAnswered,
+  askAiFailed,
+  askAiPending,
+  clearAskAi,
+  clearPrompt,
+  showPrompt,
+} from './redux/spriteLab2Redux';
 import {
   asSoundEffect,
   playPreset,
@@ -665,6 +678,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
     };
     getStore().dispatch(clearPrompt());
+    const toChoices = (...values) =>
+      values
+        .filter(choice => choice !== undefined && choice !== null)
+        .map(String)
+        .filter(choice => choice !== '');
     const promptUser = (promptText, variableName, setterCallback, choices) => {
       library.registerPrompt(promptText, variableName, setterCallback);
       // Last prompt always wins, so we only ever have 1 active prompt unlike legacy.
@@ -687,10 +705,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       choice3,
       setterCallback
     ) => {
-      const choices = [choice1, choice2, choice3]
-        .filter(choice => choice !== undefined && choice !== null)
-        .map(String)
-        .filter(choice => choice !== '');
+      const choices = toChoices(choice1, choice2, choice3);
       promptUser(
         promptText,
         variableName,
@@ -702,32 +717,67 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.aiSetters_ = new Map();
     // One request per variable at a time, to avoid a flood of requests at once.
     const pending = (this.aiPending_ = new Set());
-    library.commands.askAI = (promptText, variableName, setterCallback) => {
+    getStore().dispatch(clearAskAi());
+    const isCurrentRun = () => !this.destroyed_ && runId === this.runId_;
+    let systemPrompt = '';
+    library.commands.setSystemPrompt = promptText => {
+      if (this.canAskAi_()) {
+        systemPrompt = String(promptText ?? '');
+      }
+    };
+    const askAi = (variableName, setterCallback, request) => {
       if (!this.canAskAi_() || pending.has(variableName)) {
         return;
       }
       pending.add(variableName);
       this.registerAiAnswer_(library, variableName, setterCallback);
-      askAiText(String(promptText ?? ''))
+      getStore().dispatch(askAiPending());
+      request()
         .then(
           text => {
-            if (this.destroyed_ || runId !== this.runId_) {
+            if (!isCurrentRun()) {
               return;
             }
             this.deliverAiAnswer_(library, variableName, text);
           },
           error => {
-            if (this.destroyed_ || runId !== this.runId_) {
+            if (!isCurrentRun()) {
               return;
             }
+            getStore().dispatch(askAiFailed(askAiErrorMessage(error)));
             console.warn(
               error instanceof AskAiError
-                ? `SpriteLab2: the ask AI block's ${error.phase} did not pass the safety check.`
+                ? `SpriteLab2: ${error.message}.`
                 : `SpriteLab2: the ask AI block got no answer (${error.message}).`
             );
           }
         )
-        .finally(() => pending.delete(variableName));
+        .finally(() => {
+          pending.delete(variableName);
+          if (!pending.size && isCurrentRun()) {
+            getStore().dispatch(askAiAnswered());
+          }
+        });
+    };
+    library.commands.askAI = (promptText, variableName, setterCallback) =>
+      askAi(variableName, setterCallback, () =>
+        askAiText(String(promptText ?? ''), systemPrompt)
+      );
+    library.commands.askAIWithChoices = (
+      promptText,
+      variableName,
+      choice1,
+      choice2,
+      choice3,
+      setterCallback
+    ) => {
+      const question = String(promptText ?? '');
+      const choices = toChoices(choice1, choice2, choice3);
+      askAi(variableName, setterCallback, () =>
+        choices.length
+          ? askAiChoice(question, choices, systemPrompt)
+          : askAiText(question, systemPrompt)
+      );
     };
     return library;
   }
@@ -1051,6 +1101,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     stopSoundEffects();
     this.reset();
     getStore().dispatch(clearPrompt());
+    getStore().dispatch(clearAskAi());
     this.stopTickTimer();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();

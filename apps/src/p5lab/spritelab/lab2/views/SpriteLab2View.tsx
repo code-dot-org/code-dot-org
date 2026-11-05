@@ -45,6 +45,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks, ownsTop} from '../addBlocks';
+import {ImageSource, isImageSource} from '../ai/images/imageCache';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -58,11 +59,13 @@ import {
 } from '../blockCatalog';
 import {toolboxBlockTypes} from '../blockLocks';
 import {ASK_AI_BLOCK_TYPE} from '../blockly/blockDefinitions/askAi';
+import {ASK_AI_WITH_CHOICES_BLOCK_TYPE} from '../blockly/blockDefinitions/askAiWithChoices';
 import {
   refreshSceneDropdowns,
   setSceneMenuActiveId,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
+import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockly/blockDefinitions/setSystemPrompt';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {activeCallout, calloutSelector} from '../callouts';
@@ -82,6 +85,7 @@ import {onTrimsUpdated} from '../imageTrim';
 import {
   editsWorld,
   GENERATION_LIMIT,
+  imageSourceForMode,
   isFreeplayMode,
   tabsForMode,
 } from '../levelMode';
@@ -106,6 +110,7 @@ import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
 import spriteLab2Reducer, {
+  clearAskAi,
   ExternalSceneOption,
   MusicProjectOption,
   resetSpriteLab2,
@@ -146,6 +151,7 @@ import {useWorldStartPattern} from '../worldStartPattern';
 
 import BlockCatalogDialog from './BlockCatalogDialog';
 import {isPointerClick} from './blurAfterPointerClick';
+import AskAiIndicator from './components/AskAiIndicator';
 import Callout from './components/Callout';
 import EditorStrip, {EditHistory} from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
@@ -200,7 +206,27 @@ const PREVIEW_SHARE = 0.22;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 
-const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE];
+// ?image-source=live|cached overrides the level's, and
+// ?image-cache-url= reads another tree (a local one, or a version under
+// review), for internal testing.
+function getImageSourceParam(): ImageSource | undefined {
+  const value = queryParams('image-source');
+  return isImageSource(value) ? value : undefined;
+}
+
+function getImageCacheUrlParam(): string | undefined {
+  const value = queryParams('image-cache-url');
+  if (typeof value !== 'string' || !value) {
+    return undefined;
+  }
+  return value.endsWith('/') ? value : `${value}/`;
+}
+
+const AI_BLOCK_TYPES = [
+  ASK_AI_BLOCK_TYPE,
+  ASK_AI_WITH_CHOICES_BLOCK_TYPE,
+  SET_SYSTEM_PROMPT_BLOCK_TYPE,
+];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_PANE_WIDTH = 280;
@@ -294,6 +320,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const dispatch = useAppDispatch();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
+  const imageSourceParam = useMemo(getImageSourceParam, []);
+  const imageCacheUrlParam = useMemo(getImageCacheUrlParam, []);
   // The advanced image settings, for authors; level edit modes have them.
   const imagesAdvanced =
     useMemo(() => queryParams('images-advanced') === 'true', []) ||
@@ -1278,6 +1306,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [dispatch, getCode, requestThumbnail]);
 
   const activePrompt = useAppSelector(state => state.spriteLab2.prompt);
+  const askAiStatus = useAppSelector(state => state.spriteLab2.askAi);
+  const handleAskAiExpired = useCallback(
+    () => dispatch(clearAskAi()),
+    [dispatch]
+  );
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -2421,6 +2454,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 advancedOffered={imagesAdvanced}
                 onDrawingHistory={setDrawingHistory}
                 ratingRequired={ratingRequired}
+                imageSource={
+                  imageSourceParam ||
+                  imageSourceForMode(levelProperties.levelMode)
+                }
+                imageCacheUrl={imageCacheUrlParam}
               />
             </div>
           )}
@@ -2488,15 +2526,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               />
             }
             playBar={
-              <PlayBar
-                playing={activeTab === 'Play'}
-                arrows={arrowSet}
-                onPlay={handlePlayClick}
-                onStop={stopTab ? handleStopClick : undefined}
-                // A level pinned to one scene has one Play, for that scene.
-                onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
-                playSceneHidden={activeScene.id === scenes[0].id}
-              />
+              <>
+                <div className={moduleStyles.playBarButtons}>
+                  <PlayBar
+                    playing={activeTab === 'Play'}
+                    arrows={arrowSet}
+                    onPlay={handlePlayClick}
+                    onStop={stopTab ? handleStopClick : undefined}
+                    // A level pinned to one scene has one Play, for that scene.
+                    onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
+                    playSceneHidden={activeScene.id === scenes[0].id}
+                  />
+                </div>
+                <AskAiIndicator
+                  status={askAiStatus}
+                  onFailureExpired={handleAskAiExpired}
+                />
+              </>
             }
             fadeTrigger={fadeTrigger}
             covered={jumpCover}

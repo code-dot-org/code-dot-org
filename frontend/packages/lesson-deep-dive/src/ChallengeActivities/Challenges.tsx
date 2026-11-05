@@ -1,6 +1,7 @@
-import {Challenge} from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useCallback} from 'react';
+import {type FC, useCallback} from 'react';
 import {useNavigate} from 'react-router-dom';
+
+import {type Challenge} from '../types';
 
 import ChallengePicker from './ChallengePicker';
 
@@ -18,7 +19,7 @@ const Challenges: FC<ChallengesProps> = ({lessonId, onReviewInstead}) => {
         navigate(`/challenge/${pickedChallenge.id}/${pickedChallengeType}`);
       }
     },
-    [navigate]
+    [navigate],
   );
 
   return (
