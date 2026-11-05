@@ -45,7 +45,6 @@
       "kind": "freeplay"
     },
     "toolbox_definition": {
-      "kind": "categoryToolbox",
       "contents": [
         {
           "kind": "category",
@@ -53,60 +52,107 @@
           "contents": [
             {
               "kind": "block",
-              "type": "gamelab_setBackgroundImageAs"
+              "type": "gamelab_setBackgroundImageAs",
+              "id": "g3gxz}=mn4D}4}whLL7.",
+              "fields": {
+                "IMG": "<field name=\"IMG\">null</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_setBackground",
+              "id": "}K/_i!Z1fTg3WCo1@nE{",
               "inputs": {
                 "COLOR": {
                   "shadow": {
-                    "type": "colour_picker"
+                    "type": "colour_picker",
+                    "id": "S}`aK[h;lBFx5T+off%E",
+                    "fields": {
+                      "COLOUR": "#ff0000"
+                    }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_setPlatformGravity"
+              "type": "spritelab2_setPlatformGravity",
+              "id": "k!X;GVdw|V?pqFc|[0f7",
+              "fields": {
+                "GRAVITY": 0.75
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_setCameraZoom"
+              "type": "spritelab2_setCameraZoom",
+              "id": "?]OH/lNR{CG%CDcnHTRk",
+              "fields": {
+                "ZOOM": 2
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_setWeather"
+              "type": "spritelab2_setWeather",
+              "id": "/.JAeRQW|,,/VE!$ts0X",
+              "fields": {
+                "WEATHER": "<field name=\"WEATHER\">none</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "gamelab_setForegroundEffect"
+              "type": "gamelab_setForegroundEffect",
+              "id": "-MVo_kU,5u~+e5D)TeuX",
+              "fields": {
+                "EFFECT": "<field name=\"EFFECT\">\"bubbles\"</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_burst"
+              "type": "spritelab2_burst",
+              "id": "lOuN+2YOqJaW]6G#.0=v",
+              "fields": {
+                "COUNT": 20,
+                "LOOK": "<field name=\"LOOK\">sparks</field>",
+                "ORIGIN": "<field name=\"ORIGIN\">null</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_makeBurst",
+              "id": "OR0Q71D]BLSap,Dn$IqR",
+              "fields": {
+                "EFFECT": "<field name=\"EFFECT\">\"burst\"</field>",
+                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>"
+              },
               "inputs": {
                 "NUM": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "}`:^.HK*p2ak1}EkE)CA",
                     "fields": {
                       "NUM": 10
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_setPrompt",
+              "id": "Mi5S*rj7l;=etG}b/CDY",
               "inputs": {
                 "QUESTION": {
                   "shadow": {
                     "type": "text",
+                    "id": "H~5%avBNs(xtuz!nLNgd",
                     "fields": {
                       "TEXT": ""
                     }
@@ -116,22 +162,29 @@
                   "block": {
                     "type": "variables_get",
                     "movable": false,
+                    "extraState": {
+                    },
                     "fields": {
                       "VAR": {
-                        "name": "answer"
+                        "id": "/Tz~?wnD#q+GG**CbOC7",
+                        "name": "answer",
+                        "type": ""
                       }
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_setPromptWithChoices",
+              "id": "*C5-y{UtEQ.BHWTcywk[",
               "inputs": {
                 "QUESTION": {
                   "shadow": {
                     "type": "text",
+                    "id": "1-t=e-o=+4dV9B/W46$/",
                     "fields": {
                       "TEXT": ""
                     }
@@ -141,9 +194,13 @@
                   "block": {
                     "type": "variables_get",
                     "movable": false,
+                    "extraState": {
+                    },
                     "fields": {
                       "VAR": {
-                        "name": "answer"
+                        "id": "/Tz~?wnD#q+GG**CbOC7",
+                        "name": "answer",
+                        "type": ""
                       }
                     }
                   }
@@ -151,6 +208,7 @@
                 "A": {
                   "shadow": {
                     "type": "text",
+                    "id": "dwNr;t=V7DWn*ed9{5=d",
                     "fields": {
                       "TEXT": "choice 1"
                     }
@@ -159,6 +217,7 @@
                 "B": {
                   "shadow": {
                     "type": "text",
+                    "id": "K2sZ0D:6iEBpQ*Q#;S1d",
                     "fields": {
                       "TEXT": "choice 2"
                     }
@@ -167,14 +226,17 @@
                 "C": {
                   "shadow": {
                     "type": "text",
+                    "id": "WFb{gy3M{a]?Y1{(DZiA",
                     "fields": {
                       "TEXT": "choice 3"
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             }
-          ]
+          ],
+          "id": "World"
         },
         {
           "kind": "category",
@@ -182,83 +244,589 @@
           "contents": [
             {
               "kind": "block",
-              "type": "spritelab2_makePlatformPlayer"
+              "type": "spritelab2_makePlatformPlayer",
+              "id": "J@VV?o#)l1a8gocMvbDv",
+              "fields": {
+                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>",
+                "GRID": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                ]
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_makePlatformBlocks"
+              "type": "spritelab2_makePlatformBlocks",
+              "id": "zRESkSV#l9LjvB%RghS$",
+              "fields": {
+                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>",
+                "GRID": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                ]
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_makeSpriteAtGrid"
+              "type": "spritelab2_makeSpriteAtGrid",
+              "id": "zj_lh@aK4b^~+.3=I1z7",
+              "fields": {
+                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>",
+                "GRID": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                ]
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "spritelab2_makeSpriteAtPosition",
+              "id": "J:@NeY54{|E73Yz.u~xe",
               "fields": {
-                "POSITION": "left"
-              }
+                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>",
+                "POSITION": "<field name=\"POSITION\">left</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_makeNewSpriteAnon",
+              "id": "qCqsc(6YZSU2L{ieQsUY",
+              "fields": {
+                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>"
+              },
               "inputs": {
                 "LOCATION": {
                   "shadow": {
                     "type": "gamelab_location_picker",
+                    "id": "RC)itU==D`p_9A[+yzBS",
                     "fields": {
                       "LOCATION": "{\"x\":200,\"y\":200}"
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "gamelab_makeSpritesGrid"
+              "type": "gamelab_makeSpritesGrid",
+              "id": "(+ytj(|Pv$E,MVm8Lr:y",
+              "fields": {
+                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>",
+                "GRID": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                ]
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_setAsPlatformPlayer"
+              "type": "spritelab2_setAsPlatformPlayer",
+              "id": "c+{RnOxA[{NNk,2T{7,6",
+              "fields": {
+                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_thePlayer"
+              "type": "spritelab2_thePlayer",
+              "id": "pIOdek6ihoqHRtd_4EA~",
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "gamelab_allSpritesWithAnimation"
+              "type": "gamelab_allSpritesWithAnimation",
+              "id": "N8ZJ)@;11O1?z[PM_feq",
+              "fields": {
+                "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "gamelab_location_picker"
+              "type": "gamelab_location_picker",
+              "id": "(~0ENqw4^4}QH+^l;a=!",
+              "fields": {
+                "LOCATION": null
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_spriteSay",
+              "id": "W^LqMt;m.pYXCi-#Rob6",
               "fields": {
                 "SPEECH": "Hello!"
               },
               "inputs": {
                 "SPRITE": {
                   "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "id": "P^@faEndSNV|z8UMnJ!^",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_spriteSayTime",
+              "id": "cTMrT?on(xof_@=.Uy98",
               "inputs": {
                 "SPRITE": {
                   "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "id": "3kqhXZ1DT;iC](SJV.8R",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
                   }
                 },
                 "TEXT1": {
                   "shadow": {
                     "type": "text",
+                    "id": "yb@#y9DG}NC[,1ZQ@[?+",
                     "fields": {
                       "TEXT": "Hello!"
                     }
@@ -267,93 +835,127 @@
                 "NUM": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "6H8TFc)H_Dn/VG.5?Q|6",
                     "fields": {
                       "NUM": 2
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_moveForward",
+              "id": "*5!ZQk~6WIBl#S:6=@O.",
               "inputs": {
                 "SPRITE": {
                   "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "id": "%o38{u:ayymP3i%?y?j3",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
                   }
                 },
                 "DISTANCE": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "0SndDcs6xCxxHZtU`_0G",
                     "fields": {
                       "NUM": 20
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_moveBackward",
+              "id": "s~yQYjg2y45I[~#JTHY8",
               "inputs": {
                 "SPRITE": {
                   "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "id": "Il7hbj*GpTPs,U-EHW`}",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
                   }
                 },
                 "DISTANCE": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "Nw9NyC+$z67g3~4ThX#,",
                     "fields": {
                       "NUM": 20
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_moveInDirection",
+              "id": "v*bA+$*}{VisWOXV%AUS",
+              "fields": {
+                "DIRECTION": "<field name=\"DIRECTION\">\"North\"</field>"
+              },
               "inputs": {
                 "SPRITE": {
                   "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "id": ".|G:=$XUtxJMpXka`a!r",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
                   }
                 },
                 "DISTANCE": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "mAV*H~z{(D$xfTX^2rBK",
                     "fields": {
                       "NUM": 100
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_setProp",
+              "id": "Jiy$RMf-aIF?k3b=u_H)",
               "fields": {
-                "PROPERTY": "\"scale\""
+                "PROPERTY": "<field name=\"PROPERTY\">\"scale\"</field>"
               },
               "inputs": {
                 "SPRITE": {
                   "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "id": "P`=`}[)C`j(l3.-4S4jy",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
                   }
                 },
                 "VAL": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "l1}_Q[K9D!(~*86}+=e.",
                     "fields": {
                       "NUM": 100
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             }
-          ]
+          ],
+          "id": "Sprites"
         },
         {
           "kind": "category",
@@ -361,67 +963,107 @@
           "contents": [
             {
               "kind": "block",
-              "type": "spritelab2_whenPlayer"
+              "type": "spritelab2_whenPlayer",
+              "id": "ZG`tVv%Fp~M_-HkqmHya",
+              "fields": {
+                "ACTION": "<field name=\"ACTION\">walk</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_spriteClicked",
+              "id": "C1ZNF+,j3!2l$?tSiA8F",
+              "fields": {
+                "CONDITION": "<field name=\"CONDITION\">\"when\"</field>"
+              },
               "inputs": {
                 "SPRITE": {
                   "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "id": "[skLg^`tFMx/)Bfk*M?M",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_checkTouching",
+              "id": "RsJ]j_D_Xwx.Va`?c=+)",
+              "fields": {
+                "CONDITION": "<field name=\"CONDITION\">\"when\"</field>"
+              },
               "inputs": {
                 "SPRITE1": {
                   "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "id": "E3DY}DE1O6c^x9cC?js!",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
                   }
                 },
                 "SPRITE2": {
                   "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "id": "[-J_?FXr^HVs@R{GQFT0",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_atTime",
+              "id": "XkZTQOrXo.LwZc|fN?m^",
+              "fields": {
+                "UNIT": "<field name=\"UNIT\">\"seconds\"</field>"
+              },
               "inputs": {
                 "N": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "x!SicC;#Jw::?%`Mz5g~",
                     "fields": {
                       "NUM": 3
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_whenPromptAnswered",
+              "id": "(|1T/k1[}y4j;4G5mSO4",
               "inputs": {
                 "VAR": {
                   "block": {
                     "type": "variables_get",
                     "movable": false,
+                    "extraState": {
+                    },
                     "fields": {
                       "VAR": {
-                        "name": "answer"
+                        "id": "/Tz~?wnD#q+GG**CbOC7",
+                        "name": "answer",
+                        "type": ""
                       }
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             }
-          ]
+          ],
+          "id": "Events"
         },
         {
           "kind": "category",
@@ -430,24 +1072,29 @@
             {
               "kind": "block",
               "type": "spritelab2_setSystemPrompt",
+              "id": "4s`DbvTZHxXMGdCX1o8n",
               "inputs": {
                 "PROMPT": {
                   "shadow": {
                     "type": "text",
+                    "id": ")#-7S,L?Zwc2DI`Mon#+",
                     "fields": {
                       "TEXT": ""
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "spritelab2_askAI",
+              "id": "(v~VCAc]L5v$!]6PWZ.M",
               "inputs": {
                 "PROMPT": {
                   "shadow": {
                     "type": "text",
+                    "id": "]--DC8+hE*|3wh~Qk_#m",
                     "fields": {
                       "TEXT": ""
                     }
@@ -456,32 +1103,44 @@
                 "VAR": {
                   "block": {
                     "type": "variables_get",
+                    "extraState": {
+                    },
                     "fields": {
                       "VAR": {
-                        "name": "AI answer"
+                        "id": "PQkZ-iwo%Hqcz0um:2pX",
+                        "name": "AI answer",
+                        "type": ""
                       }
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_whenPromptAnswered",
+              "id": "UYVR)@lF,u=SPV6JAxXk",
               "inputs": {
                 "VAR": {
                   "block": {
                     "type": "variables_get",
+                    "extraState": {
+                    },
                     "fields": {
                       "VAR": {
-                        "name": "AI answer"
+                        "id": "PQkZ-iwo%Hqcz0um:2pX",
+                        "name": "AI answer",
+                        "type": ""
                       }
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             }
-          ]
+          ],
+          "id": "AI"
         },
         {
           "kind": "category",
@@ -490,17 +1149,25 @@
             {
               "kind": "block",
               "type": "spritelab2_beginsBehavior",
+              "id": "PInUhDi;MOi9p4Mae-;R",
               "fields": {
-                "BEHAVIOR": "patrollingOnBlocks"
-              }
+                "SPRITE": "<field name=\"SPRITE\">null</field>",
+                "BEHAVIOR": "<field name=\"BEHAVIOR\">patrollingOnBlocks</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "gamelab_addBehaviorSimple",
+              "id": "Q=}M$yn7UM/Q./XXvGp*",
               "inputs": {
                 "SPRITE": {
                   "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "id": "{JO?z)ui0u}eLVKB$Nii",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
                   }
                 },
                 "BEHAVIOR": {
@@ -508,21 +1175,29 @@
                     "type": "spritelab2_movingWithArrowKeys"
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_movingLeft"
+              "type": "spritelab2_movingLeft",
+              "id": "{W%*?q!E_~c)Kj{|Finq",
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_movingWithArrowKeys"
+              "type": "spritelab2_movingWithArrowKeys",
+              "id": "~P!ol5lu!T9Hq-?gr0aD",
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_patrollingLeftRight"
+              "type": "spritelab2_patrollingLeftRight",
+              "id": "G$AS$9jY;oEeeluL]n6@",
+              "enabled": true
             }
-          ]
+          ],
+          "id": "Behaviors"
         },
         {
           "kind": "category",
@@ -530,17 +1205,30 @@
           "contents": [
             {
               "kind": "block",
-              "type": "spritelab2_goToScene"
+              "type": "spritelab2_goToScene",
+              "id": "hsCM]0KgJ[)/r@.ZD2Wx",
+              "fields": {
+                "SCENE": ""
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_goToExternalScene"
+              "type": "spritelab2_goToExternalScene",
+              "id": "64#6vI}*4u{8,F;~{Wj)",
+              "fields": {
+                "SCENE": ""
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_restartScene"
+              "type": "spritelab2_restartScene",
+              "id": "S0P%SRyu]:yCfbNvV4@Y",
+              "enabled": true
             }
-          ]
+          ],
+          "id": "Scenes"
         },
         {
           "kind": "category",
@@ -548,13 +1236,24 @@
           "contents": [
             {
               "kind": "block",
-              "type": "spritelab2_playSound"
+              "type": "spritelab2_playSound",
+              "id": "w$?WBg(4@1(!!{dF`,45",
+              "fields": {
+                "SOUND": "synth://boom"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_playMusic"
+              "type": "spritelab2_playMusic",
+              "id": "BCp(bWGxAndCZ;0:}QgM",
+              "fields": {
+                "SONG": ""
+              },
+              "enabled": true
             }
-          ]
+          ],
+          "id": "Sound"
         },
         {
           "kind": "category",
@@ -562,29 +1261,46 @@
           "contents": [
             {
               "kind": "block",
-              "type": "math_number"
+              "type": "math_number",
+              "id": ",tl4Sb@GZ1o*%p;+y*B}",
+              "fields": {
+                "NUM": 0
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "math_change",
+              "id": ")QE4H19lxZ%Nd4GXZ.[U",
+              "fields": {
+                "VAR": {
+                  "id": "?znrh`LV?(N)=2UK!ow/",
+                  "name": "item",
+                  "type": ""
+                }
+              },
               "inputs": {
                 "DELTA": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "ZG2U;[t_1mGWvB=/1yB?",
                     "fields": {
                       "NUM": 1
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "math_random_int",
+              "id": "ebG|C51HWKE]n8o?a~n*",
               "inputs": {
                 "FROM": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "(jf38II)1CA7MSKJh{;d",
                     "fields": {
                       "NUM": 1
                     }
@@ -593,34 +1309,60 @@
                 "TO": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "^vih/6Cy!^kVg_Wv%`YK",
                     "fields": {
                       "NUM": 100
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "math_arithmetic"
+              "type": "math_arithmetic",
+              "id": "I!(m=cm^Y?=5e(!P.^V?",
+              "fields": {
+                "OP": "<field name=\"OP\">ADD</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "math_round"
+              "type": "math_round",
+              "id": ")P4q^LGGF:@7lM+op-Hs",
+              "fields": {
+                "OP": "<field name=\"OP\">ROUND</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "math_single"
+              "type": "math_single",
+              "id": "Q8Vd+1qoW%p]Y%W%!0JW",
+              "fields": {
+                "OP": "<field name=\"OP\">ROOT</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "math_modulo"
+              "type": "math_modulo",
+              "id": "=6Gt-l:s[qw/*/9:5dXn",
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "math_number_property"
+              "type": "math_number_property",
+              "id": "eiND.45V+R#yKe]?pOPR",
+              "extraState": "<mutation divisor_input=\"false\"></mutation>",
+              "fields": {
+                "PROPERTY": "<field name=\"PROPERTY\">EVEN</field>"
+              },
+              "enabled": true
             }
-          ]
+          ],
+          "id": "Math"
         },
         {
           "kind": "category",
@@ -628,25 +1370,45 @@
           "contents": [
             {
               "kind": "block",
-              "type": "controls_if"
+              "type": "controls_if",
+              "id": "=(ZPfTrceh#+3!*j+]Wm",
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "logic_compare"
+              "type": "logic_compare",
+              "id": "S|Z;8^tQv)4B3wxvPC|^",
+              "fields": {
+                "OP": "<field name=\"OP\">EQ</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "logic_operation"
+              "type": "logic_operation",
+              "id": "[o$CbI9VGD=^q:VUa*0:",
+              "fields": {
+                "OP": "<field name=\"OP\">AND</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "logic_negate"
+              "type": "logic_negate",
+              "id": "OnGvns+I9$lkc.G9Ysz.",
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "logic_boolean"
+              "type": "logic_boolean",
+              "id": "jof/O03xJin{sIYK(k/m",
+              "fields": {
+                "BOOL": "<field name=\"BOOL\">TRUE</field>"
+              },
+              "enabled": true
             }
-          ]
+          ],
+          "id": "Logic"
         },
         {
           "kind": "category",
@@ -655,28 +1417,45 @@
             {
               "kind": "block",
               "type": "controls_repeat_ext",
+              "id": "4}Adtae1ag)[4+QxK.T!",
               "inputs": {
                 "TIMES": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "a.T$Kj;6t=sKfqLy-/UZ",
                     "fields": {
                       "NUM": 10
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "controls_whileUntil"
+              "type": "controls_whileUntil",
+              "id": "`Rfw=eVxIn#7c5InPp)4",
+              "fields": {
+                "MODE": "<field name=\"MODE\">WHILE</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
               "type": "controls_for",
+              "id": "kIcS#XmR.opAV0hdH{Gi",
+              "fields": {
+                "VAR": {
+                  "id": "z7YH_g$L+;|Y/47fZ58u",
+                  "name": "i",
+                  "type": ""
+                }
+              },
               "inputs": {
                 "FROM": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "brj9y$//D~|CLTZ3Mn#B",
                     "fields": {
                       "NUM": 1
                     }
@@ -685,6 +1464,7 @@
                 "TO": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "..*F#o(033_uhed2[^+9",
                     "fields": {
                       "NUM": 10
                     }
@@ -693,18 +1473,29 @@
                 "BY": {
                   "shadow": {
                     "type": "math_number",
+                    "id": "a)CEWO)]T#(ZM$C:faeY",
                     "fields": {
                       "NUM": 1
                     }
                   }
                 }
-              }
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "controls_flow_statements"
+              "type": "controls_flow_statements",
+              "id": "prkY}f%ZYJ,#5lmtXa:H",
+              "disabledReasons": [
+                "CONTROL_FLOW_NOT_IN_LOOP"
+              ],
+              "fields": {
+                "FLOW": "<field name=\"FLOW\">BREAK</field>"
+              },
+              "enabled": true
             }
-          ]
+          ],
+          "id": "Loops"
         },
         {
           "kind": "category",
@@ -712,13 +1503,24 @@
           "contents": [
             {
               "kind": "block",
-              "type": "text_join_simple"
+              "type": "text_join_simple",
+              "id": "3+[*;Vwpx2o!*td7z0*G",
+              "extraState": {
+                "itemCount": 2
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "text"
+              "type": "text",
+              "id": "-c_Jl@1*F6cNHy3jVrtX",
+              "fields": {
+                "TEXT": ""
+              },
+              "enabled": true
             }
-          ]
+          ],
+          "id": "Text"
         },
         {
           "kind": "category",
@@ -726,25 +1528,36 @@
           "contents": [
             {
               "kind": "block",
-              "type": "colour_picker"
+              "type": "colour_picker",
+              "id": ";yiLKW%[{Ku97l3WD:N;",
+              "fields": {
+                "COLOUR": "#ff0000"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "colour_random"
+              "type": "colour_random",
+              "id": "3.$-eojJf@F0p{^Tb5#*",
+              "enabled": true
             }
-          ]
+          ],
+          "id": "Color"
         },
         {
           "kind": "category",
+          "custom": "VARIABLE",
           "name": "Variables",
-          "custom": "VARIABLE"
+          "id": "Variables"
         },
         {
           "kind": "category",
+          "custom": "PROCEDURE",
           "name": "Functions",
-          "custom": "PROCEDURE"
+          "id": "Functions"
         }
-      ]
+      ],
+      "kind": "categoryToolbox"
     },
     "start_sources": {
       "animations": {
@@ -1202,7 +2015,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-29 12:31:19 -0700\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 14:17:47 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-10-29 12:31:19 -0700\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 14:17:47 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 09:24:02 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
