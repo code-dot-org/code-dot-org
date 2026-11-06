@@ -61,7 +61,7 @@ module ProjectsList
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
 
-      projects_query = Projects.new(storage_id).get_projects_with_state(state: state, order: Sequel.desc(:updated_at))
+      projects_query = Projects.new(storage_id).get_projects_with_state(state: state)
 
       projects_query.each do |project|
         channel_id = get_project_channel_id(storage_id, project[:id])
