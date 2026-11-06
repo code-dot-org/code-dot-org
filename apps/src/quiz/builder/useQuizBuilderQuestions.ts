@@ -29,6 +29,14 @@ const NEW_CHOICES = [
 // Unlike placements, it holds empty pages and edits need no renumbering.
 type PageLayout = number[][];
 
+// The endpoints also return a question's page. Only load reads it; after
+// that the layout says which page a question is on.
+type ServerQuestion = QuizBuilderQuestion & {page: number | null};
+
+function withoutPage({page, ...question}: ServerQuestion): QuizBuilderQuestion {
+  return question;
+}
+
 // A hook for managing a quiz's questions.
 // Provides the current state of the quiz's questions, including loading and error states.
 // Also returns functions to add new questions, and save and remove existing ones.
@@ -58,8 +66,10 @@ export default function useQuizBuilderQuestions(
         `/levels/${levelId}/quiz_configuration`
       );
       const body = await response.json();
-      const loaded: QuizBuilderQuestion[] = body.questions ?? [];
-      setQuestionsById(Object.fromEntries(loaded.map(q => [q.id, q])));
+      const loaded: ServerQuestion[] = body.questions ?? [];
+      setQuestionsById(
+        Object.fromEntries(loaded.map(q => [q.id, withoutPage(q)]))
+      );
       setLayout(
         groupByPage(loaded).map(({questions}) => questions.map(q => q.id))
       );
@@ -95,7 +105,6 @@ export default function useQuizBuilderQuestions(
         standards: [],
         attachedToOtherQuizzes: false,
         usedInPublishedUnit: false,
-        page,
       };
       let question: QuizBuilderQuestion;
       switch (type) {
@@ -173,7 +182,7 @@ export default function useQuizBuilderQuestions(
               true,
               {'Content-Type': 'application/json'}
             );
-        const saved: QuizBuilderQuestion = await response.json();
+        const saved = withoutPage(await response.json());
         setQuestionsById(prev => {
           const rest = {...prev};
           delete rest[id];

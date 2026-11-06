@@ -83,8 +83,8 @@ export function isMatchDraft(draft: QuizQuestionDraft): draft is MatchDraft {
 }
 
 // A question as the builder endpoints return it (GET /levels/:id/
-// quiz_configuration and a placement create): the QuizQuestion model's
-// fields plus the placement and cross-quiz usage context that
+// quiz_configuration and a placement create), without its page: the
+// QuizQuestion model's fields plus the cross-quiz usage context that
 // QuizQuestionSerialization#quiz_question_json adds.
 export type QuizBuilderQuestion = QuizQuestionPayload & {
   id: number;
@@ -92,7 +92,6 @@ export type QuizBuilderQuestion = QuizQuestionPayload & {
   standards: StandardSummary[];
   attachedToOtherQuizzes: boolean;
   usedInPublishedUnit: boolean;
-  page: number | null;
 };
 
 // A negative id marks a question that has been added locally

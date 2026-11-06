@@ -3,7 +3,8 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import useQuizBuilderQuestions from '@cdo/apps/quiz/builder/useQuizBuilderQuestions';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 
-const QUESTION = {
+// A question as the hook stores it.
+const STORED = {
   id: 7,
   type: 'MultipleChoiceQuestion',
   questionName: 'Existing question',
@@ -18,8 +19,10 @@ const QUESTION = {
   standards: [],
   attachedToOtherQuizzes: false,
   usedInPublishedUnit: false,
-  page: 1,
 };
+
+// The same question as the server sends it, with its page.
+const QUESTION = {...STORED, page: 1};
 
 const PAYLOAD = {
   type: 'MultipleChoiceQuestion' as const,
@@ -57,14 +60,14 @@ describe('useQuizBuilderQuestions', () => {
 
     expect(getSpy).toHaveBeenCalledWith('/levels/42/quiz_configuration');
     expect(result.current.isLoading).toBe(false);
-    expect(result.current.questions).toEqual([QUESTION]);
-    expect(result.current.pages).toEqual([{page: 1, questions: [QUESTION]}]);
+    expect(result.current.questions).toEqual([STORED]);
+    expect(result.current.pages).toEqual([{page: 1, questions: [STORED]}]);
   });
 
   it('numbers pages by their order, closing gaps in the saved page numbers', async () => {
-    const later = {...QUESTION, id: 8, page: 3};
+    const later = {...STORED, id: 8};
     getSpy.mockResolvedValue({
-      json: async () => ({questions: [QUESTION, later]}),
+      json: async () => ({questions: [QUESTION, {...later, page: 3}]}),
     } as Response);
     const {result, waitForNextUpdate} = renderHook(() =>
       useQuizBuilderQuestions(42)
@@ -72,7 +75,7 @@ describe('useQuizBuilderQuestions', () => {
     await waitForNextUpdate();
 
     expect(result.current.pages).toEqual([
-      {page: 1, questions: [QUESTION]},
+      {page: 1, questions: [STORED]},
       {page: 2, questions: [later]},
     ]);
   });
@@ -146,7 +149,6 @@ describe('useQuizBuilderQuestions', () => {
         {id: '1', text: 'Option B'},
       ],
       correctChoiceId: '0',
-      page: 1,
     });
   });
 
@@ -212,7 +214,6 @@ describe('useQuizBuilderQuestions', () => {
       result.current.addPendingQuestion(2, 'MultipleChoiceQuestion');
     });
 
-    expect(result.current.questions[1]).toMatchObject({page: 2});
     expect(result.current.pages.map(p => p.questions.length)).toEqual([1, 1]);
   });
 
@@ -266,7 +267,7 @@ describe('useQuizBuilderQuestions', () => {
         {'Content-Type': 'application/json'}
       );
       expect(updatedId).toBe(QUESTION.id);
-      expect(result.current.questions).toEqual([updated]);
+      expect(result.current.questions).toEqual([{...STORED, ...PAYLOAD}]);
     });
 
     it('resolves with the new id and replaces the question by it when the server forks it', async () => {
@@ -307,7 +308,7 @@ describe('useQuizBuilderQuestions', () => {
 
       expect(updatedId).toBeUndefined();
       expect(result.current.error).toBe('question title cannot be blank');
-      expect(result.current.questions).toEqual([QUESTION]);
+      expect(result.current.questions).toEqual([STORED]);
       expect(result.current.errorQuestionId).toBe(7);
     });
 
@@ -485,7 +486,7 @@ describe('useQuizBuilderQuestions', () => {
 
       expect(succeeded).toBe(false);
       expect(result.current.error).toBe('not found');
-      expect(result.current.questions).toEqual([QUESTION]);
+      expect(result.current.questions).toEqual([STORED]);
       expect(result.current.errorQuestionId).toBe(7);
     });
   });
