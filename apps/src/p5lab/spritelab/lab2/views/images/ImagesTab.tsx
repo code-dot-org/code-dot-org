@@ -269,8 +269,22 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     learning,
     levelId,
   });
-  // Rating a picture keeps it a second time; the story is offered only on
-  // the first keep of each picture.
+  const tools = useDrawing({
+    images,
+    saveEdited: writer.saveEdited,
+    storePicture,
+    active,
+    onDrawingHistory,
+  });
+  const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
+    tools;
+  const drawingKeyRef = useRef(drawing?.target.key);
+  drawingKeyRef.current = drawing?.target.key;
+  // Rating a picture keeps it a second time, under a record that now
+  // carries the verdict. The story is offered only on the first keep of
+  // each picture. On a repeat keep the tools open on the picture are handed
+  // the new record, or they would take it for a new picture landing over
+  // the drawing and close.
   const keptRef = useRef<string | null>(null);
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
@@ -281,22 +295,16 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       };
       const firstKeep = keptRef.current !== result.filename;
       keptRef.current = result.filename;
+      if (!firstKeep && target.key && drawingKeyRef.current === target.key) {
+        adoptGeneration(result.generation);
+      }
       await storePicture(target, () => writer.acceptGenerated(target, result));
       if (firstKeep) {
         offerStory(result);
       }
     },
-    [writer, storePicture, offerStory]
+    [writer, storePicture, offerStory, adoptGeneration]
   );
-
-  const tools = useDrawing({
-    images,
-    saveEdited: writer.saveEdited,
-    storePicture,
-    active,
-    onDrawingHistory,
-  });
-  const {drawing, startDrawing, leaveDrawing, stopDrawing} = tools;
   // When the chosen image has been deleted, choose the first image left, or
   // none; tools open on it close without saving, since a save would create
   // a new image from the deleted pixels.

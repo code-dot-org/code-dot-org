@@ -64,6 +64,25 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
         >
           land {imageType} {imageSubject ?? ''}
         </button>
+        <button
+          type="button"
+          onClick={() =>
+            onKeep({
+              // The picture kept again with its verdict, as a rating does.
+              filename: `made-${picturesMade}.png`,
+              uint8Array: new Uint8Array([137, 80, 78, 71]),
+              mediaType: 'image/png',
+              generation: {
+                imageType,
+                ...(imageSubject && {subject: imageSubject}),
+                prompt: 'A cat',
+                verdict: 'up',
+              },
+            })
+          }
+        >
+          rate {imageType}
+        </button>
         {layout({
           mode: generating ? 'generating' : 'edit',
           busy: generating,
@@ -599,6 +618,41 @@ describe('ImagesTab', () => {
     fireEvent.click(screen.getByRole('button', {name: 'generate off'}));
     expect(screen.getByText('toolbar')).toBeTruthy();
     expect(screen.getByText('canvas')).toBeTruthy();
+  });
+
+  it('keeps the tools open when the picture under them is rated', async () => {
+    delete params['images-edited'];
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      sourceUrl: 'one.png',
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    acceptGenerated.mockImplementation(async (_target, result) => {
+      propsByKey.k1 = {...propsByKey.k1, generation: result.generation};
+      return 'k1';
+    });
+    const {rerender} = renderTab({editingOffered: true});
+    await screen.findByText('canvas');
+    const again = () =>
+      rerender(
+        <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
+      );
+    // A picture lands over the drawing: the tools open again on it.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^land sprite/}));
+    });
+    again();
+    const canvas = await screen.findByText('canvas');
+    // Rating it keeps it again; the tab sees the record on its next render.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^rate sprite/}));
+    });
+    expect(acceptGenerated).toHaveBeenCalledTimes(2);
+    again();
+    // The same canvas: the tools were never put away.
+    expect(screen.getByText('canvas')).toBe(canvas);
+    expect(screen.getByText('toolbar')).toBeTruthy();
   });
 
   it('paints every image in place in free play, the words beside the tools', async () => {
