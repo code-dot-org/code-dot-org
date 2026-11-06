@@ -92,19 +92,22 @@ const SpritelabModeFields: React.FunctionComponent<
   const showPaletteRoles = fieldApplies(mode, 'paletteRoles');
   const showImageFirst = fieldApplies(mode, 'imageFirst');
 
-  // The two settings disagree about which wins: the World palette lists the
-  // roles' images but preselects the image type's, which may not be among them.
+  // The palette lists the roles' images but preselects the one found by image
+  // type and role, so a role the palette omits preselects a hidden image. A
+  // background preselects nothing, so it cannot disagree.
   const paletteConflict =
     showPaletteRoles &&
     getPaletteRoles(mode).length > 0 &&
-    typeof mode.imageType === 'string';
+    typeof mode.imageType === 'string' &&
+    mode.imageType !== 'background' &&
+    !getPaletteRoles(mode).includes(mode.imageRole as string);
 
   const imageTypeHelper =
     kind === 'world' && mode.imageType === 'background'
       ? 'A world cell holds a sprite or a block, so a background preselects nothing.'
       : kind === 'world'
       ? 'The World palette offers only this level’s image of this kind.'
-      : 'The Images tab offers only this kind, and only one image.';
+      : 'The Images tab offers only this type, and the user can only make one image.';
 
   return (
     <div>
@@ -162,7 +165,7 @@ const SpritelabModeFields: React.FunctionComponent<
             helperMessage={imageTypeHelper}
             errorMessage={
               paletteConflict
-                ? 'Palette roles already choose the images. Clear one or the other.'
+                ? 'Image role must be one of the palette roles, or the palette preselects an image it does not offer.'
                 : undefined
             }
             size="s"
