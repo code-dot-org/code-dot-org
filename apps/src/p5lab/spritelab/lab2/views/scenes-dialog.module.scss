@@ -31,11 +31,11 @@
   background: var(--background-neutral-secondary);
 }
 
-// The rows sit in the middle of the body's width.
+// As many columns as fit, the set of them centred; a short last row
+// starts at the first column rather than centring on its own.
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 216px);
   justify-content: center;
   gap: 20px;
   padding: 12px;
