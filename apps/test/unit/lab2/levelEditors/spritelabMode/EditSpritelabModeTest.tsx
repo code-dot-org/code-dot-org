@@ -48,6 +48,20 @@ describe('EditSpritelabMode', () => {
     expect(submitted(container)).not.toBe('');
   });
 
+  it.each([
+    {kind: 'image', imageType: 'sprite', imageRole: 'hero', learning: true},
+    {
+      kind: 'code',
+      imageType: 'background',
+      imageRole: 'platform-background',
+      imageFirst: true,
+      learning: true,
+    },
+  ])('round-trips a mode a shipped level holds: %j', mode => {
+    const {container} = renderEditor(mode);
+    expect(JSON.parse(submitted(container))).toEqual(mode);
+  });
+
   it('round-trips a saved mode untouched', () => {
     const mode = {
       kind: 'world',

@@ -4,6 +4,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import {Typography} from '@mui/material';
 import React, {useMemo, useState} from 'react';
 
+import {ImageSource} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
   IMAGE_SUBJECTS,
   IMAGE_TYPE_LABELS,
@@ -23,6 +24,8 @@ import {
   LevelModeObject,
   parsePaletteRoles,
   setImageFirst,
+  setImageSource,
+  setLearning,
   setImageRole,
   setImageSubject,
   setImageType,
@@ -74,6 +77,11 @@ function imageTypeItems(kind: LevelModeKind | undefined, chosen: unknown) {
   return IMAGE_TYPES_ITEMS;
 }
 
+const IMAGE_SOURCE_ITEMS = [
+  {value: 'cached', text: 'Cached'},
+  {value: 'live', text: 'Live'},
+];
+
 const IMAGE_SUBJECT_ITEMS = IMAGE_SUBJECTS.map(subject => ({
   value: subject,
   text: imageKindLabel('sprite', subject),
@@ -119,6 +127,8 @@ const SpritelabModeFields: React.FunctionComponent<
   const showImageRole = fieldApplies(mode, 'imageRole');
   const showPaletteRoles = fieldApplies(mode, 'paletteRoles');
   const showImageFirst = fieldApplies(mode, 'imageFirst');
+  const showLearning = fieldApplies(mode, 'learning');
+  const showImageSource = fieldApplies(mode, 'imageSource');
 
   // The palette lists images in the palette roles but preselects the level's
   // image role, so a role the palette omits will select a hidden image. A
@@ -273,6 +283,34 @@ const SpritelabModeFields: React.FunctionComponent<
             onChange={event =>
               onChange(setImageFirst(mode, event.target.checked))
             }
+            size="s"
+          />
+        </div>
+      )}
+      {showLearning && (
+        <div className={moduleStyles.booleanField}>
+          <Checkbox
+            name="spritelab_mode_learning"
+            label="Tell the student how AI made their picture, after the first one."
+            checked={mode.learning === true}
+            onChange={event =>
+              onChange(setLearning(mode, event.target.checked))
+            }
+            size="s"
+          />
+        </div>
+      )}
+      {showImageSource && (
+        <div className={moduleStyles.fieldArea}>
+          <SimpleDropdown
+            labelText="Image source"
+            name="spritelab_mode_image_source"
+            items={IMAGE_SOURCE_ITEMS}
+            selectedValue={(mode.imageSource as string) ?? 'cached'}
+            onChange={event =>
+              onChange(setImageSource(mode, event.target.value as ImageSource))
+            }
+            helperMessage="Cached pictures come from the published set, with the model filling gaps. Live asks the model every time."
             size="s"
           />
         </div>

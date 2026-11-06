@@ -2,6 +2,10 @@
   Helpers for reading, writing and cleaning the sprite lab 2 level mode property.
 */
 import {
+  ImageSource,
+  isImageSource,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
+import {
   IMAGE_SUBJECTS,
   IMAGE_TYPES,
   ImageSubject,
@@ -35,17 +39,33 @@ export const KIND_LABELS: Record<LevelModeKind, string> = {
 
 // Keys a kind can carry; changing the kind drops the rest.
 const KEYS_BY_KIND: Record<LevelModeKind, string[]> = {
-  code: ['imageType', 'imageSubject', 'imageRole', 'imageFirst'],
+  code: [
+    'imageType',
+    'imageSubject',
+    'imageRole',
+    'imageFirst',
+    'learning',
+    'imageSource',
+  ],
   world: [
     'imageType',
     'imageSubject',
     'imageRole',
     'paletteRoles',
     'imageFirst',
+    'learning',
+    'imageSource',
   ],
-  play: ['imageType', 'imageSubject', 'imageRole', 'imageFirst'],
-  image: ['imageType', 'imageSubject', 'imageRole'],
-  freeplay: [],
+  play: [
+    'imageType',
+    'imageSubject',
+    'imageRole',
+    'imageFirst',
+    'learning',
+    'imageSource',
+  ],
+  image: ['imageType', 'imageSubject', 'imageRole', 'learning', 'imageSource'],
+  freeplay: ['learning', 'imageSource'],
 };
 
 export function getKind(mode: LevelModeObject): LevelModeKind | undefined {
@@ -90,7 +110,10 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
       );
     // A false flag reads the same as no flag, so only true is stored.
     case 'imageFirst':
+    case 'learning':
       return value === true;
+    case 'imageSource':
+      return isImageSource(value);
     default:
       return false;
   }
@@ -141,6 +164,12 @@ export function fieldApplies(mode: LevelModeObject, key: string): boolean {
       return fieldApplies(mode, 'imageType') && mode.imageType === 'sprite';
     case 'imageRole':
       return kind === 'image' || fieldApplies(mode, 'imageType');
+    // Both act on a picture the student makes, so they need an Images tab.
+    case 'learning':
+    case 'imageSource':
+      return (
+        kind === 'image' || kind === 'freeplay' || mode.imageFirst === true
+      );
     default:
       return true;
   }
@@ -195,6 +224,25 @@ export function setImageFirst(
 ): LevelModeObject {
   return withoutInapplicableKeys(
     setJsonObjectValue(mode, 'imageFirst', imageFirst || undefined)
+  );
+}
+
+export function setLearning(
+  mode: LevelModeObject,
+  learning: boolean
+): LevelModeObject {
+  return setJsonObjectValue(mode, 'learning', learning || undefined);
+}
+
+/** Unset reads as 'cached', so the default is stored by storing nothing. */
+export function setImageSource(
+  mode: LevelModeObject,
+  imageSource: ImageSource
+): LevelModeObject {
+  return setJsonObjectValue(
+    mode,
+    'imageSource',
+    imageSource === 'cached' ? undefined : imageSource
   );
 }
 
