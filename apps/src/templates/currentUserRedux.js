@@ -131,6 +131,7 @@ const initialState = {
   userCreatedAt: null,
   userSharingDisabled: false,
   hasSeenHomepageWelcome: false,
+  canUseLessonDeepDiveChallenges: false,
   blockedAichatProviders: [],
   spritelabAskAiRefusal: SpritelabAskAiRefusals.NOT_IN_PILOT,
 };
@@ -265,6 +266,7 @@ export default function currentUser(state = initialState, action) {
       sharing_disabled,
       has_seen_homepage_welcome,
       ai_chat_access_level,
+      can_use_lesson_deep_dive_challenges,
       blocked_aichat_providers,
       spritelab_ask_ai_refusal,
     } = action.serverUser;
@@ -306,6 +308,8 @@ export default function currentUser(state = initialState, action) {
       userSharingDisabled: sharing_disabled,
       hasSeenHomepageWelcome: has_seen_homepage_welcome,
       aiChatAccessLevel: ai_chat_access_level,
+      canUseLessonDeepDiveChallenges:
+        can_use_lesson_deep_dive_challenges ?? false,
       blockedAichatProviders: blocked_aichat_providers ?? [],
       spritelabAskAiRefusal: spritelab_ask_ai_refusal,
     };

@@ -51,6 +51,7 @@ export interface CurrentUserState {
   inUSA: boolean;
   isLevelbuilder: boolean;
   aiChatAccessLevel: AiChatAccessLevel;
+  canUseLessonDeepDiveChallenges: boolean;
   blockedAichatProviders: string[];
   spritelabAskAiRefusal: SpritelabAskAiRefusal | null;
 }

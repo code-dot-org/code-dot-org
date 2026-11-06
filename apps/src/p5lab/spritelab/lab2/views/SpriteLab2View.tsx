@@ -48,6 +48,7 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks, ownsTop} from '../addBlocks';
+import {ImageSource, isImageSource} from '../ai/images/imageCache';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -59,10 +60,11 @@ import {
   heldBackBlockTypes,
   newBlockTypes,
 } from '../blockCatalog';
-import {toolboxBlockTypes} from '../blockLocks';
+import {ownToolboxTypes} from '../blockLocks';
 import {
   refreshSceneDropdowns,
   setSceneMenuActiveId,
+  withSceneMenuActive,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
@@ -80,11 +82,13 @@ import {
   defaultImageName,
   defaultRole,
   imagesNamedForRole,
+  imagesNamedInRole,
 } from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
 import {
   editsWorld,
   GENERATION_LIMIT,
+  imageSourceForMode,
   isFreeplayMode,
   tabsForMode,
 } from '../levelMode';
@@ -205,6 +209,22 @@ const PREVIEW_SHARE = 0.22;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 
+// ?image-source=live|cached overrides the level's, and
+// ?image-cache-url= reads another tree (a local one, or a version under
+// review), for internal testing.
+function getImageSourceParam(): ImageSource | undefined {
+  const value = queryParams('image-source');
+  return isImageSource(value) ? value : undefined;
+}
+
+function getImageCacheUrlParam(): string | undefined {
+  const value = queryParams('image-cache-url');
+  if (typeof value !== 'string' || !value) {
+    return undefined;
+  }
+  return value.endsWith('/') ? value : `${value}/`;
+}
+
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_PANE_WIDTH = 280;
 const DEFAULT_SCENE_ID = 'scene-1';
@@ -297,6 +317,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const dispatch = useAppDispatch();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
+  const imageSourceParam = useMemo(getImageSourceParam, []);
+  const imageCacheUrlParam = useMemo(getImageCacheUrlParam, []);
   // The advanced image settings, for authors; level edit modes have them.
   const imagesAdvanced =
     useMemo(() => queryParams('images-advanced') === 'true', []) ||
@@ -638,13 +660,26 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [scenes, animationList]
   );
 
-  // Keep activeSceneId pointing at a real scene: locked to the pin once the
-  // ensure effect lands it, otherwise reset to the first scene when the
-  // active one disappears (e.g. code cleared via start over).
+  // The scenes the student may open on this level: on a pinned level the
+  // pin and, when the level says so, its extra scene; otherwise every
+  // scene.
+  const openableSceneIds = useMemo(
+    () =>
+      pinnedSceneId
+        ? [
+            pinnedSceneId,
+            ...(extraScene?.editable ? [extraScene.id] : []),
+          ].filter(id => scenes.some(s => s.id === id))
+        : scenes.map(s => s.id),
+    [pinnedSceneId, extraScene, scenes]
+  );
+  // Keep activeSceneId pointing at a real scene: locked to the pin's scenes
+  // once the ensure effect lands them, otherwise reset to the first scene
+  // when the active one disappears (e.g. code cleared via start over).
   useEffect(() => {
     if (pinnedSceneId) {
       if (
-        activeSceneId !== pinnedSceneId &&
+        !openableSceneIds.includes(activeSceneId ?? '') &&
         scenes.some(s => s.id === pinnedSceneId)
       ) {
         setActiveSceneId(pinnedSceneId);
@@ -654,7 +689,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (!scenes.some(s => s.id === activeSceneId)) {
       setActiveSceneId(scenes[0].id);
     }
-  }, [scenes, activeSceneId, pinnedSceneId]);
+  }, [scenes, activeSceneId, pinnedSceneId, openableSceneIds]);
 
   // Premade world, when the level authors one.
   const paintedWorld = useWorldStartPattern({
@@ -731,8 +766,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       Object.fromEntries(
         objectiveRoles.map(role => [
           role,
-          // World cells and touched sprites are sprite images.
-          imagesNamedForRole(animationList, 'sprite', role),
+          // World cells hold sprites and blocks alike.
+          imagesNamedInRole(animationList, role),
         ])
       ),
     [objectiveRoles, animationList]
@@ -800,6 +835,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return !!props?.generation?.verdict && !before.has(props.name);
     });
   }, [animationList, initialSources]);
+  const sceneSources = useMemo(
+    () =>
+      Object.fromEntries(
+        scenes.map(scene => [
+          scene.id,
+          scene.source as WorkspaceSource | undefined,
+        ])
+      ),
+    [scenes]
+  );
   const objectives = useObjectives({
     objectives: levelProperties.objectives,
     images: objectiveImages,
@@ -807,6 +852,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     baselineGrid,
     imagesForRole,
     source: activeScene.source as WorkspaceSource | undefined,
+    sceneSources,
+    editingSceneId: activeScene.id,
     everPlayed: playProgress.everPlayed,
     rated,
     runtime: playProgress.runtime,
@@ -821,6 +868,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const callout = activeCallout(levelProperties.callouts, {
     done: calloutDone,
     tab: activeTab,
+    scene: activeScene.id,
   });
 
   // The World palette selection lives here so it survives leaving the tab
@@ -1317,8 +1365,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           const live = scene.id === activeSceneId ? getCode() : null;
           code =
             live ??
-            getCodeFromSerializedWorkspace(
-              scene.source ?? DEFAULT_SCENE_SOURCE
+            withSceneMenuActive(scene.id, () =>
+              getCodeFromSerializedWorkspace(
+                scene.source ?? DEFAULT_SCENE_SOURCE
+              )
             );
         } catch (e) {
           // A scene that fails to compile shouldn't kill the jump
@@ -1396,8 +1446,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ])
       );
       try {
-        return getCodeFromSerializedWorkspace(
-          scene.source ?? DEFAULT_SCENE_SOURCE
+        return withSceneMenuActive(scene.id, () =>
+          getCodeFromSerializedWorkspace(scene.source ?? DEFAULT_SCENE_SOURCE)
         );
       } finally {
         dispatch({
@@ -1908,8 +1958,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const leavingResetRef = useRef<{level: number; reinitBefore: number}>();
   useEffect(() => {
     leavingResetRef.current = undefined;
-    // A level with no added blocks runs no add-blocks pass, which is what
-    // would otherwise drop the previous level's reserved rooms.
+    // The add-blocks pass drops them too, except on the Start Over reset it
+    // sits out.
     const workspace = Blockly.getMainWorkspace?.() as
       | BlocklyCore.WorkspaceSvg
       | undefined;
@@ -1922,13 +1972,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // in page loads nothing, so arriving runs it; a load puts the view back
   // wherever the workspace was, so a load runs it too and brings the
   // level's outline back on screen.
+  // The level's entries belong to its pinned scene.
+  const sceneAddBlocks = useMemo(
+    () =>
+      activeScene.id === pinnedSceneId ? levelProperties.addBlocks ?? [] : [],
+    [levelProperties.addBlocks, pinnedSceneId, activeScene.id]
+  );
+  // Runs with no entries too: the pass also drops other levels' outlines.
   const addLevelBlocks = useCallback(() => {
-    if (
-      !animationsSeeded ||
-      isToolboxMode ||
-      !levelProperties.addBlocks ||
-      activeScene.id !== pinnedSceneId
-    ) {
+    if (!animationsSeeded || isToolboxMode) {
       return;
     }
     const key = [
@@ -1951,19 +2003,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
-    addMissingBlocks(workspace, levelProperties.addBlocks);
+    addMissingBlocks(workspace, sceneAddBlocks);
   }, [
     animationsSeeded,
     levelProperties.id,
-    levelProperties.addBlocks,
-    activeScene.id,
-    pinnedSceneId,
+    sceneAddBlocks,
     sourcesReinitializedCount,
     workspaceVersion,
   ]);
-  const ownToolboxTypes = useMemo(
-    () => toolboxBlockTypes(levelProperties.toolboxDefinition),
-    [levelProperties.toolboxDefinition]
+  const ownTypes = useMemo(
+    () =>
+      ownToolboxTypes(levelProperties.toolboxDefinition, earlierLevels ?? []),
+    [earlierLevels, levelProperties.toolboxDefinition]
   );
   useEffect(() => {
     if (!animationsSeeded) {
@@ -1984,14 +2035,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     sceneLoadsRef.current++;
-    // Before free play, blocks built on an earlier level cannot be deleted.
-    // This level's own stacks, added by it or built from its toolbox, stay
-    // deletable.
+    // On a level that asks, blocks built on an earlier level cannot be
+    // deleted. Earlier levels built the pinned scene; an extra scene is this
+    // level's own. The stacks this level added and the toolbox blocks no
+    // earlier level required stay deletable.
     loadCode(source, {
-      lock: !isLevelEditMode && !isFreeplayMode(levelProperties.levelMode),
-      isOwnStack: top =>
-        ownsTop(levelProperties.addBlocks ?? [], top) ||
-        ownToolboxTypes.has(top.type),
+      lock:
+        !isLevelEditMode &&
+        !!levelProperties.lockEarlierBlocks &&
+        (!pinnedSceneId || activeScene.id === pinnedSceneId),
+      isOwn: block =>
+        ownsTop(levelProperties.addBlocks ?? [], block.getRootBlock()) ||
+        ownTypes.has(block.type),
     });
     runLocalScene(activeScene);
     // After the load, so the blocks sit below what the workspace holds.
@@ -2000,7 +2055,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     addLevelBlocks,
     animationsSeeded,
     levelProperties.addBlocks,
-    ownToolboxTypes,
+    levelProperties.lockEarlierBlocks,
+    ownTypes,
+    pinnedSceneId,
     activeScene,
     currentSources.source,
     getCurrentBlocks,
@@ -2113,9 +2170,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     [dispatch]
   );
+  // A pinned level's one Play plays the game from its scene, whichever
+  // scene is open.
   const handlePreviewClick = useCallback(
-    () => playFrom(activeSceneId === defaultPlaySceneId ? null : activeSceneId),
-    [playFrom, activeSceneId, defaultPlaySceneId]
+    () =>
+      playFrom(
+        pinnedSceneId || activeSceneId === defaultPlaySceneId
+          ? null
+          : activeSceneId
+      ),
+    [playFrom, pinnedSceneId, activeSceneId, defaultPlaySceneId]
   );
   // Focus must not stay on a play button (see handOffControlFocus), and
   // the playspace is only focusable once Play has rendered, so a keyboard
@@ -2247,9 +2311,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The scene controls for the scene row or the workspace bar. A pinned
   // level shows only its own scene.
   const sceneControls = {
-    scenes: pinnedSceneId
-      ? sceneMetadata.filter(scene => scene.id === pinnedSceneId)
-      : sceneMetadata,
+    scenes: sceneMetadata.filter(scene => openableSceneIds.includes(scene.id)),
     activeSceneId,
     locked: !!pinnedSceneId,
     lockedReason: LOCKED_REASON,
@@ -2294,8 +2356,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       )}
       {callout && !isLevelEditMode && (
         <Callout
-          selector={calloutSelector(callout.target)}
+          selector={calloutSelector(callout)}
           direction={callout.direction}
+          fallback={
+            callout.fallback && {
+              selector: calloutSelector(callout.fallback),
+              direction: callout.fallback.direction,
+            }
+          }
         />
       )}
       {showBlockCatalog && (
@@ -2422,6 +2490,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 lockedImageType={levelProperties.levelMode?.imageType}
                 lockedImageSubject={levelProperties.levelMode?.imageSubject}
                 imageRole={levelProperties.levelMode?.imageRole}
+                ownImageMade={
+                  !!levelProperties.levelMode?.imageType &&
+                  objectiveImages[levelProperties.levelMode.imageType] >= 1
+                }
+                learning={levelProperties.levelMode?.learning}
+                levelId={levelProperties.id}
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}
                 editingOffered={isFreeplayMode(levelProperties.levelMode)}
@@ -2431,6 +2505,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 advancedOffered={imagesAdvanced}
                 onDrawingHistory={setDrawingHistory}
                 ratingRequired={ratingRequired}
+                imageSource={
+                  imageSourceParam ||
+                  imageSourceForMode(levelProperties.levelMode)
+                }
+                imageCacheUrl={imageCacheUrlParam}
               />
             </div>
           )}
