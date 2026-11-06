@@ -2336,7 +2336,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {scenesOpen && (
         <ScenesDialog
           scenes={sceneMetadata}
-          activeSceneId={activeSceneId}
           editable={scenesEditable}
           creating={scenesCreating}
           onCreateScene={sceneEditing.createScene}

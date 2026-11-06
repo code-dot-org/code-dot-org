@@ -97,7 +97,6 @@ const SceneNameField: React.FunctionComponent<SceneNameFieldProps> = ({
 
 interface SceneCardProps {
   scene: SceneMetadata;
-  active: boolean;
   /** The first scene: where Play and other projects' jumps begin. */
   startsHere: boolean;
   /** The last scene can't be deleted: a project always has one. */
@@ -112,7 +111,6 @@ interface SceneCardProps {
 
 const SceneCard: React.FunctionComponent<SceneCardProps> = ({
   scene,
-  active,
   startsHere,
   deletable,
   editable,
@@ -124,13 +122,7 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
   const [renaming, setRenaming] = useState(false);
   const [confirming, setConfirming] = useState(false);
   return (
-    <div
-      className={classNames(
-        styles.card,
-        active && styles.cardActive,
-        disabled && styles.cardDisabled
-      )}
-    >
+    <div className={classNames(styles.card, disabled && styles.cardDisabled)}>
       <div className={styles.tile}>
         <ScenePicture src={scene.thumbnail} className={styles.tilePicture} />
       </div>
@@ -206,6 +198,8 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
                 Delete
               </MuiButton>
             ))}
+          {/* The start scene's is pressed and inert: there is nothing it
+              could do. */}
           {!confirming && (
             <MuiButton
               variant={startsHere ? 'contained' : 'outlined'}
@@ -213,12 +207,8 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
               size="extraSmall"
               aria-pressed={startsHere}
               startIcon={<FontAwesomeV6Icon iconName="play" aria-hidden />}
-              disabled={disabled}
-              onClick={() => {
-                if (!startsHere) {
-                  onMakeStart(scene.id);
-                }
-              }}
+              disabled={disabled || startsHere}
+              onClick={() => onMakeStart(scene.id)}
             >
               Start here
             </MuiButton>
@@ -258,7 +248,6 @@ const NewSceneCard: React.FunctionComponent<NewSceneCardProps> = ({
 
 interface ScenesDialogProps {
   scenes: SceneMetadata[];
-  activeSceneId: string | null;
   /** Whether scenes can be added, renamed, reordered and deleted here. */
   editable: boolean;
   /** Opens with a new scene waiting for its name. */
@@ -272,7 +261,6 @@ interface ScenesDialogProps {
 
 const ScenesDialog: React.FunctionComponent<ScenesDialogProps> = ({
   scenes,
-  activeSceneId,
   editable,
   creating = false,
   onCreateScene,
@@ -299,7 +287,6 @@ const ScenesDialog: React.FunctionComponent<ScenesDialogProps> = ({
                 <SceneCard
                   key={scene.id}
                   scene={scene}
-                  active={scene.id === activeSceneId}
                   startsHere={index === 0}
                   deletable={scenes.length > 1}
                   editable={editable}

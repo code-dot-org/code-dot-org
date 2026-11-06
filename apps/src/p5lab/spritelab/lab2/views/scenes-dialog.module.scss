@@ -92,18 +92,13 @@
   }
 }
 
-.cardActive .tile {
-  outline: 2px solid var(--borders-brand-teal-primary);
-  outline-offset: 2px;
-}
-
-// The name with its pencil, or the field with save and cancel; one height
-// either way so the card does not jump.
+// The name with its pencil, or the field with save and cancel; the
+// field's height either way, so the card does not grow when it opens.
 .nameRow {
   display: flex;
   align-items: center;
   gap: 2px;
-  min-height: 28px;
+  min-height: 34px;
 }
 
 .name {

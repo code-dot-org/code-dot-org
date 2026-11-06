@@ -21,13 +21,7 @@ function renderDialog(
   };
   render(
     <ThemeProvider>
-      <ScenesDialog
-        scenes={scenes}
-        activeSceneId="a"
-        editable
-        {...handlers}
-        {...props}
-      />
+      <ScenesDialog scenes={scenes} editable {...handlers} {...props} />
     </ThemeProvider>
   );
   return handlers;
@@ -49,9 +43,8 @@ describe('ScenesDialog', () => {
     const {onMakeStartScene} = renderDialog();
     const [intro, cave] = startButtons();
     expect(intro.getAttribute('aria-pressed')).toBe('true');
+    expect(intro).toBeDisabled();
     expect(cave.getAttribute('aria-pressed')).toBe('false');
-    fireEvent.click(intro);
-    expect(onMakeStartScene).not.toHaveBeenCalled();
     fireEvent.click(cave);
     expect(onMakeStartScene).toHaveBeenCalledWith('b');
   });
