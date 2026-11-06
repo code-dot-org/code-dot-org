@@ -25,7 +25,8 @@ The words come from `sentences.json` beside these scripts, a pinned copy of
 the lab's `apps/static/spritelab_lab2/sentences.json`. A cached picture's
 path is its word ids, so the words the tree was drawn from must not change
 under it. The copy here matches the lab's file as of the "hoai2026: adlib
-updates" change (#76697). Whenever the two differ, every run says so.
+updates" change (#76697), less the creature `fairy`, which is dropped here
+ahead of the lab. Whenever the two differ, every run says so.
 
 A word's id is a folder in every path, so it is lowercase words joined by
 single hyphens, as the lab writes them (`outer space` is `outer-space`).
@@ -52,8 +53,8 @@ To see the words, and the size of a run:
 ./bin/oneoff/hoai_2026/imagegen/generate_images --list-sentences
 ```
 
-All of it is 1,816 fillings, 5,448 variants and 18,552 images. The
-character sentence is 16,380 of those images.
+All of it is 1,738 fillings, 5,214 variants and 17,382 images. The
+character sentence is 15,210 of those images.
 
 ## Changing the words
 
@@ -108,7 +109,7 @@ draws and moderates every variant not yet drawn. Narrow it with
 `-i/--id SENTENCE`, `-f/--filter TEXT`, `-v/--variants N` and `--limit N`.
 `-c/--choice SLOT=WORD` pins a slot (`_` for an empty optional slot), so a
 small batch can sweep one slot and hold the rest. One character per
-creature is 14 sets of 5 pictures:
+creature is 13 sets of 5 pictures:
 
 ```
 ./bin/oneoff/hoai_2026/imagegen/generate_images -i character -v 1 \
@@ -124,7 +125,7 @@ its seed; the set is the same drawing, so a review of its base still holds.
 A set with only its base is never published. The tree holds characters only
 as sets: when a student turns Animated off, the lab is to use a set's first
 frame as the single picture. Three bases per filling of
-every character is 3,276 images, against 16,380 for the full sets:
+every character is 3,042 images, against 15,210 for the full sets:
 
 ```
 ./bin/oneoff/hoai_2026/imagegen/generate_images -i character --first-frame --judge
