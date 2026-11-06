@@ -207,4 +207,22 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
 
     assert_response :bad_request
   end
+
+  test "create rejects a response while the quiz's lockable lesson is locked" do
+    unit = create(:unit)
+    lesson = create(:lesson, script: unit, lockable: true)
+    create(:script_level, script: unit, lesson: lesson, levels: [@quiz], assessment: true)
+    attempt = create(:quiz_attempt, user: @student, level: @quiz, unit: unit)
+    sign_in @student
+
+    assert_no_difference 'QuizQuestionResponse.count' do
+      post :create, params: {
+        quizAttemptId: attempt.id,
+        quizQuestionId: @question.id,
+        responseData: {selectedChoiceId: 'b'}
+      }
+    end
+
+    assert_response :forbidden
+  end
 end
