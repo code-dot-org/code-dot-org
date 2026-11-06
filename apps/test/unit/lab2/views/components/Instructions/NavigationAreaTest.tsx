@@ -276,6 +276,49 @@ describe('NavigationArea', () => {
       );
       expect(screen.getByRole('button')).toHaveTextContent('Submit');
     });
+
+    describe('with a callout box', () => {
+      const callout = {
+        heading: 'Stuck or want to get better at something?',
+        body: 'Practice a skill on your skill map, then come back.',
+      };
+
+      it('renders the heading and body text', () => {
+        renderWithHost({
+          label: 'Practice skills',
+          enabled: true,
+          onContinue: jest.fn(),
+          callout,
+        });
+        expect(screen.getByText(callout.heading)).toBeInTheDocument();
+        expect(screen.getByText(callout.body)).toBeInTheDocument();
+      });
+
+      it('still renders the button inside the callout box', () => {
+        renderWithHost({
+          label: 'Practice skills',
+          enabled: true,
+          onContinue: jest.fn(),
+          callout,
+        });
+        expect(screen.getByRole('button')).toHaveTextContent('Practice skills');
+      });
+
+      it('calls onContinue when the button is clicked', () => {
+        const onContinue = jest.fn();
+        renderWithHost({enabled: true, onContinue, callout});
+
+        fireEvent.click(screen.getByRole('button'));
+
+        expect(onContinue).toHaveBeenCalledTimes(1);
+      });
+
+      it('does not render heading or body text without a callout', () => {
+        renderWithHost({enabled: true, onContinue: jest.fn()});
+        expect(screen.queryByText(callout.heading)).toBeNull();
+        expect(screen.queryByText(callout.body)).toBeNull();
+      });
+    });
   });
 
   describe('continuing without external navigation', () => {
