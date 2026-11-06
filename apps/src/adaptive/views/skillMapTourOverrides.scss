@@ -96,6 +96,13 @@
   display: none;
 }
 
+// Show the exit (×) button only on the final step, where the user has no
+// other way to dismiss the tour from within the dialog.
+body.adaptive-tour-no-next .introjs-skipbutton {
+  display: block;
+  color: var(--text-neutral-primary);
+}
+
 // On the "pick a checkpoint" step the user advances by clicking the map, not
 // the Next button.
 body.adaptive-tour-step-select .introjs-nextbutton {
