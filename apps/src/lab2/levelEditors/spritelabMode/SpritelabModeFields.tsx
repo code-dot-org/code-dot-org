@@ -136,13 +136,15 @@ const SpritelabModeFields: React.FunctionComponent<
 
   // The palette lists images in the palette roles but preselects the level's
   // image role, so a role the palette omits will select a hidden image. A
-  // background selects nothing, so it cannot cause a palette conflict.
+  // background selects nothing, so it cannot cause a palette conflict. With no
+  // image role the selection comes from image_role_defaults, so no image role is valid.
   const paletteConflict =
     showPaletteRoles &&
     getPaletteRoles(mode).length > 0 &&
     mode.imageType !== undefined &&
     mode.imageType !== 'background' &&
-    !getPaletteRoles(mode).includes(mode.imageRole ?? '');
+    mode.imageRole !== undefined &&
+    !getPaletteRoles(mode).includes(mode.imageRole);
 
   // A world level can leave the image type unset if it is not imageFirst,
   // otherwise show an error for a missing type.
