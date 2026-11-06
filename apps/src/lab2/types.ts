@@ -344,6 +344,7 @@ export interface LevelProperties {
   validationFile?: ProjectFile;
   enableMicroBit?: boolean;
   miniApp?: string;
+  miniAppVariant?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
   widgetView?: boolean;
