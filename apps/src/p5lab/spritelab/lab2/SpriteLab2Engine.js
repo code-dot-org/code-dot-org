@@ -481,6 +481,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // set-gravity block says otherwise. Negative flips the world: players
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
+    this.platformGravityMagnitude_ = PLATFORM_GRAVITY;
     this.platformJumpHeight_ = 2;
     this.notifyControlsChange_();
     this.particles_.reset();
@@ -501,12 +502,17 @@ export default class SpriteLab2Engine extends SpriteLab {
     // as a move.
     this.forgetPlayer_();
     library.commands.setPlatformGravity = value => {
-      this.platformGravity_ = Number(value) || 0;
+      this.platformGravityMagnitude_ = Math.abs(Number(value) || 0);
+      this.platformGravity_ = this.platformGravityMagnitude_;
       this.notifyControlsChange_();
     };
     library.commands.setPlatformGravityDirection = direction => {
-      const magnitude = Math.abs(this.platformGravity_);
-      this.platformGravity_ = direction === 'up' ? -magnitude : magnitude;
+      this.platformGravity_ =
+        direction === 'none'
+          ? 0
+          : direction === 'up'
+          ? -this.platformGravityMagnitude_
+          : this.platformGravityMagnitude_;
       this.notifyControlsChange_();
     };
     library.commands.setPlatformJumpHeight = value => {

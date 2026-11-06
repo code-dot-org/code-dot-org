@@ -14,6 +14,7 @@ const definition: BlockJson = {
       options: [
         ['↓', 'down'],
         ['↑', 'up'],
+        ['none', 'none'],
       ],
     },
   ],
