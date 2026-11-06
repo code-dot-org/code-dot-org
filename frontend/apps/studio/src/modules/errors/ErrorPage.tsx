@@ -1,11 +1,13 @@
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import Typography, {type TypographyProps} from '@mui/material/Typography';
 import type {FunctionComponent, ReactNode} from 'react';
 
 /** Props for {@link ErrorPage}. */
 export interface ErrorPageProps {
   /** Heading text displayed as the primary error title. */
   title: string;
+  /** Typography variant of the title; h5 unless a page needs a larger one. */
+  titleVariant?: TypographyProps['variant'];
   /** Body text describing the error and suggested action. */
   description: string;
   /** Observability event ID, when available. Shown so users can reference it in support requests. */
@@ -20,6 +22,7 @@ export interface ErrorPageProps {
  */
 export const ErrorPage: FunctionComponent<ErrorPageProps> = ({
   title,
+  titleVariant = 'h5',
   description,
   eventId,
   actions,
@@ -36,7 +39,7 @@ export const ErrorPage: FunctionComponent<ErrorPageProps> = ({
       textAlign: 'center',
     }}
   >
-    <Typography variant="h5" component="h2">
+    <Typography variant={titleVariant} component="h2">
       {title}
     </Typography>
     <Typography variant="body1">{description}</Typography>

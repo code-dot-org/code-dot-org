@@ -1,0 +1,38 @@
+/* The curriculum's catalog image, at the catalog card's size. */
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16rem;
+  height: 8.75rem;
+  margin-bottom: var(--spacing-p-m);
+  overflow: hidden;
+  border-radius: var(--shape-md);
+  background: var(--background-brand-purple-primary-fixed);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageContain img {
+  width: auto;
+  height: 6rem;
+  object-fit: contain;
+}
+
+.heading {
+  margin: 0 0 0.25em;
+}
+
+/* Focused only to announce the screen; it takes no input. */
+.heading:focus {
+  outline: none;
+}
+
+.message {
+  margin: 0 0 var(--spacing-p-l);
+  color: var(--text-neutral-secondary);
+}

@@ -31,11 +31,13 @@ import {QueryClientProvider} from '@code-dot-org/core/api';
 import StudioFooter from '@/components/footer';
 import SiteHeader from '@/components/header';
 import PageFlash from '@/components/pageFlash';
+import {isMobileBuild} from '@/config/buildMode';
 import {
   fetchAuthOutcome,
   primeCsrfToken,
   primeCurrentUser,
   useAuth,
+  type AuthOutcome,
 } from '@/modules/auth';
 import Bootstrap from '@/modules/bootstrap';
 import {AuthErrorPage} from '@/modules/errors';
@@ -83,10 +85,12 @@ function RootContent() {
   const router = useRouter();
   const onRetry = useCallback(() => router.invalidate(), [router]);
   const hideFooter = shouldHideFooter(useMatches());
+  // The mobile build draws no site chrome; the launcher has its own header.
+  const siteChrome = !isMobileBuild();
 
   return (
     <>
-      <SiteHeader />
+      {siteChrome && <SiteHeader />}
       {/* Reserve ~a viewport for the route content so the footer starts at/below
           the fold while a route's chunk or data loads, and doesn't jump down when
           the content arrives. Layout-level concern shared by every async route;
@@ -95,7 +99,7 @@ function RootContent() {
         <PageFlash />
         {renderRouteArea(auth, onRetry)}
       </Box>
-      {!hideFooter && <StudioFooter />}
+      {siteChrome && !hideFooter && <StudioFooter />}
       <TanStackRouterDevtools />
     </>
   );
@@ -124,11 +128,15 @@ const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
 
 /** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 function RootLayout() {
+  // Chromium before 99, which Fire OS 7 tablets can still run, drops layered
+  // rules; the mobile build injects MUI's styles first instead, so module CSS
+  // after them wins as it does over the mui layer.
+  const layered = !isMobileBuild();
   return (
     <QueryClientProvider client={queryClient}>
-      <StyledEngineProvider enableCssLayer>
+      <StyledEngineProvider enableCssLayer={layered} injectFirst={!layered}>
         <HeadContent />
-        {cssLayerOrder}
+        {layered && cssLayerOrder}
         <ThemeProvider theme={theme}>
           {responsiveFloorStyles}
           <Bootstrap locale="en-US">
@@ -167,6 +175,10 @@ export const Route = createRootRoute({
     ],
   }),
   beforeLoad: async () => {
+    // The mobile build runs from local files and never calls Rails.
+    if (isMobileBuild()) {
+      return {auth: {status: 'signed-out'} as AuthOutcome};
+    }
     const auth = await fetchAuthOutcome();
     primeCurrentUser(queryClient, auth);
     // Prime a CSRF token when the shell lacks the meta, so mutations work on a
