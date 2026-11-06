@@ -13,7 +13,7 @@ import {
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {isAdaptiveAiEnabled} from '../ai/generate';
@@ -21,7 +21,6 @@ import {
   PROJECT_STEP_ID,
   Progress,
   stepIdToResume,
-  totalTimeSpent,
   useProgress,
 } from '../progress';
 import {ProgressKey} from '../progress/progressStore';
@@ -30,6 +29,7 @@ import {findCheckpoint} from '../schema/helpers';
 import {Checkpoint, Pathway} from '../types';
 
 import AdaptiveHeader from './AdaptiveHeader';
+import AdaptiveTabBar from './AdaptiveTabBar';
 import {checkpointStepFromUrl, clearUrl} from './checkpointUrl';
 import FinishDialog from './FinishDialog';
 import MapScreen from './MapScreen';
@@ -180,6 +180,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   saveAnswers,
 }) => {
   const dispatch = useAppDispatch();
+  const projectName = useAppSelector(
+    state => state.lab.channel?.name || undefined
+  );
   const [view, setView] = useState<View>(
     initialCheckpointId
       ? {kind: 'step', checkpointId: initialCheckpointId, stepId: initialStepId}
@@ -305,6 +308,10 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     const isProject = view.kind === 'project';
     const {checkpoint} = pathwayContext;
     const isFinish = checkpoint === finishCheckpoint;
+    const goToMap = () => {
+      clearUrl();
+      setView({kind: 'map'});
+    };
     return (
       <div className={styles.app}>
         <PathwayContext.Provider value={pathwayContext}>
@@ -318,10 +325,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             onCompleteStep={completeStep}
             onLeaveStep={leaveStep}
             onSaveAnswers={saveAnswers}
-            onExit={() => {
-              clearUrl();
-              setView({kind: 'map'});
-            }}
+            onExit={goToMap}
             onFinish={() => {
               if (isFinish) return finishLevel();
               clearUrl();
@@ -331,6 +335,15 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
               });
             }}
             onFinishPathway={isProject || isFinish ? undefined : requestFinish}
+            activeTab={isProject ? 'project' : undefined}
+            onTabChange={
+              isProject
+                ? tab => {
+                    if (tab === 'map') goToMap();
+                  }
+                : undefined
+            }
+            projectName={isProject ? projectName : undefined}
           />
         </PathwayContext.Provider>
         {finishDialog}
@@ -348,6 +361,13 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         title={`Skill Tree: ${pathway.title}`}
         onFinish={requestFinish}
       />
+      <AdaptiveTabBar
+        activeTab="map"
+        onTabChange={tab => {
+          if (tab === 'project') openProject();
+        }}
+        projectName={projectName}
+      />
       <MapScreen
         pathway={pathway}
         levelProperties={levelProperties}
@@ -364,8 +384,6 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             stepId: cp ? stepIdToResume(cp, progress) : undefined,
           });
         }}
-        timeSpentSeconds={totalTimeSpent(progress)}
-        onWorkOnProject={openProject}
         hasSkippedCheckpoints={hasSkippedCheckpoints}
       />
       {finishDialog}
