@@ -643,6 +643,7 @@
 
     <div class="refresh">
       <span id="built"></span>
+      <span id="stale-note">If it looks out of date, ask Cassi to rebuild it.</span>
       <button type="button" id="refresh" hidden>Refresh data</button>
       <span class="refresh-status" id="refresh-status" role="status"></span>
     </div>
@@ -921,6 +922,7 @@
     const [mcp, user] = await Promise.all([claude.use("mcp"), claude.use("user")]);
     if (!mcp || !(await (user?.isOwner() ?? false))) return;
     refreshBtn.hidden = false;
+    document.getElementById("stale-note").hidden = true;
     refreshBtn.addEventListener("click", async () => {
       refreshBtn.disabled = true;
       showRefreshStatus("Starting the rebuild…");

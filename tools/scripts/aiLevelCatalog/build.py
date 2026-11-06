@@ -265,12 +265,25 @@ def render(data, exempt_count, revision, built_on):
     return page
 
 
+def standalone(page):
+    """Wrap the page in the document skeleton the artifact service otherwise adds."""
+    title, rest = page.split('\n', 1)
+    return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
+            f'{title}<style>body{{margin:0}}[hidden]{{display:none!important}}</style></head><body>\n'
+            f'{rest}\n</body></html>\n')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output', help='path of the HTML page to write')
+    parser.add_argument('--standalone', action='store_true',
+                        help='write a complete HTML document for static hosting rather than a claude.ai artifact')
     args = parser.parse_args()
     data, exempt_count = build()
     page = render(data, exempt_count, git_revision(), datetime.date.today())
+    if args.standalone:
+        page = standalone(page)
     with open(args.output, 'w', encoding='utf-8') as f:
         f.write(page)
     t = data['totals']
