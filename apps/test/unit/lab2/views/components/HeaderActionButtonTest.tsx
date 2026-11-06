@@ -15,10 +15,13 @@ describe('HeaderActionButton', () => {
     document.body.appendChild(slot);
     const onClick = jest.fn();
     render(
-      <HeaderActionButton onClick={onClick}>I'm finished</HeaderActionButton>
+      <HeaderActionButton onClick={onClick} tone="success">
+        I'm finished
+      </HeaderActionButton>
     );
     const button = screen.getByRole('button', {name: "I'm finished"});
     expect(slot.contains(button)).toBe(true);
+    expect(button.classList.contains('success')).toBe(true);
     fireEvent.click(button);
     expect(onClick).toHaveBeenCalledTimes(1);
   });

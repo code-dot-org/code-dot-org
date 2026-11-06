@@ -2381,7 +2381,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       )}
       {/* The last level's Finish, in the page header as well. */}
       {levelProperties.useSecondaryFinishButton && (
-        <HeaderActionButton onClick={() => dispatch(continueOrFinishLesson())}>
+        <HeaderActionButton
+          tone="success"
+          onClick={() => dispatch(continueOrFinishLesson())}
+        >
           I'm finished
         </HeaderActionButton>
       )}

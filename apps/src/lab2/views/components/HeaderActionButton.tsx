@@ -5,10 +5,13 @@
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import {HEADER_ACTION_ID} from '@cdo/apps/code-studio/components/header/SimpleHeader';
+
+import styles from './header-action-button.module.scss';
 
 function useHeaderSlot(): HTMLElement | null {
   const [slot, setSlot] = useState(() =>
@@ -34,11 +37,14 @@ function useHeaderSlot(): HTMLElement | null {
 interface HeaderActionButtonProps {
   children: React.ReactNode;
   onClick: () => void;
+  /** Green, for a button that ends the unit. */
+  tone?: 'primary' | 'success';
 }
 
 const HeaderActionButton: React.FunctionComponent<HeaderActionButtonProps> = ({
   children,
   onClick,
+  tone = 'primary',
 }) => {
   const slot = useHeaderSlot();
   if (!slot) {
@@ -49,6 +55,7 @@ const HeaderActionButton: React.FunctionComponent<HeaderActionButtonProps> = ({
       variant="contained"
       color="primary"
       size="extraSmall"
+      className={classNames(tone === 'success' && styles.success)}
       endIcon={<FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />}
       onClick={onClick}
     >
