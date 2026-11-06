@@ -1663,8 +1663,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [stageCovered, activeTab, worldMounted]);
   // Closing All scenes can leave focus nowhere: its opener in the scene
   // menu unmounted with the menu, or the bar's button let go of focus on
-  // its click. The scene menu's trigger takes it. After the effect above,
-  // which lets the stage take focus again.
+  // its click. The scene menu's trigger takes it. This runs after the
+  // inert effect above on purpose: until that effect releases the stage,
+  // the trigger refuses focus.
   const scenesWereOpenRef = useRef(false);
   useEffect(() => {
     if (

@@ -35,9 +35,10 @@ const SceneNameField: React.FunctionComponent<SceneNameFieldProps> = ({
 }) => {
   const [draft, setDraft] = useState(initial);
   const inputRef = useRef<HTMLInputElement>(null);
-  // Deferred past the dialog's own mount, which puts focus on its first
-  // control. Without scrolling: a new card scrolls itself whole into view,
-  // and the focus would otherwise bring just the field.
+  // Focus is deferred past the dialog's own mount, which puts focus on the
+  // dialog's first control and would take it straight back. It is given
+  // without scrolling: a new card scrolls itself whole into view, and a
+  // focus that scrolled would bring only the field.
   useEffect(() => {
     const timer = window.setTimeout(() => {
       inputRef.current?.focus({preventScroll: true});
@@ -66,7 +67,8 @@ const SceneNameField: React.FunctionComponent<SceneNameFieldProps> = ({
           if (e.key === 'Enter') {
             commit();
           } else if (e.key === 'Escape') {
-            // The field's escape, not the dialog's.
+            // Escape here cancels the name. It is stopped so the dialog's
+            // own Escape does not close the dialog as well.
             e.stopPropagation();
             onCancel();
           }
@@ -123,8 +125,10 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
 }) => {
   const [renaming, setRenaming] = useState(false);
   const [confirming, setConfirming] = useState(false);
-  // Held still means no edit half-done either: shown as closed at once,
-  // and closed.
+  // A card held still has no edit half-done either. The rename field and
+  // the delete question read as closed on the very render that holds the
+  // card, so no frame shows a stale one; their state is cleared too, so
+  // neither reopens when the card is released.
   const renameOpen = renaming && !disabled;
   const deleteAsked = confirming && !disabled;
   useEffect(() => {
