@@ -10,12 +10,9 @@ import * as Observability from '@code-dot-org/core/plugins/observability';
 import {Output} from 'ai';
 import {z} from 'zod';
 
-import {
-  geminiThinkingOptions,
-  getModel,
-} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
+import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
 import {isTextSafe} from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
-import {AichatContext, GeminiThinkingLevel} from '@cdo/apps/aichat/types';
+import {AichatContext} from '@cdo/apps/aichat/types';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -41,8 +38,6 @@ export const isAdaptiveAiEnabled = (): boolean =>
 export interface GenerateOptions<T> {
   schema: z.ZodType<T>;
   model: ValueOf<typeof AiChatModelIds>;
-  /** Gemini 3 only; left out, the model thinks at its own default. */
-  thinkingLevel?: GeminiThinkingLevel;
   prompt: string;
   /** The shell's own context, not the mounted chat's. */
   context: AichatContext;
@@ -62,7 +57,6 @@ type GatewayResult = Awaited<ReturnType<typeof generateText>>;
 export async function generate<T>({
   schema,
   model,
-  thinkingLevel,
   prompt,
   context,
   trace: traceOptions,
@@ -87,9 +81,6 @@ export async function generate<T>({
           model: getModel(model),
           prompt,
           output: Output.object({schema}),
-          ...(thinkingLevel && {
-            providerOptions: geminiThinkingOptions(thinkingLevel),
-          }),
         },
         {phase: 'generation', aichatContext: context}
       ),

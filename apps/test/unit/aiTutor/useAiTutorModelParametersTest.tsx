@@ -54,12 +54,11 @@ describe('useAiTutorModelParameters', () => {
     });
   });
 
-  it("takes the level's model and thinking level", async () => {
+  it("takes the level's model", async () => {
     const {result} = renderHook(() =>
       useAiTutorModelParameters({
         aiTutorModelParameters: {
           selectedModelId: 'gemini-3.5-flash-lite',
-          thinkingLevel: 'minimal',
         },
       })
     );
@@ -67,7 +66,6 @@ describe('useAiTutorModelParameters', () => {
     expect(result.current.modelParameters).toEqual({
       ...baseModelParameters,
       selectedModelId: 'gemini-3.5-flash-lite',
-      thinkingLevel: 'minimal',
       systemPrompt: baseModelParameters.systemPrompt,
     });
   });

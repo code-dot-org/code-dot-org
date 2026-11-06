@@ -90,20 +90,12 @@ describe('generate', () => {
     });
   });
 
-  it("asks the caller's model, at its thinking level only when one is given", async () => {
+  it("asks the caller's model", async () => {
     mockGenerateText.mockResolvedValue(gatewayResult);
 
     await generate(options);
     expect(getModel).toHaveBeenCalledWith('gemini-3.1-flash-lite');
     expect(mockGenerateText.mock.calls[0][0]).toMatchObject({model: 'model'});
-    expect(mockGenerateText.mock.calls[0][0]).not.toHaveProperty(
-      'providerOptions'
-    );
-
-    await generate({...options, thinkingLevel: 'low'});
-    expect(mockGenerateText.mock.calls[1][0]).toMatchObject({
-      providerOptions: {google: {thinkingConfig: {thinkingLevel: 'low'}}},
-    });
   });
 
   it('starts the trace with the prompt and context, and ends it with usage and response id', async () => {

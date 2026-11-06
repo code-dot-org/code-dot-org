@@ -22,7 +22,7 @@ import {
   formatChatMessage,
   formatSystemMessages,
 } from './helpers/messageHelpers';
-import {geminiThinkingOptions, getModel} from './helpers/modelHelpers';
+import {getModel} from './helpers/modelHelpers';
 import {
   isTextSafe,
   checkGeneratedImageSafety,
@@ -82,7 +82,6 @@ export async function generateChatResponse(
   // Generate a response with the model. `text` is the response we return and
   // store, even under a schema, where it holds the JSON the model emitted --
   // not the parsed `output` re-serialized, which is not what was signed.
-  const {thinkingLevel} = modelParameters;
   const {text, files, finishReason, response, responseSignature} =
     await generateText(
       {
@@ -90,9 +89,6 @@ export async function generateChatResponse(
         messages,
         temperature: modelParameters.temperature,
         ...(outputSchema && {output: outputSchema}),
-        ...(thinkingLevel && {
-          providerOptions: geminiThinkingOptions(thinkingLevel),
-        }),
       },
       {phase: 'generation'}
     );

@@ -23,16 +23,14 @@ describe('aiTutorModelParametersFor', () => {
     });
   });
 
-  it("is the level's model and thinking level when the level names one", () => {
+  it("is the level's model when the level names one", () => {
     const {aiTutorModelParametersFor} = load();
     expect(
       aiTutorModelParametersFor({
         selectedModelId: 'gemini-3.5-flash-lite',
-        thinkingLevel: 'minimal',
       })
     ).toEqual({
       selectedModelId: 'gemini-3.5-flash-lite',
-      thinkingLevel: 'minimal',
     });
   });
 
@@ -45,7 +43,6 @@ describe('aiTutorModelParametersFor', () => {
     expect(
       aiTutorModelParametersFor({
         selectedModelId: 'gemini-3.5-flash-lite',
-        thinkingLevel: 'minimal',
       })
     ).toEqual({selectedModelId: 'gemini-2.5-flash-lite'});
   });
