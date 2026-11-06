@@ -21,10 +21,6 @@ import {
   isAskAiEnabled,
 } from './ai/text/askAi';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
-import {
-  PLAYER_2_GROUP,
-  PLAYER_GROUP,
-} from './blockly/blockDefinitions/makePlatformPlayer';
 import {burstBoxes} from './bursts';
 import {
   backgroundFrame,
@@ -63,6 +59,7 @@ import {
   wallBox,
 } from './platformPhysics';
 import {createPlayerActionTracker, isPlayerAction} from './playerActions';
+import {isPlayerGroup, PLAYER_GROUP} from './playerGroups';
 import {
   askAiAnswered,
   askAiFailed,
@@ -84,10 +81,6 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 // after the jump event fires: the handler runs on the interpreter's next
 // tick, not inside the dispatch. The spot must come from an impulse this
 // recent, or a jump the tracker saw without one would serve a stale spot.
-// Both players fall, land and jump under the platformer's gravity.
-const isPlayerGroup = group =>
-  group === PLAYER_GROUP || group === PLAYER_2_GROUP;
-
 const JUMP_EVENT_FRAMES = 4;
 const JUMP_IMPULSE_FRAMES = 8;
 
@@ -599,15 +592,21 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
-      this.jumpStarts_ = new Map();
-      this.jumpImpulseFrame_ = this.p5Wrapper.p5
-        ? this.p5Wrapper.p5.frameCount
-        : -Infinity;
+      // Take-off spots serve the jump event, which only the arrow-key
+      // player raises; a player 2 jump must not reset them.
+      if (group === PLAYER_GROUP) {
+        this.jumpStarts_ = new Map();
+        this.jumpImpulseFrame_ = this.p5Wrapper.p5
+          ? this.p5Wrapper.p5.frameCount
+          : -Infinity;
+      }
       library.getSpriteArray({group}).forEach(sprite => {
-        this.jumpStarts_.set(sprite, {
-          x: sprite.position.x,
-          y: sprite.position.y,
-        });
+        if (group === PLAYER_GROUP) {
+          this.jumpStarts_.set(sprite, {
+            x: sprite.position.x,
+            y: sprite.position.y,
+          });
+        }
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
     };
@@ -1534,7 +1533,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     const p = half(player);
     const touching = [];
     Object.values(this.library.nativeSpriteMap).forEach(sprite => {
-      if (sprite === player || sprite.removed || sprite.group === 'walls') {
+      if (
+        sprite.removed ||
+        sprite.group === 'walls' ||
+        isPlayerGroup(sprite.group)
+      ) {
         return;
       }
       const s = half(sprite);

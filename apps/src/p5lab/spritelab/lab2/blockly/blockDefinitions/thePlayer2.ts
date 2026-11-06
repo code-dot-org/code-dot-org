@@ -3,7 +3,7 @@ import {Order} from 'blockly/javascript';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
-import {PLAYER_2_GROUP} from './makePlatformPlayer';
+import {PLAYER_2_GROUP} from '../../playerGroups';
 
 export const THE_PLAYER_2_BLOCK_TYPE = 'spritelab2_thePlayer2';
 

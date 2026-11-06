@@ -2,9 +2,10 @@ import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import {noteImageFieldValue} from '../../imageReferences';
+import {PLAYER_2_GROUP} from '../../playerGroups';
 import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 
-import {JUMP_SPEED, PLAYER_2_GROUP} from './makePlatformPlayer';
+import {platformControlsHelper} from './makePlatformPlayer';
 
 /**
  * A second platform player, steered by W, A, S and D as the first is by
@@ -26,41 +27,15 @@ const generator: GeneratorFunction = block =>
     block.getFieldValue('ANIMATION_NAME')
   )}});\n`;
 
-const group = JSON.stringify(PLAYER_2_GROUP);
-
 const helperCode = [
-  // Guarded like wirePlatformControls: several of these blocks in one
-  // program share one set of handlers.
-  'var platformControls2Wired = false;',
-  'function wirePlatformControls2() {',
-  '  if (platformControls2Wired) {',
-  '    return;',
-  '  }',
-  '  platformControls2Wired = true;',
-  "  keyPressed('while', 'a', function () {",
-  `    moveInDirection({group: ${group}}, getProp({group: ${group}}, 'speed'), 'West');`,
-  '  });',
-  "  keyPressed('while', 'd', function () {",
-  `    moveInDirection({group: ${group}}, getProp({group: ${group}}, 'speed'), 'East');`,
-  '  });',
-  "  keyPressed('while', 'w', function () {",
-  '    if (platformGravity() === 0) {',
-  `      moveInDirection({group: ${group}}, getProp({group: ${group}}, 'speed'), 'North');`,
-  '    }',
-  '  });',
-  "  keyPressed('when', 'w', function () {",
-  '    if (platformGravity() !== 0) {',
-  `      platformJump(${JUMP_SPEED}, ${group});`,
-  '    }',
-  '  });',
-  "  keyPressed('while', 's', function () {",
-  '    if (platformGravity() === 0) {',
-  `      moveInDirection({group: ${group}}, getProp({group: ${group}}, 'speed'), 'South');`,
-  '    }',
-  '  });',
-  '}',
+  ...platformControlsHelper('wirePlatformControls2', PLAYER_2_GROUP, {
+    left: 'a',
+    right: 'd',
+    up: 'w',
+    down: 's',
+  }),
   'function setAsPlatformPlayer2(spriteArg) {',
-  `  setPlatformPlayer(spriteArg, ${group});`,
+  `  setPlatformPlayer(spriteArg, ${JSON.stringify(PLAYER_2_GROUP)});`,
   '  wirePlatformControls2();',
   '}',
 ].join('\n');

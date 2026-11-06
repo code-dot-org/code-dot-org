@@ -1,11 +1,14 @@
 import {parse} from 'acorn';
 
-import {
+import makePlatformPlayer, {
   JUMP_SPEED,
-  PLAYER_2_GROUP,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/makePlatformPlayer';
 import setAsPlatformPlayer2 from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/setAsPlatformPlayer2';
 import thePlayer2 from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/thePlayer2';
+import {
+  PLAYER_2_GROUP,
+  PLAYER_GROUP,
+} from '@cdo/apps/p5lab/spritelab/lab2/playerGroups';
 
 describe('set as player 2', () => {
   it('promotes the costume to the second player group', () => {
@@ -33,7 +36,18 @@ describe('set as player 2', () => {
     expect(code).toContain(`platformJump(${JUMP_SPEED}, "${PLAYER_2_GROUP}")`);
     // Nothing of the arrow-key player's.
     expect(code).not.toContain("'left'");
-    expect(code).not.toContain("'players'}");
+    expect(code).not.toContain(JSON.stringify(PLAYER_GROUP));
+  });
+
+  it('leaves the arrow-key player its keys, its group and its space bar', () => {
+    const code = makePlatformPlayer.helperCode;
+    expect(() => parse(code, {ecmaVersion: 5})).not.toThrow();
+    for (const key of ['left', 'right', 'up', 'down']) {
+      expect(code).toContain(`keyPressed('while', '${key}'`);
+    }
+    expect(code).toContain(`keyPressed('when', 'space'`);
+    expect(code).toContain(`platformJump(${JUMP_SPEED}, "${PLAYER_GROUP}")`);
+    expect(code).not.toContain(JSON.stringify(PLAYER_2_GROUP));
   });
 
   it('has a reference block for player 2', () => {
