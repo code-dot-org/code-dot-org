@@ -1,7 +1,7 @@
 {
-  "name": "lesson10_homework_tracker",
+  "name": "Homework Tracker",
   "card": {
-    "description": "Students using the OnTrack homework app during one school week. Each student is labeled On Track or Needs Check-in. The app records how many assignments each student submitted in the app, what time they submitted, and how long they spent in the app. A student is labeled On Track when all 5 assignments were submitted in the app before 9 PM. Teachers' gradebook totals were added for comparison.",
+    "description": "Students using the OnTrack homework app during one school week. Each student is labeled On Track or Needs Check-in. The app records how many assignments each student submitted in the app, what time they submitted, and how long they spent in the app. A student is labeled On Track when all 5 assignments were submitted in the app before 9 PM. The teacher's gradebook, showing whether each student finished all their work, was added for comparison.",
     "source": "Created for AI Discoveries, Lesson 10",
     "lastUpdated": "2026",
     "context": {
@@ -23,9 +23,9 @@
       "description": "How the student turns in homework."
     },
     {
-      "type": "numerical",
-      "id": "Assignments Done in Gradebook",
-      "description": "Assignments the teacher marked as done (out of 5)."
+      "type": "categorical",
+      "id": "Finished All Work in Gradebook",
+      "description": "Whether the teacher's gradebook shows all 5 assignments done (Yes or No)."
     },
     {
       "type": "numerical",
