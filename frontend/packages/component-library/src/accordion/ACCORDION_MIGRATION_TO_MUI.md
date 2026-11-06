@@ -17,7 +17,9 @@ the panel, and the height animation. Each is deferred to a later PR.
 
 The target is what DSCO renders today, within 0.005 mismatch per story. Six
 legacy defects are fixed on purpose. Two of them change an open-state
-render; none changes a closed one, and every DSCO story renders closed.
+render. One of those, the token text color, also reaches a ReactNode
+label, which shows closed; no story or consumer has one, and every DSCO
+story renders closed.
 Figma is out of scope.
 
 ## Approach and exports
@@ -176,7 +178,10 @@ and `default`. Unlike dialog, the `Mui` names do not stay as aliases: the
 same PR moves the one consumer and deletes them, so `MuiAccordion` is left
 to mean MUI's own part, imported as
 `import {Accordion as MuiAccordion} from '@mui/material'` by a caller that
-needs full control.
+needs full control. The same PR deletes the two accordion
+`no-restricted-imports` entries in `apps/.eslintrc.js` and the design-system
+skill's sentence against the plain names; left in place, they reject the
+renamed wrappers.
 
 ## Prop map
 
@@ -304,7 +309,7 @@ Tests that pin the contract (Execute):
 
 | Defect                                                                                                                                                 | Fix                                                                                                           | Stories changed                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| ReactNode content takes no token color; in Dark it is near black on the dark panel                                                                     | Item root `color: var(--text-neutral-primary)`, replacing Paper's `palette.text.primary`                      | `with-rich-content`, `with-multiple-paragraphs-as-content` (open only) |
+| ReactNode label and content take no token color; in Dark they are near black on the dark panel                                                         | Item root `color: var(--text-neutral-primary)`, replacing Paper's `palette.text.primary`                      | `with-rich-content`, `with-multiple-paragraphs-as-content` (open only) |
 | `details > p` is `display: flex; flex-direction: column`, so a `<p>` with inline children splits into lines                                            | `& > p` keeps `margin: 0` and `padding: 1.25rem` and drops the flex rules; a text-only `<p>` renders the same | `with-rich-content` (open only)                                        |
 | A string label renders a block `<p>` inside `<summary>`; the summary is now a `<button>`, which takes phrasing content only                            | The outer label `Typography` renders as `span`                                                                | none                                                                   |
 | The chevron `<i>` has no `aria-hidden`, so its glyph can leak into the summary's name                                                                  | `aria-hidden="true"` on the icon                                                                              | none                                                                   |

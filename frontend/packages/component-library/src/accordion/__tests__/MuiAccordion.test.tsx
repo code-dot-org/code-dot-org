@@ -292,22 +292,24 @@ describe('MuiAccordion Component', () => {
     ]);
     const bodyStyle = document.body.getAttribute('style');
 
-    const {container} = render(<MuiAccordion items={mockAccordionItems} />);
-    fireEvent.click(getSummary('First Accordion'));
-    getSummary('Second Accordion').focus();
+    try {
+      const {container} = render(<MuiAccordion items={mockAccordionItems} />);
+      fireEvent.click(getSummary('First Accordion'));
+      getSummary('Second Accordion').focus();
 
-    expect(
-      within(container).getByText('This is the first accordion content.'),
-    ).toBeVisible();
-    expect(document.body.getAttribute('style')).toBe(bodyStyle);
-    expect(document.querySelectorAll('[aria-hidden="true"]')).toHaveLength(
-      mockAccordionItems.length,
-    );
-    // React's development build adds and removes a window 'error' listener per event.
-    for (const [added, removed] of [spies.slice(0, 2), spies.slice(2)]) {
-      expect(removed.mock.calls).toEqual(added.mock.calls);
+      expect(
+        within(container).getByText('This is the first accordion content.'),
+      ).toBeVisible();
+      expect(document.body.getAttribute('style')).toBe(bodyStyle);
+      expect(document.querySelectorAll('[aria-hidden="true"]')).toHaveLength(
+        mockAccordionItems.length,
+      );
+      // React's development build adds and removes a window 'error' listener per event.
+      for (const [added, removed] of [spies.slice(0, 2), spies.slice(2)]) {
+        expect(removed.mock.calls).toEqual(added.mock.calls);
+      }
+    } finally {
+      spies.forEach(spy => spy.mockRestore());
     }
-
-    spies.forEach(spy => spy.mockRestore());
   });
 });

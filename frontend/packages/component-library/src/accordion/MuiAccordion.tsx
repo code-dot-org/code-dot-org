@@ -16,7 +16,8 @@ export type MuiAccordionItem = {
   /** React key for the item. It never reaches the DOM, so it may repeat across accordions on one page. */
   id: string;
   /** Summary text. A string renders as body2 strong text; a node renders as is inside the summary
-   *  `<button>`, so it must be phrasing content (no `<p>`, `<div>` or headings). */
+   *  `<button>`, so it must be phrasing content (no `<p>`, `<div>` or headings) and must not be
+   *  interactive (no links, buttons or inputs). */
   label: string | ReactNode;
   /** Panel content, mounted and hidden while the item is closed. A string renders as a body2 `<p>`
    *  with 1.25rem padding; a node renders as is, and only its direct `<p>` children get that padding. */
