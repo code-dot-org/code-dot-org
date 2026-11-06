@@ -27,8 +27,6 @@ function renderDialog(
   return handlers;
 }
 
-const startButtons = () => screen.getAllByRole('button', {name: 'Start here'});
-
 describe('ScenesDialog', () => {
   it('is a dialog named All scenes that Done, the cross and Escape close', () => {
     const {onClose} = renderDialog();
@@ -41,11 +39,11 @@ describe('ScenesDialog', () => {
 
   it('marks the first scene as where play starts, and makes another the start', () => {
     const {onMakeStartScene} = renderDialog();
-    const [intro, cave] = startButtons();
-    expect(intro.getAttribute('aria-pressed')).toBe('true');
-    expect(intro).toBeDisabled();
-    expect(cave.getAttribute('aria-pressed')).toBe('false');
-    fireEvent.click(cave);
+    expect(screen.getByText('Starts here')).toBeTruthy();
+    // Only the other scene can be made the start.
+    const buttons = screen.getAllByRole('button', {name: 'Start here'});
+    expect(buttons).toHaveLength(1);
+    fireEvent.click(buttons[0]);
     expect(onMakeStartScene).toHaveBeenCalledWith('b');
   });
 
@@ -144,6 +142,7 @@ describe('ScenesDialog', () => {
     renderDialog({editable: false});
     expect(screen.queryByRole('button', {name: 'Delete'})).toBeNull();
     expect(screen.queryByRole('button', {name: 'Start here'})).toBeNull();
+    expect(screen.queryByText('Starts here')).toBeNull();
     expect(screen.queryByRole('button', {name: 'New scene'})).toBeNull();
     expect(screen.queryByRole('button', {name: 'Rename Cave'})).toBeNull();
     expect(screen.getByText('Cave')).toBeTruthy();

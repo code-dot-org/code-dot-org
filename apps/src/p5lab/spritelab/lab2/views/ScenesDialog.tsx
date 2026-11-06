@@ -35,10 +35,11 @@ const SceneNameField: React.FunctionComponent<SceneNameFieldProps> = ({
   const [draft, setDraft] = useState(initial);
   const inputRef = useRef<HTMLInputElement>(null);
   // Deferred past the dialog's own mount, which puts focus on its first
-  // control.
+  // control. Without scrolling: a new card scrolls itself whole into view,
+  // and the focus would otherwise bring just the field.
   useEffect(() => {
     const timer = window.setTimeout(() => {
-      inputRef.current?.focus();
+      inputRef.current?.focus({preventScroll: true});
       inputRef.current?.select();
     });
     return () => window.clearTimeout(timer);
@@ -198,21 +199,26 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
                 Delete
               </MuiButton>
             ))}
-          {/* The start scene's is pressed and inert: there is nothing it
-              could do. */}
-          {!confirming && (
-            <MuiButton
-              variant={startsHere ? 'contained' : 'outlined'}
-              color={startsHere ? 'primary' : 'secondary'}
-              size="extraSmall"
-              aria-pressed={startsHere}
-              startIcon={<FontAwesomeV6Icon iconName="play" aria-hidden />}
-              disabled={disabled || startsHere}
-              onClick={() => onMakeStart(scene.id)}
-            >
-              Start here
-            </MuiButton>
-          )}
+          {/* The start scene wears a mark in the button's place: there is
+              nothing to press. */}
+          {!confirming &&
+            (startsHere ? (
+              <span className={styles.startsHere}>
+                <FontAwesomeV6Icon iconName="play" aria-hidden />
+                Starts here
+              </span>
+            ) : (
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="extraSmall"
+                startIcon={<FontAwesomeV6Icon iconName="play" aria-hidden />}
+                disabled={disabled}
+                onClick={() => onMakeStart(scene.id)}
+              >
+                Start here
+              </MuiButton>
+            ))}
         </div>
       )}
     </div>
@@ -230,7 +236,8 @@ const NewSceneCard: React.FunctionComponent<NewSceneCardProps> = ({
   onCancel,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
-  // Into view at the end of the row, which may be below the fold.
+  // The whole card into view: it lands at the end, which may be below
+  // the fold.
   useEffect(() => {
     ref.current?.scrollIntoView?.({block: 'nearest'});
   }, []);
@@ -242,6 +249,9 @@ const NewSceneCard: React.FunctionComponent<NewSceneCardProps> = ({
       <div className={styles.nameRow}>
         <SceneNameField initial="" onCommit={onCreate} onCancel={onCancel} />
       </div>
+      {/* Where the buttons will be, so the card is already its full
+          height. */}
+      <div className={styles.cardActions} aria-hidden />
     </div>
   );
 };
