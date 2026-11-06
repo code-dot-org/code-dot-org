@@ -51,7 +51,15 @@
         },
         {
           "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer2"
+        },
+        {
+          "kind": "block",
           "type": "spritelab2_thePlayer"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_thePlayer2"
         },
         {
           "kind": "block",

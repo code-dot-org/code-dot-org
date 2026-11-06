@@ -35,7 +35,12 @@ const generator: GeneratorFunction = block =>
 // zero gravity there is no jump and the up and down arrows steer instead.
 // Clears a two-tile step with a little margin (apex ~2.4 tiles at the
 // default gravity).
-const JUMP_SPEED = 13;
+export const JUMP_SPEED = 13;
+
+/** The groups the engine treats as platform players: the arrow-key player
+    and the W-A-S-D one. */
+export const PLAYER_GROUP = 'players';
+export const PLAYER_2_GROUP = 'players2';
 
 const helperCode = [
   // Shared by every block that produces a platform player; guarded so

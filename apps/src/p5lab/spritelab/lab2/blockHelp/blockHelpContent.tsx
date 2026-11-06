@@ -52,6 +52,18 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     summary: 'Whichever sprite is the platform player right now.',
     body: 'Drop it into any block that takes a sprite.',
   },
+  spritelab2_setAsPlatformPlayer2: {
+    title: 'Set as player 2',
+    summary: 'Makes a sprite a second player, moved with W, A, S and D.',
+    body:
+      'The first player keeps the arrow keys, so two people can play on ' +
+      'one keyboard.',
+  },
+  spritelab2_thePlayer2: {
+    title: 'Player 2',
+    summary: 'Whichever sprite is player 2 right now.',
+    body: 'Drop it into any block that takes a sprite.',
+  },
   spritelab2_askAI: {
     title: 'Ask AI',
     summary: 'Asks the AI a question and puts its answer in a variable.',

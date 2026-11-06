@@ -21,6 +21,10 @@ import {
   isAskAiEnabled,
 } from './ai/text/askAi';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
+import {
+  PLAYER_2_GROUP,
+  PLAYER_GROUP,
+} from './blockly/blockDefinitions/makePlatformPlayer';
 import {burstBoxes} from './bursts';
 import {
   backgroundFrame,
@@ -80,6 +84,10 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 // after the jump event fires: the handler runs on the interpreter's next
 // tick, not inside the dispatch. The spot must come from an impulse this
 // recent, or a jump the tracker saw without one would serve a stale spot.
+// Both players fall, land and jump under the platformer's gravity.
+const isPlayerGroup = group =>
+  group === PLAYER_GROUP || group === PLAYER_2_GROUP;
+
 const JUMP_EVENT_FRAMES = 4;
 const JUMP_IMPULSE_FRAMES = 8;
 
@@ -556,11 +564,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       return id;
     };
-    // Move existing sprites (e.g. world-placed ones) into the players
-    // group; the per-frame resolver picks them up from there.
-    library.commands.setPlatformPlayer = spriteArg => {
+    // Move existing sprites (e.g. world-placed ones) into a player group;
+    // the per-frame resolver picks them up from there.
+    library.commands.setPlatformPlayer = (spriteArg, group = PLAYER_GROUP) => {
       library.getSpriteArray(spriteArg).forEach(sprite => {
-        sprite.group = 'players';
+        sprite.group = group;
       });
     };
     // Footing in the gravity direction — the resolver's own geometry, so it
@@ -575,20 +583,19 @@ export default class SpriteLab2Engine extends SpriteLab {
       const walls = this.wallsThisFrame_(library);
       const view = {width: p5.width, height: p5.height};
       return library.getSpriteArray(spriteArg).some(sprite => {
-        const gravity =
-          sprite.group === 'players'
-            ? this.platformGravity_
-            : this.bodyGravity_();
+        const gravity = isPlayerGroup(sprite.group)
+          ? this.platformGravity_
+          : this.bodyGravity_();
         return gravity === 0 || test(sprite, walls, view, gravity);
       });
     };
-    // Jump against gravity if any player has footing.
-    library.commands.platformJump = speed => {
+    // Jump against gravity if any player of the group has footing.
+    library.commands.platformJump = (speed, group = PLAYER_GROUP) => {
       // Weightless, the player is steered up and down instead.
       if (this.platformGravity_ === 0) {
         return;
       }
-      if (!footing({group: 'players'}, isSupported)) {
+      if (!footing({group}, isSupported)) {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
@@ -596,7 +603,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.jumpImpulseFrame_ = this.p5Wrapper.p5
         ? this.p5Wrapper.p5.frameCount
         : -Infinity;
-      library.getSpriteArray({group: 'players'}).forEach(sprite => {
+      library.getSpriteArray({group}).forEach(sprite => {
         this.jumpStarts_.set(sprite, {
           x: sprite.position.x,
           y: sprite.position.y,
@@ -1362,7 +1369,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // the scene a few pixels out for one frame.
       engine.resolvePlatformPhysics_();
       engine.physicsResolvedThisFrame_ = true;
-      const player = this.getSpriteArray({group: 'players'})[0];
+      const player = this.getSpriteArray({group: PLAYER_GROUP})[0];
       const focus = cameraFocus(zoom, player ? player.position : null);
       if (engine.frameCaptureArmed_) {
         // The picture shows the whole world: drawn at zoom 1, copied by the
@@ -1437,7 +1444,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // Consuming the one-frame mark: see usePlatformBody.
       const marked = sprite.__slab2Body;
       sprite.__slab2Body = false;
-      if (sprite.group === 'players') {
+      if (isPlayerGroup(sprite.group)) {
         players.push(snapshot(sprite));
       } else if (marked) {
         bodies.push(snapshot(sprite));
@@ -1449,7 +1456,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.prevBodies_.forEach(sprite => {
       if (
         !sprite.removed &&
-        sprite.group !== 'players' &&
+        !isPlayerGroup(sprite.group) &&
         !bodies.some(b => b.sprite === sprite)
       ) {
         sprite.mirrorY(1);
@@ -1482,10 +1489,14 @@ export default class SpriteLab2Engine extends SpriteLab {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }
     // Both the requested and the resolved positions are known here, so this
-    // is where the observer is fed.
-    this.observePlayer_(players, walls, view);
-    this.trackPlayerActions_(players, walls, view);
-    this.reportPlayerProgress_(players, view);
+    // is where the observer is fed. The arrow-key player is the one heard,
+    // tracked and reported; player 2 only moves.
+    const firstPlayers = players.filter(
+      ({sprite}) => sprite.group === PLAYER_GROUP
+    );
+    this.observePlayer_(firstPlayers, walls, view);
+    this.trackPlayerActions_(firstPlayers, walls, view);
+    this.reportPlayerProgress_(firstPlayers, view);
   }
 
   trackPlayerActions_(players, walls, view) {
@@ -1689,7 +1700,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       state.x = sprite.position.x;
       state.facing = nextFacing(state.facing, dx);
       const moving = isMoving(dx);
-      const player = this.usesPlatformPhysics_ && sprite.group === 'players';
+      const player = this.usesPlatformPhysics_ && isPlayerGroup(sprite.group);
       const airborne =
         player && !isSupported(sprite, walls, view, this.platformGravity_);
       if (moving || airborne) {
