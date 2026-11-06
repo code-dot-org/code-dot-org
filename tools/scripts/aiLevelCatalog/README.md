@@ -32,3 +32,20 @@ button, shown only to the artifact's owner, starts the claude.ai Routine
 named in `REFRESH_TRIGGER_ID`. The Routine checks out the latest `staging`,
 runs this script, and republishes the artifact. A new owner needs a Routine
 of their own and that constant changed to its id.
+
+## The CodeAI Cloud copy
+
+The same page is deployed as a static site, `ai-tools-catalog`, on CodeAI
+Cloud. It does not refresh itself; redeploy it to update it. The deploy
+broker is reachable only from the internal network, so run this from a
+laptop on it, in Claude Code with the codeai-cloud plugin:
+
+    git fetch origin staging && git checkout --detach origin/staging
+    git checkout <branch with this tool> -- tools/scripts/aiLevelCatalog   # until it is on staging
+    mkdir -p ~/ai-tools-catalog
+    python3 tools/scripts/aiLevelCatalog/build.py --standalone ~/ai-tools-catalog/index.html
+
+Then, in `~/ai-tools-catalog`, ask Claude to `/deploy` it as the existing
+static project `ai-tools-catalog`, internal. Keep that folder: the
+`codeai-cloud.yaml` the first deploy writes there makes later redeploys a
+single `ship`.
