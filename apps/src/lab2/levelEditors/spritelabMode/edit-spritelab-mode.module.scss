@@ -19,3 +19,8 @@
 .booleanField + .booleanField {
   margin-top: 8px;
 }
+
+// A boolean field carries no bottom margin, so the next field supplies the gap.
+.booleanField + .fieldArea {
+  margin-top: 16px;
+}

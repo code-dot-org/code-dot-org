@@ -297,7 +297,7 @@ const SpritelabModeFields: React.FunctionComponent<
         <div className={moduleStyles.booleanField}>
           <Checkbox
             name="spritelab_mode_learning"
-            label="Tell the student how AI made their picture, after the first one."
+            label="Show a modal explaining how AI made the picture after the first generation only."
             checked={mode.learning === true}
             onChange={event =>
               onChange(setLearning(mode, event.target.checked))
