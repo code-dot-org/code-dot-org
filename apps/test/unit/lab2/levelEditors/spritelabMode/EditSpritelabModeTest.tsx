@@ -132,6 +132,19 @@ describe('EditSpritelabMode', () => {
     expect(textbox(PALETTE_ROLES)).toHaveValue('');
   });
 
+  it('accepts a space typed into the image role', () => {
+    const {container} = renderEditor({kind: 'image', imageType: 'background'});
+    let typed = '';
+    for (const character of 'platform background') {
+      typed = (textbox(IMAGE_ROLE) as HTMLInputElement).value + character;
+      type(IMAGE_ROLE, typed);
+    }
+    expect(textbox(IMAGE_ROLE)).toHaveValue('platform background');
+    expect(JSON.parse(submitted(container)).imageRole).toBe(
+      'platform background'
+    );
+  });
+
   it('keeps a trailing separator the author is still typing', () => {
     const {container} = renderEditor({kind: 'world'});
     type(PALETTE_ROLES, 'treasure, ');

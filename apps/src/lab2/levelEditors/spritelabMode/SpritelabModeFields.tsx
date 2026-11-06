@@ -81,17 +81,26 @@ const IMAGE_SUBJECT_ITEMS = IMAGE_SUBJECTS.map(subject => ({
   text: imageKindLabel('sprite', subject),
 }));
 
+function useTypedText(saved: string, normalize: (text: string) => string) {
+  const [text, setText] = useState(saved);
+  if (normalize(text) !== saved) {
+    setText(saved);
+  }
+  return [text, setText] as const;
+}
+
 const SpritelabModeFields: React.FunctionComponent<
   SpritelabModeFieldsProps
 > = ({mode, removed, usesLab2, onChange}) => {
   const kind = getKind(mode);
-  const [paletteRolesText, setPaletteRolesText] = useState(() =>
-    getPaletteRoles(mode).join(', ')
+  const [paletteRolesText, setPaletteRolesText] = useTypedText(
+    getPaletteRoles(mode).join(', '),
+    text => parsePaletteRoles(text).join(', ')
   );
-  const savedRoles = getPaletteRoles(mode).join(', ');
-  if (parsePaletteRoles(paletteRolesText).join(', ') !== savedRoles) {
-    setPaletteRolesText(savedRoles);
-  }
+  const [imageRoleText, setImageRoleText] = useTypedText(
+    (mode.imageRole as string) ?? '',
+    text => text.trim()
+  );
 
   const kindHelper = useMemo(() => {
     let helpText = kind
@@ -233,8 +242,11 @@ const SpritelabModeFields: React.FunctionComponent<
           <TextField
             label="Image role"
             name="spritelab_mode_image_role"
-            value={(mode.imageRole as string) ?? ''}
-            onChange={event => onChange(setImageRole(mode, event.target.value))}
+            value={imageRoleText}
+            onChange={event => {
+              setImageRoleText(event.target.value);
+              onChange(setImageRole(mode, event.target.value));
+            }}
             helperMessage="Tagged on every image this level makes. Later levels can use image_role_defaults to set which role(s) blockly dropdowns should start on."
             size="s"
           />
