@@ -134,8 +134,8 @@ export default function useQuizBuilderQuestions(
       setQuestionsById(prev => ({...prev, [id]: question}));
       setLayout(prev => {
         const next = prev.map(questionIds => [...questionIds]);
-        // Creates the page if it doesn't exist yet, as in an empty quiz.
-        while (next.length < page) {
+        // An empty quiz has no pages until its first question.
+        if (next.length === 0) {
           next.push([]);
         }
         next[page - 1].push(id);

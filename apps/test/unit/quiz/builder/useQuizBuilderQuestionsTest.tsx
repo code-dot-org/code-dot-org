@@ -208,6 +208,7 @@ describe('useQuizBuilderQuestions', () => {
     await waitForNextUpdate();
 
     act(() => {
+      result.current.addPage();
       result.current.addPendingQuestion(2, 'MultipleChoiceQuestion');
     });
 
@@ -390,6 +391,7 @@ describe('useQuizBuilderQuestions', () => {
 
       let pendingId: number | undefined;
       act(() => {
+        result.current.addPage();
         pendingId = result.current.addPendingQuestion(
           2,
           'MultipleChoiceQuestion'
