@@ -13,15 +13,16 @@ import {
   imageKindLabel,
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
-import {LevelModeKind} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
+import {
+  LevelMode,
+  LevelModeKind,
+} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
 
 import {
   fieldApplies,
-  getKind,
   getPaletteRoles,
   KIND_LABELS,
   LEVEL_MODE_KINDS,
-  LevelModeObject,
   parsePaletteRoles,
   setImageFirst,
   setImageSource,
@@ -37,11 +38,11 @@ import {
 import moduleStyles from './edit-spritelab-mode.module.scss';
 
 interface SpritelabModeFieldsProps {
-  mode: LevelModeObject;
+  mode: Partial<LevelMode>;
   // Saved values that were not valid and are dropped from the mode.
   removed: string[];
   usesLab2: boolean;
-  onChange: (mode: LevelModeObject) => void;
+  onChange: (mode: Partial<LevelMode>) => void;
 }
 
 const NO_KIND = '';
@@ -60,7 +61,10 @@ const IMAGE_TYPES_ITEMS = IMAGE_TYPES.map(imageType => ({
   text: IMAGE_TYPE_LABELS[imageType],
 }));
 
-function imageTypeItems(kind: LevelModeKind | undefined, chosen: unknown) {
+function imageTypeItems(
+  kind: LevelModeKind | undefined,
+  chosen: ImageType | undefined
+) {
   if (kind === 'world') {
     // World levels can leave the image type unset.
     return [
@@ -98,13 +102,13 @@ function useTypedText(saved: string, normalize: (text: string) => string) {
 const SpritelabModeFields: React.FunctionComponent<
   SpritelabModeFieldsProps
 > = ({mode, removed, usesLab2, onChange}) => {
-  const kind = getKind(mode);
+  const kind = mode.kind;
   const [paletteRolesText, setPaletteRolesText] = useTypedText(
     getPaletteRoles(mode).join(', '),
     text => parsePaletteRoles(text).join(', ')
   );
   const [imageRoleText, setImageRoleText] = useTypedText(
-    (mode.imageRole as string) ?? '',
+    mode.imageRole ?? '',
     text => text.trim()
   );
 
@@ -136,9 +140,9 @@ const SpritelabModeFields: React.FunctionComponent<
   const paletteConflict =
     showPaletteRoles &&
     getPaletteRoles(mode).length > 0 &&
-    typeof mode.imageType === 'string' &&
+    mode.imageType !== undefined &&
     mode.imageType !== 'background' &&
-    !getPaletteRoles(mode).includes(mode.imageRole as string);
+    !getPaletteRoles(mode).includes(mode.imageRole ?? '');
 
   // A world level can leave the image type unset if it is not imageFirst,
   // otherwise show an error for a missing type.
@@ -204,7 +208,7 @@ const SpritelabModeFields: React.FunctionComponent<
             labelText="Image type"
             name="spritelab_mode_image_type"
             items={imageTypeItems(kind, mode.imageType)}
-            selectedValue={(mode.imageType as string) ?? NO_IMAGE_TYPE}
+            selectedValue={mode.imageType ?? NO_IMAGE_TYPE}
             onChange={event =>
               onChange(
                 setImageType(
@@ -233,7 +237,7 @@ const SpritelabModeFields: React.FunctionComponent<
             labelText="Image subject"
             name="spritelab_mode_image_subject"
             items={IMAGE_SUBJECT_ITEMS}
-            selectedValue={(mode.imageSubject as string) ?? 'character'}
+            selectedValue={mode.imageSubject ?? 'character'}
             onChange={event =>
               onChange(
                 setImageSubject(mode, event.target.value as ImageSubject)
@@ -306,7 +310,7 @@ const SpritelabModeFields: React.FunctionComponent<
             labelText="Image source"
             name="spritelab_mode_image_source"
             items={IMAGE_SOURCE_ITEMS}
-            selectedValue={(mode.imageSource as string) ?? 'cached'}
+            selectedValue={mode.imageSource ?? 'cached'}
             onChange={event =>
               onChange(setImageSource(mode, event.target.value as ImageSource))
             }

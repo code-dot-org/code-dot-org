@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
+import {LevelMode} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
+
 import {cleanLevelMode, LevelModeObject} from './spritelabMode';
 import SpritelabModeFields from './SpritelabModeFields';
 
@@ -22,7 +24,7 @@ const EditSpritelabMode: React.FunctionComponent<EditSpritelabModeProps> = ({
 
   useEffect(() => subscribeToUsesLab2?.(setUsesLab2), [subscribeToUsesLab2]);
 
-  const handleChange = (newMode: LevelModeObject) =>
+  const handleChange = (newMode: Partial<LevelMode>) =>
     setState(current => ({...current, mode: newMode}));
 
   return (

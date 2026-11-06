@@ -19,6 +19,10 @@ import {
 
 import {setJsonObjectValue} from '../jsonUtils';
 
+/**
+ * A saved level_mode as it arrives: any keys, any values, since the property
+ * could have been hand-edited as JSON before this editor existed.
+ */
 export type LevelModeObject = Record<string, unknown>;
 
 export const LEVEL_MODE_KINDS: LevelModeKind[] = [
@@ -38,7 +42,7 @@ export const KIND_LABELS: Record<LevelModeKind, string> = {
 };
 
 // Keys a kind can carry; changing the kind drops the rest.
-const KEYS_BY_KIND: Record<LevelModeKind, string[]> = {
+const KEYS_BY_KIND: Record<LevelModeKind, (keyof LevelMode)[]> = {
   code: [
     'imageType',
     'imageSubject',
@@ -68,17 +72,8 @@ const KEYS_BY_KIND: Record<LevelModeKind, string[]> = {
   freeplay: ['learning', 'imageSource'],
 };
 
-export function getKind(mode: LevelModeObject): LevelModeKind | undefined {
-  const kind = mode.kind;
-  return LEVEL_MODE_KINDS.includes(kind as LevelModeKind)
-    ? (kind as LevelModeKind)
-    : undefined;
-}
-
-export function getPaletteRoles(mode: LevelModeObject): string[] {
-  return Array.isArray(mode.paletteRoles)
-    ? (mode.paletteRoles as string[])
-    : [];
+export function getPaletteRoles(mode: Partial<LevelMode>): string[] {
+  return mode.paletteRoles ?? [];
 }
 
 /** Returns a stringified list of the tabs a kind will show to the user. */
@@ -125,12 +120,12 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
  * everything is dropped.
  */
 export function cleanLevelMode(mode: LevelModeObject): {
-  mode: LevelModeObject;
+  mode: Partial<LevelMode>;
   removed: string[];
 } {
   const describe = (key: string, value: unknown) =>
     `${key}: ${JSON.stringify(value)}`;
-  if (!getKind(mode)) {
+  if (!isValidLevelModeValue('kind', mode.kind)) {
     return {
       mode: {},
       removed: Object.entries(mode).map(([key, value]) => describe(key, value)),
@@ -145,12 +140,15 @@ export function cleanLevelMode(mode: LevelModeObject): {
       removed.push(describe(key, value));
     }
   });
-  return {mode: cleaned, removed};
+  return {mode: cleaned as Partial<LevelMode>, removed};
 }
 
 /** Whether a field belongs on the form for the current mode. */
-export function fieldApplies(mode: LevelModeObject, key: string): boolean {
-  const kind = getKind(mode);
+export function fieldApplies(
+  mode: Partial<LevelMode>,
+  key: keyof LevelMode
+): boolean {
+  const kind = mode.kind;
   if (!kind) {
     return false;
   }
@@ -175,20 +173,20 @@ export function fieldApplies(mode: LevelModeObject, key: string): boolean {
   }
 }
 
-function withoutInapplicableKeys(mode: LevelModeObject): LevelModeObject {
-  const next: LevelModeObject = {};
-  Object.entries(mode).forEach(([key, value]) => {
-    if (key === 'kind' || fieldApplies(mode, key)) {
-      next[key] = value;
+function withoutInapplicableKeys(mode: Partial<LevelMode>): Partial<LevelMode> {
+  const next = {...mode};
+  (Object.keys(mode) as (keyof LevelMode)[]).forEach(key => {
+    if (key !== 'kind' && !fieldApplies(mode, key)) {
+      delete next[key];
     }
   });
   return next;
 }
 
 export function setKind(
-  mode: LevelModeObject,
+  mode: Partial<LevelMode>,
   kind: LevelModeKind | undefined
-): LevelModeObject {
+): Partial<LevelMode> {
   if (!kind) {
     return {};
   }
@@ -196,49 +194,49 @@ export function setKind(
 }
 
 export function setImageType(
-  mode: LevelModeObject,
+  mode: Partial<LevelMode>,
   imageType: ImageType | undefined
-): LevelModeObject {
+): Partial<LevelMode> {
   return withoutInapplicableKeys(
     setJsonObjectValue(mode, 'imageType', imageType)
   );
 }
 
 export function setImageSubject(
-  mode: LevelModeObject,
+  mode: Partial<LevelMode>,
   imageSubject: ImageSubject | undefined
-): LevelModeObject {
+): Partial<LevelMode> {
   return setJsonObjectValue(mode, 'imageSubject', imageSubject);
 }
 
 export function setImageRole(
-  mode: LevelModeObject,
+  mode: Partial<LevelMode>,
   imageRole: string
-): LevelModeObject {
+): Partial<LevelMode> {
   return setJsonObjectValue(mode, 'imageRole', imageRole.trim() || undefined);
 }
 
 export function setImageFirst(
-  mode: LevelModeObject,
+  mode: Partial<LevelMode>,
   imageFirst: boolean
-): LevelModeObject {
+): Partial<LevelMode> {
   return withoutInapplicableKeys(
     setJsonObjectValue(mode, 'imageFirst', imageFirst || undefined)
   );
 }
 
 export function setLearning(
-  mode: LevelModeObject,
+  mode: Partial<LevelMode>,
   learning: boolean
-): LevelModeObject {
+): Partial<LevelMode> {
   return setJsonObjectValue(mode, 'learning', learning || undefined);
 }
 
 /** Unset reads as 'cached', so the default is stored by storing nothing. */
 export function setImageSource(
-  mode: LevelModeObject,
+  mode: Partial<LevelMode>,
   imageSource: ImageSource
-): LevelModeObject {
+): Partial<LevelMode> {
   return setJsonObjectValue(
     mode,
     'imageSource',
@@ -256,9 +254,9 @@ export function parsePaletteRoles(text: string): string[] {
 }
 
 export function setPaletteRoles(
-  mode: LevelModeObject,
+  mode: Partial<LevelMode>,
   text: string
-): LevelModeObject {
+): Partial<LevelMode> {
   const roles = parsePaletteRoles(text);
   return setJsonObjectValue(
     mode,
