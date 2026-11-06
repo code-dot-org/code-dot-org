@@ -9,26 +9,18 @@ require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../deployment'
+require 'erb'
 require 'mysql2'
-require 'uri'
+require 'yaml'
 require 'cdo/active_job_backend'
 require 'cdo/active_job_queue_metrics'
 
-# encoding and default_group match dashboard/config/database.yml.
+# Connects as Rails would from this process. mysql2 ignores the
+# ActiveRecord-only keys.
 def dashboard_db_client
-  uri = URI.parse(CDO.dashboard_db_writer)
-  Mysql2::Client.new(
-    host: uri.host,
-    port: uri.port,
-    username: uri.user && URI::DEFAULT_PARSER.unescape(uri.user),
-    password: uri.password && URI::DEFAULT_PARSER.unescape(uri.password),
-    database: uri.path.delete_prefix('/'),
-    encoding: 'utf8mb4',
-    default_group: 'cdo',
-    connect_timeout: 2,
-    read_timeout: 30,
-    write_timeout: 5
-  )
+  path = File.expand_path('../../dashboard/config/database.yml', __dir__)
+  config = YAML.safe_load(ERB.new(File.read(path)).result, aliases: true, permitted_classes: [Symbol])
+  Mysql2::Client.new(config.fetch(CDO.rack_env.to_s).fetch('primary').transform_keys(&:to_sym))
 end
 
 def main
