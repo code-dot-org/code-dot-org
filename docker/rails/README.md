@@ -88,9 +88,9 @@ Two suites, in increasing cost.
 
 `smoke-test.sh` is database-free. It runs the image with a series of one-off
 commands and asserts the slice is what it should be: `bundle check` passes,
-`deployment.rb` loads (which exercises the CDO config cascade and `lib/`),
-`cdo/pycall` initialises libpython through the venv, the staging gem set loads,
-the kept paths above are present, and no toolchain came along.
+`deployment.rb` loads, and this ensures that the CDO config and `lib/` work
+without Rails. The staging gem set loads. The kept paths listed above are
+present. No build toolchain came along.
 
 ```
 ./docker/rails/smoke-test.sh cdo-rails:test docker
@@ -220,9 +220,8 @@ matches against it.
 ### The dependency layer
 
 The build pulls a `cdo-deps` layer named by a content key. A push that changes
-`Gemfile`, `Gemfile.lock`, `.ruby-version`, `.python-version`, `pyproject.toml`
-or `uv.lock` arrives before that layer exists. `cdo-deps-image` is building it
-at that moment.
+`Gemfile`, `Gemfile.lock` or `.ruby-version` arrives before that layer exists.
+`cdo-deps-image` is building it at that moment.
 
 On a push, a missing layer ends the run with a notice and publishes nothing.
 `cdo-deps-image` chains this workflow when the layer lands, and the build runs

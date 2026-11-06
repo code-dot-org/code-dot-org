@@ -1,0 +1,95 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-11-06T04:51:51.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Maya is making a page to help her friends pick where to eat. \n\n**Her plan:**\n- Theme: Lunch spots\n- Audience: My friends\n- Purpose: Help us decide where to eat\n- Look & Feel: Bold and playful\n",
+        "imageUrl": "https://images.code.org/09eedb46ae66abc13064312c375f103f-interactive-elements_01_setup_1600.png",
+        "key": "adaptive-less-checkpoints-plan-panel-interactive-00d6c2ec-3df7-4acf-86a7-d07e0ee662fa",
+        "links": [
+          {
+            "text": "Next",
+            "x": 80,
+            "y": 85,
+            "targetKey": "adaptive-less-checkpoints-plan-panel-interactive-a26beaf2-bcc2-4378-ad32-f706e1d2c7a6",
+            "width": 20
+          }
+        ]
+      },
+      {
+        "text": "The AI built a page. It’s bright and bold, and it shows five lunch places.\n",
+        "imageUrl": "https://images.code.org/25d964afe9bfde80e335bafe04403186-interactive-elements_02_webpage_1600.png",
+        "key": "adaptive-less-checkpoints-plan-panel-interactive-a26beaf2-bcc2-4378-ad32-f706e1d2c7a6",
+        "links": [
+          {
+            "text": "Next",
+            "x": 80,
+            "y": 85,
+            "targetKey": "adaptive-less-checkpoints-plan-panel-interactive-3d4c2ec4-8168-49fe-9829-0ddaa8fd9121",
+            "width": 20
+          }
+        ]
+      },
+      {
+        "text": "Maya checks the page against her plan. The purpose doesn’t fit. Nothing helps her friends decide.\n",
+        "imageUrl": "https://images.code.org/59444122ff9e626cc21dd1f47103f32c-interactive-elements_03_review_1600.png",
+        "key": "adaptive-less-checkpoints-plan-panel-interactive-3d4c2ec4-8168-49fe-9829-0ddaa8fd9121",
+        "links": [
+          {
+            "text": "Next",
+            "x": 80,
+            "y": 85,
+            "targetKey": "adaptive-less-checkpoints-plan-panel-interactive-65cf44dd-3f23-42f1-a7d8-8d630066c071",
+            "width": 20
+          }
+        ]
+      },
+      {
+        "text": "Maya’s page only lists places, but her plan says it should help her friends decide. \n\n**What advice would you give Maya?**\n\n- A. “Ask the AI to add a Spin button that picks one place.” \n- B. “Ask the AI to make the whole page better for your friends.”\n- C. “Ask the AI to make the colors brighter and the heading bigger.”",
+        "imageUrl": "https://images.code.org/f1573bcb937afa21a98c4f6b8d0e6009-blue-background-1600x900.png",
+        "key": "adaptive-less-checkpoints-plan-panel-interactive-65cf44dd-3f23-42f1-a7d8-8d630066c071",
+        "layout": "text-top-center",
+        "links": [
+          {
+            "text": "A",
+            "x": 25,
+            "y": 70,
+            "targetKey": "adaptive-less-checkpoints-plan-panel-interactive-9de2ab66-590a-4918-bad7-55eee2c4976a",
+            "width": 16
+          },
+          {
+            "text": "B",
+            "x": 50,
+            "y": 70,
+            "targetKey": "adaptive-less-checkpoints-plan-panel-interactive-9de2ab66-590a-4918-bad7-55eee2c4976a",
+            "width": 16
+          },
+          {
+            "text": "C",
+            "x": 75,
+            "y": 70,
+            "targetKey": "adaptive-less-checkpoints-plan-panel-interactive-9de2ab66-590a-4918-bad7-55eee2c4976a",
+            "width": 16
+          }
+        ]
+      },
+      {
+        "text": "The correct answer is A. “Ask the AI to add a Spin button that picks one place.” \n\nA Spin button that picks one place gives Maya’s page the purpose her plan asks for.\n\n---\n\n**Tip:** Check your page against each part of your plan, starting with your Purpose. If something is missing, ask the AI to add it.\n",
+        "imageUrl": "https://images.code.org/9a90f1484da2f2a45fcc9fc9189ad3e5-blue-background-1600x900.png",
+        "key": "adaptive-less-checkpoints-plan-panel-interactive-9de2ab66-590a-4918-bad7-55eee2c4976a",
+        "layout": "text-top-center",
+        "showContinueButton": true
+      }
+    ],
+    "use_links": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-06 04:55:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 05:00:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 05:02:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 05:03:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 05:06:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 05:11:34 +0000\",\"changed\":[\"panels\",\"use_links\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 05:14:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 05:17:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 05:19:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

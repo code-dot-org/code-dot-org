@@ -18,6 +18,13 @@ module User::AiAccessible
     ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]
   end
 
+  # Teachers follow their own access; a student needs a visible section with chat enabled and challenges on.
+  def can_use_lesson_deep_dive_challenges?
+    return false unless can_use_lesson_deep_dive?
+    return true if teacher_can_access_aichat? || levelbuilder?
+    sections_as_student.any? {|s| !s.hidden && s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED] && s.ai_challenge_enabled}
+  end
+
   def can_use_ai_iteration_tools?
     levelbuilder?
   end

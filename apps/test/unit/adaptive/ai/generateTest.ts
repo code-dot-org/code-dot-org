@@ -1,6 +1,11 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import {z} from 'zod';
 
-import {generate, moderateInput} from '@cdo/apps/adaptive/ai/generate';
+import {
+  generate,
+  moderateInput,
+  moderateOutput,
+} from '@cdo/apps/adaptive/ai/generate';
 import {startTrace} from '@cdo/apps/adaptive/ai/langfuse/trace';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {generateText} from '@cdo/apps/aiGateway';
@@ -8,6 +13,9 @@ import DCDO from '@cdo/apps/dcdo';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aiGateway', () => ({generateText: jest.fn()}));
+jest.mock('@code-dot-org/core/plugins/observability', () => ({
+  metrics: {count: jest.fn()},
+}));
 const mockEnd = jest.fn();
 jest.mock('@cdo/apps/adaptive/ai/langfuse/trace', () => ({
   startTrace: jest.fn(() => ({traceId: 'trace-1', end: mockEnd})),
@@ -28,6 +36,7 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
 }));
 
 const mockGenerateText = generateText as jest.Mock;
+const mockCount = Observability.metrics.count as jest.Mock;
 const mockStartTrace = startTrace as jest.Mock;
 const mockDcdoGet = DCDO.get as jest.Mock;
 
@@ -154,6 +163,10 @@ describe('moderateInput', () => {
     });
 
     await expect(moderateInput('bad text', context)).resolves.toBe('flagged');
+    expect(mockCount).toHaveBeenCalledWith('adaptive.text_moderation', 1, {
+      phase: 'input_filter',
+      result: 'flagged',
+    });
   });
 
   it('is an error, and reported, when the judge fails or answers nonsense', async () => {
@@ -164,5 +177,33 @@ describe('moderateInput', () => {
     await expect(moderateInput('text', context)).resolves.toBe('error');
 
     expect(mockLogError).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe('moderateOutput', () => {
+  beforeEach(() => jest.clearAllMocks());
+
+  it('asks the judge in the output phase and counts the result', async () => {
+    mockGenerateText.mockResolvedValue({output: {classification: 'OK'}});
+
+    await expect(moderateOutput('Do this.', context)).resolves.toBe('ok');
+    expect(mockGenerateText.mock.calls[0][1]).toEqual({
+      phase: 'output_filter',
+      aichatContext: context,
+    });
+    expect(mockCount).toHaveBeenCalledWith('adaptive.text_moderation', 1, {
+      phase: 'output_filter',
+      result: 'ok',
+    });
+  });
+
+  it('is an error, counted as one, when the judge fails', async () => {
+    mockGenerateText.mockRejectedValue(new Error('gateway down'));
+
+    await expect(moderateOutput('text', context)).resolves.toBe('error');
+    expect(mockCount).toHaveBeenCalledWith('adaptive.text_moderation', 1, {
+      phase: 'output_filter',
+      result: 'error',
+    });
   });
 });
