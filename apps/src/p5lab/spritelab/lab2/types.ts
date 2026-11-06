@@ -141,6 +141,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     name: string;
     source?: WorkspaceSerialization;
     worldStartPattern?: string[];
+    /** The student can open this scene in the editor beside the pinned
+        one; Play still starts the game from the pinned scene. */
+    editable?: boolean;
   };
   /** The level's objectives (objectives.ts): the Guide's text, checklist
       and Continue gate. */
@@ -153,6 +156,10 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
+  /** Blocks built on earlier levels cannot be deleted from the pinned scene
+      here (blockLocks.ts); the stacks this level adds and the toolbox
+      blocks no earlier level required can. */
+  lockEarlierBlocks?: boolean;
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;

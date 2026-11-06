@@ -343,6 +343,8 @@ export const AiChatModelIds = {
   "GEMINI_3_1_FLASH_IMAGE": "gemini-3.1-flash-image",
   "GPT_5_6_LUNA": "gpt-5.6-luna",
   "GPT_6_LUNA": "gpt-6-luna"
+  "GEMINI_3_1_FLASH_LITE": "gemini-3.1-flash-lite",
+  "GEMINI_3_5_FLASH_LITE": "gemini-3.5-flash-lite"
 } as const;
 
 export const AiChatGeminiModelIds = [
@@ -351,7 +353,9 @@ export const AiChatGeminiModelIds = [
   "gemini-2.5-flash-lite",
   "gemini-2.5-pro",
   "gemini-2.5-flash-image",
-  "gemini-3.1-flash-image"
+  "gemini-3.1-flash-image",
+  "gemini-3.1-flash-lite",
+  "gemini-3.5-flash-lite"
 ] as const;
 
 export const AiChatProviders = {
@@ -369,6 +373,9 @@ export const AiChatProviderByModelId = {
   "gpt-4o-mini": "openai",
   "gpt-5.6-luna": "openai",
   "gpt-6-luna": "openai"
+  "gemini-3.1-flash-lite": "google",
+  "gemini-3.5-flash-lite": "google",
+  "gpt-4o-mini": "openai"
 } as const;
 
 export const AiChatClientTypes = {
@@ -410,6 +417,8 @@ export const AiChatToolsDependency = {
   "AVAILABLE": "available",
   "NONE": "none"
 } as const;
+
+export const AiGatewayAccessTokenLifetimeSeconds = 60 as const;
 
 export const FeaturedProjectStatus = {
   "active": "active",

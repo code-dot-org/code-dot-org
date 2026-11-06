@@ -94,9 +94,9 @@
         },
         {
           "id": "intro-interest",
-          "title": "What are you into?",
+          "title": "Start with an idea.",
           "kind": "questions",
-          "description": "Pick one, or type your own.",
+          "description": "Pick one to start or type your own. You can change it later.",
           "questions": [
             {
               "id": 201,
@@ -122,8 +122,9 @@
         },
         {
           "id": "intro-purpose",
-          "title": "What should your site do?",
+          "title": "Decide the purpose",
           "kind": "questions",
+          "description": "Start with one. You can add more as you build.",
           "questions": [
             {
               "id": 202,
@@ -169,7 +170,7 @@
               "id": 212,
               "type": "MultipleChoiceQuestion",
               "questionName": "intro-feel",
-              "questionTitle": "How should it feel?",
+              "questionTitle": "How should the site look and feel?",
               "choices": [
                 { "id": "a", "text": "Calm and clean" },
                 { "id": "b", "text": "Bold and energetic" },
@@ -182,7 +183,7 @@
         },
         {
           "id": "intro-review",
-          "title": "Your plan",
+          "title": "Here's you plan!",
           "kind": "review",
           "description": "Build a first version with AI, or start from a blank page.",
           "questionId": 214,
@@ -195,7 +196,7 @@
           "kind": "level",
           "level": "adaptive-less-checkpoints-plan-your-site-apply",
           "project": true,
-          "instructions": "This is your site. Look it over, change anything you like, then continue.",
+          "instructions": "This is your site. Look it over, then continue. You will be building the skills to make it your own.",
           "projectPrompt": "The first version of the student's website, built from their plan: a hero with a headline that says what the site is for, one or two sections that fit the topic, and a call-to-action. Keep the look and feel simple, but appropriate for their given topic. It should feel clean but not overly polished."
         }
       ]
@@ -203,26 +204,26 @@
     {
       "id": "skill-check",
       "title": "Skill Check",
-      "description": "A few quick questions to find your starting point. Not graded.",
+      "description": "Your answers to these five questions set your starting point. You can review them anytime, but changes won't update your path.",
       "requires": ["intro"],
       "routeAfterCompletion": true,
       "steps": [
         {
           "id": "skill-check-experience",
-          "title": "Your experience",
+          "title": "Your experience with AI and code.",
           "kind": "questions",
-          "description": "Pick the closest one. These questions find your starting point. They are not graded.",
+          "description": "Five quick questions about building with AI. There is no right or wrong here - your answers will set up your starting point.",
           "questions": [
             {
               "id": 213,
               "type": "MultipleChoiceQuestion",
               "questionName": "skill-check-experience",
-              "questionTitle": "Have you worked on a website before?",
+              "questionTitle": "Which sounds closest to you?",
               "choices": [
-                { "id": "a", "text": "No, this is new to me" },
-                { "id": "b", "text": "I have used a website builder or a template" },
-                { "id": "c", "text": "I have changed code (HTML, CSS or JavaScript) before" },
-                { "id": "d", "text": "I have built websites on my own" }
+                { "id": "a", "text": "I’m new to using AI to build websites." },
+                { "id": "b", "text": "I have a little experience using AI to build websites." },
+                { "id": "c", "text": "I have built a full website with AI or a site builder." },
+                { "id": "d", "text": "I have built many websites with AI and edited code myself." }
               ]
             }
           ]
@@ -238,61 +239,61 @@
               "questionName": "intro-self-check",
               "questionTitle": "Which sentence sounds most like you?",
               "choices": [
-                { "id": "a", "text": "I’m new to this. I haven’t worked with website code before." },
-                { "id": "b", "text": "I know some of the basics, like headings, buttons, and links that make up a page." },
-                { "id": "c", "text": "I can describe how a page looks, like its colors, fonts, and layout." },
-                { "id": "d", "text": "I can describe how a page behaves, like what happens when someone clicks or types." }
+                { "id": "a", "text": "I’m new to making websites." },
+                { "id": "b", "text": "I know web terms like nav bar and call-to-action." },
+                { "id": "c", "text": "I’ve built a site with AI or a site builder." },
+                { "id": "d", "text": "I’ve edited website code." }
               ]
             },
             {
               "id": 103,
               "type": "MultipleChoiceQuestion",
               "questionName": "intro-knowledge-button",
-              "questionTitle": "You want a button that changes color when someone clicks it. Which instruction would work best?",
+              "questionTitle": "You want a big section at the top of your page with a headline and a button. Which message would you send the AI?",
               "choices": [
-                { "id": "a", "text": "Style the button with a blue background color." },
-                { "id": "b", "text": "Add a click event that changes the button’s color." },
-                { "id": "c", "text": "Make the button look better and work better." },
-                { "id": "d", "text": "Add a button element that says “Click me.”" },
-                { "id": "e", "text": "I’m not sure." }
+                { "id": "a", "text": "Make the top of my page look better." },
+                { "id": "b", "text": "Put a big title at the top with a button under it." },
+                { "id": "c", "text": "Add a hero section with a headline and a button." },
+                { "id": "d", "text": "Add an h1 and a button inside a div." },
+                { "id": "e", "text": "I’m not sure yet." }
               ],
               "measures": {
                 "skillId": "build",
-                "evidenceLevels": { "a": 1, "b": 2, "c": 0, "d": 1, "e": 0 }
+                "evidenceLevels": { "a": 0, "b": 1, "c": 2, "d": 2, "e": 0 }
               }
             },
             {
               "id": 104,
               "type": "MultipleChoiceQuestion",
               "questionName": "intro-knowledge-cards",
-              "questionTitle": "You want a page with a heading and three cards in a row. Which instruction would work best?",
+              "questionTitle": "You asked for a page for your robotics club. The AI also added a shop section you didn’t ask for. What do you do?",
               "choices": [
-                { "id": "a", "text": "Add a heading and three cards." },
-                { "id": "b", "text": "Add an h1 and three div elements." },
-                { "id": "c", "text": "Add an h1, then place three cards side by side." },
-                { "id": "d", "text": "Use flexbox to lay out three card divs in a row." },
-                { "id": "e", "text": "I’m not sure." }
+                { "id": "a", "text": "Keep it because it looks good." },
+                { "id": "b", "text": "Ask the AI to make it better." },
+                { "id": "c", "text": "Ask the AI to remove just the shop." },
+                { "id": "d", "text": "Delete the shop section yourself." },
+                { "id": "e", "text": "I’m not sure yet." }
               ],
               "measures": {
                 "skillId": "language",
-                "evidenceLevels": { "a": 1, "b": 1, "c": 2, "d": 2, "e": 0 }
+                "evidenceLevels": { "a": 0, "b": 1, "c": 2, "d": 2, "e": 0 }
               }
             },
             {
               "id": 105,
               "type": "MultipleChoiceQuestion",
               "questionName": "intro-knowledge-error",
-              "questionTitle": "Your heading looks wrong, and everything after it is huge too. You open the code and see this:\n\n<h1>Panda Fan Club\n<p>Welcome to the club!</p>\n\nWhich instruction to the AI would work best?",
+              "questionTitle": "You tell the AI your Join button does nothing. It replies, “Fixed! The button now works.” What do you do next?",
               "choices": [
-                { "id": "a", "text": "It’s broken. Fix it." },
-                { "id": "b", "text": "Add a CSS rule to fix the heading color." },
-                { "id": "c", "text": "Update the click handler so the heading changes." },
-                { "id": "d", "text": "Close the h1 tag after “Panda Fan Club”." },
-                { "id": "e", "text": "I’m not sure." }
+                { "id": "a", "text": "Move on to the next part of your site." },
+                { "id": "b", "text": "Ask the AI to double-check its fix." },
+                { "id": "c", "text": "Click the button to see if it works." },
+                { "id": "d", "text": "Test the button, then the whole page." },
+                { "id": "e", "text": "I’m not sure yet." }
               ],
               "measures": {
                 "skillId": "debug",
-                "evidenceLevels": { "a": 0, "b": 1, "c": 1, "d": 2, "e": 0 }
+                "evidenceLevels": { "a": 0, "b": 1, "c": 2, "d": 2, "e": 0 }
               }
             }
           ]

@@ -1,0 +1,17 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-11-05T18:01:59.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Comic Strip\r\ndirections",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "project_template_level_name": "data-makes-ai-lesson11-sketch-lab-template"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-05 18:02:01 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 18:04:35 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

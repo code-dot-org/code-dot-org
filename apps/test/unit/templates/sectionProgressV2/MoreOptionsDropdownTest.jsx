@@ -97,6 +97,17 @@ describe('MoreOptionsDropdown', () => {
     expect(screen.queryByText(i18n.resetProgress())).toBeNull();
   });
 
+  it('hides the reset progress option for demo sections', () => {
+    renderComponent({isDemoSection: true});
+
+    fireEvent.click(
+      screen.getByRole('button', {name: i18n.additionalOptions()})
+    );
+
+    expect(screen.getByText(i18n.expandAll())).toBeTruthy();
+    expect(screen.queryByText(i18n.resetProgress())).toBeNull();
+  });
+
   it('opens the reset progress dialog when reset-progress is clicked', () => {
     renderComponent();
 
@@ -104,7 +115,11 @@ describe('MoreOptionsDropdown', () => {
       name: i18n.additionalOptions(),
     });
     fireEvent.click(trigger);
-    fireEvent.click(screen.getByText(i18n.resetProgress()));
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `${i18n.resetProgress()} ${i18n.betaTag()}`,
+      })
+    );
 
     expect(
       screen.getByText(
