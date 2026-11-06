@@ -11,6 +11,7 @@ import {
   visibleSteps,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
+import {usePathwayStatus} from '@cdo/apps/adaptive/progress/usePathwayStatus';
 import {computeEvidence} from '@cdo/apps/adaptive/routing/evidence';
 import {routeStatusMap} from '@cdo/apps/adaptive/routing/route';
 import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
@@ -554,5 +555,22 @@ describe('useProgress', () => {
     expect(
       result.current.progress?.steps.project.generatedInstructions
     ).toEqual(generatedInstructions);
+  });
+});
+
+describe('usePathwayStatus', () => {
+  it('reads undefined progress as empty', () => {
+    const {result} = renderHook(() => usePathwayStatus(pathway, undefined));
+
+    expect(result.current.statusMap).toEqual(
+      statusMapOf(pathway, EMPTY_PROGRESS)
+    );
+  });
+
+  it('routes the progress it is given', () => {
+    const progress = progressOf(['intro'], ['a']);
+    const {result} = renderHook(() => usePathwayStatus(pathway, progress));
+
+    expect(result.current.statusMap).toEqual(statusMapOf(pathway, progress));
   });
 });
