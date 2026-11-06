@@ -2,7 +2,7 @@
 // the full prompt the model received; for a character set, a second view
 // shows the prompts sent for the other poses.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
@@ -110,7 +110,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
         </MuiButton>
       )}
       {open && (
-        <MuiDialog
+        <Dialog
           title={TITLE}
           className={styles.dialog}
           customContent={

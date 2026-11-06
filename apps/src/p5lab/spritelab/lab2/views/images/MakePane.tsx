@@ -1,7 +1,7 @@
 // The tab's right column: the sentence scene's controls, laid out as a thin
 // pane beside the frame.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
@@ -122,7 +122,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
         )}
       </div>
       {confirming && (
-        <MuiDialog
+        <Dialog
           title="Replace this image?"
           description="A new picture takes its place."
           onClose={() => setConfirming(false)}

@@ -1,4 +1,4 @@
-import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import TextField from '@code-dot-org/component-library/textField';
 import React, {useCallback, useState} from 'react';
 import {createPortal} from 'react-dom';

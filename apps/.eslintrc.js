@@ -198,18 +198,6 @@ module.exports = {
             message:
               'DSCO Typography is deprecated. Use MUI Typography from @mui/material instead. From the apps directory (cd apps), run: npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src" --parser=tsx --extensions=tsx,ts,jsx,js',
           },
-          {
-            name: '@code-dot-org/component-library/dialog',
-            importNames: [
-              'Dialog',
-              'CustomDialog',
-              'default',
-              'DialogProps',
-              'CustomDialogProps',
-            ],
-            message:
-              'DSCO Dialog is deprecated. Import MuiDialog / MuiCustomDialog (and MuiDialogProps / MuiCustomDialogProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/dialog-to-mui-dialog.ts; see codemods/README.md there',
-          },
         ],
         patterns: [
           {

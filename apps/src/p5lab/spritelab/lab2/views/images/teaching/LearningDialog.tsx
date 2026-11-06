@@ -2,7 +2,7 @@
 // first picture on a level that asks: nothing closes it but reading to the
 // end. The copy differs for a character and for a background.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
@@ -248,7 +248,7 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
   const onLastPanel = index === panels.length - 1;
   const panel = panels[index];
   return (
-    <MuiDialog
+    <Dialog
       title={TITLE}
       className={styles.dialog}
       customContent={

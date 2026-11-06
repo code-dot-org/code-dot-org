@@ -1,17 +1,16 @@
-// Common dialog styles
+// position, background-color and border come from .customDialog on the same element.
 .dialog {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 39.375rem;
-  max-width: 50rem;
+  // The min() limits below assume it; Storybook and dashboard already resolve border-box.
+  box-sizing: border-box;
+  min-width: min(39.375rem, 100%);
+  max-width: min(50rem, 100%);
   padding: 2.25rem 3.5rem 2.5rem 3.5rem;
   gap: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
-  background-color: var(--background-neutral-primary);
-  border: 1px solid var(--borders-neutral-primary);
 
   &:has(.dialogIcon) {
     padding-top: 3.5rem;
@@ -27,7 +26,10 @@
 
   img {
     width: 16.25rem;
-    height: 8.625rem;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 260 / 138;
+    object-fit: contain;
   }
 
   h2,
@@ -48,10 +50,8 @@
   gap: 8px;
 }
 
-// TODO: Make this selector higher specificity, as font awesome icons might get display from font awesome styles right
-// now, which breaks the styling. Once done - remove inline styles display flex from icon
-// in apps/src/templates/manageStudents/ConfirmRemoveStudentDialog.jsx
-.dialogIcon {
+// Two classes, so display: flex outranks Font Awesome's display rule regardless of stylesheet order.
+.dialog > .dialogIcon {
   position: absolute;
   inset-block-start: -32px;
   display: flex;
@@ -72,10 +72,4 @@
     width: 40px;
     line-height: 125%;
   }
-}
-
-.dialogCloseButton {
-  position: absolute;
-  inset-block-start: 9px;
-  inset-inline-end: 9px;
 }
