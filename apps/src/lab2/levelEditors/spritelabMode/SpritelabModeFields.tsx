@@ -21,6 +21,7 @@ import {
   KIND_LABELS,
   LEVEL_MODE_KINDS,
   LevelModeObject,
+  parsePaletteRoles,
   setImageFirst,
   setImageRole,
   setImageSubject,
@@ -87,6 +88,10 @@ const SpritelabModeFields: React.FunctionComponent<
   const [paletteRolesText, setPaletteRolesText] = useState(() =>
     getPaletteRoles(mode).join(', ')
   );
+  const savedRoles = getPaletteRoles(mode).join(', ');
+  if (parsePaletteRoles(paletteRolesText).join(', ') !== savedRoles) {
+    setPaletteRolesText(savedRoles);
+  }
 
   const kindHelper = useMemo(() => {
     let helpText = kind

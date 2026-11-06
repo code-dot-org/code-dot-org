@@ -123,6 +123,22 @@ describe('EditSpritelabMode', () => {
     ]);
   });
 
+  it('clears the palette roles field when a new kind drops the roles', () => {
+    const {container} = renderEditor({kind: 'world'});
+    type(PALETTE_ROLES, 'treasure, block');
+    choose(KIND, 'code');
+    choose(KIND, 'world');
+    expect(submitted(container)).toBe('{"kind":"world"}');
+    expect(textbox(PALETTE_ROLES)).toHaveValue('');
+  });
+
+  it('keeps a trailing separator the author is still typing', () => {
+    const {container} = renderEditor({kind: 'world'});
+    type(PALETTE_ROLES, 'treasure, ');
+    expect(textbox(PALETTE_ROLES)).toHaveValue('treasure, ');
+    expect(JSON.parse(submitted(container)).paletteRoles).toEqual(['treasure']);
+  });
+
   it('removes a field rather than submitting a blank value', () => {
     const {container} = renderEditor({kind: 'image', imageRole: 'hero'});
     type(IMAGE_ROLE, '');
