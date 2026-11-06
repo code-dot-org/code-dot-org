@@ -64,6 +64,25 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
         >
           land {imageType} {imageSubject ?? ''}
         </button>
+        <button
+          type="button"
+          onClick={() =>
+            onKeep({
+              // The picture kept again with its verdict, as a rating does.
+              filename: `made-${picturesMade}.png`,
+              uint8Array: new Uint8Array([137, 80, 78, 71]),
+              mediaType: 'image/png',
+              generation: {
+                imageType,
+                ...(imageSubject && {subject: imageSubject}),
+                prompt: 'A cat',
+                verdict: 'up',
+              },
+            })
+          }
+        >
+          rate {imageType}
+        </button>
         {layout({
           mode: generating ? 'generating' : 'edit',
           busy: generating,
@@ -599,6 +618,29 @@ describe('ImagesTab', () => {
     fireEvent.click(screen.getByRole('button', {name: 'generate off'}));
     expect(screen.getByText('toolbar')).toBeTruthy();
     expect(screen.getByText('canvas')).toBeTruthy();
+  });
+
+  it('keeps the tools open when the picture under them is rated', async () => {
+    delete params['images-edited'];
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      sourceUrl: 'one.png',
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    acceptGenerated.mockImplementation(async (_target, result) => {
+      propsByKey.k1 = {...propsByKey.k1, generation: result.generation};
+      return 'k1';
+    });
+    renderTab({editingOffered: true});
+    const canvas = await screen.findByText('canvas');
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^rate sprite/}));
+    });
+    expect(acceptGenerated).toHaveBeenCalledTimes(1);
+    // The same canvas: the tools were never put away.
+    expect(screen.getByText('canvas')).toBe(canvas);
+    expect(screen.getByText('toolbar')).toBeTruthy();
   });
 
   it('paints every image in place in free play, the words beside the tools', async () => {

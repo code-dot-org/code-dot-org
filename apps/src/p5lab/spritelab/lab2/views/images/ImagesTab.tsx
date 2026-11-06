@@ -3,6 +3,8 @@
 // make or remake it. A generated or drawn picture is written to the project
 // as soon as it is ready; the student does not confirm it.
 
+import isEqual from 'lodash/isEqual';
+import omit from 'lodash/omit';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -57,7 +59,7 @@ import {currentPixels} from './imagePixels';
 import MakePane from './MakePane';
 import OwnWorkPane from './OwnWorkPane';
 import PaintPlaceholder from './PaintPlaceholder';
-import {listProjectImages, ProjectImage} from './projectImages';
+import {ImageProps, listProjectImages, ProjectImage} from './projectImages';
 import LearningDialog from './teaching/LearningDialog';
 import RatingBar from './teaching/RatingBar';
 import ReopenedBehindTheScenes from './teaching/ReopenedBehindTheScenes';
@@ -125,6 +127,21 @@ type EditedMode = 'paint' | 'pane' | 'generate';
 function readEditedMode(): EditedMode {
   const value = queryParams('images-edited');
   return value === 'pane' || value === 'generate' ? value : 'paint';
+}
+
+/** Whether two generation records are of one picture: a verdict judges
+    the picture without changing it. */
+function samePicture(
+  a: ImageProps['generation'],
+  b: ImageProps['generation']
+): boolean {
+  if (a === b) {
+    return true;
+  }
+  if (!a || !b) {
+    return false;
+  }
+  return isEqual(omit(a, 'verdict'), omit(b, 'verdict'));
 }
 
 const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
@@ -370,12 +387,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   ]);
   // A generated picture replacing the image (or blank) being drawn on
   // becomes the image's pixels; the tools close without saving the drawn
-  // pixels over it.
+  // pixels over it. A rating keeps the picture again with its verdict in
+  // the record, which is the same picture.
   const landedOverPainting =
     !!drawing &&
     paintsInPlace &&
     !!chosenImage?.props.generation &&
-    chosenImage.props.generation !== tools.openedOnGeneration &&
+    !samePicture(chosenImage.props.generation, tools.openedOnGeneration) &&
     (drawing.target.key === chosenImage.key || drawing.target.key === null);
   const {abandonDrawing} = tools;
   useEffect(() => {
