@@ -1,0 +1,174 @@
+{
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "finishReason": {
+      "type": "string"
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "promptTokens": {
+          "type": "number"
+        },
+        "completionTokens": {
+          "type": "number"
+        },
+        "totalTokens": {
+          "type": "number"
+        },
+        "inputTokens": {
+          "type": "number"
+        },
+        "outputTokens": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "output": {},
+    "warnings": {
+      "type": "array",
+      "items": {}
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "mediaType": {
+            "type": "string"
+          },
+          "base64": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "mediaType",
+          "base64"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "modelId": {
+          "type": "string"
+        },
+        "headers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "body": {}
+      },
+      "required": [
+        "id",
+        "timestamp",
+        "modelId"
+      ],
+      "additionalProperties": false
+    },
+    "responseSignature": {
+      "type": "string"
+    },
+    "rawFinishReason": {
+      "type": "string"
+    },
+    "providerMetadata": {
+      "type": "object",
+      "properties": {
+        "aiGateway": {
+          "type": "object",
+          "properties": {
+            "moderation": {
+              "type": "object",
+              "properties": {
+                "input_text": {
+                  "type": "string",
+                  "enum": [
+                    "ok",
+                    "flagged",
+                    "error"
+                  ]
+                },
+                "output_text": {
+                  "$ref": "#/properties/providerMetadata/properties/aiGateway/properties/moderation/properties/input_text"
+                },
+                "output_image": {
+                  "type": "object",
+                  "properties": {
+                    "azure_moderation": {
+                      "type": "object",
+                      "properties": {
+                        "verdict": {
+                          "$ref": "#/properties/providerMetadata/properties/aiGateway/properties/moderation/properties/input_text"
+                        },
+                        "categories": {
+                          "type": "object",
+                          "properties": {
+                            "Hate": {
+                              "type": "number",
+                              "enum": [
+                                0,
+                                2,
+                                4,
+                                6
+                              ]
+                            },
+                            "SelfHarm": {
+                              "$ref": "#/properties/providerMetadata/properties/aiGateway/properties/moderation/properties/output_image/properties/azure_moderation/properties/categories/properties/Hate"
+                            },
+                            "Sexual": {
+                              "$ref": "#/properties/providerMetadata/properties/aiGateway/properties/moderation/properties/output_image/properties/azure_moderation/properties/categories/properties/Hate"
+                            },
+                            "Violence": {
+                              "$ref": "#/properties/providerMetadata/properties/aiGateway/properties/moderation/properties/output_image/properties/azure_moderation/properties/categories/properties/Hate"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "verdict"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "llm_judge": {
+                      "$ref": "#/properties/providerMetadata/properties/aiGateway/properties/moderation/properties/input_text"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "providerReason": {
+              "type": "string"
+            },
+            "providerMessage": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": {}
+    }
+  },
+  "required": [
+    "finishReason"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
