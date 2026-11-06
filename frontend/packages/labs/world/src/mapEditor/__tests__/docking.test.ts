@@ -6,6 +6,7 @@ import {
   atSize,
   dividerAt,
   dockChoices,
+  placementWords,
   dockedAt,
   dockedBox,
   dockedEdges,
@@ -155,6 +156,24 @@ describe('docking from the inspector', () => {
       'Left of game',
       'Right of game',
     ]);
+  });
+
+  it('names a placement by its kind too, where its id does not say it', () => {
+    const kinds: Record<string, string> = {game: 'Viewport'};
+    expect(
+      dockChoices(screen(), 'hud', id => placementWords(id, kinds[id]))
+        .filter(choice => choice.target)
+        .map(choice => choice.label),
+    ).toEqual([
+      'Above game (Viewport)',
+      'Below game (Viewport)',
+      'Left of game (Viewport)',
+      'Right of game (Viewport)',
+    ]);
+    expect(placementWords('HealthBar', 'Health Bar')).toBe('HealthBar');
+    expect(placementWords('Label2', 'Label')).toBe('Label2');
+    expect(placementWords('Score', 'Label')).toBe('Score (Label)');
+    expect(placementWords('Score', undefined)).toBe('Score');
   });
 
   it('offers nothing beside itself', () => {

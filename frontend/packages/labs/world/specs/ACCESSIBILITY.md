@@ -143,6 +143,10 @@ below, and are listed last.
 - **Placements are named by their ids** in the Dock menu ("Above
   HealthBar"), which are what the inspector shows but not always what a
   learner would call them.
+  CLOSED: a placement is named by its id and its kind, "Below Game
+  (Viewport)", in the menu, its group headings, and what docking says.
+  The kind is left off where the id begins with it ("HealthBar",
+  "Label2").
 - **Reaching the stage from a tile is a walk by Tab** past the rest of the
   palette; taking an actor in hand does not move focus to the stage, which
   is right for a pointer and long for a keyboard.
@@ -593,4 +597,6 @@ themes. Not seen with a screen reader.
   library. Escape, or choosing a sound and Use this sound, puts focus
   back on the dropdown, which then says the sound chosen ("dropdown:
   jump"). Opened by a pointer, Escape puts focus on the block. Not by a
-  screen reader.
+  screen reader. The same holds, by the same keys and Escape, for "add
+  actor", "show screen", "add effect" and "set background"; "set
+  sprite", whose dropdown opens a picker of its own, was not reached.

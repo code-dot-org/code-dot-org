@@ -238,10 +238,28 @@ const SIDES: readonly Side[] = ['top', 'bottom', 'left', 'right'];
  * placement inside another, which a drag cannot dock either.
  */
 /** Where a zone docks, in the words the Dock… menu uses. */
-export const zoneWords = ({target, side}: {target?: string; side: Side}) =>
-  target === undefined ? EDGE_WORDS[side] : `${BESIDE_WORDS[side]} ${target}`;
+export const zoneWords = (
+  {target, side}: {target?: string; side: Side},
+  named: (id: string) => string = id => id,
+) =>
+  target === undefined
+    ? EDGE_WORDS[side]
+    : `${BESIDE_WORDS[side]} ${named(target)}`;
 
-export function dockChoices(doc: MapDoc, id: string): DockChoice[] {
+/**
+ * A placement as the docking words name it: its id, and its kind's name
+ * when the id does not already say it ("Score (Label)", but "HealthBar").
+ */
+export const placementWords = (id: string, kind: string | undefined) =>
+  !kind || squash(id).startsWith(squash(kind)) ? id : `${id} (${kind})`;
+
+const squash = (words: string) => words.replace(/\s+/g, '').toLowerCase();
+
+export function dockChoices(
+  doc: MapDoc,
+  id: string,
+  named?: (id: string) => string,
+): DockChoice[] {
   if (!dockable(doc)(id)) {
     return [];
   }
@@ -249,7 +267,11 @@ export function dockChoices(doc: MapDoc, id: string): DockChoice[] {
   return [
     ...SIDES.map(side => ({side, label: zoneWords({side})})),
     ...others.flatMap(target =>
-      SIDES.map(side => ({target, side, label: zoneWords({target, side})})),
+      SIDES.map(side => ({
+        target,
+        side,
+        label: zoneWords({target, side}, named),
+      })),
     ),
   ];
 }

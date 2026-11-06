@@ -67,6 +67,7 @@ import {CameraInspector} from './CameraInspector';
 import {
   dividerAt,
   dockChoices,
+  placementWords,
   zoneWords,
   dockedAt,
   dockedBox,
@@ -1184,6 +1185,10 @@ export const MapStage = ({
     const stem = type.split('/').pop() ?? type;
     return stem.charAt(0).toUpperCase() + stem.slice(1);
   };
+  const dockName = (id: string) => {
+    const type = map.actors.find(actor => actor.id === id)?.type;
+    return placementWords(id, type && (kinds?.[type]?.name ?? kindName(type)));
+  };
 
   /**
    * Put a record in the map — with NO POSITION, which is what makes it one.
@@ -2064,7 +2069,7 @@ export const MapStage = ({
             : undefined;
         commit(docked(mapRef.current, drag.id, drag.last));
         if (zone) {
-          say(`${drag.id} docked: ${zoneWords(zone)}`);
+          say(`${drag.id} docked: ${zoneWords(zone, dockName)}`);
         } else if (canDock && wasDocked) {
           say(`${drag.id} undocked, floating where it was let go`);
         }
@@ -2878,7 +2883,11 @@ export const MapStage = ({
     commit(next);
     setSelectedId(id);
     canvasRef.current?.focus();
-    say(zone ? `Docked a ${named}: ${zoneWords(zone)}` : `Placed a ${named}`);
+    say(
+      zone
+        ? `Docked a ${named}: ${zoneWords(zone, dockName)}`
+        : `Placed a ${named}`,
+    );
   };
 
   const handleClick = (event: ReactMouseEvent) => {
@@ -3702,7 +3711,7 @@ export const MapStage = ({
     }
   }, [traitsPending, selectedId]);
   // Entering a zone while dragging is said, as the zone's tint is shown.
-  const zoneSaid = dockZone ? zoneWords(dockZone) : '';
+  const zoneSaid = dockZone ? zoneWords(dockZone, dockName) : '';
   useEffect(() => {
     if (zoneSaid) {
       say(`Let go to dock: ${zoneSaid}`);
@@ -3946,7 +3955,7 @@ export const MapStage = ({
               // the screen's edges and the sides of what is docked already
               // — each doing what a drop there does (specs/PURPOSE_PLAN.md,
               // step 5; ACCESSIBILITY.md, "Docking").
-              const choices = dockChoices(map, selectedActor.id);
+              const choices = dockChoices(map, selectedActor.id, dockName);
               if (choices.length === 0) {
                 return null;
               }
@@ -3954,7 +3963,7 @@ export const MapStage = ({
               let group = '';
               for (const choice of choices) {
                 const heading = choice.target
-                  ? `Beside ${choice.target}`
+                  ? `Beside ${dockName(choice.target)}`
                   : 'The screen';
                 if (heading !== group) {
                   group = heading;
