@@ -4,15 +4,17 @@ Shared ESLint, TypeScript, Prettier, Stylelint, and lint-staged configs for all 
 
 ## ESLint
 
-Three flat-config presets are available:
+Five flat-config presets are available:
 
-| Preset              | Use for                                              |
-| ------------------- | ---------------------------------------------------- |
-| `eslint/node.mjs`   | Node.js tools, config files                          |
-| `eslint/react.mjs`  | React apps and component libraries                   |
-| `eslint/vitest.mjs` | Vitest test files (overlay on top of another preset) |
+| Preset              | Use for                                                    |
+| ------------------- | ---------------------------------------------------------- |
+| `eslint/base.mjs`   | Shared rules under `node` and `react`; not used directly   |
+| `eslint/node.mjs`   | Node.js tools, config files                                |
+| `eslint/react.mjs`  | React apps and component libraries                         |
+| `eslint/lab.mjs`    | Labs (`packages/labs/*`): `react` plus import restrictions |
+| `eslint/vitest.mjs` | Vitest test files (overlay on top of another preset)       |
 
-All base presets include `eslint:recommended`, `typescript-eslint`, and `eslint-plugin-import-x` (with enforced import ordering). The `react` preset adds `eslint-plugin-jsx-a11y` (strict) and `eslint-plugin-react`. The `vitest` preset applies `@vitest/eslint-plugin`'s recommended rules to `*.test.{ts,tsx}`.
+`base` includes `eslint:recommended`, `typescript-eslint`, and `eslint-plugin-import-x` (with enforced import ordering). The `react` preset adds `eslint-plugin-jsx-a11y` (strict) and `eslint-plugin-react`. The `lab` preset forbids importing `@code-dot-org/lab/host`, which only platform hosts may use. The `vitest` preset applies `@vitest/eslint-plugin`'s recommended rules to `*.test.{ts,tsx}`.
 
 ```js
 // eslint.config.mjs — React app
@@ -101,21 +103,29 @@ Keep these presets general-purpose. Package-specific options (`composite`, `decl
 
 Key overrides from default Prettier: `singleQuote: true`, `bracketSpacing: false`, `arrowParens: 'avoid'`. Also includes `prettier-plugin-packagejson` for sorting `package.json` keys.
 
-Run Prettier separately from ESLint (no ESLint/Prettier plugin):
+Run Prettier separately from ESLint (no ESLint/Prettier plugin), as its own
+scripts; Turborepo's `lint` and `lint:fix` tasks depend on them:
 
 ```json
-"lint": "eslint . && prettier --check .",
-"lint:fix": "eslint --fix . && prettier --write ."
+"lint": "eslint .",
+"lint:fix": "eslint --fix .",
+"prettier": "prettier --check .",
+"prettier:fix": "prettier --write ."
 ```
 
 Configure your editor to auto-format on save — see [Prettier editor integration](https://prettier.io/docs/en/editors).
 
 ## Stylelint
 
-```js
-// stylelint.config.mjs
-import cdoStylelint from '@code-dot-org/lint-config/stylelint/index.mjs';
-export default cdoStylelint;
+Wired through `package.json`, not a config file; see
+[Stylelint config](../../docs/conventions/packages.md#stylelint-config) for the
+scripts.
+
+```json
+// package.json
+{
+  "stylelint": {"extends": "@code-dot-org/lint-config/stylelint/index.mjs"}
+}
 ```
 
 Extends `stylelint-config-standard-scss` with relaxed rules matching the legacy `apps/` style (vendor prefixes allowed, flexible selector patterns, SCSS globals permitted).

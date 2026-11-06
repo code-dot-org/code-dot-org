@@ -150,14 +150,14 @@ When adding a new code.org-specific integration, use this table to decide where 
 | **npm dependency weight**          | Lightweight or external-script-only (e.g. LocalizeJS loads via `<script>`)   | Heavy npm dep that would contaminate core's `package.json` even as an optional peer       |
 | **Bundle isolation**               | Excluded from main bundle via sub-path import discipline                     | Guaranteed by package boundary — bundler never pulls it in unless the package is imported |
 | **Code.org specificity**           | Tightly coupled to `SiteConfig` / `window.__CODE_STUDIO__`                   | Independently useful without core's config                                                |
-| **Number of similar integrations** | ≤ ~3–4 total plugins expected                                                | Many integrations of the same kind (e.g. one per analytics provider)                      |
+| **Number of similar integrations** | About four plugins or fewer expected in total                                | Many integrations of the same kind (e.g. one per analytics provider)                      |
 | **Cross-cutting concern**          | Needs `onCoreReady` lifecycle (e.g. reads `environment` to configure itself) | Has its own lifecycle independent of core boot                                            |
 | **Open-source fork impact**        | Fork omits the sub-path import — code stays in repo but is never bundled     | Fork omits the entire package from `package.json` — code never enters the repo clone      |
 
 **Default rule:** Start as a plugin in core. Graduate to a new package only if the npm dependency weight or architectural independence makes the package boundary genuinely necessary.
 
-Current count: five plugins (localization, observability, consent,
-experiments, with analytics pending). This is the top of the "≤ ~3–4" guidance above;
+Current count: four plugins (localization, observability, consent,
+experiments), with analytics pending. This is the top of the guidance above; the
 extraction trigger for consent specifically is a consumer that wants it
 without the rest of core.
 

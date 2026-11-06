@@ -32,7 +32,7 @@ Before building, decide where the integration belongs. Use a plugin in core when
 
 - The npm dependency is absent or lightweight (loaded externally, or small enough to be an optional peer dep without misleading consumers of core).
 - The integration needs `onCoreReady` — it reads `SiteConfig` fields (environment, brand, dashboardApiUrl) to configure itself at boot.
-- Fewer than ~4 plugins are expected total; bundle discipline (never re-export from `src/index.ts`) is sufficient to keep things tree-shakeable.
+- About four plugins or fewer are expected in total (README has the current count); bundle discipline (never re-export from `src/index.ts`) is sufficient to keep things tree-shakeable.
 
 Create a new `frontend/packages/*` package instead when:
 
