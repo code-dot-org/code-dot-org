@@ -23,6 +23,8 @@ export interface FinishDialogProps {
   /** The project's share link; absent while the project cannot be shared. */
   shareUrl?: string;
   projectType?: ProjectType;
+  /** Saves and opens a remix of the project, as the header's Remix does. */
+  onRemix: () => void;
 }
 
 const FINISH_DIALOGS: Record<
@@ -43,7 +45,8 @@ const FinishDialogHost: React.FunctionComponent<{
   shareUrl: string | null;
   projectType?: ProjectType;
   onClose: () => void;
-}> = ({dialogId, shareUrl, projectType, onClose}) => {
+  onRemix: () => void;
+}> = ({dialogId, shareUrl, projectType, onClose, onRemix}) => {
   const [open, setOpen] = useState(true);
   const shareable = useAppSelector(
     state => !state.lab.shareFailure && !state.lab.isBlockedAbuse
@@ -63,6 +66,7 @@ const FinishDialogHost: React.FunctionComponent<{
         onClose={close}
         shareUrl={shareable && shareUrl ? shareUrl : undefined}
         projectType={projectType}
+        onRemix={onRemix}
       />
     </div>
   );
@@ -79,6 +83,9 @@ export function showFinishDialog(dialogId: FinishDialogId): void {
   }
   const shareUrl = projectManager.getShareUrl();
   const projectType = projectManager.getProjectType();
+  const remix = () => {
+    projectManager.flushSave().then(() => projectManager.redirectToRemix());
+  };
   // The share filter runs on save; wait for its answer so the dialog opens
   // knowing whether the project can be shared.
   projectManager
@@ -99,6 +106,7 @@ export function showFinishDialog(dialogId: FinishDialogId): void {
             shareUrl={shareUrl}
             projectType={projectType}
             onClose={onClose}
+            onRemix={remix}
           />
         </Provider>,
         container

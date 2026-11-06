@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -13,6 +13,7 @@ describe('Hoai2026Congrats', () => {
         onClose={jest.fn()}
         shareUrl="https://studio.code.org/projects/spritelab2/abc"
         projectType="spritelab"
+        onRemix={jest.fn()}
         {...props}
       />
     );
@@ -23,21 +24,38 @@ describe('Hoai2026Congrats', () => {
       screen.getByRole('dialog', {name: 'Congratulations!'})
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('heading', {name: 'Make your own game in Sprite Lab'})
+      screen.getByRole('heading', {
+        name: 'Discover even more blocks in Sprite Lab',
+      })
     ).toBeInTheDocument();
     expect(
       screen.getByRole('heading', {name: 'Bring AI to your classroom'})
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {name: /How AI Makes Decisions/})
-    ).toBeInTheDocument();
+      screen.getByRole('link', {name: /How AI Makes Decisions/})
+    ).toHaveAttribute(
+      'href',
+      'https://studio.code.org/courses/k5-ai-data-2024/units/1/reset'
+    );
+    expect(screen.getByRole('link', {name: /AI Discoveries/})).toHaveAttribute(
+      'href',
+      'https://code.org/en-US/curriculum/artificial-intelligence-discoveries'
+    );
     expect(screen.getByRole('button', {name: 'Copy link'})).toBeInTheDocument();
     expect(
       screen.getByRole('button', {name: 'Certificate'})
     ).toBeInTheDocument();
-    expect(
-      screen.getByRole('button', {name: 'Start AI 101'})
-    ).toBeInTheDocument();
+    expect(screen.getByRole('link', {name: 'Learn more'})).toHaveAttribute(
+      'href',
+      'https://code.org/en-US/professional-learning'
+    );
+  });
+
+  it('opens a remix of the game from the student card', () => {
+    const onRemix = jest.fn();
+    renderDialog({onRemix});
+    fireEvent.click(screen.getByRole('button', {name: 'Open Sprite Lab'}));
+    expect(onRemix).toHaveBeenCalledTimes(1);
   });
 
   it('says so instead of offering a link when the game cannot be shared', () => {

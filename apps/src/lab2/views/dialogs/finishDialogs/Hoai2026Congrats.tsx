@@ -16,17 +16,17 @@ import {FinishDialogProps} from './showFinishDialog';
 
 import styles from './hoai2026-congrats.module.scss';
 
-// Where each offer leads. None is decided yet; an undefined one renders as
-// a button that goes nowhere.
+// Where each offer leads. The certificate's is not decided yet; an
+// undefined one renders as a button that goes nowhere.
 const DESTINATIONS: Record<
-  'spriteLab' | 'elementary' | 'middleSchool' | 'certificate' | 'ai101',
+  'elementary' | 'middleSchool' | 'certificate' | 'professionalLearning',
   string | undefined
 > = {
-  spriteLab: undefined,
-  elementary: undefined,
-  middleSchool: undefined,
+  elementary: 'https://studio.code.org/courses/k5-ai-data-2024/units/1/reset',
+  middleSchool:
+    'https://code.org/en-US/curriculum/artificial-intelligence-discoveries',
   certificate: undefined,
-  ai101: undefined,
+  professionalLearning: 'https://code.org/en-US/professional-learning',
 };
 
 const TITLE_ID = 'hoai2026-congrats-title';
@@ -88,6 +88,7 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
   onClose,
   shareUrl,
   projectType,
+  onRemix,
 }) => (
   <MuiCustomDialog
     className={styles.dialog}
@@ -126,9 +127,10 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
             variant="h3"
             className={styles.cardTitle}
           >
-            Make your own game in Sprite Lab
+            Discover even more blocks in Sprite Lab
           </Typography>
           <div>
+            {/* A remix of this game, as the header's Remix button makes. */}
             <MuiButton
               variant="contained"
               color="white"
@@ -137,7 +139,7 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
               endIcon={
                 <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
               }
-              {...linkProps(DESTINATIONS.spriteLab)}
+              onClick={onRemix}
             >
               Open Sprite Lab
             </MuiButton>
@@ -208,16 +210,16 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
         </Offer>
         <Offer
           icon="lightbulb"
-          title="AI 101 for teachers"
-          text="Learn to teach with AI."
+          title="Professional learning"
+          text="Learn to teach computer science and AI."
         >
           <MuiButton
             variant="outlined"
             color="secondary"
             endIcon={<ExternalIcon />}
-            {...linkProps(DESTINATIONS.ai101)}
+            {...linkProps(DESTINATIONS.professionalLearning)}
           >
-            Start AI 101
+            Learn more
           </MuiButton>
         </Offer>
       </div>
