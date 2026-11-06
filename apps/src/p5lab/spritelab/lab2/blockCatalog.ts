@@ -43,10 +43,7 @@ export function blockTypesIn(node: unknown, shadow = false): string[] {
 
 const unique = (types: string[]) => [...new Set(types)];
 
-export const GRAVITY_BLOCK_TYPES = [
-  'spritelab2_setPlatformGravity',
-  'spritelab2_setPlatformGravityDirection',
-];
+export const GRAVITY_BLOCK_TYPES = ['spritelab2_setPlatformGravity'];
 
 /** Gravity amount and direction are one student-facing feature. */
 export function gravityBlockTypesTogether(type: string): string[] {
@@ -89,10 +86,6 @@ export function newBlockTypes(
 ): string[] {
   const required = new Set(earlier.flatMap(requiredBlockTypes));
   const offered = offeredBlockTypes(level);
-  const gravityIndex = offered.indexOf(GRAVITY_BLOCK_TYPES[0]);
-  if (gravityIndex >= 0 && !offered.includes(GRAVITY_BLOCK_TYPES[1])) {
-    offered.splice(gravityIndex + 1, 0, GRAVITY_BLOCK_TYPES[1]);
-  }
   return unique(offered).filter(type => !required.has(type));
 }
 

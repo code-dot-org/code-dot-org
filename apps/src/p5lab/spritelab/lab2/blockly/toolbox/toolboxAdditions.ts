@@ -95,7 +95,6 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     name: 'Platform',
     types: [
       'spritelab2_setPlatformGravity',
-      'spritelab2_setPlatformGravityDirection',
       'spritelab2_setCameraZoom',
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
@@ -164,21 +163,6 @@ function ensureInjectedCategories(def: ToolboxInfo): void {
   const contents = def.contents;
   const categories = contents.filter(isStaticCategoryInfo);
   const sprites = findCategory(contents, 'Sprites');
-  const gravity = contents.findIndex(
-    entry =>
-      isBlockInfo(entry) && entry.type === 'spritelab2_setPlatformGravity'
-  );
-  const directionPresent = contents.some(
-    entry =>
-      isBlockInfo(entry) &&
-      entry.type === 'spritelab2_setPlatformGravityDirection'
-  );
-  if (gravity >= 0 && !directionPresent) {
-    contents.splice(gravity + 1, 0, {
-      kind: 'block',
-      type: 'spritelab2_setPlatformGravityDirection',
-    });
-  }
   if (!sprites) {
     return;
   }
@@ -217,23 +201,6 @@ function ensureInjectedCategories(def: ToolboxInfo): void {
   INJECTED_CATEGORIES.forEach(({name, types}) => {
     const authored = findCategory(contents, name);
     if (authored) {
-      if (name === 'Platform') {
-        const gravity = authored.contents.findIndex(
-          entry =>
-            isBlockInfo(entry) && entry.type === 'spritelab2_setPlatformGravity'
-        );
-        const directionPresent = authored.contents.some(
-          entry =>
-            isBlockInfo(entry) &&
-            entry.type === 'spritelab2_setPlatformGravityDirection'
-        );
-        if (gravity >= 0 && !directionPresent) {
-          authored.contents.splice(gravity + 1, 0, {
-            kind: 'block',
-            type: 'spritelab2_setPlatformGravityDirection',
-          });
-        }
-      }
       if (presentIn(authored).size === 0) {
         contents.splice(contents.indexOf(authored), 1);
       }

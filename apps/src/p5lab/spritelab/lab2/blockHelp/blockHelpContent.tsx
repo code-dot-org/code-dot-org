@@ -33,13 +33,10 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   spritelab2_setPlatformGravity: {
     title: 'Set gravity',
     animation: {src: animSetGravity, alt: 'The set gravity block in action.'},
-    summary: 'Changes how hard everything falls.',
-    body: `**${DEFAULT_GRAVITY_STRENGTH}** is the default gravity; **0** is weightless.`,
-  },
-  spritelab2_setPlatformGravityDirection: {
-    title: 'Set gravity direction',
-    summary: 'Changes which way everything falls.',
-    body: 'Choose **↑** to fall toward the top, **↓** to fall toward the bottom, or **none** to move freely.',
+    summary: 'Changes how hard and which way everything falls.',
+    body:
+      `**${DEFAULT_GRAVITY_STRENGTH}** is the default strength. Choose **↑** ` +
+      `to fall toward the top, **↓** toward the bottom, or **none** for no force.`,
   },
   spritelab2_setCameraZoom: {
     title: 'Set zoom',

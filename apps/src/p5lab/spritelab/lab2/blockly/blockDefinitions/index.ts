@@ -24,7 +24,7 @@ import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
-import setPlatformGravityDirection from './setPlatformGravityDirection';
+import setSystemPrompt from './setSystemPrompt';
 import setWeather from './setWeather';
 import showTitle from './showTitle';
 import thePlayer from './thePlayer';
@@ -55,7 +55,6 @@ const labBlockDefinitions: {
   makeSpriteAtPosition,
   makePlatformBlocks,
   setPlatformGravity,
-  setPlatformGravityDirection,
   setAsPlatformPlayer,
   setCameraZoom,
   setWeather,
