@@ -3,7 +3,7 @@ import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 const MIN_JUMP_HEIGHT = 0;
 const MAX_JUMP_HEIGHT = 10;
-const DEFAULT_JUMP_HEIGHT = 2;
+const DEFAULT_JUMP_HEIGHT = 3;
 
 /**
  * Set the platform player's jump height in playfield squares.

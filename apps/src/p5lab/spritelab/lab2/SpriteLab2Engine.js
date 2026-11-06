@@ -482,7 +482,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
     this.platformGravityMagnitude_ = PLATFORM_GRAVITY;
-    this.platformJumpHeight_ = 2;
+    this.platformJumpHeight_ = 3;
     this.notifyControlsChange_();
     this.particles_.reset();
     this.jumpStarts_ = null;
