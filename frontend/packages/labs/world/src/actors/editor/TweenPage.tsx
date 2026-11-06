@@ -15,6 +15,7 @@ import {
 import TextField from '@code-dot-org/component-library/textField';
 
 import {BlocklyFileEditor} from '../../blockly/BlocklyFileEditor';
+import {TrailActions} from '../../layout/TrailContext';
 import stepStyles from '../../rules/editor/ruleEditor.module.css';
 import type {ActorData, ActorTween} from '../actorData';
 import {
@@ -24,6 +25,8 @@ import {
   withActorTweenDocument,
 } from '../actorTweens';
 
+import {PageDelete} from './PageDelete';
+
 export interface TweenPageProps {
   data: ActorData;
   tween: ActorTween;
@@ -31,6 +34,8 @@ export interface TweenPageProps {
   isReadOnly: boolean;
   /** Change the actor's data as the file now holds it. */
   onUpdate: (change: (data: ActorData) => ActorData) => void;
+  /** Delete it, asked and done by the page's owner; absent, no Delete. */
+  onDelete?: () => void;
 }
 
 export const TweenPage = ({
@@ -39,6 +44,7 @@ export const TweenPage = ({
   fileId,
   isReadOnly,
   onUpdate,
+  onDelete,
 }: TweenPageProps) => {
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => heading.current?.focus(), []);
@@ -98,6 +104,11 @@ export const TweenPage = ({
           Each set below the head is where that property ends up, from wherever
           it is when the tween is played.
         </Typography>
+        {onDelete && !isReadOnly && (
+          <TrailActions fallback={button => button}>
+            <PageDelete what="tween" onDelete={onDelete} />
+          </TrailActions>
+        )}
       </div>
       <div className={stepStyles.codeBlocks}>
         <BlocklyFileEditor

@@ -288,6 +288,10 @@ below, and are listed last.
   Ground"); the rename is a labelled field in place, Enter saving and
   Escape not, and the trait stays open under its new name. A delete asks
   first, names what uses it, and puts focus on the rule's name.
+- **What it is for is drawn**, in a group named by its label, with
+  "Edit what it is for" after it. Edit puts focus in the text, described
+  by a line naming the markdown it takes; Done or Escape puts focus back
+  on Edit.
 - **Untested**: no screen reader; the keys only by tests and a headless
   browser.
 
@@ -342,6 +346,10 @@ below, and are listed last.
   named by its heading, before the workspace in the tab order. The
   workspace keeps a heading for a screen reader ("Block: heal by"),
   hidden from sight.
+- **Delete is on each page** (November 2026), in the breadcrumb bar:
+  "Delete block", "Delete event", "Delete step", "Delete tween". It asks
+  first; a yes goes back to the Blocks tab with focus on the Edit that
+  took its row, or on New; a no leaves focus where it was.
 - **What it does is Blockly**, under a head that is the block itself. A
   value's getter is dragged out of the head's socket with a pointer; from
   the keyboard it is the Variables drawer's, as any local's is.

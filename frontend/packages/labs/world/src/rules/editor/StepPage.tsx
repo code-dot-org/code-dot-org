@@ -19,8 +19,10 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import TextField from '@code-dot-org/component-library/textField';
 
 import {without} from '../../actors/editor/memberEdits';
+import {PageDelete} from '../../actors/editor/PageDelete';
 import {BlocklyFileEditor} from '../../blockly/BlocklyFileEditor';
 import type {PhaseDef} from '../../engine/core/phases';
+import {TrailActions} from '../../layout/TrailContext';
 import type {RuleData} from '../ruleData';
 import {
   phasesOf,
@@ -56,6 +58,8 @@ export interface StepPageViewProps {
   onRename: (name: string) => void;
   onPhase: (phase: string | undefined) => void;
   onDocument: (saved: string) => void;
+  /** Delete it, asked and done by the page's owner; absent, no Delete. */
+  onDelete?: () => void;
 }
 
 export const StepPageView = ({
@@ -72,6 +76,7 @@ export const StepPageView = ({
   onRename,
   onPhase,
   onDocument,
+  onDelete,
 }: StepPageViewProps) => {
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => heading.current?.focus(), []);
@@ -146,6 +151,11 @@ export const StepPageView = ({
           {phases.find(one => one.id === phase)?.summary ??
             'Runs once a frame, before or after the other steps.'}
         </Typography>
+        {onDelete && !isReadOnly && (
+          <TrailActions fallback={button => button}>
+            <PageDelete what="step" onDelete={onDelete} />
+          </TrailActions>
+        )}
       </div>
       <div className={styles.codeBlocks}>
         <BlocklyFileEditor

@@ -18,6 +18,7 @@ import {
   type KeyboardEvent,
 } from 'react';
 
+import {BlocklyMarkdown} from '@code-dot-org/blockly';
 import {usePrompts, type CustomEditorProps} from '@code-dot-org/codebridge';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -378,7 +379,10 @@ const Uses = ({
   );
 };
 
-/** A labelled box for prose: what a rule or a trait is for. */
+/**
+ * What a rule is for: markdown, drawn, and edited as plain text on Edit.
+ * Done, or Escape, draws it again and puts focus back on Edit.
+ */
 const Prose = ({
   id,
   label,
@@ -391,22 +395,89 @@ const Prose = ({
   value: string;
   isReadOnly: boolean;
   onValue: (text: string) => void;
-}) => (
-  <div className={styles.field}>
-    <label htmlFor={id}>
-      <Typography variant="body4" component="span">
+}) => {
+  const [editing, setEditing] = useState(false);
+  const editRef = useRef<HTMLButtonElement>(null);
+  const boxRef = useRef<HTMLTextAreaElement>(null);
+  const backToEdit = useRef(false);
+  useEffect(() => {
+    if (editing) {
+      boxRef.current?.focus();
+    } else if (backToEdit.current) {
+      backToEdit.current = false;
+      editRef.current?.focus();
+    }
+  }, [editing]);
+  const done = () => {
+    backToEdit.current = true;
+    setEditing(false);
+  };
+  if (editing && !isReadOnly) {
+    return (
+      <div className={styles.field}>
+        <label htmlFor={id}>
+          <Typography variant="body4" component="span">
+            {label}
+          </Typography>
+        </label>
+        <textarea
+          id={id}
+          className={styles.prose}
+          ref={boxRef}
+          value={value}
+          aria-describedby={`${id}-hint`}
+          onChange={event => onValue(event.target.value)}
+          onKeyDown={event => {
+            if (event.key === 'Escape') {
+              event.preventDefault();
+              event.stopPropagation();
+              done();
+            }
+          }}
+        />
+        <Typography variant="body4" id={`${id}-hint`}>
+          Markdown: **bold**, *italic*, `code`, a blank line between paragraphs.
+        </Typography>
+        <Button
+          variant="text"
+          size="extraSmall"
+          className={styles.proseToggle}
+          onClick={done}
+        >
+          Done
+        </Button>
+      </div>
+    );
+  }
+  return (
+    <div className={styles.field} role="group" aria-labelledby={`${id}-label`}>
+      <Typography variant="body4" component="span" id={`${id}-label`}>
         {label}
       </Typography>
-    </label>
-    <textarea
-      id={id}
-      className={styles.prose}
-      value={value}
-      readOnly={isReadOnly}
-      onChange={event => onValue(event.target.value)}
-    />
-  </div>
-);
+      {value.trim() ? (
+        <div className={styles.proseDrawn}>
+          <BlocklyMarkdown content={value} />
+        </div>
+      ) : (
+        <Typography variant="body3" className={styles.proseEmpty}>
+          Nothing written yet.
+        </Typography>
+      )}
+      {!isReadOnly && (
+        <Button
+          ref={editRef}
+          variant="text"
+          size="extraSmall"
+          className={styles.proseToggle}
+          aria-label={`Edit ${label.toLowerCase()}`}
+          onClick={() => setEditing(true)}
+        >
+          Edit
+        </Button>
+      )}
+    </div>
+  );
+};
 
 /** A trait's rename, said in place, and its delete. */
 const TraitActions = ({

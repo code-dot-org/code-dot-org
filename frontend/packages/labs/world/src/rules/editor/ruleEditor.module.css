@@ -127,6 +127,28 @@
   resize: vertical;
 }
 
+.proseDrawn {
+  color: var(--text-neutral-primary);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.proseDrawn p {
+  margin: 0 0 0.5rem;
+}
+
+.proseDrawn :last-child {
+  margin-bottom: 0;
+}
+
+.proseEmpty {
+  color: var(--text-neutral-secondary);
+}
+
+.proseToggle {
+  align-self: flex-start;
+}
+
 .prose:focus-visible {
   outline: 2px solid var(--borders-brand-teal-primary);
   outline-offset: 1px;

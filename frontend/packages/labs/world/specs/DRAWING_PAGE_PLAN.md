@@ -115,4 +115,8 @@ its handlers and nothing else.
 
 - Whether a game actor may have both a picture and a drawing. The engine
   draws the drawing; Looks like makes it one or the other.
-- A step's page gives no way to delete it; the Blocks tab does.
+- A step's page gives no way to delete it; the Blocks tab does. FIXED,
+  November 2026: a step's, a block's, an event's and a tween's page each
+  has Delete in the breadcrumb bar ("Delete step"). It asks as the Blocks
+  tab does, and on yes goes back to that tab with focus on the Edit that
+  took its row, or on New. A rule's step page has none yet.

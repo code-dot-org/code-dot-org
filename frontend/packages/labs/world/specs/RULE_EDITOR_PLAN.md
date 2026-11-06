@@ -328,4 +328,7 @@ a trait moves focus to its view's heading, and back puts it on the trait.
 - **Read-only** reads "Only this rule sets ⟨name⟩", which says what it
   means; whether a learner reads it so is for a lesson to find.
 - **Description markdown.** A rule's description is markdown, edited as
-  plain text; nothing on the view draws it yet.
+  plain text; nothing on the view draws it yet. FIXED, November 2026:
+  "What it is for" is drawn (`BlocklyMarkdown`), and Edit turns it into
+  the plain text, with a line saying the markdown it takes; Done or
+  Escape draws it again, focus back on Edit. Read-only, it is only drawn.

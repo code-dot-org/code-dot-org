@@ -750,6 +750,37 @@ describe('an event or block of its own (specs/ACTOR_BLOCKS_PLAN.md, step 3)', ()
     );
   });
 
+  it('is deleted from its own page, back on the Blocks tab', async () => {
+    open();
+    blocks();
+    fireEvent.click(screen.getByRole('button', {name: 'New event'}));
+    showDialog.mockClear();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Delete event'}));
+
+    await waitFor(() => expect(written().members).toBeUndefined());
+    expect(showDialog.mock.calls[0][0]).toMatchObject({title: 'Delete event'});
+    await waitFor(() =>
+      expect(document.activeElement).toBe(
+        screen.getByRole('button', {name: 'New event'}),
+      ),
+    );
+  });
+
+  it('stays on its page when the delete is cancelled', async () => {
+    open();
+    blocks();
+    fireEvent.click(screen.getByRole('button', {name: 'New event'}));
+    showDialog.mockResolvedValueOnce({type: 'cancel', args: ''});
+
+    fireEvent.click(screen.getByRole('button', {name: 'Delete event'}));
+
+    await waitFor(() => expect(showDialog).toHaveBeenCalled());
+    expect(
+      screen.getByRole('button', {name: 'Delete event'}),
+    ).toBeInTheDocument();
+  });
+
   it('takes its uses to its new words when its page is left', () => {
     open();
     blocks();

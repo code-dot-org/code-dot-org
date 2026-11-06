@@ -99,6 +99,27 @@ describe('the Rule Editor', () => {
     ).toBe('12');
   });
 
+  it('draws what it is for, and edits it as markdown on Edit', () => {
+    open();
+    const what = screen.getByRole('group', {name: 'What it is for'});
+    expect(what.querySelector('strong')).not.toBeNull();
+    fireEvent.click(
+      within(what).getByRole('button', {name: 'Edit what it is for'}),
+    );
+    const box = screen.getByRole('textbox', {name: 'What it is for'});
+    expect(box).toHaveFocus();
+    expect((box as HTMLTextAreaElement).value).toMatch(/\*\*/);
+    fireEvent.change(box, {target: {value: 'Pulls *down*.'}});
+    expect(written().description).toBe('Pulls *down*.');
+    fireEvent.keyDown(box, {key: 'Escape'});
+    expect(
+      screen.getByRole('button', {name: 'Edit what it is for'}),
+    ).toHaveFocus();
+    expect(
+      screen.getByRole('group', {name: 'What it is for'}).querySelector('em'),
+    ).not.toBeNull();
+  });
+
   it('says a property is the rule’s alone to set', () => {
     open();
     fireEvent.click(

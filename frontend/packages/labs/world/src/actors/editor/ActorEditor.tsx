@@ -547,9 +547,9 @@ export const ActorEditor = (props: CustomEditorProps) => {
     }
   };
   /** A member gone, once its uses are said; focus to whatever took its row. */
-  const deleteOne = async (member: ActorMember) => {
+  const deleteOne = async (member: ActorMember): Promise<boolean> => {
     if (!data) {
-      return;
+      return false;
     }
     const reading = memberReading(member, data.name);
     const uses = memberUses(
@@ -566,16 +566,17 @@ export const ActorEditor = (props: CustomEditorProps) => {
           : `Delete “${reading}”? No code uses it.`,
       }))
     ) {
-      return;
+      return false;
     }
     const mine = (data.members ?? []).filter(one => one.kind === member.kind);
     const at = mine.findIndex(one => one.id === member.id);
     const next = mine[at + 1] ?? mine[at - 1];
     edit(removeMember(data, member.id));
     setReturnTo(next?.id ?? `new-${member.kind}`);
+    return true;
   };
 
-  const deleteStep = async (at: number) => {
+  const deleteStep = async (at: number): Promise<boolean> => {
     const step = data?.steps?.[at];
     if (
       !data ||
@@ -585,17 +586,18 @@ export const ActorEditor = (props: CustomEditorProps) => {
         message: `Delete “${step.name}”? ${data.name} stops doing it every frame.`,
       }))
     ) {
-      return;
+      return false;
     }
     const left = (data.steps ?? []).length - 1;
     edit(removeActorStep(data, at));
     setReturnTo(left ? `step-${Math.min(at, left - 1)}` : 'new-step');
+    return true;
   };
 
-  const deleteTween = async (id: string) => {
+  const deleteTween = async (id: string): Promise<boolean> => {
     const found = data && actorTweenAt(data, id);
     if (!data || !found) {
-      return;
+      return false;
     }
     const uses = tweenUses(currentSources.source, modulePath, id).map(one =>
       fileLabel(currentSources.source.files[one]),
@@ -609,12 +611,20 @@ export const ActorEditor = (props: CustomEditorProps) => {
           : `Delete “${found.tween.name}”? No code plays it.`,
       }))
     ) {
-      return;
+      return false;
     }
     const left = (data.tweens ?? []).filter(one => one.id !== id);
     edit(removeActorTween(data, id));
     const next = left[Math.min(found.at, left.length - 1)];
     setReturnTo(next ? `tween-${next.id}` : 'new-tween');
+    return true;
+  };
+  /** Deleted from its own page: back to the Blocks tab, on what took its row. */
+  const deleteFromPage = async (deleted: Promise<boolean>) => {
+    if (await deleted) {
+      setSection('blocks');
+      setScript(null);
+    }
   };
 
   /** Its own drawing, opened: a copy of the one it inherits, or a blank one. */
@@ -789,6 +799,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
           isNew={opened.id === fresh}
           isReadOnly={isReadOnly}
           onUpdate={update}
+          onDelete={() => void deleteFromPage(deleteOne(opened))}
           onLeave={(before, after) => {
             const now = sources.current;
             const source = renameMember(
@@ -849,6 +860,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
           fileId={fileId}
           isReadOnly={isReadOnly}
           onUpdate={update}
+          onDelete={() => void deleteFromPage(deleteTween(tweenOpen.tween.id))}
         />
       </div>
     );
@@ -885,6 +897,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
           onDocument={saved =>
             update(now => withActorStepDocument(now, stepAt, saved))
           }
+          onDelete={() => void deleteFromPage(deleteStep(stepAt))}
         />
       </div>
     );

@@ -49,6 +49,7 @@ import {
   type Arranged,
 } from './MemberParts';
 import {MemberPicture} from './MemberPicture';
+import {PageDelete} from './PageDelete';
 
 export interface MemberPageProps {
   data: ActorData;
@@ -69,6 +70,8 @@ export interface MemberPageProps {
    * loaded again under the learner on every keystroke.
    */
   onLeave: (before: ActorMember, after: ActorMember) => void;
+  /** Delete it, asked and done by the page's owner; absent, no Delete. */
+  onDelete?: () => void;
   /**
    * The blocks the member's picture is drawn from; an actor's own by
    * default. A rule's page hands its own (`rules/ruleMembers`).
@@ -121,6 +124,7 @@ export const MemberPage = ({
   isReadOnly,
   onUpdate,
   onLeave,
+  onDelete,
   palette: given,
   language = 'actor',
   reports,
@@ -249,6 +253,11 @@ export const MemberPage = ({
   if (!isBlock) {
     return (
       <div className={styles.memberPage}>
+        {onDelete && !isReadOnly && (
+          <TrailActions fallback={button => button}>
+            <PageDelete what="event" onDelete={onDelete} />
+          </TrailActions>
+        )}
         <Typography
           ref={heading}
           tabIndex={-1}
@@ -287,6 +296,12 @@ export const MemberPage = ({
         >
           Edit design
         </Button>
+        {onDelete && !isReadOnly && (
+          <PageDelete
+            what={member.kind === 'event' ? 'event' : 'block'}
+            onDelete={onDelete}
+          />
+        )}
       </TrailActions>
       {/* Above what it does, and before it in the tab order: the head the
           chips arrange is just below them. */}
