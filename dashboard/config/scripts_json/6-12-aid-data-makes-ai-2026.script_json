@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-05 02:53:20 UTC",
+    "serialized_at": "2026-11-05 21:53:44 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2276,7 +2276,7 @@
       "key": "c5ac2902-3362-430e-bb63-e9353b48decf",
       "position": 3,
       "properties": {
-        "progression_name": "Explore the Model"
+        "progression_name": "Investigate the Model"
       },
       "seeding_key": {
         "activity_section.key": "c5ac2902-3362-430e-bb63-e9353b48decf",
@@ -2298,6 +2298,7 @@
       "key": "b8c30dd0-be20-4f79-ad6c-c05cc85a5159",
       "position": 1,
       "properties": {
+        "progression_name": "Vocabulary Flashcards"
       },
       "seeding_key": {
         "activity_section.key": "b8c30dd0-be20-4f79-ad6c-c05cc85a5159",
@@ -3280,7 +3281,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore the Model"
+        "progression": "Investigate the Model"
       },
       "bonus": false,
       "seeding_key": {
@@ -3316,6 +3317,28 @@
       },
       "level_keys": [
         "data-makes-ai-lesson10-frq"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocabulary Flashcards"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "b8c30dd0-be20-4f79-ad6c-c05cc85a5159"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson10-vocab-flashcards"
       ]
     }
   ],
@@ -3870,6 +3893,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "62c0ea3b-c7b2-46cc-8b53-ee3891e51997"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson10-vocab-flashcards",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "b8c30dd0-be20-4f79-ad6c-c05cc85a5159"
       }
     }
   ],
