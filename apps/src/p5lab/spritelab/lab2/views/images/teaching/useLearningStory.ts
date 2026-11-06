@@ -45,8 +45,7 @@ export interface LearningStoryTools {
   /** The rating's reasons dialog opened or closed; the story waits while
       it is open. */
   handleAsking: (open: boolean) => void;
-  /** The student asked for the story of a picture: it opens at once, and
-      counts as the visit's telling. */
+  /** The student asked for the story of a picture; it opens at once. */
   tellStory: (story: LearningStory) => void;
   endStory: () => void;
 }
@@ -118,12 +117,7 @@ export default function useLearningStory({
     },
     [learning, tellHeldStory]
   );
-  const tellStory = useCallback((asked: LearningStory) => {
-    window.clearTimeout(timerRef.current);
-    heldStoryRef.current = null;
-    toldRef.current = true;
-    setStory(asked);
-  }, []);
+  const tellStory = useCallback((asked: LearningStory) => setStory(asked), []);
   const endStory = useCallback(() => setStory(null), []);
   return {story, offerStory, handleAsking, tellStory, endStory};
 }

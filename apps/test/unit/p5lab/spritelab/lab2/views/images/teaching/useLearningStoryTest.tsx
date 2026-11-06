@@ -116,9 +116,8 @@ describe('useLearningStory', () => {
     expect(tools().story).toMatchObject({prompt: 'A cat'});
   });
 
-  it("tells a story the student asks for at once, and that is the visit's telling", () => {
-    const {tools} = setup({learning: true});
-    act(() => tools().offerStory(picture({subject: 'character'})));
+  it('tells a story the student asks for at once, on any level', () => {
+    const {tools} = setup({levelId: 3});
     const asked = {
       picture: {src: 'data:image/png;base64,AA=='},
       prompt: 'A dog',
@@ -127,13 +126,6 @@ describe('useLearningStory', () => {
     act(() => tools().tellStory(asked));
     expect(tools().story).toEqual(asked);
     act(() => tools().endStory());
-    // The telling that was pending is dropped, and the next picture passes
-    // quietly.
-    act(() => {
-      jest.advanceTimersByTime(2000);
-    });
-    expect(tools().story).toBeNull();
-    offer(tools);
     expect(tools().story).toBeNull();
   });
 
