@@ -12,6 +12,7 @@ import {
 } from './oceans/constants';
 import {initAll, stopUIRerender} from './oceans/init';
 import Sounds from './oceans/Sounds';
+import {stopTextToSpeech} from './utils/TextToSpeech';
 
 /** Props for the OceansLab React component. */
 export interface OceansLabProps {
@@ -72,6 +73,11 @@ export default function OceansLab({
 
     return () => {
       sounds.stopAllAudio();
+      // Guide speech is browser-owned, so it outlives this instance unless
+      // cancelled here.
+      if (textToSpeechLocale) {
+        stopTextToSpeech();
+      }
       stopUIRerender();
     };
   }, [appMode, guides, textToSpeechLocale, stableOnContinue]);
