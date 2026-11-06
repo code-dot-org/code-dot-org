@@ -51,13 +51,29 @@ const KIND_ITEMS = [
   })),
 ];
 
-const IMAGE_TYPE_ITEMS = [
-  {value: NO_IMAGE_TYPE, text: 'None (no filter)'},
-  ...IMAGE_TYPES.map(imageType => ({
-    value: imageType,
-    text: IMAGE_TYPE_LABELS[imageType],
-  })),
-];
+const IMAGE_TYPES_ITEMS = IMAGE_TYPES.map(imageType => ({
+  value: imageType,
+  text: IMAGE_TYPE_LABELS[imageType],
+}));
+
+// Only a world level can leave the type unset, where it means the palette
+// goes by role instead. On a kind that makes an image, no type means no plus
+// button, so the placeholder is there to be replaced, not chosen.
+function imageTypeItems(kind: LevelModeKind | undefined, chosen: unknown) {
+  if (kind === 'world') {
+    return [
+      {value: NO_IMAGE_TYPE, text: 'None: use palette role'},
+      ...IMAGE_TYPES_ITEMS,
+    ];
+  }
+  if (chosen === undefined) {
+    return [
+      {value: NO_IMAGE_TYPE, text: 'Choose a type', disabled: true},
+      ...IMAGE_TYPES_ITEMS,
+    ];
+  }
+  return IMAGE_TYPES_ITEMS;
+}
 
 const IMAGE_SUBJECT_ITEMS = IMAGE_SUBJECTS.map(subject => ({
   value: subject,
@@ -102,12 +118,28 @@ const SpritelabModeFields: React.FunctionComponent<
     mode.imageType !== 'background' &&
     !getPaletteRoles(mode).includes(mode.imageRole as string);
 
-  const imageTypeHelper =
-    kind === 'world' && mode.imageType === 'background'
-      ? 'A world cell holds a sprite or a block, so a background preselects nothing.'
-      : kind === 'world'
-      ? 'The World palette offers only this level’s image of this kind.'
-      : 'The Images tab offers only this type, and the user can only make one image.';
+  // A world level is the one kind that can leave the type unset, and only
+  // while it has no Images tab of its own to fill.
+  const typeMissing =
+    showImageType &&
+    mode.imageType === undefined &&
+    (kind !== 'world' || mode.imageFirst === true);
+
+  const imageTypeHelper = useMemo(() => {
+    if (kind !== 'world') {
+      return 'The Images tab offers only this type, and the user can only make one image.';
+    }
+    if (mode.imageType === undefined) {
+      return getPaletteRoles(mode).length > 0
+        ? 'With no type the palette includes the palette roles below, and students start on the first image of the first role.'
+        : 'With no type and no palette roles the palette offers every image in the project, with none selected to start.';
+    }
+    // A world cell holds a sprite or a block, so nothing matches a background.
+    if (mode.imageType === 'background') {
+      return 'A background neither narrows the palette nor selects anything to start, but does filter the Images tab if image-first is on.';
+    }
+    return 'The World palette offers only this level’s image of this type.';
+  }, [kind, mode]);
 
   return (
     <div>
@@ -150,7 +182,7 @@ const SpritelabModeFields: React.FunctionComponent<
           <SimpleDropdown
             labelText="Image type"
             name="spritelab_mode_image_type"
-            items={IMAGE_TYPE_ITEMS}
+            items={imageTypeItems(kind, mode.imageType)}
             selectedValue={(mode.imageType as string) ?? NO_IMAGE_TYPE}
             onChange={event =>
               onChange(
@@ -166,6 +198,8 @@ const SpritelabModeFields: React.FunctionComponent<
             errorMessage={
               paletteConflict
                 ? 'Image role must be one of the palette roles, or the palette preselects an image it does not offer.'
+                : typeMissing
+                ? 'Pick a type. Without one there is no image to make.'
                 : undefined
             }
             size="s"
@@ -220,7 +254,7 @@ const SpritelabModeFields: React.FunctionComponent<
         <div className={moduleStyles.booleanField}>
           <Checkbox
             name="spritelab_mode_image_first"
-            label="Open on the Images tab to make this level's image first"
+            label="Enable the Images tab and start on it."
             checked={mode.imageFirst === true}
             onChange={event =>
               onChange(setImageFirst(mode, event.target.checked))
