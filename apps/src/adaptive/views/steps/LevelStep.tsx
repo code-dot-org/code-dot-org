@@ -33,7 +33,7 @@ import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {isAdaptiveAiEnabled} from '../../ai/generate';
 import {buildTutorContext} from '../../ai/tutorContext';
 import {workAdapterFor} from '../../ai/validation/adapters';
-import {latestValidation} from '../../progress/model';
+import {latestValidation, validationAllowsContinue} from '../../progress/model';
 import {projectInfoFromChannel} from '../../project/projectInfo';
 import {LevelStep as LevelStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
@@ -268,13 +268,14 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   ]);
 
   // The lab's own Continue button advances the step. A step whose work is
-  // checked waits for work that passes, unless no judge can run: adaptive AI
-  // is off, or the lab takes no part in checking.
+  // checked waits for work that passes, or for enough failed checks that the
+  // judge may be at fault, unless no judge can run: adaptive AI is off, or
+  // the lab takes no part in checking.
   const checked =
     !step.validation ||
     !isAdaptiveAiEnabled() ||
     !workAdapterFor(levelProperties.appName) ||
-    !!latestValidationAttempt?.pass;
+    validationAllowsContinue(progress.steps[step.id]);
   const navigation = useMemo(
     () => ({
       label: continueLabel,
