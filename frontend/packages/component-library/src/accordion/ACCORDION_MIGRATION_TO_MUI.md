@@ -169,7 +169,7 @@ in the dialog and chips runs. The tooltip precedent gave the MUI version the
 plain name, but MUI's `Tooltip` came from `@mui/material` and did not
 collide. Here both ship from the same entry, and the DSCO stories import
 `../index` and must keep rendering the legacy component for the gate to
-compare. The finish workflow's step 4 deletes the legacy source and
+compare. The finish workflow's step 4 (RE-231) deletes the legacy source and
 renames the wrappers to the legacy names: `Accordion`, `AccordionProps`,
 `AccordionItem`, `FAQAccordion`, `FAQAccordionProps`, `FAQAccordionItem`
 and `default`. Unlike dialog, the `Mui` names do not stay as aliases: the
@@ -343,9 +343,9 @@ output.
 
 | Behavior             | Legacy today                                                      | With MUI                                                                                                                                                                                                         | UI tests at risk | After | Moves DOM | Ticket |
 | -------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----- | --------- | ------ |
-| Heading              | No heading; `slotProps.heading.component: 'div'`                  | The summary sits in an `<h3>` (`all: unset`); a heading per item in the page outline. A page rule such as `.x h3` outranks the reset                                                                             | None             |       | yes       |        |
-| Region               | No `role="region"`, no ids; `slotProps.region.role: undefined`    | `role="region"` on the panel; each open panel becomes a landmark. MUI labels it only from the summary's `id` and `aria-controls` props, so the wrapper must generate both with `useId`, or the region is unnamed | None             |       | no        |        |
-| Open/close animation | Instant, as native `<details>`; `slotProps.transition.timeout: 0` | `Collapse` animates height (`timeout: 'auto'`); a capture or assertion right after a click must wait for the transition                                                                                          | None             |       | yes       |        |
+| Heading              | No heading; `slotProps.heading.component: 'div'`                  | The summary sits in an `<h3>` (`all: unset`); a heading per item in the page outline. A page rule such as `.x h3` outranks the reset                                                                             | None             |       | yes       | RE-232 |
+| Region               | No `role="region"`, no ids; `slotProps.region.role: undefined`    | `role="region"` on the panel; each open panel becomes a landmark. MUI labels it only from the summary's `id` and `aria-controls` props, so the wrapper must generate both with `useId`, or the region is unnamed | None             |       | no        | RE-233 |
+| Open/close animation | Instant, as native `<details>`; `slotProps.transition.timeout: 0` | `Collapse` animates height (`timeout: 'auto'`); a capture or assertion right after a click must wait for the transition                                                                                          | None             |       | yes       | RE-234 |
 
 ## Story gaps
 
