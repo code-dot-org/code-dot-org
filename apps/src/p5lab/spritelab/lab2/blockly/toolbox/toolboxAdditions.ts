@@ -23,6 +23,7 @@ import {
   PLAY_SOUND_EFFECT_BLOCK_TYPE,
 } from '../blockDefinitions/playSoundEffect';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
+import {SHOW_TITLE_BLOCK_TYPE} from '../blockDefinitions/showTitle';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 
@@ -108,6 +109,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       PLAY_MUSIC_BLOCK_TYPE,
       RESTART_SCENE_BLOCK_TYPE,
       'gamelab_spriteSay',
+      SHOW_TITLE_BLOCK_TYPE,
       GO_TO_SCENE_BLOCK_TYPE,
       GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
     ],
@@ -128,6 +130,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'gamelab_setProp',
       'gamelab_spriteSay',
       'gamelab_spriteSayTime',
+      SHOW_TITLE_BLOCK_TYPE,
       GO_TO_SCENE_BLOCK_TYPE,
       GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
     ],

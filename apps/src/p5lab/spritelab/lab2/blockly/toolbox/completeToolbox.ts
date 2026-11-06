@@ -15,6 +15,7 @@ import {PLAY_SOUND_EFFECT_BLOCK_TYPE} from '../blockDefinitions/playSoundEffect'
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
 import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockDefinitions/setSystemPrompt';
 import {SET_WEATHER_BLOCK_TYPE} from '../blockDefinitions/setWeather';
+import {SHOW_TITLE_BLOCK_TYPE} from '../blockDefinitions/showTitle';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 
@@ -49,6 +50,7 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     GO_TO_SCENE_BLOCK_TYPE,
     GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
     RESTART_SCENE_BLOCK_TYPE,
+    SHOW_TITLE_BLOCK_TYPE,
     'spritelab2_setPlatformGravity',
     'spritelab2_setCameraZoom',
   ],

@@ -1,12 +1,14 @@
 // Judges one piece of work on a project step against the step's condition
 // and the skill it measures, and shapes the verdict as the attempt progress
-// keeps. A judge that cannot answer records nothing.
+// keeps. A judge that cannot answer records nothing. A reason the student
+// should not read gives way to a plain one; the verdict stands.
 
 import {AichatContext} from '@cdo/apps/aichat/types';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 import {ValidationAttempt} from '../../progress/model';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../../types';
-import {generate, isAdaptiveAiEnabled} from '../generate';
+import {generate, isAdaptiveAiEnabled, moderateOutput} from '../generate';
 
 import {
   OPENERS,
@@ -15,6 +17,12 @@ import {
   verdictSchema,
 } from './prompt';
 import {StepWork} from './types';
+
+/** What the student reads in place of a reason that did not clear moderation. */
+export const PLAIN_REASONS = {
+  pass: `${OPENERS.pass[0]} Your work does what this step asked.`,
+  fail: `${OPENERS.fail[0]} Look at the instructions again and give it another try.`,
+} as const;
 
 export interface ValidateStepOptions {
   pathway: Pathway;
@@ -84,10 +92,24 @@ export async function validateStep({
     },
   });
   if (!output) return undefined;
+  const moderation = await moderateOutput(output.reason, aichatContext);
+  if (moderation !== 'ok') {
+    Lab2Registry.getInstance().getMetricsReporter().logWarning({
+      message:
+        "Adaptive validation reason replaced: the judge's text did not clear moderation",
+      moderation,
+      pathwayId: pathway.id,
+      stepId: step.id,
+      traceId,
+    });
+  }
   return {
     pass: output.pass,
     evidenceLevel: describedLevelAtOrBelow(described, output.evidenceLevel),
-    reason: withOpener(output.pass, output.reason),
+    reason:
+      moderation === 'ok'
+        ? withOpener(output.pass, output.reason)
+        : PLAIN_REASONS[output.pass ? 'pass' : 'fail'],
     traceId,
   };
 }

@@ -25,6 +25,7 @@ import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
 import setSystemPrompt from './setSystemPrompt';
 import setWeather from './setWeather';
+import showTitle from './showTitle';
 import thePlayer from './thePlayer';
 import whenPlayer from './whenPlayer';
 import whenRun from './whenRun';
@@ -57,6 +58,7 @@ const labBlockDefinitions: {
   setCameraZoom,
   setWeather,
   burst,
+  showTitle,
   thePlayer,
   askAi,
   askAiWithChoices,

@@ -24,7 +24,8 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
-      "imageRole": "hero"
+      "imageRole": "hero",
+      "learning": true
     },
     "objectives": {
       "title": "**Make a character**",

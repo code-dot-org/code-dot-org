@@ -1,6 +1,7 @@
 import {
   defaultImageName,
   defaultRole,
+  imagesNamedInRole,
 } from '@cdo/apps/p5lab/spritelab/lab2/imageRoleDefaults';
 import {RuntimeAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/types';
 
@@ -60,5 +61,26 @@ describe('defaultImageName', () => {
     expect(
       defaultImageName(list, {sprite: 'story-background'}, 'sprite')
     ).toBeUndefined();
+  });
+});
+
+describe('imagesNamedInRole', () => {
+  it('names every image in the role whatever its kind, newest first', () => {
+    const withBlocks = {
+      orderedKeys: ['stone', 'ice', 'hero', 'bg'],
+      propsByKey: {
+        stone: {name: 'Stone', categories: ['blocks'], role: 'block'},
+        ice: {name: 'Ice', categories: ['blocks'], role: 'block'},
+        hero: {name: 'Hero', categories: [], role: 'hero'},
+        bg: {name: 'Forest', categories: ['backgrounds'], role: 'block'},
+      },
+    } as unknown as RuntimeAnimationList;
+    expect(imagesNamedInRole(withBlocks, 'block')).toEqual([
+      'Stone',
+      'Ice',
+      'Forest',
+    ]);
+    expect(imagesNamedInRole(withBlocks, 'hero')).toEqual(['Hero']);
+    expect(imagesNamedInRole(withBlocks, 'villain')).toEqual([]);
   });
 });
