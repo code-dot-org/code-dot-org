@@ -125,7 +125,11 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
   return (
     <div className={classNames(styles.card, disabled && styles.cardDisabled)}>
       <div className={styles.tile}>
-        <ScenePicture src={scene.thumbnail} className={styles.tilePicture} />
+        <ScenePicture
+          src={scene.thumbnail}
+          className={styles.tilePicture}
+          blank
+        />
       </div>
       <div className={styles.nameRow}>
         {renaming ? (
