@@ -220,7 +220,7 @@ module.exports = {
               'FAQAccordionProps',
             ],
             message:
-              'DSCO Accordion is deprecated. Import MuiAccordion / MuiFAQAccordion (and MuiAccordionProps / MuiAccordionItem / MuiFAQAccordionProps) from the same path instead.',
+              'DSCO Accordion and FAQAccordion are deprecated. Import MuiAccordion / MuiFAQAccordion (and MuiAccordionProps / MuiAccordionItem / MuiFAQAccordionProps) from the same path instead.',
           },
           {
             name: '@code-dot-org/component-library/accordion/faqAccordion',
