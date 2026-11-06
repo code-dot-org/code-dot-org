@@ -1,9 +1,3 @@
-@use "color.scss";
-
-// The unit image is a square inside the header bar; the gaps are the row's own.
-$image-size: 32px;
-$image-radius: 6px;
-$image-gap: 12px;
 $inset: 2px;
 
 // The same fade HeaderMiddle's row has; keyframes are scoped to the module.
@@ -24,18 +18,6 @@ $inset: 2px;
   align-items: center;
   justify-content: center;
   animation: fadein 0.4s;
-}
-
-.image {
-  width: $image-size;
-  height: $image-size;
-  box-sizing: border-box;
-  border: 1px solid color.$white;
-  border-radius: $image-radius;
-  background-color: color.$black;
-  flex: none;
-  object-fit: cover;
-  margin-inline-end: $image-gap;
 }
 
 // The bar, in the adaptive header's idiom: a light pill on the dark header,

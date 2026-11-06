@@ -71,13 +71,11 @@ const SAVE_ICONS: Record<
 };
 
 interface SimpleHeaderProps {
-  scriptData: {simpleProgressImage?: string};
   /** The lesson's name, on the bar's first pill. */
   lessonName?: string;
 }
 
 const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
-  scriptData,
   lessonName,
 }) => {
   const isRtl = useSelector((state: HeaderState) => state.isRtl);
@@ -106,13 +104,6 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
       <div id="project_info_container" className={styles.projectInfo}>
         <ProjectInfo isRtl={isRtl} />
       </div>
-      {scriptData.simpleProgressImage && (
-        <img
-          src={scriptData.simpleProgressImage}
-          alt=""
-          className={styles.image}
-        />
-      )}
       <div className={styles.bar} data-theme="Light">
         {lessonName && (
           <div className={styles.lesson}>

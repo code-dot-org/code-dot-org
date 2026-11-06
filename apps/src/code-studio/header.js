@@ -125,7 +125,7 @@ header.build = function (
     const middle = isAdaptiveLevel ? (
       <AdaptiveHeaderPortal />
     ) : scriptData.simpleProgress ? (
-      <SimpleHeader scriptData={scriptData} lessonName={lessonData.name} />
+      <SimpleHeader lessonName={lessonData.name} />
     ) : (
       <HeaderMiddle
         scriptNameData={scriptNameData}

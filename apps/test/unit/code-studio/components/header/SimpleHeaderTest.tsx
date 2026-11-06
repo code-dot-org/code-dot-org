@@ -40,11 +40,7 @@ function renderHeader(
   });
   return render(
     <Provider store={store}>
-      <SimpleHeader
-        scriptData={{simpleProgressImage: '/logo.png'}}
-        lessonName="Make a quest"
-        {...props}
-      />
+      <SimpleHeader lessonName="Make a quest" {...props} />
     </Provider>
   );
 }
@@ -58,11 +54,10 @@ describe('SimpleHeader', () => {
     ];
   });
 
-  it('places the image, the lesson name, the bubbles and the buttons', () => {
+  it('places the lesson name, the bubbles and the buttons', () => {
     renderHeader();
     const row = document.querySelector('#header_middle_content') as HTMLElement;
     expect(row.classList.contains(styles.row)).toBe(true);
-    expect(row.querySelector('img')?.getAttribute('src')).toBe('/logo.png');
     expect(screen.getByText('Make a quest').getAttribute('title')).toBe(
       'Make a quest'
     );
