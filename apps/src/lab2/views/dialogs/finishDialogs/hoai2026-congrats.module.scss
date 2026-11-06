@@ -82,9 +82,11 @@
   background: var(--brand-purple-95);
 }
 
-// Full width, white on the purple card.
+// Full width, white on the purple card, its words at the left and the
+// arrow at the right.
 .students .open {
   width: 100%;
+  justify-content: space-between;
   background: var(--background-neutral-white-fixed);
   color: var(--brand-purple-50);
 
