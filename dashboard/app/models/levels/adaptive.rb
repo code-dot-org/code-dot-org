@@ -113,40 +113,47 @@ class Adaptive < Level
     video_keys = video_steps(pathway).filter_map {|step| step['videoKey']}.uniq
     videos = Video.where(key: video_keys).index_by(&:key)
 
+    resolve = lambda do |checkpoint|
+      next checkpoint unless checkpoint.is_a?(Hash) && checkpoint['steps'].is_a?(Array)
+      checkpoint.merge(
+        'steps' => checkpoint['steps'].map do |step|
+          if level_step?(step)
+            level = levels[step['level']]
+            level ? step.merge('levelProperties' => yield(level)) : step
+          elsif video_step?(step)
+            video = videos[step['videoKey']]
+            next step unless video
+            step.merge(
+              'src' => video.youtube_url,
+              'download' => video.download,
+              'thumbnail' => video.thumbnail_url
+            )
+          else
+            step
+          end
+        end
+      )
+    end
+
     resolved = pathway.dup
     if pathway['project'].is_a?(Hash)
       level = levels[pathway.dig('project', 'templateLevel')]
       resolved['project'] = level ? pathway['project'].merge('levelProperties' => yield(level)) : pathway['project']
     end
     if pathway['checkpoints'].is_a?(Array)
-      resolved['checkpoints'] = pathway['checkpoints'].map do |checkpoint|
-        next checkpoint unless checkpoint.is_a?(Hash) && checkpoint['steps'].is_a?(Array)
-        checkpoint.merge(
-          'steps' => checkpoint['steps'].map do |step|
-            if level_step?(step)
-              level = levels[step['level']]
-              level ? step.merge('levelProperties' => yield(level)) : step
-            elsif video_step?(step)
-              video = videos[step['videoKey']]
-              next step unless video
-              step.merge(
-                'src' => video.youtube_url,
-                'download' => video.download,
-                'thumbnail' => video.thumbnail_url
-              )
-            else
-              step
-            end
-          end
-        )
-      end
+      resolved['checkpoints'] = pathway['checkpoints'].map(&resolve)
+    end
+    if pathway.dig('finish', 'checkpoint').is_a?(Hash)
+      resolved['finish'] = pathway['finish'].merge('checkpoint' => resolve.call(pathway['finish']['checkpoint']))
     end
     resolved
   end
 
+  # Every checkpoint's steps, the finish checkpoint's last.
   private def steps(pathway)
-    checkpoints = pathway['checkpoints']
-    return [] unless checkpoints.is_a?(Array)
+    checkpoints = pathway['checkpoints'].is_a?(Array) ? pathway['checkpoints'] : []
+    finish = pathway.dig('finish', 'checkpoint')
+    checkpoints += [finish] if finish.is_a?(Hash)
     checkpoints.flat_map do |checkpoint|
       steps = checkpoint.is_a?(Hash) ? checkpoint['steps'] : nil
       steps.is_a?(Array) ? steps.select {|step| step.is_a?(Hash)} : []

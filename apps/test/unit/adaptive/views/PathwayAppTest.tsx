@@ -135,6 +135,10 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   useAppSelector: (sel: any) => mockUseAppSelector(sel),
 }));
+jest.mock('@cdo/apps/lab2/progress/continueOrFinishLesson', () => ({
+  __esModule: true,
+  default: () => ({type: 'continueOrFinishLesson'}),
+}));
 jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
   sendAdaptiveStepReport: jest.fn(),
   sendStartedReportIfNotStarted: (app: string) => ({startedReport: app}),
@@ -183,6 +187,15 @@ const pathway: Pathway = {
     },
   ],
 };
+const finish: Pathway['finish'] = {
+  dialog: {title: 'Ready to Wrap Up?', body: 'Sure?'},
+  checkpoint: {
+    id: 'wrap-up',
+    title: 'Wrap up',
+    description: 'The end.',
+    steps: [step('wrap-up')],
+  },
+};
 const progressKey = {scriptId: 2, levelId: 3};
 
 describe('PathwayApp', () => {
@@ -206,11 +219,11 @@ describe('PathwayApp', () => {
   } as unknown as LevelProperties;
 
   // Progress loads from a promise, so the first render settles after a tick.
-  const renderSettled = async () => {
+  const renderSettled = async (content: Pathway = pathway) => {
     await act(async () => {
       render(
         <PathwayApp
-          pathway={pathway}
+          pathway={content}
           progressKey={progressKey}
           levelProperties={levelProperties}
         />
@@ -503,7 +516,7 @@ describe('PathwayApp', () => {
     expect(screen.getByText('map screen')).toBeTruthy();
   });
 
-  it("opens the project from the map header's I'm finished", async () => {
+  it("finishes the level at once from I'm finished when the pathway has no finish block", async () => {
     mockLoad.mockResolvedValue({
       steps: {'intro-step': {status: 'started', timeSpent: 0}},
     });
@@ -512,18 +525,77 @@ describe('PathwayApp', () => {
 
     act(() => screen.getByText("I'm finished!").click());
 
-    expect(screen.getByText('playing My Project')).toBeTruthy();
-    expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
+    expect(screen.queryByText('Ready to Wrap Up?')).toBeNull();
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'continueOrFinishLesson',
+    });
   });
 
-  it('opens the project when a checkpoint is left for it', async () => {
-    await renderSettled();
+  it('asks through the finish dialog first, and keeps working on request', async () => {
+    mockLoad.mockResolvedValue({
+      steps: {'intro-step': {status: 'started', timeSpent: 0}},
+    });
+    await renderSettled({...pathway, finish});
+
+    act(() => screen.getByText("I'm finished!").click());
+    expect(screen.getByText('Ready to Wrap Up?')).toBeTruthy();
+
+    act(() => screen.getByRole('button', {name: 'Keep Working'}).click());
+    expect(screen.queryByText('Ready to Wrap Up?')).toBeNull();
+    expect(screen.getByText('map screen')).toBeTruthy();
+    expect(mockDispatch).not.toHaveBeenCalledWith({
+      type: 'continueOrFinishLesson',
+    });
+  });
+
+  it('plays the finish checkpoint after the dialog, then finishes the level the Lab2 way', async () => {
+    mockLoad.mockResolvedValue({
+      steps: {'intro-step': {status: 'started', timeSpent: 0}},
+    });
+    await renderSettled({...pathway, finish});
+
+    act(() => screen.getByText("I'm finished!").click());
+    act(() => screen.getByRole('button', {name: 'Finish'}).click());
+    expect(screen.getByText('playing Wrap up')).toBeTruthy();
+    expect(screen.queryByText('finish pathway')).toBeNull();
+    expect(mockDispatch).not.toHaveBeenCalledWith({
+      type: 'continueOrFinishLesson',
+    });
+
+    act(() => screen.getByText('finish').click());
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'continueOrFinishLesson',
+    });
+  });
+
+  it('goes straight into the finish checkpoint when there is no dialog, from a checkpoint too', async () => {
+    await renderSettled({...pathway, finish: {checkpoint: finish.checkpoint}});
     expect(screen.getByText(/playing Intro/)).toBeTruthy();
 
     act(() => screen.getByText('finish pathway').click());
 
-    expect(screen.getByText('playing My Project')).toBeTruthy();
-    expect(screen.queryByText('finish pathway')).toBeNull();
+    expect(screen.queryByText('Ready to Wrap Up?')).toBeNull();
+    expect(screen.getByText('playing Wrap up')).toBeTruthy();
+  });
+
+  it('finishes the level after the dialog alone when there is no finish checkpoint', async () => {
+    mockLoad.mockResolvedValue({
+      steps: {'intro-step': {status: 'started', timeSpent: 0}},
+    });
+    await renderSettled({...pathway, finish: {dialog: finish.dialog}});
+
+    act(() => screen.getByText("I'm finished!").click());
+    act(() => screen.getByRole('button', {name: 'Finish'}).click());
+
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'continueOrFinishLesson',
+    });
+  });
+
+  it('opens the finish checkpoint named in the URL', async () => {
+    window.history.replaceState({}, '', '/?checkpoint=wrap-up');
+    await renderSettled({...pathway, finish});
+    expect(screen.getByText(/playing Wrap up/)).toBeTruthy();
   });
 
   describe('tab bar', () => {
