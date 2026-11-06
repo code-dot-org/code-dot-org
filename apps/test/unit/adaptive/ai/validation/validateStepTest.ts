@@ -114,6 +114,8 @@ describe('validateStep', () => {
     });
     const call = mockGenerate.mock.calls[0][0];
     expect(call.trace.name).toBe('adaptive-validation');
+    expect(call.model).toBe('gemini-3.1-flash-lite');
+    expect(call.thinkingLevel).toBeUndefined();
     expect(call.trace.metadata).toMatchObject({
       pathwayId: 'p',
       checkpointId: 'basics',

@@ -259,6 +259,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const levelName = instructionsProps.levelProperties.name;
   const levelSystemPrompt = instructionsProps.levelProperties.levelSystemPrompt;
+  const aiTutorModelParameters =
+    instructionsProps.levelProperties.aiTutorModelParameters;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
@@ -383,6 +385,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         channelId,
         aiTutorChatButtonData,
         aiTutorSystemPrompt,
+        aiTutorModelParameters,
         aiTutorResponseSchemaSettings,
         tutorVideos,
         disabledState: aiChatDisabledState,

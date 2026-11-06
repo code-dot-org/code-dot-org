@@ -9,6 +9,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ValidationAttempt} from '../../progress/model';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../../types';
 import {generate, isAdaptiveAiEnabled, moderateOutput} from '../generate';
+import {ADAPTIVE_MODELS} from '../models';
 
 import {
   OPENERS,
@@ -77,6 +78,7 @@ export async function validateStep({
   });
   const {output, traceId} = await generate({
     schema: verdictSchema,
+    model: ADAPTIVE_MODELS.FAST,
     prompt,
     context: aichatContext,
     trace: {

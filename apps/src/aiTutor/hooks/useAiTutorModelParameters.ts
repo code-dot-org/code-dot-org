@@ -1,13 +1,16 @@
 import {useEffect, useMemo, useState} from 'react';
 
-import {ModelParameters} from '@cdo/apps/aichat/types';
+import {AiTutorModelParameters, ModelParameters} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {
   getJsonVideoPrompt,
   type JsonVideoFileMetadata,
 } from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
-import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
+import {
+  aiTutorModelId,
+  aiTutorModelIdFromQuery,
+} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -48,6 +51,8 @@ export const baseModelParameters: ModelParameters = {
 
 interface UseAiTutorModelParametersOptions {
   aiTutorSystemPrompt?: string;
+  /** The level's model; a model named in the query string still wins. */
+  aiTutorModelParameters?: AiTutorModelParameters;
   aiTutorJsonSchema?: object;
   tutorVideos?: JsonVideoFileMetadata[];
 }
@@ -148,7 +153,14 @@ export const useAiTutorModelParameters = (
     if (!systemPrompt) {
       return undefined;
     }
-    let result = {...baseModelParameters, systemPrompt} as ModelParameters;
+    const levelModel = aiTutorModelIdFromQuery
+      ? undefined
+      : options?.aiTutorModelParameters;
+    let result = {
+      ...baseModelParameters,
+      ...levelModel,
+      systemPrompt,
+    } as ModelParameters;
     if (options?.aiTutorJsonSchema) {
       result = {
         ...result,
@@ -157,7 +169,11 @@ export const useAiTutorModelParameters = (
     }
 
     return result;
-  }, [options?.aiTutorJsonSchema, systemPrompt]);
+  }, [
+    options?.aiTutorJsonSchema,
+    options?.aiTutorModelParameters,
+    systemPrompt,
+  ]);
 
   return {
     modelParameters,

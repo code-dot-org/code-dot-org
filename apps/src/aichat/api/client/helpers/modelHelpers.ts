@@ -2,6 +2,7 @@ import {createGoogleGenerativeAI} from '@ai-sdk/google';
 import {createOpenAI} from '@ai-sdk/openai';
 import {type LanguageModel} from 'ai';
 
+import {GeminiThinkingLevel} from '@cdo/apps/aichat/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {
   AiChatGeminiModelIds,
@@ -33,6 +34,11 @@ export function getModel(modelId: ModelId) {
   }
   return modelMap[modelId]!;
 }
+
+/** The generateText provider options that set a Gemini 3 model's thinking level. */
+export const geminiThinkingOptions = (thinkingLevel: GeminiThinkingLevel) => ({
+  google: {thinkingConfig: {thinkingLevel}},
+});
 
 export function getTranscriptionModel() {
   return openAiProvider.transcription('whisper-1');
