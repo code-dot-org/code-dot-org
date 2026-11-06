@@ -34,6 +34,20 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert build(:adaptive, adaptive_id: 'sample').valid?
   end
 
+  test "creating from the level builder with a name alone points at the sample content" do
+    level = Adaptive.create_from_level_builder({user: create(:levelbuilder)}, {name: 'Adaptive quick'})
+
+    assert_equal 'sample', level.adaptive_id
+    assert_equal Game.adaptive, level.game
+    assert_equal 'custom', level.level_num
+  end
+
+  test "creating from the level builder keeps a chosen content id" do
+    level = Adaptive.create_from_level_builder({user: create(:levelbuilder)}, {name: 'Adaptive chosen', adaptive_id: 'needs-skill'})
+
+    assert_equal 'needs-skill', level.adaptive_id
+  end
+
   test "lab2 properties include the parsed content" do
     level = create(:adaptive)
     script_level = create(:script_level, levels: [level])
@@ -67,6 +81,9 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert_equal 'weblab2', try['levelProperties'][:appName]
     refute ghost.key?('levelProperties'), 'an unknown level name passes through unresolved'
     refute read.key?('levelProperties'), 'only level steps are resolved'
+    so_far, showcase = pathway['finish']['checkpoint']['steps']
+    assert_equal template.id, showcase['levelProperties'][:id], "the finish checkpoint's levels resolve too"
+    refute so_far.key?('levelProperties')
   end
 
   test "resolving levels leaves the cached pathway untouched" do
@@ -119,6 +136,7 @@ class AdaptiveTest < ActiveSupport::TestCase
 
     assert_equal 'level', level.find_step('try')['kind']
     assert_equal 'panels', level.find_step('read')['kind']
+    assert_equal 'stats', level.find_step('so-far')['kind'], "the finish checkpoint's steps are found"
     project = level.find_step('project')
     assert_equal 'level', project['kind']
     assert_equal 'adaptive-test-template', project['level']
@@ -131,7 +149,7 @@ class AdaptiveTest < ActiveSupport::TestCase
     write_levels_pathway
     level = create(:adaptive, adaptive_id: 'levels')
 
-    assert_equal({'try' => sandbox, 'project' => template}, level.step_levels)
+    assert_equal({'try' => sandbox, 'showcase' => template, 'project' => template}, level.step_levels)
   end
 
   test "lookups are empty without content" do
@@ -161,6 +179,15 @@ class AdaptiveTest < ActiveSupport::TestCase
           {'id' => 'read', 'kind' => 'panels', 'panels' => []},
         ],
       }],
+      'finish' => {
+        'checkpoint' => {
+          'id' => 'wrap-up',
+          'steps' => [
+            {'id' => 'so-far', 'kind' => 'stats'},
+            {'id' => 'showcase', 'kind' => 'level', 'level' => 'adaptive-test-template', 'project' => true},
+          ],
+        },
+      },
     }.to_json
 )
     AdaptiveContent.reset_cache!
