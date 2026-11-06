@@ -243,9 +243,8 @@ const NewSceneCard: React.FunctionComponent<NewSceneCardProps> = ({
   }, []);
   return (
     <div ref={ref} className={classNames(styles.card, styles.cardNew)}>
-      <div className={styles.tile}>
-        <ScenePicture src={undefined} className={styles.tilePicture} />
-      </div>
+      {/* Blank: there is no picture to stand in for yet. */}
+      <div className={styles.tile} />
       <div className={styles.nameRow}>
         <SceneNameField initial="" onCommit={onCreate} onCancel={onCancel} />
       </div>
