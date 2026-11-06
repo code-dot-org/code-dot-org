@@ -6,6 +6,15 @@ Storybook for the `@code-dot-org/component-library` design system.
 - `yarn build` — static build under `dist/`
 - `yarn test-storybook` — Vitest (browser) story tests; `yarn test:ui:ci` runs them with the Eyes check
 
+## Theme switcher
+
+The toolbar has a **Theme** dropdown (Light / Dark). It writes
+`data-theme` onto the preview `<html>`, which selects the Light or Dark
+token block in `@code-dot-org/component-library-styles/colors.css` (and
+the brand-scoped blocks layered on it). The canvas and docs previews
+paint `--background-neutral-primary`, so the background follows too.
+It combines with the Brand dropdown.
+
 ## Brand switcher
 
 The toolbar has a **Brand** dropdown (paintbrush icon) for previewing any
