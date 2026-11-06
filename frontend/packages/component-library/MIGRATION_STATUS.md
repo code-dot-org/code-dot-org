@@ -137,7 +137,7 @@ No runtime code inside the package imports the legacy `Dialog` and `CustomDialog
 ### Typography internal consumers (11) — **All Done**
 
 | DSCO Component         | Migration Status   |
-| ---------------------- | ------------------ |
+| ---------------------- | ------------------ | --- | --- | ------------------------------------------------------------------------------ |
 | `Checkbox`             | **Done**           |
 | `RadioButton`          | **Done**           |
 | `Toggle`               | **Done**           |
@@ -150,3 +150,4 @@ No runtime code inside the package imports the legacy `Dialog` and `CustomDialog
 | `Popover`              | **Done**           |
 | `SimpleList`           | **Done**           |
 | `Video`                | **Done** (was N/A) |
+| `progressWidget`       | N/A                | —   | —   | Header progress widget and its bubbles. Uses MUI `Tooltip`; no MUI equivalent. |
