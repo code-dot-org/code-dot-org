@@ -2,7 +2,7 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {Typography} from '@mui/material';
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import {
   IMAGE_SUBJECTS,
@@ -44,7 +44,7 @@ const NO_KIND = '';
 const NO_IMAGE_TYPE = '';
 
 const KIND_ITEMS = [
-  {value: NO_KIND, text: 'None: the lab decides'},
+  {value: NO_KIND, text: 'None'},
   ...LEVEL_MODE_KINDS.map(kind => ({
     value: kind,
     text: KIND_LABELS[kind],
@@ -52,7 +52,7 @@ const KIND_ITEMS = [
 ];
 
 const IMAGE_TYPE_ITEMS = [
-  {value: NO_IMAGE_TYPE, text: 'None: every kind of image'},
+  {value: NO_IMAGE_TYPE, text: 'None (no filter)'},
   ...IMAGE_TYPES.map(imageType => ({
     value: imageType,
     text: IMAGE_TYPE_LABELS[imageType],
@@ -72,9 +72,19 @@ const SpritelabModeFields: React.FunctionComponent<
     getPaletteRoles(mode).join(', ')
   );
 
-  const kindHelper = kind
-    ? `Students see these tabs: ${tabsForKind(kind, mode.imageFirst === true)}.`
-    : 'Without a mode the level shows every tab and nothing is locked.';
+  const kindHelper = useMemo(() => {
+    let helpText = kind
+      ? `Students see these tabs: ${tabsForKind(
+          kind,
+          mode.imageFirst === true
+        )}.`
+      : 'Without a mode students see Images, Code and Play, and can edit scenes.';
+    if (kind === 'freeplay') {
+      helpText +=
+        ' In free play, students have unlimited image generations, can draw and edit images, can edit scenes, and the instructions start collapsed.';
+    }
+    return helpText;
+  }, [kind, mode.imageFirst]);
 
   const showImageType = fieldApplies(mode, 'imageType');
   const showImageSubject = fieldApplies(mode, 'imageSubject');
@@ -100,8 +110,10 @@ const SpritelabModeFields: React.FunctionComponent<
     <div>
       {!usesLab2 && (
         <Typography variant="body4" className={moduleStyles.descriptionText}>
-          These settings take effect only on the Lab 2 version of Sprite Lab.
-          Enable Lab 2 below for them to do anything.
+          <Typography variant="strong">
+            These settings affect only the Lab 2 version of Sprite Lab. Enable
+            Lab 2 for them to do anything.
+          </Typography>
         </Typography>
       )}
       {removed.length > 0 && (

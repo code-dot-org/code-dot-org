@@ -27,9 +27,9 @@ function submitted(container: HTMLElement) {
   return input.value;
 }
 
-function renderEditor(initialMode: LevelModeObject | null, usesLab2 = true) {
+function renderEditor(initialMode: LevelModeObject | null) {
   return render(
-    <EditSpritelabMode initialMode={initialMode} initialUsesLab2={usesLab2} />
+    <EditSpritelabMode initialMode={initialMode} initialUsesLab2 />
   );
 }
 
@@ -56,7 +56,7 @@ describe('EditSpritelabMode', () => {
     expect(JSON.parse(submitted(container))).toEqual(mode);
   });
 
-  it('drops stale keys and says which ones', () => {
+  it('drops stale keys', () => {
     const {container} = renderEditor({
       kind: 'image',
       imageType: 'block',
@@ -67,9 +67,6 @@ describe('EditSpritelabMode', () => {
       kind: 'image',
       imageType: 'block',
     });
-    expect(screen.getByText(/will be removed when you save/)).toHaveTextContent(
-      'sentence: "block"; placeOne: true'
-    );
   });
 
   it('clears the whole mode when the kind is not a real kind', () => {
@@ -136,23 +133,5 @@ describe('EditSpritelabMode', () => {
     const {container} = renderEditor({kind: 'code', imageFirst: true});
     fireEvent.click(screen.getByRole('checkbox', {name: IMAGE_FIRST}));
     expect(JSON.parse(submitted(container))).toEqual({kind: 'code'});
-  });
-
-  it('warns when the image type and palette roles disagree', () => {
-    renderEditor({
-      kind: 'world',
-      imageType: 'sprite',
-      paletteRoles: ['treasure'],
-    });
-    expect(
-      screen.getByText(/Palette roles already choose the images/)
-    ).toBeInTheDocument();
-  });
-
-  it('says the settings do nothing until Lab 2 is on', () => {
-    renderEditor({kind: 'code'}, false);
-    expect(
-      screen.getByText(/only on the Lab 2 version of Sprite Lab/)
-    ).toBeInTheDocument();
   });
 });

@@ -22,16 +22,11 @@ const EditSpritelabMode: React.FunctionComponent<EditSpritelabModeProps> = ({
 
   useEffect(() => subscribeToUsesLab2?.(setUsesLab2), [subscribeToUsesLab2]);
 
-  // The dropped values stay listed until the page reloads: they are still
-  // about to be removed from what was saved.
   const handleChange = (newMode: LevelModeObject) =>
     setState(current => ({...current, mode: newMode}));
 
   return (
     <div>
-      {/* JSON.stringify, not serializeJsonObject: the server parses this
-          string, and "" is not valid JSON. An empty object clears the
-          property, since blank properties are stripped on save. */}
       <input
         id="level_level_mode"
         name="level[level_mode]"
