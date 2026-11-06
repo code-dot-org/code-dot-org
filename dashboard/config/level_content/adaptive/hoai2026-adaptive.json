@@ -1578,5 +1578,46 @@
         }
       ]
     }
-  ]
+  ],
+  "finish": {
+    "dialog": {
+      "title": "Ready to Wrap Up?",
+      "body": "Proceed to see your overall stats and your final project! Or click Keep Working to continue working on your project and skills.",
+      "finishLabel": "Finish",
+      "cancelLabel": "Keep Working"
+    },
+    "checkpoint": {
+      "id": "wrap-up",
+      "title": "Wrap up",
+      "description": "What you did, and what comes next.",
+      "steps": [
+        {
+          "id": "wrap-up-stats",
+          "title": "Great job!",
+          "kind": "stats",
+          "heading": "Great job!",
+          "subheading": "An encouraging subtitle goes here!"
+        },
+        {
+          "id": "wrap-up-showcase",
+          "title": "Your final project",
+          "kind": "level",
+          "level": "adaptive-HoAI26-wrap-up-showcase",
+          "project": true,
+          "instructions": "Look what you built! Review your final project."
+        },
+        {
+          "id": "wrap-up-challenge",
+          "title": "Builder's Challenge",
+          "kind": "markdown",
+          "markdown": "## You just built something with AI!\n\n<img src=\"https://images.code.org/99d7f396c47a604d6ca01825a08c4ab2-Panel 1.png\" alt=\"\" width=\"800\" height=\"340\">\n\n<br>Your project doesn't have to end here. Team up with your classmates and enter the Builder's Challenge, a national AI competition for high school students.",
+          "link": {
+            "label": "Learn about the Builder's Challenge",
+            "href": "https://code.org"
+          },
+          "continueLabel": "Get my Certificate"
+        }
+      ]
+    }
+  }
 }
