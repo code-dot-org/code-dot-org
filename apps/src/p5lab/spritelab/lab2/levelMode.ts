@@ -26,6 +26,9 @@ export interface LevelMode {
   /** The level opens on the Images tab to make its image, then goes on to
       its own tabs. */
   imageFirst?: boolean;
+  /** The level tells how AI made the student's image, after the first
+      picture made in a visit. */
+  learning?: boolean;
   /** Where the level's pictures come from (imageCache.ts); the tree first
       when unset. */
   imageSource?: ImageSource;

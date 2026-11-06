@@ -20,6 +20,18 @@ describe('callouts', () => {
     expect(calloutHolds({target: 'world-tab'}, state)).toBe(true);
   });
 
+  it('holds while the editor is not on the named scene', () => {
+    const toScene: LevelCallout = {
+      target: 'scene-menu',
+      when: {sceneNot: 'second-scene'},
+    };
+    expect(calloutHolds(toScene, state)).toBe(true);
+    expect(calloutHolds(toScene, {...state, scene: 'scene-1'})).toBe(true);
+    expect(calloutHolds(toScene, {...state, scene: 'second-scene'})).toBe(
+      false
+    );
+  });
+
   it('shows the first callout that holds', () => {
     const callouts: LevelCallout[] = [
       {target: 'code-tab', when: {done: [1]}},
@@ -33,8 +45,26 @@ describe('callouts', () => {
   });
 
   it('names the switch button for each tab', () => {
-    expect(calloutSelector('code-tab')).toBe('#editor-switch-code');
-    expect(calloutSelector('world-tab')).toBe('#editor-switch-world');
-    expect(calloutSelector('images-tab')).toBe('#editor-switch-images');
+    expect(calloutSelector({target: 'code-tab'})).toBe('#editor-switch-code');
+    expect(calloutSelector({target: 'world-tab'})).toBe('#editor-switch-world');
+    expect(calloutSelector({target: 'images-tab'})).toBe(
+      '#editor-switch-images'
+    );
+  });
+
+  it('names the scene menu button and a scene entry in the open menu', () => {
+    expect(calloutSelector({target: 'scene-menu'})).toBe(
+      '#scene-dropdown-dropdown-button'
+    );
+    expect(
+      calloutSelector({target: 'scene-option', scene: 'second-scene'})
+    ).toBe('#scene-option-second-scene');
+  });
+
+  it('warns of a scene entry callout that names no scene', () => {
+    const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    calloutSelector({target: 'scene-option'});
+    expect(warn).toHaveBeenCalledWith('scene-option callout names no scene');
+    warn.mockRestore();
   });
 });
