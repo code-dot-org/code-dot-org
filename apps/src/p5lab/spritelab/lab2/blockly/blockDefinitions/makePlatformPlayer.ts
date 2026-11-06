@@ -33,9 +33,7 @@ const generator: GeneratorFunction = block =>
 // "set speed" still applies; the jump goes through platformJump, which
 // checks footing and jumps against gravity whichever way it points. At
 // zero gravity there is no jump and the up and down arrows steer instead.
-// Clears a two-tile step with a little margin (apex ~2.4 tiles at the
-// default gravity).
-const JUMP_SPEED = 13;
+// Jump height is configured in playfield squares by set jump height.
 
 const helperCode = [
   // Shared by every block that produces a platform player; guarded so
@@ -59,7 +57,7 @@ const helperCode = [
   '  });',
   "  keyPressed('when', 'up', function () {",
   '    if (platformGravity() !== 0) {',
-  `      platformJump(${JUMP_SPEED});`,
+    '      platformJump();',
   '    }',
   '  });',
   "  keyPressed('while', 'down', function () {",
@@ -68,7 +66,7 @@ const helperCode = [
   '    }',
   '  });',
   "  keyPressed('when', 'space', function () {",
-  `    platformJump(${JUMP_SPEED});`,
+    '    platformJump();',
   '  });',
   '}',
   'function makePlatformPlayer(animation, layout) {',

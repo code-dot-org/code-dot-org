@@ -481,6 +481,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // set-gravity block says otherwise. Negative flips the world: players
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
+    this.platformJumpHeight_ = 2;
     this.notifyControlsChange_();
     this.particles_.reset();
     this.jumpStarts_ = null;
@@ -502,6 +503,14 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.setPlatformGravity = value => {
       this.platformGravity_ = Number(value) || 0;
       this.notifyControlsChange_();
+    };
+    library.commands.setPlatformGravityDirection = direction => {
+      const magnitude = Math.abs(this.platformGravity_);
+      this.platformGravity_ = direction === 'up' ? -magnitude : magnitude;
+      this.notifyControlsChange_();
+    };
+    library.commands.setPlatformJumpHeight = value => {
+      this.platformJumpHeight_ = Math.max(1, Math.min(4, Number(value) || 1));
     };
     // The view eases toward the target zoom a frame at a time (see the
     // platform draw loop below); a fresh run starts back at 1.
@@ -592,6 +601,15 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
+      const jumpSpeed =
+        speed === undefined
+          ? Math.sqrt(
+              2 *
+                Math.abs(this.platformGravity_) *
+                this.platformJumpHeight_ *
+                (library.defaultSpriteSize || 40)
+            )
+          : Math.abs(Number(speed) || 0);
       this.jumpStarts_ = new Map();
       this.jumpImpulseFrame_ = this.p5Wrapper.p5
         ? this.p5Wrapper.p5.frameCount
@@ -601,7 +619,7 @@ export default class SpriteLab2Engine extends SpriteLab {
           x: sprite.position.x,
           y: sprite.position.y,
         });
-        sprite.velocity.y = up * Math.abs(Number(speed) || 0);
+        sprite.velocity.y = up * jumpSpeed;
       });
     };
     // A behavior that wants gravity for its sprite marks it for the platform

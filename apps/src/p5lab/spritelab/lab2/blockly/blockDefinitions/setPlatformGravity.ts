@@ -1,21 +1,24 @@
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
-import {PLATFORM_GRAVITY} from '../../platformPhysics';
+const MIN_JUMP_HEIGHT = 1;
+const MAX_JUMP_HEIGHT = 4;
+const DEFAULT_JUMP_HEIGHT = 2;
 
 /**
- * Override the platformer's gravity. Negative flips the world: players fall
- * up and land on block undersides and the view's top edge; the platform
- * player's jump follows the flip. Zero turns gravity off.
+ * Set the platform player's jump height in playfield squares.
  */
 const definition: BlockJson = {
-  type: 'spritelab2_setPlatformGravity',
-  message0: 'set gravity to %1',
+  type: 'spritelab2_setPlatformJumpHeight',
+  message0: 'set jump height to %1 squares',
   args0: [
     {
       type: 'field_number',
-      name: 'GRAVITY',
-      value: PLATFORM_GRAVITY,
+      name: 'HEIGHT',
+      value: DEFAULT_JUMP_HEIGHT,
+      min: MIN_JUMP_HEIGHT,
+      max: MAX_JUMP_HEIGHT,
+      precision: 1,
     },
   ],
   previousStatement: null,
@@ -24,6 +27,6 @@ const definition: BlockJson = {
 };
 
 const generator: GeneratorFunction = block =>
-  `setPlatformGravity(${Number(block.getFieldValue('GRAVITY'))});\n`;
+  `setPlatformJumpHeight(${Number(block.getFieldValue('HEIGHT'))});\n`;
 
 export default {definition, generator};
