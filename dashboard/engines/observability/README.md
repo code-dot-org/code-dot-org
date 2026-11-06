@@ -14,7 +14,9 @@ dashboard_sentry_dsn: "https://..."   # required for Sentry to send events
 
 ## OpenTelemetry
 
-Only activates when `CDO.enable_opentelemetry` is true **and** the process is a web server (`CDO.running_web_application?`). This prevents unnecessary overhead in rake tasks and test runners.
+Activates when `CDO.enable_opentelemetry` is true, in every process except unit test runs.
+
+A rake process traced by [`lib/cdo/rake_tracing.rb`](../../../lib/cdo/rake_tracing.rb) has configured the SDK before Rails boots. Setup then leaves it alone, so rake traces keep their own exporter and bypass the collector's sampling.
 
 Traces are exported to the local OpenTelemetry Collector via OTLP. The collector is installed by the `cdo-otel-collector` cookbook (`cookbooks/cdo-otel-collector`). The collector forwards traces to the configured APM backend.
 
@@ -22,7 +24,7 @@ Traces are exported to the local OpenTelemetry Collector via OTLP. The collector
 
 ## Sentry
 
-Only activates when `CDO.enable_sentry` is true **and** the process is a web server (`CDO.running_web_application?`). This prevents Sentry from initializing during rake tasks, migrations, and test runners. When `CDO.enable_opentelemetry` is also enabled, Sentry's OTLP integration is turned on so errors include trace context. When OpenTelemetry is off, the OTLP integration is disabled.
+Activates when `CDO.enable_sentry` is true, in every process except unit test runs. When `CDO.enable_opentelemetry` is also enabled, Sentry's OTLP integration is turned on so errors include trace context. When OpenTelemetry is off, the OTLP integration is disabled.
 
 Main Dashboard code should report handled errors via `Observability::Errors.report`, not by referencing `Honeybadger` or `Sentry` directly.
 

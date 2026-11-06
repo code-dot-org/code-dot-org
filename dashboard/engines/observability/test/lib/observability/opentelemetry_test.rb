@@ -42,6 +42,12 @@ describe Observability::OpenTelemetry do
         Observability::OpenTelemetry.setup
       end
 
+      it 'leaves an SDK that rake tracing already configured in place' do
+        OpenTelemetry.stubs(:tracer_provider).returns(OpenTelemetry::SDK::Trace::TracerProvider.new)
+        OpenTelemetry::SDK.expects(:configure).never
+        Observability::OpenTelemetry.setup
+      end
+
       it 'sets the service name to dashboard' do
         fake_config = mock('otel_config')
         fake_config.expects(:service_name=).with('dashboard')

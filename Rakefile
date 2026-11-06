@@ -1,5 +1,7 @@
 # Run 'rake' or 'rake -D' to get a list of valid Rake commands with descriptions.
 require_relative 'deployment'
+require 'cdo/rake_tracing'
+Cdo::RakeTracing.start
 
 Rake::TaskManager.record_task_metadata = true
 Dir.glob(File.join(__dir__, 'lib/rake/*.rake')).sort.each {|rake| import rake}
