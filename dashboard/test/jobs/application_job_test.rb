@@ -25,7 +25,7 @@ class ApplicationJobTest < ActiveJob::TestCase
 
   # The cron runs the same SQL over a mysql2 client; this runs it over
   # ActiveRecord against the test database.
-  SELECT_ALL = ->(sql) {Delayed::Job.connection.select_all(sql).to_a}
+  QUERY = ->(sql) {Delayed::Job.connection.select_all(sql).to_a}
 
   setup do
     Delayed::Job.delete_all
@@ -50,7 +50,7 @@ class ApplicationJobTest < ActiveJob::TestCase
   end
 
   def report(worker_count: nil)
-    Cdo::ActiveJobQueueMetrics.report(SELECT_ALL, environment: CDO.rack_env, now: @now, worker_count: worker_count)
+    Cdo::ActiveJobQueueMetrics.report(QUERY, environment: CDO.rack_env, now: @now, worker_count: worker_count)
   end
 
   def environment
@@ -72,13 +72,13 @@ class ApplicationJobTest < ActiveJob::TestCase
   test 'queue counts are grouped by job class' do
     assert_equal(
       {'ApplicationJobTest::TestableJob' => @class_counts, 'Some::OtherJob' => @class_counts},
-      Cdo::ActiveJobQueueMetrics.counts_by_class(SELECT_ALL, now: @now)
+      Cdo::ActiveJobQueueMetrics.counts_by_class(QUERY, now: @now)
     )
   end
 
   test 'job classes are matched exactly, not by prefix' do
     populate_jobs_table(@t, 'ApplicationJobTest::TestableJobber')
-    counts = Cdo::ActiveJobQueueMetrics.counts_by_class(SELECT_ALL, now: @now)
+    counts = Cdo::ActiveJobQueueMetrics.counts_by_class(QUERY, now: @now)
     assert_equal 3, counts.fetch('ApplicationJobTest::TestableJob')[:queued]
     assert_equal 3, counts.fetch('ApplicationJobTest::TestableJobber')[:queued]
   end
@@ -86,7 +86,7 @@ class ApplicationJobTest < ActiveJob::TestCase
   test 'a job class named in the arguments does not change the grouping' do
     Delayed::Job.delete_all
     Delayed::Job.insert_all([{handler: "job_data:\n  job_class: Real::Job\n  arguments:\n  - 'job_class: Fake::Job'\n", run_at: @t, created_at: @t, updated_at: @t}])
-    assert_equal ['Real::Job'], Cdo::ActiveJobQueueMetrics.counts_by_class(SELECT_ALL, now: @now).keys
+    assert_equal ['Real::Job'], Cdo::ActiveJobQueueMetrics.counts_by_class(QUERY, now: @now).keys
   end
 
   test 'report publishes queue-wide and per-class metrics' do

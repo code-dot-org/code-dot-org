@@ -3,7 +3,7 @@ require 'cdo/aws/metrics'
 module Cdo
   # Queue metrics for the delayed_jobs table, published to CloudWatch by
   # bin/cron/report_activejob_metrics, which runs without Rails. Callers pass
-  # select_all, a callable that runs one SQL string and returns its rows as
+  # query, a callable that runs one SQL string and returns its rows as
   # Hashes, so the SQL is independent of the database library.
   module ActiveJobQueueMetrics
     NAMESPACE = 'code-dot-org/ActiveJob'.freeze
@@ -20,8 +20,8 @@ module Cdo
     # Publishes queue-wide metrics, which KEDA and alarms read, and the same
     # queue metrics per job class. A class with no rows publishes nothing.
     # With worker_count, also publishes WorkerCount and PercentWorkersIdle.
-    def self.report(select_all, environment:, now: Time.now.utc, worker_count: nil)
-      by_class = counts_by_class(select_all, now: now)
+    def self.report(query, environment:, now: Time.now.utc, worker_count: nil)
+      by_class = counts_by_class(query, now: now)
       overall = total(by_class.values)
       dimensions = [{name: 'Environment', value: environment}]
 
@@ -36,8 +36,8 @@ module Cdo
 
     # Keyed by job class; nil collects rows whose handler names no ActiveJob
     # class, such as jobs enqueued through delayed_job directly.
-    def self.counts_by_class(select_all, now:)
-      select_all.call(sql(now: now)).to_h do |row|
+    def self.counts_by_class(query, now:)
+      query.call(sql(now: now)).to_h do |row|
         row = row.transform_keys(&:to_sym)
         [row[:job_class], COLUMNS.to_h {|column| [column, row[column].to_i]}]
       end

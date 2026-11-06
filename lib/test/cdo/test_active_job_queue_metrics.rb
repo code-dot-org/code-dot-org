@@ -13,7 +13,7 @@ class ActiveJobQueueMetricsTest < Minitest::Test
     {'job_class' => job_class}.merge(counts.merge(overrides).transform_keys(&:to_s))
   end
 
-  def select_all(*rows)
+  def query_returning(*rows)
     ->(_sql) {rows}
   end
 
@@ -30,7 +30,7 @@ class ActiveJobQueueMetricsTest < Minitest::Test
 
   def test_counts_by_class_accepts_symbol_keys_and_non_integer_values
     symbol_row = row('A::Job').to_h {|key, value| [key.to_sym, key == 'job_class' ? value : value.to_s]}
-    counts = Cdo::ActiveJobQueueMetrics.counts_by_class(select_all(symbol_row), now: NOW)
+    counts = Cdo::ActiveJobQueueMetrics.counts_by_class(query_returning(symbol_row), now: NOW)
     assert_equal 3, counts.fetch('A::Job')[:queued]
     assert_equal 30, counts.fetch('A::Job')[:oldest_pending_age]
   end
@@ -54,7 +54,7 @@ class ActiveJobQueueMetricsTest < Minitest::Test
 
   def test_report_publishes_queue_wide_priority_and_per_class_metrics
     metrics = pushed_metrics do
-      Cdo::ActiveJobQueueMetrics.report(select_all(row('A::Job'), row('B::Job', pending_low: 2, oldest_pending_age: 50)), environment: 'test', now: NOW)
+      Cdo::ActiveJobQueueMetrics.report(query_returning(row('A::Job'), row('B::Job', pending_low: 2, oldest_pending_age: 50)), environment: 'test', now: NOW)
     end
     published = values(metrics)
 
@@ -72,26 +72,26 @@ class ActiveJobQueueMetricsTest < Minitest::Test
 
   def test_report_counts_rows_without_a_job_class_only_queue_wide
     metrics = pushed_metrics do
-      Cdo::ActiveJobQueueMetrics.report(select_all(row('A::Job'), row(nil)), environment: 'test', now: NOW)
+      Cdo::ActiveJobQueueMetrics.report(query_returning(row('A::Job'), row(nil)), environment: 'test', now: NOW)
     end
     assert_equal 6, values(metrics)[['QueuedJobCount', ['test']]]
     assert(metrics.none? {|metric| metric[:dimensions].any? {|d| d[:name] == 'JobName' && d[:value].nil?}})
   end
 
   def test_report_publishes_zeros_for_an_empty_queue
-    metrics = pushed_metrics {Cdo::ActiveJobQueueMetrics.report(select_all, environment: 'test', now: NOW)}
+    metrics = pushed_metrics {Cdo::ActiveJobQueueMetrics.report(query_returning, environment: 'test', now: NOW)}
     assert_equal 10, metrics.size
     assert(metrics.all? {|metric| metric[:value] == 0})
   end
 
   def test_report_publishes_worker_metrics_when_given_a_worker_count
-    metrics = pushed_metrics {Cdo::ActiveJobQueueMetrics.report(select_all(row('A::Job')), environment: 'test', now: NOW, worker_count: 4)}
+    metrics = pushed_metrics {Cdo::ActiveJobQueueMetrics.report(query_returning(row('A::Job')), environment: 'test', now: NOW, worker_count: 4)}
     assert_equal 4, values(metrics)[['WorkerCount', ['test']]]
     assert_equal 75.0, values(metrics)[['PercentWorkersIdle', ['test']]]
   end
 
   def test_report_reports_zero_idle_without_workers
-    metrics = pushed_metrics {Cdo::ActiveJobQueueMetrics.report(select_all, environment: 'test', now: NOW, worker_count: 0)}
+    metrics = pushed_metrics {Cdo::ActiveJobQueueMetrics.report(query_returning, environment: 'test', now: NOW, worker_count: 0)}
     assert_equal 0, values(metrics)[['PercentWorkersIdle', ['test']]]
   end
 end
