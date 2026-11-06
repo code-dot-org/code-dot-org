@@ -1,10 +1,13 @@
 # Detect ActiveRecord SQL statements that are larger than 16KB. RDS Proxy pins its outbound connection to the MySQL server
 # for exclusive use by the single inbound connection from our application if the inbound connection to RDS Proxy executes
 # a SQL statement larger than 16KB. https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-pinning.html
+
+require 'cdo/pinned_sql_connections'
+
 module Cdo
   module OversizedSqlStatements
     LIMIT_BYTES = 16_384
-
+    PIN_REASON = :oversized_statement
     SELF_BASENAME = File.basename(__FILE__).freeze
 
     def self.subscribe
@@ -17,6 +20,8 @@ module Cdo
         # so this is the same length the proxy measures.
         bytes = sql.bytesize
         next unless bytes > LIMIT_BYTES
+
+        Cdo::PinnedSqlConnections.pin(payload[:connection], PIN_REASON)
 
         CDO.log.warn(
           'event=oversized_sql_statement ' \
@@ -41,4 +46,5 @@ module Cdo
   end
 end
 
+Cdo::PinnedSqlConnections.install!
 Cdo::OversizedSqlStatements.subscribe
