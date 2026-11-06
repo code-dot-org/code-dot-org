@@ -1,3 +1,7 @@
-.buttonMargin {
-      margin-right: 8px;
+// Space the buttons from the container: the MUI Button root override sets
+// margin: 0 at equal specificity, so a margin on the button itself is lost to
+// stylesheet order.
+.editButtons {
+  display: flex;
+  gap: 8px;
 }
