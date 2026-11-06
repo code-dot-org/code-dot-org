@@ -43,6 +43,15 @@ export function blockTypesIn(node: unknown, shadow = false): string[] {
 
 const unique = (types: string[]) => [...new Set(types)];
 
+export const GRAVITY_BLOCK_TYPES = [
+  'spritelab2_setPlatformJumpHeight',
+  'spritelab2_setPlatformGravityDirection',
+];
+
+export function gravityBlockTypesTogether(type: string): string[] {
+  return GRAVITY_BLOCK_TYPES.includes(type) ? GRAVITY_BLOCK_TYPES : [type];
+}
+
 /** The block types a level offers a student: its toolbox, plus the blocks
     add_blocks places in the workspace before the student starts. */
 export function offeredBlockTypes(level: SpriteLab2LevelProperties): string[] {
