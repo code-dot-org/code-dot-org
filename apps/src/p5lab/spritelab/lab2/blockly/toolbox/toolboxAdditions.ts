@@ -161,6 +161,21 @@ function ensureInjectedCategories(def: ToolboxInfo): void {
   const contents = def.contents;
   const categories = contents.filter(isStaticCategoryInfo);
   const sprites = findCategory(contents, 'Sprites');
+  const gravity = contents.findIndex(
+    entry =>
+      isBlockInfo(entry) && entry.type === 'spritelab2_setPlatformGravity'
+  );
+  const directionPresent = contents.some(
+    entry =>
+      isBlockInfo(entry) &&
+      entry.type === 'spritelab2_setPlatformGravityDirection'
+  );
+  if (gravity >= 0 && !directionPresent) {
+    contents.splice(gravity + 1, 0, {
+      kind: 'block',
+      type: 'spritelab2_setPlatformGravityDirection',
+    });
+  }
   if (!sprites) {
     return;
   }
