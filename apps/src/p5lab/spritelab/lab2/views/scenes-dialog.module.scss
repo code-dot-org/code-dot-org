@@ -1,4 +1,4 @@
-@use '../../../../pixelEditor/dialogChrome' as chrome;
+@use '@cdo/apps/pixelEditor/dialogChrome' as chrome;
 @use './imageTile' as tile;
 
 // Wide enough for a row of three cards; the dialog's own width rule would
@@ -70,8 +70,6 @@
   height: 192px;
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
-  color: var(--text-neutral-secondary);
-  font-size: 28px;
 }
 
 .tilePicture {

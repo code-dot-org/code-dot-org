@@ -160,7 +160,8 @@ describe('ScenesDialog', () => {
     renderDialog({editable: false});
     expect(screen.queryByRole('button', {name: 'Delete'})).toBeNull();
     expect(screen.queryByRole('button', {name: 'Start here'})).toBeNull();
-    expect(screen.queryByText('Starts here')).toBeNull();
+    // Where play starts still shows.
+    expect(screen.getByText('Starts here')).toBeTruthy();
     expect(screen.queryByRole('button', {name: 'New scene'})).toBeNull();
     expect(screen.queryByRole('button', {name: 'Rename Cave'})).toBeNull();
     expect(screen.getByText('Cave')).toBeTruthy();

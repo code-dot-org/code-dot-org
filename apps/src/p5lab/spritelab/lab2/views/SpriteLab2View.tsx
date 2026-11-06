@@ -1665,10 +1665,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // menu unmounted with the menu, or the bar's button let go of focus on
   // its click. The scene menu's trigger takes it. After the effect above,
   // which lets the stage take focus again.
+  const scenesWereOpenRef = useRef(false);
   useEffect(() => {
-    if (!scenesDialog && document.activeElement === document.body) {
+    if (
+      scenesWereOpenRef.current &&
+      !scenesDialog &&
+      document.activeElement === document.body
+    ) {
       document.getElementById(sceneDropdownButtonId())?.focus();
     }
+    scenesWereOpenRef.current = !!scenesDialog;
   }, [scenesDialog]);
 
   const fade = useTabFade(activeTab, {

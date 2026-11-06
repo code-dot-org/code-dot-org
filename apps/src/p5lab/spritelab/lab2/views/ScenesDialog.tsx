@@ -123,7 +123,10 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
 }) => {
   const [renaming, setRenaming] = useState(false);
   const [confirming, setConfirming] = useState(false);
-  // Held still means no edit half-done either.
+  // Held still means no edit half-done either: shown as closed at once,
+  // and closed.
+  const renameOpen = renaming && !disabled;
+  const deleteAsked = confirming && !disabled;
   useEffect(() => {
     if (disabled) {
       setRenaming(false);
@@ -140,7 +143,7 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
         />
       </div>
       <div className={styles.nameRow}>
-        {renaming ? (
+        {renameOpen ? (
           <SceneNameField
             initial={scene.name}
             onCommit={name => {
@@ -170,69 +173,66 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
           </>
         )}
       </div>
-      {editable && (
-        <div className={styles.cardActions}>
-          {deletable &&
-            (confirming ? (
-              <div className={styles.deleteConfirm}>
-                <span className={styles.deleteQuestion}>
-                  Delete this scene?
-                </span>
-                <div className={styles.deleteChoices}>
-                  <MuiButton
-                    variant="contained"
-                    color="error"
-                    size="extraSmall"
-                    fullWidth
-                    onClick={() => onDelete(scene.id)}
-                  >
-                    Delete
-                  </MuiButton>
-                  <MuiButton
-                    variant="outlined"
-                    color="secondary"
-                    size="extraSmall"
-                    fullWidth
-                    onClick={() => setConfirming(false)}
-                  >
-                    Keep
-                  </MuiButton>
-                </div>
+      <div className={styles.cardActions}>
+        {editable &&
+          deletable &&
+          (deleteAsked ? (
+            <div className={styles.deleteConfirm}>
+              <span className={styles.deleteQuestion}>Delete this scene?</span>
+              <div className={styles.deleteChoices}>
+                <MuiButton
+                  variant="contained"
+                  color="error"
+                  size="extraSmall"
+                  fullWidth
+                  onClick={() => onDelete(scene.id)}
+                >
+                  Delete
+                </MuiButton>
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="extraSmall"
+                  fullWidth
+                  onClick={() => setConfirming(false)}
+                >
+                  Keep
+                </MuiButton>
               </div>
-            ) : (
-              <MuiButton
-                variant="outlined"
-                color="error"
-                size="extraSmall"
-                startIcon={<FontAwesomeV6Icon iconName="trash" aria-hidden />}
-                disabled={disabled}
-                onClick={() => setConfirming(true)}
-              >
-                Delete
-              </MuiButton>
-            ))}
-          {/* The start scene wears a mark in the button's place: there is
-              nothing to press. */}
-          {!confirming &&
-            (startsHere ? (
-              <span className={styles.startsHere}>
-                <FontAwesomeV6Icon iconName="play" aria-hidden />
-                Starts here
-              </span>
-            ) : (
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                size="extraSmall"
-                startIcon={<FontAwesomeV6Icon iconName="play" aria-hidden />}
-                disabled={disabled}
-                onClick={() => onMakeStart(scene.id)}
-              >
-                Start here
-              </MuiButton>
-            ))}
-        </div>
-      )}
+            </div>
+          ) : (
+            <MuiButton
+              variant="outlined"
+              color="error"
+              size="extraSmall"
+              startIcon={<FontAwesomeV6Icon iconName="trash" aria-hidden />}
+              disabled={disabled}
+              onClick={() => setConfirming(true)}
+            >
+              Delete
+            </MuiButton>
+          ))}
+        {/* The start scene wears a mark in the button's place: there is
+            nothing to press, on any level. */}
+        {!deleteAsked &&
+          (startsHere ? (
+            <span className={styles.startsHere}>
+              <FontAwesomeV6Icon iconName="play" aria-hidden />
+              Starts here
+            </span>
+          ) : editable ? (
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
+              startIcon={<FontAwesomeV6Icon iconName="play" aria-hidden />}
+              disabled={disabled}
+              onClick={() => onMakeStart(scene.id)}
+            >
+              Start here
+            </MuiButton>
+          ) : null)}
+      </div>
     </div>
   );
 };
