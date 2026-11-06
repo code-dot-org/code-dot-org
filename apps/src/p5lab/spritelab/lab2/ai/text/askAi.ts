@@ -77,20 +77,6 @@ const REFUSAL_MESSAGES: Record<SpritelabAskAiRefusal, string> = {
     "AI blocks aren't available in your region yet.",
 };
 
-// The server's reason is a page-load snapshot, so it cannot report a kill
-// switch thrown since. Read that switch live, in the server's own order.
-function refusalReason(
-  spritelabAskAiRefusal: SpritelabAskAiRefusal | null
-): SpritelabAskAiRefusal | null {
-  if (spritelabAskAiRefusal === SpritelabAskAiRefusals.NOT_IN_PILOT) {
-    return spritelabAskAiRefusal;
-  }
-  if (!isAskAiEnabled()) {
-    return SpritelabAskAiRefusals.OFF;
-  }
-  return spritelabAskAiRefusal;
-}
-
 /** The server's reason (User::AiAccessible) for refusing an answer, in words. */
 export function askAiRefusal({
   userType,
@@ -98,14 +84,16 @@ export function askAiRefusal({
 }: Pick<CurrentUserState, 'userType' | 'spritelabAskAiRefusal'>):
   | string
   | null {
-  const refusal = refusalReason(spritelabAskAiRefusal);
-  if (!refusal) {
+  if (!spritelabAskAiRefusal) {
     return null;
   }
-  if (refusal === SpritelabAskAiRefusals.NO_ACCESS && userType === 'teacher') {
+  if (
+    spritelabAskAiRefusal === SpritelabAskAiRefusals.NO_ACCESS &&
+    userType === 'teacher'
+  ) {
     return 'AI blocks need a verified teacher account.';
   }
-  return REFUSAL_MESSAGES[refusal];
+  return REFUSAL_MESSAGES[spritelabAskAiRefusal];
 }
 
 const SAFETY_CHECK_FAILURES = {
