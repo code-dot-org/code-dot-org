@@ -63,6 +63,12 @@ describe('sentences', () => {
     ).toBe('A cute witch wearing a crown');
   });
 
+  it('makes witches green-skinned', () => {
+    expect(promptText(CHARACTER_SENTENCE, {creature: 'witch'})).toBe(
+      'A green-skinned witch'
+    );
+  });
+
   it('leaves out a phrase whose slot is empty, and its words', () => {
     expect(
       promptText(CHARACTER_SENTENCE, {creature: 'cat', adjective: 'grumpy'})
