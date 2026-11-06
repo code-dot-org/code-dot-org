@@ -14,6 +14,7 @@ import MarkdownStep from './MarkdownStep';
 import PanelsStep from './PanelsStep';
 import QuestionsStep from './QuestionsStep';
 import ReviewStep from './ReviewStep';
+import StatsStep from './StatsStep';
 import VideoStep from './VideoStep';
 
 import styles from './stepPlayer.module.scss';
@@ -202,6 +203,15 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
       case 'markdown':
         return (
           <MarkdownStep
+            key={step.id}
+            step={step}
+            continueLabel={continueLabel}
+            onComplete={advance}
+          />
+        );
+      case 'stats':
+        return (
+          <StatsStep
             key={step.id}
             step={step}
             continueLabel={continueLabel}

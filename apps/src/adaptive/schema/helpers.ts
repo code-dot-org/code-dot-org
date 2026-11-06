@@ -10,6 +10,26 @@ type ResolvedStandard = NonNullable<
   Pathway['skills'][string]['standards']
 >[number];
 
+/** Shape shared by a pathway as authored and as served, for the lookups below. */
+interface HasCheckpoints<C> {
+  checkpoints: C[];
+  finish?: {checkpoint?: C};
+}
+
+/** The pathway's checkpoints and, last, the finish checkpoint when there is one. */
+export function allCheckpoints<C>(pathway: HasCheckpoints<C>): C[] {
+  const finish = pathway.finish?.checkpoint;
+  return finish ? [...pathway.checkpoints, finish] : pathway.checkpoints;
+}
+
+/** The checkpoint with `id`, the finish checkpoint included, or undefined. */
+export function findCheckpoint<C extends {id: string}>(
+  pathway: HasCheckpoints<C>,
+  id: string
+): C | undefined {
+  return allCheckpoints(pathway).find(c => c.id === id);
+}
+
 /**
  * Checkpoints in progression order: by the length of the longest `requires`
  * chain beneath each one, so roots come first and every checkpoint follows

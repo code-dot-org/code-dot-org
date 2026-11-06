@@ -27,7 +27,6 @@ jest.mock('tone', () => {
     lfos: [] as LFO[],
     compressors: [] as Compressor[],
     synths: [] as Synth[],
-    plucks: [] as PluckSynth[],
   };
   class Synth extends Node {
     frequency = param();
@@ -111,14 +110,6 @@ jest.mock('tone', () => {
       made.compressors.push(this);
     }
   }
-  class PluckSynth extends Node {
-    release = 0;
-    triggerAttack: Fn = jest.fn(() => this);
-    constructor(public options: object) {
-      super();
-      made.plucks.push(this);
-    }
-  }
   // Fresh per test: the module keeps its bus and instruments per context.
   const makeContext = () => ({
     state: 'running',
@@ -142,7 +133,6 @@ jest.mock('tone', () => {
     MembraneSynth,
     FMSynth,
     MetalSynth,
-    PluckSynth,
     getContext: () => context,
     start,
     __made: made,
@@ -344,7 +334,6 @@ describe('playNotes', () => {
       lfos: FakeLfo[];
       compressors: object[];
       synths: (Struck & {constructor: {name: string}})[];
-      plucks: {release: number; triggerAttack: jest.Mock; dispose: jest.Mock}[];
     };
     __context: {state: string; setTimeout: jest.Mock};
     __resetContext: () => void;
@@ -527,11 +516,6 @@ describe('playNotes', () => {
       expect(synth.triggerRelease).toHaveBeenCalledWith(10);
       expect(synth.dispose).not.toHaveBeenCalled();
     });
-    playSoundEffect({...jump, wave: 'pluck', pattern: 'steady'});
-    stopSoundEffects();
-    const gain = made.gains.at(-1)!.gain;
-    expect(gain.cancelScheduledValues).toHaveBeenCalledWith(10);
-    expect(gain.setValueAtTime).toHaveBeenLastCalledWith(0, 10);
   });
 
   it('ends a wobble when its instrument is struck again, or on stop', () => {
@@ -632,25 +616,6 @@ describe('playNotes', () => {
     const [note] = notesFor({...jump, wave: 'bell'});
     const [synth] = made.synths;
     expect(near(rampTarget(synth.frequency), note.slideTo!)).toBe(true);
-  });
-
-  it('plucks one string, or a strummed chord, and never bends it', () => {
-    const [note] = notesFor({...jump, wave: 'pluck', pattern: 'slide up'});
-    playNotes([note]);
-    expect(made.plucks).toHaveLength(1);
-    expect(made.synths).toHaveLength(0);
-    const [[hz, at]] = made.plucks[0].triggerAttack.mock.calls;
-    expect(near(hz, note.hz)).toBe(true);
-    expect(at).toBe(10);
-    expect(made.plucks[0].release).toBe(note.seconds);
-    playSoundEffect({...jump, wave: 'pluck', pattern: 'chord'});
-    // The chord takes the next three strings of the four kept.
-    expect(made.plucks).toHaveLength(4);
-    const struck = made.plucks
-      .slice(1)
-      .map(p => p.triggerAttack.mock.calls[0][0]);
-    expect(near(struck[1], struck[0] * 1.25)).toBe(true);
-    expect(near(struck[2], struck[0] * 1.5)).toBe(true);
   });
 
   it('plays nothing with ?quiet on the URL', () => {

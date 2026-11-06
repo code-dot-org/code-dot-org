@@ -327,9 +327,7 @@
           "id": "fix-it-project",
           "title": "Report it and check the fix",
           "kind": "level",
-          "level": "adaptive-less-checkpoints-fix-it-apply",
-          "project": true,
-          "instructionsPrompt": "Task: Reports a real problem, then checks the AI's fix.\nOutline: Needs a real problem. Prompt: \"Tell the AI what you expected, what happened and where.\" Then, after the AI offers a fix: \"How did you check? Say what you tried.\" If nothing breaks, the tutor may offer a safe problem (parked for engineering). Two moments in one step, so it runs longer than the other project steps.\nEvidence: what was expected, what happened and where, all in one message; and a stated check, such as \"I reloaded and the image appears.\""
+          "level": "adaptive-less-checkpoints-fix-it-apply"
         }
       ]
     },

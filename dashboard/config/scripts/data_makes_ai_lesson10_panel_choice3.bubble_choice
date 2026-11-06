@@ -1,0 +1,10 @@
+name 'data-makes-ai-lesson10-panel-choice3'
+display_name 'App Data and Models'
+description 'These are the datasets that have been used to train app models. Explore the decision trees and trace mistakes that you find'
+
+sublevels
+level 'data-makes-ai-lesson10-aistudio-marisol'
+level 'data-makes-ai-lesson10-aistudio-andre'
+level 'data-makes-ai-lesson10-aistudio-jonah'
+
+uses_lab2
