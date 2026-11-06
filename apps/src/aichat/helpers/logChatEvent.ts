@@ -1,12 +1,23 @@
 import ChatEventLogger from '../chatEventLogger';
-import {ChatEvent, isModelUpdate, isNotification} from '../types';
+import {
+  AichatContext,
+  ChatEvent,
+  isModelUpdate,
+  isNotification,
+} from '../types';
 
 // Logs the event to the backend for all chat events except:
 // - notifications with includeInHistory != true
 // - if the teacher is viewing as a student.
+//
+// Pass aichatContext when the event belongs to a context that may no longer be
+// current -- for instance a model response that arrives after the user has
+// moved to another level. Without it, the event is filed under whatever
+// context is in effect when it reaches the server.
 export const logChatEvent = (
   chatEvent: ChatEvent,
-  viewAsUserId: number | null
+  viewAsUserId: number | null,
+  aichatContext?: AichatContext
 ) => {
   // Do not log to backend if a teacher is viewing a student's work,
   // and for most Notifications (exception being when a student fully reset's their project).
@@ -32,5 +43,5 @@ export const logChatEvent = (
     };
   }
 
-  ChatEventLogger.getInstance().logChatEvent(chatEvent);
+  ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
 };
