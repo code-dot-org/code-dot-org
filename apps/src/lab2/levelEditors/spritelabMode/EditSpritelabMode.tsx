@@ -1,0 +1,51 @@
+import React, {useEffect, useState} from 'react';
+
+import {cleanLevelMode, LevelModeObject} from './spritelabMode';
+import SpritelabModeFields from './SpritelabModeFields';
+
+interface EditSpritelabModeProps {
+  initialMode: LevelModeObject | null;
+  initialUsesLab2: boolean;
+  // Calls back with the Lab 2 checkbox's new state; returns an unsubscribe.
+  subscribeToUsesLab2?: (onChange: (usesLab2: boolean) => void) => () => void;
+}
+
+const EditSpritelabMode: React.FunctionComponent<EditSpritelabModeProps> = ({
+  initialMode,
+  initialUsesLab2,
+  subscribeToUsesLab2,
+}) => {
+  const [usesLab2, setUsesLab2] = useState(initialUsesLab2);
+  const [{mode, removed}, setState] = useState(() =>
+    cleanLevelMode(initialMode ?? {})
+  );
+
+  useEffect(() => subscribeToUsesLab2?.(setUsesLab2), [subscribeToUsesLab2]);
+
+  // The dropped values stay listed until the page reloads: they are still
+  // about to be removed from what was saved.
+  const handleChange = (newMode: LevelModeObject) =>
+    setState(current => ({...current, mode: newMode}));
+
+  return (
+    <div>
+      {/* JSON.stringify, not serializeJsonObject: the server parses this
+          string, and "" is not valid JSON. An empty object clears the
+          property, since blank properties are stripped on save. */}
+      <input
+        id="level_level_mode"
+        name="level[level_mode]"
+        type="hidden"
+        value={JSON.stringify(mode)}
+      />
+      <SpritelabModeFields
+        mode={mode}
+        removed={removed}
+        usesLab2={usesLab2}
+        onChange={handleChange}
+      />
+    </div>
+  );
+};
+
+export default EditSpritelabMode;

@@ -1,0 +1,221 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import TextField from '@code-dot-org/component-library/textField';
+import {Typography} from '@mui/material';
+import React, {useState} from 'react';
+
+import {
+  IMAGE_SUBJECTS,
+  IMAGE_TYPE_LABELS,
+  IMAGE_TYPES,
+  ImageSubject,
+  imageKindLabel,
+  ImageType,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {LevelModeKind} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
+
+import {
+  fieldApplies,
+  getKind,
+  getPaletteRoles,
+  KIND_LABELS,
+  LEVEL_MODE_KINDS,
+  LevelModeObject,
+  setImageFirst,
+  setImageRole,
+  setImageSubject,
+  setImageType,
+  setKind,
+  setPaletteRoles,
+  tabsForKind,
+} from './spritelabMode';
+
+import moduleStyles from './edit-spritelab-mode.module.scss';
+
+interface SpritelabModeFieldsProps {
+  mode: LevelModeObject;
+  // Saved values that were not valid and are dropped from the mode.
+  removed: string[];
+  usesLab2: boolean;
+  onChange: (mode: LevelModeObject) => void;
+}
+
+const NO_KIND = '';
+const NO_IMAGE_TYPE = '';
+
+const KIND_ITEMS = [
+  {value: NO_KIND, text: 'None: the lab decides'},
+  ...LEVEL_MODE_KINDS.map(kind => ({
+    value: kind,
+    text: KIND_LABELS[kind],
+  })),
+];
+
+const IMAGE_TYPE_ITEMS = [
+  {value: NO_IMAGE_TYPE, text: 'None: every kind of image'},
+  ...IMAGE_TYPES.map(imageType => ({
+    value: imageType,
+    text: IMAGE_TYPE_LABELS[imageType],
+  })),
+];
+
+const IMAGE_SUBJECT_ITEMS = IMAGE_SUBJECTS.map(subject => ({
+  value: subject,
+  text: imageKindLabel('sprite', subject),
+}));
+
+const SpritelabModeFields: React.FunctionComponent<
+  SpritelabModeFieldsProps
+> = ({mode, removed, usesLab2, onChange}) => {
+  const kind = getKind(mode);
+  const [paletteRolesText, setPaletteRolesText] = useState(() =>
+    getPaletteRoles(mode).join(', ')
+  );
+
+  const kindHelper = kind
+    ? `Students see these tabs: ${tabsForKind(kind, mode.imageFirst === true)}.`
+    : 'Without a mode the level shows every tab and nothing is locked.';
+
+  const showImageType = fieldApplies(mode, 'imageType');
+  const showImageSubject = fieldApplies(mode, 'imageSubject');
+  const showImageRole = fieldApplies(mode, 'imageRole');
+  const showPaletteRoles = fieldApplies(mode, 'paletteRoles');
+  const showImageFirst = fieldApplies(mode, 'imageFirst');
+
+  // The two settings disagree about which wins: the World palette lists the
+  // roles' images but preselects the image type's, which may not be among them.
+  const paletteConflict =
+    showPaletteRoles &&
+    getPaletteRoles(mode).length > 0 &&
+    typeof mode.imageType === 'string';
+
+  const imageTypeHelper =
+    kind === 'world' && mode.imageType === 'background'
+      ? 'A world cell holds a sprite or a block, so a background preselects nothing.'
+      : kind === 'world'
+      ? 'The World palette offers only this level’s image of this kind.'
+      : 'The Images tab offers only this kind, and only one image.';
+
+  return (
+    <div>
+      {!usesLab2 && (
+        <Typography variant="body4" className={moduleStyles.descriptionText}>
+          These settings take effect only on the Lab 2 version of Sprite Lab.
+          Enable Lab 2 below for them to do anything.
+        </Typography>
+      )}
+      {removed.length > 0 && (
+        <Typography variant="body4" className={moduleStyles.warningText}>
+          These saved values are not valid for Sprite Lab 2 and will be removed
+          when you save: {removed.join('; ')}
+        </Typography>
+      )}
+      <div className={moduleStyles.fieldArea}>
+        <SimpleDropdown
+          labelText="Kind"
+          name="spritelab_mode_kind"
+          items={KIND_ITEMS}
+          selectedValue={kind ?? NO_KIND}
+          onChange={event =>
+            onChange(
+              setKind(
+                mode,
+                event.target.value === NO_KIND
+                  ? undefined
+                  : (event.target.value as LevelModeKind)
+              )
+            )
+          }
+          helperMessage={kindHelper}
+          size="s"
+        />
+      </div>
+      {showImageType && (
+        <div className={moduleStyles.fieldArea}>
+          <SimpleDropdown
+            labelText="Image type"
+            name="spritelab_mode_image_type"
+            items={IMAGE_TYPE_ITEMS}
+            selectedValue={(mode.imageType as string) ?? NO_IMAGE_TYPE}
+            onChange={event =>
+              onChange(
+                setImageType(
+                  mode,
+                  event.target.value === NO_IMAGE_TYPE
+                    ? undefined
+                    : (event.target.value as ImageType)
+                )
+              )
+            }
+            helperMessage={imageTypeHelper}
+            errorMessage={
+              paletteConflict
+                ? 'Palette roles already choose the images. Clear one or the other.'
+                : undefined
+            }
+            size="s"
+          />
+        </div>
+      )}
+      {showImageSubject && (
+        <div className={moduleStyles.fieldArea}>
+          <SimpleDropdown
+            labelText="Image subject"
+            name="spritelab_mode_image_subject"
+            items={IMAGE_SUBJECT_ITEMS}
+            selectedValue={(mode.imageSubject as string) ?? 'character'}
+            onChange={event =>
+              onChange(
+                setImageSubject(mode, event.target.value as ImageSubject)
+              )
+            }
+            helperMessage="A character can be drawn as an animated set; an object is one still picture."
+            size="s"
+          />
+        </div>
+      )}
+      {showImageRole && (
+        <div className={moduleStyles.fieldArea}>
+          <TextField
+            label="Image role"
+            name="spritelab_mode_image_role"
+            value={(mode.imageRole as string) ?? ''}
+            onChange={event => onChange(setImageRole(mode, event.target.value))}
+            helperMessage="Recorded on every image this level makes. Later levels open their dropdowns on it through Image role defaults."
+            size="s"
+          />
+        </div>
+      )}
+      {showPaletteRoles && (
+        <div className={moduleStyles.fieldArea}>
+          <TextField
+            label="Palette roles"
+            name="spritelab_mode_palette_roles"
+            value={paletteRolesText}
+            onChange={event => {
+              setPaletteRolesText(event.target.value);
+              onChange(setPaletteRoles(mode, event.target.value));
+            }}
+            helperMessage="Comma separated. The palette offers images in these roles instead of one image, and the first role listed is what students place first."
+            size="s"
+          />
+        </div>
+      )}
+      {showImageFirst && (
+        <div className={moduleStyles.booleanField}>
+          <Checkbox
+            name="spritelab_mode_image_first"
+            label="Open on the Images tab to make this level's image first"
+            checked={mode.imageFirst === true}
+            onChange={event =>
+              onChange(setImageFirst(mode, event.target.checked))
+            }
+            size="s"
+          />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SpritelabModeFields;

@@ -1,0 +1,223 @@
+/*
+  Reading and writing the Sprite Lab 2 level_mode property. The editor keeps
+  only the keys and values the lab understands; anything else is dropped when
+  the level is next saved. The lab's own reader is
+  apps/src/p5lab/spritelab/lab2/levelMode.ts, which owns the types.
+*/
+import {
+  IMAGE_SUBJECTS,
+  IMAGE_TYPES,
+  ImageSubject,
+  ImageType,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {
+  LevelMode,
+  LevelModeKind,
+  tabsForMode,
+} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
+
+import {setJsonObjectValue} from '../jsonUtils';
+
+export type LevelModeObject = Record<string, unknown>;
+
+export const LEVEL_MODE_KINDS: LevelModeKind[] = [
+  'code',
+  'world',
+  'play',
+  'image',
+  'freeplay',
+];
+
+export const KIND_LABELS: Record<LevelModeKind, string> = {
+  code: 'Code',
+  world: 'World',
+  play: 'Play',
+  image: 'Image',
+  freeplay: 'Free play',
+};
+
+// Keys a kind can carry; changing the kind drops the rest.
+const KEYS_BY_KIND: Record<LevelModeKind, string[]> = {
+  code: ['imageType', 'imageSubject', 'imageRole', 'imageFirst'],
+  world: [
+    'imageType',
+    'imageSubject',
+    'imageRole',
+    'paletteRoles',
+    'imageFirst',
+  ],
+  play: ['imageType', 'imageSubject', 'imageRole', 'imageFirst'],
+  image: ['imageType', 'imageSubject', 'imageRole'],
+  freeplay: [],
+};
+
+export function getKind(mode: LevelModeObject): LevelModeKind | undefined {
+  const kind = mode.kind;
+  return LEVEL_MODE_KINDS.includes(kind as LevelModeKind)
+    ? (kind as LevelModeKind)
+    : undefined;
+}
+
+export function getPaletteRoles(mode: LevelModeObject): string[] {
+  return Array.isArray(mode.paletteRoles)
+    ? (mode.paletteRoles as string[])
+    : [];
+}
+
+/** The tabs a kind gives a student, for the Kind field's helper text. */
+export function tabsForKind(kind: LevelModeKind, imageFirst: boolean): string {
+  const mode: LevelMode = {kind, imageFirst};
+  return (tabsForMode(mode) ?? []).join(', ');
+}
+
+function isNonEmptyString(value: unknown): boolean {
+  return typeof value === 'string' && value.trim() !== '';
+}
+
+function isValidLevelModeValue(key: string, value: unknown): boolean {
+  switch (key) {
+    case 'kind':
+      return LEVEL_MODE_KINDS.includes(value as LevelModeKind);
+    case 'imageType':
+      return IMAGE_TYPES.includes(value as ImageType);
+    case 'imageSubject':
+      return IMAGE_SUBJECTS.includes(value as ImageSubject);
+    case 'imageRole':
+      return isNonEmptyString(value);
+    case 'paletteRoles':
+      return (
+        Array.isArray(value) &&
+        value.length > 0 &&
+        value.every(isNonEmptyString) &&
+        new Set(value).size === value.length
+      );
+    // A false flag reads the same as no flag, so only true is stored.
+    case 'imageFirst':
+      return value === true;
+    default:
+      return false;
+  }
+}
+
+/**
+ * Drops unknown keys and invalid values, returning a description of each one
+ * dropped. Without a valid kind the whole mode means nothing to the lab, so
+ * everything goes.
+ */
+export function cleanLevelMode(mode: LevelModeObject): {
+  mode: LevelModeObject;
+  removed: string[];
+} {
+  const describe = (key: string, value: unknown) =>
+    `${key}: ${JSON.stringify(value)}`;
+  if (!getKind(mode)) {
+    return {
+      mode: {},
+      removed: Object.entries(mode).map(([key, value]) => describe(key, value)),
+    };
+  }
+  const cleaned: LevelModeObject = {};
+  const removed: string[] = [];
+  Object.entries(mode).forEach(([key, value]) => {
+    if (isValidLevelModeValue(key, value)) {
+      cleaned[key] = value;
+    } else {
+      removed.push(describe(key, value));
+    }
+  });
+  return {mode: cleaned, removed};
+}
+
+/** Whether a field belongs on the form for the mode as it stands. */
+export function fieldApplies(mode: LevelModeObject, key: string): boolean {
+  const kind = getKind(mode);
+  if (!kind) {
+    return false;
+  }
+  if (!KEYS_BY_KIND[kind].includes(key)) {
+    return false;
+  }
+  switch (key) {
+    case 'imageType':
+      return kind === 'image' || kind === 'world' || mode.imageFirst === true;
+    case 'imageSubject':
+      return fieldApplies(mode, 'imageType') && mode.imageType === 'sprite';
+    case 'imageRole':
+      return kind === 'image' || fieldApplies(mode, 'imageType');
+    default:
+      return true;
+  }
+}
+
+function withoutInapplicableKeys(mode: LevelModeObject): LevelModeObject {
+  const next: LevelModeObject = {};
+  Object.entries(mode).forEach(([key, value]) => {
+    if (key === 'kind' || fieldApplies(mode, key)) {
+      next[key] = value;
+    }
+  });
+  return next;
+}
+
+export function setKind(
+  mode: LevelModeObject,
+  kind: LevelModeKind | undefined
+): LevelModeObject {
+  if (!kind) {
+    return {};
+  }
+  return withoutInapplicableKeys(setJsonObjectValue(mode, 'kind', kind));
+}
+
+export function setImageType(
+  mode: LevelModeObject,
+  imageType: ImageType | undefined
+): LevelModeObject {
+  return withoutInapplicableKeys(
+    setJsonObjectValue(mode, 'imageType', imageType)
+  );
+}
+
+export function setImageSubject(
+  mode: LevelModeObject,
+  imageSubject: ImageSubject | undefined
+): LevelModeObject {
+  return setJsonObjectValue(mode, 'imageSubject', imageSubject);
+}
+
+export function setImageRole(
+  mode: LevelModeObject,
+  imageRole: string
+): LevelModeObject {
+  return setJsonObjectValue(mode, 'imageRole', imageRole.trim() || undefined);
+}
+
+export function setImageFirst(
+  mode: LevelModeObject,
+  imageFirst: boolean
+): LevelModeObject {
+  return withoutInapplicableKeys(
+    setJsonObjectValue(mode, 'imageFirst', imageFirst || undefined)
+  );
+}
+
+/** Roles as typed: comma separated, blanks and repeats dropped, order kept. */
+export function parsePaletteRoles(text: string): string[] {
+  const roles = text
+    .split(',')
+    .map(role => role.trim())
+    .filter(role => role !== '');
+  return [...new Set(roles)];
+}
+
+export function setPaletteRoles(
+  mode: LevelModeObject,
+  text: string
+): LevelModeObject {
+  const roles = parsePaletteRoles(text);
+  return setJsonObjectValue(
+    mode,
+    'paletteRoles',
+    roles.length ? roles : undefined
+  );
+}
