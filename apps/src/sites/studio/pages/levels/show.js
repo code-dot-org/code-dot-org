@@ -3,7 +3,10 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-import {setHostedDrawerConfig} from '@cdo/apps/aiTeacherDrawer/redux';
+import {
+  setDrawerRubric,
+  setHostedDrawerConfig,
+} from '@cdo/apps/aiTeacherDrawer/redux';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
 import ShareLogo from '@cdo/apps/code-studio/components/shareLogo/ShareLogo';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
@@ -147,6 +150,19 @@ function initPage() {
       levelName: config.level_name,
     };
     getStore().dispatch(setTaRubric(rubric));
+    if (rubric) {
+      getStore().dispatch(
+        setDrawerRubric({
+          rubric,
+          studentLevelInfo,
+          levelName: config.level_name,
+          parentLevelName,
+          levelType,
+          unitName: config.script_name,
+          courseName: config.course_name,
+        })
+      );
+    }
 
     const rubricFabMountPoint = document.getElementById(
       'rubric-fab-mount-point'
