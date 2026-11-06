@@ -11,6 +11,7 @@ const parts = (over: Partial<SentenceSceneParts> = {}): SentenceSceneParts => ({
   panelRef: {current: null},
   frame: null,
   frameFilled: false,
+  cachedTag: null,
   behindTheScenes: null,
   status: null,
   sentence: <span>sentence</span>,

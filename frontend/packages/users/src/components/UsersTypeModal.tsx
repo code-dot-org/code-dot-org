@@ -7,11 +7,13 @@ import {useToast} from '@code-dot-org/component-library/toast';
 import {
   DashboardApiClient,
   useUpdateUserType,
+  type EmailOptIn,
   type UserType,
 } from '@code-dot-org/core/api';
 
 import {hashEmail} from '../util/hashEmail';
 
+import EmailOptInField from './EmailOptInField';
 import FormDialog from './FormDialog';
 import {useModalForm} from './useModalForm';
 
@@ -23,7 +25,8 @@ const TYPE_LABEL: Record<UserType, string> = {
 /**
  * Confirmation alertdialog for an account-type change. Committed only on
  * confirm; dismissing leaves the account unchanged. Educator accounts require a
- * cleartext email, so becoming one prompts for it and blocks confirm until given.
+ * cleartext email and, like legacy, an answer to the email opt-in question, so
+ * becoming one prompts for both and blocks confirm until given.
  */
 export default function UsersTypeModal({
   open,
@@ -38,11 +41,16 @@ export default function UsersTypeModal({
   const toast = useToast();
   const {errors, resetErrors, onSubmit} = useModalForm();
   const [email, setEmail] = useState('');
+  const [emailOptIn, setEmailOptIn] = useState<EmailOptIn>('');
+  const [optInTouched, setOptInTouched] = useState(false);
 
   const isChangingToEducator = prospectiveType === 'teacher';
+  const optInUnanswered = isChangingToEducator && emailOptIn === '';
 
   const close = () => {
     setEmail('');
+    setEmailOptIn('');
+    setOptInTouched(false);
     resetErrors();
     onClose();
   };
@@ -52,7 +60,12 @@ export default function UsersTypeModal({
     if (!prospectiveType) return;
     await mutation.mutateAsync(
       isChangingToEducator
-        ? {userType: 'teacher', email, hashedEmail: hashEmail(email)}
+        ? {
+            userType: 'teacher',
+            email,
+            hashedEmail: hashEmail(email),
+            emailOptIn,
+          }
         : {userType: prospectiveType},
     );
     toast(`Account type changed to ${TYPE_LABEL[prospectiveType]}.`);
@@ -78,7 +91,8 @@ export default function UsersTypeModal({
             variant="contained"
             disabled={
               mutation.isPending ||
-              (isChangingToEducator && email.trim().length === 0)
+              (isChangingToEducator && email.trim().length === 0) ||
+              optInUnanswered
             }
           >
             {prospectiveType
@@ -106,6 +120,15 @@ export default function UsersTypeModal({
           errorMessage={errors.fieldErrors.email?.[0]}
           aria-invalid={errors.fieldErrors.email ? true : undefined}
           helperMessage="Educator accounts need an email address."
+        />
+      )}
+      {isChangingToEducator && (
+        <EmailOptInField
+          value={emailOptIn}
+          onChange={setEmailOptIn}
+          touched={optInTouched}
+          onTouched={() => setOptInTouched(true)}
+          disabled={mutation.isPending}
         />
       )}
     </FormDialog>

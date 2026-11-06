@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-03 04:36:00 UTC",
+    "serialized_at": "2026-11-06 04:52:19 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -10052,6 +10052,90 @@
       "level_keys": [
         "adaptive-less-checkpoints-show-off-apply"
       ]
+    },
+    {
+      "chapter": 370,
+      "position": 43,
+      "activity_section_position": 43,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-less-checkpoints-plan-panel-interactive"
+        ],
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "a0fb6160-fa38-47c4-984f-9d1ecb5e3b8e"
+      },
+      "level_keys": [
+        "adaptive-less-checkpoints-plan-panel-interactive"
+      ]
+    },
+    {
+      "chapter": 371,
+      "position": 44,
+      "activity_section_position": 44,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-less-checkpoints-plan-panel-words"
+        ],
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "a0fb6160-fa38-47c4-984f-9d1ecb5e3b8e"
+      },
+      "level_keys": [
+        "adaptive-less-checkpoints-plan-panel-words"
+      ]
+    },
+    {
+      "chapter": 372,
+      "position": 45,
+      "activity_section_position": 45,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-less-checkpoints-plan-panel-style"
+        ],
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "a0fb6160-fa38-47c4-984f-9d1ecb5e3b8e"
+      },
+      "level_keys": [
+        "adaptive-less-checkpoints-plan-panel-style"
+      ]
+    },
+    {
+      "chapter": 373,
+      "position": 46,
+      "activity_section_position": 46,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-less-checkpoints-plan-panel-code"
+        ],
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "a0fb6160-fa38-47c4-984f-9d1ecb5e3b8e"
+      },
+      "level_keys": [
+        "adaptive-less-checkpoints-plan-panel-code"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -14476,6 +14560,54 @@
         "level.key": "adaptive-less-checkpoints-show-off-apply",
         "script_level.level_keys": [
           "adaptive-less-checkpoints-show-off-apply"
+        ],
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "a0fb6160-fa38-47c4-984f-9d1ecb5e3b8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-less-checkpoints-plan-panel-interactive",
+        "script_level.level_keys": [
+          "adaptive-less-checkpoints-plan-panel-interactive"
+        ],
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "a0fb6160-fa38-47c4-984f-9d1ecb5e3b8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-less-checkpoints-plan-panel-words",
+        "script_level.level_keys": [
+          "adaptive-less-checkpoints-plan-panel-words"
+        ],
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "a0fb6160-fa38-47c4-984f-9d1ecb5e3b8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-less-checkpoints-plan-panel-style",
+        "script_level.level_keys": [
+          "adaptive-less-checkpoints-plan-panel-style"
+        ],
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "a0fb6160-fa38-47c4-984f-9d1ecb5e3b8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-less-checkpoints-plan-panel-code",
+        "script_level.level_keys": [
+          "adaptive-less-checkpoints-plan-panel-code"
         ],
         "lesson.key": "lesson-25",
         "lesson_group.key": "",

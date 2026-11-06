@@ -146,6 +146,8 @@ export function useObjectives({
   baselineGrid,
   imagesForRole,
   source,
+  sceneSources,
+  editingSceneId,
   everPlayed,
   rated,
   runtime,
@@ -156,6 +158,8 @@ export function useObjectives({
   baselineGrid?: (WorldCell | null)[][];
   imagesForRole: Record<string, readonly string[] | undefined>;
   source?: WorkspaceSource;
+  sceneSources?: Record<string, WorkspaceSource | undefined>;
+  editingSceneId?: string;
   everPlayed: boolean;
   rated: boolean;
   runtime: RuntimeProgress;
@@ -168,6 +172,8 @@ export function useObjectives({
       baselineGrid,
       imagesForRole,
       source,
+      sceneSources,
+      editingSceneId,
       everPlayed,
       rated,
       runtime: runtime ?? EMPTY_RUNTIME,
@@ -178,6 +184,8 @@ export function useObjectives({
       baselineGrid,
       imagesForRole,
       source,
+      sceneSources,
+      editingSceneId,
       everPlayed,
       rated,
       runtime,

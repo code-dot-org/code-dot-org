@@ -479,6 +479,8 @@ interface FieldJson {
 
 interface FieldInput extends FieldJson {
   type: 'field_input';
+  /** The text the field starts with. */
+  text?: string;
 }
 
 interface FieldNumber extends FieldJson {

@@ -1665,6 +1665,34 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test 'can set ai_challenge_enabled by the section teacher' do
+    sign_in @teacher
+    post :set_ai_challenge_enabled, params: {id: @section.id, ai_challenge_enabled: true}
+    assert_response :success
+    assert @section.reload.ai_challenge_enabled
+
+    post :set_ai_challenge_enabled, params: {id: @section.id, ai_challenge_enabled: false}
+    assert_response :success
+    refute @section.reload.ai_challenge_enabled
+  end
+
+  test 'cannot set ai_challenge_enabled by a different teacher' do
+    sign_in @following_teacher
+    post :set_ai_challenge_enabled, params: {id: @section.id, ai_challenge_enabled: true}
+    assert_response :forbidden
+  end
+
+  test 'set ai_challenge_enabled returns 403 when signed out' do
+    post :set_ai_challenge_enabled, params: {id: @section.id, ai_challenge_enabled: true}
+    assert_response :forbidden
+  end
+
+  test 'set ai_challenge_enabled fails when passed nil' do
+    sign_in @teacher
+    post :set_ai_challenge_enabled, params: {id: @section.id, ai_challenge_enabled: nil}
+    assert_response :bad_request
+  end
+
   # Helper: build a section with a script containing two lessons, each with one script level.
   # Lessons belong to a lesson_group so unit.lessons (through lesson_groups) finds them.
   # Returns [section, student, lesson1, lesson2, sl1, sl2].
