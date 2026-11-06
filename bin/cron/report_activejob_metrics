@@ -9,14 +9,32 @@ require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../deployment'
-require 'cdo/sequel'
+require 'mysql2'
+require 'uri'
 require 'cdo/active_job_backend'
 require 'cdo/active_job_queue_metrics'
 
+# encoding and default_group match dashboard/config/database.yml.
+def dashboard_db_client
+  uri = URI.parse(CDO.dashboard_db_writer)
+  Mysql2::Client.new(
+    host: uri.host,
+    port: uri.port,
+    username: uri.user && URI::DEFAULT_PARSER.unescape(uri.user),
+    password: uri.password && URI::DEFAULT_PARSER.unescape(uri.password),
+    database: uri.path.delete_prefix('/'),
+    encoding: 'utf8mb4',
+    default_group: 'cdo',
+    connect_timeout: 2,
+    read_timeout: 30,
+    write_timeout: 5
+  )
+end
+
 def main
-  db = Cdo::Sequel.database_connection_pool(CDO.dashboard_db_writer)
-  Cdo::ActiveJobQueueMetrics.report_overall(
-    ->(sql) {db.fetch(sql).first},
+  db = dashboard_db_client
+  Cdo::ActiveJobQueueMetrics.report(
+    ->(sql) {db.query(sql).to_a},
     environment: CDO.rack_env,
     worker_count: Cdo::ActiveJobBackend::ExistingWorkers.get_workers_from_ps.size
   )

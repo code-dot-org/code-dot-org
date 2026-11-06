@@ -19,7 +19,7 @@ module ActiveJobMetrics
     # When both the Parent and Child class define the same callback, they may be called in any order.
     # Also note that jobs executed via `.perform_now` will not trigger the `enqueue` callbacks.
     # https://guides.rubyonrails.org/v6.0/active_job_basics.html#available-callbacks
-    after_enqueue :report_job_count
+    after_enqueue :report_enqueued
     before_perform :report_wait_time
     after_perform :report_performance
   end
@@ -31,17 +31,20 @@ module ActiveJobMetrics
     ]
   end
 
-  def self.select_one
-    ->(sql) {Delayed::Job.connection.select_one(sql)}
-  end
-
-  # The minutely cron publishes the same queue-wide metrics. Publishing them on
-  # enqueue as well lets KEDA see a burst before the next cron run. Worker
-  # metrics come only from the cron: this process cannot see the workers.
-  protected def report_job_count
-    now = Time.now.utc
-    Cdo::ActiveJobQueueMetrics.report_overall(ActiveJobMetrics.select_one, environment: CDO.rack_env, now: now)
-    Cdo::ActiveJobQueueMetrics.report_job(ActiveJobMetrics.select_one, job_class: self.class.name, environment: CDO.rack_env, now: now)
+  # Queue depth, per class and overall, comes from the minutely
+  # report_activejob_metrics cron, so enqueue costs no queries.
+  protected def report_enqueued
+    Cdo::Metrics.push(
+      METRICS_NAMESPACE, [
+        {
+          metric_name: 'EnqueuedCount',
+          value: 1,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: common_dimensions,
+        },
+      ]
+    )
   rescue => exception
     Observability::Errors.report(exception, error_message: 'Error reporting ActiveJob metrics')
   end
