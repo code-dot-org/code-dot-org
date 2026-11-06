@@ -94,7 +94,7 @@ module AiPodcastsSafetyHelper
     end
 
     private def client
-      AichatOpenaiResponsesHelper::Client.new(CDO.openai_student_learning_api_key, MODEL)
+      AichatOpenaiResponsesHelper::Client.new(CDO.openai_lesson_deep_dive_api_key, MODEL)
     end
 
     private def get_safety_system_prompt

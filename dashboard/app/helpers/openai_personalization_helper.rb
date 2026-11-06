@@ -105,8 +105,7 @@ module OpenaiPersonalizationHelper
   end
 
   def self.client
-    # NEED TO CHANGE THIS KEY
-    PersonalizationOpenaiHelper::Client.new(CDO.openai_measures_of_learning_api_key, MODEL)
+    PersonalizationOpenaiHelper::Client.new(CDO.openai_lesson_summaries_api_key, MODEL)
   end
 
   def self.prepend_system_prompt(system_prompt, messages)
