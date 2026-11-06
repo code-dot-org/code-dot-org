@@ -18,7 +18,6 @@ export const RAW_EDITABLE_PROPERTIES = [
   'objectives',
   'hide_custom_blocks',
   'image_role_defaults',
-  'level_mode',
   'pinned_scene',
   'extra_scene',
   'add_blocks',
@@ -98,7 +97,7 @@ function buildSection() {
         <code>null</code> means unset.  Only these keys save here; every
         other property has its own editor.
       </p>
-      <p>Enter properties to change as JSON — for example <code>{"level_mode": {"kind": "world"}}</code></p>
+      <p>Enter properties to change as JSON — for example <code>{"pinned_scene": {"id": "scene-1", "name": "Scene 1"}}</code></p>
       <p>
         Keys are top-level property names, and each key's value replaces
         that property whole — to change part of a nested value, copy the
