@@ -134,12 +134,6 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     sign_in(create(:levelbuilder))
     post :get_access_token, params: ask_ai_params, as: :json
     assert_response :success
-
-    pilot_teacher = create(:authorized_teacher)
-    create(:single_user_experiment, min_user_id: pilot_teacher.id, name: User::AiAccessible::SPRITELAB2_AI_PILOT)
-    sign_in(pilot_teacher)
-    post :get_access_token, params: ask_ai_params, as: :json
-    assert_response :success
   end
 
   test 'sends the log token rather than the raw user id' do

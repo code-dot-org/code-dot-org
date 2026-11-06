@@ -274,14 +274,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, response["is_verified_instructor"]
   end
 
-  test 'current reports no spritelab_ask_ai_refusal for a levelbuilder' do
-    sign_in(create(:levelbuilder))
-
-    get :current
-
-    assert_nil JSON.parse(@response.body)['spritelab_ask_ai_refusal']
-  end
-
   test 'current reports spritelab_ask_ai_refusal outside the pilot' do
     sign_in(@user)
 

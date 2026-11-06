@@ -15,9 +15,7 @@ export const AI_BLOCK_TYPES = [
 
 const AI_BLOCK_TYPE_SET: ReadonlySet<string> = new Set(AI_BLOCK_TYPES);
 
-// The AI category goes whole, prompt-answered block and all, so it does not
-// linger with only that block in it. It stays, stripped, when it is the only
-// place the level offers one of those blocks.
+// Authored AI categories hold the prompt-answered block too.
 export function withoutAiBlocks(toolbox: ToolboxInfo): ToolboxInfo {
   const stripped = withoutBlockTypes(toolbox, AI_BLOCK_TYPE_SET);
   const category = findCategory(stripped.contents, AI_CATEGORY);

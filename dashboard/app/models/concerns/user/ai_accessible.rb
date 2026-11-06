@@ -29,12 +29,11 @@ module User::AiAccessible
       teachers.any? {|teacher| teacher.has_pilot_experiment?(SPRITELAB2_AI_PILOT)}
   end
 
-  # Why the ask AI blocks are refused, or nil. NOT_IN_PILOT comes first: the
-  # client hides the blocks on it alone. Essential-only access is not enough:
-  # the level id it would be checked against is client-supplied.
   def spritelab_ask_ai_refusal
+    # First: the client hides the blocks on this reason alone.
     return SPRITELAB_ASK_AI_REFUSALS[:NOT_IN_PILOT] unless in_spritelab2_ai_pilot?
     return SPRITELAB_ASK_AI_REFUSALS[:OFF] unless DCDO.get('spritelab-lab2-ask-ai-enabled', true)
+    # Essential-only won't do: it would trust a client-supplied level id.
     return SPRITELAB_ASK_AI_REFUSALS[:NO_ACCESS] unless ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]
     # AiGatewayAuthController refuses these for every client type.
     return SPRITELAB_ASK_AI_REFUSALS[:REGION_BLOCKED] if blocked_aichat_providers.any? && !DCDO.get('ai_gateway_fallback_is_enabled', false)

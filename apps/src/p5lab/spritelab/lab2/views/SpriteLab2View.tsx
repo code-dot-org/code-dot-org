@@ -1761,8 +1761,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     } else {
       runProgram();
     }
-    // inAiPilot arrives with the current user, maybe after the first run
-    // refused its AI blocks; run again so they take effect.
+    // The current user may load after the first run refused its AI blocks.
   }, [engineReady, runProgram, inAiPilot]);
   // The premade world is painted once the engine is ready and the images it
   // names exist. A level that opened on Play restarts the game with it.

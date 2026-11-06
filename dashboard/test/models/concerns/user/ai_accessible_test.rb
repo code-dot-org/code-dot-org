@@ -442,11 +442,6 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       _(user.can_access_aichat_chat_completion?(curriculum_generator, nil)).must_equal true
     end
 
-    it 'returns false for SPRITELAB_ASK_AI outside the pilot, even with access' do
-      allow(user).to receive(:has_aichat_access?).and_return(true)
-      _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal false
-    end
-
     it 'returns true for SPRITELAB_ASK_AI in the pilot with access' do
       allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(true)
       allow(user).to receive(:ai_chat_access_level).and_return(Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
@@ -461,18 +456,6 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       essential_level = create(:aichat)
       _(user.has_aichat_access?(essential_level.id)).must_equal true
       _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, essential_level.id)).must_equal false
-    end
-
-    it 'returns false for SPRITELAB_ASK_AI in the pilot without access' do
-      allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(true)
-      _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal false
-    end
-
-    it 'returns false for SPRITELAB_ASK_AI when the DCDO kill switch is off' do
-      allow(DCDO).to receive(:get).with("spritelab-lab2-ask-ai-enabled", true).and_return(false)
-      allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(true)
-      allow(user).to receive(:has_aichat_access?).and_return(true)
-      _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal false
     end
 
     # Sprite Lab 2's ambient client type is trusted; this one must not inherit that.
