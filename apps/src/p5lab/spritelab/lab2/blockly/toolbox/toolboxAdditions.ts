@@ -94,8 +94,6 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     // light blue ones.
     name: 'Platform',
     types: [
-      'spritelab2_setPlatformJumpHeight',
-      'spritelab2_setPlatformGravityDirection',
       'spritelab2_setCameraZoom',
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
@@ -165,16 +163,6 @@ function ensureInjectedCategories(def: ToolboxInfo): void {
   const categories = contents.filter(isStaticCategoryInfo);
   const sprites = findCategory(contents, 'Sprites');
   if (!sprites) {
-    const present = new Set(
-      contents.filter(isBlockInfo).map(block => block.type)
-    );
-    ['spritelab2_setPlatformJumpHeight', 'spritelab2_setPlatformGravityDirection']
-      .reverse()
-      .forEach(type => {
-        if (!present.has(type)) {
-          contents.unshift({kind: 'block', type});
-        }
-      });
     return;
   }
   // A new block entry carries its FIELD_DEFAULTS; anything else starts
