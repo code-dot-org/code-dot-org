@@ -108,9 +108,9 @@ const SpritelabModeFields: React.FunctionComponent<
   const showPaletteRoles = fieldApplies(mode, 'paletteRoles');
   const showImageFirst = fieldApplies(mode, 'imageFirst');
 
-  // The palette lists the roles' images but preselects the one found by image
-  // type and role, so a role the palette omits preselects a hidden image. A
-  // background preselects nothing, so it cannot disagree.
+  // The palette lists images in the palette roles but preselects the level's
+  // image role, so a role the palette omits will select a hidden image. A
+  // background selects nothing, so it cannot disagree.
   const paletteConflict =
     showPaletteRoles &&
     getPaletteRoles(mode).length > 0 &&
@@ -118,8 +118,8 @@ const SpritelabModeFields: React.FunctionComponent<
     mode.imageType !== 'background' &&
     !getPaletteRoles(mode).includes(mode.imageRole as string);
 
-  // A world level is the one kind that can leave the type unset, and only
-  // while it has no Images tab of its own to fill.
+  // A world level is the one kind that can leave the type unset, but only
+  // while it has no Images tab.
   const typeMissing =
     showImageType &&
     mode.imageType === undefined &&
@@ -230,7 +230,7 @@ const SpritelabModeFields: React.FunctionComponent<
             name="spritelab_mode_image_role"
             value={(mode.imageRole as string) ?? ''}
             onChange={event => onChange(setImageRole(mode, event.target.value))}
-            helperMessage="Recorded on every image this level makes. Later levels open their dropdowns on it through Image role defaults."
+            helperMessage="Tagged on every image this level makes. Later levels can use image_role_defaults to set which role(s) blockly dropdowns should start on."
             size="s"
           />
         </div>
