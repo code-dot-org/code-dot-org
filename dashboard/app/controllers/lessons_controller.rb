@@ -241,6 +241,12 @@ class LessonsController < ApplicationController
         raise msg unless last_script_level.assessment && %w(LevelGroup Quiz).include?(last_script_level.level.type)
       end
 
+      exam_script_levels = @lesson.script_levels.select(&:exam_quiz?)
+      if exam_script_levels.any?
+        raise "A lesson containing an exam quiz must be lockable." unless @lesson.lockable
+        raise "An exam quiz must be the last level in its lesson." unless exam_script_levels == [@lesson.script_levels.last]
+      end
+
       @lesson.script.prevent_new_duplicate_levels(old_dup_level_keys)
       @lesson.script.fix_lesson_positions
     end
