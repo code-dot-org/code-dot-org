@@ -341,13 +341,17 @@ $z-over-blockly: 71;
 // of its own, one divider on its right. The design-system trigger is an
 // MUI text button; its own hover/focus styling stays.
 // Square, like the stage. Sized for the menu; `small` fits the tab bar.
+// A hairline keeps a new scene's white picture from vanishing into a
+// light menu.
 .sceneThumb {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-sizing: border-box;
   width: 40px;
   height: 40px;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 3px;
   background: var(--background-neutral-tertiary);
   color: var(--text-neutral-secondary);
