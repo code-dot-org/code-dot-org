@@ -21,6 +21,16 @@ const QUESTION = {
   page: 1,
 };
 
+const PAYLOAD = {
+  type: 'MultipleChoiceQuestion' as const,
+  questionName: 'Updated question',
+  questionTitle: 'What is 2 + 3?',
+  choices: QUESTION.choices,
+  correctChoiceId: 'b',
+  description: null,
+  explanation: null,
+};
+
 describe('useQuizBuilderQuestions', () => {
   let getSpy: jest.SpyInstance;
   let postSpy: jest.SpyInstance;
@@ -48,6 +58,71 @@ describe('useQuizBuilderQuestions', () => {
     expect(getSpy).toHaveBeenCalledWith('/levels/42/quiz_configuration');
     expect(result.current.isLoading).toBe(false);
     expect(result.current.questions).toEqual([QUESTION]);
+    expect(result.current.pages).toEqual([{page: 1, questions: [QUESTION]}]);
+  });
+
+  it('numbers pages by their order, closing gaps in the saved page numbers', async () => {
+    const later = {...QUESTION, id: 8, page: 3};
+    getSpy.mockResolvedValue({
+      json: async () => ({questions: [QUESTION, later]}),
+    } as Response);
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    expect(result.current.pages).toEqual([
+      {page: 1, questions: [QUESTION]},
+      {page: 2, questions: [later]},
+    ]);
+  });
+
+  it('keeps each question the same object across unrelated updates', async () => {
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+    const before = result.current.pages[0].questions[0];
+
+    act(() => {
+      result.current.addPage();
+    });
+
+    expect(result.current.pages[0].questions[0]).toBe(before);
+  });
+
+  it('keeps a saved question the same object across unrelated updates', async () => {
+    putSpy.mockResolvedValue({
+      json: async () => ({...QUESTION, questionName: 'Renamed'}),
+    } as Response);
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+    await act(async () => {
+      await result.current.saveQuestion(7, PAYLOAD);
+    });
+    const saved = result.current.pages[0].questions[0];
+    expect(saved).toMatchObject({questionName: 'Renamed'});
+
+    act(() => {
+      result.current.addPage();
+    });
+
+    expect(result.current.pages[0].questions[0]).toBe(saved);
+  });
+
+  it('adds an empty page at the end', async () => {
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    act(() => {
+      result.current.addPage();
+    });
+
+    expect(result.current.pages.map(p => p.questions.length)).toEqual([1, 0]);
   });
 
   it('adds a placeholder question locally, with no network call', async () => {
@@ -137,6 +212,7 @@ describe('useQuizBuilderQuestions', () => {
     });
 
     expect(result.current.questions[1]).toMatchObject({page: 2});
+    expect(result.current.pages.map(p => p.questions.length)).toEqual([1, 1]);
   });
 
   it('returns a negative id, distinct from any real server id', async () => {
@@ -168,16 +244,6 @@ describe('useQuizBuilderQuestions', () => {
   });
 
   describe('saveQuestion', () => {
-    const PAYLOAD = {
-      type: 'MultipleChoiceQuestion' as const,
-      questionName: 'Updated question',
-      questionTitle: 'What is 2 + 3?',
-      choices: QUESTION.choices,
-      correctChoiceId: 'b',
-      description: null,
-      explanation: null,
-    };
-
     it('PUTs the payload and replaces the question in place on success', async () => {
       const updated = {...QUESTION, ...PAYLOAD};
       putSpy.mockResolvedValue({json: async () => updated} as Response);
@@ -218,6 +284,7 @@ describe('useQuizBuilderQuestions', () => {
 
       expect(updatedId).toBe(123);
       expect(result.current.questions.map(q => q.id)).toEqual([123]);
+      expect(result.current.pages[0].questions.map(q => q.id)).toEqual([123]);
     });
 
     it('surfaces the server error message and leaves questions untouched on failure', async () => {

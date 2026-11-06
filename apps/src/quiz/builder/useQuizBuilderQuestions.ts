@@ -4,10 +4,12 @@ import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {QuizQuestionType} from '../types';
+import {groupByPage} from '../utils';
 
 import {newMatchPair} from './matchPairs';
 import {
   isPendingQuestionId,
+  QuizBuilderPage,
   QuizBuilderQuestion,
   QuizBuilderQuestionsState,
   QuizQuestionPayload,
@@ -23,13 +25,20 @@ const NEW_CHOICES = [
   {id: '1', text: 'Option B'},
 ];
 
+// Each page's question ids, in order; page numbers are positions in the list.
+// Unlike placements, it holds empty pages and edits need no renumbering.
+type PageLayout = number[][];
+
 // A hook for managing a quiz's questions.
 // Provides the current state of the quiz's questions, including loading and error states.
 // Also returns functions to add new questions, and save and remove existing ones.
 export default function useQuizBuilderQuestions(
   levelId: number
 ): QuizBuilderQuestionsState {
-  const [questions, setQuestions] = useState<QuizBuilderQuestion[]>([]);
+  const [questionsById, setQuestionsById] = useState<
+    Record<number, QuizBuilderQuestion>
+  >({});
+  const [layout, setLayout] = useState<PageLayout>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   // Ids handed to locally-created, not-yet-saved questions - see
@@ -49,7 +58,11 @@ export default function useQuizBuilderQuestions(
         `/levels/${levelId}/quiz_configuration`
       );
       const body = await response.json();
-      setQuestions(body.questions ?? []);
+      const loaded: QuizBuilderQuestion[] = body.questions ?? [];
+      setQuestionsById(Object.fromEntries(loaded.map(q => [q.id, q])));
+      setLayout(
+        groupByPage(loaded).map(({questions}) => questions.map(q => q.id))
+      );
     } catch (e) {
       setError(await networkErrorMessage(e));
     } finally {
@@ -60,6 +73,16 @@ export default function useQuizBuilderQuestions(
   useEffect(() => {
     load();
   }, [load]);
+
+  const pages: QuizBuilderPage[] = layout.map((questionIds, index) => ({
+    page: index + 1,
+    // The same objects as in questionsById: a card resets its draft when its
+    // question object changes.
+    questions: questionIds.map(id => questionsById[id]),
+  }));
+  const questions = pages.flatMap(page => page.questions);
+
+  const addPage = useCallback(() => setLayout(prev => [...prev, []]), []);
 
   const addPendingQuestion = useCallback(
     (page: number, type: QuizQuestionType) => {
@@ -108,7 +131,16 @@ export default function useQuizBuilderQuestions(
           };
           break;
       }
-      setQuestions(prev => [...prev, question]);
+      setQuestionsById(prev => ({...prev, [id]: question}));
+      setLayout(prev => {
+        const next = prev.map(questionIds => [...questionIds]);
+        // Creates the page if it doesn't exist yet, as in an empty quiz.
+        while (next.length < page) {
+          next.push([]);
+        }
+        next[page - 1].push(id);
+        return next;
+      });
       return id;
     },
     []
@@ -118,17 +150,20 @@ export default function useQuizBuilderQuestions(
   // passed in: a pending question (see isPendingQuestionId) is created
   // server-side on its first save, and QuizQuestionsController#update
   // forks a question that's used in a published unit, or whose type
-  // changed, rather than editing it in place.
+  // changed, rather than editing it in place. Either way the new id takes
+  // the old one's place in the layout.
   const saveQuestion = useCallback(
     async (id: number, payload: QuizQuestionPayload) => {
       setError(null);
       setErrorQuestionId(null);
       try {
-        const question = questions.find(q => q.id === id);
         const response = isPendingQuestionId(id)
           ? await HttpClient.post(
               `/levels/${levelId}/quiz_question_placements`,
-              JSON.stringify({...payload, page: question?.page ?? 1}),
+              JSON.stringify({
+                ...payload,
+                page: layout.findIndex(ids => ids.includes(id)) + 1,
+              }),
               true,
               {'Content-Type': 'application/json'}
             )
@@ -139,8 +174,15 @@ export default function useQuizBuilderQuestions(
               {'Content-Type': 'application/json'}
             );
         const saved: QuizBuilderQuestion = await response.json();
-        setQuestions(prev =>
-          prev.map(question => (question.id === id ? saved : question))
+        setQuestionsById(prev => {
+          const rest = {...prev};
+          delete rest[id];
+          return {...rest, [saved.id]: saved};
+        });
+        setLayout(prev =>
+          prev.map(questionIds =>
+            questionIds.map(qid => (qid === id ? saved.id : qid))
+          )
         );
         return saved.id;
       } catch (e) {
@@ -149,8 +191,19 @@ export default function useQuizBuilderQuestions(
         return undefined;
       }
     },
-    [levelId, questions]
+    [levelId, layout]
   );
+
+  const dropQuestion = useCallback((id: number) => {
+    setLayout(prev =>
+      prev.map(questionIds => questionIds.filter(qid => qid !== id))
+    );
+    setQuestionsById(prev => {
+      const rest = {...prev};
+      delete rest[id];
+      return rest;
+    });
+  }, []);
 
   // A pending question only exists locally, so removing one is just a
   // local drop. Otherwise, detaches the question from this quiz - the
@@ -159,7 +212,7 @@ export default function useQuizBuilderQuestions(
   const removeQuestion = useCallback(
     async (id: number) => {
       if (isPendingQuestionId(id)) {
-        setQuestions(prev => prev.filter(question => question.id !== id));
+        dropQuestion(id);
         return true;
       }
       setError(null);
@@ -169,7 +222,7 @@ export default function useQuizBuilderQuestions(
           `/levels/${levelId}/quiz_question_placements/${id}`,
           true
         );
-        setQuestions(prev => prev.filter(question => question.id !== id));
+        dropQuestion(id);
         return true;
       } catch (e) {
         setError(await networkErrorMessage(e));
@@ -177,14 +230,16 @@ export default function useQuizBuilderQuestions(
         return false;
       }
     },
-    [levelId]
+    [levelId, dropQuestion]
   );
 
   return {
     questions,
+    pages,
     isLoading,
     error,
     errorQuestionId,
+    addPage,
     addPendingQuestion,
     saveQuestion,
     removeQuestion,

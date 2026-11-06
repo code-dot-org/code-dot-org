@@ -1,4 +1,4 @@
-import {QuizQuestionItem, QuizQuestionType} from '../types';
+import {QuizPage, QuizQuestionItem, QuizQuestionType} from '../types';
 
 // A subset of the Ruby Standard#summarize_for_lesson_edit payload - the
 // fields the builder reads today. The rest ride along untyped.
@@ -102,15 +102,23 @@ export function isPendingQuestionId(id: number): boolean {
   return id < 0;
 }
 
+// A page of the quiz being built, {page, questions}, with its list of questions
+// in order; empty until a question is added.
+export type QuizBuilderPage = QuizPage<QuizBuilderQuestion>;
+
 // What useQuizBuilderQuestions exposes.
 export interface QuizBuilderQuestionsState {
+  // Every question on the quiz, in page order.
   questions: QuizBuilderQuestion[];
+  pages: QuizBuilderPage[];
   isLoading: boolean;
   error: string | null;
   // The question `error` is about, or null for a load failure - general,
   // not about any existing question. A caller uses this to show the error
   // on that question's card instead of globally.
   errorQuestionId: number | null;
+  // Adds an empty page at the end.
+  addPage: () => void;
   // Adds a placeholder question to local state only, on the given page.
   addPendingQuestion: (page: number, type: QuizQuestionType) => number;
   // Resolves with the saved question's id on success. For a pending
