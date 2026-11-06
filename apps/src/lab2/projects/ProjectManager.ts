@@ -360,6 +360,12 @@ export default class ProjectManager {
     this.channelsStore.redirectToRemix(this.lastChannel);
   }
 
+  /** Saves what is unsaved, then leaves for a remix of the project. */
+  async saveAndRemix() {
+    await this.flushSave();
+    this.redirectToRemix();
+  }
+
   redirectToView() {
     this.throwErrorIfDestroyed('redirectToView');
     if (!this.lastChannel || !this.lastChannel.projectType) {

@@ -2,7 +2,7 @@
 // finish_dialog. Any lab can name one; the share dialog's finish variants
 // (hoc2024, hoai2025) are served by the share dialog instead.
 
-import React, {useCallback, useState} from 'react';
+import React from 'react';
 import {Provider} from 'react-redux';
 
 import {waitForShareFailureRefresh} from '@cdo/apps/lab2/lab2Redux';
@@ -23,8 +23,9 @@ export interface FinishDialogProps {
   /** The project's share link; absent while the project cannot be shared. */
   shareUrl?: string;
   projectType?: ProjectType;
-  /** Saves and opens a remix of the project, as the header's Remix does. */
-  onRemix: () => void;
+  /** Saves and opens a remix of the project; absent while the project may
+      not be remixed, for the reasons the header's Remix button honors. */
+  onRemix?: () => void;
   /** The unit's finish URL, where a certificate is offered; absent when the
       unit has none. */
   certificateUrl?: string;
@@ -38,7 +39,14 @@ const FINISH_DIALOGS: Record<
 };
 
 export function isFinishDialogId(id: string | undefined): id is FinishDialogId {
-  return !!id && id in FINISH_DIALOGS;
+  // Own keys only: a level property naming "constructor" is not a dialog.
+  return !!id && Object.prototype.hasOwnProperty.call(FINISH_DIALOGS, id);
+}
+
+// The header's project state, which the lab's typed root state does not
+// carry; the level page's store holds both.
+interface ProjectShareState {
+  project?: {inRestrictedShareMode?: boolean; exceedsAbuseThreshold?: boolean};
 }
 
 const FINISH_DIALOG_CONTAINER_ID = 'finish-dialog';
@@ -51,31 +59,44 @@ const FinishDialogHost: React.FunctionComponent<{
   onRemix: () => void;
   certificateUrl?: string;
 }> = ({dialogId, shareUrl, projectType, onClose, onRemix, certificateUrl}) => {
-  const [open, setOpen] = useState(true);
   const shareable = useAppSelector(
     state => !state.lab.shareFailure && !state.lab.isBlockedAbuse
   );
-  const close = useCallback(() => {
-    setOpen(false);
-    onClose();
-  }, [onClose]);
-  if (!open) {
-    return null;
-  }
+  // What keeps the header's Remix button away: a blocked project, or one
+  // whose sharing is restricted.
+  const remixable = useAppSelector(state => {
+    const {project} = state as unknown as ProjectShareState;
+    return (
+      !state.lab.isBlockedAbuse &&
+      !project?.inRestrictedShareMode &&
+      !project?.exceedsAbuseThreshold
+    );
+  });
   const Dialog = FINISH_DIALOGS[dialogId];
   // The host is outside the lab's theme provider, as the share dialog is.
   return (
     <div data-theme={Lab2Registry.getInstance().getTheme()}>
       <Dialog
-        onClose={close}
+        onClose={onClose}
         shareUrl={shareable && shareUrl ? shareUrl : undefined}
         projectType={projectType}
-        onRemix={onRemix}
+        onRemix={remixable ? onRemix : undefined}
         certificateUrl={certificateUrl}
       />
     </div>
   );
 };
+
+function finishDialogContainer(): HTMLElement {
+  const existing = document.getElementById(FINISH_DIALOG_CONTAINER_ID);
+  if (existing) {
+    return existing;
+  }
+  const container = document.createElement('div');
+  container.id = FINISH_DIALOG_CONTAINER_ID;
+  document.body.appendChild(container);
+  return container;
+}
 
 /**
  * Save, then show the level's finish dialog. Closing it leaves the student
@@ -92,7 +113,9 @@ export function showFinishDialog(
   const shareUrl = projectManager.getShareUrl();
   const projectType = projectManager.getProjectType();
   const remix = () => {
-    projectManager.flushSave().then(() => projectManager.redirectToRemix());
+    projectManager
+      .saveAndRemix()
+      .catch(error => console.error('Remix from the finish dialog:', error));
   };
   // The share filter runs on save; wait for its answer so the dialog opens
   // knowing whether the project can be shared.
@@ -100,13 +123,8 @@ export function showFinishDialog(
     .flushSave()
     .then(waitForShareFailureRefresh)
     .then(() => {
-      let container = document.getElementById(FINISH_DIALOG_CONTAINER_ID);
-      if (!container) {
-        container = document.createElement('div');
-        container.id = FINISH_DIALOG_CONTAINER_ID;
-        document.body.appendChild(container);
-      }
-      const onClose = () => unmountReactRoot(container as Element);
+      const container = finishDialogContainer();
+      const onClose = () => unmountReactRoot(container);
       createReactRoot(
         <Provider store={getStore()}>
           <FinishDialogHost

@@ -6,9 +6,7 @@ import {
   Typography,
 } from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
-
-import {commonI18n as i18n} from '@cdo/apps/types/locale';
+import React, {useId} from 'react';
 
 import {CopyToClipboardButton} from '../CopyToClipboardButton';
 
@@ -26,9 +24,9 @@ const DESTINATIONS = {
 
 const TITLE_ID = 'hoai2026-congrats-title';
 
-/** Button props that make an external link of a destination, once it has one. */
-function linkProps(href: string | undefined): Partial<MuiButtonProps> {
-  return href ? {href, target: '_blank', rel: 'noopener noreferrer'} : {};
+/** Button props that make an external link of a destination, in a new tab. */
+function linkProps(href: string): Partial<MuiButtonProps> {
+  return {href, target: '_blank', rel: 'noopener noreferrer'};
 }
 
 const ExternalIcon = () => (
@@ -38,7 +36,7 @@ const ExternalIcon = () => (
 const Resource: React.FunctionComponent<{
   grade: string;
   name: string;
-  href: string | undefined;
+  href: string;
 }> = ({grade, name, href}) => (
   <MuiButton
     variant="text"
@@ -58,26 +56,35 @@ const Offer: React.FunctionComponent<{
   title: string;
   text: string;
   children: React.ReactNode;
-}> = ({icon, title, text, children}) => (
-  <section className={styles.offer} aria-label={title}>
-    <Typography component="h3" variant="h5" className={styles.offerTitle}>
-      <FontAwesomeV6Icon
-        iconName={icon}
-        iconStyle="solid"
-        className={styles.offerIcon}
-      />
-      {title}
-    </Typography>
-    <Typography variant="body2" className={styles.offerText}>
-      {text}
-    </Typography>
-    {children}
-  </section>
-);
+}> = ({icon, title, text, children}) => {
+  const titleId = useId();
+  return (
+    <section className={styles.offer} aria-labelledby={titleId}>
+      <Typography
+        id={titleId}
+        component="h3"
+        variant="h5"
+        className={styles.offerTitle}
+      >
+        <FontAwesomeV6Icon
+          iconName={icon}
+          iconStyle="solid"
+          className={styles.offerIcon}
+        />
+        {title}
+      </Typography>
+      <Typography variant="body2" className={styles.offerText}>
+        {text}
+      </Typography>
+      {children}
+    </section>
+  );
+};
 
 /**
  * The finish dialog for the 2026 Hour of AI Sprite Lab activity: what the
- * student can do next, and what their teacher can.
+ * student can do next, and what their teacher can. Its words are English
+ * in code, as the 2025 dialog's are.
  */
 const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
   onClose,
@@ -98,7 +105,7 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
       variant="h4"
       className={styles.title}
     >
-      {i18n.congratulations()}
+      Congratulations!
     </Typography>
     <hr className={styles.rule} />
     <div className={styles.body}>
@@ -126,7 +133,8 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
             Discover even more blocks in Sprite Lab
           </Typography>
           <div>
-            {/* A remix of this game, as the header's Remix button makes. */}
+            {/* A remix of this game, as the header's Remix button makes;
+                held while the project may not be remixed. */}
             <MuiButton
               variant="contained"
               color="white"
@@ -135,6 +143,7 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
               endIcon={
                 <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
               }
+              disabled={!onRemix}
               onClick={onRemix}
             >
               Open Sprite Lab
@@ -197,10 +206,13 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
           title="Get your certificate"
           text="Print it with your name on it."
         >
+          {/* The unit's own finish page, so it opens in place of the lab
+              as the lab's Finish would; held while the unit has none. */}
           <MuiButton
             variant="outlined"
             color="secondary"
-            {...linkProps(certificateUrl)}
+            href={certificateUrl}
+            disabled={!certificateUrl}
           >
             Certificate
           </MuiButton>
@@ -230,7 +242,7 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
         onClick={onClose}
         type="button"
       >
-        {i18n.keepPlaying()}
+        Keep playing
       </MuiButton>
     </div>
   </MuiCustomDialog>

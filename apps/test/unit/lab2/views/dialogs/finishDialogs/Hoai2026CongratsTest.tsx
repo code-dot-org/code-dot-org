@@ -43,10 +43,10 @@ describe('Hoai2026Congrats', () => {
       'https://code.org/en-US/curriculum/artificial-intelligence-discoveries'
     );
     expect(screen.getByRole('button', {name: 'Copy link'})).toBeInTheDocument();
-    expect(screen.getByRole('link', {name: 'Certificate'})).toHaveAttribute(
-      'href',
-      '/congrats?s=hoai2026-dev'
-    );
+    const certificate = screen.getByRole('link', {name: 'Certificate'});
+    expect(certificate).toHaveAttribute('href', '/congrats?s=hoai2026-dev');
+    // In place of the lab, as the lab's Finish would go.
+    expect(certificate).not.toHaveAttribute('target');
     expect(screen.getByRole('link', {name: 'Learn more'})).toHaveAttribute(
       'href',
       'https://code.org/en-US/professional-learning'
@@ -60,12 +60,25 @@ describe('Hoai2026Congrats', () => {
     expect(onRemix).toHaveBeenCalledTimes(1);
   });
 
-  it('offers the certificate as a plain button when the unit has no finish URL', () => {
+  it('holds the certificate when the unit has no finish URL', () => {
     renderDialog({certificateUrl: undefined});
     expect(screen.queryByRole('link', {name: 'Certificate'})).toBeNull();
+    expect(screen.getByRole('button', {name: 'Certificate'})).toBeDisabled();
+  });
+
+  it('holds Open Sprite Lab when the project may not be remixed', () => {
+    renderDialog({onRemix: undefined});
     expect(
-      screen.getByRole('button', {name: 'Certificate'})
-    ).toBeInTheDocument();
+      screen.getByRole('button', {name: 'Open Sprite Lab'})
+    ).toBeDisabled();
+  });
+
+  it('names each offer by its heading once', () => {
+    renderDialog();
+    const offer = screen.getByRole('region', {name: 'Share your game'});
+    expect(offer.getAttribute('aria-labelledby')).toBe(
+      offer.querySelector('h3')?.id
+    );
   });
 
   it('says so instead of offering a link when the game cannot be shared', () => {
