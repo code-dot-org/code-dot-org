@@ -40,13 +40,6 @@
     "multimodal": true
   },
   {
-    "id": "gemini-3.5-flash",
-    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 3.5 Flash",
-    "overview": "...",
-    "trainingData": "...",
-    "multimodal": true
-  },
-  {
     "id": "gemini-3.5-flash-lite",
     "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 3.5 Flash-Lite",
     "overview": "...",

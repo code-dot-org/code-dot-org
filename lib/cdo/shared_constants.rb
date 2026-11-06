@@ -872,7 +872,6 @@ module SharedConstants
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
     GEMINI_3_1_FLASH_IMAGE: "gemini-3.1-flash-image",
     GEMINI_3_1_FLASH_LITE: "gemini-3.1-flash-lite",
-    GEMINI_3_5_FLASH: "gemini-3.5-flash",
     GEMINI_3_5_FLASH_LITE: "gemini-3.5-flash-lite",
   }
 
@@ -887,7 +886,6 @@ module SharedConstants
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
     AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
     AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_LITE],
-    AI_CHAT_MODEL_IDS[:GEMINI_3_5_FLASH],
     AI_CHAT_MODEL_IDS[:GEMINI_3_5_FLASH_LITE],
   ].freeze
 

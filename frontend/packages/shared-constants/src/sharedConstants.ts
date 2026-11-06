@@ -342,7 +342,6 @@ export const AiChatModelIds = {
   "GEMINI_2_5_FLASH_IMAGE": "gemini-2.5-flash-image",
   "GEMINI_3_1_FLASH_IMAGE": "gemini-3.1-flash-image",
   "GEMINI_3_1_FLASH_LITE": "gemini-3.1-flash-lite",
-  "GEMINI_3_5_FLASH": "gemini-3.5-flash",
   "GEMINI_3_5_FLASH_LITE": "gemini-3.5-flash-lite"
 } as const;
 
@@ -354,7 +353,6 @@ export const AiChatGeminiModelIds = [
   "gemini-2.5-flash-image",
   "gemini-3.1-flash-image",
   "gemini-3.1-flash-lite",
-  "gemini-3.5-flash",
   "gemini-3.5-flash-lite"
 ] as const;
 
@@ -371,7 +369,6 @@ export const AiChatProviderByModelId = {
   "gemini-2.5-flash-image": "google",
   "gemini-3.1-flash-image": "google",
   "gemini-3.1-flash-lite": "google",
-  "gemini-3.5-flash": "google",
   "gemini-3.5-flash-lite": "google",
   "gpt-4o-mini": "openai"
 } as const;
