@@ -18,6 +18,7 @@ import styles from './scenes-dialog.module.scss';
 
 export const SCENE_NAME_MAX_LENGTH = 40;
 const TITLE = 'All scenes';
+const NEW_SCENE_BUTTON_ID = 'scenes-dialog-new-scene';
 
 interface SceneNameFieldProps {
   initial: string;
@@ -122,6 +123,13 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
 }) => {
   const [renaming, setRenaming] = useState(false);
   const [confirming, setConfirming] = useState(false);
+  // Held still means no edit half-done either.
+  useEffect(() => {
+    if (disabled) {
+      setRenaming(false);
+      setConfirming(false);
+    }
+  }, [disabled]);
   return (
     <div className={classNames(styles.card, disabled && styles.cardDisabled)}>
       <div className={styles.tile}>
@@ -283,6 +291,15 @@ const ScenesDialog: React.FunctionComponent<ScenesDialogProps> = ({
   onClose,
 }) => {
   const [naming, setNaming] = useState(creating);
+  // The name field going, kept or cancelled, would leave focus nowhere;
+  // New scene takes it.
+  const wasNamingRef = useRef(naming);
+  useEffect(() => {
+    if (wasNamingRef.current && !naming) {
+      document.getElementById(NEW_SCENE_BUTTON_ID)?.focus();
+    }
+    wasNamingRef.current = naming;
+  }, [naming]);
   return (
     <MuiDialog
       title={TITLE}
@@ -325,6 +342,7 @@ const ScenesDialog: React.FunctionComponent<ScenesDialogProps> = ({
       secondaryButtonProps={
         editable
           ? {
+              id: NEW_SCENE_BUTTON_ID,
               children: 'New scene',
               startIcon: <FontAwesomeV6Icon iconName="plus" aria-hidden />,
               disabled: naming,

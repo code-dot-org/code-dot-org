@@ -1,4 +1,5 @@
-@use './checkerboard';
+@use '../../../../pixelEditor/dialogChrome' as chrome;
+@use './imageTile' as tile;
 
 // Wide enough for a row of three cards; the dialog's own width rule would
 // cap it at 50rem.
@@ -9,15 +10,7 @@
 }
 
 .srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  border: 0;
+  @include chrome.sr-only;
 }
 
 // The cards, in rows; the body scrolls down when they outrun it. The
@@ -70,11 +63,7 @@
 // The scene's picture, square like the stage; a picture only, nothing to
 // press or hover.
 .tile {
-  @include checkerboard.checkerboard(
-    16px,
-    var(--dialog-checker-tint, rgb(128 128 128 / 16%)),
-    var(--dialog-checker-bg, transparent)
-  );
+  @include tile.tile-checkerboard;
 
   box-sizing: border-box;
   width: 192px;

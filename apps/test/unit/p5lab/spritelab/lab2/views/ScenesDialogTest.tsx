@@ -118,6 +118,23 @@ describe('ScenesDialog', () => {
     expect(screen.getByRole('button', {name: 'Done'})).not.toBeDisabled();
   });
 
+  it('closes a delete question and a rename when a new scene is named', () => {
+    renderDialog();
+    fireEvent.click(screen.getAllByRole('button', {name: 'Delete'})[1]);
+    expect(screen.getByText('Delete this scene?')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Rename Intro'}));
+    expect(screen.getAllByRole('textbox', {name: 'Scene name'})).toHaveLength(
+      1
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'New scene'}));
+    expect(screen.queryByText('Delete this scene?')).toBeNull();
+    // The one field left is the new scene's.
+    expect(screen.getAllByRole('textbox', {name: 'Scene name'})).toHaveLength(
+      1
+    );
+    expect(screen.getByRole('button', {name: 'Rename Intro'})).toBeDisabled();
+  });
+
   it('cancelling the name makes no scene', () => {
     const {onCreateScene} = renderDialog();
     fireEvent.click(screen.getByRole('button', {name: 'New scene'}));
@@ -127,6 +144,7 @@ describe('ScenesDialog', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Cancel name'}));
     expect(onCreateScene).not.toHaveBeenCalled();
     expect(screen.queryByRole('textbox', {name: 'Scene name'})).toBeNull();
+    expect(screen.getByRole('button', {name: 'New scene'})).toHaveFocus();
     expect(
       screen.getByRole('button', {name: 'Rename Cave'})
     ).not.toBeDisabled();

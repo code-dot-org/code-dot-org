@@ -160,6 +160,7 @@ import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
+import {sceneDropdownButtonId} from './components/SceneDropdown';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
 import ImagesTab from './images/ImagesTab';
@@ -1639,9 +1640,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // All scenes: a dialog over the editors and the stage, opening on a new
   // scene's name when asked for one.
-  const [scenesOpen, setScenesOpen] = useState(false);
-  const [scenesCreating, setScenesCreating] = useState(false);
-  const stageCovered = scenesOpen;
+  const [scenesDialog, setScenesDialog] = useState<{
+    creating: boolean;
+  } | null>(null);
+  const stageCovered = !!scenesDialog;
   // Hidden content stays in the tab order and the accessibility tree:
   // inert while hidden, via refs (React 18's JSX has no inert attribute).
   // worldMounted: the world's wrapper can first render after the last change.
@@ -1659,6 +1661,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       worldWrapperRef.current.inert = activeTab !== 'World';
     }
   }, [stageCovered, activeTab, worldMounted]);
+  // Closing All scenes can leave focus nowhere: its opener in the scene
+  // menu unmounted with the menu, or the bar's button let go of focus on
+  // its click. The scene menu's trigger takes it. After the effect above,
+  // which lets the stage take focus again.
+  useEffect(() => {
+    if (!scenesDialog && document.activeElement === document.body) {
+      document.getElementById(sceneDropdownButtonId())?.focus();
+    }
+  }, [scenesDialog]);
 
   const fade = useTabFade(activeTab, {
     Code: codeWrapperRef,
@@ -2319,30 +2330,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     lockedReason: LOCKED_REASON,
     allowCreate: scenesEditable || !!pinnedSceneId,
     onSelectScene: sceneEditing.selectScene,
-    onNewScene: () => {
-      setScenesCreating(true);
-      setScenesOpen(true);
-    },
-    onManageScenes: () => {
-      setScenesCreating(false);
-      setScenesOpen(true);
-    },
+    onNewScene: () => setScenesDialog({creating: true}),
+    onManageScenes: () => setScenesDialog({creating: false}),
   };
   const catalogOffered = catalog.length > 0 && isEditable;
   const openBlockCatalog = () => setShowBlockCatalog(true);
 
   return (
     <div className={moduleStyles.labRow}>
-      {scenesOpen && (
+      {scenesDialog && (
         <ScenesDialog
           scenes={sceneMetadata}
           editable={scenesEditable}
-          creating={scenesCreating}
+          creating={scenesDialog.creating}
           onCreateScene={sceneEditing.createScene}
           onRenameScene={sceneEditing.renameScene}
           onDeleteScene={sceneEditing.deleteScene}
           onMakeStartScene={sceneEditing.makeStartScene}
-          onClose={() => setScenesOpen(false)}
+          onClose={() => setScenesDialog(null)}
         />
       )}
       {showStartOver && startOverOffered && (
