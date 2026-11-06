@@ -33,7 +33,6 @@ import {ADAPTIVE_MODELS} from './models';
 export const ADAPTIVE_AI_ENABLED_FLAG = 'adaptive-ai-enabled';
 
 const TIMEOUT_MS = 30_000;
-// The judge is the tutor's, with its prompt; only the model is the shell's.
 const SAFETY_CONFIG = {modelId: ADAPTIVE_MODELS.FAST};
 
 export const isAdaptiveAiEnabled = (): boolean =>
