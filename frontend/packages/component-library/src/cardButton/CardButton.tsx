@@ -1,6 +1,6 @@
 import ButtonBase, {ButtonBaseProps} from '@mui/material/ButtonBase';
 import classNames from 'classnames';
-import {forwardRef, ReactNode} from 'react';
+import {forwardRef, ReactNode, Ref} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
@@ -28,7 +28,7 @@ export interface CardButtonProps
   title: ReactNode;
   /** Supporting text under the title. */
   description?: ReactNode;
-  /** Leading icon. Solid unless `iconStyle` says otherwise. */
+  /** Leading icon. Solid unless `iconStyle` or `iconFamily` is set. */
   startIcon?: FontAwesomeV6IconProps;
   /**
    * Custom leading content in place of `startIcon`, e.g. an avatar. It is at
@@ -51,8 +51,8 @@ export interface CardButtonProps
 }
 
 const renderIcon = (icon: FontAwesomeV6IconProps, className: string) => (
-  <span className={className}>
-    <FontAwesomeV6Icon iconStyle="solid" {...icon} />
+  <span className={className} aria-hidden>
+    <FontAwesomeV6Icon {...icon} />
   </span>
 );
 
@@ -71,7 +71,10 @@ const renderIcon = (icon: FontAwesomeV6IconProps, className: string) => (
  * than a Button: a leading icon, a title, optional supporting text and an
  * optional trailing icon. Built on MUI `ButtonBase`; pass `href` for a link.
  */
-const CardButton = forwardRef<HTMLButtonElement, CardButtonProps>(
+const CardButton = forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  CardButtonProps
+>(
   (
     {
       layout = 'horizontal',
@@ -98,7 +101,7 @@ const CardButton = forwardRef<HTMLButtonElement, CardButtonProps>(
 
     return (
       <ButtonBase
-        ref={ref}
+        ref={ref as Ref<HTMLButtonElement>}
         disableRipple
         aria-pressed={!isLink && selected !== undefined ? selected : undefined}
         {...rest}

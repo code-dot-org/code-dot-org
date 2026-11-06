@@ -32,9 +32,10 @@ container, e.g. for a stack of rows or equal-width tiles in a grid.
 ## Icons and start content
 
 `startIcon` and `endIcon` take `FontAwesomeV6Icon` props and render solid
-unless `iconStyle` says otherwise. For a custom leading visual, such as an
+unless `iconStyle` or `iconFamily` says otherwise. For a custom leading visual, such as an
 avatar, pass `startContent`; it replaces `startIcon`, is never smaller than the
-icon box, and keeps its own colors in every state.
+icon box, keeps its own colors in every state, and fades when the card is
+disabled.
 
 ## Selection
 
@@ -71,6 +72,13 @@ links, which never get `aria-pressed`.
 | `startIcon`, `startIconName`      | `startIcon`                                                                  |
 | `hasStartContent`, `startContent` | `startContent`                                                               |
 | `endIcon`, `endIconName`          | `endIcon`                                                                    |
+
+## Line heights
+
+Title and description leading sit one step below the CADS Body text styles,
+with 4px between them, so wrapped text reads as one block. Padding absorbs
+the title's half of the difference, so a card without a description keeps
+the Figma height. The Figma component was updated to match.
 
 ## Known difference from Figma
 

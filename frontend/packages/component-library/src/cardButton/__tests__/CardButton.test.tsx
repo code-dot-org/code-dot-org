@@ -46,6 +46,32 @@ describe('Design System - CardButton', () => {
     expect(icon.className).not.toContain('fa-solid');
   });
 
+  it('leaves fa-solid off when only iconFamily is set', () => {
+    render(
+      <CardButton
+        title="Code"
+        startIcon={{iconName: 'github', iconFamily: 'brands'}}
+      />,
+    );
+    const icon = screen.getByTestId('font-awesome-v6-icon');
+    expect(icon.className).toContain('fa-brands');
+    expect(icon.className).not.toContain('fa-solid');
+  });
+
+  it('hides icons from assistive technology', () => {
+    render(
+      <CardButton
+        title="Next"
+        startIcon={{iconName: 'fire'}}
+        endIcon={{iconName: 'chevron-right'}}
+      />,
+    );
+    for (const icon of screen.getAllByTestId('font-awesome-v6-icon')) {
+      expect(icon.parentElement).toHaveAttribute('aria-hidden', 'true');
+    }
+    expect(screen.getByRole('button', {name: 'Next'})).toBeInTheDocument();
+  });
+
   it('renders startContent in place of startIcon', () => {
     render(
       <CardButton
