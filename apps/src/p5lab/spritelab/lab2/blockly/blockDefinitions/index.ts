@@ -3,6 +3,7 @@ import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category'
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import askAi from './askAi';
+import askAiWithChoices from './askAiWithChoices';
 import beginsBehavior from './beginsBehavior';
 import burst from './burst';
 import goToExternalScene from './goToExternalScene';
@@ -24,6 +25,7 @@ import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
 import setSystemPrompt from './setSystemPrompt';
 import setWeather from './setWeather';
+import showTitle from './showTitle';
 import thePlayer from './thePlayer';
 import whenPlayer from './whenPlayer';
 import whenRun from './whenRun';
@@ -56,8 +58,10 @@ const labBlockDefinitions: {
   setCameraZoom,
   setWeather,
   burst,
+  showTitle,
   thePlayer,
   askAi,
+  askAiWithChoices,
   setSystemPrompt,
   placeholder,
   // Toolbox edit mode's category marker blocks.

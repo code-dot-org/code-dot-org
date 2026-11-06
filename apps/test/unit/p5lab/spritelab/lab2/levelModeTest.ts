@@ -1,4 +1,5 @@
 import {
+  imageSourceForMode,
   isFreeplayMode,
   tabsForMode,
 } from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
@@ -50,5 +51,15 @@ describe('isFreeplayMode', () => {
   it('names one kind', () => {
     expect(isFreeplayMode({kind: 'freeplay'})).toBe(true);
     expect(isFreeplayMode(undefined)).toBe(false);
+  });
+});
+
+describe('imageSourceForMode', () => {
+  it('is the tree first unless the level names a source', () => {
+    expect(imageSourceForMode({kind: 'image'})).toBe('cached');
+    expect(imageSourceForMode(undefined)).toBe('cached');
+    expect(imageSourceForMode({kind: 'image', imageSource: 'live'})).toBe(
+      'live'
+    );
   });
 });
