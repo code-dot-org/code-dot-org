@@ -107,7 +107,7 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
         variant="body2"
         className={styles.intro}
       >
-        You made sprites with AI, built a world and coded your own game.
+        You made sprites with AI, built a world, and coded your own game.
       </Typography>
       <div className={styles.cards}>
         <section
