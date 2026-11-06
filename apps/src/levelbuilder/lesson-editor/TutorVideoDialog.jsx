@@ -1,4 +1,4 @@
-import {MuiAccordion as Accordion} from '@code-dot-org/component-library/accordion';
+import {MuiAccordion} from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 import {Typography, Button as MuiButton} from '@mui/material';
@@ -268,7 +268,7 @@ export default function TutorVideoDialog({
         </Typography>
       )}
 
-      <Accordion
+      <MuiAccordion
         className={moduleStyles.example}
         items={[
           {
