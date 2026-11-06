@@ -82,6 +82,17 @@ $connector-gap: 2px;
   color: var(--text-neutral-primary-inverse);
 }
 
+// Centers the dot on the line box; vertical-align would center it on the x-height.
+.answer {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.answerDot {
+  @include mixins.leaf-dot(10px);
+}
+
 @media (forced-colors: active) {
   .currentStep .stepNumber {
     outline: 2px solid;
