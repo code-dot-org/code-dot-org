@@ -451,10 +451,68 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test "create is forbidden while the quiz's lockable lesson is locked" do
+    unit = create_unit_with_lock_quiz(@quiz)
+    sign_in @student
+
+    assert_no_difference 'QuizAttempt.count' do
+      post :create, params: {levelId: @quiz.id, unitId: unit.id}
+    end
+
+    assert_response :forbidden
+  end
+
+  test "create starts an attempt once the teacher unlocks the lesson" do
+    unit = create_unit_with_lock_quiz(@quiz)
+    UserLevel.update_lockable_state(@student.id, @quiz.id, unit.id, false, false)
+    sign_in @student
+
+    post :create, params: {levelId: @quiz.id, unitId: unit.id}
+
+    assert_response :created
+  end
+
+  test "create is forbidden while the lesson is released read-only" do
+    unit = create_unit_with_lock_quiz(@quiz)
+    UserLevel.update_lockable_state(@student.id, @quiz.id, unit.id, false, true)
+    sign_in @student
+
+    post :create, params: {levelId: @quiz.id, unitId: unit.id}
+
+    assert_response :forbidden
+  end
+
+  test "create lets a verified instructor take a quiz in a locked lesson" do
+    unit = create_unit_with_lock_quiz(@quiz)
+    sign_in create(:authorized_teacher)
+
+    post :create, params: {levelId: @quiz.id, unitId: unit.id}
+
+    assert_response :created
+  end
+
+  test "update does not submit an attempt while the quiz's lockable lesson is locked" do
+    unit = create_unit_with_lock_quiz(@quiz)
+    attempt = create(:quiz_attempt, user: @student, level: @quiz, unit: unit)
+    sign_in @student
+
+    put :update, params: {id: attempt.id}
+
+    assert_response :forbidden
+    assert_nil attempt.reload.submitted_at
+  end
+
   private def create_unit_with_quiz(quiz)
     unit = create(:unit)
     lesson = create(:lesson, script: unit)
     create(:script_level, script: unit, lesson: lesson, levels: [quiz])
+    unit
+  end
+
+  private def create_unit_with_lock_quiz(quiz)
+    unit = create(:unit)
+    lesson = create(:lesson, script: unit, lockable: true)
+    create(:script_level, script: unit, lesson: lesson, levels: [quiz], assessment: true)
     unit
   end
 end
