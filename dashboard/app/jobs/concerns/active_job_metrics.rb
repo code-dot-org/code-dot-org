@@ -1,11 +1,11 @@
 require 'cdo/aws/metrics'
 require 'cdo/honeybadger'
-require 'cdo/active_job_backend'
+require 'cdo/active_job_queue_metrics'
 
 module ActiveJobMetrics
   extend ActiveSupport::Concern
 
-  METRICS_NAMESPACE = 'code-dot-org/ActiveJob'.freeze
+  METRICS_NAMESPACE = Cdo::ActiveJobQueueMetrics::NAMESPACE
 
   included do
     # Parent class callbacks are called in addition to any callbacks defined in the job subclass
@@ -31,204 +31,17 @@ module ActiveJobMetrics
     ]
   end
 
-  protected def mine(jobs)
-    jobs.where('handler LIKE ?', "%job_class: #{self.class.name}%")
+  def self.select_one
+    ->(sql) {Delayed::Job.connection.select_one(sql)}
   end
 
-  # Failed jobs are those that have failed at least once.
-  def self.failed_jobs
-    Delayed::Job.where.not(failed_at: nil)
-  end
-
-  def failed_jobs
-    mine(ActiveJobMetrics.failed_jobs)
-  end
-
-  # Queued jobs includes all jobs that aren't yet complete, including those scheduled
-  # to run in the future, those currently running, and those that are waiting to run
-  def self.queued_jobs
-    Delayed::Job.where(failed_at: nil)
-  end
-
-  def queued_jobs
-    mine(ActiveJobMetrics.queued_jobs)
-  end
-
-  # Workable jobs are queued jobs that are eligible to run now (run_at is not in the future)
-  def self.workable_queued_jobs
-    queued_jobs.where('run_at <= ?', _now_utc)
-  end
-
-  def workable_queued_jobs
-    mine(ActiveJobMetrics.workable_queued_jobs)
-  end
-
-  # Overridable for testing
-  def self._now_utc
-    Time.now.utc
-  end
-
-  # Pending jobs are those that could be run/running schedule-wise, but have either not yet started
-  # or have not yet run to completion (success/failure)
-  def self.pending_jobs
-    queued_jobs.where('run_at <= ?', _now_utc)
-  end
-
-  def pending_jobs
-    mine(ActiveJobMetrics.pending_jobs)
-  end
-
-  # Waiting To Start Jobs are those that would be valid to run but are not currently being run (="not locked")
-  def self.waiting_to_start_jobs
-    pending_jobs.where(locked_at: nil)
-  end
-
-  def waiting_to_start_jobs
-    mine(ActiveJobMetrics.waiting_to_start_jobs)
-  end
-
-  def self.running_jobs
-    Delayed::Job.where.not(locked_at: nil)
-  end
-
-  def running_jobs
-    mine(ActiveJobMetrics.running_jobs)
-  end
-
-  def self.oldest_job_age_s(jobs)
-    oldest_job = jobs.order(:run_at).first
-    oldest_job ? _now_utc - oldest_job.run_at : 0
-  end
-
-  def self.oldest_pending_job_age_s
-    oldest_job_age_s(pending_jobs)
-  end
-
-  def oldest_pending_job_age_s
-    ActiveJobMetrics.oldest_job_age_s(pending_jobs)
-  end
-
-  def self.oldest_waiting_to_start_job_age_s
-    oldest_job_age_s(waiting_to_start_jobs)
-  end
-
-  def oldest_waiting_to_start_job_age_s
-    ActiveJobMetrics.oldest_job_age_s(waiting_to_start_jobs)
-  end
-
-  def self.report_metrics(job_class, dimensions:, report_overall_metrics: false)
-    metrics = [
-      {
-        metric_name: 'QueuedJobCount',
-        value: job_class.queued_jobs.count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: dimensions,
-      },
-      {
-        metric_name: 'WorkableQueuedJobCount',
-        value: job_class.workable_queued_jobs.count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: dimensions,
-      },
-      {
-        metric_name: 'PendingJobCount',
-        value: job_class.pending_jobs.count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: dimensions
-      },
-      {
-        metric_name: 'FailedJobCount',
-        value: job_class.failed_jobs.count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: dimensions,
-      },
-      {
-        metric_name: 'WaitingToStartJobCount',
-        value: job_class.waiting_to_start_jobs.count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: dimensions,
-      },
-      {
-        metric_name: 'RunningJobCount',
-        value: job_class.running_jobs.count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: dimensions,
-      },
-      {
-        metric_name: 'OldestPendingJobAge',
-        value: job_class.oldest_pending_job_age_s,
-        unit: 'Seconds',
-        timestamp: Time.now,
-        dimensions: dimensions,
-      },
-      {
-        metric_name: 'OldestWaitingToStartJobAge',
-        value: job_class.oldest_waiting_to_start_job_age_s,
-        unit: 'Seconds',
-        timestamp: Time.now,
-        dimensions: dimensions,
-      },
-    ]
-
-    if report_overall_metrics
-      current_worker_count = ActiveJobMetrics.worker_count
-      current_running_jobs_count = ActiveJobMetrics.running_jobs.count
-
-      overall_metrics = [
-        {
-          metric_name: 'WorkerCount',
-          value: current_worker_count,
-          unit: 'Count',
-          timestamp: Time.now,
-          dimensions: dimensions,
-        },
-        {
-          metric_name: 'PercentWorkersIdle',
-          value: current_worker_count > 0 ? ((current_worker_count - current_running_jobs_count) / current_worker_count.to_f) * 100 : 0,
-          unit: 'Percent',
-          timestamp: Time.now,
-          dimensions: dimensions,
-        }
-      ]
-      metrics.concat(overall_metrics)
-
-      jobs = job_class.pending_jobs
-      priorities = {
-        'high' => jobs.where('priority < 10'),
-        'low' => jobs.where('priority >= 10'),
-      }
-      timestamp = Time.now
-      priorities.each do |priority, priority_jobs|
-        metrics << {
-          metric_name: 'PendingJobCount',
-          value: priority_jobs.count,
-          unit: 'Count',
-          timestamp: timestamp,
-          dimensions: dimensions + [{name: 'Priority', value: priority}],
-        }
-      end
-    end
-
-    Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
-  end
-
-  def self.report_overall_queue_metrics
-    ActiveJobMetrics.report_metrics(ActiveJobMetrics, dimensions: [{name: 'Environment', value: CDO.rack_env}], report_overall_metrics: true)
-  end
-
-  def self.worker_count
-    Cdo::ActiveJobBackend::ExistingWorkers.get_workers_from_ps.size
-  end
-
+  # The minutely cron publishes the same queue-wide metrics. Publishing them on
+  # enqueue as well lets KEDA see a burst before the next cron run. Worker
+  # metrics come only from the cron: this process cannot see the workers.
   protected def report_job_count
-    ActiveJobMetrics.report_overall_queue_metrics
-    ActiveJobMetrics.report_metrics(self, dimensions: common_dimensions)
+    now = Time.now.utc
+    Cdo::ActiveJobQueueMetrics.report_overall(ActiveJobMetrics.select_one, environment: CDO.rack_env, now: now)
+    Cdo::ActiveJobQueueMetrics.report_job(ActiveJobMetrics.select_one, job_class: self.class.name, environment: CDO.rack_env, now: now)
   rescue => exception
     Observability::Errors.report(exception, error_message: 'Error reporting ActiveJob metrics')
   end

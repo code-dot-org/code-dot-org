@@ -1,11 +1,26 @@
 #!/usr/bin/env ruby
+# Publishes ActiveJob queue metrics to CloudWatch. KEDA scales the Kubernetes
+# worker fleet on PendingJobCount and alarms read these metrics, so this must
+# keep running every minute. It does not load Rails: a Rails boot takes longer
+# than a minute. If cron jobs move off the production daemon, this moves to a
+# Kubernetes CronJob (schedule '* * * * *', concurrencyPolicy: Forbid); worker
+# metrics would then need a source other than ps on this host.
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../deployment'
+require 'cdo/sequel'
+require 'cdo/active_job_backend'
+require 'cdo/active_job_queue_metrics'
 
 def main
-  ActiveJobMetrics.report_overall_queue_metrics
+  db = Cdo::Sequel.database_connection_pool(CDO.dashboard_db_writer)
+  Cdo::ActiveJobQueueMetrics.report_overall(
+    ->(sql) {db.fetch(sql).first},
+    environment: CDO.rack_env,
+    worker_count: Cdo::ActiveJobBackend::ExistingWorkers.get_workers_from_ps.size
+  )
+  Cdo::Metrics.flush!
 end
 
 main
