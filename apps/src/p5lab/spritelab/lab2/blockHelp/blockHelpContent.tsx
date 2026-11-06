@@ -11,7 +11,7 @@ import animWhenClicked from '@cdo/static/spritelab_lab2/block-help/when-clicked.
 
 import {MAX_ZOOM, MIN_ZOOM} from '../camera';
 
-const DEFAULT_GRAVITY_STRENGTH = 10;
+const DEFAULT_GRAVITY_STRENGTH = 5;
 
 /**
  * What the new-block catalog says about a block: a `summary` sentence, then
