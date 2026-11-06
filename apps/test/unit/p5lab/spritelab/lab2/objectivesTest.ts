@@ -132,6 +132,30 @@ describe('checkObjective', () => {
     );
   });
 
+  it('reads the named scene rather than the open one', () => {
+    const say = {kind: 'block', type: 'gamelab_spriteSay'} as const;
+    const empty = {blocks: {blocks: []}};
+    const scoped = inputs({
+      source: empty,
+      sceneSources: {'scene-1': source, 'second-scene': empty},
+    });
+    expect(checkObjective({...say, scene: 'scene-1'}, scoped)).toBe(true);
+    expect(checkObjective({...say, scene: 'second-scene'}, scoped)).toBe(false);
+    expect(checkObjective({...say, scene: 'missing'}, scoped)).toBe(false);
+    expect(checkObjective(say, scoped)).toBe(false);
+  });
+
+  it('reads which scene the editor is on', () => {
+    const editing = {kind: 'editing', id: 'second-scene'} as const;
+    expect(
+      checkObjective(editing, inputs({editingSceneId: 'second-scene'}))
+    ).toBe(true);
+    expect(checkObjective(editing, inputs({editingSceneId: 'scene-1'}))).toBe(
+      false
+    );
+    expect(checkObjective(editing, inputs())).toBe(false);
+  });
+
   it('accepts any of several block types', () => {
     const either: ObjectiveCheck = {
       kind: 'block',

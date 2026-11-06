@@ -2,6 +2,7 @@ import {z} from 'zod';
 
 import {checkpointSchema, checkpointSourceSchema} from './checkpoint';
 import {destinationSchema} from './destination';
+import {finishSchema, finishSourceSchema} from './finish';
 import {projectSchema, projectSourceSchema} from './project';
 import {skillSchema, skillSourceSchema} from './skill';
 
@@ -42,6 +43,8 @@ export const pathwaySourceSchema = z.strictObject({
   destinations: z.record(z.string().min(1), destinationSchema).optional(),
   /** How the map is drawn, unless a URL parameter says otherwise. */
   map: mapSchema.optional(),
+  /** What I'm finished does; without it the level finishes at once. */
+  finish: finishSourceSchema.optional(),
 });
 
 /**
@@ -52,4 +55,5 @@ export const pathwaySchema = pathwaySourceSchema.extend({
   project: projectSchema,
   skills: z.record(z.string(), skillSchema),
   checkpoints: z.array(checkpointSchema).min(1),
+  finish: finishSchema.optional(),
 });

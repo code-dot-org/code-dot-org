@@ -167,6 +167,11 @@ class Policies::DemoSections
     DemoStudent.exists?(user_id: user_id.to_i)
   end
 
+  # `demo_student_durable?` for a list of ids, in one query.
+  def self.any_demo_student_durable?(user_ids)
+    DemoStudent.exists?(user_id: user_ids.map(&:to_i))
+  end
+
   def self.reset_cache!
     @all_demo_student_ids = nil
   end

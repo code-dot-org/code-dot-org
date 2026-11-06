@@ -2,7 +2,10 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as cdoXml from '@cdo/apps/blockly/addons/cdoXml';
 import * as serializationModule from '@cdo/apps/blockly/utils/serialization/state';
-import {getCode} from '@cdo/apps/blockly/utils/workspace/getCode';
+import {
+  getCode,
+  getCodeFromSerializedWorkspace,
+} from '@cdo/apps/blockly/utils/workspace/getCode';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import setBlocklyGlobal from '../../../../util/setupBlocklyGlobal';
@@ -49,5 +52,11 @@ describe('getCode', () => {
     expect(getProjectSerializationStub).to.have.been.calledWith(workspaceStub);
 
     expect(result).to.equal(JSON.stringify(serializationStub));
+  });
+});
+
+describe('getCodeFromSerializedWorkspace', () => {
+  it('is empty for no source, without touching Blockly', () => {
+    expect(getCodeFromSerializedWorkspace(undefined)).to.equal('');
   });
 });

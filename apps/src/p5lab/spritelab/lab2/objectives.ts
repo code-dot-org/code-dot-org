@@ -20,6 +20,8 @@ export type ObjectiveCheck =
       data?: string;
       /** Field values the block must carry. */
       fields?: Record<string, string>;
+      /** In this scene's code, by id; the open scene's when unset. */
+      scene?: string;
     }
   | {
       kind: 'world';
@@ -40,6 +42,8 @@ export type ObjectiveCheck =
     }
   /** A jump landed on the scene. */
   | {kind: 'scene'; id: string}
+  /** The student opened the scene in the editor. */
+  | {kind: 'editing'; id: string}
   /** The student answered the question about a generated picture. */
   | {kind: 'rated'};
 
@@ -124,7 +128,12 @@ export interface ObjectiveInputs {
   /** Image names by role: a student can make a role's image more than
       once, and every one counts. */
   imagesForRole: Record<string, readonly string[] | undefined>;
+  /** The open scene's code. */
   source?: WorkspaceSource;
+  /** Every scene's code, by id, for a check naming its scene. */
+  sceneSources?: Record<string, WorkspaceSource | undefined>;
+  /** The scene open in the editor. */
+  editingSceneId?: string;
   everPlayed: boolean;
   rated: boolean;
   runtime: RuntimeProgress;
@@ -179,7 +188,10 @@ function hasBlock(
   check: Extract<ObjectiveCheck, {kind: 'block'}>,
   inputs: ObjectiveInputs
 ): boolean {
-  const {source} = inputs;
+  const source =
+    check.scene === undefined
+      ? inputs.source
+      : inputs.sceneSources?.[check.scene];
   const tops = (source?.blocks?.blocks ?? []).filter(
     top =>
       (check.under === undefined || top.type === check.under) &&
@@ -257,6 +269,8 @@ export function checkObjective(
     }
     case 'scene':
       return inputs.runtime.scenesLanded.has(check.id);
+    case 'editing':
+      return inputs.editingSceneId === check.id;
     case 'rated':
       return inputs.rated;
   }
