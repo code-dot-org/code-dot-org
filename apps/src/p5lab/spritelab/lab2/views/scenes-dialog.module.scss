@@ -31,10 +31,12 @@
   background: var(--background-neutral-secondary);
 }
 
+// The rows sit in the middle of the body's width.
 .grid {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
   gap: 20px;
   padding: 12px;
 }
