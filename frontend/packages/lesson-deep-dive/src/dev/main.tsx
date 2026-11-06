@@ -12,6 +12,14 @@ import {StrictMode, type ComponentProps} from 'react';
 import {Provider} from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
 
+import {
+  ApiClientProvider,
+  createApiClient,
+  createKyTransport,
+  refreshCsrfToken,
+  resolveCsrfToken,
+} from '@code-dot-org/core/api';
+
 import TutorApp from '@cdo/apps/aiTutor/views/TutorApp';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
@@ -52,16 +60,29 @@ async function boot(): Promise<void> {
     await startMockWorker();
   }
 
+  const apiClient = createApiClient(
+    createKyTransport({
+      baseUrl: window.location.origin,
+      credentials: 'same-origin',
+      getCsrfToken: resolveCsrfToken,
+      kyOptions: {timeout: false},
+    }),
+  );
+  // index.html has no csrf-token meta tag.
+  await refreshCsrfToken(apiClient.transport);
+
   createReactRoot(
     <StrictMode>
       <DevPageChrome>
         <Provider store={createDevStore()}>
-          <BrowserRouter>
-            <TutorApp
-              lessonDeepDiveData={LESSON_DEEP_DIVE_DATA}
-              tutorGalleryData={null}
-            />
-          </BrowserRouter>
+          <ApiClientProvider client={apiClient}>
+            <BrowserRouter>
+              <TutorApp
+                lessonDeepDiveData={LESSON_DEEP_DIVE_DATA}
+                tutorGalleryData={null}
+              />
+            </BrowserRouter>
+          </ApiClientProvider>
         </Provider>
       </DevPageChrome>
     </StrictMode>,

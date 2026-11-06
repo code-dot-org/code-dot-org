@@ -1,6 +1,7 @@
 // Public API for @code-dot-org/lesson-deep-dive
 // Export all public symbols from this file.
 export {default as AudioRecorder} from './ChallengeActivities/AudioRecorder';
+export {default as Challenges} from './ChallengeActivities/Challenges';
 export {default as FizzyButton} from './FizzyButton';
 export {default as LessonSummaryCard} from './LessonSummaryCard';
 export {default as LevelsAttemptedBox} from './StudentLessonStats/LevelsAttemptedBox';
