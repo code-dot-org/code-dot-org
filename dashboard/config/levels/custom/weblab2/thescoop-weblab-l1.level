@@ -8,7 +8,6 @@
   "properties": {
     "require_edit_to_continue": "false",
     "encrypted": "false",
-    "project_template_level_name": "thescoop-weblab-template",
     "long_instructions": "Day 1",
     "offer_browser_tts": "false",
     "submittable": "false",
@@ -33,6 +32,9 @@
       ],
       "answerTypeCustomizations": {
       }
+    },
+    "widget2": {
+      "id": "the-scoop"
     }
   },
   "audit_log": "[{\"changed_at\":\"2026-07-14 12:59:10 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-14 13:01:18 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"

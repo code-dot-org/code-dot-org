@@ -1,0 +1,92 @@
+/* Distribution — one flat bar per outcome, plotted on a fixed count axis. */
+
+.distribution-chart {
+    /* Room for the top tick label, which is centered on the topmost gridline
+       and so pokes above the plot. */
+    padding-top: 0.5em;
+    margin-bottom: 0.75em;
+}
+
+/* Scale column beside the plot; glyph labels below it, in the plot's column. */
+.distribution-plot {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 10rem auto;
+    column-gap: 0.5em;
+    row-gap: 0.4em;
+}
+
+.distribution-scale {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    width: 1.6em;
+}
+
+.distribution-scale__tick {
+    position: absolute;
+    right: 0;
+    transform: translateY(50%); /* center the label on its gridline */
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gray-500);
+    line-height: 1;
+}
+
+.distribution-track {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1.5em;
+    border-bottom: 2px solid var(--gray-300); /* the zero baseline */
+}
+
+.distribution-track__gridline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px dashed var(--gray-300);
+}
+
+/* Full-height slot the fill grows inside — invisible itself. */
+.distribution-bar {
+    position: relative; /* paints above the gridlines */
+    width: 3rem;
+    height: 100%;
+}
+
+.distribution-bar__fill {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0%;
+    border-radius: 0.25em 0.25em 0 0;
+    background-color: var(--purple-500);
+    transition: height 0.3s ease;
+}
+
+.distribution-bar[data-category="tails"] .distribution-bar__fill {
+    background-color: var(--purple-300);
+}
+
+/* Matches the track's flex layout so each glyph sits under its own bar. */
+.distribution-legend {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+/* Echoes the coin's faces, so a bar reads as "the heads side". */
+.distribution-legend__item {
+    width: 3rem;
+    text-align: center;
+    font-family: "Space Grotesk", monospace;
+    font-weight: 700;
+    color: var(--purple-900);
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Classification</title>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles.css" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header><h1>Predicting Reviews</h1></header>
+        <main>
+            <section class="features-container" aria-label="Customer Features">
+                <p class="block-label">Customer...</p>
+                <div class="feature-list" id="feature-list"></div>
+            </section>
+
+            <div class="arrow">→</div>
+
+            <section
+                id="prediction-container"
+                class="prediction-container"
+                role="status"
+                aria-label="Positive Review Probability"
+            >
+                <p class="block-label">Positive review?</p>
+                <p class="verdict" id="verdict">Yes</p>
+                <div class="prob-bars">
+                    <div class="prob-row">
+                        <span class="prob-name">Yes</span>
+                        <div class="prob-track">
+                            <div class="prob-fill yes" id="bar-yes"></div>
+                        </div>
+                        <span class="prob-pct" id="pct-yes">50%</span>
+                    </div>
+                    <div class="prob-row">
+                        <span class="prob-name">No</span>
+                        <div class="prob-track">
+                            <div class="prob-fill no" id="bar-no"></div>
+                        </div>
+                        <span class="prob-pct" id="pct-no">50%</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <template id="feature-row-template">
+            <label class="feature">
+                <span class="feature-name"></span>
+                <span class="toggle">
+                    <input
+                        type="checkbox"
+                        aria-controls="prediction-container"
+                    />
+                    <span class="slider"></span>
+                </span>
+            </label>
+        </template>
+
+        <script type="module" src="app.js"></script>
+    </body>
+</html>
