@@ -490,8 +490,12 @@ interface FieldNumber extends FieldJson {
   precision?: number;
 }
 
-interface FieldSlider extends FieldNumber {
+interface FieldSlider extends FieldJson {
   type: 'field_slider';
+  value?: number;
+  min?: number;
+  max?: number;
+  precision?: number;
 }
 
 interface FieldDropdown extends FieldJson {
