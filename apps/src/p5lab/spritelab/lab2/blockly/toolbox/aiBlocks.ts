@@ -1,9 +1,9 @@
-import {withoutBlockTypes} from '../../blockCatalog';
+import {blockTypesIn, withoutBlockTypes} from '../../blockCatalog';
 import {ASK_AI_BLOCK_TYPE} from '../blockDefinitions/askAi';
 import {ASK_AI_WITH_CHOICES_BLOCK_TYPE} from '../blockDefinitions/askAiWithChoices';
 import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockDefinitions/setSystemPrompt';
 
-import {ToolboxInfo, withoutCategory} from './types';
+import {findCategory, ToolboxInfo, withoutCategory} from './types';
 
 export const AI_CATEGORY = 'AI';
 
@@ -16,10 +16,19 @@ export const AI_BLOCK_TYPES = [
 const AI_BLOCK_TYPE_SET: ReadonlySet<string> = new Set(AI_BLOCK_TYPES);
 
 // The AI category goes whole, prompt-answered block and all, so it does not
-// linger with only that block in it.
+// linger with only that block in it. It stays, stripped, when it is the only
+// place the level offers one of those blocks.
 export function withoutAiBlocks(toolbox: ToolboxInfo): ToolboxInfo {
-  return withoutBlockTypes(
-    withoutCategory(toolbox, AI_CATEGORY),
-    AI_BLOCK_TYPE_SET
+  const stripped = withoutBlockTypes(toolbox, AI_BLOCK_TYPE_SET);
+  const category = findCategory(stripped.contents, AI_CATEGORY);
+  if (!category) {
+    return stripped;
+  }
+  const elsewhere = new Set(
+    blockTypesIn(stripped.contents.filter(entry => entry !== category))
   );
+  const onlyHere = blockTypesIn(category.contents).some(
+    type => !elsewhere.has(type)
+  );
+  return onlyHere ? stripped : withoutCategory(stripped, AI_CATEGORY);
 }

@@ -309,8 +309,27 @@ describe('isAskAiEnabled', () => {
 describe('askAiRefusal', () => {
   const student = {userType: 'student', spritelabAskAiRefusal: null};
 
+  beforeEach(() => {
+    DCDO.get.mockReturnValue(true);
+  });
+
   it('allows a user the server does not refuse', () => {
     expect(askAiRefusal(student)).toBeNull();
+  });
+
+  it('reads the kill switch live, after the server has answered', () => {
+    DCDO.get.mockReturnValue(false);
+    expect(askAiRefusal(student)).toBe('The AI is turned off right now.');
+  });
+
+  it('words a kill switch thrown outside the pilot as the pilot', () => {
+    DCDO.get.mockReturnValue(false);
+    expect(
+      askAiRefusal({
+        ...student,
+        spritelabAskAiRefusal: SpritelabAskAiRefusals.NOT_IN_PILOT,
+      })
+    ).toBe("AI blocks aren't available yet.");
   });
 
   it("words each of the server's refusals", () => {
