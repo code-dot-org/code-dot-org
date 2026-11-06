@@ -26,9 +26,18 @@ const fullList = {
 };
 let animationList: {
   orderedKeys: string[];
-  propsByKey: Record<string, {name: string; categories: string[]}>;
+  propsByKey: Record<
+    string,
+    {name: string; categories: string[]; role?: string}
+  >;
 } = fullList;
-const mockStore = {getState: () => ({animationList})};
+let imageRoleDefaults: Record<string, string> | undefined;
+const mockStore = {
+  getState: () => ({
+    animationList,
+    lab: {levelProperties: {imageRoleDefaults}},
+  }),
+};
 
 describe('image picker fields', () => {
   it('lists costumes newest-first', () => {

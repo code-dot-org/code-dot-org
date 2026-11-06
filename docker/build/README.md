@@ -11,7 +11,6 @@ Contents on top of cdo-base:
 - `git`, for the Gemfile's git-sourced gems
 - `python3`, for node-gyp
 - Node 20 with corepack, for the `apps/` build
-- `uv`, for the `python/` workspace
 
 It runs as the non-root `cdo` user with `BUNDLE_PATH=/usr/local/bundle`
 writable.
@@ -42,7 +41,7 @@ docker build -f docker/deps/Dockerfile --build-arg BUILD_IMAGE=cdo-build:local .
 ```
 
 The cost of not publishing is that a runner with no layer cache reinstalls
-the toolchain (apt, Node, uv) per build — about 30 seconds. Registry
+the toolchain (apt, Node) per build — about 30 seconds. Registry
 build cache covers it; if that stops holding, publishing this image is the
 fix, and the smoke gate below already proves it builds standalone.
 
@@ -84,18 +83,6 @@ are the only version-sensitive material in the mechanism.
 The smoke test pins the image's Node major to the repo's `.nvmrc`, so a major
 moved here without the repo-wide pins (`.nvmrc`, chef's `cdo-nodejs`, `apps/`
 engines) fails at the gate instead of shipping skew.
-
-## Where uv comes from
-
-uv comes from Astral's own registry image, copied in with `COPY --from`, the
-primary method in [their Docker
-guide](https://docs.astral.sh/uv/guides/integration/docker/). It is pinned by
-tag *and* digest, so the reference cannot move even if the tag is republished,
-and it is written out on the `FROM` line rather than assembled from an `ARG`:
-dependabot reads `FROM` lines and cannot resolve `ARG`s, so a literal is what
-gets bumped (`.github/dependabot.yml` globs `/docker/*`, so new images need no
-edit there). That limitation is why `NODE_VERSION` and `NODE_KEYS_REF` are
-bumped by hand.
 
 ## Bundler and identity environment
 

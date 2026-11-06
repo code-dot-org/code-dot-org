@@ -3,3 +3,11 @@
 html {
   @include font.main-font-regular;
 }
+
+// Follow the Theme toolbar. Docs pages paint their own background, so the
+// docs view needs .docs-story as well as body.
+body,
+:global(.docs-story) {
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}

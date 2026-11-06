@@ -84,6 +84,7 @@
     "@dnd-kit/utilities": "^3.2.2",
     "@mui/material": "^7.0.0",
     "classnames": "^2.5.1",
-    "react": "^17.0.0 || ^18.0.0 || ^19.0.0"
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-router-dom": "^6.26.0"
   }
 }

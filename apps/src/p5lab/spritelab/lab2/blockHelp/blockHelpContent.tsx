@@ -102,6 +102,11 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       'Try it under "when touching" for a pickup, or under a click to ' +
       'celebrate.',
   },
+  spritelab2_showTitle: {
+    title: 'Show title',
+    summary: 'Big text across the middle of the game for a moment.',
+    body: 'Put it under a touch to announce a win.',
+  },
   spritelab2_goToExternalScene: {
     title: 'Go to project',
     animation: {

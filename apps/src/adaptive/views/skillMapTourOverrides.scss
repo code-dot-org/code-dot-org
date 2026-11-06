@@ -15,6 +15,8 @@
   box-shadow: var(--neutral-black-alpha-50) 0 0 0 5000px !important;
 }
 
+// Arrow triangles use a larger border-width than IntroJS's default.
+// border-color matches the card background so the caret blends in both themes.
 .introjs-arrow {
   border-width: 10px;
 }
@@ -22,75 +24,83 @@
 .introjs-arrow.top-right,
 .introjs-arrow.top-middle {
   top: -18px;
+  border-bottom-color: var(--background-neutral-primary);
 }
 .introjs-arrow.right {
   right: -18px;
+  border-left-color: var(--background-neutral-primary);
 }
 .introjs-arrow.right-bottom {
   bottom: 18px;
+  border-left-color: var(--background-neutral-primary);
 }
 .introjs-arrow.bottom,
 .introjs-arrow.bottom-right,
 .introjs-arrow.bottom-middle {
   bottom: -18px;
+  border-top-color: var(--background-neutral-primary);
 }
 .introjs-arrow.left,
 .introjs-arrow.left-bottom {
   left: -18px;
+  border-right-color: var(--background-neutral-primary);
 }
 
 .introjs-tooltip {
-  width: 400px;
-  max-width: 400px;
-  border: 1px solid var(--background-neutral-primary);
-  box-shadow: 0 3px 30px var(--background-neutral-black-fixed);
+  width: 320px;
+  max-width: 320px;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 10px;
+  box-shadow:
+    0 4px 6px -4px rgb(0 0 0 / 10%),
+    0 10px 15px -3px rgb(0 0 0 / 10%);
 }
 .introjs-tooltiptext {
-  padding: 0 24px;
+  padding: 2px 20px 0;
 
   p {
     @include main-font-regular;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 .introjs-tooltip-title {
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-semi-bold);
   color: var(--text-neutral-primary);
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 .introjs-tooltip-header {
-  padding: 24px 24px 0;
+  padding: 20px 20px 0;
 }
 .introjs-tooltipbuttons {
-  padding: 10px 24px;
+  border-top: none;
+  padding: 16px 20px 20px;
 }
 
 .introjs-button {
   @include main-font-regular;
-  padding: 8px 16px 6px;
-  font-size: 0.75rem;
+  padding: 5px 12px;
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semi-bold);
   text-shadow: none;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 .introjs-button:focus {
   box-shadow: 0 0 0 0.2rem var(--text-neutral-tertiary);
 }
 
-.introjs-prevbutton {
-  color: var(--text-brand-purple-primary);
-  border: 1px solid var(--borders-brand-purple-primary);
-  background-color: var(--background-neutral-primary);
+.introjs-prevbutton,
+.introjs-skipbutton {
+  display: none;
+}
 
-  &:hover,
-  &:active,
-  &:focus,
-  &:visited {
-    color: var(--text-neutral-white-fixed);
-    background-color: var(--background-brand-purple-light);
-    text-decoration: none;
-    box-shadow: none;
-  }
+// Show the exit (×) button only on the final step, where the user has no
+// other way to dismiss the tour from within the dialog.
+body.adaptive-tour-no-next .introjs-skipbutton {
+  display: block;
+  color: var(--text-neutral-primary);
 }
 
 // On the "pick a checkpoint" step the user advances by clicking the map, not

@@ -15,6 +15,14 @@ import moduleStyles from '../sprite-lab2-view.module.scss';
 // CustomDropdown derives its element ids from this.
 const SCENE_DROPDOWN_NAME = 'scene-dropdown';
 
+/** The id of the button that opens the scene menu. */
+export const sceneDropdownButtonId = (): string =>
+  `${SCENE_DROPDOWN_NAME}-dropdown-button`;
+
+/** The id of a scene's entry in the open menu. */
+export const sceneMenuItemId = (sceneId: string): string =>
+  `scene-option-${sceneId}`;
+
 interface SceneMenuProps {
   scenes: SceneMetadata[];
   activeSceneId: string | null;
@@ -82,6 +90,7 @@ const SceneMenu: React.FunctionComponent<SceneMenuProps> = ({
         <li key={scene.id}>
           <button
             type="button"
+            id={sceneMenuItemId(scene.id)}
             aria-current={scene.id === activeSceneId ? 'true' : undefined}
             className={classNames(
               moduleStyles.sceneMenuItem,
