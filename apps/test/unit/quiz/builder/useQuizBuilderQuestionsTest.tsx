@@ -74,6 +74,19 @@ describe('useQuizBuilderQuestions', () => {
     expect(version.current).toBe(5);
   });
 
+  it('numbers pages by their order, closing gaps in the saved page numbers', async () => {
+    const later = {...QUESTION, id: 8, page: 3};
+    getSpy.mockResolvedValue({
+      json: async () => ({version: 5, questions: [QUESTION, later]}),
+    } as Response);
+    const {result} = await renderLoaded();
+
+    expect(result.current.pages).toEqual([
+      {page: 1, questions: [QUESTION]},
+      {page: 2, questions: [later]},
+    ]);
+  });
+
   it('keeps each question the same object across unrelated updates', async () => {
     const {result} = await renderLoaded();
     const before = result.current.pages[0].questions[0];
