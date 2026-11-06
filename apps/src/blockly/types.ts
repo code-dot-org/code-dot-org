@@ -455,6 +455,7 @@ type ArgumentJson =
   | FieldInput
   | FieldDropdown
   | FieldNumber
+  | FieldSlider
   | FieldImageJson
   | InputValue;
 
@@ -487,6 +488,10 @@ interface FieldNumber extends FieldJson {
   min?: number;
   max?: number;
   precision?: number;
+}
+
+interface FieldSlider extends FieldNumber {
+  type: 'field_slider';
 }
 
 interface FieldDropdown extends FieldJson {
