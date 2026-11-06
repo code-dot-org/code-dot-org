@@ -22,7 +22,7 @@ describe('BehindTheScenes', () => {
     });
     expect(screen.queryByRole('dialog')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
-    const dialog = screen.getByRole('dialog', {name: 'Behind the scenes'});
+    const dialog = screen.getByRole('alertdialog');
     expect(dialog.textContent).toContain('Behind the scenes');
     expect(screen.getByText(/^A cat\. /).textContent).toContain('pixel');
     expect(
@@ -34,7 +34,7 @@ describe('BehindTheScenes', () => {
     // No story to lead on to.
     expect(screen.queryByRole('button', {name: 'How AI made this'})).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
-    expect(screen.queryByRole('dialog')).toBeNull();
+    expect(screen.queryByRole('alertdialog')).toBeNull();
   });
 
   it("leads on to the picture's story when there is one to tell, closing itself first", () => {
@@ -51,7 +51,7 @@ describe('BehindTheScenes', () => {
     });
     fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
     fireEvent.click(screen.getByRole('button', {name: 'How AI made this'}));
-    expect(screen.queryByRole('dialog')).toBeNull();
+    expect(screen.queryByRole('alertdialog')).toBeNull();
     expect(onTellStory).toHaveBeenCalledWith(story);
   });
 
@@ -59,7 +59,7 @@ describe('BehindTheScenes', () => {
     renderBehind({sent: sentPromptsFor('A cat', OPTIONS, 'pixel', false)});
     fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
     fireEvent.click(screen.getByRole('button', {name: 'Close dialog'}));
-    expect(screen.queryByRole('dialog')).toBeNull();
+    expect(screen.queryByRole('alertdialog')).toBeNull();
   });
 
   it("switches between a set's first-picture words and the shared pose words", () => {
