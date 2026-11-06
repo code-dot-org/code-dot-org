@@ -89,26 +89,41 @@ const PortalThemeProvider = ({
 }) => {
   // MUI's ThemeProvider feeds DefaultPropsProvider from these; this one replaces it.
   const outer = useMuiTheme().components;
-  const value = useMemo(
-    () =>
-      ({
-        ...outer,
-        MuiPopper: withDataTheme(outer?.MuiPopper, theme),
-        MuiPopover: withDataTheme(outer?.MuiPopover, theme),
-      }) as DefaultProps,
+  const value = useMemo<DefaultProps>(
+    () => ({
+      // Theme-shaped entries ({defaultProps, styleOverrides, ...}) are what MUI feeds the provider.
+      ...(outer as DefaultProps),
+      MuiPopper: withDataTheme<'MuiPopper'>(outer?.MuiPopper, theme),
+      MuiPopover: withDataTheme<'MuiPopover'>(outer?.MuiPopover, theme),
+    }),
     [outer, theme],
   );
   return <DefaultPropsProvider value={value}>{children}</DefaultPropsProvider>;
 };
 
-function withDataTheme<T extends {defaultProps?: object}>(
-  entry: T | undefined,
+interface ComponentEntry {
+  defaultProps?: object;
+  styleOverrides?: unknown;
+  variants?: unknown;
+}
+
+/**
+ * Adds `data-theme` to a component's entry, keeping its shape. MUI reads either
+ * `defaultProps` or, when there are no `styleOverrides` or `variants`, the entry
+ * itself as the default props, so a flat entry has to stay flat.
+ */
+function withDataTheme<K extends 'MuiPopper' | 'MuiPopover'>(
+  entry: ComponentEntry | undefined,
   theme: Theme,
 ) {
-  return {
-    ...entry,
-    defaultProps: {...entry?.defaultProps, 'data-theme': theme},
-  };
+  const isFlat =
+    !entry?.defaultProps && !entry?.styleOverrides && !entry?.variants;
+  return (isFlat
+    ? {...entry, 'data-theme': theme}
+    : {
+        ...entry,
+        defaultProps: {...entry?.defaultProps, 'data-theme': theme},
+      }) as unknown as DefaultProps[K];
 }
 
 const noop = () => {};
@@ -118,6 +133,10 @@ interface ThemeProviderProps {
   /**
    * Pins the subtree to this theme. setTheme and toggleTheme then act on the
    * enclosing provider, and the pinned subtree keeps its theme.
+   *
+   * Passing the prop with no value (`theme={maybeTheme}` where `maybeTheme` is
+   * undefined) inside another provider follows that provider instead of
+   * starting its own state. A bare `<ThemeProvider>` still starts its own.
    */
   theme?: Theme;
   /** Starting theme of an unpinned provider. */
@@ -145,16 +164,23 @@ interface ThemeProviderProps {
  *
  * Prefer this over a bare data-theme attribute, which MUI portals do not see.
  * */
-export const ThemeProvider = ({
-  children,
-  theme: pinnedTheme,
-  initialTheme = 'Light',
-}: ThemeProviderProps) => {
+export const ThemeProvider = (props: ThemeProviderProps) => {
+  const {children, theme: pinnedTheme, initialTheme = 'Light'} = props;
   const enclosing = useContext(ThemeContext);
   const [ownTheme, setOwnTheme] = useState<Theme>(initialTheme);
-  const theme = pinnedTheme ?? ownTheme;
+  // `theme` was passed but unset, so there is nothing to pin: follow the enclosing provider.
+  const followed =
+    'theme' in props &&
+    pinnedTheme === undefined &&
+    props.initialTheme === undefined
+      ? enclosing
+      : undefined;
+  const theme = pinnedTheme ?? followed?.theme ?? ownTheme;
 
   const value = useMemo<ThemeContextProps>(() => {
+    if (followed) {
+      return followed;
+    }
     if (pinnedTheme) {
       return {
         theme: pinnedTheme,
@@ -168,7 +194,13 @@ export const ThemeProvider = ({
       toggleTheme: () =>
         setOwnTheme(prevTheme => (prevTheme === 'Light' ? 'Dark' : 'Light')),
     };
-  }, [pinnedTheme, ownTheme, enclosing?.setTheme, enclosing?.toggleTheme]);
+  }, [
+    followed,
+    pinnedTheme,
+    ownTheme,
+    enclosing?.setTheme,
+    enclosing?.toggleTheme,
+  ]);
 
   /**
    * We're adding data-theme attribute to a html element to be able to access current theme value in styles
@@ -180,7 +212,7 @@ export const ThemeProvider = ({
         {/* A pinned section wraps existing markup; it must not add a box. */}
         <div
           data-theme={theme}
-          style={pinnedTheme ? {display: 'contents'} : undefined}
+          style={pinnedTheme || followed ? {display: 'contents'} : undefined}
         >
           {children}
         </div>
