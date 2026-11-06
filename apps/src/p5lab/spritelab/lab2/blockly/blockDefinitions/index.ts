@@ -1,5 +1,6 @@
 import category from '@cdo/apps/blockly/blockDefinitions/category';
 import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
+import '@blockly/field-slider';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import askAi from './askAi';

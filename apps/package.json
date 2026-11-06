@@ -212,6 +212,7 @@
     "@blockly/field-bitmap": "^6.0.9",
     "@blockly/field-colour": "^6.0.12",
     "@blockly/field-grid-dropdown": "^6.0.10",
+    "@blockly/field-slider": "^13.1.0",
     "@blockly/plugin-cross-tab-copy-paste": "^8.0.8",
     "@blockly/plugin-scroll-options": "^7.0.9",
     "@blockly/theme-dark": "^8.0.4",

@@ -54,6 +54,8 @@ import {
 import useGameAudio from '../audioFeedback/useGameAudio';
 import {
   catalogEntries,
+  GRAVITY_BLOCK_TYPES,
+  gravityBlockTypesTogether,
   heldBackBlockTypes,
   newBlockTypes,
 } from '../blockCatalog';
@@ -487,13 +489,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
   );
   // Everything the toolbox leaves out.
-  const hiddenBlockTypes = useMemo(
-    () =>
-      isLevelbuilder
-        ? heldBackBlocks
-        : new Set([...heldBackBlocks, ...AI_BLOCK_TYPES]),
-    [heldBackBlocks, isLevelbuilder]
-  );
+  const hiddenBlockTypes = useMemo(() => {
+    const hidden = isLevelbuilder
+      ? new Set(heldBackBlocks)
+      : new Set([...heldBackBlocks, ...AI_BLOCK_TYPES]);
+    if (isFreeplayMode(levelProperties.levelMode)) {
+      GRAVITY_BLOCK_TYPES.forEach(type => hidden.delete(type));
+    }
+    return hidden;
+  }, [heldBackBlocks, isLevelbuilder, levelProperties.levelMode]);
   const [showBlockCatalog, setShowBlockCatalog] = useState(false);
   // Dismissing the catalog, not opening it, is what counts as seen: an
   // opening cut short (a Start Over that leaves the level, a reload) comes
@@ -506,8 +510,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [currentSources.blockCatalogSeen, patchSources]);
   const addCatalogBlock = useCallback(
     (type: string) => {
-      if (!chosenBlockSet.has(type)) {
-        patchSources({chosenBlocks: [...chosenBlockSet, type]});
+      const typesToAdd = gravityBlockTypesTogether(type).filter(
+        blockType => !chosenBlockSet.has(blockType)
+      );
+      if (typesToAdd.length > 0) {
+        patchSources({
+          chosenBlocks: [...chosenBlockSet, ...typesToAdd],
+        });
       }
     },
     [chosenBlockSet, patchSources]

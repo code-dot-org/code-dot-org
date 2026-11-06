@@ -3,19 +3,31 @@ import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import {PLATFORM_GRAVITY} from '../../platformPhysics';
 
-/**
- * Override the platformer's gravity. Negative flips the world: players fall
- * up and land on block undersides and the view's top edge; the platform
- * player's jump follows the flip. Zero turns gravity off.
- */
+const MIN_GRAVITY_STRENGTH = 1;
+const MAX_GRAVITY_STRENGTH = 10;
+const DEFAULT_GRAVITY_STRENGTH = 5;
+
+/** Override the platformer's gravity and direction. */
 const definition: BlockJson = {
   type: 'spritelab2_setPlatformGravity',
-  message0: 'set gravity to %1',
+  message0: 'set gravity to %1 in direction %2',
   args0: [
     {
-      type: 'field_number',
+      type: 'field_slider',
       name: 'GRAVITY',
-      value: PLATFORM_GRAVITY,
+      value: DEFAULT_GRAVITY_STRENGTH,
+      min: MIN_GRAVITY_STRENGTH,
+      max: MAX_GRAVITY_STRENGTH,
+      precision: 1,
+    },
+    {
+      type: 'field_dropdown',
+      name: 'DIRECTION',
+      options: [
+        ['↓', 'down'],
+        ['↑', 'up'],
+        ['none', 'none'],
+      ],
     },
   ],
   previousStatement: null,
@@ -23,7 +35,17 @@ const definition: BlockJson = {
   style: BlockStyles.SPRITE,
 };
 
-const generator: GeneratorFunction = block =>
-  `setPlatformGravity(${Number(block.getFieldValue('GRAVITY'))});\n`;
+const generator: GeneratorFunction = block => {
+  const gravityStrength = Number(block.getFieldValue('GRAVITY'));
+  const engineGravity =
+    (gravityStrength / DEFAULT_GRAVITY_STRENGTH) * PLATFORM_GRAVITY;
+
+  const direction = JSON.stringify(block.getFieldValue('DIRECTION'));
+
+  return (
+    `setPlatformGravity(${engineGravity});\n` +
+    `setPlatformGravityDirection(${direction});\n`
+  );
+};
 
 export default {definition, generator};

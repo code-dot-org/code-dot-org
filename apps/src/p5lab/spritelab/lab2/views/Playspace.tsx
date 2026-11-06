@@ -769,7 +769,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       )}
       {mode === 'play' && (
         <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
-          Left and right arrows move. Space or up arrow jumps. In zero gravity,
+          Left and right arrows move. Space or the arrow opposite gravity jumps. In zero gravity,
           up and down steer. Navigation sounds can be turned on in Settings:
           footsteps and bumps, a tone for your height, and tones that grow
           louder as a wall or an edge comes near.
