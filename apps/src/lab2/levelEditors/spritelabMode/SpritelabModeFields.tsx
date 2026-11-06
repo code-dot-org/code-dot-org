@@ -81,7 +81,7 @@ const IMAGE_SUBJECT_ITEMS = IMAGE_SUBJECTS.map(subject => ({
 
 function useTypedText(saved: string, normalize: (text: string) => string) {
   const [text, setText] = useState(saved);
-  if (normalize(text) !== saved) {
+  if (normalize(text) !== normalize(saved)) {
     setText(saved);
   }
   return [text, setText] as const;

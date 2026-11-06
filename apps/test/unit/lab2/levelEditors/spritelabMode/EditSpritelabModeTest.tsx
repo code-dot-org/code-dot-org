@@ -131,6 +131,18 @@ describe('EditSpritelabMode', () => {
     ]);
   });
 
+  it('mounts with roles saved with surrounding spaces', () => {
+    const {container} = renderEditor({
+      kind: 'world',
+      imageType: 'sprite',
+      imageRole: ' hero ',
+      paletteRoles: [' treasure '],
+    });
+    expect(textbox(IMAGE_ROLE)).toHaveValue(' hero ');
+    expect(textbox(PALETTE_ROLES)).toHaveValue(' treasure ');
+    expect(JSON.parse(submitted(container)).imageRole).toBe(' hero ');
+  });
+
   it('accepts a space typed into the image role', () => {
     const {container} = renderEditor({kind: 'image', imageType: 'background'});
     let typed = '';
