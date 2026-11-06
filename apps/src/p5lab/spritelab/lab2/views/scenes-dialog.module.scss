@@ -20,8 +20,10 @@
   border: 0;
 }
 
-// The cards, in rows; the body scrolls down when they outrun it.
+// The cards, in rows; the body scrolls down when they outrun it. The
+// dialog centres its content, so the body asks for the full width.
 .body {
+  align-self: stretch;
   max-height: min(55vh, 560px);
   overflow-y: auto;
   padding: 8px;
