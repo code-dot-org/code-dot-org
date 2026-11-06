@@ -133,10 +133,15 @@ export default function useLearningStory({
     },
     [learning, tellHeldStory]
   );
-  const tellStory = useCallback(
-    (asked: LearningStory) => setStory({...asked, asked: true}),
-    []
-  );
+  // An asked-for telling is the visit's telling: a story still due for the
+  // level is dropped, so it neither replaces this one mid-read nor repeats
+  // it after.
+  const tellStory = useCallback((asked: LearningStory) => {
+    window.clearTimeout(timerRef.current);
+    heldStoryRef.current = null;
+    toldRef.current = true;
+    setStory({...asked, asked: true});
+  }, []);
   const endStory = useCallback(() => setStory(null), []);
   return {story, offerStory, handleAsking, tellStory, endStory};
 }
