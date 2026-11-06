@@ -42,7 +42,7 @@ describe('continueOrFinishLesson', () => {
 
   it('shows a finish dialog of its own and stays on the level', () => {
     finish('hoai2026');
-    expect(showFinishDialog).toHaveBeenCalledWith('hoai2026');
+    expect(showFinishDialog).toHaveBeenCalledWith('hoai2026', '/done');
     expect(shareLab2Project).not.toHaveBeenCalled();
   });
 

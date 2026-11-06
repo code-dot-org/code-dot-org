@@ -14,6 +14,7 @@ describe('Hoai2026Congrats', () => {
         shareUrl="https://studio.code.org/projects/spritelab2/abc"
         projectType="spritelab"
         onRemix={jest.fn()}
+        certificateUrl="/congrats?s=hoai2026-dev"
         {...props}
       />
     );
@@ -42,9 +43,10 @@ describe('Hoai2026Congrats', () => {
       'https://code.org/en-US/curriculum/artificial-intelligence-discoveries'
     );
     expect(screen.getByRole('button', {name: 'Copy link'})).toBeInTheDocument();
-    expect(
-      screen.getByRole('button', {name: 'Certificate'})
-    ).toBeInTheDocument();
+    expect(screen.getByRole('link', {name: 'Certificate'})).toHaveAttribute(
+      'href',
+      '/congrats?s=hoai2026-dev'
+    );
     expect(screen.getByRole('link', {name: 'Learn more'})).toHaveAttribute(
       'href',
       'https://code.org/en-US/professional-learning'
@@ -56,6 +58,14 @@ describe('Hoai2026Congrats', () => {
     renderDialog({onRemix});
     fireEvent.click(screen.getByRole('button', {name: 'Open Sprite Lab'}));
     expect(onRemix).toHaveBeenCalledTimes(1);
+  });
+
+  it('offers the certificate as a plain button when the unit has no finish URL', () => {
+    renderDialog({certificateUrl: undefined});
+    expect(screen.queryByRole('link', {name: 'Certificate'})).toBeNull();
+    expect(
+      screen.getByRole('button', {name: 'Certificate'})
+    ).toBeInTheDocument();
   });
 
   it('says so instead of offering a link when the game cannot be shared', () => {

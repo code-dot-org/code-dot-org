@@ -71,9 +71,10 @@ function handleNavigation(
   }
 
   const {finishUrl, finishDialog} = levelProperties;
-  // A finish dialog of its own keeps the student on the level.
+  // A finish dialog of its own keeps the student on the level; the unit's
+  // finish URL is where its certificate offer leads.
   if (isFinishDialogId(finishDialog)) {
-    showFinishDialog(finishDialog);
+    showFinishDialog(finishDialog, finishUrl);
     return;
   }
   // If we have a finish URL, show the finish dialog if present, or redirect to the finish URL.

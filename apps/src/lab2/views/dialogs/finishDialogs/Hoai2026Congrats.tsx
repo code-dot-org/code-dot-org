@@ -16,16 +16,11 @@ import {FinishDialogProps} from './showFinishDialog';
 
 import styles from './hoai2026-congrats.module.scss';
 
-// Where each offer leads. The certificate's is not decided yet; an
-// undefined one renders as a button that goes nowhere.
-const DESTINATIONS: Record<
-  'elementary' | 'middleSchool' | 'certificate' | 'professionalLearning',
-  string | undefined
-> = {
+// Where the fixed offers lead; the certificate's comes with the level.
+const DESTINATIONS = {
   elementary: 'https://studio.code.org/courses/k5-ai-data-2024/units/1/reset',
   middleSchool:
     'https://code.org/en-US/curriculum/artificial-intelligence-discoveries',
-  certificate: undefined,
   professionalLearning: 'https://code.org/en-US/professional-learning',
 };
 
@@ -89,6 +84,7 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
   shareUrl,
   projectType,
   onRemix,
+  certificateUrl,
 }) => (
   <MuiCustomDialog
     className={styles.dialog}
@@ -203,7 +199,7 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
           <MuiButton
             variant="outlined"
             color="secondary"
-            {...linkProps(DESTINATIONS.certificate)}
+            {...linkProps(certificateUrl)}
           >
             Certificate
           </MuiButton>

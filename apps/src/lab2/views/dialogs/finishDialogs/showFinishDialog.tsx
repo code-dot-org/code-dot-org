@@ -25,6 +25,9 @@ export interface FinishDialogProps {
   projectType?: ProjectType;
   /** Saves and opens a remix of the project, as the header's Remix does. */
   onRemix: () => void;
+  /** The unit's finish URL, where a certificate is offered; absent when the
+      unit has none. */
+  certificateUrl?: string;
 }
 
 const FINISH_DIALOGS: Record<
@@ -46,7 +49,8 @@ const FinishDialogHost: React.FunctionComponent<{
   projectType?: ProjectType;
   onClose: () => void;
   onRemix: () => void;
-}> = ({dialogId, shareUrl, projectType, onClose, onRemix}) => {
+  certificateUrl?: string;
+}> = ({dialogId, shareUrl, projectType, onClose, onRemix, certificateUrl}) => {
   const [open, setOpen] = useState(true);
   const shareable = useAppSelector(
     state => !state.lab.shareFailure && !state.lab.isBlockedAbuse
@@ -67,6 +71,7 @@ const FinishDialogHost: React.FunctionComponent<{
         shareUrl={shareable && shareUrl ? shareUrl : undefined}
         projectType={projectType}
         onRemix={onRemix}
+        certificateUrl={certificateUrl}
       />
     </div>
   );
@@ -76,7 +81,10 @@ const FinishDialogHost: React.FunctionComponent<{
  * Save, then show the level's finish dialog. Closing it leaves the student
  * on the level.
  */
-export function showFinishDialog(dialogId: FinishDialogId): void {
+export function showFinishDialog(
+  dialogId: FinishDialogId,
+  certificateUrl?: string
+): void {
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   if (!projectManager) {
     return;
@@ -107,6 +115,7 @@ export function showFinishDialog(dialogId: FinishDialogId): void {
             projectType={projectType}
             onClose={onClose}
             onRemix={remix}
+            certificateUrl={certificateUrl}
           />
         </Provider>,
         container
