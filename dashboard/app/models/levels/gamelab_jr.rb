@@ -49,6 +49,7 @@ class GamelabJr < Gamelab
     callouts
     objectives
     block_catalog
+    lock_earlier_blocks
     no_project
   )
 

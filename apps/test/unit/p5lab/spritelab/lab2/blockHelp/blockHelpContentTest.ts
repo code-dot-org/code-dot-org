@@ -16,9 +16,11 @@ describe('BLOCK_HELP', () => {
   const PICTURE_PENDING = new Set([
     'gamelab_spriteSay',
     'spritelab2_restartScene',
+    'spritelab2_showTitle',
     'gamelab_atTime',
     'spritelab2_whenPlayer',
     'spritelab2_askAI',
+    'spritelab2_askAIWithChoices',
     'spritelab2_setSystemPrompt',
   ]);
 
