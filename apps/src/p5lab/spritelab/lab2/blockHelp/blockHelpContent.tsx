@@ -34,7 +34,7 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     title: 'Set gravity',
     animation: {src: animSetGravity, alt: 'The set gravity block in action.'},
     summary: 'Changes how hard everything falls.',
-    body: `**${DEFAULT_GRAVITY_STRENGTH}** is Earth-like gravity; **0** is weightless.`,
+    body: `**${DEFAULT_GRAVITY_STRENGTH}** is the default gravity; **0** is weightless.`,
   },
   spritelab2_setPlatformGravityDirection: {
     title: 'Set gravity direction',
