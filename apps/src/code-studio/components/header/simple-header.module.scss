@@ -1,5 +1,9 @@
 $inset: 2px;
 
+// Bootstrap's large breakpoint, below which the bar keeps only the current
+// bubble, as the library's ProgressWidget does.
+$narrow: 991.98px;
+
 // The same fade HeaderMiddle's row has; keyframes are scoped to the module.
 @keyframes fadein {
   from {
@@ -66,6 +70,15 @@ $inset: 2px;
   align-items: center;
   gap: 4px;
   padding: 0 8px;
+
+  // The lesson name is the only part that shrinks; once it is gone the row
+  // would overflow the header, so narrow screens keep the current bubble
+  // alone. Guarded on a current bubble so the row is never left empty.
+  @media (max-width: $narrow) {
+    &:has(> [aria-current]) > :not([aria-current]) {
+      display: none;
+    }
+  }
 }
 
 .save {
