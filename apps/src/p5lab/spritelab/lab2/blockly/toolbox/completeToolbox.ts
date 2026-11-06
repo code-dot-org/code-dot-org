@@ -4,8 +4,6 @@ import {
   makeDynamicCategory,
 } from '@cdo/apps/blockly/utils/toolbox';
 
-import {ASK_AI_BLOCK_TYPE} from '../blockDefinitions/askAi';
-import {ASK_AI_WITH_CHOICES_BLOCK_TYPE} from '../blockDefinitions/askAiWithChoices';
 import {BURST_BLOCK_TYPE} from '../blockDefinitions/burst';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
@@ -13,15 +11,13 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
 import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
 import {PLAY_SOUND_EFFECT_BLOCK_TYPE} from '../blockDefinitions/playSoundEffect';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
-import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockDefinitions/setSystemPrompt';
 import {SET_WEATHER_BLOCK_TYPE} from '../blockDefinitions/setWeather';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 
+import {AI_BLOCK_TYPES, AI_CATEGORY} from './aiBlocks';
 import {filterToSupportedSharedBlocks} from './supportedSharedBlocks';
 import {ToolboxInfo} from './types';
-
-export const AI_CATEGORY = 'AI';
 
 // Where the lab-owned blocks live in the complete toolbox.
 const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
@@ -54,11 +50,7 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_setPlatformGravity',
     'spritelab2_setCameraZoom',
   ],
-  [AI_CATEGORY]: [
-    ASK_AI_BLOCK_TYPE,
-    ASK_AI_WITH_CHOICES_BLOCK_TYPE,
-    SET_SYSTEM_PROMPT_BLOCK_TYPE,
-  ],
+  [AI_CATEGORY]: AI_BLOCK_TYPES,
 };
 
 // Blocks registered outside the DB block pool (Blockly core, blocksCommon,

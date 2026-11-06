@@ -17,8 +17,8 @@ import {
   SYSTEM_PROMPT,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/text/askAi';
 import {
-  AiChatAccessLevels,
   AiChatClientTypes,
+  SpritelabAskAiRefusals,
 } from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aichat/api/client/helpers/safetyHelpers', () => ({
@@ -307,62 +307,36 @@ describe('isAskAiEnabled', () => {
 });
 
 describe('askAiRefusal', () => {
-  const allowed = {
-    userType: 'student',
-    inSpritelab2AiPilot: true,
-    aiChatAccessLevel: AiChatAccessLevels.ENABLED,
-    blockedAichatProviders: [],
-  };
+  const student = {userType: 'student', spritelabAskAiRefusal: null};
 
-  beforeEach(() => DCDO.get.mockReturnValue(undefined));
-
-  it('allows a pilot user with AI access', () => {
-    expect(askAiRefusal(allowed)).toBeNull();
+  it('allows a user the server does not refuse', () => {
+    expect(askAiRefusal(student)).toBeNull();
   });
 
-  it('refuses when the block is turned off', () => {
-    DCDO.get.mockReturnValue(false);
-    expect(askAiRefusal(allowed)).toBe('The AI is turned off right now.');
-  });
-
-  it('refuses outside the pilot', () => {
-    expect(askAiRefusal({...allowed, inSpritelab2AiPilot: false})).toBe(
-      "AI blocks aren't available yet."
-    );
-  });
-
-  it('refuses without full AI access', () => {
-    [AiChatAccessLevels.ESSENTIAL_ONLY, AiChatAccessLevels.DISABLED].forEach(
-      aiChatAccessLevel =>
-        expect(askAiRefusal({...allowed, aiChatAccessLevel})).toBe(
-          "Your teacher hasn't turned on AI for this class."
-        )
+  it("words each of the server's refusals", () => {
+    [
+      [SpritelabAskAiRefusals.NOT_IN_PILOT, "AI blocks aren't available yet."],
+      [SpritelabAskAiRefusals.OFF, 'The AI is turned off right now.'],
+      [
+        SpritelabAskAiRefusals.NO_ACCESS,
+        "Your teacher hasn't turned on AI for this class.",
+      ],
+      [
+        SpritelabAskAiRefusals.REGION_BLOCKED,
+        "AI blocks aren't available in your region yet.",
+      ],
+    ].forEach(([spritelabAskAiRefusal, message]) =>
+      expect(askAiRefusal({...student, spritelabAskAiRefusal})).toBe(message)
     );
   });
 
   it('tells a teacher without AI access to verify', () => {
     expect(
       askAiRefusal({
-        ...allowed,
         userType: 'teacher',
-        aiChatAccessLevel: AiChatAccessLevels.DISABLED,
+        spritelabAskAiRefusal: SpritelabAskAiRefusals.NO_ACCESS,
       })
     ).toBe('AI blocks need a verified teacher account.');
-  });
-
-  it("refuses when the model's provider is blocked", () => {
-    expect(askAiRefusal({...allowed, blockedAichatProviders: ['google']})).toBe(
-      "AI blocks aren't available in your region yet."
-    );
-  });
-
-  it('allows a blocked provider once the gateway falls back', () => {
-    DCDO.get.mockImplementation(key =>
-      key === 'ai_gateway_fallback_is_enabled' ? true : undefined
-    );
-    expect(
-      askAiRefusal({...allowed, blockedAichatProviders: ['google']})
-    ).toBeNull();
   });
 });
 

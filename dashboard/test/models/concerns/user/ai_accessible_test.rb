@@ -64,6 +64,47 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
   end
 
+  describe '#spritelab_ask_ai_refusal' do
+    subject(:spritelab_ask_ai_refusal) {user.spritelab_ask_ai_refusal}
+
+    before do
+      allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(true)
+      allow(user).to receive(:ai_chat_access_level).and_return(SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+    end
+
+    it 'returns nil for a pilot user with full AI access' do
+      _(spritelab_ask_ai_refusal).must_be_nil
+    end
+
+    it 'returns NOT_IN_PILOT outside the pilot, even with the kill switch off' do
+      allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(false)
+      allow(DCDO).to receive(:get).with('spritelab-lab2-ask-ai-enabled', true).and_return(false)
+      _(spritelab_ask_ai_refusal).must_equal SharedConstants::SPRITELAB_ASK_AI_REFUSALS[:NOT_IN_PILOT]
+    end
+
+    it 'returns OFF when the kill switch is off' do
+      allow(DCDO).to receive(:get).with('spritelab-lab2-ask-ai-enabled', true).and_return(false)
+      _(spritelab_ask_ai_refusal).must_equal SharedConstants::SPRITELAB_ASK_AI_REFUSALS[:OFF]
+    end
+
+    it 'returns NO_ACCESS for essential-only access' do
+      allow(user).to receive(:ai_chat_access_level).and_return(SharedConstants::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
+      _(spritelab_ask_ai_refusal).must_equal SharedConstants::SPRITELAB_ASK_AI_REFUSALS[:NO_ACCESS]
+    end
+
+    it 'returns REGION_BLOCKED when a provider is blocked' do
+      allow(user).to receive(:blocked_aichat_providers).and_return(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+      _(spritelab_ask_ai_refusal).must_equal SharedConstants::SPRITELAB_ASK_AI_REFUSALS[:REGION_BLOCKED]
+    end
+
+    it 'returns nil for a blocked provider once the gateway falls back' do
+      allow(user).to receive(:blocked_aichat_providers).and_return(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+      allow(DCDO).to receive(:get).and_call_original
+      allow(DCDO).to receive(:get).with('ai_gateway_fallback_is_enabled', false).and_return(true)
+      _(spritelab_ask_ai_refusal).must_be_nil
+    end
+  end
+
   describe '#teacher_can_access_aichat?' do
     subject(:teacher_can_access_aichat?) {user.teacher_can_access_aichat?}
 

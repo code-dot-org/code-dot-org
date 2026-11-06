@@ -112,13 +112,13 @@ describe('currentUserRedux', () => {
       expect(nextState.blockedAichatProviders).toEqual([]);
     });
 
-    it('keeps whether the user is in the Sprite Lab 2 AI pilot', () => {
+    it("keeps the server's reason for refusing the Sprite Lab 2 AI blocks", () => {
       const nextState = currentUser(
         initialState,
-        setInitialData({...serverUser, in_spritelab2_ai_pilot: true})
+        setInitialData({...serverUser, spritelab_ask_ai_refusal: 'no_access'})
       );
 
-      expect(nextState.inSpritelab2AiPilot).toBe(true);
+      expect(nextState.spritelabAskAiRefusal).toBe('no_access');
     });
   });
 });

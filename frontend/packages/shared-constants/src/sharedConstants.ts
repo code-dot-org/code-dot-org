@@ -401,6 +401,13 @@ export const AiChatAccessLevels = {
   "ESSENTIAL_ONLY": "essential_only"
 } as const;
 
+export const SpritelabAskAiRefusals = {
+  "OFF": "off",
+  "NOT_IN_PILOT": "not_in_pilot",
+  "NO_ACCESS": "no_access",
+  "REGION_BLOCKED": "region_blocked"
+} as const;
+
 export const AiChatToolsDependency = {
   "ESSENTIAL": "essential",
   "AVAILABLE": "available",

@@ -9,24 +9,21 @@ import z from 'zod/v3';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
 import {isTextSafe} from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
-import {
-  isAiChatModelBlocked,
-  isAiGatewayFallbackEnabled,
-} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getStore} from '@cdo/apps/redux';
-import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {
-  AiChatAccessLevels,
+  CurrentUserState,
+  SpritelabAskAiRefusal,
+} from '@cdo/apps/templates/CurrentUserState';
+import {
   AiChatClientTypes,
   AiChatModelIds,
+  SpritelabAskAiRefusals,
 } from '@cdo/generated-scripts/sharedConstants';
 
 const ASK_AI_DCDO_KEY = 'spritelab-lab2-ask-ai-enabled';
-
-const ASK_AI_MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
 
 const ASK_AI_METRIC = 'spritelab-lab2.ask_ai';
 
@@ -71,40 +68,32 @@ export function isAskAiEnabled(): boolean {
   return DCDO.get(ASK_AI_DCDO_KEY, true) !== false;
 }
 
-/**
- * Why the gateway would refuse this user an answer, or null if it would not.
- * Mirrors User::AiAccessible, so a refused request never leaves the browser.
- */
+const REFUSAL_MESSAGES: Record<SpritelabAskAiRefusal, string> = {
+  [SpritelabAskAiRefusals.NOT_IN_PILOT]: "AI blocks aren't available yet.",
+  [SpritelabAskAiRefusals.OFF]: 'The AI is turned off right now.',
+  [SpritelabAskAiRefusals.NO_ACCESS]:
+    "Your teacher hasn't turned on AI for this class.",
+  [SpritelabAskAiRefusals.REGION_BLOCKED]:
+    "AI blocks aren't available in your region yet.",
+};
+
+/** The server's reason (User::AiAccessible) for refusing an answer, in words. */
 export function askAiRefusal({
   userType,
-  inSpritelab2AiPilot,
-  aiChatAccessLevel,
-  blockedAichatProviders,
-}: Pick<
-  CurrentUserState,
-  | 'userType'
-  | 'inSpritelab2AiPilot'
-  | 'aiChatAccessLevel'
-  | 'blockedAichatProviders'
->): string | null {
-  if (!isAskAiEnabled()) {
-    return 'The AI is turned off right now.';
-  }
-  if (!inSpritelab2AiPilot) {
-    return "AI blocks aren't available yet.";
-  }
-  if (aiChatAccessLevel !== AiChatAccessLevels.ENABLED) {
-    return userType === 'teacher'
-      ? 'AI blocks need a verified teacher account.'
-      : "Your teacher hasn't turned on AI for this class.";
+  spritelabAskAiRefusal,
+}: Pick<CurrentUserState, 'userType' | 'spritelabAskAiRefusal'>):
+  | string
+  | null {
+  if (!spritelabAskAiRefusal) {
+    return null;
   }
   if (
-    !isAiGatewayFallbackEnabled() &&
-    isAiChatModelBlocked(ASK_AI_MODEL_ID, blockedAichatProviders)
+    spritelabAskAiRefusal === SpritelabAskAiRefusals.NO_ACCESS &&
+    userType === 'teacher'
   ) {
-    return "AI blocks aren't available in your region yet.";
+    return 'AI blocks need a verified teacher account.';
   }
-  return null;
+  return REFUSAL_MESSAGES[spritelabAskAiRefusal];
 }
 
 const SAFETY_CHECK_FAILURES = {
@@ -208,7 +197,7 @@ async function requestAnswer(
 ): Promise<string> {
   const {text} = await generateText(
     {
-      model: getModel(ASK_AI_MODEL_ID),
+      model: getModel(AiChatModelIds.GEMINI_2_5_FLASH),
       system: buildSystemPrompt(studentSystemPrompt),
       prompt,
       temperature: 1,
@@ -226,7 +215,7 @@ async function requestChoice(
   const numbers = options.map((_, i) => String(i + 1)) as [string, ...string[]];
   const {output} = await generateText(
     {
-      model: getModel(ASK_AI_MODEL_ID),
+      model: getModel(AiChatModelIds.GEMINI_2_5_FLASH),
       system: buildSystemPrompt(studentSystemPrompt, CHOICE_SYSTEM_PROMPT),
       prompt,
       output: Output.object({schema: z.object({answer: z.enum(numbers)})}),

@@ -42,7 +42,10 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  SpritelabAskAiRefusals,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks, ownsTop} from '../addBlocks';
 import {
@@ -57,18 +60,14 @@ import {
   newBlockTypes,
 } from '../blockCatalog';
 import {toolboxBlockTypes} from '../blockLocks';
-import {ASK_AI_BLOCK_TYPE} from '../blockly/blockDefinitions/askAi';
-import {ASK_AI_WITH_CHOICES_BLOCK_TYPE} from '../blockly/blockDefinitions/askAiWithChoices';
 import {
   refreshSceneDropdowns,
   setSceneMenuActiveId,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
-import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockly/blockDefinitions/setSystemPrompt';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
-import {AI_CATEGORY} from '../blockly/toolbox/completeToolbox';
-import {withoutCategory} from '../blockly/toolbox/types';
+import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
@@ -205,12 +204,6 @@ const EDITORS: Editor[] = ['Images', 'World', 'Code'];
 const PREVIEW_SHARE = 0.22;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
-
-const AI_BLOCK_TYPES = [
-  ASK_AI_BLOCK_TYPE,
-  ASK_AI_WITH_CHOICES_BLOCK_TYPE,
-  SET_SYSTEM_PROMPT_BLOCK_TYPE,
-];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_PANE_WIDTH = 280;
@@ -464,15 +457,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [catalog, chosenBlocks]
   );
   const inAiPilot = useAppSelector(
-    state => state.currentUser.inSpritelab2AiPilot
-  );
-  // Everything the toolbox leaves out.
-  const hiddenBlockTypes = useMemo(
-    () =>
-      inAiPilot
-        ? heldBackBlocks
-        : new Set([...heldBackBlocks, ...AI_BLOCK_TYPES]),
-    [heldBackBlocks, inAiPilot]
+    state =>
+      state.currentUser.spritelabAskAiRefusal !==
+      SpritelabAskAiRefusals.NOT_IN_PILOT
   );
   const [showBlockCatalog, setShowBlockCatalog] = useState(false);
   // Dismissing the catalog, not opening it, is what counts as seen: an
@@ -619,11 +606,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [activeTab, enabledTabs, dispatch]);
   const authoredToolbox = levelProperties.toolboxDefinition;
-  // The whole category, since its answered block also serves prompts.
   const sceneToolbox = useMemo(
     () =>
       authoredToolbox && !inAiPilot
-        ? withoutCategory(authoredToolbox, AI_CATEGORY)
+        ? withoutAiBlocks(authoredToolbox)
         : authoredToolbox,
     [authoredToolbox, inAiPilot]
   );
@@ -1210,7 +1196,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   } = useBlocklyWorkspace({
     enabled: animationsSeeded,
     toolboxDefinition: injectedToolbox,
-    hiddenBlockTypes,
+    hiddenBlockTypes: heldBackBlocks,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
   });
@@ -1573,7 +1559,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [
     animationsSeeded,
     sceneToolbox,
-    hiddenBlockTypes,
+    heldBackBlocks,
     workspaceVersion,
     refreshToolbox,
   ]);
