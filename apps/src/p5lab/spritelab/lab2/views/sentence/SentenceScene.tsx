@@ -37,6 +37,7 @@ import {
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 import BehindTheScenes from '../images/teaching/BehindTheScenes';
 import {pickTip} from '../images/teaching/generationTips';
+import {LearningStory} from '../images/teaching/useLearningStory';
 import StripFrame from '../StripFrame';
 
 import {PixelReveal, SparkleBurst} from './PixelReveal';
@@ -180,6 +181,9 @@ interface SentenceSceneProps {
   wordLayout?: WordLayout;
   /** Behind the scenes as an icon alone, for a host's header. */
   compactBehindTheScenes?: boolean;
+  /** Tells the "How AI made your image" story of the picture showing,
+      from Behind the scenes. */
+  onTellStory?: (story: LearningStory) => void;
   advanced?: AdvancedOptions;
   /** Where a sentence's picture comes from (imageCache.ts); the tree first
       when unset. A typed prompt always goes to the model. */
@@ -204,6 +208,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   layout,
   wordLayout,
   compactBehindTheScenes,
+  onTellStory,
   advanced,
   imageSource = 'cached',
   imageCacheUrl,
@@ -623,6 +628,20 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       }}
       disabled={busy}
       compact={compactBehindTheScenes}
+      onTellStory={
+        onTellStory &&
+        (() =>
+          onTellStory({
+            picture: {
+              src: chosenPicture.dataURI,
+              crop: sheet
+                ? {width: sheet.frameSize.x, height: sheet.frameSize.y}
+                : undefined,
+            },
+            prompt: chosenPicture.prompt,
+            imageType,
+          }))
+      }
     />
   );
   const ratingOffered = showingResult && !!chosenPicture && !ratingDismissed;

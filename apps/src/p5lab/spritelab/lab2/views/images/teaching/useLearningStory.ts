@@ -1,6 +1,7 @@
 // The "How AI made your image" story: told once a visit on a level that
 // asks for it, after the first picture made there, and only in a quiet
-// moment.
+// moment; and told again whenever a student asks for it from Behind the
+// scenes.
 
 import {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -44,6 +45,9 @@ export interface LearningStoryTools {
   /** The rating's reasons dialog opened or closed; the story waits while
       it is open. */
   handleAsking: (open: boolean) => void;
+  /** The student asked for the story of a picture: it opens at once, and
+      counts as the visit's telling. */
+  tellStory: (story: LearningStory) => void;
   endStory: () => void;
 }
 
@@ -114,6 +118,12 @@ export default function useLearningStory({
     },
     [learning, tellHeldStory]
   );
+  const tellStory = useCallback((asked: LearningStory) => {
+    window.clearTimeout(timerRef.current);
+    heldStoryRef.current = null;
+    toldRef.current = true;
+    setStory(asked);
+  }, []);
   const endStory = useCallback(() => setStory(null), []);
-  return {story, offerStory, handleAsking, endStory};
+  return {story, offerStory, handleAsking, tellStory, endStory};
 }

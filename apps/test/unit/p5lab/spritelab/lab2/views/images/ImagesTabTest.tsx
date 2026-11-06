@@ -771,6 +771,23 @@ describe('ImagesTab', () => {
     jest.useRealTimers();
   });
 
+  it('tells the story of an image opened again, from Behind the scenes', () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      sourceUrl: 'one.png',
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    renderTab();
+    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
+    fireEvent.click(screen.getByRole('button', {name: 'How AI made this'}));
+    expect(
+      screen.getByRole('alertdialog', {name: 'How AI made your image'})
+    ).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+    expect(screen.getByText('A cat')).toBeTruthy();
+  });
+
   it('holds the story while the tab is away, and tells it on return', async () => {
     jest.useFakeTimers();
     const {rerender} = renderTab({
