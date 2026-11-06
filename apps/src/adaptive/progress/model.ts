@@ -77,6 +77,18 @@ export function latestValidation(
   return history?.[history.length - 1];
 }
 
+/** Failed checks after which Continue opens anyway, since the judge can be wrong. */
+export const FAILED_VALIDATIONS_TO_CONTINUE = 3;
+
+/** Whether a checked step's work lets the student continue past it. */
+export function validationAllowsContinue(
+  entry: StepProgress | undefined
+): boolean {
+  const history = entry?.validationHistory ?? [];
+  if (history.some(attempt => attempt.pass)) return true;
+  return history.length >= FAILED_VALIDATIONS_TO_CONTINUE;
+}
+
 /** Id of the project screen's step, which records no progress. */
 export const PROJECT_STEP_ID = 'project';
 

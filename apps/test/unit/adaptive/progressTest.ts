@@ -8,6 +8,7 @@ import {
   stepIdToResume,
   totalTimeSpent,
   useProgress,
+  validationAllowsContinue,
   visibleSteps,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
@@ -163,6 +164,37 @@ describe('stepIdToResume', () => {
         two: {status: 'started', timeSpent: 0},
       })
     ).toBe('two');
+  });
+});
+
+describe('validationAllowsContinue', () => {
+  const attempt = (pass: boolean) => ({
+    at: '2026-01-01T00:00:00Z',
+    pass,
+    evidenceLevel: 0,
+    reason: '',
+  });
+  const entry = (...passes: boolean[]) => ({
+    timeSpent: 0,
+    validationHistory: passes.map(attempt),
+  });
+
+  it('holds before any check', () => {
+    expect(validationAllowsContinue(undefined)).toBe(false);
+    expect(validationAllowsContinue({timeSpent: 0})).toBe(false);
+  });
+
+  it('opens once any check passes, even if a later one fails', () => {
+    expect(validationAllowsContinue(entry(false, true))).toBe(true);
+    expect(validationAllowsContinue(entry(true, false))).toBe(true);
+  });
+
+  it('holds after fewer than three failed checks', () => {
+    expect(validationAllowsContinue(entry(false, false))).toBe(false);
+  });
+
+  it('opens after three failed checks', () => {
+    expect(validationAllowsContinue(entry(false, false, false))).toBe(true);
   });
 });
 
