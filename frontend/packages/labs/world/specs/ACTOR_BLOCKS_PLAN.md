@@ -369,8 +369,14 @@ before the page can be reached headless.
 
 - **A getter dragged out loose reads `???`**: outside the head's stack
   its value is not in scope, which is right, and says so only by that.
+  FIXED by EVENT_VALUES_PLAN.md, which came after: in the browser, one
+  dragged out of `do something ⟨amount⟩` reads `amount`, slanted, with
+  a warning.
 - **The head's getters draw a dropdown arrow** though they cannot be
-  changed.
+  changed. FIXED: a getter fixed in its block is drawn without the ▾
+  (`ScopedFieldVariable.initView`), 12 pixels narrower; one dragged out
+  of the head keeps it, and its menu. The arrow keys pass over the fixed
+  field to the getter, which reads "Variable 'amount'".
 
 ## Not in this phase
 

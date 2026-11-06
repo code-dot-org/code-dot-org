@@ -112,6 +112,24 @@ export class ScopedFieldVariable extends Blockly.FieldVariable {
   }
 
   /**
+   * No ▾ on a getter fixed in its block, as a member head's are: there is
+   * no menu to open.
+   */
+  override initView(): void {
+    super.initView();
+    if (this.getSourceBlock()?.isOwnEditable() === false) {
+      const field = this as unknown as {
+        arrow?: SVGTSpanElement | null;
+        svgArrow?: SVGElement | null;
+      };
+      field.arrow?.remove();
+      field.arrow = null;
+      field.svgArrow?.remove();
+      field.svgArrow = null;
+    }
+  }
+
+  /**
    * …drawn slanted, so it does not read as a working getter. Not faint: at
    * 60% the name was under 4.5:1 on nearly every style in every theme.
    */
