@@ -786,6 +786,9 @@ describe('ImagesTab', () => {
     ).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Next'}));
     expect(screen.getByText('A cat')).toBeTruthy();
+    // Asked for, so it closes unread.
+    fireEvent.click(screen.getByRole('button', {name: 'Close dialog'}));
+    expect(screen.queryByRole('alertdialog')).toBeNull();
   });
 
   it('holds the story while the tab is away, and tells it on return', async () => {

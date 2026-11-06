@@ -763,6 +763,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           prompt={story.prompt}
           imageType={story.imageType}
           onDone={endStory}
+          onClose={story.asked ? endStory : undefined}
         />
       )}
     </div>

@@ -37,16 +37,22 @@ describe('BehindTheScenes', () => {
     expect(screen.queryByRole('alertdialog')).toBeNull();
   });
 
-  it("leads on to the picture's story when the host tells one, closing itself first", () => {
+  it("leads on to the picture's story when there is one to tell, closing itself first", () => {
     const onTellStory = jest.fn();
+    const story = {
+      picture: {src: 'data:image/png;base64,AA=='},
+      prompt: 'A cat',
+      imageType: 'sprite' as const,
+    };
     renderBehind({
       sent: sentPromptsFor('A cat', OPTIONS, 'pixel', false),
+      story,
       onTellStory,
     });
     fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
     fireEvent.click(screen.getByRole('button', {name: 'How AI made this'}));
     expect(screen.queryByRole('alertdialog')).toBeNull();
-    expect(onTellStory).toHaveBeenCalledTimes(1);
+    expect(onTellStory).toHaveBeenCalledWith(story);
   });
 
   it('closes on the corner x as well', () => {

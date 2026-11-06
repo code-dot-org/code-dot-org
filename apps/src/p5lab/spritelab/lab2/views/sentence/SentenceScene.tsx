@@ -37,7 +37,7 @@ import {
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 import BehindTheScenes from '../images/teaching/BehindTheScenes';
 import {pickTip} from '../images/teaching/generationTips';
-import {LearningStory} from '../images/teaching/useLearningStory';
+import {LearningStory, storyFor} from '../images/teaching/useLearningStory';
 import StripFrame from '../StripFrame';
 
 import {PixelReveal, SparkleBurst} from './PixelReveal';
@@ -628,20 +628,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       }}
       disabled={busy}
       compact={compactBehindTheScenes}
-      onTellStory={
-        onTellStory &&
-        (() =>
-          onTellStory({
-            picture: {
-              src: chosenPicture.dataURI,
-              crop: sheet
-                ? {width: sheet.frameSize.x, height: sheet.frameSize.y}
-                : undefined,
-            },
-            prompt: chosenPicture.prompt,
-            imageType,
-          }))
-      }
+      story={storyFor(
+        chosenPicture.dataURI,
+        chosenPicture.prompt,
+        imageType,
+        sheet?.frameSize
+      )}
+      onTellStory={onTellStory}
     />
   );
   const ratingOffered = showingResult && !!chosenPicture && !ratingDismissed;

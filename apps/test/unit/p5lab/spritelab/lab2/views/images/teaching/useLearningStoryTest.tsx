@@ -124,7 +124,7 @@ describe('useLearningStory', () => {
       imageType: 'sprite' as const,
     };
     act(() => tools().tellStory(asked));
-    expect(tools().story).toEqual(asked);
+    expect(tools().story).toEqual({...asked, asked: true});
     act(() => tools().endStory());
     expect(tools().story).toBeNull();
   });

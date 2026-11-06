@@ -8,7 +8,7 @@ import {sentPromptsFor} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sent
 import {ProjectImage} from '../projectImages';
 
 import BehindTheScenes from './BehindTheScenes';
-import {LearningStory} from './useLearningStory';
+import {LearningStory, storyFor} from './useLearningStory';
 
 interface ReopenedBehindTheScenesProps {
   image: ProjectImage;
@@ -25,25 +25,20 @@ const ReopenedBehindTheScenes: React.FunctionComponent<
     return null;
   }
   const {src, sheet} = image;
-  const tellStory =
-    onTellStory && src
-      ? () =>
-          onTellStory({
-            picture: {
-              src,
-              crop: sheet && {
-                width: sheet.frameSize.x,
-                height: sheet.frameSize.y,
-              },
-            },
-            prompt: generation.prompt,
-            imageType: generation.imageType,
-          })
-      : undefined;
   return (
     <BehindTheScenes
       compact
-      onTellStory={tellStory}
+      story={
+        src
+          ? storyFor(
+              src,
+              generation.prompt,
+              generation.imageType,
+              sheet?.frameSize
+            )
+          : undefined
+      }
+      onTellStory={onTellStory}
       sent={sentPromptsFor(
         generation.prompt,
         {
