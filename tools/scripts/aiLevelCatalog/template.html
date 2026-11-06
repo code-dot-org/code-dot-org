@@ -1,0 +1,948 @@
+<title>AI Level Catalog</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+<style>
+  /* Layout: masthead, summary strip, sticky filter bar, then course cards with unit accordions holding per-lesson level tables. */
+  :root {
+    --ground: #f1f5f6;
+    --surface: #ffffff;
+    --surface-2: #f7fafa;
+    --ink: #101b1d;
+    --ink-2: #4c5f62;
+    --ink-3: #6b7d80;
+    --line: #dbe4e5;
+    --line-soft: #e9eff0;
+    --accent: #0d6a80;
+    --accent-ink: #ffffff;
+    --essential: #a4331a;
+    --essential-soft: #fbe9e3;
+    --optional: #7a5710;
+    --optional-soft: #f8efd9;
+    --shadow: 0 1px 2px rgba(16, 27, 29, .06), 0 8px 24px -16px rgba(16, 27, 29, .22);
+
+    --display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0b1315;
+      --surface: #111d20;
+      --surface-2: #162427;
+      --ink: #e7eeef;
+      --ink-2: #a3b4b7;
+      --ink-3: #82959a;
+      --line: #24373b;
+      --line-soft: #1b2b2e;
+      --accent: #5ec2d8;
+      --accent-ink: #0b1315;
+      --essential: #f0906d;
+      --essential-soft: #3a201a;
+      --optional: #e0b45c;
+      --optional-soft: #33290f;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .7);
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0b1315;
+    --surface: #111d20;
+    --surface-2: #162427;
+    --ink: #e7eeef;
+    --ink-2: #a3b4b7;
+    --ink-3: #82959a;
+    --line: #24373b;
+    --line-soft: #1b2b2e;
+    --accent: #5ec2d8;
+    --accent-ink: #0b1315;
+    --essential: #f0906d;
+    --essential-soft: #3a201a;
+    --optional: #e0b45c;
+    --optional-soft: #33290f;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .7);
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0 0 auto;
+    height: env(safe-area-inset-top, 0px);
+    z-index: 30;
+    background: var(--ground);
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-block: 40px 96px;
+    padding-left: max(24px, env(safe-area-inset-left, 0px));
+    padding-right: max(24px, env(safe-area-inset-right, 0px));
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  a { color: var(--accent); }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-size: clamp(30px, 4.4vw, 46px);
+    line-height: 1.06;
+    letter-spacing: -.014em;
+    font-weight: 600;
+    text-wrap: balance;
+    margin: 10px 0 0;
+  }
+
+  .standfirst {
+    max-width: 68ch;
+    color: var(--ink-2);
+    font-size: 16.5px;
+    margin: 14px 0 0;
+  }
+
+  .standfirst strong { color: var(--ink); font-weight: 600; }
+
+  details.method {
+    margin-top: 18px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    max-width: 80ch;
+  }
+
+  details.method > summary {
+    cursor: pointer;
+    padding: 11px 14px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--ink-2);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  details.method > summary::-webkit-details-marker { display: none; }
+  details.method > summary::before {
+    content: "\25B8";
+    color: var(--ink-3);
+    font-size: 11px;
+    transition: transform .15s ease;
+  }
+  details.method[open] > summary::before { transform: rotate(90deg); }
+
+  .method-body {
+    padding: 0 16px 16px 34px;
+    font-size: 13.5px;
+    color: var(--ink-2);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .method-body p { margin: 0; }
+
+  code {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    background: var(--surface-2);
+    border: 1px solid var(--line-soft);
+    border-radius: 4px;
+    padding: 1px 5px;
+    overflow-wrap: anywhere;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .stat {
+    background: var(--surface);
+    padding: 16px 18px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .stat-value {
+    font-size: 27px;
+    font-weight: 620;
+    letter-spacing: -.02em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat-note { font-size: 12px; color: var(--ink-3); }
+  .stat.is-essential .stat-value { color: var(--essential); }
+  .stat.is-optional .stat-value { color: var(--optional); }
+
+  .models {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 7px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 3px 9px;
+  }
+
+  .chip b { font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
+  .chip span { color: var(--ink-3); }
+
+  .controls {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 20;
+    background: color-mix(in srgb, var(--ground) 90%, transparent);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  input[type="search"] {
+    flex: 1 1 220px;
+    min-width: 0;
+    font: inherit;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    padding: 7px 11px;
+  }
+
+  input[type="search"]::placeholder { color: var(--ink-3); }
+
+  .seg {
+    display: inline-flex;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    overflow: hidden;
+  }
+
+  .seg button {
+    font: inherit;
+    font-size: 13px;
+    font-weight: 550;
+    color: var(--ink-2);
+    background: transparent;
+    border: 0;
+    border-right: 1px solid var(--line);
+    padding: 7px 12px;
+    cursor: pointer;
+  }
+
+  .seg button:last-child { border-right: 0; }
+  .seg button:hover { background: var(--surface-2); }
+  .seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+
+  select {
+    font: inherit;
+    font-size: 13px;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    padding: 7px 9px;
+    max-width: 220px;
+    min-width: 0;
+  }
+
+  .multi { position: relative; }
+
+  .multi > summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    padding: 7px 28px 7px 10px;
+    max-width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+  }
+
+  .multi > summary::-webkit-details-marker { display: none; }
+  .multi > summary::after {
+    content: "\25BE";
+    position: absolute;
+    right: 10px;
+    color: var(--ink-3);
+  }
+
+  .multi[open] > summary { border-color: var(--accent); }
+
+  .multi-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    z-index: 25;
+    min-width: 240px;
+    max-width: calc(100vw - 32px);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .multi-menu label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13px;
+    color: var(--ink);
+    padding: 6px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .multi-menu label:hover { background: var(--surface-2); }
+  .multi-menu input { accent-color: var(--accent); margin: 0; }
+
+  .multi-menu .multi-clear {
+    margin-top: 4px;
+    border-top: 1px solid var(--line-soft);
+    padding-top: 6px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .multi-menu .multi-clear button {
+    font: inherit;
+    font-size: 12.5px;
+    color: var(--accent);
+    background: transparent;
+    border: 0;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+
+  .ghost {
+    font: inherit;
+    font-size: 13px;
+    font-weight: 550;
+    color: var(--ink-2);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    padding: 7px 11px;
+    cursor: pointer;
+  }
+
+  .ghost:hover { background: var(--surface-2); color: var(--ink); }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .result-line {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+    margin-left: auto;
+    font-variant-numeric: tabular-nums;
+  }
+
+  #results { display: flex; flex-direction: column; gap: 18px; }
+
+  .course {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .course-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px 14px;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .course-title {
+    font-family: var(--display);
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    min-width: 0;
+  }
+
+  .slug {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-2);
+    background: var(--surface-2);
+    border: 1px solid var(--line-soft);
+    border-radius: 5px;
+    padding: 2px 7px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+
+  .slug:hover { color: var(--accent); }
+
+  .state-tag {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border: 1px dashed var(--line);
+    border-radius: 4px;
+    padding: 1px 6px;
+  }
+
+  .course-tally {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .unit { border-top: 1px solid var(--line-soft); }
+  .unit:first-of-type { border-top: 0; }
+
+  .unit-head {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 11px;
+    padding: 11px 18px;
+    background: transparent;
+    border: 0;
+    border-left: 3px solid transparent;
+    font: inherit;
+    text-align: left;
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .unit-head:hover { background: var(--surface-2); }
+  .unit-head[aria-expanded="true"] { border-left-color: var(--accent); background: var(--surface-2); }
+
+  .caret {
+    color: var(--ink-3);
+    font-size: 10px;
+    flex: 0 0 auto;
+    transition: transform .15s ease;
+  }
+
+  .unit-head[aria-expanded="true"] .caret { transform: rotate(90deg); }
+  .unit-num { font-family: var(--mono); font-size: 11.5px; color: var(--accent); }
+  .unit-name { font-weight: 570; font-size: 14.5px; }
+  .unit-slug { font-family: var(--mono); font-size: 12px; color: var(--ink-3); overflow-wrap: anywhere; }
+  .unit-tally { margin-left: auto; display: flex; gap: 7px; flex: 0 0 auto; }
+
+  .pill {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .02em;
+    border-radius: 999px;
+    padding: 2px 9px;
+    border: 1px solid transparent;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .pill-essential { color: var(--essential); background: var(--essential-soft); border-color: color-mix(in srgb, var(--essential) 26%, transparent); }
+  .pill-optional { color: var(--optional); background: var(--optional-soft); border-color: color-mix(in srgb, var(--optional) 26%, transparent); }
+  .pill-neutral { color: var(--ink-2); background: var(--surface-2); border-color: var(--line); }
+
+  .unit-body { padding: 4px 0 14px; background: var(--surface-2); border-left: 3px solid var(--accent); }
+
+  .lesson-head { display: flex; align-items: baseline; gap: 9px; padding: 13px 18px 6px; }
+  .lesson-num { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: .06em; white-space: nowrap; }
+  .lesson-name { font-size: 13px; font-weight: 570; color: var(--ink-2); }
+
+  .table-scroll { overflow-x: auto; padding: 0 18px; }
+
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+
+  thead th {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 500;
+    text-align: left;
+    padding: 5px 10px 5px 0;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+
+  thead th.num { text-align: right; }
+
+  tbody td {
+    padding: 7px 10px 7px 0;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: baseline;
+  }
+
+  tbody tr:last-child td { border-bottom: 0; }
+
+  td.lvl-name {
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.4;
+    word-break: break-word;
+    min-width: 210px;
+    border-left: 3px solid transparent;
+    padding-left: 9px;
+  }
+
+  td.lvl-name .in-choice {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    color: var(--ink-3);
+  }
+
+  tr.req-essential td.lvl-name { border-left-color: var(--essential); }
+  tr.req-optional td.lvl-name { border-left-color: var(--optional); }
+
+  td.nowrap { white-space: nowrap; }
+  .mono { font-family: var(--mono); font-size: 11.5px; color: var(--ink); }
+  .mono-dim { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+
+  td.lvl-link { white-space: nowrap; text-align: right; }
+  td.lvl-link a { font-family: var(--mono); font-size: 11.5px; text-decoration: none; }
+  td.lvl-link a:hover { text-decoration: underline; }
+
+  .refresh {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    font-size: 13px;
+    color: var(--ink-3);
+  }
+
+  .refresh button {
+    font: inherit;
+    font-size: 13px;
+    font-weight: 550;
+    color: var(--accent-ink);
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 7px;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+
+  .refresh button:disabled { opacity: .6; cursor: default; }
+  .refresh-status { color: var(--ink-2); }
+  .refresh-status.is-error { color: var(--essential); }
+
+  .empty { padding: 40px 18px; text-align: center; color: var(--ink-3); font-size: 14px; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    font-size: 12.5px;
+    color: var(--ink-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+  }
+
+  @media (max-width: 640px) {
+    .wrap {
+      padding-block: 28px 72px;
+      padding-left: max(16px, env(safe-area-inset-left, 0px));
+      padding-right: max(16px, env(safe-area-inset-right, 0px));
+    }
+    .course-tally, .result-line { margin-left: 0; width: 100%; }
+    .unit-tally { margin-left: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Curriculum catalog &middot; /*SNAPSHOT*/</div>
+    <h1>Levels with AI in stable courses</h1>
+    <p class="standfirst">/*STANDFIRST*/</p>
+
+    <details class="method">
+      <summary>How this list was built</summary>
+      <div class="method-body">/*METHOD*/</div>
+    </details>
+
+    <div class="refresh">
+      <span id="built"></span>
+      <button type="button" id="refresh" hidden>Refresh data</button>
+      <span class="refresh-status" id="refresh-status" role="status"></span>
+    </div>
+  </header>
+
+  <section class="stats" aria-label="Summary" id="stats"></section>
+
+  <div class="models" id="model-chips" aria-label="Levels per model"></div>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search course, unit, lesson, or level" aria-label="Search">
+    <div class="seg" role="group" aria-label="AI requirement" id="seg-req">
+      <button type="button" data-req="all" aria-pressed="true">All</button>
+      <button type="button" data-req="essential" aria-pressed="false">Essential</button>
+      <button type="button" data-req="optional" aria-pressed="false">Optional</button>
+    </div>
+    <select id="course" aria-label="Course"></select>
+    <select id="model" aria-label="Model"></select>
+    <details class="multi" id="type-multi">
+      <summary id="type-summary" aria-label="Level types">All level types</summary>
+      <div class="multi-menu" role="group" aria-label="Level types">
+        <div id="type-options"></div>
+        <div class="multi-clear"><button type="button" id="type-clear">Show all types</button></div>
+      </div>
+    </details>
+    <button type="button" class="ghost" id="expand">Expand all</button>
+    <button type="button" class="ghost" id="collapse">Collapse all</button>
+    <div class="result-line" id="count" aria-live="polite"></div>
+  </div>
+
+  <main id="results"></main>
+
+  <footer>/*FOOTER*/</footer>
+</div>
+
+<script>
+  const DATA = /*DATA*/;
+  const TYPES = DATA.types;
+  const MODELS = DATA.models;
+
+  const state = {q: "", req: "all", course: "all", model: "all", types: new Set()};
+  const open = new Set();
+
+  const nf = new Intl.NumberFormat("en-US");
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+  const plural = (n, w) => `${nf.format(n)} ${w}${n === 1 ? "" : "s"}`;
+
+  // Level tuple: [name, typeIdx, essential, [modelIdx], url, levelPos, choiceName|null, choicePos|null, tutor]
+  const T = DATA.totals;
+  document.getElementById("stats").innerHTML = [
+    ["Stable courses", nf.format(T.courses), plural(T.units, "unit")],
+    ["Levels with AI", nf.format(T.levels), `${plural(T.unique, "distinct level")}`],
+    ["AI essential", nf.format(T.essential), "level needs AI to work", "is-essential"],
+    ["AI optional", nf.format(T.optional), "AI Tutor is an aid", "is-optional"],
+    ["Models in use", nf.format(MODELS.length), `across ${plural(TYPES.length, "level type")}`],
+  ].map(([label, value, note, cls]) => `
+    <div class="stat ${cls || ""}">
+      <div class="stat-label">${label}</div>
+      <div class="stat-value">${value}</div>
+      <div class="stat-note">${note}</div>
+    </div>`).join("");
+
+  document.getElementById("model-chips").innerHTML = '<span class="eyebrow" style="align-self:center">Levels per model</span>' + DATA.modelCounts
+    .map(([i, n]) => `<span class="chip"><b>${nf.format(n)}</b><span>${esc(MODELS[i])}</span></span>`)
+    .join("");
+
+  const courseSel = document.getElementById("course");
+  courseSel.innerHTML = '<option value="all">All courses</option>' +
+    DATA.courses.map((c, i) => `<option value="${i}">${esc(c.n)} (${esc(c.s)})</option>`).join("");
+
+  const modelSel = document.getElementById("model");
+  modelSel.innerHTML = '<option value="all">All models</option>' +
+    MODELS.map((m, i) => `<option value="${i}">${esc(m)}</option>`).join("");
+
+  const hay = (...parts) => parts.join(" ").toLowerCase();
+  const typeLabel = l => TYPES[l[1]] + (l[8] ? " (Tutor)" : "");
+  const fullTypeLabel = l => TYPES[l[1]] + (l[8] ? (l[2] === 1 ? " (essential Tutor)" : " (optional Tutor)") : "");
+  // One option per level type and AI requirement, since Weblab2 is essential in most units and optional in a few.
+  const typeKey = l => `${l[1]}:${l[2]}`;
+  const typeOptions = new Map();
+  for (const c of DATA.courses) for (const u of c.units) for (const L of u.L) for (const l of L.lv) typeOptions.set(typeKey(l), fullTypeLabel(l));
+  const typeList = [...typeOptions].sort((a, b) => a[1].localeCompare(b[1]));
+  const typeMulti = document.getElementById("type-multi");
+  const typeSummary = document.getElementById("type-summary");
+  document.getElementById("type-options").innerHTML = typeList
+    .map(([k, label], i) => `<label for="type-${i}"><input type="checkbox" id="type-${i}" value="${k}">${esc(label)}</label>`)
+    .join("");
+
+  function syncTypeSummary() {
+    const n = state.types.size;
+    typeSummary.textContent = n === 0 ? "All level types"
+      : n === 1 ? typeOptions.get([...state.types][0])
+      : `${n} level types`;
+  }
+
+
+  function matches(lv, unit, course, lessonName) {
+    if (state.req === "essential" && lv[2] !== 1) return false;
+    if (state.req === "optional" && lv[2] !== 0) return false;
+    if (state.model !== "all" && !lv[3].includes(+state.model)) return false;
+    if (state.types.size && !state.types.has(typeKey(lv))) return false;
+    if (state.q && !hay(lv[0], lv[6] || "", fullTypeLabel(lv), lessonName, unit.n, unit.s, course.n, course.s).includes(state.q)) return false;
+    return true;
+  }
+
+  function filter() {
+    const out = [];
+    DATA.courses.forEach((course, ci) => {
+      if (state.course !== "all" && ci !== +state.course) return;
+      const units = [];
+      for (const unit of course.units) {
+        const lessons = [];
+        for (const lesson of unit.L) {
+          const lv = lesson.lv.filter(l => matches(l, unit, course, lesson.n));
+          if (lv.length) lessons.push({p: lesson.p, n: lesson.n, lv});
+        }
+        if (lessons.length) {
+          const all = lessons.flatMap(l => l.lv);
+          units.push({unit, lessons, count: all.length, ess: all.filter(l => l[2] === 1).length});
+        }
+      }
+      if (units.length) {
+        out.push({course, units, count: units.reduce((a, u) => a + u.count, 0), ess: units.reduce((a, u) => a + u.ess, 0)});
+      }
+    });
+    return out;
+  }
+
+  function lessonRows(lessons) {
+    return lessons.map(lesson => `
+      <div class="lesson-head">
+        <span class="lesson-num">${lesson.p == null ? "&mdash;" : "L" + lesson.p}</span>
+        <span class="lesson-name">${esc(lesson.n)}</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th style="padding-left:12px">Level</th>
+              <th>Type</th>
+              <th>AI</th>
+              <th>Model</th>
+              <th class="num">Prod</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${lesson.lv.map(l => {
+              const ess = l[2] === 1;
+              const where = l[7] == null ? `level ${l[5]}` : `level ${l[5]}.${l[7]}`;
+              return `<tr class="req-${ess ? "essential" : "optional"}">
+                <td class="lvl-name">${esc(l[0])}${l[6] ? `<span class="in-choice">choice ${l[7]} in ${esc(l[6])}</span>` : ""}</td>
+                <td class="nowrap"><span class="mono-dim">${esc(typeLabel(l))}</span></td>
+                <td><span class="pill pill-${ess ? "essential" : "optional"}">${ess ? "essential" : "optional"}</span></td>
+                <td class="nowrap"><span class="mono">${esc(l[3].map(i => MODELS[i]).join(", "))}</span></td>
+                <td class="lvl-link"><a href="https://studio.code.org${esc(l[4])}" target="_blank" rel="noopener">${where} &#8599;</a></td>
+              </tr>`;
+            }).join("")}
+          </tbody>
+        </table>
+      </div>`).join("");
+  }
+
+  function renderCourses(data) {
+    return data.map(c => `
+      <section class="course">
+        <div class="course-head">
+          <span class="course-title">${esc(c.course.n)}</span>
+          <a class="slug" href="https://studio.code.org/courses/${esc(c.course.s)}" target="_blank" rel="noopener">${esc(c.course.s)}</a>
+          <div class="course-tally">
+            <span class="pill pill-neutral">${plural(c.count, "level")}</span>
+            ${c.ess ? `<span class="pill pill-essential">${nf.format(c.ess)} essential</span>` : ""}
+            <span>${plural(c.units.length, "unit")}</span>
+          </div>
+        </div>
+        ${c.units.map(u => {
+          const key = `${c.course.s}/${u.unit.s}`;
+          const isOpen = open.has(key);
+          return `
+          <div class="unit">
+            <button type="button" class="unit-head" data-key="${esc(key)}" aria-expanded="${isOpen}">
+              <span class="caret">&#9654;</span>
+              <span class="unit-num">U${u.unit.p}</span>
+              <span class="unit-name">${esc(u.unit.n)}</span>
+              <span class="unit-slug">${esc(u.unit.s)}</span>
+              <span class="unit-tally">
+                ${u.ess ? `<span class="pill pill-essential">${nf.format(u.ess)} essential</span>` : ""}
+                ${u.count - u.ess ? `<span class="pill pill-optional">${nf.format(u.count - u.ess)} optional</span>` : ""}
+              </span>
+            </button>
+            <div class="unit-body" ${isOpen ? "" : "hidden"}>
+              ${isOpen ? lessonRows(u.lessons) : ""}
+            </div>
+          </div>`;
+        }).join("")}
+      </section>`).join("");
+  }
+
+  function render() {
+    const results = document.getElementById("results");
+    const data = filter();
+    const total = data.reduce((a, c) => a + c.count, 0);
+    const ess = data.reduce((a, c) => a + c.ess, 0);
+
+    document.getElementById("count").textContent =
+      `${plural(total, "level")} · ${nf.format(ess)} essential · ${plural(data.length, "course")}`;
+
+    results.innerHTML = data.length
+      ? renderCourses(data)
+      : '<div class="course"><div class="empty">No levels match these filters.</div></div>';
+
+    results.querySelectorAll(".unit-head").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const key = btn.dataset.key;
+        if (open.has(key)) open.delete(key); else open.add(key);
+        render();
+      });
+    });
+  }
+
+  document.querySelectorAll("#seg-req button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.req = btn.dataset.req;
+      document.querySelectorAll("#seg-req button").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+      render();
+    });
+  });
+
+  document.getElementById("q").addEventListener("input", e => {
+    state.q = e.target.value.trim().toLowerCase();
+    render();
+  });
+
+  courseSel.addEventListener("change", e => { state.course = e.target.value; render(); });
+  modelSel.addEventListener("change", e => { state.model = e.target.value; render(); });
+  typeMulti.addEventListener("change", e => {
+    if (e.target.checked) state.types.add(e.target.value); else state.types.delete(e.target.value);
+    syncTypeSummary();
+    render();
+  });
+
+  document.getElementById("type-clear").addEventListener("click", () => {
+    state.types.clear();
+    typeMulti.querySelectorAll("input").forEach(i => { i.checked = false; });
+    syncTypeSummary();
+    render();
+  });
+
+  document.addEventListener("click", e => { if (typeMulti.open && !typeMulti.contains(e.target)) typeMulti.open = false; });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && typeMulti.open) { typeMulti.open = false; typeSummary.focus(); } });
+
+  document.getElementById("expand").addEventListener("click", () => {
+    filter().forEach(c => c.units.forEach(u => open.add(`${c.course.s}/${u.unit.s}`)));
+    render();
+  });
+
+  document.getElementById("collapse").addEventListener("click", () => { open.clear(); render(); });
+
+  render();
+
+  // The page cannot rebuild itself: the refresh button starts a Routine that
+  // rebuilds the data from staging in a cloud session and republishes this
+  // artifact. Routines belong to one account, so only the owner gets it.
+  const REFRESH_TRIGGER_ID = "/*TRIGGER_ID*/";
+  const refreshBtn = document.getElementById("refresh");
+  const refreshStatus = document.getElementById("refresh-status");
+  document.getElementById("built").textContent =
+    `Data from staging at ${DATA.built.revision}, built ${DATA.built.on}.`;
+
+  function showRefreshStatus(text, isError) {
+    refreshStatus.textContent = text;
+    refreshStatus.classList.toggle("is-error", Boolean(isError));
+  }
+
+  (async () => {
+    if (!window.claude?.use) return;
+    const [mcp, user] = await Promise.all([claude.use("mcp"), claude.use("user")]);
+    if (!mcp || !(await (user?.isOwner() ?? false))) return;
+    refreshBtn.hidden = false;
+    refreshBtn.addEventListener("click", async () => {
+      refreshBtn.disabled = true;
+      showRefreshStatus("Starting the rebuild…");
+      try {
+        await mcp.callTool("Claude Code Remote", "fire_trigger", {trigger_id: REFRESH_TRIGGER_ID}, {cache: false});
+        showRefreshStatus("Rebuild started. It takes about 5 to 10 minutes, and this page reloads with the new data when it is done.");
+        return;
+      } catch (e) {
+        const messages = {
+          approval_required: "Starting a rebuild needs your approval. Click Refresh data again and allow Claude Code Remote when asked.",
+          not_in_manifest: "Claude Code Remote is turned off for this page. Turn it on in the page's Permissions menu, then try again.",
+          server_not_connected: "Add the Claude Code Remote connector in claude.ai Settings → Connectors, then try again.",
+          selection_required: "Choose which Claude Code Remote connector to use when claude.ai asks, then try again.",
+          needs_reauth: "Reconnect Claude Code Remote in claude.ai Settings → Connectors, then try again.",
+          blocked_by_policy: "Your organization's settings do not allow this page to start a rebuild.",
+          server_unavailable: "Claude Code Remote did not answer, so the rebuild may or may not have started. Wait a few minutes before trying again.",
+          upstream_error: "Claude Code Remote did not answer, so the rebuild may or may not have started. Wait a few minutes before trying again.",
+          tool_error: `The rebuild did not start: ${e?.message || "the routine refused it"}.`,
+        };
+        showRefreshStatus(messages[e?.code] || `The rebuild did not start (${e?.code || "unknown error"}).`, true);
+      }
+      refreshBtn.disabled = false;
+    });
+  })();
+</script>
