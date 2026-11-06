@@ -7,6 +7,14 @@
   box-sizing: border-box;
   width: min(1000px, 100vw - 48px);
   max-width: none;
+
+  // The house layout centers the button row. Here the row has two buttons
+  // and follows a left-aligned grid of cards, so it sits at the end edge,
+  // where a dialog's actions are usually found. The row is the panel's
+  // child that holds the buttons.
+  > div:has(> :global(.MuiButton-root)) {
+    align-self: flex-end;
+  }
 }
 
 .srOnly {
