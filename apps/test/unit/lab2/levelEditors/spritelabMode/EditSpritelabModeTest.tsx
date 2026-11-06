@@ -12,7 +12,7 @@ const IMAGE_TYPE = /^Image type/;
 const IMAGE_SUBJECT = /^Image subject/;
 const IMAGE_ROLE = /^Image role/;
 const PALETTE_ROLES = /^Palette roles/;
-const IMAGE_FIRST = /^Open on the Images tab/;
+const IMAGE_FIRST = /^Enable the Images tab/;
 
 const dropdown = (name: RegExp) => screen.getByRole('combobox', {name});
 const textbox = (name: RegExp) => screen.getByRole('textbox', {name});
