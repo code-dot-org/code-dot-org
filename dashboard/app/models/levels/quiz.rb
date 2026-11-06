@@ -170,6 +170,17 @@ class Quiz < Level
     problems + parent_levels.map {|parent| "it is a sublevel of \"#{parent.name}\""}
   end
 
+  # True when a lockable lesson holding this quiz is locked or read-only for user; see ScriptLevel#locked?.
+  def locked_for?(user, unit_id)
+    script_levels.where(script_id: unit_id).includes(lesson: :script_levels).any? do |script_level|
+      lesson = script_level.lesson
+      next false unless lesson&.lockable?
+      next true if script_level.locked?(user)
+      lock_level = lesson.script_levels.last
+      UserLevel.find_by(user: user, script_id: unit_id, level: lock_level.oldest_active_level)&.readonly_answers?
+    end
+  end
+
   # Placements are quiz-owned join rows; questions stay shared bank content.
   def clone_with_name(new_name, editor_experiment: nil)
     ActiveRecord::Base.transaction do
