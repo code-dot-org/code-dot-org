@@ -1,0 +1,215 @@
+@use './imageTile' as tile;
+
+// Wide enough for a row of four cards; the base dialog's own width rule
+// would cap it at 50rem.
+.dialog {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: min(1000px, 100vw - 48px);
+  max-width: none;
+  padding: 20px 24px 24px;
+  gap: 16px;
+  border-radius: 8px;
+  color: var(--text-neutral-primary);
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// The cards, in rows; the body scrolls down when they outrun it.
+.body {
+  max-height: min(60vh, 560px);
+  overflow-y: auto;
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--background-neutral-secondary);
+}
+
+// Wide gaps, so an arrow between neighbors has room to read.
+.grid {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px 40px;
+  padding: 12px;
+}
+
+// The arrows between cards whose code jumps between them, drawn over the
+// grid and under nothing clickable.
+.links {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  fill: var(--borders-brand-teal-primary);
+  stroke: var(--borders-brand-teal-primary);
+
+  path {
+    fill: none;
+    stroke-width: 2px;
+  }
+
+  marker path {
+    fill: var(--borders-brand-teal-primary);
+    stroke: none;
+  }
+}
+
+// A card groups a scene's picture and controls.
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 216px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+// Held still while a new scene is named.
+.cardDisabled {
+  opacity: 0.5;
+}
+
+.cardNew {
+  border-style: dashed;
+}
+
+// Square, like the stage; the tile is a button that opens the scene.
+.tile {
+  @include tile.image-tile(192px);
+
+  position: relative;
+  border-radius: 4px;
+  color: var(--text-neutral-secondary);
+  font-size: 28px;
+}
+
+// The new scene's tile is not a button yet: no hover, no hand.
+.tileNew {
+  cursor: default;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+.tilePicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.cardActive .tile {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 2px;
+}
+
+// The name with its pencil, or the field with save and cancel; one height
+// either way so the card does not jump.
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 28px;
+}
+
+.name {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0 2px;
+  color: var(--text-neutral-primary);
+  font-size: 15px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Smaller than MUI's small, to sit beside the name rather than over it.
+.nameIconButton {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.nameField {
+  min-width: 0;
+  flex: 1 1 auto;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+// Delete beside Start here, or the delete question in their place. The
+// labels stay on one line: the card is sized to fit them.
+.cardActions {
+  display: flex;
+  gap: 6px;
+
+  > * {
+    flex: 1 1 0;
+    min-width: 0;
+    white-space: nowrap;
+  }
+}
+
+.deleteConfirm {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.deleteQuestion {
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  text-align: center;
+}
+
+.deleteChoices {
+  display: flex;
+  gap: 6px;
+}
+
+// New scene at the start, Done at the end.
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.done {
+  margin-left: auto;
+}

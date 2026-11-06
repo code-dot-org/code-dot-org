@@ -161,14 +161,13 @@ import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
-import Sheet from './components/Sheet';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
 import ImagesTab from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
-import ScenesGallery from './ScenesGallery';
+import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
 import {useFlyoutDots} from './useFlyoutDots';
@@ -358,7 +357,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // level, say) needs the selection steered onto a tab that exists. A mode
   // with no tabs at all renders no shell, so leave the selection alone.
   useEffect(() => {
-    if (tabs.length && activeTab !== 'Scenes' && !tabs.includes(activeTab)) {
+    if (tabs.length && !tabs.includes(activeTab)) {
       dispatch(setActiveTab(tabs.includes('Code') ? 'Code' : tabs[0]));
     }
   }, [tabs, activeTab, dispatch]);
@@ -1639,8 +1638,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const {playMusic} = useSceneMusic(activeTab === 'Play', musicProjects);
 
-  // A sheet over the editors and the stage: All scenes.
-  const stageCovered = activeTab === 'Scenes';
+  // All scenes: a dialog over the editors and the stage, opening on a new
+  // scene's name when asked for one.
+  const [scenesOpen, setScenesOpen] = useState(false);
+  const [scenesCreating, setScenesCreating] = useState(false);
+  const stageCovered = scenesOpen;
   // Hidden content stays in the tab order and the accessibility tree:
   // inert while hidden, via refs (React 18's JSX has no inert attribute).
   // worldMounted: the world's wrapper can first render after the last change.
@@ -2265,12 +2267,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // mode is unconstrained.
   const scenesEditable =
     !levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode);
-  // The stage: the preview beside Code and World and beside All scenes,
-  // centered to play; Images takes the whole width.
+  // The stage: the preview beside Code and World, centered to play; Images
+  // takes the whole width.
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play'
       ? 'play'
-      : activeTab === 'Code' || activeTab === 'World' || activeTab === 'Scenes'
+      : activeTab === 'Code' || activeTab === 'World'
       ? 'preview'
       : 'hidden';
 
@@ -2320,14 +2322,35 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     lockedReason: LOCKED_REASON,
     allowCreate: scenesEditable || !!pinnedSceneId,
     onSelectScene: sceneEditing.selectScene,
-    onCreateScene: sceneEditing.createScene,
-    onManageScenes: sceneEditing.openGallery,
+    onNewScene: () => {
+      setScenesCreating(true);
+      setScenesOpen(true);
+    },
+    onManageScenes: () => {
+      setScenesCreating(false);
+      setScenesOpen(true);
+    },
   };
   const catalogOffered = catalog.length > 0 && isEditable;
   const openBlockCatalog = () => setShowBlockCatalog(true);
 
   return (
     <div className={moduleStyles.labRow}>
+      {scenesOpen && (
+        <ScenesDialog
+          scenes={sceneMetadata}
+          activeSceneId={activeSceneId}
+          editable={scenesEditable}
+          links={links}
+          creating={scenesCreating}
+          onOpenScene={sceneEditing.selectScene}
+          onCreateScene={sceneEditing.createScene}
+          onRenameScene={sceneEditing.renameScene}
+          onDeleteScene={sceneEditing.deleteScene}
+          onMakeStartScene={sceneEditing.makeStartScene}
+          onClose={() => setScenesOpen(false)}
+        />
+      )}
       {showStartOver && startOverOffered && (
         <StartOverDialog
           onConfirm={() => {
@@ -2605,26 +2628,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             onPreviewClick={handlePreviewClick}
           />
         </div>
-
-        {activeTab === 'Scenes' && (
-          <Sheet
-            title="All scenes"
-            onDone={() => sceneEditing.selectScene(activeScene.id)}
-          >
-            <ScenesGallery
-              scenes={sceneMetadata}
-              activeSceneId={activeSceneId}
-              editable={scenesEditable}
-              links={links}
-              onPlayGame={handlePlayGame}
-              onOpenScene={sceneEditing.selectScene}
-              onCreateScene={sceneEditing.createScene}
-              onRenameScene={sceneEditing.renameScene}
-              onDeleteScene={sceneEditing.deleteScene}
-              onMakeStartScene={sceneEditing.makeStartScene}
-            />
-          </Sheet>
-        )}
       </LabShell>
     </div>
   );
