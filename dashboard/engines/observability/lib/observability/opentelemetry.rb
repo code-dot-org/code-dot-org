@@ -7,6 +7,9 @@ module Observability
       return unless CDO.enable_opentelemetry && !CDO.unit_test
 
       require 'opentelemetry/sdk'
+      # A rake process traced by lib/cdo/rake_tracing.rb configured the SDK before Rails booted; keep its exporter.
+      return if ::OpenTelemetry.tracer_provider.is_a?(::OpenTelemetry::SDK::Trace::TracerProvider)
+
       require 'opentelemetry/instrumentation/all'
       require 'opentelemetry-exporter-otlp'
 

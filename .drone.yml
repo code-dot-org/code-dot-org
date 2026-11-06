@@ -102,6 +102,9 @@ steps:
     pull: always
     environment:
       CI_JOB: 'unit_tests'
+      # Read only by builds tagged [trace rake]; see lib/cdo/rake_tracing.rb.
+      RAKE_SENTRY_DSN:
+        from_secret: RAKE_SENTRY_DSN
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
@@ -241,6 +244,9 @@ steps:
       VISUAL_PROVIDER: 'applitools'
       APPLITOOLS_API_KEY:
         from_secret: APPLITOOLS_API_KEY
+      # Read only by builds tagged [trace rake]; see lib/cdo/rake_tracing.rb.
+      RAKE_SENTRY_DSN:
+        from_secret: RAKE_SENTRY_DSN
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       # Cached data gets restored by the root user, so we need to reassign

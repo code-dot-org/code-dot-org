@@ -231,6 +231,9 @@ acapela_ephemeral_password:
 # Enables OpenTelemetry instrumentation and exporting to the OpenTelemetry Collector. See `dashboard/engines/observability/` for more details.
 enable_opentelemetry: false
 
+# Traces rake tasks with OpenTelemetry and sends the spans to rake_sentry_dsn. See lib/cdo/rake_tracing.rb.
+enable_rake_tracing: false
+
 # Sentry trace and error reporting.
 enable_sentry: false
 # DSN for the Dashboard Rails backend Sentry project.
@@ -244,6 +247,8 @@ activejobs_sentry_dsn: !Secret
 frontend_apps_sentry_dsn: !Secret
 # DSN for the frontend/apps/studio Vite app Sentry project.
 frontend_studio_sentry_dsn: !Secret
+# DSN for the Sentry project that receives rake traces. A !Secret here would fail app server boot until created.
+rake_sentry_dsn:
 # Organization auth token with the project:releases scope; aws/ci_build records each deploy with it.
 sentry_releases_token: !Secret
 
