@@ -3,8 +3,6 @@
 // make or remake it. A generated or drawn picture is written to the project
 // as soon as it is ready; the student does not confirm it.
 
-import isEqual from 'lodash/isEqual';
-import omit from 'lodash/omit';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -59,7 +57,7 @@ import {currentPixels} from './imagePixels';
 import MakePane from './MakePane';
 import OwnWorkPane from './OwnWorkPane';
 import PaintPlaceholder from './PaintPlaceholder';
-import {ImageProps, listProjectImages, ProjectImage} from './projectImages';
+import {listProjectImages, ProjectImage} from './projectImages';
 import LearningDialog from './teaching/LearningDialog';
 import RatingBar from './teaching/RatingBar';
 import ReopenedBehindTheScenes from './teaching/ReopenedBehindTheScenes';
@@ -127,22 +125,6 @@ type EditedMode = 'paint' | 'pane' | 'generate';
 function readEditedMode(): EditedMode {
   const value = queryParams('images-edited');
   return value === 'pane' || value === 'generate' ? value : 'paint';
-}
-
-/** Whether two generation records are of one picture: a verdict judges
-    the picture without changing it. Every other picture differs by its
-    seed, or by its cache variant. */
-function samePicture(
-  a: ImageProps['generation'],
-  b: ImageProps['generation']
-): boolean {
-  if (a === b) {
-    return true;
-  }
-  if (!a || !b) {
-    return false;
-  }
-  return isEqual(omit(a, 'verdict'), omit(b, 'verdict'));
 }
 
 const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
@@ -287,8 +269,19 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     learning,
     levelId,
   });
+  const tools = useDrawing({
+    images,
+    saveEdited: writer.saveEdited,
+    storePicture,
+    active,
+    onDrawingHistory,
+  });
+  const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
+    tools;
+  const drawingKeyRef = useRef(drawing?.target.key);
+  drawingKeyRef.current = drawing?.target.key;
   // Rating a picture keeps it a second time; the story is offered only on
-  // the first keep of each picture.
+  // the first keep of each picture, and the tools open on it stay open.
   const keptRef = useRef<string | null>(null);
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
@@ -299,22 +292,16 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       };
       const firstKeep = keptRef.current !== result.filename;
       keptRef.current = result.filename;
+      if (!firstKeep && target.key && drawingKeyRef.current === target.key) {
+        adoptGeneration(result.generation);
+      }
       await storePicture(target, () => writer.acceptGenerated(target, result));
       if (firstKeep) {
         offerStory(result);
       }
     },
-    [writer, storePicture, offerStory]
+    [writer, storePicture, offerStory, adoptGeneration]
   );
-
-  const tools = useDrawing({
-    images,
-    saveEdited: writer.saveEdited,
-    storePicture,
-    active,
-    onDrawingHistory,
-  });
-  const {drawing, startDrawing, leaveDrawing, stopDrawing} = tools;
   // When the chosen image has been deleted, choose the first image left, or
   // none; tools open on it close without saving, since a save would create
   // a new image from the deleted pixels.
@@ -388,13 +375,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   ]);
   // A generated picture replacing the image (or blank) being drawn on
   // becomes the image's pixels; the tools close without saving the drawn
-  // pixels over it. A rating keeps the picture again with its verdict in
-  // the record, which is the same picture.
+  // pixels over it.
   const landedOverPainting =
     !!drawing &&
     paintsInPlace &&
     !!chosenImage?.props.generation &&
-    !samePicture(chosenImage.props.generation, tools.openedOnGeneration) &&
+    chosenImage.props.generation !== tools.openedOnGeneration &&
     (drawing.target.key === chosenImage.key || drawing.target.key === null);
   const {abandonDrawing} = tools;
   useEffect(() => {

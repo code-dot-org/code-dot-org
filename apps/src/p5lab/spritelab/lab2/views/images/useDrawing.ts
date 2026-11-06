@@ -65,6 +65,9 @@ export interface DrawingTools {
   drawing: Drawing | null;
   /** The image's generation record when the tools opened on it. */
   openedOnGeneration: ImageProps['generation'];
+  /** The picture under the tools was kept again under a new record (a
+      rating adds its verdict); the tools stay open on it. */
+  adoptGeneration: (generation: ImageProps['generation']) => void;
   /** What the frame shows over the editor's canvas until the editor has
       painted: a copy of the previous drawing's canvas, or the picture
       decoded ahead. */
@@ -494,9 +497,17 @@ export default function useDrawing({
     editorRef.current = editor;
   }, []);
 
+  const adoptGeneration = useCallback(
+    (generation: ImageProps['generation']) => {
+      openedOnGenerationRef.current = generation;
+    },
+    []
+  );
+
   return {
     drawing,
     openedOnGeneration: openedOnGenerationRef.current,
+    adoptGeneration,
     placeholderPicture: previousCanvasRef.current?.canvas ?? drawing?.picture,
     saveFailed,
     startDrawing,

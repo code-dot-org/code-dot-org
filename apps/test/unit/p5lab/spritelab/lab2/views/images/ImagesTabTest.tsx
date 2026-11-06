@@ -632,12 +632,24 @@ describe('ImagesTab', () => {
       propsByKey.k1 = {...propsByKey.k1, generation: result.generation};
       return 'k1';
     });
-    renderTab({editingOffered: true});
+    const {rerender} = renderTab({editingOffered: true});
+    await screen.findByText('canvas');
+    const again = () =>
+      rerender(
+        <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
+      );
+    // A picture lands over the drawing: the tools open again on it.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^land sprite/}));
+    });
+    again();
     const canvas = await screen.findByText('canvas');
+    // Rating it keeps it again; the tab sees the record on its next render.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: /^rate sprite/}));
     });
-    expect(acceptGenerated).toHaveBeenCalledTimes(1);
+    expect(acceptGenerated).toHaveBeenCalledTimes(2);
+    again();
     // The same canvas: the tools were never put away.
     expect(screen.getByText('canvas')).toBe(canvas);
     expect(screen.getByText('toolbar')).toBeTruthy();
