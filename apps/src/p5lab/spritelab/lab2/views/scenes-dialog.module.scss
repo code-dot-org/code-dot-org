@@ -1,4 +1,4 @@
-@use './imageTile' as tile;
+@use './checkerboard';
 
 // Wide enough for a row of four cards; the base dialog's own width rule
 // would cap it at 50rem.
@@ -71,23 +71,22 @@
   border-style: dashed;
 }
 
-// Square, like the stage; the tile is a button that opens the scene.
+// The scene's picture, square like the stage; a picture only, nothing to
+// press or hover.
 .tile {
-  @include tile.image-tile(192px);
+  @include checkerboard.checkerboard(
+    16px,
+    var(--dialog-checker-tint, rgb(128 128 128 / 16%)),
+    var(--dialog-checker-bg, transparent)
+  );
 
-  position: relative;
+  box-sizing: border-box;
+  width: 192px;
+  height: 192px;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
   color: var(--text-neutral-secondary);
   font-size: 28px;
-}
-
-// The new scene's tile is not a button yet: no hover, no hand.
-.tileNew {
-  cursor: default;
-
-  &:hover {
-    transform: none;
-  }
 }
 
 .tilePicture {

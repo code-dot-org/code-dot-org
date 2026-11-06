@@ -2339,7 +2339,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           activeSceneId={activeSceneId}
           editable={scenesEditable}
           creating={scenesCreating}
-          onOpenScene={sceneEditing.selectScene}
           onCreateScene={sceneEditing.createScene}
           onRenameScene={sceneEditing.renameScene}
           onDeleteScene={sceneEditing.deleteScene}

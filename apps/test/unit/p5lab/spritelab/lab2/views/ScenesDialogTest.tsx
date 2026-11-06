@@ -13,7 +13,6 @@ function renderDialog(
   props: Partial<React.ComponentProps<typeof ScenesDialog>> = {}
 ) {
   const handlers = {
-    onOpenScene: jest.fn(),
     onCreateScene: jest.fn(),
     onRenameScene: jest.fn(),
     onDeleteScene: jest.fn(),
@@ -55,13 +54,6 @@ describe('ScenesDialog', () => {
     expect(onMakeStartScene).not.toHaveBeenCalled();
     fireEvent.click(cave);
     expect(onMakeStartScene).toHaveBeenCalledWith('b');
-  });
-
-  it('opens a scene from its tile and closes', () => {
-    const {onOpenScene, onClose} = renderDialog();
-    fireEvent.click(screen.getByRole('button', {name: 'Open Cave'}));
-    expect(onOpenScene).toHaveBeenCalledWith('b');
-    expect(onClose).toHaveBeenCalledTimes(1);
   });
 
   it('renames from the pencil, saving on Enter or the check', () => {
@@ -126,8 +118,8 @@ describe('ScenesDialog', () => {
     expect(screen.getByRole('button', {name: 'Save name'})).toBeDisabled();
     expect(screen.getByRole('button', {name: 'New scene'})).toBeDisabled();
     expect(screen.getByRole('button', {name: 'Done'})).toBeDisabled();
-    expect(screen.getByRole('button', {name: 'Open Cave'})).toBeDisabled();
     expect(screen.getByRole('button', {name: 'Rename Cave'})).toBeDisabled();
+    expect(screen.getAllByRole('button', {name: 'Delete'})[1]).toBeDisabled();
     fireEvent.change(input, {target: {value: ' Boss room '}});
     fireEvent.keyDown(input, {key: 'Enter'});
     expect(onCreateScene).toHaveBeenCalledWith('Boss room');
@@ -144,7 +136,9 @@ describe('ScenesDialog', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Cancel name'}));
     expect(onCreateScene).not.toHaveBeenCalled();
     expect(screen.queryByRole('textbox', {name: 'Scene name'})).toBeNull();
-    expect(screen.getByRole('button', {name: 'Open Cave'})).not.toBeDisabled();
+    expect(
+      screen.getByRole('button', {name: 'Rename Cave'})
+    ).not.toBeDisabled();
   });
 
   it('opens on a new scene waiting for its name when asked', async () => {

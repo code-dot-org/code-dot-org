@@ -109,7 +109,6 @@ interface SceneCardProps {
   editable: boolean;
   /** Held still while another scene is being named. */
   disabled: boolean;
-  onOpen: (sceneId: string) => void;
   onRename: (sceneId: string, name: string) => void;
   onDelete: (sceneId: string) => void;
   onMakeStart: (sceneId: string) => void;
@@ -122,7 +121,6 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
   deletable,
   editable,
   disabled,
-  onOpen,
   onRename,
   onDelete,
   onMakeStart,
@@ -137,15 +135,9 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
         disabled && styles.cardDisabled
       )}
     >
-      <button
-        type="button"
-        className={styles.tile}
-        aria-label={`Open ${scene.name}`}
-        disabled={disabled}
-        onClick={() => onOpen(scene.id)}
-      >
+      <div className={styles.tile}>
         <ScenePicture src={scene.thumbnail} className={styles.tilePicture} />
-      </button>
+      </div>
       <div className={styles.nameRow}>
         {renaming ? (
           <SceneNameField
@@ -258,9 +250,9 @@ const NewSceneCard: React.FunctionComponent<NewSceneCardProps> = ({
   }, []);
   return (
     <div ref={ref} className={classNames(styles.card, styles.cardNew)}>
-      <span className={classNames(styles.tile, styles.tileNew)}>
+      <div className={styles.tile}>
         <ScenePicture src={undefined} className={styles.tilePicture} />
-      </span>
+      </div>
       <div className={styles.nameRow}>
         <SceneNameField initial="" onCommit={onCreate} onCancel={onCancel} />
       </div>
@@ -275,8 +267,6 @@ interface ScenesDialogProps {
   editable: boolean;
   /** Opens with a new scene waiting for its name. */
   creating?: boolean;
-  /** A scene was chosen from its tile; the dialog closes with it. */
-  onOpenScene: (sceneId: string) => void;
   onCreateScene: (name: string) => void;
   onRenameScene: (sceneId: string, name: string) => void;
   onDeleteScene: (sceneId: string) => void;
@@ -289,7 +279,6 @@ const ScenesDialog: React.FunctionComponent<ScenesDialogProps> = ({
   activeSceneId,
   editable,
   creating = false,
-  onOpenScene,
   onCreateScene,
   onRenameScene,
   onDeleteScene,
@@ -325,10 +314,6 @@ const ScenesDialog: React.FunctionComponent<ScenesDialogProps> = ({
               deletable={scenes.length > 1}
               editable={editable}
               disabled={naming}
-              onOpen={sceneId => {
-                onOpenScene(sceneId);
-                onClose();
-              }}
               onRename={onRenameScene}
               onDelete={onDeleteScene}
               onMakeStart={onMakeStartScene}
