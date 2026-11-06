@@ -38,6 +38,14 @@ const JSON_HEADERS = {'Content-Type': 'application/json'};
 // Unlike placements, it holds empty pages and edits need no renumbering.
 type PageLayout = number[][];
 
+// The endpoints also return a question's page. Only load reads it; after
+// that the layout says which page a question is on.
+type ServerQuestion = QuizBuilderQuestion & {page: number | null};
+
+function withoutPage({page, ...question}: ServerQuestion): QuizBuilderQuestion {
+  return question;
+}
+
 function placementsFromLayout(layout: PageLayout): QuizPlacement[] {
   return layout
     .filter(questionIds => questionIds.length > 0)
@@ -96,14 +104,16 @@ export default function useQuizBuilderQuestions(
         `/levels/${levelId}/quiz_configuration`
       );
       const body = await response.json();
-      const loaded: QuizBuilderQuestion[] = body.questions ?? [];
+      const loaded: ServerQuestion[] = body.questions ?? [];
       if (typeof body.version === 'number') {
         advanceQuizVersion(quizVersion, body.version);
       }
       const loadedLayout = groupByPage(loaded).map(({questions}) =>
         questions.map(q => q.id)
       );
-      setQuestionsById(Object.fromEntries(loaded.map(q => [q.id, q])));
+      setQuestionsById(
+        Object.fromEntries(loaded.map(q => [q.id, withoutPage(q)]))
+      );
       setLayout(loadedLayout);
       setSavedPlacements(placementsFromLayout(loadedLayout));
       setDeleteQuestionIds([]);
@@ -144,7 +154,6 @@ export default function useQuizBuilderQuestions(
         attachedToOtherQuizzes: false,
         deletable: true,
         usedInPublishedUnit: false,
-        page,
       };
       let question: QuizBuilderQuestion;
       switch (type) {
@@ -183,8 +192,8 @@ export default function useQuizBuilderQuestions(
       setQuestionsById(prev => ({...prev, [id]: question}));
       setLayout(prev => {
         const next = prev.map(questionIds => [...questionIds]);
-        // Creates the page if it doesn't exist yet, as in an empty quiz.
-        while (next.length < page) {
+        // An empty quiz has no pages until its first question.
+        if (next.length === 0) {
           next.push([]);
         }
         next[page - 1].push(id);
@@ -219,7 +228,7 @@ export default function useQuizBuilderQuestions(
               true,
               JSON_HEADERS
             );
-        const saved: QuizBuilderQuestion = await response.json();
+        const saved = withoutPage(await response.json());
         const previous = questionsById[id];
         const isFork = !isPendingQuestionId(id) && saved.id !== id;
         setQuestionsById(prev => {
@@ -229,12 +238,11 @@ export default function useQuizBuilderQuestions(
           return {
             ...rest,
             [saved.id]: isFork
-              ? {...saved, page: previous.page}
+              ? saved
               : {
                   ...saved,
                   attachedToOtherQuizzes: previous.attachedToOtherQuizzes,
                   deletable: previous.deletable,
-                  page: previous.page,
                 },
           };
         });

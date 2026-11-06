@@ -19,11 +19,16 @@ import {groupByPage} from '@cdo/apps/quiz/utils';
 jest.mock('@cdo/apps/quiz/builder/useQuizBuilderQuestions');
 const mockUseQuizBuilderQuestions = jest.mocked(useQuizBuilderQuestions);
 
+// A question and the page the mocked hook puts it on.
+type PlacedQuestion = QuizBuilderQuestion & {page: number};
+
 const question = (
   overrides: Partial<
-    Extract<QuizBuilderQuestion, {type: 'MultipleChoiceQuestion'}>
+    Extract<QuizBuilderQuestion, {type: 'MultipleChoiceQuestion'}> & {
+      page: number;
+    }
   > = {}
-): QuizBuilderQuestion => ({
+): PlacedQuestion => ({
   id: 1,
   type: 'MultipleChoiceQuestion',
   questionName: 'JavaScript variable fundamentals',
@@ -67,11 +72,13 @@ function createFromDropdown(index: number, typeLabel: string) {
 }
 
 function renderWorkspace(
-  stateOverrides: Partial<QuizBuilderQuestionsState> = {},
+  stateOverrides: Omit<Partial<QuizBuilderQuestionsState>, 'questions'> & {
+    questions?: PlacedQuestion[];
+  } = {},
   propOverrides: Partial<React.ComponentProps<typeof QuizBuilderWorkspace>> = {}
 ) {
   // pages defaults to the questions grouped by their page, as the hook does.
-  const questions = stateOverrides.questions ?? BASE_STATE.questions;
+  const questions = stateOverrides.questions ?? [];
   mockUseQuizBuilderQuestions.mockReturnValue({
     ...BASE_STATE,
     pages: groupByPage(questions),

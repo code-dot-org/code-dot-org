@@ -82,7 +82,8 @@ export function isMatchDraft(draft: QuizQuestionDraft): draft is MatchDraft {
   return draft.type === 'MatchQuestion';
 }
 
-// A question as QuizQuestionSerialization#quiz_question_json returns it.
+// A question as QuizQuestionSerialization#quiz_question_json returns it,
+// without its page.
 export type QuizBuilderQuestion = QuizQuestionPayload & {
   id: number;
   // TODO: move to QuizQuestionSharedFields when we allow editing standards.
@@ -92,7 +93,6 @@ export type QuizBuilderQuestion = QuizQuestionPayload & {
   // from this quiz may delete it.
   deletable: boolean;
   usedInPublishedUnit: boolean;
-  page: number | null;
 };
 
 // A negative id marks a question that has been added locally

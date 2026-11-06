@@ -21,7 +21,6 @@ const MULTIPLE_CHOICE_QUESTION: QuizBuilderQuestion = {
   attachedToOtherQuizzes: false,
   deletable: true,
   usedInPublishedUnit: false,
-  page: 1,
 };
 
 const MULTIPLE_SELECT_QUESTION: QuizBuilderQuestion = {
@@ -41,7 +40,6 @@ const MULTIPLE_SELECT_QUESTION: QuizBuilderQuestion = {
   attachedToOtherQuizzes: false,
   deletable: true,
   usedInPublishedUnit: false,
-  page: 1,
 };
 
 // QuizQuestionCard doesn't own its expanded state (QuizBuilderWorkspace does,
