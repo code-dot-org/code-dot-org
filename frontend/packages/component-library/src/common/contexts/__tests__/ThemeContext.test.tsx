@@ -1,5 +1,6 @@
 import {
   Autocomplete,
+  createTheme,
   Menu,
   MenuItem,
   ThemeProvider as MuiThemeProvider,
@@ -107,6 +108,33 @@ describe('ThemeProvider and portaled MUI surfaces', () => {
     );
   });
 
+  it('lets a call site override the theme on the popper slot', async () => {
+    renderInMui(
+      <InTheme theme="Dark">
+        <Tooltip
+          title="tip"
+          slotProps={{popper: {'data-theme': 'Light'} as object}}
+        >
+          <button type="button">trigger</button>
+        </Tooltip>
+      </InTheme>,
+    );
+
+    expect(await openTooltip()).toHaveAttribute('data-theme', 'Light');
+  });
+
+  it('lets a call site override the theme through PopperProps', async () => {
+    renderInMui(
+      <InTheme theme="Dark">
+        <Tooltip title="tip" PopperProps={{'data-theme': 'Light'} as object}>
+          <button type="button">trigger</button>
+        </Tooltip>
+      </InTheme>,
+    );
+
+    expect(await openTooltip()).toHaveAttribute('data-theme', 'Light');
+  });
+
   it('keeps a function slotProps on the tooltip', async () => {
     renderInMui(
       <InTheme theme="Dark">
@@ -167,6 +195,70 @@ describe('ThemeProvider and portaled MUI surfaces', () => {
     expect(
       (await screen.findByRole('listbox')).closest('.MuiAutocomplete-popper'),
     ).toHaveAttribute('data-theme', 'Dark');
+  });
+
+  it('merges into the outer theme defaultProps for Popper and Popover', () => {
+    const outerTheme = createTheme({
+      components: {
+        MuiPopper: {defaultProps: {className: 'from-outer-popper'}},
+        MuiPopover: {defaultProps: {className: 'from-outer-popover'}},
+      },
+    });
+    render(
+      <MuiThemeProvider theme={outerTheme}>
+        <InTheme theme="Dark">
+          <Popper open anchorEl={anchor} disablePortal>
+            <p>popper</p>
+          </Popper>
+          <Popover open anchorEl={anchor}>
+            <p>popover</p>
+          </Popover>
+        </InTheme>
+      </MuiThemeProvider>,
+    );
+
+    const popper = screen.getByText('popper').closest('[data-theme]');
+    expect(popper).toHaveClass('from-outer-popper');
+    expect(popper).toHaveAttribute('data-theme', 'Dark');
+    const popover = screen.getByText('popover').closest('.MuiPopover-root');
+    expect(popover).toHaveClass('from-outer-popover');
+    expect(popover).toHaveAttribute('data-theme', 'Dark');
+  });
+
+  it('keeps a flat outer defaultProps entry flat', () => {
+    // MUI also accepts default props written directly on the entry.
+    const flatTheme = createTheme({
+      components: {MuiPopper: {className: 'from-flat-entry'} as object},
+    });
+    render(
+      <MuiThemeProvider theme={flatTheme}>
+        <InTheme theme="Dark">
+          <Popper open anchorEl={anchor} disablePortal>
+            <p>popper</p>
+          </Popper>
+        </InTheme>
+      </MuiThemeProvider>,
+    );
+
+    const popper = screen.getByText('popper').closest('[data-theme]');
+    expect(popper).toHaveClass('from-flat-entry');
+    expect(popper).toHaveAttribute('data-theme', 'Dark');
+  });
+
+  it('updates an open popper when the theme changes', async () => {
+    renderInMui(
+      <ThemeProvider>
+        <ThemeReadout />
+        <Tooltip open title="tip">
+          <span>trigger</span>
+        </Tooltip>
+      </ThemeProvider>,
+    );
+
+    const popper = await screen.findByRole('tooltip');
+    expect(popper).toHaveAttribute('data-theme', 'Light');
+    await user.click(screen.getByRole('button', {name: 'Light'}));
+    expect(screen.getByRole('tooltip')).toHaveAttribute('data-theme', 'Dark');
   });
 
   it('leaves surfaces outside the provider alone', async () => {
@@ -247,6 +339,70 @@ describe('pinned ThemeProvider', () => {
       'data-theme',
       'Light',
     );
+  });
+
+  it('follows the enclosing provider when theme is passed unset', async () => {
+    const maybeTheme: Theme | undefined = undefined;
+    renderInMui(
+      <InTheme theme="Dark">
+        <ThemeProvider theme={maybeTheme}>
+          <ThemeReadout />
+          <Tooltip title="tip">
+            <span>trigger</span>
+          </Tooltip>
+        </ThemeProvider>
+      </InTheme>,
+    );
+
+    expect(screen.getByRole('button')).toHaveTextContent('Dark');
+    await user.hover(screen.getByText('trigger'));
+    expect(await screen.findByRole('tooltip')).toHaveAttribute(
+      'data-theme',
+      'Dark',
+    );
+    expect(screen.getByRole('button').parentElement).toHaveStyle({
+      display: 'contents',
+    });
+  });
+
+  it('keeps following the enclosing provider when it changes', async () => {
+    const maybeTheme: Theme | undefined = undefined;
+    renderInMui(
+      <ThemeProvider>
+        <ThemeReadout />
+        <ThemeProvider theme={maybeTheme}>
+          <p>inner</p>
+        </ThemeProvider>
+      </ThemeProvider>,
+    );
+
+    const inner = () => screen.getByText('inner').parentElement;
+    expect(inner()).toHaveAttribute('data-theme', 'Light');
+    await user.click(screen.getByRole('button'));
+    expect(inner()).toHaveAttribute('data-theme', 'Dark');
+  });
+
+  it('still starts its own state when nested bare', async () => {
+    renderInMui(
+      <InTheme theme="Dark">
+        <ThemeProvider>
+          <ThemeReadout />
+        </ThemeProvider>
+      </InTheme>,
+    );
+
+    expect(screen.getByRole('button')).toHaveTextContent('Light');
+  });
+
+  it('starts its own state when theme is unset and nothing encloses it', () => {
+    const maybeTheme: Theme | undefined = undefined;
+    renderInMui(
+      <ThemeProvider theme={maybeTheme}>
+        <ThemeReadout />
+      </ThemeProvider>,
+    );
+
+    expect(screen.getByRole('button')).toHaveTextContent('Light');
   });
 
   it('adds no layout box', () => {
