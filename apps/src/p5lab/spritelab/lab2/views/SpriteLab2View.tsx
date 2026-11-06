@@ -53,6 +53,7 @@ import {
 import useGameAudio from '../audioFeedback/useGameAudio';
 import {
   catalogEntries,
+  gravityBlockTypesTogether,
   heldBackBlockTypes,
   newBlockTypes,
 } from '../blockCatalog';
@@ -479,8 +480,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [currentSources.blockCatalogSeen, patchSources]);
   const addCatalogBlock = useCallback(
     (type: string) => {
-      if (!chosenBlockSet.has(type)) {
-        patchSources({chosenBlocks: [...chosenBlockSet, type]});
+      const typesToAdd = gravityBlockTypesTogether(type).filter(
+        blockType => !chosenBlockSet.has(blockType)
+      );
+      if (typesToAdd.length > 0) {
+        patchSources({
+          chosenBlocks: [...chosenBlockSet, ...typesToAdd],
+        });
       }
     },
     [chosenBlockSet, patchSources]

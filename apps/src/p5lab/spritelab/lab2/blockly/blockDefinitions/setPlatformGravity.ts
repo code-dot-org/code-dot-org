@@ -5,7 +5,7 @@ import {PLATFORM_GRAVITY} from '../../platformPhysics';
 
 const MIN_GRAVITY_STRENGTH = 0;
 const MAX_GRAVITY_STRENGTH = 10;
-const DEFAULT_GRAVITY_STRENGTH = 10;
+const DEFAULT_GRAVITY_STRENGTH = 5;
 
 /**
  * Override the platformer's gravity. Zero turns gravity off. Direction is
