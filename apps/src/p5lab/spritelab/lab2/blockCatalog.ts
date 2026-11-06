@@ -43,7 +43,7 @@ export function blockTypesIn(node: unknown, shadow = false): string[] {
 
 const unique = (types: string[]) => [...new Set(types)];
 
-const GRAVITY_BLOCK_TYPES = [
+export const GRAVITY_BLOCK_TYPES = [
   'spritelab2_setPlatformGravity',
   'spritelab2_setPlatformGravityDirection',
 ];
