@@ -1,4 +1,5 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React, {useState} from 'react';
 
 import {
@@ -143,6 +144,29 @@ describe('WordMenus', () => {
       screen.getByRole('button', {name: 'cute. Show adjective words'})
     );
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
+  });
+
+  it('moves focus to the new set by arrow or chip, onto its chosen word', async () => {
+    const user = userEvent.setup();
+    render(<Harness initial={{creature: 'cat'}} />);
+    const press = async (name: string) => {
+      screen.getByRole('button', {name}).focus();
+      await user.keyboard('{Enter}');
+    };
+    await press('Next words');
+    const adjective = screen.getByRole('group', {name: 'adjective'});
+    expect(document.activeElement).toBe(
+      within(adjective).getAllByRole('button')[0]
+    );
+    await press('cat. Show creature words');
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'cat'})
+    );
+    await press('Next words');
+    await press('Previous words');
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'cat'})
+    );
   });
 
   it('shows a chip as plain text while the creature is missing', () => {

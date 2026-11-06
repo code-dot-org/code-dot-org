@@ -6,7 +6,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {hueClass, withPeriod, WordChip, WordText} from './sentencePieces';
 import {
@@ -93,6 +93,21 @@ export function useWordMenus({
       ])
   );
   const filled = (id: string) => !!wordFor(sentence, id, choices[id]);
+
+  // Arrows and chips take focus to the new set's chosen or first word.
+  const focusTarget = useRef<HTMLButtonElement>(null);
+  const focusWords = useRef(false);
+  const focusId = filled(slot.id) ? choices[slot.id] : slot.words[0].id;
+  const goToWords = (next: number) => {
+    focusWords.current = next !== index;
+    goTo(next);
+  };
+  useEffect(() => {
+    if (focusWords.current) {
+      focusWords.current = false;
+      focusTarget.current?.focus();
+    }
+  }, [moveCount]);
 
   const choose = (slotId: string, wordId: string | undefined) => {
     const next = {...choices, [slotId]: wordId};
@@ -247,7 +262,7 @@ export function useWordMenus({
                 type="button"
                 className={styles.chipWord}
                 aria-label={`${word.text}. Show ${s.label} words`}
-                onClick={() => goTo(slots.findIndex(x => x.id === s.id))}
+                onClick={() => goToWords(slots.findIndex(x => x.id === s.id))}
               >
                 <WordText word={word} />
               </button>
@@ -280,6 +295,9 @@ export function useWordMenus({
       return (
         <button
           key={word.id}
+          ref={
+            set.id === slot.id && word.id === focusId ? focusTarget : undefined
+          }
           type="button"
           className={classNames(
             styles.word,
@@ -366,7 +384,7 @@ export function useWordMenus({
                 className={styles.arrow}
                 aria-label="Previous words"
                 disabled={!canMove || index === 0}
-                onClick={() => goTo(Math.max(0, index - 1))}
+                onClick={() => goToWords(Math.max(0, index - 1))}
               >
                 <FontAwesomeV6Icon
                   iconName={vertical ? 'chevron-up' : 'chevron-left'}
@@ -408,7 +426,7 @@ export function useWordMenus({
                 className={styles.arrow}
                 aria-label="Next words"
                 disabled={!canMove || index >= lastAvailable}
-                onClick={() => goTo(Math.min(lastAvailable, index + 1))}
+                onClick={() => goToWords(Math.min(lastAvailable, index + 1))}
               >
                 <FontAwesomeV6Icon
                   iconName={vertical ? 'chevron-down' : 'chevron-right'}
