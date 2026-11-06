@@ -8,10 +8,11 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import QuizMetadataList from '../QuizMetadataList';
 import {QuizQuestionType} from '../types';
-import {pluralize} from '../utils';
 
 import {
   EMPTY_PAGE_REASON,
+  editedQuestionsReason,
+  NO_CHANGES_REASON,
   QUIZ_BUILDER_HEADER_ID,
   UNSAVED_QUESTION_REASON,
 } from './constants';
@@ -99,11 +100,11 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     id => !isPendingQuestionId(id)
   ).length;
   const saveDisabledReason = hasPendingQuestion
-    ? 'Save or discard your new question first'
+    ? UNSAVED_QUESTION_REASON
     : editedCount > 0
-    ? `Save or discard changes to ${pluralize(editedCount, 'question')} first`
+    ? editedQuestionsReason(editedCount)
     : !hasUnsavedLayout
-    ? 'No changes to save'
+    ? NO_CHANGES_REASON
     : undefined;
 
   const hasUnsavedChanges = hasUnsavedLayout || dirtyIds.size > 0;

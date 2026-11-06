@@ -2,6 +2,12 @@ import {fireEvent, render, screen, within} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
+import {
+  EMPTY_PAGE_REASON,
+  editedQuestionsReason,
+  NO_CHANGES_REASON,
+  UNSAVED_QUESTION_REASON,
+} from '@cdo/apps/quiz/builder/constants';
 import QuizBuilderWorkspace from '@cdo/apps/quiz/builder/QuizBuilderWorkspace';
 import {
   QuizBuilderQuestion,
@@ -249,7 +255,7 @@ describe('QuizBuilderWorkspace', () => {
     fireEvent.mouseOver(addPage);
     expect(
       await screen.findByRole('tooltip', {
-        name: 'Create a question on the empty page first.',
+        name: EMPTY_PAGE_REASON,
       })
     ).toBeInTheDocument();
 
@@ -278,7 +284,7 @@ describe('QuizBuilderWorkspace', () => {
     fireEvent.mouseOver(createQuestion);
     expect(
       await screen.findByRole('tooltip', {
-        name: 'Save or remove your new question first.',
+        name: UNSAVED_QUESTION_REASON,
       })
     ).toBeInTheDocument();
   });
@@ -428,7 +434,7 @@ describe('QuizBuilderWorkspace', () => {
       expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
       fireEvent.mouseOver(saveButton());
       expect(
-        await screen.findByRole('tooltip', {name: 'No changes to save'})
+        await screen.findByRole('tooltip', {name: NO_CHANGES_REASON})
       ).toBeInTheDocument();
     });
 
@@ -453,7 +459,7 @@ describe('QuizBuilderWorkspace', () => {
       fireEvent.mouseOver(saveButton());
       expect(
         await screen.findByRole('tooltip', {
-          name: 'Save or discard your new question first',
+          name: UNSAVED_QUESTION_REASON,
         })
       ).toBeInTheDocument();
     });
@@ -476,7 +482,7 @@ describe('QuizBuilderWorkspace', () => {
       fireEvent.mouseOver(saveButton());
       expect(
         await screen.findByRole('tooltip', {
-          name: 'Save or discard changes to 1 question first',
+          name: editedQuestionsReason(1),
         })
       ).toBeInTheDocument();
     });
