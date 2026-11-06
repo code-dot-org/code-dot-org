@@ -955,6 +955,14 @@ module SharedConstants
     ESSENTIAL_ONLY: 'essential_only',
   }.freeze
 
+  # Why the server refuses a user the Sprite Lab 2 ask AI blocks.
+  SPRITELAB_ASK_AI_REFUSALS = {
+    OFF: 'off',
+    NOT_IN_PILOT: 'not_in_pilot',
+    NO_ACCESS: 'no_access',
+    REGION_BLOCKED: 'region_blocked',
+  }.freeze
+
   # The degree to which a curriculum depends on AI chat features.
   # 'essential' means the curriculum cannot be completed without AI chat tools.
   # 'available' means the curriculum can be completed without AI chat tools but the tools are available for use.

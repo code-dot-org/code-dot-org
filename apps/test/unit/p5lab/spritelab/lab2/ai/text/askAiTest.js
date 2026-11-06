@@ -9,13 +9,17 @@ import {
   askAiText,
   AskAiError,
   askAiErrorMessage,
+  askAiRefusal,
   buildSystemPrompt,
   CHOICE_SYSTEM_PROMPT,
   cleanAnswer,
   isAskAiEnabled,
   SYSTEM_PROMPT,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/text/askAi';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  SpritelabAskAiRefusals,
+} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aichat/api/client/helpers/safetyHelpers', () => ({
   isTextSafe: jest.fn(),
@@ -299,6 +303,40 @@ describe('isAskAiEnabled', () => {
     expect(isAskAiEnabled()).toBe(true);
     DCDO.get.mockReturnValue(false);
     expect(isAskAiEnabled()).toBe(false);
+  });
+});
+
+describe('askAiRefusal', () => {
+  const student = {userType: 'student', spritelabAskAiRefusal: null};
+
+  it('allows a user the server does not refuse', () => {
+    expect(askAiRefusal(student)).toBeNull();
+  });
+
+  it("words each of the server's refusals", () => {
+    [
+      [SpritelabAskAiRefusals.NOT_IN_PILOT, "AI blocks aren't available yet."],
+      [SpritelabAskAiRefusals.OFF, 'The AI is turned off right now.'],
+      [
+        SpritelabAskAiRefusals.NO_ACCESS,
+        "Your teacher hasn't turned on AI for this class.",
+      ],
+      [
+        SpritelabAskAiRefusals.REGION_BLOCKED,
+        "AI blocks aren't available in your region yet.",
+      ],
+    ].forEach(([spritelabAskAiRefusal, message]) =>
+      expect(askAiRefusal({...student, spritelabAskAiRefusal})).toBe(message)
+    );
+  });
+
+  it('tells a teacher without AI access to verify', () => {
+    expect(
+      askAiRefusal({
+        userType: 'teacher',
+        spritelabAskAiRefusal: SpritelabAskAiRefusals.NO_ACCESS,
+      })
+    ).toBe('AI blocks need a verified teacher account.');
   });
 });
 
