@@ -82,15 +82,16 @@ export function isMatchDraft(draft: QuizQuestionDraft): draft is MatchDraft {
   return draft.type === 'MatchQuestion';
 }
 
-// A question as the builder endpoints return it (GET /levels/:id/
-// quiz_configuration and a placement create), without its page: the
-// QuizQuestion model's fields plus the cross-quiz usage context that
-// QuizQuestionSerialization#quiz_question_json adds.
+// A question as QuizQuestionSerialization#quiz_question_json returns it,
+// without its page.
 export type QuizBuilderQuestion = QuizQuestionPayload & {
   id: number;
   // TODO: move to QuizQuestionSharedFields when we allow editing standards.
   standards: StandardSummary[];
   attachedToOtherQuizzes: boolean;
+  // No other quiz uses it and no student has answered it, so removing it
+  // from this quiz may delete it.
+  deletable: boolean;
   usedInPublishedUnit: boolean;
 };
 
@@ -99,6 +100,13 @@ export type QuizBuilderQuestion = QuizQuestionPayload & {
 // database-assigned and always positive.
 export function isPendingQuestionId(id: number): boolean {
   return id < 0;
+}
+
+// One question's spot on the quiz, as PUT quiz_configuration takes and returns it.
+export interface QuizPlacement {
+  quizQuestionId: number;
+  page: number;
+  position: number;
 }
 
 // A page of the quiz being built, {page, questions}, with its list of questions
@@ -111,11 +119,14 @@ export interface QuizBuilderQuestionsState {
   questions: QuizBuilderQuestion[];
   pages: QuizBuilderPage[];
   isLoading: boolean;
+  isSavingQuiz: boolean;
   error: string | null;
-  // The question `error` is about, or null for a load failure - general,
-  // not about any existing question. A caller uses this to show the error
-  // on that question's card instead of globally.
+  // The question `error` is about, or null for a general error (a failed
+  // load or quiz save). A caller uses this to show the error on that
+  // question's card instead of globally.
   errorQuestionId: number | null;
+  // Whether the quiz's questions, pages or order differ from the last save.
+  hasUnsavedLayout: boolean;
   // Adds an empty page at the end.
   addPage: () => void;
   // Adds a placeholder question to local state only, on the given page.
@@ -131,8 +142,15 @@ export interface QuizBuilderQuestionsState {
     id: number,
     payload: QuizQuestionPayload
   ) => Promise<number | undefined>;
-  // For a pending question, just drops it from local state. Otherwise
-  // detaches it from the quiz server-side first.
-  removeQuestion: (id: number) => Promise<boolean>;
+  // Takes the question off the quiz in local state. On the next saveQuiz it
+  // comes off the quiz but stays in the question bank, or with permanently,
+  // is deleted unless another quiz uses it or a student has answered it.
+  removeQuestion: (
+    id: number,
+    options: {permanently: boolean}
+  ) => Promise<boolean>;
+  // Saves the quiz's questions, pages and order. Resolves false on failure,
+  // with `error` set, including when the quiz changed since it loaded.
+  saveQuiz: () => Promise<boolean>;
   load: () => Promise<void>;
 }
