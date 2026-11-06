@@ -122,7 +122,6 @@ import spriteLab2Reducer, {
   setScenes,
   Tab,
 } from '../redux/spriteLab2Redux';
-import {sceneLinks} from '../sceneLinks';
 import {
   collectSavedExternalKeys,
   ExternalProject,
@@ -2163,8 +2162,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [handOffControlFocus]
   );
 
-  const links = useMemo(() => sceneLinks(scenes), [scenes]);
-
   // Entering Play from the start scene (null) or the previewed scene; the
   // first scene IS the beginning, so it plays as the start.
   const playFrom = useCallback(
@@ -2341,7 +2338,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           scenes={sceneMetadata}
           activeSceneId={activeSceneId}
           editable={scenesEditable}
-          links={links}
           creating={scenesCreating}
           onOpenScene={sceneEditing.selectScene}
           onCreateScene={sceneEditing.createScene}

@@ -40,37 +40,12 @@
   background: var(--background-neutral-secondary);
 }
 
-// Wide gaps, so an arrow between neighbors has room to read.
 .grid {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 28px 40px;
+  gap: 20px;
   padding: 12px;
-}
-
-// The arrows between cards whose code jumps between them, drawn over the
-// grid and under nothing clickable.
-.links {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  pointer-events: none;
-  fill: var(--borders-brand-teal-primary);
-  stroke: var(--borders-brand-teal-primary);
-
-  path {
-    fill: none;
-    stroke-width: 2px;
-  }
-
-  marker path {
-    fill: var(--borders-brand-teal-primary);
-    stroke: none;
-  }
 }
 
 // A card groups a scene's picture and controls.

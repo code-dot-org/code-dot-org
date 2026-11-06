@@ -57,17 +57,6 @@ describe('ScenesDialog', () => {
     expect(onMakeStartScene).toHaveBeenCalledWith('b');
   });
 
-  it('draws an arrow for each link between cards', () => {
-    renderDialog({
-      links: [
-        {from: 'a', to: 'b'},
-        {from: 'b', to: 'a'},
-        {from: 'a', to: 'gone'},
-      ],
-    });
-    expect(document.querySelectorAll('svg path[marker-end]')).toHaveLength(2);
-  });
-
   it('opens a scene from its tile and closes', () => {
     const {onOpenScene, onClose} = renderDialog();
     fireEvent.click(screen.getByRole('button', {name: 'Open Cave'}));
