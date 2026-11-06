@@ -334,6 +334,6 @@ this` does not say which socket is `who` and which is `amount`; the hat
   the learner who carried `amount` out is not told it was `amount`. That
   is the scope rule's drawing everywhere, not this plan's. Fixed: a getter
   holding a name the file declares, but not where it sits, draws the name
-  faint and slanted and warns `amount is only known inside “when this actor
+  slanted and warns `amount is only known inside “when this actor
 is hit by (any) amount”`. A name nothing declares, as a drawer getter's
   default is, still draws `???`.

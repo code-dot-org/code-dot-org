@@ -345,6 +345,10 @@ below, and are listed last.
   keys have been driven only by tests and a headless browser, not by
   hand. Target sizes are the small IconButton's and the design system's
   small TextField; neither has been measured against 24 pixels.
+  MEASURED (November 2026): the Blocks tab with a block on it, a new
+  block's page with its design open and every kind of part added, and a
+  new event's page all pass 2.5.8. The smallest are the palette's "Add a
+  line break" (24 by 32) and the grips (32 by 32).
 
 ### Opening a Scroll View (ONE_WORLD_PLAN.md, step 8)
 
@@ -360,16 +364,27 @@ below, and are listed last.
   scrolled out of sight.
 - **Untested**: not through a screen reader, and the dashed edge and the
   window's foot have not been measured for contrast against the stage.
+  MEASURED (November 2026): the blue (#4d9fff) is 6.65:1 on the backing
+  inside, and the foot has the backing on both sides. Outside is the
+  screen's background, which may be any color: on white the blue was
+  2.72:1. The edge is now drawn over a dark line twice its width, as a
+  dock zone's is, so one side of it clears 3:1 on any background.
 
 ### A name carried out of what declares it (EVENT_VALUES_PLAN.md)
 
-- **The getter draws the name faint and slanted, and carries a warning**:
+- **The getter draws the name slanted, and carries a warning**:
   "amount is not known here." The style is visual only; the warning's
   text is what says it. (1.4.1 Use of Color does not apply: no color
   changes.)
 - **Untested**: whether a screen reader reaches a block's warning, and the
   faint text's contrast against the getter's fill, which is lower than
   a working getter's by design.
+  MEASURED (November 2026): white at 60% on the getter's fill was under
+  4.5:1 on 42 of the 50 styles across the ten block themes, High
+  Contrast's logic (2.60:1) among them, and no opacity clears Modern's
+  location yellow. The name is no longer faint; slanted, with its
+  warning, it still does not read as a working getter, and its contrast
+  is the getter's own (see the chips, below).
 
 ### A hat's values as chips (VARIABLE_OWNERSHIP_PLAN.md, step 5)
 

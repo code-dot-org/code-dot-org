@@ -111,7 +111,10 @@ export class ScopedFieldVariable extends Blockly.FieldVariable {
     return block.workspace.getVariableMap().getVariableById(id)?.getName();
   }
 
-  /** …drawn slanted and faint, so it does not read as a working getter. */
+  /**
+   * …drawn slanted, so it does not read as a working getter. Not faint: at
+   * 60% the name was under 4.5:1 on nearly every style in every theme.
+   */
   protected override render_(): void {
     super.render_();
     const text = (this as unknown as {textElement_?: SVGTextElement | null})
@@ -119,7 +122,6 @@ export class ScopedFieldVariable extends Blockly.FieldVariable {
     if (text) {
       const stray = this.strayName() !== undefined;
       text.style.fontStyle = stray ? 'italic' : '';
-      text.style.opacity = stray ? '0.6' : '';
     }
   }
 

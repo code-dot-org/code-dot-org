@@ -261,7 +261,10 @@ const SCRIPT = '#7c4dff';
 const OUTSIDE_ALPHA = 0.3;
 /** Behind what an opened Scroll View holds, so it reads over the rest. */
 const OPENED_BACKING = MAP_BG;
-/** Its edge and the foot of its window: the selection's blue. */
+/**
+ * Its edge and the foot of its window: the selection's blue, over a dark
+ * line, since outside it is the screen's background, which may be any color.
+ */
 const OPENED_EDGE = SELECT;
 const DEG2RAD = Math.PI / 180;
 
@@ -3270,6 +3273,9 @@ export const MapStage = ({
       ctx.closePath();
       ctx.fillStyle = OPENED_BACKING;
       ctx.fill();
+      ctx.strokeStyle = OUTSIDE_BG;
+      ctx.lineWidth = 4 / view.scale;
+      ctx.stroke();
       ctx.strokeStyle = OPENED_EDGE;
       ctx.lineWidth = 2 / view.scale;
       ctx.setLineDash([6 / view.scale, 4 / view.scale]);
