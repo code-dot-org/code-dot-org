@@ -18,11 +18,13 @@ import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import HeaderActionButton from '@cdo/apps/lab2/views/components/HeaderActionButton';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
@@ -2376,6 +2378,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           onAdd={addCatalogBlock}
           onClose={closeBlockCatalog}
         />
+      )}
+      {/* The last level's Finish, in the page header as well. */}
+      {levelProperties.useSecondaryFinishButton && (
+        <HeaderActionButton onClick={() => dispatch(continueOrFinishLesson())}>
+          I'm finished
+        </HeaderActionButton>
       )}
       <ResourcePanel
         levelProperties={panelLevelProperties}

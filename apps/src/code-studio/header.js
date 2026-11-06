@@ -119,13 +119,13 @@ header.build = function (
     const isAdaptiveLevel = lessonData.levels.some(
       level => level.app === 'adaptive' && level.ids?.includes(currentLevelId)
     );
-    // An adaptive level draws its own header. A unit with simple progress has
-    // no bubbles to fit, so its header is a plain flex row rather than the
-    // measured one.
+    // An adaptive level draws its own header. A unit with simple progress
+    // walks its one lesson in order: its header is one bar with the lesson
+    // name and a bubble per level, none of them a link.
     const middle = isAdaptiveLevel ? (
       <AdaptiveHeaderPortal />
     ) : scriptData.simpleProgress ? (
-      <SimpleHeader scriptData={scriptData} scriptNameData={scriptNameData} />
+      <SimpleHeader scriptData={scriptData} lessonName={lessonData.name} />
     ) : (
       <HeaderMiddle
         scriptNameData={scriptNameData}
