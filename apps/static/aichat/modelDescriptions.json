@@ -33,8 +33,6 @@
     "trainingData": "..."
   },
   {
-    "id": "gpt-5.6-luna",
-    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] GPT-5.6 Luna",
     "id": "gemini-3.1-flash-lite",
     "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 3.1 Flash-Lite",
     "overview": "...",
@@ -42,10 +40,22 @@
     "multimodal": true
   },
   {
-    "id": "gpt-6-luna",
-    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] GPT-6 Luna",
     "id": "gemini-3.5-flash-lite",
     "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 3.5 Flash-Lite",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  },
+  {
+    "id": "gpt-5.6-luna",
+    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] GPT-5.6 Luna",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  },
+  {
+    "id": "gpt-6-luna",
+    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] GPT-6 Luna",
     "overview": "...",
     "trainingData": "...",
     "multimodal": true
