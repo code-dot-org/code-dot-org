@@ -170,8 +170,13 @@ plain name, but MUI's `Tooltip` came from `@mui/material` and did not
 collide. Here both ship from the same entry, and the DSCO stories import
 `../index` and must keep rendering the legacy component for the gate to
 compare. The finish workflow's step 4 deletes the legacy source and
-re-exports the wrappers under the legacy names and `default`; the `Mui`
-names stay as aliases until callers drop them.
+renames the wrappers to the legacy names: `Accordion`, `AccordionProps`,
+`AccordionItem`, `FAQAccordion`, `FAQAccordionProps`, `FAQAccordionItem`
+and `default`. Unlike dialog, the `Mui` names do not stay as aliases: the
+same PR moves the one consumer and deletes them, so `MuiAccordion` is left
+to mean MUI's own part, imported as
+`import {Accordion as MuiAccordion} from '@mui/material'` by a caller that
+needs full control.
 
 ## Prop map
 
