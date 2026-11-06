@@ -25,7 +25,7 @@ declare global {
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface SiteConfigExtensions {}
 
-/** Analytics section of the <meta name="app-config"> tag. */
+/** Analytics field of the <meta name="app-config"> tag. */
 export interface AnalyticsRuntimeConfig {
   analytics?: {
     provider?: 'statsig' | 'none';

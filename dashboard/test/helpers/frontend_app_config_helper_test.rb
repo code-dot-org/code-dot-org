@@ -12,7 +12,7 @@ class FrontendAppConfigHelperTest < ActionView::TestCase
       DCDO.stubs(:get).with('statsig-enabled', true).returns(true)
     end
 
-    it 'composes the observability and analytics sections into one JSON object' do
+    it 'composes the observability and analytics fields into one JSON object' do
       _(JSON.parse(frontend_app_config('test-dsn'))).must_equal(
         {
           'observability' => {'provider' => 'none'},
@@ -21,7 +21,7 @@ class FrontendAppConfigHelperTest < ActionView::TestCase
       )
     end
 
-    it 'carries each section owner\'s values through unchanged' do
+    it 'carries each field owner\'s values through unchanged' do
       CDO.stubs(:enable_sentry).returns(true)
       CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
 

@@ -1,4 +1,4 @@
-# Composes the <meta name="app-config"> JSON from the helpers that own each section.
+# Composes the <meta name="app-config"> JSON from the helpers that own each field.
 module FrontendAppConfigHelper
   def frontend_app_config(sentry_dsn)
     {

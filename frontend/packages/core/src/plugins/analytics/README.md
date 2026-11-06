@@ -112,8 +112,8 @@ adapter does not run either, so a disabled page is silent everywhere. Anything
 other than an explicit `false`, including an absent key, leaves analytics on.
 
 `provider` reports what is _configured_, independently of `enabled`, so the
-client key and identity seed still ride a disabled section and the page
-describes itself fully.
+client key and identity seed still ride along when the field says disabled
+and the page describes itself fully.
 
 `user` is present only when the page was rendered for a signed-in person; it is
 absent entirely otherwise.
