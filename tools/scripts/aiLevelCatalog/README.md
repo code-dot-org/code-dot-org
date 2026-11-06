@@ -36,9 +36,11 @@ of their own and that constant changed to its id.
 ## The CodeAI Cloud copy
 
 The same page is deployed as a static site, `ai-tools-catalog`, on CodeAI
-Cloud. It does not refresh itself; redeploy it to update it. The deploy
-broker is reachable only from the internal network, so run this from a
-laptop on it, in Claude Code with the codeai-cloud plugin:
+Cloud. It does not refresh itself; redeploy it to update it, in Claude Code
+with the codeai-cloud plugin. A claude.ai cloud session needs
+`deploy.internal.code.org` in its environment's allowed domains, and the
+plugin's CLI run with `NODE_USE_ENV_PROXY=1`, since Node's fetch otherwise
+ignores the session's proxy.
 
     git fetch origin staging && git checkout --detach origin/staging
     git checkout <branch with this tool> -- tools/scripts/aiLevelCatalog   # until it is on staging
