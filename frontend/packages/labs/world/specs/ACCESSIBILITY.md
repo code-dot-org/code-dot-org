@@ -574,6 +574,12 @@ themes. Not seen with a screen reader.
   drawn in its middle.
 - **Blockly's own targets are not covered**: a block's fields are drawn
   at the workspace's zoom.
+  MEASURED (November 2026) on nine workspaces (actors' code in
+  Platformer, Jetpack, Meteors and the Interface Kit, and a rule's
+  block): every dropdown, text field and hat button is 20 pixels tall
+  (22 for a few), so under 24, and every one passes by the spacing
+  exception: no two are within 24 pixels centre to centre. A block that
+  holds a field is not counted as crowding it.
 
 ## Not yet done for any phase
 
@@ -582,3 +588,9 @@ themes. Not seen with a screen reader.
   each kind of file.
 - Keyboard focus coming back from the sound library to the block whose
   dropdown opened it, which the pass above could not reach.
+  CLOSED, by trying it (November 2026): the arrows reach a `play sound`
+  block's dropdown, Enter and End reach "(import…)", and Enter opens the
+  library. Escape, or choosing a sound and Use this sound, puts focus
+  back on the dropdown, which then says the sound chosen ("dropdown:
+  jump"). Opened by a pointer, Escape puts focus on the block. Not by a
+  screen reader.
