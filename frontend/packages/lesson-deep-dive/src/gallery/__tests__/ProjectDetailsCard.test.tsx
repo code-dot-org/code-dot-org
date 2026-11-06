@@ -89,6 +89,26 @@ describe('ProjectDetailsCard', () => {
     expect(screen.queryByText('Whiteboard')).not.toBeInTheDocument();
   });
 
+  it('shows the transcript in a collapsed disclosure', () => {
+    render(
+      <ProjectDetailsCard
+        detail={{...baseDetail, transcript: 'This network has three nodes.'}}
+        unitPosition={1}
+      />,
+    );
+
+    const summary = screen.getByText('Transcript (auto-generated)');
+    const details = summary.closest('details');
+    expect(details).not.toHaveAttribute('open');
+    expect(details).toHaveTextContent('This network has three nodes.');
+  });
+
+  it('omits the transcript when there is none', () => {
+    render(<ProjectDetailsCard detail={baseDetail} unitPosition={1} />);
+
+    expect(screen.queryByText(/Transcript/)).not.toBeInTheDocument();
+  });
+
   it('omits the unit label when the unit is unknown', () => {
     render(<ProjectDetailsCard detail={baseDetail} unitPosition={null} />);
 

@@ -1,9 +1,9 @@
 # cdo-deps
 
-The dependency layer: `cdo-base` plus the production Ruby bundle and the
-Python virtualenv. It carries no source tree and no compile toolchain — the
-gems and the venv are built in `cdo-build` and copied onto `cdo-base`, so the
-compilers, headers, Node, and git that produced them do not ship.
+The dependency layer: `cdo-base` plus the production Ruby bundle. It carries
+no source tree and no compile toolchain — the gems are built in `cdo-build`
+and copied onto `cdo-base`, so the compilers, headers, Node, and git that
+produced them do not ship.
 
 `cdo-rails` stacks on it: `FROM cdo-deps` plus the Rails source slice.
 
@@ -13,19 +13,6 @@ Contents:
   `test`, installed under `/usr/local/bundle`
 - the lockfiles and engine gemspecs Bundler needs to resolve that bundle at
   runtime: `.ruby-version`, `Gemfile`, `Gemfile.lock`, `dashboard/engines`
-- `/code-dot-org/.venv`, the interpreter uv manages for it under
-  `$HOME/.local/share/uv`, the `uv` binary, and the project files `uv run`
-  resolves the venv through: `.python-version`, `pyproject.toml`, `uv.lock`,
-  and `python/`
-
-`uv` is the one build-time tool that stays. Rails boot requires `cdo/pycall`,
-which shells out to `uv run` to locate the venv's interpreter and its
-site-packages, so the runtime needs it.
-
-`python/` ships because the workspace members are installed editable: the venv
-points into that tree. A source flavor overlays its own checkout's copy on
-top, so a `.py` change rides the source layer and does not move this image's
-content key.
 
 ## Build
 
@@ -47,8 +34,8 @@ pin it.
 `--build-arg BUNDLE_JOBS=<n>` throttles `bundle install` parallelism. Empty
 (the default) means one job per core, which is also the peak-memory case.
 
-The final stage runs `bundle check` and imports `pycdo`, so a bad copy between
-stages fails the build rather than the first boot.
+The final stage runs `bundle check`, so a bad copy between stages fails the
+build rather than the first boot.
 
 ## Smoke test
 
@@ -59,8 +46,8 @@ stages fails the build rather than the first boot.
 
 It asserts the bundle resolves and activates, that the native extensions built
 in `cdo-build` load against `cdo-base`'s libraries (mysql2, rmagick,
-nokogiri), that the venv imports offline, that no compiler or Node came along,
-and that the environment below is exported. The `cdo-base` contract itself is
+nokogiri), that no compiler, Node, or uv came along, and that the environment
+below is exported. The `cdo-base` contract itself is
 covered by `docker/base/smoke-test.sh`; see
 [docker/base/README.md](../base/README.md).
 
@@ -71,7 +58,6 @@ covered by `docker/base/smoke-test.sh`; see
 | `BUNDLE_PATH` | `/usr/local/bundle` | where the bundle lives |
 | `BUNDLE_DEPLOYMENT` | `1` | frozen lockfile; a drifted `Gemfile` fails loudly |
 | `BUNDLE_WITHOUT` | `development:test` | without it `Bundler.setup` tries to activate groups that were never installed |
-| `UV_NO_SYNC` | `1` | without it `uv run` re-syncs at runtime, including dev groups, into an image that should be immutable |
 
 Gem executables are not on `PATH`. Bare `rake` resolves to the base image's
 copy; `bundle exec rake` resolves the locked one. Go through `bundle exec`.
@@ -79,7 +65,7 @@ copy; `bundle exec rake` resolves the locked one. Go through `bundle exec`.
 ## Build context
 
 `Dockerfile.dockerignore` is an allowlist: deny everything, then re-include
-exactly what Bundler and uv need. Both docker and buildah honour the
+exactly what Bundler needs. Both docker and buildah honour the
 `<dockerfile>.dockerignore` naming convention and fail the build when a COPY
 names an excluded path.
 
@@ -103,9 +89,6 @@ content key computed from the inputs that decide what lands in the layer:
 .ruby-version
 Gemfile
 Gemfile.lock
-.python-version
-pyproject.toml
-uv.lock
 docker/build/Dockerfile
 docker/deps/Dockerfile
 docker/scripts/install-node.sh
@@ -139,9 +122,8 @@ To see which key a checkout implies — to pull the matching layer, or to work
 out why a keyed tag did not resolve — reproduce it in a shell:
 
 ```
-key="bundle-$(cat .ruby-version Gemfile Gemfile.lock .python-version \
-  pyproject.toml uv.lock docker/build/Dockerfile docker/deps/Dockerfile \
-  docker/scripts/install-node.sh | sha256sum | cut -d' ' -f1)"
+key="bundle-$(cat .ruby-version Gemfile Gemfile.lock docker/build/Dockerfile \
+  docker/deps/Dockerfile docker/scripts/install-node.sh | sha256sum | cut -d' ' -f1)"
 echo "$key"
 ```
 
