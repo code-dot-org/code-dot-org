@@ -1,6 +1,6 @@
-// The "How AI made your image" story: told once a visit on a level about a
-// character or a background, after the first picture made there, and only
-// in a quiet moment.
+// The "How AI made your image" story: told once a visit on a level that
+// asks for it, after the first picture made there, and only in a quiet
+// moment.
 
 import {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -13,8 +13,6 @@ import {LearningPicture} from './LearningDialog';
 
 // Wait for the pixel reveal animation to finish before opening the dialog.
 const LEARNING_DELAY_MS = 1800;
-// Image types that open the dialog after their first picture.
-const LEARNING_KINDS: ImageType[] = ['sprite', 'background'];
 
 /** `?learning=always` opens the dialog after every picture, for reviewing
     it. */
@@ -25,13 +23,16 @@ function learningForced(): boolean {
 export interface LearningStory {
   picture: LearningPicture;
   prompt: string;
+  imageType: ImageType;
 }
 
 interface UseLearningStoryOptions {
   /** The tab is the one showing. */
   active: boolean;
-  /** Set on a level whose task is one image of this type. */
-  lockedImageType?: ImageType;
+  /** The level tells the story (its level mode's `learning`). */
+  learning?: boolean;
+  /** The level being visited; each arrival on a level is a visit. */
+  levelId?: number;
 }
 
 export interface LearningStoryTools {
@@ -48,17 +49,30 @@ export interface LearningStoryTools {
 
 export default function useLearningStory({
   active,
-  lockedImageType,
+  learning,
+  levelId,
 }: UseLearningStoryOptions): LearningStoryTools {
   const [story, setStory] = useState<LearningStory | null>(null);
+  // Whether the story was told this visit; the tab outlives a level
+  // change, so a level change ends the visit rather than an unmount.
   const toldRef = useRef(false);
   const timerRef = useRef<number>();
-  useEffect(() => () => window.clearTimeout(timerRef.current), []);
   // The story waits for a quiet moment: this tab in view, and no rating
   // question open. Until then it is held here.
   const activeRef = useRef(active);
   const askingRef = useRef(false);
   const heldStoryRef = useRef<(() => void) | null>(null);
+  // A story still pending when the level changes belongs to the level
+  // being left; a return to it is a new visit.
+  useEffect(
+    () => () => {
+      window.clearTimeout(timerRef.current);
+      heldStoryRef.current = null;
+      toldRef.current = false;
+      setStory(null);
+    },
+    [levelId]
+  );
   const tellHeldStory = useCallback(() => {
     const tell = heldStoryRef.current;
     if (tell && activeRef.current && !askingRef.current) {
@@ -79,12 +93,7 @@ export default function useLearningStory({
   );
   const offerStory = useCallback(
     (result: GeneratedImageResult) => {
-      const {imageType, subject} = result.generation;
-      const due =
-        !toldRef.current &&
-        !!lockedImageType &&
-        LEARNING_KINDS.includes(imageType) &&
-        subject !== 'object';
+      const due = !!learning && !toldRef.current;
       if (!due && !learningForced()) {
         return;
       }
@@ -95,11 +104,15 @@ export default function useLearningStory({
         : undefined;
       timerRef.current = window.setTimeout(() => {
         heldStoryRef.current = () =>
-          setStory({picture: {src, crop}, prompt: result.generation.prompt});
+          setStory({
+            picture: {src, crop},
+            prompt: result.generation.prompt,
+            imageType: result.generation.imageType,
+          });
         tellHeldStory();
       }, LEARNING_DELAY_MS);
     },
-    [lockedImageType, tellHeldStory]
+    [learning, tellHeldStory]
   );
   const endStory = useCallback(() => setStory(null), []);
   return {story, offerStory, handleAsking, endStory};

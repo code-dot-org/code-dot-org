@@ -6,6 +6,7 @@ import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 import {Answer, Progress, StepAnswers, visibleSteps} from '../../progress';
 import {Checkpoint, Step} from '../../types';
 import AdaptiveHeader from '../AdaptiveHeader';
+import AdaptiveTabBar from '../AdaptiveTabBar';
 import {checkpointStepFromUrl, updateUrl} from '../checkpointUrl';
 import {usePathwayContext} from '../PathwayContext';
 
@@ -14,6 +15,7 @@ import MarkdownStep from './MarkdownStep';
 import PanelsStep from './PanelsStep';
 import QuestionsStep from './QuestionsStep';
 import ReviewStep from './ReviewStep';
+import StatsStep from './StatsStep';
 import VideoStep from './VideoStep';
 
 import styles from './stepPlayer.module.scss';
@@ -42,6 +44,11 @@ interface StepPlayerProps {
   onFinish: () => void;
   /** Leaves for the final project; the header offers it when given. */
   onFinishPathway?: () => void;
+  /** Active top-level tab; shows the My project / Practice skills switcher. */
+  activeTab?: 'map' | 'project';
+  onTabChange?: (tab: 'map' | 'project') => void;
+  /** Student's project name; shown in the tab label in place of "My project". */
+  projectName?: string;
 }
 
 /** The progress with one question's answers replaced, before the store reports them. */
@@ -80,6 +87,9 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onExit,
   onFinish,
   onFinishPathway,
+  activeTab,
+  onTabChange,
+  projectName,
 }) => {
   const {progress} = usePathwayContext();
   const steps = useMemo(
@@ -208,6 +218,15 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             onComplete={advance}
           />
         );
+      case 'stats':
+        return (
+          <StatsStep
+            key={step.id}
+            step={step}
+            continueLabel={continueLabel}
+            onComplete={advance}
+          />
+        );
       case 'video':
         return (
           <VideoStep
@@ -239,6 +258,13 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
         onViewSkillTree={() => leave(onExit)}
         onFinish={onFinishPathway && (() => leave(onFinishPathway))}
       />
+      {activeTab !== undefined && onTabChange && (
+        <AdaptiveTabBar
+          activeTab={activeTab}
+          onTabChange={tab => leave(() => onTabChange(tab))}
+          projectName={projectName}
+        />
+      )}
       <div className={styles.playerBody}>{renderStep(step)}</div>
     </div>
   );

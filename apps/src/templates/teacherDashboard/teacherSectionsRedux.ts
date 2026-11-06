@@ -438,6 +438,14 @@ const sectionSlice = createSlice({
 
       state.sections[sectionId].aiChatAccessLevel = aiChatAccessLevel;
     },
+    updateSectionAiChallengeEnabled(
+      state,
+      action: PayloadAction<{sectionId: number; aiChallengeEnabled: boolean}>
+    ) {
+      const {sectionId, aiChallengeEnabled} = action.payload;
+
+      state.sections[sectionId].aiChallengeEnabled = aiChallengeEnabled;
+    },
     setCourseOfferings(state, action: PayloadAction<CourseOfferingSet>) {
       state.courseOfferings = action.payload;
       state.courseOfferingsAreLoaded = true;
@@ -1417,6 +1425,7 @@ export const {
   setAvailableParticipantTypes,
   startLoadingSectionData,
   updateSectionAiChatAccessLevel,
+  updateSectionAiChallengeEnabled,
   updateSelectedSection,
   sectionHasNewData,
   sectionDoesNotHaveNewData,

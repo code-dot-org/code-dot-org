@@ -14,6 +14,14 @@ export type CheckpointStatus =
   /** Demonstrated by the student's evidence and skippable, so passed without being played. */
   | 'skipped';
 
+export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
+  locked: 'Locked',
+  available: 'Ready to start',
+  inProgress: 'In progress',
+  complete: 'Complete',
+  skipped: 'Skipped',
+};
+
 /** Each checkpoint's status, by checkpoint id. */
 export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 

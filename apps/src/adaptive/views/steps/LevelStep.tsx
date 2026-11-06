@@ -284,6 +284,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
         : 'Continue unlocks once your work on this step meets its goal.',
       endIcon: <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />,
       onContinue: onComplete,
+      callout: undefined,
     }),
     [continueLabel, checked, onComplete]
   );

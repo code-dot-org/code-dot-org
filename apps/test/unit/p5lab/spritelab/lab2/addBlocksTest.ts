@@ -7,6 +7,7 @@ import {
   missingBlocks,
   placeBelow,
   trailingShadow,
+  dropStalePlaceholders,
   unfilledOutlines,
 } from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
 
@@ -192,6 +193,69 @@ describe('addBlocks', () => {
     );
   });
 
+  describe('stale placeholders', () => {
+    // A stack: each real block's type, then the shadow showing at its end
+    // (recorded on the last block's connection), if any.
+    const chain = (
+      types: string[],
+      showing?: {type: string; extraState?: unknown},
+      data?: string
+    ) => {
+      const dropped: string[] = [];
+      const shadow = showing && {isShadow: () => true};
+      const blocks = types.map((type, i) => ({
+        type,
+        data: i === 0 ? data : undefined,
+        isShadow: () => false,
+        nextConnection: {
+          targetBlock: (): unknown =>
+            blocks[i + 1] ?? (i === types.length - 1 ? shadow ?? null : null),
+          getShadowState: () =>
+            i === types.length - 1 ? showing ?? null : null,
+          setShadowState: (state: null) => dropped.push(`${type}:${state}`),
+        },
+      }));
+      return {top: blocks[0], dropped};
+    };
+    const workspace = (...tops: unknown[]) =>
+      ({getTopBlocks: () => tops} as unknown as Parameters<
+        typeof dropStalePlaceholders
+      >[0]);
+
+    it('drops a showing placeholder no entry of the level puts there', () => {
+      const run = chain(['spritelab2_whenRun'], SAY);
+      expect(dropStalePlaceholders(workspace(run.top), [])).toBe(1);
+      expect(run.dropped).toEqual(['spritelab2_whenRun:null']);
+    });
+
+    it("keeps the level's own, hung or under a block it adds, by tag", () => {
+      const run = chain(['spritelab2_whenRun'], SAY);
+      const at6 = chain(['gamelab_atTime'], SAY, 'at-6');
+      const at9 = chain(['gamelab_atTime'], SAY, 'at-9');
+      const entries = [
+        {attachTo: 'spritelab2_whenRun', shadow: SAY},
+        {type: 'gamelab_atTime', data: 'at-6', next: {shadow: SAY}},
+      ];
+      expect(
+        dropStalePlaceholders(workspace(run.top, at6.top, at9.top), entries)
+      ).toBe(1);
+      expect(run.dropped).toEqual([]);
+      expect(at6.dropped).toEqual([]);
+      expect(at9.dropped).toEqual(['gamelab_atTime:null']);
+    });
+
+    it('leaves a covered placeholder, a filled stack and other shadows', () => {
+      // say covers the when-run placeholder; the stack ends in a plain block.
+      const filled = chain(['spritelab2_whenRun', 'gamelab_spriteSay']);
+      const other = chain(['spritelab2_whenRun'], {type: 'gamelab_spriteSay'});
+      expect(dropStalePlaceholders(workspace(filled.top, other.top), [])).toBe(
+        0
+      );
+      expect(filled.dropped).toEqual([]);
+      expect(other.dropped).toEqual([]);
+    });
+  });
+
   describe('unfilled outlines', () => {
     // A top block of `type` over `ends`, read by the matcher like a block.
     const top = (type: string, ends: End[], values: {data?: string} = {}) =>
@@ -260,6 +324,25 @@ describe('addBlocks', () => {
           {type: 'gamelab_atTime', data: 'at-6'},
         ])
       ).toEqual([]);
+    });
+
+    it('a tagged attachment waits only on the stack with its tag', () => {
+      const ends: End[] = [{shadow: GO_TO_SCENE, next: true}, {isShadow: true}];
+      const treasure = top('gamelab_checkTouching', ends, {data: 'treasure'});
+      const patrol = top('gamelab_checkTouching', ends, {data: 'patrol'});
+      const onTreasure = {
+        attachTo: 'gamelab_checkTouching',
+        data: 'treasure',
+        shadow: GO_TO_SCENE,
+      };
+      expect(
+        unfilledOutlines(workspace(patrol, treasure), [onTreasure])
+      ).toEqual([treasure]);
+      expect(
+        unfilledOutlines(workspace(patrol, treasure), [
+          {attachTo: 'gamelab_checkTouching', shadow: GO_TO_SCENE},
+        ])
+      ).toEqual([patrol, treasure]);
     });
 
     it('lists a stack once when two entries point at it', () => {

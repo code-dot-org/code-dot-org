@@ -9,6 +9,7 @@ describe('camelize', () => {
   it('matches the server camelization for every editable key', () => {
     const expected = {
       block_catalog: 'blockCatalog',
+      lock_earlier_blocks: 'lockEarlierBlocks',
       objectives: 'objectives',
       hide_custom_blocks: 'hideCustomBlocks',
       image_role_defaults: 'imageRoleDefaults',

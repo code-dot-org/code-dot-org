@@ -19,6 +19,20 @@ export function setSceneMenuActiveId(id: string | null): void {
   activeSceneId = id;
 }
 
+/** Run `fn` with `id` as the scene the menu leaves out, then put the
+    editor's scene back. A scene compiled off screen loads its blocks
+    against the menu, and a jump to the editor's scene would be refused
+    and fall back to the first option. */
+export function withSceneMenuActive<T>(id: string, fn: () => T): T {
+  const previous = activeSceneId;
+  activeSceneId = id;
+  try {
+    return fn();
+  } finally {
+    activeSceneId = previous;
+  }
+}
+
 // Dropdown options: [friendly name, scene id]. The id is the saved value.
 // Reads the redux mirror so the menu stays current as scenes are added.
 function sceneMenuOptions(): [string, string][] {
