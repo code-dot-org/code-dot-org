@@ -14,7 +14,6 @@ export type AccordionItem = {
 
 /**
  * @deprecated Use `MuiAccordionProps` from `@code-dot-org/component-library/accordion`.
- * Codemod: `codemods/accordion-to-mui.ts` in `frontend/packages/component-library`.
  */
 export interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
   /** List of Accordion items */
@@ -37,7 +36,6 @@ export interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
  * Renders an accordion with a list of items.
  *
  * @deprecated Use `MuiAccordion` from `@code-dot-org/component-library/accordion`; it takes the same props.
- * Codemod: `codemods/accordion-to-mui.ts` in `frontend/packages/component-library`.
  * See `src/accordion/ACCORDION_MIGRATION_TO_MUI.md`.
  */
 const Accordion: React.FC<AccordionProps> = ({
