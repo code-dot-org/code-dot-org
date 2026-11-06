@@ -77,7 +77,7 @@ const REFUSAL_MESSAGES: Record<SpritelabAskAiRefusal, string> = {
     "AI blocks aren't available in your region yet.",
 };
 
-/** The server's reason (User::AiAccessible) for refusing an answer, in words. */
+// The server's reason (User::AiAccessible) for refusing an answer, in words. 
 export function askAiRefusal({
   userType,
   spritelabAskAiRefusal,

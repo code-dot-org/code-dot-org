@@ -15,9 +15,9 @@ export const AI_BLOCK_TYPES = [
 
 const AI_BLOCK_TYPE_SET: ReadonlySet<string> = new Set(AI_BLOCK_TYPES);
 
-// Authored AI categories hold the prompt-answered block too.
 export function withoutAiBlocks(toolbox: ToolboxInfo): ToolboxInfo {
   const stripped = withoutBlockTypes(toolbox, AI_BLOCK_TYPE_SET);
+  The AI category survives stripping because it holds the prompt-answered block
   const category = findCategory(stripped.contents, AI_CATEGORY);
   if (!category) {
     return stripped;
