@@ -44,9 +44,6 @@ namespace :install do
         RakeUtils.bundle_install
         RakeUtils.python_venv_install
 
-        # Provision writer and reader SQL users on systems not provisioned via CloudFormation.
-        RakeUtils.rake_stream_output 'db:provision_sql_users'
-
         if ENV['CI']
           if ENV['CI_JOB'] == 'unit_tests'
             # Prepare for dashboard unit tests to run.
@@ -78,6 +75,9 @@ namespace :install do
   tasks = []
   tasks << :hooks if rack_env?(:development)
   tasks << :locals_yml if rack_env?(:development)
+  # Ahead of :dashboard and :pegasus, because the first thing either does with a database is open a connection as one
+  # of these users, and after :locals_yml, whose output `bin/provision-sql-users` reads.
+  tasks << 'sql_users:provision' if RakeUtils.local_environment? && (CDO.build_dashboard || CDO.build_pegasus)
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
