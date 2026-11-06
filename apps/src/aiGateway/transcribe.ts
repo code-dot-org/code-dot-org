@@ -8,6 +8,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import AichatContextManager from '../aichat/aichatContextManager';
 
+import {challengeHeaders, fetchChallengeToken} from './challengeToken';
 import {
   CURRENT_SCHEMA_VERSION,
   CurrentGatewayTranscribeResponseSchema,
@@ -20,11 +21,7 @@ import {
   recordTokenNotIssued,
 } from './requestMetric';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {
-  fetchTurnstileToken,
-  turnstileErrorTags,
-  turnstileHeaders,
-} from './turnstile';
+import {turnstileErrorTags} from './turnstile';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -48,7 +45,7 @@ async function transcribeThroughGateway(
         throw error;
       });
       const {token, turnstileEnforcementMode} = access;
-      const turnstileToken = await fetchTurnstileToken(
+      const challengeToken = await fetchChallengeToken(
         turnstileEnforcementMode
       );
 
@@ -69,7 +66,7 @@ async function transcribeThroughGateway(
         {
           'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
           'x-ai-gateway-phase': 'transcription',
-          ...turnstileHeaders(turnstileToken),
+          ...challengeHeaders(challengeToken),
         }
       ).catch(async (error: unknown) => {
         await recordGatewayRequestError(access.signingKey, error);
