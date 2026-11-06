@@ -413,6 +413,8 @@ export const AiChatToolsDependency = {
   "NONE": "none"
 } as const;
 
+export const AiGatewayAccessTokenLifetimeSeconds = 60 as const;
+
 export const FeaturedProjectStatus = {
   "active": "active",
   "bookmarked": "bookmarked",
