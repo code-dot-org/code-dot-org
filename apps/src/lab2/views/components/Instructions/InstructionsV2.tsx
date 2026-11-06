@@ -1,7 +1,6 @@
 import {
   Theme,
   ThemeProvider,
-  useTheme,
 } from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import React, {
@@ -97,7 +96,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
   const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
-  const {theme: defaultTheme} = useTheme();
   const ref: MutableRefObject<HTMLDivElement | null> = useRef(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isScrollable, setIsScrollable] = useState(false);
@@ -122,7 +120,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const checklist = objectives?.items.length ? objectives.items : undefined;
 
   return (
-    <PinTheme theme={overrideTheme}>
+    <ThemeProvider theme={overrideTheme}>
       <div
         id="instructions"
         className={classNames(
@@ -132,7 +130,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             : moduleStyles.standardBackground,
           'instructions'
         )}
-        data-theme={overrideTheme || defaultTheme}
       >
         <div
           id="instructions-panel"
@@ -216,18 +213,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
           )}
         </div>
       </div>
-    </PinTheme>
+    </ThemeProvider>
   );
 };
-// Pinning only on override keeps popups in step with the panel at no cost otherwise.
-const PinTheme: React.FC<{theme?: Theme; children: React.ReactNode}> = ({
-  theme,
-  children,
-}) =>
-  theme ? (
-    <ThemeProvider theme={theme}>{children}</ThemeProvider>
-  ) : (
-    <>{children}</>
-  );
 
 export default memo(Instructions);
