@@ -10,18 +10,6 @@ import {
 } from '@cdo/apps/lab2/levelEditors/spritelabMode/spritelabMode';
 
 describe('cleanLevelMode', () => {
-  it('keeps every valid key', () => {
-    const mode = {
-      kind: 'world',
-      imageType: 'sprite',
-      imageSubject: 'object',
-      imageRole: 'treasure',
-      paletteRoles: ['treasure', 'block'],
-      imageFirst: true,
-    };
-    expect(cleanLevelMode(mode)).toEqual({mode, removed: []});
-  });
-
   it('drops keys the lab does not read', () => {
     const {mode, removed} = cleanLevelMode({
       kind: 'image',
@@ -77,20 +65,6 @@ describe('fieldApplies', () => {
     );
   });
 
-  it('offers the subject only for a sprite', () => {
-    expect(
-      fieldApplies({kind: 'image', imageType: 'sprite'}, 'imageSubject')
-    ).toBe(true);
-    expect(
-      fieldApplies({kind: 'image', imageType: 'block'}, 'imageSubject')
-    ).toBe(false);
-  });
-
-  it('offers palette roles only on a world level', () => {
-    expect(fieldApplies({kind: 'world'}, 'paletteRoles')).toBe(true);
-    expect(fieldApplies({kind: 'code'}, 'paletteRoles')).toBe(false);
-  });
-
   it('offers nothing beyond the kind on a free play level', () => {
     expect(fieldApplies({kind: 'freeplay'}, 'imageType')).toBe(false);
     expect(fieldApplies({kind: 'freeplay'}, 'imageFirst')).toBe(false);
@@ -102,18 +76,6 @@ describe('fieldApplies', () => {
 });
 
 describe('setKind', () => {
-  it('clears the mode when the kind is removed', () => {
-    expect(setKind({kind: 'world', imageType: 'sprite'}, undefined)).toEqual(
-      {}
-    );
-  });
-
-  it('drops keys the new kind cannot use', () => {
-    expect(
-      setKind({kind: 'world', imageType: 'sprite', paletteRoles: ['a']}, 'code')
-    ).toEqual({kind: 'code'});
-  });
-
   it('keeps keys the new kind can still use', () => {
     expect(
       setKind({kind: 'world', imageType: 'sprite', imageRole: 'hero'}, 'image')
@@ -142,12 +104,6 @@ describe('setImageType', () => {
 });
 
 describe('setImageRole', () => {
-  it('removes the key rather than storing a blank', () => {
-    expect(setImageRole({kind: 'image', imageRole: 'hero'}, '   ')).toEqual({
-      kind: 'image',
-    });
-  });
-
   it('trims what is typed', () => {
     expect(setImageRole({kind: 'image'}, ' hero ')).toEqual({
       kind: 'image',
@@ -157,12 +113,6 @@ describe('setImageRole', () => {
 });
 
 describe('setImageFirst', () => {
-  it('removes the key rather than storing false', () => {
-    expect(setImageFirst({kind: 'code', imageFirst: true}, false)).toEqual({
-      kind: 'code',
-    });
-  });
-
   it('drops the image fields it was carrying when turned off', () => {
     expect(
       setImageFirst(

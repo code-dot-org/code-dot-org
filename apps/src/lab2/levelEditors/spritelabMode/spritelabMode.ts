@@ -1,8 +1,5 @@
 /*
-  Reading and writing the Sprite Lab 2 level_mode property. The editor keeps
-  only the keys and values the lab understands; anything else is dropped when
-  the level is next saved. The lab's own reader is
-  apps/src/p5lab/spritelab/lab2/levelMode.ts, which owns the types.
+  Helpers for reading, writing and cleaning the sprite lab 2 level mode property.
 */
 import {
   IMAGE_SUBJECTS,
@@ -64,7 +61,7 @@ export function getPaletteRoles(mode: LevelModeObject): string[] {
     : [];
 }
 
-/** The tabs a kind gives a student, for the Kind field's helper text. */
+/** Returns a stringified list of the tabs a kind will show to the user. */
 export function tabsForKind(kind: LevelModeKind, imageFirst: boolean): string {
   const mode: LevelMode = {kind, imageFirst};
   return (tabsForMode(mode) ?? []).join(', ');
@@ -102,7 +99,7 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
 /**
  * Drops unknown keys and invalid values, returning a description of each one
  * dropped. Without a valid kind the whole mode means nothing to the lab, so
- * everything goes.
+ * everything is dropped.
  */
 export function cleanLevelMode(mode: LevelModeObject): {
   mode: LevelModeObject;
@@ -128,7 +125,7 @@ export function cleanLevelMode(mode: LevelModeObject): {
   return {mode: cleaned, removed};
 }
 
-/** Whether a field belongs on the form for the mode as it stands. */
+/** Whether a field belongs on the form for the current mode. */
 export function fieldApplies(mode: LevelModeObject, key: string): boolean {
   const kind = getKind(mode);
   if (!kind) {
@@ -201,7 +198,7 @@ export function setImageFirst(
   );
 }
 
-/** Roles as typed: comma separated, blanks and repeats dropped, order kept. */
+/** Parses palette roles from a comma separated string, drops blanks and repeats, keeps order. */
 export function parsePaletteRoles(text: string): string[] {
   const roles = text
     .split(',')

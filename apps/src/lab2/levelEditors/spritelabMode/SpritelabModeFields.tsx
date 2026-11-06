@@ -57,11 +57,9 @@ const IMAGE_TYPES_ITEMS = IMAGE_TYPES.map(imageType => ({
   text: IMAGE_TYPE_LABELS[imageType],
 }));
 
-// Only a world level can leave the type unset, where it means the palette
-// goes by role instead. On a kind that makes an image, no type means no plus
-// button, so the placeholder is there to be replaced, not chosen.
 function imageTypeItems(kind: LevelModeKind | undefined, chosen: unknown) {
   if (kind === 'world') {
+    // World levels can leave the image type unset.
     return [
       {value: NO_IMAGE_TYPE, text: 'None: use palette role'},
       ...IMAGE_TYPES_ITEMS,
@@ -124,7 +122,7 @@ const SpritelabModeFields: React.FunctionComponent<
 
   // The palette lists images in the palette roles but preselects the level's
   // image role, so a role the palette omits will select a hidden image. A
-  // background selects nothing, so it cannot disagree.
+  // background selects nothing, so it cannot cause a palette conflict.
   const paletteConflict =
     showPaletteRoles &&
     getPaletteRoles(mode).length > 0 &&
@@ -132,9 +130,9 @@ const SpritelabModeFields: React.FunctionComponent<
     mode.imageType !== 'background' &&
     !getPaletteRoles(mode).includes(mode.imageRole as string);
 
-  // A world level is the one kind that can leave the type unset, but only
-  // while it has no Images tab.
-  const typeMissing =
+  // A world level can leave the image type unset if it is not imageFirst,
+  // otherwise show an error for a missing type.
+  const showImageTypeMissingError =
     showImageType &&
     mode.imageType === undefined &&
     (kind !== 'world' || mode.imageFirst === true);
@@ -148,7 +146,6 @@ const SpritelabModeFields: React.FunctionComponent<
         ? 'With no type the palette includes the palette roles below, and students start on the first image of the first role.'
         : 'With no type and no palette roles the palette offers every image in the project, with none selected to start.';
     }
-    // A world cell holds a sprite or a block, so nothing matches a background.
     if (mode.imageType === 'background') {
       return 'A background neither narrows the palette nor selects anything to start, but does filter the Images tab if image-first is on.';
     }
@@ -212,7 +209,7 @@ const SpritelabModeFields: React.FunctionComponent<
             errorMessage={
               paletteConflict
                 ? 'Image role must be one of the palette roles, or the palette preselects an image it does not offer.'
-                : typeMissing
+                : showImageTypeMissingError
                 ? 'Pick a type. Without one there is no image to make.'
                 : undefined
             }
@@ -232,7 +229,7 @@ const SpritelabModeFields: React.FunctionComponent<
                 setImageSubject(mode, event.target.value as ImageSubject)
               )
             }
-            helperMessage="A character can be drawn as an animated set; an object is one still picture."
+            helperMessage="A character can be drawn as an animated set. An object is one still picture."
             size="s"
           />
         </div>

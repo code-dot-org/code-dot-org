@@ -5,8 +5,6 @@ import React from 'react';
 import EditSpritelabMode from '@cdo/apps/lab2/levelEditors/spritelabMode/EditSpritelabMode';
 import {LevelModeObject} from '@cdo/apps/lab2/levelEditors/spritelabMode/spritelabMode';
 
-// Names are anchored because a field's accessible name carries its helper
-// message, and several of those mention the other fields.
 const KIND = /^Kind/;
 const IMAGE_TYPE = /^Image type/;
 const IMAGE_SUBJECT = /^Image subject/;
@@ -17,9 +15,9 @@ const IMAGE_FIRST = /^Enable the Images tab/;
 const dropdown = (name: RegExp) => screen.getByRole('combobox', {name});
 const textbox = (name: RegExp) => screen.getByRole('textbox', {name});
 
-// What the form would submit for level[level_mode]. A hidden input has no
-// accessible role of its own.
+// What the form would submit for level[level_mode].
 function submitted(container: HTMLElement) {
+  // A hidden input has no accessible role of its own.
   // eslint-disable-next-line no-restricted-properties
   const input = container.querySelector(
     '[name="level[level_mode]"]'
@@ -51,7 +49,14 @@ describe('EditSpritelabMode', () => {
   });
 
   it('round-trips a saved mode untouched', () => {
-    const mode = {kind: 'world', imageType: 'sprite', imageRole: 'treasure'};
+    const mode = {
+      kind: 'world',
+      imageType: 'sprite',
+      imageSubject: 'object',
+      imageRole: 'treasure',
+      paletteRoles: ['treasure', 'block'],
+      imageFirst: true,
+    };
     const {container} = renderEditor(mode);
     expect(JSON.parse(submitted(container))).toEqual(mode);
   });
@@ -86,7 +91,7 @@ describe('EditSpritelabMode', () => {
     expect(submitted(container)).toBe('{}');
   });
 
-  it('drops the keys a new kind cannot use', () => {
+  it('drops the keys a new kind cannot use, from the fields as well', () => {
     const {container} = renderEditor({
       kind: 'world',
       imageType: 'sprite',
@@ -94,6 +99,9 @@ describe('EditSpritelabMode', () => {
     });
     choose(KIND, 'freeplay');
     expect(JSON.parse(submitted(container))).toEqual({kind: 'freeplay'});
+    choose(KIND, 'world');
+    expect(submitted(container)).toBe('{"kind":"world"}');
+    expect(textbox(PALETTE_ROLES)).toHaveValue('');
   });
 
   it('shows the image subject only for a sprite', () => {
@@ -121,15 +129,6 @@ describe('EditSpritelabMode', () => {
       'treasure',
       'block',
     ]);
-  });
-
-  it('clears the palette roles field when a new kind drops the roles', () => {
-    const {container} = renderEditor({kind: 'world'});
-    type(PALETTE_ROLES, 'treasure, block');
-    choose(KIND, 'code');
-    choose(KIND, 'world');
-    expect(submitted(container)).toBe('{"kind":"world"}');
-    expect(textbox(PALETTE_ROLES)).toHaveValue('');
   });
 
   it('accepts a space typed into the image role', () => {
