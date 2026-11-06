@@ -2,7 +2,7 @@ import {
   useTheme,
   ThemeProvider,
 } from '@code-dot-org/component-library/common/contexts';
-import {ExplanationTypes} from '@code-dot-org/lesson-deep-dive';
+import {AudioRecorder, ExplanationTypes} from '@code-dot-org/lesson-deep-dive';
 import {createTheme, ThemeProvider as MuiThemeProvider} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
@@ -19,7 +19,6 @@ import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import AudioRecorder from './AudioRecorder';
 import {requestEvaluation} from './requestEvaluation';
 
 import styles from './whiteboard-challenge.module.scss';

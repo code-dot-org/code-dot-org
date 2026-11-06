@@ -1,8 +1,7 @@
+import {Button} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
 import {expect, userEvent, within} from 'storybook/test';
-
-import {Button} from '@/button';
 
 import MuiDialog, {MuiDialogProps} from '../MuiDialog';
 
@@ -18,7 +17,9 @@ const SingleTemplate: StoryFn<MuiDialogProps> = args => {
 
   return (
     <div>
-      <Button onClick={() => setIsOpen(true)} text="Open Dialog" />
+      <Button variant="contained" onClick={() => setIsOpen(true)}>
+        Open Dialog
+      </Button>
       {isOpen && (
         <MuiDialog
           {...args}
@@ -51,12 +52,14 @@ const MultipleTemplate: StoryFn<{
         {args.components?.map((componentArg, index) => (
           <div key={index}>
             <Button
+              variant="contained"
               key={`button-${index}`}
               onClick={() =>
                 setValues({...values, [`${index}${componentArg.title}`]: true})
               }
-              text={`Open ${componentArg.title}`}
-            />
+            >
+              {`Open ${componentArg.title}`}
+            </Button>
             {values[`${index}${componentArg.title}`] && (
               <MuiDialog
                 {...componentArg}
@@ -210,9 +213,11 @@ DialogWithCustomBottomContent.args = {
   customBottomContent: (
     <div>
       <Button
-        text="Extra Action"
+        variant="contained"
         onClick={() => alert('Extra action clicked!')}
-      />
+      >
+        Extra Action
+      </Button>
     </div>
   ),
   onClose: () => console.log('Dialog with custom bottom content closed'),

@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-6284600-8d16a7dc57ca",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following functions to their purposes in coding an image.",
+  "solution": [
+    {
+      "option": "draw_circle",
+      "correct": "Creates a circle on the image."
+    },
+    {
+      "option": "fill_color",
+      "correct": "Fills a shape with a specific color."
+    },
+    {
+      "option": "resize_image",
+      "correct": "Changes the dimensions of the image."
+    },
+    {
+      "option": "add_text",
+      "correct": "Places text onto the image."
+    }
+  ],
+  "objective_keys": [
+    "5dcb927c-d068-4942-9be6-233b94749fd9"
+  ]
+}

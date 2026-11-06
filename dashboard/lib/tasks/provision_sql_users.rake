@@ -1,13 +1,13 @@
 require 'cdo/sql_user_provisioner'
 
 namespace :db do
-  desc 'Provision writer/reader MySQL users for CI and local dev (parity with the SQLUser CloudFormation Resource).'
+  desc 'Provision writer/reader MySQL users where no Aurora cluster provisions them (parity with the SQLUser Lambda).'
   task :provision_sql_users do
-    # Only non-AWS ()development and continuous integration) environments need this.
-    # Every AWS Stack has SQL Users provisioned via CloudFormation.
+    # 'localhost' means no Aurora cluster, so no Custom::SQLUser CloudFormation Resource provisioning these users:
+    # continuous integration, local development, and adhocs running mysqld on the app server EC2 Instance.
     # TODO: Expand this test to include other systems not provisioned via CloudFormation, such as k8s.
-    unless ENV['CI'] || rack_env?(:development)
-      puts "Skipping db:provision_sql_users: not a CI build or local development environment (rack_env=#{rack_env})."
+    unless CDO.db_cluster_id == 'localhost'
+      puts "Skipping db:provision_sql_users: db_cluster_id=#{CDO.db_cluster_id.inspect} is an Aurora cluster."
       next
     end
 

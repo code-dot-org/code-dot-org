@@ -1,0 +1,68 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-10-22T17:08:36.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "explainCode",
+        "example",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Required testing \ntest_username = \"trailblazer\"\ntest_password = \"trailblazer\"\n# Write your rules below, using test_username and test_password\n\n\n# --- Now build your Password Checker ---\n# Never use a real password here -- make up fake credentials for testing!\nusername = input(\"Choose a username: \")\npassword = input(\"Choose a password: \")\n\n# Write your rules again below, using username and password",
+          "folderId": "0",
+          "active": false
+        },
+        "1": {
+          "id": "1",
+          "name": "password_check_plan.txt",
+          "contents": "*** MY PLAN: ***\n\nMy rules:\n- Rule 1 (uses: ________): \n\n- Rule 2 (uses: ________): \n\n(optional) Rule 3, grouped with parentheses:\n\n\nWhat I want \"accepted\" to require:\n\n\n*** MY TESTING (Mini Truth Table): ***\n\nTry your program with at least four username/password combinations.\n\nUsername | Password | Predicted accepted | Actual accepted\n---------|----------|---------------------|------------------\n\n\n\n\n*** MY REFLECTION: ***\n\nIf you used AI Tutor to help, reflect below on how you used it and how you used its output.\n\n\nHow did testing go? Did you update any part of your program as a result? Explain.",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nOrz3sAkfSfs=\n",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\nclass TestPasswordChecker(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and save the results\"\"\"\n        cls.stdout = ValidationProtocol().get_stdout_logs()\n        cls.accepted_lines = [line for line in cls.stdout if \"accepted\" in line.lower()]\n\n    def setUp(self):\n        if not self.accepted_lines:\n            self.skipTest(\"Nothing printed before your program reached input(). Make sure your required check at the top prints a result before you call input().\")\n\n    def test_prints_boolean_result(self):\n        \"\"\"Your required check prints True or False\"\"\"\n        self.assertTrue(\n            any(\"True\" in line or \"False\" in line for line in self.accepted_lines),\n            \"Make sure you're printing the Boolean variable itself (e.g. accepted), not just a sentence.\"\n        )\n\n    def test_rejects_matching_username(self):\n        \"\"\"Your required check correctly rejects a password that matches the username\"\"\"\n        self.assertIn(\n            \"False\", self.accepted_lines[0],\n            \"test_username and test_password are both \\\"trailblazer\\\" -- long enough, but identical to the username, so this should be False. If you got True, check whether you combined your rules with `and` -- using `or` here lets a matching password slip through.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "long_instructions": "#Make: Build a Password Checker\r\n\r\n**Your Task:** Write a program that checks a username and password against a set of rules, then prints whether the password is accepted.\r\n\r\n**Your rules should:**\r\n\r\n- `len()` to check something about the password’s length (work with AI Tutor to learn about this)\r\n- At least one rule combining two conditions with `and` or `or`\r\n\r\n**Challenge:** Add a third rule grouped with parentheses, or rewrite one of your rules using `not`.\r\n\r\n**Important:** Never use a real password — make up fake credentials for testing.\r\n\r\n**Do This:**\r\n\r\n1. Fill out **MY PLAN** in `password_checker_plan.txt` before coding.\r\n- Write your rules with the `Required testing` section of `main.py` to test your logical operator use. \r\n- Write your rules again in the `Password Checker` section, using `username` and `password`.\r\n- Test your program with at least four username/password combinations, and record your predictions and results in **MY TESTING**.\r\n- Fill out **MY REFLECTION** in `password_checker_plan.txt`.",
+    "teacher_markdown": "- `len()` is new — let the Documentation AI Tutor cover it on request. \r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-22 17:08:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 17:26:05 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 17:26:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 17:26:46 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 17:29:48 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 17:31:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 18:43:55 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:03:55 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:04:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:04:37 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:05:23 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:09:35 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:21:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:21:38 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:23:27 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:31:27 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:32:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:33:23 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 18:11:46 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 18:29:35 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

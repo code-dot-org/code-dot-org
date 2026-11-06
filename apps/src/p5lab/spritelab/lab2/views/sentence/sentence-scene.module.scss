@@ -1,0 +1,66 @@
+@use "sr-only";
+
+.srOnly {
+  @include sr-only.sr-only;
+}
+
+.pixelArt {
+  image-rendering: pixelated;
+}
+
+// Fills the frame even when the stored image is smaller than it (small
+// crisp-scaled pixel art, a 256px block).
+.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// The in-progress state: a centered spinner filling the frame.
+.generating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.spinner {
+  font-size: 48px;
+  color: var(--text-neutral-quaternary);
+}
+
+.error {
+  color: var(--text-error-primary);
+}
+
+// Shows for three seconds, then fades.
+.cachedTag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--background-neutral-black-fixed);
+  color: var(--text-neutral-white-fixed);
+  font-size: 12px;
+  line-height: 1.5;
+  pointer-events: none;
+  animation: cached-tag-fade 0.4s ease 3s forwards;
+}
+
+@keyframes cached-tag-fade {
+  to {
+    opacity: 0;
+  }
+}
+
+// The Animated switch's row: its label at the left, the switch at the
+// right edge of the pane.
+.animatedRow > label {
+  justify-content: space-between;
+  width: 100%;
+}

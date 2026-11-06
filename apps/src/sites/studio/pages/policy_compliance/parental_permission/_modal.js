@@ -81,10 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           inSection={getScriptData('inSection')}
         />
       </Provider>,
-      document.getElementById('parental-permission-modal-container'),
-      {
-        legacyReactDomRender: true,
-      }
+      document.getElementById('parental-permission-modal-container')
     );
   };
 

@@ -10,13 +10,23 @@
 
 import {
   AnimationPoses,
+  CHARACTER_STRIP_BASE_FRAME,
   CHARACTER_STRIP_FRAME_COUNT,
   CHARACTER_STRIP_POSES,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
+import {
+  assumePixelGrid,
+  canvasFromRaster,
+  downsampleToGrid,
+  gridAtPitch,
+  NATIVE_PIXEL_GRID,
+  rasterFromImage,
+} from '@cdo/apps/pixelEditor/pixelArt';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI} from './encoding';
+import {CachedImage} from './imageCache';
 import {
   GeneratedImageResult,
   logicalGridFor,
@@ -263,26 +273,12 @@ async function composeStrip(
     return {canvas, bounds: findOpaqueBounds(data, width, height, SOLID_ALPHA)};
   });
 
-  const boxes = rasters
-    .map(r => r.bounds)
-    .filter((b): b is NonNullable<typeof b> => b !== null);
-  const grounded = rasters
-    .slice(0, GROUNDED_FRAMES)
-    .map(r => r.bounds)
-    .filter((b): b is NonNullable<typeof b> => b !== null);
-  const crop = boxes.length
-    ? {
-        left: Math.max(0, Math.min(...boxes.map(b => b.left)) - CROP_PAD_PX),
-        top: Math.max(0, Math.min(...boxes.map(b => b.top)) - CROP_PAD_PX),
-        right: Math.min(
-          width - 1,
-          Math.max(...boxes.map(b => b.right)) + CROP_PAD_PX
-        ),
-        bottom: Math.max(
-          ...(grounded.length ? grounded : boxes).map(b => b.bottom)
-        ),
-      }
-    : {left: 0, top: 0, right: width - 1, bottom: height - 1};
+  const crop = contentCrop(
+    rasters.map(r => r.bounds),
+    width,
+    height,
+    CROP_PAD_PX
+  );
   const cropW = crop.right - crop.left + 1;
   const cropH = crop.bottom - crop.top + 1;
   const scale = Math.min(cell / cropW, cell / cropH);
@@ -315,6 +311,101 @@ async function composeStrip(
   return canvasToBlob(strip);
 }
 
+// The standing frame is the base picture the other poses were edited from,
+// so its block size is the one the whole set shares.
+const BASE_FRAME_INDEX = CHARACTER_STRIP_BASE_FRAME;
+
+type Bounds = NonNullable<ReturnType<typeof findOpaqueBounds>>;
+
+/**
+ * The region of a frame that the strip keeps: the union of every frame's
+ * opaque content, widened by `pad` on the left, top and right. The bottom
+ * comes from the first GROUNDED_FRAMES frames only, so a jumping pose does
+ * not push the floor down. With no opaque content at all, the whole frame.
+ */
+function contentCrop(
+  bounds: (Bounds | null)[],
+  width: number,
+  height: number,
+  pad = 0
+): Bounds {
+  const boxes = bounds.filter((b): b is Bounds => b !== null);
+  const grounded = bounds
+    .slice(0, GROUNDED_FRAMES)
+    .filter((b): b is Bounds => b !== null);
+  if (!boxes.length) {
+    return {left: 0, top: 0, right: width - 1, bottom: height - 1};
+  }
+  return {
+    left: Math.max(0, Math.min(...boxes.map(b => b.left)) - pad),
+    top: Math.max(0, Math.min(...boxes.map(b => b.top)) - pad),
+    right: Math.min(width - 1, Math.max(...boxes.map(b => b.right)) + pad),
+    bottom: Math.max(
+      ...(grounded.length ? grounded : boxes).map(b => b.bottom)
+    ),
+  };
+}
+
+/**
+ * The frames of a pixel-style set as one strip of square cells, one image
+ * pixel per art pixel. Every frame is downsampled to the base frame's block
+ * size: the posed frames are edits of the base and have the same block size,
+ * but the grid can start at a different pixel in each, so the grid offset is
+ * found per frame. The crop is the one composeStrip uses, and nothing is
+ * scaled: the cell is the crop's longer side. A frame whose grid offset
+ * left it one cell narrower than the others is drawn with a transparent
+ * column where it ends.
+ */
+async function composePixelStrip(
+  frames: Blob[],
+  fallbackBlock: number
+): Promise<{blob: Blob; cell: number}> {
+  const images = await Promise.all(frames.map(loadImageFromBlob));
+  const width = images[0].width;
+  const height = images[0].height;
+  const rasters = images.map(img => {
+    const raster = rasterFromImage(img, width, height);
+    if (!raster) {
+      throw new Error('No canvas context');
+    }
+    return raster;
+  });
+  const pitch = assumePixelGrid(rasters[BASE_FRAME_INDEX], fallbackBlock).sizeX;
+  const logical = rasters.map(raster =>
+    downsampleToGrid(raster, gridAtPitch(raster, pitch))
+  );
+  const crop = contentCrop(
+    logical.map(r => findOpaqueBounds(r.data, r.width, r.height, SOLID_ALPHA)),
+    logical[0].width,
+    logical[0].height
+  );
+  const cropW = crop.right - crop.left + 1;
+  const cropH = crop.bottom - crop.top + 1;
+  const cell = Math.max(cropW, cropH);
+  const dx = Math.floor((cell - cropW) / 2);
+  const dy = cell - cropH;
+
+  const strip = document.createElement('canvas');
+  strip.width = cell * frames.length;
+  strip.height = cell;
+  const ctx = strip.getContext('2d')!;
+  ctx.imageSmoothingEnabled = false;
+  logical.forEach((raster, index) => {
+    ctx.drawImage(
+      canvasFromRaster(raster),
+      crop.left,
+      crop.top,
+      cropW,
+      cropH,
+      index * cell + dx,
+      dy,
+      cropW,
+      cropH
+    );
+  });
+  return {blob: await canvasToBlob(strip), cell};
+}
+
 // One pause-and-retry per frame: a transient failure gets one more try
 // after a breath rather than a burst.
 const RETRY_DELAY_MS = 4000;
@@ -339,6 +430,9 @@ export interface CharacterSetOptions {
   pixelGrid?: number;
   /** How the character is built; absent = a person-like figure. */
   bodyPlan?: BodyPlan;
+  /** Take every frame from the cache instead of the model; see
+      GenerateImageOptions.cached. */
+  cached?: CachedImage;
 }
 
 export interface CharacterSetProgress {
@@ -356,20 +450,29 @@ export interface CharacterSetProgress {
  * ranges). The base frame is drawn first; the posed frames are drawn from
  * it in parallel.
  *
- * Pixel style is keyed like a single sprite but not grid-normalized: each
- * frame would find its own grid and land at its own scale, and the frames
- * of one strip must agree.
+ * Pixel style is stored at its logical size like a single sprite: every
+ * frame is brought to the base frame's pitch (composePixelStrip), so the
+ * frames of one strip agree.
  */
 export async function generateCharacterSet(
   prompt: string,
   options: CharacterSetOptions,
   onProgress?: (progress: CharacterSetProgress) => void
 ): Promise<GeneratedImageResult> {
+  const {cached} = options;
+  // A cached set was drawn on the colour this choice made from the same
+  // prompt, so it keys the same way.
   const key = chooseKeyColor(prompt);
   // One seed for the whole set; parallel frames offset it so alike prompts
   // don't collapse into alike drawings.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
+  const {temperature} = options;
   const pixelBlock = pixelBlockFor('sprite', options.pixelGrid);
+  const drawFrame = (
+    frame: string,
+    text: string,
+    request: Parameters<typeof requestFrameWithRetry>[1]
+  ) => (cached ? cached.raw(frame) : requestFrameWithRetry(text, request));
   const total = CHARACTER_SET_PICTURE_COUNT;
   const keyFrame = (raw: RawImage) =>
     removeKeyColor(rawImageToBlob(raw), key.rgb, {
@@ -379,19 +482,23 @@ export async function generateCharacterSet(
     bytesToDataURI(new Uint8Array(await blob.arrayBuffer()), 'image/png');
 
   // The prompt judge runs while the base picture draws; its verdict gates
-  // everything after (the posed frames embed the same student text).
-  const promptVerdict = markHandled(checkPromptSafety(prompt));
+  // everything after (the posed frames embed the same student text). A
+  // cached set was reviewed before upload: neither judge runs.
+  const promptVerdict = cached
+    ? Promise.resolve()
+    : markHandled(checkPromptSafety(prompt));
   // Judge every generated frame. Each verdict is awaited before that
   // frame's preview shows, so flagged pixels never reach the progress UI.
   const judgeFrame = (raw: RawImage): Promise<void> =>
-    markHandled(checkImageSafety(raw));
+    cached ? Promise.resolve() : markHandled(checkImageSafety(raw));
 
   onProgress?.({done: 0, total, label: 'the character'});
-  const base = await requestFrameWithRetry(
+  const base = await drawFrame(
+    'base',
     basePrompt(prompt, options.style, key, pixelBlock, options.bodyPlan),
     {
       seed,
-      temperature: options.temperature,
+      temperature,
       imageSize: CHARACTER_SET_IMAGE_SIZE,
       model: getCharacterSetImageModel(),
     }
@@ -411,11 +518,12 @@ export async function generateCharacterSet(
   // parallel: a set costs two round trips, not five.
   const posed = await Promise.all(
     posedFrames(options.bodyPlan).map(async (frame, index) => {
-      const raw = await requestFrameWithRetry(
+      const raw = await drawFrame(
+        frame.label,
         posePrompt(prompt, frame, options.style, key, pixelBlock),
         {
           seed: seed + index + 1,
-          temperature: options.temperature,
+          temperature,
           references: [baseURI],
           imageSize: CHARACTER_SET_IMAGE_SIZE,
           model: getCharacterSetImageModel(),
@@ -435,24 +543,28 @@ export async function generateCharacterSet(
 
   onProgress?.({done: total, total, label: 'assembling', preview});
 
-  // Strip order: the second idle, the base between the ranges that share
-  // it, then the walk and jump frames (CHARACTER_STRIP_POSES).
-  const stripFrames = [posed[0], baseKeyed, ...posed.slice(1)];
-  let cell = STRIP_CELL_PX;
-  let blob = await composeStrip(stripFrames, cell, options.style);
-  if (blob.size > MAX_STRIP_BYTES) {
-    cell = Math.round(cell * 0.6);
+  // The posed frames in strip order, with the base frame at its place
+  // (CHARACTER_STRIP_POSES).
+  const stripFrames = [...posed];
+  stripFrames.splice(BASE_FRAME_INDEX, 0, baseKeyed);
+  let cell: number;
+  let blob: Blob;
+  if (options.style === 'pixel') {
+    ({blob, cell} = await composePixelStrip(stripFrames, pixelBlock));
+  } else {
+    cell = STRIP_CELL_PX;
     blob = await composeStrip(stripFrames, cell, options.style);
+    if (blob.size > MAX_STRIP_BYTES) {
+      cell = Math.round(cell * 0.6);
+      blob = await composeStrip(stripFrames, cell, options.style);
+    }
   }
 
   const generation: ImageGenerationMetadata = {
     prompt,
     imageType: 'sprite',
     style: options.style,
-    seed,
-    ...(options.temperature !== undefined && {
-      temperature: options.temperature,
-    }),
+    ...(!cached && {seed, ...(temperature !== undefined && {temperature})}),
     ...(options.style === 'pixel' && {
       pixelGrid: logicalGridFor(pixelBlock),
     }),
@@ -463,6 +575,7 @@ export async function generateCharacterSet(
     filename: `generated-${createUuid()}.png`,
     uint8Array: new Uint8Array(await blob.arrayBuffer()),
     mediaType: 'image/png',
+    ...(options.style === 'pixel' && {pixelGridSize: NATIVE_PIXEL_GRID}),
     generation,
     frames: {
       frameSize: {x: cell, y: cell},

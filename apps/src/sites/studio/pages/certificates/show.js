@@ -19,9 +19,6 @@ $(document).ready(function () {
         imageAlt={imageAlt}
       />
     </Provider>,
-    document.getElementById('certificate-share'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('certificate-share')
   );
 });

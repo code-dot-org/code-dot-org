@@ -5,6 +5,7 @@ import buildHTMLContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/bui
 import askTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/ask.md';
 import buildCSSTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildCSS.md';
 import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildHTML.md';
+import buildPageTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildPage.md';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
 import environmentPrompt from '@cdo/apps/weblab2/prompts/environment.md';
 import preReplyCheckAllowJs from '@cdo/apps/weblab2/prompts/preReplyCheckAllowJs.md';
@@ -48,6 +49,11 @@ describe('generateAiTutorPrompt', () => {
       expect(result.endsWith(preReplyCheckAllowJs.trim())).toBe(true);
     });
 
+    it('ends with preReplyCheckAllowJs content if buildPage answer type is included', () => {
+      const result = generateAiTutorPrompt(['buildPage', 'ask']);
+      expect(result.endsWith(preReplyCheckAllowJs.trim())).toBe(true);
+    });
+
     it('ends with preReplyCheckNoJs content if buildJavaScript answer type is not included', () => {
       const result = generateAiTutorPrompt(['buildHTML', 'buildCSS', 'ask']);
       expect(result.endsWith(preReplyCheckNoJs.trim())).toBe(true);
@@ -87,6 +93,12 @@ describe('generateAiTutorPrompt', () => {
     it('includes the securityIntro content', () => {
       const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
       expect(result).toContain(securityIntro.trim());
+    });
+
+    it('explains how to use project-local AI Tutor uploads', () => {
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      expect(result).toContain('aitutor_uploads/');
+      expect(result).toContain('The external image allow-list does not apply');
     });
 
     it('includes allowed connect sources from sharedConstants', () => {
@@ -152,6 +164,13 @@ describe('generateAiTutorPrompt', () => {
       expect(htmlTriggerPos).toBeLessThan(contractsStart);
       expect(askTriggerPos).toBeGreaterThan(routerStart);
       expect(askTriggerPos).toBeLessThan(contractsStart);
+    });
+
+    it('lists buildPage ahead of the single-language build modes', () => {
+      const result = generateAiTutorPrompt(['buildHTML', 'buildPage']);
+      expect(result.indexOf(buildPageTrigger.trim())).toBeLessThan(
+        result.indexOf(buildHTMLTrigger.trim())
+      );
     });
 
     it('formats each trigger as a list item with a leading dash', () => {

@@ -1,0 +1,62 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-02T20:09:59.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Investigate & Modify\r\n\r\n**Do This:** \r\n\r\n1. Modify this program so the pattern skips every other spot instead of drawing at every position.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "hint",
+        "explainCode",
+        "example"
+      ],
+      "answerTypeCustomizations": {
+        "buildPython": "Only write python code for the Theater specific program. Do not write code for the while loop logic. "
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from theater import *\n\nset_fill_color(\"teal\")\nset_stroke_color(\"black\")\nset_stroke_width(2)\n\nx = 20\nwhile x < 380:\n    draw_ellipse(x, 180, 40, 40)\n    pause(0.1)\n    x = x + 20  \n\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqWaqoyzAQQR9iA\n2FU+rvZJ2XUrJ6WE8K5bs/hNQZeluBzXQfqIZFPHipJZ/P7ZS62Om3AHcdQo\niRsReyDyzU9w5mh6FgqsW4OEfk7JZ2cv0qXR+3/nr9qeKKlkWO3fQLw8YGwD\noWOsV55XTb6KzjTwanFT6qpjypgQIMAZNB7NYVmMN23/yjzSuLuLpu2vXSJL\ni3NCwdZsAPskLDzKmkbxOyf8dE19u0nG832eAw3nxn9rrxH6Qo15/UA4/uho\nsJJ+yCMIr20AYVaE0HLSZkhXA/gEhvlui8UA0OzLs0s3WuCI9ZkiXaGFg6zk\nv37OcP9WlKD4t48MdNXTlEtd4NOGFpAB7jjLtR5EFnVgWqiCGcgeXqyaK1yP\n2J7tgKfiMIA=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import re\nfrom unittest import TestCase\n\n\nclass TestInvestigateModify(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Read the student's source code\"\"\"\n        with open(\"main.py\") as f:\n            cls.source = f.read().replace(\" \", \"\")\n\n    def test_skips_every_other_spot(self):\n        \"\"\"Modifies the loop so it skips every other spot\"\"\"\n        doubled_step = bool(re.search(r\"x(\\+=|=x\\+)40\\b\", self.source))\n        modulo_skip = \"%2\" in self.source and \"draw_ellipse\" in self.source\n        self.assertTrue(\n            doubled_step or modulo_skip,\n            \"We didn't detect a change that skips every other spot. Try doubling how much x increases each pass (e.g., x = x + 40), or add a check (like using % 2) so draw_ellipse only runs on every other pass.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-02T20:09:59.643+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson16-Investigate-theater_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson16-Investigate-theater_27_28\"},{\"changed_at\":\"2026-11-02 20:11:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:12:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:12:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:12:49 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 22:34:20 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 19:46:14 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 19:47:11 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

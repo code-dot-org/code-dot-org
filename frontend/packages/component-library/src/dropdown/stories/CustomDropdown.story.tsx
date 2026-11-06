@@ -1,6 +1,6 @@
+import {Button} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 
-import {Button} from '@/button';
 import Link from '@/link/Link';
 
 import CustomDropdown, {CustomDropdownProps} from '../CustomDropdown';
@@ -23,13 +23,15 @@ const SingleTemplate: StoryFn<CustomDropdownProps> = args => {
       <ul>
         <li key="1">
           <Button
-            text="DSCO Button"
+            variant="contained"
             onClick={() => console.log('Item 1 clicked')}
-          />
+          >
+            MUI Button
+          </Button>
         </li>
         <li key="2">
           <button onClick={() => console.log('Item 2 clicked')}>
-            non-DSCO Button
+            Native button
           </button>
         </li>
         <li key="button-3">

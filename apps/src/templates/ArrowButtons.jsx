@@ -73,7 +73,7 @@ class ArrowButtons extends React.Component {
           size="medium"
           disabled={disabled}
           className="arrow"
-          aria-label="Left arrow"
+          aria-label="Right arrow"
           onKeyDown={onKeyDown}
           onKeyUp={onKeyUp}
         >
@@ -86,7 +86,7 @@ class ArrowButtons extends React.Component {
           size="medium"
           disabled={disabled}
           className="arrow"
-          aria-label="Left arrow"
+          aria-label="Up arrow"
           onKeyDown={onKeyDown}
           onKeyUp={onKeyUp}
         >
@@ -99,7 +99,7 @@ class ArrowButtons extends React.Component {
           size="medium"
           disabled={disabled}
           className="arrow"
-          aria-label="Left arrow"
+          aria-label="Down arrow"
           onKeyDown={onKeyDown}
           onKeyUp={onKeyUp}
         >

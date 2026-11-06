@@ -1,0 +1,749 @@
+@use 'sass:math';
+@use '../checkerboard';
+@use '../imageTile' as tile;
+@use '../editor-strip' as strip;
+@use '../sentence/sr-only';
+
+// A frame of a set on a canvas, scaled to its box with its pixels sharp.
+@mixin fills-box {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+// Three columns: the list, the frame, the pane. The pane's width is set
+// inline to the preview column's; the list takes one to three tiles; the
+// frame takes what is left.
+$tile-px: 88px;
+$tile-gap: 8px;
+$column-gap: 20px;
+$pad: 16px;
+// The list's share of the tab's width.
+$list-share: 0.2;
+// The frame's rounded corners, and the border inside them.
+$frame-radius: 12px;
+$frame-border: 2px;
+
+// The tab starts at the top of the editors' strip, which lies over its
+// first two columns; the pane column carries its own header there.
+.tab {
+  position: relative;
+  display: flex;
+  gap: $column-gap;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: (strip.$height + $pad) $pad $pad;
+  // The list's width is queried against the tab, below.
+  container-type: inline-size;
+}
+
+// A tip over the frame's bottom part while a picture is made; the frame
+// clips it to its corners.
+.frameTip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 12px 14px;
+  background-color: color-mix(
+    in srgb,
+    var(--neutral-base-true-black) 65%,
+    transparent
+  );
+  color: var(--text-neutral-white-fixed);
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.frameTipIcon {
+  flex: none;
+  font-size: 22px;
+}
+
+// The pane's header, the same height as the editors' strip, across the top
+// of the pane column.
+.panelHeader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: strip.$height;
+}
+
+.list {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  gap: 12px;
+  min-width: $tile-px;
+  max-width: 3 * $tile-px + 2 * $tile-gap;
+  // A share of the tab: one tile in a narrow window, three in a wide one.
+  width: math.percentage($list-share);
+  min-height: 0;
+}
+
+// Below the tab width where a fifth holds two tile columns, the list is
+// exactly one column, so the slack goes to the frame instead.
+$two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
+
+@container (max-width: #{$two-columns-at - 1px}) {
+  .list {
+    width: $tile-px;
+  }
+}
+
+// The plus never wraps under the name: a narrow column truncates the
+// name and count instead.
+.listHeader {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 36px;
+}
+
+// The name over its count, with the plus at the right.
+.listTitle {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.listName,
+.listCount {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.listCount {
+  color: var(--text-neutral-quaternary);
+}
+
+// The plus: a brand square like a dialog header's icon.
+.newButton {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+// The trash can, in a row pinned to the column's bottom.
+.listFooter {
+  display: flex;
+  flex: none;
+  margin-top: auto;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 36px;
+}
+
+// Thumbnail of the image to be deleted, beside the dialog's text.
+.deleteLead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.deleteThumb {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: var(--background-neutral-secondary);
+}
+
+.deleteText {
+  margin: 0;
+  text-align: left;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $tile-px);
+  gap: $tile-gap;
+  align-content: start;
+  min-height: 0;
+  overflow-y: auto;
+  // Space inside the scroll box so a hovered tile's growth and the chosen
+  // slot's ring are not clipped.
+  margin: 0 -12px;
+  padding: 8px 12px 12px;
+}
+
+// A kind's name over its tiles, across the whole row.
+.tilesHeader {
+  grid-column: 1 / -1;
+  margin: 10px 0 0;
+  color: var(--text-neutral-quaternary);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.tile {
+  @include tile.image-tile($tile-px);
+
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+
+  // The chosen set's pose, playing in the tile's box.
+  canvas {
+    @include fills-box;
+  }
+
+  // A hovered tile scales by 6%, about 2.6px per side, inside the ring's
+  // 3px offset; the ring is on the slot and does not move.
+  &:hover:not(:disabled) {
+    transform: scale(1.06);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+// Each tile sits in a slot of its own size. The ring is drawn on the slot,
+// not the tile, so it does not scale with a hovered tile.
+.tileSlot {
+  width: $tile-px;
+  height: $tile-px;
+  border-radius: 6px;
+}
+
+.tileSlotChosen {
+  outline: 2px solid var(--border-brand-primary);
+  outline-offset: 3px;
+}
+
+// The image not made yet: an empty dotted box where its tile will be.
+.tileDraft {
+  border: 2px dotted var(--border-neutral-primary);
+  background: transparent;
+}
+
+.pixelArt {
+  image-rendering: pixelated;
+}
+
+// The middle column is a gray well, set off from the list and the pane,
+// running the full height of the tab: it takes back the tab's own top and
+// bottom padding and keeps the frame where it was.
+.frameWell {
+  display: flex;
+  flex: 1 1 0;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  margin: -$pad 0;
+  padding: $pad 16px;
+  background-color: var(--background-neutral-secondary);
+}
+
+.frameColumn {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  // The frame row's tile size is queried against the column, below.
+  container-type: inline-size;
+}
+
+.frameRow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.frame {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: $frame-border dashed var(--border-neutral-primary);
+  border-radius: $frame-radius;
+  background-color: var(--background-neutral-primary);
+  overflow: hidden;
+
+  // The sheet preview's canvas holds one frame at its stored size, scaled
+  // to the frame either way: a pixel-art set's frame is a few dozen art
+  // pixels wide. image-rendering: pixelated keeps the scaled-up pixels
+  // sharp.
+  canvas {
+    @include fills-box;
+  }
+}
+
+// The checkerboard shows a picture's transparency.
+.frameFilled {
+  border-style: solid;
+
+  @include checkerboard.checkerboard(
+    24px,
+    var(--neutral-gray-10),
+    var(--neutral-base-white)
+  );
+}
+
+// The picture's box is the frame's full size, so a stored image smaller
+// than the frame is scaled up to fill it.
+.picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// The drawing tools, across the frame's top.
+.above {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+// The editor's canvas fills the frame, so the editor's own border and
+// background are removed. The frame's checkerboard is hidden under the
+// tools: the editor's canvas paints its own, and until it has, a plain
+// neutral background shows through transparent pixels.
+.paintFrame {
+  border-style: solid;
+  background-image: none;
+  background-color: var(--background-neutral-secondary);
+}
+
+.paintCanvas {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: $frame-radius - $frame-border;
+  background-color: transparent;
+}
+
+// The canvas with a placeholder laid over it while the editor loads.
+.paintStack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.paintPlaceholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+// The row under the frame keeps this height while nothing is rendered
+// there; ImageFrame reads it to size the frame.
+$under-min-height: 48px;
+$under-padding-top: 8px;
+
+:export {
+  underMinPx: math.div($under-min-height + $under-padding-top, 1px);
+}
+
+.under {
+  // flex: none: the frame's side is computed assuming this row keeps its
+  // full height; a shorter row would let its contents overflow the column.
+  display: flex;
+  flex: none;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  min-height: $under-min-height;
+  padding-top: $under-padding-top;
+  // Pinned to the column's foot; the spare height goes above it.
+  margin-top: auto;
+}
+
+// The panel's body: flush under its header and to the tab's edges, with
+// the preview column's rule down its left.
+.pane {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  min-height: 0;
+  margin: (-$pad) (-$pad) (-$pad) 0;
+  padding: 16px;
+  border-left: 1px solid var(--border-neutral-primary);
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+
+  // The scene moves focus here on a mode change and announces it; no
+  // outline is drawn around the whole pane for that programmatic focus.
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+// The word list, between the pinned sentence and the pinned buttons: one
+// rounded box whose contents scroll when they run past the space.
+.paneScroll {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  overflow-y: auto;
+  box-sizing: border-box;
+  // Room for the focus ring at the edges.
+  padding: 8px;
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: 12px;
+  background-color: var(--background-neutral-primary);
+}
+
+// The sentence on a brand panel, its text white on the brand color.
+.sentencePanel {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background-color: var(--background-brand-primary);
+  color: var(--text-neutral-white-fixed);
+
+  p {
+    color: inherit;
+  }
+}
+
+.headline {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+// Under the drawing tools when a pause-save failed.
+.saveNotice {
+  margin: 4px 0 0;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-neutral-primary);
+}
+
+// Pinned to the pane's foot, however little stands above it.
+.paneBottom {
+  margin-top: auto;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+// The quieter neutral: Generate is the main call to action. Nested under
+// the pane to outrank the library button's own colors.
+.pane .drawButton {
+  border-color: var(--border-neutral-secondary);
+  color: var(--text-neutral-secondary);
+
+  &:hover {
+    border-color: var(--text-neutral-primary);
+    color: var(--text-neutral-primary);
+  }
+}
+
+// The question and the thumbs float over the frame's bottom edge, dark on
+// any theme, as a floating bar.
+.ratingBar {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px 6px 18px;
+  border-radius: 12px;
+  background-color: var(--background-neutral-primary-inverse);
+  color: var(--text-neutral-primary-inverse);
+  box-shadow: 0 2px 8px var(--background-neutral-alpha-30);
+  white-space: nowrap;
+}
+
+.ratingQuestion {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  user-select: none;
+}
+
+// Nested under the bar to outrank the library button's own colors.
+.ratingBar .thumb,
+.ratingBar .dismiss {
+  color: var(--text-neutral-primary-inverse);
+  font-size: 20px;
+
+  &:hover {
+    // A light wash on the dark bar; the alpha tokens are all black-based.
+    background-color: var(--neutral-white-alpha-20);
+  }
+}
+
+.ratingBar .thumbChosen {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+// The question: the design-system dialog, its content a line with the
+// thumb and the reasons as rows.
+.ratingDialog {
+  width: 520px;
+}
+
+.ratingPrompt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.ratingPromptIcon {
+  font-size: 20px;
+}
+
+.ratingPromptUp {
+  color: var(--text-success-primary);
+}
+
+.ratingPromptDown {
+  color: var(--text-accent-orange-primary);
+}
+
+// Full width: the dialog centers its content otherwise.
+.reasonList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+}
+
+// A row is the design system's checkbox label, full width, with a tint
+// and a brand border when picked. Its own box and label text stay; the
+// row only changes what surrounds them. Nested under the list to outrank
+// the library's own label styles.
+.reasonList .reasonRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: 8px;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    border-color: var(--border-neutral-secondary);
+  }
+}
+
+.reasonList .reasonRowPicked {
+  border-color: var(--border-brand-primary);
+  background-color: var(--background-brand-light);
+  color: var(--text-brand-primary);
+}
+
+// The pane's first row: the headline at the left, the Behind the scenes and
+// Advanced buttons at the right.
+.paneHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+// A set's frames under the big frame, centered: the row spans the slot
+// (which otherwise keeps to the right) and centers its tiles.
+$frame-tile-canvas: 56px;
+$frame-tile-pad: 4px;
+$frame-tile-border: 2px;
+$frame-tile-gap: 6px;
+$frame-group-gap: 14px;
+// A character set's tiles side by side, as many as its frames.
+$strip-frames: 5;
+$frame-tile-edge: $frame-tile-pad + $frame-tile-border;
+$frame-tile-width: $frame-tile-canvas + 2 * $frame-tile-edge;
+$frame-strip-gaps: 2 * $frame-tile-gap + 2 * $frame-group-gap;
+$frame-strip-width: $strip-frames * $frame-tile-width + $frame-strip-gaps;
+
+.frameStrip {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: flex-start;
+  gap: $frame-group-gap;
+  flex-wrap: wrap;
+}
+
+// One pose's frames under its name.
+.frameGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.frameGroupTitle {
+  color: var(--text-neutral-quaternary);
+  user-select: none;
+}
+
+.frameGroupTiles {
+  display: flex;
+  gap: $frame-tile-gap;
+}
+
+.frameTile {
+  display: flex;
+  margin: 0;
+  padding: $frame-tile-pad;
+  border: $frame-tile-border solid var(--border-neutral-primary);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+  box-shadow: none;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+// The pressed tile is marked by more than color: a thicker border, which
+// takes its width from the padding so the tile keeps its size.
+.frameTileChosen {
+  padding: $frame-tile-pad - 1px;
+  border-width: $frame-tile-border + 1px;
+  border-color: var(--border-brand-primary);
+  background: var(--background-neutral-secondary);
+}
+
+// The tile's picture, one still frame.
+.frameTilePicture {
+  position: relative;
+  display: block;
+  width: $frame-tile-canvas;
+  height: $frame-tile-canvas;
+
+  @include checkerboard.checkerboard(
+    8px,
+    var(--neutral-gray-10),
+    var(--neutral-base-white)
+  );
+
+  canvas {
+    @include fills-box;
+  }
+}
+
+// A column too narrow for the row of frames gets smaller tiles, so the
+// row keeps to one line and the frame keeps its height.
+@container (max-width: #{$frame-strip-width - 1px}) {
+  .frameStrip {
+    gap: 8px;
+  }
+
+  .frameGroupTiles {
+    gap: 4px;
+  }
+
+  .frameTilePicture {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+// Positioning context for the Advanced popover, which is placed relative
+// to its button.
+.advancedHost {
+  position: relative;
+}
+
+// Placed below its button and right-aligned to it, so it stays inside the
+// pane when the pane is at the window's right edge. The library positions
+// the popover relative to the viewport; this overrides that to position it
+// within .advancedHost.
+.advancedHost .advancedPopover {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  width: 320px;
+  margin-top: 8px;
+  transform: none;
+  z-index: 2;
+}
+
+// Nested under the popover to outrank the library's own label styles.
+.advancedPopover .advancedField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+// The checkbox row: the design system's label, box and text in a row.
+.advancedPopover .advancedField:has(input[type='checkbox']) {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.advancedPrompt {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: 6px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font: inherit;
+  resize: vertical;
+}
+
+.paneHeaderTools {
+  display: flex;
+  flex: none;
+  align-items: center;
+}
+
+.srOnly {
+  @include sr-only.sr-only;
+}

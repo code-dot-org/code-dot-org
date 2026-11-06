@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q9-2026'
+
+right '0.75'
+wrong '0.60'
+wrong '0.50'
+wrong '0.30'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Of a store's 10 reviews, 6 are positive. The word "great" appears in 4 reviews, 3 of them positive. What is the probability that a review is positive, given that it contains "great"?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Naive Bayes
+MARKDOWN

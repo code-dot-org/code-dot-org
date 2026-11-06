@@ -1,4 +1,4 @@
-import {generate} from '@cdo/apps/adaptive/ai/generate';
+import {generate, moderateOutput} from '@cdo/apps/adaptive/ai/generate';
 import {
   INSTRUCTIONS_PROMPT_VERSION,
   buildInstructionsPrompt,
@@ -9,8 +9,21 @@ import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-jest.mock('@cdo/apps/adaptive/ai/generate', () => ({generate: jest.fn()}));
+jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
+  generate: jest.fn(),
+  moderateOutput: jest.fn(async () => 'ok'),
+}));
+const mockLogWarning = jest.fn();
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  __esModule: true,
+  default: {
+    getInstance: () => ({
+      getMetricsReporter: () => ({logWarning: mockLogWarning}),
+    }),
+  },
+}));
 const mockGenerate = generate as jest.Mock;
+const mockModerateOutput = moderateOutput as jest.Mock;
 
 const step: LevelStep = {
   id: 'build',
@@ -58,7 +71,7 @@ const inputsHash = generateInputsHash(
 const resolve = (
   overrides: Partial<Parameters<typeof resolveStepInstructions>[0]> = {}
 ) => {
-  const updateStepContext = jest.fn();
+  const saveGeneratedInstructions = jest.fn();
   const result = resolveStepInstructions({
     pathway,
     checkpoint,
@@ -66,12 +79,12 @@ const resolve = (
     projectInfo,
     sources,
     authoredInstructions: 'Authored.',
-    stepContext: undefined,
-    updateStepContext,
+    generatedInstructions: undefined,
+    saveGeneratedInstructions,
     aichatContext: context,
     ...overrides,
   });
-  return {result, updateStepContext};
+  return {result, saveGeneratedInstructions};
 };
 
 describe('resolveStepInstructions', () => {
@@ -95,7 +108,7 @@ describe('resolveStepInstructions', () => {
 
   it('returns cached instructions whose hash matches, without generating', async () => {
     const {result} = resolve({
-      stepContext: {generated: {instructions: 'Cached.', inputsHash}},
+      generatedInstructions: {instructions: 'Cached.', inputsHash},
     });
 
     expect(await result).toBe('Cached.');
@@ -107,13 +120,15 @@ describe('resolveStepInstructions', () => {
       output: {instructions: 'Fresh.'},
       traceId: 'trace-1',
     });
-    const {result, updateStepContext} = resolve({
-      stepContext: {generated: {instructions: 'Old.', inputsHash: 'deadbeef'}},
+    const {result, saveGeneratedInstructions} = resolve({
+      generatedInstructions: {instructions: 'Old.', inputsHash: 'deadbeef'},
     });
 
     expect(await result).toBe('Fresh.');
-    expect(updateStepContext).toHaveBeenCalledWith('build', {
-      generated: {instructions: 'Fresh.', inputsHash, traceId: 'trace-1'},
+    expect(saveGeneratedInstructions).toHaveBeenCalledWith('build', {
+      instructions: 'Fresh.',
+      inputsHash,
+      traceId: 'trace-1',
     });
   });
 
@@ -136,11 +151,31 @@ describe('resolveStepInstructions', () => {
     });
   });
 
-  it('returns the authored text and caches nothing when generation yields nothing', async () => {
-    mockGenerate.mockResolvedValue({traceId: 'trace-1'});
-    const {result, updateStepContext} = resolve();
+  it('moderates the generated text before showing it, and returns the authored text, caching nothing, when it does not clear', async () => {
+    mockGenerate.mockResolvedValue({
+      output: {instructions: 'Rude.'},
+      traceId: 'trace-1',
+    });
+    mockModerateOutput.mockResolvedValueOnce('flagged');
+    const {result, saveGeneratedInstructions} = resolve();
 
     expect(await result).toBe('Authored.');
-    expect(updateStepContext).not.toHaveBeenCalled();
+    expect(mockModerateOutput).toHaveBeenCalledWith('Rude.', context);
+    expect(saveGeneratedInstructions).not.toHaveBeenCalled();
+    expect(mockLogWarning).toHaveBeenCalledWith(
+      expect.objectContaining({
+        moderation: 'flagged',
+        stepId: 'build',
+        traceId: 'trace-1',
+      })
+    );
+  });
+
+  it('returns the authored text and caches nothing when generation yields nothing', async () => {
+    mockGenerate.mockResolvedValue({traceId: 'trace-1'});
+    const {result, saveGeneratedInstructions} = resolve();
+
+    expect(await result).toBe('Authored.');
+    expect(saveGeneratedInstructions).not.toHaveBeenCalled();
   });
 });

@@ -1,6 +1,6 @@
-import {type Metadata, selectableColumns} from '@code-dot-org/ailab';
 import Papa from 'papaparse';
 
+import {type Metadata, selectableColumns} from '@cdo/apps/ailab/engine';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 const AILAB_ASSET_PATH = '/blockly/media/skins/ailab/';
@@ -12,8 +12,10 @@ export interface DatasetFiles {
 }
 
 export interface DatasetColumns {
+  all: string[];
   selectable: string[];
   defaultLabel?: string;
+  defaultIdColumn?: string;
 }
 
 export async function fetchDatasetColumns(
@@ -34,12 +36,33 @@ export async function fetchDatasetColumns(
     ])
   );
   const selectable = selectableColumns(rows, columnTypes);
-  const {defaultLabelColumn} = metadata;
+  const {defaultLabelColumn, defaultIdColumn} = metadata;
+  const all = Object.keys(rows[0] ?? {});
   return {
+    all,
     selectable,
     defaultLabel:
       defaultLabelColumn && selectable.includes(defaultLabelColumn)
         ? defaultLabelColumn
         : undefined,
+    defaultIdColumn:
+      defaultIdColumn && all.includes(defaultIdColumn)
+        ? defaultIdColumn
+        : undefined,
+  };
+}
+
+export function withoutIdColumn(
+  columns: DatasetColumns | undefined,
+  idColumn: string | undefined
+): DatasetColumns | undefined {
+  if (!columns || idColumn === undefined) {
+    return columns;
+  }
+  return {
+    ...columns,
+    selectable: columns.selectable.filter(column => column !== idColumn),
+    defaultLabel:
+      columns.defaultLabel === idColumn ? undefined : columns.defaultLabel,
   };
 }

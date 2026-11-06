@@ -13,28 +13,27 @@ module Services
 
     test 'can delete custom level file' do
       Policies::LevelFiles.stubs(:write_to_file?).returns(true)
-      level = create(:level, name: "Testing Level File Writing")
+      with_tmp_rails_root do |root|
+        level = create(:level, name: "Testing Level File Writing")
 
-      # There are a couple of different places level files can end up, and we want
-      # to check all of them.
-      level_files = [
-        # Check at the default location
-        "config/levels/custom/#{level.game.app}/#{level.name}.level",
-        # Check at an arbitrary-chosen but technically valid location
-        "config/levels/custom/foo/#{level.name}.level",
-      ]
+        # There are a couple of different places level files can end up, and we want
+        # to check all of them.
+        level_files = [
+          # Check at the default location
+          "config/levels/custom/#{level.game.app}/#{level.name}.level",
+          # Check at an arbitrary-chosen but technically valid location
+          "config/levels/custom/foo/#{level.name}.level",
+        ]
 
-      level_files.each do |level_file|
-        full_level_file_path = Rails.root.join(level_file)
-        FileUtils.mkdir_p(File.dirname(full_level_file_path))
-        FileUtils.touch(full_level_file_path)
-        assert File.exist?(full_level_file_path)
-        Services::LevelFiles.delete_custom_level_file(level)
-        refute File.exist?(full_level_file_path)
+        level_files.each do |level_file|
+          full_level_file_path = root.join(level_file)
+          FileUtils.mkdir_p(File.dirname(full_level_file_path))
+          FileUtils.touch(full_level_file_path)
+          assert File.exist?(full_level_file_path)
+          Services::LevelFiles.delete_custom_level_file(level)
+          refute File.exist?(full_level_file_path)
+        end
       end
-    ensure
-      # Make sure we clean up all touched level files, even if the test fails
-      level_files.each {|level_file| FileUtils.rm_f(level_file)}
     end
 
     test 'converts from and to XML level format' do

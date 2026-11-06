@@ -20,14 +20,14 @@ interface UseInstructionsDrawerOptions {
   // True when the AI Tutor tab is selected. When false (Instructions tab), the
   // chat is hidden and the instructions fill the whole panel.
   aiTutorActive: boolean;
-  // The drawer starts open rather than collapsed.
-  initiallyOpen?: boolean;
+  // The drawer is always open: the toggle does nothing.
+  pinned?: boolean;
 }
 
 export const useInstructionsDrawer = ({
   isPredictLevel,
   aiTutorActive,
-  initiallyOpen = false,
+  pinned = false,
 }: UseInstructionsDrawerOptions) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const instructionsScrollAreaRef = useRef<HTMLDivElement>(null);
@@ -49,7 +49,7 @@ export const useInstructionsDrawer = ({
   const [maxInstructionsHeight, setMaxInstructionsHeight] = useState<
     number | undefined
   >(undefined);
-  const [isCollapsed, setIsCollapsed] = useState(!initiallyOpen);
+  const [isCollapsed, setIsCollapsed] = useState(!pinned);
   const [showScrollFade, setShowScrollFade] = useState(false);
 
   const {
@@ -294,12 +294,13 @@ export const useInstructionsDrawer = ({
   }, [isCollapsed, updateScrollFade]);
 
   const toggleInstructions = useCallback(() => {
+    if (pinned) return;
     const eventToReport = isCollapsed
       ? EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_EXPANDED
       : EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_COLLAPSED;
     sendLab2AnalyticsEvent(eventToReport);
     setIsCollapsed(prev => !prev);
-  }, [isCollapsed]);
+  }, [isCollapsed, pinned]);
 
   // Whole-container height, derived synchronously (instructionsHeight lags a frame).
   const fullHeight =

@@ -1,16 +1,18 @@
 // What a level step shows as its instructions: the authored text, or for a
 // project step with a prompt, text generated around the student's project
 // and cached in progress by a hash of what it was made from. Generation
-// failing, or adaptive AI being off, means the authored text.
+// failing, adaptive AI being off, or generated text that does not clear
+// moderation means the authored text.
 
 import {AichatContext} from '@cdo/apps/aichat/types';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
-import {StepContext, generateInputsHash} from '../progress/model';
+import {GeneratedContent, generateInputsHash} from '../progress/model';
 import {summarizeProjectFiles} from '../project/summarizeProjectFiles';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
 
-import {generate} from './generate';
+import {generate, moderateOutput} from './generate';
 import {
   INSTRUCTIONS_PROMPT_VERSION,
   buildInstructionsPrompt,
@@ -26,8 +28,12 @@ export interface StepInstructionsOptions {
   sources: ProjectSources | undefined;
   /** The step's own instructions, else the level's. */
   authoredInstructions: string | undefined;
-  stepContext: StepContext | undefined;
-  updateStepContext: (stepId: string, patch: StepContext) => void;
+  /** Saved instructions, reused while their inputsHash still matches. */
+  generatedInstructions: GeneratedContent | undefined;
+  saveGeneratedInstructions: (
+    stepId: string,
+    content: GeneratedContent
+  ) => void;
   /** The shell's own context, not the mounted chat's. */
   aichatContext: AichatContext;
 }
@@ -44,8 +50,8 @@ export async function resolveStepInstructions({
   projectInfo,
   sources,
   authoredInstructions,
-  stepContext,
-  updateStepContext,
+  generatedInstructions,
+  saveGeneratedInstructions,
   aichatContext,
 }: StepInstructionsOptions): Promise<string | undefined> {
   if (!step.instructionsPrompt || !step.project) return authoredInstructions;
@@ -59,9 +65,8 @@ export async function resolveStepInstructions({
     fallback: authoredInstructions,
   });
   const inputsHash = generateInputsHash(prompt);
-  if (stepContext?.generated?.inputsHash === inputsHash) {
-    return stepContext.generated.instructions;
-  }
+  if (generatedInstructions?.inputsHash === inputsHash)
+    return generatedInstructions.instructions;
 
   const {output, traceId} = await generate({
     schema: generatedInstructionsSchema,
@@ -79,8 +84,24 @@ export async function resolveStepInstructions({
     },
   });
   if (!output) return authoredInstructions;
-  updateStepContext(step.id, {
-    generated: {instructions: output.instructions, inputsHash, traceId},
+  // Nothing is cached, so the next resolve asks again rather than keep text
+  // the judge would not clear.
+  const moderation = await moderateOutput(output.instructions, aichatContext);
+  if (moderation !== 'ok') {
+    Lab2Registry.getInstance().getMetricsReporter().logWarning({
+      message:
+        'Adaptive instructions not shown: generated text did not clear moderation',
+      moderation,
+      pathwayId: pathway.id,
+      stepId: step.id,
+      traceId,
+    });
+    return authoredInstructions;
+  }
+  saveGeneratedInstructions(step.id, {
+    instructions: output.instructions,
+    inputsHash,
+    traceId,
   });
   return output.instructions;
 }

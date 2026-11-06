@@ -1,0 +1,16 @@
+name 'aif-y2-natural-language-processing-preassessment-q8-2026'
+
+wrong 'A measure of how important a word is to a document'
+wrong 'A sequence of consecutive tokens taken from a document'
+right 'A way to represent a document by counting how many times each word appears'
+wrong 'A model that predicts which word is the most likely to come next in a document'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is the bag of words model?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Bag of Words
+MARKDOWN

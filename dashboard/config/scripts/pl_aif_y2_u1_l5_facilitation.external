@@ -1,0 +1,61 @@
+name 'pl-aif-y2-u1-l5-facilitation'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating For Loops
+
+Students move from a by-hand simulation into writing that same repetition as code. The off-by-one trap shows up right where it always does: counting from 0 instead of 1.
+
+## What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Warm-up:</strong> the class discusses why the Ice Bucket Challenge went viral so quickly</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Going Viral (by hand):</strong> students calculate a post's views growing day by day, using a starting view count and share rate, repeating the same arithmetic each round</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>For loops introduced:</strong> the tedium of repeating that arithmetic by hand motivates loops, iteration, and for loops as concepts</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">4</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Going Viral in Code (Levels 1-3):</strong> students write a <code>simulate</code> function with a for loop, putting the same simulation into real Python</div>
+  </div>
+</div>
+
+<hr>
+
+## Watch for: Off-by-One Errors
+
+The lab's own solution calls <code>simulate(100, 1, 10)</code>, which prints <strong>Day 0 through Day 9</strong>, ten days total. That zero-indexing is where students trip.
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Expects Day 1-10</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">"I passed in 10 days, so it should print Day 1 through Day 10."</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Traces range(days)</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">"range(10) gives 0 through 9, so the loop runs 10 times starting at Day 0."</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222; margin-bottom: 8px;">&bull; "What are the actual values range(10) gives you? Count them out."</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "If the loop started at Day 1 instead, how many days would it actually simulate?"</div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Why this matters beyond this lesson:</strong> zero-indexing isn't a Python quirk students can ignore, it shows up every time they loop over a range, a list, or anything else in Python. Catching the misconception here saves confusion later.
+  </div>
+</div>
+MARKDOWN

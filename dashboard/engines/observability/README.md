@@ -38,6 +38,10 @@ A nil token leaves the user context untouched, so a failed lookup degrades to an
 
 This is not the only way an identifier can reach Sentry. Anything placed in `context`, `extra`, tags, or an OpenTelemetry span attribute is exported as-is, and there is currently no `before_send` scrubber on either the Ruby or JavaScript side.
 
+### Sentry Releases
+
+During a deploy, the `aws/ci_build` script emits a Sentry release event and annotates the commit hash that was deployed.
+
 ## Testing
 
 Tests live in `test/` and mirror the `lib/` structure. Run them from the engine root:

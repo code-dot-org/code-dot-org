@@ -17,17 +17,13 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   LessonSummaryCard: () => <div>lesson-summary</div>,
   PreSkillsCheck: () => <div>pre-skills-check</div>,
   TutorSummaryBox: () => <div>tutor-summary</div>,
+  NextStepPicker: () => <div>next-step</div>,
 }));
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/ReflectionBox',
   () => ({__esModule: true, default: () => <div>reflection</div>})
 );
-
-jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/NextStepPicker', () => ({
-  __esModule: true,
-  default: () => <div>next-step</div>,
-}));
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox',
@@ -42,6 +38,11 @@ jest.mock(
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {post: jest.fn().mockResolvedValue(undefined)},
+}));
+
+let mockChallengesEnabled = true;
+jest.mock('@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled', () => ({
+  useLessonDeepDiveChallengesEnabled: () => mockChallengesEnabled,
 }));
 
 const LESSON_DATA: LessonDeepDiveData = {
@@ -82,6 +83,7 @@ describe('LessonDeepDiveContainer story card sequence', () => {
   beforeEach(() => {
     jest.useFakeTimers();
     experiments.setEnabled(experiments.LESSON_TUTOR, true);
+    mockChallengesEnabled = true;
     (HttpClient.post as jest.Mock).mockClear();
   });
 
@@ -169,6 +171,7 @@ describe('LessonDeepDiveContainer story card sequence', () => {
 describe('LessonDeepDiveContainer URL param routing', () => {
   beforeEach(() => {
     experiments.setEnabled(experiments.LESSON_TUTOR, true);
+    mockChallengesEnabled = true;
   });
 
   afterEach(() => {
@@ -190,5 +193,33 @@ describe('LessonDeepDiveContainer URL param routing', () => {
   it('falls back to welcome when :screenId is not a known screen', () => {
     renderContainer('not-a-real-screen');
     expect(screen.getByText('welcome')).toBeInTheDocument();
+  });
+});
+
+describe('LessonDeepDiveContainer without challenges', () => {
+  beforeEach(() => {
+    experiments.setEnabled(experiments.LESSON_TUTOR, true);
+    mockChallengesEnabled = false;
+  });
+
+  afterEach(() => {
+    experiments.setEnabled(experiments.LESSON_TUTOR, false);
+  });
+
+  it('skips next-step going forward from reflection', () => {
+    renderContainer('reflection');
+    act(() => fireEvent.keyDown(window, {key: 'ArrowRight'}));
+    expect(screen.getByText('intervention')).toBeInTheDocument();
+  });
+
+  it('skips next-step going back from intervention', () => {
+    renderContainer('intervention');
+    act(() => fireEvent.keyDown(window, {key: 'ArrowLeft'}));
+    expect(screen.getByText('reflection')).toBeInTheDocument();
+  });
+
+  it('does not render next-step from the URL', () => {
+    renderContainer('next-step');
+    expect(screen.queryByText('next-step')).not.toBeInTheDocument();
   });
 });

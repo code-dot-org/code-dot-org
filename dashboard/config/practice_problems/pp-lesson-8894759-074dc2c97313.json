@@ -1,0 +1,28 @@
+{
+  "key": "pp-lesson-8894759-074dc2c97313",
+  "problem_type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following are necessary components for creating an effective chatbot? (Select all that apply)",
+  "solution": [
+    {
+      "option": "Clear goal for the chatbot",
+      "correct": true
+    },
+    {
+      "option": "Random user inputs",
+      "correct": false
+    },
+    {
+      "option": "Relevant training data",
+      "correct": true
+    },
+    {
+      "option": "Complex algorithms without context",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "09979de0-7ee5-4aab-b721-0b99aaf30cab",
+    "912e8d0b-431d-4bcb-a0ea-e780c73b1fd3"
+  ]
+}

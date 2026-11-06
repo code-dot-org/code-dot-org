@@ -2,12 +2,14 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {
   AnimationPoses,
+  CHARACTER_POSE_TITLES,
   CharacterPose,
   orderedPoseKeys,
   poseFrame,
+  PoseKey,
 } from '../characterAnimations';
 
-import moduleStyles from './image-details-dialog.module.scss';
+import moduleStyles from './animated-sheet-preview.module.scss';
 
 // The sketch's frame rate, which pose frameDelays are counted in.
 const TICKS_PER_SECOND = 30;
@@ -24,17 +26,13 @@ const POSE_PREVIEW_CYCLES: Record<CharacterPose, number> = {
 // preview shows a jump once — up, then down — each frame held a second.
 const JUMP_PREVIEW_FRAME_DELAY = 30;
 
-const POSE_TITLES: Record<CharacterPose, string> = {
-  stand: 'Idle',
-  walk: 'Walk',
-  jump: 'Jump',
-};
-
 interface AnimatedSheetPreviewProps {
   /** The sheet image (data URI or URL). */
   src: string;
   frameSize: {x: number; y: number};
   poses: AnimationPoses;
+  /** Play this one pose only, with no caption. */
+  only?: PoseKey;
 }
 
 /**
@@ -46,12 +44,12 @@ interface AnimatedSheetPreviewProps {
  */
 const AnimatedSheetPreview: React.FunctionComponent<
   AnimatedSheetPreviewProps
-> = ({src, frameSize, poses}) => {
+> = ({src, frameSize, poses, only}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   // Each pose's turn in the rotation: its range, name, and length in ticks.
   const turns = useMemo(
     () =>
-      orderedPoseKeys(poses).map(key => {
+      orderedPoseKeys(only ? {[only]: poses[only]} : poses).map(key => {
         const pose = key.split('-')[0] as CharacterPose;
         const range =
           pose === 'jump'
@@ -65,7 +63,7 @@ const AnimatedSheetPreview: React.FunctionComponent<
         }
         return {pose, range, ticks: range.frameDelay * frames};
       }),
-    [poses]
+    [poses, only]
   );
   const [shownPose, setShownPose] = useState<CharacterPose | null>(null);
 
@@ -147,9 +145,9 @@ const AnimatedSheetPreview: React.FunctionComponent<
         height={frameSize.y}
         aria-label="Animation preview"
       />
-      {shownPose && (
+      {shownPose && !only && (
         <span className={moduleStyles.sheetPreviewCaption}>
-          {POSE_TITLES[shownPose]}
+          {CHARACTER_POSE_TITLES[shownPose]}
         </span>
       )}
     </div>

@@ -64,13 +64,14 @@ module LangfuseHelper
   # Traces a generation in the Adaptive Learning shell. The actual request is made
   # by the browser over AI Gateway. This is a stopgap until Langfuse traces are handled
   # by the gateway directly.
-  def self.trace_adaptive_generation(trace_id:, trace_name:, user_id:, model:, input:, output:, outcome:, error_message:, usage:, metadata:, start_time:, end_time:)
+  def self.trace_adaptive_generation(trace_id:, trace_name:, user_id:, model:, input:, output:, outcome:, error_message:, usage:, metadata:, start_time:, end_time:, session_id: nil)
     adaptive_client.create_trace_and_generation(
       trace_id: trace_id,
       trace_name: trace_name,
       generation_name: "llm-call",
       model: model,
       user_id: user_id.to_s,
+      session_id: session_id,
       input: input,
       output: output,
       usage: usage,

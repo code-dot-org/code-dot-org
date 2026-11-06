@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:29:07.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "#### Ask for a small piece of code\r\n\r\n1. Pick a section of your site.\r\n2. Ask the AI for a small piece of code for it. Use the section's name in your prompt.\r\n3. In the same prompt, say if the change is to its structure, style, or behavior.\r\n4. Try it out. If it's not what you wanted, tell the AI what to fix.\r\n\r\n*Example: “Add a small piece of code to the Sign Up section that shows a thank-you message when a visitor clicks the button. This changes its behavior.”*\r\n\r\n**Check your prompt:** Does it use the section's name and say if the change is to structure, style, or behavior?",
+    "project_template_level_name": "adaptive-less-checkpoints-template-main-website-project",
+    "encrypted_exemplar_sources": "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\nsLWMaNl6DvNJh/1TTmoiAjzfhKV2T5+snam8nwo=\n",
+    "generate_outline": "Instruct the AI to generate a small code snippet for a specific section of your page, then evaluate the code and decide whether to keep, redirect, or edit it.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:29:12 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:29:12 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:29:22 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:29:22 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 17:16:29 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 17:17:11 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:05:43 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

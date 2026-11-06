@@ -12,7 +12,7 @@ $border-subtle: chrome.$border-subtle;
 .dialogHost {
   display: contents;
 
-  // The host carries data-theme; the chrome colors follow it.
+  // The chrome's palette, on the page's tokens.
   @include chrome.theme;
 }
 
@@ -156,6 +156,13 @@ $border-subtle: chrome.$border-subtle;
     display: flex;
     align-items: center;
     margin-top: 8px;
+  }
+
+  // The color control in a host's group, beside the tools.
+  .colorInline {
+    display: flex;
+    align-items: center;
+    margin: 0 2px;
   }
 
   .colorPicker {

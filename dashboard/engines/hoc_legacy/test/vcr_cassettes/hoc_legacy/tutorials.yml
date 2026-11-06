@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://preview.contentful.com/spaces/27jkibac934d/environments/master/entries?content_type=curriculum&fields.tutorialID%5Bexists%5D=true&limit=200&locale=en-US&order=fields.tutorialID,sys.createdAt&skip=0
+    uri: https://preview.contentful.com/spaces/hwu8vzk5v0g2/environments/master/entries?content_type=activity&fields.tutorialID%5Bexists%5D=true&limit=200&locale=en-US&order=fields.tutorialID,sys.createdAt&skip=0
     body:
       encoding: UTF-8
       string: ''
@@ -14,53 +14,69 @@ http_interactions:
     headers:
       Connection:
       - close
+      Date:
+      - Wed, 07 Oct 2026 18:43:37 GMT
       Content-Type:
       - application/vnd.contentful.delivery.v1+json
-      Cf-Space-Id:
-      - 27jkibac934d
-      Cf-Environment-Id:
-      - master
+      Access-Control-Allow-Methods:
+      - GET,HEAD,OPTIONS
+      X-Contentful-Ratelimit-Second-Limit:
+      - '20'
       Cf-Environment-Uuid:
-      - 45a004b5-cb62-4f60-afce-02706585f713
-      Cf-Organization-Id:
-      - 2yiy0qEwjW5xQJ6poYTwaj
-      X-Contentful-Route:
-      - "/spaces/:space/environments/:environment/entries"
+      - 1243d419-035a-4426-83d1-d204391ad323
+      Server-Timing:
+      - total;dur=873, total;dur=965
       Etag:
-      - W/"14496306270420811438"
+      - W/"16735130571517742884"
+      Strict-Transport-Security:
+      - max-age=31536000
       X-Content-Type-Options:
       - nosniff
       Server:
       - Contentful
+      X-Contentful-Request-Id:
+      - b79e0951-3486-444a-9d1f-8b742bc62533
       Contentful-Api:
       - cpa
-      Contentful-Upstream:
-      - content-api
+      X-Cache:
+      - MISS
+      Age:
+      - '0'
+      Access-Control-Max-Age:
+      - '1728000'
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
-      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature,X-Contentful-Resource-Resolution
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,Destination,Dnt,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Contentful-Content-Type,X-Contentful-Enable-Alpha-Feature,X-Contentful-Extensions-Sourcemap,X-Contentful-Organization,X-Contentful-Personal-Intercept,X-Contentful-Resource-Resolution,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Version,X-Http-Method-Override,X-Mx-Reqtoken,X-Requested-With
       Access-Control-Expose-Headers:
       - Etag
-      Access-Control-Allow-Methods:
-      - GET,HEAD,OPTIONS
-      Access-Control-Max-Age:
-      - '1728000'
-      Content-Encoding:
-      - gzip
-      Accept-Ranges:
-      - bytes
-      Date:
-      - Wed, 29 Oct 2025 20:22:03 GMT
-      X-Contentful-Request-Id:
-      - 46094c7d-f8e9-4a9c-acc9-f2dc7b0c9b5c
-      Strict-Transport-Security:
-      - max-age=15768000
+      X-Served-By:
+      - cache-bfi-krnt7300049-BFI
       Transfer-Encoding:
       - chunked
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Wed, 29 Oct 2025 20:22:03 GMT
+      encoding: UTF-8
+      string: '{"sys":{"type":"Array"},"total":1,"skip":0,"limit":200,"items":[{"metadata":{"tags":[{"sys":{"type":"Link","linkType":"Tag","id":"hour-of-code"}}],"concepts":[]},"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"hwu8vzk5v0g2"}},"type":"Entry","id":"1wyJzyNJTFih6fw4QJqlMi","contentType":{"sys":{"type":"Link","linkType":"ContentType","id":"activity"}},"revision":1,"createdAt":"2026-09-11T14:23:10.630Z","updatedAt":"2026-09-11T14:38:51.117Z","publishedAt":"2026-09-11T14:38:51.117Z","firstPublishedAt":"2026-09-11T14:38:51.117Z","publishedVersion":1,"environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"locale":"en-US"},"fields":{"title":"Minecraft
+        Hour of Code","image":{"sys":{"type":"Link","linkType":"Asset","id":"oEcaAvG8l7jey1HW19fK7"}},"organization":"Mojang,
+        Microsoft and CodeAI ","ages":["13-18","9-12","6-8"],"languageProgramming":["Blocks"],"shortDescription":"Minecraft
+        is back for the Hour of Code with a brand new activity! Journey through Minecraft
+        with code.","longDescription":"Minecraft is back for the Hour of Code with
+        a brand new activity! Journey through Minecraft with code.","primaryLinkRef":{"sys":{"type":"Link","linkType":"Entry","id":"4N6WYLm7aQIrwtq91gXGwY"}},"secondaryLinkRef":{"sys":{"type":"Link","linkType":"Entry","id":"4l0SVpOxA7XzBbhP3DvjI7"}},"technologyClassroom":["All
+        modern browsers","Android","iPad/iPhone","Poor or no internet","Computers"],"topic":["Computer
+        Science only"],"activityType":["Self-led tutorial"],"length":["One hour","One
+        hour with follow-on"],"accessibilitys":["Captions","Text-to-speech","Keyboard
+        navigation"],"languagesText":"Arabic, Bulgarian, Catalan, Czech, Danish, German,
+        English, Spanish, Greek, Persian, Finnish, French, Croatian, Hungarian, Icelandic,
+        Indonesian, Italian, Japanese, Georgian, Korean, Lithuanian, Burmese, Dutch,
+        Norwegian (Nynorsk), no, Polish, Portuguese, Portuguese (Brazil), Portuguese
+        (Portugal), Romanian, Russian, Slovak, Slovenian, Swedish, Turkish, Ukrainian,
+        Vietnamese, Chinese (Simplified), Chinese (Traditional), Chinese (Simplified)","supportedLanguages":["Arabic","Bulgarian","Czech","Danish","English
+        - UK","English - USA","German","Spanish - LATAM","Spanish - Spain","Greek","Persian","Finnish","French","Croatian","Hungarian","Indonesian","Italian","Japanese","Georgian","Korean","Dutch","Norwegian","Polish","Portuguese","Romanian","Russian","Slovak","Swedish","Turkish","Ukrainian","Vietnamese","Chinese
+        (Simplified)","Chinese (Traditional)"],"tutorialID":"mc","featuredPosition":3}}],"includes":{"Entry":[{"metadata":{"tags":[],"concepts":[]},"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"hwu8vzk5v0g2"}},"type":"Entry","id":"4N6WYLm7aQIrwtq91gXGwY","contentType":{"sys":{"type":"Link","linkType":"ContentType","id":"link"}},"revision":2,"createdAt":"2026-09-11T14:21:21.097Z","updatedAt":"2026-10-05T14:13:43.829Z","publishedAt":"2026-10-05T14:13:43.829Z","firstPublishedAt":"2026-09-11T14:36:43.015Z","publishedVersion":4,"environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"locale":"en-US"},"fields":{"linkName":"Minecraft
+        Hour of Code - Tutorial Link","label":"Start","primaryTarget":"https://code.org/minecraft","isThisAnExternalLink":true,"ariaLabel":"Minecraft
+        Hour of Code Tutorial"}},{"metadata":{"tags":[],"concepts":[]},"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"hwu8vzk5v0g2"}},"type":"Entry","id":"4l0SVpOxA7XzBbhP3DvjI7","contentType":{"sys":{"type":"Link","linkType":"ContentType","id":"link"}},"revision":1,"createdAt":"2026-09-11T14:21:33.863Z","updatedAt":"2026-09-11T14:36:57.195Z","publishedAt":"2026-09-11T14:36:57.195Z","firstPublishedAt":"2026-09-11T14:36:57.195Z","publishedVersion":1,"environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"locale":"en-US"},"fields":{"linkName":"
+        Minecraft Hour of Code - Teacher Materials Link","label":"Teacher notes","primaryTarget":"https://studio.code.org/courses/mc/units/1/lessons/1","isThisAnExternalLink":true,"ariaLabel":"
+        Minecraft Hour of Code teacher materials"}}],"Asset":[{"metadata":{"tags":[],"concepts":[]},"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"hwu8vzk5v0g2"}},"type":"Asset","id":"oEcaAvG8l7jey1HW19fK7","revision":1,"createdAt":"2026-09-11T14:19:10.331Z","updatedAt":"2026-09-11T14:35:09.630Z","publishedAt":"2026-09-11T14:35:09.630Z","firstPublishedAt":"2026-09-11T14:35:09.630Z","publishedVersion":2,"environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"locale":"en-US"},"fields":{"title":"Minecraft
+        Hour of Code Image","description":"","file":{"url":"//contentful-images.code.org/hwu8vzk5v0g2/oEcaAvG8l7jey1HW19fK7/4005c8aedf5ecc7f637e3079f449e0d1/aquatic2018.jpg","details":{"size":32158,"image":{"width":480,"height":360}},"fileName":"aquatic2018.jpg","contentType":"image/jpeg"}}}]}}'
+  recorded_at: Wed, 07 Oct 2026 18:43:37 GMT
 recorded_with: VCR 6.2.0

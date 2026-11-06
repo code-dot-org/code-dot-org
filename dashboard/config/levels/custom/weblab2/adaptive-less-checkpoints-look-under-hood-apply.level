@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:30:15.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "#### Find and change one line\r\n\r\n1. Pick a section of your site. Switch to Split Mode and find its code.\r\n2. Make an update to one line and see what happens.\r\n    - Not sure what a line does? Ask the AI.\r\n3. Try more changes, or ask the AI for ideas.\r\n\r\n*Example: “What does this line in my Sign Up section do? `message.textContent = \"Thanks!\"` I want it to say ‘Join now!’ instead.”*\r\n\r\n\r\n",
+    "project_template_level_name": "adaptive-less-checkpoints-template-main-website-project",
+    "encrypted_exemplar_sources": "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\nO4CzOBU6S79x3VCVaFvwQ0Q=\n",
+    "generate_outline": "Apply your coding skills by finding a specific section of code on your page, explaining its function, and making a small modification to one line of JavaScript.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:30:18 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:30:19 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:30:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:30:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 17:23:28 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:04:59 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -1,0 +1,17 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-11-03T03:29:43.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "long_instructions": "TODOs:\r\n- Look at your `index.html` file and choose one part of your page that contains words.\r\n- Write a prompt to the AI that names this specific text part.\r\n- In your prompt, clearly state what the chosen text part should say.\r\n- Submit your prompt to the AI to update the words in your `index.html` file.\r\n- Check `index.html` to see the AI's changes to the text.",
+    "project_template_level_name": "new-adaptive-HoAI26-template-main-project",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMoPaW/tBpOOjVk1ohoU\nsAZHXWgzcvJnBoKNZqbeAXJ9yQQkmiDSdyHoqo9CWvUPs/3vx6rxgVcaPpbk\n6fiH+9J2U1gFGYzsucGtn1fvdbxxkGl5N/HLHjU6dhIDfpK9xYAvQXDW7Ovq\nFn0m9n67Lg5h1562tw5eMCvRZoD3t9GWmEGNuH9Csw1DrjetA6IKxxTdUIcz\nF8WGG35jYi8JFGjybZ9doks5lk4B+KlsLoPJMyaW36XIRr/RbBDjXwDRjxzj\nb1j6uLe/4CD8BDIDC3d9FR4PmmuVYv0XX2teCmh9zCc8/QZuMLZuHxteuLez\na+4temZ4QfwFCmwb7tUU2B91phSj0xnLso5L+8qXX58E6XV2SVtqTE6iwZnJ\nitDyn/gT7wk1HIP+Sw+NGIC2tvZzYSm0utZwGgJtsZzhJ3AZPKrRl/66bnqb\nKBVS0dlHqfO0JYivi5EckMRjL+PE6bcWQfbGF4ZJ0h2DOFm8uY14Ngk3N/hL\nWQ/j8grAbcm9QJWjSiSuilQY6JWkRH3TOuD7QSRRwCgIv+4U8tmuhTJeJ+mJ\n9r0Q4inME1PP4J6O/dtduUgvmPx0f/ZPPpGiAv9kWd5scvDDbpHh2ynevvYf\nq30cB5/7fxvwJW0dgiCHU3v7iJZIhVGxADWZRLOA5Jx2I6Q6Bb1KBM1KEbTZ\ng6+txaIjZsEEOAI8Jr2jDzOBU7LtoHg+fROkaXLh/1etwIJp9cl52d0YLcqc\nQy9fzDIHinbOcAPxzFlXu+09Ao8rnitUABaEljST0DkMd2LDPUkJCXShmoMe\nZ8UyUlhfi43Cn61vjCW7aH80zKV/OuouXPV90rxR2TYE2rGwyD7kr4Y28gQu\nMPSOrqmNKQ1lDx0nU0yCMUxYgL+Ng6xMAmfxFRqVLObklw/t8X9C3ZuNt5f7\nVG2T9217a7tRwkpsI4MqYBz990Gsq8vJcxNhpv/j+7hxQID5ACRvUkDCUyq2\nGoJEbLd0p1ocw7BbH85jlBlYMdiQJWtoH56mYk1ZChCEOxBvx6GSq2UdQCp3\nv586d3tpe9JU9EeprbvRQCYmddq9IFeTiCvQCTXZmEzhuQ9kI+ECnCyulalu\nXiBTXKVJSWtBdJBx4mz9T/3lynfYDI3zMeUTo/t4TzspSJNU4Zes5KFAlNbf\nUEQVWLOs67/D16y6eYpdME5rTL1sXFlsUyD5c99hMtpbTM4RfYgBw8bGo2Jh\nyDgi188xxhGkvPg7mANSbIALuFfF35R986Mb1mDy/Z7huR1ZBkPKgwVmIcpD\nuZaPFkDI8suE9oBuPwIE+Cjip0Xeu++E5bE2SZYOBF6fvSEBARSIKWKeFlc+\n7yvhgZcAwdZgWqegNfw1JHIvFWw/hdPDwBRFZC3xvpi1463zQSEXysD3X97f\nOGgQzUE2uSWiXV7PNgAgXVoGwmOteBpp3dH5e+ZN1lJocrNirx0QcF3LdXt4\ndU3LX39wJNX00/ZPbGZ4uZwA6fLZdXz+4wsBb8tGWzO0ctkkBq+AXi564PlP\nSX58oSYWTB8mucdbBekYCIuWyUppGZstjXOjF4DDSSEGg7VWjf4WhaODoDdo\n0/PsALetrLIfCvB6aRu4t2BKzrE4GcjOi266V7jGKC5C6EHJ+bfiF3l0Hlqw\nqx1f3xT067HdgUHD+vyqXzEMN3wObvdfc/zJPSBAG6kwmHbCtSX8h3oLc/LH\nHiqeuvaRvg==\n",
+    "generate_outline": "Ask for a change in your project. Name one part of your page's words and say what it should say."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 03:29:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:29:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:29:54 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:29:54 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

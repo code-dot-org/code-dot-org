@@ -38,9 +38,13 @@ interface ChallengeBoxProps {
 // message. 'queued' and 'running' are not terminal (polling continues);
 // 'success' is terminal but its text comes from student_feedback, not here.
 const EVALUATION_ERROR_MESSAGES: Record<string, string> = {
-  pii_violation: 'This challenge response contains personal information',
-  profanity_violation: 'This challenge response contains profanity',
-  failure: 'An error occured during evaluation',
+  pii_violation:
+    "Sorry, I can't write feedback about this because it contains personal information. Please make changes and submit again.",
+  profanity_violation:
+    "Sorry, I can't write feedback about this because it was flagged by our content moderation policy. Please make changes and submit again.",
+  feedback_violation:
+    'Sorry, my feedback was flagged by our content moderation policy. Please try submitting again.',
+  failure: 'An error occurred during evaluation',
 };
 
 const ChallengeBox: FC<ChallengeBoxProps> = ({

@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894786-74b9db9508e8",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "A team collected data for training their machine learning model by surveying only a small group of people from one neighborhood. What is the primary issue with their data collection method?",
+  "solution": [
+    {
+      "option": "The sample size is too small to represent the larger population.",
+      "correct": true
+    },
+    {
+      "option": "The survey questions were too complicated.",
+      "correct": false
+    },
+    {
+      "option": "The survey was conducted online.",
+      "correct": false
+    },
+    {
+      "option": "The results were not analyzed properly.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "31d897b0-58ed-48ca-8bf5-699b2d6fee00"
+  ]
+}

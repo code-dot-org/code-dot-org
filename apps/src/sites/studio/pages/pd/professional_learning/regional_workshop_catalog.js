@@ -13,9 +13,6 @@ $(() => {
       nationalWorkshops={nationalWorkshops}
       zipFromSchoolInfo={zipFromSchoolInfo}
     />,
-    document.getElementById('regional-workshop-catalog'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('regional-workshop-catalog')
   );
 });

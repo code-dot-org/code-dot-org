@@ -1,16 +1,25 @@
-# Base class to contain common functionality shared
-# between DCDOBase and GatekeeperBase
+require 'dynamic_config/environment_aware_dynamic_config_helper'
+
+# Base class for a dynamic configuration module that allows us to update config
+# settings without pushing new code; inherited by both DCDO and Gatekeeper.
+# Mostly just a wrapper around a DatastoreCache
 class DynamicConfigBase
-  def initialize(datastore_cache)
-    @datastore_cache = datastore_cache
+  include Singleton
+
+  def self.datastore_cache
+    @datastore_cache ||= EnvironmentAwareDynamicConfigHelper.create_datastore_cache(cache_identifier)
+  end
+
+  def self.cache_identifier
+    raise 'overwrite this to return a unique identifier for this implementation'
   end
 
   # Sets the value for a given key
   # @param key [String]
   # @param value [JSONable]
-  def set(key, value)
+  def self.set(key, value)
     raise ArgumentError unless key.is_a? String
-    @datastore_cache.set(key, value)
+    datastore_cache.set(key, value)
   end
 
   # @param key [String]
@@ -18,33 +27,31 @@ class DynamicConfigBase
   # @returns the stored value at key
   # @note This method is redefined in Rack::CookieDCDO to return the cookie DCDO value for testing, if it exists
   # @see Rack::CookieDCDO#modify_dcdo
-  def get(key, default)
+  def self.get(key, default)
     raise ArgumentError unless key.is_a? String
-    value = @datastore_cache.get(key)
 
-    unless value.nil?
-      return value
-    end
+    value = datastore_cache.get(key)
+    return value unless value.nil?
 
     default
   end
 
   # Clear all stored settings
-  def clear
-    @datastore_cache.clear
+  def self.clear
+    datastore_cache.clear
   end
 
   # Returns the current dcdo config state as yaml
   # @returns [String]
-  def to_yaml
-    YAML.dump(@datastore_cache.all)
+  def self.to_yaml
+    YAML.dump(datastore_cache.all)
   end
 
-  def to_h
-    @datastore_cache.all
+  def self.to_h
+    datastore_cache.all
   end
 
-  def refresh
-    @datastore_cache.update_local_cache
+  def self.refresh
+    datastore_cache.update_local_cache
   end
 end

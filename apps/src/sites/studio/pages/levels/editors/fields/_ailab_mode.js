@@ -1,7 +1,7 @@
-import {getRawDatasets} from '@code-dot-org/ailab';
 import $ from 'jquery';
 import React from 'react';
 
+import {getRawDatasets} from '@cdo/apps/ailab/engine';
 import EditAilabMode from '@cdo/apps/lab2/levelEditors/ailabMode/EditAilabMode';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';

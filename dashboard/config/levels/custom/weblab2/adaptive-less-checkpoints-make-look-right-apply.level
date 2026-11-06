@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:25:09.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "#### Keep your style going\r\n\r\n1. Make a change to your page. Include your 3-word style in your prompt.\r\n2. Try it out. Then make a second change and include your style again.\r\n3. Find the section that's hardest to read. Ask the AI to make it easier to read.\r\n\r\n*Example: “Make the Events cards bigger. Keep it bold, modern, and playful.”*\r\n\r\n**Check your prompt:** Does each change include your 3-word style?",
+    "project_template_level_name": "adaptive-less-checkpoints-template-main-website-project",
+    "encrypted_exemplar_sources": "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\nM0TBGSP+pJb0y4ET1YdvIikjobgIQ7T1L+7r\n",
+    "generate_outline": "Apply your design skills by making further visual changes to your page, ensuring consistency with your defined style and fixing any text readability issues.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:25:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:25:18 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:25:29 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:25:30 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 04:37:13 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:08:38 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

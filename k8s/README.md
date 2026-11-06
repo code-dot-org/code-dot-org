@@ -121,7 +121,10 @@ seconds regardless.
 
 During migration, Kubernetes can start with `low` while existing workers
 continue consuming both priorities. To move all low-priority work to Kubernetes,
-the existing workers must also be configured to consume only high priorities.
+the existing workers must also be configured to consume only high priorities:
+set `active_job_worker_max_priority: 9` for them (`config/<env>.yml.erb`,
+`globals.yml`, or `CDO_ACTIVE_JOB_WORKER_MAX_PRIORITY`) and restart them with
+`bin/restart-active-job-workers`.
 
 Run `bundle exec ruby k8s/bin/verify-worker-priorities` to check Helm modes,
 generated worker commands, and invalid values without a cluster or database.

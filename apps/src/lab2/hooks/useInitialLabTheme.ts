@@ -23,9 +23,11 @@ interface UseInitialLabThemeProps {
 }
 const LABS_WITH_THEME_PREFERENCE: (string | undefined)[] = [
   'aichat',
+  'ailab',
   'pythonlab',
   'weblab2',
   'sketchlab',
+  'spritelab',
 ];
 
 // Determine and set the theme for the lab that is currently being loaded.

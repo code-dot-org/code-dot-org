@@ -221,6 +221,47 @@ describe('ChallengeBox', () => {
     ).toBeEnabled();
   });
 
+  it('shows a canned message and stops polling when the feedback is flagged', async () => {
+    jest.useFakeTimers();
+    fetchJson.mockResolvedValue({
+      value: fakeChallengeResponse({evaluation_status: 'feedback_violation'}),
+    });
+    snapshot.mockResolvedValue({
+      blob: new Blob(['png-bytes'], {type: 'image/png'}),
+    });
+    post.mockResolvedValue({ok: true, json: async () => createdResponse});
+    put.mockResolvedValue({});
+
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
+    await submitWhiteboardChallenge();
+    await waitFor(() =>
+      expect(
+        screen.getByText('Tutor is writing feedback...')
+      ).toBeInTheDocument()
+    );
+
+    await tick(2000);
+
+    await waitFor(() =>
+      expect(
+        screen.getByText(
+          'Sorry, my feedback was flagged by our content moderation policy. Please try submitting again.'
+        )
+      ).toBeInTheDocument()
+    );
+    expect(
+      screen.queryByText('Tutor is writing feedback...')
+    ).not.toBeInTheDocument();
+
+    jest.useRealTimers();
+  });
+
   it('displays the feedback once evaluation succeeds', async () => {
     jest.useFakeTimers();
     fetchJson.mockResolvedValue({

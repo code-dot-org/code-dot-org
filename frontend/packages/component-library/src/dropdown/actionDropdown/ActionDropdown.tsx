@@ -8,6 +8,7 @@ import {useCallback, AriaAttributes} from 'react';
 import {useDropdownContext} from '@/common/contexts/DropdownContext';
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+import Tags from '@/tags';
 
 import CustomDropdown, {
   CustomDropdownMenuPlacement,
@@ -21,6 +22,8 @@ export interface ActionDropdownOption extends CustomDropdownOption {
   onClick: () => void;
   isOptionDestructive?: boolean;
   icon: FontAwesomeV6IconProps;
+  /** Short text shown in a tag after the label, e.g. "Beta" */
+  tag?: string;
 }
 
 export interface ActionDropdownProps extends AriaAttributes {
@@ -108,6 +111,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
             onClick,
             isOptionDisabled,
             isOptionDestructive,
+            tag,
             icon: {
               iconName,
               iconStyle,
@@ -135,6 +139,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
                   className={iconClassName}
                 />
                 <span>{label}</span>
+                {tag && <Tags tagsList={[{label: tag}]} size="s" />}
               </button>
             </li>
           );

@@ -26,6 +26,11 @@ import {
   SoundDropdown,
 } from './blockDefinitions/playSound';
 import {
+  EffectOptionDropdown,
+  FIELD_EFFECT_OPTION_TYPE,
+} from './blockDefinitions/playSoundEffect';
+import {EVENT_HAT_EXTENSION, eventHat} from './blockDefinitions/whenPlayer';
+import {
   ExternalSceneDropdown,
   FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
 } from './externalSceneDropdown';
@@ -87,6 +92,10 @@ function installLabBlocks(): void {
     MusicProjectDropdown
   );
   Blockly.fieldRegistry.register(FIELD_SOUND_DROPDOWN_TYPE, SoundDropdown);
+  Blockly.fieldRegistry.register(
+    FIELD_EFFECT_OPTION_TYPE,
+    EffectOptionDropdown
+  );
   Blockly.fieldRegistry.register(FIELD_COSTUME_TYPE, CostumeField);
   Blockly.fieldRegistry.register(FIELD_BLOCK_IMAGE_TYPE, BlockImageField);
   Blockly.fieldRegistry.register(FIELD_GRID_TYPE, GridField);
@@ -95,6 +104,7 @@ function installLabBlocks(): void {
     PLACEHOLDER_OUTLINE_EXTENSION,
     placeholderOutline
   );
+  BlocklyCore.Extensions.register(EVENT_HAT_EXTENSION, eventHat);
   BlocklyCore.Extensions.registerMutator(
     PLACEHOLDER_MUTATOR,
     placeholderMutator

@@ -6,12 +6,13 @@ import {z} from 'zod';
 
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
 
+import {describeEvidenceLevels} from './evidenceLevels';
 import {labEnvironment} from './labEnvironments';
 
 /**
  * Used by Langfuse traces; change when a meaningful update is made.
  */
-export const INSTRUCTIONS_PROMPT_VERSION = '2026-10-12';
+export const INSTRUCTIONS_PROMPT_VERSION = '2026-10-27';
 
 export const generatedInstructionsSchema = z.object({
   /** Markdown the student reads, in place of the authored instructions. */
@@ -38,6 +39,9 @@ export function buildInstructionsPrompt({
 }: InstructionsPromptInput): string {
   const name = project.name ? `"${project.name}"` : 'untitled so far';
   const environment = labEnvironment(pathway);
+  const {validation} = step;
+  const skill = validation && pathway.skills[validation.measures.skillId];
+  const levels = skill ? describeEvidenceLevels(skill) : '';
   return [
     'You write the instructions a student reads for one step of a project-based learning pathway. The student is building their own project in a coding lab, and these instructions tell them what to do next in it.',
     environment ? `How the student works in this lab:\n${environment}` : '',
@@ -56,10 +60,26 @@ export function buildInstructionsPrompt({
           codeBlock(fallback),
         ].join('\n')
       : '',
+    validation
+      ? [
+          'HOW THE WORK IS CHECKED',
+          'When the student finishes, the change they made in this step is checked against this condition:',
+          validation.condition,
+          levels,
+        ]
+          .filter(Boolean)
+          .join('\n')
+      : '',
     [
       'Write the instructions for this student. The goal is for them to actually read and act on the box, so it must be scannable, action-first, and concrete.',
       '',
       '- If the template has a heading, start with that same heading on its own line.',
+      validation
+        ? '- The steps must ask for exactly what the condition names, in terms of their project, so work that follows them meets it. Do not mention the check or quote the condition.'
+        : '',
+      levels
+        ? '- Make the specific example in the contrast pair show work at the highest evidence level listed.'
+        : '',
       '- An opening acknowledgement is fine if it is short and part of a sentence that leads into the first step, such as "Your header looks great! Now add...". No separate recap of what the page already has.',
       '- Name their actual project content (title, description, page text) where it shows them what to do.',
       '- Stay within what the step asks for; do not add goals.',

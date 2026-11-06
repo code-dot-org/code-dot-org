@@ -9,6 +9,7 @@ import {
   getStartingLabel,
   isSetByPretrained,
   ModeObject,
+  needsDataset,
   setFeatures,
 } from './ailabMode';
 import {DatasetColumns} from './datasetColumns';
@@ -99,7 +100,10 @@ const FeaturesField: React.FunctionComponent<FeaturesFieldProps> = ({
           name="ailab_mode_lockFeatures"
           label="Lock the features so students cannot change them"
           checked={locked}
-          disabled={isSetByPretrained(mode, 'lockFeatures')}
+          disabled={
+            isSetByPretrained(mode, 'lockFeatures') ||
+            needsDataset(mode, 'lockFeatures')
+          }
           onChange={e =>
             onChange(
               setJsonObjectValue(

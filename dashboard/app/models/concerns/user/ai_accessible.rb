@@ -14,7 +14,15 @@ module User::AiAccessible
 
   # Lesson deep dive is not tied to a level, so essential-only access does not unlock it.
   def can_use_lesson_deep_dive?
+    return false unless DCDO.get('lesson-deep-dive-enabled', true)
     ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]
+  end
+
+  # Teachers follow their own access; a student needs a visible section with chat enabled and challenges on.
+  def can_use_lesson_deep_dive_challenges?
+    return false unless can_use_lesson_deep_dive?
+    return true if teacher_can_access_aichat? || levelbuilder?
+    sections_as_student.any? {|s| !s.hidden && s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED] && s.ai_challenge_enabled}
   end
 
   def can_use_ai_iteration_tools?
@@ -30,15 +38,14 @@ module User::AiAccessible
     section_enabled_access_level
   end
 
-  # Whether some AI models are unavailable to this user because of where they are.
-  def us_only_aichat_models_disabled?
-    return false if levelbuilder?
-    international_ai_chat_user?
+  def blocked_aichat_providers
+    return [] if levelbuilder?
+    international_ai_chat_user? ? AI_CHAT_US_ONLY_PROVIDERS : []
   end
 
   def can_use_aichat_model?(model_id)
-    return true unless AI_CHAT_US_ONLY_MODEL_IDS.include?(model_id)
-    !us_only_aichat_models_disabled?
+    provider = AI_CHAT_PROVIDER_BY_MODEL_ID[model_id]
+    provider.nil? || blocked_aichat_providers.exclude?(provider)
   end
 
   # has essential or higher access to AI chat tools
@@ -58,6 +65,10 @@ module User::AiAccessible
     return false if client_type == AI_CHAT_CLIENT_TYPES[:AI_TUTOR] && DCDO.get("block_ai_tutor_chat_completion", false)
     return false if client_type == AI_CHAT_CLIENT_TYPES[:ADAPTIVE] && !DCDO.get("adaptive-ai-enabled", false)
     return false if client_type == AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION] && !DCDO.get("theater-ai-descriptions-enabled", false)
+    return false if client_type == AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] && !can_use_lesson_deep_dive?
+    return false if client_type == AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR] && !levelbuilder?
+    return false if client_type == AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] && !DCDO.get("spritelab-lab2-ask-ai-enabled", true)
+    return false if client_type == AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] && !levelbuilder?
 
     has_aichat_access?(level_id) || trust_chat_client?(client_type)
   end

@@ -26,9 +26,6 @@ $(document).ready(() => {
         <ExpandableImageDialog />
       </>
     </Provider>,
-    document.getElementById('edit-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('edit-container')
   );
 });

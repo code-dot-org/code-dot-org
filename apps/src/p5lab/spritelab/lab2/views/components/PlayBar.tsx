@@ -75,7 +75,7 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
       press();
     },
     // Focus must not stay on the button, where Space (a game key) would
-    // activate it on every press; cancelling pointerdown does not keep it
+    // activate it on every press; canceling pointerdown does not keep it
     // off in every browser.
     onPointerUp: (e: React.PointerEvent<HTMLElement>) => {
       release();
@@ -149,6 +149,12 @@ interface PlayBarProps {
   onPlay: (event: React.MouseEvent<HTMLElement>) => void;
   /** Absent when there is no editing view to return to. */
   onStop?: (event: React.MouseEvent<HTMLElement>) => void;
+  /** Plays from the start scene, offered beside Play scene; absent on a
+      level that keeps to one scene, whose one Play plays that scene. */
+  onPlayGame?: (event: React.MouseEvent<HTMLElement>) => void;
+  /** On the start scene Play scene and Play game are the same thing: one
+      button, Play, which plays the game. */
+  playSceneHidden?: boolean;
 }
 
 /**
@@ -161,20 +167,43 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
   arrows,
   onPlay,
   onStop,
+  onPlayGame,
+  playSceneHidden = false,
 }) => {
   const setupBlockColor = useSetupBlockColor();
   if (!playing) {
+    const playSceneAway = !!onPlayGame && playSceneHidden;
     return (
-      <MuiButton
-        variant="contained"
-        color="primary"
-        size="small"
-        sx={getRunButtonSx(setupBlockColor)}
-        startIcon={<FontAwesomeV6Icon iconName="play" />}
-        onClick={onPlay}
-      >
-        Play
-      </MuiButton>
+      <>
+        {!playSceneAway && (
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
+            sx={getRunButtonSx(setupBlockColor)}
+            startIcon={<FontAwesomeV6Icon iconName="play" />}
+            onClick={onPlay}
+          >
+            {onPlayGame ? 'Play scene' : 'Play'}
+          </MuiButton>
+        )}
+        {onPlayGame && (
+          <MuiButton
+            variant={playSceneAway ? 'contained' : 'outlined'}
+            color={playSceneAway ? 'primary' : 'secondary'}
+            size="small"
+            sx={playSceneAway ? getRunButtonSx(setupBlockColor) : undefined}
+            startIcon={
+              <FontAwesomeV6Icon
+                iconName={playSceneAway ? 'play' : 'flag-checkered'}
+              />
+            }
+            onClick={onPlayGame}
+          >
+            {playSceneAway ? 'Play' : 'Play game'}
+          </MuiButton>
+        )}
+      </>
     );
   }
   return (

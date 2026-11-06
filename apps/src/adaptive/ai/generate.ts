@@ -2,12 +2,16 @@
 // output through the AI gateway, under its own client type, off until a DCDO
 // flag opts in, and never an exception to the caller. Every feature built on
 // it has a no-AI result it falls back to. Every call, however it ends, is
-// traced to Langfuse under an id the caller gets back.
+// traced to Langfuse under an id the caller gets back. Beside it, the check
+// that text may pass between a student and a model: what the student wrote
+// going in, and what the model wrote before the student reads it.
 
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import {Output} from 'ai';
 import {z} from 'zod';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
+import {isTextSafe} from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
@@ -103,6 +107,38 @@ export async function generate<T>({
     return {traceId};
   }
 }
+
+export type ModerationResult = 'ok' | 'flagged' | 'error';
+type ModerationPhase = 'input_filter' | 'output_filter';
+
+/**
+ * Moderates the given text, with a timeout for the given phase (input or output).
+ */
+async function moderate(
+  text: string,
+  phase: ModerationPhase,
+  context: AichatContext
+): Promise<ModerationResult> {
+  let result: ModerationResult;
+  try {
+    const safe = await withTimeout(
+      isTextSafe(text, phase, undefined, context),
+      TIMEOUT_MS
+    );
+    result = safe ? 'ok' : 'flagged';
+  } catch (error) {
+    report(`Adaptive ${phase} moderation failed`, error);
+    result = 'error';
+  }
+  Observability.metrics.count('adaptive.text_moderation', 1, {phase, result});
+  return result;
+}
+
+export const moderateInput = (text: string, context: AichatContext) =>
+  moderate(text, 'input_filter', context);
+
+export const moderateOutput = (text: string, context: AichatContext) =>
+  moderate(text, 'output_filter', context);
 
 function getUsage(result: GatewayResult): TraceUsage | undefined {
   const usage = result.usage;
