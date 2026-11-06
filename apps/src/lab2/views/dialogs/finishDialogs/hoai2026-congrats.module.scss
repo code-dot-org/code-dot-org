@@ -94,11 +94,14 @@
 }
 
 .eyebrow,
-// Sized so the longer card title stays on one line down to the smallest
-// supported width.
 .cardTitle {
   margin: 0;
   color: inherit;
+}
+
+// Sized so the longer card title stays on one line down to the smallest
+// supported width.
+.cardTitle {
   font-size: clamp(1.125rem, 1.7vw, 1.375rem);
   line-height: 1.2;
 }
