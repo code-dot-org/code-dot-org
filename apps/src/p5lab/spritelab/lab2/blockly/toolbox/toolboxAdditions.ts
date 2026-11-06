@@ -199,6 +199,23 @@ function ensureInjectedCategories(def: ToolboxInfo): void {
   INJECTED_CATEGORIES.forEach(({name, types}) => {
     const authored = findCategory(contents, name);
     if (authored) {
+      if (name === 'Platform') {
+        const gravity = authored.contents.findIndex(
+          entry =>
+            isBlockInfo(entry) && entry.type === 'spritelab2_setPlatformGravity'
+        );
+        const directionPresent = authored.contents.some(
+          entry =>
+            isBlockInfo(entry) &&
+            entry.type === 'spritelab2_setPlatformGravityDirection'
+        );
+        if (gravity >= 0 && !directionPresent) {
+          authored.contents.splice(gravity + 1, 0, {
+            kind: 'block',
+            type: 'spritelab2_setPlatformGravityDirection',
+          });
+        }
+      }
       if (presentIn(authored).size === 0) {
         contents.splice(contents.indexOf(authored), 1);
       }

@@ -89,8 +89,9 @@ export function newBlockTypes(
 ): string[] {
   const required = new Set(earlier.flatMap(requiredBlockTypes));
   const offered = offeredBlockTypes(level);
-  if (offered.includes(GRAVITY_BLOCK_TYPES[0])) {
-    offered.push(GRAVITY_BLOCK_TYPES[1]);
+  const gravityIndex = offered.indexOf(GRAVITY_BLOCK_TYPES[0]);
+  if (gravityIndex >= 0 && !offered.includes(GRAVITY_BLOCK_TYPES[1])) {
+    offered.splice(gravityIndex + 1, 0, GRAVITY_BLOCK_TYPES[1]);
   }
   return unique(offered).filter(type => !required.has(type));
 }
