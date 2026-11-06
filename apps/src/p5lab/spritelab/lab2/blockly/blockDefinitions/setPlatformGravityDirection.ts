@@ -12,8 +12,9 @@ const definition: BlockJson = {
       type: 'field_dropdown',
       name: 'DIRECTION',
       options: [
-        ['down', 'down'],
-        ['up', 'up'],
+        ['↓', 'down'],
+        ['↑', 'up'],
+        ['none', 'none'],
       ],
     },
   ],

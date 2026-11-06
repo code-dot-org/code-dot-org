@@ -3,20 +3,20 @@ import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import {PLATFORM_GRAVITY} from '../../platformPhysics';
 
-const MIN_GRAVITY_STRENGTH = 0;
+const MIN_GRAVITY_STRENGTH = 1;
 const MAX_GRAVITY_STRENGTH = 10;
 const DEFAULT_GRAVITY_STRENGTH = 5;
 
 /**
- * Override the platformer's gravity. Zero turns gravity off. Direction is
- * expressed by a separate block-facing control.
+ * Override the platformer's gravity. Direction is expressed by a separate
+ * block-facing control.
  */
 const definition: BlockJson = {
   type: 'spritelab2_setPlatformGravity',
   message0: 'set gravity to %1',
   args0: [
     {
-      type: 'field_number',
+      type: 'field_slider',
       name: 'GRAVITY',
       value: DEFAULT_GRAVITY_STRENGTH,
       min: MIN_GRAVITY_STRENGTH,

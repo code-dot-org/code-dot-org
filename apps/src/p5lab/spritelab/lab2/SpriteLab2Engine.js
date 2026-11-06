@@ -457,14 +457,23 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.setPlatformGravity = value => {
       const magnitude = Math.abs(Number(value)) || 0;
       this.platformGravity_ =
-        this.platformGravityDirection_ === 'up' ? -magnitude : magnitude;
+        this.platformGravityDirection_ === 'none'
+          ? 0
+          : this.platformGravityDirection_ === 'up'
+          ? -magnitude
+          : magnitude;
       this.notifyControlsChange_();
     };
     library.commands.setPlatformGravityDirection = direction => {
-      this.platformGravityDirection_ = direction === 'up' ? 'up' : 'down';
+      this.platformGravityDirection_ =
+        direction === 'up' || direction === 'none' ? direction : 'down';
       const magnitude = Math.abs(this.platformGravity_);
       this.platformGravity_ =
-        this.platformGravityDirection_ === 'up' ? -magnitude : magnitude;
+        this.platformGravityDirection_ === 'none'
+          ? 0
+          : this.platformGravityDirection_ === 'up'
+          ? -magnitude
+          : magnitude;
       this.notifyControlsChange_();
     };
     // The view eases toward the target zoom a frame at a time (see the
