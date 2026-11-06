@@ -510,7 +510,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.notifyControlsChange_();
     };
     library.commands.setPlatformJumpHeight = value => {
-      this.platformJumpHeight_ = Math.max(1, Math.min(4, Number(value) || 1));
+      this.platformJumpHeight_ = Math.max(0, Math.min(10, Number(value) || 0));
     };
     // The view eases toward the target zoom a frame at a time (see the
     // platform draw loop below); a fresh run starts back at 1.
@@ -610,6 +610,9 @@ export default class SpriteLab2Engine extends SpriteLab {
                 (library.defaultSpriteSize || 40)
             )
           : Math.abs(Number(speed) || 0);
+      if (jumpSpeed === 0) {
+        return;
+      }
       this.jumpStarts_ = new Map();
       this.jumpImpulseFrame_ = this.p5Wrapper.p5
         ? this.p5Wrapper.p5.frameCount
