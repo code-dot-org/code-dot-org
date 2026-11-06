@@ -1,8 +1,8 @@
-// The design system's Modal as its Figma file now draws it: a title row with
-// the close x, the content between two edge-to-edge hairlines, and the
-// buttons at the end edge. The library's Modal predates that drawing (its
-// content slot is capped at a fixed height and its hairlines stop inside the
-// padding), so labs match the drawing here, on the library's dialog shell.
+// The design file's Modal on the library's dialog shell: a title row with the
+// close x, the content between two edge-to-edge hairlines, and the buttons
+// at the end edge. The library's own Modal caps its content at a fixed
+// height and keeps its hairlines inside the padding, which the lab dialogs
+// cannot live with.
 
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import {
@@ -28,6 +28,7 @@ export interface LabModalProps {
   secondaryButtonProps?: MuiButtonProps;
   /** Closes the dialog from the corner x and Escape. */
   onClose: () => void;
+  /** The x's name; the shell's "Close dialog" when unset. */
   closeLabel?: string;
   /** Added to the panel, to size it. */
   className?: string;
@@ -39,7 +40,7 @@ const LabModal: React.FunctionComponent<LabModalProps> = ({
   primaryButtonProps,
   secondaryButtonProps,
   onClose,
-  closeLabel = 'Close dialog',
+  closeLabel,
   className,
 }) => {
   const titleId = useId();

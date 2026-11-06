@@ -6,8 +6,11 @@
   width: 640px;
   max-width: calc(100vw - 32px);
   max-height: calc(100vh - 32px);
+  // The visible height on a phone, under its browser bar; vh above is the
+  // fallback where dvh is unknown.
+  max-height: calc(100dvh - 32px);
   border-radius: var(--shape-md);
-  box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
+  box-shadow: var(--shadow-lg);
   color: var(--text-neutral-primary);
 }
 
@@ -36,8 +39,8 @@
   padding: 14px 20px;
 }
 
-// The shell's close x is the panel's only direct button; it moves from the
-// corner to the middle of the title row.
+// The shell's close x is the panel's only direct button. It moves from the
+// corner to sit level with the title's first line, inset like the title.
 .modal > button {
   inset-block-start: 17px;
   inset-inline-end: 18px;
