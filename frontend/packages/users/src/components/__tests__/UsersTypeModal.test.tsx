@@ -6,6 +6,7 @@ import {createQueryClient, QueryClientProvider} from '@code-dot-org/core/api';
 import type {UserType} from '@code-dot-org/core/api';
 import {mockServer} from '@code-dot-org/core/api/mocks/server';
 
+import {EMAIL_OPT_IN_REQUIRED} from '../EmailOptInField';
 import UsersTypeModal from '../UsersTypeModal';
 
 function renderModal(prospectiveType: UserType, onClose = vi.fn()) {
@@ -22,6 +23,8 @@ function renderModal(prospectiveType: UserType, onClose = vi.fn()) {
 }
 
 const emailField = () => screen.queryByRole('textbox', {name: /email/i});
+const optInRadio = (answer: 'Yes' | 'No') =>
+  screen.queryByRole('radio', {name: answer});
 
 describe('UsersTypeModal', () => {
   it('prompts for an email when changing to educator', () => {
@@ -34,12 +37,39 @@ describe('UsersTypeModal', () => {
     expect(emailField()).toBeNull();
   });
 
-  it('keeps confirm disabled until an email is entered when changing to educator', () => {
+  it('asks the email opt-in question when changing to educator', () => {
+    renderModal('teacher');
+    expect(
+      screen.getByRole('radiogroup', {name: /can we email you/i}),
+    ).toBeInTheDocument();
+  });
+
+  it('does not ask the email opt-in question when changing to student', () => {
+    renderModal('student');
+    expect(optInRadio('Yes')).toBeNull();
+  });
+
+  it('keeps confirm disabled until both email and opt-in are answered', () => {
     renderModal('teacher');
     const confirm = screen.getByRole('button', {name: /change to educator/i});
     expect(confirm).toBeDisabled();
     fireEvent.change(emailField()!, {target: {value: 'new@teacher.org'}});
+    expect(confirm).toBeDisabled();
+    fireEvent.click(optInRadio('Yes')!);
     expect(confirm).toBeEnabled();
+  });
+
+  it('keeps confirm disabled when only the opt-in is answered', () => {
+    renderModal('teacher');
+    fireEvent.click(optInRadio('No')!);
+    expect(
+      screen.getByRole('button', {name: /change to educator/i}),
+    ).toBeDisabled();
+  });
+
+  it('does not show the required error before the question is touched', () => {
+    renderModal('teacher');
+    expect(screen.queryByText(EMAIL_OPT_IN_REQUIRED)).not.toBeInTheDocument();
   });
 
   it('sends the email and hashed email when changing to educator', async () => {
@@ -52,6 +82,7 @@ describe('UsersTypeModal', () => {
     );
     const onClose = renderModal('teacher');
     fireEvent.change(emailField()!, {target: {value: 'new@teacher.org'}});
+    fireEvent.click(optInRadio('Yes')!);
     fireEvent.click(screen.getByRole('button', {name: /change to educator/i}));
 
     await waitFor(() => expect(onClose).toHaveBeenCalled());
@@ -60,8 +91,41 @@ describe('UsersTypeModal', () => {
         user_type: 'teacher',
         email: 'new@teacher.org',
         hashed_email: expect.any(String),
+        email_preference_opt_in: 'yes',
       },
     });
+  });
+
+  it('sends a negative email opt-in when the answer is no', async () => {
+    let body: unknown;
+    mockServer.use(
+      http.patch('*/users/user_type', async ({request}) => {
+        body = await request.json();
+        return new HttpResponse(null, {status: 204});
+      }),
+    );
+    const onClose = renderModal('teacher');
+    fireEvent.change(emailField()!, {target: {value: 'new@teacher.org'}});
+    fireEvent.click(optInRadio('No')!);
+    fireEvent.click(screen.getByRole('button', {name: /change to educator/i}));
+
+    await waitFor(() => expect(onClose).toHaveBeenCalled());
+    expect(body).toMatchObject({user: {email_preference_opt_in: 'no'}});
+  });
+
+  it('sends no opt-in when changing to student', async () => {
+    let body: unknown;
+    mockServer.use(
+      http.patch('*/users/user_type', async ({request}) => {
+        body = await request.json();
+        return new HttpResponse(null, {status: 204});
+      }),
+    );
+    const onClose = renderModal('student');
+    fireEvent.click(screen.getByRole('button', {name: /change to student/i}));
+
+    await waitFor(() => expect(onClose).toHaveBeenCalled());
+    expect(body).toEqual({user: {user_type: 'student'}});
   });
 
   it('submits on Enter in the email field when changing to educator', async () => {
@@ -74,6 +138,7 @@ describe('UsersTypeModal', () => {
     );
     const onClose = renderModal('teacher');
     fireEvent.change(emailField()!, {target: {value: 'new@teacher.org'}});
+    fireEvent.click(optInRadio('Yes')!);
     const form = screen
       .getByRole('button', {name: /change to educator/i})
       .closest('form');
@@ -96,6 +161,7 @@ describe('UsersTypeModal', () => {
     );
     renderModal('teacher');
     fireEvent.change(emailField()!, {target: {value: 'taken@teacher.org'}});
+    fireEvent.click(optInRadio('Yes')!);
     fireEvent.click(screen.getByRole('button', {name: /change to educator/i}));
 
     expect(

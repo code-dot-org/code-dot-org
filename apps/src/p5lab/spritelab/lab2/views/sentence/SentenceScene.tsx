@@ -12,6 +12,12 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {generateCharacterSet} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
 import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
 import {
+  CachedImage,
+  findCachedImage,
+  sentencePath,
+  ImageSource,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
+import {
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
@@ -43,6 +49,7 @@ import {
   restoreChoices,
   SavedChoices,
   sentenceFor,
+  sentenceWordIds,
 } from './sentences';
 import {playSound} from './sentenceSounds';
 import {SentPrompts, sentPromptsFor} from './sentPrompts';
@@ -56,6 +63,9 @@ import styles from './sentence-scene.module.scss';
 const STYLE: ImageStyle = 'pixel';
 // The service's middle temperature.
 const TEMPERATURE = 1;
+// The making shows at least this long on a cached level, where a picture
+// can land in well under a second.
+const MIN_CACHED_GENERATING_MS = 5000;
 
 export type Mode = 'edit' | 'generating' | 'result';
 
@@ -68,6 +78,8 @@ interface GeneratedPicture {
   prompt: string;
   /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
+  /** Served from the cache rather than drawn by the model. */
+  cached: boolean;
 }
 
 /** Settings from the Advanced popover: a typed prompt that replaces the
@@ -96,6 +108,9 @@ export interface SentenceSceneParts {
   frame: React.ReactNode;
   /** A made picture is showing in the frame. */
   frameFilled: boolean;
+  /** A reviewer's mark over a picture served from the tree, while the tree
+      is filled in; comes out before ship. */
+  cachedTag: React.ReactNode;
   /** The Behind the scenes button, once there is a picture. */
   behindTheScenes: React.ReactNode;
   /** The screen reader's status line. */
@@ -166,6 +181,11 @@ interface SentenceSceneProps {
   /** Behind the scenes as an icon alone, for a host's header. */
   compactBehindTheScenes?: boolean;
   advanced?: AdvancedOptions;
+  /** Where a sentence's picture comes from (imageCache.ts); the tree first
+      when unset. A typed prompt always goes to the model. */
+  imageSource?: ImageSource;
+  /** Another tree to read cached pictures from (QA). */
+  imageCacheUrl?: string;
 }
 
 const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
@@ -185,6 +205,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   wordLayout,
   compactBehindTheScenes,
   advanced,
+  imageSource = 'cached',
+  imageCacheUrl,
 }) => {
   const style = STYLE;
   const sentence = sentenceFor(imageType, imageSubject);
@@ -215,6 +237,28 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
   const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
+  // The cached variant shown last for a filling, so Generate again shows
+  // another.
+  const lastCachedRef = useRef<{path: string; variant: number}>();
+
+  // The cached picture for the sentence as filled, when the tree has one.
+  const findCached = useCallback(async (): Promise<CachedImage | undefined> => {
+    const wordIds = sentenceWordIds(sentence, choices);
+    const path = sentencePath(sentence.id, wordIds, style);
+    const last = lastCachedRef.current;
+    const found = await findCachedImage({
+      sentenceId: sentence.id,
+      wordIds,
+      style,
+      characterSet: canAnimate,
+      avoidVariant: last?.path === path ? last.variant : undefined,
+      baseUrl: imageCacheUrl,
+    });
+    if (found) {
+      lastCachedRef.current = {path, variant: found.variant};
+    }
+    return found;
+  }, [sentence, choices, style, canAnimate, imageCacheUrl]);
 
   const persist = useCallback(
     async (picture: GeneratedPicture, pictureVerdict: Verdict | null) => {
@@ -244,7 +288,32 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       return;
     }
     const run = ++runRef.current;
+    const startedAt = Date.now();
     const prompt = typedPrompt || promptText(sentence, choices);
+    const pixelScale = advanced?.pixelScale || 1;
+    // The cache holds the sentences' pictures as the level draws them;
+    // whatever the advanced settings change goes to the model.
+    const customized =
+      !!typedPrompt || !!advanced?.startFrom || pixelScale !== 1;
+    const fromCache = imageSource === 'cached' && !customized;
+    setMode('generating');
+    setTip(current => pickTip(current));
+    setVerdict(null);
+    setRatingDismissed(false);
+    setError(null);
+    playSound('go');
+    // A filling the tree lacks, or a lookup that fails, goes to the model.
+    let cached: CachedImage | undefined;
+    if (fromCache) {
+      try {
+        cached = await findCached();
+      } catch (e) {
+        console.warn('Image cache lookup failed:', e);
+      }
+      if (run !== runRef.current) {
+        return;
+      }
+    }
     // true attaches the project context for per-level breakdowns.
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
@@ -254,18 +323,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         imageType,
         ...(typedPrompt ? {} : {sentenceId: sentence.id, choices}),
         style,
+        imageSource,
+        cached: !!cached,
       },
       true
     );
     onGenerateStart?.();
-    setMode('generating');
-    setTip(current => pickTip(current));
-    setVerdict(null);
-    setRatingDismissed(false);
-    setError(null);
-    playSound('go');
     try {
-      const pixelScale = advanced?.pixelScale || 1;
       const options: GenerateImageOptions = {
         imageType,
         ...(imageType === 'sprite' && {subject: imageSubject ?? 'character'}),
@@ -285,6 +349,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       const bodyPlan = typedPrompt
         ? undefined
         : chosenBodyPlan(sentence, choices);
+      // What the lab would send. A cached picture was made from the same
+      // words by the same prompt builders, so this describes it as well.
       const sent: SentPrompts = sentPromptsFor(
         prompt,
         options,
@@ -298,10 +364,20 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
             temperature: TEMPERATURE,
             pixelGrid: options.pixelGrid,
             bodyPlan,
+            cached,
           })
-        : await generateImage(prompt, options);
+        : await generateImage(prompt, {...options, cached});
       if (run !== runRef.current) {
         return;
+      }
+      if (cached) {
+        const elapsed = Date.now() - startedAt;
+        await new Promise(resolve =>
+          setTimeout(resolve, Math.max(MIN_CACHED_GENERATING_MS - elapsed, 0))
+        );
+        if (run !== runRef.current) {
+          return;
+        }
       }
       // The chosen words are stored in the image's generation metadata so
       // the sentence can be refilled when the image is reopened; a typed
@@ -328,6 +404,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
         prompt,
         sent,
+        cached: !!cached,
       };
       setChosenPicture(entry);
       setMode('result');
@@ -362,6 +439,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     exhausted,
     advanced,
     persist,
+    imageSource,
+    findCached,
   ]);
 
   const judge = useCallback(
@@ -558,6 +637,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         panelRef,
         frame,
         frameFilled: !!chosenPicture && !generating,
+        // Keyed like the reveal, so each picture shows it afresh.
+        cachedTag: chosenPicture?.cached && !generating && (
+          <span key={`cached-${chosenPicture.id}`} className={styles.cachedTag}>
+            cached
+          </span>
+        ),
         behindTheScenes,
         status: statusNode,
         sentence: sentenceNode,

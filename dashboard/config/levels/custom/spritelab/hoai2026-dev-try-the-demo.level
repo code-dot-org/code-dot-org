@@ -90,9 +90,7 @@
             "frameCount": 1,
             "looping": true,
             "frameDelay": 2,
-            "categories": [
-
-            ],
+            "categories": [],
             "role": "demo-treasure"
           },
           "adf02487-46fd-4faa-a06b-36db83b39864": {
@@ -105,9 +103,7 @@
             "frameCount": 5,
             "looping": true,
             "frameDelay": 20,
-            "categories": [
-
-            ],
+            "categories": [],
             "role": "demo-hero",
             "poses": {
               "stand-right": {
@@ -211,6 +207,14 @@
                           "type": "spritelab2_playSound",
                           "fields": {
                             "SOUND": "sound://category_achievements/melodic_win_1.mp3"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "spritelab2_showTitle",
+                              "fields": {
+                                "TEXT": "You win!"
+                              }
+                            }
                           }
                         }
                       }
@@ -279,8 +283,7 @@
     "enable_big_playspace": "false"
   },
   "audit_log": "[{\"changed_at\":\"2026-10-31 22:38:56 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-31 22:40:08 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-31 22:41:06 +0000\",\"changed\":[\"header_label\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-31 22:46:37 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "level_concept_difficulty": {}
 }]]></config>
   <blocks/>
 </GamelabJr>
