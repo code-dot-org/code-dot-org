@@ -3,14 +3,10 @@
 // exists: its card appears with the name field open, and cancelling the
 // name drops it.
 
-import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {
-  Button as MuiButton,
-  IconButton as MuiIconButton,
-  Typography as MuiTypography,
-} from '@mui/material';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
@@ -287,74 +283,61 @@ const ScenesDialog: React.FunctionComponent<ScenesDialogProps> = ({
 }) => {
   const [naming, setNaming] = useState(creating);
   return (
-    <MuiCustomDialog
-      aria-label={TITLE}
+    <MuiDialog
+      title={TITLE}
       className={styles.dialog}
       onClose={onClose}
-    >
-      <MuiTypography
-        component="h2"
-        variant="overline2"
-        className={styles.title}
-      >
-        {TITLE}
-      </MuiTypography>
-      <p id="dsco-dialog-description" className={styles.srOnly}>
-        Every scene of the game in play order. Changes are kept as they are
-        made.
-      </p>
-      <div className={styles.body}>
-        <div className={styles.grid}>
-          {scenes.map((scene, index) => (
-            <SceneCard
-              key={scene.id}
-              scene={scene}
-              active={scene.id === activeSceneId}
-              startsHere={index === 0}
-              deletable={scenes.length > 1}
-              editable={editable}
-              disabled={naming}
-              onRename={onRenameScene}
-              onDelete={onDeleteScene}
-              onMakeStart={onMakeStartScene}
-            />
-          ))}
-          {naming && (
-            <NewSceneCard
-              onCreate={name => {
-                onCreateScene(name);
-                setNaming(false);
-              }}
-              onCancel={() => setNaming(false)}
-            />
-          )}
-        </div>
-      </div>
-      <div className={styles.footer}>
-        {editable && (
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="small"
-            startIcon={<FontAwesomeV6Icon iconName="plus" aria-hidden />}
-            disabled={naming}
-            onClick={() => setNaming(true)}
-          >
-            New scene
-          </MuiButton>
-        )}
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="small"
-          className={styles.done}
-          disabled={naming}
-          onClick={onClose}
-        >
-          Done
-        </MuiButton>
-      </div>
-    </MuiCustomDialog>
+      customContent={
+        <>
+          <p id="dsco-dialog-description" className={styles.srOnly}>
+            Every scene of the game in play order. Changes are kept as they are
+            made.
+          </p>
+          <div className={styles.body}>
+            <div className={styles.grid}>
+              {scenes.map((scene, index) => (
+                <SceneCard
+                  key={scene.id}
+                  scene={scene}
+                  active={scene.id === activeSceneId}
+                  startsHere={index === 0}
+                  deletable={scenes.length > 1}
+                  editable={editable}
+                  disabled={naming}
+                  onRename={onRenameScene}
+                  onDelete={onDeleteScene}
+                  onMakeStart={onMakeStartScene}
+                />
+              ))}
+              {naming && (
+                <NewSceneCard
+                  onCreate={name => {
+                    onCreateScene(name);
+                    setNaming(false);
+                  }}
+                  onCancel={() => setNaming(false)}
+                />
+              )}
+            </div>
+          </div>
+        </>
+      }
+      secondaryButtonProps={
+        editable
+          ? {
+              children: 'New scene',
+              startIcon: <FontAwesomeV6Icon iconName="plus" aria-hidden />,
+              disabled: naming,
+              onClick: () => setNaming(true),
+            }
+          : undefined
+      }
+      primaryButtonProps={{
+        children: 'Done',
+        disabled: naming,
+        onClick: onClose,
+      }}
+    />
   );
 };
 
