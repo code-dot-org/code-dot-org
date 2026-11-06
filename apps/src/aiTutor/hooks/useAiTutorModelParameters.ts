@@ -8,8 +8,8 @@ import {
 } from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {
-  aiTutorModelId,
-  aiTutorModelIdFromQuery,
+  defaultAiTutorModelId,
+  aiTutorModelParametersFor,
 } from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -44,7 +44,7 @@ const customPromptName =
 
 export const baseModelParameters: ModelParameters = {
   systemPrompt: defaultSystemPrompt,
-  selectedModelId: aiTutorModelId,
+  selectedModelId: defaultAiTutorModelId,
   temperature: 0.5,
   retrievalContexts: [],
 } as const;
@@ -139,26 +139,13 @@ export const useAiTutorModelParameters = (
     }
   }, [systemPrompt]);
 
-  useEffect(() => {
-    // We currently use query params to allow AI model selection but otherwise do not provide any user
-    // interface to select or see the selected model. This console log was added to give users (testers)
-    // feedback as to which model was actually selected (e.g. if the query param is entered incorrectly or
-    // an unavailable model is selected, it will use the default model). It's in a useEffect (on first
-    // render) rather than in `ai/AiTutorModelId.ts` as that module is apparently imported even if AI Tutor
-    // isn't enabled, leading to a confusing console log message.
-    console.log('🤖: aiTutorModelId:', aiTutorModelId);
-  }, []);
-
   const modelParameters = useMemo(() => {
     if (!systemPrompt) {
       return undefined;
     }
-    const levelModel = aiTutorModelIdFromQuery
-      ? undefined
-      : options?.aiTutorModelParameters;
     let result = {
       ...baseModelParameters,
-      ...levelModel,
+      ...aiTutorModelParametersFor(options?.aiTutorModelParameters),
       systemPrompt,
     } as ModelParameters;
     if (options?.aiTutorJsonSchema) {
@@ -174,6 +161,17 @@ export const useAiTutorModelParameters = (
     options?.aiTutorModelParameters,
     systemPrompt,
   ]);
+
+  const selectedModelId = modelParameters?.selectedModelId;
+  useEffect(() => {
+    // We currently use query params to allow AI model selection but otherwise do not provide any user
+    // interface to select or see the selected model. This console log was added to give users (testers)
+    // feedback as to which model was actually selected (e.g. if the query param is entered incorrectly or
+    // an unavailable model is selected, it will use the default model). It's in a useEffect rather than
+    // in `ai/AiTutorModelId.ts` as that module is apparently imported even if AI Tutor isn't enabled,
+    // leading to a confusing console log message.
+    if (selectedModelId) console.log('🤖: aiTutorModelId:', selectedModelId);
+  }, [selectedModelId]);
 
   return {
     modelParameters,

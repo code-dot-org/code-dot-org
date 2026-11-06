@@ -15,8 +15,9 @@ jest.mock('@cdo/apps/lab2/ai/ai-should-show-copy-code', () => ({
 }));
 
 jest.mock('@cdo/apps/lab2/ai/ai-tutor-model-id', () => ({
-  aiTutorModelId: 'mock-model-id',
-  aiTutorModelIdFromQuery: undefined,
+  defaultAiTutorModelId: 'mock-model-id',
+  aiTutorModelParametersFor: (level?: {selectedModelId: string}) =>
+    level ?? {selectedModelId: 'mock-model-id'},
 }));
 
 describe('useAiTutorModelParameters', () => {

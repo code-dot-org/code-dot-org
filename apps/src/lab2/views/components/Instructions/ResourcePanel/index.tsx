@@ -19,7 +19,7 @@ import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
-import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
+import {aiTutorModelParametersFor} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import {getLabShortcuts} from '@cdo/apps/lab2/keyboardShortcuts/shortcutsPerLab';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -294,7 +294,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const aiChatDisabledState = useAiChatDisabledState({
     appName,
     clientType: AiChatClientTypes.AI_TUTOR,
-    selectedModelId: aiTutorModelId,
+    selectedModelId: aiTutorModelParametersFor(aiTutorModelParameters)
+      .selectedModelId,
     isPredictLevel: !!isPredictLevel,
     hasSubmittedPredictResponse,
   });
