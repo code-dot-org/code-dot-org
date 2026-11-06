@@ -6,7 +6,6 @@ import Accordion, {AccordionProps} from './../Accordion';
 
 /**
  * @deprecated Use `MuiFAQAccordionItem` from `@code-dot-org/component-library/accordion/faqAccordion`.
- * Codemod: `codemods/accordion-to-mui.ts` in `frontend/packages/component-library`.
  */
 export type FAQAccordionItem = {
   id: string;
@@ -18,7 +17,6 @@ export type FAQAccordionItem = {
 
 /**
  * @deprecated Use `MuiFAQAccordionProps` from `@code-dot-org/component-library/accordion`.
- * Codemod: `codemods/accordion-to-mui.ts` in `frontend/packages/component-library`.
  */
 export interface FAQAccordionProps extends AccordionProps {
   /** List of FAQ items */
@@ -42,7 +40,6 @@ export interface FAQAccordionProps extends AccordionProps {
  * (see https://developers.google.com/search/docs/appearance/structured-data/faqpage#json-ld)
  *
  * @deprecated Use `MuiFAQAccordion` from `@code-dot-org/component-library/accordion`; it takes the same props.
- * Codemod: `codemods/accordion-to-mui.ts` in `frontend/packages/component-library`.
  * See `src/accordion/ACCORDION_MIGRATION_TO_MUI.md`.
  */
 const FAQAccordion: React.FC<FAQAccordionProps> = ({

@@ -6,9 +6,8 @@
 and `AccordionDetails`. The look goes into a theme override, so a bare
 `Accordion` from `@mui/material` gets it too. A thin wrapper in
 `src/accordion` keeps the legacy `items` API and the legacy behavior. It ships
-as `MuiAccordion` and `MuiFAQAccordion` beside the untouched legacy names. An
-import-only codemod moves the one consumer, `TutorVideoDialog.jsx`, in one
-stacked PR.
+as `MuiAccordion` and `MuiFAQAccordion` beside the untouched legacy names.
+The one consumer, `TutorVideoDialog.jsx`, moves by hand in one stacked PR.
 
 Each item stops being a native `<details>`/`<summary>`. It becomes MUI's
 root, a summary `<button type="button" aria-expanded>`, and a collapse panel
@@ -52,7 +51,6 @@ Files (Execute):
 | `src/accordion/index.ts`, `faqAccordion/index.ts`               | Add the new exports; legacy lines unchanged                                         |
 | `Accordion.tsx`, `faqAccordion/FAQAccordion.tsx`                | `@deprecated` JSDoc only                                                            |
 | `package.json`                                                  | `./accordrion/faqAccordion` export key corrected (see defects)                      |
-| `codemods/accordion-to-mui.ts`                                  | The codemod                                                                         |
 
 `muiAugmentation.ts` does not change: no new variant, color or size.
 
@@ -195,71 +193,24 @@ MUI side implements it. `consumer` says what a call site edits.
 
 ## Codemod
 
-Required. No entry's consumer change is `rewrite`, `rename` or `drop`. Every
-call site edits only its import, and that edit is mechanical. The transform
-is idempotent, so it can be re-run when staging gains consumers while the
-PRs are open. Build it from `codemods/dialog-to-mui-dialog.ts` with the
-source paths and the rename tables swapped.
+None. One call site does not repay a jscodeshift transform, its README
+entry and its review; the props are unchanged, so the move is an import
+edit by hand. A later consumer, inside or outside this repository, does
+the same.
 
-Script: `codemods/accordion-to-mui.ts`, run with `yarn jscodeshift`.
+Expected hand edit:
 
-Transforms:
-
-1. `import L from '@code-dot-org/component-library/accordion'` becomes
-   `import {MuiAccordion as L} from '@code-dot-org/component-library/accordion'`
-   (no `as` when `L` is `MuiAccordion`). It merges into an existing named
-   value import from the same source.
-2. Named value specifiers from `.../accordion`, under any local name `L`:
-   `Accordion` and `default` become `MuiAccordion as L`; `FAQAccordion`
-   becomes `MuiFAQAccordion as L`. JSX and identifier references are left
-   as written.
-3. Named type specifiers from `.../accordion`: `AccordionProps` becomes
-   `MuiAccordionProps as L`, `FAQAccordionProps` becomes
-   `MuiFAQAccordionProps as L`. `import type` and inline `type` modifiers are
-   kept.
-4. From `.../accordion/faqAccordion`: the default import and `FAQAccordion`
-   become `MuiFAQAccordion as L`; `FAQAccordionProps` and `FAQAccordionItem`
-   become `MuiFAQAccordionProps as L` and `MuiFAQAccordionItem as L`.
-5. `jest.mock`, `jest.doMock`, `vi.mock` or `vi.doMock` of either entry,
-   where the factory returns one object literal: for a `default`,
-   `Accordion` or `FAQAccordion` key whose value is a name or a function, add
-   the matching `Mui` key with the same value unless one is there. Any other
-   value, or a factory with both `default` and the named key, is reported.
-6. Files without either source are untouched. Specifiers already on `Mui`
-   names are left alone. No prop is renamed or dropped, so no call site is
-   skipped.
-7. Reported per file for hand work, not rewritten: enzyme string selectors
-   naming `Accordion` or `FAQAccordion` as a type, passed to `find`,
-   `filter`, `closest`, `children`, `parents`, `exists`, `is`, `not`,
-   `some` or `every`; namespace imports; re-exports; `require()` /
-   `import()` of either entry.
-8. `.ts` files are parsed with the `ts` parser, others with `tsx`.
-
-Expected residue:
-
-- None by hand in the one consumer. `TutorVideoDialog.jsx` becomes
-  `import {MuiAccordion as Accordion} from '@code-dot-org/component-library/accordion'`.
-  It has no unit test, no snapshot and no enzyme selector.
+- `TutorVideoDialog.jsx` imports `{MuiAccordion}` from
+  `@code-dot-org/component-library/accordion` and renders `<MuiAccordion>`
+  with the same props. It has no unit test, no snapshot and no enzyme
+  selector.
 - No consumer SCSS edit. `.example` (`margin: 12px 0`) lands on the root
   `div`, which carries no emotion styles, as today. `.exampleCode` is on the
   `<pre>`, which no override reaches (`& > p` matches only a `<p>`).
-- Not residue, but checked by hand: the `<pre>` text takes
-  `--text-neutral-primary` from the item root instead of the dialog's
-  inherited color (the dark-text fix), and the summary is now a `<button>`
-  under dashboard's global `button` rules (see Risks).
-
-How to run (build the package first; apps resolves it to `dist/`):
-
-```bash
-cd frontend/packages/component-library
-yarn build
-TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/accordion-to-mui.ts \
-  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register \
-  --dry ../../../apps/src ../../../apps/test/unit
-TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/accordion-to-mui.ts \
-  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register \
-  ../../../apps/src/levelbuilder/lesson-editor/TutorVideoDialog.jsx
-```
+- Checked by hand: the `<pre>` text takes `--text-neutral-primary` from the
+  item root instead of the dialog's inherited color (the dark-text fix),
+  and the summary is now a `<button>` under dashboard's global `button`
+  rules (see Risks).
 
 ## Parity
 
@@ -412,7 +363,7 @@ Chunk size 25. One PR, stacked on the Execute PR.
 | --- | ---------------------------------------------------------- | ----- | ------------- |
 | 1   | `apps/src/levelbuilder/lesson-editor/TutorVideoDialog.jsx` | 1     | 1             |
 
-Per PR: `yarn build` the package, run the codemod on the file, run
+Per PR: `yarn build` the package, edit the import by hand, run
 `tools/hooks/lint.rb origin/staging <branch>`, and check the sample on the
 local studio.
 
@@ -432,14 +383,13 @@ Execute:
 
 - `@deprecated` JSDoc on legacy `Accordion`, `AccordionProps`,
   `FAQAccordion`, `FAQAccordionProps`, `FAQAccordionItem` and both default
-  exports, naming the `Mui` replacement and the codemod.
+  exports, naming the `Mui` replacement.
 - JSDoc on every prop of `MuiAccordionProps`, `MuiAccordionItem` and
   `MuiFAQAccordionProps`.
 - `src/accordion/README.md` and `faqAccordion/README.md`: both APIs, the
   import lines (the `faqAccordion` path now resolves), how to compose a bare
-  MUI `Accordion` with the chevron `expandIcon`, pointers to this plan and
-  the codemod's README entry, Storybook.
-- `codemods/README.md`: an entry for `accordion-to-mui.ts`.
+  MUI `Accordion` with the chevron `expandIcon`, a pointer to this plan,
+  Storybook.
 - `MIGRATION_STATUS.md`: the `accordion` row becomes In Progress, override
   `styleOverrides/accordion.ts` plus the wrapper, pointing at this plan; the
   `STYLE_OVERRIDES` block lists `MuiAccordion`, `MuiAccordionSummary`,
@@ -452,7 +402,7 @@ Migrate (only when the consumer is moved):
 - `.agents/skills/design-system/SKILL.md`: add Accordion to "Use MUI for",
   via `import {MuiAccordion} from '@code-dot-org/component-library/accordion'`.
 - `apps/.eslintrc.js`: two `no-restricted-imports` paths entries, each
-  with a message naming the codemod:
+  with a message naming the `Mui` replacement:
   - `@code-dot-org/component-library/accordion`, `importNames` `default`,
     `Accordion`, `AccordionProps`, `FAQAccordion`, `FAQAccordionProps`.
   - `@code-dot-org/component-library/accordion/faqAccordion`, `importNames`
@@ -500,13 +450,6 @@ Execute records here every place the code departs from this plan.
   and focus-visible are exact. Setting `position: relative` on the legacy
   `<summary>` reproduces most of the difference in DSCO; making MUI's summary
   and root static does not remove it, and the rest was not traced.
-- Codemod transform 5: a mock key written as a method (`Accordion() {}`) is
-  reported, not copied, the same as any value that is neither a name nor a
-  function expression. A factory with two legacy keys for one `Mui` key is
-  reported once and gets no key for it; its other keys are still copied.
-- Codemod transform 4 also rewrites a named `default` specifier from
-  `.../accordion/faqAccordion` (`{default as L}`), as transform 2 does for
-  `.../accordion`.
 
 ## Outcome
 
@@ -525,14 +468,10 @@ READMEs keep their legacy sections until then.
 | --- | -------------------------------------- | ----- |
 | 1   | `apps/src/levelbuilder/lesson-editor/` | 1     |
 
-Codemod: it rewrote one file, `TutorVideoDialog.jsx`, changing only the
-import to `import {MuiAccordion as Accordion} from
-'@code-dot-org/component-library/accordion';`. It left
-`TutorDeepDiveEditorTest.jsx` untouched: the test mounts the dialog through
-`TutorDeepDiveEditor` and imports nothing from the entry point. A dry run
-over both files after the sweep reports 2 unmodified, so the tree is at the
-codemod's fixed point. There was no hand residue: no JSX, SCSS, snapshot or
-selector needed an edit.
+Consumer edit: by hand, in `TutorVideoDialog.jsx`, the import and the JSX
+name only. `TutorDeepDiveEditorTest.jsx` mounts the dialog through
+`TutorDeepDiveEditor` and imports nothing from the entry point, so it is
+untouched. No SCSS, snapshot or selector needed an edit.
 
 Verify: green. ESLint over both files passes. Jest over
 `TutorDeepDiveEditorTest.jsx` passes, 9 of 9. In the worktree the run

@@ -11,8 +11,8 @@ import {MuiFAQAccordion} from '@code-dot-org/component-library/accordion/faqAcco
 ```
 
 The legacy [FAQAccordion](FAQAccordion.tsx) is deprecated and still exported,
-including as the default export. The `accordion-to-mui.ts` entry in
-[codemods/README.md](../../../codemods/README.md) moves a call site over. See
+including as the default export. The props are unchanged, so moving a call
+site is an import edit. See
 [ACCORDION_MIGRATION_TO_MUI.md](../ACCORDION_MIGRATION_TO_MUI.md) and the
 [accordion README](../README.md) for composing a bare MUI `Accordion`.
 

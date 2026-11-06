@@ -18,9 +18,8 @@ import {MuiFAQAccordion} from '@code-dot-org/component-library/accordion/faqAcco
 
 The legacy [Accordion](Accordion.tsx) and
 [FAQAccordion](faqAccordion/FAQAccordion.tsx) are deprecated and still
-exported under their old names, including the default export. The
-`accordion-to-mui.ts` entry in [codemods/README.md](../../codemods/README.md)
-moves a call site over.
+exported under their old names, including the default export. The props
+are unchanged, so moving a call site is an import edit.
 
 A bare `Accordion` from `@mui/material` gets the same look from the theme.
 Pass the chevron as its `expandIcon`; the theme colors and flips it:
