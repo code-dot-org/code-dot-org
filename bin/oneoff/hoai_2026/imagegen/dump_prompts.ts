@@ -7,6 +7,12 @@
 // path is its word ids, so the words the cache was drawn from must not move
 // under it. A copy that differs from the lab's is reported on stderr.
 //
+// A word can be worded differently in the prompt than on its chip:
+// prompt_words.json beside this script maps a word id to its prompt
+// wording ("witch" is drawn as a green-skinned witch). Only the prompt
+// changes; the word's id, and so its path, do not. The lab does not read
+// this file, so these prompts differ from a live picture's on purpose.
+//
 // With --catalog it prints one line per sentence describing its slots and
 // words instead; with --safety, the safety judges' instructions.
 //
@@ -182,8 +188,12 @@ function phraseFilled(phrase: Segment[], chosen: Chosen): boolean {
   );
 }
 
+/** A word id's wording in prompts, where prompt_words.json gives one. */
+let PROMPT_WORDS: {[wordId: string]: string} = {};
+
 /** Mirrors promptText() in sentences.ts: an empty optional slot and the
-    phrase around it drop out, and the gaps they leave close up. */
+    phrase around it drop out, and the gaps they leave close up. A word is
+    worded as PROMPT_WORDS says, where it says. */
 function promptText(segments: Segment[], chosen: Chosen): string {
   const parts: string[] = [];
   const add = (list: Segment[]) =>
@@ -193,7 +203,7 @@ function promptText(segments: Segment[], chosen: Chosen): string {
       } else if ('slot' in segment) {
         const word = chosen[segment.slot];
         if (word) {
-          parts.push(word.text);
+          parts.push(PROMPT_WORDS[word.id] ?? word.text);
         }
       } else if (phraseFilled(segment.phrase, chosen)) {
         add(segment.phrase);
@@ -372,7 +382,11 @@ function dumpCatalog(sentence: Sentence): void {
         id: slot.id,
         label: slot.label,
         required: slot.required,
-        words: slot.words.map(word => ({id: word.id, text: word.text})),
+        words: slot.words.map(word => ({
+          id: word.id,
+          text: word.text,
+          ...(PROMPT_WORDS[word.id] && {prompt: PROMPT_WORDS[word.id]}),
+        })),
       })),
     }),
   );
@@ -399,5 +413,24 @@ if (
   );
 }
 
+const sentences = sentencesFrom(manifest as Manifest);
+
+const promptWordsFile = path.join(__dirname, 'prompt_words.json');
+if (fs.existsSync(promptWordsFile)) {
+  PROMPT_WORDS = JSON.parse(fs.readFileSync(promptWordsFile, 'utf8'));
+  // A typo would otherwise change nothing, silently.
+  const known = new Set(
+    sentences.flatMap(sentence =>
+      sentence.slots.flatMap(slot => slot.words.map(word => word.id)),
+    ),
+  );
+  const unknown = Object.keys(PROMPT_WORDS).filter(id => !known.has(id));
+  if (unknown.length) {
+    throw new Error(
+      `prompt_words.json names word ids no sentence has: ${unknown.join(', ')}`,
+    );
+  }
+}
+
 const dump = process.argv.includes('--catalog') ? dumpCatalog : dumpJobs;
-sentencesFrom(manifest as Manifest).forEach(dump);
+sentences.forEach(dump);

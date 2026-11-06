@@ -253,7 +253,8 @@ if options[:list_words]
     puts "#{entry['sentenceId']} (#{kind}#{entry['animated'] ? ', animated' : ''}): #{entry['example']}"
     entry['slots'].each do |slot|
       words = slot['words'].map do |word|
-        word['id'] == word['text'] ? word['id'] : "#{word['id']} (#{word['text']})"
+        shown = word['id'] == word['text'] ? word['id'] : "#{word['id']} (#{word['text']})"
+        word['prompt'] ? "#{shown} (prompt: #{word['prompt']})" : shown
       end
       words.unshift(EMPTY_WORD_ID) unless slot['required']
       shown = slot['label'] == slot['id'] ? '' : " (shown as \"#{slot['label']}\")"

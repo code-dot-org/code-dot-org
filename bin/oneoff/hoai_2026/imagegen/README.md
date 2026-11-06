@@ -88,6 +88,16 @@ per filled sentence; the scripts run it through `npx tsx`, which needs Node
 Those modules, and aichat's `safetyPrompts.ts`, must stay free of `@cdo/...`
 imports and browser APIs, or `dump_prompts.ts` stops working.
 
+`prompt_words.json` overrides the words a prompt says for a word id, here
+only: `{"witch": "green-skinned witch"}` draws "A green-skinned witch" where
+the lab would say "A witch". The id, the path and the word a student picks
+stay `witch`. The lab does not read this file, so until it says the same
+words, a live picture and a cached one are drawn from different prompts.
+The key colour follows the prompt too: a purple or pink witch, which the
+lab keys on green, is drawn on magenta here. `--list-words` shows each
+override. Changing the file makes the drawings it touches stale, as any
+prompt change does: the next run draws them again.
+
 ## Drawing
 
 ```
