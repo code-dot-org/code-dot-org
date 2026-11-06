@@ -130,7 +130,8 @@ function readEditedMode(): EditedMode {
 }
 
 /** Whether two generation records are of one picture: a verdict judges
-    the picture without changing it. */
+    the picture without changing it. Every other picture differs by its
+    seed, or by its cache variant. */
 function samePicture(
   a: ImageProps['generation'],
   b: ImageProps['generation']
