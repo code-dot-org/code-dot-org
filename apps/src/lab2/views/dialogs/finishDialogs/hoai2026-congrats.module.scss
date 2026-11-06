@@ -82,7 +82,9 @@
   background: var(--brand-purple-95);
 }
 
+// Full width, white on the purple card.
 .students .open {
+  width: 100%;
   background: var(--background-neutral-white-fixed);
   color: var(--brand-purple-50);
 
@@ -173,6 +175,13 @@
   padding: var(--offer-padding);
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 12px;
+}
+
+// Sized to its words, like the offers' other buttons; the share dialog
+// stretches it.
+.copyLink {
+  width: auto;
+  margin-top: 0;
 }
 
 .offerTitle {

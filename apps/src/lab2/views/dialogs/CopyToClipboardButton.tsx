@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -16,12 +17,14 @@ export const CopyToClipboardButton: React.FunctionComponent<{
   projectType: ProjectType;
   /** The button's text, "Copy link to project" by default. */
   label?: string;
+  className?: string;
   /** The icon before the text until the link is copied. */
   iconName?: string;
 }> = ({
   shareUrl,
   projectType,
   label = i18n.copyLinkToProject(),
+  className,
   iconName = 'clipboard',
 }) => {
   const [copiedAt, setCopiedAt] = useState<number | null>(null);
@@ -52,7 +55,7 @@ export const CopyToClipboardButton: React.FunctionComponent<{
         variant="outlined"
         color="secondary"
         size="medium"
-        className={moduleStyles.shareDialogButton}
+        className={classNames(moduleStyles.shareDialogButton, className)}
         onClick={handleCopyToClipboard}
         type="button"
         startIcon={

@@ -184,6 +184,7 @@ const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
               projectType={projectType}
               label="Copy link"
               iconName="link"
+              className={styles.copyLink}
             />
           ) : (
             <Typography variant="body2" className={styles.offerText}>
