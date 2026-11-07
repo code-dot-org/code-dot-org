@@ -1,0 +1,79 @@
+@use '@cdo/apps/pixelEditor/dialogChrome' as chrome;
+
+.dialogHost {
+  display: contents;
+
+  @include chrome.theme;
+
+  // A near-black panel on the dark theme, to match the design.
+  [data-theme='Dark'] & {
+    --dialog-panel-bg: var(--background-neutral-primary);
+    --dialog-inset-bg: var(--background-neutral-tertiary);
+  }
+}
+
+.dialogHost .dialog {
+  @include chrome.panel;
+
+  width: 450px;
+}
+
+.header {
+  padding: 16px 48px;
+  border-bottom: 1px solid chrome.$border-subtle;
+  text-align: center;
+}
+
+// Lighter and more spaced out than overline1, to match the design.
+.header .headerLabel {
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.content {
+  padding: 24px;
+  text-align: center;
+}
+
+.title {
+  margin: 20px 0 4px;
+}
+
+.illustration {
+  aspect-ratio: 9 / 4;
+  border: 2px dashed var(--borders-neutral-primary);
+  border-radius: 6px;
+}
+
+.tip {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--dialog-inset-bg);
+  font-weight: 600;
+}
+
+.tip + .tip {
+  margin-top: 12px;
+}
+
+// The brand text color is white on the dark theme, so these use the purple
+// shades directly.
+.buttonName {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375em;
+  margin-left: 0.125em;
+  color: var(--brand-purple-50);
+
+  [data-theme='Dark'] & {
+    color: var(--brand-purple-20);
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 24px;
+  border-top: 1px solid chrome.$border-subtle;
+}
