@@ -1,5 +1,10 @@
 import {Components, Theme} from '@mui/material/styles';
 
+import {
+  ACCORDION_DETAILS_OVERRIDES,
+  ACCORDION_OVERRIDES,
+  ACCORDION_SUMMARY_OVERRIDES,
+} from './accordion';
 import {BREADCRUMBS_OVERRIDES} from './breadcrumbs';
 import {BUTTON_OVERRIDES} from './button';
 import {FOOTER_OVERRIDES} from './footer';
@@ -23,4 +28,7 @@ export const STYLE_OVERRIDES: Components<Theme> = {
   MuiIconButton: ICON_BUTTON_OVERRIDES,
   MuiFooter: FOOTER_OVERRIDES,
   MuiTooltip: TOOLTIP_OVERRIDES,
+  MuiAccordion: ACCORDION_OVERRIDES,
+  MuiAccordionSummary: ACCORDION_SUMMARY_OVERRIDES,
+  MuiAccordionDetails: ACCORDION_DETAILS_OVERRIDES,
 };
