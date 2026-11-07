@@ -705,9 +705,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   placement="right"
                   leaveDelay={hideTooltipDelayMs}
                   disableInteractive
-                  slotProps={
-                    theme ? {tooltip: {'data-theme': theme}} : undefined
-                  }
                 >
                   <MuiIconButton
                     variant="text"
@@ -742,9 +739,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   placement="right"
                   leaveDelay={hideTooltipDelayMs}
                   disableInteractive
-                  slotProps={
-                    theme ? {tooltip: {'data-theme': theme}} : undefined
-                  }
                   key={`tooltip-${tab}`}
                 >
                   <div
@@ -797,7 +791,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             id={resourcePanelLinksElementId}
             className={classNames(styles.bottomTabs)}
           >
-            <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
+            <ResourcePanelExtraLinks levelId={levelId} />
             {footerButtons}
             {documentationUrl && (
               <IconButtonWithTooltip
@@ -812,8 +806,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 size="small"
               />
             )}
-            {aiTutorVisible && <DisclaimerButton theme={theme} />}
-            <CopyrightButton theme={theme} />
+            {aiTutorVisible && <DisclaimerButton />}
+            <CopyrightButton />
             <div ref={settingsButtonRef}>
               <IconButtonWithTooltip
                 id="settings"

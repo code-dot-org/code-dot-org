@@ -1,5 +1,4 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {keyboardOnlyTooltipProps} from '@code-dot-org/component-library/tooltip';
 import {ProjectFile} from '@codebridge/types';
@@ -64,8 +63,6 @@ const FileTab = ({
   const {iconName, iconStyle, iconClassName, isActive, className} =
     useFileTabState(file);
   const dispatch = useAppDispatch();
-  // Optional: FileTabs tests have no ThemeProvider.
-  const {theme} = useTheme(true);
   const isAiTutorVersion = useAppSelector(
     state => state.lab2Project.viewingAiTutorVersion
   );
@@ -146,8 +143,6 @@ const FileTab = ({
       <Tooltip
         title={showReorderHint ? 'Press M to reorder · Esc to cancel' : ''}
         placement="bottom-start"
-        // Portal is document.body, outside the themed subtree.
-        slotProps={{tooltip: {'data-theme': theme}}}
         {...keyboardOnlyTooltipProps}
       >
         <div

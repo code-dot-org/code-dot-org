@@ -415,8 +415,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       title="Enter to edit · Esc to exit"
       open={showKeyboardHint}
       placement="top"
-      // The bubble portals to document.body, outside the themed subtree.
-      slotProps={{tooltip: {'data-theme': theme}}}
       {...keyboardOnlyTooltipProps}
     >
       <div
