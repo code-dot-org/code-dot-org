@@ -197,7 +197,7 @@ class StatsigReporter {
    */
   shouldPutRecord(alwaysPut) {
     // Checked before alwaysPut so the feature flag beats the manual override.
-    if (!DCDO.get('statsig-enabled', true)) {
+    if (!DCDO.get('statsig-plugin-enabled', true)) {
       return false;
     }
     if (alwaysPut) {
