@@ -23,7 +23,6 @@ import {HTMLPreview} from '@cdo/apps/weblab2/htmlPreview/HTMLPreview';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
 import DebugPanel from '../debugPanel/DebugPanel';
-import {hidesViewModeToggle} from '../showcase';
 import {ViewMode, Weblab2LevelProperties} from '../types';
 import {setViewMode} from '../weblab2Redux';
 
@@ -50,8 +49,9 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   const hideWorkspaceForWidgetView = !getIsStartMode() && isWidgetView;
   const levelProperties = useCodebridgeContext()
     .levelProperties as Weblab2LevelProperties;
+  // A showcase has no other mode to toggle to.
   const hideViewModeToggle =
-    hideWorkspaceForWidgetView || hidesViewModeToggle(levelProperties);
+    hideWorkspaceForWidgetView || !!levelProperties.showcase;
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
