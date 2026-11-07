@@ -114,10 +114,13 @@ WORKDIR /src
 # assets precompiled below. With them off, as in CI's unit-test job, Rails
 # compiles each dev bundle through Sprockets on first request, which takes
 # minutes per page on the audit machine. The queue adapter is the unit-test
-# job's, so rake tasks start no job workers.
+# job's, so rake tasks start no job workers. The session cookie is otherwise
+# Secure, which a browser never returns over the image's plain HTTP, so every
+# sign-in would fail its CSRF check.
 RUN cp locals.yml.default locals.yml \
     && printf '%s\n' '' '# oss-scanner: built assets, as in CI UI tests; queue adapter from CI_JOB=unit_tests' \
          'optimize_rails_assets: true' 'optimize_webpack_assets: true' 'active_job_queue_adapter: :test' \
+         '# oss-scanner: plain HTTP, so the session cookie must not be Secure' 'no_https_store: true' \
          >> locals.yml
 
 # Git LFS. The scanner's clone has LFS *pointer files*, not content: about
