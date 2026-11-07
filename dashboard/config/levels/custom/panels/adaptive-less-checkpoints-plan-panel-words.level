@@ -1,11 +1,44 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-11-06T04:51:58.000Z",
   "level_num": "custom",
   "user_id": 18754,
   "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Priya’s plan\nPriya is making a page to save her neighborhood park.\n\n- Theme: Save Maple Park\n- Audience: Neighbors\n- Purpose: Get people to sign a petition\n- Look & Feel: Hopeful and warm",
+        "imageUrl": "https://images.code.org/66ce3d6cc909f3b9bbd60c4279c26068-01-priya-start-1600.png",
+        "key": "adaptive-less-checkpoints-plan-panel-words-79326ee0-7678-4853-a478-b11db7a3f323"
+      },
+      {
+        "text": "###The AI’s first try\nThe AI built a page. It has a hopeful headline and a warm intro. The button says Submit.",
+        "imageUrl": "https://images.code.org/22c3bf1346290b7889af3cb97dbfc330-02-priya-page-1600.png",
+        "key": "adaptive-less-checkpoints-plan-panel-words-b91a0613-e4c8-4f71-b049-3644ed36e60d"
+      },
+      {
+        "text": "###Priya checks her plan\nPriya checks the page against her plan. The purpose doesn’t fit. \n\nA button that says Submit doesn’t tell neighbors what they’re signing.",
+        "imageUrl": "https://images.code.org/6440b96c5009b3c1eb3c877466d411ed-03-priya-review-1600.png",
+        "key": "adaptive-less-checkpoints-plan-panel-words-66090432-4a76-4e54-9810-8b4da0e1f2f4"
+      },
+      {
+        "text": "Priya’s button just says Submit, but her plan says the page should get people to sign a petition. \n\n**What advice would you give Priya?**\n\n- A. “Ask the AI to make the whole page more persuasive for your neighbors.”\n- B. “Ask the AI to make the headline bigger and a brighter green.”\n- C. “Ask the AI to make the call-to-action say Sign the petition.” ",
+        "imageUrl": "https://images.code.org/b7ceb7dff93139e347e0eebb59518667-blue-background-1600x900 (1).png",
+        "key": "adaptive-less-checkpoints-plan-panel-words-ff5b6e8b-ada9-4c1c-8d70-44fc030697e6",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "The correct answer is C. A call-to-action that says Sign the petition tells neighbors exactly what to do. \n\n---\n\n**Tip:** When the words are off, name the part and give the AI the exact words you want.\n",
+        "imageUrl": "https://images.code.org/3f1aafd12b811dedbba2d4cd643d5664-Clear prompts spark bright ideas.png",
+        "key": "adaptive-less-checkpoints-plan-panel-words-5c62df09-20e1-4981-a5e7-eb8adfa24c6d",
+        "layout": "text-top-center"
+      }
+    ],
+    "use_links": "false"
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2026-11-06 23:55:04 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 23:56:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-07 00:05:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>
