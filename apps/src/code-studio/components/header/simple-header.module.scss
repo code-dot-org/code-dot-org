@@ -1,7 +1,7 @@
 $inset: 2px;
 
-// Bootstrap's large breakpoint, below which the bar keeps only the current
-// bubble, as the library's ProgressWidget does.
+// Below this width the bar keeps only the current bubble, as the library's
+// ProgressWidget does at the same width.
 $narrow: 991.98px;
 
 // The same fade HeaderMiddle's row has; keyframes are scoped to the module.
