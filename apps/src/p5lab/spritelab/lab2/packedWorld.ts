@@ -4,7 +4,7 @@
 // levelbuilder saves them, so nothing in between sees the packed form.
 
 import {Scene, Sources} from './types';
-import {isLegacyWorld, trimLegacyWorld, World, WorldCell} from './world';
+import {World, WorldCell} from './world';
 
 export interface PackedWorld {
   /** Cells per side of the grid. */
@@ -76,28 +76,16 @@ export function packWorld(world: World): PackedWorld | World {
   return {size, rows, legend};
 }
 
-/** The sources with every packed world expanded and every oversize legacy
-    grid trimmed to its playfield (world.ts); the same object when there is
-    nothing to do, so memoized readers keep their identity. A trimmed world
-    is what the next save writes, so a project is rewritten on its first
-    change. */
+/** The sources with every packed world expanded; the same object when none
+    is packed, so memoized readers keep their identity. */
 export function unpackSources<T extends Sources>(sources: T): T {
   const scenes = sources.scenes;
-  const needsWork = (scene: Scene) =>
-    isPackedWorld(scene.world) || isLegacyWorld(scene.world);
-  if (!scenes?.some(needsWork)) {
+  if (!scenes?.some(scene => isPackedWorld(scene.world))) {
     return sources;
   }
   const unpacked: Scene[] = scenes.map(scene =>
-    needsWork(scene)
-      ? {
-          ...scene,
-          world: trimLegacyWorld(
-            isPackedWorld(scene.world)
-              ? unpackWorld(scene.world)
-              : (scene.world as World)
-          ),
-        }
+    isPackedWorld(scene.world)
+      ? {...scene, world: unpackWorld(scene.world)}
       : scene
   );
   return {...sources, scenes: unpacked};

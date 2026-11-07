@@ -45,24 +45,28 @@ describe('world', () => {
       image: 'ice',
       kind: 'block',
     });
-    expect(sceneGridSize(legacy)).toBe(DEFAULT_SCENE_GRID_SIZE);
+    expect(sceneGridSize(trimmed)).toBe(DEFAULT_SCENE_GRID_SIZE);
     // The 8-cell era stored 24 per side.
     expect(trimLegacyWorld(oversizeWorld(LEGACY_SCENE_SIZE)).grid).toHaveLength(
       LEGACY_SCENE_SIZE
     );
   });
 
-  it('leaves a grid alone unless it is a legacy one', () => {
+  it('trims by shape alone, dropping anything outside the corner', () => {
+    // Nothing outside the corner was ever shown or run.
+    const painted = oversizeWorld(DEFAULT_SCENE_GRID_SIZE);
+    painted.grid[DEFAULT_SCENE_GRID_SIZE][0] = {image: 'ice', kind: 'block'};
+    expect(isLegacyWorld(painted)).toBe(true);
+    expect(trimLegacyWorld(painted).grid.flat().filter(Boolean)).toHaveLength(
+      0
+    );
+  });
+
+  it('leaves a grid alone unless it has the legacy shape', () => {
     const current = createEmptyWorld();
     expect(isLegacyWorld(current)).toBe(false);
     expect(trimLegacyWorld(current)).toBe(current);
     expect(trimLegacyWorld(undefined)).toBeUndefined();
-    // A placement outside the corner means the grid is not the legacy
-    // shape, whatever its size.
-    const painted = oversizeWorld(DEFAULT_SCENE_GRID_SIZE);
-    painted.grid[DEFAULT_SCENE_GRID_SIZE][0] = {image: 'ice', kind: 'block'};
-    expect(isLegacyWorld(painted)).toBe(false);
-    expect(trimLegacyWorld(painted)).toBe(painted);
     // Only the playfields the lab has had count: a 12-cell world is not a
     // 4-cell legacy one.
     expect(isLegacyWorld(createEmptyWorld(12))).toBe(false);
@@ -106,18 +110,6 @@ describe('world', () => {
       [
         'setDefaultSpriteSize(20);',
         'makeNewGroupSprite("ice", \'walls\', {x: 10, y: 10});',
-        '',
-      ].join('\n')
-    );
-  });
-
-  it('compiles a legacy oversize grid at its playfield size', () => {
-    const legacy = oversizeWorld(DEFAULT_SCENE_GRID_SIZE);
-    legacy.grid[DEFAULT_SCENE_GRID_SIZE - 1][0] = {image: 'ice', kind: 'block'};
-    expect(compileWorldPrelude(legacy)).toBe(
-      [
-        'setDefaultSpriteSize(40);',
-        'makeNewGroupSprite("ice", \'walls\', {x: 20, y: 380});',
         '',
       ].join('\n')
     );
@@ -172,18 +164,6 @@ describe('world', () => {
     const kept = resizeWorld(painted, LEGACY_SCENE_SIZE);
     expect(sceneGridSize(kept)).toBe(DEFAULT_SCENE_GRID_SIZE);
     expect(kept.grid[0][0]).toEqual({image: 'ice', kind: 'block'});
-  });
-
-  it('resizes a legacy oversize grid from its playfield, not its storage', () => {
-    const legacy = oversizeWorld(LEGACY_SCENE_SIZE);
-    legacy.grid[LEGACY_SCENE_SIZE - 1][0] = {image: 'ice', kind: 'block'};
-    const grown = resizeWorld(legacy, DEFAULT_SCENE_GRID_SIZE);
-    expect(sceneGridSize(grown)).toBe(DEFAULT_SCENE_GRID_SIZE);
-    expect(grown.grid).toHaveLength(DEFAULT_SCENE_GRID_SIZE);
-    expect(grown.grid[DEFAULT_SCENE_GRID_SIZE - 1][0]).toEqual({
-      image: 'ice',
-      kind: 'block',
-    });
   });
 
   it('returns the same world when the size already matches', () => {

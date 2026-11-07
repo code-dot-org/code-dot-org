@@ -11,6 +11,7 @@ import {
 } from './blockly/blockDefinitions/whenRun';
 import {forEachSavedBlock} from './scenesApi';
 import {Scene, SerializedAnimationList} from './types';
+import {isLegacyWorld, trimLegacyWorld} from './world';
 
 // when_run -> spritelab2_whenRun (2026-08-29): the lab's own hat block.
 const RENAMED_BLOCK_TYPES: {[type: string]: string} = {
@@ -31,9 +32,22 @@ export function migrateBlockTypes(source: unknown): boolean {
   return changed;
 }
 
+// Worlds stored at three times the playfield per side (2026-11): see
+// trimLegacyWorld.
+function migrateWorld(scene: Scene): boolean {
+  if (!isLegacyWorld(scene.world)) {
+    return false;
+  }
+  scene.world = trimLegacyWorld(scene.world);
+  return true;
+}
+
 /** Applied to a project's scenes on load, in place. */
 export function migrateScenes(scenes: Scene[]): boolean {
-  return scenes.map(scene => migrateBlockTypes(scene.source)).some(Boolean);
+  return scenes
+    .map(scene => [migrateBlockTypes(scene.source), migrateWorld(scene)])
+    .flat()
+    .some(Boolean);
 }
 
 // generation.itemType -> generation.imageType (2026-08-17).

@@ -13,33 +13,6 @@ const legend = {
 };
 
 describe('packedWorld', () => {
-  it('trims a legacy oversize world, packed or stored as a grid', () => {
-    const packed = {size: 30, rows: ['', 'B'], legend};
-    const stored = {
-      grid: Array.from({length: 30}, () =>
-        Array.from({length: 30}, () => null)
-      ),
-    };
-    const sources = unpackSources({
-      source: '',
-      scenes: [
-        {id: 'a', name: 'A', source: '', world: packed as never},
-        {id: 'b', name: 'B', source: '', world: stored},
-      ],
-    } as never) as {scenes: {world: {grid: unknown[][]}}[]};
-    expect(sources.scenes[0].world.grid).toHaveLength(10);
-    expect(sources.scenes[0].world.grid[1][0]).toEqual(legend.B);
-    expect(sources.scenes[1].world.grid).toHaveLength(10);
-  });
-
-  it('returns the same sources when nothing needs expanding or trimming', () => {
-    const sources = {
-      source: '',
-      scenes: [{id: 'a', name: 'A', source: '', world: {grid: [[null]]}}],
-    } as never;
-    expect(unpackSources(sources)).toBe(sources);
-  });
-
   it('expands rows into a square grid, padding what is left off', () => {
     const {grid} = unpackWorld({size: 4, rows: ['.S', 'BBB'], legend});
     expect(grid).toHaveLength(4);

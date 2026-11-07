@@ -8,10 +8,9 @@ import {noteImageReference} from './imageReferences';
 // Cells per side of the playfield, for a world being created now. The stored
 // grid is the playfield: its side is the playfield's.
 export const DEFAULT_SCENE_GRID_SIZE = 10;
-// Worlds saved before this were stored at three times the playfield per
-// side, ahead of a scrollable playfield that never came; only the top-left
-// corner was ever shown or run. trimLegacyWorld cuts such a grid back. The
-// playfield was 8 cells when the lab shipped and 10 since.
+// A legacy grid is three times a playfield the lab has had per side (8 at
+// first, 10 since) with only its top-left corner in use; trimLegacyWorld
+// keeps that corner. Applied as a project's scenes are read (migrateSources).
 const LEGACY_WORLD_MULTIPLE = 3;
 const LEGACY_PLAYFIELD_SIZES = [8, DEFAULT_SCENE_GRID_SIZE];
 
@@ -34,29 +33,20 @@ export interface World {
  * two levels disagree about the same stored placements.
  */
 export function sceneGridSize(world?: World): number {
-  const rows = trimLegacyWorld(world)?.grid?.length ?? 0;
+  const rows = world?.grid?.length ?? 0;
   return rows || DEFAULT_SCENE_GRID_SIZE;
 }
 
-/** Whether a grid is an oversize legacy one: three times a playfield the
-    lab has had per side, with nothing outside the top-left corner, where
-    nothing could be placed. */
+/** Whether a grid has the legacy shape: three times a playfield the lab has
+    had per side. Nothing outside the corner was ever shown or run, so the
+    shape alone decides. */
 export function isLegacyWorld(world?: World): boolean {
-  const grid = world?.grid;
-  const side = grid?.length ?? 0;
-  const corner = side / LEGACY_WORLD_MULTIPLE;
-  if (!LEGACY_PLAYFIELD_SIZES.includes(corner)) {
-    return false;
-  }
-  return grid!.every(
-    (cells, row) =>
-      cells.length === side &&
-      cells.every((cell, col) => !cell || (row < corner && col < corner))
-  );
+  const side = world?.grid?.length ?? 0;
+  return LEGACY_PLAYFIELD_SIZES.includes(side / LEGACY_WORLD_MULTIPLE);
 }
 
-/** The world cut back to its playfield, when it is a legacy oversize grid;
-    the same world otherwise, so memoized readers keep their identity. */
+/** The world cut back to its playfield when its grid has the legacy shape;
+    the same world otherwise. */
 export function trimLegacyWorld(world: World): World;
 export function trimLegacyWorld(world?: World): World | undefined;
 export function trimLegacyWorld(world?: World): World | undefined {
@@ -65,6 +55,7 @@ export function trimLegacyWorld(world?: World): World | undefined {
   }
   const corner = world.grid.length / LEGACY_WORLD_MULTIPLE;
   return {
+    ...world,
     grid: world.grid.slice(0, corner).map(cells => cells.slice(0, corner)),
   };
 }
@@ -100,7 +91,6 @@ export function resizeWorld(
   if (!world?.grid?.length) {
     return createEmptyWorld(sceneSize);
   }
-  world = trimLegacyWorld(world);
   const side = sceneSize;
   const current = world.grid.length;
   if (current === side) {
@@ -152,7 +142,6 @@ export function paintWorldCell(
 // draw on top. Placed items are cell-sized: the prelude pins the default
 // sprite size to one cell, which platformer levels already use.
 export function compileWorldPrelude(world?: World): string {
-  world = trimLegacyWorld(world);
   const rows = world?.grid ?? [];
   const sceneSize = sceneGridSize(world);
   const cell = cellSize(sceneSize);
