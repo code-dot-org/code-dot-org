@@ -16,7 +16,7 @@ function renderBar(props = {}) {
       scenes={SCENES}
       activeSceneId="b"
       onSelectScene={onSelectScene}
-      onCreateScene={jest.fn()}
+      onNewScene={jest.fn()}
       onManageScenes={onManageScenes}
       rightExtra={<span>extra</span>}
       {...props}
