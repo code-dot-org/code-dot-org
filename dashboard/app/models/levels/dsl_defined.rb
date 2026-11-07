@@ -161,8 +161,8 @@ class DSLDefined < Level
 
   def existing_filename
     # Find a file in [scripts_dir]/**/*.[class]* containing the string "name '[name]'"
-    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* #{Rails.root}/#{scripts_dir} --color=never"
-    `#{grep_string}`.chomp
+    grep_args = ['grep', '-lir', "name '#{name}'", "--include=*.#{self.class.to_s.underscore}*", "#{Rails.root}/#{scripts_dir}", '--color=never']
+    IO.popen(grep_args, &:read).chomp
   end
 
   def canonical_filename
@@ -191,6 +191,10 @@ class DSLDefined < Level
   end
 
   def clone_with_name(new_name, editor_experiment: nil)
+    # new_name is spliced into a single-quoted literal in DSL source that is evaluated below.
+    unless new_name.is_a?(String) && new_name.match?(/\A[A-Za-z0-9 !"&()+,\-.:=?_|]{1,70}\z/)
+      raise ArgumentError, "New level name must be 1-70 letters, numbers, spaces, or !\"&()+,-.:=?_|"
+    end
     raise ArgumentError, "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
     old_dsl = dsl_text
     new_dsl = old_dsl.try(:sub, "name '#{name}'", "name '#{new_name}'")
