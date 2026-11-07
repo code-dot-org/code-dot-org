@@ -272,19 +272,6 @@ export default function useBlocklyWorkspace({
     };
   }, [enabled, sharedBlocks, toolboxDefinition, prepareToolbox]);
 
-  // Catalog changes alter which blocks are hidden without changing the
-  // authored toolbox definition. Update the flyout in place so adding a block
-  // from Discover Blocks does not recreate the workspace.
-  useEffect(() => {
-    const workspace = workspaceRef.current;
-    if (!workspace || isToolboxMode || isStartMode || !toolboxDefinition) {
-      return;
-    }
-    const toolbox = prepareToolbox(toolboxDefinition);
-    workspace.updateToolbox(toolbox);
-    toolboxRef.current = toolbox;
-  }, [hiddenBlockTypes, prepareToolbox, toolboxDefinition]);
-
   // Update workspace theme on display-theme change. Resolve through
   // getUserTheme rather than applying cdoDark/cdoTheme directly: a user
   // with a persisted accessibility theme (e.g. high contrast) must get

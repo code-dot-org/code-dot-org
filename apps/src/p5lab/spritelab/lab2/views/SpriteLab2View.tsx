@@ -487,12 +487,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
   );
   // Everything the toolbox leaves out.
-  const hiddenBlockTypes = useMemo(() => {
-    const hidden = isLevelbuilder
-      ? new Set(heldBackBlocks)
-      : new Set([...heldBackBlocks, ...AI_BLOCK_TYPES]);
-    return hidden;
-  }, [heldBackBlocks, isLevelbuilder]);
+  const hiddenBlockTypes = useMemo(
+    () =>
+      isLevelbuilder
+        ? heldBackBlocks
+        : new Set([...heldBackBlocks, ...AI_BLOCK_TYPES]),
+    [heldBackBlocks, isLevelbuilder]
+  );
   const [showBlockCatalog, setShowBlockCatalog] = useState(false);
   // Dismissing the catalog, not opening it, is what counts as seen: an
   // opening cut short (a Start Over that leaves the level, a reload) comes
@@ -505,9 +506,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [currentSources.blockCatalogSeen, patchSources]);
   const addCatalogBlock = useCallback(
     (type: string) => {
-      const typesToAdd = chosenBlockSet.has(type) ? [] : [type];
-      if (typesToAdd.length > 0) {
-        patchSources({chosenBlocks: [...chosenBlockSet, ...typesToAdd]});
+      if (!chosenBlockSet.has(type)) {
+        patchSources({chosenBlocks: [...chosenBlockSet, type]});
       }
     },
     [chosenBlockSet, patchSources]

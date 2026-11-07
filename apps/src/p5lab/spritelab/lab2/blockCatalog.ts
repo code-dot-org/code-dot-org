@@ -43,11 +43,6 @@ export function blockTypesIn(node: unknown, shadow = false): string[] {
 
 const unique = (types: string[]) => [...new Set(types)];
 
-const CATALOG_ONLY_BLOCK_TYPES = [
-  'spritelab2_setPlatformJumpHeight',
-  'spritelab2_setPlatformGravityDirection',
-];
-
 /** The block types a level offers a student: its toolbox, plus the blocks
     add_blocks places in the workspace before the student starts. */
 export function offeredBlockTypes(level: SpriteLab2LevelProperties): string[] {
@@ -83,11 +78,7 @@ export function newBlockTypes(
   earlier: readonly SpriteLab2LevelProperties[]
 ): string[] {
   const required = new Set(earlier.flatMap(requiredBlockTypes));
-  const offered = offeredBlockTypes(level);
-  if (level.blockCatalog) {
-    offered.push(...CATALOG_ONLY_BLOCK_TYPES);
-  }
-  return unique(offered).filter(type => !required.has(type));
+  return offeredBlockTypes(level).filter(type => !required.has(type));
 }
 
 /**
