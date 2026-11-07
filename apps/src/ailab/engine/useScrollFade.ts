@@ -1,8 +1,7 @@
 import {useEffect, type RefObject} from 'react';
 
-// Marks the scroller's parent with data-fade-top and data-fade-bottom while
-// there is more to scroll to, and sets --scrollbar-width to keep the fades
-// clear of the scrollbar. Pair it with the scroll-fade mixin.
+// Sets data-fade-top, data-fade-bottom and --scrollbar-width on the scroller's
+// parent, for the scroll-fade mixin.
 export function useScrollFade(scrollRef: RefObject<HTMLElement>) {
   useEffect(() => {
     const el = scrollRef.current;

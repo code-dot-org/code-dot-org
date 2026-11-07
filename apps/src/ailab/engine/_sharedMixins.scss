@@ -27,7 +27,7 @@
   border-radius: var(--shape-md);
 }
 
-// Fades the top and bottom edges of a scroller inside this element, driven by useScrollFade.
+// Fades a scroller's edges inside this element; useScrollFade sets the state.
 @mixin scroll-fade {
   position: relative;
 
@@ -35,8 +35,7 @@
   &::after {
     content: '';
     position: absolute;
-    right: var(--scrollbar-width);
-    left: 0;
+    inset-inline: 0 var(--scrollbar-width);
     z-index: 1;
     height: 24px;
     pointer-events: none;
