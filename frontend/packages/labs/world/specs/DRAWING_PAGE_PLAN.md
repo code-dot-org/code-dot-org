@@ -119,4 +119,5 @@ its handlers and nothing else.
   November 2026: a step's, a block's, an event's and a tween's page each
   has Delete in the breadcrumb bar ("Delete step"). It asks as the Blocks
   tab does, and on yes goes back to that tab with focus on the Edit that
-  took its row, or on New. A rule's step page has none yet.
+  took its row, or on New. A rule's step page has the same Delete, and
+  goes back to the rule, or to the trait that owns the step.

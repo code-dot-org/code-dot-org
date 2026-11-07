@@ -108,6 +108,44 @@ describe('SpritePickerDialog', () => {
     ).toBeEnabled();
   });
 
+  it('opens with focus on the tile that is drawn now', () => {
+    open({current: {sprite: 'coinSpin.png', cell: 2}});
+
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'coinSpin.png, cell 3'}),
+    );
+  });
+
+  it('leaves focus where the learner took it when the picture decodes late', () => {
+    const {rerender} = render(
+      <SpritePickerDialog
+        sprites={['player.png']}
+        images={{}}
+        sheets={{}}
+        current={{sprite: 'player.png'}}
+        onPick={vi.fn()}
+        onImport={vi.fn()}
+        onCancel={vi.fn()}
+      />,
+    );
+    screen.getByRole('button', {name: 'Cancel'}).focus();
+
+    rerender(
+      <SpritePickerDialog
+        sprites={['player.png']}
+        images={{'player.png': image(1)}}
+        sheets={{}}
+        current={{sprite: 'player.png'}}
+        onPick={vi.fn()}
+        onImport={vi.fn()}
+        onCancel={vi.fn()}
+      />,
+    );
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'Cancel'}),
+    );
+  });
+
   it('waits for the primary button rather than picking on a click', () => {
     const onPick = vi.fn();
     open({onPick});

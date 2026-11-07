@@ -228,7 +228,9 @@ names it by its owner and place (`ruleSteps.stepId`).
 
 The page's bar holds the step's name and when it runs: a trait's steps
 take its subject's moments and the world's `sense`; the rule's own take any,
-or every tick. Below is the workspace of what it does, hung below a head
+or every tick. Delete in the breadcrumb bar asks, as the list's does, and
+on yes goes back to the rule, or the trait, with focus on the Edit that
+took the step's row, or on New step. Below is the workspace of what it does, hung below a head
 (`stepHead`) that says that moment — "each frame, during push, for each
 actor with Affected by Gravity". The head is made only on the page, as a
 member's is, and the workspace goes back into the step as its body.

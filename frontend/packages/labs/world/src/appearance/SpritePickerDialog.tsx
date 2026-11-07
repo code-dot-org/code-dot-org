@@ -45,7 +45,7 @@
 // So `Done` keeps it and closes, and `Use this picture` keeps it and uses it.
 
 import {Typography} from '@mui/material';
-import {useMemo, useState} from 'react';
+import {useEffect, useMemo, useRef, useState} from 'react';
 
 import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -190,6 +190,24 @@ export const SpritePickerDialog = ({
   const [chosen, setChosen] = useState(keyOf(current));
   const picked = tiles.find(tile => tile.key === chosen);
 
+  // The dialog's own first focus is the first action; the picture it holds now
+  // may decode later, and takes focus only if the learner has not moved on.
+  const palette = useRef<HTMLUListElement>(null);
+  const holding = useRef<HTMLButtonElement>(null);
+  const focusPlaced = useRef(false);
+  useEffect(() => {
+    const first = palette.current?.querySelector('button');
+    const at = document.activeElement;
+    if (
+      !focusPlaced.current &&
+      holding.current &&
+      (at === first || at === document.body || at === null)
+    ) {
+      holding.current.focus();
+      focusPlaced.current = true;
+    }
+  }, [tiles]);
+
   /** Whether the palette has been given over to describing one. */
   const [describing, setDescribing] = useState(false);
   /** A picture drawn and not yet written, which the confirm writes. */
@@ -309,7 +327,7 @@ export const SpritePickerDialog = ({
             />
           ) : (
             <>
-              <ul className={styles.palette}>
+              <ul ref={palette} className={styles.palette}>
                 {action('import', 'download', 'Import', onImport)}
                 {onNew && action('new', 'plus', 'New', onNew)}
                 {onUpload && action('upload', 'upload', 'Upload', onUpload)}
@@ -321,6 +339,7 @@ export const SpritePickerDialog = ({
                 {tiles.map(tile => (
                   <li key={tile.key}>
                     <button
+                      ref={tile.key === keyOf(current) ? holding : undefined}
                       type="button"
                       className={
                         tile.key === chosen

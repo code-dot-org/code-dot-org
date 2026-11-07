@@ -349,7 +349,9 @@ below, and are listed last.
 - **Delete is on each page** (November 2026), in the breadcrumb bar:
   "Delete block", "Delete event", "Delete step", "Delete tween". It asks
   first; a yes goes back to the Blocks tab with focus on the Edit that
-  took its row, or on New; a no leaves focus where it was.
+  took its row, or on New; a no leaves focus where it was. A rule's step
+  page has it too, and goes back to the rule or the trait that owns the
+  step.
 - **What it does is Blockly**, under a head that is the block itself. A
   value's getter is dragged out of the head's socket with a pointer; from
   the keyboard it is the Variables drawer's, as any local's is.
@@ -608,3 +610,11 @@ themes. Not seen with a screen reader.
   screen reader. The same holds, by the same keys and Escape, for "add
   actor", "show screen", "add effect" and "set background"; "set
   sprite", whose dropdown opens a picker of its own, was not reached.
+  CLOSED for "set sprite" too (November 2026), on the Pilot's code in
+  the Jetpack project: Enter on its field opens "Choose a picture", and
+  Escape, or a picture chosen by Tab and Enter and then Use this picture,
+  puts focus back on the field, which says the new picture ("dropdown:
+  wall"). The picker opened with focus on Import, ahead of every picture;
+  it now opens on the picture the field holds, which is the one marked
+  pressed. Each picture is named by its file name ("wall.png"), and a
+  sheet's cells by file and cell ("coinSpin.png, cell 3").

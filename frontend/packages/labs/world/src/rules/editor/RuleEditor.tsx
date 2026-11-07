@@ -801,7 +801,8 @@ export const RuleEditor = (props: CustomEditorProps) => {
     edit(made.data);
     openStep(made.place);
   };
-  const deleteStep = async (place: StepAt) => {
+  /** Deleted from its own page, the page closes onto what holds it. */
+  const deleteStep = async (place: StepAt, fromPage = false) => {
     const step = stepOf(data, place);
     if (
       !step ||
@@ -811,6 +812,9 @@ export const RuleEditor = (props: CustomEditorProps) => {
       }))
     ) {
       return;
+    }
+    if (fromPage) {
+      setScript(place.owner ? {kind: 'trait', id: place.owner} : null);
     }
     const left = stepsOf(data, place.owner).length - 1;
     edit(removeStep(data, place));
@@ -853,6 +857,7 @@ export const RuleEditor = (props: CustomEditorProps) => {
           fileId={fileId}
           isReadOnly={isReadOnly}
           onUpdate={update}
+          onDelete={() => void deleteStep(openedStep, true)}
           onLeave={(from, to) => {
             const now = sources.current;
             const source = renameStep(now.source, data.name, from, to);

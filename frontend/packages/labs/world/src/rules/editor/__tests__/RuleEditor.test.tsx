@@ -339,6 +339,29 @@ describe('a rule’s step', () => {
       ).toEqual(['applyVelocity']),
     );
   });
+
+  it('is deleted from its own page, back on its trait', async () => {
+    open();
+    openTrait();
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Edit applyVelocity, during push'}),
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Delete step'}));
+
+    await vi.waitFor(() =>
+      expect(
+        traitOf(written()).steps.map((one: {name: string}) => one.name),
+      ).toEqual(['handleCollisions']),
+    );
+    await vi.waitFor(() =>
+      expect(document.activeElement).toBe(
+        screen.getByRole('button', {
+          name: 'Edit handleCollisions, during react',
+        }),
+      ),
+    );
+  });
 });
 
 describe('a rule’s trait', () => {

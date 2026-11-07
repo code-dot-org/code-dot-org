@@ -181,6 +181,7 @@ export interface StepPageProps {
   onUpdate: (change: (data: RuleData) => RuleData) => void;
   /** The page is left: the step's name as it was opened and as it is now. */
   onLeave: (from: string, to: string) => void;
+  onDelete?: () => void;
 }
 
 /** One of a rule's steps. */
@@ -191,6 +192,7 @@ export const StepPage = ({
   isReadOnly,
   onUpdate,
   onLeave,
+  onDelete,
 }: StepPageProps) => {
   const step = stepOf(data, place);
   const opened = useRef(step?.name ?? '');
@@ -234,6 +236,7 @@ export const StepPage = ({
         )
       }
       onDocument={saved => onUpdate(now => withStepDocument(now, place, saved))}
+      onDelete={onDelete}
     />
   );
 };
