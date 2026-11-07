@@ -8,11 +8,10 @@ import {noteImageReference} from './imageReferences';
 // Cells per side of the playfield, for a world being created now. The stored
 // grid is the playfield: its side is the playfield's.
 export const DEFAULT_SCENE_GRID_SIZE = 10;
-// A legacy grid is three times a playfield the lab has had per side (8 at
-// first, 10 since) with only its top-left corner in use; trimLegacyWorld
-// keeps that corner. Applied as a project's scenes are read (migrateSources).
+// A legacy grid is three times the playfield per side with only its top-left
+// corner in use; trimLegacyWorld keeps that corner. Applied as a project's
+// scenes are read (migrateSources).
 const LEGACY_WORLD_MULTIPLE = 3;
-const LEGACY_PLAYFIELD_SIZES = [8, DEFAULT_SCENE_GRID_SIZE];
 
 export interface WorldCell {
   // Animation name to draw and spawn.
@@ -37,12 +36,12 @@ export function sceneGridSize(world?: World): number {
   return rows || DEFAULT_SCENE_GRID_SIZE;
 }
 
-/** Whether a grid has the legacy shape: three times a playfield the lab has
-    had per side. Nothing outside the corner was ever shown or run, so the
-    shape alone decides. */
+/** Whether a grid has the legacy shape. Nothing outside the corner was ever
+    shown or run, so the shape alone decides. */
 export function isLegacyWorld(world?: World): world is World {
-  const side = world?.grid?.length ?? 0;
-  return LEGACY_PLAYFIELD_SIZES.includes(side / LEGACY_WORLD_MULTIPLE);
+  return (
+    world?.grid?.length === DEFAULT_SCENE_GRID_SIZE * LEGACY_WORLD_MULTIPLE
+  );
 }
 
 /** A legacy world cut back to its playfield. */

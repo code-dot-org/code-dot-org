@@ -46,10 +46,6 @@ describe('world', () => {
       kind: 'block',
     });
     expect(sceneGridSize(trimmed)).toBe(DEFAULT_SCENE_GRID_SIZE);
-    // The 8-cell era stored 24 per side.
-    expect(trimLegacyWorld(oversizeWorld(LEGACY_SCENE_SIZE)).grid).toHaveLength(
-      LEGACY_SCENE_SIZE
-    );
   });
 
   it('trims by shape alone, dropping anything outside the corner', () => {
@@ -65,9 +61,10 @@ describe('world', () => {
   it('knows a current grid from a legacy one', () => {
     expect(isLegacyWorld(createEmptyWorld())).toBe(false);
     expect(isLegacyWorld(undefined)).toBe(false);
-    // Only the playfields the lab has had count: a 12-cell world is not a
-    // 4-cell legacy one.
+    // Only the current playfield's storage counts: a 12-cell world is not a
+    // 4-cell legacy one, and the 8-cell era's 24 is history.
     expect(isLegacyWorld(createEmptyWorld(12))).toBe(false);
+    expect(isLegacyWorld(oversizeWorld(LEGACY_SCENE_SIZE))).toBe(false);
     expect(isLegacyWorld({grid: []})).toBe(false);
   });
 
