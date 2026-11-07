@@ -62,11 +62,9 @@ describe('world', () => {
     );
   });
 
-  it('leaves a grid alone unless it has the legacy shape', () => {
-    const current = createEmptyWorld();
-    expect(isLegacyWorld(current)).toBe(false);
-    expect(trimLegacyWorld(current)).toBe(current);
-    expect(trimLegacyWorld(undefined)).toBeUndefined();
+  it('knows a current grid from a legacy one', () => {
+    expect(isLegacyWorld(createEmptyWorld())).toBe(false);
+    expect(isLegacyWorld(undefined)).toBe(false);
     // Only the playfields the lab has had count: a 12-cell world is not a
     // 4-cell legacy one.
     expect(isLegacyWorld(createEmptyWorld(12))).toBe(false);

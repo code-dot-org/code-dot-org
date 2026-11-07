@@ -40,19 +40,13 @@ export function sceneGridSize(world?: World): number {
 /** Whether a grid has the legacy shape: three times a playfield the lab has
     had per side. Nothing outside the corner was ever shown or run, so the
     shape alone decides. */
-export function isLegacyWorld(world?: World): boolean {
+export function isLegacyWorld(world?: World): world is World {
   const side = world?.grid?.length ?? 0;
   return LEGACY_PLAYFIELD_SIZES.includes(side / LEGACY_WORLD_MULTIPLE);
 }
 
-/** The world cut back to its playfield when its grid has the legacy shape;
-    the same world otherwise. */
-export function trimLegacyWorld(world: World): World;
-export function trimLegacyWorld(world?: World): World | undefined;
-export function trimLegacyWorld(world?: World): World | undefined {
-  if (!world || !isLegacyWorld(world)) {
-    return world;
-  }
+/** A legacy world cut back to its playfield. */
+export function trimLegacyWorld(world: World): World {
   const corner = world.grid.length / LEGACY_WORLD_MULTIPLE;
   return {
     ...world,
