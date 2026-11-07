@@ -4,19 +4,18 @@
 
 When making changes, check if the following docs need updates:
 
-- **[docs/architecture.md](./docs/architecture.md)** — Update when changing:
+- **[Studio architecture](../../../apps/studio/docs/architecture.md)** — Update when changing:
 
   - How the lab is registered in Studio (`labs.ts`, `getLabEntrypoint.ts`,
     `getLabFixtures.ts`)
   - Init ordering (if `initializeCore()` moves or new init steps are added)
-  - Build output shape (entry point, formats, externalized deps)
-  - Fixture scenarios (`src/fixtures/` — fields the `LabFixture` populates,
-    which tags the lab supports)
 
 - **[README.md](./README.md)** — Update when changing:
 
   - Public API surface (the exported root component contract)
   - Dashboard API usage patterns
   - Dev server setup
+  - Fixture scenarios (`src/fixtures/` — fields the `LabFixture` populates,
+    which tags the lab supports)
 
 - **This file (AGENTS.md)** — Update when adding new constraints agents would violate.
