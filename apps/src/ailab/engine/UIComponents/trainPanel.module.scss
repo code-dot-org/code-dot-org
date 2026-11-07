@@ -21,9 +21,7 @@
   flex-direction: column;
   gap: 7px;
 
-  // Keep each card at its natural height so the panel scrolls instead of
-  // squeezing them. The result card clips its overflow, which would otherwise
-  // let it shrink to nothing.
+  // The result card clips overflow, so it would shrink instead of scrolling.
   > * {
     flex-shrink: 0;
   }
