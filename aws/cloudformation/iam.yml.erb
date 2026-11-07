@@ -1,8 +1,34 @@
+<%#
+  Stack:    IAM (single account-wide stack; deployed CloudFormation stack name is "IAM")
+  Profile:  codeorg-admin
+  Cadence:  rare, manual. Defines the privilege model the rest of the stacks
+            depend on — get this wrong and you lock everyone out, including
+            yourself. Lint and validate before every :start.
+
+  Best practice (from README): create a PR, get approval, then deploy from
+  the PR branch BEFORE merging. If the deploy fails, fix the PR and re-try;
+  only merge once the live stack matches the template.
+
+  Always, in order:
+    export AWS_PROFILE=codeorg-admin
+    bundle exec rake stack:iam:lint     RAILS_ENV=production
+    bundle exec rake stack:iam:validate RAILS_ENV=production
+    ADMIN=1 bundle exec rake stack:iam:start RAILS_ENV=production
+    unset AWS_PROFILE
+
+  ADMIN=1 is mandatory: this stack creates roles under the `/admin/` path,
+  and the default CloudFormationService role explicitly excludes that path
+  (see the `NotResource` clauses on CloudFormationService below). Without
+  ADMIN=1 the deploy fails with an authorization error.
+
+  Rake wiring: lib/rake/stack.rake (the `other_stacks` loop).
+%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   IAM layer including global/shared roles and access permissions for Code.org infrastructure.
-  Note: Admin permissions are required to manage some admin-only resources in this stack.
+  Note: Admin permissions are required. See the ERB header above for the
+  lint/validate/deploy sequence.
 Parameters:
   # Google ID parameters are defined in this template, use String placeholder during initial stack creation.
   DeveloperGoogleIDs:
