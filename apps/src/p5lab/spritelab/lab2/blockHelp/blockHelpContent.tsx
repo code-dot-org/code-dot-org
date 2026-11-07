@@ -37,7 +37,7 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   spritelab2_setPlatformGravityDirection: {
     title: 'Set gravity direction',
     summary: 'Changes which way everything falls.',
-    body: 'Choose **↓** to fall toward the bottom, **↑** to fall toward the bottom, or **none** to move in four directions.',
+    body: 'Choose **↓** to fall toward the bottom, **↑** to fall toward the top, or **none** to move in four directions.',
   },
   spritelab2_setCameraZoom: {
     title: 'Set zoom',
