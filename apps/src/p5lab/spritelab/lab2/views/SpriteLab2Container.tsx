@@ -49,11 +49,11 @@ function getToolboxEditSources(
   return {source: toolboxToWorkspaceBlocks(definition)};
 }
 
-// The block catalog's bookkeeping is not a student edit: Continue and the
-// Run/Edit prompt read hasEdited.
+// Saved flags for the block catalog and free play intro are not student
+// edits: Continue and the Run/Edit prompt read hasEdited.
 const CATALOG_KEYS: ReadonlySet<keyof Sources> = new Set<keyof Sources>([
   'chosenBlocks',
-  'blockCatalogSeen',
+  'freeplayIntroSeen',
 ]);
 const isStudentEdit = (prev: Sources, next: Sources) =>
   (Object.keys({...prev, ...next}) as (keyof Sources)[]).some(

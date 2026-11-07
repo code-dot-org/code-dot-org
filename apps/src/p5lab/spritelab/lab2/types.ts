@@ -101,8 +101,8 @@ export interface Sources extends ProjectSources {
   scenes?: Scene[];
   /** Catalog blocks the student added to the toolbox (blockCatalog.ts). */
   chosenBlocks?: string[];
-  /** The catalog has opened itself once on the free play level. */
-  blockCatalogSeen?: boolean;
+  /** The free play intro has been dismissed. */
+  freeplayIntroSeen?: boolean;
 }
 
 /** A single-frame image a level gives the project: a lab asset by URL. */
