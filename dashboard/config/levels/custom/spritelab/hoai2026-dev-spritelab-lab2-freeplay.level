@@ -103,10 +103,6 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_playMusic"
-            },
-            {
-              "kind": "block",
               "type": "spritelab2_setWeather"
             },
             {
@@ -200,10 +196,6 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_playMusic"
-            },
-            {
-              "kind": "block",
               "type": "spritelab2_setWeather"
             },
             {
@@ -252,10 +244,6 @@
             {
               "kind": "block",
               "type": "spritelab2_goToScene"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_goToExternalScene"
             }
           ]
         }
