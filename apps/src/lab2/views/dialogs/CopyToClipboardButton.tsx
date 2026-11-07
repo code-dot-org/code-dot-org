@@ -20,12 +20,15 @@ export const CopyToClipboardButton: React.FunctionComponent<{
   className?: string;
   /** The icon before the text until the link is copied. */
   iconName?: string;
+  /** The icon while the copied tooltip shows. */
+  copiedIconName?: string;
 }> = ({
   shareUrl,
   projectType,
   label = i18n.copyLinkToProject(),
   className,
   iconName = 'clipboard',
+  copiedIconName = 'clipboard-check',
 }) => {
   const [copiedAt, setCopiedAt] = useState<number | null>(null);
 
@@ -59,9 +62,7 @@ export const CopyToClipboardButton: React.FunctionComponent<{
         onClick={handleCopyToClipboard}
         type="button"
         startIcon={
-          <FontAwesomeV6Icon
-            iconName={copiedAt ? 'clipboard-check' : iconName}
-          />
+          <FontAwesomeV6Icon iconName={copiedAt ? copiedIconName : iconName} />
         }
       >
         {label}

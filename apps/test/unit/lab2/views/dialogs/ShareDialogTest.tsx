@@ -83,17 +83,19 @@ describe('Lab2 ShareDialog', () => {
       ).toBeDisabled();
     });
 
-    it('withholds the remix when sharing is restricted', () => {
-      mockedUseAppSelector.mockImplementation(selector =>
-        selector({
-          currentUser: {signInState: 'Unknown'},
-          project: {inRestrictedShareMode: true},
-        })
-      );
+    it('holds Open Sprite Lab until the lab has a standalone project', () => {
       renderFinish();
       expect(
         screen.getByRole('button', {name: 'Open Sprite Lab'})
       ).toBeDisabled();
+    });
+
+    it('withholds the share link when the teacher disabled sharing', () => {
+      renderFinish({userSharingDisabled: true});
+      expect(screen.queryByRole('button', {name: 'Copy link'})).toBeNull();
+      expect(
+        screen.getByText("This game can't be shared right now.")
+      ).toBeInTheDocument();
     });
 
     it('closes through the share dialog store', () => {

@@ -31,6 +31,11 @@ import moduleStyles from './share-dialog.module.scss';
 
 export const SHARE_FAILURE_TITLE = "This project can't be shared";
 
+// A Sprite Lab in Lab2 remix lands in the classic Sprite Lab until the lab
+// has a standalone project of its own (#75765); the finish dialog's Open
+// Sprite Lab is held until then.
+const REMIX_OFFERED = false;
+
 export const SHARE_FAILURE_FALLBACK_PREFIX =
   "The project can't be shared because it contains flagged content. ";
 
@@ -166,18 +171,6 @@ const ShareDialog: React.FunctionComponent<{
     dispatch(hideShareDialog());
   }, [dispatch]);
 
-  // What keeps the header's Remix button away besides a blocked project:
-  // restricted sharing, in the header's project slice, which the lab's typed
-  // root state does not carry; the level page's store holds both.
-  const sharingRestricted = useAppSelector(state => {
-    const {project} = state as unknown as {
-      project?: {
-        inRestrictedShareMode?: boolean;
-        exceedsAbuseThreshold?: boolean;
-      };
-    };
-    return !!project?.inRestrictedShareMode || !!project?.exceedsAbuseThreshold;
-  });
   const remix = useCallback(() => {
     Lab2Registry.getInstance()
       .getProjectManager()
@@ -238,9 +231,9 @@ const ShareDialog: React.FunctionComponent<{
       <div data-theme={theme}>
         <Hoai2026Congrats
           onClose={handleClose}
-          shareUrl={isAbusive ? undefined : shareUrl}
+          shareUrl={isAbusive || userSharingDisabled ? undefined : shareUrl}
           projectType={projectType}
-          onRemix={isAbusive || sharingRestricted ? undefined : remix}
+          onRemix={REMIX_OFFERED && !isAbusive ? remix : undefined}
           certificateUrl={finishUrl}
         />
       </div>

@@ -87,7 +87,7 @@ export interface Hoai2026CongratsProps {
   shareUrl?: string;
   projectType?: ProjectType;
   /** Saves and opens a remix of the project; absent while the project may
-      not be remixed, for the reasons the header's Remix button honors. */
+      not be remixed. */
   onRemix?: () => void;
   /** The unit's finish URL, where a certificate is offered; absent when the
       unit has none. */
@@ -206,6 +206,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
               projectType={projectType}
               label="Copy link"
               iconName="link"
+              copiedIconName="check"
               className={styles.copyLink}
             />
           ) : (
