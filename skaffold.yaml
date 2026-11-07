@@ -1,7 +1,7 @@
 # Using skaffold (https://skaffold.dev/) allows us to start a kubernetes cluster
 # for code.org development with one command: `skaffold dev`
 #
-# This is currently an experimental feature, see: k8s/experimental.yaml
+# Status: see k8s/README.md#status
 #
 # The config builds and deploys the backend stack: the ActiveJob worker and
 # cluster-local services, with no dashboard frontend or frontend asset build.
