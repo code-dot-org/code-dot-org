@@ -20,6 +20,13 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
+
+  // Keep each card at its natural height so the panel scrolls instead of
+  // squeezing them. The result card clips its overflow, which would otherwise
+  // let it shrink to nothing.
+  > * {
+    flex-shrink: 0;
+  }
 }
 
 $features-menu-max-height: 240px;
