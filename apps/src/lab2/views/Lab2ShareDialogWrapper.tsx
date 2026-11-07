@@ -108,13 +108,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     return null;
   }
 
-  // A finish dialog of its own is served whatever the lab; the share panel
-  // itself only to the labs that have moved to it.
-  const finishDialogOfItsOwn = shareDialogId === 'hoai2026';
-  if (
-    PROJECT_TYPES_USING_NEW_SHARE_DIALOG.includes(projectType) ||
-    finishDialogOfItsOwn
-  ) {
+  if (PROJECT_TYPES_USING_NEW_SHARE_DIALOG.includes(projectType)) {
     return dialogPanel === 'share' ? (
       <ShareDialog
         dialogId={shareDialogId}
