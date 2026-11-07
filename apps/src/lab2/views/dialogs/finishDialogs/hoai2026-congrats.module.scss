@@ -1,0 +1,227 @@
+// Sized to fit a 1024x605 window without scrolling; smaller windows scroll
+// the panel. The spacing variables shrink with the window height.
+.dialog {
+  --gap: 14px;
+  --card-padding: 22px 28px;
+  --picture-height: 96px;
+  --row-padding: 14px 18px;
+  --offer-padding: 14px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  box-sizing: border-box;
+  width: min(1120px, calc(100vw - 32px));
+  max-height: calc(100vh - 24px);
+  padding: 20px 28px;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+@media (max-height: 700px) {
+  .dialog {
+    --gap: 8px;
+    --card-padding: 12px 22px;
+    --picture-height: 36px;
+    --row-padding: 9px 16px;
+    --offer-padding: 10px 18px;
+
+    padding: 14px 24px;
+  }
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-neutral-primary);
+}
+
+.rule {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: var(--borders-neutral-primary);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.intro {
+  margin: 0;
+  color: var(--text-neutral-primary);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: var(--card-padding);
+  border-radius: 12px;
+  color: var(--text-neutral-white-fixed);
+}
+
+// The cards keep their brand colors under either theme, so what sits on
+// them is fixed too: no semantic token names a fixed strong purple or a
+// fixed purple text on white, hence the primitives.
+.students {
+  background: var(--background-brand-purple-primary-fixed);
+}
+
+.teachers {
+  background: var(--brand-purple-95);
+}
+
+// Full width, white on the purple card, its words at the left and the
+// arrow at the right. The theme's own rules for this button set the same
+// colours from a stylesheet that may land later, so each rule here
+// carries one more class than the theme rule it replaces.
+.students .open {
+  width: 100%;
+  justify-content: space-between;
+  background: var(--background-neutral-white-fixed);
+  color: var(--brand-purple-50);
+
+  &:focus {
+    color: var(--brand-purple-50);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: var(--brand-purple-5);
+    color: var(--brand-purple-50);
+  }
+}
+
+.card .eyebrow,
+.card .cardTitle {
+  margin: 0;
+  color: inherit;
+}
+
+// Sized so the longer card title stays on one line down to the smallest
+// supported width.
+.cardTitle {
+  font-size: clamp(1.125rem, 1.7vw, 1.375rem);
+  line-height: 1.2;
+}
+
+.picture {
+  height: var(--picture-height);
+  margin-top: auto;
+  border-radius: 8px;
+  background: var(--background-neutral-white-fixed);
+}
+
+.resources {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+// A white two-line row on the dark card; the parent selector outranks the
+// theme's text-button rules, which fix a one-line height.
+.teachers .resource {
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  padding: var(--row-padding);
+  border-radius: 8px;
+  text-align: start;
+  text-transform: none;
+  line-height: 1.35;
+  background: var(--background-neutral-white-fixed);
+  color: var(--brand-purple-50);
+
+  &:focus {
+    color: var(--brand-purple-50);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: var(--brand-purple-5);
+    color: var(--brand-purple-50);
+  }
+}
+
+.resourceText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.resourceGrade {
+  font-size: 0.875rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+// Body sizes, as the 2025 dialog's text.
+.resourceName {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.offers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: var(--offer-padding);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 12px;
+}
+
+// Sized to its words, like the offers' other buttons; the share dialog
+// stretches it.
+.copyLink {
+  width: auto;
+  margin-top: 0;
+}
+
+.offer .offerTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  color: var(--text-neutral-primary);
+}
+
+.offerIcon {
+  color: var(--text-brand-purple-primary);
+}
+
+.offer .offerText {
+  margin: 0 0 4px;
+  color: var(--text-neutral-secondary);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 760px) {
+  .cards,
+  .offers {
+    grid-template-columns: 1fr;
+  }
+}
