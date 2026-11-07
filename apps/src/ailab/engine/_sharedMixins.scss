@@ -27,6 +27,38 @@
   border-radius: var(--shape-md);
 }
 
+// Fades the top and bottom edges of a scroller inside this element, driven by useScrollFade.
+@mixin scroll-fade {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: var(--scrollbar-width);
+    left: 0;
+    z-index: 1;
+    height: 48px;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &::before {
+    top: 0;
+    background: linear-gradient(var(--background-neutral-primary), transparent);
+  }
+
+  &::after {
+    bottom: 0;
+    background: linear-gradient(transparent, var(--background-neutral-primary));
+  }
+
+  &[data-fade-top]::before,
+  &[data-fade-bottom]::after {
+    opacity: 1;
+  }
+}
+
 @mixin card-fields {
   display: flex;
   flex-direction: column;

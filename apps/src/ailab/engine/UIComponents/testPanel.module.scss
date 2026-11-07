@@ -33,6 +33,15 @@ $card-min-height: 200px;
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
+.fieldsScroll {
+  @include mixins.scroll-fade;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
 .fields {
   @include mixins.card-fields;
 
