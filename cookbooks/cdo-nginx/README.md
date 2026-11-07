@@ -2,7 +2,8 @@
 Installs and configures Nginx buffering proxy.
 
 ## Requirements
-Ubuntu 18.04
+Ubuntu 20.04, the production AMI (`IMAGE_ID` in `lib/cdo/cloud_formation/cdo_app.rb`).
+`.kitchen.yml` still tests on Ubuntu 18.04.
 
 #### apt packages installed (from PPA)
 - `nginx`

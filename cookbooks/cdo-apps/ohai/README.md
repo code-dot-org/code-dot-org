@@ -1,6 +1,6 @@
-# sudo-user
+# sudo_user.rb
 
-This cookbook supports the pattern where `chef-client` is invoked via `sudo` for root-level access privileges, but where
+This Ohai plugin (`Sudo`) supports the pattern where `chef-client` is invoked via `sudo` for root-level access privileges, but where
 the underlying user is needed for certain operations.
 
 - Provides `node[:user]` via `ENV['SUDO_USER']` when Ohai is run via `sudo`, falling back to `ENV['USER']` otherwise.

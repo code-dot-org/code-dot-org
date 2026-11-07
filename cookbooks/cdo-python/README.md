@@ -1,3 +1,3 @@
 # cdo-python
 
-Installs python using pipenv and pyenv.
+Installs [uv](https://docs.astral.sh/uv/) to `/usr/local/bin`.
