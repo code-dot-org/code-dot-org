@@ -100,7 +100,7 @@ class DCDO < DynamicConfigBase
       # also lets dashboard mint gateway tokens for those users.
       ai_gateway_fallback_is_enabled: DCDO.get('ai_gateway_fallback_is_enabled', false),
       builders_challenge_url: DCDO.get('builders_challenge_url', nil),
-      'statsig-enabled': DCDO.get('statsig-enabled', true)
+      'statsig-plugin-enabled': DCDO.get('statsig-plugin-enabled', true)
     }
   end
 end
