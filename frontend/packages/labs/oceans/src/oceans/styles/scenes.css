@@ -95,6 +95,12 @@
   color: var(--ocean-color-grey);
   font-size: 100%;
 
+  /* Tells the browser taps are never for double-tap-zoom/panning, so it can
+   * dispatch click immediately instead of waiting ~300ms to see if a second
+   * tap follows. Without this, taps on some mobile browsers can feel like
+   * they need to be repeated. */
+  touch-action: manipulation;
+
   /* em so padding scales with font-size regardless of consumer context. */
   padding: 0.75em 1.5em;
   border-radius: 8px;
@@ -102,6 +108,64 @@
   border: none;
   white-space: nowrap;
   line-height: 1.3;
+}
+
+.ocean-button[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+/* Interaction cues: buttons sit slightly raised, lift on hover, press down
+ * when tapped, and show a clear ring for keyboard focus.  `translate` is used
+ * instead of `transform` so it composes with buttons already positioned by a
+ * transform (e.g. the guide's Continue button). */
+.ocean-button {
+  box-shadow:
+    0 2px 0 rgb(0 0 0 / 20%),
+    0 4px 10px rgb(0 0 0 / 18%);
+  transition:
+    translate 80ms ease-out,
+    box-shadow 80ms ease-out;
+}
+
+.ocean-button:focus-visible {
+  outline: 3px solid var(--ocean-color-neon-blue);
+  outline-offset: 2px;
+}
+
+.ocean-button:not([aria-disabled='true']):active {
+  translate: 0 2px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 25%);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ocean-button:not([aria-disabled='true']):hover {
+    translate: 0 -1px;
+    box-shadow:
+      0 3px 0 rgb(0 0 0 / 20%),
+      0 6px 14px rgb(0 0 0 / 22%);
+  }
+
+  .ocean-button:not([aria-disabled='true']):hover:active {
+    translate: 0 2px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 25%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ocean-button {
+    transition: none;
+  }
+}
+
+/* Same keyboard focus ring for the lab's icon buttons. */
+.ocean-erase-button:focus-visible,
+.ocean-info-icon-container:focus-visible,
+.ocean-toggle-icon:focus-visible,
+.ocean-media-control:focus-visible {
+  outline: 3px solid var(--ocean-color-neon-blue);
+  outline-offset: 2px;
 }
 
 .ocean-button--continue {
@@ -157,11 +221,18 @@
   margin-top: 2%;
 }
 
-/* Hover/focus tinting for the words buttons. */
-.ocean-word-button:hover,
+/* Keep the focus ring tint always (keyboard users); scope the hover tint to
+ * devices with a real pointer so a tap doesn't leave it "stuck" selected. */
 .ocean-word-button:focus {
   background-color: var(--ocean-color-orange);
   color: var(--ocean-color-white);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ocean-word-button:hover {
+    background-color: var(--ocean-color-orange);
+    color: var(--ocean-color-white);
+  }
 }
 
 /* ── Confirmation dialog ───────────────────────────────────────────── */
@@ -266,20 +337,26 @@
   width: 100%;
   display: flex;
   justify-content: center;
+
+  /* `gap` rather than a margin on one button: a physical margin-left ends up
+   * on the outer edge in right-to-left locales, leaving the two white buttons
+   * touching with a seam between them. */
+  gap: 10px;
 }
 
-.ocean-train__button-yes {
-  margin-left: 10px;
-}
+/* Scoped to real pointer devices: on touch, `:hover` is applied by the tap
+ * and never properly cleared, so the just-tapped Yes/No button would stay
+ * tinted as if still "selected" on the next question. */
+@media (hover: hover) and (pointer: fine) {
+  .ocean-train__button-yes:hover {
+    background-color: var(--ocean-color-green);
+    color: var(--ocean-color-white);
+  }
 
-.ocean-train__button-yes:hover {
-  background-color: var(--ocean-color-green);
-  color: var(--ocean-color-white);
-}
-
-.ocean-train__button-no:hover {
-  background-color: var(--ocean-color-red);
-  color: var(--ocean-color-white);
+  .ocean-train__button-no:hover {
+    background-color: var(--ocean-color-red);
+    color: var(--ocean-color-white);
+  }
 }
 
 .ocean-train__bot {
@@ -658,6 +735,11 @@
   color: rgb(0 0 0 / 0%);
 }
 
+/* A tap during typing skips the animation and shows the full text here. */
+.ocean-guide__final-text--shown {
+  color: inherit;
+}
+
 .ocean-guide__continue-reminder {
   position: absolute;
   right: 1%;
@@ -754,4 +836,24 @@
   margin-left: 50%;
   margin-top: 2%;
   padding: 3% 7%;
+}
+
+/* ── Touch screens ─────────────────────────────────────────────────── */
+
+/* The lab's font size scales with its width, so on a phone the em-sized
+ * buttons shrink to ~20px tall. Give touch screens a 44px minimum tap target,
+ * moving rows only where the taller buttons would otherwise collide. Kept at
+ * the end of the file so it overrides the base positions above. */
+@media (pointer: coarse) {
+  .ocean-button {
+    min-height: 44px;
+  }
+
+  .ocean-train__buttons {
+    top: min(83%, calc(98% - 44px));
+  }
+
+  .ocean-button--play-again {
+    bottom: max(13.5%, calc(2% + 50px));
+  }
 }

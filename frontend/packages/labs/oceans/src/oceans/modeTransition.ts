@@ -24,7 +24,17 @@ export const setModelInitCallback = (fn: (state: State) => void): void => {
  * @param mode - The `Modes` integer value to switch to.
  */
 export const toMode = (mode: number): void => {
-  const state = setState({currentMode: mode});
+  // Reset animation flags in the same update as the mode change so there is
+  // never a rendered frame where `currentMode` already matches the new
+  // scene (and its guide/arrow can appear) while `isRunning`/`isPaused` are
+  // still left over from the previous scene and suppress that scene's own
+  // "move forward" button (e.g. Predict's Run button) until the new mode's
+  // async init resolves.
+  const state = setState({
+    currentMode: mode,
+    isRunning: false,
+    isPaused: false,
+  });
   if (_initModel) {
     _initModel(state);
   }

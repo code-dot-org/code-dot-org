@@ -43,14 +43,25 @@ function getInitialMode(): AppModeValue {
  */
 function DemoShell() {
   const [appMode, setAppMode] = useState<AppModeValue>(getInitialMode);
+  const [endNotice, setEndNotice] = useState<string | null>(null);
   const params = new URLSearchParams(window.location.search);
+
+  function selectMode(mode: AppModeValue) {
+    setEndNotice(null);
+    setAppMode(mode);
+  }
 
   /** Advance to next mode in APP_MODES sequence when the user completes one. */
   function handleContinue() {
     const idx = APP_MODES.findIndex(m => m.id === appMode);
     const next = APP_MODES[idx + 1];
     if (next) {
-      setAppMode(next.id);
+      selectMode(next.id);
+    } else {
+      // Without this, Continue on the last mode looks broken here.
+      setEndNotice(
+        `${APP_MODES[idx]?.label ?? 'This'} is the last activity on this page. On Code.org, Continue goes to the next level.`,
+      );
     }
   }
 
@@ -84,11 +95,16 @@ function DemoShell() {
               name="mode"
               value={m.id}
               checked={appMode === m.id}
-              onChange={() => setAppMode(m.id)}
+              onChange={() => selectMode(m.id)}
             />{' '}
             {m.label}
           </label>
         ))}
+        {endNotice && (
+          <span role="status" style={{flexBasis: '100%'}}>
+            {endNotice}
+          </span>
+        )}
       </div>
 
       {/* Lab area — mirrors the studio OceansContainer exactly: same shell /

@@ -64,7 +64,30 @@ const dismissCurrentGuide = (): boolean => {
   return false;
 };
 
+/**
+ * Dismiss a specific guide even if its text is still typing.  Safe to call
+ * more than once for the same guide.
+ *
+ * @param guideId - The id of the guide to dismiss.
+ * @returns True if the guide was dismissed by this call.
+ */
+const dismissGuide = (guideId: string): boolean => {
+  const state = getState();
+  if (state.guideDismissals.includes(guideId)) {
+    return false;
+  }
+  // Stop the typing sound too, in case the text hadn't finished typing.
+  clearInterval(state.guideTypingTimer as ReturnType<typeof setInterval>);
+  setState({
+    guideDismissals: [...state.guideDismissals, guideId],
+    guideShowing: false,
+    guideTypingTimer: undefined,
+  });
+  return true;
+};
+
 export default {
   getCurrentGuide,
   dismissCurrentGuide,
+  dismissGuide,
 };

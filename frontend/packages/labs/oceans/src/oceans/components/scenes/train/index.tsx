@@ -71,6 +71,7 @@ class Train extends React.Component<Record<string, never>, TrainState> {
         <div className="ocean-train__buttons">
           <Button
             className="ocean-train__button-no"
+            disabled={state.isRunning}
             onClick={() => {
               this.setState({headOpen: true});
               return train.onClassifyFish(false);
@@ -83,6 +84,7 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           </Button>
           <Button
             className="ocean-train__button-yes"
+            disabled={state.isRunning}
             onClick={() => {
               this.setState({headOpen: true});
               return train.onClassifyFish(true);

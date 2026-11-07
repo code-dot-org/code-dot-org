@@ -16,6 +16,13 @@ const imageStyleOverrides: Record<string, Record<string, string>> = {
   can: {bottom: '2%', left: '16%'},
 };
 
+/**
+ * Pond guides whose arrow points at the Pond's bottom buttons must wait for
+ * those buttons, which only appear once `canSkipPond` is set.
+ */
+const pondButtonsShown = (state: State): boolean =>
+  !!(state.fishData && state.totalPondFish !== null && state.canSkipPond);
+
 /** Full guide sequence for the HoC (Hour of Code) experience. */
 const guidesHoc: GuideEntry[] = [
   {
@@ -154,9 +161,7 @@ const guidesHoc: GuideEntry[] = [
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Pond,
-      fn: (state: State) => {
-        return !!(state.fishData && state.totalPondFish !== null);
-      },
+      fn: pondButtonsShown,
     },
     arrow: 'LowerLeft',
   },
@@ -166,9 +171,7 @@ const guidesHoc: GuideEntry[] = [
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Pond,
-      fn: (state: State) => {
-        return !!(state.fishData && state.totalPondFish !== null);
-      },
+      fn: pondButtonsShown,
     },
     arrow: 'LowerRight',
   },
@@ -228,6 +231,8 @@ const guidesHoc: GuideEntry[] = [
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
       isPaused: true,
+      // The arrow points at Continue, which appears a moment after the pause.
+      fn: (state: State) => !!state.canSkipPredict,
     },
     noDimBackground: true,
     arrow: 'LowerRight',
@@ -491,9 +496,7 @@ const guidesHoc: GuideEntry[] = [
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Pond,
-      fn: (state: State) => {
-        return !!(state.fishData && state.totalPondFish !== null);
-      },
+      fn: pondButtonsShown,
     },
     arrow: 'LowerLeft',
   },
@@ -503,9 +506,7 @@ const guidesHoc: GuideEntry[] = [
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Pond,
-      fn: (state: State) => {
-        return !!(state.fishData && state.totalPondFish !== null);
-      },
+      fn: pondButtonsShown,
     },
     arrow: 'LowishRight',
   },

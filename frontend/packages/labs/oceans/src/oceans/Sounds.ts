@@ -62,6 +62,12 @@ export default function Sounds() {
    */
   this.audioUnlocked_ = false;
 
+  /**
+   * Set on the first user gesture, once we've asked the browser to resume.
+   * @private {boolean}
+   */
+  this.resumeRequested_ = false;
+
   if (window.AudioContext) {
     try {
       this.audioContext = new AudioContext();
@@ -101,27 +107,27 @@ Sounds.getSingleton = function () {
  * @private
  */
 Sounds.prototype.initializeAudioUnlockState_ = function () {
-  this.unlockAudio(
-    function () {
-      if (this.isAudioUnlocked()) {
-        return;
-      }
-      var unlockHandler = function () {
-        this.unlockAudio(
-          function () {
-            if (this.isAudioUnlocked()) {
-              document.removeEventListener('mousedown', unlockHandler, true);
-              document.removeEventListener('touchend', unlockHandler, true);
-              document.removeEventListener('keydown', unlockHandler, true);
-            }
-          }.bind(this),
-        );
-      }.bind(this);
-      document.addEventListener('mousedown', unlockHandler, true);
-      document.addEventListener('touchend', unlockHandler, true);
-      document.addEventListener('keydown', unlockHandler, true);
-    }.bind(this),
-  );
+  if (this.isAudioUnlocked()) {
+    return;
+  }
+  // The events browsers count as user activation (pointerdown does not count
+  // for touch, so pointerup/touchend are needed there).
+  var gestureEvents = ['mousedown', 'pointerup', 'touchend', 'keydown'];
+  var unlockHandler = function () {
+    this.resumeRequested_ = true;
+    this.unlockAudio(
+      function () {
+        if (this.isAudioUnlocked()) {
+          gestureEvents.forEach(function (eventName) {
+            document.removeEventListener(eventName, unlockHandler, true);
+          });
+        }
+      }.bind(this),
+    );
+  }.bind(this);
+  gestureEvents.forEach(function (eventName) {
+    document.addEventListener(eventName, unlockHandler, true);
+  });
 };
 
 /**
@@ -130,7 +136,15 @@ Sounds.prototype.initializeAudioUnlockState_ = function () {
  */
 Sounds.prototype.isAudioUnlocked = function () {
   // Audio unlock doesn't make sense for the fallback player as used here.
-  return this.audioUnlocked_ || !this.audioContext;
+  if (!this.audioContext) {
+    return true;
+  }
+  // `currentTime > 0` is not a reliable signal: a context that ran and was then
+  // suspended keeps a non-zero currentTime. The context state is authoritative.
+  if (this.audioContext.state) {
+    return this.audioContext.state === 'running';
+  }
+  return this.audioUnlocked_;
 };
 
 /**
@@ -160,6 +174,29 @@ Sounds.prototype.whenAudioUnlocked = function (callback) {
  */
 Sounds.prototype.unlockAudio = function (onComplete) {
   if (this.isAudioUnlocked()) {
+    if (onComplete) {
+      onComplete();
+    }
+    return;
+  }
+
+  // Modern autoplay policies create the context "suspended" and only let it
+  // run once resume() is called during a user gesture; nothing else will
+  // reliably start it.
+  if (this.audioContext.resume) {
+    var finish = function () {
+      if (this.isAudioUnlocked()) {
+        this.audioUnlocked_ = true;
+        this.whenAudioUnlockedCallbacks_.forEach(function (cb) {
+          cb();
+        });
+        this.whenAudioUnlockedCallbacks_.length = 0;
+      }
+      if (onComplete) {
+        onComplete();
+      }
+    }.bind(this);
+    this.audioContext.resume().then(finish, finish);
     return;
   }
 
@@ -282,6 +319,12 @@ Sounds.prototype.register = function (config) {
  * @param {function} [options.onEnded]
  */
 Sounds.prototype.play = function (soundId, options) {
+  // Before the first user gesture the browser won't let the context run, so
+  // these sounds can't be heard now — and Web Audio would queue them all to
+  // fire at the same instant once the context resumes. Drop them instead.
+  if (this.audioContext && !this.isAudioUnlocked() && !this.resumeRequested_) {
+    return;
+  }
   var sound = this.soundsById[soundId];
   if (sound) {
     sound.play(options);

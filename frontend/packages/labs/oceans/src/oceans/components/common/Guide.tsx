@@ -36,6 +36,28 @@ const GUIDE_STYLE_CLASS: Record<string, string> = {
   Center: 'ocean-guide--center',
 };
 
+/**
+ * The enabled lab button under a tap on the guide's dimmed background, if
+ * any.  Taps on the guide's own text box never reach the lab underneath.
+ */
+const findButtonUnderScrim = (event: React.MouseEvent): HTMLElement | null => {
+  const elements = document.elementsFromPoint(event.clientX, event.clientY);
+  if (elements[0]?.closest('.guide-dialog')) {
+    return null;
+  }
+  for (const element of elements) {
+    const button = element.closest<HTMLElement>('.ocean-button');
+    if (
+      button &&
+      !button.closest('.guide-dialog') &&
+      button.getAttribute('aria-disabled') !== 'true'
+    ) {
+      return button;
+    }
+  }
+  return null;
+};
+
 /** Map a `GuideEntry.arrow` value to its modifier class name. */
 const GUIDE_ARROW_CLASS: Record<string, string> = {
   BotRight: 'ocean-guide__arrow--bot-right',
@@ -53,34 +75,11 @@ const GUIDE_CONTINUE_DELAY_MS = 500;
 class Guide extends React.Component<Record<string, never>> {
   guideDialogRef = React.createRef<HTMLDivElement>();
   lastFocusedGuideId: string | null = null;
+
   lastTypingGuideId: string | null = null;
-  typingSpedUp = false;
+  /** Guide whose typing animation was skipped by a tap; its full text shows. */
+  skippedGuideId: string | null = null;
   canContinueAt = 0;
-
-  componentDidMount() {
-    this.lastTypingGuideId = guide.getCurrentGuide()?.id ?? null;
-    // Catch clicks outside the dialog too (including guides without a scrim).
-    document.addEventListener('click', this.onDocumentClick, true);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('click', this.onDocumentClick, true);
-  }
-
-  onDocumentClick = () => {
-    if (guide.getCurrentGuide() && !getState().guideShowing) {
-      this.typingSpedUp = true;
-    }
-  };
-
-  // Use Typist's delay generator so the speed changes mid-message without
-  // remounting Typist, which would restart the typing animation.
-  getTypingDelay = (
-    mean: number,
-    std: number,
-    {defDelayGenerator}: Typist.CurrentTextProps,
-  ): number =>
-    Number(defDelayGenerator(mean, std)) / (this.typingSpedUp ? 3 : 1);
 
   componentDidUpdate() {
     // Focus the dialog only when the guide changes, not on every re-render
@@ -88,9 +87,9 @@ class Guide extends React.Component<Record<string, never>> {
     const currentGuideId = currentGuide ? currentGuide.id : null;
 
 
-    // A new message always starts at the original typing speed.
+    // Reset the skip state and delay when a new dialogue appears.
     if (currentGuideId !== this.lastTypingGuideId) {
-      this.typingSpedUp = false;
+      this.skippedGuideId = null;
       this.canContinueAt = 0;
       this.lastTypingGuideId = currentGuideId;
     }
@@ -127,16 +126,24 @@ class Guide extends React.Component<Record<string, never>> {
     }
   };
 
-  onGuideClick = () => {
-    const state = getState();
-    const currentGuide = guide.getCurrentGuide();
-    const isTyping = !!currentGuide && !state.guideShowing;
-    if (isTyping) {
-      this.typingSpedUp = true;
+  closeGuide = (guideId: string): boolean => {
+    const dismissed = guide.dismissGuide(guideId);
+
+    if (dismissed && getState().textToSpeechLocale) {
+      stopTextToSpeech();
     }
 
+    return dismissed;
+  };
+
+  onGuideClick = (event?: React.MouseEvent) => {
+    const state = getState();
+    const currentGuide = guide.getCurrentGuide();
+
+    if (!currentGuide) return;
+
+    // Preserve existing text-to-speech initiation.
     if (this.attemptTextToSpeechTextToSpeech(true)) {
-      // This click started text to speech.
       setState(
         {
           hasTextToSpeechStartedByClick: true,
@@ -144,24 +151,55 @@ class Guide extends React.Component<Record<string, never>> {
         },
         {skipCallback: true},
       );
-     } else if (!isTyping && (Date.now() >= this.canContinueAt)) {
-      // Only dismiss after the current message has finished typing.
-      // Make sure we don't try and dismiss a guide if it's
-      // not modal.
-      if (currentGuide && !currentGuide.noDimBackground) {
-        // This click did not start text to speech, so attempt
-        // to dismiss the guide.
-        const dismissed = guide.dismissCurrentGuide();
-        if (dismissed) {
-          if (state.textToSpeechLocale) {
-            stopTextToSpeech();
-          }
-          soundLibrary.playSound('other');
-        }
+    }
+
+    // FIRST CLICK: Reveal the entire text immediately.
+    if (!state.guideShowing) {
+      this.skippedGuideId = currentGuide.id;
+      this.onTypingDone();
+      return;
+    }
+
+    // Prevent advancing during the 500ms pause.
+    if (Date.now() < this.canContinueAt) {
+      return;
+    }
+
+    // Don't dismiss guides without a modal background.
+    if (currentGuide.noDimBackground) {
+      return;
+    }
+
+    // Allow clicking an eligible button behind the overlay,
+    // but only after text is fully displayed and delay passes.
+    const buttonUnderTap =
+      event && currentGuide.style !== 'Info'
+        ? findButtonUnderScrim(event)
+        : null;
+
+    if (buttonUnderTap) {
+      const dismissed = this.closeGuide(currentGuide.id);
+
+      if (dismissed) {
+        buttonUnderTap.click();
       }
+
+      return;
+    }
+
+    // Info guides must use their Continue button.
+    if (currentGuide.style === 'Info') {
+      return;
+    }
+
+    // Otherwise, advance or dismiss normally.
+    if (guide.dismissCurrentGuide()) {
+      if (state.textToSpeechLocale) {
+        stopTextToSpeech();
+      }
+      soundLibrary.playSound('other');
     }
   };
-
   // Called from both the guide click handler and the render method, and
   // attempts to play text to speech if needed.  Returns true if it believes
   // it started text to speech.
@@ -258,6 +296,9 @@ class Guide extends React.Component<Record<string, never>> {
     // literals from guidesHoc / guidesK5; pass through verbatim.
     const imageStyle = currentGuide?.imageStyle;
 
+    const typingSkipped =
+      !!currentGuide && this.skippedGuideId === currentGuide.id;
+
     return (
       <div>
         {currentGuide && currentGuide.image && (
@@ -289,17 +330,21 @@ class Guide extends React.Component<Record<string, never>> {
                   )}
 
                   {/* Visible Typist animation for sighted users */}
-                  <div className="ocean-guide__typing-text" aria-hidden="true">
-                    <Typist
-                      avgTypingDelay={35}
-                      stdTypingDelay={15}
-                      delayGenerator={this.getTypingDelay}
-                      cursor={{show: false}}
-                      onTypingDone={this.onTypingDone}
+                  {!typingSkipped && (
+                    <div
+                      className="ocean-guide__typing-text"
+                      aria-hidden="true"
                     >
-                      {currentGuide.textFn(getState())}
-                    </Typist>
-                  </div>
+                      <Typist
+                        avgTypingDelay={35}
+                        stdTypingDelay={15}
+                        cursor={{show: false}}
+                        onTypingDone={this.onTypingDone}
+                      >
+                        {currentGuide.textFn(getState())}
+                      </Typist>
+                    </div>
+                  )}
 
                   <div
                     className={
@@ -313,7 +358,11 @@ class Guide extends React.Component<Record<string, never>> {
                       aria-live="polite"
                       tabIndex={0}
                       onKeyDown={this.onGuideKeyDown}
-                      className="ocean-guide__final-text"
+                      className={
+                        typingSkipped
+                          ? 'ocean-guide__final-text ocean-guide__final-text--shown'
+                          : 'ocean-guide__final-text'
+                      }
                     >
                       {currentGuide.textFn(getState())}
                     </div>
@@ -335,7 +384,21 @@ class Guide extends React.Component<Record<string, never>> {
                   {currentGuide.style === 'Info' && (
                     <Button
                       className="ocean-guide__info-button"
-                      onClick={() => {}}
+                      onClick={event => {
+                        event.stopPropagation();
+
+                        if (!getState().guideShowing) {
+                          this.skippedGuideId = currentGuide.id;
+                          this.onTypingDone();
+                          return;
+                        }
+
+                        if (Date.now() < this.canContinueAt) {
+                          return;
+                        }
+
+                        this.closeGuide(currentGuide.id);
+                      }}
                     >
                       {I18n.t('continue')}
                     </Button>
