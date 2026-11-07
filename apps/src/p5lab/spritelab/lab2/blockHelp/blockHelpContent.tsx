@@ -1,6 +1,4 @@
 import animBurst from '@cdo/static/spritelab_lab2/block-help/burst.gif';
-import animGoToExternalScene from '@cdo/static/spritelab_lab2/block-help/go-to-external-scene.png';
-import animPlayMusic from '@cdo/static/spritelab_lab2/block-help/play-music.png';
 import animPlaySound from '@cdo/static/spritelab_lab2/block-help/play-sound.gif';
 import animSetASpriteProperty from '@cdo/static/spritelab_lab2/block-help/set-a-sprite-property.gif';
 import animSetGravity from '@cdo/static/spritelab_lab2/block-help/set-gravity.gif';
@@ -81,13 +79,6 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     summary: 'Plays one short sound, once.',
     body: 'Put it under an event, such as a touch or a click.',
   },
-  spritelab2_playMusic: {
-    title: 'Play music',
-    animation: {src: animPlayMusic, alt: 'Musical notes.'},
-    summary:
-      'Plays one of your Music Lab songs, repeating, while the game plays.',
-    body: 'Put it under "when run" in the scene where the music should start.',
-  },
   spritelab2_setWeather: {
     title: 'Set weather',
     animation: {src: animSetWeather, alt: 'The set weather block in action.'},
@@ -106,15 +97,6 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     title: 'Show title',
     summary: 'Big text across the middle of the game for a moment.',
     body: 'Put it under a touch to announce a win.',
-  },
-  spritelab2_goToExternalScene: {
-    title: 'Go to project',
-    animation: {
-      src: animGoToExternalScene,
-      alt: 'An arrow from one scene to another.',
-    },
-    summary: 'Jumps into a scene from a classmate’s project.',
-    body: 'Their scenes appear in the list once they have shared a project.',
   },
   gamelab_setProp: {
     title: 'Set a sprite property',
