@@ -32,8 +32,8 @@ export function migrateBlockTypes(source: unknown): boolean {
   return changed;
 }
 
-// Worlds stored at three times the playfield per side (2026-11): see
-// trimLegacyWorld.
+// Until 2026-11 a world was saved as a 30 by 30 grid of which only the
+// top-left 10 by 10 was used. Such a grid is cut back to that corner.
 function migrateWorld(scene: Scene): boolean {
   if (!isLegacyWorld(scene.world)) {
     return false;
