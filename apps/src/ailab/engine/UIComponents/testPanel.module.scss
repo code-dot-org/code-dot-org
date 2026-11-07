@@ -14,8 +14,8 @@
   border-left: 1px solid transparent;
 }
 
-// The header, one field and the action row; a shorter panel scrolls instead.
-$card-min-height: 200px;
+// The header, two fields and the action row; a shorter panel scrolls instead.
+$card-min-height: 240px;
 
 .card {
   @include mixins.card;
