@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-05 05:24:19 UTC",
+    "serialized_at": "2026-11-05 22:37:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -616,9 +616,23 @@
       "key": "7cf84633-6bb3-4ef5-8e93-64f3613eda87",
       "position": 1,
       "properties": {
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "7cf84633-6bb3-4ef5-8e93-64f3613eda87",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28"
+      }
+    },
+    {
+      "key": "c9ea1d21-bf9a-4e3b-aef1-25ba59998388",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9ea1d21-bf9a-4e3b-aef1-25ba59998388",
         "lesson.key": "lesson-17",
         "lesson_group.key": "",
         "script.name": "csp-unit2-dev-27-28"
@@ -1093,6 +1107,38 @@
       "seeding_key": {
         "activity_section.key": "688eac7b-0695-4322-b5c2-f9c08548f303",
         "lesson_activity.key": "7cf84633-6bb3-4ef5-8e93-64f3613eda87"
+      }
+    },
+    {
+      "key": "eaadf6c0-0da4-473f-a6c3-41fcedbae154",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eaadf6c0-0da4-473f-a6c3-41fcedbae154",
+        "lesson_activity.key": "c9ea1d21-bf9a-4e3b-aef1-25ba59998388"
+      }
+    },
+    {
+      "key": "f390b9e0-4a1a-4bfe-b0bd-0496753e0a3d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Make"
+      },
+      "seeding_key": {
+        "activity_section.key": "f390b9e0-4a1a-4bfe-b0bd-0496753e0a3d",
+        "lesson_activity.key": "c9ea1d21-bf9a-4e3b-aef1-25ba59998388"
+      }
+    },
+    {
+      "key": "308987b4-b317-4635-8846-ac74c0620cbe",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "308987b4-b317-4635-8846-ac74c0620cbe",
+        "lesson_activity.key": "c9ea1d21-bf9a-4e3b-aef1-25ba59998388"
       }
     },
     {
@@ -2126,6 +2172,50 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson18-make-sign-up-helper_27_28"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "f390b9e0-4a1a-4bfe-b0bd-0496753e0a3d"
+      },
+      "level_keys": [
+        "csp-unit2-lesson18-make-sign-up-helper_27_28"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson18-cfu_27_28"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "308987b4-b317-4635-8846-ac74c0620cbe"
+      },
+      "level_keys": [
+        "csp-unit2-lesson18-cfu_27_28"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Predict & Run"
       },
       "bonus": false,
@@ -2143,7 +2233,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2165,7 +2255,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2187,7 +2277,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2209,7 +2299,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2770,6 +2860,30 @@
         "lesson_group.key": "",
         "script.name": "csp-unit2-dev-27-28",
         "activity_section.key": "0d2253c8-8f94-4459-a4be-85b4ce03b12b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson18-make-sign-up-helper_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson18-make-sign-up-helper_27_28"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "f390b9e0-4a1a-4bfe-b0bd-0496753e0a3d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson18-cfu_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson18-cfu_27_28"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "308987b4-b317-4635-8846-ac74c0620cbe"
       }
     },
     {

@@ -9,9 +9,8 @@ You might want to do this for a couple reasons:
 
 
 ````
-ubuntu@levelbuilder:~$ dashboard-console
-Loading levelbuilder environment (Rails 4.0.3)
-irb(main):001:0> User.find_by_email_or_hashed_email('thi.phomprida@code.org').send_reset_password_instructions('thi.phomprida@code.org')
+$ bin/dashboard-console
+> User.send_reset_password_instructions(email: 'teacher@example.com')
 ````
 
 This will send the reset password email (if the env sends email) and

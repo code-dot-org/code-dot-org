@@ -16,12 +16,9 @@ import {PathwayEvidence} from '../routing/evidence';
 import {Pathway} from '../types';
 
 import CheckpointCard from './CheckpointCard';
-import {getSkillProgress} from './map/groupProgress';
 import {resolveMapSettings} from './map/mapSettings';
 import MapView from './map/MapView';
 import MapZoom from './map/MapZoom';
-import MapStats from './MapStats';
-import ProjectCard from './ProjectCard';
 
 import styles from './mapScreen.module.scss';
 
@@ -53,9 +50,6 @@ interface MapScreenProps {
   focusId?: string;
   onFocus: (id: string | undefined) => void;
   onStart: (checkpointId: string) => void;
-  /** Seconds spent on steps so far, for the title bar. */
-  timeSpentSeconds: number;
-  onWorkOnProject: () => void;
   hasSkippedCheckpoints: boolean;
 }
 
@@ -67,18 +61,13 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   focusId,
   onFocus,
   onStart,
-  timeSpentSeconds,
-  onWorkOnProject,
   hasSkippedCheckpoints,
 }) => {
   const themeSetting = useThemeSetting('adaptive');
-  const skillProgress = useMemo(
-    () => getSkillProgress(pathway, statusMap),
-    [pathway, statusMap]
-  );
-  // The project manager lives only while the map shows, so it never races a
-  // step's manager on the same channel.
-  const projectState = usePathwayProject(pathway);
+  // Load the project channel into Redux so PathwayApp can read its name for
+  // the tab label. The manager lives only while the map shows, so it never
+  // races a step's manager on the same channel.
+  usePathwayProject(pathway);
   // During the tour, show CheckpointCard for the user-selected checkpoint
   // without zooming the map. A zoomed map shifts the highlighted node away from
   // where IntroJS measured it, so we keep the map at its fit view.
@@ -180,22 +169,12 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
         options={{
           scrollToElement: false,
           exitOnOverlayClick: false,
-          hidePrev: true,
-          nextLabel: 'Next',
-          doneLabel: 'Done',
+          nextLabel: 'Got it',
+          doneLabel: 'Got it',
           showBullets: false,
-          showStepNumbers: true,
+          showStepNumbers: false,
         }}
       />
-      <header className={styles.mapBar}>
-        <MuiTypography variant="strong">{pathway.title}</MuiTypography>
-        {!mapSettings.hideStats && (
-          <MapStats
-            skills={skillProgress}
-            timeSpentSeconds={timeSpentSeconds}
-          />
-        )}
-      </header>
       <div className={styles.mapBody}>
         <ResourcePanel
           levelProperties={levelProperties}
@@ -234,7 +213,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               pathway={pathway}
               statusMap={statusMap}
               settings={mapSettings}
-              focusId={focusId}
+              focusId={tourEnabled ? undefined : focusId}
               tourFocusIds={tourFocusIds}
               onSelect={id => {
                 if (
@@ -252,7 +231,12 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
             />
           </MapZoom>
         </div>
-        <aside id="adaptive-tour-side" className={styles.side}>
+        <aside
+          id="adaptive-tour-side"
+          className={`${styles.side}${
+            focused ? '' : ` ${styles.sideNoSelection}`
+          }`}
+        >
           {focused ? (
             <CheckpointCard
               pathway={pathway}
@@ -267,11 +251,11 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               onSelectCheckpoint={onFocus}
             />
           ) : (
-            <ProjectCard
-              pathway={pathway}
-              {...projectState}
-              onWorkOnProject={onWorkOnProject}
-            />
+            <div className={styles.sideEmptyPrompt}>
+              <MuiTypography variant="body2" className={styles.sideEmptyText}>
+                Select a checkpoint
+              </MuiTypography>
+            </div>
           )}
         </aside>
       </div>

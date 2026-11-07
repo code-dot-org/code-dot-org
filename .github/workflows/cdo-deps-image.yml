@@ -18,9 +18,6 @@ on:
       - 'Gemfile'
       - 'Gemfile.lock'
       - '.ruby-version'
-      - '.python-version'
-      - 'pyproject.toml'
-      - 'uv.lock'
       - 'dashboard/engines/*/*.gemspec'
       - 'dashboard/engines/*/lib/*/version.rb'
       - '.github/workflows/cdo-deps-image.yml'
@@ -33,9 +30,6 @@ on:
       - 'Gemfile'
       - 'Gemfile.lock'
       - '.ruby-version'
-      - '.python-version'
-      - 'pyproject.toml'
-      - 'uv.lock'
       - 'dashboard/engines/*/*.gemspec'
       - 'dashboard/engines/*/lib/*/version.rb'
       - '.github/workflows/cdo-deps-image.yml'
@@ -125,7 +119,6 @@ jobs:
             docker/deps
             docker/scripts
             dashboard/engines
-            python
 
       # podman reads ~/.docker/config.json as a credential fallback, so one
       # docker login serves both engines.
@@ -221,7 +214,6 @@ jobs:
             docker/deps
             docker/scripts
             dashboard/engines
-            python
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
@@ -299,7 +291,6 @@ jobs:
             docker/deps
             docker/scripts
             dashboard/engines
-            python
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0

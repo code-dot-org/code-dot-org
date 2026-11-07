@@ -14,10 +14,6 @@ require 'cdo/shared_constants'
 require 'cdo/rack/request'
 require 'cdo/rack/response'
 
-# load and configure pycall before numpy and any other python-related gems
-# can be automatically loaded just below.
-require 'cdo/pycall'
-
 # Early in the Rails boot process, set the environment variable VITE_RUBY_ROOT so that
 # vite_ruby knows where to find the frontend code.
 ENV["VITE_RUBY_ROOT"] = vite_dir

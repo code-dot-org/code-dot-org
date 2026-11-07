@@ -23,6 +23,11 @@ class AiGatewayAuthController < ApplicationController
   TURNSTILE_ENFORCEMENT_MODES = %w[disabled monitor enforce].freeze
   TURNSTILE_ENFORCEMENT_MODE_DEFAULT = 'disabled'.freeze
 
+  # Whether the browser may reuse a token for later gateway requests until it
+  # expires. Off, every gateway request fetches a fresh token.
+  ACCESS_TOKEN_REUSE_DCDO_KEY = 'ai-gateway-access-token-reuse-enabled'.freeze
+  ACCESS_TOKEN_REUSE_DEFAULT = true
+
   rescue_from CanCan::AccessDenied do
     render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
   end
@@ -72,8 +77,7 @@ class AiGatewayAuthController < ApplicationController
 
     # Set a little in the past to account for time drift
     issued_at_time = (Time.now - 5.seconds).to_i
-    # expire token in 1 minute
-    expiration_time = (Time.now + 1.minute).to_i
+    expiration_time = (Time.now + SharedConstants::AI_GATEWAY_ACCESS_TOKEN_LIFETIME_SECONDS.seconds).to_i
 
     token = JWT.encode(
       {
@@ -95,7 +99,7 @@ class AiGatewayAuthController < ApplicationController
       'RS256',
       jwt_headers
     )
-    render json: {token: token, turnstileEnforcementMode: enforcement_mode, signingKey: signing_key_name}
+    render json: {token: token, turnstileEnforcementMode: enforcement_mode, signingKey: signing_key_name, reusable: access_token_reusable?}
   end
 
   # DCDO stores arbitrary JSON, so the value here may be any type. A YAML-loaded
@@ -105,5 +109,9 @@ class AiGatewayAuthController < ApplicationController
   private def turnstile_enforcement_mode
     mode = DCDO.get(TURNSTILE_ENFORCEMENT_MODE_DCDO_KEY, TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
     TURNSTILE_ENFORCEMENT_MODES.include?(mode) ? mode : TURNSTILE_ENFORCEMENT_MODE_DEFAULT
+  end
+
+  private def access_token_reusable?
+    DCDO.get(ACCESS_TOKEN_REUSE_DCDO_KEY, ACCESS_TOKEN_REUSE_DEFAULT) == true
   end
 end
