@@ -28,7 +28,7 @@
 }
 
 // Fades a scroller's edges inside this element; useScrollFade sets the state.
-@mixin scroll-fade {
+@mixin scroll-fade($height: 48px) {
   position: relative;
 
   &::before,
@@ -37,7 +37,7 @@
     position: absolute;
     inset-inline: 0 var(--scrollbar-width);
     z-index: 1;
-    height: 24px;
+    height: $height;
     pointer-events: none;
     opacity: 0;
   }

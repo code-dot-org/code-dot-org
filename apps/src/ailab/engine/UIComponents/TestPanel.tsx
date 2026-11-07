@@ -135,6 +135,7 @@ const TestPanel = () => {
         >
           Make a prediction
         </Typography>
+        {/* useScrollFade marks the scroller's parent. */}
         <div className={styles.fieldsScroll}>
           <div ref={fieldsRef} className={styles.fields}>
             {selectedFeatures.map(renderField)}

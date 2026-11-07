@@ -14,7 +14,7 @@
   border-left: 1px solid transparent;
 }
 
-// The header, two fields and the action row; a shorter panel scrolls instead.
+// Roughly the header, two fields and the action row.
 $card-min-height: 240px;
 
 .card {
@@ -34,7 +34,7 @@ $card-min-height: 240px;
 }
 
 .fieldsScroll {
-  @include mixins.scroll-fade;
+  @include mixins.scroll-fade(24px);
 
   display: flex;
   flex-direction: column;

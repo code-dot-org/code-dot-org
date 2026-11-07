@@ -1,7 +1,6 @@
 import {useEffect, type RefObject} from 'react';
 
-// Sets data-fade-top, data-fade-bottom and --scrollbar-width on the scroller's
-// parent, for the scroll-fade mixin.
+// Sets the fade state that the scroll-fade mixin styles, on the scroller's parent.
 export function useScrollFade(scrollRef: RefObject<HTMLElement>) {
   useEffect(() => {
     const el = scrollRef.current;
