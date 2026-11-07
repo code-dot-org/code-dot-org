@@ -1,0 +1,21 @@
+// The map measures this box to scale itself, so it needs a definite height.
+.map {
+  height: 100%;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-neutral-secondary);
+  text-align: center;
+}
+
+// Inset past the map's scrollbar gutter.
+.zoomControls {
+  position: absolute;
+  top: 8px;
+  right: 24px;
+  z-index: 1;
+}

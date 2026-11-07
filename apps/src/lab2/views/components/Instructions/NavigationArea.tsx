@@ -349,6 +349,22 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               enabled={submitEnabled}
               tooltipMessage={submitTooltip}
             />
+          ) : externalNavigation?.callout ? (
+            <div className={moduleStyles.externalPromptBox}>
+              <strong>{externalNavigation.callout.heading}</strong>
+              <span>{externalNavigation.callout.body}</span>
+              <ContinueButton
+                disabled={!continueEnabled}
+                variant={variant}
+                color={color}
+                endIcon={externalNavigation.endIcon ?? endIcon}
+                tooltipMessage={continueTooltip}
+                hideIfDisabled={hideContinueIfDisabled}
+                onContinue={handleContinue}
+              >
+                {buttonText}
+              </ContinueButton>
+            </div>
           ) : (
             <ContinueButton
               disabled={!continueEnabled}

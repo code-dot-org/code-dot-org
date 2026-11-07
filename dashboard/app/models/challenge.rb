@@ -10,9 +10,12 @@
 #  created_at                        :datetime         not null
 #  updated_at                        :datetime         not null
 #  rubric                            :json
+#  key                               :string(255)
+#  whiteboard_starter_image_key      :string(255)
 #
 # Indexes
 #
+#  index_challenges_on_key        (key) UNIQUE
 #  index_challenges_on_lesson_id  (lesson_id)
 #
 class Challenge < ApplicationRecord

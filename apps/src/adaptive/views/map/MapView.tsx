@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {CheckpointStatusMap} from '../../progress';
+import {CheckpointStatusMap} from '../../progress/model';
 import {Pathway} from '../../types';
 
 import DestinationsMap from './DestinationsMap';
@@ -21,7 +21,8 @@ export interface MapProps {
   focusId?: string;
   /** Defaults to 'whole'. */
   fit?: MapFit;
-  onSelect: (id: string) => void;
+  /** Leaving it out makes the map read-only. */
+  onSelect?: (id: string) => void;
   tourFocusIds?: string[];
 }
 
