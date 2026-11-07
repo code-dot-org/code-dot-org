@@ -11,13 +11,24 @@ apps/
                              # standalone mode is a supported architectural alternative
 packages/
   core/                      # Core application functionality
+  audio/                     # Sound and SoundBoard playback classes
+  changelogs/                # release-it config: changelogs, versioning, publishing
   component-library/         # Design System React components
   component-library-styles/  # Design System shared styles, variables, colors, mixins
+  e2e-tests/                 # Playwright end-to-end suite for studio.code.org
   fonts/                     # Code.org web fonts
+  lesson-deep-dive/          # Post-lesson review flow for AI Tutor+
   lint-config/               # Shared ESLint, Prettier, TypeScript configs for frontend/
-packages/labs/               # Standalone curriculum lab apps — music is the first;
-                             # more labs follow the same pattern
+  markdown/                  # Sanitized markdown rendered as design-system components
+  playwright-support/        # Shared Playwright fixtures, config helpers, scripts
+  shared-constants/          # Ruby shared constants as generated TypeScript
+  users/                     # Account settings feature module
+packages/labs/               # Standalone curriculum lab apps
+  ailab/                     # AI Lab (ML Playground)
+  base/                      # Lab2 framework host (@code-dot-org/lab)
   music/                     # Music Lab
+  oceans/                    # AI for Oceans
+apps/design-system-storybook/  # Storybook for the design system
 ```
 
 ## README hierarchy
@@ -39,7 +50,7 @@ Run from `frontend/`.
 ```bash
 yarn build           # build all packages
 yarn test            # run all tests
-yarn lint:fix        # auto-fix lint across changed packages
+yarn lint:fix        # auto-fix lint in every package (turbo-cached)
 yarn lint            # verify after fix
 yarn dev             # start Studio in watch mode (Vite + Turborepo)
 yarn release:dryrun  # validate before reporting success — runs build, lint
@@ -72,11 +83,11 @@ Batch edits across files, then one build — not one build per file.
 Full detail in `docs/conventions/`. Read before creating or significantly
 modifying that area — not before every edit.
 
-| When touching                                                                           | Read                                 |
-| --------------------------------------------------------------------------------------- | ------------------------------------ |
-| Any `packages/*` or `packages/labs/*` scaffold files                                    | `docs/conventions/packages.md`       |
-| Rails config injection, `SiteConfig`, meta tag                                          | `docs/conventions/tech.md`           |
-| `packages/core` singletons, boot, `./api` or `./localization` sub-path, or plugin model | `packages/core/docs/architecture.md` |
+| When touching                                                                                   | Read                                 |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------ |
+| Any `packages/*` or `packages/labs/*` scaffold files                                            | `docs/conventions/packages.md`       |
+| Rails config injection, `SiteConfig`, meta tag                                                  | `packages/core/docs/architecture.md` |
+| `packages/core` singletons, boot, `./api` or `./plugins/localization` sub-path, or plugin model | `packages/core/docs/architecture.md` |
 
 ## Generator ↔ conventions coupling
 
@@ -95,8 +106,11 @@ the generator enforces what the docs specify.
 Key rules that apply everywhere:
 
 - Always `yarn`, never `npx`. Turbo is invoked through workspace scripts.
+  Exception: one-off setup commands documented in a package README
+  (`npx skills` in `e2e-tests`, `npx msw init` in `core`).
 - Externalized deps (`react`, `uuid`, etc.) → `peerDependencies` + `devDependencies`, never `dependencies`
-- `packages/*` use Vitest. `apps/` (repo root) uses Jest.
+- `packages/*` use Vitest for unit tests and Playwright for UI tests;
+  `e2e-tests` is Playwright only. `apps/` (repo root) uses Jest.
 - Runtime config (API endpoints, feature flags, DSNs) comes from the Rails
   `<meta name="app-config">` tag via `SiteConfig` — never `import.meta.env`
 - Dashboard API calls → use `DashboardApiClient` from `@code-dot-org/core/api`. Do not
