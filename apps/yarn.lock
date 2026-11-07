@@ -3830,6 +3830,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/field-slider@npm:^13.1.0":
+  version: 13.4.0
+  resolution: "@blockly/field-slider@npm:13.4.0"
+  peerDependencies:
+    blockly: ^13.2.0
+  checksum: 10/ff73cf80c81389dca375d1be29f67b726c6f59cb67931d8f3fca8ad6608db165d3d718bd265877be2e706c006de2ce99cc2504cd16f2859364aab2b5aa7c8ae2
+  languageName: node
+  linkType: hard
+
 "@blockly/plugin-cross-tab-copy-paste@npm:^8.0.8":
   version: 8.0.8
   resolution: "@blockly/plugin-cross-tab-copy-paste@npm:8.0.8"
@@ -11916,6 +11925,7 @@ __metadata:
     "@blockly/field-bitmap": "npm:^6.0.9"
     "@blockly/field-colour": "npm:^6.0.12"
     "@blockly/field-grid-dropdown": "npm:^6.0.10"
+    "@blockly/field-slider": "npm:^13.1.0"
     "@blockly/plugin-cross-tab-copy-paste": "npm:^8.0.8"
     "@blockly/plugin-scroll-options": "npm:^7.0.9"
     "@blockly/theme-dark": "npm:^8.0.4"

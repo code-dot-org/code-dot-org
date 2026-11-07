@@ -1,5 +1,6 @@
 import category from '@cdo/apps/blockly/blockDefinitions/category';
 import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
+import '@blockly/field-slider';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import askAi from './askAi';
@@ -23,7 +24,7 @@ import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
-import setSystemPrompt from './setSystemPrompt';
+import setPlatformGravityDirection from './setPlatformGravityDirection';
 import setWeather from './setWeather';
 import showTitle from './showTitle';
 import thePlayer from './thePlayer';
@@ -54,6 +55,7 @@ const labBlockDefinitions: {
   makeSpriteAtPosition,
   makePlatformBlocks,
   setPlatformGravity,
+  setPlatformGravityDirection,
   setAsPlatformPlayer,
   setCameraZoom,
   setWeather,

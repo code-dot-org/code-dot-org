@@ -478,9 +478,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       library.contactEpsilon = CONTACT_EPSILON;
     }
     // Fresh library = fresh run; gravity returns to the default until a
-    // set-gravity block says otherwise. Negative flips the world: players
-    // fall up and land on block undersides and the view's top edge.
+    // set-gravity block says otherwise. Direction is stored separately so a
+    // direction chosen while gravity is zero applies if gravity is restored.
     this.platformGravity_ = PLATFORM_GRAVITY;
+    this.platformGravityDirection_ = 'down';
     this.notifyControlsChange_();
     this.particles_.reset();
     this.jumpStarts_ = null;
@@ -500,7 +501,25 @@ export default class SpriteLab2Engine extends SpriteLab {
     // as a move.
     this.forgetPlayer_();
     library.commands.setPlatformGravity = value => {
-      this.platformGravity_ = Number(value) || 0;
+      const magnitude = Math.abs(Number(value)) || 0;
+      this.platformGravity_ =
+        this.platformGravityDirection_ === 'none'
+          ? 0
+          : this.platformGravityDirection_ === 'up'
+          ? -magnitude
+          : magnitude;
+      this.notifyControlsChange_();
+    };
+    library.commands.setPlatformGravityDirection = direction => {
+      this.platformGravityDirection_ =
+        direction === 'up' || direction === 'none' ? direction : 'down';
+      const magnitude = Math.abs(this.platformGravity_);
+      this.platformGravity_ =
+        this.platformGravityDirection_ === 'none'
+          ? 0
+          : this.platformGravityDirection_ === 'up'
+          ? -magnitude
+          : magnitude;
       this.notifyControlsChange_();
     };
     // The view eases toward the target zoom a frame at a time (see the
