@@ -24,6 +24,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {CopyToClipboardButton} from './CopyToClipboardButton';
+import Hoai2026Congrats from './finishDialogs/Hoai2026Congrats';
 import HoaiCongrats from './finishDialogs/HoaiCongrats';
 
 import moduleStyles from './share-dialog.module.scss';
@@ -165,6 +166,25 @@ const ShareDialog: React.FunctionComponent<{
     dispatch(hideShareDialog());
   }, [dispatch]);
 
+  // What keeps the header's Remix button away besides a blocked project:
+  // restricted sharing, in the header's project slice, which the lab's typed
+  // root state does not carry; the level page's store holds both.
+  const sharingRestricted = useAppSelector(state => {
+    const {project} = state as unknown as {
+      project?: {
+        inRestrictedShareMode?: boolean;
+        exceedsAbuseThreshold?: boolean;
+      };
+    };
+    return !!project?.inRestrictedShareMode || !!project?.exceedsAbuseThreshold;
+  });
+  const remix = useCallback(() => {
+    Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.saveAndRemix()
+      .catch(error => console.error('Remix from the finish dialog:', error));
+  }, []);
+
   const feedbackLink = useAppSelector(state => {
     const {userType, signInState} = state.currentUser;
     if (signInState !== SignInState.SignedIn) return undefined;
@@ -210,6 +230,20 @@ const ShareDialog: React.FunctionComponent<{
         projectType={projectType}
         theme={theme}
       />
+    );
+  }
+
+  if (dialogId === 'hoai2026') {
+    return (
+      <div data-theme={theme}>
+        <Hoai2026Congrats
+          onClose={handleClose}
+          shareUrl={isAbusive ? undefined : shareUrl}
+          projectType={projectType}
+          onRemix={isAbusive || sharingRestricted ? undefined : remix}
+          certificateUrl={finishUrl}
+        />
+      </div>
     );
   }
 

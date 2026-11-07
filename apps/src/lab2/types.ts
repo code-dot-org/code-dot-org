@@ -337,7 +337,7 @@ export interface LevelProperties {
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
   finishUrl?: string;
-  finishDialog?: ShareDialogId | FinishDialogId;
+  finishDialog?: ShareDialogId;
   offerBrowserTts?: boolean;
   useSecondaryFinishButton?: boolean;
   // Python Lab/Codebridge specific properties
@@ -579,10 +579,6 @@ export interface LabProps<
   channel?: Channel;
 }
 
-export type ShareDialogId = 'hoc2024' | 'hoai2025';
-
-/** A finish dialog of its own (views/dialogs/finishDialogs), outside the
-    share dialog. */
-export type FinishDialogId = 'hoai2026';
+export type ShareDialogId = 'hoc2024' | 'hoai2025' | 'hoai2026';
 
 export type LevelNavigationConfirmation = () => boolean | Promise<boolean>;

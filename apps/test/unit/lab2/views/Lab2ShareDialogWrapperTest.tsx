@@ -103,6 +103,28 @@ describe('Lab2ShareDialogWrapper', () => {
     expect(screen.queryByText(/share dialog/)).not.toBeInTheDocument();
   });
 
+  it('serves a finish dialog of its own to a lab still on the legacy share dialog', () => {
+    setState('spritelab');
+
+    render(
+      <Lab2ShareDialogWrapper
+        shareUrl="fakeShareUrl"
+        shareDialogId="hoai2026"
+        finishUrl="/done"
+      />
+    );
+
+    expect(screen.getByText('share dialog: no failure')).toBeInTheDocument();
+  });
+
+  it("keeps the legacy share dialog for that lab's own share button", () => {
+    setState('spritelab');
+
+    render(<Lab2ShareDialogWrapper shareUrl="fakeShareUrl" />);
+
+    expect(screen.queryByText(/share dialog/)).not.toBeInTheDocument();
+  });
+
   it('passes isAbusive when the project is blocked for abuse', () => {
     setState('sketchlab', true, null, true);
 

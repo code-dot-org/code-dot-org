@@ -49,6 +49,60 @@ describe('Lab2 ShareDialog', () => {
     );
   }
 
+  describe('the 2026 Hour of AI finish dialog', () => {
+    const renderFinish = (
+      props: Partial<React.ComponentProps<typeof ShareDialog>> = {}
+    ) =>
+      renderShareDialog({
+        dialogId: 'hoai2026',
+        finishUrl: '/done',
+        projectType: 'spritelab',
+        ...props,
+      });
+
+    it('renders in place of the share panel, with the finish URL as the certificate', () => {
+      renderFinish();
+      expect(
+        screen.getByRole('dialog', {name: 'Congratulations!'})
+      ).toBeInTheDocument();
+      expect(screen.getByRole('link', {name: 'Certificate'})).toHaveAttribute(
+        'href',
+        '/done'
+      );
+      expect(screen.getByRole('button', {name: 'Copy link'})).toBeEnabled();
+      expect(
+        screen.queryByRole('button', {name: 'Copy link to project'})
+      ).not.toBeInTheDocument();
+    });
+
+    it('withholds the share link and the remix when the project is blocked', () => {
+      renderFinish({isAbusive: true});
+      expect(screen.queryByRole('button', {name: 'Copy link'})).toBeNull();
+      expect(
+        screen.getByRole('button', {name: 'Open Sprite Lab'})
+      ).toBeDisabled();
+    });
+
+    it('withholds the remix when sharing is restricted', () => {
+      mockedUseAppSelector.mockImplementation(selector =>
+        selector({
+          currentUser: {signInState: 'Unknown'},
+          project: {inRestrictedShareMode: true},
+        })
+      );
+      renderFinish();
+      expect(
+        screen.getByRole('button', {name: 'Open Sprite Lab'})
+      ).toBeDisabled();
+    });
+
+    it('closes through the share dialog store', () => {
+      renderFinish();
+      screen.getByRole('button', {name: 'Keep playing'}).click();
+      expect(mockDispatch).toHaveBeenCalledWith(hideShareDialog());
+    });
+  });
+
   it('renders the share link UI when there is no share failure', () => {
     renderShareDialog({shareFailure: null});
     expect(

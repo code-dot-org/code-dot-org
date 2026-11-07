@@ -8,9 +8,9 @@ import {
 import classNames from 'classnames';
 import React, {useId} from 'react';
 
-import {CopyToClipboardButton} from '../CopyToClipboardButton';
+import {ProjectType} from '@cdo/apps/lab2/types';
 
-import {FinishDialogProps} from './showFinishDialog';
+import {CopyToClipboardButton} from '../CopyToClipboardButton';
 
 import styles from './hoai2026-congrats.module.scss';
 
@@ -81,12 +81,25 @@ const Offer: React.FunctionComponent<{
   );
 };
 
+export interface Hoai2026CongratsProps {
+  onClose: () => void;
+  /** The project's share link; absent while the project cannot be shared. */
+  shareUrl?: string;
+  projectType?: ProjectType;
+  /** Saves and opens a remix of the project; absent while the project may
+      not be remixed, for the reasons the header's Remix button honors. */
+  onRemix?: () => void;
+  /** The unit's finish URL, where a certificate is offered; absent when the
+      unit has none. */
+  certificateUrl?: string;
+}
+
 /**
  * The finish dialog for the 2026 Hour of AI Sprite Lab activity: what the
  * student can do next, and what their teacher can. Its words are English
  * in code, as the 2025 dialog's are.
  */
-const Hoai2026Congrats: React.FunctionComponent<FinishDialogProps> = ({
+const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
   onClose,
   shareUrl,
   projectType,
