@@ -14,6 +14,14 @@ export type CheckpointStatus =
   /** Demonstrated by the student's evidence and skippable, so passed without being played. */
   | 'skipped';
 
+export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
+  locked: 'Locked',
+  available: 'Ready to start',
+  inProgress: 'In progress',
+  complete: 'Complete',
+  skipped: 'Skipped',
+};
+
 /** Each checkpoint's status, by checkpoint id. */
 export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 
@@ -67,6 +75,18 @@ export function latestValidation(
 ): ValidationAttempt | undefined {
   const history = entry?.validationHistory;
   return history?.[history.length - 1];
+}
+
+/** Failed checks after which Continue opens anyway, since the judge can be wrong. */
+export const FAILED_VALIDATIONS_TO_CONTINUE = 3;
+
+/** Whether a checked step's work lets the student continue past it. */
+export function validationAllowsContinue(
+  entry: StepProgress | undefined
+): boolean {
+  const history = entry?.validationHistory ?? [];
+  if (history.some(attempt => attempt.pass)) return true;
+  return history.length >= FAILED_VALIDATIONS_TO_CONTINUE;
 }
 
 /** Id of the project screen's step, which records no progress. */
