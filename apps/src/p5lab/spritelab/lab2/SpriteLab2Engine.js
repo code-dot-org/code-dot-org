@@ -82,7 +82,7 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 // recent, or a jump the tracker saw without one would serve a stale spot.
 const JUMP_EVENT_FRAMES = 4;
 const JUMP_IMPULSE_FRAMES = 8;
-const JUMP_CLEARANCE_MULTIPLIER = 1.3;
+const JUMP_CLEARANCE_SQUARES = 0.3;
 
 // What a say bubble lasts (actionCommands spriteSay), so a title and a say
 // started together go together.
@@ -613,8 +613,7 @@ export default class SpriteLab2Engine extends SpriteLab {
           ? Math.sqrt(
               2 *
                 Math.abs(this.platformGravity_) *
-                this.platformJumpHeight_ *
-                JUMP_CLEARANCE_MULTIPLIER *
+                (this.platformJumpHeight_ + JUMP_CLEARANCE_SQUARES) *
                 (library.defaultSpriteSize || 40)
             )
           : Math.abs(Number(speed) || 0);
