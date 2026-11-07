@@ -3,22 +3,69 @@ import {
   compileWorldPrelude,
   createEmptyWorld,
   DEFAULT_SCENE_GRID_SIZE,
+  isLegacyWorld,
   paintWorldCell,
   resizeWorld,
   sceneGridSize,
-  WORLD_MULTIPLE,
+  trimLegacyWorld,
+  World,
+  WorldCell,
 } from '@cdo/apps/p5lab/spritelab/lab2/world';
 
 // A legacy world: the 8-cell playfield this lab shipped with first.
 const LEGACY_SCENE_SIZE = 8;
 
+// A grid as projects stored it before the playfield became the grid: three
+// times the playfield per side, with placements only in the top-left corner.
+function oversizeWorld(sceneSize: number): World {
+  const side = sceneSize * 3;
+  return {
+    grid: Array.from({length: side}, () =>
+      Array.from({length: side}, (): WorldCell | null => null)
+    ),
+  };
+}
+
 describe('world', () => {
-  it('creates an empty world at a multiple of the scene grid per side', () => {
+  it('creates an empty world the size of the playfield', () => {
     const world = createEmptyWorld();
-    const side = DEFAULT_SCENE_GRID_SIZE * WORLD_MULTIPLE;
-    expect(world.grid).toHaveLength(side);
-    expect(world.grid[0]).toHaveLength(side);
+    expect(world.grid).toHaveLength(DEFAULT_SCENE_GRID_SIZE);
+    expect(world.grid[0]).toHaveLength(DEFAULT_SCENE_GRID_SIZE);
     expect(world.grid.flat().every(cell => cell === null)).toBe(true);
+  });
+
+  it('recognizes an oversize legacy grid and trims it to its playfield', () => {
+    const legacy = oversizeWorld(DEFAULT_SCENE_GRID_SIZE);
+    legacy.grid[DEFAULT_SCENE_GRID_SIZE - 1][0] = {image: 'ice', kind: 'block'};
+    expect(isLegacyWorld(legacy)).toBe(true);
+    const trimmed = trimLegacyWorld(legacy);
+    expect(trimmed.grid).toHaveLength(DEFAULT_SCENE_GRID_SIZE);
+    expect(trimmed.grid[0]).toHaveLength(DEFAULT_SCENE_GRID_SIZE);
+    expect(trimmed.grid[DEFAULT_SCENE_GRID_SIZE - 1][0]).toEqual({
+      image: 'ice',
+      kind: 'block',
+    });
+    expect(sceneGridSize(trimmed)).toBe(DEFAULT_SCENE_GRID_SIZE);
+  });
+
+  it('trims by shape alone, dropping anything outside the corner', () => {
+    // Nothing outside the corner was ever shown or run.
+    const painted = oversizeWorld(DEFAULT_SCENE_GRID_SIZE);
+    painted.grid[DEFAULT_SCENE_GRID_SIZE][0] = {image: 'ice', kind: 'block'};
+    expect(isLegacyWorld(painted)).toBe(true);
+    expect(trimLegacyWorld(painted).grid.flat().filter(Boolean)).toHaveLength(
+      0
+    );
+  });
+
+  it('knows a current grid from a legacy one', () => {
+    expect(isLegacyWorld(createEmptyWorld())).toBe(false);
+    expect(isLegacyWorld(undefined)).toBe(false);
+    // Only the current playfield's storage counts: a 12-cell world is not a
+    // 4-cell legacy one, and the 8-cell era's 24 is history.
+    expect(isLegacyWorld(createEmptyWorld(12))).toBe(false);
+    expect(isLegacyWorld(oversizeWorld(LEGACY_SCENE_SIZE))).toBe(false);
+    expect(isLegacyWorld({grid: []})).toBe(false);
   });
 
   it('reads the playfield size back off a stored grid', () => {
@@ -63,13 +110,6 @@ describe('world', () => {
     );
   });
 
-  it('runs only the scene-sized top-left corner of the world', () => {
-    const world = createEmptyWorld();
-    world.grid[DEFAULT_SCENE_GRID_SIZE][0] = {image: 'ice', kind: 'block'};
-    world.grid[0][DEFAULT_SCENE_GRID_SIZE] = {image: 'ice', kind: 'block'};
-    expect(compileWorldPrelude(world)).toBe('');
-  });
-
   it("grows a smaller world, keeping the playfield's floor at the floor", () => {
     const legacy = createEmptyWorld(LEGACY_SCENE_SIZE);
     // A floor along the old playfield's bottom row, and someone standing on
@@ -112,14 +152,13 @@ describe('world', () => {
     expect(sceneGridSize(resizeWorld(empty, LEGACY_SCENE_SIZE))).toBe(
       LEGACY_SCENE_SIZE
     );
-    // Painted at the very bottom of the authoring area: the smaller world has
-    // nowhere to put it, even after the rows shift, so the size is kept.
+    // Painted at the top: the rows shift down with the floor, so the smaller
+    // world has nowhere to put it and the size is kept.
     const painted = createEmptyWorld(DEFAULT_SCENE_GRID_SIZE);
-    const lastRow = DEFAULT_SCENE_GRID_SIZE * WORLD_MULTIPLE - 1;
-    painted.grid[lastRow][0] = {image: 'ice', kind: 'block'};
+    painted.grid[0][0] = {image: 'ice', kind: 'block'};
     const kept = resizeWorld(painted, LEGACY_SCENE_SIZE);
     expect(sceneGridSize(kept)).toBe(DEFAULT_SCENE_GRID_SIZE);
-    expect(kept.grid[lastRow][0]).toEqual({image: 'ice', kind: 'block'});
+    expect(kept.grid[0][0]).toEqual({image: 'ice', kind: 'block'});
   });
 
   it('returns the same world when the size already matches', () => {
