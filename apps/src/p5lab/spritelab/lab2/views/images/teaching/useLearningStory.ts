@@ -1,6 +1,6 @@
 // The "How AI made your image" story: told once a visit on a level that
 // asks for it, after the first picture made there, and only in a quiet
-// moment.
+// moment; and at once whenever a student asks for it.
 
 import {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -8,6 +8,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
 import {GeneratedImageResult} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {ImageType} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {FrameSize} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
 import {LearningPicture} from './LearningDialog';
 
@@ -24,6 +25,25 @@ export interface LearningStory {
   picture: LearningPicture;
   prompt: string;
   imageType: ImageType;
+  /** The student asked for it, so it may be closed unread. */
+  asked?: boolean;
+}
+
+/** The story of a picture; a character set's first frame alone. */
+export function storyFor(
+  src: string,
+  prompt: string,
+  imageType: ImageType,
+  frameSize?: FrameSize | null
+): LearningStory {
+  return {
+    picture: {
+      src,
+      crop: frameSize ? {width: frameSize.x, height: frameSize.y} : undefined,
+    },
+    prompt,
+    imageType,
+  };
 }
 
 interface UseLearningStoryOptions {
@@ -44,6 +64,8 @@ export interface LearningStoryTools {
   /** The rating's reasons dialog opened or closed; the story waits while
       it is open. */
   handleAsking: (open: boolean) => void;
+  /** The student asked for the story of a picture; it opens at once. */
+  tellStory: (story: LearningStory) => void;
   endStory: () => void;
 }
 
@@ -98,22 +120,28 @@ export default function useLearningStory({
         return;
       }
       toldRef.current = true;
-      const src = bytesToDataURI(result.uint8Array, result.mediaType);
-      const crop = result.frames
-        ? {width: result.frames.frameSize.x, height: result.frames.frameSize.y}
-        : undefined;
+      const story = storyFor(
+        bytesToDataURI(result.uint8Array, result.mediaType),
+        result.generation.prompt,
+        result.generation.imageType,
+        result.frames?.frameSize
+      );
       timerRef.current = window.setTimeout(() => {
-        heldStoryRef.current = () =>
-          setStory({
-            picture: {src, crop},
-            prompt: result.generation.prompt,
-            imageType: result.generation.imageType,
-          });
+        heldStoryRef.current = () => setStory(story);
         tellHeldStory();
       }, LEARNING_DELAY_MS);
     },
     [learning, tellHeldStory]
   );
+  // An asked-for telling is the visit's telling: a story still due for the
+  // level is dropped, so it neither replaces this one mid-read nor repeats
+  // it after.
+  const tellStory = useCallback((asked: LearningStory) => {
+    window.clearTimeout(timerRef.current);
+    heldStoryRef.current = null;
+    toldRef.current = true;
+    setStory({...asked, asked: true});
+  }, []);
   const endStory = useCallback(() => setStory(null), []);
-  return {story, offerStory, handleAsking, endStory};
+  return {story, offerStory, handleAsking, tellStory, endStory};
 }
