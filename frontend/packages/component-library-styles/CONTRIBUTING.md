@@ -50,11 +50,15 @@ and how to do it:
 
 0. Check existing design tokens for duplicates or overlap to prevent redundancy.
 
-1. **Add the token** to the appropriate SCSS file:
+1. **Add the token** to the appropriate file:
 
    - Fonts → `font.scss`
    - Variables → `variables.scss`
    - Mixins → `mixins.scss`
+   - CADS color tokens → not by hand. Design re-exports `colors_codeAi.css` and `primitiveColors_codeAi.css`; then
+     run `node scripts/generateBrandCodeAiNext.mjs` and `node scripts/generateBrandCodeAiAudit.mjs` to regenerate
+     `brandCodeAiNext.css` and `brandCodeAiAudit.css`. Never edit a file headed `GENERATED FILE — do not edit`. See
+     [Brand Tokens](./README.md#brand-tokens).
 
 2. Ensure the token follows existing naming conventions (e.g., `field-helper-section-white`).
 
@@ -62,7 +66,7 @@ and how to do it:
 
    - Follow the existing structure and organization.
 
-4. **Test the token or style** across light/dark themes, RTL and, (if applicable)
+4. **Test the token or style** across light/dark themes, every brand (`data-brand`), RTL and, (if applicable)
    responsiveness (desktop, tablet, mobile).
 
 5. Submit a PR following the [Contribution Roadmap](#-contribution-roadmap).
@@ -77,7 +81,7 @@ and how to do it:
 ## 🎯 Coding Standards
 
 - ✅ Use **SCSS** for consistency.
-- ✅ Use **semantic colors** from `@code-dot-org/component-library-styles/colors.scss` where possible.
+- ✅ Use **semantic colors** from `@code-dot-org/component-library-styles/colors.css` where possible.
 - ✅ Keep typography and spacing consistent with design tokens.
 - ✅ Keep token names **descriptive** and follow existing naming conventions.
 - ✅ Keep file size reasonable — split large files if needed.
@@ -85,8 +89,8 @@ and how to do it:
 
 ## 🧪 How to Test Your Styles
 
-There's currently no automated testing for styles. Here's how you can test your changes manually or through other
-packages automated tests:
+`yarn test` runs both brand generators with `--check` and fails if a generated file is stale. Nothing else is
+tested automatically; test your changes manually or through other packages' automated tests:
 
 1. **Unit Tests (Manually)** — Test RTL (right-to-left) support directly since it's part of Design System scope.
 2. **Storybook Tests** — Ensure Storybook displays the token or style correctly.
