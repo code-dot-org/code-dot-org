@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
@@ -22,13 +22,6 @@ let levels:
 jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
   getCurrentLevels: () => levels,
 }));
-jest.mock('@cdo/apps/code-studio/initApp/project', () => ({
-  __esModule: true,
-  default: {save: jest.fn()},
-}));
-const {default: project} = jest.requireMock(
-  '@cdo/apps/code-studio/initApp/project'
-) as {default: {save: jest.Mock}};
 // Connected to a store of its own; stubbed to what the row places.
 jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
   __esModule: true,
@@ -110,17 +103,6 @@ describe('SimpleHeader', () => {
     expect(
       screen.getByRole('group', {name: 'Lesson progress'}).childElementCount
     ).toBe(0);
-  });
-
-  it('offers to try again when a save fails', () => {
-    renderHeader({
-      showProjectUpdatedAt: true,
-      projectUpdatedStatus: 'error',
-      showTryAgainDialog: true,
-    });
-    expect(screen.getByText('Error saving your project')).toBeTruthy();
-    fireEvent.click(document.getElementById('try-again-save-button')!);
-    expect(project.save).toHaveBeenCalledTimes(1);
   });
 
   it('shows the save status once the project store asks', () => {

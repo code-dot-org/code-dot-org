@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import project from '@cdo/apps/code-studio/initApp/project';
 import TimeAgo from '@cdo/apps/templates/TimeAgo';
 import msg from '@cdo/locale';
 
@@ -64,7 +65,7 @@ class ProjectUpdatedAt extends React.Component {
     return (
       <div className="project_updated_at header_text" style={styles.container}>
         {this.renderText()}
-        <RetryProjectSaveDialog />
+        <RetryProjectSaveDialog onTryAgain={() => project.save()} />
       </div>
     );
   }

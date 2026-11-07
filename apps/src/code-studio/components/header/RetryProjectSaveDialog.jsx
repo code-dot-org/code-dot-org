@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import project from '@cdo/apps/code-studio/initApp/project';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
@@ -15,12 +14,7 @@ export class UnconnectedRetryProjectSaveDialog extends Component {
   static propTypes = {
     projectUpdatedStatus: PropTypes.oneOf(Object.values(statuses)),
     isOpen: PropTypes.bool,
-    /** Saves the project again by default. */
-    onTryAgain: PropTypes.func,
-  };
-
-  static defaultProps = {
-    onTryAgain: () => project.save(),
+    onTryAgain: PropTypes.func.isRequired,
   };
 
   handleClick = () => {

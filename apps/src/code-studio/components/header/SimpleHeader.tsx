@@ -18,7 +18,6 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProjectInfo from './ProjectInfo';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
-import RetryProjectSaveDialog from './RetryProjectSaveDialog';
 import {SAVE_STATUS_ICONS} from './saveStatusIcons';
 
 import styles from './simple-header.module.scss';
@@ -135,7 +134,6 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
               role="img"
               className={styles.saveIcon}
             />
-            <RetryProjectSaveDialog />
           </div>
         )}
         <div id={HEADER_ACTION_ID} className={styles.action} />
