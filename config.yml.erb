@@ -716,6 +716,11 @@ active_job_queue_adapter: :delayed_job
 active_job_backend_n_workers_to_start: 10
 active_job_backend_rolling_restart_in_n_batches: 2
 
+# Age in seconds at which bin/cron/recycle_active_job_workers rolling-restarts
+# the worker pool. 0 disables it. DCDO overrides this per environment once the
+# pool is old enough to be a candidate.
+active_job_backend_worker_restart_period: 0
+
 # aiproxy credentials
 aiproxy_api_key: !Secret
 
