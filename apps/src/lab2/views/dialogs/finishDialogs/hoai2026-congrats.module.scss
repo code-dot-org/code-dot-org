@@ -83,12 +83,18 @@
 }
 
 // Full width, white on the purple card, its words at the left and the
-// arrow at the right.
+// arrow at the right. The theme's own rules for this button set the same
+// colours from a stylesheet that may land later, so each rule here
+// carries one more class than the theme rule it replaces.
 .students .open {
   width: 100%;
   justify-content: space-between;
   background: var(--background-neutral-white-fixed);
   color: var(--brand-purple-50);
+
+  &:focus {
+    color: var(--brand-purple-50);
+  }
 
   &:hover,
   &:focus-visible {
@@ -97,8 +103,8 @@
   }
 }
 
-.eyebrow,
-.cardTitle {
+.card .eyebrow,
+.card .cardTitle {
   margin: 0;
   color: inherit;
 }
@@ -137,6 +143,10 @@
   line-height: 1.35;
   background: var(--background-neutral-white-fixed);
   color: var(--brand-purple-50);
+
+  &:focus {
+    color: var(--brand-purple-50);
+  }
 
   &:hover,
   &:focus-visible {
@@ -186,7 +196,7 @@
   margin-top: 0;
 }
 
-.offerTitle {
+.offer .offerTitle {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -199,7 +209,7 @@
   color: var(--text-brand-purple-primary);
 }
 
-.offerText {
+.offer .offerText {
   margin: 0 0 4px;
   color: var(--text-neutral-secondary);
 }
