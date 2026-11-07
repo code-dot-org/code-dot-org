@@ -125,12 +125,15 @@ The update PR must hold only the update, never skill edits (those go in their ow
 - Stage exactly: the three URL files and `constants/index.ts`; add the story file if you edited it and the
   caller files the operator approved in step 3.
 - End the commit message with the commit attribution line from the session's system reminder.
-- End the PR body with the PR attribution line from the same reminder, and delete the placeholder comment in
-  the template.
+- End the PR body with the PR attribution line from the same reminder.
 - Title: `Update Font Awesome kit: <added icons, or "N new custom icons">`.
-- Body: fill in `.agents/skills/update-fontawesome-kit/pr-template.md` (summary, added/removed icons table,
-  before/after story screenshots, testing checklist). It needs the S3 prefix
-  (`cdo-dsco/assets/font-awesome-pro/<ts>`), the added and removed icons, usages found for removed icons, the
-  step 6 check results, and before/after screenshots of the Custom Icons story. Take the screenshots yourself
-  with Storybook plus Playwright: "before" is `origin/staging`, "after" is the branch.
+- Body: follow `.github/pull_request_template.md` and `.github/PULL_REQUEST_GUIDELINES.md`. This PR needs:
+  - Background: the S3 prefix (`cdo-dsco/assets/font-awesome-pro/<ts>`) and the files whose timestamp moved.
+  - Visible changes: a table of added and removed icons, usages found for removed icons (step 3, or "none
+    found"), and before/after screenshots of the Custom Icons story. Take the screenshots yourself with
+    Storybook plus Playwright: "before" is `origin/staging`, "after" is the branch.
+  - Validation: the step 6 check results and the step 7 commands, marking which steps the operator did and
+    which you did. Leave the two vetting checkboxes unchecked; they are the operator's.
+  - Authorship: the operator directed the update; you ran this skill.
+  - Delete the Deployment notes and Privacy and security sections; a kit update has neither.
 - Open as a draft into `staging`, then tell the operator the link.
