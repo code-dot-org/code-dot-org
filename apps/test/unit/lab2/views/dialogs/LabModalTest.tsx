@@ -44,6 +44,13 @@ describe('LabModal', () => {
     expect(screen.getByRole('button', {name: 'Done'})).toBeTruthy();
   });
 
+  it('has no x and ignores Escape without onClose: a dialog read to the end', () => {
+    renderModal({onClose: undefined});
+    expect(screen.queryByRole('button', {name: 'Close dialog'})).toBeNull();
+    fireEvent.keyDown(document, {key: 'Escape'});
+    expect(screen.getByRole('dialog', {name: 'All scenes'})).toBeTruthy();
+  });
+
   it('closes from the corner x and from Escape', () => {
     const onClose = renderModal({closeLabel: 'Close the scenes'});
     fireEvent.click(screen.getByRole('button', {name: 'Close the scenes'}));

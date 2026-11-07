@@ -26,8 +26,9 @@ export interface LabModalProps {
   primaryButtonProps: MuiButtonProps;
   /** Spread on an outlined button before the primary; none without it. */
   secondaryButtonProps?: MuiButtonProps;
-  /** Closes the dialog from the corner x and Escape. */
-  onClose: () => void;
+  /** Closes the dialog from the corner x and Escape. Without it there is
+      neither: the dialog is read to the end, through its buttons. */
+  onClose?: () => void;
   /** The x's name; the shell's "Close dialog" when unset. */
   closeLabel?: string;
   /** Added to the panel, to size it. */
@@ -51,7 +52,7 @@ const LabModal: React.FunctionComponent<LabModalProps> = ({
       closeLabel={closeLabel}
       aria-labelledby={titleId}
     >
-      <div className={styles.header}>
+      <div className={classNames(styles.header, onClose && styles.closable)}>
         <MuiTypography
           id={titleId}
           component="h2"
