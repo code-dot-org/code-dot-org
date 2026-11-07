@@ -14,19 +14,31 @@
   border-left: 1px solid transparent;
 }
 
+// The header, one field and the action row; a shorter panel scrolls instead.
+$card-min-height: 200px;
+
 .card {
   @include mixins.card;
 
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  min-height: $card-min-height;
   box-shadow: var(--shadow-sm);
 }
 
 .cardHeader {
+  flex-shrink: 0;
   padding: 8px;
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
 .fields {
   @include mixins.card-fields;
+
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
 }
 
 .fields .field {
@@ -38,6 +50,7 @@
 }
 
 .actionRow {
+  flex-shrink: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
