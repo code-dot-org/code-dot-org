@@ -28,7 +28,12 @@ function useHeaderSlot(): HTMLElement | null {
         setSlot(found);
       }
     });
-    observer.observe(document.body, {childList: true, subtree: true});
+    // The header's own root when the page has one: the lab's DOM churn is
+    // outside it.
+    observer.observe(document.querySelector('.header_level') ?? document.body, {
+      childList: true,
+      subtree: true,
+    });
     return () => observer.disconnect();
   }, [slot]);
   return slot;

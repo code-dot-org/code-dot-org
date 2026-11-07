@@ -79,6 +79,16 @@ $narrow: 991.98px;
       display: none;
     }
   }
+
+  // Without :has() the guard is dropped; a level page always has a current
+  // bubble.
+  @supports not selector(:has(*)) {
+    @media (max-width: $narrow) {
+      > :not([aria-current]) {
+        display: none;
+      }
+    }
+  }
 }
 
 .save {

@@ -1,8 +1,8 @@
 // The level header's middle for a unit whose simple_progress property is
 // set: one bar with the lesson's name, a bubble per level that fills in as
 // the level is done, the project's save status, and a slot the lab fills
-// with a button of its own (HeaderActionButton). The bubbles are pictures,
-// not links: the unit is walked in order, with no going back or ahead.
+// with a button of its own. The bubbles are pictures, not links: the unit
+// is walked in order, with no going back or ahead.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {ProgressBubble} from '@code-dot-org/component-library/progressWidget';
@@ -13,10 +13,13 @@ import {useSelector} from 'react-redux';
 
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
+import {LevelWithProgress} from '@cdo/apps/types/progressTypes';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProjectInfo from './ProjectInfo';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
+import RetryProjectSaveDialog from './RetryProjectSaveDialog';
+import {SAVE_STATUS_ICONS} from './saveStatusIcons';
 
 import styles from './simple-header.module.scss';
 
@@ -29,15 +32,6 @@ export const HEADER_ACTION_ID = 'simple_header_action';
 interface HeaderState {
   isRtl: boolean;
   project: ProjectState;
-}
-
-/** The fields of a getCurrentLevels entry the bubbles read. */
-interface HeaderLevel {
-  id: string;
-  status?: string;
-  levelNumber?: number;
-  isCurrentLevel?: boolean;
-  sublevels?: HeaderLevel[];
 }
 
 type BubbleStatus = React.ComponentProps<typeof ProgressBubble>['status'];
@@ -60,16 +54,6 @@ const statusLabel: Record<NonNullable<BubbleStatus>, string> = {
   error: 'rejected',
 };
 
-const SAVE_ICONS: Record<
-  ProjectState['projectUpdatedStatus'],
-  {iconName: string; label: string}
-> = {
-  default: {iconName: 'cloud', label: 'Not saved'},
-  saving: {iconName: 'cloud-arrow-up', label: 'Saving'},
-  saved: {iconName: 'cloud-check', label: 'Saved'},
-  error: {iconName: 'cloud-exclamation', label: 'Save failed'},
-};
-
 interface SimpleHeaderProps {
   /** The lesson's name, on the bar's first pill. */
   lessonName?: string;
@@ -82,9 +66,10 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
   const {showProjectUpdatedAt, projectUpdatedStatus} = useSelector(
     (state: HeaderState) => state.project
   );
-  // getCurrentLevels builds a new array per call; isEqual skips needless
-  // re-renders.
-  const levels = useSelector(getCurrentLevels, isEqual) as HeaderLevel[];
+  // getCurrentLevels builds a new array per call, and none until the lesson
+  // is known; isEqual skips needless re-renders.
+  const levels = (useSelector(getCurrentLevels, isEqual) ??
+    []) as LevelWithProgress[];
 
   // Eyes UI tests key on these to tell a page with this header from one with
   // a server-rendered header, and to wait for the font swap.
@@ -97,7 +82,7 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
     });
   }, []);
 
-  const saveIcon = SAVE_ICONS[projectUpdatedStatus];
+  const saveIcon = SAVE_STATUS_ICONS[projectUpdatedStatus];
 
   return (
     <div id="header_middle_content" className={styles.row}>
@@ -127,7 +112,7 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
               !!level.isCurrentLevel ||
               !!level.sublevels?.some(sublevel => sublevel.isCurrentLevel);
             const status =
-              bubbleStatusByLevelStatus[level.status ?? ''] ?? 'notStarted';
+              bubbleStatusByLevelStatus[level.status] ?? 'notStarted';
             return (
               <ProgressBubble
                 key={level.id}
@@ -145,11 +130,12 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
           <div className={styles.save}>
             <FontAwesomeV6Icon
               iconName={saveIcon.iconName}
-              title={saveIcon.label}
-              aria-label={saveIcon.label}
+              title={saveIcon.title}
+              aria-label={saveIcon.title}
               role="img"
               className={styles.saveIcon}
             />
+            <RetryProjectSaveDialog />
           </div>
         )}
         <div id={HEADER_ACTION_ID} className={styles.action} />
