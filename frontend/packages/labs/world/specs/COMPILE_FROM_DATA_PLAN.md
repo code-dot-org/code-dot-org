@@ -455,3 +455,6 @@ from the Main Screen's data, and `define world` is gone
   made it, so after 5a they name the main camera only. A Viewport's stored
   cameras have names (`showsThrough` reads them); a dropdown of those is
   not built.
+  CLOSED by ONE_WORLD_PLAN.md, step 6: a Viewport has one camera, and code
+  reaches it as `camera of ⟨Viewport⟩`. The three blocks and `shows
+  through` are gone, so there are no names to choose from.

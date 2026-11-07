@@ -569,6 +569,19 @@ describe('what it is for (specs/ACTORS_AS_DATA_PLAN.md, step 3)', () => {
     );
   });
 
+  it('takes its icons as one tab stop, the arrows moving within it', () => {
+    open(as({for: 'interface'}));
+    const icon = (name: string) => screen.getByRole('button', {name});
+    expect(icon('text')).toHaveAttribute('tabindex', '0');
+    expect(icon('speech')).toHaveAttribute('tabindex', '-1');
+
+    icon('text').focus();
+    fireEvent.keyDown(icon('text'), {key: 'ArrowRight'});
+    expect(document.activeElement).toBe(icon('speech'));
+    expect(icon('speech')).toHaveAttribute('tabindex', '0');
+    expect(icon('text')).toHaveAttribute('tabindex', '-1');
+  });
+
   it('says what it is for, and offers no way to change it', () => {
     // Decided when it is made (specs/ACTORS_AS_DATA_PLAN.md).
     open();

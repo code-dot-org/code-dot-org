@@ -50,6 +50,8 @@ import {useEffect, useMemo, useRef, useState} from 'react';
 import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
+import {useRovingGrid} from '../layout/rovingGrid';
+
 import {CellThumb} from './CellThumb';
 import {DescribePicture} from './generate/DescribePicture';
 import type {GeneratedPicture, ImageGenerator} from './generate/imageGenerator';
@@ -192,7 +194,14 @@ export const SpritePickerDialog = ({
 
   // The dialog's own first focus is the first action; the picture it holds now
   // may decode later, and takes focus only if the learner has not moved on.
-  const palette = useRef<HTMLUListElement>(null);
+  const {
+    listRef: palette,
+    listProps,
+    itemProps,
+  } = useRovingGrid<HTMLUListElement>(
+    tiles.map(tile => tile.key),
+    keyOf(current),
+  );
   const holding = useRef<HTMLButtonElement>(null);
   const focusPlaced = useRef(false);
   useEffect(() => {
@@ -327,7 +336,7 @@ export const SpritePickerDialog = ({
             />
           ) : (
             <>
-              <ul ref={palette} className={styles.palette}>
+              <ul ref={palette} className={styles.palette} {...listProps}>
                 {action('import', 'download', 'Import', onImport)}
                 {onNew && action('new', 'plus', 'New', onNew)}
                 {onUpload && action('upload', 'upload', 'Upload', onUpload)}
@@ -340,6 +349,7 @@ export const SpritePickerDialog = ({
                   <li key={tile.key}>
                     <button
                       ref={tile.key === keyOf(current) ? holding : undefined}
+                      {...itemProps(tile.key)}
                       type="button"
                       className={
                         tile.key === chosen

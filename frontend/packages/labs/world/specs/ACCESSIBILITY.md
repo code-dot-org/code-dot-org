@@ -242,6 +242,9 @@ below, and are listed last.
   icon and pressed when chosen; the picture in each is hidden from a
   screen reader, the name says it. A group of sixteen tab stops, where a
   radio group would be one: noted, not changed.
+  CLOSED (November 2026): the sixteen are one tab stop, the chosen icon
+  or else the first, and the arrows, Home and End move among them
+  (`layout/rovingGrid`). Moving does not choose; Enter or Space does.
 - **What it is** is a named group: Acts like is a labelled dropdown, Is a
   record a checkbox with its meaning in a line of text after it.
 - **A picture is chosen from a labelled list**, in the Actor Editor and
@@ -618,3 +621,8 @@ themes. Not seen with a screen reader.
   it now opens on the picture the field holds, which is the one marked
   pressed. Each picture is named by its file name ("wall.png"), and a
   sheet's cells by file and cell ("coinSpin.png, cell 3").
+  The pictures were a tab stop each, 36 of them in Jetpack ahead of
+  Cancel. They are now one, as the icon picker's are: the arrows move
+  among them, up and down by where each is drawn, and Home and End go to
+  the first and the last. Import and the other ways to get a picture keep
+  a tab stop each.

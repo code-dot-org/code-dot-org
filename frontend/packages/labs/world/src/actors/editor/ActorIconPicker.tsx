@@ -7,11 +7,12 @@
 //
 // A button each, pressed when chosen, as the animation row's are: sixteen is
 // few enough to see at once, and a dropdown would hide the pictures that are
-// the point of choosing.
+// the point of choosing. The sixteen are one tab stop, moved in by the arrows.
 
 import {Button, Typography} from '@mui/material';
 
 import {ACTOR_ICONS} from '../../blockly/actorIcons';
+import {useRovingGrid} from '../../layout/rovingGrid';
 
 import styles from './actorEditor.module.css';
 
@@ -27,30 +28,37 @@ export const ActorIconPicker = ({
   selected,
   onChange,
   isReadOnly,
-}: ActorIconPickerProps) => (
-  <section className={styles.icons} aria-labelledby="actor-icon-heading">
-    <Typography variant="body2" component="h3" id="actor-icon-heading">
-      Icon
-    </Typography>
-    <ul className={styles.iconList}>
-      {Object.entries(ACTOR_ICONS).map(([name, image]) => (
-        <li key={name}>
-          <Button
-            variant={name === selected ? 'contained' : 'outlined'}
-            color="secondary"
-            size="small"
-            className={styles.iconChoice}
-            aria-pressed={name === selected}
-            disabled={isReadOnly}
-            onClick={() => onChange(name === selected ? undefined : name)}
-          >
-            <img src={image} alt="" aria-hidden="true" />
-            {name}
-          </Button>
-        </li>
-      ))}
-    </ul>
-  </section>
-);
+}: ActorIconPickerProps) => {
+  const {listRef, listProps, itemProps} = useRovingGrid<HTMLUListElement>(
+    Object.keys(ACTOR_ICONS),
+    selected,
+  );
+  return (
+    <section className={styles.icons} aria-labelledby="actor-icon-heading">
+      <Typography variant="body2" component="h3" id="actor-icon-heading">
+        Icon
+      </Typography>
+      <ul ref={listRef} className={styles.iconList} {...listProps}>
+        {Object.entries(ACTOR_ICONS).map(([name, image]) => (
+          <li key={name}>
+            <Button
+              variant={name === selected ? 'contained' : 'outlined'}
+              color="secondary"
+              size="small"
+              className={styles.iconChoice}
+              {...itemProps(name)}
+              aria-pressed={name === selected}
+              disabled={isReadOnly}
+              onClick={() => onChange(name === selected ? undefined : name)}
+            >
+              <img src={image} alt="" aria-hidden="true" />
+              {name}
+            </Button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
 export default ActorIconPicker;

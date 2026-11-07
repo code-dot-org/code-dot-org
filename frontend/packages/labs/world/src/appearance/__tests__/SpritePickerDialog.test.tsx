@@ -146,6 +146,29 @@ describe('SpritePickerDialog', () => {
     );
   });
 
+  it('is one tab stop, moved in by the arrows and Home and End', () => {
+    open({current: {sprite: 'coinSpin.png', cell: 2}});
+    const tile = (name: string) => screen.getByRole('button', {name});
+
+    expect(tile('coinSpin.png, cell 3')).toHaveAttribute('tabindex', '0');
+    expect(tile('player.png')).toHaveAttribute('tabindex', '-1');
+    expect(tile('Import')).not.toHaveAttribute('tabindex', '-1');
+
+    fireEvent.keyDown(document.activeElement!, {key: 'ArrowRight'});
+    expect(document.activeElement).toBe(tile('coinSpin.png, cell 4'));
+    expect(tile('coinSpin.png, cell 4')).toHaveAttribute('tabindex', '0');
+    expect(tile('coinSpin.png, cell 3')).toHaveAttribute('tabindex', '-1');
+    fireEvent.keyDown(document.activeElement!, {key: 'Home'});
+    expect(document.activeElement).toBe(tile('player.png'));
+    fireEvent.keyDown(document.activeElement!, {key: 'End'});
+    expect(document.activeElement).toBe(tile('coinSpin.png, cell 6'));
+    // Moving is not choosing.
+    expect(tile('coinSpin.png, cell 3')).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+  });
+
   it('waits for the primary button rather than picking on a click', () => {
     const onPick = vi.fn();
     open({onPick});
