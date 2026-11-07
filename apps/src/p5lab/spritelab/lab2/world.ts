@@ -6,10 +6,14 @@ import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {noteImageReference} from './imageReferences';
 
 // Cells per side of the playfield, for a world being created now. The stored
-// world is WORLD_MULTIPLE times this per side, authored ahead of a
-// scrollable playfield; only the top-left scene-sized corner runs today.
+// grid is the playfield: its side is the playfield's.
 export const DEFAULT_SCENE_GRID_SIZE = 10;
-export const WORLD_MULTIPLE = 3;
+// Worlds saved before this were stored at three times the playfield per
+// side, ahead of a scrollable playfield that never came; only the top-left
+// corner was ever shown or run. trimLegacyWorld cuts such a grid back. The
+// playfield was 8 cells when the lab shipped and 10 since.
+const LEGACY_WORLD_MULTIPLE = 3;
+const LEGACY_PLAYFIELD_SIZES = [8, DEFAULT_SCENE_GRID_SIZE];
 
 export interface WorldCell {
   // Animation name to draw and spawn.
@@ -30,8 +34,39 @@ export interface World {
  * two levels disagree about the same stored placements.
  */
 export function sceneGridSize(world?: World): number {
-  const rows = world?.grid?.length ?? 0;
-  return rows ? Math.floor(rows / WORLD_MULTIPLE) : DEFAULT_SCENE_GRID_SIZE;
+  const rows = trimLegacyWorld(world)?.grid?.length ?? 0;
+  return rows || DEFAULT_SCENE_GRID_SIZE;
+}
+
+/** Whether a grid is an oversize legacy one: three times a playfield the
+    lab has had per side, with nothing outside the top-left corner, where
+    nothing could be placed. */
+export function isLegacyWorld(world?: World): boolean {
+  const grid = world?.grid;
+  const side = grid?.length ?? 0;
+  const corner = side / LEGACY_WORLD_MULTIPLE;
+  if (!LEGACY_PLAYFIELD_SIZES.includes(corner)) {
+    return false;
+  }
+  return grid!.every(
+    (cells, row) =>
+      cells.length === side &&
+      cells.every((cell, col) => !cell || (row < corner && col < corner))
+  );
+}
+
+/** The world cut back to its playfield, when it is a legacy oversize grid;
+    the same world otherwise, so memoized readers keep their identity. */
+export function trimLegacyWorld(world: World): World;
+export function trimLegacyWorld(world?: World): World | undefined;
+export function trimLegacyWorld(world?: World): World | undefined {
+  if (!world || !isLegacyWorld(world)) {
+    return world;
+  }
+  const corner = world.grid.length / LEGACY_WORLD_MULTIPLE;
+  return {
+    grid: world.grid.slice(0, corner).map(cells => cells.slice(0, corner)),
+  };
 }
 
 /** Playfield pixels per cell — sprites are placed and sized by this. */
@@ -42,10 +77,9 @@ export function cellSize(sceneSize: number): number {
 export function createEmptyWorld(
   sceneSize: number = DEFAULT_SCENE_GRID_SIZE
 ): World {
-  const side = sceneSize * WORLD_MULTIPLE;
   return {
-    grid: Array.from({length: side}, () =>
-      Array.from({length: side}, () => null)
+    grid: Array.from({length: sceneSize}, () =>
+      Array.from({length: sceneSize}, () => null)
     ),
   };
 }
@@ -66,7 +100,8 @@ export function resizeWorld(
   if (!world?.grid?.length) {
     return createEmptyWorld(sceneSize);
   }
-  const side = sceneSize * WORLD_MULTIPLE;
+  world = trimLegacyWorld(world);
+  const side = sceneSize;
   const current = world.grid.length;
   if (current === side) {
     return world;
@@ -117,6 +152,7 @@ export function paintWorldCell(
 // draw on top. Placed items are cell-sized: the prelude pins the default
 // sprite size to one cell, which platformer levels already use.
 export function compileWorldPrelude(world?: World): string {
+  world = trimLegacyWorld(world);
   const rows = world?.grid ?? [];
   const sceneSize = sceneGridSize(world);
   const cell = cellSize(sceneSize);

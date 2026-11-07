@@ -6,7 +6,13 @@ import {imageTypeFromCategories} from './imageGallery';
 import {imageNamedForRole} from './imageRoleDefaults';
 import {countWorldCells} from './projectCounts';
 import {RuntimeAnimationList, Scene, Sources} from './types';
-import {createEmptyWorld, sceneGridSize, World, WorldCell} from './world';
+import {
+  createEmptyWorld,
+  sceneGridSize,
+  trimLegacyWorld,
+  World,
+  WorldCell,
+} from './world';
 
 /**
  * Which image each pattern character draws: 'B' the block the student made
@@ -50,6 +56,7 @@ export function paintPattern(
   pattern: string[],
   cellFor: {[char: string]: WorldCell}
 ): World | null {
+  world = trimLegacyWorld(world);
   const counts = countWorldCells(world?.grid);
   const size = sceneGridSize(world);
   const grid = (
