@@ -14,6 +14,10 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
       end
     end
 
+    before do
+      DCDO.stubs(:get).with('statsig-plugin-enabled', true).returns(true)
+    end
+
     it 'returns false' do
       _load_web_analytics.must_equal false
     end
@@ -27,6 +31,18 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
         end
       end
     end
+
+    context 'when Statsig is switched off' do
+      let(:request_path) {StatsigAnalyticsHelper::TARGET_PATHS.first}
+
+      before do
+        DCDO.stubs(:get).with('statsig-plugin-enabled', true).returns(false)
+      end
+
+      it 'returns false even on a matching path' do
+        _load_web_analytics.must_equal false
+      end
+    end
   end
 
   describe '#analytics_config' do
@@ -34,7 +50,7 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
     let(:current_user) {nil}
 
     before do
-      DCDO.stubs(:get).with('statsig-enabled', true).returns(true)
+      DCDO.stubs(:get).with('statsig-plugin-enabled', true).returns(true)
     end
 
     it 'reports the client key when one is provisioned' do
@@ -71,7 +87,7 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
 
     it 'surfaces the switch without collapsing the configured provider' do
       CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
-      DCDO.stubs(:get).with('statsig-enabled', true).returns(false)
+      DCDO.stubs(:get).with('statsig-plugin-enabled', true).returns(false)
       _(analytics_config).must_equal(
         {
           provider: 'statsig',
@@ -83,7 +99,7 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
 
     it 'reports the switch alongside an unconfigured provider' do
       CDO.stubs(:safe_statsig_api_client_key).returns('')
-      DCDO.stubs(:get).with('statsig-enabled', true).returns(false)
+      DCDO.stubs(:get).with('statsig-plugin-enabled', true).returns(false)
       _(analytics_config).must_equal({provider: 'none', enabled: false})
     end
 
@@ -104,7 +120,7 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
 
       it 'keeps seeding the identity while the switch is off' do
         CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
-        DCDO.stubs(:get).with('statsig-enabled', true).returns(false)
+        DCDO.stubs(:get).with('statsig-plugin-enabled', true).returns(false)
         _(analytics_config).must_equal(
           {
             provider: 'statsig',
