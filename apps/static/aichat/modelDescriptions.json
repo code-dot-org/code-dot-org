@@ -45,5 +45,19 @@
     "overview": "...",
     "trainingData": "...",
     "multimodal": true
+  },
+  {
+    "id": "gpt-5.6-luna",
+    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] GPT-5.6 Luna",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  },
+  {
+    "id": "gpt-6-luna",
+    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] GPT-6 Luna",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
   }
 ]
