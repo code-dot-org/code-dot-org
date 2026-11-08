@@ -6,6 +6,7 @@ import {
   EMPTY_PAGE_REASON,
   editedQuestionsReason,
   NO_CHANGES_REASON,
+  QUIZ_BUILDER_HEADER_ID,
   UNSAVED_QUESTION_REASON,
 } from '@cdo/apps/quiz/builder/constants';
 import QuizBuilderWorkspace from '@cdo/apps/quiz/builder/QuizBuilderWorkspace';
@@ -99,8 +100,18 @@ function renderWorkspace(
 }
 
 describe('QuizBuilderWorkspace', () => {
+  // The page header's slot, which the haml layout renders on the build page.
+  let headerSlot: HTMLElement;
+
   beforeEach(() => {
     jest.resetAllMocks();
+    headerSlot = document.createElement('div');
+    headerSlot.id = QUIZ_BUILDER_HEADER_ID;
+    document.body.appendChild(headerSlot);
+  });
+
+  afterEach(() => {
+    headerSlot.remove();
   });
 
   it('shows the intro screen card, with its content, when the intro screen is on', () => {
@@ -435,6 +446,11 @@ describe('QuizBuilderWorkspace', () => {
 
   describe('Save quiz', () => {
     const saveButton = () => screen.getByRole('button', {name: 'Save quiz'});
+
+    it('is in the page header', () => {
+      renderWorkspace({questions: [question()]});
+      expect(headerSlot).toContainElement(saveButton());
+    });
 
     it('is off with nothing to save', async () => {
       renderWorkspace({questions: [question()]});

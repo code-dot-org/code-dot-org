@@ -117,7 +117,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     return () => window.removeEventListener('beforeunload', warn);
   }, [hasUnsavedChanges]);
 
-  // The page header's slot; absent outside builder mode, as in unit tests.
+  // Save quiz goes in a slot in the page header (_header.html.haml).
   const [headerSlot] = useState(() =>
     document.getElementById(QUIZ_BUILDER_HEADER_ID)
   );
@@ -134,7 +134,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
         {...ariaDisabledProps(isSavingQuiz ? undefined : saveDisabledReason)}
         // After the spread, which sets its own className when disabled.
         className={classNames(
-          headerSlot && styles.headerSaveButton,
+          styles.headerSaveButton,
           saveDisabledReason && !isSavingQuiz && buttonClasses.disabled
         )}
       >
@@ -230,11 +230,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   }
 
   return (
-    <PanelContainer
-      id="quiz-workspace"
-      headerContent="Workspace"
-      leftHeaderContent={!headerSlot && saveButton}
-    >
+    <PanelContainer id="quiz-workspace" headerContent="Workspace">
       {headerSlot && createPortal(saveButton, headerSlot)}
       <div className={styles.workspace}>
         <header className={styles.header}>

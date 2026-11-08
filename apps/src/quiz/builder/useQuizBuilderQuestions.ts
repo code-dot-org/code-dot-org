@@ -234,13 +234,14 @@ export default function useQuizBuilderQuestions(
         setQuestionsById(prev => {
           const rest = {...prev};
           delete rest[id];
-          // The response doesn't know this quiz, so keep what the load said.
           return {
             ...rest,
             [saved.id]: isFork
               ? saved
               : {
                   ...saved,
+                  // PUT /quiz_questions/:id counts this quiz in both fields
+                  // below; keep the load's values, which leave it out.
                   attachedToOtherQuizzes: previous.attachedToOtherQuizzes,
                   deletable: previous.deletable,
                 },
