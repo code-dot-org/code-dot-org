@@ -68,6 +68,20 @@ describe('patternCells', () => {
     });
   });
 
+  it('draws a further character for each role the level names', () => {
+    const list = animations([
+      ['k2', 'secondCharacter', []],
+      ['k1', 'firstCharacter', []],
+    ]);
+    list.propsByKey.k2.role = 'friend';
+    list.propsByKey.k1.role = 'hero';
+    const cells = patternCells(list, 'hero', {F: 'friend', T: 'treasure'});
+    expect(cells.S).toEqual({image: 'firstCharacter', kind: 'sprite'});
+    expect(cells.F).toEqual({image: 'secondCharacter', kind: 'sprite'});
+    // No image carries the role yet: nothing to draw for its character.
+    expect(cells.T).toBeUndefined();
+  });
+
   it('offers only the characters it has images for', () => {
     expect(patternCells(animations([['k1', 'hero', []]]))).toEqual({
       S: {image: 'hero', kind: 'sprite'},

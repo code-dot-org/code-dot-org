@@ -11,12 +11,14 @@ import {createEmptyWorld, sceneGridSize, World, WorldCell} from './world';
 /**
  * Which image each pattern character draws: 'B' the block the student made
  * most recently, 'S' the sprite carrying spriteRole (the level's default
- * sprite), else their first character. orderedKeys is newest-first, because
- * Sprite Lab prepends new animations.
+ * sprite), else their first character; and each character of `roles` the
+ * newest sprite carrying its role, when the student has made one.
+ * orderedKeys is newest-first, because Sprite Lab prepends new animations.
  */
 export function patternCells(
   animations: RuntimeAnimationList,
-  spriteRole?: string
+  spriteRole?: string,
+  roles?: {[char: string]: string}
 ): {[char: string]: WorldCell} {
   const {orderedKeys, propsByKey} = animations;
   const typeOf = (key: string) =>
@@ -34,6 +36,12 @@ export function patternCells(
   if (spriteName) {
     cells.S = {image: spriteName, kind: 'sprite'};
   }
+  Object.entries(roles ?? {}).forEach(([char, role]) => {
+    const name = imageNamedForRole(animations, 'sprite', role);
+    if (name) {
+      cells[char] = {image: name, kind: 'sprite'};
+    }
+  });
   return cells;
 }
 
@@ -110,6 +118,7 @@ export function useWorldStartPattern({
   enabled,
   animations,
   spriteRole,
+  roles,
   updateSources,
 }: {
   pattern: string[] | undefined;
@@ -117,6 +126,8 @@ export function useWorldStartPattern({
   enabled: boolean;
   animations: RuntimeAnimationList;
   spriteRole?: string;
+  /** Further pattern characters, each naming a sprite role. */
+  roles?: {[char: string]: string};
   updateSources: (updater: (prev: Sources) => Sources) => void;
 }): World | null {
   // The world as the pattern painted it: the baseline a level's "changed"
@@ -126,7 +137,7 @@ export function useWorldStartPattern({
     if (!pattern?.length || !pinnedSceneId || !enabled) {
       return;
     }
-    const cellFor = patternCells(animations, spriteRole);
+    const cellFor = patternCells(animations, spriteRole, roles);
     updateSources(prev => {
       const scenes: Scene[] = prev.scenes ?? [];
       const index = scenes.findIndex(scene => scene.id === pinnedSceneId);
@@ -142,6 +153,14 @@ export function useWorldStartPattern({
       setPainted(world);
       return {...prev, scenes: next};
     });
-  }, [pattern, pinnedSceneId, enabled, animations, spriteRole, updateSources]);
+  }, [
+    pattern,
+    pinnedSceneId,
+    enabled,
+    animations,
+    spriteRole,
+    roles,
+    updateSources,
+  ]);
   return painted;
 }

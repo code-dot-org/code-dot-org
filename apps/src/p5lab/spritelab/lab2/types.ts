@@ -141,6 +141,7 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     name: string;
     source?: WorkspaceSerialization;
     worldStartPattern?: string[];
+    worldStartRoles?: {[char: string]: string};
     /** The student can open this scene in the editor beside the pinned
         one; Play still starts the game from the pinned scene. */
     editable?: boolean;
@@ -153,6 +154,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       the student made most recently, 'S' the image_role_defaults sprite,
       else their first character. */
   worldStartPattern?: string[];
+  /** Further pattern characters, each the newest sprite carrying a role:
+      {"F": "friend"}. */
+  worldStartRoles?: {[char: string]: string};
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
