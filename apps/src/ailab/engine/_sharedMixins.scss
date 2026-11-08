@@ -27,37 +27,6 @@
   border-radius: var(--shape-md);
 }
 
-// Fades a scroller's edges inside this element; useScrollFade sets the state.
-@mixin scroll-fade($height: 48px) {
-  position: relative;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    inset-inline: 0 var(--scrollbar-width);
-    z-index: 1;
-    height: $height;
-    pointer-events: none;
-    opacity: 0;
-  }
-
-  &::before {
-    top: 0;
-    background: linear-gradient(var(--background-neutral-primary), transparent);
-  }
-
-  &::after {
-    bottom: 0;
-    background: linear-gradient(transparent, var(--background-neutral-primary));
-  }
-
-  &[data-fade-top]::before,
-  &[data-fade-bottom]::after {
-    opacity: 1;
-  }
-}
-
 @mixin card-fields {
   display: flex;
   flex-direction: column;

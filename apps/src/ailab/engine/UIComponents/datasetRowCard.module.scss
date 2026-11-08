@@ -1,5 +1,3 @@
-@use '../sharedMixins' as mixins;
-
 .card {
   display: flex;
   flex-direction: column;
@@ -31,11 +29,37 @@
 }
 
 .list {
-  @include mixins.scroll-fade;
-
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 0;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: var(--scrollbar-width);
+    left: 0;
+    z-index: 1;
+    height: 48px;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &::before {
+    top: 0;
+    background: linear-gradient(var(--background-neutral-primary), transparent);
+  }
+
+  &::after {
+    bottom: 0;
+    background: linear-gradient(transparent, var(--background-neutral-primary));
+  }
+
+  &[data-fade-top]::before,
+  &[data-fade-bottom]::after {
+    opacity: 1;
+  }
 }
 
 .details {

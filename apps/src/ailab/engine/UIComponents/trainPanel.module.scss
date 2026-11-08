@@ -14,30 +14,6 @@
   @include mixins.panel-header-title;
 }
 
-.contentScroll {
-  @include mixins.scroll-fade(24px);
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  min-height: 0;
-
-  // The fade blends into the panel, not into a card.
-  &::before {
-    background: linear-gradient(
-      var(--background-neutral-secondary),
-      transparent
-    );
-  }
-
-  &::after {
-    background: linear-gradient(
-      transparent,
-      var(--background-neutral-secondary)
-    );
-  }
-}
-
 .content {
   @include mixins.panel-content;
 

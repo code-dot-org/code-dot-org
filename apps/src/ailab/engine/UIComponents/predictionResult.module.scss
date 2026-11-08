@@ -10,7 +10,6 @@ $connector-gap: 2px;
 .card {
   @include mixins.card;
 
-  flex-shrink: 0;
   box-shadow: var(--shadow-sm);
 }
 

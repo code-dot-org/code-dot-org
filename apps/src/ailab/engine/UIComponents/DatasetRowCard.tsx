@@ -7,7 +7,6 @@ import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getDatasetId, getIdColumn} from '../selectors';
 import type {DataRow} from '../types';
-import {useScrollFade} from '../useScrollFade';
 
 import styles from './datasetRowCard.module.scss';
 import appStyles from '../app.module.scss';
@@ -37,7 +36,34 @@ const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
     }
   }, [isCurrent]);
 
-  useScrollFade(detailsRef);
+  // Fade the list's top and bottom edges while there is more to scroll to,
+  // and keep the fades clear of the scrollbar.
+  useEffect(() => {
+    const el = detailsRef.current;
+    const list = el?.parentElement;
+    if (!el || !list) {
+      return;
+    }
+    const update = () => {
+      // Written to the DOM rather than state, so scrolling doesn't re-render.
+      const scrollbar = el.offsetWidth - el.clientWidth;
+      list.style.setProperty('--scrollbar-width', `${scrollbar}px`);
+      // Allow 1px for subpixel scroll positions.
+      list.toggleAttribute('data-fade-top', el.scrollTop > 1);
+      list.toggleAttribute(
+        'data-fade-bottom',
+        el.scrollHeight - el.scrollTop - el.clientHeight > 1
+      );
+    };
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+    el.addEventListener('scroll', update);
+    return () => {
+      observer.disconnect();
+      el.removeEventListener('scroll', update);
+    };
+  }, []);
 
   return (
     <div
