@@ -1,4 +1,7 @@
-import {listProjectImages} from '@cdo/apps/p5lab/spritelab/lab2/views/images/projectImages';
+import {
+  characterImageNames,
+  listProjectImages,
+} from '@cdo/apps/p5lab/spritelab/lab2/views/images/projectImages';
 
 const thumbs: Record<string, string> = {};
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/imageTrim', () => ({
@@ -95,5 +98,37 @@ describe('listProjectImages', () => {
       propsByKey: {a: {categories: []}},
     });
     expect(image.name).toBe('image');
+  });
+});
+
+describe('characterImageNames', () => {
+  it('names the character sets and the single pictures of characters', () => {
+    const names = characterImageNames({
+      orderedKeys: ['set', 'single', 'told', 'key', 'grass', 'sky', 'gone'],
+      propsByKey: {
+        set: {
+          name: 'Cat',
+          categories: [],
+          poses: {'stand-right': {start: 0, count: 2, frameDelay: 6}},
+          frameSize: {x: 64, y: 64},
+        },
+        single: {name: 'Dog', categories: [], subject: 'character'},
+        told: {
+          name: 'Owl',
+          categories: [],
+          generation: {
+            prompt: 'an owl',
+            imageType: 'sprite',
+            subject: 'character',
+            style: 'pixel',
+          },
+        },
+        key: {name: 'Key', categories: [], subject: 'object'},
+        grass: {name: 'Grass', categories: ['blocks'], subject: 'character'},
+        sky: {name: 'Sky', categories: ['backgrounds']},
+        gone: undefined,
+      },
+    });
+    expect([...names]).toEqual(['Cat', 'Dog', 'Owl']);
   });
 });

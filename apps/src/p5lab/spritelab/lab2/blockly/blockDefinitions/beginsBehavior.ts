@@ -43,7 +43,8 @@ const generator: GeneratorFunction = block => {
 };
 
 // An eight pixel swing over about three seconds, after the Oceans fish;
-// the sprite passes through blocks, which would otherwise hold it.
+// the sprite passes through blocks, which would otherwise hold it, and is
+// not pulled down as a character otherwise is.
 export const FLOAT_SWING_PX = 8;
 export const FLOAT_PERIOD_TICKS = 180;
 
@@ -54,6 +55,7 @@ const FLOATING_HELPER_CODE = [
   '  return {',
   '    func: function (spriteId) {',
   '      passThroughWalls(spriteId);',
+  '      defyGravity(spriteId);',
   "      var tick = getProp(spriteId, 'floatTick');",
   '      if (tick == undefined) {',
   '        tick = 0;',

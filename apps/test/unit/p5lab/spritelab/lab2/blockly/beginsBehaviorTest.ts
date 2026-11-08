@@ -48,6 +48,7 @@ describe('floating', () => {
   function float(startY: number, phaseRoll = 0, nudgeAt?: number) {
     const props: {[key: string]: number | undefined} = {y: startY};
     let passes = 0;
+    let weightless = 0;
     const commands = {
       getProp: (id: unknown, prop: string) => props[prop],
       setProp: (id: unknown, prop: string, value: number | undefined) => {
@@ -59,6 +60,7 @@ describe('floating', () => {
       randomNumber: (low: number, high: number) =>
         low + Math.round(phaseRoll * (high - low)),
       passThroughWalls: () => passes++,
+      defyGravity: () => weightless++,
     };
     const made = new Function(
       'getProp',
@@ -66,13 +68,15 @@ describe('floating', () => {
       'changePropBy',
       'randomNumber',
       'passThroughWalls',
+      'defyGravity',
       `${beginsBehavior.helperCode}\nreturn floating();`
     )(
       commands.getProp,
       commands.setProp,
       commands.changePropBy,
       commands.randomNumber,
-      commands.passThroughWalls
+      commands.passThroughWalls,
+      commands.defyGravity
     );
     const ys: number[] = [];
     for (let i = 0; i < FLOAT_PERIOD_TICKS * 2; i++) {
@@ -82,19 +86,20 @@ describe('floating', () => {
       made.func({id: 1});
       ys.push(props.y as number);
     }
-    return {name: made.name, ys, passes};
+    return {name: made.name, ys, passes, weightless};
   }
 
-  it('bobs about its resting height by the swing, once per period, passing through the blocks', () => {
-    const {name, ys, passes} = float(200);
+  it('bobs about its resting height by the swing, once per period, passing through the blocks and free of gravity', () => {
+    const {name, ys, passes, weightless} = float(200);
     expect(name).toBe('floating');
     expect(Math.max(...ys)).toBeCloseTo(200 + FLOAT_SWING_PX, 0);
     expect(Math.min(...ys)).toBeCloseTo(200 - FLOAT_SWING_PX, 0);
     // One period on, it is back where it was.
     expect(ys[FLOAT_PERIOD_TICKS]).toBeCloseTo(ys[0], 5);
     expect(ys[0]).toBeCloseTo(200, 5);
-    // Marked every tick: the mark lasts one frame.
+    // Marked every tick: the marks last one frame.
     expect(passes).toBe(ys.length);
+    expect(weightless).toBe(ys.length);
   });
 
   it('keeps bobbing about a new height when something else moves it', () => {

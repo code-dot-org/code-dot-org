@@ -42,6 +42,29 @@ export interface ProjectImage {
   };
 }
 
+/** A sprite image's subject. An image with poses is a character set, so
+    its subject is 'character' regardless of stored metadata; a single-frame
+    sprite keeps its stored subject, when there is one. */
+export function spriteSubject(props: ImageProps): ImageSubject | undefined {
+  if (imageTypeFromCategories(props.categories) !== 'sprite') {
+    return undefined;
+  }
+  return props.poses ? 'character' : props.subject ?? props.generation?.subject;
+}
+
+/** The names of the list's character images: the sprites the engine lets
+    fall and stand on blocks without a behavior saying so. */
+export function characterImageNames(list: AnimationListState): Set<string> {
+  const names = new Set<string>();
+  list.orderedKeys.forEach(key => {
+    const props = list.propsByKey[key];
+    if (props?.name && spriteSubject(props) === 'character') {
+      names.add(props.name);
+    }
+  });
+  return names;
+}
+
 /** The project's images in gallery order. */
 export function listProjectImages(list: AnimationListState): ProjectImage[] {
   const images = list.orderedKeys.flatMap(key => {
@@ -57,15 +80,7 @@ export function listProjectImages(list: AnimationListState): ProjectImage[] {
         props,
         name: props.name || 'image',
         imageType,
-        // An image with poses is a character set, so its subject is
-        // 'character' regardless of stored metadata; a single-frame sprite
-        // keeps its stored subject, when there is one.
-        subject:
-          imageType !== 'sprite'
-            ? undefined
-            : props.poses
-            ? 'character'
-            : props.subject ?? props.generation?.subject,
+        subject: spriteSubject(props),
         thumb: getImageThumbnail(props.name ?? '') || src,
         src,
         pixelated: !!props.pixelGridSize,

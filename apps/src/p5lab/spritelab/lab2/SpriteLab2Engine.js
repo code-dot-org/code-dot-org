@@ -74,6 +74,7 @@ import {
   stopSoundEffects,
   synthPresetOf,
 } from './soundEffects';
+import {characterImageNames} from './views/images/projectImages';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 // A burst from the player starts at its take-off spot this many frames
@@ -235,6 +236,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Last frame's platform bodies, so a sprite whose mark stops arriving
     // is restored to an ordinary sprite (see resolvePlatformPhysics_).
     this.prevBodies_ = [];
+    this.characterSource_ = null;
+    this.characterNames_ = new Set();
     // Settles a pending image-grace wait (see
     // whenAnimationsAreReadyOrGivenUp_).
     this.imageWaitCancel_ = null;
@@ -605,12 +608,19 @@ export default class SpriteLab2Engine extends SpriteLab {
       });
     };
     // A behavior that wants gravity for its sprite marks it for the platform
-    // resolver, which otherwise moves only players. The mark lasts one frame
-    // — the resolver consumes it — so a removed behavior stops marking and
-    // its sprite is an ordinary sprite again.
+    // resolver, which otherwise moves only players and characters. The mark
+    // lasts one frame — the resolver consumes it — so a removed behavior
+    // stops marking and its sprite is an ordinary sprite again.
     library.commands.usePlatformBody = spriteArg => {
       library.getSpriteArray(spriteArg).forEach(sprite => {
         sprite.__slab2Body = true;
+      });
+    };
+    // A behavior that keeps its sprite in the air marks it for one frame,
+    // the same way; a character so marked is not pulled down that frame.
+    library.commands.defyGravity = spriteArg => {
+      library.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.__slab2Weightless = true;
       });
     };
     // A behavior marks its sprite for one frame, and the wall collision
@@ -1433,13 +1443,19 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
     const players = [];
     const bodies = [];
+    const characters = this.characterCostumes_();
     Object.values(this.library.nativeSpriteMap).forEach(sprite => {
-      // Consuming the one-frame mark: see usePlatformBody.
+      // Consuming the one-frame marks: see usePlatformBody and defyGravity.
       const marked = sprite.__slab2Body;
       sprite.__slab2Body = false;
+      const weightless = sprite.__slab2Weightless;
+      sprite.__slab2Weightless = false;
       if (sprite.group === 'players') {
         players.push(snapshot(sprite));
-      } else if (marked) {
+      } else if (
+        !weightless &&
+        (marked || characters.has(sprite.getAnimationLabel()))
+      ) {
         bodies.push(snapshot(sprite));
       }
     });
@@ -1590,6 +1606,18 @@ export default class SpriteLab2Engine extends SpriteLab {
       };
     }
     return this.wallsCache_.walls;
+  }
+
+  // The costumes that are characters: they fall and stand on blocks with
+  // no behavior saying so. Rebuilt when the image list changes.
+  characterCostumes_() {
+    const list =
+      this.preloadAnimationsOverride || getStore().getState().animationList;
+    if (this.characterSource_ !== list) {
+      this.characterSource_ = list;
+      this.characterNames_ = characterImageNames(list);
+    }
+    return this.characterNames_;
   }
 
   // Marked sprites keep a little downward pull at zero gravity, so
