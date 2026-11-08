@@ -296,8 +296,10 @@ export default function useQuizBuilderQuestions(
     setError(null);
     setErrorQuestionId(null);
     setIsSavingQuiz(true);
-    const sentLayout = layout;
     const placements = placementsFromLayout(layout);
+    // What this save sends. Edits made while it's in flight, including
+    // questions marked for deletion, stay unsaved for the next save.
+    const sentLayout = layout;
     const sentDeleteQuestionIds = deleteQuestionIds;
     try {
       const response = await HttpClient.put(
