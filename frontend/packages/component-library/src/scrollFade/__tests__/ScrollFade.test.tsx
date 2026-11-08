@@ -147,9 +147,38 @@ describe('Design System - ScrollFade', () => {
     expect(fades).toHaveLength(2);
   });
 
-  it('adds no tab stops', () => {
-    const {root, scroller} = renderScrollFade();
-    expect(root).not.toHaveAttribute('tabindex');
+  it('makes an overflowing scroller with no focusable content a tab stop', () => {
+    const {scroller} = renderScrollFade();
+    sizeScroller(scroller, {
+      scrollHeight: 500,
+      clientHeight: 200,
+      scrollTop: 0,
+    });
+    expect(scroller).toHaveAttribute('tabindex', '0');
+  });
+
+  it('adds no tab stop when the content fits', () => {
+    const {scroller} = renderScrollFade();
+    sizeScroller(scroller, {
+      scrollHeight: 200,
+      clientHeight: 200,
+      scrollTop: 0,
+    });
+    expect(scroller).not.toHaveAttribute('tabindex');
+  });
+
+  it('adds no tab stop when the content has focusable elements', () => {
+    render(
+      <ScrollFade>
+        <button>focusable</button>
+      </ScrollFade>,
+    );
+    const scroller = screen.getByRole('button').parentElement as HTMLElement;
+    sizeScroller(scroller, {
+      scrollHeight: 500,
+      clientHeight: 200,
+      scrollTop: 0,
+    });
     expect(scroller).not.toHaveAttribute('tabindex');
   });
 

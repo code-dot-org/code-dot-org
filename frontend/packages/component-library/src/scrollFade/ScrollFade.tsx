@@ -10,6 +10,9 @@ import {
 
 import moduleStyles from './scrollFade.module.scss';
 
+const FOCUSABLE_SELECTOR =
+  'a[href], button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"]), [contenteditable="true"]';
+
 export interface ScrollFadeProps extends HTMLAttributes<HTMLDivElement> {
   /** Content of the scrolling area. */
   children: ReactNode;
@@ -37,7 +40,9 @@ export interface ScrollFadeProps extends HTMLAttributes<HTMLDivElement> {
  * Design System: ScrollFade Component.
  * A vertically scrolling area that fades its top and bottom edges while there
  * is more content to scroll to in that direction. Give it a height, or a flex
- * or grid slot, so that its content can overflow.
+ * or grid slot, so that its content can overflow. When it overflows and has no
+ * focusable content, the scroller becomes a tab stop so keyboard users can
+ * scroll it.
  */
 const ScrollFade: FC<ScrollFadeProps> = ({
   children,
@@ -63,10 +68,19 @@ const ScrollFade: FC<ScrollFadeProps> = ({
       root.style.setProperty('--scroll-fade-scrollbar-width', `${scrollbar}px`);
       // Allow 1px for subpixel scroll positions.
       root.toggleAttribute('data-fade-top', scroller.scrollTop > 1);
-      root.toggleAttribute(
-        'data-fade-bottom',
-        scroller.scrollHeight - scroller.scrollTop - scroller.clientHeight > 1,
-      );
+      const remaining =
+        scroller.scrollHeight - scroller.scrollTop - scroller.clientHeight;
+      root.toggleAttribute('data-fade-bottom', remaining > 1);
+      // Keyboard users need a way to scroll: focus the scroller itself, but
+      // only when it overflows and has no focusable content of its own.
+      const needsFocus =
+        scroller.scrollHeight - scroller.clientHeight > 1 &&
+        !scroller.querySelector(FOCUSABLE_SELECTOR);
+      if (needsFocus) {
+        scroller.setAttribute('tabindex', '0');
+      } else {
+        scroller.removeAttribute('tabindex');
+      }
     };
 
     // Content can grow without the scroller's own box changing, so watch the
