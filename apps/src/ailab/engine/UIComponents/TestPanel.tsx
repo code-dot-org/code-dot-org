@@ -4,7 +4,7 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button, Typography} from '@mui/material';
-import React, {type ChangeEvent} from 'react';
+import React, {type ChangeEvent, useRef} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getRandomPredictInputs} from '../helpers/randomPredictInputs';
@@ -22,6 +22,7 @@ import {
 } from '../selectors';
 import train from '../train';
 import {useTrainingData} from '../TrainingDataContext';
+import {useScrollFade} from '../useScrollFade';
 
 import PredictionResult from './PredictionResult';
 
@@ -52,6 +53,8 @@ const TestPanel = () => {
     getPredictAvailable(state, project)
   );
   const {trainedModel} = useTrainingData();
+  const fieldsRef = useRef<HTMLDivElement>(null);
+  useScrollFade(fieldsRef);
 
   const onChange = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -132,7 +135,12 @@ const TestPanel = () => {
         >
           Make a prediction
         </Typography>
-        <div className={styles.fields}>{selectedFeatures.map(renderField)}</div>
+        {/* useScrollFade marks the scroller's parent. */}
+        <div className={styles.fieldsScroll}>
+          <div ref={fieldsRef} className={styles.fields}>
+            {selectedFeatures.map(renderField)}
+          </div>
+        </div>
         <div className={styles.actionRow}>
           <Button
             variant="contained"
