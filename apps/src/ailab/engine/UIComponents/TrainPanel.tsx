@@ -4,7 +4,7 @@ import CheckboxDropdown from '@code-dot-org/component-library/dropdown/checkboxD
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import {Button, CircularProgress, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {type ChangeEvent, useEffect, useState} from 'react';
+import React, {type ChangeEvent, useEffect, useRef, useState} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
@@ -13,6 +13,7 @@ import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {readyToTrain, setTrainingModalStep} from '../redux';
 import {getDatasetId, getSelectableColumns} from '../selectors';
+import {useScrollFade} from '../useScrollFade';
 import {useTrainingRun} from '../useTrainingRun';
 
 import FieldLabel from './FieldLabel';
@@ -23,6 +24,8 @@ import styles from './trainPanel.module.scss';
 
 const TrainPanel = () => {
   const dispatch = useAppDispatch();
+  const contentRef = useRef<HTMLDivElement>(null);
+  useScrollFade(contentRef);
   const datasetId = useAppSelector(state => getDatasetId(state) || '');
   const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const featuresLocked = useAppSelector(state => !!state.mode?.lockFeatures);
@@ -104,86 +107,88 @@ const TrainPanel = () => {
           Train
         </Typography>
       </div>
-      <div className={styles.content}>
-        <div className={styles.card}>
-          <div className={styles.fields}>
-            <div className={styles.field}>
-              <FieldLabel
-                text="Predict"
-                tooltip="What you want your model to predict."
-              />
-              <SimpleDropdown
-                name="ailab-label"
-                color="gray"
-                labelText="Predict"
-                isLabelVisible={false}
-                dropdownTextThickness="thin"
-                size="s"
-                className={styles.dropdown}
-                items={labelItems}
-                selectedValue={labelColumn ?? ''}
-                onChange={onLabelChange}
-                disabled={labelIsPreset}
-              />
-            </div>
-            <div className={classNames(styles.field, styles.featuresField)}>
-              <FieldLabel
-                text="Using"
-                tooltip="What your model will use to make a prediction."
-              />
-              <DropdownProviderWrapper>
-                <CheckboxDropdown
-                  name="ailab-features"
-                  color="gray"
-                  labelText={featuresSummary}
-                  aria-label={`Using, ${featuresSummary}`}
-                  labelType="thin"
-                  size="s"
-                  className={styles.featuresDropdown}
-                  allOptions={featureOptions}
-                  checkedOptions={selectedFeatures}
-                  onChange={onFeatureChange}
-                  doneText="Done"
-                  selectAllText="Select All"
-                  clearAllText="Clear"
-                  onClearAll={onRemoveAllFeatures}
-                  onSelectAll={onSelectAllFeatures}
-                  disabled={featuresLocked}
+      <div className={styles.contentScroll}>
+        <div ref={contentRef} className={styles.content}>
+          <div className={styles.card}>
+            <div className={styles.fields}>
+              <div className={styles.field}>
+                <FieldLabel
+                  text="Predict"
+                  tooltip="What you want your model to predict."
                 />
-              </DropdownProviderWrapper>
-            </div>
-          </div>
-          <PredictionSentence
-            label={labelColumn}
-            features={selectedFeatures}
-            className={styles.sentence}
-          />
-          {!hasTrainingResult && !pretrained && (
-            <div className={styles.actionRow}>
-              <Button
-                variant="contained"
-                color="primary"
-                size="small"
-                fullWidth
-                disabled={!canTrain}
-                loading={isStartingTraining}
-                loadingPosition="start"
-                loadingIndicator={
-                  <CircularProgress
-                    color="inherit"
-                    size={16}
-                    disableShrink
-                    aria-label="Training"
+                <SimpleDropdown
+                  name="ailab-label"
+                  color="gray"
+                  labelText="Predict"
+                  isLabelVisible={false}
+                  dropdownTextThickness="thin"
+                  size="s"
+                  className={styles.dropdown}
+                  items={labelItems}
+                  selectedValue={labelColumn ?? ''}
+                  onChange={onLabelChange}
+                  disabled={labelIsPreset}
+                />
+              </div>
+              <div className={classNames(styles.field, styles.featuresField)}>
+                <FieldLabel
+                  text="Using"
+                  tooltip="What your model will use to make a prediction."
+                />
+                <DropdownProviderWrapper>
+                  <CheckboxDropdown
+                    name="ailab-features"
+                    color="gray"
+                    labelText={featuresSummary}
+                    aria-label={`Using, ${featuresSummary}`}
+                    labelType="thin"
+                    size="s"
+                    className={styles.featuresDropdown}
+                    allOptions={featureOptions}
+                    checkedOptions={selectedFeatures}
+                    onChange={onFeatureChange}
+                    doneText="Done"
+                    selectAllText="Select All"
+                    clearAllText="Clear"
+                    onClearAll={onRemoveAllFeatures}
+                    onSelectAll={onSelectAllFeatures}
+                    disabled={featuresLocked}
                   />
-                }
-                onClick={() => setIsStartingTraining(true)}
-              >
-                {isStartingTraining ? 'Training…' : 'Train model'}
-              </Button>
+                </DropdownProviderWrapper>
+              </div>
             </div>
-          )}
+            <PredictionSentence
+              label={labelColumn}
+              features={selectedFeatures}
+              className={styles.sentence}
+            />
+            {!hasTrainingResult && !pretrained && (
+              <div className={styles.actionRow}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  fullWidth
+                  disabled={!canTrain}
+                  loading={isStartingTraining}
+                  loadingPosition="start"
+                  loadingIndicator={
+                    <CircularProgress
+                      color="inherit"
+                      size={16}
+                      disableShrink
+                      aria-label="Training"
+                    />
+                  }
+                  onClick={() => setIsStartingTraining(true)}
+                >
+                  {isStartingTraining ? 'Training…' : 'Train model'}
+                </Button>
+              </div>
+            )}
+          </div>
+          <TrainingResultCard />
         </div>
-        <TrainingResultCard />
       </div>
     </div>
   );
