@@ -89,10 +89,6 @@
         },
         {
           "kind": "block",
-          "type": "spritelab2_playMusic"
-        },
-        {
-          "kind": "block",
           "type": "spritelab2_setWeather"
         },
         {
