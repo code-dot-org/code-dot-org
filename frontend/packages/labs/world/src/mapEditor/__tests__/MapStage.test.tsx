@@ -1561,8 +1561,14 @@ describe('what a gated lab withholds', () => {
     expect(script.getAttribute('aria-describedby')).not.toBe(
       mapScript.getAttribute('aria-describedby'),
     );
-    fireEvent.click(script);
-    fireEvent.click(mapScript);
+    // A press explains rather than acts.
+    for (const button of [script, mapScript]) {
+      fireEvent.click(button);
+      expect(view.getByRole('dialog', {name: 'Locked'})).toHaveTextContent(
+        'Not unlocked yet',
+      );
+      fireEvent.keyDown(view.getByRole('dialog'), {key: 'Escape'});
+    }
     expect(onEditScript).not.toHaveBeenCalled();
     // The marks are drawn either way, so their toggle still works.
     expect(view.getByRole('button', {name: 'Code marks'})).toBeInTheDocument();
@@ -1725,6 +1731,7 @@ describe('from a placement to its kind', () => {
       expect(button).toHaveAttribute('aria-disabled', 'true');
       expect(button).not.toBeDisabled();
       fireEvent.click(button);
+      fireEvent.keyDown(view.getByRole('dialog'), {key: 'Escape'});
     }
     expect(onEnhanceKind).not.toHaveBeenCalled();
     expect(onOpenKind).not.toHaveBeenCalled();

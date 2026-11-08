@@ -96,6 +96,13 @@
   color: var(--text-neutral-secondary);
 }
 
+.lock {
+  flex: 0 0 auto;
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+  cursor: help;
+}
+
 /* SQUARE, which it was not: this shared a class with the panel below and so
    wore the panel's padding, and a `Button` carries a 64-pixel minimum width of
    its own besides. A chevron is one glyph and wants a box the size of one. */

@@ -15,6 +15,8 @@ import type {HTMLAttributes} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
+import {LockBadge} from './WithheldNote';
+
 export interface IconActionProps
   extends Omit<HTMLAttributes<HTMLButtonElement>, 'color'> {
   /** What it does, in words: the accessible name and the tooltip. */
@@ -22,6 +24,8 @@ export interface IconActionProps
   /** The FontAwesome icon. */
   icon: string;
   disabled?: boolean;
+  /** Why a gated lab withholds it: worn as a lock, said under the tooltip. */
+  lockedBy?: string;
   /** Where a lesson's "show me" rings it (`callouts/places`). */
   'data-callout'?: string;
 }
@@ -30,9 +34,10 @@ export const IconAction = ({
   label,
   icon,
   disabled,
+  lockedBy,
   ...rest
 }: IconActionProps) => (
-  <Tooltip title={label}>
+  <Tooltip title={<Lockable label={label} lockedBy={lockedBy} />}>
     {/* A disabled button fires no pointer events, so the tooltip listens
         on a wrapper that does. */}
     <span>
@@ -45,9 +50,28 @@ export const IconAction = ({
         {...rest}
       >
         <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />
+        {lockedBy && <LockBadge />}
       </IconButton>
     </span>
   </Tooltip>
 );
+
+/** A tooltip's words: what the control does, and why it is locked if it is. */
+export const Lockable = ({
+  label,
+  lockedBy,
+}: {
+  label: string;
+  lockedBy?: string;
+}) =>
+  lockedBy ? (
+    <>
+      {label}
+      <br />
+      {lockedBy}
+    </>
+  ) : (
+    label
+  );
 
 export default IconAction;

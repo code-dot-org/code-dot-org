@@ -30,10 +30,13 @@ not theirs yet from a thing that does not exist.
   seam is answered in a lesson. The world stays the active tab when the
   actor is made: the new kind is on the palette, which is where a learner
   who asked from the map wants it.
-- **A withheld control is shown, inert, with the lesson that grants it**,
-  as a locked rule is in the import dialog: a link that reads "Unlocked
-  by:" and the lesson's title, and opens the map on that tile. The Script
-  buttons, the Layers list, and the three above.
+- **A withheld control is shown, inert, and wears a lock.** Its tooltip
+  reads "Unlocked by:" and the lesson's title; pressing it opens a small
+  popover with the same sentence and Go to lesson, which opens the map on
+  that tile. The Script buttons, the Layers list, and the three above.
+  (November 2026: this was a link written beside each control, and a
+  selected placement in a lesson carried five of them. See Learned while
+  building.)
 - **Three more affordances**: `map-enhance`, `map-open-kind`,
   `map-new-actor`.
 
@@ -91,6 +94,16 @@ not theirs yet from a thing that does not exist.
   order was the only thing tying a link to its button. Each control now
   names its note, and scripts, which have a way in from the toolbar and
   one from the inspector, have two notes with two ids.
+- **A sentence beside every withheld control is too much text.** Early in
+  the progression most of the map editor is withheld, and with a
+  placement selected the inspector, the toolbar and the palette carried
+  five "Unlocked by:" links, one of them as wide as the toolbar. The lock
+  is now on the control: a badge over an icon button's corner, the lock
+  in place of Add New Actor's "+", a lock button beside the Layers
+  heading. The sentence is the tooltip, and a press, which on a withheld
+  control would otherwise do nothing, opens a popover with the way to
+  the lesson. What a screen reader hears is unchanged: the note the
+  control's `aria-describedby` names is still there, out of sight.
 - **The file menus are where the Creator lives, so they are mounted in
   every level.** Lifting the Creator out would have meant lifting a dozen
   things it is built from. A `menus` prop turns the folder buttons off and
@@ -126,7 +139,8 @@ brings its blocks to the front. The palette should end in `New actor…`;
 making one should leave the map in front with the new kind selected, ready
 to place. In a lesson, where there are no folder buttons, `New actor…`
 should still open the Creator. In a gated lab with `place/script` not done,
-the Script buttons should be dimmed and still reachable with Tab, with
-"Unlocked by: This one, not the other" beside each, and the Layers list
-should be a heading with the same kind of link until `place/layers` is
-done.
+the Script buttons should be dimmed, wear a lock, and still be reachable
+with Tab. Hovering or focusing one should show "Unlocked by: This one, not
+the other"; pressing one should open a popover saying so, whose Go to
+lesson opens the map on that tile. The Layers list should be a heading
+and a lock until `place/layers` is done.

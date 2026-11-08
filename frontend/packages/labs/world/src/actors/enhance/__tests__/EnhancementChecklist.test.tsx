@@ -177,6 +177,13 @@ describe('a row a gated lab has not got to', () => {
     // done is part of the answer (specs/ENHANCE_GATE_PLAN.md).
     shelfHolds = unlock => !(unlock.kind === 'rule' && unlock.id === 'gravity');
     expect(oneRow()).toBeDisabled();
+    // A lock, not a sentence in the row; the sentence is its name, and the
+    // row's own panel says it for a keyboard.
+    expect(
+      screen.getByRole('img', {name: 'Unlocked by: Down'}),
+    ).toBeInTheDocument();
+    expect(screen.queryByText('Unlocked by: Down')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'What falls does'}));
     expect(screen.getByText('Unlocked by: Down')).toBeInTheDocument();
   });
 

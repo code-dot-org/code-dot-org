@@ -83,7 +83,7 @@ import {
   type DockZone,
 } from './docking';
 import {DockSizeField} from './DockSizeField';
-import {IconAction} from './IconAction';
+import {IconAction, Lockable} from './IconAction';
 import {LayerInspector} from './LayerInspector';
 import {LayerPanel} from './LayerPanel';
 import styles from './mapEditor.module.css';
@@ -172,7 +172,12 @@ import {
 } from './stageGeometry';
 import {useAfterImport} from './useAfterImport';
 import {VectorInput} from './VectorInput';
-import {WithheldNote} from './WithheldNote';
+import {
+  LockBadge,
+  WithheldNote,
+  useWithheldPopover,
+  useWithheldSentence,
+} from './WithheldNote';
 import type {CameraProperty} from './worldCameraCode';
 import {WorldInspector, type WorldInspectorProps} from './WorldInspector';
 import type {CameraTraitChoice} from './worldRuleProperties';
@@ -522,6 +527,7 @@ const ToolbarIcon = ({
   label,
   icon,
   pressed,
+  lockedBy,
   ...rest
 }: {
   label: string;
@@ -529,13 +535,15 @@ const ToolbarIcon = ({
   /** On or off, for a switch; absent for an action. */
   pressed?: boolean;
   className?: string;
-  onClick?: () => void;
+  onClick?: (event: ReactMouseEvent<HTMLElement>) => void;
+  /** Why a gated lab withholds it (`IconAction`). */
+  lockedBy?: string;
   'aria-disabled'?: true;
   'aria-describedby'?: string;
   /** Where "Show me" finds it (`callouts/places`). */
   'data-callout'?: string;
 }) => (
-  <Tooltip title={label}>
+  <Tooltip title={<Lockable label={label} lockedBy={lockedBy} />}>
     <IconButton
       aria-label={label}
       aria-pressed={pressed}
@@ -545,6 +553,7 @@ const ToolbarIcon = ({
       {...rest}
     >
       <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />
+      {lockedBy && icon !== 'lock' && <LockBadge />}
     </IconButton>
   </Tooltip>
 );
@@ -629,9 +638,9 @@ export const MapStage = ({
   // What a gated lab withholds (`WithheldNote`). A withheld control is
   // `aria-disabled`, NOT `disabled`: a disabled button leaves the tab order,
   // and a keyboard then has no way to reach it and hear why. It keeps its
-  // place, does nothing, and is described by the note beside it, which names
-  // the lesson that grants it. `where` tells two notes about one affordance
-  // apart — scripts have a way in from the toolbar and one in the inspector.
+  // place, wears a lock, and a press explains rather than acts. `where` tells
+  // two notes about one affordance apart — scripts have a way in from the
+  // toolbar and one in the inspector.
   const locked = (id: Affordance): boolean => withheld?.has(id) ?? false;
   // Whether a placement's script may be opened from the canvas — the floating
   // button, a double-click, Enter. Withheld, the inspector's button stays and
@@ -642,11 +651,15 @@ export const MapStage = ({
   /** The open Dock menu's button, while it is open. */
   const [dockMenu, setDockMenu] = useState<HTMLElement | null>(null);
   const noteId = (id: Affordance, where: string) => `withheld-${id}-${where}`;
+  const withheldSentence = useWithheldSentence();
+  const {explain, popover: withheldPopover} = useWithheldPopover();
   const orWithheld = (id: Affordance, where: string, act: () => void) =>
     locked(id)
       ? {
           'aria-disabled': true as const,
           'aria-describedby': noteId(id, where),
+          lockedBy: withheldSentence(id),
+          onClick: explain(id),
         }
       : {onClick: act};
   const withheldClass = (id: Affordance) =>
@@ -3931,8 +3944,6 @@ export const MapStage = ({
               )}
             </div>
           </div>
-          {/* What a withheld one says about the lesson that brings it, under
-              the row rather than inside it. */}
           {onEditScript && note('map-scripts', 'inspector')}
           {selectedKind && onEnhanceKind && note('map-enhance', 'inspector')}
           {selectedKind && onOpenKind && note('map-open-kind', 'inspector')}
@@ -4316,6 +4327,7 @@ export const MapStage = ({
             </>
           ))}
       </div>
+      {withheldPopover}
       {/* ONE COLUMN down the left: the panels at the top and whichever
           inspector is open at the foot, taking only the height the panels
           leave. Positioned apart, a tall inspector ran up over the camera
@@ -4327,11 +4339,18 @@ export const MapStage = ({
             panels.layers &&
             (locked('map-layers') ? (
               // The strip's place, kept: a list nobody can use yet is still where
-              // layers will be, and says which lesson brings them.
+              // layers will be, and its lock says which lesson brings them.
               <div className={styles.layers} data-testid="layer-panel-locked">
-                <Typography variant="subtitle2" component="span">
-                  Layers
-                </Typography>
+                <div className={styles.lockedHeading}>
+                  <Typography variant="subtitle2" component="span">
+                    Layers
+                  </Typography>
+                  <ToolbarIcon
+                    label="Layers are locked"
+                    icon="lock"
+                    {...orWithheld('map-layers', 'strip', () => {})}
+                  />
+                </div>
                 {note('map-layers', 'strip')}
               </div>
             ) : (

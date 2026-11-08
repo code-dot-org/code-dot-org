@@ -18,7 +18,9 @@ gate does not reach.
 ## What is being built
 
 - **A row whose rules are not unlocked is shown and cannot be ticked**,
-  with the lesson that grants the first missing one said beside it. Shown
+  with a lock whose tooltip names the lesson that grants the first missing
+  one. The row's What it does panel says the same, for a keyboard, which
+  cannot focus a disabled checkbox or the lock. Shown
   rather than left out: the list answers "what can this one do", and a
   thing it could do once a lesson is done is part of that answer. A row an
   actor CANNOT take is still left out, which is a different question.
@@ -71,7 +73,9 @@ gate does not reach.
   shown and refused with the lesson named.
 - **The words are the same as everywhere else** — "Unlocked by:" and the
   lesson's title — and here they are words rather than a link, because
-  this list is inside a modal that it cannot close.
+  this list is inside a modal that it cannot close. They were written
+  beside the row at first; they are now the lock's tooltip and its
+  accessible name, as the map editor's are (November 2026).
 
 ## Not built, and known
 
@@ -87,7 +91,8 @@ gate does not reach.
 ## What to look at in the browser
 
 In a gated lab early in the progression, open Enhance on any actor: the
-rows whose rules are not unlocked yet should be greyed with "Unlocked by:"
-and a lesson's name beside them, and should not tick. In an ungated lab —
+rows whose rules are not unlocked yet should be greyed with a lock whose
+tooltip reads "Unlocked by:" and a lesson's name, should say the same
+when their What it does panel is opened, and should not tick. In an ungated lab —
 which is every lab unless a level says otherwise — nothing should look any
 different from before.

@@ -54,12 +54,51 @@
 }
 
 /* A control a gated lab withholds: there, focusable, and not to be used.
-   Dimmed, and never by that alone — the note beside it says which lesson
-   brings it (`WithheldNote`). */
+   Dimmed, and never by that alone: it wears a lock, and its tooltip says
+   which lesson brings it (`WithheldNote`). */
 .withheld,
 .withheld:hover {
-  cursor: not-allowed;
+  cursor: help;
   opacity: 0.55;
+}
+
+/* Over the bottom right corner of the withheld control's icon. ButtonBase is
+   positioned, so this lands on the button whatever wraps it. */
+.lockBadge {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  font-size: 9px;
+  line-height: 1;
+  padding: 1px;
+  border-radius: 3px;
+  color: var(--text-neutral-primary, #1d1e20);
+  background: var(--background-neutral-primary, #fff);
+  pointer-events: none;
+}
+
+.lockedHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.withheldPopover {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  max-width: 260px;
+  padding: 8px 12px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 /* The palette and the stage, side by side under the strip. */

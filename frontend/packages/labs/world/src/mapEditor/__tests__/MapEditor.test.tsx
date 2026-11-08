@@ -6,7 +6,7 @@
 // not a size, and shrinking a map is not a license to delete what is now
 // outside it.
 
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
@@ -85,7 +85,8 @@ vi.mock('../MapStage', () => ({
 let shelf:
   | {
       holds: (unlock: {kind: string; id?: string}) => boolean;
-      grantedBy: () => undefined;
+      grantedBy: () => string | undefined;
+      openTree?: (tile: string) => void;
     }
   | undefined;
 vi.mock('../../progression/progressionContext', () => ({
@@ -516,6 +517,30 @@ describe('`Add New Actor` on the palette', () => {
     ).toHaveTextContent('Not unlocked yet');
     fireEvent.click(button);
     expect(requestActorCreate).not.toHaveBeenCalled();
+    shelf = undefined;
+  });
+
+  it('wears a lock that names the lesson, and a press leads to it', () => {
+    const openTree = vi.fn();
+    shelf = {
+      holds: unlock =>
+        !(unlock.kind === 'affordance' && unlock.id === 'map-new-actor'),
+      grantedBy: () => 'not-a-tile',
+      openTree,
+    };
+    open();
+    const button = tile('Add New Actor');
+    // Not a line of text beside it: the sentence is out of sight until asked.
+    expect(screen.queryByRole('button', {name: /Unlocked by/})).toBeNull();
+    expect(
+      document.getElementById(button.getAttribute('aria-describedby')!),
+    ).toHaveTextContent('Unlocked by: not-a-tile');
+    fireEvent.click(button);
+    expect(requestActorCreate).not.toHaveBeenCalled();
+    const dialog = screen.getByRole('dialog', {name: 'Locked'});
+    expect(dialog).toHaveTextContent('Unlocked by: not-a-tile');
+    fireEvent.click(within(dialog).getByRole('button', {name: 'Go to lesson'}));
+    expect(openTree).toHaveBeenCalledWith('not-a-tile');
     shelf = undefined;
   });
 });

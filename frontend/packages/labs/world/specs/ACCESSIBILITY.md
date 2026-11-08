@@ -598,6 +598,24 @@ themes. Not seen with a screen reader.
   exception: no two are within 24 pixels centre to centre. A block that
   holds a field is not counted as crowding it.
 
+### Locks on withheld controls (KINDS_FROM_THE_MAP_PLAN.md, ENHANCE_GATE_PLAN.md)
+
+- **A withheld control in the map editor keeps its tab stop and its name**
+  (`aria-disabled`, not `disabled`) and is described by a hidden note,
+  "Unlocked by:" and the lesson, or "Not unlocked yet". The note used to
+  be visible text beside it; it is now the tooltip, shown on focus as on
+  hover. The lock badge is `aria-hidden`: the description says it.
+- **Pressing it opens a popover** (`role="dialog"`, "Locked") with the
+  sentence and Go to lesson. Focus goes to the popover and comes back to
+  the control on Escape. Focus lands on the popover itself, not on Go to
+  lesson, so a screen reader reads the sentence first; Go to lesson is
+  one Tab on.
+- **A locked enhancement row is a disabled checkbox and a lock image**
+  named by the sentence. Neither takes focus, so the sentence is also in
+  the row's What it does panel, which its chevron button opens.
+- **Untested**: no screen reader. The tests pin the attributes and the
+  popover; a keyboard walk was done in a browser on the inspector's Code.
+
 ## Not yet done for any phase
 
 - A screen-reader pass through the shell: the breadcrumb, the palette,

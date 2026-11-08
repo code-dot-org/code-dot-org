@@ -55,7 +55,7 @@
 // "also adds" is a wall, which was the complaint; twelve names is a list you
 // can scan. The sentence is still there for the row you are wondering about.
 
-import {Button as MuiButton, Typography} from '@mui/material';
+import {Button as MuiButton, Tooltip, Typography} from '@mui/material';
 import {useMemo, useState} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
@@ -435,11 +435,22 @@ export const EnhancementChecklist = ({
                       {/* A row a gated lab has not got to. Named rather than
                           linked: this list is inside a modal it cannot close,
                           and two modals at once is what the accessibility
-                          checklist says to avoid (specs/ENHANCE_GATE_PLAN.md). */}
+                          checklist says to avoid (specs/ENHANCE_GATE_PLAN.md).
+                          A lock with the lesson as its tooltip; the row's own
+                          panel says it too, for a keyboard. */}
                       {locked && (
-                        <Typography variant="body4" className={styles.note}>
-                          {locked}
-                        </Typography>
+                        <Tooltip title={locked}>
+                          <span
+                            role="img"
+                            aria-label={locked}
+                            className={styles.lock}
+                          >
+                            <FontAwesomeV6Icon
+                              iconName="lock"
+                              iconStyle="solid"
+                            />
+                          </span>
+                        </Tooltip>
                       )}
                       <MuiButton
                         size="small"
@@ -468,6 +479,11 @@ export const EnhancementChecklist = ({
                         <Typography variant="body4">
                           {enhancement.description}
                         </Typography>
+                        {locked && (
+                          <Typography variant="body4" className={styles.note}>
+                            {locked}
+                          </Typography>
+                        )}
                         {/* What lands in the project. The same promise the import
                     dialogs make, and it matters more here: this one writes
                     into files the learner already has. */}

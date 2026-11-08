@@ -109,10 +109,10 @@
 }
 
 /* A control a gated lab withholds: there, focusable, and not to be used.
-   Dimmed, and never by that alone — the note beside it says which lesson
-   brings it (`WithheldNote`). */
+   Dimmed, and never by that alone: it wears a lock, and its tooltip says
+   which lesson brings it (`WithheldNote`). */
 .withheld,
 .withheld:hover {
-  cursor: not-allowed;
+  cursor: help;
   opacity: 0.55;
 }

@@ -10,7 +10,7 @@
 // it is let go — docked, on a Screen, if it is let go in a dock zone — and
 // does not take it as the brush. A HUD bar is placed once, not painted.
 
-import {Button} from '@mui/material';
+import {Button, Tooltip} from '@mui/material';
 import {useEffect, useRef, useState, type DragEvent} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -24,7 +24,11 @@ import {
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
 
 import styles from './actorPalette.module.css';
-import {WithheldNote} from './WithheldNote';
+import {
+  WithheldNote,
+  useWithheldPopover,
+  useWithheldSentence,
+} from './WithheldNote';
 
 export interface PaletteActor {
   /** What the actor is called: "Player". */
@@ -84,6 +88,8 @@ export const ActorPalette = ({
   hidden,
 }: ActorPaletteProps) => {
   const [tab, setTab] = useState<PaletteTab>(startTab);
+  const withheldSentence = useWithheldSentence();
+  const {explain, popover} = useWithheldPopover();
   const shown = actors.filter(actor => isUnder(actor.purpose, tab));
   const listRef = useRef<HTMLUListElement>(null);
   useEffect(() => {
@@ -95,6 +101,36 @@ export const ActorPalette = ({
         ?.focus();
     }
   }, [focusTile]);
+
+  const newButton = (
+    <Button
+      variant="outlined"
+      color="secondary"
+      size="small"
+      fullWidth
+      data-callout="map.newActor"
+      // Its own name, which a tooltip with a string title would replace.
+      aria-label="Add New Actor"
+      startIcon={
+        <FontAwesomeV6Icon
+          iconName={newWithheld ? 'lock' : 'plus'}
+          iconStyle="solid"
+        />
+      }
+      // Focusable when withheld, so a keyboard can reach it and hear
+      // why (`WithheldNote`).
+      {...(newWithheld
+        ? {
+            className: styles.withheld,
+            'aria-disabled': true,
+            'aria-describedby': 'withheld-map-new-actor',
+            onClick: explain('map-new-actor'),
+          }
+        : {onClick: () => onNew(tab)})}
+    >
+      Add New Actor
+    </Button>
+  );
 
   return (
     <div className={styles.palette} data-callout="map.palette" hidden={hidden}>
@@ -207,31 +243,20 @@ export const ActorPalette = ({
       </ul>
       {!isReadOnly && (
         <div className={styles.foot}>
-          <Button
-            variant="outlined"
-            color="secondary"
-            size="small"
-            fullWidth
-            data-callout="map.newActor"
-            startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
-            // Focusable when withheld, and described by the note beside
-            // it, so a keyboard can reach it and hear why (`WithheldNote`).
-            {...(newWithheld
-              ? {
-                  className: styles.withheld,
-                  'aria-disabled': true,
-                  'aria-describedby': 'withheld-map-new-actor',
-                }
-              : {onClick: () => onNew(tab)})}
-          >
-            Add New Actor
-          </Button>
+          {newWithheld ? (
+            <Tooltip title={withheldSentence('map-new-actor')}>
+              {newButton}
+            </Tooltip>
+          ) : (
+            newButton
+          )}
           {newWithheld && (
             <WithheldNote
               affordance="map-new-actor"
               id="withheld-map-new-actor"
             />
           )}
+          {popover}
         </div>
       )}
     </div>
