@@ -1,5 +1,4 @@
 import animBurst from '@cdo/static/spritelab_lab2/block-help/burst.gif';
-import animGoToExternalScene from '@cdo/static/spritelab_lab2/block-help/go-to-external-scene.png';
 import animPlayMusic from '@cdo/static/spritelab_lab2/block-help/play-music.png';
 import animPlaySound from '@cdo/static/spritelab_lab2/block-help/play-sound.gif';
 import animSetASpriteProperty from '@cdo/static/spritelab_lab2/block-help/set-a-sprite-property.gif';
@@ -106,15 +105,6 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     title: 'Show title',
     summary: 'Big text across the middle of the game for a moment.',
     body: 'Put it under a touch to announce a win.',
-  },
-  spritelab2_goToExternalScene: {
-    title: 'Go to project',
-    animation: {
-      src: animGoToExternalScene,
-      alt: 'An arrow from one scene to another.',
-    },
-    summary: 'Jumps into a scene from a classmate’s project.',
-    body: 'Their scenes appear in the list once they have shared a project.',
   },
   gamelab_setProp: {
     title: 'Set a sprite property',

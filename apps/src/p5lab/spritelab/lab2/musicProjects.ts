@@ -3,7 +3,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {PLAY_MUSIC_BLOCK_TYPE} from './blockly/blockDefinitions/playMusic';
 import {MusicProjectOption} from './redux/spriteLab2Redux';
-import {collectSavedFieldValues} from './scenesApi';
+import {collectSavedFieldValues} from './savedBlocks';
 import {Scene} from './types';
 
 interface PersonalProject {

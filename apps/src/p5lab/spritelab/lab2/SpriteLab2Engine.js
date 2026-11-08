@@ -189,7 +189,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Scene-jump handlers, set by the view (it compiles the target and
     // re-runs).
     this.onGoToScene = null;
-    this.onGoToExternalScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
     // ({touching: image names, height: 0 floor to 1 top}) each frame a
@@ -207,14 +206,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onSceneJumpStart = null;
     this.onSceneJumpLand = null;
     this.onSceneJumpCancel = null;
-    // When set, re-runs preload from this list instead of the project's own
-    // (external scenes carry their own images). One list per project: its
-    // identity tells the caches below apart.
-    this.preloadAnimationsOverride = null;
-    // Decoded images for this project and for the external project visited
-    // last; whichever is running is the p5 wrapper's cache.
+    // Decoded images, the p5 wrapper's cache; reused by name across re-runs.
     this.ownPreloads_ = {};
-    this.externalPreloads_ = null;
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
@@ -720,9 +713,6 @@ export default class SpriteLab2Engine extends SpriteLab {
           })
       );
     };
-    library.commands.goToExternalScene = sceneKey => {
-      this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
-    };
     getStore().dispatch(clearPrompt());
     const toChoices = (...values) =>
       values
@@ -1104,9 +1094,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Preload images added since the initial execute() — the costume/
     // background commands silently no-op on unknown names. Already-loaded
     // entries are skipped and trims are cached, so re-runs are cheap.
-    await this.preloadTrimmedImages_(
-      this.preloadAnimationsOverride || getStore().getState().animationList
-    );
+    await this.preloadTrimmedImages_(getStore().getState().animationList);
     p5.allSprites.removeSprites();
     // removeSprites destroyed the edge sprites too; clear the handle so the
     // next edgesCollide/edgesDisplace recreates them instead of colliding
@@ -1250,16 +1238,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
-    // Decoded images are reused by name across re-runs, and another
-    // project's names collide with this one's, so each project runs from
-    // its own cache.
-    const external = this.isExternalList_(animationList);
-    if (external && this.externalPreloads_?.list !== animationList) {
-      this.externalPreloads_ = {list: animationList, cache: {}};
-    }
-    this.p5Wrapper.preloadedSprites = external
-      ? this.externalPreloads_.cache
-      : this.ownPreloads_;
+    this.p5Wrapper.preloadedSprites = this.ownPreloads_;
     const scoped = this.referencedImages
       ? filterAnimationsToNames(animationList, this.referencedImages)
       : animationList;
@@ -1267,7 +1246,6 @@ export default class SpriteLab2Engine extends SpriteLab {
       loadedAnimations(
         await trimAnimationListImages(scoped, {
           keepNames: animationNames(animationList),
-          thumbnails: !external,
           upscalePixelArt: true,
         })
       ),
@@ -1293,15 +1271,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
   }
 
-  isExternalList_(animationList) {
-    return animationList === this.preloadAnimationsOverride;
-  }
-
   // Decode one animation by name, mid-run: the escape hatch for a costume
   // name built dynamically, which the scene-scoped preload cannot see.
   async decodeAnimationOnDemand_(name) {
-    const list =
-      this.preloadAnimationsOverride || getStore().getState().animationList;
+    const list = getStore().getState().animationList;
     const key = (list.orderedKeys || []).find(
       k => list.propsByKey[k]?.name === name
     );
@@ -1316,7 +1289,6 @@ export default class SpriteLab2Engine extends SpriteLab {
       loadedAnimations(
         await trimAnimationListImages(single, {
           keepNames: animationNames(list),
-          thumbnails: !this.isExternalList_(list),
           upscalePixelArt: true,
         })
       ),
@@ -1658,8 +1630,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (!p5 || !library) {
       return;
     }
-    const list =
-      this.preloadAnimationsOverride || getStore().getState().animationList;
+    const list = getStore().getState().animationList;
     if (this.posesSource_ !== list) {
       this.posesSource_ = list;
       this.posesByName_ = posesByImageName(list);
