@@ -320,10 +320,11 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   object-fit: contain;
 }
 
-// The drawing tools, across the frame's top.
+// The drawing tools, across the column above the frame.
 .above {
   display: flex;
   justify-content: center;
+  width: 100%;
   padding-bottom: 8px;
 }
 

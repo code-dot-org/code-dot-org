@@ -55,7 +55,9 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
 }) => {
   // The frame is a square as large as the column allows. CSS alone cannot
   // size it: a flex item's percentage height is undefined until the column
-  // is laid out, so the side is measured.
+  // is laid out, so the side is measured. The rows above and under it take
+  // the column's width, not the frame's, so their heights do not depend on
+  // the side being measured and one measurement settles it.
   const columnRef = useRef<HTMLDivElement>(null);
   const aboveRef = useRef<HTMLDivElement>(null);
   const underRef = useRef<HTMLDivElement>(null);
@@ -93,11 +95,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
     <div className={styles.frameWell}>
       <div ref={columnRef} className={styles.frameColumn}>
         {above && (
-          <div
-            ref={aboveRef}
-            className={styles.above}
-            style={{width: frameSide}}
-          >
+          <div ref={aboveRef} className={styles.above}>
             {above}
           </div>
         )}
