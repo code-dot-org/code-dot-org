@@ -37,10 +37,11 @@ const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
 // play area.
 const CANVAS = 400;
 const MARGIN = 12;
-// One row of the design system's small buttons (2rem plus 1px borders).
-const SMALL_BUTTON_PX = 34;
-const BAR_GAP = 12;
-export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
+// The bar pinned to the overlay's foot, the editors' scene bar's twin: the
+// editor strip's height ($editor-strip-height).
+const BOTTOM_BAR_PX = 41;
+// The arrow cross: three of its buttons and two gaps (.arrowCross).
+export const CROSS_PX = 3 * 56 + 2 * 6;
 // The preview column's share of the browser's width.
 const PREVIEW_WIDTH_SHARE = 1 / 3;
 // Under PREVIEW_MIN_PX the column widens, up to the max share, and the
@@ -167,6 +168,61 @@ export function playPlacement(
   return above.scale > beside.scale ? above : beside;
 }
 
+/**
+ * Where the play view and its arrow cross go: the cross at the box's right,
+ * or under it when that leaves the box bigger. The cross is as wide as it is
+ * tall, `cross`; 0 means there is none. `reserveBottom` is the bar's room.
+ */
+export function playLayout(
+  size: Size,
+  guideSize: {width: number; height: number} | null,
+  guideSide: 'left' | 'right',
+  reserveBottom: number,
+  cross: number
+): {box: Placement; cross: {x: number; y: number} | null} {
+  if (!cross) {
+    return {
+      box: playPlacement(size, guideSize, reserveBottom, 0, guideSide),
+      cross: null,
+    };
+  }
+  // Beside: the box and the cross centered as one, which a box centered in
+  // the width less the cross gives; a guide's clearance then counts the
+  // cross too, since the guide shifts in by the same amount.
+  const beside = playPlacement(
+    {w: size.w - cross - MARGIN, h: size.h},
+    guideSize,
+    reserveBottom,
+    0,
+    guideSide
+  );
+  const stacked = playPlacement(
+    size,
+    guideSize,
+    reserveBottom + cross + MARGIN,
+    0,
+    guideSide
+  );
+  if (stacked.scale > beside.scale) {
+    const boxSide = CANVAS * stacked.scale;
+    return {
+      box: stacked,
+      cross: {
+        x: stacked.x + (boxSide - cross) / 2,
+        y: stacked.y + boxSide + MARGIN,
+      },
+    };
+  }
+  const boxSide = CANVAS * beside.scale;
+  return {
+    box: beside,
+    cross: {
+      x: beside.x + boxSide + MARGIN,
+      y: beside.y + (boxSide - cross) / 2,
+    },
+  };
+}
+
 interface PlayspaceProps {
   mode: PlayspaceMode;
   // Scenes UI variant: increment to play a quick fade-in-from-black over the
@@ -190,8 +246,12 @@ interface PlayspaceProps {
   controls?: React.ReactNode;
   // Over the box's bottom edge, unscaled.
   prompt?: React.ReactNode;
-  // Under the box, which is placed to leave it room.
-  playBar?: React.ReactNode;
+  // Pinned to the foot: across the column in preview, across the stage in
+  // play. The box is placed to leave it room.
+  bottomBar?: React.ReactNode;
+  // The arrow cross, beside or under the box while playing, whichever
+  // leaves the box bigger.
+  arrows?: React.ReactNode;
   // Across the top of the column in preview; the box is placed under it.
   columnHeader?: React.ReactNode;
   // Under the bar in preview; the preview shrinks to leave it BELOW_MIN_PX.
@@ -222,7 +282,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   boxRef,
   controls,
   prompt,
-  playBar,
+  bottomBar,
+  arrows,
   columnHeader,
   below,
   side = 'right',
@@ -237,8 +298,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const [size, setSize] = useState({w: 0, h: 0});
   // The height the docked instructions need, from their content.
   const [belowNeed, setBelowNeed] = useState(0);
-  // The bar's height, measured: one row of small buttons until it wraps.
-  const [barHeight, setBarHeight] = useState(SMALL_BUTTON_PX);
   const belowObserver = useRef<ResizeObserver | null>(null);
   const belowContentRef = useCallback((el: HTMLDivElement | null) => {
     belowObserver.current?.disconnect();
@@ -409,11 +468,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   // panels left of the workspace count against the code, not the preview.
   const browserWidth = window.innerWidth || size.w;
   const share = Math.round(browserWidth * columnShare);
-  // The room under the box: the bar, the gap and the card. The bar's
-  // buttons wrap on a narrow column, so its room follows its height.
-  const barRoom = playBar ? barHeight + BAR_GAP : 0;
+  // The room under the box: the card and its gap, then the bar at the foot.
+  const bottomRoom = bottomBar ? BOTTOM_BAR_PX : 0;
   const belowRoomFor = (card: number) =>
-    barRoom + (below ? CARD_GAP + card : 0);
+    bottomRoom + (below ? CARD_GAP + card : 0);
   // A taller need shrinks the box, never widens the column, which would
   // reflow the text taller again.
   let columnWidth = share;
@@ -439,7 +497,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   if (below && boxWidth < PREVIEW_MIN_PX) {
     const maxColumn = Math.round(browserWidth * PREVIEW_WIDTH_MAX_SHARE);
     const besideWidth = Math.min(
-      size.h - topRoom - 2 * CARD_GAP - barRoom,
+      size.h - topRoom - 2 * CARD_GAP - bottomRoom,
       maxColumn - BESIDE_TEXT_MIN_PX - 3 * CARD_GAP
     );
     if (besideWidth > boxWidth && besideWidth >= BESIDE_BOX_MIN_PX) {
@@ -465,15 +523,15 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     beside && side === 'left'
       ? previewPlacement.x + previewBoxSide + CARD_GAP
       : columnLeft + CARD_GAP;
-  const belowRoomTop = previewPlacement.y + previewBoxSide + barRoom + CARD_GAP;
-  const belowRoom = size.h - belowRoomTop - CARD_GAP;
+  const belowRoomTop = previewPlacement.y + previewBoxSide + CARD_GAP;
+  const belowRoom = size.h - belowRoomTop - CARD_GAP - bottomRoom;
   const belowHeight = Math.min(belowNeed + 2 * CARD_BORDER_PX, belowRoom);
   const belowCard: React.CSSProperties = beside
     ? {
         left: belowLeft,
         top: topRoom + CARD_GAP,
         width: columnWidth - 3 * CARD_GAP - previewBoxSide,
-        bottom: CARD_GAP,
+        bottom: CARD_GAP + bottomRoom,
       }
     : belowNeed > 0
     ? {
@@ -486,7 +544,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         left: belowLeft,
         top: belowRoomTop,
         width: columnWidth - 2 * CARD_GAP,
-        bottom: CARD_GAP,
+        bottom: CARD_GAP + bottomRoom,
       };
   const playCardWidth = Math.min(belowCard.width as number, PLAY_CARD_WIDTH_PX);
   const playCard: React.CSSProperties = {
@@ -511,10 +569,11 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         }
       : null;
 
-  const placement: Placement =
+  const playing =
     mode === 'play'
-      ? playPlacement(size, cardGuide, barRoom, 0, side)
-      : previewPlacement;
+      ? playLayout(size, cardGuide, side, bottomRoom, arrows ? CROSS_PX : 0)
+      : null;
+  const placement: Placement = playing ? playing.box : previewPlacement;
   const {x, y, scale} = placement;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
@@ -531,12 +590,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   useEffect(() => {
     reportColumnWidth.current?.(measuredColumnWidth);
   }, [measuredColumnWidth]);
-  // Under the box, unscaled; at the column's width under a stacked
-  // preview, so a shrunk box never wraps the buttons.
-  const barLeft = previewWidth > 0 && !beside ? columnLeft + CARD_GAP : x;
-  const barWidth =
-    previewWidth > 0 && !beside ? previewWidth - 2 * CARD_GAP : boxSide;
-  const barTransform = `translate(${barLeft}px, ${y + boxSide + BAR_GAP}px)`;
+  // The bar spans the column in preview and the stage in play.
+  const barLeft = mode === 'play' ? 0 : columnLeft;
+  const barWidth = mode === 'play' ? size.w : columnWidth;
   const compact = size.h < COMPACT_BELOW_PX;
   // Hidden settles after the fade, so the card and the bar stay through it.
   const [settledHidden, setSettledHidden] = useState(mode === 'hidden');
@@ -550,27 +606,13 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   }, [mode]);
   const visible = measured && !settledHidden;
 
-  const barRef = useRef<HTMLDivElement>(null);
   const promptRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const bar = barRef.current;
-    if (!bar || typeof ResizeObserver !== 'function') {
-      return;
-    }
-    const observer = new ResizeObserver(() =>
-      setBarHeight(Math.max(SMALL_BUTTON_PX, Math.round(bar.offsetHeight)))
-    );
-    observer.observe(bar);
-    return () => observer.disconnect();
-    // The bar's node comes and goes with the prop, not with its contents.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [!!playBar]);
-
-  // Fade in the play bar and the prompt bar so they don't render incorrectly
-  // while switching modes.
+  const crossRef = useRef<HTMLDivElement>(null);
+  // Fade in the prompt bar and the arrow cross so they don't render
+  // incorrectly while switching modes.
   useLayoutEffect(() => {
     if (animate) {
-      [barRef, promptRef].forEach(ref =>
+      [promptRef, crossRef].forEach(ref =>
         ref.current?.animate?.(
           [
             {opacity: 0},
@@ -581,7 +623,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         )
       );
     }
-    // Only a mode change moves the bar; animate is derived for that render.
+    // Only a mode change moves them; animate is derived for that render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
 
@@ -666,15 +708,11 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           // slide only between the two visible placements.
           opacity: visible ? 1 : 0,
           // Hairline seam so a white game canvas reads against a white page
-          // in light mode — corner preview only; it fades out with the slide
-          // to Play. A shadow, not a border, so the 400x400 geometry the
-          // transform and pointer math rely on stays untouched.
-          boxShadow:
-            mode === 'play'
-              ? '0 0 0 1px transparent'
-              : '0 0 0 1px var(--borders-neutral-primary)',
+          // in light mode. A shadow, not a border, so the 400x400 geometry
+          // the transform and pointer math rely on stays untouched.
+          boxShadow: '0 0 0 1px var(--borders-neutral-primary)',
           transition: animate
-            ? `transform ${SLIDE_MS}ms ease, opacity ${FADE_MS}ms ease-in, box-shadow ${SLIDE_MS}ms ease`
+            ? `transform ${SLIDE_MS}ms ease, opacity ${FADE_MS}ms ease-in`
             : `opacity ${FADE_MS}ms ease-in`,
           // Interactive in Play, and while picking a location (so the preview
           // can be clicked even on the Code tab).
@@ -701,8 +739,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
             className={moduleStyles.previewClickCatch}
             role="button"
             tabIndex={0}
-            title="Play this scene"
-            aria-label="Play this scene"
+            title="Run this scene"
+            aria-label="Run this scene"
             onClick={onPreviewClick}
             onKeyDown={e => {
               if (e.key === 'Enter' || e.key === ' ') {
@@ -786,18 +824,30 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           {columnHeader}
         </div>
       )}
-      {playBar && (
+      {playing?.cross && arrows && (
         <div
-          ref={barRef}
-          className={moduleStyles.playBar}
+          ref={crossRef}
+          className={moduleStyles.arrowCrossHolder}
           style={{
-            transform: barTransform,
+            transform: `translate(${playing.cross.x}px, ${playing.cross.y}px)`,
+            opacity: visible ? 1 : 0,
+            transition: `opacity ${FADE_MS}ms ease-in`,
+          }}
+        >
+          {arrows}
+        </div>
+      )}
+      {bottomBar && measured && (
+        <div
+          className={moduleStyles.bottomBar}
+          style={{
+            left: barLeft,
             width: barWidth,
             opacity: visible ? 1 : 0,
             transition: `opacity ${FADE_MS}ms ease-in`,
           }}
         >
-          {playBar}
+          {bottomBar}
         </div>
       )}
       {below && visible && (

@@ -1,4 +1,7 @@
-import {playPlacement} from '@cdo/apps/p5lab/spritelab/lab2/views/Playspace';
+import {
+  playLayout,
+  playPlacement,
+} from '@cdo/apps/p5lab/spritelab/lab2/views/Playspace';
 
 // The canvas is 400px; the margin 12px; the guide sits 32px from the right
 // edge and 20px from the bottom (Playspace, Guide).
@@ -81,5 +84,47 @@ describe('playPlacement', () => {
       const guideTop = size.h - GUIDE.height - 20;
       expect(b.right <= guideLeft || b.bottom <= guideTop).toBe(true);
     }
+  });
+});
+
+describe('playLayout', () => {
+  const CROSS = 180;
+
+  it('puts the cross beside the box on a wide stage, centered as one', () => {
+    const {box: p, cross} = playLayout(
+      {w: 1200, h: 600},
+      null,
+      'right',
+      41,
+      CROSS
+    );
+    const b = box(p);
+    // The box fills the height less the bar; the pair is centered across.
+    expect(b.bottom - b.top).toBe(600 - 41 - 24);
+    expect(cross).not.toBeNull();
+    expect(cross!.x).toBeCloseTo(b.right + 12);
+    expect(b.left).toBeCloseTo(1200 - (b.right + 12 + CROSS));
+    // Centered on the box's height.
+    expect(cross!.y + CROSS / 2).toBeCloseTo((b.top + b.bottom) / 2);
+  });
+
+  it('puts the cross under the box on a tall stage when that leaves it bigger', () => {
+    const {box: p, cross} = playLayout(
+      {w: 500, h: 1000},
+      null,
+      'right',
+      41,
+      CROSS
+    );
+    const b = box(p);
+    expect(b.right - b.left).toBe(500 - 24);
+    expect(cross!.y).toBeCloseTo(b.bottom + 12);
+    expect(cross!.x + CROSS / 2).toBeCloseTo((b.left + b.right) / 2);
+  });
+
+  it('places the box alone when there is no cross', () => {
+    const {box: p, cross} = playLayout({w: 1000, h: 600}, null, 'right', 41, 0);
+    expect(cross).toBeNull();
+    expect(box(p)).toEqual(box(playPlacement({w: 1000, h: 600}, null, 41)));
   });
 });

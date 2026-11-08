@@ -420,51 +420,89 @@ $z-over-blockly: 71;
   }
 }
 
-// The Play/Stop and arrow bar under the playspace box, along with an optional AI status indicator. 
-// Only its buttons take pointer events: the bar spans the box's width, and over the corner
-// preview that strip would otherwise sit on the Blockly workspace.
-.playBar {
+// The bar pinned to the stage's foot, the editors' scene bar's twin: Run
+// under the preview, Reset while playing. The overlay passes pointer
+// events through; the bar takes its own.
+.bottomBar {
   position: absolute;
-  top: 0;
-  left: 0;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  bottom: 0;
+  height: $editor-strip-height;
+  box-sizing: border-box;
+  display: flex;
   align-items: center;
-  pointer-events: none;
-
-  // On a narrow column a button's text wraps; the button grows with it
-  // and the bar's measured height makes room.
-  button {
-    pointer-events: auto;
-    height: auto;
-    min-height: 2rem;
-    white-space: normal;
-    line-height: 1.25;
-    text-align: center;
-  }
+  justify-content: center;
+  gap: 16px;
+  padding: 0 8px;
+  background: var(--background-neutral-primary);
+  border-top: 1px solid var(--borders-neutral-primary);
+  pointer-events: auto;
 }
 
 .playBarButtons {
-  grid-column: 2;
   display: flex;
   min-width: 0;
-  // Stretch keeps the buttons a shared height when one of them wraps to two lines.
-  align-items: stretch;
+  align-items: center;
   gap: 16px;
 }
 
-.arrowKeys {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+// Placed by the playspace beside or under the game; the cross inside takes
+// the pointer events the overlay passes through.
+.arrowCrossHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+// Four buttons in a cross; its size is CROSS_PX in Playspace.
+$arrow-key: 56px;
+$arrow-gap: 6px;
+
+.arrowCross {
+  display: grid;
+  grid-template-columns: repeat(3, $arrow-key);
+  grid-template-rows: repeat(3, $arrow-key);
+  gap: $arrow-gap;
+  pointer-events: auto;
+}
+
+.arrowUp {
+  grid-area: 1 / 2;
+}
+
+.arrowLeft {
+  grid-area: 2 / 1;
+}
+
+.arrowRight {
+  grid-area: 2 / 3;
+}
+
+.arrowDown {
+  grid-area: 3 / 2;
 }
 
 // A held key acts on the touch itself: no scroll or double-tap wait, and
-// no selection or callout under a long press.
-.holdKey {
+// no selection or callout under a long press. Dark squares with a light
+// chevron, after the legacy lab's touch controls: primitives, since the
+// stage they sit on stays light under either theme and the semantic
+// inverse tokens flip with the lab's dark panels. Doubled to outrank the
+// icon button's own size and colors.
+.holdKey.holdKey {
   touch-action: none;
   user-select: none;
   -webkit-touch-callout: none;
+  width: $arrow-key;
+  height: $arrow-key;
+  border-radius: 12px;
+  background: var(--neutral-base-black);
+  color: var(--neutral-base-white);
+  font-size: 20px;
+
+  &:hover,
+  &:active {
+    background: var(--neutral-gray-90);
+  }
 }
 
 // Restart buttons in the play area's top-right corner, clear of the game

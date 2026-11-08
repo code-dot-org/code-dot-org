@@ -159,7 +159,7 @@ import Callout from './components/Callout';
 import EditorStrip, {EditHistory} from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
-import PlayBar from './components/PlayBar';
+import RunButtons, {ArrowCross} from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
 import {sceneDropdownButtonId} from './components/SceneDropdown';
@@ -2619,15 +2619,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 }
               />
             }
-            playBar={
+            bottomBar={
               <>
                 <div className={moduleStyles.playBarButtons}>
-                  <PlayBar
+                  <RunButtons
                     playing={activeTab === 'Play'}
-                    arrows={arrowSet}
                     onPlay={handlePlayClick}
                     onStop={stopTab ? handleStopClick : undefined}
-                    // A level pinned to one scene has one Play, for that scene.
+                    // A level pinned to one scene has one Run, for that scene.
                     onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
                     playSceneHidden={activeScene.id === scenes[0].id}
                   />
@@ -2637,6 +2636,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   onFailureExpired={handleAskAiExpired}
                 />
               </>
+            }
+            arrows={
+              activeTab === 'Play' ? (
+                <ArrowCross arrows={arrowSet} />
+              ) : undefined
             }
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
