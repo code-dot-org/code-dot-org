@@ -1,0 +1,37 @@
+.scrollFade {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.scroller {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+// Written by ScrollFade as it measures the scroller.
+.fade {
+  position: absolute;
+  inset-inline: 0 var(--scroll-fade-scrollbar-width, 0);
+  z-index: 1;
+  height: var(--scroll-fade-height);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.fadeTop {
+  top: 0;
+  background: linear-gradient(var(--scroll-fade-color), transparent);
+}
+
+.fadeBottom {
+  bottom: 0;
+  background: linear-gradient(transparent, var(--scroll-fade-color));
+}
+
+.scrollFade[data-fade-top] .fadeTop,
+.scrollFade[data-fade-bottom] .fadeBottom {
+  opacity: 1;
+}

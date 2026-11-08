@@ -320,6 +320,14 @@
       "import": "./dist/radioButton/index.mjs",
       "require": "./dist/radioButton/index.js"
     },
+    "./scrollFade": {
+      "types": {
+        "import": "./dist/scrollFade/index.d.ts",
+        "require": "./dist/scrollFade/index.d.ts"
+      },
+      "import": "./dist/scrollFade/index.mjs",
+      "require": "./dist/scrollFade/index.js"
+    },
     "./segmentedButtons": {
       "types": {
         "import": "./dist/segmentedButtons/index.d.ts",
