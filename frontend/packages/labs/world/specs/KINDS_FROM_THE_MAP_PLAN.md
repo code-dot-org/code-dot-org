@@ -130,6 +130,13 @@ not theirs yet from a thing that does not exist.
   announced.
 - A withheld control is dimmed to 0.55. Whether that reads in the dark
   theme is a thing to look at.
+  CLOSED (November 2026), measured on the inspector's Code: the icon is
+  6.4:1 on white and 12.9:1 on the dark theme's #121212, and dimmed it is
+  2.4:1 and 4.6:1. Dark was never the weak one. Inactive controls are
+  exempt from contrast, but the lock was dimmed with the button, so the
+  one mark that says why was at 2.4:1. Only the control's own icon (or
+  Add New Actor's words) is dimmed now; the lock is drawn in the
+  button's colour at full strength, 6.4:1 and 12.9:1.
 
 ## What to look at in the browser
 

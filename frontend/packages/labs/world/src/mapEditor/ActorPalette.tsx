@@ -128,7 +128,9 @@ export const ActorPalette = ({
           }
         : {onClick: () => onNew(tab)})}
     >
-      Add New Actor
+      <span className={newWithheld ? styles.dimmed : undefined}>
+        Add New Actor
+      </span>
     </Button>
   );
 

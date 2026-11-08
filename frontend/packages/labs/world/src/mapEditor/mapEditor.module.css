@@ -54,11 +54,15 @@
 }
 
 /* A control a gated lab withholds: there, focusable, and not to be used.
-   Dimmed, and never by that alone: it wears a lock, and its tooltip says
-   which lesson brings it (`WithheldNote`). */
+   Its own icon is dimmed and its lock is not, since the lock is what says
+   so; dimming the whole button took the lock to 2.4:1 on white. Its
+   tooltip says which lesson brings it (`WithheldNote`). */
 .withheld,
 .withheld:hover {
   cursor: help;
+}
+
+.withheld > :not(.lockBadge) {
   opacity: 0.55;
 }
 
@@ -72,7 +76,6 @@
   line-height: 1;
   padding: 1px;
   border-radius: 3px;
-  color: var(--text-neutral-primary, #1d1e20);
   background: var(--background-neutral-primary, #fff);
   pointer-events: none;
 }

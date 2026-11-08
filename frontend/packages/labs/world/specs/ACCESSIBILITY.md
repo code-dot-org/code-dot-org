@@ -613,6 +613,17 @@ themes. Not seen with a screen reader.
 - **A locked enhancement row is a disabled checkbox and a lock image**
   named by the sentence. Neither takes focus, so the sentence is also in
   the row's What it does panel, which its chevron button opens.
+- **The lock is not dimmed; the control is.** Measured on the inspector's
+  Code, the icon is 6.4:1 on white and 12.9:1 on the dark theme's
+  #121212, and dimmed to 0.55 it is 2.4:1 and 4.6:1. Inactive controls
+  are exempt from contrast, but the lock, which says why, is drawn in the
+  button's colour at full strength (6.4:1, 12.9:1); only the icon, or Add
+  New Actor's words, is dimmed.
+- **The popover is white in the dark theme**, as is every MUI `Menu` and
+  `Popover` in the lab (the "⋯" beside the map's name among them). Their
+  palette comes from `getMuiThemeForBrand` (component-library), which
+  takes the brand and not the Light or Dark setting. A fix there would
+  serve every lab that uses it.
 - **Untested**: no screen reader. The tests pin the attributes and the
   popover; a keyboard walk was done in a browser on the inspector's Code.
 
