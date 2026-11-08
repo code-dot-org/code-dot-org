@@ -18,6 +18,7 @@ import {
   buildInstructionsPrompt,
   generatedInstructionsSchema,
 } from './instructionsPrompt';
+import {ADAPTIVE_MODELS} from './models';
 
 export interface StepInstructionsOptions {
   pathway: Pathway;
@@ -70,6 +71,7 @@ export async function resolveStepInstructions({
 
   const {output, traceId} = await generate({
     schema: generatedInstructionsSchema,
+    model: ADAPTIVE_MODELS.FAST,
     prompt,
     context: aichatContext,
     trace: {

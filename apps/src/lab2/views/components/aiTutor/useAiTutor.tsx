@@ -3,7 +3,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {WaitingAnimation} from '@cdo/apps/aichat/views/WaitingAnimation';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
+import {defaultAiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import AiTutorManager, {
   AiTutorMessageType,
 } from '@cdo/apps/lab2/ai/AiTutorManager';
@@ -41,7 +41,12 @@ export function useAiTutor(
 
   const managerRef = useRef<AiTutorManager | null>(
     isEnabled
-      ? new AiTutorManager(aiTutorModelId, currentLevelId, scriptId, channelId)
+      ? new AiTutorManager(
+          defaultAiTutorModelId,
+          currentLevelId,
+          scriptId,
+          channelId
+        )
       : null
   );
 
@@ -57,10 +62,10 @@ export function useAiTutor(
       currentLevelId,
       scriptId,
       channelId,
-      aiTutorModelId
+      defaultAiTutorModelId
     );
     managerRef.current = new AiTutorManager(
-      aiTutorModelId,
+      defaultAiTutorModelId,
       currentLevelId,
       scriptId,
       channelId
