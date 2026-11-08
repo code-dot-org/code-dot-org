@@ -1443,7 +1443,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
     const players = [];
     const bodies = [];
-    const characters = this.characterCostumes_();
+    // At zero gravity a character with no behavior stays where it is; the
+    // small pull bodies keep then is for behaviors that walk on blocks.
+    const characters =
+      this.platformGravity_ === 0 ? new Set() : this.characterCostumes_();
     Object.values(this.library.nativeSpriteMap).forEach(sprite => {
       // Consuming the one-frame marks: see usePlatformBody and defyGravity.
       const marked = sprite.__slab2Body;
