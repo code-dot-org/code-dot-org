@@ -28,4 +28,22 @@ describe('ContinueButton', () => {
 
     expect(screen.queryByRole('button')).toBeNull();
   });
+
+  it('wears the success green when asked', () => {
+    render(
+      <ContinueButton onContinue={jest.fn()} tone="success" className="own">
+        Go
+      </ContinueButton>
+    );
+    const classes = screen.getByRole('button').classList;
+    expect(classes.contains('success')).toBe(true);
+    expect(classes.contains('own')).toBe(true);
+  });
+
+  it('is plain primary by default', () => {
+    render(<ContinueButton onContinue={jest.fn()}>Go</ContinueButton>);
+    expect(screen.getByRole('button').classList.contains('success')).toBe(
+      false
+    );
+  });
 });

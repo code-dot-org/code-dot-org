@@ -2432,6 +2432,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         // render inside the instructions panel.
         objectives={objectives.active ? objectives : undefined}
         hideContinueIfDisabled
+        continueTone="success"
         footerButtons={
           startOverOffered && (
             <IconButtonWithTooltip

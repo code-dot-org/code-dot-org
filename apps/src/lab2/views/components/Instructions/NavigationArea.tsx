@@ -44,6 +44,9 @@ interface NavigationAreaProps {
   requireRun?: boolean;
   validationTooltip?: string;
   hideContinueIfDisabled?: boolean;
+  /** Continue in the success green; the last level's outlined Finish keeps
+      its own look. */
+  continueTone?: 'primary' | 'success';
   /** The level's checklist is all done, or not yet; unset without one. */
   objectivesDone?: boolean;
   className?: string;
@@ -71,6 +74,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   validationTooltip,
   handleInstructionsTextClick,
   hideContinueIfDisabled,
+  continueTone,
   objectivesDone,
   className,
   markdownClassName,
@@ -191,6 +195,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     showSecondaryFinishButton && !hasNextLevel
       ? (['outlined', 'secondary'] as const)
       : (['contained', 'primary'] as const);
+  const tone = variant === 'contained' ? continueTone : undefined;
 
   const endIcon = useMemo(
     () =>
@@ -357,6 +362,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
                 disabled={!continueEnabled}
                 variant={variant}
                 color={color}
+                tone={tone}
                 endIcon={externalNavigation.endIcon ?? endIcon}
                 tooltipMessage={continueTooltip}
                 hideIfDisabled={hideContinueIfDisabled}
@@ -370,6 +376,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               disabled={!continueEnabled}
               variant={variant}
               color={color}
+              tone={tone}
               endIcon={externalNavigation?.endIcon ?? endIcon}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}

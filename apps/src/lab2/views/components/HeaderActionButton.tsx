@@ -11,7 +11,7 @@ import {createPortal} from 'react-dom';
 
 import {HEADER_ACTION_ID} from '@cdo/apps/code-studio/components/header/SimpleHeader';
 
-import styles from './header-action-button.module.scss';
+import toneStyles from './button-tone.module.scss';
 
 function useHeaderSlot(): HTMLElement | null {
   const [slot, setSlot] = useState(() =>
@@ -60,7 +60,7 @@ const HeaderActionButton: React.FunctionComponent<HeaderActionButtonProps> = ({
       variant="contained"
       color="primary"
       size="extraSmall"
-      className={classNames(tone === 'success' && styles.success)}
+      className={classNames(tone === 'success' && toneStyles.success)}
       endIcon={<FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />}
       onClick={onClick}
     >

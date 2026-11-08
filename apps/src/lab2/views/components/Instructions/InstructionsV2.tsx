@@ -52,6 +52,8 @@ export interface InstructionsProps {
   hideNavigation?: boolean;
   /** If the continue button should be hidden if disabled. */
   hideContinueIfDisabled?: boolean;
+  /** Continue in the success green. */
+  continueTone?: 'primary' | 'success';
   /** Instructions content that updates dynamically throughout a level. Replaces `longInstructions` if provided. */
   dynamicInstructions?: string;
   /** The level's checklist, under the text; Continue waits until every
@@ -83,6 +85,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   onObjectiveClick,
   hideNavigation = false,
   hideContinueIfDisabled = false,
+  continueTone,
   ...feedbackProps
 }) => {
   const {longInstructions, predictSettings, offerBrowserTts, appName} =
@@ -198,6 +201,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             levelProperties={levelProperties}
             handleInstructionsTextClick={handleInstructionsTextClick}
             hideContinueIfDisabled={hideContinueIfDisabled}
+            continueTone={continueTone}
             styleAsBubble
           />
         )}

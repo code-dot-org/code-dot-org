@@ -12,6 +12,17 @@
     ],
     "encrypted": "false",
     "header_label": "Try a quest",
+    "callouts": [
+      {
+        "target": "continue-button",
+        "direction": "down",
+        "when": {
+          "done": [
+            0
+          ]
+        }
+      }
+    ],
     "helper_libraries": [
       "NativeSpriteLab",
       "zGameDev"
