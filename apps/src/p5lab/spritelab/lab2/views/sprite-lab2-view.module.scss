@@ -484,10 +484,9 @@ $arrow-gap: 6px;
 
 // A held key acts on the touch itself: no scroll or double-tap wait, and
 // no selection or callout under a long press. Dark squares with a light
-// chevron, after the legacy lab's touch controls: primitives, since the
-// stage they sit on stays light under either theme and the semantic
-// inverse tokens flip with the lab's dark panels. Doubled to outrank the
-// icon button's own size and colors.
+// chevron on the light stage, after the legacy lab's touch controls; the
+// inverse tokens turn them light on the dark theme's stage. Doubled to
+// outrank the icon button's own size and colors.
 .holdKey.holdKey {
   touch-action: none;
   user-select: none;
@@ -495,13 +494,17 @@ $arrow-gap: 6px;
   width: $arrow-key;
   height: $arrow-key;
   border-radius: 12px;
-  background: var(--neutral-base-black);
-  color: var(--neutral-base-white);
+  background: var(--background-neutral-primary-inverse);
+  color: var(--text-neutral-primary-inverse);
   font-size: 20px;
 
   &:hover,
   &:active {
-    background: var(--neutral-gray-90);
+    background: color-mix(
+      in srgb,
+      var(--background-neutral-primary-inverse) 85%,
+      var(--background-neutral-primary)
+    );
   }
 }
 
