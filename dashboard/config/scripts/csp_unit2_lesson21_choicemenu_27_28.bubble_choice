@@ -1,0 +1,17 @@
+name 'csp-unit2-lesson21-choicemenu_27_28'
+display_name 'Pattern Gallery'
+description 'Pick one pattern and make it your own. Every pattern was written by someone else, so keep the credit comment at the top and add what you changed.'
+
+sublevels
+level 'csp-unit1-lesson21-choiceA_27_28'
+level 'csp-unit1-lesson21-choiceB_27_28'
+level 'csp-unit1-lesson21-choiceC_27_28'
+level 'csp-unit1-lesson21-choiceD_27_28'
+level 'csp-unit1-lesson21-choiceE_27_28'
+level 'csp-unit1-lesson21-choiceF_27_28'
+level 'csp-unit1-lesson21-choiceG_27_28'
+level 'csp-unit1-lesson21-choiceH_27_28'
+level 'csp-unit1-lesson21-choiceI_27_28'
+level 'csp-unit1-lesson21-choiceJ_27_28'
+
+uses_lab2

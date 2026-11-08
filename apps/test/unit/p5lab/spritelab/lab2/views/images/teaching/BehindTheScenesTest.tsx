@@ -31,8 +31,28 @@ describe('BehindTheScenes', () => {
     ).toContain('data:image/png;base64,AA==');
     // One picture: no second view to switch to.
     expect(screen.queryByRole('button', {name: 'Other poses'})).toBeNull();
+    // No story to lead on to.
+    expect(screen.queryByRole('button', {name: 'How AI made this'})).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
     expect(screen.queryByRole('alertdialog')).toBeNull();
+  });
+
+  it("leads on to the picture's story when there is one to tell, closing itself first", () => {
+    const onTellStory = jest.fn();
+    const story = {
+      picture: {src: 'data:image/png;base64,AA=='},
+      prompt: 'A cat',
+      imageType: 'sprite' as const,
+    };
+    renderBehind({
+      sent: sentPromptsFor('A cat', OPTIONS, 'pixel', false),
+      story,
+      onTellStory,
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
+    fireEvent.click(screen.getByRole('button', {name: 'How AI made this'}));
+    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(onTellStory).toHaveBeenCalledWith(story);
   });
 
   it('closes on the corner x as well', () => {
