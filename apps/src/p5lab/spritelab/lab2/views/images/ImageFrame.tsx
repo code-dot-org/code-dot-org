@@ -37,11 +37,6 @@ interface ImageFrameProps {
   under?: React.ReactNode;
 }
 
-// The height the row under the frame keeps while nothing is rendered there
-// (.under's min-height plus its padding), subtracted from the column height
-// before the square side is computed.
-const UNDER_MIN_PX = Number(styles.underMinPx);
-
 const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   image,
   frame,
@@ -74,7 +69,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
           Math.min(
             column.clientWidth,
             column.clientHeight -
-              Math.max(UNDER_MIN_PX, underRef.current?.offsetHeight ?? 0) -
+              (underRef.current?.offsetHeight ?? 0) -
               (aboveRef.current?.offsetHeight ?? 0)
           )
         )
