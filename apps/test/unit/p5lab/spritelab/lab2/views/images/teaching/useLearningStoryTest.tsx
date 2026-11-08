@@ -18,6 +18,13 @@ const picture = (
     generation: {imageType: 'sprite', prompt: 'A cat', ...generation},
   } as GeneratedImageResult);
 
+/** A story a student asks for from Behind the scenes. */
+const asked = {
+  picture: {src: 'data:image/png;base64,AA=='},
+  prompt: 'A dog',
+  imageType: 'sprite' as const,
+};
+
 /** Renders the hook and hands back its latest tools. */
 function setup(
   options: {active?: boolean; learning?: boolean; levelId?: number} = {}
@@ -114,6 +121,29 @@ describe('useLearningStory', () => {
     // The new level still gets its own telling.
     offer(tools);
     expect(tools().story).toMatchObject({prompt: 'A cat'});
+  });
+
+  it('tells a story the student asks for at once, on any level', () => {
+    const {tools} = setup({levelId: 3});
+    act(() => tools().tellStory(asked));
+    expect(tools().story).toEqual({...asked, asked: true});
+    act(() => tools().endStory());
+    expect(tools().story).toBeNull();
+  });
+
+  it("counts an asked-for story as the visit's telling", () => {
+    const {tools} = setup({learning: true, levelId: 3});
+    // Asked for during the reveal pause: the due story neither takes over
+    // nor follows.
+    act(() => tools().offerStory(picture({subject: 'character'})));
+    act(() => tools().tellStory(asked));
+    act(() => {
+      jest.advanceTimersByTime(2000);
+    });
+    expect(tools().story).toEqual({...asked, asked: true});
+    act(() => tools().endStory());
+    offer(tools);
+    expect(tools().story).toBeNull();
   });
 
   it('forgets a pending story when it goes away', () => {
