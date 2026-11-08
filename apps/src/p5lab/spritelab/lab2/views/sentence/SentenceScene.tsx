@@ -161,10 +161,13 @@ interface SentenceSceneProps {
   initialAnimated?: boolean;
   /** The student turned Animated on or off. */
   onAnimatedChange?: (animated: boolean) => void;
-  /** Called with each generated picture as soon as it is shown, and again
-      with the verdict added to its generation metadata when the student
-      rates it. */
+  /** Called with each generated picture as soon as it is shown. */
   onKeep: (result: GeneratedImageResult) => Promise<void> | void;
+  /** Called when the student rates the kept picture; resolves true once
+      the verdict is on its record. Without it, or when it resolves false,
+      the picture is kept again with the verdict in its generation
+      metadata. */
+  onRate?: (verdict: Verdict) => boolean | Promise<boolean>;
   /** Called when a generation request is sent to the model. */
   onGenerateStart?: () => void;
   /** The scene is making or keeping a picture, or has stopped; a host can
@@ -197,6 +200,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   initialAnimated = true,
   onAnimatedChange,
   onKeep,
+  onRate,
   onGenerateStart,
   onBusyChange,
   ratingRequired = false,
@@ -444,12 +448,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   ]);
 
   const judge = useCallback(
-    (next: Verdict) => {
+    async (next: Verdict) => {
       setVerdict(next);
       playSound(next === 'up' ? 'cheer' : 'hmm');
-      if (chosenPicture) {
-        persist(chosenPicture, next);
-      }
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT,
         {
@@ -459,8 +460,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         },
         true
       );
+      if (chosenPicture && !(await onRate?.(next))) {
+        persist(chosenPicture, next);
+      }
     },
-    [chosenPicture, imageType, persist]
+    [chosenPicture, imageType, persist, onRate]
   );
 
   // Giving reasons finishes the rating; the rating strip is hidden

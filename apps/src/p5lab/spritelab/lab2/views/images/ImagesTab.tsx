@@ -40,6 +40,7 @@ import {
   PAINT_TOOLS,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/paintTools';
 import SentenceScene from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
+import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
 import {readWordLayout} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/wordLayout';
 import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -278,14 +279,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
-  const drawingKeyRef = useRef(drawing?.target.key);
-  drawingKeyRef.current = drawing?.target.key;
-  // Rating a picture keeps it a second time, under a record that now
-  // carries the verdict. The story is offered only on the first keep of
-  // each picture. On a repeat keep the tools open on the picture are handed
-  // the new record, or they would take it for a new picture landing over
-  // the drawing and close.
-  const keptRef = useRef<string | null>(null);
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
       const target: ImageTarget = {
@@ -293,17 +286,28 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         imageType: result.generation.imageType,
         subject: result.generation.subject,
       };
-      const firstKeep = keptRef.current !== result.filename;
-      keptRef.current = result.filename;
-      if (!firstKeep && target.key && drawingKeyRef.current === target.key) {
-        adoptGeneration(result.generation);
-      }
       await storePicture(target, () => writer.acceptGenerated(target, result));
-      if (firstKeep) {
-        offerStory(result);
-      }
+      offerStory(result);
     },
-    [writer, storePicture, offerStory, adoptGeneration]
+    [writer, storePicture, offerStory]
+  );
+  // The verdict goes onto the kept picture's record, its pixels untouched,
+  // so tools open on the picture keep what has been drawn since it landed.
+  const handleRate = useCallback(
+    async (verdict: Verdict) => {
+      const key = chosenKeyRef.current;
+      const generation = key ? writer.rateGenerated(key, verdict) : undefined;
+      if (!key || !generation) {
+        return false;
+      }
+      adoptGeneration(key, generation);
+      await storePicture(
+        {key, imageType: generation.imageType},
+        async () => key
+      );
+      return true;
+    },
+    [writer, storePicture, adoptGeneration]
   );
   // When the chosen image has been deleted, choose the first image left, or
   // none; tools open on it close without saving, since a save would create
@@ -503,6 +507,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onGenerateStart={onGenerate}
           onBusyChange={setBusy}
           onKeep={handleKeep}
+          onRate={handleRate}
           wordLayout={wordLayout}
           compactBehindTheScenes
           imageSource={imageSource}

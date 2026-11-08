@@ -21,6 +21,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
     onAnimatedChange,
     onBusyChange,
     onKeep,
+    onRate,
     layout,
   }: {
     imageType: string;
@@ -29,6 +30,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
     onAnimatedChange?: (animated: boolean) => void;
     onBusyChange?: (busy: boolean) => void;
     onKeep: (result: unknown) => void;
+    onRate?: (verdict: string) => void;
     layout: (parts: unknown) => React.ReactNode;
   }) => {
     const [generating, setGenerating] = React.useState(false);
@@ -64,23 +66,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
         >
           land {imageType} {imageSubject ?? ''}
         </button>
-        <button
-          type="button"
-          onClick={() =>
-            onKeep({
-              // The picture kept again with its verdict, as a rating does.
-              filename: `made-${picturesMade}.png`,
-              uint8Array: new Uint8Array([137, 80, 78, 71]),
-              mediaType: 'image/png',
-              generation: {
-                imageType,
-                ...(imageSubject && {subject: imageSubject}),
-                prompt: 'A cat',
-                verdict: 'up',
-              },
-            })
-          }
-        >
+        <button type="button" onClick={() => onRate?.('up')}>
           rate {imageType}
         </button>
         {layout({
@@ -215,6 +201,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/imageTrim', () => ({
 }));
 const acceptGenerated = jest.fn();
 const saveEdited = jest.fn();
+const rateGenerated = jest.fn();
 const deleteImage = jest.fn();
 const endSession = jest.fn();
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter', () => ({
@@ -222,6 +209,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter', () => ({
   default: () => ({
     acceptGenerated: (...args: unknown[]) => acceptGenerated(...args),
     saveEdited: (...args: unknown[]) => saveEdited(...args),
+    rateGenerated: (...args: unknown[]) => rateGenerated(...args),
     deleteImage: (...args: unknown[]) => deleteImage(...args),
     endSession: () => endSession(),
   }),
@@ -249,6 +237,7 @@ describe('ImagesTab', () => {
     // paint-first default has tests of its own below.
     params['images-edited'] = 'pane';
     acceptGenerated.mockReset();
+    rateGenerated.mockReset();
     saveEdited.mockReset();
     deleteImage.mockReset();
     delete params.learning;
@@ -632,6 +621,12 @@ describe('ImagesTab', () => {
       propsByKey.k1 = {...propsByKey.k1, generation: result.generation};
       return 'k1';
     });
+    // The verdict goes onto the record alone, as the writer does it.
+    rateGenerated.mockImplementation((key: string, verdict: string) => {
+      const generation = {...(propsByKey[key].generation as object), verdict};
+      propsByKey[key] = {...propsByKey[key], generation};
+      return generation;
+    });
     const {rerender} = renderTab({editingOffered: true});
     await screen.findByText('canvas');
     const again = () =>
@@ -644,11 +639,13 @@ describe('ImagesTab', () => {
     });
     again();
     const canvas = await screen.findByText('canvas');
-    // Rating it keeps it again; the tab sees the record on its next render.
+    // Rating it rewrites its record, not its pixels; the tab sees the
+    // record on its next render.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: /^rate sprite/}));
     });
-    expect(acceptGenerated).toHaveBeenCalledTimes(2);
+    expect(acceptGenerated).toHaveBeenCalledTimes(1);
+    expect(rateGenerated).toHaveBeenCalledWith('k1', 'up');
     again();
     // The same canvas: the tools were never put away.
     expect(screen.getByText('canvas')).toBe(canvas);

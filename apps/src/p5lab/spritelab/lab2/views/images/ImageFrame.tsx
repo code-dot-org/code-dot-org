@@ -57,6 +57,8 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   const aboveRef = useRef<HTMLDivElement>(null);
   const underRef = useRef<HTMLDivElement>(null);
   const [frameSide, setFrameSide] = useState<number>();
+  const hasAbove = !!above;
+  const hasUnder = !!under;
   useLayoutEffect(() => {
     const column = columnRef.current;
     if (!column) {
@@ -84,7 +86,9 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
       observer.observe(underRef.current);
     }
     return () => observer.disconnect();
-  }, []);
+    // The rows come and go (the tools leave while a picture is made); a
+    // row that appears later is watched from then on.
+  }, [hasAbove, hasUnder]);
   const filled = live ? !generating : !!image;
   return (
     <div className={styles.frameWell}>

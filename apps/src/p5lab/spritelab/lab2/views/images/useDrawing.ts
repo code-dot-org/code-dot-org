@@ -65,11 +65,11 @@ export interface DrawingTools {
   drawing: Drawing | null;
   /** The image's generation record when the tools opened on it. */
   openedOnGeneration: ImageProps['generation'];
-  /** The picture under the tools was kept again under a new record, as a
-      rating does when it adds its verdict. The tools take the record as
-      their own and stay open; without this, a changed record reads as a
-      new picture landing over the drawing. */
-  adoptGeneration: (generation: ImageProps['generation']) => void;
+  /** The image's generation record changed without its pixels, as a
+      rating changes it. Tools open on that image take the record as their
+      own and stay open; without this, a changed record reads as a new
+      picture landing over the drawing. */
+  adoptGeneration: (key: string, generation: ImageProps['generation']) => void;
   /** What the frame shows over the editor's canvas until the editor has
       painted: a copy of the previous drawing's canvas, or the picture
       decoded ahead. */
@@ -500,8 +500,10 @@ export default function useDrawing({
   }, []);
 
   const adoptGeneration = useCallback(
-    (generation: ImageProps['generation']) => {
-      openedOnGenerationRef.current = generation;
+    (key: string, generation: ImageProps['generation']) => {
+      if (drawingRef.current?.target.key === key) {
+        openedOnGenerationRef.current = generation;
+      }
     },
     []
   );
