@@ -456,41 +456,46 @@ describe('QuizConfigurationPanel', () => {
     ).toBe(true);
   });
 
-  // Re-enable when the builder offers Exam again.
-  it.skip("choosing a purpose for the first time applies that purpose's defaults to every field, in the same request", async () => {
-    put.mockResolvedValue(jsonResponse({...INITIAL_VALUES, purpose: 'exam'}));
+  it("choosing a purpose for the first time applies that purpose's defaults to every field, in the same request", async () => {
+    put.mockResolvedValue(
+      jsonResponse({...INITIAL_VALUES, purpose: 'check_for_understanding'})
+    );
     renderPanel({initialValues: {...INITIAL_VALUES, purpose: undefined}});
 
-    fireEvent.click(screen.getByText('Exam', {exact: true}));
+    fireEvent.click(screen.getByText('Check for understanding', {exact: true}));
 
-    // Exam's defaults, per PURPOSE_DEFAULTS.
+    // Check for understanding's defaults, per PURPOSE_DEFAULTS.
     expect(
       (screen.getByLabelText('Show intro screen') as HTMLInputElement).checked
-    ).toBe(true);
+    ).toBe(false);
     expect(
       (screen.getByLabelText('Allow multiple attempts') as HTMLInputElement)
         .checked
-    ).toBe(false);
+    ).toBe(true);
     expect(
       (screen.getByLabelText('Show correctness') as HTMLInputElement).checked
-    ).toBe(false);
+    ).toBe(true);
     expect(
-      screen.queryByLabelText('Reveal answer and explanation')
-    ).not.toBeInTheDocument();
+      (
+        screen.getByLabelText(
+          'Reveal answer and explanation'
+        ) as HTMLInputElement
+      ).checked
+    ).toBe(true);
     expect(
       (screen.getByLabelText('Show questions after submit') as HTMLInputElement)
         .checked
-    ).toBe(false);
+    ).toBe(true);
 
     await waitFor(() => expect(put).toHaveBeenCalled());
     expect(lastRequestBody()).toMatchObject({
-      purpose: 'exam',
-      showIntroScreen: true,
+      purpose: 'check_for_understanding',
+      showIntroScreen: false,
       timeLimitMinutes: null,
-      allowMultipleAttempts: false,
-      showCorrectness: false,
-      revealAnswerExplanation: false,
-      showQuestionsAfterSubmit: false,
+      allowMultipleAttempts: true,
+      showCorrectness: true,
+      revealAnswerExplanation: true,
+      showQuestionsAfterSubmit: true,
     });
   });
 
