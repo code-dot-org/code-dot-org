@@ -20,7 +20,7 @@ dev = [
   'ipython >=8',
   # theater's tests render real gifs. Pyodide supplies pillow at runtime, so
   # theater does not depend on it, but CI runs pytest from this environment.
-  'pillow >=10',
+  'pillow>=13.0.0',
   'pytest >=8',
   'pytest-mock >=3',
   'ruff >=0.8',
