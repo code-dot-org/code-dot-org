@@ -17,7 +17,7 @@
     .column
       %ul.match_questions
         - level.localized_property(:questions).each do |question|
-          %li{style: "height: #{level.height}px"}!= render_multi_or_match_content(question['text'])
+          %li{style: "height: #{level.height}px; display: flex; flex-direction: column"}!= render_multi_or_match_content(question['text'])
     .column.match_answerdest
       %ul.match_slots.draggablecolumn
         - level.answers.each do |_|
