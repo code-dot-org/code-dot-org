@@ -82,16 +82,20 @@ describe('patternCells', () => {
     expect(cells.T).toBeUndefined();
   });
 
-  it("leaves 'S' and 'B' their own meaning, whatever a level names them", () => {
+  it("ignores a level's roles for 'S' and 'B', which are built in", () => {
     const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
     const list = animations([
       ['k2', 'secondCharacter', []],
       ['k1', 'firstCharacter', []],
     ]);
     list.propsByKey.k2.role = 'friend';
+    // The level tries to point both letters at the friend.
     const cells = patternCells(list, undefined, {S: 'friend', B: 'friend'});
+    // 'S' still draws the default sprite, the oldest one, not the friend.
     expect(cells.S).toEqual({image: 'firstCharacter', kind: 'sprite'});
+    // 'B' still means the newest block, and there is no block here.
     expect(cells.B).toBeUndefined();
+    // One warning per letter the level tried to redefine.
     expect(warn).toHaveBeenCalledTimes(2);
     warn.mockRestore();
   });
