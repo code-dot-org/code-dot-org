@@ -10,15 +10,20 @@ export interface ControlsState {
   gravity: number;
 }
 
-/** Left and right plus Jump; left, right, up and down; or no arrows. */
-export type ArrowSet = 'jump' | 'steer' | 'none';
+/** Which arrow jumps: the up arrow under gravity, the down arrow when
+    gravity pulls up (the player stands on the ceiling); none, with all four
+    steering, when there is no gravity; or no arrows at all. */
+export type ArrowSet = 'jump' | 'jumpDown' | 'steer' | 'none';
 
 /** A story scene has nothing to steer. */
 export function arrowSetFor(state: ControlsState): ArrowSet {
   if (!state.platformer) {
     return 'none';
   }
-  return state.gravity !== 0 ? 'jump' : 'steer';
+  if (state.gravity === 0) {
+    return 'steer';
+  }
+  return state.gravity > 0 ? 'jump' : 'jumpDown';
 }
 
 export type GameKey = 'left' | 'right' | 'up' | 'down';

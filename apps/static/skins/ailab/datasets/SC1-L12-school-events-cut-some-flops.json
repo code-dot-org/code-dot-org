@@ -1,0 +1,62 @@
+{
+  "name": "SC1-L12-school-events-cut-some-flops",
+  "card": {
+    "description": "A student council keeps a notebook of past school events. Each record is one event. The label says if the event filled up or not. You can also choose Ran Over Budget? or Asked for Again? as the label.",
+    "source": "Simulated data: all events, names and counts are made up for this lesson. No real schools or brands.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Use the model's predictions to help the council plan events students will come to.",
+      "potentialMisuses": "This is a small notebook that one council made up from one council, so it may predict poorly for other events or schools."
+    }
+  },
+  "defaultLabelColumn": "Filled Up?",
+  "defaultIdColumn": "Event",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Event",
+      "description": "What is the event called?"
+    },
+    {
+      "type": "categorical",
+      "id": "Start Time",
+      "description": "When does the event start?"
+    },
+    {
+      "type": "categorical",
+      "id": "Day",
+      "description": "What day of the week is the event?"
+    },
+    {
+      "type": "categorical",
+      "id": "Food Served",
+      "description": "Does the event serve food?"
+    },
+    {
+      "type": "categorical",
+      "id": "Cost",
+      "description": "How much does it cost to go?"
+    },
+    {
+      "type": "categorical",
+      "id": "Announced On",
+      "description": "How did the council tell students about the event?"
+    },
+    {
+      "type": "categorical",
+      "id": "Ran Over Budget?",
+      "description": "Did the council spend more than it planned on the event?"
+    },
+    {
+      "type": "categorical",
+      "id": "Asked for Again?",
+      "description": "Did students ask the council to run the event again?"
+    },
+    {
+      "type": "categorical",
+      "id": "Filled Up?",
+      "description": "Did the event fill up? This is what the model predicts."
+    }
+  ]
+}

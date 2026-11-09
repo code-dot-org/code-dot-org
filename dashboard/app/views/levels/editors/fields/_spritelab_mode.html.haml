@@ -1,0 +1,9 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#level_mode_area"}}
+  Level mode (Lab2 only)
+
+#level_mode_area.in.collapse
+  #spritelab-mode-editor
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_spritelab_mode.js'),
+        data: {spritelabmode: @level.level_mode.to_json}}

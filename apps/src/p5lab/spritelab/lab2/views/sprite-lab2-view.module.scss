@@ -399,7 +399,9 @@ $z-over-blockly: 71;
 }
 
 // Fixed 400x400 (the engine canvas size); positioned via a transform so it can
-// animate between the corner preview and the centered play view.
+// animate between the corner preview and the centered play view. The
+// corners are rounded in canvas units, so they scale with the box; the
+// canvas and the covers inside are clipped to them.
 .playspaceBox {
   position: absolute;
   top: 0;
@@ -407,6 +409,8 @@ $z-over-blockly: 71;
   width: 400px;
   height: 400px;
   transform-origin: 0 0;
+  border-radius: 10px;
+  overflow: hidden;
   background: var(--background-neutral-secondary);
   // Transitions, and the preview-only hairline seam, are set inline:
   // transform only animates between the two visible placements; opacity
@@ -420,56 +424,119 @@ $z-over-blockly: 71;
   }
 }
 
-// The Play/Stop and arrow bar under the playspace box, along with an optional AI status indicator. 
-// Only its buttons take pointer events: the bar spans the box's width, and over the corner
-// preview that strip would otherwise sit on the Blockly workspace.
-.playBar {
+// The bar pinned to the stage's foot, the editors' scene bar's twin: Run
+// under the preview, Reset while playing. The overlay passes pointer
+// events through; the bar takes its own.
+.bottomBar {
   position: absolute;
-  top: 0;
-  left: 0;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  bottom: 0;
+  height: $editor-strip-height;
+  box-sizing: border-box;
+  display: flex;
   align-items: center;
-  pointer-events: none;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 8px;
+  background: var(--background-neutral-primary);
+  border-top: 1px solid var(--borders-neutral-primary);
+  pointer-events: auto;
+}
 
-  // On a narrow column a button's text wraps; the button grows with it
-  // and the bar's measured height makes room.
-  button {
-    pointer-events: auto;
-    height: auto;
-    min-height: 2rem;
-    white-space: normal;
-    line-height: 1.25;
-    text-align: center;
-  }
+// Under the preview the bar covers the column's edge, so it draws the
+// hairline between itself and the scene bar beside it.
+.bottomBarColumn {
+  border-inline-start: 1px solid var(--borders-neutral-primary);
 }
 
 .playBarButtons {
-  grid-column: 2;
   display: flex;
   min-width: 0;
-  // Stretch keeps the buttons a shared height when one of them wraps to two lines.
-  align-items: stretch;
+  align-items: center;
   gap: 16px;
 }
 
-.arrowKeys {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+// Placed by the playspace beside or under the game; the cross inside takes
+// the pointer events the overlay passes through.
+.arrowCrossHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+// Four buttons: the up key over a row of left, down and right; three keys
+// and two gaps across, which the playspace's CROSS_KEY and CROSS_KEY_GAP
+// repeat to place it.
+$arrow-key: 38px;
+$arrow-gap: 6px;
+
+.arrowCross {
+  display: grid;
+  grid-template-columns: repeat(3, $arrow-key);
+  grid-template-rows: repeat(2, $arrow-key);
+  gap: $arrow-gap;
+  pointer-events: auto;
+}
+
+.arrowUp {
+  grid-area: 1 / 2;
+}
+
+.arrowLeft {
+  grid-area: 2 / 1;
+}
+
+.arrowRight {
+  grid-area: 2 / 3;
+}
+
+.arrowDown {
+  grid-area: 2 / 2;
 }
 
 // A held key acts on the touch itself: no scroll or double-tap wait, and
-// no selection or callout under a long press.
-.holdKey {
+// no selection or callout under a long press. Dark squares with a light
+// chevron on the light stage, after the legacy lab's touch controls; the
+// inverse tokens turn them light on the dark theme's stage. Doubled to
+// outrank the icon button's own size, least width, padding and colors.
+.holdKey.holdKey {
   touch-action: none;
   user-select: none;
   -webkit-touch-callout: none;
+  width: $arrow-key;
+  height: $arrow-key;
+  min-width: $arrow-key;
+  min-height: $arrow-key;
+  padding: 0;
+  border-radius: 8px;
+  background: var(--background-neutral-primary-inverse);
+  color: var(--text-neutral-primary-inverse);
+  font-size: 14px;
+
+  &:hover,
+  &:active {
+    background: color-mix(
+      in srgb,
+      var(--background-neutral-primary-inverse) 85%,
+      var(--background-neutral-primary)
+    );
+  }
+
+  // Under a preview that is not being played: the keys as they are, only
+  // the chevrons dimmed toward them.
+  &:disabled {
+    background: var(--background-neutral-primary-inverse);
+    color: color-mix(
+      in srgb,
+      var(--text-neutral-primary-inverse) 45%,
+      var(--background-neutral-primary-inverse)
+    );
+  }
 }
 
-// Restart buttons in the play area's top-right corner, clear of the game
-// wherever the canvas lands. The overlay ignores pointer events; these
-// buttons accept them.
+// Restart buttons in the play area's top-right corner; the playspace keeps
+// the game clear of them (CONTROLS_INSET repeats the inset). The overlay
+// ignores pointer events; these buttons accept them.
 .playControls {
   position: absolute;
   top: 8px;

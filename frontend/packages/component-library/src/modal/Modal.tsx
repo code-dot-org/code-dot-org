@@ -4,9 +4,11 @@ import {
   Typography as MuiTypography,
 } from '@mui/material';
 import classnames from 'classnames';
-import {HTMLAttributes, ReactNode} from 'react';
+import {HTMLAttributes, ReactNode, useRef} from 'react';
 
 import CustomDialog from '@/dialog/MuiCustomDialog';
+
+import useTabStopWhileOverflowing from './useTabStopWhileOverflowing';
 
 import moduleStyles from './modal.module.scss';
 
@@ -22,6 +24,10 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
    *  to the element in custom content which will be representing the dialog description. (Used by screen readers
    *  for dialog's `aria-describedBy` attribute) */
   customBottomContent?: ReactNode;
+  /** Controls at the start of the action row, opposite the buttons. They come
+   *  after the content and before the buttons in tab order, so they can take
+   *  focus when the modal opens; keep destructive actions out of this slot. */
+  startActions?: ReactNode;
   /** Modal primary button props */
   primaryButtonProps: MuiButtonProps;
   /** Modal secondary button props */
@@ -68,6 +74,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   className,
   customContent,
   customBottomContent,
+  startActions,
   onClose,
   closeLabel = 'Close modal',
   imageUrl,
@@ -75,6 +82,9 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   imagePlacement = 'top',
   ...HTMLAttributes
 }) => {
+  const contentRef = useRef<HTMLDivElement>(null);
+  useTabStopWhileOverflowing(contentRef);
+
   // Deprecation warning for mode prop
   if (mode) {
     console.warn(
@@ -96,13 +106,19 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       aria-label={title}
       {...HTMLAttributes}
     >
-      <div className={moduleStyles.modalTitleSection}>
+      <div
+        className={classnames(
+          moduleStyles.modalTitleSection,
+          onClose && moduleStyles.closable,
+        )}
+      >
         <MuiTypography variant="h3" gutterBottom>
           {title}
         </MuiTypography>
       </div>
       <hr />
       <div
+        ref={contentRef}
         className={classnames(
           moduleStyles.modalContentSection,
           moduleStyles[`modalContentSection-${imagePlacement}-imagePlacement`],
@@ -123,20 +139,29 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       </div>
       <hr />
       <div className={moduleStyles.modalActionsSection}>
-        {secondaryButtonProps && (
-          <MuiButton
-            variant="outlined"
-            color={mode === 'dark' ? 'white' : 'secondary'}
-            {...secondaryButtonProps}
-          />
+        {startActions && (
+          <div className={moduleStyles.modalStartActions}>{startActions}</div>
         )}
-        <MuiButton
-          variant="contained"
-          color={mode === 'dark' ? 'white' : 'primary'}
-          {...primaryButtonProps}
-        />
+        <div className={moduleStyles.modalEndActions}>
+          {secondaryButtonProps && (
+            <MuiButton
+              variant="outlined"
+              color={mode === 'dark' ? 'white' : 'secondary'}
+              {...secondaryButtonProps}
+            />
+          )}
+          <MuiButton
+            variant="contained"
+            color={mode === 'dark' ? 'white' : 'primary'}
+            {...primaryButtonProps}
+          />
+        </div>
       </div>
-      {customBottomContent}
+      {customBottomContent && (
+        <div className={moduleStyles.modalBottomSection}>
+          {customBottomContent}
+        </div>
+      )}
     </CustomDialog>
   );
 };
