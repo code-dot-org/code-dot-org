@@ -21,8 +21,12 @@ class CoursesController < ApplicationController
     @course_families_course_types = []
     UnitGroup.family_names.map do |cf|
       co = CourseOffering.find_by(key: cf)
-      first_cv = co.course_versions.first
-      ug = first_cv.content_root
+      first_cv = co&.course_versions&.first
+      ug = first_cv&.content_root
+      if co.nil? || first_cv.nil? || ug.nil?
+        Rails.logger.warn("CoursesController#new: skipping family name '#{cf}' (missing CourseOffering, CourseVersion, or content_root)")
+        next
+      end
       @versioned_course_families << cf unless first_cv.key == 'unversioned'
       @course_families_course_types << [cf, {instruction_type: ug.instruction_type, instructor_audience: ug.instructor_audience, participant_audience: ug.participant_audience}]
     end
