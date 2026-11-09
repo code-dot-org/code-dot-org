@@ -18,6 +18,8 @@ import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants
 
 import {uploadLevelAsset} from '../levelApi';
 
+import {dslHeredoc, dslQuote} from './dsl';
+
 // Bubble Choice is a DSLDefined picker page whose sublevels are full
 // Level records generated separately via the standard per-lab path.
 // This file handles the parent's own copy plus per-sublevel thumbnails
@@ -251,21 +253,6 @@ export async function generateBubbleChoiceThumbnail(
   const ext = imageFile.mediaType.split('/')[1] || 'png';
   const filename = `${sublevelName}-thumb-${createUuid()}.${ext}`;
   return uploadLevelAsset(imageFile.uint8Array, filename, imageFile.mediaType);
-}
-
-function dslQuote(s: string): string {
-  return `'${s.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
-}
-
-// Picks a heredoc terminator absent from the body.
-function dslHeredoc(body: string, defaultTag = 'MARKDOWN'): string {
-  let tag = defaultTag;
-  let suffix = 0;
-  while (body.includes(tag)) {
-    suffix += 1;
-    tag = `${defaultTag}_${suffix}`;
-  }
-  return `<<${tag}\n${body}\n${tag}`;
 }
 
 // sublevelNames order becomes the picker order via

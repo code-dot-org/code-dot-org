@@ -4,9 +4,11 @@ import {AICHAT_PRESET_IDS} from '../ai/aichat';
 import {
   BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES,
   ExistingLessonData,
+  ExistingLevelRef,
   LabType,
   labTypeFromRailsType,
   LevelSpec,
+  SerializedActivity,
   SerializedLevel,
   SerializedScriptLevel,
   SUPPORTED_LAB_TYPES,
@@ -61,9 +63,10 @@ interface LessonLevelEntry {
 // Walk every level in the lesson in display order, yielding the level
 // summary along with the activity/section it belongs to and the
 // surrounding script_level (which we ship back verbatim on save).
-function listLessonLevels(lesson: ExistingLessonData): LessonLevelEntry[] {
+function listLessonLevels(
+  activities: SerializedActivity[]
+): LessonLevelEntry[] {
   const out: LessonLevelEntry[] = [];
-  const activities = lesson.activities || [];
   for (let a = 0; a < activities.length; a++) {
     const sections = activities[a].activitySections || [];
     for (let s = 0; s < sections.length; s++) {
@@ -78,6 +81,23 @@ function listLessonLevels(lesson: ExistingLessonData): LessonLevelEntry[] {
     }
   }
   return out;
+}
+
+// Existing-level refs keyed by level name, so cards created this run can
+// be promoted to existing from the saved lesson.
+export function existingRefsByLevelName(
+  activities: SerializedActivity[]
+): Map<string, ExistingLevelRef> {
+  const refs = new Map<string, ExistingLevelRef>();
+  for (const {
+    level,
+    scriptLevel,
+    activityIndex,
+    sectionIndex,
+  } of listLessonLevels(activities)) {
+    refs.set(level.name, {activityIndex, sectionIndex, scriptLevel});
+  }
+  return refs;
 }
 
 // Find the longest hyphen-bounded prefix shared by all level names. Used to
@@ -109,7 +129,7 @@ export interface InitialState {
 }
 
 export function buildInitialState(lesson: ExistingLessonData): InitialState {
-  const entries = listLessonLevels(lesson);
+  const entries = listLessonLevels(lesson.activities || []);
   if (entries.length === 0) {
     return {prefix: '', specs: [newLevelSpec()]};
   }
@@ -163,6 +183,7 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
           return {
             key: createUuid(),
             id: subId,
+            existingName: sub.name,
             labType: supportedSubLabType ?? BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES[0],
             description: sub.generateOutline || '',
             lastGeneratedDescription: sub.generateOutline || undefined,
