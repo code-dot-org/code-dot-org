@@ -613,7 +613,7 @@ export default class SpriteLab2Engine extends SpriteLab {
               2 *
                 Math.abs(this.platformGravity_) *
                 (this.platformJumpHeight_ + JUMP_CLEARANCE_SQUARES) *
-                library.defaultSpriteSize
+                (library.defaultSpriteSize || cellSize(DEFAULT_SCENE_GRID_SIZE))
             )
           : Math.abs(Number(speed) || 0);
       if (jumpSpeed === 0) {
