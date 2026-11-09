@@ -77,7 +77,7 @@ describe('Hoai2026Congrats', () => {
     renderDialog();
     const offer = screen.getByRole('region', {name: 'Share your game'});
     expect(offer.getAttribute('aria-labelledby')).toBe(
-      offer.querySelector('h3')?.id
+      offer.querySelector('h4')?.id
     );
   });
 

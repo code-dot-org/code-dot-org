@@ -1,5 +1,5 @@
-import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import {
   Button as MuiButton,
   ButtonProps as MuiButtonProps,
@@ -21,8 +21,6 @@ const DESTINATIONS = {
     'https://code.org/en-US/curriculum/artificial-intelligence-discoveries',
   professionalLearning: 'https://code.org/en-US/professional-learning',
 };
-
-const TITLE_ID = 'hoai2026-congrats-title';
 
 /** Button props that make an external link of a destination, in a new tab. */
 function linkProps(href: string): Partial<MuiButtonProps> {
@@ -62,7 +60,7 @@ const Offer: React.FunctionComponent<{
     <section className={styles.offer} aria-labelledby={titleId}>
       <Typography
         id={titleId}
-        component="h3"
+        component="h4"
         variant="h5"
         className={styles.offerTitle}
       >
@@ -106,160 +104,142 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
   onRemix,
   certificateUrl,
 }) => (
-  <MuiCustomDialog
+  <Modal
     className={styles.dialog}
+    title="Congratulations!"
+    description="You made sprites with AI, built a world, and coded your own game."
     onClose={onClose}
     closeLabel="Close"
-    aria-labelledby={TITLE_ID}
-  >
-    <Typography
-      id={TITLE_ID}
-      component="h2"
-      variant="h4"
-      className={styles.title}
-    >
-      Congratulations!
-    </Typography>
-    <hr className={styles.rule} />
-    <div className={styles.body}>
-      <Typography
-        id="dsco-dialog-description"
-        variant="body2"
-        className={styles.intro}
-      >
-        You made sprites with AI, built a world, and coded your own game.
-      </Typography>
-      <div className={styles.cards}>
-        <section
-          className={classNames(styles.card, styles.students)}
-          aria-labelledby="hoai2026-congrats-students"
-        >
-          <Typography variant="overline2" className={styles.eyebrow}>
-            For students
-          </Typography>
-          <Typography
-            id="hoai2026-congrats-students"
-            component="h3"
-            variant="h3"
-            className={styles.cardTitle}
+    // The one button is the quiet kind: it keeps the student where they are.
+    primaryButtonProps={{
+      children: 'Keep playing',
+      variant: 'outlined',
+      color: 'secondary',
+      size: 'large',
+      onClick: onClose,
+    }}
+    customContent={
+      <div className={styles.body}>
+        <div className={styles.cards}>
+          <section
+            className={classNames(styles.card, styles.students)}
+            aria-labelledby="hoai2026-congrats-students"
           >
-            Discover even more blocks in Sprite Lab
-          </Typography>
-          <div>
-            {/* A remix of this game, as the header's Remix button makes;
-                held while the project may not be remixed. */}
-            <MuiButton
-              variant="contained"
-              color="white"
-              size="large"
-              className={styles.open}
-              endIcon={
-                <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
-              }
-              disabled={!onRemix}
-              onClick={onRemix}
-            >
-              Open Sprite Lab
-            </MuiButton>
-          </div>
-          {/* A plain box until the card's picture arrives. */}
-          <div className={styles.picture} aria-hidden="true" />
-        </section>
-        <section
-          className={classNames(styles.card, styles.teachers)}
-          aria-labelledby="hoai2026-congrats-teachers"
-        >
-          <Typography variant="overline2" className={styles.eyebrow}>
-            For teachers
-          </Typography>
-          <Typography
-            id="hoai2026-congrats-teachers"
-            component="h3"
-            variant="h3"
-            className={styles.cardTitle}
-          >
-            Bring AI to your classroom
-          </Typography>
-          <div className={styles.resources}>
-            <Resource
-              grade="Elementary"
-              name="How AI Makes Decisions"
-              href={DESTINATIONS.elementary}
-            />
-            <Resource
-              grade="Middle school"
-              name="AI Discoveries"
-              href={DESTINATIONS.middleSchool}
-            />
-          </div>
-        </section>
-      </div>
-      <div className={styles.offers}>
-        <Offer
-          icon="share"
-          title="Share your game"
-          text="Send it to friends to play."
-        >
-          {shareUrl && projectType ? (
-            <CopyToClipboardButton
-              shareUrl={shareUrl}
-              projectType={projectType}
-              label="Copy link"
-              iconName="link"
-              copiedIconName="check"
-              className={styles.copyLink}
-            />
-          ) : (
-            <Typography variant="body2" className={styles.offerText}>
-              This game can't be shared right now.
+            <Typography variant="overline2" className={styles.eyebrow}>
+              For students
             </Typography>
-          )}
-        </Offer>
-        <Offer
-          icon="award"
-          title="Get your certificate"
-          text="Print it with your name on it."
-        >
-          {/* The unit's own finish page, so it opens in place of the lab
+            <Typography
+              id="hoai2026-congrats-students"
+              component="h3"
+              variant="h4"
+              className={styles.cardTitle}
+            >
+              Discover even more blocks in Sprite Lab
+            </Typography>
+            <div>
+              {/* A remix of this game, as the header's Remix button makes;
+                held while the project may not be remixed. */}
+              <MuiButton
+                variant="contained"
+                color="white"
+                size="large"
+                className={styles.open}
+                endIcon={
+                  <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
+                }
+                disabled={!onRemix}
+                onClick={onRemix}
+              >
+                Open Sprite Lab
+              </MuiButton>
+            </div>
+            {/* A plain box until the card's picture arrives. */}
+            <div className={styles.picture} aria-hidden="true" />
+          </section>
+          <section
+            className={classNames(styles.card, styles.teachers)}
+            aria-labelledby="hoai2026-congrats-teachers"
+          >
+            <Typography variant="overline2" className={styles.eyebrow}>
+              For teachers
+            </Typography>
+            <Typography
+              id="hoai2026-congrats-teachers"
+              component="h3"
+              variant="h4"
+              className={styles.cardTitle}
+            >
+              Bring AI to your classroom
+            </Typography>
+            <div className={styles.resources}>
+              <Resource
+                grade="Elementary"
+                name="How AI Makes Decisions"
+                href={DESTINATIONS.elementary}
+              />
+              <Resource
+                grade="Middle school"
+                name="AI Discoveries"
+                href={DESTINATIONS.middleSchool}
+              />
+            </div>
+          </section>
+        </div>
+        <div className={styles.offers}>
+          <Offer
+            icon="share"
+            title="Share your game"
+            text="Send it to friends to play."
+          >
+            {shareUrl && projectType ? (
+              <CopyToClipboardButton
+                shareUrl={shareUrl}
+                projectType={projectType}
+                label="Copy link"
+                iconName="link"
+                copiedIconName="check"
+                className={styles.copyLink}
+              />
+            ) : (
+              <Typography variant="body2" className={styles.offerText}>
+                This game can't be shared right now.
+              </Typography>
+            )}
+          </Offer>
+          <Offer
+            icon="award"
+            title="Get your certificate"
+            text="Print it with your name on it."
+          >
+            {/* The unit's own finish page, so it opens in place of the lab
               as the lab's Finish would; held while the unit has none. */}
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            href={certificateUrl}
-            disabled={!certificateUrl}
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              href={certificateUrl}
+              disabled={!certificateUrl}
+            >
+              Certificate
+            </MuiButton>
+          </Offer>
+          <Offer
+            icon="lightbulb"
+            title="Professional learning"
+            text="Learn to teach computer science and AI."
           >
-            Certificate
-          </MuiButton>
-        </Offer>
-        <Offer
-          icon="lightbulb"
-          title="Professional learning"
-          text="Learn to teach computer science and AI."
-        >
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            endIcon={<ExternalIcon />}
-            {...linkProps(DESTINATIONS.professionalLearning)}
-          >
-            Learn more
-          </MuiButton>
-        </Offer>
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              endIcon={<ExternalIcon />}
+              {...linkProps(DESTINATIONS.professionalLearning)}
+            >
+              Learn more
+            </MuiButton>
+          </Offer>
+        </div>
       </div>
-    </div>
-    <hr className={styles.rule} />
-    <div className={styles.footer}>
-      <MuiButton
-        variant="outlined"
-        color="secondary"
-        size="large"
-        onClick={onClose}
-        type="button"
-      >
-        Keep playing
-      </MuiButton>
-    </div>
-  </MuiCustomDialog>
+    }
+  />
 );
 
 export default Hoai2026Congrats;
