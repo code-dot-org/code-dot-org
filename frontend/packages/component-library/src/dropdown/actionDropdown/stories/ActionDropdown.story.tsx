@@ -125,6 +125,34 @@ WithDisabledOptionActionDropdown.args = {
   size: 'm',
 };
 
+export const WithTaggedOptionActionDropdown = SingleTemplate.bind({});
+WithTaggedOptionActionDropdown.args = {
+  name: 'withTaggedOption-dropdown',
+  triggerButtonProps: {
+    color: 'primary',
+    variant: 'contained',
+    children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
+  },
+  options: [
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+      onClick: () => null,
+    },
+    {
+      value: 'option-2',
+      label: 'Option 2',
+      tag: 'Beta',
+      icon: {iconName: 'flask', iconStyle: 'solid'},
+      onClick: () => null,
+    },
+  ],
+  disabled: false,
+  labelText: 'Default Dropdown',
+  size: 'm',
+};
+
 export const WithDestructiveOptionActionDropdown = SingleTemplate.bind({});
 WithDestructiveOptionActionDropdown.args = {
   name: 'withDisabledOption-dropdown',

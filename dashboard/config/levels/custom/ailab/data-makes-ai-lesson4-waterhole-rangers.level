@@ -8,10 +8,10 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true\r\n}",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L08-marketing-base\"\r\n  ],\r\n  \"label\": \"Result\",\r\n  \"features\": [\r\n    \"Clip Type\",\r\n    \"Length\",\r\n    \"Famous Actor\",\r\n    \"Funny\"\r\n  ],\r\n  \"pretrained\": true,\r\n  \"hideSelectLabel\": true,\r\n  \"lockFeatures\": true,\r\n  \"hideDatasetView\": true\r\n}",
     "uses_lab2": "true",
-    "dynamic_instructions": "{\r\n  \"results\": \"- Read the data card.\\n- Click **Make a prediction**.\\n- Enter each of the three cases on the slide.\\n- Write what the model says for each case.\"\r\n}"
+    "dynamic_instructions": "{\r\n  \"results\": \"- Click **Filter** and choose Clip Type: Interview.\\n- Find the long interviews that aren't funny. Count how many were Hits.\\n- Fill in the Our Pair row in your guide. You're done when both rows are filled in.\"\r\n}"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-27 19:10:48 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 20:46:11 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 02:20:30 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 17:27:52 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-27 19:10:48 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 20:46:11 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 02:20:30 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 17:27:52 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:32:42 +0000\",\"changed\":[\"mode\",\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:38:59 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Ailab>

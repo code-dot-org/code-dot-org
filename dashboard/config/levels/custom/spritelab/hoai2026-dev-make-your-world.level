@@ -95,7 +95,7 @@
           "text": "Add **blocks** to jump onto.",
           "check": {
             "kind": "world",
-            "changed": true
+            "role": "block"
           }
         },
         {

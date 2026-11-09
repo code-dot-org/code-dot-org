@@ -13,6 +13,9 @@ export interface ModelParameters {
   responseJsonSchema?: object;
 }
 
+/** The model a level or host picks for the AI Tutor, in place of its default. */
+export type AiTutorModelParameters = Pick<ModelParameters, 'selectedModelId'>;
+
 /** Metadata about a given model, common across all aichat levels */
 export type ModelDescription = (typeof modelsJson)[number] & {
   id: ValueOf<typeof AiChatModelIds>;

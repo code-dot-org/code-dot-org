@@ -1,6 +1,7 @@
 // A Behind the scenes button that opens a dialog showing the picture and
 // the full prompt the model received; for a character set, a second view
-// shows the prompts sent for the other poses.
+// shows the prompts sent for the other poses. A second button leads on to
+// the picture's "How AI made your image" story, when there is one to tell.
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -13,9 +14,12 @@ import {FrameSize} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
 import {POSE_MARK, SentPrompts} from '../../sentence/sentPrompts';
 
+import {LearningStory} from './useLearningStory';
+
 import styles from './behind-the-scenes.module.scss';
 
 const TITLE = 'Behind the scenes';
+const STORY_BUTTON = 'How AI made this';
 const VIEWS = [
   ['picture', 'First picture'],
   ['poses', 'Other poses'],
@@ -41,6 +45,10 @@ interface BehindTheScenesProps {
   disabled?: boolean;
   /** The icon alone, for a header with no room for the title. */
   compact?: boolean;
+  /** The picture's story, offered when there is one and a teller. */
+  story?: LearningStory;
+  /** Opens the story in place of this dialog. */
+  onTellStory?: (story: LearningStory) => void;
 }
 
 const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
@@ -48,6 +56,8 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
   picture,
   disabled,
   compact,
+  story,
+  onTellStory,
 }) => {
   const [open, setOpen] = useState(false);
   const [view, setView] = useState<View>('picture');
@@ -152,6 +162,16 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
             </div>
           }
           onClose={() => setOpen(false)}
+          secondaryButtonProps={
+            story &&
+            onTellStory && {
+              children: STORY_BUTTON,
+              onClick: () => {
+                setOpen(false);
+                onTellStory(story);
+              },
+            }
+          }
           primaryButtonProps={{
             children: 'Got it',
             onClick: () => setOpen(false),

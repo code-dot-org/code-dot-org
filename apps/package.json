@@ -46,7 +46,8 @@
     "ua-parser-js": "^0.7.40",
     "serialport": "^13.0.0",
     "@code-dot-org/markdown/@code-dot-org/component-library": "portal:../frontend/packages/component-library/",
-    "@code-dot-org/markdown/@code-dot-org/core": "portal:../frontend/packages/core/"
+    "@code-dot-org/markdown/@code-dot-org/core": "portal:../frontend/packages/core/",
+    "@code-dot-org/core/@code-dot-org/shared-constants": "portal:../frontend/packages/shared-constants/"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",

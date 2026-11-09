@@ -5,15 +5,18 @@ interface ScenePictureProps {
   src: string | undefined;
   /** Sizes the tile; the picture fills it. */
   className: string;
+  /** Without a picture, the tile is empty rather than showing an icon. */
+  blank?: boolean;
 }
 
 /**
- * A scene's picture, or a blank tile until it has one. A picture that fails
- * to load (an asset since deleted) shows the blank tile too.
+ * A scene's picture, or an icon (or nothing) until it has one. A picture
+ * that fails to load (an asset since deleted) counts as none.
  */
 const ScenePicture: React.FunctionComponent<ScenePictureProps> = ({
   src,
   className,
+  blank = false,
 }) => {
   const [failed, setFailed] = useState<string | null>(null);
   return (
@@ -21,7 +24,7 @@ const ScenePicture: React.FunctionComponent<ScenePictureProps> = ({
       {src && failed !== src ? (
         <img src={src} alt="" onError={() => setFailed(src)} />
       ) : (
-        <FontAwesomeV6Icon iconName="image" iconStyle="regular" />
+        !blank && <FontAwesomeV6Icon iconName="image" iconStyle="regular" />
       )}
     </span>
   );
