@@ -286,7 +286,7 @@ describe('StepPlayer', () => {
               },
             ],
             skills: {html: {id: 'html', title: 'HTML', description: ''}},
-          },
+          } as unknown as PathwayContextValue['pathway'],
           statusMap: {cp: 'complete'},
           progress: {steps: {s: {timeSpent: 90}}},
         }
