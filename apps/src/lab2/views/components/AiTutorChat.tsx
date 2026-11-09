@@ -7,6 +7,7 @@ import React, {useCallback, useMemo} from 'react';
 
 import {
   AiChatDisabledState,
+  AiTutorModelParameters,
   ChatButtonClickHandler,
   ChatButtonData,
   ResponseSchemaSettings,
@@ -39,6 +40,7 @@ export interface AiTutorChatProps {
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPrompt?: string;
+  aiTutorModelParameters?: AiTutorModelParameters;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   hasInstructionsDrawer?: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
@@ -61,6 +63,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPrompt,
+  aiTutorModelParameters,
   aiTutorResponseSchemaSettings,
   hasInstructionsDrawer,
   tutorVideos,
@@ -84,6 +87,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
 
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPrompt,
+    aiTutorModelParameters,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
     tutorVideos,
   });

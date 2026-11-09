@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_10_29_140602) do
+ActiveRecord::Schema[7.1].define(version: 2026_11_04_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -440,6 +440,9 @@ ActiveRecord::Schema[7.1].define(version: 2026_10_29_140602) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.json "rubric"
+    t.string "key"
+    t.string "whiteboard_starter_image_key"
+    t.index ["key"], name: "index_challenges_on_key", unique: true
     t.index ["lesson_id"], name: "index_challenges_on_lesson_id"
   end
 

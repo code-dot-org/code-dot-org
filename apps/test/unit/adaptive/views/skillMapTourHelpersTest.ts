@@ -6,12 +6,12 @@ import {
 } from '@cdo/apps/adaptive/views/skillMapTourHelpers';
 
 describe('buildSkillMapTourSteps', () => {
-  it('returns 3 steps without skipped checkpoints', () => {
-    expect(buildSkillMapTourSteps(false)).toHaveLength(3);
+  it('returns 4 steps without skipped checkpoints', () => {
+    expect(buildSkillMapTourSteps(false)).toHaveLength(4);
   });
 
-  it('returns 4 steps with skipped checkpoints', () => {
-    expect(buildSkillMapTourSteps(true)).toHaveLength(4);
+  it('returns 5 steps with skipped checkpoints', () => {
+    expect(buildSkillMapTourSteps(true)).toHaveLength(5);
   });
 
   it('targets the map canvas on step 1', () => {
@@ -20,12 +20,18 @@ describe('buildSkillMapTourSteps', () => {
     );
   });
 
-  it('targets the map area on step 2 so the spotlight contains zoomed nodes', () => {
-    expect(buildSkillMapTourSteps(false)[1].element).toBe('#adaptive-tour-map');
+  it('targets the first checkpoint on step 2', () => {
+    expect(buildSkillMapTourSteps(false)[1].element).toBe(
+      '#adaptive-tour-first-checkpoint'
+    );
   });
 
-  it('targets the side panel on step 3', () => {
-    expect(buildSkillMapTourSteps(false)[2].element).toBe(
+  it('targets the map area on step 3 so the spotlight contains zoomed nodes', () => {
+    expect(buildSkillMapTourSteps(false)[2].element).toBe('#adaptive-tour-map');
+  });
+
+  it('targets the side panel on step 4', () => {
+    expect(buildSkillMapTourSteps(false)[3].element).toBe(
       '#adaptive-tour-side'
     );
   });
@@ -35,14 +41,14 @@ describe('buildSkillMapTourSteps', () => {
   });
 
   describe('with skipped checkpoints', () => {
-    it('inserts the Skill Checks step at index 1', () => {
-      expect(buildSkillMapTourSteps(true)[1].element).toBe(
+    it('inserts the Skill Checks step at index 2', () => {
+      expect(buildSkillMapTourSteps(true)[2].element).toBe(
         '#adaptive-tour-first-available'
       );
     });
 
-    it('moves the open-checkpoints step to index 2', () => {
-      expect(buildSkillMapTourSteps(true)[2].element).toBe(
+    it('moves the open-checkpoints step to index 3', () => {
+      expect(buildSkillMapTourSteps(true)[3].element).toBe(
         '#adaptive-tour-map'
       );
     });
@@ -68,16 +74,16 @@ describe('buildSkillMapTourSteps', () => {
 });
 
 describe('getSkillMapTourStepIndices', () => {
-  it('returns pickCheckpoint=1 and sidebar=2 without skipped checkpoints', () => {
+  it('returns pickCheckpoint=2 and sidebar=3 without skipped checkpoints', () => {
     const indices = getSkillMapTourStepIndices(false);
-    expect(indices.pickCheckpoint).toBe(1);
-    expect(indices.sidebar).toBe(2);
-  });
-
-  it('returns pickCheckpoint=2 and sidebar=3 with skipped checkpoints', () => {
-    const indices = getSkillMapTourStepIndices(true);
     expect(indices.pickCheckpoint).toBe(2);
     expect(indices.sidebar).toBe(3);
+  });
+
+  it('returns pickCheckpoint=3 and sidebar=4 with skipped checkpoints', () => {
+    const indices = getSkillMapTourStepIndices(true);
+    expect(indices.pickCheckpoint).toBe(3);
+    expect(indices.sidebar).toBe(4);
   });
 });
 

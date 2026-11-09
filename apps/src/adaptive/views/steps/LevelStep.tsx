@@ -31,9 +31,10 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {isAdaptiveAiEnabled} from '../../ai/generate';
+import {ADAPTIVE_MODELS} from '../../ai/models';
 import {buildTutorContext} from '../../ai/tutorContext';
 import {workAdapterFor} from '../../ai/validation/adapters';
-import {latestValidation} from '../../progress/model';
+import {latestValidation, validationAllowsContinue} from '../../progress/model';
 import {projectInfoFromChannel} from '../../project/projectInfo';
 import {LevelStep as LevelStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
@@ -253,6 +254,12 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       disableProductTours: true,
       longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
+      // The tutor on the shell's own model, through the gateway; stock otherwise.
+      ...(isAdaptiveAiEnabled() && {
+        aiTutorModelParameters: {
+          selectedModelId: ADAPTIVE_MODELS.STANDARD,
+        },
+      }),
     };
   }, [
     pathway,
@@ -268,13 +275,14 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   ]);
 
   // The lab's own Continue button advances the step. A step whose work is
-  // checked waits for work that passes, unless no judge can run: adaptive AI
-  // is off, or the lab takes no part in checking.
+  // checked waits for work that passes, or for enough failed checks that the
+  // judge may be at fault, unless no judge can run: adaptive AI is off, or
+  // the lab takes no part in checking.
   const checked =
     !step.validation ||
     !isAdaptiveAiEnabled() ||
     !workAdapterFor(levelProperties.appName) ||
-    !!latestValidationAttempt?.pass;
+    validationAllowsContinue(progress.steps[step.id]);
   const navigation = useMemo(
     () => ({
       label: continueLabel,
@@ -284,6 +292,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
         : 'Continue unlocks once your work on this step meets its goal.',
       endIcon: <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />,
       onContinue: onComplete,
+      callout: undefined,
     }),
     [continueLabel, checked, onComplete]
   );
