@@ -16,6 +16,11 @@ interface BubbleCanvas {
   textAlign(horizontal: string, vertical: string): void;
   BASELINE: string;
   textWidth(text: string): number;
+  /** The canvas context p5 draws on; its text metrics give the height of
+      a capital, which p5 itself does not report. */
+  drawingContext?: {
+    measureText(text: string): {actualBoundingBoxAscent?: number};
+  };
   fill(color: string): void;
   noStroke(): void;
   stroke(color: string): void;
@@ -80,10 +85,11 @@ const TEXT_SIZES: [size: number, maxLines: number][] = [
   [13, Infinity],
 ];
 const LINE_HEIGHT = 1.25;
-// The capitals' height as a share of the text size, about right for the
-// page font: each line is centered on its capitals, so a line with no
-// descenders sits as low in its box as one with.
-const CAP_HEIGHT = 0.7;
+// Each line is centered on its capitals, so a line with no descenders sits
+// as low in its box as one with. The capitals' height is measured from the
+// font (see capHeight); this share of the text size stands in where the
+// canvas cannot measure it, and is about right for the page font.
+const CAP_HEIGHT_FALLBACK = 0.7;
 // The text's room inside the bubble, as shares of the text size.
 const PADDING_X = 0.7;
 const PADDING_Y = 0.5;
@@ -102,7 +108,7 @@ const TAIL_BASE = 14;
 export const TAIL_LEAD = 5;
 export const INK = '#222222';
 const FILL = '#ffffff';
-// The main page font; a fallback when the variable is not to be had.
+// The page's main font, used when the CSS variable cannot be read.
 const FONT_FALLBACK = "'Geist', 'Noto Sans', sans-serif";
 const WORLD_VIEW: BubbleView = {
   x: 0,
@@ -118,6 +124,29 @@ const TEXT_LAYOUTS_KEPT = 64;
 // Reading the variable forces a style recalculation, so it is read once it
 // is there.
 let pageFontRead: string | null = null;
+
+// Capital heights by font and size, measured once each.
+const CAP_HEIGHTS = new Map<string, number>();
+
+/** The height of a capital letter in the font and size p5 is set to, in
+    canvas pixels: measured from the canvas, which p5 keeps at the font and
+    size last set, or a share of the size where the canvas gives no such
+    metric. */
+export function capHeight(
+  p5: Pick<BubbleCanvas, 'drawingContext'>,
+  font: string,
+  size: number
+): number {
+  const key = `${size}px ${font}`;
+  const kept = CAP_HEIGHTS.get(key);
+  if (kept !== undefined) {
+    return kept;
+  }
+  const measured = p5.drawingContext?.measureText('H').actualBoundingBoxAscent;
+  const height = measured || size * CAP_HEIGHT_FALLBACK;
+  CAP_HEIGHTS.set(key, height);
+  return height;
+}
 
 /** The page's main font family, for the canvas. */
 export function pageFont(): string {
@@ -388,7 +417,8 @@ export function drawSpeechBubble(
   p5.textSize(layout.textSize);
   p5.textAlign(p5.CENTER, p5.BASELINE);
   // Each line's capitals centered in its own line box.
-  const baseline = (layout.lineHeight + CAP_HEIGHT * layout.textSize) / 2;
+  const baseline =
+    (layout.lineHeight + capHeight(p5, font, layout.textSize)) / 2;
   layout.lines.forEach((line, i) =>
     p5.text(
       line,

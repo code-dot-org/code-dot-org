@@ -1,4 +1,5 @@
 import {
+  capHeight,
   layoutSpeechBubble,
   MARGIN,
   MAX_TEXT_LENGTH,
@@ -120,5 +121,21 @@ describe('layoutSpeechBubble', () => {
     expect(long.textSize).toBe(13);
     expect(long.lines.join(' ').length).toBeLessThanOrEqual(MAX_TEXT_LENGTH);
     expect(long.lines[long.lines.length - 1].endsWith('...')).toBe(true);
+  });
+});
+
+describe('capHeight', () => {
+  it('measures a capital from the canvas, once per font and size', () => {
+    const measureText = jest.fn(() => ({actualBoundingBoxAscent: 14.2}));
+    const p5 = {drawingContext: {measureText}};
+    expect(capHeight(p5, 'Geist', 20)).toBe(14.2);
+    expect(capHeight(p5, 'Geist', 20)).toBe(14.2);
+    expect(measureText).toHaveBeenCalledTimes(1);
+  });
+
+  it('falls back to a share of the size where the canvas has no metric', () => {
+    const p5 = {drawingContext: {measureText: () => ({})}};
+    expect(capHeight(p5, 'Nothing', 20)).toBe(14);
+    expect(capHeight({}, 'Nothing', 10)).toBe(7);
   });
 });
