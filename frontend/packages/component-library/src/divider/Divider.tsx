@@ -5,6 +5,9 @@ import {SpacingNoneToL} from './../common/types';
 
 import moduleStyles from './divider.module.scss';
 
+/**
+ * @deprecated Use `DividerProps` from `@mui/material`.
+ */
 export interface DividerProps extends HTMLAttributes<HTMLElement> {
   /** Divider Color */
   color?: 'primary' | 'strong';
@@ -26,6 +29,9 @@ export interface DividerProps extends HTMLAttributes<HTMLElement> {
  *
  * Design System: Divider Component.
  * Used to render a section divider line. Can be used to break up the page or section content.
+ *
+ * @deprecated Use `Divider` from `@mui/material`; CdoTheme gives it the `primary` color.
+ * See `src/divider/README.md` for `strong` and `margin`.
  */
 
 const Divider: React.FC<DividerProps> = ({
