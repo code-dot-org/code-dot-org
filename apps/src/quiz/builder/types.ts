@@ -132,6 +132,9 @@ export interface QuizBuilderQuestionsState {
   questions: QuizBuilderQuestion[];
   pages: QuizBuilderPage[];
   isLoading: boolean;
+  // Whether the questions and layout have loaded; until then there is
+  // nothing for Save quiz to save against.
+  hasLoaded: boolean;
   isSavingQuiz: boolean;
   error: string | null;
   // The question `error` is about, or null for a general error (a failed

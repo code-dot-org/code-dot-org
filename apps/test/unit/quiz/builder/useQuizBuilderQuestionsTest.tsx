@@ -65,10 +65,12 @@ describe('useQuizBuilderQuestions', () => {
     );
 
     expect(result.current.isLoading).toBe(true);
+    expect(result.current.hasLoaded).toBe(false);
     await waitForNextUpdate();
 
     expect(getSpy).toHaveBeenCalledWith('/levels/42/quiz_configuration');
     expect(result.current.isLoading).toBe(false);
+    expect(result.current.hasLoaded).toBe(true);
     expect(result.current.questions).toEqual([STORED]);
     expect(result.current.pages).toEqual([{page: 1, questions: [STORED]}]);
     expect(result.current.hasUnsavedLayout).toBe(false);
@@ -244,7 +246,24 @@ describe('useQuizBuilderQuestions', () => {
     expect(result.current.error).toBe('Something went wrong.');
     expect(result.current.questions).toEqual([]);
     expect(result.current.isLoading).toBe(false);
+    expect(result.current.hasLoaded).toBe(false);
     expect(result.current.errorQuestionId).toBeNull();
+  });
+
+  it('sends nothing on Save quiz when the load failed', async () => {
+    getSpy.mockRejectedValue(new Error('offline'));
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    let saved;
+    await act(async () => {
+      saved = await result.current.saveQuiz({showCorrectness: false});
+    });
+
+    expect(saved).toBe(false);
+    expect(putSpy).not.toHaveBeenCalled();
   });
 
   describe('saveQuestion', () => {

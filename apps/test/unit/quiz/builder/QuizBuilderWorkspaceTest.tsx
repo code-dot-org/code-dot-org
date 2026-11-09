@@ -13,6 +13,8 @@ import {
   editedQuestionsReason,
   INVALID_CONFIG_REASON,
   NO_CHANGES_REASON,
+  QUIZ_LOAD_FAILED_REASON,
+  QUIZ_LOADING_REASON,
   QUIZ_BUILDER_HEADER_ID,
   UNSAVED_QUESTION_REASON,
 } from '@cdo/apps/quiz/builder/constants';
@@ -58,6 +60,7 @@ const BASE_STATE: QuizBuilderQuestionsState = {
   questions: [],
   pages: [],
   isLoading: false,
+  hasLoaded: true,
   isSavingQuiz: false,
   error: null,
   errorQuestionId: null,
@@ -579,6 +582,33 @@ describe('QuizBuilderWorkspace', () => {
 
       await waitFor(() => expect(saveQuiz).toHaveBeenCalled());
       expect(onConfigSaved).not.toHaveBeenCalled();
+    });
+
+    it('is off with a configuration change while the quiz is loading', async () => {
+      renderWorkspace(
+        {isLoading: true, hasLoaded: false},
+        {config: {...CONFIG, allowMultipleAttempts: true}}
+      );
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {name: QUIZ_LOADING_REASON})
+      ).toBeInTheDocument();
+    });
+
+    it('is off with a configuration change after the quiz failed to load', async () => {
+      const saveQuiz = jest.fn();
+      renderWorkspace(
+        {hasLoaded: false, error: 'Something went wrong.', saveQuiz},
+        {config: {...CONFIG, allowMultipleAttempts: true}}
+      );
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.click(saveButton());
+      expect(saveQuiz).not.toHaveBeenCalled();
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {name: QUIZ_LOAD_FAILED_REASON})
+      ).toBeInTheDocument();
     });
 
     it('is off while the configuration is invalid', async () => {

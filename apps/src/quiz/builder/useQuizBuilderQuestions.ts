@@ -70,6 +70,7 @@ export default function useQuizBuilderQuestions(
   // Removed questions to delete permanently on save, if nothing else uses them.
   const [deleteQuestionIds, setDeleteQuestionIds] = useState<number[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [hasLoaded, setHasLoaded] = useState(false);
   const [isSavingQuiz, setIsSavingQuiz] = useState(false);
   const [error, setError] = useState<string | null>(null);
   // Ids handed to locally-created, not-yet-saved questions - see
@@ -100,6 +101,7 @@ export default function useQuizBuilderQuestions(
       setLayout(loadedLayout);
       setSavedPlacements(placementsFromLayout(loadedLayout));
       setDeleteQuestionIds([]);
+      setHasLoaded(true);
     } catch (e) {
       setError(await networkErrorMessage(e));
     } finally {
@@ -273,6 +275,10 @@ export default function useQuizBuilderQuestions(
 
   const saveQuiz = useCallback(
     async (config: Partial<QuizConfigurationData> = {}) => {
+      // Without the loaded layout and version there is nothing to save against.
+      if (!hasLoaded) {
+        return false;
+      }
       if (layout.some(questionIds => questionIds.some(isPendingQuestionId))) {
         setError('Save every question before saving the quiz.');
         setErrorQuestionId(null);
@@ -322,13 +328,14 @@ export default function useQuizBuilderQuestions(
         setIsSavingQuiz(false);
       }
     },
-    [levelId, layout, deleteQuestionIds]
+    [levelId, hasLoaded, layout, deleteQuestionIds]
   );
 
   return {
     questions,
     pages,
     isLoading,
+    hasLoaded,
     isSavingQuiz,
     error,
     errorQuestionId,

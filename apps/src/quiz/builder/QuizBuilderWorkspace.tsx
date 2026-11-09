@@ -15,6 +15,8 @@ import {
   INVALID_CONFIG_REASON,
   NO_CHANGES_REASON,
   QUIZ_BUILDER_HEADER_ID,
+  QUIZ_LOAD_FAILED_REASON,
+  QUIZ_LOADING_REASON,
   UNSAVED_QUESTION_REASON,
 } from './constants';
 import CreateQuestionDropdown from './CreateQuestionDropdown';
@@ -53,6 +55,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     questions,
     pages,
     isLoading,
+    hasLoaded,
     isSavingQuiz,
     error,
     errorQuestionId,
@@ -100,7 +103,11 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   const editedCount = [...dirtyIds].filter(
     id => !isPendingQuestionId(id)
   ).length;
-  const saveDisabledReason = hasPendingQuestion
+  const saveDisabledReason = isLoading
+    ? QUIZ_LOADING_REASON
+    : !hasLoaded
+    ? QUIZ_LOAD_FAILED_REASON
+    : hasPendingQuestion
     ? UNSAVED_QUESTION_REASON
     : editedCount > 0
     ? editedQuestionsReason(editedCount)

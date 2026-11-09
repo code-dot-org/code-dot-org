@@ -16,6 +16,8 @@ export const UNSAVED_QUESTION_REASON =
   'Save or remove your new question first.';
 export const EMPTY_PAGE_REASON = 'Create a question on the empty page first.';
 export const NO_CHANGES_REASON = 'No changes to save.';
+export const QUIZ_LOADING_REASON = 'The quiz is still loading.';
+export const QUIZ_LOAD_FAILED_REASON = 'Reload the page to load the quiz.';
 export const INVALID_CONFIG_REASON = 'Fix the errors in Configuration first.';
 export const editedQuestionsReason = (count: number) =>
   `Save or discard changes to ${pluralize(count, 'question')} first.`;
