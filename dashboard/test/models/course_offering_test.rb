@@ -624,6 +624,24 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert unit1.get_course_version.course_offering.can_be_assigned?(@levelbuilder)
   end
 
+  test 'can_be_assigned? requires a verified instructor when the course does' do
+    unit_group = create(
+      :single_unit_course,
+      :with_course_offering,
+      family_name: 'verified-only',
+      version_year: '2026',
+      published_state: 'stable',
+      verified_instructor_required: true
+    )
+    course_version = unit_group.reload.course_version
+    verified_teacher = create(:authorized_teacher)
+
+    refute course_version.course_offering.can_be_assigned?(@teacher)
+    refute course_version.course_assignable?(@teacher)
+    assert course_version.course_offering.can_be_assigned?(verified_teacher)
+    assert course_version.course_assignable?(verified_teacher)
+  end
+
   test 'get assignable course offerings for student should return no offerings' do
     assert_equal CourseOffering.assignable_course_offerings(@student).length, 0
   end

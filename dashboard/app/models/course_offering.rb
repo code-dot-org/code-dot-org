@@ -298,6 +298,7 @@ class CourseOffering < ApplicationRecord
   def can_be_assigned?(user)
     return false unless assignable?
     return false unless can_be_instructor?(user)
+    return false if !user.verified_instructor? && course_versions.all?(&:verified_instructor_required?)
     return true if any_versions_launched?
     return true if any_version_is_assignable_pilot?(user)
     return true if any_version_is_assignable_editor_experiment?(user)

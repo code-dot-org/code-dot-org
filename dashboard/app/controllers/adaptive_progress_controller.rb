@@ -87,7 +87,9 @@ class AdaptiveProgressController < ApplicationController
   private def load_adaptive
     @level = Adaptive.find(params[:levelId])
     @unit = Unit.find(params[:scriptId])
-    raise ActiveRecord::RecordNotFound unless @level.script_levels.exists?(script_id: @unit.id)
+    script_level = @level.script_levels.find_by(script_id: @unit.id)
+    raise ActiveRecord::RecordNotFound unless script_level
+    authorize! :read, script_level
   end
 
   private def adaptive_user_level

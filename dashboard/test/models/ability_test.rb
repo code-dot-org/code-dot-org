@@ -1091,6 +1091,40 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(teacher).can?(:manage, user_level)
   end
 
+  test 'verified-instructor-only course is readable by verified instructors and their students' do
+    unit = create(:unit)
+    unit_group = create(:single_unit_course, unit: unit, verified_instructor_required: true)
+    script_level = create(:script_level, script: unit)
+
+    verified_teacher = create(:authorized_teacher)
+    student_of_verified = create(:student)
+    create(:section, user: verified_teacher).add_student(student_of_verified)
+
+    [verified_teacher, student_of_verified, create(:levelbuilder)].each do |user|
+      ability = Ability.new(user)
+      assert ability.can?(:read, unit_group), user.inspect
+      assert ability.can?(:read, unit), user.inspect
+      assert ability.can?(:read, script_level), user.inspect
+    end
+  end
+
+  test 'verified-instructor-only course is not readable by others' do
+    unit = create(:unit)
+    unit_group = create(:single_unit_course, unit: unit, verified_instructor_required: true)
+    script_level = create(:script_level, script: unit)
+
+    unverified_teacher = create(:teacher)
+    student_of_unverified = create(:student)
+    create(:section, user: unverified_teacher).add_student(student_of_unverified)
+
+    [nil, unverified_teacher, student_of_unverified, create(:student)].each do |user|
+      ability = Ability.new(user)
+      refute ability.can?(:read, unit_group), user.inspect
+      refute ability.can?(:read, unit), user.inspect
+      refute ability.can?(:read, script_level), user.inspect
+    end
+  end
+
   private def put_students_in_section_and_code_review_group(students, section)
     code_review_group = create(:code_review_group, section: section)
     students.each do |student|
