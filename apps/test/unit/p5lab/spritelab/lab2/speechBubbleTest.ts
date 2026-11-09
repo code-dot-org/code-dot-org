@@ -4,6 +4,7 @@ import {
   MAX_TEXT_LENGTH,
   RADIUS,
   TAIL_HEIGHT,
+  TAIL_LEAD,
   wrapText,
 } from '@cdo/apps/p5lab/spritelab/lab2/speechBubble';
 
@@ -37,15 +38,16 @@ describe('wrapText', () => {
 });
 
 describe('layoutSpeechBubble', () => {
-  it('sits centered above a sprite in the middle, with a symmetric tail', () => {
-    const b = layoutSpeechBubble(measure, 'Hi', 200, 300);
+  it('sits centered above a sprite, the tail straight-edged on its left and leading right', () => {
+    const b = layoutSpeechBubble(measure, 'We did it!', 200, 300);
     expect(b.textSize).toBe(20);
-    expect(b.lines).toEqual(['Hi']);
+    expect(b.lines).toEqual(['We did it!']);
     expect(b.x + b.width / 2).toBe(200);
     expect(b.y + b.height + TAIL_HEIGHT).toBe(300);
-    expect(b.tail.tipX).toBe(200);
+    expect(b.tail.tipX).toBe(200 + TAIL_LEAD);
     expect(b.tail.tipY).toBe(300);
-    expect(200 - b.tail.baseLeft).toBeCloseTo(b.tail.baseRight - 200);
+    expect(b.tail.baseLeft).toBe(b.tail.tipX);
+    expect(b.tail.baseRight).toBeGreaterThan(b.tail.tipX);
   });
 
   it('keeps inside the view by a margin, the tail sliding to the sprite', () => {
@@ -59,9 +61,9 @@ describe('layoutSpeechBubble', () => {
     expect(right.x + right.width).toBe(400 - MARGIN);
     expect(right.tail.tipX).toBe(right.x + right.width - RADIUS);
     expect(right.tail.baseRight).toBeCloseTo(right.tail.tipX);
-    // A speaker inside the run keeps the tip over itself.
+    // A speaker inside the run keeps the tip just right of itself.
     expect(layoutSpeechBubble(measure, 'We did it!', 20, 300).tail.tipX).toBe(
-      20
+      20 + TAIL_LEAD
     );
   });
 
@@ -84,16 +86,17 @@ describe('layoutSpeechBubble', () => {
     expect(b.paddingY).toBe(10);
   });
 
-  it('leans the tail toward the speaker between the center and a side', () => {
+  it('mirrors the tail once the bubble is pushed left of the speaker', () => {
     const b = layoutSpeechBubble(
       measure,
       'A fairly long line of talk',
       330,
       300
     );
-    // Off center to the right: more of the base to the tip's left.
-    expect(b.tail.tipX).toBe(330);
-    expect(330 - b.tail.baseLeft).toBeGreaterThan(b.tail.baseRight - 330);
+    expect(b.x + b.width).toBe(400 - MARGIN);
+    expect(b.tail.tipX).toBe(330 - TAIL_LEAD);
+    expect(b.tail.baseRight).toBe(b.tail.tipX);
+    expect(b.tail.baseLeft).toBeLessThan(b.tail.tipX);
   });
 
   it('stays under the top edge, the tail shortened to a sprite come up into it', () => {

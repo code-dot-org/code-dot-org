@@ -97,6 +97,9 @@ export const STROKE = 2;
 export const MARGIN = 4;
 export const TAIL_HEIGHT = 12;
 const TAIL_BASE = 14;
+// The tail's tip stands this far from the speaker's center, on the side the
+// tail leans away from.
+export const TAIL_LEAD = 5;
 export const INK = '#222222';
 const FILL = '#ffffff';
 // The main page font; a fallback when the variable is not to be had.
@@ -248,13 +251,12 @@ export function layoutSpeechBubble(
 ): BubbleLayout {
   const textLayout = layoutBubbleText(measure, text);
   const {width, height} = textLayout;
-  const x = Math.round(
-    clamp(
-      spriteX - width / 2,
-      view.x + MARGIN,
-      view.x + view.width - MARGIN - width
-    )
-  );
+  const centered = spriteX - width / 2;
+  const rightmost = view.x + view.width - MARGIN - width;
+  const x = Math.round(clamp(centered, view.x + MARGIN, rightmost));
+  // Bumped against the view's right edge, the bubble sits left of the
+  // speaker, and the tail takes its mirror shape.
+  const pushedLeft = centered > rightmost;
   const y = Math.round(
     clamp(
       spriteY - TAIL_HEIGHT - height,
@@ -276,13 +278,16 @@ export function layoutSpeechBubble(
   // Along the straight run of the bottom edge, inside the corners.
   const runLeft = x + RADIUS;
   const runRight = x + width - RADIUS;
-  const tipX = Math.round(clamp(spriteX, runLeft, runRight));
-  // The base slides from under the tip toward the bubble's center: a tip
-  // at the center gets a symmetric tail, one at the end of the run a tail
-  // whose near edge stands straight, as a speaker off to that side reads.
-  const lean = clamp((tipX - (x + width / 2)) / (width / 2 - RADIUS), -1, 1);
-  let baseLeft = tipX - (TAIL_BASE * (1 + lean)) / 2;
-  let baseRight = tipX + (TAIL_BASE * (1 - lean)) / 2;
+  // The tail's near edge stands straight down from the base to the tip and
+  // its far edge leans: the left edge straight and the base right of the
+  // tip, as a speaker at the left of a bubble reads, or the mirror of that
+  // when the bubble has been pushed left of the speaker. The tip slides
+  // along the run with the speaker.
+  const tipX = Math.round(
+    clamp(spriteX + (pushedLeft ? -TAIL_LEAD : TAIL_LEAD), runLeft, runRight)
+  );
+  let baseLeft = pushedLeft ? tipX - TAIL_BASE : tipX;
+  let baseRight = pushedLeft ? tipX : tipX + TAIL_BASE;
   if (baseLeft < runLeft) {
     baseRight += runLeft - baseLeft;
     baseLeft = runLeft;
