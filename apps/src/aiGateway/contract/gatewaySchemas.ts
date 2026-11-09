@@ -265,6 +265,80 @@ export const GatewayTranscribeResponseV2Schema =
   GatewayTranscribeResponseV1Schema;
 
 // ---------------------------------------------------------------------------
+// Schema version 3
+// ---------------------------------------------------------------------------
+// The worker's moderation outcome, carried in the SDK's own result fields:
+// finishReason is 'content-filter' for a block and 'error' for a failed check;
+// rawFinishReason names the gateway code; providerMetadata.aiGateway holds the
+// verdicts.
+
+// Azure AI Content Safety's harm categories and severity levels. Defined here
+// rather than in util/moderateImage.ts because the worker vendors only this
+// directory.
+const ContentSafetyCategorySchema = z.enum([
+  'Hate',
+  'SelfHarm',
+  'Sexual',
+  'Violence',
+]);
+const ContentSafetySeveritySchema = z.union([
+  z.literal(0),
+  z.literal(2),
+  z.literal(4),
+  z.literal(6),
+]);
+
+const ModerationVerdictSchema = z.enum(['ok', 'flagged', 'error']);
+
+// A key is absent when its check did not run. With several generated images,
+// each verdict is the worst across them and each category its highest
+// severity.
+const AiGatewayModerationSchema = z.object({
+  input_text: ModerationVerdictSchema.optional(),
+  output_text: ModerationVerdictSchema.optional(),
+  output_image: z
+    .object({
+      azure_moderation: z
+        .object({
+          verdict: ModerationVerdictSchema,
+          categories: z
+            .object({
+              Hate: ContentSafetySeveritySchema.optional(),
+              SelfHarm: ContentSafetySeveritySchema.optional(),
+              Sexual: ContentSafetySeveritySchema.optional(),
+              Violence: ContentSafetySeveritySchema.optional(),
+            })
+            .optional(),
+        })
+        .optional(),
+      llm_judge: ModerationVerdictSchema.optional(),
+    })
+    .optional(),
+});
+
+export const AiGatewayProviderMetadataSchema = z.object({
+  moderation: AiGatewayModerationSchema.optional(),
+  // The provider's own block reason and message, when the provider blocked it.
+  providerReason: z.string().optional(),
+  providerMessage: z.string().optional(),
+});
+
+export const GatewayGenerateTextResponseV3Schema =
+  GatewayGenerateTextResponseV2Schema.extend({
+    rawFinishReason: z.string().optional(),
+    // Keyed by provider, as in the SDK. Only the gateway's own entry is typed.
+    providerMetadata: z
+      .object({aiGateway: AiGatewayProviderMetadataSchema.optional()})
+      .catchall(z.unknown())
+      .optional(),
+  });
+
+const GatewayGenerateTextRequestV3Schema = GatewayGenerateTextRequestV2Schema;
+const GatewayTranscribeRequestV3Schema = GatewayTranscribeRequestV2Schema;
+export const GatewayTranscribeResponseV3Schema =
+  GatewayTranscribeResponseV2Schema;
+
+// ---------------------------------------------------------------------------
 // Exported inferred types — use these in runtime code instead of hand-rolling
 // parallel type definitions.
 // ---------------------------------------------------------------------------
@@ -287,6 +361,18 @@ export type GatewayGenerateTextResponseV2 = z.infer<
 export type GatewayTranscribeResponseV2 = z.infer<
   typeof GatewayTranscribeResponseV2Schema
 >;
+export type GatewayGenerateTextResponseV3 = z.infer<
+  typeof GatewayGenerateTextResponseV3Schema
+>;
+export type GatewayTranscribeResponseV3 = z.infer<
+  typeof GatewayTranscribeResponseV3Schema
+>;
+export type AiGatewayProviderMetadata = z.infer<
+  typeof AiGatewayProviderMetadataSchema
+>;
+export type ModerationVerdict = z.infer<typeof ModerationVerdictSchema>;
+export type ContentSafetyCategory = z.infer<typeof ContentSafetyCategorySchema>;
+export type ContentSafetySeverity = z.infer<typeof ContentSafetySeveritySchema>;
 
 // ---------------------------------------------------------------------------
 // Versioned schema maps — the authoritative list of "what versions exist".
@@ -297,21 +383,25 @@ export type GatewayTranscribeResponseV2 = z.infer<
 export const generateTextRequestSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayGenerateTextRequestV1Schema,
   2: GatewayGenerateTextRequestV2Schema,
+  3: GatewayGenerateTextRequestV3Schema,
 };
 
 export const generateTextResponseSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayGenerateTextResponseV1Schema,
   2: GatewayGenerateTextResponseV2Schema,
+  3: GatewayGenerateTextResponseV3Schema,
 };
 
 export const transcribeRequestSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayTranscribeRequestV1Schema,
   2: GatewayTranscribeRequestV2Schema,
+  3: GatewayTranscribeRequestV3Schema,
 };
 
 export const transcribeResponseSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayTranscribeResponseV1Schema,
   2: GatewayTranscribeResponseV2Schema,
+  3: GatewayTranscribeResponseV3Schema,
 };
 
 export const ALL_GATEWAY_SCHEMA_GROUPS: Record<
@@ -331,7 +421,7 @@ export const ALL_GATEWAY_SCHEMA_GROUPS: Record<
 // version is introduced.
 // ---------------------------------------------------------------------------
 
-export const CURRENT_SCHEMA_VERSION = '2' as const;
+export const CURRENT_SCHEMA_VERSION = '3' as const;
 
 // ---------------------------------------------------------------------------
 // Current-version response schemas — what the client parses replies with.
@@ -341,9 +431,9 @@ export const CURRENT_SCHEMA_VERSION = '2' as const;
 // rather than a map lookup, which would erase the inferred types.
 
 export const CurrentGatewayGenerateTextResponseSchema =
-  GatewayGenerateTextResponseV2Schema;
+  GatewayGenerateTextResponseV3Schema;
 export const CurrentGatewayTranscribeResponseSchema =
-  GatewayTranscribeResponseV2Schema;
+  GatewayTranscribeResponseV3Schema;
 
 export type CurrentGatewayGenerateTextResponse = z.infer<
   typeof CurrentGatewayGenerateTextResponseSchema

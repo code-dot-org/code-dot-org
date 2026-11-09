@@ -1,5 +1,9 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
+import type {
+  ContentSafetyCategory,
+  ContentSafetySeverity,
+} from '@cdo/apps/aiGateway/contract/gatewaySchemas';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
@@ -23,11 +27,11 @@ const LABS_WITH_IMAGE_MODERATION = [
 
 const MODERATION_SPAN_OP = 'image.moderate';
 
-export type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
+export type CategoryName = ContentSafetyCategory;
 export type SeverityThresholds = Partial<Record<CategoryName, number>>;
 export type CategoryAnalysis = {
   category: CategoryName;
-  severity: 0 | 2 | 4 | 6;
+  severity: ContentSafetySeverity;
 };
 // The parsed body of a /v3/images/moderate response (Azure AI Content Safety),
 // or null when the moderation service is unavailable.
