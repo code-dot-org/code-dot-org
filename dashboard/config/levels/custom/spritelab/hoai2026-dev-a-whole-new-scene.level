@@ -82,7 +82,7 @@
                   "type": "gamelab_spriteSay",
                   "data": "friend-says",
                   "fields": {
-                    "SPEECH": "What next?"
+                    "SPEECH": "What's next?"
                   },
                   "inputs": {
                     "SPRITE": {
