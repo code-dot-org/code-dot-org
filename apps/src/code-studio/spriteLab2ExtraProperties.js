@@ -23,6 +23,7 @@ export const RAW_EDITABLE_PROPERTIES = [
   'extra_scene',
   'add_blocks',
   'world_start_pattern',
+  'world_start_roles',
   'starter_images',
   'callouts',
   'no_project',

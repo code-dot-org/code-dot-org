@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-07T08:00:24.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "Predict the console output for each line",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## Predict & Run\r\n\r\nDo This:\r\n\r\nRead the program. Before you run it, predict:\r\n- What will each Song line print?\r\n- What will the Total be?\r\n- What will the Average be?\r\n\r\nRun the program and compare your prediction with the output.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Playlist Timer\ntotal = 0\nfor j in range(5):\n    song_length = 3 + j\n    total = total + song_length\n    print(\"Song \" + str(j + 1) + \": \" + str(song_length) + \" min\")\nprint(\"Total: \" + str(total) + \" min\")\nprint(\"Average: \" + str(total / 5) + \" min\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "teacher_markdown": "For Teachers Only\r\n\r\nExpected output:\r\nSong 1: 3 min\r\nSong 2: 4 min\r\nSong 3: 5 min\r\nSong 4: 6 min\r\nSong 5: 7 min\r\nTotal: 25 min\r\nAverage: 5.0 min\r\n\r\nDo not explain the result yet. Students investigate this same pattern in Level 2.\r\n\r\nWatch for: students are surprised that the average prints as 5.0, not 5. Division in Python gives a decimal. Accept this and move on. Students who predict the songs start at 1 or that j is the song length are tracing j instead of 3 + j. Ask them to write j's value for each pass.\r\n\r\nj ends at 4 but the program never prints it, so do not ask students for j's last value on this level."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-07T08:00:24.820+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson7-predict_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson7-predict_27_28\"},{\"changed_at\":\"2026-11-07 08:05:44 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-07 08:07:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

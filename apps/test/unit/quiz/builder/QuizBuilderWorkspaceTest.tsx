@@ -2,21 +2,34 @@ import {fireEvent, render, screen, within} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
+import {
+  EMPTY_PAGE_REASON,
+  editedQuestionsReason,
+  NO_CHANGES_REASON,
+  QUIZ_BUILDER_HEADER_ID,
+  UNSAVED_QUESTION_REASON,
+} from '@cdo/apps/quiz/builder/constants';
 import QuizBuilderWorkspace from '@cdo/apps/quiz/builder/QuizBuilderWorkspace';
 import {
   QuizBuilderQuestion,
   QuizBuilderQuestionsState,
 } from '@cdo/apps/quiz/builder/types';
 import useQuizBuilderQuestions from '@cdo/apps/quiz/builder/useQuizBuilderQuestions';
+import {groupByPage} from '@cdo/apps/quiz/utils';
 
 jest.mock('@cdo/apps/quiz/builder/useQuizBuilderQuestions');
 const mockUseQuizBuilderQuestions = jest.mocked(useQuizBuilderQuestions);
 
+// A question and the page the mocked hook puts it on.
+type PlacedQuestion = QuizBuilderQuestion & {page: number};
+
 const question = (
   overrides: Partial<
-    Extract<QuizBuilderQuestion, {type: 'MultipleChoiceQuestion'}>
+    Extract<QuizBuilderQuestion, {type: 'MultipleChoiceQuestion'}> & {
+      page: number;
+    }
   > = {}
-): QuizBuilderQuestion => ({
+): PlacedQuestion => ({
   id: 1,
   type: 'MultipleChoiceQuestion',
   questionName: 'JavaScript variable fundamentals',
@@ -27,6 +40,7 @@ const question = (
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
+  deletable: true,
   usedInPublishedUnit: false,
   page: 1,
   ...overrides,
@@ -34,12 +48,17 @@ const question = (
 
 const BASE_STATE: QuizBuilderQuestionsState = {
   questions: [],
+  pages: [],
   isLoading: false,
+  isSavingQuiz: false,
   error: null,
   errorQuestionId: null,
+  hasUnsavedLayout: false,
+  addPage: jest.fn(),
   addPendingQuestion: jest.fn(),
   saveQuestion: jest.fn(),
   removeQuestion: jest.fn(),
+  saveQuiz: jest.fn(),
   load: jest.fn(),
 };
 
@@ -54,16 +73,22 @@ function createFromDropdown(index: number, typeLabel: string) {
 }
 
 function renderWorkspace(
-  stateOverrides: Partial<QuizBuilderQuestionsState> = {},
+  stateOverrides: Omit<Partial<QuizBuilderQuestionsState>, 'questions'> & {
+    questions?: PlacedQuestion[];
+  } = {},
   propOverrides: Partial<React.ComponentProps<typeof QuizBuilderWorkspace>> = {}
 ) {
+  // pages defaults to the questions grouped by their page, as the hook does.
+  const questions = stateOverrides.questions ?? [];
   mockUseQuizBuilderQuestions.mockReturnValue({
     ...BASE_STATE,
+    pages: groupByPage(questions),
     ...stateOverrides,
   });
   return render(
     <QuizBuilderWorkspace
       levelId={42}
+      quizVersion={{current: 7}}
       quizTitle="AI Foundations Certification Exam"
       showIntroScreen={false}
       customIntroText=""
@@ -75,8 +100,18 @@ function renderWorkspace(
 }
 
 describe('QuizBuilderWorkspace', () => {
+  // The page header's slot, which the haml layout renders on the build page.
+  let headerSlot: HTMLElement;
+
   beforeEach(() => {
     jest.resetAllMocks();
+    headerSlot = document.createElement('div');
+    headerSlot.id = QUIZ_BUILDER_HEADER_ID;
+    document.body.appendChild(headerSlot);
+  });
+
+  afterEach(() => {
+    headerSlot.remove();
   });
 
   it('shows the intro screen card, with its content, when the intro screen is on', () => {
@@ -95,7 +130,7 @@ describe('QuizBuilderWorkspace', () => {
 
   it('fetches questions for the given level', () => {
     renderWorkspace();
-    expect(mockUseQuizBuilderQuestions).toHaveBeenCalledWith(42);
+    expect(mockUseQuizBuilderQuestions).toHaveBeenCalledWith(42, {current: 7});
   });
 
   it('shows a loading message while questions load', () => {
@@ -163,9 +198,11 @@ describe('QuizBuilderWorkspace', () => {
     // hook's return value has to change too, so the appended question is
     // actually there for the workspace to expand.
     const addPendingQuestion = jest.fn().mockImplementation(() => {
+      const questions = [question(), question({id: -1})];
       mockUseQuizBuilderQuestions.mockReturnValue({
         ...BASE_STATE,
-        questions: [question(), question({id: -1})],
+        questions,
+        pages: groupByPage(questions),
         addPendingQuestion,
       });
       return -1;
@@ -206,31 +243,42 @@ describe('QuizBuilderWorkspace', () => {
     );
   });
 
-  it('adds an empty page one past the last existing page without creating a question', async () => {
+  it('adds a page without creating a question', () => {
+    const addPage = jest.fn();
     const addPendingQuestion = jest.fn();
     renderWorkspace({
-      questions: [
-        question({id: 1, page: 1}),
-        question({id: 2, page: 3, questionName: 'MVC frameworks'}),
-      ],
+      questions: [question({id: 1, page: 1})],
+      addPage,
       addPendingQuestion,
     });
 
     fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
+    expect(addPage).toHaveBeenCalled();
     expect(addPendingQuestion).not.toHaveBeenCalled();
-    expect(screen.getByText('Page 4')).toBeInTheDocument();
+  });
+
+  it('shows an empty page, blocks adding another, and creates questions on it', async () => {
+    const addPendingQuestion = jest.fn();
+    const questions = [question({id: 1, page: 1})];
+    renderWorkspace({
+      questions,
+      pages: [...groupByPage(questions), {page: 2, questions: []}],
+      addPendingQuestion,
+    });
+
+    expect(screen.getByText('Page 2')).toBeInTheDocument();
     expect(screen.getByText('This page is empty')).toBeInTheDocument();
     const addPage = screen.getByRole('button', {name: 'Add page'});
     expect(addPage).toHaveAttribute('aria-disabled', 'true');
     fireEvent.mouseOver(addPage);
     expect(
       await screen.findByRole('tooltip', {
-        name: 'Create a question on the empty page first.',
+        name: EMPTY_PAGE_REASON,
       })
     ).toBeInTheDocument();
 
-    createFromDropdown(2, 'Free response');
-    expect(addPendingQuestion).toHaveBeenCalledWith(4, 'FreeResponseQuestion');
+    createFromDropdown(1, 'Free response');
+    expect(addPendingQuestion).toHaveBeenCalledWith(2, 'FreeResponseQuestion');
   });
 
   it('hides create actions while questions are still loading', () => {
@@ -254,7 +302,7 @@ describe('QuizBuilderWorkspace', () => {
     fireEvent.mouseOver(createQuestion);
     expect(
       await screen.findByRole('tooltip', {
-        name: 'Save or remove your new question first.',
+        name: UNSAVED_QUESTION_REASON,
       })
     ).toBeInTheDocument();
   });
@@ -394,5 +442,108 @@ describe('QuizBuilderWorkspace', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Discard changes'}));
     fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
     expect(screen.queryByRole('img', {name: badge})).not.toBeInTheDocument();
+  });
+
+  describe('Save quiz', () => {
+    const saveButton = () => screen.getByRole('button', {name: 'Save quiz'});
+
+    it('is in the page header', () => {
+      renderWorkspace({questions: [question()]});
+      expect(headerSlot).toContainElement(saveButton());
+    });
+
+    it('is off with nothing to save', async () => {
+      renderWorkspace({questions: [question()]});
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {name: NO_CHANGES_REASON})
+      ).toBeInTheDocument();
+    });
+
+    it('saves the quiz when the layout has changed', () => {
+      const saveQuiz = jest.fn();
+      renderWorkspace({
+        questions: [question()],
+        hasUnsavedLayout: true,
+        saveQuiz,
+      });
+      expect(saveButton()).not.toHaveAttribute('aria-disabled');
+      fireEvent.click(saveButton());
+      expect(saveQuiz).toHaveBeenCalled();
+    });
+
+    it('is off while a new question is unsaved', async () => {
+      renderWorkspace({
+        questions: [question({id: -1})],
+        hasUnsavedLayout: true,
+      });
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {
+          name: UNSAVED_QUESTION_REASON,
+        })
+      ).toBeInTheDocument();
+    });
+
+    it('is off while a question has unsaved edits', async () => {
+      const saveQuiz = jest.fn();
+      renderWorkspace({
+        questions: [question()],
+        hasUnsavedLayout: true,
+        saveQuiz,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
+      fireEvent.change(
+        screen.getByDisplayValue('JavaScript variable fundamentals'),
+        {target: {value: 'Edited name'}}
+      );
+
+      fireEvent.click(saveButton());
+      expect(saveQuiz).not.toHaveBeenCalled();
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {
+          name: editedQuestionsReason(1),
+        })
+      ).toBeInTheDocument();
+    });
+
+    it('shows that it is saving', () => {
+      renderWorkspace({
+        questions: [question()],
+        hasUnsavedLayout: true,
+        isSavingQuiz: true,
+      });
+      expect(screen.getByRole('button', {name: 'Saving…'})).toBeDisabled();
+    });
+
+    it('asks before leaving with unsaved changes', () => {
+      renderWorkspace({questions: [question()], hasUnsavedLayout: true});
+      const event = new Event('beforeunload', {cancelable: true});
+      window.dispatchEvent(event);
+      expect(event.defaultPrevented).toBe(true);
+    });
+
+    it('asks before leaving with an unsaved question draft', () => {
+      renderWorkspace({questions: [question()]});
+      fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
+      fireEvent.change(
+        screen.getByDisplayValue('JavaScript variable fundamentals'),
+        {target: {value: 'Edited name'}}
+      );
+
+      const event = new Event('beforeunload', {cancelable: true});
+      window.dispatchEvent(event);
+      expect(event.defaultPrevented).toBe(true);
+    });
+
+    it('lets the page close with nothing unsaved', () => {
+      renderWorkspace({questions: [question()]});
+      const event = new Event('beforeunload', {cancelable: true});
+      window.dispatchEvent(event);
+      expect(event.defaultPrevented).toBe(false);
+    });
   });
 });
