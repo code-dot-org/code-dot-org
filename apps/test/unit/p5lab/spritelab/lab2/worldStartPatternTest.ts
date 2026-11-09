@@ -82,6 +82,20 @@ describe('patternCells', () => {
     expect(cells.T).toBeUndefined();
   });
 
+  it("leaves 'S' and 'B' their own meaning, whatever a level names them", () => {
+    const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    const list = animations([
+      ['k2', 'secondCharacter', []],
+      ['k1', 'firstCharacter', []],
+    ]);
+    list.propsByKey.k2.role = 'friend';
+    const cells = patternCells(list, undefined, {S: 'friend', B: 'friend'});
+    expect(cells.S).toEqual({image: 'firstCharacter', kind: 'sprite'});
+    expect(cells.B).toBeUndefined();
+    expect(warn).toHaveBeenCalledTimes(2);
+    warn.mockRestore();
+  });
+
   it('offers only the characters it has images for', () => {
     expect(patternCells(animations([['k1', 'hero', []]]))).toEqual({
       S: {image: 'hero', kind: 'sprite'},

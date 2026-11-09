@@ -62,7 +62,6 @@
               "type": "gamelab_checkTouching",
               "x": 20,
               "y": 230,
-              "data": "friend-touch",
               "fields": {
                 "CONDITION": "\"when\""
               },

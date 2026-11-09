@@ -59,6 +59,15 @@ describe('defaultRole', () => {
     expect(defaultRole(tagged, 'sprite', say('friend-says'))).toBe('friend');
     // A tag the level does not name falls through to the block's role.
     expect(defaultRole(tagged, 'sprite', say('other'))).toBe('hero');
+    // A tagged block's sockets can be named one by one, like a block type's.
+    const touch = (index: number) => ({
+      blockType: 'gamelab_checkTouching',
+      index,
+      data: 'meeting',
+    });
+    const perSocket = {...tagged, 'data:meeting': ['friend', 'hero']};
+    expect(defaultRole(perSocket, 'sprite', touch(0))).toBe('friend');
+    expect(defaultRole(perSocket, 'sprite', touch(1))).toBe('hero');
   });
 });
 
