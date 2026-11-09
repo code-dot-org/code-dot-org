@@ -1,3 +1,4 @@
+require 'cdo/aws'
 require 'csv'
 require 'digest'
 require 'erb'

@@ -1,3 +1,4 @@
+require 'cdo/aws'
 require 'cdo/config'
 require 'cdo/secrets_config'
 
