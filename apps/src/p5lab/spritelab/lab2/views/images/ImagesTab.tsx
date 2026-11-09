@@ -6,6 +6,7 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {ImageSource} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
   GeneratedImageResult,
   UploadImageFunction,
@@ -76,6 +77,14 @@ interface ImagesTabProps {
   lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
   imageRole?: string;
+  /** An image of the level's type was made on this visit. Until then the
+      plus is offered, so a student back on a level they did can make
+      another. */
+  ownImageMade?: boolean;
+  /** The level tells how AI made the image (level mode `learning`). */
+  learning?: boolean;
+  /** The level being visited; a new level is a new visit. */
+  levelId?: number;
   /** Generations the student has left on this level; unlimited when
       unset. */
   generationsLeft?: number;
@@ -99,6 +108,11 @@ interface ImagesTabProps {
   /** The level checks that the picture was rated: the rating strip stays
       until a thumb is given. */
   ratingRequired?: boolean;
+  /** Where a sentence's picture comes from (imageCache.ts); the tree first
+      when unset. */
+  imageSource?: ImageSource;
+  /** Another tree to read cached pictures from (QA). */
+  imageCacheUrl?: string;
 }
 
 const DRAFT_ID = 'draft';
@@ -119,6 +133,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   lockedImageType,
   lockedImageSubject,
   imageRole,
+  ownImageMade,
+  learning,
+  levelId,
   generationsLeft,
   onGenerate,
   editingOffered,
@@ -128,6 +145,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   onDrawingHistory,
   advancedOffered,
   ratingRequired,
+  imageSource,
+  imageCacheUrl,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // The engine trims each image after it loads and stores a thumbnail; the
@@ -171,11 +190,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     [startSession]
   );
 
-  // On a level whose task is one image: that image, when it exists.
+  // On a level whose task is one image: the newest such image, when one
+  // exists (the list is newest first), as the dropdowns' role defaults
+  // pick it.
   const ownImage = lockedImageType
-    ? imageRole
-      ? images.find(image => image.props.role === imageRole)
-      : images.find(image => image.imageType === lockedImageType)
+    ? images.find(image =>
+        imageRole
+          ? image.props.role === imageRole
+          : image.imageType === lockedImageType
+      )
     : undefined;
   // The opening choice is read once at mount; a later change to the list
   // must not move the choice.
@@ -241,10 +264,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Animated is on until the student turns it off, and stays as they left
   // it from image to image; no image or level turns it off for them.
   const [animated, setAnimated] = useState(true);
-  const {story, offerStory, handleAsking, endStory} = useLearningStory({
-    active,
-    lockedImageType,
-  });
+  const {story, offerStory, handleAsking, tellStory, endStory} =
+    useLearningStory({
+      active,
+      learning,
+      levelId,
+    });
   // Rating a picture keeps it a second time; the story is offered only on
   // the first keep of each picture.
   const keptRef = useRef<string | null>(null);
@@ -382,15 +407,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
 
   const deleteOffered = !!editingOffered;
   // On a level whose task is one image, the plus is shown until that image
-  // exists and its menu enables only that kind. In free play every kind is
-  // enabled.
+  // is made on this visit, and its menu enables only that kind. In free
+  // play every kind is enabled.
   const lockedKind: ImageKind | undefined = lockedImageType
     ? {
         imageType: lockedImageType,
         subject: lockedImageType === 'sprite' ? lockedImageSubject : undefined,
       }
     : undefined;
-  const newOffered = !!editingOffered || (!!lockedKind && !ownImage);
+  const newOffered = !!editingOffered || (!!lockedKind && !ownImageMade);
   // A level about one image keeps the choice on that image, or on the slot
   // it will take; the project's other tiles are listed but disabled.
   const chooseOffered = !lockedKind;
@@ -473,6 +498,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onKeep={handleKeep}
           wordLayout={wordLayout}
           compactBehindTheScenes
+          onTellStory={tellStory}
+          imageSource={imageSource}
+          imageCacheUrl={imageCacheUrl}
           advanced={
             advancedOffered
               ? {
@@ -526,18 +554,23 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 tip={generating ? parts.tip : undefined}
                 under={generating ? undefined : under}
                 overlay={
-                  parts.rating.offered && (
-                    <RatingBar
-                      verdict={parts.rating.verdict}
-                      onJudge={parts.rating.judge}
-                      onReasons={parts.rating.explain}
-                      onAsking={handleAsking}
-                      onDismiss={
-                        parts.rating.required ? undefined : parts.rating.dismiss
-                      }
-                      disabled={parts.busy}
-                    />
-                  )
+                  <>
+                    {parts.cachedTag}
+                    {parts.rating.offered && (
+                      <RatingBar
+                        verdict={parts.rating.verdict}
+                        onJudge={parts.rating.judge}
+                        onReasons={parts.rating.explain}
+                        onAsking={handleAsking}
+                        onDismiss={
+                          parts.rating.required
+                            ? undefined
+                            : parts.rating.dismiss
+                        }
+                        disabled={parts.busy}
+                      />
+                    )}
+                  </>
                 }
               />
             );
@@ -573,6 +606,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                       <ReopenedBehindTheScenes
                         image={chosenImage}
                         disabled={busy}
+                        onTellStory={tellStory}
                       />
                     )}
                     {advancedOffered && (
@@ -723,9 +757,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       )}
       {story && (
         <LearningDialog
+          // A new story opens on its first panel.
+          key={story.picture.src}
           picture={story.picture}
           prompt={story.prompt}
+          imageType={story.imageType}
           onDone={endStory}
+          onClose={story.asked ? endStory : undefined}
         />
       )}
     </div>

@@ -16,7 +16,7 @@ function renderDropdown(props = {}) {
       scenes={SCENES}
       activeSceneId="b"
       onSelectScene={onSelectScene}
-      onCreateScene={jest.fn()}
+      onNewScene={jest.fn()}
       {...props}
     />
   );
@@ -53,6 +53,15 @@ describe('SceneDropdown', () => {
     ]);
     fireEvent.click(screen.getByRole('button', {name: 'All scenes…'}));
     expect(onManageScenes).toHaveBeenCalled();
+  });
+
+  it('hands New scene to the host, which names it', () => {
+    const onNewScene = jest.fn();
+    renderDropdown({onNewScene});
+    fireEvent.click(screen.getByRole('button', {name: 'Scene: Cave'}));
+    fireEvent.click(screen.getByRole('button', {name: 'New scene…'}));
+    expect(onNewScene).toHaveBeenCalledTimes(1);
+    expect(screen.queryByRole('textbox')).toBeNull();
   });
 
   it('holds New scene when locked', () => {

@@ -348,3 +348,13 @@
 .predictSummaryBubble {
   flex-shrink: 0; // Ensure the contents always fits in the bubble.
 }
+
+.externalPromptBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+}

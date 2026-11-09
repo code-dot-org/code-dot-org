@@ -1,0 +1,41 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-11-04T15:29:27.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false",
+    "display_name": "Jonah’s Cafeteria App",
+    "bubble_choice_description": "Jonah’s school dropped the only lunches he could eat, and the menu app thinks he wants things he can't eat. Find out who the menu was built for.",
+    "thumbnail_url": "https://images.code.org/a4425ad5b360a5a2e334da042d849643-data-makes-ai-lesson-10-jonah-a-friendly-chest-up-portrait-of-jonah-in-his-cac-1.png",
+    "panels": [
+      {
+        "text": "\"I’m vegetarian and the veggie wrap was basically the only thing at school I could eat. Now it’s gone and so is the bean burrito.\"",
+        "imageUrl": "https://images.code.org/e579d84602145f0ff7410e8ea5decb5e-data-makes-ai-lesson-10-jonah-jonah-standing-in-a-school-cafeteria-lunch-line--1.png",
+        "key": "data-makes-ai-lesson10-panel-jonah-f0835053-cf13-4b72-87a8-01a69882313d",
+        "typing": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "\"The sign in the cafeteria says the new menu is 'based on what students want.' Nobody asked me. I didn’t even know there was a survey. Now I bring lunch from home every day, which is fine I guess, but my friends all buy lunch so I’m the only one at my table with a lunchbox.\"",
+        "imageUrl": "https://images.code.org/aaa7e3c5eb662d75a1aaba324012593c-data-makes-ai-lesson-10-jonah-a-crowded-cafeteria-table-jonah-sits-in-the-midd-1.png",
+        "key": "data-makes-ai-lesson10-panel-jonah-79da5b50-a1fa-4b92-ae0c-f704e541dfc1",
+        "typing": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "\"Also I tried the menu app and it said I would probably buy chicken nuggets lol. I have never eaten a chicken nugget in my life.\"",
+        "imageUrl": "https://images.code.org/127d560902e8b1de61a8af7b4d6fa4d4-data-makes-ai-lesson-10-jonah-jonah-at-a-desk-or-library-table-holding-up-a-ta-1.png",
+        "key": "data-makes-ai-lesson10-panel-jonah-79ec9e18-3370-4e01-8c00-327ee15ee559",
+        "typing": true,
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-04 15:49:32 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 15:50:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 15:52:25 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

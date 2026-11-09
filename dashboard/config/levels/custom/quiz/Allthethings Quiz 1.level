@@ -9,7 +9,7 @@
     "show_correctness": true,
     "reveal_answer_explanation": true,
     "show_questions_after_submit": true,
-    "purpose": "exam",
+    "purpose": "check_for_understanding",
     "allow_multiple_attempts": true
   },
   "published": true,
