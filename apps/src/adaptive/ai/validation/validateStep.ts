@@ -6,6 +6,10 @@
 import {AichatContext} from '@cdo/apps/aichat/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
+import {
+  moderationFallbackReason,
+  sendAiFallbackUsed,
+} from '../../metricsHelpers';
 import {ValidationAttempt} from '../../progress/model';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../../types';
 import {generate, isAdaptiveAiEnabled, moderateOutput} from '../generate';
@@ -93,7 +97,15 @@ export async function validateStep({
       },
     },
   });
-  if (!output) return undefined;
+  if (!output) {
+    sendAiFallbackUsed(
+      'validation',
+      'modelErrorOrInvalidOutput',
+      checkpoint,
+      step
+    );
+    return undefined;
+  }
   const moderation = await moderateOutput(output.reason, aichatContext);
   if (moderation !== 'ok') {
     Lab2Registry.getInstance().getMetricsReporter().logWarning({
@@ -104,6 +116,12 @@ export async function validateStep({
       stepId: step.id,
       traceId,
     });
+    sendAiFallbackUsed(
+      'validation',
+      moderationFallbackReason(moderation),
+      checkpoint,
+      step
+    );
   }
   return {
     pass: output.pass,

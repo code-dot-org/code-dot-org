@@ -783,6 +783,7 @@ const EVENTS = {
   ADAPTIVE_INSTRUCTIONS_GENERATED: 'Adaptive Instructions Generated',
   ADAPTIVE_WORK_VALIDATION_PASSED: 'Adaptive Work Validation Passed',
   ADAPTIVE_WORK_VALIDATION_FAILED: 'Adaptive Work Validation Failed',
+  ADAPTIVE_AI_FALLBACK_USED: 'Adaptive AI Fallback Used',
 
   // Teacher and Permanent promotion events
   PROMOTION_CLICKED: 'Promotion Clicked',

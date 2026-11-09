@@ -1,5 +1,12 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+jest.mock('@code-dot-org/core/plugins/observability', () => ({
+  metrics: {count: jest.fn()},
+  recordError: jest.fn(),
+}));
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
@@ -98,5 +105,37 @@ describe('ProgressStore', () => {
 
     expect(mockLogError).toHaveBeenCalledTimes(1);
     expect(http.put).toHaveBeenCalledTimes(2);
+  });
+
+  it('counts each write by route and outcome, with the status of a failed one', async () => {
+    http.put
+      .mockRejectedValueOnce({response: {status: 422}})
+      .mockResolvedValueOnce({ok: true});
+    const store = new ProgressStore();
+
+    store.saveStep(key, 'read', {started: true});
+    await store.saveValidation(key, 'try', {
+      pass: true,
+      evidenceLevel: 1,
+      reason: 'Fine.',
+    });
+
+    const count = Observability.metrics.count as jest.Mock;
+    expect(count.mock.calls).toEqual([
+      [
+        'adaptive.progress.request',
+        1,
+        {lab: 'adaptive', route: 'progress', outcome: 'error', status: 422},
+      ],
+      [
+        'adaptive.progress.request',
+        1,
+        {lab: 'adaptive', route: 'validation_history', outcome: 'ok'},
+      ],
+    ]);
+    const [error, context] = (Observability.recordError as jest.Mock).mock
+      .calls[0];
+    expect(error.message).toBe('Adaptive progress: progress failed');
+    expect(context).toEqual({stepId: 'read', status: 422});
   });
 });

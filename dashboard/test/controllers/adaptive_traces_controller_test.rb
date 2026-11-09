@@ -46,6 +46,12 @@ class AdaptiveTracesControllerTest < ActionController::TestCase
     sign_in(@student)
     allow_adaptive_ai(false)
     LangfuseHelper.expects(:trace_adaptive_generation).never
+    Cdo::Metrics.expects(:push).with do |namespace, metrics|
+      namespace == SharedConstants::AICHAT_METRICS_NAMESPACE &&
+        metrics.length == 1 &&
+        metrics.first[:metric_name] == 'AdaptiveTraces.Forbidden' &&
+        metrics.first[:dimensions].include?({name: 'UserType', value: 'student'})
+    end
 
     post :create, params: @params, as: :json
 

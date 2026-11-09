@@ -8,6 +8,7 @@ import {
   validateStep,
   withOpener,
 } from '@cdo/apps/adaptive/ai/validation/validateStep';
+import {sendAiFallbackUsed} from '@cdo/apps/adaptive/metricsHelpers';
 import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -15,6 +16,10 @@ jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
   generate: jest.fn(),
   isAdaptiveAiEnabled: jest.fn(() => true),
   moderateOutput: jest.fn(async () => 'ok'),
+}));
+jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
+  ...jest.requireActual('@cdo/apps/adaptive/metricsHelpers'),
+  sendAiFallbackUsed: jest.fn(),
 }));
 const mockLogWarning = jest.fn();
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
@@ -219,6 +224,49 @@ describe('validateStep', () => {
     expect(onJudging).toHaveBeenCalledTimes(1);
     expect(mockGenerate).toHaveBeenCalledTimes(1);
     expect(validation).toBeDefined();
+  });
+});
+
+describe('validateStep fallbacks', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    mockEnabled.mockReturnValue(true);
+    mockModerateOutput.mockResolvedValue('ok');
+  });
+
+  it('sends a fallback when the judge gives no verdict', async () => {
+    mockGenerate.mockResolvedValue({traceId: 'trace-2'});
+    await validateStep(options);
+    expect(sendAiFallbackUsed).toHaveBeenCalledWith(
+      'validation',
+      'modelErrorOrInvalidOutput',
+      checkpoint,
+      step
+    );
+  });
+
+  it("sends a fallback when the judge's reason is replaced", async () => {
+    mockGenerate.mockResolvedValue({
+      output: {pass: false, evidenceLevel: 0, reason: 'Bad words.'},
+      traceId: 'trace-2',
+    });
+    mockModerateOutput.mockResolvedValue('flagged');
+    await validateStep(options);
+    expect(sendAiFallbackUsed).toHaveBeenCalledWith(
+      'validation',
+      'outputFlaggedByModeration',
+      checkpoint,
+      step
+    );
+  });
+
+  it('sends nothing when the verdict stands as written', async () => {
+    mockGenerate.mockResolvedValue({
+      output: {pass: true, evidenceLevel: 1, reason: 'Fine.'},
+      traceId: 'trace-2',
+    });
+    await validateStep(options);
+    expect(sendAiFallbackUsed).not.toHaveBeenCalled();
   });
 });
 

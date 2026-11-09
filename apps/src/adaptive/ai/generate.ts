@@ -15,9 +15,14 @@ import {isTextSafe} from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+
+import {
+  countAdaptive,
+  distributeAdaptive,
+  reportAdaptiveError,
+} from '../observability';
 
 import {
   TraceMetadata,
@@ -54,6 +59,18 @@ export interface GenerateResult<T> {
 
 type GatewayResult = Awaited<ReturnType<typeof generateText>>;
 
+// Finer than the Langfuse outcome, which Rails allowlists: a timeout is its own.
+type GenerationOutcome = 'success' | 'schema_mismatch' | 'timeout' | 'error';
+
+const GENERATION_FAILURES: Record<
+  Exclude<GenerationOutcome, 'success'>,
+  string
+> = {
+  schema_mismatch: 'Adaptive AI output did not fit its schema',
+  timeout: 'Adaptive AI generation timed out',
+  error: 'Adaptive AI generation failed',
+};
+
 export async function generate<T>({
   schema,
   model,
@@ -73,6 +90,22 @@ export async function generate<T>({
     },
   });
   const {traceId} = trace;
+  const startedAt = Date.now();
+  const record = (outcome: GenerationOutcome, error?: unknown) => {
+    const tags = {
+      trace: traceOptions.name,
+      model,
+      outcome,
+      pathwayId: traceOptions.metadata.pathwayId,
+    };
+    countAdaptive('adaptive.ai.generation', tags);
+    distributeAdaptive('adaptive.ai.latency_ms', Date.now() - startedAt, tags);
+    if (outcome === 'success') return;
+    reportAdaptiveError(GENERATION_FAILURES[outcome], error, {
+      context: {traceId, stepId: traceOptions.metadata.stepId},
+      tags: {trace: traceOptions.name, model},
+    });
+  };
 
   try {
     const result = await withTimeout(
@@ -88,7 +121,7 @@ export async function generate<T>({
     );
     const parsed = schema.safeParse(result.output);
     if (!parsed.success) {
-      report('Adaptive AI output did not fit its schema', parsed.error);
+      record('schema_mismatch', parsed.error);
       trace.end({
         outcome: 'schema_mismatch',
         output: result.output,
@@ -98,6 +131,7 @@ export async function generate<T>({
       });
       return {traceId};
     }
+    record('success');
     trace.end({
       outcome: 'success',
       output: parsed.data,
@@ -106,7 +140,7 @@ export async function generate<T>({
     });
     return {output: parsed.data, traceId};
   } catch (error) {
-    report('Adaptive AI generation failed', error);
+    record(isTimeout(error) ? 'timeout' : 'error', error);
     trace.end({outcome: 'error', errorMessage: errorMessage(error)});
     return {traceId};
   }
@@ -131,7 +165,9 @@ async function moderate(
     );
     result = safe ? 'ok' : 'flagged';
   } catch (error) {
-    report(`Adaptive ${phase} moderation failed`, error);
+    reportAdaptiveError(`Adaptive ${phase} moderation failed`, error, {
+      tags: {phase},
+    });
     result = 'error';
   }
   Observability.metrics.count('adaptive.text_moderation', 1, {phase, result});
@@ -158,10 +194,20 @@ function errorMessage(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
 }
 
+const TIMEOUT_ERROR_NAME = 'AdaptiveTimeoutError';
+
+const isTimeout = (error: unknown) =>
+  error instanceof Error && error.name === TIMEOUT_ERROR_NAME;
+
 function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   return new Promise((resolve, reject) => {
     const timer = setTimeout(
-      () => reject(new Error(`timed out after ${ms}ms`)),
+      () =>
+        reject(
+          Object.assign(new Error(`timed out after ${ms}ms`), {
+            name: TIMEOUT_ERROR_NAME,
+          })
+        ),
       ms
     );
     promise.then(
@@ -175,12 +221,4 @@ function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
       }
     );
   });
-}
-
-function report(message: string, error: unknown) {
-  Lab2Registry.getInstance()
-    .getMetricsReporter()
-    .logError(message, error instanceof Error ? error : undefined, {
-      error: String(error),
-    });
 }

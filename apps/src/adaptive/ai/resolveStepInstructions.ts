@@ -9,7 +9,12 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
-import {sendAdaptiveEvent, stepProperties} from '../metricsHelpers';
+import {
+  moderationFallbackReason,
+  sendAdaptiveEvent,
+  sendAiFallbackUsed,
+  stepProperties,
+} from '../metricsHelpers';
 import {GeneratedContent, generateInputsHash} from '../progress/model';
 import {summarizeProjectFiles} from '../project/summarizeProjectFiles';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
@@ -109,7 +114,15 @@ export async function resolveStepInstructions({
     success: !!output,
     latencyMs: Date.now() - startedAt,
   });
-  if (!output) return authoredInstructions;
+  if (!output) {
+    sendAiFallbackUsed(
+      'instructions',
+      'modelErrorOrInvalidOutput',
+      checkpoint,
+      step
+    );
+    return authoredInstructions;
+  }
   // Nothing is cached, so the next resolve asks again rather than keep text
   // the judge would not clear.
   const moderation = await moderateOutput(output.instructions, aichatContext);
@@ -122,6 +135,12 @@ export async function resolveStepInstructions({
       stepId: step.id,
       traceId,
     });
+    sendAiFallbackUsed(
+      'instructions',
+      moderationFallbackReason(moderation),
+      checkpoint,
+      step
+    );
     return authoredInstructions;
   }
   justGeneratedHash = inputsHash;
