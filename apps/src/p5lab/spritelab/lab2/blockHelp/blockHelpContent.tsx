@@ -10,7 +10,6 @@ import animThePlayer from '@cdo/static/spritelab_lab2/block-help/the-player.gif'
 import animWhenClicked from '@cdo/static/spritelab_lab2/block-help/when-clicked.gif';
 
 import {MAX_ZOOM, MIN_ZOOM} from '../camera';
-import {PLATFORM_GRAVITY} from '../platformPhysics';
 
 /**
  * What the new-block catalog says about a block: a `summary` sentence, then
@@ -29,13 +28,16 @@ export interface BlockHelp {
 }
 
 export const BLOCK_HELP: Record<string, BlockHelp> = {
-  spritelab2_setPlatformGravity: {
-    title: 'Set gravity',
+  spritelab2_setPlatformJumpHeight: {
+    title: 'Set jump height',
     animation: {src: animSetGravity, alt: 'The set gravity block in action.'},
-    summary: 'Changes how hard everything falls.',
-    body:
-      `**${PLATFORM_GRAVITY}** is normal; smaller numbers float, and a ` +
-      'negative number flips the world upside down.',
+    summary: 'Changes how many squares the player can jump.',
+    body: 'The number is how high the player jumps in squares.',
+  },
+  spritelab2_setPlatformGravityDirection: {
+    title: 'Set gravity direction',
+    summary: 'Changes which way everything falls.',
+    body: 'Choose **↓** to fall toward the bottom, **↑** to fall toward the top, or **none** to move in four directions.',
   },
   spritelab2_setCameraZoom: {
     title: 'Set zoom',
