@@ -19,6 +19,10 @@ interface EditorStripProps {
   onChange?: (editor: Editor) => void;
   editors?: Editor[];
   disabledEditors?: Editor[];
+  /** A control set into the switch (see EditorSwitch). */
+  between?: {after: Editor; node: React.ReactNode};
+  /** Rendered at the bar's end, before undo and redo. */
+  endExtra?: React.ReactNode;
   /** The name in the middle; the open editor's unless given. */
   title?: string;
   /** The switch at the bar's start instead of its end; undo and redo
@@ -38,6 +42,8 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   onChange,
   editors,
   disabledEditors,
+  between,
+  endExtra,
   title,
   switchAtStart = false,
   history,
@@ -85,6 +91,7 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
       onChange={onChange}
       editors={editors}
       disabledEditors={disabledEditors}
+      between={between}
     />
   );
   return (
@@ -106,6 +113,7 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
         {title ?? (editor === 'Code' ? 'Workspace' : editor)}
       </MuiTypography>
       <div className={moduleStyles.editorStripEnd}>
+        {endExtra}
         {switchAtStart ? historyNode : switchNode}
       </div>
     </div>

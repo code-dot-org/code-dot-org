@@ -1,6 +1,8 @@
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React from 'react';
 
+import moduleStyles from '../sprite-lab2-view.module.scss';
+
 export type Editor = 'Images' | 'World' | 'Code';
 
 interface EditorSwitchProps {
@@ -11,6 +13,9 @@ interface EditorSwitchProps {
   /** Editors this level does not enable; shown disabled rather than left
       out, so the switch keeps one shape across the unit's levels. */
   disabledEditors?: Editor[];
+  /** Splits the switch in two after an editor, with a control between the
+      halves: the scene picker, which the editors after it both reflect. */
+  between?: {after: Editor; node: React.ReactNode};
 }
 
 const DEFAULT_EDITORS: Editor[] = ['Code', 'World'];
@@ -30,21 +35,31 @@ const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
   onChange,
   editors = DEFAULT_EDITORS,
   disabledEditors = [],
-}) => (
-  <div role="group" aria-label="Edit">
-    <SegmentedButtons
-      size="s"
-      selectedButtonValue={value}
-      onChange={editor => onChange(editor as Editor)}
-      buttons={editors.map(editor => ({
-        id: editorSwitchButtonId(editor),
-        value: editor,
-        label: editor,
-        iconLeft: {iconName: ICONS[editor], iconStyle: 'solid'},
-        disabled: disabledEditors.includes(editor),
-      }))}
-    />
-  </div>
-);
+  between,
+}) => {
+  const buttons = (group: Editor[]) =>
+    group.length > 0 && (
+      <SegmentedButtons
+        size="s"
+        selectedButtonValue={value}
+        onChange={editor => onChange(editor as Editor)}
+        buttons={group.map(editor => ({
+          id: editorSwitchButtonId(editor),
+          value: editor,
+          label: editor,
+          iconLeft: {iconName: ICONS[editor], iconStyle: 'solid'},
+          disabled: disabledEditors.includes(editor),
+        }))}
+      />
+    );
+  const cut = between ? editors.indexOf(between.after) + 1 : editors.length;
+  return (
+    <div role="group" aria-label="Edit" className={moduleStyles.editorSwitch}>
+      {buttons(editors.slice(0, cut))}
+      {between?.node}
+      {buttons(editors.slice(cut))}
+    </div>
+  );
+};
 
 export default EditorSwitch;

@@ -141,6 +141,13 @@ $z-over-blockly: 71;
   padding: 0 8px;
 }
 
+// The switch's halves and what stands between them (?scene-tabs=true).
+.editorSwitch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 // The cell at the bar's start: the undo pair, or with ?editors=stripleft
 // the switch.
 .editorStripStart {

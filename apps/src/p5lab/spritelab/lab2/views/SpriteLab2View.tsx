@@ -162,7 +162,7 @@ import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
-import {sceneDropdownButtonId} from './components/SceneDropdown';
+import SceneDropdown, {sceneDropdownButtonId} from './components/SceneDropdown';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
 import ImagesTab from './images/ImagesTab';
@@ -329,6 +329,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const imagesAdvanced =
     useMemo(() => queryParams('images-advanced') === 'true', []) ||
     isLevelEditMode;
+  // ?scene-tabs=true: the scene picker stands in the editors' strip, between
+  // Images and World | Code, in place of the bar at the editors' base; the
+  // scene is picked first and World and Code both show it.
+  const sceneTabs = useMemo(() => queryParams('scene-tabs') === 'true', []);
   // The mode decides the tab set, and an image level's is empty: its panel
   // replaces the shell. A level with no mode, or one whose authored kind is
   // not a kind we know, falls back to the lab defaults.
@@ -2452,7 +2456,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       <LabShell>
         {WorkspaceAlert}
         <div ref={stageRef} className={moduleStyles.stage}>
-          {scenesOffered &&
+          {!sceneTabs &&
+            scenesOffered &&
             editorsShown &&
             (activeTab === 'Code' || activeTab === 'World') && (
               <WorkspaceSceneBar
@@ -2479,6 +2484,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onChange={handleEditorChange}
                 editors={EDITORS}
                 disabledEditors={disabledEditors}
+                between={
+                  sceneTabs && scenesOffered
+                    ? {
+                        after: 'Images',
+                        node: <SceneDropdown {...sceneControls} />,
+                      }
+                    : undefined
+                }
+                endExtra={
+                  sceneTabs &&
+                  activeTab === 'Code' &&
+                  catalogOffered && (
+                    <DiscoverBlocksButton
+                      remaining={heldBackBlocks.size}
+                      className={moduleStyles.barButton}
+                      onClick={openBlockCatalog}
+                    />
+                  )
+                }
                 switchAtStart
                 history={
                   activeTab === 'Code'
@@ -2497,7 +2521,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             className={classNames(
               moduleStyles.codeTabWrapper,
               editorsShown && moduleStyles.underEditorStrip,
-              moduleStyles.aboveWorkspaceSceneBar
+              !sceneTabs && moduleStyles.aboveWorkspaceSceneBar
             )}
             style={{
               clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
@@ -2562,7 +2586,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               className={classNames(
                 moduleStyles.codeTabWrapper,
                 editorsShown && moduleStyles.underEditorStrip,
-                moduleStyles.aboveWorkspaceSceneBar
+                !sceneTabs && moduleStyles.aboveWorkspaceSceneBar
               )}
               style={{
                 clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
