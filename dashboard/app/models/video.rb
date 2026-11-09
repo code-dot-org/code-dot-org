@@ -31,12 +31,10 @@ class Video < ApplicationRecord
 
   before_save :fetch_thumbnail
 
-  # YouTube video IDs must be 11 characters and contain no invalid characters, such as exclamation points or asterisks.
-  # Ref: https://developers.google.com/youtube/iframe_api_reference (events|onError|2)
-  YOUTUBE_ID_REGEX = /[^!*"&?\/ ]{11}/
-  # YouTube embed URL has the following format: http://www.youtube-nocookie.com/embed/VIDEO_ID
-  # Ref: https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds
-  EMBED_URL_REGEX = /(?:http[s]?:)?\/\/(?:www\.)?(?:youtube(?:education|-nocookie)?)\.com\/embed\/(?<id>#{YOUTUBE_ID_REGEX})/
+  # Built from SharedConstants so the frontend matches the same URLs. See
+  # SharedConstants::YOUTUBE_PATTERNS for what each pattern covers.
+  YOUTUBE_ID_REGEX = /#{SharedConstants::YOUTUBE_PATTERNS[:id]}/
+  EMBED_URL_REGEX = /#{SharedConstants::YOUTUBE_PATTERNS[:embed_url]}/
 
   def self.check_i18n_names
     video_keys = Video.all.collect(&:key)
