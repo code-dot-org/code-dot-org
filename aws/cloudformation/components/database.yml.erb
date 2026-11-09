@@ -261,6 +261,8 @@
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
+        MaxConnectionsPercent: 40 # Transitional - raise this as we eliminate Ruby logic that pins db connections.
+        MaxIdleConnectionsPercent: 5
   ReportingDBProxyEndpoint:
     Type: AWS::RDS::DBProxyEndpoint
     Properties:
@@ -289,6 +291,7 @@
         # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
         # exceed 10% of the total database connection capacity of a reader instance.
         MaxConnectionsPercent: 10
+        MaxIdleConnectionsPercent: 5
   WriterSQLUser:
     Type: Custom::SQLUser
 <%  unless rack_env?(:production)%>
