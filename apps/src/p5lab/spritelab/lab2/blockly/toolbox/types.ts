@@ -13,15 +13,3 @@ export function findCategory(
 ): StaticCategoryInfo | undefined {
   return contents.filter(isStaticCategoryInfo).find(c => c.name === name);
 }
-
-export function withoutCategory(
-  toolbox: ToolboxInfo,
-  name: string
-): ToolboxInfo {
-  return {
-    ...toolbox,
-    contents: toolbox.contents.filter(
-      entry => !(isStaticCategoryInfo(entry) && entry.name === name)
-    ),
-  };
-}

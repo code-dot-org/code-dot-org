@@ -2,7 +2,7 @@ import {withoutAiBlocks} from '@cdo/apps/p5lab/spritelab/lab2/blockly/toolbox/ai
 import {ToolboxInfo} from '@cdo/apps/p5lab/spritelab/lab2/blockly/toolbox/types';
 
 describe('withoutAiBlocks', () => {
-  it('removes the AI category and AI blocks filed elsewhere', () => {
+  it('removes AI blocks from every category, keeping the rest', () => {
     const toolbox: ToolboxInfo = {
       kind: 'categoryToolbox',
       contents: [
@@ -33,28 +33,6 @@ describe('withoutAiBlocks', () => {
           name: 'Events',
           contents: [{kind: 'block', type: 'gamelab_whenPromptAnswered'}],
         },
-      ],
-    });
-  });
-
-  it('keeps the category holding the only copy of a non-AI block', () => {
-    const toolbox: ToolboxInfo = {
-      kind: 'categoryToolbox',
-      contents: [
-        {
-          kind: 'category',
-          name: 'AI',
-          contents: [
-            {kind: 'block', type: 'spritelab2_askAI'},
-            {kind: 'block', type: 'gamelab_whenPromptAnswered'},
-          ],
-        },
-      ],
-    };
-
-    expect(withoutAiBlocks(toolbox)).toEqual({
-      kind: 'categoryToolbox',
-      contents: [
         {
           kind: 'category',
           name: 'AI',
@@ -64,21 +42,25 @@ describe('withoutAiBlocks', () => {
     });
   });
 
-  it('removes the category once nothing is left in it', () => {
+  it('removes a category left empty, whatever its name', () => {
     const toolbox: ToolboxInfo = {
       kind: 'categoryToolbox',
       contents: [
         {
           kind: 'category',
-          name: 'AI',
-          contents: [{kind: 'block', type: 'spritelab2_askAI'}],
+          name: 'Chatbot',
+          contents: [
+            {kind: 'block', type: 'spritelab2_askAI'},
+            {kind: 'block', type: 'spritelab2_askAIWithChoices'},
+          ],
         },
+        {kind: 'category', name: 'Variables', custom: 'VARIABLE'},
       ],
     };
 
     expect(withoutAiBlocks(toolbox)).toEqual({
       kind: 'categoryToolbox',
-      contents: [],
+      contents: [{kind: 'category', name: 'Variables', custom: 'VARIABLE'}],
     });
   });
 });
