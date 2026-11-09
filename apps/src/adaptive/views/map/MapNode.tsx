@@ -2,8 +2,9 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React from 'react';
 
-import {CheckpointStatus, STATUS_LABELS} from '../../progress';
+import {CheckpointStatus, STATUS_LABELS} from '../../progress/model';
 import {Checkpoint} from '../../types';
+import PathwayIcon from '../components/PathwayIcon';
 
 import {NodePosition} from './layout/types';
 
@@ -33,7 +34,7 @@ interface MapNodeProps {
   above?: React.ReactNode;
   /** Rendered after the circle. */
   children?: React.ReactNode;
-  onSelect: (id: string) => void;
+  onSelect?: (id: string) => void;
   tourId?: string;
 }
 
@@ -61,22 +62,39 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
     style={{left: position.x, top: position.y - circleTop, width}}
   >
     {above}
-    <button
-      type="button"
-      id={tourId}
-      className={styles.circle}
-      data-checkpoint-id={checkpoint.id}
-      onClick={() => onSelect(checkpoint.id)}
-      aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
-      aria-pressed={focusId === checkpoint.id}
-    >
-      <FontAwesomeV6Icon iconName={icon ?? STATUS_ICONS[status]} />
-      {icon && status === 'locked' && (
-        <span className={styles.badge} aria-hidden="true">
-          <FontAwesomeV6Icon iconName="lock" />
-        </span>
-      )}
-    </button>
+    {onSelect ? (
+      <button
+        type="button"
+        id={tourId}
+        className={styles.circle}
+        data-checkpoint-id={checkpoint.id}
+        onClick={() => onSelect(checkpoint.id)}
+        aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
+        aria-pressed={focusId === checkpoint.id}
+      >
+        <PathwayIcon iconName={icon ?? STATUS_ICONS[status]} />
+        {icon && status === 'locked' && (
+          <span className={styles.badge} aria-hidden="true">
+            <FontAwesomeV6Icon iconName="lock" />
+          </span>
+        )}
+      </button>
+    ) : (
+      <div
+        id={tourId}
+        className={styles.circle}
+        data-checkpoint-id={checkpoint.id}
+        role="img"
+        aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
+      >
+        <PathwayIcon iconName={icon ?? STATUS_ICONS[status]} />
+        {icon && status === 'locked' && (
+          <span className={styles.badge} aria-hidden="true">
+            <FontAwesomeV6Icon iconName="lock" />
+          </span>
+        )}
+      </div>
+    )}
     {children}
   </div>
 );

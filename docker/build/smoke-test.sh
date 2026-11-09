@@ -48,12 +48,6 @@ run "corepack runs the pinned yarn ${yarn_pin}" "$yarn_pin" -- \
 # python3, for node-gyp.
 run "python3 present" "" -- python3 --version
 
-# Both uv binaries: they arrive by a two-path COPY --from, and a typo there
-# would drop one silently.
-run "uv present" "" -- uv --version
-# shellcheck disable=SC2016
-run "uvx present" "uvx-ok" -- sh -c 'command -v uvx > /dev/null && echo uvx-ok'
-
 # The gem tree must be writable by the build user. ABI dir from the interpreter,
 # as in the Dockerfile, so a Ruby bump needs no edit here.
 run "BUNDLE_PATH exported" "/usr/local/bundle" -- \

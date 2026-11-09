@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-07T01:49:43.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Pattern Machine\r\n\r\nBuild the pattern you planned on page 1 of your activity guide:\r\n\r\n1. Write a for loop where the loop variable positions each shape. Use your positioning expression from the plan.\r\n2. Add your justification comment at the top: for loop because the count is known.\r\n3. Run it. Check that your first shape and your last shape land where your plan says.\r\n\r\n\r\n**Remember:** If you started from code someone else wrote or an AI tool generated, be sure to include the credit comment.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Pattern Machine\nfrom theater import *\n\n# Background\nclear(\"#1B1B3A\")\n\n# Your loop goes here\n\n\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMr/Y26Vbe4LSKle\nGoqvoo69QQWZjJHFtoix2sVkgapAN3IULh/8giQnND4ELq+o9IfPn9m6DAiY\nGfQZEhj6SHe6KSR2CTVGhS+aWRk2j2aMilcIEfKD2OmXZZdVkEQadQyISYUq\npDFaLCknmBS20H4ktup16BD1thwV6TNEn3euc/ApaKkUJuX9fVGP8q0SVrLe\nPxv7gJpzI9DCK6gmhDxA0gg1OuzMQRdTlx9BbyYj+WU2Jwl6j8KcuMRbMDPp\nhklaygrnf4pE4O2Rrd53m2/8BX5k3WVDmO0QT4ZGOflGVf9qSIBOrWm2vGSA\nN1mhrNrncERkfqYqKQlsEZhGNgB1Q4YteLCKQ3fZev/rwgqjnDzAOiriYkMd\nEQkVT+EN9gjMJz3RgLlPq/Gi92gwtJ5PTLDkqFY7poEqmE6+hIVz0b1/qlHp\no8CUWgYZFxCsIGipX8WGPBk12+V7aHWvWCuUFG561WH8DtVIIdzopOBIdWJ4\nHl8Z52rArXfUFPj37fpO7IfWrxOfnLPF/iSSBzGv/Nd8URXRR9huwLq5OPqF\nVZwMBEmBsEnCZSPc4cKxaTbmjElmTIV1hMGVlQZpo6s3tFDdm2of4btGpYuY\nvuqcJtbH03jnfa3ITrtx2GtOO0cIjuNAShgZKfuT9V1hMUxTaIWaXto7zbT+\n+dmGwLnjOVZbgwhhsca7apAskEGb0tb2Mdo0DkPUxW34kEwD5dDHYV91L2Jn\noJnlIszQUXokySF/OUSeRYmTfMH2G9xNwl+b3OWM26StFs3BEDDcwTWacXQl\n2Fiys30Cgiw51LaUH1QTUwd+jtU0DgwsZa8p7TgW472bTHIH8O9sxQWfnrS3\nF6l59gLIdMvKxMcNbY3e20sPPoLMXJ6DVQfxU/RWvo5yCudTBCv9JENwIcZs\nTP7hKs/qG0XIuifPJwQt7t0xIoFHAxkLCL5kbmfNz1p2oNWckUZGPE4ySUPt\n1hM+YW19dn7Q739HLAt5ryWBR1m7fX3vstx/sGQ14ffCukrR++6QNLCxT1Dz\nW1P0jY2wuVc16zVXzC3Hd4cj3hvDAQxcZcGuqyPvx6iAkNx84ySuph6ZT+B2\nl0TjN5JaVa5wPqOinWA+dFlQZxHbZHpJmy2/8f5wIqtaF8+QLw4yWA36dt02\n+UaooaAYKq5MHrN51/W45CLjAQLP5FXTrcMnTb0EAv8vmHNmA/BlTAzsrc+D\nkg4gN/eIbzbMMse6GR79UTx1smSI7L5QvRrpNCHhrxGsxAYi+rZGnA2zu4AX\njCiGPdikpN4YhY4z2RNGPs/UDgnfmGGHZwptWYl806rb/QLK9Vz74v/RsWT9\nLaX4PgxIdQKWRUupHUD0d6RupwwfjnVmTyhIgXoMFvrdpc10BoTRd0Mec7bG\nTeQQKDDV8aJ1Jwzc2IaZ8EtuczhIvvFFWVFvHQL4r2G2l8y3FNlhY2sbZnU9\nr1LK57uIzbcxbEGeg2vXrOTnJJl+c4kT/bc4Ji1GJtFLLwDmY45gif5JAR3u\naTFDXsZo+ECmAa9hIJbH8S3weiujOHybDx4bEsoMaCvlMCmbX0eryhXgYNWc\n9DJ3kGwdnyaJaYZAq1oGqG1ro8gZ/ahrv10/aUZQqc/lQbKifNeZbG0c+ikd\n8ME6Q0EYMQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-07 02:02:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-07 02:04:09 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-07 02:04:13 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-07 02:04:29 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-07 02:05:26 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

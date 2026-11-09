@@ -129,6 +129,29 @@ set `active_job_worker_max_priority: 9` for them (`config/<env>.yml.erb`,
 Run `bundle exec ruby k8s/bin/verify-worker-priorities` to check Helm modes,
 generated worker commands, and invalid values without a cluster or database.
 
+## Active Job autoscaling
+
+The chart can create a KEDA `ScaledObject` and `TriggerAuthentication` for the
+worker Deployment. KEDA owns the resulting HPA. Dashboard autoscaling remains
+independent. Autoscaling is disabled by default. The shared KEDA installation
+is deployed separately by `k8s-gitops`; this chart only supplies workload
+resources.
+
+Example autoscaling config for the Active Job worker deployment:
+
+```yaml
+activeJobWorker:
+  priorityMode: low
+  terminationGracePeriodSeconds: 2100
+  autoscaling:
+    enabled: true
+    minReplicas: 1
+    maxReplicas: 4
+    jobsPerReplica: 1
+    pollingInterval: 30
+    awsRegion: us-east-1
+```
+
 ## Non-local clusters
 
 Argo CD and Kargo configuration lives in the

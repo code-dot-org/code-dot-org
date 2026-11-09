@@ -8,9 +8,11 @@ import {
   stepIdToResume,
   totalTimeSpent,
   useProgress,
+  validationAllowsContinue,
   visibleSteps,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
+import {usePathwayStatus} from '@cdo/apps/adaptive/progress/usePathwayStatus';
 import {computeEvidence} from '@cdo/apps/adaptive/routing/evidence';
 import {routeStatusMap} from '@cdo/apps/adaptive/routing/route';
 import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
@@ -162,6 +164,37 @@ describe('stepIdToResume', () => {
         two: {status: 'started', timeSpent: 0},
       })
     ).toBe('two');
+  });
+});
+
+describe('validationAllowsContinue', () => {
+  const attempt = (pass: boolean) => ({
+    at: '2026-01-01T00:00:00Z',
+    pass,
+    evidenceLevel: 0,
+    reason: '',
+  });
+  const entry = (...passes: boolean[]) => ({
+    timeSpent: 0,
+    validationHistory: passes.map(attempt),
+  });
+
+  it('holds before any check', () => {
+    expect(validationAllowsContinue(undefined)).toBe(false);
+    expect(validationAllowsContinue({timeSpent: 0})).toBe(false);
+  });
+
+  it('opens once any check passes, even if a later one fails', () => {
+    expect(validationAllowsContinue(entry(false, true))).toBe(true);
+    expect(validationAllowsContinue(entry(true, false))).toBe(true);
+  });
+
+  it('holds after fewer than three failed checks', () => {
+    expect(validationAllowsContinue(entry(false, false))).toBe(false);
+  });
+
+  it('opens after three failed checks', () => {
+    expect(validationAllowsContinue(entry(false, false, false))).toBe(true);
   });
 });
 
@@ -554,5 +587,22 @@ describe('useProgress', () => {
     expect(
       result.current.progress?.steps.project.generatedInstructions
     ).toEqual(generatedInstructions);
+  });
+});
+
+describe('usePathwayStatus', () => {
+  it('reads undefined progress as empty', () => {
+    const {result} = renderHook(() => usePathwayStatus(pathway, undefined));
+
+    expect(result.current.statusMap).toEqual(
+      statusMapOf(pathway, EMPTY_PROGRESS)
+    );
+  });
+
+  it('routes the progress it is given', () => {
+    const progress = progressOf(['intro'], ['a']);
+    const {result} = renderHook(() => usePathwayStatus(pathway, progress));
+
+    expect(result.current.statusMap).toEqual(statusMapOf(pathway, progress));
   });
 });

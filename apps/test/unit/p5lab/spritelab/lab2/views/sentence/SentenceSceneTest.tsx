@@ -293,6 +293,21 @@ describe('SentenceScene', () => {
     ).toBeTruthy();
   });
 
+  it("hands up the picture's story from Behind the scenes", async () => {
+    const onTellStory = jest.fn();
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene({onTellStory});
+    pickCreature();
+    await generate();
+    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
+    fireEvent.click(screen.getByRole('button', {name: 'How AI made this'}));
+    expect(onTellStory).toHaveBeenCalledWith({
+      picture: {src: expect.stringMatching(/^data:image\/png/)},
+      prompt: 'A cat',
+      imageType: 'sprite',
+    });
+  });
+
   it('holds Generate once the generations are used up', () => {
     renderScene({generationsLeft: 0});
     pickCreature();

@@ -2,15 +2,21 @@ import {
   Button as MuiButton,
   ButtonProps as MuiButtonProps,
 } from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
 import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
+import {ButtonColor} from '@cdo/apps/lab2/views/components/buttonColor';
 
+import {instructionsContinueButtonElementId} from './ResourcePanel/constants';
+
+import colorStyles from '@cdo/apps/lab2/views/components/button-color.module.scss';
 import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructions.module.scss';
 
 type ContinueButtonProps = Omit<MuiButtonProps, 'onClick'> & {
   tooltipMessage?: string;
   hideIfDisabled?: boolean;
+  buttonColor?: ButtonColor;
   onContinue: () => void;
 };
 
@@ -20,9 +26,11 @@ type ContinueButtonProps = Omit<MuiButtonProps, 'onClick'> & {
 const ContinueButton: React.FC<ContinueButtonProps> = ({
   tooltipMessage,
   hideIfDisabled,
+  buttonColor = 'primary',
   disabled,
   onContinue,
   children,
+  className,
   ...buttonProps
 }) => {
   // Show tooltip when button is disabled AND we have a message.
@@ -46,7 +54,11 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
           color="primary"
           size="small"
           type="button"
-          id="instructions-continue-button"
+          id={instructionsContinueButtonElementId}
+          className={classNames(
+            className,
+            buttonColor === 'success' && colorStyles.success
+          )}
           onClick={onContinue}
           disabled={disabled}
           {...buttonProps}

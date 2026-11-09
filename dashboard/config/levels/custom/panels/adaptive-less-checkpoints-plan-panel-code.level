@@ -1,0 +1,44 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-11-06T04:52:12.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Theo’s plan\nTheo is making a weather checker for himself.\n\n- Theme: Weather\n- Audience: Me\n- Purpose: See today’s weather for any city I type\n- Look & Feel: Simple and clean",
+        "imageUrl": "https://images.code.org/1fb32b00bc7c4bd0bb3071c289807e40-under-the-hood-01-start-1600x900.png",
+        "key": "adaptive-less-checkpoints-plan-panel-code-3e1d6a82-cd37-4c68-a978-45bad78e5d57"
+      },
+      {
+        "text": "###The AI’s first try\nThe AI built a page. It’s simple and clean, with a box for a city and a Check button. When Theo presses Check, it shows the weather.",
+        "imageUrl": "https://images.code.org/94b9564eb3cdbc2bde4eb691964ac8a4-under-the-hood-02-webpage-1600x900.png",
+        "key": "adaptive-less-checkpoints-plan-panel-code-2753de4d-93bd-4ee7-ab05-2ab42cba3c41"
+      },
+      {
+        "text": "###Theo checks his plan\nTheo checks the page against his plan. The purpose doesn’t fit. He types a new city, and Check still shows the same one.",
+        "imageUrl": "https://images.code.org/943f1cf8f1e010f2c86b54a70ff89556-under-the-hood-03-review-1600x900.png",
+        "key": "adaptive-less-checkpoints-plan-panel-code-94690e4e-c2c1-4650-9471-e5b1b77578ce"
+      },
+      {
+        "text": "Theo’s Check button shows the same city every time, but his plan says it should show the weather for any city he types. \n\n**What advice would you give Theo?**\n\n- A. “Ask the AI to make the Check button use the city you type.” \n- B. “Ask the AI to make the whole code work better and run faster.”\n- C. “Ask the AI to make the page look simpler with fewer colors.”",
+        "imageUrl": "https://images.code.org/1c0c5e1f5e9089fefd0f1b2dfef641da-blue-background-1600x900 (1).png",
+        "key": "adaptive-less-checkpoints-plan-panel-code-f3c9b482-c4de-4dd2-9452-c68b030fc792",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "The correct answer is A. Naming the Check button and saying what it should do points the AI at the exact problem. \n\n---\n\n**Tip:** When something doesn’t work, name the part that’s off, then say what it should do.",
+        "imageUrl": "https://images.code.org/d8ee4ca778096e2b5f18cd09451fee81-Clear prompts spark bright ideas.png",
+        "key": "adaptive-less-checkpoints-plan-panel-code-f5f530b6-d24d-4e8e-9b80-1f414c194d07",
+        "layout": "text-top-center"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-07 00:03:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

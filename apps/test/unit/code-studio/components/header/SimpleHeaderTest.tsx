@@ -3,33 +3,35 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 
-import SimpleHeader from '@cdo/apps/code-studio/components/header/SimpleHeader';
+import SimpleHeader, {
+  HEADER_ACTION_ID,
+} from '@cdo/apps/code-studio/components/header/SimpleHeader';
 import projectReducer, {ProjectState} from '@cdo/apps/code-studio/projectRedux';
 
 import styles from '@cdo/apps/code-studio/components/header/simple-header.module.scss';
 
-let current: {headerLabel?: string} | undefined;
-let parent: {headerLabel?: string} | undefined;
+let levels:
+  | {
+      id: string;
+      status?: string;
+      levelNumber: number;
+      isCurrentLevel?: boolean;
+      sublevels?: {isCurrentLevel?: boolean}[];
+    }[]
+  | undefined = [];
 jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
-  getCurrentLevel: () => current,
-  getParentLevel: () => parent,
+  getCurrentLevels: () => levels,
 }));
-// Connected to stores of their own; stubbed to what the row places.
+// Connected to a store of its own; stubbed to what the row places.
 jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
   __esModule: true,
   default: () => null,
 }));
-// The real module's constants size the slot; only the saved-at itself is
-// stubbed.
-jest.mock('@cdo/apps/code-studio/components/header/ProjectUpdatedAt', () => ({
-  __esModule: true,
-  ...jest.requireActual(
-    '@cdo/apps/code-studio/components/header/ProjectUpdatedAt'
-  ),
-  default: () => require('react').createElement('span', null, 'Saved'),
-}));
 
-function renderHeader(project: Partial<ProjectState> = {}) {
+function renderHeader(
+  project: Partial<ProjectState> = {},
+  props: Partial<React.ComponentProps<typeof SimpleHeader>> = {}
+) {
   const reducer = combineReducers({
     isRtl: () => false,
     project: projectReducer,
@@ -40,29 +42,27 @@ function renderHeader(project: Partial<ProjectState> = {}) {
   });
   return render(
     <Provider store={store}>
-      <SimpleHeader
-        scriptData={{simpleProgressImage: '/logo.png'}}
-        scriptNameData={{name: 'hoai2026 dev', href: '/s/hoai2026-dev'}}
-      />
+      <SimpleHeader lessonName="Make a quest" {...props} />
     </Provider>
   );
 }
 
 describe('SimpleHeader', () => {
   beforeEach(() => {
-    current = {headerLabel: 'Story'};
-    parent = undefined;
+    levels = [
+      {id: '1', status: 'perfect', levelNumber: 1},
+      {id: '2', status: 'attempted', levelNumber: 2, isCurrentLevel: true},
+      {id: '3', levelNumber: 3},
+    ];
   });
 
-  it('places the image, the name and label, and the buttons', () => {
+  it('places the lesson name, the bubbles and the buttons', () => {
     renderHeader();
     const row = document.querySelector('#header_middle_content') as HTMLElement;
     expect(row.classList.contains(styles.row)).toBe(true);
-    expect(row.querySelector('img')?.getAttribute('src')).toBe('/logo.png');
-    const name = document.querySelector('#unit_name_container') as HTMLElement;
-    expect(name.getAttribute('href')).toBe('/s/hoai2026-dev');
-    expect(name.textContent).toBe('hoai2026 dev');
-    expect(screen.getByText('Story').getAttribute('title')).toBe('Story');
+    expect(screen.getByText('Make a quest').getAttribute('title')).toBe(
+      'Make a quest'
+    );
     expect(
       document
         .querySelector('#project_info_container')
@@ -70,28 +70,53 @@ describe('SimpleHeader', () => {
     ).toBe(true);
   });
 
-  it("reads a current sublevel's label from its parent", () => {
-    current = {};
-    parent = {headerLabel: 'Parent'};
+  it('draws a bubble per level with its status, the current one marked, none of them a link', () => {
     renderHeader();
-    expect(screen.getByText('Parent')).toBeTruthy();
+    const group = screen.getByRole('group', {name: 'Lesson progress'});
+    const bubbles = group.querySelectorAll('[role=img]');
+    expect([...bubbles].map(b => b.getAttribute('aria-label'))).toEqual([
+      'Level 1, completed',
+      'Level 2, in progress',
+      'Level 3, not started',
+    ]);
+    expect(bubbles[1].getAttribute('aria-current')).toBe('step');
+    expect(bubbles[1].textContent).toBe('2');
+    expect(group.querySelectorAll('a, button')).toHaveLength(0);
   });
 
-  it('shows the name alone when the current level has no label', () => {
-    current = {};
+  it('marks a level current when one of its sublevels is', () => {
+    levels = [
+      {id: '1', levelNumber: 1, sublevels: [{isCurrentLevel: true}]},
+      {id: '2', levelNumber: 2},
+    ];
     renderHeader();
-    expect(screen.queryByText('·')).toBeNull();
-    expect(document.querySelector('#unit_name_container')).not.toBeNull();
+    const bubbles = screen
+      .getByRole('group', {name: 'Lesson progress'})
+      .querySelectorAll('[role=img]');
+    expect(bubbles[0].getAttribute('aria-current')).toBe('step');
+    expect(bubbles[1].getAttribute('aria-current')).toBeNull();
   });
 
-  it('reserves the saved-at slot, and fills it once the project store asks', () => {
+  it('draws no bubbles until the lesson is known', () => {
+    levels = undefined;
     renderHeader();
-    expect(screen.queryByText('Saved')).toBeNull();
-    const slot = document.querySelector('#unit_name_container')?.parentElement
-      ?.nextElementSibling as HTMLElement;
-    expect(slot.style.height).toBe('14px');
-    renderHeader({showProjectUpdatedAt: true});
-    expect(screen.getByText('Saved')).toBeTruthy();
+    expect(
+      screen.getByRole('group', {name: 'Lesson progress'}).childElementCount
+    ).toBe(0);
+  });
+
+  it('shows the save status once the project store asks', () => {
+    renderHeader();
+    expect(screen.queryByRole('img', {name: /Saved|Saving|saved/})).toBeNull();
+    renderHeader({showProjectUpdatedAt: true, projectUpdatedStatus: 'saving'});
+    expect(screen.getByRole('img', {name: 'Saving'})).toBeTruthy();
+  });
+
+  it('leaves a slot for the lab to fill', () => {
+    renderHeader();
+    const slot = document.getElementById(HEADER_ACTION_ID) as HTMLElement;
+    expect(slot.classList.contains(styles.action)).toBe(true);
+    expect(slot.childElementCount).toBe(0);
   });
 
   it('marks the document as carrying the header', () => {

@@ -1,7 +1,9 @@
 // A level's callouts (the callouts level property): a bouncing arrow at
-// one of the lab's tabs or scene controls, shown while the level's
-// condition holds. The first callout whose condition holds is the one
-// shown.
+// one of the lab's tabs, scene controls or the Continue button, shown while
+// the level's condition holds. The first callout whose condition holds is
+// the one shown.
+
+import {instructionsContinueButtonElementId} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 
 import {Tab} from './redux/spriteLab2Redux';
 import {CalloutDirection} from './views/components/Callout';
@@ -18,7 +20,9 @@ export type CalloutTarget =
   /** The scene menu's button. */
   | 'scene-menu'
   /** A scene's entry in the open scene menu; `scene` names it. */
-  | 'scene-option';
+  | 'scene-option'
+  /** The instructions panel's Continue, once the level lets it show. */
+  | 'continue-button';
 
 /** Where an arrow goes. */
 export interface CalloutSpot {
@@ -70,6 +74,8 @@ export function calloutSelector({target, scene}: CalloutSpot): string {
         console.warn('scene-option callout names no scene');
       }
       return `#${sceneMenuItemId(scene ?? '')}`;
+    case 'continue-button':
+      return `#${instructionsContinueButtonElementId}`;
   }
 }
 

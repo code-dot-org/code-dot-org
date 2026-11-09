@@ -265,11 +265,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Animated is on until the student turns it off, and stays as they left
   // it from image to image; no image or level turns it off for them.
   const [animated, setAnimated] = useState(true);
-  const {story, offerStory, handleAsking, endStory} = useLearningStory({
-    active,
-    learning,
-    levelId,
-  });
+  const {story, offerStory, handleAsking, tellStory, endStory} =
+    useLearningStory({
+      active,
+      learning,
+      levelId,
+    });
   const tools = useDrawing({
     images,
     saveEdited: writer.saveEdited,
@@ -510,6 +511,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onRate={handleRate}
           wordLayout={wordLayout}
           compactBehindTheScenes
+          onTellStory={tellStory}
           imageSource={imageSource}
           imageCacheUrl={imageCacheUrl}
           advanced={
@@ -617,6 +619,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                       <ReopenedBehindTheScenes
                         image={chosenImage}
                         disabled={busy}
+                        onTellStory={tellStory}
                       />
                     )}
                     {advancedOffered && (
@@ -773,6 +776,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           prompt={story.prompt}
           imageType={story.imageType}
           onDone={endStory}
+          onClose={story.asked ? endStory : undefined}
         />
       )}
     </div>

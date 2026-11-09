@@ -8,22 +8,37 @@ import {sentPromptsFor} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sent
 import {ProjectImage} from '../projectImages';
 
 import BehindTheScenes from './BehindTheScenes';
+import {LearningStory, storyFor} from './useLearningStory';
 
 interface ReopenedBehindTheScenesProps {
   image: ProjectImage;
   disabled?: boolean;
+  /** Tells the image's "How AI made your image" story. */
+  onTellStory?: (story: LearningStory) => void;
 }
 
 const ReopenedBehindTheScenes: React.FunctionComponent<
   ReopenedBehindTheScenesProps
-> = ({image, disabled}) => {
+> = ({image, disabled, onTellStory}) => {
   const generation = image.props.generation;
   if (!generation) {
     return null;
   }
+  const {src, sheet} = image;
   return (
     <BehindTheScenes
       compact
+      story={
+        src
+          ? storyFor(
+              src,
+              generation.prompt,
+              generation.imageType,
+              sheet?.frameSize
+            )
+          : undefined
+      }
+      onTellStory={onTellStory}
       sent={sentPromptsFor(
         generation.prompt,
         {

@@ -111,7 +111,7 @@ statsig_api_client_key: !Secret
 statsig_api_client_key_session_replay: !Secret
 <% else %>
 statsig_server_secret_key: 'secret-fake-key'
-statsig_api_client_key: 'client-fake-key'
+statsig_api_client_key: ''
 <% end -%>
 
 # Enables DCDO settings via cookies
@@ -139,6 +139,7 @@ build_apps: true
 build_studio: true
 use_my_apps: true
 use_my_studio: true
+skip_seed: true
 
 # Pass in secrets via env vars, since Drone cannot access secrets directly.
 contentful_hour_of_ai_access_token: <%= ENV['CONTENTFUL_HOUR_OF_AI_ACCESS_TOKEN'] %>

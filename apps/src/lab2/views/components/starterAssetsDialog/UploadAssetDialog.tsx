@@ -142,10 +142,36 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
       title={'Manage Starter Assets'}
       className={styles.starterAssetsModal}
       primaryButtonProps={{
-        children: 'Upload',
-        onClick: () => {},
-        style: {display: 'none'},
+        children: buttonText,
+        disabled: loading || !!requestInProgress,
+        onClick: () => {
+          clearAlert();
+          openFileInput();
+        },
+        startIcon: (
+          <FontAwesomeV6Icon
+            iconName={requestInProgress ? 'spinner' : 'upload'}
+            animationType={requestInProgress ? 'spin' : undefined}
+          />
+        ),
       }}
+      secondaryButtonProps={{children: 'Cancel', onClick: onClose}}
+      startActions={
+        selectedFiles.length > 0 && (
+          <MuiButton
+            variant="contained"
+            color="error"
+            size="medium"
+            loadingPosition="start"
+            disabled={!!requestInProgress}
+            onClick={onDeleteSelected}
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconName="trash" />}
+          >{`Delete ${selectedFiles.length} ${
+            selectedFiles.length === 1 ? 'file' : 'files'
+          }`}</MuiButton>
+        )
+      }
       customContent={
         loading ? (
           <Loading />
@@ -167,55 +193,7 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
           </>
         )
       }
-      customBottomContent={
-        <>
-          <div className={styles.modalActionsRow}>
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              size="medium"
-              onClick={onClose}
-              type="button"
-            >
-              {'Cancel'}
-            </MuiButton>
-            {selectedFiles.length > 0 && (
-              <MuiButton
-                variant="contained"
-                color="error"
-                size="medium"
-                loadingPosition="start"
-                disabled={!!requestInProgress}
-                onClick={onDeleteSelected}
-                type="button"
-                startIcon={<FontAwesomeV6Icon iconName="trash" />}
-              >{`Delete ${selectedFiles.length} ${
-                selectedFiles.length === 1 ? 'file' : 'files'
-              }`}</MuiButton>
-            )}
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
-              disabled={loading || !!requestInProgress}
-              onClick={() => {
-                clearAlert();
-                openFileInput();
-              }}
-              type="button"
-              startIcon={
-                <FontAwesomeV6Icon
-                  iconName={requestInProgress ? 'spinner' : 'upload'}
-                  animationType={requestInProgress ? 'spin' : undefined}
-                />
-              }
-            >
-              {buttonText}
-            </MuiButton>
-          </div>
-          {alert && <DialogAlert {...alert} />}
-        </>
-      }
+      customBottomContent={alert && <DialogAlert {...alert} />}
     />
   );
 };
