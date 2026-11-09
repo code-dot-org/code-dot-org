@@ -2638,9 +2638,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               </>
             }
             arrows={
-              activeTab === 'Play' ? (
-                <ArrowCross arrows={arrowSet} />
-              ) : undefined
+              <ArrowCross arrows={arrowSet} disabled={activeTab !== 'Play'} />
             }
             fadeTrigger={fadeTrigger}
             covered={jumpCover}

@@ -399,7 +399,9 @@ $z-over-blockly: 71;
 }
 
 // Fixed 400x400 (the engine canvas size); positioned via a transform so it can
-// animate between the corner preview and the centered play view.
+// animate between the corner preview and the centered play view. The
+// corners are rounded in canvas units, so they scale with the box; the
+// canvas and the covers inside are clipped to them.
 .playspaceBox {
   position: absolute;
   top: 0;
@@ -407,6 +409,8 @@ $z-over-blockly: 71;
   width: 400px;
   height: 400px;
   transform-origin: 0 0;
+  border-radius: 10px;
+  overflow: hidden;
   background: var(--background-neutral-secondary);
   // Transitions, and the preview-only hairline seam, are set inline:
   // transform only animates between the two visible placements; opacity
@@ -460,8 +464,9 @@ $z-over-blockly: 71;
   pointer-events: none;
 }
 
-// Four buttons in a cross; its size is CROSS_PX in Playspace.
-$arrow-key: 56px;
+// Four buttons in a cross: three keys and two gaps across, which the
+// playspace's CROSS_KEY and CROSS_KEY_GAP repeat to place it.
+$arrow-key: 34px;
 $arrow-gap: 6px;
 
 .arrowCross {
@@ -492,17 +497,20 @@ $arrow-gap: 6px;
 // no selection or callout under a long press. Dark squares with a light
 // chevron on the light stage, after the legacy lab's touch controls; the
 // inverse tokens turn them light on the dark theme's stage. Doubled to
-// outrank the icon button's own size and colors.
+// outrank the icon button's own size, least width, padding and colors.
 .holdKey.holdKey {
   touch-action: none;
   user-select: none;
   -webkit-touch-callout: none;
   width: $arrow-key;
   height: $arrow-key;
-  border-radius: 12px;
+  min-width: $arrow-key;
+  min-height: $arrow-key;
+  padding: 0;
+  border-radius: 7px;
   background: var(--background-neutral-primary-inverse);
   color: var(--text-neutral-primary-inverse);
-  font-size: 20px;
+  font-size: 12px;
 
   &:hover,
   &:active {
@@ -512,11 +520,22 @@ $arrow-gap: 6px;
       var(--background-neutral-primary)
     );
   }
+
+  // Under a preview that is not being played: the keys as they are, only
+  // the chevrons dimmed toward them.
+  &:disabled {
+    background: var(--background-neutral-primary-inverse);
+    color: color-mix(
+      in srgb,
+      var(--text-neutral-primary-inverse) 45%,
+      var(--background-neutral-primary-inverse)
+    );
+  }
 }
 
-// Restart buttons in the play area's top-right corner, clear of the game
-// wherever the canvas lands. The overlay ignores pointer events; these
-// buttons accept them.
+// Restart buttons in the play area's top-right corner; the playspace keeps
+// the game clear of them (CONTROLS_INSET repeats the inset). The overlay
+// ignores pointer events; these buttons accept them.
 .playControls {
   position: absolute;
   top: 8px;

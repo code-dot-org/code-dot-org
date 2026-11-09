@@ -13,6 +13,7 @@ import moduleStyles from '../sprite-lab2-view.module.scss';
 interface HoldKeyProps {
   gameKey: GameKey;
   label: string;
+  disabled?: boolean;
   className?: string;
   children?: React.ReactNode;
 }
@@ -40,6 +41,7 @@ const afterFrames = (count: number, fn: () => void): void => {
 const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
   gameKey,
   label,
+  disabled,
   className,
   children,
 }) => {
@@ -118,6 +120,7 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
   return (
     <MuiIconButton
       aria-label={label}
+      disabled={disabled}
       className={classNames(moduleStyles.holdKey, className)}
       {...handlers}
     >
@@ -128,40 +131,45 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
 
 interface ArrowCrossProps {
   arrows: ArrowSet;
+  /** Shown but inert, under a preview that is not being played. */
+  disabled?: boolean;
 }
 
 /**
- * The four arrow buttons in a cross, shown while a scene with a player runs.
- * Under gravity the top one jumps; weightless, it steers up.
+ * The four arrow buttons in a cross, for a scene with a player. Under
+ * gravity the top one jumps; weightless, it steers up.
  */
 export const ArrowCross: React.FunctionComponent<ArrowCrossProps> = ({
   arrows,
+  disabled = false,
 }) => {
   if (arrows === 'none') {
     return null;
   }
+  const keys: [GameKey, string, string, string][] = [
+    [
+      'up',
+      arrows === 'jump' ? 'Jump' : 'Up',
+      'chevron-up',
+      moduleStyles.arrowUp,
+    ],
+    ['left', 'Left', 'chevron-left', moduleStyles.arrowLeft],
+    ['right', 'Right', 'chevron-right', moduleStyles.arrowRight],
+    ['down', 'Down', 'chevron-down', moduleStyles.arrowDown],
+  ];
   return (
     <div className={moduleStyles.arrowCross}>
-      <HoldKey
-        gameKey="up"
-        label={arrows === 'jump' ? 'Jump' : 'Up'}
-        className={moduleStyles.arrowUp}
-      >
-        <FontAwesomeV6Icon iconName="chevron-up" />
-      </HoldKey>
-      <HoldKey gameKey="left" label="Left" className={moduleStyles.arrowLeft}>
-        <FontAwesomeV6Icon iconName="chevron-left" />
-      </HoldKey>
-      <HoldKey
-        gameKey="right"
-        label="Right"
-        className={moduleStyles.arrowRight}
-      >
-        <FontAwesomeV6Icon iconName="chevron-right" />
-      </HoldKey>
-      <HoldKey gameKey="down" label="Down" className={moduleStyles.arrowDown}>
-        <FontAwesomeV6Icon iconName="chevron-down" />
-      </HoldKey>
+      {keys.map(([gameKey, label, icon, className]) => (
+        <HoldKey
+          key={gameKey}
+          gameKey={gameKey}
+          label={label}
+          disabled={disabled}
+          className={className}
+        >
+          <FontAwesomeV6Icon iconName={icon} />
+        </HoldKey>
+      ))}
     </div>
   );
 };

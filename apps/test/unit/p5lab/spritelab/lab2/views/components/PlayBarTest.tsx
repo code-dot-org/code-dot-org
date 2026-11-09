@@ -71,4 +71,11 @@ describe('ArrowCross', () => {
     render(<ArrowCross arrows="none" />);
     expect(screen.queryByRole('button')).toBeNull();
   });
+
+  it('can stand under a preview, disabled', () => {
+    render(<ArrowCross arrows="jump" disabled />);
+    const buttons = screen.getAllByRole('button');
+    expect(buttons).toHaveLength(4);
+    buttons.forEach(button => expect(button).toBeDisabled());
+  });
 });

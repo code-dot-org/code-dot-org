@@ -40,8 +40,19 @@ const MARGIN = 12;
 // The bar pinned to the overlay's foot, the editors' scene bar's twin: the
 // editor strip's height ($editor-strip-height).
 const BOTTOM_BAR_PX = 41;
-// The arrow cross: three of its buttons and two gaps (.arrowCross).
-export const CROSS_PX = 3 * 56 + 2 * 6;
+// The arrow cross: three keys and two gaps across, as the stylesheet's
+// .arrowCross has them; the same size in every mode.
+const CROSS_KEY = 34;
+const CROSS_KEY_GAP = 6;
+const CROSS_PX = 3 * CROSS_KEY + 2 * CROSS_KEY_GAP;
+// Under the preview the cross sits this far below the box and this share
+// of the box's width in from its left edge, so buttons could one day join
+// it on the right.
+const PREVIEW_CROSS_GAP = 2 * MARGIN;
+const PREVIEW_CROSS_INSET_SHARE = 0.06;
+// The restart buttons' inset from the play area's top-right corner, as the
+// stylesheet's .playControls has it.
+const CONTROLS_INSET = 8;
 // The preview column's share of the browser's width.
 const PREVIEW_WIDTH_SHARE = 1 / 3;
 // Under PREVIEW_MIN_PX the column widens, up to the max share, and the
@@ -95,15 +106,27 @@ function centeredIn(area: Size): Placement {
  * Where the play view goes in an overlay of `size`, clear of a guide hung
  * from a bottom corner: centered when that clears the guide, else beside or
  * above it, whichever leaves the box bigger. `reserveBelow` is room kept
- * under the box (the play bar).
+ * under the box (the play bar); `reserveTop`, room kept over it.
  */
 export function playPlacement(
   size: Size,
   guideSize?: {width: number; height: number} | null,
   reserveBelow = 0,
   reserveLeft = 0,
-  guideSide: 'left' | 'right' = 'right'
+  guideSide: 'left' | 'right' = 'right',
+  reserveTop = 0
 ): Placement {
+  if (reserveTop) {
+    // Place within the area under the reserve, then shift down.
+    const inner = playPlacement(
+      {w: size.w, h: size.h - reserveTop},
+      guideSize,
+      reserveBelow,
+      reserveLeft,
+      guideSide
+    );
+    return {...inner, y: inner.y + reserveTop};
+  }
   if (reserveLeft) {
     // Place within the area right of the reserve, then shift back.
     const inner = playPlacement(
@@ -168,40 +191,109 @@ export function playPlacement(
   return above.scale > beside.scale ? above : beside;
 }
 
+type PlayLayout = {box: Placement; cross: {x: number; y: number} | null};
+
 /**
- * Where the play view and its arrow cross go: the cross at the box's right,
- * or under it when that leaves the box bigger. The cross is as wide as it is
- * tall, `cross`; 0 means there is none. `reserveBottom` is the bar's room.
+ * Where the play view and its arrow cross go: the box centered on the stage
+ * with the cross in the room to its right, half a key left of that room's
+ * center, or the cross under the box when that leaves the box bigger. The
+ * cross is as wide as it is tall, `cross`; 0 means there is none.
+ * `reserveBottom` is the bar's room. `corner` is the size of the restart
+ * buttons in the top-right corner: a box that would reach under them is
+ * placed below them instead.
  */
 export function playLayout(
   size: Size,
   guideSize: {width: number; height: number} | null,
   guideSide: 'left' | 'right',
   reserveBottom: number,
-  cross: number
-): {box: Placement; cross: {x: number; y: number} | null} {
+  cross: number,
+  corner: Size | null = null
+): PlayLayout {
+  const laid = playLayoutUnder(
+    size,
+    guideSize,
+    guideSide,
+    reserveBottom,
+    cross
+  );
+  if (!corner) {
+    return laid;
+  }
+  const cornerLeft = size.w - CONTROLS_INSET - corner.w - MARGIN;
+  const cornerBottom = CONTROLS_INSET + corner.h + MARGIN;
+  const {box} = laid;
+  const underCorner =
+    box.x + CANVAS * box.scale > cornerLeft && box.y < cornerBottom;
+  return underCorner
+    ? playLayoutUnder(
+        size,
+        guideSize,
+        guideSide,
+        reserveBottom,
+        cross,
+        cornerBottom
+      )
+    : laid;
+}
+
+/** playLayout with `reserveTop` kept clear over the box. */
+function playLayoutUnder(
+  size: Size,
+  guideSize: {width: number; height: number} | null,
+  guideSide: 'left' | 'right',
+  reserveBottom: number,
+  cross: number,
+  reserveTop = 0
+): PlayLayout {
   if (!cross) {
     return {
-      box: playPlacement(size, guideSize, reserveBottom, 0, guideSide),
+      box: playPlacement(
+        size,
+        guideSize,
+        reserveBottom,
+        0,
+        guideSide,
+        reserveTop
+      ),
       cross: null,
     };
   }
-  // Beside: the box and the cross centered as one, which a box centered in
-  // the width less the cross gives; a guide's clearance then counts the
-  // cross too, since the guide shifts in by the same amount.
-  const beside = playPlacement(
-    {w: size.w - cross - MARGIN, h: size.h},
+  // Beside: the box centered as it would be alone. When the room right of
+  // it is too narrow for the cross, the box gives that room up on both
+  // sides, so it stays centered; the guide, hung from the stage's corner,
+  // then stands that much nearer the narrowed edge.
+  const edge = cross + 2 * MARGIN;
+  let beside = playPlacement(
+    size,
     guideSize,
     reserveBottom,
     0,
-    guideSide
+    guideSide,
+    reserveTop
   );
+  if (size.w - (beside.x + CANVAS * beside.scale) < edge) {
+    const guideIn =
+      guideSize && guideSize.width > edge
+        ? {...guideSize, width: guideSize.width - edge}
+        : null;
+    const inner = playPlacement(
+      {w: size.w - 2 * edge, h: size.h},
+      guideIn,
+      reserveBottom,
+      0,
+      guideSide,
+      reserveTop
+    );
+    beside = {...inner, x: inner.x + edge};
+  }
   const stacked = playPlacement(
     size,
     guideSize,
     reserveBottom + cross + MARGIN,
     0,
-    guideSide
+    guideSide,
+    reserveTop
   );
   if (stacked.scale > beside.scale) {
     const boxSide = CANVAS * stacked.scale;
@@ -214,10 +306,14 @@ export function playLayout(
     };
   }
   const boxSide = CANVAS * beside.scale;
+  const boxRight = beside.x + boxSide;
   return {
     box: beside,
     cross: {
-      x: beside.x + boxSide + MARGIN,
+      x: Math.max(
+        boxRight + MARGIN,
+        boxRight + (size.w - boxRight - cross) / 2 - CROSS_KEY / 2
+      ),
       y: beside.y + (boxSide - cross) / 2,
     },
   };
@@ -249,8 +345,8 @@ interface PlayspaceProps {
   // Pinned to the foot: across the column in preview, across the stage in
   // play. The box is placed to leave it room.
   bottomBar?: React.ReactNode;
-  // The arrow cross, beside or under the box while playing, whichever
-  // leaves the box bigger.
+  // The arrow cross: under the box in preview; while playing beside or
+  // under it, whichever leaves the box bigger.
   arrows?: React.ReactNode;
   // Across the top of the column in preview; the box is placed under it.
   columnHeader?: React.ReactNode;
@@ -314,6 +410,25 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     belowObserver.current = observer;
   }, []);
   useEffect(() => () => belowObserver.current?.disconnect(), []);
+  // The restart buttons' size, so the box keeps clear of their corner. The
+  // last size stands while they are away: the box is placed against it as
+  // play opens, before they are measured again.
+  const [controlsSize, setControlsSize] = useState<Size | null>(null);
+  const controlsObserver = useRef<ResizeObserver | null>(null);
+  const controlsRef = useCallback((el: HTMLDivElement | null) => {
+    controlsObserver.current?.disconnect();
+    controlsObserver.current = null;
+    if (!el || typeof ResizeObserver === 'undefined') {
+      return;
+    }
+    const observer = new ResizeObserver(entries => {
+      const rect = entries[0].contentRect;
+      setControlsSize({w: rect.width, h: rect.height});
+    });
+    observer.observe(el);
+    controlsObserver.current = observer;
+  }, []);
+  useEffect(() => () => controlsObserver.current?.disconnect(), []);
 
   const dispatch = useAppDispatch();
   // The location-picker block puts us in "selecting" mode; while active, the
@@ -448,6 +563,18 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   useEffect(() => {
     wasMeasured.current = measured;
   }, [measured]);
+  // The transform is against the overlay's corner, and a panel opening or
+  // closing beside the overlay moves that corner: a transform animated
+  // across such a resize would slide the box over the screen from where
+  // the old corner put it, to end where it already was. So a resize moves
+  // the box at once; only a change of mode slides it.
+  const lastSize = useRef(size);
+  const resized =
+    lastSize.current.w !== size.w || lastSize.current.h !== size.h;
+  useEffect(() => {
+    lastSize.current = size;
+  }, [size]);
+  const slide = animate && !resized;
 
   // Track the overlay's size so we can center/scale the canvas to fit.
   useEffect(() => {
@@ -468,15 +595,19 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   // panels left of the workspace count against the code, not the preview.
   const browserWidth = window.innerWidth || size.w;
   const share = Math.round(browserWidth * columnShare);
-  // The room under the box: the card and its gap, then the bar at the foot.
+  // The room under the box: the cross, the card and its gap, then the bar
+  // at the foot.
   const bottomRoom = bottomBar ? BOTTOM_BAR_PX : 0;
-  const belowRoomFor = (card: number) =>
+  const cardRoomFor = (card: number) =>
     bottomRoom + (below ? CARD_GAP + card : 0);
   // A taller need shrinks the box, never widens the column, which would
   // reflow the text taller again.
   let columnWidth = share;
   const topRoom = columnHeader ? COLUMN_HEADER_PX : 0;
   const need = Math.max(BELOW_MIN_PX, belowNeed + 2 * CARD_BORDER_PX);
+  const crossSize = arrows ? CROSS_PX : 0;
+  const crossRoom = arrows ? crossSize + PREVIEW_CROSS_GAP : 0;
+  const belowRoomFor = (card: number) => cardRoomFor(card) + crossRoom;
   const inColumn = playPlacement(
     {w: size.w, h: size.h - topRoom},
     null,
@@ -497,7 +628,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   if (below && boxWidth < PREVIEW_MIN_PX) {
     const maxColumn = Math.round(browserWidth * PREVIEW_WIDTH_MAX_SHARE);
     const besideWidth = Math.min(
-      size.h - topRoom - 2 * CARD_GAP - bottomRoom,
+      size.h - topRoom - 2 * CARD_GAP - bottomRoom - crossRoom,
       maxColumn - BESIDE_TEXT_MIN_PX - 3 * CARD_GAP
     );
     if (besideWidth > boxWidth && besideWidth >= BESIDE_BOX_MIN_PX) {
@@ -523,7 +654,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     beside && side === 'left'
       ? previewPlacement.x + previewBoxSide + CARD_GAP
       : columnLeft + CARD_GAP;
-  const belowRoomTop = previewPlacement.y + previewBoxSide + CARD_GAP;
+  const belowRoomTop =
+    previewPlacement.y + previewBoxSide + crossRoom + CARD_GAP;
   const belowRoom = size.h - belowRoomTop - CARD_GAP - bottomRoom;
   const belowHeight = Math.min(belowNeed + 2 * CARD_BORDER_PX, belowRoom);
   const belowCard: React.CSSProperties = beside
@@ -571,10 +703,26 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
 
   const playing =
     mode === 'play'
-      ? playLayout(size, cardGuide, side, bottomRoom, arrows ? CROSS_PX : 0)
+      ? playLayout(
+          size,
+          cardGuide,
+          side,
+          bottomRoom,
+          crossSize,
+          controls ? controlsSize : null
+        )
       : null;
   const placement: Placement = playing ? playing.box : previewPlacement;
   const {x, y, scale} = placement;
+  // In preview the cross sits under the box, toward its left.
+  const cross = playing
+    ? playing.cross
+    : arrows
+    ? {
+        x: previewPlacement.x + previewBoxSide * PREVIEW_CROSS_INSET_SHARE,
+        y: previewPlacement.y + previewBoxSide + PREVIEW_CROSS_GAP,
+      }
+    : null;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
   // The room the code gives up.
@@ -711,7 +859,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           // in light mode. A shadow, not a border, so the 400x400 geometry
           // the transform and pointer math rely on stays untouched.
           boxShadow: '0 0 0 1px var(--borders-neutral-primary)',
-          transition: animate
+          transition: slide
             ? `transform ${SLIDE_MS}ms ease, opacity ${FADE_MS}ms ease-in`
             : `opacity ${FADE_MS}ms ease-in`,
           // Interactive in Play, and while picking a location (so the preview
@@ -814,7 +962,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         </p>
       )}
       {mode === 'play' && controls && (
-        <div className={moduleStyles.playControls}>{controls}</div>
+        <div ref={controlsRef} className={moduleStyles.playControls}>
+          {controls}
+        </div>
       )}
       {mode === 'preview' && columnHeader && measured && (
         <div
@@ -824,15 +974,17 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           {columnHeader}
         </div>
       )}
-      {playing?.cross && arrows && (
+      {cross && arrows && (
         <div
           ref={crossRef}
           className={moduleStyles.arrowCrossHolder}
-          style={{
-            transform: `translate(${playing.cross.x}px, ${playing.cross.y}px)`,
-            opacity: visible ? 1 : 0,
-            transition: `opacity ${FADE_MS}ms ease-in`,
-          }}
+          style={
+            {
+              transform: `translate(${cross.x}px, ${cross.y}px)`,
+              opacity: visible ? 1 : 0,
+              transition: `opacity ${FADE_MS}ms ease-in`,
+            } as React.CSSProperties
+          }
         >
           {arrows}
         </div>
