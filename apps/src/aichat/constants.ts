@@ -48,6 +48,8 @@ export const AI_CHAT_NOT_AUTHORIZED_TEACHER =
   'You must be a verified teacher or sign in via Google, Microsoft, Facebook, or an LMS to use and assign this tool.';
 export const AI_CHAT_NOT_AUTHORIZED_STUDENT =
   'Your teacher has not enabled this tool. Check with your teacher if you think this is an error.';
+export const AI_NOT_AVAILABLE_INTERNATIONAL =
+  'This AI feature is not available in your region.';
 export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL =
   'This AI Chat level is not available in your region.';
 export const AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL =

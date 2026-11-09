@@ -4,7 +4,7 @@ import {
   AI_SETTINGS_SUPPORT_LINK,
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
-  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+  AI_NOT_AVAILABLE_INTERNATIONAL,
   REGION_BLOCKED_COPY,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
@@ -95,7 +95,7 @@ export function useAiChatDisabledState({
       const copy = clientType && REGION_BLOCKED_COPY[clientType];
       return {
         disabled: true,
-        disabledMessage: copy?.message ?? AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+        disabledMessage: copy?.message ?? AI_NOT_AVAILABLE_INTERNATIONAL,
         ...(copy && {
           disabledLink: {
             href: copy.faqLink,

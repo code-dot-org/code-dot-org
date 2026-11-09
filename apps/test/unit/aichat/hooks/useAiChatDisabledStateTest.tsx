@@ -6,6 +6,7 @@ import {
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
   AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+  AI_NOT_AVAILABLE_INTERNATIONAL,
   AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
   AI_CHAT_LAB_FAQ_LINK,
   AI_TUTOR_FAQ_LINK,
@@ -252,7 +253,7 @@ describe('useAiChatDisabledState', () => {
 
     expect(result.current).toEqual({
       disabled: true,
-      disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+      disabledMessage: AI_NOT_AVAILABLE_INTERNATIONAL,
     });
   });
 

@@ -1,6 +1,6 @@
 import {
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
-  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+  AI_NOT_AVAILABLE_INTERNATIONAL,
   AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
 } from '@cdo/apps/aichat/constants';
 import {addChatEvent} from '@cdo/apps/aichat/redux/thunks/addChatEvent';
@@ -44,7 +44,7 @@ describe('notifyErrorUnauthorized', () => {
       jest.fn(),
       AiChatClientTypes.FLOW_LAB
     );
-    expect(shownText()).toBe(AI_CHAT_NOT_AVAILABLE_INTERNATIONAL);
+    expect(shownText()).toBe(AI_NOT_AVAILABLE_INTERNATIONAL);
   });
 
   it('shows the authorization message for any other 403', async () => {

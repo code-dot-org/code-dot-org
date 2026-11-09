@@ -1,7 +1,7 @@
 import {
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
-  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+  AI_NOT_AVAILABLE_INTERNATIONAL,
   MODEL_REGION_BLOCKED_ERROR,
   REGION_BLOCKED_COPY,
 } from '@cdo/apps/aichat/constants';
@@ -38,7 +38,7 @@ export async function notifyErrorUnauthorized(
   };
   const regionMessage =
     (clientType && REGION_BLOCKED_COPY[clientType]?.message) ||
-    AI_CHAT_NOT_AVAILABLE_INTERNATIONAL;
+    AI_NOT_AVAILABLE_INTERNATIONAL;
   const messageText = regionBlocked
     ? regionMessage
     : userTypeToMessageText[userType] ||
