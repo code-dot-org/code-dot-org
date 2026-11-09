@@ -607,6 +607,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
+      // Squares are default-grid cells; other grid sizes need a new guard.
       const jumpSpeed =
         speed === undefined
           ? Math.sqrt(
