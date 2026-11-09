@@ -3,10 +3,10 @@ import {
   Widget,
   WidgetMetric,
   WidgetProperties,
-} from 'cloudwatch-dashboard-types';
+} from "cloudwatch-dashboard-types";
 
-import {AiRequestExecutionStatus} from '../../../../../../apps/generated-scripts/sharedConstants';
-import {getTypedKeys} from '../../../../../../apps/src/types/utils';
+import { AiRequestExecutionStatus } from "../../../../../../apps/generated-scripts/sharedConstants";
+import { getTypedKeys } from "../../../../../../apps/src/types/utils";
 import {
   BROWSER_COLORS,
   commonGraphProps,
@@ -18,10 +18,10 @@ import {
   REGION,
   STATUS_COLORS,
   WARNING_COLOR,
-} from '../constants';
+} from "../constants";
 
-export function createTitleWidget(title: string, level: 'h1' | 'h2'): Widget {
-  return createMarkdownWidget(`${level === 'h1' ? '#' : '##'} **${title}**`);
+export function createTitleWidget(title: string, level: "h1" | "h2"): Widget {
+  return createMarkdownWidget(`${level === "h1" ? "#" : "##"} **${title}**`);
 }
 
 export function createMarkdownWidget(
@@ -30,7 +30,7 @@ export function createMarkdownWidget(
   height = 1
 ): Widget {
   return {
-    type: 'text',
+    type: "text",
     width,
     height,
     properties: {
@@ -40,31 +40,31 @@ export function createMarkdownWidget(
 }
 
 export function createLatencyComparisonGraph(
-  models: {name: string; id: string}[],
+  models: { name: string; id: string }[],
   environment: string,
-  view: 'timeSeries' | 'gauge' = 'timeSeries',
-  dimensions?: {width: number; height: number}
+  view: "timeSeries" | "gauge" = "timeSeries",
+  dimensions?: { width: number; height: number }
 ): Widget {
   return {
     ...commonGraphProps,
     ...(dimensions || {}),
     properties: {
       region: REGION,
-      title: 'Model Latency by Model',
-      metrics: models.map<WidgetMetric>(({name, id}) => [
-        'AWS/SageMaker',
-        'ModelLatency',
-        'EndpointName',
-        id + '-' + environment,
-        'VariantName',
+      title: "Model Latency by Model",
+      metrics: models.map<WidgetMetric>(({ name, id }) => [
+        "AWS/SageMaker",
+        "ModelLatency",
+        "EndpointName",
+        id + "-" + environment,
+        "VariantName",
         ENDPOINT_VARIANT,
-        {label: name, color: MODEL_COLORS[id]},
+        { label: name, color: MODEL_COLORS[id] },
       ]),
       view,
       setPeriodToTimeRange: true,
-      ...(view === 'gauge' && {
+      ...(view === "gauge" && {
         yAxis: {
-          left: {min: 0, max: LATENCY_GAUGE_MAX_SECONDS * Math.pow(10, 6)}, // convert to microseconds
+          left: { min: 0, max: LATENCY_GAUGE_MAX_SECONDS * Math.pow(10, 6) }, // convert to microseconds
         },
       }),
     },
@@ -76,13 +76,13 @@ export function createActiveJobGraph(environment: string): Widget {
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: 'Active Job Latency',
-      metrics: ['TotalTime', 'ExecutionTime', 'WaitTime'].map(metric => [
-        'code-dot-org/ActiveJob',
+      title: "Active Job Latency",
+      metrics: ["TotalTime", "ExecutionTime", "WaitTime"].map((metric) => [
+        "code-dot-org/ActiveJob",
         metric,
-        'JobName',
-        'AichatRequestChatCompletionJob',
-        'Environment',
+        "JobName",
+        "AichatRequestChatCompletionJob",
+        "Environment",
         environment,
       ]),
     },
@@ -92,15 +92,15 @@ export function createActiveJobGraph(environment: string): Widget {
 export function createBrowserLatencyComparisonGraph(
   browsers: string[],
   environment: string,
-  view: 'timeSeries' | 'gauge' = 'timeSeries',
-  dimensions?: {width: number; height: number}
+  view: "timeSeries" | "gauge" = "timeSeries",
+  dimensions?: { width: number; height: number }
 ): Widget {
   return {
     ...commonGraphProps,
     ...(dimensions || {}),
     properties: {
       region: REGION,
-      title: 'Chat Request Latency by Browser',
+      title: "Chat Request Latency by Browser",
       metrics: browsers
         .map<WidgetMetric[]>((browser, i) => [
           [
@@ -121,9 +121,9 @@ export function createBrowserLatencyComparisonGraph(
         .flat(),
       view,
       setPeriodToTimeRange: true,
-      ...(view === 'gauge' && {
+      ...(view === "gauge" && {
         yAxis: {
-          left: {min: 0, max: LATENCY_GAUGE_MAX_SECONDS * Math.pow(10, 3)}, // convert to milliseconds
+          left: { min: 0, max: LATENCY_GAUGE_MAX_SECONDS * Math.pow(10, 3) }, // convert to milliseconds
         },
       }),
     },
@@ -131,7 +131,7 @@ export function createBrowserLatencyComparisonGraph(
 }
 
 export function createBrowserLatencyByModelGraph(
-  models: {name: string; id: string}[],
+  models: { name: string; id: string }[],
   environment: string,
   browser: string
 ): Widget {
@@ -140,16 +140,16 @@ export function createBrowserLatencyByModelGraph(
     properties: {
       region: REGION,
       title: `Chat Request Latency by Model - ${browser}`,
-      metrics: models.map<WidgetMetric>(({name, id}) => [
+      metrics: models.map<WidgetMetric>(({ name, id }) => [
         `${environment}-browser-metrics`,
-        'AichatModelResponseTime',
-        'Hostname',
-        'studio.code.org',
-        'ModelId',
+        "AichatModelResponseTime",
+        "Hostname",
+        "studio.code.org",
+        "ModelId",
         id,
-        'AppName',
-        'aichat',
-        'Browser',
+        "AppName",
+        "aichat",
+        "Browser",
         browser,
         {
           label: name,
@@ -166,9 +166,9 @@ function getLatencySearch(
   model?: string
 ) {
   return `SEARCH('{${environment}-browser-metrics,AppName,Browser,BrowserVersion,Hostname,ModelId} AppName="aichat" ${
-    browser ? `Browser="${browser}"` : ''
+    browser ? `Browser="${browser}"` : ""
   } ${
-    model ? `ModelId="${model}"` : ''
+    model ? `ModelId="${model}"` : ""
   } MetricName="AichatModelResponseTime"', 'Average', 300)`;
 }
 
@@ -183,47 +183,47 @@ export function createBrowserChatPerformanceGraph(
       title: `Chat Completion Performance - ${browser}`,
       metrics: [
         ...[
-          'ChatCompletionRequestInitiated',
-          'ChatCompletionErrorUnhandled',
-          'ChatCompletionErrorRateLimited',
+          "ChatCompletionRequestInitiated",
+          "ChatCompletionErrorUnhandled",
+          "ChatCompletionErrorRateLimited",
         ].map<WidgetMetric>((metric, i) => [
           `${environment}-browser-metrics`,
           `Aichat.${metric}`,
-          'Hostname',
-          'studio.code.org',
-          'AppName',
-          'aichat',
-          'Browser',
+          "Hostname",
+          "studio.code.org",
+          "AppName",
+          "aichat",
+          "Browser",
           browser,
           {
             visible: i === 0,
             id: `m${i + 1}`,
             color: COUNT_COLOR,
-            label: i === 0 ? 'Request Count' : metric,
+            label: i === 0 ? "Request Count" : metric,
           },
         ]),
         [
           {
-            id: 'e1',
+            id: "e1",
             expression: `m2/m1 * 100`,
             label: `Error Rate (%)`,
-            yAxis: 'right',
+            yAxis: "right",
             color: ERROR_COLOR,
           },
         ] as unknown as ExpressionMetric,
         [
           {
-            id: 'e2',
+            id: "e2",
             expression: `m3/m1 * 100`,
             label: `Rate Limited (%)`,
-            yAxis: 'right',
+            yAxis: "right",
             color: WARNING_COLOR,
           },
         ] as unknown as ExpressionMetric,
       ],
-      stat: 'Sum',
+      stat: "Sum",
       yAxis: {
-        right: {label: '%', showUnits: false, min: 0, max: 100},
+        right: { label: "%", showUnits: false, min: 0, max: 100 },
       },
     },
   };
@@ -238,59 +238,59 @@ export function createOverallChatPerformanceGraph(
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: 'Chat Completion Performance - All Browsers',
+      title: "Chat Completion Performance - All Browsers",
       metrics: [
         ...[
-          'ChatCompletionRequestInitiated',
-          'ChatCompletionErrorUnhandled',
-          'ChatCompletionErrorRateLimited',
+          "ChatCompletionRequestInitiated",
+          "ChatCompletionErrorUnhandled",
+          "ChatCompletionErrorRateLimited",
         ]
           .map<WidgetMetric[]>((metric, i) =>
             browsers.map<WidgetMetric>((browser, j) => [
               `${environment}-browser-metrics`,
               `Aichat.${metric}`,
-              'Hostname',
-              'studio.code.org',
-              'AppName',
-              'aichat',
-              'Browser',
+              "Hostname",
+              "studio.code.org",
+              "AppName",
+              "aichat",
+              "Browser",
               browser,
-              {id: `m${i + 1}${j + 1}`, visible: false},
+              { id: `m${i + 1}${j + 1}`, visible: false },
             ])
           )
           .flat(),
         [
           {
-            expression: browserIndices.map(i => `m1${i}`).join('+'),
-            label: 'Request Count',
+            expression: browserIndices.map((i) => `m1${i}`).join("+"),
+            label: "Request Count",
             color: COUNT_COLOR,
-            id: 'e1',
+            id: "e1",
           },
         ] as unknown as ExpressionMetric,
         [
           {
             expression: `(${browserIndices
-              .map(i => `m2${i}`)
-              .join('+')})/e1 * 100`,
-            label: 'Error Rate (%)',
-            yAxis: 'right',
+              .map((i) => `m2${i}`)
+              .join("+")})/e1 * 100`,
+            label: "Error Rate (%)",
+            yAxis: "right",
             color: ERROR_COLOR,
           },
         ] as unknown as ExpressionMetric,
         [
           {
             expression: `(${browserIndices
-              .map(i => `m3${i}`)
-              .join('+')})/e1 * 100`,
-            label: 'Rate Limited (%)',
-            yAxis: 'right',
+              .map((i) => `m3${i}`)
+              .join("+")})/e1 * 100`,
+            label: "Rate Limited (%)",
+            yAxis: "right",
             color: WARNING_COLOR,
           },
         ] as unknown as ExpressionMetric,
       ],
-      stat: 'Sum',
+      stat: "Sum",
       yAxis: {
-        right: {label: '%', showUnits: false, min: 0, max: 100},
+        right: { label: "%", showUnits: false, min: 0, max: 100 },
       },
     },
   };
@@ -307,30 +307,30 @@ export function createBrowserSavePerformanceGraph(
       title: `Save/Update Performance - ${browser}`,
       metrics: [
         ...[
-          'SaveStarted',
-          'SaveFailError',
-          'SaveFailToxicityDetected',
+          "SaveStarted",
+          "SaveFailError",
+          "SaveFailToxicityDetected",
         ].map<WidgetMetric>((metric, i) => [
           `${environment}-browser-metrics`,
           `Aichat.${metric}`,
-          'Hostname',
-          'studio.code.org',
-          'AppName',
-          'aichat',
-          'Browser',
+          "Hostname",
+          "studio.code.org",
+          "AppName",
+          "aichat",
+          "Browser",
           browser,
           {
             visible: i === 0,
             id: `m${i + 1}`,
             color: COUNT_COLOR,
-            label: i === 0 ? 'Save/Update Count' : metric,
+            label: i === 0 ? "Save/Update Count" : metric,
           },
         ]),
         [
           {
             expression: `m2/m1 * 100`,
             label: `Error Rate (%)`,
-            yAxis: 'right',
+            yAxis: "right",
             color: ERROR_COLOR,
           },
         ] as unknown as ExpressionMetric,
@@ -338,14 +338,14 @@ export function createBrowserSavePerformanceGraph(
           {
             expression: `m3/m1 * 100`,
             label: `Toxicity Detected (%)`,
-            yAxis: 'right',
+            yAxis: "right",
             color: WARNING_COLOR,
           },
         ] as unknown as ExpressionMetric,
       ],
-      stat: 'Sum',
+      stat: "Sum",
       yAxis: {
-        right: {label: '%', showUnits: false, min: 0, max: 100},
+        right: { label: "%", showUnits: false, min: 0, max: 100 },
       },
     },
   };
@@ -360,55 +360,55 @@ export function createOverallSavePerformanceGraph(
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: 'Save/Update Performance - All Browsers',
+      title: "Save/Update Performance - All Browsers",
       metrics: [
-        ...['SaveStarted', 'SaveFailError', 'SaveFailToxicityDetected']
+        ...["SaveStarted", "SaveFailError", "SaveFailToxicityDetected"]
           .map<WidgetMetric[]>((metric, i) =>
             browsers.map<WidgetMetric>((browser, j) => [
               `${environment}-browser-metrics`,
               `Aichat.${metric}`,
-              'Hostname',
-              'studio.code.org',
-              'AppName',
-              'aichat',
-              'Browser',
+              "Hostname",
+              "studio.code.org",
+              "AppName",
+              "aichat",
+              "Browser",
               browser,
-              {id: `m${i + 1}${j + 1}`, visible: false},
+              { id: `m${i + 1}${j + 1}`, visible: false },
             ])
           )
           .flat(),
         [
           {
-            expression: browserIndices.map(i => `m1${i}`).join('+'),
-            label: 'Save/Update Count',
+            expression: browserIndices.map((i) => `m1${i}`).join("+"),
+            label: "Save/Update Count",
             color: COUNT_COLOR,
-            id: 'e1',
+            id: "e1",
           },
         ] as unknown as ExpressionMetric,
         [
           {
             expression: `(${browserIndices
-              .map(i => `m2${i}`)
-              .join('+')})/e1 * 100`,
-            label: 'Error Rate (%)',
-            yAxis: 'right',
+              .map((i) => `m2${i}`)
+              .join("+")})/e1 * 100`,
+            label: "Error Rate (%)",
+            yAxis: "right",
             color: ERROR_COLOR,
           },
         ] as unknown as ExpressionMetric,
         [
           {
             expression: `(${browserIndices
-              .map(i => `m3${i}`)
-              .join('+')})/e1 * 100`,
-            label: 'Toxicity Detected (%)',
-            yAxis: 'right',
+              .map((i) => `m3${i}`)
+              .join("+")})/e1 * 100`,
+            label: "Toxicity Detected (%)",
+            yAxis: "right",
             color: WARNING_COLOR,
           },
         ] as unknown as ExpressionMetric,
       ],
-      stat: 'Sum',
+      stat: "Sum",
       yAxis: {
-        right: {label: '%', showUnits: false, min: 0, max: 100},
+        right: { label: "%", showUnits: false, min: 0, max: 100 },
       },
     },
   };
@@ -419,68 +419,68 @@ export function createJobPerformanceGraph(environment: string): Widget {
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: 'Execution Performance - All Models',
+      title: "Execution Performance - All Models",
       metrics: [
         [
           {
             expression: `SEARCH('{GenAICurriculum,Environment,ModelId} Environment=\"${environment}\" MetricName=\"AichatRequestChatCompletionJob.Start\"', 'Sum', 300)`,
-            id: 'e1',
+            id: "e1",
             visible: false,
           },
         ],
         [
           {
             expression: `SEARCH('{GenAICurriculum,Environment,ExecutionStatus,ModelId} Environment=\"${environment}\" ExecutionStatus=\"FAILURE\"', 'Sum', 300)`,
-            id: 'e2',
+            id: "e2",
             visible: false,
           },
         ],
         [
           {
-            expression: 'SUM(e1)',
-            label: 'Executions',
+            expression: "SUM(e1)",
+            label: "Executions",
             color: COUNT_COLOR,
           },
         ],
         [
           {
-            expression: 'SUM(e2)/SUM(e1) * 100',
-            label: 'Failure Rate (%)',
-            yAxis: 'right',
+            expression: "SUM(e2)/SUM(e1) * 100",
+            label: "Failure Rate (%)",
+            yAxis: "right",
             color: ERROR_COLOR,
           },
         ] as unknown as ExpressionMetric, // needed for yAxis (TS issue)
       ] as WidgetMetric[],
       yAxis: {
-        right: {min: 0, max: 100, label: '%', showUnits: false},
-        left: {label: 'Count', showUnits: false},
+        right: { min: 0, max: 100, label: "%", showUnits: false },
+        left: { label: "Count", showUnits: false },
       },
     },
   };
 }
 
 export function createExecutionCountGraph(
-  models: {name: string; id: string}[],
+  models: { name: string; id: string }[],
   environment: string,
-  dimensions?: {width: number; height: number}
+  dimensions?: { width: number; height: number }
 ): Widget {
   return {
     ...commonGraphProps,
     ...(dimensions || {}),
     properties: {
       region: REGION,
-      title: 'Total Executions by Model',
-      metrics: models.map<WidgetMetric>(({name, id}) => [
-        'GenAICurriculum',
-        'AichatRequestChatCompletionJob.Start',
-        'Environment',
+      title: "Total Executions by Model",
+      metrics: models.map<WidgetMetric>(({ name, id }) => [
+        "GenAICurriculum",
+        "AichatRequestChatCompletionJob.Start",
+        "Environment",
         environment,
-        'ModelId',
+        "ModelId",
         id,
-        {label: name, color: MODEL_COLORS[id]},
+        { label: name, color: MODEL_COLORS[id] },
       ]),
-      view: 'singleValue',
-      stat: 'Sum',
+      view: "singleValue",
+      stat: "Sum",
       setPeriodToTimeRange: true,
     } as WidgetProperties,
   };
@@ -489,12 +489,12 @@ export function createExecutionCountGraph(
 export function createJobExecutionGraph(
   modelId: string,
   environment: string,
-  dimensions?: {width: number; height: number}
+  dimensions?: { width: number; height: number }
 ): Widget {
-  const namespace = 'GenAICurriculum';
-  const prefix = 'AichatRequestChatCompletionJob';
+  const namespace = "GenAICurriculum";
+  const prefix = "AichatRequestChatCompletionJob";
   const endStatuses = getTypedKeys(AiRequestExecutionStatus).filter(
-    status =>
+    (status) =>
       AiRequestExecutionStatus[status] > AiRequestExecutionStatus.SUCCESS
   );
 
@@ -503,39 +503,39 @@ export function createJobExecutionGraph(
     ...(dimensions || {}),
     properties: {
       region: REGION,
-      title: 'Job Executions',
+      title: "Job Executions",
       metrics: [
         [
           namespace,
           `${prefix}.Start`,
-          'Environment',
+          "Environment",
           environment,
-          'ModelId',
+          "ModelId",
           modelId,
-          {id: 'm0', label: 'Executions', color: COUNT_COLOR},
+          { id: "m0", label: "Executions", color: COUNT_COLOR },
         ],
         ...endStatuses.map<WidgetMetric>((status, i) => [
           namespace,
           `${prefix}.Finish`,
-          'ExecutionStatus',
+          "ExecutionStatus",
           status,
-          'Environment',
+          "Environment",
           environment,
-          'ModelId',
+          "ModelId",
           modelId,
-          {visible: false, id: `m${i + 1}`},
+          { visible: false, id: `m${i + 1}` },
         ]),
         ...endStatuses.map<WidgetMetric>((status, i) => [
           {
             expression: `m${i + 1}/m0 * 100`,
             label: `${status} %`,
-            yAxis: 'right',
+            yAxis: "right",
             color: STATUS_COLORS[status],
           },
         ]),
       ],
-      stat: 'Sum',
-      yAxis: {right: {min: 0, max: 100, label: '%', showUnits: false}},
+      stat: "Sum",
+      yAxis: { right: { min: 0, max: 100, label: "%", showUnits: false } },
     },
   };
 }
@@ -548,20 +548,20 @@ export function createInvocationGraph(
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: 'Invocations',
+      title: "Invocations",
       metrics: [
-        'Invocations',
-        'InvocationsPerInstance',
-        'ConcurrentRequestsPerModel',
-      ].map(metric => [
-        'AWS/SageMaker',
+        "Invocations",
+        "InvocationsPerInstance",
+        "ConcurrentRequestsPerModel",
+      ].map((metric) => [
+        "AWS/SageMaker",
         metric,
-        'EndpointName',
-        modelId + '-' + environment,
-        'VariantName',
+        "EndpointName",
+        modelId + "-" + environment,
+        "VariantName",
         ENDPOINT_VARIANT,
       ]),
-      stat: 'Sum',
+      stat: "Sum",
     },
   };
 }
@@ -574,20 +574,20 @@ export function createInvocationErrorGraph(
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: 'Invocation Errors',
+      title: "Invocation Errors",
       metrics: [
-        'InvocationModelErrors',
-        'Invocation5XXErrors',
-        'Invocation4XXErrors',
-      ].map(metric => [
-        'AWS/SageMaker',
+        "InvocationModelErrors",
+        "Invocation5XXErrors",
+        "Invocation4XXErrors",
+      ].map((metric) => [
+        "AWS/SageMaker",
         metric,
-        'EndpointName',
-        modelId + '-' + environment,
-        'VariantName',
+        "EndpointName",
+        modelId + "-" + environment,
+        "VariantName",
         ENDPOINT_VARIANT,
       ]),
-      stat: 'Sum',
+      stat: "Sum",
     },
   };
 }
@@ -597,27 +597,27 @@ export function createUtilizationGraph(
   environment: string
 ): Widget {
   const metrics = [
-    'DiskUtilization',
-    'MemoryUtilization',
-    'CPUUtilization',
-    'GPUUtilization',
-    'GPUMemoryUtilization',
+    "DiskUtilization",
+    "MemoryUtilization",
+    "CPUUtilization",
+    "GPUUtilization",
+    "GPUMemoryUtilization",
   ];
 
   return {
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: 'Utilization',
-      metrics: metrics.map(metric => [
-        '/aws/sagemaker/Endpoints',
+      title: "Utilization",
+      metrics: metrics.map((metric) => [
+        "/aws/sagemaker/Endpoints",
         metric,
-        'EndpointName',
-        modelId + '-' + environment,
-        'VariantName',
+        "EndpointName",
+        modelId + "-" + environment,
+        "VariantName",
         ENDPOINT_VARIANT,
       ]),
-      yAxis: {left: {min: 0, max: 100}},
+      yAxis: { left: { min: 0, max: 100 } },
     },
   };
 }
@@ -625,19 +625,19 @@ export function createUtilizationGraph(
 export function createLatencyGraph(
   modelId: string,
   environment: string,
-  view: 'singleValue' | 'timeSeries' = 'timeSeries',
-  dimensions?: {width: number; height: number}
+  view: "singleValue" | "timeSeries" = "timeSeries",
+  dimensions?: { width: number; height: number }
 ): Widget {
   const latencyMetrics: WidgetMetric[] = [];
-  ['ModelLatency', 'OverheadLatency'].forEach((metric, i) => {
+  ["ModelLatency", "OverheadLatency"].forEach((metric, i) => {
     latencyMetrics.push([
-      'AWS/SageMaker',
+      "AWS/SageMaker",
       metric,
-      'EndpointName',
-      modelId + '-' + environment,
-      'VariantName',
+      "EndpointName",
+      modelId + "-" + environment,
+      "VariantName",
       ENDPOINT_VARIANT,
-      {id: `m${i + 1}`, visible: false},
+      { id: `m${i + 1}`, visible: false },
     ]);
     latencyMetrics.push([
       {
@@ -652,52 +652,132 @@ export function createLatencyGraph(
     ...(dimensions || {}),
     properties: {
       region: REGION,
-      title: `${view === 'singleValue' ? 'Average ' : ''}Latency`,
+      title: `${view === "singleValue" ? "Average " : ""}Latency`,
       metrics: [
         [
-          'GenAICurriculum',
-          'AichatRequestChatCompletionJob.ExecutionTime',
-          'Environment',
+          "GenAICurriculum",
+          "AichatRequestChatCompletionJob.ExecutionTime",
+          "Environment",
           environment,
-          'ModelId',
+          "ModelId",
           modelId,
-          {label: 'Job Execution Time'},
+          { label: "Job Execution Time" },
         ],
-        ...['1', '2'].map<WidgetMetric>(attempt => [
-          'GenAICurriculum',
-          'AichatSafety.Openai.Latency',
-          'Attempts',
+        ...["1", "2"].map<WidgetMetric>((attempt) => [
+          "GenAICurriculum",
+          "AichatSafety.Openai.Latency",
+          "Attempts",
           attempt,
-          'PromptVersion',
-          'V0',
-          'Environment',
+          "PromptVersion",
+          "V0",
+          "Environment",
           environment,
-          {label: `OpenAI Latency (${attempt} attempt(s))`},
+          { label: `OpenAI Latency (${attempt} attempt(s))` },
         ]),
         ...latencyMetrics,
       ],
-      yAxis: {left: {label: 'Seconds', showUnits: false}},
+      yAxis: { left: { label: "Seconds", showUnits: false } },
       view,
-      ...{setPeriodToTimeRange: true},
+      ...{ setPeriodToTimeRange: true },
     },
   };
 }
 
 export function createLogTable(
-  type: 'error' | 'warning',
+  type: "error" | "warning",
   environment: string
 ): Widget {
-  const level = type === 'error' ? 'SEVERE' : 'WARNING';
-  const key = type === 'error' ? 'errorMessage' : 'message';
+  const level = type === "error" ? "SEVERE" : "WARNING";
+  const key = type === "error" ? "errorMessage" : "message";
   return {
     height: 6,
     width: 9,
-    type: 'log',
+    type: "log",
     properties: {
       region: REGION,
       query: `SOURCE '${environment}-browser-events' | fields @message\n| filter level = \"${level}\" and message.appName = 'aichat'\n| stats count(*) as count by message.${key} as ${type}\n| display ${type}, count\n| sort by count desc`,
       title: `${type}s by type`,
-      view: 'table',
+      view: "table",
+    },
+  };
+}
+
+export function createMultimodalLatencyGraph(
+  modelId: string,
+  environment: string,
+  view: "singleValue" | "timeSeries" = "timeSeries",
+  dimensions?: { width: number; height: number }
+): Widget {
+  const latencyMetrics: WidgetMetric[] = [];
+  ["true", "false"].forEach((multimodalValue) => {
+    ["ModelLatency", "OverheadLatency"].forEach((metric, i) => {
+      const metricId = `m${i + 1}_${multimodalValue}`;
+      latencyMetrics.push([
+        "AWS/SageMaker",
+        metric,
+        "EndpointName",
+        `${modelId}-${environment}`,
+        "VariantName",
+        ENDPOINT_VARIANT,
+        "Multimodal",
+        multimodalValue,
+        { id: metricId, visible: false },
+      ]);
+      latencyMetrics.push([
+        {
+          expression: `${metricId} / 1000000`,
+          label: `${metric} (Multimodal=${multimodalValue})`,
+        },
+      ]);
+    });
+  });
+
+  const executionTimeMetrics: WidgetMetric[] = ["true", "false"].map(
+    (multimodalValue) => [
+      "GenAICurriculum",
+      "AichatRequestChatCompletionJob.ExecutionTime",
+      "Environment",
+      environment,
+      "ModelId",
+      modelId,
+      "Multimodal",
+      multimodalValue,
+      {
+        label: `Job Execution Time (Multimodal=${multimodalValue})`,
+      },
+    ]
+  );
+
+  const openaiLatencyMetrics: WidgetMetric[] = ["true", "false"].map(
+    (multimodalValue) => [
+      "GenAICurriculum",
+      "AichatSafety.Openai.Latency",
+      "PromptVersion",
+      "V0",
+      "Environment",
+      environment,
+      "Multimodal",
+      multimodalValue,
+      {
+        label: `OpenAI Latency (Multimodal=${multimodalValue})`,
+      },
+    ]
+  );
+
+  return {
+    ...commonGraphProps,
+    ...(dimensions || {}),
+    properties: {
+      region: REGION,
+      title: `${view === "singleValue" ? "Average " : ""}Latency`,
+      metrics: [
+        ...executionTimeMetrics,
+        ...openaiLatencyMetrics,
+        ...latencyMetrics,
+      ],
+      yAxis: { left: { label: "Seconds", showUnits: false } },
+      view,
+      setPeriodToTimeRange: true,
     },
   };
 }
