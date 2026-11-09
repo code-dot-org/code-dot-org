@@ -1,12 +1,25 @@
-import {Typography} from '@mui/material';
+import {
+  Typography,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button as MuiButton,
+} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import {navigateToHref} from '@cdo/apps/utils';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import RubricEditor from './RubricEditor';
-import {saveRubricToTable, SAVING_TEXT, styles} from './rubricHelper';
+import {
+  saveRubricToTable,
+  deleteRubric,
+  SAVING_TEXT,
+  styles,
+} from './rubricHelper';
 
 export default function RubricsContainer({
   unitName,
@@ -14,6 +27,7 @@ export default function RubricsContainer({
   submittableLevels,
   rubric,
   lessonId,
+  allowMajorCurriculumChanges,
 }) {
   const [learningGoalList, setLearningGoalList] = useState(
     !!rubric ? rubric.learningGoals : initialLearningGoal
@@ -22,6 +36,7 @@ export default function RubricsContainer({
   const [s3ConfigDir, setS3ConfigDir] = useState(rubric?.s3ConfigDir || '');
 
   const [saveNotificationText, setSaveNotificationText] = useState('');
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const hasSubmittableLevels = submittableLevels.length > 0;
 
   const generateLearningGoalKey = () => {
@@ -168,6 +183,16 @@ export default function RubricsContainer({
     setSelectedLevelForAssessment(event.target.value);
   };
 
+  const handleDeleteConfirm = async () => {
+    setShowDeleteConfirm(false);
+    try {
+      const data = await deleteRubric(rubric.id);
+      navigateToHref(data.lessonEditPath);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   const pageHeader = !!rubric ? 'Modify your rubric' : 'Create your rubric';
 
   return (
@@ -213,7 +238,16 @@ export default function RubricsContainer({
             aiRubricS3ConfigValue={s3ConfigDir}
             onAiRubricS3ConfigChange={setS3ConfigDir}
           />
-          <div style={styles.bottomRow}>
+          <div style={styles.bottomRowSpread}>
+            {allowMajorCurriculumChanges && !!rubric && (
+              <Button
+                className="ui-test-delete-button"
+                color={Button.ButtonColor.red}
+                text="Delete Rubric"
+                onClick={() => setShowDeleteConfirm(true)}
+                size={Button.ButtonSize.narrow}
+              />
+            )}
             <Button
               className="ui-test-save-button"
               color={Button.ButtonColor.brandSecondaryDefault}
@@ -228,6 +262,30 @@ export default function RubricsContainer({
               {saveNotificationText}
             </Typography>
           </div>
+          <Dialog
+            open={showDeleteConfirm}
+            onClose={() => setShowDeleteConfirm(false)}
+          >
+            <DialogTitle>Delete Rubric</DialogTitle>
+            <DialogContent>
+              <Typography variant="body2">
+                Are you sure you want to permanently delete this rubric from the
+                lesson? This action cannot be undone.
+              </Typography>
+            </DialogContent>
+            <DialogActions>
+              <MuiButton onClick={() => setShowDeleteConfirm(false)}>
+                Cancel
+              </MuiButton>
+              <MuiButton
+                onClick={handleDeleteConfirm}
+                color="error"
+                variant="contained"
+              >
+                Delete
+              </MuiButton>
+            </DialogActions>
+          </Dialog>
         </div>
       )}
       {!hasSubmittableLevels && (
@@ -257,6 +315,7 @@ RubricsContainer.propTypes = {
   ),
   rubric: PropTypes.object,
   lessonId: PropTypes.number,
+  allowMajorCurriculumChanges: PropTypes.bool,
 };
 
 const initialLearningGoal = [
