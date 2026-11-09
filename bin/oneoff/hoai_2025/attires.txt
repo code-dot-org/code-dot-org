@@ -1,0 +1,7 @@
+headscarf
+sunglasses 
+headphones 
+crown 
+beanie 
+colorful_hair 
+no_accessories

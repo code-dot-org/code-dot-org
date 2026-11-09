@@ -1,0 +1,14 @@
+wolf 
+moose 
+frog 
+tiger 
+frilled_lizard 
+axolotl 
+fox 
+giraffe
+koala 
+rabbit 
+cat 
+dog 
+squirrel
+flame
