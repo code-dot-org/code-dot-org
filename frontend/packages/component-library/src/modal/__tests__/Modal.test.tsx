@@ -156,6 +156,15 @@ describe('Modal Component', () => {
       Reflect.deleteProperty(proto, 'clientHeight');
     });
 
+    it('should leave the tab stop to a control in the content', () => {
+      render(
+        <Modal {...defaultProps} customContent={<input aria-label="Name" />} />,
+      );
+      const content = screen.getByText(defaultProps.description!).parentElement;
+      expect(content).toHaveAttribute('tabindex', '-1');
+      expect(screen.getByRole('textbox', {name: 'Name'})).toHaveFocus();
+    });
+
     it('should make the content a tab stop and focus it first', () => {
       render(<Modal {...defaultProps} />);
       const content = screen.getByText(defaultProps.description!).parentElement;

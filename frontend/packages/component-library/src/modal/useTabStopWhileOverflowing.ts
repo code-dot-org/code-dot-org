@@ -1,10 +1,17 @@
 import {RefObject, useLayoutEffect} from 'react';
 
+const FOCUSABLE_SELECTOR =
+  'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), ' +
+  'textarea:not([disabled]), select:not([disabled]), ' +
+  '[tabindex]:not([tabindex="-1"])';
+
 // Keyboard users scroll an element by focusing it and pressing the arrow keys.
 // Chrome and Firefox let them tab to a scrolling element that has no focusable
 // child; Safari does not, so a long, text-only modal could not be scrolled from
 // the keyboard there. This hook gives the element a tab stop (tabindex="0")
 // while its content overflows, and takes it away once the content fits.
+// Content with a control of its own needs no tab stop: tabbing to the control
+// scrolls it into view, and in a form the first field should take first focus.
 const useTabStopWhileOverflowing = (ref: RefObject<HTMLElement>) => {
   // A layout effect, not a plain effect: the dialog picks what to focus on open
   // in an effect of its own, which runs after this one. Setting the tab stop
@@ -17,7 +24,10 @@ const useTabStopWhileOverflowing = (ref: RefObject<HTMLElement>) => {
       // attribute. Either way the element leaves the tab order, but if it held
       // focus when the content shrank, removing the attribute would drop focus
       // to the page body, outside the dialog.
-      el.tabIndex = el.scrollHeight - el.clientHeight > 1 ? 0 : -1;
+      const overflows =
+        el.scrollHeight - el.clientHeight > 1 ||
+        el.scrollWidth - el.clientWidth > 1;
+      el.tabIndex = overflows && !el.querySelector(FOCUSABLE_SELECTOR) ? 0 : -1;
     };
     sync();
     if (typeof ResizeObserver === 'undefined') return;
