@@ -1,13 +1,21 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button, Typography} from '@mui/material';
-import React, {useCallback, useState} from 'react';
+import {Button, buttonClasses, Typography} from '@mui/material';
+import classNames from 'classnames';
+import React, {MutableRefObject, useCallback, useEffect, useState} from 'react';
+import {createPortal} from 'react-dom';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import QuizMetadataList from '../QuizMetadataList';
 import {QuizQuestionType} from '../types';
 
-import {EMPTY_PAGE_REASON, UNSAVED_QUESTION_REASON} from './constants';
+import {
+  EMPTY_PAGE_REASON,
+  editedQuestionsReason,
+  NO_CHANGES_REASON,
+  QUIZ_BUILDER_HEADER_ID,
+  UNSAVED_QUESTION_REASON,
+} from './constants';
 import CreateQuestionDropdown from './CreateQuestionDropdown';
 import DisabledReason, {ariaDisabledProps} from './DisabledReason';
 import IntroScreenCard from './IntroScreenCard';
@@ -21,6 +29,7 @@ import styles from './quiz-builder-workspace.module.scss';
 
 interface QuizBuilderWorkspaceProps {
   levelId: number;
+  quizVersion: MutableRefObject<number | null>;
   quizTitle: string;
   showIntroScreen: boolean;
   customIntroText: string;
@@ -33,6 +42,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   QuizBuilderWorkspaceProps
 > = ({
   levelId,
+  quizVersion,
   quizTitle,
   showIntroScreen,
   customIntroText,
@@ -44,13 +54,16 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     questions,
     pages,
     isLoading,
+    isSavingQuiz,
     error,
     errorQuestionId,
+    hasUnsavedLayout,
     addPage,
     addPendingQuestion,
     saveQuestion,
     removeQuestion,
-  } = useQuizBuilderQuestions(levelId);
+    saveQuiz,
+  } = useQuizBuilderQuestions(levelId, quizVersion);
   // Only one card is expanded at a time - opening one collapses whichever
   // was open before it. A create opens the just-created question straight
   // into editing.
@@ -82,6 +95,53 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     (pages.some(page => page.questions.length === 0)
       ? EMPTY_PAGE_REASON
       : undefined);
+
+  const editedCount = [...dirtyIds].filter(
+    id => !isPendingQuestionId(id)
+  ).length;
+  const saveDisabledReason = hasPendingQuestion
+    ? UNSAVED_QUESTION_REASON
+    : editedCount > 0
+    ? editedQuestionsReason(editedCount)
+    : !hasUnsavedLayout
+    ? NO_CHANGES_REASON
+    : undefined;
+
+  const hasUnsavedChanges = hasUnsavedLayout || dirtyIds.size > 0;
+  useEffect(() => {
+    if (!hasUnsavedChanges) {
+      return;
+    }
+    const warn = (event: BeforeUnloadEvent) => event.preventDefault();
+    window.addEventListener('beforeunload', warn);
+    return () => window.removeEventListener('beforeunload', warn);
+  }, [hasUnsavedChanges]);
+
+  // Save quiz goes in a slot in the page header (_header.html.haml).
+  const [headerSlot] = useState(() =>
+    document.getElementById(QUIZ_BUILDER_HEADER_ID)
+  );
+  const saveButton = (
+    <DisabledReason reason={isSavingQuiz ? undefined : saveDisabledReason}>
+      <Button
+        variant="outlined"
+        color="secondary"
+        size="extraSmall"
+        type="button"
+        onClick={() => saveQuiz()}
+        disabled={isSavingQuiz}
+        startIcon={<FontAwesomeV6Icon iconName="floppy-disk" />}
+        {...ariaDisabledProps(isSavingQuiz ? undefined : saveDisabledReason)}
+        // After the spread, which sets its own className when disabled.
+        className={classNames(
+          styles.headerSaveButton,
+          saveDisabledReason && !isSavingQuiz && buttonClasses.disabled
+        )}
+      >
+        {isSavingQuiz ? 'Saving…' : 'Save quiz'}
+      </Button>
+    </DisabledReason>
+  );
 
   const handleCreate = (page: number, type: QuizQuestionType) => {
     setExpandedId(addPendingQuestion(page, type));
@@ -141,7 +201,9 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                   }
                   error={question.id === errorQuestionId ? error : null}
                   onSave={saveQuestion}
-                  onRemove={removeQuestion}
+                  // Until removal offers Remove from quiz or Delete, it deletes
+                  // if unused.
+                  onRemove={id => removeQuestion(id, {permanently: true})}
                   onDirtyChange={setQuestionDirty}
                 />
               </li>
@@ -169,6 +231,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
 
   return (
     <PanelContainer id="quiz-workspace" headerContent="Workspace">
+      {headerSlot && createPortal(saveButton, headerSlot)}
       <div className={styles.workspace}>
         <header className={styles.header}>
           <Typography variant="h2" component="h1" className={styles.title}>

@@ -108,7 +108,8 @@ interface QuizConfigurationPanelProps {
   initialValues: QuizConfigurationData;
   // Called on success with the server's values for the fields this save sent,
   // so a caller can sync its own copy of the configuration without a reload.
-  onSaved: (updated: Partial<QuizConfigurationData>) => void;
+  // version is the quiz's new saved version; see useQuizBuilderQuestions.
+  onSaved: (updated: Partial<QuizConfigurationData>, version: number) => void;
 }
 
 const QuizConfigurationPanel: React.FunctionComponent<
@@ -214,8 +215,9 @@ const QuizConfigurationPanel: React.FunctionComponent<
         true,
         {'Content-Type': 'application/json'}
       );
-      const saved: QuizConfigurationData = await response.json();
-      onSaved(pick(saved, Object.keys(body)));
+      const saved: QuizConfigurationData & {version: number} =
+        await response.json();
+      onSaved(pick(saved, Object.keys(body)), saved.version);
       return true;
     } catch (error) {
       setError(await networkErrorMessage(error));
