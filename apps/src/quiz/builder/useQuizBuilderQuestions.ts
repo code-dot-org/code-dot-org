@@ -1,10 +1,4 @@
-import {
-  MutableRefObject,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -18,6 +12,7 @@ import {
   QuizBuilderPage,
   QuizBuilderQuestion,
   QuizBuilderQuestionsState,
+  QuizConfigurationData,
   QuizPlacement,
   QuizQuestionPayload,
 } from './types';
@@ -58,24 +53,14 @@ function placementsFromLayout(layout: PageLayout): QuizPlacement[] {
     );
 }
 
-// Records a version the server returned. Overlapping saves can resolve out of
-// order, and versions only grow, so it never moves backward.
-export function advanceQuizVersion(
-  quizVersion: MutableRefObject<number | null>,
-  version: number
-) {
-  quizVersion.current = Math.max(quizVersion.current ?? 0, version);
-}
-
 // Manages a quiz's questions and its layout (which questions it has, on
 // which pages, in what order). Question content saves on its own; the layout,
 // including removals and deletions, is local until saveQuiz.
 export default function useQuizBuilderQuestions(
-  levelId: number,
-  // The quiz's saved version, shared with the configuration saves that also
-  // advance it.
-  quizVersion: MutableRefObject<number | null>
+  levelId: number
 ): QuizBuilderQuestionsState {
+  // The quiz's saved version, which Save quiz sends back.
+  const quizVersion = useRef<number | null>(null);
   const [questionsById, setQuestionsById] = useState<
     Record<number, QuizBuilderQuestion>
   >({});
@@ -105,9 +90,7 @@ export default function useQuizBuilderQuestions(
       );
       const body = await response.json();
       const loaded: ServerQuestion[] = body.questions ?? [];
-      if (typeof body.version === 'number') {
-        advanceQuizVersion(quizVersion, body.version);
-      }
+      quizVersion.current = body.version ?? null;
       const loadedLayout = groupByPage(loaded).map(({questions}) =>
         questions.map(q => q.id)
       );
@@ -122,7 +105,7 @@ export default function useQuizBuilderQuestions(
     } finally {
       setIsLoading(false);
     }
-  }, [levelId, quizVersion]);
+  }, [levelId]);
 
   useEffect(() => {
     load();
@@ -288,52 +271,59 @@ export default function useQuizBuilderQuestions(
     []
   );
 
-  const saveQuiz = useCallback(async () => {
-    if (layout.some(questionIds => questionIds.some(isPendingQuestionId))) {
-      setError('Save every question before saving the quiz.');
+  const saveQuiz = useCallback(
+    async (config: Partial<QuizConfigurationData> = {}) => {
+      if (layout.some(questionIds => questionIds.some(isPendingQuestionId))) {
+        setError('Save every question before saving the quiz.');
+        setErrorQuestionId(null);
+        return false;
+      }
+      setError(null);
       setErrorQuestionId(null);
-      return false;
-    }
-    setError(null);
-    setErrorQuestionId(null);
-    setIsSavingQuiz(true);
-    const placements = placementsFromLayout(layout);
-    // What this save sends. Edits made while it's in flight, including
-    // questions marked for deletion, stay unsaved for the next save.
-    const sentLayout = layout;
-    const sentDeleteQuestionIds = deleteQuestionIds;
-    try {
-      const response = await HttpClient.put(
-        `/levels/${levelId}/quiz_configuration`,
-        JSON.stringify({
-          version: quizVersion.current,
-          placements,
-          deleteQuestionIds: sentDeleteQuestionIds,
-        }),
-        true,
-        JSON_HEADERS
-      );
-      const body = await response.json();
-      advanceQuizVersion(quizVersion, body.version);
-      // Drops the empty pages that weren't saved, unless the layout changed
-      // during the save; those edits stay unsaved.
-      setLayout(prev =>
-        prev === sentLayout
-          ? prev.filter(questionIds => questionIds.length > 0)
-          : prev
-      );
-      setSavedPlacements(placements);
-      setDeleteQuestionIds(prev =>
-        prev.filter(id => !sentDeleteQuestionIds.includes(id))
-      );
-      return true;
-    } catch (e) {
-      setError(await networkErrorMessage(e));
-      return false;
-    } finally {
-      setIsSavingQuiz(false);
-    }
-  }, [levelId, quizVersion, layout, deleteQuestionIds]);
+      setIsSavingQuiz(true);
+      const placements = placementsFromLayout(layout);
+      // What this save sends. Edits made while it's in flight, including
+      // questions marked for deletion, stay unsaved for the next save.
+      const sentLayout = layout;
+      const sentDeleteQuestionIds = deleteQuestionIds;
+      try {
+        const response = await HttpClient.put(
+          `/levels/${levelId}/quiz_configuration`,
+          JSON.stringify({
+            // A field left unset is sent as null, which clears it.
+            ...Object.fromEntries(
+              Object.entries(config).map(([key, value]) => [key, value ?? null])
+            ),
+            version: quizVersion.current,
+            placements,
+            deleteQuestionIds: sentDeleteQuestionIds,
+          }),
+          true,
+          JSON_HEADERS
+        );
+        const body = await response.json();
+        quizVersion.current = body.version;
+        // Drops the empty pages that weren't saved, unless the layout changed
+        // during the save; those edits stay unsaved.
+        setLayout(prev =>
+          prev === sentLayout
+            ? prev.filter(questionIds => questionIds.length > 0)
+            : prev
+        );
+        setSavedPlacements(placements);
+        setDeleteQuestionIds(prev =>
+          prev.filter(id => !sentDeleteQuestionIds.includes(id))
+        );
+        return true;
+      } catch (e) {
+        setError(await networkErrorMessage(e));
+        return false;
+      } finally {
+        setIsSavingQuiz(false);
+      }
+    },
+    [levelId, layout, deleteQuestionIds]
+  );
 
   return {
     questions,
