@@ -135,7 +135,10 @@ describe('QuizConfigurationPanel', () => {
     const field = screen.getByLabelText(TIME_LIMIT_LABEL);
 
     fireEvent.change(field, {target: {value: '10'}});
-    expect(onChange).toHaveBeenLastCalledWith({timeLimitMinutes: 10});
+    expect(onChange).toHaveBeenLastCalledWith({
+      timeLimitMinutes: 10,
+      showIntroScreen: true,
+    });
 
     fireEvent.change(field, {target: {value: ''}});
     expect(onChange).toHaveBeenLastCalledWith({timeLimitMinutes: undefined});
@@ -160,14 +163,17 @@ describe('QuizConfigurationPanel', () => {
     expect(toggle).toHaveAccessibleDescription(INTRO_SCREEN_LOCKED_REASON);
   });
 
-  it('says a time limit needs the intro screen while it is off', () => {
+  it('turns the intro screen on when a time limit is set', () => {
     renderPanel({showIntroScreen: false});
 
     fireEvent.change(screen.getByLabelText(TIME_LIMIT_LABEL), {
       target: {value: '10'},
     });
 
-    expect(screen.getByText(INTRO_SCREEN_REQUIRED_ERROR)).toBeInTheDocument();
+    expect(isChecked('Show intro screen')).toBe(true);
+    expect(
+      screen.queryByText(INTRO_SCREEN_REQUIRED_ERROR)
+    ).not.toBeInTheDocument();
   });
 
   it('turning off showCorrectness also turns off reveal in the same change', () => {

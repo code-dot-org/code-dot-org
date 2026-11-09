@@ -137,10 +137,15 @@ const QuizConfigurationPanel: React.FunctionComponent<
     });
   };
 
+  // A timed quiz needs its intro screen, so setting a time limit turns it on.
   const handleTimeLimitChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const text = e.target.value;
     setTimeLimitText(text);
-    onChange({timeLimitMinutes: text === '' ? undefined : Number(text)});
+    onChange(
+      text === ''
+        ? {timeLimitMinutes: undefined}
+        : {timeLimitMinutes: Number(text), showIntroScreen: true}
+    );
   };
 
   // Turning either off hides the answer and explanation, so it's turned off.
