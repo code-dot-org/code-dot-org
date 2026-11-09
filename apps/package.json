@@ -266,6 +266,7 @@
     "@mapbox/search-js-react": "^1.0.0",
     "@microbit/microbit-fs": "^0.9.2",
     "@microsoft/immersive-reader-sdk": "^1.1.0",
+    "@modelcontextprotocol/sdk": "^1.30.0",
     "@mui/material": "^7.3.2",
     "@popperjs/core": "^2.11.8",
     "@rails/actioncable": "^8.0.201",
