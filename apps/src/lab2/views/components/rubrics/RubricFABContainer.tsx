@@ -66,13 +66,9 @@ const RubricFABContainer: React.FC = () => {
     [unitName, courseName, levelName]
   );
 
-  const canShow =
-    appName &&
-    isTeacher &&
-    showRubric &&
-    !labLoading &&
-    !isLoadingRubric &&
-    rubricData;
+  const hasRubric =
+    !!appName && isTeacher && showRubric && !isLoadingRubric && !!rubricData;
+  const canShow = hasRubric && !labLoading;
 
   // Temporary hack: show/hide the AI Differentiation FAB based on if the Rubric FAB is showing.
   // Note that currently, the AI Diff FAB will be out of date on Lab2 levels since it relies on
@@ -92,8 +88,9 @@ const RubricFABContainer: React.FC = () => {
 
   // The page embeds no rubric on a Lab2 level, so the TA drawer's Rubrics
   // screen learns of this one here, and again whenever the level changes.
+  // The drawer does not wait for the lab to load, so neither does this.
   useEffect(() => {
-    if (!canShow) {
+    if (!hasRubric) {
       dispatch(setDrawerRubric(null));
       return;
     }
@@ -109,7 +106,7 @@ const RubricFABContainer: React.FC = () => {
       })
     );
   }, [
-    canShow,
+    hasRubric,
     rubricData,
     studentLevelInfo,
     levelName,

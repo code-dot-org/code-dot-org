@@ -30,14 +30,14 @@ jest.mock('@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton', () => ({
 
 const rubric = {id: 7, learningGoals: [], level: {name: 'rubric-level'}};
 
-const createStore = () =>
+const createStore = ({labLoading = false} = {}) =>
   configureStore({
     reducer: {
       aiDiffChat: aiDiffChatReducer,
       currentUser: () => ({isTeacher: true}),
       lab: () => ({
         isLoadingProjectOrLevel: false,
-        isLoading: false,
+        isLoading: labLoading,
         isLoadingTheme: false,
       }),
       progress: () => ({
@@ -85,6 +85,15 @@ describe('RubricFABContainer', () => {
       unitName: 'csd2-2026',
       courseName: 'csd-2026',
     });
+  });
+
+  it('publishes the rubric before the lab finishes loading', () => {
+    const {store, queryByText} = renderContainer(
+      createStore({labLoading: true})
+    );
+
+    expect(store.getState().aiDiffChat.drawerRubric).not.toBeNull();
+    expect(queryByText('AI TA drawer')).toBeNull();
   });
 
   it('withdraws the rubric when the level does not show one', () => {
