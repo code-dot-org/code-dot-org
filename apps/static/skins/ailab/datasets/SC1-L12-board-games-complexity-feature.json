@@ -1,0 +1,62 @@
+{
+  "name": "SC1-L12-board-games-complexity-feature",
+  "card": {
+    "description": "A game café has a shelf of 60 real board games. Each record is one game. The label says if BoardGameGeek lists it as a family game (Yes) or not (No). You can also choose Strategy Game? or Highly Rated? as the label.",
+    "source": "BoardGameGeek Dataset on Board Games (Kaggle: andrewmvd/board-games, https://www.kaggle.com/datasets/andrewmvd/board-games). Real games and real facts (players, play time, age, complexity, year). Family Game? comes from BoardGameGeek's own Family Games domain tag. We picked which 60 games to include.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Use the tree to predict which games could go on the café's family shelf.",
+      "potentialMisuses": "It is trained on only 54 of the 60 games, and one café picked them, so it may predict poorly for games that are not like these. BoardGameGeek's family tag comes from the community. Some families may disagree with it."
+    }
+  },
+  "defaultLabelColumn": "Family Game?",
+  "defaultIdColumn": "Game",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Game",
+      "description": "What is the board game called?"
+    },
+    {
+      "type": "categorical",
+      "id": "Max Players",
+      "description": "What is the most players that can play?"
+    },
+    {
+      "type": "categorical",
+      "id": "Play Time (min)",
+      "description": "How many minutes does one game take?"
+    },
+    {
+      "type": "categorical",
+      "id": "Min Age (years)",
+      "description": "What is the youngest age the maker suggests?"
+    },
+    {
+      "type": "categorical",
+      "id": "Complexity",
+      "description": "How hard are the rules to learn? Light is easy. Heavy is hard."
+    },
+    {
+      "type": "categorical",
+      "id": "Year Era",
+      "description": "When did the game come out?"
+    },
+    {
+      "type": "categorical",
+      "id": "Strategy Game?",
+      "description": "Does BoardGameGeek list the game as a strategy game?"
+    },
+    {
+      "type": "categorical",
+      "id": "Highly Rated?",
+      "description": "Is the game's average rating 7.5 or higher out of 10?"
+    },
+    {
+      "type": "categorical",
+      "id": "Family Game?",
+      "description": "Is the game a family game? This is what the tree predicts for each game."
+    }
+  ]
+}

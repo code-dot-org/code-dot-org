@@ -24,6 +24,7 @@ export const SUPPORTED_SHARED_BLOCK_TYPES: ReadonlySet<string> = new Set([
 
   'gamelab_atTime',
   'gamelab_checkTouching',
+  'gamelab_everyInterval',
   'gamelab_spriteClicked',
   'gamelab_whenPromptAnswered',
 

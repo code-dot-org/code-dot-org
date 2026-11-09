@@ -19,6 +19,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
     DCDO.stubs(:get).with('ai_gateway_fallback_is_enabled', anything).returns(false)
     stub_environment_key_enabled(false)
+    stub_access_token_reuse(AiGatewayAuthController::ACCESS_TOKEN_REUSE_DEFAULT)
     @params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB],
@@ -108,7 +109,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     end
   end
 
-  test 'the Sprite Lab ask AI block mints a token only for a levelbuilder' do
+  test 'the Sprite Lab ask AI block mints a token only in the pilot' do
     ask_ai_params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI],
@@ -122,7 +123,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     OpenSSL::PKey::RSA.stubs(:new).returns(OpenSSL::PKey::RSA.generate(2048))
     JWT.stubs(:encode).returns('fake.jwt.token')
 
-    # A teacher who would otherwise be allowed is refused without the permission.
+    # A teacher who would otherwise be allowed is refused outside the pilot.
     sign_in(@authorized_teacher)
     post :get_access_token, params: ask_ai_params, as: :json
     assert_response :forbidden
@@ -213,6 +214,16 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     end
   end
 
+  test 'tells the browser it may reuse the token only when DCDO holds a literal true' do
+    [[true, true], [false, false], ['true', false], [nil, false], [1, false]].each do |stored, expected|
+      stub_access_token_reuse(stored)
+
+      mint_and_capture_claims
+
+      assert_equal expected, JSON.parse(response.body)['reusable'], "for #{stored.inspect}"
+    end
+  end
+
   test 'signs with the legacy shared key and no kid while the flag is off' do
     mint_and_capture_claims
 
@@ -248,6 +259,12 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
 
     assert_response :internal_server_error
     assert_nil JSON.parse(response.body)['signingKey']
+  end
+
+  private def stub_access_token_reuse(value)
+    DCDO.stubs(:get).
+      with(AiGatewayAuthController::ACCESS_TOKEN_REUSE_DCDO_KEY, AiGatewayAuthController::ACCESS_TOKEN_REUSE_DEFAULT).
+      returns(value)
   end
 
   private def stub_environment_key_enabled(value)

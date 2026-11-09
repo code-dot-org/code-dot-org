@@ -1,15 +1,12 @@
 # cdo-dev is the development image. It layers on cdo-deps rather than
 # cdo-base. That way the dev and test gems install as a delta over a warm
 # tree, not a full reinstall.
-#
-# The build reads no repo source. Lockfiles, gemspecs, and python project
-# files arrive already baked into cdo-deps; the source itself arrives at
-# runtime as a mounted volume. Context is the repo root, and the
-# dockerignore admits only the shared node install script:
-#
-#   docker build -f docker/dev/Dockerfile -t cdo-dev:local .
 
 ARG DEPS_IMAGE=ghcr.io/code-dot-org/cdo-deps:latest
+
+# uv from Astral's official docker setup.
+# See: https://docs.astral.sh/uv/guides/integration/docker/
+FROM ghcr.io/astral-sh/uv:0.5.18@sha256:e2101b9e627153b8fe4e8a1249cc4194f1b38ece7f28a5a9b8f958e3b560e69c AS uv
 
 FROM ${DEPS_IMAGE}
 
@@ -51,6 +48,9 @@ RUN set -eux \
        sudo \
        > /dev/null \
   && rm -rf /var/lib/apt/lists/*
+
+# uv, for the Python Lab workspace under python/.
+COPY --from=uv /uv /uvx /usr/local/bin/
 
 COPY docker/scripts/install-node.sh /tmp/install-node.sh
 
@@ -113,16 +113,13 @@ RUN --mount=type=cache,id=cdo-dev-bundle-cache,sharing=locked,uid=1000,gid=1000,
   && bundle check \
   && rm -rf ~/.bundle "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git
 
-# The venv delta, into /opt/venv, outside the repo mount's shadow.
-# Workspace members stay editable against /code-dot-org/python, the live
-# mounted tree. UV_NO_SYNC must be 0, not empty: uv rejects an empty
-# boolean. The bare `uv run`, with no --no-sync, proves the value parses.
-ENV \
-  UV_NO_SYNC=0 \
-  UV_PROJECT_ENVIRONMENT=/opt/venv
+# The Python Lab virtual env
+COPY --chown=1000:1000 .python-version pyproject.toml uv.lock ./
+COPY --chown=1000:1000 python/ python/
+ENV UV_PROJECT_ENVIRONMENT=/opt/venv
 RUN set -eux \
   && uv sync --frozen --quiet \
-  && uv run python -c 'import pycdo'
+  && uv run python -c 'import pythonlab_setup'
 
 # The checkout is mounted from the host but read as cdo; git refuses the
 # tree without this. ~/.yarn is created so a caller can mount a yarn cache

@@ -4,6 +4,9 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+
+import {sendAdaptiveEvent} from '../metricsHelpers';
 import {
   CheckpointStatus,
   CheckpointStatusMap,
@@ -68,6 +71,13 @@ const CheckpointCard: React.FunctionComponent<CheckpointCardProps> = ({
           skills.map(s => s.id)
         )
       : [];
+  const selectCheckpoint = (id: string) => {
+    sendAdaptiveEvent(EVENTS.ADAPTIVE_SKILL_MAP_CHECKPOINT_SELECTED, {
+      checkpointId: id,
+      status: statusMap[id],
+    });
+    onSelectCheckpoint(id);
+  };
 
   return (
     <div className={shared.card}>
@@ -95,7 +105,7 @@ const CheckpointCard: React.FunctionComponent<CheckpointCardProps> = ({
                     key={c.id}
                     type="button"
                     className={styles.linkButton}
-                    onClick={() => onSelectCheckpoint(c.id)}
+                    onClick={() => selectCheckpoint(c.id)}
                   >
                     {c.title}
                   </button>
@@ -144,7 +154,7 @@ const CheckpointCard: React.FunctionComponent<CheckpointCardProps> = ({
                       styles.linkButton,
                       done && styles.struck
                     )}
-                    onClick={() => onSelectCheckpoint(c.id)}
+                    onClick={() => selectCheckpoint(c.id)}
                   >
                     {c.title}
                   </button>

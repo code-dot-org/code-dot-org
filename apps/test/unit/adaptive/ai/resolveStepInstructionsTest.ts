@@ -138,6 +138,7 @@ describe('resolveStepInstructions', () => {
     await result;
 
     expect(mockGenerate.mock.calls[0][0]).toMatchObject({
+      model: 'gemini-3.1-flash-lite',
       trace: {
         name: 'adaptive-instructions',
         metadata: {
