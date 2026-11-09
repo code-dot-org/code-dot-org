@@ -18,6 +18,7 @@ describe('BLOCK_HELP', () => {
     'spritelab2_restartScene',
     'spritelab2_showTitle',
     'gamelab_atTime',
+    'gamelab_everyInterval',
     'spritelab2_whenPlayer',
     'spritelab2_askAI',
     'spritelab2_askAIWithChoices',

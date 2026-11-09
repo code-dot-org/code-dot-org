@@ -1007,6 +1007,26 @@
             },
             {
               "kind": "block",
+              "type": "gamelab_everyInterval",
+              "id": "[L+lzmtw11w]lj)-p$=_",
+              "fields": {
+                "UNIT": "<field name=\"UNIT\">\"seconds\"</field>"
+              },
+              "inputs": {
+                "N": {
+                  "shadow": {
+                    "type": "math_number",
+                    "id": "k7Qe2mVx9LpT4nZc8RbW",
+                    "fields": {
+                      "NUM": 2
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
               "type": "gamelab_checkTouching",
               "id": "QrFc5?FW:In3VofP,Y_O",
               "fields": {
@@ -2088,7 +2108,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-29 12:31:19 -0700\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 14:17:47 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:16 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:24 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-10-29 12:31:19 -0700\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 14:17:47 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:16 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:24 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-09 11:09:52 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
