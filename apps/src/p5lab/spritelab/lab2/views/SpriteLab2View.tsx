@@ -92,6 +92,7 @@ import {
   GENERATION_LIMIT,
   imageSourceForMode,
   isFreeplayMode,
+  isOneImageMode,
   tabsForMode,
 } from '../levelMode';
 import {
@@ -2316,16 +2317,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  // Generations on this level so far; free play has no limit.
+  // Generations on this level so far; only a one-image level has a limit.
   const [generationCount, setGenerationCount] = useState(0);
   useEffect(() => setGenerationCount(0), [levelProperties.id]);
   const countGeneration = useCallback(
     () => setGenerationCount(count => count + 1),
     []
   );
-  const generationsLeft = isFreeplayMode(levelProperties.levelMode)
-    ? undefined
-    : GENERATION_LIMIT - generationCount;
+  const oneImage = isOneImageMode(levelProperties.levelMode);
+  const generationsLeft = oneImage
+    ? GENERATION_LIMIT - generationCount
+    : undefined;
   // A toolbox has no scenes: New scene would put the student default into
   // the saved toolbox.
   const scenesOffered = animationsSeeded && !isToolboxMode;
@@ -2529,7 +2531,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <ImagesTab
                 uploadImage={uploadImage}
                 onDeleteImage={handleDeleteImage}
-                lockedImageType={levelProperties.levelMode?.imageType}
+                lockedImageType={
+                  oneImage ? levelProperties.levelMode?.imageType : undefined
+                }
                 lockedImageSubject={levelProperties.levelMode?.imageSubject}
                 imageRole={levelProperties.levelMode?.imageRole}
                 ownImageMade={
@@ -2540,7 +2544,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 levelId={levelProperties.id}
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}
-                editingOffered={isFreeplayMode(levelProperties.levelMode)}
+                editingOffered={!oneImage}
                 paneWidth={paneWidthPx}
                 onImageLanded={saveImagesNow}
                 active={activeTab === 'Images'}
