@@ -143,7 +143,8 @@ AZURE_BLOCKED_SEVERITY = {
 # --require-review turns it on for one run.
 REQUIRE_REVIEW = false
 
-# Times a flagged variant is redrawn before it is left out.
+# Times a variant is redrawn, after moderation flags it or the model
+# declines a pose, before it is left out.
 MAX_REDRAWS = 2
 
 # Concurrent requests

@@ -134,6 +134,14 @@ every character is 3,042 images, against 15,210 for the full sets:
 A run skips what is already drawn and checked, so it can be stopped and run
 again. Failed requests are listed at the end and drawn on the next run.
 
+Gemini sometimes answers without an image, which is how it declines; the
+error says why, in its words. Asking again sends the same request, which
+it declines again, so a declined frame is asked for once more with another
+seed. A base declined twice fails, and the next run draws it with a new
+seed. A pose declined twice will not be drawn from that base: the set goes
+to the attic and starts again from a new base, counted like a flagged
+redraw, so after `MAX_REDRAWS` of them the variant is abandoned.
+
 The images are drawn by `gemini-3.1-flash-image` on Vertex AI, where the AI
 Gateway draws a live picture. The gateway's own credential is a service
 account Cloudflare holds and never hands out, so the script uses ours:

@@ -167,7 +167,7 @@ OptionParser.new do |opts|
     options[:moderation] = false
   end
 
-  opts.on('--redraw-abandoned', "Tries again the variants moderation flagged #{MAX_REDRAWS + 1} times in a row.") do
+  opts.on('--redraw-abandoned', "Tries again the variants flagged by moderation, or whose poses were declined, #{MAX_REDRAWS + 1} times in a row.") do
     options[:redraw_abandoned] = true
   end
 
@@ -410,8 +410,31 @@ def request_google_image(options, job, frame, reference, seed)
     images = parsed.dig('candidates', 0, 'content', 'parts')&.filter_map do |part|
       part.dig('inlineData', 'data') || part.dig('inline_data', 'data')
     end
-    images&.last
+    images&.last || raise(DeclinedImageError, declined_message(parsed))
   end
+end
+
+# Why Gemini drew nothing, in its own words where it gives any.
+def declined_message(parsed)
+  candidate = parsed.dig('candidates', 0) || {}
+  text = (candidate.dig('content', 'parts') || []).filter_map {|part| part['text']}.join(' ')
+  details = {
+    'finishReason' => candidate['finishReason'],
+    'finishMessage' => candidate['finishMessage'],
+    'blockReason' => parsed.dig('promptFeedback', 'blockReason'),
+    'blockReasonMessage' => parsed.dig('promptFeedback', 'blockReasonMessage'),
+    'text' => text,
+  }.filter_map {|name, value| "#{name} #{value.to_s.strip[0, 200]}" unless value.to_s.strip.empty?}
+  details.empty? ? 'No image in the response' : "No image in the response: #{details.join('; ')}"
+end
+
+# Draws one frame, and once more with another seed if the model declines.
+# Returns the image and the seed that drew it.
+def draw_frame(options, job, frame, reference, seed)
+  [request_image(options, job, frame, reference, seed), seed]
+rescue DeclinedImageError
+  seed &&= rand(2**31)
+  [request_image(options, job, frame, reference, seed), seed]
 end
 
 def request_image(options, job, frame, reference, seed)
@@ -530,20 +553,42 @@ def process_variant(options, moderator, prompt_checks, job, variant)
       # returned it, as generateCharacterSet() does; a base from an earlier
       # run, by its stored PNG.
       drawn = {}
+      declined = nil
       missing.each do |frame|
         reference = nil
         if frame['reference']
           reference = drawn[frame['reference']] ||
             File.binread(File.join(output_path, frame_path(job, variant, frame['reference'])))
         end
-        raw = request_image(options, job, frame, reference, frame_seed(record['seed'], job, frame))
+        begin
+          raw, seed = draw_frame(options, job, frame, reference, frame_seed(record['seed'], job, frame))
+        rescue DeclinedImageError => exception
+          # A declined base fails like any error; the next run reseeds it.
+          raise unless frame['reference']
+          declined = exception
+          break
+        end
         drawn[frame['name']] = raw
         path = File.join(output_path, frame_path(job, variant, frame['name']))
         FileUtils.mkdir_p(File.dirname(path))
         File.binwrite(path, to_png(raw))
         entry = record['frames'].find {|f| f['name'] == frame['name']}
-        entry['seed'] = frame_seed(record['seed'], job, frame) if record['seed']
+        entry['seed'] = seed if seed
         entry.delete('checks')
+      end
+
+      # A pose declined from this base under two seeds will not be drawn
+      # from it: the set starts again from a new base.
+      if declined
+        redraws = record['redraws'].to_i
+        record = retire(options, job, variant, record, "pose declined: #{declined.message}")
+        if redraws >= MAX_REDRAWS
+          record['abandoned'] = {'at' => Time.now.utc.iso8601, 'after' => redraws + 1}
+          write_record(job, variant, record)
+          return :abandoned
+        end
+        record['redraws'] = redraws + 1
+        next
       end
       # A set is its base: poses drawn later from it are the same drawing,
       # and a review of the base still holds.
@@ -663,7 +708,7 @@ else
     drawn: 'drawn',
     checked: 'checked only',
     prompt_only: 'records written, not drawn',
-    abandoned: "left out after #{MAX_REDRAWS + 1} flagged drawings (--redraw-abandoned tries again)",
+    abandoned: "left out after #{MAX_REDRAWS + 1} flagged or declined drawings (--redraw-abandoned tries again)",
   }.each {|key, label| puts "#{tally[key].to_s.rjust(6)} #{label}" if tally[key] > 0}
   if failures.any?
     puts

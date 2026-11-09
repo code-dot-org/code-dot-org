@@ -21,6 +21,10 @@ require_relative 'constants'
 # Raised for a request that should not be retried.
 class ImageRequestError < StandardError; end
 
+# Raised when Gemini answers but draws nothing, which it does when it
+# declines. The same request is declined the same way every time.
+class DeclinedImageError < ImageRequestError; end
+
 # Raised for a request worth another attempt.
 class RetryableImageRequestError < StandardError; end
 
