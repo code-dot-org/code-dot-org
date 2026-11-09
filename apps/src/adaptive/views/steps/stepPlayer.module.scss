@@ -177,8 +177,9 @@
   background: var(--background-neutral-primary);
   box-sizing: border-box;
 
-  // Focused on open for screen readers; the ring adds nothing on a card.
-  &:focus {
+  // Focused on open for screen readers; the ring adds nothing on a programmatic
+  // focus target, but must not suppress keyboard-initiated focus.
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 }
@@ -229,7 +230,7 @@
   background: var(--background-neutral-primary);
   text-align: center;
 
-  h1:focus {
+  h1:focus:not(:focus-visible) {
     outline: none;
   }
 }

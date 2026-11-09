@@ -79,6 +79,9 @@ const AdaptiveHeader: React.FunctionComponent<AdaptiveHeaderProps> = ({
           iconName={saveIcon.iconName}
           title={saveIcon.title}
           className={styles.saveIcon}
+          aria-label={saveIcon.title}
+          aria-live="polite"
+          aria-atomic="true"
         />
       </div>
       {onFinish && (
