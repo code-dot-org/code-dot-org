@@ -164,4 +164,20 @@ describe('Design System - CardButton', () => {
     expect(ref.current).toBe(screen.getByRole('button'));
     expect(ref.current).toHaveClass('custom');
   });
+
+  it('passes startIconColor through without dropping style', () => {
+    render(
+      <CardButton
+        title="Go"
+        startIcon={{iconName: 'fire'}}
+        startIconColor="var(--text-success-primary)"
+        style={{marginTop: 4}}
+      />,
+    );
+    const button = screen.getByRole('button');
+    expect(button.style.getPropertyValue('--card-button-start-custom')).toBe(
+      'var(--text-success-primary)',
+    );
+    expect(button.style.marginTop).toBe('4px');
+  });
 });

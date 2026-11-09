@@ -1,6 +1,6 @@
 import ButtonBase, {ButtonBaseProps} from '@mui/material/ButtonBase';
 import classNames from 'classnames';
-import {forwardRef, ReactNode, Ref} from 'react';
+import {CSSProperties, forwardRef, ReactNode, Ref} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
@@ -20,6 +20,11 @@ export interface CardButtonProps
   description?: ReactNode;
   /** Leading icon. Solid unless `iconStyle` or `iconFamily` is set. */
   startIcon?: FontAwesomeV6IconProps;
+  /**
+   * Any CSS color for `startIcon`, preferably a semantic token such as
+   * `var(--text-info-primary)`. Selected and disabled cards use their own.
+   */
+  startIconColor?: string;
   /**
    * Custom leading content in place of `startIcon`, e.g. an avatar. It is at
    * least the icon box in size and keeps its own colors in every state.
@@ -74,11 +79,13 @@ const CardButton = forwardRef<
       title,
       description,
       startIcon,
+      startIconColor,
       startContent,
       endIcon,
       selected,
       fullWidth = false,
       className,
+      style,
       ...rest
     },
     ref,
@@ -101,6 +108,14 @@ const CardButton = forwardRef<
           fullWidth && styles['cardButton-fullWidth'],
           className,
         )}
+        style={
+          startIconColor
+            ? ({
+                ...style,
+                '--card-button-start-custom': startIconColor,
+              } as CSSProperties)
+            : style
+        }
       >
         {startContent ? (
           <span className={styles.startContent}>{startContent}</span>

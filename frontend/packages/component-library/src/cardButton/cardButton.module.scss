@@ -15,7 +15,11 @@
   --card-button-border: var(--border-neutral-primary);
   --card-button-title: var(--text-neutral-primary);
   --card-button-description: var(--text-neutral-secondary);
-  --card-button-start: var(--text-brand-primary);
+  // Selected and disabled set --card-button-start outright, dropping the custom color.
+  --card-button-start: var(
+    --card-button-start-custom,
+    var(--text-brand-primary)
+  );
   --card-button-end: var(--text-neutral-secondary);
 
   display: inline-flex;

@@ -30,6 +30,7 @@ export default {
     fullWidth: {control: 'boolean'},
     startIcon: {control: 'object'},
     endIcon: {control: 'object'},
+    startIconColor: {control: 'text'},
     startContent: {control: false},
     containerWidth: {control: {type: 'number', min: 120, step: 10}},
     onClick: {action: 'clicked'},
@@ -137,6 +138,36 @@ export const AllVariants = () => (
         </div>
       )),
     )}
+  </div>
+);
+
+export const StartIconColors = () => (
+  <div style={{display: 'grid', gap: 8, width: 360}}>
+    {[
+      {title: 'Practice', icon: 'dumbbell', color: 'var(--text-info-primary)'},
+      {
+        title: 'Challenge',
+        icon: 'trophy',
+        color: 'var(--text-warning-secondary)',
+      },
+      {title: 'Explore', icon: 'compass', color: 'var(--text-success-primary)'},
+    ].map(({title, icon, color}) => (
+      <CardButton
+        key={title}
+        fullWidth
+        title={title}
+        startIcon={{iconName: icon}}
+        startIconColor={color}
+        endIcon={{iconName: 'chevron-right'}}
+      />
+    ))}
+    <CardButton
+      fullWidth
+      selected
+      title="Selected ignores the color"
+      startIcon={{iconName: 'compass'}}
+      startIconColor="var(--text-success-primary)"
+    />
   </div>
 );
 

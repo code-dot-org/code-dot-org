@@ -32,10 +32,16 @@ container, e.g. for a stack of rows or equal-width tiles in a grid.
 ## Icons and start content
 
 `startIcon` and `endIcon` take `FontAwesomeV6Icon` props and render solid
-unless `iconStyle` or `iconFamily` says otherwise. For a custom leading visual, such as an
-avatar, pass `startContent`; it replaces `startIcon`, is never smaller than the
-icon box, keeps its own colors in every state, and fades when the card is
-disabled.
+unless `iconStyle` or `iconFamily` says otherwise.
+
+`startIconColor` recolors the start icon, e.g. to tell cards in a group apart.
+It takes any CSS color; prefer a semantic token such as
+`var(--text-success-primary)`, and keep 3:1 contrast against the card. Selected
+and disabled cards ignore it and use their own icon color.
+
+For a custom leading visual, such as an avatar, pass `startContent`; it
+replaces `startIcon`, is never smaller than the icon box, keeps its own colors
+in every state, and fades when the card is disabled.
 
 ## Selection
 
@@ -92,6 +98,6 @@ with the arrow keys; the container owns that.
 | `state`                           | Design only. Hover, pressed and focus come from CSS; disabled is `disabled`. |
 | `title`, `description`            | `title`, `description`                                                       |
 | `showDescription`                 | Presence of `description`                                                    |
-| `startIcon`, `startIconName`      | `startIcon`                                                                  |
+| `startIcon`, `startIconName`      | `startIcon`; color override is `startIconColor` (code only)                  |
 | `hasStartContent`, `startContent` | `startContent`                                                               |
 | `endIcon`, `endIconName`          | `endIcon`                                                                    |
