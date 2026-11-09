@@ -5,6 +5,7 @@ require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/ci_utils'
 require 'cdo/git_utils'
+require 'cdo/rake_tracing'
 require 'cdo/sauce_connect'
 require 'cdo/aws/device_farm'
 require 'open-uri'
@@ -90,6 +91,10 @@ SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'
 # By default, UI test reruns hit AWS Device Farm Chrome. This tag opts
 # out and falls back to SauceLabs.
 USE_SAUCELABS_TAG = 'use saucelabs'
+
+# Trace every rake task with OpenTelemetry and send the spans to Sentry. Needs
+# the RAKE_SENTRY_DSN Drone secret; see lib/cdo/rake_tracing.rb.
+TRACE_RAKE_TAG = Cdo::RakeTracing::CI_TAG
 
 # Maximum parallel browsers to use for UI and eyes tests
 PARALLEL_COUNT = 24

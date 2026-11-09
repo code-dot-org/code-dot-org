@@ -1,3 +1,7 @@
+require_relative '../deployment'
+require 'cdo/rake_tracing'
+Cdo::RakeTracing.start
+
 require_relative '../lib/cdo/pegasus/src/env'
 
 SECONDS_TO_WAIT = 60
