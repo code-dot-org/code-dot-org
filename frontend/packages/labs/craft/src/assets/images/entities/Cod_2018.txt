@@ -1,0 +1,28 @@
+Surface: Cod_Surface**
+_______________________________________
+
+Facing Right: 	Below surface - 00
+		Jump - 01-05
+
+Facing Left:	Below surface - 06
+		Jump - 07-12
+
+_______________________________________
+
+Swim: Cod**
+_______________________________________
+
+Facing Up: 	00-03
+
+Facing Right: 	05-07
+
+Facing Down: 	10-13
+
+Facing Left: 	15-18
+
+Turn frame: 
+		Down/Left - 14
+		Up/Left - 19
+		Down/Right - 09
+		Up/Right - 04
+		

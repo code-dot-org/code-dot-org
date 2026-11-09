@@ -1,0 +1,43 @@
+Surface: Pufferfish_Surface**
+____________________________________
+
+Below surface - 00
+Jump - 01-11
+
+____________________________________
+
+Swim: Pufferfish**
+____________________________________
+
+Small: 
+	Facing Down: 00-03
+
+	Facing Left: 05-08
+
+	Facing Up: 10-13
+
+	Facing Right: 15-18
+	
+	Turn frame:
+			Down/Left: 04
+			Down/Right: 19
+			Up/Left: 09
+			Up/Right: 14
+
+Medium:
+	Facing Down: 20
+	Facing Left: 21
+	Facing Up: 22
+	Facing Right: 23
+
+Large: 
+	Facing Down: 24-27
+	Facing Left: 29-32
+	Facing Up: 34-37
+	Facing Right: 39-42
+	
+	Turn frame:
+			Down/Left: 28
+			Down/Right: 43
+			Up/Left: 33
+			Up/Right: 38

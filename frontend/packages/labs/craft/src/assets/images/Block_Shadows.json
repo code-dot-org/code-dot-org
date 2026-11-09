@@ -1,0 +1,36 @@
+{"frames": {
+
+"Shadow_Parts_Fade_base.png":
+{
+	"frame": {"x":0,"y":0,"w":12,"h":50},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":-10,"w":12,"h":50},
+	"sourceSize": {"w":64,"h":64}
+},
+"Shadow_Parts_Fade_overlap.png":
+{
+	"frame": {"x":0,"y":50,"w":10,"h":20},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":52,"y":2,"w":10,"h":20},
+	"sourceSize": {"w":64,"h":64}
+},
+"Shadow_Parts_Fade_top.png":
+{
+	"frame": {"x":0,"y":70,"w":10,"h":10},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":-10,"w":10,"h":10},
+	"sourceSize": {"w":64,"h":64}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Block_Shadows.png",
+	"format": "RGBA8888",
+	"size": {"w":12,"h":80},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:45dfa3300e7ef0977b468138025928c5:a3b2e124ec3a8d21bbfe866bc18e4a50:622e359e387aa243f058c60f1e88308f$"
+}
+}

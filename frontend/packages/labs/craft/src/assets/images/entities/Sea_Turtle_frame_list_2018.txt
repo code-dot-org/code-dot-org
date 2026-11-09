@@ -1,0 +1,25 @@
+Swimming: Sea_Turtle**
+_____________________________________________
+
+Facing Up:	Swim - 00-03
+
+Facing Right:	Swim - 05-08
+
+Facing Down:	Swim - 10-13
+
+Facing Left:	Swim - 15-18
+
+Turn frame:
+		Up/Right - 04
+		Down/Right - 09
+		Down/Left - 14
+		Up/Left - 19
+
+_____________________________________________
+
+Surfacing: Sea_Turtle_Surface**
+_____________________________________________
+
+Surface Left: 00-12
+
+Surface Right: 13-25
