@@ -11,6 +11,8 @@ import {createPortal} from 'react-dom';
 
 import {HEADER_ACTION_ID} from '@cdo/apps/code-studio/components/header/SimpleHeader';
 
+import {ButtonTone} from './buttonTone';
+
 import toneStyles from './button-tone.module.scss';
 
 function useHeaderSlot(): HTMLElement | null {
@@ -42,8 +44,7 @@ function useHeaderSlot(): HTMLElement | null {
 interface HeaderActionButtonProps {
   children: React.ReactNode;
   onClick: () => void;
-  /** Green, for a button that ends the unit. */
-  tone?: 'primary' | 'success';
+  tone?: ButtonTone;
 }
 
 const HeaderActionButton: React.FunctionComponent<HeaderActionButtonProps> = ({

@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
+import {ButtonTone} from '@cdo/apps/lab2/views/components/buttonTone';
 
 import toneStyles from '@cdo/apps/lab2/views/components/button-tone.module.scss';
 import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructions.module.scss';
@@ -16,8 +17,7 @@ export const CONTINUE_BUTTON_ID = 'instructions-continue-button';
 type ContinueButtonProps = Omit<MuiButtonProps, 'onClick'> & {
   tooltipMessage?: string;
   hideIfDisabled?: boolean;
-  /** Green, matching the header's finish button. */
-  tone?: 'primary' | 'success';
+  tone?: ButtonTone;
   onContinue: () => void;
 };
 

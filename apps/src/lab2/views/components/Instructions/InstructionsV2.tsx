@@ -15,6 +15,7 @@ import {
   ObjectiveItem,
   ObjectivesChecklist,
 } from '@cdo/apps/lab2/types';
+import {ButtonTone} from '@cdo/apps/lab2/views/components/buttonTone';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 
@@ -52,8 +53,8 @@ export interface InstructionsProps {
   hideNavigation?: boolean;
   /** If the continue button should be hidden if disabled. */
   hideContinueIfDisabled?: boolean;
-  /** Continue in the success green. */
-  continueTone?: 'primary' | 'success';
+  /** Continue's color. */
+  continueTone?: ButtonTone;
   /** Instructions content that updates dynamically throughout a level. Replaces `longInstructions` if provided. */
   dynamicInstructions?: string;
   /** The level's checklist, under the text; Continue waits until every
