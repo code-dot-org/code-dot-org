@@ -1,6 +1,12 @@
 // CADS header breakpoint; apps' simple-header.module.scss repeats it.
 $narrow: 991.98px;
 
+@mixin end-corners {
+  border-inline-end: 0;
+  border-start-end-radius: calc(var(--shape-md) - 1px);
+  border-end-end-radius: calc(var(--shape-md) - 1px);
+}
+
 .widget {
   display: inline-flex;
   align-items: stretch;
@@ -61,17 +67,28 @@ $narrow: 991.98px;
   background-color: var(--background-neutral-primary);
 
   // Without an action the bubbles end the widget and take its corners.
-  &:last-child,
+  &:last-child {
+    @include end-corners;
+  }
+
+  // Its own rule: a browser without :has() drops the whole selector list.
   &:has(+ .action:empty) {
-    border-inline-end: 0;
-    border-start-end-radius: calc(var(--shape-md) - 1px);
-    border-end-end-radius: calc(var(--shape-md) - 1px);
+    @include end-corners;
   }
 
   // Only when some bubble is current, so the row is never left empty.
   @media (max-width: $narrow) {
     &:has(> [aria-current]) > :not([aria-current]) {
       display: none;
+    }
+  }
+
+  // Without :has() the guard is dropped; a level page always has a current bubble.
+  @supports not selector(:has(*)) {
+    @media (max-width: $narrow) {
+      > :not([aria-current]) {
+        display: none;
+      }
     }
   }
 }
