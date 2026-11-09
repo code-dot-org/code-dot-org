@@ -13,13 +13,29 @@
   max-width: none;
 }
 
-@media (max-height: 700px) {
+// On a short window the modal's own rows give up some of their padding
+// too. Its rows are divs in order: the title, the content, the actions;
+// the close x is its one button.
+@media (max-height: 800px) {
   .dialog {
     --gap: 8px;
     --card-padding: 12px 22px;
     --picture-height: 36px;
     --row-padding: 9px 16px;
     --offer-padding: 10px 18px;
+
+    > div:nth-of-type(1),
+    > div:nth-of-type(3) {
+      padding-block: 10px;
+    }
+
+    > div:nth-of-type(2) {
+      padding-block: 16px;
+    }
+
+    > button {
+      inset-block-start: 15.5px;
+    }
   }
 }
 
