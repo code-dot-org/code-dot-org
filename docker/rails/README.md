@@ -254,8 +254,11 @@ handle this registry offers.
 **The index names its source commit.** Every published index is an OCI image
 index whose `org.opencontainers.image.revision` annotation is the full SHA of
 the commit it was built from, on `git-<sha>` and `latest` alike. The merge job
-checks the media type, the annotation and both platforms before `latest`
-moves, so a consumer never sees an index without them.
+builds the index under the commit tag, then checks the media type, the
+annotation and both platforms before `latest` moves. `latest` never points at
+an index that failed those checks. The commit tag can: a run that fails
+validation leaves `git-<sha>` (or `dev-<sha>`) pointing at the unvalidated
+index, with the run red, until a re-run repoints it.
 
 **Everything published passed the suites.** Smoke and boot verification run on
 the bytes of every publish, without exception.
