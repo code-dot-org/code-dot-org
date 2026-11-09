@@ -73,3 +73,7 @@
     line-height: 125%;
   }
 }
+
+.dialog.destructive > .dialogIcon {
+  background: var(--background-error-primary);
+}

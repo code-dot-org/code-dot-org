@@ -102,6 +102,14 @@ describe('MuiDialog Component', () => {
     );
   });
 
+  it('should make the primary button red when destructive, in either mode', () => {
+    render(<MuiDialog {...defaultProps} mode="dark" destructive />);
+
+    expect(screen.getByRole('button', {name: 'Primary Button'})).toHaveClass(
+      'MuiButton-colorError',
+    );
+  });
+
   it('should leave the close button and panel alone in dark mode', () => {
     render(<MuiDialog {...defaultProps} mode="dark" />);
 
