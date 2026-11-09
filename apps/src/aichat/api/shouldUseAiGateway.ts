@@ -10,11 +10,13 @@ type ModelId = ValueOf<typeof AiChatModelIds>;
 const isGeminiModelId = (modelId: string): boolean =>
   (AiChatGeminiModelIds as readonly string[]).includes(modelId);
 
-// The image models have no Rails backend support, so they always route
-// through the gateway.
-const IMAGE_MODEL_IDS: readonly string[] = [
+// Models with no Rails backend support, so they always route through the
+// gateway.
+const GATEWAY_ONLY_MODEL_IDS: readonly string[] = [
   AiChatModelIds.GEMINI_2_5_FLASH_IMAGE,
   AiChatModelIds.GEMINI_3_1_FLASH_IMAGE,
+  AiChatModelIds.GPT_5_6_LUNA,
+  AiChatModelIds.GPT_6_LUNA,
 ];
 
 // Allows features/apps to opt-in to using AI Gateway. Stopgap until
@@ -26,7 +28,7 @@ export function setAiGatewayOptIn(optIn: boolean) {
 }
 
 export default function shouldUseAiGateway(modelId: ModelId) {
-  if (IMAGE_MODEL_IDS.includes(modelId)) return true;
+  if (GATEWAY_ONLY_MODEL_IDS.includes(modelId)) return true;
   return (
     isGeminiModelId(modelId) &&
     (experiments.isEnabledAllowingQueryString(experiments.USE_AI_GATEWAY) ||

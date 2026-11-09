@@ -59,6 +59,30 @@ describe('LearningDialog', () => {
     expect(onDone).toHaveBeenCalledTimes(1);
   });
 
+  it('closes unread only when asked to', () => {
+    const onClose = jest.fn();
+    const {rerender} = render(
+      <LearningDialog
+        picture={{src: 'data:one'}}
+        prompt="A cat"
+        imageType="sprite"
+        onDone={jest.fn()}
+      />
+    );
+    expect(screen.queryByRole('button', {name: 'Close dialog'})).toBeNull();
+    rerender(
+      <LearningDialog
+        picture={{src: 'data:one'}}
+        prompt="A cat"
+        imageType="sprite"
+        onDone={jest.fn()}
+        onClose={onClose}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Close dialog'}));
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
   it('tells a background in six panels, with the thumbs as icons', () => {
     render(
       <LearningDialog
