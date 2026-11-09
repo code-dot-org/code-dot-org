@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RemindMe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Remind<span>Me</span></div>
+
+    <nav class="top-nav" aria-label="Main navigation">
+      <button class="nav-btn" type="button">🏠 <span>Home</span></button>
+      <a class="nav-btn" href="about.html">❓ <span>About</span></a>
+      <button id="themeToggle" class="nav-btn theme-btn" type="button">🌓 <span>Theme</span></button>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="workspace-header">
+      <div>
+        <p class="eyebrow">Task Panel</p>
+        <h1>Reminders</h1>
+        <p class="workspace-subtitle">Manage tasks, add reminders, and keep track of what still needs attention.</p>
+      </div>
+    </section>
+
+    <section class="workspace-grid">
+      <aside class="control-column">
+        <section class="card form-card" aria-labelledby="add-title">
+          <h2 id="add-title">Add Reminder</h2>
+
+          <label for="title" class="field-label">Title</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="e.g., Finish history outline"
+          />
+
+          <div class="actions primary-actions">
+            <button id="saveBtn" class="btn btn-secondary" title="Saves (maybe)" type="button">Save</button>
+            <button id="addBtn" class="btn btn-primary" title="Click twice?" type="button">Add</button>
+          </div>
+
+          <div class="actions secondary-actions">
+            <button id="clearBtn" class="btn btn-outline" type="button">Clear All</button>
+            <button id="shuffleBtn" class="btn btn-ghost" type="button">Shuffle</button>
+            <button id="helpBtn" class="btn btn-icon" type="button" aria-label="Help">?</button>
+          </div>
+        </section>
+
+        <section class="card status-card" aria-labelledby="status-title">
+          <div class="status-header">
+            <h2 id="status-title">Status</h2>
+            <span class="status-pill">Live</span>
+          </div>
+          <p id="hint" class="hint">Tip: Use Add to add a reminder. Or maybe Save?</p>
+        </section>
+      </aside>
+
+      <section class="card list-card" aria-labelledby="list-title">
+        <div class="list-header">
+          <h2 id="list-title">Reminders</h2>
+          <span class="list-badge">Today</span>
+        </div>
+
+        <p class="list-subtitle">Your latest reminder activity appears here.</p>
+
+        <ul id="list" class="reminder-list" aria-live="polite"></ul>
+        <p id="emptyState" class="empty-state">No reminders yet. Add your first one from the panel on the left.</p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 RemindMe</p>
+    <a href="about.html">About</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

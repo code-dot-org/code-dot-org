@@ -1,0 +1,318 @@
+/* ── Reset & Base ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --early-ideas:        #4A55A2;
+  --early-ideas-light:  #EEF0FF;
+  --rule-based:         #C84B11;
+  --rule-based-light:   #FFF0E9;
+  --learning:           #2D6A4F;
+  --learning-light:     #EDFAF4;
+  --modern:             #0077B6;
+  --modern-light:       #E0F4FF;
+  --limits:             #7B3F00;
+  --limits-light:       #FFF3E0;
+
+  --bg:           #F0F2F8;
+  --card-bg:      #FFFFFF;
+  --text:         #1C1C2E;
+  --text-muted:   #6B7280;
+  --border:       #E2E5F1;
+
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --shadow:     0 2px 8px rgba(0,0,0,0.08);
+  --shadow-lg:  0 6px 20px rgba(0,0,0,0.13);
+  --transition: 0.2s ease;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* ── Header ───────────────────────────────────────────── */
+.page-header {
+  background: #1C1C2E;
+  color: white;
+  padding: 20px 24px 16px;
+}
+
+.page-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.do-this-strip {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(255,255,255,0.07);
+  border-left: 3px solid #A78BFA;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 10px 14px;
+}
+
+.do-this-label {
+  background: #A78BFA;
+  color: #1C1C2E;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.do-this-strip p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.82);
+}
+
+/* ── Filter Bar ───────────────────────────────────────── */
+.filter-bar {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.filter-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.filter-btn {
+  border: 2px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-btn:hover { opacity: 0.8; }
+
+/* All filter default active state */
+.filter-btn.active {
+  background: var(--text);
+  color: white;
+  border-color: var(--text);
+}
+
+/* Era-colored filter buttons */
+.filter-btn.era-early-ideas { color: var(--early-ideas); border-color: var(--early-ideas); }
+.filter-btn.era-rule-based  { color: var(--rule-based);  border-color: var(--rule-based); }
+.filter-btn.era-learning    { color: var(--learning);    border-color: var(--learning); }
+.filter-btn.era-modern      { color: var(--modern);      border-color: var(--modern); }
+.filter-btn.era-limits      { color: var(--limits);      border-color: var(--limits); }
+
+.filter-btn.era-early-ideas.active { background: var(--early-ideas); color: white; }
+.filter-btn.era-rule-based.active  { background: var(--rule-based);  color: white; }
+.filter-btn.era-learning.active    { background: var(--learning);    color: white; }
+.filter-btn.era-modern.active      { background: var(--modern);      color: white; }
+.filter-btn.era-limits.active      { background: var(--limits);      color: white; }
+
+/* ── Card Grid ────────────────────────────────────────── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 20px 24px;
+  align-items: start;
+}
+
+/* ── Milestone Card ───────────────────────────────────── */
+.milestone-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+
+.milestone-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.milestone-card.hidden {
+  display: none;
+}
+
+.milestone-card.era-early-ideas { border-top: 4px solid var(--early-ideas); }
+.milestone-card.era-rule-based  { border-top: 4px solid var(--rule-based); }
+.milestone-card.era-learning    { border-top: 4px solid var(--learning); }
+.milestone-card.era-modern      { border-top: 4px solid var(--modern); }
+.milestone-card.era-limits      { border-top: 4px solid var(--limits); }
+
+/* Card header */
+.card-header {
+  padding: 16px 16px 4px;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+
+.card-heading {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 10px;
+  row-gap: 2px;
+  align-items: center;
+  font-size: inherit;
+}
+
+.card-header::-webkit-details-marker {
+  display: none;
+}
+
+.card-header:focus-visible {
+  outline: 3px solid #6D28D9;
+  outline-offset: -3px;
+  border-radius: calc(var(--radius-md) - 2px);
+}
+
+.card-title {
+  font-size: 0.93rem;
+  font-weight: 700;
+  color: var(--text);
+  grid-column: 1;
+  grid-row: 1;
+  line-height: 1.25;
+}
+
+.card-period {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.card-toggle {
+  grid-row: 1 / 3;
+  grid-column: 2;
+  transition: transform var(--transition);
+  align-self: center;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--text-muted);
+}
+
+.milestone-card[open] .card-toggle {
+  transform: rotate(180deg);
+}
+
+/* Era badge */
+.card-era-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  margin: 10px 16px 14px;
+}
+
+.era-early-ideas .card-era-badge { background: var(--early-ideas-light); color: var(--early-ideas); }
+.era-rule-based  .card-era-badge { background: var(--rule-based-light);  color: var(--rule-based); }
+.era-learning    .card-era-badge { background: var(--learning-light);    color: var(--learning); }
+.era-modern      .card-era-badge { background: var(--modern-light);      color: var(--modern); }
+.era-limits      .card-era-badge { background: var(--limits-light);      color: var(--limits); }
+
+/* ── Drawer ───────────────────────────────────────────── */
+.card-drawer {
+  display: none;
+  border-top: 1px solid var(--border);
+}
+
+.milestone-card[open] .card-drawer {
+  display: block;
+}
+
+/* Stacked content sections */
+.drawer-section {
+  padding: 16px 16px 0;
+}
+
+.drawer-section h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.section-content {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Turning point callout */
+.turning-point {
+  margin: 16px;
+  background: #FFFBEA;
+  border: 1px solid #F0D060;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.turning-point-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6B4C00;
+  margin-bottom: 5px;
+}
+
+.turning-point p {
+  font-size: 0.9rem;
+  color: #5C4500;
+  line-height: 1.6;
+}
+
+/* ── Footnotes ────────────────────────────────────────── */
+sup.fn {
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: super;
+  margin-left: 1px;
+}
+
+/* ── Footer ───────────────────────────────────────────── */
+.page-footer {
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 540px) {
+  .page-header h1    { font-size: 1.2rem; }
+  .card-grid         { grid-template-columns: 1fr; padding: 14px 16px; }
+  .filter-bar        { padding: 10px 16px; }
+}

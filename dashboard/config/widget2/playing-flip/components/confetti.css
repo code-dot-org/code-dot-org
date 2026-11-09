@@ -1,0 +1,69 @@
+/* Confetti — scraps that pop out of the coin and waft off the bottom edge. */
+
+.confetti-layer {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* Outer element carries the trajectory: pop up, then drift down and out. */
+.confetti-piece {
+    position: absolute;
+    animation: confetti-fall var(--fall-duration, 2s) var(--fall-delay, 0s)
+        forwards;
+}
+
+@keyframes confetti-fall {
+    0% {
+        /* Rising against gravity — fast at first, then slowing. */
+        animation-timing-function: cubic-bezier(0.15, 0.6, 0.4, 1);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    22% {
+        /* Apex, then gravity takes over and accelerates the fall. */
+        animation-timing-function: cubic-bezier(0.55, 0, 0.85, 0.6);
+        transform: translate3d(calc(var(--drift) * 0.35), var(--pop), 0);
+        opacity: 1;
+    }
+    82% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(var(--drift), var(--fall), 0);
+        opacity: 0;
+    }
+}
+
+/* Inner element tumbles independently of where the piece is heading. */
+.confetti-piece__shape {
+    width: var(--size, 7px);
+    height: var(--size, 7px);
+    animation: confetti-flutter var(--flutter-duration, 0.6s) linear infinite;
+}
+
+@keyframes confetti-flutter {
+    from {
+        transform: rotate(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotate(var(--spin, 360deg)) rotateY(360deg);
+    }
+}
+
+.confetti-piece__shape--strip {
+    height: calc(var(--size, 7px) * 0.4);
+}
+
+.confetti-piece__shape--circle {
+    border-radius: 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* Bursts are skipped in JS; this is the belt-and-braces half. */
+    .confetti-layer {
+        display: none;
+    }
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>All About Otters!</title>
+    <style>
+        /* ── Tag Inspector sidebar ── */
+
+        #tag-inspector {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 320px;
+            height: 100vh;
+            background: #1e1e2e;
+            color: #cdd6f4;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            z-index: 9999;
+            box-shadow: -3px 0 12px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+        }
+
+        #tag-inspector-header {
+            background: #313244;
+            color: #cba6f7;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            flex-shrink: 0;
+            border-bottom: 1px solid #45475a;
+            user-select: none;
+        }
+
+        #tag-inspector-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 12px 14px;
+        }
+
+        #tag-inspector-placeholder {
+            color: #585b70;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .ti-section {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #313244;
+        }
+
+        .ti-section:last-child {
+            border-bottom: none;
+        }
+
+        .ti-section-title {
+            margin: 0 0 6px 0;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #a6e3a1;
+        }
+
+        #ti-tag {
+            color: #89b4fa;
+            font-weight: bold;
+        }
+
+        #ti-id {
+            color: #f38ba8;
+        }
+
+        #ti-classes {
+            color: #fab387;
+        }
+
+        .ti-rule-block {
+            margin-bottom: 10px;
+            background: #181825;
+            border-radius: 4px;
+            padding: 6px 8px;
+            font-size: 12px;
+        }
+
+        .ti-rule-selector {
+            color: #cba6f7;
+            margin-bottom: 3px;
+        }
+
+        .ti-rule-prop {
+            padding-left: 12px;
+        }
+
+        .ti-rule-prop-name {
+            color: #89dceb;
+        }
+
+        .ti-rule-prop-value {
+            color: #a6e3a1;
+        }
+
+        .ti-no-rules {
+            color: #585b70;
+            font-style: italic;
+        }
+
+        .ti-highlight {
+            outline: 2px solid #cba6f7 !important;
+            outline-offset: 2px !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+      <h1>Welcome to the Otter Zone!</h1>
+      <img src="otter.jpg" alt="A cute brown otter floating in a river">
+      <p id="image-credit">Image by Michael Baird photography</p>
+    </header>
+
+    <main>
+      <div class="two-column-layout">
+        <section id="otter-facts">
+          <h2>Cool Otter Facts!</h2>
+          <ul>
+            <li>Did you know otters hold hands when they sleep so they don't drift apart? Awww!</li>
+            <li>They can also hold their breath for a loooong time underwater!</li>
+          </ul>
+        </section>
+
+        <section id="otter-swimmers">
+          <h2>Otterly Amazing Swimmers!</h2>
+          <p>Otters are super speedy in the water! They use their powerful tails and webbed feet to zoom around.</p>
+          <p>They can dive deep to find yummy snacks like fish and crabs.</p>
+        </section>
+      </div>
+
+      <hr id="otter-divider">
+
+      <section id="otter-locations">
+        <h2>Where in the World are Otters?</h2>
+        <p>You can find different kinds of otters all over the globe, from chilly Alaska to sunny Brazil.</p>
+        <p>Some live in rivers, some in coasts, and some even in the open ocean!</p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Thanks for visiting the otter-tastic website!</p>
+    </footer>
+
+    <div id="tag-inspector">
+        <div id="tag-inspector-header">Tag Inspector</div>
+        <div id="tag-inspector-body">
+            <p id="tag-inspector-placeholder">Hover over any element to inspect it.</p>
+
+            <div class="ti-section" id="ti-identity" hidden>
+                <div class="ti-section-title">HTML Element</div>
+                <div id="ti-tag"></div>
+            </div>
+
+            <div class="ti-section" id="ti-css" hidden>
+                <div class="ti-section-title">CSS Rules</div>
+                <div id="ti-rules"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // ── Student CSS (single source of truth) ──────────────────────────────
+        // Edit styles here. They are injected into the page AND read by the
+        // inspector, so what you see in the sidebar always matches what's here.
+        const STUDENT_CSS = `
+            body {
+                font-family: 'Open Sans', sans-serif;
+                color: #333333;
+                margin: 0;
+                line-height: 1.6;
+                padding-right: 340px;
+            }
+
+            header, footer {
+                background-color: #f0f8ff;
+                padding: 1rem;
+                text-align: center;
+                border: 2px solid #a7d9f7;
+                color: #005f99;
+            }
+
+            main {
+                padding: 1rem;
+                max-width: 960px;
+                margin: 0 auto;
+            }
+
+            section {
+                margin-bottom: 1rem;
+                padding: 1rem;
+                border-radius: 8px;
+            }
+
+            #otter-facts {
+                background-color: #fff5e1;
+                border: 3px solid #ffd700;
+                font-family: 'Lato', sans-serif;
+                color: #8b4513;
+            }
+
+            #otter-swimmers {
+                background-color: #e0f8e0;
+                border: 3px solid #8bc34a;
+                font-family: 'Georgia', serif;
+                color: #33691e;
+            }
+
+            #otter-locations {
+                background-color: #ffe0b2;
+                border: 3px solid #ff9800;
+                font-family: 'Merriweather', serif;
+                color: #e65100;
+            }
+
+            #otter-predators {
+                background-color: #ffcccc;
+                border-color: #cc0000;
+                font-family: 'Verdana', sans-serif;
+                color: #660000;
+            }
+
+            .two-column-layout {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .two-column-layout section {
+                flex: 1;
+                min-width: 300px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 15px;
+                border: 5px solid #a7d9f7;
+            }
+
+            h1 {
+                text-decoration: underline;
+            }
+
+            #image-credit {
+                font-size: 10px;
+                color: #6699bb;
+            }
+
+            hr#otter-divider {
+                border: 3px dashed #a7d9f7;
+                background-color: transparent;
+                color: #a7d9f7;
+            }
+        `;
+
+        // Inject student CSS into the page
+        (function () {
+            var s = document.createElement('style');
+            s.textContent = STUDENT_CSS;
+            document.head.appendChild(s);
+        })();
+
+        (function () {
+            'use strict';
+
+            const VISUAL_PROPS = new Set([
+                'color', 'background-color', 'background',
+                'border', 'border-color', 'border-style', 'border-width', 'border-radius',
+                'font-family', 'font-size', 'font-weight',
+                'text-decoration', 'text-align'
+            ]);
+
+            const INHERITABLE_PROPS = new Set(['color', 'font-family', 'font-size', 'font-weight', 'text-decoration']);
+
+            const sidebar     = document.getElementById('tag-inspector');
+            const placeholder = document.getElementById('tag-inspector-placeholder');
+            const tiIdentity  = document.getElementById('ti-identity');
+            const tiCss       = document.getElementById('ti-css');
+            const tiTag       = document.getElementById('ti-tag');
+            const tiRules     = document.getElementById('ti-rules');
+            let lastHighlighted = null;
+
+            // Parse STUDENT_CSS directly — values are exactly as written (hex, shorthands, etc.)
+            const SOURCE_RULES = (function () {
+                const text = STUDENT_CSS.replace(/\/\*[\s\S]*?\*\//g, ''); // strip comments
+                const rules = [];
+                const rulePattern = /([^{]+)\{([^}]*)\}/g;
+                let match;
+                while ((match = rulePattern.exec(text)) !== null) {
+                    const selector = match[1].trim();
+                    if (!selector || selector.startsWith('@')) continue;
+                    const props = [];
+                    match[2].split(';').forEach(function (decl) {
+                        const colonIdx = decl.indexOf(':');
+                        if (colonIdx === -1) return;
+                        const name  = decl.substring(0, colonIdx).trim();
+                        const value = decl.substring(colonIdx + 1).trim();
+                        if (name && value) props.push({ name: name, value: value });
+                    });
+                    if (props.length > 0) rules.push({ selector: selector, props: props });
+                }
+                return rules;
+            })();
+
+            document.addEventListener('mouseover', function (e) {
+                const target = e.target;
+                if (sidebar.contains(target) || target === sidebar) return;
+                if (target === document.body || target === document.documentElement) return;
+                updateHighlight(target);
+                updatePanel(target);
+            });
+
+            function updateHighlight(el) {
+                if (lastHighlighted && lastHighlighted !== el) {
+                    lastHighlighted.classList.remove('ti-highlight');
+                }
+                el.classList.add('ti-highlight');
+                lastHighlighted = el;
+            }
+
+            function updatePanel(el) {
+                placeholder.hidden = true;
+                tiIdentity.hidden  = false;
+                tiCss.hidden       = false;
+
+                tiTag.textContent = '<' + el.tagName.toLowerCase() + '>';
+
+                const directRules   = getMatchingSourceRules(el);
+                const ancestorRules = getAncestorRules(el, directRules);
+                renderRules(directRules.concat(ancestorRules));
+            }
+
+            function getMatchingSourceRules(el) {
+                const matched = [];
+                for (const rule of SOURCE_RULES) {
+                    try { if (el.matches(rule.selector)) matched.push(rule); } catch (e) {}
+                }
+                return matched;
+            }
+
+            function renderRules(rules) {
+                tiRules.innerHTML = '';
+
+                const seen = new Set();
+                const allProps = [];
+                for (const rule of rules) {
+                    for (const prop of rule.props) {
+                        if (VISUAL_PROPS.has(prop.name) && !seen.has(prop.name)) {
+                            seen.add(prop.name);
+                            allProps.push(prop);
+                        }
+                    }
+                }
+
+                if (allProps.length === 0) {
+                    const msg = document.createElement('div');
+                    msg.className = 'ti-no-rules';
+                    msg.textContent = 'No visual CSS rules apply.';
+                    tiRules.appendChild(msg);
+                    return;
+                }
+
+                const block = document.createElement('div');
+                block.className = 'ti-rule-block';
+
+                const open = document.createElement('div');
+                open.className = 'ti-rule-selector';
+                open.textContent = '{';
+                block.appendChild(open);
+
+                for (const prop of allProps) {
+                    const line = document.createElement('div');
+                    line.className = 'ti-rule-prop';
+
+                    const n = document.createElement('span');
+                    n.className = 'ti-rule-prop-name';
+                    n.textContent = prop.name;
+
+                    const v = document.createElement('span');
+                    v.className = 'ti-rule-prop-value';
+                    v.textContent = ': ' + prop.value + ';';
+
+                    line.appendChild(n);
+                    line.appendChild(v);
+                    block.appendChild(line);
+                }
+
+                const close = document.createElement('div');
+                close.className = 'ti-rule-selector';
+                close.textContent = '}';
+                block.appendChild(close);
+
+                tiRules.appendChild(block);
+            }
+
+            function getAncestorRules(el, directRules) {
+                const covered = new Set();
+                for (const rule of directRules) {
+                    for (const prop of rule.props) {
+                        if (INHERITABLE_PROPS.has(prop.name)) covered.add(prop.name);
+                    }
+                }
+
+                const remaining = new Set(Array.from(INHERITABLE_PROPS).filter(function (p) { return !covered.has(p); }));
+                const result = [];
+                let ancestor = el.parentElement;
+
+                while (ancestor && ancestor.nodeType === Node.ELEMENT_NODE && remaining.size > 0) {
+                    const rules = getMatchingSourceRules(ancestor);
+                    for (const rule of rules) {
+                        var setsUncovered = rule.props.some(function (p) { return remaining.has(p.name); });
+                        if (setsUncovered) {
+                            result.push(rule);
+                            rule.props.forEach(function (p) { remaining.delete(p.name); });
+                        }
+                    }
+                    ancestor = ancestor.parentElement;
+                }
+
+                return result;
+            }
+        })();
+    </script>
+</body>
+
+</html>

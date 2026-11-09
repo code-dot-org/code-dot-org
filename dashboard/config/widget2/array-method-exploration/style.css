@@ -1,0 +1,147 @@
+/* Global Reset & Fonts */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header { text-align: center; margin-bottom: 25px; }
+h1 { color: #2c3e50; margin: 0; }
+
+/* Controls Section */
+.controls-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.group {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.group h3 { margin-top: 0; margin-bottom: 15px; font-size: 1.1rem; }
+
+/* Safe Zone (Green) */
+.group.safe {
+  background-color: #e6fffa;
+  border: 2px solid #38b2ac;
+}
+
+/* Unsafe Zone (Amber/Orange) */
+.group.unsafe {
+  background-color: #fffaf0;
+  border: 2px solid #ed8936;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.9; }
+.btn-safe { background-color: #38b2ac; color: white; }
+.btn-unsafe { background-color: #ed8936; color: white; }
+
+.reset-container { text-align: center; margin-bottom: 30px; }
+.btn-reset { 
+  background-color: #718096; 
+  color: white; 
+  width: auto; 
+  padding: 10px 30px;
+}
+
+/* Display Grid */
+.display-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.card h2 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+.card h2 code {
+  background-color: #edf2f7;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: #2d3748;
+}
+
+.price-list { list-style: none; padding: 0; min-height: 120px; }
+.price-list li {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 8px;
+  text-align: right;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+/* Status Boxes */
+.status-box {
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  background: #cbd5e0;
+}
+
+/* Dynamic States */
+
+/* Mutated State (Amber/Orange) */
+.card.mutated {
+  border-color: #ed8936;
+  background-color: #fffaf0;
+}
+.card.mutated .status-box {
+  background-color: #ed8936;
+  color: white;
+}
+
+/* Safe State (Green) */
+.card.safe {
+  border-color: #38b2ac;
+  background-color: #e6fffa;
+}
+.card.safe .status-box {
+  background-color: #38b2ac;
+  color: white;
+}
