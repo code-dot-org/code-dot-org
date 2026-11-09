@@ -1,0 +1,80 @@
+# helmfile.yaml.gotmpl
+repositories:
+  - name: langfuse
+    url: https://langfuse.github.io/langfuse-k8s
+
+helmDefaults:
+  atomic: true
+
+# common, non-secret config for all envs
+values:
+
+environments:
+  development:
+    values:
+      - langfuse:
+          salt:
+            value: "changeme-salt"
+          nextauth:
+            secret:
+              value: "changeme-nextauth"
+      - postgresql:
+          enabled: true
+          auth:
+            password: "postgres-password"
+      - clickhouse:
+          enabled: true
+          auth:
+            password: "clickhouse-password"
+      - redis:
+          enabled: true
+          auth:
+            password: "redis-password"
+      - s3:
+          deploy: true
+          bucket: "langfuse"
+          endpoint: "http://langfuse-s3:9000"
+          accessKey: "minio-access"
+          secretKey: "minio-secret"
+          forcePathStyle: true
+  production:
+    values:
+      - langfuse:
+          salt:
+            value: {{ "ref+awssecrets://production/langfuse/salt" | fetchSecretValue | quote }}
+            
+          nextauth:
+            secret:
+              value: {{ "ref+awssecrets://production/langfuse/nextauth-secret" | fetchSecretValue | quote }}
+      - postgresql:
+          enabled: true
+          auth:
+            password: {{ "ref+awssecrets://production/langfuse/postgres-password" | fetchSecretValue | quote }}
+      - clickhouse:
+          enabled: true
+          auth:
+            password: {{ "ref+awssecrets://production/langfuse/clickhouse-password" | fetchSecretValue | quote }}
+      - redis:
+          enabled: true
+          auth:
+            password: {{ "ref+awssecrets://production/langfuse/redis-password" | fetchSecretValue | quote }}
+      - s3:
+          deploy: true
+          bucket: "langfuse"
+          endpoint: {{ "ref+awssecrets://production/langfuse/s3-endpoint" | fetchSecretValue | quote }}
+          accessKey: {{ "ref+awssecrets://production/langfuse/s3-access-key" | fetchSecretValue | quote }}
+          secretKey: {{ "ref+awssecrets://production/langfuse/s3-secret-key" | fetchSecretValue | quote }}
+          forcePathStyle: true
+
+---
+
+releases:
+  - name: langfuse
+    namespace: langfuse
+    createNamespace: true
+    chart: langfuse/langfuse
+    # pin if you want, or drop this to follow latest chart
+    version: "1.5.10"
+    values:
+      value: {{ "my static string" | upper }}
+

@@ -1,0 +1,36 @@
+# Optional, but highly recommended. Generate via `openssl rand -hex 32`.
+#  langfuse:
+#    encryptionKey:
+#      value: ""
+langfuse:
+  salt:
+    value: secureSalt
+  nextauth:
+    secret:
+      value: "erin-values"
+  # ingress:
+  #   enabled: true
+  #   hosts:
+  #     - host: langfuse.local
+  #       paths:
+  #         - path: /
+  #           pathType: Prefix
+  #   annotations: []
+
+postgresql:
+  auth:
+    # If you want to use `postgres` as the username, you need to provide postgresPassword instead of password.
+    username: langfuse
+    password: "erin-values"
+
+clickhouse:
+  auth:
+    password: "erin-values"
+
+redis:
+  auth:
+    password: "erin-values"
+
+s3:
+  auth:
+    rootPassword: "erin-values"
