@@ -82,8 +82,7 @@ begin
         'which may have read partially stale views.', color: 'yellow'
   end
 
-  # Exit non-zero for cron rather than raising if there were any views that failed to refresh.
-  exit 1 if failures.any?
+# Deliberately exit zero when individual views failed to refresh and report to Data Team instead.
 rescue StandardError => exception
   CDO.log.error "[redshift-zero-etl] #{ENVIRONMENT_TYPE} refresh failed: #{exception.message}"
   notify_data_team "Redshift materialized view refresh failed in #{ENVIRONMENT_TYPE}: #{exception.message}", color: 'red'
