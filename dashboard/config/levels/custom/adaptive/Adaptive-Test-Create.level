@@ -1,0 +1,13 @@
+<Adaptive>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 77,
+  "created_at": "2026-11-04T22:52:16.000Z",
+  "level_num": "custom",
+  "user_id": 13506,
+  "properties": {
+    "encrypted": "false",
+    "adaptive_id": "hoai2026-adaptive"
+  }
+}]]></config>
+</Adaptive>

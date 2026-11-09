@@ -1,0 +1,47 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-06T20:32:31.000Z",
+  "level_num": "custom",
+  "properties": {
+    "project_template_level_name": "adaptive-less-checkpoints-template-main-website-project",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    },
+    "require_edit_to_continue": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-06T20:32:31.267+00:00\",\"changed\":[\"cloned from \\\"adaptive-HoAI26-wrap-up-showcase\\\"\"],\"cloned_from\":\"adaptive-HoAI26-wrap-up-showcase\"},{\"changed_at\":\"2026-11-06 20:32:41 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -5,12 +5,21 @@ import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import {
   ASK_AI_TIMEOUT_MS,
+  askAiChoice,
   askAiText,
   AskAiError,
+  askAiErrorMessage,
+  askAiRefusal,
+  buildSystemPrompt,
+  CHOICE_SYSTEM_PROMPT,
   cleanAnswer,
   isAskAiEnabled,
+  SYSTEM_PROMPT,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/text/askAi';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  SpritelabAskAiRefusals,
+} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aichat/api/client/helpers/safetyHelpers', () => ({
   isTextSafe: jest.fn(),
@@ -147,6 +156,145 @@ describe('askAiText', () => {
     await askAiText('x'.repeat(5000));
     expect(generateText.mock.calls[0][0].prompt).toHaveLength(1000);
   });
+
+  it("uses the lab's system prompt alone when the student set none", async () => {
+    await askAiText('hello');
+    expect(generateText.mock.calls[0][0].system).toBe(SYSTEM_PROMPT);
+  });
+
+  it("adds the student's system prompt after the lab's rules", async () => {
+    await askAiText('hello', 'Talk like a pirate.');
+    const {system} = generateText.mock.calls[0][0];
+    expect(system.startsWith(SYSTEM_PROMPT)).toBe(true);
+    expect(system.endsWith('Talk like a pirate.')).toBe(true);
+  });
+
+  // Judged together, a long system prompt could bury a bad question.
+  it("judges the student's system prompt apart from the question", async () => {
+    await askAiText('hello', 'Talk like a parrot.');
+    const inputs = isTextSafe.mock.calls
+      .filter(([, filter]) => filter === 'input_filter')
+      .map(([text]) => text);
+    expect(inputs).toEqual(['hello', 'Talk like a parrot.']);
+  });
+
+  it('judges a system prompt once across questions', async () => {
+    await askAiText('hello', 'Talk like a robot.');
+    await askAiText('goodbye', 'Talk like a robot.');
+    const judged = isTextSafe.mock.calls.filter(
+      ([text]) => text === 'Talk like a robot.'
+    );
+    expect(judged).toHaveLength(1);
+  });
+
+  it('throws with the system prompt phase when it is flagged', async () => {
+    isTextSafe.mockImplementation(async text => text !== 'something awful');
+    await expect(askAiText('hello', 'something awful')).rejects.toMatchObject({
+      name: 'AskAiError',
+      phase: 'system_prompt',
+    });
+    expect(Observability.metrics.count).toHaveBeenCalledWith(
+      expect.any(String),
+      1,
+      {result: 'system_prompt_flagged'}
+    );
+  });
+
+  it('truncates a very long system prompt', async () => {
+    await askAiText('hello', 'x'.repeat(5000));
+    expect(generateText.mock.calls[0][0].system).toBe(
+      buildSystemPrompt('x'.repeat(1000))
+    );
+  });
+});
+
+describe('askAiErrorMessage', () => {
+  it('names the system prompt when it is the flagged text', () => {
+    expect(askAiErrorMessage(new AskAiError('system_prompt'))).toBe(
+      "That system prompt isn't allowed."
+    );
+  });
+});
+
+describe('askAiChoice', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    DCDO.get.mockReturnValue(true);
+    isTextSafe.mockResolvedValue(true);
+    generateText.mockResolvedValue({output: {answer: '2'}});
+  });
+
+  it('shows the model the question and every choice', async () => {
+    await expect(
+      askAiChoice('is a whale a fish?', ['yes', 'no'])
+    ).resolves.toBe('no');
+    const [{system, prompt}] = generateText.mock.calls[0];
+    expect(system).toBe(CHOICE_SYSTEM_PROMPT);
+    expect(prompt).toBe(
+      'Question: is a whale a fish?\nAnswer choices:\n1. yes\n2. no'
+    );
+  });
+
+  it("adds the student's system prompt after the choice rules", async () => {
+    await askAiChoice('pick one', ['yes', 'no'], 'Pick the silliest one.');
+    expect(generateText.mock.calls[0][0].system).toBe(
+      buildSystemPrompt('Pick the silliest one.', CHOICE_SYSTEM_PROMPT)
+    );
+  });
+
+  it('judges the question with the choices, and not the answer', async () => {
+    await askAiChoice('is a whale a fish?', ['yes', 'no']);
+    expect(isTextSafe).toHaveBeenCalledTimes(1);
+    const [text, phase, , context] = isTextSafe.mock.calls[0];
+    expect(text).toBe(generateText.mock.calls[0][0].prompt);
+    expect(phase).toBe('input_filter');
+    expect(context.clientType).toBe(AiChatClientTypes.SPRITELAB_ASK_AI);
+  });
+
+  it('lists a repeated choice once', async () => {
+    await askAiChoice('pick one', ['no', 'no', 'yes']);
+    expect(generateText.mock.calls[0][0].prompt).toBe(
+      'Question: pick one\nAnswer choices:\n1. no\n2. yes'
+    );
+  });
+
+  it('rejects an answer that is not one of the choices', async () => {
+    generateText.mockResolvedValue({output: {answer: '3'}});
+    await expect(askAiChoice('hello', ['yes', 'no'])).rejects.toThrow(
+      'other than a choice'
+    );
+    expect(Observability.metrics.count).toHaveBeenCalledWith(
+      'spritelab-lab2.ask_ai_choice',
+      1,
+      {result: 'error'}
+    );
+  });
+
+  it('caps what the model sees, but answers with the full choice', async () => {
+    const long = 'y'.repeat(500);
+    generateText.mockResolvedValue({output: {answer: '1'}});
+    await expect(askAiChoice('x'.repeat(5000), [long, 'no'])).resolves.toBe(
+      long
+    );
+    expect(generateText.mock.calls[0][0].prompt).toBe(
+      `Question: ${'x'.repeat(1000)}\n` +
+        `Answer choices:\n1. ${'y'.repeat(150)}\n2. no`
+    );
+  });
+
+  it('tells apart long choices that start the same', async () => {
+    const first = `${'y'.repeat(150)} first`;
+    const second = `${'y'.repeat(150)} second`;
+    await expect(askAiChoice('pick one', [first, second])).resolves.toBe(
+      second
+    );
+  });
+
+  it('answers with a lone choice without asking the model', async () => {
+    await expect(askAiChoice('pick one', ['yes', 'yes'])).resolves.toBe('yes');
+    expect(generateText).not.toHaveBeenCalled();
+    expect(isTextSafe).not.toHaveBeenCalled();
+  });
 });
 
 describe('isAskAiEnabled', () => {
@@ -155,6 +303,24 @@ describe('isAskAiEnabled', () => {
     expect(isAskAiEnabled()).toBe(true);
     DCDO.get.mockReturnValue(false);
     expect(isAskAiEnabled()).toBe(false);
+  });
+});
+
+describe('askAiRefusal', () => {
+  const student = {userType: 'student', spritelabAskAiRefusal: null};
+
+  it('allows a user the server does not refuse', () => {
+    expect(askAiRefusal(student)).toBeNull();
+  });
+
+  it('tells a teacher without AI access something other than a student', () => {
+    const noAccess = {
+      ...student,
+      spritelabAskAiRefusal: SpritelabAskAiRefusals.NO_ACCESS,
+    };
+    const teacherMessage = askAiRefusal({...noAccess, userType: 'teacher'});
+    expect(teacherMessage).toEqual(expect.any(String));
+    expect(teacherMessage).not.toBe(askAiRefusal(noAccess));
   });
 });
 

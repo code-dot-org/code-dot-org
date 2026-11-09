@@ -21,6 +21,7 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template",
+    "lock_earlier_blocks": true,
     "level_mode": {
       "kind": "code"
     },
@@ -31,16 +32,30 @@
     "extra_scene": {
       "id": "second-scene",
       "name": "Scene 2",
+      "editable": true,
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
       "worldStartPattern": [
         "..........",
         "..........",
-        "..........",
-        "..........",
-        "..........",
-        "..........",
-        "..........",
-        "..........",
         ".S........",
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "..........",
         "BBBBBBBBBB"
       ]
     },
@@ -56,6 +71,10 @@
           "fields": {
             "SCENE": "second-scene"
           }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer"
         }
       ]
     },
@@ -63,8 +82,13 @@
       {
         "attachTo": "gamelab_checkTouching",
         "data": "treasure-touch",
-        "room": {
-          "type": "spritelab2_goToScene"
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "spritelab2_goToScene"
+            }
+          }
         }
       }
     ],
@@ -78,7 +102,24 @@
             "type": "spritelab2_goToScene",
             "fields": {
               "SCENE": "second-scene"
-            }
+            },
+            "scene": "scene-1"
+          }
+        },
+        {
+          "text": "Switch to **Scene 2** using the scene menu.",
+          "check": {
+            "kind": "editing",
+            "id": "second-scene"
+          }
+        },
+        {
+          "text": "Drag **set as player** under **when run**, so your hero can be steered in Scene 2.",
+          "check": {
+            "kind": "block",
+            "type": "spritelab2_setAsPlatformPlayer",
+            "under": "spritelab2_whenRun",
+            "scene": "second-scene"
           }
         },
         {
@@ -115,11 +156,47 @@
     "use_default_sprites": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "enable_big_playspace": "false"
+    "enable_big_playspace": "false",
+    "callouts": [
+      {
+        "target": "scene-option",
+        "scene": "second-scene",
+        "direction": "left",
+        "fallback": {
+          "target": "scene-menu",
+          "direction": "down"
+        },
+        "when": {
+          "done": [
+            0
+          ],
+          "notDone": [
+            1
+          ]
+        }
+      },
+      {
+        "target": "scene-option",
+        "scene": "second-scene",
+        "direction": "left",
+        "fallback": {
+          "target": "scene-menu",
+          "direction": "down"
+        },
+        "when": {
+          "done": [
+            1
+          ],
+          "notDone": [
+            2
+          ],
+          "sceneNot": "second-scene"
+        }
+      }
+    ]
   },
   "audit_log": "[{\"changed_at\":\"2026-11-01 18:37:41 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "level_concept_difficulty": {}
 }]]></config>
   <blocks/>
 </GamelabJr>

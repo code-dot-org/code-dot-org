@@ -235,6 +235,11 @@ enable_opentelemetry: false
 enable_sentry: false
 # DSN for the Dashboard Rails backend Sentry project.
 dashboard_sentry_dsn: !Secret
+# Sentry Data Source Name (DSN) for the Cronjobs project.
+# See https://docs.sentry.io/concepts/key-terms/dsn-explainer/
+cronjobs_sentry_dsn: !Secret
+# DSN for the ActiveJob workers Sentry project. Not read yet.
+activejobs_sentry_dsn: !Secret
 # DSN for the apps/ webpack bundle Sentry project.
 frontend_apps_sentry_dsn: !Secret
 # DSN for the frontend/apps/studio Vite app Sentry project.
@@ -407,6 +412,11 @@ optimize_rails_assets: true
 # Improves local environment load time by loading only the i18n data for the current locale.
 # Note: Not intended for production use.
 lazy_load_i18n: false
+
+# Whether to skip `rake seed:default` during `rake build`. Until you run
+# `rake seed:default` or disable this flag, you won't see changes to curriculum
+# data and other seeded content (see dashboard/lib/tasks/seed.rake).
+skip_seed:
 
 # Whether to store sprocket asset cache on disk or in memory. Setting this to
 # false reduces memory usage, but significantly slows down dev server startup.
@@ -670,9 +680,10 @@ ai_proxy_origin: https://aiproxy-test.code.org
 # and test.yml.erb. The Statsig SDK expects the prefixed key type (secret-) in
 # the string, otherwise it will throw an error on initialization, even in
 # local_mode.
+# Client keys are blank by default; set one in locals.yml to enable Statsig locally.
 statsig_server_secret_key: 'secret-fake-key'
-statsig_api_client_key: 'client-fake-key'
-statsig_api_client_key_session_replay: 'client-fake-key'
+statsig_api_client_key: ''
+statsig_api_client_key_session_replay: ''
 
 # MailGun/MailJet API keys
 mailjet_api_key:

@@ -35,6 +35,13 @@ export type AnimationPoses = Partial<Record<PoseKey, PoseRange>>;
 /** Pose order everywhere poses are listed. */
 export const CHARACTER_POSE_ORDER: CharacterPose[] = ['stand', 'walk', 'jump'];
 
+/** Each pose's name as a student reads it. */
+export const CHARACTER_POSE_TITLES: Record<CharacterPose, string> = {
+  stand: 'Idle',
+  walk: 'Walk',
+  jump: 'Jump',
+};
+
 /**
  * The strip a generated set is stored as: one row of five square frames —
  * second idle, standing, mid-stride walk, rising jump, falling jump — all
@@ -54,6 +61,67 @@ export const CHARACTER_STRIP_POSES: AnimationPoses = {
 };
 
 export const CHARACTER_STRIP_FRAME_COUNT = 5;
+
+/** The index of the frame a set was generated from: the last frame of its
+    stand-right pose, or 0 for a set with no such pose. */
+export function standingFrameIndex(poses: AnimationPoses): number {
+  const stand = poses['stand-right'];
+  return stand ? stand.start + stand.count - 1 : 0;
+}
+
+/** The standing frame is the base picture the other poses were drawn
+    from. */
+export const CHARACTER_STRIP_BASE_FRAME = standingFrameIndex(
+  CHARACTER_STRIP_POSES
+);
+
+/** The size of one frame of a strip, in image pixels. */
+export interface FrameSize {
+  x: number;
+  y: number;
+}
+
+/** The top-left corner of frame `index`. Frames fill a row left to right
+    and wrap to the next row at the image width, the same way the engine
+    reads a sheet. */
+export function stripCellOrigin(
+  imageWidth: number,
+  frameSize: FrameSize,
+  index: number
+): {x: number; y: number} {
+  const columns = Math.max(1, Math.floor(imageWidth / frameSize.x));
+  return {
+    x: (index % columns) * frameSize.x,
+    y: Math.floor(index / columns) * frameSize.y,
+  };
+}
+
+/** Copies frame `index` of `image` into a canvas sized to one frame. Pass a
+    canvas to draw into an existing one. */
+export function drawStripCell(
+  image: HTMLImageElement,
+  frameSize: FrameSize,
+  index: number,
+  canvas: HTMLCanvasElement = document.createElement('canvas')
+): HTMLCanvasElement {
+  canvas.width = frameSize.x;
+  canvas.height = frameSize.y;
+  const {x, y} = stripCellOrigin(image.naturalWidth, frameSize, index);
+  canvas
+    .getContext('2d')
+    ?.drawImage(
+      image,
+      x,
+      y,
+      frameSize.x,
+      frameSize.y,
+      0,
+      0,
+      frameSize.x,
+      frameSize.y
+    );
+  return canvas;
+}
 
 /** Right first: the left-facing frames are mirrored from the right ones. */
 export const CHARACTER_FACINGS: CharacterFacing[] = ['right', 'left'];

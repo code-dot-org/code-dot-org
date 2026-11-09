@@ -1,5 +1,6 @@
 // Shows a step's markdown on a canvas sized like a panel, the text centered
-// vertically, with the step's button under the canvas at the end.
+// vertically, with the step's button and an optional outside link under the
+// canvas at the end.
 
 import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useMemo, useRef} from 'react';
@@ -42,6 +43,15 @@ const MarkdownStep: React.FunctionComponent<MarkdownStepProps> = ({
   useEffect(() => {
     if (ready) canvasRef.current?.focus();
   }, [ready]);
+  // The site's stylesheet sets every image's height to auto, over the
+  // height written on an <img> tag; a style on the element wins it back.
+  useEffect(() => {
+    canvasRef.current
+      ?.querySelectorAll<HTMLImageElement>('img[height]')
+      .forEach(img => {
+        img.style.height = `${img.getAttribute('height')}px`;
+      });
+  }, [ready, step.markdown]);
 
   return (
     <div ref={host} className={styles.markdownHost}>
@@ -61,6 +71,18 @@ const MarkdownStep: React.FunctionComponent<MarkdownStepProps> = ({
             className={styles.markdownActions}
             style={{width: size.width, height: PANEL_CONTROLS_HEIGHT}}
           >
+            {step.link && (
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="medium"
+                href={step.link.href}
+                target="_blank"
+                rel="noopener"
+              >
+                {step.link.label}
+              </MuiButton>
+            )}
             <MuiButton
               variant="contained"
               color="primary"

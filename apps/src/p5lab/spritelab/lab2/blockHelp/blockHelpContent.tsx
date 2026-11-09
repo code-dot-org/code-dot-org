@@ -59,6 +59,22 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       'The answer takes a moment to arrive, so the variable stays empty ' +
       'until it does. Use **when ... answered** to do something with it.',
   },
+  spritelab2_askAIWithChoices: {
+    title: 'Ask AI with answer choices',
+    summary:
+      'Asks the AI a question and puts the choice it picks in a variable.',
+    body:
+      'Empty choices are left out, and with no choices at all the AI ' +
+      'answers in its own words. Use **when ... answered** to do ' +
+      'something with the answer once it arrives.',
+  },
+  spritelab2_setSystemPrompt: {
+    title: 'Set system prompt',
+    summary: 'Tells the AI how to answer every question after it.',
+    body:
+      'Try a personality, like **Talk like a pirate.** Put it before any ' +
+      '**ask AI** blocks.',
+  },
   spritelab2_playSound: {
     title: 'Play sound',
     animation: {src: animPlaySound, alt: 'The play sound block in action.'},
@@ -85,6 +101,11 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     body:
       'Try it under "when touching" for a pickup, or under a click to ' +
       'celebrate.',
+  },
+  spritelab2_showTitle: {
+    title: 'Show title',
+    summary: 'Big text across the middle of the game for a moment.',
+    body: 'Put it under a touch to announce a win.',
   },
   spritelab2_goToExternalScene: {
     title: 'Go to project',

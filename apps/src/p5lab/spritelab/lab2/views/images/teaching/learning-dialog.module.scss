@@ -1,0 +1,213 @@
+@use "../../sentence/sr-only";
+
+// The design-system dialog, wider than its default for the three pictures.
+.dialog {
+  width: 600px;
+  max-width: 100%;
+}
+
+.srOnly {
+  @include sr-only.sr-only;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 0;
+  animation: panel-in 0.3s ease-out;
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 180px;
+}
+
+.heading {
+  margin: 0;
+  text-align: center;
+}
+
+.text {
+  margin: 0;
+  text-align: center;
+}
+
+.inlineIcon {
+  margin: 0 2px;
+}
+
+// Three rows of four pictures, each fading in a little after the last.
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(4, 56px);
+  gap: 10px;
+  font-size: 32px;
+  color: var(--text-neutral-primary);
+}
+
+.mosaicCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: var(--background-neutral-secondary);
+  animation: cell-in 0.4s ease-out both;
+  animation-delay: var(--cell-delay, 0ms);
+}
+
+@keyframes cell-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.words {
+  margin: 0;
+  text-align: center;
+}
+
+.quote {
+  opacity: 0.5;
+}
+
+// The guess from noise through three stages, side by side: four squares
+// that fit the dialog's 552px of content with room to spare.
+.stages {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .chunky {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+.noise {
+  width: 110px;
+  height: 110px;
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+
+.chunky {
+  width: 140px;
+  height: 140px;
+  border-radius: 8px;
+  image-rendering: pixelated;
+  object-fit: contain;
+  background-color: var(--background-neutral-secondary);
+}
+
+.thumbs {
+  position: absolute;
+  right: -44px;
+  bottom: -8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 28px;
+  color: var(--text-neutral-primary);
+}
+
+// A character's square and a background's, to scale.
+.sizes {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.sizeBox {
+  display: flex;
+  border: 2px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+  background-color: var(--background-neutral-secondary);
+  background-image:
+    linear-gradient(var(--borders-neutral-primary) 1px, transparent 1px),
+    linear-gradient(90deg, var(--borders-neutral-primary) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.sizeSmall {
+  width: 80px;
+  height: 80px;
+}
+
+.sizeLarge {
+  width: 160px;
+  height: 160px;
+
+  .chunky {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+}
+
+.guess {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .chunky {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.dice {
+  position: absolute;
+  right: -28px;
+  bottom: -8px;
+  font-size: 40px;
+  color: var(--text-neutral-primary);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--borders-neutral-primary);
+}
+
+.dotNow {
+  background-color: var(--text-neutral-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .mosaicCell {
+    animation: none;
+  }
+}

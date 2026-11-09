@@ -39,7 +39,7 @@ jest.mock('intro.js-react', () => {
 
     return (
       <div role="dialog" aria-label="tour">
-        <button type="button" onClick={() => advance(1)}>
+        <button type="button" onClick={() => advance(stepRef.current + 1)}>
           advance
         </button>
         <button type="button" onClick={() => advance(0)}>
@@ -76,15 +76,34 @@ jest.mock('@cdo/apps/adaptive/views/map/MapView', () => ({
   ),
 }));
 
-jest.mock('@cdo/apps/adaptive/views/ProjectCard', () => ({
-  __esModule: true,
-  default: () => <div>project card</div>,
-}));
+const mockHideStats = false;
 jest.mock('@cdo/apps/adaptive/views/map/mapSettings', () => ({
-  resolveMapSettings: () => ({}),
+  resolveMapSettings: () => ({hideStats: mockHideStats}),
 }));
-jest.mock('@code-dot-org/component-library/common/contexts', () => ({
-  useTheme: () => ({theme: 'Light', setTheme: jest.fn()}),
+jest.mock('@cdo/apps/lab2/hooks/useThemeSetting', () => ({
+  __esModule: true,
+  default: () => ({
+    id: 'theme',
+    label: 'Theme',
+    options: [],
+    selectedValue: 'Light',
+    onChange: jest.fn(),
+  }),
+}));
+jest.mock('@cdo/apps/lab2/views/components/Instructions/ResourcePanel', () => ({
+  __esModule: true,
+  default: ({
+    sidebarOnly,
+    settings,
+  }: {
+    sidebarOnly?: boolean;
+    settings?: {id: string}[];
+  }) => (
+    <div>
+      resource rail{sidebarOnly ? ' (sidebar only)' : ''}: settings{' '}
+      {settings?.map(s => s.id).join(',')}
+    </div>
+  ),
 }));
 
 const step = (id: string) => ({
@@ -129,11 +148,11 @@ function renderMapScreen(
   return render(
     <MapScreen
       pathway={pathway}
+      levelProperties={{id: 1, name: 'adaptive', appName: 'adaptive'}}
       statusMap={statusMap}
       evidence={{}}
       onFocus={jest.fn()}
       onStart={jest.fn()}
-      onWorkOnProject={jest.fn()}
       hasSkippedCheckpoints={false}
       {...overrides}
     />
@@ -179,65 +198,71 @@ describe('MapScreen tour', () => {
   });
 
   describe('step transitions', () => {
-    it('shows ProjectCard before any interaction', () => {
+    it('shows "Select a checkpoint" prompt before any interaction', () => {
       renderMapScreen();
-      expect(screen.getByText('project card')).toBeTruthy();
-      expect(screen.queryByText('First Checkpoint')).toBeNull();
-    });
-
-    it('still shows ProjectCard after advancing to step 2 without a map click', () => {
-      // Advancing no longer auto-selects a checkpoint — user must click the map.
-      renderMapScreen();
-      act(() => {
-        fireEvent.click(screen.getByText('advance'));
-      });
-      expect(screen.getByText('project card')).toBeTruthy();
+      expect(screen.getByText('Select a checkpoint')).toBeTruthy();
       expect(screen.queryByText('First Checkpoint')).toBeNull();
     });
 
     it('shows CheckpointCard after the user selects a checkpoint on the map', () => {
       renderMapScreen();
       act(() => {
-        fireEvent.click(screen.getByText('advance')); // step 1
+        fireEvent.click(screen.getByText('advance')); // → step 1
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 2 (pick checkpoint)
       });
       act(() => {
         fireEvent.click(screen.getByText('select cp-1'));
       });
       expect(screen.getByText('First Checkpoint')).toBeTruthy();
-      expect(screen.queryByText('project card')).toBeNull();
+      expect(screen.queryByText('Select a checkpoint')).toBeNull();
     });
 
     it('ignores map clicks on locked checkpoints during the select step', () => {
       renderMapScreen();
       act(() => {
-        fireEvent.click(screen.getByText('advance')); // step 1
+        fireEvent.click(screen.getByText('advance')); // → step 1
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 2 (pick checkpoint)
       });
       act(() => {
         fireEvent.click(screen.getByText('select cp-2')); // cp-2 is locked
       });
-      expect(screen.getByText('project card')).toBeTruthy();
       expect(screen.queryByText('Second Checkpoint')).toBeNull();
+      expect(screen.getByText('Select a checkpoint')).toBeTruthy();
     });
 
-    it('clears CheckpointCard when navigating back to step 1', () => {
+    it('shows the prompt again when navigating back to step 1', () => {
       renderMapScreen();
       act(() => {
-        fireEvent.click(screen.getByText('advance')); // step 1
+        fireEvent.click(screen.getByText('advance')); // → step 1
       });
       act(() => {
-        fireEvent.click(screen.getByText('select cp-1')); // step 2 with checkpoint
+        fireEvent.click(screen.getByText('advance')); // → step 2 (pick checkpoint)
       });
       act(() => {
-        fireEvent.click(screen.getByText('back')); // step 0
+        fireEvent.click(screen.getByText('select cp-1')); // → step 3 (sidebar)
       });
-      expect(screen.getByText('project card')).toBeTruthy();
+      expect(screen.getByText('First Checkpoint')).toBeTruthy();
+      act(() => {
+        fireEvent.click(screen.getByText('back')); // → step 0 (clears tour checkpoint)
+      });
       expect(screen.queryByText('First Checkpoint')).toBeNull();
+      expect(screen.getByText('Select a checkpoint')).toBeTruthy();
     });
 
     it('sets body classes correctly across step transitions', () => {
       renderMapScreen();
       act(() => {
-        fireEvent.click(screen.getByText('advance')); // step 1
+        fireEvent.click(screen.getByText('advance')); // → step 1
+      });
+      expect(
+        document.body.classList.contains('adaptive-tour-step-select')
+      ).toBe(false);
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 2 (pick checkpoint)
       });
       expect(
         document.body.classList.contains('adaptive-tour-step-select')
@@ -246,7 +271,7 @@ describe('MapScreen tour', () => {
         false
       );
       act(() => {
-        fireEvent.click(screen.getByText('select cp-1')); // step 2 via nextStep
+        fireEvent.click(screen.getByText('select cp-1')); // → step 3 (sidebar) via nextStep
       });
       expect(
         document.body.classList.contains('adaptive-tour-step-select')
@@ -259,10 +284,13 @@ describe('MapScreen tour', () => {
     it('dismisses the tour when the Start button is clicked', () => {
       renderMapScreen();
       act(() => {
-        fireEvent.click(screen.getByText('advance')); // step 1
+        fireEvent.click(screen.getByText('advance')); // → step 1
       });
       act(() => {
-        fireEvent.click(screen.getByText('select cp-1')); // step 2
+        fireEvent.click(screen.getByText('advance')); // → step 2 (pick checkpoint)
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-1')); // → step 3 (sidebar)
       });
       act(() => {
         fireEvent.click(screen.getByRole('button', {name: 'Start'}));
@@ -277,5 +305,16 @@ describe('MapScreen tour', () => {
       renderMapScreen({hasSkippedCheckpoints: true});
       expect(screen.getByRole('dialog', {name: 'tour'})).toBeTruthy();
     });
+  });
+});
+
+describe('MapScreen resource rail', () => {
+  it("shows the labs' rail beside the map with the theme setting", () => {
+    localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
+    renderMapScreen();
+    expect(
+      screen.getByText('resource rail (sidebar only): settings theme')
+    ).toBeTruthy();
+    localStorage.clear();
   });
 });

@@ -42,6 +42,47 @@ describe('MarkdownStep', () => {
     expect(onComplete).toHaveBeenCalledTimes(1);
   });
 
+  it('renders an image from the markdown and an outside link beside the button', () => {
+    render(
+      <MarkdownStep
+        step={{
+          ...step,
+          markdown:
+            '## Done\n\n![A student presents](https://example.com/x.png)\n\nNext steps.',
+          link: {label: 'Learn more', href: 'https://code.org'},
+          continueLabel: 'Get my Certificate',
+        }}
+        continueLabel="Continue"
+        onComplete={jest.fn()}
+      />
+    );
+    const image = screen.getByRole('img', {name: 'A student presents'});
+    expect(image.getAttribute('src')).toBe('https://example.com/x.png');
+    const link = screen.getByRole('link', {name: 'Learn more'});
+    expect(link.getAttribute('href')).toBe('https://code.org');
+    expect(link.getAttribute('target')).toBe('_blank');
+    expect(
+      screen.getByRole('button', {name: 'Get my Certificate'})
+    ).toBeTruthy();
+  });
+
+  it('keeps the height written on an image tag, over the site stylesheet', () => {
+    render(
+      <MarkdownStep
+        step={{
+          ...step,
+          markdown:
+            '<img src="https://example.com/x.png" alt="" width="800" height="400">',
+        }}
+        continueLabel="Continue"
+        onComplete={jest.fn()}
+      />
+    );
+    const image = document.querySelector('img') as HTMLImageElement;
+    expect(image.getAttribute('height')).toBe('400');
+    expect(image.style.height).toBe('400px');
+  });
+
   it('keeps a lone newline as a line break, and a blank line as a paragraph break', () => {
     render(
       <MarkdownStep

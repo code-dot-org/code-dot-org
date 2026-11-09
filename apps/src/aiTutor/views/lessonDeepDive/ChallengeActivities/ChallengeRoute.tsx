@@ -2,7 +2,7 @@ import {Challenge, challengeValidator} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useEffect, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
-import experiments from '@cdo/apps/util/experiments';
+import {useLessonDeepDiveChallengesEnabled} from '@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -20,6 +20,7 @@ const ChallengeRoute: FC<ChallengeRouteProps> = ({lessonId}) => {
     modality: string;
   }>();
   const navigate = useNavigate();
+  const challengesEnabled = useLessonDeepDiveChallengesEnabled();
   const [challenge, setChallenge] = useState<Challenge | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
 
@@ -50,11 +51,7 @@ const ChallengeRoute: FC<ChallengeRouteProps> = ({lessonId}) => {
     };
   }, [lessonId, challengeId, navigate]);
 
-  if (
-    !experiments.isEnabledAllowingQueryString(
-      experiments.LESSON_TUTOR_CHALLENGE
-    )
-  ) {
+  if (!challengesEnabled) {
     return null;
   }
 

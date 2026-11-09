@@ -1,20 +1,27 @@
 // A generated project: the template rewritten around the student's answers
 // by one model call, laid over the template's sources. No answers, no
-// editable files, adaptive AI off, a failed call or answers that do not
-// clear moderation all mean nothing is generated, and the template stands.
-
-import * as Observability from '@code-dot-org/core/plugins/observability';
+// editable files, adaptive AI off, a failed call, answers that do not clear
+// moderation or a result that does not all mean nothing is generated, and
+// the template stands.
 
 import {AichatContext} from '@cdo/apps/aichat/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectSources} from '@cdo/apps/lab2/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
+import {sendAdaptiveEvent, stepProperties} from '../metricsHelpers';
 import {Progress} from '../progress/model';
 import {checkpointPlan} from '../project/plan';
 import {applyGeneratedFiles, editableFiles} from '../project/projectGeneration';
 import {Checkpoint, LevelStep, Pathway} from '../types';
 
-import {generate, isAdaptiveAiEnabled, moderateInput} from './generate';
+import {
+  generate,
+  isAdaptiveAiEnabled,
+  moderateInput,
+  moderateOutput,
+} from './generate';
+import {ADAPTIVE_MODELS} from './models';
 import {
   PROJECT_PROMPT_VERSION,
   buildProjectPrompt,
@@ -43,7 +50,9 @@ export interface GeneratedProject {
 /**
  * Builds the project a project step asks for, named and described by the
  * model from the same call. What the student typed is moderated first; the
- * model is never asked about answers that did not clear.
+ * model is never asked about answers that did not clear. What the model
+ * wrote is moderated too, as the student's site and its name, before any
+ * of it is laid over the template.
  */
 export async function generateProject({
   pathway,
@@ -66,17 +75,19 @@ export async function generateProject({
     plan,
     files,
   });
+  const startedAt = Date.now();
+  const sendGenerated = (errorType?: string) =>
+    sendAdaptiveEvent(EVENTS.ADAPTIVE_PROJECT_GENERATED, {
+      ...stepProperties(checkpoint, step),
+      success: !errorType,
+      latencyMs: Date.now() - startedAt,
+      errorType,
+    });
   // Only what the student wrote is moderated; a chosen answer is authored text.
   const typed = plan.answers.filter(a => a.typed).map(a => a.answer);
   const moderation = typed.length
     ? await moderateInput(typed.join('\n\n'), aichatContext)
     : 'ok';
-  if (typed.length) {
-    Observability.metrics.count('adaptive.text_moderation', 1, {
-      phase: 'input_filter',
-      result: moderation,
-    });
-  }
   if (moderation !== 'ok') {
     Lab2Registry.getInstance().getMetricsReporter().logWarning({
       message:
@@ -85,11 +96,17 @@ export async function generateProject({
       pathwayId: pathway.id,
       stepId: step.id,
     });
+    sendGenerated(
+      moderation === 'flagged'
+        ? 'answersFlaggedByModeration'
+        : 'moderationCheckFailed'
+    );
     return undefined;
   }
 
   const {output, traceId} = await generate({
     schema: projectOutputSchema,
+    model: ADAPTIVE_MODELS.STANDARD,
     prompt,
     context: aichatContext,
     trace: {
@@ -102,9 +119,38 @@ export async function generateProject({
       },
     },
   });
-  if (!output || !traceId) return undefined;
+  if (!output || !traceId) {
+    sendGenerated('modelErrorOrInvalidOutput');
+    return undefined;
+  }
+  const written = [
+    output.name,
+    output.description,
+    ...output.files.map(file => file.contents),
+  ].join('\n\n');
+  const outputModeration = await moderateOutput(written, aichatContext);
+  if (outputModeration !== 'ok') {
+    Lab2Registry.getInstance().getMetricsReporter().logWarning({
+      message:
+        'Adaptive project not used: the generated site did not clear moderation',
+      moderation: outputModeration,
+      pathwayId: pathway.id,
+      stepId: step.id,
+      traceId,
+    });
+    sendGenerated(
+      outputModeration === 'flagged'
+        ? 'outputFlaggedByModeration'
+        : 'moderationCheckFailed'
+    );
+    return undefined;
+  }
   const seeded = applyGeneratedFiles(sources, output.files);
-  if (!seeded) return undefined;
+  if (!seeded) {
+    sendGenerated('noGeneratedFileMatchedProject');
+    return undefined;
+  }
+  sendGenerated();
   return {
     name: output.name,
     description: output.description,

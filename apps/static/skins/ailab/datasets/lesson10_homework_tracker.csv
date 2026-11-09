@@ -1,0 +1,63 @@
+ID,How Work Is Turned In,Finished All Work in Gradebook,Submitted in App,Submit Time,Minutes in App,Status
+Data 1,App,No,3,After 9 PM,16,Needs Check-in
+Data 2,App,Yes,5,Afternoon (3-6 PM),150,On Track
+Data 3,App,No,3,After 9 PM,33,Needs Check-in
+Data 4,App,Yes,5,Evening (6-9 PM),134,On Track
+Data 5,App,Yes,5,Evening (6-9 PM),153,On Track
+Data 6,App,Yes,5,Evening (6-9 PM),121,On Track
+Data 7,App,Yes,5,Evening (6-9 PM),155,On Track
+Data 8,Paper,Yes,0,No app submissions,9,Needs Check-in
+Data 9,App,Yes,5,Afternoon (3-6 PM),150,On Track
+Data 10,App,Yes,5,After 9 PM,82,Needs Check-in
+Data 11,App,Yes,5,Evening (6-9 PM),106,On Track
+Data 12,App,Yes,5,Evening (6-9 PM),158,On Track
+Data 13,App,Yes,5,After 9 PM,123,Needs Check-in
+Data 14,App,Yes,5,Evening (6-9 PM),80,On Track
+Data 15,App,Yes,5,After 9 PM,146,Needs Check-in
+Data 16,Paper,Yes,0,No app submissions,10,Needs Check-in
+Data 17,App,No,4,Evening (6-9 PM),59,Needs Check-in
+Data 18,App,Yes,5,Evening (6-9 PM),124,On Track
+Data 19,Paper,Yes,0,No app submissions,0,Needs Check-in
+Data 20,App + paper (shared phone),Yes,2,After 9 PM,50,Needs Check-in
+Data 21,App + paper (shared phone),Yes,3,After 9 PM,47,Needs Check-in
+Data 22,App,Yes,5,Evening (6-9 PM),139,On Track
+Data 23,App + paper (shared phone),Yes,2,After 9 PM,30,Needs Check-in
+Data 24,App,No,3,Evening (6-9 PM),29,Needs Check-in
+Data 25,App,Yes,5,Evening (6-9 PM),151,On Track
+Data 26,App,Yes,5,After 9 PM,104,Needs Check-in
+Data 27,App,Yes,5,Evening (6-9 PM),70,On Track
+Data 28,App,Yes,5,Evening (6-9 PM),134,On Track
+Data 29,App,Yes,5,Evening (6-9 PM),141,On Track
+Data 30,App,Yes,5,Evening (6-9 PM),122,On Track
+Data 31,App,No,4,Evening (6-9 PM),67,Needs Check-in
+Data 32,App,Yes,5,Evening (6-9 PM),81,On Track
+Data 33,App,No,2,Evening (6-9 PM),40,Needs Check-in
+Data 34,App,Yes,5,Evening (6-9 PM),116,On Track
+Data 35,App + paper (shared phone),Yes,3,Evening (6-9 PM),35,Needs Check-in
+Data 36,App,Yes,5,Evening (6-9 PM),127,On Track
+Data 37,App,Yes,5,After 9 PM,136,Needs Check-in
+Data 38,App,No,1,After 9 PM,21,Needs Check-in
+Data 39,App + paper (shared phone),Yes,2,Evening (6-9 PM),53,Needs Check-in
+Data 40,Paper,Yes,0,No app submissions,9,Needs Check-in
+Data 41,App,Yes,5,Afternoon (3-6 PM),104,On Track
+Data 42,App,Yes,5,Afternoon (3-6 PM),78,On Track
+Data 43,App,No,4,Evening (6-9 PM),81,Needs Check-in
+Data 44,Paper,Yes,0,No app submissions,5,Needs Check-in
+Data 45,App,Yes,5,Afternoon (3-6 PM),124,On Track
+Data 46,App,Yes,5,Evening (6-9 PM),116,On Track
+Data 47,App,Yes,5,Evening (6-9 PM),145,On Track
+Data 48,App,Yes,5,Afternoon (3-6 PM),147,On Track
+Data 49,App,No,3,After 9 PM,56,Needs Check-in
+Data 50,App,No,3,Evening (6-9 PM),30,Needs Check-in
+Data 51,App,Yes,5,Evening (6-9 PM),114,On Track
+Data 52,App,Yes,5,Evening (6-9 PM),116,On Track
+Data 53,Paper,Yes,0,No app submissions,0,Needs Check-in
+Data 54,App,Yes,5,Evening (6-9 PM),105,On Track
+Data 55,App,Yes,5,Afternoon (3-6 PM),114,On Track
+Data 56,App,No,4,Evening (6-9 PM),91,Needs Check-in
+Data 57,App + paper (shared phone),Yes,2,After 9 PM,35,Needs Check-in
+Data 58,App,Yes,5,After 9 PM,105,Needs Check-in
+Data 59,App,Yes,5,Evening (6-9 PM),121,On Track
+Data 60,App,No,4,Evening (6-9 PM),102,Needs Check-in
+Data 61,App,No,2,Evening (6-9 PM),53,Needs Check-in
+Data 62,App,Yes,5,After 9 PM,130,Needs Check-in

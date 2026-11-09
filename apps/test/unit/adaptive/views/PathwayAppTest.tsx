@@ -4,17 +4,16 @@ import React from 'react';
 import {EMPTY_PROGRESS, Progress} from '@cdo/apps/adaptive/progress';
 import {Pathway} from '@cdo/apps/adaptive/types';
 import PathwayApp from '@cdo/apps/adaptive/views/PathwayApp';
+import {LevelProperties} from '@cdo/apps/lab2/types';
 
 jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
   __esModule: true,
   default: ({
     onStart,
     focusId,
-    onWorkOnProject,
   }: {
     onStart: (id: string) => void;
     focusId?: string;
-    onWorkOnProject: () => void;
   }) => (
     <>
       <button type="button" onClick={() => onStart('intro')}>
@@ -23,9 +22,7 @@ jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
       <button type="button" onClick={() => onStart('multi')}>
         start multi
       </button>
-      <button type="button" onClick={onWorkOnProject}>
-        map screen{focusId ? ` focused on ${focusId}` : ''}
-      </button>
+      <span>map screen{focusId ? ` focused on ${focusId}` : ''}</span>
     </>
   ),
 }));
@@ -42,6 +39,29 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
     </div>
   ),
 }));
+jest.mock('@cdo/apps/adaptive/views/AdaptiveTabBar', () => ({
+  __esModule: true,
+  default: ({
+    activeTab,
+    onTabChange,
+    projectName,
+  }: {
+    activeTab: string;
+    onTabChange: (tab: string) => void;
+    projectName?: string;
+  }) => (
+    <div>
+      tabs: {activeTab}
+      {projectName && <span>tab project: {projectName}</span>}
+      <button type="button" onClick={() => onTabChange('project')}>
+        My project tab
+      </button>
+      <button type="button" onClick={() => onTabChange('map')}>
+        Practice skills tab
+      </button>
+    </div>
+  ),
+}));
 jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   __esModule: true,
   // Finishing completes the last step first, as the real player does.
@@ -52,6 +72,9 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
     onExit,
     onFinish,
     onFinishPathway,
+    activeTab,
+    onTabChange,
+    projectName,
   }: {
     checkpoint: {title: string; steps: unknown[]};
     initialStepId?: string;
@@ -59,10 +82,15 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
     onExit: () => void;
     onFinish: () => void;
     onFinishPathway?: () => void;
+    activeTab?: string;
+    onTabChange?: (tab: string) => void;
+    projectName?: string;
   }) => (
     <div>
       playing {checkpoint.title}
       {initialStepId ? ` at ${initialStepId}` : ''}
+      {activeTab && <span>step-tab: {activeTab}</span>}
+      {projectName && <span>step project: {projectName}</span>}
       <button type="button" onClick={onExit}>
         exit
       </button>
@@ -80,6 +108,11 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
           finish pathway
         </button>
       )}
+      {onTabChange && (
+        <button type="button" onClick={() => onTabChange('map')}>
+          step tab: map
+        </button>
+      )}
     </div>
   ),
 }));
@@ -94,9 +127,17 @@ jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
   isAdaptiveAiEnabled: () => false,
 }));
 const mockDispatch = jest.fn();
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const mockUseAppSelector = jest.fn<any, [any]>();
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   ...jest.requireActual('@cdo/apps/util/reduxHooks'),
   useAppDispatch: () => mockDispatch,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  useAppSelector: (sel: any) => mockUseAppSelector(sel),
+}));
+jest.mock('@cdo/apps/lab2/progress/continueOrFinishLesson', () => ({
+  __esModule: true,
+  default: () => ({type: 'continueOrFinishLesson'}),
 }));
 jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
   sendAdaptiveStepReport: jest.fn(),
@@ -146,6 +187,15 @@ const pathway: Pathway = {
     },
   ],
 };
+const finish: Pathway['finish'] = {
+  dialog: {title: 'Ready to Wrap Up?', body: 'Sure?'},
+  checkpoint: {
+    id: 'wrap-up',
+    title: 'Wrap up',
+    description: 'The end.',
+    steps: [step('wrap-up')],
+  },
+};
 const progressKey = {scriptId: 2, levelId: 3};
 
 describe('PathwayApp', () => {
@@ -154,6 +204,7 @@ describe('PathwayApp', () => {
   beforeEach(() => {
     mockDispatch.mockClear();
     mockLoad.mockResolvedValue(EMPTY_PROGRESS);
+    mockUseAppSelector.mockReturnValue(undefined);
     window.history.replaceState({}, '', '/');
   });
 
@@ -161,10 +212,22 @@ describe('PathwayApp', () => {
     window.history.replaceState({}, '', originalUrl);
   });
 
+  const levelProperties = {
+    id: 1,
+    name: 'adaptive',
+    appName: 'adaptive',
+  } as unknown as LevelProperties;
+
   // Progress loads from a promise, so the first render settles after a tick.
-  const renderSettled = async () => {
+  const renderSettled = async (content: Pathway = pathway) => {
     await act(async () => {
-      render(<PathwayApp pathway={pathway} progressKey={progressKey} />);
+      render(
+        <PathwayApp
+          pathway={content}
+          progressKey={progressKey}
+          levelProperties={levelProperties}
+        />
+      );
     });
     await act(async () => {
       await Promise.resolve();
@@ -201,10 +264,6 @@ describe('PathwayApp', () => {
     await renderSettled();
 
     expect(screen.getByText('map screen')).toBeTruthy();
-    expect(mockDispatch).not.toHaveBeenCalled();
-
-    act(() => screen.getByText('map screen').click());
-    expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
   });
 
   it('resumes at the first incomplete step when opening an in-progress checkpoint', async () => {
@@ -417,7 +476,13 @@ describe('PathwayApp', () => {
       },
     });
     await act(async () => {
-      render(<PathwayApp pathway={routing} progressKey={progressKey} />);
+      render(
+        <PathwayApp
+          pathway={routing}
+          progressKey={progressKey}
+          levelProperties={levelProperties}
+        />
+      );
     });
     await act(async () => {
       await Promise.resolve();
@@ -433,7 +498,13 @@ describe('PathwayApp', () => {
 
   it('returns to the map unfocused after a checkpoint that does not route', async () => {
     await act(async () => {
-      render(<PathwayApp pathway={pathway} progressKey={progressKey} />);
+      render(
+        <PathwayApp
+          pathway={pathway}
+          progressKey={progressKey}
+          levelProperties={levelProperties}
+        />
+      );
     });
     await act(async () => {
       await Promise.resolve();
@@ -445,7 +516,7 @@ describe('PathwayApp', () => {
     expect(screen.getByText('map screen')).toBeTruthy();
   });
 
-  it("opens the project from the map header's I'm finished", async () => {
+  it("finishes the level at once from I'm finished when the pathway has no finish block", async () => {
     mockLoad.mockResolvedValue({
       steps: {'intro-step': {status: 'started', timeSpent: 0}},
     });
@@ -454,17 +525,162 @@ describe('PathwayApp', () => {
 
     act(() => screen.getByText("I'm finished!").click());
 
-    expect(screen.getByText('playing My Project')).toBeTruthy();
-    expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
+    expect(screen.queryByText('Ready to Wrap Up?')).toBeNull();
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'continueOrFinishLesson',
+    });
   });
 
-  it('opens the project when a checkpoint is left for it', async () => {
-    await renderSettled();
+  it('asks through the finish dialog first, and keeps working on request', async () => {
+    mockLoad.mockResolvedValue({
+      steps: {'intro-step': {status: 'started', timeSpent: 0}},
+    });
+    await renderSettled({...pathway, finish});
+
+    act(() => screen.getByText("I'm finished!").click());
+    expect(screen.getByText('Ready to Wrap Up?')).toBeTruthy();
+
+    act(() => screen.getByRole('button', {name: 'Keep Working'}).click());
+    expect(screen.queryByText('Ready to Wrap Up?')).toBeNull();
+    expect(screen.getByText('map screen')).toBeTruthy();
+    expect(mockDispatch).not.toHaveBeenCalledWith({
+      type: 'continueOrFinishLesson',
+    });
+  });
+
+  it('plays the finish checkpoint after the dialog, then finishes the level the Lab2 way', async () => {
+    mockLoad.mockResolvedValue({
+      steps: {'intro-step': {status: 'started', timeSpent: 0}},
+    });
+    await renderSettled({...pathway, finish});
+
+    act(() => screen.getByText("I'm finished!").click());
+    act(() => screen.getByRole('button', {name: 'Finish'}).click());
+    expect(screen.getByText('playing Wrap up')).toBeTruthy();
+    expect(screen.queryByText('finish pathway')).toBeNull();
+    expect(mockDispatch).not.toHaveBeenCalledWith({
+      type: 'continueOrFinishLesson',
+    });
+
+    act(() => screen.getByText('finish').click());
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'continueOrFinishLesson',
+    });
+  });
+
+  it('goes straight into the finish checkpoint when there is no dialog, from a checkpoint too', async () => {
+    await renderSettled({...pathway, finish: {checkpoint: finish.checkpoint}});
     expect(screen.getByText(/playing Intro/)).toBeTruthy();
 
     act(() => screen.getByText('finish pathway').click());
 
-    expect(screen.getByText('playing My Project')).toBeTruthy();
-    expect(screen.queryByText('finish pathway')).toBeNull();
+    expect(screen.queryByText('Ready to Wrap Up?')).toBeNull();
+    expect(screen.getByText('playing Wrap up')).toBeTruthy();
+  });
+
+  it('finishes the level after the dialog alone when there is no finish checkpoint', async () => {
+    mockLoad.mockResolvedValue({
+      steps: {'intro-step': {status: 'started', timeSpent: 0}},
+    });
+    await renderSettled({...pathway, finish: {dialog: finish.dialog}});
+
+    act(() => screen.getByText("I'm finished!").click());
+    act(() => screen.getByRole('button', {name: 'Finish'}).click());
+
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'continueOrFinishLesson',
+    });
+  });
+
+  it('opens the finish checkpoint named in the URL', async () => {
+    window.history.replaceState({}, '', '/?checkpoint=wrap-up');
+    await renderSettled({...pathway, finish});
+    expect(screen.getByText(/playing Wrap up/)).toBeTruthy();
+  });
+
+  describe('tab bar', () => {
+    it('shows the tab bar in map view with the map tab active', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.getByText('tabs: map')).toBeTruthy();
+    });
+
+    it('opens the project when the My project tab is clicked in map view', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      mockDispatch.mockClear();
+
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+
+      expect(screen.getByText('playing My Project')).toBeTruthy();
+      expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
+    });
+
+    it('passes the project tab as active to StepPlayer in project view', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+
+      expect(screen.getByText('step-tab: project')).toBeTruthy();
+    });
+
+    it('returns to the map when the Practice skills tab is clicked in project view', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+      expect(screen.getByText('playing My Project')).toBeTruthy();
+
+      act(() => screen.getByRole('button', {name: 'step tab: map'}).click());
+
+      expect(screen.getByText('tabs: map')).toBeTruthy();
+    });
+
+    it('does not show the tab bar while playing a checkpoint step', async () => {
+      await renderSettled();
+
+      // Auto-started into a checkpoint step, not the map.
+      expect(screen.getByText(/playing Intro/)).toBeTruthy();
+      expect(screen.queryByText(/tabs:/)).toBeNull();
+    });
+
+    it('passes the channel name to the tab bar as projectName', async () => {
+      mockUseAppSelector.mockReturnValue('Cool Website');
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.getByText('tab project: Cool Website')).toBeTruthy();
+    });
+
+    it('passes the channel name through StepPlayer to the tab bar in project view', async () => {
+      mockUseAppSelector.mockReturnValue('Cool Website');
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+
+      expect(screen.getByText('step project: Cool Website')).toBeTruthy();
+    });
+
+    it('shows no project name when the channel has no name', async () => {
+      mockUseAppSelector.mockReturnValue(undefined);
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.queryByText(/tab project:/)).toBeNull();
+    });
   });
 });

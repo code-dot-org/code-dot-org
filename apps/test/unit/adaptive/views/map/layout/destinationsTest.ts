@@ -119,10 +119,10 @@ describe('layoutDestinations', () => {
 
   it('lists the destinations in authored order with their checkpoints', () => {
     expect(layout.destinations).toEqual([
-      {title: 'North', ids: ['n1', 'n2', 'n3']},
-      {title: 'East', ids: ['e1', 'e2', 'e3']},
-      {title: 'South', ids: ['s1', 's2', 's3']},
-      {title: 'West', ids: ['w1', 'w2', 'w3']},
+      {key: 'North', ids: ['n1', 'n2', 'n3']},
+      {key: 'East', ids: ['e1', 'e2', 'e3']},
+      {key: 'South', ids: ['s1', 's2', 's3']},
+      {key: 'West', ids: ['w1', 'w2', 'w3']},
     ]);
   });
 

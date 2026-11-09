@@ -88,11 +88,37 @@ describe('currentUserRedux', () => {
       user_type: 'teacher',
       is_signed_in: true,
     };
-    const action = setInitialData(serverUser);
-    const nextState = currentUser(initialState, action);
 
-    expect(nextState.userId).toEqual(1);
-    expect(nextState.userName).toEqual('test_user');
-    expect(nextState.userType).toEqual('teacher');
+    it('maps the server user into state', () => {
+      const nextState = currentUser(initialState, setInitialData(serverUser));
+
+      expect(nextState.userId).toEqual(1);
+      expect(nextState.userName).toEqual('test_user');
+      expect(nextState.userType).toEqual('teacher');
+    });
+
+    it('keeps the blocked AI chat providers', () => {
+      const nextState = currentUser(
+        initialState,
+        setInitialData({...serverUser, blocked_aichat_providers: ['google']})
+      );
+
+      expect(nextState.blockedAichatProviders).toEqual(['google']);
+    });
+
+    it('treats missing blocked AI chat providers as none blocked', () => {
+      const nextState = currentUser(initialState, setInitialData(serverUser));
+
+      expect(nextState.blockedAichatProviders).toEqual([]);
+    });
+
+    it("keeps the server's reason for refusing the Sprite Lab 2 AI blocks", () => {
+      const nextState = currentUser(
+        initialState,
+        setInitialData({...serverUser, spritelab_ask_ai_refusal: 'no_access'})
+      );
+
+      expect(nextState.spritelabAskAiRefusal).toBe('no_access');
+    });
   });
 });

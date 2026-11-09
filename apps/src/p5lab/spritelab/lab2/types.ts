@@ -3,7 +3,11 @@ import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {AddBlockEntry} from './addBlocks';
-import {ImageGenerationMetadata, ImageType} from './ai/images/types';
+import {
+  ImageGenerationMetadata,
+  ImageSubject,
+  ImageType,
+} from './ai/images/types';
 import {LevelCallout} from './callouts';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
@@ -23,6 +27,9 @@ export interface SerializedAnimationProps {
   name: string;
   sourceUrl?: string;
   frameSize: {x: number; y: number};
+  /** The size of the whole stored image: the full strip for a sheet, the
+      same as frameSize for a single-frame image. */
+  sourceSize?: {x: number; y: number};
   frameCount: number;
   looping: boolean;
   frameDelay: number;
@@ -36,6 +43,12 @@ export interface SerializedAnimationProps {
   trimmed?: boolean;
   /** What the image level that made it was for (level_mode.imageRole). */
   role?: string;
+  /** Whether a sprite is a character or an object. Stored on its own, not
+      only inside `generation`, because a hand edit clears `generation`. */
+  subject?: ImageSubject;
+  /** True once the student has drawn on the pixels; false while they are
+      exactly what the prompt produced. */
+  edited?: boolean;
   /** Present on AI-generated images. */
   generation?: ImageGenerationMetadata;
   /** Present on a character set: where each pose lives in the sheet. */
@@ -128,6 +141,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     name: string;
     source?: WorkspaceSerialization;
     worldStartPattern?: string[];
+    /** The student can open this scene in the editor beside the pinned
+        one; Play still starts the game from the pinned scene. */
+    editable?: boolean;
   };
   /** The level's objectives (objectives.ts): the Guide's text, checklist
       and Continue gate. */
@@ -140,6 +156,10 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
+  /** Blocks built on earlier levels cannot be deleted from the pinned scene
+      here (blockLocks.ts); the stacks this level adds and the toolbox
+      blocks no earlier level required can. */
+  lockEarlierBlocks?: boolean;
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;
