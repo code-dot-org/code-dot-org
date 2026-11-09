@@ -1,12 +1,11 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
-import React, {useCallback, useMemo, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import QuizMetadataList from '../QuizMetadataList';
 import {QuizQuestionType} from '../types';
-import {groupByPage} from '../utils';
 
 import {EMPTY_PAGE_REASON, UNSAVED_QUESTION_REASON} from './constants';
 import CreateQuestionDropdown from './CreateQuestionDropdown';
@@ -43,9 +42,11 @@ const QuizBuilderWorkspace: React.FunctionComponent<
 }) => {
   const {
     questions,
+    pages,
     isLoading,
     error,
     errorQuestionId,
+    addPage,
     addPendingQuestion,
     saveQuestion,
     removeQuestion,
@@ -72,28 +73,18 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   const hasPendingQuestion = questions.some(question =>
     isPendingQuestionId(question.id)
   );
-  // Pages aren't stored separately - each question's placement has a page number.
-  // "Add page" keeps the new, still-empty page in local state until a question is created on it.
-  const [addedEmptyPage, setAddedEmptyPage] = useState<number | null>(null);
-  const pages = useMemo(() => {
-    const pagesWithQuestions = groupByPage(questions);
-    return addedEmptyPage === null
-      ? pagesWithQuestions
-      : [...pagesWithQuestions, {page: addedEmptyPage, questions: []}];
-  }, [questions, addedEmptyPage]);
-  const isEmptyQuiz = questions.length === 0 && addedEmptyPage === null;
+  const isEmptyQuiz = pages.length === 0;
   const createDisabledReason = hasPendingQuestion
     ? UNSAVED_QUESTION_REASON
     : undefined;
   const addPageDisabledReason =
     createDisabledReason ??
-    (addedEmptyPage !== null ? EMPTY_PAGE_REASON : undefined);
+    (pages.some(page => page.questions.length === 0)
+      ? EMPTY_PAGE_REASON
+      : undefined);
 
   const handleCreate = (page: number, type: QuizQuestionType) => {
     setExpandedId(addPendingQuestion(page, type));
-    if (page === addedEmptyPage) {
-      setAddedEmptyPage(null);
-    }
   };
 
   let outline: React.ReactNode;
@@ -126,7 +117,6 @@ const QuizBuilderWorkspace: React.FunctionComponent<
       </div>
     );
   } else {
-    const nextPage = pages[pages.length - 1].page + 1;
     outline = (
       <>
         {pages.map(({page, questions: pageQuestions}) => (
@@ -144,6 +134,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
               <li key={question.id}>
                 <QuizQuestionCard
                   question={question}
+                  page={page}
                   isExpanded={question.id === expandedId}
                   onExpandedChange={expanded =>
                     setExpandedId(expanded ? question.id : null)
@@ -164,7 +155,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
               color="secondary"
               size="extraSmall"
               type="button"
-              onClick={() => setAddedEmptyPage(nextPage)}
+              onClick={addPage}
               startIcon={<FontAwesomeV6Icon iconName="plus" />}
               {...ariaDisabledProps(addPageDisabledReason)}
             >

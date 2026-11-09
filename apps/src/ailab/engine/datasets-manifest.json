@@ -1,6 +1,22 @@
 {
   "datasets": [
     {
+      "id": "lesson09_virtual_production",
+      "name": "Virtual Production",
+      "path": "datasets/lesson09_virtual_production.csv",
+      "metadataPath": "datasets/lesson09_virtual_production.json",
+      "isToy": true,
+      "rowCount": 84
+    },
+    {
+      "id": "lesson09_virtual_production_mashups",
+      "name": "Virtual Production Combined Features",
+      "path": "datasets/lesson09_virtual_production_mashups.csv",
+      "metadataPath": "datasets/lesson09_virtual_production_mashups.json",
+      "isToy": true,
+      "rowCount": 84
+    },
+    {
       "id": "lesson10_cafeteria_menu",
       "name": "Cafeteria Menu",
       "path": "datasets/lesson10_cafeteria_menu.csv",

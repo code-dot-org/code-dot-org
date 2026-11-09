@@ -8,15 +8,21 @@ import {
   QuizBuilderQuestionsState,
 } from '@cdo/apps/quiz/builder/types';
 import useQuizBuilderQuestions from '@cdo/apps/quiz/builder/useQuizBuilderQuestions';
+import {groupByPage} from '@cdo/apps/quiz/utils';
 
 jest.mock('@cdo/apps/quiz/builder/useQuizBuilderQuestions');
 const mockUseQuizBuilderQuestions = jest.mocked(useQuizBuilderQuestions);
 
+// A question and the page the mocked hook puts it on.
+type PlacedQuestion = QuizBuilderQuestion & {page: number};
+
 const question = (
   overrides: Partial<
-    Extract<QuizBuilderQuestion, {type: 'MultipleChoiceQuestion'}>
+    Extract<QuizBuilderQuestion, {type: 'MultipleChoiceQuestion'}> & {
+      page: number;
+    }
   > = {}
-): QuizBuilderQuestion => ({
+): PlacedQuestion => ({
   id: 1,
   type: 'MultipleChoiceQuestion',
   questionName: 'JavaScript variable fundamentals',
@@ -34,9 +40,11 @@ const question = (
 
 const BASE_STATE: QuizBuilderQuestionsState = {
   questions: [],
+  pages: [],
   isLoading: false,
   error: null,
   errorQuestionId: null,
+  addPage: jest.fn(),
   addPendingQuestion: jest.fn(),
   saveQuestion: jest.fn(),
   removeQuestion: jest.fn(),
@@ -54,11 +62,16 @@ function createFromDropdown(index: number, typeLabel: string) {
 }
 
 function renderWorkspace(
-  stateOverrides: Partial<QuizBuilderQuestionsState> = {},
+  stateOverrides: Omit<Partial<QuizBuilderQuestionsState>, 'questions'> & {
+    questions?: PlacedQuestion[];
+  } = {},
   propOverrides: Partial<React.ComponentProps<typeof QuizBuilderWorkspace>> = {}
 ) {
+  // pages defaults to the questions grouped by their page, as the hook does.
+  const questions = stateOverrides.questions ?? [];
   mockUseQuizBuilderQuestions.mockReturnValue({
     ...BASE_STATE,
+    pages: groupByPage(questions),
     ...stateOverrides,
   });
   return render(
@@ -163,9 +176,11 @@ describe('QuizBuilderWorkspace', () => {
     // hook's return value has to change too, so the appended question is
     // actually there for the workspace to expand.
     const addPendingQuestion = jest.fn().mockImplementation(() => {
+      const questions = [question(), question({id: -1})];
       mockUseQuizBuilderQuestions.mockReturnValue({
         ...BASE_STATE,
-        questions: [question(), question({id: -1})],
+        questions,
+        pages: groupByPage(questions),
         addPendingQuestion,
       });
       return -1;
@@ -206,19 +221,30 @@ describe('QuizBuilderWorkspace', () => {
     );
   });
 
-  it('adds an empty page one past the last existing page without creating a question', async () => {
+  it('adds a page without creating a question', () => {
+    const addPage = jest.fn();
     const addPendingQuestion = jest.fn();
     renderWorkspace({
-      questions: [
-        question({id: 1, page: 1}),
-        question({id: 2, page: 3, questionName: 'MVC frameworks'}),
-      ],
+      questions: [question({id: 1, page: 1})],
+      addPage,
       addPendingQuestion,
     });
 
     fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
+    expect(addPage).toHaveBeenCalled();
     expect(addPendingQuestion).not.toHaveBeenCalled();
-    expect(screen.getByText('Page 4')).toBeInTheDocument();
+  });
+
+  it('shows an empty page, blocks adding another, and creates questions on it', async () => {
+    const addPendingQuestion = jest.fn();
+    const questions = [question({id: 1, page: 1})];
+    renderWorkspace({
+      questions,
+      pages: [...groupByPage(questions), {page: 2, questions: []}],
+      addPendingQuestion,
+    });
+
+    expect(screen.getByText('Page 2')).toBeInTheDocument();
     expect(screen.getByText('This page is empty')).toBeInTheDocument();
     const addPage = screen.getByRole('button', {name: 'Add page'});
     expect(addPage).toHaveAttribute('aria-disabled', 'true');
@@ -229,8 +255,8 @@ describe('QuizBuilderWorkspace', () => {
       })
     ).toBeInTheDocument();
 
-    createFromDropdown(2, 'Free response');
-    expect(addPendingQuestion).toHaveBeenCalledWith(4, 'FreeResponseQuestion');
+    createFromDropdown(1, 'Free response');
+    expect(addPendingQuestion).toHaveBeenCalledWith(2, 'FreeResponseQuestion');
   });
 
   it('hides create actions while questions are still loading', () => {

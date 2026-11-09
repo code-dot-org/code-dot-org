@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-11-06T19:30:59.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "* “Is it raining?” \n* “Is the field muddy?”\n\nBoth questions are really asking one thing: \"Is it wet outside?\"",
+        "imageUrl": "https://images.code.org/4535de643488ddadd4b1d61cd80897a4-lesson9-panel1.png",
+        "key": "undefined-b0c46cf1-796f-4dde-ac7c-523e5f03c1e0",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "You can combine two features into one new feature. This is called **feature combination**",
+        "imageUrl": "https://images.code.org/b001377df84c71ddf65b8db7fe64fa17-lesson9-panel2.png",
+        "key": "undefined-ad6413e5-1684-4c2f-a081-672fb4e2b842"
+      },
+      {
+        "text": "**Either**: *Yes* if **one** of them is true.\n\n**Both**: *Yes* only if **both** are true.",
+        "imageUrl": "https://images.code.org/c839dc57b8a00b24b6f1b124ad105643-lesson9-panel3.png",
+        "key": "undefined-21faeeca-a0aa-4510-8f22-97b6fd06d189",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "One good question can do the work of two and make our decision trees smarter. \n\nNow try it with movie scenes!",
+        "imageUrl": "https://images.code.org/40f21af11ad7e82567ee0d372e8bbf7e-lesson9-panel4.png",
+        "key": "undefined-700fc24f-663a-46a8-827c-3549ad286425",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-06 19:40:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 19:42:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 19:42:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

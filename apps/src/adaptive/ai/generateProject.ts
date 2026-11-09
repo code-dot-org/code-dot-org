@@ -19,6 +19,7 @@ import {
   moderateInput,
   moderateOutput,
 } from './generate';
+import {ADAPTIVE_MODELS} from './models';
 import {
   PROJECT_PROMPT_VERSION,
   buildProjectPrompt,
@@ -90,6 +91,7 @@ export async function generateProject({
 
   const {output, traceId} = await generate({
     schema: projectOutputSchema,
+    model: ADAPTIVE_MODELS.STANDARD,
     prompt,
     context: aichatContext,
     trace: {
