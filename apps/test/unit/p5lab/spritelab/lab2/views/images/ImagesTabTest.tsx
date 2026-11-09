@@ -746,11 +746,11 @@ describe('ImagesTab', () => {
         screen.getByRole('button', {name: /^land sprite character$/})
       );
     });
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
     act(() => {
       jest.advanceTimersByTime(2000);
     });
-    const dialog = screen.getByRole('alertdialog', {
+    const dialog = screen.getByRole('dialog', {
       name: 'How AI made your image',
     });
     expect(dialog).toBeTruthy();
@@ -759,7 +759,7 @@ describe('ImagesTab', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Next'}));
     }
     fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
     // Told once: the next picture of the kind passes quietly.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: /^land sprite$/}));
@@ -767,7 +767,7 @@ describe('ImagesTab', () => {
     act(() => {
       jest.advanceTimersByTime(2000);
     });
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
     jest.useRealTimers();
   });
 
@@ -782,13 +782,13 @@ describe('ImagesTab', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
     fireEvent.click(screen.getByRole('button', {name: 'How AI made this'}));
     expect(
-      screen.getByRole('alertdialog', {name: 'How AI made your image'})
+      screen.getByRole('dialog', {name: 'How AI made your image'})
     ).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Next'}));
     expect(screen.getByText('A cat')).toBeTruthy();
     // Asked for, so it closes unread.
-    fireEvent.click(screen.getByRole('button', {name: 'Close dialog'}));
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Close modal'}));
+    expect(screen.queryByRole('dialog')).toBeNull();
   });
 
   it('holds the story while the tab is away, and tells it on return', async () => {
@@ -825,10 +825,10 @@ describe('ImagesTab', () => {
       jest.advanceTimersByTime(2000);
     });
     // Not over another tab.
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
     away(true);
     expect(
-      screen.getByRole('alertdialog', {name: 'How AI made your image'})
+      screen.getByRole('dialog', {name: 'How AI made your image'})
     ).toBeTruthy();
     jest.useRealTimers();
   });
@@ -847,7 +847,7 @@ describe('ImagesTab', () => {
         jest.advanceTimersByTime(2000);
       });
       expect(
-        screen.getByRole('alertdialog', {name: 'How AI made your image'})
+        screen.getByRole('dialog', {name: 'How AI made your image'})
       ).toBeTruthy();
       for (let step = 0; step < 4; step++) {
         fireEvent.click(screen.getByRole('button', {name: 'Next'}));

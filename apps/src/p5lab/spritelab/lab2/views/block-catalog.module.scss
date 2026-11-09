@@ -1,6 +1,7 @@
 // The new-block catalog: a list of blocks on the left, the chosen block's
 // help on the right, and the button that opens it, at the scene bar's end
-// or on a band across the toolbox's foot.
+// or on a band across the toolbox's foot. The host carries the pixel
+// editor's dialog theme, which the list's hover and active colors read.
 
 @use '@cdo/apps/pixelEditor/dialogChrome' as chrome;
 @use 'catalog-dot' as catalog;
@@ -15,54 +16,18 @@ $band-inset: 8px;
 }
 
 .dialogHost .dialog {
-  @include chrome.panel;
-
   width: 760px;
   max-width: calc(100vw - 32px);
-  display: flex;
-  flex-direction: column;
-  color: chrome.$panel-text;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 20px 24px 14px;
-
-  h2 {
-    margin: 0 0 4px;
-    font-size: 20px;
-  }
-
-  p {
-    margin: 0;
-    font-size: 14px;
-    color: var(--dialog-text-secondary);
-  }
-}
-
-// The tile that heads the dialog, tall enough to span the title and its
-// line.
-.headerIcon {
-  flex: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  background: var(--background-brand-primary);
-  color: var(--neutral-base-white);
-  font-size: 28px;
 }
 
 .columns {
   display: flex;
+  align-self: stretch;
   min-height: 360px;
   max-height: 60vh;
-  border-top: 1px solid chrome.$border-subtle;
-  border-bottom: 1px solid chrome.$border-subtle;
+  margin-top: 16px;
+  border: 1px solid chrome.$border-subtle;
+  border-radius: 8px;
 }
 
 .list {
@@ -131,12 +96,13 @@ $band-inset: 8px;
     margin: 0 0 12px;
     font-size: 18px;
   }
+}
 
-  p {
-    margin: 0 0 10px;
-    font-size: 14px;
-    line-height: 1.45;
-  }
+// Doubled to outrank the modal's own paragraph rule.
+.dialog .info p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 // The block's title with, level with it on the right, a pill naming the
@@ -171,11 +137,15 @@ $band-inset: 8px;
   align-items: flex-start;
 }
 
-.animation {
+// The modal styles every image in its content as a full-width picture;
+// this outranks that for the block's picture.
+.dialog .animation {
+  display: block;
   flex: none;
   width: 200px;
   height: auto;
   border-radius: 6px;
+  background: none;
 }
 
 .animationPending {
@@ -209,12 +179,6 @@ $band-inset: 8px;
   gap: 8px;
   margin: 0;
   font-weight: 600;
-}
-
-.footer {
-  display: flex;
-  justify-content: flex-end;
-  padding: 12px 24px;
 }
 
 // Across the toolbox's foot, at the column's width (CatalogBand.tsx).

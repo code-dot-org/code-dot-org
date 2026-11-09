@@ -151,11 +151,15 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 // Thumbnail of the image to be deleted, beside the dialog's text.
 .deleteLead {
   display: flex;
+  align-self: stretch;
   align-items: center;
   gap: 14px;
 }
 
-.deleteThumb {
+// The modal styles every image in its content as a full-width picture;
+// this outranks that for the thumbnail.
+.deleteDialog .deleteThumb {
+  display: block;
   flex: none;
   width: 64px;
   height: 64px;
@@ -518,10 +522,12 @@ $under-padding-top: 8px;
 // thumb and the reasons as rows.
 .ratingDialog {
   width: 520px;
+  min-width: 0;
 }
 
 .ratingPrompt {
   display: flex;
+  align-self: stretch;
   align-items: center;
   gap: 10px;
   margin: 0 0 16px;
@@ -542,6 +548,7 @@ $under-padding-top: 8px;
 
 // Full width: the dialog centers its content otherwise.
 .reasonList {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   gap: 12px;

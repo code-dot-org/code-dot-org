@@ -3,8 +3,8 @@
 // reading to the end. A telling the student asked for closes like any
 // dialog. The copy differs for a character and for a background.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
@@ -252,7 +252,7 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
   const onLastPanel = index === panels.length - 1;
   const panel = panels[index];
   return (
-    <MuiDialog
+    <Modal
       title={TITLE}
       className={styles.dialog}
       onClose={onClose}
@@ -265,7 +265,7 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
           <div key={index} className={styles.panel}>
             <div className={styles.visual}>{panel.visual(picture, prompt)}</div>
             <MuiTypography
-              component="h3"
+              component="h4"
               variant="h4"
               className={styles.heading}
             >
