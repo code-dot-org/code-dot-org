@@ -58,6 +58,10 @@ db_connection_settings = {
     hash[:primary_replica] = hash[:primary_replica].merge(writer_endpoint)
   else
     hash[:primary] = hash[:primary].merge(writer_endpoint) unless Cdo::DatabaseProxy.rds_proxy_for_writes?
+    # As in the `NONE` branch above, a process that bypasses the proxy bypasses it for replica reads too.
+    # `primary_reporting` keeps its endpoint in every branch: reporting queries depend on the session settings that
+    # endpoint's initialization query applies.
+    hash[:primary_replica] = hash[:primary_replica].merge(writer_endpoint) unless Cdo::DatabaseProxy.rds_proxy_for_reads?
   end
 end
 %>

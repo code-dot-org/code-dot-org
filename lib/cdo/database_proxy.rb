@@ -23,5 +23,13 @@ module Cdo
     def self.rds_proxy_for_writes?
       selected == RDSPROXY && CDO.running_web_application?
     end
+
+    # Whether this process sends its replica reads through RDS Proxy. The rule is the same as for writes, for one
+    # further reason: a process that is not the web application holds its pools for hours and enters a
+    # `connected_to(role: :reading)` block rarely, so a replica connection it leaves idle can be closed behind the
+    # proxy before the next read reaches for it.
+    def self.rds_proxy_for_reads?
+      rds_proxy_for_writes?
+    end
   end
 end
