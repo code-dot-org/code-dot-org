@@ -14,6 +14,7 @@ interface BubbleCanvas {
   textFont(font: string): void;
   textSize(size: number): void;
   textAlign(horizontal: string, vertical: string): void;
+  BASELINE: string;
   textWidth(text: string): number;
   fill(color: string): void;
   noStroke(): void;
@@ -65,6 +66,10 @@ const TEXT_SIZES: [size: number, maxLines: number][] = [
   [13, Infinity],
 ];
 const LINE_HEIGHT = 1.25;
+// The capitals' height as a share of the text size, about right for the
+// page font: each line is centered on its capitals, so a line with no
+// descenders sits as low in its box as one with.
+const CAP_HEIGHT = 0.7;
 // The text's room inside the bubble, as shares of the text size.
 const PADDING_X = 0.7;
 const PADDING_Y = 0.5;
@@ -293,16 +298,16 @@ export function drawSpeechBubble(
   p5.noStroke();
   p5.fill(INK);
   p5.textSize(layout.textSize);
-  p5.textAlign(p5.CENTER, p5.TOP);
+  p5.textAlign(p5.CENTER, p5.BASELINE);
   const paddingY =
     (layout.height - layout.lines.length * layout.lineHeight) / 2;
-  // Each line centered in its own line box.
-  const lead = (layout.lineHeight - layout.textSize) / 2;
+  // Each line's capitals centered in its own line box.
+  const baseline = (layout.lineHeight + CAP_HEIGHT * layout.textSize) / 2;
   layout.lines.forEach((line, i) =>
     p5.text(
       line,
       layout.x + layout.width / 2,
-      layout.y + paddingY + lead + i * layout.lineHeight
+      layout.y + paddingY + baseline + i * layout.lineHeight
     )
   );
   p5.pop();
