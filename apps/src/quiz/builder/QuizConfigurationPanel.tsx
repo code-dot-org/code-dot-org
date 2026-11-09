@@ -370,6 +370,12 @@ const QuizConfigurationPanel: React.FunctionComponent<
     });
   };
 
+  // Exam is not offered until exam quizzes are locked like legacy
+  // assessments; a quiz already saved as one still shows it.
+  const purposeOptions = PURPOSE_OPTIONS.filter(
+    option => option.value !== 'exam' || purpose === 'exam'
+  );
+
   return (
     <div className={styles.panel} ref={panelRef}>
       {error && (
@@ -387,7 +393,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
             </p>
           </div>
           <div className={styles.optionsList}>
-            {PURPOSE_OPTIONS.map(option => (
+            {purposeOptions.map(option => (
               <button
                 key={option.value}
                 type="button"
@@ -412,7 +418,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
               size="s"
               color="gray"
               labelText="Purpose"
-              items={PURPOSE_OPTIONS}
+              items={purposeOptions}
               selectedValue={purpose}
               disabled={savingField === 'purpose'}
               onChange={handlePurposeChange}
