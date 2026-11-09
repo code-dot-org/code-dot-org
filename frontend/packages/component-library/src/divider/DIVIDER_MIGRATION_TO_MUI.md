@@ -76,8 +76,8 @@ No consumer passes `color` or `margin`.
 | `apps/src/quiz/attempt/PageDivider.tsx`                  | import |
 | `frontend/packages/markdown/src/components/Markdown.tsx` | import |
 
-The consumer PR also bans `@code-dot-org/component-library/divider` in
-`apps/.eslintrc.js`.
+The consumer PR also banned `@code-dot-org/component-library/divider` in
+`apps/.eslintrc.js`, until step 4 removed the entry point.
 
 ## Parity
 
@@ -116,7 +116,7 @@ inline `width`, and a vertical one.
 
 Legacy source deleted (step 4, RE-228): `Divider.tsx`, its SCSS, test and
 stories, and `src/divider/index.ts` are gone, and the package no longer
-exports `./divider` or `./divider/index.css`. Nothing imported them: both
+exports `./divider` or `./divider/index.css`. Nothing in this repo imported them: both
 consumers had moved to `@mui/material` in #76703. The `apps/.eslintrc.js` ban
 on the entry point is removed, since an import of it now fails to resolve.
 With no deferred changes, the migration is complete.
