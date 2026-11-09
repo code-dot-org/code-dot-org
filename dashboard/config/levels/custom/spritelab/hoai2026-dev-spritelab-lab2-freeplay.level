@@ -252,6 +252,10 @@
             {
               "kind": "block",
               "type": "spritelab2_goToScene"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_goToExternalScene"
             }
           ]
         }
