@@ -121,6 +121,10 @@ module Cdo
       # See: https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
       db_options[:reconnect] = true
 
+      # Suppress Sequel's `SET SQL_AUTO_IS_NULL=0` (which it issues on every new connection) to prevent RDS Proxy from
+      # pinning the connection.
+      db_options[:auto_is_null] = true
+
       if query_timeout
         db_options[:read_timeout] = query_timeout
         db_options[:init_command] = "SET SESSION MAX_EXECUTION_TIME = #{query_timeout * 1000}"
