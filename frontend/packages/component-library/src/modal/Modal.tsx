@@ -22,6 +22,9 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
    *  to the element in custom content which will be representing the dialog description. (Used by screen readers
    *  for dialog's `aria-describedBy` attribute) */
   customBottomContent?: ReactNode;
+  /** Rendered at the start of the action row, opposite the buttons: a text
+   *  button, a link, a checkbox. */
+  startActions?: ReactNode;
   /** Modal primary button props */
   primaryButtonProps: MuiButtonProps;
   /** Modal secondary button props */
@@ -68,6 +71,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   className,
   customContent,
   customBottomContent,
+  startActions,
   onClose,
   closeLabel = 'Close modal',
   imageUrl,
@@ -96,7 +100,12 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       aria-label={title}
       {...HTMLAttributes}
     >
-      <div className={moduleStyles.modalTitleSection}>
+      <div
+        className={classnames(
+          moduleStyles.modalTitleSection,
+          onClose && moduleStyles.closable,
+        )}
+      >
         <MuiTypography variant="h3" gutterBottom>
           {title}
         </MuiTypography>
@@ -123,20 +132,29 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       </div>
       <hr />
       <div className={moduleStyles.modalActionsSection}>
-        {secondaryButtonProps && (
-          <MuiButton
-            variant="outlined"
-            color={mode === 'dark' ? 'white' : 'secondary'}
-            {...secondaryButtonProps}
-          />
+        {startActions && (
+          <div className={moduleStyles.modalStartActions}>{startActions}</div>
         )}
-        <MuiButton
-          variant="contained"
-          color={mode === 'dark' ? 'white' : 'primary'}
-          {...primaryButtonProps}
-        />
+        <div className={moduleStyles.modalEndActions}>
+          {secondaryButtonProps && (
+            <MuiButton
+              variant="outlined"
+              color={mode === 'dark' ? 'white' : 'secondary'}
+              {...secondaryButtonProps}
+            />
+          )}
+          <MuiButton
+            variant="contained"
+            color={mode === 'dark' ? 'white' : 'primary'}
+            {...primaryButtonProps}
+          />
+        </div>
       </div>
-      {customBottomContent}
+      {customBottomContent && (
+        <div className={moduleStyles.modalBottomSection}>
+          {customBottomContent}
+        </div>
+      )}
     </CustomDialog>
   );
 };

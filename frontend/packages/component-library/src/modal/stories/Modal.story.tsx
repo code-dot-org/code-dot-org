@@ -272,6 +272,27 @@ ModalWithCustomBottomContent.args = {
   onClose: () => null,
 };
 
+export const ModalWithStartActions = SingleTemplate.bind({});
+ModalWithStartActions.args = {
+  title: 'Modal with Start Actions',
+  description:
+    'The action row holds a group at its start, opposite the primary and secondary buttons.',
+  startActions: (
+    <Button variant="text" color="primary" onClick={() => null}>
+      Start over
+    </Button>
+  ),
+  primaryButtonProps: {
+    children: 'Save',
+    onClick: () => console.log('Primary action clicked'),
+  },
+  secondaryButtonProps: {
+    children: 'Cancel',
+    onClick: () => console.log('Secondary action clicked'),
+  },
+  onClose: () => null,
+};
+
 export const MultipleModals = MultipleTemplate.bind({});
 MultipleModals.args = {
   components: [
