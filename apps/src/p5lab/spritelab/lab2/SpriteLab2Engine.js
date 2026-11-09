@@ -206,8 +206,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onSceneJumpStart = null;
     this.onSceneJumpLand = null;
     this.onSceneJumpCancel = null;
-    // Decoded images, the p5 wrapper's cache; reused by name across re-runs.
-    this.ownPreloads_ = {};
+    // Decoded images, reused by name across re-runs; handed to each p5
+    // wrapper as its cache.
+    this.preloads_ = {};
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
@@ -1238,7 +1239,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
-    this.p5Wrapper.preloadedSprites = this.ownPreloads_;
+    this.p5Wrapper.preloadedSprites = this.preloads_;
     const scoped = this.referencedImages
       ? filterAnimationsToNames(animationList, this.referencedImages)
       : animationList;

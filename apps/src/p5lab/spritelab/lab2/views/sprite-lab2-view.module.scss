@@ -555,7 +555,7 @@ $z-over-blockly: 71;
   pointer-events: none;
 }
 
-// Scene-jump transition (scenes UI variant): sceneCover blanks the canvas the
+// Scene-jump transition: sceneCover blanks the canvas the
 // instant a jump triggers and holds while the target loads; sceneFade takes
 // over when it lands and fades out, revealing the new scene.
 .sceneCover {

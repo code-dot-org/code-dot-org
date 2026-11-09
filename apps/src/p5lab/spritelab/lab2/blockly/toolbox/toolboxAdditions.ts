@@ -139,18 +139,13 @@ function presentIn(category: StaticCategoryInfo): Set<string | undefined> {
   return new Set(category.contents.filter(isBlockInfo).map(b => b.type));
 }
 
-// Append the scene blocks to the "Game Design" category.
+// Append the scene block to the "Game Design" category.
 function ensureSceneBlocks(def: ToolboxInfo): void {
   const category = findCategory(def.contents, 'Game Design');
-  if (!category) {
+  if (!category || presentIn(category).has(GO_TO_SCENE_BLOCK_TYPE)) {
     return;
   }
-  const present = presentIn(category);
-  [GO_TO_SCENE_BLOCK_TYPE].forEach(type => {
-    if (!present.has(type)) {
-      category.contents.push({kind: 'block', type});
-    }
-  });
+  category.contents.push({kind: 'block', type: GO_TO_SCENE_BLOCK_TYPE});
 }
 
 // Lead the "Sprites" category with the platformer composites and build the
