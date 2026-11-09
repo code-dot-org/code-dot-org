@@ -68,26 +68,15 @@ module Cdo
     end
 
     class StackSecret < Secret
-      # This attribute is used by the Cdo::Secrets.required (and require!) methods to determine which AWS Secret to get.
+      # There is no environment-wide fallback: nil when this host's CloudFormation Stack is unknown.
       def key
         stack_specific_secret_path
       end
 
-      # Extend the default lookup functionality to support checking for
-      # stack-specific secrets, defaulting to the original functionality if
-      # none are found.
       def lookup(secrets_manager)
-        # First try looking for a Stack-specific secret.
-        stack_specific_secret_path ? secrets_manager.get!(stack_specific_secret_path) : super
-      rescue ::Aws::SecretsManager::Errors::ValidationException
-        # We're likely executing in an environment that's not part of a
-        # CloudFormation Stack, so the secret name was invalid (nil). Fall back
-        # to looking up the environment type secret.
-        super
-      rescue ::Aws::SecretsManager::Errors::ResourceNotFoundException
-        # Fall back to looking up a secret shared by all deployments with the
-        # same environment-type ('development', 'test', 'production', etc.).
-        super
+        path = key
+        raise "CDO.#{secret_key} is a !StackSecret, but this host's CloudFormation Stack is unknown" unless path
+        secrets_manager.get!(path)
       end
 
       # Generate path to a Secret that was provisioned for a specific
@@ -95,8 +84,8 @@ module Cdo
       # different values for different deployments that have the same
       # environment type.
       #
-      # Note that we use `secret_key` for this rather than `key`, since the
-      # latter is environment-specific and we want stack-specific overrides to
+      # Note that we use `secret_key` for this rather than Secret#key, since the
+      # latter is environment-specific and we want stack-specific secrets to
       # apply to all environments.
       def stack_specific_secret_path
         @stack ||= Cdo::SecretsConfig::StackSecret.current_stack_name
@@ -147,7 +136,8 @@ module Cdo
       end
 
       @table.select {|_k, v| v.to_s.match(SECRET_REGEX)}.each do |key, value|
-        cdo_secrets.required(*value.to_s.scan(SECRET_REGEX).flatten)
+        # A StackSecret whose Stack is unknown renders as "${}"; its lookup raises instead.
+        cdo_secrets.required(*value.to_s.scan(SECRET_REGEX).flatten.reject(&:empty?))
         @table[key] = Cdo.lazy do
           if value.is_a?(Secret)
             value.lookup(cdo_secrets)

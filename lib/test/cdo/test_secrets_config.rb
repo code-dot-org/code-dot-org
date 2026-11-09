@@ -89,14 +89,23 @@ class SecretsConfigTest < Minitest::Test
     assert_equal 'stack-specific bar secret', config.bar
   end
 
-  def test_stack_secret_tag_falls_back_to_regular_secret
-    stub_secret 'bar!'
+  def test_stack_secret_tag_does_not_fall_back_to_regular_secret
+    stub_multiple_secrets('/cdo/bar' => 'default bar secret')
     load_configuration <<~YAML
-      foo: foo!
       bar: !StackSecret
     YAML
-    assert_equal 'foo!', config.foo
-    assert_equal 'bar!', config.bar
+    assert_raises(Cdo::Secrets::NOT_FOUND) {config.bar}
+  end
+
+  def test_stack_secret_tag_unknown_stack
+    Cdo::SecretsConfig::StackSecret.stubs(:current_stack_name).returns(nil)
+    stub_multiple_secrets('/cdo/bar' => 'default bar secret')
+    load_configuration <<~YAML
+      bar: !StackSecret
+    YAML
+    assert_equal({}, config.cdo_secrets.required!)
+    e = assert_raises(RuntimeError) {config.bar}
+    assert_match /CDO.bar is a !StackSecret, but this host's CloudFormation Stack is unknown/, e.message
   end
 
   def test_clear_secrets
