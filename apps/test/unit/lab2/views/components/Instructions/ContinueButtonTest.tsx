@@ -31,7 +31,11 @@ describe('ContinueButton', () => {
 
   it('wears the success green when asked', () => {
     render(
-      <ContinueButton onContinue={jest.fn()} tone="success" className="own">
+      <ContinueButton
+        onContinue={jest.fn()}
+        buttonColor="success"
+        className="own"
+      >
         Go
       </ContinueButton>
     );

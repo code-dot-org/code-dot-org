@@ -2411,7 +2411,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {/* The last level's Finish, in the page header as well. */}
       {levelProperties.useSecondaryFinishButton && (
         <HeaderActionButton
-          tone="success"
+          buttonColor="success"
           onClick={() => dispatch(continueOrFinishLesson())}
         >
           I'm finished
@@ -2432,7 +2432,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         // render inside the instructions panel.
         objectives={objectives.active ? objectives : undefined}
         hideContinueIfDisabled
-        continueTone="success"
+        continueButtonColor="success"
         footerButtons={
           startOverOffered && (
             <IconButtonWithTooltip

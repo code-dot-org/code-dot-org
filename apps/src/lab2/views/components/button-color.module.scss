@@ -1,4 +1,4 @@
-// A contained primary button in the success green (see buttonTone.ts).
+// A contained primary button in the success green (see buttonColor.ts).
 // Doubled, so the tokens outrank the theme's emotion styles; a disabled
 // button keeps the theme's disabled look.
 .success.success:not(:global(.Mui-disabled)) {

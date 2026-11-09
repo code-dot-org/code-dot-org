@@ -15,7 +15,7 @@ import {
   ObjectiveItem,
   ObjectivesChecklist,
 } from '@cdo/apps/lab2/types';
-import {ButtonTone} from '@cdo/apps/lab2/views/components/buttonTone';
+import {ButtonColor} from '@cdo/apps/lab2/views/components/buttonColor';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 
@@ -54,7 +54,7 @@ export interface InstructionsProps {
   /** If the continue button should be hidden if disabled. */
   hideContinueIfDisabled?: boolean;
   /** Continue's color. */
-  continueTone?: ButtonTone;
+  continueButtonColor?: ButtonColor;
   /** Instructions content that updates dynamically throughout a level. Replaces `longInstructions` if provided. */
   dynamicInstructions?: string;
   /** The level's checklist, under the text; Continue waits until every
@@ -86,7 +86,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   onObjectiveClick,
   hideNavigation = false,
   hideContinueIfDisabled = false,
-  continueTone,
+  continueButtonColor,
   ...feedbackProps
 }) => {
   const {longInstructions, predictSettings, offerBrowserTts, appName} =
@@ -202,7 +202,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             levelProperties={levelProperties}
             handleInstructionsTextClick={handleInstructionsTextClick}
             hideContinueIfDisabled={hideContinueIfDisabled}
-            continueTone={continueTone}
+            continueButtonColor={continueButtonColor}
             styleAsBubble
           />
         )}

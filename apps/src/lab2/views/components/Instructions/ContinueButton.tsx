@@ -6,17 +6,17 @@ import classNames from 'classnames';
 import React from 'react';
 
 import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
-import {ButtonTone} from '@cdo/apps/lab2/views/components/buttonTone';
+import {ButtonColor} from '@cdo/apps/lab2/views/components/buttonColor';
 
 import {instructionsContinueButtonElementId} from './ResourcePanel/constants';
 
-import toneStyles from '@cdo/apps/lab2/views/components/button-tone.module.scss';
+import colorStyles from '@cdo/apps/lab2/views/components/button-color.module.scss';
 import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructions.module.scss';
 
 type ContinueButtonProps = Omit<MuiButtonProps, 'onClick'> & {
   tooltipMessage?: string;
   hideIfDisabled?: boolean;
-  tone?: ButtonTone;
+  buttonColor?: ButtonColor;
   onContinue: () => void;
 };
 
@@ -26,7 +26,7 @@ type ContinueButtonProps = Omit<MuiButtonProps, 'onClick'> & {
 const ContinueButton: React.FC<ContinueButtonProps> = ({
   tooltipMessage,
   hideIfDisabled,
-  tone = 'primary',
+  buttonColor = 'primary',
   disabled,
   onContinue,
   children,
@@ -57,7 +57,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
           id={instructionsContinueButtonElementId}
           className={classNames(
             className,
-            tone === 'success' && toneStyles.success
+            buttonColor === 'success' && colorStyles.success
           )}
           onClick={onContinue}
           disabled={disabled}
