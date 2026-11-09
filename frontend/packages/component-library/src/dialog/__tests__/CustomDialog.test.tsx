@@ -396,14 +396,14 @@ describe('CustomDialog Component', () => {
     expect(screen.getByRole('textbox', {name: 'Overlay'})).toHaveFocus();
   });
 
-  it('should focus the MUI container when the panel has nothing focusable', async () => {
+  it('should focus the panel when it has nothing focusable', async () => {
     render(
       <CustomDialog aria-label="Nothing to focus">{description}</CustomDialog>,
     );
     await settle();
 
-    expect(document.activeElement).toBe(getFocusContainer(getPanel()));
-    expect(document.activeElement).toHaveAttribute('tabindex', '-1');
+    expect(getPanel()).toHaveFocus();
+    expect(getPanel()).toHaveAttribute('tabindex', '-1');
   });
 
   it('should let focus move to a control outside the dialog', async () => {

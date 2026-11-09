@@ -99,6 +99,8 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
       el.focus();
       if (document.activeElement === el) return;
     }
+    // MUI's container has no role; the panel does, so a screen reader announces the dialog.
+    panel.focus();
   }, []);
 
   useEffect(() => {
@@ -141,6 +143,7 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
         paper: {
           ref: panelRef,
           role,
+          tabIndex: -1,
           'aria-label': ariaLabel,
           // An explicit undefined keeps MUI's generated id, which nothing carries, off the panel.
           'aria-labelledby': ariaLabelledBy,

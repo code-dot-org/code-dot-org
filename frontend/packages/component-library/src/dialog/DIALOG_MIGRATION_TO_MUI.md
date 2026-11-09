@@ -578,4 +578,5 @@ on, MUI pulls focus back from any overlay it does not track, and several open
 over a mounted dialog (see the Focus enforcement row). The transition's
 `onEntered` then moves focus to the first control that takes focus, a tick later
 than the hook did, unless focus is already in the panel; with nothing focusable
-it stays on the container.
+it goes to the panel (`tabindex="-1"`), whose `role="dialog"` and label a
+screen reader announces. The container has no role.

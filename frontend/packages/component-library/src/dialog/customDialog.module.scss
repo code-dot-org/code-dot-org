@@ -14,6 +14,11 @@
   position: relative;
   background-color: var(--background-neutral-primary);
   border: 1px solid var(--borders-neutral-primary);
+
+  // Focused only when it has no control to focus; MUI's container, which held that focus before, has no outline either.
+  &:focus {
+    outline: none;
+  }
 }
 
 .customDialogCloseButton {
