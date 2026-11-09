@@ -1,0 +1,33 @@
+{
+  "name": "SC1-L12-movies-base",
+  "card": {
+    "description": "A movie studio has facts about 186 real movies that came out in US theaters from 2022 to 2026. Each record is one movie. The label says if the movie was a box office hit (Yes) or not (No). A hit earned much more than it cost to make. You can also choose Critics Liked It or Rating as the label.",
+    "source": "Real movies and real facts from Wikipedia, The Numbers and Box Office Mojo, collected in November 2026. A box office hit earned at least 2.5 times its budget (the money spent to make it) around the world. Critics Liked It means a Rotten Tomatoes critics score of 75% or higher. We picked which movies to include: G, PG and PG-13 movies that played in many theaters.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Use the tree to predict whether a new movie might earn much more than it cost to make.",
+      "potentialMisuses": "The tree is trained on only 167 movies from five years. We only picked G, PG and PG-13 movies, so it may predict poorly for R-rated movies. Movies from August to October 2026 were still in theaters, so some of their box office numbers may change. A movie can earn a lot of money and still not be good. You might not like it."
+    }
+  },
+  "defaultLabelColumn": "Box Office Hit",
+  "defaultIdColumn": "Title",
+  "fields": [
+    { "type": "categorical", "id": "Title", "description": "What is the movie called?" },
+    { "type": "categorical", "id": "Release Year", "description": "What year did the movie come out in US theaters?" },
+    { "type": "categorical", "id": "Animated", "description": "Is the movie animated?" },
+    { "type": "categorical", "id": "Genre", "description": "What kind of story is the movie?" },
+    { "type": "categorical", "id": "Based On", "description": "Where did the movie's story come from?" },
+    { "type": "categorical", "id": "Sequel", "description": "Is the movie a sequel or a later part of a movie series?" },
+    { "type": "categorical", "id": "Remake", "description": "Is the movie a new version of an older movie?" },
+    { "type": "categorical", "id": "Superhero", "description": "Is the movie about a superhero?" },
+    { "type": "categorical", "id": "Has Songs", "description": "Do the characters sing songs as part of the story?" },
+    { "type": "categorical", "id": "Length", "description": "How long is the movie? Short is under 100 minutes. Long is 130 minutes or more." },
+    { "type": "categorical", "id": "Release Season", "description": "What season did the movie come out?" },
+    { "type": "categorical", "id": "Budget", "description": "How much did the movie cost to make? Low is under $50 million. High is $150 million or more." },
+    { "type": "categorical", "id": "Audience Grade", "description": "What letter grade did people give the movie after they saw it on opening weekend?" },
+    { "type": "categorical", "id": "Critics Liked It", "description": "Did movie critics like it? Yes means a Rotten Tomatoes critics score of 75% or higher." },
+    { "type": "categorical", "id": "Rating", "description": "What is the movie's US age rating (G, PG or PG-13)?" },
+    { "type": "categorical", "id": "Box Office Hit", "description": "Did the movie earn at least 2.5 times its budget around the world? This is what the tree predicts for each movie." }
+  ]
+}
