@@ -1,3 +1,4 @@
+@playwright
 Feature: Dance Party
 
   Scenario: Dance AI Modal
