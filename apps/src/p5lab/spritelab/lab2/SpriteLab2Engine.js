@@ -74,6 +74,7 @@ import {
   stopSoundEffects,
   synthPresetOf,
 } from './soundEffects';
+import {drawSpeechBubble} from './speechBubble';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 // A burst from the player starts at its take-off spot this many frames
@@ -665,6 +666,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       return fires ? [{}] : [];
     };
+    // The say and think bubbles, drawn this lab's way (speechBubble.ts).
+    library.drawSpeechBubble = (text, spriteX, spriteY, bubbleType) =>
+      drawSpeechBubble(library.p5, text, spriteX, spriteY, bubbleType);
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));
