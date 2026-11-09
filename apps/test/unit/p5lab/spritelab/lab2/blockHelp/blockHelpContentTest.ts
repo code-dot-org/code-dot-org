@@ -22,6 +22,7 @@ describe('BLOCK_HELP', () => {
     'spritelab2_askAI',
     'spritelab2_askAIWithChoices',
     'spritelab2_setSystemPrompt',
+    'spritelab2_setPlatformGravityDirection',
   ]);
 
   it('gives every entry an animation, or is known to be waiting for one', () => {

@@ -48,9 +48,12 @@ import {
 import {ParticleLayer} from './particles';
 import {
   CONTACT_EPSILON,
+  DEFAULT_JUMP_HEIGHT,
   hasSupportAhead,
   isAtEdge,
   isSupported,
+  MAX_JUMP_HEIGHT,
+  MIN_JUMP_HEIGHT,
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   bodyBox,
@@ -479,11 +482,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       library.contactEpsilon = CONTACT_EPSILON;
     }
     // Fresh library = fresh run; gravity returns to the default until a
-    // set-gravity block says otherwise. Negative flips the world: players
-    // fall up and land on block undersides and the view's top edge.
+    // set-gravity-direction block says otherwise. Negative flips the world:
+    // players fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
-    this.platformGravityMagnitude_ = PLATFORM_GRAVITY;
-    this.platformJumpHeight_ = 3;
+    this.platformJumpHeight_ = DEFAULT_JUMP_HEIGHT;
     this.notifyControlsChange_();
     this.particles_.reset();
     this.jumpStarts_ = null;
@@ -502,22 +504,20 @@ export default class SpriteLab2Engine extends SpriteLab {
     // A new run starts the player's history over, so the spawn is not heard
     // as a move.
     this.forgetPlayer_();
-    library.commands.setPlatformGravity = value => {
-      this.platformGravityMagnitude_ = Math.abs(Number(value) || 0);
-      this.platformGravity_ = this.platformGravityMagnitude_;
-      this.notifyControlsChange_();
-    };
     library.commands.setPlatformGravityDirection = direction => {
       this.platformGravity_ =
         direction === 'none'
           ? 0
           : direction === 'up'
-          ? -this.platformGravityMagnitude_
-          : this.platformGravityMagnitude_;
+          ? -PLATFORM_GRAVITY
+          : PLATFORM_GRAVITY;
       this.notifyControlsChange_();
     };
     library.commands.setPlatformJumpHeight = value => {
-      this.platformJumpHeight_ = Math.max(0, Math.min(10, Number(value) || 0));
+      this.platformJumpHeight_ = Math.max(
+        MIN_JUMP_HEIGHT,
+        Math.min(MAX_JUMP_HEIGHT, Number(value) || 0)
+      );
     };
     // The view eases toward the target zoom a frame at a time (see the
     // platform draw loop below); a fresh run starts back at 1.
@@ -614,7 +614,7 @@ export default class SpriteLab2Engine extends SpriteLab {
               2 *
                 Math.abs(this.platformGravity_) *
                 (this.platformJumpHeight_ + JUMP_CLEARANCE_SQUARES) *
-                (library.defaultSpriteSize || 40)
+                library.defaultSpriteSize
             )
           : Math.abs(Number(speed) || 0);
       if (jumpSpeed === 0) {

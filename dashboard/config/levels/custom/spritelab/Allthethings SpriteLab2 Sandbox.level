@@ -68,7 +68,11 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_setPlatformGravity"
+              "type": "spritelab2_setPlatformJumpHeight"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setPlatformGravityDirection"
             },
             {
               "kind": "block",
