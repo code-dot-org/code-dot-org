@@ -3,7 +3,7 @@
 .card {
   @include mixins.card;
 
-  overflow: hidden;
+  overflow: clip;
 }
 
 .results {

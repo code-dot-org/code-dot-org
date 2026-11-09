@@ -41,7 +41,58 @@
               "x": 20,
               "y": 20,
               "deletable": false,
-              "movable": false
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "gamelab_spriteSay",
+                  "fields": {
+                    "SPEECH": "We did it!"
+                  },
+                  "inputs": {
+                    "SPRITE": {
+                      "shadow": {
+                        "type": "gamelab_allSpritesWithAnimation"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "gamelab_checkTouching",
+              "x": 20,
+              "y": 230,
+              "fields": {
+                "CONDITION": "\"when\""
+              },
+              "inputs": {
+                "SPRITE1": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "SPRITE2": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "gamelab_spriteSay",
+                  "data": "friend-says",
+                  "fields": {
+                    "SPEECH": "What's next?"
+                  },
+                  "inputs": {
+                    "SPRITE": {
+                      "shadow": {
+                        "type": "gamelab_allSpritesWithAnimation"
+                      }
+                    }
+                  }
+                }
+              }
             }
           ]
         }
@@ -55,12 +106,21 @@
         "..........",
         "..........",
         "..........",
-        "..........",
+        "......F...",
         "BBBBBBBBBB"
-      ]
+      ],
+      "worldStartRoles": {
+        "F": "friend"
+      }
     },
     "image_role_defaults": {
-      "sprite": "hero"
+      "sprite": "hero",
+      "gamelab_checkTouching": [
+        "hero",
+        "friend"
+      ],
+      "gamelab_spriteSay": "hero",
+      "data:friend-says": "friend"
     },
     "toolbox_definition": {
       "kind": "flyoutToolbox",
