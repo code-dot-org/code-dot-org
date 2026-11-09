@@ -1,9 +1,13 @@
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  AiChatModelIds,
+} from '@cdo/generated-scripts/sharedConstants';
 import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
 import type {ValueOf} from '../types/utils';
 
 import type {ModelDescription, ModelParameters} from './types';
+import type {AiChatClientType} from './types/context';
 
 export const modelDescriptions: ModelDescription[] =
   modelsJson.filter(isValidDescription);
@@ -48,6 +52,23 @@ export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL =
   'This AI Chat level is not available in your region.';
 export const AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL =
   'AI Tutor is not available in your region.';
+
+// The error Rails and the AI gateway send when the user's region blocks the model.
+export const MODEL_REGION_BLOCKED_ERROR = 'model_not_available_in_region';
+
+// Allows specific FAQ articles for different aichat clients.
+export const REGION_BLOCKED_COPY: Partial<
+  Record<AiChatClientType, {message: string; faqLink: string}>
+> = {
+  [AiChatClientTypes.AI_CHAT_LAB]: {
+    message: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+    faqLink: AI_CHAT_LAB_FAQ_LINK,
+  },
+  [AiChatClientTypes.AI_TUTOR]: {
+    message: AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
+    faqLink: AI_TUTOR_FAQ_LINK,
+  },
+};
 export type CourseOrUnit = 'course' | 'unit';
 export const usOnlyModelsEssentialMessage = (subject: CourseOrUnit) =>
   `This ${subject} requires AI models that are not available in your region. AI chat tools will be disabled in some levels.`;

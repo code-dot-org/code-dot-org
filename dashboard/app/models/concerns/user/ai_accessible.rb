@@ -5,6 +5,8 @@ module User::AiAccessible
 
   TEACHER_PREVERIFICATION_PILOT = 'teacher-preverification'.freeze
   SPRITELAB2_AI_PILOT = 'ai-in-your-program-pilot'.freeze
+  # Testers join to be treated as outside the US; see blocked_aichat_providers.
+  SIMULATE_INTERNATIONAL_PILOT = 'ai-simulate-international'.freeze
 
   # Chat apis trust the client to decide if it can access chat features
   # This allows us the flexibility to do things like experiment with new
@@ -42,8 +44,8 @@ module User::AiAccessible
     return SPRITELAB_ASK_AI_REFUSALS[:OFF] unless DCDO.get('spritelab-lab2-ask-ai-enabled', true)
     # Essential-only won't do: it would trust a client-supplied level id.
     return SPRITELAB_ASK_AI_REFUSALS[:NO_ACCESS] unless ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]
-    # AiGatewayAuthController refuses these for every client type.
-    return SPRITELAB_ASK_AI_REFUSALS[:REGION_BLOCKED] if blocked_aichat_providers.any? && !DCDO.get('ai_gateway_fallback_is_enabled', false)
+    # The gateway's fallback serves only adaptive and the tutor.
+    return SPRITELAB_ASK_AI_REFUSALS[:REGION_BLOCKED] if blocked_aichat_providers.any?
     nil
   end
 
@@ -57,13 +59,22 @@ module User::AiAccessible
   end
 
   def blocked_aichat_providers
+    # Ahead of the levelbuilder exemption, since levelbuilders are the testers.
+    return AI_CHAT_US_ONLY_PROVIDERS if simulating_international_ai_chat_user?
     return [] if levelbuilder?
     international_ai_chat_user? ? AI_CHAT_US_ONLY_PROVIDERS : []
   end
 
-  def can_use_aichat_model?(model_id)
+  def ai_gateway_fallback_allowed?(client_type)
+    DCDO.get('ai_gateway_fallback_is_enabled', false) &&
+      AI_GATEWAY_FALLBACK_CLIENT_TYPES.include?(client_type)
+  end
+
+  # Without a client type, as on the Rails chat path, no fallback applies.
+  def can_use_aichat_model?(model_id, client_type: nil)
     provider = AI_CHAT_PROVIDER_BY_MODEL_ID[model_id]
-    provider.nil? || blocked_aichat_providers.exclude?(provider)
+    return true if provider.nil? || blocked_aichat_providers.exclude?(provider)
+    ai_gateway_fallback_allowed?(client_type) && AI_CHAT_GEMINI_IMAGE_MODEL_IDS.exclude?(model_id)
   end
 
   # has essential or higher access to AI chat tools
@@ -108,6 +119,11 @@ module User::AiAccessible
 
   private def in_section_with_ai_chat_access_essential_only?
     sections_as_student.any? {|s| !s.hidden && s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY]}
+  end
+
+  private def simulating_international_ai_chat_user?
+    return @simulating_international_ai_chat_user if defined?(@simulating_international_ai_chat_user)
+    @simulating_international_ai_chat_user = Experiment.enabled?(user: self, experiment_name: SIMULATE_INTERNATIONAL_PILOT)
   end
 
   # A teacher is international when they (the teacher) are non-US. A student is

@@ -336,23 +336,59 @@ describe('useAiChatDisabledState', () => {
       mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
     });
 
-    it('enables a blocked model the gateway serves', () => {
+    it('enables the tutor on a blocked model the gateway serves', () => {
       mockShouldUseAiGateway.mockReturnValue(true);
 
       const {result} = renderHook(() =>
         useAiChatDisabledState({
           appName: 'pythonlab',
-          selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
+          clientType: AiChatClientTypes.AI_TUTOR,
+          selectedModelId: AiChatModelIds.GEMINI_3_5_FLASH_LITE,
         })
       );
 
       expect(result.current).toEqual({disabled: false});
     });
 
+    it('still blocks an image model, which has no fallback', () => {
+      mockShouldUseAiGateway.mockReturnValue(true);
+
+      const {result} = renderHook(() =>
+        useAiChatDisabledState({
+          appName: 'pythonlab',
+          clientType: AiChatClientTypes.AI_TUTOR,
+          selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH_IMAGE,
+        })
+      );
+
+      expect(result.current).toEqual({
+        disabled: true,
+        disabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
+      });
+    });
+
+    it('still blocks a client type the fallback does not serve', () => {
+      mockShouldUseAiGateway.mockReturnValue(true);
+
+      const {result} = renderHook(() =>
+        useAiChatDisabledState({
+          appName: 'aichat',
+          clientType: AiChatClientTypes.AI_CHAT_LAB,
+          selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
+        })
+      );
+
+      expect(result.current).toEqual({
+        disabled: true,
+        disabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
+      });
+    });
+
     it('still blocks a blocked model that Rails serves', () => {
       const {result} = renderHook(() =>
         useAiChatDisabledState({
           appName: 'pythonlab',
+          clientType: AiChatClientTypes.AI_TUTOR,
           selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
         })
       );
