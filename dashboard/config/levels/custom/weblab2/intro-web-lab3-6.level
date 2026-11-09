@@ -1,0 +1,70 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-16T16:17:05.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Point at What You Mean\r\n\r\n*\"Make it better\"* is a wish. *\"Make the heading at the top bigger and give it a beach-blue background\"* is a direction. AI can only follow directions.\r\n\r\nYou don't need any technical words - you just need to **name which part** and **describe the outcome**.\r\n\r\n**Do This:** Make **two changes** to the otter page. For each one:\r\n1. **Name the part:** \"the heading that says Otterly Amazing Swimmers\", \"the list of otter facts\", \"the photo at the top\"...\r\n2. **Describe the outcome:** what should it look like when AI is done?\r\n3. **Judge the preview**, then Accept or Reject.\r\n\r\n> **Try it:** If you're vague on purpose (\"make it nicer\"), watch what happens - AI Tutor will have to ask you what you mean.\r\n\r\nOnce you've accepted two changes, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- Do NOT create a style.css file - put all css in a `<style>` tag in the head of the index.html file\n- Generate both HTML and CSS at the same time\n- Do NOT use IDs or classes on elements\n- Do NOT generate links or buttons\n- Do NOT generate `<script>` tags\n- Never generate placeholder images. If the student implies they want a new image, explain that images must be uploaded to the project first.\n- The student is looking at the page preview, not the code. Describe your changes in terms of what changed on the page (\"the heading is now dark blue\"), never in terms of HTML tags or CSS properties.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITY**\n- If the student's request does not make clear WHICH part of the page to change, do not guess: ask one short clarifying question (\"Which part do you mean - the title at the top, or the section headings?\") before generating any code.\n- Make only the changes the student explicitly requested.",
+        "buildHTML": "- Do NOT create a style.css file - put all css in a `<style>` tag in the head of the index.html file\n- Generate both HTML and CSS at the same time\n- Do NOT use IDs or classes on elements\n- Do NOT generate links or buttons\n- Do NOT generate `<script>` tags\n- Never generate placeholder images. If the student implies they want a new image, explain that images must be uploaded to the project first.\n- The student is looking at the page preview, not the code. Describe your changes in terms of what changed on the page (\"the heading is now dark blue\"), never in terms of HTML tags or CSS properties.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITY**\n- If the student's request does not make clear WHICH part of the page to change, do not guess: ask one short clarifying question before generating any code.\n- Make only the changes the student explicitly requested.",
+        "hint": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n\n<head>\n    <title>All About Otters!</title>\n    <style>\n        body {\n            font-family: 'Open Sans', sans-serif;\n            color: #333333;\n            margin: 0;\n            line-height: 1.6;\n        }\n\n        header, footer {\n            background-color: #f0f8ff;\n            padding: 1rem;\n            text-align: center;\n            border: 2px solid #a7d9f7;\n            color: #005f99;\n        }\n\n        main {\n            padding: 1rem;\n            max-width: 960px;\n            margin: 0 auto;\n        }\n\n        section {\n            margin-bottom: 1rem;\n            padding: 1rem;\n            border-radius: 8px;\n        }\n\n        #otter-facts {\n            background-color: #fff5e1;\n            border: 3px solid #ffd700;\n            font-family: 'Lato', sans-serif;\n            color: #8b4513;\n        }\n\n        #otter-swimmers {\n            background-color: #e0f8e0;\n            border: 3px solid #8bc34a;\n            font-family: 'Georgia', serif;\n            color: #33691e;\n        }\n\n        #otter-locations {\n            background-color: #ffe0b2;\n            border: 3px solid #ff9800;\n            font-family: 'Merriweather', serif;\n            color: #e65100;\n        }\n\n        #otter-predators {\n            background-color: #ffcccc;\n            border-color: #cc0000;\n            font-family: 'Verdana', sans-serif;\n            color: #660000;\n        }\n\n        .two-column-layout {\n            display: flex;\n            flex-wrap: wrap;\n            gap: 1rem;\n        }\n\n        .two-column-layout section {\n            flex: 1;\n            min-width: 300px;\n        }\n\n        img {\n            max-width: 100%;\n            height: auto;\n            border-radius: 15px;\n            border: 5px solid #a7d9f7;\n        }\n\n        h1 {\n            text-decoration: underline;\n        }\n\n        #image-credit {\n            font-size: 10px;\n            color: #6699bb;\n        }\n\n        hr#otter-divider {\n            border: 3px dashed #a7d9f7;\n            background-color: transparent;\n            color: #a7d9f7;\n        }\n\n    </style>\n</head>\n\n<body>\n    <header>\n      <h1>Welcome to the Otter Zone!</h1>\n    </header>\n\n    <main>\n      <div class=\"two-column-layout\">\n        <section id=\"otter-facts\">\n          <h2>Cool Otter Facts!</h2>\n          <ul>\n            <li>Did you know otters hold hands when they sleep so they don't drift apart? Awww!</li>\n            <li>They can also hold their breath for a loooong time underwater!</li>\n          </ul>\n        </section>\n\n        <section id=\"otter-swimmers\">\n          <h2>Otterly Amazing Swimmers!</h2>\n          <p>Otters are super speedy in the water! They use their powerful tails and webbed feet to zoom around.</p>\n          <p>They can dive deep to find yummy snacks like fish and crabs.</p>\n        </section>\n      </div>\n\n      <hr id=\"otter-divider\">\n\n      <section id=\"otter-locations\">\n        <h2>Where in the World are Otters?</h2>\n        <p>You can find different kinds of otters all over the globe, from chilly Alaska to sunny Brazil.</p>\n        <p>Some live in rivers, some in coasts, and some even in the open ocean!</p>\n      </section>\n\n    </main>\n\n    <footer>\n      <p>Thanks for visiting the otter-tastic website!</p>\n    </footer>\n\n</body>\n\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "otter.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-2/uuid/de7dca6a-8250-448e-91ba-3507de49029a.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "offer_browser_tts": "true",
+    "teacher_markdown": "**Intent:** Precision without jargon. Students learn that pointing at a specific part of the page (\"the heading that says...\", \"the section about...\") plus a concrete outcome is what makes AI accurate - no HTML vocabulary required. The AI on this level is configured to ask a clarifying question when the target is ambiguous, so vague prompts produce a conversation instead of a guess.\r\n\r\n**Circulation questions:**\r\n\r\n- \"Read me your prompt. Which words point at the part? Which words describe the outcome?\"\r\n- \"What happened when you were vague?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may name the outcome but not the target (\"make it blue\" - which *it*?) - have them re-read their prompt looking for the pointing words\r\n- Students may reach for technical-sounding words they don't know - reassure them plain language works: \"say it the way you'd say it to a friend\"\r\n",
+    "require_edit_to_continue": "true",
+    "display_name": "Point at What You Mean"
+  },
+  "audit_log": "[{\"changed_at\": \"2026-07-03T00:00:00.000+00:00\", \"changed\": [\"cloned from \\\"hoai-web-design-v2-2_pilot2_launch\\\" for intro-to-web-lab3\"], \"cloned_from\": \"hoai-web-design-v2-2_pilot2_launch\"}]"
+}]]></config>
+</Weblab2>

@@ -1,0 +1,88 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-16T16:17:08.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## One Change at a Time\r\n\r\nBig requests (\"redesign the whole page!\") give AI room to surprise you - and not always in a good way. Skilled collaborators work in **small steps**, checking each one.\r\n\r\nHere's a plain page about famous artworks. Make it great, one step at a time.\r\n\r\n**Do This:** Improve this page with **three separate requests** - judge and Accept (or Reject) each one before making the next:\r\n1. One change to how the page **looks** (colors, style, mood...)\r\n2. One change to the **content** (add a fact, a new artwork, a better title...)\r\n3. One change of **your choice**.\r\n\r\n> **Notice:** After each change, everything you already approved stays put. Small steps mean small surprises.\r\n\r\nOnce you've accepted three changes, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- Do NOT create a style.css file - put all css in a `<style>` tag in the head of the index.html file\n- Generate both HTML and CSS at the same time\n- Do NOT use IDs or classes on elements\n- Do NOT generate links or buttons\n- Do NOT generate `<script>` tags\n- Never generate placeholder images. If the student implies they want a new image, explain that images must be uploaded to the project first.\n- The student is looking at the page preview, not the code. Describe your changes in terms of what changed on the page (\"the heading is now dark blue\"), never in terms of HTML tags or CSS properties.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITY**\n- Make exactly ONE change per response. If the student asks for several changes at once, do the first one and say you'll do the others one at a time - invite them to ask for the next one.",
+        "buildHTML": "- Do NOT create a style.css file - put all css in a `<style>` tag in the head of the index.html file\n- Generate both HTML and CSS at the same time\n- Do NOT use IDs or classes on elements\n- Do NOT generate links or buttons\n- Do NOT generate `<script>` tags\n- Never generate placeholder images. If the student implies they want a new image, explain that images must be uploaded to the project first.\n- The student is looking at the page preview, not the code. Describe your changes in terms of what changed on the page (\"the heading is now dark blue\"), never in terms of HTML tags or CSS properties.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITY**\n- Make exactly ONE change per response. If the student asks for several changes at once, do the first one and say you'll do the others one at a time - invite them to ask for the next one.",
+        "hint": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "One Change at a Time",
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      img {\n        border: 10px solid #8888ff;\n        border-radius: 6px;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Famous Works of Art</h1>\n\n    <section>\n      <h2>The Starry Night</h2>\n      <img src=\"starry-night.jpg\" alt=\"The Starry Night by Vincent van Gogh\">\n      <p><em>Vincent van Gogh, 1889</em></p>\n      <p>A swirling night sky over a quiet village, painted while Van Gogh was staying at a psychiatric hospital in France.</p>\n    </section>\n\n    <section>\n      <h2>Girl with a Pearl Earring</h2>\n      <img src=\"girl-with-pearl-earring.jpg\" alt=\"Girl with a Pearl Earring by Johannes Vermeer\">\n      <p><em>Johannes Vermeer, 1665</em></p>\n      <p>Often called the \"Mona Lisa of the North,\" this painting is known for its subject's direct and mysterious gaze.</p>\n    </section>\n\n    <section>\n      <h2>The Great Wave</h2>\n      <img src=\"great-wave.jpg\" alt=\"The Great Wave off Kanagawa by Katsushika Hokusai\">\n      <p><em>Katsushika Hokusai, 1831</em></p>\n      <p>One of the most recognizable works in Japanese art, depicting a towering wave with Mount Fuji in the background.</p>\n    </section>\n\t\n\t<footer>\n\t\t<p>Image credit: All images from Wikimedia Creative Commons</p>\n\t</footer>\n\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "great-wave.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-10c/uuid/10dc2615-a127-4692-a29b-db2ae77fef12.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "girl-with-pearl-earring.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-10c/uuid/d887b0e9-3220-4a2f-8f1f-6d5ec8933bf1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "starry-night.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-10c/uuid/4f3c8f08-49f3-491f-b83b-ca929122e207.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "offer_browser_tts": "false",
+    "teacher_markdown": "**Intent:** Iteration granularity. One mega-prompt produces a page-sized surprise; three small prompts produce three small, judgeable changes. The AI on this level is configured to make only one change per request, so students feel the rhythm: ask, look, decide, repeat.\r\n\r\n**Circulation questions:**\r\n\r\n- \"What were your three steps? Why that order?\"\r\n- \"Did any change surprise you? Was it easier to catch because it was small?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may bundle several changes into one prompt - the AI will do only one; use it as the teachable moment\r\n- Students may not look at the preview between steps - ask them what change #2 actually did before they send #3\r\n",
+    "require_edit_to_continue": "true"
+  },
+  "audit_log": "[{\"changed_at\": \"2026-07-03T00:00:00.000+00:00\", \"changed\": [\"cloned from \\\"hoai-web-design-v2-10c_pilot2_launch\\\" for intro-to-web-lab3\"], \"cloned_from\": \"hoai-web-design-v2-10c_pilot2_launch\"}]"
+}]]></config>
+</Weblab2>
