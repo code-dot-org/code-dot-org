@@ -37,9 +37,10 @@ const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
 // play area.
 const CANVAS = 400;
 const MARGIN = 12;
-// The bar pinned to the overlay's foot, the editors' scene bar's twin: the
-// editor strip's height ($editor-strip-height).
-const BOTTOM_BAR_PX = 41;
+// The editor strip's height ($editor-strip-height): the header over the
+// preview column, and the bar pinned to the overlay's foot, the editors'
+// scene bar's twin.
+const EDITOR_STRIP_PX = 41;
 // The arrow cross: three keys and two gaps across, as the stylesheet's
 // .arrowCross has them; the same size in every mode.
 const CROSS_KEY = 38;
@@ -69,9 +70,6 @@ const CARD_BORDER_PX = 1;
 const COMPACT_BELOW_PX = 560;
 // The column's two cards' inset from its edges and from each other.
 const CARD_GAP = 12;
-// A header over the column keeps this much of its top clear: the editor
-// strip's height ($editor-strip-height).
-const COLUMN_HEADER_PX = 41;
 // While playing the instructions' card narrows so the game can center.
 const PLAY_CARD_WIDTH_PX = BESIDE_TEXT_MIN_PX;
 // The box's slide between its two placements, and the fade of whatever
@@ -595,13 +593,13 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const share = Math.round(browserWidth * columnShare);
   // The room under the box: the cross, the card and its gap, then the bar
   // at the foot.
-  const bottomRoom = bottomBar ? BOTTOM_BAR_PX : 0;
+  const bottomRoom = bottomBar ? EDITOR_STRIP_PX : 0;
   const cardRoomFor = (card: number) =>
     bottomRoom + (below ? CARD_GAP + card : 0);
   // A taller need shrinks the box, never widens the column, which would
   // reflow the text taller again.
   let columnWidth = share;
-  const topRoom = columnHeader ? COLUMN_HEADER_PX : 0;
+  const topRoom = columnHeader ? EDITOR_STRIP_PX : 0;
   const need = Math.max(BELOW_MIN_PX, belowNeed + 2 * CARD_BORDER_PX);
   const crossSize = arrows ? CROSS_SIZE : null;
   const crossRoom = crossSize ? crossSize.h + PREVIEW_CROSS_GAP : 0;
@@ -715,7 +713,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   // In preview the cross sits under the box, centered on it.
   const cross = playing
     ? playing.cross
-    : arrows
+    : crossSize
     ? {
         x: previewPlacement.x + (previewBoxSide - crossSize.w) / 2,
         y: previewPlacement.y + previewBoxSide + PREVIEW_CROSS_GAP,
