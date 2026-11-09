@@ -41,35 +41,21 @@ export const KIND_LABELS: Record<LevelModeKind, string> = {
   freeplay: 'Free play',
 };
 
+const IMAGE_KEYS: (keyof LevelMode)[] = [
+  'imageType',
+  'imageSubject',
+  'imageRole',
+];
+
+const IMAGE_TAB_KEYS: (keyof LevelMode)[] = ['learning', 'imageSource'];
+
 // Keys a kind can carry; changing the kind drops the rest.
 const KEYS_BY_KIND: Record<LevelModeKind, (keyof LevelMode)[]> = {
-  code: [
-    'imageType',
-    'imageSubject',
-    'imageRole',
-    'imageFirst',
-    'learning',
-    'imageSource',
-  ],
-  world: [
-    'imageType',
-    'imageSubject',
-    'imageRole',
-    'paletteRoles',
-    'imageFirst',
-    'learning',
-    'imageSource',
-  ],
-  play: [
-    'imageType',
-    'imageSubject',
-    'imageRole',
-    'imageFirst',
-    'learning',
-    'imageSource',
-  ],
-  image: ['imageType', 'imageSubject', 'imageRole', 'learning', 'imageSource'],
-  freeplay: ['learning', 'imageSource'],
+  code: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS],
+  world: [...IMAGE_KEYS, 'paletteRoles', 'imageFirst', ...IMAGE_TAB_KEYS],
+  play: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS],
+  image: [...IMAGE_KEYS, ...IMAGE_TAB_KEYS],
+  freeplay: [...IMAGE_TAB_KEYS],
 };
 
 export function getPaletteRoles(mode: Partial<LevelMode>): string[] {
