@@ -28,6 +28,7 @@ import setWeather from './setWeather';
 import showTitle from './showTitle';
 import thePlayer from './thePlayer';
 import whenPlayer from './whenPlayer';
+import whenPlayerStepsOn from './whenPlayerStepsOn';
 import whenRun from './whenRun';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
@@ -43,6 +44,7 @@ const labBlockDefinitions: {
   playSoundEffect,
   whenRun,
   whenPlayer,
+  whenPlayerStepsOn,
   goToExternalScene,
   restartScene,
   movingLeft,

@@ -18,6 +18,7 @@ import {SET_WEATHER_BLOCK_TYPE} from '../blockDefinitions/setWeather';
 import {SHOW_TITLE_BLOCK_TYPE} from '../blockDefinitions/showTitle';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
+import {WHEN_PLAYER_STEPS_ON_BLOCK_TYPE} from '../blockDefinitions/whenPlayerStepsOn';
 
 import {filterToSupportedSharedBlocks} from './supportedSharedBlocks';
 import {ToolboxInfo} from './types';
@@ -39,7 +40,7 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_setAsPlatformPlayer',
     THE_PLAYER_BLOCK_TYPE,
   ],
-  Events: [WHEN_PLAYER_BLOCK_TYPE],
+  Events: [WHEN_PLAYER_BLOCK_TYPE, WHEN_PLAYER_STEPS_ON_BLOCK_TYPE],
   Behaviors: [
     'spritelab2_beginsBehavior',
     'spritelab2_movingLeft',

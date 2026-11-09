@@ -34,6 +34,34 @@ export interface PlayerActionTracker {
   forget(): void;
 }
 
+/**
+ * Which kinds of block the player stands on, frame by frame, and which it
+ * has just stepped onto: the kinds under its feet now that were not there
+ * the frame before. Landing on a block and walking onto one from the
+ * ground or from another kind both count; a row of one kind counts once.
+ */
+export interface FootingTracker {
+  /** `kinds` are the kinds underfoot this frame; returns the new ones. */
+  observe(kinds: Iterable<string>): Set<string>;
+  /** No player: the next frame's footing is all new. */
+  forget(): void;
+}
+
+export function createFootingTracker(): FootingTracker {
+  let underfoot = new Set<string>();
+  return {
+    observe(kinds) {
+      const now = new Set(kinds);
+      const stepped = new Set([...now].filter(kind => !underfoot.has(kind)));
+      underfoot = now;
+      return stepped;
+    },
+    forget() {
+      underfoot = new Set();
+    },
+  };
+}
+
 export function createPlayerActionTracker(): PlayerActionTracker {
   let previous: {
     x: number;

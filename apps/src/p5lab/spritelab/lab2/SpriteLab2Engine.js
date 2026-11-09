@@ -51,6 +51,7 @@ import {
   hasSupportAhead,
   isAtEdge,
   isSupported,
+  supportingWalls,
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   bodyBox,
@@ -58,7 +59,11 @@ import {
   usesPlatformPhysics,
   wallBox,
 } from './platformPhysics';
-import {createPlayerActionTracker, isPlayerAction} from './playerActions';
+import {
+  createFootingTracker,
+  createPlayerActionTracker,
+  isPlayerAction,
+} from './playerActions';
 import {
   askAiAnswered,
   askAiFailed,
@@ -643,13 +648,25 @@ export default class SpriteLab2Engine extends SpriteLab {
         playSoundEffect(effect);
       }
     };
-    // The physics pass records the player's actions; the events that fire
-    // on them run one frame later.
+    // The physics pass records the player's actions, and the images of
+    // the blocks it has just stepped onto; the events that fire on them
+    // run one frame later.
     this.playerActionTracker_ = createPlayerActionTracker();
     this.playerActions_ = new Set();
+    this.footingTracker_ = createFootingTracker();
+    this.steppedOn_ = new Set();
     library.commands.whenPlayer = (action, callback) => {
       if (isPlayerAction(action)) {
         library.addEvent(PLAYER_ACTION_EVENT, {action}, callback);
+      }
+    };
+    library.commands.whenPlayerStepsOn = (animation, callback) => {
+      if (animation) {
+        library.addEvent(
+          PLAYER_ACTION_EVENT,
+          {on: String(animation)},
+          callback
+        );
       }
     };
     const callbackArgs = library.getCallbackArgListForEvent.bind(library);
@@ -657,7 +674,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (inputEvent.type !== PLAYER_ACTION_EVENT) {
         return callbackArgs(inputEvent);
       }
-      const fires = this.playerActions_.has(inputEvent.args.action);
+      const {action, on} = inputEvent.args;
+      const fires = on
+        ? this.steppedOn_.has(on)
+        : this.playerActions_.has(action);
       // A burst in a jump handler starts where the player took off; the
       // handler runs on the interpreter's next tick, so the frame is kept.
       if (fires && inputEvent.args.action === 'jump' && this.p5Wrapper.p5) {
@@ -1492,22 +1512,30 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (!players.length) {
       this.playerActionTracker_.forget();
       this.playerActions_ = new Set();
+      this.footingTracker_.forget();
+      this.steppedOn_ = new Set();
       return;
     }
     const {sprite, x: requestedX, y: requestedY} = players[0];
     const animation = sprite.animation;
+    const gravity = this.platformGravity_;
     this.playerActions_ = this.playerActionTracker_.observe(
       {
         sprite,
         requestedX,
         requestedY,
-        gravity: this.platformGravity_,
+        gravity,
         walls,
         view,
         animationFrame: animation ? animation.getFrame() : undefined,
         animationFrames: animation ? animation.getLastFrame() + 1 : undefined,
       },
       Date.now()
+    );
+    this.steppedOn_ = this.footingTracker_.observe(
+      supportingWalls(sprite, walls, view, gravity).map(wall =>
+        wall.getAnimationLabel()
+      )
     );
   }
 

@@ -1,4 +1,5 @@
 import {
+  createFootingTracker,
   createPlayerActionTracker,
   isPlayerAction,
   PlayerAction,
@@ -54,6 +55,29 @@ function run(frames: PlayerFrame[], stepMs = 16): PlayerAction[][] {
   const tracker = createPlayerActionTracker();
   return frames.map((f, i) => [...tracker.observe(f, i * stepMs)]);
 }
+
+describe('createFootingTracker', () => {
+  it('reports a kind when it comes underfoot, not while it stays', () => {
+    const tracker = createFootingTracker();
+    // In the air, then landing on grass.
+    expect([...tracker.observe([])]).toEqual([]);
+    expect([...tracker.observe(['grass'])]).toEqual(['grass']);
+    // Along a row of grass, then astride grass and lava.
+    expect([...tracker.observe(['grass', 'grass'])]).toEqual([]);
+    expect([...tracker.observe(['grass', 'lava'])]).toEqual(['lava']);
+    // Fully onto the lava, then off it onto the floor and back.
+    expect([...tracker.observe(['lava'])]).toEqual([]);
+    expect([...tracker.observe([])]).toEqual([]);
+    expect([...tracker.observe(['lava'])]).toEqual(['lava']);
+  });
+
+  it('starts over after forgetting the player', () => {
+    const tracker = createFootingTracker();
+    tracker.observe(['grass']);
+    tracker.forget();
+    expect([...tracker.observe(['grass'])]).toEqual(['grass']);
+  });
+});
 
 describe('isPlayerAction', () => {
   it('knows the four actions', () => {

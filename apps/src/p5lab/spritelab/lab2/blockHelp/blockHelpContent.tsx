@@ -158,4 +158,14 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       'bumps into something.',
     body: 'Pick the moment from the dropdown.',
   },
+  spritelab2_whenPlayerStepsOn: {
+    title: 'When player steps on',
+    summary:
+      'Runs the blocks below each time the player steps onto a platform ' +
+      'block of the chosen kind.',
+    body:
+      'Pick the block image.  Landing on such a block counts, and so does ' +
+      'walking onto one from the ground or from another kind of block; ' +
+      'walking along a row of them fires once.',
+  },
 };

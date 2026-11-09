@@ -5,6 +5,7 @@ import {
   hasSupportAt,
   isAtEdge,
   isSupported,
+  supportingWalls,
   resolvePlatformPhysics,
   PhysicsBox,
   PhysicsSprite,
@@ -324,6 +325,23 @@ describe('platformPhysics with custom gravity', () => {
     // Body top (feet-anchor flipped to a head anchor) on the underside:
     // body center 120, image center 5 below it.
     expect(player.position.y).toBe(125);
+  });
+
+  it('supportingWalls names the blocks underfoot, none on the floor', () => {
+    // Two cells side by side (cols 1 and 2, row 6) and one above them.
+    const left = {...wallAt(1, 6), name: 'grass'};
+    const right = {...wallAt(2, 6), name: 'lava'};
+    const high = {...wallAt(1, 3), name: 'cloud'};
+    const walls = [left, right, high];
+    const names = (sprite: PhysicsSprite, gravity?: number) =>
+      supportingWalls(sprite, walls, VIEW, gravity).map(wall => wall.name);
+    expect(names(makeSprite(75, 275))).toEqual(['grass']);
+    // Astride the two: both.
+    expect(names(makeSprite(100, 275))).toEqual(['grass', 'lava']);
+    expect(names(makeSprite(300, 375))).toEqual([]);
+    expect(names(makeSprite(75, 200))).toEqual([]);
+    // Under flipped gravity the head rests on an underside.
+    expect(names(makeSprite(75, 375), -PLATFORM_GRAVITY)).toEqual(['grass']);
   });
 
   it('isSupported sees floor, block tops, and flipped undersides', () => {

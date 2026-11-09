@@ -339,15 +339,39 @@ export function isSupported(
   gravity: number = PLATFORM_GRAVITY
 ): boolean {
   return inDownwardTerms(sprite, walls, view, gravity, (s, w) => {
-    const {halfW, feet} = feetLine(s);
+    const {feet} = feetLine(s);
     return (
-      feet >= view.height - CONTACT_EPSILON ||
-      wallsAtFeet(w, feet).some(
-        wall =>
-          Math.abs(s.position.x - wall.position.x) < halfW + wallHalf(wall)
-      )
+      feet >= view.height - CONTACT_EPSILON || underFeet(s, w).some(Boolean)
     );
   });
+}
+
+/**
+ * The walls a sprite stands on, by the same footing as isSupported: the
+ * given wall objects, so a caller can read what they are. None on the
+ * view's floor, or in the air.
+ */
+export function supportingWalls<W extends PhysicsBox>(
+  sprite: PhysicsSprite,
+  walls: W[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): W[] {
+  return inDownwardTerms(sprite, walls, view, gravity, (s, w) => {
+    const under = underFeet(s, w);
+    return walls.filter((_, i) => under[i]);
+  });
+}
+
+// In downward terms, which walls the body stands on: top at its feet,
+// within contact slack, and overlapping it across.
+function underFeet(sprite: PhysicsSprite, walls: PhysicsBox[]): boolean[] {
+  const {halfW, feet} = feetLine(sprite);
+  return walls.map(
+    wall =>
+      Math.abs(feet - (wall.position.y - wallHalf(wall))) <= CONTACT_EPSILON &&
+      Math.abs(sprite.position.x - wall.position.x) < halfW + wallHalf(wall)
+  );
 }
 
 /**

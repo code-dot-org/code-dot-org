@@ -116,6 +116,10 @@
         },
         {
           "kind": "block",
+          "type": "spritelab2_whenPlayerStepsOn"
+        },
+        {
+          "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
             "SPEECH": "Hello!"

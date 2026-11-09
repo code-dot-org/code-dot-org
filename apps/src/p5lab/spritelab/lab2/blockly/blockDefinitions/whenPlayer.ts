@@ -33,14 +33,25 @@ const definition: BlockJson = {
     'landing or a bump, and on every step while walking.',
 };
 
-// The blocks below the hat are the handler; eventHat keeps them out of the
-// hat's next chain.
-const generator: GeneratorFunction = (block, javascript) => {
+/**
+ * The code of the blocks below an event hat, indented as a handler's body;
+ * eventHat keeps them out of the hat's next chain.
+ */
+export function eventHandlerCode(
+  block: BlocklyCore.Block,
+  javascript: Parameters<GeneratorFunction>[1]
+): string {
   const next = block.nextConnection?.targetBlock() ?? null;
   const handler = next ? String(javascript.blockToCode(next, false)) : '';
-  const body = handler ? javascript.prefixLines(handler, '  ') : '';
+  return handler ? javascript.prefixLines(handler, '  ') : '';
+}
+
+const generator: GeneratorFunction = (block, javascript) => {
   const action = JSON.stringify(block.getFieldValue('ACTION'));
-  return `whenPlayer(${action}, function () {\n${body}});\n`;
+  return `whenPlayer(${action}, function () {\n${eventHandlerCode(
+    block,
+    javascript
+  )}});\n`;
 };
 
 export default {definition, generator};

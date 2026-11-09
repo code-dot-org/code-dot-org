@@ -26,6 +26,7 @@ import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
 import {SHOW_TITLE_BLOCK_TYPE} from '../blockDefinitions/showTitle';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
+import {WHEN_PLAYER_STEPS_ON_BLOCK_TYPE} from '../blockDefinitions/whenPlayerStepsOn';
 
 import {
   BlockInfo,
@@ -103,6 +104,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'spritelab2_makeSpriteAtGrid',
       'gamelab_setBackgroundImageAs',
       WHEN_PLAYER_BLOCK_TYPE,
+      WHEN_PLAYER_STEPS_ON_BLOCK_TYPE,
       'gamelab_checkTouching',
       PLAY_SOUND_BLOCK_TYPE,
       PLAY_SOUND_EFFECT_BLOCK_TYPE,
