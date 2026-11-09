@@ -136,8 +136,9 @@ interface ArrowCrossProps {
 }
 
 /**
- * The four arrow buttons in a cross, for a scene with a player. Under
- * gravity the top one jumps; weightless, it steers up.
+ * The four arrow buttons in a cross, for a scene with a player. The arrow
+ * that jumps against gravity is labelled Jump: the top one under gravity,
+ * the bottom one when gravity pulls up; weightless, all four steer.
  */
 export const ArrowCross: React.FunctionComponent<ArrowCrossProps> = ({
   arrows,
@@ -155,7 +156,12 @@ export const ArrowCross: React.FunctionComponent<ArrowCrossProps> = ({
     ],
     ['left', 'Left', 'chevron-left', moduleStyles.arrowLeft],
     ['right', 'Right', 'chevron-right', moduleStyles.arrowRight],
-    ['down', 'Down', 'chevron-down', moduleStyles.arrowDown],
+    [
+      'down',
+      arrows === 'jumpDown' ? 'Jump' : 'Down',
+      'chevron-down',
+      moduleStyles.arrowDown,
+    ],
   ];
   return (
     <div className={moduleStyles.arrowCross}>

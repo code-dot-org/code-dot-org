@@ -60,9 +60,13 @@ describe('RunButtons', () => {
 });
 
 describe('ArrowCross', () => {
-  it('shows four arrows, the top one a jump under gravity', () => {
+  it('shows four arrows, the one that jumps against gravity named Jump', () => {
     const {rerender} = render(<ArrowCross arrows="jump" />);
     expect(names()).toEqual(['Jump', 'Left', 'Right', 'Down']);
+    // Gravity pulling up: the player stands on the ceiling and the down
+    // arrow jumps.
+    rerender(<ArrowCross arrows="jumpDown" />);
+    expect(names()).toEqual(['Up', 'Left', 'Right', 'Jump']);
     rerender(<ArrowCross arrows="steer" />);
     expect(names()).toEqual(['Up', 'Left', 'Right', 'Down']);
   });
