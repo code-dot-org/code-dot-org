@@ -13,9 +13,9 @@ const FOCUSABLE_SELECTOR =
 // Content with a control of its own needs no tab stop: tabbing to the control
 // scrolls it into view, and in a form the first field should take first focus.
 const useTabStopWhileOverflowing = (ref: RefObject<HTMLElement>) => {
-  // A layout effect, not a plain effect: the dialog picks what to focus on open
-  // in an effect of its own, which runs after this one. Setting the tab stop
-  // first is what lets scrolling content take first focus.
+  // A layout effect, so the tab stop is set during the first commit. The dialog
+  // picks what to focus once its opening transition has entered, after that,
+  // which is what lets scrolling content take first focus.
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;

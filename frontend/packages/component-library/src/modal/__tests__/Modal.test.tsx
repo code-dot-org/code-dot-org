@@ -117,10 +117,10 @@ describe('Modal Component', () => {
     ]);
   });
 
-  it('should give startActions first focus on mount', () => {
+  it('should give startActions first focus on mount', async () => {
     render(<Modal {...defaultProps} startActions={<a href="#help">Help</a>} />);
-    expect(document.activeElement).toBe(
-      screen.getByRole('link', {name: 'Help'}),
+    await waitFor(() =>
+      expect(screen.getByRole('link', {name: 'Help'})).toHaveFocus(),
     );
   });
 
@@ -156,28 +156,34 @@ describe('Modal Component', () => {
       Reflect.deleteProperty(proto, 'clientHeight');
     });
 
-    it('should leave the tab stop to a control in the content', () => {
+    it('should leave the tab stop to a control in the content', async () => {
       render(
         <Modal {...defaultProps} customContent={<input aria-label="Name" />} />,
       );
       const content = screen.getByText(defaultProps.description!).parentElement;
       expect(content).toHaveAttribute('tabindex', '-1');
-      expect(screen.getByRole('textbox', {name: 'Name'})).toHaveFocus();
+      await waitFor(() =>
+        expect(screen.getByRole('textbox', {name: 'Name'})).toHaveFocus(),
+      );
     });
 
-    it('should make the content a tab stop and focus it first', () => {
+    it('should make the content a tab stop and focus it first', async () => {
       render(<Modal {...defaultProps} />);
       const content = screen.getByText(defaultProps.description!).parentElement;
       expect(content).toHaveAttribute('tabindex', '0');
-      expect(content).toHaveFocus();
+      await waitFor(() => expect(content).toHaveFocus());
     });
   });
 
-  it('should keep the content out of the tab order when it fits', () => {
+  it('should keep the content out of the tab order when it fits', async () => {
     render(<Modal {...defaultProps} />);
     const content = screen.getByText(defaultProps.description!).parentElement;
     expect(content).toHaveAttribute('tabindex', '-1');
-    expect(screen.getByRole('button', {name: 'Primary Action'})).toHaveFocus();
+    await waitFor(() =>
+      expect(
+        screen.getByRole('button', {name: 'Primary Action'}),
+      ).toHaveFocus(),
+    );
   });
 
   it('should apply accessibility attributes', () => {
