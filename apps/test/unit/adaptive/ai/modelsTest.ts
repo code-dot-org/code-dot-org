@@ -12,7 +12,7 @@ const load = () => {
   return loaded!;
 };
 
-const GEMINI = {
+const GOOGLE = {
   STANDARD: 'gemini-3.5-flash-lite',
   FAST: 'gemini-3.1-flash-lite',
 };
@@ -21,8 +21,8 @@ const OPENAI = {STANDARD: 'gpt-6-luna', FAST: 'gpt-6-luna'};
 describe('ADAPTIVE_MODELS', () => {
   beforeEach(() => mockQueryParams.mockReturnValue(undefined));
 
-  it("is Gemini's set when the query string names no provider", () => {
-    expect(load().ADAPTIVE_MODELS).toEqual(GEMINI);
+  it("is Google's set when the query string names no provider", () => {
+    expect(load().ADAPTIVE_MODELS).toEqual(GOOGLE);
   });
 
   it("is the named provider's set", () => {
@@ -32,8 +32,8 @@ describe('ADAPTIVE_MODELS', () => {
     expect(load().ADAPTIVE_MODELS).toEqual(OPENAI);
   });
 
-  it("is Gemini's set when the query string names a provider it does not know", () => {
-    mockQueryParams.mockReturnValue('anthropic');
-    expect(load().ADAPTIVE_MODELS).toEqual(GEMINI);
+  it("is Google's set when the query string names a provider it does not know", () => {
+    mockQueryParams.mockReturnValue('gemini');
+    expect(load().ADAPTIVE_MODELS).toEqual(GOOGLE);
   });
 });
