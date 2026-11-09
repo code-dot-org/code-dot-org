@@ -32,10 +32,9 @@ export interface LevelMode {
   /** Where the level's pictures come from (imageCache.ts); the tree first
       when unset. */
   imageSource?: ImageSource;
-  /** The level is about one image, of its imageType: the Images tab offers
-      that one image and GENERATION_LIMIT generations of it, with no adding,
-      drawing or deleting. Unset, the tab is as in free play: any images,
-      without limit. */
+  /** The Images tab offers one image, of the level's imageType, with
+      GENERATION_LIMIT generations of it and no adding, drawing or deleting.
+      Unset, the tab is as in free play. */
   oneImage?: boolean;
 }
 
@@ -71,8 +70,7 @@ export function editsWorld(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'world';
 }
 
-/** The mode that adds, renames, reorders and deletes scenes, and opens
-    with the instructions out of the way. */
+/** Whether the level is free play, the open-ended kind. */
 export function isFreeplayMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'freeplay';
 }

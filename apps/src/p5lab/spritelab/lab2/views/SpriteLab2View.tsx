@@ -2534,7 +2534,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 lockedImageType={
                   oneImage ? levelProperties.levelMode?.imageType : undefined
                 }
-                lockedImageSubject={levelProperties.levelMode?.imageSubject}
+                lockedImageSubject={
+                  oneImage ? levelProperties.levelMode?.imageSubject : undefined
+                }
                 imageRole={levelProperties.levelMode?.imageRole}
                 ownImageMade={
                   !!levelProperties.levelMode?.imageType &&
