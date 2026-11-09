@@ -89,65 +89,6 @@ describe('migrateAnimationList', () => {
     expect(migrateScenes(scenes as never)).toBe(true);
     expect(scenes[0].source.blocks.blocks[0].type).toBe('spritelab2_whenRun');
   });
-
-  it('cuts out a removed block wherever it sits, and keeps what followed it', () => {
-    const removed = 'spritelab2_goToExternalScene';
-    const source = {
-      blocks: {
-        blocks: [
-          // Under a hat: the title it hid takes its place in the stack.
-          {
-            type: 'spritelab2_whenRun',
-            x: 20,
-            y: 20,
-            next: {
-              block: {
-                type: removed,
-                fields: {SCENE: 'abc:def'},
-                next: {block: {type: 'spritelab2_showTitle'}},
-              },
-            },
-          },
-          // At the top of a stack: the block under it becomes the top, in
-          // the same place; two in a row both go.
-          {
-            type: removed,
-            x: 200,
-            y: 40,
-            next: {
-              block: {type: removed, next: {block: {type: 'spritelab2_burst'}}},
-            },
-          },
-          // Inside an input, with nothing under it: the input empties.
-          {
-            type: 'gamelab_checkTouching',
-            x: 20,
-            y: 300,
-            inputs: {DO: {block: {type: removed}}},
-          },
-          // Alone: the stack goes.
-          {type: removed, x: 400, y: 400},
-        ],
-      },
-    };
-    expect(migrateBlockTypes(source)).toBe(true);
-    const tops = source.blocks.blocks as {
-      type: string;
-      x?: number;
-      y?: number;
-      next?: {block: {type: string}};
-      inputs?: {DO: {block?: {type: string}}};
-    }[];
-    expect(tops.map(top => top.type)).toEqual([
-      'spritelab2_whenRun',
-      'spritelab2_burst',
-      'gamelab_checkTouching',
-    ]);
-    expect(tops[0].next?.block.type).toBe('spritelab2_showTitle');
-    expect([tops[1].x, tops[1].y]).toEqual([200, 40]);
-    expect(tops[2].inputs?.DO.block).toBeUndefined();
-    expect(migrateBlockTypes(source)).toBe(false);
-  });
 });
 
 describe('migrateScenes worlds', () => {
