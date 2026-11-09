@@ -1013,6 +1013,17 @@
               "fields": {
                 "UNIT": "<field name=\"UNIT\">\"seconds\"</field>"
               },
+              "inputs": {
+                "N": {
+                  "shadow": {
+                    "type": "math_number",
+                    "id": "k7Qe2mVx9LpT4nZc8RbW",
+                    "fields": {
+                      "NUM": 2
+                    }
+                  }
+                }
+              },
               "enabled": true
             },
             {
