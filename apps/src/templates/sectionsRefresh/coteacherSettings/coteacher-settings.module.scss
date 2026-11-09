@@ -133,16 +133,6 @@
   &PillIcon {
     margin-inline-end: 5px;
   }
-
-
-  .tableRow {
-    .tableToolTipText {
-      span {
-        color: var(--text-neutral-inverse);
-      }
-      max-width: 365px;
-    }
-  }
 }
 
 .removeDialog {
