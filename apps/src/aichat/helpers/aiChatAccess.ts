@@ -34,8 +34,8 @@ export const AI_GATEWAY_FALLBACK_DCDO_KEY = 'ai_gateway_fallback_is_enabled';
 export const isAiGatewayFallbackEnabled = (): boolean =>
   !!DCDO.get(AI_GATEWAY_FALLBACK_DCDO_KEY, false);
 
-// Mirrors User::AiAccessible#can_use_aichat_model? in Rails.
-export const canGatewayFallBack = (
+// The client's half of User::AiAccessible#should_ai_gateway_fall_back?; Rails cannot see client routing.
+export const shouldGatewayFallBack = (
   modelId: string,
   clientType: string | undefined
 ): boolean =>

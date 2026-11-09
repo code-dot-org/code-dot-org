@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/aichat/constants';
 import {
   areAiChatToolsEnabled,
-  canGatewayFallBack,
+  shouldGatewayFallBack,
   isAiChatModelBlocked,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
@@ -84,7 +84,7 @@ export function useAiChatDisabledState({
     if (
       selectedModelId &&
       isAiChatModelBlocked(selectedModelId, blockedAichatProviders) &&
-      !canGatewayFallBack(selectedModelId, clientType)
+      !shouldGatewayFallBack(selectedModelId, clientType)
     ) {
       if (!isTeacher) {
         return {

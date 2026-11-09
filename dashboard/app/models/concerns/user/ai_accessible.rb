@@ -66,11 +66,15 @@ module User::AiAccessible
       AI_GATEWAY_FALLBACK_CLIENT_TYPES.include?(client_type)
   end
 
+  def should_ai_gateway_fall_back?(model_id, client_type)
+    ai_gateway_fallback_allowed?(client_type) && AI_CHAT_GEMINI_IMAGE_MODEL_IDS.exclude?(model_id)
+  end
+
   # Without a client type, as on the Rails chat path, no fallback applies.
   def can_use_aichat_model?(model_id, client_type: nil)
     provider = AI_CHAT_PROVIDER_BY_MODEL_ID[model_id]
     return true if provider.nil? || blocked_aichat_providers.exclude?(provider)
-    ai_gateway_fallback_allowed?(client_type) && AI_CHAT_GEMINI_IMAGE_MODEL_IDS.exclude?(model_id)
+    should_ai_gateway_fall_back?(model_id, client_type)
   end
 
   # has essential or higher access to AI chat tools

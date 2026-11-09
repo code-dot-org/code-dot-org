@@ -6,7 +6,7 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
 import {
   areAiChatToolsEnabled,
-  canGatewayFallBack,
+  shouldGatewayFallBack,
   isAiChatModelBlocked,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {generateText} from '@cdo/apps/aiGateway';
@@ -84,7 +84,7 @@ export function canRequestTheaterDescription(): boolean {
       THEATER_DESCRIPTIONS_MODEL_ID,
       currentUser.blockedAichatProviders
     ) ||
-      canGatewayFallBack(
+      shouldGatewayFallBack(
         THEATER_DESCRIPTIONS_MODEL_ID,
         AiChatClientTypes.THEATER_DESCRIPTION
       )) &&
