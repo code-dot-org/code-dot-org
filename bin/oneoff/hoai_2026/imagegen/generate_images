@@ -167,7 +167,7 @@ OptionParser.new do |opts|
     options[:moderation] = false
   end
 
-  opts.on('--redraw-abandoned', "Tries again the variants flagged by moderation, or whose poses were declined, #{MAX_REDRAWS + 1} times in a row.") do
+  opts.on('--redraw-abandoned', "Gives the variants flagged by moderation, or whose poses were declined, #{MAX_REDRAWS + 1} times in a row another #{MAX_REDRAWS + 1} tries.") do
     options[:redraw_abandoned] = true
   end
 
@@ -519,8 +519,10 @@ def process_variant(options, moderator, prompt_checks, job, variant)
   record = read_record(job, variant)
   present = frames_present(job, variant)
 
-  if record&.dig('abandoned') && !options[:redraw_abandoned]
-    return :abandoned
+  if record&.dig('abandoned')
+    return :abandoned unless options[:redraw_abandoned]
+    # Left at its limit, the count would abandon it on its first flag again.
+    record['redraws'] = 0
   end
 
   record ||= fresh_record(options, job, variant)

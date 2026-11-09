@@ -177,7 +177,7 @@ it gets. They mirror the lab's live checks (`imageSafety.ts`):
   `prompt_verdicts.json`.
 
 A flagged variant is redrawn with a new seed, up to `MAX_REDRAWS` times, then
-left out; `--redraw-abandoned` tries it again. A check whose service fails
+left out; `--redraw-abandoned` gives it as many tries again. A check whose service fails
 is retried on the next run. Nothing without a passing verdict is published.
 `--no-moderation` skips Azure for an experiment, and a later run without it
 checks what was skipped.
