@@ -1,0 +1,302 @@
+# Run this command to always ignore formatting commits in `git blame`
+# git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+#
+# Autocorrected Rubocop Fixes
+#
+
+# Fix Violations of and Reenable `Style/HashConversion`
+014ca1eac0a2e20c99af65aaa51111d02c01af63
+cb2a0bf25de0b6d5163d6001a34d709917747158
+# Set `EnforcedStyle: refute` for `Rails/RefuteMethods`
+f8910d09272ed5ad722b8e0613fcc19de299c8cc
+956667bd4c244b4c985fa78a648835deb242babd
+2bfc361d3ad4808eb197ce14a3e8c1607fc58868
+# Apply Default Fixes for Two `Layout/Multiline*Indentation` Rules
+c04db39b6a6523d2adb60dc1395b6e65625a5306
+982dddb405d826cd447af71635e7e0a614ef803a
+# Set `EnforcedStyle: indented` for Two `Layout/Multiline*Indentation` Rules
+f20d89cdab02c32633dd857dbe1802084c436533
+fc77697be11b9f713037ba42107957708c8d0338
+c3c255402d8f8a664408f5dd9265d0fc7b554876
+# Fix Violations of and Reenable `Layout/SpaceAroundEqualsInParameterDefault`
+5bec26dcce6b29af2c79b266cfbfba6b3c82d6a3
+37dbb6700fe43d49344d3176ffc0a66bc936ea9d
+# Fix Violations of and Reenable  `Lint/AmbiguousBlockAssociation`
+5e6107d2004553ff4560cbc14f66da322d16452d
+973dc2723455dff2c03ae0c6aa520dac448a60c6
+# Explicitly Disable `Performance/Detect`
+acf77bcbaa3749f9c116488ea81458ea82215913
+# Fix Violations of and Reenable `Style/RedundantBegin`
+81e3a44572ed74e1148ea237d4f177ff19fbb135
+# Fix Violations of and Reenable `Style/Encoding`
+d7567b9859b7e0dc4e0fa9a752a04f9289dea6bf
+# Fix Violations of and Reenable `Style/ClassEqualityComparison`
+87ce141cc7f5756779226c4ab91e56705157cccc
+# Fix Violations of and Reenable `Rails/AssertNot`
+c859a1bc973dae95bfbd618b334900d083226925
+abaf518b40edce1871f4666ba7e6fa5c0b508414
+# Fix Violations of and Reenable `Lint/OrAssignmentToConstant`
+bdcc6b0e95364273d52c4ca3612d78dfb13bac07
+ae8b19e5faa6ab4e6ca2bc6aadd83e6568dac9bc
+# Fix Violations of and Reenable `Rails/Pick`
+07f74b660327ec3f720850f898032a38770ee41a
+# Fix Violations of and Reenable `Style/CollectionCompact`
+93619459ef15aa6043cd534c438437c6c4c4a965
+# Set `Rails/Date` `EnforcedStyle` to "strict"
+e3338028ba956009af05b78dfa4be6dc4b1386fd
+d2f46145945042cbed94269009a675241e8cdbc7
+863d249bd739da46660f8beb2175c70fb6c80684
+# Update Rubocop to 1.52.1
+6b171a06085301ae26eed96d4833f3fc20a92afb
+d1f074b6f00447e395ba401c411c9d013abf5557
+9ef9b21b648272c1957547952aa70033fdc33daf
+b671353276bc1a98559a1a0f1aa0a1cf31e6501a
+1e4d4d0a9eba795c50f744181370eebdb213b7ef
+ec973f40896ad5daf2961b32ca2f5dcb8edd4f72
+f757f2e2514dc2d9bb6d437b1110801c54c0773a
+d0189398c0b09e99e260933a463c49e915c57a94
+e58baa224abbfd8d1b29d30ca4bce85472d317a3
+599197d9507defa01034d563821507747f6c056a
+890b090821670db64655e2687e8ad167f7c5401e
+# Fix Violations of and Reenable `Rails/AssertNot`
+f1b03ba6b00296d2d985213920349df36b7ab61c
+# Fix Violations of and Reenable `Style/SoleNestedConditional`
+df20a9e2bd257d81112d44209406f6af3358e522
+bcc8e1180e79e2b69e4a3b5402fa0d82a68c9cf6
+f39b2d31b6d20fa5545d8cf71f9836ca64c9edcb
+d045b5563e6ff4d04888b770765d6bccb0bcfa4d
+fc0ee26f306ac48435caa18be84d500b5e31164e
+ab6eb1039e1cb53909c1f338f242421055ab88c1
+# Fix Violations of and Reenable `Rails/SquishedSQLHeredocs`
+3b7fabcaed91d5ce4e5765e5e2c4ed81c037bdaf
+# Fix Violations of and Reenable `Style/NegatedIfElseCondition`
+2df274b377016197d5eb647c256237122cc407d8
+# Fix Violations of and Reenable `Style/YodaCondition`
+8761f7dd06eb289e53a9ffe97291a0150a3d1f37
+# Fix Violations of and Reenable `Rails/NegateInclude`
+0c22901450bb4cb71c7e4821ea6510d14532f413
+6a1f07f10282664357101afe4bdadb93ce471ce9
+# Fix Violations of and Reenable `Style/RedundantPercentQ`
+e911956a5e7c261f8f6a7ca903e9928d46b34b29
+# Fix Violations of and Reenable `Style/HashAsLastArrayItem`
+c2d1221acdbf4bcb717511155d4ac157ec23451d
+# Add Exceptions for and Reenable `Rails/OutputSafety`
+5b2500c3a33222136098c361c291330c8e7598b2
+6e10b302758a826e18138a8df7e5e9aa28cac18d
+# Fix Violations of and Reenable `Rails/Date`
+9f275fcaae52a33f6e1e18af447244162403d659
+c04d5e5ba7e1cd7e275dcf05e91979cb54aefebc
+a8de716a247cf60212746108e99710da59f21114
+afd44bd7d0963c7b98ac2e83527f74955791f2a4
+85663a89c2b6722200bc868afbf1296770dfbfc1
+43ba91a2e49ba8346e2f939a78e49b458e75dd02
+c1695c3552485e95b1ac4d14a1bfedd28b1091ea
+# Set `EnforcedStyle` to `inline` for `Style/AccessModifierDeclarations`
+bb0fbb225b62217aac92106b33e889553b9b12f3
+d5e8ff906459e4de3d6a3c3619726019d19289b4
+e2f024c05c76a26d848ebddd9625512e9d93c97d
+7a0fc8feb4e4fcd727b4436803e11f83f4ee94ad
+# Set `PreferredName` for `Naming/RescuedExceptionsVariableName`
+f7f6c4d1d8bcf297ad9848d89ace3717c9992fe9
+489a15c4a0f7cd4a266b255a73eece192d5589e6
+# Fix Violations of and Reenable `Style/AccessModifierDeclarations`
+add1984081179efeed8fc53c29ae71ffbb5b735e
+68d99ab636312bdcf582b6856fd70aa25b46de7f
+# Fix Violations of and Reenable `Naming/RescuedExceptionsVariableName`
+76f77f00b475f81798e5da8945736c9795b99cbe
+1fbec7617a7a0f17882d15870073d2fb69389f19
+825704a612c0c97c7e741eafe098288733ab525d
+a6d499f7dc5c23fe6a95b03ae60ddda6aa13a25c
+863346096309890df5f790d1d0d9c8b93a3cc7b7
+f7f6c4d1d8bcf297ad9848d89ace3717c9992fe9
+489a15c4a0f7cd4a266b255a73eece192d5589e6
+0aafbd8a350ed61b7f51b287abd33d87dd1eed38
+9958b4eedb868a8520bbcb442f25f0c56aa4a06f
+# Fix Violations of and Reenable `Style/RedundantSort`
+d8a587d5f01e78e4e57dabae91199942101eb83b
+# Fix Violations of and Reenable `Naming/MemoizedInstanceVariableName`
+db337c74e2f67e4b4440c076388064c918750859
+fd89718ba00ed1371dcbb2ae6a9900c7fde86564
+50aec545ddcf49c00319c4dbd568c4e559b7f44b
+266e783fc2067e7f0b7f3b38b140f4935a98403d
+# Fix Violations of and Reenable `Style/RedundantArgument`
+1f8e0114e92b377226a04ea62b5f4aa2eb283d80
+25d0fe28d992a87c915adb5e293bb50aa02d41ed
+# Fix Violations of and Reenable `Lint/RedundantSafeNavigation`
+b75fb8e9ffccd4d065b6565d60ba7eefb58b7adb
+# Fix Violations of and Reenable `Style/CaseLikeIf`
+8e03fa188a6b2872b3643a1ea08e5d7cfadfb744
+# Fix Violations of and Reenable `Rails/WhereEquals`
+911ac0a97d16c9468891c6a2979901d7d5b429ea
+# Fix Violations of and Reenable `Rails/WhereExists`
+fa601a3c5cbd34179f871b5eff67f7c2f58d0b27
+# Fix Violations of and Reenable `Style/FileRead` and `Style/FileWrite`
+29b9f2b19c5306227107de6838f66dac619d002c
+d3a91484d5de88c2ef3a32c3fc10cc47f879c245
+# Fix Violations of and Reenable `Performance/TimesMap`
+c74efed07d75fd54b78e322c05048851efa528eb
+# Fix Violations of and Reenable `Lint/SymbolConversion`
+eeb5af340070511f7753a0dfc39e072984e1d061
+f62ee7d86cd4f5f10aa317aa6e6b6d0711a622a2
+2e15bf434b2ab098ad6e54eba89e37db379498bc
+# Fix Violations of and Reenable `Lint/ScriptPermission`
+3a49dabedf949cce53bcfffecd5be6ec6192fa7d
+# Fix Violations of and Reenable `Lint/UriEscapeUnescape`
+bde1e0d47f5a468ecb91470f7a8142fc8f67fb5e
+32729ef13dd8040357c1612939e8acdf1b6af460
+8db80afa4e43090e16baa1e8ad2af3696d5e4492
+8fef11b23705f3f7c5babe3e961247290ba9f97d
+# Fix Violations of and Reenable `Style/SlicingWithRange`
+e3b9caf47bf980b0469e095fbb7e66e4770a2567
+# Fix Violations of and Reenable `Lint/DuplicateMethods`
+d98565219ac14cbc70aee25a4126907faff26569
+d2b9cf8aa89e2aaf6de4449987566289bb5f3031
+36bf10d5d0afffd79ce8f6e7cef2e9491cca4dbb
+# Fix Violations of and Reenable `Rails/DeprecatedActiveModelErrorsMethods`
+1b1ae15b53aa939544e18170147c4b239266eed4
+d211105e98e8466dace5bdd65d711838ccbbd197
+8463b68a7b599040045c0bc8db1a6596d518b3bc
+# Fix Violation of and Reenable `Lint/StructNewOverride`
+89c700c7d267afcb55ac39197405f6e0405c5fda
+e1a07f36dece58d2f33cf6ae3ce241399bfee528
+# Fix Violations of and Reenable `Style/CaseEquality`
+9d24485c90998cb1164d14f2f7729b2015b3ffcb
+977dc9245f2337780a01796a99e0072836a7baec
+# Disable `Style/AccessorGrouping` Rubocp Rule
+06ea67de9a8d85ecdf297c670e626f8da3be319c
+# Add Override for and Standardize `Style/AccessorGrouping`
+4fa06dbd3838d38a614bb154b560ea5d5ca4efb5
+# Fix Violations of and Reenable `Style/StderrPuts`
+c2071910890d9837461ebd24d2199b7260ed841b
+3f9ca2019b9476aa4249d48c377a648e4033d7cd
+88b620efccaa2eae262d743ed57566ad100cd2f0
+# Fix Violations of and Reenable `Lint/ErbNewArguments`
+04970cdae7ff10f529e104938efae3b904b8f06d
+# Fix Violations of and Reenable `Style/SingleArgumentDig`
+fe3241db4060cfe7db7e78055a015fd49942367f
+# Fix Violation of and Reenable `Lint/SelfAssignment`
+920ddf779096f5abec60470dd34d4c580349a042
+# Fix Violations of and Reenable `Style/AccessorGrouping`
+eb6ca3854f34a367d8cfafe498eb61d48f82a740
+d01430fa0728914a6d744b98d2698e8dbc829395
+a2b5ef086eb78c4449e85ceb072bb74a6457a057
+8a3992670a07299e7d89b632e64d43c53058cee0
+# Fix Violations of and Reenable `Style/RedundantFileExtensionInRequire`
+3cf50ab7242e5f6bdf73061e338ef0d6a2d6ae35
+# Fix Violations of and Reenable `Performance/InefficientHashSearch`
+2695fafc9f4d4f05165f828cab68493f2f37e609
+# Fix Violations of and Reenable `Rails/Present`
+b95ff13801571ab9a9a650d9082bd025d0b48da6
+# Fix Violations of and Reenable `Performance/StringInclude`
+6e47e64aae1cf0d4df50a61186e98aa595bf8a70
+d1a960cadc284da0047335138d1bef4b8eaeb244
+4d7064eddd3d8b7d9141cd5e8ad66198f07fa911
+# Fix Violations of and Reenable `Rails/Blank`
+3929d238e1cb5518e1b9fd139b6fe50ab9d55706
+b16b45cb160c01b4071000459c02ab389ec54c60
+# Fix Violations of and Reenable `Performance/Sum`
+22a893443d999341fbdc53ca2f13c51e0828421b
+e2c3c0e40d06fefdf20bcf46cf5bf79506def6fd
+117377de88262782ee31699ba0917753e02f654d
+37fac2db04e961bf58a8f9578970bca9d954f73f
+# Fix Violations of and Reenable `Performance/RedundantEqualityComparisonBlock`
+737b6d0fec642681e4762429d42c2ea1e1dfa8b7
+# Fix Violation of and Reenable `Lint/FloatComparison`
+48bac8da78659388dcdba27eb1f1b490595af9aa
+# Fix Violations of and Reenable `Lint/DuplicateElsifCondition`
+abff241bd3a838d5053b12f08f5d7e4e60b5208d
+# Fix Violations of and Reenable `Style/TrailingUnderscoreVariable`
+818051d93913071d7c06e492dc19351b788c9669
+# Fix Violations of and Reenable `Rails/HttpStatus`
+9ebe2c8b6e7e8d83f13649579650c735335936fc
+# Fix Violations of and Reenable `Security/Open` Rubocop Rule
+19b2575b5a72ffb245ea4a113d339c6b5d660024
+f01bda5c70575b7664ef26dcdf763235d7a3cd92
+8361cd07b0511482d9a267b9c8695d758e581d6e
+d8d79a23c1938d723fb597cb7d4a66b29c4e249f
+f1c6e31e6dcb9ff02550024ec7139364012691f7
+# Fix Violations of `Security/IoMethods` and Reenable
+52c18b0b364f56455c066d11568e4a7dc1af8db2
+# Fix `Performance/Casecmp` Violations and Reenable
+84ae624f095da85dc8531abcd2ad3dd901386ff7
+# Fix and Reenable `Security/YAMLLoad` Violations
+13a1b64db843ac059fbde88af33a173a1581b73a
+d52c02d1864a0246fbc57181d454c83736fa6294
+9aa2e35961c1bbf8ba4b757f6fa950a2275aae0d
+26f2d8239eb89288d8f994c34a0243d36c7cfddb
+ac45c6b26109ba9d5c430a806b4463bd7a179e69
+# Fix and Reenable `Security/JSONLoad` Violations
+7ad083b2147d6327ebb5c8c23f306faee3db597e
+c281f6b80681658656bf7d97b961e34376239362
+d6a850806cdcccef33d557f7f58e31f8f386b9a6
+d5a145e0fc55575b79ccd138871507fabb24838f
+f45c3e1c2d31a8723e3715f8dbed179e33fa2272
+# Fix Violation of `Lint/RedundantCopDisableDirective` and Reenable
+c9914593a83bf74cbf7135be11b9fef5d61b4cfa
+# Fix `Lint/UselessMethodDefinition` Rubocop Violations
+3fa5134928ffc6d5373f6c8a1a48cc98fa65edfb
+113e6c074938c34e88503287353e20798913438e
+a81e4afeed4f3d576aabea3e149e640d55d36df9
+8e720b59668b2af07c34d257c7a2b03811867a64
+# Fix and Reenable `Style/SafeNavigation`
+f784daac9faf365752ab602c9e5635cb6884c11d
+e0b18e76bdf533755f3549ce4431278a1af70ed2
+a2380a773375fa0dd207d67cdfeabc4bc0a024e4
+11fa777d001b2f8578b2468299e0bf7e123285f7
+# Fix and Reenable Some `Style/` Rubocop Rules
+f76f12027866a28397f5c0a92de060594a384d33
+f6af28d0d0acd160b6150acd56e86991c8dd1ed9
+2efeaa2e9bee705510fe58b7d7ddf5b124c9d2ac
+6330159518cc0639983922b684563ab08b2648db
+14e0efef88d9892802afeb86ea82fa6bea99f1d7
+# Fix Some `Security/` Rubocop Rules
+7a2b3507faa90b1a47259c9ec71da152564299a4
+2c0bbc48548f401fdfaa9542e468901ff1b0749a
+2ed9d40f5a18159c3e90d9b3885f6d2d732e05bd
+6c97f234a45380d8531c9cf13c4017669668d887
+0965e11a15cef62b7c8b4590b06fc9a2901b7f05
+# More Misc Rubocop Fixes
+9ea79927b1a31629f854ff8db018288e6e2889f0
+e6a70eb7d0a198715d9da337c157ed48222513c1
+b06e4d0c87243725333b72396021163abb2aa177
+# Fix and Reenable some `BelongsTo` Rubocop Rules
+6842ca2430b32d19fb8411873b159d9cdd7055d9
+2a49cee0eab0943810df573516096597b4f90ce9
+159ed3c0dade7e2cbfae33e6dd00d846733d0b61
+# More Misc Rubocop Fixes
+76ebc952c8c170e5c69914bc11bcce25169a1bcb
+09c9370381fa43d2b143f94fa13368a51f1ff4fd
+89ff7d8e7f492674b4a887deabc21afdc64ac8f9
+# Auto-correct some Rails Rubocop violations
+ffb59aa9c8776c91c3cd4e17ca8080bd07c650fc
+5e0513c771bae689fa2dbd6f8d5f60477c3fe208
+1bac41214487f107f7baf87b2468f1c053bc8437
+2c28137777849b2af0b8f8ddfdee7a39414014b8
+# Fix rails rubocop violations
+5f0f4ff7f596b974404c17ea84aa464f2805e76b
+ca8407fedfec253adbf688cabe052a0c72312a44
+99eef86058305395bc95660d1020c9303d38cdee
+1005262ee25bda06b4ac21fb88f8a021d02880bc
+982bcd44536accbb9ad5433414580e4ddd93f6d9
+d0adb436d7dbe5888a7cddcb227b63ce7f89bcc2
+f51c07482c44c216af39cd218e385da49967f489
+2c37be902ec084bb65c8cfb1fa4faf002819246d
+# auto-correct rubocop Rails violations
+6a7e64db3b560a4b476ba45fe210610bf21c682b
+b598268124621b67ecb9302c13a6ea34a736c726
+13aa0360b2fc0bf9d63a885d6e29b01af681807c
+# auto-correct rubocop Security, Migration, Naming, and Performance violations
+6a7e64db3b560a4b476ba45fe210610bf21c682b
+6ff9ab55c317624751e8a0380f3e60ecf4c36e4d
+# Fix Rubocop `Lint` Violations
+7902439be8237f516e7dc43f4ce54ff2b2273844
+141da75f5336faaa4c61bd0fb300d762a902fdb5
+e42c5bd266a21e88ad645bf1d5b504c3dc526f1d
+cc5a207d20681b4d9d0f0f6866a055201bf55a59
+ecb23b1c49616b66d41d9c19a5e07c6e0e61ef1f
+# Fix Rubocop `Layout` Violations
+6e49521fd97dd1e7ced61f801863ad3b48a0d71e
+84a0e7d82e374c168a5b06c02c039380e6bd50e2
+78561b237180fd44228feb6dec8e5a3beac97b60
+f3cfc08cff3811e950ff52404a4dcb147d42e2eb
