@@ -699,6 +699,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: animationsSeeded,
     animations: animationList,
     spriteRole: defaultRole(levelProperties.imageRoleDefaults, 'sprite'),
+    roles: levelProperties.worldStartRoles,
     updateSources,
   });
   // The extra scene's premade world, painted by the same rules.
@@ -708,6 +709,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: animationsSeeded,
     animations: animationList,
     spriteRole: defaultRole(levelProperties.imageRoleDefaults, 'sprite'),
+    roles: extraScene?.worldStartRoles,
     updateSources,
   });
 
