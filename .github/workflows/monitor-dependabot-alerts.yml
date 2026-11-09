@@ -1,0 +1,36 @@
+name: Monitor Dependabot Alerts
+
+on:
+  schedule:
+    # Run daily at 9 AM UTC (1 AM PST / 2 AM PDT)
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  monitor-alerts:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      security-events: read
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+          cache-dependency-path: ".github/actions/monitor-dependabot-alerts"
+
+      - name: Install dependencies
+        working-directory: .github/actions/monitor-dependabot-alerts
+        run: yarn install
+
+      - name: Monitor Dependabot alerts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: .github/actions/monitor-dependabot-alerts
+        run: node monitor-alerts.mjs
+
