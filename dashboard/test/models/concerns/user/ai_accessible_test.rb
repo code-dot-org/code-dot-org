@@ -339,28 +339,6 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         _blocked_aichat_providers.must_be_empty
       end
     end
-
-    context 'when the user is in the simulate-international pilot' do
-      before do
-        create(:single_user_experiment, min_user_id: user.id, name: User::AiAccessible::SIMULATE_INTERNATIONAL_PILOT)
-      end
-
-      it 'blocks US only providers for a US teacher' do
-        allow(user).to receive(:teacher?).and_return(true)
-        allow(user).to receive(:school_info).and_return(build(:school_info_us))
-        _blocked_aichat_providers.must_equal SharedConstants::AI_CHAT_US_ONLY_PROVIDERS
-      end
-
-      it 'blocks US only providers for a levelbuilder' do
-        allow(user).to receive(:levelbuilder?).and_return(true)
-        _blocked_aichat_providers.must_equal SharedConstants::AI_CHAT_US_ONLY_PROVIDERS
-      end
-
-      it 'blocks US only providers even when international usage is allowed via DCDO' do
-        allow(DCDO).to receive(:get).with("allow_international_usage_all_models", false).and_return(true)
-        _blocked_aichat_providers.must_equal SharedConstants::AI_CHAT_US_ONLY_PROVIDERS
-      end
-    end
   end
 
   describe '#can_use_aichat_model?' do

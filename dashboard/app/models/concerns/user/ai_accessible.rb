@@ -5,8 +5,6 @@ module User::AiAccessible
 
   TEACHER_PREVERIFICATION_PILOT = 'teacher-preverification'.freeze
   SPRITELAB2_AI_PILOT = 'ai-in-your-program-pilot'.freeze
-  # Testers join to be treated as outside the US; see blocked_aichat_providers.
-  SIMULATE_INTERNATIONAL_PILOT = 'ai-simulate-international'.freeze
 
   # Chat apis trust the client to decide if it can access chat features
   # This allows us the flexibility to do things like experiment with new
@@ -59,8 +57,6 @@ module User::AiAccessible
   end
 
   def blocked_aichat_providers
-    # Ahead of the levelbuilder exemption, since levelbuilders are the testers.
-    return AI_CHAT_US_ONLY_PROVIDERS if simulating_international_ai_chat_user?
     return [] if levelbuilder?
     international_ai_chat_user? ? AI_CHAT_US_ONLY_PROVIDERS : []
   end
@@ -119,11 +115,6 @@ module User::AiAccessible
 
   private def in_section_with_ai_chat_access_essential_only?
     sections_as_student.any? {|s| !s.hidden && s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY]}
-  end
-
-  private def simulating_international_ai_chat_user?
-    return @simulating_international_ai_chat_user if defined?(@simulating_international_ai_chat_user)
-    @simulating_international_ai_chat_user = Experiment.enabled?(user: self, experiment_name: SIMULATE_INTERNATIONAL_PILOT)
   end
 
   # A teacher is international when they (the teacher) are non-US. A student is
