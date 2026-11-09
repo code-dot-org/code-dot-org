@@ -524,7 +524,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     const drawLoop = library.commands.executeDrawLoopAndCallbacks;
     library.commands.executeDrawLoopAndCallbacks = function () {
       drawLoop.apply(this, arguments);
-      if (engine.restartGate_.due(engine.runFrame_())) {
+      if (
+        !engine.sceneJumpInFlight_ &&
+        engine.restartGate_.due(engine.runFrame_())
+      ) {
         engine.triggerSceneJump_(engine.onRestartScene);
       }
       engine.drawTitle_(this);
@@ -726,8 +729,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.goToScene = sceneId => {
       this.triggerSceneJump_(this.onGoToScene, String(sceneId));
     };
+    // A restart asked for while another scene jump is on its way would be
+    // swallowed by it; it does not take the run's one restart.
     library.commands.restartScene = () => {
-      if (this.restartGate_.request(this.runFrame_())) {
+      if (
+        !this.sceneJumpInFlight_ &&
+        this.restartGate_.request(this.runFrame_())
+      ) {
         this.triggerSceneJump_(this.onRestartScene);
       }
     };

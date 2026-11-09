@@ -369,7 +369,7 @@ function underFeet(sprite: PhysicsSprite, walls: PhysicsBox[]): boolean[] {
   const {halfW, feet} = feetLine(sprite);
   return walls.map(
     wall =>
-      Math.abs(feet - (wall.position.y - wallHalf(wall))) <= CONTACT_EPSILON &&
+      topAtFeet(wall, feet) &&
       Math.abs(sprite.position.x - wall.position.x) < halfW + wallHalf(wall)
   );
 }
@@ -561,10 +561,12 @@ export function hasSupportAhead(
 
 // The walls whose top is at foot level, within contact tolerance.
 function wallsAtFeet(walls: PhysicsBox[], feet: number): PhysicsBox[] {
-  return walls.filter(
-    wall =>
-      Math.abs(feet - (wall.position.y - wallHalf(wall))) <= CONTACT_EPSILON
-  );
+  return walls.filter(wall => topAtFeet(wall, feet));
+}
+
+// Whether a wall's top is at foot level, within contact slack.
+function topAtFeet(wall: PhysicsBox, feet: number): boolean {
+  return Math.abs(feet - (wall.position.y - wallHalf(wall))) <= CONTACT_EPSILON;
 }
 
 // The sprite as it stands in a view flipped top for bottom, for reading
