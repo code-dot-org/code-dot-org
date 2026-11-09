@@ -39,10 +39,12 @@ disabled.
 
 ## Selection
 
-`selected` gives the card selected chrome. On a button, a boolean `selected`
-also sets `aria-pressed`, which is right for a toggle or a single-select group
-of cards. Leave `selected` undefined on plain action or navigation cards, and on
-links, which never get `aria-pressed`.
+`selected` gives the card selected chrome. Leave it undefined on plain action
+or navigation cards. A boolean `selected` also tells assistive technology:
+
+- On a button it sets `aria-pressed`, for a toggle or a set of mode buttons.
+- On a link it sets `aria-current` when true, for the current item in a list
+  of links.
 
 ```jsx
 <div role="group" aria-label="Mode">
@@ -53,6 +55,27 @@ links, which never get `aria-pressed`.
       title={mode.title}
       startIcon={{iconName: mode.icon}}
       selected={value === mode.value}
+      onClick={() => setValue(mode.value)}
+    />
+  ))}
+</div>
+```
+
+A single choice that is part of a form is a radio group. Pass `role="radio"`
+and `aria-checked`; with a `role`, the card sets no state attribute of its own.
+The radio group pattern gives the group one tab stop and moves between cards
+with the arrow keys; the container owns that.
+
+```jsx
+<div role="radiogroup" aria-label="Mode">
+  {modes.map(mode => (
+    <CardButton
+      key={mode.value}
+      role="radio"
+      aria-checked={value === mode.value}
+      selected={value === mode.value}
+      tabIndex={value === mode.value ? 0 : -1}
+      title={mode.title}
       onClick={() => setValue(mode.value)}
     />
   ))}

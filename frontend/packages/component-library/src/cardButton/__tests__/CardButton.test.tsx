@@ -111,11 +111,26 @@ describe('Design System - CardButton', () => {
     expect(screen.getByRole('button')).toHaveAttribute('aria-pressed', 'true');
   });
 
-  it('renders a link without aria-pressed when href is set', () => {
-    render(<CardButton title="Lesson 2" href="/lessons/2" selected />);
+  it('marks a selected link aria-current instead of aria-pressed', () => {
+    const {rerender} = render(
+      <CardButton title="Lesson 2" href="/lessons/2" selected />,
+    );
     const link = screen.getByRole('link', {name: 'Lesson 2'});
     expect(link).toHaveAttribute('href', '/lessons/2');
+    expect(link).toHaveAttribute('aria-current', 'true');
     expect(link).not.toHaveAttribute('aria-pressed');
+
+    rerender(
+      <CardButton title="Lesson 2" href="/lessons/2" selected={false} />,
+    );
+    expect(link).not.toHaveAttribute('aria-current');
+  });
+
+  it('leaves selection semantics to an explicit role', () => {
+    render(<CardButton title="Audio" role="radio" aria-checked selected />);
+    const radio = screen.getByRole('radio', {name: 'Audio'});
+    expect(radio).toHaveAttribute('aria-checked', 'true');
+    expect(radio).not.toHaveAttribute('aria-pressed');
   });
 
   it('calls onClick from pointer and keyboard', async () => {

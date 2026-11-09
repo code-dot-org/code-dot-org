@@ -28,8 +28,10 @@ export interface CardButtonProps
   /** Trailing icon, e.g. `chevron-right`. Horizontal layout only. */
   endIcon?: FontAwesomeV6IconProps;
   /**
-   * Selected chrome for a chosen option. A boolean on a button also sets
-   * `aria-pressed`; leave it undefined on plain action or navigation cards.
+   * Selected chrome for a chosen option. A boolean sets `aria-pressed` on a
+   * button, and `aria-current` on a link when true. With an explicit `role`,
+   * no state attribute is set; pass the one the role needs, e.g. `aria-checked`.
+   * Leave it undefined on plain action or navigation cards.
    */
   selected?: boolean;
   /** Fill the container width instead of hugging the content. */
@@ -81,13 +83,15 @@ const CardButton = forwardRef<
     },
     ref,
   ) => {
+    const announceSelected = selected !== undefined && !rest.role;
     const isLink = rest.href !== undefined;
 
     return (
       <ButtonBase
         ref={ref as Ref<HTMLButtonElement>}
         disableRipple
-        aria-pressed={!isLink && selected !== undefined ? selected : undefined}
+        aria-pressed={announceSelected && !isLink ? selected : undefined}
+        aria-current={announceSelected && isLink && selected ? true : undefined}
         {...rest}
         className={classNames(
           styles.cardButton,
