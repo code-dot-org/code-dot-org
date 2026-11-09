@@ -1,10 +1,17 @@
-import {fireEvent, render, screen, within} from '@testing-library/react';
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import {
   EMPTY_PAGE_REASON,
   editedQuestionsReason,
+  INVALID_CONFIG_REASON,
   NO_CHANGES_REASON,
   QUIZ_BUILDER_HEADER_ID,
   UNSAVED_QUESTION_REASON,
@@ -13,6 +20,7 @@ import QuizBuilderWorkspace from '@cdo/apps/quiz/builder/QuizBuilderWorkspace';
 import {
   QuizBuilderQuestion,
   QuizBuilderQuestionsState,
+  QuizConfigurationData,
 } from '@cdo/apps/quiz/builder/types';
 import useQuizBuilderQuestions from '@cdo/apps/quiz/builder/useQuizBuilderQuestions';
 import {groupByPage} from '@cdo/apps/quiz/utils';
@@ -72,6 +80,21 @@ function createFromDropdown(index: number, typeLabel: string) {
   fireEvent.click(within(dropdown).getByRole('button', {name: typeLabel}));
 }
 
+const CONFIG: QuizConfigurationData = {
+  showCorrectness: true,
+  revealAnswerExplanation: false,
+  showIntroScreen: false,
+  customIntroText: '',
+  allowMultipleAttempts: false,
+  showQuestionsAfterSubmit: false,
+};
+
+// The same configuration as edited and as saved, so nothing is unsaved.
+const withConfig = (fields: Partial<QuizConfigurationData>) => ({
+  config: {...CONFIG, ...fields},
+  savedConfig: {...CONFIG, ...fields},
+});
+
 function renderWorkspace(
   stateOverrides: Omit<Partial<QuizBuilderQuestionsState>, 'questions'> & {
     questions?: PlacedQuestion[];
@@ -88,12 +111,11 @@ function renderWorkspace(
   return render(
     <QuizBuilderWorkspace
       levelId={42}
-      quizVersion={{current: 7}}
       quizTitle="AI Foundations Certification Exam"
-      showIntroScreen={false}
-      customIntroText=""
-      allowMultipleAttempts={false}
-      onSaveQuizConfig={jest.fn()}
+      config={CONFIG}
+      savedConfig={CONFIG}
+      onConfigChange={jest.fn()}
+      onConfigSaved={jest.fn()}
       {...propOverrides}
     />
   );
@@ -117,20 +139,23 @@ describe('QuizBuilderWorkspace', () => {
   it('shows the intro screen card, with its content, when the intro screen is on', () => {
     renderWorkspace(
       {},
-      {showIntroScreen: true, customIntroText: 'You have 45 minutes.'}
+      withConfig({
+        showIntroScreen: true,
+        customIntroText: 'You have 45 minutes.',
+      })
     );
     expect(screen.getByText('Intro Screen')).toBeInTheDocument();
     expect(screen.getByText('You have 45 minutes.')).toBeInTheDocument();
   });
 
   it('hides the intro screen card when the intro screen is off', () => {
-    renderWorkspace({}, {showIntroScreen: false});
+    renderWorkspace({}, withConfig({showIntroScreen: false}));
     expect(screen.queryByText('Intro Screen')).not.toBeInTheDocument();
   });
 
   it('fetches questions for the given level', () => {
     renderWorkspace();
-    expect(mockUseQuizBuilderQuestions).toHaveBeenCalledWith(42, {current: 7});
+    expect(mockUseQuizBuilderQuestions).toHaveBeenCalledWith(42);
   });
 
   it('shows a loading message while questions load', () => {
@@ -154,7 +179,14 @@ describe('QuizBuilderWorkspace', () => {
   });
 
   it('shows time limit and unlimited attempts in the workspace header', () => {
-    renderWorkspace({}, {timeLimitMinutes: 45, allowMultipleAttempts: true});
+    renderWorkspace(
+      {},
+      withConfig({
+        showIntroScreen: true,
+        timeLimitMinutes: 45,
+        allowMultipleAttempts: true,
+      })
+    );
     expect(screen.getByText('45 minutes')).toBeInTheDocument();
     expect(screen.getByText('Unlimited attempts')).toBeInTheDocument();
     expect(screen.queryByText('1 attempt')).not.toBeInTheDocument();
@@ -508,6 +540,67 @@ describe('QuizBuilderWorkspace', () => {
           name: editedQuestionsReason(1),
         })
       ).toBeInTheDocument();
+    });
+
+    it('saves configuration changes, then reports what it saved', async () => {
+      const saveQuiz = jest.fn().mockResolvedValue(true);
+      const onConfigSaved = jest.fn();
+      renderWorkspace(
+        {questions: [question()], saveQuiz},
+        {
+          config: {...CONFIG, allowMultipleAttempts: true},
+          onConfigSaved,
+        }
+      );
+      expect(saveButton()).not.toHaveAttribute('aria-disabled');
+
+      fireEvent.click(saveButton());
+
+      expect(saveQuiz).toHaveBeenCalledWith({allowMultipleAttempts: true});
+      await waitFor(() =>
+        expect(onConfigSaved).toHaveBeenCalledWith({
+          allowMultipleAttempts: true,
+        })
+      );
+    });
+
+    it('keeps configuration changes unsaved when the save fails', async () => {
+      const saveQuiz = jest.fn().mockResolvedValue(false);
+      const onConfigSaved = jest.fn();
+      renderWorkspace(
+        {questions: [question()], saveQuiz},
+        {
+          config: {...CONFIG, allowMultipleAttempts: true},
+          onConfigSaved,
+        }
+      );
+
+      fireEvent.click(saveButton());
+
+      await waitFor(() => expect(saveQuiz).toHaveBeenCalled());
+      expect(onConfigSaved).not.toHaveBeenCalled();
+    });
+
+    it('is off while the configuration is invalid', async () => {
+      renderWorkspace(
+        {questions: [question()]},
+        {config: {...CONFIG, showIntroScreen: true, timeLimitMinutes: 0}}
+      );
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {name: INVALID_CONFIG_REASON})
+      ).toBeInTheDocument();
+    });
+
+    it('asks before leaving with unsaved configuration', () => {
+      renderWorkspace(
+        {questions: [question()]},
+        {config: {...CONFIG, allowMultipleAttempts: true}}
+      );
+      const event = new Event('beforeunload', {cancelable: true});
+      window.dispatchEvent(event);
+      expect(event.defaultPrevented).toBe(true);
     });
 
     it('shows that it is saving', () => {
