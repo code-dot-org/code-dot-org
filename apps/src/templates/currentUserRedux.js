@@ -2,7 +2,10 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReport from '@cdo/apps/metrics/AnalyticsReporter';
 import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import experiments from '@cdo/apps/util/experiments';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  SpritelabAskAiRefusals,
+  UserTypes,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {makeEnum} from '../utils';
 
@@ -130,6 +133,7 @@ const initialState = {
   hasSeenHomepageWelcome: false,
   canUseLessonDeepDiveChallenges: false,
   blockedAichatProviders: [],
+  spritelabAskAiRefusal: SpritelabAskAiRefusals.NOT_IN_PILOT,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -264,6 +268,7 @@ export default function currentUser(state = initialState, action) {
       ai_chat_access_level,
       can_use_lesson_deep_dive_challenges,
       blocked_aichat_providers,
+      spritelab_ask_ai_refusal,
     } = action.serverUser;
     // TODO: Once Amplitude is fully removed, the StatsigReporter class should be
     // renamed to AnalyticsReporter.
@@ -306,6 +311,7 @@ export default function currentUser(state = initialState, action) {
       canUseLessonDeepDiveChallenges:
         can_use_lesson_deep_dive_challenges ?? false,
       blockedAichatProviders: blocked_aichat_providers ?? [],
+      spritelabAskAiRefusal: spritelab_ask_ai_refusal,
     };
   }
 
