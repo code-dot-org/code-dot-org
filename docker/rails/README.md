@@ -200,12 +200,16 @@ when you add something the running app reads from disk.
 
 ## Published image
 
-`ghcr.io/code-dot-org/cdo-rails`, a multi-platform manifest over amd64 and
-arm64, built natively per architecture and merged — the cdo-base pattern.
+`ghcr.io/code-dot-org/cdo-rails`, an OCI image index over amd64 and arm64,
+built natively per architecture and merged. The index carries the annotation
+`org.opencontainers.image.revision`, the full SHA of the commit the image was
+built from, which is how a consumer such as Kargo learns the commit behind a
+digest. The merge uses regctl rather than buildx because buildx drops index
+annotations when the children are Docker-typed manifests.
 
 | tag | published from | meaning |
 |---|---|---|
-| `git-<sha>` | staging | the commit this image was built from |
+| `git-<sha>` | staging | the commit this image was built from; repointed when that commit is rebuilt |
 | `latest` | staging | the most recent staging publish |
 | `dev-<sha>` | other branches | manual dispatch |
 | `git-<sha>-amd64`, `git-<sha>-arm64` | any publish run | per-arch inputs to the merge job; not for consumers |
@@ -232,25 +236,31 @@ re-run the workflow.
 
 This directory publishes an image. It does not know who runs it.
 
-Four guarantees hold, and anything reading this registry may rely on them.
+Five guarantees hold, and anything reading this registry may rely on them.
 
 **`latest` is the most recent staging publish.** It moves on every publish,
 including a rebuild of source that has not changed.
 
 **`git-<sha>` names the commit its image was built from.** Every staging
-publish writes one, and it is never repointed.
+publish writes one. It is repointed when that commit is rebuilt: the
+`cdo-deps-image` chain and a manual dispatch both rebuild the default branch's
+head and republish its `git-<sha>` with new bytes. The tag names a commit, not
+bytes.
 
 **A digest pins exact bytes.** Tags move and digests do not, so a deployment
-that wants to hold still should record a digest.
+that wants to hold still should record a digest. It is the only immutable
+handle this registry offers.
+
+**The index names its source commit.** Every published index is an OCI image
+index whose `org.opencontainers.image.revision` annotation is the full SHA of
+the commit it was built from, on `git-<sha>` and `latest` alike. The merge job
+checks the media type, the annotation and both platforms before `latest`
+moves, so a consumer never sees an index without them.
 
 **Everything published passed the suites.** Smoke and boot verification run on
 the bytes of every publish, without exception.
 
-These four are an interface. Consumers of this registry are not visible from
-this directory, so a change to any of them breaks something you cannot see from
-here.
-
-These four are an interface. Consumers of this registry are not visible from
+These five are an interface. Consumers of this registry are not visible from
 this directory, so a change to any of them breaks something you cannot see from
 here.
 
