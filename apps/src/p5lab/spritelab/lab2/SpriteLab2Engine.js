@@ -1,7 +1,6 @@
 import * as BlocklyCore from 'blockly/core';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {
@@ -16,9 +15,9 @@ import SpriteLab from '../SpriteLab';
 import {
   askAiChoice,
   askAiErrorMessage,
+  askAiRefusal,
   askAiText,
   AskAiError,
-  isAskAiEnabled,
 } from './ai/text/askAi';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {burstBoxes} from './bursts';
@@ -765,14 +764,24 @@ export default class SpriteLab2Engine extends SpriteLab {
     const pending = (this.aiPending_ = new Set());
     getStore().dispatch(clearAskAi());
     const isCurrentRun = () => !this.destroyed_ && runId === this.runId_;
+    // Once per run, not on every pass of a block in a loop.
+    let refusalShown = false;
+    const canAskAi = () => {
+      const refusal = askAiRefusal(getStore().getState().currentUser);
+      if (refusal && !refusalShown) {
+        refusalShown = true;
+        getStore().dispatch(askAiFailed(refusal));
+      }
+      return !refusal;
+    };
     let systemPrompt = '';
     library.commands.setSystemPrompt = promptText => {
-      if (this.canAskAi_()) {
+      if (canAskAi()) {
         systemPrompt = String(promptText ?? '');
       }
     };
     const askAi = (variableName, setterCallback, request) => {
-      if (!this.canAskAi_() || pending.has(variableName)) {
+      if (pending.has(variableName) || !canAskAi()) {
         return;
       }
       pending.add(variableName);
@@ -844,21 +853,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.userInputEventCallbacks[variableName]?.userCallbacks.forEach(
       callback => callback()
     );
-  }
-
-  // Mirrors the gateway's own check (User::AiAccessible), so a request it
-  // would refuse never leaves the browser.
-  canAskAi_() {
-    if (!isAskAiEnabled()) {
-      console.warn('SpriteLab2: the ask AI block is turned off.');
-      return false;
-    }
-    const permissions = getStore().getState().lab?.permissions;
-    if (!permissions?.includes(PERMISSIONS.LEVELBUILDER)) {
-      console.warn('SpriteLab2: the ask AI block needs levelbuilder access.');
-      return false;
-    }
-    return true;
   }
 
   onPromptAnswer(variableName, value) {

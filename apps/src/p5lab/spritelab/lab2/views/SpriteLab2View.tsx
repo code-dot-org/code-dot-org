@@ -13,7 +13,7 @@ import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {PERMISSIONS, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
@@ -44,7 +44,10 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  SpritelabAskAiRefusals,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks, ownsTop} from '../addBlocks';
 import {ImageSource, isImageSource} from '../ai/images/imageCache';
@@ -60,17 +63,15 @@ import {
   newBlockTypes,
 } from '../blockCatalog';
 import {ownToolboxTypes} from '../blockLocks';
-import {ASK_AI_BLOCK_TYPE} from '../blockly/blockDefinitions/askAi';
-import {ASK_AI_WITH_CHOICES_BLOCK_TYPE} from '../blockly/blockDefinitions/askAiWithChoices';
 import {
   refreshSceneDropdowns,
   setSceneMenuActiveId,
   withSceneMenuActive,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
-import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockly/blockDefinitions/setSystemPrompt';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
@@ -224,12 +225,6 @@ function getImageCacheUrlParam(): string | undefined {
   }
   return value.endsWith('/') ? value : `${value}/`;
 }
-
-const AI_BLOCK_TYPES = [
-  ASK_AI_BLOCK_TYPE,
-  ASK_AI_WITH_CHOICES_BLOCK_TYPE,
-  SET_SYSTEM_PROMPT_BLOCK_TYPE,
-];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_PANE_WIDTH = 280;
@@ -484,16 +479,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => heldBackBlockTypes(catalog, chosenBlocks),
     [catalog, chosenBlocks]
   );
-  const isLevelbuilder = useAppSelector(state =>
-    state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
-  );
-  // Everything the toolbox leaves out.
-  const hiddenBlockTypes = useMemo(
-    () =>
-      isLevelbuilder
-        ? heldBackBlocks
-        : new Set([...heldBackBlocks, ...AI_BLOCK_TYPES]),
-    [heldBackBlocks, isLevelbuilder]
+  const inAiPilot = useAppSelector(
+    state =>
+      state.currentUser.spritelabAskAiRefusal !==
+      SpritelabAskAiRefusals.NOT_IN_PILOT
   );
   const [showBlockCatalog, setShowBlockCatalog] = useState(false);
   // Dismissing the catalog, not opening it, is what counts as seen: an
@@ -639,7 +628,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       );
     }
   }, [activeTab, enabledTabs, dispatch]);
-  const sceneToolbox = levelProperties.toolboxDefinition;
+  const authoredToolbox = levelProperties.toolboxDefinition;
+  const sceneToolbox = useMemo(
+    () =>
+      authoredToolbox && !inAiPilot
+        ? withoutAiBlocks(authoredToolbox)
+        : authoredToolbox,
+    [authoredToolbox, inAiPilot]
+  );
   // Blockly fixes a workspace's toolbox kind at injection, so reaching a
   // toolbox of the other kind takes a new workspace. Same-kind changes swap
   // in place instead, below.
@@ -1249,7 +1245,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   } = useBlocklyWorkspace({
     enabled: animationsSeeded,
     toolboxDefinition: injectedToolbox,
-    hiddenBlockTypes,
+    hiddenBlockTypes: heldBackBlocks,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
   });
@@ -1614,7 +1610,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [
     animationsSeeded,
     sceneToolbox,
-    hiddenBlockTypes,
+    heldBackBlocks,
     workspaceVersion,
     refreshToolbox,
   ]);
@@ -1836,7 +1832,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     } else {
       runProgram();
     }
-  }, [engineReady, runProgram]);
+    // inAiPilot reruns this once the user loads; earlier runs refuse AI blocks.
+  }, [engineReady, runProgram, inAiPilot]);
   // The premade world is painted once the engine is ready and the images it
   // names exist. A level that opened on Play restarts the game with it.
   useEffect(() => {
