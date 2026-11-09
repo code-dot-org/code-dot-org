@@ -1,4 +1,3 @@
-import {Theme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   IconButton as MuiIconButton,
@@ -12,7 +11,6 @@ import styles from '../styles.module.scss';
 interface ButtonWithDialogProps {
   text: string;
   id: string;
-  theme: Theme;
   Dialog: React.ReactNode;
   iconName: string;
   ariaLabel?: string;
@@ -23,7 +21,6 @@ interface ButtonWithDialogProps {
 const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
   text,
   id,
-  theme,
   Dialog,
   iconName,
   ariaLabel,
@@ -40,7 +37,6 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
         placement="right"
         leaveDelay={hideTooltipDelayMs}
         disableInteractive
-        slotProps={theme ? {tooltip: {'data-theme': theme}} : undefined}
       >
         <MuiIconButton
           id={`uitest-${id}-button`}

@@ -1,4 +1,3 @@
-import {Theme} from '@code-dot-org/component-library/common/contexts';
 import React, {useState} from 'react';
 
 import {useExtraLinks} from '@cdo/apps/lab2/hooks/useExtraLinks';
@@ -9,12 +8,11 @@ import ButtonWithDialog from './ButtonWithDialog';
 
 interface ResourcePanelExtraLinksProps {
   levelId: number;
-  theme: Theme;
 }
 
 const ResourcePanelExtraLinks: React.FunctionComponent<
   ResourcePanelExtraLinksProps
-> = ({levelId, theme}) => {
+> = ({levelId}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const {isExtraLinksLoading, levelLinkData, projectLinkData} =
     useExtraLinks(levelId);
@@ -38,7 +36,6 @@ const ResourcePanelExtraLinks: React.FunctionComponent<
       text={'Extra Links'}
       ariaLabel={lab2I18n.extraLinks()}
       id={'resource-panel-extra-links'}
-      theme={theme}
       Dialog={innerDialog}
       iconName={'link'}
       setIsDialogOpen={setIsModalOpen}
