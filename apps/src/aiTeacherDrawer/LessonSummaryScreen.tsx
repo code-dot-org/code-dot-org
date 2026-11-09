@@ -9,16 +9,14 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
+import {
+  AiLessonSummaryResponse,
+  LessonSummaryInfo,
+  parseLessonSummary,
+} from './lessonSummary';
 import {SuggestedLesson} from './SectionPodcastCard';
 
 import styles from './lesson-summary-screen.module.scss';
-
-interface LessonSummaryInfo {
-  learning_objective: string;
-  lesson_beats: string[];
-  misconceptions: string[];
-  tips: string[];
-}
 
 interface LessonSummaryScreenProps {
   lesson: SuggestedLesson;
@@ -50,12 +48,15 @@ const LessonSummaryScreen: React.FC<LessonSummaryScreenProps> = ({
     setIsLoading(true);
     setHasError(false);
     setSummary(null);
-    HttpClient.fetchJson<{lesson_summary: string}>(
+    HttpClient.fetchJson<AiLessonSummaryResponse>(
       `/ai_lesson_summaries/show?lesson_id=${lesson.lesson_id}`
     )
       .then(response => {
-        if (response.response.ok && response.value?.lesson_summary) {
-          setSummary(JSON.parse(response.value.lesson_summary));
+        const parsed = response.response.ok
+          ? parseLessonSummary(response.value)
+          : null;
+        if (parsed) {
+          setSummary(parsed);
         } else {
           setHasError(true);
         }

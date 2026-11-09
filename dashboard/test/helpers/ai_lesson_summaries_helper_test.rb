@@ -122,9 +122,65 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     AiLessonSummariesHelper.generate_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
   end
 
+  test "generate_lesson_summary raises when lesson beats are not strings" do
+    malformed_summary = JSON.parse(@lesson_summary).merge('lesson_beats' => [{name: "Warm Up"}]).to_json
+    stub_openai_content(malformed_summary)
+
+    assert_raises(OpenaiLessonSummaryInvalidResponse) do
+      AiLessonSummariesHelper.generate_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    end
+  end
+
+  test "generate_lesson_summary accepts a response with extra fields" do
+    summary_with_extra_field = JSON.parse(@lesson_summary).merge('vocabulary' => ['loop']).to_json
+    stub_openai_content(summary_with_extra_field)
+
+    result = AiLessonSummariesHelper.generate_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+
+    assert_equal summary_with_extra_field, result[:json]
+  end
+
+  test "generate_lesson_summary raises when the response has no content" do
+    stub_openai_content(nil)
+
+    assert_raises(OpenaiLessonSummaryInvalidResponse) do
+      AiLessonSummariesHelper.generate_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    end
+  end
+
+  test "generate_lesson_summary raises when the response is truncated" do
+    stub_openai_content(@lesson_summary[0, 30])
+
+    assert_raises(OpenaiLessonSummaryInvalidResponse) do
+      AiLessonSummariesHelper.generate_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    end
+  end
+
+  test "generate_lesson_summary raises when the podcast script is missing" do
+    stub_openai_content({}.to_json)
+
+    assert_raises(OpenaiLessonSummaryInvalidResponse) do
+      AiLessonSummariesHelper.generate_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+    end
+  end
+
   # *****
   # retrieve_and_save_ai_lesson_summary tests
   # *****
+
+  test "retrieve_and_save_ai_lesson_summary does not save a summary that does not match the schema" do
+    malformed_summary = JSON.parse(@lesson_summary).merge('lesson_beats' => [{name: "Warm Up"}]).to_json
+    mock_response = mock('response')
+    mock_response.stubs(:code).returns(200)
+    mock_response.stubs(:body).returns({choices: [{message: {content: malformed_summary}}]}.to_json)
+    HTTParty.stubs(:post).returns(mock_response)
+
+    assert_raises(OpenaiLessonSummaryInvalidResponse) do
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false, true)
+    end
+
+    assert_nil AiLessonSummary.find_by(user_id: @user.id, lesson_id: @lesson.id)&.lesson_summary
+  end
 
   test "retrieve_and_save_ai_lesson_summary creates AiLessonSummary when API call succeeds for brief text summary response" do
     # Mock successful API response
@@ -338,7 +394,8 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
               lesson_beats: {type: "array", items: {type: "string"}},
               misconceptions: {type: "array", items: {type: "string"}},
               tips: {type: "array", items: {type: "string"}}
-            }
+            },
+            required: %w(learning_objective lesson_beats misconceptions tips)
           }
         }
       }
@@ -381,7 +438,8 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
             type: "object",
             properties: {
               podcast_script: {type: "string"}
-            }
+            },
+            required: %w(podcast_script)
           }
         }
       }
@@ -407,22 +465,22 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
       type: "object",
       properties: {
         learning_objective: {type: "string"},
-        lesson_beats: {type: "string"},
-        misconceptions: {type: "string"},
-        tips: {type: "string"}
-      }
+        lesson_beats: {type: "array", items: {type: "string"}},
+        misconceptions: {type: "array", items: {type: "string"}},
+        tips: {type: "array", items: {type: "string"}}
+      },
+      required: %w(learning_objective lesson_beats misconceptions tips)
     }
 
-    HTTParty.stubs(:post) do |_url, options|
-      body_data = JSON.parse(options[:body])
-      assert_equal "json_schema", body_data['response_format']['type']
-      assert_equal "lesson_summary", body_data['response_format']['json_schema']['name']
-      assert_equal expected_schema, body_data['response_format']['json_schema']['schema']
-      mock('response')
-    end
+    body_data = nil
+    HTTParty.expects(:post).with {|_url, options| body_data = JSON.parse(options[:body])}.returns(mock('response'))
 
     client = AiLessonSummariesHelper::Client.new(@api_key, @model)
     client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+
+    assert_equal "json_schema", body_data['response_format']['type']
+    assert_equal "lesson_summary", body_data['response_format']['json_schema']['name']
+    assert_equal expected_schema.deep_stringify_keys, body_data['response_format']['json_schema']['schema']
   end
 
   test "Client request_lesson_summary includes correct JSON schema for podcast script response format" do
@@ -432,19 +490,19 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
       type: "object",
       properties: {
         podcast_script: {type: "string"}
-      }
+      },
+      required: %w(podcast_script)
     }
 
-    HTTParty.stubs(:post) do |_url, options|
-      body_data = JSON.parse(options[:body])
-      assert_equal "json_schema", body_data['response_format']['type']
-      assert_equal "lesson_summary", body_data['response_format']['json_schema']['name']
-      assert_equal expected_schema, body_data['response_format']['json_schema']['schema']
-      mock('response')
-    end
+    body_data = nil
+    HTTParty.expects(:post).with {|_url, options| body_data = JSON.parse(options[:body])}.returns(mock('response'))
 
     client = AiLessonSummariesHelper::Client.new(@api_key, @model)
     client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+
+    assert_equal "json_schema", body_data['response_format']['type']
+    assert_equal "lesson_summary", body_data['response_format']['json_schema']['name']
+    assert_equal expected_schema.deep_stringify_keys, body_data['response_format']['json_schema']['schema']
   end
 
   # *****
@@ -537,5 +595,14 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     AiLessonSummariesJob.expects(:perform_later).never
 
     AiLessonSummariesHelper.perform_ai_lesson_summary_by_lesson(lesson, unit, @user.id)
+  end
+
+  private def stub_openai_content(content)
+    mock_response = mock('response')
+    mock_response.stubs(:code).returns(200)
+    mock_response.stubs(:body).returns({choices: [{message: {content: content}}]}.to_json)
+    mock_client = mock('client')
+    mock_client.stubs(:request_lesson_summary).returns(mock_response)
+    AiLessonSummariesHelper::Client.stubs(:new).returns(mock_client)
   end
 end
