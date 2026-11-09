@@ -21,6 +21,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
     onAnimatedChange,
     onBusyChange,
     onKeep,
+    onRate,
     layout,
   }: {
     imageType: string;
@@ -29,6 +30,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
     onAnimatedChange?: (animated: boolean) => void;
     onBusyChange?: (busy: boolean) => void;
     onKeep: (result: unknown) => void;
+    onRate?: (verdict: string) => void;
     layout: (parts: unknown) => React.ReactNode;
   }) => {
     const [generating, setGenerating] = React.useState(false);
@@ -63,6 +65,9 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           }
         >
           land {imageType} {imageSubject ?? ''}
+        </button>
+        <button type="button" onClick={() => onRate?.('up')}>
+          rate {imageType}
         </button>
         {layout({
           mode: generating ? 'generating' : 'edit',
@@ -196,6 +201,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/imageTrim', () => ({
 }));
 const acceptGenerated = jest.fn();
 const saveEdited = jest.fn();
+const rateGenerated = jest.fn();
 const deleteImage = jest.fn();
 const endSession = jest.fn();
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter', () => ({
@@ -203,6 +209,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter', () => ({
   default: () => ({
     acceptGenerated: (...args: unknown[]) => acceptGenerated(...args),
     saveEdited: (...args: unknown[]) => saveEdited(...args),
+    rateGenerated: (...args: unknown[]) => rateGenerated(...args),
     deleteImage: (...args: unknown[]) => deleteImage(...args),
     endSession: () => endSession(),
   }),
@@ -230,6 +237,7 @@ describe('ImagesTab', () => {
     // paint-first default has tests of its own below.
     params['images-edited'] = 'pane';
     acceptGenerated.mockReset();
+    rateGenerated.mockReset();
     saveEdited.mockReset();
     deleteImage.mockReset();
     delete params.learning;
@@ -599,6 +607,49 @@ describe('ImagesTab', () => {
     fireEvent.click(screen.getByRole('button', {name: 'generate off'}));
     expect(screen.getByText('toolbar')).toBeTruthy();
     expect(screen.getByText('canvas')).toBeTruthy();
+  });
+
+  it('keeps the tools open when the picture under them is rated', async () => {
+    delete params['images-edited'];
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      sourceUrl: 'one.png',
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    acceptGenerated.mockImplementation(async (_target, result) => {
+      propsByKey.k1 = {...propsByKey.k1, generation: result.generation};
+      return 'k1';
+    });
+    // The verdict goes onto the record alone, as the writer does it.
+    rateGenerated.mockImplementation((key: string, verdict: string) => {
+      const generation = {...(propsByKey[key].generation as object), verdict};
+      propsByKey[key] = {...propsByKey[key], generation};
+      return generation;
+    });
+    const {rerender} = renderTab({editingOffered: true});
+    await screen.findByText('canvas');
+    const again = () =>
+      rerender(
+        <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
+      );
+    // A picture lands over the drawing: the tools open again on it.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^land sprite/}));
+    });
+    again();
+    const canvas = await screen.findByText('canvas');
+    // Rating it rewrites its record, not its pixels; the tab sees the
+    // record on its next render.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^rate sprite/}));
+    });
+    expect(acceptGenerated).toHaveBeenCalledTimes(1);
+    expect(rateGenerated).toHaveBeenCalledWith('k1', 'up');
+    again();
+    // The same canvas: the tools were never put away.
+    expect(screen.getByText('canvas')).toBe(canvas);
+    expect(screen.getByText('toolbar')).toBeTruthy();
   });
 
   it('paints every image in place in free play, the words beside the tools', async () => {

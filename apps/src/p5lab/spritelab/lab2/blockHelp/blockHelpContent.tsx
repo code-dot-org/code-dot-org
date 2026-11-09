@@ -1,6 +1,5 @@
 import animBurst from '@cdo/static/spritelab_lab2/block-help/burst.gif';
 import animGoToExternalScene from '@cdo/static/spritelab_lab2/block-help/go-to-external-scene.png';
-import animPlayMusic from '@cdo/static/spritelab_lab2/block-help/play-music.png';
 import animPlaySound from '@cdo/static/spritelab_lab2/block-help/play-sound.gif';
 import animSetASpriteProperty from '@cdo/static/spritelab_lab2/block-help/set-a-sprite-property.gif';
 import animSetGravity from '@cdo/static/spritelab_lab2/block-help/set-gravity.gif';
@@ -10,7 +9,6 @@ import animThePlayer from '@cdo/static/spritelab_lab2/block-help/the-player.gif'
 import animWhenClicked from '@cdo/static/spritelab_lab2/block-help/when-clicked.gif';
 
 import {MAX_ZOOM, MIN_ZOOM} from '../camera';
-import {PLATFORM_GRAVITY} from '../platformPhysics';
 
 /**
  * What the new-block catalog says about a block: a `summary` sentence, then
@@ -29,13 +27,16 @@ export interface BlockHelp {
 }
 
 export const BLOCK_HELP: Record<string, BlockHelp> = {
-  spritelab2_setPlatformGravity: {
-    title: 'Set gravity',
+  spritelab2_setPlatformJumpHeight: {
+    title: 'Set jump height',
     animation: {src: animSetGravity, alt: 'The set gravity block in action.'},
-    summary: 'Changes how hard everything falls.',
-    body:
-      `**${PLATFORM_GRAVITY}** is normal; smaller numbers float, and a ` +
-      'negative number flips the world upside down.',
+    summary: 'Changes how many squares the player can jump.',
+    body: 'The number is how high the player jumps in squares.',
+  },
+  spritelab2_setPlatformGravityDirection: {
+    title: 'Set gravity direction',
+    summary: 'Changes which way everything falls.',
+    body: 'Choose **↓** to fall toward the bottom, **↑** to fall toward the top, or **none** to move in four directions.',
   },
   spritelab2_setCameraZoom: {
     title: 'Set zoom',
@@ -80,13 +81,6 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     animation: {src: animPlaySound, alt: 'The play sound block in action.'},
     summary: 'Plays one short sound, once.',
     body: 'Put it under an event, such as a touch or a click.',
-  },
-  spritelab2_playMusic: {
-    title: 'Play music',
-    animation: {src: animPlayMusic, alt: 'Musical notes.'},
-    summary:
-      'Plays one of your Music Lab songs, repeating, while the game plays.',
-    body: 'Put it under "when run" in the scene where the music should start.',
   },
   spritelab2_setWeather: {
     title: 'Set weather',
@@ -150,6 +144,11 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     body:
       '**seconds** counts from when the scene starts; **frames** counts ' +
       'frames instead.',
+  },
+  gamelab_everyInterval: {
+    title: 'Repeat every',
+    summary: 'Runs the blocks below each time this much time passes.',
+    body: 'Pick **frames** to count frames instead of seconds.',
   },
   spritelab2_whenPlayer: {
     title: 'When player',

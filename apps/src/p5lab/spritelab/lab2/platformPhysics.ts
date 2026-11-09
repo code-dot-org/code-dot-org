@@ -20,6 +20,11 @@ export const TERMINAL_FALL_SPEED = 10;
 // strengths behave identically here.
 export const PLATFORM_GRAVITY = 0.75;
 
+// The platform player's jump height, in playfield squares.
+export const MIN_JUMP_HEIGHT = 0;
+export const MAX_JUMP_HEIGHT = 10;
+export const DEFAULT_JUMP_HEIGHT = 3;
+
 // What patrollers feel when the world's gravity is zero and the player is
 // steered about: enough to settle onto blocks, gently.
 export const PATROLLER_WEIGHTLESS_GRAVITY = 0.2;
