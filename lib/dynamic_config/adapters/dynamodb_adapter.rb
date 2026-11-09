@@ -45,15 +45,17 @@ class DynamoDBAdapter
     )
   end
 
+  # @param consistent_read [Boolean] strongly consistent scan, at twice the read cost
   # @returns [Hash]
   # @raise if DynamoDB is unavailable
-  def all
+  def all(consistent_read: false)
     result = {}
     last_evaluated = nil
     loop do
       resp = @client.scan(
         {
           table_name: @table_name,
+          consistent_read: consistent_read,
           exclusive_start_key: last_evaluated
         }
       )
@@ -69,7 +71,7 @@ class DynamoDBAdapter
         result[key] = value
       end
 
-      break if resp.count == 0 || resp.last_evaluated_key.nil?
+      break if resp.last_evaluated_key.nil?
       last_evaluated = resp.last_evaluated_key
     end
 

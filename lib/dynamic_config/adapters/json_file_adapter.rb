@@ -32,8 +32,9 @@ class JSONFileDatastoreAdapter
     nil
   end
 
+  # Reads are always consistent; the keyword exists to match DynamoDBAdapter#all.
   # @returns [Hash]
-  def all
+  def all(consistent_read: false)
     load_from_file
     ret = {}
     @hash.each do |k, v|
