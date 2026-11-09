@@ -51,7 +51,7 @@ describe('QuizConfigurationPanel', () => {
     const {onChange} = renderPanel();
 
     fireEvent.click(screen.getByLabelText('Allow multiple attempts'));
-    fireEvent.change(screen.getByLabelText('Quiz display name'), {
+    fireEvent.change(screen.getByLabelText(/Quiz display name/), {
       target: {value: 'Unit 1 check'},
     });
 
