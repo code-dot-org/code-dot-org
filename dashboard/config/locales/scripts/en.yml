@@ -30552,6 +30552,8 @@ en:
               name: 'Lesson 21: For Loops Day 2'
             lesson-21:
               name: 'Lesson 22: For Loops Day 3'
+            lesson-22:
+              name: 'Lesson 23: Comparing Algorithms'
           lesson_groups: {}
           name: csp-unit2-dev-27-28
           title: Unit 2 - Building Solutions Using Selection and Iteration

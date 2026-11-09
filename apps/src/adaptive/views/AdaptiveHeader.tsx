@@ -10,19 +10,10 @@ import {createPortal} from 'react-dom';
 import {useSelector} from 'react-redux';
 
 import {ADAPTIVE_HEADER_ID} from '@cdo/apps/code-studio/components/header/AdaptiveHeaderPortal';
+import {SAVE_STATUS_ICONS} from '@cdo/apps/code-studio/components/header/saveStatusIcons';
 import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
 
 import styles from './adaptiveHeader.module.scss';
-
-const SAVE_ICONS: Record<
-  ProjectState['projectUpdatedStatus'],
-  {iconName: string; title: string}
-> = {
-  default: {iconName: 'cloud', title: 'Not saved'},
-  saving: {iconName: 'cloud-arrow-up', title: 'Saving'},
-  saved: {iconName: 'cloud-check', title: 'Saved'},
-  error: {iconName: 'cloud-exclamation', title: 'Save failed'},
-};
 
 function useHeaderSlot(): HTMLElement | null {
   const [slot, setSlot] = useState(() =>
@@ -60,7 +51,7 @@ const AdaptiveHeader: React.FunctionComponent<AdaptiveHeaderProps> = ({
   const status = useSelector(
     (state: {project: ProjectState}) => state.project.projectUpdatedStatus
   );
-  const saveIcon = SAVE_ICONS[status];
+  const saveIcon = SAVE_STATUS_ICONS[status];
 
   const bar = (
     <div className={styles.bar} data-theme="Light">

@@ -14,8 +14,13 @@ import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getStore} from '@cdo/apps/redux';
 import {
+  CurrentUserState,
+  SpritelabAskAiRefusal,
+} from '@cdo/apps/templates/CurrentUserState';
+import {
   AiChatClientTypes,
   AiChatModelIds,
+  SpritelabAskAiRefusals,
 } from '@cdo/generated-scripts/sharedConstants';
 
 const ASK_AI_DCDO_KEY = 'spritelab-lab2-ask-ai-enabled';
@@ -61,6 +66,34 @@ ${studentSystemPrompt}`;
 
 export function isAskAiEnabled(): boolean {
   return DCDO.get(ASK_AI_DCDO_KEY, true) !== false;
+}
+
+const REFUSAL_MESSAGES: Record<SpritelabAskAiRefusal, string> = {
+  [SpritelabAskAiRefusals.NOT_IN_PILOT]: "AI blocks aren't available yet.",
+  [SpritelabAskAiRefusals.OFF]: 'The AI is turned off right now.',
+  [SpritelabAskAiRefusals.NO_ACCESS]:
+    "Your teacher hasn't turned on AI for this class.",
+  [SpritelabAskAiRefusals.REGION_BLOCKED]:
+    "AI blocks aren't available in your region yet.",
+};
+
+// The server's reason (User::AiAccessible) for refusing an answer, in words.
+export function askAiRefusal({
+  userType,
+  spritelabAskAiRefusal,
+}: Pick<CurrentUserState, 'userType' | 'spritelabAskAiRefusal'>):
+  | string
+  | null {
+  if (!spritelabAskAiRefusal) {
+    return null;
+  }
+  if (
+    spritelabAskAiRefusal === SpritelabAskAiRefusals.NO_ACCESS &&
+    userType === 'teacher'
+  ) {
+    return 'AI blocks need a verified teacher account.';
+  }
+  return REFUSAL_MESSAGES[spritelabAskAiRefusal];
 }
 
 const SAFETY_CHECK_FAILURES = {

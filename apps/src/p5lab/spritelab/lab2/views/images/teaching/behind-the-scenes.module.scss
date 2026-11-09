@@ -1,6 +1,14 @@
 .dialog {
   width: 640px;
   max-width: 100%;
+
+  // The house layout centers the button row. Here the row has two buttons
+  // and follows a left-aligned frame of words, so it sits at the end edge,
+  // where a dialog's actions are usually found. The row is the panel's
+  // child that holds the buttons.
+  > div:has(> :global(.MuiButton-root)) {
+    align-self: flex-end;
+  }
 }
 
 // The thumbnail beside the intro, then the switch, then the words.

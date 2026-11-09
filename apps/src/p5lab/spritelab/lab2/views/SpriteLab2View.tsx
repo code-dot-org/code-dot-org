@@ -13,16 +13,18 @@ import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {PERMISSIONS, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import HeaderActionButton from '@cdo/apps/lab2/views/components/HeaderActionButton';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
@@ -42,7 +44,10 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  SpritelabAskAiRefusals,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks, ownsTop} from '../addBlocks';
 import {ImageSource, isImageSource} from '../ai/images/imageCache';
@@ -58,17 +63,15 @@ import {
   newBlockTypes,
 } from '../blockCatalog';
 import {ownToolboxTypes} from '../blockLocks';
-import {ASK_AI_BLOCK_TYPE} from '../blockly/blockDefinitions/askAi';
-import {ASK_AI_WITH_CHOICES_BLOCK_TYPE} from '../blockly/blockDefinitions/askAiWithChoices';
 import {
   refreshSceneDropdowns,
   setSceneMenuActiveId,
   withSceneMenuActive,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
-import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockly/blockDefinitions/setSystemPrompt';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
@@ -122,7 +125,6 @@ import spriteLab2Reducer, {
   setScenes,
   Tab,
 } from '../redux/spriteLab2Redux';
-import {sceneLinks} from '../sceneLinks';
 import {
   collectSavedExternalKeys,
   ExternalProject,
@@ -161,14 +163,14 @@ import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
-import Sheet from './components/Sheet';
+import {sceneDropdownButtonId} from './components/SceneDropdown';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
 import ImagesTab from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
-import ScenesGallery from './ScenesGallery';
+import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
 import {useFlyoutDots} from './useFlyoutDots';
@@ -223,12 +225,6 @@ function getImageCacheUrlParam(): string | undefined {
   }
   return value.endsWith('/') ? value : `${value}/`;
 }
-
-const AI_BLOCK_TYPES = [
-  ASK_AI_BLOCK_TYPE,
-  ASK_AI_WITH_CHOICES_BLOCK_TYPE,
-  SET_SYSTEM_PROMPT_BLOCK_TYPE,
-];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_PANE_WIDTH = 280;
@@ -358,7 +354,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // level, say) needs the selection steered onto a tab that exists. A mode
   // with no tabs at all renders no shell, so leave the selection alone.
   useEffect(() => {
-    if (tabs.length && activeTab !== 'Scenes' && !tabs.includes(activeTab)) {
+    if (tabs.length && !tabs.includes(activeTab)) {
       dispatch(setActiveTab(tabs.includes('Code') ? 'Code' : tabs[0]));
     }
   }, [tabs, activeTab, dispatch]);
@@ -483,16 +479,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => heldBackBlockTypes(catalog, chosenBlocks),
     [catalog, chosenBlocks]
   );
-  const isLevelbuilder = useAppSelector(state =>
-    state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
-  );
-  // Everything the toolbox leaves out.
-  const hiddenBlockTypes = useMemo(
-    () =>
-      isLevelbuilder
-        ? heldBackBlocks
-        : new Set([...heldBackBlocks, ...AI_BLOCK_TYPES]),
-    [heldBackBlocks, isLevelbuilder]
+  const inAiPilot = useAppSelector(
+    state =>
+      state.currentUser.spritelabAskAiRefusal !==
+      SpritelabAskAiRefusals.NOT_IN_PILOT
   );
   const [showBlockCatalog, setShowBlockCatalog] = useState(false);
   // Dismissing the catalog, not opening it, is what counts as seen: an
@@ -638,7 +628,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       );
     }
   }, [activeTab, enabledTabs, dispatch]);
-  const sceneToolbox = levelProperties.toolboxDefinition;
+  const authoredToolbox = levelProperties.toolboxDefinition;
+  const sceneToolbox = useMemo(
+    () =>
+      authoredToolbox && !inAiPilot
+        ? withoutAiBlocks(authoredToolbox)
+        : authoredToolbox,
+    [authoredToolbox, inAiPilot]
+  );
   // Blockly fixes a workspace's toolbox kind at injection, so reaching a
   // toolbox of the other kind takes a new workspace. Same-kind changes swap
   // in place instead, below.
@@ -1248,7 +1245,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   } = useBlocklyWorkspace({
     enabled: animationsSeeded,
     toolboxDefinition: injectedToolbox,
-    hiddenBlockTypes,
+    hiddenBlockTypes: heldBackBlocks,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
   });
@@ -1613,7 +1610,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [
     animationsSeeded,
     sceneToolbox,
-    hiddenBlockTypes,
+    heldBackBlocks,
     workspaceVersion,
     refreshToolbox,
   ]);
@@ -1639,8 +1636,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const {playMusic} = useSceneMusic(activeTab === 'Play', musicProjects);
 
-  // A sheet over the editors and the stage: All scenes.
-  const stageCovered = activeTab === 'Scenes';
+  // All scenes: a dialog over the editors and the stage, opening on a new
+  // scene's name when asked for one.
+  const [scenesDialog, setScenesDialog] = useState<{
+    creating: boolean;
+  } | null>(null);
+  const stageCovered = !!scenesDialog;
   // Hidden content stays in the tab order and the accessibility tree:
   // inert while hidden, via refs (React 18's JSX has no inert attribute).
   // worldMounted: the world's wrapper can first render after the last change.
@@ -1658,6 +1659,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       worldWrapperRef.current.inert = activeTab !== 'World';
     }
   }, [stageCovered, activeTab, worldMounted]);
+  // Closing All scenes can leave focus nowhere: its opener in the scene
+  // menu unmounted with the menu, or the bar's button let go of focus on
+  // its click. The scene menu's trigger takes it. This runs after the
+  // inert effect above on purpose: until that effect releases the stage,
+  // the trigger refuses focus.
+  const scenesWereOpenRef = useRef(false);
+  useEffect(() => {
+    if (
+      scenesWereOpenRef.current &&
+      !scenesDialog &&
+      document.activeElement === document.body
+    ) {
+      document.getElementById(sceneDropdownButtonId())?.focus();
+    }
+    scenesWereOpenRef.current = !!scenesDialog;
+  }, [scenesDialog]);
 
   const fade = useTabFade(activeTab, {
     Code: codeWrapperRef,
@@ -1815,7 +1832,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     } else {
       runProgram();
     }
-  }, [engineReady, runProgram]);
+    // inAiPilot reruns this once the user loads; earlier runs refuse AI blocks.
+  }, [engineReady, runProgram, inAiPilot]);
   // The premade world is painted once the engine is ready and the images it
   // names exist. A level that opened on Play restarts the game with it.
   useEffect(() => {
@@ -2161,8 +2179,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [handOffControlFocus]
   );
 
-  const links = useMemo(() => sceneLinks(scenes), [scenes]);
-
   // Entering Play from the start scene (null) or the previewed scene; the
   // first scene IS the beginning, so it plays as the start.
   const playFrom = useCallback(
@@ -2265,12 +2281,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // mode is unconstrained.
   const scenesEditable =
     !levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode);
-  // The stage: the preview beside Code and World and beside All scenes,
-  // centered to play; Images takes the whole width.
+  // The stage: the preview beside Code and World, centered to play; Images
+  // takes the whole width.
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play'
       ? 'play'
-      : activeTab === 'Code' || activeTab === 'World' || activeTab === 'Scenes'
+      : activeTab === 'Code' || activeTab === 'World'
       ? 'preview'
       : 'hidden';
 
@@ -2320,14 +2336,26 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     lockedReason: LOCKED_REASON,
     allowCreate: scenesEditable || !!pinnedSceneId,
     onSelectScene: sceneEditing.selectScene,
-    onCreateScene: sceneEditing.createScene,
-    onManageScenes: sceneEditing.openGallery,
+    onNewScene: () => setScenesDialog({creating: true}),
+    onManageScenes: () => setScenesDialog({creating: false}),
   };
   const catalogOffered = catalog.length > 0 && isEditable;
   const openBlockCatalog = () => setShowBlockCatalog(true);
 
   return (
     <div className={moduleStyles.labRow}>
+      {scenesDialog && (
+        <ScenesDialog
+          scenes={sceneMetadata}
+          editable={scenesEditable}
+          creating={scenesDialog.creating}
+          onCreateScene={sceneEditing.createScene}
+          onRenameScene={sceneEditing.renameScene}
+          onDeleteScene={sceneEditing.deleteScene}
+          onMakeStartScene={sceneEditing.makeStartScene}
+          onClose={() => setScenesDialog(null)}
+        />
+      )}
       {showStartOver && startOverOffered && (
         <StartOverDialog
           onConfirm={() => {
@@ -2376,6 +2404,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           onAdd={addCatalogBlock}
           onClose={closeBlockCatalog}
         />
+      )}
+      {/* The last level's Finish, in the page header as well. */}
+      {levelProperties.useSecondaryFinishButton && (
+        <HeaderActionButton
+          tone="success"
+          onClick={() => dispatch(continueOrFinishLesson())}
+        >
+          I'm finished
+        </HeaderActionButton>
       )}
       <ResourcePanel
         levelProperties={panelLevelProperties}
@@ -2605,26 +2642,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             onPreviewClick={handlePreviewClick}
           />
         </div>
-
-        {activeTab === 'Scenes' && (
-          <Sheet
-            title="All scenes"
-            onDone={() => sceneEditing.selectScene(activeScene.id)}
-          >
-            <ScenesGallery
-              scenes={sceneMetadata}
-              activeSceneId={activeSceneId}
-              editable={scenesEditable}
-              links={links}
-              onPlayGame={handlePlayGame}
-              onOpenScene={sceneEditing.selectScene}
-              onCreateScene={sceneEditing.createScene}
-              onRenameScene={sceneEditing.renameScene}
-              onDeleteScene={sceneEditing.deleteScene}
-              onMakeStartScene={sceneEditing.makeStartScene}
-            />
-          </Sheet>
-        )}
       </LabShell>
     </div>
   );
