@@ -1,17 +1,13 @@
 import {RefObject, useLayoutEffect} from 'react';
 
-/**
- * Makes a scrolling element a tab stop while its content overflows, so the
- * keyboard can scroll it; Safari gives such an element no tab stop of its own.
- * Out of overflow it keeps tabindex="-1": dropping the attribute would blur it
- * if it held focus. A layout effect, so the tab stop exists before the dialog
- * picks its first focus.
- */
+// Safari gives a scrolling element with no focusable child no tab stop, so the keyboard cannot scroll it.
 const useTabStopWhileOverflowing = (ref: RefObject<HTMLElement>) => {
+  // A layout effect, so the tab stop exists before the dialog picks its first focus.
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
     const sync = () => {
+      // -1, not no attribute, when it fits: removing tabindex would blur it if it held focus.
       el.tabIndex = el.scrollHeight - el.clientHeight > 1 ? 0 : -1;
     };
     sync();
