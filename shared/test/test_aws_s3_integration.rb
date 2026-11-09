@@ -137,28 +137,44 @@ class AwsS3IntegrationTest < Minitest::Test
   end
 
   def test_s3_timeout
-    client = AWS::S3.connect_v2!
-    # Use default timeout settings by default.
-    assert_equal 60, client.config.http_read_timeout
+    client = AWS::S3.connect_v2! # Each subsequent call to `AWS::S3.connect_v2!`in this test updates `client`.
+    # AWS SDK defaults.
+    assert_equal 15, client.config.http_open_timeout, 'Default S3 client http open timeout should be 15.'
+    assert_equal 60, client.config.http_read_timeout, 'Default S3 client http read timeout should be 60.'
+    assert_equal 5, client.config.http_idle_timeout, 'Default S3 client http connection pool timeout should be 5.'
+    assert_nil client.config.notify_timeout, 'When client is initialized, custom setting notify_timeout should be nil.'
 
+    # Code not executing inside a webserver still uses AWS defaults even when settings are modified.
     DCDO.set('s3_timeout', 1)
-    # Slight limitation: change isn't applied until #connect_v2! is called.
-    assert_equal 60, client.config.http_read_timeout
-    assert_equal 1, AWS::S3.connect_v2!.config.http_read_timeout
-    # Existing client references are updated.
-    assert_equal 1, client.config.http_read_timeout
+    DCDO.set('s3_slow_request', 30)
+    DCDO.set('s3_connection_pool_timeout', 10)
+    AWS::S3.connect_v2!
+    assert_equal 15, client.config.http_open_timeout, 'Outside the web application server, S3 client http open timeout should be 15.'
+    assert_equal 60, client.config.http_read_timeout, 'Outside the web application server, S3 client http read timeout should be 60.'
+    assert_equal 5, client.config.http_idle_timeout, 'Outside the web application server, S3 client http connection pool timeout should be 5.'
+    assert_nil client.config.notify_timeout, 'Outside the web application server, custom S3 client setting notify_timeout should be nil.'
+
+    # We only apply custom S3 client timeout settings within the web server.
+    CDO.stubs(:running_web_application?).returns(true)
+    DCDO.set('s3_timeout', 1)
+    DCDO.set('s3_slow_request', 30)
+    DCDO.set('s3_connection_pool_timeout', 10)
+    AWS::S3.connect_v2!
+    assert_equal 1, client.config.http_open_timeout, 'Inside the web application server, S3 client http open timeout should be 1.'
+    assert_equal 1, client.config.http_read_timeout, 'Inside the web application server, S3 client http read timeout should be 1.'
+    assert_equal 10, client.config.http_idle_timeout, 'Inside the web application server, S3 client http connection pool timeout should be 10.'
+    assert_equal 30, client.config.notify_timeout, 'Custom slow response threshold should be 30.'
 
     DCDO.set('s3_timeout', nil)
     AWS::S3.connect_v2!
-    # Slight limitation: doesn't revert to default setting (60) if variable is set to nil.
-    assert_equal 15, client.config.http_read_timeout
+    assert_equal 15, client.config.http_read_timeout, 'Setting DCDO s3_timeout to nil does not revert read timeout to default.'
 
-    assert_equal 15, client.config.notify_timeout
-    DCDO.set('s3_slow_request', 30)
-    AWS::S3.connect_v2!
-    assert_equal 30, client.config.notify_timeout
-    assert_equal 15, client.config.http_read_timeout
+    # Reset.
+    DCDO.set('s3_timeout', nil)
     DCDO.set('s3_slow_request', nil)
+    DCDO.set('s3_connection_pool_timeout', nil)
+    AWS::S3.connect_v2!
+    CDO.stubs(:running_web_application?).returns(false)
   end
 
   # Ensure find objects with ext correctly finds and filters responses
