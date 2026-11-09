@@ -10,3 +10,116 @@
     Properties:
       LogGroupName: !Ref BrowserEventLogs
       LogStreamName: "<%=rack_env?(:adhoc) ? stack_name : environment%>"
+
+
+<% if rack_env?(:production) -%>
+  # SNS Topics for SES notifications
+  #
+  # Because we share a single SES configuration across all environments, we only
+  # need to deploy this logging pipeline to the production environment. When we
+  # establish more environment separation, if we split up SES, then this will
+  # need to be deployed to all environments.
+
+  DeliveriesTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub '${AWS::StackName}-ses-deliveries'
+      DisplayName: 'SES Delivery Notifications'
+
+  BouncesTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub '${AWS::StackName}-ses-bounces'
+      DisplayName: 'SES Bounce Notifications'
+
+  ComplaintsTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub '${AWS::StackName}-ses-complaints'
+      DisplayName: 'SES Complaint Notifications'
+
+  SesNotificationsLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: S3WriteAccess
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:PutObject
+                  - s3:PutObjectAcl
+                Resource: !Sub 'arn:aws:s3:::${LogsBucketName}/${AWS::StackName}-ses-notifications/*'
+
+  # Lambda function to process SES notifications and store to S3
+  SesNotificationsProcessorLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Sub '${AWS::StackName}-ses-notifications-processor'
+      Runtime: nodejs20.x
+      Handler: index.handler
+      Role: !GetAtt SesNotificationsLambdaRole.Arn
+      Environment:
+        Variables:
+          S3_BUCKET: !Ref LogsBucketName
+          S3_PREFIX: !Sub ${AWS::StackName}-ses-notifications
+      Code: <%= lambda_zip 'lambdas/ses-notifications/index.js' %>
+
+  # SNS Subscriptions to Lambda
+  DeliveriesTopicSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      TopicArn: !Ref DeliveriesTopic
+      Protocol: lambda
+      Endpoint: !GetAtt SesNotificationsProcessorLambda.Arn
+
+  BouncesTopicSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      TopicArn: !Ref BouncesTopic
+      Protocol: lambda
+      Endpoint: !GetAtt SesNotificationsProcessorLambda.Arn
+
+  ComplaintsTopicSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      TopicArn: !Ref ComplaintsTopic
+      Protocol: lambda
+      Endpoint: !GetAtt SesNotificationsProcessorLambda.Arn
+
+  # Lambda permissions for SNS to invoke the function
+  DeliveriesLambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref SesNotificationsProcessorLambda
+      Action: lambda:InvokeFunction
+      Principal: sns.amazonaws.com
+      SourceArn: !Ref DeliveriesTopic
+
+  BouncesLambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref SesNotificationsProcessorLambda
+      Action: lambda:InvokeFunction
+      Principal: sns.amazonaws.com
+      SourceArn: !Ref BouncesTopic
+
+  ComplaintsLambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref SesNotificationsProcessorLambda
+      Action: lambda:InvokeFunction
+      Principal: sns.amazonaws.com
+      SourceArn: !Ref ComplaintsTopic
+
+<% end -%>
