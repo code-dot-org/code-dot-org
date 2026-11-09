@@ -72,17 +72,3 @@ links, which never get `aria-pressed`.
 | `startIcon`, `startIconName`      | `startIcon`                                                                  |
 | `hasStartContent`, `startContent` | `startContent`                                                               |
 | `endIcon`, `endIconName`          | `endIcon`                                                                    |
-
-## Line heights
-
-Title and description leading sit one step below the CADS Body text styles,
-with 4px between them, so wrapped text reads as one block. Padding absorbs
-the title's half of the difference, so a card without a description keeps
-the Figma height. The Figma component was updated to match.
-
-## Known difference from Figma
-
-Chrome rounds font ascent and descent to whole pixels; Figma does not. Where the
-rounded sum is odd (Geist at 16px, Font Awesome at 18px and 20px), Chrome draws
-the glyphs 1px higher than Figma inside the same line box. Boxes, padding and
-colors are exact.

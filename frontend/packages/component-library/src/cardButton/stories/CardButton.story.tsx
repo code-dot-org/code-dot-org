@@ -1,6 +1,8 @@
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
 
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
+
 import CardButton, {CardButtonProps} from '../CardButton';
 
 // `containerWidth` is story-only: it sizes a wrapper so a `fullWidth` card can
@@ -52,7 +54,7 @@ Default.args = {
 export const WithDescription = Template.bind({});
 WithDescription.args = {
   ...Default.args,
-  title: 'AIF Test',
+  title: 'AI Foundations',
   description: 'Lesson 1: Prompting AI',
   startIcon: {iconName: 'fire'},
   fullWidth: true,
@@ -71,7 +73,7 @@ Vertical.args = {
 export const WithStartContent = Template.bind({});
 WithStartContent.args = {
   ...Default.args,
-  title: 'Test 4-8',
+  title: 'Web Apps',
   description: 'Lesson 1: Welcome to Web Apps',
   fullWidth: true,
   containerWidth: 451,
@@ -89,7 +91,7 @@ WithStartContent.args = {
         fontSize: 24,
       }}
     >
-      <i className="fa-solid fa-ghost" aria-hidden="true" />
+      <FontAwesomeV6Icon iconName="ghost" aria-hidden />
     </span>
   ),
 };

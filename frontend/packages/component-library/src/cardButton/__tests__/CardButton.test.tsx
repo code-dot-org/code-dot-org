@@ -15,8 +15,8 @@ describe('Design System - CardButton', () => {
   });
 
   it('omits an empty description', () => {
-    const {container} = render(<CardButton title="Practice" description="" />);
-    expect(container.querySelectorAll('button > span > span')).toHaveLength(1);
+    render(<CardButton title="Practice" description="" />);
+    expect(screen.getByRole('button')).toHaveTextContent(/^Practice$/);
   });
 
   it('renders start and end icons as solid by default', () => {

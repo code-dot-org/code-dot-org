@@ -10,17 +10,7 @@ export type CardButtonLayout = 'horizontal' | 'vertical';
 export type CardButtonSize = 'medium' | 'small';
 
 export interface CardButtonProps
-  extends Omit<
-    ButtonBaseProps,
-    | 'children'
-    | 'title'
-    | 'centerRipple'
-    | 'disableRipple'
-    | 'disableTouchRipple'
-    | 'focusRipple'
-    | 'TouchRippleProps'
-    | 'touchRippleRef'
-  > {
+  extends Omit<ButtonBaseProps, 'children' | 'title' | 'disableRipple'> {
   /** `horizontal` for list rows, `vertical` for side-by-side choice tiles. */
   layout?: CardButtonLayout;
   size?: CardButtonSize;
@@ -92,12 +82,6 @@ const CardButton = forwardRef<
     ref,
   ) => {
     const isLink = rest.href !== undefined;
-    const hasStartContent =
-      startContent !== undefined &&
-      startContent !== null &&
-      startContent !== false;
-    const hasDescription =
-      description !== undefined && description !== null && description !== '';
 
     return (
       <ButtonBase
@@ -114,14 +98,14 @@ const CardButton = forwardRef<
           className,
         )}
       >
-        {hasStartContent ? (
+        {startContent ? (
           <span className={styles.startContent}>{startContent}</span>
         ) : (
           startIcon && renderIcon(startIcon, styles.startIcon)
         )}
         <span className={styles.content}>
           <span className={styles.title}>{title}</span>
-          {hasDescription && (
+          {description && (
             <span className={styles.description}>{description}</span>
           )}
         </span>
