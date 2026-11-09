@@ -276,7 +276,15 @@ describe('StepPlayer', () => {
         {activeTab: 'project', onTabChange},
         {
           pathway: {
-            checkpoints: [{id: 'cp', steps: [], skillIds: ['html']}],
+            checkpoints: [
+              {
+                id: 'cp',
+                title: 'CP',
+                description: '',
+                steps: [],
+                skillIds: ['html'],
+              },
+            ],
             skills: {html: {id: 'html', title: 'HTML', description: ''}},
           },
           statusMap: {cp: 'complete'},
