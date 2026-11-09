@@ -22,8 +22,9 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
    *  to the element in custom content which will be representing the dialog description. (Used by screen readers
    *  for dialog's `aria-describedBy` attribute) */
   customBottomContent?: ReactNode;
-  /** Rendered at the start of the action row, opposite the buttons: a text
-   *  button, a link, a checkbox. */
+  /** Rendered at the start of the action row, opposite the buttons: any
+   *  buttons or components. Its first control comes first in tab order and
+   *  takes focus when the modal opens, so keep destructive actions out of it. */
   startActions?: ReactNode;
   /** Modal primary button props */
   primaryButtonProps: MuiButtonProps;

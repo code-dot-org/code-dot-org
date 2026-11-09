@@ -12,7 +12,6 @@
   border: 1px solid var(--borders-neutral-primary);
   border-radius: var(--shape-xl);
   box-shadow: var(--shadow-lg);
-  // Scrolls only for consumers that turn off the content section's own scroll.
   overflow: auto;
 
   hr {
@@ -24,7 +23,7 @@
     background: var(--borders-neutral-primary);
   }
 
-  // The dialog shell's close x, its only direct button: level with the title.
+  // The dialog shell's close x, its only direct button: its 25px box centered on the title's 36px line.
   > button {
     inset-block-start: 23.5px;
     inset-inline-end: 20px;
@@ -39,7 +38,8 @@
 
 .modalTitleSection {
   flex-shrink: 0;
-  padding: 18px 20px 18px 24px;
+  padding-block: 18px;
+  padding-inline: 24px 20px;
 
   // Room for the close x and a 10px gap before it.
   &.closable {
@@ -113,15 +113,18 @@
 .modalActionsSection {
   display: flex;
   flex-shrink: 0;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  padding: 18px 20px 18px 24px;
+  padding-block: 18px;
+  padding-inline: 24px 20px;
 }
 
 .modalStartActions,
 .modalEndActions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
 }
@@ -133,5 +136,6 @@
 
 .modalBottomSection {
   flex-shrink: 0;
-  padding: 0 20px 18px 24px;
+  padding-block-end: 18px;
+  padding-inline: 24px 20px;
 }

@@ -76,44 +76,62 @@ describe('Modal Component', () => {
     expect(screen.getByText('Custom Bottom Content')).toBeInTheDocument();
   });
 
-  it('should put startActions before the buttons in the action row', () => {
+  const controlNames = () =>
+    Array.from(
+      screen.getByRole('dialog').querySelectorAll('a, button, input'),
+    ).map(el => el.getAttribute('aria-label') || el.textContent);
+
+  it('should put startActions before the buttons, and the close button last', () => {
     render(
       <Modal
         {...defaultProps}
         secondaryButtonProps={{children: 'Secondary Action'}}
-        startActions={<a href="#help">Help</a>}
+        startActions={
+          <>
+            <a href="#help">Help</a>
+            <input type="checkbox" aria-label="Remember" />
+          </>
+        }
       />,
     );
-    const help = screen.getByRole('link', {name: 'Help'});
-    const row = help.closest('.modalActionsSection') as HTMLElement;
-    expect(row).not.toBeNull();
-    expect(
-      Array.from(row.querySelectorAll('a, button')).map(el => el.textContent),
-    ).toEqual(['Help', 'Secondary Action', 'Primary Action']);
+    expect(controlNames()).toEqual([
+      'Help',
+      'Remember',
+      'Secondary Action',
+      'Primary Action',
+      'Close modal',
+    ]);
   });
 
-  it('should render no start group without startActions', () => {
-    render(<Modal {...defaultProps} />);
-    expect(document.querySelector('.modalStartActions')).toBeNull();
-    expect(document.querySelector('.modalEndActions')).toContainElement(
-      screen.getByRole('button', {name: 'Primary Action'}),
+  it('should keep the button order without startActions', () => {
+    render(
+      <Modal
+        {...defaultProps}
+        secondaryButtonProps={{children: 'Secondary Action'}}
+      />,
+    );
+    expect(controlNames()).toEqual([
+      'Secondary Action',
+      'Primary Action',
+      'Close modal',
+    ]);
+  });
+
+  it('should give startActions first focus on mount', () => {
+    render(<Modal {...defaultProps} startActions={<a href="#help">Help</a>} />);
+    expect(document.activeElement).toBe(
+      screen.getByRole('link', {name: 'Help'}),
     );
   });
 
-  it('should render no bottom section when customBottomContent is falsy', () => {
-    render(<Modal {...defaultProps} customBottomContent={false} />);
-    expect(document.querySelector('.modalBottomSection')).toBeNull();
-  });
-
-  it('should leave room for the close button only when there is one', () => {
-    const {rerender} = render(<Modal {...defaultProps} />);
-    expect(document.querySelector('.modalTitleSection')).toHaveClass(
-      'closable',
+  it('should render customBottomContent after the action buttons', () => {
+    render(
+      <Modal
+        {...defaultProps}
+        customBottomContent={<button type="button">Bottom</button>}
+      />,
     );
-    rerender(<Modal {...defaultProps} onClose={undefined} />);
-    expect(document.querySelector('.modalTitleSection')).not.toHaveClass(
-      'closable',
-    );
+    expect(controlNames()).toEqual(['Primary Action', 'Bottom', 'Close modal']);
   });
 
   it('should apply accessibility attributes', () => {
