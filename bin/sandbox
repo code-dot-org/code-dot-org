@@ -1,0 +1,174 @@
+#!/bin/bash
+# bin/sandbox: multi-instance devcontainer orchestration.
+#
+# Thin wrapper around `devcontainer` CLI for managing N parallel
+# devcontainer instances. Each instance gets its own workspace folder
+# (a git worktree off the shared clone volume) and its own compose project.
+#
+# Single-instance use doesn't need this — just use VS Code "Reopen in
+# Container" or `devcontainer up` directly.
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+SANDBOX_DIR="${HOME}/.cdo-sandbox"
+CLONE_VOLUME="${CDO_REPO_VOLUME:-cdo-repo}"
+
+die() { echo "sandbox: error: $*" >&2; exit 1; }
+info() { echo "sandbox: $*"; }
+
+require_cmd() {
+  command -v "$1" >/dev/null 2>&1 || die "$1 required. $2"
+}
+
+# Ensure the shared clone volume exists
+ensure_clone() {
+  "${REPO_ROOT}/.devcontainer/scripts/init-repo-volume.sh"
+}
+
+# Map persona to devcontainer config directory
+config_dir() {
+  local persona="${1:-rails}"
+  local dir="${REPO_ROOT}/.devcontainer/${persona}"
+  [ -d "$dir" ] && echo "$dir" || die "unknown persona: $persona (expected: rails, frontend, fullstack)"
+}
+
+cmd_new() {
+  local name="" persona="rails"
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --rails)     persona="rails"; shift ;;
+      --frontend)  persona="frontend"; shift ;;
+      --apps|--fullstack) persona="fullstack"; shift ;;
+      -*)          die "unknown flag: $1" ;;
+      *)           name="$1"; shift ;;
+    esac
+  done
+  [ -z "$name" ] && die "usage: sandbox new <name> [--rails|--frontend|--fullstack]"
+
+  require_cmd devcontainer "Install: npm install -g @devcontainers/cli"
+  require_cmd docker "Install: https://docs.docker.com/engine/install/"
+  require_cmd git-lfs "Install: https://git-lfs.com"
+
+  local sdir="${SANDBOX_DIR}/${name}"
+  [ -d "$sdir" ] && die "sandbox '$name' already exists"
+  mkdir -p "$sdir"
+
+  ensure_clone
+
+  # Create a worktree for this sandbox
+  local wt_path="${sdir}/workspace"
+  local branch
+  branch="$(git -C "$REPO_ROOT" branch --show-current 2>/dev/null || echo HEAD)"
+
+  info "creating worktree for '${name}' on '${branch}'..."
+  docker run --rm -v "$CLONE_VOLUME":/repo alpine/git:latest sh -c \
+    "cd /repo && git worktree add '${wt_path}' '${branch}' 2>&1 | tail -1" || true
+
+  # Write metadata
+  echo "$persona" > "$sdir/persona"
+  echo "$branch" > "$sdir/branch"
+
+  local cfgdir
+  cfgdir="$(config_dir "$persona")"
+
+  info "starting devcontainer (${persona})..."
+  devcontainer up \
+    --workspace-folder "$wt_path" \
+    --config "${cfgdir}/devcontainer.json" \
+    2>&1 | tail -5
+
+  info "sandbox '${name}' ready"
+  info "  attach: sandbox exec ${name} bash"
+  info "  stop:   sandbox rm ${name}"
+}
+
+cmd_exec() {
+  local name="${1:-}"
+  [ -z "$name" ] && die "usage: sandbox exec <name> [cmd...]"
+  shift
+
+  local sdir="${SANDBOX_DIR}/${name}"
+  [ -d "$sdir" ] || die "sandbox '$name' not found"
+
+  local persona
+  persona="$(cat "$sdir/persona")"
+  local cfgdir
+  cfgdir="$(config_dir "$persona")"
+
+  devcontainer exec \
+    --workspace-folder "${sdir}/workspace" \
+    --config "${cfgdir}/devcontainer.json" \
+    "${@:-bash}"
+}
+
+cmd_rm() {
+  local name="${1:-}"
+  [ -z "$name" ] && die "usage: sandbox rm <name>"
+
+  local sdir="${SANDBOX_DIR}/${name}"
+  [ -d "$sdir" ] || die "sandbox '$name' not found"
+
+  local persona
+  persona="$(cat "$sdir/persona" 2>/dev/null || echo rails)"
+  local cfgdir
+  cfgdir="$(config_dir "$persona")"
+
+  info "stopping devcontainer '${name}'..."
+  devcontainer stop \
+    --workspace-folder "${sdir}/workspace" \
+    --config "${cfgdir}/devcontainer.json" \
+    2>/dev/null || true
+
+  # Remove worktree
+  docker run --rm -v "$CLONE_VOLUME":/repo alpine/git:latest sh -c \
+    "cd /repo && git worktree remove --force '${sdir}/workspace' 2>/dev/null" 2>/dev/null || true
+
+  rm -rf "$sdir"
+  info "sandbox '${name}' destroyed"
+}
+
+cmd_ls() {
+  if [ ! -d "$SANDBOX_DIR" ] || [ -z "$(ls -A "$SANDBOX_DIR" 2>/dev/null)" ]; then
+    info "no sandboxes"
+    return
+  fi
+
+  printf "%-16s %-12s %-24s\n" "NAME" "PERSONA" "BRANCH"
+  printf "%-16s %-12s %-24s\n" "----" "-------" "------"
+
+  for d in "$SANDBOX_DIR"/*/; do
+    [ -f "$d/persona" ] || continue
+    local name persona branch
+    name="$(basename "$d")"
+    persona="$(cat "$d/persona" 2>/dev/null || echo "?")"
+    branch="$(cat "$d/branch" 2>/dev/null || echo "?")"
+    printf "%-16s %-12s %-24s\n" "$name" "$persona" "${branch:0:24}"
+  done
+}
+
+cmd="${1:-help}"
+shift || true
+
+case "$cmd" in
+  new)     cmd_new "$@" ;;
+  rm)      cmd_rm "$@" ;;
+  ls)      cmd_ls ;;
+  exec)    cmd_exec "$@" ;;
+  help|--help|-h)
+    echo "Usage: bin/sandbox <command> [args]"
+    echo ""
+    echo "Multi-instance devcontainer orchestration."
+    echo "For single-instance use, just open in VS Code or run 'devcontainer up'."
+    echo ""
+    echo "Commands:"
+    echo "  new <name> [--rails|--frontend|--fullstack]  Create a sandbox"
+    echo "  exec <name> [cmd...]                          Run a command"
+    echo "  rm <name>                                     Destroy a sandbox"
+    echo "  ls                                            List sandboxes"
+    ;;
+  *)
+    die "unknown command: $cmd. Run 'bin/sandbox help'."
+    ;;
+esac

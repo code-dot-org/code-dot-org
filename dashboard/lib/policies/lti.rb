@@ -145,19 +145,26 @@ class Policies::Lti
           type: "LtiResourceLinkRequest",
           label: "Launch CodeAI",
           placements: ["link_selection"],
-          icon_uri: ApplicationController.helpers.image_url(Cdo::Brand.logo_filename, host: CDO.studio_url('')),
         },
         {
           type: "LtiResourceLinkRequest",
           label: "Launch CodeAI",
           placements: ["assignment_selection"],
-          icon_uri: ApplicationController.helpers.image_url(Cdo::Brand.logo_filename, host: CDO.studio_url('')),
         }
       ]
     }
   }.freeze
 
   MAX_COURSE_MEMBERSHIP = 1000
+
+  def self.dynamic_registration_config
+    config = DYNAMIC_REGISTRATION_CONFIG.deep_dup
+    icon_uri = ApplicationController.helpers.image_url(Cdo::Brand.logo_filename, host: CDO.studio_url(''))
+    config.dig("https://purl.imsglobal.org/spec/lti-tool-configuration", :messages)&.each do |msg|
+      msg[:icon_uri] = icon_uri
+    end
+    config
+  end
 
   def self.get_account_type(roles)
     roles.each do |role|

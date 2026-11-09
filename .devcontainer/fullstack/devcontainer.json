@@ -1,0 +1,31 @@
+{
+  "name": "code-dot-org (fullstack)",
+  "dockerComposeFile": [
+    "docker-compose.yml",
+    "docker-compose.fullstack.yml"
+  ],
+  "service": "app",
+  "workspaceFolder": "/code-dot-org",
+  "remoteUser": "cdo",
+  "initializeCommand": ".devcontainer/scripts/init-repo-volume.sh",
+  "postStartCommand": "/usr/local/bin/entrypoint.sh true",
+  "forwardPorts": [
+    3000,
+    9000,
+    3036,
+    3306
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "rebornix.Ruby",
+        "Shopify.ruby-lsp",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}

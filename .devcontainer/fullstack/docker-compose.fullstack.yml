@@ -1,0 +1,45 @@
+# Fullstack/apps persona: Rails + apps dev server + db + redis.
+# Curated defaults: start:cheapest, 12GB memory floor, inotify floor.
+# Repo in a Docker volume (full clone).
+
+services:
+  app:
+    image: ${CDO_DEV_BASE_IMAGE:-cdo-dev-base:latest}
+    stdin_open: true
+    init: true
+    tty: true
+    working_dir: /code-dot-org
+    volumes:
+      - cdo-repo:/code-dot-org
+      - turbo-cache:/code-dot-org/frontend/.turbo/cache
+    tmpfs:
+      - /code-dot-org/dashboard/tmp:size=512m,uid=1000,gid=1000
+      - /code-dot-org/dashboard/log:size=256m,uid=1000,gid=1000
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    extra_hosts:
+      - "localhost-studio.code.org:127.0.0.1"
+    environment:
+      - RAILS_ENV=development
+      - AWS_EC2_METADATA_DISABLED=true
+      - APPS_DEVTOOL=eval
+      - SKIP_TYPECHECK=1
+      - DEVCONTAINER_BOOTSTRAP_APPS=true
+      - NODE_OPTIONS=--max-old-space-size=8192
+    ports:
+      - "${CDO_RAILS_PORT:-3000}:3000"
+      - "${CDO_APPS_PORT:-9000}:9000"
+      - "${CDO_FRONTEND_PORT:-3036}:3036"
+    deploy:
+      resources:
+        limits:
+          memory: ${CDO_MEMORY_LIMIT:-12g}
+
+volumes:
+  cdo-repo:
+    name: ${CDO_REPO_VOLUME:-cdo-repo}
+  turbo-cache:
+    name: cdo-turbo-cache

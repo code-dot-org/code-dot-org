@@ -1,0 +1,22 @@
+# Frontend standalone (MSW mocked APIs, no Rails/DB/Redis).
+# For fast package dev: oceans, ailab, markdown, component-library.
+# Storybook, vitest, standalone Vite dev server.
+
+services:
+  app:
+    image: ${CDO_DEV_FRONTEND_IMAGE:-cdo-dev-frontend:latest}
+    working_dir: /code-dot-org/frontend
+    volumes:
+      - cdo-repo:/code-dot-org
+      - turbo-cache:/code-dot-org/frontend/.turbo/cache
+    environment:
+      - VITE_API_MODE=msw
+    ports:
+      - "${CDO_FRONTEND_PORT:-3036}:3036"
+      - "${CDO_STORYBOOK_PORT:-6006}:6006"
+
+volumes:
+  cdo-repo:
+    name: ${CDO_REPO_VOLUME:-cdo-repo}
+  turbo-cache:
+    name: cdo-turbo-cache
