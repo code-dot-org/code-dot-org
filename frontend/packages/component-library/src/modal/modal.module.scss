@@ -1,3 +1,5 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
 // Common Modal styles
 // The title, content and action rows span the panel, so their hairlines run edge to edge.
 .modal {
@@ -58,6 +60,12 @@
   min-height: 0;
   overflow: auto;
   padding: 24px;
+
+  // A tab stop only while it scrolls; inset, since the panel clips its sides.
+  &:focus-visible {
+    @include mixins.focus-styles;
+    outline-offset: -2px;
+  }
 
   p {
     margin: 0;

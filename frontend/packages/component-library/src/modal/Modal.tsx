@@ -4,9 +4,11 @@ import {
   Typography as MuiTypography,
 } from '@mui/material';
 import classnames from 'classnames';
-import {HTMLAttributes, ReactNode} from 'react';
+import {HTMLAttributes, ReactNode, useRef} from 'react';
 
 import CustomDialog from '@/dialog/MuiCustomDialog';
+
+import useTabStopWhileOverflowing from './useTabStopWhileOverflowing';
 
 import moduleStyles from './modal.module.scss';
 
@@ -23,8 +25,9 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
    *  for dialog's `aria-describedBy` attribute) */
   customBottomContent?: ReactNode;
   /** Rendered at the start of the action row, opposite the buttons: any
-   *  buttons or components. Its first control comes first in tab order and
-   *  takes focus when the modal opens, so keep destructive actions out of it. */
+   *  buttons or components. Its controls come before the buttons in tab order,
+   *  so when the content has no tab stop its first control takes focus on
+   *  open; keep destructive actions out of it. Scrolling content is a tab stop. */
   startActions?: ReactNode;
   /** Modal primary button props */
   primaryButtonProps: MuiButtonProps;
@@ -80,6 +83,9 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   imagePlacement = 'top',
   ...HTMLAttributes
 }) => {
+  const contentRef = useRef<HTMLDivElement>(null);
+  useTabStopWhileOverflowing(contentRef);
+
   // Deprecation warning for mode prop
   if (mode) {
     console.warn(
@@ -113,6 +119,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       </div>
       <hr />
       <div
+        ref={contentRef}
         className={classnames(
           moduleStyles.modalContentSection,
           moduleStyles[`modalContentSection-${imagePlacement}-imagePlacement`],

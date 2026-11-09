@@ -116,17 +116,6 @@ ModalInShortViewport.parameters = {
     },
   },
   eyes: {browser: {width: 1024, height: 320, name: 'chrome'}},
-  a11y: {
-    config: {
-      rules: [
-        {
-          // The shrunken content section scrolls but takes no focus; legacy Modal shares this defect.
-          id: 'scrollable-region-focusable',
-          enabled: false,
-        },
-      ],
-    },
-  },
 };
 ModalInShortViewport.play = async ({canvasElement}) => {
   await userEvent.click(
@@ -138,6 +127,13 @@ ModalInShortViewport.play = async ({canvasElement}) => {
   expect(window.innerHeight).toBe(320);
   expect(top).toBeGreaterThanOrEqual(0);
   expect(bottom).toBeLessThanOrEqual(window.innerHeight);
+
+  // The scrolling content is a tab stop, and the first.
+  const content = document.getElementById(
+    'dsco-dialog-description',
+  )?.parentElement;
+  expect(content).toHaveAttribute('tabindex', '0');
+  expect(content).toHaveFocus();
 };
 
 export const ModalWithoutSecondaryButton = SingleTemplate.bind({});
