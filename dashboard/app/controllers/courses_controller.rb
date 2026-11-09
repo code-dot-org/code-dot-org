@@ -54,8 +54,9 @@ class CoursesController < ApplicationController
       return
     end
 
-    if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| !s.hidden && s.course_id == @unit_group.id} && TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
-      section_id = params[:section_id] || current_user.sections_instructed.select {|s| !s.hidden && s.course_id == @unit_group.id}.last.id
+    visible_sections_for_course = current_user&.sections_instructed&.select {|s| !s.hidden && s.course_id == @unit_group.id} || []
+    if current_user&.user_type == "teacher" && visible_sections_for_course.any? && TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
+      section_id = params[:section_id] || visible_sections_for_course.last&.id
       if section_id
         redirect_to "/teacher_dashboard/sections/#{section_id}/courses/#{@unit_group.name}"
         return
