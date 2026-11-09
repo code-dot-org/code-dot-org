@@ -116,17 +116,6 @@ ModalInShortViewport.parameters = {
     },
   },
   eyes: {browser: {width: 1024, height: 320, name: 'chrome'}},
-  a11y: {
-    config: {
-      rules: [
-        {
-          // The shrunken content section scrolls but takes no focus; legacy Modal shares this defect.
-          id: 'scrollable-region-focusable',
-          enabled: false,
-        },
-      ],
-    },
-  },
 };
 ModalInShortViewport.play = async ({canvasElement}) => {
   await userEvent.click(
@@ -138,6 +127,13 @@ ModalInShortViewport.play = async ({canvasElement}) => {
   expect(window.innerHeight).toBe(320);
   expect(top).toBeGreaterThanOrEqual(0);
   expect(bottom).toBeLessThanOrEqual(window.innerHeight);
+
+  // The scrolling content is a tab stop, and the first.
+  const content = document.getElementById(
+    'dsco-dialog-description',
+  )?.parentElement;
+  expect(content).toHaveAttribute('tabindex', '0');
+  expect(content).toHaveFocus();
 };
 
 export const ModalWithoutSecondaryButton = SingleTemplate.bind({});
@@ -267,6 +263,27 @@ ModalWithCustomBottomContent.args = {
   },
   secondaryButtonProps: {
     children: 'Secondary Action',
+    onClick: () => console.log('Secondary action clicked'),
+  },
+  onClose: () => null,
+};
+
+export const ModalWithStartActions = SingleTemplate.bind({});
+ModalWithStartActions.args = {
+  title: 'Modal with Start Actions',
+  description:
+    'The action row holds a group at its start, opposite the primary and secondary buttons.',
+  startActions: (
+    <Button variant="text" color="primary" onClick={() => null}>
+      Start over
+    </Button>
+  ),
+  primaryButtonProps: {
+    children: 'Save',
+    onClick: () => console.log('Primary action clicked'),
+  },
+  secondaryButtonProps: {
+    children: 'Cancel',
     onClick: () => console.log('Secondary action clicked'),
   },
   onClose: () => null,
