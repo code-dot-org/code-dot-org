@@ -1,19 +1,30 @@
 import {RefObject, useLayoutEffect} from 'react';
 
-// Safari gives a scrolling element with no focusable child no tab stop, so the keyboard cannot scroll it.
+// Keyboard users scroll an element by focusing it and pressing the arrow keys.
+// Chrome and Firefox let them tab to a scrolling element that has no focusable
+// child; Safari does not, so a long, text-only modal could not be scrolled from
+// the keyboard there. This hook gives the element a tab stop (tabindex="0")
+// while its content overflows, and takes it away once the content fits.
 const useTabStopWhileOverflowing = (ref: RefObject<HTMLElement>) => {
-  // A layout effect, so the tab stop exists before the dialog picks its first focus.
+  // A layout effect, not a plain effect: the dialog picks what to focus on open
+  // in an effect of its own, which runs after this one. Setting the tab stop
+  // first is what lets scrolling content take first focus.
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
     const sync = () => {
-      // -1, not no attribute, when it fits: removing tabindex would blur it if it held focus.
+      // When the content fits, set tabindex="-1" instead of removing the
+      // attribute. Either way the element leaves the tab order, but if it held
+      // focus when the content shrank, removing the attribute would drop focus
+      // to the page body, outside the dialog.
       el.tabIndex = el.scrollHeight - el.clientHeight > 1 ? 0 : -1;
     };
     sync();
     if (typeof ResizeObserver === 'undefined') return;
 
-    // The element's own box stops growing at its cap, so watch the children too.
+    // The element's own height stops growing at the panel's cap, so watching
+    // only the element would miss content that keeps growing past it. Watch
+    // each child too, and re-watch when children are added or removed.
     const resizes = new ResizeObserver(sync);
     const observeAll = () => {
       resizes.disconnect();
