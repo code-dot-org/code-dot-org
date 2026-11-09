@@ -47,9 +47,12 @@ import {
 import {ParticleLayer} from './particles';
 import {
   CONTACT_EPSILON,
+  DEFAULT_JUMP_HEIGHT,
   hasSupportAhead,
   isAtEdge,
   isSupported,
+  MAX_JUMP_HEIGHT,
+  MIN_JUMP_HEIGHT,
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   bodyBox,
@@ -81,6 +84,7 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 // recent, or a jump the tracker saw without one would serve a stale spot.
 const JUMP_EVENT_FRAMES = 4;
 const JUMP_IMPULSE_FRAMES = 8;
+const JUMP_CLEARANCE_SQUARES = 0.3;
 
 // What a say bubble lasts (actionCommands spriteSay), so a title and a say
 // started together go together.
@@ -477,9 +481,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       library.contactEpsilon = CONTACT_EPSILON;
     }
     // Fresh library = fresh run; gravity returns to the default until a
-    // set-gravity block says otherwise. Negative flips the world: players
-    // fall up and land on block undersides and the view's top edge.
+    // set-gravity-direction block says otherwise. Negative flips the world:
+    // players fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
+    this.platformJumpHeight_ = DEFAULT_JUMP_HEIGHT;
     this.notifyControlsChange_();
     this.particles_.reset();
     this.jumpStarts_ = null;
@@ -498,9 +503,20 @@ export default class SpriteLab2Engine extends SpriteLab {
     // A new run starts the player's history over, so the spawn is not heard
     // as a move.
     this.forgetPlayer_();
-    library.commands.setPlatformGravity = value => {
-      this.platformGravity_ = Number(value) || 0;
+    library.commands.setPlatformGravityDirection = direction => {
+      this.platformGravity_ =
+        direction === 'none'
+          ? 0
+          : direction === 'up'
+          ? -PLATFORM_GRAVITY
+          : PLATFORM_GRAVITY;
       this.notifyControlsChange_();
+    };
+    library.commands.setPlatformJumpHeight = value => {
+      this.platformJumpHeight_ = Math.max(
+        MIN_JUMP_HEIGHT,
+        Math.min(MAX_JUMP_HEIGHT, Number(value) || 0)
+      );
     };
     // The view eases toward the target zoom a frame at a time (see the
     // platform draw loop below); a fresh run starts back at 1.
@@ -591,6 +607,22 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
+      // TODO: When we support configurable grid sizes (vs. just 10x10),
+      // consider updating the code everywhere we have
+      // library.defaultSpriteSize and cellSize(DEFAULT_SCENE_GRID_SIZE),
+      // which are both 40.
+      const jumpSpeed =
+        speed === undefined
+          ? Math.sqrt(
+              2 *
+                Math.abs(this.platformGravity_) *
+                (this.platformJumpHeight_ + JUMP_CLEARANCE_SQUARES) *
+                (library.defaultSpriteSize || cellSize(DEFAULT_SCENE_GRID_SIZE))
+            )
+          : Math.abs(Number(speed) || 0);
+      if (jumpSpeed === 0) {
+        return;
+      }
       this.jumpStarts_ = new Map();
       this.jumpImpulseFrame_ = this.p5Wrapper.p5
         ? this.p5Wrapper.p5.frameCount
@@ -600,7 +632,7 @@ export default class SpriteLab2Engine extends SpriteLab {
           x: sprite.position.x,
           y: sprite.position.y,
         });
-        sprite.velocity.y = up * Math.abs(Number(speed) || 0);
+        sprite.velocity.y = up * jumpSpeed;
       });
     };
     // A behavior that wants gravity for its sprite marks it for the platform

@@ -4,6 +4,7 @@ import React from 'react';
 
 import {CheckpointStatus, STATUS_LABELS} from '../../progress/model';
 import {Checkpoint} from '../../types';
+import PathwayIcon from '../components/PathwayIcon';
 
 import {NodePosition} from './layout/types';
 
@@ -71,7 +72,7 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
         aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
         aria-pressed={focusId === checkpoint.id}
       >
-        <FontAwesomeV6Icon iconName={icon ?? STATUS_ICONS[status]} />
+        <PathwayIcon iconName={icon ?? STATUS_ICONS[status]} />
         {icon && status === 'locked' && (
           <span className={styles.badge} aria-hidden="true">
             <FontAwesomeV6Icon iconName="lock" />
@@ -86,7 +87,7 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
         role="img"
         aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
       >
-        <FontAwesomeV6Icon iconName={icon ?? STATUS_ICONS[status]} />
+        <PathwayIcon iconName={icon ?? STATUS_ICONS[status]} />
         {icon && status === 'locked' && (
           <span className={styles.badge} aria-hidden="true">
             <FontAwesomeV6Icon iconName="lock" />
