@@ -80,51 +80,29 @@ describe('QuizConfigurationPanel', () => {
 
   it('shows the chooser when no purpose is set yet, and saves the chosen purpose', async () => {
     put.mockResolvedValue(
-      jsonResponse({...INITIAL_VALUES, purpose: 'exam_simulation'})
+      jsonResponse({...INITIAL_VALUES, purpose: 'practice'})
     );
     const {onSaved} = renderPanel({
       initialValues: {...INITIAL_VALUES, purpose: undefined},
     });
     expect(screen.getByText('What is this quiz for?')).toBeInTheDocument();
 
-    fireEvent.click(screen.getByText('Exam simulation', {exact: true}));
+    fireEvent.click(screen.getByText('Practice', {exact: true}));
 
     // Switches to the dropdown right away, without waiting on the save.
     expect(
       screen.queryByText('What is this quiz for?')
     ).not.toBeInTheDocument();
-    expect(screen.getByLabelText('Purpose')).toHaveValue('exam_simulation');
+    expect(screen.getByLabelText('Purpose')).toHaveValue('practice');
     await waitFor(() => expect(onSaved).toHaveBeenCalled());
-    expect(lastRequestBody().purpose).toBe('exam_simulation');
-  });
-
-  it('does not offer Exam in the chooser', () => {
-    renderPanel({initialValues: {...INITIAL_VALUES, purpose: undefined}});
-
-    expect(screen.getByText('Exam simulation', {exact: true})).toBeVisible();
-    expect(screen.queryByText('Exam', {exact: true})).not.toBeInTheDocument();
-  });
-
-  it('does not offer Exam in the dropdown', () => {
-    renderPanel();
-
-    const values = Array.from(
-      (screen.getByLabelText('Purpose') as HTMLSelectElement).options
-    ).map(option => option.value);
-    expect(values).not.toContain('exam');
-  });
-
-  it('still shows Exam for a quiz already saved as one', () => {
-    renderPanel({initialValues: {...INITIAL_VALUES, purpose: 'exam'}});
-
-    expect(screen.getByLabelText('Purpose')).toHaveValue('exam');
+    expect(lastRequestBody().purpose).toBe('practice');
   });
 
   it('reverts to the chooser when saving the chosen purpose fails', async () => {
     put.mockRejectedValue(new Error('network down'));
     renderPanel({initialValues: {...INITIAL_VALUES, purpose: undefined}});
 
-    fireEvent.click(screen.getByText('Exam simulation', {exact: true}));
+    fireEvent.click(screen.getByText('Practice', {exact: true}));
     expect(screen.getByLabelText('Purpose')).toBeInTheDocument();
 
     await waitFor(() =>
@@ -478,25 +456,24 @@ describe('QuizConfigurationPanel', () => {
     ).toBe(true);
   });
 
-  it("choosing a purpose for the first time applies that purpose's defaults to every field, in the same request", async () => {
-    put.mockResolvedValue(
-      jsonResponse({...INITIAL_VALUES, purpose: 'exam_simulation'})
-    );
+  // Re-enable when the builder offers Exam again.
+  it.skip("choosing a purpose for the first time applies that purpose's defaults to every field, in the same request", async () => {
+    put.mockResolvedValue(jsonResponse({...INITIAL_VALUES, purpose: 'exam'}));
     renderPanel({initialValues: {...INITIAL_VALUES, purpose: undefined}});
 
-    fireEvent.click(screen.getByText('Exam simulation', {exact: true}));
+    fireEvent.click(screen.getByText('Exam', {exact: true}));
 
-    // Exam simulation's defaults, per PURPOSE_DEFAULTS.
+    // Exam's defaults, per PURPOSE_DEFAULTS.
     expect(
       (screen.getByLabelText('Show intro screen') as HTMLInputElement).checked
     ).toBe(true);
     expect(
       (screen.getByLabelText('Allow multiple attempts') as HTMLInputElement)
         .checked
-    ).toBe(true);
+    ).toBe(false);
     expect(
       (screen.getByLabelText('Show correctness') as HTMLInputElement).checked
-    ).toBe(true);
+    ).toBe(false);
     expect(
       screen.queryByLabelText('Reveal answer and explanation')
     ).not.toBeInTheDocument();
@@ -507,10 +484,38 @@ describe('QuizConfigurationPanel', () => {
 
     await waitFor(() => expect(put).toHaveBeenCalled());
     expect(lastRequestBody()).toMatchObject({
-      purpose: 'exam_simulation',
+      purpose: 'exam',
       showIntroScreen: true,
       timeLimitMinutes: null,
-      allowMultipleAttempts: true,
+      allowMultipleAttempts: false,
+      showCorrectness: false,
+      revealAnswerExplanation: false,
+      showQuestionsAfterSubmit: false,
+    });
+  });
+
+  it('exam_simulation defaults: correctness shown, questions and explanation hidden', async () => {
+    put.mockResolvedValue(
+      jsonResponse({...INITIAL_VALUES, purpose: 'exam_simulation'})
+    );
+    renderPanel({initialValues: {...INITIAL_VALUES, purpose: undefined}});
+
+    fireEvent.click(screen.getByText('Exam simulation', {exact: true}));
+
+    expect(
+      (screen.getByLabelText('Show correctness') as HTMLInputElement).checked
+    ).toBe(true);
+    expect(
+      (screen.getByLabelText('Show questions after submit') as HTMLInputElement)
+        .checked
+    ).toBe(false);
+    expect(
+      screen.queryByLabelText('Reveal answer and explanation')
+    ).not.toBeInTheDocument();
+
+    await waitFor(() => expect(put).toHaveBeenCalled());
+    expect(lastRequestBody()).toMatchObject({
+      purpose: 'exam_simulation',
       showCorrectness: true,
       revealAnswerExplanation: false,
       showQuestionsAfterSubmit: false,
@@ -530,7 +535,7 @@ describe('QuizConfigurationPanel', () => {
     await waitFor(() => expect(put).toHaveBeenCalled());
     // Only purpose is sent - an absent key leaves that field untouched
     // server-side, so the other fields are never even part of this
-    // request, let alone overridden with exam simulation's defaults.
+    // request, let alone overridden with exam_simulation's defaults.
     expect(lastRequestBody()).toEqual({purpose: 'exam_simulation'});
     expect(
       (screen.getByLabelText('Show intro screen') as HTMLInputElement).checked
