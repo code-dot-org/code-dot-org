@@ -8,11 +8,10 @@ import React from 'react';
 import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
 import {ButtonTone} from '@cdo/apps/lab2/views/components/buttonTone';
 
+import {instructionsContinueButtonElementId} from './ResourcePanel/constants';
+
 import toneStyles from '@cdo/apps/lab2/views/components/button-tone.module.scss';
 import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructions.module.scss';
-
-/** The button's element id, for anything that points at it. */
-export const CONTINUE_BUTTON_ID = 'instructions-continue-button';
 
 type ContinueButtonProps = Omit<MuiButtonProps, 'onClick'> & {
   tooltipMessage?: string;
@@ -55,7 +54,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
           color="primary"
           size="small"
           type="button"
-          id={CONTINUE_BUTTON_ID}
+          id={instructionsContinueButtonElementId}
           className={classNames(
             className,
             tone === 'success' && toneStyles.success

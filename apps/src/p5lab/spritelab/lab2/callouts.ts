@@ -3,7 +3,7 @@
 // the level's condition holds. The first callout whose condition holds is
 // the one shown.
 
-import {CONTINUE_BUTTON_ID} from '@cdo/apps/lab2/views/components/Instructions/ContinueButton';
+import {instructionsContinueButtonElementId} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 
 import {Tab} from './redux/spriteLab2Redux';
 import {CalloutDirection} from './views/components/Callout';
@@ -75,7 +75,7 @@ export function calloutSelector({target, scene}: CalloutSpot): string {
       }
       return `#${sceneMenuItemId(scene ?? '')}`;
     case 'continue-button':
-      return `#${CONTINUE_BUTTON_ID}`;
+      return `#${instructionsContinueButtonElementId}`;
   }
 }
 
