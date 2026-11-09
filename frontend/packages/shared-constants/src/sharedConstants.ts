@@ -341,6 +341,8 @@ export const AiChatModelIds = {
   "GEMINI_2_5_PRO": "gemini-2.5-pro",
   "GEMINI_2_5_FLASH_IMAGE": "gemini-2.5-flash-image",
   "GEMINI_3_1_FLASH_IMAGE": "gemini-3.1-flash-image",
+  "GPT_5_6_LUNA": "gpt-5.6-luna",
+  "GPT_6_LUNA": "gpt-6-luna",
   "GEMINI_3_1_FLASH_LITE": "gemini-3.1-flash-lite",
   "GEMINI_3_5_FLASH_LITE": "gemini-3.5-flash-lite"
 } as const;
@@ -370,7 +372,9 @@ export const AiChatProviderByModelId = {
   "gemini-3.1-flash-image": "google",
   "gemini-3.1-flash-lite": "google",
   "gemini-3.5-flash-lite": "google",
-  "gpt-4o-mini": "openai"
+  "gpt-4o-mini": "openai",
+  "gpt-5.6-luna": "openai",
+  "gpt-6-luna": "openai"
 } as const;
 
 export const AiChatClientTypes = {
@@ -405,6 +409,13 @@ export const AiChatAccessLevels = {
   "ENABLED": "enabled",
   "DISABLED": "disabled",
   "ESSENTIAL_ONLY": "essential_only"
+} as const;
+
+export const SpritelabAskAiRefusals = {
+  "OFF": "off",
+  "NOT_IN_PILOT": "not_in_pilot",
+  "NO_ACCESS": "no_access",
+  "REGION_BLOCKED": "region_blocked"
 } as const;
 
 export const AiChatToolsDependency = {

@@ -4,9 +4,7 @@ import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 // In display order: the scene-editing tabs (grouped behind the scene
 // picker), then Images, then Play.
 export const ALL_TABS = ['World', 'Code', 'Images', 'Play'] as const;
-// 'Scenes' is the scene gallery: a full-workspace view reached from the
-// scene picker, with no button of its own in the bar.
-export type Tab = (typeof ALL_TABS)[number] | 'Scenes';
+export type Tab = (typeof ALL_TABS)[number];
 
 // Redux mirror of the scenes (full data lives in project sources), so the
 // scene selector and the go-to-scene dropdown can read it reactively.

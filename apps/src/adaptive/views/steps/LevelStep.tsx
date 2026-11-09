@@ -31,6 +31,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {isAdaptiveAiEnabled} from '../../ai/generate';
+import {ADAPTIVE_MODELS} from '../../ai/models';
 import {buildTutorContext} from '../../ai/tutorContext';
 import {workAdapterFor} from '../../ai/validation/adapters';
 import {latestValidation, validationAllowsContinue} from '../../progress/model';
@@ -225,6 +226,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     aichatContext: aiContext,
     chat,
     recordValidation: recordStepValidation,
+    priorAttempts: progress.steps[step.id]?.validationHistory?.length ?? 0,
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share
@@ -253,6 +255,12 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       disableProductTours: true,
       longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
+      // The tutor on the shell's own model, through the gateway; stock otherwise.
+      ...(isAdaptiveAiEnabled() && {
+        aiTutorModelParameters: {
+          selectedModelId: ADAPTIVE_MODELS.STANDARD,
+        },
+      }),
     };
   }, [
     pathway,

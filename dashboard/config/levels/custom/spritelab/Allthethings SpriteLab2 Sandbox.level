@@ -78,12 +78,11 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_setPlatformGravity",
-              "id": "m:]y2sD@Vh7L_@fJpK[O",
-              "fields": {
-                "GRAVITY": 0.75
-              },
-              "enabled": true
+              "type": "spritelab2_setPlatformJumpHeight"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setPlatformGravityDirection"
             },
             {
               "kind": "block",

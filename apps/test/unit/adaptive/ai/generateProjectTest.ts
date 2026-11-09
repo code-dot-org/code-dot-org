@@ -155,6 +155,7 @@ describe('generateProject', () => {
     expect(mockGenerate).toHaveBeenCalledWith(
       expect.objectContaining({
         context,
+        model: 'gemini-3.5-flash-lite',
         trace: {
           name: 'adaptive-project',
           metadata: {
