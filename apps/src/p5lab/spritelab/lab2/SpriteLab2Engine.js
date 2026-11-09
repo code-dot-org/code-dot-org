@@ -72,6 +72,7 @@ import {
   clearPrompt,
   showPrompt,
 } from './redux/spriteLab2Redux';
+import {createRestartGate} from './restartGate';
 import {
   asSoundEffect,
   playPreset,
@@ -113,9 +114,6 @@ const STORY_LANE_SPRITE_SIZE = 210;
 // Coordinates stay 400-based.
 const CANVAS_DENSITY_FACTOR = 2;
 
-// How long a restart quiets further restarts: long enough to see the scene
-// run again before another collision can end it.
-const RESTART_QUIET_MS = 1000;
 // The inputEvents type a when-player hat registers.
 const PLAYER_ACTION_EVENT = 'playerAction';
 // How much a platform scene dims its background, so the blocks and the
@@ -203,8 +201,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Which on-screen controls fit the running scene: fires on every run
     // and on each set-gravity block, with {platformer, gravity}.
     this.onControlsChange = null;
-    // When the last restart fired, for the quiet window above.
-    this.lastRestartAt_ = 0;
+    // When a "restart scene" block takes effect (see restartGate.ts), by
+    // frames into the current run.
+    this.restartGate_ = createRestartGate();
+    this.runStartFrame_ = 0;
     // null while no audio is listening.
     this.playerObserver_ = null;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
@@ -512,9 +512,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     // platform draw loop below); a fresh run starts back at 1.
     this.cameraZoom_ = 1;
     this.cameraZoomTarget_ = 1;
-    // Not reset per run: a restart re-runs the program, and zeroing this here
-    // would let the next frame restart again immediately.
-    this.lastRestartAt_ = this.lastRestartAt_ || 0;
     library.commands.setCameraZoom = value => {
       this.cameraZoomTarget_ = clampZoom(Number(value));
     };
@@ -527,6 +524,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     const drawLoop = library.commands.executeDrawLoopAndCallbacks;
     library.commands.executeDrawLoopAndCallbacks = function () {
       drawLoop.apply(this, arguments);
+      if (engine.restartGate_.due(engine.runFrame_())) {
+        engine.triggerSceneJump_(engine.onRestartScene);
+      }
       engine.drawTitle_(this);
       if (engine.frameCaptureArmed_) {
         engine.frameCaptureArmed_ = false;
@@ -726,19 +726,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.goToScene = sceneId => {
       this.triggerSceneJump_(this.onGoToScene, String(sceneId));
     };
-    // The quiet window keeps a condition that still holds on the next frame
-    // from restarting at frame rate.
     library.commands.restartScene = () => {
-      if (Date.now() - this.lastRestartAt_ < RESTART_QUIET_MS) {
-        return;
+      if (this.restartGate_.request(this.runFrame_())) {
+        this.triggerSceneJump_(this.onRestartScene);
       }
-      this.triggerSceneJump_(
-        this.onRestartScene &&
-          (() => {
-            this.lastRestartAt_ = Date.now();
-            this.onRestartScene();
-          })
-      );
     };
     library.commands.goToExternalScene = sceneKey => {
       this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
@@ -1087,6 +1078,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.firstFrameDue_ = true;
     this.held_ = false;
     const p5 = this.p5Wrapper.p5;
+    this.runStartFrame_ = p5 ? p5.frameCount : 0;
+    this.restartGate_.reset();
     const density = Math.ceil(
       CANVAS_DENSITY_FACTOR * (window.devicePixelRatio || 1)
     );
@@ -1618,6 +1611,12 @@ export default class SpriteLab2Engine extends SpriteLab {
       };
     }
     return this.wallsCache_.walls;
+  }
+
+  // Frames drawn so far in the current run.
+  runFrame_() {
+    const p5 = this.p5Wrapper.p5;
+    return p5 ? p5.frameCount - this.runStartFrame_ : 0;
   }
 
   // Marked sprites keep a little downward pull at zero gravity, so
