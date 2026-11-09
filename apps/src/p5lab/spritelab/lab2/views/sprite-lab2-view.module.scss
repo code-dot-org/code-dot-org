@@ -464,15 +464,16 @@ $z-over-blockly: 71;
   pointer-events: none;
 }
 
-// Four buttons in a cross: three keys and two gaps across, which the
-// playspace's CROSS_KEY and CROSS_KEY_GAP repeat to place it.
+// Four buttons: the up key over a row of left, down and right; three keys
+// and two gaps across, which the playspace's CROSS_KEY and CROSS_KEY_GAP
+// repeat to place it.
 $arrow-key: 34px;
 $arrow-gap: 6px;
 
 .arrowCross {
   display: grid;
   grid-template-columns: repeat(3, $arrow-key);
-  grid-template-rows: repeat(3, $arrow-key);
+  grid-template-rows: repeat(2, $arrow-key);
   gap: $arrow-gap;
   pointer-events: auto;
 }
@@ -490,7 +491,7 @@ $arrow-gap: 6px;
 }
 
 .arrowDown {
-  grid-area: 3 / 2;
+  grid-area: 2 / 2;
 }
 
 // A held key acts on the touch itself: no scroll or double-tap wait, and

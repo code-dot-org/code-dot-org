@@ -44,7 +44,11 @@ const BOTTOM_BAR_PX = 41;
 // .arrowCross has them; the same size in every mode.
 const CROSS_KEY = 34;
 const CROSS_KEY_GAP = 6;
-const CROSS_PX = 3 * CROSS_KEY + 2 * CROSS_KEY_GAP;
+// Three keys across; two rows, the up key over left, down and right.
+const CROSS_SIZE = {
+  w: 3 * CROSS_KEY + 2 * CROSS_KEY_GAP,
+  h: 2 * CROSS_KEY + CROSS_KEY_GAP,
+};
 // Under the preview the cross sits this far below the box and this share
 // of the box's width in from its left edge, so buttons could one day join
 // it on the right.
@@ -196,9 +200,9 @@ type PlayLayout = {box: Placement; cross: {x: number; y: number} | null};
 /**
  * Where the play view and its arrow cross go: the box centered on the stage
  * with the cross in the room to its right, half a key left of that room's
- * center, or the cross under the box when that leaves the box bigger. The
- * cross is as wide as it is tall, `cross`; 0 means there is none.
- * `reserveBottom` is the bar's room. `corner` is the size of the restart
+ * center, or the cross under the box when that leaves the box bigger.
+ * `cross` is its size; null means there is none. `reserveBottom` is the
+ * bar's room. `corner` is the size of the restart
  * buttons in the top-right corner: a box that would reach under them is
  * placed below them instead.
  */
@@ -207,7 +211,7 @@ export function playLayout(
   guideSize: {width: number; height: number} | null,
   guideSide: 'left' | 'right',
   reserveBottom: number,
-  cross: number,
+  cross: Size | null,
   corner: Size | null = null
 ): PlayLayout {
   const laid = playLayoutUnder(
@@ -243,7 +247,7 @@ function playLayoutUnder(
   guideSize: {width: number; height: number} | null,
   guideSide: 'left' | 'right',
   reserveBottom: number,
-  cross: number,
+  cross: Size | null,
   reserveTop = 0
 ): PlayLayout {
   if (!cross) {
@@ -263,7 +267,7 @@ function playLayoutUnder(
   // it is too narrow for the cross, the box gives that room up on both
   // sides, so it stays centered; the guide, hung from the stage's corner,
   // then stands that much nearer the narrowed edge.
-  const edge = cross + 2 * MARGIN;
+  const edge = cross.w + 2 * MARGIN;
   let beside = playPlacement(
     size,
     guideSize,
@@ -290,7 +294,7 @@ function playLayoutUnder(
   const stacked = playPlacement(
     size,
     guideSize,
-    reserveBottom + cross + MARGIN,
+    reserveBottom + cross.h + MARGIN,
     0,
     guideSide,
     reserveTop
@@ -300,7 +304,7 @@ function playLayoutUnder(
     return {
       box: stacked,
       cross: {
-        x: stacked.x + (boxSide - cross) / 2,
+        x: stacked.x + (boxSide - cross.w) / 2,
         y: stacked.y + boxSide + MARGIN,
       },
     };
@@ -312,9 +316,9 @@ function playLayoutUnder(
     cross: {
       x: Math.max(
         boxRight + MARGIN,
-        boxRight + (size.w - boxRight - cross) / 2 - CROSS_KEY / 2
+        boxRight + (size.w - boxRight - cross.w) / 2 - CROSS_KEY / 2
       ),
-      y: beside.y + (boxSide - cross) / 2,
+      y: beside.y + (boxSide - cross.h) / 2,
     },
   };
 }
@@ -605,8 +609,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   let columnWidth = share;
   const topRoom = columnHeader ? COLUMN_HEADER_PX : 0;
   const need = Math.max(BELOW_MIN_PX, belowNeed + 2 * CARD_BORDER_PX);
-  const crossSize = arrows ? CROSS_PX : 0;
-  const crossRoom = arrows ? crossSize + PREVIEW_CROSS_GAP : 0;
+  const crossSize = arrows ? CROSS_SIZE : null;
+  const crossRoom = crossSize ? crossSize.h + PREVIEW_CROSS_GAP : 0;
   const belowRoomFor = (card: number) => cardRoomFor(card) + crossRoom;
   const inColumn = playPlacement(
     {w: size.w, h: size.h - topRoom},

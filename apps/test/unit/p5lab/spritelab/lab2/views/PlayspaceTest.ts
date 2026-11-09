@@ -88,8 +88,8 @@ describe('playPlacement', () => {
 });
 
 describe('playLayout', () => {
-  // Three 34px keys and two 6px gaps across.
-  const CROSS = 114;
+  // Three 34px keys and two 6px gaps across, two rows high.
+  const CROSS = {w: 114, h: 74};
   const HALF_KEY = 17;
 
   it('centers the box on a wide stage, the cross in the room to its right, half a key left', () => {
@@ -105,9 +105,9 @@ describe('playLayout', () => {
     expect(b.bottom - b.top).toBe(600 - 41 - 24);
     expect(b.left).toBeCloseTo(1200 - b.right);
     expect(cross).not.toBeNull();
-    expect(cross!.x + CROSS / 2).toBeCloseTo((b.right + 1200) / 2 - HALF_KEY);
+    expect(cross!.x + CROSS.w / 2).toBeCloseTo((b.right + 1200) / 2 - HALF_KEY);
     // Centered on the box's height.
-    expect(cross!.y + CROSS / 2).toBeCloseTo((b.top + b.bottom) / 2);
+    expect(cross!.y + CROSS.h / 2).toBeCloseTo((b.top + b.bottom) / 2);
   });
 
   it('narrows the box on both sides when the cross would not fit beside it', () => {
@@ -122,9 +122,9 @@ describe('playLayout', () => {
     // A centered box filling the height leaves (750 - 535) / 2 right of
     // it, short of the cross and its margins: the box gives up that room
     // on both sides and stays centered.
-    expect(b.right - b.left).toBe(750 - 2 * (CROSS + 24) - 24);
+    expect(b.right - b.left).toBe(750 - 2 * (CROSS.w + 24) - 24);
     expect(b.left).toBeCloseTo(750 - b.right);
-    expect(b.right + CROSS + 2 * 12).toBeLessThanOrEqual(750);
+    expect(b.right + CROSS.w + 2 * 12).toBeLessThanOrEqual(750);
     // Half a key left of center would touch the box: a margin off it instead.
     expect(cross!.x).toBeCloseTo(b.right + 12);
   });
@@ -140,7 +140,7 @@ describe('playLayout', () => {
     const b = box(p);
     expect(b.right - b.left).toBe(500 - 24);
     expect(cross!.y).toBeCloseTo(b.bottom + 12);
-    expect(cross!.x + CROSS / 2).toBeCloseTo((b.left + b.right) / 2);
+    expect(cross!.x + CROSS.w / 2).toBeCloseTo((b.left + b.right) / 2);
   });
 
   it('drops the box below the restart buttons when it would reach under them', () => {
@@ -153,7 +153,7 @@ describe('playLayout', () => {
     const b = box(p);
     expect(b.top).toBeGreaterThanOrEqual(8 + 70 + 12);
     // Under them the height binds: the box, the cross and the bar share it.
-    expect(b.right - b.left).toBe(850 - 90 - (CROSS + 12) - 41 - 24);
+    expect(b.right - b.left).toBe(850 - 90 - (CROSS.h + 12) - 41 - 24);
     expect(cross!.y).toBeCloseTo(b.bottom + 12);
     // A box with room to the right of it is left where it was.
     const wide = playLayout(
@@ -170,7 +170,13 @@ describe('playLayout', () => {
   });
 
   it('places the box alone when there is no cross', () => {
-    const {box: p, cross} = playLayout({w: 1000, h: 600}, null, 'right', 41, 0);
+    const {box: p, cross} = playLayout(
+      {w: 1000, h: 600},
+      null,
+      'right',
+      41,
+      null
+    );
     expect(cross).toBeNull();
     expect(box(p)).toEqual(box(playPlacement({w: 1000, h: 600}, null, 41)));
   });
