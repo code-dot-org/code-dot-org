@@ -438,6 +438,12 @@ $z-over-blockly: 71;
   pointer-events: auto;
 }
 
+// Under the preview the bar covers the column's edge, so it draws the
+// hairline between itself and the scene bar beside it.
+.bottomBarColumn {
+  border-inline-start: 1px solid var(--borders-neutral-primary);
+}
+
 .playBarButtons {
   display: flex;
   min-width: 0;

@@ -839,7 +839,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       )}
       {bottomBar && measured && (
         <div
-          className={moduleStyles.bottomBar}
+          className={classNames(
+            moduleStyles.bottomBar,
+            mode === 'preview' && moduleStyles.bottomBarColumn
+          )}
           style={{
             left: barLeft,
             width: barWidth,
