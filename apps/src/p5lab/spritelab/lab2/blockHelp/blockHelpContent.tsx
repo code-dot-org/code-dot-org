@@ -151,6 +151,11 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       '**seconds** counts from when the scene starts; **frames** counts ' +
       'frames instead.',
   },
+  gamelab_everyInterval: {
+    title: 'Repeat every',
+    summary: 'Runs the blocks below each time this much time passes.',
+    body: 'Pick **frames** to count frames instead of seconds.',
+  },
   spritelab2_whenPlayer: {
     title: 'When player',
     summary:
