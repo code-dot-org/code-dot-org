@@ -14,11 +14,13 @@ describe('NewCourseFormTest', () => {
           instructor_audience: 'teacher',
           participant_audience: 'student',
           instruction_type: 'teacher_led',
+          existing_version_keys: [],
         },
         'family-2': {
           instructor_audience: 'universal_instructor',
           participant_audience: 'teacher',
           instruction_type: 'self_paced',
+          existing_version_keys: [],
         },
       },
     };
