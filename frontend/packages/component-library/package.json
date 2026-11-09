@@ -149,15 +149,6 @@
       "import": "./dist/dialog/index.mjs",
       "require": "./dist/dialog/index.js"
     },
-    "./divider": {
-      "types": {
-        "import": "./dist/divider/index.d.ts",
-        "require": "./dist/divider/index.d.ts"
-      },
-      "import": "./dist/divider/index.mjs",
-      "require": "./dist/divider/index.js"
-    },
-    "./divider/index.css": "./dist/divider/index.css",
     "./dropdown": {
       "types": {
         "import": "./dist/dropdown/index.d.ts",
