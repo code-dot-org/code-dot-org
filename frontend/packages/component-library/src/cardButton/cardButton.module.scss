@@ -1,9 +1,6 @@
-// Figma counts the stroke inside the box: a medium row is 1+15+22+15+1 = 54.
-
 // Two classes, so MUI's single-class ButtonBase reset never wins on order.
 .cardButton:global(.MuiButtonBase-root) {
-  --card-button-padding-top: 0.9375rem;
-  --card-button-padding-bottom: 0.9375rem;
+  --card-button-padding-block: var(--spacing-p-xs);
   --card-button-padding-inline: var(--spacing-p-xs);
   --card-button-gap: 0.75rem;
   --card-button-start-box: 1.25rem;
@@ -30,8 +27,7 @@
   max-width: 100%;
   min-width: 0;
   margin: 0;
-  padding: var(--card-button-padding-top) var(--card-button-padding-inline)
-    var(--card-button-padding-bottom);
+  padding: var(--card-button-padding-block) var(--card-button-padding-inline);
   border: 1px solid var(--card-button-border);
   border-radius: var(--shape-md);
   background-color: var(--card-button-background);
@@ -58,8 +54,7 @@
   }
 
   &.cardButton-small {
-    --card-button-padding-top: 0.625rem;
-    --card-button-padding-bottom: 0.625rem;
+    --card-button-padding-block: 0.625rem;
     --card-button-padding-inline: 0.75rem;
     --card-button-gap: 0.625rem;
     --card-button-start-box: 1.125rem;
@@ -72,15 +67,15 @@
     --card-button-description-leading: 1rem;
   }
 
-  // Figma pads a tile 2px less at the bottom.
   &.cardButton-vertical {
-    --card-button-padding-top: calc(var(--spacing-p-s) + 0.0625rem);
-    --card-button-padding-bottom: calc(var(--spacing-p-s) - 0.0625rem);
+    --card-button-padding-block: var(--spacing-p-s);
     --card-button-padding-inline: var(--spacing-p-s);
     --card-button-gap: var(--spacing-p-xxs);
     --card-button-start-box: 2rem;
     --card-button-start-glyph: 1.5rem;
 
+    // 2px more at the top optically balances the icon against the text.
+    padding-top: calc(var(--card-button-padding-block) + 0.125rem);
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -94,8 +89,7 @@
   }
 
   &.cardButton-vertical.cardButton-small {
-    --card-button-padding-top: calc(var(--spacing-p-xs) + 0.125rem);
-    --card-button-padding-bottom: var(--spacing-p-xs);
+    --card-button-padding-block: var(--spacing-p-xs);
     --card-button-padding-inline: var(--spacing-p-xs);
     --card-button-start-box: 1.5rem;
     --card-button-start-glyph: 1.25rem;
