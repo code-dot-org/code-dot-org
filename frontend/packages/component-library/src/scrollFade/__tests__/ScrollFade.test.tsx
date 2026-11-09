@@ -184,12 +184,10 @@ describe('Design System - ScrollFade', () => {
     });
   });
 
-  describe('fade size and color', () => {
-    it('defaults to a 24px fade with no color', () => {
+  describe('fade size and insets', () => {
+    it('defaults to a 24px fade', () => {
       const {root} = renderScrollFade();
       expect(root.style.getPropertyValue('--scroll-fade-size')).toBe('24px');
-      expect(root.style.getPropertyValue('--scroll-fade-color')).toBe('');
-      expect(root.querySelectorAll('[aria-hidden="true"]')).toHaveLength(0);
     });
 
     it('takes a size in px or as any CSS length', () => {
@@ -200,17 +198,6 @@ describe('Design System - ScrollFade', () => {
       expect(remRoot.style.getPropertyValue('--scroll-fade-size')).toBe(
         '1.5rem',
       );
-    });
-
-    it('paints hidden gradients for its edges when given a color', () => {
-      const {root} = renderScrollFade({
-        fadeColor: 'var(--background-neutral-secondary)',
-        edges: ['top', 'left'],
-      });
-      expect(root.style.getPropertyValue('--scroll-fade-color')).toBe(
-        'var(--background-neutral-secondary)',
-      );
-      expect(root.querySelectorAll('[aria-hidden="true"]')).toHaveLength(2);
     });
 
     it('insets the fades by the scrollbars', () => {
@@ -314,6 +301,24 @@ describe('Design System - ScrollFade', () => {
       layout(scroller, TALL);
       expect(scroller).toHaveAttribute('tabindex', '-1');
     });
+
+    it('warns when the tab stop has no name', () => {
+      const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+      const {scroller} = renderScrollFade();
+      layout(scroller, TALL);
+      expect(warn).toHaveBeenCalledTimes(1);
+      warn.mockRestore();
+    });
+
+    it('does not warn when the tab stop is named', () => {
+      const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+      const {scroller} = renderScrollFade({
+        scrollerProps: {'aria-label': 'Results'},
+      });
+      layout(scroller, TALL);
+      expect(warn).not.toHaveBeenCalled();
+      warn.mockRestore();
+    });
   });
 
   describe('props', () => {
@@ -326,11 +331,10 @@ describe('Design System - ScrollFade', () => {
     it('applies class names to the root and the scroller', () => {
       const {root, scroller} = renderScrollFade({
         className: 'root-class',
-        scrollerClassName: 'scroller-class',
-        scrollerProps: {className: 'props-class'},
+        scrollerProps: {className: 'scroller-class'},
       });
       expect(root).toHaveClass('root-class');
-      expect(scroller).toHaveClass('scroller-class', 'props-class');
+      expect(scroller).toHaveClass('scroller-class');
     });
 
     it('forwards other HTML attributes to the root', () => {

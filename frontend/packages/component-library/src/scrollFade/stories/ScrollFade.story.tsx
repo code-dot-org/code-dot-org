@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/react-vite';
-import {within, expect} from 'storybook/test';
+import {within, expect, waitFor} from 'storybook/test';
 
 import ScrollFade from '../index';
 
@@ -13,7 +13,6 @@ export default {
       options: ['top', 'right', 'bottom', 'left'],
     },
     fadeSize: {control: 'text'},
-    fadeColor: {control: 'text'},
   },
   args: {
     edges: ['top', 'bottom'],
@@ -87,9 +86,11 @@ export const DefaultScrollFade: Story = {
     const canvas = within(canvasElement);
 
     // content overflows, so only the bottom edge fades at first
-    expect(
-      canvas.getByText('Row 1').closest('[data-fade-bottom]'),
-    ).toBeTruthy();
+    await waitFor(() =>
+      expect(
+        canvas.getByText('Row 1').closest('[data-fade-bottom]'),
+      ).toBeTruthy(),
+    );
     expect(canvas.getByText('Row 1').closest('[data-fade-top]')).toBeNull();
   },
 };
@@ -141,22 +142,6 @@ export const OverAnyBackground: Story = {
   ),
 };
 
-// An opaque overlay instead of the mask, for fading into a specific color.
-export const WithFadeColor: Story = {
-  args: {
-    fadeColor: 'var(--background-neutral-secondary)',
-    fadeSize: 40,
-  },
-  render: args => (
-    <ScrollFade
-      {...args}
-      style={{...frame, background: 'var(--background-neutral-secondary)'}}
-    >
-      {rows}
-    </ScrollFade>
-  ),
-};
-
 // With no focusable content, the scroller becomes a named tab stop.
 export const KeyboardScrollable: Story = {
   args: {scrollerProps: {'aria-label': 'Release notes'}},
@@ -167,7 +152,7 @@ export const KeyboardScrollable: Story = {
   ),
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    const region = canvas.getByRole('region', {name: 'Release notes'});
+    const region = await canvas.findByRole('region', {name: 'Release notes'});
     expect(region).toHaveAttribute('tabindex', '0');
   },
 };

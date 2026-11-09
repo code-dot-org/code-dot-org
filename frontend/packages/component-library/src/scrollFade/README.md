@@ -23,17 +23,11 @@ The ref is the scrolling element, for `scrollTo` and the like.
 
 ## Fading
 
-By default the scroller's content fades to transparent through a
-`mask-image`, so it needs no color and works over any background. Solid
-strips in the mask keep the scrollbars and the scroller's own borders
-unfaded. Put borders and padding meant to stay crisp on the root. Overlay
-scrollbars, like macOS's, take no space to measure, so their thumb fades
-with the content at a fading edge.
-
-`fadeColor` paints a gradient of that color behind each edge, which the
-content reveals as it fades. Use it only to fade into a color other than what
-is behind the scroller. Being behind the content, it never covers an overlay
-scrollbar, and the scroller needs a transparent background for it to show.
+The scroller's content fades to transparent through a `mask-image`, so the
+fade needs no color and works over any background. Solid strips in the mask
+keep the scrollbars unfaded. Put borders on the root, not the scroller.
+Overlay scrollbars, like macOS's, take no space to measure, so
+their thumb fades with the content at a fading edge.
 
 The root clips its content to its own rounded corners.
 
@@ -52,8 +46,9 @@ the mask would clip one on the scroller. Label it through `scrollerProps`:
 <ScrollFade scrollerProps={{'aria-label': 'Release notes'}}>…</ScrollFade>
 ```
 
-A labelled tab stop is announced as a region. A `tabIndex` or `role` in
-`scrollerProps` turns the automatic one off.
+A labelled tab stop is announced as a region. An unlabelled one logs a
+warning. A `tabIndex` or `role` in `scrollerProps` overrides the automatic
+one.
 
 For guidelines on how to use this component and the features it
 offers, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-scrollfade--docs).

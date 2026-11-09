@@ -15,7 +15,6 @@ $inset-bottom: var(--scroll-fade-inset-bottom, 0px);
 $transition: 100ms ease-out;
 
 .scrollFade {
-  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -31,8 +30,6 @@ $transition: 100ms ease-out;
 }
 
 .scroller {
-  position: relative;
-  z-index: 1;
   flex: 1 1 auto;
   min-width: 0;
   min-height: 0;
@@ -96,49 +93,8 @@ $transition: 100ms ease-out;
   }
 }
 
-// With fadeColor, a gradient behind the scroller shows through as the content
-// fades. Behind rather than over, so it never covers an overlay scrollbar.
-.fade {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity $transition;
-}
-
-.top {
-  inset: 0 $inset-right auto $inset-left;
-  height: var(--scroll-fade-size);
-  background: linear-gradient(to bottom, var(--scroll-fade-color), transparent);
-}
-
-.bottom {
-  inset: auto $inset-right $inset-bottom $inset-left;
-  height: var(--scroll-fade-size);
-  background: linear-gradient(to top, var(--scroll-fade-color), transparent);
-}
-
-.left {
-  inset: 0 auto $inset-bottom $inset-left;
-  width: var(--scroll-fade-size);
-  background: linear-gradient(to right, var(--scroll-fade-color), transparent);
-}
-
-.right {
-  inset: 0 $inset-right $inset-bottom auto;
-  width: var(--scroll-fade-size);
-  background: linear-gradient(to left, var(--scroll-fade-color), transparent);
-}
-
-@each $edge in top, right, bottom, left {
-  .scrollFade[data-fade-#{$edge}] > .#{$edge} {
-    opacity: 1;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .scrollFade > .scroller,
-  .fade {
+  .scrollFade > .scroller {
     transition: none;
   }
 }

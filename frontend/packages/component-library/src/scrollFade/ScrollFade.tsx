@@ -4,9 +4,10 @@ import {
   forwardRef,
   HTMLAttributes,
   ReactNode,
-  useCallback,
   useEffect,
+  useImperativeHandle,
   useRef,
+  useState,
 } from 'react';
 
 import moduleStyles from './scrollFade.module.scss';
@@ -19,19 +20,6 @@ const DEFAULT_EDGES: ScrollFadeEdge[] = ['top', 'bottom'];
 const FOCUSABLE_SELECTOR =
   'a[href], button, input, select, textarea, summary, iframe, audio[controls], video[controls], [tabindex]:not([tabindex="-1"]), [contenteditable]:not([contenteditable="false"])';
 
-// Writes only on change: the mutation observer below watches tabindex, and
-// even a same-value write would queue a record and loop.
-function setAttribute(el: Element, name: string, value: string | null) {
-  if (el.getAttribute(name) === value) {
-    return;
-  }
-  if (value === null) {
-    el.removeAttribute(name);
-  } else {
-    el.setAttribute(name, value);
-  }
-}
-
 export interface ScrollFadeProps extends HTMLAttributes<HTMLDivElement> {
   /** Content of the scrolling area. */
   children: ReactNode;
@@ -43,13 +31,6 @@ export interface ScrollFadeProps extends HTMLAttributes<HTMLDivElement> {
   edges?: ScrollFadeEdge[];
   /** Length of each fade: a number in px, or any CSS length or percentage. */
   fadeSize?: number | string;
-  /**
-   * The content fades out over whatever is behind it. Set a color to fade
-   * into that color instead, painted behind the content at each edge.
-   */
-  fadeColor?: string;
-  /** Class name for the scrolling element, which holds the children. */
-  scrollerClassName?: string;
   /**
    * Attributes for the scrolling element. Give it an `aria-label` or
    * `aria-labelledby`: when it becomes a tab stop it is then announced as a
@@ -80,9 +61,7 @@ const ScrollFade = forwardRef<HTMLDivElement, ScrollFadeProps>(
       children,
       edges = DEFAULT_EDGES,
       fadeSize = 24,
-      fadeColor,
       className,
-      scrollerClassName,
       scrollerProps,
       style,
       ...rootProps
@@ -90,25 +69,30 @@ const ScrollFade = forwardRef<HTMLDivElement, ScrollFadeProps>(
     ref,
   ) => {
     const rootRef = useRef<HTMLDivElement>(null);
-    const scrollerRef = useRef<HTMLDivElement | null>(null);
-    const setScrollerRef = useCallback(
-      (node: HTMLDivElement | null) => {
-        scrollerRef.current = node;
-        if (typeof ref === 'function') {
-          ref(node);
-        } else if (ref) {
-          ref.current = node;
-        }
-      },
-      [ref],
-    );
+    const scrollerRef = useRef<HTMLDivElement>(null);
+    useImperativeHandle(ref, () => scrollerRef.current as HTMLDivElement, []);
+    // Chrome and Firefox already make such a scroller focusable, but Safari
+    // does not, and none of them name it.
+    const [needsFocus, setNeedsFocus] = useState(false);
 
-    const edgeKey = ALL_EDGES.filter(edge => edges.includes(edge)).join(' ');
-    const vertical = edgeKey.includes('top') || edgeKey.includes('bottom');
-    const horizontal = edgeKey.includes('left') || edgeKey.includes('right');
-    // A tabIndex or role from the consumer wins over the ones managed here.
+    const activeEdges = ALL_EDGES.filter(edge => edges.includes(edge));
+    const edgeKey = activeEdges.join(' ');
+    const vertical =
+      activeEdges.includes('top') || activeEdges.includes('bottom');
+    const horizontal =
+      activeEdges.includes('left') || activeEdges.includes('right');
+    const named = Boolean(
+      scrollerProps?.['aria-label'] || scrollerProps?.['aria-labelledby'],
+    );
     const ownsTabIndex = scrollerProps?.tabIndex === undefined;
-    const ownsRole = scrollerProps?.role === undefined;
+
+    useEffect(() => {
+      if (needsFocus && ownsTabIndex && !named) {
+        console.warn(
+          'ScrollFade: an overflowing scroller became a tab stop with no name. Give it an aria-label or aria-labelledby through scrollerProps.',
+        );
+      }
+    }, [needsFocus, ownsTabIndex, named]);
 
     useEffect(() => {
       const root = rootRef.current;
@@ -116,8 +100,9 @@ const ScrollFade = forwardRef<HTMLDivElement, ScrollFadeProps>(
       if (!root || !scroller) {
         return;
       }
-      const active = new Set(edgeKey.split(' '));
+      const active = edgeKey.split(' ');
       let rtl = false;
+      let overflows = false;
 
       // Written to the DOM rather than state, so scrolling doesn't re-render.
       const updateFades = () => {
@@ -136,10 +121,13 @@ const ScrollFade = forwardRef<HTMLDivElement, ScrollFadeProps>(
         ALL_EDGES.forEach(edge =>
           root.toggleAttribute(
             `data-fade-${edge}`,
-            active.has(edge) && past[edge],
+            active.includes(edge) && past[edge],
           ),
         );
       };
+
+      const updateFocus = () =>
+        setNeedsFocus(overflows && !scroller.querySelector(FOCUSABLE_SELECTOR));
 
       const measure = () => {
         rtl = getComputedStyle(scroller).direction === 'rtl';
@@ -151,48 +139,40 @@ const ScrollFade = forwardRef<HTMLDivElement, ScrollFadeProps>(
         root.style.setProperty('--scroll-fade-inset-left', `${left}px`);
         root.style.setProperty('--scroll-fade-inset-right', `${right}px`);
         root.style.setProperty('--scroll-fade-inset-bottom', `${bottom}px`);
-
-        if (ownsTabIndex) {
-          const overflows =
-            scroller.scrollHeight - scroller.clientHeight > 1 ||
-            scroller.scrollWidth - scroller.clientWidth > 1;
-          const needsFocus =
-            overflows && !scroller.querySelector(FOCUSABLE_SELECTOR);
-          const named =
-            scroller.hasAttribute('aria-label') ||
-            scroller.hasAttribute('aria-labelledby');
-          setAttribute(scroller, 'tabindex', needsFocus ? '0' : null);
-          if (ownsRole) {
-            setAttribute(
-              scroller,
-              'role',
-              needsFocus && named ? 'region' : null,
-            );
-          }
-        }
+        overflows =
+          scroller.scrollHeight - scroller.clientHeight > 1 ||
+          scroller.scrollWidth - scroller.clientWidth > 1;
+        updateFocus();
         updateFades();
       };
 
       // Content can grow without the scroller's own box changing, so watch
       // the children too.
       const resizeObserver = new ResizeObserver(measure);
-      const observe = () => {
+      const observeChildren = () => {
         resizeObserver.disconnect();
         resizeObserver.observe(scroller);
         Array.from(scroller.children).forEach(child =>
           resizeObserver.observe(child),
         );
-        measure();
       };
       // Subtree: focusable content can arrive anywhere below the scroller.
-      const mutationObserver = new MutationObserver(observe);
+      const mutationObserver = new MutationObserver(records => {
+        if (
+          records.some(r => r.type === 'childList' && r.target === scroller)
+        ) {
+          observeChildren();
+        }
+        updateFocus();
+      });
       mutationObserver.observe(scroller, {
         childList: true,
         subtree: true,
         attributes: true,
         attributeFilter: ['tabindex', 'href', 'contenteditable', 'controls'],
       });
-      observe();
+      observeChildren();
+      measure();
       scroller.addEventListener('scroll', updateFades, {passive: true});
 
       return () => {
@@ -200,7 +180,7 @@ const ScrollFade = forwardRef<HTMLDivElement, ScrollFadeProps>(
         mutationObserver.disconnect();
         scroller.removeEventListener('scroll', updateFades);
       };
-    }, [edgeKey, ownsTabIndex, ownsRole]);
+    }, [edgeKey]);
 
     return (
       <div
@@ -210,33 +190,26 @@ const ScrollFade = forwardRef<HTMLDivElement, ScrollFadeProps>(
           {
             '--scroll-fade-size':
               typeof fadeSize === 'number' ? `${fadeSize}px` : fadeSize,
-            ...(fadeColor && {'--scroll-fade-color': fadeColor}),
             ...style,
           } as CSSProperties
         }
         {...rootProps}
       >
         <div
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- focusable so a keyboard can scroll it
+          tabIndex={needsFocus ? 0 : undefined}
+          role={needsFocus && named ? 'region' : undefined}
           {...scrollerProps}
-          ref={setScrollerRef}
+          ref={scrollerRef}
           className={classNames(
             moduleStyles.scroller,
             vertical && moduleStyles.scrollY,
             horizontal && moduleStyles.scrollX,
-            scrollerClassName,
             scrollerProps?.className,
           )}
         >
           {children}
         </div>
-        {fadeColor &&
-          ALL_EDGES.filter(edge => edgeKey.includes(edge)).map(edge => (
-            <span
-              key={edge}
-              aria-hidden="true"
-              className={classNames(moduleStyles.fade, moduleStyles[edge])}
-            />
-          ))}
       </div>
     );
   },
