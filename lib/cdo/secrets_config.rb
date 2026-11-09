@@ -63,6 +63,7 @@ module Cdo
 
       # Resolve the secret referenced by this object.
       def lookup(secrets_manager)
+        raise "Secret path is nil or empty. {secret_key: #{secret_key}}" if key.nil? || key.empty?
         secrets_manager.get!(key)
       end
     end
