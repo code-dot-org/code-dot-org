@@ -1425,7 +1425,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     waiters.forEach(onFrame => onFrame(canvas));
   }
 
-  // Platformer physics for players and marked sprites (see
+  // Platformer physics for players, characters and marked sprites (see
   // platformPhysics.ts for the rules), run immediately before every paint —
   // after p5's pre-phase velocity integration and after this frame's
   // behaviors/events have moved sprites.
@@ -1443,12 +1443,14 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
     const players = [];
     const bodies = [];
-    // At zero gravity a character with no behavior stays where it is; the
-    // small pull bodies keep then is for behaviors that walk on blocks.
+    // At zero gravity a character with no behavior stays where it is; only
+    // marked bodies keep the small pull (bodyGravity_), for behaviors that
+    // walk on blocks.
     const characters =
       this.platformGravity_ === 0 ? new Set() : this.characterCostumes_();
     Object.values(this.library.nativeSpriteMap).forEach(sprite => {
       // Consuming the one-frame marks: see usePlatformBody and defyGravity.
+      // A sprite marked both ways floats.
       const marked = sprite.__slab2Body;
       sprite.__slab2Body = false;
       const weightless = sprite.__slab2Weightless;
@@ -1464,18 +1466,21 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
     // A sprite whose mark stopped arriving (its behavior was removed) is an
     // ordinary sprite again: upright, and not carrying the resolver's last
-    // fall speed.
+    // fall speed or last position, which would read as one frame's movement
+    // if the sprite became a body again later.
+    const bodySprites = new Set(bodies.map(b => b.sprite));
     this.prevBodies_.forEach(sprite => {
       if (
         !sprite.removed &&
         sprite.group !== 'players' &&
-        !bodies.some(b => b.sprite === sprite)
+        !bodySprites.has(sprite)
       ) {
         sprite.mirrorY(1);
         sprite.velocity.y = 0;
+        delete sprite.__slab2Prev;
       }
     });
-    this.prevBodies_ = bodies.map(b => b.sprite);
+    this.prevBodies_ = [...bodySprites];
     // Under upward gravity a sprite stands on the ceiling, so it is drawn
     // upside down — each list under its own gravity's sign. Drawing only:
     // the body the resolver measures is unchanged.
