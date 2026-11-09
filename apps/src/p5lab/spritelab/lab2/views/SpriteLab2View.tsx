@@ -160,7 +160,7 @@ import Callout from './components/Callout';
 import EditorStrip, {EditHistory} from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
-import PlayBar from './components/PlayBar';
+import RunButtons, {ArrowCross} from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
 import {sceneDropdownButtonId} from './components/SceneDropdown';
@@ -699,6 +699,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: animationsSeeded,
     animations: animationList,
     spriteRole: defaultRole(levelProperties.imageRoleDefaults, 'sprite'),
+    roles: levelProperties.worldStartRoles,
     updateSources,
   });
   // The extra scene's premade world, painted by the same rules.
@@ -708,6 +709,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: animationsSeeded,
     animations: animationList,
     spriteRole: defaultRole(levelProperties.imageRoleDefaults, 'sprite'),
+    roles: extraScene?.worldStartRoles,
     updateSources,
   });
 
@@ -2408,7 +2410,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {/* The last level's Finish, in the page header as well. */}
       {levelProperties.useSecondaryFinishButton && (
         <HeaderActionButton
-          tone="success"
+          buttonColor="success"
           onClick={() => dispatch(continueOrFinishLesson())}
         >
           I'm finished
@@ -2429,6 +2431,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         // render inside the instructions panel.
         objectives={objectives.active ? objectives : undefined}
         hideContinueIfDisabled
+        continueButtonColor="success"
         footerButtons={
           startOverOffered && (
             <IconButtonWithTooltip
@@ -2616,15 +2619,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 }
               />
             }
-            playBar={
+            bottomBar={
               <>
                 <div className={moduleStyles.playBarButtons}>
-                  <PlayBar
+                  <RunButtons
                     playing={activeTab === 'Play'}
-                    arrows={arrowSet}
                     onPlay={handlePlayClick}
                     onStop={stopTab ? handleStopClick : undefined}
-                    // A level pinned to one scene has one Play, for that scene.
+                    // A level pinned to one scene has one Run, for that scene.
                     onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
                     playSceneHidden={activeScene.id === scenes[0].id}
                   />
@@ -2634,6 +2636,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   onFailureExpired={handleAskAiExpired}
                 />
               </>
+            }
+            arrows={
+              <ArrowCross arrows={arrowSet} disabled={activeTab !== 'Play'} />
             }
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
