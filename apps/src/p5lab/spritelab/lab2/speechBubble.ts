@@ -44,15 +44,29 @@ interface BubbleCanvas {
 /** The text's width at a size, in canvas pixels. */
 export type MeasureText = (text: string, size: number) => number;
 
-export interface BubbleLayout {
-  lines: string[];
-  textSize: number;
-  lineHeight: number;
-  /** The bubble's box. */
+/** The part of the world on screen, in world coordinates. */
+export interface BubbleView {
   x: number;
   y: number;
   width: number;
   height: number;
+}
+
+/** The text's lines, size and the box they need; the same for every
+    bubble that says the same thing. */
+export interface TextLayout {
+  lines: string[];
+  textSize: number;
+  lineHeight: number;
+  paddingY: number;
+  width: number;
+  height: number;
+}
+
+export interface BubbleLayout extends TextLayout {
+  /** The bubble's box. */
+  x: number;
+  y: number;
   /** The say tail: its base along the bubble's bottom edge, and its tip. */
   tail: {baseLeft: number; baseRight: number; tipX: number; tipY: number};
 }
@@ -87,16 +101,46 @@ export const INK = '#222222';
 const FILL = '#ffffff';
 // The main page font; a fallback when the variable is not to be had.
 const FONT_FALLBACK = "'Geist', 'Noto Sans', sans-serif";
+const WORLD_VIEW: BubbleView = {
+  x: 0,
+  y: 0,
+  width: APP_WIDTH,
+  height: APP_HEIGHT,
+};
+// Text layouts by text, so a bubble is wrapped and measured once, not on
+// every frame it shows.
+const TEXT_LAYOUTS = new Map<string, TextLayout>();
+const TEXT_LAYOUTS_KEPT = 64;
+
+// Reading the variable forces a style recalculation, so it is read once it
+// is there.
+let pageFontRead: string | null = null;
 
 /** The page's main font family, for the canvas. */
 export function pageFont(): string {
+  if (pageFontRead) {
+    return pageFontRead;
+  }
   if (typeof getComputedStyle !== 'function' || !document.body) {
     return FONT_FALLBACK;
   }
   const family = getComputedStyle(document.body)
     .getPropertyValue('--font-family-main')
     .trim();
+  if (family) {
+    pageFontRead = family;
+  }
   return family || FONT_FALLBACK;
+}
+
+// What a too-wide word breaks between: whole glyph clusters where the
+// browser can tell them apart, so a joined emoji or an accented letter is
+// not cut in two; code points elsewhere.
+function graphemes(word: string): string[] {
+  if (typeof Intl !== 'undefined' && 'Segmenter' in Intl) {
+    return [...new Intl.Segmenter().segment(word)].map(part => part.segment);
+  }
+  return [...word];
 }
 
 /** Breaks text into lines no wider than `maxWidth`, at spaces where it
@@ -126,7 +170,7 @@ export function wrapText(
     }
     // Too wide alone: as many characters as fit, then the rest.
     let piece = '';
-    for (const char of word) {
+    for (const char of graphemes(word)) {
       if (piece && !fits(piece + char)) {
         lines.push(piece);
         piece = '';
@@ -145,50 +189,94 @@ export function wrapText(
 const clamp = (value: number, min: number, max: number) =>
   Math.max(min, Math.min(max, value));
 
+// The first size whose line count fits; the last size takes any count.
+function fitText(
+  measure: MeasureText,
+  text: string
+): {textSize: number; lines: string[]} {
+  for (const [size, maxLines] of TEXT_SIZES.slice(0, -1)) {
+    const lines = wrapText(measure, text, size, MAX_TEXT_WIDTH);
+    if (lines.length <= maxLines) {
+      return {textSize: size, lines};
+    }
+  }
+  const [size] = TEXT_SIZES[TEXT_SIZES.length - 1];
+  return {textSize: size, lines: wrapText(measure, text, size, MAX_TEXT_WIDTH)};
+}
+
+/** The lines `text` wraps to and the box around them. */
+export function layoutBubbleText(
+  measure: MeasureText,
+  text: string
+): TextLayout {
+  const kept = TEXT_LAYOUTS.get(text);
+  if (kept) {
+    return kept;
+  }
+  const {textSize, lines} = fitText(measure, ellipsify(text, MAX_TEXT_LENGTH));
+  const lineHeight = Math.round(textSize * LINE_HEIGHT);
+  const paddingX = Math.round(textSize * PADDING_X);
+  const paddingY = Math.round(textSize * PADDING_Y);
+  const textWidth = Math.max(...lines.map(line => measure(line, textSize)));
+  const layout = {
+    lines,
+    textSize,
+    lineHeight,
+    paddingY,
+    width: Math.max(MIN_WIDTH, Math.ceil(textWidth) + 2 * paddingX),
+    height: lines.length * lineHeight + 2 * paddingY,
+  };
+  if (TEXT_LAYOUTS.size >= TEXT_LAYOUTS_KEPT) {
+    TEXT_LAYOUTS.delete(TEXT_LAYOUTS.keys().next().value as string);
+  }
+  TEXT_LAYOUTS.set(text, layout);
+  return layout;
+}
+
 /**
  * Where a bubble for `text` goes, spoken by a sprite whose top center is
  * (spriteX, spriteY): above the sprite, centered on it as far as the view
  * allows, the tail's tip at the sprite and its base leaning from the
- * bubble's center toward the tip.
+ * bubble's center toward the tip. Whole pixels, so the stroke is crisp.
  */
 export function layoutSpeechBubble(
   measure: MeasureText,
   text: string,
   spriteX: number,
   spriteY: number,
-  view = {width: APP_WIDTH, height: APP_HEIGHT}
+  view: BubbleView = WORLD_VIEW
 ): BubbleLayout {
-  const shown = ellipsify(text, MAX_TEXT_LENGTH);
-  let lines: string[] = [shown];
-  let textSize = TEXT_SIZES[TEXT_SIZES.length - 1][0];
-  for (const [size, maxLines] of TEXT_SIZES) {
-    const wrapped = wrapText(measure, shown, size, MAX_TEXT_WIDTH);
-    textSize = size;
-    lines = wrapped;
-    if (wrapped.length <= maxLines) {
-      break;
-    }
-  }
-  const lineHeight = Math.round(textSize * LINE_HEIGHT);
-  const paddingX = Math.round(textSize * PADDING_X);
-  const paddingY = Math.round(textSize * PADDING_Y);
-  const textWidth = Math.max(...lines.map(line => measure(line, textSize)));
-  const width = Math.max(MIN_WIDTH, Math.ceil(textWidth) + 2 * paddingX);
-  const height = lines.length * lineHeight + 2 * paddingY;
-  const x = clamp(spriteX - width / 2, MARGIN, view.width - MARGIN - width);
-  const y = clamp(
-    spriteY - TAIL_HEIGHT - height,
-    MARGIN,
-    view.height - MARGIN - height
+  const textLayout = layoutBubbleText(measure, text);
+  const {width, height} = textLayout;
+  const x = Math.round(
+    clamp(
+      spriteX - width / 2,
+      view.x + MARGIN,
+      view.x + view.width - MARGIN - width
+    )
+  );
+  const y = Math.round(
+    clamp(
+      spriteY - TAIL_HEIGHT - height,
+      view.y + MARGIN,
+      view.y + view.height - MARGIN - height
+    )
   );
   const bottom = y + height;
   // The tail reaches the sprite, or only just past the bubble when the
-  // sprite has come up into it.
-  const tipY = Math.max(spriteY, bottom + 1);
+  // sprite has come up into it, and no further than the view's bottom edge
+  // when the sprite has gone below it.
+  const tipY = Math.round(
+    clamp(
+      spriteY,
+      bottom + 1,
+      Math.max(bottom + 1, view.y + view.height - MARGIN)
+    )
+  );
   // Along the straight run of the bottom edge, inside the corners.
   const runLeft = x + RADIUS;
   const runRight = x + width - RADIUS;
-  const tipX = clamp(spriteX, runLeft, runRight);
+  const tipX = Math.round(clamp(spriteX, runLeft, runRight));
   // The base slides from under the tip toward the bubble's center: a tip
   // at the center gets a symmetric tail, one at the end of the run a tail
   // whose near edge stands straight, as a speaker off to that side reads.
@@ -202,16 +290,7 @@ export function layoutSpeechBubble(
     baseLeft -= baseRight - runRight;
     baseRight = runRight;
   }
-  return {
-    lines,
-    textSize,
-    lineHeight,
-    x,
-    y,
-    width,
-    height,
-    tail: {baseLeft, baseRight, tipX, tipY},
-  };
+  return {...textLayout, x, y, tail: {baseLeft, baseRight, tipX, tipY}};
 }
 
 // A quarter circle as a cubic curve.
@@ -257,20 +336,24 @@ function thinkShapes(p5: BubbleCanvas, layout: BubbleLayout): void {
   const bottomX = (tail.tipX + topX) / 2;
   const bottom = y + height;
   const reach = Math.max(1, tail.tipY - bottom);
-  p5.ellipse(topX, bottom + reach * 0.35, Math.min(TAIL_HEIGHT, reach));
-  p5.ellipse(bottomX, bottom + reach * 0.85, Math.min(TAIL_HEIGHT, reach) / 2);
+  const size = Math.min(TAIL_HEIGHT, reach);
+  // The top circle hangs from the edge, never up into the box.
+  p5.ellipse(topX, bottom + Math.max(reach * 0.35, size / 2), size);
+  p5.ellipse(bottomX, bottom + reach * 0.85, size / 2);
 }
 
 /**
  * Draws a bubble for `text` over a sprite whose top center is (spriteX,
- * spriteY); `bubbleType` 'think' trails circles instead of a tail.
+ * spriteY), kept inside `view`; `bubbleType` 'think' trails circles instead
+ * of a tail.
  */
 export function drawSpeechBubble(
   p5: BubbleCanvas,
   text: unknown,
   spriteX: number,
   spriteY: number,
-  bubbleType?: string
+  bubbleType?: string,
+  view?: BubbleView
 ): BubbleLayout {
   const shown =
     typeof text === 'string'
@@ -285,7 +368,7 @@ export function drawSpeechBubble(
     p5.textSize(size);
     return p5.textWidth(s);
   };
-  const layout = layoutSpeechBubble(measure, shown, spriteX, spriteY);
+  const layout = layoutSpeechBubble(measure, shown, spriteX, spriteY, view);
   p5.stroke(INK);
   p5.strokeWeight(STROKE);
   p5.strokeJoin(p5.ROUND);
@@ -299,15 +382,13 @@ export function drawSpeechBubble(
   p5.fill(INK);
   p5.textSize(layout.textSize);
   p5.textAlign(p5.CENTER, p5.BASELINE);
-  const paddingY =
-    (layout.height - layout.lines.length * layout.lineHeight) / 2;
   // Each line's capitals centered in its own line box.
   const baseline = (layout.lineHeight + CAP_HEIGHT * layout.textSize) / 2;
   layout.lines.forEach((line, i) =>
     p5.text(
       line,
       layout.x + layout.width / 2,
-      layout.y + paddingY + baseline + i * layout.lineHeight
+      layout.y + layout.paddingY + baseline + i * layout.lineHeight
     )
   );
   p5.pop();

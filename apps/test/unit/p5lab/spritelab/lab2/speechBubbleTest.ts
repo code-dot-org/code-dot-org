@@ -25,6 +25,15 @@ describe('wrapText', () => {
     ]);
     expect(wrapText(measure, '', 20, 100)).toEqual(['']);
   });
+
+  it('keeps a joined emoji whole when it breaks inside a word', () => {
+    const family = '\u{1F468}\u200D\u{1F469}\u200D\u{1F467}';
+    expect(wrapText(measure, `ab${family}cd`, 20, 30)).toEqual([
+      'ab',
+      family,
+      'cd',
+    ]);
+  });
 });
 
 describe('layoutSpeechBubble', () => {
@@ -54,6 +63,25 @@ describe('layoutSpeechBubble', () => {
     expect(layoutSpeechBubble(measure, 'We did it!', 20, 300).tail.tipX).toBe(
       20
     );
+  });
+
+  it('keeps inside the part of the world the camera shows', () => {
+    const view = {x: 200, y: 200, width: 200, height: 200};
+    const b = layoutSpeechBubble(measure, 'We did it!', 215, 300, view);
+    expect(b.x).toBe(view.x + MARGIN);
+    const low = layoutSpeechBubble(measure, 'Hi', 300, 900, view);
+    expect(low.y + low.height).toBe(view.y + view.height - MARGIN);
+    // The tail stops just past the bubble rather than following a sprite
+    // that has fallen out of view.
+    expect(low.tail.tipY).toBe(low.y + low.height + 1);
+  });
+
+  it('lays the box out in whole pixels', () => {
+    const b = layoutSpeechBubble(measure, 'Odd', 200.4, 300.6);
+    [b.x, b.y, b.width, b.height, b.tail.tipX, b.tail.tipY].forEach(n =>
+      expect(Number.isInteger(n)).toBe(true)
+    );
+    expect(b.paddingY).toBe(10);
   });
 
   it('leans the tail toward the speaker between the center and a side', () => {

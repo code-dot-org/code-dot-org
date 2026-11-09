@@ -508,6 +508,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // platform draw loop below); a fresh run starts back at 1.
     this.cameraZoom_ = 1;
     this.cameraZoomTarget_ = 1;
+    // The world the camera shows, set by each zoomed frame; null until then,
+    // for a scene drawn without the camera.
+    this.bubbleView_ = null;
     // Not reset per run: a restart re-runs the program, and zeroing this here
     // would let the next frame restart again immediately.
     this.lastRestartAt_ = this.lastRestartAt_ || 0;
@@ -666,9 +669,17 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       return fires ? [{}] : [];
     };
-    // The say and think bubbles, drawn this lab's way (speechBubble.ts).
+    // The say and think bubbles, drawn this lab's way (speechBubble.ts),
+    // inside the part of the world the camera shows.
     library.drawSpeechBubble = (text, spriteX, spriteY, bubbleType) =>
-      drawSpeechBubble(library.p5, text, spriteX, spriteY, bubbleType);
+      drawSpeechBubble(
+        library.p5,
+        text,
+        spriteX,
+        spriteY,
+        bubbleType,
+        this.bubbleView_ || undefined
+      );
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));
@@ -1399,6 +1410,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     camera.position.y = focus.y;
     camera.on();
     p5.drawSprites();
+    this.bubbleView_ = {
+      x: focus.x - APP_WIDTH / (2 * zoom),
+      y: focus.y - APP_HEIGHT / (2 * zoom),
+      width: APP_WIDTH / zoom,
+      height: APP_HEIGHT / zoom,
+    };
     library.drawSpeechBubbles();
     camera.off();
   }
