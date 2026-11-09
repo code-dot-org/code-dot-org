@@ -607,7 +607,10 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
-      // Squares are default-grid cells; other grid sizes need a new guard.
+      // TODO: When we support configurable grid sizes (vs. just 10x10),
+      // consider updating the code everywhere we have
+      // library.defaultSpriteSize and cellSize(DEFAULT_SCENE_GRID_SIZE),
+      // which are both 40.
       const jumpSpeed =
         speed === undefined
           ? Math.sqrt(
