@@ -70,8 +70,7 @@ declare module '@mui/material/Breadcrumbs' {
   }
 }
 
-// The tooltip portals out of any surrounding `data-theme` subtree, so callers
-// pass the theme to its slot explicitly. See styleOverrides/tooltip.ts.
+// Lets a call site pin the bubble's theme; ThemeProvider otherwise supplies it.
 declare module '@mui/material/Tooltip' {
   interface TooltipTooltipSlotPropsOverrides {
     'data-theme'?: DataThemeMode;
