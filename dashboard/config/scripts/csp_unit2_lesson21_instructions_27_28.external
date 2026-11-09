@@ -1,0 +1,31 @@
+name 'csp_unit2_lesson21_instructions_27_28'
+title 'Modify: Pattern Gallery'
+description 'description here'
+
+markdown <<MARKDOWN
+## Modify: Pattern Gallery
+
+Next you will choose a pattern from the gallery. Each one was written by a different author, and your job is to make it your own.
+
+1. Run it as-is first.
+2. Change one thing at a time: the count, the spacing, the color, the shape, the size.
+3. Add a second loop that adds something new to the scene.
+4. Update the comment at the top: name the author and say what you changed.
+
+
+---
+
+> **Credit it like this**
+>
+> Before:
+> ```python
+> # City at Night — original by Ms. Rivera
+> ```
+>
+> After:
+> ```python
+> # City at Night — original by Ms. Rivera. Changed window count and color; added a third row. Modified by <your name>
+> ```
+>
+> Who it came from + what you changed. A pattern with no comment does not pass, even if it looks great.
+MARKDOWN

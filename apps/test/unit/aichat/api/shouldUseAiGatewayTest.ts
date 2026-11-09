@@ -31,6 +31,20 @@ describe('shouldUseAiGateway', () => {
     expect(shouldUseAiGateway(AiChatModelIds.MISTRAL)).toBe(false);
   });
 
+  it('always routes a model Rails cannot serve', () => {
+    expect(shouldUseAiGateway(AiChatModelIds.GEMINI_2_5_FLASH_IMAGE)).toBe(
+      true
+    );
+    expect(shouldUseAiGateway(AiChatModelIds.GPT_5_6_LUNA)).toBe(true);
+    expect(shouldUseAiGateway(AiChatModelIds.GPT_6_LUNA)).toBe(true);
+  });
+
+  it('leaves gpt-4o-mini on Rails', () => {
+    setAiGatewayOptIn(true);
+    mockExperiment.mockReturnValue(true);
+    expect(shouldUseAiGateway(AiChatModelIds.CHATGPT)).toBe(false);
+  });
+
   it('still honours the experiment on its own', () => {
     mockExperiment.mockReturnValue(true);
     expect(shouldUseAiGateway(AiChatModelIds.GEMINI_2_5_FLASH)).toBe(true);
