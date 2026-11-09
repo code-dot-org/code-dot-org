@@ -467,7 +467,7 @@ $z-over-blockly: 71;
 // Four buttons: the up key over a row of left, down and right; three keys
 // and two gaps across, which the playspace's CROSS_KEY and CROSS_KEY_GAP
 // repeat to place it.
-$arrow-key: 34px;
+$arrow-key: 38px;
 $arrow-gap: 6px;
 
 .arrowCross {
@@ -508,10 +508,10 @@ $arrow-gap: 6px;
   min-width: $arrow-key;
   min-height: $arrow-key;
   padding: 0;
-  border-radius: 7px;
+  border-radius: 8px;
   background: var(--background-neutral-primary-inverse);
   color: var(--text-neutral-primary-inverse);
-  font-size: 12px;
+  font-size: 14px;
 
   &:hover,
   &:active {

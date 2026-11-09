@@ -42,18 +42,15 @@ const MARGIN = 12;
 const BOTTOM_BAR_PX = 41;
 // The arrow cross: three keys and two gaps across, as the stylesheet's
 // .arrowCross has them; the same size in every mode.
-const CROSS_KEY = 34;
+const CROSS_KEY = 38;
 const CROSS_KEY_GAP = 6;
 // Three keys across; two rows, the up key over left, down and right.
 const CROSS_SIZE = {
   w: 3 * CROSS_KEY + 2 * CROSS_KEY_GAP,
   h: 2 * CROSS_KEY + CROSS_KEY_GAP,
 };
-// Under the preview the cross sits this far below the box and this share
-// of the box's width in from its left edge, so buttons could one day join
-// it on the right.
+// Under the preview the cross sits this far below the box.
 const PREVIEW_CROSS_GAP = 2 * MARGIN;
-const PREVIEW_CROSS_INSET_SHARE = 0.06;
 // The restart buttons' inset from the play area's top-right corner, as the
 // stylesheet's .playControls has it.
 const CONTROLS_INSET = 8;
@@ -199,8 +196,8 @@ type PlayLayout = {box: Placement; cross: {x: number; y: number} | null};
 
 /**
  * Where the play view and its arrow cross go: the box centered on the stage
- * with the cross in the room to its right, half a key left of that room's
- * center, or the cross under the box when that leaves the box bigger.
+ * with the cross centered in the room to its right, or under the box when
+ * that leaves the box bigger.
  * `cross` is its size; null means there is none. `reserveBottom` is the
  * bar's room. `corner` is the size of the restart
  * buttons in the top-right corner: a box that would reach under them is
@@ -314,10 +311,7 @@ function playLayoutUnder(
   return {
     box: beside,
     cross: {
-      x: Math.max(
-        boxRight + MARGIN,
-        boxRight + (size.w - boxRight - cross.w) / 2 - CROSS_KEY / 2
-      ),
+      x: boxRight + (size.w - boxRight - cross.w) / 2,
       y: beside.y + (boxSide - cross.h) / 2,
     },
   };
@@ -718,12 +712,12 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       : null;
   const placement: Placement = playing ? playing.box : previewPlacement;
   const {x, y, scale} = placement;
-  // In preview the cross sits under the box, toward its left.
+  // In preview the cross sits under the box, centered on it.
   const cross = playing
     ? playing.cross
     : arrows
     ? {
-        x: previewPlacement.x + previewBoxSide * PREVIEW_CROSS_INSET_SHARE,
+        x: previewPlacement.x + (previewBoxSide - crossSize.w) / 2,
         y: previewPlacement.y + previewBoxSide + PREVIEW_CROSS_GAP,
       }
     : null;

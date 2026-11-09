@@ -88,11 +88,10 @@ describe('playPlacement', () => {
 });
 
 describe('playLayout', () => {
-  // Three 34px keys and two 6px gaps across, two rows high.
-  const CROSS = {w: 114, h: 74};
-  const HALF_KEY = 17;
+  // Three 38px keys and two 6px gaps across, two rows high.
+  const CROSS = {w: 126, h: 82};
 
-  it('centers the box on a wide stage, the cross in the room to its right, half a key left', () => {
+  it('centers the box on a wide stage, the cross in the room to its right', () => {
     const {box: p, cross} = playLayout(
       {w: 1200, h: 600},
       null,
@@ -105,28 +104,28 @@ describe('playLayout', () => {
     expect(b.bottom - b.top).toBe(600 - 41 - 24);
     expect(b.left).toBeCloseTo(1200 - b.right);
     expect(cross).not.toBeNull();
-    expect(cross!.x + CROSS.w / 2).toBeCloseTo((b.right + 1200) / 2 - HALF_KEY);
+    expect(cross!.x + CROSS.w / 2).toBeCloseTo((b.right + 1200) / 2);
     // Centered on the box's height.
     expect(cross!.y + CROSS.h / 2).toBeCloseTo((b.top + b.bottom) / 2);
   });
 
   it('narrows the box on both sides when the cross would not fit beside it', () => {
     const {box: p, cross} = playLayout(
-      {w: 750, h: 600},
+      {w: 800, h: 600},
       null,
       'right',
       41,
       CROSS
     );
     const b = box(p);
-    // A centered box filling the height leaves (750 - 535) / 2 right of
+    // A centered box filling the height leaves (800 - 535) / 2 right of
     // it, short of the cross and its margins: the box gives up that room
     // on both sides and stays centered.
-    expect(b.right - b.left).toBe(750 - 2 * (CROSS.w + 24) - 24);
-    expect(b.left).toBeCloseTo(750 - b.right);
-    expect(b.right + CROSS.w + 2 * 12).toBeLessThanOrEqual(750);
-    // Half a key left of center would touch the box: a margin off it instead.
-    expect(cross!.x).toBeCloseTo(b.right + 12);
+    expect(b.right - b.left).toBe(800 - 2 * (CROSS.w + 24) - 24);
+    expect(b.left).toBeCloseTo(800 - b.right);
+    expect(b.right + CROSS.w + 2 * 12).toBeLessThanOrEqual(800);
+    // Centered in the room given up.
+    expect(cross!.x + CROSS.w / 2).toBeCloseTo((b.right + 800) / 2);
   });
 
   it('puts the cross under the box on a tall stage when that leaves it bigger', () => {
