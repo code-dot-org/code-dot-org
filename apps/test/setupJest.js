@@ -43,11 +43,12 @@ window.matchMedia = jest.fn(() => ({
 }));
 window.fetch = mockFetch;
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
+// A class, not jest.fn: suites that call jest.resetAllMocks() would strip a mock's methods.
+global.ResizeObserver = class {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
 
 global.speechSynthesis = {
   speak: jest.fn(),
