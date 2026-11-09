@@ -43,19 +43,23 @@ class DatabaseConfigurationTest < ActiveSupport::TestCase
     Rails.application.config.database_configuration.fetch(Rails.env).fetch(name)
   end
 
-  test 'connects writes through RDS Proxy from processes that serve concurrent requests' do
-    [:web_application, :active_job_worker].each do |context|
-      assert_equal RDS_PROXY_WRITER,
-        rendered_pool('primary', db_proxy: 'rdsproxy', execution_context: context)['host'],
-        "#{context} must connect writes through RDS Proxy"
-    end
+  test 'connects writes through RDS Proxy from the web application' do
+    assert_equal RDS_PROXY_WRITER,
+      rendered_pool('primary', db_proxy: 'rdsproxy', execution_context: :web_application)['host']
   end
 
   test 'connects writes directly to the database writer endpoint from every other process' do
     # The build, migrations, cron jobs and dashboard-console run one long task rather than many concurrent short ones,
     # so they gain nothing from multiplexing and should not inherit the proxy's timeout and pinning behavior.
-    assert_equal DATABASE_WRITER,
-      rendered_pool('primary', db_proxy: 'rdsproxy', execution_context: nil)['host']
+    #
+    # Active Job workers run on the `daemon` instance, which has never had ProxySQL installed, so they have always
+    # connected directly to the cluster's writer endpoint. They also hold MySQL advisory locks, which RDS Proxy must
+    # pin to a single database connection for the remainder of the session.
+    [nil, :active_job_worker].each do |context|
+      assert_equal DATABASE_WRITER,
+        rendered_pool('primary', db_proxy: 'rdsproxy', execution_context: context)['host'],
+        "#{context.inspect} must connect writes directly to the database writer endpoint"
+    end
   end
 
   test 'connects writes through ProxySQL from every process' do

@@ -1,4 +1,5 @@
 <%
+require 'cdo/database_proxy'
 require 'dynamic_config/dcdo'
 
 # Legacy database connection configuration settings. The Chef recipe that conditionally installs ProxySQL modifies
@@ -6,13 +7,6 @@ require 'dynamic_config/dcdo'
 # is installed and listening for client database connections.
 writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
 reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
-
-# Which proxy, if any, this Rails process connects through: 'proxysql', 'rdsproxy', or 'none'.
-proxysql_installed = !CDO.db_proxy_admin.nil?
-database_proxy = CDO.db_proxy.to_s.strip
-# An unset `CDO.db_proxy` preserves the current production functionality, rather than silently moving reads off ProxySQL.
-database_proxy = proxysql_installed ? 'proxysql' : 'none' if database_proxy.empty?
-database_proxy = 'none' if database_proxy == 'proxysql' && !proxysql_installed
 
 # Client database connection configuration settings for the primary (writer instance), replica (read replica instances), and reporting (reporting instances).
 # Each defaults to its RDS Proxy endpoint; the overrides below select ProxySQL or a direct database connection where the deployment, or this process, calls for one.
@@ -43,8 +37,8 @@ db_connection_settings = {
   # This is set to the hostname of the MySQL daemon on development, continuous integration, and default adhoc systems.
   writer_endpoint = {host: CDO.db_endpoint_writer, port: CDO.db_endpoint_writer_port}
 
-  case database_proxy
-  when 'proxysql'
+  case Cdo::DatabaseProxy.selected
+  when Cdo::DatabaseProxy::PROXYSQL
     hash[:primary] = {
       database: writer.path.sub(%r{^/}, ""),
       host: writer.host,
@@ -59,17 +53,11 @@ db_connection_settings = {
       username: reader.user,
       password: reader.password,
     }
-  when 'none'
+  when Cdo::DatabaseProxy::NONE
     hash[:primary] = hash[:primary].merge(writer_endpoint)
     hash[:primary_replica] = hash[:primary_replica].merge(writer_endpoint)
   else
-    # Only use RDS Proxy for writer connections when executing in a web application server or an Active Job worker.
-    # Database connection multiplexing is for optimizing connections when multiple processes are executing requests/jobs
-    # concurrently. Build jobs and administrative Ruby shell scripts should talk directly to the cluster's writer endpoint
-    # to minimize complexity and risk.
-    unless CDO.running_web_application? || CDO.running_active_job_worker?
-      hash[:primary] = hash[:primary].merge(writer_endpoint)
-    end
+    hash[:primary] = hash[:primary].merge(writer_endpoint) unless Cdo::DatabaseProxy.rds_proxy_for_writes?
   end
 end
 %>

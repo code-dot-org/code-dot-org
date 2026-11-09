@@ -7,10 +7,14 @@ import {
   moderateOutput,
 } from '@cdo/apps/adaptive/ai/generate';
 import {startTrace} from '@cdo/apps/adaptive/ai/langfuse/trace';
+import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  AiChatModelIds,
+} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aiGateway', () => ({generateText: jest.fn()}));
 jest.mock('@code-dot-org/core/plugins/observability', () => ({
@@ -25,6 +29,7 @@ jest.mock('@cdo/apps/dcdo', () => ({
   default: {get: jest.fn()},
 }));
 jest.mock('@cdo/apps/aichat/api/client/helpers/modelHelpers', () => ({
+  ...jest.requireActual('@cdo/apps/aichat/api/client/helpers/modelHelpers'),
   getModel: jest.fn(() => 'model'),
 }));
 const mockLogError = jest.fn();
@@ -51,7 +56,13 @@ const trace = {
   name: 'adaptive-instructions' as const,
   metadata: {stepId: 'build'},
 };
-const options = {schema, prompt: 'p', context, trace};
+const options = {
+  schema,
+  model: AiChatModelIds.GEMINI_3_1_FLASH_LITE,
+  prompt: 'p',
+  context,
+  trace,
+};
 const gatewayResult = {
   output: {instructions: 'Do this.'},
   usage: {inputTokens: 10, outputTokens: 2, totalTokens: 12},
@@ -79,6 +90,14 @@ describe('generate', () => {
     });
   });
 
+  it("asks the caller's model", async () => {
+    mockGenerateText.mockResolvedValue(gatewayResult);
+
+    await generate(options);
+    expect(getModel).toHaveBeenCalledWith('gemini-3.1-flash-lite');
+    expect(mockGenerateText.mock.calls[0][0]).toMatchObject({model: 'model'});
+  });
+
   it('starts the trace with the prompt and context, and ends it with usage and response id', async () => {
     mockGenerateText.mockResolvedValue(gatewayResult);
 
@@ -87,7 +106,7 @@ describe('generate', () => {
     expect(mockStartTrace).toHaveBeenCalledWith({
       name: 'adaptive-instructions',
       levelId: 7,
-      model: expect.any(String),
+      model: 'gemini-3.1-flash-lite',
       prompt: 'p',
       metadata: {stepId: 'build', scriptId: undefined},
     });
@@ -155,6 +174,17 @@ describe('moderateInput', () => {
       phase: 'input_filter',
       aichatContext: context,
     });
+  });
+
+  it("asks the judge on the shell's model, at the judge's own thinking", async () => {
+    mockGenerateText.mockResolvedValue({output: {classification: 'OK'}});
+
+    await moderateInput('a site about dogs', context);
+
+    expect(getModel).toHaveBeenCalledWith('gemini-3.1-flash-lite');
+    expect(mockGenerateText.mock.calls[0][0]).not.toHaveProperty(
+      'providerOptions'
+    );
   });
 
   it('is flagged when the judge does not clear the text', async () => {
