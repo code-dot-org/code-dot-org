@@ -5,7 +5,6 @@ import {
 } from '@cdo/apps/blockly/utils/toolbox';
 
 import {BURST_BLOCK_TYPE} from '../blockDefinitions/burst';
-import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
 import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
@@ -46,7 +45,6 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
   ],
   'Game Design': [
     GO_TO_SCENE_BLOCK_TYPE,
-    GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
     RESTART_SCENE_BLOCK_TYPE,
     SHOW_TITLE_BLOCK_TYPE,
     'spritelab2_setPlatformJumpHeight',

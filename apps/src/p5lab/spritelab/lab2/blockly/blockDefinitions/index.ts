@@ -6,7 +6,6 @@ import askAi from './askAi';
 import askAiWithChoices from './askAiWithChoices';
 import beginsBehavior from './beginsBehavior';
 import burst from './burst';
-import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
 import makePlatformBlocks from './makePlatformBlocks';
 import makePlatformPlayer from './makePlatformPlayer';
@@ -44,7 +43,6 @@ const labBlockDefinitions: {
   playSoundEffect,
   whenRun,
   whenPlayer,
-  goToExternalScene,
   restartScene,
   movingLeft,
   movingWithArrowKeys,
