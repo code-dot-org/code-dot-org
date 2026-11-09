@@ -145,4 +145,15 @@ class SequelTest < Minitest::Test
   ensure
     db&.disconnect
   end
+
+  def test_database_connection_pool_does_not_assert_sql_auto_is_null
+    db = Cdo::Sequel.database_connection_pool('mysql2://root@localhost/dashboard')
+    connection_setting_sqls = db.send(:mysql_connection_setting_sqls)
+
+    assert_empty connection_setting_sqls.grep(/SQL_AUTO_IS_NULL/i)
+    # The rest of the connection setup is untouched.
+    refute_empty connection_setting_sqls.grep(/wait_timeout/i)
+  ensure
+    db&.disconnect
+  end
 end
