@@ -380,6 +380,27 @@ module Cdo
             assert_includes batches[0][1], 'CREATE MATERIALIZED VIEW learning_platform_production_pii.users'
             assert_equal ['learning_platform_production_pii.users'], result.keys
           end
+
+          it 'rebuilds only the views named in `only`' do
+            batches = []
+            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; true}.returns(['id'])
+
+            result = generator.create_or_replace_views(
+              client: client, environment_type: :production, only: ['learning_platform_production.users']
+            )
+
+            assert_equal ['learning_platform_production.users'], result.keys
+            assert_equal 1, batches.length
+            assert_equal 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_production.users', batches[0][0]
+          end
+
+          it 'submits nothing when `only` is empty' do
+            client.expects(:batch_execute_async).never
+
+            assert_empty generator.create_or_replace_views(
+              client: client, environment_type: :production, only: []
+            )
+          end
         end
 
         describe '.view_status' do
@@ -1240,6 +1261,32 @@ module Cdo
             assert_includes plan[:to_update], 'learning_platform_production_pii.users'
             assert_includes plan[:to_update], 'learning_platform_production.users'
             assert_empty plan[:to_drop]
+          end
+
+          it 'leaves a view alone when only its sibling view changed' do
+            pii_fqn = 'learning_platform_production_pii.users'
+            non_pii_fqn = 'learning_platform_production.users'
+            pii_hash = MaterializedViewManager.ddl_hash(
+              MaterializedViewManager.new(model).rendered_ddls(environment_type: 'production')[pii_fqn][:sql]
+            )
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'comment' => pii_hash},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'comment' => nil}
+              ]
+            )
+            batches = []
+            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; true}.returns(['id'])
+
+            result = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            assert_equal [pii_fqn], result[:unchanged]
+            assert_equal [non_pii_fqn], result[:to_update]
+            assert_equal [non_pii_fqn], result[:statements].keys
+            assert_equal 1, batches.length
+            refute(batches.flatten.any? {|sql| sql.include?(pii_fqn)})
           end
 
           it 'classifies orphaned views as to_drop' do
