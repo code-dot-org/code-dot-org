@@ -117,10 +117,13 @@ export default class StudioSpriteSheet {
 
   /** @return {number} number of animation frames for a given type. */
   getAnimationFrameCount(animationType) {
-    return valueOr(
-      this.animationFrameCounts[animationType],
-      this.defaultFramesPerAnimation
-    );
+    // GLOBAL ANIMATION DISABLE: Always return 1 frame
+    return 1;
+    // Original code (disabled):
+    // return valueOr(
+    //   this.animationFrameCounts[animationType],
+    //   this.defaultFramesPerAnimation
+    // );
   }
 
   /**
@@ -133,32 +136,38 @@ export default class StudioSpriteSheet {
    *          top-left corner.
    */
   getFrame(animationType, animationIndex, frameIndex) {
-    var x, y;
-    if (this.packedSheetFrameCount) {
-      var absoluteFrameIndex =
-        this.animationOffsets[animationType] +
-        this.animationFrameCounts[animationType] * animationIndex;
-      absoluteFrameIndex += frameIndex;
+    // GLOBAL ANIMATION DISABLE: Always return the first frame (frame 0) of the grid
+    var x = 0;
+    var y = 0;
 
-      if (this.horizontalAnimation) {
-        x = this.frameWidth * (absoluteFrameIndex % this.columnCount);
-        y =
-          this.frameHeight * Math.floor(absoluteFrameIndex / this.columnCount);
-      } else {
-        x = this.frameWidth * Math.floor(absoluteFrameIndex / this.rowCount);
-        y = this.frameHeight * (absoluteFrameIndex % this.rowCount);
-      }
-    } else {
-      if (animationType) {
-        animationIndex += this.animationOffsets[animationType];
-      }
-      x =
-        this.frameWidth *
-        (this.horizontalAnimation ? frameIndex : animationIndex);
-      y =
-        this.frameHeight *
-        (this.horizontalAnimation ? animationIndex : frameIndex);
-    }
+    // Original code (disabled to force first frame):
+    // var x, y;
+    // if (this.packedSheetFrameCount) {
+    //   var absoluteFrameIndex =
+    //     this.animationOffsets[animationType] +
+    //     this.animationFrameCounts[animationType] * animationIndex;
+    //   absoluteFrameIndex += frameIndex;
+    //
+    //   if (this.horizontalAnimation) {
+    //     x = this.frameWidth * (absoluteFrameIndex % this.columnCount);
+    //     y =
+    //       this.frameHeight * Math.floor(absoluteFrameIndex / this.columnCount);
+    //   } else {
+    //     x = this.frameWidth * Math.floor(absoluteFrameIndex / this.rowCount);
+    //     y = this.frameHeight * (absoluteFrameIndex % this.rowCount);
+    //   }
+    // } else {
+    //   if (animationType) {
+    //     animationIndex += this.animationOffsets[animationType];
+    //   }
+    //   x =
+    //     this.frameWidth *
+    //     (this.horizontalAnimation ? frameIndex : animationIndex);
+    //   y =
+    //     this.frameHeight *
+    //     (this.horizontalAnimation ? animationIndex : frameIndex);
+    // }
+
     return {
       x: x,
       y: y,
