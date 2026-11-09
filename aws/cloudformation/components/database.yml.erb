@@ -204,6 +204,40 @@
                 Action: secretsmanager:GetSecretValue
                 Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/${AWS::StackName}/db_credential_employee_*"
       PermissionsBoundary: !ImportValue IAM-DevPermissions
+  DBProxy:
+    Type: AWS::RDS::DBProxy
+    DependsOn: [WriterSQLUser, ReaderSQLUser]
+    Properties:
+      DBProxyName: !Ref AWS::StackName
+      EngineFamily: MYSQL
+      RoleArn: !GetAtt DBProxyRole.Arn
+      Auth:
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretAdmin, IAMAuth: DISABLED}
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretWriter, IAMAuth: DISABLED}
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretReader, IAMAuth: DISABLED}
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  ReaderDBProxyEndpoint:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${AWS::StackName}-reader"
+      DBProxyName: !Ref DBProxy
+      TargetRole: READ_ONLY
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  DBProxyTargetGroup:
+    Type: AWS::RDS::DBProxyTargetGroup
+<%  unless rack_env?(:production)%>
+    # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
+    # These Database Instances are not yet provisioned by this Stack.
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
+<%  end -%>
+    Properties:
+      DBProxyName: !Ref DBProxy
+      DBClusterIdentifiers: [<%=rack_env?(:production) ? "'#{PRODUCTION_DB_CLUSTER_ID}'" : '!Ref AuroraCluster'%>]
+      TargetGroupName: default
+      ConnectionPoolConfigurationInfo:
+        ConnectionBorrowTimeout: 10
   ReportingDBProxy:
     Type: AWS::RDS::DBProxy
     DependsOn: ReaderSQLUser
