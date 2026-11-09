@@ -20,7 +20,6 @@ const MULTIPLE_CHOICE_QUESTION: QuizBuilderQuestion = {
   standards: [],
   attachedToOtherQuizzes: false,
   usedInPublishedUnit: false,
-  page: 1,
 };
 
 const MULTIPLE_SELECT_QUESTION: QuizBuilderQuestion = {
@@ -39,7 +38,6 @@ const MULTIPLE_SELECT_QUESTION: QuizBuilderQuestion = {
   standards: [],
   attachedToOtherQuizzes: false,
   usedInPublishedUnit: false,
-  page: 1,
 };
 
 // QuizQuestionCard doesn't own its expanded state (QuizBuilderWorkspace does,
@@ -55,6 +53,7 @@ function renderCard(
     return (
       <QuizQuestionCard
         question={MULTIPLE_CHOICE_QUESTION}
+        page={1}
         onSave={onSave}
         onRemove={onRemove}
         {...props}
@@ -68,6 +67,12 @@ function renderCard(
 }
 
 describe('QuizQuestionCard', () => {
+  it('shows the page it is given on the Usage tab', () => {
+    renderCard({isExpanded: true, page: 3});
+    fireEvent.click(screen.getByRole('tab', {name: 'Usage'}));
+    expect(screen.getByText('Page 3')).toBeInTheDocument();
+  });
+
   it('shows a collapsed preview by default', () => {
     renderCard();
 

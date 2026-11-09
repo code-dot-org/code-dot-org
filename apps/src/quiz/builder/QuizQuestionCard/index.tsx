@@ -19,6 +19,8 @@ import styles from './quiz-question-card.module.scss';
 
 interface QuizQuestionCardProps {
   question: QuizBuilderQuestion;
+  // The page the question is on in the quiz being built.
+  page: number;
   isExpanded: boolean;
   onExpandedChange: (expanded: boolean) => void;
   error?: string | null;
@@ -83,6 +85,7 @@ function toPayload(draft: QuizQuestionDraft): QuizQuestionPayload {
 // state, saved or discarded independently of the rest of the outline.
 const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   question,
+  page,
   isExpanded,
   onExpandedChange,
   error,
@@ -194,7 +197,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
           {
             value: 'usage',
             text: 'Usage',
-            tabContent: <UsageTab question={question} />,
+            tabContent: <UsageTab question={question} page={page} />,
           },
         ]}
         onChange={() => {}}
