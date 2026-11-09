@@ -20,7 +20,7 @@ const mockAddChatEvent = addChatEvent as jest.Mock;
 const forbidden = (body: object) =>
   ({
     response: new Response(JSON.stringify(body), {status: 403}),
-  }) as unknown as NetworkError;
+  } as unknown as NetworkError);
 
 const shownText = () => mockAddChatEvent.mock.calls[0][0].text;
 

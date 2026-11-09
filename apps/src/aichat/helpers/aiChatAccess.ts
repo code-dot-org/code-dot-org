@@ -1,8 +1,8 @@
+import shouldUseAiGateway from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import {
   AiChatAccessLevel,
   AiChatToolsDependencyValue,
 } from '@cdo/apps/aichat/types/accessControls';
-import shouldUseAiGateway from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import {
   AiChatAccessLevels,
