@@ -17,14 +17,6 @@ export function getBlockDefinitionsForUpdatedLocale(
   // Call into our localization engine to get the new blocks and refresh all active
   // workspaces.
 
-  // Copy over new localization keys for the normal blocks in 'Msg'
-  for (const [key, value] of Object.entries(Blockly.Msg || {})) {
-    Blockly.SourceMsg[key] ||= value;
-    Blockly.Msg[key] = localization.translate(Blockly.SourceMsg[key], [
-      'blockly-block',
-    ]);
-  }
-
   // Go through custom and shared blocks to translate the blockText there
   // This means recreating the block init() functions with updated block
   // configurations.
@@ -33,10 +25,19 @@ export function getBlockDefinitionsForUpdatedLocale(
   )) {
     const blockDefinition =
       Blockly.SourceCustomBlocks.blockDefinitionsByName[blockName];
+
+    if (!blockDefinition.config.sourceArgs) {
+      blockDefinition.config.sourceArgs = blockDefinition.config.args;
+    }
+
+    blockDefinition.config.args = blockDefinition.config.sourceArgs || [];
+
     Blockly.SourceCustomBlocks.blockTexts[blockName] ||=
       blockDefinition.config.blockText;
+
     const oldBlockText = Blockly.SourceCustomBlocks.blockTexts[blockName];
     let newBlockText: string = oldBlockText;
+
     if (blockDefinition.config.returnType === 'Behavior') {
       newBlockText = localization.translate(`[behavior] ${oldBlockText}`, [
         'blockly-block',
@@ -55,14 +56,41 @@ export function getBlockDefinitionsForUpdatedLocale(
       newBlockText = localization.translate(oldBlockText, ['blockly-block']);
     }
 
-    // Unfreeze the block definition to add the new translation strings
-    Blockly.SourceCustomBlocks.blockDefinitionsByName[blockName] = {
+    const args = blockDefinition.config.args
+      ? [...blockDefinition.config.args]
+      : blockDefinition.config.args;
+
+    (args || []).forEach((arg, i) => {
+      if (arg.options) {
+        // Deep clone the argument
+        args[i] = {...args[i]};
+
+        args[i].options = arg.options.map(item => {
+          // Sometimes the options list is just an array of strings rather than
+          // a tuple of a label and an id. This is typically true of grid/image
+          // dropdowns.
+          if (!Array.isArray(item)) {
+            return item;
+          }
+
+          const [text, ...rest] = item;
+          return [localization.translate(text, ['blockly-block']), ...rest];
+        });
+      }
+    });
+
+    const newDefinition = {
       ...blockDefinition,
       config: {
         ...blockDefinition.config,
+        ...(args ? {args} : {}),
         blockText: newBlockText,
       },
     };
+
+    // Unfreeze the block definition to add the new translation strings
+    Blockly.SourceCustomBlocks.blockDefinitionsByName[blockName] =
+      newDefinition;
   }
 
   return Object.values(Blockly.SourceCustomBlocks.blockDefinitionsByName);
