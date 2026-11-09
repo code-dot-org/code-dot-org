@@ -1,6 +1,5 @@
 import animBurst from '@cdo/static/spritelab_lab2/block-help/burst.gif';
 import animGoToExternalScene from '@cdo/static/spritelab_lab2/block-help/go-to-external-scene.png';
-import animPlayMusic from '@cdo/static/spritelab_lab2/block-help/play-music.png';
 import animPlaySound from '@cdo/static/spritelab_lab2/block-help/play-sound.gif';
 import animSetASpriteProperty from '@cdo/static/spritelab_lab2/block-help/set-a-sprite-property.gif';
 import animSetGravity from '@cdo/static/spritelab_lab2/block-help/set-gravity.gif';
@@ -80,13 +79,6 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     animation: {src: animPlaySound, alt: 'The play sound block in action.'},
     summary: 'Plays one short sound, once.',
     body: 'Put it under an event, such as a touch or a click.',
-  },
-  spritelab2_playMusic: {
-    title: 'Play music',
-    animation: {src: animPlayMusic, alt: 'Musical notes.'},
-    summary:
-      'Plays one of your Music Lab songs, repeating, while the game plays.',
-    body: 'Put it under "when run" in the scene where the music should start.',
   },
   spritelab2_setWeather: {
     title: 'Set weather',
