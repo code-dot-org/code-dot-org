@@ -1,5 +1,5 @@
 import {pick} from 'lodash';
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 
 import {LabProps} from '@cdo/apps/lab2/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -11,6 +11,7 @@ import QuizBuilderWorkspace from './QuizBuilderWorkspace';
 import QuizConfigurationPanel, {
   QuizConfigurationData,
 } from './QuizConfigurationPanel';
+import {advanceQuizVersion} from './useQuizBuilderQuestions';
 
 export default function useQuizBuilderView({
   levelProperties,
@@ -28,10 +29,19 @@ export default function useQuizBuilderView({
     showQuestionsAfterSubmit: toBool(props.showQuestionsAfterSubmit),
   });
 
+  // The quiz's saved version, which Save quiz sends back. Every quiz save
+  // returns a new one. A ref, since nothing renders it.
+  const quizVersion = useRef<number | null>(null);
+
   // Saves may overlap and resolve out of order; each applies only the fields
   // it sent, since the response's other fields can be stale.
-  const applySaved = (updated: Partial<QuizConfigurationData>) =>
+  const applySaved = (
+    updated: Partial<QuizConfigurationData>,
+    version: number
+  ) => {
+    advanceQuizVersion(quizVersion, version);
     setQuizConfig(prev => ({...prev, ...updated}));
+  };
 
   const saveQuizConfig = async (fields: Partial<QuizConfigurationData>) => {
     const response = await HttpClient.put(
@@ -40,7 +50,8 @@ export default function useQuizBuilderView({
       true,
       {'Content-Type': 'application/json'}
     );
-    applySaved(pick(await response.json(), Object.keys(fields)));
+    const saved = await response.json();
+    applySaved(pick(saved, Object.keys(fields)), saved.version);
   };
 
   return {
@@ -63,6 +74,7 @@ export default function useQuizBuilderView({
     workspaceContent: (
       <QuizBuilderWorkspace
         levelId={levelId}
+        quizVersion={quizVersion}
         quizTitle={quizConfig.displayName || levelProperties.name}
         showIntroScreen={quizConfig.showIntroScreen}
         customIntroText={quizConfig.customIntroText ?? ''}
