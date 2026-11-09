@@ -65,9 +65,11 @@ describe('fieldApplies', () => {
     );
   });
 
-  it('offers nothing beyond the kind on a free play level', () => {
+  it('offers only the Images tab fields on a free play level', () => {
     expect(fieldApplies({kind: 'freeplay'}, 'imageType')).toBe(false);
     expect(fieldApplies({kind: 'freeplay'}, 'imageFirst')).toBe(false);
+    expect(fieldApplies({kind: 'freeplay'}, 'learning')).toBe(true);
+    expect(fieldApplies({kind: 'freeplay'}, 'imageSource')).toBe(true);
   });
 
   it('offers nothing without a kind', () => {
@@ -93,13 +95,18 @@ describe('setImageType', () => {
     ).toEqual({kind: 'image', imageType: 'block'});
   });
 
-  it('drops the subject and role when the type is cleared', () => {
+  it('drops the subject when the type is cleared, keeping the role', () => {
     expect(
       setImageType(
-        {kind: 'world', imageType: 'sprite', imageSubject: 'object'},
+        {
+          kind: 'world',
+          imageType: 'sprite',
+          imageSubject: 'object',
+          imageRole: 'hero',
+        },
         undefined
       )
-    ).toEqual({kind: 'world'});
+    ).toEqual({kind: 'world', imageRole: 'hero'});
   });
 });
 

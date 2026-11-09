@@ -56,7 +56,7 @@ const KIND_ITEMS = [
   })),
 ];
 
-const IMAGE_TYPES_ITEMS = IMAGE_TYPES.map(imageType => ({
+const IMAGE_TYPE_ITEMS = IMAGE_TYPES.map(imageType => ({
   value: imageType,
   text: IMAGE_TYPE_LABELS[imageType],
 }));
@@ -69,16 +69,16 @@ function imageTypeItems(
     // World levels can leave the image type unset.
     return [
       {value: NO_IMAGE_TYPE, text: 'None: use palette role'},
-      ...IMAGE_TYPES_ITEMS,
+      ...IMAGE_TYPE_ITEMS,
     ];
   }
   if (chosen === undefined) {
     return [
       {value: NO_IMAGE_TYPE, text: 'Choose a type', disabled: true},
-      ...IMAGE_TYPES_ITEMS,
+      ...IMAGE_TYPE_ITEMS,
     ];
   }
-  return IMAGE_TYPES_ITEMS;
+  return IMAGE_TYPE_ITEMS;
 }
 
 const IMAGE_SOURCE_ITEMS = [
