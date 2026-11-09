@@ -4,6 +4,9 @@
 import Tabs from '@code-dot-org/component-library/tabs';
 import React from 'react';
 
+import {GroupProgress} from './map/groupProgress';
+import MapStats from './MapStats';
+
 import styles from './adaptiveTabBar.module.scss';
 
 type TabValue = 'map' | 'project';
@@ -12,12 +15,16 @@ interface AdaptiveTabBarProps {
   activeTab: TabValue;
   onTabChange: (tab: TabValue) => void;
   projectName?: string;
+  skills?: GroupProgress[];
+  timeSpentSeconds?: number;
 }
 
 const AdaptiveTabBar: React.FunctionComponent<AdaptiveTabBarProps> = ({
   activeTab,
   onTabChange,
   projectName,
+  skills,
+  timeSpentSeconds,
 }) => (
   <div className={styles.tabBar}>
     <Tabs
@@ -44,6 +51,9 @@ const AdaptiveTabBar: React.FunctionComponent<AdaptiveTabBarProps> = ({
         },
       ]}
     />
+    {skills !== undefined && timeSpentSeconds !== undefined && (
+      <MapStats skills={skills} timeSpentSeconds={timeSpentSeconds} />
+    )}
   </div>
 );
 

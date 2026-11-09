@@ -3,11 +3,18 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 
-import {Answer, Progress, StepAnswers, visibleSteps} from '../../progress';
+import {
+  Answer,
+  Progress,
+  StepAnswers,
+  totalTimeSpent,
+  visibleSteps,
+} from '../../progress';
 import {Checkpoint, Step} from '../../types';
 import AdaptiveHeader from '../AdaptiveHeader';
 import AdaptiveTabBar from '../AdaptiveTabBar';
 import {checkpointStepFromUrl, updateUrl} from '../checkpointUrl';
+import {getSkillProgress} from '../map/groupProgress';
 import {usePathwayContext} from '../PathwayContext';
 
 import LevelStep from './LevelStep';
@@ -91,7 +98,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onTabChange,
   projectName,
 }) => {
-  const {progress} = usePathwayContext();
+  const {progress, pathway, statusMap} = usePathwayContext();
   const steps = useMemo(
     () => visibleSteps(checkpoint, progress),
     [checkpoint, progress]
@@ -263,6 +270,8 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
           activeTab={activeTab}
           onTabChange={tab => leave(() => onTabChange(tab))}
           projectName={projectName}
+          skills={getSkillProgress(pathway, statusMap)}
+          timeSpentSeconds={totalTimeSpent(progress)}
         />
       )}
       <div className={styles.playerBody}>{renderStep(step)}</div>
