@@ -11,7 +11,8 @@
     }
   }
 
-  li:has(.item:disabled) {
+  li:has(.item:disabled),
+  li:has(.item[aria-disabled='true']) {
     &:hover,
     &:active {
       background-color: transparent;
@@ -45,7 +46,8 @@
   text-align: left;
   cursor: pointer;
 
-  &:disabled {
+  &:disabled,
+  &[aria-disabled='true'] {
     color: var(--text-disabled-neutral);
     cursor: not-allowed;
   }
@@ -55,7 +57,7 @@
     outline-offset: -2px;
   }
 
-  &.destructive:not(:disabled) {
+  &.destructive:not(:disabled, [aria-disabled='true']) {
     color: var(--text-error-primary);
   }
 }

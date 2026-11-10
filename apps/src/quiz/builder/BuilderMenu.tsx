@@ -1,5 +1,6 @@
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -14,6 +15,8 @@ export interface BuilderMenuItem {
   // For an item whose label needs its group's label to make sense.
   ariaLabel?: string;
   disabled?: boolean;
+  // Turns the item off but keeps it focusable, to show this in a tooltip.
+  disabledReason?: string;
   destructive?: boolean;
 }
 
@@ -37,28 +40,35 @@ const MenuItem: React.FunctionComponent<BuilderMenuItem> = ({
   iconName,
   ariaLabel,
   disabled = false,
+  disabledReason,
   destructive = false,
 }) => (
   <li>
-    <button
-      type="button"
-      className={classNames(styles.item, destructive && styles.destructive)}
-      disabled={disabled}
-      aria-label={ariaLabel}
-      onClick={() => {
-        onClick();
-        closeDropdown();
-      }}
-    >
-      {iconName && (
-        <FontAwesomeV6Icon
-          iconName={iconName}
-          iconStyle="solid"
-          className={styles.icon}
-        />
-      )}
-      <span>{label}</span>
-    </button>
+    <Tooltip describeChild title={disabledReason ?? ''} placement="left">
+      <button
+        type="button"
+        className={classNames(styles.item, destructive && styles.destructive)}
+        disabled={disabled}
+        aria-disabled={disabledReason ? true : undefined}
+        aria-label={ariaLabel}
+        onClick={() => {
+          if (disabledReason) {
+            return;
+          }
+          onClick();
+          closeDropdown();
+        }}
+      >
+        {iconName && (
+          <FontAwesomeV6Icon
+            iconName={iconName}
+            iconStyle="solid"
+            className={styles.icon}
+          />
+        )}
+        <span>{label}</span>
+      </button>
+    </Tooltip>
   </li>
 );
 
