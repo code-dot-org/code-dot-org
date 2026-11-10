@@ -235,6 +235,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                       otherPages={pages
                         .map(({page: otherPage}) => otherPage)
                         .filter(otherPage => otherPage !== page)}
+                      hasUnsavedChanges={dirtyIds.has(question.id)}
                       onMove={offset => moveQuestion(question.id, offset)}
                       onMoveToPage={toPage =>
                         moveQuestionToPage(question.id, toPage)

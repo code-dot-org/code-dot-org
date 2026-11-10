@@ -9,6 +9,7 @@ interface QuestionMenuProps {
   canMoveDown: boolean;
   // The quiz's other pages, which the question can move to.
   otherPages: number[];
+  hasUnsavedChanges: boolean;
   onMove: (offset: -1 | 1) => void;
   onMoveToPage: (page: number) => void;
   onRemove: () => void;
@@ -19,6 +20,7 @@ const QuestionMenu: React.FunctionComponent<QuestionMenuProps> = ({
   canMoveUp,
   canMoveDown,
   otherPages,
+  hasUnsavedChanges,
   onMove,
   onMoveToPage,
   onRemove,
@@ -31,6 +33,7 @@ const QuestionMenu: React.FunctionComponent<QuestionMenuProps> = ({
           ...otherPages.map(page => ({
             label: `Page ${page}`,
             ariaLabel: `Move to Page ${page}`,
+            disabled: hasUnsavedChanges,
             onClick: () => onMoveToPage(page),
           })),
         ]

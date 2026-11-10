@@ -532,6 +532,25 @@ describe('QuizBuilderWorkspace', () => {
       expect(moveQuestionToPage).toHaveBeenCalledWith(1, 2);
     });
 
+    it('turns off moving to another page while the question has unsaved edits', () => {
+      renderWorkspace({questions: TWO_PAGES});
+
+      fireEvent.click(
+        screen.getAllByRole('button', {name: 'Edit question'})[0]
+      );
+      fireEvent.change(
+        screen.getByDisplayValue('JavaScript variable fundamentals'),
+        {target: {value: 'Edited name'}}
+      );
+
+      expect(
+        menuOf(1).getByRole('button', {name: 'Move to Page 2'})
+      ).toBeDisabled();
+      expect(
+        menuOf(1).getByRole('button', {name: 'Move question down'})
+      ).toBeEnabled();
+    });
+
     it('offers no pages to move to on a one-page quiz', () => {
       renderWorkspace({questions: [question()]});
 
