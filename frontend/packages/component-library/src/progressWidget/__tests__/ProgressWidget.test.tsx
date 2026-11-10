@@ -49,6 +49,14 @@ describe('ProgressWidget', () => {
     expect(screen.queryByRole('button')).not.toBeInTheDocument();
   });
 
+  it('draws no lesson area for a plain title with no name or save status', () => {
+    const {container} = renderWidget({
+      onLessonClick: undefined,
+      lessonLabel: '',
+    });
+    expect(container.querySelector('[title]')).not.toBeInTheDocument();
+  });
+
   it('names the bubble row', () => {
     renderWidget();
     expect(

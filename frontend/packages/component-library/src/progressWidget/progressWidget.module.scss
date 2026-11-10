@@ -1,12 +1,6 @@
 // CADS header breakpoint; apps' simple-header.module.scss repeats it.
 $narrow: 991.98px;
 
-@mixin end-corners {
-  border-inline-end: 0;
-  border-start-end-radius: calc(var(--shape-md) - 1px);
-  border-end-end-radius: calc(var(--shape-md) - 1px);
-}
-
 .widget {
   display: inline-flex;
   align-items: stretch;
@@ -15,7 +9,7 @@ $narrow: 991.98px;
   height: 30px;
   border: 1px solid var(--borders-neutral-primary);
   border-radius: var(--shape-md);
-  background-color: var(--background-neutral-secondary);
+  background-color: var(--background-neutral-primary);
   font-family: var(--font-family-main);
 }
 
@@ -26,6 +20,15 @@ $narrow: 991.98px;
   min-width: 0;
   padding-block: 0;
   padding-inline: 3px 6px;
+  border-inline-end: 1px solid var(--borders-neutral-primary);
+  border-start-start-radius: calc(var(--shape-md) - 1px);
+  border-end-start-radius: calc(var(--shape-md) - 1px);
+  background-color: var(--background-neutral-secondary);
+
+  // A plain title with no name and no save status.
+  &:empty {
+    display: none;
+  }
 }
 
 // CADS Dropdown Button; two classes to beat MUI's emotion styles.
@@ -73,18 +76,6 @@ $narrow: 991.98px;
   align-items: center;
   gap: 4px;
   padding: 0 8px;
-  border-inline: 1px solid var(--borders-neutral-primary);
-  background-color: var(--background-neutral-primary);
-
-  // Without an action the bubbles end the widget and take its corners.
-  &:last-child {
-    @include end-corners;
-  }
-
-  // Its own rule: a browser without :has() drops the whole selector list.
-  &:has(+ .action:empty) {
-    @include end-corners;
-  }
 
   // Only when some bubble is current, so the row is never left empty.
   @media (max-width: $narrow) {
@@ -108,6 +99,10 @@ $narrow: 991.98px;
   align-items: center;
   padding-block: 0;
   padding-inline: 3px;
+  border-inline-start: 1px solid var(--borders-neutral-primary);
+  border-start-end-radius: calc(var(--shape-md) - 1px);
+  border-end-end-radius: calc(var(--shape-md) - 1px);
+  background-color: var(--background-neutral-secondary);
 
   // An action component may render nothing, and a portal slot starts empty.
   &:empty {

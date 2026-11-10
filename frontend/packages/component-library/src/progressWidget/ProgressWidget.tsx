@@ -112,7 +112,7 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
         >
           <span className={moduleStyles.lessonLabel}>{lessonLabel}</span>
         </Button>
-      ) : (
+      ) : lessonLabel ? (
         <Typography
           variant="body4"
           component="span"
@@ -124,7 +124,7 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
         >
           {lessonLabel}
         </Typography>
-      )}
+      ) : null}
       {saveStatus !== 'none' && (
         <Tooltip title={saveStatusLabel} placement="bottom">
           <span
@@ -140,9 +140,6 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
           </span>
         </Tooltip>
       )}
-      <Box component="span" role="status" sx={visuallyHidden}>
-        {announcedSaveStatuses.includes(saveStatus) ? saveStatusLabel : ''}
-      </Box>
     </div>
     <div
       className={moduleStyles.bubbles}
@@ -156,6 +153,9 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
     ) : action ? (
       <div className={moduleStyles.action}>{action}</div>
     ) : null}
+    <Box component="span" role="status" sx={visuallyHidden}>
+      {announcedSaveStatuses.includes(saveStatus) ? saveStatusLabel : ''}
+    </Box>
   </div>
 );
 
