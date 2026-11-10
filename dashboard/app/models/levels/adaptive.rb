@@ -33,12 +33,17 @@ class Adaptive < Level
 
   PROJECT_STEP_ID = 'project'.freeze
 
+  # What a level made with only a name points at, until the author picks
+  # content in the editor.
+  DEFAULT_ADAPTIVE_ID = 'sample'.freeze
+
   validates :adaptive_id, presence: true
   validate :adaptive_content_exists
 
+  # The lesson editor's quick create sends a name and a type alone.
   def self.create_from_level_builder(params, level_params)
     create!(
-      level_params.merge(
+      level_params.reverse_merge(adaptive_id: DEFAULT_ADAPTIVE_ID).merge(
         user: params[:user],
         game: Game.adaptive,
         level_num: 'custom',
@@ -76,6 +81,16 @@ class Adaptive < Level
     names.filter_map {|step_id, name| [step_id, levels[name]] if levels[name]}.to_h
   end
 
+  # A student's progress on this pathway in one unit: each step's row, with
+  # each level step's UserLevel merged on top. Reads only.
+  def progress_json(user_id:, script_id:)
+    user_level = UserLevel.find_by(user_id: user_id, level_id: id, script_id: script_id)
+    rows = user_level&.user_adaptive_steps || []
+    steps = rows.filter_map {|row| (entry = row.step_json) && [row.step_id, entry]}.to_h
+    steps.merge!(level_step_progress(user_id, script_id)) {|_step_id, entry, progress| entry.merge(progress)}
+    {'steps' => steps}
+  end
+
   def sharing_levels
     Adaptive.order(:name).select {|level| level.adaptive_id == adaptive_id}
   end
@@ -108,44 +123,62 @@ class Adaptive < Level
     video_keys = video_steps(pathway).filter_map {|step| step['videoKey']}.uniq
     videos = Video.where(key: video_keys).index_by(&:key)
 
+    resolve = lambda do |checkpoint|
+      next checkpoint unless checkpoint.is_a?(Hash) && checkpoint['steps'].is_a?(Array)
+      checkpoint.merge(
+        'steps' => checkpoint['steps'].map do |step|
+          if level_step?(step)
+            level = levels[step['level']]
+            level ? step.merge('levelProperties' => yield(level)) : step
+          elsif video_step?(step)
+            video = videos[step['videoKey']]
+            next step unless video
+            step.merge(
+              'src' => video.youtube_url,
+              'download' => video.download,
+              'thumbnail' => video.thumbnail_url
+            )
+          else
+            step
+          end
+        end
+      )
+    end
+
     resolved = pathway.dup
     if pathway['project'].is_a?(Hash)
       level = levels[pathway.dig('project', 'templateLevel')]
       resolved['project'] = level ? pathway['project'].merge('levelProperties' => yield(level)) : pathway['project']
     end
     if pathway['checkpoints'].is_a?(Array)
-      resolved['checkpoints'] = pathway['checkpoints'].map do |checkpoint|
-        next checkpoint unless checkpoint.is_a?(Hash) && checkpoint['steps'].is_a?(Array)
-        checkpoint.merge(
-          'steps' => checkpoint['steps'].map do |step|
-            if level_step?(step)
-              level = levels[step['level']]
-              level ? step.merge('levelProperties' => yield(level)) : step
-            elsif video_step?(step)
-              video = videos[step['videoKey']]
-              next step unless video
-              step.merge(
-                'src' => video.youtube_url,
-                'download' => video.download,
-                'thumbnail' => video.thumbnail_url
-              )
-            else
-              step
-            end
-          end
-        )
-      end
+      resolved['checkpoints'] = pathway['checkpoints'].map(&resolve)
+    end
+    if pathway.dig('finish', 'checkpoint').is_a?(Hash)
+      resolved['finish'] = pathway['finish'].merge('checkpoint' => resolve.call(pathway['finish']['checkpoint']))
     end
     resolved
   end
 
+  # Every checkpoint's steps, the finish checkpoint's last.
   private def steps(pathway)
-    checkpoints = pathway['checkpoints']
-    return [] unless checkpoints.is_a?(Array)
+    checkpoints = pathway['checkpoints'].is_a?(Array) ? pathway['checkpoints'] : []
+    finish = pathway.dig('finish', 'checkpoint')
+    checkpoints += [finish] if finish.is_a?(Hash)
     checkpoints.flat_map do |checkpoint|
       steps = checkpoint.is_a?(Hash) ? checkpoint['steps'] : nil
       steps.is_a?(Array) ? steps.select {|step| step.is_a?(Hash)} : []
     end
+  end
+
+  # Step id => progress, for each level step the user has a UserLevel on.
+  private def level_step_progress(user_id, script_id)
+    levels = step_levels
+    user_levels = UserLevel.where(user_id: user_id, script_id: script_id, level_id: levels.values.map(&:id)).index_by(&:level_id)
+    levels.filter_map do |step_id, level|
+      user_level = user_levels[level.id]
+      next unless user_level
+      [step_id, {'status' => user_level.passing? ? 'complete' : 'started', 'timeSpent' => user_level.time_spent || 0}]
+    end.to_h
   end
 
   # Level step id => level name, the project's step included as find_step sees it.

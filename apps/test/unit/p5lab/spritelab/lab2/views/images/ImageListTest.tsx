@@ -260,16 +260,16 @@ describe('ImageList', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
     expect(onDelete).not.toHaveBeenCalled();
     // The dialog shows which image, by its picture.
-    const dialog = screen.getByRole('alertdialog');
+    const dialog = screen.getByRole('dialog');
     expect(within(dialog).getByRole('img', {name: 'Sprite 2'})).toHaveAttribute(
       'src',
       'data:b'
     );
     fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
     fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
     expect(onDelete).toHaveBeenCalledWith('b');
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
   });
 });

@@ -45,10 +45,10 @@ on both docker and podman from the same Dockerfile.
 | image | directory | adds | published as |
 |---|---|---|---|
 | cdo-base | [base/](base/README.md) | Ruby on slim Debian, mysql client, ImageMagick, jemalloc, locales, the uid-1000 `cdo` user | `ghcr.io/code-dot-org/cdo-base` |
-| cdo-build | [build/](build/README.md) | the compile toolchain, Node, and uv; builds the dependency layer and is then discarded | not published |
-| cdo-deps | [deps/](deps/README.md) | the production gem bundle and the python venv, named by a content key over its inputs | `ghcr.io/code-dot-org/cdo-deps` |
+| cdo-build | [build/](build/README.md) | the compile toolchain and Node; builds the dependency layer and is then discarded | not published |
+| cdo-deps | [deps/](deps/README.md) | the production gem bundle, named by a content key over its inputs | `ghcr.io/code-dot-org/cdo-deps` |
 | cdo-rails | [rails/](rails/README.md) | the Rails source slice; runs as api or worker | `ghcr.io/code-dot-org/cdo-rails` |
-| cdo-dev | [dev/](dev/README.md) | the development image: toolchain, Node, Playwright chromium, dev/test gems; source arrives as a volume | `ghcr.io/code-dot-org/cdo-dev` |
+| cdo-dev | [dev/](dev/README.md) | the development image: toolchain, Node, uv and the Python Lab venv, Playwright chromium, dev/test gems; source arrives as a volume | `ghcr.io/code-dot-org/cdo-dev` |
 
 Each build takes its parent as a build argument, so a caller can pin the parent
 by digest. `cdo-deps` is resolved by content key rather than by tag — see

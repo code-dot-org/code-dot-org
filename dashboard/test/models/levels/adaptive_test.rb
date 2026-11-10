@@ -34,6 +34,20 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert build(:adaptive, adaptive_id: 'sample').valid?
   end
 
+  test "creating from the level builder with a name alone points at the sample content" do
+    level = Adaptive.create_from_level_builder({user: create(:levelbuilder)}, {name: 'Adaptive quick'})
+
+    assert_equal 'sample', level.adaptive_id
+    assert_equal Game.adaptive, level.game
+    assert_equal 'custom', level.level_num
+  end
+
+  test "creating from the level builder keeps a chosen content id" do
+    level = Adaptive.create_from_level_builder({user: create(:levelbuilder)}, {name: 'Adaptive chosen', adaptive_id: 'needs-skill'})
+
+    assert_equal 'needs-skill', level.adaptive_id
+  end
+
   test "lab2 properties include the parsed content" do
     level = create(:adaptive)
     script_level = create(:script_level, levels: [level])
@@ -67,6 +81,9 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert_equal 'weblab2', try['levelProperties'][:appName]
     refute ghost.key?('levelProperties'), 'an unknown level name passes through unresolved'
     refute read.key?('levelProperties'), 'only level steps are resolved'
+    so_far, showcase = pathway['finish']['checkpoint']['steps']
+    assert_equal template.id, showcase['levelProperties'][:id], "the finish checkpoint's levels resolve too"
+    refute so_far.key?('levelProperties')
   end
 
   test "resolving levels leaves the cached pathway untouched" do
@@ -119,6 +136,7 @@ class AdaptiveTest < ActiveSupport::TestCase
 
     assert_equal 'level', level.find_step('try')['kind']
     assert_equal 'panels', level.find_step('read')['kind']
+    assert_equal 'stats', level.find_step('so-far')['kind'], "the finish checkpoint's steps are found"
     project = level.find_step('project')
     assert_equal 'level', project['kind']
     assert_equal 'adaptive-test-template', project['level']
@@ -131,7 +149,7 @@ class AdaptiveTest < ActiveSupport::TestCase
     write_levels_pathway
     level = create(:adaptive, adaptive_id: 'levels')
 
-    assert_equal({'try' => sandbox, 'project' => template}, level.step_levels)
+    assert_equal({'try' => sandbox, 'showcase' => template, 'project' => template}, level.step_levels)
   end
 
   test "lookups are empty without content" do
@@ -139,6 +157,46 @@ class AdaptiveTest < ActiveSupport::TestCase
 
     assert_nil level.find_step('try')
     assert_empty level.step_levels
+  end
+
+  test "progress_json is empty for a user with no progress, and creates nothing" do
+    write_levels_pathway
+    level = create(:adaptive, adaptive_id: 'levels')
+    unit = create(:script_level, levels: [level]).script
+
+    assert_no_difference ['UserLevel.count', 'UserAdaptiveStep.count'] do
+      assert_equal({'steps' => {}}, level.progress_json(user_id: create(:student).id, script_id: unit.id))
+    end
+  end
+
+  test "progress_json merges a level step's UserLevel over its step row" do
+    sandbox = create(:weblab2, name: 'adaptive-test-sandbox')
+    write_levels_pathway
+    level = create(:adaptive, adaptive_id: 'levels')
+    unit = create(:script_level, levels: [level]).script
+    student = create(:student)
+    adaptive_user_level = create(:user_level, user: student, level: level, script: unit)
+    UserAdaptiveStep.create!(user_level: adaptive_user_level, step_id: 'try', generated_instructions: {'instructions' => 'Go.'})
+    UserAdaptiveStep.create!(user_level: adaptive_user_level, step_id: 'read', progress: {'startedAt' => '2026-10-01T00:00:00Z', 'timeSpent' => 4})
+    create(:user_level, user: student, level: sandbox, script: unit, best_result: ActivityConstants::FREE_PLAY_RESULT, time_spent: 9)
+
+    steps = level.progress_json(user_id: student.id, script_id: unit.id)['steps']
+
+    assert_equal({'status' => 'complete', 'timeSpent' => 9, 'generatedInstructions' => {'instructions' => 'Go.'}}, steps['try'])
+    assert_equal 'started', steps['read']['status']
+    assert_equal 4, steps['read']['timeSpent']
+  end
+
+  test "progress_json reads only the given user's and unit's progress" do
+    sandbox = create(:weblab2, name: 'adaptive-test-sandbox')
+    write_levels_pathway
+    level = create(:adaptive, adaptive_id: 'levels')
+    unit = create(:script_level, levels: [level]).script
+    other_student = create(:student)
+    create(:user_level, user: other_student, level: sandbox, script: unit, best_result: ActivityConstants::FREE_PLAY_RESULT)
+    create(:user_level, user: other_student, level: sandbox, script: create(:unit), best_result: ActivityConstants::FREE_PLAY_RESULT)
+
+    assert_empty level.progress_json(user_id: create(:student).id, script_id: unit.id)['steps']
   end
 
   test "sharing_levels lists every level with the same content id, by name" do
@@ -161,6 +219,15 @@ class AdaptiveTest < ActiveSupport::TestCase
           {'id' => 'read', 'kind' => 'panels', 'panels' => []},
         ],
       }],
+      'finish' => {
+        'checkpoint' => {
+          'id' => 'wrap-up',
+          'steps' => [
+            {'id' => 'so-far', 'kind' => 'stats'},
+            {'id' => 'showcase', 'kind' => 'level', 'level' => 'adaptive-test-template', 'project' => true},
+          ],
+        },
+      },
     }.to_json
 )
     AdaptiveContent.reset_cache!

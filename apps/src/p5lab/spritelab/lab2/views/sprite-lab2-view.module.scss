@@ -1,4 +1,3 @@
-@use './imageTile' as tile;
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 @use './editor-strip' as strip;
@@ -78,7 +77,7 @@ $tab-item-height: 34px;
   min-height: 0;
 }
 
-// The editors and the stage, inert together while a sheet covers them.
+// The editors and the stage, inert together while All scenes covers them.
 .stage {
   display: contents;
 }
@@ -323,9 +322,8 @@ $z-over-blockly: 71;
 }
 
 // After .codeTabWrapper too: the Images pane off to the right while
-// another editor shows, as a closed sheet waits. Hidden as well: off to the
-// right is where the page's own drawer opens, and the pane would paint over
-// it.
+// another editor shows. Hidden as well: off to the right is where the
+// page's own drawer opens, and the pane would paint over it.
 .picturesEditorParked {
   left: 110%;
   right: auto;
@@ -342,13 +340,17 @@ $z-over-blockly: 71;
 // of its own, one divider on its right. The design-system trigger is an
 // MUI text button; its own hover/focus styling stays.
 // Square, like the stage. Sized for the menu; `small` fits the tab bar.
+// A hairline keeps a new scene's white picture from vanishing into a
+// light menu.
 .sceneThumb {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-sizing: border-box;
   width: 40px;
   height: 40px;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 3px;
   background: var(--background-neutral-tertiary);
   color: var(--text-neutral-secondary);
@@ -366,200 +368,6 @@ $z-over-blockly: 71;
   height: 22px;
   border-radius: 2px;
   font-size: 11px;
-}
-
-// --- All scenes (the pictures gallery's card idiom) ---
-
-.scenesMap {
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  overflow: auto;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-
-  // Wide gaps, so an arrow between neighbors has room to read.
-  .imageGallery {
-    position: relative;
-    gap: 36px 48px;
-  }
-}
-
-.scenesMapHeader {
-  display: flex;
-  justify-content: flex-end;
-  padding: 16px 16px 0;
-}
-
-// The arrows between cards whose code jumps between them, drawn over the
-// gallery and under nothing clickable.
-.sceneLinks {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  pointer-events: none;
-  fill: var(--borders-brand-teal-primary);
-  stroke: var(--borders-brand-teal-primary);
-
-  path {
-    fill: none;
-    stroke-width: 2px;
-  }
-
-  marker path {
-    fill: var(--borders-brand-teal-primary);
-    stroke: none;
-  }
-}
-
-// A dim card groups a scene's picture and controls. Cards in a row stretch
-// to one height, and the footer pins to the bottom.
-.sceneCard {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 8px;
-  box-sizing: border-box;
-  width: 152px;
-  padding: 12px;
-  border-radius: 8px;
-  background: var(--background-neutral-secondary);
-}
-
-// Square, like the stage; the tile is a button that opens the scene.
-.sceneTile {
-  @include tile.image-tile(128px);
-
-  position: relative;
-  border-radius: 4px;
-  color: var(--text-neutral-secondary);
-  font-size: 28px;
-}
-
-.sceneTilePicture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.sceneCardActive .sceneTile {
-  outline: 2px solid var(--borders-brand-teal-primary);
-  outline-offset: 2px;
-}
-
-// Where Play begins: a small label inset from the picture's top-left corner.
-.sceneStartBadge {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  padding: 2px 6px;
-  border-radius: 3px;
-  background: var(--background-brand-teal-primary);
-  color: var(--text-neutral-white-fixed);
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-// The name with its pencil, or the field with save and cancel; one height
-// either way so the card does not jump.
-.sceneNameRow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-  min-height: 28px;
-}
-
-// The chip's size, so the name reads the same here as in the bar.
-.sceneName {
-  min-width: 0;
-  padding: 0 2px;
-  color: var(--text-neutral-primary);
-  font-size: 14px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-// Smaller than MUI's small, to sit beside 14px text rather than over it.
-.sceneNameIconButton {
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  font-size: 12px;
-}
-
-.sceneNameField {
-  min-width: 0;
-  flex: 1 1 auto;
-
-  input {
-    box-sizing: border-box;
-    width: 100%;
-  }
-}
-
-// Delete, or its confirmation, pinned to the card's bottom.
-.sceneCardFooter {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: auto;
-}
-
-.sceneDeleteQuestion {
-  color: var(--text-neutral-primary);
-  font-size: 12px;
-  text-align: center;
-}
-
-.sceneDeleteChoices {
-  display: flex;
-  gap: 6px;
-}
-
-// Fills its card, so the row of cards reads as one height.
-.newSceneCard {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 128px;
-  margin: 0;
-  padding: 0;
-  gap: 2px;
-  border: 1px dashed var(--borders-neutral-primary);
-  border-radius: 4px;
-  background-color: transparent;
-  box-shadow: none;
-  color: var(--text-neutral-primary);
-  font-size: 28px;
-  cursor: pointer;
-
-  &:hover {
-    border-color: var(--borders-neutral-strong);
-  }
-}
-
-// The new-scene dialog: name above the type choice.
-.newSceneFields {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
 
 // The persistent playspace overlay; clicks fall through except over the
@@ -591,7 +399,9 @@ $z-over-blockly: 71;
 }
 
 // Fixed 400x400 (the engine canvas size); positioned via a transform so it can
-// animate between the corner preview and the centered play view.
+// animate between the corner preview and the centered play view. The
+// corners are rounded in canvas units, so they scale with the box; the
+// canvas and the covers inside are clipped to them.
 .playspaceBox {
   position: absolute;
   top: 0;
@@ -599,6 +409,8 @@ $z-over-blockly: 71;
   width: 400px;
   height: 400px;
   transform-origin: 0 0;
+  border-radius: 10px;
+  overflow: hidden;
   background: var(--background-neutral-secondary);
   // Transitions, and the preview-only hairline seam, are set inline:
   // transform only animates between the two visible placements; opacity
@@ -612,48 +424,119 @@ $z-over-blockly: 71;
   }
 }
 
-// The Play/Stop and arrow bar under the playspace box. Only its buttons
-// take pointer events: the bar spans the box's width, and over the corner
-// preview that strip would otherwise sit on the Blockly workspace.
-.playBar {
+// The bar pinned to the stage's foot, the editors' scene bar's twin: Run
+// under the preview, Reset while playing. The overlay passes pointer
+// events through; the bar takes its own.
+.bottomBar {
+  position: absolute;
+  bottom: 0;
+  height: $editor-strip-height;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 8px;
+  background: var(--background-neutral-primary);
+  border-top: 1px solid var(--borders-neutral-primary);
+  pointer-events: auto;
+}
+
+// Under the preview the bar covers the column's edge, so it draws the
+// hairline between itself and the scene bar beside it.
+.bottomBarColumn {
+  border-inline-start: 1px solid var(--borders-neutral-primary);
+}
+
+.playBarButtons {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 16px;
+}
+
+// Placed by the playspace beside or under the game; the cross inside takes
+// the pointer events the overlay passes through.
+.arrowCrossHolder {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  gap: 16px;
   pointer-events: none;
-
-  // On a narrow column a button's text wraps; the button grows with it
-  // and the bar's measured height makes room.
-  button {
-    pointer-events: auto;
-    height: auto;
-    min-height: 2rem;
-    white-space: normal;
-    line-height: 1.25;
-    text-align: center;
-  }
 }
 
-.arrowKeys {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+// Four buttons: the up key over a row of left, down and right; three keys
+// and two gaps across, which the playspace's CROSS_KEY and CROSS_KEY_GAP
+// repeat to place it.
+$arrow-key: 38px;
+$arrow-gap: 6px;
+
+.arrowCross {
+  display: grid;
+  grid-template-columns: repeat(3, $arrow-key);
+  grid-template-rows: repeat(2, $arrow-key);
+  gap: $arrow-gap;
+  pointer-events: auto;
+}
+
+.arrowUp {
+  grid-area: 1 / 2;
+}
+
+.arrowLeft {
+  grid-area: 2 / 1;
+}
+
+.arrowRight {
+  grid-area: 2 / 3;
+}
+
+.arrowDown {
+  grid-area: 2 / 2;
 }
 
 // A held key acts on the touch itself: no scroll or double-tap wait, and
-// no selection or callout under a long press.
-.holdKey {
+// no selection or callout under a long press. Dark squares with a light
+// chevron on the light stage, after the legacy lab's touch controls; the
+// inverse tokens turn them light on the dark theme's stage. Doubled to
+// outrank the icon button's own size, least width, padding and colors.
+.holdKey.holdKey {
   touch-action: none;
   user-select: none;
   -webkit-touch-callout: none;
+  width: $arrow-key;
+  height: $arrow-key;
+  min-width: $arrow-key;
+  min-height: $arrow-key;
+  padding: 0;
+  border-radius: 8px;
+  background: var(--background-neutral-primary-inverse);
+  color: var(--text-neutral-primary-inverse);
+  font-size: 14px;
+
+  &:hover,
+  &:active {
+    background: color-mix(
+      in srgb,
+      var(--background-neutral-primary-inverse) 85%,
+      var(--background-neutral-primary)
+    );
+  }
+
+  // Under a preview that is not being played: the keys as they are, only
+  // the chevrons dimmed toward them.
+  &:disabled {
+    background: var(--background-neutral-primary-inverse);
+    color: color-mix(
+      in srgb,
+      var(--text-neutral-primary-inverse) 45%,
+      var(--background-neutral-primary-inverse)
+    );
+  }
 }
 
-// Restart buttons in the play area's top-right corner, clear of the game
-// wherever the canvas lands. The overlay ignores pointer events; these
-// buttons accept them.
+// Restart buttons in the play area's top-right corner; the playspace keeps
+// the game clear of them (CONTROLS_INSET repeats the inset). The overlay
+// ignores pointer events; these buttons accept them.
 .playControls {
   position: absolute;
   top: 8px;
@@ -685,45 +568,6 @@ $z-over-blockly: 71;
 // cannot collapse through it and escape the measurement.
 .previewBelowContent {
   display: flow-root;
-}
-
-// A sheet under the scene row, over the whole area below. Closed, the
-// Pictures sheet sits off to the right rather than hidden, so a dialog
-// rendered inside it still shows; moved by `left`, not a transform, which
-// would become the containing block of the fixed-position image dialog.
-.sheet {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  // Topmost: the image dialog renders inside the sheet, not in a portal.
-  z-index: variables.$z-index-overlay;
-  display: flex;
-  flex-direction: column;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-}
-
-.sheetClosed {
-  left: 110%;
-}
-
-.sheetHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: none;
-  padding: 8px 8px 8px 16px;
-  border-bottom: 1px solid var(--borders-neutral-primary);
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.sheetBody {
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow: auto;
 }
 
 .playspaceCanvas {
@@ -778,7 +622,7 @@ $z-over-blockly: 71;
   pointer-events: none;
 }
 
-// Scene-jump transition (scenes UI variant): sceneCover blanks the canvas the
+// Scene-jump transition: sceneCover blanks the canvas the
 // instant a jump triggers and holds while the target loads; sceneFade takes
 // over when it lands and fades out, revealing the new scene.
 .sceneCover {
@@ -804,49 +648,6 @@ $z-over-blockly: 71;
 
   to {
     opacity: 0;
-  }
-}
-
-// Loading an external scene: a dimming overlay + spinner that fades in only
-// after a delay, so fast loads never flash it (the Lab2 loading pattern).
-.sceneLoading {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: color-mix(in srgb, var(--neutral-base-true-black) 55%, transparent);
-  opacity: 0;
-  animation: scene-loading-fade-in 0.4s ease-in 1.5s both;
-  pointer-events: none;
-}
-
-.sceneLoadingSpinner {
-  width: 48px;
-  height: 48px;
-  border: 5px solid color-mix(in srgb, var(--neutral-base-white) 30%, transparent);
-  border-top-color: var(--borders-neutral-white-fixed);
-  border-radius: 50%;
-  animation: scene-loading-spin 0.9s linear infinite;
-}
-
-@keyframes scene-loading-fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes scene-loading-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
   }
 }
 

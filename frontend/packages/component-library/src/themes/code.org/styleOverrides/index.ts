@@ -7,6 +7,7 @@ import {
 } from './accordion';
 import {BREADCRUMBS_OVERRIDES} from './breadcrumbs';
 import {BUTTON_OVERRIDES} from './button';
+import {DIVIDER_OVERRIDES} from './divider';
 import {FOOTER_OVERRIDES} from './footer';
 import {ICON_BUTTON_OVERRIDES} from './iconButton';
 import {LINK_OVERRIDES} from './link';
@@ -26,6 +27,7 @@ export const STYLE_OVERRIDES: Components<Theme> = {
   MuiButtonBase: BUTTON_BASE_OVERRIDES,
   MuiButton: BUTTON_OVERRIDES,
   MuiIconButton: ICON_BUTTON_OVERRIDES,
+  MuiDivider: DIVIDER_OVERRIDES,
   MuiFooter: FOOTER_OVERRIDES,
   MuiTooltip: TOOLTIP_OVERRIDES,
   MuiAccordion: ACCORDION_OVERRIDES,

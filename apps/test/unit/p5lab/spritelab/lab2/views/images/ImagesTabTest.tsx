@@ -21,6 +21,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
     onAnimatedChange,
     onBusyChange,
     onKeep,
+    onRate,
     layout,
   }: {
     imageType: string;
@@ -29,6 +30,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
     onAnimatedChange?: (animated: boolean) => void;
     onBusyChange?: (busy: boolean) => void;
     onKeep: (result: unknown) => void;
+    onRate?: (verdict: string) => void;
     layout: (parts: unknown) => React.ReactNode;
   }) => {
     const [generating, setGenerating] = React.useState(false);
@@ -64,6 +66,9 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
         >
           land {imageType} {imageSubject ?? ''}
         </button>
+        <button type="button" onClick={() => onRate?.('up')}>
+          rate {imageType}
+        </button>
         {layout({
           mode: generating ? 'generating' : 'edit',
           busy: generating,
@@ -71,6 +76,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           panelRef: {current: null},
           frame: generating ? <span>spinner</span> : null,
           frameFilled: false,
+          cachedTag: null,
           behindTheScenes: null,
           status: null,
           sentence: <span>words</span>,
@@ -195,6 +201,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/imageTrim', () => ({
 }));
 const acceptGenerated = jest.fn();
 const saveEdited = jest.fn();
+const rateGenerated = jest.fn();
 const deleteImage = jest.fn();
 const endSession = jest.fn();
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter', () => ({
@@ -202,6 +209,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter', () => ({
   default: () => ({
     acceptGenerated: (...args: unknown[]) => acceptGenerated(...args),
     saveEdited: (...args: unknown[]) => saveEdited(...args),
+    rateGenerated: (...args: unknown[]) => rateGenerated(...args),
     deleteImage: (...args: unknown[]) => deleteImage(...args),
     endSession: () => endSession(),
   }),
@@ -229,6 +237,7 @@ describe('ImagesTab', () => {
     // paint-first default has tests of its own below.
     params['images-edited'] = 'pane';
     acceptGenerated.mockReset();
+    rateGenerated.mockReset();
     saveEdited.mockReset();
     deleteImage.mockReset();
     delete params.learning;
@@ -281,6 +290,37 @@ describe('ImagesTab', () => {
     expect(screen.getByRole('button', {name: 'Sprite 2'})).toBeEnabled();
     fireEvent.click(screen.getByRole('button', {name: 'Sprite 1'}));
     expect(pressed()).toEqual(['Sprite 2']);
+  });
+
+  it('offers the plus again on a level done before, until a new image lands', async () => {
+    propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
+    const view = renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    expect(pressed()).toEqual(['Sprite 1']);
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
+    expect(pressed()).toEqual(['New character']);
+    acceptGenerated.mockImplementation(async () => {
+      propsByKey.k2 = {name: 'Sprite 2', categories: [], role: 'hero'};
+      return 'k2';
+    });
+    await act(async () => {
+      fireEvent.click(
+        screen.getByRole('button', {name: /^land sprite character$/})
+      );
+    });
+    expect(pressed()).toEqual(['Sprite 2']);
+    // The host counts the image as made on this visit; the plus then goes.
+    view.rerender(
+      <ImagesTab
+        onDeleteImage={jest.fn()}
+        paneWidth={280}
+        lockedImageType="sprite"
+        imageRole="hero"
+        ownImageMade
+      />
+    );
+    expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
+    expect(screen.getByRole('button', {name: 'Sprite 1'})).toBeDisabled();
   });
 
   it('adds a draft of the kind picked under the plus, one session per image', () => {
@@ -569,6 +609,49 @@ describe('ImagesTab', () => {
     expect(screen.getByText('canvas')).toBeTruthy();
   });
 
+  it('keeps the tools open when the picture under them is rated', async () => {
+    delete params['images-edited'];
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      sourceUrl: 'one.png',
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    acceptGenerated.mockImplementation(async (_target, result) => {
+      propsByKey.k1 = {...propsByKey.k1, generation: result.generation};
+      return 'k1';
+    });
+    // The verdict goes onto the record alone, as the writer does it.
+    rateGenerated.mockImplementation((key: string, verdict: string) => {
+      const generation = {...(propsByKey[key].generation as object), verdict};
+      propsByKey[key] = {...propsByKey[key], generation};
+      return generation;
+    });
+    const {rerender} = renderTab({editingOffered: true});
+    await screen.findByText('canvas');
+    const again = () =>
+      rerender(
+        <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
+      );
+    // A picture lands over the drawing: the tools open again on it.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^land sprite/}));
+    });
+    again();
+    const canvas = await screen.findByText('canvas');
+    // Rating it rewrites its record, not its pixels; the tab sees the
+    // record on its next render.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^rate sprite/}));
+    });
+    expect(acceptGenerated).toHaveBeenCalledTimes(1);
+    expect(rateGenerated).toHaveBeenCalledWith('k1', 'up');
+    again();
+    // The same canvas: the tools were never put away.
+    expect(screen.getByText('canvas')).toBe(canvas);
+    expect(screen.getByText('toolbar')).toBeTruthy();
+  });
+
   it('paints every image in place in free play, the words beside the tools', async () => {
     delete params['images-edited'];
     propsByKey.k1 = {
@@ -700,9 +783,9 @@ describe('ImagesTab', () => {
     expect(screen.queryByText('canvas')).toBeNull();
   });
 
-  it('tells how the picture was made after the first one on a level about one image, once', async () => {
+  it('tells how the picture was made after the first one on a level that asks, once', async () => {
     jest.useFakeTimers();
-    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero', learning: true});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     acceptGenerated.mockImplementation(async () => {
@@ -714,20 +797,20 @@ describe('ImagesTab', () => {
         screen.getByRole('button', {name: /^land sprite character$/})
       );
     });
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
     act(() => {
       jest.advanceTimersByTime(2000);
     });
-    const dialog = screen.getByRole('alertdialog', {
+    const dialog = screen.getByRole('dialog', {
       name: 'How AI made your image',
     });
     expect(dialog).toBeTruthy();
     expect(screen.queryByRole('button', {name: /close/i})).toBeNull();
-    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+    for (let i = 0; i < 4; i++) {
+      fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+    }
     fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
     // Told once: the next picture of the kind passes quietly.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: /^land sprite$/}));
@@ -735,8 +818,28 @@ describe('ImagesTab', () => {
     act(() => {
       jest.advanceTimersByTime(2000);
     });
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
     jest.useRealTimers();
+  });
+
+  it('tells the story of an image opened again, from Behind the scenes', () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      sourceUrl: 'one.png',
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    renderTab();
+    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
+    fireEvent.click(screen.getByRole('button', {name: 'How AI made this'}));
+    expect(
+      screen.getByRole('dialog', {name: 'How AI made your image'})
+    ).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+    expect(screen.getByText('A cat')).toBeTruthy();
+    // Asked for, so it closes unread.
+    fireEvent.click(screen.getByRole('button', {name: 'Close modal'}));
+    expect(screen.queryByRole('dialog')).toBeNull();
   });
 
   it('holds the story while the tab is away, and tells it on return', async () => {
@@ -744,6 +847,7 @@ describe('ImagesTab', () => {
     const {rerender} = renderTab({
       lockedImageType: 'sprite',
       imageRole: 'hero',
+      learning: true,
     });
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
@@ -763,6 +867,7 @@ describe('ImagesTab', () => {
           paneWidth={280}
           lockedImageType="sprite"
           imageRole="hero"
+          learning
           active={active}
         />
       );
@@ -771,10 +876,10 @@ describe('ImagesTab', () => {
       jest.advanceTimersByTime(2000);
     });
     // Not over another tab.
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
     away(true);
     expect(
-      screen.getByRole('alertdialog', {name: 'How AI made your image'})
+      screen.getByRole('dialog', {name: 'How AI made your image'})
     ).toBeTruthy();
     jest.useRealTimers();
   });
@@ -793,11 +898,11 @@ describe('ImagesTab', () => {
         jest.advanceTimersByTime(2000);
       });
       expect(
-        screen.getByRole('alertdialog', {name: 'How AI made your image'})
+        screen.getByRole('dialog', {name: 'How AI made your image'})
       ).toBeTruthy();
-      fireEvent.click(screen.getByRole('button', {name: 'Next'}));
-      fireEvent.click(screen.getByRole('button', {name: 'Next'}));
-      fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+      for (let step = 0; step < 4; step++) {
+        fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+      }
       fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
     }
     jest.useRealTimers();

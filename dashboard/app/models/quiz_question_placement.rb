@@ -32,6 +32,10 @@ class QuizQuestionPlacement < ApplicationRecord
   end
 
   private def write_to_quiz_file!
-    level.with_lock {level.save!} if level.is_a?(Quiz) && !level.destroyed?
+    return unless level.is_a?(Quiz) && !level.destroyed?
+    level.with_lock do
+      level.advance_saved_version
+      level.save!
+    end
   end
 end

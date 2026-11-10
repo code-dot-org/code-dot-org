@@ -4,22 +4,42 @@ import {
   makeDynamicCategory,
 } from '@cdo/apps/blockly/utils/toolbox';
 
-import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
+import {BURST_BLOCK_TYPE} from '../blockDefinitions/burst';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
+import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
+import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
+import {PLAY_SOUND_EFFECT_BLOCK_TYPE} from '../blockDefinitions/playSoundEffect';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
+import {SET_WEATHER_BLOCK_TYPE} from '../blockDefinitions/setWeather';
+import {SHOW_TITLE_BLOCK_TYPE} from '../blockDefinitions/showTitle';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
+import {THE_PLAYER_2_BLOCK_TYPE} from '../blockDefinitions/thePlayer2';
+import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 
+import {AI_BLOCK_TYPES, AI_CATEGORY} from './aiBlocks';
+import {filterToSupportedSharedBlocks} from './supportedSharedBlocks';
 import {ToolboxInfo} from './types';
 
 // Where the lab-owned blocks live in the complete toolbox.
 const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
+  World: [
+    SET_WEATHER_BLOCK_TYPE,
+    BURST_BLOCK_TYPE,
+    PLAY_SOUND_BLOCK_TYPE,
+    PLAY_SOUND_EFFECT_BLOCK_TYPE,
+    PLAY_MUSIC_BLOCK_TYPE,
+  ],
   Sprites: [
     'spritelab2_makePlatformPlayer',
     'spritelab2_makePlatformBlocks',
     'spritelab2_makeSpriteAtGrid',
+    'spritelab2_makeSpriteAtPosition',
     'spritelab2_setAsPlatformPlayer',
+    'spritelab2_setAsPlatformPlayer2',
     THE_PLAYER_BLOCK_TYPE,
+    THE_PLAYER_2_BLOCK_TYPE,
   ],
+  Events: [WHEN_PLAYER_BLOCK_TYPE],
   Behaviors: [
     'spritelab2_beginsBehavior',
     'spritelab2_movingLeft',
@@ -28,11 +48,13 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
   ],
   'Game Design': [
     GO_TO_SCENE_BLOCK_TYPE,
-    GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
     RESTART_SCENE_BLOCK_TYPE,
-    'spritelab2_setPlatformGravity',
+    SHOW_TITLE_BLOCK_TYPE,
+    'spritelab2_setPlatformJumpHeight',
+    'spritelab2_setPlatformGravityDirection',
     'spritelab2_setCameraZoom',
   ],
+  [AI_CATEGORY]: AI_BLOCK_TYPES,
 };
 
 // Blocks registered outside the DB block pool (Blockly core, blocksCommon,
@@ -67,11 +89,8 @@ const COMMON_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
 };
 
 /**
- * Every available block sorted by category: the level's DB block pool plus
- * the lab-owned and common blocks. Toolbox editing leads with the category
- * marker blocks; start mode appends the dynamic Variables/Functions
- * categories instead. Behaviors stays static: the dynamic flyout can't read
- * static contents from JSON toolboxes yet (getLevelToolboxBlocks/CT-8).
+ * Returns the complete toolbox definition for the given shared blocks and mode.
+ * Filters out any shared blocks that are not supported by Sprite Lab in lab2.
  */
 export function getCompleteToolboxDefinition(
   sharedBlocksByCategory: {[category: string]: string[]},
@@ -81,7 +100,7 @@ export function getCompleteToolboxDefinition(
     ...(forToolboxEditing
       ? {Categories: [BLOCK_TYPES.category, BLOCK_TYPES.categoryDynamic]}
       : {}),
-    ...sharedBlocksByCategory,
+    ...filterToSupportedSharedBlocks(sharedBlocksByCategory),
   };
   [LAB_BLOCKS_BY_CATEGORY, COMMON_BLOCKS_BY_CATEGORY].forEach(byCategory =>
     Object.entries(byCategory).forEach(([name, types]) => {

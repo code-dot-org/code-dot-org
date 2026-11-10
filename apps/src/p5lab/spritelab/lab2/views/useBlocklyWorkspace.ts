@@ -60,13 +60,13 @@ interface UseBlocklyWorkspaceResult {
   /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
   refreshToolbox: (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => void;
   /** Load code into the workspace. With `lock`, every loaded block is made
-      undeletable except the stacks `isOwnStack` claims as the level's own
+      undeletable except the blocks `isOwn` claims as the level's own
       (blockLocks.ts). */
   loadCode: (
     source: WorkspaceSerialization,
     options?: {
       lock?: boolean;
-      isOwnStack?: (top: BlocklyCore.Block) => boolean;
+      isOwn?: (block: BlocklyCore.Block) => boolean;
     }
   ) => void;
   /**
@@ -300,7 +300,7 @@ export default function useBlocklyWorkspace({
       source: WorkspaceSerialization,
       options?: {
         lock?: boolean;
-        isOwnStack?: (top: BlocklyCore.Block) => boolean;
+        isOwn?: (block: BlocklyCore.Block) => boolean;
       }
     ) => {
       const workspace = workspaceRef.current;
@@ -311,7 +311,7 @@ export default function useBlocklyWorkspace({
       try {
         loadBlocksToWorkspace(workspace, JSON.stringify(source));
         if (options?.lock) {
-          lockBlocks(workspace, options.isOwnStack);
+          lockBlocks(workspace, options.isOwn);
         }
         // Update ref here (instead of in change listener) since callers may read this synchronously.
         currentBlocksRef.current = source;

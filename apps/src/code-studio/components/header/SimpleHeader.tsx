@@ -1,49 +1,74 @@
 // The level header's middle for a unit whose simple_progress property is
-// set: the unit's image, the unit name and the current level's header label
-// on one line with the project's saved-at under them, after the project's
-// own controls.  One flex row, nothing measured, shown on mount.
+// set: one bar with the lesson's name, a bubble per level that fills in as
+// the level is done, the project's save status, and a slot the lab fills
+// with a button of its own. The bubbles are pictures, not links: the unit
+// is walked in order, with no going back or ahead.
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {ProgressBubble} from '@code-dot-org/component-library/progressWidget';
+import {Typography as MuiTypography} from '@mui/material';
+import {isEqual} from 'lodash';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
-import {
-  getCurrentLevel,
-  getParentLevel,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
+import {LevelWithProgress} from '@cdo/apps/types/progressTypes';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProjectInfo from './ProjectInfo';
-import ProjectUpdatedAt, {PROJECT_UPDATED_AT_HEIGHT} from './ProjectUpdatedAt';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
+import {SAVE_STATUS_ICONS} from './saveStatusIcons';
 
 import styles from './simple-header.module.scss';
 
-// The header page's store has no typed root state; these are the two
-// slices this component reads.
+/** The lab portals its header button, if it has one, into the element
+    with this id. */
+export const HEADER_ACTION_ID = 'simple_header_action';
+
+// The header page's store has no typed root state; these are the slices
+// this component reads.
 interface HeaderState {
   isRtl: boolean;
   project: ProjectState;
 }
 
+type BubbleStatus = React.ComponentProps<typeof ProgressBubble>['status'];
+
+const bubbleStatusByLevelStatus: Record<string, BubbleStatus> = {
+  [LevelStatus.attempted]: 'inProgress',
+  [LevelStatus.passed]: 'passed',
+  [LevelStatus.perfect]: 'completed',
+  [LevelStatus.free_play_complete]: 'completed',
+  [LevelStatus.completed_assessment]: 'completed',
+  [LevelStatus.submitted]: 'completed',
+};
+
+const statusLabel: Record<NonNullable<BubbleStatus>, string> = {
+  notStarted: 'not started',
+  inProgress: 'in progress',
+  passed: 'passed',
+  completed: 'completed',
+  keepWorking: 'keep working',
+  error: 'rejected',
+};
+
 interface SimpleHeaderProps {
-  scriptData: {simpleProgressImage?: string};
-  /** The unit name and its link, as header.build receives them. */
-  scriptNameData?: {name: string; href: string};
+  /** The lesson's name, on the bar's first pill. */
+  lessonName?: string;
 }
 
 const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
-  scriptData,
-  scriptNameData,
+  lessonName,
 }) => {
   const isRtl = useSelector((state: HeaderState) => state.isRtl);
-  const showSaved = useSelector(
-    (state: HeaderState) => state.project.showProjectUpdatedAt
+  const {showProjectUpdatedAt, projectUpdatedStatus} = useSelector(
+    (state: HeaderState) => state.project
   );
-  // A current sublevel's label is its parent's.
-  const label: string | undefined = useSelector(
-    (state: unknown) =>
-      (getParentLevel(state) ?? getCurrentLevel(state))?.headerLabel
-  );
+  // getCurrentLevels builds a new array per call, and none until the lesson
+  // is known; isEqual skips needless re-renders.
+  const levels = (useSelector(getCurrentLevels, isEqual) ??
+    []) as LevelWithProgress[];
 
   // Eyes UI tests key on these to tell a page with this header from one with
   // a server-rendered header, and to wait for the font swap.
@@ -56,53 +81,62 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
     });
   }, []);
 
+  const saveIcon = SAVE_STATUS_ICONS[projectUpdatedStatus];
+
   return (
     <div id="header_middle_content" className={styles.row}>
       <div id="project_info_container" className={styles.projectInfo}>
         <ProjectInfo isRtl={isRtl} />
       </div>
-      {scriptData.simpleProgressImage && (
-        <img
-          src={scriptData.simpleProgressImage}
-          alt=""
-          className={styles.image}
-        />
-      )}
-      <div className={styles.text}>
-        <div className={styles.title}>
-          {scriptNameData && (
-            <a
-              id="unit_name_container"
-              href={scriptNameData.href}
-              title={scriptNameData.name}
-              className={styles.unitName}
+      <div className={styles.bar} data-theme="Light">
+        {lessonName && (
+          <div className={styles.lesson}>
+            <MuiTypography
+              variant="body3"
+              component="span"
+              className={styles.lessonName}
+              title={lessonName}
             >
-              {scriptNameData.name}
-            </a>
-          )}
-          {scriptNameData && label && (
-            <span className={styles.separator} aria-hidden="true">
-              ·
-            </span>
-          )}
-          {label && (
-            <span className={styles.label} title={label}>
-              {label}
-            </span>
-          )}
-        </div>
-        {/* The saved-at's height is reserved before it shows, and the line
-            height set with it: the header's inherited line height is taller
-            and would push the text below the slot. */}
+              {lessonName}
+            </MuiTypography>
+          </div>
+        )}
         <div
-          className={styles.saved}
-          style={{
-            height: PROJECT_UPDATED_AT_HEIGHT,
-            lineHeight: `${PROJECT_UPDATED_AT_HEIGHT}px`,
-          }}
+          className={styles.bubbles}
+          role="group"
+          aria-label="Lesson progress"
         >
-          {showSaved && <ProjectUpdatedAt />}
+          {levels.map(level => {
+            const active =
+              !!level.isCurrentLevel ||
+              !!level.sublevels?.some(sublevel => sublevel.isCurrentLevel);
+            const status =
+              bubbleStatusByLevelStatus[level.status] ?? 'notStarted';
+            return (
+              <ProgressBubble
+                key={level.id}
+                status={status}
+                isActive={active}
+                levelNumber={level.levelNumber}
+                ariaLabel={`Level ${level.levelNumber ?? ''}, ${
+                  statusLabel[status]
+                }`}
+              />
+            );
+          })}
         </div>
+        {showProjectUpdatedAt && (
+          <div className={styles.save}>
+            <FontAwesomeV6Icon
+              iconName={saveIcon.iconName}
+              title={saveIcon.title}
+              aria-label={saveIcon.title}
+              role="img"
+              className={styles.saveIcon}
+            />
+          </div>
+        )}
+        <div id={HEADER_ACTION_ID} className={styles.action} />
       </div>
     </div>
   );

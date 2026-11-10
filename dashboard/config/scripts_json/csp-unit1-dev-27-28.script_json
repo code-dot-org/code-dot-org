@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-04 05:25:16 UTC",
+    "serialized_at": "2026-11-07 01:09:23 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -179,7 +179,7 @@
     },
     {
       "key": "lesson-24",
-      "name": "Lesson 9: Black and Whtie Images",
+      "name": "Lesson 9: Black and White Images",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -290,6 +290,9 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "overview": "**Where does bias in technology come from — and how do we fix it?**\n\nThis lesson examines how bias enters technology through a real case, Twitter’s image-cropping algorithm. Students crop images themselves, watch and read about how reporters and Twitter tested the algorithm and found it favored lighter faces, and explain how human choices and data work together to produce bias. Students then decide when a task should be automated and when a person should keep the final decision, and propose a revision to a biased design along with a plan to retest it.",
+        "preparation": "- Print copies of the Twitter Image Cropping article (1 per student)\n- Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n- Watch the parts of the video “Are We Automating Racism?” referenced in the lesson plan.",
+        "student_overview": "**Where does bias in technology come from — and how do we fix it?**\n\nStart by cropping photos yourself and comparing your choices with a partner’s. Then watch and read about how Twitter’s cropping algorithm ended up favoring some people over others, and figure out where that bias came from. You’ll decide when an algorithm should make a call and when a person should, then propose a fix for a biased design and plan how to retest it."
       },
       "seeding_key": {
         "lesson.key": "lesson-27",
@@ -305,6 +308,9 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
+        "overview": "**How do we know if an AI system is accurate enough to trust for a real job? And who would be affected if it got something wrong?**\n\nStudents test an AI chatbot against criteria they define themselves, using a library scenario where the chatbot confidently answers questions it has no real information about. Through testing, scoring, and comparing results with a partner, students uncover where the system succeeds and where it fails, then reason about who is affected by those failures and whether the system needs human oversight.",
+        "preparation": "- Provide copies of the AI Lab activity guide (one per pair)",
+        "student_overview": "**How do we know if an AI system is accurate enough to trust for a real job? And who would be affected if it got something wrong?**\n\nStudents put an AI chatbot to the test, deciding for themselves what counts as a trustworthy answer and then checking if the chatbot measures up. Along the way, they discover where it falls short and think about who gets affected when it does."
       },
       "seeding_key": {
         "lesson.key": "lesson-29",
@@ -320,6 +326,9 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
+        "overview": "**Why can't computers understand plain English?**\n\nIn this lesson, students discover why computers need programming languages. They design a small arrangement of blocks (LEGO® pieces or paper cutouts), write text-only instructions for it, and trade with another group to see whether a classmate can rebuild it from the words alone. In the wrap-up, students pinpoint where the instructions broke down, connect those breakdowns to the ambiguity of everyday language, and imagine how a language built for giving instructions would need to be different. A short Check Your Understanding asks students to describe how programming languages differ from natural languages and to justify why programming languages exist.",
+        "preparation": "- Prepare either a small set of LEGO blocks or paper cutouts for each pair of students",
+        "student_overview": "**Why can't computers understand plain English?**\n\nWhy can't a computer just follow instructions written in plain English? You'll find out by building a design from blocks, writing instructions for it using only words, and trading with another group to see if they can rebuild it. Then you'll figure out where the instructions went wrong and what a language built for giving clear instructions would need to look like."
       },
       "seeding_key": {
         "lesson.key": "lesson-28",
@@ -335,6 +344,9 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
+        "overview": "**How do we know two algorithms solve the same problem?**\n\nThis lesson introduces what it means for two algorithms to solve the same problem. Students begin by solving a set of birthday problems with their classmates and noticing which ones can be solved in similar ways. They then work in partners to trace four pairs of flowcharts for a robot on a grid, drawing each trail and writing out the steps before deciding whether each pair is \"the same.\" The emphasis is on judging algorithms by what they accomplish, not by how they look. Short vocabulary slides introduce problem, algorithm, and sequencing as students encounter each idea.",
+        "preparation": "- Print copies of the Comparing Algorithms Activity Guide (1 per pair)",
+        "student_overview": "**How do we know two algorithms solve the same problem?**\n\nStart by hunting down classmates' birthdays to see how different problems can be solved in similar ways. Then, with a partner, trace pairs of robot flowcharts, draw the trail each one makes, and write out the steps to decide whether two different-looking algorithms solve the same problem. By the end, you'll use the words problem, algorithm, and sequencing to explain what makes two algorithms the same."
       },
       "seeding_key": {
         "lesson.key": "lesson-30",
@@ -350,6 +362,9 @@
       "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
+        "overview": "**How do you control what a computer does, one instruction at a time?**\n\nIn this lesson, students write their first lines of Python code using the Neighborhood platform, guiding a Painter through a series of move, turn, and paint commands. Students predict, trace, tinker with, and extend existing code before writing and debugging their own, building an understanding of sequential programming, comments, and programming statements along the way. The lesson culminates in students applying these commands independently to solve a Modify challenge and debug a program with an error.",
+        "purpose": "\n- Provide copies of the unit guide (one per student).",
+        "student_overview": "**How do you control what a computer does, one instruction at a time?**\n\nYou write your first lines of code by giving instructions to a Painter, telling it how to move, turn, and paint on a grid. Along the way, you predict what code does, fix a bug, and finish painting a path for a neighborhood block party."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -365,6 +380,9 @@
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
+        "overview": "**How do I turn my idea into a program that actually works?**\n\nYesterday students analyzed and modified other people's code. Today they write their own from scratch. Students first sketch their plan on a handout — a sequence of move, turn, and paint commands, each one labeled — before touching a keyboard. They then code that plan in the level, run it, and trace any mismatches between what they expected and what happened. Students revise until their program matches their sketch.",
+        "preparation": "- Print or share the \"Design Your Program\" handout, one per student.\n- Review the Free-Response Supports and consider which, if any, supports are suitable for your classroom.\n- Check the **\"Teacher's Lounge\"** forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How do I turn my idea into a program that actually works?**\n\nYesterday you looked at other people's code to figure out how it worked. Today it's your turn to write your own! You'll start by sketching your plan — deciding what you want to create and labeling exactly where your character will move, turn, and paint. Then you'll bring that plan to life by writing the code yourself, running it to check it against your sketch, and fixing anything that doesn't look right."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -528,6 +546,8 @@
       "key": "a7e6bbfe-5ab1-40fb-844c-e712320b275d",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "a7e6bbfe-5ab1-40fb-844c-e712320b275d",
@@ -537,9 +557,53 @@
       }
     },
     {
-      "key": "335e6312-817b-4b6d-b723-39f381478601",
+      "key": "3b5e10b6-d3a4-4f30-9237-045096e941be",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3b5e10b6-d3a4-4f30-9237-045096e941be",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "6a4637f0-da4b-4d60-92a9-c1fef49d0ac2",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6a4637f0-da4b-4d60-92a9-c1fef49d0ac2",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "bd88188d-1c0b-41d3-84e1-ea44064b8587",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd88188d-1c0b-41d3-84e1-ea44064b8587",
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "335e6312-817b-4b6d-b723-39f381478601",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601",
@@ -549,9 +613,39 @@
       }
     },
     {
-      "key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea",
+      "key": "4f406c1c-9e7e-4b03-b21f-4fe1f6968c54",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f406c1c-9e7e-4b03-b21f-4fe1f6968c54",
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "a21b15bf-8982-4fd0-9e84-eb6a7e3d695c",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a21b15bf-8982-4fd0-9e84-eb6a7e3d695c",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea",
@@ -561,12 +655,56 @@
       }
     },
     {
-      "key": "b2ac46c7-c309-4c94-bf71-edc6a1239188",
+      "key": "f21c65e3-fad0-4a93-99d4-ada80f072257",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f21c65e3-fad0-4a93-99d4-ada80f072257",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "3fe14184-f0a2-4aa9-9692-d295cb54d5a1",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3fe14184-f0a2-4aa9-9692-d295cb54d5a1",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "b2ac46c7-c309-4c94-bf71-edc6a1239188",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "b3cf9487-6de8-4b7e-8e3c-ab6d29b596bd",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3cf9487-6de8-4b7e-8e3c-ab6d29b596bd",
         "lesson.key": "lesson-17",
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28"
@@ -1011,6 +1149,7 @@
       "key": "6eaf7378-b00a-4ac9-b30b-0d64b4e2d576",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students share something they know a lot about with a small group, building early comfort speaking up and previewing the idea that everyone brings valuable knowledge to this course."
       },
       "seeding_key": {
         "activity_section.key": "6eaf7378-b00a-4ac9-b30b-0d64b4e2d576",
@@ -1018,9 +1157,295 @@
       }
     },
     {
-      "key": "22820190-156e-432e-af5a-2b304c971103",
+      "key": "a822a33e-4f46-4aba-8998-799f5b6b15b1",
+      "position": 2,
+      "properties": {
+        "description": "Welcome to Computer Science Principles! This year we’re going to learn a lot about computer science, but before we begin, we want to learn a little bit about you and your thoughts on computer science in general. Let’s start by seeing how creative we can be right now!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a822a33e-4f46-4aba-8998-799f5b6b15b1",
+        "lesson_activity.key": "a7e6bbfe-5ab1-40fb-844c-e712320b275d"
+      }
+    },
+    {
+      "key": "8382bd2b-1f72-493f-9491-a4f74b76d889",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 2-4. Direct students to introduce themselves while you distribute sticky notes.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note or scratch paper."
+      },
+      "seeding_key": {
+        "activity_section.key": "8382bd2b-1f72-493f-9491-a4f74b76d889",
+        "lesson_activity.key": "a7e6bbfe-5ab1-40fb-844c-e712320b275d"
+      }
+    },
+    {
+      "key": "17569318-ba84-4aae-832c-df66be61f975",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a minute to write down something that they know a lot about or could teach someone. Once students are ready, click the animated slide to reveal the next steps: each person in the group should share what they wrote down on their sticky and then tell the group something interesting about that topic.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for topics that might resurface later in the course, and prompt any hesitant students with a follow-up question about what they shared.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The goal is for students to name something they're interested in and know enough about to share real insight — it doesn't have to be a school subject. Much of their willingness to open up will come from your own genuine curiosity about what they share. If students get stuck, remind them everyone has some hobby, interest, or hidden talent worth talking about."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "17569318-ba84-4aae-832c-df66be61f975",
+        "lesson_activity.key": "a7e6bbfe-5ab1-40fb-844c-e712320b275d"
+      }
+    },
+    {
+      "key": "be036253-06a4-4483-862f-95d4c0a858d2",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives."
+      },
+      "seeding_key": {
+        "activity_section.key": "be036253-06a4-4483-862f-95d4c0a858d2",
+        "lesson_activity.key": "a7e6bbfe-5ab1-40fb-844c-e712320b275d"
+      }
+    },
+    {
+      "key": "aac098b6-5cb1-41b3-9e06-7472ac5017af",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "aac098b6-5cb1-41b3-9e06-7472ac5017af",
+        "lesson_activity.key": "a7e6bbfe-5ab1-40fb-844c-e712320b275d"
+      }
+    },
+    {
+      "key": "936782d6-9785-4712-97c2-6933844a6762",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students identify how technology touches an area they're interested in and sketch out a creative way it could be improved or a new problem it could solve, practicing the mindset of noticing problems and imagining solutions.",
+        "duration": "20",
+        "name": "Rapid Prototype an Innovation"
+      },
+      "seeding_key": {
+        "activity_section.key": "936782d6-9785-4712-97c2-6933844a6762",
+        "lesson_activity.key": "3b5e10b6-d3a4-4f30-9237-045096e941be"
+      }
+    },
+    {
+      "key": "c52c88e9-a60a-406b-93ec-93acbe06b8d6",
+      "position": 2,
+      "properties": {
+        "description": "Technology seems to be everywhere, affecting everything we do. But it starts with someone recognizing a problem and building something to solve it. As a class, we're going to try \"rapid prototyping\" — a prototype is just a quick sketch of an idea, the first draft something real might be built from.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c52c88e9-a60a-406b-93ec-93acbe06b8d6",
+        "lesson_activity.key": "3b5e10b6-d3a4-4f30-9237-045096e941be"
+      }
+    },
+    {
+      "key": "c9c6bf86-d68a-4c43-943c-e91d2ee76c59",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a poster paper."
+      },
+      "seeding_key": {
+        "activity_section.key": "c9c6bf86-d68a-4c43-943c-e91d2ee76c59",
+        "lesson_activity.key": "3b5e10b6-d3a4-4f30-9237-045096e941be"
+      }
+    },
+    {
+      "key": "220d7413-3ea2-40d6-b913-fc53865123c8",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each group work through their members' areas of interest, brainstorming how technology touches each one and one way it could be improved.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that every group member is contributing ideas across all the interests in their group, not just their own.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep things quick. If a group is worried about not being innovative enough, remind them that very small ideas can have big consequences. People once thought it was ridiculous that you would want to send a short text message to another person over a phone.\n\nAlternatively, a group may have a great idea that they want to spend more time on. They can do that later. For now, just remind them it's a rapid prototype."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "220d7413-3ea2-40d6-b913-fc53865123c8",
+        "lesson_activity.key": "3b5e10b6-d3a4-4f30-9237-045096e941be"
+      }
+    },
+    {
+      "key": "2b59f7ac-4b16-45b4-bb22-d986907bae29",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to agree on the idea from their brainstorm that would be most interesting to the rest of the class, sketch it on their poster, and jot down one possible downside or new problem their idea could create.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups work, prompt them to think beyond the benefit — ask \"what's one way this could go wrong, or create a new problem?\" if they're stuck.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If a group starts perfecting their drawing, remind them this is still a rapid prototype — a rough sketch is enough. Polish isn't the goal; conveying the idea clearly is."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the completed posters as a quick formative check — do students' sketches show a technology idea connected to a real interest, and does their noted downside or new problem show genuine thinking about effects, not just a token answer? This can help you gauge how well the class is grasping both lesson objectives before moving forward."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2b59f7ac-4b16-45b4-bb22-d986907bae29",
+        "lesson_activity.key": "3b5e10b6-d3a4-4f30-9237-045096e941be"
+      }
+    },
+    {
+      "key": "5785bf3d-ef7e-429d-9259-399a19a2ad55",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students put their posters on the wall. Do a \"Gallery Walk\" or a whip around so that each student can see all of the other groups' work.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Take this opportunity to explain the importance of bringing individual interests and perspectives to this course. From day one, students should be thinking about how to apply the principles they learn to their own lives — hopefully with excitement."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5785bf3d-ef7e-429d-9259-399a19a2ad55",
+        "lesson_activity.key": "3b5e10b6-d3a4-4f30-9237-045096e941be"
+      }
+    },
+    {
+      "key": "e3e847d4-bf1c-48e1-ad83-199575ba593b",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students see how computer science touches a wide range of fields beyond what they might expect, connecting back to the prototyping they just did.",
+        "duration": "5",
+        "name": "Making Connections"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3e847d4-bf1c-48e1-ad83-199575ba593b",
+        "lesson_activity.key": "3b5e10b6-d3a4-4f30-9237-045096e941be"
+      }
+    },
+    {
+      "key": "3411c7c6-63f1-4b11-9687-5f1c19553c12",
+      "position": 8,
+      "properties": {
+        "description": "We're just starting this class, but you all bring passions and knowledge about things you care about — and it's likely that those things involve technology in some way. Everyone's unique, but we're all in this together.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3411c7c6-63f1-4b11-9687-5f1c19553c12",
+        "lesson_activity.key": "3b5e10b6-d3a4-4f30-9237-045096e941be"
+      }
+    },
+    {
+      "key": "c17ad798-4038-4f7b-9ee0-c1255d25c399",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-video\"></i> **Video:** Show the \"Computer Science is Changing Everything\" video.\n\n**Questions to consider with the video:**\n- What are you excited to learn about in this course?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students can discuss in small groups and then share out with the whole class. It's ok if at this point students don't have an answer to this prompt."
+      },
+      "seeding_key": {
+        "activity_section.key": "c17ad798-4038-4f7b-9ee0-c1255d25c399",
+        "lesson_activity.key": "3b5e10b6-d3a4-4f30-9237-045096e941be"
+      }
+    },
+    {
+      "key": "475bbc34-11dd-48ab-bf4a-52a492057953",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives."
+      },
+      "seeding_key": {
+        "activity_section.key": "475bbc34-11dd-48ab-bf4a-52a492057953",
+        "lesson_activity.key": "6a4637f0-da4b-4d60-92a9-c1fef49d0ac2"
+      }
+    },
+    {
+      "key": "5cbe2525-ea77-438a-b917-12bad504cf27",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day, then click the animated slide to display the two examples on the slide, asking students to raise their hand if they've felt that problem themselves. Invite one or two volunteers to share an app idea of their own. Keep this quick and low-pressure — the goal is a fun, casual close to the period, not a deep discussion."
+      },
+      "seeding_key": {
+        "activity_section.key": "5cbe2525-ea77-438a-b917-12bad504cf27",
+        "lesson_activity.key": "6a4637f0-da4b-4d60-92a9-c1fef49d0ac2"
+      }
+    },
+    {
+      "key": "ed7a2bf2-e044-40ea-8b8a-7ea83feccf21",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Have students talk through the questions on the screen with a partner.\n- *What are apps?*\n- *How do we interact with them?*\n- *What kinds of things do apps do?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that apps solve problems or do everyday tasks, such as entertainment (images, movies, TV), social (chatting, social media), commerce (marketplaces), and finding information (search engines, maps). Students should also recognize that apps have screens, or user interfaces, that collect information from users with buttons, sliders, and text boxes, and display information back with sounds, images, video, and text."
+      },
+      "seeding_key": {
+        "activity_section.key": "ed7a2bf2-e044-40ea-8b8a-7ea83feccf21",
+        "lesson_activity.key": "bd88188d-1c0b-41d3-84e1-ea44064b8587"
+      }
+    },
+    {
+      "key": "209cd164-873b-47c3-ab44-8b3b49a654d0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives."
+      },
+      "seeding_key": {
+        "activity_section.key": "209cd164-873b-47c3-ab44-8b3b49a654d0",
+        "lesson_activity.key": "bd88188d-1c0b-41d3-84e1-ea44064b8587"
+      }
+    },
+    {
+      "key": "26b5a18d-1d59-416b-9333-c86dfa3c5a16",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "26b5a18d-1d59-416b-9333-c86dfa3c5a16",
+        "lesson_activity.key": "bd88188d-1c0b-41d3-84e1-ea44064b8587"
+      }
+    },
+    {
+      "key": "df1073b7-5454-4f0b-a404-a97fabe3f7f4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students try out sample apps and describe how users interact with each app, what its purpose is, and who it is for.",
+        "duration": "10",
+        "name": "App Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "df1073b7-5454-4f0b-a404-a97fabe3f7f4",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "698272a5-a956-4017-baec-3384394d0748",
+      "position": 2,
+      "properties": {
+        "description": "Today we are going to look at some sample apps to explore their purpose and function.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "698272a5-a956-4017-baec-3384394d0748",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "0ff1a8cc-8433-45f9-8679-d1ad239c751d",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students work in pairs. Depending on time, they explore at least three of the five apps."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0ff1a8cc-8433-45f9-8679-d1ad239c751d",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "22820190-156e-432e-af5a-2b304c971103",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to work in pairs through Levels 1 to 5.\n- **Level 1 Water Conservation Tips:** Users switch between English and Spanish, choose a refillable bottle and fill it, and start a shower timer to learn ways to save water.\n- **Level 2 Bird Quiz:** Users answer three bird trivia questions, moving on after a right answer and landing on a losing screen after a wrong one.\n- **Level 3 Hamilton Township:** Users change the color of the town's flower baskets and click pictures to learn how the town is beautifying its streets.\n- **Level 4 Four Square:** Users click through screens that explain how to play and answer how many players are needed.\n- **Level 5 Monarch Butterflies:** Users click each life stage to see a description and follow the monarch life cycle.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students who describe what they did in the app, not just what the screen looks like.",
         "progression_name": "App Exploration"
       },
       "seeding_key": {
@@ -1029,9 +1454,81 @@
       }
     },
     {
-      "key": "4d707f7b-9443-4365-9902-5aaab6fafc6e",
-      "position": 2,
+      "key": "dc2fc456-f107-4c70-bd84-95519b91cab1",
+      "position": 5,
       "properties": {
+        "description": "Choose one app and talk it through with your partner. Write your ideas on scratch paper first.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dc2fc456-f107-4c70-bd84-95519b91cab1",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "c80b5c8d-db5a-4c14-b534-942a013ddb5e",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts:\n- *How does the user interact with the app?*\n- *What is the purpose of this app?*\n- *Who is the target audience?*"
+      },
+      "seeding_key": {
+        "activity_section.key": "c80b5c8d-db5a-4c14-b534-942a013ddb5e",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "609c6413-413d-4c6f-bbc8-514d1f6fa261",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn the vocabulary for how apps take in and send out information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the video “How Computers Work.” Have students listen for the words input and output.",
+        "duration": "10",
+        "name": "Input and Output"
+      },
+      "seeding_key": {
+        "activity_section.key": "609c6413-413d-4c6f-bbc8-514d1f6fa261",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "aea35d1b-59f6-4ed8-af86-53a0f533d5f3",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *input*. Explain that an app gets input in many ways, from a user or from another program."
+      },
+      "seeding_key": {
+        "activity_section.key": "aea35d1b-59f6-4ed8-af86-53a0f533d5f3",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "ccb25287-4862-4299-8625-adee0776eeb0",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *output*. Explain that an app's output usually depends on its input, or on how the program was set up. For example, you could program an app to play a song as soon as it runs."
+      },
+      "seeding_key": {
+        "activity_section.key": "ccb25287-4862-4299-8625-adee0776eeb0",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "f2771bad-22b6-4d07-9835-f1d448be60f2",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *user interface*. Explain that the buttons, pictures, and text on an app's screen are its user interface."
+      },
+      "seeding_key": {
+        "activity_section.key": "f2771bad-22b6-4d07-9835-f1d448be60f2",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "4d707f7b-9443-4365-9902-5aaab6fafc6e",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students identify the inputs and outputs of the sample apps by trying actions and observing the results.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to work in pairs through Levels 6 to 10.\n- **Level 6 Water Conservation Tips:** Clicking Spanish changes the text, clicking the refillable bottle and then the faucet fills the bottle, and clicking the timer ends the countdown.\n- **Level 7 Bird Quiz:** Clicking an answer moves to the next question or to the losing screen, and three right answers lead to the winning screen.\n- **Level 8 Hamilton Township:** Clicking a color button changes the color box, and clicking a picture shows where that item belongs.\n- **Level 9 Four Square:** Clicking a number shows \"Not enough\" or \"Right!\", and clicking More Info moves to the next screen.\n- **Level 10 Monarch Butterflies:** Clicking the caterpillar or chrysalis shows its description, and clicking the butterfly reveals the Home button.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students pair every input with the output it caused.",
+        "duration": "5",
+        "name": "App Investigation",
         "progression_name": "App Investigation"
       },
       "seeding_key": {
@@ -1040,10 +1537,30 @@
       }
     },
     {
-      "key": "4142eae2-5b4c-45ca-9e3e-db3c595de1ed",
-      "position": 3,
+      "key": "172f8e73-0804-4eda-aa65-09bc4df462b7",
+      "position": 12,
       "properties": {
-        "progression_name": "Check for Understanding"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What input did you try, and what output did it cause?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that inputs are actions like clicking a button, and outputs are what the app shows or plays in response."
+      },
+      "seeding_key": {
+        "activity_section.key": "172f8e73-0804-4eda-aa65-09bc4df462b7",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "4142eae2-5b4c-45ca-9e3e-db3c595de1ed",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Check whether students can match input, output, and user interface to examples, state an app's purpose, and explain how they learned what an app does by using it.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 11, the vocabulary match, and Level 12, the written reflection.",
+        "duration": "10",
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use these levels to check whether students can match an input, an output, and a user interface to examples, state an app's purpose, and describe an action they tried and how the app responded."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4142eae2-5b4c-45ca-9e3e-db3c595de1ed",
@@ -1051,10 +1568,108 @@
       }
     },
     {
-      "key": "0b20dbe4-acdc-40dc-b06e-4c37a70efb07",
+      "key": "3b7f9f61-4e3d-4918-b3a4-e0547af19844",
       "position": 1,
       "properties": {
-        "progression_name": "Test a Sensor"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives."
+      },
+      "seeding_key": {
+        "activity_section.key": "3b7f9f61-4e3d-4918-b3a4-e0547af19844",
+        "lesson_activity.key": "4f406c1c-9e7e-4b03-b21f-4fe1f6968c54"
+      }
+    },
+    {
+      "key": "c885c334-f8e9-4b00-bb86-84645fb27447",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to think about what they learned today."
+      },
+      "seeding_key": {
+        "activity_section.key": "c885c334-f8e9-4b00-bb86-84645fb27447",
+        "lesson_activity.key": "4f406c1c-9e7e-4b03-b21f-4fe1f6968c54"
+      }
+    },
+    {
+      "key": "633ad166-719d-44c1-bcce-8af8461c4e9c",
+      "position": 3,
+      "properties": {
+        "description": "Apps have different purposes for different users. They take in input and send out output, and users interact with them through the user interface.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "633ad166-719d-44c1-bcce-8af8461c4e9c",
+        "lesson_activity.key": "4f406c1c-9e7e-4b03-b21f-4fe1f6968c54"
+      }
+    },
+    {
+      "key": "7dfb817a-41b1-47e5-b164-23225dfa450e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How could you tell what an app does just by using it?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that using an app and watching how it responds shows its purpose and behavior."
+      },
+      "seeding_key": {
+        "activity_section.key": "7dfb817a-41b1-47e5-b164-23225dfa450e",
+        "lesson_activity.key": "4f406c1c-9e7e-4b03-b21f-4fe1f6968c54"
+      }
+    },
+    {
+      "key": "8fb28cce-13b3-426a-a486-6ce017fc7520",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "8fb28cce-13b3-426a-a486-6ce017fc7520",
+        "lesson_activity.key": "4f406c1c-9e7e-4b03-b21f-4fe1f6968c54"
+      }
+    },
+    {
+      "key": "374c1639-aee7-4c45-89da-bc9ddc21f6e0",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Get students thinking about how much their devices notice on their own, before the terms \"automatic input\" and \"user input\" are introduced.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** List as many ways as you can that a phone, laptop, or watch collects information on its own to work and to run apps.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students realize their devices collect far more information on their own than they expected. Record their answers on the board and keep them. You'll point back to this list on the \"What is an automatic input?\" slide. Listen for: location, time, light level (auto-brightness), motion (screen rotation, step count), face unlock, battery level, Wi-Fi and Bluetooth, and \"Hey Siri\" listening.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "374c1639-aee7-4c45-89da-bc9ddc21f6e0",
+        "lesson_activity.key": "a21b15bf-8982-4fd0-9e84-eb6a7e3d695c"
+      }
+    },
+    {
+      "key": "ae4db31e-df8d-42a9-83b2-f3b17cf9b7bb",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "ae4db31e-df8d-42a9-83b2-f3b17cf9b7bb",
+        "lesson_activity.key": "a21b15bf-8982-4fd0-9e84-eb6a7e3d695c"
+      }
+    },
+    {
+      "key": "8adb6339-da00-4c34-a59b-25af446564e2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn the difference between user input and automatic input, then test four simulated sensors to see how inputs change an app's output.\n\n\n",
+        "duration": "10",
+        "name": "Inputs and Test a Sensor"
+      },
+      "seeding_key": {
+        "activity_section.key": "8adb6339-da00-4c34-a59b-25af446564e2",
+        "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea"
+      }
+    },
+    {
+      "key": "0b20dbe4-acdc-40dc-b06e-4c37a70efb07",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students work in pairs in Lesson 3, Level 1: Test a Sensor. Have students try every sensor and watch what happens on the phone.\" The level has a Sensor Panel on the left and a phone on the right. Each sensor changes something different on the phone. Encourage pairs to try each sensor more than once and to change one thing at a time so they can see exactly what it affects.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask pairs:\n* \"What happens at 0 and 100 on the Light Sensor?\"\n* \"Did changing the city change anything you didn't expect?\"\n* \"What happened when someone else picked up the phone?\"\n",
+        "progression_name": "Test a Sensor",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The microphone reads replies out loud. Have students use headphones, or turn off \"Read replies out loud\" so the room doesn't get noisy.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0b20dbe4-acdc-40dc-b06e-4c37a70efb07",
@@ -1062,10 +1677,106 @@
       }
     },
     {
-      "key": "4d8460a7-d3a9-4913-8a1e-189c63a1a19d",
-      "position": 2,
+      "key": "3f0744bc-801d-4284-b5d7-fac4709e0a05",
+      "position": 3,
       "properties": {
-        "progression_name": "Trace Input to Output"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which does a phone use on its own? Which need your permission or action first? Which are both?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students see that most automatic inputs only work because the user gave permission or took action first.\n* Light Sensor (on its own): Adjusts the screen without asking.\n* GPS (both): You tap \"Allow\" once, then it tracks you on its own.\n* Front Camera (both): You set up your face, then it checks on its own.\n* Microphone (both): You give permission, then it listens for \"Hey Siri.\"\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f0744bc-801d-4284-b5d7-fac4709e0a05",
+        "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea"
+      }
+    },
+    {
+      "key": "9ceed25f-1f3a-4ad6-ab8e-9de2e3fd9865",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define user input. Ask students for one example that isn't on the slide, such as taking a photo, scrolling, or filling out a form.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define automatic input. Point back to the warm-up list on the board and say, \"Most of what you listed are automatic inputs. Your phone collected them without you doing anything.\"",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make it personal. If permitted, have students open their phone's location settings (on iPhone: Settings → Privacy & Security → Location Services; on Android: Settings → Location → App permissions) and count how many apps have location access. Most students are surprised by the number and have forgotten saying yes to most of them. This sets up the \"permission\" discussion after Test a Sensor.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9ceed25f-1f3a-4ad6-ab8e-9de2e3fd9865",
+        "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea"
+      }
+    },
+    {
+      "key": "1531c41a-0a52-4110-b3b7-0ab9d4ed3482",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1531c41a-0a52-4110-b3b7-0ab9d4ed3482",
+        "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea"
+      }
+    },
+    {
+      "key": "e9fbd894-c8c3-4ec5-a2b9-2f20097bf012",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define hidden output. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9fbd894-c8c3-4ec5-a2b9-2f20097bf012",
+        "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea"
+      }
+    },
+    {
+      "key": "257174eb-450e-46ac-94cd-30fce3389a3f",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "257174eb-450e-46ac-94cd-30fce3389a3f",
+        "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea"
+      }
+    },
+    {
+      "key": "26f2751c-4a26-40b3-81ef-6c6d1696ee95",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn to trace how information moves through an app using the ISPO model. Then they apply it to a real app scenario, including at least one hidden output.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through each stage in order, pointing to each card as you go:\n* **Input:** \"This is what the app takes in, either from you or automatically.\"\n* **Storage:** \"This is what the app saves, like your settings or history.\"\n* **Process:** \"This is where the app turns that information into something useful.\"\n* **Output:** \"This is what the app produces. Some of it you see, and some of it you never see.\"\n",
+        "duration": "15",
+        "name": "The ISPO Model"
+      },
+      "seeding_key": {
+        "activity_section.key": "26f2751c-4a26-40b3-81ef-6c6d1696ee95",
+        "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea"
+      }
+    },
+    {
+      "key": "973d591e-925c-476b-94fa-d2359e141051",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click to reveal each stage one at a time, then click to bring in the phone. Pause on two points: Input: The user never said where they were. Location was an automatic input; Output: Point to the hidden output. Ask, \"Did you know your voice recording leaves your phone?\"\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students asked this same question in Test a Sensor. Remind them that when they pressed Speak, the same four stages happened behind the scenes.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "973d591e-925c-476b-94fa-d2359e141051",
+        "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea"
+      }
+    },
+    {
+      "key": "4d8460a7-d3a9-4913-8a1e-189c63a1a19d",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students work in pairs in Lesson 3, Level 2: Trace Input to Output. Assign scenarios A-D so all four are covered. Sending a text (B) is the most familiar, and scanning a QR code (D) is the biggest challenge. In the level, students sort pre-written cards into the Input, Storage, Process, and Output zones, then fill in blank cards with their own ideas. Every flowchart must include an automatic input, a visible output, and a hidden output.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask pairs:\n* Stuck on Storage: \"When you open this app tomorrow, what does it still remember?\"\n* Everything in Output: \"Which of these would the user actually see?\"\n* No hidden output: \"Did any information leave the phone? Where did it go?\"\n",
+        "progression_name": "Trace Input to Output",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the completed Level 2 flowcharts as a quick formative check. Did students sort the cards into the right stages? Look closely at two cards: the automatic input, such as \"GPS finds where you are,\" and the hidden output, such as \"Your location is sent to the map company.\" Placing these correctly shows students can tell automatic input from user input and hidden output from visible output. This can help you gauge how well the class understands the first two objectives before moving on to edge cases.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4d8460a7-d3a9-4913-8a1e-189c63a1a19d",
@@ -1073,14 +1784,318 @@
       }
     },
     {
-      "key": "39af2b67-fa6d-433f-b55c-843c922d4925",
+      "key": "52e68b7f-1041-4a7c-a26f-defeda7fd38d",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students explain how an app should respond when conditions change, and what feedback the user should get. This builds their understanding of why apps need to behave as intended across a range of conditions.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Handle an Edge Case activity guide.\n",
+        "duration": "10",
+        "name": "Handle an Edge Case"
+      },
+      "seeding_key": {
+        "activity_section.key": "52e68b7f-1041-4a7c-a26f-defeda7fd38d",
+        "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea"
+      }
+    },
+    {
+      "key": "b058cdbb-06f3-45c9-8a75-4b2003e2f1c7",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define edge case."
+      },
+      "seeding_key": {
+        "activity_section.key": "b058cdbb-06f3-45c9-8a75-4b2003e2f1c7",
+        "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea"
+      }
+    },
+    {
+      "key": "472e2fd4-6c2b-41d4-82c3-09ed50eddfc8",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students go back to Level 2 to find the edge case for the scenario they traced. They look back at their flowchart, check which stages would change, and write how the app should respond and what the user should see or hear.\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the completed activity guides as a quick formative check. Did students name a specific app response, such as \"saves the message and tries again,\" rather than \"it shows an error\"? Does their feedback tell the user what happened and what to do next? This helps you gauge the third objective: why apps need to behave as intended across a range of conditions.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "472e2fd4-6c2b-41d4-82c3-09ed50eddfc8",
+        "lesson_activity.key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea"
+      }
+    },
+    {
+      "key": "f65f2104-4cda-4246-abaf-4de6375aa3b9",
       "position": 1,
       "properties": {
-        "progression_name": "Checking for Understanding"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to just think about what they learned today. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f65f2104-4cda-4246-abaf-4de6375aa3b9",
+        "lesson_activity.key": "f21c65e3-fad0-4a93-99d4-ada80f072257"
+      }
+    },
+    {
+      "key": "66fdbe5d-4075-491d-b979-bbe0a814fb5e",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "66fdbe5d-4075-491d-b979-bbe0a814fb5e",
+        "lesson_activity.key": "f21c65e3-fad0-4a93-99d4-ada80f072257"
+      }
+    },
+    {
+      "key": "ecfdcb8a-3342-4aaf-93b3-21b7b07ef89b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**  Students share their own ideas about what information is and begin to see that computer science is about information, not just computers. This sets up the working definition used in the rest of the lesson: information is the answer to a question.\n\n\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ecfdcb8a-3342-4aaf-93b3-21b7b07ef89b",
+        "lesson_activity.key": "3fe14184-f0a2-4aa9-9692-d295cb54d5a1"
+      }
+    },
+    {
+      "key": "0b814d32-6a8c-4a38-b019-7b447f084bb8",
+      "position": 2,
+      "properties": {
+        "description": "A lot of people think that computer science is the study of computers, like the phone in your pocket or the computer on your desk. As we'll see this year, computer science actually has a lot more to do with information.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0b814d32-6a8c-4a38-b019-7b447f084bb8",
+        "lesson_activity.key": "3fe14184-f0a2-4aa9-9692-d295cb54d5a1"
+      }
+    },
+    {
+      "key": "de47f96c-6d91-441a-967b-7c304e8f1d23",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What is your definition of information?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  More important than writing a formal definition of information is getting students discussing the term and its diverse forms. If students struggle with defining \"information,\" modify the prompt by asking them to provide examples of information in their world such as texts, books, videos, music, conversations, etc."
+      },
+      "seeding_key": {
+        "activity_section.key": "de47f96c-6d91-441a-967b-7c304e8f1d23",
+        "lesson_activity.key": "3fe14184-f0a2-4aa9-9692-d295cb54d5a1"
+      }
+    },
+    {
+      "key": "7855cb36-4c41-444e-9156-05e5ac4f5bdb",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "7855cb36-4c41-444e-9156-05e5ac4f5bdb",
+        "lesson_activity.key": "3fe14184-f0a2-4aa9-9692-d295cb54d5a1"
+      }
+    },
+    {
+      "key": "aa69b488-d6d9-4191-90dc-01c692a3aea5",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build and revise their own devices to send 2, then 4, then 8 possible messages. Along the way, they discover that reusing a small set of options in sequence scales better than inventing a new option for every message. This lays the groundwork for representing information with bits.\n",
+        "duration": "35",
+        "name": "Information Sending Devices"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa69b488-d6d9-4191-90dc-01c692a3aea5",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "cc17c089-bd6b-4853-9abd-12775c99577f",
+      "position": 2,
+      "properties": {
+        "description": "Today you are going to build your own device for sending and receiving messages which you will use to answer questions that you write.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cc17c089-bd6b-4853-9abd-12775c99577f",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "a334b77c-5a1d-4136-b36b-76caf15a2741",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Materials for students to build their binary message devices (straws, scissors, etc.).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a334b77c-5a1d-4136-b36b-76caf15a2741",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "6c8a2515-9018-43f7-8f07-7f7ae765e9f3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to write down a question that has two possible answers.",
+        "name": "Challenge #1",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In this activity, avoid the urge to give students a pre-written question or answers without allowing them time to struggle with the challenge. Encourage students to write down how their device works.\n* Example Question: Do you like strawberry or vanilla ice cream?\n* Answer: strawberry (move my pencil up and down), vanilla (move my pencil side to side)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6c8a2515-9018-43f7-8f07-7f7ae765e9f3",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "e57714e9-927a-4c82-887d-9fbcaf5d3315",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to build a device out of classroom supplies to communicate the answer to their question. Remind students of the rules:\n* No projectiles.\n* No language can be used. For example: If my question is \"Is your favorite color blue or green?\" I can't write the words blue and green on my device.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e57714e9-927a-4c82-887d-9fbcaf5d3315",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "76ba725a-331e-40ef-8ed5-41b210af60f9",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After students have completed their devices, choose a few groups to demonstrate their device in action. Students stand on opposite sides of the classroom. One student asks the agreed upon question. The other student uses the device to communicate the answer."
+      },
+      "seeding_key": {
+        "activity_section.key": "76ba725a-331e-40ef-8ed5-41b210af60f9",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "b13793ed-9641-417b-9c88-3989a3e69a86",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to modify the answer to their question so there are now four possible answers.",
+        "name": "Challenge #2",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may add new ways of answering a question. Others may notice that they can reuse their previous responses, sending those responses in sequences that produce new messages. Avoid the urge to tell them to reuse the device, instead allowing them to explore their own ideas.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b13793ed-9641-417b-9c88-3989a3e69a86",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "c2ca4715-4700-4155-aa2f-c8a0f0e9c78b",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to update their device to communicate one of four possible answers to their question.  Encourage them to consider:\n* Should you modify your device?\n* Can you use it in a different way?\n* Should you make a new device?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2ca4715-4700-4155-aa2f-c8a0f0e9c78b",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "e43e3db6-f72f-40ef-97bb-af96d7f3386f",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Again, choose groups to demonstrate their updated devices.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e43e3db6-f72f-40ef-97bb-af96d7f3386f",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "44291c50-87f7-40c8-b0af-ac1f75dbaef6",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to modify the answers to their question so there are now eight possible choices.",
+        "name": "Challenge #3",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "At this point, students may start to realize that the way their device communicates information is not practical and could not be scaled up if there were for example, a thousand or a million possible answers.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "44291c50-87f7-40c8-b0af-ac1f75dbaef6",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "326f70e1-45ac-4e5e-82ef-4eb3948fd7ff",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to update their device to communicate one of eight possible answers to your question. Encourage them to consider:\n* Should you modify your device?\n* Can you use it in a different way?\n* Should you make a new device?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "326f70e1-45ac-4e5e-82ef-4eb3948fd7ff",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "b99f979d-bcef-4c02-9069-d336c0af7d1d",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Do a final demonstration of devices before ending the activity.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b99f979d-bcef-4c02-9069-d336c0af7d1d",
+        "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "39af2b67-fa6d-433f-b55c-843c922d4925",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Lesson 4, Level 1 to answer the checking for understanding question.\n",
+        "progression_name": "Checking for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use this level to check whether students can explain that a sequence of two options can represent many different messages, describe why reusing the same two options scales better than adding a new option for every message, and give an example of combining two options to send more than two messages.\n\nIf many students still describe adding new options for each message, run a short reflection discussion: revisit a pair's Challenge #1 device and have the class figure out together how to send four messages using only its two original options.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "39af2b67-fa6d-433f-b55c-843c922d4925",
         "lesson_activity.key": "b2ac46c7-c309-4c94-bf71-edc6a1239188"
+      }
+    },
+    {
+      "key": "cc7c1979-aa59-467b-9324-24eb8545aef2",
+      "position": 1,
+      "properties": {
+        "description": "Let's wrap up by discussing how you designed your devices and what that means about the questions you can ask and the messages you can send.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cc7c1979-aa59-467b-9324-24eb8545aef2",
+        "lesson_activity.key": "b3cf9487-6de8-4b7e-8e3c-ab6d29b596bd"
+      }
+    },
+    {
+      "key": "a7138b11-3d76-48dd-8d9a-30474f8cd631",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Think back to your simple two-option device from Challenge #1. Instead of changing your device and adding more options every time you added more answers, how could you simply modify the way you use your device with only two options?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Focus the discussion on why some groups created devices using unique options for each additional message, while other groups devised plans in which they reused the same device to create new combinations of the original two options.\n\nUltimately, groups begin to notice that, for example: instead of bending a straw in four different directions, they could simply bend the straw the same two ways multiple times.\n* Sample Question: Do you like strawberry, chocolate, vanilla, or peanut butter ice cream?\n* Answers: strawberry (bend straw forward once), chocolate (bend straw forward twice), vanilla (bend straw backwards once), peanut butter (bend straw backwards twice)\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7138b11-3d76-48dd-8d9a-30474f8cd631",
+        "lesson_activity.key": "b3cf9487-6de8-4b7e-8e3c-ab6d29b596bd"
+      }
+    },
+    {
+      "key": "019590d6-5c06-4c8b-b250-f700d853baa2",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to just think about what they learned today. Have students share with a neighbor before having a quick class discussion.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "019590d6-5c06-4c8b-b250-f700d853baa2",
+        "lesson_activity.key": "b3cf9487-6de8-4b7e-8e3c-ab6d29b596bd"
       }
     },
     {
@@ -2215,7 +3230,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding"
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -2237,7 +3252,7 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding"
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -5336,6 +6351,34 @@
       }
     },
     {
+      "name": "AI Lab Activity Guide",
+      "url": "https://docs.google.com/document/d/13Bn4pgLQy54GzNzQTo10ONf79o5l5wU3Xc5KrSbyWFE",
+      "key": "ai_lab_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "ai_lab_activity_guide"
+      }
+    },
+    {
+      "name": "AI Lab Activity Guide",
+      "url": "https://docs.google.com/document/d/1ZGRldM4hbqjKx8V2KWWJQOk6Or0Darv9s7-K-EBf824/",
+      "key": "ai_lab_activity_guide_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_lab_activity_guide_1"
+      }
+    },
+    {
       "name": "AI: Training Data & Bias",
       "url": "https://www.youtube.com/watch?v=x2mRoFNm22g&t=1s",
       "key": "ai_training_data_bias",
@@ -5350,6 +6393,48 @@
       }
     },
     {
+      "name": "AL Lab Day",
+      "url": "https://docs.google.com/document/d/13Bn4pgLQy54GzNzQTo10ONf79o5l5wU3Xc5KrSbyWFE/",
+      "key": "al_lab_day",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "al_lab_day"
+      }
+    },
+    {
+      "name": "Algorithmic Bias",
+      "url": "https://docs.google.com/presentation/d/1kXKjaqCUlapv9kRCQi0MPwKeUrkUZbJYL11XcaA2pog",
+      "key": "algorithmic_bias",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "algorithmic_bias"
+      }
+    },
+    {
+      "name": "Algorithms Solve Problems",
+      "url": "https://docs.google.com/presentation/d/1gZFx7zFSbJMj4ROSEnUBQedfIpDbxsxC9KaXR3rsxm8/",
+      "key": "algorithms_solve_problems",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "algorithms_solve_problems"
+      }
+    },
+    {
       "name": "ASCII Student Reference",
       "url": "https://docs.google.com/document/d/1_UW60GD6xJ861MK5Yf1X5DuCukBpnhz3Xlsvo_zOYag/",
       "key": "ascii_student_reference",
@@ -5361,6 +6446,20 @@
       },
       "seeding_key": {
         "resource.key": "ascii_student_reference"
+      }
+    },
+    {
+      "name": "Auto-Mod Review Queue",
+      "url": "https://docs.google.com/document/d/1rpRKeaCi7KjcsnPgoe6BTA8jOJ-C1NQdrZh8B4AqEVI/",
+      "key": "auto-mod_review_queue",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "auto-mod_review_queue"
       }
     },
     {
@@ -5490,6 +6589,20 @@
       }
     },
     {
+      "name": "Comparing Algorithms",
+      "url": "https://docs.google.com/document/d/1KdO4fw26tr9EbJ52EqeWeTsS8XNJYl1WOBW-VBnQQpE/",
+      "key": "comparing_algorithms",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "comparing_algorithms"
+      }
+    },
+    {
       "name": "Computer Science is Changing Everything",
       "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
       "key": "computer_science_is_changing_everything_1",
@@ -5514,6 +6627,34 @@
       },
       "seeding_key": {
         "resource.key": "csp_unit_1_unit_guide"
+      }
+    },
+    {
+      "name": "Design Your Program",
+      "url": "https://docs.google.com/document/d/1gdIeo_lIssuMYClrEy_aE32fkYWzdz5R1BKnZkQUrAc",
+      "key": "design_your_program",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "design_your_program"
+      }
+    },
+    {
+      "name": "Design Your Program",
+      "url": "https://docs.google.com/document/d/1oIrUKZVgmdSh0oKdDCl2AWiPNXkg2ceQ-elBm-A4xXc/",
+      "key": "design_your_program_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "design_your_program_1"
       }
     },
     {
@@ -5670,6 +6811,34 @@
       }
     },
     {
+      "name": "Intro to Programming: Day 1",
+      "url": "https://docs.google.com/presentation/d/1wftV7KAi_gQKwOiZmDxuyl3TvmDWOfrGabAk_4oNNGE/",
+      "key": "intro_to_programming_day_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_programming_day_1"
+      }
+    },
+    {
+      "name": "Intro to Programming: Day 2",
+      "url": "https://docs.google.com/presentation/d/1SEvBSkXcdl57enxWyhNNMgtLGrRYDzgNBf_WK-dbGFQ",
+      "key": "intro_to_programming_day_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_programming_day_2"
+      }
+    },
+    {
       "name": "Introduction to Apps",
       "url": "https://docs.google.com/presentation/d/1F4Kb23ysISq1bv9CoH3lquZFXRmB4cjw7kXiSwUVMk0/",
       "key": "introduction_to_apps_1",
@@ -5681,6 +6850,20 @@
       },
       "seeding_key": {
         "resource.key": "introduction_to_apps_1"
+      }
+    },
+    {
+      "name": "Keep It Running",
+      "url": "https://docs.google.com/document/d/1DCJpitliaMFUwuiE726JKGdms4Dx2esfKkIPeCv88TY/",
+      "key": "keep_it_running",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "keep_it_running"
       }
     },
     {
@@ -5810,6 +6993,48 @@
       }
     },
     {
+      "name": "Sharing learnings about our image cropping algorithm (Twitter)",
+      "url": "https://blog.x.com/en/engineering/sharing-learnings-about-our-image-cropping-algorithm",
+      "key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
+      }
+    },
+    {
+      "name": "The Need for Programming Languages",
+      "url": "https://docs.google.com/presentation/d/1jrRI_wck4Xu3h-wGC6lJlsQnVMwmWMziD16_pp25Hf0/",
+      "key": "the_need_for_programming_languages",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_need_for_programming_languages"
+      }
+    },
+    {
+      "name": "Trustworthy AI: Transparency and Maintenance",
+      "url": "https://docs.google.com/presentation/d/1rdUD7ECAkE7lpDsIgKycnJZ4PvYUDRmk03gdUuoIatY",
+      "key": "trustworthy_ai_transparency_and_maintenance",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "trustworthy_ai_transparency_and_maintenance"
+      }
+    },
+    {
       "name": "Unit 1 Unit Guide",
       "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/",
       "key": "unit_1_unit_guide",
@@ -5909,6 +7134,76 @@
     },
     {
       "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc",
+      "key": "unit_1_unit_guide_15",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_15"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA",
+      "key": "unit_1_unit_guide_16",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_16"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/",
+      "key": "unit_1_unit_guide_17",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_17"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA/",
+      "key": "unit_1_unit_guide_18",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_18"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1MrYVN_AMm03qyom0zXiVmj5WHSh0VAQ2BU6iC7CJVjA",
+      "key": "unit_1_unit_guide_19",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_19"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
       "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/",
       "key": "unit_1_unit_guide_2",
       "properties": {
@@ -5919,6 +7214,48 @@
       },
       "seeding_key": {
         "resource.key": "unit_1_unit_guide_2"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1KolECcmMEw2UwA0T1k-rLadXCKw4frc1x2VNIuXIcqg/",
+      "key": "unit_1_unit_guide_20",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_20"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1MrYVN_AMm03qyom0zXiVmj5WHSh0VAQ2BU6iC7CJVjA/edit?tab=t.0#heading=h.x6ksc4d0ged8",
+      "key": "unit_1_unit_guide_21",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_21"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1KolECcmMEw2UwA0T1k-rLadXCKw4frc1x2VNIuXIcqg/edit?tab=t.0#heading=h.x6ksc4d0ged8",
+      "key": "unit_1_unit_guide_22",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_22"
       }
     },
     {
@@ -6035,6 +7372,24 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "intro_to_programming_day_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_1_unit_guide_19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_1_unit_guide_20"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -6193,6 +7548,54 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "design_your_program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "design_your_program_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "intro_to_programming_day_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_1_unit_guide_21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_1_unit_guide_22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "resource.key": "auto-mod_review_queue"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "resource.key": "keep_it_running"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "resource.key": "trustworthy_ai_transparency_and_maintenance"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-22",
         "resource.key": "candy"
       }
@@ -6319,6 +7722,78 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-27",
+        "resource.key": "algorithmic_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "resource.key": "unit_1_unit_guide_15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "resource.key": "unit_1_unit_guide_16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-28",
+        "resource.key": "the_need_for_programming_languages"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-29",
+        "resource.key": "ai_lab_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-29",
+        "resource.key": "ai_lab_activity_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-29",
+        "resource.key": "al_lab_day"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "resource.key": "algorithms_solve_problems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "resource.key": "comparing_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "resource.key": "unit_1_unit_guide_17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "resource.key": "unit_1_unit_guide_18"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-31",
         "resource.key": "how_computers_work"
       }
@@ -6370,6 +7845,16 @@
       }
     },
     {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "a finite set of instructions that accomplish a task. There are usually many algorithms to solve the same problem.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
       "key": "attribution",
       "word": "Attribution",
       "definition": "Giving credit to the original creator of content when required.",
@@ -6387,6 +7872,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "automatic_input"
+      }
+    },
+    {
+      "key": "bias",
+      "word": "Bias",
+      "definition": "When an app consistently favors certain people, values, or outcomes over others.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bias"
       }
     },
     {
@@ -6417,6 +7912,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "byte"
+      }
+    },
+    {
+      "key": "data_bias",
+      "word": "Data bias",
+      "definition": "when the data used to train or inform an app leaves out, or does not represent, the people and situations the app is meant to serve.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_bias"
       }
     },
     {
@@ -6550,6 +8055,36 @@
       }
     },
     {
+      "key": "problem",
+      "word": "Problem",
+      "definition": "a general description of a task that can (or cannot) be solved with an algorithm",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "problem"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "a collection of programming statements",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "programming_statement",
+      "word": "Programming Statement",
+      "definition": "a command or instruction",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "programming_statement"
+      }
+    },
+    {
       "key": "round_off_error",
       "word": "Round-off Error",
       "definition": "Error from attempting to represent a number that is too precise. The value is rounded.",
@@ -6557,6 +8092,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "round_off_error"
+      }
+    },
+    {
+      "key": "sequencing",
+      "word": "Sequencing",
+      "definition": "putting steps in an order",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "key": "sequential_programming",
+      "word": "Sequential Programming",
+      "definition": "when program statements run in order, from top to bottom",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequential_programming"
       }
     },
     {
@@ -6581,6 +8136,24 @@
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "programming_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "sequential_programming"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -6709,6 +8282,36 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-27",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "vocabulary.key": "data_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "vocabulary.key": "problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-31",
         "vocabulary.key": "input"
       }
@@ -6775,6 +8378,16 @@
       }
     },
     {
+      "key": "19bc21a4-6f56-4757-8945-dd1b4a9e240e",
+      "properties": {
+        "description": "Trace and test a program, debugging until output matches intended results."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "19bc21a4-6f56-4757-8945-dd1b4a9e240e"
+      }
+    },
+    {
       "key": "1a2cc9a1-86e7-4b1c-962f-18ee3298845d",
       "properties": {
         "description": "Explain the challenges of creating a clear set of rules for ordering patterns."
@@ -6792,6 +8405,36 @@
       "seeding_key": {
         "lesson.key": "lesson-25",
         "objective.key": "22d21c70-fea6-40af-b3c6-62da7bddedda"
+      }
+    },
+    {
+      "key": "2ab89c93-c30e-43fa-9b00-52fcb8b1cb21",
+      "properties": {
+        "description": "Define criteria for evaluating whether an AI chatbot’s responses are accurate and trustworthy for a real-world task."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-29",
+        "objective.key": "2ab89c93-c30e-43fa-9b00-52fcb8b1cb21"
+      }
+    },
+    {
+      "key": "2c33fd92-e788-415c-b943-e6d8ff466a73",
+      "properties": {
+        "description": "Test an AI chatbot against your own criteria and identify patterns in where it succeeds or fails."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-29",
+        "objective.key": "2c33fd92-e788-415c-b943-e6d8ff466a73"
+      }
+    },
+    {
+      "key": "33a15737-e6a7-4f63-83d5-697c6734a9d5",
+      "properties": {
+        "description": "Evaluate whether an AI system needs human oversight, and explain who could be affected if it gives inaccurate information."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-29",
+        "objective.key": "33a15737-e6a7-4f63-83d5-697c6734a9d5"
       }
     },
     {
@@ -6825,6 +8468,26 @@
       }
     },
     {
+      "key": "436e3633-0b5d-4304-babb-40d834f68ad4",
+      "properties": {
+        "description": "Sketch a program design using move, turn, and paint commands."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "436e3633-0b5d-4304-babb-40d834f68ad4"
+      }
+    },
+    {
+      "key": "4cdbba9b-b4b7-41ce-862b-30b25d33583f",
+      "properties": {
+        "description": "Justify the existence of programming languages to precisely communicate instructions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-28",
+        "objective.key": "4cdbba9b-b4b7-41ce-862b-30b25d33583f"
+      }
+    },
+    {
       "key": "580d62f4-c1bc-41ee-9894-5d4587163751",
       "properties": {
         "description": "Describe the challenges in representing text using a fixed number of bits for each character"
@@ -6852,6 +8515,16 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "objective.key": "66ef587e-b3d1-4259-baf9-34454e688303"
+      }
+    },
+    {
+      "key": "70c1e82f-be25-4c48-ae7e-571b02330e26",
+      "properties": {
+        "description": "Represent algorithms as written steps and flowcharts"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "objective.key": "70c1e82f-be25-4c48-ae7e-571b02330e26"
       }
     },
     {
@@ -6905,6 +8578,16 @@
       }
     },
     {
+      "key": "8aa13e7e-86f1-477f-8cfd-5bf89642957a",
+      "properties": {
+        "description": "Write a sequential program that implements a planned design."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "8aa13e7e-86f1-477f-8cfd-5bf89642957a"
+      }
+    },
+    {
       "key": "8b6f84f6-b42a-4420-b59e-0ebf50e21f3c",
       "properties": {
         "description": "Modify a loop written by someone else to produce a new result."
@@ -6945,6 +8628,16 @@
       }
     },
     {
+      "key": "965fd76f-bd87-4216-a61b-90dcdb113a98",
+      "properties": {
+        "description": "Explain that some algorithms may look or operate differently but still solve the same problem"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "objective.key": "965fd76f-bd87-4216-a61b-90dcdb113a98"
+      }
+    },
+    {
       "key": "99556a73-cec3-4f51-8fc9-c36c16f4ae24",
       "properties": {
         "description": "Use patterns to represent information"
@@ -6952,6 +8645,26 @@
       "seeding_key": {
         "lesson.key": "lesson-17",
         "objective.key": "99556a73-cec3-4f51-8fc9-c36c16f4ae24"
+      }
+    },
+    {
+      "key": "c01ce701-1269-4ea2-a125-1db507150ec3",
+      "properties": {
+        "description": "Explain the qualities that differentiate natural languages and programming languages"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-28",
+        "objective.key": "c01ce701-1269-4ea2-a125-1db507150ec3"
+      }
+    },
+    {
+      "key": "da4e7f24-eb1e-4ba8-a4fa-2a4b1476e515",
+      "properties": {
+        "description": "Explain the formal definitions of a problem, an algorithm, and sequencing"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "objective.key": "da4e7f24-eb1e-4ba8-a4fa-2a4b1476e515"
       }
     },
     {

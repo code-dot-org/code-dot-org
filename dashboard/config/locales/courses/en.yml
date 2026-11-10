@@ -7650,3 +7650,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        adaptive-dev:
+          title: adaptive-dev
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

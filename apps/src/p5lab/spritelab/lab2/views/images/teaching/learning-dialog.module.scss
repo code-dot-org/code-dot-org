@@ -11,6 +11,7 @@
 }
 
 .panel {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,9 +39,18 @@
   min-height: 180px;
 }
 
+.heading {
+  margin: 0;
+  text-align: center;
+}
+
 .text {
   margin: 0;
   text-align: center;
+}
+
+.inlineIcon {
+  margin: 0 2px;
 }
 
 // Three rows of four pictures, each fading in a little after the last.
@@ -84,11 +94,24 @@
   opacity: 0.5;
 }
 
-// The guess at three stages, side by side.
+// The guess from noise through three stages, side by side: four squares
+// that fit the dialog's 552px of content with room to spare.
 .stages {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+
+  .chunky {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+.noise {
+  width: 110px;
+  height: 110px;
+  border-radius: 8px;
+  image-rendering: pixelated;
 }
 
 .chunky {
@@ -98,6 +121,51 @@
   image-rendering: pixelated;
   object-fit: contain;
   background-color: var(--background-neutral-secondary);
+}
+
+.thumbs {
+  position: absolute;
+  right: -44px;
+  bottom: -8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 28px;
+  color: var(--text-neutral-primary);
+}
+
+// A character's square and a background's, to scale.
+.sizes {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.sizeBox {
+  display: flex;
+  border: 2px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+  background-color: var(--background-neutral-secondary);
+  background-image:
+    linear-gradient(var(--borders-neutral-primary) 1px, transparent 1px),
+    linear-gradient(90deg, var(--borders-neutral-primary) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.sizeSmall {
+  width: 80px;
+  height: 80px;
+}
+
+.sizeLarge {
+  width: 160px;
+  height: 160px;
+
+  .chunky {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
 }
 
 .guess {
