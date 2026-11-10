@@ -11,7 +11,7 @@ const IMAGE_SUBJECT = /^Image subject/;
 const IMAGE_ROLE = /^Image role/;
 const PALETTE_ROLES = /^Palette roles/;
 const IMAGE_FIRST = /^Enable the Images tab/;
-const ONE_IMAGE = /^Keep students to one image/;
+const ONE_IMAGE = /^Limit students to one image/;
 
 const dropdown = (name: RegExp) => screen.getByRole('combobox', {name});
 const textbox = (name: RegExp) => screen.getByRole('textbox', {name});

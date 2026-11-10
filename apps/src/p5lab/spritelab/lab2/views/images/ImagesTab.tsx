@@ -72,7 +72,7 @@ interface ImagesTabProps {
   uploadImage?: UploadImageFunction;
   /** Drop every reference to a deleted image (called after the removal). */
   onDeleteImage: (name: string) => void;
-  /** The one type of image this level offers to generate/upload. */
+  /** The one type of image this level offers to generate. */
   lockedImageType?: ImageType;
   lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
