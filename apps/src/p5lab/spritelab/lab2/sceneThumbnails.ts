@@ -9,7 +9,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {hashString} from '@cdo/apps/utils';
 
 import {SceneMetadata} from './redux/spriteLab2Redux';
-import {forEachSavedBlock} from './scenesApi';
+import {forEachSavedBlock} from './savedBlocks';
 import {RuntimeAnimationList, Scene} from './types';
 
 /** Thumbnails are square, like the stage. */

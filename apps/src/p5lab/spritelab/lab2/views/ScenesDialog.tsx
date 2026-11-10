@@ -3,8 +3,8 @@
 // exists: its card appears with the name field open, and cancelling the
 // name drops it.
 
-import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
@@ -305,7 +305,7 @@ const ScenesDialog: React.FunctionComponent<ScenesDialogProps> = ({
     wasNamingRef.current = naming;
   }, [naming]);
   return (
-    <Dialog
+    <Modal
       title={TITLE}
       className={styles.dialog}
       onClose={onClose}

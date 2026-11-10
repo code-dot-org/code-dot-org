@@ -79,6 +79,7 @@ const IMAGE_FIELDS: Record<string, readonly string[]> = {
   spritelab2_makePlatformPlayer: ['ANIMATION_NAME'],
   spritelab2_makeSpriteAtGrid: ['ANIMATION_NAME'],
   spritelab2_setAsPlatformPlayer: ['ANIMATION_NAME'],
+  spritelab2_setAsPlatformPlayer2: ['ANIMATION_NAME'],
 };
 
 // A picker field's saved value is its XML element, `<field name="X">"cat"
