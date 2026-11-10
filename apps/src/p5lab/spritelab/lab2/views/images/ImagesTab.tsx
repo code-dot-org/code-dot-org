@@ -194,9 +194,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     [startSession]
   );
 
-  // On a level with an imageType, the newest such image, when one
-  // exists (the list is newest first), as the dropdowns' role defaults
-  // pick it.
+  // The image the level's own task produces: the one tagged with its role,
+  // or without a role the newest of its type (the list is newest first, as
+  // the dropdowns' role defaults pick it).
   const ownImage =
     imageRole || lockedImageType
       ? images.find(image =>
@@ -206,9 +206,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         )
       : undefined;
   // The opening choice is read once at mount; a later change to the list
-  // must not move the choice. A level that names its own image opens on it,
-  // as does a one-image level, which shows an empty slot until it is made;
-  // any other level opens on the newest image in the project.
+  // must not move the choice. A level with a role or a type opens on its own
+  // image, and a one-image level on the empty slot until that image is made;
+  // anything else opens on the project's newest image.
   const openOnRef = useRef(
     lockedImageType || imageRole || oneImage ? ownImage : images[0]
   );

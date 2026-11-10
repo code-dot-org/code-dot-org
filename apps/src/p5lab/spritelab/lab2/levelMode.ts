@@ -32,7 +32,7 @@ export interface LevelMode {
   /** Where the level's pictures come from (imageCache.ts); the tree first
       when unset. */
   imageSource?: ImageSource;
-  /** Limit to 1 image generation, with GENERATION_LIMIT generations and no adding, drawing or deleting. */
+  /** Limit to 1 image generation, with GENERATION_LIMIT generations and no deleting. */
   oneImage?: boolean;
 }
 
