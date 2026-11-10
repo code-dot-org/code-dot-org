@@ -9,6 +9,8 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE, WorldCell} from './world';
 export type ObjectiveCheck =
   /** An image of the type was made on this level. */
   | {kind: 'image'; imageType: ImageType}
+  /** An image was generated on this level: of the type, or of any. */
+  | {kind: 'generated'; imageType?: ImageType}
   | {
       kind: 'block';
       /** The block type a real (not shadow) block must have, or any of
@@ -44,9 +46,7 @@ export type ObjectiveCheck =
   | {kind: 'scene'; id: string}
   /** The student opened the scene in the editor. */
   | {kind: 'editing'; id: string}
-  /** The student answered the question about a generated picture. The
-      item stays out of the checklist until a picture has been generated on
-      the level, so a student who draws instead is not asked to rate. */
+  /** The student answered the question about a generated picture. */
   | {kind: 'rated'};
 
 export interface Objective {
@@ -55,6 +55,9 @@ export interface Objective {
   /** Markdown. */
   text: string;
   check: ObjectiveCheck;
+  /** The item joins the checklist once this holds, and stays; until then
+      it is neither shown nor required. */
+  shownWhen?: ObjectiveCheck;
 }
 
 export interface Objectives {
@@ -137,18 +140,18 @@ export interface ObjectiveInputs {
   /** The scene open in the editor. */
   editingSceneId?: string;
   everPlayed: boolean;
-  /** A picture generated on this level is in the project. */
-  generated: boolean;
+  /** Images generated on this level, by type. */
+  generated: ImageCounts;
   rated: boolean;
   runtime: RuntimeProgress;
 }
 
-/** Whether a check's item is in the checklist yet. */
+/** Whether an item is in the checklist yet. */
 export function objectiveShown(
-  check: ObjectiveCheck,
+  item: Objective,
   inputs: ObjectiveInputs
 ): boolean {
-  return check.kind !== 'rated' || inputs.generated;
+  return !item.shownWhen || checkObjective(item.shownWhen, inputs);
 }
 
 // A field saved as "<field name="X">value</field>" or as the bare value;
@@ -260,6 +263,10 @@ export function checkObjective(
   switch (check.kind) {
     case 'image':
       return inputs.images[check.imageType] >= 1;
+    case 'generated':
+      return check.imageType
+        ? inputs.generated[check.imageType] >= 1
+        : Object.values(inputs.generated).some(count => count >= 1);
     case 'block':
       return hasBlock(check, inputs);
     case 'world':

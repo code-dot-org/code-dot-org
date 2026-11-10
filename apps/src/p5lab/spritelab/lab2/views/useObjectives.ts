@@ -8,7 +8,7 @@ import {ObjectiveItem, ObjectivesChecklist} from '@cdo/apps/lab2/types';
 import {
   checkObjective,
   EMPTY_RUNTIME,
-  ObjectiveCheck,
+  Objective,
   ObjectiveInputs,
   Objectives,
   objectiveShown,
@@ -168,7 +168,7 @@ export function useObjectives({
   sceneSources?: Record<string, WorkspaceSource | undefined>;
   editingSceneId?: string;
   everPlayed: boolean;
-  generated: boolean;
+  generated: ImageCounts;
   rated: boolean;
   runtime: RuntimeProgress;
 }): ObjectivesState {
@@ -206,10 +206,10 @@ export function useObjectives({
   const newlyIn = useCallback(
     (
       had: ReadonlySet<number>,
-      holds: (check: ObjectiveCheck, inputs: ObjectiveInputs) => boolean
+      holds: (item: Objective, inputs: ObjectiveInputs) => boolean
     ) =>
       (items ?? []).flatMap((item, index) =>
-        !had.has(index) && holds(item.check, inputs) ? [index] : []
+        !had.has(index) && holds(item, inputs) ? [index] : []
       ),
     [items, inputs]
   );
@@ -223,7 +223,9 @@ export function useObjectives({
   shownRef.current = shown;
   useEffect(() => {
     const held = earnedRef.current;
-    const newly = newlyIn(held, checkObjective);
+    const newly = newlyIn(held, (item, inputs) =>
+      checkObjective(item.check, inputs)
+    );
     const seen = shownRef.current;
     const newlyShown = newlyIn(seen, objectiveShown);
     // No update when nothing new holds: an input rebuilt every render would

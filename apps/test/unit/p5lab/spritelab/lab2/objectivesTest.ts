@@ -5,6 +5,7 @@ import {
   fieldValue,
   ObjectiveCheck,
   ObjectiveInputs,
+  objectiveShown,
   realBlocks,
   runtimeNeeds,
 } from '@cdo/apps/p5lab/spritelab/lab2/objectives';
@@ -75,7 +76,7 @@ function inputs(over: Partial<ObjectiveInputs> = {}): ObjectiveInputs {
     imagesForRole: {hero: ['Sprite 1'], treasure: ['Sprite 3']},
     source,
     everPlayed: false,
-    generated: false,
+    generated: {sprite: 0, background: 0, block: 0},
     rated: false,
     runtime: EMPTY_RUNTIME,
     ...over,
@@ -115,6 +116,18 @@ describe('checkObjective', () => {
     expect(checkObjective({kind: 'image', imageType: 'background'}, made)).toBe(
       false
     );
+  });
+
+  it('counts images generated on the level, of a type or of any', () => {
+    const made = inputs({generated: {sprite: 0, background: 1, block: 0}});
+    expect(checkObjective({kind: 'generated'}, made)).toBe(true);
+    expect(
+      checkObjective({kind: 'generated', imageType: 'background'}, made)
+    ).toBe(true);
+    expect(checkObjective({kind: 'generated', imageType: 'sprite'}, made)).toBe(
+      false
+    );
+    expect(checkObjective({kind: 'generated'}, inputs())).toBe(false);
   });
 
   it('finds a real block under a hat, not a shadow or a stray', () => {
@@ -264,5 +277,20 @@ describe('runtimeNeeds', () => {
     expect(
       runtimeNeeds({items: [{text: '', check: {kind: 'reach', moved: true}}]})
     ).toEqual({touch: false, move: true});
+  });
+});
+
+describe('objectiveShown', () => {
+  it('holds an item back until its shownWhen check does', () => {
+    const rate = {text: 'Rate it.', check: {kind: 'rated' as const}};
+    expect(objectiveShown(rate, inputs())).toBe(true);
+    const waits = {...rate, shownWhen: {kind: 'generated' as const}};
+    expect(objectiveShown(waits, inputs())).toBe(false);
+    expect(
+      objectiveShown(
+        waits,
+        inputs({generated: {sprite: 1, background: 0, block: 0}})
+      )
+    ).toBe(true);
   });
 });

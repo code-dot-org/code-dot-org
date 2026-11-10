@@ -809,9 +809,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     imageNames,
     dispatch,
   ]);
-  // Whether an image made on this level (not in the sources the level opened
-  // with) carries generation metadata, and whether one carries the
-  // student's rating in it.
+  // The images made on this level (not in the sources the level opened
+  // with) that carry generation metadata, by type, and whether one carries
+  // the student's rating in it.
   const {generated, rated} = useMemo(() => {
     const before = new Set(
       Object.values(initialSources.animations?.propsByKey ?? {}).map(
@@ -820,13 +820,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
     const made = animationList.orderedKeys.flatMap(key => {
       const props = animationList.propsByKey[key];
-      return props?.generation && !before.has(props.name)
-        ? [props.generation]
-        : [];
+      return props?.generation && !before.has(props.name) ? [props] : [];
+    });
+    const generated: ImageCounts = {sprite: 0, background: 0, block: 0};
+    made.forEach(props => {
+      generated[imageTypeFromCategories(props.categories)]++;
     });
     return {
-      generated: made.length > 0,
-      rated: made.some(generation => !!generation.verdict),
+      generated,
+      rated: made.some(props => !!props.generation?.verdict),
     };
   }, [animationList, initialSources]);
   const sceneSources = useMemo(
