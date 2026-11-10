@@ -27,7 +27,7 @@ export interface BuilderCardProps {
   onRemove: () => void;
   // When set, Remove looks disabled but stays focusable to show this tooltip.
   cannotRemoveReason?: string;
-  // Shown in the header after the Edit toggle.
+  // Shown in the header before the Edit toggle.
   menu?: React.ReactNode;
   // A question inside a page: tighter corners and a clamped name.
   nested?: boolean;
@@ -104,6 +104,7 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
         </div>
         <div className={rowStyles.actions}>
           {isDirty && <UnsavedBadge label="Unsaved changes" />}
+          {menu}
           <IconButton
             ref={toggleButtonRef}
             aria-label={
@@ -120,7 +121,6 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
               iconName={isExpanded ? 'chevron-up' : 'pen-to-square'}
             />
           </IconButton>
-          {menu}
         </div>
       </div>
 

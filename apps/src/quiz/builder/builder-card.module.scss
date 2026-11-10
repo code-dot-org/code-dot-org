@@ -2,10 +2,21 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  overflow: hidden;
   border: 1px solid var(--border-neutral-primary);
   border-radius: var(--shape-lg);
   background: var(--background-neutral-primary);
+}
+
+// Rounds the edge rows rather than clipping the card, which would cut off
+// the question menu.
+.card > :first-child {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.card > :last-child {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 .cardNested {
