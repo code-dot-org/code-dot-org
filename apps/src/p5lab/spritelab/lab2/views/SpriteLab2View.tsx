@@ -810,17 +810,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     dispatch,
   ]);
   // Whether an image made on this level (not in the sources the level opened
-  // with) carries the student's rating in its generation metadata.
-  const rated = useMemo(() => {
+  // with) carries generation metadata, and whether one carries the
+  // student's rating in it.
+  const {generated, rated} = useMemo(() => {
     const before = new Set(
       Object.values(initialSources.animations?.propsByKey ?? {}).map(
         props => props.name
       )
     );
-    return animationList.orderedKeys.some(key => {
+    const made = animationList.orderedKeys.flatMap(key => {
       const props = animationList.propsByKey[key];
-      return !!props?.generation?.verdict && !before.has(props.name);
+      return props?.generation && !before.has(props.name)
+        ? [props.generation]
+        : [];
     });
+    return {
+      generated: made.length > 0,
+      rated: made.some(generation => !!generation.verdict),
+    };
   }, [animationList, initialSources]);
   const sceneSources = useMemo(
     () =>
@@ -842,18 +849,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sceneSources,
     editingSceneId: activeScene.id,
     everPlayed: playProgress.everPlayed,
+    generated,
     rated,
     runtime: playProgress.runtime,
   });
 
   // The callout arrow at a tab, shown while the level's condition holds.
-  const calloutDone = useMemo(
-    () =>
-      new Set(objectives.items.flatMap((item, i) => (item.done ? [i] : []))),
-    [objectives.items]
-  );
   const callout = activeCallout(levelProperties.callouts, {
-    done: calloutDone,
+    done: objectives.earned,
     tab: activeTab,
     scene: activeScene.id,
   });

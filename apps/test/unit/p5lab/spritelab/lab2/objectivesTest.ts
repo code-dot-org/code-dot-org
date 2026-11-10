@@ -75,6 +75,7 @@ function inputs(over: Partial<ObjectiveInputs> = {}): ObjectiveInputs {
     imagesForRole: {hero: ['Sprite 1'], treasure: ['Sprite 3']},
     source,
     everPlayed: false,
+    generated: false,
     rated: false,
     runtime: EMPTY_RUNTIME,
     ...over,

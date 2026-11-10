@@ -13,7 +13,15 @@ const OBJECTIVES = {
 };
 const IMAGES = {sprite: 0, background: 0, block: 0};
 
-function Checklist({everPlayed}: {everPlayed: boolean}) {
+function Checklist({
+  everPlayed,
+  generated = true,
+  rated = false,
+}: {
+  everPlayed: boolean;
+  generated?: boolean;
+  rated?: boolean;
+}) {
   const state = useObjectives({
     objectives: OBJECTIVES,
     images: IMAGES,
@@ -21,10 +29,16 @@ function Checklist({everPlayed}: {everPlayed: boolean}) {
     grid: [[null]],
     imagesForRole: {},
     everPlayed,
-    rated: false,
+    generated,
+    rated,
     runtime: EMPTY_RUNTIME,
   });
-  return <div>{state.items.map(i => `${i.id}:${i.done}`).join(' ')}</div>;
+  return (
+    <div>
+      {state.items.map(i => `${i.id}:${i.done}`).join(' ')}
+      {state.allDone && ' all'}
+    </div>
+  );
 }
 
 describe('useObjectives', () => {
@@ -50,5 +64,17 @@ describe('useObjectives', () => {
     } finally {
       spy.mockRestore();
     }
+  });
+
+  it('keeps a rated item out until a picture is generated, then keeps it', () => {
+    const view = render(<Checklist everPlayed={true} generated={false} />);
+    expect(view.container.textContent).toBe('play:true all');
+    view.rerender(<Checklist everPlayed={true} generated={true} />);
+    expect(view.container.textContent).toBe('play:true rate:false');
+    // A hand edit clears the picture's generation record; the item stays.
+    view.rerender(<Checklist everPlayed={true} generated={false} />);
+    expect(view.container.textContent).toBe('play:true rate:false');
+    view.rerender(<Checklist everPlayed={true} generated={true} rated />);
+    expect(view.container.textContent).toBe('play:true rate:true all');
   });
 });

@@ -44,7 +44,9 @@ export type ObjectiveCheck =
   | {kind: 'scene'; id: string}
   /** The student opened the scene in the editor. */
   | {kind: 'editing'; id: string}
-  /** The student answered the question about a generated picture. */
+  /** The student answered the question about a generated picture. The
+      item stays out of the checklist until a picture has been generated on
+      the level, so a student who draws instead is not asked to rate. */
   | {kind: 'rated'};
 
 export interface Objective {
@@ -135,8 +137,18 @@ export interface ObjectiveInputs {
   /** The scene open in the editor. */
   editingSceneId?: string;
   everPlayed: boolean;
+  /** A picture generated on this level is in the project. */
+  generated: boolean;
   rated: boolean;
   runtime: RuntimeProgress;
+}
+
+/** Whether a check's item is in the checklist yet. */
+export function objectiveShown(
+  check: ObjectiveCheck,
+  inputs: ObjectiveInputs
+): boolean {
+  return check.kind !== 'rated' || inputs.generated;
 }
 
 // A field saved as "<field name="X">value</field>" or as the bare value;
