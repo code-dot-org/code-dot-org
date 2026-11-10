@@ -4,6 +4,7 @@
 // progression map's detail pane is the first (world lab, specs/PROGRESSION_UI).
 export {default as MainInstructionsContent} from './MainInstructionsContent';
 export type {MainInstructionsContentProps} from './MainInstructionsContent';
+export {default as NavigationArea} from './NavigationArea';
 export {default as PredictQuestion} from './PredictQuestion';
 export {default as PredictQuestionRunPrompt} from './PredictQuestionRunPrompt';
 export {default as PredictResetButton} from './PredictResetButton';

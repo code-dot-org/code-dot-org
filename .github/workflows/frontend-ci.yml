@@ -32,6 +32,7 @@ jobs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
       studio-changed: ${{ steps.changes.outputs.studio }}
       oceans-changed: ${{ steps.changes.outputs.oceans }}
+      sprite-changed: ${{ steps.changes.outputs.sprite }}
       markdown-changed: ${{ steps.changes.outputs.markdown }}
       users-changed: ${{ steps.changes.outputs.users }}
       lesson-deep-dive-changed: ${{ steps.changes.outputs.lesson-deep-dive }}
@@ -62,6 +63,13 @@ jobs:
               - '.github/**'
             oceans:
               - 'frontend/packages/labs/oceans/**'
+              - 'frontend/packages/core/**'
+              - 'frontend/packages/lint-config/**'
+              - 'frontend/packages/playwright-support/**'
+              - 'frontend/*'
+              - '.github/**'
+            sprite:
+              - 'frontend/packages/labs/sprite/**'
               - 'frontend/packages/core/**'
               - 'frontend/packages/lint-config/**'
               - 'frontend/packages/playwright-support/**'
@@ -123,6 +131,15 @@ jobs:
       playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
+  # Start the sprite lab CI workflow
+  sprite:
+    if: ${{ needs.setup.outputs.sprite-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/sprite-ci.yml
+    with:
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
+    secrets: inherit
+
   # Start the markdown package CI workflow
   markdown:
     if: ${{ needs.setup.outputs.markdown-changed == 'true' }}
@@ -158,7 +175,7 @@ jobs:
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
   teardown:
-    needs: [setup, component-library, oceans, markdown]
+    needs: [setup, component-library, oceans, markdown, sprite]
     if: always()
     runs-on: ubuntu-24.04
     steps:
