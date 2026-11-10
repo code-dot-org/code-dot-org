@@ -107,9 +107,9 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
 }
 
 /**
- * Drops unknown keys and invalid values, returning a description of each one
- * dropped. Without a valid kind the whole mode means nothing to the lab, so
- * everything is dropped.
+ * Drops unknown keys, invalid values and keys the kind cannot carry,
+ * returning a description of each one dropped. Without a valid kind the
+ * whole mode means nothing to the lab, so everything is dropped.
  */
 export function cleanLevelMode(mode: LevelModeObject): {
   mode: Partial<LevelMode>;
@@ -123,10 +123,14 @@ export function cleanLevelMode(mode: LevelModeObject): {
       removed: Object.entries(mode).map(([key, value]) => describe(key, value)),
     };
   }
+  const kind = mode.kind as LevelModeKind;
   const cleaned: LevelModeObject = {};
   const removed: string[] = [];
   Object.entries(mode).forEach(([key, value]) => {
-    if (isValidLevelModeValue(key, value)) {
+    const kept =
+      isValidLevelModeValue(key, value) &&
+      (key === 'kind' || KEYS_BY_KIND[kind].includes(key as keyof LevelMode));
+    if (kept) {
       cleaned[key] = value;
     } else {
       removed.push(describe(key, value));
@@ -154,14 +158,16 @@ export function fieldApplies(
       return fieldApplies(mode, 'imageType') && mode.imageType === 'sprite';
     case 'imageRole':
       return kind === 'image' || fieldApplies(mode, 'imageType');
-    // All three act on a picture the student makes, so they need an Images
-    // tab.
+    // Both act on a picture the student makes, so they need an Images tab.
     case 'learning':
     case 'imageSource':
-    case 'oneImage':
       return (
         kind === 'image' || kind === 'freeplay' || mode.imageFirst === true
       );
+    // An Images tab too, but never free play, which always allows multiple
+    // images.
+    case 'oneImage':
+      return kind === 'image' || mode.imageFirst === true;
     default:
       return true;
   }

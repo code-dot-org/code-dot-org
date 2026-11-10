@@ -47,6 +47,19 @@ describe('cleanLevelMode', () => {
     });
   });
 
+  // The form hides the checkbox on a free play level, so a flag kept here
+  // could never be cleared, and the hidden input would submit it again.
+  it('drops a key the kind cannot carry, rather than round-tripping it', () => {
+    const {mode, removed} = cleanLevelMode({
+      kind: 'freeplay',
+      oneImage: true,
+      imageType: 'sprite',
+      learning: true,
+    });
+    expect(mode).toEqual({kind: 'freeplay', learning: true});
+    expect(removed).toEqual(['oneImage: true', 'imageType: "sprite"']);
+  });
+
   it('drops palette roles that are empty or repeated', () => {
     expect(cleanLevelMode({kind: 'world', paletteRoles: []}).mode).toEqual({
       kind: 'world',
@@ -87,6 +100,8 @@ describe('fieldApplies', () => {
     );
     expect(fieldApplies({kind: 'code'}, 'oneImage')).toBe(false);
     expect(fieldApplies({kind: 'freeplay'}, 'oneImage')).toBe(false);
+    // Free play offers the other Images tab fields.
+    expect(fieldApplies({kind: 'freeplay'}, 'learning')).toBe(true);
   });
 
   it('offers nothing without a kind', () => {
