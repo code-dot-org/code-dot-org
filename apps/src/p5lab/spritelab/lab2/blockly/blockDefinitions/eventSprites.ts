@@ -35,9 +35,15 @@ const EVENT_SPRITES: Record<string, EventSprite> = {
   },
 };
 
-// Outside its event the handler's extraArgs is undefined.
-const isUnderItsEvent = (block: Block): boolean =>
-  block.getRootBlock().type === EVENT_SPRITES[block.type].eventType;
+// extraArgs exists only inside the handler: not in the event's own sprite
+// inputs, and not anywhere else.
+function isInItsHandler(block: Block): boolean {
+  const root = block.getRootBlock();
+  return (
+    root.type === EVENT_SPRITES[block.type].eventType &&
+    !!root.getNextBlock()?.getDescendants(false).includes(block)
+  );
+}
 
 export function eventSpriteWarning(this: Block): void {
   this.setOnChange(() => {
@@ -45,10 +51,10 @@ export function eventSpriteWarning(this: Block): void {
       return;
     }
     const picksNothing =
-      this.getRootBlock().isEnabled() && !isUnderItsEvent(this);
+      this.getRootBlock().isEnabled() && !isInItsHandler(this);
     this.setWarningText(
       picksNothing
-        ? `This block picks a sprite only under "${
+        ? `This block picks a sprite only in the blocks below "${
             EVENT_SPRITES[this.type].eventName
           }".`
         : null
@@ -71,7 +77,7 @@ function eventSprite(type: string): {
       extensions: [EVENT_SPRITE_EXTENSION],
     },
     generator: block => [
-      isUnderItsEvent(block) ? `{id: extraArgs.${extraArg}}` : '{}',
+      isInItsHandler(block) ? `{id: extraArgs.${extraArg}}` : '{}',
       Order.ATOMIC,
     ],
   };
