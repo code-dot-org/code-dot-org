@@ -24,6 +24,8 @@ export class RecaptchaError extends Error {
     options?: {cause?: unknown}
   ) {
     super(message, options);
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'RecaptchaError';
     this.reason = reason;
   }
