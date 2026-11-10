@@ -508,6 +508,55 @@ describe('useQuizBuilderQuestions', () => {
     });
   });
 
+  describe('pages', () => {
+    const sizes = (pages: {questions: unknown[]}[]) =>
+      pages.map(p => p.questions.length);
+
+    it('adds an empty page at a given position', async () => {
+      const {result} = await renderLoaded();
+
+      act(() => {
+        result.current.addPage(1);
+      });
+
+      expect(sizes(result.current.pages)).toEqual([0, 1]);
+    });
+
+    it('moves a page, leaving the first page where it is when moved up', async () => {
+      const {result} = await renderLoaded();
+      act(() => {
+        result.current.addPage();
+      });
+
+      act(() => {
+        result.current.movePage(1, 1);
+      });
+      expect(sizes(result.current.pages)).toEqual([0, 1]);
+
+      act(() => {
+        result.current.movePage(1, -1);
+      });
+      expect(sizes(result.current.pages)).toEqual([0, 1]);
+    });
+
+    it('deletes an empty page but not one with questions', async () => {
+      const {result} = await renderLoaded();
+      act(() => {
+        result.current.addPage();
+      });
+
+      act(() => {
+        result.current.deletePage(1);
+      });
+      expect(sizes(result.current.pages)).toEqual([1, 0]);
+
+      act(() => {
+        result.current.deletePage(2);
+      });
+      expect(sizes(result.current.pages)).toEqual([1]);
+    });
+  });
+
   describe('removeQuestion', () => {
     it('drops a pending question locally, leaving nothing to save', async () => {
       const {result} = await renderLoaded();

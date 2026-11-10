@@ -13,7 +13,9 @@ import {
   EMPTY_PAGE_REASON,
   editedQuestionsReason,
   INVALID_CONFIG_REASON,
+  LAST_PAGE_REASON,
   NO_CHANGES_REASON,
+  PAGE_HAS_QUESTIONS_REASON,
   QUIZ_BUILDER_HEADER_ID,
   QUIZ_LOAD_FAILED_REASON,
   QUIZ_LOADING_REASON,
@@ -22,6 +24,7 @@ import {
 import CreateQuestionDropdown from './CreateQuestionDropdown';
 import DisabledReason, {ariaDisabledProps} from './DisabledReason';
 import IntroScreenCard from './IntroScreenCard';
+import PageMenu from './PageMenu';
 import {changedConfigFields, configError, timeLimitError} from './quizConfig';
 import QuizPageBlock from './QuizPageBlock';
 import QuizQuestionCard from './QuizQuestionCard';
@@ -62,6 +65,8 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     errorQuestionId,
     hasUnsavedLayout,
     addPage,
+    movePage,
+    deletePage,
     moveQuestion,
     moveQuestionToPage,
     addPendingQuestion,
@@ -211,6 +216,24 @@ const QuizBuilderWorkspace: React.FunctionComponent<
             hasUnsavedQuestion={pageQuestions.some(question =>
               dirtyIds.has(question.id)
             )}
+            menu={
+              <PageMenu
+                page={page}
+                canMoveUp={page > 1}
+                canMoveDown={page < pages.length}
+                canAddPage={!addPageDisabledReason}
+                deleteDisabledReason={
+                  pageQuestions.length > 0
+                    ? PAGE_HAS_QUESTIONS_REASON
+                    : pages.length === 1
+                    ? LAST_PAGE_REASON
+                    : undefined
+                }
+                onMove={offset => movePage(page, offset)}
+                onAddPage={addPage}
+                onDelete={() => deletePage(page)}
+              />
+            }
           >
             {pageQuestions.map((question, index) => (
               <li key={question.id}>
@@ -258,7 +281,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
               color="secondary"
               size="extraSmall"
               type="button"
-              onClick={addPage}
+              onClick={() => addPage()}
               startIcon={<FontAwesomeV6Icon iconName="plus" />}
               {...ariaDisabledProps(addPageDisabledReason)}
             >

@@ -12,7 +12,9 @@ import {
   EMPTY_PAGE_REASON,
   editedQuestionsReason,
   INVALID_CONFIG_REASON,
+  LAST_PAGE_REASON,
   NO_CHANGES_REASON,
+  PAGE_HAS_QUESTIONS_REASON,
   QUIZ_LOAD_FAILED_REASON,
   QUIZ_LOADING_REASON,
   QUIZ_BUILDER_HEADER_ID,
@@ -66,6 +68,8 @@ const BASE_STATE: QuizBuilderQuestionsState = {
   errorQuestionId: null,
   hasUnsavedLayout: false,
   addPage: jest.fn(),
+  movePage: jest.fn(),
+  deletePage: jest.fn(),
   moveQuestion: jest.fn(),
   moveQuestionToPage: jest.fn(),
   addPendingQuestion: jest.fn(),
@@ -588,6 +592,87 @@ describe('QuizBuilderWorkspace', () => {
       );
 
       expect(removeQuestion).toHaveBeenCalledWith(3, {permanently: true});
+    });
+  });
+
+  describe('Page menu', () => {
+    const pageMenuOf = (page: number) =>
+      within(document.getElementById(`page-menu-${page}-dropdown`)!);
+    const TWO_PAGES = [
+      question({id: 1, page: 1}),
+      question({id: 2, page: 2, questionName: 'MVC frameworks'}),
+    ];
+
+    it('turns off moves past the first and last page', () => {
+      renderWorkspace({questions: TWO_PAGES});
+
+      expect(
+        pageMenuOf(1).getByRole('button', {name: 'Move page up'})
+      ).toBeDisabled();
+      expect(
+        pageMenuOf(2).getByRole('button', {name: 'Move page down'})
+      ).toBeDisabled();
+    });
+
+    it('moves a page and adds pages above and below it', () => {
+      const movePage = jest.fn();
+      const addPage = jest.fn();
+      renderWorkspace({questions: TWO_PAGES, movePage, addPage});
+
+      fireEvent.click(
+        pageMenuOf(1).getByRole('button', {name: 'Move page down'})
+      );
+      fireEvent.click(
+        pageMenuOf(2).getByRole('button', {name: 'Add page above'})
+      );
+      fireEvent.click(
+        pageMenuOf(2).getByRole('button', {name: 'Add page below'})
+      );
+
+      expect(movePage).toHaveBeenCalledWith(1, 1);
+      expect(addPage).toHaveBeenCalledWith(2);
+      expect(addPage).toHaveBeenCalledWith(3);
+    });
+
+    it('turns off adding a page while one is empty', () => {
+      renderWorkspace({
+        questions: TWO_PAGES,
+        pages: [...groupByPage(TWO_PAGES), {page: 3, questions: []}],
+      });
+
+      expect(
+        pageMenuOf(1).getByRole('button', {name: 'Add page above'})
+      ).toBeDisabled();
+    });
+
+    it('deletes only an empty page, and never the last one', () => {
+      const deletePage = jest.fn();
+      renderWorkspace({
+        questions: TWO_PAGES,
+        pages: [...groupByPage(TWO_PAGES), {page: 3, questions: []}],
+        deletePage,
+      });
+
+      const deleteFull = pageMenuOf(1).getByRole('button', {
+        name: 'Delete page',
+      });
+      expect(deleteFull).toHaveAttribute('aria-disabled', 'true');
+      expect(deleteFull).toHaveAccessibleDescription(PAGE_HAS_QUESTIONS_REASON);
+      fireEvent.click(deleteFull);
+      expect(deletePage).not.toHaveBeenCalled();
+
+      fireEvent.click(pageMenuOf(3).getByRole('button', {name: 'Delete page'}));
+      expect(deletePage).toHaveBeenCalledWith(3);
+    });
+
+    it('keeps the only page, even when empty', () => {
+      renderWorkspace({pages: [{page: 1, questions: []}]});
+
+      const deleteOnly = pageMenuOf(1).getByRole('button', {
+        name: 'Delete page',
+      });
+      expect(deleteOnly).toHaveAttribute('aria-disabled', 'true');
+      expect(deleteOnly).toHaveAccessibleDescription(LAST_PAGE_REASON);
     });
   });
 
