@@ -4,6 +4,7 @@ import React from 'react';
 
 import {QuizQuestionType} from '../types';
 
+import closeDropdown from './closeDropdown';
 import {QUESTION_TYPE_LABELS_ICONS} from './constants';
 import DisabledReason, {ariaDisabledProps} from './DisabledReason';
 
@@ -14,12 +15,6 @@ interface CreateQuestionDropdownProps {
   // contained for the empty state, text inside a page's dashed add row.
   variant?: 'contained' | 'text';
   disabledReason?: string;
-}
-
-// ActionDropdown closes its menu through a context it doesn't share with
-// CustomDropdown; a mousedown outside is what actually closes it.
-function closeDropdown() {
-  document.body.dispatchEvent(new MouseEvent('mousedown', {bubbles: true}));
 }
 
 const CreateQuestionDropdown: React.FunctionComponent<
