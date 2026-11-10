@@ -145,6 +145,10 @@ export interface QuizBuilderQuestionsState {
   hasUnsavedLayout: boolean;
   // Adds an empty page at the end.
   addPage: () => void;
+  // Moves a question one place up (-1) or down (1) on its page.
+  moveQuestion: (id: number, offset: -1 | 1) => void;
+  // Moves a question to the bottom of another page.
+  moveQuestionToPage: (id: number, page: number) => void;
   // Adds a placeholder question to local state only, on the given page.
   addPendingQuestion: (page: number, type: QuizQuestionType) => number;
   // Resolves with the saved question's id on success. For a pending
