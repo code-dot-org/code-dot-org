@@ -86,31 +86,12 @@ and those haven't been checked in RTL yet.
 
 ### `data-theme`
 
-MUI renders the tooltip in a portal on `document.body`, outside any
-`data-theme` subtree. Inside the component library's `ThemeProvider`
-(`@code-dot-org/component-library/common/contexts`, which wraps every Lab2
-lab) nothing needs doing: the provider sets `data-theme` on the popper of every
-MUI `Tooltip`, `Popper`, `Popover`, `Menu`, `Select` menu and `Autocomplete`
-list beneath it, matching its own theme. A nested provider wins over an outer
-one.
-
-To keep a section in one theme whatever the surrounding one, pin it with
-`<ThemeProvider theme="Light">`. Its portals follow the pin; a bare
-`data-theme` attribute on the section does not reach them. The pinned wrapper
-is `display: contents`, so it adds no layout box.
-
-The provider does this with an MUI `DefaultPropsProvider` that adds
-`data-theme` to the surrounding theme's `MuiPopper` and `MuiPopover` default
-props. It works with or without an outer MUI theme. An MUI `ThemeProvider`
-nested inside it installs its own default props and drops these; nest it
-outside, as `WhiteboardChallenge` does.
-
-A tooltip whose bubble must differ from the surrounding theme sets its own:
+MUI renders the tooltip in a portal on `document.body`, so it doesn't inherit a
+surrounding `data-theme` subtree. Pass it through `slotProps` when needed:
 
 ```tsx
 <Tooltip title="…" slotProps={{tooltip: {'data-theme': 'Dark'}}}>
 ```
 
-The bubble attribute is closer than the popper's, so it wins. `Dialog`,
-`Drawer` and other `Modal`s are not covered yet; they set `data-theme` on
-their content as before.
+(Or, as a follow-up, the bubble could use `-fixed` tokens and stop caring about
+the surrounding theme at all.)

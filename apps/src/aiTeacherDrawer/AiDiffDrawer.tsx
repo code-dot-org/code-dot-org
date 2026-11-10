@@ -1,4 +1,3 @@
-import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import Drawer from '@mui/material/Drawer';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
@@ -239,17 +238,16 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     // theme (see colors_codeAi.css), so this is the appearance the drawer has
     // everywhere else.
     return (
-      <ThemeProvider theme="Light">
-        <div
-          className={style.inlineDrawer}
-          style={{width: chatIsOpen ? drawerWidth : 0}}
-          aria-hidden={!chatIsOpen}
-        >
-          <div className={style.inlineDrawerPanel} style={{width: drawerWidth}}>
-            {panel}
-          </div>
+      <div
+        data-theme="Light"
+        className={style.inlineDrawer}
+        style={{width: chatIsOpen ? drawerWidth : 0}}
+        aria-hidden={!chatIsOpen}
+      >
+        <div className={style.inlineDrawerPanel} style={{width: drawerWidth}}>
+          {panel}
         </div>
-      </ThemeProvider>
+      </div>
     );
   }
 
