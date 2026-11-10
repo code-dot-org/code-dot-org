@@ -53,6 +53,55 @@
       Statistic: Sum
       Threshold: 1
       TreatMissingData: breaching
+
+  # 'App Server'/backlog is published every second per instance; the Host-only series pools every instance's samples.
+  PumaBacklogInstanceWedgedAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Ref InfraWorkdayUrgent
+      AlarmName: <%="#{stack_name}_puma_backlog_instance_wedged" %>
+      AlarmDescription: >-
+        One app server's Puma backlog has stayed above 100 queued requests for 10 minutes while the
+        load balancer still routes to it. Known cause: a Puma worker deadlocked in DNS resolution
+        after fork; health checks stay green and the queue grows without bound. Find the instance
+        in the per-InstanceId 'App Server'/backlog series, capture worker threads if practical,
+        then replace the instance.
+      Namespace: App Server
+      MetricName: backlog
+      Dimensions: [{Name: Host, Value: <%=CDO.dashboard_hostname%>}]
+      # One stuck instance lifts p97 while it supplies over 3% of samples (fleets under ~33
+      # instances); a fleet-wide one-second burst supplies under 2%.
+      ExtendedStatistic: p97
+      Period: 60
+      EvaluationPeriods: 10
+      DatapointsToAlarm: 10
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 100
+      TreatMissingData: notBreaching
+
+  PumaBacklogFleetBurstsAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Ref InfraWorkdayUrgent
+      AlarmName: <%="#{stack_name}_puma_backlog_fleet_bursts" %>
+      AlarmDescription: >-
+        Puma backlog bursts above 20 queued requests in at least 5 of the last 30 minutes. Bursts
+        last about a second and hit every app server at once, so the cause is usually a shared
+        downstream stall (database, RDS Proxy, cache, or an external service), not one instance.
+        Compare the burst minutes with RDS Proxy DatabaseConnectionsBorrowLatency, Aurora latency,
+        and load balancer p99 TargetResponseTime.
+      Namespace: App Server
+      MetricName: backlog
+      Dimensions: [{Name: Host, Value: <%=CDO.dashboard_hostname%>}]
+      Statistic: Maximum
+      Period: 60
+      EvaluationPeriods: 30
+      DatapointsToAlarm: 5
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 20
+      TreatMissingData: notBreaching
 <%  end -%>
 
   # ---------------------------------------------
