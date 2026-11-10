@@ -235,8 +235,9 @@ on a body surface, which is not a list of sections.
 - **A hat's `+` makes room.** The layout runs after an edit, and opening or
   shutting a hat's mini toolbox is not one: it adds a row and fires no event,
   so the flyout was drawn over the hat below (reported from the browser). The
-  hat's extension wraps the toggle to say the block resized
-  (`blockResized`), and the editor lays out again. Seen in the browser: the
+  hat's extension passes the mini toolbox an `onToggle` (blockly MT-8)
+  that says the block resized (`blockResized`), and the editor lays out
+  again. Seen in the browser: the
   hats below Flappy's `starts touching` move down 57px as it opens and back
   as it shuts.
 
