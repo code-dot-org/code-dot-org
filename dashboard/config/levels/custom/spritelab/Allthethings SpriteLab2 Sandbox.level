@@ -1307,15 +1307,6 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_goToExternalScene",
-              "id": "zKM;+c=FMirR|^A3]H13",
-              "fields": {
-                "SCENE": ""
-              },
-              "enabled": true
-            },
-            {
-              "kind": "block",
               "type": "spritelab2_restartScene",
               "id": "v4ar8]7LUcK:j!om.qhB",
               "enabled": true
