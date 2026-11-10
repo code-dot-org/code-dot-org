@@ -62,13 +62,10 @@ type GatewayResult = Awaited<ReturnType<typeof generateText>>;
 // Finer than the Langfuse outcome, which Rails allowlists: a timeout is its own.
 type GenerationOutcome = 'success' | 'schema_mismatch' | 'timeout' | 'error';
 
-const GENERATION_FAILURES: Record<
-  Exclude<GenerationOutcome, 'success'>,
-  string
-> = {
+// Only failures the gateway cannot see; it raises its own in Sentry.
+const GENERATION_FAILURES: Record<'schema_mismatch' | 'timeout', string> = {
   schema_mismatch: 'Adaptive AI output did not fit its schema',
   timeout: 'Adaptive AI generation timed out',
-  error: 'Adaptive AI generation failed',
 };
 
 export async function generate<T>({
@@ -100,7 +97,7 @@ export async function generate<T>({
     };
     countAdaptive('adaptive.ai.generation', tags);
     distributeAdaptive('adaptive.ai.latency_ms', Date.now() - startedAt, tags);
-    if (outcome === 'success') return;
+    if (outcome === 'success' || outcome === 'error') return;
     reportAdaptiveError(GENERATION_FAILURES[outcome], error, {
       context: {traceId, stepId: traceOptions.metadata.stepId},
       tags: {trace: traceOptions.name, model},

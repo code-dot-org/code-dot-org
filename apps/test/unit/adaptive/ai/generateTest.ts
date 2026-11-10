@@ -149,11 +149,6 @@ describe('generate', () => {
     mockGenerateText.mockRejectedValue(new Error('boom'));
 
     expect(await generate(options)).toEqual({traceId: 'trace-1'});
-    expect(mockLogError).toHaveBeenCalledWith(
-      'Adaptive AI generation failed',
-      expect.any(Error),
-      expect.anything()
-    );
     expect(mockEnd).toHaveBeenCalledWith({
       outcome: 'error',
       errorMessage: 'boom',
@@ -180,9 +175,8 @@ describe('generate', () => {
     expect(mockRecordError).not.toHaveBeenCalled();
   });
 
-  it('raises a failure as its own Sentry issue, with what was thrown as the cause', async () => {
-    const thrown = new Error('boom');
-    mockGenerateText.mockRejectedValue(thrown);
+  it('counts a gateway failure but leaves its Sentry issue to the gateway', async () => {
+    mockGenerateText.mockRejectedValue(new Error('boom'));
 
     await generate(options);
 
@@ -191,9 +185,18 @@ describe('generate', () => {
       1,
       expect.objectContaining({outcome: 'error'})
     );
+    expect(mockRecordError).not.toHaveBeenCalled();
+    expect(mockLogError).not.toHaveBeenCalled();
+  });
+
+  it('raises a schema mismatch as its own Sentry issue, with the parse error as the cause', async () => {
+    mockGenerateText.mockResolvedValue({...gatewayResult, output: {wrong: 1}});
+
+    await generate(options);
+
     const [error, context, tags] = mockRecordError.mock.calls[0];
-    expect(error.message).toBe('Adaptive AI generation failed');
-    expect(error.cause).toBe(thrown);
+    expect(error.message).toBe('Adaptive AI output did not fit its schema');
+    expect(error.cause).toBeInstanceOf(z.ZodError);
     expect(context).toEqual({traceId: 'trace-1', stepId: 'build'});
     expect(tags).toEqual({
       lab: 'adaptive',
