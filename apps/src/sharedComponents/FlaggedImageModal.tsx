@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import Modal from '@code-dot-org/component-library/modal';
 import {Typography} from '@mui/material';
 import React from 'react';
@@ -20,10 +21,11 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
   errorMessage,
   appName,
 }) => {
+  const {theme} = useTheme(true);
   // Portal to document.body: when nested under another dialog, CustomDialog's
   // height:100% overlay collapses the Modal flex body. z-index keeps this modal on top.
   return createPortal(
-    <div className={moduleStyles.stackingWrapper}>
+    <div className={moduleStyles.stackingWrapper} data-theme={theme}>
       <Modal
         id="image-flagged-modal"
         onClose={() => onCancel(appName)}
