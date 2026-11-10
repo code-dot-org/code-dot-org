@@ -51,6 +51,16 @@ $narrow: 991.98px;
   text-overflow: ellipsis;
 }
 
+// With .lesson's 3px, the design's 8px inset for a title without a button.
+.lessonTitle {
+  padding-inline-start: 5px;
+  color: var(--text-neutral-primary);
+
+  @media (max-width: $narrow) {
+    max-width: 120px;
+  }
+}
+
 .saveStatus {
   display: inline-flex;
   flex-shrink: 0;
@@ -72,7 +82,8 @@ $narrow: 991.98px;
   }
 
   // Its own rule: a browser without :has() drops the whole selector list.
-  &:has(+ .action:empty) {
+  &:has(+ .action:empty),
+  &:has(+ .action > :is(div, span):only-child:empty) {
     @include end-corners;
   }
 
@@ -101,6 +112,11 @@ $narrow: 991.98px;
 
   // An action component may render nothing.
   &:empty {
+    display: none;
+  }
+
+  // Nor does an empty portal target take room; its own rule, as above.
+  &:has(> :is(div, span):only-child:empty) {
     display: none;
   }
 }

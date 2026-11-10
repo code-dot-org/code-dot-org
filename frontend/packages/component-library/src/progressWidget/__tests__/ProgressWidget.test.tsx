@@ -42,6 +42,12 @@ describe('ProgressWidget', () => {
     ).toHaveAttribute('aria-expanded', 'true');
   });
 
+  it('shows the lesson name as text without a lesson handler', () => {
+    renderWidget({onLessonClick: undefined});
+    expect(screen.getByText('Lesson 3: Puzzles')).toBeInTheDocument();
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
+  });
+
   it('names the bubble row', () => {
     renderWidget();
     expect(
@@ -102,6 +108,11 @@ describe('ProgressWidget', () => {
   it('renders the action', () => {
     renderWidget({action: <button>Continue</button>});
     expect(screen.getByRole('button', {name: 'Continue'})).toBeInTheDocument();
+  });
+
+  it('renders an empty portal target as the action', () => {
+    renderWidget({action: <div id="header-action" />});
+    expect(document.getElementById('header-action')).toBeInTheDocument();
   });
 
   it('draws nothing for a falsy action', () => {

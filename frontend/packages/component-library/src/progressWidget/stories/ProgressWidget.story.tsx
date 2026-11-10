@@ -120,6 +120,23 @@ export const OfflineNoAction: Story = {
   },
 };
 
+export const PlainTitle: Story = {
+  args: {
+    lessonLabel: 'Quest Builder Hour of AI Tutorial',
+    bubblesLabel: 'Lesson progress',
+    saveStatus: 'saved',
+    saveStatusLabel: 'Saved just now',
+    children: lessonBubbles,
+    action: <div data-testid="portal-target" />,
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    expect(canvas.queryByRole('button', {name: /Quest Builder/})).toBeNull();
+    const slot = canvas.getByTestId('portal-target').parentElement!;
+    expect(getComputedStyle(slot).display).toBe('none');
+  },
+};
+
 export const SaveStatuses: Story = {
   render: () => (
     <div
