@@ -1,6 +1,6 @@
 import ButtonBase, {ButtonBaseProps} from '@mui/material/ButtonBase';
 import classNames from 'classnames';
-import {CSSProperties, forwardRef, ReactNode, Ref} from 'react';
+import {CSSProperties, forwardRef, ReactNode, Ref, useId} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
@@ -9,29 +9,27 @@ import styles from './cardButton.module.scss';
 export type CardButtonLayout = 'horizontal' | 'vertical';
 export type CardButtonSize = 'medium' | 'small';
 
-export interface CardButtonProps
-  extends Omit<ButtonBaseProps, 'children' | 'title' | 'disableRipple'> {
-  /** `horizontal` for list rows, `vertical` for side-by-side choice tiles. */
-  layout?: CardButtonLayout;
+// Ripple props do nothing because the ripple is always off; `component` would
+// hide a link from the href check; `sx` would bypass the SCSS module.
+type CardButtonBaseProps = Omit<
+  ButtonBaseProps,
+  | 'children'
+  | 'title'
+  | 'disableRipple'
+  | 'centerRipple'
+  | 'focusRipple'
+  | 'disableTouchRipple'
+  | 'TouchRippleProps'
+  | 'touchRippleRef'
+  | 'component'
+  | 'LinkComponent'
+  | 'sx'
+> & {
   size?: CardButtonSize;
-  /** Primary text. */
+  /** Primary text, and the card's accessible name. */
   title: ReactNode;
-  /** Supporting text under the title. */
+  /** Supporting text under the title, and the card's accessible description. */
   description?: ReactNode;
-  /** Leading icon. Solid unless `iconStyle` or `iconFamily` is set. */
-  startIcon?: FontAwesomeV6IconProps;
-  /**
-   * Any CSS color for `startIcon`, preferably a semantic token such as
-   * `var(--text-info-primary)`. Selected and disabled cards use their own.
-   */
-  startIconColor?: string;
-  /**
-   * Custom leading content in place of `startIcon`, e.g. an avatar. It is at
-   * least the icon box in size and keeps its own colors in every state.
-   */
-  startContent?: ReactNode;
-  /** Trailing icon, e.g. `chevron-right`. Horizontal layout only. */
-  endIcon?: FontAwesomeV6IconProps;
   /**
    * Selected chrome for a chosen option. A boolean sets `aria-pressed` on a
    * button, and `aria-current` on a link when true. With an explicit `role`,
@@ -41,11 +39,52 @@ export interface CardButtonProps
   selected?: boolean;
   /** Fill the container width instead of hugging the content. */
   fullWidth?: boolean;
-  /** Renders the card as a link. */
+  /** Renders the card as a link. A disabled card renders a button instead. */
   href?: string;
   target?: string;
   rel?: string;
-}
+};
+
+type CardButtonLayoutProps =
+  | {
+      /** `horizontal` for list rows, `vertical` for side-by-side choice tiles. */
+      layout?: 'horizontal';
+      /** Trailing icon, e.g. `chevron-right`. Horizontal layout only. */
+      endIcon?: FontAwesomeV6IconProps;
+    }
+  | {
+      layout: 'vertical';
+      endIcon?: never;
+    };
+
+type CardButtonStartProps =
+  | {
+      /** Leading icon. Solid unless `iconStyle` or `iconFamily` is set. */
+      startIcon?: FontAwesomeV6IconProps;
+      /**
+       * Any CSS color for `startIcon`, preferably a semantic token such as
+       * `var(--text-info-primary)`. Selected and disabled cards use their own.
+       */
+      startIconColor?: string;
+      startContent?: never;
+    }
+  | {
+      /**
+       * Decorative, non-interactive leading content in place of `startIcon`,
+       * e.g. an avatar. It is at least the icon box in size and keeps its own
+       * colors in every state.
+       */
+      startContent: ReactNode;
+      startIcon?: never;
+      startIconColor?: never;
+    };
+
+export type CardButtonProps = CardButtonBaseProps &
+  CardButtonLayoutProps &
+  CardButtonStartProps;
+
+const hasContent = (node: ReactNode) =>
+  node !== undefined && node !== null && node !== false && node !== '';
 
 const renderIcon = (icon: FontAwesomeV6IconProps, className: string) => (
   <span className={className} aria-hidden>
@@ -86,12 +125,22 @@ const CardButton = forwardRef<
       fullWidth = false,
       className,
       style,
+      href,
+      target,
+      rel,
       ...rest
     },
     ref,
   ) => {
+    const titleId = useId();
+    const descriptionId = useId();
+    const showStartContent = hasContent(startContent);
+    const showDescription = hasContent(description);
+    // A disabled <a> stays followable by screen readers; a disabled <button> does not.
+    const isLink = href !== undefined && !rest.disabled;
     const announceSelected = selected !== undefined && !rest.role;
-    const isLink = rest.href !== undefined;
+    const namedByConsumer =
+      rest['aria-label'] !== undefined || rest['aria-labelledby'] !== undefined;
 
     return (
       <ButtonBase
@@ -99,6 +148,11 @@ const CardButton = forwardRef<
         disableRipple
         aria-pressed={announceSelected && !isLink ? selected : undefined}
         aria-current={announceSelected && isLink && selected ? true : undefined}
+        aria-labelledby={namedByConsumer ? undefined : titleId}
+        aria-describedby={
+          namedByConsumer || !showDescription ? undefined : descriptionId
+        }
+        {...(isLink ? {href, target, rel} : {})}
         {...rest}
         className={classNames(
           styles.cardButton,
@@ -109,7 +163,7 @@ const CardButton = forwardRef<
           className,
         )}
         style={
-          startIconColor
+          startIconColor && !showStartContent
             ? ({
                 ...style,
                 '--card-button-start-custom': startIconColor,
@@ -117,15 +171,19 @@ const CardButton = forwardRef<
             : style
         }
       >
-        {startContent ? (
+        {showStartContent ? (
           <span className={styles.startContent}>{startContent}</span>
         ) : (
           startIcon && renderIcon(startIcon, styles.startIcon)
         )}
         <span className={styles.content}>
-          <span className={styles.title}>{title}</span>
-          {description && (
-            <span className={styles.description}>{description}</span>
+          <span id={titleId} className={styles.title}>
+            {title}
+          </span>
+          {showDescription && (
+            <span id={descriptionId} className={styles.description}>
+              {description}
+            </span>
           )}
         </span>
         {layout === 'horizontal' &&

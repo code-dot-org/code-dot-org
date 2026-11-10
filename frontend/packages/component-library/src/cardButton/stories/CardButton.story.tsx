@@ -73,7 +73,9 @@ Vertical.args = {
 
 export const WithStartContent = Template.bind({});
 WithStartContent.args = {
-  ...Default.args,
+  layout: 'horizontal',
+  size: 'medium',
+  endIcon: {iconName: 'chevron-right'},
   title: 'Web Apps',
   description: 'Lesson 1: Welcome to Web Apps',
   fullWidth: true,
@@ -125,13 +127,14 @@ export const AllVariants = () => (
             >
               <CardButton
                 {...state}
+                {...(layout === 'horizontal'
+                  ? {layout, endIcon: {iconName: 'chevron-right'}}
+                  : {layout})}
                 fullWidth
-                layout={layout}
                 size={size}
                 title={`${label} ${size}`}
                 description="Supporting description text"
                 startIcon={{iconName: 'face-smile'}}
-                endIcon={{iconName: 'chevron-right'}}
               />
             </div>
           ))}

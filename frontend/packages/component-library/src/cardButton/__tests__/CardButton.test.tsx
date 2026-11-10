@@ -6,17 +6,41 @@ import {vi} from 'vitest';
 import CardButton from '../CardButton';
 
 describe('Design System - CardButton', () => {
-  it('renders the title and description inside one button', () => {
-    render(<CardButton title="Practice" description="Five short puzzles" />);
-    const button = screen.getByRole('button', {
-      name: 'Practice Five short puzzles',
-    });
-    expect(button).toBeInTheDocument();
+  it('names the button by its title and describes it by its description', () => {
+    render(
+      <CardButton
+        title="Practice"
+        description="Five short puzzles"
+        startContent={<img alt="Jane" src="" />}
+      />,
+    );
+    const button = screen.getByRole('button', {name: 'Practice'});
+    expect(button).toHaveAccessibleDescription('Five short puzzles');
+  });
+
+  it('defers to a consumer-supplied name', () => {
+    render(
+      <CardButton
+        title="Practice"
+        description="Five short puzzles"
+        aria-label="Start practice"
+      />,
+    );
+    const button = screen.getByRole('button', {name: 'Start practice'});
+    expect(button).not.toHaveAttribute('aria-labelledby');
+    expect(button).not.toHaveAttribute('aria-describedby');
   });
 
   it('omits an empty description', () => {
     render(<CardButton title="Practice" description="" />);
-    expect(screen.getByRole('button')).toHaveTextContent(/^Practice$/);
+    const button = screen.getByRole('button');
+    expect(button).toHaveTextContent(/^Practice$/);
+    expect(button).not.toHaveAttribute('aria-describedby');
+  });
+
+  it('renders a zero description and a zero startContent', () => {
+    render(<CardButton title="Score" description={0} startContent={0} />);
+    expect(screen.getByRole('button')).toHaveTextContent(/^0Score0$/);
   });
 
   it('renders start and end icons as solid by default', () => {
@@ -74,6 +98,7 @@ describe('Design System - CardButton', () => {
 
   it('renders startContent in place of startIcon', () => {
     render(
+      // @ts-expect-error startIcon and startContent are exclusive.
       <CardButton
         title="Section"
         startIcon={{iconName: 'fire'}}
@@ -88,6 +113,7 @@ describe('Design System - CardButton', () => {
 
   it('drops the end icon on vertical cards', () => {
     render(
+      // @ts-expect-error endIcon is horizontal only.
       <CardButton
         layout="vertical"
         title="Tile"
@@ -124,6 +150,46 @@ describe('Design System - CardButton', () => {
       <CardButton title="Lesson 2" href="/lessons/2" selected={false} />,
     );
     expect(link).not.toHaveAttribute('aria-current');
+  });
+
+  it('lets a consumer override the default state attribute', () => {
+    const {rerender} = render(
+      <CardButton title="Audio" selected aria-pressed="mixed" />,
+    );
+    expect(screen.getByRole('button')).toHaveAttribute('aria-pressed', 'mixed');
+
+    rerender(
+      <CardButton
+        title="Lesson 2"
+        href="/lessons/2"
+        selected
+        aria-current="page"
+      />,
+    );
+    expect(screen.getByRole('link')).toHaveAttribute('aria-current', 'page');
+  });
+
+  it('renders a disabled link as a disabled button', async () => {
+    const user = userEvent.setup({pointerEventsCheck: 0});
+    const onClick = vi.fn();
+    render(
+      <CardButton
+        title="Lesson 2"
+        href="/lessons/2"
+        target="_blank"
+        rel="noopener"
+        onClick={onClick}
+        disabled
+      />,
+    );
+    expect(screen.queryByRole('link')).not.toBeInTheDocument();
+    const button = screen.getByRole('button', {name: 'Lesson 2'});
+    expect(button).toBeDisabled();
+    expect(button).not.toHaveAttribute('href');
+    expect(button).not.toHaveAttribute('target');
+    expect(button).not.toHaveAttribute('rel');
+    await user.click(button);
+    expect(onClick).not.toHaveBeenCalled();
   });
 
   it('leaves selection semantics to an explicit role', () => {
@@ -179,5 +245,36 @@ describe('Design System - CardButton', () => {
       'var(--text-success-primary)',
     );
     expect(button.style.marginTop).toBe('4px');
+  });
+
+  it('ignores startIconColor when startContent is set', () => {
+    render(
+      // @ts-expect-error startIconColor applies to startIcon only.
+      <CardButton
+        title="Go"
+        startContent={<span>avatar</span>}
+        startIconColor="var(--text-success-primary)"
+      />,
+    );
+    expect(
+      screen
+        .getByRole('button')
+        .style.getPropertyValue('--card-button-start-custom'),
+    ).toBe('');
+  });
+
+  it('applies layout, size and fullWidth classes', () => {
+    const {rerender} = render(<CardButton title="Go" />);
+    const button = screen.getByRole('button');
+    expect(button.className).toMatch(/cardButton-horizontal/);
+    expect(button.className).toMatch(/cardButton-medium/);
+    expect(button.className).not.toMatch(/cardButton-fullWidth/);
+
+    rerender(
+      <CardButton title="Go" layout="vertical" size="small" fullWidth />,
+    );
+    expect(button.className).toMatch(/cardButton-vertical/);
+    expect(button.className).toMatch(/cardButton-small/);
+    expect(button.className).toMatch(/cardButton-fullWidth/);
   });
 });

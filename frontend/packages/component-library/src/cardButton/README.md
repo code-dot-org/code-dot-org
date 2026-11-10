@@ -23,7 +23,7 @@ import CardButton from '@code-dot-org/component-library/cardButton';
 
 - `layout="horizontal"` (default): a list row. Icon, text, optional end icon.
 - `layout="vertical"`: a centered tile for side-by-side choices. It has no end
-  icon; an `endIcon` passed to a vertical card is not rendered.
+  icon; passing `endIcon` with it is a type error.
 - `size`: `medium` (default) or `small`.
 
 The card hugs its content, like a Button. Pass `fullWidth` to fill the
@@ -32,16 +32,29 @@ container, e.g. for a stack of rows or equal-width tiles in a grid.
 ## Icons and start content
 
 `startIcon` and `endIcon` take `FontAwesomeV6Icon` props and render solid
-unless `iconStyle` or `iconFamily` says otherwise.
+unless `iconStyle` or `iconFamily` says otherwise. Icons are not mirrored in
+right-to-left layouts; pass `chevron-left` instead of `chevron-right` there.
 
 `startIconColor` recolors the start icon, e.g. to tell cards in a group apart.
 It takes any CSS color; prefer a semantic token such as
 `var(--text-success-primary)`, and keep 3:1 contrast against the card. Selected
 and disabled cards ignore it and use their own icon color.
 
-For a custom leading visual, such as an avatar, pass `startContent`; it
-replaces `startIcon`, is never smaller than the icon box, keeps its own colors
-in every state, and fades when the card is disabled.
+For a custom leading visual, such as an avatar, pass `startContent` in place of
+`startIcon`. It is never smaller than the icon box, keeps its own colors in
+every state, and fades when the card is disabled. It must be decorative and
+non-interactive: an interactive element inside a `<button>` is invalid.
+
+## Accessible name
+
+The title is the card's accessible name and the description is its accessible
+description, so a list of cards reads as its titles. Passing `aria-label` or
+`aria-labelledby` replaces both.
+
+## Links
+
+`href` renders an `<a>`. A disabled card drops `href`, `target` and `rel` and
+renders a disabled `<button>`, which assistive technology cannot activate.
 
 ## Selection
 
@@ -49,8 +62,9 @@ in every state, and fades when the card is disabled.
 or navigation cards. A boolean `selected` also tells assistive technology:
 
 - On a button it sets `aria-pressed`, for a toggle or a set of mode buttons.
-- On a link it sets `aria-current` when true, for the current item in a list
-  of links.
+- On a link it sets `aria-current="true"` when true, for the current item in a
+  list of links. Pass `aria-current="page"` or `"step"` to be more specific;
+  an explicit `aria-pressed` or `aria-current` always wins.
 
 ```jsx
 <div role="group" aria-label="Mode">
@@ -69,24 +83,46 @@ or navigation cards. A boolean `selected` also tells assistive technology:
 
 A single choice that is part of a form is a radio group. Pass `role="radio"`
 and `aria-checked`; with a `role`, the card sets no state attribute of its own.
-The radio group pattern gives the group one tab stop and moves between cards
-with the arrow keys; the container owns that.
+The group has one tab stop, the checked card or the first card when none is
+checked, and the arrow keys move and check. The container owns that:
 
 ```jsx
-<div role="radiogroup" aria-label="Mode">
-  {modes.map(mode => (
-    <CardButton
-      key={mode.value}
-      role="radio"
-      aria-checked={value === mode.value}
-      selected={value === mode.value}
-      tabIndex={value === mode.value ? 0 : -1}
-      title={mode.title}
-      onClick={() => setValue(mode.value)}
-    />
-  ))}
-</div>
+const ARROW_STEP = {ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1};
+
+function ModePicker({modes, value, setValue}) {
+  const refs = useRef([]);
+  const checked = modes.findIndex(mode => mode.value === value);
+  const tabStop = checked === -1 ? 0 : checked;
+
+  const onKeyDown = event => {
+    const step = ARROW_STEP[event.key];
+    if (!step) return;
+    event.preventDefault();
+    const next = (tabStop + step + modes.length) % modes.length;
+    setValue(modes[next].value);
+    refs.current[next].focus();
+  };
+
+  return (
+    <div role="radiogroup" aria-label="Mode" onKeyDown={onKeyDown}>
+      {modes.map((mode, i) => (
+        <CardButton
+          key={mode.value}
+          ref={el => (refs.current[i] = el)}
+          role="radio"
+          aria-checked={i === checked}
+          selected={i === checked}
+          tabIndex={i === tabStop ? 0 : -1}
+          title={mode.title}
+          onClick={() => setValue(mode.value)}
+        />
+      ))}
+    </div>
+  );
+}
 ```
+
+Right-to-left layouts swap `ArrowLeft` and `ArrowRight`.
 
 ## Figma mapping
 
