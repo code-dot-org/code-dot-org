@@ -30,7 +30,7 @@ jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
 
 function renderHeader(
   project: Partial<ProjectState> = {},
-  props: Partial<React.ComponentProps<typeof SimpleHeader>> = {}
+  props: Partial<React.ComponentProps<typeof SimpleHeader>> = {},
 ) {
   const reducer = combineReducers({
     isRtl: () => false,
@@ -43,7 +43,7 @@ function renderHeader(
   return render(
     <Provider store={store}>
       <SimpleHeader lessonName="Make a quest" {...props} />
-    </Provider>
+    </Provider>,
   );
 }
 
@@ -61,12 +61,12 @@ describe('SimpleHeader', () => {
     const row = document.querySelector('#header_middle_content') as HTMLElement;
     expect(row.classList.contains(styles.row)).toBe(true);
     expect(screen.getByText('Make a quest').getAttribute('title')).toBe(
-      'Make a quest'
+      'Make a quest',
     );
     expect(
       document
         .querySelector('#project_info_container')
-        ?.classList.contains(styles.projectInfo)
+        ?.classList.contains(styles.projectInfo),
     ).toBe(true);
   });
 
@@ -101,7 +101,7 @@ describe('SimpleHeader', () => {
     levels = undefined;
     renderHeader();
     expect(
-      screen.getByRole('group', {name: 'Lesson progress'}).childElementCount
+      screen.getByRole('group', {name: 'Lesson progress'}).childElementCount,
     ).toBe(0);
   });
 
@@ -112,10 +112,26 @@ describe('SimpleHeader', () => {
     expect(screen.getByRole('img', {name: 'Saving'})).toBeTruthy();
   });
 
+  it('announces a failed save', () => {
+    renderHeader({showProjectUpdatedAt: true, projectUpdatedStatus: 'error'});
+    expect(screen.getByRole('img', {name: 'Save failed'})).toBeTruthy();
+    expect(screen.getByRole('status').textContent).toBe('Save failed');
+  });
+
+  it('shows no save status for a project not saved yet', () => {
+    renderHeader({showProjectUpdatedAt: true, projectUpdatedStatus: 'default'});
+    expect(screen.queryByRole('img', {name: 'Not saved'})).toBeNull();
+  });
+
+  it('shows the lesson name as text, with no lesson menu', () => {
+    renderHeader();
+    expect(screen.queryByRole('button')).toBeNull();
+  });
+
   it('leaves a slot for the lab to fill', () => {
     renderHeader();
     const slot = document.getElementById(HEADER_ACTION_ID) as HTMLElement;
-    expect(slot.classList.contains(styles.action)).toBe(true);
+    expect(slot).toBeTruthy();
     expect(slot.childElementCount).toBe(0);
   });
 

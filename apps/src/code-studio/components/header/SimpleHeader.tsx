@@ -1,12 +1,15 @@
 // The level header's middle for a unit whose simple_progress property is
-// set: one bar with the lesson's name, a bubble per level that fills in as
-// the level is done, the project's save status, and a slot the lab fills
-// with a button of its own. The bubbles are pictures, not links: the unit
-// is walked in order, with no going back or ahead.
+// set: the progress widget with the lesson's name as text, a bubble per level
+// that fills in as the level is done, the project's save status, and a slot
+// the lab fills with a button of its own. The bubbles are pictures, not links:
+// the unit is walked in order, with no going back or ahead.
 
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {ProgressBubble} from '@code-dot-org/component-library/progressWidget';
-import {Typography as MuiTypography} from '@mui/material';
+import ProgressWidget, {
+  ProgressBubble,
+  ProgressBubbleStatus,
+  ProgressWidgetSaveProps,
+  ProgressWidgetSaveStatus,
+} from '@code-dot-org/component-library/progressWidget';
 import {isEqual} from 'lodash';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
@@ -33,9 +36,7 @@ interface HeaderState {
   project: ProjectState;
 }
 
-type BubbleStatus = React.ComponentProps<typeof ProgressBubble>['status'];
-
-const bubbleStatusByLevelStatus: Record<string, BubbleStatus> = {
+const bubbleStatusByLevelStatus: Record<string, ProgressBubbleStatus> = {
   [LevelStatus.attempted]: 'inProgress',
   [LevelStatus.passed]: 'passed',
   [LevelStatus.perfect]: 'completed',
@@ -44,7 +45,7 @@ const bubbleStatusByLevelStatus: Record<string, BubbleStatus> = {
   [LevelStatus.submitted]: 'completed',
 };
 
-const statusLabel: Record<NonNullable<BubbleStatus>, string> = {
+const statusLabel: Record<ProgressBubbleStatus, string> = {
   notStarted: 'not started',
   inProgress: 'in progress',
   passed: 'passed',
@@ -53,8 +54,18 @@ const statusLabel: Record<NonNullable<BubbleStatus>, string> = {
   error: 'rejected',
 };
 
+// 'default' is a project not saved yet: nothing to report.
+const widgetSaveStatus: Record<
+  ProjectState['projectUpdatedStatus'],
+  ProgressWidgetSaveStatus
+> = {
+  default: 'none',
+  saving: 'saving',
+  saved: 'saved',
+  error: 'failed',
+};
+
 interface SimpleHeaderProps {
-  /** The lesson's name, on the bar's first pill. */
   lessonName?: string;
 }
 
@@ -63,7 +74,7 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
 }) => {
   const isRtl = useSelector((state: HeaderState) => state.isRtl);
   const {showProjectUpdatedAt, projectUpdatedStatus} = useSelector(
-    (state: HeaderState) => state.project
+    (state: HeaderState) => state.project,
   );
   // getCurrentLevels builds a new array per call, and none until the lesson
   // is known; isEqual skips needless re-renders.
@@ -81,30 +92,28 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
     });
   }, []);
 
-  const saveIcon = SAVE_STATUS_ICONS[projectUpdatedStatus];
+  const saveStatus = showProjectUpdatedAt
+    ? widgetSaveStatus[projectUpdatedStatus]
+    : 'none';
+  const saveProps: ProgressWidgetSaveProps =
+    saveStatus === 'none'
+      ? {saveStatus}
+      : {
+          saveStatus,
+          saveStatusLabel: SAVE_STATUS_ICONS[projectUpdatedStatus].title,
+        };
 
   return (
     <div id="header_middle_content" className={styles.row}>
       <div id="project_info_container" className={styles.projectInfo}>
         <ProjectInfo isRtl={isRtl} />
       </div>
-      <div className={styles.bar} data-theme="Light">
-        {lessonName && (
-          <div className={styles.lesson}>
-            <MuiTypography
-              variant="body3"
-              component="span"
-              className={styles.lessonName}
-              title={lessonName}
-            >
-              {lessonName}
-            </MuiTypography>
-          </div>
-        )}
-        <div
-          className={styles.bubbles}
-          role="group"
-          aria-label="Lesson progress"
+      <div className={styles.widget} data-theme="Light">
+        <ProgressWidget
+          lessonLabel={lessonName ?? ''}
+          bubblesLabel="Lesson progress"
+          actionSlotId={HEADER_ACTION_ID}
+          {...saveProps}
         >
           {levels.map(level => {
             const active =
@@ -124,19 +133,7 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
               />
             );
           })}
-        </div>
-        {showProjectUpdatedAt && (
-          <div className={styles.save}>
-            <FontAwesomeV6Icon
-              iconName={saveIcon.iconName}
-              title={saveIcon.title}
-              aria-label={saveIcon.title}
-              role="img"
-              className={styles.saveIcon}
-            />
-          </div>
-        )}
-        <div id={HEADER_ACTION_ID} className={styles.action} />
+        </ProgressWidget>
       </div>
     </div>
   );
