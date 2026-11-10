@@ -14,6 +14,7 @@ import {
   unassignSection,
   sectionHasNewData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import VerifiedInstructorRequiredAlert from '@cdo/apps/templates/VerifiedInstructorRequiredAlert';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -26,6 +27,7 @@ const MultipleSectionsAssigner = ({
   courseOfferingId,
   courseVersionId,
   aiChatToolsDependency,
+  verifiedInstructorRequired,
   scriptId,
   reassignConfirm = () => {},
   isAssigningCourseOnly,
@@ -253,6 +255,9 @@ const MultipleSectionsAssigner = ({
           {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
             <AssigningAvailableAiChatToolsAlert />
           )}
+          <VerifiedInstructorRequiredAlert
+            verifiedInstructorRequired={verifiedInstructorRequired}
+          />
         </div>
       }
     />
@@ -272,6 +277,7 @@ MultipleSectionsAssigner.propTypes = {
   participantAudience: PropTypes.string,
   onAssignSuccess: PropTypes.func,
   sectionDirections: PropTypes.string,
+  verifiedInstructorRequired: PropTypes.bool,
   aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
     .isRequired,
   // Redux

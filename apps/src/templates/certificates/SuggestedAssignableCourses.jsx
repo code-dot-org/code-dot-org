@@ -49,6 +49,7 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
         grade_levels,
         duration,
         ai_chat_tools_dependency,
+        verified_instructor_required,
         school_subject,
         cs_topic,
         course_version_path,
@@ -78,6 +79,7 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
           subjects={school_subject?.split(',')}
           topics={cs_topic?.split(',')}
           aiChatToolsDependency={ai_chat_tools_dependency}
+          verifiedInstructorRequired={verified_instructor_required}
           isTranslated={is_translated}
           isEnglish={isEnglish}
           pathToCourse={course_version_path}

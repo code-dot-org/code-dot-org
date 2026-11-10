@@ -49,6 +49,7 @@ class CourseEditor extends Component {
     initialUnitPrefixes: PropTypes.arrayOf(PropTypes.string),
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialHasVerifiedResources: PropTypes.bool.isRequired,
+    initialVerifiedInstructorRequired: PropTypes.bool,
     initialNumberedUnits: PropTypes.oneOf(Object.values(NumberedUnitsType)),
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -87,6 +88,8 @@ class CourseEditor extends Component {
       versionTitle: this.props.initialVersionTitle,
       descriptionShort: this.props.initialDescriptionShort,
       hasVerifiedResources: this.props.initialHasVerifiedResources,
+      verifiedInstructorRequired:
+        !!this.props.initialVerifiedInstructorRequired,
       numberedUnits: this.props.initialNumberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
@@ -118,6 +121,7 @@ class CourseEditor extends Component {
       description_student: this.state.descriptionStudent,
       description_teacher: this.state.descriptionTeacher,
       has_verified_resources: this.state.hasVerifiedResources,
+      verified_instructor_required: this.state.verifiedInstructorRequired,
       family_name: this.state.familyName,
       version_year: this.state.versionYear,
       published_state: this.state.publishedState,
@@ -232,6 +236,7 @@ class CourseEditor extends Component {
       descriptionStudent,
       descriptionTeacher,
       hasVerifiedResources,
+      verifiedInstructorRequired,
       numberedUnits,
       familyName,
       versionYear,
@@ -333,6 +338,27 @@ class CourseEditor extends Component {
               style={styles.checkbox}
               onChange={() =>
                 this.setState({hasVerifiedResources: !hasVerifiedResources})
+              }
+            />
+          </label>
+          <label>
+            Verified Instructors Only
+            <HelpTip>
+              <p>
+                Check to restrict this course to teachers and the students of
+                verified instructors. Signed-out users and students with no
+                verified teacher cannot open it. Unverified teachers can open
+                and assign it, but are warned that their students cannot.
+              </p>
+            </HelpTip>
+            <input
+              type="checkbox"
+              defaultChecked={verifiedInstructorRequired}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  verifiedInstructorRequired: !verifiedInstructorRequired,
+                })
               }
             />
           </label>

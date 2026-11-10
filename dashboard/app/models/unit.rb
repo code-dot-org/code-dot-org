@@ -1461,6 +1461,7 @@ class Unit < ApplicationRecord
         lesson_extras_available: lesson_extras_available,
         hasUnnumberedLessons: has_unnumbered_lessons?,
         has_verified_resources: has_verified_resources?,
+        verified_instructor_required: !!unit_group_unit&.cached_unit_group&.verified_instructor_required?,
         curriculum_path: curriculum_path,
         announcements: localized_announcements,
         age_13_required: logged_out_age_13_required?,
