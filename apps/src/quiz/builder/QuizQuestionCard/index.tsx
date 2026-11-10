@@ -30,6 +30,8 @@ interface QuizQuestionCardProps {
   ) => Promise<number | undefined>;
   onRemove: (id: number) => Promise<boolean>;
   onDirtyChange?: (id: number, isDirty: boolean) => void;
+  // The question's options menu, shown in the card's header.
+  menu?: React.ReactNode;
 }
 
 function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
@@ -92,6 +94,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   onSave,
   onRemove,
   onDirtyChange,
+  menu,
 }) => {
   const [draft, setDraft] = useState(() => toDraft(question));
   const [isSaving, setIsSaving] = useState(false);
@@ -165,6 +168,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
       onSave={handleSave}
       onDiscard={handleDiscard}
       onRemove={handleRemove}
+      menu={menu}
       nested
       neverSaved={neverSaved}
     >

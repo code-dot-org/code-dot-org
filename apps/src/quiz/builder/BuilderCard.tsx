@@ -27,6 +27,8 @@ export interface BuilderCardProps {
   onRemove: () => void;
   // When set, Remove looks disabled but stays focusable to show this tooltip.
   cannotRemoveReason?: string;
+  // Shown in the header after the Edit toggle.
+  menu?: React.ReactNode;
   // A question inside a page: tighter corners and a clamped name.
   nested?: boolean;
   neverSaved?: boolean;
@@ -48,6 +50,7 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
   onDiscard,
   onRemove,
   cannotRemoveReason,
+  menu,
   nested = false,
   neverSaved = false,
   children,
@@ -117,6 +120,7 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
               iconName={isExpanded ? 'chevron-up' : 'pen-to-square'}
             />
           </IconButton>
+          {menu}
         </div>
       </div>
 
