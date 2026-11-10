@@ -19,7 +19,8 @@ Rules for callers:
   widget shows only the bubble marked `aria-current` (set by `isActive`), so
   mark one; in browsers with `:has()`, a row with none shows them all.
 - Without `onLessonClick` the lesson name is plain text, for units walked in
-  order with no lesson menu.
+  order. Their bubbles should be images (no `href` or `onClick`): see the
+  target-size rule below.
 - For an action drawn in another React root, pass `actionSlotId` instead of
   `action` and portal into the element with that id; the slot stays hidden
   while it is empty.
@@ -35,7 +36,8 @@ Rules for callers:
   offline saves are announced; saving and saved are not, because autosave
   repeats them constantly.
 - The bubbles are 12px, under the 24px minimum target size; the lesson menu
-  is the larger route to every level.
+  is the larger route to every level, so clickable bubbles need
+  `onLessonClick`.
 
 Design: CADS Figma file, "Header" page, "Progress Widget" and
 "Progress Bubbles" components.
