@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'open3'
+require 'yaml'
+
+CHART = File.expand_path('../helm', __dir__).freeze
+SCALING = {
+  'autoscaling.enabled' => true,
+  'RAILS_ENV' => 'staging',
+}.freeze
+
+def check(condition, message)
+  abort message unless condition
+end
+
+def helm(values = {}, chart_values = {})
+  overrides = values.transform_keys {|key| "activeJobWorker.#{key}"}.merge(chart_values)
+  args = overrides.flat_map {|key, value| ['--set-json', "#{key}=#{JSON.generate(value)}"]}
+  Open3.capture3('helm', 'template', 'cdo', CHART, '--set', 'RAILS_ENV=staging', *args)
+end
+
+def render(values = {}, chart_values = {})
+  stdout, stderr, status = helm(values, chart_values)
+  check(status.success?, stderr)
+  YAML.load_stream(stdout).compact
+end
+
+def worker(docs)
+  docs.find {|doc| doc['kind'] == 'Deployment' && doc.dig('metadata', 'name') == 'cdo-active-job-worker'}
+end
+
+def rejected(values, message)
+  _, stderr, status = helm(SCALING.merge(values))
+  check(!status.success? && stderr.include?(message), "expected #{message}: #{stderr}")
+end
+
+docs = render
+check(docs.none? {|doc| doc['apiVersion'] == 'keda.sh/v1alpha1'}, 'default render requires KEDA')
+check(worker(docs).dig('spec', 'replicas') == 1, 'default worker replica count changed')
+check(worker(render('replicas' => 0)).dig('spec', 'replicas') == 0, 'explicit zero replicas lost')
+docs = render({'enabled' => false})
+check(worker(docs).nil?, 'disabled worker rendered')
+
+%w(both high low).each do |mode|
+  docs = render(SCALING.merge('priorityMode' => mode))
+  deployment = worker(docs)
+  check(!deployment.fetch('spec').key?('replicas'), 'autoscaled worker still declares replicas')
+  check(docs.none? {|doc| doc['kind'] == 'HorizontalPodAutoscaler'}, 'chart rendered an HPA alongside KEDA')
+  scaler = docs.find {|doc| doc['kind'] == 'ScaledObject'}.fetch('spec')
+  auth = docs.find {|doc| doc['kind'] == 'TriggerAuthentication'}
+  check(scaler.dig('scaleTargetRef', 'name') == deployment.dig('metadata', 'name'), 'wrong scale target')
+  trigger = scaler.fetch('triggers').first
+  check(trigger.dig('authenticationRef', 'name') == auth.dig('metadata', 'name'), 'wrong authentication reference')
+  check(auth.dig('spec', 'podIdentity') == {'provider' => 'aws', 'identityOwner' => 'keda'}, 'wrong AWS identity')
+  check(trigger['type'] == 'aws-cloudwatch', 'wrong scaler')
+  check(trigger['metricType'] == 'AverageValue', 'metric does not express work per replica')
+  metadata = trigger.fetch('metadata')
+  check(metadata['namespace'] == 'code-dot-org/ActiveJob' && metadata['metricName'] == 'PendingJobCount', 'wrong CloudWatch metric')
+  check(metadata['dimensionName'] == (mode == 'both' ? 'Environment' : 'Environment;Priority'), 'wrong dimension names')
+  check(metadata['dimensionValue'] == (mode == 'both' ? 'staging' : "staging;#{mode}"), 'wrong priority or environment')
+  check(metadata['awsRegion'] == 'us-east-1', 'wrong default region')
+  check(metadata['targetMetricValue'] == '1', 'wrong demand target')
+  check(metadata['minMetricValue'] == '0', 'CloudWatch scaler requires minMetricValue')
+  check(metadata['metricStat'] == 'Maximum' && metadata['metricStatPeriod'] == '60', 'queue gauge must not be summed')
+  check(metadata['metricCollectionTime'] == '180' && metadata['ignoreNullValues'] == 'false', 'missing metrics must fail after a bounded lookback')
+  check(!metadata.key?('query') && !auth.fetch('spec').key?('secretTargetRef'), 'SQL credentials remain')
+  check(scaler.dig('fallback', 'behavior') == 'currentReplicasIfHigher', 'metric failure can shrink the pool')
+end
+
+docs = render(SCALING.merge('RAILS_ENV' => 'production', 'priorityMode' => 'low', 'autoscaling.awsRegion' => 'us-west-2', 'autoscaling.jobsPerReplica' => 3))
+metadata = docs.find {|doc| doc['kind'] == 'ScaledObject'}.dig('spec', 'triggers', 0, 'metadata')
+check(metadata['dimensionValue'] == 'production;low', 'worker environment did not override chart RAILS_ENV')
+check(metadata['awsRegion'] == 'us-west-2' && metadata['targetMetricValue'] == '3', 'scaler overrides were lost')
+
+docs = render(SCALING, {'dashboard.enabled' => true, 'autoscaling.enabled' => true})
+check(docs.count {|doc| doc['kind'] == 'HorizontalPodAutoscaler'} == 1, 'dashboard HPA changed')
+check(!worker(docs).fetch('spec').key?('replicas'), 'dashboard autoscaling changed worker ownership')
+
+rejected({'enabled' => false}, 'requires activeJobWorker.enabled')
+rejected({'autoscaling.minReplicas' => 5}, 'must not exceed maxReplicas')
+rejected({'autoscaling.minReplicas' => 0}, 'minReplicas')
+rejected({'autoscaling.jobsPerReplica' => 0}, 'jobsPerReplica')
+rejected({'autoscaling.awsRegion' => ''}, 'awsRegion')
+rejected({'args' => ['custom']}, 'requires the generated worker command')
+rejected({'extraEnv.CDO_ACTIVE_JOB_WORKER_MAX_PRIORITY' => '9'}, 'through priorityMode only')
+rejected({'autoscaling.unknown' => true}, 'unknown')
+puts 'Worker autoscaling rendering, demand filters, replica ownership, and validation passed.'

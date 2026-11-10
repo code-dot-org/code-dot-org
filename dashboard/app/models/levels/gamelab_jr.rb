@@ -45,10 +45,12 @@ class GamelabJr < Gamelab
     pinned_scene
     extra_scene
     world_start_pattern
+    world_start_roles
     starter_images
     callouts
     objectives
     block_catalog
+    lock_earlier_blocks
     no_project
   )
 

@@ -22,6 +22,7 @@ import {
   TrainingDataProvider,
 } from '@cdo/apps/ailab/engine';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
@@ -80,6 +81,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   const [initialProject] = useState(() => sourceToProject(savedSource));
   const dispatch = useAppDispatch();
   const {showDialog} = useDialogControl();
+  const themeSetting = useThemeSetting('ailab');
   const progressManager = useContext(ProgressManagerContext);
   const [validator] = useState(() => new AccuracyValidator());
   const [dynamicInstructionsKey, setDynamicInstructionsKey] =
@@ -185,21 +187,27 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
 
   return (
     <div id="ailab-lab2" className={styles.ailab} data-notranslate>
-      <ResourcePanel
-        className={styles.resourcePanel}
-        levelProperties={levelProperties}
-        isRunning={false}
-        hasRun={false}
-        hasEdited={hasEdited}
-        validationTooltip={
-          mode?.requireAccuracy
-            ? `Train a model with at least ${mode.requireAccuracy}% accuracy`
-            : undefined
-        }
-        dynamicInstructions={dynamicInstructionsContent}
-        backpackProps={BACKPACK_PROPS}
-      />
-      <div className={styles.divider} />
+      {/* Mounted with its instructions, or the panel would open on another tab. */}
+      {dynamicInstructionsKey && (
+        <>
+          <ResourcePanel
+            className={styles.resourcePanel}
+            levelProperties={levelProperties}
+            isRunning={false}
+            hasRun={false}
+            hasEdited={hasEdited}
+            validationTooltip={
+              mode?.requireAccuracy
+                ? `Train a model with at least ${mode.requireAccuracy}% accuracy`
+                : undefined
+            }
+            dynamicInstructions={dynamicInstructionsContent}
+            backpackProps={BACKPACK_PROPS}
+            settings={[themeSetting]}
+          />
+          <div className={styles.divider} />
+        </>
+      )}
       <div className={styles.workspace}>
         <div className={styles.root}>
           <Provider store={store}>

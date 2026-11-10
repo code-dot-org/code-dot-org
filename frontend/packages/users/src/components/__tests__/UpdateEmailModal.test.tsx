@@ -144,26 +144,11 @@ describe('UpdateEmailModal', () => {
       expect(screen.queryByRole('radiogroup')).not.toBeInTheDocument();
     });
 
-    it('should require an answer from a teacher before sending anything', async () => {
-      let requested = false;
-      mockServer.use(
-        http.patch('*/users/email', () => {
-          requested = true;
-          return HttpResponse.json({});
-        }),
-      );
-      const {onClose} = renderModal(vi.fn(), true);
-
-      fillAndSubmit();
-
-      expect(
-        await screen.findByText('This field is required.'),
-      ).toBeInTheDocument();
-      expect(screen.getByRole('radiogroup')).toHaveAccessibleDescription(
-        'This field is required.',
-      );
-      expect(requested).toBe(false);
-      expect(onClose).not.toHaveBeenCalled();
+    it('should keep the submit button disabled until a teacher answers', () => {
+      renderModal(vi.fn(), true);
+      expect(submitButton()).toBeDisabled();
+      fireEvent.click(screen.getByRole('radio', {name: 'Yes'}));
+      expect(submitButton()).toBeEnabled();
     });
 
     it("should send a teacher's answer with the email change", async () => {

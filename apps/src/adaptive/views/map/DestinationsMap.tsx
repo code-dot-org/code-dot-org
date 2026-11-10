@@ -1,9 +1,9 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {DestinationColor} from '../../schema/destination';
 import {Pathway} from '../../types';
+import PathwayIcon from '../components/PathwayIcon';
 
 import {checkpointIcon} from './checkpointIcon';
 import {busRoutes} from './layout/busRoutes';
@@ -108,11 +108,21 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
     if (!tourFocusIds?.length) return undefined;
     const positions = tourFocusIds.map(id => layout.nodes[id]).filter(Boolean);
     if (!positions.length) return undefined;
+    // Labels sit beside the circle, so horizontal extent uses SIDE_LABEL_REACH.
+    const xs = positions.map(p => p.x);
+    const ys = positions.map(p => p.y);
+    const minX = Math.min(...xs) - SIDE_LABEL_REACH;
+    const maxX = Math.max(...xs) + SIDE_LABEL_REACH;
+    const minY = Math.min(...ys) - NODE_RADIUS;
+    const maxY = Math.max(...ys) + NODE_RADIUS;
     return {
-      x: positions.reduce((s, p) => s + p.x, 0) / positions.length,
-      y: positions.reduce((s, p) => s + p.y, 0) / positions.length,
+      x: (minX + maxX) / 2,
+      y: (minY + maxY) / 2,
+      width: maxX - minX,
+      height: maxY - minY,
     };
   }, [tourFocusIds, layout.nodes]);
+  const firstCheckpointId = pathway.checkpoints[0]?.id;
   const firstSkippedId = useMemo(
     () => pathway.checkpoints.find(c => statusMap[c.id] === 'skipped')?.id,
     [pathway.checkpoints, statusMap]
@@ -149,7 +159,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
         >
           <span className={styles.destinationTitle}>
             {box.icon && (
-              <FontAwesomeV6Icon
+              <PathwayIcon
                 iconName={box.icon}
                 className={styles.destinationIcon}
               />
@@ -174,6 +184,8 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
             tourId={
               checkpoint.id === firstSkippedId
                 ? 'adaptive-tour-first-available'
+                : checkpoint.id === firstCheckpointId
+                ? 'adaptive-tour-first-checkpoint'
                 : undefined
             }
           >

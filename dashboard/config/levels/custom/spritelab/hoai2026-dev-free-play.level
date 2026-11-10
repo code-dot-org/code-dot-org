@@ -39,7 +39,11 @@
       "contents": [
         {
           "kind": "block",
-          "type": "spritelab2_setPlatformGravity"
+          "type": "spritelab2_setPlatformJumpHeight"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setPlatformGravityDirection"
         },
         {
           "kind": "block",
@@ -51,7 +55,15 @@
         },
         {
           "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer2"
+        },
+        {
+          "kind": "block",
           "type": "spritelab2_thePlayer"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_thePlayer2"
         },
         {
           "kind": "block",
@@ -89,10 +101,6 @@
         },
         {
           "kind": "block",
-          "type": "spritelab2_playMusic"
-        },
-        {
-          "kind": "block",
           "type": "spritelab2_setWeather"
         },
         {
@@ -126,6 +134,13 @@
                 "type": "gamelab_allSpritesWithAnimation"
               }
             }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_showTitle",
+          "fields": {
+            "TEXT": "You win!"
           }
         },
         {
@@ -179,10 +194,6 @@
         {
           "kind": "block",
           "type": "spritelab2_goToScene"
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_goToExternalScene"
         }
       ]
     },
@@ -218,8 +229,7 @@
     "enable_big_playspace": "false"
   },
   "audit_log": "[{\"changed_at\":\"2026-11-01 18:57:55 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "level_concept_difficulty": {}
 }]]></config>
   <blocks/>
 </GamelabJr>

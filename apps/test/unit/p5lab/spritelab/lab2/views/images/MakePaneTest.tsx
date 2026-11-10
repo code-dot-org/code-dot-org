@@ -11,6 +11,7 @@ const parts = (over: Partial<SentenceSceneParts> = {}): SentenceSceneParts => ({
   panelRef: {current: null},
   frame: null,
   frameFilled: false,
+  cachedTag: null,
   behindTheScenes: null,
   status: null,
   sentence: <span>sentence</span>,
@@ -49,14 +50,14 @@ describe('MakePane', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     expect(generate).not.toHaveBeenCalled();
     expect(
-      screen.getByRole('alertdialog', {name: 'Replace this image?'})
+      screen.getByRole('dialog', {name: 'Replace this image?'})
     ).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
     expect(generate).not.toHaveBeenCalled();
     fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     fireEvent.click(screen.getByRole('button', {name: 'Replace'}));
     expect(generate).toHaveBeenCalledTimes(1);
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
     // A picture has landed: the next generation replaces it without asking.
     rerender(
       <MakePane

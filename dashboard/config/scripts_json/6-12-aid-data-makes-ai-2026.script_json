@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-02 22:14:21 UTC",
+    "serialized_at": "2026-11-06 21:22:34 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -129,6 +129,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**How can two copies of the same app give different answers?**\n\nIn this lesson, students work as data scientists and audit Playlist Bot, an app that picks songs for the school dance. In Song Piles, groups line up song cards by release year and lay a pencil at a cutoff year. Students see that every Banger sits on one side, and that the person who chose the cutoff shaped what counts as a good dance song. In AI Lab, pairs test the school's bot with a new hit, Soda Pop, and find the question that decided its prediction. They sort and filter a second bot's records to check balance, then test it with Soda Pop. The same app gives different answers because each bot was trained on different records. Pairs record their audit on a Model Card, and each student writes who the school's bot might leave out.",
+        "preparation": "- Print the Song Piles Cards handout (one set of 10 song cards for each group) and cut out the cards.\n- Print the Model Card handout (one for each student).",
+        "student_overview": "How can two copies of the same app give different answers? You'll check Playlist Bot, an app that picks songs for the school dance. You'll sort its song records. Then you'll test two versions of the bot with the same new song. Last, you'll find out who its records leave out."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -172,12 +175,15 @@
     },
     {
       "key": "lesson-9",
-      "name": "Refining the Model",
+      "name": "Combining Features",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "In this lesson, students learn that improving a model isn't only about adding more data. Sometimes the better move is asking a better question. Working with the virtual production team from the Amazon Studios career tour, students combine two or three features into one new feature and test whether it helps a model decide where a scene should be filmed. They discover that a well-built combined feature can make a model simpler and more accurate, while a poorly built one can make it worse. Students finish by documenting their model in a model card, naming what it does well, where it falls short, and who it might fail.\n",
+        "preparation": "* Print one set of Feature Combination cards per pair: 8 feature cards, 3 joiner cards (Both, Either, Count them), and 12 scene cards with the answer printed on the back.\n* Print one copy of the decision tree per pair. \n",
+        "student_overview": "Can a better question make a smarter model? In this lesson, you'll invent new features by combining old ones, test them by hand and in AI Studio, and find out which combinations actually help. Then you'll write a model card that explains what your model is good at and who it might leave out.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -193,6 +199,8 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "In this lesson, students learn that a model can be accurate and still be unfair. Working as investigators, they move from one person's complaint about an app, to experiencing the problem firsthand, to finding the pattern of people the app keeps failing, and then trace that pattern back to a decision made while building the model. Across three cases, students see that unfairness can start in different places: in who was included in the data, in which features the model uses, or in how the right answer was defined. By the end, students understand that a high accuracy score only shows that a model matches its labels, not that its data or labels were fair to everyone.",
+        "student_overview": " If an app works for most people, is that good enough? In this lesson, you'll investigate apps that work well for most users but keep failing a group of people. You'll use the app yourself, dig into the data behind it, and figure out the choice that caused the problem."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -563,6 +571,118 @@
       "seeding_key": {
         "lesson_activity.key": "bdf37acc-8483-4403-ae76-35d9bb256994",
         "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "a0f6d272-423e-4798-93fd-daee1d56cb50",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a0f6d272-423e-4798-93fd-daee1d56cb50",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "708f020e-d440-4605-a261-bfbf36f5d658",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "708f020e-d440-4605-a261-bfbf36f5d658",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "6bcd3c40-d4b2-429d-b423-5b02913116af",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6bcd3c40-d4b2-429d-b423-5b02913116af",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "5446c81e-73da-41c6-8173-b033f3ea9983",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5446c81e-73da-41c6-8173-b033f3ea9983",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "ec63fe53-5d8d-4986-8231-c588fb13f038",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec63fe53-5d8d-4986-8231-c588fb13f038",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "98535489-39a2-4c0d-8eab-5b24853bbe43",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98535489-39a2-4c0d-8eab-5b24853bbe43",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "d7848dae-10ac-41a1-af2a-33c4ab2b5735",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d7848dae-10ac-41a1-af2a-33c4ab2b5735",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "eaa30c09-48a8-4339-9aa3-4711b7a9d18e",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eaa30c09-48a8-4339-9aa3-4711b7a9d18e",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026"
       }
@@ -1294,7 +1414,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 9: Students flip the two flashcards, training data and record.",
-        "progression_name": "Free Response Question"
+        "progression_name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "d4861b11-2d76-48e6-a465-5de8a2e9b247",
@@ -1726,7 +1846,8 @@
       "key": "e7086e5c-ee26-468d-b16f-58d9f0beb7e2",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Bot A and Bot B use the same app. What is different about their records?\n* *Turn and Talk: partners talk for one minute, then two or three pairs share.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should compare what is in each bot's records. Listen for: \"Bot A is mostly older songs, and Bot B has older and new songs.\" If students say the bots are different apps, ask: \"What did the DJ crew change when they built Bot B?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Keep students in their pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3. Students test Bot B with Soda Pop and compare its answer with Bot A's (Bot B says Banger, decided by Beat Drop)."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Bot A and Bot B use the same app. What is different about their records?\n* *Turn and Talk: partners talk for one minute, then two or three pairs share.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should compare what is in each bot's records. Listen for: \"Bot A is mostly older songs, and Bot B has older and new songs.\" If students say the bots are different apps, ask: \"What did the DJ crew change when they built Bot B?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Keep students in their pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3. Students test Bot B with Soda Pop and compare its answer with Bot A's (Bot B says Banger, decided by Beat Drop).",
+        "progression_name": "Playlist Bot B"
       },
       "seeding_key": {
         "activity_section.key": "e7086e5c-ee26-468d-b16f-58d9f0beb7e2",
@@ -1778,7 +1899,8 @@
       "key": "5b6a320a-90dd-457d-81e2-a7df3ca5e0c4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work on their own. Give them three minutes.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 4. Students write who Playlist Bot A might leave out at the dance."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work on their own. Give them three minutes.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 4. Students write who Playlist Bot A might leave out at the dance.",
+        "progression_name": "Free Response"
       },
       "seeding_key": {
         "activity_section.key": "5b6a320a-90dd-457d-81e2-a7df3ca5e0c4",
@@ -2191,6 +2313,278 @@
       "seeding_key": {
         "activity_section.key": "8e808aa9-88fd-4f43-9454-37224768eaed",
         "lesson_activity.key": "bdf37acc-8483-4403-ae76-35d9bb256994"
+      }
+    },
+    {
+      "key": "caa6623e-db56-4050-8f82-970edbc86d08",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "caa6623e-db56-4050-8f82-970edbc86d08",
+        "lesson_activity.key": "a0f6d272-423e-4798-93fd-daee1d56cb50"
+      }
+    },
+    {
+      "key": "919b5a5f-92f0-4019-b0de-898c06c622d4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "919b5a5f-92f0-4019-b0de-898c06c622d4",
+        "lesson_activity.key": "708f020e-d440-4605-a261-bfbf36f5d658"
+      }
+    },
+    {
+      "key": "e5778990-8bc9-4028-a25a-7aded5903b3c",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is Feature Combination?"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5778990-8bc9-4028-a25a-7aded5903b3c",
+        "lesson_activity.key": "708f020e-d440-4605-a261-bfbf36f5d658"
+      }
+    },
+    {
+      "key": "e98ec50b-bcee-4a4a-b4c3-844b32e535e1",
+      "position": 3,
+      "properties": {
+        "progression_name": "Test Feature Combination"
+      },
+      "seeding_key": {
+        "activity_section.key": "e98ec50b-bcee-4a4a-b4c3-844b32e535e1",
+        "lesson_activity.key": "708f020e-d440-4605-a261-bfbf36f5d658"
+      }
+    },
+    {
+      "key": "83393fab-ca6c-4092-a833-bda1be92252f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Complete A Model Card"
+      },
+      "seeding_key": {
+        "activity_section.key": "83393fab-ca6c-4092-a833-bda1be92252f",
+        "lesson_activity.key": "708f020e-d440-4605-a261-bfbf36f5d658"
+      }
+    },
+    {
+      "key": "b0f59274-1a2e-44ac-acc2-48251ac3920d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b0f59274-1a2e-44ac-acc2-48251ac3920d",
+        "lesson_activity.key": "6bcd3c40-d4b2-429d-b423-5b02913116af"
+      }
+    },
+    {
+      "key": "16e80df6-d4a8-4837-b294-f58fbd225f8f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students see a model score high on their own class. Then the students it got wrong say what that felt like. That sets up the question the audit will answer: who is in the leftover percent, and why?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show each prediction. Count the students standing, and have them sit before the next one\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have the class calculate the accuracy for one prediction and write it in the blank.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If no one in the class is left-handed, hopefully the birthday prediction will still have some students sitting. If not, consider your own unique question that will have just a few students sitting."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "16e80df6-d4a8-4837-b294-f58fbd225f8f",
+        "lesson_activity.key": "5446c81e-73da-41c6-8173-b033f3ea9983"
+      }
+    },
+    {
+      "key": "594bacf0-7d8e-494d-9b36-28f5ecd1396c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n\n* Is this a good model?\n\n* Has anything ever been designed in a way that didn't work for you?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Most of the class will call the model good, and that's the belief you want students holding when they start the audit. Don't argue with it yet. The second question usually brings out left-handed students talking about scissors, spiral notebooks, desks, or game controllers. When that comes up, ask whether those things work for most people, and let the room see that \"most people\" and \"everyone\" aren't the same. Leave it there. Who gets left out of a real app, and why, is the work students do today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "594bacf0-7d8e-494d-9b36-28f5ecd1396c",
+        "lesson_activity.key": "5446c81e-73da-41c6-8173-b033f3ea9983"
+      }
+    },
+    {
+      "key": "f027d8d7-bb31-430d-a1d5-b7906c20acb0",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student/group a copy of the Accuracy ≠ Fairness activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write a one-sentence first answer to the Question of the Day at the top of their activity guide. They'll come back to it at the end of class."
+      },
+      "seeding_key": {
+        "activity_section.key": "f027d8d7-bb31-430d-a1d5-b7906c20acb0",
+        "lesson_activity.key": "ec63fe53-5d8d-4986-8231-c588fb13f038"
+      }
+    },
+    {
+      "key": "bd423ce6-9ede-42f1-8e7f-c0d0612782e2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students choose a case file, write a first answer to the Question of the Day, and choose a case to investigate\n\n**Say:** A few minutes ago, our model was right about most of you, and a few of you sat down. These three students sent in complaints about apps that keep getting things wrong for them. Your job is to figure out whether it's a one-time glitch or something that keeps happening to people like them, and why.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to complete Levels 1 through 2.\n- **Level 1:** Students read all three complaints, choose one case, and write the complaint in their own words in their activity guide.\n- **Level 2:** Students open the app for the case which they chose. Students try it and record what happened.\n",
+        "duration": "10",
+        "name": "Stakeholder Complaints & Apps",
+        "progression_name": "Stakeholder Complaints & Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd423ce6-9ede-42f1-8e7f-c0d0612782e2",
+        "lesson_activity.key": "ec63fe53-5d8d-4986-8231-c588fb13f038"
+      }
+    },
+    {
+      "key": "8bdd8104-3525-4f82-b90b-2815c6a26616",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** For Level 1, push students to try more than one option. Have them log several kinds of days, play the week more than once, or switch lunch profiles. Ask: Does it go wrong every time, or only for some choices? For Level 2, encourage students to try more than one option. Have them log several kinds of days, play the week more than once, or switch lunch profiles. Ask: Does it go wrong every time, or only for some choices?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Spread students across the three cases so each one has at least a few investigators. The synthesis at the end of the lesson compares all three. None of the apps explain why they made a decision. That's on purpose as students find the reason by exploring the data in the next section of the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8bdd8104-3525-4f82-b90b-2815c6a26616",
+        "lesson_activity.key": "ec63fe53-5d8d-4986-8231-c588fb13f038"
+      }
+    },
+    {
+      "key": "94e6b146-7a6e-47e7-8b07-15c93c60ae78",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define stakeholder\n\n**Say:** When you used the app, you were in the student's shoes. Marisol, Andre, and Jonah didn't build these apps, but the apps affect them every day. Anyone affected by what a model does is called a stakeholder.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Who else might the app affect?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question stretches \"stakeholder\" past the one student in each complaint. Students will name the obvious person first. Push for others: Andre's mom gets the emails, other swimmers and wheelchair athletes use Marisol's app, and the cafeteria staff plans menus from Jonah's survey. Ask: Who might the app be failing that hasn't complained yet? That question leads straight into the investigation.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model each move for students, if able. Students used the first two in Lesson 8, so keep those quick and spend most of the time on the Data Card. Every case's About This Data note holds a clue.",
+        "progression_name": "Student Complaint Forms",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The filter only takes one condition at a time. If students need two, have them filter by the first, then scan the results for the second. Long branch labels get cut off, like \"Bean and chees...\"; show students how to hover over and read the full label."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "94e6b146-7a6e-47e7-8b07-15c93c60ae78",
+        "lesson_activity.key": "ec63fe53-5d8d-4986-8231-c588fb13f038"
+      }
+    },
+    {
+      "key": "ca95c728-ef3f-4fe3-8894-096229cb7674",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students find out who else the app fails and trace the pattern back to a decision someone made.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 3 to train the model using the features the app uses in order to investigate its fairness.",
+        "duration": "15",
+        "name": "Investigate the Model",
+        "progression_name": "Investigate the Model"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca95c728-ef3f-4fe3-8894-096229cb7674",
+        "lesson_activity.key": "ec63fe53-5d8d-4986-8231-c588fb13f038"
+      }
+    },
+    {
+      "key": "c5ac2902-3362-430e-bb63-e9353b48decf",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Every case follows the same path: filter to find the group, read the tree, read About this data. If a student is stuck on Step 3, point them to the feature their app leaves out:\n\n* Marisol: filter by Activity Type and look at the swimming days.\n\n* Andre: filter by Finished All Work in Gradebook: Yes, and count how many are labeled Needs Check-in.\n\n* Jonah: filter by Diet, then by Lunch Source.\n\nIn Step 4, many students stop at the tree, saying something like \"it asks about steps.\" Push them back one more step: Who decided that's what the app should look at? For Andre, ask what the Submit Time question means for a student who finished at 10 PM. For Jonah, ask why the tree never asks about Diet.",
+        "progression_name": "Investigate the Model",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each case has a known accuracy: Marisol 85.71%, Andre 100%, Jonah 88.89%. A student with a different number picked different features."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Step 4 in the activity guide is the clearest view of where students are. A student who is still describing will write what happened, like \"the app called her swim days Rest Days.\" A student who is tracing will name a decision a person made and who it hurts, like \"the app only looks at steps, so a swim practice looks the same as a day on the couch.\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c5ac2902-3362-430e-bb63-e9353b48decf",
+        "lesson_activity.key": "ec63fe53-5d8d-4986-8231-c588fb13f038"
+      }
+    },
+    {
+      "key": "72223b62-add4-44a4-9536-5e08d885b015",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define audit.\n\n**Say:** What you just did has a name. You started with one person's complaint, checked whether it kept happening to the same group, and traced it back to where it started. At real tech companies, people are hired to do exactly this, and it's called an audit, or an algorithm audit.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How can an app be accurate and still be unfair?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Start with a student from Andre's case. They can explain that the model followed the On Track rule perfectly, but the rule was the problem. Accuracy only measures whether a model matches its labels, not whether those labels are fair. Then bring in the other two cases to show that unfairness starts in different places: Marisol's app looks at the wrong things, and Jonah's app left people out of the data. If students land on \"the app is broken,\" push back: Did the model make any mistakes by its own rules?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "72223b62-add4-44a4-9536-5e08d885b015",
+        "lesson_activity.key": "ec63fe53-5d8d-4986-8231-c588fb13f038"
+      }
+    },
+    {
+      "key": "62c0ea3b-c7b2-46cc-8b53-ee3891e51997",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students explain their investigation to the person it affected: how the model decides, why it failed them, and the decision behind it.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 4. Students write their letter as a free response. The sentence frame is there for anyone who wants it; students who'd rather write in their own words can.",
+        "duration": "10",
+        "name": "Respond to the Complaint",
+        "progression_name": "Respond to the User Complaint",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "A strong letter explains the model in plain words, names what made it unfair, and ties that to a decision a person made. For example: \"The app decides if your day was active by looking at your steps. Swimming doesn't add steps, so it called your practice a Rest Day. The people who built it decided to only use what a step counter can measure.\" Letters that only apologize or repeat the complaint (\"the app was unfair to you and that's not okay\") show a student who saw the problem but hasn't explained it yet. Ask them: What does the model look at, and who decided that? Students who suggest a fix that matches the cause, like adding Activity Type for Marisol or changing the On Track rule for Andre, are going beyond today's goal."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "62c0ea3b-c7b2-46cc-8b53-ee3891e51997",
+        "lesson_activity.key": "ec63fe53-5d8d-4986-8231-c588fb13f038"
+      }
+    },
+    {
+      "key": "b8c30dd0-be20-4f79-ad6c-c05cc85a5159",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 5. Students study the flashcards, then match each word to its definition.",
+        "progression_name": "Vocabulary Flashcards"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8c30dd0-be20-4f79-ad6c-c05cc85a5159",
+        "lesson_activity.key": "98535489-39a2-4c0d-8eab-5b24853bbe43"
+      }
+    },
+    {
+      "key": "b6183428-75a8-4919-8012-55164ef5c398",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to just think about what they learned today.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Look at the answer you wrote at the top of your activity guide. Did it change?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Look for answers that point to a real person and the decision behind the problem, not a general \"it's unfair.\" A strong answer often goes back to the warm-up. For example, the model was right about most of the class, but it was always wrong about the same students, just like the apps in today's cases. If a student says \"no,\" ask who it isn't good enough for and what someone would need to change. Take two responses, ideally from different cases.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "b6183428-75a8-4919-8012-55164ef5c398",
+        "lesson_activity.key": "98535489-39a2-4c0d-8eab-5b24853bbe43"
+      }
+    },
+    {
+      "key": "03fae606-7b44-45e0-9336-cec899ef20cf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "03fae606-7b44-45e0-9336-cec899ef20cf",
+        "lesson_activity.key": "d7848dae-10ac-41a1-af2a-33c4ab2b5735"
+      }
+    },
+    {
+      "key": "28bbd924-381e-4b51-bf1b-0d9fa9fd9a48",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "28bbd924-381e-4b51-bf1b-0d9fa9fd9a48",
+        "lesson_activity.key": "eaa30c09-48a8-4339-9aa3-4711b7a9d18e"
+      }
+    },
+    {
+      "key": "11608613-01ab-4deb-b794-72d74c8d7952",
+      "position": 2,
+      "properties": {
+        "progression_name": "Comic Strip"
+      },
+      "seeding_key": {
+        "activity_section.key": "11608613-01ab-4deb-b794-72d74c8d7952",
+        "lesson_activity.key": "eaa30c09-48a8-4339-9aa3-4711b7a9d18e"
       }
     }
   ],
@@ -2641,7 +3035,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Response Question"
+        "progression": "Vocabulary"
       },
       "bonus": false,
       "seeding_key": {
@@ -2817,6 +3211,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Playlist Bot B"
       },
       "bonus": false,
       "seeding_key": {
@@ -2834,6 +3229,28 @@
     },
     {
       "chapter": 30,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Response"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson6-frq"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "5b6a320a-90dd-457d-81e2-a7df3ca5e0c4"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson6-frq"
+      ]
+    },
+    {
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2855,7 +3272,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2877,7 +3294,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2899,7 +3316,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2921,7 +3338,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -2943,7 +3360,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2965,7 +3382,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2987,7 +3404,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3009,7 +3426,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3031,7 +3448,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3053,7 +3470,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3075,7 +3492,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3094,6 +3511,204 @@
       },
       "level_keys": [
         "data-makes-ai-lesson8-frq"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Feature Combination?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson9-panel"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "e5778990-8bc9-4028-a25a-7aded5903b3c"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson9-panel"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Test Feature Combination"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson9-ai-studio"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "e98ec50b-bcee-4a4a-b4c3-844b32e535e1"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson9-ai-studio"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Complete A Model Card"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson9-sketch-lab"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "83393fab-ca6c-4092-a833-bda1be92252f"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson9-sketch-lab"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Stakeholder Complaints & Apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-panel-choice"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "bd423ce6-9ede-42f1-8e7f-c0d0612782e2"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson10-panel-choice"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Stakeholder Complaints & Apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-panel-choice2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "bd423ce6-9ede-42f1-8e7f-c0d0612782e2"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson10-panel-choice2"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate the Model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-panel-choice3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "ca95c728-ef3f-4fe3-8894-096229cb7674"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson10-panel-choice3"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Respond to the User Complaint"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-frq"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "62c0ea3b-c7b2-46cc-8b53-ee3891e51997"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson10-frq"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocabulary Flashcards"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "b8c30dd0-be20-4f79-ad6c-c05cc85a5159"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson10-vocab-flashcards"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Comic Strip"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson11-sketch-lab1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "11608613-01ab-4deb-b794-72d74c8d7952"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson11-sketch-lab1"
       ]
     }
   ],
@@ -3448,6 +4063,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-makes-ai-lesson6-frq",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson6-frq"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "5b6a320a-90dd-457d-81e2-a7df3ca5e0c4"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-makes-ai-lesson7-ai-studio0",
         "script_level.level_keys": [
           "data-makes-ai-lesson7-ai-studio0"
@@ -3589,9 +4216,131 @@
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "5dd31760-0a6e-48b2-83c0-449196b8957d"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson9-panel",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson9-panel"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "e5778990-8bc9-4028-a25a-7aded5903b3c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson9-ai-studio",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson9-ai-studio"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "e98ec50b-bcee-4a4a-b4c3-844b32e535e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson9-sketch-lab",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson9-sketch-lab"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "83393fab-ca6c-4092-a833-bda1be92252f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson10-panel-choice",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-panel-choice"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "bd423ce6-9ede-42f1-8e7f-c0d0612782e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson10-panel-choice2",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-panel-choice2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "bd423ce6-9ede-42f1-8e7f-c0d0612782e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson10-panel-choice3",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-panel-choice3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "ca95c728-ef3f-4fe3-8894-096229cb7674"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson10-frq",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-frq"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "62c0ea3b-c7b2-46cc-8b53-ee3891e51997"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson10-vocab-flashcards",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "b8c30dd0-be20-4f79-ad6c-c05cc85a5159"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson11-sketch-lab1",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson11-sketch-lab1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "11608613-01ab-4deb-b794-72d74c8d7952"
+      }
     }
   ],
   "resources": [
+    {
+      "name": "[KEY] Accuracy ≠ Fairness",
+      "url": "https://docs.google.com/document/d/1tFWA9DwgE9JWVOKoA-UXnRl0IrkM4NvP_yjT_LQydMw/",
+      "key": "_key_accuracy_fairness",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_accuracy_fairness"
+      }
+    },
     {
       "name": "[KEY] Curating a Dataset",
       "url": "https://docs.google.com/document/d/1YX3vB9mU6RV8qlKz0t_3aqKqKC1CkkfuW8sAW73pllI/",
@@ -3705,6 +4454,103 @@
       }
     },
     {
+      "name": "Accuracy ≠ Fairness",
+      "url": "https://docs.google.com/presentation/d/1yk5VcEdnNgExzwNgcdV_0yY2rTYwEJHSBxmq9Lf_jUU/",
+      "key": "accuracy_fairness",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "accuracy_fairness"
+      }
+    },
+    {
+      "name": "Accuracy ≠ Fairness",
+      "url": "https://docs.google.com/document/d/1v2Man02V2hGchfCGHKVDUwP3rpb5v2KpCJeG5ky94Hs/",
+      "key": "accuracy_fairness_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "accuracy_fairness_1"
+      }
+    },
+    {
+      "name": "Balanced vs. Unbalanced Data",
+      "url": "https://docs.google.com/presentation/d/1LpDCE20AMa7bVzWUK6dnDqjW62TgyYuYIQxnunfcyhs/",
+      "key": "balanced_vs_unbalanced_data",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "balanced_vs_unbalanced_data"
+      }
+    },
+    {
+      "name": "Balanced vs. Unbalanced Data - Activity Guide",
+      "url": "https://docs.google.com/document/d/1R5q0piBxZQdQEGylD4PhH7iTvL_mt7eL64OiVyOB6cY/",
+      "key": "balanced_vs_unbalanced_data_-_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "balanced_vs_unbalanced_data_-_activity_guide"
+      }
+    },
+    {
+      "name": "Balanced vs. Unbalanced Data - Activity Guide",
+      "url": "https://docs.google.com/document/d/1vueXsnzQxZ76YkXKeyBI0aHe5ZjelE4tLPqROQyVHJM/",
+      "key": "balanced_vs_unbalanced_data_-_activity_guide_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "balanced_vs_unbalanced_data_-_activity_guide_1"
+      }
+    },
+    {
+      "name": "Combining Features",
+      "url": "https://docs.google.com/presentation/d/1ViWV9Y67dlVWjT81VNm1rf2d-Em5AtZ0nVwfN7VmLeo/",
+      "key": "combining_features",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "combining_features"
+      }
+    },
+    {
+      "name": "Combining Features",
+      "url": "https://docs.google.com/document/d/1JS3Q4QtRSGimTH6ZV-dwKJTT72on4hxeRY3pAmSCY3M/",
+      "key": "combining_features_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "combining_features_1"
+      }
+    },
+    {
       "name": "Curating a Dataset",
       "url": "https://docs.google.com/presentation/d/17m6QvaH0yHPX-evvyhdYdc4igCFCatNi9alqshge0FQ/",
       "key": "curating_a_dataset",
@@ -3772,6 +4618,20 @@
       },
       "seeding_key": {
         "resource.key": "data_makes_ai_-_lesson_4_-_learning_from_examples"
+      }
+    },
+    {
+      "name": "Feature Combination Cards",
+      "url": "https://docs.google.com/document/d/1B2LG-ijvmmbKgFsyglQRcvpvIkW3LF3HO_9JHiDLxlk/",
+      "key": "feature_combination_cards",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "feature_combination_cards"
       }
     },
     {
@@ -3888,7 +4748,7 @@
     },
     {
       "name": "Sorting by Rules",
-      "url": "https://docs.google.com/presentation/d/1ccAacsgREHijhihJ9hQmSRaDBnrysGOADpiZJ0aHG6Y",
+      "url": "https://docs.google.com/presentation/d/1-2Y4maoihDUAZ1oxFmHpwgeU2ec0TSiHHksvK_UU78o/",
       "key": "sorting_by_rules",
       "properties": {
         "audience": "Teacher",
@@ -3980,6 +4840,24 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "sorting_by_rules"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_accuracy_fairness"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "accuracy_fairness"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "accuracy_fairness_1"
       }
     },
     {
@@ -4080,6 +4958,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "balanced_vs_unbalanced_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "balanced_vs_unbalanced_data_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "balanced_vs_unbalanced_data_-_activity_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "_key_how_to_train_your_decision_tree"
       }
@@ -4113,6 +5009,24 @@
         "lesson.key": "lesson-8",
         "resource.key": "testing_and_tracing_predictions_1"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "combining_features"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "combining_features_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "feature_combination_cards"
+      }
     }
   ],
   "scripts_resources": [
@@ -4133,6 +5047,26 @@
       }
     },
     {
+      "key": "audit",
+      "word": "Audit",
+      "definition": "a careful  investigation of a model to find patterns of failure and trace them back to their cause",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "audit"
+      }
+    },
+    {
+      "key": "balanced_data",
+      "word": "balanced data",
+      "definition": "training data with enough records of every kind",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "balanced_data"
+      }
+    },
+    {
       "key": "branching_logic",
       "word": "branching logic",
       "definition": "A way of making decisions using yes or no questions, where each answer sends you in a different direction",
@@ -4150,6 +5084,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "classification"
+      }
+    },
+    {
+      "key": "combined_feature",
+      "word": "Combined Feature",
+      "definition": "a new feature built by joining two or more features.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "combined_feature"
       }
     },
     {
@@ -4213,6 +5157,16 @@
       }
     },
     {
+      "key": "model_card",
+      "word": "Model Card",
+      "definition": "a short document that explains what a model does, what it learned from, and who it might work well or badly for.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "model_card"
+      }
+    },
+    {
       "key": "prediction",
       "word": "prediction",
       "definition": "the best guess based on the data available.",
@@ -4230,6 +5184,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "record"
+      }
+    },
+    {
+      "key": "stakeholder",
+      "word": "Stakeholder",
+      "definition": "anyone who is affected by what a model does.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "stakeholder"
       }
     },
     {
@@ -4261,6 +5225,16 @@
       "seeding_key": {
         "vocabulary.key": "training_data"
       }
+    },
+    {
+      "key": "unbalanced_data",
+      "word": "unbalanced data",
+      "definition": "training data where one kind of record shows up much more often than the others",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "unbalanced_data"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -4286,6 +5260,18 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "feature"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "audit"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "stakeholder"
       }
     },
     {
@@ -4338,6 +5324,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "balanced_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "unbalanced_data"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-8",
         "vocabulary.key": "test_data"
       }
@@ -4346,6 +5344,18 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "vocabulary.key": "tracing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "combined_feature"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "model_card"
       }
     }
   ],
@@ -4414,6 +5424,26 @@
       }
     },
     {
+      "key": "29f8e82e-727f-408c-9bda-ecbc9c20e0bd",
+      "properties": {
+        "description": "Identify a pattern of unfair results across many predictions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "29f8e82e-727f-408c-9bda-ecbc9c20e0bd"
+      }
+    },
+    {
+      "key": "2b8f5059-1e02-4f8b-948a-1eb343ad9a8c",
+      "properties": {
+        "description": " Compare the predictions of two models that use the same app but different training data."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "2b8f5059-1e02-4f8b-948a-1eb343ad9a8c"
+      }
+    },
+    {
       "key": "33c147f0-4613-4ccc-bf73-6f39e03875be",
       "properties": {
         "description": "Choose the most useful features for predicting a label"
@@ -4421,6 +5451,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "33c147f0-4613-4ccc-bf73-6f39e03875be"
+      }
+    },
+    {
+      "key": "38b9e940-9ae1-44ba-bc82-6ead984660f8",
+      "properties": {
+        "description": "Combine features into a new feature"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "38b9e940-9ae1-44ba-bc82-6ead984660f8"
       }
     },
     {
@@ -4461,6 +5501,46 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "53fca13a-30c1-4f86-83c9-309ca64a3f9c"
+      }
+    },
+    {
+      "key": "5d8b32b4-6b47-4e0e-afa1-75569ff7c71c",
+      "properties": {
+        "description": "Describe who a model works for and who it might fail"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "5d8b32b4-6b47-4e0e-afa1-75569ff7c71c"
+      }
+    },
+    {
+      "key": "629c6607-49ce-4571-a05e-15f1de7b5640",
+      "properties": {
+        "description": "Classify a dataset as balanced or unbalanced."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "629c6607-49ce-4571-a05e-15f1de7b5640"
+      }
+    },
+    {
+      "key": "63760c88-4548-46cd-85fa-0b97fa53ee1c",
+      "properties": {
+        "description": "Explain how a model can be accurate and still be unfair"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "63760c88-4548-46cd-85fa-0b97fa53ee1c"
+      }
+    },
+    {
+      "key": "7a6bc76d-68d5-42f3-852c-1ecc58454b88",
+      "properties": {
+        "description": "Test how a new feature changes a model"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "7a6bc76d-68d5-42f3-852c-1ecc58454b88"
       }
     },
     {
@@ -4534,6 +5614,16 @@
       }
     },
     {
+      "key": "d4ec7ff7-3e59-4cce-a506-0a81eb8d4c1d",
+      "properties": {
+        "description": "Attribute a model's unfair predictions to a belief held by the person who built its data."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "d4ec7ff7-3e59-4cce-a506-0a81eb8d4c1d"
+      }
+    },
+    {
       "key": "e27dce1f-3034-4ffc-9650-595c57c91922",
       "properties": {
         "description": "compare predictions from models trained on different records."
@@ -4574,6 +5664,16 @@
       }
     },
     {
+      "key": "f3a85ae7-7123-4b0e-942b-5ea333e18d45",
+      "properties": {
+        "description": " Identify who a model trained on unbalanced data leaves out."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "f3a85ae7-7123-4b0e-942b-5ea333e18d45"
+      }
+    },
+    {
       "key": "f6c1e503-3f80-4b89-9923-8677d9e61d3e",
       "properties": {
         "description": "distinguish the label from the features in a dataset."
@@ -4582,9 +5682,33 @@
         "lesson.key": "lesson-4",
         "objective.key": "f6c1e503-3f80-4b89-9923-8677d9e61d3e"
       }
+    },
+    {
+      "key": "fab476fb-afac-49e0-8433-2cd5b6087a87",
+      "properties": {
+        "description": "Trace an unfair pattern back to a decision someone made"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "fab476fb-afac-49e0-8433-2cd5b6087a87"
+      }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -4630,6 +5754,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "framework.shortcode": "csta2026",
         "standard.shortcode": "MS-ALG-ML-08"
       }

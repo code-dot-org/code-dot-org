@@ -1,7 +1,6 @@
 import * as BlocklyCore from 'blockly/core';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {
@@ -13,7 +12,13 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
-import {askAiText, AskAiError, isAskAiEnabled} from './ai/text/askAi';
+import {
+  askAiChoice,
+  askAiErrorMessage,
+  askAiRefusal,
+  askAiText,
+  AskAiError,
+} from './ai/text/askAi';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {burstBoxes} from './bursts';
 import {
@@ -42,9 +47,12 @@ import {
 import {ParticleLayer} from './particles';
 import {
   CONTACT_EPSILON,
+  DEFAULT_JUMP_HEIGHT,
   hasSupportAhead,
   isAtEdge,
   isSupported,
+  MAX_JUMP_HEIGHT,
+  MIN_JUMP_HEIGHT,
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   bodyBox,
@@ -53,7 +61,15 @@ import {
   wallBox,
 } from './platformPhysics';
 import {createPlayerActionTracker, isPlayerAction} from './playerActions';
-import {clearPrompt, showPrompt} from './redux/spriteLab2Redux';
+import {isPlayerGroup, PLAYER_GROUP} from './playerGroups';
+import {
+  askAiAnswered,
+  askAiFailed,
+  askAiPending,
+  clearAskAi,
+  clearPrompt,
+  showPrompt,
+} from './redux/spriteLab2Redux';
 import {
   asSoundEffect,
   playPreset,
@@ -61,6 +77,7 @@ import {
   stopSoundEffects,
   synthPresetOf,
 } from './soundEffects';
+import {drawSpeechBubble} from './speechBubble';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 // A burst from the player starts at its take-off spot this many frames
@@ -69,6 +86,14 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 // recent, or a jump the tracker saw without one would serve a stale spot.
 const JUMP_EVENT_FRAMES = 4;
 const JUMP_IMPULSE_FRAMES = 8;
+const JUMP_CLEARANCE_SQUARES = 0.3;
+
+// What a say bubble lasts (actionCommands spriteSay), so a title and a say
+// started together go together.
+const TITLE_SECONDS = 4;
+const TITLE_TEXT_PX = 48;
+const TITLE_STROKE_PX = 6;
+const TITLE_MARGIN_PX = 16;
 
 const NOOP = () => {};
 
@@ -169,7 +194,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Scene-jump handlers, set by the view (it compiles the target and
     // re-runs).
     this.onGoToScene = null;
-    this.onGoToExternalScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
     // ({touching: image names, height: 0 floor to 1 top}) each frame a
@@ -187,14 +211,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onSceneJumpStart = null;
     this.onSceneJumpLand = null;
     this.onSceneJumpCancel = null;
-    // When set, re-runs preload from this list instead of the project's own
-    // (external scenes carry their own images). One list per project: its
-    // identity tells the caches below apart.
-    this.preloadAnimationsOverride = null;
-    // Decoded images for this project and for the external project visited
-    // last; whichever is running is the p5 wrapper's cache.
-    this.ownPreloads_ = {};
-    this.externalPreloads_ = null;
+    // Decoded images, reused by name across re-runs; handed to each p5
+    // wrapper as its cache.
+    this.preloads_ = {};
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
@@ -231,6 +250,37 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.jumpStarts_ = null;
     this.jumpImpulseFrame_ = -Infinity;
     this.jumpEventFrame_ = -Infinity;
+    // The show-title block's text and when it goes, in unpaused seconds.
+    this.title_ = null;
+  }
+
+  /** The title across the middle of the view, over everything, until its
+      time is up; not on the preview frame, as speech bubbles are not. */
+  drawTitle_(library) {
+    const title = this.title_;
+    if (!title || library.isPreviewFrame()) {
+      return;
+    }
+    if (library.getUnpausedWorldTime() >= title.until) {
+      this.title_ = null;
+      return;
+    }
+    const p5 = library.p5;
+    p5.push();
+    p5.textAlign(p5.CENTER, p5.CENTER);
+    p5.textStyle(p5.BOLD);
+    p5.textSize(TITLE_TEXT_PX);
+    p5.stroke('white');
+    p5.strokeWeight(TITLE_STROKE_PX);
+    p5.fill('black');
+    p5.text(
+      title.text,
+      TITLE_MARGIN_PX,
+      0,
+      APP_WIDTH - 2 * TITLE_MARGIN_PX,
+      APP_HEIGHT
+    );
+    p5.pop();
   }
 
   /** The burst block: particles from each sprite the argument names. Just
@@ -427,9 +477,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       library.contactEpsilon = CONTACT_EPSILON;
     }
     // Fresh library = fresh run; gravity returns to the default until a
-    // set-gravity block says otherwise. Negative flips the world: players
-    // fall up and land on block undersides and the view's top edge.
+    // set-gravity-direction block says otherwise. Negative flips the world:
+    // players fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
+    this.platformJumpHeight_ = DEFAULT_JUMP_HEIGHT;
     this.notifyControlsChange_();
     this.particles_.reset();
     this.jumpStarts_ = null;
@@ -438,17 +489,38 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.setWeather = kind => this.particles_.setWeather(kind);
     library.commands.burstParticles = (count, look, spriteArg) =>
       this.burstParticles(count, look, spriteArg);
+    this.title_ = null;
+    library.commands.showTitle = text => {
+      this.title_ = {
+        text: String(text),
+        until: library.getUnpausedWorldTime() + TITLE_SECONDS,
+      };
+    };
     // A new run starts the player's history over, so the spawn is not heard
     // as a move.
     this.forgetPlayer_();
-    library.commands.setPlatformGravity = value => {
-      this.platformGravity_ = Number(value) || 0;
+    library.commands.setPlatformGravityDirection = direction => {
+      this.platformGravity_ =
+        direction === 'none'
+          ? 0
+          : direction === 'up'
+          ? -PLATFORM_GRAVITY
+          : PLATFORM_GRAVITY;
       this.notifyControlsChange_();
+    };
+    library.commands.setPlatformJumpHeight = value => {
+      this.platformJumpHeight_ = Math.max(
+        MIN_JUMP_HEIGHT,
+        Math.min(MAX_JUMP_HEIGHT, Number(value) || 0)
+      );
     };
     // The view eases toward the target zoom a frame at a time (see the
     // platform draw loop below); a fresh run starts back at 1.
     this.cameraZoom_ = 1;
     this.cameraZoomTarget_ = 1;
+    // The world the camera shows, set by each zoomed frame; null until then,
+    // for a scene drawn without the camera.
+    this.bubbleView_ = null;
     // Not reset per run: a restart re-runs the program, and zeroing this here
     // would let the next frame restart again immediately.
     this.lastRestartAt_ = this.lastRestartAt_ || 0;
@@ -464,6 +536,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     const drawLoop = library.commands.executeDrawLoopAndCallbacks;
     library.commands.executeDrawLoopAndCallbacks = function () {
       drawLoop.apply(this, arguments);
+      engine.drawTitle_(this);
       if (engine.frameCaptureArmed_) {
         engine.frameCaptureArmed_ = false;
         engine.settleFrameCaptures_(this.p5.canvas);
@@ -497,11 +570,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       return id;
     };
-    // Move existing sprites (e.g. world-placed ones) into the players
-    // group; the per-frame resolver picks them up from there.
-    library.commands.setPlatformPlayer = spriteArg => {
+    // Move existing sprites (e.g. world-placed ones) into a player group;
+    // the per-frame resolver picks them up from there.
+    library.commands.setPlatformPlayer = (spriteArg, group = PLAYER_GROUP) => {
       library.getSpriteArray(spriteArg).forEach(sprite => {
-        sprite.group = 'players';
+        sprite.group = group;
       });
     };
     // Footing in the gravity direction — the resolver's own geometry, so it
@@ -516,33 +589,54 @@ export default class SpriteLab2Engine extends SpriteLab {
       const walls = this.wallsThisFrame_(library);
       const view = {width: p5.width, height: p5.height};
       return library.getSpriteArray(spriteArg).some(sprite => {
-        const gravity =
-          sprite.group === 'players'
-            ? this.platformGravity_
-            : this.bodyGravity_();
+        const gravity = isPlayerGroup(sprite.group)
+          ? this.platformGravity_
+          : this.bodyGravity_();
         return gravity === 0 || test(sprite, walls, view, gravity);
       });
     };
-    // Jump against gravity if any player has footing.
-    library.commands.platformJump = speed => {
+    // Jump against gravity if any player of the group has footing.
+    library.commands.platformJump = (speed, group = PLAYER_GROUP) => {
       // Weightless, the player is steered up and down instead.
       if (this.platformGravity_ === 0) {
         return;
       }
-      if (!footing({group: 'players'}, isSupported)) {
+      if (!footing({group}, isSupported)) {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
-      this.jumpStarts_ = new Map();
-      this.jumpImpulseFrame_ = this.p5Wrapper.p5
-        ? this.p5Wrapper.p5.frameCount
-        : -Infinity;
-      library.getSpriteArray({group: 'players'}).forEach(sprite => {
-        this.jumpStarts_.set(sprite, {
-          x: sprite.position.x,
-          y: sprite.position.y,
-        });
-        sprite.velocity.y = up * Math.abs(Number(speed) || 0);
+      // TODO: When we support configurable grid sizes (vs. just 10x10),
+      // consider updating the code everywhere we have
+      // library.defaultSpriteSize and cellSize(DEFAULT_SCENE_GRID_SIZE),
+      // which are both 40.
+      const jumpSpeed =
+        speed === undefined
+          ? Math.sqrt(
+              2 *
+                Math.abs(this.platformGravity_) *
+                (this.platformJumpHeight_ + JUMP_CLEARANCE_SQUARES) *
+                (library.defaultSpriteSize || cellSize(DEFAULT_SCENE_GRID_SIZE))
+            )
+          : Math.abs(Number(speed) || 0);
+      if (jumpSpeed === 0) {
+        return;
+      }
+      // Take-off spots serve the jump event, which only the arrow-key
+      // player raises; a player 2 jump must not reset them.
+      if (group === PLAYER_GROUP) {
+        this.jumpStarts_ = new Map();
+        this.jumpImpulseFrame_ = this.p5Wrapper.p5
+          ? this.p5Wrapper.p5.frameCount
+          : -Infinity;
+      }
+      library.getSpriteArray({group}).forEach(sprite => {
+        if (group === PLAYER_GROUP) {
+          this.jumpStarts_.set(sprite, {
+            x: sprite.position.x,
+            y: sprite.position.y,
+          });
+        }
+        sprite.velocity.y = up * jumpSpeed;
       });
     };
     // A behavior that wants gravity for its sprite marks it for the platform
@@ -606,6 +700,17 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       return fires ? [{}] : [];
     };
+    // The say and think bubbles, drawn this lab's way (speechBubble.ts),
+    // inside the part of the world the camera shows.
+    library.drawSpeechBubble = (text, spriteX, spriteY, bubbleType) =>
+      drawSpeechBubble(
+        library.p5,
+        text,
+        spriteX,
+        spriteY,
+        bubbleType,
+        this.bubbleView_ || undefined
+      );
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));
@@ -661,10 +766,12 @@ export default class SpriteLab2Engine extends SpriteLab {
           })
       );
     };
-    library.commands.goToExternalScene = sceneKey => {
-      this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
-    };
     getStore().dispatch(clearPrompt());
+    const toChoices = (...values) =>
+      values
+        .filter(choice => choice !== undefined && choice !== null)
+        .map(String)
+        .filter(choice => choice !== '');
     const promptUser = (promptText, variableName, setterCallback, choices) => {
       library.registerPrompt(promptText, variableName, setterCallback);
       // Last prompt always wins, so we only ever have 1 active prompt unlike legacy.
@@ -687,10 +794,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       choice3,
       setterCallback
     ) => {
-      const choices = [choice1, choice2, choice3]
-        .filter(choice => choice !== undefined && choice !== null)
-        .map(String)
-        .filter(choice => choice !== '');
+      const choices = toChoices(choice1, choice2, choice3);
       promptUser(
         promptText,
         variableName,
@@ -702,32 +806,77 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.aiSetters_ = new Map();
     // One request per variable at a time, to avoid a flood of requests at once.
     const pending = (this.aiPending_ = new Set());
-    library.commands.askAI = (promptText, variableName, setterCallback) => {
-      if (!this.canAskAi_() || pending.has(variableName)) {
+    getStore().dispatch(clearAskAi());
+    const isCurrentRun = () => !this.destroyed_ && runId === this.runId_;
+    // Once per run, not on every pass of a block in a loop.
+    let refusalShown = false;
+    const canAskAi = () => {
+      const refusal = askAiRefusal(getStore().getState().currentUser);
+      if (refusal && !refusalShown) {
+        refusalShown = true;
+        getStore().dispatch(askAiFailed(refusal));
+      }
+      return !refusal;
+    };
+    let systemPrompt = '';
+    library.commands.setSystemPrompt = promptText => {
+      if (canAskAi()) {
+        systemPrompt = String(promptText ?? '');
+      }
+    };
+    const askAi = (variableName, setterCallback, request) => {
+      if (pending.has(variableName) || !canAskAi()) {
         return;
       }
       pending.add(variableName);
       this.registerAiAnswer_(library, variableName, setterCallback);
-      askAiText(String(promptText ?? ''))
+      getStore().dispatch(askAiPending());
+      request()
         .then(
           text => {
-            if (this.destroyed_ || runId !== this.runId_) {
+            if (!isCurrentRun()) {
               return;
             }
             this.deliverAiAnswer_(library, variableName, text);
           },
           error => {
-            if (this.destroyed_ || runId !== this.runId_) {
+            if (!isCurrentRun()) {
               return;
             }
+            getStore().dispatch(askAiFailed(askAiErrorMessage(error)));
             console.warn(
               error instanceof AskAiError
-                ? `SpriteLab2: the ask AI block's ${error.phase} did not pass the safety check.`
+                ? `SpriteLab2: ${error.message}.`
                 : `SpriteLab2: the ask AI block got no answer (${error.message}).`
             );
           }
         )
-        .finally(() => pending.delete(variableName));
+        .finally(() => {
+          pending.delete(variableName);
+          if (!pending.size && isCurrentRun()) {
+            getStore().dispatch(askAiAnswered());
+          }
+        });
+    };
+    library.commands.askAI = (promptText, variableName, setterCallback) =>
+      askAi(variableName, setterCallback, () =>
+        askAiText(String(promptText ?? ''), systemPrompt)
+      );
+    library.commands.askAIWithChoices = (
+      promptText,
+      variableName,
+      choice1,
+      choice2,
+      choice3,
+      setterCallback
+    ) => {
+      const question = String(promptText ?? '');
+      const choices = toChoices(choice1, choice2, choice3);
+      askAi(variableName, setterCallback, () =>
+        choices.length
+          ? askAiChoice(question, choices, systemPrompt)
+          : askAiText(question, systemPrompt)
+      );
     };
     return library;
   }
@@ -748,21 +897,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.userInputEventCallbacks[variableName]?.userCallbacks.forEach(
       callback => callback()
     );
-  }
-
-  // Mirrors the gateway's own check (User::AiAccessible), so a request it
-  // would refuse never leaves the browser.
-  canAskAi_() {
-    if (!isAskAiEnabled()) {
-      console.warn('SpriteLab2: the ask AI block is turned off.');
-      return false;
-    }
-    const permissions = getStore().getState().lab?.permissions;
-    if (!permissions?.includes(PERMISSIONS.LEVELBUILDER)) {
-      console.warn('SpriteLab2: the ask AI block needs levelbuilder access.');
-      return false;
-    }
-    return true;
   }
 
   onPromptAnswer(variableName, value) {
@@ -1008,9 +1142,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Preload images added since the initial execute() — the costume/
     // background commands silently no-op on unknown names. Already-loaded
     // entries are skipped and trims are cached, so re-runs are cheap.
-    await this.preloadTrimmedImages_(
-      this.preloadAnimationsOverride || getStore().getState().animationList
-    );
+    await this.preloadTrimmedImages_(getStore().getState().animationList);
     p5.allSprites.removeSprites();
     // removeSprites destroyed the edge sprites too; clear the handle so the
     // next edgesCollide/edgesDisplace recreates them instead of colliding
@@ -1051,6 +1183,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     stopSoundEffects();
     this.reset();
     getStore().dispatch(clearPrompt());
+    getStore().dispatch(clearAskAi());
     this.stopTickTimer();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();
@@ -1153,16 +1286,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
-    // Decoded images are reused by name across re-runs, and another
-    // project's names collide with this one's, so each project runs from
-    // its own cache.
-    const external = this.isExternalList_(animationList);
-    if (external && this.externalPreloads_?.list !== animationList) {
-      this.externalPreloads_ = {list: animationList, cache: {}};
-    }
-    this.p5Wrapper.preloadedSprites = external
-      ? this.externalPreloads_.cache
-      : this.ownPreloads_;
+    this.p5Wrapper.preloadedSprites = this.preloads_;
     const scoped = this.referencedImages
       ? filterAnimationsToNames(animationList, this.referencedImages)
       : animationList;
@@ -1170,7 +1294,6 @@ export default class SpriteLab2Engine extends SpriteLab {
       loadedAnimations(
         await trimAnimationListImages(scoped, {
           keepNames: animationNames(animationList),
-          thumbnails: !external,
           upscalePixelArt: true,
         })
       ),
@@ -1196,15 +1319,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
   }
 
-  isExternalList_(animationList) {
-    return animationList === this.preloadAnimationsOverride;
-  }
-
   // Decode one animation by name, mid-run: the escape hatch for a costume
   // name built dynamically, which the scene-scoped preload cannot see.
   async decodeAnimationOnDemand_(name) {
-    const list =
-      this.preloadAnimationsOverride || getStore().getState().animationList;
+    const list = getStore().getState().animationList;
     const key = (list.orderedKeys || []).find(
       k => list.propsByKey[k]?.name === name
     );
@@ -1219,7 +1337,6 @@ export default class SpriteLab2Engine extends SpriteLab {
       loadedAnimations(
         await trimAnimationListImages(single, {
           keepNames: animationNames(list),
-          thumbnails: !this.isExternalList_(list),
           upscalePixelArt: true,
         })
       ),
@@ -1265,7 +1382,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // the scene a few pixels out for one frame.
       engine.resolvePlatformPhysics_();
       engine.physicsResolvedThisFrame_ = true;
-      const player = this.getSpriteArray({group: 'players'})[0];
+      const player = this.getSpriteArray({group: PLAYER_GROUP})[0];
       const focus = cameraFocus(zoom, player ? player.position : null);
       if (engine.frameCaptureArmed_) {
         // The picture shows the whole world: drawn at zoom 1, copied by the
@@ -1298,6 +1415,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     camera.position.y = focus.y;
     camera.on();
     p5.drawSprites();
+    this.bubbleView_ = {
+      x: focus.x - APP_WIDTH / (2 * zoom),
+      y: focus.y - APP_HEIGHT / (2 * zoom),
+      width: APP_WIDTH / zoom,
+      height: APP_HEIGHT / zoom,
+    };
     library.drawSpeechBubbles();
     camera.off();
   }
@@ -1340,7 +1463,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // Consuming the one-frame mark: see usePlatformBody.
       const marked = sprite.__slab2Body;
       sprite.__slab2Body = false;
-      if (sprite.group === 'players') {
+      if (isPlayerGroup(sprite.group)) {
         players.push(snapshot(sprite));
       } else if (marked) {
         bodies.push(snapshot(sprite));
@@ -1352,7 +1475,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.prevBodies_.forEach(sprite => {
       if (
         !sprite.removed &&
-        sprite.group !== 'players' &&
+        !isPlayerGroup(sprite.group) &&
         !bodies.some(b => b.sprite === sprite)
       ) {
         sprite.mirrorY(1);
@@ -1385,10 +1508,14 @@ export default class SpriteLab2Engine extends SpriteLab {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }
     // Both the requested and the resolved positions are known here, so this
-    // is where the observer is fed.
-    this.observePlayer_(players, walls, view);
-    this.trackPlayerActions_(players, walls, view);
-    this.reportPlayerProgress_(players, view);
+    // is where the observer is fed. The arrow-key player is the one heard,
+    // tracked and reported; player 2 only moves.
+    const firstPlayers = players.filter(
+      ({sprite}) => sprite.group === PLAYER_GROUP
+    );
+    this.observePlayer_(firstPlayers, walls, view);
+    this.trackPlayerActions_(firstPlayers, walls, view);
+    this.reportPlayerProgress_(firstPlayers, view);
   }
 
   trackPlayerActions_(players, walls, view) {
@@ -1426,7 +1553,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     const p = half(player);
     const touching = [];
     Object.values(this.library.nativeSpriteMap).forEach(sprite => {
-      if (sprite === player || sprite.removed || sprite.group === 'walls') {
+      if (
+        sprite.removed ||
+        sprite.group === 'walls' ||
+        isPlayerGroup(sprite.group)
+      ) {
         return;
       }
       const s = half(sprite);
@@ -1561,8 +1692,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (!p5 || !library) {
       return;
     }
-    const list =
-      this.preloadAnimationsOverride || getStore().getState().animationList;
+    const list = getStore().getState().animationList;
     if (this.posesSource_ !== list) {
       this.posesSource_ = list;
       this.posesByName_ = posesByImageName(list);
@@ -1592,7 +1722,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       state.x = sprite.position.x;
       state.facing = nextFacing(state.facing, dx);
       const moving = isMoving(dx);
-      const player = this.usesPlatformPhysics_ && sprite.group === 'players';
+      const player = this.usesPlatformPhysics_ && isPlayerGroup(sprite.group);
       const airborne =
         player && !isSupported(sprite, walls, view, this.platformGravity_);
       if (moving || airborne) {

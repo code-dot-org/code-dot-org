@@ -139,6 +139,27 @@ describe('useImageWriter', () => {
     expect(patch).toMatchObject({subject: 'object', generation: undefined});
   });
 
+  it('writes a verdict onto the record alone, and nothing for an image with none', () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      sourceUrl: '/v3/assets/chan/old.png',
+      generation: {prompt: 'A cat', imageType: 'sprite'},
+    };
+    propsByKey.k2 = {name: 'Sprite 2', sourceUrl: '/v3/assets/chan/own.png'};
+    const {writer, uploadImage} = renderWriter();
+    const generation = writer().rateGenerated('k1', 'up');
+    expect(generation).toEqual({
+      prompt: 'A cat',
+      imageType: 'sprite',
+      verdict: 'up',
+    });
+    expect(repointAnimation).toHaveBeenCalledTimes(1);
+    expect(repointAnimation.mock.calls[0][2]).toEqual({generation});
+    expect(uploadImage).not.toHaveBeenCalled();
+    expect(writer().rateGenerated('k2', 'up')).toBeUndefined();
+    expect(repointAnimation).toHaveBeenCalledTimes(1);
+  });
+
   it('repoints an existing image, uploading each picture once', async () => {
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer, uploadImage} = renderWriter();

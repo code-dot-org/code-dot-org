@@ -1,30 +1,34 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
 // Common Modal styles
+// The title, content and action rows span the panel, so their hairlines run edge to edge.
 .modal {
   position: relative;
   display: flex;
   min-width: 600px;
   max-width: 800px;
-  padding: 1.5rem 2rem;
+  padding: 0;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
+  align-items: stretch;
   background-color: var(--background-neutral-primary);
   border: 1px solid var(--borders-neutral-primary);
-  border-radius: 0.5rem;
-  box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
+  border-radius: var(--shape-xl);
+  box-shadow: var(--shadow-lg);
   overflow: auto;
 
   hr {
     width: 100%;
     margin: 0;
     border: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 0.0625rem;
     flex-shrink: 0;
     background: var(--borders-neutral-primary);
+  }
+
+  // The dialog shell's close x, its only direct button: its 25px box centered on the title's 36px line.
+  > button {
+    inset-block-start: 23.5px;
+    inset-inline-end: 20px;
   }
 }
 
@@ -35,8 +39,14 @@
 }
 
 .modalTitleSection {
-  align-self: stretch;
-  gap: 1.5rem;
+  flex-shrink: 0;
+  padding-block: 18px;
+  padding-inline: 24px 20px;
+
+  // Room for the close x and a 10px gap before it.
+  &.closable {
+    padding-inline-end: 55px;
+  }
 
   h3 {
     margin-bottom: 0;
@@ -44,18 +54,17 @@
   }
 }
 
+// The one part that scrolls: the title and the buttons stay in view.
 .modalContentSection {
+  flex: 1 1 auto;
+  min-height: 0;
   overflow: auto;
-  padding: 4px;
+  padding: 24px;
 
-  max-height: 168px;
-
-  &.modalContentSection-top-imagePlacement {
-    max-height: 432px;
-  }
-
-  &.modalContentSection-inline-imagePlacement {
-    max-height: 248px;
+  // A tab stop only while it scrolls; inset, since the panel clips its sides.
+  &:focus-visible {
+    @include mixins.focus-styles;
+    outline-offset: -2px;
   }
 
   p {
@@ -111,14 +120,30 @@
 
 .modalActionsSection {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   gap: 0.5rem;
-  align-self: stretch;
+  padding-block: 18px;
+  padding-inline: 24px 20px;
 }
 
-.modalCloseButton {
-  position: absolute;
-  inset-block-start: 8px;
-  inset-inline-end: 8px;
+.modalStartActions,
+.modalEndActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+// Keeps the buttons at the end edge when there is nothing at the start.
+.modalEndActions {
+  margin-inline-start: auto;
+}
+
+.modalBottomSection {
+  flex-shrink: 0;
+  padding-block-end: 18px;
+  padding-inline: 24px 20px;
 }

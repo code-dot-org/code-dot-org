@@ -77,14 +77,6 @@
           }
         },
         {
-          "text": "Pick your sprite.",
-          "check": {
-            "kind": "block",
-            "type": "spritelab2_setAsPlatformPlayer",
-            "under": "spritelab2_whenRun"
-          }
-        },
-        {
           "text": "Click **Play**, then use the arrow keys to run and jump.",
           "check": {
             "kind": "reach",
