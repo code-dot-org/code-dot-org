@@ -231,7 +231,7 @@ def get_js_build_command
       'yarn build:dist'
     else
       # Run npm commands separately to ensure NODE_OPTIONS are set correctly for the build step.
-      'yarn clean && yarn build:dist'
+      'yarn clean && APPS_BUILD_MAX_MEMORY=12288 yarn build:dist'
     end
   else
     'yarn build'
