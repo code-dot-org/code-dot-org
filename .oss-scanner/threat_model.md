@@ -142,8 +142,10 @@ The image is built by `.oss-scanner/Dockerfile`. Everything below was verified w
 - Node 20 with yarn 4: `apps/` and `frontend/` dependencies installed, and the `frontend/packages` that `apps/` consumes already built.
 - The uv venv, Python 3.12 with the dev group.
 - MySQL 8.0 and Redis, with:
-  - `dashboard_test` prepared the way CI prepares it (schema + test fixtures + `seed:test`, no curriculum content)
+  - `dashboard_test`, for the tests, prepared the way CI prepares it (schema + test fixtures + `seed:test`)
+  - `dashboard_test_app`, for running the app, prepared the same way and then seeded with a subset of curriculum: `seed:ui_test` (the UI-test units CI uses) and the AI Foundations course `ai-foundations-exploring-ai-and-cs-2026` (8 units, one of them Python Lab), plus the demo accounts below
   - `pegasus_test` migrated
+- An S3 emulator (moto) on `127.0.0.1:9000`, which `locals.yml` points the app at, so project code, files and assets save and load. It keeps data in memory, so saved projects last until it stops.
 - The frontend, built as for CI's UI tests: the minified `apps/` webpack bundles (`apps/build/package`, served through `dashboard/public/blockly`), the Studio app (`frontend/apps/studio/dist`), and the Rails assets precompiled into `dashboard/public/assets`.
 - All Git LFS content (locales, lab JSON and media under `apps/static`, images, test fixtures).
 - Headless Chrome: Chrome for Testing at `/usr/local/bin/chrome` (`CHROME_BIN`), the build the pinned Playwright expects, so Playwright finds it without `playwright install`. In this container run it with `--no-sandbox --disable-dev-shm-usage`.
@@ -151,8 +153,8 @@ The image is built by `.oss-scanner/Dockerfile`. Everything below was verified w
 **Start the services first.** This takes about 1s, because the data is already in the image. Rails needs MySQL even to boot.
 
 ```bash
-/src/.oss-scanner/start-services.sh            # MySQL 8 (socket + 127.0.0.1:3306; Rails uses `writer`/`reader`, admin is root; no passwords) + Redis
-/src/.oss-scanner/start-services.sh --reset    # drop and re-prepare the test DBs (~2 min)
+/src/.oss-scanner/start-services.sh            # MySQL 8 (socket + 127.0.0.1:3306; Rails uses `writer`/`reader`, admin is root; no passwords) + Redis + S3 emulator
+/src/.oss-scanner/start-services.sh --reset    # drop and re-prepare the test DBs (~2 min); discards the curriculum and demo accounts
 ```
 
 **Toolchain:**
@@ -189,13 +191,26 @@ cd /src/frontend/packages/component-library && yarn test              # Vitest (
 cd /src && for d in python/pythonlab/*/; do uv run --no-sync pytest -q "$d"; done   # one package at a time, as CI does
 ```
 
-**Writing a reproducer.** A dashboard test is the best form: a controller or integration test under `dashboard/test/` using the factories in `dashboard/test/factories/`. There is no curriculum seed data, so tests that need units, lessons or levels must create them with factories, as the existing tests do. `rails server` also works: `cd dashboard && bundle exec rails s -p 3000 -b 127.0.0.1` after `start-services.sh`, about 15s to boot. Verified: `/users/sign_in` 200 in under a second, `/` 302. In headless Chrome (Playwright from `frontend/`, launched with `--no-sandbox --disable-dev-shm-usage`), `/users/sign_in`, `/users/sign_up`, `/home` and `/projects/public` load in about 4s with their webpack bundles running and no page errors; only requests to external hosts (fonts, analytics, OneTrust) fail. To sign in, create an account first, e.g. `bundle exec rails runner "User.create!(user_type: 'teacher', email: 't@example.com', password: 'password-1', name: 'T', age: 30)"`, then sign in at `/users/sign_in`; verified to land on `/teacher_dashboard/home`. Pages that need curriculum content, S3 or external services will error.
+**Demo accounts and curriculum.** They are in `dashboard_test_app`, so start the server with `TEST_ENV_NUMBER=_app`:
+
+```bash
+cd /src/dashboard && TEST_ENV_NUMBER=_app bundle exec rails s -p 3000 -b 127.0.0.1
+```
+
+Then sign in at `http://localhost:3000/users/sign_in`, password `demo-password-1` for both:
+
+- `demo-teacher@example.com`: a teacher with "Demo Section", assigned the AI Foundations course
+- `demo-student@example.com`: a student in that section; sign-in lands on the course
+
+The Python Lab unit is `/courses/ai-foundations-exploring-ai-and-cs-2026/units/6`; its first Python Lab level is lesson 4, level 1. Verified as the student: open a level, edit and run Python (it runs in the browser), reload and find the code saved, with progress recorded. Projects work too: `/projects/pythonlab/new` creates, runs and saves one. Use `localhost:3000`, which `locals.yml` names as the studio host, so generated links stay on this server.
+
+**Writing a reproducer.** A dashboard test is the best form: a controller or integration test under `dashboard/test/` using the factories in `dashboard/test/factories/`. Tests should create the units, lessons and levels they need with factories, as the existing tests do, rather than depend on the seeded curriculum. `rails server` also works: `cd dashboard && bundle exec rails s -p 3000 -b 127.0.0.1` after `start-services.sh`, about 15s to boot. Verified: `/users/sign_in` 200 in under a second, `/` 302. In headless Chrome (Playwright from `frontend/`, launched with `--no-sandbox --disable-dev-shm-usage`), `/users/sign_in`, `/users/sign_up`, `/home` and `/projects/public` load in about 4s with their webpack bundles running and no page errors; only requests to external hosts (fonts, analytics, OneTrust) fail. Pages for curriculum that is not seeded, or that need an external service, will error.
 
 **What does not work offline in this image:**
 
 - **No `yarn install`, `bundle install` or `uv sync` that needs new packages.** The yarn download caches were removed to save space; installed `node_modules` work.
 - **No rebuilding the served frontend.** An edit under `apps/src` does not change what Rails serves; `yarn build:dist` needs more memory than this machine has. Jest reads the source, so test client code there.
-- **AWS (S3, Secrets Manager), Javabuilder, AI/LLM providers, Clever/Google/Microsoft OAuth and other external services are unreachable.** Code paths that call them fail or use test doubles.
+- **AWS other than S3 (Secrets Manager, CloudFront signed cookies), Javabuilder, AI/LLM providers, Clever/Google/Microsoft OAuth and other external services are unreachable.** Code paths that call them fail or use test doubles. So do lab assets loaded from other hosts: Music Lab's sound library (`curriculum.code.org`), Dance Party's songs, and the Sprite Lab/Game Lab animation library, which nothing seeds into the emulated bucket.
 - **Cucumber/Selenium UI tests** are not set up: there is no chromedriver.
 
 ## How we rate severity
