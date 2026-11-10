@@ -58,8 +58,9 @@ $frame-border: 2px;
     transparent
   );
   color: var(--text-neutral-white-fixed);
-  font-size: 14px;
-  line-height: 1.35;
+  // The design system's h6 size.
+  font-size: 1.25rem;
+  line-height: 1.4;
   text-align: left;
 }
 
@@ -479,6 +480,8 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   align-items: center;
   gap: 4px;
   padding: 6px 10px 6px 18px;
+  // The outline keeps the bar apart from a picture of its own color.
+  border: 2px solid var(--border-brand-primary);
   border-radius: 12px;
   background-color: var(--background-neutral-primary-inverse);
   color: var(--text-neutral-primary-inverse);
