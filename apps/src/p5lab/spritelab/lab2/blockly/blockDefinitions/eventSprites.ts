@@ -35,8 +35,8 @@ const EVENT_SPRITES: Record<string, EventSprite> = {
   },
 };
 
-// extraArgs exists only inside the handler: not in the event's own sprite
-// inputs, and not anywhere else.
+// The event's own sprite inputs run outside its handler, where extraArgs is
+// undefined.
 function isInItsHandler(block: Block): boolean {
   const root = block.getRootBlock();
   return (
