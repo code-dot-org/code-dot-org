@@ -139,15 +139,12 @@ const SpritelabModeFields: React.FunctionComponent<
     mode.imageRole !== undefined &&
     !getPaletteRoles(mode).includes(mode.imageRole);
 
-  // The type is optional everywhere, except that a one-image level needs
-  // one to tell students which image to make.
-  const showImageTypeMissingError =
-    showImageType && mode.imageType === undefined && mode.oneImage === true;
-
   const imageTypeHelper = useMemo(() => {
     if (kind !== 'world') {
       if (mode.imageType === undefined) {
-        return 'With no type students can make images of any kind.';
+        return mode.oneImage
+          ? 'With no type students make one image of whichever kind they pick.'
+          : 'With no type students can make images of any kind.';
       }
       return mode.oneImage
         ? 'The Images tab makes only this type, and students make one image of it.'
@@ -221,8 +218,6 @@ const SpritelabModeFields: React.FunctionComponent<
             errorMessage={
               paletteConflict
                 ? 'Image role must be one of the palette roles, or the palette preselects an image it does not offer.'
-                : showImageTypeMissingError
-                ? 'Pick a type, or turn off one image below: a one-image level needs to know which image students make.'
                 : undefined
             }
             size="s"
@@ -293,7 +288,7 @@ const SpritelabModeFields: React.FunctionComponent<
         <div className={moduleStyles.booleanField}>
           <Checkbox
             name="spritelab_mode_one_image"
-            label={`Limit students to one image generation of a specific type, with ${GENERATION_LIMIT} generations of it and no drawing or deleting.`}
+            label={`Limit students to one image, with ${GENERATION_LIMIT} generations of it and no drawing or deleting.`}
             checked={mode.oneImage === true}
             onChange={event =>
               onChange(setOneImage(mode, event.target.checked))

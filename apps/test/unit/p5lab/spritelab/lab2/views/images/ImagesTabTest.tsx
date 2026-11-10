@@ -343,9 +343,30 @@ describe('ImagesTab', () => {
     expect(screen.queryByRole('button', {name: 'New character'})).toBeNull();
   });
 
-  it('says so where the level has no images and no adding', () => {
-    renderTab();
+  it('says so where the level has no images left to make', () => {
+    renderTab({oneImage: true, ownImageMade: true});
     expect(screen.getByText('This level has no images to make.')).toBeTruthy();
+  });
+
+  it('makes one image of any kind where the level names no type', () => {
+    const view = renderTab({oneImage: true});
+    // No type to narrow the menu, so every kind is offered.
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    expect(
+      screen.getByRole('menuitem', {name: 'Background'})
+    ).not.toHaveAttribute('aria-disabled', 'true');
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Background'}));
+    expect(pressed()).toEqual(['New background']);
+    // The host counts any image as the level's own; the plus then goes.
+    view.rerender(
+      <ImagesTab
+        onDeleteImage={jest.fn()}
+        paneWidth={280}
+        oneImage
+        ownImageMade
+      />
+    );
+    expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
   });
 
   it('makes more than one image of the level kind when one image is off', () => {

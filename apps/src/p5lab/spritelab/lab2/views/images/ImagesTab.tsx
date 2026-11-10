@@ -77,6 +77,9 @@ interface ImagesTabProps {
   lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
   imageRole?: string;
+  /** The level's task is a single image (level mode `oneImage`): the tab
+      opens on it, or on the empty slot it will fill. */
+  oneImage?: boolean;
   /** An image of the level's type was made on this visit. Until then the
       plus is offered, so a student back on a level they did can make
       another. */
@@ -133,6 +136,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   lockedImageType,
   lockedImageSubject,
   imageRole,
+  oneImage,
   ownImageMade,
   learning,
   levelId,
@@ -193,16 +197,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // On a level about one type of image: the newest such image, when one
   // exists (the list is newest first), as the dropdowns' role defaults
   // pick it.
-  const ownImage = lockedImageType
-    ? images.find(image =>
-        imageRole
-          ? image.props.role === imageRole
-          : image.imageType === lockedImageType
-      )
-    : undefined;
+  const ownImage =
+    imageRole || lockedImageType
+      ? images.find(image =>
+          imageRole
+            ? image.props.role === imageRole
+            : image.imageType === lockedImageType
+        )
+      : undefined;
   // The opening choice is read once at mount; a later change to the list
-  // must not move the choice.
-  const openOnRef = useRef(lockedImageType ? ownImage : images[0]);
+  // must not move the choice. A level that names its own image opens on it,
+  // as does a one-image level, which shows an empty slot until it is made;
+  // any other level opens on the newest image in the project.
+  const openOnRef = useRef(
+    lockedImageType || imageRole || oneImage ? ownImage : images[0]
+  );
   useEffect(() => {
     setChosenId(openOnRef.current?.key ?? null);
   }, []);
@@ -428,7 +437,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Where a single image is the task, the plus is shown until that image is
   // made on this visit, and the choice stays on it or on the slot it will
   // take; the project's other tiles are listed but disabled.
-  const newOffered = !!editingOffered || (!!lockedKind && !ownImageMade);
+  const newOffered = !!editingOffered || !ownImageMade;
   const chooseOffered = !!editingOffered;
 
   return (

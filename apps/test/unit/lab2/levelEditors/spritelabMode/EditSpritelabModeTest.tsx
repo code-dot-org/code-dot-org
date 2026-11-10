@@ -200,14 +200,18 @@ describe('EditSpritelabMode', () => {
     expect(JSON.parse(submitted(container))).toEqual({kind: 'image'});
   });
 
-  it('asks for a type only when one image needs something to lock to', () => {
-    const missing = 'Pick a type, or turn off one image below';
-    renderEditor({kind: 'image'});
-    expect(screen.queryByText(new RegExp(missing))).not.toBeInTheDocument();
+  it('leaves the type optional, one image or not', () => {
+    const {container} = renderEditor({kind: 'image'});
     fireEvent.click(screen.getByRole('checkbox', {name: ONE_IMAGE}));
-    expect(screen.getByText(new RegExp(missing))).toBeInTheDocument();
-    choose(IMAGE_TYPE, 'block');
-    expect(screen.queryByText(new RegExp(missing))).not.toBeInTheDocument();
+    expect(JSON.parse(submitted(container))).toEqual({
+      kind: 'image',
+      oneImage: true,
+    });
+    expect(
+      screen.getByText(
+        'With no type students make one image of whichever kind they pick.'
+      )
+    ).toBeInTheDocument();
   });
 
   it('offers one image only where the level has an Images tab', () => {
