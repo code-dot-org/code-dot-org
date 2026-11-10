@@ -284,13 +284,10 @@ jobs:
   # the final name.
   # See: https://docs.docker.com/build/ci/github-actions/multi-platform/#distribute-build-across-multiple-runners
   #
-  # The index is built with regctl rather than `docker buildx imagetools
-  # create`. Kargo reads the source commit from the index annotation
-  # org.opencontainers.image.revision, and buildx silently drops index
-  # annotations when every child is a Docker-typed manifest, as ours are,
-  # because it then emits a Docker manifest list. regctl always emits an OCI
-  # image index and leaves the per-arch manifests, the bytes the suites ran
-  # against, untouched.
+  # regctl builds the index: an OCI image index over the two per-arch
+  # manifests, annotated with org.opencontainers.image.revision, the commit
+  # the image was built from. The per-arch manifests, the bytes the suites
+  # ran against, enter the index unchanged.
   merge:
     name: merge per-arch images into one index
     if: github.event_name != 'pull_request'
