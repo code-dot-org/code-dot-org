@@ -34,10 +34,8 @@ const generator: GeneratorFunction = block =>
 // "set speed" still applies; the jump goes through platformJump, which
 // checks footing and jumps against gravity whichever way it points. At
 // zero gravity there is no jump and the up and down arrows steer instead.
-// Clears a two-tile step with a little margin (apex ~2.4 tiles at the
-// default gravity).
-export const JUMP_SPEED = 13;
-
+// Jump height is configured in playfield squares by set jump height; the
+// engine works out the speed.
 /** The keys that steer one platform player. */
 export interface PlatformControlKeys {
   left: string;
@@ -62,6 +60,8 @@ export function platformControlsHelper(
   const player = `{group: ${JSON.stringify(group)}}`;
   const move = (direction: string) =>
     `moveInDirection(${player}, getProp(${player}, 'speed'), '${direction}');`;
+  // The engine picks the speed from the jump height.
+  const jump = `platformJump(undefined, ${JSON.stringify(group)});`;
   return [
     `var ${name}Wired = false;`,
     `function ${name}() {`,
@@ -81,8 +81,13 @@ export function platformControlsHelper(
     '    }',
     '  });',
     `  keyPressed('when', '${keys.up}', function () {`,
-    '    if (platformGravity() !== 0) {',
-    `      platformJump(${JUMP_SPEED}, ${JSON.stringify(group)});`,
+    '    if (platformGravity() > 0) {',
+    `      ${jump}`,
+    '    }',
+    '  });',
+    `  keyPressed('when', '${keys.down}', function () {`,
+    '    if (platformGravity() < 0) {',
+    `      ${jump}`,
     '    }',
     '  });',
     `  keyPressed('while', '${keys.down}', function () {`,
@@ -93,7 +98,7 @@ export function platformControlsHelper(
     ...(keys.jump
       ? [
           `  keyPressed('when', '${keys.jump}', function () {`,
-          `    platformJump(${JUMP_SPEED}, ${JSON.stringify(group)});`,
+          `    ${jump}`,
           '  });',
         ]
       : []),

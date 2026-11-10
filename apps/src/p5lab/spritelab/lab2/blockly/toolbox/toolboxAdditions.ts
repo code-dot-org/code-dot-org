@@ -11,7 +11,6 @@ import {
 } from '@cdo/apps/blockly/utils/toolbox';
 import {DEFAULT_SCENE_GRID_SIZE} from '@cdo/apps/p5lab/spritelab/lab2/world';
 
-import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
 import {
@@ -95,7 +94,8 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     // light blue ones.
     name: 'Platform',
     types: [
-      'spritelab2_setPlatformGravity',
+      'spritelab2_setPlatformJumpHeight',
+      'spritelab2_setPlatformGravityDirection',
       'spritelab2_setCameraZoom',
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
@@ -114,7 +114,6 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'gamelab_spriteSay',
       SHOW_TITLE_BLOCK_TYPE,
       GO_TO_SCENE_BLOCK_TYPE,
-      GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
     ],
   },
   {
@@ -135,7 +134,6 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'gamelab_spriteSayTime',
       SHOW_TITLE_BLOCK_TYPE,
       GO_TO_SCENE_BLOCK_TYPE,
-      GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
     ],
   },
 ];
@@ -145,18 +143,13 @@ function presentIn(category: StaticCategoryInfo): Set<string | undefined> {
   return new Set(category.contents.filter(isBlockInfo).map(b => b.type));
 }
 
-// Append the scene blocks to the "Game Design" category.
+// Append the scene block to the "Game Design" category.
 function ensureSceneBlocks(def: ToolboxInfo): void {
   const category = findCategory(def.contents, 'Game Design');
-  if (!category) {
+  if (!category || presentIn(category).has(GO_TO_SCENE_BLOCK_TYPE)) {
     return;
   }
-  const present = presentIn(category);
-  [GO_TO_SCENE_BLOCK_TYPE, GO_TO_EXTERNAL_SCENE_BLOCK_TYPE].forEach(type => {
-    if (!present.has(type)) {
-      category.contents.push({kind: 'block', type});
-    }
-  });
+  category.contents.push({kind: 'block', type: GO_TO_SCENE_BLOCK_TYPE});
 }
 
 // Lead the "Sprites" category with the platformer composites and build the

@@ -6,7 +6,7 @@ import React, {FC, useEffect, useRef, useState} from 'react';
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {fetchUserChatHistory} from '@cdo/apps/aichat/redux';
-import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
+import {defaultAiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
@@ -78,7 +78,7 @@ export const AiTutorContainer: FC<{
   const disabledState = useAiChatDisabledState({
     appName: labState.appType,
     clientType: AiChatClientTypes.AI_TUTOR,
-    selectedModelId: aiTutorModelId,
+    selectedModelId: defaultAiTutorModelId,
   });
 
   const lab: CommonLab | undefined =

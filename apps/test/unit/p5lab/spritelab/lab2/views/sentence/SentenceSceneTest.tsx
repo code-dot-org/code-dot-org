@@ -185,14 +185,16 @@ describe('SentenceScene', () => {
     expect(generateImage).toHaveBeenCalledTimes(1);
   });
 
-  it('keeps the picture as it lands, and again with its rating', async () => {
+  it('keeps the picture as it lands, and again with its rating when no host records it', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
     await generate();
     expect(onKeep).toHaveBeenCalledTimes(1);
     expect(onKeep.mock.calls[0][0].generation.verdict).toBeUndefined();
-    fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    });
     expect(onKeep).toHaveBeenCalledTimes(2);
     expect(onKeep.mock.calls[1][0].generation.verdict).toBe('up');
     expect(screen.getByText('up')).toBeTruthy();
@@ -206,6 +208,32 @@ describe('SentenceScene', () => {
     expect(
       screen.queryByRole('group', {name: 'How did the AI do?'})
     ).toBeNull();
+  });
+
+  it('leaves the rating to a host that records it, keeping the picture once', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    const onRate = jest.fn(async () => true);
+    renderScene({onRate});
+    pickCreature();
+    await generate();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    });
+    expect(onRate).toHaveBeenCalledWith('up');
+    expect(onKeep).toHaveBeenCalledTimes(1);
+    expect(screen.getByText('up')).toBeTruthy();
+  });
+
+  it('keeps the picture again with its rating when the host cannot record it', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene({onRate: async () => false});
+    pickCreature();
+    await generate();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    });
+    expect(onKeep).toHaveBeenCalledTimes(2);
+    expect(onKeep.mock.calls[1][0].generation.verdict).toBe('up');
   });
 
   it('puts the rating away unanswered on Dismiss, until the next picture', async () => {
@@ -263,6 +291,21 @@ describe('SentenceScene', () => {
     expect(
       screen.getByRole('group', {name: 'How did the AI do?'})
     ).toBeTruthy();
+  });
+
+  it("hands up the picture's story from Behind the scenes", async () => {
+    const onTellStory = jest.fn();
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene({onTellStory});
+    pickCreature();
+    await generate();
+    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
+    fireEvent.click(screen.getByRole('button', {name: 'How AI made this'}));
+    expect(onTellStory).toHaveBeenCalledWith({
+      picture: {src: expect.stringMatching(/^data:image\/png/)},
+      prompt: 'A cat',
+      imageType: 'sprite',
+    });
   });
 
   it('holds Generate once the generations are used up', () => {

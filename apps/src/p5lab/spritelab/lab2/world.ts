@@ -6,10 +6,12 @@ import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {noteImageReference} from './imageReferences';
 
 // Cells per side of the playfield, for a world being created now. The stored
-// world is WORLD_MULTIPLE times this per side, authored ahead of a
-// scrollable playfield; only the top-left scene-sized corner runs today.
+// grid is the playfield: its side is the playfield's.
 export const DEFAULT_SCENE_GRID_SIZE = 10;
-export const WORLD_MULTIPLE = 3;
+// A legacy grid is three times the playfield per side with only its top-left
+// corner in use; trimLegacyWorld keeps that corner. Applied as a project's
+// scenes are read (migrateSources).
+const LEGACY_WORLD_MULTIPLE = 3;
 
 export interface WorldCell {
   // Animation name to draw and spawn.
@@ -31,7 +33,24 @@ export interface World {
  */
 export function sceneGridSize(world?: World): number {
   const rows = world?.grid?.length ?? 0;
-  return rows ? Math.floor(rows / WORLD_MULTIPLE) : DEFAULT_SCENE_GRID_SIZE;
+  return rows || DEFAULT_SCENE_GRID_SIZE;
+}
+
+/** Whether a grid has the legacy shape. Nothing outside the corner was ever
+    shown or run, so the shape alone decides. */
+export function isLegacyWorld(world?: World): world is World {
+  return (
+    world?.grid?.length === DEFAULT_SCENE_GRID_SIZE * LEGACY_WORLD_MULTIPLE
+  );
+}
+
+/** A legacy world cut back to its playfield. */
+export function trimLegacyWorld(world: World): World {
+  const corner = world.grid.length / LEGACY_WORLD_MULTIPLE;
+  return {
+    ...world,
+    grid: world.grid.slice(0, corner).map(cells => cells.slice(0, corner)),
+  };
 }
 
 /** Playfield pixels per cell — sprites are placed and sized by this. */
@@ -42,10 +61,9 @@ export function cellSize(sceneSize: number): number {
 export function createEmptyWorld(
   sceneSize: number = DEFAULT_SCENE_GRID_SIZE
 ): World {
-  const side = sceneSize * WORLD_MULTIPLE;
   return {
-    grid: Array.from({length: side}, () =>
-      Array.from({length: side}, () => null)
+    grid: Array.from({length: sceneSize}, () =>
+      Array.from({length: sceneSize}, () => null)
     ),
   };
 }
@@ -66,7 +84,7 @@ export function resizeWorld(
   if (!world?.grid?.length) {
     return createEmptyWorld(sceneSize);
   }
-  const side = sceneSize * WORLD_MULTIPLE;
+  const side = sceneSize;
   const current = world.grid.length;
   if (current === side) {
     return world;

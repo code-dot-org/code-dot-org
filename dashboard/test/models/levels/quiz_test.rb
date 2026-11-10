@@ -5,6 +5,23 @@ class QuizTest < ActiveSupport::TestCase
     assert create(:quiz).uses_lab2?
   end
 
+  test "not used_in_published_unit? when its unit is still in development" do
+    quiz = create(:quiz)
+    unit = create(:unit, :in_single_unit_course)
+    create(:script_level, script: unit, levels: [quiz])
+
+    refute quiz.used_in_published_unit?
+  end
+
+  test "used_in_published_unit? when its unit is stable" do
+    quiz = create(:quiz)
+    unit = create(:unit)
+    create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:script_level, script: unit, levels: [quiz])
+
+    assert quiz.used_in_published_unit?
+  end
+
   test "purpose must be one of the known values" do
     quiz = create(:quiz)
     Quiz::PURPOSES.each do |purpose|

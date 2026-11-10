@@ -39,11 +39,14 @@
   background: var(--background-neutral-primary);
   color: var(--text-neutral-disabled);
   font-size: 22px;
-  cursor: pointer;
   transition:
     transform 200ms,
     box-shadow 200ms,
     background 200ms;
+}
+
+button.circle {
+  cursor: pointer;
 
   &:hover,
   &:focus-visible {
@@ -59,6 +62,9 @@
 .available .circle {
   border-color: var(--background-brand-purple-primary);
   color: var(--text-brand-purple-primary);
+}
+
+.available:not(.focused) button.circle {
   animation: pulse 1.8s ease-out infinite;
 }
 
@@ -82,7 +88,6 @@
 
 .focused .circle {
   box-shadow: 0 0 0 10px var(--background-brand-purple-light);
-  animation: none;
 }
 
 // The lock, in a corner of a circle that shows its skill's icon instead.

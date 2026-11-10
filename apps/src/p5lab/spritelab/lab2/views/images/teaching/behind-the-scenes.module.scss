@@ -5,6 +5,7 @@
 
 // The thumbnail beside the intro, then the switch, then the words.
 .body {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   gap: 12px;

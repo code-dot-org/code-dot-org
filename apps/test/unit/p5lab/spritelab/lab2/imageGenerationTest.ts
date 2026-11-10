@@ -123,7 +123,7 @@ describe('generateImage', () => {
     expect(checkImageSafety).not.toHaveBeenCalled();
     expect(cached.raw).toHaveBeenCalledWith('single');
     expect(Array.from(result.uint8Array)).toEqual([5, 6]);
-    expect(result.generation).toMatchObject({prompt: 'a beach'});
+    expect(result.generation).toMatchObject({prompt: 'a beach', variant: 1});
     expect(result.generation.seed).toBeUndefined();
     expect(result.generation.temperature).toBeUndefined();
   });

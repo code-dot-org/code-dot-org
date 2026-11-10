@@ -1,0 +1,35 @@
+.tabBar {
+  flex: none;
+  // Full-width bottom border; DSCO's ul::after only spans the ul width.
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+  padding-inline: 16px;
+
+  // &.tabBar repeats the class to give our nested selectors one extra
+  // class-level unit of specificity, outranking DSCO's compound selectors
+  // without !important.
+  &.tabBar {
+    .tabsContainer {
+      ul {
+        gap: 0;
+      }
+
+      ul li button[role='tab'] {
+        color: var(--text-neutral-secondary);
+        // Enough vertical padding to reach ~44px total tab height.
+        padding-block: 10px;
+        padding-inline: 14px;
+
+        &:hover:not([aria-selected='true']) {
+          color: var(--text-neutral-primary);
+          border-bottom: none;
+        }
+
+        &[aria-selected='true'] {
+          color: var(--text-neutral-secondary);
+          border-bottom-color: var(--border-brand-primary);
+        }
+      }
+    }
+  }
+}

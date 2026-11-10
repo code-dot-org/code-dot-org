@@ -1,15 +1,24 @@
-import {useCallback, useEffect, useRef, useState} from 'react';
+import {
+  MutableRefObject,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {QuizQuestionType} from '../types';
+import {groupByPage} from '../utils';
 
 import {newMatchPair} from './matchPairs';
 import {
   isPendingQuestionId,
+  QuizBuilderPage,
   QuizBuilderQuestion,
   QuizBuilderQuestionsState,
+  QuizPlacement,
   QuizQuestionPayload,
 } from './types';
 
@@ -23,14 +32,60 @@ const NEW_CHOICES = [
   {id: '1', text: 'Option B'},
 ];
 
-// A hook for managing a quiz's questions.
-// Provides the current state of the quiz's questions, including loading and error states.
-// Also returns functions to add new questions, and save and remove existing ones.
+const JSON_HEADERS = {'Content-Type': 'application/json'};
+
+// Each page's question ids, in order; page numbers are positions in the list.
+// Unlike placements, it holds empty pages and edits need no renumbering.
+type PageLayout = number[][];
+
+// The endpoints also return a question's page. Only load reads it; after
+// that the layout says which page a question is on.
+type ServerQuestion = QuizBuilderQuestion & {page: number | null};
+
+function withoutPage({page, ...question}: ServerQuestion): QuizBuilderQuestion {
+  return question;
+}
+
+function placementsFromLayout(layout: PageLayout): QuizPlacement[] {
+  return layout
+    .filter(questionIds => questionIds.length > 0)
+    .flatMap((questionIds, pageIndex) =>
+      questionIds.map((quizQuestionId, positionIndex) => ({
+        quizQuestionId,
+        page: pageIndex + 1,
+        position: positionIndex + 1,
+      }))
+    );
+}
+
+// Records a version the server returned. Overlapping saves can resolve out of
+// order, and versions only grow, so it never moves backward.
+export function advanceQuizVersion(
+  quizVersion: MutableRefObject<number | null>,
+  version: number
+) {
+  quizVersion.current = Math.max(quizVersion.current ?? 0, version);
+}
+
+// Manages a quiz's questions and its layout (which questions it has, on
+// which pages, in what order). Question content saves on its own; the layout,
+// including removals and deletions, is local until saveQuiz.
 export default function useQuizBuilderQuestions(
-  levelId: number
+  levelId: number,
+  // The quiz's saved version, shared with the configuration saves that also
+  // advance it.
+  quizVersion: MutableRefObject<number | null>
 ): QuizBuilderQuestionsState {
-  const [questions, setQuestions] = useState<QuizBuilderQuestion[]>([]);
+  const [questionsById, setQuestionsById] = useState<
+    Record<number, QuizBuilderQuestion>
+  >({});
+  const [layout, setLayout] = useState<PageLayout>([]);
+  // The layout as last loaded or saved, to tell whether it has changed.
+  const [savedPlacements, setSavedPlacements] = useState<QuizPlacement[]>([]);
+  // Removed questions to delete permanently on save, if nothing else uses them.
+  const [deleteQuestionIds, setDeleteQuestionIds] = useState<number[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isSavingQuiz, setIsSavingQuiz] = useState(false);
   const [error, setError] = useState<string | null>(null);
   // Ids handed to locally-created, not-yet-saved questions - see
   // isPendingQuestionId. Decrementing keeps them distinct from each other
@@ -49,17 +104,43 @@ export default function useQuizBuilderQuestions(
         `/levels/${levelId}/quiz_configuration`
       );
       const body = await response.json();
-      setQuestions(body.questions ?? []);
+      const loaded: ServerQuestion[] = body.questions ?? [];
+      if (typeof body.version === 'number') {
+        advanceQuizVersion(quizVersion, body.version);
+      }
+      const loadedLayout = groupByPage(loaded).map(({questions}) =>
+        questions.map(q => q.id)
+      );
+      setQuestionsById(
+        Object.fromEntries(loaded.map(q => [q.id, withoutPage(q)]))
+      );
+      setLayout(loadedLayout);
+      setSavedPlacements(placementsFromLayout(loadedLayout));
+      setDeleteQuestionIds([]);
     } catch (e) {
       setError(await networkErrorMessage(e));
     } finally {
       setIsLoading(false);
     }
-  }, [levelId]);
+  }, [levelId, quizVersion]);
 
   useEffect(() => {
     load();
   }, [load]);
+
+  const pages: QuizBuilderPage[] = layout.map((questionIds, index) => ({
+    page: index + 1,
+    // The same objects as in questionsById: a card resets its draft when its
+    // question object changes.
+    questions: questionIds.map(id => questionsById[id]),
+  }));
+  const questions = pages.flatMap(page => page.questions);
+  const hasUnsavedLayout =
+    deleteQuestionIds.length > 0 ||
+    JSON.stringify(placementsFromLayout(layout)) !==
+      JSON.stringify(savedPlacements);
+
+  const addPage = useCallback(() => setLayout(prev => [...prev, []]), []);
 
   const addPendingQuestion = useCallback(
     (page: number, type: QuizQuestionType) => {
@@ -71,8 +152,8 @@ export default function useQuizBuilderQuestions(
         explanation: null,
         standards: [],
         attachedToOtherQuizzes: false,
+        deletable: true,
         usedInPublishedUnit: false,
-        page,
       };
       let question: QuizBuilderQuestion;
       switch (type) {
@@ -108,7 +189,16 @@ export default function useQuizBuilderQuestions(
           };
           break;
       }
-      setQuestions(prev => [...prev, question]);
+      setQuestionsById(prev => ({...prev, [id]: question}));
+      setLayout(prev => {
+        const next = prev.map(questionIds => [...questionIds]);
+        // An empty quiz has no pages until its first question.
+        if (next.length === 0) {
+          next.push([]);
+        }
+        next[page - 1].push(id);
+        return next;
+      });
       return id;
     },
     []
@@ -118,30 +208,56 @@ export default function useQuizBuilderQuestions(
   // passed in: a pending question (see isPendingQuestionId) is created
   // server-side on its first save, and QuizQuestionsController#update
   // forks a question that's used in a published unit, or whose type
-  // changed, rather than editing it in place.
+  // changed, rather than editing it in place. Either way the new id takes
+  // the old one's place in the layout, for saveQuiz to place.
   const saveQuestion = useCallback(
     async (id: number, payload: QuizQuestionPayload) => {
       setError(null);
       setErrorQuestionId(null);
       try {
-        const question = questions.find(q => q.id === id);
         const response = isPendingQuestionId(id)
           ? await HttpClient.post(
-              `/levels/${levelId}/quiz_question_placements`,
-              JSON.stringify({...payload, page: question?.page ?? 1}),
-              true,
-              {'Content-Type': 'application/json'}
-            )
-          : await HttpClient.put(
-              `/quiz_questions/${id}?quizLevelId=${levelId}`,
+              '/quiz_questions',
               JSON.stringify(payload),
               true,
-              {'Content-Type': 'application/json'}
+              JSON_HEADERS
+            )
+          : await HttpClient.put(
+              `/quiz_questions/${id}`,
+              JSON.stringify(payload),
+              true,
+              JSON_HEADERS
             );
-        const saved: QuizBuilderQuestion = await response.json();
-        setQuestions(prev =>
-          prev.map(question => (question.id === id ? saved : question))
+        const saved = withoutPage(await response.json());
+        const previous = questionsById[id];
+        const isFork = !isPendingQuestionId(id) && saved.id !== id;
+        setQuestionsById(prev => {
+          const rest = {...prev};
+          delete rest[id];
+          return {
+            ...rest,
+            [saved.id]: isFork
+              ? saved
+              : {
+                  ...saved,
+                  // PUT /quiz_questions/:id counts this quiz in both fields
+                  // below; keep the load's values, which leave it out.
+                  attachedToOtherQuizzes: previous.attachedToOtherQuizzes,
+                  deletable: previous.deletable,
+                },
+          };
+        });
+        setLayout(prev =>
+          prev.map(questionIds =>
+            questionIds.map(qid => (qid === id ? saved.id : qid))
+          )
         );
+        // A type change replaces a placed question, so the original is deleted
+        // on Save quiz unless something else uses it.
+        const wasPlaced = savedPlacements.some(p => p.quizQuestionId === id);
+        if (isFork && wasPlaced && saved.type !== previous.type) {
+          setDeleteQuestionIds(prev => [...prev, id]);
+        }
         return saved.id;
       } catch (e) {
         setError(await networkErrorMessage(e));
@@ -149,45 +265,89 @@ export default function useQuizBuilderQuestions(
         return undefined;
       }
     },
-    [levelId, questions]
+    [questionsById, savedPlacements]
   );
 
-  // A pending question only exists locally, so removing one is just a
-  // local drop. Otherwise, detaches the question from this quiz - the
-  // endpoint itself decides whether to also hard-delete it, which it
-  // leaves alone if something else still references it.
+  // Local until saveQuiz. permanently marks a saved question for deletion
+  // instead of only removing it from the quiz (it stays in the question bank).
   const removeQuestion = useCallback(
-    async (id: number) => {
-      if (isPendingQuestionId(id)) {
-        setQuestions(prev => prev.filter(question => question.id !== id));
-        return true;
+    async (id: number, {permanently}: {permanently: boolean}) => {
+      setLayout(prev =>
+        prev.map(questionIds => questionIds.filter(qid => qid !== id))
+      );
+      setQuestionsById(prev => {
+        const rest = {...prev};
+        delete rest[id];
+        return rest;
+      });
+      if (permanently && !isPendingQuestionId(id)) {
+        setDeleteQuestionIds(prev => [...prev, id]);
       }
-      setError(null);
-      setErrorQuestionId(null);
-      try {
-        await HttpClient.delete(
-          `/levels/${levelId}/quiz_question_placements/${id}`,
-          true
-        );
-        setQuestions(prev => prev.filter(question => question.id !== id));
-        return true;
-      } catch (e) {
-        setError(await networkErrorMessage(e));
-        setErrorQuestionId(id);
-        return false;
-      }
+      return true;
     },
-    [levelId]
+    []
   );
+
+  const saveQuiz = useCallback(async () => {
+    if (layout.some(questionIds => questionIds.some(isPendingQuestionId))) {
+      setError('Save every question before saving the quiz.');
+      setErrorQuestionId(null);
+      return false;
+    }
+    setError(null);
+    setErrorQuestionId(null);
+    setIsSavingQuiz(true);
+    const placements = placementsFromLayout(layout);
+    // What this save sends. Edits made while it's in flight, including
+    // questions marked for deletion, stay unsaved for the next save.
+    const sentLayout = layout;
+    const sentDeleteQuestionIds = deleteQuestionIds;
+    try {
+      const response = await HttpClient.put(
+        `/levels/${levelId}/quiz_configuration`,
+        JSON.stringify({
+          version: quizVersion.current,
+          placements,
+          deleteQuestionIds: sentDeleteQuestionIds,
+        }),
+        true,
+        JSON_HEADERS
+      );
+      const body = await response.json();
+      advanceQuizVersion(quizVersion, body.version);
+      // Drops the empty pages that weren't saved, unless the layout changed
+      // during the save; those edits stay unsaved.
+      setLayout(prev =>
+        prev === sentLayout
+          ? prev.filter(questionIds => questionIds.length > 0)
+          : prev
+      );
+      setSavedPlacements(placements);
+      setDeleteQuestionIds(prev =>
+        prev.filter(id => !sentDeleteQuestionIds.includes(id))
+      );
+      return true;
+    } catch (e) {
+      setError(await networkErrorMessage(e));
+      return false;
+    } finally {
+      setIsSavingQuiz(false);
+    }
+  }, [levelId, quizVersion, layout, deleteQuestionIds]);
 
   return {
     questions,
+    pages,
     isLoading,
+    isSavingQuiz,
     error,
     errorQuestionId,
+    hasUnsavedLayout,
+    addPage,
     addPendingQuestion,
     saveQuestion,
     removeQuestion,
+    saveQuiz,
     load,
   };
 }

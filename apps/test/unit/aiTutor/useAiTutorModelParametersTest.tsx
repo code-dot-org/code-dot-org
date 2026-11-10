@@ -15,7 +15,9 @@ jest.mock('@cdo/apps/lab2/ai/ai-should-show-copy-code', () => ({
 }));
 
 jest.mock('@cdo/apps/lab2/ai/ai-tutor-model-id', () => ({
-  aiTutorModelId: 'mock-model-id',
+  defaultAiTutorModelId: 'mock-model-id',
+  aiTutorModelParametersFor: (level?: {selectedModelId: string}) =>
+    level ?? {selectedModelId: 'mock-model-id'},
 }));
 
 describe('useAiTutorModelParameters', () => {
@@ -48,6 +50,22 @@ describe('useAiTutorModelParameters', () => {
     );
     expect(result.current.modelParameters).toEqual({
       ...baseModelParameters,
+      systemPrompt: baseModelParameters.systemPrompt,
+    });
+  });
+
+  it("takes the level's model", async () => {
+    const {result} = renderHook(() =>
+      useAiTutorModelParameters({
+        aiTutorModelParameters: {
+          selectedModelId: 'gemini-3.5-flash-lite',
+        },
+      })
+    );
+
+    expect(result.current.modelParameters).toEqual({
+      ...baseModelParameters,
+      selectedModelId: 'gemini-3.5-flash-lite',
       systemPrompt: baseModelParameters.systemPrompt,
     });
   });

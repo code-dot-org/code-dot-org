@@ -1,8 +1,6 @@
 import {parse} from 'acorn';
 
-import makePlatformPlayer, {
-  JUMP_SPEED,
-} from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/makePlatformPlayer';
+import makePlatformPlayer from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/makePlatformPlayer';
 import setAsPlatformPlayer2 from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/setAsPlatformPlayer2';
 import thePlayer2 from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/thePlayer2';
 import {
@@ -33,7 +31,8 @@ describe('set as player 2', () => {
       expect(code).toContain(`keyPressed('while', '${key}'`);
     }
     expect(code).toContain(`keyPressed('when', 'w'`);
-    expect(code).toContain(`platformJump(${JUMP_SPEED}, "${PLAYER_2_GROUP}")`);
+    // The engine picks the speed from the jump height.
+    expect(code).toContain(`platformJump(undefined, "${PLAYER_2_GROUP}")`);
     // Nothing of the arrow-key player's.
     expect(code).not.toContain("'left'");
     expect(code).not.toContain(JSON.stringify(PLAYER_GROUP));
@@ -46,7 +45,7 @@ describe('set as player 2', () => {
       expect(code).toContain(`keyPressed('while', '${key}'`);
     }
     expect(code).toContain(`keyPressed('when', 'space'`);
-    expect(code).toContain(`platformJump(${JUMP_SPEED}, "${PLAYER_GROUP}")`);
+    expect(code).toContain(`platformJump(undefined, "${PLAYER_GROUP}")`);
     expect(code).not.toContain(JSON.stringify(PLAYER_2_GROUP));
   });
 

@@ -1,9 +1,10 @@
-// How the picture came to be, told once over a few panels after a student's
-// first picture on a level that asks: nothing closes it but reading to the
-// end. The copy differs for a character and for a background.
+// How the picture came to be, told over a few panels after a student's
+// first picture on a level that asks: nothing closes that telling but
+// reading to the end. A telling the student asked for closes like any
+// dialog. The copy differs for a character and for a background.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
@@ -27,6 +28,8 @@ interface LearningDialogProps {
   /** What the picture is of: a background gets its own telling. */
   imageType: ImageType;
   onDone: () => void;
+  /** Closes the story unread; without it, only Got it ends it. */
+  onClose?: () => void;
 }
 
 const TITLE = 'How AI made your image';
@@ -242,15 +245,17 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
   prompt,
   imageType,
   onDone,
+  onClose,
 }) => {
   const [index, setIndex] = useState(0);
   const panels = panelsFor(imageType);
   const onLastPanel = index === panels.length - 1;
   const panel = panels[index];
   return (
-    <MuiDialog
+    <Modal
       title={TITLE}
       className={styles.dialog}
+      onClose={onClose}
       customContent={
         <>
           <span id="dsco-dialog-description" className={styles.srOnly}>
@@ -260,7 +265,7 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
           <div key={index} className={styles.panel}>
             <div className={styles.visual}>{panel.visual(picture, prompt)}</div>
             <MuiTypography
-              component="h3"
+              component="h4"
               variant="h4"
               className={styles.heading}
             >
