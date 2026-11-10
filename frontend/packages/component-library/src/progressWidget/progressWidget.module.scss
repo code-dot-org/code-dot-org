@@ -82,8 +82,7 @@ $narrow: 991.98px;
   }
 
   // Its own rule: a browser without :has() drops the whole selector list.
-  &:has(+ .action:empty),
-  &:has(+ .action > :is(div, span):only-child:empty) {
+  &:has(+ .action:empty) {
     @include end-corners;
   }
 
@@ -110,13 +109,8 @@ $narrow: 991.98px;
   padding-block: 0;
   padding-inline: 3px;
 
-  // An action component may render nothing.
+  // An action component may render nothing, and a portal slot starts empty.
   &:empty {
-    display: none;
-  }
-
-  // Nor does an empty portal target take room; its own rule, as above.
-  &:has(> :is(div, span):only-child:empty) {
     display: none;
   }
 }

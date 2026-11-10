@@ -127,12 +127,12 @@ export const PlainTitle: Story = {
     saveStatus: 'saved',
     saveStatusLabel: 'Saved just now',
     children: lessonBubbles,
-    action: <div data-testid="portal-target" />,
+    actionSlotId: 'portal-target',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     expect(canvas.queryByRole('button', {name: /Quest Builder/})).toBeNull();
-    const slot = canvas.getByTestId('portal-target').parentElement!;
+    const slot = canvasElement.querySelector('#portal-target') as HTMLElement;
     expect(getComputedStyle(slot).display).toBe('none');
   },
 };

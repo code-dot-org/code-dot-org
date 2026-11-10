@@ -20,8 +20,9 @@ Rules for callers:
   mark one; in browsers with `:has()`, a row with none shows them all.
 - Without `onLessonClick` the lesson name is plain text, for units walked in
   order with no lesson menu.
-- `action` may be an empty `div` or `span` that a portal fills later (a lab
-  in another React root); the slot stays hidden until it has content.
+- For an action drawn in another React root, pass `actionSlotId` instead of
+  `action` and portal into the element with that id; the slot stays hidden
+  while it is empty.
 - `ariaLabel` must carry what the color and star show, e.g. "Level 4,
   assessment, completed": they are not announced.
 - A disabled (locked) bubble keeps the role its `href` or `onClick` gives

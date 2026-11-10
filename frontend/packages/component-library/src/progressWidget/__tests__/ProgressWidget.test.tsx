@@ -1,5 +1,6 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import {createPortal} from 'react-dom';
 
 import ProgressWidget, {ProgressBubble, ProgressWidgetProps} from '../';
 
@@ -110,9 +111,14 @@ describe('ProgressWidget', () => {
     expect(screen.getByRole('button', {name: 'Continue'})).toBeInTheDocument();
   });
 
-  it('renders an empty portal target as the action', () => {
-    renderWidget({action: <div id="header-action" />});
-    expect(document.getElementById('header-action')).toBeInTheDocument();
+  it('leaves an empty slot that a portal fills', () => {
+    renderWidget({actionSlotId: 'header-action'});
+    const slot = document.getElementById('header-action') as HTMLElement;
+    expect(slot).toBeEmptyDOMElement();
+    render(<>{createPortal(<button>I'm finished</button>, slot)}</>);
+    expect(
+      within(slot).getByRole('button', {name: "I'm finished"}),
+    ).toBeInTheDocument();
   });
 
   it('draws nothing for a falsy action', () => {

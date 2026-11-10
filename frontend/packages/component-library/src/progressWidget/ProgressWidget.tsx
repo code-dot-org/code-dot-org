@@ -32,6 +32,18 @@ export type ProgressWidgetLessonProps =
     }
   | {onLessonClick?: undefined; lessonMenuExpanded?: undefined};
 
+export type ProgressWidgetActionProps =
+  | {
+      /** The Continue button. */
+      action?: ReactNode;
+      actionSlotId?: undefined;
+    }
+  | {
+      action?: undefined;
+      /** Id of an empty slot that a portal from another React root fills; hidden while empty. */
+      actionSlotId: string;
+    };
+
 export type ProgressWidgetProps = {
   /** Lesson name, e.g. "Lesson 3: Online Puzzles". */
   lessonLabel: string;
@@ -39,10 +51,9 @@ export type ProgressWidgetProps = {
   bubblesLabel: string;
   /** Bubbles as direct children; below 992px only the aria-current one shows. */
   children: ReactNode;
-  /** The Continue button, or an empty div or span for a portal to fill. */
-  action?: ReactNode;
   className?: string;
 } & ProgressWidgetLessonProps &
+  ProgressWidgetActionProps &
   ProgressWidgetSaveProps;
 
 const saveIconName: Record<
@@ -82,6 +93,7 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
   saveStatusLabel,
   children,
   action,
+  actionSlotId,
   className,
 }) => (
   <div className={classNames(moduleStyles.widget, className)}>
@@ -139,7 +151,11 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
     >
       {children}
     </div>
-    {action ? <div className={moduleStyles.action}>{action}</div> : null}
+    {actionSlotId ? (
+      <div id={actionSlotId} className={moduleStyles.action} />
+    ) : action ? (
+      <div className={moduleStyles.action}>{action}</div>
+    ) : null}
   </div>
 );
 
