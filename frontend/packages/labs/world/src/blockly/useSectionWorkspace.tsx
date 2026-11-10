@@ -32,6 +32,7 @@ import {
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {clearAddButtons, drawAddButtons} from './addSectionButtons';
+import {onBlockResized} from './blockResized';
 import {syncBodyToggles} from './bodyToggle';
 import {eventChoicesIn, type EventChoice} from './eventChoices';
 import {
@@ -591,6 +592,7 @@ export function useSectionWorkspace({
   const onInject = useCallback(
     (workspace: Blockly.WorkspaceSvg) => {
       bindUnbuiltBodies(workspace, bodies);
+      onBlockResized(workspace, () => reflow(workspace));
       const undo = workspace.undo.bind(workspace);
       workspace.undo = (redo?: boolean) => {
         const stack = redo
@@ -613,7 +615,7 @@ export function useSectionWorkspace({
         undo(redo);
       };
     },
-    [bodies, rememberCollapsed],
+    [bodies, rememberCollapsed, reflow],
   );
 
   /**

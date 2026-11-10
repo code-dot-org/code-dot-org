@@ -232,6 +232,13 @@ on a body surface, which is not a list of sections.
   showed its headers with no way to open them until a tab switch reloaded it
   with the fonts already there (reported from the browser). Both reloads now
   run the layout, which puts the controls back.
+- **A hat's `+` makes room.** The layout runs after an edit, and opening or
+  shutting a hat's mini toolbox is not one: it adds a row and fires no event,
+  so the flyout was drawn over the hat below (reported from the browser). The
+  hat's extension wraps the toggle to say the block resized
+  (`blockResized`), and the editor lays out again. Seen in the browser: the
+  hats below Flappy's `starts touching` move down 57px as it opens and back
+  as it shuts.
 
 ## Not built, and known
 

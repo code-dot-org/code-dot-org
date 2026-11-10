@@ -32,6 +32,7 @@ import {
   type MiniToolboxBlock,
 } from '@code-dot-org/blockly/fields/miniToolbox';
 
+import {blockResized} from '../blockResized';
 import {SUBJECT_FIELD} from '../eventSubject';
 import {localFieldName} from '../fields/eventLocal';
 
@@ -121,6 +122,18 @@ export const eventHatToolboxExtension: Extension = defineExtension(
         // An extension may not add the hooks that would save it open.
         remembersOpen: false,
       });
+      // The toggle's handler is private to the button; wrapped so the layout
+      // hears that the hat grew or shrank (`blockResized`).
+      const toggle = this.getField?.(
+        'MINI_TOOLBOX_FLYOUT_TOGGLE',
+      ) as unknown as {onClick?: () => void} | null;
+      const press = toggle?.onClick;
+      if (toggle && press) {
+        toggle.onClick = () => {
+          press();
+          blockResized(this);
+        };
+      }
       // The list the flyout reads, rewritten in place: a subject set from
       // this actor to a kind turns `this actor` into `subject actor`.
       addOnChange(this, () => {
