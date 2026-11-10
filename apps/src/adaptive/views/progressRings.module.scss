@@ -58,3 +58,18 @@
   background: var(--destination-color);
   color: var(--text-neutral-white-fixed);
 }
+
+.large {
+  gap: 12px;
+
+  .ring {
+    width: 60px;
+    height: 60px;
+  }
+
+  .inner {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+}
