@@ -15,8 +15,8 @@ the caller maps its own level data onto `levelType` and `status`.
 Rules for callers:
 
 - Pass the bubbles as direct children of `ProgressWidget`. Below 992px the
-  widget shows only the bubble marked `aria-current` (set by `isActive`); if
-  none is, it shows them all.
+  widget shows only the bubble marked `aria-current` (set by `isActive`), so
+  mark one; in browsers with `:has()`, a row with none shows them all.
 - `ariaLabel` must carry what the color and star show, e.g. "Level 4,
   assessment, completed": they are not announced.
 - A disabled (locked) bubble keeps the role its `href` or `onClick` gives
