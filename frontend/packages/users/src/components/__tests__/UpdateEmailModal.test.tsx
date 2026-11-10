@@ -10,12 +10,21 @@ import {MALFORMED_EMAIL, WRONG_PASSWORD} from '../../fixtures/errorBodies';
 import {GENERIC_ERROR} from '../modalErrors';
 import UpdateEmailModal from '../UpdateEmailModal';
 
-function renderModal(onClose = vi.fn(), isTeacher = false) {
+function renderModal(
+  onClose = vi.fn(),
+  isTeacher = false,
+  requiresPassword = true,
+) {
   const client = createQueryClient({queries: {retry: false}});
   render(
     <QueryClientProvider client={client}>
       <ToastProvider politeness="polite">
-        <UpdateEmailModal open onClose={onClose} isTeacher={isTeacher} />
+        <UpdateEmailModal
+          open
+          onClose={onClose}
+          isTeacher={isTeacher}
+          requiresPassword={requiresPassword}
+        />
       </ToastProvider>
     </QueryClientProvider>,
   );
@@ -34,6 +43,12 @@ describe('UpdateEmailModal', () => {
     renderModal();
     expect(newEmailField()).toBeInTheDocument();
     expect(currentPasswordField()).toBeInTheDocument();
+  });
+
+  it('omits the current-password field when the account has no password', () => {
+    renderModal(vi.fn(), false, false);
+    expect(newEmailField()).toBeInTheDocument();
+    expect(screen.queryByLabelText('Current password')).toBeNull();
   });
 
   it('submits the hashed email and current password, then toasts and closes', async () => {
