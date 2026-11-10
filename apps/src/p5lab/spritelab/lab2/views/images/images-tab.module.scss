@@ -98,12 +98,26 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   .list {
     width: $tile-px;
   }
+
+  // One tile wide, the name may take two lines and the plus goes under it.
+  .listHeader {
+    flex-wrap: wrap;
+  }
+
+  .listTitle {
+    flex-basis: 100%;
+  }
+
+  // Outranks the nowrap below.
+  .listTitle .listName {
+    white-space: normal;
+  }
 }
 
-// The plus never wraps under the name: a narrow column truncates the
-// name and count instead.
+// The plus sits beside the name, which truncates before it would wrap.
 .listHeader {
   display: flex;
+  flex: none;
   align-items: center;
   gap: 4px;
   min-height: 36px;
