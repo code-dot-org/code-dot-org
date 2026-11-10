@@ -886,6 +886,28 @@ class LevelsControllerTest < ActionController::TestCase
     assert_match /JSON::ParserError/, JSON.parse(@response.body)['code_functions'].first
   end
 
+  test "update parses level_mode into a hash" do
+    level = create(:spritelab)
+    patch :update, params: {
+      id: level,
+      level: {level_mode: {kind: 'world', imageType: 'sprite'}.to_json}
+    }
+    assert_response :success
+
+    level.reload
+    assert_equal({'kind' => 'world', 'imageType' => 'sprite'}, level.level_mode)
+  end
+
+  test "update removes level_mode when it is empty" do
+    level = create(:spritelab, level_mode: {'kind' => 'world'})
+    patch :update, params: {id: level, level: {level_mode: '{}'}}
+    assert_response :success
+
+    level.reload
+    assert_nil level.level_mode
+    refute level.properties.key?('level_mode')
+  end
+
   test "update_start_code encrypts validation" do
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
     level = create(:javalab)

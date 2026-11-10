@@ -109,7 +109,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     end
   end
 
-  test 'the Sprite Lab ask AI block mints a token only for a levelbuilder' do
+  test 'the Sprite Lab ask AI block mints a token only in the pilot' do
     ask_ai_params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI],
@@ -123,7 +123,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     OpenSSL::PKey::RSA.stubs(:new).returns(OpenSSL::PKey::RSA.generate(2048))
     JWT.stubs(:encode).returns('fake.jwt.token')
 
-    # A teacher who would otherwise be allowed is refused without the permission.
+    # A teacher who would otherwise be allowed is refused outside the pilot.
     sign_in(@authorized_teacher)
     post :get_access_token, params: ask_ai_params, as: :json
     assert_response :forbidden

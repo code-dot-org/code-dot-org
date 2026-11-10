@@ -27,7 +27,8 @@
       "imageType": "background",
       "imageRole": "platform-background",
       "imageFirst": true,
-      "learning": true
+      "learning": true,
+      "oneImage": true
     },
     "pinned_scene": {
       "id": "scene-1",

@@ -3,11 +3,11 @@
 // ring is a button that does nothing but take focus, so a keyboard reaches
 // its tooltip and a screen reader reads its label.
 
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import PathwayIcon from './components/PathwayIcon';
 import {GroupProgress} from './map/groupProgress';
 
 import styles from './progressRings.module.scss';
@@ -38,7 +38,7 @@ const ProgressRings: React.FunctionComponent<ProgressRingsProps> = ({
               aria-label={label}
             >
               <span className={styles.inner}>
-                {icon && <FontAwesomeV6Icon iconName={icon} />}
+                {icon && <PathwayIcon iconName={icon} />}
               </span>
             </button>
           </Tooltip>

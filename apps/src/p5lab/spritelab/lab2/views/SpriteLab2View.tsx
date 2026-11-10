@@ -13,7 +13,7 @@ import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {PERMISSIONS, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
@@ -34,7 +34,6 @@ import {useLevelProperties} from '@cdo/apps/lab2/views/LevelPropertiesWrapper';
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
 import {
   revokeObjectUrlImages,
-  SET_INITIAL_ANIMATION_LIST,
   setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {cancelLocationSelection} from '@cdo/apps/p5lab/redux/locationPicker';
@@ -44,7 +43,10 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  SpritelabAskAiRefusals,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks, ownsTop} from '../addBlocks';
 import {ImageSource, isImageSource} from '../ai/images/imageCache';
@@ -60,17 +62,14 @@ import {
   newBlockTypes,
 } from '../blockCatalog';
 import {ownToolboxTypes} from '../blockLocks';
-import {ASK_AI_BLOCK_TYPE} from '../blockly/blockDefinitions/askAi';
-import {ASK_AI_WITH_CHOICES_BLOCK_TYPE} from '../blockly/blockDefinitions/askAiWithChoices';
 import {
   refreshSceneDropdowns,
   setSceneMenuActiveId,
   withSceneMenuActive,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
-import {SET_SYSTEM_PROMPT_BLOCK_TYPE} from '../blockly/blockDefinitions/setSystemPrompt';
-import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
@@ -91,6 +90,7 @@ import {
   GENERATION_LIMIT,
   imageSourceForMode,
   isFreeplayMode,
+  isOneImageMode,
   tabsForMode,
 } from '../levelMode';
 import {
@@ -115,32 +115,17 @@ import reseedablePageConstants, {
 } from '../redux/reseedablePageConstants';
 import spriteLab2Reducer, {
   clearAskAi,
-  ExternalSceneOption,
   MusicProjectOption,
   resetSpriteLab2,
   setActiveTab,
-  setExternalScenes,
   setMusicProjects,
   setScenes,
   Tab,
 } from '../redux/spriteLab2Redux';
-import {
-  collectSavedExternalKeys,
-  ExternalProject,
-  fetchExternalProject,
-  fetchSectionScenes,
-  parseExternalSceneKey,
-  toExternalSceneOptions,
-} from '../scenesApi';
 import {sceneMetadataFor} from '../sceneThumbnails';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {clearRoom} from '../stackRoom';
-import {
-  RuntimeAnimationList,
-  SpriteLab2LevelProperties,
-  Scene,
-  Sources,
-} from '../types';
+import {SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
   DEFAULT_SCENE_GRID_SIZE,
@@ -159,7 +144,7 @@ import Callout from './components/Callout';
 import EditorStrip, {EditHistory} from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
-import PlayBar from './components/PlayBar';
+import RunButtons, {ArrowCross} from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
 import {sceneDropdownButtonId} from './components/SceneDropdown';
@@ -224,12 +209,6 @@ function getImageCacheUrlParam(): string | undefined {
   }
   return value.endsWith('/') ? value : `${value}/`;
 }
-
-const AI_BLOCK_TYPES = [
-  ASK_AI_BLOCK_TYPE,
-  ASK_AI_WITH_CHOICES_BLOCK_TYPE,
-  SET_SYSTEM_PROMPT_BLOCK_TYPE,
-];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_PANE_WIDTH = 280;
@@ -484,16 +463,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => heldBackBlockTypes(catalog, chosenBlocks),
     [catalog, chosenBlocks]
   );
-  const isLevelbuilder = useAppSelector(state =>
-    state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
-  );
-  // Everything the toolbox leaves out.
-  const hiddenBlockTypes = useMemo(
-    () =>
-      isLevelbuilder
-        ? heldBackBlocks
-        : new Set([...heldBackBlocks, ...AI_BLOCK_TYPES]),
-    [heldBackBlocks, isLevelbuilder]
+  const inAiPilot = useAppSelector(
+    state =>
+      state.currentUser.spritelabAskAiRefusal !==
+      SpritelabAskAiRefusals.NOT_IN_PILOT
   );
   const [showBlockCatalog, setShowBlockCatalog] = useState(false);
   // Dismissing the catalog, not opening it, is what counts as seen: an
@@ -639,7 +612,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       );
     }
   }, [activeTab, enabledTabs, dispatch]);
-  const sceneToolbox = levelProperties.toolboxDefinition;
+  const authoredToolbox = levelProperties.toolboxDefinition;
+  const sceneToolbox = useMemo(
+    () =>
+      authoredToolbox && !inAiPilot
+        ? withoutAiBlocks(authoredToolbox)
+        : authoredToolbox,
+    [authoredToolbox, inAiPilot]
+  );
   // Blockly fixes a workspace's toolbox kind at injection, so reaching a
   // toolbox of the other kind takes a new workspace. Same-kind changes swap
   // in place instead, below.
@@ -703,6 +683,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: animationsSeeded,
     animations: animationList,
     spriteRole: defaultRole(levelProperties.imageRoleDefaults, 'sprite'),
+    roles: levelProperties.worldStartRoles,
     updateSources,
   });
   // The extra scene's premade world, painted by the same rules.
@@ -712,6 +693,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: animationsSeeded,
     animations: animationList,
     spriteRole: defaultRole(levelProperties.imageRoleDefaults, 'sprite'),
+    roles: extraScene?.worldStartRoles,
     updateSources,
   });
 
@@ -1028,12 +1010,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     seededLevelRef.current = levelProperties.id;
     let canceled = false;
     seedAnimationList(initialSources.animations);
-    // Workspace injection only waits on a fetched list (section scenes, the
-    // user's songs) when saved blocks hold values from it; the gated path
-    // times out into placeholder options so a hung API can't blank the lab.
-    const savedExternalKeys = collectSavedExternalKeys(
-      getScenes(initialSources)
-    );
+    // Workspace injection only waits on the user's songs when saved blocks
+    // hold one; the gated path times out into placeholder options so a hung
+    // API can't blank the lab.
     const savedSongs = collectSavedSongs(getScenes(initialSources));
     const withTimeout = <T,>(fetching: Promise<T>): Promise<T> =>
       Promise.race([
@@ -1042,18 +1021,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           setTimeout(() => reject(new Error('timeout')), LIST_FETCH_TIMEOUT_MS)
         ),
       ]);
-    const externalOptions = async (
-      timed: boolean
-    ): Promise<ExternalSceneOption[]> => {
-      try {
-        const fetching = fetchSectionScenes(levelProperties.id, scriptId);
-        const refs = await (timed ? withTimeout(fetching) : fetching);
-        return toExternalSceneOptions(refs);
-      } catch (e) {
-        console.warn('section scenes unavailable', e);
-        return [];
-      }
-    };
     const musicOptions = async (): Promise<MusicProjectOption[]> => {
       try {
         return await withTimeout(fetchMusicProjects());
@@ -1062,36 +1029,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         return [];
       }
     };
-    if (savedExternalKeys.length === 0 && savedSongs.length === 0) {
+    if (savedSongs.length === 0) {
       setAnimationsSeeded(true);
-      // Nothing waits on this list, so a slow response is simply used
-      // whenever it lands instead of being discarded at the timeout.
-      externalOptions(false).then(options => {
-        if (!canceled) {
-          dispatch(setExternalScenes(options));
-        }
-      });
     } else {
       musicSeededRef.current = true;
-      Promise.all([externalOptions(true), musicOptions()]).then(
-        ([external, music]) => {
-          if (canceled) {
-            return;
-          }
-          const known = new Set(external.map(o => o.key));
-          savedExternalKeys.forEach(key => {
-            if (!known.has(key)) {
-              external.push({
-                key,
-                label: `(unavailable) #${key.slice(0, 10)}`,
-              });
-            }
-          });
-          dispatch(setExternalScenes(external));
-          dispatch(setMusicProjects(withUnavailableSongs(music, savedSongs)));
-          setAnimationsSeeded(true);
+      musicOptions().then(music => {
+        if (canceled) {
+          return;
         }
-      );
+        dispatch(setMusicProjects(withUnavailableSongs(music, savedSongs)));
+        setAnimationsSeeded(true);
+      });
     }
     return () => {
       canceled = true;
@@ -1108,11 +1056,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // What's on stage right now — updated by every run, including scene jumps —
   // so "Restart scene" (and the reseed watcher below) can re-run it.
-  const currentPlayingRef = useRef<
-    | {kind: 'local'; scene: Scene}
-    | {kind: 'external'; project: ExternalProject; sceneId: string}
-    | null
-  >(null);
+  const currentPlayingRef = useRef<{kind: 'local'; scene: Scene} | null>(null);
 
   // Re-run the stage once a reseeded animation list finishes loading. The
   // reseed-triggered run happens immediately, but reseeded entries carry
@@ -1209,10 +1153,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
   }, [levelProperties, initialSources]);
 
-  // Persist Images-tab changes back to sources in the serialized shape.
-  // Serialized from the LIVE store, not a commit's snapshot: the effect
-  // runs after compileExternalScene's synchronous merge-and-restore, and a
-  // snapshot save would leak the classmate's costumes into sources.
+  // Persist Images-tab changes back to sources in the serialized shape,
+  // serialized from the live store.
   const writeAnimations = useCallback(
     (forceSave?: boolean) =>
       patchSources(
@@ -1249,7 +1191,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   } = useBlocklyWorkspace({
     enabled: animationsSeeded,
     toolboxDefinition: injectedToolbox,
-    hiddenBlockTypes,
+    hiddenBlockTypes: heldBackBlocks,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
   });
@@ -1359,9 +1301,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       if (!engine) {
         return;
       }
-      // Running a local scene leaves any external-project context behind.
-      currentExternalProjectRef.current = null;
-      engine.preloadAnimationsOverride = null;
       currentPlayingRef.current = {kind: 'local', scene};
       const {result: program, referencedImages} = collectImageReferences(() => {
         const prelude = compileWorldPrelude(worldFor(scene));
@@ -1402,166 +1341,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     [scenes, runLocalScene]
   );
-
-  // --- External scenes (cross-project jumps) ---
-  const externalProjectsRef = useRef(new Map<string, ExternalProject>());
-  // One preload list per fetched project, kept for as long as the project
-  // is: the engine tells one project's list from another's by object
-  // reference, so a project must hand it the same list object every jump.
-  const externalPreloadListsRef = useRef(
-    new WeakMap<ExternalProject, RuntimeAnimationList>()
-  );
-  // The external project whose scene is currently running; its own go-to-scene
-  // blocks resolve against this.
-  const currentExternalProjectRef = useRef<ExternalProject | null>(null);
-  const [externalLoading, setExternalLoading] = useState(false);
-
-  // The external scene's dropdowns validate against the redux lists at
-  // block-load time, so merge its animations/scenes in for the synchronous
-  // compile and restore after. RAW action, not the thunk — the thunk
-  // re-fetches every image per dispatch (a fetch storm across jumps) — and
-  // restoring the captured state object keeps selectors reference-equal.
-  const compileExternalScene = useCallback(
-    (scene: Scene, project: ExternalProject) => {
-      const currentAnimations = getStore().getState().animationList;
-      const theirs = project.animations;
-      const merged = {
-        orderedKeys: [
-          ...currentAnimations.orderedKeys,
-          ...(theirs.orderedKeys || []).filter(
-            (k: string) => !currentAnimations.propsByKey[k]
-          ),
-        ],
-        propsByKey: {
-          ...(theirs.propsByKey || {}),
-          ...currentAnimations.propsByKey,
-        },
-      };
-      const currentSceneMetadata = sceneMetadata;
-      dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: merged});
-      // Dedupe: the external project can be the user's own (a jump back into
-      // this project), and duplicate ids break the selector's list rendering.
-      const knownSceneIds = new Set(currentSceneMetadata.map(s => s.id));
-      dispatch(
-        setScenes([
-          ...currentSceneMetadata,
-          ...project.scenes
-            .filter(s => !knownSceneIds.has(s.id))
-            .map(s => ({id: s.id, name: s.name})),
-        ])
-      );
-      try {
-        return withSceneMenuActive(scene.id, () =>
-          getCodeFromSerializedWorkspace(scene.source ?? DEFAULT_SCENE_SOURCE)
-        );
-      } finally {
-        dispatch({
-          type: SET_INITIAL_ANIMATION_LIST,
-          animationList: currentAnimations,
-        });
-        dispatch(setScenes(currentSceneMetadata));
-      }
-    },
-    [dispatch, sceneMetadata]
-  );
-
-  const runExternalProjectScene = useCallback(
-    (project: ExternalProject, sceneId: string) => {
-      const engine = engineRef.current;
-      const scene = project.scenes.find(s => s.id === sceneId);
-      if (!engine || !scene) {
-        engineRef.current?.cancelSceneJump();
-        return;
-      }
-      currentExternalProjectRef.current = project;
-      currentPlayingRef.current = {kind: 'external', project, sceneId};
-      // An external scene runs at the playfield size ITS project authored —
-      // reshaping it to this level's size would resize every cell under a
-      // layout built for the other one.
-      const {result: program, referencedImages} = collectImageReferences(() => {
-        const prelude = compileWorldPrelude(scene.world);
-        let code = '';
-        try {
-          code = compileExternalScene(scene, project);
-        } catch (e) {
-          console.error('Failed to compile external scene', sceneId, e);
-        }
-        return prelude + code;
-      });
-      // Preload the external project's images. Their saved animations carry
-      // sourceUrl (dataURI is stripped on save); p5.loadImage takes URLs too.
-      let preloadList = externalPreloadListsRef.current.get(project);
-      if (!preloadList) {
-        const theirs = project.animations;
-        preloadList = {
-          orderedKeys: theirs.orderedKeys || [],
-          propsByKey: Object.fromEntries(
-            Object.entries(theirs.propsByKey || {}).map(([key, props]) => [
-              key,
-              {...props, dataURI: props.sourceUrl},
-            ])
-          ),
-        };
-        externalPreloadListsRef.current.set(project, preloadList);
-      }
-      engine.preloadAnimationsOverride = preloadList;
-      dispatch(setIsRunning(true));
-      engine.runProgram(program, referencedImages);
-    },
-    [dispatch, compileExternalScene]
-  );
-
-  // Fetch the classmate's project fresh (their scenes may have changed);
-  // the last good copy is only a fetch-failure fallback.
-  const runExternalScene = useCallback(
-    async (key: string) => {
-      const parsed = parseExternalSceneKey(key);
-      if (!parsed) {
-        engineRef.current?.cancelSceneJump();
-        return;
-      }
-      setExternalLoading(true);
-      let project: ExternalProject | undefined;
-      try {
-        project = await fetchExternalProject(
-          parsed.channel,
-          levelProperties.id,
-          scriptId
-        );
-        migrateScenes(project.scenes);
-        externalProjectsRef.current.set(parsed.channel, project);
-      } catch (e) {
-        project = externalProjectsRef.current.get(parsed.channel);
-        if (!project) {
-          console.error('Failed to load external scene', key, e);
-          engineRef.current?.cancelSceneJump();
-          return;
-        }
-        console.warn('Using last-loaded copy of external scene', key, e);
-      } finally {
-        setExternalLoading(false);
-      }
-      runExternalProjectScene(project, parsed.sceneId);
-    },
-    [runExternalProjectScene, levelProperties.id, scriptId]
-  );
-
-  // The external dropdown re-fetches the section list on every open, so
-  // scenes classmates add while this lab is open show up.
-  useEffect(() => {
-    setExternalSceneRefreshHandler(async () => {
-      const refs = await fetchSectionScenes(levelProperties.id, scriptId);
-      const options = toExternalSceneOptions(refs);
-      const known = new Set(options.map(o => o.key));
-      collectSavedExternalKeys(scenes).forEach(key => {
-        if (!known.has(key)) {
-          options.push({key, label: `(unavailable) #${key.slice(0, 10)}`});
-        }
-      });
-      dispatch(setExternalScenes(options));
-    });
-    return () => setExternalSceneRefreshHandler(null);
-  }, [levelProperties.id, scriptId, dispatch, scenes]);
 
   // Scene jumps should only navigate while playing. In preview (Code tab) a
   // goToScene block would otherwise pull the preview off the scene being edited.
@@ -1614,7 +1393,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [
     animationsSeeded,
     sceneToolbox,
-    hiddenBlockTypes,
+    heldBackBlocks,
     workspaceVersion,
     refreshToolbox,
   ]);
@@ -1761,20 +1540,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         runScene(sceneId);
         return;
       }
-      const external = currentExternalProjectRef.current;
-      if (external && external.scenes.some(s => s.id === sceneId)) {
-        runExternalProjectScene(external, sceneId);
-        return;
-      }
       // Unknown scene id: resume the old scene rather than staying frozen.
       engine.cancelSceneJump();
-    };
-    engine.onGoToExternalScene = (key: string) => {
-      if (!isPlayingRef.current) {
-        engine.cancelSceneJump();
-        return;
-      }
-      runExternalScene(key);
     };
     // By ref: the restart handler is declared below this effect, and it is
     // also what the Play tab's button calls.
@@ -1809,8 +1576,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     scenes,
     pinnedSceneId,
     runScene,
-    runExternalScene,
-    runExternalProjectScene,
   ]);
 
   // Start the live preview once the engine is ready. A level that opens on
@@ -1836,7 +1601,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     } else {
       runProgram();
     }
-  }, [engineReady, runProgram]);
+    // inAiPilot reruns this once the user loads; earlier runs refuse AI blocks.
+  }, [engineReady, runProgram, inAiPilot]);
   // The premade world is painted once the engine is ready and the images it
   // names exist. A level that opened on Play restarts the game with it.
   useEffect(() => {
@@ -1860,10 +1626,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (activeTab === 'Play') {
       runScene(playStartSceneId ?? defaultPlaySceneId);
     } else if (activeTab === 'Code' || activeTab === 'World') {
-      // Only when the stage is showing something else: after Play, after a
-      // jump, or after an external scene. Code, World and Images share one
-      // preview, so moving between them leaves it as it is. The preview is
-      // the held first frame, not a game Play left running.
+      // Only when the stage is showing something else: after Play or after
+      // a jump. Code, World and Images share one preview, so moving between
+      // them leaves it as it is. The preview is the held first frame, not a
+      // game Play left running.
       const playing = currentPlayingRef.current;
       const previewingActive =
         playing?.kind === 'local' && playing.scene.id === activeSceneId;
@@ -2161,13 +1927,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     const current = currentPlayingRef.current;
     if (!current) {
       runScene(defaultPlaySceneId);
-    } else if (current.kind === 'local') {
+    } else {
       // Re-resolve by id: the scene's code may have been edited since.
       runScene(current.scene.id);
-    } else {
-      runExternalProjectScene(current.project, current.sceneId);
     }
-  }, [runScene, defaultPlaySceneId, runExternalProjectScene]);
+  }, [runScene, defaultPlaySceneId]);
   restartSceneRef.current = handleRestartScene;
 
   // A restart from a block rides the scene-jump cover and fades when the new
@@ -2317,16 +2081,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  // Generations on this level so far; free play has no limit.
+  // Generations on this level so far; only a one-image level has a limit.
   const [generationCount, setGenerationCount] = useState(0);
   useEffect(() => setGenerationCount(0), [levelProperties.id]);
   const countGeneration = useCallback(
     () => setGenerationCount(count => count + 1),
     []
   );
-  const generationsLeft = isFreeplayMode(levelProperties.levelMode)
-    ? undefined
-    : GENERATION_LIMIT - generationCount;
+  const oneImage = isOneImageMode(levelProperties.levelMode);
+  const generationsLeft = oneImage
+    ? GENERATION_LIMIT - generationCount
+    : undefined;
   // A toolbox has no scenes: New scene would put the student default into
   // the saved toolbox.
   const scenesOffered = animationsSeeded && !isToolboxMode;
@@ -2411,7 +2176,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {/* The last level's Finish, in the page header as well. */}
       {levelProperties.useSecondaryFinishButton && (
         <HeaderActionButton
-          tone="success"
+          buttonColor="success"
           onClick={() => dispatch(continueOrFinishLesson())}
         >
           I'm finished
@@ -2432,6 +2197,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         // render inside the instructions panel.
         objectives={objectives.active ? objectives : undefined}
         hideContinueIfDisabled
+        continueButtonColor="success"
         footerButtons={
           startOverOffered && (
             <IconButtonWithTooltip
@@ -2530,8 +2296,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <ImagesTab
                 uploadImage={uploadImage}
                 onDeleteImage={handleDeleteImage}
-                lockedImageType={levelProperties.levelMode?.imageType}
-                lockedImageSubject={levelProperties.levelMode?.imageSubject}
+                lockedImageType={
+                  oneImage ? levelProperties.levelMode?.imageType : undefined
+                }
+                lockedImageSubject={
+                  oneImage ? levelProperties.levelMode?.imageSubject : undefined
+                }
                 imageRole={levelProperties.levelMode?.imageRole}
                 ownImageMade={
                   !!levelProperties.levelMode?.imageType &&
@@ -2541,7 +2311,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 levelId={levelProperties.id}
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}
-                editingOffered={isFreeplayMode(levelProperties.levelMode)}
+                editingOffered={!oneImage}
                 paneWidth={paneWidthPx}
                 onImageLanded={saveImagesNow}
                 active={activeTab === 'Images'}
@@ -2614,20 +2384,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <PromptBar
                 prompt={activePrompt}
                 onAnswer={handlePromptAnswer}
-                disabled={
-                  playspaceMode !== 'play' || jumpCover || externalLoading
-                }
+                disabled={playspaceMode !== 'play' || jumpCover}
               />
             }
-            playBar={
+            bottomBar={
               <>
                 <div className={moduleStyles.playBarButtons}>
-                  <PlayBar
+                  <RunButtons
                     playing={activeTab === 'Play'}
-                    arrows={arrowSet}
                     onPlay={handlePlayClick}
                     onStop={stopTab ? handleStopClick : undefined}
-                    // A level pinned to one scene has one Play, for that scene.
+                    // A level pinned to one scene has one Run, for that scene.
                     onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
                     playSceneHidden={activeScene.id === scenes[0].id}
                   />
@@ -2638,9 +2405,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 />
               </>
             }
+            arrows={
+              <ArrowCross arrows={arrowSet} disabled={activeTab !== 'Play'} />
+            }
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
-            loading={externalLoading}
             getDefaultSpriteSize={getDefaultSpriteSize}
             onPreviewClick={handlePreviewClick}
           />
