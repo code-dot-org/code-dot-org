@@ -194,7 +194,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     [startSession]
   );
 
-  // On a level about one type of image: the newest such image, when one
+  // On a level with an imageType, the newest such image, when one
   // exists (the list is newest first), as the dropdowns' role defaults
   // pick it.
   const ownImage =
