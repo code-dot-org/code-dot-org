@@ -32,9 +32,13 @@ export interface LevelMode {
   /** Where the level's pictures come from (imageCache.ts); the tree first
       when unset. */
   imageSource?: ImageSource;
+  /** The Images tab offers one image, of the level's imageType, with
+      GENERATION_LIMIT generations of it and no adding, drawing or deleting.
+      Unset, the tab is as in free play. */
+  oneImage?: boolean;
 }
 
-/** Generations a level before free play allows; free play has no limit. */
+/** Generations a one-image level allows. */
 export const GENERATION_LIMIT = 5;
 
 /** The style the advanced generate form starts on; the student form is
@@ -66,9 +70,14 @@ export function editsWorld(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'world';
 }
 
-/** The only mode where students add images and draw on them. */
+/** Whether the level is free play, the open-ended kind. */
 export function isFreeplayMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'freeplay';
+}
+
+/** Whether the level keeps the student to one image (see oneImage). */
+export function isOneImageMode(mode: LevelMode | undefined): boolean {
+  return !!mode?.oneImage;
 }
 
 /** The source a mode's pictures come from: the tree first unless named. */
