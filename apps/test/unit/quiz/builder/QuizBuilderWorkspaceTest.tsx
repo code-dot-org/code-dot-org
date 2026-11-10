@@ -551,6 +551,28 @@ describe('QuizBuilderWorkspace', () => {
       ).toBeEnabled();
     });
 
+    it('turns the menu off while the question is saving', () => {
+      // Never resolves, so the save stays in flight.
+      const saveQuestion = jest.fn(() => new Promise<number>(() => {}));
+      renderWorkspace({questions: TWO_PAGES, saveQuestion});
+
+      fireEvent.click(
+        screen.getAllByRole('button', {name: 'Edit question'})[0]
+      );
+      fireEvent.change(
+        screen.getByDisplayValue('JavaScript variable fundamentals'),
+        {target: {value: 'Edited name'}}
+      );
+      fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+
+      expect(
+        menuOf(1).getByRole('button', {name: 'Question options'})
+      ).toBeDisabled();
+      expect(
+        menuOf(2).getByRole('button', {name: 'Question options'})
+      ).toBeEnabled();
+    });
+
     it('offers no pages to move to on a one-page quiz', () => {
       renderWorkspace({questions: [question()]});
 

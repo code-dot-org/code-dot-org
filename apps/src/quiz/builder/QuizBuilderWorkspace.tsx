@@ -227,8 +227,9 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                   // if unused.
                   onRemove={id => removeQuestion(id, {permanently: true})}
                   onDirtyChange={setQuestionDirty}
-                  menu={
+                  menu={isBusy => (
                     <QuestionMenu
+                      isBusy={isBusy}
                       name={`question-menu-${question.id}`}
                       canMoveUp={index > 0}
                       canMoveDown={index < pageQuestions.length - 1}
@@ -244,7 +245,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                         removeQuestion(question.id, {permanently: true})
                       }
                     />
-                  }
+                  )}
                 />
               </li>
             ))}

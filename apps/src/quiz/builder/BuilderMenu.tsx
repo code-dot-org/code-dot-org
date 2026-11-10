@@ -28,6 +28,7 @@ interface BuilderMenuProps {
   // The trigger's accessible name, e.g. "Question options".
   label: string;
   entries: BuilderMenuEntry[];
+  disabled?: boolean;
 }
 
 const MenuItem: React.FunctionComponent<BuilderMenuItem> = ({
@@ -67,10 +68,12 @@ const BuilderMenu: React.FunctionComponent<BuilderMenuProps> = ({
   name,
   label,
   entries,
+  disabled = false,
 }) => (
   <CustomDropdown
     name={name}
     labelText={label}
+    disabled={disabled}
     menuPlacement="right"
     size="xs"
     useMuiIconButtonAsTrigger

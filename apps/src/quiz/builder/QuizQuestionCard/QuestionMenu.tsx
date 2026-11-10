@@ -10,6 +10,8 @@ interface QuestionMenuProps {
   // The quiz's other pages, which the question can move to.
   otherPages: number[];
   hasUnsavedChanges: boolean;
+  // The card is saving or removing the question.
+  isBusy: boolean;
   onMove: (offset: -1 | 1) => void;
   onMoveToPage: (page: number) => void;
   onRemove: () => void;
@@ -21,6 +23,7 @@ const QuestionMenu: React.FunctionComponent<QuestionMenuProps> = ({
   canMoveDown,
   otherPages,
   hasUnsavedChanges,
+  isBusy,
   onMove,
   onMoveToPage,
   onRemove,
@@ -42,6 +45,7 @@ const QuestionMenu: React.FunctionComponent<QuestionMenuProps> = ({
     <BuilderMenu
       name={name}
       label="Question options"
+      disabled={isBusy}
       entries={[
         {
           iconName: 'arrow-up',
