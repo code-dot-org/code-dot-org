@@ -30,7 +30,7 @@ jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
 
 function renderHeader(
   project: Partial<ProjectState> = {},
-  props: Partial<React.ComponentProps<typeof SimpleHeader>> = {},
+  props: Partial<React.ComponentProps<typeof SimpleHeader>> = {}
 ) {
   const reducer = combineReducers({
     isRtl: () => false,
@@ -43,7 +43,7 @@ function renderHeader(
   return render(
     <Provider store={store}>
       <SimpleHeader lessonName="Make a quest" {...props} />
-    </Provider>,
+    </Provider>
   );
 }
 
@@ -61,12 +61,12 @@ describe('SimpleHeader', () => {
     const row = document.querySelector('#header_middle_content') as HTMLElement;
     expect(row.classList.contains(styles.row)).toBe(true);
     expect(screen.getByText('Make a quest').getAttribute('title')).toBe(
-      'Make a quest',
+      'Make a quest'
     );
     expect(
       document
         .querySelector('#project_info_container')
-        ?.classList.contains(styles.projectInfo),
+        ?.classList.contains(styles.projectInfo)
     ).toBe(true);
   });
 
@@ -101,7 +101,7 @@ describe('SimpleHeader', () => {
     levels = undefined;
     renderHeader();
     expect(
-      screen.getByRole('group', {name: 'Lesson progress'}).childElementCount,
+      screen.getByRole('group', {name: 'Lesson progress'}).childElementCount
     ).toBe(0);
   });
 

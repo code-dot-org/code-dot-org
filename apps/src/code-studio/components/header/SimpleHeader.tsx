@@ -54,7 +54,7 @@ const statusLabel: Record<ProgressBubbleStatus, string> = {
   error: 'rejected',
 };
 
-// 'default' is a project not saved yet: nothing to report.
+// 'default' means no save yet in this page view: nothing to report.
 const widgetSaveStatus: Record<
   ProjectState['projectUpdatedStatus'],
   ProgressWidgetSaveStatus
@@ -74,7 +74,7 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
 }) => {
   const isRtl = useSelector((state: HeaderState) => state.isRtl);
   const {showProjectUpdatedAt, projectUpdatedStatus} = useSelector(
-    (state: HeaderState) => state.project,
+    (state: HeaderState) => state.project
   );
   // getCurrentLevels builds a new array per call, and none until the lesson
   // is known; isEqual skips needless re-renders.
