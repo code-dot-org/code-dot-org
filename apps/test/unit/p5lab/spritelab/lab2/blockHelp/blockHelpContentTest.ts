@@ -18,10 +18,14 @@ describe('BLOCK_HELP', () => {
     'spritelab2_restartScene',
     'spritelab2_showTitle',
     'gamelab_atTime',
+    'gamelab_everyInterval',
     'spritelab2_whenPlayer',
+    'spritelab2_setAsPlatformPlayer2',
+    'spritelab2_thePlayer2',
     'spritelab2_askAI',
     'spritelab2_askAIWithChoices',
     'spritelab2_setSystemPrompt',
+    'spritelab2_setPlatformGravityDirection',
   ]);
 
   it('gives every entry an animation, or is known to be waiting for one', () => {

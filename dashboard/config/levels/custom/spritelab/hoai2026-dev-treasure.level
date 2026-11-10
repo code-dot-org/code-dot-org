@@ -25,7 +25,8 @@
       "kind": "image",
       "imageType": "sprite",
       "imageSubject": "object",
-      "imageRole": "treasure"
+      "imageRole": "treasure",
+      "oneImage": true
     },
     "objectives": {
       "title": "**Treasure**",

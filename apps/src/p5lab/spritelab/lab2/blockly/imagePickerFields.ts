@@ -98,7 +98,7 @@ function slotOf(block: BlocklyCore.Block): ImageSlot {
     block.outputConnection?.targetConnection?.getParentInput();
   const parent = block.getParent();
   if (!parentInput || !parent) {
-    return {blockType: block.type, index: 0};
+    return {blockType: block.type, index: 0, data: block.data ?? undefined};
   }
   const sockets = parent.inputList.filter(input =>
     input.connection?.getCheck()?.includes(SPRITE_CHECK)
@@ -106,6 +106,7 @@ function slotOf(block: BlocklyCore.Block): ImageSlot {
   return {
     blockType: parent.type,
     index: Math.max(0, sockets.indexOf(parentInput)),
+    data: parent.data ?? undefined,
   };
 }
 

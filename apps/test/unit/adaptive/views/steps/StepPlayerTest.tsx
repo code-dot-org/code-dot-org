@@ -74,14 +74,23 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveTabBar', () => ({
     activeTab,
     onTabChange,
     projectName,
+    skills,
+    timeSpentSeconds,
   }: {
     activeTab: string;
     onTabChange: (tab: string) => void;
     projectName?: string;
+    skills?: unknown[];
+    timeSpentSeconds?: number;
   }) => (
     <div>
       tab bar: {activeTab}
       {projectName && <span>tab project: {projectName}</span>}
+      {skills !== undefined && (
+        <span>
+          tab stats: {skills.length} skills, {timeSpentSeconds}s
+        </span>
+      )}
       <button type="button" onClick={() => onTabChange('map')}>
         go to map tab
       </button>
@@ -112,7 +121,8 @@ describe('StepPlayer', () => {
   afterEach(() => now.mockRestore());
 
   const renderPlayer = (
-    props: Partial<React.ComponentProps<typeof StepPlayer>> = {}
+    props: Partial<React.ComponentProps<typeof StepPlayer>> = {},
+    contextOverrides: Partial<PathwayContextValue> = {}
   ) => {
     const calls: unknown[][] = [];
     const record =
@@ -125,9 +135,10 @@ describe('StepPlayer', () => {
       <PathwayContext.Provider
         value={
           {
-            pathway: {checkpoints: []},
+            pathway: {checkpoints: [], skills: {}},
             statusMap: {},
             progress: {steps: {}},
+            ...contextOverrides,
           } as unknown as PathwayContextValue
         }
       >
@@ -257,6 +268,31 @@ describe('StepPlayer', () => {
         projectName: 'Cool Website',
       });
       expect(screen.getByText('tab project: Cool Website')).toBeTruthy();
+    });
+
+    it('passes skill progress and time spent from context to the tab bar', () => {
+      const onTabChange = jest.fn();
+      renderPlayer(
+        {activeTab: 'project', onTabChange},
+        {
+          pathway: {
+            checkpoints: [
+              {
+                id: 'cp',
+                title: 'CP',
+                description: '',
+                steps: [],
+                skillIds: ['html'],
+              },
+            ],
+            skills: {html: {id: 'html', title: 'HTML', description: ''}},
+          } as unknown as PathwayContextValue['pathway'],
+          statusMap: {cp: 'complete'},
+          progress: {steps: {s: {timeSpent: 90}}},
+        }
+      );
+      // 1 skill (html), 90 seconds total
+      expect(screen.getByText('tab stats: 1 skills, 90s')).toBeTruthy();
     });
   });
 

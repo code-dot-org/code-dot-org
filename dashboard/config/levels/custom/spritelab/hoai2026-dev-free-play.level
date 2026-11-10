@@ -39,7 +39,11 @@
       "contents": [
         {
           "kind": "block",
-          "type": "spritelab2_setPlatformGravity"
+          "type": "spritelab2_setPlatformJumpHeight"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setPlatformGravityDirection"
         },
         {
           "kind": "block",
@@ -51,7 +55,15 @@
         },
         {
           "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer2"
+        },
+        {
+          "kind": "block",
           "type": "spritelab2_thePlayer"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_thePlayer2"
         },
         {
           "kind": "block",
@@ -86,10 +98,6 @@
             "LENGTH": "short",
             "PATTERN": "slide up"
           }
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_playMusic"
         },
         {
           "kind": "block",
@@ -186,10 +194,6 @@
         {
           "kind": "block",
           "type": "spritelab2_goToScene"
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_goToExternalScene"
         }
       ]
     },

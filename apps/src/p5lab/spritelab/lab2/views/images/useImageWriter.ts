@@ -33,6 +33,7 @@ import {
   repointAnimation,
   uploadOrEmbed,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/imageSave';
+import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
 import useReclaimAsset from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
 import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
 import {getStore} from '@cdo/apps/redux';
@@ -84,6 +85,13 @@ export interface ImageWriter {
     meta: PixelEditorSaveMeta,
     options?: SaveEditedOptions
   ) => Promise<string>;
+  /** Writes the student's verdict into an image's generation record, the
+      pixels untouched, and returns the record; undefined for an image with
+      no record. */
+  rateGenerated: (
+    key: string,
+    verdict: Verdict
+  ) => ImageProps['generation'] | undefined;
   deleteImage: (key: string) => void;
   /** Deletes the session's uploaded files that no image points at any
       more, and forgets its uploads. A session is one image's run of
@@ -237,6 +245,19 @@ export default function useImageWriter({
     [uploadImage, write]
   );
 
+  const rateGenerated = useCallback(
+    (key: string, verdict: Verdict) => {
+      const current = propsOf(key)?.generation;
+      if (!current) {
+        return undefined;
+      }
+      const generation = {...current, verdict};
+      write({key, imageType: generation.imageType}, {generation});
+      return generation;
+    },
+    [write]
+  );
+
   const deleteImage = useCallback(
     (key: string) => {
       const removed = propsOf(key);
@@ -252,5 +273,5 @@ export default function useImageWriter({
     [dispatch, reclaimAsset, onDeleteImage]
   );
 
-  return {acceptGenerated, saveEdited, deleteImage, endSession};
+  return {acceptGenerated, saveEdited, rateGenerated, deleteImage, endSession};
 }
