@@ -6,6 +6,7 @@ import {
   setImageRole,
   setImageType,
   setKind,
+  setOneImage,
   setPaletteRoles,
 } from '@cdo/apps/lab2/levelEditors/spritelabMode/spritelabMode';
 
@@ -39,6 +40,13 @@ describe('cleanLevelMode', () => {
     expect(removed).toEqual(['imageFirst: false']);
   });
 
+  it('keeps the one-image flag', () => {
+    expect(cleanLevelMode({kind: 'image', oneImage: true}).mode).toEqual({
+      kind: 'image',
+      oneImage: true,
+    });
+  });
+
   it('drops palette roles that are empty or repeated', () => {
     expect(cleanLevelMode({kind: 'world', paletteRoles: []}).mode).toEqual({
       kind: 'world',
@@ -70,6 +78,15 @@ describe('fieldApplies', () => {
     expect(fieldApplies({kind: 'freeplay'}, 'imageFirst')).toBe(false);
     expect(fieldApplies({kind: 'freeplay'}, 'learning')).toBe(true);
     expect(fieldApplies({kind: 'freeplay'}, 'imageSource')).toBe(true);
+  });
+
+  it('offers one image wherever there is an Images tab, except free play', () => {
+    expect(fieldApplies({kind: 'image'}, 'oneImage')).toBe(true);
+    expect(fieldApplies({kind: 'code', imageFirst: true}, 'oneImage')).toBe(
+      true
+    );
+    expect(fieldApplies({kind: 'code'}, 'oneImage')).toBe(false);
+    expect(fieldApplies({kind: 'freeplay'}, 'oneImage')).toBe(false);
   });
 
   it('offers nothing without a kind', () => {
@@ -127,6 +144,24 @@ describe('setImageFirst', () => {
         false
       )
     ).toEqual({kind: 'code'});
+  });
+
+  it('drops one image along with the Images tab it needs', () => {
+    expect(
+      setImageFirst({kind: 'play', imageFirst: true, oneImage: true}, false)
+    ).toEqual({kind: 'play'});
+  });
+});
+
+describe('setOneImage', () => {
+  it('removes the key rather than storing false', () => {
+    expect(setOneImage({kind: 'image', oneImage: true}, false)).toEqual({
+      kind: 'image',
+    });
+    expect(setOneImage({kind: 'image'}, true)).toEqual({
+      kind: 'image',
+      oneImage: true,
+    });
   });
 });
 

@@ -14,6 +14,7 @@ import {
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import {
+  GENERATION_LIMIT,
   LevelMode,
   LevelModeKind,
 } from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
@@ -31,6 +32,7 @@ import {
   setImageSubject,
   setImageType,
   setKind,
+  setOneImage,
   setPaletteRoles,
   tabsForKind,
 } from './spritelabMode';
@@ -131,6 +133,7 @@ const SpritelabModeFields: React.FunctionComponent<
   const showImageRole = fieldApplies(mode, 'imageRole');
   const showPaletteRoles = fieldApplies(mode, 'paletteRoles');
   const showImageFirst = fieldApplies(mode, 'imageFirst');
+  const showOneImage = fieldApplies(mode, 'oneImage');
   const showLearning = fieldApplies(mode, 'learning');
   const showImageSource = fieldApplies(mode, 'imageSource');
 
@@ -155,7 +158,9 @@ const SpritelabModeFields: React.FunctionComponent<
 
   const imageTypeHelper = useMemo(() => {
     if (kind !== 'world') {
-      return 'The Images tab offers only this type, and the user can only make one image.';
+      return mode.oneImage
+        ? 'The Images tab offers only this type, and the student makes one image of it.'
+        : 'This does nothing until you keep students to one image below; until then the Images tab offers every type.';
     }
     if (mode.imageType === undefined) {
       return getPaletteRoles(mode).length > 0
@@ -288,6 +293,19 @@ const SpritelabModeFields: React.FunctionComponent<
             checked={mode.imageFirst === true}
             onChange={event =>
               onChange(setImageFirst(mode, event.target.checked))
+            }
+            size="s"
+          />
+        </div>
+      )}
+      {showOneImage && (
+        <div className={moduleStyles.booleanField}>
+          <Checkbox
+            name="spritelab_mode_one_image"
+            label={`Keep students to one image, with ${GENERATION_LIMIT} generations of it and no adding, drawing or deleting.`}
+            checked={mode.oneImage === true}
+            onChange={event =>
+              onChange(setOneImage(mode, event.target.checked))
             }
             size="s"
           />

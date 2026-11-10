@@ -11,6 +11,7 @@ const IMAGE_SUBJECT = /^Image subject/;
 const IMAGE_ROLE = /^Image role/;
 const PALETTE_ROLES = /^Palette roles/;
 const IMAGE_FIRST = /^Enable the Images tab/;
+const ONE_IMAGE = /^Keep students to one image/;
 
 const dropdown = (name: RegExp) => screen.getByRole('combobox', {name});
 const textbox = (name: RegExp) => screen.getByRole('textbox', {name});
@@ -181,6 +182,29 @@ describe('EditSpritelabMode', () => {
     const {container} = renderEditor({kind: 'image', imageRole: 'hero'});
     type(IMAGE_ROLE, '');
     expect(JSON.parse(submitted(container))).toEqual({kind: 'image'});
+  });
+
+  it('writes the one-image flag the author ticks', () => {
+    const {container} = renderEditor({kind: 'image', imageType: 'sprite'});
+    fireEvent.click(screen.getByRole('checkbox', {name: ONE_IMAGE}));
+    expect(JSON.parse(submitted(container))).toEqual({
+      kind: 'image',
+      imageType: 'sprite',
+      oneImage: true,
+    });
+  });
+
+  it('offers one image only where the level has an Images tab', () => {
+    renderEditor({kind: 'code'});
+    expect(
+      screen.queryByRole('checkbox', {name: ONE_IMAGE})
+    ).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('checkbox', {name: IMAGE_FIRST}));
+    expect(screen.getByRole('checkbox', {name: ONE_IMAGE})).toBeInTheDocument();
+    choose(KIND, 'freeplay');
+    expect(
+      screen.queryByRole('checkbox', {name: ONE_IMAGE})
+    ).not.toBeInTheDocument();
   });
 
   it('removes the image-first flag rather than submitting false', () => {

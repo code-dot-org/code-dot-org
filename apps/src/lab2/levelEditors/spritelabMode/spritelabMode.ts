@@ -47,7 +47,11 @@ const IMAGE_KEYS: (keyof LevelMode)[] = [
   'imageRole',
 ];
 
-const IMAGE_TAB_KEYS: (keyof LevelMode)[] = ['learning', 'imageSource'];
+const IMAGE_TAB_KEYS: (keyof LevelMode)[] = [
+  'learning',
+  'imageSource',
+  'oneImage',
+];
 
 // Keys a kind can carry; changing the kind drops the rest.
 const KEYS_BY_KIND: Record<LevelModeKind, (keyof LevelMode)[]> = {
@@ -55,7 +59,8 @@ const KEYS_BY_KIND: Record<LevelModeKind, (keyof LevelMode)[]> = {
   world: [...IMAGE_KEYS, 'paletteRoles', 'imageFirst', ...IMAGE_TAB_KEYS],
   play: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS],
   image: [...IMAGE_KEYS, ...IMAGE_TAB_KEYS],
-  freeplay: [...IMAGE_TAB_KEYS],
+  // Free play always allows multiple images.
+  freeplay: IMAGE_TAB_KEYS.filter(key => key !== 'oneImage'),
 };
 
 export function getPaletteRoles(mode: Partial<LevelMode>): string[] {
@@ -92,6 +97,7 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
     // A false flag reads the same as no flag, so only true is stored.
     case 'imageFirst':
     case 'learning':
+    case 'oneImage':
       return value === true;
     case 'imageSource':
       return isImageSource(value);
@@ -148,9 +154,11 @@ export function fieldApplies(
       return fieldApplies(mode, 'imageType') && mode.imageType === 'sprite';
     case 'imageRole':
       return kind === 'image' || fieldApplies(mode, 'imageType');
-    // Both act on a picture the student makes, so they need an Images tab.
+    // All three act on a picture the student makes, so they need an Images
+    // tab.
     case 'learning':
     case 'imageSource':
+    case 'oneImage':
       return (
         kind === 'image' || kind === 'freeplay' || mode.imageFirst === true
       );
@@ -209,6 +217,13 @@ export function setImageFirst(
   return withoutInapplicableKeys(
     setJsonObjectValue(mode, 'imageFirst', imageFirst || undefined)
   );
+}
+
+export function setOneImage(
+  mode: Partial<LevelMode>,
+  oneImage: boolean
+): Partial<LevelMode> {
+  return setJsonObjectValue(mode, 'oneImage', oneImage || undefined);
 }
 
 export function setLearning(
