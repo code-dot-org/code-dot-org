@@ -8,6 +8,7 @@ import {ObjectiveItem, ObjectivesChecklist} from '@cdo/apps/lab2/types';
 import {
   checkObjective,
   EMPTY_RUNTIME,
+  ObjectiveCheck,
   ObjectiveInputs,
   Objectives,
   objectiveShown,
@@ -201,31 +202,30 @@ export function useObjectives({
     ]
   );
   const items = objectives?.items;
+  // The indexes of the items, outside `had`, that `holds` now.
+  const newlyIn = useCallback(
+    (
+      had: ReadonlySet<number>,
+      holds: (check: ObjectiveCheck, inputs: ObjectiveInputs) => boolean
+    ) =>
+      (items ?? []).flatMap((item, index) =>
+        !had.has(index) && holds(item.check, inputs) ? [index] : []
+      ),
+    [items, inputs]
+  );
   // Read at mount, so the first render sets nothing.
   const [shown, setShown] = useState<ReadonlySet<number>>(
-    () =>
-      new Set(
-        (items ?? []).flatMap((item, index) =>
-          objectiveShown(item.check, inputs) ? [index] : []
-        )
-      )
+    () => new Set(newlyIn(new Set(), objectiveShown))
   );
   const earnedRef = useRef(earned);
   earnedRef.current = earned;
   const shownRef = useRef(shown);
   shownRef.current = shown;
   useEffect(() => {
-    if (!items?.length) {
-      return;
-    }
     const held = earnedRef.current;
-    const newly = items.flatMap((item, index) =>
-      !held.has(index) && checkObjective(item.check, inputs) ? [index] : []
-    );
+    const newly = newlyIn(held, checkObjective);
     const seen = shownRef.current;
-    const newlyShown = items.flatMap((item, index) =>
-      !seen.has(index) && objectiveShown(item.check, inputs) ? [index] : []
-    );
+    const newlyShown = newlyIn(seen, objectiveShown);
     // No update when nothing new holds: an input rebuilt every render would
     // otherwise re-run this effect without end.
     if (newly.length) {
@@ -234,7 +234,7 @@ export function useObjectives({
     if (newlyShown.length) {
       setShown(new Set([...seen, ...newlyShown]));
     }
-  }, [items, inputs]);
+  }, [newlyIn]);
 
   // One object per change: the panel it feeds is memoized on it.
   return useMemo<ObjectivesState>(() => {
