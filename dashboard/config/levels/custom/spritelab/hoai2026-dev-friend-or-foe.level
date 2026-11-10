@@ -29,7 +29,8 @@
         "friend",
         "block"
       ],
-      "imageFirst": true
+      "imageFirst": true,
+      "oneImage": true
     },
     "pinned_scene": {
       "id": "scene-1",

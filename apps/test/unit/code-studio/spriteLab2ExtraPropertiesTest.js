@@ -13,7 +13,6 @@ describe('camelize', () => {
       objectives: 'objectives',
       hide_custom_blocks: 'hideCustomBlocks',
       image_role_defaults: 'imageRoleDefaults',
-      level_mode: 'levelMode',
       pinned_scene: 'pinnedScene',
       extra_scene: 'extraScene',
       add_blocks: 'addBlocks',

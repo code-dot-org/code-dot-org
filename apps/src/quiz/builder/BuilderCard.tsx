@@ -18,10 +18,11 @@ export interface BuilderCardProps {
   isExpanded: boolean;
   onExpandedChange: (expanded: boolean) => void;
   isDirty: boolean;
-  isSaving: boolean;
-  isRemoving: boolean;
+  isSaving?: boolean;
+  isRemoving?: boolean;
   error?: string | null;
-  onSave: () => void;
+  // Without it there's no Save button, for a card saved with Save quiz.
+  onSave?: () => void;
   onDiscard: () => void;
   onRemove: () => void;
   // When set, Remove looks disabled but stays focusable to show this tooltip.
@@ -40,8 +41,8 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
   isExpanded,
   onExpandedChange,
   isDirty,
-  isSaving,
-  isRemoving,
+  isSaving = false,
+  isRemoving = false,
   error,
   onSave,
   onDiscard,
@@ -162,22 +163,24 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
               >
                 {neverSaved ? 'Discard' : 'Discard changes'}
               </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                size="extraSmall"
-                type="button"
-                disabled={isBusy || !isDirty}
-                loading={isSaving}
-                onClick={onSave}
-                startIcon={
-                  isSaving ? undefined : (
-                    <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
-                  )
-                }
-              >
-                Save
-              </Button>
+              {onSave && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="extraSmall"
+                  type="button"
+                  disabled={isBusy || !isDirty}
+                  loading={isSaving}
+                  onClick={onSave}
+                  startIcon={
+                    isSaving ? undefined : (
+                      <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
+                    )
+                  }
+                >
+                  Save
+                </Button>
+              )}
             </div>
           </div>
         </>

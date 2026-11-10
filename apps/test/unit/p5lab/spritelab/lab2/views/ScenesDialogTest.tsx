@@ -30,9 +30,9 @@ function renderDialog(
 describe('ScenesDialog', () => {
   it('is a dialog named All scenes that Done, the cross and Escape close', () => {
     const {onClose} = renderDialog();
-    expect(screen.getByRole('alertdialog', {name: 'All scenes'})).toBeTruthy();
+    expect(screen.getByRole('dialog', {name: 'All scenes'})).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Done'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Close dialog'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Close modal'}));
     fireEvent.keyDown(document, {key: 'Escape'});
     expect(onClose).toHaveBeenCalledTimes(3);
   });

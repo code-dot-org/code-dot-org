@@ -6,7 +6,6 @@ import askAi from './askAi';
 import askAiWithChoices from './askAiWithChoices';
 import beginsBehavior from './beginsBehavior';
 import burst from './burst';
-import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
 import makePlatformBlocks from './makePlatformBlocks';
 import makePlatformPlayer from './makePlatformPlayer';
@@ -21,6 +20,7 @@ import playSound from './playSound';
 import playSoundEffect from './playSoundEffect';
 import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
+import setAsPlatformPlayer2 from './setAsPlatformPlayer2';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravityDirection from './setPlatformGravityDirection';
 import setPlatformJumpHeight from './setPlatformJumpHeight';
@@ -28,6 +28,7 @@ import setSystemPrompt from './setSystemPrompt';
 import setWeather from './setWeather';
 import showTitle from './showTitle';
 import thePlayer from './thePlayer';
+import thePlayer2 from './thePlayer2';
 import whenPlayer from './whenPlayer';
 import whenRun from './whenRun';
 
@@ -44,7 +45,6 @@ const labBlockDefinitions: {
   playSoundEffect,
   whenRun,
   whenPlayer,
-  goToExternalScene,
   restartScene,
   movingLeft,
   movingWithArrowKeys,
@@ -57,11 +57,13 @@ const labBlockDefinitions: {
   setPlatformJumpHeight,
   setPlatformGravityDirection,
   setAsPlatformPlayer,
+  setAsPlatformPlayer2,
   setCameraZoom,
   setWeather,
   burst,
   showTitle,
   thePlayer,
+  thePlayer2,
   askAi,
   askAiWithChoices,
   setSystemPrompt,
