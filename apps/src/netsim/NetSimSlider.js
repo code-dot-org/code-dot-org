@@ -3,6 +3,7 @@
  */
 
 import $ from 'jquery';
+import 'jquery-ui/ui/widgets/slider';
 
 var i18n = require('@cdo/netsim/locale');
 

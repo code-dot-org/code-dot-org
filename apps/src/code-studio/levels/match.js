@@ -1,4 +1,6 @@
 import React from 'react';
+import 'jquery-ui/ui/widgets/draggable';
+import 'jquery-ui/ui/widgets/droppable';
 
 import {LegacyMatchErrorDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 
