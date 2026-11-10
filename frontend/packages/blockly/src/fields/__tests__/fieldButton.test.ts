@@ -41,3 +41,14 @@ describe('fields.md: FieldButton display text', () => {
     expect(displayTextOf(field)).toBe('go');
   });
 });
+
+describe('fields.md: FieldButton label', () => {
+  it('FLD-18: is labelled by its text, else by its tooltip', () => {
+    const text = new FieldButton({value: 'go', onClick: () => {}});
+    expect(text.computeAriaLabel()).toBe('go');
+
+    const icon = new FieldButton({value: '', icon: glyph(), onClick: () => {}});
+    icon.setTooltip('Open the file');
+    expect(icon.computeAriaLabel()).toBe('Open the file');
+  });
+});

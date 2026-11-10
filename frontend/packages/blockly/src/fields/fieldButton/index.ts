@@ -68,6 +68,32 @@ export class FieldButton extends Blockly.Field {
   }
 
   /**
+   * A button drawn only as an icon has no text to be named by, so its
+   * tooltip names it.
+   */
+  override computeAriaLabel(includeTypeInfo?: boolean): string {
+    if (this.getText()) {
+      return super.computeAriaLabel(includeTypeInfo);
+    }
+    const tip = this.getTooltip();
+    return typeof tip === 'string' ? tip : '';
+  }
+
+  override recomputeAriaContext(): boolean {
+    if (!super.recomputeAriaContext()) {
+      return false;
+    }
+    const element = this.getFocusableElement();
+    Blockly.utils.aria.setRole(element, Blockly.utils.aria.Role.BUTTON);
+    Blockly.utils.aria.setState(
+      element,
+      Blockly.utils.aria.State.LABEL,
+      this.computeAriaLabel(),
+    );
+    return true;
+  }
+
+  /**
    * Create the block UI for this field.
    * @override
    */

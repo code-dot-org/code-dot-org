@@ -158,6 +158,12 @@ so the button is not treated as a value to edit, and Blockly's own
 `updateEditable` then stamps no class at all, which left a button built
 with its block (every button in a flyout) unstyled.
 
+FLD-18. Shown on a workspace, the button is an ARIA `button`. Its label is
+Blockly's, made from its text; a button with no text is labelled by its
+tooltip, or by nothing when the tooltip is not a string. A caller that sets
+the tooltip after appending the field calls `recomputeAriaContext` to have
+it read.
+
 ### Test vectors
 
 FLD-V5 (FLD-14). A button with an icon and no value shows `''`; one with
@@ -167,3 +173,6 @@ neither shows a non-breaking space; one with the value `rules` and
 FLD-V6 (FLD-10, FLD-11). After registering `fieldColourPlugin` and then
 unregistering everything, `field_colour` is still a registered field and
 `colour_picker` still a defined block.
+
+FLD-V7 (FLD-18). A button with the value `go` is labelled `go`; one with
+no value and the tooltip `Open the file` is labelled `Open the file`.
