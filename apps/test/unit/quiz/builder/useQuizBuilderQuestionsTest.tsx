@@ -441,6 +441,73 @@ describe('useQuizBuilderQuestions', () => {
     });
   });
 
+  describe('moving questions', () => {
+    // Questions 7 and 8 on page 1, 9 on page 2.
+    const renderTwoPages = async () => {
+      getSpy.mockResolvedValue({
+        json: async () => ({
+          version: 5,
+          questions: [
+            QUESTION,
+            {...QUESTION, id: 8},
+            {...QUESTION, id: 9, page: 2},
+          ],
+        }),
+      } as Response);
+      return renderLoaded();
+    };
+    const layout = (pages: {questions: {id: number}[]}[]) =>
+      pages.map(p => p.questions.map(q => q.id));
+
+    it('moves a question up or down on its page', async () => {
+      const {result} = await renderTwoPages();
+
+      act(() => {
+        result.current.moveQuestion(7, 1);
+      });
+      expect(layout(result.current.pages)).toEqual([[8, 7], [9]]);
+      expect(result.current.hasUnsavedLayout).toBe(true);
+
+      act(() => {
+        result.current.moveQuestion(7, -1);
+      });
+      expect(layout(result.current.pages)).toEqual([[7, 8], [9]]);
+      expect(result.current.hasUnsavedLayout).toBe(false);
+    });
+
+    it('leaves a question at the edge of its page where it is', async () => {
+      const {result} = await renderTwoPages();
+
+      act(() => {
+        result.current.moveQuestion(7, -1);
+        result.current.moveQuestion(9, 1);
+      });
+
+      expect(layout(result.current.pages)).toEqual([[7, 8], [9]]);
+    });
+
+    it('moves a question to the bottom of another page', async () => {
+      const {result} = await renderTwoPages();
+
+      act(() => {
+        result.current.moveQuestionToPage(7, 2);
+      });
+
+      expect(layout(result.current.pages)).toEqual([[8], [9, 7]]);
+      expect(result.current.hasUnsavedLayout).toBe(true);
+    });
+
+    it('keeps a page emptied by a move, for Save quiz to drop', async () => {
+      const {result} = await renderTwoPages();
+
+      act(() => {
+        result.current.moveQuestionToPage(9, 1);
+      });
+
+      expect(layout(result.current.pages)).toEqual([[7, 8, 9], []]);
+    });
+  });
+
   describe('removeQuestion', () => {
     it('drops a pending question locally, leaving nothing to save', async () => {
       const {result} = await renderLoaded();

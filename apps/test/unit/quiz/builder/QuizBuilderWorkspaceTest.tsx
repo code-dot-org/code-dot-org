@@ -66,6 +66,8 @@ const BASE_STATE: QuizBuilderQuestionsState = {
   errorQuestionId: null,
   hasUnsavedLayout: false,
   addPage: jest.fn(),
+  moveQuestion: jest.fn(),
+  moveQuestionToPage: jest.fn(),
   addPendingQuestion: jest.fn(),
   saveQuestion: jest.fn(),
   removeQuestion: jest.fn(),
@@ -477,6 +479,75 @@ describe('QuizBuilderWorkspace', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Discard changes'}));
     fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
     expect(screen.queryByRole('img', {name: badge})).not.toBeInTheDocument();
+  });
+
+  describe('Question menu', () => {
+    // Questions 1 and 2 on page 1, 3 on page 2.
+    const TWO_PAGES = [
+      question({id: 1, page: 1}),
+      question({id: 2, page: 1, questionName: 'MVC frameworks'}),
+      question({id: 3, page: 2, questionName: 'Recursion'}),
+    ];
+    const menuOf = (id: number) =>
+      within(document.getElementById(`question-menu-${id}-dropdown`)!);
+
+    it('turns off moves past the edges of the page', () => {
+      renderWorkspace({questions: TWO_PAGES});
+
+      expect(
+        menuOf(1).getByRole('button', {name: 'Move question up'})
+      ).toBeDisabled();
+      expect(
+        menuOf(1).getByRole('button', {name: 'Move question down'})
+      ).toBeEnabled();
+      expect(
+        menuOf(2).getByRole('button', {name: 'Move question down'})
+      ).toBeDisabled();
+    });
+
+    it('moves a question up or down', () => {
+      const moveQuestion = jest.fn();
+      renderWorkspace({questions: TWO_PAGES, moveQuestion});
+
+      fireEvent.click(
+        menuOf(1).getByRole('button', {name: 'Move question down'})
+      );
+      fireEvent.click(
+        menuOf(2).getByRole('button', {name: 'Move question up'})
+      );
+
+      expect(moveQuestion).toHaveBeenCalledWith(1, 1);
+      expect(moveQuestion).toHaveBeenCalledWith(2, -1);
+    });
+
+    it("moves a question to one of the quiz's other pages", () => {
+      const moveQuestionToPage = jest.fn();
+      renderWorkspace({questions: TWO_PAGES, moveQuestionToPage});
+
+      expect(
+        menuOf(1).queryByRole('button', {name: 'Move to Page 1'})
+      ).not.toBeInTheDocument();
+      fireEvent.click(menuOf(1).getByRole('button', {name: 'Move to Page 2'}));
+
+      expect(moveQuestionToPage).toHaveBeenCalledWith(1, 2);
+    });
+
+    it('offers no pages to move to on a one-page quiz', () => {
+      renderWorkspace({questions: [question()]});
+
+      expect(menuOf(1).queryByText('Move to page')).not.toBeInTheDocument();
+    });
+
+    it('removes a question from the quiz', () => {
+      const removeQuestion = jest.fn();
+      renderWorkspace({questions: TWO_PAGES, removeQuestion});
+
+      fireEvent.click(
+        menuOf(3).getByRole('button', {name: 'Remove from quiz'})
+      );
+
+      expect(removeQuestion).toHaveBeenCalledWith(3, {permanently: true});
+    });
   });
 
   describe('Save quiz', () => {
