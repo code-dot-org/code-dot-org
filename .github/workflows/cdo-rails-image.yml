@@ -334,19 +334,9 @@ jobs:
             type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
 
       # Build the index once, under the commit-keyed tag (git-<sha> on the
-      # default branch, dev-<sha> elsewhere), and validate it before any
-      # moving tag points at it. The source tags are commit-keyed, so no
-      # moving tag can enter the index.
-      #
-      # Fallbacks, should the validate step fail on the first run:
-      # - regctl did not derive a platform from a single-arch child: build in
-      #   two steps, `regctl index create <ref> --ref <amd64> --desc-platform
-      #   linux/amd64 --annotation ...` then `regctl index add <ref> --ref
-      #   <arm64> --desc-platform linux/arm64`.
-      # - A puller rejects an OCI index over Docker-typed children: convert
-      #   each leg with `skopeo copy --format oci` before building the index,
-      #   or return to buildx with `--annotation index:...` once every child
-      #   is OCI.
+      # default branch, dev-<sha> elsewhere), and validate it before `latest`
+      # points at it. The inputs are this run's per-arch tags, so the index
+      # is built from the manifests the suites ran against.
       - name: Build the annotated index under the commit tag
         id: index
         env:
