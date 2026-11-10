@@ -1,47 +1,33 @@
-import {pick} from 'lodash';
 import React, {useState} from 'react';
 
 import {LabProps} from '@cdo/apps/lab2/types';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {QuizLevelProperties, QuizViewContent} from '../types';
 import {toBool} from '../utils';
 
 import QuizBuilderWorkspace from './QuizBuilderWorkspace';
-import QuizConfigurationPanel, {
-  QuizConfigurationData,
-} from './QuizConfigurationPanel';
+import QuizConfigurationPanel from './QuizConfigurationPanel';
+import {QuizConfigurationData} from './types';
 
 export default function useQuizBuilderView({
   levelProperties,
 }: LabProps): QuizViewContent {
   const {id: levelId, ...props} = levelProperties as QuizLevelProperties;
 
-  // Lifted so a Configuration save is reflected immediately elsewhere on
-  // this page, without a page reload - see QuizConfigurationPanel's onSaved.
-  const [quizConfig, setQuizConfig] = useState<QuizConfigurationData>({
+  const [savedConfig, setSavedConfig] = useState<QuizConfigurationData>(() => ({
     ...props,
     showCorrectness: toBool(props.showCorrectness),
     revealAnswerExplanation: toBool(props.revealAnswerExplanation),
     showIntroScreen: toBool(props.showIntroScreen),
     allowMultipleAttempts: toBool(props.allowMultipleAttempts),
     showQuestionsAfterSubmit: toBool(props.showQuestionsAfterSubmit),
-  });
+  }));
+  // The configuration as edited in the panel and the intro screen card,
+  // saved with Save quiz.
+  const [configDraft, setConfigDraft] = useState(savedConfig);
 
-  // Saves may overlap and resolve out of order; each applies only the fields
-  // it sent, since the response's other fields can be stale.
-  const applySaved = (updated: Partial<QuizConfigurationData>) =>
-    setQuizConfig(prev => ({...prev, ...updated}));
-
-  const saveQuizConfig = async (fields: Partial<QuizConfigurationData>) => {
-    const response = await HttpClient.put(
-      `/levels/${levelId}/quiz_configuration`,
-      JSON.stringify(fields),
-      true,
-      {'Content-Type': 'application/json'}
-    );
-    applySaved(pick(await response.json(), Object.keys(fields)));
-  };
+  const updateConfig = (fields: Partial<QuizConfigurationData>) =>
+    setConfigDraft(prev => ({...prev, ...fields}));
 
   return {
     resourcePanelProps: {
@@ -52,9 +38,8 @@ export default function useQuizBuilderView({
           icon: 'wrench',
           content: (
             <QuizConfigurationPanel
-              quizId={levelId}
-              initialValues={quizConfig}
-              onSaved={applySaved}
+              values={configDraft}
+              onChange={updateConfig}
             />
           ),
         },
@@ -63,12 +48,11 @@ export default function useQuizBuilderView({
     workspaceContent: (
       <QuizBuilderWorkspace
         levelId={levelId}
-        quizTitle={quizConfig.displayName || levelProperties.name}
-        showIntroScreen={quizConfig.showIntroScreen}
-        customIntroText={quizConfig.customIntroText ?? ''}
-        timeLimitMinutes={quizConfig.timeLimitMinutes}
-        allowMultipleAttempts={quizConfig.allowMultipleAttempts}
-        onSaveQuizConfig={saveQuizConfig}
+        quizTitle={configDraft.displayName || levelProperties.name}
+        config={configDraft}
+        savedConfig={savedConfig}
+        onConfigChange={updateConfig}
+        onConfigSaved={fields => setSavedConfig(prev => ({...prev, ...fields}))}
       />
     ),
   };

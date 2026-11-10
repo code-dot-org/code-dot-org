@@ -82,6 +82,10 @@ export interface ImageGenerationMetadata {
   /** Sending the same seed and prompt again asks for the same image.
       Absent on a cached picture, which has no roll to replay. */
   seed?: number;
+  /** The variant a cached picture came from (imageCache.ts), which tells
+      two cached pictures of the same words apart; absent on one the model
+      drew. */
+  variant?: number;
   /** Sampling wildness the user chose; absent = the service default. */
   temperature?: number;
   /** Logical grid the pixel prompt asked for (e.g. 64 for 64x64); absent on

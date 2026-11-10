@@ -564,7 +564,9 @@ export async function generateCharacterSet(
     prompt,
     imageType: 'sprite',
     style: options.style,
-    ...(!cached && {seed, ...(temperature !== undefined && {temperature})}),
+    ...(cached
+      ? {variant: cached.variant}
+      : {seed, ...(temperature !== undefined && {temperature})}),
     ...(options.style === 'pixel' && {
       pixelGrid: logicalGridFor(pixelBlock),
     }),

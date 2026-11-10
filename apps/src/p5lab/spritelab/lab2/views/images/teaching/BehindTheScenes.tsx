@@ -3,8 +3,8 @@
 // shows the prompts sent for the other poses. A second button leads on to
 // the picture's "How AI made your image" story, when there is one to tell.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
@@ -120,7 +120,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
         </MuiButton>
       )}
       {open && (
-        <MuiDialog
+        <Modal
           title={TITLE}
           className={styles.dialog}
           customContent={

@@ -2,12 +2,26 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
-import {Answer, Progress, StepAnswers, visibleSteps} from '../../progress';
+import {
+  firstProjectStepId,
+  sendAdaptiveEvent,
+  sendFinalProjectClicked,
+  stepProperties,
+} from '../../metricsHelpers';
+import {
+  Answer,
+  Progress,
+  StepAnswers,
+  totalTimeSpent,
+  visibleSteps,
+} from '../../progress';
 import {Checkpoint, Step} from '../../types';
 import AdaptiveHeader from '../AdaptiveHeader';
 import AdaptiveTabBar from '../AdaptiveTabBar';
 import {checkpointStepFromUrl, updateUrl} from '../checkpointUrl';
+import {getSkillProgress} from '../map/groupProgress';
 import {usePathwayContext} from '../PathwayContext';
 
 import LevelStep from './LevelStep';
@@ -91,7 +105,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onTabChange,
   projectName,
 }) => {
-  const {progress} = usePathwayContext();
+  const {pathway, progress, statusMap} = usePathwayContext();
   const steps = useMemo(
     () => visibleSteps(checkpoint, progress),
     [checkpoint, progress]
@@ -136,7 +150,12 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   useEffect(() => {
     takeElapsed(); // Restarts the clock for this step.
     onStartStep(step);
-  }, [step, onStartStep, takeElapsed]);
+    sendAdaptiveEvent(
+      EVENTS.ADAPTIVE_STEP_STARTED,
+      stepProperties(checkpoint, step),
+      step.kind
+    );
+  }, [checkpoint, step, onStartStep, takeElapsed]);
 
   const leave = (then: () => void) => {
     onLeaveStep(step, takeElapsed());
@@ -144,7 +163,18 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   };
 
   const advance = () => {
+    const wasComplete = progress.steps[step.id]?.status === 'complete';
     onCompleteStep(step, takeElapsed());
+    sendAdaptiveEvent(
+      EVENTS.ADAPTIVE_STEP_COMPLETED,
+      stepProperties(checkpoint, step),
+      step.kind
+    );
+    if (!wasComplete && step.id === firstProjectStepId(pathway))
+      sendAdaptiveEvent(
+        EVENTS.ADAPTIVE_FIRST_PROMPT_SUBMITTED,
+        stepProperties(checkpoint, step)
+      );
     // Read visible steps from the ref, not the `steps` memo: an answer saved
     // in this same click can decide which step plays next, and the memo
     // lags until progress updates on the next render.
@@ -175,6 +205,29 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
       list
     );
     onSaveAnswers(step, questionId, list, takeElapsed());
+    sendAnswerEvents(questionId, list);
+  };
+
+  const sendAnswerEvents = (questionId: number, list: Answer[]) => {
+    if (step.kind !== 'questions') return;
+    const question = step.questions.find(q => q.id === questionId);
+    const answer = list.at(-1);
+    if (!question || !answer) return;
+    const base = {...stepProperties(checkpoint, step), questionId};
+    if (question.type === 'MultipleChoiceQuestion') {
+      sendAdaptiveEvent(EVENTS.ADAPTIVE_MULTIPLE_CHOICE_QUESTION_ANSWERED, {
+        ...base,
+        questionName: question.questionName,
+        choiceId: answer.answerId,
+        isCorrect: answer.isCorrect,
+        attemptNumber: list.length,
+      });
+    } else {
+      sendAdaptiveEvent(EVENTS.ADAPTIVE_FREE_RESPONSE_ANSWERED, {
+        ...base,
+        length: answer.text?.length ?? 0,
+      });
+    }
   };
 
   const renderStep = (step: Step) => {
@@ -255,14 +308,35 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
     <div className={styles.player}>
       <AdaptiveHeader
         title={headerTitle ?? `${checkpoint.title}: ${step.title}`}
-        onViewSkillTree={() => leave(onExit)}
-        onFinish={onFinishPathway && (() => leave(onFinishPathway))}
+        onViewSkillTree={() => {
+          sendAdaptiveEvent(
+            EVENTS.ADAPTIVE_SKILL_MAP_HEADER_BUTTON_CLICKED,
+            {
+              fromCheckpointId: checkpoint.id,
+              fromStepId: step.id,
+            },
+            step.kind
+          );
+          leave(onExit);
+        }}
+        onFinish={
+          onFinishPathway &&
+          (() => {
+            sendFinalProjectClicked('stepHeader', statusMap, {
+              checkpoint,
+              step,
+            });
+            leave(onFinishPathway);
+          })
+        }
       />
       {activeTab !== undefined && onTabChange && (
         <AdaptiveTabBar
           activeTab={activeTab}
           onTabChange={tab => leave(() => onTabChange(tab))}
           projectName={projectName}
+          skills={getSkillProgress(pathway, statusMap)}
+          timeSpentSeconds={totalTimeSpent(progress)}
         />
       )}
       <div className={styles.playerBody}>{renderStep(step)}</div>
