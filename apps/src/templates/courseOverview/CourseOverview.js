@@ -64,6 +64,7 @@ class CourseOverview extends Component {
     participantAudience: PropTypes.string,
     aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
       .isRequired,
+    verifiedInstructorRequired: PropTypes.bool,
     requiresInaccessibleAiModels: PropTypes.bool,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
@@ -147,6 +148,7 @@ class CourseOverview extends Component {
       isSignedIn,
       participantAudience,
       aiChatToolsDependency,
+      verifiedInstructorRequired,
       requiresInaccessibleAiModels,
       demoType,
     } = this.props;
@@ -238,6 +240,7 @@ class CourseOverview extends Component {
           title={title}
           participantAudience={participantAudience}
           aiChatToolsDependency={aiChatToolsDependency}
+          verifiedInstructorRequired={verifiedInstructorRequired}
         />
         {viewAsTeacher && requiresInaccessibleAiModels && (
           <RequiresInaccessibleAiModelsAlert subject="course" />
@@ -270,6 +273,7 @@ class CourseOverview extends Component {
             showAssignButton={showAssignButton}
             participantAudience={participantAudience}
             aiChatToolsDependency={aiChatToolsDependency}
+            verifiedInstructorRequired={verifiedInstructorRequired}
           />
         ))}
       </div>

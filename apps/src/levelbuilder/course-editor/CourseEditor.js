@@ -345,10 +345,10 @@ class CourseEditor extends Component {
             Verified Instructors Only
             <HelpTip>
               <p>
-                Check to restrict this course to verified instructors and the
-                students in their sections. Signed-out users, unverified
-                teachers, and students with no verified teacher cannot open it,
-                and unverified teachers cannot assign it.
+                Check to restrict this course to teachers and the students of
+                verified instructors. Signed-out users and students with no
+                verified teacher cannot open it. Unverified teachers can open
+                and assign it, but are warned that their students cannot.
               </p>
             </HelpTip>
             <input

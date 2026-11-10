@@ -298,7 +298,6 @@ class CourseOffering < ApplicationRecord
   def can_be_assigned?(user)
     return false unless assignable?
     return false unless can_be_instructor?(user)
-    return false if !user.verified_instructor? && course_versions.all?(&:verified_instructor_required?)
     return true if any_versions_launched?
     return true if any_version_is_assignable_pilot?(user)
     return true if any_version_is_assignable_editor_experiment?(user)
@@ -440,6 +439,7 @@ class CourseOffering < ApplicationRecord
       available_resources: get_available_resources(locale_code),
       facilitated_workshops: Array(upcoming_facilitated_workshops(user)).map(&:summarize_for_pl_catalog),
       ai_chat_tools_dependency: ai_chat_tools_dependency,
+      verified_instructor_required: !!latest_published_version(locale_code)&.verified_instructor_required?,
     }
   end
 

@@ -121,6 +121,7 @@ const initialState = {
   isLti: undefined,
   isTeacher: undefined,
   isLevelbuilder: undefined,
+  isVerifiedInstructor: undefined,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
   over21: false,
@@ -295,6 +296,7 @@ export default function currentUser(state = initialState, action) {
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,
       isLevelbuilder: is_levelbuilder,
+      isVerifiedInstructor: is_verified_instructor,
       inUSA: ['US', 'RD'].includes(country_code) || !!us_state_code,
       hasCompletedAiDifferentiationWelcome:
         has_completed_ai_differentiation_welcome,

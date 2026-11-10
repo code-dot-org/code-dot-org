@@ -1091,7 +1091,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(teacher).can?(:manage, user_level)
   end
 
-  test 'verified-instructor-only course is readable by verified instructors and their students' do
+  test 'verified-instructor-only course is readable by teachers and students of verified instructors' do
     unit = create(:unit)
     unit_group = create(:single_unit_course, unit: unit, verified_instructor_required: true)
     script_level = create(:script_level, script: unit)
@@ -1100,7 +1100,7 @@ class AbilityTest < ActiveSupport::TestCase
     student_of_verified = create(:student)
     create(:section, user: verified_teacher).add_student(student_of_verified)
 
-    [verified_teacher, student_of_verified, create(:levelbuilder)].each do |user|
+    [verified_teacher, student_of_verified, create(:teacher), create(:levelbuilder)].each do |user|
       ability = Ability.new(user)
       assert ability.can?(:read, unit_group), user.inspect
       assert ability.can?(:read, unit), user.inspect
@@ -1117,7 +1117,7 @@ class AbilityTest < ActiveSupport::TestCase
     student_of_unverified = create(:student)
     create(:section, user: unverified_teacher).add_student(student_of_unverified)
 
-    [nil, unverified_teacher, student_of_unverified, create(:student)].each do |user|
+    [nil, student_of_unverified, create(:student)].each do |user|
       ability = Ability.new(user)
       refute ability.can?(:read, unit_group), user.inspect
       refute ability.can?(:read, unit), user.inspect

@@ -200,6 +200,9 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       unitRequiresInaccessibleAiModels={
         unitSummaryResponse.unitData.requires_inaccessible_ai_models
       }
+      verifiedInstructorRequired={
+        unitSummaryResponse.unitData.verified_instructor_required
+      }
     />
   );
 };

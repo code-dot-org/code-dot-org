@@ -7,7 +7,6 @@ module Curriculum::AssignableCourse
   def course_assignable?(user)
     return false unless get_course_version&.course_offering&.assignable?
     return false unless can_be_instructor?(user)
-    return false if !user.verified_instructor? && get_course_version.verified_instructor_required?
     return true if launched?
     return true if pilot? && has_pilot_experiment?(user)
     return true if is_a?(Unit) && has_editor_experiment?(user)

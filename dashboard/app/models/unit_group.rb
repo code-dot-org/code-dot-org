@@ -682,10 +682,10 @@ class UnitGroup < ApplicationRecord
     (is_assigned || has_progress) && has_pilot_teacher
   end
 
-  # A student qualifies through any of their teachers, as AI chat access does.
+  # Any teacher may read the course; a student needs a verified teacher.
   def has_verified_instructor_access?(user)
     return false unless user&.persisted?
-    user.verified_instructor? || user.teachers.any?(&:verified_instructor?)
+    user.teacher? || user.teachers.any?(&:verified_instructor?)
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot

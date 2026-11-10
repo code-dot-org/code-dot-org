@@ -176,6 +176,7 @@ class CourseVersion < ApplicationRecord
         path: content_root.link,
         is_stable: stable?,
         is_recommended: recommended?(locale_code),
+        verified_instructor_required: verified_instructor_required?,
         locales: content_root.supported_locale_names,
         locale_codes: content_root.supported_locale_codes,
         units: units.map do |u|
