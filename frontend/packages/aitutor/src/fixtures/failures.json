@@ -1,0 +1,35 @@
+{
+  "name": "every way a turn can fail",
+  "turns": [
+    {
+      "when": {"contains": "profanity"},
+      "reply": {"userStatus": "profanity_violation"}
+    },
+    {
+      "when": {"contains": "pii"},
+      "reply": {"userStatus": "pii_violation"}
+    },
+    {
+      "when": {"contains": "too large"},
+      "reply": {"userStatus": "user_input_too_large"}
+    },
+    {
+      "when": {"contains": "timeout"},
+      "reply": {"status": "model_timeout"}
+    },
+    {
+      "when": {"contains": "rate"},
+      "reply": {"status": "model_rate_limited"}
+    },
+    {
+      "when": {"contains": "error"},
+      "reply": {"status": "error"}
+    },
+    {
+      "when": {"contains": "hang"},
+      "hang": true,
+      "reply": {"text": "never said"}
+    }
+  ],
+  "fallback": {"text": "Ask me to fail in one of the named ways."}
+}
