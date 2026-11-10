@@ -138,4 +138,36 @@ class StudentSnapshotPromptHelperTest < ActiveSupport::TestCase
 
     assert_equal({'main.js' => 'console.log(2);'}, result)
   end
+
+  # ---------------------------------------------------------------------------
+  # get_user_level_interactions
+  # ---------------------------------------------------------------------------
+
+  test 'get_user_level_interactions resolves the code location once for every interaction' do
+    %w(v0 v1 v2).each do |code_version|
+      UserLevelInteraction.create!(
+        user_id: @student.id,
+        level_id: @level.id,
+        script_id: @unit.id,
+        school_year: '2026-2027',
+        interaction: 'run',
+        code_version: code_version
+      )
+    end
+
+    location = {storage_id: 1, storage_app_id: 2, channel_id: 'fake-channel'}
+    ApplicationController.helpers.expects(:get_student_code_location).
+      with(@student.id, @level, @unit.id).
+      once.
+      returns(location)
+    %w(v0 v1 v2).each do |code_version|
+      ApplicationController.helpers.expects(:get_student_code_at).
+        with(location, code_version).
+        returns({student_code: nil})
+    end
+
+    result = AiSystemPrompts::StudentSnapshotPromptHelper.get_user_level_interactions(@level, @student.id, @unit.id)
+
+    assert_equal 3, result.length
+  end
 end
