@@ -118,7 +118,7 @@ describe('SimpleHeader', () => {
     expect(screen.getByRole('status').textContent).toBe('Save failed');
   });
 
-  it('shows no save status for a project not saved yet', () => {
+  it('shows no save status in the initial default state', () => {
     renderHeader({showProjectUpdatedAt: true, projectUpdatedStatus: 'default'});
     expect(screen.queryByRole('img', {name: 'Not saved'})).toBeNull();
   });

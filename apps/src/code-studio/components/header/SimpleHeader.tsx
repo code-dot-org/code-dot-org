@@ -54,7 +54,7 @@ const statusLabel: Record<ProgressBubbleStatus, string> = {
   error: 'rejected',
 };
 
-// 'default' means no save yet in this page view: nothing to report.
+// 'default' is the state before the lab configures the header.
 const widgetSaveStatus: Record<
   ProjectState['projectUpdatedStatus'],
   ProgressWidgetSaveStatus
