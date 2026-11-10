@@ -2296,12 +2296,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <ImagesTab
                 uploadImage={uploadImage}
                 onDeleteImage={handleDeleteImage}
-                lockedImageType={
-                  oneImage ? levelProperties.levelMode?.imageType : undefined
-                }
-                lockedImageSubject={
-                  oneImage ? levelProperties.levelMode?.imageSubject : undefined
-                }
+                lockedImageType={levelProperties.levelMode?.imageType}
+                lockedImageSubject={levelProperties.levelMode?.imageSubject}
                 imageRole={levelProperties.levelMode?.imageRole}
                 ownImageMade={
                   !!levelProperties.levelMode?.imageType &&

@@ -72,8 +72,7 @@ interface ImagesTabProps {
   uploadImage?: UploadImageFunction;
   /** Drop every reference to a deleted image (called after the removal). */
   onDeleteImage: (name: string) => void;
-  /** Set on a level whose task is one image of this type. The tab opens on
-      that image, or on an empty slot for it until it is made. */
+  /** The one type of image this level offers to generate/upload. */
   lockedImageType?: ImageType;
   lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
@@ -91,7 +90,7 @@ interface ImagesTabProps {
   generationsLeft?: number;
   /** Called when a generation request is sent to the model. */
   onGenerate?: () => void;
-  /** Students may add images and draw on them (free play). */
+  /** Students may add images, draw on them and delete them. */
   editingOffered?: boolean;
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
@@ -191,7 +190,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     [startSession]
   );
 
-  // On a level whose task is one image: the newest such image, when one
+  // On a level about one type of image: the newest such image, when one
   // exists (the list is newest first), as the dropdowns' role defaults
   // pick it.
   const ownImage = lockedImageType
@@ -418,19 +417,19 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     )?.key;
 
   const deleteOffered = !!editingOffered;
-  // On a level whose task is one image, the plus is shown until that image
-  // is made on this visit, and its menu enables only that kind. In free
-  // play every kind is enabled.
+  // The plus menu enables only the level's kind; without one every kind is
+  // enabled.
   const lockedKind: ImageKind | undefined = lockedImageType
     ? {
         imageType: lockedImageType,
         subject: lockedImageType === 'sprite' ? lockedImageSubject : undefined,
       }
     : undefined;
+  // Where a single image is the task, the plus is shown until that image is
+  // made on this visit, and the choice stays on it or on the slot it will
+  // take; the project's other tiles are listed but disabled.
   const newOffered = !!editingOffered || (!!lockedKind && !ownImageMade);
-  // A level about one image keeps the choice on that image, or on the slot
-  // it will take; the project's other tiles are listed but disabled.
-  const chooseOffered = !lockedKind;
+  const chooseOffered = !!editingOffered;
 
   return (
     <div className={styles.tab}>

@@ -63,24 +63,14 @@ const IMAGE_TYPE_ITEMS = IMAGE_TYPES.map(imageType => ({
   text: IMAGE_TYPE_LABELS[imageType],
 }));
 
-function imageTypeItems(
-  kind: LevelModeKind | undefined,
-  chosen: ImageType | undefined
-) {
-  if (kind === 'world') {
-    // World levels can leave the image type unset.
-    return [
-      {value: NO_IMAGE_TYPE, text: 'None: use palette role'},
-      ...IMAGE_TYPE_ITEMS,
-    ];
-  }
-  if (chosen === undefined) {
-    return [
-      {value: NO_IMAGE_TYPE, text: 'Choose a type', disabled: true},
-      ...IMAGE_TYPE_ITEMS,
-    ];
-  }
-  return IMAGE_TYPE_ITEMS;
+function imageTypeItems(kind: LevelModeKind | undefined) {
+  return [
+    {
+      value: NO_IMAGE_TYPE,
+      text: kind === 'world' ? 'None: use palette role' : 'None: any type',
+    },
+    ...IMAGE_TYPE_ITEMS,
+  ];
 }
 
 const IMAGE_SOURCE_ITEMS = [
@@ -149,18 +139,19 @@ const SpritelabModeFields: React.FunctionComponent<
     mode.imageRole !== undefined &&
     !getPaletteRoles(mode).includes(mode.imageRole);
 
-  // A world level can leave the image type unset if it is not imageFirst,
-  // otherwise show an error for a missing type.
+  // The type is optional everywhere, except that a one-image level needs
+  // one to tell students which image to make.
   const showImageTypeMissingError =
-    showImageType &&
-    mode.imageType === undefined &&
-    (kind !== 'world' || mode.imageFirst === true);
+    showImageType && mode.imageType === undefined && mode.oneImage === true;
 
   const imageTypeHelper = useMemo(() => {
     if (kind !== 'world') {
+      if (mode.imageType === undefined) {
+        return 'With no type students can make images of any kind.';
+      }
       return mode.oneImage
-        ? 'The Images tab offers only this type, and the student makes one image of it.'
-        : 'This does nothing until you keep students to one image below; until then the Images tab offers every type.';
+        ? 'The Images tab makes only this type, and students make one image of it.'
+        : 'The Images tab makes only this type, and students can make as many as they like.';
     }
     if (mode.imageType === undefined) {
       return getPaletteRoles(mode).length > 0
@@ -214,7 +205,7 @@ const SpritelabModeFields: React.FunctionComponent<
           <SimpleDropdown
             labelText="Image type"
             name="spritelab_mode_image_type"
-            items={imageTypeItems(kind, mode.imageType)}
+            items={imageTypeItems(kind)}
             selectedValue={mode.imageType ?? NO_IMAGE_TYPE}
             onChange={event =>
               onChange(
@@ -231,7 +222,7 @@ const SpritelabModeFields: React.FunctionComponent<
               paletteConflict
                 ? 'Image role must be one of the palette roles, or the palette preselects an image it does not offer.'
                 : showImageTypeMissingError
-                ? 'Pick a type. Without one there is no image to make.'
+                ? 'Pick a type, or turn off one image below: a one-image level needs to know which image students make.'
                 : undefined
             }
             size="s"

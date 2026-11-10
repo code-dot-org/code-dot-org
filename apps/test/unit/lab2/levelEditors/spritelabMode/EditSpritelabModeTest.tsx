@@ -194,6 +194,22 @@ describe('EditSpritelabMode', () => {
     });
   });
 
+  it('clears the image type, which every kind may leave unset', () => {
+    const {container} = renderEditor({kind: 'image', imageType: 'sprite'});
+    choose(IMAGE_TYPE, '');
+    expect(JSON.parse(submitted(container))).toEqual({kind: 'image'});
+  });
+
+  it('asks for a type only when one image needs something to lock to', () => {
+    const missing = 'Pick a type, or turn off one image below';
+    renderEditor({kind: 'image'});
+    expect(screen.queryByText(new RegExp(missing))).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('checkbox', {name: ONE_IMAGE}));
+    expect(screen.getByText(new RegExp(missing))).toBeInTheDocument();
+    choose(IMAGE_TYPE, 'block');
+    expect(screen.queryByText(new RegExp(missing))).not.toBeInTheDocument();
+  });
+
   it('offers one image only where the level has an Images tab', () => {
     renderEditor({kind: 'code'});
     expect(
