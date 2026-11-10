@@ -33,8 +33,13 @@ $transition: 100ms ease-out;
   flex: 1 1 auto;
   min-width: 0;
   min-height: 0;
+  // Only the edges asked for scroll; the other axis is clipped.
+  overflow: hidden;
+}
 
-  &:focus {
+// Without :has() the root can't draw the ring, so keep the native outline.
+@supports selector(:has(*)) {
+  .scroller:focus {
     outline: none;
   }
 }
@@ -55,15 +60,15 @@ $transition: 100ms ease-out;
     linear-gradient(
       to bottom,
       transparent,
-      #000 var(--scroll-fade-top),
-      #000 calc(100% - var(--scroll-fade-bottom)),
+      #000 var(--scroll-fade-top, 0%),
+      #000 calc(100% - var(--scroll-fade-bottom, 0%)),
       transparent
     ),
     linear-gradient(
       to right,
       transparent,
-      #000 var(--scroll-fade-left),
-      #000 calc(100% - var(--scroll-fade-right)),
+      #000 var(--scroll-fade-left, 0%),
+      #000 calc(100% - var(--scroll-fade-right, 0%)),
       transparent
     );
   mask-position:

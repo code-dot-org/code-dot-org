@@ -78,7 +78,7 @@ const grid = (
 //
 export const DefaultScrollFade: Story = {
   render: args => (
-    <ScrollFade {...args} style={frame}>
+    <ScrollFade {...args} style={frame} scrollerProps={{'aria-label': 'Rows'}}>
       {rows}
     </ScrollFade>
   ),
@@ -98,16 +98,46 @@ export const DefaultScrollFade: Story = {
 export const Horizontal: Story = {
   args: {edges: ['left', 'right']},
   render: args => (
-    <ScrollFade {...args} style={{width: 320}}>
+    <ScrollFade
+      {...args}
+      style={{width: 320}}
+      scrollerProps={{'aria-label': 'Chips'}}
+    >
       <div style={{display: 'flex', gap: 8, padding: '8px 0'}}>{chips}</div>
     </ScrollFade>
   ),
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const scroller = await canvas.findByRole('region', {name: 'Chips'});
+    const root = scroller.parentElement as HTMLElement;
+
+    // the chips overflow to the right, so only the right edge fades
+    await waitFor(() => expect(root).toHaveAttribute('data-fade-right'));
+    expect(root).not.toHaveAttribute('data-fade-left');
+
+    scroller.scrollLeft = scroller.scrollWidth;
+    await waitFor(() => expect(root).not.toHaveAttribute('data-fade-right'));
+    expect(root).toHaveAttribute('data-fade-left');
+
+    // a chip added below the observed children must bring the right fade back
+    scroller.firstElementChild?.appendChild(
+      Object.assign(document.createElement('span'), {
+        textContent: 'Chip 13',
+        style: 'flex: none; padding: 0 3rem',
+      }),
+    );
+    await waitFor(() => expect(root).toHaveAttribute('data-fade-right'));
+  },
 };
 
 export const AllEdges: Story = {
   args: {edges: ['top', 'right', 'bottom', 'left']},
   render: args => (
-    <ScrollFade {...args} style={{...frame, width: 320}}>
+    <ScrollFade
+      {...args}
+      style={{...frame, width: 320}}
+      scrollerProps={{'aria-label': 'Grid'}}
+    >
       {grid}
     </ScrollFade>
   ),
@@ -117,11 +147,24 @@ export const RightToLeft: Story = {
   args: {edges: ['left', 'right']},
   render: args => (
     <div dir="rtl">
-      <ScrollFade {...args} style={{width: 320}}>
+      <ScrollFade
+        {...args}
+        style={{width: 320}}
+        scrollerProps={{'aria-label': 'Chips'}}
+      >
         <div style={{display: 'flex', gap: 8, padding: '8px 0'}}>{chips}</div>
       </ScrollFade>
     </div>
   ),
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const scroller = await canvas.findByRole('region', {name: 'Chips'});
+    const root = scroller.parentElement as HTMLElement;
+
+    // RTL starts at the right edge, so the hidden chips are to the left
+    await waitFor(() => expect(root).toHaveAttribute('data-fade-left'));
+    expect(root).not.toHaveAttribute('data-fade-right');
+  },
 };
 
 // The default mask fades the content itself, so it needs no color even over
@@ -135,7 +178,11 @@ export const OverAnyBackground: Story = {
           'linear-gradient(135deg, var(--background-brand-aqua-light), var(--background-brand-purple-light))',
       }}
     >
-      <ScrollFade {...args} style={{height: 200, width: 240}}>
+      <ScrollFade
+        {...args}
+        style={{height: 200, width: 240}}
+        scrollerProps={{'aria-label': 'Rows'}}
+      >
         {rows}
       </ScrollFade>
     </div>
