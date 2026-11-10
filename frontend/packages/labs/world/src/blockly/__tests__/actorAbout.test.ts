@@ -37,6 +37,7 @@ interface Stub {
   inputs?: Record<string, Stub>;
   parent?: Stub;
   workspace?: unknown;
+  miniToolboxSourceId_?: string;
 }
 
 /** Give a chain of stand-ins the shape the resolver walks. */
@@ -261,6 +262,30 @@ describe('what `object actor` is about', () => {
       type: 'actors/mark',
       name: 'mark',
     });
+  });
+
+  it("is the hat's, in the hat's own `+`", () => {
+    // A flyout block has no parent; the mini toolbox names the hat it opened
+    // from, in the workspace the flyout drops blocks into.
+    const workspace = aScreen();
+    const hat = asBlock({
+      type: 'world_on_Collisions_StartsTouchingEvent',
+      id: 'hat1',
+      workspace,
+      fields: {FILTER0: 'actors/mark'},
+    });
+    const flyout = {targetWorkspace: {getBlockById: () => hat}};
+
+    expect(
+      actorAbout(
+        asBlock({
+          type: 'world_object_actor',
+          workspace: flyout,
+          miniToolboxSourceId_: 'hat1',
+        }),
+        'object',
+      ),
+    ).toEqual({type: 'actors/mark', name: 'mark'});
   });
 
   it('is nobody under a hat whose filter is a KEY, not a kind', () => {

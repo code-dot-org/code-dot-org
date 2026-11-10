@@ -1011,6 +1011,7 @@ They answer it now, from where the block SITS (`blockly/actorAbout`):
 | in a world hat whose subject is `any ⟨Crate⟩` | a Crate       |
 | in the body of `add actor ⟨Coin⟩`             | a Coin        |
 | `object actor` under a hat filtered on ⟨Mark⟩ | a Mark        |
+| in a hat's `+`                                | as in the hat |
 | a rule's trait step, or the toolbox           | the word      |
 
 **The last row is what makes the rest legible.** A block that shows a picture
@@ -1022,6 +1023,12 @@ rule, `this actor` is whatever elects the trait — a different answer per proje
 It also gives the hat's kind filter a second job: pick ⟨Mark⟩ on the hat and the
 `object actor` below it starts showing a Mark, which says what the filter did
 better than a sentence about it can.
+
+**A hat's `+` shows what the hat would.** A block in the flyout has no parent,
+so the walk would find nothing. `addMiniToolbox` stamps each block it offers
+with the hat's id (`miniToolboxSourceId`), and the three blocks read it through
+a mutator (`fromMiniToolbox`) and walk as though they stood in the hat. Nothing
+of it is saved: a block dragged out forgets the hat and reads where it lands.
 
 **The picture does not replace the name.** The word beside it stays — `this
 ⟨picture⟩` — and the picture's `alt` is the kind, so it is read aloud as "this

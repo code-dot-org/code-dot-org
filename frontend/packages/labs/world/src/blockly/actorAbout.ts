@@ -16,6 +16,7 @@
 //   in a hat whose subject is `any ⟨Crate⟩`  → a Crate
 //   `subject actor` under a hat about `any ⟨Crate⟩` → a Crate
 //   `object actor` under a hat filtered on ⟨Mark⟩ → a Mark
+//   in a hat's `+`                           → as in that hat
 //   anywhere else                            → nobody knows
 //
 // THE LAST ROW IS THE IMPORTANT ONE. A block that shows a picture sometimes is
@@ -29,7 +30,12 @@
 // dropdowns could not do that — an option is an image or text, never both — and
 // a block's message has room for the pair.
 
-import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
+import {
+  Blockly,
+  defineExtension,
+  defineMutator,
+  type Extension,
+} from '@code-dot-org/blockly';
 
 import {actorIconImage} from './actorIcons';
 import {actorIcon, actorThumbnail} from './actorThumbnails';
@@ -83,8 +89,25 @@ interface Surroundings {
   getParent?: () => Surroundings | null;
   getFieldValue?: (name: string) => string | null;
   getInputTargetBlock?: (name: string) => Surroundings | null;
-  workspace?: {getTopBlocks?: (ordered?: boolean) => Surroundings[]};
+  workspace?: {
+    getTopBlocks?: (ordered?: boolean) => Surroundings[];
+    targetWorkspace?: {getBlockById?: (id: string) => Surroundings | null};
+  };
+  /** The hat whose `+` this block sits in (`fromMiniToolbox`). */
+  miniToolboxSourceId_?: string;
 }
+
+/**
+ * Where a block in a hat's `+` stands: in that hat, as though it were the
+ * hat's first row, since that is where it will mean what it means.
+ */
+const standingIn = (block: Surroundings): Surroundings | undefined => {
+  const id = block.getParent?.() ? undefined : block.miniToolboxSourceId_;
+  const hat = id && block.workspace?.targetWorkspace?.getBlockById?.(id);
+  return hat
+    ? {type: block.type, getParent: () => hat, workspace: hat.workspace}
+    : undefined;
+};
 
 /**
  * The actor an `.actor` FILE is about.
@@ -134,6 +157,10 @@ export function actorAbout(
   block: Surroundings,
   which: 'this' | 'subject' | 'object',
 ): ActorAbout | undefined {
+  const inHat = standingIn(block);
+  if (inHat) {
+    return actorAbout(inHat, which);
+  }
   let child = block;
   for (
     let at = block.getParent?.();
@@ -281,6 +308,21 @@ export const actorPictureExtension: Extension = defineExtension(
     },
   },
 );
+
+/**
+ * Which hat's `+` the block was made in. `addMiniToolbox` stamps every block
+ * it offers with `miniToolboxSourceId`; nothing of it is saved, so a block
+ * dragged out forgets the hat and reads where it was dropped instead.
+ */
+export const fromMiniToolbox = defineMutator('world_from_mini_toolbox', {
+  saveExtraState(): null {
+    return null;
+  },
+  loadExtraState(state: {miniToolboxSourceId?: string} | null): void {
+    (this as Surroundings).miniToolboxSourceId_ = state?.miniToolboxSourceId;
+    drawActor(this);
+  },
+});
 
 /** Redraw every actor picture on a workspace — see the extension. */
 export function refreshActorPictures(workspace: Blockly.Workspace): void {

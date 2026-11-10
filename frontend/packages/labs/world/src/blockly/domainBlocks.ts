@@ -37,7 +37,11 @@ import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {VIEWPORT_TILES} from '../runtime/viewport';
 import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 
-import {actorPictureExtension, registerKindFilter} from './actorAbout';
+import {
+  actorPictureExtension,
+  fromMiniToolbox,
+  registerKindFilter,
+} from './actorAbout';
 import {actorInputExtension, cameraInputExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
@@ -4137,6 +4141,7 @@ const worldObjectActor = defineBlock({
   output: 'Actor',
   style: 'sprite_blocks',
   extensions: [actorPictureExtension],
+  mutator: fromMiniToolbox,
   tooltip:
     'The other actor this event carries — the one that was just touched. ' +
     'Only meaningful inside a “when” block for an event that carries an actor.',
@@ -4164,6 +4169,7 @@ const worldSubjectActor = defineBlock({
   output: 'Actor',
   style: 'sprite_blocks',
   extensions: [actorPictureExtension],
+  mutator: fromMiniToolbox,
   tooltip:
     'The actor this event happened to. Only meaningful inside a “when” ' +
     'block.',
@@ -4668,6 +4674,7 @@ const worldThisActor = defineBlock({
   // Actor values share the sprite style — the color that groups the actors.
   style: 'sprite_blocks',
   extensions: [actorPictureExtension],
+  mutator: fromMiniToolbox,
   tooltip: 'This actor — the one these blocks belong to.',
   generator: {
     javascript() {
