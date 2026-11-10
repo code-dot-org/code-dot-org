@@ -452,3 +452,8 @@ button.chipWord {
     transition: none;
   }
 }
+
+// A piece whose entrance has played; last, to outrank the entrances above.
+.settled {
+  animation: none;
+}

@@ -6,7 +6,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {hueClass, withPeriod, WordChip, WordText} from './sentencePieces';
 import {
@@ -68,6 +68,30 @@ export function useWordMenus({
   // What the last pick did, for screen readers; the sentence itself is not
   // live, since its chips carry controls.
   const [announcement, setAnnouncement] = useState('');
+  // The entrances that have played, by piece. A piece whose DOM is rebuilt
+  // where it stands, as when the pane moves under the paint tools, keeps
+  // its place in the set and does not land again; a piece that goes
+  // leaves the set, so the same word chosen later lands afresh.
+  const settled = useRef(new Set<string>());
+  const shown = new Set<string>();
+  const entrance = (id: string) => {
+    shown.add(id);
+    return {
+      settled: settled.current.has(id),
+      onAnimationEnd: (e: React.AnimationEvent) => {
+        if (e.target === e.currentTarget) {
+          settled.current.add(id);
+        }
+      },
+    };
+  };
+  useEffect(() => {
+    settled.current.forEach(id => {
+      if (!shown.has(id)) {
+        settled.current.delete(id);
+      }
+    });
+  });
   const slot = slots[Math.min(index, slots.length - 1)];
   const show = (next: number) => {
     setDirection(next < index ? 'left' : 'right');
@@ -228,6 +252,7 @@ export function useWordMenus({
               ]
             : [];
         }
+        const landing = entrance(`chip:${s.id}-${word.id}`);
         return [
           <WordChip
             // Keyed by word too, so a changed word remounts and replays the
@@ -235,7 +260,11 @@ export function useWordMenus({
             key={`${s.id}-${word.id}`}
             sentence={sentence}
             slotId={s.id}
-            className={classNames(overSlotId === s.id && styles.dropTarget)}
+            className={classNames(
+              overSlotId === s.id && styles.dropTarget,
+              landing.settled && styles.settled
+            )}
+            onAnimationEnd={landing.onAnimationEnd}
             {...dropHandlers(s.id)}
           >
             {disabled || !canMove || !isAvailable(s) || clusters ? (
@@ -274,9 +303,12 @@ export function useWordMenus({
         : [];
     });
 
-  const renderWords = (set: Slot) =>
+  // The set key changes on each arrival in the carousel, so its words
+  // pop again then.
+  const renderWords = (set: Slot, setKey = set.id) =>
     set.words.map((word, wordIndex) => {
       const chosen = choices[set.id] === word.id;
+      const pop = entrance(`word:${setKey}-${word.id}`);
       return (
         <button
           key={word.id}
@@ -284,9 +316,11 @@ export function useWordMenus({
           className={classNames(
             styles.word,
             hueClass(sentence, set.id),
-            chosen && styles.chosen
+            chosen && styles.chosen,
+            pop.settled && styles.settled
           )}
           style={{'--i': wordIndex} as React.CSSProperties}
+          onAnimationEnd={pop.onAnimationEnd}
           aria-pressed={chosen}
           disabled={disabled}
           draggable={!disabled}
@@ -377,26 +411,32 @@ export function useWordMenus({
               visible. */}
               <div className={styles.sets}>
                 {slots.map((set, i) => {
-                  const shown = i === index;
+                  const onShow = i === index;
+                  // Remounted on each arrival so the entrance replays.
+                  const key = onShow ? `${set.id}-${moveCount}` : set.id;
+                  const arrival = entrance(`set:${key}`);
                   return (
                     <div
-                      // Remounted on each arrival so the entrance replays.
-                      key={shown ? `${set.id}-${moveCount}` : set.id}
+                      key={key}
                       className={classNames(
                         styles.set,
-                        !shown && styles.setHidden,
-                        shown &&
+                        !onShow && styles.setHidden,
+                        onShow &&
                           (direction === 'left'
                             ? styles.enterFromLeft
-                            : styles.enterFromRight)
+                            : styles.enterFromRight),
+                        arrival.settled && styles.settled
                       )}
+                      onAnimationEnd={arrival.onAnimationEnd}
                       role="group"
                       aria-label={`${set.label}${
                         set.required ? ' (pick one)' : ''
                       }`}
-                      aria-hidden={!shown}
+                      aria-hidden={!onShow}
                     >
-                      <div className={styles.words}>{renderWords(set)}</div>
+                      <div className={styles.words}>
+                        {renderWords(set, key)}
+                      </div>
                     </div>
                   );
                 })}

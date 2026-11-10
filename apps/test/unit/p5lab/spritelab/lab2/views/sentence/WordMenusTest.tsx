@@ -145,6 +145,20 @@ describe('WordMenus', () => {
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
   });
 
+  it('lands a chip once, until the word is chosen anew', () => {
+    const {rerender} = render(<Harness initial={{creature: 'cat'}} />);
+    const chip = () =>
+      screen.getByRole('button', {name: 'cat. Show creature words'})
+        .parentElement as HTMLElement;
+    expect(chip().classList.contains('settled')).toBe(false);
+    fireEvent.animationEnd(chip());
+    rerender(<Harness initial={{creature: 'cat'}} />);
+    expect(chip().classList.contains('settled')).toBe(true);
+    fireEvent.click(screen.getByRole('button', {name: 'Remove cat'}));
+    fireEvent.click(screen.getByRole('button', {name: 'cat'}));
+    expect(chip().classList.contains('settled')).toBe(false);
+  });
+
   it('shows a chip as plain text while the creature is missing', () => {
     render(<Harness initial={{creature: 'cat', adjective: 'cute'}} />);
     fireEvent.click(screen.getByRole('button', {name: 'Remove cat'}));
