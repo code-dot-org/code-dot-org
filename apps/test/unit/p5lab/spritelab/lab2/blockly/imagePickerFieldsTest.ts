@@ -50,20 +50,21 @@ describe('image picker fields', () => {
   });
 
   it('offers the blocks after the sprites under the touches block', () => {
-    const field = CostumeField.fromJson({});
-    field.setSourceBlock({
-      getParent: () => ({type: TOUCHING_BLOCK_TYPE}),
-    } as never);
+    // Blockly's setter wants a real block; the field reads only its parent.
+    const onBlock = (field: CostumeField, parentType: string) => {
+      (field as unknown as {sourceBlock_: unknown}).sourceBlock_ = {
+        getParent: () => ({type: parentType}),
+      };
+      return field;
+    };
+    const field = onBlock(CostumeField.fromJson({}), TOUCHING_BLOCK_TYPE);
     expect(field.getOptions(false).map(option => option[1])).toEqual([
       '"rival"',
       '"hero"',
       '"brick"',
     ]);
     // Under any other block, the sprites alone.
-    const other = CostumeField.fromJson({});
-    other.setSourceBlock({
-      getParent: () => ({type: 'gamelab_spriteSay'}),
-    } as never);
+    const other = onBlock(CostumeField.fromJson({}), 'gamelab_spriteSay');
     expect(other.getOptions(false).map(option => option[1])).toEqual([
       '"rival"',
       '"hero"',
