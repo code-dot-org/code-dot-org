@@ -52,7 +52,7 @@ export class ImageCacheMissError extends Error {
   constructor(url: string, readonly status?: number) {
     super(`Cached image missing: ${url}${status ? ` (${status})` : ''}`);
     // The ES5 build target otherwise leaves this with Error's prototype.
-    Object.setPrototypeOf(this, ImageCacheMissError.prototype);
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'ImageCacheMissError';
   }
 }
