@@ -8,6 +8,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import AichatContextManager from '../aichat/aichatContextManager';
 
+import {challengeHeaders} from './challengeToken';
 import {
   CURRENT_SCHEMA_VERSION,
   CurrentGatewayTranscribeResponseSchema,
@@ -16,7 +17,7 @@ import {
 import {sendGatewayRequest} from './gatewayRequest';
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, getModelString} from './shared';
-import {turnstileErrorTags, turnstileHeaders} from './turnstile';
+import {turnstileErrorTags} from './turnstile';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -38,7 +39,7 @@ async function transcribeThroughGateway(
       const audioBlob = await audioToBlob(audio);
       const response = await sendGatewayRequest(
         aichatContext,
-        (accessToken, turnstileToken) => {
+        (accessToken, challengeToken) => {
           const formData = new FormData();
           formData.append('token', accessToken);
           formData.append('audio', audioBlob, 'audio');
@@ -53,7 +54,7 @@ async function transcribeThroughGateway(
             {
               'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
               'x-ai-gateway-phase': 'transcription',
-              ...turnstileHeaders(turnstileToken),
+              ...challengeHeaders(challengeToken),
             }
           );
         }
