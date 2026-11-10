@@ -3,6 +3,7 @@ import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/draggable';
 import 'jquery-ui/ui/widgets/droppable';
 import 'jquery-ui/ui/widgets/resizable';
+import '@cdo/apps/third-party/jquery.ui.touch-punch.min';
 import objectFitImages from 'object-fit-images';
 import React from 'react';
 import {Provider} from 'react-redux';
