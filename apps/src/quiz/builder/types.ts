@@ -113,12 +113,28 @@ export interface QuizPlacement {
 // in order; empty until a question is added.
 export type QuizBuilderPage = QuizPage<QuizBuilderQuestion>;
 
+// A quiz's configuration, as the builder edits it and Save quiz sends it.
+export interface QuizConfigurationData {
+  displayName?: string;
+  customIntroText?: string;
+  timeLimitMinutes?: number;
+  showCorrectness: boolean;
+  revealAnswerExplanation: boolean;
+  showIntroScreen: boolean;
+  purpose?: string;
+  allowMultipleAttempts: boolean;
+  showQuestionsAfterSubmit: boolean;
+}
+
 // What useQuizBuilderQuestions exposes.
 export interface QuizBuilderQuestionsState {
   // Every question on the quiz, in page order.
   questions: QuizBuilderQuestion[];
   pages: QuizBuilderPage[];
   isLoading: boolean;
+  // Whether the questions and layout have loaded; until then there is
+  // nothing for Save quiz to save against.
+  hasLoaded: boolean;
   isSavingQuiz: boolean;
   error: string | null;
   // The question `error` is about, or null for a general error (a failed
@@ -149,8 +165,9 @@ export interface QuizBuilderQuestionsState {
     id: number,
     options: {permanently: boolean}
   ) => Promise<boolean>;
-  // Saves the quiz's questions, pages and order. Resolves false on failure,
-  // with `error` set, including when the quiz changed since it loaded.
-  saveQuiz: () => Promise<boolean>;
+  // Saves the quiz's questions, pages and order, with the given configuration
+  // fields. Resolves false on failure, with `error` set, including when the
+  // quiz changed since it loaded.
+  saveQuiz: (config?: Partial<QuizConfigurationData>) => Promise<boolean>;
   load: () => Promise<void>;
 }

@@ -31,10 +31,6 @@ import {
 } from './blockDefinitions/playSoundEffect';
 import {EVENT_HAT_EXTENSION, eventHat} from './blockDefinitions/whenPlayer';
 import {
-  ExternalSceneDropdown,
-  FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
-} from './externalSceneDropdown';
-import {
   FIELD_GRID_SINGLE_TYPE,
   FIELD_GRID_TYPE,
   GridField,
@@ -83,10 +79,6 @@ function installLabBlocks(): void {
     return;
   }
   Blockly.fieldRegistry.register(FIELD_SCENE_DROPDOWN_TYPE, SceneDropdown);
-  Blockly.fieldRegistry.register(
-    FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
-    ExternalSceneDropdown
-  );
   Blockly.fieldRegistry.register(
     FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
     MusicProjectDropdown

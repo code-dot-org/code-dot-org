@@ -30,6 +30,7 @@ import {
   Progress,
   isComplete,
   stepIdToResume,
+  totalTimeSpent,
   useProgress,
   visibleSteps,
 } from '../progress';
@@ -42,6 +43,7 @@ import AdaptiveHeader from './AdaptiveHeader';
 import AdaptiveTabBar from './AdaptiveTabBar';
 import {checkpointStepFromUrl, clearUrl} from './checkpointUrl';
 import FinishDialog from './FinishDialog';
+import {getSkillProgress} from './map/groupProgress';
 import MapScreen from './MapScreen';
 import {PathwayContext} from './PathwayContext';
 import StepPlayer from './steps/StepPlayer';
@@ -479,6 +481,8 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           }
         }}
         projectName={projectName}
+        skills={getSkillProgress(pathway, statusMap)}
+        timeSpentSeconds={totalTimeSpent(progress)}
       />
       <MapScreen
         pathway={pathway}

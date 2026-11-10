@@ -323,9 +323,6 @@ interface PlayspaceProps {
   // Hold a solid black cover over the canvas (from a jump trigger until the
   // target scene lands, when the fade takes over).
   covered?: boolean;
-  // Show the loading overlay (delayed fade-in, so quick loads never flash a
-  // spinner). Used while fetching an external project.
-  loading?: boolean;
   // The engine's current default sprite size (canvas units), for sizing the
   // location-picker's hover ghost. Read at hover time — helper libraries can
   // change it per run.
@@ -370,7 +367,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   mode,
   fadeTrigger = 0,
   covered = false,
-  loading = false,
   boxRef,
   controls,
   prompt,
@@ -920,13 +916,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         {/* Keyed so each scene jump restarts the fade-from-black animation. */}
         {fadeTrigger > 0 && (
           <div key={fadeTrigger} className={moduleStyles.sceneFade} />
-        )}
-        {/* Loading overlay: mounted for the whole load, but CSS delays its
-            fade-in so only slow loads ever show it. */}
-        {loading && (
-          <div className={moduleStyles.sceneLoading}>
-            <div className={moduleStyles.sceneLoadingSpinner} />
-          </div>
         )}
       </div>
       {/* Outside the box: role="application" hides what is inside it from

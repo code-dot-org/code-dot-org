@@ -1,5 +1,7 @@
 .tabBar {
   flex: none;
+  display: flex;
+  align-items: center;
   // Full-width bottom border; DSCO's ul::after only spans the ul width.
   border-bottom: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-primary);
@@ -10,6 +12,7 @@
   // without !important.
   &.tabBar {
     .tabsContainer {
+      flex: 1;
       ul {
         gap: 0;
       }
