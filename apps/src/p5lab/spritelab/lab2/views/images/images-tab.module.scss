@@ -320,10 +320,11 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   object-fit: contain;
 }
 
-// The drawing tools, across the frame's top.
+// The drawing tools, across the column above the frame.
 .above {
   display: flex;
   justify-content: center;
+  width: 100%;
   padding-bottom: 8px;
 }
 
@@ -361,27 +362,22 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   pointer-events: none;
 }
 
-// The row under the frame keeps this height while nothing is rendered
-// there; ImageFrame reads it to size the frame.
-$under-min-height: 48px;
-$under-padding-top: 8px;
-
-:export {
-  underMinPx: math.div($under-min-height + $under-padding-top, 1px);
-}
-
+// The row under the frame: the frame strip of a character set, or nothing,
+// taking no room, so a single picture's frame runs to the column's foot.
 .under {
-  // flex: none: the frame's side is computed assuming this row keeps its
-  // full height; a shorter row would let its contents overflow the column.
+  // flex: none: the frame's side is computed from this row's measured
+  // height; a row that gave way would let its contents overflow the column.
   display: flex;
   flex: none;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  min-height: $under-min-height;
-  padding-top: $under-padding-top;
   // Pinned to the column's foot; the spare height goes above it.
   margin-top: auto;
+
+  &:not(:empty) {
+    padding-top: 8px;
+  }
 }
 
 // The panel's body: flush under its header and to the tab's edges, with
