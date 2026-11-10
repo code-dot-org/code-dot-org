@@ -914,6 +914,12 @@ module SharedConstants
     keys.
     freeze
 
+  # Image models: the gateway has no fallback that produces images.
+  AI_CHAT_GEMINI_IMAGE_MODEL_IDS = [
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
+    AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
+  ].freeze
+
   AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: "ai-chat-lab",
     # AI Tutor in levels and on standalone projects.
@@ -942,6 +948,12 @@ module SharedConstants
   }
 
   AI_GATEWAY_ACCESS_TOKEN_LIFETIME_SECONDS = 60
+
+  # Client types the gateway may serve from a fallback provider when the user's provider is blocked.
+  AI_GATEWAY_FALLBACK_CLIENT_TYPES = [
+    AI_CHAT_CLIENT_TYPES[:ADAPTIVE],
+    AI_CHAT_CLIENT_TYPES[:AI_TUTOR],
+  ].freeze
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
