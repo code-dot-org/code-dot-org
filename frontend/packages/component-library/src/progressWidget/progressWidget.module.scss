@@ -69,6 +69,11 @@ $narrow: 991.98px;
   flex-shrink: 0;
   color: var(--text-neutral-tertiary);
   font-size: 12px;
+
+  // Alone in the lesson area, centred in it.
+  &:first-child {
+    margin-inline-start: 3px;
+  }
 }
 
 .bubbles {

@@ -49,12 +49,24 @@ describe('ProgressWidget', () => {
     expect(screen.queryByRole('button')).not.toBeInTheDocument();
   });
 
-  it('draws no lesson area for a plain title with no name or save status', () => {
+  it('leaves the lesson area empty for a plain title with no name', () => {
     const {container} = renderWidget({
       onLessonClick: undefined,
       lessonLabel: '',
     });
-    expect(container.querySelector('[title]')).not.toBeInTheDocument();
+    expect(
+      container.firstElementChild?.firstElementChild,
+    ).toBeEmptyDOMElement();
+  });
+
+  it('keeps the save status when a plain title has no name', () => {
+    renderWidget({
+      onLessonClick: undefined,
+      lessonLabel: '',
+      saveStatus: 'saved',
+      saveStatusLabel: 'Saved',
+    });
+    expect(screen.getByRole('img', {name: 'Saved'})).toBeInTheDocument();
   });
 
   it('names the bubble row', () => {
