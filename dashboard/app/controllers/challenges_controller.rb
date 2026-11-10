@@ -1,6 +1,6 @@
 class ChallengesController < ApplicationController
   before_action :authenticate_user!
-  before_action {head :forbidden unless current_user.can_use_lesson_deep_dive?}
+  before_action {head :forbidden unless current_user.can_use_lesson_deep_dive_challenges?}
   load_and_authorize_resource only: [:index, :show, :starter_image]
   before_action :require_levelbuilder_mode_or_test_env, only: [:create, :update, :destroy]
   authorize_resource only: [:create, :update, :destroy]

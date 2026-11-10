@@ -238,6 +238,7 @@ Dashboard::Application.routes.draw do
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
           post 'ai_chat_access_level', to: 'sections#set_ai_chat_access_level'
+          post 'ai_challenge_enabled', to: 'sections#set_ai_challenge_enabled'
           get 'suggested_lesson'
         end
         collection do
@@ -471,7 +472,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :quiz_questions, only: [:index, :show, :update] do
+    resources :quiz_questions, only: [:index, :show, :create, :update] do
       collection do
         get 'course_unit_search'
       end
@@ -1336,6 +1337,7 @@ Dashboard::Application.routes.draw do
         get 'cfu_responses/:lesson_id', controller: :student_snapshots, action: :cfu_responses # GET /student_snapshots/cfu_responses/{lesson_id}?student_id=123
         get 'exemplar_code/:lesson_id', action: :exemplar_code # GET /student_snapshots/exemplar_code/{lesson_id}
         get 'units/:unit_id/lessons/:lesson_id/students/:student_id/code', action: :student_code # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
+        get 'units/:unit_id/lessons/:lesson_id/students/:student_id/adaptive', action: :adaptive # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/adaptive
         get 'ai_generated_lesson_feedback', controller: :student_snapshots, action: :ai_generated_lesson_feedback # GET /student_snapshots/ai_generated_lesson_feedback
         get 'lesson_insight', controller: :student_snapshots, action: :lesson_insight # GET /student_snapshots/lesson_insight
         get 'student_has_work_in_lesson', controller: :student_snapshots, action: :student_has_work_in_lesson # GET /student_snapshots/student_has_work_in_lesson
@@ -1512,10 +1514,6 @@ Dashboard::Application.routes.draw do
     post '/aichat_events/log_chat_event', to: 'aichat_events#log_chat_event'
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
     get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
-
-    # Lab2 Sprite Lab scenes UI variant: cross-project scene jumps.
-    get '/sprite_lab2/section_scenes', to: 'sprite_lab2#section_scenes'
-    get '/sprite_lab2/external_scenes', to: 'sprite_lab2#external_scenes'
 
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 

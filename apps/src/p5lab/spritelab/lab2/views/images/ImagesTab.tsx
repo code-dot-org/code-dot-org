@@ -40,6 +40,7 @@ import {
   PAINT_TOOLS,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/paintTools';
 import SentenceScene from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
+import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
 import {readWordLayout} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/wordLayout';
 import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -77,6 +78,14 @@ interface ImagesTabProps {
   lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
   imageRole?: string;
+  /** An image of the level's type was made on this visit. Until then the
+      plus is offered, so a student back on a level they did can make
+      another. */
+  ownImageMade?: boolean;
+  /** The level tells how AI made the image (level mode `learning`). */
+  learning?: boolean;
+  /** The level being visited; a new level is a new visit. */
+  levelId?: number;
   /** Generations the student has left on this level; unlimited when
       unset. */
   generationsLeft?: number;
@@ -125,6 +134,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   lockedImageType,
   lockedImageSubject,
   imageRole,
+  ownImageMade,
+  learning,
+  levelId,
   generationsLeft,
   onGenerate,
   editingOffered,
@@ -179,11 +191,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     [startSession]
   );
 
-  // On a level whose task is one image: that image, when it exists.
+  // On a level whose task is one image: the newest such image, when one
+  // exists (the list is newest first), as the dropdowns' role defaults
+  // pick it.
   const ownImage = lockedImageType
-    ? imageRole
-      ? images.find(image => image.props.role === imageRole)
-      : images.find(image => image.imageType === lockedImageType)
+    ? images.find(image =>
+        imageRole
+          ? image.props.role === imageRole
+          : image.imageType === lockedImageType
+      )
     : undefined;
   // The opening choice is read once at mount; a later change to the list
   // must not move the choice.
@@ -249,30 +265,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Animated is on until the student turns it off, and stays as they left
   // it from image to image; no image or level turns it off for them.
   const [animated, setAnimated] = useState(true);
-  const {story, offerStory, handleAsking, endStory} = useLearningStory({
-    active,
-    lockedImageType,
-  });
-  // Rating a picture keeps it a second time; the story is offered only on
-  // the first keep of each picture.
-  const keptRef = useRef<string | null>(null);
-  const handleKeep = useCallback(
-    async (result: GeneratedImageResult) => {
-      const target: ImageTarget = {
-        key: chosenKeyRef.current,
-        imageType: result.generation.imageType,
-        subject: result.generation.subject,
-      };
-      const firstKeep = keptRef.current !== result.filename;
-      keptRef.current = result.filename;
-      await storePicture(target, () => writer.acceptGenerated(target, result));
-      if (firstKeep) {
-        offerStory(result);
-      }
-    },
-    [writer, storePicture, offerStory]
-  );
-
+  const {story, offerStory, handleAsking, tellStory, endStory} =
+    useLearningStory({
+      active,
+      learning,
+      levelId,
+    });
   const tools = useDrawing({
     images,
     saveEdited: writer.saveEdited,
@@ -280,7 +278,38 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     active,
     onDrawingHistory,
   });
-  const {drawing, startDrawing, leaveDrawing, stopDrawing} = tools;
+  const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
+    tools;
+  const handleKeep = useCallback(
+    async (result: GeneratedImageResult) => {
+      const target: ImageTarget = {
+        key: chosenKeyRef.current,
+        imageType: result.generation.imageType,
+        subject: result.generation.subject,
+      };
+      await storePicture(target, () => writer.acceptGenerated(target, result));
+      offerStory(result);
+    },
+    [writer, storePicture, offerStory]
+  );
+  // The verdict goes onto the kept picture's record, its pixels untouched,
+  // so tools open on the picture keep what has been drawn since it landed.
+  const handleRate = useCallback(
+    async (verdict: Verdict) => {
+      const key = chosenKeyRef.current;
+      const generation = key ? writer.rateGenerated(key, verdict) : undefined;
+      if (!key || !generation) {
+        return false;
+      }
+      adoptGeneration(key, generation);
+      await storePicture(
+        {key, imageType: generation.imageType},
+        async () => key
+      );
+      return true;
+    },
+    [writer, storePicture, adoptGeneration]
+  );
   // When the chosen image has been deleted, choose the first image left, or
   // none; tools open on it close without saving, since a save would create
   // a new image from the deleted pixels.
@@ -390,15 +419,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
 
   const deleteOffered = !!editingOffered;
   // On a level whose task is one image, the plus is shown until that image
-  // exists and its menu enables only that kind. In free play every kind is
-  // enabled.
+  // is made on this visit, and its menu enables only that kind. In free
+  // play every kind is enabled.
   const lockedKind: ImageKind | undefined = lockedImageType
     ? {
         imageType: lockedImageType,
         subject: lockedImageType === 'sprite' ? lockedImageSubject : undefined,
       }
     : undefined;
-  const newOffered = !!editingOffered || (!!lockedKind && !ownImage);
+  const newOffered = !!editingOffered || (!!lockedKind && !ownImageMade);
   // A level about one image keeps the choice on that image, or on the slot
   // it will take; the project's other tiles are listed but disabled.
   const chooseOffered = !lockedKind;
@@ -479,8 +508,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onGenerateStart={onGenerate}
           onBusyChange={setBusy}
           onKeep={handleKeep}
+          onRate={handleRate}
           wordLayout={wordLayout}
           compactBehindTheScenes
+          onTellStory={tellStory}
           imageSource={imageSource}
           imageCacheUrl={imageCacheUrl}
           advanced={
@@ -588,6 +619,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                       <ReopenedBehindTheScenes
                         image={chosenImage}
                         disabled={busy}
+                        onTellStory={tellStory}
                       />
                     )}
                     {advancedOffered && (
@@ -738,9 +770,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       )}
       {story && (
         <LearningDialog
+          // A new story opens on its first panel.
+          key={story.picture.src}
           picture={story.picture}
           prompt={story.prompt}
+          imageType={story.imageType}
           onDone={endStory}
+          onClose={story.asked ? endStory : undefined}
         />
       )}
     </div>

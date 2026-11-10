@@ -1,31 +1,11 @@
 require 'benchmark'
 require 'csv'
-require 'action_view/helpers/date_helper'
 require '../lib/cdo/git_utils'
 require '../lib/cdo/rake_utils'
 require '../lib/cdo/hash_utils'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
-# Enables timed_task to be used in place of task when defining rake tasks, which prints
-# how long the task took to stdout.
-module CustomRake
-  class TimedTask < Rake::Task
-    include ActionView::Helpers::DateHelper
-
-    def execute(args = nil)
-      puts "Finished #{name} (#{distance_of_time_in_words(Benchmark.realtime {super}.to_f)})"
-    end
-  end
-end
-
-module TimedTask
-  def timed_task(...)
-    CustomRake::TimedTask.define_task(...)
-  end
-end
-
 namespace :seed do
-  include TimedTask
   verbose false
 
   timed_task_with_logging check_migrations: :environment do

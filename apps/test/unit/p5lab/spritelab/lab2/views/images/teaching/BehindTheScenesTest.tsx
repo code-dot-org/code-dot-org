@@ -22,7 +22,7 @@ describe('BehindTheScenes', () => {
     });
     expect(screen.queryByRole('dialog')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
-    const dialog = screen.getByRole('alertdialog');
+    const dialog = screen.getByRole('dialog');
     expect(dialog.textContent).toContain('Behind the scenes');
     expect(screen.getByText(/^A cat\. /).textContent).toContain('pixel');
     expect(
@@ -31,15 +31,35 @@ describe('BehindTheScenes', () => {
     ).toContain('data:image/png;base64,AA==');
     // One picture: no second view to switch to.
     expect(screen.queryByRole('button', {name: 'Other poses'})).toBeNull();
+    // No story to lead on to.
+    expect(screen.queryByRole('button', {name: 'How AI made this'})).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  it("leads on to the picture's story when there is one to tell, closing itself first", () => {
+    const onTellStory = jest.fn();
+    const story = {
+      picture: {src: 'data:image/png;base64,AA=='},
+      prompt: 'A cat',
+      imageType: 'sprite' as const,
+    };
+    renderBehind({
+      sent: sentPromptsFor('A cat', OPTIONS, 'pixel', false),
+      story,
+      onTellStory,
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
+    fireEvent.click(screen.getByRole('button', {name: 'How AI made this'}));
+    expect(screen.queryByRole('dialog')).toBeNull();
+    expect(onTellStory).toHaveBeenCalledWith(story);
   });
 
   it('closes on the corner x as well', () => {
     renderBehind({sent: sentPromptsFor('A cat', OPTIONS, 'pixel', false)});
     fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Close dialog'}));
-    expect(screen.queryByRole('alertdialog')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Close modal'}));
+    expect(screen.queryByRole('dialog')).toBeNull();
   });
 
   it("switches between a set's first-picture words and the shared pose words", () => {

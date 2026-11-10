@@ -342,7 +342,9 @@ export async function generateImage(
     imageType,
     ...(options.subject && {subject: options.subject}),
     style,
-    ...(!cached && {seed, ...(temperature !== undefined && {temperature})}),
+    ...(cached
+      ? {variant: cached.variant}
+      : {seed, ...(temperature !== undefined && {temperature})}),
     // Recorded even at the default: the point is comparing what was asked
     // for against what came back.
     ...(style === 'pixel' && {pixelGrid: logicalGridFor(pixelBlock)}),

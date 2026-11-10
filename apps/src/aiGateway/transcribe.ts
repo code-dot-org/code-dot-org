@@ -13,18 +13,10 @@ import {
   CurrentGatewayTranscribeResponseSchema,
   type CurrentGatewayTranscribeResponse,
 } from './contract/gatewaySchemas';
+import {sendGatewayRequest} from './gatewayRequest';
 import {reportGatewayError} from './logHelper';
-import {
-  recordGatewayRequestError,
-  recordGatewayRequestOk,
-  recordTokenNotIssued,
-} from './requestMetric';
-import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {
-  fetchTurnstileToken,
-  turnstileErrorTags,
-  turnstileHeaders,
-} from './turnstile';
+import {AI_GATEWAY_URL, getModelString} from './shared';
+import {turnstileErrorTags, turnstileHeaders} from './turnstile';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -36,46 +28,36 @@ async function transcribeThroughGateway(
 ): Promise<TranscriptionResult> {
   const {model, audio, ...restOptions} = options;
   const modelString = getModelString(model);
-  const clientType = AichatContextManager.getContext().clientType;
+  const aichatContext = AichatContextManager.getContext();
+  const clientType = aichatContext.clientType;
 
   let schemaErrorReported = false;
   const execute = async (): Promise<TranscriptionResult> => {
     try {
-      // Serialized, not parallel: the access token response carries the
-      // Turnstile mode that decides whether a challenge is needed at all.
-      const access = await fetchAccessToken().catch((error: unknown) => {
-        recordTokenNotIssued();
-        throw error;
-      });
-      const {token, turnstileEnforcementMode} = access;
-      const turnstileToken = await fetchTurnstileToken(
-        turnstileEnforcementMode
-      );
-
-      const formData = new FormData();
-      formData.append('token', token);
+      // Built before the token is issued: a URL input downloads here.
       const audioBlob = await audioToBlob(audio);
-      formData.append('audio', audioBlob, 'audio');
-      formData.append('model', getModelString(model));
-
-      for (const [key, value] of Object.entries(restOptions)) {
-        formData.append(key, String(value));
-      }
-
-      const response = await HttpClient.post(
-        `${AI_GATEWAY_URL}/transcribe`,
-        formData,
-        false,
-        {
-          'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
-          'x-ai-gateway-phase': 'transcription',
-          ...turnstileHeaders(turnstileToken),
+      const response = await sendGatewayRequest(
+        aichatContext,
+        (accessToken, turnstileToken) => {
+          const formData = new FormData();
+          formData.append('token', accessToken);
+          formData.append('audio', audioBlob, 'audio');
+          formData.append('model', getModelString(model));
+          for (const [key, value] of Object.entries(restOptions)) {
+            formData.append(key, String(value));
+          }
+          return HttpClient.post(
+            `${AI_GATEWAY_URL}/transcribe`,
+            formData,
+            false,
+            {
+              'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
+              'x-ai-gateway-phase': 'transcription',
+              ...turnstileHeaders(turnstileToken),
+            }
+          );
         }
-      ).catch(async (error: unknown) => {
-        await recordGatewayRequestError(access.signingKey, error);
-        throw error;
-      });
-      recordGatewayRequestOk(access.signingKey);
+      );
 
       const rawResponse = await response.json();
       const parseResult =
