@@ -123,7 +123,7 @@ describe('WordMenus', () => {
     const ghost = document.querySelector('p[aria-hidden]') as HTMLElement;
     // The icons carry no text; the longest words by width are picked.
     expect(ghost.textContent?.replace(/\s+/g, ' ')).toBe(
-      'A robotic astronaut wearing a glasses.'
+      'A robotic dumpling wearing a glasses.'
     );
     expect(sentenceText()).toBe('A cat.');
   });
