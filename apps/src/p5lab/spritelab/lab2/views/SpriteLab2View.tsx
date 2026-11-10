@@ -103,7 +103,7 @@ import {
   fetchMusicProjects,
   withUnavailableSongs,
 } from '../musicProjects';
-import {runtimeNeeds, WorkspaceSource} from '../objectives';
+import {objectiveChecks, runtimeNeeds, WorkspaceSource} from '../objectives';
 import {packSources} from '../packedWorld';
 import {
   countImagesByType,
@@ -741,7 +741,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const objectiveRoles = useMemo(() => {
     const roles = new Set<string>();
-    levelProperties.objectives?.items?.forEach(({check}) => {
+    objectiveChecks(levelProperties.objectives).forEach(check => {
       if ('role' in check && check.role) {
         roles.add(check.role);
       }
@@ -1886,8 +1886,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   // A level that checks for a rating keeps the rating strip up until a
   // thumb is given.
-  const ratingRequired = !!levelProperties.objectives?.items?.some(
-    item => item.check.kind === 'rated'
+  const ratingRequired = objectiveChecks(levelProperties.objectives).some(
+    check => check.kind === 'rated'
   );
   const handleEditorChange = useCallback(
     (editor: Editor) => dispatch(setActiveTab(editor)),

@@ -87,9 +87,18 @@ export interface RuntimeNeeds {
   move: boolean;
 }
 
+/** Every check the checklist reads: each item's own and its `shownWhen`. */
+export function objectiveChecks(
+  objectives: Objectives | undefined
+): ObjectiveCheck[] {
+  return (objectives?.items ?? []).flatMap(item =>
+    item.shownWhen ? [item.check, item.shownWhen] : [item.check]
+  );
+}
+
 export function runtimeNeeds(objectives: Objectives | undefined): RuntimeNeeds {
   const needs = {touch: false, move: false};
-  objectives?.items?.forEach(({check}) => {
+  objectiveChecks(objectives).forEach(check => {
     if (check.kind === 'reach') {
       needs.touch ||= check.role !== undefined;
       needs.move ||= check.moved === true;

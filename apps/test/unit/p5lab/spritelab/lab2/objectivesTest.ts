@@ -277,6 +277,18 @@ describe('runtimeNeeds', () => {
     expect(
       runtimeNeeds({items: [{text: '', check: {kind: 'reach', moved: true}}]})
     ).toEqual({touch: false, move: true});
+    // A shownWhen check is read like the item's own.
+    expect(
+      runtimeNeeds({
+        items: [
+          {
+            text: '',
+            check: {kind: 'play'},
+            shownWhen: {kind: 'reach', role: 'treasure'},
+          },
+        ],
+      })
+    ).toEqual({touch: true, move: false});
   });
 });
 
