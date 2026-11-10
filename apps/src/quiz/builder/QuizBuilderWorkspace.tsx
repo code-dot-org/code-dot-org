@@ -22,6 +22,7 @@ import {
 import CreateQuestionDropdown from './CreateQuestionDropdown';
 import DisabledReason, {ariaDisabledProps} from './DisabledReason';
 import IntroScreenCard from './IntroScreenCard';
+import PageMenu from './PageMenu';
 import {changedConfigFields, configError, timeLimitError} from './quizConfig';
 import QuizPageBlock from './QuizPageBlock';
 import QuizQuestionCard from './QuizQuestionCard';
@@ -62,6 +63,8 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     errorQuestionId,
     hasUnsavedLayout,
     addPage,
+    movePage,
+    deletePage,
     moveQuestion,
     moveQuestionToPage,
     addPendingQuestion,
@@ -211,6 +214,20 @@ const QuizBuilderWorkspace: React.FunctionComponent<
             hasUnsavedQuestion={pageQuestions.some(question =>
               dirtyIds.has(question.id)
             )}
+            menu={
+              <PageMenu
+                page={page}
+                canMoveUp={page > 1}
+                canMoveDown={page < pages.length}
+                canAddPage={!addPageDisabledReason}
+                // The last page stays, and a page with questions isn't
+                // deleted until removal offers Remove from quiz or Delete.
+                canDelete={pageQuestions.length === 0 && pages.length > 1}
+                onMove={offset => movePage(page, offset)}
+                onAddPage={addPage}
+                onDelete={() => deletePage(page)}
+              />
+            }
           >
             {pageQuestions.map((question, index) => (
               <li key={question.id}>
@@ -256,7 +273,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
               color="secondary"
               size="extraSmall"
               type="button"
-              onClick={addPage}
+              onClick={() => addPage()}
               startIcon={<FontAwesomeV6Icon iconName="plus" />}
               {...ariaDisabledProps(addPageDisabledReason)}
             >
