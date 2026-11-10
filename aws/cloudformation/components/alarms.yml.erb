@@ -102,6 +102,46 @@
       ComparisonOperator: GreaterThanThreshold
       Threshold: 20
       TreatMissingData: notBreaching
+
+  PumaBacklogFleetSaturationAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Ref InfraWorkdayUrgent
+      AlarmName: <%="#{stack_name}_puma_backlog_fleet_saturation" %>
+      AlarmDescription: >-
+        The fleet's average Puma backlog has exceeded 10% of its total thread capacity in 3 of the
+        last 5 minutes: app servers are out of capacity and autoscaling has not caught up. Check the
+        Auto Scaling group's desired and in-service counts, then whether request volume or request
+        duration rose.
+      Metrics:
+        - Id: saturation_pct
+          Label: Backlog Saturation %
+          Expression: (backlog / max_threads) * 100
+          ReturnData: true
+        - Id: backlog
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: App Server
+              MetricName: backlog
+              Dimensions: [{Name: Host, Value: <%=CDO.dashboard_hostname%>}]
+            Period: 60
+            Stat: Sum
+        - Id: max_threads
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: App Server
+              MetricName: max_threads
+              Dimensions: [{Name: Host, Value: <%=CDO.dashboard_hostname%>}]
+            Period: 60
+            Stat: Sum
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 3
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 10
+      TreatMissingData: notBreaching
 <%  end -%>
 
   # ---------------------------------------------
