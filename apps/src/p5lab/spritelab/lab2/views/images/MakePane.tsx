@@ -88,11 +88,10 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
           sentence and the Animated switch; while a picture is made there
           are no words to show, so no box either. */}
       {!generating && (
-        <div className={styles.paneScroll}>
-          {parts.wordChooser}
-          {parts.error}
-        </div>
+        <div className={styles.paneScroll}>{parts.wordChooser}</div>
       )}
+      {/* Pinned under the scrolling words, so a failure is always in view. */}
+      {parts.error}
       {parts.animatedChoice}
       <div className={styles.paneBottom}>
         <MuiButton
