@@ -38,17 +38,26 @@ describe('MultiChoiceQuestionContainer', () => {
     ).toBeInTheDocument();
   });
 
-  it('renders the description as markdown under the title', () => {
+  it('renders description headings below the title heading', () => {
     render(
       <MultiChoiceQuestionContainer
-        question={{...QUESTION, description: '### Hint\n\nAssume x is 5.'}}
+        question={{
+          ...QUESTION,
+          description: '# Context\n\n## Details\n\n### Hint\n\nAssume x is 5.',
+        }}
         selectedChoiceId={null}
         onSelectChoice={jest.fn()}
       />
     );
 
     expect(
-      screen.getByRole('heading', {name: 'Hint', level: 3})
+      screen.getByRole('heading', {name: 'Context', level: 3})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {name: 'Details', level: 4})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {name: 'Hint', level: 5})
     ).toBeInTheDocument();
     expect(screen.getByText('Assume x is 5.')).toBeInTheDocument();
   });

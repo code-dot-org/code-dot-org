@@ -1,4 +1,23 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
 .description {
+  h3 {
+    @include typography.heading-lg;
+  }
+
+  h4 {
+    @include typography.heading-md;
+  }
+
+  h5 {
+    @include typography.heading-sm;
+  }
+
+  h6 {
+    @include typography.heading-xs;
+  }
+
   p:first-child {
     margin-top: 0;
   }
