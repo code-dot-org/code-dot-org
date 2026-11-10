@@ -12,6 +12,7 @@ import {
   BlockImageField,
   CostumeField,
   refreshAnimationDropdownThumbnails,
+  TOUCHING_BLOCK_TYPE,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/imagePickerFields';
 
 // Newest-first, as Sprite Lab keeps it: 'hero' was made first, 'rival'
@@ -43,6 +44,27 @@ describe('image picker fields', () => {
   it('lists costumes newest-first', () => {
     const field = CostumeField.fromJson({});
     expect(field.getOptions(false).map(option => option[1])).toEqual([
+      '"rival"',
+      '"hero"',
+    ]);
+  });
+
+  it('offers the blocks after the sprites under the touches block', () => {
+    const field = CostumeField.fromJson({});
+    field.setSourceBlock({
+      getParent: () => ({type: TOUCHING_BLOCK_TYPE}),
+    } as never);
+    expect(field.getOptions(false).map(option => option[1])).toEqual([
+      '"rival"',
+      '"hero"',
+      '"brick"',
+    ]);
+    // Under any other block, the sprites alone.
+    const other = CostumeField.fromJson({});
+    other.setSourceBlock({
+      getParent: () => ({type: 'gamelab_spriteSay'}),
+    } as never);
+    expect(other.getOptions(false).map(option => option[1])).toEqual([
       '"rival"',
       '"hero"',
     ]);
