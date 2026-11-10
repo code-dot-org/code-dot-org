@@ -13,7 +13,9 @@ import {
   EMPTY_PAGE_REASON,
   editedQuestionsReason,
   INVALID_CONFIG_REASON,
+  LAST_PAGE_REASON,
   NO_CHANGES_REASON,
+  PAGE_HAS_QUESTIONS_REASON,
   QUIZ_BUILDER_HEADER_ID,
   QUIZ_LOAD_FAILED_REASON,
   QUIZ_LOADING_REASON,
@@ -220,9 +222,13 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                 canMoveUp={page > 1}
                 canMoveDown={page < pages.length}
                 canAddPage={!addPageDisabledReason}
-                // The last page stays, and a page with questions isn't
-                // deleted until removal offers Remove from quiz or Delete.
-                canDelete={pageQuestions.length === 0 && pages.length > 1}
+                deleteDisabledReason={
+                  pageQuestions.length > 0
+                    ? PAGE_HAS_QUESTIONS_REASON
+                    : pages.length === 1
+                    ? LAST_PAGE_REASON
+                    : undefined
+                }
                 onMove={offset => movePage(page, offset)}
                 onAddPage={addPage}
                 onDelete={() => deletePage(page)}

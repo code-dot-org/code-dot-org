@@ -12,7 +12,9 @@ import {
   EMPTY_PAGE_REASON,
   editedQuestionsReason,
   INVALID_CONFIG_REASON,
+  LAST_PAGE_REASON,
   NO_CHANGES_REASON,
+  PAGE_HAS_QUESTIONS_REASON,
   QUIZ_LOAD_FAILED_REASON,
   QUIZ_LOADING_REASON,
   QUIZ_BUILDER_HEADER_ID,
@@ -610,9 +612,14 @@ describe('QuizBuilderWorkspace', () => {
         deletePage,
       });
 
-      expect(
-        pageMenuOf(1).getByRole('button', {name: 'Delete page'})
-      ).toBeDisabled();
+      const deleteFull = pageMenuOf(1).getByRole('button', {
+        name: 'Delete page',
+      });
+      expect(deleteFull).toHaveAttribute('aria-disabled', 'true');
+      expect(deleteFull).toHaveAccessibleDescription(PAGE_HAS_QUESTIONS_REASON);
+      fireEvent.click(deleteFull);
+      expect(deletePage).not.toHaveBeenCalled();
+
       fireEvent.click(pageMenuOf(3).getByRole('button', {name: 'Delete page'}));
       expect(deletePage).toHaveBeenCalledWith(3);
     });
@@ -620,9 +627,11 @@ describe('QuizBuilderWorkspace', () => {
     it('keeps the only page, even when empty', () => {
       renderWorkspace({pages: [{page: 1, questions: []}]});
 
-      expect(
-        pageMenuOf(1).getByRole('button', {name: 'Delete page'})
-      ).toBeDisabled();
+      const deleteOnly = pageMenuOf(1).getByRole('button', {
+        name: 'Delete page',
+      });
+      expect(deleteOnly).toHaveAttribute('aria-disabled', 'true');
+      expect(deleteOnly).toHaveAccessibleDescription(LAST_PAGE_REASON);
     });
   });
 

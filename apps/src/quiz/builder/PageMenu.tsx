@@ -7,7 +7,8 @@ interface PageMenuProps {
   canMoveUp: boolean;
   canMoveDown: boolean;
   canAddPage: boolean;
-  canDelete: boolean;
+  // Why the page can't be deleted, if it can't.
+  deleteDisabledReason?: string;
   onMove: (offset: -1 | 1) => void;
   // Adds an empty page that becomes page `page`.
   onAddPage: (page: number) => void;
@@ -19,7 +20,7 @@ const PageMenu: React.FunctionComponent<PageMenuProps> = ({
   canMoveUp,
   canMoveDown,
   canAddPage,
-  canDelete,
+  deleteDisabledReason,
   onMove,
   onAddPage,
   onDelete,
@@ -58,7 +59,7 @@ const PageMenu: React.FunctionComponent<PageMenuProps> = ({
         iconName: 'trash-can',
         label: 'Delete page',
         destructive: true,
-        disabled: !canDelete,
+        disabledReason: deleteDisabledReason,
         onClick: onDelete,
       },
     ]}
