@@ -56,9 +56,8 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     title: 'Set as player 2',
     summary: 'Makes a sprite a second player, moved with W, A, S and D.',
     body:
-      'Allows you and a classmate to play your game on one keyboard. The ' +
-      'first player uses the arrow keys, and the second player uses W, A, ' +
-      'S, and D. The camera still follows the first player.',
+      'Lets you and a classmate play your game on one keyboard. The first ' +
+      'player uses the arrow keys, and the second player uses W, A, S, and D.',
   },
   spritelab2_thePlayer2: {
     title: 'Player 2',
