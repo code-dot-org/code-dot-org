@@ -75,14 +75,19 @@ const AdaptiveHeader: React.FunctionComponent<AdaptiveHeaderProps> = ({
         >
           {title}
         </MuiTypography>
-        <FontAwesomeV6Icon
-          iconName={saveIcon.iconName}
-          title={saveIcon.title}
-          className={styles.saveIcon}
-          aria-label={saveIcon.title}
+        <span
           aria-live="polite"
           aria-atomic="true"
-        />
+          aria-label={saveIcon.title}
+          role="status"
+        >
+          <FontAwesomeV6Icon
+            iconName={saveIcon.iconName}
+            title={saveIcon.title}
+            className={styles.saveIcon}
+            aria-hidden
+          />
+        </span>
       </div>
       {onFinish && (
         <MuiButton
