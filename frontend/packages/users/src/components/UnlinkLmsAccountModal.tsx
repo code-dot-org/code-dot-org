@@ -2,6 +2,7 @@ import {Button, DialogContentText} from '@mui/material';
 
 import {FormError} from '@code-dot-org/component-library/form';
 import {DashboardApiClient, useUnlinkLtiAccount} from '@code-dot-org/core/api';
+import {sendEvent} from '@code-dot-org/core/plugins/analytics';
 
 import FormDialog from './FormDialog';
 import {useModalForm} from './useModalForm';
@@ -29,7 +30,13 @@ export default function UnlinkLmsAccountModal({
     onClose();
   };
 
+  const cancel = () => {
+    sendEvent('lti_unlink_cancel', {lms_name: lmsName});
+    close();
+  };
+
   const handleSubmit = onSubmit(async () => {
+    sendEvent('lti_unlink_click', {lms_name: lmsName});
     await mutation.mutateAsync({authenticationOptionId});
     window.location.assign('/users/edit');
   });
@@ -45,7 +52,7 @@ export default function UnlinkLmsAccountModal({
       onSubmit={handleSubmit}
       actions={
         <>
-          <Button onClick={close}>Cancel</Button>
+          <Button onClick={cancel}>Cancel</Button>
           <Button
             type="submit"
             variant="contained"
