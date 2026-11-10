@@ -41,8 +41,6 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
     exports: 'auto',
-    // MUI subpaths are CJS with __esModule; 'default' interop drops their .default.
-    interop: 'auto',
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].js',
     preserveModules: true,
     preserveModulesRoot: 'src',
