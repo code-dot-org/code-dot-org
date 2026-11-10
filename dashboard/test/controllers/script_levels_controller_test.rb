@@ -1317,7 +1317,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 1,
     }
 
-    assert_select 'img[src="https://studio.code.org/api/hour/begin_hoc-script.png"]'
+    assert_select 'img[src="https://studio.code.org/api/hour/begin_hoc-course.png"]'
   end
 
   test 'should not show tracking pixel for second level of hoc course in prod' do
@@ -1333,7 +1333,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 2,
     }
 
-    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-script.png"]', false, 'must not contain tracking pixel'
+    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-course.png"]', false, 'must not contain tracking pixel'
   end
 
   test "should 404 for invalid chapter for flappy" do
