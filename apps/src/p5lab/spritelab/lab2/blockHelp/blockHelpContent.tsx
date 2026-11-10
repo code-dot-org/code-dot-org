@@ -1,5 +1,4 @@
 import animBurst from '@cdo/static/spritelab_lab2/block-help/burst.gif';
-import animGoToExternalScene from '@cdo/static/spritelab_lab2/block-help/go-to-external-scene.png';
 import animPlaySound from '@cdo/static/spritelab_lab2/block-help/play-sound.gif';
 import animSetASpriteProperty from '@cdo/static/spritelab_lab2/block-help/set-a-sprite-property.gif';
 import animSetGravity from '@cdo/static/spritelab_lab2/block-help/set-gravity.gif';
@@ -53,6 +52,18 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     summary: 'Whichever sprite is the platform player right now.',
     body: 'Drop it into any block that takes a sprite.',
   },
+  spritelab2_setAsPlatformPlayer2: {
+    title: 'Set as player 2',
+    summary: 'Makes a sprite a second player, moved with W, A, S and D.',
+    body:
+      'Lets you and a classmate play your game on one keyboard. The first ' +
+      'player uses the arrow keys, and the second player uses W, A, S, and D.',
+  },
+  spritelab2_thePlayer2: {
+    title: 'Player 2',
+    summary: 'Whichever sprite is player 2 right now.',
+    body: 'Drop it into any block that takes a sprite.',
+  },
   spritelab2_askAI: {
     title: 'Ask AI',
     summary: 'Asks the AI a question and puts its answer in a variable.',
@@ -100,15 +111,6 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     title: 'Show title',
     summary: 'Big text across the middle of the game for a moment.',
     body: 'Put it under a touch to announce a win.',
-  },
-  spritelab2_goToExternalScene: {
-    title: 'Go to project',
-    animation: {
-      src: animGoToExternalScene,
-      alt: 'An arrow from one scene to another.',
-    },
-    summary: 'Jumps into a scene from a classmate’s project.',
-    body: 'Their scenes appear in the list once they have shared a project.',
   },
   gamelab_setProp: {
     title: 'Set a sprite property',

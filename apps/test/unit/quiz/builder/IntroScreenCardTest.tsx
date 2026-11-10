@@ -1,24 +1,36 @@
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import React from 'react';
+import React, {useState} from 'react';
 
 import IntroScreenCard from '@cdo/apps/quiz/builder/IntroScreenCard';
+import {QuizConfigurationData} from '@cdo/apps/quiz/builder/types';
 
 const INTRO_TEXT = 'This exam covers Units 1 to 3. You have 45 minutes.';
 
+// Holds the edited text, as useQuizBuilderView does.
 function renderCard(
   overrides: Partial<React.ComponentProps<typeof IntroScreenCard>> = {}
 ) {
-  const onSave = jest.fn().mockResolvedValue(undefined);
-  render(
-    <IntroScreenCard
-      customIntroText={INTRO_TEXT}
-      hasTimeLimit={false}
-      onSave={onSave}
-      {...overrides}
-    />
-  );
-  return {onSave};
+  const onChange = jest.fn();
+  const Wrapper = () => {
+    const [text, setText] = useState(INTRO_TEXT);
+    return (
+      <IntroScreenCard
+        customIntroText={text}
+        savedCustomIntroText={INTRO_TEXT}
+        hasTimeLimit={false}
+        onChange={(fields: Partial<QuizConfigurationData>) => {
+          onChange(fields);
+          if (fields.customIntroText !== undefined) {
+            setText(fields.customIntroText);
+          }
+        }}
+        {...overrides}
+      />
+    );
+  };
+  render(<Wrapper />);
+  return {onChange};
 }
 
 function expand() {
@@ -32,67 +44,43 @@ describe('IntroScreenCard', () => {
     expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
   });
 
-  it('edits the content in a textarea and saves it as customIntroText, then collapses', async () => {
-    const {onSave} = renderCard();
+  it('passes each edit on, with no Save button of its own', () => {
+    const {onChange} = renderCard();
     expand();
 
     const textarea = screen.getByRole('textbox');
     expect(textarea).toHaveValue(INTRO_TEXT);
-    expect(screen.getByRole('button', {name: 'Save'})).toBeDisabled();
-
     fireEvent.change(textarea, {target: {value: '# Welcome'}});
-    fireEvent.click(screen.getByRole('button', {name: 'Save'}));
 
-    await waitFor(() =>
-      expect(onSave).toHaveBeenCalledWith({customIntroText: '# Welcome'})
-    );
-    await waitFor(() =>
-      expect(screen.queryByRole('textbox')).not.toBeInTheDocument()
-    );
+    expect(onChange).toHaveBeenCalledWith({customIntroText: '# Welcome'});
+    expect(screen.getByLabelText('Unsaved changes')).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {name: 'Edit intro screen'})
-    ).toHaveFocus();
+      screen.queryByRole('button', {name: 'Save'})
+    ).not.toBeInTheDocument();
   });
 
-  it('discards unsaved changes', () => {
+  it('discards changes back to the saved text', () => {
     renderCard();
     expand();
 
     fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Edited'}});
-    expect(screen.getByLabelText('Unsaved changes')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', {name: 'Discard changes'}));
 
     expect(screen.getByRole('textbox')).toHaveValue(INTRO_TEXT);
     expect(screen.queryByLabelText('Unsaved changes')).not.toBeInTheDocument();
   });
 
-  it('shows the error and keeps the edit open when saving fails', async () => {
-    const onSave = jest.fn().mockRejectedValue(new Error('boom'));
-    renderCard({onSave});
-    expand();
-
-    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Edited'}});
-    fireEvent.click(screen.getByRole('button', {name: 'Save'}));
-
-    expect(
-      await screen.findByText('Something went wrong.')
-    ).toBeInTheDocument();
-    expect(screen.getByRole('textbox')).toHaveValue('Edited');
-  });
-
-  it('turns the intro screen off when removed from the quiz', async () => {
-    const {onSave} = renderCard();
+  it('turns the intro screen off when removed from the quiz', () => {
+    const {onChange} = renderCard();
     expand();
 
     fireEvent.click(screen.getByRole('button', {name: 'Remove from quiz'}));
 
-    await waitFor(() =>
-      expect(onSave).toHaveBeenCalledWith({showIntroScreen: false})
-    );
+    expect(onChange).toHaveBeenCalledWith({showIntroScreen: false});
   });
 
   it('blocks removing the intro screen while a time limit is set, and says why', () => {
-    const {onSave} = renderCard({hasTimeLimit: true});
+    const {onChange} = renderCard({hasTimeLimit: true});
     expand();
 
     const remove = screen.getByRole('button', {name: 'Remove from quiz'});
@@ -102,6 +90,6 @@ describe('IntroScreenCard', () => {
     );
 
     fireEvent.click(remove);
-    expect(onSave).not.toHaveBeenCalled();
+    expect(onChange).not.toHaveBeenCalled();
   });
 });
