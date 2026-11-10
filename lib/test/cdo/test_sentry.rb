@@ -13,17 +13,19 @@ class SentryTest < Minitest::Test
     CDO.stubs(
       sentry_releases_token: 'token',
       dashboard_sentry_dsn: 'https://key@o123.ingest.us.sentry.io/456',
+      frontend_apps_sentry_dsn: 'https://key@o123.ingest.us.sentry.io/789',
+      frontend_studio_sentry_dsn: 'https://key@o123.ingest.us.sentry.io/1011',
       log: stub_everything('log')
     )
   end
 
-  def test_notify_new_release_should_create_the_release_and_its_deploy_under_the_dsn_organization_and_project
+  def test_notify_new_release_should_create_the_release_and_its_deploy_under_the_dsn_organization_and_projects
     release = stub_request(:post, RELEASES).
       with(
         headers: {'Authorization' => 'Bearer token', 'Content-Type' => 'application/json'},
         body: {
           version: REVISION,
-          projects: ['456'],
+          projects: %w[456 789 1011],
           refs: [{repository: 'code-dot-org/code-dot-org', commit: REVISION}]
         }.to_json
       ).to_return(status: 201)
@@ -37,6 +39,18 @@ class SentryTest < Minitest::Test
 
     assert_requested release
     assert_requested deploy
+  end
+
+  def test_notify_new_release_should_leave_out_projects_whose_dsn_is_not_configured
+    CDO.stubs(frontend_studio_sentry_dsn: nil)
+    release = stub_request(:post, RELEASES).
+      with(body: hash_including('projects' => %w[456 789])).
+      to_return(status: 201)
+    stub_request(:post, DEPLOYS).to_return(status: 201)
+
+    Cdo::Sentry.notify_new_release(:production, REVISION)
+
+    assert_requested release
   end
 
   def test_notify_new_release_should_skip_untracked_environments
