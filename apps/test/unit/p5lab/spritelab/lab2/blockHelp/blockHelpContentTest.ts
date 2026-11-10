@@ -21,6 +21,8 @@ describe('BLOCK_HELP', () => {
     'gamelab_everyInterval',
     'spritelab2_whenPlayer',
     'spritelab2_whenPlayerStepsOn',
+    'spritelab2_setAsPlatformPlayer2',
+    'spritelab2_thePlayer2',
     'spritelab2_askAI',
     'spritelab2_askAIWithChoices',
     'spritelab2_setSystemPrompt',

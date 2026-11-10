@@ -13,6 +13,7 @@ import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
 import {SET_WEATHER_BLOCK_TYPE} from '../blockDefinitions/setWeather';
 import {SHOW_TITLE_BLOCK_TYPE} from '../blockDefinitions/showTitle';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
+import {THE_PLAYER_2_BLOCK_TYPE} from '../blockDefinitions/thePlayer2';
 import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 import {WHEN_PLAYER_STEPS_ON_BLOCK_TYPE} from '../blockDefinitions/whenPlayerStepsOn';
 
@@ -35,7 +36,9 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_makeSpriteAtGrid',
     'spritelab2_makeSpriteAtPosition',
     'spritelab2_setAsPlatformPlayer',
+    'spritelab2_setAsPlatformPlayer2',
     THE_PLAYER_BLOCK_TYPE,
+    THE_PLAYER_2_BLOCK_TYPE,
   ],
   Events: [WHEN_PLAYER_BLOCK_TYPE, WHEN_PLAYER_STEPS_ON_BLOCK_TYPE],
   Behaviors: [

@@ -66,6 +66,7 @@ import {
   createPlayerActionTracker,
   isPlayerAction,
 } from './playerActions';
+import {isPlayerGroup, PLAYER_GROUP} from './playerGroups';
 import {
   askAiAnswered,
   askAiFailed,
@@ -577,11 +578,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       return id;
     };
-    // Move existing sprites (e.g. world-placed ones) into the players
-    // group; the per-frame resolver picks them up from there.
-    library.commands.setPlatformPlayer = spriteArg => {
+    // Move existing sprites (e.g. world-placed ones) into a player group;
+    // the per-frame resolver picks them up from there.
+    library.commands.setPlatformPlayer = (spriteArg, group = PLAYER_GROUP) => {
       library.getSpriteArray(spriteArg).forEach(sprite => {
-        sprite.group = 'players';
+        sprite.group = group;
       });
     };
     // Footing in the gravity direction — the resolver's own geometry, so it
@@ -596,20 +597,19 @@ export default class SpriteLab2Engine extends SpriteLab {
       const walls = this.wallsThisFrame_(library);
       const view = {width: p5.width, height: p5.height};
       return library.getSpriteArray(spriteArg).some(sprite => {
-        const gravity =
-          sprite.group === 'players'
-            ? this.platformGravity_
-            : this.bodyGravity_();
+        const gravity = isPlayerGroup(sprite.group)
+          ? this.platformGravity_
+          : this.bodyGravity_();
         return gravity === 0 || test(sprite, walls, view, gravity);
       });
     };
-    // Jump against gravity if any player has footing.
-    library.commands.platformJump = speed => {
+    // Jump against gravity if any player of the group has footing.
+    library.commands.platformJump = (speed, group = PLAYER_GROUP) => {
       // Weightless, the player is steered up and down instead.
       if (this.platformGravity_ === 0) {
         return;
       }
-      if (!footing({group: 'players'}, isSupported)) {
+      if (!footing({group}, isSupported)) {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
@@ -629,15 +629,21 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (jumpSpeed === 0) {
         return;
       }
-      this.jumpStarts_ = new Map();
-      this.jumpImpulseFrame_ = this.p5Wrapper.p5
-        ? this.p5Wrapper.p5.frameCount
-        : -Infinity;
-      library.getSpriteArray({group: 'players'}).forEach(sprite => {
-        this.jumpStarts_.set(sprite, {
-          x: sprite.position.x,
-          y: sprite.position.y,
-        });
+      // Take-off spots serve the jump event, which only the arrow-key
+      // player raises; a player 2 jump must not reset them.
+      if (group === PLAYER_GROUP) {
+        this.jumpStarts_ = new Map();
+        this.jumpImpulseFrame_ = this.p5Wrapper.p5
+          ? this.p5Wrapper.p5.frameCount
+          : -Infinity;
+      }
+      library.getSpriteArray({group}).forEach(sprite => {
+        if (group === PLAYER_GROUP) {
+          this.jumpStarts_.set(sprite, {
+            x: sprite.position.x,
+            y: sprite.position.y,
+          });
+        }
         sprite.velocity.y = up * jumpSpeed;
       });
     };
@@ -1397,7 +1403,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // the scene a few pixels out for one frame.
       engine.resolvePlatformPhysics_();
       engine.physicsResolvedThisFrame_ = true;
-      const player = this.getSpriteArray({group: 'players'})[0];
+      const player = this.getSpriteArray({group: PLAYER_GROUP})[0];
       const focus = cameraFocus(zoom, player ? player.position : null);
       if (engine.frameCaptureArmed_) {
         // The picture shows the whole world: drawn at zoom 1, copied by the
@@ -1478,7 +1484,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // Consuming the one-frame mark: see usePlatformBody.
       const marked = sprite.__slab2Body;
       sprite.__slab2Body = false;
-      if (sprite.group === 'players') {
+      if (isPlayerGroup(sprite.group)) {
         players.push(snapshot(sprite));
       } else if (marked) {
         bodies.push(snapshot(sprite));
@@ -1490,7 +1496,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.prevBodies_.forEach(sprite => {
       if (
         !sprite.removed &&
-        sprite.group !== 'players' &&
+        !isPlayerGroup(sprite.group) &&
         !bodies.some(b => b.sprite === sprite)
       ) {
         sprite.mirrorY(1);
@@ -1523,10 +1529,14 @@ export default class SpriteLab2Engine extends SpriteLab {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }
     // Both the requested and the resolved positions are known here, so this
-    // is where the observer is fed.
-    this.observePlayer_(players, walls, view);
-    this.trackPlayerActions_(players, walls, view);
-    this.reportPlayerProgress_(players, view);
+    // is where the observer is fed. The arrow-key player is the one heard,
+    // tracked and reported; player 2 only moves.
+    const firstPlayers = players.filter(
+      ({sprite}) => sprite.group === PLAYER_GROUP
+    );
+    this.observePlayer_(firstPlayers, walls, view);
+    this.trackPlayerActions_(firstPlayers, walls, view);
+    this.reportPlayerProgress_(firstPlayers, view);
   }
 
   trackPlayerActions_(players, walls, view) {
@@ -1572,7 +1582,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     const p = half(player);
     const touching = [];
     Object.values(this.library.nativeSpriteMap).forEach(sprite => {
-      if (sprite === player || sprite.removed || sprite.group === 'walls') {
+      if (
+        sprite.removed ||
+        sprite.group === 'walls' ||
+        isPlayerGroup(sprite.group)
+      ) {
         return;
       }
       const s = half(sprite);
@@ -1743,7 +1757,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       state.x = sprite.position.x;
       state.facing = nextFacing(state.facing, dx);
       const moving = isMoving(dx);
-      const player = this.usesPlatformPhysics_ && sprite.group === 'players';
+      const player = this.usesPlatformPhysics_ && isPlayerGroup(sprite.group);
       const airborne =
         player && !isSupported(sprite, walls, view, this.platformGravity_);
       if (moving || airborne) {
