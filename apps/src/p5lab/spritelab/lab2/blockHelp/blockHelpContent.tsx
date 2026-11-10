@@ -137,13 +137,13 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     title: 'Remove',
     summary: 'Takes sprites out of the scene.',
     body:
-      'Give it **the touched sprite** under "when touching", so only the ' +
-      'coin the player reaches disappears.',
+      'Under "when player touches coin", give it **the touched sprite**, so ' +
+      'only the coin the player reaches disappears.',
   },
   spritelab2_touchedSprite: {
     title: 'The touched sprite',
     summary: 'Picks the sprite that was just touched, under "when touching".',
-    body: 'Anywhere else it picks no sprite at all.',
+    body: 'In "when player touches coin", it picks the coin.',
   },
   spritelab2_clickedSprite: {
     title: 'The clicked sprite',
