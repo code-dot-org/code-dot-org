@@ -41,6 +41,8 @@ const zip = () => screen.getByRole('textbox', {name: /zip code/i});
 const schoolList = () =>
   screen.getByRole('combobox', {name: 'Select your school from the list'});
 const submit = () => screen.getByRole('button', {name: 'Update my school'});
+const NO_SCHOOL_BUTTON = 'I don’t teach CS in a school setting';
+const noSchool = () => screen.getByRole('button', {name: NO_SCHOOL_BUTTON});
 
 afterEach(() => resetUsersFixtures());
 
@@ -98,6 +100,82 @@ describe('UpdateSchoolModal', () => {
 
     fireEvent.click(submit());
     await waitFor(() => expect(onClose).toHaveBeenCalled());
+  });
+
+  it('offers the non-school setting once the US zip is valid', () => {
+    renderModal();
+
+    fireEvent.change(country(), {target: {value: 'US'}});
+    expect(noSchool()).toBeDisabled();
+
+    fireEvent.change(zip(), {target: {value: '303'}});
+    expect(noSchool()).toBeDisabled();
+
+    fireEvent.change(zip(), {target: {value: '98101'}});
+    expect(noSchool()).toBeEnabled();
+  });
+
+  it('does not offer the non-school setting outside the US', () => {
+    renderModal();
+
+    fireEvent.change(country(), {target: {value: 'CA'}});
+
+    expect(screen.queryByRole('button', {name: NO_SCHOOL_BUTTON})).toBeNull();
+  });
+
+  it('saves the non-school setting', async () => {
+    const onClose = renderModal();
+    const saved = vi.fn();
+    mockServer.use(
+      http.patch('*/api/v1/user_school_infos', async ({request}) => {
+        saved(await request.json());
+        return new HttpResponse(null, {status: 204});
+      }),
+    );
+
+    fireEvent.change(country(), {target: {value: 'US'}});
+    fireEvent.change(zip(), {target: {value: '98101'}});
+    fireEvent.click(noSchool());
+
+    expect(
+      screen.queryByRole('combobox', {
+        name: 'Select your school from the list',
+      }),
+    ).toBeNull();
+    expect(
+      screen.getByText('You’ve chosen a non-school setting.'),
+    ).toBeInTheDocument();
+    expect(submit()).toBeEnabled();
+
+    fireEvent.click(submit());
+
+    expect(
+      await screen.findByText('School information updated.'),
+    ).toBeInTheDocument();
+    expect(saved).toHaveBeenCalledWith({
+      user: {
+        school_info_attributes: {
+          country: 'US',
+          school_type: 'noSchoolSetting',
+          zip: '98101',
+        },
+      },
+    });
+    expect(onClose).toHaveBeenCalled();
+  });
+
+  it('returns from the non-school setting to the school list', () => {
+    renderModal();
+
+    fireEvent.change(country(), {target: {value: 'US'}});
+    fireEvent.change(zip(), {target: {value: '98101'}});
+    fireEvent.click(noSchool());
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Return to results list'}),
+    );
+
+    expect(schoolList()).toHaveValue('selectASchool');
+    expect(submit()).toBeDisabled();
   });
 
   it('asks only for a school name outside the US', async () => {
