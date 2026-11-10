@@ -48,8 +48,8 @@ const THUMBNAIL_SIZE: Record<AnimationKind, number> = {
   block: 32,
 };
 
-/** The pool's "when touches" block, whose sprite pickers offer platform
-    blocks after the sprites: a touch with a block counts from any side. */
+/** The pool's "when touches" block: its sprite picker lists sprites, then
+    platform blocks. Touching a block from any side counts. */
 export const TOUCHING_BLOCK_TYPE = 'gamelab_checkTouching';
 
 // Thumbnail options for one kind of animation, filtered by image category.
