@@ -68,6 +68,11 @@ export interface MiniToolboxOptions {
    * mutator may.
    */
   remembersOpen?: boolean;
+  /**
+   * Called once the flyout has opened or shut, with whether it is open. The
+   * block's size changed, and no Blockly event says so: nothing saved did.
+   */
+  onToggle?: (open: boolean) => void;
 }
 
 /**
@@ -79,7 +84,7 @@ export interface MiniToolboxOptions {
  */
 export function addMiniToolbox(
   block: Blockly.BlockSvg,
-  {blocks, tooltip, remembersOpen = true}: MiniToolboxOptions,
+  {blocks, tooltip, remembersOpen = true, onToggle}: MiniToolboxOptions,
 ): void {
   // Nothing to draw on, already done, or nowhere to draw: the headless
   // generator workspace renders nothing and reads no field of this, so it can
@@ -119,7 +124,7 @@ export function addMiniToolbox(
     icon: glyph(PLUS),
     // Nothing is edited by opening a palette, so a read-only workspace may too.
     allowReadOnlyClick: true,
-    onClick: () => toggleFlyout(block, toggle),
+    onClick: () => toggleFlyout(block, toggle, onToggle),
   });
   // Its value is always empty; saved, it is a field a headless load lacks.
   // Blockly saves an editable field too (FLD-17).
@@ -130,7 +135,7 @@ export function addMiniToolbox(
     toggle.setTooltip(tooltip);
   }
   if (remembersOpen) {
-    saveOpenState(block, toggle);
+    saveOpenState(block, toggle, onToggle);
   }
 }
 
@@ -140,7 +145,11 @@ export function addMiniToolbox(
  * A block with only XML mutation hooks is left alone, since a JSON hook would
  * replace them.
  */
-function saveOpenState(block: Blockly.BlockSvg, toggle: FieldButton): void {
+function saveOpenState(
+  block: Blockly.BlockSvg,
+  toggle: FieldButton,
+  onToggle?: (open: boolean) => void,
+): void {
   if (block.mutationToDom && !block.saveExtraState) {
     return;
   }
@@ -157,16 +166,21 @@ function saveOpenState(block: Blockly.BlockSvg, toggle: FieldButton): void {
     const {useDefaultIcon, ...own} = state ?? {};
     loadOwn?.(own);
     if (useDefaultIcon === false && !block.getInput(FLYOUT_INPUT)) {
-      toggleFlyout(block, toggle);
+      toggleFlyout(block, toggle, onToggle);
     }
   };
 }
 
 /** Open the flyout by adding its input, or shut it by removing it. */
-function toggleFlyout(block: Blockly.BlockSvg, toggle: FieldButton): void {
+function toggleFlyout(
+  block: Blockly.BlockSvg,
+  toggle: FieldButton,
+  onToggle?: (open: boolean) => void,
+): void {
   if (block.getInput(FLYOUT_INPUT)) {
     block.removeInput(FLYOUT_INPUT);
     setIcon(toggle, PLUS);
+    onToggle?.(false);
     return;
   }
   const key = FieldFlyout.flyoutIdFor(block);
@@ -174,6 +188,7 @@ function toggleFlyout(block: Blockly.BlockSvg, toggle: FieldButton): void {
   block.appendDummyInput(FLYOUT_INPUT).appendField(field, key);
   field.showFlyout();
   setIcon(toggle, MINUS);
+  onToggle?.(true);
 }
 
 /**

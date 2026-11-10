@@ -18,13 +18,12 @@ be dragged out, so it cannot do this.
 
 ## Requirements
 
-MT-1. `addMiniToolbox(block, {blocks, tooltip?, remembersOpen?})`, called
-from a block's
-`init` or an extension, puts a toggle button (FLD-12) at the front of the
-block's first input, as a field named `MINI_TOOLBOX_FLYOUT_TOGGLE` with
-`tooltip`. It does nothing for a block with no inputs, for one that already
-has the toggle, and for a block on a workspace that is not rendered, which
-draws nothing and so needs none.
+MT-1. `addMiniToolbox(block, {blocks, tooltip?, remembersOpen?, onToggle?})`,
+called from a block's `init` or an extension, puts a toggle button (FLD-12)
+at the front of the block's first input, as a field named
+`MINI_TOOLBOX_FLYOUT_TOGGLE` with `tooltip`. It does nothing for a block
+with no inputs, for one that already has the toggle, and for a block on a
+workspace that is not rendered, which draws nothing and so needs none.
 
 MT-2. It sets the block's inputs inline and aligns every one to the left,
 so that the block's words stay put as the flyout opens and shuts, and adds
@@ -68,6 +67,12 @@ them. With `remembersOpen: false` none of this is done and the flyout opens
 shut. An extension passes it: Blockly throws when an extension that is not a
 mutator adds `saveExtraState` or `loadExtraState`.
 
+MT-8. Each time the flyout opens or shuts, by a press or by loading open
+(MT-7), `onToggle` is called with whether it is now open, after the input is
+added or removed. The block's size has changed and Blockly fires no event
+for it, since nothing saved changed; a caller that lays blocks out by their
+size listens here.
+
 ## Test vectors
 
 MT-V1 (MT-3). Two `test_hat` blocks with mini toolboxes register two keys,
@@ -75,6 +80,10 @@ each holding the hat's own id.
 
 MT-V2 (MT-7). A hat with its flyout open saves `extraState:
 {useDefaultIcon: false}` and no `fields`, and loads open.
+
+MT-V3 (MT-8). Pressed twice, a hat calls `onToggle` with `true`, then
+`false`; the first call sees the input `MINI_TOOLBOX_FLYOUT`, the second
+does not.
 
 ## Not specified here
 

@@ -188,6 +188,32 @@ describe('mini-toolbox.md: the toggle', () => {
   });
 });
 
+describe('mini-toolbox.md: telling the caller', () => {
+  it('MT-8, MT-V3: calls onToggle once the block has opened or shut', () => {
+    const seen: Array<[boolean, boolean]> = [];
+    Blockly.Blocks.test_told_hat = {
+      init(this: Blockly.BlockSvg) {
+        this.appendDummyInput().appendField('when told');
+        this.setNextStatement(true);
+        addMiniToolbox(this, {
+          blocks: [OFFERED],
+          onToggle: open =>
+            seen.push([open, Boolean(this.getInput('MINI_TOOLBOX_FLYOUT'))]),
+        });
+      },
+    };
+    const block = workspace.newBlock('test_told_hat') as Blockly.BlockSvg;
+    block.initSvg();
+
+    press(block);
+    press(block);
+    expect(seen).toEqual([
+      [true, true],
+      [false, false],
+    ]);
+  });
+});
+
 describe('mini-toolbox.md: pressing', () => {
   it('MT-4: opens when the toggle is pressed with the pointer', () => {
     const block = Blockly.serialization.blocks.append(
