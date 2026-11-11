@@ -161,12 +161,16 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 .listFooter {
   display: flex;
   flex: none;
-  margin-top: auto;
   align-items: center;
   justify-content: flex-start;
   min-height: 36px;
   // A hairline separates the delete button's row from the images above.
-  padding-top: 8px;
+  // The row reaches past the list on both sides, through the tab's padding
+  // on the left and the gap between the columns on the right, so the
+  // hairline runs the full width of the list's pane. The padding keeps
+  // the button where it was.
+  margin: auto (-$column-gap) 0 (-$pad);
+  padding: 8px $column-gap 0 $pad;
   border-top: 1px solid var(--border-neutral-primary);
 }
 

@@ -458,9 +458,10 @@ $z-over-blockly: 71;
   min-width: 0;
   align-items: center;
   gap: 16px;
-  // In a narrow column the second button moves to a row of its own. A
-  // button's label never breaks onto two lines.
+  // In a narrow column the second button moves to a row of its own, and
+  // each row is centered. A button's label never breaks onto two lines.
   flex-wrap: wrap;
+  justify-content: center;
   row-gap: 8px;
 
   button {
