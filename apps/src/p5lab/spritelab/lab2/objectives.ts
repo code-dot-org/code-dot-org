@@ -9,7 +9,8 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE, WorldCell} from './world';
 export type ObjectiveCheck =
   /** An image of the type was made on this level. */
   | {kind: 'image'; imageType: ImageType}
-  /** An image was generated on this level: of the type, or of any. */
+  /** The student generated an image on this level: one of `imageType` if
+      it is given, otherwise an image of any type. */
   | {kind: 'generated'; imageType?: ImageType}
   | {
       kind: 'block';
@@ -55,8 +56,9 @@ export interface Objective {
   /** Markdown. */
   text: string;
   check: ObjectiveCheck;
-  /** The item joins the checklist once this holds, and stays; until then
-      it is neither shown nor required. */
+  /** If set, the item is hidden until this check passes. While hidden it
+      does not block Continue. Once it has appeared it stays, and must be
+      completed like any other item. */
   shownWhen?: ObjectiveCheck;
 }
 
@@ -87,7 +89,8 @@ export interface RuntimeNeeds {
   move: boolean;
 }
 
-/** Every check the checklist reads: each item's own and its `shownWhen`. */
+/** All the checks a checklist uses: each item's `check`, plus its
+    `shownWhen` if it has one. */
 export function objectiveChecks(
   objectives: Objectives | undefined
 ): ObjectiveCheck[] {
@@ -149,13 +152,14 @@ export interface ObjectiveInputs {
   /** The scene open in the editor. */
   editingSceneId?: string;
   everPlayed: boolean;
-  /** Images generated on this level, by type. */
+  /** How many images the student has generated on this level, by type. */
   generated: ImageCounts;
   rated: boolean;
   runtime: RuntimeProgress;
 }
 
-/** Whether an item is in the checklist yet. */
+/** Whether an item should be visible: true unless it has a `shownWhen`
+    check that has not passed. */
 export function objectiveShown(
   item: Objective,
   inputs: ObjectiveInputs

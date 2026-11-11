@@ -25,8 +25,8 @@ export type ObjectiveItemState = ObjectiveItem;
 export interface ObjectivesState extends ObjectivesChecklist {
   /** The level declares a checklist. */
   active: boolean;
-  /** The items done, by their index in the level's list, which is how a
-      callout names them. */
+  /** The indexes of the completed items, counted in the level's full list
+      (hidden items included). Callouts refer to items by this index. */
   earned: ReadonlySet<number>;
 }
 
@@ -140,10 +140,10 @@ export function usePlayProgress(
 }
 
 /**
- * The checklist's state. An item that is done stays done, and an item that
- * has appeared stays in the list, as the Guide's steps never retreat; a
- * reload starts the list over, as the level's milestone is the lasting
- * record.
+ * The checklist's state. Once an item is completed it stays completed, and
+ * once an item has appeared it stays visible, even if its check stops
+ * passing. Reloading the page starts the checklist over; the level's saved
+ * progress is what lasts.
  */
 export function useObjectives({
   objectives,
@@ -202,43 +202,45 @@ export function useObjectives({
     ]
   );
   const items = objectives?.items;
-  // The indexes of the items, outside `had`, that `holds` now.
-  const newlyIn = useCallback(
+  // The indexes of the items that pass `test` and are not in `already`.
+  const newIndexes = useCallback(
     (
-      had: ReadonlySet<number>,
-      holds: (item: Objective, inputs: ObjectiveInputs) => boolean
+      already: ReadonlySet<number>,
+      test: (item: Objective, inputs: ObjectiveInputs) => boolean
     ) =>
       (items ?? []).flatMap((item, index) =>
-        !had.has(index) && holds(item, inputs) ? [index] : []
+        !already.has(index) && test(item, inputs) ? [index] : []
       ),
     [items, inputs]
   );
-  // Read at mount, so the first render sets nothing.
+  // The items visible at the start are worked out during the first render,
+  // so that mounting does not cause a second render.
   const [shown, setShown] = useState<ReadonlySet<number>>(
-    () => new Set(newlyIn(new Set(), objectiveShown))
+    () => new Set(newIndexes(new Set(), objectiveShown))
   );
   const earnedRef = useRef(earned);
   earnedRef.current = earned;
   const shownRef = useRef(shown);
   shownRef.current = shown;
   useEffect(() => {
-    const held = earnedRef.current;
-    const newly = newlyIn(held, (item, inputs) =>
+    const completed = earnedRef.current;
+    const newlyCompleted = newIndexes(completed, (item, inputs) =>
       checkObjective(item.check, inputs)
     );
-    const seen = shownRef.current;
-    const newlyShown = newlyIn(seen, objectiveShown);
-    // No update when nothing new holds: an input rebuilt every render would
-    // otherwise re-run this effect without end.
-    if (newly.length) {
-      setEarned(new Set([...held, ...newly]));
+    const visible = shownRef.current;
+    const newlyVisible = newIndexes(visible, objectiveShown);
+    // State is set only when something changed. The inputs are a new object
+    // on most renders, so setting state every time would loop forever.
+    if (newlyCompleted.length) {
+      setEarned(new Set([...completed, ...newlyCompleted]));
     }
-    if (newlyShown.length) {
-      setShown(new Set([...seen, ...newlyShown]));
+    if (newlyVisible.length) {
+      setShown(new Set([...visible, ...newlyVisible]));
     }
-  }, [newlyIn]);
+  }, [newIndexes]);
 
-  // One object per change: the panel it feeds is memoized on it.
+  // The result is a new object only when something changed, because the
+  // panel that receives it re-renders whenever the object is new.
   return useMemo<ObjectivesState>(() => {
     if (!objectives) {
       return {active: false, items: [], allDone: false, earned};

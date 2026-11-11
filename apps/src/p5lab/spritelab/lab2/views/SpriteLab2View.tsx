@@ -809,9 +809,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     imageNames,
     dispatch,
   ]);
-  // The images made on this level (not in the sources the level opened
-  // with) that carry generation metadata, by type, and whether one carries
-  // the student's rating in it.
+  // From the images made on this level (those not already in the project
+  // when the level opened): how many were generated, by type, and whether
+  // the student has rated any of them.
   const {generated, rated} = useMemo(() => {
     const before = new Set(
       Object.values(initialSources.animations?.propsByKey ?? {}).map(
