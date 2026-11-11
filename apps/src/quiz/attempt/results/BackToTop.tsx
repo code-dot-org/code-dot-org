@@ -8,7 +8,7 @@ export const BACK_TO_TOP_SCROLL_THRESHOLD_PX = 400;
 
 export interface BackToTopProps {
   scrollContainerRef: React.RefObject<HTMLElement>;
-  // When this is unset, focus goes to the scroll container, so it must be focusable.
+  // If nothing is mounted here, focus goes to the scroll container instead.
   focusTargetRef: React.RefObject<HTMLElement>;
 }
 
