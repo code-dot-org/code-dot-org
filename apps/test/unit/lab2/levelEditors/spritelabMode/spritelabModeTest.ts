@@ -29,7 +29,6 @@ describe('cleanLevelMode', () => {
       kind: 'code',
       extraTabs: ['Images', 'World'],
       paletteRoles: ['treasure', 'block'],
-      oneImage: true,
       noNewImages: true,
       imageKinds: ['sprite', 'block'],
     };

@@ -147,6 +147,7 @@ const WorldRow = React.memo<WorldRowProps>(
             tabIndex={col === cursorCol ? 0 : -1}
             className={classNames(
               moduleStyles.worldCell,
+              cell?.kind === 'sprite' && moduleStyles.worldCellSprite,
               refusal && moduleStyles.worldCellBlocked
             )}
             onPointerDown={event => onCellPointerDown(event, row, col)}

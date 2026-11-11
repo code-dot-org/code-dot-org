@@ -55,7 +55,6 @@ const IMAGE_TAB_KEYS: (keyof LevelMode)[] = ['learning', 'imageSource'];
 const TAB_KEYS: (keyof LevelMode)[] = [
   'extraTabs',
   'paletteRoles',
-  'oneImage',
   'noNewImages',
   'imageKinds',
 ];
@@ -65,7 +64,7 @@ const KEYS_BY_KIND: Record<LevelModeKind, (keyof LevelMode)[]> = {
   code: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
   world: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
   play: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
-  image: [...IMAGE_KEYS, ...IMAGE_TAB_KEYS, 'oneImage'],
+  image: [...IMAGE_KEYS, ...IMAGE_TAB_KEYS],
   freeplay: [...IMAGE_TAB_KEYS],
 };
 
@@ -121,7 +120,6 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
     // A false flag reads the same as no flag, so only true is stored.
     case 'imageFirst':
     case 'learning':
-    case 'oneImage':
     case 'noNewImages':
       return value === true;
     case 'imageSource':
