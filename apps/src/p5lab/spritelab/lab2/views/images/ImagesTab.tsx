@@ -258,8 +258,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     },
     []
   );
-  // The element in the pane's header bar, beside "AI Prompt", where the
-  // pane draws its info button.
+  // The element at the right end of the pane's header bar, where the pane
+  // draws its info button.
   const [headerSlot, setHeaderSlot] = useState<HTMLElement | null>(null);
   // While a picture is being made the list holds still: choosing another
   // image would unmount the scene and throw the picture away, after it has
@@ -438,7 +438,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   return (
     <div className={styles.tab}>
       <div className={styles.panelHeader} style={{width: paneWidth}}>
-        <EditorStrip title="AI Prompt" afterTitleRef={setHeaderSlot} />
+        <EditorStrip title="AI Prompt" endSlotRef={setHeaderSlot} />
       </div>
       <ImageList
         disabled={busy}

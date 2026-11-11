@@ -28,7 +28,7 @@ interface MakePaneProps {
   /** Extra controls for the header, placed after the Behind the scenes
       button. */
   extra?: React.ReactNode;
-  /** The element in the pane's header bar, beside its title, that the
+  /** The element at the right end of the pane's header bar that the
       Behind the scenes button and `extra` are drawn into. Without it they
       are not shown. */
   headerSlot?: HTMLElement | null;
