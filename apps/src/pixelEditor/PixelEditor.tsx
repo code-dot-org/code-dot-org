@@ -39,19 +39,17 @@ const MAX_CSS_HEIGHT_PX = 720;
 const CSS_WIDTH_VIEWPORT_FRACTION = 0.76;
 const MAX_CSS_WIDTH_PX = 900;
 
-// Transparency checkerboard: cell size in display px outside pixel mode, the
-// smallest legible cell in pixel mode (art-pixel cells are grouped up to it),
-// and per-theme base/tint pairs (a white base reads best on a light panel, a
-// panel-colored base on a dark one — the image dialog uses the same pairs).
+// The checkerboard that shows through transparent pixels. Its cells are
+// this many display px outside pixel mode. In pixel mode a cell is a whole
+// number of art pixels, at least the smaller size. The colors are white
+// and a pale gray (the design system's neutral gray 10) in both the light
+// and the dark theme, the same as wherever else a picture is shown.
 const CHECKER_CELL_PX = 16;
 const MIN_CHECKER_CELL_PX = 4;
-const CHECKER_COLORS = {
-  light: {base: '#ffffff', tint: 'rgb(128 128 128 / 16%)'},
-  dark: {base: '#333a47', tint: 'rgb(128 128 128 / 22%)'},
-};
+const CHECKER_COLORS = {base: '#ffffff', tint: '#e1e3e6'};
 
-// A bright azure, at the darkest shade that clears 3:1 against white while
-// holding 3:1 on the dark checker and 6.9:1 on a black background fill.
+// A bright azure, at the darkest shade that clears 3:1 against the white
+// of the checkerboard and 6.9:1 on a black background fill.
 const DEFAULT_COLOR: RGBA = [0, 155, 233, 255];
 
 // Summed per-channel difference a pixel may have from the clicked color and
@@ -229,10 +227,6 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   const shownToolsRef = useRef(shownTools);
   shownToolsRef.current = shownTools;
   const column = toolbarLayout === 'column';
-  // A ref so repaint (a stable callback) always draws the current theme's
-  // checkerboard.
-  const themeModeRef = useRef<'light' | 'dark'>(themeMode);
-  themeModeRef.current = themeMode;
   const [tool, setTool] = useState<PixelTool>('pen');
   // The last non-eyedropper tool, so the eyedropper returns you to what you
   // were using rather than always the pen. Tracked during render: whenever
@@ -423,14 +417,13 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       ctx.fillStyle = opaqueGround;
       ctx.fillRect(0, 0, display.width, display.height);
     } else {
-      const checker = CHECKER_COLORS[themeModeRef.current];
-      ctx.fillStyle = checker.base;
+      ctx.fillStyle = CHECKER_COLORS.base;
       ctx.fillRect(0, 0, display.width, display.height);
       const scale = scaleRef.current;
       const cell = pixelModeRef.current
         ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
         : CHECKER_CELL_PX;
-      ctx.fillStyle = checker.tint;
+      ctx.fillStyle = CHECKER_COLORS.tint;
       for (let y = 0; y * cell < display.height; y++) {
         for (let x = y % 2; x * cell < display.width; x += 2) {
           ctx.fillRect(x * cell, y * cell, cell, cell);
@@ -442,12 +435,6 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
     }
   }, [opaqueGround]);
-
-  // The checkerboard is baked into the canvas; redraw it if the page theme
-  // flips while the editor is open.
-  useEffect(() => {
-    repaint();
-  }, [repaint, themeMode]);
 
   // Abandon any in-progress stroke or shape drag. Losing the window
   // mid-press swallows the pointerup (and pointercancel isn't reliably
