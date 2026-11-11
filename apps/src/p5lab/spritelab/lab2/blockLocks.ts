@@ -4,9 +4,20 @@
 // locks belong to the level, are set as the pinned scene loads and are
 // never saved, so a later level without the property loads the same
 // project with every block deletable again.
+//
+// The blocks a level adds for the student to build on (add_blocks) cannot
+// be deleted on that level either, whether or not the level opts in to the
+// lock above.
 
 import * as BlocklyCore from 'blockly/core';
 
+import {
+  AddBlock,
+  AddBlockEntry,
+  isAttachRoom,
+  isAttachShadow,
+  matchesEntry,
+} from './addBlocks';
 import {requiredBlockTypes} from './blockCatalog';
 import {WHEN_RUN_BLOCK_TYPE} from './blockly/blockDefinitions/whenRun';
 import {SpriteLab2LevelProperties} from './types';
@@ -61,6 +72,51 @@ export function lockBlocks(
         block.setDeletable(false);
       }
     });
+  });
+}
+
+// Locks a block the level added, and the blocks the level added inside or
+// under it. The entry says which those are: the workspace block in the same
+// place, of the same type. A block the student put there is left alone.
+function lockAsAdded(block: BlocklyCore.Block, added: AddBlock): void {
+  block.setDeletable(false);
+  const stillThere = (
+    child: BlocklyCore.Block | null,
+    addedChild: AddBlock | null | undefined
+  ): child is BlocklyCore.Block =>
+    !!child &&
+    !!addedChild &&
+    !child.isShadow() &&
+    child.type === addedChild.type;
+  Object.entries(added.inputs ?? {}).forEach(([name, input]) => {
+    const child = block.getInputTargetBlock(name);
+    if (stillThere(child, input.block)) {
+      lockAsAdded(child, input.block as AddBlock);
+    }
+  });
+  const below = block.getNextBlock();
+  if (stillThere(below, added.next?.block)) {
+    lockAsAdded(below, added.next?.block as AddBlock);
+  }
+}
+
+/** Makes the blocks this level added (add_blocks) undeletable: each added
+    top block, and any block the level added inside or under it. A level
+    adds a block because the level is about it, and one that is not in the
+    toolbox could not be got back. What the student builds under an added
+    block can still be deleted. */
+export function lockAddedBlocks(
+  workspace: BlocklyCore.Workspace,
+  entries: AddBlockEntry[]
+): void {
+  const blocks = entries.filter(
+    (entry): entry is AddBlock => !isAttachShadow(entry) && !isAttachRoom(entry)
+  );
+  workspace.getTopBlocks(false).forEach(top => {
+    const added = blocks.find(entry => matchesEntry(top, entry));
+    if (added) {
+      lockAsAdded(top, added);
+    }
   });
 }
 

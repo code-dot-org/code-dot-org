@@ -330,11 +330,57 @@ export function forgetCoveredOutlines(
   return forgotten;
 }
 
+type BlockState = BlocklyCore.serialization.blocks.State;
+
+function stripOutlines(block: BlockState): BlockState {
+  const out: BlockState = {...block};
+  if (block.inputs) {
+    out.inputs = Object.fromEntries(
+      Object.entries(block.inputs).map(([name, input]) => [
+        name,
+        input.block ? {...input, block: stripOutlines(input.block)} : input,
+      ])
+    );
+  }
+  if (block.next) {
+    const {shadow, block: below} = block.next;
+    const outline = shadow?.type === PLACEHOLDER_BLOCK_TYPE;
+    if (below) {
+      out.next = {
+        ...(shadow && !outline && {shadow}),
+        block: stripOutlines(below),
+      };
+    } else if (outline) {
+      delete out.next;
+    }
+  }
+  return out;
+}
+
+/**
+ * The serialized workspace with every outline left out, for saving. An
+ * outline is the level's hint, not the student's work: the level draws it
+ * when it opens (see syncOutlines), so the saved project never holds one.
+ */
+export function withoutOutlines<
+  T extends {blocks?: {languageVersion?: number; blocks?: BlockState[]}}
+>(serialized: T): T {
+  const blocks = serialized.blocks?.blocks;
+  if (!blocks) {
+    return serialized;
+  }
+  return {
+    ...serialized,
+    blocks: {...serialized.blocks, blocks: blocks.map(stripOutlines)},
+  };
+}
+
 /**
  * Removes every outline showing at the end of a stack that none of the
- * level's entries puts there. Blockly saves an outline with the block it
- * hangs from, so an earlier level's outline that was never filled would
- * otherwise show as this level's hint. Returns how many were removed.
+ * level's entries puts there. A project saved before outlines were left
+ * out of the save (see withoutOutlines) can hold an earlier level's
+ * outline that was never filled, which would otherwise show as this
+ * level's hint. Returns how many were removed.
  */
 export function dropStalePlaceholders(
   workspace: BlocklyCore.Workspace,

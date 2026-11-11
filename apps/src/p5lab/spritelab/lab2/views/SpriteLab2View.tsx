@@ -66,7 +66,7 @@ import {
   heldBackBlockTypes,
   newBlockTypes,
 } from '../blockCatalog';
-import {ownToolboxTypes} from '../blockLocks';
+import {lockAddedBlocks, ownToolboxTypes} from '../blockLocks';
 import {
   refreshSceneDropdowns,
   setSceneMenuActiveId,
@@ -1812,7 +1812,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
-    addMissingBlocks(workspace, sceneAddBlocks, blockChecks);
+    addMissingBlocks(workspace, sceneAddBlocks, blockChecks).then(() => {
+      // The blocks the level added stay. A levelbuilder editing the level
+      // can delete anything.
+      if (!isLevelEditMode) {
+        lockAddedBlocks(workspace, sceneAddBlocks);
+      }
+    });
   }, [
     animationsSeeded,
     levelProperties.id,

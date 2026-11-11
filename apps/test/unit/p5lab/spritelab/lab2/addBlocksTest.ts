@@ -13,6 +13,7 @@ import {
   trailingShadow,
   dropStalePlaceholders,
   unfilledOutlines,
+  withoutOutlines,
 } from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
 
 const placeholder = (like: string, fields?: Record<string, string>) => ({
@@ -570,5 +571,61 @@ describe('addBlocks', () => {
         unfilledOutlines(workspace(waiting), [WHEN_RUN_SAY, WHEN_RUN_SAY])
       ).toEqual([waiting]);
     });
+  });
+});
+
+describe('withoutOutlines', () => {
+  it('leaves out every outline, showing or covered, and keeps other shadows', () => {
+    const source = {
+      blocks: {
+        languageVersion: 0,
+        blocks: [
+          // An outline showing at the end of a stack.
+          {
+            type: 'gamelab_checkTouching',
+            data: 'treasure-touch',
+            next: {shadow: SAY},
+          },
+          // An outline recorded under a real block, and one further down.
+          {
+            type: 'spritelab2_whenRun',
+            next: {
+              shadow: GO_TO_SCENE,
+              block: {
+                type: 'gamelab_spriteSay',
+                inputs: {
+                  SPRITE: {shadow: {type: 'gamelab_allSpritesWithAnimation'}},
+                },
+                next: {shadow: SAY},
+              },
+            },
+          },
+        ],
+      },
+    };
+    expect(withoutOutlines(source)).toEqual({
+      blocks: {
+        languageVersion: 0,
+        blocks: [
+          {type: 'gamelab_checkTouching', data: 'treasure-touch'},
+          {
+            type: 'spritelab2_whenRun',
+            next: {
+              block: {
+                type: 'gamelab_spriteSay',
+                inputs: {
+                  SPRITE: {shadow: {type: 'gamelab_allSpritesWithAnimation'}},
+                },
+              },
+            },
+          },
+        ],
+      },
+    });
+  });
+
+  it('leaves a source with no blocks alone', () => {
+    const source = {blocks: {languageVersion: 0}};
+    expect(withoutOutlines(source)).toBe(source);
   });
 });

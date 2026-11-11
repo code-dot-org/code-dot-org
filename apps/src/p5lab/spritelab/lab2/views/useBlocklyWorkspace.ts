@@ -17,6 +17,7 @@ import {
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
+import {withoutOutlines} from '../addBlocks';
 import {withoutBlockTypes} from '../blockCatalog';
 import {lockBlocks, withoutLocks} from '../blockLocks';
 import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
@@ -231,10 +232,10 @@ export default function useBlocklyWorkspace({
         workspaceRef.current
       ) as WorkspaceSerialization;
       // A levelbuilder editing the level authors its locks, so they are kept.
-      // For a student the locks come from the level, not from the saved
-      // project, so any saved ones are stripped.
+      // For a student the locks and the outlines come from the level, not
+      // from the saved project, so neither is saved.
       if (!isToolboxMode && !isStartMode) {
-        serialized = withoutLocks(serialized);
+        serialized = withoutOutlines(withoutLocks(serialized));
       }
       currentBlocksRef.current = serialized;
       onWorkspaceChangeRef.current(serialized);

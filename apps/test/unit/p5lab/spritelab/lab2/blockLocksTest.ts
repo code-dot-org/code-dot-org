@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import {
+  lockAddedBlocks,
   lockBlocks,
   ownToolboxTypes,
   withoutLocks,
@@ -116,6 +117,90 @@ describe('lockBlocks', () => {
       block => block.getRootBlock().type === 'gamelab_checkTouching'
     );
     expect([touch.deletable, say.deletable]).toEqual([true, true]);
+  });
+});
+
+describe('lockAddedBlocks', () => {
+  /** A block as the lock reads it: its tag, what is in its inputs, and
+      what is under it. */
+  function placed(
+    type: string,
+    parts: {
+      data?: string;
+      inputs?: Record<string, FakeBlock>;
+      next?: FakeBlock;
+    } = {}
+  ) {
+    return Object.assign(fakeBlock(type), {
+      data: parts.data,
+      getInputTargetBlock: (name: string) => parts.inputs?.[name] ?? null,
+      getNextBlock: () => parts.next ?? null,
+    });
+  }
+  const workspaceOf = (...tops: FakeBlock[]) =>
+    ({getTopBlocks: () => tops} as unknown as BlocklyCore.Workspace);
+
+  it('locks the top block the level added, and not what the student built', () => {
+    const say = placed('gamelab_spriteSay');
+    const event = placed('gamelab_checkTouching', {
+      data: 'treasure-touch',
+      next: say,
+    });
+    // An event of the same type the student built: it carries no tag.
+    const built = placed('gamelab_checkTouching');
+    lockAddedBlocks(workspaceOf(event, built), [
+      {type: 'gamelab_checkTouching', data: 'treasure-touch'},
+      // A placeholder hung on a stack is not a block the level added.
+      {
+        attachTo: 'gamelab_checkTouching',
+        shadow: {type: 'spritelab2_placeholder'},
+      },
+    ]);
+    expect(event.deletable).toBe(false);
+    expect(say.deletable).toBe(true);
+    expect(built.deletable).toBe(true);
+  });
+
+  it('locks the blocks the level added inside and under an added block', () => {
+    const sprite = placed('gamelab_allSpritesWithAnimation');
+    const studentSay = placed('gamelab_spriteSay');
+    const burst = placed('spritelab2_burst', {next: studentSay});
+    const event = placed('gamelab_checkTouching', {
+      data: 'treasure-touch',
+      inputs: {SPRITE1: sprite},
+      next: burst,
+    });
+    lockAddedBlocks(workspaceOf(event), [
+      {
+        type: 'gamelab_checkTouching',
+        data: 'treasure-touch',
+        inputs: {SPRITE1: {block: {type: 'gamelab_allSpritesWithAnimation'}}},
+        next: {block: {type: 'spritelab2_burst'}},
+      },
+    ]);
+    expect([event.deletable, sprite.deletable, burst.deletable]).toEqual([
+      false,
+      false,
+      false,
+    ]);
+    // Under the added blocks, the student's own block can still go.
+    expect(studentSay.deletable).toBe(true);
+  });
+
+  it('leaves a block the student put where an added block was', () => {
+    const say = placed('gamelab_spriteSay');
+    const event = placed('gamelab_checkTouching', {
+      data: 'treasure-touch',
+      next: say,
+    });
+    lockAddedBlocks(workspaceOf(event), [
+      {
+        type: 'gamelab_checkTouching',
+        data: 'treasure-touch',
+        next: {block: {type: 'spritelab2_burst'}},
+      },
+    ]);
+    expect(say.deletable).toBe(true);
   });
 });
 
