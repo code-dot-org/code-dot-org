@@ -499,8 +499,10 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   gap: 4px;
   padding: 6px 10px 6px 18px;
   // Without the outline, the bar is hard to see over a picture that is
-  // the same color as the bar.
-  border: 2px solid var(--border-brand-primary);
+  // the same color as the bar. The outline is the opposite of the bar's
+  // own color: white around the dark bar of the light theme, dark around
+  // the light bar of the dark theme.
+  border: 2px solid var(--background-neutral-primary);
   border-radius: 12px;
   background-color: var(--background-neutral-primary-inverse);
   color: var(--text-neutral-primary-inverse);
