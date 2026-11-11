@@ -98,16 +98,6 @@
         "bodyPlan": "quadruped"
       },
       {
-        "id": "fairy",
-        "text": "fairy",
-        "icon": "wand-sparkles"
-      },
-      {
-        "id": "astronaut",
-        "text": "astronaut",
-        "icon": "user-astronaut"
-      },
-      {
         "id": "unicorn",
         "text": "unicorn",
         "icon": "unicorn",

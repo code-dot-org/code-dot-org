@@ -88,11 +88,11 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
           sentence and the Animated switch; while a picture is made there
           are no words to show, so no box either. */}
       {!generating && (
-        <div className={styles.paneScroll}>
-          {parts.wordChooser}
-          {parts.error}
-        </div>
+        <div className={styles.paneScroll}>{parts.wordChooser}</div>
       )}
+      {/* The error message sits outside the scrolling box of words, so it
+          is visible however far the words are scrolled. */}
+      {parts.error}
       {parts.animatedChoice}
       <div className={styles.paneBottom}>
         <MuiButton

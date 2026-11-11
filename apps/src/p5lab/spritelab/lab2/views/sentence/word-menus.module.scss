@@ -452,3 +452,11 @@ button.chipWord {
     transition: none;
   }
 }
+
+// Turns off the entrance animation of an element whose animation has
+// already finished (see WordMenus). This rule must stay at the end of the
+// file: it has the same specificity as the animation rules above, so it
+// only wins by coming after them.
+.entrancePlayed {
+  animation: none;
+}
