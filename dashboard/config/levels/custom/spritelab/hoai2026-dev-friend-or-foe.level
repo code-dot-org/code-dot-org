@@ -54,7 +54,8 @@
           "check": {
             "kind": "world",
             "role": "friend"
-          }
+          },
+          "live": true
         }
       ]
     },

@@ -142,8 +142,9 @@ export function usePlayProgress(
 /**
  * The checklist's state. Once an item is completed it stays completed, and
  * once an item has appeared it stays visible, even if its check stops
- * passing. Reloading the page starts the checklist over; the level's saved
- * progress is what lasts.
+ * passing. The exception is an item marked `live`: it is completed only
+ * while its check passes. Reloading the page starts the checklist over; the
+ * level's saved progress is what lasts.
  */
 export function useObjectives({
   objectives,
@@ -227,17 +228,28 @@ export function useObjectives({
     const newlyCompleted = newIndexes(completed, (item, inputs) =>
       checkObjective(item.check, inputs)
     );
+    // A live item that was completed and whose check no longer passes.
+    const undone = [...completed].filter(index => {
+      const item = items?.[index];
+      return !!item?.live && !checkObjective(item.check, inputs);
+    });
     const visible = shownRef.current;
     const newlyVisible = newIndexes(visible, objectiveShown);
     // State is set only when something changed. The inputs are a new object
     // on most renders, so setting state every time would loop forever.
-    if (newlyCompleted.length) {
-      setEarned(new Set([...completed, ...newlyCompleted]));
+    if (newlyCompleted.length || undone.length) {
+      setEarned(
+        new Set(
+          [...completed, ...newlyCompleted].filter(
+            index => !undone.includes(index)
+          )
+        )
+      );
     }
     if (newlyVisible.length) {
       setShown(new Set([...visible, ...newlyVisible]));
     }
-  }, [newIndexes]);
+  }, [newIndexes, items, inputs]);
 
   // The result is a new object only when something changed, because the
   // panel that receives it re-renders whenever the object is new.

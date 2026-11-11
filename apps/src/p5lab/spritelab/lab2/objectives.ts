@@ -60,6 +60,11 @@ export interface Objective {
       does not block Continue. Once it has appeared it stays, and must be
       completed like any other item. */
   shownWhen?: ObjectiveCheck;
+  /** If true, the item is ticked only while its check passes, so it
+      un-ticks when the student undoes the work (for example, removes an
+      object they had placed). Without this, an item stays ticked once its
+      check has passed. Use it for work a later level depends on. */
+  live?: boolean;
 }
 
 export interface Objectives {
