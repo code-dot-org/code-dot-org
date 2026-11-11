@@ -723,16 +723,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const playProgress = usePlayProgress(playing, needs);
   const {onPlayerProgress, onSceneLanded} = playProgress;
-  // Nothing counts until this level's list is seeded: before that the store
-  // still holds the previous level's images, and an item they earned would
-  // stay earned.
   // The images made on this level, by type. A level that makes one image
   // for a role also counts that image when it was made on an earlier
-  // visit: a student who comes back changes it in place, so no new image
-  // would ever be counted, and the level's image steps could not be ticked.
+  // visit. A student who comes back changes that image in place, so no new
+  // image would ever be counted, and the level's image steps could not be
+  // ticked.
   const levelImageType = levelProperties.levelMode?.imageType;
   const levelImageRole = levelProperties.levelMode?.imageRole;
   const objectiveImages = useMemo(() => {
+    // No image is counted until this level's image list has loaded. Until
+    // then the store still holds the previous level's images, and a step
+    // they completed would stay completed.
     if (!animationsSeeded) {
       return NO_IMAGES;
     }
@@ -866,7 +867,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ),
     [scenes]
   );
-  // The header's bubble for this level reads the same status.
+  // The student completed this level on an earlier visit. This is the
+  // level's saved status, the same one that colors its bubble in the
+  // header.
   const completedBefore = useAppSelector(
     state => getCurrentLevel(state)?.status === LevelStatus.perfect
   );
