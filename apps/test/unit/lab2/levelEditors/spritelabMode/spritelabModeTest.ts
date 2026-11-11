@@ -109,6 +109,15 @@ describe('setKind', () => {
 });
 
 describe('setImageType', () => {
+  it('keeps the limited paint tools on an image level', () => {
+    expect(
+      setImageType(
+        {kind: 'image', imageType: 'sprite', limitedPaintTools: true},
+        'block'
+      )
+    ).toEqual({kind: 'image', imageType: 'block', limitedPaintTools: true});
+  });
+
   it('drops the subject when the type is no longer a sprite', () => {
     expect(
       setImageType(

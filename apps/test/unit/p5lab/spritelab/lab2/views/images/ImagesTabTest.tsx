@@ -733,8 +733,15 @@ describe('ImagesTab', () => {
     unmount();
 
     // Without the option the tools are the ones free play offers.
-    renderTab({editingOffered: true});
+    const freePlay = renderTab({editingOffered: true});
     expect(await screen.findByText('canvas')).toBeTruthy();
+    expect(screen.getByText('3 brush sizes')).toBeTruthy();
+    freePlay.unmount();
+
+    // That holds on a level about one image too.
+    propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
     expect(screen.getByText('3 brush sizes')).toBeTruthy();
   });
 
@@ -811,6 +818,7 @@ describe('ImagesTab', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
     const {rerender} = renderTab({
       lockedImageType: 'sprite',
+      limitedPaintTools: true,
       imageRole: 'hero',
     });
     fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));

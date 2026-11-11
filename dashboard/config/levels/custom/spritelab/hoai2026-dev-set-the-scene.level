@@ -24,6 +24,7 @@
     "lock_earlier_blocks": true,
     "level_mode": {
       "kind": "code",
+      "limitedPaintTools": true,
       "imageType": "background",
       "imageRole": "platform-background",
       "imageFirst": true,

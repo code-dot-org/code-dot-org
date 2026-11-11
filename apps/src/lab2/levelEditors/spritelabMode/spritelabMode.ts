@@ -67,7 +67,7 @@ const KEYS_BY_KIND: Record<LevelModeKind, (keyof LevelMode)[]> = {
   code: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
   world: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
   play: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
-  image: [...IMAGE_KEYS, ...IMAGE_TAB_KEYS],
+  image: [...IMAGE_KEYS, ...IMAGE_TAB_KEYS, 'limitedPaintTools'],
   freeplay: [...IMAGE_TAB_KEYS],
 };
 
