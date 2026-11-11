@@ -122,6 +122,7 @@ import spriteLab2Reducer, {
   setScenes,
   Tab,
 } from '../redux/spriteLab2Redux';
+import {resetUnitProgress} from '../resetUnitProgress';
 import {sceneMetadataFor} from '../sceneThumbnails';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {clearRoom} from '../stackRoom';
@@ -364,6 +365,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     state => getCurrentLevels(state)?.[0]?.id as string | undefined
   );
   const scriptId = useAppSelector(state => state.progress.scriptId);
+  const scriptName = useAppSelector(state => state.progress.scriptName);
   const isRunning = useAppSelector(state => state.runState.isRunning);
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
   const blocklySettings = useBlocklySettings();
@@ -2141,8 +2143,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }
             startOver();
             setShowStartOver(false);
+            // The project is shared by the unit's levels, so resetting it
+            // undoes all of them. Their progress is cleared too, where the
+            // unit allows it, before going back to the first level, so that
+            // level opens with every bubble showing "not done".
+            const cleared = scriptName
+              ? resetUnitProgress(scriptName, dispatch)
+              : Promise.resolve(false);
             if (leaving) {
-              dispatch(navigateToLevelId(firstLevelId));
+              cleared.then(() => dispatch(navigateToLevelId(firstLevelId)));
             }
           }}
           onCancel={() => setShowStartOver(false)}

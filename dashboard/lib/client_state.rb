@@ -18,6 +18,15 @@ class ClientState
     session[:callouts_seen] = nil
   end
 
+  # Forgets the level progress recorded for one unit, by its name. Progress
+  # in other units is kept.
+  # @param [String] unit_name
+  def reset_level_progress_for_unit(unit_name)
+    migrate_cookies
+    remaining = progress_hash.except(unit_name)
+    cookies.permanent[:progress] = JSON.generate(remaining)
+  end
+
   # Returns the progress value for the given level_id, or 0 if there
   # has been no progress.
   # @param [ScriptLevel] script_level

@@ -1414,6 +1414,53 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test "reset_user_progress clears the signed-in student's level progress in a unit that opts in" do
+    unit = create(:script, :with_levels, levels_count: 1)
+    unit.update!(start_over_resets_progress: true)
+    sign_out @teacher
+    sign_in @student_1
+    UserLevel.create!(user: @student_1, script: unit, level: unit.levels.first, best_result: 100)
+    # Progress in another unit, and another student's progress, are kept.
+    UserLevel.create!(user: @student_1, script: @script, level: @level, best_result: 100)
+    UserLevel.create!(user: @student_2, script: unit, level: unit.levels.first, best_result: 100)
+
+    post :reset_user_progress, params: {script: unit.name}
+
+    assert_response :no_content
+    assert_equal 0, UserLevel.where(user_id: @student_1.id, script_id: unit.id).count
+    assert_equal 1, UserLevel.where(user_id: @student_1.id, script_id: @script.id).count
+    assert_equal 1, UserLevel.where(user_id: @student_2.id, script_id: unit.id).count
+  end
+
+  test "reset_user_progress is forbidden for a unit that does not opt in" do
+    sign_out @teacher
+    sign_in @student_1
+    UserLevel.create!(user: @student_1, script: @script, level: @level, best_result: 100)
+
+    post :reset_user_progress, params: {script: @script.name}
+
+    assert_response :forbidden
+    assert_equal 1, UserLevel.where(user_id: @student_1.id, script_id: @script.id).count
+  end
+
+  test "reset_user_progress returns not found for a unit that does not exist" do
+    post :reset_user_progress, params: {script: 'no-such-unit'}
+
+    assert_response :not_found
+  end
+
+  test "reset_user_progress forgets a signed-out visitor's progress in the unit, and keeps other units'" do
+    unit = create(:script, :with_levels, levels_count: 1)
+    unit.update!(start_over_resets_progress: true)
+    sign_out @teacher
+    cookies[:progress] = JSON.generate({unit.name => {'1' => 100}, 'another-unit' => {'2' => 100}})
+
+    post :reset_user_progress, params: {script: unit.name}
+
+    assert_response :no_content
+    assert_equal({'another-unit' => {'2' => 100}}, JSON.parse(cookies[:progress]))
+  end
+
   test "teacher_panel_section returns summarized section when passed section id owned by logged in teacher" do
     get :teacher_panel_section, params: {
       section_id: @section.id

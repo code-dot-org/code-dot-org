@@ -562,6 +562,28 @@ class ApiController < ApplicationController
     }
   end
 
+  # POST /api/user_progress/:script/reset
+  # Clears the current student's level progress in one unit: the signed-in
+  # user's, or a signed-out visitor's progress kept in their cookie. A lab
+  # calls this when Start Over resets a project that every level of the unit
+  # shares, so the unit's levels read as not done again. The project itself
+  # is reset by the lab, not here.
+  #
+  # Only a unit that opts in (start_over_resets_progress) can be reset this
+  # way, so this cannot clear a student's progress in a classroom course.
+  def reset_user_progress
+    unit = Unit.get_from_cache(params[:script], raise_exceptions: false)
+    return head :not_found unless unit
+    return head :forbidden unless unit.start_over_resets_progress?
+
+    if current_user
+      User.delete_level_progress_for_unit(user_id: current_user.id, script_id: unit.id)
+    else
+      client_state.reset_level_progress_for_unit(unit.name)
+    end
+    head :no_content
+  end
+
   use_reader_connection_for_route(:user_progress)
 
   # Return a JSON summary of the user's progress for params[:script].

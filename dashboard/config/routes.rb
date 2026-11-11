@@ -1126,7 +1126,7 @@ Dashboard::Application.routes.draw do
     # Mutating actions kept out of the GET wildcard below: a GET would skip
     # CSRF verification.
     api_post_only_methods = [:import_classlink_classroom]
-    api_explicitly_routed_methods = [:mass_progress_reset]
+    api_explicitly_routed_methods = [:mass_progress_reset, :reset_user_progress]
     api_methods -= api_post_only_methods + api_explicitly_routed_methods
 
     namespace :dashboardapi, module: :api do
@@ -1151,6 +1151,7 @@ Dashboard::Application.routes.draw do
     post '/api/mass_progress_reset', to: 'api#mass_progress_reset'
     get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
     get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
+    post '/api/user_progress/:script/reset', to: 'api#reset_user_progress'
     get '/api/user_app_options/:script/:lesson_position/:level_position/:level', to: 'api#user_app_options', as: 'user_app_options'
     get '/api/example_solutions/:script_level_id/:level_id', to: 'api#example_solutions'
     put '/api/firehose_unreachable', to: 'api#firehose_unreachable'

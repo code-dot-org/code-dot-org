@@ -7,7 +7,8 @@
       "simple_progress": true,
       "simple_progress_image": "/blockly/media/hoai2026/logo.png",
       "is_migrated": true,
-      "tts": true
+      "tts": true,
+      "start_over_resets_progress": true
     },
     "new_name": null,
     "family_name": null,

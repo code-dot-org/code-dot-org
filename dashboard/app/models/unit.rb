@@ -347,6 +347,7 @@ class Unit < ApplicationRecord
     generate_authoring_rules
     simple_progress
     simple_progress_image
+    start_over_resets_progress
   )
 
   def self.starwars_unit
@@ -1479,6 +1480,7 @@ class Unit < ApplicationRecord
         tts: tts?,
         simpleProgress: simple_progress?,
         simpleProgressImage: simple_progress_image,
+        startOverResetsProgress: start_over_resets_progress?,
         deprecated: deprecated?,
         is_migrated: is_migrated?,
         scriptPath: unit_path,
@@ -1816,7 +1818,8 @@ class Unit < ApplicationRecord
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
       :enable_blockly_keyboard_navigation,
-      :simple_progress
+      :simple_progress,
+      :start_over_resets_progress
     ]
 
     result = {}

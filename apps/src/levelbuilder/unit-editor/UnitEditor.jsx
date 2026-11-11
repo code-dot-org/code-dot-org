@@ -80,6 +80,7 @@ class UnitEditor extends React.Component {
     initialTts: PropTypes.bool,
     initialSimpleProgress: PropTypes.bool,
     initialSimpleProgressImage: PropTypes.string,
+    initialStartOverResetsProgress: PropTypes.bool,
     hasCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
@@ -140,6 +141,7 @@ class UnitEditor extends React.Component {
       tts: this.props.initialTts,
       simpleProgress: this.props.initialSimpleProgress,
       simpleProgressImage: this.props.initialSimpleProgressImage || '',
+      startOverResetsProgress: !!this.props.initialStartOverResetsProgress,
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
@@ -252,6 +254,7 @@ class UnitEditor extends React.Component {
       tts: this.state.tts,
       simple_progress: this.state.simpleProgress,
       simple_progress_image: this.state.simpleProgressImage,
+      start_over_resets_progress: this.state.startOverResetsProgress,
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
@@ -462,6 +465,25 @@ class UnitEditor extends React.Component {
               />
             </label>
           )}
+          <label>
+            Start Over in a lab also clears this unit's level progress
+            <input
+              type="checkbox"
+              checked={this.state.startOverResetsProgress}
+              style={styles.checkbox}
+              onChange={e =>
+                this.setState({startOverResetsProgress: e.target.checked})
+              }
+            />
+            <HelpTip>
+              <p>
+                For a unit whose levels all share one project. When a student
+                presses Start Over, the project is reset and every level of the
+                unit shows as not done again. Leave this off for a unit taught
+                in classrooms: it lets a student clear their own progress.
+              </p>
+            </HelpTip>
+          </label>
           <label>
             Enable Text-to-Speech
             <input

@@ -1562,6 +1562,16 @@ class User < ApplicationRecord
     delete_progress_for_units(user_ids: [user_id], unit_ids: [script_id])
   end
 
+  # Deletes one user's level progress in a unit and nothing else. The user's
+  # projects in the unit are kept, unlike delete_progress_for_unit, which
+  # also removes them.
+  def self.delete_level_progress_for_unit(user_id:, script_id:)
+    raise "User id required" unless user_id
+    raise "Script id required" unless script_id
+
+    paranoid_destroy_all_with_retry(UserLevel.where(user_id: user_id, script_id: script_id))
+  end
+
   # Batched version of delete_progress_for_unit: deletes progress for every
   # (user, unit) pair in one pass instead of one query round-trip per pair.
   def self.delete_progress_for_units(user_ids:, unit_ids:)
