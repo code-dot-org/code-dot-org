@@ -215,6 +215,14 @@ $border-subtle: chrome.$border-subtle;
 
 // Keyboard paint cursor, pixel mode: the exact brush footprint. White core
 // with a black halo inside and out, so it reads against any artwork.
+// The lines between art pixels, over the display canvas; sized in JS.
+.gridLines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
 .kbCursorRect {
   position: absolute;
   box-sizing: border-box;
@@ -288,17 +296,31 @@ $border-subtle: chrome.$border-subtle;
   @include chrome.primary-button;
 }
 
+$palette-swatch: 24px;
+$palette-gap: 8px;
+// Swatches on each row of the palette popover.
+$palette-columns: 5;
+
 .palette {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: $palette-gap;
+}
+
+// Wide enough for one row of swatches; any more wrap onto the next row.
+$palette-row: $palette-columns * $palette-swatch + ($palette-columns - 1) * $palette-gap;
+
+.palettePopover {
+  box-sizing: content-box;
+  width: $palette-row;
+  padding: $palette-gap;
 }
 
 .paletteSwatch {
   box-sizing: border-box;
-  width: 24px;
-  height: 24px;
+  width: $palette-swatch;
+  height: $palette-swatch;
   margin: 0;
   padding: 0;
   border: 2px solid var(--dialog-control-border-strong);

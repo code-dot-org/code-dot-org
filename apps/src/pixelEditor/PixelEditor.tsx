@@ -12,8 +12,11 @@ import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import ColorPicker from './ColorPicker';
-import PaletteSwatches from './PaletteSwatches';
-import {NATIVE_PIXEL_GRID, downsampleToGrid} from './pixelArt';
+import {
+  NATIVE_PIXEL_GRID,
+  downsampleToGrid,
+  gridLinePositions,
+} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
 import {PixelTool, TOOLS, toolTitle} from './toolDefinitions';
 import {
@@ -52,7 +55,7 @@ const CHECKER_COLORS = {
 
 // The grid lines drawn between art pixels in pixel mode. The gray is
 // visible over light pixels and over dark ones. The lines are drawn only
-// when an art pixel is at least this many display px wide.
+// when an art pixel is at least this many CSS px wide on screen.
 const GRID_LINE_COLOR = 'rgb(128 128 128 / 35%)';
 const MIN_GRID_LINE_CELL_PX = 6;
 
@@ -187,14 +190,15 @@ export interface PixelEditorProps {
   onHistoryChange?: (history: PixelEditorHistory) => void;
   // Added to the canvas box, e.g. to drop its border inside a host's frame.
   canvasClassName?: string;
-  // One round swatch each, in place of the spectrum picker; the first is
-  // the color the editor opens on.
+  // The only colors offered: the color square opens these as round
+  // swatches, in place of the spectrum picker. The first is the color the
+  // editor opens on.
   palette?: readonly PaletteColor[];
   // The brush sizes to offer, in BRUSH_SIZES order; all four when absent.
   // The editor opens on the first; one alone shows no size buttons.
   brushSizes?: readonly number[];
   // The toolbar as the host lays it out: groups of tool ids, 'sizes' (the
-  // brush sizes) and 'color' (the swatches or the picker), a divider
+  // brush sizes) and 'color' (the color square and its popover), a divider
   // between groups. Absent, the toolbar is the editor's own arrangement.
   toolbarGroups?: readonly (readonly ToolbarItem[])[];
   // The host lays the parts out, inside the editor's theme host.
@@ -279,6 +283,11 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   const pixelModeRef = useRef(false);
 
   const displayRef = useRef<HTMLCanvasElement | null>(null);
+  // The grid lines, on a canvas of their own over the display canvas. This
+  // canvas has one pixel per screen pixel. The display canvas is scaled by
+  // the browser to fit, and a one-pixel line drawn on it can fall between
+  // screen pixels and disappear on a display that is not high-density.
+  const gridLinesRef = useRef<HTMLCanvasElement | null>(null);
   // Backing canvas at native image resolution: the single source of truth.
   const backingRef = useRef<HTMLCanvasElement | null>(null);
   // Circle preview: drawn over the backing on the display until pointer-up.
@@ -447,20 +456,40 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     if (previewRef.current) {
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
     }
-    // Lines between the art pixels, over the picture, so the grid shows on
-    // filled pixels as well as on the checkerboard. They are left out when
-    // the art pixels are too small on screen for lines to fit between them.
-    const scale = scaleRef.current;
-    if (pixelModeRef.current && scale >= MIN_GRID_LINE_CELL_PX) {
-      ctx.fillStyle = GRID_LINE_COLOR;
-      for (let x = scale; x < display.width; x += scale) {
-        ctx.fillRect(Math.round(x), 0, 1, display.height);
-      }
-      for (let y = scale; y < display.height; y += scale) {
-        ctx.fillRect(0, Math.round(y), display.width, 1);
-      }
-    }
   }, [opaqueGround]);
+
+  // Draws the lines between the art pixels for a display canvas shown at
+  // `cssWidth` by `cssHeight`. The lines sit over the picture, so the grid
+  // shows on filled pixels as well as on the checkerboard. They are left
+  // out when the art pixels are too small on screen for lines to fit
+  // between them.
+  const paintGridLines = useCallback((cssWidth: number, cssHeight: number) => {
+    const lines = gridLinesRef.current;
+    const backing = backingRef.current;
+    if (!lines || !backing) {
+      return;
+    }
+    const density = window.devicePixelRatio || 1;
+    // Setting the size also clears the canvas.
+    lines.width = Math.round(cssWidth * density);
+    lines.height = Math.round(cssHeight * density);
+    lines.style.width = `${cssWidth}px`;
+    lines.style.height = `${cssHeight}px`;
+    const ctx = lines.getContext('2d');
+    const cellCssPx = cssWidth / backing.width;
+    if (!ctx || !pixelModeRef.current || cellCssPx < MIN_GRID_LINE_CELL_PX) {
+      return;
+    }
+    // One CSS pixel thick, in whole screen pixels.
+    const thickness = Math.max(1, Math.round(density));
+    ctx.fillStyle = GRID_LINE_COLOR;
+    for (const x of gridLinePositions(backing.width, lines.width)) {
+      ctx.fillRect(x, 0, thickness, lines.height);
+    }
+    for (const y of gridLinePositions(backing.height, lines.height)) {
+      ctx.fillRect(0, y, lines.width, thickness);
+    }
+  }, []);
 
   // The checkerboard is baked into the canvas; redraw it if the page theme
   // flips while the editor is open.
@@ -744,6 +773,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
         y: Math.round(cssH) / backing.height,
       });
       repaint();
+      paintGridLines(Math.round(cssW), Math.round(cssH));
     };
     size();
     const area = canvasAreaRef.current;
@@ -753,7 +783,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     const observer = new ResizeObserver(size);
     observer.observe(area);
     return () => observer.disconnect();
-  }, [loaded, loadVersion, repaint, fit]);
+  }, [loaded, loadVersion, repaint, paintGridLines, fit]);
 
   // Map a pointer event to backing-canvas pixel coordinates.
   const toPixel = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
@@ -1414,13 +1444,12 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     onHistoryChange?.({canUndo, canRedo, undo, redo});
   }, [onHistoryChange, canUndo, canRedo, undo, redo]);
 
-  const colorControl = palette ? (
-    <PaletteSwatches palette={palette} color={color} onChange={setColor} />
-  ) : (
+  const colorControl = (
     <ColorPicker
       color={color}
       onChange={setColor}
       recentColors={recentColors}
+      palette={palette}
     />
   );
 
@@ -1616,6 +1645,11 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
               onBlur={dismissKeyboardCursor}
             />
             {/* eslint-enable jsx-a11y/no-interactive-element-to-noninteractive-role */}
+            <canvas
+              ref={gridLinesRef}
+              className={moduleStyles.gridLines}
+              aria-hidden
+            />
             {kbCursor &&
               cssScale &&
               (pixelMode ? (

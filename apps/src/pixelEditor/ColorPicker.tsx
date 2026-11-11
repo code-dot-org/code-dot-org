@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import PaletteSwatches from './PaletteSwatches';
+import {PaletteColor} from './PixelEditor';
 import PixelTooltip from './PixelTooltip';
 import {RGBA, TRANSPARENT} from './tools';
 
@@ -47,6 +49,9 @@ interface ColorPickerProps {
   // Recently used colors, in first-seen order; shown as one row under the
   // spectrum, after the permanent transparent swatch.
   recentColors?: RGBA[];
+  // A fixed set of colors. The popover then offers these as round swatches
+  // and nothing else: no spectrum, no recent colors, no transparent.
+  palette?: readonly PaletteColor[];
 }
 
 /**
@@ -55,14 +60,20 @@ interface ColorPickerProps {
  * anywhere else to close. Keyboard: the spectrum takes focus on open, arrow
  * keys steer the sample cursor (color updates live), Enter/Space confirms,
  * Escape reverts to the color the popover opened with.
+ *
+ * With a `palette`, the popover holds that palette's swatches instead. The
+ * chosen swatch takes focus on open, Tab moves between swatches, and
+ * choosing one closes the popover.
  */
 const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
   color,
   onChange,
   recentColors = [],
+  palette,
 }) => {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
+  const paletteRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const swatchRef = useRef<HTMLButtonElement | null>(null);
   // The sample cursor, in spectrum-canvas px. Always shown while open and
@@ -111,6 +122,13 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       // the swatch on Enter/Escape). Programmatic focus after a click isn't
       // :focus-visible, so pointer users see no focus ring.
       canvasRef.current.focus();
+    }
+    if (open && paletteRef.current) {
+      const swatches = paletteRef.current.querySelectorAll('button');
+      const chosen = Array.from(swatches).find(
+        swatch => swatch.getAttribute('aria-pressed') === 'true'
+      );
+      (chosen ?? swatches[0])?.focus();
     }
   }, [open]);
 
@@ -298,7 +316,22 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
           {swatchButton}
         </PixelTooltip>
       )}
-      {open && (
+      {open && palette && (
+        <div
+          ref={paletteRef}
+          className={classNames(
+            moduleStyles.spectrumPopover,
+            moduleStyles.palettePopover
+          )}
+        >
+          <PaletteSwatches
+            palette={palette}
+            color={color}
+            onChange={pickAndClose}
+          />
+        </div>
+      )}
+      {open && !palette && (
         <div className={moduleStyles.spectrumPopover}>
           <div className={moduleStyles.spectrumWrap}>
             {/* role="application" so screen readers hand the arrow keys
