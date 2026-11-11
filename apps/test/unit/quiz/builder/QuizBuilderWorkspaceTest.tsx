@@ -665,6 +665,30 @@ describe('QuizBuilderWorkspace', () => {
       expect(deletePage).toHaveBeenCalledWith(3);
     });
 
+    it('keeps page menus shut while a question has unsaved edits', async () => {
+      renderWorkspace({questions: TWO_PAGES});
+
+      fireEvent.click(
+        screen.getAllByRole('button', {name: 'Edit question'})[0]
+      );
+      fireEvent.change(
+        screen.getByDisplayValue('JavaScript variable fundamentals'),
+        {target: {value: 'Edited name'}}
+      );
+
+      for (const page of [1, 2]) {
+        expect(
+          pageMenuOf(page).getByRole('button', {name: `Page ${page} options`})
+        ).toHaveAttribute('aria-disabled', 'true');
+      }
+      fireEvent.mouseOver(
+        pageMenuOf(2).getByRole('button', {name: 'Page 2 options'})
+      );
+      expect(
+        await screen.findByRole('tooltip', {name: editedQuestionsReason(1)})
+      ).toBeInTheDocument();
+    });
+
     it('keeps the only page, even when empty', () => {
       renderWorkspace({pages: [{page: 1, questions: []}]});
 

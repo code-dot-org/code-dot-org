@@ -9,6 +9,7 @@ interface PageMenuProps {
   canAddPage: boolean;
   // Why the page can't be deleted, if it can't.
   deleteDisabledReason?: string;
+  rearrangeDisabledReason?: string;
   onMove: (offset: -1 | 1) => void;
   // Adds an empty page that becomes page `page`.
   onAddPage: (page: number) => void;
@@ -21,6 +22,7 @@ const PageMenu: React.FunctionComponent<PageMenuProps> = ({
   canMoveDown,
   canAddPage,
   deleteDisabledReason,
+  rearrangeDisabledReason,
   onMove,
   onAddPage,
   onDelete,
@@ -28,6 +30,7 @@ const PageMenu: React.FunctionComponent<PageMenuProps> = ({
   <BuilderMenu
     name={`page-menu-${page}`}
     label={`Page ${page} options`}
+    disabledReason={rearrangeDisabledReason}
     entries={[
       {
         iconName: 'arrow-up',

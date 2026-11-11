@@ -111,6 +111,11 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   const editedCount = [...dirtyIds].filter(
     id => !isPendingQuestionId(id)
   ).length;
+  const rearrangeDisabledReason = hasPendingQuestion
+    ? UNSAVED_QUESTION_REASON
+    : editedCount > 0
+    ? editedQuestionsReason(editedCount)
+    : undefined;
   const saveDisabledReason = isLoading
     ? QUIZ_LOADING_REASON
     : !hasLoaded
@@ -229,6 +234,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                     ? LAST_PAGE_REASON
                     : undefined
                 }
+                rearrangeDisabledReason={rearrangeDisabledReason}
                 onMove={offset => movePage(page, offset)}
                 onAddPage={addPage}
                 onDelete={() => deletePage(page)}
