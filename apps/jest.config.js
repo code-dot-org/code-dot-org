@@ -19,6 +19,9 @@ const jestAliases = {
   '^firmata$': 'mock-firmata/mock-firmata',
   // Stub out core's api module, since it carries in ESM-only packages which don't play well with apps' CommonJS build.
   '^@code-dot-org/core/api$': '<rootDir>/test/util/stubCoreApi.ts',
+  // The analytics plugin reaches that api module through its stable-ID fetch.
+  '^@code-dot-org/core/plugins/analytics$':
+    '<rootDir>/test/util/stubCoreAnalytics.ts',
   'script-loader!@code-dot-org/(.*)': '<rootDir>/node_modules/@code-dot-org/$1',
 };
 

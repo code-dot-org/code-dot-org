@@ -7,11 +7,11 @@ module StatsigAnalyticsHelper
   TARGET_PATH_PATTERNS = Regexp.union(TARGET_PATHS).freeze
 
   def load_web_analytics?(request)
-    DCDO.get('statsig-plugin-enabled', true) && TARGET_PATH_PATTERNS.match?(request.path)
+    TARGET_PATH_PATTERNS.match?(request.path)
   end
 
   def analytics_config
-    enabled = DCDO.get('statsig-plugin-enabled', true)
+    enabled = DCDO.get('statsig-plugin-enabled', false)
     # Set in production, on the managed test server, and in locals.yml for local work.
     client_key = CDO.safe_statsig_api_client_key
     return {provider: 'none', enabled: enabled} if client_key.blank?
