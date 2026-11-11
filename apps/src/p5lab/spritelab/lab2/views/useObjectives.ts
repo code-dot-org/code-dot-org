@@ -140,9 +140,9 @@ export function usePlayProgress(
 }
 
 /**
- * The checklist's state. An item stays done once it has held, like the
- * Guide's steps never retreat, and an item stays shown once it has been;
- * a reload starts the list over, as the level's milestone is the lasting
+ * The checklist's state. An item that is done stays done, and an item that
+ * has appeared stays in the list, as the Guide's steps never retreat; a
+ * reload starts the list over, as the level's milestone is the lasting
  * record.
  */
 export function useObjectives({
