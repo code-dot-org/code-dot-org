@@ -15,6 +15,7 @@ import {
   LAST_PAGE_REASON,
   NO_CHANGES_REASON,
   PAGE_HAS_QUESTIONS_REASON,
+  QUESTION_HAS_CHANGES_REASON,
   QUIZ_LOAD_FAILED_REASON,
   QUIZ_LOADING_REASON,
   QUIZ_BUILDER_HEADER_ID,
@@ -547,9 +548,13 @@ describe('QuizBuilderWorkspace', () => {
         {target: {value: 'Edited name'}}
       );
 
-      expect(
-        menuOf(1).getByRole('button', {name: 'Move to Page 2'})
-      ).toBeDisabled();
+      const moveToPage = menuOf(1).getByRole('button', {
+        name: 'Move to Page 2',
+      });
+      expect(moveToPage).toHaveAttribute('aria-disabled', 'true');
+      expect(moveToPage).toHaveAccessibleDescription(
+        QUESTION_HAS_CHANGES_REASON
+      );
       expect(
         menuOf(1).getByRole('button', {name: 'Move question down'})
       ).toBeEnabled();

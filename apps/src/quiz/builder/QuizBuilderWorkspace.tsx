@@ -16,6 +16,7 @@ import {
   LAST_PAGE_REASON,
   NO_CHANGES_REASON,
   PAGE_HAS_QUESTIONS_REASON,
+  QUESTION_HAS_CHANGES_REASON,
   QUIZ_BUILDER_HEADER_ID,
   QUIZ_LOAD_FAILED_REASON,
   QUIZ_LOADING_REASON,
@@ -265,7 +266,15 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                       otherPages={pages
                         .map(({page: otherPage}) => otherPage)
                         .filter(otherPage => otherPage !== page)}
-                      hasUnsavedChanges={dirtyIds.has(question.id)}
+                      // Moving to another page remounts the card, which
+                      // would lose its draft.
+                      moveToPageDisabledReason={
+                        !dirtyIds.has(question.id)
+                          ? undefined
+                          : isPendingQuestionId(question.id)
+                          ? UNSAVED_QUESTION_REASON
+                          : QUESTION_HAS_CHANGES_REASON
+                      }
                       onMove={offset => moveQuestion(question.id, offset)}
                       onMoveToPage={toPage =>
                         moveQuestionToPage(question.id, toPage)

@@ -21,6 +21,8 @@ export const QUIZ_LOAD_FAILED_REASON = 'Reload the page to load the quiz.';
 export const INVALID_CONFIG_REASON = 'Fix the errors in Configuration first.';
 export const editedQuestionsReason = (count: number) =>
   `Save or discard changes to ${pluralize(count, 'question')} first.`;
+export const QUESTION_HAS_CHANGES_REASON =
+  "Save or discard this question's changes first.";
 export const PAGE_HAS_QUESTIONS_REASON =
   "Move or remove this page's questions first.";
 export const LAST_PAGE_REASON = 'A quiz needs at least one page.';
