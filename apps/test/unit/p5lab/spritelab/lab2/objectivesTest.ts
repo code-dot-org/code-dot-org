@@ -5,7 +5,7 @@ import {
   fieldValue,
   ObjectiveCheck,
   ObjectiveInputs,
-  followsItsWork,
+  isAboutLastingWork,
   objectiveShown,
   realBlocks,
   runtimeNeeds,
@@ -308,19 +308,19 @@ describe('objectiveShown', () => {
   });
 });
 
-describe('followsItsWork', () => {
+describe('isAboutLastingWork', () => {
   it('is true for the checks that read work kept in the project', () => {
-    expect(followsItsWork({kind: 'block', type: 'any'})).toBe(true);
-    expect(followsItsWork({kind: 'world'})).toBe(true);
-    expect(followsItsWork({kind: 'image', imageType: 'sprite'})).toBe(true);
+    expect(isAboutLastingWork({kind: 'block', type: 'any'})).toBe(true);
+    expect(isAboutLastingWork({kind: 'world'})).toBe(true);
+    expect(isAboutLastingWork({kind: 'image', imageType: 'sprite'})).toBe(true);
   });
 
   it('is false for things that happened, the open scene and the AI record', () => {
-    expect(followsItsWork({kind: 'play'})).toBe(false);
-    expect(followsItsWork({kind: 'reach', moved: true})).toBe(false);
-    expect(followsItsWork({kind: 'scene', id: 'scene-2'})).toBe(false);
-    expect(followsItsWork({kind: 'editing', id: 'scene-2'})).toBe(false);
-    expect(followsItsWork({kind: 'rated'})).toBe(false);
-    expect(followsItsWork({kind: 'generated'})).toBe(false);
+    expect(isAboutLastingWork({kind: 'play'})).toBe(false);
+    expect(isAboutLastingWork({kind: 'reach', moved: true})).toBe(false);
+    expect(isAboutLastingWork({kind: 'scene', id: 'scene-2'})).toBe(false);
+    expect(isAboutLastingWork({kind: 'editing', id: 'scene-2'})).toBe(false);
+    expect(isAboutLastingWork({kind: 'rated'})).toBe(false);
+    expect(isAboutLastingWork({kind: 'generated'})).toBe(false);
   });
 });

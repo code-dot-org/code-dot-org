@@ -8,7 +8,7 @@ import {ObjectiveItem, ObjectivesChecklist} from '@cdo/apps/lab2/types';
 import {
   checkObjective,
   EMPTY_RUNTIME,
-  followsItsWork,
+  isAboutLastingWork,
   Objective,
   ObjectiveInputs,
   Objectives,
@@ -141,9 +141,10 @@ export function usePlayProgress(
 }
 
 /**
- * The checklist's state. An item about lasting work (see followsItsWork) is
- * completed only while its check passes. Any other item stays completed
- * once its check has passed. An item that has appeared stays visible.
+ * The checklist's state. An item about lasting work (see isAboutLastingWork)
+ * is completed only while its check passes, so it is un-ticked when the
+ * student undoes the work. Any other item stays completed once its check
+ * has passed. An item that has appeared stays visible.
  * Reloading the page starts the checklist over; the level's saved progress
  * is what lasts.
  */
@@ -235,7 +236,7 @@ export function useObjectives({
       const item = items?.[index];
       return (
         !!item &&
-        followsItsWork(item.check) &&
+        isAboutLastingWork(item.check) &&
         !checkObjective(item.check, inputs)
       );
     });

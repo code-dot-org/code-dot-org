@@ -71,19 +71,17 @@ const LASTING_WORK_KINDS: ReadonlySet<ObjectiveCheck['kind']> = new Set([
 ]);
 
 /**
- * Whether a step is ticked only while its check passes, so that it un-ticks
- * when the student undoes the work (removes a block, erases what they
- * placed). That is so for the checks that read lasting work, which a later
- * level may depend on.
+ * Whether a check reads work that stays in the project, so that the check
+ * can be made again at any time and a later level may depend on the work.
  *
- * Every other step stays ticked once it has been done. Some record
- * something that happened and cannot be undone: pressing Run, reaching a
- * sprite, arriving in a scene. Two read something that changes for reasons
- * other than undoing the step: which scene is open in the editor, and a
- * picture's AI record, which is removed when the student edits the picture
- * by hand.
+ * Every other check is one of two sorts. Some record something that
+ * happened during a visit to the level and leave nothing to read later:
+ * pressing Run, reaching a sprite, arriving in a scene. Two read something
+ * that changes for reasons other than undoing the step: which scene is open
+ * in the editor, and a picture's AI record, which is removed when the
+ * student edits the picture by hand.
  */
-export function followsItsWork(check: ObjectiveCheck): boolean {
+export function isAboutLastingWork(check: ObjectiveCheck): boolean {
   return LASTING_WORK_KINDS.has(check.kind);
 }
 
