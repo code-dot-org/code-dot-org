@@ -4,6 +4,7 @@ import React, {
   useCallback,
   useEffect,
   useLayoutEffect,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -18,7 +19,12 @@ import {
   gridLinePositions,
 } from './pixelArt';
 import PixelTooltip from './PixelTooltip';
-import {PixelTool, TOOLS, toolTitle} from './toolDefinitions';
+import {
+  PixelTool,
+  TOOLS,
+  toolAfterColorChoice,
+  toolTitle,
+} from './toolDefinitions';
 import {
   BRUSH_SIZES,
   drawCircle,
@@ -234,7 +240,10 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   children,
 }) => {
   const themeMode = useThemeMode();
-  const shownTools = tools ? TOOLS.filter(t => tools.includes(t.id)) : TOOLS;
+  const shownTools = useMemo(
+    () => (tools ? TOOLS.filter(t => tools.includes(t.id)) : TOOLS),
+    [tools]
+  );
   // For the window keydown listener, which is bound once.
   const shownToolsRef = useRef(shownTools);
   shownToolsRef.current = shownTools;
@@ -251,6 +260,10 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   if (tool !== 'eyedropper') {
     lastNonEyedropperToolRef.current = tool;
   }
+  const offeredToolIds = useMemo(
+    () => shownTools.map(shown => shown.id),
+    [shownTools]
+  );
   const shownBrushSizes = brushSizes
     ? BRUSH_SIZES.filter(size => brushSizes.includes(size))
     : BRUSH_SIZES;
@@ -1068,7 +1081,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
         // The pick is final on release (a drag samples continuously until
         // then); return to whatever tool was active before, so picking a
         // color mid-task drops you back where you were.
-        setTool(lastNonEyedropperToolRef.current);
+        setTool(
+          toolAfterColorChoice(lastNonEyedropperToolRef.current, offeredToolIds)
+        );
         return;
       }
       const backing = backingRef.current;
@@ -1111,6 +1126,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       drawShape,
       pushUndo,
       recordColorUse,
+      offeredToolIds,
     ]
   );
 
@@ -1183,7 +1199,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       } else if (tool === 'eyedropper') {
         pickColorAt(p);
         // Mirror the pointer flow: return to the tool used before the pick.
-        setTool(lastNonEyedropperToolRef.current);
+        setTool(
+          toolAfterColorChoice(lastNonEyedropperToolRef.current, offeredToolIds)
+        );
         announce(`Color picked ${at}`);
       } else if (tool === 'bucket') {
         pushUndo();
@@ -1207,6 +1225,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       pickColorAt,
       redrawKeyboardShapePreview,
       announce,
+      offeredToolIds,
     ]
   );
 
@@ -1444,10 +1463,17 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     onHistoryChange?.({canUndo, canRedo, undo, redo});
   }, [onHistoryChange, canUndo, canRedo, undo, redo]);
 
+  const chooseColor = useCallback(
+    (chosen: RGBA) => {
+      setColor(chosen);
+      setTool(current => toolAfterColorChoice(current, offeredToolIds));
+    },
+    [offeredToolIds]
+  );
   const colorControl = (
     <ColorPicker
       color={color}
-      onChange={setColor}
+      onChange={chooseColor}
       recentColors={recentColors}
       palette={palette}
     />

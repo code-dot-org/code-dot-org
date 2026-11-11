@@ -183,14 +183,19 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         e.stopPropagation();
-        onChange(colorOnOpenRef.current);
+        // Nothing to put back when no color was tried; saying so would
+        // read as a color being chosen.
+        const opened = colorOnOpenRef.current;
+        if (opened.some((value, i) => value !== color[i])) {
+          onChange(opened);
+        }
         setOpen(false);
         focusSwatchSoon();
       }
     };
     document.addEventListener('keydown', onKeyDown, true);
     return () => document.removeEventListener('keydown', onKeyDown, true);
-  }, [open, onChange, focusSwatchSoon]);
+  }, [open, color, onChange, focusSwatchSoon]);
 
   // Read the spectrum pixel at (x, y) into the active color.
   const sampleAt = useCallback(

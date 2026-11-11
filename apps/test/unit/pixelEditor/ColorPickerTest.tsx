@@ -41,7 +41,6 @@ describe('ColorPicker with a palette', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Choose color (C)'}));
     fireEvent.keyDown(document, {key: 'Escape'});
     expect(screen.queryByRole('group', {name: 'Colors'})).toBeNull();
-    // Escape puts back the color the palette opened on.
-    expect(onChange).toHaveBeenCalledWith(BLUE);
+    expect(onChange).not.toHaveBeenCalled();
   });
 });
