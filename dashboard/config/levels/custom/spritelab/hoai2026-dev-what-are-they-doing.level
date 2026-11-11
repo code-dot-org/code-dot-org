@@ -28,6 +28,7 @@
         "Images",
         "World"
       ],
+      "noNewImages": true,
       "noDeletingImages": true,
       "limitedPaintTools": true,
       "paletteRoles": [
