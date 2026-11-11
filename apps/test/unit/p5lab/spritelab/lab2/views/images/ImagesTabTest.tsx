@@ -107,6 +107,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
 jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
   const PixelEditorStub = ({
     tools,
+    palette,
     knownPixelGrid,
     onEdit,
     onSave,
@@ -114,6 +115,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
     children,
   }: {
     tools?: readonly string[];
+    palette?: readonly unknown[];
     knownPixelGrid?: number;
     onEdit?: () => void;
     onSave: (dataURI: string, meta: {pixelGridSize?: number}) => void;
@@ -136,6 +138,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
           stroke
         </button>
         <span>{tools ? `${tools.length} tools` : 'all tools'}</span>
+        <span>{palette ? `${palette.length} colors` : 'every color'}</span>
         <span>grid {knownPixelGrid ?? 'none'}</span>
         {children({
           ready: true,
@@ -447,11 +450,12 @@ describe('ImagesTab', () => {
 
   it('draws a new image in free play with every tool, and Done makes it an image', async () => {
     const onDrawingHistory = jest.fn();
-    renderTab({editingOffered: true, onDrawingHistory});
+    renderTab({editingOffered: true, fullPaintTools: true, onDrawingHistory});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
     expect(screen.getByText('4 tools')).toBeTruthy();
+    expect(screen.getByText('every color')).toBeTruthy();
     expect(screen.getByText('toolbar')).toBeTruthy();
     const done = screen.getByRole('button', {name: 'Done drawing'});
     expect((done as HTMLButtonElement).disabled).toBe(true);
@@ -752,14 +756,16 @@ describe('ImagesTab', () => {
     expect(screen.queryByText('Your edited image')).toBeNull();
   });
 
-  it('edits an image with the few tools before free play, saving when the tab is left', async () => {
+  it('edits an image with a fixed set of colors before free play, saving when the tab is left', async () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
     const {rerender} = renderTab({
       lockedImageType: 'sprite',
       imageRole: 'hero',
     });
     fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
-    expect(screen.getByText('3 tools')).toBeTruthy();
+    // The eyedropper is among the tools; the colors are the fixed swatches.
+    expect(screen.getByText('4 tools')).toBeTruthy();
+    expect(screen.getByText('10 colors')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     saveEdited.mockResolvedValue('k1');
     await act(async () => {

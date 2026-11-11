@@ -45,6 +45,12 @@ const MAX_CSS_WIDTH_PX = 900;
 // panel-colored base on a dark one — the image dialog uses the same pairs).
 const CHECKER_CELL_PX = 16;
 const MIN_CHECKER_CELL_PX = 4;
+
+// Grid lines between art pixels in pixel mode: a gray that shows on light
+// and on dark pixels alike, drawn only when an art pixel is at least this
+// many display px wide.
+const GRID_LINE_COLOR = 'rgb(128 128 128 / 35%)';
+const MIN_GRID_LINE_CELL_PX = 6;
 const CHECKER_COLORS = {
   light: {base: '#ffffff', tint: 'rgb(128 128 128 / 16%)'},
   dark: {base: '#333a47', tint: 'rgb(128 128 128 / 22%)'},
@@ -440,6 +446,19 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     ctx.drawImage(backing, 0, 0, display.width, display.height);
     if (previewRef.current) {
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
+    }
+    // Lines between the art pixels, over the picture, so the grid shows on
+    // filled pixels as well as on the checkerboard. They are left out when
+    // the art pixels are too small on screen for lines to fit between them.
+    const scale = scaleRef.current;
+    if (pixelModeRef.current && scale >= MIN_GRID_LINE_CELL_PX) {
+      ctx.fillStyle = GRID_LINE_COLOR;
+      for (let x = scale; x < display.width; x += scale) {
+        ctx.fillRect(Math.round(x), 0, 1, display.height);
+      }
+      for (let y = scale; y < display.height; y += scale) {
+        ctx.fillRect(0, Math.round(y), display.width, 1);
+      }
     }
   }, [opaqueGround]);
 
