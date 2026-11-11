@@ -48,7 +48,12 @@ import {
   SpritelabAskAiRefusals,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {addMissingBlocks, ownsTop} from '../addBlocks';
+import {
+  addMissingBlocks,
+  BlockCheck,
+  ownsTop,
+  syncOutlines,
+} from '../addBlocks';
 import {ImageSource, isImageSource} from '../ai/images/imageCache';
 import {
   uploadAssetToLevel,
@@ -1773,6 +1778,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       activeScene.id === pinnedSceneId ? levelProperties.addBlocks ?? [] : [],
     [levelProperties.addBlocks, pinnedSceneId, activeScene.id]
   );
+  // The level's checklist checks for blocks. They say which blocks fill an
+  // outline (see fillingTypes).
+  const blockChecks = useMemo(
+    () =>
+      objectiveChecks(levelProperties.objectives).filter(
+        (check): check is BlockCheck => check.kind === 'block'
+      ),
+    [levelProperties.objectives]
+  );
   // Runs with no entries too: the pass also drops other levels' outlines.
   const addLevelBlocks = useCallback(() => {
     if (!animationsSeeded || isToolboxMode) {
@@ -1798,14 +1812,58 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
-    addMissingBlocks(workspace, sceneAddBlocks);
+    addMissingBlocks(workspace, sceneAddBlocks, blockChecks);
   }, [
     animationsSeeded,
     levelProperties.id,
     sceneAddBlocks,
+    blockChecks,
     sourcesReinitializedCount,
     workspaceVersion,
   ]);
+  // The outlines follow the blocks. After the student moves, adds or
+  // deletes a block, the outlines are brought in line again: an outline
+  // goes when its block is dropped in, and comes back if the block is
+  // taken out. The same pass removes any outline that does not belong to
+  // this level, so one from an earlier level cannot turn up later.
+  useEffect(() => {
+    if (!animationsSeeded || isToolboxMode) {
+      return;
+    }
+    const workspace = Blockly.getMainWorkspace?.() as
+      | BlocklyCore.WorkspaceSvg
+      | undefined;
+    if (!workspace) {
+      return;
+    }
+    const blockChanges: string[] = [
+      Blockly.Events.BLOCK_MOVE,
+      Blockly.Events.BLOCK_CREATE,
+      Blockly.Events.BLOCK_DELETE,
+    ];
+    let timer = 0;
+    const onChange = (event: BlocklyCore.Events.Abstract) => {
+      if (!blockChanges.includes(event.type)) {
+        return;
+      }
+      // One pass after a burst of changes, once the workspace has settled.
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => {
+        // Not while a block is being dragged, and not on the reset that
+        // Start Over makes on its way to the first level: that project
+        // must be left as the reset made it.
+        if (workspace.isDragging() || leavingResetRef.current) {
+          return;
+        }
+        syncOutlines(workspace, sceneAddBlocks, blockChecks);
+      }, 0);
+    };
+    workspace.addChangeListener(onChange);
+    return () => {
+      window.clearTimeout(timer);
+      workspace.removeChangeListener(onChange);
+    };
+  }, [animationsSeeded, sceneAddBlocks, blockChecks, workspaceVersion]);
   const ownTypes = useMemo(
     () =>
       ownToolboxTypes(levelProperties.toolboxDefinition, earlierLevels ?? []),

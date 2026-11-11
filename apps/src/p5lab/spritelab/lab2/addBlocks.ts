@@ -5,6 +5,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import {PLACEHOLDER_BLOCK_TYPE} from './blockly/blockDefinitions/placeholder';
+import {ObjectiveCheck} from './objectives';
 import {scrollIntoView} from './scrollIntoView';
 import {
   clearRoom,
@@ -128,6 +129,9 @@ export function placeBelow(stacks: {x: number; y: number; height: number}[]): {
 
 type Shadow = BlocklyCore.serialization.blocks.State;
 
+/** A checklist step's check for a block, as the level writes it. */
+export type BlockCheck = Extract<ObjectiveCheck, {kind: 'block'}>;
+
 // Placeholders are told apart by the block they stand in for, fields
 // included: two levels may each want a make-new-sprite, one left, one right.
 function likeKey(shadow: Shadow | null | undefined): string | undefined {
@@ -143,42 +147,6 @@ function samePlaceholder(a: Shadow | null | undefined, b: Shadow): boolean {
 
 function isBlank(shadow: Shadow | null | undefined): boolean {
   return !!(shadow?.extraState as {blank?: boolean} | undefined)?.blank;
-}
-
-/**
- * The connection under a stack's last real block, if `shadow` can be
- * attached there. Blockly keeps a connection's shadow recorded even while a
- * real block covers it, so a stack that already received this placeholder,
- * filled in or not, gets it nowhere else. A saved project keeps the
- * placeholder as it was when the level drew it, so a placeholder still
- * empty whose blank flag no longer matches the level's is attached again
- * in its place.
- */
-export function freeStackEnd(
-  top: BlocklyCore.Block,
-  shadow: Shadow
-): BlocklyCore.Connection | null {
-  for (let block: BlocklyCore.Block = top; ; ) {
-    const connection = block.nextConnection;
-    if (!connection) {
-      return null;
-    }
-    const recorded = connection.getShadowState();
-    const next = connection.targetBlock();
-    if (samePlaceholder(recorded, shadow)) {
-      const waiting = !next || next.isShadow();
-      return waiting && isBlank(recorded) !== isBlank(shadow)
-        ? connection
-        : null;
-    }
-    if (!next) {
-      return recorded ? null : connection;
-    }
-    if (next.isShadow()) {
-      return null;
-    }
-    block = next;
-  }
 }
 
 /** The placeholder an entry carries: hung on a stack, or under the block
@@ -199,42 +167,45 @@ function entryOn(entry: AddBlockEntry, top: PresentBlock): boolean {
 }
 
 /**
- * Drop every placeholder showing at the end of a stack that none of the
- * level's entries puts there. Blockly saves a placeholder with the block
- * it hangs from, so an earlier level's outline, never filled or uncovered
- * since, would otherwise show as this level's hint. One a real block
- * covers is left recorded: it is how the stack remembers that its level
- * gave it that outline already (see freeStackEnd). Returns how many were
- * dropped.
+ * The block types that fill an entry's outline. An outline is the hint for
+ * a checklist step, so these are the types that step accepts: the block
+ * checks the level makes under the same top block (and the same tag, when
+ * the check names one), plus the block the outline is drawn to look like.
+ * A level that accepts several blocks under one event lists them in its
+ * check, and any of them fills the outline.
  */
-export function dropStalePlaceholders(
-  workspace: BlocklyCore.Workspace,
-  entries: AddBlockEntry[]
-): number {
-  let dropped = 0;
-  for (const top of workspace.getTopBlocks(false)) {
-    const end = trailingShadow(top);
-    const recorded = end?.connection.getShadowState();
-    if (!end || recorded?.type !== PLACEHOLDER_BLOCK_TYPE) {
-      continue;
-    }
-    const wanted = entries.some(entry => {
-      const placeholder = placeholderOf(entry);
-      return (
-        !!placeholder &&
-        entryOn(entry, top) &&
-        samePlaceholder(recorded, placeholder)
-      );
-    });
-    if (!wanted) {
-      withoutUndo(() => end.connection.setShadowState(null));
-      dropped++;
-    }
+export function fillingTypes(
+  entry: AddBlockEntry,
+  blockChecks: BlockCheck[]
+): string[] {
+  const placeholder = placeholderOf(entry);
+  if (!placeholder) {
+    return [];
   }
-  return dropped;
+  const topType = isAttachment(entry) ? entry.attachTo : entry.type;
+  const like = (placeholder.extraState as {like?: {type?: string}} | undefined)
+    ?.like?.type;
+  const accepted = blockChecks
+    .filter(
+      check =>
+        check.under === topType &&
+        (check.data === undefined || check.data === entry.data)
+    )
+    .flatMap(check => check.type);
+  return [...new Set([...(like ? [like] : []), ...accepted])];
 }
 
-// A change the level makes on arriving is not the student's to undo.
+/** Whether a stack holds a real block (not an outline) of one of the
+    types, anywhere under its top block. */
+export function stackHolds(top: BlocklyCore.Block, types: string[]): boolean {
+  return top
+    .getDescendants(false)
+    .some(
+      block => block !== top && !block.isShadow() && types.includes(block.type)
+    );
+}
+
+// A change the lab makes to the outlines is not the student's to undo.
 function withoutUndo(change: () => void): void {
   const recording = BlocklyCore.Events.getRecordUndo();
   BlocklyCore.Events.setRecordUndo(false);
@@ -262,6 +233,159 @@ export function trailingShadow(top: BlocklyCore.Block): {
     }
     block = next;
   }
+}
+
+/** The connection under a stack's last block, or null when that block has
+    none or already holds a shadow there. */
+function freeEnd(top: BlocklyCore.Block): BlocklyCore.Connection | null {
+  for (let block: BlocklyCore.Block = top; ; ) {
+    const connection = block.nextConnection;
+    if (!connection) {
+      return null;
+    }
+    const next = connection.targetBlock();
+    if (!next) {
+      return connection;
+    }
+    if (next.isShadow()) {
+      return null;
+    }
+    block = next;
+  }
+}
+
+/**
+ * Makes one stack show its outline, or not, by what the stack holds. The
+ * outline is shown at the end of the stack while the stack has no block of
+ * the filling types, and removed once it has one. Nothing is remembered
+ * about the outline when it is not showing: the stack's own blocks say
+ * whether the step it hints at is done. Returns whether the outline is
+ * showing afterwards.
+ */
+export function syncStackOutline(
+  top: BlocklyCore.Block,
+  shadow: Shadow,
+  types: string[]
+): boolean {
+  const end = trailingShadow(top);
+  const showing =
+    !!end && samePlaceholder(end.connection.getShadowState(), shadow);
+  if (stackHolds(top, types)) {
+    if (end && showing) {
+      end.connection.setShadowState(null);
+    }
+    return false;
+  }
+  if (end && showing) {
+    // A saved project keeps the outline as it was drawn. When the level's
+    // version of it has changed (blank or not), it is drawn again.
+    if (isBlank(end.connection.getShadowState()) !== isBlank(shadow)) {
+      end.connection.setShadowState(shadow);
+    }
+    return true;
+  }
+  const connection = freeEnd(top);
+  if (!connection) {
+    return false;
+  }
+  connection.setShadowState(shadow);
+  return true;
+}
+
+/**
+ * Forgets every outline that a real block now covers. When a block is
+ * dropped on an outline, Blockly keeps the outline on the connection, out
+ * of sight, and would show it again if the block were pulled off, on any
+ * level and for the rest of the project's life. The outlines are decided
+ * from the stack's blocks instead (see syncStackOutline), so nothing
+ * hidden is kept. Returns how many were forgotten.
+ */
+export function forgetCoveredOutlines(
+  workspace: BlocklyCore.Workspace
+): number {
+  let forgotten = 0;
+  for (const block of workspace.getAllBlocks(false)) {
+    const connection = block.nextConnection;
+    const next = connection?.targetBlock();
+    if (
+      connection &&
+      next &&
+      !next.isShadow() &&
+      connection.getShadowState()?.type === PLACEHOLDER_BLOCK_TYPE
+    ) {
+      connection.setShadowState(null);
+      forgotten++;
+    }
+  }
+  return forgotten;
+}
+
+/**
+ * Removes every outline showing at the end of a stack that none of the
+ * level's entries puts there. Blockly saves an outline with the block it
+ * hangs from, so an earlier level's outline that was never filled would
+ * otherwise show as this level's hint. Returns how many were removed.
+ */
+export function dropStalePlaceholders(
+  workspace: BlocklyCore.Workspace,
+  entries: AddBlockEntry[]
+): number {
+  let dropped = 0;
+  for (const top of workspace.getTopBlocks(false)) {
+    const end = trailingShadow(top);
+    const recorded = end?.connection.getShadowState();
+    if (!end || recorded?.type !== PLACEHOLDER_BLOCK_TYPE) {
+      continue;
+    }
+    const wanted = entries.some(entry => {
+      const placeholder = placeholderOf(entry);
+      return (
+        !!placeholder &&
+        entryOn(entry, top) &&
+        samePlaceholder(recorded, placeholder)
+      );
+    });
+    if (!wanted) {
+      end.connection.setShadowState(null);
+      dropped++;
+    }
+  }
+  return dropped;
+}
+
+/**
+ * Brings every outline in the workspace in line with the level: hidden
+ * outlines are forgotten, other levels' outlines are removed, and each of
+ * this level's outlines is shown or removed by whether its stack holds the
+ * block it asks for. It is safe to run at any time and as often as needed;
+ * a second run changes nothing. Returns the stacks whose outline is
+ * showing.
+ */
+export function syncOutlines(
+  workspace: BlocklyCore.Workspace,
+  entries: AddBlockEntry[],
+  blockChecks: BlockCheck[]
+): BlocklyCore.Block[] {
+  const showing = new Set<BlocklyCore.Block>();
+  withoutUndo(() => {
+    forgetCoveredOutlines(workspace);
+    dropStalePlaceholders(workspace, entries);
+    for (const entry of entries) {
+      const placeholder = placeholderOf(entry);
+      if (!placeholder) {
+        continue;
+      }
+      const types = fillingTypes(entry, blockChecks);
+      for (const top of workspace.getTopBlocks(false)) {
+        if (entryOn(entry, top) && syncStackOutline(top, placeholder, types)) {
+          showing.add(top);
+          // One stack per entry: the first of the type, as before.
+          break;
+        }
+      }
+    }
+  });
+  return [...showing];
 }
 
 /** The stacks still ending in one of the level's placeholders: under a
@@ -292,30 +416,11 @@ export function unfilledOutlines(
   return [...found];
 }
 
-/** Hang the shadow on the first stack of the type with a free end, and
-    make room under the stacks again; returns that stack, or null. */
-export function attachShadow(
-  workspace: BlocklyCore.WorkspaceSvg,
-  entry: AttachShadow
-): BlocklyCore.BlockSvg | null {
-  for (const top of workspace.getTopBlocks(false)) {
-    if (!attachesTo(entry, top)) {
-      continue;
-    }
-    const connection = freeStackEnd(top, entry.shadow);
-    if (connection) {
-      connection.setShadowState(entry.shadow);
-      ensureRoom(workspace);
-      return top;
-    }
-  }
-  return null;
-}
-
 /**
  * Add the level's blocks the workspace lacks, each placed below
- * everything already there, hang its shadows on the stacks named for
- * them, and drop the placeholders of other levels. Returns how many were
+ * everything already there, and bring the outlines in line with the level
+ * (see syncOutlines). `blockChecks` are the level's checklist checks for
+ * blocks, which say what fills each outline. Returns how many blocks were
  * added. Fires ordinary create events, so the workspace saves and re-runs
  * as after an edit. Then scrolls what was added, and any outline of the
  * level's still waiting for its block, into view, so a pass with nothing
@@ -323,7 +428,8 @@ export function attachShadow(
  */
 export async function addMissingBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
-  entries: AddBlockEntry[]
+  entries: AddBlockEntry[],
+  blockChecks: BlockCheck[] = []
 ): Promise<number> {
   await heightsSettled();
   if (!workspace.rendered) {
@@ -332,7 +438,6 @@ export async function addMissingBlocks(
   // Reserved rooms belong to a level and the workspace is reused across
   // levels, so the previous level's rooms are dropped first.
   clearRoom(workspace);
-  dropStalePlaceholders(workspace, entries);
   const blocks = entries.filter(
     (entry): entry is AddBlock => !isAttachment(entry)
   );
@@ -356,17 +461,17 @@ export async function addMissingBlocks(
       console.warn(`add_blocks entry ${entry.type} not added:`, e);
     }
   }
+  try {
+    if (syncOutlines(workspace, entries, blockChecks).length) {
+      ensureRoom(workspace);
+    }
+  } catch (e) {
+    // An outline the pool cannot build is a level-authoring slip; the level
+    // must still open.
+    console.warn('add_blocks outlines not drawn:', e);
+  }
   for (const entry of entries) {
-    if (isAttachShadow(entry)) {
-      try {
-        const top = attachShadow(workspace, entry);
-        if (top) {
-          added.push(top);
-        }
-      } catch (e) {
-        console.warn(`add_blocks shadow for ${entry.attachTo} not hung:`, e);
-      }
-    } else if (isAttachRoom(entry)) {
+    if (isAttachRoom(entry)) {
       reserveRoom(workspace, {
         attachTo: entry.attachTo,
         data: entry.data,

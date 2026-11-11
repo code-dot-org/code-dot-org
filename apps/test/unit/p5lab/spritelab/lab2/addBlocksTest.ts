@@ -1,11 +1,15 @@
 import {
-  freeStackEnd,
+  fillingTypes,
+  forgetCoveredOutlines,
   isAttachRoom,
   isAttachShadow,
   ownsTop,
   matchesEntry,
   missingBlocks,
   placeBelow,
+  stackHolds,
+  syncOutlines,
+  syncStackOutline,
   trailingShadow,
   dropStalePlaceholders,
   unfilledOutlines,
@@ -17,12 +21,6 @@ const placeholder = (like: string, fields?: Record<string, string>) => ({
 });
 const SAY = placeholder('gamelab_spriteSay');
 const GO_TO_SCENE = placeholder('spritelab2_goToScene');
-const SPRITE_LEFT = placeholder('spritelab2_makeSpriteAtPosition', {
-  POSITION: 'left',
-});
-const SPRITE_RIGHT = placeholder('spritelab2_makeSpriteAtPosition', {
-  POSITION: 'right',
-});
 
 // A stack of block-likes, top first. Each entry is a block's bottom
 // connection: `shadow` is the placeholder recorded there, `next` whether a
@@ -116,69 +114,234 @@ describe('addBlocks', () => {
     expect(isAttachShadow(AT_TIME)).toBe(false);
   });
 
-  it("finds the free connection under a stack's last block", () => {
-    const top = stack({next: true}, {next: true}, {});
-    const last = top.nextConnection.targetBlock().nextConnection.targetBlock();
-    expect(freeStackEnd(top, SAY)).toBe(last.nextConnection);
-  });
-
-  it('hangs nothing under a stack with no bottom connection', () => {
-    expect(freeStackEnd(stack(null), SAY)).toBeNull();
-    expect(freeStackEnd(stack({next: true}, null), SAY)).toBeNull();
-  });
-
-  it('hangs nothing under a placeholder still waiting to be filled', () => {
-    expect(
-      freeStackEnd(stack({shadow: SAY, next: true}, {isShadow: true}), SAY)
-    ).toBeNull();
-    expect(
-      freeStackEnd(
-        stack({shadow: SAY, next: true}, {isShadow: true}),
-        GO_TO_SCENE
-      )
-    ).toBeNull();
-  });
-
-  it('hangs a waiting placeholder again when its outline no longer matches', () => {
-    const BLANK_SAY = {
-      ...SAY,
-      extraState: {...SAY.extraState, blank: true},
-    };
-    const top = stack({shadow: BLANK_SAY, next: true}, {isShadow: true});
-    expect(freeStackEnd(top, SAY)).toBe(top.nextConnection);
-    // Covered by the student's block, it is left alone.
-    expect(
-      freeStackEnd(stack({shadow: BLANK_SAY, next: true}, {}), SAY)
-    ).toBeNull();
-  });
-
-  it('hangs its placeholder once: a filled one is not hung again below', () => {
-    // when run -> say (the student's block over the say placeholder).
-    const filled = stack({shadow: SAY, next: true}, {});
-    expect(freeStackEnd(filled, SAY)).toBeNull();
-  });
-
-  it('tells placeholders of one block type apart by their fields', () => {
-    // when run -> make new sprite (left, filled) -> say (filled): the
-    // right-hand sprite's placeholder still hangs at the end.
-    const filled = stack(
-      {shadow: SPRITE_LEFT, next: true},
-      {shadow: SAY, next: true},
-      {}
+  // A stack of real blocks, by type, top first, that behaves like Blockly's
+  // where the outline code touches it: each block's bottom connection
+  // remembers a shadow, and the shadow shows as a block only while no real
+  // block hangs there. `showing` puts a shadow at the end of the stack;
+  // `covered` records one under the real block at that index, out of sight.
+  type Outline = {type: string; extraState?: unknown} | null;
+  const liveStack = (
+    types: string[],
+    {
+      showing,
+      covered = {},
+      data,
+      noBottom = false,
+    }: {
+      showing?: Outline;
+      covered?: Record<number, Outline>;
+      data?: string;
+      noBottom?: boolean;
+    } = {}
+  ) => {
+    const sets: string[] = [];
+    const recorded: Outline[] = types.map((_, i) =>
+      i === types.length - 1 ? showing ?? null : covered[i] ?? null
     );
-    const end = filled.nextConnection
-      .targetBlock()
-      .nextConnection.targetBlock();
-    expect(freeStackEnd(filled, SPRITE_RIGHT)).toBe(end.nextConnection);
-    expect(freeStackEnd(filled, SPRITE_LEFT)).toBeNull();
+    const shadowBlock = {type: 'shadow', isShadow: () => true};
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const blocks: any[] = types.map((type, i) => ({
+      type,
+      data: i === 0 ? data : undefined,
+      isShadow: () => false,
+      nextConnection:
+        noBottom && i === types.length - 1
+          ? null
+          : {
+              targetBlock: () =>
+                blocks[i + 1] ?? (recorded[i] ? shadowBlock : null),
+              getShadowState: () => recorded[i],
+              setShadowState: (state: Outline) => {
+                recorded[i] = state;
+                sets.push(`${type}:${state ? 'set' : 'cleared'}`);
+              },
+            },
+    }));
+    blocks[0].getDescendants = () => [
+      ...blocks,
+      ...(recorded[types.length - 1] && !noBottom ? [shadowBlock] : []),
+    ];
+    return {top: blocks[0], blocks, sets, recorded};
+  };
+  const liveWorkspace = (...stacks: ReturnType<typeof liveStack>[]) =>
+    ({
+      getTopBlocks: () => stacks.map(st => st.top),
+      getAllBlocks: () => stacks.flatMap(st => st.blocks),
+    } as unknown as Parameters<typeof syncOutlines>[0]);
+
+  describe('what fills an outline', () => {
+    const outline = {attachTo: 'gamelab_checkTouching', shadow: SAY};
+
+    it('is filled by the block it is drawn to look like', () => {
+      expect(fillingTypes(outline, [])).toEqual(['gamelab_spriteSay']);
+    });
+
+    it('is also filled by any block the checklist accepts under the same top block', () => {
+      expect(
+        fillingTypes(outline, [
+          {
+            kind: 'block',
+            type: ['spritelab2_burst', 'spritelab2_playSound'],
+            under: 'gamelab_checkTouching',
+          },
+          // A check under another top block is about another stack.
+          {
+            kind: 'block',
+            type: 'spritelab2_goToScene',
+            under: 'spritelab2_whenRun',
+          },
+        ])
+      ).toEqual([
+        'gamelab_spriteSay',
+        'spritelab2_burst',
+        'spritelab2_playSound',
+      ]);
+    });
+
+    it('takes a check that names a tag only for the stack with that tag', () => {
+      const check = {
+        kind: 'block' as const,
+        type: 'spritelab2_burst',
+        under: 'gamelab_checkTouching',
+        data: 'treasure',
+      };
+      expect(fillingTypes({...outline, data: 'treasure'}, [check])).toContain(
+        'spritelab2_burst'
+      );
+      expect(fillingTypes({...outline, data: 'patrol'}, [check])).not.toContain(
+        'spritelab2_burst'
+      );
+    });
+
+    it('has nothing to fill for a room, which draws no outline', () => {
+      expect(
+        fillingTypes(
+          {attachTo: 'spritelab2_whenRun', room: {type: 'gamelab_spriteSay'}},
+          []
+        )
+      ).toEqual([]);
+    });
+
+    it('finds a real block of the type under the top block, not the top block or an outline', () => {
+      const withSay = liveStack(['spritelab2_whenRun', 'gamelab_spriteSay']);
+      expect(stackHolds(withSay.top, ['gamelab_spriteSay'])).toBe(true);
+      expect(stackHolds(withSay.top, ['spritelab2_whenRun'])).toBe(false);
+      const waiting = liveStack(['spritelab2_whenRun'], {showing: SAY});
+      expect(stackHolds(waiting.top, ['shadow'])).toBe(false);
+    });
   });
 
-  it('hangs a different placeholder under a filled one', () => {
-    // when clicked -> say (filled) gets go to scene under the say.
-    const filled = stack({shadow: SAY, next: true}, {});
-    expect(freeStackEnd(filled, GO_TO_SCENE)).toBe(
-      filled.nextConnection.targetBlock().nextConnection
-    );
+  describe('one stack and its outline', () => {
+    const SAY_TYPES = ['gamelab_spriteSay'];
+
+    it('draws the outline at the end of a stack that lacks the block', () => {
+      const run = liveStack(['spritelab2_whenRun', 'spritelab2_burst']);
+      expect(syncStackOutline(run.top, SAY, SAY_TYPES)).toBe(true);
+      expect(run.sets).toEqual(['spritelab2_burst:set']);
+    });
+
+    it('leaves an outline that is already showing', () => {
+      const run = liveStack(['spritelab2_whenRun'], {showing: SAY});
+      expect(syncStackOutline(run.top, SAY, SAY_TYPES)).toBe(true);
+      expect(run.sets).toEqual([]);
+    });
+
+    it('draws nothing once the stack holds the block, and nothing is kept hidden', () => {
+      const run = liveStack(['spritelab2_whenRun', 'gamelab_spriteSay']);
+      expect(syncStackOutline(run.top, SAY, SAY_TYPES)).toBe(false);
+      expect(run.sets).toEqual([]);
+    });
+
+    it('removes a showing outline when the block is elsewhere in the stack', () => {
+      // The student put the say block above the outline, not on it.
+      const run = liveStack(['spritelab2_whenRun', 'gamelab_spriteSay'], {
+        showing: SAY,
+      });
+      expect(syncStackOutline(run.top, SAY, SAY_TYPES)).toBe(false);
+      expect(run.sets).toEqual(['gamelab_spriteSay:cleared']);
+    });
+
+    it('counts any block the level accepts as filling the outline', () => {
+      const run = liveStack(['gamelab_checkTouching', 'spritelab2_playSound']);
+      expect(
+        syncStackOutline(run.top, SAY, [
+          'gamelab_spriteSay',
+          'spritelab2_playSound',
+        ])
+      ).toBe(false);
+      expect(run.sets).toEqual([]);
+    });
+
+    it('draws nothing under a stack whose last block has no bottom connection', () => {
+      const run = liveStack(['spritelab2_whenRun'], {noBottom: true});
+      expect(syncStackOutline(run.top, SAY, SAY_TYPES)).toBe(false);
+    });
+
+    it('draws nothing where another shadow already sits', () => {
+      const run = liveStack(['spritelab2_whenRun'], {showing: GO_TO_SCENE});
+      expect(syncStackOutline(run.top, SAY, SAY_TYPES)).toBe(false);
+      expect(run.sets).toEqual([]);
+    });
+
+    it('draws a showing outline again when the level now wants it blank, or not', () => {
+      const BLANK_SAY = {
+        ...SAY,
+        extraState: {...SAY.extraState, blank: true},
+      };
+      const run = liveStack(['spritelab2_whenRun'], {showing: BLANK_SAY});
+      expect(syncStackOutline(run.top, SAY, SAY_TYPES)).toBe(true);
+      expect(run.sets).toEqual(['spritelab2_whenRun:set']);
+    });
+  });
+
+  describe('the whole workspace', () => {
+    it('forgets an outline hidden under a real block, and only that', () => {
+      // say sits on the outline the level drew under when run.
+      const filled = liveStack(['spritelab2_whenRun', 'gamelab_spriteSay'], {
+        covered: {0: SAY},
+      });
+      const waiting = liveStack(['gamelab_atTime'], {showing: SAY});
+      expect(forgetCoveredOutlines(liveWorkspace(filled, waiting))).toBe(1);
+      expect(filled.sets).toEqual(['spritelab2_whenRun:cleared']);
+      expect(waiting.sets).toEqual([]);
+    });
+
+    it('leaves a level with no outlines of its own with none, shown or hidden', () => {
+      // Free play: an old outline is hidden under one block and another
+      // still shows on a second stack.
+      const filled = liveStack(['spritelab2_whenRun', 'gamelab_spriteSay'], {
+        covered: {0: SAY},
+      });
+      const waiting = liveStack(['gamelab_atTime'], {showing: SAY});
+      expect(syncOutlines(liveWorkspace(filled, waiting), [], [])).toEqual([]);
+      expect(filled.recorded).toEqual([null, null]);
+      expect(waiting.recorded).toEqual([null]);
+    });
+
+    it("shows the level's outline where its block is missing, and a second pass changes nothing", () => {
+      const run = liveStack(['spritelab2_whenRun', 'spritelab2_burst']);
+      const touch = liveStack(['gamelab_checkTouching', 'gamelab_spriteSay']);
+      const entries = [
+        {attachTo: 'spritelab2_whenRun', shadow: GO_TO_SCENE},
+        {attachTo: 'gamelab_checkTouching', shadow: SAY},
+      ];
+      const workspace = liveWorkspace(run, touch);
+      expect(syncOutlines(workspace, entries, [])).toEqual([run.top]);
+      expect(run.sets).toEqual(['spritelab2_burst:set']);
+      expect(touch.sets).toEqual([]);
+      expect(syncOutlines(workspace, entries, [])).toEqual([run.top]);
+      expect(run.sets).toEqual(['spritelab2_burst:set']);
+    });
+
+    it('brings the outline back when the block that filled it is taken out', () => {
+      const touch = liveStack(['gamelab_checkTouching']);
+      const entries = [{attachTo: 'gamelab_checkTouching', shadow: SAY}];
+      // The stack once held a say block; now it holds only its top block.
+      expect(syncOutlines(liveWorkspace(touch), entries, [])).toEqual([
+        touch.top,
+      ]);
+      expect(touch.recorded).toEqual([SAY]);
+    });
   });
 
   it('a room entry adds no block, owns no stack, and waits on no outline', () => {
