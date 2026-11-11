@@ -12,6 +12,7 @@ import {
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import {
+  EXTRA_TABS,
   LevelMode,
   LevelModeKind,
   tabsForMode,
@@ -68,9 +69,6 @@ const KEYS_BY_KIND: Record<LevelModeKind, (keyof LevelMode)[]> = {
   freeplay: [...IMAGE_TAB_KEYS],
 };
 
-/** The editor tabs a level can add with `extraTabs`. */
-const EXTRA_TAB_NAMES = ['Images', 'World', 'Code'];
-
 /** Whether a value is a list with at least one entry, each from `allowed`
     and none repeated. */
 function isListOf(value: unknown, allowed: readonly string[]): boolean {
@@ -114,7 +112,7 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
         new Set(value).size === value.length
       );
     case 'extraTabs':
-      return isListOf(value, EXTRA_TAB_NAMES);
+      return isListOf(value, EXTRA_TABS);
     case 'imageKinds':
       return isListOf(value, IMAGE_TYPES);
     // A false flag reads the same as no flag, so only true is stored.
@@ -177,8 +175,8 @@ export function fieldApplies(
       return fieldApplies(mode, 'imageType') && mode.imageType === 'sprite';
     case 'imageRole':
       return kind === 'image' || fieldApplies(mode, 'imageType');
-    // The palette is the World tab's, which a level has by its kind or by
-    // naming it among its extra tabs.
+    // The palette belongs to the World tab. A level has that tab when its
+    // kind is "world", or when it lists World among its extra tabs.
     case 'paletteRoles':
       return kind === 'world' || !!mode.extraTabs?.includes('World');
     // Both act on a picture the student makes, so they need an Images tab.

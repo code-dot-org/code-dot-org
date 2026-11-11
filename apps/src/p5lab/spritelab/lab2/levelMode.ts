@@ -66,7 +66,7 @@ const TABS: Record<LevelModeKind, Tab[]> = {
 };
 
 /** The editor tabs a level may add with `extraTabs`. */
-const EXTRA_TABS: readonly Tab[] = ['Images', 'World', 'Code'];
+export const EXTRA_TABS: readonly Tab[] = ['Images', 'World', 'Code'];
 
 /** The tabs a level shows; undefined, for the lab's default, when the kind
     is not one the lab knows. The first tab is where the level opens. */
@@ -75,7 +75,7 @@ export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
   if (!own) {
     return undefined;
   }
-  const tabs =
+  const tabs: Tab[] =
     mode.imageFirst && !own.includes('Images') ? ['Images', ...own] : [...own];
   // The level's extra tabs go after its own, so they do not change where
   // the level opens.
@@ -84,7 +84,7 @@ export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
       tabs.push(tab);
     }
   });
-  return tabs as Tab[];
+  return tabs;
 }
 
 /** Whether the level is a world level: its work is placing images on the
