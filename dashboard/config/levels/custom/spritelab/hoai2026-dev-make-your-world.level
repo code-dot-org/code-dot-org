@@ -31,6 +31,7 @@
         "Images"
       ],
       "noNewImages": true,
+      "noDeletingImages": true,
       "imageKinds": [
         "sprite"
       ]

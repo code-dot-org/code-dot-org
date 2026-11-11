@@ -96,8 +96,8 @@ interface ImagesTabProps {
   /** No New button, even where `editingOffered` would show one: the
       student works on the images already listed. */
   noNewImages?: boolean;
-  /** Images may be deleted. */
-  deletingOffered?: boolean;
+  /** No Delete button, even where `editingOffered` would show one. */
+  noDeletingImages?: boolean;
   /** The kinds of image the list shows. Every kind when unset. */
   imageKinds?: ImageType[];
   /** Width of the right pane in px; it equals the preview column's width
@@ -148,7 +148,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   onGenerate,
   editingOffered,
   noNewImages,
-  deletingOffered,
+  noDeletingImages,
   imageKinds,
   paneWidth,
   onImageLanded,
@@ -430,7 +430,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       group.frames.includes(shownFrame)
     )?.key;
 
-  const deleteOffered = !!deletingOffered;
+  const deleteOffered = !!editingOffered && !noDeletingImages;
   // On a level whose task is one image, the plus is shown until that image
   // is made on this visit, and its menu enables only that kind. In free
   // play every kind is enabled.

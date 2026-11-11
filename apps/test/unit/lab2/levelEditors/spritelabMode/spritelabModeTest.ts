@@ -30,6 +30,7 @@ describe('cleanLevelMode', () => {
       extraTabs: ['Images', 'World'],
       paletteRoles: ['treasure', 'block'],
       noNewImages: true,
+      noDeletingImages: true,
       imageKinds: ['sprite', 'block'],
     };
     expect(cleanLevelMode(mode)).toEqual({mode, removed: []});

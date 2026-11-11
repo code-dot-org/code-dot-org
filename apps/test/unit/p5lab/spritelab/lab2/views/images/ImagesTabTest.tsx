@@ -392,7 +392,7 @@ describe('ImagesTab', () => {
   it('holds the list still while a picture is being made', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     propsByKey.k2 = {name: 'Sprite 2', categories: []};
-    renderTab({editingOffered: true, deletingOffered: true});
+    renderTab({editingOffered: true});
     fireEvent.click(screen.getByRole('button', {name: 'busy on'}));
     const tile = screen.getByRole('button', {
       name: 'Sprite 2',
@@ -414,7 +414,7 @@ describe('ImagesTab', () => {
     delete params['images-edited'];
     propsByKey.k1 = {name: 'Sprite 1', categories: [], sourceUrl: 'one.png'};
     propsByKey.k2 = {name: 'Sprite 2', categories: [], sourceUrl: 'two.png'};
-    const {rerender} = renderTab({editingOffered: true, deletingOffered: true});
+    const {rerender} = renderTab({editingOffered: true});
     expect(await screen.findByText('canvas')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
@@ -434,7 +434,7 @@ describe('ImagesTab', () => {
   it('deletes through the list and moves on to the next image', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     propsByKey.k2 = {name: 'Sprite 2', categories: []};
-    const {rerender} = renderTab({editingOffered: true, deletingOffered: true});
+    const {rerender} = renderTab({editingOffered: true});
     fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
     deleteImage.mockImplementation(() => delete propsByKey.k1);
     fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
@@ -757,11 +757,21 @@ describe('ImagesTab', () => {
 
   it('offers no New button and no delete button when the level says so', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
-    renderTab({editingOffered: true, noNewImages: true});
+    const {unmount} = renderTab({
+      editingOffered: true,
+      noNewImages: true,
+      noDeletingImages: true,
+    });
     expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
     expect(screen.queryByRole('button', {name: 'Delete image'})).toBeNull();
     // The image is still there to work on.
     expect(screen.getByRole('button', {name: 'Sprite 1'})).toBeTruthy();
+    unmount();
+
+    // Each option removes only its own button.
+    renderTab({editingOffered: true, noNewImages: true});
+    expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
+    expect(screen.getByRole('button', {name: 'Delete image'})).toBeTruthy();
   });
 
   it('keeps the words under an edited image when the parameter asks', () => {

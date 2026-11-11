@@ -57,6 +57,7 @@ const TAB_KEYS: (keyof LevelMode)[] = [
   'extraTabs',
   'paletteRoles',
   'noNewImages',
+  'noDeletingImages',
   'imageKinds',
 ];
 
@@ -119,6 +120,7 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
     case 'imageFirst':
     case 'learning':
     case 'noNewImages':
+    case 'noDeletingImages':
       return value === true;
     case 'imageSource':
       return isImageSource(value);

@@ -45,6 +45,10 @@ export interface LevelMode {
   /** The Images tab has no New button: the student can regenerate or draw
       on the images it lists, but cannot add one. */
   noNewImages?: boolean;
+  /** The Images tab has no Delete button. A level sets this when a later
+      level depends on an image made earlier. Unset, an image can be deleted
+      wherever images can be added, as in free play. */
+  noDeletingImages?: boolean;
   /** The kinds of image the Images tab lists. Every kind when unset. */
   imageKinds?: ImageType[];
 }

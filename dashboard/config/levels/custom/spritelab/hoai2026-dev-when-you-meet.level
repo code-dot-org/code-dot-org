@@ -28,6 +28,7 @@
         "Images",
         "World"
       ],
+      "noDeletingImages": true,
       "paletteRoles": [
         "friend",
         "treasure",
