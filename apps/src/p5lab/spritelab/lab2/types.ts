@@ -160,6 +160,11 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** Further pattern characters, each the newest sprite carrying a role:
       {"F": "friend"}. 'S' and 'B' keep their own meaning. */
   worldStartRoles?: WorldStartRoles;
+  /** The World tab keeps the last copy of each character or object image
+      that has a role: it can be erased or painted over only after another
+      copy has been placed. Unset, every cell can be changed, as in free
+      play. */
+  keepLastCopy?: boolean;
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
