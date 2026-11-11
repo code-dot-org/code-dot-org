@@ -128,11 +128,14 @@ describe('addBlocks', () => {
       covered = {},
       data,
       noBottom = false,
+      disabled = [],
     }: {
       showing?: Outline;
       covered?: Record<number, Outline>;
       data?: string;
       noBottom?: boolean;
+      /** The indexes of the blocks the student has disabled. */
+      disabled?: number[];
     } = {}
   ) => {
     const sets: string[] = [];
@@ -145,6 +148,7 @@ describe('addBlocks', () => {
       type,
       data: i === 0 ? data : undefined,
       isShadow: () => false,
+      isEnabled: () => !disabled.includes(i),
       nextConnection:
         noBottom && i === types.length - 1
           ? null
@@ -248,6 +252,13 @@ describe('addBlocks', () => {
       expect(stackHolds(withSay.top, ['spritelab2_whenRun'])).toBe(false);
       const waiting = liveStack(['spritelab2_whenRun'], {showing: SAY});
       expect(stackHolds(waiting.top, ['shadow'])).toBe(false);
+    });
+
+    it('does not count a block the student has disabled', () => {
+      const off = liveStack(['spritelab2_whenRun', 'gamelab_spriteSay'], {
+        disabled: [1],
+      });
+      expect(stackHolds(off.top, ['gamelab_spriteSay'])).toBe(false);
     });
   });
 
@@ -385,6 +396,50 @@ describe('addBlocks', () => {
         first.top,
       ]);
       expect(second.sets).toEqual([]);
+    });
+
+    it('leaves the outline on one stack when two were showing it', () => {
+      const first = liveStack(['gamelab_checkTouching'], {showing: SAY});
+      const second = liveStack(['gamelab_checkTouching'], {showing: SAY});
+      const entries = [{attachTo: 'gamelab_checkTouching', shadow: SAY}];
+      expect(syncOutlines(liveWorkspace(first, second), entries, [])).toEqual([
+        first.top,
+      ]);
+      expect(first.recorded).toEqual([SAY]);
+      expect(second.recorded).toEqual([null]);
+    });
+
+    it('draws an outline that nothing says how to fill as the level opens, and not again after', () => {
+      // No block it is drawn to look like, and no check names its stack.
+      const BLANK = {type: 'spritelab2_placeholder', extraState: {blank: true}};
+      const entries = [{attachTo: 'spritelab2_whenRun', shadow: BLANK}];
+      const run = liveStack(['spritelab2_whenRun']);
+      expect(syncOutlines(liveWorkspace(run), entries, [], true)).toEqual([
+        run.top,
+      ]);
+      // The student dropped a block on it, and the pass after that edit
+      // does not draw it under the new block.
+      const filled = liveStack(['spritelab2_whenRun', 'gamelab_spriteSay']);
+      expect(syncOutlines(liveWorkspace(filled), entries, [])).toEqual([]);
+      expect(filled.sets).toEqual([]);
+    });
+
+    it("still draws the level's other outlines when one cannot be built", () => {
+      const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+      const run = liveStack(['spritelab2_whenRun']);
+      run.blocks[0].nextConnection.setShadowState = () => {
+        throw new Error('no such block type');
+      };
+      const touch = liveStack(['gamelab_checkTouching']);
+      const entries = [
+        {attachTo: 'spritelab2_whenRun', shadow: GO_TO_SCENE},
+        {attachTo: 'gamelab_checkTouching', shadow: SAY},
+      ];
+      expect(syncOutlines(liveWorkspace(run, touch), entries, [])).toEqual([
+        touch.top,
+      ]);
+      expect(warn).toHaveBeenCalledTimes(1);
+      warn.mockRestore();
     });
 
     it('brings the outline back when the block that filled it is taken out', () => {

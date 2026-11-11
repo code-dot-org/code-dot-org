@@ -1,0 +1,210 @@
+// The blocks a level adds to its pinned scene (add_blocks): when they are
+// added, the outlines that hint at what to put under them, and the lock
+// that keeps them from being deleted.
+
+import * as BlocklyCore from 'blockly/core';
+import {MutableRefObject, useCallback, useEffect, useMemo, useRef} from 'react';
+
+import {
+  addMissingBlocks,
+  AddBlockEntry,
+  BlockCheck,
+  OUTLINE_EVENT_GROUP,
+  syncOutlines,
+} from '../addBlocks';
+import {lockAddedBlocks} from '../blockLocks';
+import {objectiveChecks, Objectives} from '../objectives';
+import {clearRoom} from '../stackRoom';
+
+const NO_ENTRIES: AddBlockEntry[] = [];
+
+/** A Start Over that leaves for the first level: the level being left, and
+    the count of sources resets before the one Start Over makes. */
+interface LeavingReset {
+  level: number;
+  reinitBefore: number;
+}
+
+interface LevelBlocksOptions {
+  /** The workspace holds a student's program and the project's images are
+      in. Nothing is added before that. */
+  ready: boolean;
+  /** A levelbuilder is editing the level, and can delete anything. */
+  editing: boolean;
+  levelId: number;
+  /** The level's add_blocks entries. They belong to its pinned scene. */
+  addBlocks: AddBlockEntry[] | undefined;
+  pinnedSceneId: string | undefined;
+  /** The scene open in the editor. */
+  activeSceneId: string;
+  objectives: Objectives | undefined;
+  /** Goes up each time the project's sources are replaced whole. */
+  sourcesReinitializedCount: number;
+  /** Goes up each time the workspace is created again. */
+  workspaceVersion: number;
+}
+
+interface LevelBlocks {
+  /** Adds the level's blocks, draws its outlines and locks what it added,
+      once for each level, load, sources reset and workspace. The owner
+      calls it after loading a scene's code. */
+  addLevelBlocks: () => void;
+  /** Counts loads of a scene's code into the workspace. The owner adds one
+      for each load, before calling addLevelBlocks. */
+  sceneLoadsRef: MutableRefObject<number>;
+  /** The owner sets this when Start Over leaves for the first level. The
+      pass then skips the reset Start Over makes, or the fresh project
+      would open with this level's blocks in it. A level change clears it,
+      used or not. */
+  leavingResetRef: MutableRefObject<LeavingReset | undefined>;
+}
+
+export default function useLevelBlocks({
+  ready,
+  editing,
+  levelId,
+  addBlocks,
+  pinnedSceneId,
+  activeSceneId,
+  objectives,
+  sourcesReinitializedCount,
+  workspaceVersion,
+}: LevelBlocksOptions): LevelBlocks {
+  const sceneLoadsRef = useRef(0);
+  // The key of the last pass (see addLevelBlocks).
+  const addedBlocksForRef = useRef('');
+  // The key of the pass that was skipped for a Start Over reset. Until
+  // another pass runs, the outlines are left alone too.
+  const skippedPassRef = useRef<string | null>(null);
+  const leavingResetRef = useRef<LeavingReset>();
+  useEffect(() => {
+    leavingResetRef.current = undefined;
+    // The add-blocks pass drops them too, except on the Start Over reset it
+    // sits out.
+    const workspace = Blockly.getMainWorkspace?.() as
+      | BlocklyCore.WorkspaceSvg
+      | undefined;
+    if (workspace) {
+      clearRoom(workspace);
+    }
+  }, [levelId]);
+
+  const entries = useMemo(
+    () =>
+      activeSceneId === pinnedSceneId ? addBlocks ?? NO_ENTRIES : NO_ENTRIES,
+    [addBlocks, pinnedSceneId, activeSceneId]
+  );
+  // The level's checklist checks for blocks in the open scene. They say
+  // which blocks fill an outline (see fillingTypes).
+  const blockChecks = useMemo(
+    () =>
+      objectiveChecks(objectives).filter(
+        (check): check is BlockCheck =>
+          check.kind === 'block' &&
+          (check.scene === undefined || check.scene === activeSceneId)
+      ),
+    [objectives, activeSceneId]
+  );
+
+  // The level's added blocks join the pinned scene once it is on screen. A
+  // level reached without a page load loads nothing, so arriving runs the
+  // pass. A load puts the view back wherever the workspace was, so a load
+  // runs it too and brings the level's outline back on screen. It runs
+  // with no entries as well, to remove other levels' outlines.
+  const addLevelBlocks = useCallback(() => {
+    if (!ready) {
+      return;
+    }
+    const key = [
+      levelId,
+      sourcesReinitializedCount,
+      workspaceVersion,
+      sceneLoadsRef.current,
+    ].join(':');
+    if (addedBlocksForRef.current === key) {
+      return;
+    }
+    addedBlocksForRef.current = key;
+    const leavingReset = leavingResetRef.current;
+    if (
+      leavingReset &&
+      leavingReset.level === levelId &&
+      sourcesReinitializedCount > leavingReset.reinitBefore
+    ) {
+      leavingResetRef.current = undefined;
+      skippedPassRef.current = key;
+      return;
+    }
+    const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
+    addMissingBlocks(workspace, entries, blockChecks).then(() => {
+      // Adding waits for the workspace to settle. If another pass has
+      // started meanwhile, these entries may not be the workspace's.
+      if (!editing && addedBlocksForRef.current === key) {
+        lockAddedBlocks(workspace, entries);
+      }
+    });
+  }, [
+    ready,
+    editing,
+    levelId,
+    entries,
+    blockChecks,
+    sourcesReinitializedCount,
+    workspaceVersion,
+  ]);
+  useEffect(() => {
+    addLevelBlocks();
+  }, [addLevelBlocks]);
+
+  // The outlines follow the blocks. After the student moves, adds or
+  // deletes a block, the outlines are brought in line again: an outline
+  // goes when its block is dropped in, and comes back if the block is
+  // taken out.
+  useEffect(() => {
+    if (!ready) {
+      return;
+    }
+    const workspace = Blockly.getMainWorkspace?.() as
+      | BlocklyCore.WorkspaceSvg
+      | undefined;
+    if (!workspace) {
+      return;
+    }
+    const blockChanges: string[] = [
+      Blockly.Events.BLOCK_MOVE,
+      Blockly.Events.BLOCK_CREATE,
+      Blockly.Events.BLOCK_DELETE,
+    ];
+    let timer = 0;
+    const onChange = (event: BlocklyCore.Events.Abstract) => {
+      if (
+        !blockChanges.includes(event.type) ||
+        event.group === OUTLINE_EVENT_GROUP
+      ) {
+        return;
+      }
+      // One pass after a burst of changes, once the workspace has settled.
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => {
+        // Not while a block is being dragged, and not on the reset that
+        // Start Over makes on its way to the first level: that project
+        // must be left as the reset made it.
+        if (
+          workspace.isDragging() ||
+          leavingResetRef.current ||
+          skippedPassRef.current === addedBlocksForRef.current
+        ) {
+          return;
+        }
+        syncOutlines(workspace, entries, blockChecks);
+      }, 0);
+    };
+    workspace.addChangeListener(onChange);
+    return () => {
+      window.clearTimeout(timer);
+      workspace.removeChangeListener(onChange);
+    };
+  }, [ready, entries, blockChecks, workspaceVersion]);
+
+  return {addLevelBlocks, sceneLoadsRef, leavingResetRef};
+}

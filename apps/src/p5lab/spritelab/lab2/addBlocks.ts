@@ -6,6 +6,7 @@ import * as BlocklyCore from 'blockly/core';
 
 import {PLACEHOLDER_BLOCK_TYPE} from './blockly/blockDefinitions/placeholder';
 import {ObjectiveCheck} from './objectives';
+import {mapSavedTopBlocks} from './savedBlocks';
 import {scrollIntoView} from './scrollIntoView';
 import {
   clearRoom,
@@ -205,17 +206,29 @@ export function stackHolds(top: BlocklyCore.Block, types: string[]): boolean {
   return top
     .getDescendants(false)
     .some(
-      block => block !== top && !block.isShadow() && types.includes(block.type)
+      block =>
+        block !== top &&
+        !block.isShadow() &&
+        block.isEnabled() &&
+        types.includes(block.type)
     );
 }
 
-// A change the lab makes to the outlines is not the student's to undo.
-function withoutUndo(change: () => void): void {
+/** The event group of the changes the lab makes to the outlines. An
+    outline is not saved, so such a change is not an edit to save or run. */
+export const OUTLINE_EVENT_GROUP = 'outlines';
+
+// A change the lab makes to the outlines is not the student's to undo, and
+// is marked with the outlines' event group.
+function asOutlineChange(change: () => void): void {
   const recording = BlocklyCore.Events.getRecordUndo();
+  const group = BlocklyCore.Events.getGroup();
   BlocklyCore.Events.setRecordUndo(false);
+  BlocklyCore.Events.setGroup(OUTLINE_EVENT_GROUP);
   try {
     change();
   } finally {
+    BlocklyCore.Events.setGroup(group);
     BlocklyCore.Events.setRecordUndo(recording);
   }
 }
@@ -287,8 +300,9 @@ export function syncStackOutline(
   const showing =
     !!end && samePlaceholder(end.connection.getShadowState(), shadow);
   if (end && showing) {
-    // A saved project keeps the outline as it was drawn. When the level's
-    // version of it has changed (blank or not), it is drawn again.
+    // A project saved before outlines were left out of the save can hold
+    // the outline as an earlier version of the level drew it. When the
+    // level's version has changed (blank or not), it is drawn again.
     if (isBlank(end.connection.getShadowState()) !== isBlank(shadow)) {
       end.connection.setShadowState(shadow);
     }
@@ -330,10 +344,8 @@ export function forgetCoveredOutlines(
   return forgotten;
 }
 
-type BlockState = BlocklyCore.serialization.blocks.State;
-
-function stripOutlines(block: BlockState): BlockState {
-  const out: BlockState = {...block};
+function stripOutlines(block: AddBlock): AddBlock {
+  const out: AddBlock = {...block};
   if (block.inputs) {
     out.inputs = Object.fromEntries(
       Object.entries(block.inputs).map(([name, input]) => [
@@ -363,16 +375,9 @@ function stripOutlines(block: BlockState): BlockState {
  * when it opens (see syncOutlines), so the saved project never holds one.
  */
 export function withoutOutlines<
-  T extends {blocks?: {languageVersion?: number; blocks?: BlockState[]}}
+  T extends {blocks?: {languageVersion?: number; blocks?: AddBlock[]}}
 >(serialized: T): T {
-  const blocks = serialized.blocks?.blocks;
-  if (!blocks) {
-    return serialized;
-  }
-  return {
-    ...serialized,
-    blocks: {...serialized.blocks, blocks: blocks.map(stripOutlines)},
-  };
+  return mapSavedTopBlocks(serialized, stripOutlines);
 }
 
 /**
@@ -413,17 +418,23 @@ export function dropStalePlaceholders(
  * Brings every outline in the workspace in line with the level: hidden
  * outlines are forgotten, other levels' outlines are removed, and each of
  * this level's outlines is shown or removed by whether a stack it belongs
- * on holds the block it asks for. It is safe to run at any time and as often as needed;
- * a second run changes nothing. Returns the stacks whose outline is
- * showing.
+ * on holds the block it asks for. It is safe to run at any time and as
+ * often as needed; a second run changes nothing. Returns the stacks whose
+ * outline is showing.
+ *
+ * `opening` is the pass made as the level opens. An outline that nothing
+ * says how to fill (no block it is drawn to look like, and no check that
+ * names its stack) is drawn on that pass only. On a later pass it would be
+ * drawn again under every block the student dropped on it.
  */
 export function syncOutlines(
   workspace: BlocklyCore.Workspace,
   entries: AddBlockEntry[],
-  blockChecks: BlockCheck[]
+  blockChecks: BlockCheck[],
+  opening = false
 ): BlocklyCore.Block[] {
   const showing = new Set<BlocklyCore.Block>();
-  withoutUndo(() => {
+  asOutlineChange(() => {
     forgetCoveredOutlines(workspace);
     dropStalePlaceholders(workspace, entries);
     for (const entry of entries) {
@@ -432,6 +443,9 @@ export function syncOutlines(
         continue;
       }
       const types = fillingTypes(entry, blockChecks);
+      if (!types.length && !opening) {
+        continue;
+      }
       const stacks = workspace
         .getTopBlocks(false)
         .filter(top => entryOn(entry, top));
@@ -440,14 +454,22 @@ export function syncOutlines(
       // shows the outline. Otherwise filling one stack would move the
       // outline to the next.
       const done = stacks.some(top => stackHolds(top, types));
+      // The outline is drawn on one stack only: the first that can take
+      // it. It is removed from every other stack.
+      let shown = false;
       for (const top of stacks) {
-        if (done) {
-          removeOutline(top, placeholder);
-        } else if (syncStackOutline(top, placeholder, types)) {
-          // The outline is drawn on one stack only: the first that can
-          // take it.
-          showing.add(top);
-          break;
+        try {
+          if (!done && !shown && syncStackOutline(top, placeholder, types)) {
+            showing.add(top);
+            shown = true;
+          } else {
+            removeOutline(top, placeholder);
+          }
+        } catch (e) {
+          // An outline the pool cannot build (a misnamed type or field) is
+          // a level-authoring slip. The level's other outlines are still
+          // drawn.
+          console.warn('add_blocks outline not drawn:', e);
         }
       }
     }
@@ -528,14 +550,8 @@ export async function addMissingBlocks(
       console.warn(`add_blocks entry ${entry.type} not added:`, e);
     }
   }
-  try {
-    if (syncOutlines(workspace, entries, blockChecks).length) {
-      ensureRoom(workspace);
-    }
-  } catch (e) {
-    // An outline the pool cannot build is a level-authoring slip; the level
-    // must still open.
-    console.warn('add_blocks outlines not drawn:', e);
+  if (syncOutlines(workspace, entries, blockChecks, true).length) {
+    ensureRoom(workspace);
   }
   for (const entry of entries) {
     if (isAttachRoom(entry)) {

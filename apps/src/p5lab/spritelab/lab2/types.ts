@@ -164,8 +164,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
   /** Blocks built on earlier levels cannot be deleted from the pinned scene
-      here (blockLocks.ts); the stacks this level adds and the toolbox
-      blocks no earlier level required can. */
+      here (blockLocks.ts). The blocks under a stack this level adds can,
+      and so can the toolbox blocks no earlier level required. */
   lockEarlierBlocks?: boolean;
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */

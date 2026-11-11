@@ -161,6 +161,13 @@ describe('lockAddedBlocks', () => {
     expect(built.deletable).toBe(true);
   });
 
+  it('locks one stack for an entry with no tag, and leaves a second of the type', () => {
+    const added = placed('gamelab_atTime');
+    const built = placed('gamelab_atTime');
+    lockAddedBlocks(workspaceOf(added, built), [{type: 'gamelab_atTime'}]);
+    expect([added.deletable, built.deletable]).toEqual([false, true]);
+  });
+
   it('locks the blocks the level added inside and under an added block', () => {
     const sprite = placed('gamelab_allSpritesWithAnimation');
     const studentSay = placed('gamelab_spriteSay');

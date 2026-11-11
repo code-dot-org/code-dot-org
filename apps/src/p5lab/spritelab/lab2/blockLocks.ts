@@ -11,15 +11,10 @@
 
 import * as BlocklyCore from 'blockly/core';
 
-import {
-  AddBlock,
-  AddBlockEntry,
-  isAttachRoom,
-  isAttachShadow,
-  matchesEntry,
-} from './addBlocks';
+import {AddBlock, AddBlockEntry, isAttachment, matchesEntry} from './addBlocks';
 import {requiredBlockTypes} from './blockCatalog';
 import {WHEN_RUN_BLOCK_TYPE} from './blockly/blockDefinitions/whenRun';
+import {mapSavedTopBlocks} from './savedBlocks';
 import {SpriteLab2LevelProperties} from './types';
 
 type BlockState = BlocklyCore.serialization.blocks.State;
@@ -104,18 +99,23 @@ function lockAsAdded(block: BlocklyCore.Block, added: AddBlock): void {
     top block, and any block the level added inside or under it. A level
     adds a block because the level is about it, and one that is not in the
     toolbox could not be got back. What the student builds under an added
-    block can still be deleted. */
+    block can still be deleted.
+
+    A level adds one block for each entry, so one stack is locked for each
+    entry: the first that stands for it. An entry with no tag is matched by
+    type alone, and a second stack of that type is the student's own. */
 export function lockAddedBlocks(
   workspace: BlocklyCore.Workspace,
   entries: AddBlockEntry[]
 ): void {
-  const blocks = entries.filter(
-    (entry): entry is AddBlock => !isAttachShadow(entry) && !isAttachRoom(entry)
-  );
-  workspace.getTopBlocks(false).forEach(top => {
-    const added = blocks.find(entry => matchesEntry(top, entry));
-    if (added) {
-      lockAsAdded(top, added);
+  const tops = workspace.getTopBlocks(false);
+  entries.forEach(entry => {
+    if (isAttachment(entry)) {
+      return;
+    }
+    const top = tops.find(candidate => matchesEntry(candidate, entry));
+    if (top) {
+      lockAsAdded(top, entry);
     }
   });
 }
@@ -147,12 +147,5 @@ function stripLocks(block: BlockState): BlockState {
 export function withoutLocks<
   T extends {blocks?: {languageVersion?: number; blocks?: BlockState[]}}
 >(serialized: T): T {
-  const blocks = serialized.blocks?.blocks;
-  if (!blocks) {
-    return serialized;
-  }
-  return {
-    ...serialized,
-    blocks: {...serialized.blocks, blocks: blocks.map(stripLocks)},
-  };
+  return mapSavedTopBlocks(serialized, stripLocks);
 }
