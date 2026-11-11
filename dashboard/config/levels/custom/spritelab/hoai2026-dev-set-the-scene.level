@@ -28,7 +28,14 @@
       "imageRole": "platform-background",
       "imageFirst": true,
       "learning": true,
-      "oneImage": true
+      "oneImage": true,
+      "extraTabs": [
+        "World"
+      ],
+      "paletteRoles": [
+        "treasure",
+        "block"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",

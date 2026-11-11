@@ -2317,6 +2317,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}
                 editingOffered={!oneImage}
+                noNewImages={levelProperties.levelMode?.noNewImages}
+                // Only free play, or a project outside a progression, lets
+                // a student delete an image. On an earlier level a deleted
+                // image could be one a later level depends on.
+                deletingOffered={
+                  !levelProperties.levelMode ||
+                  isFreeplayMode(levelProperties.levelMode)
+                }
+                imageKinds={levelProperties.levelMode?.imageKinds}
                 paneWidth={paneWidthPx}
                 onImageLanded={saveImagesNow}
                 active={activeTab === 'Images'}

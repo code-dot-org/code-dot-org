@@ -24,6 +24,28 @@ describe('cleanLevelMode', () => {
     ]);
   });
 
+  it('keeps the options that have no field on the form, when their values are valid', () => {
+    const mode = {
+      kind: 'code',
+      extraTabs: ['Images', 'World'],
+      paletteRoles: ['treasure', 'block'],
+      oneImage: true,
+      noNewImages: true,
+      imageKinds: ['sprite', 'block'],
+    };
+    expect(cleanLevelMode(mode)).toEqual({mode, removed: []});
+  });
+
+  it('drops extra tabs and image kinds the lab does not know', () => {
+    const {mode, removed} = cleanLevelMode({
+      kind: 'code',
+      extraTabs: ['Images', 'Sound'],
+      imageKinds: ['sprite', 'sprite'],
+    });
+    expect(mode).toEqual({kind: 'code'});
+    expect(removed).toHaveLength(2);
+  });
+
   it('drops everything when the kind is not a real kind', () => {
     const {mode, removed} = cleanLevelMode({
       kind: 'build',

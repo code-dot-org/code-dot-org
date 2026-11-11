@@ -36,6 +36,17 @@ export interface LevelMode {
       GENERATION_LIMIT generations of it and no adding, drawing or deleting.
       Unset, the tab is as in free play. */
   oneImage?: boolean;
+  /** Tabs the level shows in addition to its kind's own, for example
+      ["Images", "World"]. A level uses this to keep the editors of earlier
+      levels available, so a student can go back and change their work
+      without leaving the level. The level still opens on its kind's first
+      tab. Names that are not editor tabs are ignored. */
+  extraTabs?: string[];
+  /** The Images tab has no New button: the student can regenerate or draw
+      on the images it lists, but cannot add one. */
+  noNewImages?: boolean;
+  /** The kinds of image the Images tab lists. Every kind when unset. */
+  imageKinds?: ImageType[];
 }
 
 /** Generations a one-image level allows. */
@@ -54,14 +65,26 @@ const TABS: Record<LevelModeKind, Tab[]> = {
   freeplay: ['Code', 'Images', 'World', 'Play'],
 };
 
+/** The editor tabs a level may add with `extraTabs`. */
+const EXTRA_TABS: readonly Tab[] = ['Images', 'World', 'Code'];
+
 /** The tabs a level shows; undefined, for the lab's default, when the kind
-    is not one the lab knows. */
+    is not one the lab knows. The first tab is where the level opens. */
 export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
   const own = mode && TABS[mode.kind];
   if (!own) {
     return undefined;
   }
-  return mode.imageFirst && !own.includes('Images') ? ['Images', ...own] : own;
+  const tabs =
+    mode.imageFirst && !own.includes('Images') ? ['Images', ...own] : [...own];
+  // The level's extra tabs go after its own, so they do not change where
+  // the level opens.
+  EXTRA_TABS.forEach(tab => {
+    if (mode.extraTabs?.includes(tab) && !tabs.includes(tab)) {
+      tabs.push(tab);
+    }
+  });
+  return tabs as Tab[];
 }
 
 /** Whether the level is a world level: its work is placing images on the

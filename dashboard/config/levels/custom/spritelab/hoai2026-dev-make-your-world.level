@@ -26,6 +26,13 @@
       "paletteRoles": [
         "treasure",
         "block"
+      ],
+      "extraTabs": [
+        "Images"
+      ],
+      "noNewImages": true,
+      "imageKinds": [
+        "sprite"
       ]
     },
     "starter_images": [

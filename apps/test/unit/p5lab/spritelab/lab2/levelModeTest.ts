@@ -12,6 +12,26 @@ describe('tabsForMode', () => {
     expect(tabsForMode({kind: 'play'})).toEqual(['Play']);
   });
 
+  it('adds the extra tabs a level names, after its own, and ignores other names', () => {
+    expect(tabsForMode({kind: 'code', extraTabs: ['Images']})).toEqual([
+      'Code',
+      'Play',
+      'Images',
+    ]);
+    expect(
+      tabsForMode({kind: 'code', extraTabs: ['World', 'Images', 'Sound']})
+    ).toEqual(['Code', 'Play', 'Images', 'World']);
+    // A tab the level already has is not added twice.
+    expect(tabsForMode({kind: 'world', extraTabs: ['World']})).toEqual([
+      'World',
+      'Play',
+    ]);
+    // The level still opens on its own first tab.
+    expect(
+      tabsForMode({kind: 'code', imageFirst: true, extraTabs: ['World']})
+    ).toEqual(['Images', 'Code', 'Play', 'World']);
+  });
+
   it('gives an image level the Images tab alone', () => {
     expect(tabsForMode({kind: 'image'})).toEqual(['Images']);
   });

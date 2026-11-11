@@ -49,14 +49,39 @@ const IMAGE_KEYS: (keyof LevelMode)[] = [
 
 const IMAGE_TAB_KEYS: (keyof LevelMode)[] = ['learning', 'imageSource'];
 
+// Options about which tabs a level shows and what its Images tab and World
+// palette offer. This form has no fields for most of them yet: they are
+// set by editing the JSON, and are listed here so the form keeps them.
+const TAB_KEYS: (keyof LevelMode)[] = [
+  'extraTabs',
+  'paletteRoles',
+  'oneImage',
+  'noNewImages',
+  'imageKinds',
+];
+
 // Keys a kind can carry; changing the kind drops the rest.
 const KEYS_BY_KIND: Record<LevelModeKind, (keyof LevelMode)[]> = {
-  code: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS],
-  world: [...IMAGE_KEYS, 'paletteRoles', 'imageFirst', ...IMAGE_TAB_KEYS],
-  play: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS],
-  image: [...IMAGE_KEYS, ...IMAGE_TAB_KEYS],
+  code: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
+  world: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
+  play: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
+  image: [...IMAGE_KEYS, ...IMAGE_TAB_KEYS, 'oneImage'],
   freeplay: [...IMAGE_TAB_KEYS],
 };
+
+/** The editor tabs a level can add with `extraTabs`. */
+const EXTRA_TAB_NAMES = ['Images', 'World', 'Code'];
+
+/** Whether a value is a list with at least one entry, each from `allowed`
+    and none repeated. */
+function isListOf(value: unknown, allowed: readonly string[]): boolean {
+  return (
+    Array.isArray(value) &&
+    value.length > 0 &&
+    value.every(entry => allowed.includes(entry)) &&
+    new Set(value).size === value.length
+  );
+}
 
 export function getPaletteRoles(mode: Partial<LevelMode>): string[] {
   return mode.paletteRoles ?? [];
@@ -89,9 +114,15 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
         value.every(isNonEmptyString) &&
         new Set(value).size === value.length
       );
+    case 'extraTabs':
+      return isListOf(value, EXTRA_TAB_NAMES);
+    case 'imageKinds':
+      return isListOf(value, IMAGE_TYPES);
     // A false flag reads the same as no flag, so only true is stored.
     case 'imageFirst':
     case 'learning':
+    case 'oneImage':
+    case 'noNewImages':
       return value === true;
     case 'imageSource':
       return isImageSource(value);
@@ -148,6 +179,10 @@ export function fieldApplies(
       return fieldApplies(mode, 'imageType') && mode.imageType === 'sprite';
     case 'imageRole':
       return kind === 'image' || fieldApplies(mode, 'imageType');
+    // The palette is the World tab's, which a level has by its kind or by
+    // naming it among its extra tabs.
+    case 'paletteRoles':
+      return kind === 'world' || !!mode.extraTabs?.includes('World');
     // Both act on a picture the student makes, so they need an Images tab.
     case 'learning':
     case 'imageSource':
