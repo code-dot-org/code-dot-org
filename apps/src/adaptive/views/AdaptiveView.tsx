@@ -62,18 +62,17 @@ const AdaptiveView: React.FunctionComponent<
   );
   // Students see this page too, so a bad pathway edit is an outage, not a preview.
   useEffect(() => {
-    const pathwayId = levelProperties.adaptiveId;
-    countAdaptive('adaptive.pathway.load', {
-      outcome: parsed.problems ? 'content_problems' : 'ok',
-      pathwayId,
+    countAdaptive('Adaptive.PathwayLoad', {
+      Outcome: parsed.problems ? 'content_problems' : 'ok',
     });
     if (!parsed.problems) return;
     reportAdaptiveError(
       'Adaptive pathway content has problems',
       new Error(parsed.problems.join('; ')),
       {
-        context: {problems: parsed.problems, levelId: levelProperties.id},
-        tags: {pathwayId},
+        problems: parsed.problems,
+        pathwayId: levelProperties.adaptiveId,
+        levelId: levelProperties.id,
       }
     );
   }, [parsed, levelProperties.adaptiveId, levelProperties.id]);

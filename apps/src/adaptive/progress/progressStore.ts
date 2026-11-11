@@ -4,7 +4,7 @@
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {countAdaptive, reportAdaptiveError} from '../observability';
+import {countAdaptive, httpStatus, reportAdaptiveError} from '../observability';
 
 import {
   Answer,
@@ -34,12 +34,8 @@ type PutRoute = 'progress' | 'generated_instructions' | 'validation_history';
 
 export type ProgressRoute = PutRoute | 'load' | 'level_step';
 
-// 0 when no response came back.
-const httpStatus = (error: unknown): number =>
-  (error as {response?: {status?: number}} | undefined)?.response?.status ?? 0;
-
 export function recordProgressOk(route: ProgressRoute) {
-  countAdaptive('adaptive.progress.request', {route, outcome: 'ok'});
+  countAdaptive('Adaptive.ProgressRequest', {Route: route, Outcome: 'ok'});
 }
 
 export function recordProgressFailure(
@@ -48,10 +44,15 @@ export function recordProgressFailure(
   stepId?: string
 ) {
   const status = httpStatus(error);
-  countAdaptive('adaptive.progress.request', {route, outcome: 'error', status});
+  countAdaptive('Adaptive.ProgressRequest', {
+    Route: route,
+    Outcome: 'error',
+    Status: status,
+  });
   reportAdaptiveError(`Adaptive progress: ${route} failed`, error, {
-    context: {stepId, status},
-    tags: {route, status},
+    route,
+    stepId,
+    status,
   });
 }
 

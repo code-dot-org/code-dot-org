@@ -1,12 +1,5 @@
-import * as Observability from '@code-dot-org/core/plugins/observability';
-
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
 import HttpClient from '@cdo/apps/util/HttpClient';
-
-jest.mock('@code-dot-org/core/plugins/observability', () => ({
-  metrics: {count: jest.fn()},
-  recordError: jest.fn(),
-}));
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
@@ -14,10 +7,16 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 }));
 
 const mockLogError = jest.fn();
+const mockIncrementCounter = jest.fn();
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {
-    getInstance: () => ({getMetricsReporter: () => ({logError: mockLogError})}),
+    getInstance: () => ({
+      getMetricsReporter: () => ({
+        logError: mockLogError,
+        incrementCounter: mockIncrementCounter,
+      }),
+    }),
   },
 }));
 
@@ -120,22 +119,29 @@ describe('ProgressStore', () => {
       reason: 'Fine.',
     });
 
-    const count = Observability.metrics.count as jest.Mock;
-    expect(count.mock.calls).toEqual([
+    expect(mockIncrementCounter.mock.calls).toEqual([
       [
-        'adaptive.progress.request',
-        1,
-        {lab: 'adaptive', route: 'progress', outcome: 'error', status: 422},
+        'Adaptive.ProgressRequest',
+        [
+          {name: 'Route', value: 'progress'},
+          {name: 'Outcome', value: 'error'},
+          {name: 'Status', value: '422'},
+        ],
       ],
       [
-        'adaptive.progress.request',
-        1,
-        {lab: 'adaptive', route: 'validation_history', outcome: 'ok'},
+        'Adaptive.ProgressRequest',
+        [
+          {name: 'Route', value: 'validation_history'},
+          {name: 'Outcome', value: 'ok'},
+        ],
       ],
     ]);
-    const [error, context] = (Observability.recordError as jest.Mock).mock
-      .calls[0];
-    expect(error.message).toBe('Adaptive progress: progress failed');
-    expect(context).toEqual({stepId: 'read', status: 422});
+    const [message, , details] = mockLogError.mock.calls[0];
+    expect(message).toBe('Adaptive progress: progress failed');
+    expect(details).toMatchObject({
+      route: 'progress',
+      stepId: 'read',
+      status: 422,
+    });
   });
 });

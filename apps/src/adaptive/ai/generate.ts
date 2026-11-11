@@ -20,8 +20,8 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   countAdaptive,
-  distributeAdaptive,
   reportAdaptiveError,
+  timeAdaptive,
 } from '../observability';
 
 import {
@@ -89,18 +89,23 @@ export async function generate<T>({
   const {traceId} = trace;
   const startedAt = Date.now();
   const record = (outcome: GenerationOutcome, error?: unknown) => {
-    const tags = {
-      trace: traceOptions.name,
-      model,
-      outcome,
-      pathwayId: traceOptions.metadata.pathwayId,
+    const dimensions = {
+      Trace: traceOptions.name,
+      ModelId: model,
+      Outcome: outcome,
     };
-    countAdaptive('adaptive.ai.generation', tags);
-    distributeAdaptive('adaptive.ai.latency_ms', Date.now() - startedAt, tags);
+    countAdaptive('Adaptive.AiGeneration', dimensions);
+    timeAdaptive(
+      'Adaptive.AiGenerationTime',
+      Date.now() - startedAt,
+      dimensions
+    );
     if (outcome === 'success' || outcome === 'error') return;
     reportAdaptiveError(GENERATION_FAILURES[outcome], error, {
-      context: {traceId, stepId: traceOptions.metadata.stepId},
-      tags: {trace: traceOptions.name, model},
+      traceId,
+      trace: traceOptions.name,
+      model,
+      stepId: traceOptions.metadata.stepId,
     });
   };
 
@@ -162,9 +167,7 @@ async function moderate(
     );
     result = safe ? 'ok' : 'flagged';
   } catch (error) {
-    reportAdaptiveError(`Adaptive ${phase} moderation failed`, error, {
-      tags: {phase},
-    });
+    reportAdaptiveError(`Adaptive ${phase} moderation failed`, error, {phase});
     result = 'error';
   }
   Observability.metrics.count('adaptive.text_moderation', 1, {phase, result});

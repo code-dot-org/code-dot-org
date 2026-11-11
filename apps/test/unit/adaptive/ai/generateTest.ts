@@ -18,8 +18,7 @@ import {
 
 jest.mock('@cdo/apps/aiGateway', () => ({generateText: jest.fn()}));
 jest.mock('@code-dot-org/core/plugins/observability', () => ({
-  metrics: {count: jest.fn(), distribution: jest.fn()},
-  recordError: jest.fn(),
+  metrics: {count: jest.fn()},
 }));
 const mockEnd = jest.fn();
 jest.mock('@cdo/apps/adaptive/ai/langfuse/trace', () => ({
@@ -34,17 +33,23 @@ jest.mock('@cdo/apps/aichat/api/client/helpers/modelHelpers', () => ({
   getModel: jest.fn(() => 'model'),
 }));
 const mockLogError = jest.fn();
+const mockIncrementCounter = jest.fn();
+const mockPublishMetric = jest.fn();
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {
-    getInstance: () => ({getMetricsReporter: () => ({logError: mockLogError})}),
+    getInstance: () => ({
+      getMetricsReporter: () => ({
+        logError: mockLogError,
+        incrementCounter: mockIncrementCounter,
+        publishMetric: mockPublishMetric,
+      }),
+    }),
   },
 }));
 
 const mockGenerateText = generateText as jest.Mock;
 const mockCount = Observability.metrics.count as jest.Mock;
-const mockDistribution = Observability.metrics.distribution as jest.Mock;
-const mockRecordError = Observability.recordError as jest.Mock;
 const mockStartTrace = startTrace as jest.Mock;
 const mockDcdoGet = DCDO.get as jest.Mock;
 
@@ -160,46 +165,47 @@ describe('generate', () => {
 
     await generate(options);
 
-    const tags = {
-      lab: 'adaptive',
-      trace: 'adaptive-instructions',
-      model: 'gemini-3.1-flash-lite',
-      outcome: 'success',
-    };
-    expect(mockCount).toHaveBeenCalledWith('adaptive.ai.generation', 1, tags);
-    expect(mockDistribution).toHaveBeenCalledWith(
-      'adaptive.ai.latency_ms',
-      expect.any(Number),
-      tags
+    const dimensions = [
+      {name: 'Trace', value: 'adaptive-instructions'},
+      {name: 'ModelId', value: 'gemini-3.1-flash-lite'},
+      {name: 'Outcome', value: 'success'},
+    ];
+    expect(mockIncrementCounter).toHaveBeenCalledWith(
+      'Adaptive.AiGeneration',
+      dimensions
     );
-    expect(mockRecordError).not.toHaveBeenCalled();
+    expect(mockPublishMetric).toHaveBeenCalledWith(
+      'Adaptive.AiGenerationTime',
+      expect.any(Number),
+      'Milliseconds',
+      dimensions
+    );
+    expect(mockLogError).not.toHaveBeenCalled();
   });
 
-  it('counts a gateway failure but leaves its Sentry issue to the gateway', async () => {
+  it('counts a gateway failure but leaves its report to the gateway', async () => {
     mockGenerateText.mockRejectedValue(new Error('boom'));
 
     await generate(options);
 
-    expect(mockCount).toHaveBeenCalledWith(
-      'adaptive.ai.generation',
-      1,
-      expect.objectContaining({outcome: 'error'})
+    expect(mockIncrementCounter).toHaveBeenCalledWith(
+      'Adaptive.AiGeneration',
+      expect.arrayContaining([{name: 'Outcome', value: 'error'}])
     );
-    expect(mockRecordError).not.toHaveBeenCalled();
     expect(mockLogError).not.toHaveBeenCalled();
   });
 
-  it('raises a schema mismatch as its own Sentry issue, with the parse error as the cause', async () => {
+  it('logs a schema mismatch with the parse error and the trace id', async () => {
     mockGenerateText.mockResolvedValue({...gatewayResult, output: {wrong: 1}});
 
     await generate(options);
 
-    const [error, context, tags] = mockRecordError.mock.calls[0];
-    expect(error.message).toBe('Adaptive AI output did not fit its schema');
-    expect(error.cause).toBeInstanceOf(z.ZodError);
-    expect(context).toEqual({traceId: 'trace-1', stepId: 'build'});
-    expect(tags).toEqual({
-      lab: 'adaptive',
+    const [message, error, details] = mockLogError.mock.calls[0];
+    expect(message).toBe('Adaptive AI output did not fit its schema');
+    expect(error).toBeInstanceOf(z.ZodError);
+    expect(details).toMatchObject({
+      traceId: 'trace-1',
+      stepId: 'build',
       trace: 'adaptive-instructions',
       model: 'gemini-3.1-flash-lite',
     });
@@ -213,12 +219,11 @@ describe('generate', () => {
       await jest.advanceTimersByTimeAsync(30_000);
 
       expect(await result).toEqual({traceId: 'trace-1'});
-      expect(mockCount).toHaveBeenCalledWith(
-        'adaptive.ai.generation',
-        1,
-        expect.objectContaining({outcome: 'timeout'})
+      expect(mockIncrementCounter).toHaveBeenCalledWith(
+        'Adaptive.AiGeneration',
+        expect.arrayContaining([{name: 'Outcome', value: 'timeout'}])
       );
-      expect(mockRecordError.mock.calls[0][0].message).toBe(
+      expect(mockLogError.mock.calls[0][0]).toBe(
         'Adaptive AI generation timed out'
       );
       expect(mockEnd).toHaveBeenCalledWith({
