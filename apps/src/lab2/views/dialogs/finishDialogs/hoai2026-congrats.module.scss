@@ -94,6 +94,13 @@
     background: var(--brand-purple-5);
     color: var(--brand-purple-50);
   }
+
+  // Held: the same white and purple, dimmed, in place of the theme's grey.
+  &:disabled {
+    background: var(--background-neutral-white-fixed);
+    color: var(--brand-purple-50);
+    opacity: 0.6;
+  }
 }
 
 .card .eyebrow,
@@ -110,7 +117,8 @@
 }
 
 .picture {
-  height: var(--picture-height);
+  flex: 1 1 auto;
+  min-height: var(--picture-height);
   margin-top: auto;
   border-radius: 8px;
   background: var(--background-neutral-white-fixed);
