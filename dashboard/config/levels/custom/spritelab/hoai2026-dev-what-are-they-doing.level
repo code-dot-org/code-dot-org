@@ -29,6 +29,7 @@
         "World"
       ],
       "noDeletingImages": true,
+      "limitedPaintTools": true,
       "paletteRoles": [
         "friend",
         "treasure",

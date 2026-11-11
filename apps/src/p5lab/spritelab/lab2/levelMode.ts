@@ -49,6 +49,10 @@ export interface LevelMode {
       level depends on an image made earlier. Unset, an image can be deleted
       wherever images can be added, as in free play. */
   noDeletingImages?: boolean;
+  /** The paint tools offer a fixed set of colors and one brush, as on a
+      one-image level. A level sets this when it shows the Images tab but
+      is not about painting. Unset, they are as in free play. */
+  limitedPaintTools?: boolean;
   /** The kinds of image the Images tab lists. Every kind when unset. */
   imageKinds?: ImageType[];
 }

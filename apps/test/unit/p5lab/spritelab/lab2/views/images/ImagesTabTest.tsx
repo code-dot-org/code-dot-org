@@ -108,6 +108,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
   const PixelEditorStub = ({
     tools,
     knownPixelGrid,
+    brushSizes,
     onEdit,
     onSave,
     onHistoryChange,
@@ -115,6 +116,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
   }: {
     tools?: readonly string[];
     knownPixelGrid?: number;
+    brushSizes?: readonly number[];
     onEdit?: () => void;
     onSave: (dataURI: string, meta: {pixelGridSize?: number}) => void;
     onHistoryChange?: (history: {canUndo: boolean}) => void;
@@ -137,6 +139,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
         </button>
         <span>{tools ? `${tools.length} tools` : 'all tools'}</span>
         <span>grid {knownPixelGrid ?? 'none'}</span>
+        <span>{brushSizes?.length ?? 'all'} brush sizes</span>
         {children({
           ready: true,
           loadError: false,
@@ -780,6 +783,28 @@ describe('ImagesTab', () => {
     renderTab({editingOffered: true});
     expect(screen.getByText('words')).toBeTruthy();
     expect(screen.queryByText('Your edited image')).toBeNull();
+  });
+
+  it('offers the limited paint tools on a level that asks for them', async () => {
+    delete params['images-edited'];
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      edited: true,
+      sourceUrl: 'sprite1.png',
+    };
+    const {unmount} = renderTab({
+      editingOffered: true,
+      limitedPaintTools: true,
+    });
+    expect(await screen.findByText('canvas')).toBeTruthy();
+    expect(screen.getByText('1 brush sizes')).toBeTruthy();
+    unmount();
+
+    // Without the option the tools are the ones free play offers.
+    renderTab({editingOffered: true});
+    expect(await screen.findByText('canvas')).toBeTruthy();
+    expect(screen.getByText('3 brush sizes')).toBeTruthy();
   });
 
   it('edits an image with the few tools before free play, saving when the tab is left', async () => {

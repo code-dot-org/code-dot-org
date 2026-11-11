@@ -58,6 +58,7 @@ const TAB_KEYS: (keyof LevelMode)[] = [
   'paletteRoles',
   'noNewImages',
   'noDeletingImages',
+  'limitedPaintTools',
   'imageKinds',
 ];
 
@@ -121,6 +122,7 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
     case 'learning':
     case 'noNewImages':
     case 'noDeletingImages':
+    case 'limitedPaintTools':
       return value === true;
     case 'imageSource':
       return isImageSource(value);

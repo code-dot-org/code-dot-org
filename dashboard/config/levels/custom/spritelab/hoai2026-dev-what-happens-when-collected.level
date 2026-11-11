@@ -29,6 +29,7 @@
       ],
       "noNewImages": true,
       "noDeletingImages": true,
+      "limitedPaintTools": true,
       "imageKinds": [
         "sprite",
         "block"

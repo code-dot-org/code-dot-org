@@ -98,6 +98,9 @@ interface ImagesTabProps {
   noNewImages?: boolean;
   /** No Delete button, even where `editingOffered` would show one. */
   noDeletingImages?: boolean;
+  /** The limited paint tools, even where `editingOffered` would give the
+      full set. */
+  limitedPaintTools?: boolean;
   /** The kinds of image the list shows. Every kind when unset. */
   imageKinds?: ImageType[];
   /** Width of the right pane in px; it equals the preview column's width
@@ -149,6 +152,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   editingOffered,
   noNewImages,
   noDeletingImages,
+  limitedPaintTools,
   imageKinds,
   paneWidth,
   onImageLanded,
@@ -339,8 +343,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     }
     startSession(images[0]?.key ?? null);
   }, [chosenId, draft, images, startSession, stopDrawing, drawing]);
-  // A level before free play keeps the few tools that draw.
-  const limitedTools = !editingOffered;
+  // A one-image level keeps the few tools that draw, and so does a level
+  // that asks for them. Every other level offers what free play does.
+  const limitedTools = !editingOffered || !!limitedPaintTools;
   // An image that is the student's own work (no prompt made its pixels)
   // hides the word menus until Replace image is pressed; the choice is per
   // image, and choosing another image or leaving the tab hides them again.

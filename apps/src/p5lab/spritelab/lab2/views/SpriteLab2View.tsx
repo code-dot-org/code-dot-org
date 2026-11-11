@@ -2319,6 +2319,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 editingOffered={!oneImage}
                 noNewImages={levelProperties.levelMode?.noNewImages}
                 noDeletingImages={levelProperties.levelMode?.noDeletingImages}
+                limitedPaintTools={levelProperties.levelMode?.limitedPaintTools}
                 imageKinds={levelProperties.levelMode?.imageKinds}
                 paneWidth={paneWidthPx}
                 onImageLanded={saveImagesNow}

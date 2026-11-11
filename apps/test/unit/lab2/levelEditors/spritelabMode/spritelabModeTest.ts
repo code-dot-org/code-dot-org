@@ -31,6 +31,7 @@ describe('cleanLevelMode', () => {
       paletteRoles: ['treasure', 'block'],
       noNewImages: true,
       noDeletingImages: true,
+      limitedPaintTools: true,
       imageKinds: ['sprite', 'block'],
     };
     expect(cleanLevelMode(mode)).toEqual({mode, removed: []});
