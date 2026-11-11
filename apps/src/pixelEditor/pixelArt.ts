@@ -833,12 +833,3 @@ export async function upscaleImageNearest(
     return unchanged;
   }
 }
-
-/** Where the lines between `cells` equal cells fall along `lengthPx`
-    pixels: one whole-pixel position per boundary between two cells, none at
-    the outer edges. */
-export function gridLinePositions(cells: number, lengthPx: number): number[] {
-  return Array.from({length: Math.max(cells - 1, 0)}, (_, i) =>
-    Math.round(((i + 1) * lengthPx) / cells)
-  );
-}

@@ -13,11 +13,7 @@ import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import ColorPicker from './ColorPicker';
-import {
-  NATIVE_PIXEL_GRID,
-  downsampleToGrid,
-  gridLinePositions,
-} from './pixelArt';
+import {NATIVE_PIXEL_GRID, downsampleToGrid} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
 import {
   PixelTool,
@@ -58,12 +54,6 @@ const CHECKER_COLORS = {
   light: {base: '#ffffff', tint: 'rgb(128 128 128 / 16%)'},
   dark: {base: '#333a47', tint: 'rgb(128 128 128 / 22%)'},
 };
-
-// The grid lines drawn between art pixels in pixel mode. The gray is
-// visible over light pixels and over dark ones. The lines are drawn only
-// when an art pixel is at least this many CSS px wide on screen.
-const GRID_LINE_COLOR = 'rgb(128 128 128 / 35%)';
-const MIN_GRID_LINE_CELL_PX = 6;
 
 // A bright azure, at the darkest shade that clears 3:1 against white while
 // holding 3:1 on the dark checker and 6.9:1 on a black background fill.
@@ -296,11 +286,6 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   const pixelModeRef = useRef(false);
 
   const displayRef = useRef<HTMLCanvasElement | null>(null);
-  // The grid lines, on a canvas of their own over the display canvas. This
-  // canvas has one pixel per screen pixel. The display canvas is scaled by
-  // the browser to fit, and a one-pixel line drawn on it can fall between
-  // screen pixels and disappear on a display that is not high-density.
-  const gridLinesRef = useRef<HTMLCanvasElement | null>(null);
   // Backing canvas at native image resolution: the single source of truth.
   const backingRef = useRef<HTMLCanvasElement | null>(null);
   // Circle preview: drawn over the backing on the display until pointer-up.
@@ -470,39 +455,6 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
     }
   }, [opaqueGround]);
-
-  // Draws the lines between the art pixels for a display canvas shown at
-  // `cssWidth` by `cssHeight`. The lines sit over the picture, so the grid
-  // shows on filled pixels as well as on the checkerboard. They are left
-  // out when the art pixels are too small on screen for lines to fit
-  // between them.
-  const paintGridLines = useCallback((cssWidth: number, cssHeight: number) => {
-    const lines = gridLinesRef.current;
-    const backing = backingRef.current;
-    if (!lines || !backing) {
-      return;
-    }
-    const density = window.devicePixelRatio || 1;
-    // Setting the size also clears the canvas.
-    lines.width = Math.round(cssWidth * density);
-    lines.height = Math.round(cssHeight * density);
-    lines.style.width = `${cssWidth}px`;
-    lines.style.height = `${cssHeight}px`;
-    const ctx = lines.getContext('2d');
-    const cellCssPx = cssWidth / backing.width;
-    if (!ctx || !pixelModeRef.current || cellCssPx < MIN_GRID_LINE_CELL_PX) {
-      return;
-    }
-    // One CSS pixel thick, in whole screen pixels.
-    const thickness = Math.max(1, Math.round(density));
-    ctx.fillStyle = GRID_LINE_COLOR;
-    for (const x of gridLinePositions(backing.width, lines.width)) {
-      ctx.fillRect(x, 0, thickness, lines.height);
-    }
-    for (const y of gridLinePositions(backing.height, lines.height)) {
-      ctx.fillRect(0, y, lines.width, thickness);
-    }
-  }, []);
 
   // The checkerboard is baked into the canvas; redraw it if the page theme
   // flips while the editor is open.
@@ -786,7 +738,6 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
         y: Math.round(cssH) / backing.height,
       });
       repaint();
-      paintGridLines(Math.round(cssW), Math.round(cssH));
     };
     size();
     const area = canvasAreaRef.current;
@@ -796,7 +747,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     const observer = new ResizeObserver(size);
     observer.observe(area);
     return () => observer.disconnect();
-  }, [loaded, loadVersion, repaint, paintGridLines, fit]);
+  }, [loaded, loadVersion, repaint, fit]);
 
   // Map a pointer event to backing-canvas pixel coordinates.
   const toPixel = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
@@ -1671,11 +1622,6 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
               onBlur={dismissKeyboardCursor}
             />
             {/* eslint-enable jsx-a11y/no-interactive-element-to-noninteractive-role */}
-            <canvas
-              ref={gridLinesRef}
-              className={moduleStyles.gridLines}
-              aria-hidden
-            />
             {kbCursor &&
               cssScale &&
               (pixelMode ? (

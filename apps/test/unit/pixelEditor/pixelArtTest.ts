@@ -4,7 +4,6 @@ import {
   detectPixelGrid,
   downsampleToGrid,
   gridAtPitch,
-  gridLinePositions,
   upscaleNearest,
 } from '@cdo/apps/pixelEditor/pixelArt';
 import {Raster} from '@cdo/apps/pixelEditor/tools';
@@ -95,18 +94,6 @@ function gradientRaster() {
 }
 
 describe('pixelArt', () => {
-  it('puts one grid line at each boundary between cells, on whole pixels', () => {
-    expect(gridLinePositions(4, 400)).toEqual([100, 200, 300]);
-    // 24 cells across 502 pixels: every boundary gets a line, none repeat.
-    const lines = gridLinePositions(24, 502);
-    expect(lines).toHaveLength(23);
-    expect(new Set(lines).size).toBe(23);
-    expect(lines.every(Number.isInteger)).toBe(true);
-    expect(lines[0]).toBe(21);
-    expect(lines[22]).toBe(481);
-    expect(gridLinePositions(1, 100)).toEqual([]);
-  });
-
   it('detects an aligned block grid', () => {
     const raster = blockyRaster(samplePattern(), 12);
     const grid = detectPixelGrid(raster);

@@ -215,14 +215,6 @@ $border-subtle: chrome.$border-subtle;
 
 // Keyboard paint cursor, pixel mode: the exact brush footprint. White core
 // with a black halo inside and out, so it reads against any artwork.
-// The lines between art pixels, over the display canvas; sized in JS.
-.gridLines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
 .kbCursorRect {
   position: absolute;
   box-sizing: border-box;
