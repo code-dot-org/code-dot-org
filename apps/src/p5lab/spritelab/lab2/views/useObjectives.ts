@@ -249,7 +249,9 @@ export function useObjectives({
   // A student back on a level they have completed finds it completed. The
   // steps that are checked the whole time are read from the project again,
   // above. The steps that are checked once (see isCheckedOnce) passed on
-  // the earlier visit and cannot be checked again, so they are ticked here. This runs when the level's
+  // the earlier visit and cannot be checked again, so they are ticked
+  // here. Nothing is recorded for each step: the level could only have
+  // been completed with every one of them done. This runs when the level's
   // progress arrives, which can be after the checklist first shows.
   useEffect(() => {
     if (!completedBefore || !items?.length) {
