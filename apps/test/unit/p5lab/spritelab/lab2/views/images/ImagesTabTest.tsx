@@ -686,6 +686,58 @@ describe('ImagesTab', () => {
     expect(screen.queryByRole('button', {name: 'Edit this image'})).toBeNull();
   });
 
+  it('lists only the kinds of image the level names', () => {
+    propsByKey.k1 = {name: 'Sprite 1', categories: []};
+    propsByKey.k2 = {name: 'Background 1', categories: ['backgrounds']};
+    const first = renderTab({editingOffered: true});
+    expect(screen.getByRole('button', {name: 'Background 1'})).toBeTruthy();
+    first.unmount();
+    renderTab({editingOffered: true, imageKinds: ['sprite']});
+    expect(screen.getByRole('button', {name: 'Sprite 1'})).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'Background 1'})).toBeNull();
+  });
+
+  it('offers no New button and no delete button when the level says so', () => {
+    propsByKey.k1 = {name: 'Sprite 1', categories: []};
+    const {unmount} = renderTab({
+      editingOffered: true,
+      noNewImages: true,
+      noDeletingImages: true,
+    });
+    expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Delete image'})).toBeNull();
+    // The image is still there to work on.
+    expect(screen.getByRole('button', {name: 'Sprite 1'})).toBeTruthy();
+    unmount();
+
+    // Each option removes only its own button.
+    renderTab({editingOffered: true, noNewImages: true});
+    expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
+    expect(screen.getByRole('button', {name: 'Delete image'})).toBeTruthy();
+  });
+
+  it('offers the limited paint tools on a level that asks for them', async () => {
+    delete params['images-edited'];
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      edited: true,
+      sourceUrl: 'sprite1.png',
+    };
+    const {unmount} = renderTab({
+      editingOffered: true,
+      limitedPaintTools: true,
+    });
+    expect(await screen.findByText('canvas')).toBeTruthy();
+    expect(screen.getByText('1 brush sizes')).toBeTruthy();
+    unmount();
+
+    // Without the option the tools are the ones free play offers.
+    renderTab({editingOffered: true});
+    expect(await screen.findByText('canvas')).toBeTruthy();
+    expect(screen.getByText('3 brush sizes')).toBeTruthy();
+  });
+
   it("switches to another image's tools without a gap, saving the last one behind", async () => {
     delete params['images-edited'];
     propsByKey.k1 = {name: 'Sprite 1', categories: [], sourceUrl: 'one.png'};
@@ -747,64 +799,12 @@ describe('ImagesTab', () => {
     expect(screen.getByText('words')).toBeTruthy();
   });
 
-  it('lists only the kinds of image the level names', () => {
-    propsByKey.k1 = {name: 'Sprite 1', categories: []};
-    propsByKey.k2 = {name: 'Background 1', categories: ['backgrounds']};
-    const first = renderTab({editingOffered: true});
-    expect(screen.getByRole('button', {name: 'Background 1'})).toBeTruthy();
-    first.unmount();
-    renderTab({editingOffered: true, imageKinds: ['sprite']});
-    expect(screen.getByRole('button', {name: 'Sprite 1'})).toBeTruthy();
-    expect(screen.queryByRole('button', {name: 'Background 1'})).toBeNull();
-  });
-
-  it('offers no New button and no delete button when the level says so', () => {
-    propsByKey.k1 = {name: 'Sprite 1', categories: []};
-    const {unmount} = renderTab({
-      editingOffered: true,
-      noNewImages: true,
-      noDeletingImages: true,
-    });
-    expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
-    expect(screen.queryByRole('button', {name: 'Delete image'})).toBeNull();
-    // The image is still there to work on.
-    expect(screen.getByRole('button', {name: 'Sprite 1'})).toBeTruthy();
-    unmount();
-
-    // Each option removes only its own button.
-    renderTab({editingOffered: true, noNewImages: true});
-    expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
-    expect(screen.getByRole('button', {name: 'Delete image'})).toBeTruthy();
-  });
-
   it('keeps the words under an edited image when the parameter asks', () => {
     params['images-edited'] = 'generate';
     propsByKey.k1 = {name: 'Sprite 1', categories: [], edited: true};
     renderTab({editingOffered: true});
     expect(screen.getByText('words')).toBeTruthy();
     expect(screen.queryByText('Your edited image')).toBeNull();
-  });
-
-  it('offers the limited paint tools on a level that asks for them', async () => {
-    delete params['images-edited'];
-    propsByKey.k1 = {
-      name: 'Sprite 1',
-      categories: [],
-      edited: true,
-      sourceUrl: 'sprite1.png',
-    };
-    const {unmount} = renderTab({
-      editingOffered: true,
-      limitedPaintTools: true,
-    });
-    expect(await screen.findByText('canvas')).toBeTruthy();
-    expect(screen.getByText('1 brush sizes')).toBeTruthy();
-    unmount();
-
-    // Without the option the tools are the ones free play offers.
-    renderTab({editingOffered: true});
-    expect(await screen.findByText('canvas')).toBeTruthy();
-    expect(screen.getByText('3 brush sizes')).toBeTruthy();
   });
 
   it('edits an image with the few tools before free play, saving when the tab is left', async () => {
