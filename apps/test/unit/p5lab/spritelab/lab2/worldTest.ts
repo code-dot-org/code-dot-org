@@ -4,7 +4,7 @@ import {
   createEmptyWorld,
   DEFAULT_SCENE_GRID_SIZE,
   isLegacyWorld,
-  lastCopies,
+  imagesWithOneLeft,
   paintWorldCell,
   resizeWorld,
   sceneGridSize,
@@ -188,8 +188,8 @@ describe('world', () => {
       ],
     };
     const kept = new Set(['Gem', 'Hero', 'Friend']);
-    expect([...lastCopies(world, kept)]).toEqual(['Hero']);
-    expect(lastCopies(undefined, kept).size).toBe(0);
+    expect([...imagesWithOneLeft(world, kept)]).toEqual(['Hero']);
+    expect(imagesWithOneLeft(undefined, kept).size).toBe(0);
   });
 
   it('ignores a change that would remove the last copy of a kept image', () => {

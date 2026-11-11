@@ -7,7 +7,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getImageThumbnail, onTrimsUpdated} from '../imageTrim';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
-import {createEmptyWorld, lastCopies, World, WorldCell} from '../world';
+import {createEmptyWorld, imagesWithOneLeft, World, WorldCell} from '../world';
 
 import moduleStyles from './world-tab.module.scss';
 
@@ -98,7 +98,7 @@ interface WorldRowProps {
   /** The cursor's column while it is on this row; -1 otherwise. */
   cursorCol: number;
   offered: ReadonlySet<string>;
-  lastOnes: ReadonlySet<string>;
+  onlyOneLeft: ReadonlySet<string>;
   registerCell: (
     row: number,
     col: number,
@@ -131,7 +131,7 @@ const WorldRow = React.memo<WorldRowProps>(
     thumbsByImage,
     cursorCol,
     offered,
-    lastOnes,
+    onlyOneLeft,
     registerCell,
     onCellPointerDown,
     onCellPointerEnter,
@@ -141,7 +141,7 @@ const WorldRow = React.memo<WorldRowProps>(
       {Array.from({length: sceneSize}, (_, col) => {
         const cell = cells?.[col];
         const thumb = cell ? thumbsByImage.get(cell.image) : undefined;
-        const refusal = cellRefusal(cell, offered, lastOnes);
+        const refusal = cellRefusal(cell, offered, onlyOneLeft);
         return (
           <button
             key={col}
@@ -246,12 +246,13 @@ const REFUSAL_MESSAGES: Record<Refusal, string> = {
 /** Why a cell refuses a change, or null when it allows one. A cell showing
     an image the palette does not offer stays as it is, since nothing could
     put it back; a level that narrows the palette to a few roles thereby
-    protects the cells placed by earlier levels. A cell showing one of
-    `lastOnes` is the only copy of an image the scene has to keep. */
+    protects the cells placed by earlier levels. `onlyOneLeft` holds the
+    images the scene must keep that are on one square only, so a cell
+    showing one of them stays too. */
 export function cellRefusal(
   cell: WorldCell | null | undefined,
   offered: ReadonlySet<string>,
-  lastOnes: ReadonlySet<string>
+  onlyOneLeft: ReadonlySet<string>
 ): Refusal | null {
   if (!cell) {
     return null;
@@ -259,7 +260,7 @@ export function cellRefusal(
   if (!offered.has(cell.image)) {
     return 'stays';
   }
-  return lastOnes.has(cell.image) ? 'last' : null;
+  return onlyOneLeft.has(cell.image) ? 'last' : null;
 }
 
 interface WorldTabProps {
@@ -367,7 +368,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       : -1;
 
   const grid = world?.grid ?? EMPTY_GRID;
-  const lastOnes = useMemo(() => lastCopies({grid}, kept), [grid, kept]);
+  const onlyOneLeft = useMemo(
+    () => imagesWithOneLeft({grid}, kept),
+    [grid, kept]
+  );
 
   // Screen-reader narration for actions whose visible result is a silent
   // DOM change (placements, removals, number-key choices). A no-break
@@ -392,7 +396,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     next: WorldCell | null
   ): Change => {
     const held = grid[row]?.[col];
-    const refusal = cellRefusal(held, offered, lastOnes);
+    const refusal = cellRefusal(held, offered, onlyOneLeft);
     // Painting the last copy's own image over it removes nothing.
     if (refusal && !(refusal === 'last' && next?.image === held?.image)) {
       return refusal;
@@ -948,7 +952,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             {Array.from({length: sceneSize}, (_, row) => (
               <WorldRow
                 offered={offered}
-                lastOnes={lastOnes}
+                onlyOneLeft={onlyOneLeft}
                 key={row}
                 row={row}
                 sceneSize={sceneSize}

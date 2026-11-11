@@ -113,8 +113,8 @@ export function resizeWorld(
 
 const NO_IMAGES: ReadonlySet<string> = new Set();
 
-/** The images among `kept` that exactly one cell of the world shows. */
-export function lastCopies(
+/** The images among `kept` that are on exactly one square of the world. */
+export function imagesWithOneLeft(
   world: World | undefined,
   kept: ReadonlySet<string>
 ): Set<string> {
@@ -149,7 +149,7 @@ export function paintWorldCell(
     world &&
     held &&
     held.image !== cell?.image &&
-    lastCopies(world, kept).has(held.image)
+    imagesWithOneLeft(world, kept).has(held.image)
   ) {
     return world;
   }
