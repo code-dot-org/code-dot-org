@@ -14,12 +14,15 @@ import styles from './progressRings.module.scss';
 
 interface ProgressRingsProps {
   rings: GroupProgress[];
+  /** Large rings for the stats tiles; small is the map's. */
+  size?: 'small' | 'large';
 }
 
 const ProgressRings: React.FunctionComponent<ProgressRingsProps> = ({
   rings,
+  size = 'small',
 }) => (
-  <ul className={styles.rings}>
+  <ul className={classNames(styles.rings, size === 'large' && styles.large)}>
     {rings.map(({key, title, icon, color, done, total}) => {
       const share = total ? done / total : 0;
       const label = `${title}: ${done} of ${total} checkpoints complete`;
