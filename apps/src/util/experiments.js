@@ -41,6 +41,8 @@ experiments.BLOCKLY_DOCS = 'blockly_docs';
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
 // Use glow effect for Blockly block highlighting
 experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
+// Rounded renderer, re-tuned palette and CSS polish for Blockly labs
+experiments.BLOCKLY_REFRESH = 'blockly-refresh';
 // Turn on Blockly Keyboard Navigation
 experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
 // Use nested course URLs like /courses/csd-2024/units/1/...

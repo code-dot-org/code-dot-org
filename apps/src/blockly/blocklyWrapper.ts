@@ -17,6 +17,7 @@ import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
+import experiments from '@cdo/apps/util/experiments';
 import * as utils from '@cdo/apps/utils';
 
 import {START_BLOCKS} from '../constants';
@@ -35,7 +36,9 @@ import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
 import CdoMetricsManager from './addons/cdoMetricsManager';
+import initializeRefreshCss from './addons/cdoRefreshCss';
 import CdoRendererGeras from './addons/cdoRendererGeras';
+import CdoRendererRefresh from './addons/cdoRendererRefresh';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
@@ -84,6 +87,7 @@ import CdoDarkTheme from './themes/cdoDark';
 import CdoHighContrastTheme from './themes/cdoHighContrast';
 import CdoHighContrastDarkTheme from './themes/cdoHighContrastDark';
 import CdoJigsawTheme from './themes/cdoJigsaw';
+import {CdoRefreshDarkTheme, CdoRefreshTheme} from './themes/cdoRefresh';
 import CdoTheme from './themes/cdoTheme';
 import {
   BlocklyCoreInstance,
@@ -114,6 +118,39 @@ const crossTabCopyPastePlugin = new CrossTabCopyPaste();
 crossTabCopyPastePlugin.init(options);
 
 const MAX_GET_CODE_RETRIES = 2;
+
+const DSCO_COLORED_THEMES = [
+  CdoTheme,
+  CdoDarkTheme,
+  CdoJigsawTheme,
+  CdoRefreshTheme,
+  CdoRefreshDarkTheme,
+];
+
+// The blockly-refresh experiment swaps only the defaults; an explicit choice
+// (the zelos experiment, an accessible theme) is left alone.
+function refreshRenderer(renderer: string | undefined) {
+  if (
+    experiments.isEnabled(experiments.BLOCKLY_REFRESH) &&
+    (!renderer || renderer === Renderers.DEFAULT)
+  ) {
+    return Renderers.REFRESH;
+  }
+  return renderer || Renderers.DEFAULT;
+}
+
+function refreshTheme(theme: BlocklyCore.BlocklyOptions['theme']) {
+  if (!experiments.isEnabled(experiments.BLOCKLY_REFRESH)) {
+    return theme;
+  }
+  if (theme === CdoTheme) {
+    return CdoRefreshTheme;
+  }
+  if (theme === CdoDarkTheme) {
+    return CdoRefreshDarkTheme;
+  }
+  return theme;
+}
 const RETRY_GET_CODE_INTERVAL_MS = 500;
 
 /**
@@ -327,6 +364,12 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     true /* opt_allowOverrides */
   );
   blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.RENDERER,
+    Renderers.REFRESH,
+    CdoRendererRefresh,
+    true /* opt_allowOverrides */
+  );
+  blocklyWrapper.registry.register(
     blocklyWrapper.registry.Type.CONNECTION_CHECKER,
     'cdo_connection_checker',
     CdoConnectionChecker,
@@ -417,6 +460,8 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     [Themes.DEUTERANOPIA_DARK]: CdoDeuteranopiaDarkTheme,
     [Themes.TRITANOPIA]: CdoTritanopiaTheme,
     [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme,
+    [Themes.REFRESH]: CdoRefreshTheme,
+    [Themes.REFRESH_DARK]: CdoRefreshDarkTheme,
   };
 
   // Assign all of the properties of the javascript generator to the forBlock array
@@ -507,14 +552,15 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     xml,
     options = {}
   ) {
-    applyDscoThemeColors([CdoTheme, CdoDarkTheme, CdoJigsawTheme]);
-    const theme = options.theme || CdoTheme;
+    applyDscoThemeColors(DSCO_COLORED_THEMES);
+    const theme = refreshTheme(options.theme || CdoTheme);
+    const renderer = refreshRenderer(options.renderer);
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
       theme,
       plugins: {},
       RTL: options.rtl,
-      renderer: options.renderer || Renderers.DEFAULT,
+      renderer,
     } as BlocklyCore.Options);
     // Track that this is and embedded workspace to avoid trying
     // to run logic on it to ensure things run properly (such as procedures).
@@ -525,7 +571,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
         xmlns: 'http://www.w3.org/2000/svg',
         'xmlns:html': 'http://www.w3.org/1999/xhtml',
         'xmlns:xlink': 'http://www.w3.org/1999/xlink',
-        class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`,
+        class: `${renderer}-renderer modern-theme readOnlyBlockSpace injectionDiv`,
       },
       null
     );
@@ -568,7 +614,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
-    applyDscoThemeColors([CdoTheme, CdoDarkTheme, CdoJigsawTheme]);
+    applyDscoThemeColors(DSCO_COLORED_THEMES);
 
     // Ensure we do not translate content within the blockly workspace
     if (typeof container !== 'string') {
@@ -585,7 +631,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     blocklyWrapper.isJigsaw = optOptionsExtended.isJigsaw;
     const options = {
       ...optOptionsExtended,
-      theme: optOptionsExtended.theme || CdoTheme,
+      theme: refreshTheme(optOptionsExtended.theme || CdoTheme),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -600,7 +646,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
         metricsManager: CdoMetricsManager,
         connectionChecker: CdoConnectionChecker,
       },
-      renderer: optOptionsExtended.renderer || Renderers.DEFAULT,
+      renderer: refreshRenderer(optOptionsExtended.renderer),
       comments: !!optOptionsExtended.comments,
       media: '/blockly/media/google_blockly',
       modalInputs: false, // Prevents pop-up editor on mobile
@@ -865,6 +911,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   initializeVariables(blocklyWrapper);
   initializeCdoConstants(blocklyWrapper);
   initializeCss(blocklyWrapper);
+  initializeRefreshCss(blocklyWrapper);
 
   blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
   blocklyWrapper.JavaScript.forBlock.unknown = () => '/* unknown block */\n';
