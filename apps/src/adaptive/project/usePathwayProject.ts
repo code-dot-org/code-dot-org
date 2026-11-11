@@ -6,6 +6,7 @@
 import {useCallback, useMemo} from 'react';
 
 import useSources from '@cdo/apps/lab2/hooks/useSources';
+import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {Channel, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {Pathway} from '../types';
@@ -18,6 +19,8 @@ export interface PathwayProjectState {
   channel?: Channel;
   /** The project's sources; undefined while loading. */
   sources?: ProjectSources;
+  /** The channel's manager, for what it knows beyond the channel, such as the share URL. */
+  projectManager: ProjectManager | null;
   isLoading: boolean;
   /** False for anyone but the owner, and until the channel has loaded. */
   isEditable: boolean;
@@ -77,6 +80,7 @@ export function usePathwayProject(pathway: Pathway): PathwayProjectState {
   return {
     channel,
     sources: currentSources,
+    projectManager,
     isLoading,
     isEditable,
     loadError,
