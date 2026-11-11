@@ -7,6 +7,9 @@
 }
 
 .attemptBody {
+  // Containing block for the absolutely positioned sr-only spans in the
+  // answers; otherwise they escape this scroller and extend the page height.
+  position: relative;
   flex: 1;
   min-height: 0;
   overflow-y: auto;

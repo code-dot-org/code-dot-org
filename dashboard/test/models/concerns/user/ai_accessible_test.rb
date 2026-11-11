@@ -97,11 +97,10 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       _(spritelab_ask_ai_refusal).must_equal SharedConstants::SPRITELAB_ASK_AI_REFUSALS[:REGION_BLOCKED]
     end
 
-    it 'returns nil for a blocked provider once the gateway falls back' do
+    it 'returns REGION_BLOCKED for a blocked provider even when the gateway falls back' do
       allow(user).to receive(:blocked_aichat_providers).and_return(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
-      allow(DCDO).to receive(:get).and_call_original
       allow(DCDO).to receive(:get).with('ai_gateway_fallback_is_enabled', false).and_return(true)
-      _(spritelab_ask_ai_refusal).must_be_nil
+      _(spritelab_ask_ai_refusal).must_equal SharedConstants::SPRITELAB_ASK_AI_REFUSALS[:REGION_BLOCKED]
     end
   end
 
@@ -347,6 +346,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     let(:image_model) {SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE]}
     let(:mistral_model) {SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL]}
     let(:openai_model) {SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}
+    let(:tutor) {SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]}
 
     context 'when US only providers are blocked' do
       before do
@@ -363,6 +363,31 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       it 'allows models that are available outside the US' do
         _(user.can_use_aichat_model?(openai_model)).must_equal true
         _(user.can_use_aichat_model?(mistral_model)).must_equal true
+      end
+
+      it 'blocks a US only model for a fallback client type while the gateway fallback is off' do
+        _(user.can_use_aichat_model?(us_only_model, client_type: tutor)).must_equal false
+      end
+    end
+
+    context 'when US only providers are blocked and the gateway fallback is on' do
+      before do
+        allow(user).to receive(:blocked_aichat_providers).and_return(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+        allow(DCDO).to receive(:get).with('ai_gateway_fallback_is_enabled', false).and_return(true)
+      end
+
+      it 'allows a US only text model for adaptive and the tutor' do
+        _(user.can_use_aichat_model?(us_only_model, client_type: tutor)).must_equal true
+        _(user.can_use_aichat_model?(us_only_model, client_type: SharedConstants::AI_CHAT_CLIENT_TYPES[:ADAPTIVE])).must_equal true
+      end
+
+      it 'blocks an image model, which has no fallback' do
+        _(user.can_use_aichat_model?(image_model, client_type: tutor)).must_equal false
+      end
+
+      it 'blocks a US only model for other client types and without one' do
+        _(user.can_use_aichat_model?(us_only_model, client_type: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB])).must_equal false
+        _(user.can_use_aichat_model?(us_only_model)).must_equal false
       end
     end
 

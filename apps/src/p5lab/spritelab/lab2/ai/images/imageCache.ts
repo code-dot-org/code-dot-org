@@ -41,7 +41,7 @@ export const IMAGE_CACHE_VERSION = 'v1';
 export const EMPTY_WORD_ID = '_';
 
 /** How many variants the generator draws per filling, numbered from 00. */
-export const VARIANT_COUNT = 3;
+export const VARIANT_COUNT = 8;
 
 /** A character set's frames by pose label, 'base' first; a single image is
     'single'. */
@@ -52,7 +52,7 @@ export class ImageCacheMissError extends Error {
   constructor(url: string, readonly status?: number) {
     super(`Cached image missing: ${url}${status ? ` (${status})` : ''}`);
     // The ES5 build target otherwise leaves this with Error's prototype.
-    Object.setPrototypeOf(this, ImageCacheMissError.prototype);
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'ImageCacheMissError';
   }
 }
