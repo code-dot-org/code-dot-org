@@ -62,27 +62,30 @@ export interface Objective {
   shownWhen?: ObjectiveCheck;
 }
 
-// The kinds of check that read work which stays in the project: a block in
-// the code, something placed in the world, an image.
-const LASTING_WORK_KINDS: ReadonlySet<ObjectiveCheck['kind']> = new Set([
-  'block',
-  'world',
-  'image',
-]);
+// For each kind of check, whether it has to pass only once. Every kind is
+// listed, so a new kind has to be given an answer here.
+const CHECKED_ONCE: Record<ObjectiveCheck['kind'], boolean> = {
+  // These read work in the project and are checked the whole time.
+  block: false,
+  world: false,
+  image: false,
+  // These record something that happened, which cannot be checked again.
+  play: true,
+  reach: true,
+  scene: true,
+  // These read something that changes for reasons other than undoing the
+  // step: which scene is open in the editor, and a picture's AI record,
+  // which is removed when the student edits the picture by hand.
+  editing: true,
+  generated: true,
+  rated: true,
+};
 
-/**
- * Whether a check reads work that stays in the project, so that the check
- * can be made again at any time and a later level may depend on the work.
- *
- * Every other check is one of two sorts. Some record something that
- * happened during a visit to the level and leave nothing to read later:
- * pressing Run, reaching a sprite, arriving in a scene. Two read something
- * that changes for reasons other than undoing the step: which scene is open
- * in the editor, and a picture's AI record, which is removed when the
- * student edits the picture by hand.
- */
-export function isAboutLastingWork(check: ObjectiveCheck): boolean {
-  return LASTING_WORK_KINDS.has(check.kind);
+/** Whether a check has to pass only once. After that its step counts as
+    done, whatever the check would say later. Any other check is made the
+    whole time, and its step is done only while the check passes. */
+export function isCheckedOnce(check: ObjectiveCheck): boolean {
+  return CHECKED_ONCE[check.kind];
 }
 
 export interface Objectives {
