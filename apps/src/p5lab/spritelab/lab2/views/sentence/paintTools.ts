@@ -13,8 +13,10 @@ export const PAINT_TOOLS: readonly PixelTool[] = [
 ];
 // The colors offered before free play, each as a round swatch. The first
 // is the color the editor starts on: the pixel editor's own blue. The
-// eyedropper can still pick any other color from the picture. Ten swatches
-// fit on one row with the tools, above a frame of the usual width.
+// eyedropper can still pick any other color from the picture. Ten is the
+// most swatches that fit on one row beside the tools when the picture
+// frame is its usual width. With more, the toolbar wraps onto a second
+// row.
 export const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Blue', rgba: [0, 155, 233, 255]},
   {name: 'Black', rgba: [34, 34, 34, 255]},

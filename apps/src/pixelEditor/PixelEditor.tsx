@@ -45,16 +45,16 @@ const MAX_CSS_WIDTH_PX = 900;
 // panel-colored base on a dark one — the image dialog uses the same pairs).
 const CHECKER_CELL_PX = 16;
 const MIN_CHECKER_CELL_PX = 4;
-
-// Grid lines between art pixels in pixel mode: a gray that shows on light
-// and on dark pixels alike, drawn only when an art pixel is at least this
-// many display px wide.
-const GRID_LINE_COLOR = 'rgb(128 128 128 / 35%)';
-const MIN_GRID_LINE_CELL_PX = 6;
 const CHECKER_COLORS = {
   light: {base: '#ffffff', tint: 'rgb(128 128 128 / 16%)'},
   dark: {base: '#333a47', tint: 'rgb(128 128 128 / 22%)'},
 };
+
+// The grid lines drawn between art pixels in pixel mode. The gray is
+// visible over light pixels and over dark ones. The lines are drawn only
+// when an art pixel is at least this many display px wide.
+const GRID_LINE_COLOR = 'rgb(128 128 128 / 35%)';
+const MIN_GRID_LINE_CELL_PX = 6;
 
 // A bright azure, at the darkest shade that clears 3:1 against white while
 // holding 3:1 on the dark checker and 6.9:1 on a black background fill.
