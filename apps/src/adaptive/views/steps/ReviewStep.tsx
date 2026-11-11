@@ -6,8 +6,6 @@
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useEffect, useRef} from 'react';
 
-import AttemptCard from '@cdo/apps/quiz/attempt/AttemptCard';
-
 import {isAdaptiveAiEnabled} from '../../ai/generate';
 import {Answer} from '../../progress';
 import {answersBySlot, checkpointPlan} from '../../project/plan';
@@ -58,33 +56,43 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
           <MuiTypography variant="body2">{step.description}</MuiTypography>
         )}
       </div>
-      <AttemptCard title="A prompt to get you started">
+      <div className={styles.reviewCard}>
         {answers.length > 0 && (
-          <dl className={styles.reviewAnswers}>
-            {answers.map(({slot, question, answer}) => (
-              <div key={slot} className={styles.reviewAnswer}>
-                <MuiTypography variant="body3" component="dt">
-                  {question}
-                </MuiTypography>
-                <MuiTypography variant="body2" component="dd">
-                  {answer}
-                </MuiTypography>
-              </div>
-            ))}
-          </dl>
+          <section className={styles.reviewSection}>
+            <MuiTypography variant="h4" component="h3">
+              Your answers:
+            </MuiTypography>
+            <dl className={styles.reviewAnswers}>
+              {answers.map(({slot, question, answer}) => (
+                <div key={slot} className={styles.reviewAnswer}>
+                  <MuiTypography variant="body3" component="dt">
+                    {question}
+                  </MuiTypography>
+                  <MuiTypography variant="body2" component="dd">
+                    {answer}
+                  </MuiTypography>
+                </div>
+              ))}
+            </dl>
+          </section>
         )}
         {segments.length > 0 && (
-          <MuiTypography variant="body1" className={styles.reviewPlan}>
-            {segments.map((segment, i) =>
-              'text' in segment ? (
-                <React.Fragment key={i}>{segment.text}</React.Fragment>
-              ) : (
-                <strong key={i}>{bySlot[segment.slot] ?? '…'}</strong>
-              )
-            )}
-          </MuiTypography>
+          <section className={styles.reviewSection}>
+            <MuiTypography variant="h4" component="h3">
+              A prompt to get you started:
+            </MuiTypography>
+            <MuiTypography variant="body1" className={styles.reviewPlan}>
+              {segments.map((segment, i) =>
+                'text' in segment ? (
+                  <React.Fragment key={i}>{segment.text}</React.Fragment>
+                ) : (
+                  <strong key={i}>{bySlot[segment.slot] ?? '…'}</strong>
+                )
+              )}
+            </MuiTypography>
+          </section>
         )}
-      </AttemptCard>
+      </div>
       <div className={styles.questionsActions}>
         <MuiButton
           variant={canBuild ? 'outlined' : 'contained'}
