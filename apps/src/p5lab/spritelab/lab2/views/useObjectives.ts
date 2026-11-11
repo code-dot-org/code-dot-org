@@ -25,8 +25,8 @@ export type ObjectiveItemState = ObjectiveItem;
 export interface ObjectivesState extends ObjectivesChecklist {
   /** The level declares a checklist. */
   active: boolean;
-  /** The items that have held, by their index in the level's list, which
-      is how a callout names them. */
+  /** The items done, by their index in the level's list, which is how a
+      callout names them. */
   earned: ReadonlySet<number>;
 }
 
