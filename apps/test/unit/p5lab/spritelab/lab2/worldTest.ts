@@ -4,6 +4,7 @@ import {
   createEmptyWorld,
   DEFAULT_SCENE_GRID_SIZE,
   isLegacyWorld,
+  lastCopies,
   paintWorldCell,
   resizeWorld,
   sceneGridSize,
@@ -174,6 +175,37 @@ describe('world', () => {
     expect(second.grid[1][1]).toEqual({image: 'b', kind: 'sprite'});
     expect(first.grid[1][1]).toBeNull();
     expect(paintWorldCell(second, 0, 0, null).grid[0][0]).toBeNull();
+  });
+
+  it('finds the kept images that have exactly one copy', () => {
+    const gem: WorldCell = {image: 'Gem', kind: 'sprite'};
+    const hero: WorldCell = {image: 'Hero', kind: 'sprite'};
+    const stone: WorldCell = {image: 'Stone', kind: 'block'};
+    const world = {
+      grid: [
+        [gem, hero, stone],
+        [gem, null, null],
+      ],
+    };
+    const kept = new Set(['Gem', 'Hero', 'Friend']);
+    expect([...lastCopies(world, kept)]).toEqual(['Hero']);
+    expect(lastCopies(undefined, kept).size).toBe(0);
+  });
+
+  it('ignores a change that would remove the last copy of a kept image', () => {
+    const gem: WorldCell = {image: 'Gem', kind: 'sprite'};
+    const stone: WorldCell = {image: 'Stone', kind: 'block'};
+    const kept = new Set(['Gem']);
+    const one = paintWorldCell(undefined, 0, 0, gem, kept);
+    expect(paintWorldCell(one, 0, 0, null, kept)).toBe(one);
+    expect(paintWorldCell(one, 0, 0, stone, kept)).toBe(one);
+    // With a second copy placed, either one can go, but not both.
+    const two = paintWorldCell(one, 0, 1, gem, kept);
+    const moved = paintWorldCell(two, 0, 0, null, kept);
+    expect(moved.grid[0][0]).toBeNull();
+    expect(paintWorldCell(moved, 0, 1, null, kept)).toBe(moved);
+    // An image that is not kept can always be removed.
+    expect(paintWorldCell(one, 0, 0, null).grid[0][0]).toBeNull();
   });
 
   it('keeps the identity of every row a paint does not touch', () => {

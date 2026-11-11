@@ -111,15 +111,48 @@ export function resizeWorld(
   };
 }
 
+const NO_IMAGES: ReadonlySet<string> = new Set();
+
+/** The images among `kept` that exactly one cell of the world shows. */
+export function lastCopies(
+  world: World | undefined,
+  kept: ReadonlySet<string>
+): Set<string> {
+  const counts = new Map<string, number>();
+  for (const cells of world?.grid ?? []) {
+    for (const cell of cells) {
+      if (cell && kept.has(cell.image)) {
+        counts.set(cell.image, (counts.get(cell.image) ?? 0) + 1);
+      }
+    }
+  }
+  return new Set(
+    [...counts].filter(([, count]) => count === 1).map(([image]) => image)
+  );
+}
+
 // One placement, as a pure update: safe to apply inside a functional
 // sources updater, so rapid paints can't overwrite each other. A world
 // without a grid (saved by an older experiment) is treated as empty.
+// A change that would remove the last copy of an image in `kept` is
+// ignored. The check is made here, on the world being updated, so that two
+// quick erases of the last two copies cannot both go through.
 export function paintWorldCell(
   world: World | undefined,
   row: number,
   col: number,
-  cell: WorldCell | null
+  cell: WorldCell | null,
+  kept: ReadonlySet<string> = NO_IMAGES
 ): World {
+  const held = world?.grid?.[row]?.[col];
+  if (
+    world &&
+    held &&
+    held.image !== cell?.image &&
+    lastCopies(world, kept).has(held.image)
+  ) {
+    return world;
+  }
   // Only the painted row gets a new identity: the editor memoizes its rows
   // on theirs, so the other rows skip their render.
   const grid = (world?.grid ?? createEmptyWorld().grid).slice();

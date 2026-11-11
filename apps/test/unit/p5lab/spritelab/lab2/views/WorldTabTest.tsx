@@ -245,6 +245,51 @@ describe('WorldTab palette', () => {
     }
   });
 
+  it('keeps the last copy of a kept image until another copy is placed', () => {
+    const hero = {image: 'Hero', kind: 'sprite' as const};
+    const stone = {image: 'Stone', kind: 'block' as const};
+    const kept = new Set(['Hero']);
+    const {onPaintCell, unmount} = renderTab({
+      kept,
+      world: {grid: [[hero, stone]]},
+      selected: 'erase',
+    });
+    const [heroCell, stoneCell] = screen.getAllByRole('gridcell');
+    expect(heroCell.textContent).toContain('the last one, stays');
+    fireEvent.pointerDown(heroCell, {pointerId: 1});
+    fireEvent.keyDown(heroCell, {key: 'Delete'});
+    expect(onPaintCell).not.toHaveBeenCalled();
+    expect(
+      screen.getByText('The last one stays. Place another one first.')
+    ).toBeTruthy();
+    // A block is not kept, so it can be erased as usual.
+    fireEvent.pointerDown(stoneCell, {pointerId: 1});
+    expect(onPaintCell).toHaveBeenCalledWith(0, 1, null);
+    unmount();
+
+    const second = renderTab({
+      kept,
+      world: {grid: [[hero, hero]]},
+      selected: 'erase',
+    });
+    const firstCopy = screen.getAllByRole('gridcell')[0];
+    expect(firstCopy.textContent).not.toContain('stays');
+    fireEvent.pointerDown(firstCopy, {pointerId: 1});
+    expect(second.onPaintCell).toHaveBeenCalledWith(0, 0, null);
+  });
+
+  it('does not let another image be painted over the last copy', () => {
+    const hero = {image: 'Hero', kind: 'sprite' as const};
+    const stone = {image: 'Stone', kind: 'block' as const};
+    const {onPaintCell} = renderTab({
+      kept: new Set(['Hero']),
+      world: {grid: [[hero]]},
+      selected: stone,
+    });
+    fireEvent.pointerDown(screen.getAllByRole('gridcell')[0], {pointerId: 1});
+    expect(onPaintCell).not.toHaveBeenCalled();
+  });
+
   it('keeps a cell whose kind the palette cannot place', () => {
     // A blocks-only palette: the hero stays through Erase, Delete and
     // painting over.

@@ -7,7 +7,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getImageThumbnail, onTrimsUpdated} from '../imageTrim';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
-import {createEmptyWorld, World, WorldCell} from '../world';
+import {createEmptyWorld, lastCopies, World, WorldCell} from '../world';
 
 import moduleStyles from './world-tab.module.scss';
 
@@ -20,6 +20,8 @@ const MIN_GRID_PIXELS = 320;
 
 // Rendered against a scene that has no world yet; never painted through.
 const EMPTY_GRID = createEmptyWorld().grid;
+
+const NO_IMAGES: ReadonlySet<string> = new Set();
 
 // Number keys 1-9 pick the first nine palette items from anywhere in the
 // tab; 0 picks Erase.
@@ -96,6 +98,7 @@ interface WorldRowProps {
   /** The cursor's column while it is on this row; -1 otherwise. */
   cursorCol: number;
   offered: ReadonlySet<string>;
+  lastOnes: ReadonlySet<string>;
   registerCell: (
     row: number,
     col: number,
@@ -128,6 +131,7 @@ const WorldRow = React.memo<WorldRowProps>(
     thumbsByImage,
     cursorCol,
     offered,
+    lastOnes,
     registerCell,
     onCellPointerDown,
     onCellPointerEnter,
@@ -137,7 +141,7 @@ const WorldRow = React.memo<WorldRowProps>(
       {Array.from({length: sceneSize}, (_, col) => {
         const cell = cells?.[col];
         const thumb = cell ? thumbsByImage.get(cell.image) : undefined;
-        const refusal = cellRefusal(cell, offered);
+        const refusal = cellRefusal(cell, offered, lastOnes);
         return (
           <button
             key={col}
@@ -159,7 +163,7 @@ const WorldRow = React.memo<WorldRowProps>(
             <span className={moduleStyles.srOnly}>
               {cell
                 ? `${cell.image}, ${cell.kind}${
-                    refusal === 'stays' ? ', stays' : ''
+                    refusal ? `, ${REFUSAL_LABELS[refusal]}` : ''
                   }`
                 : 'empty'}
             </span>
@@ -225,19 +229,37 @@ interface PaletteItem extends WorldCell {
 // What the palette can choose: a placeable cell, or the eraser.
 type PaletteSelection = WorldCell | 'erase';
 
-type Refusal = 'stays';
+type Refusal = 'stays' | 'last';
 /** What a change to a cell did, for narration. */
 type Change = 'placed' | 'removed' | Refusal | null;
+
+// What a screen reader hears after the name of a cell that refuses changes.
+const REFUSAL_LABELS: Record<Refusal, string> = {
+  stays: 'stays',
+  last: 'the last one, stays',
+};
+const REFUSAL_MESSAGES: Record<Refusal, string> = {
+  stays: 'That one stays.',
+  last: 'The last one stays. Place another one first.',
+};
 
 /** Why a cell refuses a change, or null when it allows one. A cell showing
     an image the palette does not offer stays as it is, since nothing could
     put it back; a level that narrows the palette to a few roles thereby
-    protects the cells placed by earlier levels. */
+    protects the cells placed by earlier levels. A cell showing one of
+    `lastOnes` is the only copy of an image the scene has to keep. */
 export function cellRefusal(
   cell: WorldCell | null | undefined,
-  offered: ReadonlySet<string>
+  offered: ReadonlySet<string>,
+  lastOnes: ReadonlySet<string>
 ): Refusal | null {
-  return cell && !offered.has(cell.image) ? 'stays' : null;
+  if (!cell) {
+    return null;
+  }
+  if (!offered.has(cell.image)) {
+    return 'stays';
+  }
+  return lastOnes.has(cell.image) ? 'last' : null;
 }
 
 interface WorldTabProps {
@@ -252,6 +274,9 @@ interface WorldTabProps {
   // The images the palette offers, when the level narrows it: a world
   // level's image of its kind, or the images in the roles it names.
   only?: string[];
+  // Images the scene keeps at least one copy of. The last copy of one can
+  // be erased or painted over only after another copy has been placed.
+  kept?: ReadonlySet<string>;
   // Palette selection, owned by the view so it survives tab switches (this
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
@@ -278,6 +303,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   onPaintCell,
   emptyMessage,
   only,
+  kept = NO_IMAGES,
   selected,
   onSelect,
 }) => {
@@ -341,6 +367,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       : -1;
 
   const grid = world?.grid ?? EMPTY_GRID;
+  const lastOnes = useMemo(() => lastCopies({grid}, kept), [grid, kept]);
 
   // Screen-reader narration for actions whose visible result is a silent
   // DOM change (placements, removals, number-key choices). A no-break
@@ -365,8 +392,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     next: WorldCell | null
   ): Change => {
     const held = grid[row]?.[col];
-    const refusal = cellRefusal(held, offered);
-    if (refusal) {
+    const refusal = cellRefusal(held, offered, lastOnes);
+    // Painting the last copy's own image over it removes nothing.
+    if (refusal && !(refusal === 'last' && next?.image === held?.image)) {
       return refusal;
     }
     if (!next) {
@@ -384,8 +412,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       announce(`${image} placed.`);
     } else if (did === 'removed') {
       announce('Removed.');
-    } else if (did === 'stays') {
-      announce('That one stays.');
+    } else if (did) {
+      announce(REFUSAL_MESSAGES[did]);
     }
   };
   const paintCell = (row: number, col: number, erase: boolean): Change => {
@@ -920,6 +948,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             {Array.from({length: sceneSize}, (_, row) => (
               <WorldRow
                 offered={offered}
+                lastOnes={lastOnes}
                 key={row}
                 row={row}
                 sceneSize={sceneSize}
