@@ -586,7 +586,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           type={attempt && !attempt.submittedAt ? 'warning' : 'info'}
         />
       )}
-      <div className={styles.attemptBody} ref={attemptBodyRef}>
+      <div className={styles.attemptBody} ref={attemptBodyRef} tabIndex={-1}>
         {error && (
           <Typography variant="body3" color="error" role="alert">
             {error}

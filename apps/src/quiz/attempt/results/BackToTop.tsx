@@ -9,8 +9,10 @@ export const BACK_TO_TOP_SCROLL_THRESHOLD_PX = 400;
 export interface BackToTopProps {
   scrollContainerRef: React.RefObject<HTMLElement>;
   // The tab unmounts once the scroll reaches the top, so focus moves here
-  // rather than being dropped to the document body.
-  focusTargetRef?: React.RefObject<HTMLElement>;
+  // rather than being dropped to the document body. Falls back to the
+  // scroll container, which must then be focusable, when the target is
+  // not rendered.
+  focusTargetRef: React.RefObject<HTMLElement>;
 }
 
 const BackToTop: React.FunctionComponent<BackToTopProps> = ({
@@ -42,11 +44,12 @@ const BackToTop: React.FunctionComponent<BackToTopProps> = ({
     const prefersReducedMotion = window.matchMedia?.(
       '(prefers-reduced-motion: reduce)'
     ).matches;
-    scrollContainerRef.current?.scrollTo({
+    const scrollContainer = scrollContainerRef.current;
+    scrollContainer?.scrollTo({
       top: 0,
       behavior: prefersReducedMotion ? 'auto' : 'smooth',
     });
-    focusTargetRef?.current?.focus({preventScroll: true});
+    (focusTargetRef.current ?? scrollContainer)?.focus({preventScroll: true});
   };
 
   return (

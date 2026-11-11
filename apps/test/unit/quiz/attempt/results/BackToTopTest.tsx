@@ -6,15 +6,19 @@ import BackToTop, {
   BACK_TO_TOP_SCROLL_THRESHOLD_PX,
 } from '@cdo/apps/quiz/attempt/results/BackToTop';
 
-const Harness: React.FunctionComponent = () => {
+const Harness: React.FunctionComponent<{hasHeading?: boolean}> = ({
+  hasHeading = true,
+}) => {
   const scrollContainerRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   return (
     <>
-      <section aria-label="Quiz results" ref={scrollContainerRef}>
-        <h2 tabIndex={-1} ref={headingRef}>
-          Results
-        </h2>
+      <section aria-label="Quiz results" ref={scrollContainerRef} tabIndex={-1}>
+        {hasHeading && (
+          <h2 tabIndex={-1} ref={headingRef}>
+            Results
+          </h2>
+        )}
       </section>
       <BackToTop
         scrollContainerRef={scrollContainerRef}
@@ -24,7 +28,7 @@ const Harness: React.FunctionComponent = () => {
   );
 };
 
-function scrollTo(scroller: HTMLElement, scrollTop: number) {
+function setScrollTop(scroller: HTMLElement, scrollTop: number) {
   Object.defineProperty(scroller, 'scrollTop', {
     configurable: true,
     value: scrollTop,
@@ -43,17 +47,17 @@ describe('BackToTop', () => {
       screen.queryByRole('button', {name: 'Back to top'})
     ).not.toBeInTheDocument();
 
-    scrollTo(scroller, BACK_TO_TOP_SCROLL_THRESHOLD_PX);
+    setScrollTop(scroller, BACK_TO_TOP_SCROLL_THRESHOLD_PX);
     expect(
       screen.queryByRole('button', {name: 'Back to top'})
     ).not.toBeInTheDocument();
 
-    scrollTo(scroller, BACK_TO_TOP_SCROLL_THRESHOLD_PX + 1);
+    setScrollTop(scroller, BACK_TO_TOP_SCROLL_THRESHOLD_PX + 1);
     expect(
       screen.getByRole('button', {name: 'Back to top'})
     ).toBeInTheDocument();
 
-    scrollTo(scroller, 0);
+    setScrollTop(scroller, 0);
     expect(
       screen.queryByRole('button', {name: 'Back to top'})
     ).not.toBeInTheDocument();
@@ -64,12 +68,23 @@ describe('BackToTop', () => {
     const scroller = screen.getByRole('region', {name: 'Quiz results'});
     scroller.scrollTo = jest.fn();
 
-    scrollTo(scroller, BACK_TO_TOP_SCROLL_THRESHOLD_PX + 1);
+    setScrollTop(scroller, BACK_TO_TOP_SCROLL_THRESHOLD_PX + 1);
     fireEvent.click(screen.getByRole('button', {name: 'Back to top'}));
 
     expect(scroller.scrollTo).toHaveBeenCalledWith(
       expect.objectContaining({top: 0})
     );
     expect(screen.getByRole('heading', {name: 'Results'})).toHaveFocus();
+  });
+
+  it('moves focus to the scroll container when there is no heading', () => {
+    render(<Harness hasHeading={false} />);
+    const scroller = screen.getByRole('region', {name: 'Quiz results'});
+    scroller.scrollTo = jest.fn();
+
+    setScrollTop(scroller, BACK_TO_TOP_SCROLL_THRESHOLD_PX + 1);
+    fireEvent.click(screen.getByRole('button', {name: 'Back to top'}));
+
+    expect(scroller).toHaveFocus();
   });
 });
