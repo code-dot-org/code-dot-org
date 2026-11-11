@@ -62,8 +62,38 @@ describe('StatsStep', () => {
       screen.getByLabelText('Build: 2 of 2 checkpoints complete')
     ).toBeTruthy();
     expect(screen.getByText('1h02m')).toBeTruthy();
+    expect(screen.getAllByRole('term').map(term => term.textContent)).toEqual([
+      'Checkpoints completed',
+      'Time spent',
+      'Skill mastery',
+      'Focus areas',
+    ]);
+    expect(document.querySelector('img')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
     expect(onComplete).toHaveBeenCalledTimes(1);
+  });
+
+  it('shows the logo the step names above the heading', () => {
+    render(
+      <PathwayContext.Provider
+        value={
+          {
+            pathway,
+            statusMap: {a: 'complete'},
+            progress: {steps: {}},
+          } as unknown as PathwayContextValue
+        }
+      >
+        <StatsStep
+          step={{...step, logoUrl: 'https://images.code.org/logo.svg'}}
+          continueLabel="Continue"
+          onComplete={jest.fn()}
+        />
+      </PathwayContext.Provider>
+    );
+    const logo = document.querySelector('img');
+    expect(logo?.getAttribute('src')).toBe('https://images.code.org/logo.svg');
+    expect(logo?.getAttribute('alt')).toBe('');
   });
 
   it('shows only the figures the step names, in its order', () => {

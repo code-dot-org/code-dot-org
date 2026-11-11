@@ -242,10 +242,33 @@ describe('parsePathway', () => {
     expect(problemsOf(raw)).toHaveLength(1);
   });
 
+  it('accepts a congrats step for a panel it knows', () => {
+    const raw = served();
+    raw.checkpoints[0].steps.push({
+      id: 'done',
+      title: 'Done',
+      kind: 'congrats',
+      panelId: 'hoai2026',
+    });
+    expect(problemsOf(raw)).toEqual([]);
+    raw.checkpoints[0].steps.push({
+      ...panels('bad'),
+      kind: 'congrats',
+      panelId: 'hoc2024',
+    } as unknown as Step);
+    expect(problemsOf(raw)[0]).toMatch(/panelId/);
+  });
+
   it('accepts a stats step, with or without a choice of figures', () => {
     const raw = served();
     raw.checkpoints[0].steps.push(
-      {id: 'so-far', title: 'So far', kind: 'stats', heading: 'Great job!'},
+      {
+        id: 'so-far',
+        title: 'So far',
+        kind: 'stats',
+        heading: 'Great job!',
+        logoUrl: 'https://images.code.org/logo.svg',
+      },
       {
         id: 'time',
         title: 'Time',
