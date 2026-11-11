@@ -16,6 +16,8 @@ const NO_SOURCES: ProjectSources = {source: ''};
 export interface PathwayProjectState {
   /** The project channel once loaded; undefined while loading or without one. */
   channel?: Channel;
+  /** The project's sources; undefined while loading. */
+  sources?: ProjectSources;
   isLoading: boolean;
   /** False for anyone but the owner, and until the channel has loaded. */
   isEditable: boolean;
@@ -41,8 +43,14 @@ export function usePathwayProject(pathway: Pathway): PathwayProjectState {
       },
     [pathway]
   );
-  const {channel, projectManager, isLoading, isEditable, loadError} =
-    useSources({levelProperties: templateLevel, defaultSources: NO_SOURCES});
+  const {
+    channel,
+    currentSources,
+    projectManager,
+    isLoading,
+    isEditable,
+    loadError,
+  } = useSources({levelProperties: templateLevel, defaultSources: NO_SOURCES});
 
   const editProject = useCallback<PathwayProjectState['editProject']>(
     async ({name, description}) => {
@@ -66,5 +74,12 @@ export function usePathwayProject(pathway: Pathway): PathwayProjectState {
     [projectManager]
   );
 
-  return {channel, isLoading, isEditable, loadError, editProject};
+  return {
+    channel,
+    sources: currentSources,
+    isLoading,
+    isEditable,
+    loadError,
+    editProject,
+  };
 }
