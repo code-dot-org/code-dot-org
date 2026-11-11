@@ -68,6 +68,14 @@
       "import": "./dist/breadcrumbs/index.mjs",
       "require": "./dist/breadcrumbs/index.js"
     },
+    "./cardButton": {
+      "types": {
+        "import": "./dist/cardButton/index.d.ts",
+        "require": "./dist/cardButton/index.d.ts"
+      },
+      "import": "./dist/cardButton/index.mjs",
+      "require": "./dist/cardButton/index.js"
+    },
     "./carousel": {
       "types": {
         "import": "./dist/carousel/index.d.ts",
