@@ -62,6 +62,32 @@ export interface Objective {
   shownWhen?: ObjectiveCheck;
 }
 
+// For each kind of check, whether it has to pass only once. Every kind is
+// listed, so a new kind has to be given an answer here.
+const CHECKED_ONCE: Record<ObjectiveCheck['kind'], boolean> = {
+  // These read work in the project and are checked the whole time.
+  block: false,
+  world: false,
+  image: false,
+  // These record something that happened, which cannot be checked again.
+  play: true,
+  reach: true,
+  scene: true,
+  // These read something that changes for reasons other than undoing the
+  // step: which scene is open in the editor, and a picture's AI record,
+  // which is removed when the student edits the picture by hand.
+  editing: true,
+  generated: true,
+  rated: true,
+};
+
+/** Whether a check has to pass only once. After that its step counts as
+    done, whatever the check would say later. Any other check is made the
+    whole time, and its step is done only while the check passes. */
+export function isCheckedOnce(check: ObjectiveCheck): boolean {
+  return CHECKED_ONCE[check.kind];
+}
+
 export interface Objectives {
   /** Markdown, shown above the list, or alone when there is no list. */
   title?: string;
@@ -165,25 +191,6 @@ export function objectiveShown(
   inputs: ObjectiveInputs
 ): boolean {
   return !item.shownWhen || checkObjective(item.shownWhen, inputs);
-}
-
-// The kinds of check that can be read from the project at any time: a block
-// in the code, something placed in the world, an image.
-const READ_FROM_PROJECT_KINDS: ReadonlySet<ObjectiveCheck['kind']> = new Set([
-  'block',
-  'world',
-  'image',
-]);
-
-/**
- * Whether a check is about something the student did during a visit to the
- * level, which leaves nothing in the project to read later: pressing Run,
- * reaching a sprite, arriving in a scene, opening a scene, rating a
- * picture. When a student comes back to a level they have completed, these
- * steps cannot be re-read, so they start ticked.
- */
-export function isAboutTheVisit(check: ObjectiveCheck): boolean {
-  return !READ_FROM_PROJECT_KINDS.has(check.kind);
 }
 
 // A field saved as "<field name="X">value</field>" or as the bare value;

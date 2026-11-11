@@ -5,7 +5,7 @@ import {
   fieldValue,
   ObjectiveCheck,
   ObjectiveInputs,
-  isAboutTheVisit,
+  isCheckedOnce,
   objectiveShown,
   realBlocks,
   runtimeNeeds,
@@ -308,18 +308,19 @@ describe('objectiveShown', () => {
   });
 });
 
-describe('isAboutTheVisit', () => {
-  it('is false for the checks that can be read from the project', () => {
-    expect(isAboutTheVisit({kind: 'block', type: 'any'})).toBe(false);
-    expect(isAboutTheVisit({kind: 'world'})).toBe(false);
-    expect(isAboutTheVisit({kind: 'image', imageType: 'sprite'})).toBe(false);
+describe('isCheckedOnce', () => {
+  it('is false for the checks that read work kept in the project', () => {
+    expect(isCheckedOnce({kind: 'block', type: 'any'})).toBe(false);
+    expect(isCheckedOnce({kind: 'world'})).toBe(false);
+    expect(isCheckedOnce({kind: 'image', imageType: 'sprite'})).toBe(false);
   });
 
-  it('is true for what the student did during a visit', () => {
-    expect(isAboutTheVisit({kind: 'play'})).toBe(true);
-    expect(isAboutTheVisit({kind: 'reach', moved: true})).toBe(true);
-    expect(isAboutTheVisit({kind: 'scene', id: 'scene-2'})).toBe(true);
-    expect(isAboutTheVisit({kind: 'editing', id: 'scene-2'})).toBe(true);
-    expect(isAboutTheVisit({kind: 'rated'})).toBe(true);
+  it('is true for things that happened, the open scene and the AI record', () => {
+    expect(isCheckedOnce({kind: 'play'})).toBe(true);
+    expect(isCheckedOnce({kind: 'reach', moved: true})).toBe(true);
+    expect(isCheckedOnce({kind: 'scene', id: 'scene-2'})).toBe(true);
+    expect(isCheckedOnce({kind: 'editing', id: 'scene-2'})).toBe(true);
+    expect(isCheckedOnce({kind: 'rated'})).toBe(true);
+    expect(isCheckedOnce({kind: 'generated'})).toBe(true);
   });
 });

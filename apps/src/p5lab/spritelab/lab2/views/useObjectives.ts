@@ -8,7 +8,7 @@ import {ObjectiveItem, ObjectivesChecklist} from '@cdo/apps/lab2/types';
 import {
   checkObjective,
   EMPTY_RUNTIME,
-  isAboutTheVisit,
+  isCheckedOnce,
   Objective,
   ObjectiveInputs,
   Objectives,
@@ -247,16 +247,16 @@ export function useObjectives({
   }, [newIndexes]);
 
   // A student back on a level they have completed finds it completed. The
-  // steps about the project are re-read from the project, above. The steps
-  // about something they did on the earlier visit (see isAboutTheVisit)
-  // cannot be re-read, so they are ticked here. This runs when the level's
+  // steps that are checked the whole time are read from the project again,
+  // above. The steps that are checked once (see isCheckedOnce) passed on
+  // the earlier visit and cannot be checked again, so they are ticked here. This runs when the level's
   // progress arrives, which can be after the checklist first shows.
   useEffect(() => {
     if (!completedBefore || !items?.length) {
       return;
     }
     const done = items.flatMap((item, index) =>
-      isAboutTheVisit(item.check) ? [index] : []
+      isCheckedOnce(item.check) ? [index] : []
     );
     setEarned(current =>
       done.every(index => current.has(index))
