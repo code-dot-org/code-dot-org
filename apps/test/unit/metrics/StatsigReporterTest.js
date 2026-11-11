@@ -1,9 +1,14 @@
+import {sendEvent, setUser} from '@code-dot-org/core/plugins/analytics';
 import {StatsigClient} from '@statsig/js-client';
 
 import DCDO from '@cdo/apps/dcdo';
 import {findOrCreateStableId} from '@cdo/apps/metrics/statsigHelpers';
 import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 
+jest.mock('@code-dot-org/core/plugins/analytics', () => ({
+  sendEvent: jest.fn(),
+  setUser: jest.fn(),
+}));
 jest.mock('@statsig/js-client', () => ({
   StatsigClient: jest.fn().mockImplementation(() => ({
     initializeAsync: jest.fn().mockResolvedValue(undefined),
@@ -73,22 +78,54 @@ describe('StatsigReporter shouldPutRecord', () => {
     DCDO.reset();
   });
 
-  it('transmits when statsig-plugin-enabled is true', () => {
-    DCDO.set('statsig-plugin-enabled', true);
-    expect(statsigReporter.shouldPutRecord(false)).toBe(true);
-  });
-
   it('transmits when statsig-plugin-enabled is absent', () => {
     expect(statsigReporter.shouldPutRecord(false)).toBe(true);
   });
 
-  it('does not transmit when statsig-plugin-enabled is false', () => {
+  it('transmits when statsig-plugin-enabled is false', () => {
     DCDO.set('statsig-plugin-enabled', false);
+    expect(statsigReporter.shouldPutRecord(false)).toBe(true);
+  });
+
+  it('does not transmit when statsig-plugin-enabled is true', () => {
+    DCDO.set('statsig-plugin-enabled', true);
     expect(statsigReporter.shouldPutRecord(false)).toBe(false);
   });
 
-  it('does not transmit when statsig-plugin-enabled is false, even with alwaysPut', () => {
-    DCDO.set('statsig-plugin-enabled', false);
+  it('does not transmit when statsig-plugin-enabled is true, even with alwaysPut', () => {
+    DCDO.set('statsig-plugin-enabled', true);
     expect(statsigReporter.shouldPutRecord(true)).toBe(false);
+  });
+});
+
+describe('StatsigReporter with statsig-plugin-enabled on', () => {
+  beforeEach(() => {
+    DCDO.set('statsig-plugin-enabled', true);
+  });
+
+  afterEach(() => {
+    DCDO.reset();
+    jest.clearAllMocks();
+  });
+
+  it('forwards events to the core plugin', () => {
+    statsigReporter.sendEvent('Event', {a: 1}, 'value');
+    expect(sendEvent).toHaveBeenCalledWith('Event', {a: 1}, 'value');
+  });
+
+  it('forwards user properties to the core plugin', async () => {
+    await statsigReporter.setUserProperties({
+      userId: 42,
+      userType: 'teacher',
+      isVerifiedInstructor: true,
+      enabledExperiments: ['experiment'],
+      educatorRole: null,
+    });
+    expect(setUser).toHaveBeenCalledWith({
+      userId: 42,
+      userType: 'teacher',
+      isVerifiedInstructor: true,
+      educatorRole: null,
+    });
   });
 });

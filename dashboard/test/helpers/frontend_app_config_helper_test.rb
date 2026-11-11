@@ -9,7 +9,7 @@ class FrontendAppConfigHelperTest < ActionView::TestCase
       CDO.stubs(:enable_sentry).returns(false)
       CDO.stubs(:safe_statsig_api_client_key).returns('')
       DCDO.stubs(:get).with('frontend-observability-sampling-config', {}).returns({})
-      DCDO.stubs(:get).with('statsig-plugin-enabled', true).returns(true)
+      DCDO.stubs(:get).with('statsig-plugin-enabled', false).returns(true)
     end
 
     it 'composes the observability and analytics fields into one JSON object' do
