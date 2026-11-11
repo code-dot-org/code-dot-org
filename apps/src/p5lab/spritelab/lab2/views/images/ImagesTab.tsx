@@ -326,8 +326,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     }
     startSession(images[0]?.key ?? null);
   }, [chosenId, draft, images, startSession, stopDrawing, drawing]);
-  // A level that keeps the student to one image offers a fixed set of
-  // colors and one brush. Every other level offers what free play does.
+  // A level before free play keeps the few tools that draw.
   const limitedTools = !editingOffered;
   // An image that is the student's own work (no prompt made its pixels)
   // hides the word menus until Replace image is pressed; the choice is per
