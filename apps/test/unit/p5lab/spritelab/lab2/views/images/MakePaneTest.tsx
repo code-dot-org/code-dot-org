@@ -87,6 +87,22 @@ describe('MakePane', () => {
     expect(generate).toHaveBeenCalledTimes(2);
   });
 
+  it('asks again before generating over a picture the student has drawn on', () => {
+    const generate = jest.fn();
+    render(
+      <MakePane
+        parts={parts({generate, mode: 'result', frameFilled: true})}
+        width={280}
+        replaces
+        editedByHand
+      />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Regenerate'}));
+    expect(generate).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', {name: 'Replace'}));
+    expect(generate).toHaveBeenCalledTimes(1);
+  });
+
   it('offers Regenerate for an AI-made image, and the drawing button when given', () => {
     const onDraw = jest.fn();
     render(

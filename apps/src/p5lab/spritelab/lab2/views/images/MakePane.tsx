@@ -32,6 +32,8 @@ interface MakePaneProps {
   drawDisabled?: boolean;
   /** The image was made by AI and is unedited: generating makes it again. */
   regenerate?: boolean;
+  /** The student has drawn on the image since it was generated. */
+  editedByHand?: boolean;
   /** Extra controls for the header, placed after the Behind the scenes
       button. */
   extra?: React.ReactNode;
@@ -46,6 +48,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
   drawIcon = 'pencil',
   drawDisabled,
   regenerate,
+  editedByHand,
   extra,
 }) => {
   const [confirming, setConfirming] = useState(false);
@@ -56,10 +59,11 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
     parts.draft.imageType,
     parts.draft.subject
   );
-  // The first generation over an existing image asks for confirmation;
-  // after a picture has been generated in this session the next one
-  // replaces it without asking.
-  const asksFirst = !!replaces && !parts.frameFilled;
+  // The first generation over an existing image asks for confirmation.
+  // After a picture has been generated in this session the next one
+  // replaces it without asking, unless the student has drawn on it since:
+  // a new picture would replace their drawing too.
+  const asksFirst = !!replaces && (!parts.frameFilled || !!editedByHand);
   const generate = () => {
     if (asksFirst) {
       setConfirming(true);

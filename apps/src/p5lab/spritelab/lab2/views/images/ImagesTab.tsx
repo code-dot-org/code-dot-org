@@ -631,16 +631,18 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 }
               />
             );
-            // The pane's second button opens the paint tools. While they
-            // are open on a level before free play, the same button closes
-            // them instead; `doneDisabled` is for a new drawing that has no
-            // strokes yet, which there is nothing to keep of.
+            // The pane's second button opens the paint tools. While the
+            // tools are open on a level before free play, the same button
+            // closes them and keeps the drawing. `doneDisabled` is true for
+            // a new drawing that has no strokes yet: there is nothing to
+            // keep, so the button cannot be pressed.
             const makePane = (doneDisabled = false) => (
               <MakePane
                 parts={parts}
                 width={paneWidth}
                 replaces={!!chosenImage}
                 regenerate={!!chosenImage?.props.generation}
+                editedByHand={sceneCopyStale}
                 onDraw={
                   drawOffered
                     ? () => {
