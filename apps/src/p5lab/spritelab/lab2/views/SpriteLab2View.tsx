@@ -2317,12 +2317,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}
                 editingOffered={!oneImage}
-                // A project outside a progression has no level mode; it
-                // gets every tool, like free play.
-                fullPaintTools={
-                  !levelProperties.levelMode ||
-                  isFreeplayMode(levelProperties.levelMode)
-                }
                 paneWidth={paneWidthPx}
                 onImageLanded={saveImagesNow}
                 active={activeTab === 'Images'}

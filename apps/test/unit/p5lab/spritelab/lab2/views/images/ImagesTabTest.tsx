@@ -450,7 +450,7 @@ describe('ImagesTab', () => {
 
   it('draws a new image in free play with every tool, and Done makes it an image', async () => {
     const onDrawingHistory = jest.fn();
-    renderTab({editingOffered: true, fullPaintTools: true, onDrawingHistory});
+    renderTab({editingOffered: true, onDrawingHistory});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
@@ -756,7 +756,7 @@ describe('ImagesTab', () => {
     expect(screen.queryByText('Your edited image')).toBeNull();
   });
 
-  it('edits an image with a fixed set of colors before free play, saving when the tab is left', async () => {
+  it('edits an image with a fixed set of colors on a one-image level, saving when the tab is left', async () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
     const {rerender} = renderTab({
       lockedImageType: 'sprite',

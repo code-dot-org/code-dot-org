@@ -1,6 +1,7 @@
-// The drawing tools a level before free play offers: the tools that draw a
-// picture, a fixed set of colors and the finest brush. Free play offers
-// every color and more brush sizes.
+// The drawing tools a one-image level (level_mode.oneImage) offers: the
+// tools that draw a picture, a fixed set of colors and the finest brush.
+// Every other level offers every color and more brush sizes, as free play
+// does.
 
 import {PaletteColor, ToolbarItem} from '@cdo/apps/pixelEditor/PixelEditor';
 import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
@@ -11,7 +12,7 @@ export const PAINT_TOOLS: readonly PixelTool[] = [
   'eraser',
   'eyedropper',
 ];
-// The colors offered before free play, each as a round swatch. The first
+// The colors a one-image level offers, each as a round swatch. The first
 // is the color the editor starts on: the pixel editor's own blue. The
 // eyedropper can still pick any other color from the picture. Ten is the
 // most swatches that fit on one row beside the tools when the picture
@@ -32,14 +33,14 @@ export const PAINT_COLORS: readonly PaletteColor[] = [
 // One brush, the finest on the pixel grid.
 export const PAINT_BRUSH_SIZES: readonly number[] = [1];
 
-// Before free play: the eyedropper and the color swatches, then the tools
+// A one-image level: the eyedropper and the color swatches, then the tools
 // that draw.
 export const PAINT_TOOLBAR: readonly (readonly ToolbarItem[])[] = [
   ['eyedropper', 'color'],
   ['pen', 'bucket', 'eraser'],
 ];
-// Free play: the eyedropper and the picker, the tools that draw, and the
-// three finer brushes; the shapes wait.
+// Every other level: the eyedropper and the picker, the tools that draw,
+// and the three finer brushes; the shapes wait.
 export const FREEPLAY_TOOLS: readonly PixelTool[] = [
   'pen',
   'bucket',

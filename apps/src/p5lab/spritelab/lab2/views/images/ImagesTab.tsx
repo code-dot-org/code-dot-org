@@ -93,9 +93,6 @@ interface ImagesTabProps {
   onGenerate?: () => void;
   /** Students may add images and draw on them (free play). */
   editingOffered?: boolean;
-  /** The paint tools offer every color and several brush sizes, as in free
-      play. Without it they offer a fixed set of colors and one brush. */
-  fullPaintTools?: boolean;
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
   paneWidth: number;
@@ -143,7 +140,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   generationsLeft,
   onGenerate,
   editingOffered,
-  fullPaintTools,
   paneWidth,
   onImageLanded,
   active = true,
@@ -330,8 +326,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     }
     startSession(images[0]?.key ?? null);
   }, [chosenId, draft, images, startSession, stopDrawing, drawing]);
-  // A level before free play offers a fixed set of colors and one brush.
-  const limitedTools = !fullPaintTools;
+  // A level that keeps the student to one image offers a fixed set of
+  // colors and one brush. Every other level offers what free play does.
+  const limitedTools = !editingOffered;
   // An image that is the student's own work (no prompt made its pixels)
   // hides the word menus until Replace image is pressed; the choice is per
   // image, and choosing another image or leaving the tab hides them again.
