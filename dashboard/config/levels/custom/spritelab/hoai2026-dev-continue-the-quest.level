@@ -1,0 +1,223 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-11-11T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-revised-template",
+    "lock_earlier_blocks": true,
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "scene-1",
+      "name": "Scene 1"
+    },
+    "extra_scene": {
+      "id": "second-scene",
+      "name": "Scene 2",
+      "editable": true,
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "spritelab2_setAsPlatformPlayer"
+                }
+              }
+            },
+            {
+              "type": "gamelab_checkTouching",
+              "x": 20,
+              "y": 230,
+              "fields": {
+                "CONDITION": "\"when\""
+              },
+              "inputs": {
+                "SPRITE1": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "SPRITE2": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "gamelab_spriteSay",
+                  "data": "friend-says",
+                  "fields": {
+                    "SPEECH": "What's next?"
+                  },
+                  "inputs": {
+                    "SPRITE": {
+                      "shadow": {
+                        "type": "gamelab_allSpritesWithAnimation"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "worldStartPattern": [
+        "..........",
+        "..........",
+        ".S........",
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "......F...",
+        "BBBBBBBBBB"
+      ],
+      "worldStartRoles": {
+        "F": "friend"
+      }
+    },
+    "image_role_defaults": {
+      "sprite": "hero",
+      "gamelab_checkTouching": [
+        "hero",
+        "friend"
+      ],
+      "gamelab_spriteSay": "hero",
+      "data:friend-says": "friend"
+    },
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "We did it!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "add_blocks": [
+
+    ],
+    "objectives": {
+      "title": "**Continue the quest!**",
+      "items": [
+        {
+          "text": "Select **Scene 2** from the scene selector below.",
+          "check": {
+            "kind": "editing",
+            "id": "second-scene"
+          }
+        },
+        {
+          "text": "Drag a **say** block under **when run** and change the message if you like!",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_spriteSay",
+            "under": "spritelab2_whenRun",
+            "scene": "second-scene"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Continue the quest!\r\nStart building the next scene of your quest.",
+    "header_label": "Continue the quest",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "callouts": [
+      {
+        "target": "scene-option",
+        "scene": "second-scene",
+        "direction": "left",
+        "fallback": {
+          "target": "scene-menu",
+          "direction": "down"
+        },
+        "when": {
+          "notDone": [
+            0
+          ]
+        }
+      },
+      {
+        "target": "scene-option",
+        "scene": "second-scene",
+        "direction": "left",
+        "fallback": {
+          "target": "scene-menu",
+          "direction": "down"
+        },
+        "when": {
+          "done": [
+            0
+          ],
+          "notDone": [
+            1
+          ],
+          "sceneNot": "second-scene"
+        }
+      }
+    ]
+  },
+  "audit_log": "[]",
+  "level_concept_difficulty": {}
+}]]></config>
+  <blocks/>
+</GamelabJr>

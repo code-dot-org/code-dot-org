@@ -371,6 +371,30 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "hoai2026-dev-continue-the-quest"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-continue-the-quest"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      },
+      "level_keys": [
+        "hoai2026-dev-continue-the-quest"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "hoai2026-dev-free-play"
         ]
       },
@@ -527,6 +551,18 @@
         "level.key": "hoai2026-dev-a-whole-new-scene",
         "script_level.level_keys": [
           "hoai2026-dev-a-whole-new-scene"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-continue-the-quest",
+        "script_level.level_keys": [
+          "hoai2026-dev-continue-the-quest"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
