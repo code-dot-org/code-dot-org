@@ -904,6 +904,16 @@ class LevelTest < ActiveSupport::TestCase
     assert new_level.encrypted, 'clone_with_suffix preserves encrypted flag'
   end
 
+  test 'cloning a dsl level rejects a name that is not a plain dsl string' do
+    old_level = create(:multi, name: 'old multi level')
+    old_level.stubs(:dsl_text).returns("name 'old multi level'\n")
+    Multi.expects(:create_from_level_builder).never
+
+    ["x'\nraise 'injected'\nname 'y", "x'+raise('injected')+'", "x\\", "x\ny", 'a' * 71, ''].each do |bad_name|
+      assert_raises(ArgumentError) {old_level.clone_with_name(bad_name)}
+    end
+  end
+
   test 'can clone with suffix' do
     old_level = create(:level, name: 'level', start_blocks: '<xml>foo</xml>')
     new_level = old_level.clone_with_suffix('_copy')
