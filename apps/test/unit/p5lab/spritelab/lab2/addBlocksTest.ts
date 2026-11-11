@@ -213,6 +213,25 @@ describe('addBlocks', () => {
       );
     });
 
+    it('takes a check that names the stack by its tag alone', () => {
+      // As the touch event level writes it: no top block type, only the tag.
+      const types = fillingTypes({...outline, data: 'treasure-touch'}, [
+        {
+          kind: 'block',
+          type: ['spritelab2_burst', 'spritelab2_playSound'],
+          data: 'treasure-touch',
+        },
+      ]);
+      expect(types).toContain('spritelab2_burst');
+      expect(types).toContain('spritelab2_playSound');
+    });
+
+    it('ignores a check that names no stack', () => {
+      expect(
+        fillingTypes(outline, [{kind: 'block', type: 'spritelab2_goToScene'}])
+      ).toEqual(['gamelab_spriteSay']);
+    });
+
     it('has nothing to fill for a room, which draws no outline', () => {
       expect(
         fillingTypes(

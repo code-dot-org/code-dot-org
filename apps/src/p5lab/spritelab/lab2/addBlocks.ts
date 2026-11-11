@@ -168,11 +168,14 @@ function entryOn(entry: AddBlockEntry, top: PresentBlock): boolean {
 
 /**
  * The block types that fill an entry's outline. An outline is the hint for
- * a checklist step, so these are the types that step accepts: the block
- * checks the level makes under the same top block (and the same tag, when
- * the check names one), plus the block the outline is drawn to look like.
- * A level that accepts several blocks under one event lists them in its
- * check, and any of them fills the outline.
+ * a checklist step, so these are the types that step accepts, plus the
+ * block the outline is drawn to look like. A level that accepts several
+ * blocks under one event lists them in its check, and any of them fills
+ * the outline.
+ *
+ * A check is about this entry's stack when it names the stack: by its top
+ * block's type (`under`), by its tag (`data`), or both. A check that names
+ * neither is about no stack in particular, so it fills no outline.
  */
 export function fillingTypes(
   entry: AddBlockEntry,
@@ -188,7 +191,8 @@ export function fillingTypes(
   const accepted = blockChecks
     .filter(
       check =>
-        check.under === topType &&
+        (check.under !== undefined || check.data !== undefined) &&
+        (check.under === undefined || check.under === topType) &&
         (check.data === undefined || check.data === entry.data)
     )
     .flatMap(check => check.type);
