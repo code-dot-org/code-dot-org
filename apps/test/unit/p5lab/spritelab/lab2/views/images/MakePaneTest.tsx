@@ -34,7 +34,7 @@ const parts = (over: Partial<SentenceSceneParts> = {}): SentenceSceneParts => ({
 });
 
 describe('MakePane', () => {
-  it('shows a failure outside the scrolling words, where it is always in view', () => {
+  it('shows an error message outside the scrolling box of words', () => {
     render(
       <MakePane
         parts={parts({
@@ -45,7 +45,8 @@ describe('MakePane', () => {
     );
     const alert = screen.getByRole('alert');
     const pane = screen.getByRole('region', {name: 'Make your picture'});
-    // A direct child of the pane: not inside the box the words scroll in.
+    // The message is a direct child of the pane, and the words are not:
+    // they are inside the scrolling box.
     expect(alert.parentElement).toBe(pane);
     expect(screen.getByText('words').parentElement).not.toBe(pane);
   });

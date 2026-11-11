@@ -68,27 +68,33 @@ export function useWordMenus({
   // What the last pick did, for screen readers; the sentence itself is not
   // live, since its chips carry controls.
   const [announcement, setAnnouncement] = useState('');
-  // The entrances that have played, by piece. A piece whose DOM is rebuilt
-  // where it stands, as when the pane moves under the paint tools, keeps
-  // its place in the set and does not land again; a piece that goes
-  // leaves the set, so the same word chosen later lands afresh.
-  const settled = useRef(new Set<string>());
-  const shown = new Set<string>();
-  const entrance = (id: string) => {
-    shown.add(id);
+  // Chips, words and word sets each play an entrance animation when they
+  // first appear. React sometimes rebuilds their elements without anything
+  // having changed, for example when starting a drawing moves this pane
+  // inside the paint tools, and a rebuilt element would play its animation
+  // again. So this remembers, by id, which entrance animations have
+  // finished, and those elements are rendered with the animation off.
+  const playedEntrances = useRef(new Set<string>());
+  const renderedIds = new Set<string>();
+  const entranceFor = (id: string) => {
+    renderedIds.add(id);
     return {
-      settled: settled.current.has(id),
+      played: playedEntrances.current.has(id),
       onAnimationEnd: (e: React.AnimationEvent) => {
+        // Animation events bubble up from child elements; only this
+        // element's own animation counts.
         if (e.target === e.currentTarget) {
-          settled.current.add(id);
+          playedEntrances.current.add(id);
         }
       },
     };
   };
+  // An id that was not rendered this time is forgotten, so that a word
+  // which is removed and later chosen again animates in again.
   useEffect(() => {
-    settled.current.forEach(id => {
-      if (!shown.has(id)) {
-        settled.current.delete(id);
+    playedEntrances.current.forEach(id => {
+      if (!renderedIds.has(id)) {
+        playedEntrances.current.delete(id);
       }
     });
   });
@@ -252,7 +258,7 @@ export function useWordMenus({
               ]
             : [];
         }
-        const landing = entrance(`chip:${s.id}-${word.id}`);
+        const chipEntrance = entranceFor(`chip:${s.id}-${word.id}`);
         return [
           <WordChip
             // Keyed by word too, so a changed word remounts and replays the
@@ -262,9 +268,9 @@ export function useWordMenus({
             slotId={s.id}
             className={classNames(
               overSlotId === s.id && styles.dropTarget,
-              landing.settled && styles.settled
+              chipEntrance.played && styles.entrancePlayed
             )}
-            onAnimationEnd={landing.onAnimationEnd}
+            onAnimationEnd={chipEntrance.onAnimationEnd}
             {...dropHandlers(s.id)}
           >
             {disabled || !canMove || !isAvailable(s) || clusters ? (
@@ -303,12 +309,13 @@ export function useWordMenus({
         : [];
     });
 
-  // The set key changes on each arrival in the carousel, so its words
-  // pop again then.
+  // `setKey` is part of each word's entrance id. The carousel gives a set a
+  // new key every time it comes into view, so the set's words animate in
+  // again on each visit.
   const renderWords = (set: Slot, setKey = set.id) =>
     set.words.map((word, wordIndex) => {
       const chosen = choices[set.id] === word.id;
-      const pop = entrance(`word:${setKey}-${word.id}`);
+      const wordEntrance = entranceFor(`word:${setKey}-${word.id}`);
       return (
         <button
           key={word.id}
@@ -317,10 +324,10 @@ export function useWordMenus({
             styles.word,
             hueClass(sentence, set.id),
             chosen && styles.chosen,
-            pop.settled && styles.settled
+            wordEntrance.played && styles.entrancePlayed
           )}
           style={{'--i': wordIndex} as React.CSSProperties}
-          onAnimationEnd={pop.onAnimationEnd}
+          onAnimationEnd={wordEntrance.onAnimationEnd}
           aria-pressed={chosen}
           disabled={disabled}
           draggable={!disabled}
@@ -411,28 +418,30 @@ export function useWordMenus({
               visible. */}
               <div className={styles.sets}>
                 {slots.map((set, i) => {
-                  const onShow = i === index;
-                  // Remounted on each arrival so the entrance replays.
-                  const key = onShow ? `${set.id}-${moveCount}` : set.id;
-                  const arrival = entrance(`set:${key}`);
+                  const inView = i === index;
+                  // The set in view gets a new key each time the carousel
+                  // moves, so React rebuilds it and its slide-in animation
+                  // plays again.
+                  const key = inView ? `${set.id}-${moveCount}` : set.id;
+                  const setEntrance = entranceFor(`set:${key}`);
                   return (
                     <div
                       key={key}
                       className={classNames(
                         styles.set,
-                        !onShow && styles.setHidden,
-                        onShow &&
+                        !inView && styles.setHidden,
+                        inView &&
                           (direction === 'left'
                             ? styles.enterFromLeft
                             : styles.enterFromRight),
-                        arrival.settled && styles.settled
+                        setEntrance.played && styles.entrancePlayed
                       )}
-                      onAnimationEnd={arrival.onAnimationEnd}
+                      onAnimationEnd={setEntrance.onAnimationEnd}
                       role="group"
                       aria-label={`${set.label}${
                         set.required ? ' (pick one)' : ''
                       }`}
-                      aria-hidden={!onShow}
+                      aria-hidden={!inView}
                     >
                       <div className={styles.words}>
                         {renderWords(set, key)}

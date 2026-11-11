@@ -90,7 +90,8 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
       {!generating && (
         <div className={styles.paneScroll}>{parts.wordChooser}</div>
       )}
-      {/* Pinned under the scrolling words, so a failure is always in view. */}
+      {/* The error message sits outside the scrolling box of words, so it
+          is visible however far the words are scrolled. */}
       {parts.error}
       {parts.animatedChoice}
       <div className={styles.paneBottom}>

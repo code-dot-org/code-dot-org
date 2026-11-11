@@ -145,18 +145,18 @@ describe('WordMenus', () => {
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
   });
 
-  it('lands a chip once, until the word is chosen anew', () => {
+  it("plays a chip's entrance animation once, and again only if the word is removed and re-chosen", () => {
     const {rerender} = render(<Harness initial={{creature: 'cat'}} />);
     const chip = () =>
       screen.getByRole('button', {name: 'cat. Show creature words'})
         .parentElement as HTMLElement;
-    expect(chip().classList.contains('settled')).toBe(false);
+    expect(chip().classList.contains('entrancePlayed')).toBe(false);
     fireEvent.animationEnd(chip());
     rerender(<Harness initial={{creature: 'cat'}} />);
-    expect(chip().classList.contains('settled')).toBe(true);
+    expect(chip().classList.contains('entrancePlayed')).toBe(true);
     fireEvent.click(screen.getByRole('button', {name: 'Remove cat'}));
     fireEvent.click(screen.getByRole('button', {name: 'cat'}));
-    expect(chip().classList.contains('settled')).toBe(false);
+    expect(chip().classList.contains('entrancePlayed')).toBe(false);
   });
 
   it('shows a chip as plain text while the creature is missing', () => {
