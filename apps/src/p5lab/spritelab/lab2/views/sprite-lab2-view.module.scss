@@ -133,6 +133,16 @@ $z-over-blockly: 71;
   gap: 8px;
 }
 
+// Controls drawn just after the title, such as an info button. The cell
+// they sit in starts one grid gap after the title; the negative margin
+// brings them back beside it, and the auto margin keeps anything else in
+// the cell at the bar's end.
+.editorStripAfterTitle {
+  display: flex;
+  align-items: center;
+  margin-inline: -14px auto;
+}
+
 // Undo and redo.
 .editorStripHistory {
   display: flex;

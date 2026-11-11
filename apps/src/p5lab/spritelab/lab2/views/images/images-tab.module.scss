@@ -606,15 +606,6 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   color: var(--text-brand-primary);
 }
 
-// The pane's first row: the headline at the left, the Behind the scenes and
-// Advanced buttons at the right.
-.paneHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
 // A set's frames under the big frame, centered: the row spans the slot
 // (which otherwise keeps to the right) and centers its tiles.
 $frame-tile-canvas: 56px;
@@ -763,12 +754,6 @@ $frame-strip-width: $strip-frames * $frame-tile-width + $frame-strip-gaps;
   color: var(--text-neutral-primary);
   font: inherit;
   resize: vertical;
-}
-
-.paneHeaderTools {
-  display: flex;
-  flex: none;
-  align-items: center;
 }
 
 .srOnly {

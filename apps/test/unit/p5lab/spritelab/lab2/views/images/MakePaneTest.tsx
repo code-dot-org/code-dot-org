@@ -51,10 +51,9 @@ describe('MakePane', () => {
     expect(screen.getByText('words').parentElement).not.toBe(pane);
   });
 
-  it('names the kind with its article, and generates on the button', () => {
+  it('generates on the button', () => {
     const generate = jest.fn();
     render(<MakePane parts={parts({generate})} width={280} />);
-    expect(screen.getByText('Generate an object')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     expect(generate).toHaveBeenCalledTimes(1);
   });
@@ -98,8 +97,33 @@ describe('MakePane', () => {
         drawLabel="Edit this image"
       />
     );
-    expect(screen.getByText('Regenerate this object')).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Regenerate'})).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
     expect(onDraw).toHaveBeenCalledTimes(1);
+  });
+
+  it('draws the info button and the extra controls into the header slot it is given', () => {
+    const headerSlot = document.createElement('div');
+    document.body.appendChild(headerSlot);
+    const shown = (generating = false) => (
+      <MakePane
+        parts={parts({
+          behindTheScenes: <button type="button">info</button>,
+          mode: generating ? 'generating' : 'edit',
+        })}
+        width={280}
+        extra={<button type="button">advanced</button>}
+        headerSlot={headerSlot}
+      />
+    );
+    const {rerender} = render(shown());
+    const pane = screen.getByRole('region', {name: 'Make your picture'});
+    // In the slot, not in the pane.
+    expect(headerSlot.textContent).toBe('infoadvanced');
+    expect(pane.contains(screen.getByText('info'))).toBe(false);
+    // Not shown while a picture is being made.
+    rerender(shown(true));
+    expect(headerSlot.textContent).toBe('');
+    headerSlot.remove();
   });
 });
