@@ -152,6 +152,13 @@
             "under": "spritelab2_whenRun",
             "scene": "second-scene"
           }
+        },
+        {
+          "text": "Press **Run** to start your quest from the beginning. Play through it to reach **Scene 2**!",
+          "check": {
+            "kind": "scene",
+            "id": "second-scene"
+          }
         }
       ]
     },
