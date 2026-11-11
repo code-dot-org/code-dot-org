@@ -180,8 +180,8 @@ $z-over-blockly: 71;
   bottom: $editor-strip-height;
 }
 
-// The scene bar at the editors' base, the strip's twin: the scene
-// controls at its start, the project-wide controls at its end.
+// The scene bar at the editors' base, the strip's twin: the project-wide
+// controls at its start, the scene controls at its end.
 .workspaceSceneBar {
   position: absolute;
   bottom: 0;
@@ -198,7 +198,7 @@ $z-over-blockly: 71;
   border-top: 1px solid var(--borders-neutral-primary);
 }
 
-// Discover blocks at the workspace bar's end, at the bar's control height.
+// Discover blocks at the workspace bar's start, at the bar's control height.
 .barButton.barButton {
   height: $tab-item-height;
   padding: 0 12px;
@@ -430,13 +430,15 @@ $z-over-blockly: 71;
 .bottomBar {
   position: absolute;
   bottom: 0;
-  height: $editor-strip-height;
+  // At least the scene bar's height, and taller when its buttons stack.
+  // The vertical padding is what a single row of buttons leaves spare.
+  min-height: $editor-strip-height;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: 0 8px;
+  padding: 4px 8px;
   background: var(--background-neutral-primary);
   border-top: 1px solid var(--borders-neutral-primary);
   pointer-events: auto;
@@ -453,6 +455,14 @@ $z-over-blockly: 71;
   min-width: 0;
   align-items: center;
   gap: 16px;
+  // In a narrow column the second button moves to a row of its own. A
+  // button's label never breaks onto two lines.
+  flex-wrap: wrap;
+  row-gap: 8px;
+
+  button {
+    white-space: nowrap;
+  }
 }
 
 // Placed by the playspace beside or under the game; the cross inside takes

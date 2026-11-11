@@ -204,6 +204,11 @@ const CHARACTER_PANELS: PanelContent[] = [
 
 const BACKGROUND_PANELS: PanelContent[] = [
   {
+    heading: 'A background is a big job',
+    body: 'Here, backgrounds have many more *pixels*, or tiny squares of color, than characters, objects, or blocks. Together, they form one scene.',
+    visual: sizes,
+  },
+  {
     heading: 'AI learned from examples',
     body: 'Before you ever used it, the AI was *trained* on many example pictures. It learned patterns from many pictures and the words describing them.',
     visual: mosaic,
@@ -227,11 +232,6 @@ const BACKGROUND_PANELS: PanelContent[] = [
     heading: 'Evaluate the picture',
     body: 'Look closely. Does it match what you asked for? Then use [thumb up] or [thumb down] to rate it.',
     visual: evaluate,
-  },
-  {
-    heading: 'A background is a big job',
-    body: 'Here, backgrounds have four times as many *pixels*, or tiny squares of color, as characters, objects, or blocks. Together, they form one scene.',
-    visual: sizes,
   },
 ];
 

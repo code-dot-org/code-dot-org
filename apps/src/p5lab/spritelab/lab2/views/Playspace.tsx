@@ -402,6 +402,24 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     belowObserver.current = observer;
   }, []);
   useEffect(() => () => belowObserver.current?.disconnect(), []);
+  // The bar at the stage's foot is measured, because its buttons stack in
+  // a narrow column and the bar grows taller to hold them.
+  const [bottomBarHeight, setBottomBarHeight] = useState(EDITOR_STRIP_PX);
+  const bottomBarObserver = useRef<ResizeObserver | null>(null);
+  const bottomBarRef = useCallback((el: HTMLDivElement | null) => {
+    bottomBarObserver.current?.disconnect();
+    bottomBarObserver.current = null;
+    if (!el || typeof ResizeObserver === 'undefined') {
+      return;
+    }
+    const observer = new ResizeObserver(() => {
+      // The whole box, with its border: that is the room the bar takes.
+      setBottomBarHeight(el.offsetHeight || EDITOR_STRIP_PX);
+    });
+    observer.observe(el);
+    bottomBarObserver.current = observer;
+  }, []);
+  useEffect(() => () => bottomBarObserver.current?.disconnect(), []);
   // The restart buttons' size, so the box keeps clear of their corner. The
   // last size stands while they are away: the box is placed against it as
   // play opens, before they are measured again.
@@ -589,7 +607,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const share = Math.round(browserWidth * columnShare);
   // The room under the box: the cross, the card and its gap, then the bar
   // at the foot.
-  const bottomRoom = bottomBar ? EDITOR_STRIP_PX : 0;
+  const bottomRoom = bottomBar ? bottomBarHeight : 0;
   const cardRoomFor = (card: number) =>
     bottomRoom + (below ? CARD_GAP + card : 0);
   // A taller need shrinks the box, never widens the column, which would
@@ -976,6 +994,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       )}
       {bottomBar && measured && (
         <div
+          ref={bottomBarRef}
           className={classNames(
             moduleStyles.bottomBar,
             mode === 'preview' && moduleStyles.bottomBarColumn

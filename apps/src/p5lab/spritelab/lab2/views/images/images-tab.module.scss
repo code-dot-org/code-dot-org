@@ -163,8 +163,11 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   flex: none;
   margin-top: auto;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   min-height: 36px;
+  // A hairline separates the delete button's row from the images above.
+  padding-top: 8px;
+  border-top: 1px solid var(--border-neutral-primary);
 }
 
 // Thumbnail of the image to be deleted, beside the dialog's text.
@@ -218,6 +221,7 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 
 .tile {
   @include tile.image-tile($tile-px);
+  @include checkerboard.light-checkerboard(16px);
 
   position: relative;
   border-radius: 6px;
@@ -271,8 +275,11 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   box-sizing: border-box;
   min-width: 0;
   min-height: 0;
-  margin: -$pad 0;
-  padding: $pad 16px;
+  // The well runs through the gap between the columns, so its gray reaches
+  // the hairline at the pane's left edge. The extra padding keeps its
+  // contents where they were.
+  margin: (-$pad) (-$column-gap) (-$pad) 0;
+  padding: $pad (16px + $column-gap) $pad 16px;
   background-color: var(--background-neutral-secondary);
 }
 
@@ -320,11 +327,7 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 .frameFilled {
   border-style: solid;
 
-  @include checkerboard.checkerboard(
-    24px,
-    var(--neutral-gray-10),
-    var(--neutral-base-white)
-  );
+  @include checkerboard.light-checkerboard(24px);
 }
 
 // The picture's box is the frame's full size, so a stored image smaller
@@ -688,11 +691,7 @@ $frame-strip-width: $strip-frames * $frame-tile-width + $frame-strip-gaps;
   width: $frame-tile-canvas;
   height: $frame-tile-canvas;
 
-  @include checkerboard.checkerboard(
-    8px,
-    var(--neutral-gray-10),
-    var(--neutral-base-white)
-  );
+  @include checkerboard.light-checkerboard(8px);
 
   canvas {
     @include fills-box;

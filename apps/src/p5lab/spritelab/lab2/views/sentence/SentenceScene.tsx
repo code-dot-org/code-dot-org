@@ -66,7 +66,7 @@ const STYLE: ImageStyle = 'pixel';
 const TEMPERATURE = 1;
 // The making shows at least this long on a cached level, where a picture
 // can land in well under a second.
-const MIN_CACHED_GENERATING_MS = 5000;
+export const MIN_CACHED_GENERATING_MS = 6000;
 
 export type Mode = 'edit' | 'generating' | 'result';
 
