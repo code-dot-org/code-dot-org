@@ -413,7 +413,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       return;
     }
     const observer = new ResizeObserver(() => {
-      // The whole box, with its border: that is the room the bar takes.
+      // offsetHeight is the bar's full height, padding and border
+      // included. That is how much room the bar takes up under the stage.
       setBottomBarHeight(el.offsetHeight || EDITOR_STRIP_PX);
     });
     observer.observe(el);

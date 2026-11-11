@@ -180,8 +180,9 @@ $z-over-blockly: 71;
   bottom: $editor-strip-height;
 }
 
-// The scene bar at the editors' base, the strip's twin: the project-wide
-// controls at its start, the scene controls at its end.
+// The scene bar along the bottom of the editors. It is the same height as
+// the editor strip along their top. The project-wide controls are at its
+// start and the scene controls are at its end.
 .workspaceSceneBar {
   position: absolute;
   bottom: 0;
@@ -430,8 +431,10 @@ $z-over-blockly: 71;
 .bottomBar {
   position: absolute;
   bottom: 0;
-  // At least the scene bar's height, and taller when its buttons stack.
-  // The vertical padding is what a single row of buttons leaves spare.
+  // The bar is at least as tall as the scene bar, and grows taller when
+  // its buttons stack in two rows. The 4px of padding above and below is
+  // the space left around a single row of buttons, so a bar with one row
+  // is exactly the scene bar's height.
   min-height: $editor-strip-height;
   box-sizing: border-box;
   display: flex;
