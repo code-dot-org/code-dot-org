@@ -23,6 +23,7 @@ import MatchQuestionContainer from './match/MatchQuestionContainer';
 import {MatchPairs} from './match/types';
 import PageDivider from './PageDivider';
 import QuizFooter from './QuizFooter';
+import BackToTop from './results/BackToTop';
 import QuestionResultCard from './results/QuestionResultCard';
 import ResultsCard from './results/ResultsCard';
 import {
@@ -150,6 +151,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   // The first card on the current page: the quiz title card or a question.
   const pageHeadingRef = useRef<HTMLHeadingElement>(null);
   const resultsHeadingRef = useRef<HTMLHeadingElement>(null);
+  const attemptBodyRef = useRef<HTMLDivElement>(null);
   // Quiz views stay mounted across same-lab navigation, so a begin/finish
   // request can resolve after a different level is already current.
   // Gate progress reporting on this level instead.
@@ -184,6 +186,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const didInitialCheckForAttemptFail = !attempt && !!error;
   const hasNoAttemptYet = attempt === null;
   const hasTitleCard = currentPageNumber === 1 && !showIntroScreen;
+  const isShowingResults =
+    !isLoading &&
+    !!unitId &&
+    (isViewingStudent || (!!attempt?.submittedAt && !isIntroOpen));
 
   // Covers both the very first intro screen and Retake reopening it - either
   // way, the button that led here is gone, so hand focus to the heading.
@@ -580,7 +586,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           type={attempt && !attempt.submittedAt ? 'warning' : 'info'}
         />
       )}
-      <div className={styles.attemptBody}>
+      <div className={styles.attemptBody} ref={attemptBodyRef}>
         {error && (
           <Typography variant="body3" color="error" role="alert">
             {error}
@@ -676,6 +682,12 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </div>
         )}
       </div>
+      {isShowingResults && (
+        <BackToTop
+          scrollContainerRef={attemptBodyRef}
+          focusTargetRef={resultsHeadingRef}
+        />
+      )}
       {isAttemptInProgress && !isViewingStudent && (
         <QuizFooter
           currentPageNumber={currentPageNumber}

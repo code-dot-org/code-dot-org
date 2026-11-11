@@ -1,4 +1,7 @@
 .attemptWorkspace {
+  // Anchors the back-to-top tab, and clips it while it slides in from below.
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
