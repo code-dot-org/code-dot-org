@@ -143,6 +143,18 @@ AZURE_BLOCKED_SEVERITY = {
 # --require-review turns it on for one run.
 REQUIRE_REVIEW = false
 
+# How much of a frame's border the lab's keying must clear, by what the
+# frame is (validate_images --keys). A character keyed on its colour clears
+# all of it unless the model drew another colour, and a pose that runs off
+# the edge still clears most; a sprite keyed from its corner may touch an
+# edge too; a block leaves a margin on every side, so any patch the flood
+# missed is a failure.
+KEY_CHECK_MIN_CLEARED = {
+  'character' => 0.5,
+  'sprite' => 0.85,
+  'block' => 0.95,
+}.freeze
+
 # Times a variant is redrawn, after moderation flags it or the model
 # declines a pose, before it is left out.
 MAX_REDRAWS = 2

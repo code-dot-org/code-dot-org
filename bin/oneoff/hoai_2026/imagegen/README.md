@@ -287,3 +287,18 @@ encodes PNG, so the pixels are the same.
 Nothing here deletes an image. `validate_images` checks that every frame is
 a square PNG with a record, and `--attic` moves an invalid one aside, so the
 next run draws it again.
+
+`validate_images --keys` also keys every sprite and block frame as the lab
+would, with the lab's own `removeBackground.ts` (through `key_check.ts`),
+and checks that its background came away. A character's background is the
+colour its prompt named, and a frame whose model drew it too dull or pale
+keeps all of it; a sprite or block is keyed from its top-left pixel, and a
+grid, a stripe or an odd corner stops the flood. How much of the border
+must clear is in `KEY_CHECK_MIN_CLEARED`. With `--attic`, a variant that
+fails moves aside whole, its record noting why, and the next run draws a
+fresh one. It takes about fifteen minutes over the whole tree.
+
+```
+./bin/oneoff/hoai_2026/imagegen/validate_images --keys            # reports
+./bin/oneoff/hoai_2026/imagegen/validate_images --keys --attic    # moves them aside
+```

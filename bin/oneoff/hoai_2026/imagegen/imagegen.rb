@@ -12,7 +12,9 @@
 
 require 'fileutils'
 require 'json'
+require 'etc'
 require 'open3'
+require 'parallel'
 require 'rmagick'
 require 'time'
 
@@ -81,6 +83,25 @@ def run_dumper(*args)
   warn stderr unless stderr.strip.empty?
   raise 'Error: dump_prompts.ts failed' unless status.success?
   stdout
+end
+
+# Keys each frame as the lab would, with key_check.ts, and returns how much
+# of each one's border came out clear, by path; a frame it could not read
+# maps to its error. Items are {path:, key:, soft:}; the work is split
+# across up to 16 processes.
+def key_check(items, processes: [Etc.nprocessors, 16].min)
+  check_node!
+  return {} if items.empty?
+  shards = items.each_slice((items.length.to_f / processes).ceil).to_a
+  results = Parallel.map(shards, in_threads: shards.length) do |shard|
+    stdout, stderr, status = Open3.capture3(
+      'npx', '--yes', 'tsx', '--tsconfig', 'tsconfig.json', File.join(SCRIPT_PATH, 'key_check.ts'),
+      stdin_data: shard.map(&:to_json).join("\n"), chdir: File.join(REPO_PATH, 'apps')
+    )
+    raise "Error: key_check.ts failed: #{stderr}" unless status.success?
+    stdout.lines.map {|line| JSON.parse(line)}
+  end
+  results.flatten.to_h {|result| [result['path'], result['error'] || result['cleared']]}
 end
 
 # Every job, freshly dumped and cached in PROMPTS_FILE.

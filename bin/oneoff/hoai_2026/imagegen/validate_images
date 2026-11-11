@@ -7,6 +7,11 @@
 # You can specify --attic to move invalid frames out of the published tree
 # into image_attic; generate_images then draws them again. Nothing is
 # deleted.
+#
+# --keys also keys every sprite and block frame as the lab would and checks
+# that its background came away. A variant with a frame that did not key
+# moves to the attic whole with --attic: its poses were drawn from its base,
+# so a fresh base needs fresh poses.
 
 # First: sets up bundler, so the gems below resolve from the Gemfile.
 require_relative '../../../../deployment'
@@ -19,6 +24,7 @@ require_relative 'image_validation'
 options = {
   attic: false,
   filter: '',
+  keys: false,
   judge: false,
 }
 OptionParser.new do |opts|
@@ -32,6 +38,10 @@ OptionParser.new do |opts|
 
   opts.on('--attic', 'Moves invalid frames into image_attic, so generate_images draws them again.') do
     options[:attic] = true
+  end
+
+  opts.on('--keys', "Also checks that the lab's keying clears each sprite and block frame's background. Takes a few minutes.") do
+    options[:keys] = true
   end
 
   opts.on('-f', '--filter FILTER', 'Checks only sentences whose id contains the given string.') do |filter|
@@ -54,6 +64,9 @@ good = 0
 count = 0
 summaries = Hash.new(0)
 reviews = Hash.new(0)
+# Frames to key, and the variant each belongs to, by path.
+to_key = []
+key_owner = {}
 
 Dir.glob(File.join(records_path, CACHE_VERSION, '**', '*.json')) do |record_file|
   record = JSON.parse(File.read(record_file))
@@ -72,6 +85,11 @@ Dir.glob(File.join(records_path, CACHE_VERSION, '**', '*.json')) do |record_file
     error = validate_image(path, image_type: record['imageType'], transparent: record['transparent'])
     unless error
       good += 1
+      if options[:keys] && KEY_CHECK_MIN_CLEARED.key?(record['imageType']) && !record['transparent']
+        to_key << {path: path, key: record['keyColor'], soft: record['style'] == 'smooth'}
+        kind = record['subject'] == 'character' ? 'character' : record['imageType']
+        key_owner[path] = [record_file, frame['name'], kind]
+      end
       next
     end
 
@@ -81,6 +99,51 @@ Dir.glob(File.join(records_path, CACHE_VERSION, '**', '*.json')) do |record_file
     FileUtils.mkdir_p(File.dirname(destination))
     File.rename(path, destination)
     puts "  moved to #{destination.delete_prefix("#{SCRIPT_PATH}/")}"
+  end
+end
+
+unkeyed = []
+if options[:keys]
+  puts
+  puts "Keying #{to_key.length} frames as the lab would..."
+  results = key_check(to_key)
+  failing = Hash.new {|h, k| h[k] = {}}
+  to_key.each do |item|
+    record_file, name, kind = key_owner[item[:path]]
+    cleared = results[item[:path]]
+    next if cleared.is_a?(Numeric) && cleared >= KEY_CHECK_MIN_CLEARED[kind]
+    failing[record_file][name] = cleared
+  end
+
+  failing.sort.each do |record_file, frames|
+    record = JSON.parse(File.read(record_file))
+    folder = File.dirname(record_file).delete_prefix("#{records_path}/")
+    shown = frames.map {|name, cleared| cleared.is_a?(Numeric) ? "#{name} #{(cleared * 100).round}%" : "#{name} #{cleared}"}
+    puts "#{record_file.delete_prefix("#{records_path}/")}: background did not key (border cleared: #{shown.join(', ')})"
+    unkeyed << record_file
+    next unless options[:attic]
+
+    stamp = Time.now.utc.strftime('%Y%m%dT%H%M%S%L')
+    moved = (record['frames'] || []).filter_map do |frame|
+      from = File.join(output_path, folder, frame['file'])
+      next unless File.exist?(from)
+      destination = File.join(attic_path, folder, frame['file'].sub(/\.png\z/, ".#{stamp}.png"))
+      FileUtils.mkdir_p(File.dirname(destination))
+      File.rename(from, destination)
+      destination.delete_prefix("#{SCRIPT_PATH}/")
+    end
+    record['history'] = (record['history'] || []) << {
+      'at' => Time.now.utc.iso8601,
+      'reason' => 'background did not key',
+      'cleared' => frames,
+      'seed' => record['seed'],
+      'review' => record['review'],
+      'checks' => record['frames']&.to_h {|frame| [frame['name'], frame['checks']]},
+      'movedTo' => moved,
+    }.compact
+    File.write("#{record_file}.tmp", JSON.pretty_generate(record))
+    File.rename("#{record_file}.tmp", record_file)
+    puts "  moved #{moved.length} frame(s) to #{ATTIC_DIRECTORY}"
   end
 end
 
@@ -96,6 +159,7 @@ orphans.each {|png| puts "#{png.delete_prefix("#{output_path}/")}: no record"}
 puts
 puts "Frames valid: #{good}/#{count}"
 puts "Frames with no record: #{orphans.length}" if orphans.any?
+puts "Variants whose background did not key: #{unkeyed.length}#{options[:attic] || unkeyed.empty? ? '' : ' (--attic moves them aside to be drawn again)'}" if options[:keys]
 puts "Moderation: #{summaries.map {|key, value| "#{value} #{key}"}.join(', ')}" if summaries.any?
 puts "Review: #{reviews.map {|key, value| "#{value} #{key}"}.join(', ')}" if reviews.any?
 puts
