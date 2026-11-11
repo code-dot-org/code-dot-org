@@ -333,6 +333,40 @@ describe('addBlocks', () => {
       expect(run.sets).toEqual(['spritelab2_burst:set']);
     });
 
+    it('removes the outline once any stack of the event holds the block', () => {
+      // Two touch events. The outline shows on the first, and the student
+      // put the say block in the second.
+      const first = liveStack(['gamelab_checkTouching'], {showing: SAY});
+      const second = liveStack(['gamelab_checkTouching', 'gamelab_spriteSay']);
+      const entries = [{attachTo: 'gamelab_checkTouching', shadow: SAY}];
+      expect(syncOutlines(liveWorkspace(first, second), entries, [])).toEqual(
+        []
+      );
+      expect(first.recorded).toEqual([null]);
+      expect(second.sets).toEqual([]);
+    });
+
+    it('does not move the outline to a second stack when the first is filled', () => {
+      const first = liveStack(['gamelab_checkTouching', 'gamelab_spriteSay']);
+      const second = liveStack(['gamelab_checkTouching']);
+      const entries = [{attachTo: 'gamelab_checkTouching', shadow: SAY}];
+      expect(syncOutlines(liveWorkspace(first, second), entries, [])).toEqual(
+        []
+      );
+      expect(first.sets).toEqual([]);
+      expect(second.sets).toEqual([]);
+    });
+
+    it('draws the outline on one stack only when none holds the block', () => {
+      const first = liveStack(['gamelab_checkTouching']);
+      const second = liveStack(['gamelab_checkTouching']);
+      const entries = [{attachTo: 'gamelab_checkTouching', shadow: SAY}];
+      expect(syncOutlines(liveWorkspace(first, second), entries, [])).toEqual([
+        first.top,
+      ]);
+      expect(second.sets).toEqual([]);
+    });
+
     it('brings the outline back when the block that filled it is taken out', () => {
       const touch = liveStack(['gamelab_checkTouching']);
       const entries = [{attachTo: 'gamelab_checkTouching', shadow: SAY}];

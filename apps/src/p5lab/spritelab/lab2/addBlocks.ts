@@ -254,6 +254,14 @@ function freeEnd(top: BlocklyCore.Block): BlocklyCore.Connection | null {
   }
 }
 
+/** Removes the outline from the end of a stack, if it is showing there. */
+function removeOutline(top: BlocklyCore.Block, shadow: Shadow): void {
+  const end = trailingShadow(top);
+  if (end && samePlaceholder(end.connection.getShadowState(), shadow)) {
+    end.connection.setShadowState(null);
+  }
+}
+
 /**
  * Makes one stack show its outline, or not, by what the stack holds. The
  * outline is shown at the end of the stack while the stack has no block of
@@ -267,15 +275,13 @@ export function syncStackOutline(
   shadow: Shadow,
   types: string[]
 ): boolean {
+  if (stackHolds(top, types)) {
+    removeOutline(top, shadow);
+    return false;
+  }
   const end = trailingShadow(top);
   const showing =
     !!end && samePlaceholder(end.connection.getShadowState(), shadow);
-  if (stackHolds(top, types)) {
-    if (end && showing) {
-      end.connection.setShadowState(null);
-    }
-    return false;
-  }
   if (end && showing) {
     // A saved project keeps the outline as it was drawn. When the level's
     // version of it has changed (blank or not), it is drawn again.
@@ -356,8 +362,8 @@ export function dropStalePlaceholders(
 /**
  * Brings every outline in the workspace in line with the level: hidden
  * outlines are forgotten, other levels' outlines are removed, and each of
- * this level's outlines is shown or removed by whether its stack holds the
- * block it asks for. It is safe to run at any time and as often as needed;
+ * this level's outlines is shown or removed by whether a stack it belongs
+ * on holds the block it asks for. It is safe to run at any time and as often as needed;
  * a second run changes nothing. Returns the stacks whose outline is
  * showing.
  */
@@ -376,10 +382,21 @@ export function syncOutlines(
         continue;
       }
       const types = fillingTypes(entry, blockChecks);
-      for (const top of workspace.getTopBlocks(false)) {
-        if (entryOn(entry, top) && syncStackOutline(top, placeholder, types)) {
+      const stacks = workspace
+        .getTopBlocks(false)
+        .filter(top => entryOn(entry, top));
+      // A student can have several stacks of one event. The checklist step
+      // is done once any of them holds the block, so then none of them
+      // shows the outline. Otherwise filling one stack would move the
+      // outline to the next.
+      const done = stacks.some(top => stackHolds(top, types));
+      for (const top of stacks) {
+        if (done) {
+          removeOutline(top, placeholder);
+        } else if (syncStackOutline(top, placeholder, types)) {
+          // The outline is drawn on one stack only: the first that can
+          // take it.
           showing.add(top);
-          // One stack per entry: the first of the type, as before.
           break;
         }
       }
