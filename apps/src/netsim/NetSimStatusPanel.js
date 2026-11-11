@@ -67,7 +67,7 @@ NetSimStatusPanel.prototype.render = function (data) {
 
   // Add a button to the panel header
   this.addButton(
-    i18n.disconnectButton({caret: '<i class="fa-solid fa-caret-left"></i>'}),
+    NetSimUtils.labelWithCaret(i18n.disconnectButton, 'fa-solid fa-caret-left'),
     this.disconnectCallback_
   );
 

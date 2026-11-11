@@ -1272,7 +1272,7 @@ NetSimPacketEditor.prototype.setBitRate = function (newBitRate) {
 NetSimPacketEditor.prototype.updateBitCounter = function () {
   var size = this.getPacketBinary().length;
   var maxSize = this.maxPacketSize_;
-  this.bitCounter_.html(
+  this.bitCounter_.text(
     netsimMsg.bitCounter({
       x: size,
       y: maxSize,

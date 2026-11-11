@@ -162,7 +162,7 @@ NetSimPanel.prototype.isMinimized = function () {
 
 /**
  * Add a button to the right end of the panel header.
- * @param {string} buttonText
+ * @param {string|Node[]} buttonText - a string is inserted as text, not HTML.
  * @param {function} pressCallback
  * @param {Object} [options]
  * @param {boolean} [options.secondary] - default TRUE, secondary button style
@@ -176,10 +176,12 @@ NetSimPanel.prototype.addButton = function (
 ) {
   options = ArgumentUtils.extendOptionsObject(options || {});
 
-  var button = $('<span>')
-    .addClass('netsim-button')
-    .html(buttonText)
-    .click(pressCallback);
+  var button = $('<span>').addClass('netsim-button').click(pressCallback);
+  if (typeof buttonText === 'string') {
+    button.text(buttonText);
+  } else {
+    button.append(buttonText);
+  }
 
   if (options.get('secondary', ArgumentUtils.isBoolean, true)) {
     button.addClass('netsim-button-secondary');

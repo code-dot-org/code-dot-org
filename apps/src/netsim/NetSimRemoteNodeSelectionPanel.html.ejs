@@ -136,7 +136,7 @@ function buttonMarkup(buttonText, buttonID, extraClasses, extraAttributes) {
     }
   }
 
-  markup += '>' + buttonText + '</span>';
+  markup += '>' + _.escape(buttonText) + '</span>';
   return markup;
 }
 
@@ -174,7 +174,7 @@ function writeEmptyRow(contents) {
   contents = utils.valueOr(contents, '');
   %>
     <tr>
-      <td colspan="3" class="empty-row"><%- contents %></td>
+      <td colspan="3" class="empty-row"><%= contents %></td>
     </tr>
   <%
 }

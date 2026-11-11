@@ -391,13 +391,35 @@ exports.zeroPadRight = function (string, desiredWidth) {
 };
 
 /**
+ * Render a translated button label as text, with an icon at each {caret}.
+ * @param {function} message - netsim message taking a {caret} parameter
+ * @param {string} iconClass
+ * @returns {Node[]}
+ */
+exports.labelWithCaret = function (message, iconClass) {
+  var token = '\uE000';
+  var nodes = [];
+  message({caret: token})
+    .split(token)
+    .forEach(function (part, index) {
+      if (index > 0) {
+        var icon = document.createElement('i');
+        icon.className = iconClass;
+        nodes.push(icon);
+      }
+      nodes.push(document.createTextNode(part));
+    });
+  return nodes;
+};
+
+/**
  * Creates a Continue/Finish button on the given NetSimPanel (in its header).
  * @param {NetSimPanel} onPanel
  * @static
  */
 exports.makeContinueButton = function (onPanel) {
   onPanel.addButton(
-    i18n.continueButton({caret: '<i class="fa-solid fa-caret-right"></i>'}),
+    exports.labelWithCaret(i18n.continueButton, 'fa-solid fa-caret-right'),
     function (jQueryEvent) {
       if (!$(jQueryEvent.target).is(':disabled')) {
         NetSimGlobals.completeLevelAndContinue();
