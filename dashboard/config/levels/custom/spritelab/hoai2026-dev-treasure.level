@@ -42,9 +42,6 @@
           "text": "**Evaluate** the AI’s image with a thumbs up or thumbs down.",
           "check": {
             "kind": "rated"
-          },
-          "shownWhen": {
-            "kind": "generated"
           }
         }
       ]
