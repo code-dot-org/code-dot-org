@@ -155,14 +155,6 @@
   }
 }
 
-// A square that holds a character or an object has a colored ring, so the
-// player and the other sprites stand out from the blocks around them. The
-// ring is drawn inside the square, so it does not hide the keyboard focus
-// outline.
-.worldCellSprite {
-  box-shadow: inset 0 0 0 2px var(--background-accent-orange-primary);
-}
-
 // A cell that refuses the chosen item: no hover color, not-allowed cursor.
 .worldCellBlocked {
   cursor: not-allowed;

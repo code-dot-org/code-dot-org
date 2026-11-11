@@ -103,17 +103,6 @@ describe('WorldTab palette', () => {
     );
   });
 
-  it('rings the squares that hold a sprite, and not the ones that hold a block', () => {
-    const grid = Array.from({length: 10}, () => Array(10).fill(null));
-    grid[0][0] = {image: 'Hero', kind: 'sprite'};
-    grid[0][1] = {image: 'Stone', kind: 'block'};
-    renderTab({world: {grid}});
-    const cells = screen.getAllByRole('gridcell');
-    expect(cells[0].classList.contains('worldCellSprite')).toBe(true);
-    expect(cells[1].classList.contains('worldCellSprite')).toBe(false);
-    expect(cells[2].classList.contains('worldCellSprite')).toBe(false);
-  });
-
   it('drops a dragged item onto the cell under the pointer', () => {
     const {onPaintCell, onSelect} = renderTab();
     const stone = screen.getByRole('radio', {name: /Stone, block/});
