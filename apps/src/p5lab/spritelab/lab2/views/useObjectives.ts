@@ -229,8 +229,8 @@ export function useObjectives({
     const newlyCompleted = newIndexes(completed, (item, inputs) =>
       checkObjective(item.check, inputs)
     );
-    // A completed item about lasting work whose check no longer passes:
-    // the student has undone the work.
+    // The completed items about lasting work whose check no longer passes.
+    // The student has undone that work, so these items are un-ticked.
     const undone = [...completed].filter(index => {
       const item = items?.[index];
       return (
@@ -243,17 +243,20 @@ export function useObjectives({
     const newlyVisible = newIndexes(visible, objectiveShown);
     // State is set only when something changed. The inputs are a new object
     // on most renders, so setting state every time would loop forever.
+    // Each update is applied to the set as it is at that moment, not to the
+    // copy read above, so it cannot undo another update that is waiting.
     if (newlyCompleted.length || undone.length) {
       setEarned(
-        new Set(
-          [...completed, ...newlyCompleted].filter(
-            index => !undone.includes(index)
+        current =>
+          new Set(
+            [...current, ...newlyCompleted].filter(
+              index => !undone.includes(index)
+            )
           )
-        )
       );
     }
     if (newlyVisible.length) {
-      setShown(new Set([...visible, ...newlyVisible]));
+      setShown(current => new Set([...current, ...newlyVisible]));
     }
   }, [newIndexes, items, inputs]);
 
