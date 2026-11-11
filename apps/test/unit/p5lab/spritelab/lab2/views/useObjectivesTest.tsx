@@ -47,8 +47,8 @@ function Checklist({
   );
 }
 
-// A checklist whose first item is about lasting work: placing something in
-// the world. Its second records something that happened.
+// A checklist whose first item is checked the whole time: placing something
+// in the world. Its second is checked once: pressing Run.
 const WORK_OBJECTIVES = {
   items: [
     {id: 'place', text: 'Place something.', check: {kind: 'world' as const}},
@@ -121,7 +121,7 @@ describe('useObjectives', () => {
     expect(view.container.textContent).toBe('play:true rate:true all');
   });
 
-  it('un-ticks an item about lasting work when the work is undone, and keeps other items ticked', () => {
+  it('un-ticks an item checked the whole time when its work is undone, and keeps an item checked once', () => {
     const view = render(<WorkChecklist placed={true} everPlayed={true} />);
     expect(view.container.textContent).toBe('place:true play:true all');
     // The placed thing is removed, so its item un-ticks. Pressing Play is
