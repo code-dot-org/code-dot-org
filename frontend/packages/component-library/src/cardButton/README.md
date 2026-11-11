@@ -65,6 +65,7 @@ or navigation cards. A boolean `selected` also tells assistive technology:
 - On a link it sets `aria-current="true"` when true, for the current item in a
   list of links. Pass `aria-current="page"` or `"step"` to be more specific;
   an explicit `aria-pressed` or `aria-current` always wins.
+  A disabled link keeps the link semantics above, even though it renders a button.
 
 ```jsx
 <div role="group" aria-label="Mode">

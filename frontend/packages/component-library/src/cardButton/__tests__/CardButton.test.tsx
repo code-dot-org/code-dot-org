@@ -192,6 +192,14 @@ describe('Design System - CardButton', () => {
     expect(onClick).not.toHaveBeenCalled();
   });
 
+  it('keeps aria-current on a selected disabled link', () => {
+    render(<CardButton title="Lesson 2" href="/lessons/2" selected disabled />);
+    const button = screen.getByRole('button', {name: 'Lesson 2'});
+    expect(button).toBeDisabled();
+    expect(button).toHaveAttribute('aria-current', 'true');
+    expect(button).not.toHaveAttribute('aria-pressed');
+  });
+
   it('leaves selection semantics to an explicit role', () => {
     render(<CardButton title="Audio" role="radio" aria-checked selected />);
     const radio = screen.getByRole('radio', {name: 'Audio'});

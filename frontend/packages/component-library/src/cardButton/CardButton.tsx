@@ -136,8 +136,9 @@ const CardButton = forwardRef<
     const descriptionId = useId();
     const showStartContent = hasContent(startContent);
     const showDescription = hasContent(description);
+    const hasHref = href !== undefined;
     // A disabled <a> stays followable by screen readers; a disabled <button> does not.
-    const isLink = href !== undefined && !rest.disabled;
+    const isLink = hasHref && !rest.disabled;
     const announceSelected = selected !== undefined && !rest.role;
     const namedByConsumer =
       rest['aria-label'] !== undefined || rest['aria-labelledby'] !== undefined;
@@ -146,8 +147,10 @@ const CardButton = forwardRef<
       <ButtonBase
         ref={ref as Ref<HTMLButtonElement>}
         disableRipple
-        aria-pressed={announceSelected && !isLink ? selected : undefined}
-        aria-current={announceSelected && isLink && selected ? true : undefined}
+        aria-pressed={announceSelected && !hasHref ? selected : undefined}
+        aria-current={
+          announceSelected && hasHref && selected ? true : undefined
+        }
         aria-labelledby={namedByConsumer ? undefined : titleId}
         aria-describedby={
           namedByConsumer || !showDescription ? undefined : descriptionId
