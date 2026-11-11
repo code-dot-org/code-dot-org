@@ -8,10 +8,7 @@ export const BACK_TO_TOP_SCROLL_THRESHOLD_PX = 400;
 
 export interface BackToTopProps {
   scrollContainerRef: React.RefObject<HTMLElement>;
-  // The tab unmounts once the scroll reaches the top, so focus moves here
-  // rather than being dropped to the document body. Falls back to the
-  // scroll container, which must then be focusable, when the target is
-  // not rendered.
+  // When this is unset, focus goes to the scroll container, so it must be focusable.
   focusTargetRef: React.RefObject<HTMLElement>;
 }
 
