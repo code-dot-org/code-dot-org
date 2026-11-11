@@ -167,6 +167,25 @@ export function objectiveShown(
   return !item.shownWhen || checkObjective(item.shownWhen, inputs);
 }
 
+// The kinds of check that can be read from the project at any time: a block
+// in the code, something placed in the world, an image.
+const READ_FROM_PROJECT_KINDS: ReadonlySet<ObjectiveCheck['kind']> = new Set([
+  'block',
+  'world',
+  'image',
+]);
+
+/**
+ * Whether a check is about something the student did during a visit to the
+ * level, which leaves nothing in the project to read later: pressing Run,
+ * reaching a sprite, arriving in a scene, opening a scene, rating a
+ * picture. When a student comes back to a level they have completed, these
+ * steps cannot be re-read, so they start ticked.
+ */
+export function isAboutTheVisit(check: ObjectiveCheck): boolean {
+  return !READ_FROM_PROJECT_KINDS.has(check.kind);
+}
+
 // A field saved as "<field name="X">value</field>" or as the bare value;
 // the legacy form also quotes a name.
 export function fieldValue(raw: unknown): string | undefined {

@@ -78,9 +78,10 @@ interface ImagesTabProps {
   lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
   imageRole?: string;
-  /** An image of the level's type was made on this visit. Until then the
-      plus is offered, so a student back on a level they did can make
-      another. */
+  /** The level's own image exists: one of its type was made on this visit,
+      or one carrying the level's role was made on an earlier visit. Until
+      then the plus is offered. After that the student changes that image,
+      and cannot add a second one for the same role. */
   ownImageMade?: boolean;
   /** The level tells how AI made the image (level mode `learning`). */
   learning?: boolean;

@@ -8,6 +8,7 @@ import {ObjectiveItem, ObjectivesChecklist} from '@cdo/apps/lab2/types';
 import {
   checkObjective,
   EMPTY_RUNTIME,
+  isAboutTheVisit,
   Objective,
   ObjectiveInputs,
   Objectives,
@@ -158,6 +159,7 @@ export function useObjectives({
   generated,
   rated,
   runtime,
+  completedBefore = false,
 }: {
   objectives: Objectives | undefined;
   images: ImageCounts;
@@ -171,6 +173,8 @@ export function useObjectives({
   generated: ImageCounts;
   rated: boolean;
   runtime: RuntimeProgress;
+  /** The student has already completed this level, on an earlier visit. */
+  completedBefore?: boolean;
 }): ObjectivesState {
   const [earned, setEarned] = useState<ReadonlySet<number>>(new Set());
   const inputs: ObjectiveInputs = useMemo(
@@ -231,13 +235,35 @@ export function useObjectives({
     const newlyVisible = newIndexes(visible, objectiveShown);
     // State is set only when something changed. The inputs are a new object
     // on most renders, so setting state every time would loop forever.
+    // Each update adds to the set as it is when the update is applied, not
+    // to the copy read above. More than one update can be waiting at once,
+    // and writing a whole set from a stale copy would undo the others.
     if (newlyCompleted.length) {
-      setEarned(new Set([...completed, ...newlyCompleted]));
+      setEarned(current => new Set([...current, ...newlyCompleted]));
     }
     if (newlyVisible.length) {
-      setShown(new Set([...visible, ...newlyVisible]));
+      setShown(current => new Set([...current, ...newlyVisible]));
     }
   }, [newIndexes]);
+
+  // A student back on a level they have completed finds it completed. The
+  // steps about the project are re-read from the project, above. The steps
+  // about something they did on the earlier visit (see isAboutTheVisit)
+  // cannot be re-read, so they are ticked here. This runs when the level's
+  // progress arrives, which can be after the checklist first shows.
+  useEffect(() => {
+    if (!completedBefore || !items?.length) {
+      return;
+    }
+    const done = items.flatMap((item, index) =>
+      isAboutTheVisit(item.check) ? [index] : []
+    );
+    setEarned(current =>
+      done.every(index => current.has(index))
+        ? current
+        : new Set([...current, ...done])
+    );
+  }, [completedBefore, items]);
 
   // The result is a new object only when something changed, because the
   // panel that receives it re-renders whenever the object is new.

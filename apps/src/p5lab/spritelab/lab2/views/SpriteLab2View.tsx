@@ -11,7 +11,10 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
 import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/getCode';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
-import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getCurrentLevel,
+  getCurrentLevels,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
@@ -45,6 +48,7 @@ import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiChatClientTypes,
+  LevelStatus,
   SpritelabAskAiRefusals,
 } from '@cdo/generated-scripts/sharedConstants';
 
@@ -722,13 +726,34 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Nothing counts until this level's list is seeded: before that the store
   // still holds the previous level's images, and an item they earned would
   // stay earned.
-  const objectiveImages = useMemo(
-    () =>
-      animationsSeeded
-        ? imageCountsDelta(countImagesByType(animationList), baselineImages)
-        : NO_IMAGES,
-    [animationsSeeded, animationList, baselineImages]
-  );
+  // The images made on this level, by type. A level that makes one image
+  // for a role also counts that image when it was made on an earlier
+  // visit: a student who comes back changes it in place, so no new image
+  // would ever be counted, and the level's image steps could not be ticked.
+  const levelImageType = levelProperties.levelMode?.imageType;
+  const levelImageRole = levelProperties.levelMode?.imageRole;
+  const objectiveImages = useMemo(() => {
+    if (!animationsSeeded) {
+      return NO_IMAGES;
+    }
+    const made = imageCountsDelta(
+      countImagesByType(animationList),
+      baselineImages
+    );
+    const roleImageExists =
+      !!levelImageType &&
+      imagesNamedForRole(animationList, levelImageType, levelImageRole).length >
+        0;
+    return roleImageExists
+      ? {...made, [levelImageType]: Math.max(made[levelImageType], 1)}
+      : made;
+  }, [
+    animationsSeeded,
+    animationList,
+    baselineImages,
+    levelImageType,
+    levelImageRole,
+  ]);
   // The World grid a "changed" check compares against: the pinned scene's
   // world as the level opened, from the same load-time sources as the image
   // baseline, with the level's premade world painted in.
@@ -841,6 +866,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ),
     [scenes]
   );
+  // The header's bubble for this level reads the same status.
+  const completedBefore = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.perfect
+  );
   const objectives = useObjectives({
     objectives: levelProperties.objectives,
     images: objectiveImages,
@@ -854,6 +883,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     generated,
     rated,
     runtime: playProgress.runtime,
+    completedBefore,
   });
 
   // The callout arrow at a tab, shown while the level's condition holds.

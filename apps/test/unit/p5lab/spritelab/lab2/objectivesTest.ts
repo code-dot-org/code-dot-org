@@ -5,6 +5,7 @@ import {
   fieldValue,
   ObjectiveCheck,
   ObjectiveInputs,
+  isAboutTheVisit,
   objectiveShown,
   realBlocks,
   runtimeNeeds,
@@ -304,5 +305,21 @@ describe('objectiveShown', () => {
         inputs({generated: {sprite: 1, background: 0, block: 0}})
       )
     ).toBe(true);
+  });
+});
+
+describe('isAboutTheVisit', () => {
+  it('is false for the checks that can be read from the project', () => {
+    expect(isAboutTheVisit({kind: 'block', type: 'any'})).toBe(false);
+    expect(isAboutTheVisit({kind: 'world'})).toBe(false);
+    expect(isAboutTheVisit({kind: 'image', imageType: 'sprite'})).toBe(false);
+  });
+
+  it('is true for what the student did during a visit', () => {
+    expect(isAboutTheVisit({kind: 'play'})).toBe(true);
+    expect(isAboutTheVisit({kind: 'reach', moved: true})).toBe(true);
+    expect(isAboutTheVisit({kind: 'scene', id: 'scene-2'})).toBe(true);
+    expect(isAboutTheVisit({kind: 'editing', id: 'scene-2'})).toBe(true);
+    expect(isAboutTheVisit({kind: 'rated'})).toBe(true);
   });
 });
