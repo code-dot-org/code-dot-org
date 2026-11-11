@@ -60,11 +60,31 @@ export interface Objective {
       does not block Continue. Once it has appeared it stays, and must be
       completed like any other item. */
   shownWhen?: ObjectiveCheck;
-  /** If true, the item is ticked only while its check passes, so it
-      un-ticks when the student undoes the work (for example, removes an
-      object they had placed). Without this, an item stays ticked once its
-      check has passed. Use it for work a later level depends on. */
-  live?: boolean;
+}
+
+// The kinds of check that read work which stays in the project: a block in
+// the code, something placed in the world, an image.
+const LASTING_WORK_KINDS: ReadonlySet<ObjectiveCheck['kind']> = new Set([
+  'block',
+  'world',
+  'image',
+]);
+
+/**
+ * Whether a step is ticked only while its check passes, so that it un-ticks
+ * when the student undoes the work (removes a block, erases what they
+ * placed). That is so for the checks that read lasting work, which a later
+ * level may depend on.
+ *
+ * Every other step stays ticked once it has been done. Some record
+ * something that happened and cannot be undone: pressing Run, reaching a
+ * sprite, arriving in a scene. Two read something that changes for reasons
+ * other than undoing the step: which scene is open in the editor, and a
+ * picture's AI record, which is removed when the student edits the picture
+ * by hand.
+ */
+export function followsItsWork(check: ObjectiveCheck): boolean {
+  return LASTING_WORK_KINDS.has(check.kind);
 }
 
 export interface Objectives {

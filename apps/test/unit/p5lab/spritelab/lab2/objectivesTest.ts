@@ -5,6 +5,7 @@ import {
   fieldValue,
   ObjectiveCheck,
   ObjectiveInputs,
+  followsItsWork,
   objectiveShown,
   realBlocks,
   runtimeNeeds,
@@ -304,5 +305,22 @@ describe('objectiveShown', () => {
         inputs({generated: {sprite: 1, background: 0, block: 0}})
       )
     ).toBe(true);
+  });
+});
+
+describe('followsItsWork', () => {
+  it('is true for the checks that read work kept in the project', () => {
+    expect(followsItsWork({kind: 'block', type: 'any'})).toBe(true);
+    expect(followsItsWork({kind: 'world'})).toBe(true);
+    expect(followsItsWork({kind: 'image', imageType: 'sprite'})).toBe(true);
+  });
+
+  it('is false for things that happened, the open scene and the AI record', () => {
+    expect(followsItsWork({kind: 'play'})).toBe(false);
+    expect(followsItsWork({kind: 'reach', moved: true})).toBe(false);
+    expect(followsItsWork({kind: 'scene', id: 'scene-2'})).toBe(false);
+    expect(followsItsWork({kind: 'editing', id: 'scene-2'})).toBe(false);
+    expect(followsItsWork({kind: 'rated'})).toBe(false);
+    expect(followsItsWork({kind: 'generated'})).toBe(false);
   });
 });

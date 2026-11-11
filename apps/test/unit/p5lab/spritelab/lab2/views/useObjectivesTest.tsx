@@ -47,22 +47,18 @@ function Checklist({
   );
 }
 
-// A checklist whose first item is live: placing something in the world.
-const LIVE_OBJECTIVES = {
+// A checklist whose first item is about lasting work: placing something in
+// the world. Its second records something that happened.
+const WORK_OBJECTIVES = {
   items: [
-    {
-      id: 'place',
-      text: 'Place something.',
-      check: {kind: 'world' as const},
-      live: true,
-    },
+    {id: 'place', text: 'Place something.', check: {kind: 'world' as const}},
     {id: 'play', text: 'Press Play.', check: {kind: 'play' as const}},
   ],
 };
 const PLACED = [[{image: 'Hero', kind: 'sprite' as const}]];
 const EMPTY = [[null]];
 
-function LiveChecklist({
+function WorkChecklist({
   placed,
   everPlayed,
 }: {
@@ -70,7 +66,7 @@ function LiveChecklist({
   everPlayed: boolean;
 }) {
   const state = useObjectives({
-    objectives: LIVE_OBJECTIVES,
+    objectives: WORK_OBJECTIVES,
     images: IMAGES,
     grid: placed ? PLACED : EMPTY,
     imagesForRole: {},
@@ -125,15 +121,15 @@ describe('useObjectives', () => {
     expect(view.container.textContent).toBe('play:true rate:true all');
   });
 
-  it('un-ticks a live item when its work is undone, and keeps other items ticked', () => {
-    const view = render(<LiveChecklist placed={true} everPlayed={true} />);
+  it('un-ticks an item about lasting work when the work is undone, and keeps other items ticked', () => {
+    const view = render(<WorkChecklist placed={true} everPlayed={true} />);
     expect(view.container.textContent).toBe('place:true play:true all');
-    // The placed thing is removed: the live item un-ticks. The play item is
-    // not live, so it stays ticked.
-    view.rerender(<LiveChecklist placed={false} everPlayed={false} />);
+    // The placed thing is removed, so its item un-ticks. Pressing Play is
+    // something that happened, so its item stays ticked.
+    view.rerender(<WorkChecklist placed={false} everPlayed={false} />);
     expect(view.container.textContent).toBe('place:false play:true');
     // Placed again: ticked again.
-    view.rerender(<LiveChecklist placed={true} everPlayed={false} />);
+    view.rerender(<WorkChecklist placed={true} everPlayed={false} />);
     expect(view.container.textContent).toBe('place:true play:true all');
   });
 });

@@ -8,6 +8,7 @@ import {ObjectiveItem, ObjectivesChecklist} from '@cdo/apps/lab2/types';
 import {
   checkObjective,
   EMPTY_RUNTIME,
+  followsItsWork,
   Objective,
   ObjectiveInputs,
   Objectives,
@@ -140,11 +141,11 @@ export function usePlayProgress(
 }
 
 /**
- * The checklist's state. Once an item is completed it stays completed, and
- * once an item has appeared it stays visible, even if its check stops
- * passing. The exception is an item marked `live`: it is completed only
- * while its check passes. Reloading the page starts the checklist over; the
- * level's saved progress is what lasts.
+ * The checklist's state. An item about lasting work (see followsItsWork) is
+ * completed only while its check passes. Any other item stays completed
+ * once its check has passed. An item that has appeared stays visible.
+ * Reloading the page starts the checklist over; the level's saved progress
+ * is what lasts.
  */
 export function useObjectives({
   objectives,
@@ -228,10 +229,15 @@ export function useObjectives({
     const newlyCompleted = newIndexes(completed, (item, inputs) =>
       checkObjective(item.check, inputs)
     );
-    // A live item that was completed and whose check no longer passes.
+    // A completed item about lasting work whose check no longer passes:
+    // the student has undone the work.
     const undone = [...completed].filter(index => {
       const item = items?.[index];
-      return !!item?.live && !checkObjective(item.check, inputs);
+      return (
+        !!item &&
+        followsItsWork(item.check) &&
+        !checkObjective(item.check, inputs)
+      );
     });
     const visible = shownRef.current;
     const newlyVisible = newIndexes(visible, objectiveShown);

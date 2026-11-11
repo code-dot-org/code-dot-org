@@ -89,16 +89,14 @@
           "check": {
             "kind": "world",
             "role": "treasure"
-          },
-          "live": true
+          }
         },
         {
           "text": "Add **blocks** to jump onto.",
           "check": {
             "kind": "world",
             "role": "block"
-          },
-          "live": true
+          }
         },
         {
           "text": "Click **Play**, then run and jump to your object..",
