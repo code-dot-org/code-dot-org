@@ -45,14 +45,14 @@ export function stepProperties(checkpoint: Checkpoint, step: Step) {
 export type AiFallbackFeature = 'instructions' | 'project' | 'validation';
 
 /** The student got the shell without an AI part it would have had. */
-export function sendAiFallbackUsed(
+export function sendAiStaticFallbackUsed(
   feature: AiFallbackFeature,
   reason: string,
   checkpoint: Checkpoint,
   step: Step
 ) {
   sendAdaptiveEvent(
-    EVENTS.ADAPTIVE_AI_FALLBACK_USED,
+    EVENTS.ADAPTIVE_AI_STATIC_FALLBACK_USED,
     {...stepProperties(checkpoint, step), feature, reason},
     feature
   );

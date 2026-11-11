@@ -8,7 +8,7 @@ import {
   validateStep,
   withOpener,
 } from '@cdo/apps/adaptive/ai/validation/validateStep';
-import {sendAiFallbackUsed} from '@cdo/apps/adaptive/metricsHelpers';
+import {sendAiStaticFallbackUsed} from '@cdo/apps/adaptive/metricsHelpers';
 import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -19,7 +19,7 @@ jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
 }));
 jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
   ...jest.requireActual('@cdo/apps/adaptive/metricsHelpers'),
-  sendAiFallbackUsed: jest.fn(),
+  sendAiStaticFallbackUsed: jest.fn(),
 }));
 const mockLogWarning = jest.fn();
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
@@ -237,7 +237,7 @@ describe('validateStep fallbacks', () => {
   it('sends a fallback when the judge gives no verdict', async () => {
     mockGenerate.mockResolvedValue({traceId: 'trace-2'});
     await validateStep(options);
-    expect(sendAiFallbackUsed).toHaveBeenCalledWith(
+    expect(sendAiStaticFallbackUsed).toHaveBeenCalledWith(
       'validation',
       'modelErrorOrInvalidOutput',
       checkpoint,
@@ -252,7 +252,7 @@ describe('validateStep fallbacks', () => {
     });
     mockModerateOutput.mockResolvedValue('flagged');
     await validateStep(options);
-    expect(sendAiFallbackUsed).toHaveBeenCalledWith(
+    expect(sendAiStaticFallbackUsed).toHaveBeenCalledWith(
       'validation',
       'outputFlaggedByModeration',
       checkpoint,
@@ -266,7 +266,7 @@ describe('validateStep fallbacks', () => {
       traceId: 'trace-2',
     });
     await validateStep(options);
-    expect(sendAiFallbackUsed).not.toHaveBeenCalled();
+    expect(sendAiStaticFallbackUsed).not.toHaveBeenCalled();
   });
 });
 

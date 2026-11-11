@@ -11,7 +11,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 import {
   sendAdaptiveEvent,
-  sendAiFallbackUsed,
+  sendAiStaticFallbackUsed,
   stepProperties,
 } from '../metricsHelpers';
 import {Progress} from '../progress/model';
@@ -87,7 +87,8 @@ export async function generateProject({
       latencyMs: Date.now() - startedAt,
       errorType,
     });
-    if (errorType) sendAiFallbackUsed('project', errorType, checkpoint, step);
+    if (errorType)
+      sendAiStaticFallbackUsed('project', errorType, checkpoint, step);
   };
   // Only what the student wrote is moderated; a chosen answer is authored text.
   const typed = plan.answers.filter(a => a.typed).map(a => a.answer);

@@ -12,7 +12,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {
   moderationFallbackReason,
   sendAdaptiveEvent,
-  sendAiFallbackUsed,
+  sendAiStaticFallbackUsed,
   stepProperties,
 } from '../metricsHelpers';
 import {GeneratedContent, generateInputsHash} from '../progress/model';
@@ -115,7 +115,7 @@ export async function resolveStepInstructions({
     latencyMs: Date.now() - startedAt,
   });
   if (!output) {
-    sendAiFallbackUsed(
+    sendAiStaticFallbackUsed(
       'instructions',
       'modelErrorOrInvalidOutput',
       checkpoint,
@@ -135,7 +135,7 @@ export async function resolveStepInstructions({
       stepId: step.id,
       traceId,
     });
-    sendAiFallbackUsed(
+    sendAiStaticFallbackUsed(
       'instructions',
       moderationFallbackReason(moderation),
       checkpoint,

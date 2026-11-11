@@ -8,7 +8,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 import {
   moderationFallbackReason,
-  sendAiFallbackUsed,
+  sendAiStaticFallbackUsed,
 } from '../../metricsHelpers';
 import {ValidationAttempt} from '../../progress/model';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../../types';
@@ -98,7 +98,7 @@ export async function validateStep({
     },
   });
   if (!output) {
-    sendAiFallbackUsed(
+    sendAiStaticFallbackUsed(
       'validation',
       'modelErrorOrInvalidOutput',
       checkpoint,
@@ -116,7 +116,7 @@ export async function validateStep({
       stepId: step.id,
       traceId,
     });
-    sendAiFallbackUsed(
+    sendAiStaticFallbackUsed(
       'validation',
       moderationFallbackReason(moderation),
       checkpoint,

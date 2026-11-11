@@ -3,7 +3,7 @@ import {
   firstProjectStepId,
   moderationFallbackReason,
   sendAdaptiveEvent,
-  sendAiFallbackUsed,
+  sendAiStaticFallbackUsed,
   setAdaptiveMetricsContext,
 } from '@cdo/apps/adaptive/metricsHelpers';
 import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
@@ -34,14 +34,14 @@ describe('adaptive metrics', () => {
   it('sends a fallback with the feature, the reason and the step', () => {
     setAdaptiveMetricsContext({pathwayId: 'p', levelId: 1, scriptId: 2});
     const step = {id: 's', title: 'S', kind: 'level', level: 'lvl'} as Step;
-    sendAiFallbackUsed(
+    sendAiStaticFallbackUsed(
       'instructions',
       moderationFallbackReason('error'),
       {id: 'c'} as Checkpoint,
       step
     );
     expect(analyticsReporter.sendEvent).toHaveBeenLastCalledWith(
-      'Adaptive AI Fallback Used',
+      'Adaptive AI Static Fallback Used',
       {
         pathwayId: 'p',
         levelId: 1,
