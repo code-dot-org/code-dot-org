@@ -287,9 +287,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         subject: result.generation.subject,
       };
       await storePicture(target, () => writer.acceptGenerated(target, result));
-      offerStory(result);
     },
-    [writer, storePicture, offerStory]
+    [writer, storePicture]
   );
   // The verdict is written onto the stored picture's generation record.
   // Its pixels are not touched, so anything drawn on the picture since it
@@ -537,6 +536,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onGenerateStart={onGenerate}
           onBusyChange={setBusy}
           onKeep={handleKeep}
+          onReady={offerStory}
           onRate={handleRate}
           wordLayout={wordLayout}
           compactBehindTheScenes

@@ -162,8 +162,14 @@ interface SentenceSceneProps {
   initialAnimated?: boolean;
   /** The student turned Animated on or off. */
   onAnimatedChange?: (animated: boolean) => void;
-  /** Called with each generated picture as soon as it is shown. */
+  /** Called with each generated picture as soon as it is ready, to store
+      it. */
   onKeep: (result: GeneratedImageResult) => Promise<void> | void;
+  /** Called with each generated picture before it is shown. The scene
+      keeps showing that the picture is being made until the returned
+      promise resolves, and shows the picture then. A host uses this to say
+      something about the picture first. */
+  onReady?: (result: GeneratedImageResult) => Promise<void> | void;
   /** Called when the student rates the kept picture; resolves true once
       the verdict is on its record. Without it, or when it resolves false,
       the picture is kept again with the verdict in its generation
@@ -204,6 +210,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   initialAnimated = true,
   onAnimatedChange,
   onKeep,
+  onReady,
   onRate,
   onGenerateStart,
   onBusyChange,
@@ -417,10 +424,17 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         sent,
         cached: !!cached,
       };
+      // The picture is stored while the host holds it back, so that
+      // leaving the page during the wait does not lose it.
+      const stored = persist(entry, null);
+      await onReady?.(entry.result);
+      if (run !== runRef.current) {
+        return;
+      }
       setChosenPicture(entry);
       setMode('result');
       playSound('reveal');
-      await persist(entry, null);
+      await stored;
     } catch (e) {
       if (run !== runRef.current) {
         return;
@@ -450,6 +464,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     exhausted,
     advanced,
     persist,
+    onReady,
     imageSource,
     findCached,
   ]);

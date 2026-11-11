@@ -21,6 +21,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
     onAnimatedChange,
     onBusyChange,
     onKeep,
+    onReady,
     onRate,
     layout,
   }: {
@@ -30,6 +31,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
     onAnimatedChange?: (animated: boolean) => void;
     onBusyChange?: (busy: boolean) => void;
     onKeep: (result: unknown) => void;
+    onReady?: (result: unknown) => void;
     onRate?: (verdict: string) => boolean | Promise<boolean>;
     layout: (parts: unknown) => React.ReactNode;
   }) => {
@@ -54,15 +56,19 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
         </button>
         <button
           type="button"
-          onClick={() =>
-            onKeep({
+          onClick={() => {
+            const result = {
               // Unique per picture, as the generator's are.
               filename: `made-${++picturesMade}.png`,
               uint8Array: new Uint8Array([137, 80, 78, 71]),
               mediaType: 'image/png',
               generation: {imageType, subject: imageSubject, prompt: 'A cat'},
-            })
-          }
+            };
+            // As the scene does: the picture is stored while the host is
+            // told it is ready.
+            onKeep(result);
+            onReady?.(result);
+          }}
         >
           land {imageType} {imageSubject ?? ''}
         </button>
@@ -879,8 +885,7 @@ describe('ImagesTab', () => {
     expect(screen.queryByText('canvas')).toBeNull();
   });
 
-  it('tells how the picture was made after the first one on a level that asks, once', async () => {
-    jest.useFakeTimers();
+  it('tells how the first picture was made as soon as it is ready on a level that asks, once', async () => {
     renderTab({lockedImageType: 'sprite', imageRole: 'hero', learning: true});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
@@ -892,10 +897,6 @@ describe('ImagesTab', () => {
       fireEvent.click(
         screen.getByRole('button', {name: /^land sprite character$/})
       );
-    });
-    expect(screen.queryByRole('dialog')).toBeNull();
-    act(() => {
-      jest.advanceTimersByTime(2000);
     });
     const dialog = screen.getByRole('dialog', {
       name: 'How AI made your image',
@@ -911,11 +912,7 @@ describe('ImagesTab', () => {
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: /^land sprite$/}));
     });
-    act(() => {
-      jest.advanceTimersByTime(2000);
-    });
     expect(screen.queryByRole('dialog')).toBeNull();
-    jest.useRealTimers();
   });
 
   it('tells the story of an image opened again, from Behind the scenes', () => {
@@ -939,7 +936,6 @@ describe('ImagesTab', () => {
   });
 
   it('holds the story while the tab is away, and tells it on return', async () => {
-    jest.useFakeTimers();
     const {rerender} = renderTab({
       lockedImageType: 'sprite',
       imageRole: 'hero',
@@ -950,11 +946,6 @@ describe('ImagesTab', () => {
     acceptGenerated.mockImplementation(async () => {
       propsByKey.k2 = {name: 'Sprite 1', categories: [], role: 'hero'};
       return 'k2';
-    });
-    await act(async () => {
-      fireEvent.click(
-        screen.getByRole('button', {name: /^land sprite character$/})
-      );
     });
     const away = (active: boolean) =>
       rerender(
@@ -967,9 +958,12 @@ describe('ImagesTab', () => {
           active={active}
         />
       );
+    // The picture becomes ready while the student is on another tab.
     away(false);
-    act(() => {
-      jest.advanceTimersByTime(2000);
+    await act(async () => {
+      fireEvent.click(
+        screen.getByRole('button', {name: /^land sprite character$/})
+      );
     });
     // Not over another tab.
     expect(screen.queryByRole('dialog')).toBeNull();
@@ -977,11 +971,9 @@ describe('ImagesTab', () => {
     expect(
       screen.getByRole('dialog', {name: 'How AI made your image'})
     ).toBeTruthy();
-    jest.useRealTimers();
   });
 
   it('tells the story after every picture when the parameter asks', async () => {
-    jest.useFakeTimers();
     params.learning = 'always';
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     renderTab({editingOffered: true});
@@ -989,9 +981,6 @@ describe('ImagesTab', () => {
     for (let i = 0; i < 2; i++) {
       await act(async () => {
         fireEvent.click(screen.getByRole('button', {name: /^land sprite/}));
-      });
-      act(() => {
-        jest.advanceTimersByTime(2000);
       });
       expect(
         screen.getByRole('dialog', {name: 'How AI made your image'})
@@ -1001,7 +990,6 @@ describe('ImagesTab', () => {
       }
       fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
     }
-    jest.useRealTimers();
   });
 
   it("shows a character set's frames before editing, and opens the tools on the picked one", async () => {
