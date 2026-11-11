@@ -331,6 +331,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
         type: "json_schema",
         json_schema: {
           name: "lesson_summary",
+          strict: true,
           schema: {
             type: "object",
             properties: {
@@ -338,7 +339,9 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
               lesson_beats: {type: "array", items: {type: "string"}},
               misconceptions: {type: "array", items: {type: "string"}},
               tips: {type: "array", items: {type: "string"}}
-            }
+            },
+            required: [:learning_objective, :lesson_beats, :misconceptions, :tips],
+            additionalProperties: false,
           }
         }
       }
@@ -377,11 +380,14 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
         type: "json_schema",
         json_schema: {
           name: "lesson_summary",
+          strict: true,
           schema: {
             type: "object",
             properties: {
               podcast_script: {type: "string"}
-            }
+            },
+            required: [:podcast_script],
+            additionalProperties: false,
           }
         }
       }
