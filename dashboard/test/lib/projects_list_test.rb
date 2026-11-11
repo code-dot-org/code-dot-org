@@ -368,6 +368,8 @@ class ProjectsListTest < ActionController::TestCase
       },
     ]
     DCDO.stubs(:get).with('project-uuid-in-url', false).returns(true)
+    # stub_storage_id_for_user_id binds to the test instance; this call runs inside ProjectsList.
+    ProjectsList.stubs(:storage_id_for_user_id).returns(@storage_id)
 
     projects_table = mock
     projects_table.expects(:where).
