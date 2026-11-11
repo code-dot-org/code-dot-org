@@ -46,7 +46,7 @@ class GamelabJr < Gamelab
     extra_scene
     world_start_pattern
     world_start_roles
-    keep_last_copy
+    world_keeps_roles
     starter_images
     callouts
     objectives

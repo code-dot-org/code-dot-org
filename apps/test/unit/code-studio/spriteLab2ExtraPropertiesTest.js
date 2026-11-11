@@ -18,7 +18,7 @@ describe('camelize', () => {
       add_blocks: 'addBlocks',
       world_start_pattern: 'worldStartPattern',
       world_start_roles: 'worldStartRoles',
-      keep_last_copy: 'keepLastCopy',
+      world_keeps_roles: 'worldKeepsRoles',
       starter_images: 'starterImages',
       callouts: 'callouts',
       no_project: 'noProject',

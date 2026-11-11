@@ -1682,24 +1682,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     [updateSources, activeSceneId, scheduleRun, worldFor]
   );
-  // On a level that asks (keep_last_copy), a scene keeps at least one copy
-  // of every character or object that has a role: a later level's step can
-  // need the player to reach it, and that level may not show the World tab.
+  // The images a scene keeps at least one of: those in the roles the level
+  // names (world_keeps_roles). A later level's step can need the player to
+  // reach one, and that level may not show the World tab.
+  const worldKeepsRoles = levelProperties.worldKeepsRoles;
   const worldKeeps = useMemo(
     () =>
       new Set(
-        levelProperties.keepLastCopy
-          ? animationList.orderedKeys
-              .map(key => animationList.propsByKey[key])
-              .filter(
-                props =>
-                  props?.role &&
-                  imageTypeFromCategories(props.categories) === 'sprite'
-              )
-              .map(props => props.name)
-          : []
+        animationList.orderedKeys
+          .map(key => animationList.propsByKey[key])
+          .filter(props => props?.role && worldKeepsRoles?.includes(props.role))
+          .map(props => props.name)
       ),
-    [levelProperties.keepLastCopy, animationList]
+    [worldKeepsRoles, animationList]
   );
   const handlePaintWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell | null) =>

@@ -7,7 +7,9 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
-    "keep_last_copy": true,
+    "world_keeps_roles": [
+      "friend"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
