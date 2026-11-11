@@ -31,11 +31,11 @@
     "world_start_pattern": [
       "..........",
       "..........",
+      "..........",
+      "..........",
+      "..........",
+      "..........",
       ".S........",
-      "..........",
-      "..........",
-      "..........",
-      "..........",
       "..........",
       "..........",
       "BBBBBBBBBB"
@@ -77,7 +77,7 @@
           }
         },
         {
-          "text": "Click **Play**, then use the arrow keys to run and jump.",
+          "text": "Click **Run**, then use the arrow keys to run and jump.",
           "check": {
             "kind": "reach",
             "moved": true

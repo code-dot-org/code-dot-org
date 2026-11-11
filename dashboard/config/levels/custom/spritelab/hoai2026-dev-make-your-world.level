@@ -99,7 +99,7 @@
           }
         },
         {
-          "text": "Click **Play**, then run and jump to your object..",
+          "text": "Click **Run**, then run and jump to your object.",
           "check": {
             "kind": "reach",
             "role": "treasure"

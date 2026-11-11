@@ -142,7 +142,7 @@
           }
         },
         {
-          "text": "Click **Play** and go meet them.",
+          "text": "Click **Run** and go meet them.",
           "check": {
             "kind": "reach",
             "role": "friend"

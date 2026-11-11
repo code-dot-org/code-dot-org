@@ -115,7 +115,7 @@
       ]
     },
     "objectives": {
-      "title": "**Collected?**",
+      "title": "**Touch event**",
       "items": [
         {
           "text": "Choose a block to drag into the dotted outline under **when touches**.",
@@ -131,7 +131,7 @@
           }
         },
         {
-          "text": "Click Play, then run and jump to your object.",
+          "text": "Click **Run**, then run and jump to your object.",
           "check": {
             "kind": "reach",
             "role": "treasure"
@@ -139,8 +139,8 @@
         }
       ]
     },
-    "long_instructions": "# Collected?\r\nWhen your player **touches** your object, something can happen. \r\n\r\nThis is called an **event**.",
-    "header_label": "Collected?",
+    "long_instructions": "# Touch event\r\nWhen your player **touches** your object, something can happen. \r\n\r\nThis is called an **event**.",
+    "header_label": "Touch event",
     "preload_asset_list": null,
     "encrypted_examples": [
 
