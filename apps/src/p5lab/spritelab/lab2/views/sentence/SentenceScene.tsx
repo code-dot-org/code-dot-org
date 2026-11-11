@@ -40,7 +40,7 @@ import {pickTip} from '../images/teaching/generationTips';
 import {LearningStory, storyFor} from '../images/teaching/useLearningStory';
 import StripFrame from '../StripFrame';
 
-import {PixelReveal, SparkleBurst} from './PixelReveal';
+import {FirstShowingOnly, PixelReveal, SparkleBurst} from './PixelReveal';
 import SentenceReadOnly from './SentenceReadOnly';
 import {
   Choices,
@@ -246,6 +246,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
   const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
+  // The pictures whose reveal animation has already played.
+  const revealedPictureIds = useRef(new Set<string>());
   // The cached variant shown last for a filling, so Generate again shows
   // another.
   const lastCachedRef = useRef<{path: string; variant: number}>();
@@ -597,27 +599,31 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           )}
         />
       )}
-      {/* Keyed by picture, so each new one remounts and plays the reveal
-          once. */}
-      <PixelReveal
+      {/* The reveal and the sparkles play once for each new picture. */}
+      <FirstShowingOnly
         key={`reveal-${chosenPicture.id}`}
-        src={chosenPicture.dataURI}
-        crop={
-          sheet
-            ? {
-                // A generated set's frames stand in one row.
-                ...stripCellOrigin(
-                  CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
-                  sheet.frameSize,
-                  stillFrame ?? 0
-                ),
-                width: sheet.frameSize.x,
-                height: sheet.frameSize.y,
-              }
-            : undefined
-        }
-      />
-      <SparkleBurst key={`burst-${chosenPicture.id}`} />
+        id={String(chosenPicture.id)}
+        shownIds={revealedPictureIds}
+      >
+        <PixelReveal
+          src={chosenPicture.dataURI}
+          crop={
+            sheet
+              ? {
+                  // A generated set's frames stand in one row.
+                  ...stripCellOrigin(
+                    CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
+                    sheet.frameSize,
+                    stillFrame ?? 0
+                  ),
+                  width: sheet.frameSize.x,
+                  height: sheet.frameSize.y,
+                }
+              : undefined
+          }
+        />
+        <SparkleBurst />
+      </FirstShowingOnly>
     </>
   ) : null;
 

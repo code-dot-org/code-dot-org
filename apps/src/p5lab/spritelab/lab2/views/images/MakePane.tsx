@@ -26,6 +26,10 @@ interface MakePaneProps {
   onDraw?: () => void;
   /** The drawing button's text. */
   drawLabel?: string;
+  /** The drawing button's icon; a pencil unless given. */
+  drawIcon?: string;
+  /** The drawing button is shown but cannot be pressed yet. */
+  drawDisabled?: boolean;
   /** The image was made by AI and is unedited: generating makes it again. */
   regenerate?: boolean;
   /** Extra controls for the header, placed after the Behind the scenes
@@ -39,6 +43,8 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
   replaces,
   onDraw,
   drawLabel = 'Draw my own',
+  drawIcon = 'pencil',
+  drawDisabled,
   regenerate,
   extra,
 }) => {
@@ -113,8 +119,8 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
             variant="outlined"
             color="secondary"
             className={styles.drawButton}
-            startIcon={<FontAwesomeV6Icon iconName="pencil" aria-hidden />}
-            disabled={parts.busy}
+            startIcon={<FontAwesomeV6Icon iconName={drawIcon} aria-hidden />}
+            disabled={parts.busy || drawDisabled}
             onClick={onDraw}
           >
             {drawLabel}

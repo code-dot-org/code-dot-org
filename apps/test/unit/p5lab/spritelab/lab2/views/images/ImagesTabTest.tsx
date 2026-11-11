@@ -30,7 +30,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
     onAnimatedChange?: (animated: boolean) => void;
     onBusyChange?: (busy: boolean) => void;
     onKeep: (result: unknown) => void;
-    onRate?: (verdict: string) => void;
+    onRate?: (verdict: string) => boolean | Promise<boolean>;
     layout: (parts: unknown) => React.ReactNode;
   }) => {
     const [generating, setGenerating] = React.useState(false);
@@ -66,7 +66,12 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
         >
           land {imageType} {imageSubject ?? ''}
         </button>
-        <button type="button" onClick={() => onRate?.('up')}>
+        <button
+          type="button"
+          onClick={async () => {
+            lastRateResult = await onRate?.('up');
+          }}
+        >
           rate {imageType}
         </button>
         {layout({
@@ -95,6 +100,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           exhausted: false,
           generate: jest.fn(),
           draft: {imageType, subject: imageSubject, style: 'pixel'},
+          ...sceneOverrides,
         } as SentenceSceneParts)}
       </div>
     );
@@ -164,6 +170,10 @@ jest.mock('@cdo/apps/imageUtils', () => ({
 }));
 
 let picturesMade = 0;
+// Parts a test wants the stood-in scene to report, over its defaults.
+let sceneOverrides: Partial<SentenceSceneParts> = {};
+// What the tab answered the last time the stood-in scene rated a picture.
+let lastRateResult: boolean | undefined;
 // Frames are cut and put back without a canvas: the strip is named for
 // what happened to it.
 const cutFrame = jest.fn(
@@ -242,6 +252,8 @@ describe('ImagesTab', () => {
     deleteImage.mockReset();
     delete params.learning;
     endSession.mockReset();
+    sceneOverrides = {};
+    lastRateResult = undefined;
   });
 
   it('opens a level about one image on the place it will go, and lands it there', async () => {
@@ -712,18 +724,18 @@ describe('ImagesTab', () => {
     finishFirst('k1');
   });
 
-  it('keeps the tools and the words open while a blank is drawn in free play', () => {
+  it('opens the tools on a new image in free play without a button, with the words beside them', async () => {
     delete params['images-edited'];
     renderTab({editingOffered: true});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
-    expect(screen.getByText('canvas')).toBeTruthy();
+    expect(await screen.findByText('canvas')).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'Draw my own'})).toBeNull();
     expect(screen.getByText('words')).toBeTruthy();
     expect(screen.queryByRole('button', {name: /^Done/})).toBeNull();
   });
 
-  it('keeps Edit this image and Done on a level about one image', async () => {
+  it('keeps the words beside the tools while an image is edited, and Done editing closes the tools', async () => {
     delete params['images-edited'];
     propsByKey.k1 = {
       name: 'Sprite 1',
@@ -736,12 +748,96 @@ describe('ImagesTab', () => {
     expect(screen.queryByText('canvas')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
     expect(await screen.findByText('canvas')).toBeTruthy();
-    expect(screen.queryByText('words')).toBeNull();
+    expect(screen.getByText('words')).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'Edit this image'})).toBeNull();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
     });
     expect(screen.queryByText('canvas')).toBeNull();
     expect(screen.getByText('words')).toBeTruthy();
+  });
+
+  it('answers a rating of an edited picture without storing the generated picture again', async () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      role: 'hero',
+      edited: true,
+      sourceUrl: 'sprite1.png',
+    };
+    // An edited picture has no generation record to write the verdict to.
+    rateGenerated.mockReturnValue(undefined);
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^rate sprite/}));
+    });
+    // True tells the scene not to fall back to storing its own copy.
+    expect(lastRateResult).toBe(true);
+    expect(acceptGenerated).not.toHaveBeenCalled();
+  });
+
+  it('shows the stored image and no rating question once the picture has been edited', () => {
+    sceneOverrides = {
+      frameFilled: true,
+      frame: <span>scene copy</span>,
+      rating: {
+        offered: true,
+        required: false,
+        verdict: null,
+        judge: jest.fn(),
+        explain: jest.fn(),
+        dismiss: jest.fn(),
+      },
+    };
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      role: 'hero',
+      sourceUrl: 'sprite1.png',
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    const first = renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    // Unedited: the scene's copy of the picture and its question show.
+    expect(screen.getByText('scene copy')).toBeTruthy();
+    expect(screen.getByText('How did AI do?')).toBeTruthy();
+    first.unmount();
+    propsByKey.k1 = {...propsByKey.k1, generation: undefined, edited: true};
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    expect(screen.queryByText('scene copy')).toBeNull();
+    expect(screen.queryByText('How did AI do?')).toBeNull();
+  });
+
+  it('holds Edit this image until a required rating has been given', () => {
+    const rating = {
+      offered: true,
+      required: true,
+      verdict: null,
+      judge: jest.fn(),
+      explain: jest.fn(),
+      dismiss: jest.fn(),
+    };
+    sceneOverrides = {
+      frameFilled: true,
+      frame: <span>scene copy</span>,
+      rating,
+    };
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      categories: [],
+      role: 'hero',
+      sourceUrl: 'sprite1.png',
+      generation: {imageType: 'sprite', prompt: 'A cat'},
+    };
+    const first = renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    const edit = () =>
+      screen.getByRole('button', {
+        name: 'Edit this image',
+      }) as HTMLButtonElement;
+    expect(edit().disabled).toBe(true);
+    first.unmount();
+    sceneOverrides = {...sceneOverrides, rating: {...rating, verdict: 'up'}};
+    renderTab({lockedImageType: 'sprite', imageRole: 'hero'});
+    expect(edit().disabled).toBe(false);
   });
 
   it('keeps the words under an edited image when the parameter asks', () => {
@@ -1012,7 +1108,6 @@ describe('ImagesTab', () => {
       'aria-pressed',
       'true'
     );
-    expect(screen.getByText('Edit the standing frame.')).toBeTruthy();
     // A stroke, then another frame: the drawn frame goes back first.
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     saveEdited.mockResolvedValue('k1');
@@ -1026,7 +1121,10 @@ describe('ImagesTab', () => {
       'data:png'
     );
     expect(saveEdited.mock.calls[0][1]).toBe('sheet.png+1:data:png');
-    expect(screen.getByText('Edit the walk frame.')).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Walk'})).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
     expect(cutFrame).toHaveBeenLastCalledWith(
       'sheet.png+1:data:png',
       {x: 64, y: 64},
