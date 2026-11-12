@@ -54,6 +54,42 @@
           "contents": [
             {
               "kind": "block",
+              "type": "gamelab_showVariable",
+              "id": "+OT#2VQGHW]uqgo$7).2",
+              "fields": {
+                "VAR": {
+                  "id": "s?sT)/qtb8zCDmR8Qh@L",
+                  "name": "m",
+                  "type": ""
+                }
+              },
+              "inputs": {
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": null
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_hideVariable",
+              "id": "aMka^g0CT;C|dLpcBPM1",
+              "fields": {
+                "VAR": {
+                  "id": "na42CC(!J_5^Esm^HJ9Z",
+                  "name": "j",
+                  "type": ""
+                }
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
               "type": "gamelab_setBackgroundImageAs",
               "id": "-O*K/-vJ*Ux7OtvgX;bR",
               "fields": {

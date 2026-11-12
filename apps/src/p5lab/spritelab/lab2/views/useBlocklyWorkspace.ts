@@ -17,6 +17,7 @@ import {
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
+import {OUTLINE_EVENT_GROUP, withoutOutlines} from '../addBlocks';
 import {withoutBlockTypes} from '../blockCatalog';
 import {lockBlocks, withoutLocks} from '../blockLocks';
 import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
@@ -189,9 +190,12 @@ export default function useBlocklyWorkspace({
         }
         return;
       }
-      // The stack-room pass tidies positions; it is not an edit to save or
-      // run.
-      if (e.group === STACK_ROOM_EVENT_GROUP) {
+      // The stack-room pass tidies positions, and the outline pass draws
+      // hints that are not saved. Neither is an edit to save or run.
+      if (
+        e.group === STACK_ROOM_EVENT_GROUP ||
+        e.group === OUTLINE_EVENT_GROUP
+      ) {
         return;
       }
       // Toolbox editing: flag blocks that won't serialize into a category.
@@ -231,10 +235,10 @@ export default function useBlocklyWorkspace({
         workspaceRef.current
       ) as WorkspaceSerialization;
       // A levelbuilder editing the level authors its locks, so they are kept.
-      // For a student the locks come from the level, not from the saved
-      // project, so any saved ones are stripped.
+      // For a student the locks and the outlines come from the level, not
+      // from the saved project, so neither is saved.
       if (!isToolboxMode && !isStartMode) {
-        serialized = withoutLocks(serialized);
+        serialized = withoutOutlines(withoutLocks(serialized));
       }
       currentBlocksRef.current = serialized;
       onWorkspaceChangeRef.current(serialized);

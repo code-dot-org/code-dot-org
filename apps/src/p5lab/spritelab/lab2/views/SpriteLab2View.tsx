@@ -51,7 +51,7 @@ import {
   SpritelabAskAiRefusals,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {addMissingBlocks, ownsTop} from '../addBlocks';
+import {ownsTop} from '../addBlocks';
 import {ImageSource, isImageSource} from '../ai/images/imageCache';
 import {
   uploadAssetToLevel,
@@ -71,6 +71,7 @@ import {
   withSceneMenuActive,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
+import {endKeyboardNavigation} from '../blockly/endKeyboardNavigation';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {codeFromSavedScene} from '../blockly/savedSceneCode';
 import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
@@ -129,7 +130,6 @@ import spriteLab2Reducer, {
 } from '../redux/spriteLab2Redux';
 import {sceneMetadataFor} from '../sceneThumbnails';
 import SpriteLab2Engine from '../SpriteLab2Engine';
-import {clearRoom} from '../stackRoom';
 import {SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
@@ -163,6 +163,7 @@ import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
 import {useFlyoutDots} from './useFlyoutDots';
+import useLevelBlocks from './useLevelBlocks';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
 import useSceneEditing from './useSceneEditing';
@@ -1793,70 +1794,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // workspace follows the active scene and re-runs the preview.
   // Sources generation and workspace the toolbox was last loaded into.
   const toolboxLoadedForRef = useRef('');
-  // Loads of a scene's code into the workspace.
-  const sceneLoadsRef = useRef(0);
-  // The key of the last added-blocks pass (see addLevelBlocks).
-  const addedBlocksForRef = useRef('');
-  // Set when Start Over leaves for the first level: the level being left and
-  // the reinitialization count before its reset. The pass skips that reset,
-  // or the fresh project would open with this level's blocks in it. A level
-  // change ends it, consumed or not.
-  const leavingResetRef = useRef<{level: number; reinitBefore: number}>();
-  useEffect(() => {
-    leavingResetRef.current = undefined;
-    // The add-blocks pass drops them too, except on the Start Over reset it
-    // sits out.
-    const workspace = Blockly.getMainWorkspace?.() as
-      | BlocklyCore.WorkspaceSvg
-      | undefined;
-    if (workspace) {
-      clearRoom(workspace);
-    }
-  }, [levelProperties.id]);
-  // The level's added blocks join the pinned scene once it is on screen:
-  // once per level, load, sources generation and workspace. A level reached
-  // in page loads nothing, so arriving runs it; a load puts the view back
-  // wherever the workspace was, so a load runs it too and brings the
-  // level's outline back on screen.
-  // The level's entries belong to its pinned scene.
-  const sceneAddBlocks = useMemo(
-    () =>
-      activeScene.id === pinnedSceneId ? levelProperties.addBlocks ?? [] : [],
-    [levelProperties.addBlocks, pinnedSceneId, activeScene.id]
-  );
-  // Runs with no entries too: the pass also drops other levels' outlines.
-  const addLevelBlocks = useCallback(() => {
-    if (!animationsSeeded || isToolboxMode) {
-      return;
-    }
-    const key = [
-      levelProperties.id,
-      sourcesReinitializedCount,
-      workspaceVersion,
-      sceneLoadsRef.current,
-    ].join(':');
-    if (addedBlocksForRef.current === key) {
-      return;
-    }
-    addedBlocksForRef.current = key;
-    const leavingReset = leavingResetRef.current;
-    if (
-      leavingReset &&
-      leavingReset.level === levelProperties.id &&
-      sourcesReinitializedCount > leavingReset.reinitBefore
-    ) {
-      leavingResetRef.current = undefined;
-      return;
-    }
-    const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
-    addMissingBlocks(workspace, sceneAddBlocks);
-  }, [
-    animationsSeeded,
-    levelProperties.id,
-    sceneAddBlocks,
+  // The level's added blocks, their outlines and their lock.
+  const {addLevelBlocks, sceneLoadsRef, leavingResetRef} = useLevelBlocks({
+    ready: animationsSeeded && !isToolboxMode,
+    editing: isLevelEditMode,
+    levelId: levelProperties.id,
+    addBlocks: levelProperties.addBlocks,
+    pinnedSceneId,
+    activeSceneId: activeScene.id,
+    objectives: levelProperties.objectives,
     sourcesReinitializedCount,
     workspaceVersion,
-  ]);
+  });
   const ownTypes = useMemo(
     () =>
       ownToolboxTypes(levelProperties.toolboxDefinition, earlierLevels ?? []),
@@ -1882,14 +1831,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     sceneLoadsRef.current++;
     // On a level that asks, blocks built on an earlier level cannot be
-    // deleted. Earlier levels built the pinned scene; an extra scene is this
-    // level's own. The stacks this level added and the toolbox blocks no
-    // earlier level required stay deletable.
+    // deleted, in any scene the level opens. A scene the level makes starts
+    // with blocks the student cannot get back from this level's toolbox.
+    // The blocks under a stack this level added stay deletable, and so do
+    // the toolbox blocks no earlier level required.
     loadCode(source, {
-      lock:
-        !isLevelEditMode &&
-        !!levelProperties.lockEarlierBlocks &&
-        (!pinnedSceneId || activeScene.id === pinnedSceneId),
+      lock: !isLevelEditMode && !!levelProperties.lockEarlierBlocks,
       isOwn: block =>
         ownsTop(levelProperties.addBlocks ?? [], block.getRootBlock()) ||
         ownTypes.has(block.type),
@@ -1899,11 +1846,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     addLevelBlocks();
   }, [
     addLevelBlocks,
+    sceneLoadsRef,
     animationsSeeded,
     levelProperties.addBlocks,
     levelProperties.lockEarlierBlocks,
     ownTypes,
-    pinnedSceneId,
     activeScene,
     currentSources.source,
     getCurrentBlocks,
@@ -1914,6 +1861,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // A re-injected workspace is empty, whatever caused it.
     workspaceVersion,
   ]);
+  // After the effect that loads, so that a commit which loads runs one
+  // pass, for the load.
   useEffect(() => {
     addLevelBlocks();
   }, [addLevelBlocks]);
@@ -2334,7 +2283,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }}
           >
             {animationsSeeded && (
-              <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
+              <div
+                id={BLOCKLY_DIV_ID}
+                className={moduleStyles.blocklyDiv}
+                onPointerDownCapture={endKeyboardNavigation}
+              />
             )}
           </div>
 
