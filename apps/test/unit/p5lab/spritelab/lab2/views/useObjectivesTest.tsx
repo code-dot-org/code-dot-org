@@ -121,14 +121,14 @@ describe('useObjectives', () => {
     expect(view.container.textContent).toBe('play:true rate:true all');
   });
 
-  it('un-ticks an item checked the whole time when its work is undone, and keeps an item checked once', () => {
+  it('unchecks an item when its work is undone, and keeps an item that only has to pass once', () => {
     const view = render(<WorkChecklist placed={true} everPlayed={true} />);
     expect(view.container.textContent).toBe('place:true play:true all');
-    // The placed thing is removed, so its item un-ticks. Pressing Play is
-    // something that happened, so its item stays ticked.
+    // The placed thing is removed, so its item is unchecked. Pressing Play
+    // is something that happened, so its item stays checked.
     view.rerender(<WorkChecklist placed={false} everPlayed={false} />);
     expect(view.container.textContent).toBe('place:false play:true');
-    // Placed again: ticked again.
+    // Placed again: checked again.
     view.rerender(<WorkChecklist placed={true} everPlayed={false} />);
     expect(view.container.textContent).toBe('place:true play:true all');
   });
