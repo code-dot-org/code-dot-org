@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-11 05:42:08 UTC",
+    "serialized_at": "2026-11-11 19:50:38 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2909,6 +2909,28 @@
       "level_keys": [
         "csp-unit2-lesson25-investigate-theater_27_28"
       ]
+    },
+    {
+      "chapter": 69,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate & Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson25-investigate-console_27_28"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "c44b82cb-23cf-4cd6-908f-284763b17731"
+      },
+      "level_keys": [
+        "csp-unit2-lesson25-investigate-console_27_28"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3727,6 +3749,18 @@
         "script.name": "csp-unit2-dev-27-28",
         "activity_section.key": "c44b82cb-23cf-4cd6-908f-284763b17731"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson25-investigate-console_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson25-investigate-console_27_28"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "c44b82cb-23cf-4cd6-908f-284763b17731"
+      }
     }
   ],
   "resources": [
@@ -3751,6 +3785,9 @@
 
   ],
   "objectives": [
+
+  ],
+  "objectives_script_levels": [
 
   ],
   "lessons_standards": [
