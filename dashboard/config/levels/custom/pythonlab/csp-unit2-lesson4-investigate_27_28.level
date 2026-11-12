@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-09T15:50:54.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Investigate\r\n\r\nThis app decides whether you get free shipping.\r\n\r\n1. Run it with a few cart totals: try 20, 50, and 35.\r\n2. Find the one line that makes the decision. Highlight it.\r\n3. What happens on the stage when that line is True? When it is False?",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from theater import *\n\ncart_total = float(input(\"What is your cart total? \"))\nfree_shipping = cart_total >= 35\n\nset_text_color(\"white\")\nclear(\"navy\")\ndraw_text(\"Cart total: \" + str(cart_total), 20, 150)\ndraw_text(\"Free shipping: \" + str(free_shipping), 20, 200)\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-09 15:54:23 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-09 15:55:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-09 15:56:09 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -3,6 +3,8 @@ import {Order} from 'blockly/javascript';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import {PLAYER_GROUP} from '../../playerGroups';
+
 export const THE_PLAYER_BLOCK_TYPE = 'spritelab2_thePlayer';
 
 /**
@@ -21,6 +23,9 @@ const definition: BlockJson = {
     'whatever it is called.',
 };
 
-const generator: GeneratorFunction = () => ["{group: 'players'}", Order.ATOMIC];
+const generator: GeneratorFunction = () => [
+  `{group: ${JSON.stringify(PLAYER_GROUP)}}`,
+  Order.ATOMIC,
+];
 
 export default {definition, generator};

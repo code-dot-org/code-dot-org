@@ -57,10 +57,12 @@ import {
   PLATFORM_GRAVITY,
   bodyBox,
   resolvePlatformPhysics,
+  touchesWall,
   usesPlatformPhysics,
   wallBox,
 } from './platformPhysics';
 import {createPlayerActionTracker, isPlayerAction} from './playerActions';
+import {isPlayerGroup, PLAYER_GROUP} from './playerGroups';
 import {
   askAiAnswered,
   askAiFailed,
@@ -76,6 +78,7 @@ import {
   stopSoundEffects,
   synthPresetOf,
 } from './soundEffects';
+import {drawSpeechBubble} from './speechBubble';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 // A burst from the player starts at its take-off spot this many frames
@@ -192,7 +195,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Scene-jump handlers, set by the view (it compiles the target and
     // re-runs).
     this.onGoToScene = null;
-    this.onGoToExternalScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
     // ({touching: image names, height: 0 floor to 1 top}) each frame a
@@ -210,14 +212,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onSceneJumpStart = null;
     this.onSceneJumpLand = null;
     this.onSceneJumpCancel = null;
-    // When set, re-runs preload from this list instead of the project's own
-    // (external scenes carry their own images). One list per project: its
-    // identity tells the caches below apart.
-    this.preloadAnimationsOverride = null;
-    // Decoded images for this project and for the external project visited
-    // last; whichever is running is the p5 wrapper's cache.
-    this.ownPreloads_ = {};
-    this.externalPreloads_ = null;
+    // Decoded images, reused by name across re-runs; handed to each p5
+    // wrapper as its cache.
+    this.preloads_ = {};
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
@@ -522,6 +519,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // platform draw loop below); a fresh run starts back at 1.
     this.cameraZoom_ = 1;
     this.cameraZoomTarget_ = 1;
+    // The world the camera shows, set by each zoomed frame; null until then,
+    // for a scene drawn without the camera.
+    this.bubbleView_ = null;
     // Not reset per run: a restart re-runs the program, and zeroing this here
     // would let the next frame restart again immediately.
     this.lastRestartAt_ = this.lastRestartAt_ || 0;
@@ -571,11 +571,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       return id;
     };
-    // Move existing sprites (e.g. world-placed ones) into the players
-    // group; the per-frame resolver picks them up from there.
-    library.commands.setPlatformPlayer = spriteArg => {
+    // Move existing sprites (e.g. world-placed ones) into a player group;
+    // the per-frame resolver picks them up from there.
+    library.commands.setPlatformPlayer = (spriteArg, group = PLAYER_GROUP) => {
       library.getSpriteArray(spriteArg).forEach(sprite => {
-        sprite.group = 'players';
+        sprite.group = group;
       });
     };
     // Footing in the gravity direction — the resolver's own geometry, so it
@@ -590,20 +590,19 @@ export default class SpriteLab2Engine extends SpriteLab {
       const walls = this.wallsThisFrame_(library);
       const view = {width: p5.width, height: p5.height};
       return library.getSpriteArray(spriteArg).some(sprite => {
-        const gravity =
-          sprite.group === 'players'
-            ? this.platformGravity_
-            : this.bodyGravity_();
+        const gravity = isPlayerGroup(sprite.group)
+          ? this.platformGravity_
+          : this.bodyGravity_();
         return gravity === 0 || test(sprite, walls, view, gravity);
       });
     };
-    // Jump against gravity if any player has footing.
-    library.commands.platformJump = speed => {
+    // Jump against gravity if any player of the group has footing.
+    library.commands.platformJump = (speed, group = PLAYER_GROUP) => {
       // Weightless, the player is steered up and down instead.
       if (this.platformGravity_ === 0) {
         return;
       }
-      if (!footing({group: 'players'}, isSupported)) {
+      if (!footing({group}, isSupported)) {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
@@ -623,15 +622,21 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (jumpSpeed === 0) {
         return;
       }
-      this.jumpStarts_ = new Map();
-      this.jumpImpulseFrame_ = this.p5Wrapper.p5
-        ? this.p5Wrapper.p5.frameCount
-        : -Infinity;
-      library.getSpriteArray({group: 'players'}).forEach(sprite => {
-        this.jumpStarts_.set(sprite, {
-          x: sprite.position.x,
-          y: sprite.position.y,
-        });
+      // Take-off spots serve the jump event, which only the arrow-key
+      // player raises; a player 2 jump must not reset them.
+      if (group === PLAYER_GROUP) {
+        this.jumpStarts_ = new Map();
+        this.jumpImpulseFrame_ = this.p5Wrapper.p5
+          ? this.p5Wrapper.p5.frameCount
+          : -Infinity;
+      }
+      library.getSpriteArray({group}).forEach(sprite => {
+        if (group === PLAYER_GROUP) {
+          this.jumpStarts_.set(sprite, {
+            x: sprite.position.x,
+            y: sprite.position.y,
+          });
+        }
         sprite.velocity.y = up * jumpSpeed;
       });
     };
@@ -696,6 +701,17 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       return fires ? [{}] : [];
     };
+    // The say and think bubbles, drawn this lab's way (speechBubble.ts),
+    // inside the part of the world the camera shows.
+    library.drawSpeechBubble = (text, spriteX, spriteY, bubbleType) =>
+      drawSpeechBubble(
+        library.p5,
+        text,
+        spriteX,
+        spriteY,
+        bubbleType,
+        this.bubbleView_ || undefined
+      );
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));
@@ -724,7 +740,30 @@ export default class SpriteLab2Engine extends SpriteLab {
         warnMissing(opts.animation);
         return null;
       }
-      return addSprite(opts);
+      const id = addSprite(opts);
+      const sprite = id === undefined ? null : library.nativeSpriteMap[id];
+      if (sprite) {
+        // "When touches" against a platform block: the stock overlap wants
+        // the shapes to overlap, and a body resting on a block only meets
+        // it, so a touch with a wall is judged with a little slack instead.
+        const overlap = sprite.overlap.bind(sprite);
+        sprite.overlap = (target, callback) => {
+          const wall =
+            target?.group === 'walls' && sprite.group !== 'walls'
+              ? target
+              : sprite.group === 'walls' && target?.group !== 'walls'
+              ? sprite
+              : null;
+          if (wall && touchesWall(wall === target ? sprite : target, wall)) {
+            if (callback) {
+              callback(sprite, target);
+            }
+            return true;
+          }
+          return overlap(target, callback);
+        };
+      }
+      return id;
     };
     const setAnimation = library.commands.setAnimation;
     library.commands.setAnimation = function (spriteArg, animation) {
@@ -750,9 +789,6 @@ export default class SpriteLab2Engine extends SpriteLab {
             this.onRestartScene();
           })
       );
-    };
-    library.commands.goToExternalScene = sceneKey => {
-      this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
     };
     getStore().dispatch(clearPrompt());
     const toChoices = (...values) =>
@@ -1130,9 +1166,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Preload images added since the initial execute() — the costume/
     // background commands silently no-op on unknown names. Already-loaded
     // entries are skipped and trims are cached, so re-runs are cheap.
-    await this.preloadTrimmedImages_(
-      this.preloadAnimationsOverride || getStore().getState().animationList
-    );
+    await this.preloadTrimmedImages_(getStore().getState().animationList);
     p5.allSprites.removeSprites();
     // removeSprites destroyed the edge sprites too; clear the handle so the
     // next edgesCollide/edgesDisplace recreates them instead of colliding
@@ -1276,16 +1310,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
-    // Decoded images are reused by name across re-runs, and another
-    // project's names collide with this one's, so each project runs from
-    // its own cache.
-    const external = this.isExternalList_(animationList);
-    if (external && this.externalPreloads_?.list !== animationList) {
-      this.externalPreloads_ = {list: animationList, cache: {}};
-    }
-    this.p5Wrapper.preloadedSprites = external
-      ? this.externalPreloads_.cache
-      : this.ownPreloads_;
+    this.p5Wrapper.preloadedSprites = this.preloads_;
     const scoped = this.referencedImages
       ? filterAnimationsToNames(animationList, this.referencedImages)
       : animationList;
@@ -1293,7 +1318,6 @@ export default class SpriteLab2Engine extends SpriteLab {
       loadedAnimations(
         await trimAnimationListImages(scoped, {
           keepNames: animationNames(animationList),
-          thumbnails: !external,
           upscalePixelArt: true,
         })
       ),
@@ -1319,15 +1343,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
   }
 
-  isExternalList_(animationList) {
-    return animationList === this.preloadAnimationsOverride;
-  }
-
   // Decode one animation by name, mid-run: the escape hatch for a costume
   // name built dynamically, which the scene-scoped preload cannot see.
   async decodeAnimationOnDemand_(name) {
-    const list =
-      this.preloadAnimationsOverride || getStore().getState().animationList;
+    const list = getStore().getState().animationList;
     const key = (list.orderedKeys || []).find(
       k => list.propsByKey[k]?.name === name
     );
@@ -1342,7 +1361,6 @@ export default class SpriteLab2Engine extends SpriteLab {
       loadedAnimations(
         await trimAnimationListImages(single, {
           keepNames: animationNames(list),
-          thumbnails: !this.isExternalList_(list),
           upscalePixelArt: true,
         })
       ),
@@ -1388,7 +1406,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // the scene a few pixels out for one frame.
       engine.resolvePlatformPhysics_();
       engine.physicsResolvedThisFrame_ = true;
-      const player = this.getSpriteArray({group: 'players'})[0];
+      const player = this.getSpriteArray({group: PLAYER_GROUP})[0];
       const focus = cameraFocus(zoom, player ? player.position : null);
       if (engine.frameCaptureArmed_) {
         // The picture shows the whole world: drawn at zoom 1, copied by the
@@ -1421,6 +1439,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     camera.position.y = focus.y;
     camera.on();
     p5.drawSprites();
+    this.bubbleView_ = {
+      x: focus.x - APP_WIDTH / (2 * zoom),
+      y: focus.y - APP_HEIGHT / (2 * zoom),
+      width: APP_WIDTH / zoom,
+      height: APP_HEIGHT / zoom,
+    };
     library.drawSpeechBubbles();
     camera.off();
   }
@@ -1463,7 +1487,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // Consuming the one-frame mark: see usePlatformBody.
       const marked = sprite.__slab2Body;
       sprite.__slab2Body = false;
-      if (sprite.group === 'players') {
+      if (isPlayerGroup(sprite.group)) {
         players.push(snapshot(sprite));
       } else if (marked) {
         bodies.push(snapshot(sprite));
@@ -1475,7 +1499,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.prevBodies_.forEach(sprite => {
       if (
         !sprite.removed &&
-        sprite.group !== 'players' &&
+        !isPlayerGroup(sprite.group) &&
         !bodies.some(b => b.sprite === sprite)
       ) {
         sprite.mirrorY(1);
@@ -1508,10 +1532,14 @@ export default class SpriteLab2Engine extends SpriteLab {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }
     // Both the requested and the resolved positions are known here, so this
-    // is where the observer is fed.
-    this.observePlayer_(players, walls, view);
-    this.trackPlayerActions_(players, walls, view);
-    this.reportPlayerProgress_(players, view);
+    // is where the observer is fed. The arrow-key player is the one heard,
+    // tracked and reported; player 2 only moves.
+    const firstPlayers = players.filter(
+      ({sprite}) => sprite.group === PLAYER_GROUP
+    );
+    this.observePlayer_(firstPlayers, walls, view);
+    this.trackPlayerActions_(firstPlayers, walls, view);
+    this.reportPlayerProgress_(firstPlayers, view);
   }
 
   trackPlayerActions_(players, walls, view) {
@@ -1549,7 +1577,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     const p = half(player);
     const touching = [];
     Object.values(this.library.nativeSpriteMap).forEach(sprite => {
-      if (sprite === player || sprite.removed || sprite.group === 'walls') {
+      if (
+        sprite.removed ||
+        sprite.group === 'walls' ||
+        isPlayerGroup(sprite.group)
+      ) {
         return;
       }
       const s = half(sprite);
@@ -1684,8 +1716,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (!p5 || !library) {
       return;
     }
-    const list =
-      this.preloadAnimationsOverride || getStore().getState().animationList;
+    const list = getStore().getState().animationList;
     if (this.posesSource_ !== list) {
       this.posesSource_ = list;
       this.posesByName_ = posesByImageName(list);
@@ -1715,7 +1746,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       state.x = sprite.position.x;
       state.facing = nextFacing(state.facing, dx);
       const moving = isMoving(dx);
-      const player = this.usesPlatformPhysics_ && sprite.group === 'players';
+      const player = this.usesPlatformPhysics_ && isPlayerGroup(sprite.group);
       const airborne =
         player && !isSupported(sprite, walls, view, this.platformGravity_);
       if (moving || airborne) {

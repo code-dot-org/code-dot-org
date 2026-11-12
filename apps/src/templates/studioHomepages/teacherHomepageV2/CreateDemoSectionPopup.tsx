@@ -1,4 +1,4 @@
-import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {LinearProgress} from '@mui/material';
 import React from 'react';

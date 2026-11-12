@@ -34,6 +34,7 @@
     },
     "block_catalog": true,
     "use_secondary_finish_button": "true",
+    "finish_dialog": "hoai2026",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -55,7 +56,15 @@
         },
         {
           "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer2"
+        },
+        {
+          "kind": "block",
           "type": "spritelab2_thePlayer"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_thePlayer2"
         },
         {
           "kind": "block",
@@ -90,10 +99,6 @@
             "LENGTH": "short",
             "PATTERN": "slide up"
           }
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_playMusic"
         },
         {
           "kind": "block",
@@ -138,10 +143,6 @@
           "fields": {
             "TEXT": "You win!"
           }
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition"
         },
         {
           "kind": "block",
@@ -190,10 +191,6 @@
         {
           "kind": "block",
           "type": "spritelab2_goToScene"
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_goToExternalScene"
         }
       ]
     },

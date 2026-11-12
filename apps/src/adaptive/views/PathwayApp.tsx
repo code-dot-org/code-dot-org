@@ -30,6 +30,8 @@ import {
   Progress,
   isComplete,
   stepIdToResume,
+  stepsCompleteShare,
+  totalTimeSpent,
   useProgress,
   visibleSteps,
 } from '../progress';
@@ -42,6 +44,7 @@ import AdaptiveHeader from './AdaptiveHeader';
 import AdaptiveTabBar from './AdaptiveTabBar';
 import {checkpointStepFromUrl, clearUrl} from './checkpointUrl';
 import FinishDialog from './FinishDialog';
+import {getSkillProgress} from './map/groupProgress';
 import MapScreen from './MapScreen';
 import {PathwayContext} from './PathwayContext';
 import StepPlayer from './steps/StepPlayer';
@@ -211,6 +214,13 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   const dispatch = useAppDispatch();
   const projectName = useAppSelector(
     state => state.lab.channel?.name || undefined
+  );
+  const stepShares = useMemo(
+    () =>
+      Object.fromEntries(
+        pathway.checkpoints.map(c => [c.id, stepsCompleteShare(c, progress)])
+      ),
+    [pathway, progress]
   );
   const [view, setView] = useState<View>(
     initialCheckpointId
@@ -464,7 +474,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   return (
     <div className={styles.app}>
       <AdaptiveHeader
-        title={`Skill Tree: ${pathway.title}`}
+        title={`Skill Map: ${pathway.title}`}
         onFinish={() => {
           sendFinalProjectClicked('mapHeader', statusMap);
           requestFinish();
@@ -479,11 +489,14 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           }
         }}
         projectName={projectName}
+        skills={getSkillProgress(pathway, statusMap)}
+        timeSpentSeconds={totalTimeSpent(progress)}
       />
       <MapScreen
         pathway={pathway}
         levelProperties={levelProperties}
         statusMap={statusMap}
+        stepShares={stepShares}
         evidence={evidence}
         focusId={view.kind === 'map' ? view.focusId : undefined}
         onFocus={focusId => setView({kind: 'map', focusId})}

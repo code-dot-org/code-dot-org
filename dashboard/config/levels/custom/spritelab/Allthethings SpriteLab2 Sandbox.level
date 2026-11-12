@@ -52,6 +52,42 @@
           "contents": [
             {
               "kind": "block",
+              "type": "gamelab_showVariable",
+              "id": "+OT#2VQGHW]uqgo$7).2",
+              "fields": {
+                "VAR": {
+                  "id": "s?sT)/qtb8zCDmR8Qh@L",
+                  "name": "m",
+                  "type": ""
+                }
+              },
+              "inputs": {
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": null
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_hideVariable",
+              "id": "aMka^g0CT;C|dLpcBPM1",
+              "fields": {
+                "VAR": {
+                  "id": "na42CC(!J_5^Esm^HJ9Z",
+                  "name": "j",
+                  "type": ""
+                }
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
               "type": "gamelab_setBackgroundImageAs",
               "id": "-O*K/-vJ*Ux7OtvgX;bR",
               "fields": {
@@ -1007,6 +1043,26 @@
             },
             {
               "kind": "block",
+              "type": "gamelab_everyInterval",
+              "id": "[L+lzmtw11w]lj)-p$=_",
+              "fields": {
+                "UNIT": "<field name=\"UNIT\">\"seconds\"</field>"
+              },
+              "inputs": {
+                "N": {
+                  "shadow": {
+                    "type": "math_number",
+                    "id": "k7Qe2mVx9LpT4nZc8RbW",
+                    "fields": {
+                      "NUM": 2
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
               "type": "gamelab_checkTouching",
               "id": "QrFc5?FW:In3VofP,Y_O",
               "fields": {
@@ -1075,6 +1131,18 @@
                   }
                 }
               },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_touchedSprite",
+              "id": "1Ro7.5G}D|hOxO0du{X;",
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_clickedSprite",
+              "id": "y%+[jqg0cA6aR;0RM8D[",
               "enabled": true
             }
           ],
@@ -1280,15 +1348,6 @@
               "kind": "block",
               "type": "spritelab2_goToScene",
               "id": "q|MY!wh)Tx|DiL|Xcd={",
-              "fields": {
-                "SCENE": ""
-              },
-              "enabled": true
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_goToExternalScene",
-              "id": "zKM;+c=FMirR|^A3]H13",
               "fields": {
                 "SCENE": ""
               },
@@ -2088,7 +2147,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-29 12:31:19 -0700\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 14:17:47 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:16 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:24 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-10-29 12:31:19 -0700\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 14:17:47 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:16 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:24 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-09 11:09:52 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"},{\"changed_at\":\"2026-11-09 11:28:35 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"},{\"changed_at\":\"2026-11-09 12:04:22 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 13:30:21 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
