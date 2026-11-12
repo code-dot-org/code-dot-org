@@ -24,6 +24,10 @@ type ExtraOptions = Record<string, unknown>;
 type SDKTools = NonNullable<SDKOptions['tools']>;
 type SDKOutput = NonNullable<SDKOptions['output']>;
 
+// The worker runs one non-streaming step, so stepMs and chunkMs do not apply.
+const totalTimeoutMs = (timeout: SDKOptions['timeout']): number | undefined =>
+  typeof timeout === 'number' ? timeout : timeout?.totalMs;
+
 const base64ToUint8Array = (base64: string): Uint8Array => {
   const binaryString = atob(base64);
   return Uint8Array.from(binaryString, char => char.charCodeAt(0));
@@ -98,7 +102,8 @@ const generateTextThroughGateway = async <
   options: SDKOptions,
   extraOptions?: ExtraOptions
 ): Promise<GatewayGenerateTextResult<TOOLS, OUTPUT>> => {
-  const {model, ...restOptions} = options;
+  // timeout and abortSignal act here, in the browser, and are not sent.
+  const {model, timeout, abortSignal, ...restOptions} = options;
   const phase = extraOptions?.phase as GatewayPhase | undefined;
   // A caller outside a chat passes its own context for the access token.
   const aichatContext =
@@ -124,7 +129,7 @@ const generateTextThroughGateway = async <
 
       const response = await sendGatewayRequest(
         aichatContext,
-        (accessToken, challengeToken) =>
+        (accessToken, challengeToken, signal) =>
           HttpClient.post(
             AI_GATEWAY_URL,
             JSON.stringify({...payload, token: accessToken}),
@@ -134,8 +139,15 @@ const generateTextThroughGateway = async <
               'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
               ...challengeHeaders(challengeToken),
               ...(phase && {'x-ai-gateway-phase': phase}),
-            }
-          )
+            },
+            {signal}
+          ),
+        {
+          timeoutMs: totalTimeoutMs(timeout),
+          abortSignal,
+          excludeChallengeFromTimeout:
+            extraOptions?.excludeChallengeFromTimeout === true,
+        }
       );
 
       const rawResponse = await response.json();

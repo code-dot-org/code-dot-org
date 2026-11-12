@@ -64,7 +64,11 @@ describe('sendGatewayRequest', () => {
     const response = await sendGatewayRequest(aichatContext, send);
 
     expect(response).toEqual({ok: true});
-    expect(send).toHaveBeenCalledWith('token-1', challengeToken);
+    expect(send).toHaveBeenCalledWith(
+      'token-1',
+      challengeToken,
+      expect.any(AbortSignal)
+    );
     expect(mockFetchChallengeToken).toHaveBeenCalledWith('enforce');
   });
 
@@ -120,5 +124,80 @@ describe('sendGatewayRequest', () => {
     await sendGatewayRequest(aichatContext, send);
 
     expect(sentAccessTokens()).toEqual(['token-1', 'token-2', 'token-2']);
+  });
+
+  describe('timeout', () => {
+    const after = <T>(ms: number, value: T) =>
+      new Promise<T>(resolve => setTimeout(() => resolve(value), ms));
+    const ok = {ok: true} as Response;
+
+    beforeEach(() => {
+      jest.useFakeTimers();
+      mockFetchChallengeToken.mockImplementation(() =>
+        after(20_000, challengeToken)
+      );
+    });
+
+    afterEach(() => {
+      mockFetchChallengeToken.mockImplementation(async () => challengeToken);
+      jest.useRealTimers();
+    });
+
+    it('counts the challenge against the timeout by default, as the AI SDK does', async () => {
+      send.mockImplementation(() => after(15_000, ok));
+
+      const pending = sendGatewayRequest(aichatContext, send, {
+        timeoutMs: 30_000,
+      });
+      const assertion = expect(pending).rejects.toMatchObject({
+        name: 'TimeoutError',
+      });
+      await jest.advanceTimersByTimeAsync(30_000);
+      await assertion;
+    });
+
+    it('starts the timer once the challenge token is in hand when the challenge is excluded', async () => {
+      send.mockImplementation(() => after(15_000, ok));
+
+      const pending = sendGatewayRequest(aichatContext, send, {
+        timeoutMs: 30_000,
+        excludeChallengeFromTimeout: true,
+      });
+      await jest.advanceTimersByTimeAsync(35_000);
+      await expect(pending).resolves.toBe(ok);
+    });
+
+    it('still times out, and aborts, a slow request when the challenge is excluded', async () => {
+      let sentSignal: AbortSignal | undefined;
+      send.mockImplementation((_accessToken, _challengeToken, signal) => {
+        sentSignal = signal;
+        return new Promise(() => {});
+      });
+
+      const pending = sendGatewayRequest(aichatContext, send, {
+        timeoutMs: 30_000,
+        excludeChallengeFromTimeout: true,
+      });
+      const assertion = expect(pending).rejects.toMatchObject({
+        name: 'TimeoutError',
+      });
+      await jest.advanceTimersByTimeAsync(20_000 + 30_000);
+      await assertion;
+      expect(sentSignal?.aborted).toBe(true);
+    });
+
+    it("rejects with the caller's abort reason", async () => {
+      const controller = new AbortController();
+      const reason = new Error('left the page');
+      send.mockImplementation(() => new Promise(() => {}));
+
+      const pending = sendGatewayRequest(aichatContext, send, {
+        abortSignal: controller.signal,
+      });
+      const assertion = expect(pending).rejects.toBe(reason);
+      await jest.advanceTimersByTimeAsync(20_000);
+      controller.abort(reason);
+      await assertion;
+    });
   });
 });
