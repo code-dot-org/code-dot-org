@@ -43,14 +43,14 @@
       "title": "**Friend or foe?**",
       "items": [
         {
-          "text": "In **Images**, click **New image** and make a friend or a foe.",
+          "text": "In **Images**, select the **+** button and make a friend or a foe.",
           "check": {
             "kind": "image",
             "imageType": "sprite"
           }
         },
         {
-          "text": "In **World**, click a square to place one or more.",
+          "text": "In **World**, select a square to place one or more.",
           "check": {
             "kind": "world",
             "role": "friend"

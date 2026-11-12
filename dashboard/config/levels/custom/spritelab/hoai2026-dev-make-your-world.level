@@ -85,7 +85,7 @@
       "title": "**Make your world**",
       "items": [
         {
-          "text": "Click a square to place your object where your player can reach it.",
+          "text": "Select a square to place your object where your player can reach it.",
           "check": {
             "kind": "world",
             "role": "treasure"
@@ -99,7 +99,7 @@
           }
         },
         {
-          "text": "Click **Play**, then run and jump to your object.",
+          "text": "Select **Run**, then run and jump to your object.",
           "check": {
             "kind": "reach",
             "role": "treasure"
