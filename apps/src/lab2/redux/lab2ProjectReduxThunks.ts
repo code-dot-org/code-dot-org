@@ -7,6 +7,7 @@ import {AnyAction} from 'redux';
 
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {ABUSE_SCORE_BLOCK_THRESHOLD} from '@cdo/apps/lab2/constants';
 import {setIsBlockedAbuse} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
@@ -344,8 +345,8 @@ export const unflagProjectChannel = async (
     // Get the updated abuse score from the response.
     const responseData = await response.json();
     const abuseScore = responseData.abuse_score;
-    // Only unblock if abuse score is now < 15.
-    if (abuseScore < 15) {
+    // Another flag may still be holding the project down.
+    if (abuseScore < ABUSE_SCORE_BLOCK_THRESHOLD) {
       dispatch(setIsBlockedAbuse(false));
     }
   } catch (error) {

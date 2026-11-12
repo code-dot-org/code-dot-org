@@ -30,7 +30,10 @@ import {RootState} from '../types/redux';
 import {NetworkError} from '../util/HttpClient';
 import {AppDispatch} from '../util/reduxHooks';
 
-import {PROJECT_TYPES_WITH_SHARE_FILTERING} from './constants';
+import {
+  ABUSE_SCORE_BLOCK_THRESHOLD,
+  PROJECT_TYPES_WITH_SHARE_FILTERING,
+} from './constants';
 import Lab2Registry from './Lab2Registry';
 import {
   getInitialValidationState,
@@ -324,7 +327,8 @@ const labSlice = createSlice({
       state.levelProperties = levelProperties;
       state.initialSources = action.payload.initialSources;
       if (typeof action.payload.abuseScore === 'number') {
-        state.isBlockedAbuse = action.payload.abuseScore >= 15 ? true : false;
+        state.isBlockedAbuse =
+          action.payload.abuseScore >= ABUSE_SCORE_BLOCK_THRESHOLD;
       }
       state.shareFailure = action.payload.shareFailure ?? null;
       state.projectSharingDisabled =
