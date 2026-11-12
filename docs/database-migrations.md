@@ -2,10 +2,6 @@
 
 How to add or change a table in the dashboard MySQL database.
 
-**TL;DR:** This is basic Rails best practice. Always separate migrations from the code that
-uses them, and think about sequencing so the old code can use the new schema, and the new
-code can use the old schema.
-
 ## Ship the migration in its own PR
 
 Put the migration in a PR by itself and merge it before any code that depends on it.
