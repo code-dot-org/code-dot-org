@@ -74,7 +74,7 @@ const KEYS_BY_KIND: Record<LevelModeKind, (keyof LevelMode)[]> = {
 
 /** Whether a value is a list with at least one entry, each passing
     `isEntry` and none repeated. */
-function isListOf(
+function isNonEmptyUniqueListOf(
   value: unknown,
   isEntry: (entry: unknown) => boolean
 ): boolean {
@@ -114,11 +114,11 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
     case 'imageRole':
       return isNonEmptyString(value);
     case 'paletteRoles':
-      return isListOf(value, isNonEmptyString);
+      return isNonEmptyUniqueListOf(value, isNonEmptyString);
     case 'extraTabs':
-      return isListOf(value, isOneOf(EXTRA_TABS));
+      return isNonEmptyUniqueListOf(value, isOneOf(EXTRA_TABS));
     case 'imageKinds':
-      return isListOf(value, isOneOf(IMAGE_TYPES));
+      return isNonEmptyUniqueListOf(value, isOneOf(IMAGE_TYPES));
     // A false flag reads the same as no flag, so only true is stored.
     case 'imageFirst':
     case 'learning':
