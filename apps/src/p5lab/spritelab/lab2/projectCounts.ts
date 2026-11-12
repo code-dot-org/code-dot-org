@@ -34,6 +34,34 @@ export function imageCountsDelta(
   };
 }
 
+/**
+ * The AI-made images that count as made on a level: how many, by kind, and
+ * whether the student has rated any of them. They are the images whose
+ * names were not in the project when the level opened (`namesBefore`), and
+ * the level's own image (`ownNames`, the ones carrying its role), whenever
+ * it was made. A student who comes back to a level changes that image in
+ * place, so it is never a new one.
+ */
+export function generatedOnLevel(
+  list: RuntimeAnimationList,
+  namesBefore: ReadonlySet<string>,
+  ownNames: ReadonlySet<string>
+): {generated: ImageCounts; rated: boolean} {
+  const generated: ImageCounts = {sprite: 0, background: 0, block: 0};
+  let rated = false;
+  list.orderedKeys.forEach(key => {
+    const props = list.propsByKey[key];
+    if (
+      props?.generation &&
+      (!namesBefore.has(props.name) || ownNames.has(props.name))
+    ) {
+      generated[imageTypeFromCategories(props.categories)]++;
+      rated ||= !!props.generation.verdict;
+    }
+  });
+  return {generated, rated};
+}
+
 // Placed World cells, tallied by kind.
 export function countWorldCells(grid?: (WorldCell | null)[][]): WorldCounts {
   let blocks = 0;
