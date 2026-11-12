@@ -308,7 +308,7 @@ describe('QuizBuilderWorkspace', () => {
       addPendingQuestion,
     });
 
-    expect(screen.getByText('Page 2')).toBeInTheDocument();
+    expect(screen.getByRole('heading', {name: 'Page 2'})).toBeInTheDocument();
     expect(screen.getByText('This page is empty')).toBeInTheDocument();
     const addPage = screen.getByRole('button', {name: 'Add page'});
     expect(addPage).toHaveAttribute('aria-disabled', 'true');
