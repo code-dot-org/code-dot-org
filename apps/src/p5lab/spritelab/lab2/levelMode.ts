@@ -32,9 +32,8 @@ export interface LevelMode {
   /** Where the level's pictures come from (imageCache.ts); the tree first
       when unset. */
   imageSource?: ImageSource;
-  /** The Images tab offers one image, of the level's imageType, with
-      GENERATION_LIMIT generations of it and no adding or deleting. Unset,
-      the tab is as in free play. */
+  /** The Images tab offers one image, of the level's imageType, with no
+      adding or deleting. Unset, the tab is as in free play. */
   oneImage?: boolean;
   /** Tabs the level shows in addition to its kind's own, for example
       ["Images", "World"]. A level uses this to keep the editors of earlier
@@ -57,13 +56,9 @@ export interface LevelMode {
   imageKinds?: ImageType[];
   /** How many pictures the student can generate in one visit to the
       level, counted across all its images. Unset, there is no limit, as
-      in free play, except on a one-image level, which allows
-      GENERATION_LIMIT. */
+      in free play, on a one-image level too. */
   generationLimit?: number;
 }
-
-/** Generations a one-image level allows when it names no limit. */
-export const GENERATION_LIMIT = 5;
 
 /** The style the advanced generate form starts on; the student form is
     pixel art only. */
@@ -124,11 +119,10 @@ export function generationLimitForMode(
   mode: LevelMode | undefined
 ): number | undefined {
   // The option is edited as JSON, so it may not be a count.
-  const own = mode?.generationLimit;
-  if (typeof own === 'number' && Number.isInteger(own) && own > 0) {
-    return own;
-  }
-  return isOneImageMode(mode) ? GENERATION_LIMIT : undefined;
+  const limit = mode?.generationLimit;
+  return typeof limit === 'number' && Number.isInteger(limit) && limit > 0
+    ? limit
+    : undefined;
 }
 
 /** The source a mode's pictures come from: the tree first unless named. */

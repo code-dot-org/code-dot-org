@@ -23,6 +23,7 @@
     "level_mode": {
       "kind": "image",
       "limitedPaintTools": true,
+      "generationLimit": 5,
       "imageType": "sprite",
       "imageRole": "hero",
       "learning": true,

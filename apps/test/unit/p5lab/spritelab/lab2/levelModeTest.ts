@@ -1,5 +1,4 @@
 import {
-  GENERATION_LIMIT,
   generationLimitForMode,
   imageSourceForMode,
   isFreeplayMode,
@@ -101,6 +100,9 @@ describe('generationLimitForMode', () => {
     expect(
       generationLimitForMode({kind: 'code', extraTabs: ['Images']})
     ).toBeUndefined();
+    expect(
+      generationLimitForMode({kind: 'image', oneImage: true})
+    ).toBeUndefined();
   });
 
   it('is the limit the level names', () => {
@@ -112,12 +114,6 @@ describe('generationLimitForMode', () => {
         generationLimit: 8,
       })
     ).toBe(8);
-  });
-
-  it('is the standard limit on a one-image level that names none', () => {
-    expect(generationLimitForMode({kind: 'image', oneImage: true})).toBe(
-      GENERATION_LIMIT
-    );
   });
 
   it('ignores a limit that was saved as something other than a count', () => {

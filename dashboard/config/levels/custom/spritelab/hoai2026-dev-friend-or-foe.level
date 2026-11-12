@@ -24,6 +24,7 @@
     "level_mode": {
       "kind": "world",
       "limitedPaintTools": true,
+      "generationLimit": 5,
       "imageType": "sprite",
       "imageRole": "friend",
       "paletteRoles": [

@@ -25,6 +25,7 @@
     "level_mode": {
       "kind": "code",
       "limitedPaintTools": true,
+      "generationLimit": 5,
       "imageType": "background",
       "imageRole": "platform-background",
       "imageFirst": true,
