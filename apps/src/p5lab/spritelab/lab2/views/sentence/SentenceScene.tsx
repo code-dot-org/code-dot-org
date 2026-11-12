@@ -167,8 +167,7 @@ interface SentenceSceneProps {
   onKeep: (result: GeneratedImageResult) => Promise<void> | void;
   /** Called with each generated picture before it is shown. The scene
       keeps showing that the picture is being made until the returned
-      promise resolves, and shows the picture then. A host uses this to say
-      something about the picture first. */
+      promise resolves, and shows the picture then. */
   onReady?: (result: GeneratedImageResult) => Promise<void> | void;
   /** Called when the student rates the kept picture; resolves true once
       the verdict is on its record. Without it, or when it resolves false,

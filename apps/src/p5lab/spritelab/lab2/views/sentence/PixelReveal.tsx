@@ -144,10 +144,9 @@ interface FirstShowingOnlyProps {
 }
 
 /**
- * Renders its children only the first time a picture is shown. The frame
- * that holds a generated picture is taken down while the student draws on
- * it and put back afterwards; without this, the reveal animation would
- * play again each time the frame came back.
+ * Renders its children only the first time a picture is shown, by its id.
+ * A picture's frame can be taken down and put back, and the reveal
+ * animation inside it should not play again each time.
  */
 export const FirstShowingOnly: React.FunctionComponent<
   FirstShowingOnlyProps

@@ -302,10 +302,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       const generation = writer.rateGenerated(key, verdict);
       if (!generation) {
         // The picture has been edited by hand, which removes its generation
-        // record, so there is nowhere to write the verdict. Returning true
-        // tells the scene the rating is dealt with. Returning false would
-        // make it store the original generated picture again, over the
-        // student's edits.
+        // record, so there is nowhere to write the verdict. True tells the
+        // scene the rating is dealt with, so it does not store its own copy
+        // of the picture again, which would go over the student's edits.
         return true;
       }
       adoptGeneration(key, generation);
@@ -636,13 +635,16 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             // closes them and keeps the drawing. `doneDisabled` is true for
             // a new drawing that has no strokes yet: there is nothing to
             // keep, so the button cannot be pressed.
-            const makePane = (doneDisabled = false) => (
+            const makePane = (doneDisabled = false, drawnOn = false) => (
               <MakePane
                 parts={parts}
                 width={paneWidth}
                 replaces={!!chosenImage}
                 regenerate={!!chosenImage?.props.generation}
-                editedByHand={sceneCopyStale}
+                // `drawnOn` covers strokes the open tools hold that are not
+                // saved yet: the stored image is marked as edited only
+                // once a save has gone through.
+                editedByHand={sceneCopyStale || drawnOn}
                 onDraw={
                   drawOffered
                     ? () => {
@@ -755,7 +757,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                           ),
                           frameRow
                         )}
-                        {makePane(!drawing.target.key && !editor.edited)}
+                        {makePane(
+                          !drawing.target.key && !editor.edited,
+                          editor.edited
+                        )}
                       </>
                     );
                   }}

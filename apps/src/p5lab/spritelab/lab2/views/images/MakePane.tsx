@@ -61,9 +61,10 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
   );
   // The first generation over an existing image asks for confirmation.
   // After a picture has been generated in this session the next one
-  // replaces it without asking, unless the student has drawn on it since:
-  // a new picture would replace their drawing too.
-  const asksFirst = !!replaces && (!parts.frameFilled || !!editedByHand);
+  // replaces it without asking. A picture the student has drawn on always
+  // asks, a new drawing included: a new picture would replace their
+  // drawing too.
+  const asksFirst = (!!replaces && !parts.frameFilled) || !!editedByHand;
   const generate = () => {
     if (asksFirst) {
       setConfirming(true);

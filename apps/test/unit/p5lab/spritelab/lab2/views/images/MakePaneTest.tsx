@@ -103,6 +103,15 @@ describe('MakePane', () => {
     expect(generate).toHaveBeenCalledTimes(1);
   });
 
+  it('asks before generating over a new drawing that is not saved yet', () => {
+    const generate = jest.fn();
+    render(<MakePane parts={parts({generate})} width={280} editedByHand />);
+    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    expect(generate).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', {name: 'Replace'}));
+    expect(generate).toHaveBeenCalledTimes(1);
+  });
+
   it('offers Regenerate for an AI-made image, and the drawing button when given', () => {
     const onDraw = jest.fn();
     render(
