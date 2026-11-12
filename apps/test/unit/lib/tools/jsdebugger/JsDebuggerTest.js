@@ -77,8 +77,8 @@ describe('The JSDebugger component', () => {
         <JsDebugger onSlideOpen={sinon.spy()} onSlideShut={sinon.spy()} />
       </Provider>
     );
-    // Get the inner JsDebugger component by name (inside the Radium and
-    // React-Redux wrappers).
+    // Get the inner JsDebugger component by name (inside the React-Redux
+    // wrapper).
     jsDebugger = root.find('JsDebugger');
   });
 

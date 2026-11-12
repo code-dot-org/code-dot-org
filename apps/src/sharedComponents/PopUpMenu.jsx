@@ -1,6 +1,5 @@
 /** @file Pop-over menu component.  Combine with react-portal to use. */
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component, Children} from 'react';
 import {PortalWithState} from 'react-portal';
 
@@ -8,6 +7,8 @@ import fontConstants from '@cdo/apps/fontConstants';
 import msg from '@cdo/locale';
 
 import color from '../util/color';
+
+import moduleStyles from './PopUpMenu.module.scss';
 
 const TAIL_WIDTH = 14;
 const TAIL_HEIGHT = 12;
@@ -161,7 +162,7 @@ class MenuBubbleUnwrapped extends Component {
   }
 }
 
-export const MenuBubble = Radium(MenuBubbleUnwrapped);
+export const MenuBubble = MenuBubbleUnwrapped;
 
 export class MenuBreak extends Component {
   render() {
@@ -218,9 +219,6 @@ class Item extends Component {
       paddingLeft: STANDARD_PADDING,
       paddingRight: STANDARD_PADDING,
       cursor: 'pointer',
-      ':hover': {
-        backgroundColor: color.lightest_gray,
-      },
     };
 
     const wrapperStyle = {
@@ -242,7 +240,7 @@ class Item extends Component {
     const target = openInNewTab ? '_blank' : '';
 
     return (
-      <div style={wrapperStyle}>
+      <div className={moduleStyles.item} style={wrapperStyle}>
         {this.props.href && (
           <a
             className={classList}
@@ -264,4 +262,4 @@ class Item extends Component {
   }
 }
 
-PopUpMenu.Item = Radium(Item);
+PopUpMenu.Item = Item;
