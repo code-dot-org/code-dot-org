@@ -19,8 +19,8 @@
         // Fully replace any existing node; otherwise, React tries to be
         // clever with our initialState and some things don't get properly
         // updated
-        ReactDOM.unmountComponentAtNode(container)
-        ReactDOM.render(React.createElement(dashboard.GridEditor, {
+        dashboard.unmountReactRoot(container);
+        dashboard.createReactRoot(React.createElement(dashboard.GridEditor, {
           maze: maze,
           initialDirt: initialDirt,
           serializedMaze: serializedMaze,
@@ -49,7 +49,7 @@
         });
       });
 
-      ReactDOM.render(React.createElement(dashboard.GridEditor, {
+      dashboard.createReactRoot(React.createElement(dashboard.GridEditor, {
         serializedMaze: serializedMaze,
         skin: '#{skin}',
         onUpdate: function (serializedData) {
