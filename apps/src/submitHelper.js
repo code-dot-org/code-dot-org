@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import {flushSync} from 'react-dom';
 
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import commonMsg from '@cdo/locale';
@@ -115,15 +116,15 @@ function showConfirmationDialog(config) {
     '</p>';
 
   const buttons = document.createElement('div');
-  createReactRoot(
-    <DialogButtons
-      confirmText={commonMsg.dialogOK()}
-      cancelText={commonMsg.dialogCancel()}
-    />,
-    buttons,
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: the buttons are queried below.
+  flushSync(() =>
+    createReactRoot(
+      <DialogButtons
+        confirmText={commonMsg.dialogOK()}
+        cancelText={commonMsg.dialogCancel()}
+      />,
+      buttons
+    )
   );
   contentDiv.appendChild(buttons);
 
