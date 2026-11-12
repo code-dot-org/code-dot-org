@@ -1,12 +1,8 @@
-import React from 'react';
+import {type StepOptions, type StepOptionsButton, type Tour} from 'shepherd.js';
 
 export const SKILL_MAP_TOUR_STORAGE_KEY = 'adaptive-skill-map-tour-seen-v1';
 export const SKILL_MAP_TOUR_INITIAL_STEP = 0;
 
-/**
- * Step indices for the interactive tour steps. These shift by one when the
- * Skill Checks step is present so MapScreen doesn't hardcode numbers.
- */
 export function getSkillMapTourStepIndices(hasSkippedCheckpoints: boolean) {
   return {
     /** Step where the user picks a checkpoint by clicking the map. */
@@ -16,76 +12,61 @@ export function getSkillMapTourStepIndices(hasSkippedCheckpoints: boolean) {
   };
 }
 
-interface TourStep {
-  element: string;
-  position?: string;
-  title: string;
-  intro: React.JSX.Element;
+function gotItButton(tour: Tour): StepOptionsButton {
+  return {
+    text: 'Got it',
+    action: () => tour.next(),
+    classes: 'custom-shepherd-button-primary',
+  };
 }
 
-export function buildSkillMapTourSteps(hasSkippedCheckpoints: boolean) {
-  const steps: TourStep[] = [
+export function buildSkillMapTourSteps(
+  tour: Tour,
+  hasSkippedCheckpoints: boolean
+): StepOptions[] {
+  const steps: StepOptions[] = [
     {
-      element: '#adaptive-tour-map-canvas',
-      position: 'right',
+      id: 'skill-map',
       title: 'This is your skill map',
-      intro: (
-        <>
-          Each circle is a checkpoint. Finish one and the checkpoints connected
-          to it unlock.
-        </>
-      ),
+      text: 'Each circle is a checkpoint. Finish one and the checkpoints connected to it unlock.',
+      attachTo: {element: '#adaptive-tour-map-canvas', on: 'right'},
+      buttons: [gotItButton(tour)],
     },
     {
-      element: '#adaptive-tour-first-checkpoint',
+      id: 'first-checkpoint',
       title: 'You started here',
-      intro: (
-        <>
-          Now you can pick your own path and choose what you want to learn next.
-        </>
-      ),
+      text: 'Now you can pick your own path and choose what you want to learn next.',
+      attachTo: {element: '#adaptive-tour-first-checkpoint', on: 'bottom'},
+      buttons: [gotItButton(tour)],
     },
   ];
 
   if (hasSkippedCheckpoints) {
     steps.push({
-      element: '#adaptive-tour-first-available',
+      id: 'skill-check',
       title: 'Skill Check',
-      intro: (
-        <>
-          You proved you already know these skills, so you can skip any
-          checkpoint with a lightbulb badge.
-        </>
-      ),
+      text: 'You proved you already know these skills, so you can skip any checkpoint with a lightbulb badge.',
+      attachTo: {element: '#adaptive-tour-first-available', on: 'bottom'},
+      buttons: [gotItButton(tour)],
     });
   }
 
   steps.push(
     {
-      element: '#adaptive-tour-map',
+      id: 'available-checkpoints',
       title: 'Available checkpoints',
-      intro: (
-        <>
-          Start with any of the unlocked checkpoints. Click one to learn more
-          about it.
-        </>
-      ),
+      // No button — a map click advances.
+      text: 'Start with any of the unlocked checkpoints. Click one to learn more about it.',
+      attachTo: {element: '#adaptive-tour-map', on: 'right'},
+      buttons: [],
     },
     {
-      element: '#adaptive-tour-side',
+      id: 'checkpoint-details',
       title: 'Checkpoint details',
-      intro: (
-        <>
-          <p>
-            See what you&apos;ll learn, how long it takes, and what to finish
-            first.
-          </p>
-          <p>
-            Ready? Click Start! You can come back to the skill map anytime to
-            pick a different checkpoint.
-          </p>
-        </>
-      ),
+      // No button — the Start button in CheckpointCard dismisses the tour.
+      text: "<p>See what you'll learn, how long it takes, and what to finish first.</p><p>Ready? Click Start! You can come back to the skill map anytime to pick a different checkpoint.</p>",
+      attachTo: {element: '#adaptive-tour-side', on: 'left'},
+      buttons: [],
     }
   );
 

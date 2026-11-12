@@ -24,15 +24,13 @@ import MapZoom from './map/MapZoom';
 
 import styles from './mapScreen.module.scss';
 
-// Product tour — base library CSS first, then our theme overrides (must follow).
 /* eslint-disable import/order */
-import 'intro.js/introjs.css';
-import './skillMapTourOverrides.scss';
-import {Steps} from 'intro.js-react';
+import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
+import type {Tour} from 'shepherd.js';
+import {createTourWithSteps} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {
   buildSkillMapTourSteps,
   getSkillMapTourStepIndices,
-  SKILL_MAP_TOUR_INITIAL_STEP,
   SKILL_MAP_TOUR_STORAGE_KEY,
 } from './skillMapTourHelpers';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
@@ -71,14 +69,17 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   // the tab label. The manager lives only while the map shows, so it never
   // races a step's manager on the same channel.
   usePathwayProject(pathway);
+
   // During the tour, show CheckpointCard for the user-selected checkpoint
   // without zooming the map. A zoomed map shifts the highlighted node away from
-  // where IntroJS measured it, so we keep the map at its fit view.
+  // where Shepherd measured it, so we keep the map at its fit view.
   const [tourCheckpointId, setTourCheckpointId] = useState<
     string | undefined
   >();
   // Tracks the active tour step so onSelect knows when to intercept map clicks.
   const [tourStep, setTourStep] = useState(0);
+  const tourStepRef = useRef(0);
+
   const effectiveFocusId = tourCheckpointId ?? focusId;
   const focused = effectiveFocusId
     ? pathway.checkpoints.find(c => c.id === effectiveFocusId)
@@ -89,6 +90,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   );
 
   const tourEnded = useRef(false);
+  const tourRef = useRef<Tour | null>(null);
 
   const [tourEnabled, setTourEnabled] = useState(
     () =>
@@ -96,44 +98,68 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
       !tryGetLocalStorage(SKILL_MAP_TOUR_STORAGE_KEY, '0')
   );
 
-  const tourSteps = useMemo(
-    () => buildSkillMapTourSteps(hasSkippedCheckpoints),
-    [hasSkippedCheckpoints]
-  );
   const tourStepIndices = useMemo(
     () => getSkillMapTourStepIndices(hasSkippedCheckpoints),
     [hasSkippedCheckpoints]
   );
 
-  useEffect(() => {
-    if (tourEnabled)
-      sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_STARTED, {
-        hasSkippedCheckpoints,
-      });
-    // Once per map visit.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   const dismissTour = () => {
     if (!tourEnded.current) {
       tourEnded.current = true;
-      if (tourStep >= tourStepIndices.sidebar)
+      if (tourStepRef.current >= tourStepIndices.sidebar)
         sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_COMPLETED);
       else
         sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_DISMISSED, {
-          stepIndex: tourStep,
+          stepIndex: tourStepRef.current,
         });
       localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
       setTourEnabled(false);
       setTourCheckpointId(undefined);
-      document.body.classList.remove(
-        'adaptive-tour-step-select',
-        'adaptive-tour-no-next'
-      );
+      document.body.classList.remove('adaptive-tour-step-select');
     }
   };
 
-  // During the "pick" step, zoom to the centroid of all open checkpoints.
+  // Keep a ref so the tour event handlers always call the latest dismissTour
+  // without needing to be recreated when React state changes.
+  const dismissTourRef = useRef(dismissTour);
+  dismissTourRef.current = dismissTour;
+
+  useEffect(() => {
+    if (!tourEnabled) return;
+
+    const indices = getSkillMapTourStepIndices(hasSkippedCheckpoints);
+    const tour = createTourWithSteps(
+      t => buildSkillMapTourSteps(t, hasSkippedCheckpoints),
+      {scrollTo: false}
+    );
+
+    tour.on('show', () => {
+      const idx = tour.steps.indexOf(tour.currentStep!);
+      tourStepRef.current = idx;
+      setTourStep(idx);
+      document.body.classList.toggle(
+        'adaptive-tour-step-select',
+        idx === indices.pickCheckpoint
+      );
+    });
+
+    tour.on('cancel', () => dismissTourRef.current());
+    tour.on('complete', () => dismissTourRef.current());
+
+    tourRef.current = tour;
+    tour.start();
+    sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_STARTED, {
+      hasSkippedCheckpoints,
+    });
+
+    return () => {
+      if (tour.isActive()) tour.cancel();
+      tourRef.current = null;
+      document.body.classList.remove('adaptive-tour-step-select');
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const tourFocusIds = useMemo(() => {
     if (!tourEnabled || tourStep !== tourStepIndices.pickCheckpoint)
       return undefined;
@@ -149,8 +175,6 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     statusMap,
   ]);
 
-  const stepsRef = useRef<Steps | null>(null);
-
   // A click on the map background while zoomed returns to the full map.
   const onMapClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (focusId && !(e.target as HTMLElement).closest('button')) {
@@ -160,46 +184,6 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
 
   return (
     <div className={styles.mapScreen}>
-      <Steps
-        ref={stepsRef}
-        enabled={tourEnabled}
-        initialStep={SKILL_MAP_TOUR_INITIAL_STEP}
-        steps={tourSteps}
-        onExit={dismissTour}
-        onComplete={dismissTour}
-        onChange={(stepIndex: number) => {
-          setTourStep(stepIndex);
-          document.body.classList.toggle(
-            'adaptive-tour-step-select',
-            stepIndex === tourStepIndices.pickCheckpoint
-          );
-          // On the sidebar step and beyond, the user ends the tour by clicking
-          // Start — hide the Next/Done button so there's only one path forward.
-          document.body.classList.toggle(
-            'adaptive-tour-no-next',
-            stepIndex >= tourStepIndices.sidebar
-          );
-          // Going back from the "open checkpoints" step zooms the map out
-          // (450ms CSS transition). Re-measure element positions once settled
-          // so the spotlight lands on the right node.
-          if (stepIndex === tourStepIndices.pickCheckpoint - 1) {
-            setTimeout(() => stepsRef.current?.introJs?.refresh(true), 500);
-          }
-        }}
-        onBeforeChange={(nextStepIndex: number) => {
-          if (nextStepIndex === 0) {
-            setTourCheckpointId(undefined);
-          }
-        }}
-        options={{
-          scrollToElement: false,
-          exitOnOverlayClick: false,
-          nextLabel: 'Got it',
-          doneLabel: 'Got it',
-          showBullets: false,
-          showStepNumbers: false,
-        }}
-      />
       <div className={styles.mapBody}>
         <ResourcePanel
           levelProperties={levelProperties}
@@ -253,7 +237,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
                   if (statusMap[id] !== 'locked') {
                     sendSelected();
                     setTourCheckpointId(id);
-                    stepsRef.current?.introJs?.nextStep();
+                    tourRef.current?.next();
                   }
                 } else if (id === focusId) {
                   onFocus(undefined);
@@ -280,7 +264,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               statusMap={statusMap}
               evidence={evidence}
               onStart={() => {
-                if (tourEnabled) dismissTour();
+                if (tourEnabled) tourRef.current?.complete();
                 onStart(focused.id);
               }}
               onSelectCheckpoint={onFocus}
