@@ -47,7 +47,7 @@ class LessonTest < ActiveSupport::TestCase
 
   test "lockable_state with quiz as last level" do
     script = create(:script, :in_single_unit_course)
-    quiz = create(:quiz)
+    quiz = create(:quiz, purpose: 'exam')
     lesson = create(:lesson, script: script, lockable: true)
     create(:script_level, script: script, levels: [quiz], assessment: true, lesson: lesson)
 
