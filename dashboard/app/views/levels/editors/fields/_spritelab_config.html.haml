@@ -1,0 +1,10 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#level_config_area"}}
+  Level settings by tab (Lab2 only, experiment)
+
+#level_config_area.in.collapse
+  #spritelab-config-editor
+
+- older = {level_mode: @level.level_mode, world_start_pattern: @level.world_start_pattern, world_start_roles: @level.world_start_roles}
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_spritelab_config.js'),
+        data: {spritelabconfig: {config: @level.level_config, older: older}.to_json}}

@@ -124,6 +124,10 @@ export type WorldStartRoles = {[char: string]: string};
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** What kind of level this is; decides the tabs and the image controls. */
   levelMode?: LevelMode;
+  /** The level's settings in the grouped shape (levelConfig/schema.ts), as
+      saved. It is checked and laid over the older properties before the lab
+      reads them (levelConfig/applyLevelConfig.ts). */
+  levelConfig?: unknown;
   /** The one scene this level edits, created on first load if the project
       lacks it. The id is the key the go-to-scene block stores; the name is
       what the student sees, applied only at creation. The id 'scene-1' is

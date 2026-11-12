@@ -908,6 +908,29 @@ class LevelsControllerTest < ActionController::TestCase
     refute level.properties.key?('level_mode')
   end
 
+  test "update parses level_config into a hash" do
+    level = create(:spritelab)
+    config = {world: {paletteRoles: ['treasure'], startPattern: ['.S.', 'BBB']}}
+    patch :update, params: {id: level, level: {level_config: config.to_json}}
+    assert_response :success
+
+    level.reload
+    assert_equal(
+      {'world' => {'paletteRoles' => ['treasure'], 'startPattern' => ['.S.', 'BBB']}},
+      level.level_config
+    )
+  end
+
+  test "update removes level_config when it is empty" do
+    level = create(:spritelab, level_config: {'world' => {'paletteRoles' => ['treasure']}})
+    patch :update, params: {id: level, level: {level_config: '{}'}}
+    assert_response :success
+
+    level.reload
+    assert_nil level.level_config
+    refute level.properties.key?('level_config')
+  end
+
   test "update_start_code encrypts validation" do
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
     level = create(:javalab)
