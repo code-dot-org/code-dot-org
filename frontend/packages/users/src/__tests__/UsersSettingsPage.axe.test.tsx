@@ -49,7 +49,7 @@ describe('UsersSettingsPage — accessibility', () => {
     expect(await auditBody()).toHaveNoViolations();
   });
 
-  it.each(['teacher', 'teacher-no-school'])(
+  it.each(['teacher', 'teacher-no-school', 'non-school-teacher'])(
     'has no axe violations on the Educator Profile tab (%s)',
     async tag => {
       renderPage(tag, 'educator-profile');
@@ -104,6 +104,24 @@ describe('UsersSettingsPage — accessibility', () => {
       target: {value: '98101'},
     });
     await within(dialog).findByRole('option', {name: 'Example Middle School'});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the update-school dialog on the non-school setting', async () => {
+    renderPage('teacher', 'educator-profile');
+    await screen.findByRole('heading', {level: 2, name: 'Role'});
+    fireEvent.click(screen.getByRole('button', {name: 'Update my school'}));
+    const dialog = await screen.findByRole('dialog', {
+      name: 'Update your school information',
+    });
+    fireEvent.change(within(dialog).getByRole('textbox', {name: /zip code/i}), {
+      target: {value: '98101'},
+    });
+    fireEvent.click(
+      within(dialog).getByRole('button', {
+        name: 'I don’t teach CS in a school setting',
+      }),
+    );
     expect(await auditBody()).toHaveNoViolations();
   });
 

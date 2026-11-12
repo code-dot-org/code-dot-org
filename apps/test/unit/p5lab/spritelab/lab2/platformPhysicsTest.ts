@@ -5,6 +5,7 @@ import {
   hasSupportAt,
   isAtEdge,
   isSupported,
+  touchesWall,
   resolvePlatformPhysics,
   PhysicsBox,
   PhysicsSprite,
@@ -324,6 +325,21 @@ describe('platformPhysics with custom gravity', () => {
     // Body top (feet-anchor flipped to a head anchor) on the underside:
     // body center 120, image center 5 below it.
     expect(player.position.y).toBe(125);
+  });
+
+  it('touchesWall meets a block from any side, and not across a gap', () => {
+    // Cell (col 1, row 6): center (75, 325), 25px to each edge. The body
+    // is 20x40, centered 5px below the art's center.
+    const wall = wallAt(1, 6);
+    // Standing on it: body bottom on the top edge.
+    expect(touchesWall(makeSprite(75, 275), wall)).toBe(true);
+    // Pressed against its right side: body edge on the wall's edge.
+    expect(touchesWall(makeSprite(110, 325), wall)).toBe(true);
+    // Head under it: body top on the underside.
+    expect(touchesWall(makeSprite(75, 365), wall)).toBe(true);
+    // Two pixels off is a gap.
+    expect(touchesWall(makeSprite(75, 273), wall)).toBe(false);
+    expect(touchesWall(makeSprite(112, 325), wall)).toBe(false);
   });
 
   it('isSupported sees floor, block tops, and flipped undersides', () => {

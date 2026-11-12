@@ -34,6 +34,7 @@
     },
     "block_catalog": true,
     "use_secondary_finish_button": "true",
+    "finish_dialog": "hoai2026",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -142,10 +143,6 @@
           "fields": {
             "TEXT": "You win!"
           }
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition"
         },
         {
           "kind": "block",

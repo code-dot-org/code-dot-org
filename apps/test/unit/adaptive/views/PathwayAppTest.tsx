@@ -159,6 +159,8 @@ jest.mock('@cdo/apps/adaptive/progress/progressStore', () => ({
     saveStep: jest.fn(),
     saveInstructions: jest.fn(),
   },
+  recordProgressOk: jest.fn(),
+  recordProgressFailure: jest.fn(),
 }));
 
 const step = (id: string) => ({

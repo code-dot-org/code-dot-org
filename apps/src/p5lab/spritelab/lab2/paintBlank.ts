@@ -1,6 +1,7 @@
-// The blank canvas "Paint manually" opens on, sized the way an AI generation
-// of the same style would come out — and the stage ground color that
-// background handling everywhere composites onto.
+// The blank canvas a drawing starts on, and the stage ground color that
+// background handling everywhere composites onto. A blank block or
+// background is sized the way an AI generation of the same style would
+// come out. A blank character or object is coarser (DRAWN_SPRITE_GRID).
 
 import {NATIVE_PIXEL_GRID} from '@cdo/apps/pixelEditor/pixelArt';
 
@@ -11,10 +12,18 @@ import {
 } from './ai/images/modelHelpers';
 import {ImageStyle, ImageType} from './ai/images/types';
 
-// Pixel style draws on the same logical grid the pixel prompt asks for,
-// which varies by image type (backgrounds get a finer grid).
+// A character or object drawn by hand starts on a grid this many pixels
+// square. It is coarser than the 32 a generated one has, so a small picture
+// takes fewer strokes to fill.
+const DRAWN_SPRITE_GRID = 24;
+
+// The grid a blank pixel-style canvas has. A hand-drawn sprite gets its own
+// size; a block and a background get the grid the pixel prompt asks the AI
+// for (a background's is finer).
 function pixelLogical(imageType: ImageType): number {
-  return MODEL_OUTPUT_PX / ASSUMED_BLOCK[imageType];
+  return imageType === 'sprite'
+    ? DRAWN_SPRITE_GRID
+    : MODEL_OUTPUT_PX / ASSUMED_BLOCK[imageType];
 }
 
 // The stage's ground color, which backgrounds must cover fully: blank

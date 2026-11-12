@@ -14,9 +14,10 @@ description: Guidelines for using and contributing to the @code-dot-org/componen
 
 ## Which Component to Use
 - **Use MUI** for: Typography, Button, IconButton, Breadcrumbs, Tooltip, Dialog, Divider. These have been migrated — their DSCO equivalents are deprecated, and the DSCO Button, LinkButton and GenericButton and the legacy DSCO Dialog are deleted. Dialog is the exception to importing from `@mui/material`: use the package's MUI wrapper, `import {Dialog, CustomDialog} from '@code-dot-org/component-library/dialog';`, never `Dialog` from `@mui/material`.
+- **Use the package's MUI-native components** where one fits: `CardButton` (`@code-dot-org/component-library/cardButton`, a clickable card on `ButtonBase`), `NotificationBanner`, `Toast`. They have no DSCO predecessor.
 - **Use DSCO** for: everything else (Checkbox, Dropdown, Modal, Tabs, TextField, Toggle, etc.). Browse `frontend/packages/component-library/src/` to discover available components.
 - **Unsure?** Check `frontend/packages/component-library/MIGRATION_STATUS.md` for the full per-component status, or look for `@deprecated` / `DEPRECATED` in the component's JSDoc header. A `@deprecated` on a single prop marks that prop, not the component.
-- Several directories ship a `README.md` next to the source (`src/form/`, `src/tooltip/`, `src/dialog/`, `src/divider/`) that says more than the status table does.
+- Several directories ship a `README.md` next to the source (`src/form/`, `src/tooltip/`, `src/dialog/`, `src/divider/`, `src/cardButton/`) that says more than the status table does.
 - The `form` kit (`FormProvider`, `Field`, `SaveBar`, save-state reducer) composes a page-level, single-PATCH settings form; assemble only the pieces you need.
 - DSCO import: `import Checkbox from '@code-dot-org/component-library/checkbox';`
 - MUI import: `import {Typography as MuiTypography} from '@mui/material';` — style overrides are applied automatically via the theme.
