@@ -246,15 +246,17 @@ export function useObjectives({
     }
   }, [newIndexes]);
 
-  // A student back on a level they have completed finds it completed. The
-  // steps that are checked the whole time are read from the project again,
-  // above. The steps that are checked once (see isCheckedOnce) passed on
-  // the earlier visit and cannot be checked again, so they are ticked
-  // here. Nothing is recorded for each step: the level could only have
-  // been completed with every one of them done. A step that only appears
-  // once another check passes (shownWhen) is left out, since the level
-  // could have been completed without it. This runs when the level's
-  // progress arrives, which can be after the checklist first shows.
+  // When a student comes back to a level they already completed, the
+  // steps that are checked once (see isCheckedOnce) are marked as done.
+  // They passed on the earlier visit, and nothing in the project can
+  // check them now. Every other step is checked against the project, as
+  // usual.
+  //
+  // A step that stays hidden until another check passes (shownWhen) is not
+  // marked, because the level could have been completed without it.
+  //
+  // The level's completed status can arrive after the checklist first
+  // shows, so this is an effect.
   useEffect(() => {
     if (!completedBefore || !items?.length) {
       return;
