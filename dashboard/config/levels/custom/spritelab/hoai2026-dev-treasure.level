@@ -23,6 +23,8 @@
     "project_template_level_name": "hoai2026-dev-revised-template",
     "level_mode": {
       "kind": "image",
+      "limitedPaintTools": true,
+      "generationLimit": 5,
       "imageType": "sprite",
       "imageSubject": "object",
       "imageRole": "treasure",
@@ -32,21 +34,15 @@
       "title": "**Treasure**",
       "items": [
         {
-          "text": "Click **New image** and make a new object.",
+          "text": "Select the **+** button and make a new object.",
           "check": {
             "kind": "image",
             "imageType": "sprite"
           }
-        },
-        {
-          "text": "**Evaluate** the AI’s image with a thumbs up or thumbs down.",
-          "check": {
-            "kind": "rated"
-          }
         }
       ]
     },
-    "long_instructions": "# Treasure or hazard?\r\n\r\nMake an object for your player to collect or avoid.\r\n",
+    "long_instructions": "# Treasure or hazard?\r\n\r\nMake an object for your player to seek or avoid.\r\n",
     "header_label": "Treasure",
     "embed": "false",
     "instructions_important": "false",

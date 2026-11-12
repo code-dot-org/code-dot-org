@@ -582,6 +582,6 @@ export interface LabProps<
   channel?: Channel;
 }
 
-export type ShareDialogId = 'hoc2024' | 'hoai2025';
+export type ShareDialogId = 'hoc2024' | 'hoai2025' | 'hoai2026';
 
 export type LevelNavigationConfirmation = () => boolean | Promise<boolean>;

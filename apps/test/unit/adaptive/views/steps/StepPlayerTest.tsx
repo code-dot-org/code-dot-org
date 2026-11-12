@@ -14,6 +14,17 @@ jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
   isAdaptiveAiEnabled: () => true,
 }));
 
+// A loaded project with nothing in it, so a review step builds without asking.
+jest.mock('@cdo/apps/adaptive/project/usePathwayProject', () => ({
+  usePathwayProject: () => ({
+    sources: {source: ''},
+    projectManager: null,
+    isLoading: false,
+    isEditable: true,
+    editProject: jest.fn(),
+  }),
+}));
+
 // Reports whether a build is requested of it when it mounts.
 jest.mock('@cdo/apps/adaptive/views/steps/LevelStep', () => {
   const React = require('react');
@@ -560,7 +571,7 @@ describe('StepPlayer', () => {
           <PathwayContext.Provider
             value={
               {
-                pathway: {checkpoints: []},
+                pathway: {checkpoints: [], project: {templateLevel: 'site'}},
                 progress,
                 statusMap: {},
                 checkpoint: planned,

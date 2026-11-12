@@ -4,6 +4,7 @@ import {
   ImageCacheMissError,
   resetMissingFrames,
   sentencePath,
+  VARIANT_COUNT,
   variantName,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 
@@ -97,7 +98,7 @@ describe('imageCache', () => {
     const calls = installFetch([]);
     expect(await find()).toBeUndefined();
     expect(await find()).toBeUndefined();
-    expect(calls).toHaveLength(3);
+    expect(calls).toHaveLength(VARIANT_COUNT);
   });
 
   it('asks again after a fetch that failed, and says so', async () => {
