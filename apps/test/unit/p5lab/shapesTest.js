@@ -1,4 +1,7 @@
-import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
+import {
+  getSerializedAnimationList,
+  throwIfSerializedAnimationListIsInvalid,
+} from '@cdo/apps/p5lab/shapes';
 
 describe('GameLab Shapes', function () {
   const propsByKeyOneItem = {
@@ -64,5 +67,18 @@ describe('GameLab Shapes', function () {
     expect(attributesMultiDupe['orderedKeys'].length).toBe(2);
     expect(attributesMultiDupe['orderedKeys'][0]).toBe('123');
     expect(attributesMultiDupe['orderedKeys'][1]).toBe('456');
+  });
+
+  // Sprite Lab 2 unblocks a project by deleting the picture that blocked it,
+  // so this mark has to survive a save.
+  it('keeps the flagged mark, and still drops the cached spritesheet', function () {
+    const {propsByKey} = getSerializedAnimationList({
+      orderedKeys: ['123'],
+      propsByKey: {
+        123: {name: 'a', flagged: true, dataURI: 'data:image/png;base64,AA'},
+      },
+    });
+    expect(propsByKey['123'].flagged).toBe(true);
+    expect(propsByKey['123'].dataURI).toBeUndefined();
   });
 });

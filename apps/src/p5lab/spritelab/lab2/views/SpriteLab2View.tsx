@@ -402,6 +402,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const isRunning = useAppSelector(state => state.runState.isRunning);
+  // Keeping a flagged picture blocks the project and, as its dialog says,
+  // stops any more uploads.
+  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
   const blocklySettings = useBlocklySettings();
   const themeSetting = useThemeSetting('spritelab');
@@ -2417,7 +2420,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 learning={levelProperties.levelMode?.learning}
                 enableImageUpload={
                   !!levelProperties.levelMode?.enableImageUpload &&
-                  !!uploadImage
+                  !!uploadImage &&
+                  !isBlockedAbuse
                 }
                 levelId={levelProperties.id}
                 generationsLeft={generationsLeft}

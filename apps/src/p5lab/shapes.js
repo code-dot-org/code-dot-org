@@ -143,6 +143,9 @@ function getSerializedAnimationProps(animation) {
     'generation',
     'edited',
     'poses',
+    // Load-bearing: deleting the flagged image is what unblocks the project,
+    // so the mark has to survive a reload.
+    'flagged',
   ]);
 }
 

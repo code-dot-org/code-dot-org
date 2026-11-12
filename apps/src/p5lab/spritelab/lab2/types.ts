@@ -53,6 +53,9 @@ export interface SerializedAnimationProps {
   generation?: ImageGenerationMetadata;
   /** Present on a character set: where each pose lives in the sheet. */
   poses?: AnimationPoses;
+  /** An upload moderation flagged and the student kept anyway. Deleting it
+      is what unblocks the project (useImageWriter.deleteImage). */
+  flagged?: boolean;
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.
