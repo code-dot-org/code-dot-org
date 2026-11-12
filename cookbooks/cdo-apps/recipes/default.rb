@@ -118,8 +118,9 @@ include_recipe node['cdo-apps']['nginx_enabled'] ?
 include_recipe 'cdo-apps::chef_credentials'
 include_recipe 'cdo-apps::crontab'
 
-# Only include a local redis server if no external redis_url was provided.
-include_recipe 'cdo-redis' unless node['cdo-secrets']['redis_url']
+# Production reads ElastiCache through CDO.redis_url (a stack secret). Elsewhere, run a
+# local redis unless the stack provided an external one.
+include_recipe 'cdo-redis' unless node['cdo-secrets']['redis_url'] || node.chef_environment == 'production'
 
 # Daemon-specific configuration for SSH access to frontend instances.
 include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo-apps']['frontends']
