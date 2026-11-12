@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-11T19:35:46.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Investigate & Modify\r\n\r\n**Do This:**\r\n\r\n1. Run the program and enter any score. Try a few different inputs.\r\n2. Ask the AI Tutor to explain the error.\r\n3. Debug the program based on the information AI Tutor provides.\r\n4. Test your fix with a few different scores.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode",
+        "hint",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "score = input(\"Enter your test score: \")\n\nif score > 90:\n    grade = \"A\"\nelif score > 80:\n    grade = \"B\"\nelif score > 70:\n    grade = \"C\"\nelse:\n    grade = \"F\"\n\nprint(\"Score:\", score)\nprint(\"Grade:\", grade)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-11T19:35:46.088+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson25-investigate-theater_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson25-investigate-theater_27_28\"},{\"changed_at\":\"2026-11-11 19:38:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"mini_app\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-11 19:46:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-11 19:46:32 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-11 19:47:57 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-11 19:50:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

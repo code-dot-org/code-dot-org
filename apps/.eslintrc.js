@@ -239,6 +239,9 @@ module.exports = {
       plugins: ['@typescript-eslint'],
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
+        // ts-loader's ES5 output drops the prototype of an Error subclass;
+        // Babel wraps native constructors, so .js and .jsx files are unaffected.
+        'cdo-custom-rules/error-subclass-prototype': 'error',
         // We can rely on typescript types instead of prop types
         'react/prop-types': 'off',
         '@typescript-eslint/no-unused-vars': ['error', {args: 'none'}],

@@ -10,6 +10,7 @@ export const SUPPORTED_SHARED_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'gamelab_setPromptWithChoices',
 
   'gamelab_allSpritesWithAnimation',
+  'gamelab_destroy',
   'gamelab_makeBurst',
   'gamelab_makeNewSpriteAnon',
   'gamelab_makeSpritesGrid',

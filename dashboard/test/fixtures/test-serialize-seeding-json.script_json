@@ -995,6 +995,56 @@
       }
     }
   ],
+  "objectives_script_levels": [
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-serialize-seeding-json_blockly_1"
+        ],
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script",
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-1-a-1-s-1",
+        "objective.key": "test-serialize-seeding-json-lg-1-l-1-objective-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-serialize-seeding-json_blockly_10"
+        ],
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script",
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-2-a-1-s-1",
+        "objective.key": "test-serialize-seeding-json-lg-1-l-2-objective-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-serialize-seeding-json_blockly_2"
+        ],
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script",
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-1-a-1-s-1",
+        "objective.key": "test-serialize-seeding-json-lg-1-l-1-objective-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-serialize-seeding-json_blockly_9"
+        ],
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script",
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-2-a-1-s-1",
+        "objective.key": "test-serialize-seeding-json-lg-1-l-2-objective-1"
+      }
+    }
+  ],
   "lessons_standards": [
     {
       "seeding_key": {

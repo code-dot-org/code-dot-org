@@ -15,6 +15,7 @@ import {
 import {COUNTRIES_US_FIRST} from '../util/countries';
 import {
   CLICK_TO_ADD,
+  NO_SCHOOL_SETTING,
   SELECT_A_SCHOOL,
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
@@ -52,6 +53,7 @@ export default function UpdateSchoolModal({
 
   const isUs = country === US_COUNTRY_CODE;
   const addingManually = schoolId === CLICK_TO_ADD;
+  const noSchoolSetting = schoolId === NO_SCHOOL_SETTING;
   const zipValid = ZIP.test(schoolZip);
 
   // Outside the US there is no zip to search on; the hook idles on a non-zip.
@@ -152,7 +154,7 @@ export default function UpdateSchoolModal({
         />
       )}
 
-      {isUs && !addingManually && (
+      {isUs && !addingManually && !noSchoolSetting && (
         <Box className={styles.schoolList}>
           <Field>
             <SimpleDropdown
@@ -176,12 +178,25 @@ export default function UpdateSchoolModal({
           <Button onClick={() => setSchoolId(CLICK_TO_ADD)} sx={{px: 0}}>
             I don’t see my school here. Add manually
           </Button>
+          <Button
+            onClick={() => setSchoolId(NO_SCHOOL_SETTING)}
+            disabled={!zipValid}
+            sx={{px: 0}}
+          >
+            I don’t teach CS in a school setting
+          </Button>
         </Box>
       )}
 
-      {isUs && addingManually && (
+      {isUs && (addingManually || noSchoolSetting) && (
         <Box className={styles.schoolList}>
-          {schoolNameField}
+          {addingManually ? (
+            schoolNameField
+          ) : (
+            <Typography variant="body2">
+              You’ve chosen a non-school setting.
+            </Typography>
+          )}
           <Button onClick={() => setSchoolId(SELECT_A_SCHOOL)} sx={{px: 0}}>
             Return to results list
           </Button>

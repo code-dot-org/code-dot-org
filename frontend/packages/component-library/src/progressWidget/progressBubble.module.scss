@@ -5,56 +5,56 @@ $inactive-size: 12px;
 $active-size: 24px;
 $edge-width: 1.5px;
 
-// Fill, edge and ink per status, at rest and on hover; circles and diamonds share them.
+// Fill, edge and foreground (number, star, flag) per status, at rest and on hover.
 $statuses: (
   notStarted: (
     fill: var(--background-neutral-primary),
     edge: var(--borders-neutral-strong),
-    ink: var(--text-neutral-primary),
+    foreground: var(--text-neutral-primary),
     hover-fill: var(--background-neutral-tertiary),
     hover-edge: var(--borders-neutral-strong),
-    hover-ink: var(--text-neutral-primary),
+    hover-foreground: var(--text-neutral-primary),
   ),
   inProgress: (
     fill: var(--background-neutral-primary),
     edge: var(--borders-success-strong),
-    ink: var(--text-neutral-primary),
+    foreground: var(--text-neutral-primary),
     hover-fill: var(--background-success-light),
     hover-edge: var(--borders-success-strong),
-    hover-ink: var(--text-neutral-primary),
+    hover-foreground: var(--text-neutral-primary),
   ),
   passed: (
     fill: var(--background-success-mid),
     edge: var(--background-success-mid),
-    ink: var(--text-neutral-primary),
+    foreground: var(--text-neutral-primary),
     hover-fill: var(--background-success-strong),
     hover-edge: var(--background-success-strong),
-    hover-ink: var(--text-neutral-white-fixed),
+    hover-foreground: var(--text-neutral-white-fixed),
   ),
   completed: (
     fill: var(--background-success-primary),
     edge: var(--background-success-primary),
-    ink: var(--text-neutral-white-fixed),
+    foreground: var(--text-neutral-white-fixed),
     hover-fill: var(--background-success-strong),
     hover-edge: var(--background-success-strong),
-    hover-ink: var(--text-neutral-white-fixed),
+    hover-foreground: var(--text-neutral-white-fixed),
   ),
-  // Fixed yellow takes fixed black ink; white on the hover yellow is under 3:1.
+  // Fixed yellow takes fixed black text; white on the hover yellow is under 3:1.
   keepWorking: (
       fill: var(--background-warning-primary),
       edge: var(--background-warning-primary),
-      ink: var(--text-neutral-black-fixed),
+      foreground: var(--text-neutral-black-fixed),
       hover-fill: var(--background-warning-strong),
       hover-edge: var(--background-warning-strong),
-      hover-ink: var(--text-neutral-black-fixed),
+      hover-foreground: var(--text-neutral-black-fixed),
     ),
   error: (
     fill: var(--background-error-primary),
     edge: var(--background-error-primary),
-    ink: var(--text-neutral-white-fixed),
+    foreground: var(--text-neutral-white-fixed),
     hover-fill: var(--background-error-strong),
     hover-edge: var(--background-error-strong),
-    hover-ink: var(--text-neutral-white-fixed),
+    hover-foreground: var(--text-neutral-white-fixed),
   ),
 );
 
@@ -73,7 +73,7 @@ $statuses: (
   padding: 0;
   border: 0;
   background: none;
-  color: var(--ink);
+  color: var(--foreground);
   text-decoration: none;
   cursor: default;
 
@@ -83,7 +83,7 @@ $statuses: (
 
   // Host pages style a:hover and a:focus; Bootstrap underlines them.
   &:is(a, button):is(:hover, :focus, :active) {
-    color: var(--ink);
+    color: var(--foreground);
     text-decoration: none;
   }
 
@@ -105,12 +105,12 @@ $statuses: (
   .#{$status} {
     --fill: #{map.get($c, fill)};
     --edge: #{map.get($c, edge)};
-    --ink: #{map.get($c, ink)};
+    --foreground: #{map.get($c, foreground)};
 
     &:is(a, button):not([aria-disabled]):is(:hover, :active) {
       --fill: #{map.get($c, hover-fill)};
       --edge: #{map.get($c, hover-edge)};
-      --ink: #{map.get($c, hover-ink)};
+      --foreground: #{map.get($c, hover-foreground)};
     }
   }
 }
@@ -118,7 +118,7 @@ $statuses: (
 .bubble.disabled {
   --fill: var(--background-neutral-disabled);
   --edge: var(--background-neutral-disabled);
-  --ink: var(--text-neutral-disabled-inverse);
+  --foreground: var(--text-neutral-disabled-inverse);
 }
 
 .default {
@@ -157,17 +157,17 @@ $statuses: (
 }
 
 .lessonExtras {
-  --ink: var(--text-neutral-quaternary);
+  --foreground: var(--text-neutral-quaternary);
 
   border-radius: 2px;
 
   &.active,
   &:is(a, button):not([aria-disabled]):is(:hover, :active) {
-    --ink: var(--text-neutral-primary);
+    --foreground: var(--text-neutral-primary);
   }
 
   &.disabled {
-    --ink: var(--text-neutral-disabled);
+    --foreground: var(--text-neutral-disabled);
   }
 }
 
@@ -182,7 +182,7 @@ $statuses: (
   font-size: 12px;
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  color: var(--ink);
+  color: var(--foreground);
 }
 
 .assessment {
@@ -190,7 +190,7 @@ $statuses: (
   display: inline-flex;
   font-size: 6px;
   line-height: 1;
-  color: var(--ink);
+  color: var(--foreground);
 
   .active & {
     position: absolute;

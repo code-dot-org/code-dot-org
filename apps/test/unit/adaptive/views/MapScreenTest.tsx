@@ -4,6 +4,7 @@ import React from 'react';
 import {Pathway} from '@cdo/apps/adaptive/types';
 import MapScreen from '@cdo/apps/adaptive/views/MapScreen';
 import {SKILL_MAP_TOUR_STORAGE_KEY} from '@cdo/apps/adaptive/views/skillMapTourHelpers';
+import DCDO from '@cdo/apps/dcdo';
 
 // Stub intro.js-react's Steps as a controllable component.
 // - "advance" / "back" fire onBeforeChange + onChange so MapScreen's tourStep
@@ -90,6 +91,13 @@ jest.mock('@cdo/apps/lab2/hooks/useThemeSetting', () => ({
     onChange: jest.fn(),
   }),
 }));
+jest.mock('@cdo/apps/dcdo', () => ({
+  __esModule: true,
+  default: {
+    get: jest.fn((_key: string, defaultValue: unknown) => defaultValue),
+  },
+}));
+
 jest.mock('@cdo/apps/lab2/views/components/Instructions/ResourcePanel', () => ({
   __esModule: true,
   default: ({
@@ -303,6 +311,26 @@ describe('MapScreen tour', () => {
   describe('with hasSkippedCheckpoints', () => {
     it('does not affect the tour visibility itself', () => {
       renderMapScreen({hasSkippedCheckpoints: true});
+      expect(screen.getByRole('dialog', {name: 'tour'})).toBeTruthy();
+    });
+  });
+
+  describe('DCDO flag', () => {
+    afterEach(() => {
+      (DCDO.get as jest.Mock).mockImplementation(
+        (_key: string, defaultValue: unknown) => defaultValue
+      );
+    });
+
+    it('hides the tour when adaptive-skill-map-tour-enabled is false', () => {
+      (DCDO.get as jest.Mock).mockReturnValue(false);
+      renderMapScreen();
+      expect(screen.queryByRole('dialog', {name: 'tour'})).toBeNull();
+    });
+
+    it('shows the tour when adaptive-skill-map-tour-enabled is true', () => {
+      (DCDO.get as jest.Mock).mockReturnValue(true);
+      renderMapScreen();
       expect(screen.getByRole('dialog', {name: 'tour'})).toBeTruthy();
     });
   });
