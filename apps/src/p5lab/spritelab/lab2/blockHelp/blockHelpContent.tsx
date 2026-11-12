@@ -1,11 +1,9 @@
 import animBurst from '@cdo/static/spritelab_lab2/block-help/burst.gif';
 import animPlaySound from '@cdo/static/spritelab_lab2/block-help/play-sound.gif';
-import animSetASpriteProperty from '@cdo/static/spritelab_lab2/block-help/set-a-sprite-property.gif';
 import animSetGravity from '@cdo/static/spritelab_lab2/block-help/set-gravity.gif';
 import animSetWeather from '@cdo/static/spritelab_lab2/block-help/set-weather.gif';
 import animSetZoom from '@cdo/static/spritelab_lab2/block-help/set-zoom.gif';
 import animThePlayer from '@cdo/static/spritelab_lab2/block-help/the-player.gif';
-import animWhenClicked from '@cdo/static/spritelab_lab2/block-help/when-clicked.gif';
 
 import {MAX_ZOOM, MIN_ZOOM} from '../camera';
 
@@ -125,22 +123,6 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     summary: 'Removes the bubble that show variable put on the screen.',
     body: 'The variable keeps its value.',
   },
-  gamelab_setProp: {
-    title: 'Set a sprite property',
-    animation: {
-      src: animSetASpriteProperty,
-      alt: 'The set a sprite property block in action.',
-    },
-    summary:
-      'Changes one thing about a sprite: its size, rotation, position, direction or speed.',
-    body: '**size** is a percent, and **rotation** is in degrees.',
-  },
-  gamelab_spriteClicked: {
-    title: 'When clicked',
-    animation: {src: animWhenClicked, alt: 'The when clicked block in action.'},
-    summary: 'Runs the blocks below when a sprite is clicked or tapped.',
-    body: '**while** keeps them running as long as the button is held down.',
-  },
   gamelab_spriteSay: {
     title: 'Say',
     summary: 'Shows words in a speech bubble over a sprite.',
@@ -169,13 +151,6 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     body:
       'Try it under "when touching" a foe, so a touch sends the player back ' +
       'to the start.',
-  },
-  gamelab_atTime: {
-    title: 'At time',
-    summary: 'Runs the blocks below once, when the scene has run this long.',
-    body:
-      '**seconds** counts from when the scene starts; **frames** counts ' +
-      'frames instead.',
   },
   gamelab_everyInterval: {
     title: 'Repeat every',
