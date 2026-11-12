@@ -268,7 +268,10 @@ const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 // The shared dialog's own copy names only the blocks.
 const START_OVER_MESSAGE =
   "This deletes your blocks and your images. You can't undo it.";
-const START_OVER_RETURNS_MESSAGE = `${START_OVER_MESSAGE} You'll start again from the first level.`;
+// In a lesson the levels share one project, so Start Over deletes the work
+// of every level.
+const START_OVER_RETURNS_MESSAGE =
+  "This deletes your blocks and your images on every level. You can't undo it. You'll start again from the first level.";
 // Start Over on a level outside a lesson resets only that level. A level
 // with no project (no_project) has no saved work of the student's to lose.
 const START_OVER_RESETS_LEVEL_MESSAGE =
