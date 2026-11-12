@@ -1680,10 +1680,28 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     [updateSources, activeSceneId, scheduleRun, worldFor]
   );
+  // The images a scene keeps at least one of: those in the roles the level
+  // names (world_keeps_roles). A later level's step can need the player to
+  // reach one, and that level may not show the World tab.
+  const worldKeepsRoles = levelProperties.worldKeepsRoles;
+  const worldKeeps = useMemo(
+    () =>
+      new Map(
+        // The property is edited as JSON, so it may not be a list.
+        (Array.isArray(worldKeepsRoles) ? worldKeepsRoles : []).flatMap(role =>
+          imagesNamedInRole(animationList, role).map(
+            (name): [string, string] => [name, role]
+          )
+        )
+      ),
+    [worldKeepsRoles, animationList]
+  );
   const handlePaintWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell | null) =>
-      updateActiveWorld(world => paintWorldCell(world, row, col, cell)),
-    [updateActiveWorld]
+      updateActiveWorld(world =>
+        paintWorldCell(world, row, col, cell, worldKeeps)
+      ),
+    [updateActiveWorld, worldKeeps]
   );
 
   // A world level about one kind of image offers the palette only the
@@ -2358,6 +2376,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                     : 'Go back and make your image first.'
                 }
                 only={paletteOnly}
+                kept={worldKeeps}
                 selected={worldPaletteSelection}
                 onSelect={choosePaletteSelection}
               />
