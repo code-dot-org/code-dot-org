@@ -7,7 +7,14 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getImageThumbnail, onTrimsUpdated} from '../imageTrim';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
-import {createEmptyWorld, imagesWithOneLeft, World, WorldCell} from '../world';
+import {
+  createEmptyWorld,
+  imagesWithOneLeft,
+  KeptRoles,
+  NOTHING_KEPT,
+  World,
+  WorldCell,
+} from '../world';
 
 import moduleStyles from './world-tab.module.scss';
 
@@ -20,8 +27,6 @@ const MIN_GRID_PIXELS = 320;
 
 // Rendered against a scene that has no world yet; never painted through.
 const EMPTY_GRID = createEmptyWorld().grid;
-
-const NO_IMAGES: ReadonlySet<string> = new Set();
 
 // Number keys 1-9 pick the first nine palette items from anywhere in the
 // tab; 0 picks Erase.
@@ -277,7 +282,7 @@ interface WorldTabProps {
   only?: string[];
   // Images the scene keeps at least one copy of. The last copy of one can
   // be erased or painted over only after another copy has been placed.
-  kept?: ReadonlySet<string>;
+  kept?: KeptRoles;
   // Palette selection, owned by the view so it survives tab switches (this
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
@@ -304,7 +309,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   onPaintCell,
   emptyMessage,
   only,
-  kept = NO_IMAGES,
+  kept = NOTHING_KEPT,
   selected,
   onSelect,
 }) => {
@@ -368,9 +373,14 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       : -1;
 
   const grid = world?.grid ?? EMPTY_GRID;
+  // The same set object until its contents change. The rows are memoized
+  // on it, and a new set after every paint would re-render them all.
+  const onlyOneLeftNames = JSON.stringify(
+    [...imagesWithOneLeft({grid}, kept)].sort()
+  );
   const onlyOneLeft = useMemo(
-    () => imagesWithOneLeft({grid}, kept),
-    [grid, kept]
+    () => new Set<string>(JSON.parse(onlyOneLeftNames)),
+    [onlyOneLeftNames]
   );
 
   // Screen-reader narration for actions whose visible result is a silent
@@ -397,9 +407,14 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   ): Change => {
     const held = grid[row]?.[col];
     const refusal = cellRefusal(held, offered, onlyOneLeft);
-    // Painting the last copy's own image over it removes nothing.
-    if (refusal && !(refusal === 'last' && next?.image === held?.image)) {
+    // A role's last square can take another image of the same role.
+    const keepsRole =
+      !!held && !!next && kept.get(next.image) === kept.get(held.image);
+    if (refusal && !(refusal === 'last' && keepsRole)) {
       return refusal;
+    }
+    if (next && held?.image === next.image) {
+      return null;
     }
     if (!next) {
       if (!held) {
@@ -454,7 +469,13 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     strokeErase.current =
       effectiveSelected !== 'erase' &&
       grid[row]?.[col]?.image === effectiveSelected?.image;
-    return paintCell(row, col, strokeErase.current);
+    const did = paintCell(row, col, strokeErase.current);
+    // A press that a role's last square refused starts no stroke. A drag
+    // from it would otherwise erase everything the pointer crossed.
+    if (did === 'last') {
+      strokeActive.current = false;
+    }
+    return did;
   };
 
   // The grid is one tab stop: this cell carries tabIndex 0 and the arrow
@@ -510,15 +531,17 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     return false;
   };
 
-  const activateCellByKeyboard = (row: number, col: number) => {
+  const activateCellByKeyboard = (row: number, col: number): Change => {
     if (!effectiveSelected) {
       announce('Choose an item first: press 1 to 9, or 0 for Erase.');
-      return;
+      return null;
     }
+    const did = startStroke(row, col);
     announceResult(
-      startStroke(row, col),
+      did,
       effectiveSelected === 'erase' ? '' : effectiveSelected.image
     );
+    return did;
   };
 
   const handleGridKeyDown = (event: React.KeyboardEvent) => {
@@ -532,8 +555,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       // while held, toggling the cell on and off.
       event.preventDefault();
       if (!event.repeat) {
-        activateCellByKeyboard(cursorRow, cursorCol);
-        paintKeyHeld.current = true;
+        const did = activateCellByKeyboard(cursorRow, cursorCol);
+        paintKeyHeld.current = did !== 'last';
       }
       return;
     }

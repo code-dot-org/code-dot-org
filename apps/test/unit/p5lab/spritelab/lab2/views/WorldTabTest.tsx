@@ -248,7 +248,7 @@ describe('WorldTab palette', () => {
   it('keeps the last copy of a kept image until another copy is placed', () => {
     const hero = {image: 'Hero', kind: 'sprite' as const};
     const stone = {image: 'Stone', kind: 'block' as const};
-    const kept = new Set(['Hero']);
+    const kept = new Map([['Hero', 'hero']]);
     const {onPaintCell, unmount} = renderTab({
       kept,
       world: {grid: [[hero, stone]]},
@@ -282,11 +282,28 @@ describe('WorldTab palette', () => {
     const hero = {image: 'Hero', kind: 'sprite' as const};
     const stone = {image: 'Stone', kind: 'block' as const};
     const {onPaintCell} = renderTab({
-      kept: new Set(['Hero']),
+      kept: new Map([['Hero', 'hero']]),
       world: {grid: [[hero]]},
       selected: stone,
     });
     fireEvent.pointerDown(screen.getAllByRole('gridcell')[0], {pointerId: 1});
+    expect(onPaintCell).not.toHaveBeenCalled();
+  });
+
+  it('starts no stroke from a press the last copy refused', () => {
+    // Hero is chosen, and its only copy is pressed and dragged from. A
+    // second click on a placed item starts an erasing stroke, so without
+    // this the drag would erase the stone beside it.
+    const hero = {image: 'Hero', kind: 'sprite' as const};
+    const stone = {image: 'Stone', kind: 'block' as const};
+    const {onPaintCell} = renderTab({
+      kept: new Map([['Hero', 'hero']]),
+      world: {grid: [[hero, stone]]},
+      selected: hero,
+    });
+    const [heroCell, stoneCell] = screen.getAllByRole('gridcell');
+    fireEvent.pointerDown(heroCell, {pointerId: 1, button: 0, buttons: 1});
+    fireEvent.pointerEnter(stoneCell, {pointerId: 1, buttons: 1});
     expect(onPaintCell).not.toHaveBeenCalled();
   });
 

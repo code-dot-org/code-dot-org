@@ -111,44 +111,54 @@ export function resizeWorld(
   };
 }
 
-const NO_IMAGES: ReadonlySet<string> = new Set();
+/** The images a world keeps, each with the role it is kept for. The world
+    keeps at least one square for each role. */
+export type KeptRoles = ReadonlyMap<string, string>;
+export const NOTHING_KEPT: KeptRoles = new Map();
 
-/** The images among `kept` that are on exactly one square of the world. */
+/** The images that are the only one of their role on the world's squares:
+    their role (see KeptRoles) is on exactly one square. */
 export function imagesWithOneLeft(
   world: World | undefined,
-  kept: ReadonlySet<string>
+  kept: KeptRoles
 ): Set<string> {
-  const counts = new Map<string, number>();
+  const onSquares = new Map<string, string[]>();
   for (const cells of world?.grid ?? []) {
     for (const cell of cells) {
-      if (cell && kept.has(cell.image)) {
-        counts.set(cell.image, (counts.get(cell.image) ?? 0) + 1);
+      const role = cell && kept.get(cell.image);
+      if (cell && role) {
+        onSquares.set(role, [...(onSquares.get(role) ?? []), cell.image]);
       }
     }
   }
   return new Set(
-    [...counts].filter(([, count]) => count === 1).map(([image]) => image)
+    [...onSquares.values()]
+      .filter(images => images.length === 1)
+      .map(images => images[0])
   );
 }
 
 // One placement, as a pure update: safe to apply inside a functional
 // sources updater, so rapid paints can't overwrite each other. A world
 // without a grid (saved by an older experiment) is treated as empty.
-// A change that would remove the last copy of an image in `kept` is
-// ignored. The check is made here, on the world being updated, so that two
-// quick erases of the last two copies cannot both go through.
+// A change that would take a kept role's last square is ignored, unless it
+// puts another image of the same role there. The check is made here, on
+// the world being updated, so that two quick erases of a role's last two
+// squares cannot both go through.
 export function paintWorldCell(
   world: World | undefined,
   row: number,
   col: number,
   cell: WorldCell | null,
-  kept: ReadonlySet<string> = NO_IMAGES
+  kept: KeptRoles = NOTHING_KEPT
 ): World {
   const held = world?.grid?.[row]?.[col];
+  const heldRole = held && kept.get(held.image);
   if (
     world &&
     held &&
-    held.image !== cell?.image &&
+    heldRole &&
+    (!cell || kept.get(cell.image) !== heldRole) &&
     imagesWithOneLeft(world, kept).has(held.image)
   ) {
     return world;

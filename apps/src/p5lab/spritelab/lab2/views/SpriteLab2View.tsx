@@ -1688,11 +1688,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const worldKeepsRoles = levelProperties.worldKeepsRoles;
   const worldKeeps = useMemo(
     () =>
-      new Set(
-        animationList.orderedKeys
-          .map(key => animationList.propsByKey[key])
-          .filter(props => props?.role && worldKeepsRoles?.includes(props.role))
-          .map(props => props.name)
+      new Map(
+        // The property is edited as JSON, so it may not be a list.
+        (Array.isArray(worldKeepsRoles) ? worldKeepsRoles : []).flatMap(role =>
+          imagesNamedInRole(animationList, role).map(
+            (name): [string, string] => [name, role]
+          )
+        )
       ),
     [worldKeepsRoles, animationList]
   );

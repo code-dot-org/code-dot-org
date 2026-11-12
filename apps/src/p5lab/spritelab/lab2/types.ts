@@ -163,7 +163,7 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** Image roles the World tab keeps at least one of, in each scene:
       ["treasure", "friend"]. The last square showing an image with one of
       these roles can be erased or painted over only after another has been
-      placed. Unset, every square can be changed, as in free play. */
+      placed. Unset, no role is kept this way. */
   worldKeepsRoles?: string[];
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
