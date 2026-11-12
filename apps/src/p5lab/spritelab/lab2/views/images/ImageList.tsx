@@ -2,6 +2,7 @@
 // being worked on marked, plus the button that adds an image and the button
 // that deletes the chosen one.
 
+import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
 import {
@@ -68,8 +69,9 @@ interface ImageListProps {
       other kind. */
   newKind?: NewImageKind;
   onUpload?: (kind: NewImageKind, trigger: HTMLElement | null) => void;
-  /** Why the last upload was refused, under the header. */
-  notice?: string | null;
+  /** Why the last upload was refused. */
+  notice?: string;
+  onNoticeClose?: () => void;
   /** Delete the chosen image; absent where images cannot be deleted. */
   onDelete?: (key: string) => void;
   /** Hold the list still, while a picture is being made: choosing another
@@ -94,6 +96,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   newKind,
   onUpload,
   notice,
+  onNoticeClose,
   onDelete,
   disabled,
   playing,
@@ -222,11 +225,6 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
           </>
         )}
       </div>
-      {notice && (
-        <p role="alert" className={styles.saveNotice}>
-          {notice}
-        </p>
-      )}
       <div ref={tilesRef} className={styles.tiles}>
         {KINDS.map(kind => {
           const kindImages = images.filter(
@@ -314,6 +312,16 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
           );
         })}
       </div>
+      {notice && (
+        <Alert
+          text={notice}
+          type="danger"
+          size="xs"
+          className={styles.listNotice}
+          onClose={onNoticeClose}
+          closeLabel="Dismiss"
+        />
+      )}
       {deletable && (
         <div className={styles.listFooter}>
           <MuiIconButton

@@ -276,11 +276,16 @@ const pngFile = (name = 'My Cat.png', bytes = 4) =>
  * Hands the hidden input a file, as the OS dialog would, and waits for the
  * checking and storing behind it.
  */
-async function pickFile(container: HTMLElement, file: File) {
+/** The input behind the Upload button. It is display:none and carries no
+    name, so no query a user could make reaches it. */
+function fileInput(container: HTMLElement) {
   // eslint-disable-next-line no-restricted-properties
-  const input = container.querySelector('#file-input') as HTMLInputElement;
+  return container.querySelector('#file-input') as HTMLInputElement;
+}
+
+async function pickFile(container: HTMLElement, file: File) {
   await act(async () => {
-    fireEvent.change(input, {target: {files: [file]}});
+    fireEvent.change(fileInput(container), {target: {files: [file]}});
   });
   await act(async () => {
     await new Promise(resolve => setTimeout(resolve, 0));
@@ -1377,10 +1382,8 @@ describe('ImagesTab', () => {
       fireEvent.click(
         screen.getByRole('menuitem', {name: 'Upload a character'})
       );
-      // eslint-disable-next-line no-restricted-properties
-      const input = container.querySelector('#file-input') as HTMLInputElement;
       await act(async () => {
-        fireEvent.change(input, {target: {files: [pngFile()]}});
+        fireEvent.change(fileInput(container), {target: {files: [pngFile()]}});
       });
       await act(async () => {
         await new Promise(resolve => setTimeout(resolve, 0));
@@ -1391,6 +1394,30 @@ describe('ImagesTab', () => {
         finish('k2');
       });
       expect(screen.getByRole('button', {name: 'New image'})).toBeEnabled();
+    });
+
+    it('removes failure alert after 10 seconds', async () => {
+      // Timers still run on their own, so picking the file works as it does
+      // everywhere else here; only the ten second wait is skipped.
+      jest.useFakeTimers({advanceTimers: true});
+      try {
+        const {container} = renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+        });
+        fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+        fireEvent.click(
+          screen.getByRole('menuitem', {name: 'Upload a character'})
+        );
+        await pickFile(container, pngFile('Huge.png', 6 * 1024 * 1024));
+        expect(screen.getByRole('alert')).toBeTruthy();
+        act(() => {
+          jest.advanceTimersByTime(10_000);
+        });
+        expect(screen.queryByRole('alert')).toBeNull();
+      } finally {
+        jest.useRealTimers();
+      }
     });
 
     it('refuses a file too big to upload, and says so', async () => {

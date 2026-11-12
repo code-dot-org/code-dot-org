@@ -135,6 +135,8 @@ interface ImagesTabProps {
 
 const DRAFT_ID = 'draft';
 
+const UPLOAD_ERROR_SHOWN_MS = 10_000;
+
 /** How an image the student drew on is shown. Default: it opens in the
     paint tools with the word menus beside them. `?images-edited=pane`
     shows a pane with Replace image and Edit this image buttons instead;
@@ -317,8 +319,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
 
-  const [uploadError, setUploadError] = useState<string | null>(null);
+  const [uploadError, setUploadError] = useState<{text: string} | null>(null);
   const [uploadStatus, setUploadStatus] = useState('');
+  useEffect(() => {
+    if (!uploadError) {
+      return;
+    }
+    const timer = setTimeout(() => setUploadError(null), UPLOAD_ERROR_SHOWN_MS);
+    return () => clearTimeout(timer);
+  }, [uploadError]);
   const handleUploaded = useCallback(
     async (kind: ImageKind, image: UploadedImage) => {
       const target: ImageTarget = {
@@ -337,10 +346,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   );
   const upload = useImageUpload({
     onAccepted: handleUploaded,
-    onError: message => {
-      setUploadError(message);
-      setUploadStatus(message);
-    },
+    onError: message => setUploadError({text: message}),
     onProgress: setUploadStatus,
   });
   const handleUpload = useCallback(
@@ -586,7 +592,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         chooseOffered={chooseOffered}
         newKind={lockedKind}
         onUpload={enableImageUpload && newOffered ? handleUpload : undefined}
-        notice={uploadError}
+        notice={uploadError?.text}
+        onNoticeClose={() => setUploadError(null)}
         onDelete={deleteOffered ? writer.deleteImage : undefined}
       />
       {sceneKind ? (
