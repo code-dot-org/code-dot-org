@@ -10,8 +10,8 @@ import type {UploadedImage} from './useImageWriter';
 
 const ACCEPTED_TYPES = ['image/png', 'image/jpeg'];
 
-// The asset endpoint's per-file ceiling.
-const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
+// FilesApi#max_file_size.
+const MAX_UPLOAD_BYTES = 5_000_000;
 
 const EXTENSIONS: Record<string, string> = {
   'image/png': 'png',
@@ -92,7 +92,7 @@ export default function useImageUpload({
         onError(UPLOAD_ERRORS.wrongType);
         return;
       }
-      if (file.size > MAX_UPLOAD_BYTES) {
+      if (file.size >= MAX_UPLOAD_BYTES) {
         onError(UPLOAD_ERRORS.tooBig);
         return;
       }
