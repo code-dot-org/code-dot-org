@@ -23,7 +23,7 @@ const BASE = 'https://dsco.code.org/assets/font-awesome-pro';
 const BUCKET = 's3://cdo-dsco/assets/font-awesome-pro';
 const URL_FILES = [
   'frontend/packages/component-library-styles/font.scss',
-  'frontend/packages/fonts/src/loader/index.ts',
+  'frontend/packages/fonts/src/fontAwesome/index.ts',
   'shared/css/font.scss',
 ].map(f => path.join(root, f));
 const CONSTANTS_REL =

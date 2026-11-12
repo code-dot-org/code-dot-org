@@ -16,6 +16,7 @@ function createJavascriptConfig(format: 'cjs' | 'esm'): Options {
     entry: [
       './src/index.ts',
       './src/loader/index.ts',
+      './src/fontAwesome/index.ts',
       './src/react/FontLoader/index.tsx',
     ],
     outDir: `dist/${format}`,

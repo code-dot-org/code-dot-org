@@ -7,7 +7,7 @@ import {initializeCore} from '@code-dot-org/core';
 import {consentPlugin} from '@code-dot-org/core/plugins/consent';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
-import {injectFontAwesome} from '@code-dot-org/fonts';
+import {injectFontAwesome} from '@code-dot-org/fonts/fontAwesome';
 
 import {isMobileBuild} from '@/config/buildMode';
 import {enableMocks} from '@/modules/mocks/enableMocks';

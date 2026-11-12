@@ -30,6 +30,14 @@
       "import": "./dist/esm/react/FontLoader/index.mjs",
       "require": "./dist/cjs/react/FontLoader/index.js"
     },
+    "./fontAwesome": {
+      "types": {
+        "import": "./dist/esm/fontAwesome/index.d.mts",
+        "require": "./dist/cjs/fontAwesome/index.d.ts"
+      },
+      "import": "./dist/esm/fontAwesome/index.mjs",
+      "require": "./dist/cjs/fontAwesome/index.js"
+    },
     "./loader": {
       "types": {
         "import": "./dist/esm/loader/index.d.mts",
