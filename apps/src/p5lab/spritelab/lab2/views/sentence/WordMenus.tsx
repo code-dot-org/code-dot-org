@@ -6,7 +6,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {hueClass, withPeriod, WordChip, WordText} from './sentencePieces';
 import {
@@ -68,6 +68,36 @@ export function useWordMenus({
   // What the last pick did, for screen readers; the sentence itself is not
   // live, since its chips carry controls.
   const [announcement, setAnnouncement] = useState('');
+  // Chips, words and word sets each play an entrance animation when they
+  // first appear. React sometimes rebuilds their elements without anything
+  // having changed, for example when starting a drawing moves this pane
+  // inside the paint tools, and a rebuilt element would play its animation
+  // again. So this remembers, by id, which entrance animations have
+  // finished, and those elements are rendered with the animation off.
+  const playedEntrances = useRef(new Set<string>());
+  const renderedIds = new Set<string>();
+  const entranceFor = (id: string) => {
+    renderedIds.add(id);
+    return {
+      played: playedEntrances.current.has(id),
+      onAnimationEnd: (e: React.AnimationEvent) => {
+        // Animation events bubble up from child elements; only this
+        // element's own animation counts.
+        if (e.target === e.currentTarget) {
+          playedEntrances.current.add(id);
+        }
+      },
+    };
+  };
+  // An id that was not rendered this time is forgotten, so that a word
+  // which is removed and later chosen again animates in again.
+  useEffect(() => {
+    playedEntrances.current.forEach(id => {
+      if (!renderedIds.has(id)) {
+        playedEntrances.current.delete(id);
+      }
+    });
+  });
   const slot = slots[Math.min(index, slots.length - 1)];
   const show = (next: number) => {
     setDirection(next < index ? 'left' : 'right');
@@ -228,6 +258,7 @@ export function useWordMenus({
               ]
             : [];
         }
+        const chipEntrance = entranceFor(`chip:${s.id}-${word.id}`);
         return [
           <WordChip
             // Keyed by word too, so a changed word remounts and replays the
@@ -235,7 +266,11 @@ export function useWordMenus({
             key={`${s.id}-${word.id}`}
             sentence={sentence}
             slotId={s.id}
-            className={classNames(overSlotId === s.id && styles.dropTarget)}
+            className={classNames(
+              overSlotId === s.id && styles.dropTarget,
+              chipEntrance.played && styles.entrancePlayed
+            )}
+            onAnimationEnd={chipEntrance.onAnimationEnd}
             {...dropHandlers(s.id)}
           >
             {disabled || !canMove || !isAvailable(s) || clusters ? (
@@ -274,9 +309,13 @@ export function useWordMenus({
         : [];
     });
 
-  const renderWords = (set: Slot) =>
+  // `setKey` is part of each word's entrance id. The carousel gives a set a
+  // new key every time it comes into view, so the set's words animate in
+  // again on each visit.
+  const renderWords = (set: Slot, setKey = set.id) =>
     set.words.map((word, wordIndex) => {
       const chosen = choices[set.id] === word.id;
+      const wordEntrance = entranceFor(`word:${setKey}-${word.id}`);
       return (
         <button
           key={word.id}
@@ -284,9 +323,11 @@ export function useWordMenus({
           className={classNames(
             styles.word,
             hueClass(sentence, set.id),
-            chosen && styles.chosen
+            chosen && styles.chosen,
+            wordEntrance.played && styles.entrancePlayed
           )}
           style={{'--i': wordIndex} as React.CSSProperties}
+          onAnimationEnd={wordEntrance.onAnimationEnd}
           aria-pressed={chosen}
           disabled={disabled}
           draggable={!disabled}
@@ -377,26 +418,34 @@ export function useWordMenus({
               visible. */}
               <div className={styles.sets}>
                 {slots.map((set, i) => {
-                  const shown = i === index;
+                  const inView = i === index;
+                  // The set in view gets a new key each time the carousel
+                  // moves, so React rebuilds it and its slide-in animation
+                  // plays again.
+                  const key = inView ? `${set.id}-${moveCount}` : set.id;
+                  const setEntrance = entranceFor(`set:${key}`);
                   return (
                     <div
-                      // Remounted on each arrival so the entrance replays.
-                      key={shown ? `${set.id}-${moveCount}` : set.id}
+                      key={key}
                       className={classNames(
                         styles.set,
-                        !shown && styles.setHidden,
-                        shown &&
+                        !inView && styles.setHidden,
+                        inView &&
                           (direction === 'left'
                             ? styles.enterFromLeft
-                            : styles.enterFromRight)
+                            : styles.enterFromRight),
+                        setEntrance.played && styles.entrancePlayed
                       )}
+                      onAnimationEnd={setEntrance.onAnimationEnd}
                       role="group"
                       aria-label={`${set.label}${
                         set.required ? ' (pick one)' : ''
                       }`}
-                      aria-hidden={!shown}
+                      aria-hidden={!inView}
                     >
-                      <div className={styles.words}>{renderWords(set)}</div>
+                      <div className={styles.words}>
+                        {renderWords(set, key)}
+                      </div>
                     </div>
                   );
                 })}

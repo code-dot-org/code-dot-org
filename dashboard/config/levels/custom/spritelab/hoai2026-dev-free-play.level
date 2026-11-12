@@ -34,6 +34,7 @@
     },
     "block_catalog": true,
     "use_secondary_finish_button": "true",
+    "finish_dialog": "hoai2026",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -55,7 +56,15 @@
         },
         {
           "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer2"
+        },
+        {
+          "kind": "block",
           "type": "spritelab2_thePlayer"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_thePlayer2"
         },
         {
           "kind": "block",

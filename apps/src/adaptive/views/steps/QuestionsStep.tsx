@@ -204,6 +204,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           <textarea
             className={styles.freeResponseTextarea}
             value={freeResponseText}
+            aria-label={q.text}
             onChange={e =>
               setFreeResponseTexts(prev => ({
                 ...prev,
@@ -235,6 +236,8 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
         <MuiTypography
           variant="body2"
           role="status"
+          aria-live="polite"
+          aria-atomic="true"
           className={
             feedback === 'correct'
               ? styles.feedbackCorrect

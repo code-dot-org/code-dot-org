@@ -41,6 +41,10 @@
   min-height: 0;
 }
 
+.shellAlert {
+  flex: 0 0 auto;
+}
+
 // One outer height for every tab item — plain tabs and the Code+scene group —
 // so the bar reads as a row of equal boxes (border-box: height includes the
 // 1px outlines).
@@ -655,5 +659,3 @@ $arrow-gap: 6px;
 .srOnly {
   @include chrome.sr-only;
 }
-
-

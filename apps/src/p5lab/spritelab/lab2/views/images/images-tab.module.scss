@@ -58,8 +58,9 @@ $frame-border: 2px;
     transparent
   );
   color: var(--text-neutral-white-fixed);
-  font-size: 14px;
-  line-height: 1.35;
+  // The same font size as an h6 heading in the design system.
+  font-size: 1.25rem;
+  line-height: 1.4;
   text-align: left;
 }
 
@@ -97,12 +98,30 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   .list {
     width: $tile-px;
   }
+
+  // When the list is only one tile wide there is no room for the plus
+  // button beside the title. The title takes the full width, its name may
+  // wrap onto a second line, and the plus button moves to the row below.
+  .listHeader {
+    flex-wrap: wrap;
+  }
+
+  .listTitle {
+    flex-basis: 100%;
+  }
+
+  // The extra class is needed to override the `white-space: nowrap` rule
+  // further down, which would otherwise win by coming later.
+  .listTitle .listName {
+    white-space: normal;
+  }
 }
 
-// The plus never wraps under the name: a narrow column truncates the
-// name and count instead.
+// In a wider list the plus button sits beside the title, and a name that
+// is too long is cut off with an ellipsis instead of wrapping.
 .listHeader {
   display: flex;
+  flex: none;
   align-items: center;
   gap: 4px;
   min-height: 36px;
@@ -483,6 +502,11 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   align-items: center;
   gap: 4px;
   padding: 6px 10px 6px 18px;
+  // Without the outline, the bar is hard to see over a picture that is
+  // the same color as the bar. The outline is the opposite of the bar's
+  // own color: white around the dark bar of the light theme, dark around
+  // the light bar of the dark theme.
+  border: 2px solid var(--background-neutral-primary);
   border-radius: 12px;
   background-color: var(--background-neutral-primary-inverse);
   color: var(--text-neutral-primary-inverse);

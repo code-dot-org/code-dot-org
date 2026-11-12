@@ -24,6 +24,7 @@ import {
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
 import {SHOW_TITLE_BLOCK_TYPE} from '../blockDefinitions/showTitle';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
+import {THE_PLAYER_2_BLOCK_TYPE} from '../blockDefinitions/thePlayer2';
 import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 
 import {
@@ -99,7 +100,9 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
       'spritelab2_setAsPlatformPlayer',
+      'spritelab2_setAsPlatformPlayer2',
       THE_PLAYER_BLOCK_TYPE,
+      THE_PLAYER_2_BLOCK_TYPE,
       'spritelab2_makeSpriteAtGrid',
       'gamelab_setBackgroundImageAs',
       WHEN_PLAYER_BLOCK_TYPE,
