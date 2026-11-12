@@ -1,6 +1,7 @@
 // The "How AI made your image" story. On a level that asks for it, it is
 // told once a visit, as soon as the first picture made there is ready and
-// before that picture is shown. It waits for a quiet moment first. It is
+// before that picture is shown. If the Images tab is not in view, or a
+// rating question is open, it is held until neither is the case. It is
 // also told at once whenever a student asks for it.
 
 import {useCallback, useEffect, useRef, useState} from 'react';
