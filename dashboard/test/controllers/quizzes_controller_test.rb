@@ -403,7 +403,7 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_equal @quiz.reload.updated_at.to_i, JSON.parse(response.body)['version']
   end
 
-  test "update keeps an exam quiz an exam while it is the last level of a lockable lesson" do
+  test "update keeps an exam Quiz an exam while it is the last level of a lockable lesson" do
     @quiz.update!(purpose: 'exam')
     lesson = create(:lesson, lockable: true)
     create(:script_level, script: lesson.script, lesson: lesson, levels: [@quiz], assessment: true)
@@ -414,7 +414,7 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_equal 'exam', @quiz.reload.purpose
   end
 
-  test "update lets an exam quiz change purpose when it is not the last level of a lockable lesson" do
+  test "update lets an exam Quiz change purpose when it is not the last level of a lockable lesson" do
     @quiz.update!(purpose: 'exam')
 
     put :update, params: {level_id: @quiz.id, purpose: 'practice'}

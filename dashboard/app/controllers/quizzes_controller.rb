@@ -60,7 +60,7 @@ class QuizzesController < ApplicationController
       end
       updates = present_configuration_updates
       if updates.key?(:purpose) && updates[:purpose] != 'exam' && @level.exam? && @level.lock_level?
-        raise "This quiz must stay an exam while it is the last level of a lockable lesson."
+        raise "This Quiz must stay an exam while it is the last level of a lockable lesson."
       end
       @level.assign_attributes(updates)
       @level.advance_saved_version
