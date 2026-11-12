@@ -60,10 +60,6 @@ $narrow: 991.98px;
 .lessonTitle {
   padding-inline-start: 5px;
   color: var(--text-neutral-primary);
-
-  @media (max-width: $narrow) {
-    max-width: 120px;
-  }
 }
 
 .saveStatus {
