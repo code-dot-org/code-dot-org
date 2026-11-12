@@ -40,7 +40,7 @@ import {pickTip} from '../images/teaching/generationTips';
 import {LearningStory, storyFor} from '../images/teaching/useLearningStory';
 import StripFrame from '../StripFrame';
 
-import {PixelReveal, SparkleBurst} from './PixelReveal';
+import {FirstShowingOnly, PixelReveal, SparkleBurst} from './PixelReveal';
 import SentenceReadOnly from './SentenceReadOnly';
 import {
   Choices,
@@ -165,8 +165,13 @@ interface SentenceSceneProps {
   initialAnimated?: boolean;
   /** The student turned Animated on or off. */
   onAnimatedChange?: (animated: boolean) => void;
-  /** Called with each generated picture as soon as it is shown. */
+  /** Called with each generated picture as soon as it is ready, to store
+      it. */
   onKeep: (result: GeneratedImageResult) => Promise<void> | void;
+  /** Called with each generated picture before it is shown. The scene
+      keeps showing that the picture is being made until the returned
+      promise resolves, and shows the picture then. */
+  onReady?: (result: GeneratedImageResult) => Promise<void> | void;
   /** Called when the student rates the kept picture; resolves true once
       the verdict is on its record. Without it, or when it resolves false,
       the picture is kept again with the verdict in its generation
@@ -207,6 +212,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   initialAnimated = true,
   onAnimatedChange,
   onKeep,
+  onReady,
   onRate,
   onGenerateStart,
   onBusyChange,
@@ -249,6 +255,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
   const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
+  // The pictures whose reveal animation has already played.
+  const revealedPictureIds = useRef(new Set<string>());
   // The cached variant shown last for a filling, so Generate again shows
   // another.
   const lastCachedRef = useRef<{path: string; variant: number}>();
@@ -418,10 +426,17 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         sent,
         cached: !!cached,
       };
+      // The picture is stored while the host holds it back, so that
+      // leaving the page during the wait does not lose it.
+      const stored = persist(entry, null);
+      await onReady?.(entry.result);
+      if (run !== runRef.current) {
+        return;
+      }
       setChosenPicture(entry);
       setMode('result');
       playSound('reveal');
-      await persist(entry, null);
+      await stored;
     } catch (e) {
       if (run !== runRef.current) {
         return;
@@ -451,6 +466,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     exhausted,
     advanced,
     persist,
+    onReady,
     imageSource,
     findCached,
   ]);
@@ -601,27 +617,31 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           )}
         />
       )}
-      {/* Keyed by picture, so each new one remounts and plays the reveal
-          once. */}
-      <PixelReveal
+      {/* The reveal and the sparkles play once for each new picture. */}
+      <FirstShowingOnly
         key={`reveal-${chosenPicture.id}`}
-        src={chosenPicture.dataURI}
-        crop={
-          sheet
-            ? {
-                // A generated set's frames stand in one row.
-                ...stripCellOrigin(
-                  CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
-                  sheet.frameSize,
-                  stillFrame ?? 0
-                ),
-                width: sheet.frameSize.x,
-                height: sheet.frameSize.y,
-              }
-            : undefined
-        }
-      />
-      <SparkleBurst key={`burst-${chosenPicture.id}`} />
+        id={String(chosenPicture.id)}
+        shownIds={revealedPictureIds}
+      >
+        <PixelReveal
+          src={chosenPicture.dataURI}
+          crop={
+            sheet
+              ? {
+                  // A generated set's frames stand in one row.
+                  ...stripCellOrigin(
+                    CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
+                    sheet.frameSize,
+                    stillFrame ?? 0
+                  ),
+                  width: sheet.frameSize.x,
+                  height: sheet.frameSize.y,
+                }
+              : undefined
+          }
+        />
+        <SparkleBurst />
+      </FirstShowingOnly>
     </>
   ) : null;
 

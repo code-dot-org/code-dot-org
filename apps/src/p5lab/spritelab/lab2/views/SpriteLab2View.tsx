@@ -9,7 +9,6 @@ import {AnyAction, Reducer} from 'redux';
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
-import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/getCode';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -69,6 +68,7 @@ import {
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {codeFromSavedScene} from '../blockly/savedSceneCode';
 import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
@@ -1315,9 +1315,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           code =
             live ??
             withSceneMenuActive(scene.id, () =>
-              getCodeFromSerializedWorkspace(
-                scene.source ?? DEFAULT_SCENE_SOURCE
-              )
+              codeFromSavedScene(scene.source ?? DEFAULT_SCENE_SOURCE)
             );
         } catch (e) {
           // A scene that fails to compile shouldn't kill the jump
@@ -2220,8 +2218,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         }
       />
       <div className={moduleStyles.divider} />
-      <LabShell>
-        {WorkspaceAlert}
+      <LabShell alert={WorkspaceAlert}>
         <div ref={stageRef} className={moduleStyles.stage}>
           {scenesOffered &&
             editorsShown &&

@@ -32,21 +32,15 @@
       "title": "**Treasure**",
       "items": [
         {
-          "text": "Click **New image** and make a new object.",
+          "text": "Select the **+** button and make a new object.",
           "check": {
             "kind": "image",
             "imageType": "sprite"
           }
-        },
-        {
-          "text": "**Evaluate** the AI’s image with a thumbs up or thumbs down.",
-          "check": {
-            "kind": "rated"
-          }
         }
       ]
     },
-    "long_instructions": "# Treasure or hazard?\r\n\r\nMake an object for your player to collect or avoid.\r\n",
+    "long_instructions": "# Treasure or hazard?\r\n\r\nMake an object for your player to seek or avoid.\r\n",
     "header_label": "Treasure",
     "embed": "false",
     "instructions_important": "false",

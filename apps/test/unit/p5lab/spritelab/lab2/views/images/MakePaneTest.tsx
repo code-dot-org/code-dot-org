@@ -58,32 +58,50 @@ describe('MakePane', () => {
     expect(generate).toHaveBeenCalledTimes(1);
   });
 
-  it('asks before generating over an existing image, once a sitting', () => {
+  it('replaces a picture that only AI made without asking', () => {
     const generate = jest.fn();
-    const {rerender} = render(
-      <MakePane parts={parts({generate})} width={280} replaces />
+    render(
+      <MakePane
+        parts={parts({generate, mode: 'result', frameFilled: true})}
+        width={280}
+        regenerate
+      />
     );
-    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Regenerate'}));
+    expect(screen.queryByRole('dialog')).toBeNull();
+    expect(generate).toHaveBeenCalledTimes(1);
+  });
+
+  it('asks before generating over a picture the student has drawn on', () => {
+    const generate = jest.fn();
+    render(
+      <MakePane
+        parts={parts({generate, mode: 'result', frameFilled: true})}
+        width={280}
+        editedByHand
+      />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Regenerate'}));
     expect(generate).not.toHaveBeenCalled();
     expect(
       screen.getByRole('dialog', {name: 'Replace this image?'})
     ).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
     expect(generate).not.toHaveBeenCalled();
-    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    expect(screen.queryByRole('dialog')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Regenerate'}));
     fireEvent.click(screen.getByRole('button', {name: 'Replace'}));
     expect(generate).toHaveBeenCalledTimes(1);
     expect(screen.queryByRole('dialog')).toBeNull();
-    // A picture has landed: the next generation replaces it without asking.
-    rerender(
-      <MakePane
-        parts={parts({generate, mode: 'result', frameFilled: true})}
-        width={280}
-        replaces
-      />
-    );
-    fireEvent.click(screen.getByRole('button', {name: 'Regenerate'}));
-    expect(generate).toHaveBeenCalledTimes(2);
+  });
+
+  it('asks before generating over a new drawing that is not saved yet', () => {
+    const generate = jest.fn();
+    render(<MakePane parts={parts({generate})} width={280} editedByHand />);
+    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    expect(generate).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', {name: 'Replace'}));
+    expect(generate).toHaveBeenCalledTimes(1);
   });
 
   it('offers Regenerate for an AI-made image, and the drawing button when given', () => {

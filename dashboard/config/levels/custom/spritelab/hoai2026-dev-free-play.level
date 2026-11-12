@@ -146,10 +146,6 @@
         },
         {
           "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition"
-        },
-        {
-          "kind": "block",
           "type": "gamelab_spriteClicked",
           "inputs": {
             "SPRITE": {

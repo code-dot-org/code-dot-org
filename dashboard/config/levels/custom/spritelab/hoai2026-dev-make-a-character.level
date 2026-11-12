@@ -31,7 +31,7 @@
       "title": "**Make a character**",
       "items": [
         {
-          "text": "Click **New image**.",
+          "text": "Select the **+** button.",
           "check": {
             "kind": "image",
             "imageType": "sprite"
