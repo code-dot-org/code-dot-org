@@ -1,5 +1,7 @@
-// The level's checklist as the Guide shows it: which items hold, kept once
-// earned for the rest of the visit, and the game's progress feeding them.
+// The level's checklist as the Guide shows it: which items are done, and
+// the game's progress feeding them. An item that is checked once stays done
+// for the rest of the visit. Any other item is done only while its check
+// passes.
 
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 

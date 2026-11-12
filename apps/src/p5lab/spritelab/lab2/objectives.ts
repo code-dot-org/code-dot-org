@@ -65,7 +65,8 @@ export interface Objective {
 // For each kind of check, whether it has to pass only once. Every kind is
 // listed, so a new kind has to be given an answer here.
 const CHECKED_ONCE: Record<ObjectiveCheck['kind'], boolean> = {
-  // These read work in the project and are checked the whole time.
+  // These read work that stays in the project, so they can be made again
+  // at any time.
   block: false,
   world: false,
   image: false,
@@ -81,9 +82,9 @@ const CHECKED_ONCE: Record<ObjectiveCheck['kind'], boolean> = {
   rated: true,
 };
 
-/** Whether a check has to pass only once. After that its step counts as
-    done, whatever the check would say later. Any other check is made the
-    whole time, and its step is done only while the check passes. */
+/** Whether a check has to pass only once, because what it reads cannot be
+    read again later. Any other check reads work that stays in the project
+    and can be made again at any time. */
 export function isCheckedOnce(check: ObjectiveCheck): boolean {
   return CHECKED_ONCE[check.kind];
 }
