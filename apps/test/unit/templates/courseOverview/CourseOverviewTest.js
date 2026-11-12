@@ -152,5 +152,50 @@ describe('CourseOverview', () => {
       );
       expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(0);
     });
+
+    it('is not shown if course requires verified teacher access', () => {
+      const wrapper = shallow(
+        <CourseOverview {...propsToShow} requiresVerifiedTeacherAccess={true} />
+      );
+      expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(0);
+    });
+  });
+
+  describe('RequiresVerifiedTeacherAccessNotification', () => {
+    const propsToShow = {
+      ...defaultProps,
+      isVerifiedInstructor: false,
+      requiresVerifiedTeacherAccess: true,
+    };
+    const NOTIFICATION = 'RequiresVerifiedTeacherAccessNotification';
+
+    it('is shown to unverified instructors if course requires verified access', () => {
+      const wrapper = shallow(<CourseOverview {...propsToShow} />);
+      expect(wrapper.find(NOTIFICATION).length).toEqual(1);
+    });
+
+    it('is not shown if instructor is verified', () => {
+      const wrapper = shallow(
+        <CourseOverview {...propsToShow} isVerifiedInstructor={true} />
+      );
+      expect(wrapper.find(NOTIFICATION).length).toEqual(0);
+    });
+
+    it('is not shown if course does not require verified access', () => {
+      const wrapper = shallow(
+        <CourseOverview
+          {...propsToShow}
+          requiresVerifiedTeacherAccess={false}
+        />
+      );
+      expect(wrapper.find(NOTIFICATION).length).toEqual(0);
+    });
+
+    it('is not shown while viewing as participant', () => {
+      const wrapper = shallow(
+        <CourseOverview {...propsToShow} viewAs={ViewType.Participant} />
+      );
+      expect(wrapper.find(NOTIFICATION).length).toEqual(0);
+    });
   });
 });

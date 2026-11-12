@@ -9,6 +9,7 @@ import {connect} from 'react-redux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import RequiresVerifiedTeacherAccessNotification from '@cdo/apps/templates/courseOverview/RequiresVerifiedTeacherAccessNotification';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
@@ -47,6 +48,7 @@ class UnitOverviewHeader extends Component {
     versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     userId: PropTypes.number,
     isOnTeacherDashboard: PropTypes.bool,
+    requiresVerifiedTeacherAccess: PropTypes.bool,
 
     // provided by redux
     plcHeaderProps: PropTypes.shape({
@@ -131,13 +133,17 @@ class UnitOverviewHeader extends Component {
       demoType,
       children,
       isOnTeacherDashboard,
+      requiresVerifiedTeacherAccess,
     } = this.props;
 
+    const showVerificationNotices =
+      viewAs === ViewType.Instructor && !isVerifiedInstructor && !demoType;
+    const showRequiresVerifiedAccess =
+      showVerificationNotices && requiresVerifiedTeacherAccess;
     const displayVerifiedResourcesWarning =
-      viewAs === ViewType.Instructor &&
-      !isVerifiedInstructor &&
+      showVerificationNotices &&
       hasVerifiedResources &&
-      !demoType;
+      !requiresVerifiedTeacherAccess;
 
     const displayVersionWarning =
       showRedirectWarning &&
@@ -170,6 +176,9 @@ class UnitOverviewHeader extends Component {
           />
         )}
         {userId && <ParticipantFeedbackNotification studentId={userId} />}
+        {showRequiresVerifiedAccess && (
+          <RequiresVerifiedTeacherAccessNotification />
+        )}
         {displayVerifiedResourcesWarning && <VerifiedResourcesNotification />}
         {displayVersionWarning && (
           <NotificationBanner

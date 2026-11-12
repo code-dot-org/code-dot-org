@@ -77,6 +77,9 @@ function showCourseEditor() {
         initialHasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
+        initialRequiresVerifiedTeacherAccess={
+          courseEditorData.course_summary.requires_verified_teacher_access
+        }
         initialNumberedUnits={courseEditorData.course_summary.numbered_units}
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}

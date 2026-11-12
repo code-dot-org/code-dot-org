@@ -2568,6 +2568,8 @@
   "reportAbuseIntro": "If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.",
   "requestProjectUnfeatured": "If you have any questions or if you would like to request that your project no longer be displayed in the [featured gallery]({url}), please reach out to us at support@code.org. ",
   "requiredQuestion": "Required?",
+  "requiresVerifiedTeacherAccessDetails": "This course is only available to verified teachers.",
+  "requiresVerifiedTeacherAccessNotice": "Verified teacher access required",
   "reset": "Reset",
   "resetProgram": "Reset",
   "resetPassword": "Reset password",

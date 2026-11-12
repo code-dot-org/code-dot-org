@@ -158,6 +158,9 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       courseOfferingId={selectedSection.courseOfferingId}
       courseVersionId={selectedSection.courseVersionId}
       isSingleUnitCourse={selectedSection.isAssignedSingleUnitCourse}
+      requiresVerifiedTeacherAccess={
+        unitSummaryResponse.unitData.requires_verified_teacher_access
+      }
       courseTitle={unitSummaryResponse.unitData.course_title}
       courseLink={courseLink}
       excludeCsfColumnInLegend={!unitSummaryResponse.unitData.csf}

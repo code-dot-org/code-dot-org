@@ -136,6 +136,7 @@ interface UnitData {
   student_resources: Resource[];
   lesson_extras_available: boolean;
   has_verified_resources: boolean;
+  requires_verified_teacher_access: boolean;
   curriculum_path: string | null;
   announcements: Announcement[];
   age_13_required: boolean;
