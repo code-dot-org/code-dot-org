@@ -27,10 +27,7 @@ function viewportContent() {
   var scale = zoomLevel() / 100;
   // outerWidth is the WebView's width, whatever the page's scale.
   var width = Math.round((window.outerWidth || screen.width) / scale);
-  return (
-    'width=' + width + ', initial-scale=' + scale + ', minimum-scale=' + scale +
-    ', maximum-scale=' + scale + ', user-scalable=no, viewport-fit=cover'
-  );
+  return `width=${width}, initial-scale=${scale}, minimum-scale=${scale}, maximum-scale=${scale}, user-scalable=no, viewport-fit=cover`;
 }
 
 function applyZoom() {
@@ -53,8 +50,7 @@ function setZoomLevel(level) {
   if (ZOOM_LEVELS.indexOf(level) < 0) {
     return;
   }
-  document.cookie =
-    ZOOM_COOKIE + '=' + level + '; path=/; max-age=315569520; secure; samesite=lax';
+  document.cookie = `${ZOOM_COOKIE}=${level}; path=/; max-age=315569520; secure; samesite=lax`;
   zoom = level;
   applyZoom();
 }

@@ -10,53 +10,48 @@ var DEBUG_STYLE_ID = 'codeai-debug-style';
 // Laid over the right of .header_right, in the space its invisible sign-in
 // and menu keep, and drawn like the site's own header buttons (.header_button:
 // Rename, Share, Remix). The page has the CodeAI tokens and Font Awesome.
-var CONTROLS_CSS =
-  ' #' + CONTROLS_ID + ' {' +
-  ' position: absolute; top: 50%; right: var(--spacing-p-xs);' +
-  ' display: flex; align-items: center; gap: var(--spacing-p-xxs);' +
-  ' transform: translateY(-50%); }' +
-  ' #' + CONTROLS_ID + ' span {' +
-  ' color: var(--text-neutral-white-fixed); font-size: var(--font-size-body-sm);' +
-  ' font-variant-numeric: tabular-nums; }' +
-  ' #' + CONTROLS_ID + ' span[hidden] { display: none; }' +
-  ' #' + CONTROLS_ID + ' button {' +
-  ' height: 2rem; padding: 0 var(--spacing-p-xs); margin: 0;' +
-  ' border: 1px solid var(--borders-neutral-white-fixed);' +
-  ' border-radius: var(--shape-md); background-color: transparent;' +
-  ' color: var(--text-neutral-white-fixed); font-size: var(--font-size-body-sm);' +
-  ' line-height: 1; cursor: pointer; }' +
-  // While hidden elements show, the header's own items take this space back:
-  // the controls step aside, and one floating button hides the elements
-  // again and brings the controls back.
-  ' html.' +
-  SHOWING_HIDDEN_CLASS +
-  ' #' +
-  CONTROLS_ID +
-  ' { display: none; }' +
-  ' #' +
-  HIDE_AGAIN_ID +
-  ' { display: none; position: fixed; right: var(--spacing-p-xs);' +
-  ' bottom: var(--spacing-p-xs); z-index: 2147483647; width: 3rem; height: 3rem;' +
-  ' align-items: center; justify-content: center; padding: 0; margin: 0;' +
-  ' border: 2px solid var(--borders-neutral-white-fixed); border-radius: 50%;' +
-  ' background-color: var(--background-brand-purple-primary-fixed);' +
-  ' color: var(--text-neutral-white-fixed); font-size: 1.25rem; cursor: pointer;' +
-  ' box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }' +
-  ' html.' +
-  SHOWING_HIDDEN_CLASS +
-  ' #' +
-  HIDE_AGAIN_ID +
-  ' { display: flex; }' +
-  ' #' + CONTROLS_ID + ' button:hover { background-color: var(--neutral-white-alpha-20); }' +
-  ' #' + CONTROLS_ID + ' button:active { background-color: var(--neutral-white-alpha-30); }' +
-  ' #' + CONTROLS_ID + ' button:focus-visible {' +
-  ' outline: 1px solid var(--borders-neutral-white-fixed); outline-offset: 2px; }' +
-  ' #' + CONTROLS_ID + ' button:disabled {' +
-  ' background-color: transparent; opacity: 0.5; cursor: default; }' +
-  // The header controls sit over the right of this, in the space the
-  // invisible items keep.
-  selectorList(['.header_right']) +
-  ' { position: relative; }';
+// While hidden elements show, the header's own items take this space back:
+// the controls step aside, and one floating button hides the elements again
+// and brings the controls back.
+var CONTROLS_CSS = `
+  #${CONTROLS_ID} {
+    position: absolute; top: 50%; right: var(--spacing-p-xs);
+    display: flex; align-items: center; gap: var(--spacing-p-xxs);
+    transform: translateY(-50%);
+  }
+  #${CONTROLS_ID} span {
+    color: var(--text-neutral-white-fixed); font-size: var(--font-size-body-sm);
+    font-variant-numeric: tabular-nums;
+  }
+  #${CONTROLS_ID} span[hidden] { display: none; }
+  #${CONTROLS_ID} button {
+    height: 2rem; padding: 0 var(--spacing-p-xs); margin: 0;
+    border: 1px solid var(--borders-neutral-white-fixed);
+    border-radius: var(--shape-md); background-color: transparent;
+    color: var(--text-neutral-white-fixed); font-size: var(--font-size-body-sm);
+    line-height: 1; cursor: pointer;
+  }
+  html.${SHOWING_HIDDEN_CLASS} #${CONTROLS_ID} { display: none; }
+  #${HIDE_AGAIN_ID} {
+    display: none; position: fixed; right: var(--spacing-p-xs);
+    bottom: var(--spacing-p-xs); z-index: 2147483647; width: 3rem; height: 3rem;
+    align-items: center; justify-content: center; padding: 0; margin: 0;
+    border: 2px solid var(--borders-neutral-white-fixed); border-radius: 50%;
+    background-color: var(--background-brand-purple-primary-fixed);
+    color: var(--text-neutral-white-fixed); font-size: 1.25rem; cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+  html.${SHOWING_HIDDEN_CLASS} #${HIDE_AGAIN_ID} { display: flex; }
+  #${CONTROLS_ID} button:hover { background-color: var(--neutral-white-alpha-20); }
+  #${CONTROLS_ID} button:active { background-color: var(--neutral-white-alpha-30); }
+  #${CONTROLS_ID} button:focus-visible {
+    outline: 1px solid var(--borders-neutral-white-fixed); outline-offset: 2px;
+  }
+  #${CONTROLS_ID} button:disabled {
+    background-color: transparent; opacity: 0.5; cursor: default;
+  }
+  ${selectorList(['.header_right'])} { position: relative; }
+`;
 
 function ensureDebugStyle() {
   if (document.getElementById(DEBUG_STYLE_ID)) {
@@ -131,14 +126,12 @@ function resetCourseButton(page) {
   button.title = 'Reset course';
   button.innerHTML = '<i class="fa-solid fa-eraser" aria-hidden="true"></i>';
   button.addEventListener('click', function () {
-    window.location.href =
-      window.location.origin +
-      '/codeai-app/reset?course=' +
-      encodeURIComponent(page.course) +
-      '&next=' +
-      encodeURIComponent(window.location.origin + page.start) +
-      '&token=' +
-      encodeURIComponent(window.codeaiResetToken);
+    var params = new URLSearchParams({
+      course: page.course,
+      next: window.location.origin + page.start,
+      token: window.codeaiResetToken,
+    });
+    window.location.href = `${window.location.origin}/codeai-app/reset?${params}`;
   });
   return button;
 }
@@ -148,7 +141,7 @@ function zoomButton(label, icon, step) {
   button.type = 'button';
   button.setAttribute('data-zoom', '');
   button.setAttribute('data-label', label);
-  button.innerHTML = '<i class="fa-solid fa-' + icon + '" aria-hidden="true"></i>';
+  button.innerHTML = `<i class="fa-solid fa-${icon}" aria-hidden="true"></i>`;
   button.addEventListener('click', function () {
     // From the page's level, which another page may have changed since.
     setZoomLevel(ZOOM_LEVELS[ZOOM_LEVELS.indexOf(zoomLevel()) + step]);
@@ -160,11 +153,11 @@ function zoomButton(label, icon, step) {
 function refreshControls() {
   var index = ZOOM_LEVELS.indexOf(zoomLevel());
   var level = controls.querySelector('span');
-  level.textContent = zoomLevel() + '%';
+  level.textContent = `${zoomLevel()}%`;
   level.hidden = zoomLevel() === 100;
   var buttons = controls.querySelectorAll('button[data-zoom]');
   for (var i = 0; i < buttons.length; i++) {
-    var label = buttons[i].getAttribute('data-label') + ' (' + zoomLevel() + '%)';
+    var label = `${buttons[i].getAttribute('data-label')} (${zoomLevel()}%)`;
     buttons[i].setAttribute('aria-label', label);
     buttons[i].title = label;
   }
@@ -210,7 +203,7 @@ function alignControls() {
   var rightInset =
     document.documentElement.clientWidth - headerRight.getBoundingClientRect().right;
   var inset = logo.getBoundingClientRect().left - rightInset;
-  controls.style.right = Math.max(0, inset) + 'px';
+  controls.style.right = `${Math.max(0, inset)}px`;
 }
 
 window.addEventListener('resize', function () {

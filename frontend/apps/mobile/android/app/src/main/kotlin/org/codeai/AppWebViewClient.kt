@@ -210,11 +210,12 @@ internal class AppWebViewClient(
     // Takes the page script's record of the last page load the page started:
     // [target] itself, or for a redirect any. A WebView without the
     // Navigation API keeps no record and is trusted.
-    private fun startedNavigationCheck(target: String, redirect: Boolean): String =
-        "(function () {" +
-            "var key = 'codeai_started_navigation', started = null;" +
-            "try { started = sessionStorage.getItem(key); sessionStorage.removeItem(key); } catch (e) {}" +
-            "return !window.navigation || started === ${JSONObject.quote(target)}" +
-            " || ($redirect && started !== null);" +
-            "})()"
+    private fun startedNavigationCheck(target: String, redirect: Boolean): String = """
+        (function () {
+          var key = 'codeai_started_navigation', started = null;
+          try { started = sessionStorage.getItem(key); sessionStorage.removeItem(key); } catch (e) {}
+          return !window.navigation || started === ${JSONObject.quote(target)}
+            || ($redirect && started !== null);
+        })()
+    """.trimIndent()
 }

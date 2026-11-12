@@ -17,7 +17,7 @@ function sameOrigin(url) {
 }
 
 function cookieValue(name) {
-  var match = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
+  var match = document.cookie.match(new RegExp(`(?:^|;\\s*)${name}=([^;]*)`));
   return match ? decodeURIComponent(match[1]) : null;
 }
 
@@ -30,16 +30,16 @@ function pageCourse() {
   if (match) {
     return {
       course: match[1],
-      start: '/courses/' + match[1] + '/units/' + match[2] + '/lessons/1/levels/1',
-      structure: '/api/script_structure/courses/' + match[1] + '/units/' + match[2],
+      start: `/courses/${match[1]}/units/${match[2]}/lessons/1/levels/1`,
+      structure: `/api/script_structure/courses/${match[1]}/units/${match[2]}`,
     };
   }
   match = path.match(/^\/s\/([A-Za-z0-9_-]+)/);
   if (match) {
     return {
       course: match[1],
-      start: '/s/' + match[1] + '/lessons/1/levels/1',
-      structure: '/api/script_structure/' + match[1],
+      start: `/s/${match[1]}/lessons/1/levels/1`,
+      structure: `/api/script_structure/${match[1]}`,
     };
   }
   // A course of its own levels, such as /flappy/1.
@@ -47,8 +47,8 @@ function pageCourse() {
   if (match) {
     return {
       course: match[1],
-      start: '/' + match[1] + '/1',
-      structure: '/api/script_structure/' + match[1],
+      start: `/${match[1]}/1`,
+      structure: `/api/script_structure/${match[1]}`,
     };
   }
   return null;

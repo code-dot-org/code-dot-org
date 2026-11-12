@@ -37,13 +37,16 @@ internal fun pageScript(resources: Resources, resetToken: String?): String {
     val files = PAGE_SCRIPT_FILES.joinToString("\n") { id ->
         resources.openRawResource(id).use { it.readBytes().toString(Charsets.UTF_8) }
     }
-    return "var codeaiDebugBuild = ${BuildConfig.DEBUG};\n" +
-        "var codeaiResetToken = ${JSONObject.quote(resetToken ?: "")};\n" +
-        "(function () {\n" +
-        "if (window.top !== window || window.$PAGE_SCRIPT_GUARD) {\n  return;\n}\n" +
-        "window.$PAGE_SCRIPT_GUARD = true;\n" +
-        files +
-        "})();\n"
+    val prelude = """
+        var codeaiDebugBuild = ${BuildConfig.DEBUG};
+        var codeaiResetToken = ${JSONObject.quote(resetToken ?: "")};
+        (function () {
+        if (window.top !== window || window.$PAGE_SCRIPT_GUARD) {
+          return;
+        }
+        window.$PAGE_SCRIPT_GUARD = true;
+    """.trimIndent()
+    return "$prelude\n$files})();\n"
 }
 
 /**

@@ -44,7 +44,7 @@ function resetCourse(session, course) {
   } catch (e) {
     // Malformed progress: clientState.js ignores it too.
   }
-  var prefix = 'source_' + course + '_';
+  var prefix = `source_${course}_`;
   for (var i = session.length - 1; i >= 0; i--) {
     var key = session.key(i);
     if (key !== null && key.indexOf(prefix) === 0) {
@@ -99,7 +99,7 @@ try {
   var resetCourseName = cookieValue(RESET_COURSE_COOKIE);
   if (resetCourseName) {
     resetCourse(session, resetCourseName);
-    document.cookie = RESET_COURSE_COOKIE + '=; path=/; max-age=0; secure; samesite=lax';
+    document.cookie = `${RESET_COURSE_COOKIE}=; path=/; max-age=0; secure; samesite=lax`;
   }
   storageMethods.setItem = function () {
     originalSetItem.apply(this, arguments);

@@ -10,8 +10,7 @@
 // cookie and reloads without ?lang=. Two tries per tab, so a cookie that
 // will not stick cannot loop the page.
 var LOCALE = 'en-US';
-var LOCALE_COOKIE =
-  'language_=' + LOCALE + '; domain=.code.org; path=/; max-age=315569520; secure; samesite=lax';
+var LOCALE_COOKIE = `language_=${LOCALE}; domain=.code.org; path=/; max-age=315569520; secure; samesite=lax`;
 var LOCALE_RELOADS_KEY = 'codeai_locale_reloads';
 
 function localeCookie() {

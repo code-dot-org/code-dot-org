@@ -95,7 +95,7 @@ LEVEL_RULES.forEach(function (rule) {
 function selectorList(selectors) {
   return selectors
     .map(function (selector) {
-      return 'html:not(#codeai-app) ' + selector;
+      return `html:not(#codeai-app) ${selector}`;
     })
     .join(', ');
 }
@@ -108,7 +108,7 @@ var SHOWING_HIDDEN_KEY = 'codeai_show_hidden';
 function hidingSelectorList(selectors) {
   return selectorList(
     selectors.map(function (selector) {
-      return ':not(.' + SHOWING_HIDDEN_CLASS + ') ' + selector;
+      return `:not(.${SHOWING_HIDDEN_CLASS}) ${selector}`;
     }),
   ).replace(/html:not\(#codeai-app\) :not/g, 'html:not(#codeai-app):not');
 }
@@ -127,25 +127,29 @@ if (DEBUG_BUILD) {
   }
 }
 
-var CSS =
-  hidingSelectorList(HIDDEN) +
-  ' { display: none !important; } ' +
-  hidingSelectorList(
-    INVISIBLE.concat(
-      INVISIBLE.map(function (selector) {
-        return selector + ' *';
-      }),
-    ),
-  ) +
-  ' { visibility: hidden !important; pointer-events: none !important; }' +
-  // removeWidgets() hides the unsupported-browser warning itself; the
-  // sign-in callout's wrapper has no size, so its popover is outlined.
-  HIDDEN.concat(INVISIBLE, ['#unsupported-browser', '.signin_callout_wrapper > * > *'])
-    .map(function (selector) {
-      return 'html.' + SHOWING_HIDDEN_CLASS + ' ' + selector;
-    })
-    .join(', ') +
-  ' { outline: 2px dashed #e5007e !important; outline-offset: -2px; }';
+var INVISIBLE_AND_CONTENTS = INVISIBLE.concat(
+  INVISIBLE.map(function (selector) {
+    return `${selector} *`;
+  }),
+);
+// removeWidgets() hides the unsupported-browser warning itself; the
+// sign-in callout's wrapper has no size, so its popover is outlined.
+var OUTLINED_SELECTORS = HIDDEN.concat(INVISIBLE, [
+  '#unsupported-browser',
+  '.signin_callout_wrapper > * > *',
+]).map(function (selector) {
+  return `html.${SHOWING_HIDDEN_CLASS} ${selector}`;
+});
+
+var CSS = `
+  ${hidingSelectorList(HIDDEN)} { display: none !important; }
+  ${hidingSelectorList(INVISIBLE_AND_CONTENTS)} {
+    visibility: hidden !important; pointer-events: none !important;
+  }
+  ${OUTLINED_SELECTORS.join(', ')} {
+    outline: 2px dashed #e5007e !important; outline-offset: -2px;
+  }
+`;
 
 function ensureStyle() {
   if (document.getElementById(STYLE_ID)) {
@@ -184,7 +188,7 @@ function removeWidgets() {
     if (showing) {
       banner.style.removeProperty('display');
       if (header) {
-        banner.style.setProperty('top', header.offsetHeight + 'px');
+        banner.style.setProperty('top', `${header.offsetHeight}px`);
       }
     } else {
       banner.style.setProperty('display', 'none', 'important');

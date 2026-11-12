@@ -85,8 +85,8 @@ document.addEventListener(
     }
     event.preventDefault();
     var structure = match[1]
-      ? '/api/script_structure/courses/' + match[1] + '/units/' + match[2]
-      : '/api/script_structure/' + match[3];
+      ? `/api/script_structure/courses/${match[1]}/units/${match[2]}`
+      : `/api/script_structure/${match[3]}`;
     firstUnpassedLevel(structure).then(function (next) {
       // Every level passed: the server's route knows where a finished
       // unit goes.
