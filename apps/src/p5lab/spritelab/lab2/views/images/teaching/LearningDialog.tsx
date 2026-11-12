@@ -192,7 +192,7 @@ const CHARACTER_PANELS: PanelContent[] = [
   },
   {
     heading: 'Try another version',
-    body: 'Click Generate again. The result can be different, even with the same prompt.',
+    body: 'Select Regenerate. The result can be different, even with the same prompt.',
     visual: anotherGuess,
   },
   {
@@ -225,7 +225,7 @@ const BACKGROUND_PANELS: PanelContent[] = [
   },
   {
     heading: 'Try another picture',
-    body: 'Click *Generate* again. The picture can be different, even with the same prompt.',
+    body: 'Select *Regenerate*. The picture can be different, even with the same prompt.',
     visual: anotherGuess,
   },
   {
