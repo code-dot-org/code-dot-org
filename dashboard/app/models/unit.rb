@@ -768,12 +768,6 @@ class Unit < ApplicationRecord
     under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_programming)
   end
 
-  def requires_verified_instructor?
-    # As of now the only course that requires the instructor to be verified in order to run code is CSA.
-    # TODO: determine if this should be replaced with has_verified_resources? instead.
-    return csa?
-  end
-
   def get_script_level_by_id(script_level_id)
     script_levels.find(id: script_level_id.to_i)
   end
@@ -1891,8 +1885,7 @@ class Unit < ApplicationRecord
         path: link(unit_group_unit: unit_group_unit),
         lesson_extras_available: lesson_extras_available?,
         text_to_speech_enabled: text_to_speech_enabled?,
-        position: unit_group_units&.first&.position,
-        requires_verified_instructor: requires_verified_instructor?
+        position: unit_group_units&.first&.position
       }
     ]
   end
