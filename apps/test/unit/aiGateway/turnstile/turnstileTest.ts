@@ -6,14 +6,25 @@ jest.mock('@code-dot-org/core/plugins/observability', () => ({
   logger: {error: jest.fn(), warn: jest.fn(), info: jest.fn()},
 }));
 
+jest.mock('@cdo/apps/dcdo', () => ({
+  __esModule: true,
+  default: {
+    get: jest.fn((_key: string, defaultValue: unknown) => defaultValue),
+  },
+}));
+
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
 import {
-  CHALLENGE_TIMEOUT_MS,
+  TURNSTILE_TIMEOUT_FLAG,
+  DEFAULT_TURNSTILE_TIMEOUT_SECONDS,
   TOKEN_MAX_AGE_MS,
 } from '@cdo/apps/aiGateway/turnstile/constants';
 import {parseTurnstileEnforcementMode} from '@cdo/apps/aiGateway/turnstile/enforcementMode';
 import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
+import DCDO from '@cdo/apps/dcdo';
+
+const TURNSTILE_TIMEOUT_MS = DEFAULT_TURNSTILE_TIMEOUT_SECONDS * 1000;
 
 const startSpanMock = Observability.startSpan as jest.Mock;
 
@@ -21,6 +32,9 @@ const startSpanMock = Observability.startSpan as jest.Mock;
 afterEach(() => {
   (TurnstileManager as unknown as {instance: null}).instance = null;
   jest.restoreAllMocks();
+  (DCDO.get as jest.Mock).mockImplementation(
+    (_key: string, defaultValue: unknown) => defaultValue
+  );
 });
 
 describe('parseTurnstileEnforcementMode', () => {
@@ -329,7 +343,7 @@ describe('TurnstileManager challenge failure callbacks', () => {
     });
 
     renderOptions['error-callback']('300030');
-    jest.advanceTimersByTime(CHALLENGE_TIMEOUT_MS);
+    jest.advanceTimersByTime(TURNSTILE_TIMEOUT_MS);
 
     await assertion;
   });
@@ -342,7 +356,21 @@ describe('TurnstileManager challenge failure callbacks', () => {
       reason: 'timeout',
     });
 
-    jest.advanceTimersByTime(CHALLENGE_TIMEOUT_MS);
+    jest.advanceTimersByTime(TURNSTILE_TIMEOUT_MS);
+
+    await assertion;
+  });
+
+  it('times out after the DCDO challenge timeout when one is set', async () => {
+    (DCDO.get as jest.Mock).mockImplementation((key, defaultValue) =>
+      key === TURNSTILE_TIMEOUT_FLAG ? 5 : defaultValue
+    );
+    const challenge = startChallenge();
+    const assertion = expect(challenge).rejects.toMatchObject({
+      reason: 'timeout',
+    });
+
+    jest.advanceTimersByTime(5_000);
 
     await assertion;
   });
