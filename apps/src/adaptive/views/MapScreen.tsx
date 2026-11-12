@@ -36,6 +36,7 @@ import {
   SKILL_MAP_TOUR_STORAGE_KEY,
 } from './skillMapTourHelpers';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
+import DCDO from '@cdo/apps/dcdo';
 /* eslint-enable import/order */
 
 // Percentages of the size at which the whole map fits.
@@ -90,7 +91,9 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   const tourEnded = useRef(false);
 
   const [tourEnabled, setTourEnabled] = useState(
-    () => !tryGetLocalStorage(SKILL_MAP_TOUR_STORAGE_KEY, '0')
+    () =>
+      !!DCDO.get('adaptive-skill-map-tour-enabled', true) &&
+      !tryGetLocalStorage(SKILL_MAP_TOUR_STORAGE_KEY, '0')
   );
 
   const tourSteps = useMemo(
