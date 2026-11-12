@@ -8,8 +8,10 @@ import {ObjectiveItem, ObjectivesChecklist} from '@cdo/apps/lab2/types';
 import {
   checkObjective,
   EMPTY_RUNTIME,
+  Objective,
   ObjectiveInputs,
   Objectives,
+  objectiveShown,
   RuntimeNeeds,
   RuntimeProgress,
   WorkspaceSource,
@@ -23,6 +25,9 @@ export type ObjectiveItemState = ObjectiveItem;
 export interface ObjectivesState extends ObjectivesChecklist {
   /** The level declares a checklist. */
   active: boolean;
+  /** The indexes of the completed items, counted in the level's full list
+      (hidden items included). Callouts refer to items by this index. */
+  earned: ReadonlySet<number>;
 }
 
 /** A frame's move past the player's speed by this much is a teleport. */
@@ -135,9 +140,10 @@ export function usePlayProgress(
 }
 
 /**
- * The checklist's state. An item stays done once it has held, like the
- * Guide's steps never retreat; a reload starts the list over, as the level's
- * milestone is the lasting record.
+ * The checklist's state. Once an item is completed it stays completed, and
+ * once an item has appeared it stays visible, even if its check stops
+ * passing. Reloading the page starts the checklist over; the level's saved
+ * progress is what lasts.
  */
 export function useObjectives({
   objectives,
@@ -146,7 +152,10 @@ export function useObjectives({
   baselineGrid,
   imagesForRole,
   source,
+  sceneSources,
+  editingSceneId,
   everPlayed,
+  generated,
   rated,
   runtime,
 }: {
@@ -156,7 +165,10 @@ export function useObjectives({
   baselineGrid?: (WorldCell | null)[][];
   imagesForRole: Record<string, readonly string[] | undefined>;
   source?: WorkspaceSource;
+  sceneSources?: Record<string, WorkspaceSource | undefined>;
+  editingSceneId?: string;
   everPlayed: boolean;
+  generated: ImageCounts;
   rated: boolean;
   runtime: RuntimeProgress;
 }): ObjectivesState {
@@ -168,7 +180,10 @@ export function useObjectives({
       baselineGrid,
       imagesForRole,
       source,
+      sceneSources,
+      editingSceneId,
       everPlayed,
+      generated,
       rated,
       runtime: runtime ?? EMPTY_RUNTIME,
     }),
@@ -178,46 +193,70 @@ export function useObjectives({
       baselineGrid,
       imagesForRole,
       source,
+      sceneSources,
+      editingSceneId,
       everPlayed,
+      generated,
       rated,
       runtime,
     ]
   );
   const items = objectives?.items;
+  // The indexes of the items that pass `test` and are not in `already`.
+  const newIndexes = useCallback(
+    (
+      already: ReadonlySet<number>,
+      test: (item: Objective, inputs: ObjectiveInputs) => boolean
+    ) =>
+      (items ?? []).flatMap((item, index) =>
+        !already.has(index) && test(item, inputs) ? [index] : []
+      ),
+    [items, inputs]
+  );
+  // The items visible at the start are worked out during the first render,
+  // so that mounting does not cause a second render.
+  const [shown, setShown] = useState<ReadonlySet<number>>(
+    () => new Set(newIndexes(new Set(), objectiveShown))
+  );
   const earnedRef = useRef(earned);
   earnedRef.current = earned;
+  const shownRef = useRef(shown);
+  shownRef.current = shown;
   useEffect(() => {
-    if (!items?.length) {
-      return;
-    }
-    const held = earnedRef.current;
-    const newly = items.flatMap((item, index) =>
-      !held.has(index) && checkObjective(item.check, inputs) ? [index] : []
+    const completed = earnedRef.current;
+    const newlyCompleted = newIndexes(completed, (item, inputs) =>
+      checkObjective(item.check, inputs)
     );
-    // No update when nothing new holds: an input rebuilt every render would
-    // otherwise re-run this effect without end.
-    if (!newly.length) {
-      return;
+    const visible = shownRef.current;
+    const newlyVisible = newIndexes(visible, objectiveShown);
+    // State is set only when something changed. The inputs are a new object
+    // on most renders, so setting state every time would loop forever.
+    if (newlyCompleted.length) {
+      setEarned(new Set([...completed, ...newlyCompleted]));
     }
-    setEarned(new Set([...held, ...newly]));
-  }, [items, inputs]);
+    if (newlyVisible.length) {
+      setShown(new Set([...visible, ...newlyVisible]));
+    }
+  }, [newIndexes]);
 
-  // One object per change: the panel it feeds is memoized on it.
+  // The result is a new object only when something changed, because the
+  // panel that receives it re-renders whenever the object is new.
   return useMemo<ObjectivesState>(() => {
     if (!objectives) {
-      return {active: false, items: [], allDone: false};
+      return {active: false, items: [], allDone: false, earned};
     }
-    const states = (items ?? []).map((item, index) => ({
-      id: item.id,
-      text: item.text,
-      done: earned.has(index),
-    }));
+    const states = (items ?? []).flatMap((item, index) =>
+      shown.has(index)
+        ? [{id: item.id, text: item.text, done: earned.has(index)}]
+        : []
+    );
     return {
       active: true,
       title: objectives.title,
       items: states,
       allDone: states.every(item => item.done),
       collapsedText: objectives.collapsedText,
+      earned,
     };
-  }, [objectives, items, earned]);
+  }, [objectives, items, earned, shown]);
 }

@@ -1,7 +1,8 @@
 // Chooses which screen to show: the checkpoint map, one checkpoint's steps,
-// or the project on its own. Owns the progress they share.
+// or the project on its own. Owns the progress they share, and does what
+// the pathway's finish block says when the student is finished.
 
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {setAiGatewayOptIn} from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import {AichatContext} from '@cdo/apps/aichat/types';
@@ -9,24 +10,40 @@ import {
   sendAdaptiveStepReport,
   sendStartedReportIfNotStarted,
 } from '@cdo/apps/code-studio/progressRedux';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {isAdaptiveAiEnabled} from '../ai/generate';
 import {
+  sendAdaptiveEvent,
+  sendFinalProjectClicked,
+  setAdaptiveMetricsContext,
+  statusCounts,
+} from '../metricsHelpers';
+import {
   PROJECT_STEP_ID,
+  CheckpointStatus,
   Progress,
+  isComplete,
   stepIdToResume,
+  totalTimeSpent,
   useProgress,
+  visibleSteps,
 } from '../progress';
 import {ProgressKey} from '../progress/progressStore';
 import {nextCheckpoint} from '../routing/route';
-import {Checkpoint, Pathway} from '../types';
+import {findCheckpoint} from '../schema/helpers';
+import {Checkpoint, Pathway, Step} from '../types';
 
 import AdaptiveHeader from './AdaptiveHeader';
+import AdaptiveTabBar from './AdaptiveTabBar';
 import {checkpointStepFromUrl, clearUrl} from './checkpointUrl';
+import FinishDialog from './FinishDialog';
+import {getSkillProgress} from './map/groupProgress';
 import MapScreen from './MapScreen';
 import {PathwayContext} from './PathwayContext';
 import StepPlayer from './steps/StepPlayer';
@@ -75,6 +92,15 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   levelProperties,
 }) => {
   const dispatch = useAppDispatch();
+  useEffect(
+    () =>
+      setAdaptiveMetricsContext({
+        pathwayId: pathway.id,
+        levelId: progressKey.levelId,
+        scriptId: progressKey.scriptId,
+      }),
+    [pathway.id, progressKey.levelId, progressKey.scriptId]
+  );
   const reportLevelStep = useCallback(
     (levelId: number, appType: string, result: number, timeMs: number) =>
       dispatch(sendAdaptiveStepReport(levelId, appType, result, timeMs)),
@@ -99,6 +125,11 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
 
   let initialCheckpointId: string | undefined;
   let initialStepId: string | undefined;
+  // A step with generatedInstructions but no status doesn't count as started.
+  // Only a checkpoint's steps count; time on the project screen does not.
+  const hasProgress = pathway.checkpoints.some(c =>
+    c.steps.some(s => progress.steps[s.id]?.status)
+  );
 
   if (urlCheckpointId) {
     if (statusMap[urlCheckpointId] === 'locked') {
@@ -107,7 +138,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     } else {
       // URL names an accessible checkpoint: open it, using the URL step if valid.
       initialCheckpointId = urlCheckpointId;
-      const cp = pathway.checkpoints.find(c => c.id === urlCheckpointId);
+      const cp = findCheckpoint(pathway, urlCheckpointId);
       if (cp) {
         const urlStepValid = cp.steps.some(s => s.id === urlStepId);
         initialStepId = urlStepValid ? urlStepId : stepIdToResume(cp, progress);
@@ -115,8 +146,6 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     }
   } else {
     // No URL checkpoint: auto-start only when the student hasn't begun yet.
-    // A step with generatedInstructions but no status doesn't count as started.
-    const hasProgress = Object.values(progress.steps).some(s => s.status);
     if (!hasProgress) {
       const firstCp = pathway.checkpoints.find(
         c => statusMap[c.id] === 'available'
@@ -137,6 +166,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       statusMap={statusMap}
       initialCheckpointId={initialCheckpointId}
       initialStepId={initialStepId}
+      isFirstVisit={!hasProgress}
       {...restProgress}
     />
   );
@@ -151,7 +181,15 @@ type LoadedPathwayAppProps = PathwayAppProps &
     initialCheckpointId?: string;
     /** Step within initialCheckpointId to start on. */
     initialStepId?: string;
+    isFirstVisit: boolean;
   };
+
+const OPEN_EVENTS: {[status in CheckpointStatus]?: string} = {
+  available: EVENTS.ADAPTIVE_CHECKPOINT_STARTED,
+  inProgress: EVENTS.ADAPTIVE_CHECKPOINT_RESUMED,
+  complete: EVENTS.ADAPTIVE_CHECKPOINT_REVIEWED,
+  skipped: EVENTS.ADAPTIVE_SKIPPED_CHECKPOINT_OPENED,
+};
 
 // The pathway once its progress is known. Reads initialCheckpointId and
 // initialStepId once, on mount.
@@ -163,6 +201,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   statusMap,
   initialCheckpointId,
   initialStepId,
+  isFirstVisit,
   startStep,
   completeStep,
   leaveStep,
@@ -172,11 +211,75 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   saveAnswers,
 }) => {
   const dispatch = useAppDispatch();
+  const projectName = useAppSelector(
+    state => state.lab.channel?.name || undefined
+  );
   const [view, setView] = useState<View>(
     initialCheckpointId
       ? {kind: 'step', checkpointId: initialCheckpointId, stepId: initialStepId}
       : {kind: 'map'}
   );
+
+  const hasReportedInitialLoad = useRef(false);
+  useEffect(() => {
+    if (hasReportedInitialLoad.current) return;
+    hasReportedInitialLoad.current = true;
+    sendAdaptiveEvent(EVENTS.ADAPTIVE_PATHWAY_LOADED, {
+      isFirstVisit,
+      ...statusCounts(statusMap),
+    });
+  }, [isFirstVisit, statusMap]);
+
+  const onMap = view.kind === 'map';
+  useEffect(() => {
+    if (onMap) sendAdaptiveEvent(EVENTS.ADAPTIVE_SKILL_MAP_VIEWED);
+  }, [onMap]);
+
+  // Reads the status at open, before the first step's start changes it.
+  const openedId = view.kind === 'step' ? view.checkpointId : undefined;
+  const lastOpenedId = useRef<string>();
+  // A skip is credited to the checkpoint played last.
+  const lastPlayedId = useRef<string>();
+  useEffect(() => {
+    if (openedId === lastOpenedId.current) return;
+    lastOpenedId.current = openedId;
+    if (!openedId) return;
+    lastPlayedId.current = openedId;
+    const status = statusMap[openedId];
+    const event = OPEN_EVENTS[status];
+    if (!event) return;
+    const checkpoint = pathway.checkpoints.find(c => c.id === openedId);
+    sendAdaptiveEvent(event, {
+      checkpointId: openedId,
+      checkpointStatus: status,
+      wasSuggested: nextCheckpoint(pathway, statusMap) === openedId,
+      requiresCount: checkpoint?.requires?.length ?? 0,
+    });
+  }, [openedId, pathway, statusMap]);
+
+  // Skips come out of routing on any change to progress, so there is no one
+  // action to send them from.
+  const previousStatusMap = useRef(statusMap);
+  useEffect(() => {
+    const before = previousStatusMap.current;
+    if (before === statusMap) return;
+    previousStatusMap.current = statusMap;
+    const newlySkipped = Object.keys(statusMap).filter(
+      id => statusMap[id] === 'skipped' && before[id] !== 'skipped'
+    );
+    for (const id of newlySkipped) {
+      const checkpoint = pathway.checkpoints.find(c => c.id === id);
+      const skillIds = checkpoint?.skillIds ?? [];
+      sendAdaptiveEvent(EVENTS.ADAPTIVE_ROUTING_SKIPPED_CHECKPOINT, {
+        checkpointId: id,
+        skillIds: skillIds.join(','),
+        evidenceLevels: skillIds
+          .map(s => `${s}:${evidence[s]?.evidenceLevel ?? 0}`)
+          .join(','),
+        triggeredByCheckpointId: lastPlayedId.current,
+      });
+    }
+  }, [statusMap, pathway, evidence]);
 
   // Handle browser back/forward at the checkpoint level.
   useEffect(() => {
@@ -190,7 +293,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         clearUrl();
         setView({kind: 'map'});
       } else {
-        const cp = pathway.checkpoints.find(c => c.id === checkpointId);
+        const cp = findCheckpoint(pathway, checkpointId);
         const validUrlStep = cp?.steps.some(s => s.id === urlStep)
           ? urlStep
           : undefined;
@@ -204,7 +307,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     };
     window.addEventListener('popstate', handler);
     return () => window.removeEventListener('popstate', handler);
-  }, [pathway.checkpoints, progress, statusMap]);
+  }, [pathway, progress, statusMap]);
   // After a routing checkpoint, zoom the map to the next suggested checkpoint.
   useEffect(() => {
     if (view.kind === 'map' && view.focusNext) {
@@ -220,6 +323,30 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     dispatch(sendStartedReportIfNotStarted('adaptive'));
     setView({kind: 'project'});
   };
+  // I'm finished does what the pathway's finish block says: asks through
+  // its dialog, plays its checkpoint, then finishes the level the way any
+  // Lab2 level does, each part skipped when absent.
+  const {dialog: finishDialogContent, checkpoint: finishCheckpoint} =
+    pathway.finish ?? {};
+  const [finishAsked, setFinishAsked] = useState(false);
+  const finishLevel = () => dispatch(continueOrFinishLesson());
+  const enterFinish = () => {
+    if (!finishCheckpoint) return finishLevel();
+    clearUrl();
+    setView({kind: 'step', checkpointId: finishCheckpoint.id});
+  };
+  const requestFinish = () =>
+    finishDialogContent ? setFinishAsked(true) : enterFinish();
+  const finishDialog = finishAsked && finishDialogContent && (
+    <FinishDialog
+      dialog={finishDialogContent}
+      onKeepWorking={() => setFinishAsked(false)}
+      onFinish={() => {
+        setFinishAsked(false);
+        enterFinish();
+      }}
+    />
+  );
   // Use AI Gateway for AI Tutor in Weblab2 steps, if adaptive AI is enabled.
   useEffect(() => {
     setAiGatewayOptIn(isAdaptiveAiEnabled());
@@ -228,7 +355,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
 
   const checkpoint =
     view.kind === 'step'
-      ? pathway.checkpoints.find(c => c.id === view.checkpointId)
+      ? findCheckpoint(pathway, view.checkpointId)
       : undefined;
   const playing = view.kind === 'project' ? project : checkpoint;
   // A review's build request is for the checkpoint it was made in.
@@ -272,6 +399,27 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   if (pathwayContext) {
     const isProject = view.kind === 'project';
     const {checkpoint} = pathwayContext;
+    const completeStepInCheckpoint = (step: Step, timeMs: number) => {
+      completeStep(step, timeMs);
+      if (isProject || isComplete(checkpoint, progress)) return;
+      const steps = visibleSteps(checkpoint, progress);
+      if (steps.at(-1)?.id !== step.id) return;
+      const priorSeconds = steps.reduce(
+        (sum, s) => sum + (progress.steps[s.id]?.timeSpent ?? 0),
+        0
+      );
+      sendAdaptiveEvent(EVENTS.ADAPTIVE_CHECKPOINT_COMPLETED, {
+        checkpointId: checkpoint.id,
+        totalTimeSeconds: priorSeconds + Math.ceil(timeMs / 1000),
+        stepsVisible: steps.length,
+        routeAfterCompletion: !!checkpoint.routeAfterCompletion,
+      });
+    };
+    const isFinish = checkpoint === finishCheckpoint;
+    const goToMap = () => {
+      clearUrl();
+      setView({kind: 'map'});
+    };
     return (
       <div className={styles.app}>
         <PathwayContext.Provider value={pathwayContext}>
@@ -279,26 +427,34 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             key={checkpoint.id}
             checkpoint={checkpoint}
             finishLabel={isProject ? 'Back to map' : undefined}
-            headerTitle={isProject ? checkpoint.title : undefined}
+            headerTitle={isProject || isFinish ? checkpoint.title : undefined}
             initialStepId={view.kind === 'step' ? view.stepId : undefined}
             onStartStep={startStep}
-            onCompleteStep={completeStep}
+            onCompleteStep={completeStepInCheckpoint}
             onLeaveStep={leaveStep}
             onSaveAnswers={saveAnswers}
-            onExit={() => {
-              clearUrl();
-              setView({kind: 'map'});
-            }}
+            onExit={goToMap}
             onFinish={() => {
+              if (isFinish) return finishLevel();
               clearUrl();
               setView({
                 kind: 'map',
                 focusNext: !isProject && !!checkpoint.routeAfterCompletion,
               });
             }}
-            onFinishPathway={isProject ? undefined : openProject}
+            onFinishPathway={isProject || isFinish ? undefined : requestFinish}
+            activeTab={isProject ? 'project' : undefined}
+            onTabChange={
+              isProject
+                ? tab => {
+                    if (tab === 'map') goToMap();
+                  }
+                : undefined
+            }
+            projectName={isProject ? projectName : undefined}
           />
         </PathwayContext.Provider>
+        {finishDialog}
       </div>
     );
   }
@@ -311,7 +467,22 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     <div className={styles.app}>
       <AdaptiveHeader
         title={`Skill Tree: ${pathway.title}`}
-        onFinish={openProject}
+        onFinish={() => {
+          sendFinalProjectClicked('mapHeader', statusMap);
+          requestFinish();
+        }}
+      />
+      <AdaptiveTabBar
+        activeTab="map"
+        onTabChange={tab => {
+          if (tab === 'project') {
+            sendFinalProjectClicked('mapTab', statusMap);
+            openProject();
+          }
+        }}
+        projectName={projectName}
+        skills={getSkillProgress(pathway, statusMap)}
+        timeSpentSeconds={totalTimeSpent(progress)}
       />
       <MapScreen
         pathway={pathway}
@@ -322,16 +493,16 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         onFocus={focusId => setView({kind: 'map', focusId})}
         onStart={id => {
           dispatch(sendStartedReportIfNotStarted('adaptive'));
-          const cp = pathway.checkpoints.find(c => c.id === id);
+          const cp = findCheckpoint(pathway, id);
           setView({
             kind: 'step',
             checkpointId: id,
             stepId: cp ? stepIdToResume(cp, progress) : undefined,
           });
         }}
-        onWorkOnProject={openProject}
         hasSkippedCheckpoints={hasSkippedCheckpoints}
       />
+      {finishDialog}
     </div>
   );
 };

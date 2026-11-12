@@ -48,10 +48,18 @@ const THUMBNAIL_SIZE: Record<AnimationKind, number> = {
   block: 32,
 };
 
+/** The pool's "when touches" block: its sprite picker lists sprites, then
+    platform blocks. Touching a block from any side counts. */
+export const TOUCHING_BLOCK_TYPE = 'gamelab_checkTouching';
+
 // Thumbnail options for one kind of animation, filtered by image category.
 // Costumes and blocks prefer the border-trimmed image (imageTrim.ts) so the
 // content fills the field instead of floating in its transparent margins.
-function animationOptions(kind: AnimationKind): [string, string][] {
+// `withBlocks` appends the block images after a costume picker's sprites.
+function animationOptions(
+  kind: AnimationKind,
+  withBlocks = false
+): [string, string][] {
   const state = getStore().getState();
   const animationList = state.animationList;
   if (!animationList) {
@@ -63,18 +71,24 @@ function animationOptions(kind: AnimationKind): [string, string][] {
       : categories.includes(BLOCKS_CATEGORY)
       ? 'block'
       : 'costume';
-  const results: [string, string][] = [];
-  animationList.orderedKeys.forEach((key: string) => {
-    const animation = animationList.propsByKey[key];
-    if (kindOf(animation.categories || []) !== kind) {
-      return;
-    }
-    const url =
-      getImageThumbnail(animation.name) ||
-      animation.sourceUrl ||
-      animationSourceUrl(key, animation, state.pageConstants?.channelId);
-    results.push([url, `"${animation.name}"`]);
-  });
+  const optionsOf = (wanted: AnimationKind): [string, string][] => {
+    const results: [string, string][] = [];
+    animationList.orderedKeys.forEach((key: string) => {
+      const animation = animationList.propsByKey[key];
+      if (kindOf(animation.categories || []) !== wanted) {
+        return;
+      }
+      const url =
+        getImageThumbnail(animation.name) ||
+        animation.sourceUrl ||
+        animationSourceUrl(key, animation, state.pageConstants?.channelId);
+      results.push([url, `"${animation.name}"`]);
+    });
+    return results;
+  };
+  const results = withBlocks
+    ? [...optionsOf(kind), ...optionsOf('block')]
+    : optionsOf(kind);
   return results.length ? results : EMPTY_IMAGE_OPTION;
 }
 
@@ -98,7 +112,7 @@ function slotOf(block: BlocklyCore.Block): ImageSlot {
     block.outputConnection?.targetConnection?.getParentInput();
   const parent = block.getParent();
   if (!parentInput || !parent) {
-    return {blockType: block.type, index: 0};
+    return {blockType: block.type, index: 0, data: block.data ?? undefined};
   }
   const sockets = parent.inputList.filter(input =>
     input.connection?.getCheck()?.includes(SPRITE_CHECK)
@@ -106,6 +120,7 @@ function slotOf(block: BlocklyCore.Block): ImageSlot {
   return {
     blockType: parent.type,
     index: Math.max(0, sockets.indexOf(parentInput)),
+    data: parent.data ?? undefined,
   };
 }
 
@@ -182,12 +197,21 @@ function animationDropdown(
   kind: AnimationKind,
   Ctor: typeof Lab2AnimationDropdown = Lab2AnimationDropdown
 ): Lab2AnimationDropdown {
+  // The constructor asks for options before the field exists.
+  const made: {field?: Lab2AnimationDropdown} = {};
   const field: Lab2AnimationDropdown = new Ctor(
-    () => animationOptions(kind),
+    () =>
+      animationOptions(
+        kind,
+        kind === 'costume' &&
+          made.field?.getSourceBlock()?.getParent()?.type ===
+            TOUCHING_BLOCK_TYPE
+      ),
     THUMBNAIL_SIZE[kind],
     THUMBNAIL_SIZE[kind],
     undefined
   );
+  made.field = field;
   field.kind = kind;
   return field;
 }

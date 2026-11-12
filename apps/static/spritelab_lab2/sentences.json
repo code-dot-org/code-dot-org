@@ -1,37 +1,83 @@
 {
   "wordSets": {
-    "creatures": [
+    "adjectives": [
       {
-        "id": "blob",
-        "text": "blob",
-        "icon": "splotch"
+        "id": "spooky",
+        "text": "spooky",
+        "icon": "ghost"
       },
+      {
+        "id": "robotic",
+        "text": "robotic",
+        "icon": "robot"
+      },
+      {
+        "id": "aquatic",
+        "text": "aquatic",
+        "icon": "water"
+      },
+      {
+        "id": "magical",
+        "text": "magical",
+        "icon": "wand-magic-sparkles"
+      },
+      {
+        "id": "cute",
+        "text": "cute",
+        "icon": "face-smile-hearts"
+      },
+      {
+        "id": "grumpy",
+        "text": "grumpy",
+        "icon": "face-angry"
+      },
+      {
+        "id": "red",
+        "text": "red",
+        "color": "#e5484d"
+      },
+      {
+        "id": "orange",
+        "text": "orange",
+        "color": "#f0883e"
+      },
+      {
+        "id": "green",
+        "text": "green",
+        "color": "#3fb950"
+      },
+      {
+        "id": "blue",
+        "text": "blue",
+        "color": "#388bfd"
+      },
+      {
+        "id": "purple",
+        "text": "purple",
+        "color": "#a371f7"
+      },
+      {
+        "id": "pink",
+        "text": "pink",
+        "color": "#f778ba"
+      }
+    ],
+    "creatures": [
       {
         "id": "robot",
         "text": "robot",
         "icon": "robot"
       },
       {
-        "id": "dragon",
-        "text": "dragon",
-        "icon": "dragon",
+        "id": "insect",
+        "text": "insect",
+        "icon": "bug"
+      },
+      {
+        "id": "axolotl",
+        "text": "axolotl",
+        "icon": "frog",
         "bodyPlan": "quadruped"
-      },
-      {
-        "id": "cat",
-        "text": "cat",
-        "icon": "cat",
-        "bodyPlan": "quadruped"
-      },
-      {
-        "id": "monster",
-        "text": "monster",
-        "icon": "alien-8bit"
-      },
-      {
-        "id": "wizard",
-        "text": "wizard",
-        "icon": "hat-wizard"
       },
       {
         "id": "penguin",
@@ -40,68 +86,56 @@
         "bodyPlan": "bird"
       },
       {
+        "id": "cat",
+        "text": "cat",
+        "icon": "cat",
+        "bodyPlan": "quadruped"
+      },
+      {
+        "id": "dog",
+        "text": "dog",
+        "icon": "dog",
+        "bodyPlan": "quadruped"
+      },
+      {
+        "id": "unicorn",
+        "text": "unicorn",
+        "icon": "unicorn",
+        "bodyPlan": "quadruped"
+      },
+      {
+        "id": "dumpling",
+        "text": "dumpling",
+        "icon": "bowl-chopsticks"
+      },
+      {
+        "id": "blob",
+        "text": "blob",
+        "icon": "splotch"
+      },
+      {
+        "id": "dragon",
+        "text": "dragon",
+        "icon": "dragon",
+        "bodyPlan": "quadruped"
+      },
+      {
+        "id": "fox",
+        "text": "fox",
+        "icon": "paw",
+        "bodyPlan": "quadruped"
+      },
+      {
         "id": "witch",
         "text": "witch",
         "icon": "hat-witch"
       }
     ],
-    "adjectives": [
-      {
-        "id": "brave",
-        "text": "brave",
-        "icon": "hand-fist"
-      },
-      {
-        "id": "sparkly",
-        "text": "sparkly",
-        "icon": "sparkles"
-      },
-      {
-        "id": "grumpy",
-        "text": "grumpy",
-        "icon": "face-angry"
-      },
-      {
-        "id": "friendly",
-        "text": "friendly",
-        "icon": "face-smile"
-      },
-      {
-        "id": "cute",
-        "text": "cute",
-        "icon": "face-smile-hearts"
-      },
-      {
-        "id": "sleepy",
-        "text": "sleepy",
-        "icon": "face-sleeping"
-      },
-      {
-        "id": "tiny",
-        "text": "tiny",
-        "icon": "bug"
-      }
-    ],
     "clothing": [
-      {
-        "id": "hat",
-        "text": "hat",
-        "icon": "hat-cowboy"
-      },
       {
         "id": "crown",
         "text": "crown",
         "icon": "crown"
-      },
-      {
-        "id": "cape",
-        "text": "cape",
-        "icon": "shirt"
-      },
-      {
-        "id": "scarf",
-        "text": "scarf",
-        "icon": "scarf"
       },
       {
         "id": "boots",
@@ -109,262 +143,26 @@
         "icon": "boot"
       },
       {
+        "id": "hat",
+        "text": "hat",
+        "icon": "hat-cowboy"
+      },
+      {
         "id": "glasses",
         "text": "glasses",
         "icon": "glasses"
+      },
+      {
+        "id": "cape",
+        "text": "cape",
+        "icon": "hood-cloak"
       }
     ],
-    "objects": [
+    "objectLooks": [
       {
-        "id": "key",
-        "text": "key",
-        "icon": "key"
-      },
-      {
-        "id": "gem",
-        "text": "gem",
-        "icon": "gem"
-      },
-      {
-        "id": "coin",
-        "text": "coin",
-        "icon": "coin"
-      },
-      {
-        "id": "apple",
-        "text": "apple",
-        "icon": "apple-whole"
-      },
-      {
-        "id": "star",
-        "text": "star",
-        "icon": "star"
-      },
-      {
-        "id": "potion",
-        "text": "potion",
-        "icon": "flask"
-      }
-    ],
-    "placeMoods": [
-      {
-        "id": "sunny",
-        "text": "sunny",
-        "icon": "sun"
-      },
-      {
-        "id": "misty",
-        "text": "misty",
-        "icon": "cloud-fog"
-      },
-      {
-        "id": "frozen",
-        "text": "frozen",
-        "icon": "snowflake"
-      },
-      {
-        "id": "spooky",
-        "text": "spooky",
-        "icon": "ghost"
-      },
-      {
-        "id": "peaceful",
-        "text": "peaceful",
-        "icon": "dove"
-      }
-    ],
-    "places": [
-      {
-        "id": "forest",
-        "text": "forest",
-        "icon": "trees"
-      },
-      {
-        "id": "cave",
-        "text": "cave",
-        "icon": "dungeon"
-      },
-      {
-        "id": "beach",
-        "text": "beach",
-        "icon": "umbrella-beach"
-      },
-      {
-        "id": "castle",
-        "text": "castle",
-        "icon": "castle"
-      },
-      {
-        "id": "city",
-        "text": "city",
-        "icon": "city"
-      },
-      {
-        "id": "jungle",
-        "text": "jungle",
-        "icon": "tree-palm"
-      }
-    ],
-    "expressions": [
-      {
-        "id": "cheerful",
-        "text": "cheerful",
-        "icon": "face-laugh"
-      },
-      {
-        "id": "curious",
-        "text": "curious",
-        "icon": "face-thinking"
-      },
-      {
-        "id": "surprised",
-        "text": "surprised",
-        "icon": "face-surprise"
-      },
-      {
-        "id": "shy",
-        "text": "shy",
-        "icon": "face-flushed"
-      },
-      {
-        "id": "proud",
-        "text": "proud",
-        "icon": "face-smile-relaxed"
-      },
-      {
-        "id": "silly",
-        "text": "silly",
-        "icon": "face-grin-tongue-wink"
-      }
-    ],
-    "times": [
-      {
-        "id": "sunrise",
-        "text": "sunrise",
-        "icon": "sunrise"
-      },
-      {
-        "id": "noon",
-        "text": "noon",
-        "icon": "clock-twelve"
-      },
-      {
-        "id": "sunset",
-        "text": "sunset",
-        "icon": "sunset"
-      },
-      {
-        "id": "night",
-        "text": "night",
-        "icon": "moon"
-      }
-    ],
-    "placeDetails": [
-      {
-        "id": "glowing-mushrooms",
-        "text": "glowing mushrooms",
-        "icon": "mushroom"
-      },
-      {
-        "id": "floating-lanterns",
-        "text": "floating lanterns",
-        "icon": "lamp"
-      },
-      {
-        "id": "distant-mountains",
-        "text": "distant mountains",
-        "icon": "mountains"
-      },
-      {
-        "id": "falling-leaves",
-        "text": "falling leaves",
-        "icon": "leaf"
-      },
-      {
-        "id": "twinkling-lights",
-        "text": "twinkling lights",
-        "icon": "lights-holiday"
-      },
-      {
-        "id": "drifting-fog",
-        "text": "drifting fog",
-        "icon": "smog"
-      }
-    ],
-    "blockMaterials": [
-      {
-        "id": "stone",
-        "text": "stone",
-        "icon": "mountain"
-      },
-      {
-        "id": "wood",
-        "text": "wood",
-        "icon": "tree"
-      },
-      {
-        "id": "ice",
-        "text": "ice",
-        "icon": "icicles"
-      },
-      {
-        "id": "gold",
-        "text": "gold",
-        "icon": "coins"
-      },
-      {
-        "id": "lava",
-        "text": "lava",
-        "icon": "volcano"
-      },
-      {
-        "id": "grass",
-        "text": "grass",
-        "icon": "seedling"
-      }
-    ],
-    "blockDetails": [
-      {
-        "id": "glowing-cracks",
-        "text": "glowing cracks",
-        "icon": "bolt"
-      },
-      {
-        "id": "tiny-gems",
-        "text": "tiny gems",
-        "icon": "gem"
-      },
-      {
-        "id": "moss-on-top",
-        "text": "moss on top",
-        "icon": "clover"
-      },
-      {
-        "id": "metal-bolts",
-        "text": "metal bolts",
-        "icon": "gear"
-      },
-      {
-        "id": "carved-patterns",
-        "text": "carved patterns",
+        "id": "crystal",
+        "text": "crystal",
         "icon": "diamond"
-      }
-    ],
-    "treasureLooks": [
-      {
-        "id": "shiny",
-        "text": "shiny",
-        "icon": "sparkles"
-      },
-      {
-        "id": "glowing",
-        "text": "glowing",
-        "icon": "lightbulb"
-      },
-      {
-        "id": "golden",
-        "text": "golden",
-        "color": "#e3b341"
       },
       {
         "id": "ancient",
@@ -372,26 +170,41 @@
         "icon": "scroll-old"
       },
       {
-        "id": "rainbow",
-        "text": "rainbow",
-        "icon": "rainbow"
+        "id": "glowing",
+        "text": "glowing",
+        "icon": "lightbulb"
       },
       {
-        "id": "tiny",
-        "text": "tiny",
-        "icon": "bug"
+        "id": "fiery",
+        "text": "fiery",
+        "icon": "fire"
+      },
+      {
+        "id": "metallic",
+        "text": "metallic",
+        "icon": "gear"
+      },
+      {
+        "id": "spiky",
+        "text": "spiky",
+        "icon": "star-sharp"
       }
     ],
-    "treasures": [
+    "objects": [
+      {
+        "id": "star",
+        "text": "star",
+        "icon": "star"
+      },
       {
         "id": "gem",
         "text": "gem",
         "icon": "gem"
       },
       {
-        "id": "crystal",
-        "text": "crystal",
-        "icon": "crystal-ball"
+        "id": "candy",
+        "text": "candy",
+        "icon": "candy"
       },
       {
         "id": "coin",
@@ -399,41 +212,304 @@
         "icon": "coin"
       },
       {
-        "id": "star",
-        "text": "star",
-        "icon": "star"
-      },
-      {
         "id": "key",
         "text": "key",
-        "icon": "key-skeleton"
+        "icon": "key"
       },
       {
-        "id": "crown",
-        "text": "crown",
-        "icon": "crown"
+        "id": "apple",
+        "text": "apple",
+        "icon": "apple-whole"
+      },
+      {
+        "id": "heart",
+        "text": "heart",
+        "icon": "heart"
+      },
+      {
+        "id": "ice-cream",
+        "text": "ice cream",
+        "icon": "ice-cream"
+      },
+      {
+        "id": "flower",
+        "text": "flower",
+        "icon": "flower"
+      },
+      {
+        "id": "gift",
+        "text": "gift",
+        "icon": "gift"
+      },
+      {
+        "id": "flame",
+        "text": "flame",
+        "icon": "flame"
+      },
+      {
+        "id": "potion",
+        "text": "potion",
+        "icon": "flask"
+      },
+      {
+        "id": "door",
+        "text": "door",
+        "icon": "door-closed"
       }
     ],
-    "treasureDetails": [
+    "placeMoods": [
       {
-        "id": "a-glow",
-        "text": "a glow",
-        "icon": "lightbulb"
+        "id": "underwater",
+        "text": "underwater",
+        "icon": "water"
       },
       {
-        "id": "tiny-sparkles",
-        "text": "tiny sparkles",
-        "icon": "sparkles"
+        "id": "futuristic",
+        "text": "futuristic",
+        "icon": "rocket"
       },
       {
-        "id": "a-ribbon",
-        "text": "a ribbon",
-        "icon": "ribbon"
+        "id": "spooky",
+        "text": "spooky",
+        "icon": "ghost"
       },
       {
-        "id": "a-crack",
-        "text": "a crack",
+        "id": "snowy",
+        "text": "snowy",
+        "icon": "snowflake"
+      },
+      {
+        "id": "outer-space",
+        "text": "outer space",
+        "icon": "planet-ringed"
+      },
+      {
+        "id": "tropical",
+        "text": "tropical",
+        "icon": "umbrella-beach"
+      },
+      {
+        "id": "frozen",
+        "text": "frozen",
+        "icon": "icicles"
+      },
+      {
+        "id": "misty",
+        "text": "misty",
+        "icon": "cloud-fog"
+      },
+      {
+        "id": "overgrown",
+        "text": "overgrown",
+        "icon": "seedling"
+      },
+      {
+        "id": "ancient",
+        "text": "ancient",
+        "icon": "scroll-old"
+      },
+      {
+        "id": "cheery",
+        "text": "cheery",
+        "icon": "sun"
+      },
+      {
+        "id": "candy",
+        "text": "candy",
+        "icon": "candy"
+      }
+    ],
+    "places": [
+      {
+        "id": "city",
+        "text": "city",
+        "icon": "city"
+      },
+      {
+        "id": "clouds",
+        "text": "clouds",
+        "icon": "clouds"
+      },
+      {
+        "id": "planet",
+        "text": "planet",
+        "icon": "planet-moon"
+      },
+      {
+        "id": "village",
+        "text": "village",
+        "icon": "house-chimney"
+      },
+      {
+        "id": "castle",
+        "text": "castle",
+        "icon": "castle"
+      },
+      {
+        "id": "cave",
+        "text": "cave",
+        "icon": "dungeon"
+      },
+      {
+        "id": "volcano",
+        "text": "volcano",
+        "icon": "volcano"
+      },
+      {
+        "id": "field",
+        "text": "field",
+        "icon": "wheat-awn"
+      },
+      {
+        "id": "swamp",
+        "text": "swamp",
+        "icon": "frog"
+      },
+      {
+        "id": "island",
+        "text": "island",
+        "icon": "island-tropical"
+      },
+      {
+        "id": "forest",
+        "text": "forest",
+        "icon": "trees"
+      },
+      {
+        "id": "mountains",
+        "text": "mountains",
+        "icon": "mountains"
+      },
+      {
+        "id": "room",
+        "text": "room",
+        "icon": "door-open"
+      }
+    ],
+    "viewpoints": [
+      {
+        "id": "inside",
+        "text": "inside",
+        "icon": "house"
+      },
+      {
+        "id": "far-away",
+        "text": "far away",
+        "icon": "binoculars"
+      }
+    ],
+    "blockLooks": [
+      {
+        "id": "dark",
+        "text": "dark",
+        "icon": "moon"
+      },
+      {
+        "id": "crystal",
+        "text": "crystal",
+        "icon": "diamond"
+      },
+      {
+        "id": "magical",
+        "text": "magical",
+        "icon": "wand-magic-sparkles"
+      },
+      {
+        "id": "golden",
+        "text": "golden",
+        "color": "#e3b341"
+      },
+      {
+        "id": "electric",
+        "text": "electric",
         "icon": "bolt"
+      },
+      {
+        "id": "crumbling",
+        "text": "crumbling",
+        "icon": "house-crack"
+      },
+      {
+        "id": "overgrown",
+        "text": "overgrown",
+        "icon": "seedling"
+      },
+      {
+        "id": "slimy",
+        "text": "slimy",
+        "icon": "droplet"
+      }
+    ],
+    "blockMaterials": [
+      {
+        "id": "bubbles",
+        "text": "bubbles",
+        "icon": "soap"
+      },
+      {
+        "id": "grass",
+        "text": "grass",
+        "icon": "seedling"
+      },
+      {
+        "id": "cheese",
+        "text": "cheese",
+        "icon": "cheese"
+      },
+      {
+        "id": "ice",
+        "text": "ice",
+        "icon": "icicles"
+      },
+      {
+        "id": "magma",
+        "text": "magma",
+        "icon": "volcano"
+      },
+      {
+        "id": "cloud",
+        "text": "cloud",
+        "icon": "cloud"
+      },
+      {
+        "id": "brick",
+        "text": "brick",
+        "icon": "block-brick"
+      },
+      {
+        "id": "flowers",
+        "text": "flowers",
+        "icon": "flower-tulip"
+      },
+      {
+        "id": "candy",
+        "text": "candy",
+        "icon": "candy"
+      },
+      {
+        "id": "coral",
+        "text": "coral",
+        "icon": "fish-fins"
+      },
+      {
+        "id": "stone",
+        "text": "stone",
+        "icon": "mountain"
+      },
+      {
+        "id": "metal",
+        "text": "metal",
+        "icon": "cubes"
+      },
+      {
+        "id": "jelly",
+        "text": "jelly",
+        "icon": "jar"
+      },
+      {
+        "id": "wood",
+        "text": "wood",
+        "icon": "tree"
       }
     ]
   },
@@ -497,7 +573,7 @@
       "slots": {
         "adjective": {
           "label": "adjective",
-          "words": "adjectives"
+          "words": "objectLooks"
         },
         "thing": {
           "label": "thing",
@@ -519,82 +595,14 @@
         },
         {
           "slot": "place"
-        }
-      ],
-      "slots": {
-        "adjective": {
-          "label": "adjective",
-          "words": "placeMoods"
-        },
-        "place": {
-          "label": "place",
-          "words": "places",
-          "required": true
-        }
-      }
-    },
-    "friend": {
-      "segments": [
-        {
-          "text": "A "
-        },
-        {
-          "slot": "adjective"
-        },
-        {
-          "text": " "
-        },
-        {
-          "slot": "creature"
         },
         {
           "phrase": [
             {
-              "text": " looking "
+              "text": " from "
             },
             {
-              "slot": "expression"
-            }
-          ]
-        }
-      ],
-      "slots": {
-        "adjective": {
-          "label": "adjective",
-          "words": "adjectives"
-        },
-        "creature": {
-          "label": "creature",
-          "words": "creatures",
-          "required": true
-        },
-        "expression": {
-          "label": "expression",
-          "words": "expressions"
-        }
-      }
-    },
-    "place-time": {
-      "segments": [
-        {
-          "text": "A "
-        },
-        {
-          "slot": "adjective"
-        },
-        {
-          "text": " "
-        },
-        {
-          "slot": "place"
-        },
-        {
-          "phrase": [
-            {
-              "text": " at "
-            },
-            {
-              "slot": "time"
+              "slot": "from"
             }
           ]
         }
@@ -609,50 +617,9 @@
           "words": "places",
           "required": true
         },
-        "time": {
-          "label": "time of day",
-          "words": "times"
-        }
-      }
-    },
-    "place-detail": {
-      "segments": [
-        {
-          "text": "A "
-        },
-        {
-          "slot": "adjective"
-        },
-        {
-          "text": " "
-        },
-        {
-          "slot": "place"
-        },
-        {
-          "phrase": [
-            {
-              "text": " with "
-            },
-            {
-              "slot": "detail"
-            }
-          ]
-        }
-      ],
-      "slots": {
-        "adjective": {
-          "label": "adjective",
-          "words": "placeMoods"
-        },
-        "place": {
-          "label": "place",
-          "words": "places",
-          "required": true
-        },
-        "detail": {
-          "label": "detail",
-          "words": "placeDetails"
+        "from": {
+          "label": "from where",
+          "words": "viewpoints"
         }
       }
     },
@@ -662,69 +629,24 @@
           "text": "A block of "
         },
         {
-          "slot": "material"
-        },
-        {
-          "phrase": [
-            {
-              "text": " with "
-            },
-            {
-              "slot": "detail"
-            }
-          ]
-        }
-      ],
-      "slots": {
-        "material": {
-          "label": "material",
-          "words": "blockMaterials",
-          "required": true
-        },
-        "detail": {
-          "label": "detail",
-          "words": "blockDetails"
-        }
-      }
-    },
-    "treasure": {
-      "segments": [
-        {
-          "text": "A "
-        },
-        {
-          "slot": "look"
+          "slot": "adjective"
         },
         {
           "text": " "
         },
         {
-          "slot": "treasure"
-        },
-        {
-          "phrase": [
-            {
-              "text": " with "
-            },
-            {
-              "slot": "detail"
-            }
-          ]
+          "slot": "material"
         }
       ],
       "slots": {
-        "look": {
+        "adjective": {
           "label": "adjective",
-          "words": "treasureLooks"
+          "words": "blockLooks"
         },
-        "treasure": {
-          "label": "treasure",
-          "words": "treasures",
+        "material": {
+          "label": "material",
+          "words": "blockMaterials",
           "required": true
-        },
-        "detail": {
-          "label": "detail",
-          "words": "treasureDetails"
         }
       }
     }

@@ -242,6 +242,110 @@ describe('parsePathway', () => {
     expect(problemsOf(raw)).toHaveLength(1);
   });
 
+  it('accepts a congrats step for a panel it knows', () => {
+    const raw = served();
+    raw.checkpoints[0].steps.push({
+      id: 'done',
+      title: 'Done',
+      kind: 'congrats',
+      panelId: 'hoai2026',
+    });
+    expect(problemsOf(raw)).toEqual([]);
+    raw.checkpoints[0].steps.push({
+      ...panels('bad'),
+      kind: 'congrats',
+      panelId: 'hoc2024',
+    } as unknown as Step);
+    expect(problemsOf(raw)[0]).toMatch(/panelId/);
+  });
+
+  it('accepts a stats step, with or without a choice of figures', () => {
+    const raw = served();
+    raw.checkpoints[0].steps.push(
+      {
+        id: 'so-far',
+        title: 'So far',
+        kind: 'stats',
+        heading: 'Great job!',
+        logoUrl: 'https://images.code.org/logo.svg',
+      },
+      {
+        id: 'time',
+        title: 'Time',
+        kind: 'stats',
+        heading: 'Time',
+        stats: ['timeSpent', 'checkpoints'],
+      }
+    );
+    expect(problemsOf(raw)).toEqual([]);
+    raw.checkpoints[0].steps.push({
+      ...panels('bad'),
+      kind: 'stats',
+      heading: 'Bad',
+      stats: ['medals'],
+    } as unknown as Step);
+    expect(problemsOf(raw)[0]).toMatch(/stats/);
+  });
+
+  it('accepts a markdown step with an outside link', () => {
+    const raw = served();
+    raw.checkpoints[0].steps.push({
+      id: 'next',
+      title: 'Next',
+      kind: 'markdown',
+      markdown:
+        '## What next?\n\n![](https://example.com/x.png)\n\nKeep going.',
+      link: {label: 'Learn more', href: 'https://code.org'},
+      continueLabel: 'Done',
+    });
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it('accepts a finish block whose checkpoint takes a last look at the project', () => {
+    const raw = served();
+    raw.finish = {
+      dialog: {title: 'Ready?', body: 'Sure?'},
+      checkpoint: {
+        id: 'wrap-up',
+        title: 'Wrap up',
+        description: 'The end.',
+        steps: [
+          {id: 'so-far', title: 'So far', kind: 'stats', heading: 'Great!'},
+          {
+            id: 'showcase',
+            title: 'Showcase',
+            kind: 'level',
+            level: 'web-showcase',
+            project: true,
+            levelProperties: levelProperties(9, 'web-showcase', 'web-template'),
+          },
+        ],
+      },
+    };
+    expect(problemsOf(raw)).toEqual([]);
+    expect(parsePathway(raw).finish?.checkpoint?.id).toBe('wrap-up');
+  });
+
+  it('checks the finish checkpoint with the others, apart from its place on the map', () => {
+    const raw = served();
+    raw.finish = {
+      checkpoint: {
+        id: 'intro',
+        title: 'Wrap up',
+        description: 'The end.',
+        requires: ['intro'],
+        skillIds: ['ghost'],
+        steps: [panels('welcome')],
+      },
+    };
+    expect(problemsOf(raw)).toEqual([
+      "finish.checkpoint.skillIds: unknown skill 'ghost'",
+      "finish.checkpoint: id 'intro' is already a checkpoint's",
+      'finish.checkpoint.requires: the finish checkpoint has no place on the map',
+      'checkpoints: step ids must be unique across checkpoints',
+    ]);
+  });
+
   it('accepts a markdown step with its own button label', () => {
     const raw = served();
     raw.checkpoints[0].steps.push({
@@ -726,6 +830,30 @@ describe('findReferenceProblems', () => {
     build.levelProperties = levelProperties(1, 'web-template');
     expect(problemsOf(raw)).toEqual([
       "checkpoints.basics.steps.build: level 'web-template' is the project template level, which only the project view plays",
+    ]);
+  });
+
+  it('flags a finish checkpoint step that plays the project template level', () => {
+    const raw = served();
+    raw.finish = {
+      checkpoint: {
+        id: 'wrap-up',
+        title: 'Wrap up',
+        description: 'The end.',
+        steps: [
+          {
+            id: 'showcase',
+            title: 'Showcase',
+            kind: 'level',
+            level: 'web-template',
+            project: true,
+            levelProperties: levelProperties(1, 'web-template'),
+          },
+        ],
+      },
+    };
+    expect(problemsOf(raw)).toEqual([
+      "finish.checkpoint.steps.showcase: level 'web-template' is the project template level, which only the project view plays",
     ]);
   });
 

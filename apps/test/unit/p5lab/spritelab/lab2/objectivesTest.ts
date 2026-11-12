@@ -5,6 +5,7 @@ import {
   fieldValue,
   ObjectiveCheck,
   ObjectiveInputs,
+  objectiveShown,
   realBlocks,
   runtimeNeeds,
 } from '@cdo/apps/p5lab/spritelab/lab2/objectives';
@@ -75,6 +76,7 @@ function inputs(over: Partial<ObjectiveInputs> = {}): ObjectiveInputs {
     imagesForRole: {hero: ['Sprite 1'], treasure: ['Sprite 3']},
     source,
     everPlayed: false,
+    generated: {sprite: 0, background: 0, block: 0},
     rated: false,
     runtime: EMPTY_RUNTIME,
     ...over,
@@ -116,6 +118,18 @@ describe('checkObjective', () => {
     );
   });
 
+  it('counts images generated on the level, of a type or of any', () => {
+    const made = inputs({generated: {sprite: 0, background: 1, block: 0}});
+    expect(checkObjective({kind: 'generated'}, made)).toBe(true);
+    expect(
+      checkObjective({kind: 'generated', imageType: 'background'}, made)
+    ).toBe(true);
+    expect(checkObjective({kind: 'generated', imageType: 'sprite'}, made)).toBe(
+      false
+    );
+    expect(checkObjective({kind: 'generated'}, inputs())).toBe(false);
+  });
+
   it('finds a real block under a hat, not a shadow or a stray', () => {
     const say = {kind: 'block', type: 'gamelab_spriteSay'} as const;
     expect(
@@ -130,6 +144,30 @@ describe('checkObjective', () => {
     expect(checkObjective({...say, fields: {SPEECH: 'stray'}}, inputs())).toBe(
       false
     );
+  });
+
+  it('reads the named scene rather than the open one', () => {
+    const say = {kind: 'block', type: 'gamelab_spriteSay'} as const;
+    const empty = {blocks: {blocks: []}};
+    const scoped = inputs({
+      source: empty,
+      sceneSources: {'scene-1': source, 'second-scene': empty},
+    });
+    expect(checkObjective({...say, scene: 'scene-1'}, scoped)).toBe(true);
+    expect(checkObjective({...say, scene: 'second-scene'}, scoped)).toBe(false);
+    expect(checkObjective({...say, scene: 'missing'}, scoped)).toBe(false);
+    expect(checkObjective(say, scoped)).toBe(false);
+  });
+
+  it('reads which scene the editor is on', () => {
+    const editing = {kind: 'editing', id: 'second-scene'} as const;
+    expect(
+      checkObjective(editing, inputs({editingSceneId: 'second-scene'}))
+    ).toBe(true);
+    expect(checkObjective(editing, inputs({editingSceneId: 'scene-1'}))).toBe(
+      false
+    );
+    expect(checkObjective(editing, inputs())).toBe(false);
   });
 
   it('accepts any of several block types', () => {
@@ -239,5 +277,32 @@ describe('runtimeNeeds', () => {
     expect(
       runtimeNeeds({items: [{text: '', check: {kind: 'reach', moved: true}}]})
     ).toEqual({touch: false, move: true});
+    // A shownWhen check is read like the item's own.
+    expect(
+      runtimeNeeds({
+        items: [
+          {
+            text: '',
+            check: {kind: 'play'},
+            shownWhen: {kind: 'reach', role: 'treasure'},
+          },
+        ],
+      })
+    ).toEqual({touch: true, move: false});
+  });
+});
+
+describe('objectiveShown', () => {
+  it('holds an item back until its shownWhen check does', () => {
+    const rate = {text: 'Rate it.', check: {kind: 'rated' as const}};
+    expect(objectiveShown(rate, inputs())).toBe(true);
+    const waits = {...rate, shownWhen: {kind: 'generated' as const}};
+    expect(objectiveShown(waits, inputs())).toBe(false);
+    expect(
+      objectiveShown(
+        waits,
+        inputs({generated: {sprite: 1, background: 0, block: 0}})
+      )
+    ).toBe(true);
   });
 });

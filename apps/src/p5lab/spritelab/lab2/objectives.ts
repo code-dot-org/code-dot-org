@@ -9,6 +9,9 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE, WorldCell} from './world';
 export type ObjectiveCheck =
   /** An image of the type was made on this level. */
   | {kind: 'image'; imageType: ImageType}
+  /** The student generated an image on this level: one of `imageType` if
+      it is given, otherwise an image of any type. */
+  | {kind: 'generated'; imageType?: ImageType}
   | {
       kind: 'block';
       /** The block type a real (not shadow) block must have, or any of
@@ -20,6 +23,8 @@ export type ObjectiveCheck =
       data?: string;
       /** Field values the block must carry. */
       fields?: Record<string, string>;
+      /** In this scene's code, by id; the open scene's when unset. */
+      scene?: string;
     }
   | {
       kind: 'world';
@@ -40,6 +45,8 @@ export type ObjectiveCheck =
     }
   /** A jump landed on the scene. */
   | {kind: 'scene'; id: string}
+  /** The student opened the scene in the editor. */
+  | {kind: 'editing'; id: string}
   /** The student answered the question about a generated picture. */
   | {kind: 'rated'};
 
@@ -49,6 +56,10 @@ export interface Objective {
   /** Markdown. */
   text: string;
   check: ObjectiveCheck;
+  /** If set, the item is hidden until this check passes. While hidden it
+      does not block Continue. Once it has appeared it stays, and must be
+      completed like any other item. */
+  shownWhen?: ObjectiveCheck;
 }
 
 export interface Objectives {
@@ -78,9 +89,19 @@ export interface RuntimeNeeds {
   move: boolean;
 }
 
+/** All the checks a checklist uses: each item's `check`, plus its
+    `shownWhen` if it has one. */
+export function objectiveChecks(
+  objectives: Objectives | undefined
+): ObjectiveCheck[] {
+  return (objectives?.items ?? []).flatMap(item =>
+    item.shownWhen ? [item.check, item.shownWhen] : [item.check]
+  );
+}
+
 export function runtimeNeeds(objectives: Objectives | undefined): RuntimeNeeds {
   const needs = {touch: false, move: false};
-  objectives?.items?.forEach(({check}) => {
+  objectiveChecks(objectives).forEach(check => {
     if (check.kind === 'reach') {
       needs.touch ||= check.role !== undefined;
       needs.move ||= check.moved === true;
@@ -124,10 +145,26 @@ export interface ObjectiveInputs {
   /** Image names by role: a student can make a role's image more than
       once, and every one counts. */
   imagesForRole: Record<string, readonly string[] | undefined>;
+  /** The open scene's code. */
   source?: WorkspaceSource;
+  /** Every scene's code, by id, for a check naming its scene. */
+  sceneSources?: Record<string, WorkspaceSource | undefined>;
+  /** The scene open in the editor. */
+  editingSceneId?: string;
   everPlayed: boolean;
+  /** How many images the student has generated on this level, by type. */
+  generated: ImageCounts;
   rated: boolean;
   runtime: RuntimeProgress;
+}
+
+/** Whether an item should be visible: true unless it has a `shownWhen`
+    check that has not passed. */
+export function objectiveShown(
+  item: Objective,
+  inputs: ObjectiveInputs
+): boolean {
+  return !item.shownWhen || checkObjective(item.shownWhen, inputs);
 }
 
 // A field saved as "<field name="X">value</field>" or as the bare value;
@@ -179,7 +216,10 @@ function hasBlock(
   check: Extract<ObjectiveCheck, {kind: 'block'}>,
   inputs: ObjectiveInputs
 ): boolean {
-  const {source} = inputs;
+  const source =
+    check.scene === undefined
+      ? inputs.source
+      : inputs.sceneSources?.[check.scene];
   const tops = (source?.blocks?.blocks ?? []).filter(
     top =>
       (check.under === undefined || top.type === check.under) &&
@@ -236,6 +276,10 @@ export function checkObjective(
   switch (check.kind) {
     case 'image':
       return inputs.images[check.imageType] >= 1;
+    case 'generated':
+      return check.imageType
+        ? inputs.generated[check.imageType] >= 1
+        : Object.values(inputs.generated).some(count => count >= 1);
     case 'block':
       return hasBlock(check, inputs);
     case 'world':
@@ -257,6 +301,8 @@ export function checkObjective(
     }
     case 'scene':
       return inputs.runtime.scenesLanded.has(check.id);
+    case 'editing':
+      return inputs.editingSceneId === check.id;
     case 'rated':
       return inputs.rated;
   }

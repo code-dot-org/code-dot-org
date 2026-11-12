@@ -2,25 +2,992 @@
   "formatVersion": 4,
   "id": "ai-makerspace-2026",
   "title": "AI Makerspace 2026",
-  "objective": "Placeholder until the AI Makerspace 2026 pathway is authored.",
+  "objective": "Steer AI toward an intended design by writing specific prompts and refining them based on what comes back. Judge AI output against your own intent, and decide when to accept, redirect, or override it. Use the vocabulary of web design (hero, feature cards, interactive canvas, call-to-action) to analyze what makes a page effective and to describe what you want built. Describe a problem with enough context for AI to give a useful explanation and fix. Verify an AI-proposed fix before trusting it, confirming the problem is resolved and nothing new broke.",
   "project": {
-    "templateLevel": "adaptive-HoAI26-template-main-project",
+    "templateLevel": "adaptive-less-checkpoints-template-main-website-project",
     "description": "Work on your final project here!"
   },
-  "skills": {},
+  "map": { "layout": "destinations" },
+  "destinations": {
+    "style-design": {
+      "title": "Style & Design",
+      "icon": "palette",
+      "color": "strawberry"
+    },
+    "interactive-elements": {
+      "title": "Interactive Elements",
+      "icon": "arrow-pointer",
+      "color": "green"
+    },
+    "story-message": {
+      "title": "Story & Message",
+      "icon": "pencil",
+      "color": "blue"
+    },
+    "under-the-hood": {
+      "title": "Under the Hood",
+      "icon": "wrench",
+      "color": "orange"
+    }
+  },
+  "skills": {
+    "build": {
+      "id": "build",
+      "icon": "solid-pen-sparkle",
+      "title": "Build with AI",
+      "description": "Steering AI toward what you intend, and deciding what to do with what comes back.",
+      "evidenceLevels": {
+        "0": "Writes vague one-line prompts with no goal, constraint or edge case, accepts whatever comes back, and cannot say why a prompt produced its result.",
+        "1": "States a basic goal in the prompt, notices obvious mismatches with intent when they are visible or pointed out, and revises broadly, asking the AI to fix it or make it better.",
+        "2": "Names a goal, a constraint and an edge case before generating, compares the output against intent to find specific matches and mismatches, and revises by naming the exact element or behavior to change, explaining why the prompt produced what it did."
+      }
+    },
+    "language": {
+      "id": "language",
+      "icon": "message-code",
+      "title": "Language of web dev",
+      "description": "Naming the parts of a page and understanding how they work.",
+      "evidenceLevels": {
+        "0": "Sees a site as one flat idea; sketches are decorative rather than structural, and recurring components go unrecognized even when pointed out.",
+        "1": "Identifies basic components such as the nav bar, hero, cards and footer in an existing page when prompted, and fills in a heavily scaffolded wireframe or site map with inconsistent structure and no clear hierarchy.",
+        "2": "Breaks a multi-page product into pages and components with a clear hierarchy, strips detail away to show structure only and can say why, and lays out a site map or wireframe that supports a plausible user flow with patterns applied consistently.",
+        "3": "Anticipates navigation needs the task did not spell out, moves between site map and wireframe as a decision requires, and picks or adapts a layout pattern on purpose rather than defaulting to the first idea."
+      }
+    },
+    "debug": {
+      "id": "debug",
+      "icon": "bug",
+      "title": "Debug with AI",
+      "description": "Describing a problem so AI can help, and checking that the fix worked.",
+      "evidenceLevels": {
+        "0": "Avoids or dismisses error messages, cannot pick out the relevant part of one, and pastes whole code or applies any suggested fix without understanding it.",
+        "1": "Reads an error when prompted but treats it as a stop sign, identifies the literal text without connecting it to the code, and pastes it to the AI with no context.",
+        "2": "Treats an error as the start of a diagnosis, connects it to the line or element at fault and restates it in their own words, and gives the AI the error plus the intended behavior and what changed.",
+        "3": "Tests deliberately to surface errors as feedback, predicts likely causes from prior bugs before reading the full message, and fixes the bug from the AI's explanation, asking for a direct patch only as a check."
+      }
+    }
+  },
   "checkpoints": [
     {
       "id": "intro",
       "title": "Intro",
-      "description": "Placeholder checkpoint.",
+      "description": "Read the intro panels, make your plan, and then do a quick skill check.",
+      "routeAfterCompletion": true,
+      "plan": {
+        "template": "Build me a website about {topic} for {audience}. It should help them {purpose}, and feel {style}. Ideas to include: {ideas}"
+      },
       "steps": [
         {
-          "id": "intro-placeholder",
-          "kind": "markdown",
-          "title": "Coming soon",
-          "markdown": "This pathway is under construction."
+          "id": "intro-panels",
+          "title": "Welcome",
+          "kind": "panels",
+          "panels": [
+            {
+              "text": "###Welcome to AI Makerspace! \n\nStart with a vision, develop your skills, then bring it to life with AI!",
+              "imageUrl": "https://images.code.org/ab398ff421cc49dda5ad4547c45ea4ce-Panel 2.png",
+              "key": "adaptive-less-checkpoints-skill-check-learn-77154340-dc52-4657-9564-a3af6ae5dbe5",
+              "layout": "text-bottom-right"
+            },
+            {
+              "text": "###Your path to building\n\nYou will begin with a skill check to find your starting point on the skill map.\n\nThen you choose checkpoints to learn and apply new skills to your project.",
+              "imageUrl": "https://images.code.org/3874ea1c9e3392f3e764d9391baa8910-skill-check-starting-point_matched-spacing_1600.png",
+              "key": "adaptive-less-checkpoints-skill-check-learn-06348056-e331-4d44-ba0a-c68f83ffa596"
+            },
+            {
+              "key": "adaptive-less-checkpoints-skill-check-learn-60807e67-6964-43c3-ab7e-497261d32117",
+              "text": "###Practice and apply\nEach checkpoint has two parts:\n-  First, practice a new skill. \n- Then, use the skill to build your own website.",
+              "imageUrl": "https://images.code.org/6a025fff6fdb74348ca1fcb57b81c350-checkpoint-practice-apply-lower_1600.png",
+              "layout": "text-top-right"
+            },
+            {
+              "key": "adaptive-less-checkpoints-skill-check-learn-c0eda26c-9442-4968-a1de-987387c356ab",
+              "text": "###Keep learning\n\nReturn to the skill map and choose your next checkpoint.",
+              "imageUrl": "https://images.code.org/c33034d95807d71da7ee70c009b24298-return-to-skill-map-green-paths_1600.png",
+              "layout": "text-top-right"
+            },
+            {
+              "text": "###Build something that’s yours.\nCreate a website that reflects your interests and ideas. \n\nWhat will you make?",
+              "imageUrl": "https://images.code.org/99d7f396c47a604d6ca01825a08c4ab2-Panel 1.png",
+              "key": "adaptive-less-checkpoints-skill-check-learn-9df6877a-dd61-421d-8e89-7f84f768137d"
+            }
+          ]
+        },
+        {
+          "id": "intro-four-ways-there",
+          "title": "Four Ways There",
+          "kind": "level",
+          "level": "adaptive-HoAI26-intro-four-ways-there"
+        },
+        {
+          "id": "intro-website",
+          "title": "Planning your website",
+          "kind": "questions",
+          "description": "Answer a few questions to add details to your plan.",
+          "questions": [
+            {
+              "id": 201,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-interest",
+              "questionTitle": "Pick a theme for your website.",
+              "choices": [
+                { "id": "a", "text": "Music and art" },
+                { "id": "b", "text": "Sports and fitness" },
+                { "id": "c", "text": "Food and cooking" },
+                { "id": "d", "text": "Gaming" },
+                { "id": "e", "text": "School and education" },
+                { "id": "f", "text": "Animals and nature" },
+                { "id": "g", "text": "Fashion and style" },
+                { "id": "h", "text": "Friends and community" }
+              ],
+              "allowOther": {
+                "placeholder": "Or type your own interest"
+              },
+              "plan": "topic"
+            },
+            {
+              "id": 211,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-audience",
+              "questionTitle": "Who is the website for?",
+              "choices": [
+                { "id": "a", "text": "My friends and family" },
+                { "id": "b", "text": "My class or school" },
+                { "id": "c", "text": "People into the same topic" },
+                { "id": "d", "text": "My team or club" },
+                { "id": "e", "text": "Just me" }
+              ],
+              "allowOther": {
+                "placeholder": "Or type your own"
+              },
+              "plan": "audience"
+            },
+            {
+              "id": 213,
+              "type": "freeResponse",
+              "text": "Brainstorm your website",
+              "placeholder": "What website would you love to have, or what problem could a website help with? Jot down a few ideas. Any idea counts, even a rough one, and nothing here is final.",
+              "plan": "ideas"
+            },
+            {
+              "id": 202,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-purpose",
+              "questionTitle": "The website will help them…",
+  "choices": [
+    { "id": "a", "text": "Learn something" },
+    { "id": "b", "text": "Decide or plan" },
+    { "id": "c", "text": "Connect with each other" },
+    { "id": "d", "text": "Play or try something" }
+  ],
+              "allowOther": {
+                "placeholder": "Or something else"
+              },
+              "plan": "purpose"
+            },
+            {
+              "id": 212,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-feel",
+              "questionTitle": "How should the site look and feel?",
+              "choices": [
+                { "id": "a", "text": "Calm and clean" },
+                { "id": "b", "text": "Bold and energetic" },
+                { "id": "c", "text": "Playful and fun" },
+                { "id": "d", "text": "Cozy and friendly" }
+              ],
+              "plan": "style"
+            }
+          ]
+        },
+        {
+          "id": "intro-review",
+          "title": "Here’s your plan",
+          "kind": "review",
+          "description": "Build a first version with AI, or start from a blank page.",
+          "questionId": 214,
+          "buildLabel": "Build with AI",
+          "skipLabel": "Start from a blank page"
+        },
+        {
+          "id": "intro-starter",
+          "title": "Your starter site",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-plan-your-site-apply",
+          "project": true,
+          "instructions": "Welcome to your website! AI wrote the starter code. Take a look around, then press Continue. You’ll build the skills to make it yours.",
+          "projectPrompt": "The first version of the student's website, built from their plan: a hero with a headline that says what the site is for, one or two sections that fit the topic, and a call-to-action. Keep the look and feel simple, but appropriate for their given topic. It should feel clean but not overly polished."
+        },
+        {
+          "id": "skill-check-web-dev",
+          "title": "Skill Check",
+          "description": "Begin with a skill check to find your starting point on the skill map.",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 102,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-self-check",
+              "questionTitle": "Which sentence sounds most like you?",
+              "choices": [
+                { "id": "a", "text": "I’m new to using AI to build websites." },
+                {
+                  "id": "b",
+                  "text": "I have a little experience using AI to build websites."
+                },
+                {
+                  "id": "c",
+                  "text": "I have built a full website with AI or a site builder."
+                },
+                {
+                  "id": "d",
+                  "text": "I have built many websites with AI and edited code myself."
+                }
+              ]
+            },
+            {
+              "id": 103,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-knowledge-button",
+              "questionTitle": "Adam wants a big section at the top of his page with a headline and a button. Which message should he send the AI?",
+              "choices": [
+                { "id": "a", "text": "Make the top of my page look better." },
+                {
+                  "id": "b",
+                  "text": "Put a big title at the top with a button under it."
+                },
+                {
+                  "id": "c",
+                  "text": "Add a hero section with a headline and a button."
+                },
+                { "id": "d", "text": "Add an h1 and a button inside a div." },
+                { "id": "e", "text": "I’m not sure yet." }
+              ],
+              "measures": {
+                "skillId": "language",
+                "evidenceLevels": { "a": 0, "b": 0, "c": 1, "d": 2, "e": 0 }
+              }
+            },
+            {
+              "id": 104,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-knowledge-cards",
+              "questionTitle": "Bryanna asked for a page for her robotics club. The AI also added a shop section she didn’t ask for. What should she do?",
+              "choices": [
+                { "id": "a", "text": "Keep it because it looks good." },
+                { "id": "b", "text": "Ask the AI to make it better." },
+                { "id": "c", "text": "Ask the AI to remove just the shop." },
+                { "id": "d", "text": "Delete the shop section yourself." },
+                { "id": "e", "text": "I’m not sure yet." }
+              ],
+              "measures": {
+                "skillId": "build",
+                "evidenceLevels": { "a": 0, "b": 0, "c": 1, "d": 2, "e": 0 }
+              }
+            },
+            {
+              "id": 105,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-knowledge-error",
+              "questionTitle": "Carlos told the AI his Join button does nothing. It replies, “Fixed! The button now works.” What should he do next?",
+              "choices": [
+                { "id": "a", "text": "Move on to the next part of his site." },
+                { "id": "b", "text": "Ask the AI to double-check its fix." },
+                { "id": "c", "text": "Click the button to see if it works." },
+                { "id": "d", "text": "Test the button, then the whole page." },
+                { "id": "e", "text": "I’m not sure yet." }
+              ],
+              "measures": {
+                "skillId": "debug",
+                "evidenceLevels": { "a": 0, "b": 0, "c": 1, "d": 2, "e": 0 }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fix-it",
+      "title": "Fix it",
+      "description": "Tell the AI what you expected, what happened instead, and where. Then check that the fix worked and nothing else broke.",
+      "skillIds": ["debug"],
+      "requires": ["intro"],
+      "steps": [
+        {
+          "id": "fix-it-bug-report",
+          "title": "Build a bug report",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-fix-it-learn-practice-1"
+        },
+        {
+          "id": "fix-it-before-and-after",
+          "title": "Before and after",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 109,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "fix-it-before-and-after",
+              "questionTitle": "The AI says it fixed your broken button. You reload the page and the button works. Which should you do next?",
+              "choices": [
+                { "id": "a", "text": "Move on, since the button works now." },
+                {
+                  "id": "b",
+                  "text": "Click the button 200 times to make sure it continues working."
+                },
+                {
+                  "id": "c",
+                  "text": "Ask the AI to confirm that everything works."
+                },
+                {
+                  "id": "d",
+                  "text": "Click through the rest of the page and look for anything that changed or broke."
+                },
+                { "id": "e", "text": "Start over from your first version." }
+              ],
+              "correctChoiceId": "d"
+            }
+          ]
+        },
+        {
+          "id": "fix-it-report-and-check",
+          "title": "Report it and check the fix",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-fix-it-apply"
+        }
+      ],
+      "targetEvidenceLevels": { "debug": 2 },
+      "skippable": true
+    },
+    {
+      "id": "direct-the-action",
+      "title": "Direct the action",
+      "description": "Write a prompt about what a visitor does and what happens next. Use your section’s name in the prompt. Try the result, then tell the AI what to fix or change.",
+      "skillIds": ["build"],
+      "requires": ["intro"],
+      "steps": [
+        {
+          "id": "direct-the-action-prompt-dial",
+          "title": "The prompt dial",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-action-learn-practice-1"
+        },
+        {
+          "id": "direct-the-action-plan-versus-result",
+          "title": "Plan versus result",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-interactive-00d6c2ec-3df7-4acf-86a7-d07e0ee662fa",
+              "imageUrl": "https://images.code.org/09eedb46ae66abc13064312c375f103f-interactive-elements_01_setup_1600.png",
+              "text": "Maya is making a page to help her friends pick where to eat. \n\n**Her plan:**\n- Theme: Lunch spots\n- Audience: My friends\n- Purpose: Help us decide where to eat\n- Look & Feel: Bold and playful\n"
+            },
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-interactive-a26beaf2-bcc2-4378-ad32-f706e1d2c7a6",
+              "imageUrl": "https://images.code.org/25d964afe9bfde80e335bafe04403186-interactive-elements_02_webpage_1600.png",
+              "text": "The AI built a page. It’s bright and bold, and it shows five lunch places.\n"
+            },
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-interactive-3d4c2ec4-8168-49fe-9829-0ddaa8fd9121",
+              "imageUrl": "https://images.code.org/59444122ff9e626cc21dd1f47103f32c-interactive-elements_03_review_1600.png",
+              "text": "Maya checks the page against her plan. The purpose doesn’t fit. Nothing helps her friends decide.\n"
+            }
+          ]
+        },
+        {
+          "id": "direct-the-action-plan-check",
+          "title": "Plan versus result",
+          "kind": "questions",
+          "description": "Maya’s page only lists places, but her plan says it should help her friends decide.",
+          "questions": [
+            {
+              "id": 114,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "direct-the-action-plan-check",
+              "questionTitle": "What advice would you give Maya?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "“Ask the AI to add a Spin button that picks one place.”"
+                },
+                {
+                  "id": "b",
+                  "text": "“Ask the AI to make the whole page better for your friends.”"
+                },
+                {
+                  "id": "c",
+                  "text": "“Ask the AI to make the colors brighter and the heading bigger.”"
+                }
+              ],
+              "correctChoiceId": "a"
+            }
+          ]
+        },
+        {
+          "id": "direct-the-action-plan-answer",
+          "title": "Plan versus result",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-interactive-9de2ab66-590a-4918-bad7-55eee2c4976a",
+              "imageUrl": "https://images.code.org/e85448d49030cb1ee20c47d4e26e75ce-Clear prompts spark bright ideas.png",
+              "text": "The correct answer is A. “Ask the AI to add a Spin button that picks one place.” \n\nA Spin button that picks one place gives Maya’s page the purpose her plan asks for.\n\n---\n\n**Tip:** Check your page against each part of your plan, starting with your Purpose. If something is missing, ask the AI to add it.\n",
+              "layout": "text-top-center"
+            }
+          ]
+        },
+        {
+          "id": "direct-the-action-tap-a-section",
+          "title": "Tap a section",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-action-learn-practice-3"
+        },
+        {
+          "id": "direct-the-action-project",
+          "title": "Try it on your page",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-action-apply",
+          "project": true,
+          "instructionsPrompt": "Task: Writes a prompt about what a visitor does, naming one part of their own page, then decides what to do with the AI's change.\nOutline: Prompt: \"Pick one interactive part of your page and name it. Ask for a change about what a visitor does and what happens. When the AI changes something, say whether you keep it, or redirect it.\" The tutor reads the prompt and the decision.\nEvidence: a prompt with 2 or more specific details about what the visitor does and what happens, or a follow-up that changes one thing",
+          "validation": {
+            "condition": "The project changed to match a prompt with two or more specific details about what a visitor does and what happens, or a follow-up that changed one thing.",
+            "measures": { "skillId": "build" }
+          }
+        }
+      ],
+      "targetEvidenceLevels": { "build": 1 },
+      "skippable": true
+    },
+    {
+      "id": "make-it-respond",
+      "title": "Make it respond",
+      "description": "Write a prompt that makes your page respond to a visitor, like picking from a list, changing a number, or remembering something they type.",
+      "skillIds": ["language"],
+      "requires": ["direct-the-action"],
+      "destination": "interactive-elements",
+      "steps": [
+        {
+          "id": "make-it-respond-widget",
+          "title": "Spin, count, remember",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-make-respond-learn-practice"
+        },
+        {
+          "id": "make-it-respond-check",
+          "title": "Choose, count, remember",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 110,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "make-it-respond-check",
+              "questionTitle": "Your page has a Pick button for club events. You want it to show how many times each event was picked, even after a reload. What else does the page need to do?",
+              "choices": [
+                { "id": "a", "text": "Pick the same event every single time." },
+                { "id": "b", "text": "Count each pick and save the totals." },
+                {
+                  "id": "c",
+                  "text": "Add a brand new event after every pick."
+                },
+                { "id": "d", "text": "Hide the whole list from every visitor." }
+              ],
+              "correctChoiceId": "b"
+            }
+          ]
+        },
+        {
+          "id": "make-it-respond-project",
+          "title": "Make your page respond",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-make-respond-apply",
+          "project": true,
+          "instructionsPrompt": "Task: Picks one idea that fits their page and describes it to the AI.\nOutline: Prompt: \"What should your page choose, count or remember? Tell the AI how. Ask AI to brainstorm ideas with you if you need.\" The student works on the idea that fits their build: a list and a pick, a number and a rule, or something to remember and show. The tutor shows the sentence they wrote.\nEvidence: names at least one: the list and the pick, the number that changes and the rule, or what is remembered and what changes on screen.",
+          "validation": {
+            "condition": "The student told the AI one of: what the options are and that the page picks one of them, what number changes and by what rule, or what the page remembers and what changes on screen when it does.",
+            "measures": { "skillId": "language" }
+          }
+        }
+      ]
+    },
+    {
+      "id": "direct-the-look",
+      "title": "Direct the look",
+      "description": "Write a prompt about colors, fonts, and layout. Use your section’s name in the prompt. Try the result, then tell the AI what to fix or change.",
+      "skillIds": ["language"],
+      "requires": ["intro"],
+      "steps": [
+        {
+          "id": "direct-the-look-prompt-dial",
+          "title": "The prompt dial",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-look-learn-practice-1"
+        },
+        {
+          "id": "direct-the-look-plan-versus-result",
+          "title": "Plan versus result",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-style-1140bdb4-5473-4cbf-8727-f204c894de61",
+              "imageUrl": "https://images.code.org/48fefa516c51a17d1eb0c586cf9bbe0a-ravi_style_design_01_1600.png",
+              "text": "###Ravi’s plan\nRavi is making a page for his bake sale.\n\n- Theme: Bake sale\n- Audience: Neighbors\n- Purpose: Show what we sell\n- Look & Feel: Warm and friendly"
+            },
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-style-3563d220-3d8f-4b5c-b77b-134f1e17f0ca",
+              "imageUrl": "https://images.code.org/9bf59113b89473668345c25f4d71eda3-ravi_style_design_02_1600.png",
+              "text": "###The AI’s first try\nThe AI built a page. It shows the treats in three cards, and it’s neat and tidy."
+            },
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-style-af5a19a9-402a-4614-aa9c-db4746e74af0",
+              "imageUrl": "https://images.code.org/659a899fdc8b514fb783d8aba6c1b149-ravi_style_design_03_1600.png",
+              "text": "###Ravi checks his plan\nRavi checks the page against his plan. The look doesn’t fit. His plan says warm, and the page is cool blue and gray."
+            }
+          ]
+        },
+        {
+          "id": "direct-the-look-plan-check",
+          "title": "Plan versus result",
+          "kind": "questions",
+          "description": "Ravi’s page is cool blue and gray, but his plan says warm and friendly.",
+          "questions": [
+            {
+              "id": 115,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "direct-the-look-plan-check",
+              "questionTitle": "What advice would you give Ravi?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "“Ask the AI to add three more treats to the page.”"
+                },
+                {
+                  "id": "b",
+                  "text": "“Ask the AI to make the hero section warm yellow and brown.”"
+                },
+                {
+                  "id": "c",
+                  "text": "“Ask the AI to make the whole page look nicer for your neighbors.”"
+                }
+              ],
+              "correctChoiceId": "b"
+            }
+          ]
+        },
+        {
+          "id": "direct-the-look-plan-answer",
+          "title": "Plan versus result",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-style-f9eebca4-2e2d-4380-af9d-7d233bf9dfc5",
+              "imageUrl": "https://images.code.org/375366e7461d7e5ac6ba8bbf040a1476-Clear prompts spark bright ideas.png",
+              "text": "The correct answer is B. Naming the hero section and the warm colors tells the AI exactly what to change. \n\n---\n\n**Tip:** When the look is off, name the section and the colors you want. “Nicer” leaves the AI guessing.\n",
+              "layout": "text-top-center"
+            }
+          ]
+        },
+        {
+          "id": "direct-the-look-tap-a-section",
+          "title": "Tap a section",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-look-learn-practice-3"
+        },
+        {
+          "id": "direct-the-look-project",
+          "title": "Try it on your page",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-look-apply",
+          "project": true,
+          "instructionsPrompt": "Task: Writes a prompt about the look of one named section of their own page\nOutline: Prompt: \"Pick one section of your page and use its name in your prompt. Ask the AI to change something small such as its colors, type, layout or something else.\" The tutor reads the prompt and the decision.\nEvidence: a prompt with 1 or more specific style details for one section, or a follow-up that changes one thing; a prompt that names a section and a detail to change in the section",
+          "validation": {
+            "condition": "A prompt named one section of the page and asked for at least one specific change to its look, such as its colors, type or layout, or a follow-up changed one thing about it.",
+            "measures": { "skillId": "language" }
+          }
+        }
+      ],
+      "targetEvidenceLevels": { "language": 1 },
+      "skippable": true
+    },
+    {
+      "id": "make-it-look-right",
+      "title": "Make it look right",
+      "description": "Choose a style and remind the AI of it each time you ask for a change. Then ask for something to be easier to read.",
+      "skillIds": ["build"],
+      "requires": ["direct-the-look"],
+      "destination": "style-design",
+      "steps": [
+        {
+          "id": "make-it-look-right-style-words",
+          "title": "Your style in three words",
+          "kind": "questions",
+          "description": "Maya needs your help. Read her situation, then give her advice. Maya planned a calm, clean, rounded style for her Park Cleanup Club site. Then she asked the AI to make the button bigger, add an events section, and change the headline. Now her page has a dark background, sharp corners, and a neon button. She likes the events section, but the page doesn’t look like her plan anymore.",
+          "questions": [
+            {
+              "id": 111,
+              "type": "freeResponse",
+              "text": "What should Maya do next to get her site back to the style she planned?",
+              "placeholder": "Get the style back"
+            }
+          ]
+        },
+        {
+          "id": "make-it-look-right-contrast",
+          "title": "Try the contrast",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-make-look-right-learn-practice-2"
+        },
+        {
+          "id": "make-it-look-right-project",
+          "title": "Keep your style, check readability",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-make-look-right-apply",
+          "project": true,
+          "instructionsPrompt": "Task: Makes two more changes and fixes a hard-to-read section.\nOutline: Prompt: \"Pick a section and ask the AI to change it to match the style you want for your page. Describe the look in detail, like the colors, fonts, and mood.\"\nEvidence: a prompt that restates the style while changing at least one thing",
+          "validation": {
+            "condition": "A prompt described the style the student wants for the page, in details such as colors, fonts or mood, and asked for at least one change to a section to match it.",
+            "measures": { "skillId": "build" }
+          }
+        }
+      ]
+    },
+    {
+      "id": "direct-the-words",
+      "title": "Direct the words",
+      "description": "Write a prompt about the tone and message you want. Use your section’s name in the prompt. Try the result, then tell the AI what to fix or change.",
+      "skillIds": ["build", "language"],
+      "requires": ["intro"],
+      "steps": [
+        {
+          "id": "direct-the-words-prompt-dial",
+          "title": "The prompt dial",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-words-learn-practice-1"
+        },
+        {
+          "id": "direct-the-words-plan-versus-result",
+          "title": "Plan versus result",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-words-79326ee0-7678-4853-a478-b11db7a3f323",
+              "imageUrl": "https://images.code.org/66ce3d6cc909f3b9bbd60c4279c26068-01-priya-start-1600.png",
+              "text": "###Priya’s plan\nPriya is making a page to save her neighborhood park.\n\n- Theme: Save Maple Park\n- Audience: Neighbors\n- Purpose: Get people to sign a petition\n- Look & Feel: Hopeful and warm"
+            },
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-words-b91a0613-e4c8-4f71-b049-3644ed36e60d",
+              "imageUrl": "https://images.code.org/22c3bf1346290b7889af3cb97dbfc330-02-priya-page-1600.png",
+              "text": "###The AI’s first try\nThe AI built a page. It has a hopeful headline and a warm intro. The button says Submit."
+            },
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-words-66090432-4a76-4e54-9810-8b4da0e1f2f4",
+              "imageUrl": "https://images.code.org/6440b96c5009b3c1eb3c877466d411ed-03-priya-review-1600.png",
+              "text": "###Priya checks her plan\nPriya checks the page against her plan. The purpose doesn’t fit. \n\nA button that says Submit doesn’t tell neighbors what they’re signing."
+            }
+          ]
+        },
+        {
+          "id": "direct-the-words-plan-check",
+          "title": "Plan versus result",
+          "kind": "questions",
+          "description": "Priya’s button just says Submit, but her plan says the page should get people to sign a petition.",
+          "questions": [
+            {
+              "id": 116,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "direct-the-words-plan-check",
+              "questionTitle": "What advice would you give Priya?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "“Ask the AI to make the whole page more persuasive for your neighbors.”"
+                },
+                {
+                  "id": "b",
+                  "text": "“Ask the AI to make the headline bigger and a brighter green.”"
+                },
+                {
+                  "id": "c",
+                  "text": "“Ask the AI to make the call-to-action say Sign the petition.”"
+                }
+              ],
+              "correctChoiceId": "c"
+            }
+          ]
+        },
+        {
+          "id": "direct-the-words-plan-answer",
+          "title": "Plan versus result",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-words-5c62df09-20e1-4981-a5e7-eb8adfa24c6d",
+              "imageUrl": "https://images.code.org/3f1aafd12b811dedbba2d4cd643d5664-Clear prompts spark bright ideas.png",
+              "text": "The correct answer is C. A call-to-action that says Sign the petition tells neighbors exactly what to do. \n\n---\n\n**Tip:** When the words are off, name the part and give the AI the exact words you want.\n",
+              "layout": "text-top-center"
+            }
+          ]
+        },
+        {
+          "id": "direct-the-words-tap-a-section",
+          "title": "Tap a section",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-words-learn-practice-3"
+        },
+        {
+          "id": "direct-the-words-project",
+          "title": "Try it on your page",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-words-apply",
+          "project": true,
+          "instructionsPrompt": "Task: Writes a prompt asking the AI to set the tone and message of their own page so it fits their site’s purpose and intended audience.\nOutline: Prompt: “Who is your site for? Describe how your page should sound to them.” Then: “What should your page say? Ask the AI to rewrite it in a specific voice, like a coach, a friend, or an excited news reporter.”\nEvidence: A prompt that names a specific voice and a message for the page, and ties both to the site’s purpose and audience.",
+          "validation": {
+            "condition": "A prompt named a specific voice for the page's words and what they should say, and tied both to who the site is for and what it is for.",
+            "measures": { "skillId": "build" }
+          }
+        }
+      ]
+    },
+    {
+      "id": "make-the-point",
+      "title": "Make the point",
+      "description": "Write a headline that tells visitors what your site is for. Add a call-to-action with a clear verb and a next step.",
+      "skillIds": ["language"],
+      "requires": ["direct-the-words"],
+      "destination": "story-message",
+      "steps": [
+        {
+          "id": "make-the-point-fix-the-button",
+          "title": "Fix the button",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-make-point-learn-practice"
+        },
+        {
+          "id": "make-the-point-check",
+          "title": "Clear headline",
+          "kind": "questions",
+          "description": "Sam is building a site to help new students find school clubs. A new student will open it on their phone and read only the headline before deciding to keep scrolling.",
+          "questions": [
+            {
+              "id": 112,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "make-the-point-check",
+              "questionTitle": "Which headline tells a new student what the site is for?",
+              "choices": [
+                { "id": "a", "text": "Welcome to the school clubs site!" },
+                { "id": "b", "text": "Find a club that fits you." },
+                { "id": "c", "text": "Our school, our story, our clubs." },
+                { "id": "d", "text": "Click here to learn more today." }
+              ],
+              "correctChoiceId": "b"
+            }
+          ]
+        },
+        {
+          "id": "make-the-point-project",
+          "title": "Rewrite your headline and call-to-action",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-make-point-apply",
+          "project": true,
+          "instructionsPrompt": "Task: Rewrites the headline and button on their own page.\nOutline: Prompt: \"What is your site for? Make the headline say it.\" Then: \"What should a visitor do next? Make the button say it.\"\nEvidence: a prompt or edit that states the site's purpose in the headline, and a call-to-action with a clear verb and next step.",
+          "validation": {
+            "condition": "The headline now says what the site is for and the call-to-action has a clear verb and a next step, whether a prompt asked for them or the student edited them by hand.",
+            "measures": { "skillId": "language" }
+          }
+        }
+      ]
+    },
+    {
+      "id": "direct-the-code",
+      "title": "Direct the code",
+      "description": "Ask for a small piece of code and an explanation of it. Use your section’s name in the prompt. Try the result, then tell the AI what to fix or change.",
+      "skillIds": ["build", "language"],
+      "requires": ["intro"],
+      "steps": [
+        {
+          "id": "direct-the-code-prompt-dial",
+          "title": "The prompt dial",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-code-learn-practice-1"
+        },
+        {
+          "id": "direct-the-code-plan-versus-result",
+          "title": "Plan versus result",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-code-3e1d6a82-cd37-4c68-a978-45bad78e5d57",
+              "imageUrl": "https://images.code.org/1fb32b00bc7c4bd0bb3071c289807e40-under-the-hood-01-start-1600x900.png",
+              "text": "###Theo’s plan\nTheo is making a weather checker for himself.\n\n- Theme: Weather\n- Audience: Me\n- Purpose: See today’s weather for any city I type\n- Look & Feel: Simple and clean"
+            },
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-code-2753de4d-93bd-4ee7-ab05-2ab42cba3c41",
+              "imageUrl": "https://images.code.org/94b9564eb3cdbc2bde4eb691964ac8a4-under-the-hood-02-webpage-1600x900.png",
+              "text": "###The AI’s first try\nThe AI built a page. It’s simple and clean, with a box for a city and a Check button. When Theo presses Check, it shows the weather."
+            },
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-code-94690e4e-c2c1-4650-9471-e5b1b77578ce",
+              "imageUrl": "https://images.code.org/943f1cf8f1e010f2c86b54a70ff89556-under-the-hood-03-review-1600x900.png",
+              "text": "###Theo checks his plan\nTheo checks the page against his plan. The purpose doesn’t fit. He types a new city, and Check still shows the same one."
+            }
+          ]
+        },
+        {
+          "id": "direct-the-code-plan-check",
+          "title": "Plan versus result",
+          "kind": "questions",
+          "description": "Theo’s Check button shows the same city every time, but his plan says it should show the weather for any city he types.",
+          "questions": [
+            {
+              "id": 117,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "direct-the-code-plan-check",
+              "questionTitle": "What advice would you give Theo?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "“Ask the AI to make the Check button use the city you type.”"
+                },
+                {
+                  "id": "b",
+                  "text": "“Ask the AI to make the whole code work better and run faster.”"
+                },
+                {
+                  "id": "c",
+                  "text": "“Ask the AI to make the page look simpler with fewer colors.”"
+                }
+              ],
+              "correctChoiceId": "a"
+            }
+          ]
+        },
+        {
+          "id": "direct-the-code-plan-answer",
+          "title": "Plan versus result",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-less-checkpoints-plan-panel-code-f5f530b6-d24d-4e8e-9b80-1f414c194d07",
+              "imageUrl": "https://images.code.org/d8ee4ca778096e2b5f18cd09451fee81-Clear prompts spark bright ideas.png",
+              "text": "The correct answer is A. Naming the Check button and saying what it should do points the AI at the exact problem. \n\n---\n\n**Tip:** When something doesn’t work, name the part that’s off, then say what it should do.",
+              "layout": "text-top-center"
+            }
+          ]
+        },
+        {
+          "id": "direct-the-code-tap-a-section",
+          "title": "Tap a section",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-code-learn-practice-3"
+        },
+        {
+          "id": "direct-the-code-project",
+          "title": "Try it on your page",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-direct-code-apply",
+          "project": true,
+          "instructionsPrompt": "Task: Asks the AI to make a change to one named section of their own page, then asks the AI to describe the code that made the change.\nOutline: Prompt: “Pick one section of your page and use its name in your prompt. Ask the AI to add a change to it. Try the result, then ask the AI to describe the code that made the change.” The tutor reads your prompts.\nEvidence: A prompt that asks for a change to a named section; a follow-up that asks the AI to describe the code behind that change, such as what it does or which part made it happen.",
+          "validation": {
+            "condition": "A prompt asked for a change to a named section of the page, and a follow-up asked the AI to describe the code behind that change, such as what it does or which part made it happen.",
+            "measures": { "skillId": "language" }
+          }
+        }
+      ],
+      "targetEvidenceLevels": { "build": 2, "language": 2 },
+      "skippable": true
+    },
+    {
+      "id": "look-under-the-hood",
+      "title": "Look under the hood",
+      "description": "Find the code for a section by its name, explain what it does, and edit one line of JavaScript.",
+      "skillIds": ["language"],
+      "requires": ["direct-the-code"],
+      "destination": "under-the-hood",
+      "steps": [
+        {
+          "id": "look-under-the-hood-search",
+          "title": "Search the code",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-look-under-hood-learn-practice"
+        },
+        {
+          "id": "look-under-the-hood-check",
+          "title": "Find the right part",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 113,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "look-under-the-hood-check",
+              "questionTitle": "Tess wants the button on her page to do something different, but she does not know which part of the code controls it. What is the best next move?",
+              "choices": [
+                { "id": "a", "text": "Delete all the code and start over." },
+                {
+                  "id": "b",
+                  "text": "Change random lines until something happens."
+                },
+                {
+                  "id": "c",
+                  "text": "Ask the AI which part of the code controls the button."
+                },
+                { "id": "d", "text": "Ask the AI to rewrite the whole page." }
+              ],
+              "correctChoiceId": "c"
+            }
+          ]
+        },
+        {
+          "id": "look-under-the-hood-project",
+          "title": "Edit a line in your project",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-look-under-hood-apply",
+          "project": true,
+          "instructionsPrompt": "Task: Asks the AI which part of one named section’s code controls its look or behavior, then changes one thing in that part.\nOutline: Prompt: “Pick one section of your page and use its name in your prompt. Ask the AI which part of its code controls how it looks or what it does. Change one thing in that part and see what happens.” The tutor reads your prompt and what changed.\nEvidence: A prompt that asks the AI about the code for a named section, and an attempt to change something, either by asking the AI or by editing the code.",
+          "validation": {
+            "condition": "The student asked the AI which part of a named section's code controls how it looks or what it does, then changed something in it, whether by asking the AI or by editing the code by hand.",
+            "measures": { "skillId": "language" }
+          }
         }
       ]
     }
-  ]
+  ],
+  "finish": {
+    "dialog": {
+      "title": "Ready to wrap up?",
+      "body": "If you’re done, click Finish to review your final project and see everything you’ve accomplished! Or use Keep Working to continue working on your project and learning new skills.",
+      "finishLabel": "Finish Hour of AI",
+      "cancelLabel": "Keep Working"
+    },
+    "checkpoint": {
+      "id": "wrap-up",
+      "title": "Wrap up",
+      "description": "Look back at what you did and see what comes next.",
+      "steps": [
+        {
+          "id": "wrap-up-stats",
+          "title": "You’re officially an AI creator!",
+          "kind": "stats",
+          "heading": "You’re officially an AI creator!",
+          "subheading": "AI isn’t magic, but what you made with it is pretty cool. Here’s what you worked on today:"
+        },
+        {
+          "id": "wrap-up-showcase",
+          "title": "Your final project",
+          "kind": "level",
+          "level": "adaptive-less-checkpoints-wrap-up-showcase",
+          "project": true,
+          "instructions": "Look what you built! Review your final project."
+        },
+        {
+          "id": "wrap-up-challenge",
+          "title": "Builder's Challenge",
+          "kind": "markdown",
+          "markdown": "## You just built something with AI!\n\n<img src=\"https://images.code.org/99d7f396c47a604d6ca01825a08c4ab2-Panel 1.png\" alt=\"\" width=\"800\" height=\"340\">\n\n<br>Want to keep going? Join the Building with AI Challenge, a national competition for high school teams. Build your project over eight weeks and submit by Feb 1, 2027.",
+          "link": {
+            "label": "Learn about the Builder's Challenge",
+            "href": "https://code.org"
+          },
+          "continueLabel": "Get my Certificate"
+        }
+      ]
+    }
+  }
 }

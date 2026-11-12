@@ -16,7 +16,7 @@ class ChallengesControllerTest < ActionController::TestCase
   let(:response_ids) {response_json.map {|c| c['id']}}
 
   before do
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
+    User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(true)
   end
 
   describe 'GET #index' do
@@ -27,9 +27,9 @@ class ChallengesControllerTest < ActionController::TestCase
       end
     end
 
-    context 'when signed in without lesson deep dive access' do
+    context 'when signed in without lesson deep dive challenge access' do
       before do
-        User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
+        User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(false)
         sign_in user
       end
 

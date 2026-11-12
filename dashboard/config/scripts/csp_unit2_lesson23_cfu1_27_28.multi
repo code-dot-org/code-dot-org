@@ -1,0 +1,43 @@
+name 'csp-unit2-lesson23-cfu1_27_28'
+title 'Check your understanding'
+description ''
+question 'Which statement about the two programs is true?'
+wrong 'They print exactly the same two lines.'
+wrong 'They print different totals, because a for loop and a while loop count differently.'
+wrong 'They print the same total and the same second number, because both loops run 4 times.'
+right 'They print the same total, but the second number is different.'
+allow_multiple_attempts false
+markdown <<MARKDOWN
+Two apps play the same four songs. Each program runs to the end.
+
+Program A:
+
+```python
+total = 0
+for j in range(4):
+    total = total + (2 + j)
+print(total)
+print(j)
+```
+
+Program B:
+
+```python
+total = 0
+song = 0
+while song < 4:
+    total = total + (2 + song)
+    song = song + 1
+print(total)
+print(song)
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Teacher solution and distractor rationale:
+
+- Correct: "They print the same total, but the second number is different." Program A prints `14` and `3`. Program B prints `14` and `4`. Both loops run 4 times and add the same song lengths, so the totals match. After the `for` loop `j` is `3`, and after the `while` loop `song` is `4`, so the leftover counter values differ. This is a side effect (2.5.B.2-4).
+- "They print exactly the same two lines." Compares only the first printed line, or assumes that matching totals mean matching programs. Revisit Level 2: same output does not mean same side effects.
+- "They print different totals, because a for loop and a while loop count differently." Treats the two loop types as producing different results. Both loops here run 4 times and add the same values, so the totals match (2.5.B.7).
+- "They print the same total and the same second number, because both loops run 4 times." Assumes that the same number of repetitions leaves the counter at the same value. A `for` loop's `j` stops at the last value in `range(4)`, while a `while` loop's counter keeps counting until the condition fails.
+MARKDOWN

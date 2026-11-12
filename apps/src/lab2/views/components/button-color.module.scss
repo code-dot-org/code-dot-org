@@ -1,0 +1,13 @@
+// A contained primary button in the success green (see buttonColor.ts).
+// Doubled, so the tokens outrank the theme's emotion styles; a disabled
+// button keeps the theme's disabled look.
+.success.success:not(:global(.Mui-disabled)) {
+  background-color: var(--background-success-primary);
+  color: var(--text-neutral-white-fixed);
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--background-success-strong);
+    color: var(--text-neutral-white-fixed);
+  }
+}

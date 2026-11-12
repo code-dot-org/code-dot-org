@@ -29735,6 +29735,17 @@ en:
             This unit introduces students to problems in the domain of natural language processing, inviting them to explore strategies computers can use to understand and generate natural language.
 
             Students consider the problem of natural language understanding and the challenge of building computer systems that can understand the complexity and the ambiguity of natural language. They explore practical applications of natural language processing from spelling and grammar checkers to search engines to AI chatbots. As students develop comfort with analyzing text in Python, they are also introduced to machine learning techniques for working with language.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Describe the challenges associated with understanding natural language.
+            - Identify applications of natural language processing in software.
+            - Use string manipulation to process text.
+            - Write Python programs to analyze text.
+            - Use machine learning techniques with text as training data.
+            - Interpret the results of text analyses and explain how those results can be useful.
+            - Evaluate the strengths and limits of natural language processing systems.
+            - Reflect on how bias can be introduced into natural language models.
+            :::
           student_description: This unit introduces you to problems in the domain of natural language processing, inviting you to explore strategies computers can use to understand and generate natural language.
         aif-year2-semester1-unit6:
           lessons: {}
@@ -30535,6 +30546,16 @@ en:
               name: 'Lesson 17: While Loops Day 3'
             lesson-18:
               name: Lesson 13 Nested Conditionals - Day 1
+            lesson-19:
+              name: 'Lesson 20: For Loops Day 1'
+            lesson-20:
+              name: 'Lesson 21: For Loops Day 2'
+            lesson-21:
+              name: 'Lesson 22: For Loops Day 3'
+            lesson-22:
+              name: 'Lesson 23: Comparing Algorithms'
+            lesson-23:
+              name: 'Lesson 25: Debugging'
           lesson_groups: {}
           name: csp-unit2-dev-27-28
           title: Unit 2 - Building Solutions Using Selection and Iteration
@@ -31261,5 +31282,13 @@ en:
           description: ''
           student_description: ''
         ai-makerspace1-2026:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Hour of AI
           lesson_groups: {}
+          name: ai-makerspace1-2026
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

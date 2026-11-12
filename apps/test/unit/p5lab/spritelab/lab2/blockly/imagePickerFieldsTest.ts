@@ -12,6 +12,7 @@ import {
   BlockImageField,
   CostumeField,
   refreshAnimationDropdownThumbnails,
+  TOUCHING_BLOCK_TYPE,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/imagePickerFields';
 
 // Newest-first, as Sprite Lab keeps it: 'hero' was made first, 'rival'
@@ -26,14 +27,45 @@ const fullList = {
 };
 let animationList: {
   orderedKeys: string[];
-  propsByKey: Record<string, {name: string; categories: string[]}>;
+  propsByKey: Record<
+    string,
+    {name: string; categories: string[]; role?: string}
+  >;
 } = fullList;
-const mockStore = {getState: () => ({animationList})};
+let imageRoleDefaults: Record<string, string> | undefined;
+const mockStore = {
+  getState: () => ({
+    animationList,
+    lab: {levelProperties: {imageRoleDefaults}},
+  }),
+};
 
 describe('image picker fields', () => {
   it('lists costumes newest-first', () => {
     const field = CostumeField.fromJson({});
     expect(field.getOptions(false).map(option => option[1])).toEqual([
+      '"rival"',
+      '"hero"',
+    ]);
+  });
+
+  it('offers the blocks after the sprites under the touches block', () => {
+    // Blockly's setter wants a real block; the field reads only its parent.
+    const onBlock = (field: CostumeField, parentType: string) => {
+      (field as unknown as {sourceBlock_: unknown}).sourceBlock_ = {
+        getParent: () => ({type: parentType}),
+      };
+      return field;
+    };
+    const field = onBlock(CostumeField.fromJson({}), TOUCHING_BLOCK_TYPE);
+    expect(field.getOptions(false).map(option => option[1])).toEqual([
+      '"rival"',
+      '"hero"',
+      '"brick"',
+    ]);
+    // Under any other block, the sprites alone.
+    const other = onBlock(CostumeField.fromJson({}), 'gamelab_spriteSay');
+    expect(other.getOptions(false).map(option => option[1])).toEqual([
       '"rival"',
       '"hero"',
     ]);

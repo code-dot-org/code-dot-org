@@ -99,7 +99,7 @@ describe('WordMenus', () => {
     expect(
       screen.getByRole('group', {name: 'creature (pick one)'})
     ).toBeTruthy();
-    expect(screen.queryByRole('button', {name: 'sparkly'})).toBeNull();
+    expect(screen.queryByRole('button', {name: 'cute'})).toBeNull();
     expect(
       (
         screen.getByRole('button', {
@@ -109,7 +109,7 @@ describe('WordMenus', () => {
     ).toBe(true);
     next();
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'sparkly'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'cute'})).toBeTruthy();
     next();
     expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
     expect(
@@ -123,7 +123,7 @@ describe('WordMenus', () => {
     const ghost = document.querySelector('p[aria-hidden]') as HTMLElement;
     // The icons carry no text; the longest words by width are picked.
     expect(ghost.textContent?.replace(/\s+/g, ' ')).toBe(
-      'A friendly monster wearing a glasses.'
+      'A robotic dumpling wearing a glasses.'
     );
     expect(sentenceText()).toBe('A cat.');
   });
@@ -143,6 +143,20 @@ describe('WordMenus', () => {
       screen.getByRole('button', {name: 'cute. Show adjective words'})
     );
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
+  });
+
+  it("plays a chip's entrance animation once, and again only if the word is removed and re-chosen", () => {
+    const {rerender} = render(<Harness initial={{creature: 'cat'}} />);
+    const chip = () =>
+      screen.getByRole('button', {name: 'cat. Show creature words'})
+        .parentElement as HTMLElement;
+    expect(chip().classList.contains('entrancePlayed')).toBe(false);
+    fireEvent.animationEnd(chip());
+    rerender(<Harness initial={{creature: 'cat'}} />);
+    expect(chip().classList.contains('entrancePlayed')).toBe(true);
+    fireEvent.click(screen.getByRole('button', {name: 'Remove cat'}));
+    fireEvent.click(screen.getByRole('button', {name: 'cat'}));
+    expect(chip().classList.contains('entrancePlayed')).toBe(false);
   });
 
   it('shows a chip as plain text while the creature is missing', () => {
@@ -186,12 +200,12 @@ describe('WordMenus', () => {
     next();
     expect(placeholderShown()).toBe(true);
     expect(sentenceText()).toBe('A cat.');
-    fireEvent.click(screen.getByRole('button', {name: 'sparkly'}));
+    fireEvent.click(screen.getByRole('button', {name: 'cute'}));
     expect(placeholderShown()).toBe(false);
-    expect(sentenceText()).toBe('A sparkly cat.');
+    expect(sentenceText()).toBe('A cute cat.');
     next();
     expect(placeholderShown()).toBe(true);
-    expect(sentenceText()).toBe('A sparkly cat wearing a .');
+    expect(sentenceText()).toBe('A cute cat wearing a .');
   });
 
   it('starts as the sentence waiting for its noun, then reads as prose', () => {
@@ -202,10 +216,10 @@ describe('WordMenus', () => {
     expect(placeholderShown()).toBe(false);
     expect(sentenceText()).toBe('A dragon.');
     next();
-    fireEvent.click(screen.getByRole('button', {name: 'sparkly'}));
+    fireEvent.click(screen.getByRole('button', {name: 'cute'}));
     next();
     fireEvent.click(screen.getByRole('button', {name: 'crown'}));
-    expect(sentenceText()).toBe('A sparkly dragon wearing a crown.');
+    expect(sentenceText()).toBe('A cute dragon wearing a crown.');
   });
 
   it('clears a word on a second click or its x, the required one included', () => {
@@ -262,7 +276,7 @@ describe('WordMenus', () => {
     fireEvent.click(screen.getByRole('button', {name: 'cat'}));
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
     expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'sparkly'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'cute'})).toBeTruthy();
     expect(placeholderShown()).toBe(true);
     expect(sentenceText()).toBe('A cat.');
   });
