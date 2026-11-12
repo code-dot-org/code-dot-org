@@ -87,7 +87,7 @@ import {
 import {onTrimsUpdated} from '../imageTrim';
 import {
   editsWorld,
-  GENERATION_LIMIT,
+  generationLimitForMode,
   imageSourceForMode,
   isFreeplayMode,
   isOneImageMode,
@@ -2086,7 +2086,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  // Generations on this level so far; only a one-image level has a limit.
+  // Generations on this level so far, for a level that limits them.
   const [generationCount, setGenerationCount] = useState(0);
   useEffect(() => setGenerationCount(0), [levelProperties.id]);
   const countGeneration = useCallback(
@@ -2094,9 +2094,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
   const oneImage = isOneImageMode(levelProperties.levelMode);
-  const generationsLeft = oneImage
-    ? GENERATION_LIMIT - generationCount
-    : undefined;
+  const generationLimit = generationLimitForMode(levelProperties.levelMode);
+  const generationsLeft =
+    generationLimit === undefined
+      ? undefined
+      : generationLimit - generationCount;
   // A toolbox has no scenes: New scene would put the student default into
   // the saved toolbox.
   const scenesOffered = animationsSeeded && !isToolboxMode;

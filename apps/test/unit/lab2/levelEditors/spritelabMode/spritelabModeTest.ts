@@ -33,8 +33,17 @@ describe('cleanLevelMode', () => {
       noDeletingImages: true,
       limitedPaintTools: true,
       imageKinds: ['sprite', 'block'],
+      generationLimit: 5,
     };
     expect(cleanLevelMode(mode)).toEqual({mode, removed: []});
+  });
+
+  it('drops a generation limit that is not a whole number above zero', () => {
+    [0, -1, 2.5, '5', true].forEach(generationLimit =>
+      expect(cleanLevelMode({kind: 'code', generationLimit}).mode).toEqual({
+        kind: 'code',
+      })
+    );
   });
 
   it('drops extra tabs and image kinds the lab does not know', () => {

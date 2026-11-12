@@ -32,6 +32,7 @@
       ],
       "noNewImages": true,
       "noDeletingImages": true,
+      "generationLimit": 5,
       "limitedPaintTools": true,
       "imageKinds": [
         "sprite"

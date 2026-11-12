@@ -60,6 +60,7 @@ const TAB_KEYS: (keyof LevelMode)[] = [
   'noDeletingImages',
   'limitedPaintTools',
   'imageKinds',
+  'generationLimit',
 ];
 
 // Keys a kind can carry; changing the kind drops the rest.
@@ -125,6 +126,8 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
     case 'noDeletingImages':
     case 'limitedPaintTools':
       return value === true;
+    case 'generationLimit':
+      return Number.isInteger(value) && (value as number) > 0;
     case 'imageSource':
       return isImageSource(value);
     default:

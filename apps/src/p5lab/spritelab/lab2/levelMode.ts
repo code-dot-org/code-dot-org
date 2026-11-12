@@ -55,9 +55,14 @@ export interface LevelMode {
   limitedPaintTools?: boolean;
   /** The kinds of image the Images tab lists. Every kind when unset. */
   imageKinds?: ImageType[];
+  /** How many pictures the student can generate in one visit to the
+      level, counted across all its images. Unset, there is no limit, as
+      in free play, except on a one-image level, which allows
+      GENERATION_LIMIT. */
+  generationLimit?: number;
 }
 
-/** Generations a one-image level allows. */
+/** Generations a one-image level allows when it names no limit. */
 export const GENERATION_LIMIT = 5;
 
 /** The style the advanced generate form starts on; the student form is
@@ -111,6 +116,19 @@ export function isFreeplayMode(mode: LevelMode | undefined): boolean {
 /** Whether the level keeps the student to one image (see oneImage). */
 export function isOneImageMode(mode: LevelMode | undefined): boolean {
   return !!mode?.oneImage;
+}
+
+/** How many pictures the level lets the student generate in one visit, or
+    undefined when it sets no limit. */
+export function generationLimitForMode(
+  mode: LevelMode | undefined
+): number | undefined {
+  // The option is edited as JSON, so it may not be a count.
+  const own = mode?.generationLimit;
+  if (typeof own === 'number' && Number.isInteger(own) && own > 0) {
+    return own;
+  }
+  return isOneImageMode(mode) ? GENERATION_LIMIT : undefined;
 }
 
 /** The source a mode's pictures come from: the tree first unless named. */

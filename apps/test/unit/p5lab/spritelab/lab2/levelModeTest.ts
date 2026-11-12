@@ -1,4 +1,6 @@
 import {
+  GENERATION_LIMIT,
+  generationLimitForMode,
   imageSourceForMode,
   isFreeplayMode,
   isOneImageMode,
@@ -89,6 +91,41 @@ describe('isOneImageMode', () => {
     ).toBe(true);
     expect(isOneImageMode({kind: 'code', oneImage: true})).toBe(true);
     expect(isOneImageMode(undefined)).toBe(false);
+  });
+});
+
+describe('generationLimitForMode', () => {
+  it('is no limit unless the level asks for one', () => {
+    expect(generationLimitForMode(undefined)).toBeUndefined();
+    expect(generationLimitForMode({kind: 'freeplay'})).toBeUndefined();
+    expect(
+      generationLimitForMode({kind: 'code', extraTabs: ['Images']})
+    ).toBeUndefined();
+  });
+
+  it('is the limit the level names', () => {
+    expect(generationLimitForMode({kind: 'code', generationLimit: 3})).toBe(3);
+    expect(
+      generationLimitForMode({
+        kind: 'image',
+        oneImage: true,
+        generationLimit: 8,
+      })
+    ).toBe(8);
+  });
+
+  it('is the standard limit on a one-image level that names none', () => {
+    expect(generationLimitForMode({kind: 'image', oneImage: true})).toBe(
+      GENERATION_LIMIT
+    );
+  });
+
+  it('ignores a limit that was saved as something other than a count', () => {
+    const saved = (generationLimit: unknown) =>
+      ({kind: 'code', generationLimit} as unknown as LevelMode);
+    expect(generationLimitForMode(saved('5'))).toBeUndefined();
+    expect(generationLimitForMode(saved(0))).toBeUndefined();
+    expect(generationLimitForMode(saved(2.5))).toBeUndefined();
   });
 });
 

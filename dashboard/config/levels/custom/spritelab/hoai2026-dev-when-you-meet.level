@@ -30,6 +30,7 @@
       ],
       "noNewImages": true,
       "noDeletingImages": true,
+      "generationLimit": 5,
       "limitedPaintTools": true,
       "paletteRoles": [
         "friend",
