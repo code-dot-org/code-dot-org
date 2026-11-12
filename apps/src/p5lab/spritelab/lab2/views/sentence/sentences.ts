@@ -2,7 +2,9 @@
 // the New image dialog, and the prompt text a filled sentence becomes. A
 // sentence is a row of segments: fixed text, a slot that takes one word,
 // or a phrase whose words show only when its slot is filled. A required
-// slot must be filled before the sentence can generate.
+// slot must be filled before the sentence can generate. A filled sentence
+// reads two ways: as the student's words, and as the text the model gets,
+// which may say more about a word than its chip does.
 
 import {EMPTY_WORD_ID} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
@@ -16,6 +18,8 @@ import manifestJson from '@cdo/static/spritelab_lab2/sentences.json';
 export interface Word {
   id: string;
   text: string;
+  /** Sent to the model in place of `text`; never shown to the student. */
+  modelFacingText?: string;
   /** A Font Awesome icon shown beside the text; decoration, not read aloud. */
   icon?: string;
   /** A plain color, shown as a dot beside the text in place of an icon. */
@@ -246,10 +250,14 @@ export function phraseFilled(
 }
 
 /**
- * The prompt text for the sentence: empty optional slots and unfilled
- * phrases are left out, and the spaces they leave are closed up.
+ * The sentence as text: empty optional slots and unfilled phrases are left
+ * out, and the spaces they leave are closed up.
  */
-export function promptText(sentence: Sentence, choices: Choices): string {
+function sentenceText(
+  sentence: Sentence,
+  choices: Choices,
+  modelFacing: boolean
+): string {
   const parts: string[] = [];
   const add = (segments: Segment[]) => {
     segments.forEach(segment => {
@@ -258,7 +266,7 @@ export function promptText(sentence: Sentence, choices: Choices): string {
       } else if ('slot' in segment) {
         const word = wordFor(sentence, segment.slot, choices[segment.slot]);
         if (word) {
-          parts.push(word.text);
+          parts.push((modelFacing && word.modelFacingText) || word.text);
         }
       } else if (phraseFilled(sentence, segment.phrase, choices)) {
         add(segment.phrase);
@@ -266,19 +274,24 @@ export function promptText(sentence: Sentence, choices: Choices): string {
     });
   };
   add(sentence.segments);
-  const prompt = parts
+  return parts
     .join('')
     .replace(/\s+/g, ' ')
     .replace(/\s+([,.])/g, '$1')
     .trim();
+}
 
-  // Keep the mad-lib UI unchanged, but make the generated prompt describe
-  // the fixed fantasy skin color shown by the image generator.
-  if (sentence.id === 'character') {
-    return prompt.replace(/\bwitch\b/g, 'green-skinned witch');
-  }
+/** The sentence in the student's own words. */
+export function studentFacingText(
+  sentence: Sentence,
+  choices: Choices
+): string {
+  return sentenceText(sentence, choices, false);
+}
 
-  return prompt;
+/** The sentence as the model gets it. */
+export function modelFacingText(sentence: Sentence, choices: Choices): string {
+  return sentenceText(sentence, choices, true);
 }
 
 /** Choices saved on an image: the sentence they were made in, and the
@@ -315,6 +328,26 @@ export function restoreChoices(
     });
   }
   return restored;
+}
+
+/**
+ * A generated image's words as the student chose them. The image records
+ * the text the model got; when its saved choices still rebuild exactly
+ * that text, the student's version is rebuilt from them too. Otherwise,
+ * as for a typed prompt, the recorded text is all there is.
+ */
+export function studentFacingTextFor(
+  generation: ImageGenerationMetadata
+): string {
+  const {sentenceId, choices, imageType, subject, prompt} = generation;
+  if (!choices) {
+    return prompt;
+  }
+  const sentence = sentenceFor(imageType, subject, sentenceId);
+  const restored = restoreChoices(sentence, {sentenceId, choices});
+  return modelFacingText(sentence, restored) === prompt
+    ? studentFacingText(sentence, restored)
+    : prompt;
 }
 
 /** The body plan of the chosen creature, when the sentence has one. */

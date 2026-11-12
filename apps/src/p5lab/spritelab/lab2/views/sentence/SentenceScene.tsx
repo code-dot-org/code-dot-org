@@ -46,11 +46,12 @@ import {
   Choices,
   chosenBodyPlan,
   isComplete,
-  promptText,
+  modelFacingText,
   restoreChoices,
   SavedChoices,
   sentenceFor,
   sentenceWordIds,
+  studentFacingText,
 } from './sentences';
 import {playSound} from './sentenceSounds';
 import {SentPrompts, sentPromptsFor} from './sentPrompts';
@@ -309,7 +310,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     }
     const run = ++runRef.current;
     const startedAt = Date.now();
-    const prompt = typedPrompt || promptText(sentence, choices);
+    const studentText = typedPrompt || studentFacingText(sentence, choices);
+    const modelText = typedPrompt || modelFacingText(sentence, choices);
     const pixelScale = advanced?.pixelScale || 1;
     // The cache holds the sentences' pictures as the level draws them;
     // whatever the advanced settings change goes to the model.
@@ -338,7 +340,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
-        promptText: prompt,
+        promptText: studentText,
         method: typedPrompt ? 'freeText' : method,
         imageType,
         ...(typedPrompt ? {} : {sentenceId: sentence.id, choices}),
@@ -372,21 +374,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       // What the lab would send. A cached picture was made from the same
       // words by the same prompt builders, so this describes it as well.
       const sent: SentPrompts = sentPromptsFor(
-        prompt,
+        modelText,
         options,
         style,
         generatesCharacterSet,
         bodyPlan
       );
       const result = generatesCharacterSet
-        ? await generateCharacterSet(prompt, {
+        ? await generateCharacterSet(modelText, {
             style,
             temperature: TEMPERATURE,
             pixelGrid: options.pixelGrid,
             bodyPlan,
             cached,
           })
-        : await generateImage(prompt, {...options, cached});
+        : await generateImage(modelText, {...options, cached});
       if (run !== runRef.current) {
         return;
       }
@@ -422,7 +424,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
             }
           : result,
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
-        prompt,
+        prompt: studentText,
         sent,
         cached: !!cached,
       };
