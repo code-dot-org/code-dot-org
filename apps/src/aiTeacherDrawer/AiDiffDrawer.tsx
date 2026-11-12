@@ -103,9 +103,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     }
   }, [requestedNav, dispatch]);
 
-  // A Lab2 lab can move on to a level without a rubric while its tab is open.
-  // Only a rubric going away moves the drawer off the tab: one asked for before
-  // the lab has loaded its rubric is still coming.
+  // A Lab2 lab can switch to a level without a rubric while the rubric tab is
+  // open. Only a rubric going away moves the drawer off the rubric tab.
   const hadRubricRef = useRef(hasRubric);
   useEffect(() => {
     if (hadRubricRef.current && !hasRubric && activeNav === 'Rubrics') {
