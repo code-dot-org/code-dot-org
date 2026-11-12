@@ -164,8 +164,7 @@ export function fieldApplies(
       return (
         kind === 'image' || kind === 'freeplay' || mode.imageFirst === true
       );
-    // An Images tab too, but never free play, which always allows multiple
-    // images.
+    // Free play always allows multiple images, so only 'image' kind supports the 'oneImage' field.
     case 'oneImage':
       return kind === 'image' || mode.imageFirst === true;
     default:
