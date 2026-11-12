@@ -172,6 +172,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       the level opens (blockLocks.ts). The blocks under a stack this level adds can,
       and so can the toolbox blocks no earlier level required. */
   lockEarlierBlocks?: boolean;
+  /** The free play intro opens the first time the student arrives
+      (FreeplayIntroDialog.tsx). */
+  freeplayIntro?: boolean;
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;

@@ -52,6 +52,7 @@ class GamelabJr < Gamelab
     objectives
     block_catalog
     lock_earlier_blocks
+    freeplay_intro
     no_project
   )
 

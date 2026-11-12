@@ -60,7 +60,7 @@ const FreeplayIntroDialog: React.FunctionComponent<
             </strong>
           </MuiTypography>
           <MuiTypography variant="body2" className={moduleStyles.tip}>
-            When you're done, click{' '}
+            When you're done, select{' '}
             <strong className={moduleStyles.buttonName}>
               I'm finished
               <FontAwesomeV6Icon iconName="check" />

@@ -1452,18 +1452,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [catalog.length]);
 
-  // The free play intro opens the first time the student reaches free play.
-  // Off in edit modes, whose saves would carry its flag into start sources.
+  // The free play intro opens the first time the student reaches a level that
+  // asks for it. Off in edit modes, whose saves would carry its flag into
+  // start sources.
   useEffect(() => {
     setShowFreeplayIntro(
-      freeplayLevel &&
+      !!levelProperties.freeplayIntro &&
         isEditable &&
         !isLevelEditMode &&
         animationsSeeded &&
         !currentSources.freeplayIntroSeen
     );
   }, [
-    freeplayLevel,
+    levelProperties.freeplayIntro,
     isEditable,
     animationsSeeded,
     currentSources.freeplayIntroSeen,

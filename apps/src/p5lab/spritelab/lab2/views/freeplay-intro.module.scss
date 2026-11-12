@@ -4,12 +4,6 @@
   display: contents;
 
   @include chrome.theme;
-
-  // A near-black panel on the dark theme, to match the design.
-  [data-theme='Dark'] & {
-    --dialog-panel-bg: var(--background-neutral-primary);
-    --dialog-inset-bg: var(--background-neutral-tertiary);
-  }
 }
 
 .dialogHost .dialog {
@@ -62,18 +56,12 @@
   margin-top: 12px;
 }
 
-// The brand text color is white on the dark theme, so these use the purple
-// shades directly.
 .buttonName {
   display: inline-flex;
   align-items: center;
   gap: 0.375em;
   margin-left: 0.125em;
-  color: var(--brand-purple-50);
-
-  [data-theme='Dark'] & {
-    color: var(--brand-purple-20);
-  }
+  color: var(--text-brand-primary-fixed);
 }
 
 .footer {
