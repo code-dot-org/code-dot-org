@@ -26,6 +26,16 @@
       "paletteRoles": [
         "treasure",
         "block"
+      ],
+      "extraTabs": [
+        "Images"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "imageKinds": [
+        "sprite"
       ]
     },
     "starter_images": [

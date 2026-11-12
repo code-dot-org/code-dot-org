@@ -92,6 +92,16 @@ interface ImagesTabProps {
   onGenerate?: () => void;
   /** Students may add images and draw on them (free play). */
   editingOffered?: boolean;
+  /** No New button, even where `editingOffered` would show one: the
+      student works on the images already listed. */
+  noNewImages?: boolean;
+  /** No Delete button, even where `editingOffered` would show one. */
+  noDeletingImages?: boolean;
+  /** The paint tools are the limited set. Without it they are the full
+      set free play has. */
+  limitedPaintTools?: boolean;
+  /** The kinds of image the list shows. Every kind when unset. */
+  imageKinds?: ImageType[];
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
   paneWidth: number;
@@ -139,6 +149,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   generationsLeft,
   onGenerate,
   editingOffered,
+  noNewImages,
+  noDeletingImages,
+  limitedPaintTools,
+  imageKinds,
   paneWidth,
   onImageLanded,
   active = true,
@@ -157,9 +171,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     trimAnimationListImages(animationList);
   }, [animationList]);
   const images = useMemo(
-    () => listProjectImages(animationList),
+    () =>
+      listProjectImages(animationList).filter(
+        // The option is edited as JSON, so it may not be a list.
+        image =>
+          !Array.isArray(imageKinds) || imageKinds.includes(image.imageType)
+      ),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [animationList, trimVersion]
+    [animationList, trimVersion, imageKinds]
   );
   const writer = useImageWriter({uploadImage, imageRole, onDeleteImage});
   const editedMode = useMemo(() => readEditedMode(), []);
@@ -332,8 +351,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     }
     startSession(images[0]?.key ?? null);
   }, [chosenId, draft, images, startSession, stopDrawing, drawing]);
-  // A level before free play keeps the few tools that draw.
-  const limitedTools = !editingOffered;
+  const limitedTools = !!limitedPaintTools;
   // An image that is the student's own work (no prompt made its pixels)
   // hides the word menus until Replace image is pressed; the choice is per
   // image, and choosing another image or leaving the tab hides them again.
@@ -444,7 +462,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       group.frames.includes(shownFrame)
     )?.key;
 
-  const deleteOffered = !!editingOffered;
+  const deleteOffered = !!editingOffered && !noDeletingImages;
   // On a level whose task is one image, the plus is shown until that image
   // is made on this visit, and its menu enables only that kind. In free
   // play every kind is enabled.
@@ -454,7 +472,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         subject: lockedImageType === 'sprite' ? lockedImageSubject : undefined,
       }
     : undefined;
-  const newOffered = !!editingOffered || (!!lockedKind && !ownImageMade);
+  const newOffered =
+    !noNewImages && (!!editingOffered || (!!lockedKind && !ownImageMade));
   // A level about one image keeps the choice on that image, or on the slot
   // it will take; the project's other tiles are listed but disabled.
   const chooseOffered = !lockedKind;

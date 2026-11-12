@@ -24,11 +24,20 @@
     "lock_earlier_blocks": true,
     "level_mode": {
       "kind": "code",
+      "limitedPaintTools": true,
+      "generationLimit": 5,
       "imageType": "background",
       "imageRole": "platform-background",
       "imageFirst": true,
       "learning": true,
-      "oneImage": true
+      "oneImage": true,
+      "extraTabs": [
+        "World"
+      ],
+      "paletteRoles": [
+        "treasure",
+        "block"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",
