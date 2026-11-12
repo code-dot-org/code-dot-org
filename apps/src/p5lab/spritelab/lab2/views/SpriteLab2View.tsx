@@ -2255,8 +2255,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         }
       />
       <div className={moduleStyles.divider} />
-      <LabShell>
-        {WorkspaceAlert}
+      <LabShell alert={WorkspaceAlert}>
         <div ref={stageRef} className={moduleStyles.stage}>
           {scenesOffered &&
             editorsShown &&

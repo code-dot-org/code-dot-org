@@ -49,9 +49,8 @@ import AdvancedPopover, {
   AdvancedSettings,
   DEFAULT_ADVANCED,
 } from './AdvancedPopover';
-import DrawPane from './DrawPane';
 import FrameRow from './FrameRow';
-import {FRAME_LABELS, frameGroups} from './frames';
+import {frameGroups} from './frames';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry} from './ImageList';
 import {currentPixels} from './imagePixels';
@@ -290,18 +289,25 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         subject: result.generation.subject,
       };
       await storePicture(target, () => writer.acceptGenerated(target, result));
-      offerStory(result);
     },
-    [writer, storePicture, offerStory]
+    [writer, storePicture]
   );
-  // The verdict goes onto the kept picture's record, its pixels untouched,
-  // so tools open on the picture keep what has been drawn since it landed.
+  // The verdict is written onto the stored picture's generation record.
+  // Its pixels are not touched, so anything drawn on the picture since it
+  // was generated is kept.
   const handleRate = useCallback(
     async (verdict: Verdict) => {
       const key = chosenKeyRef.current;
-      const generation = key ? writer.rateGenerated(key, verdict) : undefined;
-      if (!key || !generation) {
+      if (!key) {
         return false;
+      }
+      const generation = writer.rateGenerated(key, verdict);
+      if (!generation) {
+        // The picture has been edited by hand, which removes its generation
+        // record, so there is nowhere to write the verdict. True tells the
+        // scene the rating is dealt with, so it does not store its own copy
+        // of the picture again, which would go over the student's edits.
+        return true;
       }
       adoptGeneration(key, generation);
       await storePicture(
@@ -350,8 +356,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     restPick && restPick.key === chosenImage?.key ? restPick.index : null;
   const restFrameRef = useRef(restFrame);
   restFrameRef.current = restFrame;
-  // Where the tools open by themselves, no button offers them.
-  const drawOffered = !!sceneKind && !drawing && !paintsChosen;
+  // In free play the paint tools open by themselves, on an existing image
+  // and on a new one, so no button is needed to open them.
+  const drawOffered = !!sceneKind && !drawing && !paintsInPlace;
+  // The chosen image has been edited by hand since it was generated. The
+  // scene still holds the picture as the AI made it, so the frame must show
+  // the stored image instead, and the question about the AI's picture no
+  // longer applies.
+  const editedSinceGenerated = !!chosenImage?.props.edited;
   // The chosen image opens in the paint tools by itself, again on return
   // to the tab, and again once a picture has landed over it.
   const chosenKey = chosenImage?.key;
@@ -383,12 +395,27 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     kindSubject,
     startDrawing,
   ]);
+  // In free play a new image, which has no picture yet, opens in the paint
+  // tools too, on a blank canvas.
+  const draftChosen = !!chosenDraft;
+  useEffect(() => {
+    if (paintsInPlace && active && !drawingOpen && draftChosen && kindType) {
+      startDrawing({key: null, imageType: kindType, subject: kindSubject});
+    }
+  }, [
+    paintsInPlace,
+    active,
+    drawingOpen,
+    draftChosen,
+    kindType,
+    kindSubject,
+    startDrawing,
+  ]);
   // A generated picture replacing the image (or blank) being drawn on
   // becomes the image's pixels; the tools close without saving the drawn
   // pixels over it.
   const landedOverPainting =
     !!drawing &&
-    paintsInPlace &&
     !!chosenImage?.props.generation &&
     chosenImage.props.generation !== tools.openedOnGeneration &&
     (drawing.target.key === chosenImage.key || drawing.target.key === null);
@@ -510,6 +537,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onGenerateStart={onGenerate}
           onBusyChange={setBusy}
           onKeep={handleKeep}
+          onReady={offerStory}
           onRate={handleRate}
           wordLayout={wordLayout}
           compactBehindTheScenes
@@ -550,6 +578,18 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 disabled={!drawingSheet && parts.busy}
               />
             );
+            // The scene's own copy of the picture is out of date once the
+            // student has drawn on the stored image. While the scene is
+            // busy storing a new picture, the stored image's "edited" mark
+            // is still the old picture's, so it is ignored until then.
+            const sceneCopyStale = editedSinceGenerated && !parts.busy;
+            // On a level that requires a rating, the student answers the
+            // question about the AI's picture before drawing on it.
+            const ratingAwaited =
+              parts.rating.offered &&
+              parts.rating.required &&
+              !parts.rating.verdict &&
+              !sceneCopyStale;
             const frame = (
               live?: React.ReactNode,
               above?: React.ReactNode,
@@ -563,7 +603,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 live={
                   generating
                     ? parts.frame
-                    : live ?? (parts.frameFilled ? parts.frame : undefined)
+                    : live ??
+                      (parts.frameFilled && !sceneCopyStale
+                        ? parts.frame
+                        : undefined)
                 }
                 generating={generating}
                 tip={generating ? parts.tip : undefined}
@@ -571,7 +614,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 overlay={
                   <>
                     {parts.cachedTag}
-                    {parts.rating.offered && (
+                    {parts.rating.offered && !sceneCopyStale && (
                       <RatingBar
                         verdict={parts.rating.verdict}
                         onJudge={parts.rating.judge}
@@ -589,12 +632,20 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 }
               />
             );
-            const makePane = (
+            // The pane's second button opens the paint tools. While the
+            // tools are open on a level before free play, the same button
+            // closes them and keeps the drawing. `doneDisabled` is true for
+            // a new drawing that has no strokes yet: there is nothing to
+            // keep, so the button cannot be pressed.
+            const makePane = (doneDisabled = false, drawnOn = false) => (
               <MakePane
                 parts={parts}
                 width={paneWidth}
-                replaces={!!chosenImage}
                 regenerate={!!chosenImage?.props.generation}
+                // `drawnOn` covers strokes the open tools hold that are not
+                // saved yet: the stored image is marked as edited only
+                // once a save has gone through.
+                editedByHand={sceneCopyStale || drawnOn}
                 onDraw={
                   drawOffered
                     ? () => {
@@ -608,9 +659,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                           restFrame ?? undefined
                         );
                       }
+                    : drawing && !paintsInPlace
+                    ? tools.finishDrawing
                     : undefined
                 }
-                drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}
+                drawLabel={
+                  drawing
+                    ? drawing.target.key
+                      ? 'Done editing'
+                      : 'Done drawing'
+                    : chosenImage
+                    ? 'Edit this image'
+                    : 'Draw my own'
+                }
+                drawIcon={drawing ? 'check' : undefined}
+                drawDisabled={drawing ? doneDisabled : ratingAwaited}
                 extra={
                   <>
                     {/* The Behind the scenes button sits in this header:
@@ -695,21 +758,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                           ),
                           frameRow
                         )}
-                        {paintsInPlace ? (
-                          makePane
-                        ) : (
-                          <DrawPane
-                            width={paneWidth}
-                            kind={sceneKind}
-                            frameLabel={
-                              drawing.sheet
-                                ? FRAME_LABELS[drawing.sheet.index]
-                                : undefined
-                            }
-                            editing={!!drawing.target.key}
-                            edited={editor.edited}
-                            onDone={tools.finishDrawing}
-                          />
+                        {makePane(
+                          !drawing.target.key && !editor.edited,
+                          editor.edited
                         )}
                       </>
                     );
@@ -741,7 +792,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     }
                   />
                 ) : (
-                  makePane
+                  makePane()
                 )}
               </>
             );

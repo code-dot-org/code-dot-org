@@ -58,7 +58,7 @@
       "title": "**Set the scene**",
       "items": [
         {
-          "text": "In Images, click New image.",
+          "text": "In **Images**, select the **+** button.",
           "check": {
             "kind": "image",
             "imageType": "background"

@@ -15,13 +15,12 @@ the caller maps its own level data onto `levelType` and `status`.
 Rules for callers:
 
 - Pass the bubbles as direct children of `ProgressWidget`. Below 992px the
-  widget shows only the bubble marked `aria-current` (set by `isActive`); if
-  none is, it shows them all.
+  widget shows only the bubble marked `aria-current` (set by `isActive`), so
+  mark one; in browsers with `:has()`, a row with none shows them all.
 - `ariaLabel` must carry what the color and star show, e.g. "Level 4,
   assessment, completed": they are not announced.
-- Give a disabled (locked) bubble its `href` or `onClick` anyway. It then
-  renders as a disabled link or button, which contrast rules exempt; with
-  neither it is a plain image, and its white-on-grey number fails 4.5:1.
+- A disabled (locked) bubble keeps the role its `href` or `onClick` gives
+  it, marked `aria-disabled`; with neither it is an image.
 - A tooltip that repeats `ariaLabel` is not read twice; one that adds to it
   is read as a description.
 - An `onClick` that calls `preventDefault` on a link bubble should first let

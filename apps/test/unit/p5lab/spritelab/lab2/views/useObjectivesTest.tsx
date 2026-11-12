@@ -50,6 +50,42 @@ function Checklist({
   );
 }
 
+// A checklist whose first item is checked the whole time: placing something
+// in the world. Its second is checked once: pressing Run.
+const WORK_OBJECTIVES = {
+  items: [
+    {id: 'place', text: 'Place something.', check: {kind: 'world' as const}},
+    {id: 'play', text: 'Press Play.', check: {kind: 'play' as const}},
+  ],
+};
+const PLACED = [[{image: 'Hero', kind: 'sprite' as const}]];
+const EMPTY = [[null]];
+
+function WorkChecklist({
+  placed,
+  everPlayed,
+}: {
+  placed: boolean;
+  everPlayed: boolean;
+}) {
+  const state = useObjectives({
+    objectives: WORK_OBJECTIVES,
+    images: IMAGES,
+    grid: placed ? PLACED : EMPTY,
+    imagesForRole: {},
+    everPlayed,
+    generated: IMAGES,
+    rated: false,
+    runtime: EMPTY_RUNTIME,
+  });
+  return (
+    <div>
+      {state.items.map(i => `${i.id}:${i.done}`).join(' ')}
+      {state.allDone && ' all'}
+    </div>
+  );
+}
+
 describe('useObjectives', () => {
   it('sets state only when a new item holds, whatever the inputs do', () => {
     // Count every state setter call the hook makes.
@@ -127,5 +163,17 @@ describe('useObjectives', () => {
     }
     const view = render(<Both />);
     expect(view.container.textContent).toBe('place:true play:true');
+  });
+
+  it('unchecks an item when its work is undone, and keeps an item that only has to pass once', () => {
+    const view = render(<WorkChecklist placed={true} everPlayed={true} />);
+    expect(view.container.textContent).toBe('place:true play:true all');
+    // The placed thing is removed, so its item is unchecked. Pressing Play
+    // is something that happened, so its item stays checked.
+    view.rerender(<WorkChecklist placed={false} everPlayed={false} />);
+    expect(view.container.textContent).toBe('place:false play:true');
+    // Placed again: checked again.
+    view.rerender(<WorkChecklist placed={true} everPlayed={false} />);
+    expect(view.container.textContent).toBe('place:true play:true all');
   });
 });

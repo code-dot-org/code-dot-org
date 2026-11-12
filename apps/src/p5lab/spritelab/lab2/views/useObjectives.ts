@@ -1,5 +1,7 @@
-// The level's checklist as the Guide shows it: which items hold, kept once
-// earned for the rest of the visit, and the game's progress feeding them.
+// The level's checklist as the Guide shows it: which items are done, and
+// the game's progress feeding them. An item that is checked once stays done
+// for the rest of the visit. Any other item is done only while its check
+// passes.
 
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
@@ -141,10 +143,12 @@ export function usePlayProgress(
 }
 
 /**
- * The checklist's state. Once an item is completed it stays completed, and
- * once an item has appeared it stays visible, even if its check stops
- * passing. Reloading the page starts the checklist over; the level's saved
- * progress is what lasts.
+ * The checklist's state. An item whose check is checked once (see
+ * isCheckedOnce) stays completed once that check has passed. Any other
+ * item is completed only while its check passes, so it is un-ticked when
+ * the student undoes the work. An item that has appeared stays visible.
+ * Reloading the page starts the checklist over; the level's saved progress
+ * is what lasts.
  */
 export function useObjectives({
   objectives,
@@ -231,20 +235,37 @@ export function useObjectives({
     const newlyCompleted = newIndexes(completed, (item, inputs) =>
       checkObjective(item.check, inputs)
     );
+    // The completed items that are checked the whole time and whose check
+    // no longer passes. The student has undone that work, so these items
+    // are un-ticked.
+    const undone = [...completed].filter(index => {
+      const item = items?.[index];
+      return (
+        !!item &&
+        !isCheckedOnce(item.check) &&
+        !checkObjective(item.check, inputs)
+      );
+    });
     const visible = shownRef.current;
     const newlyVisible = newIndexes(visible, objectiveShown);
     // State is set only when something changed. The inputs are a new object
     // on most renders, so setting state every time would loop forever.
-    // Each update adds to the set as it is when the update is applied, not
-    // to the copy read above. More than one update can be waiting at once,
-    // and writing a whole set from a stale copy would undo the others.
-    if (newlyCompleted.length) {
-      setEarned(current => new Set([...current, ...newlyCompleted]));
+    // Each update is applied to the set as it is at that moment, not to the
+    // copy read above, so it cannot undo another update that is waiting.
+    if (newlyCompleted.length || undone.length) {
+      setEarned(
+        current =>
+          new Set(
+            [...current, ...newlyCompleted].filter(
+              index => !undone.includes(index)
+            )
+          )
+      );
     }
     if (newlyVisible.length) {
       setShown(current => new Set([...current, ...newlyVisible]));
     }
-  }, [newIndexes]);
+  }, [newIndexes, items, inputs]);
 
   // When a student comes back to a level they already completed, the
   // steps that are checked once (see isCheckedOnce) are marked as done.
