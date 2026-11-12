@@ -29,6 +29,9 @@ export interface LevelMode {
   /** The level tells how AI made the student's image, after the first
       picture made in a visit. */
   learning?: boolean;
+  /** Enable student upload. If the level sets an image type, the upload will be of that type,
+   * otherwise the student assigns a type. */
+  enableImageUpload?: boolean;
   /** Where the level's pictures come from (imageCache.ts); the tree first
       when unset. */
   imageSource?: ImageSource;

@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {
   ImageKind,
+  imageKindLabel,
   imageKindPhrase,
   ImageSubject,
   ImageType,
@@ -63,7 +64,8 @@ import RatingBar from './teaching/RatingBar';
 import ReopenedBehindTheScenes from './teaching/ReopenedBehindTheScenes';
 import useLearningStory from './teaching/useLearningStory';
 import useDrawing from './useDrawing';
-import useImageWriter, {ImageTarget} from './useImageWriter';
+import useImageUpload from './useImageUpload';
+import useImageWriter, {ImageTarget, UploadedImage} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
 
@@ -106,6 +108,8 @@ interface ImagesTabProps {
   limitedPaintTools?: boolean;
   /** The kinds of image the list shows. Every kind when unset. */
   imageKinds?: ImageType[];
+  /** Enable the user to upload their own images. */
+  enableImageUpload?: boolean;
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
   paneWidth: number;
@@ -158,6 +162,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   noDeletingImages,
   limitedPaintTools,
   imageKinds,
+  enableImageUpload,
   paneWidth,
   onImageLanded,
   active = true,
@@ -311,6 +316,40 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
+
+  const [uploadError, setUploadError] = useState<string | null>(null);
+  const [uploadStatus, setUploadStatus] = useState('');
+  const handleUploaded = useCallback(
+    async (kind: ImageKind, image: UploadedImage) => {
+      const target: ImageTarget = {
+        key: null,
+        imageType: kind.imageType,
+        subject: kind.subject,
+      };
+      const key = await writer.acceptUploaded(target, image);
+      leaveDrawing();
+      setDraft(null);
+      startSession(key);
+      landedRef.current?.();
+      setUploadStatus(`${imageKindLabel(kind.imageType, kind.subject)} added.`);
+    },
+    [leaveDrawing, startSession, writer]
+  );
+  const upload = useImageUpload({
+    onAccepted: handleUploaded,
+    onError: message => {
+      setUploadError(message);
+      setUploadStatus(message);
+    },
+    onProgress: setUploadStatus,
+  });
+  const handleUpload = useCallback(
+    (kind: ImageKind, trigger: HTMLElement | null) => {
+      setUploadError(null);
+      upload.pickFile(kind, trigger);
+    },
+    [upload]
+  );
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
       const target: ImageTarget = {
@@ -546,6 +585,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         }
         chooseOffered={chooseOffered}
         newKind={lockedKind}
+        onUpload={enableImageUpload && newOffered ? handleUpload : undefined}
+        uploadInProgress={upload.uploading}
+        notice={uploadError}
         onDelete={deleteOffered ? writer.deleteImage : undefined}
       />
       {sceneKind ? (
@@ -862,6 +904,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onClose={story.asked ? endStory : undefined}
         />
       )}
+      <upload.FileInput />
+      <p aria-live="polite" className={styles.srOnly}>
+        {uploadStatus}
+      </p>
     </div>
   );
 };

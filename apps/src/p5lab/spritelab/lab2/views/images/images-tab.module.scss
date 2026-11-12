@@ -127,7 +127,7 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   min-height: 36px;
 }
 
-// The name over its count, with the plus at the right.
+// The name over its count, with button(s) at the right.
 .listTitle {
   flex: 1 1 auto;
   min-width: 0;

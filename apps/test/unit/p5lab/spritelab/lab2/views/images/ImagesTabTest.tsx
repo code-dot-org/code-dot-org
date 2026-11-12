@@ -118,6 +118,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
 // lays out, with save handing back fixed pixels.
 jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
   const PixelEditorStub = ({
+    imageUrl,
     tools,
     palette,
     knownPixelGrid,
@@ -127,6 +128,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
     onHistoryChange,
     children,
   }: {
+    imageUrl?: string;
     tools?: readonly string[];
     palette?: readonly unknown[];
     knownPixelGrid?: number;
@@ -155,6 +157,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
         <span>{palette ? `${palette.length} colors` : 'every color'}</span>
         <span>grid {knownPixelGrid ?? 'none'}</span>
         <span>{brushSizes?.length ?? 'all'} brush sizes</span>
+        <span>drawing {imageUrl}</span>
         {children({
           ready: true,
           loadError: false,
@@ -222,6 +225,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/imageTrim', () => ({
   getImageThumbnail: () => undefined,
 }));
 const acceptGenerated = jest.fn();
+const acceptUploaded = jest.fn();
 const saveEdited = jest.fn();
 const rateGenerated = jest.fn();
 const deleteImage = jest.fn();
@@ -230,12 +234,50 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter', () => ({
   __esModule: true,
   default: () => ({
     acceptGenerated: (...args: unknown[]) => acceptGenerated(...args),
+    acceptUploaded: (...args: unknown[]) => acceptUploaded(...args),
     saveEdited: (...args: unknown[]) => saveEdited(...args),
     rateGenerated: (...args: unknown[]) => rateGenerated(...args),
     deleteImage: (...args: unknown[]) => deleteImage(...args),
     endSession: () => endSession(),
   }),
 }));
+// Resizing an uploaded picture has no canvas to run on in jsdom.
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration', () => ({
+  ...jest.requireActual(
+    '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration'
+  ),
+  downscaleToFit: async (blob: Blob) => blob,
+}));
+
+// jsdom's Blob has no arrayBuffer(); every browser this ships to does.
+if (!Blob.prototype.arrayBuffer) {
+  Blob.prototype.arrayBuffer = function () {
+    return new Promise<ArrayBuffer>((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result as ArrayBuffer);
+      reader.onerror = () => reject(reader.error);
+      reader.readAsArrayBuffer(this);
+    });
+  };
+}
+
+const pngFile = (name = 'My Cat.png', bytes = 4) =>
+  new File([new Uint8Array(bytes)], name, {type: 'image/png'});
+
+/**
+ * Hands the hidden input a file, as the OS dialog would, and waits for the
+ * checking and storing behind it.
+ */
+async function pickFile(container: HTMLElement, file: File) {
+  // eslint-disable-next-line no-restricted-properties
+  const input = container.querySelector('#file-input') as HTMLInputElement;
+  await act(async () => {
+    fireEvent.change(input, {target: {files: [file]}});
+  });
+  await act(async () => {
+    await new Promise(resolve => setTimeout(resolve, 0));
+  });
+}
 
 function renderTab(
   props: Partial<React.ComponentProps<typeof ImagesTab>> = {}
@@ -259,6 +301,7 @@ describe('ImagesTab', () => {
     // paint-first default has tests of its own below.
     params['images-edited'] = 'pane';
     acceptGenerated.mockReset();
+    acceptUploaded.mockReset();
     rateGenerated.mockReset();
     saveEdited.mockReset();
     deleteImage.mockReset();
@@ -1233,5 +1276,139 @@ describe('ImagesTab', () => {
       {x: 64, y: 64},
       2
     );
+  });
+
+  describe('uploading a picture', () => {
+    it('offers no upload unless the level allows it', () => {
+      renderTab({editingOffered: true});
+      expect(screen.queryByRole('button', {name: 'Upload image'})).toBeNull();
+    });
+
+    // One image is one image however it was made, so the upload goes when
+    // the plus does.
+    it('stops offering uploads once the level has its own image', () => {
+      propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
+      renderTab({
+        lockedImageType: 'sprite',
+        imageRole: 'hero',
+        ownImageMade: true,
+        enableImageUpload: true,
+      });
+      expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
+      expect(screen.queryByRole('button', {name: 'Upload image'})).toBeNull();
+    });
+
+    it('keeps offering uploads in free play, image or no image', () => {
+      propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
+      renderTab({
+        editingOffered: true,
+        ownImageMade: true,
+        enableImageUpload: true,
+      });
+      expect(screen.getByRole('button', {name: 'Upload image'})).toBeTruthy();
+    });
+
+    it('stores a picked file as the kind the student chose', async () => {
+      const onImageLanded = jest.fn();
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+        onImageLanded,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(screen.getByRole('menuitem', {name: 'Upload a block'}));
+      acceptUploaded.mockImplementation(async () => {
+        propsByKey.k1 = {name: 'Block 1', categories: ['blocks']};
+        return 'k1';
+      });
+      await pickFile(container, pngFile());
+      expect(acceptUploaded).toHaveBeenCalledWith(
+        {key: null, imageType: 'block', subject: undefined},
+        expect.objectContaining({
+          mediaType: 'image/png',
+          filename: expect.stringMatching(/^upload_my_cat_\d+\.png$/),
+        })
+      );
+      expect(onImageLanded).toHaveBeenCalled();
+      expect(pressed()).toEqual(['Block 1']);
+    });
+
+    it("takes the level's own kind without asking", async () => {
+      const {container} = renderTab({
+        lockedImageType: 'background',
+        enableImageUpload: true,
+      });
+      acceptUploaded.mockImplementation(async () => {
+        propsByKey.k1 = {name: 'Background 1', categories: ['backgrounds']};
+        return 'k1';
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      expect(screen.queryByRole('menu')).toBeNull();
+      await pickFile(container, pngFile());
+      expect(acceptUploaded).toHaveBeenCalledTimes(1);
+      expect(acceptUploaded.mock.calls[0][0]).toEqual({
+        key: null,
+        imageType: 'background',
+        subject: undefined,
+      });
+    });
+
+    it('refuses a file too big to upload, and says so', async () => {
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(
+        screen.getByRole('menuitem', {name: 'Upload a character'})
+      );
+      await pickFile(container, pngFile('Huge.png', 6 * 1024 * 1024));
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(screen.getByRole('alert').textContent).toMatch(/too big/);
+    });
+
+    it('refuses a file of a kind that cannot be used', async () => {
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(
+        screen.getByRole('menuitem', {name: 'Upload a character'})
+      );
+      await pickFile(
+        container,
+        new File(['x'], 'cat.gif', {type: 'image/gif'})
+      );
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(screen.getByRole('alert').textContent).toMatch(/PNG, JPG or WEBP/);
+    });
+
+    it('moves the paint tools onto the uploaded picture', async () => {
+      delete params['images-edited'];
+      propsByKey.k1 = {
+        name: 'Sprite 1',
+        categories: [],
+        sourceUrl: 'sprite1.png',
+      };
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+      });
+      expect(await screen.findByText('drawing sprite1.png')).toBeTruthy();
+      acceptUploaded.mockImplementation(async () => {
+        propsByKey.k2 = {
+          name: 'Block 1',
+          categories: ['blocks'],
+          sourceUrl: 'uploaded.png',
+        };
+        return 'k2';
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(screen.getByRole('menuitem', {name: 'Upload a block'}));
+      await pickFile(container, pngFile());
+      expect(pressed()).toEqual(['Block 1']);
+      expect(await screen.findByText('drawing uploaded.png')).toBeTruthy();
+    });
   });
 });
