@@ -154,6 +154,13 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
       // native focus trap is inactive. aria-modal tells NVDA/VoiceOver to
       // treat background content as inert during virtual-cursor navigation.
       tour.currentStep?.el?.setAttribute('aria-modal', 'true');
+      // Clear any stale selection when (re-)entering the pick step so the
+      // sidebar shows the placeholder and the layout matches step 2's initial
+      // state; harmless on first entry, corrective on back-navigation.
+      if (idx === indices.pickCheckpoint) {
+        setTourCheckpointId(undefined);
+        userSelectedCheckpointRef.current = false;
+      }
       // If the user advances to the sidebar step without having clicked a
       // checkpoint (edge case: future keyboard shortcut, test harness, etc.),
       // auto-select the first available one so the sidebar is not empty.

@@ -241,6 +241,17 @@ describe('MapScreen tour', () => {
     expect(createdTour.isActive()).toBe(true);
   });
 
+  it('creates the tour with the cancel icon disabled', () => {
+    renderMapScreen();
+    const {createTourWithSteps} = jest.requireMock(
+      '@cdo/apps/sharedComponents/productTour/productTourHelpers'
+    );
+    expect(createTourWithSteps).toHaveBeenCalledWith(
+      expect.any(Function),
+      expect.objectContaining({cancelIcon: {enabled: false}})
+    );
+  });
+
   it('does not start the tour when the storage key is already set', () => {
     localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
     renderMapScreen();
@@ -272,6 +283,35 @@ describe('MapScreen tour', () => {
       expect(screen.queryByText('First Checkpoint')).toBeNull();
     });
 
+    it('does not pre-select a checkpoint when step 2 shows', () => {
+      renderMapScreen();
+      act(() => {
+        createdTour.next(); // → step 1
+      });
+      act(() => {
+        createdTour.next(); // → step 2 (pick checkpoint)
+      });
+      expect(screen.getByText('Select a checkpoint')).toBeTruthy();
+      expect(screen.queryByText('First Checkpoint')).toBeNull();
+    });
+
+    it('auto-selects the first available checkpoint on step 3 when none was manually chosen', () => {
+      // Advancing via next() bypasses onSelect so userSelectedCheckpointRef
+      // stays false, triggering the fallback auto-select on the sidebar step.
+      renderMapScreen();
+      act(() => {
+        createdTour.next(); // → step 1
+      });
+      act(() => {
+        createdTour.next(); // → step 2
+      });
+      act(() => {
+        createdTour.next(); // → step 3, no manual selection recorded
+      });
+      expect(screen.getByText('First Checkpoint')).toBeTruthy();
+      expect(screen.queryByText('Select a checkpoint')).toBeNull();
+    });
+
     it('shows CheckpointCard after the user selects a checkpoint on the map', () => {
       renderMapScreen();
       act(() => {
@@ -300,6 +340,25 @@ describe('MapScreen tour', () => {
       });
       expect(screen.queryByText('Second Checkpoint')).toBeNull();
       expect(screen.getByText('Select a checkpoint')).toBeTruthy();
+    });
+
+    it('clears the selection when navigating back to the pick step', () => {
+      renderMapScreen();
+      act(() => {
+        createdTour.next(); // → step 1
+      });
+      act(() => {
+        createdTour.next(); // → step 2 (pick checkpoint)
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-1')); // → step 3, cp-1 selected
+      });
+      expect(screen.getByText('First Checkpoint')).toBeTruthy();
+      act(() => {
+        createdTour.back(); // → step 2
+      });
+      expect(screen.getByText('Select a checkpoint')).toBeTruthy();
+      expect(screen.queryByText('First Checkpoint')).toBeNull();
     });
 
     it('sets body classes correctly across step transitions', () => {
