@@ -383,6 +383,13 @@ describe('parsePathway', () => {
     expect(problemsOf(raw)[0]).toMatch(/destinations\.polish\.color/);
   });
 
+  it('accepts an icon on a checkpoint', () => {
+    const raw = served();
+    raw.checkpoints[0].icon = 'location-dot';
+    expect(problemsOf(raw)).toEqual([]);
+    expect(parsePathway(raw).checkpoints[0].icon).toBe('location-dot');
+  });
+
   it('accepts an icon on a skill', () => {
     const raw = served();
     raw.skills.css.icon = 'message-code';

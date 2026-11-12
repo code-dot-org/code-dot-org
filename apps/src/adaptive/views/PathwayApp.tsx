@@ -30,6 +30,7 @@ import {
   Progress,
   isComplete,
   stepIdToResume,
+  stepsCompleteShare,
   totalTimeSpent,
   useProgress,
   visibleSteps,
@@ -213,6 +214,13 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   const dispatch = useAppDispatch();
   const projectName = useAppSelector(
     state => state.lab.channel?.name || undefined
+  );
+  const stepShares = useMemo(
+    () =>
+      Object.fromEntries(
+        pathway.checkpoints.map(c => [c.id, stepsCompleteShare(c, progress)])
+      ),
+    [pathway, progress]
   );
   const [view, setView] = useState<View>(
     initialCheckpointId
@@ -488,6 +496,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         pathway={pathway}
         levelProperties={levelProperties}
         statusMap={statusMap}
+        stepShares={stepShares}
         evidence={evidence}
         focusId={view.kind === 'map' ? view.focusId : undefined}
         onFocus={focusId => setView({kind: 'map', focusId})}
