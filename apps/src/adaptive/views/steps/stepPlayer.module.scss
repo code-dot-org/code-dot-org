@@ -177,8 +177,9 @@
   background: var(--background-neutral-primary);
   box-sizing: border-box;
 
-  // Focused on open for screen readers; the ring adds nothing on a card.
-  &:focus {
+  // This hides the pulsing outline when JS moves focus automatically,
+  // but keeps it when a user navigates with a keyboard.
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 }
@@ -230,7 +231,7 @@
   background: var(--background-neutral-primary);
   text-align: center;
 
-  h1:focus {
+  h1:focus:not(:focus-visible) {
     outline: none;
   }
 }
