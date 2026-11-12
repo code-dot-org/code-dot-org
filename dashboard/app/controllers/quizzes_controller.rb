@@ -63,10 +63,10 @@ class QuizzesController < ApplicationController
         raise "This Quiz must stay an exam while it is the last level of a lockable lesson."
       end
       # Not a Quiz validation: levels seed before units, so it would fail the
-      # level seed of a commit that makes a quiz an exam and its lesson lockable.
+      # level seed of a commit that makes a Quiz an exam and its lesson lockable.
       if updates[:purpose] == 'exam' && !@level.exam?
         problems = @level.exam_placement_problems
-        raise "This quiz cannot be an exam because #{problems.join('; ')}." if problems.any?
+        raise "This Quiz cannot be an exam because #{problems.join('; ')}." if problems.any?
       end
       @level.assign_attributes(updates)
       @level.advance_saved_version
