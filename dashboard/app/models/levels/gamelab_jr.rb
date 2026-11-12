@@ -79,7 +79,8 @@ class GamelabJr < Gamelab
       ['Adaptations', 'adaptations'],
       ['Ecosystems', 'ecosystems'],
       ['Sprite Lab (Game Design)', 'game_design'],
-      ['Transformers', 'transformers']
+      ['Transformers', 'transformers'],
+      ['Quest Builder', 'quest_builder']
     ]
   end
 
