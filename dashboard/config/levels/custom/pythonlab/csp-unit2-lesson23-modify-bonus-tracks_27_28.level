@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-11T05:20:47.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "explainCode",
+        "buildPython"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## Modify\r\n\r\nEvery 3rd track on the playlist is a bonus track. This program uses `if/else` and the remainder operator `%` to decide which tracks are bonus tracks.\r\n\r\nDo This:\r\n\r\n1. Predict which tracks will print `True`. Then run the program to check.\r\n2. Add one line inside the loop that sets `is_bonus_b` with a single Boolean expression and no `if`. Look at the condition after `if`. What does it evaluate to on its own?\r\n3. Change your print so it also shows whether `is_bonus` and `is_bonus_b` match on each track.\r\n4. Use Validate to check your work.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Bonus Tracks\nfor j in range(7):\n    track = j + 1\n    if track % 3 == 0:\n        is_bonus = True\n    else:\n        is_bonus = False\n    print(\"Track \" + str(track) + \": \" + str(is_bonus))",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "teacher_markdown": "- Expected output for the starter:\r\n\r\n```\r\nTrack 1: False\r\nTrack 2: False\r\nTrack 3: True\r\nTrack 4: False\r\nTrack 5: False\r\nTrack 6: True\r\nTrack 7: False\r\n```\r\n\r\n- Expected output for the exemplar: `True` on tracks 3 and 6, and `match: True` on every line.\r\n- Coding Tip: A condition like `track % 3 == 0` already evaluates to `True` or `False`. Assigning it directly does the same job as the whole `if/else`.\r\n- Common errors:\r\n  - Writing `is_bonus_b = track % 3` (a number, not a Boolean). The match check fails with a hint about what to compare the remainder to.\r\n  - Putting the new line inside the `if` or `else`. Validate says to move it out so it runs on every pass.\r\n  - Writing `is_bonus_b` with an `if/else` of its own. Validate says one line is enough.\r\n  - Moving the `print` outside the loop. Validate reports how many lines printed.\r\n- Assessment Opportunity: Use this level to check whether students can rewrite a conditional as a Boolean expression, run both versions on the same inputs, and confirm they match.",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrJEYBti3qCbCel\nrzLH+NYzA8gyiHyoZXQoNYyWmxbYlPHRWm4m6Ay0gzrLenqS1Lz0X/oHv/Fp\nHT5bGaK+4iOhCshEjUWprLjCnIZfxf4b/UwHsXu+GsyPDsstEc3nA6o4BoIk\nvSPJn3nHhQ/BNU7aHYqoZGN4hyjWlMxwb4TGnhKagx7uWassUrf1+R2Revqd\nFk/zNTr55V8kG6zHRY62Iuxs4RfsBnRpPZa1bEU0vaA6TFDVABA2BEkijWMq\nIJVE7sUrtMPRYPrC8VBg6aEELlBxavR2JaVcdcPSOdguewQ0bAdaOpxkVGZt\npTH0iHhkqItXO1f9JxeJGiCy3UY1PrEOezqyeqWlatAjMi5T8F+K2zuX32PW\n4YrL9YblEXdtsM8jONbiP5b7nhpSrkeHTo/xlm+YONy9AsUCV5WU53mG6D+V\nH24VpWETrOk9R4k6LBpmzdbR1Ea0N7LivtXpijnmEUwBhKm+6TY2IuOS3pzg\nXyVSVW/lId2zS+CA7LbfTC7NwDfPKdtXMU/hM8UQ\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import ast\nimport io\nimport re\nfrom contextlib import redirect_stdout\nfrom unittest import TestCase\n\n\nclass AddSnapshot(ast.NodeTransformer):\n    \"\"\"Adds a snapshot call at the end of every for loop body.\"\"\"\n\n    def visit_For(self, node):\n        self.generic_visit(node)\n        call = ast.Call(func=ast.Name(id='__snapshot__', ctx=ast.Load()), args=[], keywords=[])\n        node.body.append(ast.Expr(value=call))\n        return node\n\n\ndef read_source():\n    with open('main.py') as main_file:\n        return main_file.read()\n\n\ndef run_program():\n    \"\"\"Run main.py once. Record track, is_bonus, and is_bonus_b at the end of each pass.\"\"\"\n    source = read_source()\n    output = io.StringIO()\n    snapshots = []\n    error = None\n    fake_globals = {'__name__': '__main__'}\n    fake_globals['__snapshot__'] = lambda: snapshots.append((\n        fake_globals.get('track'),\n        fake_globals.get('is_bonus', 'MISSING'),\n        fake_globals.get('is_bonus_b', 'MISSING'),\n    ))\n    try:\n        tree = AddSnapshot().visit(ast.parse(source))\n        ast.fix_missing_locations(tree)\n        with redirect_stdout(output):\n            exec(compile(tree, 'main.py', 'exec'), fake_globals)\n    except Exception as e:\n        error = e\n    lines = [line for line in output.getvalue().splitlines() if line.strip()]\n    return lines, snapshots, error\n\n\ndef indent_of(line):\n    return len(line) - len(line.lstrip())\n\n\nclass TestBonusTracks(TestCase):\n    def test_1_runs_without_error(self):\n        \"\"\"Your program runs without an error\"\"\"\n        lines, snapshots, error = run_program()\n        if error:\n            self.fail(\n                f\"Your program stopped with a {type(error).__name__}. \"\n                \"Read the error message, then check the line you added.\"\n            )\n\n    def test_2_prints_every_track(self):\n        \"\"\"Your program prints a line for each of the 7 tracks\"\"\"\n        lines, snapshots, error = run_program()\n        if error:\n            self.skipTest(\"Fix the error first, then we can check this.\")\n        if len(lines) < 7:\n            self.fail(\n                f\"Your program printed {len(lines)} line(s), but it should print at least one line for each of the 7 tracks. \"\n                \"Check that your print is still inside the loop.\"\n            )\n\n    def test_3_one_expression_no_if(self):\n        \"\"\"You set is_bonus_b with one Boolean expression and no if\"\"\"\n        source_lines = read_source().splitlines()\n        assignments = [line for line in source_lines if re.match(r\"\\s*is_bonus_b\\s*=\", line)]\n        if not assignments:\n            self.fail(\"We didn't find a line that sets is_bonus_b. Add one inside the loop.\")\n        if len(assignments) > 1:\n            self.fail(\"You set is_bonus_b more than once. A single Boolean expression only needs one line.\")\n        line = assignments[0]\n        track_lines = [l for l in source_lines if re.match(r\"\\s*track\\s*=\", l)]\n        if track_lines and indent_of(line) != indent_of(track_lines[0]):\n            self.fail(\"Your is_bonus_b line is inside an if or else. Move it out so it runs on every pass, with no if.\")\n        if \"%\" not in line:\n            self.fail(\"Your is_bonus_b line doesn't use %. Which operator checks for a remainder?\")\n        if re.search(r\"\\b(True|False)\\b\", line):\n            self.fail(\"Your is_bonus_b line uses True or False directly. Let the expression produce the Boolean for you.\")\n\n    def test_4_versions_match(self):\n        \"\"\"is_bonus_b matches is_bonus on every track\"\"\"\n        lines, snapshots, error = run_program()\n        if error:\n            self.skipTest(\"Fix the error first, then we can check this.\")\n        if not snapshots:\n            self.skipTest(\"We didn't find your loop running, so we can't check this yet.\")\n        if all(rewrite == 'MISSING' for track, original, rewrite in snapshots):\n            self.skipTest(\"Add your is_bonus_b line first, then we can compare the two versions.\")\n        for track, original, rewrite in snapshots:\n            if original == 'MISSING':\n                self.fail(\"is_bonus is missing. Keep the original if/else in your program so you can compare against it.\")\n            if rewrite == 'MISSING':\n                self.fail(\"is_bonus_b isn't set by the end of each pass. Check that your new line is inside the loop.\")\n            if original != rewrite:\n                self.fail(\n                    f\"On track {track}, is_bonus was {original} but is_bonus_b was {rewrite}. \"\n                    \"Check the number after % and what you compare the remainder to.\"\n                )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-11T05:20:47.064+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson23-investigate-two-apps_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson23-investigate-two-apps_27_28\"},{\"changed_at\":\"2026-11-11 05:21:48 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-11 05:22:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-11 05:22:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-11 05:23:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-11 05:26:08 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

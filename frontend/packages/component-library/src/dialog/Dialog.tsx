@@ -12,59 +12,47 @@ import CustomDialog from './CustomDialog';
 
 import moduleStyles from './dialog.module.scss';
 
-/**
- * @deprecated Use `MuiDialogProps` from `@code-dot-org/component-library/dialog`.
- * Codemod: `codemods/dialog-to-mui-dialog.ts` in `frontend/packages/component-library`.
- */
 export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
-  /** Dialog title */
+  /** Dialog title, an h2; also the panel's aria-label */
   title?: string;
   /** Dialog description text */
   description?: string;
-  /** Dialog Custom content (rendered right after/instead Dialog description)
-   *  If this is rendered when there's no `description` prop - make sure to add `dsco-dialog-description` `id`
-   *  to the element in custom content which will be representing the dialog description. (Used by screen readers
-   *  for dialog's `aria-describedBy` attribute)
-   *  */
+  /** Custom content, rendered after (or instead of) the description.
+   *  Without `description`, give the element that describes the dialog `id="dsco-dialog-description"`;
+   *  the panel's `aria-describedby` points at it. */
   customContent?: ReactNode;
-  /** Custom bottom content (rendered right after Dialog actions section). */
+  /** Custom bottom content, rendered after the actions row */
   customBottomContent?: ReactNode;
-  /** Dialog primary button props */
+  /** Primary button props, spread on an MUI Button variant="contained" */
   primaryButtonProps: MuiButtonProps;
-  /** Dialog secondary button props */
+  /** Secondary button props, spread on an MUI Button variant="outlined"; the button renders only when these are passed */
   secondaryButtonProps?: MuiButtonProps;
-  /** Dialog color mode */
+  /** Button color: 'light' uses primary/secondary, 'dark' uses white. The panel does not change. */
   mode?: 'light' | 'dark';
-  /** Custom class name */
+  /** Marks the primary action destructive: the primary button and icon badge turn red, with either `mode`.
+   *  A `color` in `primaryButtonProps` still overrides the button; the badge stays red. */
+  destructive?: boolean;
+  /** Custom class name, applied to the panel (the role="alertdialog" element) */
   className?: string;
-  /** Dialog onClose handler */
+  /** onClose handler. Without it there is no close button and Escape does nothing. A backdrop click never closes. */
   onClose?: () => void;
-  /** Dialog close button aria label */
+  /** Close button aria label; defaults to 'Close dialog' */
   closeLabel?: string;
-  /** Dialog icon */
+  /** Icon shown in a badge on the panel's top edge */
   icon?: FontAwesomeV6IconProps;
-  /** Dialog image url */
+  /** Image url, shown above the title */
   imageUrl?: string;
-  /** z-index for the background overlay. See variables.scss for default. */
+  /** Image alt text; the default '' marks the image decorative */
+  imageAlt?: string;
+  /** z-index for the overlay, set through --cdo-dialog-z-index; defaults to $zindex-modal-backdrop (1040). 0 is honored. */
   zIndex?: number;
 }
 
 /**
- * ## Production-ready Checklist:
- *  * (✔) implementation of component approved by design team;
- *  * (✔) has storybook, covered with stories and documentation;
- *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see ./__tests__/Dialog.test.tsx)
- *  * (?) passes accessibility checks;
- *
  * ###  Status: ```Ready for dev```
  *
- * Design System: Dialog Component.
- * Renders Dialog window that user should interact with.
- *
- * @deprecated Use `MuiDialog` from `@code-dot-org/component-library/dialog`; it takes the same props.
- * Codemod: `codemods/dialog-to-mui-dialog.ts` in `frontend/packages/component-library`.
- * See `src/dialog/DIALOG_MIGRATION_TO_MUI.md`.
+ * Design System: Dialog on `CustomDialog`, with a title, description,
+ * actions, and an optional icon badge or image.
  */
 const Dialog: React.FunctionComponent<DialogProps> = ({
   title,
@@ -72,6 +60,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
   primaryButtonProps,
   secondaryButtonProps,
   mode = 'light',
+  destructive = false,
   className,
   customContent,
   customBottomContent,
@@ -79,6 +68,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
   closeLabel = 'Close dialog',
   icon,
   imageUrl,
+  imageAlt = '',
   zIndex,
   ...HTMLAttributes
 }) => (
@@ -86,7 +76,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
     role="alertdialog"
     className={classnames(
       moduleStyles.dialog,
-      moduleStyles[`dialog-${mode}`],
+      destructive && moduleStyles.destructive,
       className,
     )}
     onClose={onClose}
@@ -96,7 +86,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
     {...HTMLAttributes}
   >
     <div className={moduleStyles.dialogTextSection}>
-      {imageUrl && <img src={imageUrl} alt="Dialog" />}
+      {imageUrl && <img src={imageUrl} alt={imageAlt} />}
       <MuiTypography variant="h2" gutterBottom>
         {title}
       </MuiTypography>
@@ -122,7 +112,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
       )}
       <MuiButton
         variant="contained"
-        color={mode === 'light' ? 'primary' : 'white'}
+        color={destructive ? 'error' : mode === 'light' ? 'primary' : 'white'}
         {...primaryButtonProps}
       />
     </div>

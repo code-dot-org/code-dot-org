@@ -18,7 +18,7 @@
     "standalone_app_name": "spritelab",
     "skin": "gamelab",
     "hide_custom_blocks": true,
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template",
     "level_mode": {
@@ -34,12 +34,17 @@
     },
     "block_catalog": true,
     "use_secondary_finish_button": "true",
+    "finish_dialog": "hoai2026",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
-          "type": "spritelab2_setPlatformGravity"
+          "type": "spritelab2_setPlatformJumpHeight"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setPlatformGravityDirection"
         },
         {
           "kind": "block",
@@ -51,7 +56,15 @@
         },
         {
           "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer2"
+        },
+        {
+          "kind": "block",
           "type": "spritelab2_thePlayer"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_thePlayer2"
         },
         {
           "kind": "block",
@@ -86,10 +99,6 @@
             "LENGTH": "short",
             "PATTERN": "slide up"
           }
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_playMusic"
         },
         {
           "kind": "block",
@@ -137,59 +146,7 @@
         },
         {
           "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition"
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_spriteClicked",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_atTime",
-          "inputs": {
-            "N": {
-              "shadow": {
-                "type": "math_number",
-                "fields": {
-                  "NUM": 3
-                }
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_setProp",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            },
-            "VAL": {
-              "shadow": {
-                "type": "math_number",
-                "fields": {
-                  "NUM": 100
-                }
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
           "type": "spritelab2_goToScene"
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_goToExternalScene"
         }
       ]
     },

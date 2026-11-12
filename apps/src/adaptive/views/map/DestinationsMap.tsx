@@ -1,9 +1,9 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {DestinationColor} from '../../schema/destination';
 import {Pathway} from '../../types';
+import PathwayIcon from '../components/PathwayIcon';
 
 import {checkpointIcon} from './checkpointIcon';
 import {busRoutes} from './layout/busRoutes';
@@ -19,10 +19,10 @@ import styles from './destinationsMap.module.scss';
 // circle's center; matches the stylesheet. Other titles sit below.
 const SIDE_LABEL_REACH = NODE_RADIUS + 16 + 110;
 const NODE_WIDTH = 112;
-// Room between a destination box and its circles, more above for the title,
-// and from the box to the group's trunk line beside it.
+// Room between a destination box and its circles, more above for the
+// header strip, and from the box to the group's trunk line beside it.
 const BOX_PADDING = 12;
-const BOX_TITLE_ROOM = 28;
+const BOX_TITLE_ROOM = 35;
 const TRUNK_GAP = 14;
 
 interface DestinationBox {
@@ -86,6 +86,7 @@ interface DestinationsMapProps extends MapProps {
 const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
   pathway,
   statusMap,
+  stepShares,
   turns,
   focusId,
   fit,
@@ -147,7 +148,6 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
           key={box.key}
           className={classNames(
             styles.destination,
-            box.side === 'right' && styles.destinationRight,
             box.color && styles[box.color]
           )}
           style={{
@@ -157,15 +157,15 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
             height: box.height,
           }}
         >
-          <span className={styles.destinationTitle}>
+          <div className={styles.destinationHeader}>
             {box.icon && (
-              <FontAwesomeV6Icon
+              <PathwayIcon
                 iconName={box.icon}
                 className={styles.destinationIcon}
               />
             )}
-            {box.title}
-          </span>
+            <span className={styles.destinationTitle}>{box.title}</span>
+          </div>
         </div>
       ))}
       {pathway.checkpoints.map(checkpoint => {
@@ -177,6 +177,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
             position={layout.nodes[checkpoint.id]}
             status={statusMap[checkpoint.id]}
             icon={checkpointIcon(pathway, checkpoint)}
+            share={stepShares?.[checkpoint.id]}
             focusId={focusId}
             circleTop={NODE_RADIUS}
             width={NODE_WIDTH}

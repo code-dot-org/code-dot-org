@@ -63,4 +63,12 @@
 .animatedRow > label {
   justify-content: space-between;
   width: 100%;
+
+  // The label's text is the same size and weight as the text in the
+  // buttons below it. The switch itself, a div, keeps its small size.
+  > :not(div) {
+    font-size: var(--font-size-body-md);
+    font-weight: 600;
+    line-height: 1.5rem;
+  }
 }
