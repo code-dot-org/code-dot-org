@@ -71,12 +71,14 @@ interface ImagesTabProps {
   uploadImage?: UploadImageFunction;
   /** Drop every reference to a deleted image (called after the removal). */
   onDeleteImage: (name: string) => void;
-  /** Set on a level whose task is one image of this type. The tab opens on
-      that image, or on an empty slot for it until it is made. */
+  /** The one type of image this level offers to generate. */
   lockedImageType?: ImageType;
   lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
   imageRole?: string;
+  /** The level's task is a single image (level mode `oneImage`): the tab
+      opens on it, or on the empty slot it will fill. */
+  oneImage?: boolean;
   /** The level's own image exists: one of its type was made on this visit,
       or one carrying the level's role was made on an earlier visit. Until
       then the plus is offered. After that there is no plus: the student
@@ -92,7 +94,7 @@ interface ImagesTabProps {
   generationsLeft?: number;
   /** Called when a generation request is sent to the model. */
   onGenerate?: () => void;
-  /** Students may add images and draw on them (free play). */
+  /** Students may add images, draw on them and delete them. */
   editingOffered?: boolean;
   /** No New button, even where `editingOffered` would show one: the
       student works on the images already listed. */
@@ -145,6 +147,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   lockedImageType,
   lockedImageSubject,
   imageRole,
+  oneImage,
   ownImageMade,
   learning,
   levelId,
@@ -211,19 +214,24 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     [startSession]
   );
 
-  // On a level whose task is one image: the newest such image, when one
-  // exists (the list is newest first), as the dropdowns' role defaults
-  // pick it.
-  const ownImage = lockedImageType
-    ? images.find(image =>
-        imageRole
-          ? image.props.role === imageRole
-          : image.imageType === lockedImageType
-      )
-    : undefined;
+  // The image the level's own task produces: the one tagged with its role,
+  // or without a role the newest of its type (the list is newest first, as
+  // the dropdowns' role defaults pick it).
+  const ownImage =
+    imageRole || lockedImageType
+      ? images.find(image =>
+          imageRole
+            ? image.props.role === imageRole
+            : image.imageType === lockedImageType
+        )
+      : undefined;
   // The opening choice is read once at mount; a later change to the list
-  // must not move the choice.
-  const openOnRef = useRef(lockedImageType ? ownImage : images[0]);
+  // must not move the choice. A level with a role or a type opens on its own
+  // image, and a one-image level on the empty slot until that image is made;
+  // anything else opens on the project's newest image.
+  const openOnRef = useRef(
+    lockedImageType || imageRole || oneImage ? ownImage : images[0]
+  );
   useEffect(() => {
     setChosenId(openOnRef.current?.key ?? null);
   }, []);
@@ -468,20 +476,19 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     )?.key;
 
   const deleteOffered = !!editingOffered && !noDeletingImages;
-  // On a level whose task is one image, the plus is shown until that image
-  // is made on this visit, and its menu enables only that kind. In free
-  // play every kind is enabled.
+  // The plus menu enables only the level's kind; without one every kind is
+  // enabled.
   const lockedKind: ImageKind | undefined = lockedImageType
     ? {
         imageType: lockedImageType,
         subject: lockedImageType === 'sprite' ? lockedImageSubject : undefined,
       }
     : undefined;
-  const newOffered =
-    !noNewImages && (!!editingOffered || (!!lockedKind && !ownImageMade));
-  // A level about one image keeps the choice on that image, or on the slot
-  // it will take; the project's other tiles are listed but disabled.
-  const chooseOffered = !lockedKind;
+  // Where a single image is the task, the plus is shown until that image is
+  // made on this visit, and the choice stays on it or on the slot it will
+  // take; the project's other tiles are listed but disabled.
+  const newOffered = !noNewImages && (!!editingOffered || !ownImageMade);
+  const chooseOffered = !!editingOffered;
 
   return (
     <div className={styles.tab}>

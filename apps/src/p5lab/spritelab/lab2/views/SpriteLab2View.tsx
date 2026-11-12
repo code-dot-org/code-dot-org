@@ -2150,6 +2150,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     generationLimit === undefined
       ? undefined
       : generationLimit - generationCount;
+  // Where the level names no image type, any image counts as its own.
+  const ownImageMade = levelImageType
+    ? objectiveImages[levelImageType] >= 1
+    : Object.values(objectiveImages).some(count => count >= 1);
   // A toolbox has no scenes: New scene would put the student default into
   // the saved toolbox.
   const scenesOffered = animationsSeeded && !isToolboxMode;
@@ -2353,17 +2357,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <ImagesTab
                 uploadImage={uploadImage}
                 onDeleteImage={handleDeleteImage}
-                lockedImageType={
-                  oneImage ? levelProperties.levelMode?.imageType : undefined
-                }
-                lockedImageSubject={
-                  oneImage ? levelProperties.levelMode?.imageSubject : undefined
-                }
+                lockedImageType={levelProperties.levelMode?.imageType}
+                lockedImageSubject={levelProperties.levelMode?.imageSubject}
                 imageRole={levelProperties.levelMode?.imageRole}
-                ownImageMade={
-                  !!levelProperties.levelMode?.imageType &&
-                  objectiveImages[levelProperties.levelMode.imageType] >= 1
-                }
+                ownImageMade={ownImageMade}
+                oneImage={oneImage}
                 learning={levelProperties.levelMode?.learning}
                 levelId={levelProperties.id}
                 generationsLeft={generationsLeft}
