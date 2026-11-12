@@ -131,7 +131,7 @@
           }
         },
         {
-          "text": "Click **Run**, then run and jump to your object.",
+          "text": "Select **Run**, then run and jump to your object.",
           "check": {
             "kind": "reach",
             "role": "treasure"

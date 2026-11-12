@@ -77,7 +77,7 @@
           }
         },
         {
-          "text": "Click **Run**, then use the arrow keys to run and jump.",
+          "text": "Select **Run**, then use the arrow keys to run and jump.",
           "check": {
             "kind": "reach",
             "moved": true

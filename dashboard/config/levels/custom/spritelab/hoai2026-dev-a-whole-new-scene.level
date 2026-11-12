@@ -183,7 +183,7 @@
           }
         },
         {
-          "text": "Click **Run** and get to **Scene 2**.",
+          "text": "Select **Run** and get to **Scene 2**.",
           "check": {
             "kind": "scene",
             "id": "second-scene"

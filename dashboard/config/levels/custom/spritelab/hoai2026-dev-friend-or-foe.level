@@ -50,7 +50,7 @@
           }
         },
         {
-          "text": "In **World**, click a square to place one or more.",
+          "text": "In **World**, select a square to place one or more.",
           "check": {
             "kind": "world",
             "role": "friend"
