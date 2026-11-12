@@ -25,7 +25,8 @@ $narrow: 991.98px;
   border-end-start-radius: calc(var(--shape-md) - 1px);
   background-color: var(--background-neutral-secondary);
 
-  // A plain title with no name and no save status.
+  // A plain title with no name and no save status leaves this area empty,
+  // so it is not drawn.
   &:empty {
     display: none;
   }
@@ -54,7 +55,8 @@ $narrow: 991.98px;
   text-overflow: ellipsis;
 }
 
-// With .lesson's 3px, the design's 8px inset for a title without a button.
+// The design insets a title that has no button by 8px: 5px here, on top
+// of .lesson's 3px of padding.
 .lessonTitle {
   padding-inline-start: 5px;
   color: var(--text-neutral-primary);
@@ -70,7 +72,8 @@ $narrow: 991.98px;
   color: var(--text-neutral-tertiary);
   font-size: 12px;
 
-  // Alone in the lesson area, centred in it.
+  // With no lesson name the save icon is the only thing in the lesson
+  // area. 3px more at its start gives it the same space on both sides.
   &:first-child {
     margin-inline-start: 3px;
   }
