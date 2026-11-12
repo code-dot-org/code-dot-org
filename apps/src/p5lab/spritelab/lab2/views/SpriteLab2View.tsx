@@ -1779,14 +1779,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     sceneLoadsRef.current++;
     // On a level that asks, blocks built on an earlier level cannot be
-    // deleted. Earlier levels built the pinned scene; an extra scene is this
-    // level's own. The blocks under a stack this level added stay deletable,
-    // and so do the toolbox blocks no earlier level required.
+    // deleted, in any scene the level opens. A scene the level makes starts
+    // with blocks the student cannot get back from this level's toolbox.
+    // The blocks under a stack this level added stay deletable, and so do
+    // the toolbox blocks no earlier level required.
     loadCode(source, {
-      lock:
-        !isLevelEditMode &&
-        !!levelProperties.lockEarlierBlocks &&
-        (!pinnedSceneId || activeScene.id === pinnedSceneId),
+      lock: !isLevelEditMode && !!levelProperties.lockEarlierBlocks,
       isOwn: block =>
         ownsTop(levelProperties.addBlocks ?? [], block.getRootBlock()) ||
         ownTypes.has(block.type),
@@ -1801,7 +1799,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     levelProperties.addBlocks,
     levelProperties.lockEarlierBlocks,
     ownTypes,
-    pinnedSceneId,
     activeScene,
     currentSources.source,
     getCurrentBlocks,

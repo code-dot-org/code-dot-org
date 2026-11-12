@@ -1,7 +1,7 @@
 // On a level that opts in (lock_earlier_blocks), blocks a student built on
 // an earlier level cannot be deleted: a stack deleted by accident would
 // leave the student with no way to continue. They can still be moved. The
-// locks belong to the level, are set as the pinned scene loads and are
+// locks belong to the level, are set as each scene loads and are
 // never saved, so a later level without the property loads the same
 // project with every block deletable again.
 //
