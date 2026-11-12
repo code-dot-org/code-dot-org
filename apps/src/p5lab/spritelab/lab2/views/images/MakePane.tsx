@@ -19,9 +19,6 @@ interface MakePaneProps {
   /** Width in px; it equals the preview column's width so the pane sits
       under that column's header. */
   width: number;
-  /** An image stands in the frame; a new picture would take its place, so
-      Generate asks for confirmation first. */
-  replaces?: boolean;
   /** Open the drawing tools; absent where drawing is not offered. */
   onDraw?: () => void;
   /** The drawing button's text. */
@@ -32,7 +29,9 @@ interface MakePaneProps {
   drawDisabled?: boolean;
   /** The image was made by AI and is unedited: generating makes it again. */
   regenerate?: boolean;
-  /** The student has drawn on the image since it was generated. */
+  /** The student drew this picture, or has drawn on it, counting strokes
+      that are not saved yet. A new picture would replace their drawing, so
+      Generate asks for confirmation. */
   editedByHand?: boolean;
   /** Extra controls for the header, placed after the Behind the scenes
       button. */
@@ -42,7 +41,6 @@ interface MakePaneProps {
 const MakePane: React.FunctionComponent<MakePaneProps> = ({
   parts,
   width,
-  replaces,
   onDraw,
   drawLabel = 'Draw my own',
   drawIcon = 'pencil',
@@ -59,14 +57,12 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
     parts.draft.imageType,
     parts.draft.subject
   );
-  // The first generation over an existing image asks for confirmation.
-  // After a picture has been generated in this session the next one
-  // replaces it without asking. A picture the student has drawn on always
-  // asks, a new drawing included: a new picture would replace their
-  // drawing too.
-  const asksFirst = (!!replaces && !parts.frameFilled) || !!editedByHand;
+  // Generating asks for confirmation only when it would replace the
+  // student's own drawing. A picture that only AI made is replaced without
+  // asking: the same button makes another one like it.
+  const confirmsReplacing = !!editedByHand;
   const generate = () => {
-    if (asksFirst) {
+    if (confirmsReplacing) {
       setConfirming(true);
     } else {
       parts.generate();

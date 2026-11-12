@@ -639,7 +639,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
               <MakePane
                 parts={parts}
                 width={paneWidth}
-                replaces={!!chosenImage}
                 regenerate={!!chosenImage?.props.generation}
                 // `drawnOn` covers strokes the open tools hold that are not
                 // saved yet: the stored image is marked as edited only
