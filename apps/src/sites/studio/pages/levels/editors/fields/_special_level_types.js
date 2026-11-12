@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import LinkToRubricEditor from '@cdo/apps/levelbuilder/rubrics/LinkToRubricEditor';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(initPage);
@@ -19,7 +19,7 @@ function initPage() {
     'link-to-rubric-editor'
   );
   if (linkToRubricContainer) {
-    ReactDOM.render(
+    createReactRoot(
       <LinkToRubricEditor lessons={lessons} />,
       linkToRubricContainer
     );
