@@ -18,6 +18,29 @@ import {clearRoom} from '../stackRoom';
 
 const NO_ENTRIES: AddBlockEntry[] = [];
 
+/**
+ * Whether an event can change which blocks a stack holds: a block made,
+ * deleted or changed, or a block joined to or taken from another. A block
+ * that only moves about the workspace keeps its place in its stack.
+ */
+function changesAStack(event: BlocklyCore.Events.Abstract): boolean {
+  switch (event.type) {
+    case Blockly.Events.BLOCK_CREATE:
+    case Blockly.Events.BLOCK_DELETE:
+    case Blockly.Events.BLOCK_CHANGE:
+      return true;
+    case Blockly.Events.BLOCK_MOVE: {
+      const move = event as BlocklyCore.Events.BlockMove;
+      return (
+        move.oldParentId !== move.newParentId ||
+        move.oldInputName !== move.newInputName
+      );
+    }
+    default:
+      return false;
+  }
+}
+
 /** A Start Over that leaves for the first level: the level being left, and
     the count of sources resets before the one Start Over makes. */
 interface LeavingReset {
@@ -172,45 +195,32 @@ export default function useLevelBlocks({
     if (!workspace) {
       return;
     }
-    const blockChanges: string[] = [
-      Blockly.Events.BLOCK_MOVE,
-      Blockly.Events.BLOCK_CREATE,
-      Blockly.Events.BLOCK_DELETE,
-      Blockly.Events.BLOCK_CHANGE,
-    ];
-    let timer = 0;
     const onChange = (event: BlocklyCore.Events.Abstract) => {
+      if (event.group === OUTLINE_EVENT_GROUP || !changesAStack(event)) {
+        return;
+      }
+      // Blockly delivers an event after the action that caused it has
+      // finished, so the blocks are settled by now. The one exception is a
+      // drag: a block pulled out of the toolbox is created as the drag
+      // starts, and the drop sends a move of its own when it ends.
+      //
+      // The reset that Start Over makes on its way to the first level is
+      // also left alone: that project must stay as the reset made it.
       if (
-        !blockChanges.includes(event.type) ||
-        event.group === OUTLINE_EVENT_GROUP
+        workspace.isDragging() ||
+        leavingResetRef.current ||
+        skippedPassRef.current === addedBlocksForRef.current
       ) {
         return;
       }
-      // One pass after a burst of changes, once the workspace has settled.
-      window.clearTimeout(timer);
-      timer = window.setTimeout(() => {
-        // Not while a block is being dragged, and not on the reset that
-        // Start Over makes on its way to the first level: that project
-        // must be left as the reset made it.
-        if (
-          workspace.isDragging() ||
-          leavingResetRef.current ||
-          skippedPassRef.current === addedBlocksForRef.current
-        ) {
-          return;
-        }
-        try {
-          syncOutlines(workspace, entries, blockChecks);
-        } catch (e) {
-          console.warn('add_blocks outlines not drawn:', e);
-        }
-      }, 0);
+      try {
+        syncOutlines(workspace, entries, blockChecks);
+      } catch (e) {
+        console.warn('add_blocks outlines not drawn:', e);
+      }
     };
     workspace.addChangeListener(onChange);
-    return () => {
-      window.clearTimeout(timer);
-      workspace.removeChangeListener(onChange);
-    };
+    return () => workspace.removeChangeListener(onChange);
   }, [ready, entries, blockChecks, workspaceVersion]);
 
   return {addLevelBlocks, sceneLoadsRef, leavingResetRef};

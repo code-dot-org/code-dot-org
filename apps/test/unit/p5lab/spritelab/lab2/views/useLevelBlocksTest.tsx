@@ -18,13 +18,18 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/stackRoom', () => ({
   clearRoom: jest.fn(),
 }));
 
-type Listener = (event: {type: string; group?: string}) => void;
+type Listener = (event: {
+  type: string;
+  group?: string;
+  newParentId?: string;
+}) => void;
 let listeners: Listener[] = [];
+let dragging = false;
 const workspace = {
   addChangeListener: (listener: Listener) => listeners.push(listener),
   removeChangeListener: (listener: Listener) =>
     (listeners = listeners.filter(l => l !== listener)),
-  isDragging: () => false,
+  isDragging: () => dragging,
 };
 
 const ENTRIES = [{type: 'gamelab_checkTouching', data: 'treasure-touch'}];
@@ -62,11 +67,19 @@ function renderLevelBlocks(initialReinit = 0) {
   };
 }
 
-/** A block edit, and the pass that follows it once the workspace settles. */
+/** A block joined to a stack, as the editor reports it. */
 function editBlock(group?: string) {
   act(() => {
-    listeners.forEach(listener => listener({type: 'move', group}));
-    jest.runAllTimers();
+    listeners.forEach(listener =>
+      listener({type: 'move', group, newParentId: 'stack'})
+    );
+  });
+}
+
+/** A block moved about the workspace without leaving its stack. */
+function moveBlockAbout() {
+  act(() => {
+    listeners.forEach(listener => listener({type: 'move'}));
   });
 }
 
@@ -74,6 +87,7 @@ describe('useLevelBlocks', () => {
   beforeEach(() => {
     jest.useFakeTimers();
     listeners = [];
+    dragging = false;
     addMissingBlocks.mockClear();
     syncOutlines.mockClear();
     lockAddedBlocks.mockClear();
@@ -140,6 +154,30 @@ describe('useLevelBlocks', () => {
     editBlock();
     expect(syncOutlines).toHaveBeenCalledTimes(1);
     editBlock('outlines');
+    expect(syncOutlines).toHaveBeenCalledTimes(1);
+  });
+
+  it('leaves the outlines alone when a block only moves about the workspace', async () => {
+    const {result} = renderLevelBlocks();
+    await act(async () => {
+      result.current.sceneLoadsRef.current++;
+      result.current.addLevelBlocks();
+    });
+    moveBlockAbout();
+    expect(syncOutlines).not.toHaveBeenCalled();
+  });
+
+  it('waits for the drop while a block is being dragged', async () => {
+    const {result} = renderLevelBlocks();
+    await act(async () => {
+      result.current.sceneLoadsRef.current++;
+      result.current.addLevelBlocks();
+    });
+    dragging = true;
+    editBlock();
+    expect(syncOutlines).not.toHaveBeenCalled();
+    dragging = false;
+    editBlock();
     expect(syncOutlines).toHaveBeenCalledTimes(1);
   });
 
