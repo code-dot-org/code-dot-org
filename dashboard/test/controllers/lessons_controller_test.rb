@@ -1505,11 +1505,11 @@ class LessonsControllerTest < ActionController::TestCase
     activity, section = create_activity_and_section(@lesson)
 
     exam = create(:quiz, purpose: 'exam')
-    practice = create(:quiz, purpose: 'practice')
+    level_group = create(:level_group)
     @update_params['activities'] = activities_json(
       activity, section, [
         {activitySectionPosition: 1, activeId: exam.id, levels: [{id: exam.id, name: exam.name}]},
-        {activitySectionPosition: 2, activeId: practice.id, assessment: true, levels: [{id: practice.id, name: practice.name}]},
+        {activitySectionPosition: 2, activeId: level_group.id, assessment: true, levels: [{id: level_group.id, name: level_group.name}]},
       ]
     )
     error = assert_raises(RuntimeError) {put :update, params: @update_params}
