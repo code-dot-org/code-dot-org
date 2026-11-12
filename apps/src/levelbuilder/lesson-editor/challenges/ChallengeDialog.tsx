@@ -66,7 +66,12 @@ const ChallengeDialog: React.FC<ChallengeDialogProps> = ({
   const storedImageUrl = challenge?.whiteboardStarterImageUrl ?? null;
   const hasImage = !!file || (!!storedImageUrl && !removeImage);
   const isEmpty = jsonText.trim() === '';
-  const errors = isEmpty ? [] : validateChallengeJson(jsonText, {hasImage});
+  const errors = isEmpty
+    ? []
+    : validateChallengeJson(jsonText, {
+        hasImage,
+        removingImage: removeImage,
+      });
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selected = e.target.files?.[0] ?? null;

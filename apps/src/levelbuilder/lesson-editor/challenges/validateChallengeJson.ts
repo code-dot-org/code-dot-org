@@ -23,7 +23,10 @@ const isNonBlankString = (value: unknown): value is string =>
 // Immediate feedback only; ChallengesController and Challenge validate again.
 export function validateChallengeJson(
   text: string,
-  {hasImage}: {hasImage: boolean}
+  {
+    hasImage,
+    removingImage = false,
+  }: {hasImage: boolean; removingImage?: boolean}
 ): string[] {
   let parsed: unknown;
   try {
@@ -92,6 +95,11 @@ export function validateChallengeJson(
         'A starter image requires a "whiteboard" or "both" default_modality.'
       );
     }
+  } else if (!removingImage && isNonBlankString(altText)) {
+    // The server clears the alt text along with a removed image.
+    errors.push(
+      '"whiteboard_starter_image_alt_text" requires a starter image. Attach one or remove the field.'
+    );
   }
 
   return errors;

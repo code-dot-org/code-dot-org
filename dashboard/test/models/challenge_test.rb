@@ -62,6 +62,10 @@ class ChallengeTest < ActiveSupport::TestCase
     refute build(:challenge, default_modality: 'video', whiteboard_starter_image_key: 'a', whiteboard_starter_image_alt_text: 'a grid').valid?
   end
 
+  test 'alt text requires a starter image' do
+    refute build(:challenge, whiteboard_starter_image_alt_text: 'a grid').valid?
+  end
+
   test 'starter_image_url is present only with a starter image' do
     assert_nil create(:challenge).starter_image_url
     challenge = create(:challenge, whiteboard_starter_image_key: 'a', whiteboard_starter_image_alt_text: 'a grid')

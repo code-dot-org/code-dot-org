@@ -221,6 +221,13 @@ class ChallengesControllerTest < ActionController::TestCase
           _(Challenge.find(response_json['id']).whiteboard_starter_image_key).must_be_nil
         end
 
+        it 'rejects alt text without a starter image' do
+          assert_no_difference 'Challenge.count' do
+            post :create, params: {lesson_id: lesson.id, challenge_json: challenge_input.to_json}
+          end
+          assert_response :bad_request
+        end
+
         it 'rejects invalid JSON' do
           post :create, params: {lesson_id: lesson.id, challenge_json: '{not json'}
           assert_response :bad_request

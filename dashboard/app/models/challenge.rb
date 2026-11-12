@@ -155,7 +155,10 @@ class Challenge < ApplicationRecord
   end
 
   private def starter_image_is_described
-    return if whiteboard_starter_image_key.blank?
+    if whiteboard_starter_image_key.blank?
+      errors.add(:whiteboard_starter_image_alt_text, 'requires a starter image') if whiteboard_starter_image_alt_text.present?
+      return
+    end
     errors.add(:whiteboard_starter_image_alt_text, 'is required with a starter image') if whiteboard_starter_image_alt_text.blank?
     errors.add(:whiteboard_starter_image_key, 'requires a whiteboard or both modality') unless default_whiteboard? || default_both?
   end

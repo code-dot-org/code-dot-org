@@ -79,6 +79,24 @@ describe('validateChallengeJson', () => {
     ]);
   });
 
+  it('rejects alt text without a starter image', () => {
+    expect(
+      check({...valid, whiteboard_starter_image_alt_text: 'a box'})
+    ).toEqual([
+      '"whiteboard_starter_image_alt_text" requires a starter image. Attach one or remove the field.',
+    ]);
+  });
+
+  it('allows leftover alt text while the image is being removed', () => {
+    const text = JSON.stringify({
+      ...valid,
+      whiteboard_starter_image_alt_text: 'a box',
+    });
+    expect(
+      validateChallengeJson(text, {hasImage: false, removingImage: true})
+    ).toEqual([]);
+  });
+
   it('rejects a starter image on a video challenge', () => {
     const errors = check(
       {
