@@ -7,8 +7,7 @@ on:
     - cron: '*/5 * * * *'
   workflow_dispatch:
 
-permissions:
-  contents: write
+permissions: {}
 
 concurrency:
   group: private-production-sync
@@ -25,6 +24,8 @@ jobs:
     if: github.repository == 'code-dot-org/code-dot-org-production'
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      contents: read
     steps:
       - name: Find branches behind public
         id: check
@@ -45,9 +46,19 @@ jobs:
           done
           echo "behind=$behind" >> "$GITHUB_OUTPUT"
 
+      # GITHUB_TOKEN cannot push commits that touch .github/workflows/, which
+      # public merges routinely do.
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        if: steps.check.outputs.behind != ''
+        with:
+          app-id: ${{ vars.PRIVATE_PRODUCTION_SYNC_APP_ID }}
+          private-key: ${{ secrets.PRIVATE_PRODUCTION_SYNC_APP_PRIVATE_KEY }}
+
       - uses: actions/checkout@v4
         if: steps.check.outputs.behind != ''
         with:
+          token: ${{ steps.app-token.outputs.token }}
           fetch-depth: 0
           lfs: false
 
