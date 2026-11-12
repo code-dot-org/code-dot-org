@@ -9,6 +9,7 @@ import {
   sentenceSlotIds,
   sentenceWordIds,
   slotsToOffer,
+  withLead,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
 import manifest from '@cdo/static/spritelab_lab2/sentences.json';
 
@@ -195,6 +196,29 @@ describe('sentences', () => {
 
 // The manifest's own sentences: an optional slot before the required one,
 // and a phrase whose slot shows only once filled.
+describe('withLead', () => {
+  it('puts the verb in front and lowers the first letter of the sentence', () => {
+    expect(withLead([{text: 'A '}, {slot: 'creature'}], 'Generate')).toEqual([
+      {text: 'Generate a '},
+      {slot: 'creature'},
+    ]);
+    expect(
+      withLead([{text: 'A block of '}, {slot: 'material'}], 'Generate')
+    ).toEqual([{text: 'Generate a block of '}, {slot: 'material'}]);
+  });
+
+  it('adds the verb as its own text when the sentence starts with a slot', () => {
+    expect(withLead([{slot: 'creature'}], 'Generate')).toEqual([
+      {text: 'Generate '},
+      {slot: 'creature'},
+    ]);
+  });
+
+  it('leaves the prompt as the sentence alone', () => {
+    expect(promptText(CHARACTER_SENTENCE, {creature: 'cat'})).toBe('A cat');
+  });
+});
+
 describe('sentences word ids', () => {
   const place = sentenceFor('background', undefined, 'place');
 

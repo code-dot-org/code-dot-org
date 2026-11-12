@@ -111,15 +111,58 @@ export function resizeWorld(
   };
 }
 
+/** The images a world keeps, each with the role it is kept for. The world
+    keeps at least one square for each role. */
+export type KeptRoles = ReadonlyMap<string, string>;
+export const NOTHING_KEPT: KeptRoles = new Map();
+
+/** The images that are the only one of their role on the world's squares:
+    their role (see KeptRoles) is on exactly one square. */
+export function imagesWithOneLeft(
+  world: World | undefined,
+  kept: KeptRoles
+): Set<string> {
+  const onSquares = new Map<string, string[]>();
+  for (const cells of world?.grid ?? []) {
+    for (const cell of cells) {
+      const role = cell && kept.get(cell.image);
+      if (cell && role) {
+        onSquares.set(role, [...(onSquares.get(role) ?? []), cell.image]);
+      }
+    }
+  }
+  return new Set(
+    [...onSquares.values()]
+      .filter(images => images.length === 1)
+      .map(images => images[0])
+  );
+}
+
 // One placement, as a pure update: safe to apply inside a functional
 // sources updater, so rapid paints can't overwrite each other. A world
 // without a grid (saved by an older experiment) is treated as empty.
+// A change that would take a kept role's last square is ignored, unless it
+// puts another image of the same role there. The check is made here, on
+// the world being updated, so that two quick erases of a role's last two
+// squares cannot both go through.
 export function paintWorldCell(
   world: World | undefined,
   row: number,
   col: number,
-  cell: WorldCell | null
+  cell: WorldCell | null,
+  kept: KeptRoles = NOTHING_KEPT
 ): World {
+  const held = world?.grid?.[row]?.[col];
+  const heldRole = held && kept.get(held.image);
+  if (
+    world &&
+    held &&
+    heldRole &&
+    (!cell || kept.get(cell.image) !== heldRole) &&
+    imagesWithOneLeft(world, kept).has(held.image)
+  ) {
+    return world;
+  }
   // Only the painted row gets a new identity: the editor memoizes its rows
   // on theirs, so the other rows skip their render.
   const grid = (world?.grid ?? createEmptyWorld().grid).slice();

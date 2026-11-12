@@ -3,7 +3,7 @@
 // to editing by hand. The decision is saved as the step's answer; a build is
 // also requested of the pathway, for the project step after to carry out.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
@@ -117,7 +117,7 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
         )}
       </div>
       {confirmingBuild && (
-        <MuiDialog
+        <Dialog
           title="Build your project again?"
           description="Your project already has work in it. Building again will overwrite it and your current project will be lost."
           onClose={() => setConfirmingBuild(false)}

@@ -1132,6 +1132,18 @@
                 }
               },
               "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_touchedSprite",
+              "id": "1Ro7.5G}D|hOxO0du{X;",
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_clickedSprite",
+              "id": "y%+[jqg0cA6aR;0RM8D[",
+              "enabled": true
             }
           ],
           "id": "Events"

@@ -144,8 +144,9 @@ const PathwayEditor: React.FunctionComponent<PathwayEditorProps> = ({
         >
           {isSaving ? 'Saving…' : 'Save pathway'}
         </MuiButton>
-        {isDirty && <span>Unsaved changes</span>}
-        {justSaved && !isDirty && <span>Saved</span>}
+        <span role="status" aria-live="polite" aria-atomic="true">
+          {isDirty ? 'Unsaved changes' : justSaved ? 'Saved' : ''}
+        </span>
       </div>
       {problems.length > 0 && (
         <Alert

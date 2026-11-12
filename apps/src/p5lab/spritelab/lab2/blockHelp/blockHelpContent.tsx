@@ -146,6 +146,23 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     summary: 'Shows words in a speech bubble over a sprite.',
     body: 'Put it under an event, so the words come at the right moment.',
   },
+  gamelab_destroy: {
+    title: 'Remove',
+    summary: 'Takes sprites out of the scene.',
+    body:
+      'Try it with **the touched sprite** under "when player touches coin", ' +
+      'so only that coin disappears.',
+  },
+  spritelab2_touchedSprite: {
+    title: 'The touched sprite',
+    summary: 'Picks the sprite that was just touched, under "when touching".',
+    body: 'Anywhere else it picks no sprite at all.',
+  },
+  spritelab2_clickedSprite: {
+    title: 'The clicked sprite',
+    summary: 'Picks the sprite that was just clicked, under "when clicked".',
+    body: 'Anywhere else it picks no sprite at all.',
+  },
   spritelab2_restartScene: {
     title: 'Restart scene',
     summary: 'Starts the scene over from the beginning.',

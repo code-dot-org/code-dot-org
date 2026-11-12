@@ -12,6 +12,10 @@ import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
 
 import labBlockDefinitions from './blockDefinitions';
 import {
+  EVENT_SPRITE_EXTENSION,
+  eventSpriteWarning,
+} from './blockDefinitions/eventSprites';
+import {
   FIELD_SCENE_DROPDOWN_TYPE,
   GO_TO_SCENE_BLOCK_TYPE,
   SceneDropdown,
@@ -97,6 +101,7 @@ function installLabBlocks(): void {
     placeholderOutline
   );
   BlocklyCore.Extensions.register(EVENT_HAT_EXTENSION, eventHat);
+  BlocklyCore.Extensions.register(EVENT_SPRITE_EXTENSION, eventSpriteWarning);
   BlocklyCore.Extensions.registerMutator(
     PLACEHOLDER_MUTATOR,
     placeholderMutator

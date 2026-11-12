@@ -1,6 +1,6 @@
 import ActionBlock from '@code-dot-org/component-library/actionBlock';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React from 'react';

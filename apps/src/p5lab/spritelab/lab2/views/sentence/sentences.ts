@@ -28,6 +28,9 @@ export interface Slot {
   id: string;
   /** Shown in the empty slot, e.g. "creature". */
   label: string;
+  /** The kind of word the slot takes, shown as a heading above its words,
+      e.g. "Noun". No heading is shown when this is not set. */
+  heading?: string;
   words: Word[];
   required?: boolean;
 }
@@ -45,6 +48,21 @@ export interface Sentence {
   slots: Record<string, Slot>;
 }
 
+/**
+ * The segments with a verb put in front, for showing the sentence to the
+ * student: with the lead "Generate", "A cat" reads "Generate a cat". This is
+ * for display only. The prompt sent to the model is built from the
+ * sentence's own segments and does not include the verb.
+ */
+export function withLead(segments: Segment[], lead: string): Segment[] {
+  const [first, ...rest] = segments;
+  if (!first || !('text' in first)) {
+    return [{text: `${lead} `}, ...segments];
+  }
+  const lowered = first.text.charAt(0).toLowerCase() + first.text.slice(1);
+  return [{text: `${lead} ${lowered}`}, ...rest];
+}
+
 /** The word chosen for each slot, by slot id. */
 export type Choices = Record<string, string | undefined>;
 
@@ -55,6 +73,7 @@ export const WORD_DRAG_TYPE = 'application/x-spritelab2-word';
 // carry their own words.
 interface ManifestSlot {
   label: string;
+  heading?: string;
   words: string | Word[];
   required?: boolean;
 }

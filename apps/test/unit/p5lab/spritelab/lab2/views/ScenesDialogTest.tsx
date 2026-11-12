@@ -112,8 +112,11 @@ describe('ScenesDialog', () => {
     expect(screen.getByRole('button', {name: 'Rename Cave'})).toBeDisabled();
     expect(screen.getAllByRole('button', {name: 'Delete'})[1]).toBeDisabled();
     fireEvent.change(input, {target: {value: ' Boss room '}});
-    fireEvent.keyDown(input, {key: 'Enter'});
+    // The press is used up by the name, so it cannot also click the button
+    // that takes focus next. fireEvent returns false for a cancelled event.
+    expect(fireEvent.keyDown(input, {key: 'Enter'})).toBe(false);
     expect(onCreateScene).toHaveBeenCalledWith('Boss room');
+    expect(onCreateScene).toHaveBeenCalledTimes(1);
     expect(screen.queryByRole('textbox', {name: 'Scene name'})).toBeNull();
     expect(screen.getByRole('button', {name: 'Done'})).not.toBeDisabled();
   });
