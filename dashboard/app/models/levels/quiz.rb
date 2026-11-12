@@ -144,6 +144,16 @@ class Quiz < Level
     end
   end
 
+  def exam?
+    purpose == 'exam'
+  end
+
+  def lock_level?
+    script_levels.includes(lesson: :script_levels).any? do |script_level|
+      script_level.lesson&.lockable && script_level.lesson.script_levels.last == script_level
+    end
+  end
+
   # Placements are quiz-owned join rows; questions stay shared bank content.
   def clone_with_name(new_name, editor_experiment: nil)
     ActiveRecord::Base.transaction do

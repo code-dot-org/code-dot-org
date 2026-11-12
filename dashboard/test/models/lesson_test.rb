@@ -45,6 +45,22 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal level1.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
   end
 
+  test "lockable_state with Quiz as last level" do
+    script = create(:script, :in_single_unit_course)
+    quiz = create(:quiz, purpose: 'exam')
+    lesson = create(:lesson, script: script, lockable: true)
+    create(:script_level, script: script, levels: [quiz], assessment: true, lesson: lesson)
+
+    lockable_state = lesson.lockable_state [@student]
+    assert_equal true, lockable_state[0][:locked], 'Quiz without user_level should be locked'
+    assert_equal quiz.id, lockable_state[0][:user_level_data][:level_id]
+
+    UserLevel.update_lockable_state(@student.id, quiz.id, script.id, false, false)
+
+    lockable_state = lesson.lockable_state [@student]
+    assert_equal false, lockable_state[0][:locked], 'unlocked Quiz should be unlocked'
+  end
+
   test "summary for single page long assessment" do
     script = create(:script, :in_single_unit_course)
     create(:text_match, name: 'level_free_response', type: 'TextMatch')
