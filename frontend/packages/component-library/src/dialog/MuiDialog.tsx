@@ -29,7 +29,8 @@ export interface MuiDialogProps extends HTMLAttributes<HTMLDivElement> {
   secondaryButtonProps?: MuiButtonProps;
   /** Button color: 'light' uses primary/secondary, 'dark' uses white. The panel does not change. */
   mode?: 'light' | 'dark';
-  /** Marks the primary action destructive: the primary button and icon badge turn red, in either mode */
+  /** Marks the primary action destructive: the primary button and icon badge turn red, with either `mode`.
+   *  A `color` in `primaryButtonProps` still overrides the button; the badge stays red. */
   destructive?: boolean;
   /** Custom class name, applied to the panel (the role="alertdialog" element) */
   className?: string;
