@@ -16,7 +16,7 @@ describe('timeoutMsFromDcdo', () => {
     mockDcdoGet.mockReturnValue(45_000);
 
     expect(timeoutMsFromDcdo('some-timeout-ms', 30_000)).toBe(45_000);
-    expect(mockDcdoGet).toHaveBeenCalledWith('some-timeout-ms', 30_000);
+    expect(mockDcdoGet).toHaveBeenCalledWith('some-timeout-ms');
   });
 
   it.each([
@@ -29,7 +29,7 @@ describe('timeoutMsFromDcdo', () => {
   });
 
   it('uses the default when the flag is unset', () => {
-    mockDcdoGet.mockImplementation((_flag, defaultValue) => defaultValue);
+    mockDcdoGet.mockReturnValue(undefined);
 
     expect(timeoutMsFromDcdo('some-timeout-ms', 30_000)).toBe(30_000);
   });
@@ -54,13 +54,11 @@ describe('timeoutMsFromDcdoSeconds', () => {
     mockDcdoGet.mockReturnValue(value);
 
     expect(timeoutMsFromDcdoSeconds('some-timeout-seconds', 30)).toBe(expected);
-    expect(mockDcdoGet).toHaveBeenCalledWith('some-timeout-seconds', 30);
+    expect(mockDcdoGet).toHaveBeenCalledWith('some-timeout-seconds');
   });
 
   it.each([undefined, true, 'abc', 0])('converts the default for %p', value => {
-    mockDcdoGet.mockImplementation((_flag, defaultValue) =>
-      value === undefined ? defaultValue : value
-    );
+    mockDcdoGet.mockReturnValue(value);
 
     expect(timeoutMsFromDcdoSeconds('some-timeout-seconds', 30)).toBe(30_000);
   });

@@ -6,7 +6,7 @@ import DCDO from '@cdo/apps/dcdo';
  * not positive, falls back to `defaultMs`.
  */
 export function timeoutMsFromDcdo(flag: string, defaultMs: number): number {
-  const value: unknown = DCDO.get(flag, defaultMs);
+  const value: unknown = DCDO.get(flag);
   const ms =
     typeof value === 'number'
       ? value
