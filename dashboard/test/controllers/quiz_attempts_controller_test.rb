@@ -451,7 +451,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test "create is forbidden while the quiz's lockable lesson is locked" do
+  test "create is forbidden while the Quiz's lockable lesson is locked" do
     unit = create_unit_with_lock_quiz(@quiz)
     sign_in @student
 
@@ -482,7 +482,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "create lets a verified instructor take a quiz in a locked lesson" do
+  test "create lets a verified instructor take a Quiz in a locked lesson" do
     unit = create_unit_with_lock_quiz(@quiz)
     sign_in create(:authorized_teacher)
 
@@ -491,7 +491,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_response :created
   end
 
-  test "update does not submit an attempt while the quiz's lockable lesson is locked" do
+  test "update does not submit an attempt while the Quiz's lockable lesson is locked" do
     unit = create_unit_with_lock_quiz(@quiz)
     attempt = create(:quiz_attempt, user: @student, level: @quiz, unit: unit)
     sign_in @student

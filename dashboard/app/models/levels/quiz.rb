@@ -170,7 +170,7 @@ class Quiz < Level
     problems + parent_levels.map {|parent| "it is a sublevel of \"#{parent.name}\""}
   end
 
-  # True when a lockable lesson holding this quiz is locked or read-only for user; see ScriptLevel#locked?.
+  # True when a lockable lesson holding this Quiz is locked or read-only for user; see ScriptLevel#locked?.
   def locked_for?(user, unit_id)
     script_levels.where(script_id: unit_id).includes(lesson: :script_levels).any? do |script_level|
       lesson = script_level.lesson
