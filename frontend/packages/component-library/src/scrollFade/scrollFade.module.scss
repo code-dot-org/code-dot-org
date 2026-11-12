@@ -37,10 +37,18 @@ $transition: 100ms ease-out;
   overflow: hidden;
 }
 
-// Without :has() the root can't draw the ring, so keep the native outline.
 @supports selector(:has(*)) {
   .scroller:focus {
     outline: none;
+  }
+}
+
+// Without :has() the root can't draw the ring, so draw it inside the clip.
+@supports not selector(:has(*)) {
+  .scroller:focus-visible {
+    @include mixins.focus-styles;
+
+    outline-offset: -2px;
   }
 }
 

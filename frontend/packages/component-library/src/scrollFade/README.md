@@ -36,7 +36,7 @@ The root clips its content to its own rounded corners.
 Browser support: the unprefixed `mask-*` properties need Chrome 120+, Safari
 15.4+ or Firefox 53+. The 100ms ease needs `@property` (Chrome 85+, Safari
 16.4+, Firefox 128+); without it the fade still shows, at once. The focus ring
-on the root needs `:has()`; without it the native outline stays on the scroller.
+on the root needs `:has()`; without it the scroller draws the ring just inside its own edge.
 
 A fade eases in over 100ms, or at once under `prefers-reduced-motion`.
 
