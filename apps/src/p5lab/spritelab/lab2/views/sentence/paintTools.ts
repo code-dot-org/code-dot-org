@@ -45,6 +45,7 @@ export const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Purple', rgba: [117, 70, 101, 255]},
   {name: 'Lavender', rgba: [131, 118, 156, 255]},
   {name: 'Pink', rgba: [255, 119, 168, 255]},
+  {name: 'Dark pink', rgba: [173, 31, 113, 255]},
 ];
 // One brush, the finest on the pixel grid.
 export const PAINT_BRUSH_SIZES: readonly number[] = [1];
