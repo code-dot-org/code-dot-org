@@ -9,7 +9,6 @@ import {AnyAction, Reducer} from 'redux';
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
-import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/getCode';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -69,6 +68,7 @@ import {
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {codeFromSavedScene} from '../blockly/savedSceneCode';
 import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
@@ -87,7 +87,7 @@ import {
 import {onTrimsUpdated} from '../imageTrim';
 import {
   editsWorld,
-  GENERATION_LIMIT,
+  generationLimitForMode,
   imageSourceForMode,
   isFreeplayMode,
   isOneImageMode,
@@ -1315,9 +1315,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           code =
             live ??
             withSceneMenuActive(scene.id, () =>
-              getCodeFromSerializedWorkspace(
-                scene.source ?? DEFAULT_SCENE_SOURCE
-              )
+              codeFromSavedScene(scene.source ?? DEFAULT_SCENE_SOURCE)
             );
         } catch (e) {
           // A scene that fails to compile shouldn't kill the jump
@@ -1682,10 +1680,28 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     [updateSources, activeSceneId, scheduleRun, worldFor]
   );
+  // The images a scene keeps at least one of: those in the roles the level
+  // names (world_keeps_roles). A later level's step can need the player to
+  // reach one, and that level may not show the World tab.
+  const worldKeepsRoles = levelProperties.worldKeepsRoles;
+  const worldKeeps = useMemo(
+    () =>
+      new Map(
+        // The property is edited as JSON, so it may not be a list.
+        (Array.isArray(worldKeepsRoles) ? worldKeepsRoles : []).flatMap(role =>
+          imagesNamedInRole(animationList, role).map(
+            (name): [string, string] => [name, role]
+          )
+        )
+      ),
+    [worldKeepsRoles, animationList]
+  );
   const handlePaintWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell | null) =>
-      updateActiveWorld(world => paintWorldCell(world, row, col, cell)),
-    [updateActiveWorld]
+      updateActiveWorld(world =>
+        paintWorldCell(world, row, col, cell, worldKeeps)
+      ),
+    [updateActiveWorld, worldKeeps]
   );
 
   // A world level about one kind of image offers the palette only the
@@ -2086,7 +2102,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  // Generations on this level so far; only a one-image level has a limit.
+  // Generations on this level so far, for a level that limits them.
   const [generationCount, setGenerationCount] = useState(0);
   useEffect(() => setGenerationCount(0), [levelProperties.id]);
   const countGeneration = useCallback(
@@ -2094,9 +2110,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
   const oneImage = isOneImageMode(levelProperties.levelMode);
-  const generationsLeft = oneImage
-    ? GENERATION_LIMIT - generationCount
-    : undefined;
+  const generationLimit = generationLimitForMode(levelProperties.levelMode);
+  const generationsLeft =
+    generationLimit === undefined
+      ? undefined
+      : generationLimit - generationCount;
   // The level's own image exists once one of its type has been made on this
   // visit; where the level names no type, any image counts.
   const levelImageType = levelProperties.levelMode?.imageType;
@@ -2233,7 +2251,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             (activeTab === 'Code' || activeTab === 'World') && (
               <WorkspaceSceneBar
                 {...sceneControls}
-                rightExtra={
+                startExtra={
                   activeTab === 'Code' &&
                   catalogOffered && (
                     <DiscoverBlocksButton
@@ -2316,6 +2334,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}
                 editingOffered={!oneImage}
+                noNewImages={levelProperties.levelMode?.noNewImages}
+                noDeletingImages={levelProperties.levelMode?.noDeletingImages}
+                limitedPaintTools={levelProperties.levelMode?.limitedPaintTools}
+                imageKinds={levelProperties.levelMode?.imageKinds}
                 paneWidth={paneWidthPx}
                 onImageLanded={saveImagesNow}
                 active={activeTab === 'Images'}
@@ -2349,11 +2371,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 sceneSize={activeSceneSize}
                 onPaintCell={handlePaintWorldCell}
                 emptyMessage={
-                  picturesOffered
+                  picturesOffered && !levelProperties.levelMode?.noNewImages
                     ? 'Make some pictures first.'
                     : 'Go back and make your image first.'
                 }
                 only={paletteOnly}
+                kept={worldKeeps}
                 selected={worldPaletteSelection}
                 onSelect={choosePaletteSelection}
               />

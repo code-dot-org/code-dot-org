@@ -7,6 +7,9 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "friend"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -23,6 +26,8 @@
     "project_template_level_name": "hoai2026-dev-revised-template",
     "level_mode": {
       "kind": "world",
+      "limitedPaintTools": true,
+      "generationLimit": 5,
       "imageType": "sprite",
       "imageRole": "friend",
       "paletteRoles": [
@@ -43,14 +48,14 @@
       "title": "**Friend or foe?**",
       "items": [
         {
-          "text": "In **Images**, click **New image** and make a friend or a foe.",
+          "text": "In **Images**, select the **+** button and make a friend or a foe.",
           "check": {
             "kind": "image",
             "imageType": "sprite"
           }
         },
         {
-          "text": "In **World**, click a square to place one or more.",
+          "text": "In **World**, select a square to place one or more.",
           "check": {
             "kind": "world",
             "role": "friend"

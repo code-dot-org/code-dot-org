@@ -25,6 +25,38 @@ describe('cleanLevelMode', () => {
     ]);
   });
 
+  it('keeps the options that have no field on the form, when their values are valid', () => {
+    const mode = {
+      kind: 'code',
+      extraTabs: ['Images', 'World'],
+      paletteRoles: ['treasure', 'block'],
+      noNewImages: true,
+      noDeletingImages: true,
+      limitedPaintTools: true,
+      imageKinds: ['sprite', 'block'],
+      generationLimit: 5,
+    };
+    expect(cleanLevelMode(mode)).toEqual({mode, removed: []});
+  });
+
+  it('drops a generation limit that is not a whole number above zero', () => {
+    [0, -1, 2.5, '5', true].forEach(generationLimit =>
+      expect(cleanLevelMode({kind: 'code', generationLimit}).mode).toEqual({
+        kind: 'code',
+      })
+    );
+  });
+
+  it('drops extra tabs and image kinds the lab does not know', () => {
+    const {mode, removed} = cleanLevelMode({
+      kind: 'code',
+      extraTabs: ['Images', 'Sound'],
+      imageKinds: ['sprite', 'sprite'],
+    });
+    expect(mode).toEqual({kind: 'code'});
+    expect(removed).toHaveLength(2);
+  });
+
   it('drops everything when the kind is not a real kind', () => {
     const {mode, removed} = cleanLevelMode({
       kind: 'build',
@@ -118,6 +150,17 @@ describe('setKind', () => {
 });
 
 describe('setImageType', () => {
+  it("keeps the Images tab's options on an image level", () => {
+    const options = {
+      limitedPaintTools: true,
+      noNewImages: true,
+      noDeletingImages: true,
+    };
+    expect(
+      setImageType({kind: 'image', imageType: 'sprite', ...options}, 'block')
+    ).toEqual({kind: 'image', imageType: 'block', ...options});
+  });
+
   it('drops the subject when the type is no longer a sprite', () => {
     expect(
       setImageType(

@@ -62,6 +62,33 @@ export interface Objective {
   shownWhen?: ObjectiveCheck;
 }
 
+// For each kind of check, whether it has to pass only once. Every kind is
+// listed, so a new kind has to be given an answer here.
+const CHECKED_ONCE: Record<ObjectiveCheck['kind'], boolean> = {
+  // These read work that stays in the project, so they can be made again
+  // at any time.
+  block: false,
+  world: false,
+  image: false,
+  // These record something that happened, which cannot be checked again.
+  play: true,
+  reach: true,
+  scene: true,
+  // These read something that changes for reasons other than undoing the
+  // step: which scene is open in the editor, and a picture's AI record,
+  // which is removed when the student edits the picture by hand.
+  editing: true,
+  generated: true,
+  rated: true,
+};
+
+/** Whether a check has to pass only once, because what it reads cannot be
+    read again later. Any other check reads work that stays in the project
+    and can be made again at any time. */
+export function isCheckedOnce(check: ObjectiveCheck): boolean {
+  return CHECKED_ONCE[check.kind];
+}
+
 export interface Objectives {
   /** Markdown, shown above the list, or alone when there is no list. */
   title?: string;

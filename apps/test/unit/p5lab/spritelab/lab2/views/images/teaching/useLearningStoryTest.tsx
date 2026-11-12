@@ -56,29 +56,38 @@ function setup(
   };
 }
 
-/** Offers a picture and lets the reveal pause pass. */
+/** Offers a picture that is ready to be shown. */
 function offer(tools: () => LearningStoryTools) {
-  act(() => tools().offerStory(picture({subject: 'character'})));
+  let shown: Promise<void> = Promise.resolve();
   act(() => {
-    jest.advanceTimersByTime(2000);
+    shown = tools().offerStory(picture({subject: 'character'}));
   });
+  return shown;
+}
+
+/** Whether a promise has resolved by now. */
+async function settled(promise: Promise<void>) {
+  let done = false;
+  promise.then(() => (done = true));
+  await act(async () => {});
+  return done;
 }
 
 describe('useLearningStory', () => {
-  beforeEach(() => {
-    jest.useFakeTimers();
-  });
-  afterEach(() => {
-    jest.useRealTimers();
+  it('tells the story at once, and holds the picture until it is closed', async () => {
+    const {tools} = setup({learning: true});
+    const shown = offer(tools);
+    expect(tools().story).toMatchObject({prompt: 'A cat'});
+    expect(await settled(shown)).toBe(false);
+    act(() => tools().endStory());
+    expect(tools().story).toBeNull();
+    expect(await settled(shown)).toBe(true);
   });
 
   it('holds the story while the rating question is open, and tells it after', () => {
     const {tools} = setup({learning: true});
     act(() => tools().handleAsking(true));
-    act(() => tools().offerStory(picture({subject: 'character'})));
-    act(() => {
-      jest.advanceTimersByTime(2000);
-    });
+    offer(tools);
     expect(tools().story).toBeNull();
     act(() => tools().handleAsking(false));
     expect(tools().story).toMatchObject({prompt: 'A cat'});
@@ -86,10 +95,11 @@ describe('useLearningStory', () => {
     expect(tools().story).toBeNull();
   });
 
-  it('tells no story on a level that does not ask for one', () => {
+  it('tells no story on a level that does not ask for one, and shows the picture at once', async () => {
     const {tools} = setup({levelId: 3});
-    offer(tools);
+    const shown = offer(tools);
     expect(tools().story).toBeNull();
+    expect(await settled(shown)).toBe(true);
   });
 
   it('tells the story once a visit, and again on the next level or a return', () => {
@@ -110,14 +120,15 @@ describe('useLearningStory', () => {
     expect(tools().story).toMatchObject({prompt: 'A cat'});
   });
 
-  it('drops a story still pending when the level changes', () => {
-    const {tools, setLevel} = setup({learning: true, levelId: 3});
-    act(() => tools().offerStory(picture({subject: 'character'})));
-    setLevel(8);
-    act(() => {
-      jest.advanceTimersByTime(2000);
-    });
+  it('drops a story still held when the level changes, and lets its picture go', async () => {
+    const {tools, setActive, setLevel} = setup({learning: true, levelId: 3});
+    // Held: the tab is not the one showing.
+    setActive(false);
+    const shown = offer(tools);
     expect(tools().story).toBeNull();
+    setLevel(8);
+    expect(tools().story).toBeNull();
+    expect(await settled(shown)).toBe(true);
     // The new level still gets its own telling.
     offer(tools);
     expect(tools().story).toMatchObject({prompt: 'A cat'});
@@ -131,26 +142,26 @@ describe('useLearningStory', () => {
     expect(tools().story).toBeNull();
   });
 
-  it("counts an asked-for story as the visit's telling", () => {
+  it("counts an asked-for story as the visit's telling", async () => {
     const {tools} = setup({learning: true, levelId: 3});
-    // Asked for during the reveal pause: the due story neither takes over
-    // nor follows.
-    act(() => tools().offerStory(picture({subject: 'character'})));
+    // Asked for while the due story is held: the due story neither takes
+    // over nor follows, and its picture is shown.
+    act(() => tools().handleAsking(true));
+    const shown = offer(tools);
     act(() => tools().tellStory(asked));
-    act(() => {
-      jest.advanceTimersByTime(2000);
-    });
+    act(() => tools().handleAsking(false));
     expect(tools().story).toEqual({...asked, asked: true});
+    expect(await settled(shown)).toBe(true);
     act(() => tools().endStory());
     offer(tools);
     expect(tools().story).toBeNull();
   });
 
-  it('forgets a pending story when it goes away', () => {
-    const {tools, unmount} = setup({learning: true});
-    act(() => tools().offerStory(picture({subject: 'character'})));
+  it('lets a held picture go when the tab goes away for good', async () => {
+    const {tools, setActive, unmount} = setup({learning: true});
+    setActive(false);
+    const shown = offer(tools);
     unmount();
-    expect(() => jest.advanceTimersByTime(2000)).not.toThrow();
-    expect(jest.getTimerCount()).toBe(0);
+    expect(await settled(shown)).toBe(true);
   });
 });

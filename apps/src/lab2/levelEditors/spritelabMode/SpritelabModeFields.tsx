@@ -14,7 +14,6 @@ import {
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import {
-  GENERATION_LIMIT,
   LevelMode,
   LevelModeKind,
 } from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
@@ -288,7 +287,7 @@ const SpritelabModeFields: React.FunctionComponent<
         <div className={moduleStyles.booleanField}>
           <Checkbox
             name="spritelab_mode_one_image"
-            label={`Limit students to one image, with ${GENERATION_LIMIT} generations of it and no deleting.`}
+            label="Limit students to one image, with no adding or deleting."
             checked={mode.oneImage === true}
             onChange={event =>
               onChange(setOneImage(mode, event.target.checked))
