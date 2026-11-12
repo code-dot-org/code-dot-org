@@ -39,7 +39,7 @@
   min-width: 0;
   min-height: 0;
   overflow-y: auto;
-  padding: 24px;
+  padding: 40px;
   background: var(--background-neutral-secondary);
 }
 
@@ -157,43 +157,65 @@
 // Markdown step: a panel-sized canvas with the text centered vertically,
 // and the button row under it, like the panels view.
 
-.markdownHost {
+// The design's card: 800 wide, at least 400 tall, its text starting at the
+// top under the logo, with the buttons 20px beneath it.
+.markdownCard {
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-width: 0;
-  min-height: 0;
-  background: var(--background-neutral-secondary);
-}
-
-.markdownCanvas {
-  display: flex;
-  overflow: auto;
-  padding: 40px;
-  border: 1px solid var(--border-neutral-primary);
+  gap: 40px;
+  width: 100%;
+  max-width: 800px;
+  min-height: 400px;
+  padding: 24px;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: var(--shape-lg);
   background: var(--background-neutral-primary);
-  box-sizing: border-box;
+  text-align: center;
 
-  // Focused on open for screen readers; the ring adds nothing on a card.
-  &:focus {
+  // This hides the pulsing outline when JS moves focus automatically,
+  // but keeps it when a user navigates with a keyboard.
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 }
 
+.cardLogo {
+  height: 40px;
+  max-width: 100%;
+}
+
 .markdownBody {
   width: 100%;
-  max-width: 800px;
-  // Auto margins center a short card and let a long one scroll from its
-  // top, where align-items would push the top out of reach.
-  margin: auto;
-  font-size: 1.125rem;
 
   // The markdown's own wrapper holds the paragraphs.
-  > div > :last-child {
-    margin-bottom: 0;
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    color: var(--text-neutral-primary);
+  }
+
+  // The design's H2: the heading-xl style, in the heading font.
+  h1,
+  h2 {
+    font-family: var(--font-family-heading);
+    font-size: 2.375rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   // An image shows whole at its own size, centered, no wider than the
@@ -203,7 +225,7 @@
     display: block;
     max-width: 100%;
     margin: 0 auto;
-    border-radius: var(--shape-lg);
+    border-radius: var(--shape-sm);
     object-fit: cover;
   }
 }
@@ -213,6 +235,10 @@
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
+  width: 100%;
+  max-width: 800px;
+  // 20px under the card, against the step's 24px gap.
+  margin-top: -4px;
 }
 
 // Stats step
@@ -220,40 +246,71 @@
 .statsCard {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  align-items: center;
+  gap: 24px;
   width: 100%;
   max-width: 800px;
-  padding: 32px;
-  border: 1px solid var(--border-neutral-primary);
+  padding: 24px;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: var(--shape-lg);
   background: var(--background-neutral-primary);
   text-align: center;
 
-  h1:focus {
+  h1:focus:not(:focus-visible) {
     outline: none;
   }
 }
 
+.statsLogo {
+  height: 40px;
+  max-width: 100%;
+}
+
+.statsHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+// Tiles in two columns; a figure added later takes the next cell.
 .statsList {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px 48px;
-  margin: 16px 0 0;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
 }
 
+// The label reads before the figure but shows beneath it.
 .statsItem {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: var(--shape-md);
+  background: var(--background-neutral-primary);
 
   dd {
     margin: 0;
   }
 }
 
+// Rings sit a little further from their label than a figure does.
+.statsItemRings {
+  gap: 12px;
+}
+
+.statsFigure {
+  color: var(--text-brand-purple-primary);
+}
+
 .statsRings {
   display: flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 60px;
 }

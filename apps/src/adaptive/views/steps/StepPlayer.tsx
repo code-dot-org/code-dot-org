@@ -10,13 +10,21 @@ import {
   sendFinalProjectClicked,
   stepProperties,
 } from '../../metricsHelpers';
-import {Answer, Progress, StepAnswers, visibleSteps} from '../../progress';
+import {
+  Answer,
+  Progress,
+  StepAnswers,
+  totalTimeSpent,
+  visibleSteps,
+} from '../../progress';
 import {Checkpoint, Step} from '../../types';
 import AdaptiveHeader from '../AdaptiveHeader';
 import AdaptiveTabBar from '../AdaptiveTabBar';
 import {checkpointStepFromUrl, updateUrl} from '../checkpointUrl';
+import {getSkillProgress} from '../map/groupProgress';
 import {usePathwayContext} from '../PathwayContext';
 
+import CongratsStep from './CongratsStep';
 import LevelStep from './LevelStep';
 import MarkdownStep from './MarkdownStep';
 import PanelsStep from './PanelsStep';
@@ -264,6 +272,8 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             onComplete={advance}
           />
         );
+      case 'congrats':
+        return <CongratsStep key={step.id} step={step} onComplete={advance} />;
       case 'stats':
         return (
           <StatsStep
@@ -328,6 +338,8 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
           activeTab={activeTab}
           onTabChange={tab => leave(() => onTabChange(tab))}
           projectName={projectName}
+          skills={getSkillProgress(pathway, statusMap)}
+          timeSpentSeconds={totalTimeSpent(progress)}
         />
       )}
       <div className={styles.playerBody}>{renderStep(step)}</div>

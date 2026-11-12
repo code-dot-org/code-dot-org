@@ -40,6 +40,7 @@ import {
   PAINT_TOOLS,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/paintTools';
 import SentenceScene from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
+import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
 import {readWordLayout} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/wordLayout';
 import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -48,9 +49,8 @@ import AdvancedPopover, {
   AdvancedSettings,
   DEFAULT_ADVANCED,
 } from './AdvancedPopover';
-import DrawPane from './DrawPane';
 import FrameRow from './FrameRow';
-import {FRAME_LABELS, frameGroups} from './frames';
+import {frameGroups} from './frames';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry} from './ImageList';
 import {currentPixels} from './imagePixels';
@@ -71,15 +71,19 @@ interface ImagesTabProps {
   uploadImage?: UploadImageFunction;
   /** Drop every reference to a deleted image (called after the removal). */
   onDeleteImage: (name: string) => void;
-  /** Set on a level whose task is one image of this type. The tab opens on
-      that image, or on an empty slot for it until it is made. */
+  /** The one type of image this level offers to generate. */
   lockedImageType?: ImageType;
   lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
   imageRole?: string;
-  /** An image of the level's type was made on this visit. Until then the
-      plus is offered, so a student back on a level they did can make
-      another. */
+  /** The level's task is a single image (level mode `oneImage`): the tab
+      opens on it, or on the empty slot it will fill. */
+  oneImage?: boolean;
+  /** The level's own image exists: one of its type was made on this visit,
+      or one carrying the level's role was made on an earlier visit. Until
+      then the plus is offered. After that there is no plus: the student
+      can regenerate or edit the existing image, and cannot add a second
+      one for the same role. */
   ownImageMade?: boolean;
   /** The level tells how AI made the image (level mode `learning`). */
   learning?: boolean;
@@ -90,8 +94,18 @@ interface ImagesTabProps {
   generationsLeft?: number;
   /** Called when a generation request is sent to the model. */
   onGenerate?: () => void;
-  /** Students may add images and draw on them (free play). */
+  /** Students may add images, draw on them and delete them. */
   editingOffered?: boolean;
+  /** No New button, even where `editingOffered` would show one: the
+      student works on the images already listed. */
+  noNewImages?: boolean;
+  /** No Delete button, even where `editingOffered` would show one. */
+  noDeletingImages?: boolean;
+  /** The paint tools are the limited set. Without it they are the full
+      set free play has. */
+  limitedPaintTools?: boolean;
+  /** The kinds of image the list shows. Every kind when unset. */
+  imageKinds?: ImageType[];
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
   paneWidth: number;
@@ -133,12 +147,17 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   lockedImageType,
   lockedImageSubject,
   imageRole,
+  oneImage,
   ownImageMade,
   learning,
   levelId,
   generationsLeft,
   onGenerate,
   editingOffered,
+  noNewImages,
+  noDeletingImages,
+  limitedPaintTools,
+  imageKinds,
   paneWidth,
   onImageLanded,
   active = true,
@@ -157,9 +176,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     trimAnimationListImages(animationList);
   }, [animationList]);
   const images = useMemo(
-    () => listProjectImages(animationList),
+    () =>
+      listProjectImages(animationList).filter(
+        // The option is edited as JSON, so it may not be a list.
+        image =>
+          !Array.isArray(imageKinds) || imageKinds.includes(image.imageType)
+      ),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [animationList, trimVersion]
+    [animationList, trimVersion, imageKinds]
   );
   const writer = useImageWriter({uploadImage, imageRole, onDeleteImage});
   const editedMode = useMemo(() => readEditedMode(), []);
@@ -190,19 +214,24 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     [startSession]
   );
 
-  // On a level whose task is one image: the newest such image, when one
-  // exists (the list is newest first), as the dropdowns' role defaults
-  // pick it.
-  const ownImage = lockedImageType
-    ? images.find(image =>
-        imageRole
-          ? image.props.role === imageRole
-          : image.imageType === lockedImageType
-      )
-    : undefined;
+  // The image the level's own task produces: the one tagged with its role,
+  // or without a role the newest of its type (the list is newest first, as
+  // the dropdowns' role defaults pick it).
+  const ownImage =
+    imageRole || lockedImageType
+      ? images.find(image =>
+          imageRole
+            ? image.props.role === imageRole
+            : image.imageType === lockedImageType
+        )
+      : undefined;
   // The opening choice is read once at mount; a later change to the list
-  // must not move the choice.
-  const openOnRef = useRef(lockedImageType ? ownImage : images[0]);
+  // must not move the choice. A level with a role or a type opens on its own
+  // image, and a one-image level on the empty slot until that image is made;
+  // anything else opens on the project's newest image.
+  const openOnRef = useRef(
+    lockedImageType || imageRole || oneImage ? ownImage : images[0]
+  );
   useEffect(() => {
     setChosenId(openOnRef.current?.key ?? null);
   }, []);
@@ -257,6 +286,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     },
     []
   );
+  // The element at the right end of the pane's header bar, where the pane
+  // draws its info button.
+  const [headerSlot, setHeaderSlot] = useState<HTMLElement | null>(null);
   // While a picture is being made the list holds still: choosing another
   // image would unmount the scene and throw the picture away, after it has
   // been counted against the level's limit.
@@ -270,26 +302,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       learning,
       levelId,
     });
-  // Rating a picture keeps it a second time; the story is offered only on
-  // the first keep of each picture.
-  const keptRef = useRef<string | null>(null);
-  const handleKeep = useCallback(
-    async (result: GeneratedImageResult) => {
-      const target: ImageTarget = {
-        key: chosenKeyRef.current,
-        imageType: result.generation.imageType,
-        subject: result.generation.subject,
-      };
-      const firstKeep = keptRef.current !== result.filename;
-      keptRef.current = result.filename;
-      await storePicture(target, () => writer.acceptGenerated(target, result));
-      if (firstKeep) {
-        offerStory(result);
-      }
-    },
-    [writer, storePicture, offerStory]
-  );
-
   const tools = useDrawing({
     images,
     saveEdited: writer.saveEdited,
@@ -297,7 +309,45 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     active,
     onDrawingHistory,
   });
-  const {drawing, startDrawing, leaveDrawing, stopDrawing} = tools;
+  const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
+    tools;
+  const handleKeep = useCallback(
+    async (result: GeneratedImageResult) => {
+      const target: ImageTarget = {
+        key: chosenKeyRef.current,
+        imageType: result.generation.imageType,
+        subject: result.generation.subject,
+      };
+      await storePicture(target, () => writer.acceptGenerated(target, result));
+    },
+    [writer, storePicture]
+  );
+  // The verdict is written onto the stored picture's generation record.
+  // Its pixels are not touched, so anything drawn on the picture since it
+  // was generated is kept.
+  const handleRate = useCallback(
+    async (verdict: Verdict) => {
+      const key = chosenKeyRef.current;
+      if (!key) {
+        return false;
+      }
+      const generation = writer.rateGenerated(key, verdict);
+      if (!generation) {
+        // The picture has been edited by hand, which removes its generation
+        // record, so there is nowhere to write the verdict. True tells the
+        // scene the rating is dealt with, so it does not store its own copy
+        // of the picture again, which would go over the student's edits.
+        return true;
+      }
+      adoptGeneration(key, generation);
+      await storePicture(
+        {key, imageType: generation.imageType},
+        async () => key
+      );
+      return true;
+    },
+    [writer, storePicture, adoptGeneration]
+  );
   // When the chosen image has been deleted, choose the first image left, or
   // none; tools open on it close without saving, since a save would create
   // a new image from the deleted pixels.
@@ -314,8 +364,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     }
     startSession(images[0]?.key ?? null);
   }, [chosenId, draft, images, startSession, stopDrawing, drawing]);
-  // A level before free play keeps the few tools that draw.
-  const limitedTools = !editingOffered;
+  const limitedTools = !!limitedPaintTools;
   // An image that is the student's own work (no prompt made its pixels)
   // hides the word menus until Replace image is pressed; the choice is per
   // image, and choosing another image or leaving the tab hides them again.
@@ -336,8 +385,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     restPick && restPick.key === chosenImage?.key ? restPick.index : null;
   const restFrameRef = useRef(restFrame);
   restFrameRef.current = restFrame;
-  // Where the tools open by themselves, no button offers them.
-  const drawOffered = !!sceneKind && !drawing && !paintsChosen;
+  // In free play the paint tools open by themselves, on an existing image
+  // and on a new one, so no button is needed to open them.
+  const drawOffered = !!sceneKind && !drawing && !paintsInPlace;
+  // The chosen image has been edited by hand since it was generated. The
+  // scene still holds the picture as the AI made it, so the frame must show
+  // the stored image instead, and the question about the AI's picture no
+  // longer applies.
+  const editedSinceGenerated = !!chosenImage?.props.edited;
   // The chosen image opens in the paint tools by itself, again on return
   // to the tab, and again once a picture has landed over it.
   const chosenKey = chosenImage?.key;
@@ -369,12 +424,27 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     kindSubject,
     startDrawing,
   ]);
+  // In free play a new image, which has no picture yet, opens in the paint
+  // tools too, on a blank canvas.
+  const draftChosen = !!chosenDraft;
+  useEffect(() => {
+    if (paintsInPlace && active && !drawingOpen && draftChosen && kindType) {
+      startDrawing({key: null, imageType: kindType, subject: kindSubject});
+    }
+  }, [
+    paintsInPlace,
+    active,
+    drawingOpen,
+    draftChosen,
+    kindType,
+    kindSubject,
+    startDrawing,
+  ]);
   // A generated picture replacing the image (or blank) being drawn on
   // becomes the image's pixels; the tools close without saving the drawn
   // pixels over it.
   const landedOverPainting =
     !!drawing &&
-    paintsInPlace &&
     !!chosenImage?.props.generation &&
     chosenImage.props.generation !== tools.openedOnGeneration &&
     (drawing.target.key === chosenImage.key || drawing.target.key === null);
@@ -405,25 +475,25 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       group.frames.includes(shownFrame)
     )?.key;
 
-  const deleteOffered = !!editingOffered;
-  // On a level whose task is one image, the plus is shown until that image
-  // is made on this visit, and its menu enables only that kind. In free
-  // play every kind is enabled.
+  const deleteOffered = !!editingOffered && !noDeletingImages;
+  // The plus menu enables only the level's kind; without one every kind is
+  // enabled.
   const lockedKind: ImageKind | undefined = lockedImageType
     ? {
         imageType: lockedImageType,
         subject: lockedImageType === 'sprite' ? lockedImageSubject : undefined,
       }
     : undefined;
-  const newOffered = !!editingOffered || (!!lockedKind && !ownImageMade);
-  // A level about one image keeps the choice on that image, or on the slot
-  // it will take; the project's other tiles are listed but disabled.
-  const chooseOffered = !lockedKind;
+  // Where a single image is the task, the plus is shown until that image is
+  // made on this visit, and the choice stays on it or on the slot it will
+  // take; the project's other tiles are listed but disabled.
+  const newOffered = !noNewImages && (!!editingOffered || !ownImageMade);
+  const chooseOffered = !!editingOffered;
 
   return (
     <div className={styles.tab}>
       <div className={styles.panelHeader} style={{width: paneWidth}}>
-        <EditorStrip title="AI" />
+        <EditorStrip title="AI Prompt" endSlotRef={setHeaderSlot} />
       </div>
       <ImageList
         disabled={busy}
@@ -496,6 +566,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onGenerateStart={onGenerate}
           onBusyChange={setBusy}
           onKeep={handleKeep}
+          onReady={offerStory}
+          onRate={handleRate}
           wordLayout={wordLayout}
           compactBehindTheScenes
           onTellStory={tellStory}
@@ -535,6 +607,18 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 disabled={!drawingSheet && parts.busy}
               />
             );
+            // The scene's own copy of the picture is out of date once the
+            // student has drawn on the stored image. While the scene is
+            // busy storing a new picture, the stored image's "edited" mark
+            // is still the old picture's, so it is ignored until then.
+            const sceneCopyStale = editedSinceGenerated && !parts.busy;
+            // On a level that requires a rating, the student answers the
+            // question about the AI's picture before drawing on it.
+            const ratingAwaited =
+              parts.rating.offered &&
+              parts.rating.required &&
+              !parts.rating.verdict &&
+              !sceneCopyStale;
             const frame = (
               live?: React.ReactNode,
               above?: React.ReactNode,
@@ -548,7 +632,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 live={
                   generating
                     ? parts.frame
-                    : live ?? (parts.frameFilled ? parts.frame : undefined)
+                    : live ??
+                      (parts.frameFilled && !sceneCopyStale
+                        ? parts.frame
+                        : undefined)
                 }
                 generating={generating}
                 tip={generating ? parts.tip : undefined}
@@ -556,7 +643,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 overlay={
                   <>
                     {parts.cachedTag}
-                    {parts.rating.offered && (
+                    {parts.rating.offered && !sceneCopyStale && (
                       <RatingBar
                         verdict={parts.rating.verdict}
                         onJudge={parts.rating.judge}
@@ -574,12 +661,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 }
               />
             );
-            const makePane = (
+            // The pane's second button opens the paint tools. While the
+            // tools are open on a level before free play, the same button
+            // closes them and keeps the drawing. `doneDisabled` is true for
+            // a new drawing that has no strokes yet: there is nothing to
+            // keep, so the button cannot be pressed.
+            const makePane = (doneDisabled = false, drawnOn = false) => (
               <MakePane
                 parts={parts}
                 width={paneWidth}
-                replaces={!!chosenImage}
                 regenerate={!!chosenImage?.props.generation}
+                headerSlot={headerSlot}
+                // `drawnOn` covers strokes the open tools hold that are not
+                // saved yet: the stored image is marked as edited only
+                // once a save has gone through.
+                editedByHand={sceneCopyStale || drawnOn}
                 onDraw={
                   drawOffered
                     ? () => {
@@ -593,9 +689,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                           restFrame ?? undefined
                         );
                       }
+                    : drawing && !paintsInPlace
+                    ? tools.finishDrawing
                     : undefined
                 }
-                drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}
+                drawLabel={
+                  drawing
+                    ? drawing.target.key
+                      ? 'Done editing'
+                      : 'Done drawing'
+                    : chosenImage
+                    ? 'Edit this image'
+                    : 'Draw my own'
+                }
+                drawIcon={drawing ? 'check' : undefined}
+                drawDisabled={drawing ? doneDisabled : ratingAwaited}
                 extra={
                   <>
                     {/* The Behind the scenes button sits in this header:
@@ -680,21 +788,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                           ),
                           frameRow
                         )}
-                        {paintsInPlace ? (
-                          makePane
-                        ) : (
-                          <DrawPane
-                            width={paneWidth}
-                            kind={sceneKind}
-                            frameLabel={
-                              drawing.sheet
-                                ? FRAME_LABELS[drawing.sheet.index]
-                                : undefined
-                            }
-                            editing={!!drawing.target.key}
-                            edited={editor.edited}
-                            onDone={tools.finishDrawing}
-                          />
+                        {makePane(
+                          !drawing.target.key && !editor.edited,
+                          editor.edited
                         )}
                       </>
                     );
@@ -726,7 +822,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     }
                   />
                 ) : (
-                  makePane
+                  makePane()
                 )}
               </>
             );

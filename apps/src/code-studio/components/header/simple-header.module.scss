@@ -1,9 +1,3 @@
-$inset: 2px;
-
-// Below this width the bar keeps only the current bubble, as the library's
-// ProgressWidget does at the same width.
-$narrow: 991.98px;
-
 // The same fade HeaderMiddle's row has; keyframes are scoped to the module.
 @keyframes fadein {
   from {
@@ -24,94 +18,13 @@ $narrow: 991.98px;
   animation: fadein 0.4s;
 }
 
-// The bar, in the adaptive header's idiom: a light pill on the dark header,
-// its parts separated by hairlines.
-.bar {
+// Lets the widget's lesson name shrink before the row overflows the header.
+.widget {
   display: flex;
-  align-items: stretch;
-  gap: 4px;
   min-width: 0;
-  height: 30px;
-  box-sizing: border-box;
-  padding: $inset;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: var(--shape-lg);
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  font-family: var(--font-family-main);
-}
 
-// The lesson's name: a shaded pill at the bar's start, the only part that
-// shrinks.
-.lesson {
-  display: flex;
-  flex: 0 1 auto;
-  align-items: center;
-  min-width: 0;
-  margin-block: -$inset;
-  margin-inline-start: -$inset;
-  padding: 0 12px;
-  border-inline-end: 1px solid var(--borders-neutral-primary);
-  border-start-start-radius: calc(var(--shape-lg) - 1px);
-  border-end-start-radius: calc(var(--shape-lg) - 1px);
-  background: var(--background-neutral-secondary);
-}
-
-.lessonName {
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.bubbles {
-  display: flex;
-  flex: none;
-  align-items: center;
-  gap: 4px;
-  padding: 0 8px;
-
-  // The lesson name is the only part that shrinks; once it is gone the row
-  // would overflow the header, so narrow screens keep the current bubble
-  // alone. Guarded on a current bubble so the row is never left empty.
-  @media (max-width: $narrow) {
-    &:has(> [aria-current]) > :not([aria-current]) {
-      display: none;
-    }
-  }
-
-  // Without :has() the guard is dropped; a level page always has a current
-  // bubble.
-  @supports not selector(:has(*)) {
-    @media (max-width: $narrow) {
-      > :not([aria-current]) {
-        display: none;
-      }
-    }
-  }
-}
-
-.save {
-  display: flex;
-  flex: none;
-  align-items: center;
-  padding: 0 8px;
-  border-inline-start: 1px solid var(--borders-neutral-primary);
-}
-
-.saveIcon {
-  color: var(--text-neutral-quaternary);
-}
-
-// The lab's button, when it has one; empty, it takes no room.
-.action {
-  display: flex;
-  flex: none;
-  align-items: center;
-
-  &:not(:empty) {
-    padding-inline-start: 4px;
-    border-inline-start: 1px solid var(--borders-neutral-primary);
+  > * {
+    min-width: 0;
   }
 }
 

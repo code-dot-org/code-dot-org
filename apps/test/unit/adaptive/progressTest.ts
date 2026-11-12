@@ -22,7 +22,12 @@ const mockLogError = jest.fn();
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {
-    getInstance: () => ({getMetricsReporter: () => ({logError: mockLogError})}),
+    getInstance: () => ({
+      getMetricsReporter: () => ({
+        logError: mockLogError,
+        incrementCounter: jest.fn(),
+      }),
+    }),
   },
 }));
 

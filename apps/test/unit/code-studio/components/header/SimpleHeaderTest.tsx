@@ -112,10 +112,26 @@ describe('SimpleHeader', () => {
     expect(screen.getByRole('img', {name: 'Saving'})).toBeTruthy();
   });
 
+  it('announces a failed save', () => {
+    renderHeader({showProjectUpdatedAt: true, projectUpdatedStatus: 'error'});
+    expect(screen.getByRole('img', {name: 'Save failed'})).toBeTruthy();
+    expect(screen.getByRole('status').textContent).toBe('Save failed');
+  });
+
+  it('shows no save status in the initial default state', () => {
+    renderHeader({showProjectUpdatedAt: true, projectUpdatedStatus: 'default'});
+    expect(screen.queryByRole('img', {name: 'Not saved'})).toBeNull();
+  });
+
+  it('shows the lesson name as text, with no lesson menu', () => {
+    renderHeader();
+    expect(screen.queryByRole('button')).toBeNull();
+  });
+
   it('leaves a slot for the lab to fill', () => {
     renderHeader();
     const slot = document.getElementById(HEADER_ACTION_ID) as HTMLElement;
-    expect(slot.classList.contains(styles.action)).toBe(true);
+    expect(slot).toBeTruthy();
     expect(slot.childElementCount).toBe(0);
   });
 

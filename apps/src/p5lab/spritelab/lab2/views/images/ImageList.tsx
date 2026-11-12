@@ -2,8 +2,8 @@
 // being worked on marked, plus the button that adds an image and the button
 // that deletes the chosen one.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import {
   Button as MuiButton,
   IconButton as MuiIconButton,
@@ -325,8 +325,8 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
       {deletable && (
         <div className={styles.listFooter}>
           <MuiIconButton
-            variant="text"
-            color="tertiary"
+            variant="contained"
+            color="error"
             size="small"
             aria-label="Delete image"
             disabled={disabled}
@@ -337,8 +337,9 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
         </div>
       )}
       {confirming && chosenImage && (
-        <MuiDialog
+        <Modal
           title="Delete this image?"
+          className={styles.deleteDialog}
           customContent={
             <div className={styles.deleteLead}>
               {chosenImage.thumb && (

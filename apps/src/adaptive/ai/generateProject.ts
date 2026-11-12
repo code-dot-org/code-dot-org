@@ -9,7 +9,11 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
-import {sendAdaptiveEvent, stepProperties} from '../metricsHelpers';
+import {
+  sendAdaptiveEvent,
+  sendAiStaticFallbackUsed,
+  stepProperties,
+} from '../metricsHelpers';
 import {Progress} from '../progress/model';
 import {checkpointPlan} from '../project/plan';
 import {applyGeneratedFiles, editableFiles} from '../project/projectGeneration';
@@ -76,13 +80,16 @@ export async function generateProject({
     files,
   });
   const startedAt = Date.now();
-  const sendGenerated = (errorType?: string) =>
+  const sendGenerated = (errorType?: string) => {
     sendAdaptiveEvent(EVENTS.ADAPTIVE_PROJECT_GENERATED, {
       ...stepProperties(checkpoint, step),
       success: !errorType,
       latencyMs: Date.now() - startedAt,
       errorType,
     });
+    if (errorType)
+      sendAiStaticFallbackUsed('project', errorType, checkpoint, step);
+  };
   // Only what the student wrote is moderated; a chosen answer is authored text.
   const typed = plan.answers.filter(a => a.typed).map(a => a.answer);
   const moderation = typed.length

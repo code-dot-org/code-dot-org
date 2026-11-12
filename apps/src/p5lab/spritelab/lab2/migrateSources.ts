@@ -9,7 +9,7 @@ import {
   LEGACY_WHEN_RUN_BLOCK_TYPE,
   WHEN_RUN_BLOCK_TYPE,
 } from './blockly/blockDefinitions/whenRun';
-import {forEachSavedBlock} from './scenesApi';
+import {forEachSavedBlock} from './savedBlocks';
 import {Scene, SerializedAnimationList} from './types';
 import {isLegacyWorld, trimLegacyWorld} from './world';
 
