@@ -2245,7 +2245,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             (activeTab === 'Code' || activeTab === 'World') && (
               <WorkspaceSceneBar
                 {...sceneControls}
-                rightExtra={
+                startExtra={
                   activeTab === 'Code' &&
                   catalogOffered && (
                     <DiscoverBlocksButton

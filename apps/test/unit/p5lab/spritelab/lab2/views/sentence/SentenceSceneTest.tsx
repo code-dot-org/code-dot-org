@@ -3,6 +3,7 @@ import {act, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import SentenceScene, {
+  MIN_CACHED_GENERATING_MS,
   SentenceSceneParts,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
 
@@ -402,7 +403,7 @@ describe('SentenceScene', () => {
       });
       expect(onGenerateStart).toHaveBeenCalledTimes(1);
       await act(async () => {
-        jest.advanceTimersByTime(4999);
+        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS - 1);
       });
       expect(screen.getByRole('status').textContent).toBe(
         'Making your picture…'
@@ -426,13 +427,13 @@ describe('SentenceScene', () => {
       pickCreature();
       await generate();
       await act(async () => {
-        jest.advanceTimersByTime(5000);
+        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS);
       });
       await generate();
       expect(findCachedImage.mock.calls[0][0].avoidVariant).toBeUndefined();
       expect(findCachedImage.mock.calls[1][0].avoidVariant).toBe(1);
       await act(async () => {
-        jest.advanceTimersByTime(5000);
+        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS);
       });
       fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
       await generate();
