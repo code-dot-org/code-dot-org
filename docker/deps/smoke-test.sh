@@ -7,8 +7,7 @@
 #   ./smoke-test.sh cdo-deps:test podman
 #
 # The base contract is covered by docker/base/smoke-test.sh; this asserts the
-# bundle resolves, the native gems load, the venv resolves offline, and no
-# toolchain came along — uv excepted, since boot resolves the venv through it.
+# bundle resolves, the native gems load, and no toolchain came along.
 
 # shellcheck disable=SC1091
 . "$(dirname "$0")/../smoke-harness.sh"
@@ -28,15 +27,7 @@ run "rmagick loads against libMagickWand" "rmagick-ok" -- \
 run "nokogiri loads" "nokogiri-ok" -- \
   bundle exec ruby -e 'require "nokogiri"; puts "nokogiri-ok"'
 
-# The python half: the venv resolves offline, exactly as boot uses it, and
-# UV_NO_SYNC is what keeps `uv run` from re-syncing an immutable image.
-run "venv imports pycdo without syncing" "pycdo-ok" -- \
-  uv run --no-sync python -c 'import pycdo; print("pycdo-ok")'
-# shellcheck disable=SC2016
-run "UV_NO_SYNC exported" "1" -- sh -c 'echo "$UV_NO_SYNC"'
-
-# uv is the deliberate exception: boot resolves the venv through it.
-assert_no_toolchain cc gcc make node yarn pkg-config git
+assert_no_toolchain cc gcc make node yarn pkg-config git uv
 
 # The boundary with the dev image, computed by Bundler instead of proxied
 # by a named gem: with BUNDLE_WITHOUT cleared, check must fail on the

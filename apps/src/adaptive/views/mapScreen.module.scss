@@ -5,15 +5,6 @@
   min-height: 0;
 }
 
-.mapBar {
-  display: flex;
-  align-items: center;
-  min-height: 40px;
-  padding: 4px 16px;
-  border-bottom: 1px solid var(--borders-neutral-primary);
-  background: var(--background-neutral-secondary);
-}
-
 .mapBody {
   display: flex;
   flex: 1;
@@ -28,13 +19,20 @@
   min-width: 0;
   // The board is scaled to fit, and the zoomed board spills past the edges.
   overflow: hidden;
-  padding: 24px;
 }
 
 .mapBack {
   position: absolute;
   top: 24px;
   right: 24px;
+  z-index: 2;
+}
+
+// Inset past the zoomed map's scrollbar gutter.
+.mapZoom {
+  position: absolute;
+  top: 16px;
+  right: 32px;
   z-index: 2;
 }
 
@@ -53,10 +51,17 @@
   background: var(--background-neutral-secondary);
 }
 
-.sideFooter {
+.sideNoSelection {
+  background: var(--background-neutral-primary);
+}
+
+.sideEmptyPrompt {
+  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  margin-top: auto;
+  justify-content: center;
+}
+
+.sideEmptyText {
+  color: var(--text-neutral-secondary);
 }

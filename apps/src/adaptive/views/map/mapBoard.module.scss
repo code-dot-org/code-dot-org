@@ -6,6 +6,11 @@
   min-height: 0;
 }
 
+.byWidth {
+  flex: none;
+  overflow: hidden;
+}
+
 .board {
   position: relative;
   transform-origin: left top;
@@ -34,7 +39,8 @@
 }
 
 .edgeActive {
-  stroke: var(--borders-success-primary);
+  stroke: var(--borders-neutral-strong);
+  stroke-width: 2;
   stroke-dasharray: none;
 }
 

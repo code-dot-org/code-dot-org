@@ -2,11 +2,15 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-10-28T00:00:00.000Z",
+  "created_at": "2026-10-30T09:28:03.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "friend",
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -21,8 +25,22 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template",
+    "lock_earlier_blocks": true,
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "extraTabs": [
+        "Images",
+        "World"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "paletteRoles": [
+        "friend",
+        "treasure",
+        "block"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",
@@ -127,7 +145,7 @@
       "title": "**When you meet**",
       "items": [
         {
-          "text": "Drag **burst**, **play sound**, **say**, **set zoom** or **restart scene** onto the dotted outline under **when touches**.",
+          "text": "Drag a block under the event **when player touches character**.",
           "check": {
             "kind": "block",
             "type": [
@@ -141,7 +159,7 @@
           }
         },
         {
-          "text": "Click **Play** and go meet them.",
+          "text": "Select **Run** and go meet them.",
           "check": {
             "kind": "reach",
             "role": "friend"
@@ -149,8 +167,36 @@
         }
       ]
     },
-    "long_instructions": "# When you meet\nDrag **burst**, **play sound**, **say**, **set zoom** or **restart scene** onto the dotted outline under **when touches**. Then click **Play** and go meet them.",
-    "header_label": "When you meet"
+    "long_instructions": "# When you meet\r\nAnother **event**: when your player touches the other character, something happens.",
+    "header_label": "When you meet",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-01 18:35:43 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 18:36:17 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
+  <blocks/>
 </GamelabJr>

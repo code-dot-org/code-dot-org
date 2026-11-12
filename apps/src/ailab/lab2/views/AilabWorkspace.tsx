@@ -1,3 +1,4 @@
+import {useToast} from '@code-dot-org/component-library/toast';
 import React, {
   useContext,
   useEffect,
@@ -21,22 +22,40 @@ import {
   TrainingDataProvider,
 } from '@cdo/apps/ailab/engine';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import type ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import type {ProjectSources} from '@cdo/apps/lab2/types';
-import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import ResourcePanel, {
+  type BackpackProps,
+} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {notifyWithToast} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AccuracyValidator from '../AccuracyValidator';
 import {getDefaultInstructions} from '../defaultInstructions';
+import {saveTreeImageToBackpack} from '../saveTreeImageToBackpack';
 import {sourceToProject} from '../sources';
 import {AilabLevelProperties} from '../types';
 
 import styles from './ailab-view.module.scss';
+
+// AI Lab takes no files from the Backpack; the tab shows the files a student saved.
+const BACKPACK_PROPS: BackpackProps = {
+  validateFileName: fileName => ({
+    isSupportFileName: false,
+    newFileName: fileName,
+  }),
+  saveFileToProject: () => {},
+  createNewProjectFile: () => {},
+  findIdForFileName: () => undefined,
+  supportedFileTypes: [],
+};
 
 interface AilabWorkspaceProps {
   levelProperties: AilabLevelProperties;
@@ -45,6 +64,7 @@ interface AilabWorkspaceProps {
   save: (project: AilabProject) => void;
   startOver: () => void;
   projectManager: ProjectManager | null;
+  onLoadingChange: (isLoading: boolean) => void;
 }
 
 const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
@@ -54,12 +74,14 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   save,
   startOver,
   projectManager,
+  onLoadingChange,
 }) => {
   // Read once: the sources change with every save, but the project the lab
   // opens with is the one this level was loaded with.
   const [initialProject] = useState(() => sourceToProject(savedSource));
   const dispatch = useAppDispatch();
   const {showDialog} = useDialogControl();
+  const themeSetting = useThemeSetting('ailab');
   const progressManager = useContext(ProgressManagerContext);
   const [validator] = useState(() => new AccuracyValidator());
   const [dynamicInstructionsKey, setDynamicInstructionsKey] =
@@ -71,6 +93,22 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   const dynamicInstructionsMap: {[key: string]: string} = useMemo(
     () => JSON.parse(levelProperties.dynamicInstructions || '{}'),
     [levelProperties.dynamicInstructions]
+  );
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const showToast = useToast();
+  const saveImageToBackpack: AilabEngineProps['saveImageToBackpack'] = useMemo(
+    () =>
+      // The Backpack API redirects signed-out users to sign in.
+      currentUserId
+        ? (image, baseName) =>
+            saveTreeImageToBackpack(
+              Lab2Registry.getInstance().getUnifiedBackpackApi(),
+              notifyWithToast(showToast),
+              image,
+              baseName
+            )
+        : undefined,
+    [currentUserId, showToast]
   );
 
   useEffect(() => {
@@ -149,20 +187,27 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
 
   return (
     <div id="ailab-lab2" className={styles.ailab} data-notranslate>
-      <ResourcePanel
-        className={styles.resourcePanel}
-        levelProperties={levelProperties}
-        isRunning={false}
-        hasRun={false}
-        hasEdited={hasEdited}
-        validationTooltip={
-          mode?.requireAccuracy
-            ? `Train a model with at least ${mode.requireAccuracy}% accuracy`
-            : undefined
-        }
-        dynamicInstructions={dynamicInstructionsContent}
-      />
-      <div className={styles.divider} />
+      {/* Mounted with its instructions, or the panel would open on another tab. */}
+      {dynamicInstructionsKey && (
+        <>
+          <ResourcePanel
+            className={styles.resourcePanel}
+            levelProperties={levelProperties}
+            isRunning={false}
+            hasRun={false}
+            hasEdited={hasEdited}
+            validationTooltip={
+              mode?.requireAccuracy
+                ? `Train a model with at least ${mode.requireAccuracy}% accuracy`
+                : undefined
+            }
+            dynamicInstructions={dynamicInstructionsContent}
+            backpackProps={BACKPACK_PROPS}
+            settings={[themeSetting]}
+          />
+          <div className={styles.divider} />
+        </>
+      )}
       <div className={styles.workspace}>
         <div className={styles.root}>
           <Provider store={store}>
@@ -180,6 +225,8 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
                   saveTrainedModel={saveTrainedModel}
                   logMetric={logMetric}
                   onStartOver={onStartOver}
+                  onLoadingChange={onLoadingChange}
+                  saveImageToBackpack={saveImageToBackpack}
                 />
               </TrainingDataProvider>
             </ProjectProvider>

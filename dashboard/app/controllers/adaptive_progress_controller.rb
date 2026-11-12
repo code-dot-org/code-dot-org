@@ -14,32 +14,33 @@ class AdaptiveProgressController < ApplicationController
 
   MAX_JSON_BYTES = 64.kilobytes
   MAX_TEXT_LENGTH = 10_000
+  # OTHER_CHOICE_ID in apps/src/adaptive/schema/question.ts.
+  OTHER_CHOICE_ID = 'other'
+  # REVIEW_DECISIONS in apps/src/adaptive/schema/steps/review.ts.
+  REVIEW_DECISIONS = %w[build skip].freeze
 
   # GET /adaptive_progress?scriptId=&levelId=
   def show
-    rows = adaptive_user_level&.user_adaptive_steps || []
-    steps = rows.filter_map {|row| (entry = row_json(row)) && [row.step_id, entry]}.to_h
-    steps.merge!(level_step_progress) {|_step_id, entry, progress| entry.merge(progress)}
-    render json: {steps: steps}
+    render json: @level.progress_json(user_id: current_user.id, script_id: @unit.id)
   end
 
   # PUT /adaptive_progress/steps/:step_id/progress
   def update_progress
     body = request.request_parameters
     step = @level.find_step(params[:step_id])
-    return head :unprocessable_entity unless step
+    return reject_save('unknown_step') unless step
 
     # Progress on level-backed steps is in UserLevel.
-    return head :unprocessable_entity if step['kind'] == 'level'
+    return reject_save('level_step') if step['kind'] == 'level'
 
     if body.key?('answers')
       answers = student_responses(step, body['answers'])
-      return head :unprocessable_entity unless answers
+      return reject_save('invalid_answers') unless answers
     end
 
     if body.key?('timeSinceLastSave')
       seconds = time_spent_seconds(body['timeSinceLastSave'])
-      return head :unprocessable_entity unless seconds
+      return reject_save('invalid_time_spent') unless seconds
     end
 
     row = step_row(step)
@@ -57,30 +58,41 @@ class AdaptiveProgressController < ApplicationController
   def update_generated_instructions
     step = @level.find_step(params[:step_id])
     # Only a project step with a prompt generates instructions.
-    return head :unprocessable_entity unless step && step['kind'] == 'level' && step['project'] == true && step['instructionsPrompt'].present?
+    return reject_save('not_instructions_step') unless step && step['kind'] == 'level' && step['project'] == true && step['instructionsPrompt'].present?
 
     instructions = request.request_parameters['generatedInstructions']
-    return head :unprocessable_entity unless valid_json_value?(instructions)
+    return reject_save('invalid_generated_instructions') unless valid_json_value?(instructions)
 
     row = step_row(step)
     row.update!(generated_instructions: instructions)
 
-    render json: row_json(row)
+    render json: row.step_json
   end
 
   # PUT /adaptive_progress/steps/:step_id/validation_history
   # Appends one check of a project step's work.
   def update_validation_history
     step = @level.find_step(params[:step_id])
-    return head :unprocessable_entity unless step && step['kind'] == 'level' && step['project'] == true && step['validation'].is_a?(Hash)
+    return reject_save('not_validation_step') unless step && step['kind'] == 'level' && step['project'] == true && step['validation'].is_a?(Hash)
 
     attempt = validation_attempt(step, request.request_parameters['attempt'])
-    return head :unprocessable_entity unless attempt
+    return reject_save('invalid_validation_attempt') unless attempt
 
     row = step_row(step)
     row.record_validation!(attempt)
 
-    render json: row_json(row)
+    render json: row.step_json
+  end
+
+  # Grouped by reason: a spike means the client and the content have drifted apart.
+  private def reject_save(reason)
+    Observability::Errors.report(
+      error_class: 'AdaptiveProgressRejected',
+      error_message: "Adaptive progress save rejected: #{reason}",
+      fingerprint: "AdaptiveProgressRejected:#{reason}",
+      context: {reason: reason, step_id: params[:step_id], level_id: @level.id, script_id: @unit.id}
+    )
+    head :unprocessable_entity
   end
 
   private def load_adaptive
@@ -112,28 +124,6 @@ class AdaptiveProgressController < ApplicationController
       locale: I18n.locale
     )
     user_level
-  end
-
-  # Step id => progress, for each level step the student has a UserLevel on.
-  private def level_step_progress
-    levels = @level.step_levels
-    user_levels = UserLevel.where(user_id: current_user.id, script_id: @unit.id, level_id: levels.values.map(&:id)).index_by(&:level_id)
-    levels.filter_map {|step_id, level| [step_id, user_level_json(user_levels[level.id])] if user_levels[level.id]}.to_h
-  end
-
-  private def row_json(row)
-    return nil unless row.progress || row.generated_instructions || row.validation_history
-    entry = {'timeSpent' => 0}.merge(row.progress_json)
-    entry['generatedInstructions'] = row.generated_instructions if row.generated_instructions
-    entry['validationHistory'] = row.validation_history if row.validation_history
-    entry
-  end
-
-  private def user_level_json(user_level)
-    {
-      'status' => user_level.passing? ? 'complete' : 'started',
-      'timeSpent' => user_level.time_spent || 0,
-    }
   end
 
   private def valid_json_value?(value)
@@ -169,12 +159,22 @@ class AdaptiveProgressController < ApplicationController
     }.compact
   end
 
+  # The step's question with `question_id`, or nil. A review step's decision
+  # is a multiple choice question over its decisions.
+  private def step_question(step, question_id)
+    if step['kind'] == 'review'
+      return nil unless step['questionId'].to_s == question_id
+      return {'id' => step['questionId'], 'type' => 'MultipleChoiceQuestion', 'choices' => REVIEW_DECISIONS.map {|id| {'id' => id}}}
+    end
+    Array(step['questions']).find {|q| q.is_a?(Hash) && q['id'].to_s == question_id}
+  end
+
   # {question id => student responses checked against the content}, or nil if they do not fit.
   private def student_responses(step, answers)
     return nil unless answers.is_a?(Hash) && answers['list'].is_a?(Array)
     question_id = answers['questionId'].to_s
     return nil if question_id.empty?
-    question = Array(step['questions']).find {|q| q.is_a?(Hash) && q['id'].to_s == question_id}
+    question = step_question(step, question_id)
     return nil unless question
 
     entries = answers['list']
@@ -182,9 +182,17 @@ class AdaptiveProgressController < ApplicationController
     case question['type']
     when 'MultipleChoiceQuestion'
       choice_ids = Array(question['choices']).map {|choice| choice['id']}
-      return nil unless entries.all? {|entry| choice_ids.include?(entry['answerId'])}
+      # A question that allows it takes a typed answer under the reserved id, with its text.
+      typed = ->(entry) {question['allowOther'] && entry['answerId'] == OTHER_CHOICE_ID && entry['text'].is_a?(String) && entry['text'].length <= MAX_TEXT_LENGTH}
+      return nil unless entries.all? {|entry| choice_ids.include?(entry['answerId']) || typed.call(entry)}
       correct_id = question['correctChoiceId']
-      list = entries.map {|entry| {'answerId' => entry['answerId'], 'isCorrect' => correct_id && entry['answerId'] == correct_id}.compact}
+      list = entries.map do |entry|
+        {
+          'answerId' => entry['answerId'],
+          'text' => (entry['text'] if typed.call(entry)),
+          'isCorrect' => correct_id && entry['answerId'] == correct_id,
+        }.compact
+      end
     when 'freeResponse'
       return nil unless entries.all? {|entry| entry['text'].is_a?(String) && entry['text'].length <= MAX_TEXT_LENGTH}
       list = entries.map {|entry| {'text' => entry['text']}}

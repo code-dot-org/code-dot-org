@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T00:32:46.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Find bigrams in a sentence from *The Gettysburg Address* by Abraham Lincoln.\r\n\r\n**☑️ Do This:**\r\n- Complete the `get_bigrams` function. Given a list of tokens, the function should return a list of bigrams.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember you can iterate over the index of every token, except the last one, with a `for` loop.\r\n\r\n```\r\nfor i in range(len(tokens) - 1):\r\n  ...\r\n```\r\n\r\nAlso remember you can create a tuple as follows:\r\n\r\n```\r\n(value1, value2)\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import re\n\n\ndef get_bigrams(tokens):\n  bigrams = []\n  for i in range(len(tokens) - 1):\n    window = (tokens[i], tokens[i + 1])\n    bigrams.append(window)\n  return bigrams\n\n\ndef tokenize(text):\n  return re.findall(r\"\\w+\", text)\n\n\ndef main():\n  text = \"It is altogether fitting and proper that we should do this.\"\n\n  # Tokenize text\n  tokens = tokenize(text)\n\n  # Get bigrams\n  bigrams = get_bigrams(tokens)\n\n  # Print bigrams\n  for bigram in bigrams:\n    print(bigram)\n\n\nmain()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "display_name": "Gettysburg Address",
+    "bubble_choice_description": "Find bigrams in a sentence from *The Gettysburg Address* by Abraham Lincoln.",
+    "thumbnail_url": "https://images.code.org/87a813cd3e6baea1c92c014ccd9958e9-gettysburg.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 00:35:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:35:24 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:35:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:35:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:36:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:36:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:36:46 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:37:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:37:28 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:39:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:43:57 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:44:15 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -3924,6 +3924,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/core@portal:../frontend/packages/core/::locator=blockly-mooc%40workspace%3A."
   dependencies:
+    "@code-dot-org/shared-constants": "workspace:*"
     camelcase-keys: "npm:^10.0.2"
     events: "npm:^3.3.0"
     flat: "npm:^6.0.1"
@@ -3932,6 +3933,8 @@ __metadata:
   peerDependencies:
     "@reduxjs/toolkit": ^2.8.2
     "@sentry/browser": ^10.51.0
+    "@statsig/js-client": ^3.25.5
+    "@statsig/web-analytics": ^3.25.5
     "@tanstack/react-query": "*"
     js-cookie: ^3.0.5
     ky: ^1.14.3
@@ -4031,9 +4034,13 @@ __metadata:
   peerDependencies:
     "@code-dot-org/component-library": "*"
     "@code-dot-org/core": "*"
+    "@dnd-kit/core": ^6.3.0
+    "@dnd-kit/sortable": ^10.0.0
+    "@dnd-kit/utilities": ^3.2.2
     "@mui/material": ^7.0.0
     classnames: ^2.5.1
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-router-dom: ^6.26.0
   languageName: node
   linkType: soft
 
@@ -4160,6 +4167,12 @@ __metadata:
   checksum: 10/9d80760ede352c83f50e2a7f74bbbff855dc2d29cc4e4dfd822d661721095983636308314042fcf1f9c0aebae1b536ff8bf0e81c0aa2fa91ebd6fd12a66e8e09
   languageName: node
   linkType: hard
+
+"@code-dot-org/shared-constants@portal:../frontend/packages/shared-constants/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/shared-constants@portal:../frontend/packages/shared-constants/::locator=blockly-mooc%40workspace%3A."
+  languageName: node
+  linkType: soft
 
 "@codemirror/autocomplete@npm:^6.0.0, @codemirror/autocomplete@npm:^6.18.6, @codemirror/autocomplete@npm:^6.3.2, @codemirror/autocomplete@npm:^6.7.1":
   version: 6.18.7
@@ -5159,6 +5172,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fortawesome/fontawesome-common-types@npm:6.7.2":
+  version: 6.7.2
+  resolution: "@fortawesome/fontawesome-common-types@npm:6.7.2"
+  checksum: 10/3c2e938afe6f5939bd63181faaec7b062902d9ed970c75d6becb1fd8e5ca0ed937e7d1513bd7ae545da407d0682039e50730cdb3136b58656128838ea2c58ac0
+  languageName: node
+  linkType: hard
+
 "@fortawesome/fontawesome-common-types@npm:7.2.0":
   version: 7.2.0
   resolution: "@fortawesome/fontawesome-common-types@npm:7.2.0"
@@ -5188,6 +5208,15 @@ __metadata:
   dependencies:
     "@fortawesome/fontawesome-common-types": "npm:7.2.0"
   checksum: 10/2f02236e58ca8506a18eb6ff26be8e9ad74e3cd4621db26d89dbc268e7a5245dbc269ca35ac81b92af6442eaef6b9ab44ee837f819fe94ea95462539ad02037c
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-solid-svg-icons@npm:6.7.2":
+  version: 6.7.2
+  resolution: "@fortawesome/free-solid-svg-icons@npm:6.7.2"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": "npm:6.7.2"
+  checksum: 10/efcd90cd5d333995ff4012a9d77a8b23523e246fa418524edf08bb6af8b14db2ee0b08ee5f7460a86474d352af06e1a2581cc827ee3706e9c0e92e178b50e27f
   languageName: node
   linkType: hard
 
@@ -11937,6 +11966,7 @@ __metadata:
     "@emotion/styled": "npm:^11.14.0"
     "@eslint/js": "npm:^9.31.0"
     "@excalidraw/excalidraw": "npm:^0.17.6"
+    "@fortawesome/free-solid-svg-icons": "npm:6.7.2"
     "@lezer/highlight": "npm:^1.2.0"
     "@magenta/music": "npm:^1.23.1"
     "@mapbox/search-js-react": "npm:^1.0.0"
@@ -16340,9 +16370,9 @@ canvg@gabelerner/canvg:
   linkType: hard
 
 "eslint-plugin-cdo-custom-rules@file:./eslint::locator=blockly-mooc%40workspace%3A.":
-  version: 1.0.0
-  resolution: "eslint-plugin-cdo-custom-rules@file:./eslint#./eslint::hash=5e07fc&locator=blockly-mooc%40workspace%3A."
-  checksum: 10/b791c30cb30d5246c83150fc7dc800a8208a2e58395f6a610a09df676d278e792b616fdab1aed0af7fdd91f551756310fa5c01bbc3e60e8eea150afe7df026f5
+  version: 1.1.0
+  resolution: "eslint-plugin-cdo-custom-rules@file:./eslint#./eslint::hash=dd1dc6&locator=blockly-mooc%40workspace%3A."
+  checksum: 10/eea9bdfe1cb51620df849f3bf92bdb348a7794c71ccd88d78107b20e5dc36264ec9fc9bfeffedf264e48083ed83c00441934596849610a3b1fb92db2e83e5f90
   languageName: node
   linkType: hard
 

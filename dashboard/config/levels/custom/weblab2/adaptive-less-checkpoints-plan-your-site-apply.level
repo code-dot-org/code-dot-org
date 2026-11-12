@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-11-03T04:18:59.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "#Prompt your website\r\n1. Click the prompt box.\r\n2. Describe the website you planned: its idea, audience, purpose, and style.\r\n3. Submit your prompt.\r\n\r\n*Example: “Make a website for my school robotics club. It’s for new students, it should get them to sign up, and it should look bold and modern.”*",
+    "project_template_level_name": "adaptive-less-checkpoints-template-main-website-project",
+    "encrypted_exemplar_sources": "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\nojPKu63EtMLlajuRZQ==\n",
+    "generate_outline": "Write your initial prompt for the AI, describing the website you have planned in your own words.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {
+      },
+      "disableCommitMessages": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:19:03 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:19:03 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:19:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:19:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 04:23:15 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 04:23:43 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-04 22:12:11 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

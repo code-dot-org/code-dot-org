@@ -15,18 +15,20 @@ import {QuizQuestionSummary} from '../types';
 import {groupByPage, toBool} from '../utils';
 
 import AttemptCard from './AttemptCard';
-import FreeResponseQuestionContainer from './FreeResponseQuestionContainer';
+import MultiChoiceQuestionContainer from './choice/MultiChoiceQuestionContainer';
+import MultipleSelectQuestionContainer from './choice/MultipleSelectQuestionContainer';
+import FreeResponseQuestionContainer from './freeResponse/FreeResponseQuestionContainer';
 import IntroCard from './IntroCard';
 import MatchQuestionContainer from './match/MatchQuestionContainer';
-import {MatchPairs, MatchSets} from './match/types';
-import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
-import MultipleSelectQuestionContainer from './MultipleSelectQuestionContainer';
+import {MatchPairs} from './match/types';
 import PageDivider from './PageDivider';
-import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
-import ResultsCard from './ResultsCard';
+import BackToTop from './results/BackToTop';
+import QuestionResultCard from './results/QuestionResultCard';
+import ResultsCard from './results/ResultsCard';
 import {
   isFreeResponseResponse,
+  isMatchResponse,
   isMultipleChoiceResponse,
   isMultipleSelectResponse,
   QuizAttemptData,
@@ -37,22 +39,6 @@ import {
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
-
-// TODO: replace with the question's own matchSets from attempt_content_json.
-const STUB_MATCH_SETS: MatchSets = [
-  [
-    {id: 'a', text: 'Image classifier'},
-    {id: 'b', text: 'Large language model'},
-    {id: 'c', text: 'Recommender system'},
-    {id: 'd', text: 'Speech recognizer'},
-  ],
-  [
-    {id: 'x', text: 'Drafting and summarizing text'},
-    {id: 'y', text: 'Turning spoken words into text'},
-    {id: 'z', text: 'Sorting photos into categories'},
-    {id: 'w', text: 'Ranking videos for one viewer'},
-  ],
-];
 
 // How long typing must pause before a free response answer autosaves.
 export const ANSWER_AUTOSAVE_DELAY_MS = 1000;
@@ -140,10 +126,6 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   // Answers are locked from the Submit click until it settles, so what was
   // on screen at the click is what gets sent.
   const [isSubmitting, setIsSubmitting] = useState(false);
-  // TODO: replace with responsesByQuestionId once match responses are saved.
-  const [stubMatchPairs, setStubMatchPairs] = useState<
-    Record<number, MatchPairs>
-  >({});
   // State lags a render behind, so a fast second click checks this instead.
   const isSubmittingRef = useRef(false);
   // One chained promise per question, so a rapid second pick waits for the
@@ -169,6 +151,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   // The first card on the current page: the quiz title card or a question.
   const pageHeadingRef = useRef<HTMLHeadingElement>(null);
   const resultsHeadingRef = useRef<HTMLHeadingElement>(null);
+  const attemptBodyRef = useRef<HTMLDivElement>(null);
   // Quiz views stay mounted across same-lab navigation, so a begin/finish
   // request can resolve after a different level is already current.
   // Gate progress reporting on this level instead.
@@ -203,6 +186,11 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const didInitialCheckForAttemptFail = !attempt && !!error;
   const hasNoAttemptYet = attempt === null;
   const hasTitleCard = currentPageNumber === 1 && !showIntroScreen;
+  const canShowBackToTop =
+    !isLoading &&
+    !!unitId &&
+    (isViewingStudent || (!!attempt?.submittedAt && !isIntroOpen));
+  const isTeacherViewingUnsubmitted = isViewingStudent && !attempt?.submittedAt;
 
   // Covers both the very first intro screen and Retake reopening it - either
   // way, the button that led here is gone, so hand focus to the heading.
@@ -398,6 +386,18 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     );
   };
 
+  // Do not rollback state update on failed save -- submit resends pairs.
+  const handleChangePairs = (questionId: number, pairs: MatchPairs) => {
+    const responseData = {pairs};
+    setResponsesByQuestionId(prev => ({
+      ...prev,
+      [questionId]: {questionType: 'MatchQuestion', responseData},
+    }));
+    queueResponseWrite(questionId, responseData).catch(() => {
+      // Already recorded as a user-facing error in useQuizAttempt.
+    });
+  };
+
   const handleBlurAnswerText = (questionId: number) => {
     const unsavedText = unsavedAnswerTextsRef.current[questionId];
     if (unsavedText !== undefined) {
@@ -511,11 +511,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             headingRef={headingRef}
             question={question}
             questionLabel={questionLabel}
-            matchSets={STUB_MATCH_SETS}
-            pairs={stubMatchPairs[question.id] ?? []}
-            onChangePairs={pairs =>
-              setStubMatchPairs(prev => ({...prev, [question.id]: pairs}))
+            pairs={
+              (response &&
+                isMatchResponse(response) &&
+                response.responseData.pairs) ||
+              []
             }
+            onChangePairs={pairs => handleChangePairs(question.id, pairs)}
             disabled={isSubmitting}
           />
         );
@@ -527,7 +529,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
   };
 
-  const renderQuestionResults = (results: QuizQuestionResult[]) =>
+  const renderQuestionResults = (
+    results: QuizQuestionResult[],
+    isSubmitted: boolean
+  ) =>
     resultPages.map(
       (
         {page, questions, firstQuestionNumber, lastQuestionNumber},
@@ -560,6 +565,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                   revealAnswerExplanation={
                     isViewingStudent || toBool(revealAnswerExplanation)
                   }
+                  isSubmitted={isSubmitted}
+                  showCorrectness={isViewingStudent || toBool(showCorrectness)}
                   isViewingStudent={isViewingStudent}
                 />
               )
@@ -580,7 +587,17 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           type={attempt && !attempt.submittedAt ? 'warning' : 'info'}
         />
       )}
-      <div className={styles.attemptBody}>
+      <div
+        className={styles.attemptBody}
+        ref={attemptBodyRef}
+        {...(isTeacherViewingUnsubmitted && {
+          // Nothing inside takes focus, so the region itself must: to stay
+          // keyboard-scrollable, and to receive focus from Back to top.
+          tabIndex: 0,
+          role: 'region',
+          'aria-label': 'Student answers',
+        })}
+      >
         {error && (
           <Typography variant="body3" color="error" role="alert">
             {error}
@@ -610,7 +627,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                   correct: null,
                   explanation: null,
                   correctChoiceId: null,
-                }))
+                })),
+                false
               )}
           </div>
         ) : isIntroOpen ? (
@@ -657,7 +675,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               onNextLevel={handleNextLevel}
             />
             {(isViewingStudent || toBool(showQuestionsAfterSubmit)) &&
-              renderQuestionResults(attempt.questionResults ?? [])}
+              renderQuestionResults(attempt.questionResults ?? [], true)}
           </div>
         ) : (
           <div className={styles.questions}>
@@ -675,6 +693,12 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </div>
         )}
       </div>
+      {canShowBackToTop && (
+        <BackToTop
+          scrollContainerRef={attemptBodyRef}
+          focusTargetRef={resultsHeadingRef}
+        />
+      )}
       {isAttemptInProgress && !isViewingStudent && (
         <QuizFooter
           currentPageNumber={currentPageNumber}

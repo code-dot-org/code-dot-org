@@ -1,9 +1,11 @@
+import {Button} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
-
-import {Button} from '@/button';
+import {expect, userEvent, within} from 'storybook/test';
 
 import Dialog, {DialogProps} from '../Dialog';
+
+import styles from './dialogStories.module.scss';
 
 export default {
   title: 'DesignSystem/Dialog/Dialog',
@@ -15,7 +17,9 @@ const SingleTemplate: StoryFn<DialogProps> = args => {
 
   return (
     <div>
-      <Button onClick={() => setIsOpen(true)} text="Open Dialog" />
+      <Button variant="contained" onClick={() => setIsOpen(true)}>
+        Open Dialog
+      </Button>
       {isOpen && (
         <Dialog
           {...args}
@@ -44,16 +48,18 @@ const MultipleTemplate: StoryFn<{
         are only added to improve Storybook view *
       </p>
       <p>Multiple Dialogs:</p>
-      <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
+      <div className={styles.launcherColumn}>
         {args.components?.map((componentArg, index) => (
           <div key={index}>
             <Button
+              variant="contained"
               key={`button-${index}`}
               onClick={() =>
                 setValues({...values, [`${index}${componentArg.title}`]: true})
               }
-              text={`Open ${componentArg.title}`}
-            />
+            >
+              {`Open ${componentArg.title}`}
+            </Button>
             {values[`${index}${componentArg.title}`] && (
               <Dialog
                 {...componentArg}
@@ -151,6 +157,30 @@ DialogWithLongText.args = {
   onClose: () => console.log('Dialog with long text closed'),
 };
 
+// The legacy panel's 630px minimum width pushed it off viewports narrower than that.
+export const DialogInNarrowViewport = SingleTemplate.bind({});
+DialogInNarrowViewport.args = {
+  ...DialogWithLongText.args,
+  title: 'Dialog in a Narrow Viewport',
+};
+DialogInNarrowViewport.globals = {
+  viewport: {value: 'mobile1', isRotated: false},
+};
+DialogInNarrowViewport.parameters = {
+  eyes: {browser: {width: 320, height: 568, name: 'chrome'}},
+};
+DialogInNarrowViewport.play = async ({canvasElement}) => {
+  await userEvent.click(
+    within(canvasElement).getByRole('button', {name: 'Open Dialog'}),
+  );
+  const panel = await within(document.body).findByRole('alertdialog');
+  const {left, right} = panel.getBoundingClientRect();
+
+  expect(window.innerWidth).toBeLessThan(630);
+  expect(left).toBeGreaterThanOrEqual(0);
+  expect(right).toBeLessThanOrEqual(window.innerWidth);
+};
+
 export const DialogWithCustomContent = SingleTemplate.bind({});
 DialogWithCustomContent.args = {
   title: 'Dialog with Custom Content',
@@ -183,9 +213,11 @@ DialogWithCustomBottomContent.args = {
   customBottomContent: (
     <div>
       <Button
-        text="Extra Action"
+        variant="contained"
         onClick={() => alert('Extra action clicked!')}
-      />
+      >
+        Extra Action
+      </Button>
     </div>
   ),
   onClose: () => console.log('Dialog with custom bottom content closed'),

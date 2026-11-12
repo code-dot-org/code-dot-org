@@ -1,0 +1,23 @@
+{
+  "key": "pp-lesson-8894781-25ce79e11637",
+  "problem_type": "sort",
+  "active": true,
+  "problem_text": "Sort the following guiding principles based on their relevance to AI ethics issues: 'Transparency', 'Accountability', 'Fairness'.",
+  "solution": [
+    {
+      "option": "Transparency",
+      "correct": "Guiding Principle"
+    },
+    {
+      "option": "Accountability",
+      "correct": "Guiding Principle"
+    },
+    {
+      "option": "Fairness",
+      "correct": "Guiding Principle"
+    }
+  ],
+  "objective_keys": [
+    "02bbb480-5366-4a98-999b-13ce32267cd5"
+  ]
+}

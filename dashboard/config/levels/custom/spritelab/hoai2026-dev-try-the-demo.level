@@ -1,12 +1,28 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-30T09:28:03.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "block_pools": [
       "GamelabJr",
       "GameDev"
     ],
     "encrypted": "false",
-    "header_label": "Try the demo",
+    "header_label": "Try a quest",
+    "callouts": [
+      {
+        "target": "continue-button",
+        "direction": "down",
+        "when": {
+          "done": [
+            0
+          ]
+        }
+      }
+    ],
     "helper_libraries": [
       "NativeSpriteLab",
       "zGameDev"
@@ -16,7 +32,7 @@
     "level_mode": {
       "kind": "play"
     },
-    "long_instructions": "# Try the demo\nHere is a game like the one you will make. Use the arrow keys to run and jump up to the crystal.",
+    "long_instructions": "#Try a quest\r\nA **quest** is a mission or a game with a goal. See what happens when you reach the crystal!\r\n",
     "no_project": true,
     "objectives": {
       "title": "**Try the demo**\n\nHere is a game like the one you will make.",
@@ -85,9 +101,7 @@
             "frameCount": 1,
             "looping": true,
             "frameDelay": 2,
-            "categories": [
-
-            ],
+            "categories": [],
             "role": "demo-treasure"
           },
           "adf02487-46fd-4faa-a06b-36db83b39864": {
@@ -100,9 +114,7 @@
             "frameCount": 5,
             "looping": true,
             "frameDelay": 20,
-            "categories": [
-
-            ],
+            "categories": [],
             "role": "demo-hero",
             "poses": {
               "stand-right": {
@@ -203,9 +215,20 @@
                       },
                       "next": {
                         "block": {
-                          "type": "spritelab2_playSound",
+                          "type": "spritelab2_playSoundEffect",
                           "fields": {
-                            "SOUND": "sound://category_achievements/melodic_win_1.mp3"
+                            "WAVE": "bell",
+                            "PITCH": "high",
+                            "LENGTH": "long",
+                            "PATTERN": "run up"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "spritelab2_showTitle",
+                              "fields": {
+                                "TEXT": "You win!"
+                              }
+                            }
                           }
                         }
                       }
@@ -216,7 +239,7 @@
             }
           },
           "world": {
-            "size": 30,
+            "size": 10,
             "rows": [
               "",
               "",
@@ -248,13 +271,33 @@
       ]
     },
     "uses_lab2": "true",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false"
   },
-  "published": true,
-  "game_id": 64,
-  "created_at": "2026-10-28T00:00:00.000Z",
-  "level_num": "custom",
-  "user_id": 1
+  "audit_log": "[{\"changed_at\":\"2026-10-31 22:38:56 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-31 22:40:08 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-31 22:41:06 +0000\",\"changed\":[\"header_label\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-31 22:46:37 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {}
 }]]></config>
   <blocks/>
 </GamelabJr>

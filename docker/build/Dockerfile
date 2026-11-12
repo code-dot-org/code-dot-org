@@ -8,11 +8,6 @@
 # Declared before the first FROM so it can be used in one.
 ARG BASE_IMAGE=ghcr.io/code-dot-org/cdo-base:latest
 
-# uv from Astral's published image, the method their Docker guide documents.
-# Written out rather than built from an ARG so dependabot can read it, and
-# pinned by digest as well as tag so the reference cannot move under us.
-FROM ghcr.io/astral-sh/uv:0.5.18@sha256:e2101b9e627153b8fe4e8a1249cc4194f1b38ece7f28a5a9b8f958e3b560e69c AS uv
-
 FROM ${BASE_IMAGE}
 
 ARG \
@@ -25,8 +20,8 @@ ARG \
 
 USER root
 
-# System build dependencies. mysql2 and rmagick link against the -dev packages,
-# node-gyp shells out to python3, and the Gemfile has git-sourced gems.
+# System build dependencies. mysql2, rmagick, and yaml link against the -dev
+# packages, node-gyp shells out to python3, and the Gemfile has git-sourced gems.
 RUN set -eux \
   && apt-get -qq update \
   && DEBIAN_FRONTEND=noninteractive apt-get -qq -y install --no-install-recommends \
@@ -34,6 +29,7 @@ RUN set -eux \
        default-libmysqlclient-dev \
        git \
        libmagickwand-dev \
+       libyaml-dev \
        pkg-config \
        python3 \
        > /dev/null \
@@ -44,8 +40,6 @@ RUN set -eux \
 # asserts whatever apps/ pins.
 COPY docker/scripts/install-node.sh /tmp/install-node.sh
 RUN /tmp/install-node.sh && rm /tmp/install-node.sh
-
-COPY --from=uv /uv /uvx /usr/local/bin/
 
 # The bundler and identity environment cdo-base omits to stay gem-agnostic.
 ENV \

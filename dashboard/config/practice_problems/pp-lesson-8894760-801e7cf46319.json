@@ -1,0 +1,20 @@
+{
+  "key": "pp-lesson-8894760-801e7cf46319",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms to their correct descriptions: 1. Assumptions 2. Specificity of prompt",
+  "solution": [
+    {
+      "option": "Assumptions",
+      "correct": "Preconceived notions that influence AI outputs."
+    },
+    {
+      "option": "Specificity of prompt",
+      "correct": "The level of detail provided to the AI for generating an image."
+    }
+  ],
+  "objective_keys": [
+    "a27a2703-9d59-4a4e-8b99-86fb1cbb9d04",
+    "b47fe95a-2f69-4b0b-9dbc-85ccd5a4af8c"
+  ]
+}

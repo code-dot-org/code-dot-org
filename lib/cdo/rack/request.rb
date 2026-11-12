@@ -118,19 +118,35 @@ module Cdo
     #
     # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def statsig_stable_id
-      existing_statsig_stable_id || (session[SharedConstants::STATSIG_STABLE_ID_KEY] = Cdo::AnonUserId.generate)
+      existing_statsig_stable_id || (session[SharedConstants::STATSIG_STABLE_ID_KEY] = SecureRandom.uuid)
     end
 
     # Anonymous (signed-out) user ID for our own records, such as anonymous level progress.
     #
-    # It reuses the Statsig stable ID, which already handles OneTrust consent, its cookie and the session.
-    # It is a separate method because our records need a stable anonymous identity, not Statsig as such:
-    # Statsig is only where the ID comes from today. Callers use this method, never statsig_stable_id,
-    # so if Statsig is removed or replaced, only this method changes, not every caller.
-    #
     # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def anon_user_id
-      statsig_stable_id
+      anon_user_id = cookies[Cdo::AnonUserId::KEY]
+      return anon_user_id if Cdo::AnonUserId.valid?(anon_user_id)
+
+      # The Statsig stable ID used to be the anonymous user ID, so reusing an existing one keeps
+      # the visitor's earlier anonymous records linked to them instead of starting a new user.
+      anon_user_id = existing_statsig_stable_id
+      anon_user_id = Cdo::AnonUserId.generate unless Cdo::AnonUserId.valid?(anon_user_id)
+
+      # Rails keeps one cookie jar per request in env, and ActionDispatch::Cookies writes it to the response,
+      # also for the legacy Rack APIs. Standalone Rack apps, such as the legacy API tests, have no jar.
+      if defined?(ActionDispatch::Cookies)
+        ActionDispatch::Request.new(env).cookie_jar[Cdo::AnonUserId::KEY] = {
+          value: anon_user_id,
+          domain: shared_cookie_domain,
+          path: '/',
+          same_site: :lax,
+          secure: ssl?,
+          httponly: true,
+        }
+      end
+
+      cookies[Cdo::AnonUserId::KEY] = anon_user_id
     end
 
     def user

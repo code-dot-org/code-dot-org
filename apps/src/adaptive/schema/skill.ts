@@ -10,6 +10,8 @@ export const skillSourceSchema = z.strictObject({
   id: z.string().min(1),
   title: z.string().min(1),
   description: z.string().min(1),
+  /** A Font Awesome (solid) or kit icon name, shown on this skill's map nodes. */
+  icon: z.string().min(1).optional(),
   /**
    * What a student at each evidence level can do, keyed by evidence level.
    * Evidence level 0 is no evidence. When present, checkpoints and questions

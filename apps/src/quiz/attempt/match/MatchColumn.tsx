@@ -2,20 +2,22 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {MatchPairs, MatchSets, MatchSide} from './types';
-import {findPartner, itemsInColumn, letterOf, getItemText} from './utils';
+import {MarkedPair, MatchSets, MatchSide} from './types';
+import {itemsInColumn, letterOf, getItemText} from './utils';
 
 import styles from './match-question-container.module.scss';
 
 interface MatchColumnProps {
   matchSets: MatchSets;
   side: MatchSide;
-  pairs: MatchPairs;
+  pairs: MarkedPair[];
   selectedId: string | undefined;
-  onClickItem: (id: string) => void;
-  // Receives each item's dot, which MatchQuestionContainer draws lines to.
+  // Omit for read-only cards, which aren't buttons.
+  onClickItem?: (id: string) => void;
+  // Receives each item's dot, which MatchBoard draws lines to.
   dotRef: (id: string, element: HTMLElement | null) => void;
   disabled?: boolean;
+  isAnswerKey?: boolean;
 }
 
 const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
@@ -26,53 +28,90 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
   onClickItem,
   dotRef,
   disabled,
-}) => (
-  <div className={styles.column}>
-    {itemsInColumn(matchSets, side).map(item => {
-      const partnerId = findPartner(pairs, item.id);
-      const isSelected = selectedId === item.id;
-      // An end item shows its partner's letter once paired.
-      const letter =
-        side === 'start'
-          ? letterOf(matchSets, item.id)
-          : partnerId && letterOf(matchSets, partnerId);
-      return (
-        <button
-          key={item.id}
-          type="button"
-          className={classNames(styles.card, side === 'end' && styles.end, {
-            [styles.cardActive]: partnerId || isSelected,
-          })}
-          aria-pressed={isSelected}
-          aria-label={
-            partnerId
-              ? `${getItemText(matchSets, item.id)}, matched with ${getItemText(
-                  matchSets,
-                  partnerId
-                )}`
-              : getItemText(matchSets, item.id)
+  isAnswerKey,
+}) => {
+  const ColumnTag = onClickItem ? 'div' : 'ul';
+  return (
+    <ColumnTag
+      className={styles.column}
+      role={onClickItem ? undefined : 'list'}
+    >
+      {itemsInColumn(matchSets, side).map(item => {
+        const pair = pairs.find(({ids}) => ids.includes(item.id));
+        const partnerId = pair?.ids.find(id => id !== item.id);
+        const status = pair?.status;
+        const isSelected = selectedId === item.id;
+        // An end item shows its partner's letter once paired.
+        const letter =
+          side === 'start'
+            ? letterOf(matchSets, item.id)
+            : partnerId && letterOf(matchSets, partnerId);
+        const className = classNames(
+          styles.card,
+          side === 'end' && styles.end,
+          {
+            [styles.cardActive]: (partnerId || isSelected) && !status,
+            [styles.cardCorrect]: status === 'correct',
+            [styles.cardIncorrect]: status === 'incorrect',
           }
-          onClick={() => onClickItem(item.id)}
-          disabled={disabled}
-        >
-          <Typography
-            variant={side === 'start' ? 'body2' : 'body3'}
-            component="span"
-            className={classNames(side === 'start' && styles.startText)}
+        );
+        const content = (
+          <>
+            <Typography
+              variant={side === 'start' ? 'body2' : 'body3'}
+              component="span"
+              className={classNames(side === 'start' && styles.startText)}
+            >
+              {item.text}
+            </Typography>
+            <span
+              ref={element => dotRef(item.id, element)}
+              className={styles.dot}
+              aria-hidden="true"
+            >
+              {letter}
+            </span>
+          </>
+        );
+        // A plain element can't reliably carry aria-label, so a read-only card
+        // states its partner in hidden text instead.
+        if (!onClickItem) {
+          return (
+            <li key={item.id} className={className}>
+              {content}
+              <span className={styles.srOnly}>
+                {partnerId
+                  ? `, matched with ${getItemText(matchSets, partnerId)}`
+                  : ', not matched'}
+                {/* The answer key's board name already says its pairs are correct. */}
+                {status && !isAnswerKey && `, ${status}`}
+              </span>
+            </li>
+          );
+        }
+        return (
+          <button
+            key={item.id}
+            type="button"
+            className={className}
+            aria-pressed={isSelected}
+            aria-label={
+              partnerId
+                ? `${getItemText(
+                    matchSets,
+                    item.id
+                  )}, matched with ${getItemText(matchSets, partnerId)}`
+                : getItemText(matchSets, item.id)
+            }
+            onClick={() => onClickItem(item.id)}
+            disabled={disabled}
           >
-            {item.text}
-          </Typography>
-          <span
-            ref={element => dotRef(item.id, element)}
-            className={styles.dot}
-            aria-hidden="true"
-          >
-            {letter}
-          </span>
-        </button>
-      );
-    })}
-  </div>
-);
+            {content}
+          </button>
+        );
+      })}
+    </ColumnTag>
+  );
+};
 
 export default MatchColumn;

@@ -1,0 +1,19 @@
+{
+  "key": "pp-lesson-6284601-8dfb96d86903",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms with their descriptions: 1. if statement, 2. if/else statement.",
+  "solution": [
+    {
+      "option": "if statement",
+      "correct": "Allows for one path of execution."
+    },
+    {
+      "option": "if/else statement",
+      "correct": "Allows for two paths of execution."
+    }
+  ],
+  "objective_keys": [
+    "999b2cbc-4fea-4f97-b3af-c057c579187a"
+  ]
+}

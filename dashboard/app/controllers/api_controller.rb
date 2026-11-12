@@ -402,7 +402,7 @@ class ApiController < ApplicationController
   # POST /api/mass_progress_reset
   # Deletes progress for every (student, unit) pair in the given lists. Only
   # allowed for students who are currently in one of the signed-in teacher's
-  # sections.
+  # sections, and never for demo students.
   def mass_progress_reset
     return head :forbidden unless current_user
 
@@ -415,6 +415,12 @@ class ApiController < ApplicationController
 
     authorized_student_ids = current_user.students.where(id: student_ids).distinct.pluck(:id)
     return head :forbidden unless authorized_student_ids.sort == student_ids.uniq.sort
+
+    # Every teacher's demo section shares the same demo students, so their
+    # progress is not one teacher's to delete.
+    if Policies::DemoSections.any_demo_student_durable?(authorized_student_ids)
+      return render json: {error: 'Cannot reset progress for demo students'}, status: :forbidden
+    end
 
     User.delete_progress_for_units(user_ids: authorized_student_ids, unit_ids: unit_ids)
 

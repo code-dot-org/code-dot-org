@@ -1,7 +1,15 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-30T09:28:03.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -16,11 +24,23 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template",
+    "lock_earlier_blocks": true,
     "level_mode": {
       "kind": "code",
+      "limitedPaintTools": true,
+      "generationLimit": 5,
       "imageType": "background",
       "imageRole": "platform-background",
-      "imageFirst": true
+      "imageFirst": true,
+      "learning": true,
+      "oneImage": true,
+      "extraTabs": [
+        "World"
+      ],
+      "paletteRoles": [
+        "treasure",
+        "block"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",
@@ -50,7 +70,14 @@
       "title": "**Set the scene**",
       "items": [
         {
-          "text": "In **Images**, click **New image** and make a background.",
+          "text": "In **Images**, select the **+** button.",
+          "check": {
+            "kind": "image",
+            "imageType": "background"
+          }
+        },
+        {
+          "text": "Make a **prompt** that describes your background, or draw it yourself.",
           "check": {
             "kind": "image",
             "imageType": "background"
@@ -66,7 +93,7 @@
         }
       ]
     },
-    "long_instructions": "# Set the scene\nIn **Images**, click **New image** and make a background. Then, in **Code**, put **set background** under **when run**.",
+    "long_instructions": "# Set the scene\r\nA **background** is the picture behind your world.",
     "header_label": "Set the scene",
     "callouts": [
       {
@@ -79,13 +106,34 @@
         }
       }
     ],
-    "preload_asset_list": null
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "game_id": 64,
-  "created_at": "2026-10-28T00:00:00.000Z",
-  "level_num": "custom",
-  "user_id": 1
+  "audit_log": "[{\"changed_at\":\"2026-11-01 17:29:48 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 18:21:45 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 18:25:07 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 18:25:11 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 18:26:07 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 18:26:25 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>

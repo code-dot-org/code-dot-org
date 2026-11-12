@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T00:45:35.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "The Raven",
+    "long_instructions": "Find n-grams in a sentence from *The Raven* by Edgar Allan Poe, where `n` can be any number you choose.\r\n\r\n**☑️ Do This:**\r\n- Complete the `get_ngrams` function. Given a list of tokens, and a value for `n` the function should return a list of n-grams.\r\n\r\n**💻 Coding Tip**\r\n\r\nA list slice like `tokens[1:4]` grabs the items from index 1 up to (but not including) index 4, and gives them back as a new list.\r\n\r\n```\r\ntokens = [\"Once\", \"upon\", \"a\", \"midnight\"]\r\nprint(tokens[1:3])    # ['upon', 'a']\r\n```\r\n\r\nAnd the `tuple` function can be used to turn a `list` into a `tuple`.\r\n\r\n```\r\ntokens = [\"Once\", \"upon\", \"a\", \"midnight\"]\r\nprint(tuple(tokens))    # ('Once', 'upon', 'a', 'midnight')\r\n```\r\n\r\nSo these can be combined to create a tuple of a slice of a list:\r\n\r\n```\r\ntokens = [\"Once\", \"upon\", \"a\", \"midnight\"]\r\nprint(tuple(tokens[1:3]))    # ('upon', 'a')\r\n```",
+    "bubble_choice_description": "Find n-grams in a sentence from *The Raven* by Edgar Allan Poe",
+    "thumbnail_url": "https://images.code.org/937bbe4c589c9b19cc42b7fd190185dc-raven.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import re\n\n\ndef get_ngrams(tokens, n):\n  ngrams = []\n  # TODO: Complete a function that returns all the n-grams in a list\n\n  return ngrams\n\n\ndef tokenize(text):\n  return re.findall(r\"\\w+\", text)\n\n\ndef main():\n  text = \"Once upon a midnight dreary, while I pondered, weak and weary\"\n\n  # Tokenize text\n  tokens = tokenize(text)\n\n  # Ask for n\n  n = int(input(\"Enter n: \"))\n\n  # Get n-grams\n  ngrams = get_ngrams(tokens, n)\n\n  # Print n-grams\n  for ngram in ngrams:\n    print(ngram)\n\n\nmain()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpKTrr49tHmlsam\ncZyUWx6SgENnZHjAbLRIV3C6MUCR2jenjAKdESVvlc+UmMi27oZ1lMNjp1T3\nD1CRnwakqKrzvBZ7s0TNmqrFvyElMUlLJdi3lp62z7SRmtyzCbBd3CXQXXAG\n+FjQ8lS4iPB1vV+jKKTC1TffpOvO4nu+nTixvMnPBBkMJGa/CzSax3VHp7ev\nXb4iww5S3VokPzJ8Uaoo4k7b76HA/93jKnyBus55+scU19xQG0QzfkgbvCFp\nE1K4N1e7nQL+gQAA7iG4Wr21iP0o45c07zAOzSyHBAnb0UivwsRWRyaoYl20\nGRVlOH/7txIMuicCYa+Zw29nqhesp3nXxvE0/VILLi81wUcRLVni/KagwH4S\n6/82W3BmorwZAHicte6NLsaYY/MneUxc3cjq24TO8n6oFed/1FTb3SfaJTZd\nz1gYLulAwtS11+d/6riVF9VYvnI1TwbW/Rmr4jKBcscC0sGaMzjEIbUcfpoF\n9Vg5qh+C0JpqlulGOX/vSjGSIDsd59LJyejZ1FikJDkn9SaMULi55GFH8zo3\n4AZlYw9LB3T5xSfSoSUHohGDBL8uHEaR9zEPhC7T32YTvO0poAlLl5rCNmVV\naXxUBk9xAxaJujqtKmnim5AE46SoRknesXpfmWqCGCvK+pCt0dePwjxFOKJF\nl7I8oitcnYuIjpa+PBlyBw74ilPMP89FNQoh4UB3LIVgh7UzJslWUVIFqaUo\na+aHYmdiu0mWnxhCu1Ju62LK513TlW4RdrQ/ryxJ3iE1/tuk53XjWXeG1q1O\nWDxVXWaZFGUFszsDSdznecJxJ9fZPeExSidy1mw=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 00:49:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:50:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 00:51:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

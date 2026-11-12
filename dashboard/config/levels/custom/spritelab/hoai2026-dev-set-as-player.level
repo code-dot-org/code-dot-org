@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-10-28T00:00:00.000Z",
+  "created_at": "2026-10-30T09:28:03.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -22,7 +22,17 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template",
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "extraTabs": [
+        "Images"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "imageKinds": [
+        "sprite"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",
@@ -34,8 +44,8 @@
       "..........",
       "..........",
       "..........",
-      ".S........",
       "..........",
+      ".S........",
       "..........",
       "..........",
       "BBBBBBBBBB"
@@ -69,7 +79,7 @@
       "title": "**Set as player**",
       "items": [
         {
-          "text": "Drag **set as player** onto the dotted outline under **when run** and pick your character.",
+          "text": "Drag the **set as player block** into the dotted outline under **when run**.",
           "check": {
             "kind": "block",
             "type": "spritelab2_setAsPlatformPlayer",
@@ -77,7 +87,7 @@
           }
         },
         {
-          "text": "Click **Play** and move with the arrow keys.",
+          "text": "Select **Run**, then use the arrow keys to run and jump.",
           "check": {
             "kind": "reach",
             "moved": true
@@ -85,8 +95,36 @@
         }
       ]
     },
-    "long_instructions": "# Set as player\nDrag **set as player** onto the dotted outline under **when run** and pick your character. Then click **Play** and move with the arrow keys.",
-    "header_label": "Set as player"
+    "long_instructions": "# Set as player\r\nA player sprite is pulled down by the world’s gravity. It runs left and right and jumps up with the arrow keys.",
+    "header_label": "Set as player",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-01 17:02:16 +0000\",\"changed\":[\"world_start_pattern\",\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:02:19 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
+  <blocks/>
 </GamelabJr>

@@ -191,7 +191,9 @@ jest.mock(
   () => ({__esModule: true, default: () => <div>Teachers Only</div>})
 );
 jest.mock('@cdo/apps/lab2/ai/ai-tutor-model-id', () => ({
-  aiTutorModelId: 'test-model-id',
+  defaultAiTutorModelId: 'test-model-id',
+  aiTutorModelParametersFor: (level?: {selectedModelId: string}) =>
+    level ?? {selectedModelId: 'test-model-id'},
 }));
 
 // ---- Helpers -------------------------------------------------------------

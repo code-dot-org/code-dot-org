@@ -106,7 +106,7 @@ export class DemoSectionCreationError extends Error {
   constructor(public errorType: 'conflict' | 'generic', message: string) {
     super(message);
     this.name = 'DemoSectionCreationError';
-    Object.setPrototypeOf(this, DemoSectionCreationError.prototype);
+    Object.setPrototypeOf(this, new.target.prototype);
   }
 }
 
@@ -437,6 +437,14 @@ const sectionSlice = createSlice({
       const {sectionId, aiChatAccessLevel} = action.payload;
 
       state.sections[sectionId].aiChatAccessLevel = aiChatAccessLevel;
+    },
+    updateSectionAiChallengeEnabled(
+      state,
+      action: PayloadAction<{sectionId: number; aiChallengeEnabled: boolean}>
+    ) {
+      const {sectionId, aiChallengeEnabled} = action.payload;
+
+      state.sections[sectionId].aiChallengeEnabled = aiChallengeEnabled;
     },
     setCourseOfferings(state, action: PayloadAction<CourseOfferingSet>) {
       state.courseOfferings = action.payload;
@@ -1094,7 +1102,7 @@ export class RosterRequestError extends Error {
 
     // Needed for TypeScript to register this class correctly in ES5
     // https://github.com/Microsoft/TypeScript/wiki/Breaking-Changes#extending-built-ins-like-error-array-and-map-may-no-longer-work
-    Object.setPrototypeOf(this, RosterRequestError.prototype);
+    Object.setPrototypeOf(this, new.target.prototype);
   }
 }
 
@@ -1417,6 +1425,7 @@ export const {
   setAvailableParticipantTypes,
   startLoadingSectionData,
   updateSectionAiChatAccessLevel,
+  updateSectionAiChallengeEnabled,
   updateSelectedSection,
   sectionHasNewData,
   sectionDoesNotHaveNewData,

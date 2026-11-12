@@ -35,6 +35,21 @@ puma_control_server_token: correct-horse-battery-staple
 
 google_maps_api_key: boguskey
 
+<%   if test_system? -%>
+db_cluster_id: !StackSecret
+db_proxy: !StackSecret
+db_endpoint_writer: !StackSecret
+db_endpoint_writer_port: !StackSecret
+db_endpoint_proxy_writer: !StackSecret
+db_endpoint_proxy_writer_port: !StackSecret
+db_endpoint_proxy_reader: !StackSecret
+db_endpoint_proxy_reader_port: !StackSecret
+db_endpoint_proxy_reporting: !StackSecret
+db_endpoint_proxy_reporting_port: !StackSecret
+db_credential_admin: !StackSecret
+db_credential_writer: !StackSecret
+db_credential_reader: !StackSecret
+<%   else -%>
 # Match values from development.yml.erb, to support running unit tests in local development environments.
 db_cluster_id: localhost
 db_proxy: none
@@ -51,6 +66,7 @@ db_credential_writer: {"username":"writer", "password":""}
 db_credential_reader: {"username":"reader", "password":""}
 
 db_writer: 'mysql://root@localhost/'
+<%   end -%>
 <% end -%>
 
 ##
@@ -95,7 +111,7 @@ statsig_api_client_key: !Secret
 statsig_api_client_key_session_replay: !Secret
 <% else %>
 statsig_server_secret_key: 'secret-fake-key'
-statsig_api_client_key: 'client-fake-key'
+statsig_api_client_key: ''
 <% end -%>
 
 # Enables DCDO settings via cookies
@@ -123,7 +139,7 @@ build_apps: true
 build_studio: true
 use_my_apps: true
 use_my_studio: true
-skip_seed_all: true
+skip_seed: true
 
 # Pass in secrets via env vars, since Drone cannot access secrets directly.
 contentful_hour_of_ai_access_token: <%= ENV['CONTENTFUL_HOUR_OF_AI_ACCESS_TOKEN'] %>
@@ -176,6 +192,9 @@ dashboard_workers: 5
 # run against these backends in CI.
 active_job_backend_n_workers_to_start: 2
 active_job_backend_rolling_restart_in_n_batches: 1
+
+# CI does not run an OpenTelemetry Collector.
+enable_opentelemetry: false
 
 ##
 ## Unit-specific settings for CI

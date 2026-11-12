@@ -1,19 +1,31 @@
 import React from 'react';
 
-import {CheckpointStatusMap} from '../../progress';
+import {CheckpointStatusMap} from '../../progress/model';
 import {Pathway} from '../../types';
 
 import DestinationsMap from './DestinationsMap';
 import {MapSettings} from './mapSettings';
 import TreeMap from './TreeMap';
 
+/**
+ * How the board fits the space it is given: whole, or across its width and
+ * as tall as that makes it.
+ */
+export type MapFit = 'whole' | 'width';
+
 /** What every map layout takes. */
 export interface MapProps {
   pathway: Pathway;
   statusMap: CheckpointStatusMap;
+  /** Share of each checkpoint's steps complete, drawn on an in-progress node. */
+  stepShares?: {[checkpointId: string]: number};
   /** Checkpoint the map is zoomed onto, if any. */
   focusId?: string;
-  onSelect: (id: string) => void;
+  /** Defaults to 'whole'. */
+  fit?: MapFit;
+  /** Leaving it out makes the map read-only. */
+  onSelect?: (id: string) => void;
+  tourFocusIds?: string[];
 }
 
 interface MapViewProps extends MapProps {

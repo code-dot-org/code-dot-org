@@ -1,0 +1,399 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-02T20:14:48.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Modify\r\nThis program paints 4 squares, but the code is pretty repetitive.\r\n\r\n**Do This:** \r\n\r\n1. Refactor the repeated `take_paint()` commands into a `while` loop that uses `is_on_bucket()` as the condition.\r\n2. Replace the four repeated painting blocks with a counting variable and a `while` loop that runs 4 times.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from neighborhood import *\n\nmove()\ntake_paint()\ntake_paint()\ntake_paint()\ntake_paint()\nmove()\nturn_left()\nturn_left()\nturn_left()\nmove()\nturn_left()\n\n# Square 1\npaint(\"white\")\nif can_move():\n    move()\nelse:\n    turn_left()\n    turn_left()\n    turn_left()\n\n# Square 2\npaint(\"white\")\nif can_move():\n    move()\nelse:\n    turn_left()\n    turn_left()\n    turn_left()\n\n# Square 3\npaint(\"white\")\nif can_move():\n    move()\nelse:\n    turn_left()\n    turn_left()\n    turn_left()\n\n# Square 4\npaint(\"white\")\nif can_move():\n    move()\nelse:\n    turn_left()\n    turn_left()\n    turn_left()",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 8,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 52
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 283
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 29
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 31
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 33
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 35
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 59
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 97
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 28
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 30
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 32
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 34
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 60
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 98
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 59
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 97
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 60
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 98
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 50
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 53
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 54
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 53
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 54
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 49
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 95
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 96
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 95
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 96
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "mini_app_variant": "functional",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "contents": "import ast\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\nclass TestModifyNeighborhood(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code and parse its structure\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        cls.painter = cls.log.painter_logs[0] if cls.log.painter_logs else None\n        with open(\"main.py\") as f:\n            cls.source = f.read()\n        cls.tree = ast.parse(cls.source)\n        cls.while_nodes = [n for n in ast.walk(cls.tree) if isinstance(n, ast.While)]\n\n    def _calls_named(self, node, name):\n        \"\"\"True if name(...) is called anywhere inside node\"\"\"\n        return any(\n            isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == name\n            for n in ast.walk(node)\n        )\n\n    def _find_loop_with_call_in_test(self, func_name):\n        for node in self.while_nodes:\n            if self._calls_named(node.test, func_name):\n                return node\n        return None\n\n    def _find_counting_loop(self):\n        \"\"\"A while loop whose condition is a numeric comparison, not is_on_bucket()\"\"\"\n        for node in self.while_nodes:\n            if isinstance(node.test, ast.Compare) and not self._calls_named(node.test, \"is_on_bucket\"):\n                return node\n        return None\n\n    # --- Refactor 1: take_paint() loop using is_on_bucket() ---\n\n    def test_uses_is_on_bucket_loop_for_take_paint(self):\n        \"\"\"Replaces the repeated take_paint() calls with a while loop using is_on_bucket()\"\"\"\n        loop = self._find_loop_with_call_in_test(\"is_on_bucket\")\n        self.assertIsNotNone(\n            loop,\n            \"We didn't find a while loop whose condition calls is_on_bucket(). Replace the four take_paint() lines with something like `while is_on_bucket(): take_paint()`.\"\n        )\n        self.assertTrue(\n            self._calls_named(loop, \"take_paint\"),\n            \"Your is_on_bucket() loop doesn't call take_paint() inside it. Make sure take_paint() is in the loop body, not just the condition.\"\n        )\n\n    # --- Refactor 2: counting loop for the 4 painting blocks ---\n\n    def test_uses_counting_loop_for_painting(self):\n        \"\"\"Replaces the four repeated painting blocks with a counting variable and a while loop\"\"\"\n        loop = self._find_counting_loop()\n        self.assertIsNotNone(\n            loop,\n            \"We didn't find a while loop with a counting condition (like `while count < 4:`). Replace the four repeated Square blocks with a counting variable and a while loop.\"\n        )\n\n        condition_vars = {n.id for n in ast.walk(loop.test) if isinstance(n, ast.Name)}\n\n        body_nodes = []\n        for stmt in loop.body:\n            body_nodes.extend(ast.walk(stmt))\n        updated_vars = set()\n        for node in body_nodes:\n            if isinstance(node, ast.Assign):\n                updated_vars |= {t.id for t in node.targets if isinstance(t, ast.Name)}\n            elif isinstance(node, ast.AugAssign) and isinstance(node.target, ast.Name):\n                updated_vars.add(node.target.id)\n        self.assertTrue(\n            condition_vars & updated_vars,\n            \"We didn't find your counting variable being updated inside the loop. Make sure you're changing the same variable you check in the while condition -- otherwise the loop runs forever or never runs.\"\n        )\n\n        loop_line = loop.lineno\n        initialized_vars = set()\n        for node in ast.walk(self.tree):\n            if getattr(node, \"lineno\", None) is not None and node.lineno < loop_line:\n                if isinstance(node, ast.Assign):\n                    initialized_vars |= {t.id for t in node.targets if isinstance(t, ast.Name)}\n                elif isinstance(node, ast.AugAssign) and isinstance(node.target, ast.Name):\n                    initialized_vars.add(node.target.id)\n        self.assertTrue(\n            condition_vars & initialized_vars,\n            \"We didn't find your counting variable being set to a starting value before the while loop. Make sure you initialize it (e.g., count = 0) above your while loop.\"\n        )\n\n        self.assertTrue(\n            self._calls_named(loop, \"paint\"),\n            \"Your counting loop doesn't call paint() inside it. Make sure the painting logic is inside the loop body.\"\n        )\n\n    # --- Functional outcome ---\n\n    def test_paints_four_squares(self):\n        \"\"\"Paints exactly 4 squares, just like the original repeated code did\"\"\"\n        if not self._find_counting_loop():\n            self.skipTest(\"Add your counting loop first -- we'll check the painted squares once it's in place.\")\n        if self.painter is None:\n            self.skipTest(\"No painter actions found yet. Make sure your program runs without errors.\")\n        self.assertEqual(\n            self.painter.action_count(\"PAINT\"),\n            4,\n            f\"Expected exactly 4 squares to be painted, but found {self.painter.action_count('PAINT')}. Check that your loop runs the right number of times and still calls paint() each pass.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-02T20:14:48.087+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson16-modify-console_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson16-modify-console_27_28\"},{\"changed_at\":\"2026-11-02 20:22:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:22:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:23:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:23:48 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-03 01:53:56 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-03 01:58:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 22:34:58 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 20:00:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

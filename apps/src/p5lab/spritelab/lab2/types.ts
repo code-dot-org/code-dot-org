@@ -3,7 +3,11 @@ import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {AddBlockEntry} from './addBlocks';
-import {ImageGenerationMetadata, ImageType} from './ai/images/types';
+import {
+  ImageGenerationMetadata,
+  ImageSubject,
+  ImageType,
+} from './ai/images/types';
 import {LevelCallout} from './callouts';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
@@ -23,6 +27,9 @@ export interface SerializedAnimationProps {
   name: string;
   sourceUrl?: string;
   frameSize: {x: number; y: number};
+  /** The size of the whole stored image: the full strip for a sheet, the
+      same as frameSize for a single-frame image. */
+  sourceSize?: {x: number; y: number};
   frameCount: number;
   looping: boolean;
   frameDelay: number;
@@ -36,6 +43,12 @@ export interface SerializedAnimationProps {
   trimmed?: boolean;
   /** What the image level that made it was for (level_mode.imageRole). */
   role?: string;
+  /** Whether a sprite is a character or an object. Stored on its own, not
+      only inside `generation`, because a hand edit clears `generation`. */
+  subject?: ImageSubject;
+  /** True once the student has drawn on the pixels; false while they are
+      exactly what the prompt produced. */
+  edited?: boolean;
   /** Present on AI-generated images. */
   generation?: ImageGenerationMetadata;
   /** Present on a character set: where each pose lives in the sheet. */
@@ -105,6 +118,9 @@ export interface StarterImage {
   pixelGridSize?: number;
 }
 
+/** A world pattern's further characters, each naming a sprite role. */
+export type WorldStartRoles = {[char: string]: string};
+
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** What kind of level this is; decides the tabs and the image controls. */
   levelMode?: LevelMode;
@@ -128,6 +144,10 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     name: string;
     source?: WorkspaceSerialization;
     worldStartPattern?: string[];
+    worldStartRoles?: WorldStartRoles;
+    /** The student can open this scene in the editor beside the pinned
+        one; Play still starts the game from the pinned scene. */
+    editable?: boolean;
   };
   /** The level's objectives (objectives.ts): the Guide's text, checklist
       and Continue gate. */
@@ -137,9 +157,21 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       the student made most recently, 'S' the image_role_defaults sprite,
       else their first character. */
   worldStartPattern?: string[];
+  /** Further pattern characters, each the newest sprite carrying a role:
+      {"F": "friend"}. 'S' and 'B' keep their own meaning. */
+  worldStartRoles?: WorldStartRoles;
+  /** Image roles the World tab keeps at least one of, in each scene:
+      ["treasure", "friend"]. The last square showing an image with one of
+      these roles can be erased or painted over only after another has been
+      placed. Unset, no role is kept this way. */
+  worldKeepsRoles?: string[];
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
+  /** Blocks built on earlier levels cannot be deleted here, in any scene
+      the level opens (blockLocks.ts). The blocks under a stack this level adds can,
+      and so can the toolbox blocks no earlier level required. */
+  lockEarlierBlocks?: boolean;
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;

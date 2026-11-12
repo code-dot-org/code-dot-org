@@ -33,7 +33,7 @@ class Foorm::Form < ApplicationRecord
 
   class InvalidFoormConfigurationError < StandardError; end
 
-  has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
+  has_many :submissions, query_constraints: [:form_name, :form_version], primary_key: [:name, :version]
 
   validate :validate_questions, :validate_published
 

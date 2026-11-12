@@ -1,11 +1,12 @@
-// The sentence as prose above, with only the words chosen so far, and one
-// slot's words at a time below in a carousel. The sentence's only blank is
-// for the set on show.
+// The sentence as prose above, with only the words chosen so far, and the
+// words to choose from below: one slot's at a time in a carousel, or every
+// open slot's in clusters down the pane. The sentence's only blank is for
+// the set on show.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {hueClass, withPeriod, WordChip, WordText} from './sentencePieces';
 import {
@@ -19,8 +20,10 @@ import {
   Word,
   WORD_DRAG_TYPE,
   wordFor,
+  withLead,
 } from './sentences';
 import {playSound} from './sentenceSounds';
+import {WordLayout} from './wordLayout';
 
 import styles from './word-menus.module.scss';
 
@@ -29,22 +32,41 @@ interface WordMenusProps {
   choices: Choices;
   onChange: (choices: Choices) => void;
   disabled?: boolean;
+  /** Defaults to 'carousel': one slot's words at a time, moving sideways. */
+  layout?: WordLayout;
+  /** A verb shown in front of the sentence, e.g. "Generate". It is not
+      part of the prompt. */
+  lead?: string;
 }
 
-// An emoji is about this many letters wide.
-const EMOJI_WIDTH_IN_LETTERS = 2;
+// An icon or a color dot is about this many letters wide.
+const ICON_WIDTH_IN_LETTERS = 2;
 const wordWidth = (w: Word) =>
-  w.text.length + (w.emoji ? EMOJI_WIDTH_IN_LETTERS : 0);
+  w.text.length + (w.icon || w.color ? ICON_WIDTH_IN_LETTERS : 0);
 
 // How many sets, in carousel order, the sentence keeps height for.
 const RESERVED_SETS = 4;
 
-const WordMenus: React.FunctionComponent<WordMenusProps> = ({
+/** The two parts a host places: the sentence line, which keeps the height
+    of its longest form, and the words to choose from. */
+export interface WordMenuParts {
+  sentence: React.ReactNode;
+  chooser: React.ReactNode;
+}
+
+export function useWordMenus({
   sentence,
   choices,
   onChange,
   disabled,
-}) => {
+  layout,
+  lead,
+}: WordMenusProps): WordMenuParts {
+  const shownSegments = lead
+    ? withLead(sentence.segments, lead)
+    : sentence.segments;
+  const clusters = layout === 'clusters';
+  const vertical = layout === 'vcarousel';
   const slots = slotsToOffer(sentence);
   const [index, setIndex] = useState(0);
   // Which way the last move went, so the new set eases in from that side.
@@ -54,6 +76,36 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   // What the last pick did, for screen readers; the sentence itself is not
   // live, since its chips carry controls.
   const [announcement, setAnnouncement] = useState('');
+  // Chips, words and word sets each play an entrance animation when they
+  // first appear. React sometimes rebuilds their elements without anything
+  // having changed, for example when starting a drawing moves this pane
+  // inside the paint tools, and a rebuilt element would play its animation
+  // again. So this remembers, by id, which entrance animations have
+  // finished, and those elements are rendered with the animation off.
+  const playedEntrances = useRef(new Set<string>());
+  const renderedIds = new Set<string>();
+  const entranceFor = (id: string) => {
+    renderedIds.add(id);
+    return {
+      played: playedEntrances.current.has(id),
+      onAnimationEnd: (e: React.AnimationEvent) => {
+        // Animation events bubble up from child elements; only this
+        // element's own animation counts.
+        if (e.target === e.currentTarget) {
+          playedEntrances.current.add(id);
+        }
+      },
+    };
+  };
+  // An id that was not rendered this time is forgotten, so that a word
+  // which is removed and later chosen again animates in again.
+  useEffect(() => {
+    playedEntrances.current.forEach(id => {
+      if (!renderedIds.has(id)) {
+        playedEntrances.current.delete(id);
+      }
+    });
+  });
   const slot = slots[Math.min(index, slots.length - 1)];
   const show = (next: number) => {
     setDirection(next < index ? 'left' : 'right');
@@ -148,8 +200,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     (last, s, i) => (isAvailable(s) ? i : last),
     0
   );
-  // With one set to show, there is nowhere to go: no arrows, no dots.
-  const oneSet = lastAvailable === 0;
   // If the set on show becomes unavailable, move to the last available one.
   useEffect(() => {
     if (index > lastAvailable) {
@@ -157,6 +207,15 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
       setIndex(lastAvailable);
     }
   }, [index, lastAvailable]);
+  // Clusters show every open set at once, so the sentence's blank stands
+  // at the first set still without a word.
+  const firstOpen = slots.findIndex(s => isAvailable(s) && !filled(s.id));
+  const clusterIndex = firstOpen >= 0 ? firstOpen : lastAvailable;
+  useEffect(() => {
+    if (clusters) {
+      setIndex(clusterIndex);
+    }
+  }, [clusters, clusterIndex]);
 
   const mentions = (segments: Segment[], slotId: string): boolean =>
     segments.some(
@@ -207,6 +266,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
               ]
             : [];
         }
+        const chipEntrance = entranceFor(`chip:${s.id}-${word.id}`);
         return [
           <WordChip
             // Keyed by word too, so a changed word remounts and replays the
@@ -214,10 +274,14 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             key={`${s.id}-${word.id}`}
             sentence={sentence}
             slotId={s.id}
-            className={classNames(overSlotId === s.id && styles.dropTarget)}
+            className={classNames(
+              overSlotId === s.id && styles.dropTarget,
+              chipEntrance.played && styles.entrancePlayed
+            )}
+            onAnimationEnd={chipEntrance.onAnimationEnd}
             {...dropHandlers(s.id)}
           >
-            {disabled || !canMove || !isAvailable(s) ? (
+            {disabled || !canMove || !isAvailable(s) || clusters ? (
               <span className={styles.chipWord}>
                 <WordText word={word} />
               </span>
@@ -253,136 +317,193 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
         : [];
     });
 
-  return (
-    <div className={styles.menus}>
-      {/* A hidden longest form shares the cell, so the height holds. */}
-      <div className={styles.srOnly} role="status">
-        {announcement}
-      </div>
-      <div className={styles.sentenceStack}>
-        <p className={styles.sentence}>
-          {withPeriod(renderSegments(sentence.segments, choices))}
-        </p>
-        <p
-          className={classNames(styles.sentence, styles.sentenceGhost)}
-          aria-hidden
+  // `setKey` is part of each word's entrance id. The carousel gives a set a
+  // new key every time it comes into view, so the set's words animate in
+  // again on each visit.
+  const renderWords = (set: Slot, setKey = set.id) =>
+    set.words.map((word, wordIndex) => {
+      const chosen = choices[set.id] === word.id;
+      const wordEntrance = entranceFor(`word:${setKey}-${word.id}`);
+      return (
+        <button
+          key={word.id}
+          type="button"
+          className={classNames(
+            styles.word,
+            hueClass(sentence, set.id),
+            chosen && styles.chosen,
+            wordEntrance.played && styles.entrancePlayed
+          )}
+          style={{'--i': wordIndex} as React.CSSProperties}
+          onAnimationEnd={wordEntrance.onAnimationEnd}
+          aria-pressed={chosen}
+          disabled={disabled}
+          draggable={!disabled}
+          onDragStart={e => {
+            e.dataTransfer.setData(
+              WORD_DRAG_TYPE,
+              JSON.stringify({slot: set.id, word: word.id})
+            );
+            e.dataTransfer.effectAllowed = 'copy';
+          }}
+          onClick={() => choose(set.id, chosen ? undefined : word.id)}
         >
-          {withPeriod(renderSegments(sentence.segments, longestChoices))}
-        </p>
-      </div>
-      <div className={styles.carouselBox}>
-        <div className={styles.carousel}>
-          <MuiIconButton
-            variant="text"
-            color="tertiary"
-            size="medium"
-            className={classNames(styles.arrow, oneSet && styles.navHidden)}
-            aria-label="Previous words"
-            disabled={!canMove || index === 0}
-            onClick={() => goTo(Math.max(0, index - 1))}
-          >
-            <FontAwesomeV6Icon iconName="chevron-left" aria-hidden />
-          </MuiIconButton>
-          {/* Every set is laid out in one cell; only the one on show is
-              visible. */}
-          <div className={styles.sets}>
-            {slots.map((set, i) => {
-              const shown = i === index;
-              return (
-                <div
-                  // Remounted on each arrival so the entrance replays.
-                  key={shown ? `${set.id}-${moveCount}` : set.id}
-                  className={classNames(
-                    styles.set,
-                    !shown && styles.setHidden,
-                    shown &&
-                      (direction === 'left'
-                        ? styles.enterFromLeft
-                        : styles.enterFromRight)
-                  )}
-                  role="group"
-                  aria-label={`${set.label}${
-                    set.required ? ' (pick one)' : ''
-                  }`}
-                  aria-hidden={!shown}
-                >
-                  <div className={styles.words}>
-                    {set.words.map((word, wordIndex) => {
-                      const chosen = choices[set.id] === word.id;
-                      return (
-                        <button
-                          key={word.id}
-                          type="button"
-                          className={classNames(
-                            styles.word,
-                            hueClass(sentence, set.id),
-                            chosen && styles.chosen
-                          )}
-                          style={{'--i': wordIndex} as React.CSSProperties}
-                          aria-pressed={chosen}
-                          disabled={disabled}
-                          draggable={!disabled}
-                          onDragStart={e => {
-                            e.dataTransfer.setData(
-                              WORD_DRAG_TYPE,
-                              JSON.stringify({slot: set.id, word: word.id})
-                            );
-                            e.dataTransfer.effectAllowed = 'copy';
-                          }}
-                          onClick={() =>
-                            choose(set.id, chosen ? undefined : word.id)
-                          }
-                        >
-                          <WordText word={word} />
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <MuiIconButton
-            variant="text"
-            color="tertiary"
-            size="medium"
-            className={classNames(styles.arrow, oneSet && styles.navHidden)}
-            aria-label="Next words"
-            disabled={!canMove || index >= lastAvailable}
-            onClick={() => goTo(Math.min(lastAvailable, index + 1))}
-          >
-            <FontAwesomeV6Icon iconName="chevron-right" aria-hidden />
-          </MuiIconButton>
+          <WordText word={word} />
+        </button>
+      );
+    });
+
+  // The kind of word a set holds, above its words. It is hidden from
+  // screen readers because the group around the words is already named for
+  // the set.
+  const wordsHeading = (set: Slot) =>
+    set.heading && (
+      <p className={styles.wordsHeading} aria-hidden>
+        {set.heading}
+      </p>
+    );
+
+  const clustersNode = (
+    <div className={styles.clusters}>
+      {slots.map(
+        set =>
+          isAvailable(set) && (
+            <div
+              key={set.id}
+              role="group"
+              aria-label={`${set.label}${set.required ? ' (pick one)' : ''}`}
+              className={styles.cluster}
+            >
+              {wordsHeading(set)}
+              <div className={styles.words}>{renderWords(set)}</div>
+            </div>
+          )
+      )}
+    </div>
+  );
+
+  return {
+    sentence: (
+      <>
+        {/* A hidden longest form shares the cell, so the height holds. */}
+        <div className={styles.srOnly} role="status">
+          {announcement}
         </div>
-        <div className={styles.dotsRow}>
-          <div className={classNames(styles.dots, oneSet && styles.navHidden)}>
-            {slots.map((s, i) =>
-              isAvailable(s) ? (
-                <button
-                  key={s.id}
-                  type="button"
-                  className={classNames(
-                    styles.dot,
-                    hueClass(sentence, s.id),
-                    i === index && styles.dotCurrent,
-                    filled(s.id) && styles.dotFilled
-                  )}
-                  aria-label={`${s.label} words${
-                    filled(s.id)
-                      ? `, ${
-                          wordFor(sentence, s.id, choices[s.id])?.text
-                        } chosen`
-                      : ''
-                  }`}
-                  aria-current={i === index ? 'true' : undefined}
-                  disabled={!canMove}
-                  onClick={() => goTo(i)}
-                />
-              ) : null
+        <div className={styles.sentenceStack}>
+          <p className={styles.sentence}>
+            {withPeriod(renderSegments(shownSegments, choices))}
+          </p>
+          <p
+            className={classNames(styles.sentence, styles.sentenceGhost)}
+            aria-hidden
+          >
+            {withPeriod(renderSegments(shownSegments, longestChoices))}
+          </p>
+        </div>
+      </>
+    ),
+    chooser: (
+      <>
+        {clusters ? (
+          clustersNode
+        ) : (
+          <div
+            className={classNames(
+              styles.carouselBox,
+              layout === 'carousel' && styles.carouselTight
             )}
+          >
+            <div
+              className={classNames(
+                styles.carousel,
+                vertical && styles.carouselVertical
+              )}
+            >
+              <MuiIconButton
+                variant="text"
+                color="tertiary"
+                size="medium"
+                className={styles.arrow}
+                aria-label="Previous words"
+                disabled={!canMove || index === 0}
+                onClick={() => goTo(Math.max(0, index - 1))}
+              >
+                <FontAwesomeV6Icon
+                  iconName={vertical ? 'chevron-up' : 'chevron-left'}
+                  aria-hidden
+                />
+              </MuiIconButton>
+              {/* Every set is laid out in one cell; only the one on show is
+              visible. */}
+              <div className={styles.sets}>
+                {slots.map((set, i) => {
+                  const inView = i === index;
+                  // The set in view gets a new key each time the carousel
+                  // moves, so React rebuilds it and its slide-in animation
+                  // plays again.
+                  const key = inView ? `${set.id}-${moveCount}` : set.id;
+                  const setEntrance = entranceFor(`set:${key}`);
+                  return (
+                    <div
+                      key={key}
+                      className={classNames(
+                        styles.set,
+                        !inView && styles.setHidden,
+                        inView &&
+                          (direction === 'left'
+                            ? styles.enterFromLeft
+                            : styles.enterFromRight),
+                        setEntrance.played && styles.entrancePlayed
+                      )}
+                      onAnimationEnd={setEntrance.onAnimationEnd}
+                      role="group"
+                      aria-label={`${set.label}${
+                        set.required ? ' (pick one)' : ''
+                      }`}
+                      aria-hidden={!inView}
+                    >
+                      {wordsHeading(set)}
+                      <div className={styles.words}>
+                        {renderWords(set, key)}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <MuiIconButton
+                variant="text"
+                color="tertiary"
+                size="medium"
+                className={styles.arrow}
+                aria-label="Next words"
+                disabled={!canMove || index >= lastAvailable}
+                onClick={() => goTo(Math.min(lastAvailable, index + 1))}
+              >
+                <FontAwesomeV6Icon
+                  iconName={vertical ? 'chevron-down' : 'chevron-right'}
+                  aria-hidden
+                />
+              </MuiIconButton>
+            </div>
           </div>
-        </div>
-      </div>
+        )}
+      </>
+    ),
+  };
+}
+
+/** The sentence over its words, as one block. */
+const WordMenus: React.FunctionComponent<WordMenusProps> = props => {
+  const parts = useWordMenus(props);
+  return (
+    <div
+      className={classNames(
+        styles.menus,
+        props.layout !== 'clusters' && styles.menusFill
+      )}
+    >
+      {parts.sentence}
+      {parts.chooser}
     </div>
   );
 };

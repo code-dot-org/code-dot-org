@@ -1,0 +1,348 @@
+import {act, fireEvent, render, screen} from '@testing-library/react';
+import React from 'react';
+
+import {Pathway} from '@cdo/apps/adaptive/types';
+import MapScreen from '@cdo/apps/adaptive/views/MapScreen';
+import {SKILL_MAP_TOUR_STORAGE_KEY} from '@cdo/apps/adaptive/views/skillMapTourHelpers';
+import DCDO from '@cdo/apps/dcdo';
+
+// Stub intro.js-react's Steps as a controllable component.
+// - "advance" / "back" fire onBeforeChange + onChange so MapScreen's tourStep
+//   state stays in sync.
+// - ref exposes introJs.nextStep, which the onSelect handler calls when the
+//   user picks a checkpoint during step 1.
+jest.mock('intro.js-react', () => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const Steps = React.forwardRef(function MockSteps(props: any, ref: any) {
+    const propsRef = React.useRef(props);
+    propsRef.current = props;
+    const stepRef = React.useRef(0);
+
+    React.useImperativeHandle(ref, () => ({
+      introJs: {
+        refresh: jest.fn(),
+        nextStep: () => {
+          const next = stepRef.current + 1;
+          propsRef.current.onBeforeChange?.(next);
+          stepRef.current = next;
+          propsRef.current.onChange?.(next);
+        },
+      },
+    }));
+
+    if (!props.enabled) return null;
+
+    const advance = (nextStep: number) => {
+      props.onBeforeChange?.(nextStep);
+      stepRef.current = nextStep;
+      props.onChange?.(nextStep);
+    };
+
+    return (
+      <div role="dialog" aria-label="tour">
+        <button type="button" onClick={() => advance(stepRef.current + 1)}>
+          advance
+        </button>
+        <button type="button" onClick={() => advance(0)}>
+          back
+        </button>
+        <button type="button" onClick={props.onExit}>
+          exit
+        </button>
+        <button type="button" onClick={props.onComplete}>
+          done
+        </button>
+      </div>
+    );
+  });
+  return {Steps};
+});
+
+jest.mock('@cdo/apps/adaptive/project/usePathwayProject', () => ({
+  usePathwayProject: () => ({isLoading: false}),
+}));
+
+// MapView mock exposes onSelect so tests can simulate a checkpoint click.
+jest.mock('@cdo/apps/adaptive/views/map/MapView', () => ({
+  __esModule: true,
+  default: ({onSelect}: {onSelect?: (id: string) => void}) => (
+    <div aria-label="map">
+      <button type="button" onClick={() => onSelect?.('cp-1')}>
+        select cp-1
+      </button>
+      <button type="button" onClick={() => onSelect?.('cp-2')}>
+        select cp-2
+      </button>
+    </div>
+  ),
+}));
+
+const mockHideStats = false;
+jest.mock('@cdo/apps/adaptive/views/map/mapSettings', () => ({
+  resolveMapSettings: () => ({hideStats: mockHideStats}),
+}));
+jest.mock('@cdo/apps/lab2/hooks/useThemeSetting', () => ({
+  __esModule: true,
+  default: () => ({
+    id: 'theme',
+    label: 'Theme',
+    options: [],
+    selectedValue: 'Light',
+    onChange: jest.fn(),
+  }),
+}));
+jest.mock('@cdo/apps/dcdo', () => ({
+  __esModule: true,
+  default: {
+    get: jest.fn((_key: string, defaultValue: unknown) => defaultValue),
+  },
+}));
+
+jest.mock('@cdo/apps/lab2/views/components/Instructions/ResourcePanel', () => ({
+  __esModule: true,
+  default: ({
+    sidebarOnly,
+    settings,
+  }: {
+    sidebarOnly?: boolean;
+    settings?: {id: string}[];
+  }) => (
+    <div>
+      resource rail{sidebarOnly ? ' (sidebar only)' : ''}: settings{' '}
+      {settings?.map(s => s.id).join(',')}
+    </div>
+  ),
+}));
+
+const step = (id: string) => ({
+  id,
+  title: id,
+  kind: 'panels' as const,
+  panels: [{key: `${id}-panel`, imageUrl: 'x.png', text: id}],
+});
+
+const pathway: Pathway = {
+  formatVersion: 4,
+  id: 'tour-test',
+  title: 'Tour Pathway',
+  objective: 'Learn.',
+  project: {templateLevel: 'tmpl', description: 'A project.'},
+  skills: {},
+  checkpoints: [
+    {
+      id: 'cp-1',
+      title: 'First Checkpoint',
+      description: 'Start here.',
+      steps: [step('cp-1-a')],
+    },
+    {
+      id: 'cp-2',
+      title: 'Second Checkpoint',
+      description: 'Next.',
+      requires: ['cp-1'],
+      steps: [step('cp-2-a')],
+    },
+  ],
+};
+
+const statusMap = {
+  'cp-1': 'available' as const,
+  'cp-2': 'locked' as const,
+};
+
+function renderMapScreen(
+  overrides: Partial<React.ComponentProps<typeof MapScreen>> = {}
+) {
+  return render(
+    <MapScreen
+      pathway={pathway}
+      levelProperties={{id: 1, name: 'adaptive', appName: 'adaptive'}}
+      statusMap={statusMap}
+      evidence={{}}
+      onFocus={jest.fn()}
+      onStart={jest.fn()}
+      hasSkippedCheckpoints={false}
+      {...overrides}
+    />
+  );
+}
+
+describe('MapScreen tour', () => {
+  afterEach(() => {
+    localStorage.clear();
+    document.body.classList.remove(
+      'adaptive-tour-step-select',
+      'adaptive-tour-no-next'
+    );
+  });
+
+  it('shows the tour when the storage key is absent', () => {
+    renderMapScreen();
+    expect(screen.getByRole('dialog', {name: 'tour'})).toBeTruthy();
+  });
+
+  it('hides the tour when the storage key is already set', () => {
+    localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
+    renderMapScreen();
+    expect(screen.queryByRole('dialog', {name: 'tour'})).toBeNull();
+  });
+
+  it('dismisses the tour and writes the storage key on exit', () => {
+    renderMapScreen();
+    act(() => {
+      fireEvent.click(screen.getByText('exit'));
+    });
+    expect(screen.queryByRole('dialog', {name: 'tour'})).toBeNull();
+    expect(localStorage.getItem(SKILL_MAP_TOUR_STORAGE_KEY)).toBe('1');
+  });
+
+  it('dismisses the tour and writes the storage key on complete', () => {
+    renderMapScreen();
+    act(() => {
+      fireEvent.click(screen.getByText('done'));
+    });
+    expect(screen.queryByRole('dialog', {name: 'tour'})).toBeNull();
+    expect(localStorage.getItem(SKILL_MAP_TOUR_STORAGE_KEY)).toBe('1');
+  });
+
+  describe('step transitions', () => {
+    it('shows "Select a checkpoint" prompt before any interaction', () => {
+      renderMapScreen();
+      expect(screen.getByText('Select a checkpoint')).toBeTruthy();
+      expect(screen.queryByText('First Checkpoint')).toBeNull();
+    });
+
+    it('shows CheckpointCard after the user selects a checkpoint on the map', () => {
+      renderMapScreen();
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 1
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 2 (pick checkpoint)
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-1'));
+      });
+      expect(screen.getByText('First Checkpoint')).toBeTruthy();
+      expect(screen.queryByText('Select a checkpoint')).toBeNull();
+    });
+
+    it('ignores map clicks on locked checkpoints during the select step', () => {
+      renderMapScreen();
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 1
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 2 (pick checkpoint)
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-2')); // cp-2 is locked
+      });
+      expect(screen.queryByText('Second Checkpoint')).toBeNull();
+      expect(screen.getByText('Select a checkpoint')).toBeTruthy();
+    });
+
+    it('shows the prompt again when navigating back to step 1', () => {
+      renderMapScreen();
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 1
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 2 (pick checkpoint)
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-1')); // → step 3 (sidebar)
+      });
+      expect(screen.getByText('First Checkpoint')).toBeTruthy();
+      act(() => {
+        fireEvent.click(screen.getByText('back')); // → step 0 (clears tour checkpoint)
+      });
+      expect(screen.queryByText('First Checkpoint')).toBeNull();
+      expect(screen.getByText('Select a checkpoint')).toBeTruthy();
+    });
+
+    it('sets body classes correctly across step transitions', () => {
+      renderMapScreen();
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 1
+      });
+      expect(
+        document.body.classList.contains('adaptive-tour-step-select')
+      ).toBe(false);
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 2 (pick checkpoint)
+      });
+      expect(
+        document.body.classList.contains('adaptive-tour-step-select')
+      ).toBe(true);
+      expect(document.body.classList.contains('adaptive-tour-no-next')).toBe(
+        false
+      );
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-1')); // → step 3 (sidebar) via nextStep
+      });
+      expect(
+        document.body.classList.contains('adaptive-tour-step-select')
+      ).toBe(false);
+      expect(document.body.classList.contains('adaptive-tour-no-next')).toBe(
+        true
+      );
+    });
+
+    it('dismisses the tour when the Start button is clicked', () => {
+      renderMapScreen();
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 1
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // → step 2 (pick checkpoint)
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-1')); // → step 3 (sidebar)
+      });
+      act(() => {
+        fireEvent.click(screen.getByRole('button', {name: 'Start'}));
+      });
+      expect(screen.queryByRole('dialog', {name: 'tour'})).toBeNull();
+      expect(localStorage.getItem(SKILL_MAP_TOUR_STORAGE_KEY)).toBe('1');
+    });
+  });
+
+  describe('with hasSkippedCheckpoints', () => {
+    it('does not affect the tour visibility itself', () => {
+      renderMapScreen({hasSkippedCheckpoints: true});
+      expect(screen.getByRole('dialog', {name: 'tour'})).toBeTruthy();
+    });
+  });
+
+  describe('DCDO flag', () => {
+    afterEach(() => {
+      (DCDO.get as jest.Mock).mockImplementation(
+        (_key: string, defaultValue: unknown) => defaultValue
+      );
+    });
+
+    it('hides the tour when adaptive-skill-map-tour-enabled is false', () => {
+      (DCDO.get as jest.Mock).mockReturnValue(false);
+      renderMapScreen();
+      expect(screen.queryByRole('dialog', {name: 'tour'})).toBeNull();
+    });
+
+    it('shows the tour when adaptive-skill-map-tour-enabled is true', () => {
+      (DCDO.get as jest.Mock).mockReturnValue(true);
+      renderMapScreen();
+      expect(screen.getByRole('dialog', {name: 'tour'})).toBeTruthy();
+    });
+  });
+});
+
+describe('MapScreen resource rail', () => {
+  it("shows the labs' rail beside the map with the theme setting", () => {
+    localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
+    renderMapScreen();
+    expect(
+      screen.getByText('resource rail (sidebar only): settings theme')
+    ).toBeTruthy();
+    localStorage.clear();
+  });
+});

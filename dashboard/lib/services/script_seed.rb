@@ -20,7 +20,7 @@ module Services
       :script_levels, :levels_script_levels, :levels,
       :resources, :lessons_resources, :scripts_resources, :scripts_student_resources,
       :vocabularies, :lessons_vocabularies, :programming_environments,
-      :programming_expressions, :lessons_programming_expressions, :objectives, :frameworks,
+      :programming_expressions, :lessons_programming_expressions, :objectives, :objectives_script_levels, :frameworks,
       :standards, :lessons_standards, :lessons_opportunity_standards, :rubrics, :learning_goals, :learning_goal_evidence_levels,
       :jit_pl_concepts, :jit_pl_concepts_lessons, keyword_init: true
     )
@@ -110,6 +110,8 @@ module Services
         jit_pl_concepts: jit_pl_concepts,
         jit_pl_concepts_lessons: jit_pl_concepts_lessons,
       )
+      objectives_script_levels = objectives.flat_map(&:objectives_script_levels).
+        sort_by {|osl| osl.seeding_key(seed_context, use_existing_level_keys: false).to_json}
       scope = {seed_context: seed_context}
 
       data = {
@@ -128,6 +130,7 @@ module Services
         lessons_vocabularies: lessons_vocabularies.map {|lv| ScriptSeed::LessonsVocabularySerializer.new(lv, scope: scope).as_json},
         lessons_programming_expressions: lessons_programming_expressions.map {|lpe| ScriptSeed::LessonsProgrammingExpressionSerializer.new(lpe, scope: scope).as_json},
         objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json},
+        objectives_script_levels: objectives_script_levels.map {|osl| ScriptSeed::ObjectivesScriptLevelSerializer.new(osl, scope: scope).as_json},
         lessons_standards: lessons_standards.map {|ls| ScriptSeed::LessonsStandardSerializer.new(ls, scope: scope).as_json},
         lessons_opportunity_standards: lessons_opportunity_standards.map {|ls| ScriptSeed::LessonsOpportunityStandardSerializer.new(ls, scope: scope).as_json},
         jit_pl_concepts_lessons: jit_pl_concepts_lessons.map {|jcl| ScriptSeed::JitPlConceptsLessonSerializer.new(jcl, scope: scope).as_json},
@@ -271,6 +274,7 @@ module Services
         seed_context.programming_expressions = ProgrammingExpression.all
         seed_context.lessons_programming_expressions = import_lessons_programming_expressions(lessons_programming_expressions_data, seed_context)
         seed_context.objectives = import_objectives(objectives_data, seed_context)
+        seed_context.objectives_script_levels = import_objectives_script_levels(data['objectives_script_levels'], seed_context)
         seed_context.frameworks = Framework.all
         seed_context.standards = Standard.all
         seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
@@ -666,7 +670,32 @@ module Services
       # Delete any existing Objectives that weren't in the imported list, and return those remaining.
       existing_objectives = Objective.joins(:lesson).where('stages.script_id' => seed_context.script.id)
       Objective.import! objectives_to_import, on_duplicate_key_update: get_columns(Objective)
-      destroy_outdated_objects(Objective, existing_objectives, objectives_to_import, seed_context)
+      destroy_outdated_objects(Objective, existing_objectives, objectives_to_import, seed_context) || []
+    end
+
+    def self.import_objectives_script_levels(objectives_script_levels_data, seed_context)
+      existing_objectives_script_levels = ObjectivesScriptLevel.where(script_level_id: seed_context.script_levels.map(&:id))
+      return existing_objectives_script_levels if objectives_script_levels_data.nil?
+
+      objectives_by_key = seed_context.objectives.index_by(&:key)
+      script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
+
+      objectives_script_levels_to_import = objectives_script_levels_data.map do |osl_data|
+        objective_key = osl_data['seeding_key']['objective.key']
+        objective = objectives_by_key[objective_key]
+        raise "No objective found: #{objective_key}" if objective.nil?
+
+        script_level = script_levels_by_seeding_key[osl_data['seeding_key'].except('objective.key')]
+        raise "No ScriptLevel found for objective #{objective_key} while seeding script: #{seed_context.script.name}" if script_level.nil?
+        raise "Objective #{objective_key} is tagged to a level outside its lesson" unless objective.lesson_id == script_level.stage_id
+
+        ObjectivesScriptLevel.new(objective_id: objective.id, script_level_id: script_level.id)
+      end
+
+      # Without an id column, destroy_outdated_objects can't target individual rows, so replace them all.
+      existing_objectives_script_levels.delete_all
+      ObjectivesScriptLevel.import! objectives_script_levels_to_import
+      ObjectivesScriptLevel.where(script_level_id: seed_context.script_levels.map(&:id))
     end
 
     def self.import_lessons_standards(lessons_standards_data, seed_context)
@@ -1027,6 +1056,14 @@ module Services
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class ObjectivesScriptLevelSerializer < ActiveModel::Serializer
+      attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context], use_existing_level_keys: false)
       end
     end
 

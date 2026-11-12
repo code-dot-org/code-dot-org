@@ -14,10 +14,22 @@ export type CheckpointStatus =
   /** Demonstrated by the student's evidence and skippable, so passed without being played. */
   | 'skipped';
 
+export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
+  locked: 'Locked',
+  available: 'Ready to start',
+  inProgress: 'In progress',
+  complete: 'Complete',
+  skipped: 'Skipped',
+};
+
 /** Each checkpoint's status, by checkpoint id. */
 export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 
-/** One submitted answer. isCorrect is absent for a survey question; text is set for free-response questions. */
+/**
+ * One submitted answer. isCorrect is absent for a survey question; text is
+ * set for a free response question and for a typed answer to a multiple
+ * choice question, whose answerId is then OTHER_CHOICE_ID.
+ */
 export interface Answer {
   answerId: string;
   isCorrect?: boolean;
@@ -65,6 +77,18 @@ export function latestValidation(
   return history?.[history.length - 1];
 }
 
+/** Failed checks after which Continue opens anyway, since the judge can be wrong. */
+export const FAILED_VALIDATIONS_TO_CONTINUE = 3;
+
+/** Whether a checked step's work lets the student continue past it. */
+export function validationAllowsContinue(
+  entry: StepProgress | undefined
+): boolean {
+  const history = entry?.validationHistory ?? [];
+  if (history.some(attempt => attempt.pass)) return true;
+  return history.length >= FAILED_VALIDATIONS_TO_CONTINUE;
+}
+
 /** Id of the project screen's step, which records no progress. */
 export const PROJECT_STEP_ID = 'project';
 
@@ -89,21 +113,55 @@ export interface Progress {
 export const EMPTY_PROGRESS: Progress = {steps: {}};
 
 /**
- * The step id to resume in a checkpoint: the first step that is not yet
- * complete. Returns undefined when all steps are complete.
+ * The checkpoint's steps the student plays: every step without a showIf,
+ * and a step with one only while its choice is the latest answer.
+ */
+export function visibleSteps(checkpoint: Checkpoint, progress: Progress) {
+  return checkpoint.steps.filter(step => {
+    if (!step.showIf) return true;
+    const {stepId, questionId, choiceId} = step.showIf;
+    const latest = progress.steps[stepId]?.answers?.[questionId]?.at(-1);
+    return latest?.answerId === choiceId;
+  });
+}
+
+/**
+ * The step id to resume in a checkpoint: the first visible step that is not
+ * yet complete. Returns undefined when all steps are complete.
  */
 export function stepIdToResume(
   checkpoint: Checkpoint,
   progress: Progress
 ): string | undefined {
-  return checkpoint.steps.find(
+  return visibleSteps(checkpoint, progress).find(
     step => progress.steps[step.id]?.status !== 'complete'
   )?.id;
 }
 
-/** Whether the student finished the checkpoint: its last step is complete. */
+/** Seconds the student has spent on steps, over every step with progress. */
+export function totalTimeSpent(progress: Progress): number {
+  return Object.values(progress.steps).reduce(
+    (sum, step) => sum + (step.timeSpent ?? 0),
+    0
+  );
+}
+
+/** The share of the checkpoint's visible steps that are complete, 0 to 1. */
+export function stepsCompleteShare(
+  checkpoint: Checkpoint,
+  progress: Progress
+): number {
+  const steps = visibleSteps(checkpoint, progress);
+  if (steps.length === 0) return 0;
+  const done = steps.filter(
+    step => progress.steps[step.id]?.status === 'complete'
+  ).length;
+  return done / steps.length;
+}
+
+/** Whether the student finished the checkpoint: its last visible step is complete. */
 export const isComplete = (checkpoint: Checkpoint, progress: Progress) => {
-  const last = checkpoint.steps[checkpoint.steps.length - 1];
+  const last = visibleSteps(checkpoint, progress).at(-1);
   return !!last && progress.steps[last.id]?.status === 'complete';
 };
 

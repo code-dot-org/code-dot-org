@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-02T20:13:22.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Investigate & Modify\r\n\r\nThis program checks whether each number from 2 to 5 is even or odd — but the same `if/else` block is copy-pasted four times.\r\n\r\n**Do This:** \r\n\r\nReplace the repetition with a `while` loop.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "num = 2\nif num % 2 == 0:\n    print(str(num) + \" is even\")\nelse:\n    print(str(num) + \" is odd\")\n\nnum = 3\nif num % 2 == 0:\n    print(str(num) + \" is even\")\nelse:\n    print(str(num) + \" is odd\")\n\nnum = 4\nif num % 2 == 0:\n    print(str(num) + \" is even\")\nelse:\n    print(str(num) + \" is odd\")\n\nnum = 5\nif num % 2 == 0:\n    print(str(num) + \" is even\")\nelse:\n    print(str(num) + \" is odd\")\n\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpRsU8obaBSHDOs\nnNz503XTOuopefr0tKl4a9Rfz2tLq8v6t3s1LuJZ03Jdy2wTHRzmYMR4ZznS\nE9H0uf2MzNqxT6Tkm2wTZbFXuliCDk/SgrYdzEsMgPkCpxs3gy1x3JYbG43r\nnMfIEsTIe/4XAEAbT2SCJTgnIEsmC5Da5s4+iG3yOnL6q9AhF83iDMbqIARB\n3+PiXdVnMICQmmrWwTouNpTXQ3NlTtAJOJfxObpn+uop9duti4prT5HcnEHu\nCRwJ+usU7kS7HrbP+2Jp0td2rSaw74r+tsZ6jbPxpwnP4w7zhjVLKeXJ8yio\nklFn92w=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import ast\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\nclass TestInvestigateModify(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code and parse its structure\"\"\"\n        cls.stdout = ValidationProtocol().get_stdout_logs()\n        with open(\"main.py\") as f:\n            cls.source = f.read()\n        cls.tree = ast.parse(cls.source)\n        cls.while_nodes = [n for n in ast.walk(cls.tree) if isinstance(n, ast.While)]\n\n    def test_uses_while_loop(self):\n        \"\"\"Uses a while loop instead of repeating the if/else block\"\"\"\n        self.assertTrue(\n            self.while_nodes,\n            \"We didn't find a while loop in your code. Replace the repeated if/else blocks with a single while loop.\"\n        )\n\n    def test_while_loop_has_required_parts(self):\n        \"\"\"The while loop has a starting value, a condition, and an update\"\"\"\n        if not self.while_nodes:\n            self.skipTest(\"No while loop found yet -- add one before checking its parts.\")\n\n        while_node = self.while_nodes[0]\n\n        condition = while_node.test\n        condition_vars = {n.id for n in ast.walk(condition) if isinstance(n, ast.Name)}\n        self.assertTrue(\n            isinstance(condition, ast.Compare) and condition_vars,\n            \"Your while loop's condition should compare a variable to a value, like `while num <= 5:`. Check what you wrote after `while`.\"\n        )\n\n        body_nodes = []\n        for stmt in while_node.body:\n            body_nodes.extend(ast.walk(stmt))\n        updated_vars = set()\n        for node in body_nodes:\n            if isinstance(node, ast.Assign):\n                updated_vars |= {t.id for t in node.targets if isinstance(t, ast.Name)}\n            elif isinstance(node, ast.AugAssign) and isinstance(node.target, ast.Name):\n                updated_vars.add(node.target.id)\n        self.assertTrue(\n            condition_vars & updated_vars,\n            \"We didn't find the loop's condition variable being updated inside the loop. Make sure you're changing the same variable you check in the while condition (e.g., num = num + 1) -- otherwise the loop runs forever or never runs.\"\n        )\n\n        loop_line = while_node.lineno\n        initialized_vars = set()\n        for node in ast.walk(self.tree):\n            if getattr(node, \"lineno\", None) is not None and node.lineno < loop_line:\n                if isinstance(node, ast.Assign):\n                    initialized_vars |= {t.id for t in node.targets if isinstance(t, ast.Name)}\n                elif isinstance(node, ast.AugAssign) and isinstance(node.target, ast.Name):\n                    initialized_vars.add(node.target.id)\n        self.assertTrue(\n            condition_vars & initialized_vars,\n            \"We didn't find your loop's variable being set to a starting value before the while loop. Make sure you initialize it (e.g., num = 2) above your while loop.\"\n        )\n\n    def test_prints_even_odd_for_each_number(self):\n        \"\"\"Prints whether each number from 2 to 5 is even or odd\"\"\"\n        if not self.while_nodes:\n            self.skipTest(\"Add your while loop first -- we'll check the output once the loop is in place.\")\n        if not self.stdout:\n            self.skipTest(\"Nothing printed at all. Make sure your loop still prints a result for each number.\")\n        expected = [\"2 is even\", \"3 is odd\", \"4 is even\", \"5 is odd\"]\n        self.assertEqual(\n            self.stdout,\n            expected,\n            f\"Expected to see whether 2, 3, 4, and 5 are each even or odd, in that order -- but we got {self.stdout}. \"\n            \"Check your loop's starting value, ending condition, and that num is updating each pass.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-02T20:13:22.031+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson16-modify-theater_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson16-modify-theater_27_28\"},{\"changed_at\":\"2026-11-02 20:13:36 +0000\",\"changed\":[\"long_instructions\",\"mini_app\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:13:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:14:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:14:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 22:34:41 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 18:03:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 18:03:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 18:03:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 18:03:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 19:57:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

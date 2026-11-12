@@ -1,0 +1,14 @@
+name 'adaptive-less-checkpoints-look-under-hood-practice'
+title 'Find the right part'
+description ' '
+question 'Tess wants the button on her page to do something different, but she does not know which part of the code controls it. What is the best next move?'
+wrong 'Delete all the code and start over.'
+wrong 'Change random lines until something happens.'
+right 'Ask the AI which part of the code controls the button.'
+wrong 'Ask the AI to rewrite the whole page.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

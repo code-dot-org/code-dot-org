@@ -1,16 +1,11 @@
 import animBurst from '@cdo/static/spritelab_lab2/block-help/burst.gif';
-import animGoToExternalScene from '@cdo/static/spritelab_lab2/block-help/go-to-external-scene.png';
-import animPlayMusic from '@cdo/static/spritelab_lab2/block-help/play-music.png';
 import animPlaySound from '@cdo/static/spritelab_lab2/block-help/play-sound.gif';
-import animSetASpriteProperty from '@cdo/static/spritelab_lab2/block-help/set-a-sprite-property.gif';
 import animSetGravity from '@cdo/static/spritelab_lab2/block-help/set-gravity.gif';
 import animSetWeather from '@cdo/static/spritelab_lab2/block-help/set-weather.gif';
 import animSetZoom from '@cdo/static/spritelab_lab2/block-help/set-zoom.gif';
 import animThePlayer from '@cdo/static/spritelab_lab2/block-help/the-player.gif';
-import animWhenClicked from '@cdo/static/spritelab_lab2/block-help/when-clicked.gif';
 
 import {MAX_ZOOM, MIN_ZOOM} from '../camera';
-import {PLATFORM_GRAVITY} from '../platformPhysics';
 
 /**
  * What the new-block catalog says about a block: a `summary` sentence, then
@@ -29,13 +24,19 @@ export interface BlockHelp {
 }
 
 export const BLOCK_HELP: Record<string, BlockHelp> = {
-  spritelab2_setPlatformGravity: {
-    title: 'Set gravity',
-    animation: {src: animSetGravity, alt: 'The set gravity block in action.'},
-    summary: 'Changes how hard everything falls.',
-    body:
-      `**${PLATFORM_GRAVITY}** is normal; smaller numbers float, and a ` +
-      'negative number flips the world upside down.',
+  spritelab2_setPlatformJumpHeight: {
+    title: 'Set jump height',
+    summary: 'Changes how many squares the player can jump.',
+    body: 'The number is how high the player jumps in squares.',
+  },
+  spritelab2_setPlatformGravityDirection: {
+    title: 'Set gravity direction',
+    animation: {
+      src: animSetGravity,
+      alt: 'The set gravity direction block in action.',
+    },
+    summary: 'Changes which way everything falls.',
+    body: 'Choose **↓** to fall toward the bottom, **↑** to fall toward the top, or **none** to move in four directions.',
   },
   spritelab2_setCameraZoom: {
     title: 'Set zoom',
@@ -52,18 +53,46 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     summary: 'Whichever sprite is the platform player right now.',
     body: 'Drop it into any block that takes a sprite.',
   },
+  spritelab2_setAsPlatformPlayer2: {
+    title: 'Set as player 2',
+    summary: 'Makes a sprite a second player, moved with W, A, S and D.',
+    body:
+      'Lets you and a classmate play your game on one keyboard. The first ' +
+      'player uses the arrow keys, and the second player uses W, A, S, and D.',
+  },
+  spritelab2_thePlayer2: {
+    title: 'Player 2',
+    summary: 'Whichever sprite is player 2 right now.',
+    body: 'Drop it into any block that takes a sprite.',
+  },
+  spritelab2_askAI: {
+    title: 'Ask AI',
+    summary: 'Asks the AI a question and puts its answer in a variable.',
+    body:
+      'The answer takes a moment to arrive, so the variable stays empty ' +
+      'until it does. Use **when ... answered** to do something with it.',
+  },
+  spritelab2_askAIWithChoices: {
+    title: 'Ask AI with answer choices',
+    summary:
+      'Asks the AI a question and puts the choice it picks in a variable.',
+    body:
+      'Empty choices are left out, and with no choices at all the AI ' +
+      'answers in its own words. Use **when ... answered** to do ' +
+      'something with the answer once it arrives.',
+  },
+  spritelab2_setSystemPrompt: {
+    title: 'Set system prompt',
+    summary: 'Tells the AI how to answer every question after it.',
+    body:
+      'Try a personality, like **Talk like a pirate.** Put it before any ' +
+      '**ask AI** blocks.',
+  },
   spritelab2_playSound: {
     title: 'Play sound',
     animation: {src: animPlaySound, alt: 'The play sound block in action.'},
     summary: 'Plays one short sound, once.',
     body: 'Put it under an event, such as a touch or a click.',
-  },
-  spritelab2_playMusic: {
-    title: 'Play music',
-    animation: {src: animPlayMusic, alt: 'Musical notes.'},
-    summary:
-      'Plays one of your Music Lab songs, repeating, while the game plays.',
-    body: 'Put it under "when run" in the scene where the music should start.',
   },
   spritelab2_setWeather: {
     title: 'Set weather',
@@ -79,35 +108,42 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       'Try it under "when touching" for a pickup, or under a click to ' +
       'celebrate.',
   },
-  spritelab2_goToExternalScene: {
-    title: 'Go to external scene',
-    animation: {
-      src: animGoToExternalScene,
-      alt: 'An arrow from one scene to another.',
-    },
-    summary: 'Jumps into a scene from a classmate’s project.',
-    body: 'Their scenes appear in the list once they have shared a project.',
+  spritelab2_showTitle: {
+    title: 'Show title',
+    summary: 'Big text across the middle of the game for a moment.',
+    body: 'Put it under a touch to announce a win.',
   },
-  gamelab_setProp: {
-    title: 'Set a sprite property',
-    animation: {
-      src: animSetASpriteProperty,
-      alt: 'The set a sprite property block in action.',
-    },
-    summary:
-      'Changes one thing about a sprite: its size, rotation, position, direction or speed.',
-    body: '**size** is a percent, and **rotation** is in degrees.',
+  gamelab_showVariable: {
+    title: 'Show variable',
+    summary: 'Shows a variable and its value in a bubble on the screen.',
+    body: 'The value updates as it changes, so try it for a score or a timer.',
   },
-  gamelab_spriteClicked: {
-    title: 'When clicked',
-    animation: {src: animWhenClicked, alt: 'The when clicked block in action.'},
-    summary: 'Runs the blocks below when a sprite is clicked or tapped.',
-    body: '**while** keeps them running as long as the button is held down.',
+  gamelab_hideVariable: {
+    title: 'Hide variable',
+    summary: 'Removes the bubble that show variable put on the screen.',
+    body: 'The variable keeps its value.',
   },
   gamelab_spriteSay: {
     title: 'Say',
     summary: 'Shows words in a speech bubble over a sprite.',
     body: 'Put it under an event, so the words come at the right moment.',
+  },
+  gamelab_destroy: {
+    title: 'Remove',
+    summary: 'Takes sprites out of the scene.',
+    body:
+      'Try it with **the touched sprite** under "when player touches coin", ' +
+      'so only that coin disappears.',
+  },
+  spritelab2_touchedSprite: {
+    title: 'The touched sprite',
+    summary: 'Picks the sprite that was just touched, under "when touching".',
+    body: 'Anywhere else it picks no sprite at all.',
+  },
+  spritelab2_clickedSprite: {
+    title: 'The clicked sprite',
+    summary: 'Picks the sprite that was just clicked, under "when clicked".',
+    body: 'Anywhere else it picks no sprite at all.',
   },
   spritelab2_restartScene: {
     title: 'Restart scene',
@@ -116,12 +152,10 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       'Try it under "when touching" a foe, so a touch sends the player back ' +
       'to the start.',
   },
-  gamelab_atTime: {
-    title: 'At time',
-    summary: 'Runs the blocks below once, when the scene has run this long.',
-    body:
-      '**seconds** counts from when the scene starts; **frames** counts ' +
-      'frames instead.',
+  gamelab_everyInterval: {
+    title: 'Repeat every',
+    summary: 'Runs the blocks below each time this much time passes.',
+    body: 'Pick **frames** to count frames instead of seconds.',
   },
   spritelab2_whenPlayer: {
     title: 'When player',

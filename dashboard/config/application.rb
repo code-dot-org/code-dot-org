@@ -14,10 +14,6 @@ require 'cdo/shared_constants'
 require 'cdo/rack/request'
 require 'cdo/rack/response'
 
-# load and configure pycall before numpy and any other python-related gems
-# can be automatically loaded just below.
-require 'cdo/pycall'
-
 # Early in the Rails boot process, set the environment variable VITE_RUBY_ROOT so that
 # vite_ruby knows where to find the frontend code.
 ENV["VITE_RUBY_ROOT"] = vite_dir
@@ -39,8 +35,13 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-    # Explicitly load appropriate defaults for this version of Rails.
+    # Explicitly load appropriate defaults for the previous version of Rails.
     config.load_defaults 7.0
+
+    # Manually load some config values for the new version of Rails while we are finalizing the update.
+    # TODO infra: start invoking config.load_defaults 7.1 and remove these
+    config.active_support.cache_format_version = 7.1
+    config.active_record.belongs_to_required_validates_foreign_key = false
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
@@ -167,7 +168,6 @@ module Dashboard
     # well as some subdirectories of the models dir that we use for organization.
 
     runtime_load_paths = [
-      Rails.root.join('lib'),
       Rails.root.join('app', 'models', 'experiments'),
       Rails.root.join('app', 'models', 'levels'),
       Rails.root.join('app', 'models', 'quiz_questions'),
@@ -184,14 +184,10 @@ module Dashboard
     # Zeitwerk, rather than as subdirectories which require namspacing.
     config.eager_load_paths += runtime_load_paths
 
-    # Ignore certain directories for autoloading and eager loading
+    # Auto- and eager-load `lib` directory, excluding certain subdirectories.
     # Ignore lib/clever becuase this is generated code and the generated code
     # does not expect 'Clever::' to be prepended to everything it references.
-    Rails.autoloaders.main.ignore(
-      Rails.root.join("lib", "tasks"),
-      Rails.root.join("lib", "assets"),
-      Rails.root.join("lib", "clever"),
-    )
+    config.autoload_lib(ignore: %w(assets tasks clever devtools))
 
     # Tools which are designed for development / test environments should not be eager-loaded
     # because they may depend on gems which are not available in production. These tools can
@@ -210,41 +206,16 @@ module Dashboard
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
     config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 
-    # In Rails 7.0, ActiveRecord objects may skip some initialization steps
-    # when they are loaded from the cache; this can break SerializedProperties,
-    # among other things. As a temporary mitigation to avoid this issue until
-    # we are updated to 7.1, we explicitly initialize all relevant objects as
-    # they are loaded.
-    #
-    # See https://github.com/rails/rails/issues/47704 and
-    # https://github.com/rails/rails/pull/47747 for more context.
-    module Rails70InitInternalsCoder
-      # TODO infra: remove this custom Coder as part of the update to Rails 7.1
-      throw "remove Rails-7.0-specific mitigation" if Rails::VERSION::MAJOR != 7 || Rails::VERSION::MINOR != 0
-      include ActiveSupport::Cache::Coders::Rails70Coder
-      extend self
-
-      def load(payload)
-        super.tap do |entry|
-          entry.try(:value).try(:init_internals)
-        end
-      end
-    end
-
     # Rails.cache is a local file system store shared by all Puma worker
     # processes on a given web application server, which persists for the
     # lifetime of the server.
-    config.cache_store = :file_store, Rails.root.join('tmp', 'cache', 'rails'), {coder: Rails70InitInternalsCoder}
+    config.cache_store = :file_store, Rails.root.join('tmp', 'cache', 'rails')
 
     # Sprockets file cache limit must be greater than precompiled-asset total to prevent thrashing.
     config.assets.cache_limit = 1.gigabyte
 
     # turn off ActionMailer logging to avoid logging email addresses
     ActionMailer::Base.logger = nil
-
-    # Make sure dependency auto loading is enabled across all environments.
-    # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
-    config.enable_dependency_loading = true
 
     # Webpack minifies the apps bundles, and the legacy application.js is
     # assembled from pre-minified sources (see application.js.erb), so no

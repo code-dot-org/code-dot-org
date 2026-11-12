@@ -1317,7 +1317,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 1,
     }
 
-    assert_select 'img[src="https://studio.code.org/api/hour/begin_hoc-script.png"]'
+    assert_select 'img[src="https://studio.code.org/api/hour/begin_hoc-course.png"]'
   end
 
   test 'should not show tracking pixel for second level of hoc course in prod' do
@@ -1333,7 +1333,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 2,
     }
 
-    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-script.png"]', false, 'must not contain tracking pixel'
+    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-course.png"]', false, 'must not contain tracking pixel'
   end
 
   test "should 404 for invalid chapter for flappy" do
@@ -1975,6 +1975,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     hidden = JSON.parse(response.body)
     expected = {@section.id.to_s => [@custom_lesson_1.id]}
     assert_equal expected, hidden
+  end
+
+  test "student cannot open a lesson hidden in their section when an archived section has the same unit" do
+    teacher = create(:teacher)
+    student = create(:student)
+    active_section = put_participant_in_section(student, teacher, @custom_script)
+    archived_section = put_participant_in_section(student, teacher, @custom_script)
+    archived_section.update!(hidden: true)
+    SectionHiddenLesson.create!(section_id: active_section.id, stage_id: @custom_lesson_1.id)
+
+    sign_in student
+    get_show_script_level_page(@custom_s1_l1)
+    assert_response :success
+    # The level page also renders #hidden-lesson, but with display: none.
+    assert_select '#hidden-lesson'
+    assert_select '#hidden-lesson[style*="display: none"]', false
   end
 
   def  put_participant_in_section(student, teacher, script)

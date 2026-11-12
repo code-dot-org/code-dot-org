@@ -1,6 +1,7 @@
 require 'sequel'
 require 'sequel/connection_pool/threaded'
 require 'uri'
+require 'cdo/database_proxy'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
 
@@ -33,6 +34,29 @@ module Cdo
       ).to_s
     end
 
+    # The dashboard writer connection URI for this process.
+    #
+    # @return [String] e.g. "mysql2://writer:p%40ssword@proxy.example.com:3306/dashboard_production"
+    def self.dashboard_writer_uri
+      # Chef substitutes ProxySQL's local listener into this URI at build time, so there is nothing to compose.
+      return CDO.dashboard_db_writer if Cdo::DatabaseProxy.selected == Cdo::DatabaseProxy::PROXYSQL
+
+      host, port =
+        if Cdo::DatabaseProxy.rds_proxy_for_writes?
+          [CDO.db_endpoint_proxy_writer, CDO.db_endpoint_proxy_writer_port]
+        else
+          [CDO.db_endpoint_writer, CDO.db_endpoint_writer_port]
+        end
+
+      mysql2_uri(
+        host: host,
+        port: port,
+        username: CDO.db_credential_writer['username'],
+        password: CDO.db_credential_writer['password'],
+        database: CDO.dashboard_db_name
+      )
+    end
+
     # Create and return a Sequel::Database object, which represents a connection pool to a database and can be
     # used to query a database and/or issue other types of SQL statements.
     # https://sequel.jeremyevans.net/rdoc/classes/Sequel/Database.html
@@ -49,7 +73,10 @@ module Cdo
       # Enable string literals in dataset filtering methods for backwards compatibility.
       ::Sequel::Database.extension :auto_literal_strings
 
-      writer = writer.gsub 'mysql:', 'mysql2:'
+      # Sequel names its MySQL adapter `mysql2`.
+      uri = URI.parse(writer)
+      uri.scheme = 'mysql2' if uri.scheme == 'mysql'
+      writer = uri.to_s
 
       db_options = {
         encoding: 'utf8mb4',
@@ -89,8 +116,14 @@ module Cdo
         write_timeout: 5
       }
 
-      # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
-      db_options[:reconnect] = true if DCDO.get('enable_mysql_client_reconnect', true)
+      # `MYSQL_OPT_RECONNECT` is deprecated in 8.0, although it still remains
+      # valid in 8.4. We do unfortunately still rely on it.
+      # See: https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
+      db_options[:reconnect] = true
+
+      # Suppress Sequel's `SET SQL_AUTO_IS_NULL=0` (which it issues on every new connection) to prevent RDS Proxy from
+      # pinning the connection.
+      db_options[:auto_is_null] = true
 
       if query_timeout
         db_options[:read_timeout] = query_timeout

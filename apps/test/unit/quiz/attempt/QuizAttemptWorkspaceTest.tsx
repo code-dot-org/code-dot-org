@@ -581,6 +581,7 @@ describe('QuizAttemptWorkspace', () => {
               quizQuestionId: 1,
               questionType: 'MultipleChoiceQuestion',
               responseData: {selectedChoiceId: 'a'},
+              answered: true,
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
@@ -589,6 +590,7 @@ describe('QuizAttemptWorkspace', () => {
               quizQuestionId: 2,
               questionType: 'MultipleChoiceQuestion',
               responseData: {selectedChoiceId: 'b'},
+              answered: true,
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -872,6 +874,7 @@ describe('QuizAttemptWorkspace', () => {
           quizQuestionId: 1,
           questionType: 'MultipleChoiceQuestion',
           responseData: {selectedChoiceId: 'b'},
+          answered: true,
           correct: true,
           explanation: 'Because 3 + 5 = 8.',
           correctChoiceId: 'b',
@@ -899,6 +902,25 @@ describe('QuizAttemptWorkspace', () => {
       expect(screen.getByRole('note')).toHaveTextContent(
         "You are viewing Aisha Khan's work in read only mode."
       );
+    });
+
+    it("makes the questions a keyboard-focusable region when the student hasn't submitted", () => {
+      renderWorkspace({hookState: {attempt: null}, viewAsUserId: 99});
+
+      expect(
+        screen.getByRole('region', {name: 'Student answers'})
+      ).toHaveAttribute('tabindex', '0');
+    });
+
+    it('leaves the scroll area alone once the student has submitted, since the results card takes focus', () => {
+      renderWorkspace({
+        hookState: {attempt: {...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'}},
+        viewAsUserId: 99,
+      });
+
+      expect(
+        screen.queryByRole('region', {name: 'Student answers'})
+      ).not.toBeInTheDocument();
     });
 
     it("fetches the student's attempt rather than the teacher's own", () => {
@@ -934,6 +956,7 @@ describe('QuizAttemptWorkspace', () => {
 
       expect(screen.getByText('What is the value of x?')).toBeInTheDocument();
       expect(screen.getByText('What is the value of y?')).toBeInTheDocument();
+      expect(screen.queryByText('Skipped')).not.toBeInTheDocument();
       expect(screen.queryByRole('radio')).not.toBeInTheDocument();
       expect(
         screen.queryByRole('button', {name: /Next|Submit|Finish|Begin/})
@@ -954,7 +977,7 @@ describe('QuizAttemptWorkspace', () => {
             ],
           },
         },
-        quizQuestions: [question({id: 1})],
+        quizQuestions: [question({id: 1}), question({id: 2, page: 2})],
         viewAsUserId: 99,
       });
 
@@ -962,6 +985,7 @@ describe('QuizAttemptWorkspace', () => {
       expect(alert).toHaveTextContent(
         'Aisha Khan is still working on this assessment.'
       );
+      expect(screen.queryByText('Skipped')).not.toBeInTheDocument();
       expect(alert).toHaveAttribute('data-type', 'warning');
       expect(screen.queryByRole('radio')).not.toBeInTheDocument();
       expect(
@@ -969,7 +993,7 @@ describe('QuizAttemptWorkspace', () => {
       ).not.toBeInTheDocument();
     });
 
-    it('shows score, question results, and the explanation even when the quiz hides them, without Try again', () => {
+    it('shows score, question results, result tags, and the explanation even when the quiz hides them, without Try again', () => {
       renderWorkspace({
         hookState: {attempt: SUBMITTED},
         quizQuestions: [question({id: 1})],
@@ -984,6 +1008,7 @@ describe('QuizAttemptWorkspace', () => {
       );
       expect(alert).toHaveAttribute('data-type', 'info');
       expect(screen.getByText('100%')).toBeInTheDocument();
+      expect(screen.getByText('Correct')).toBeInTheDocument();
       expect(screen.getByText('Because 3 + 5 = 8.')).toBeInTheDocument();
       expect(
         screen.queryByRole('button', {name: 'Try again'})
@@ -1153,6 +1178,7 @@ describe('QuizAttemptWorkspace', () => {
                 quizQuestionId: 1,
                 questionType: 'MultipleChoiceQuestion',
                 responseData: {selectedChoiceId: 'a'},
+                answered: true,
                 correct: true,
                 explanation: null,
                 correctChoiceId: 'a',
@@ -1161,6 +1187,7 @@ describe('QuizAttemptWorkspace', () => {
                 quizQuestionId: 2,
                 questionType: 'MultipleChoiceQuestion',
                 responseData: {selectedChoiceId: 'b'},
+                answered: true,
                 correct: false,
                 explanation: null,
                 correctChoiceId: 'a',
@@ -1450,6 +1477,7 @@ describe('QuizAttemptWorkspace', () => {
                 quizQuestionId: 9,
                 questionType: 'FreeResponseQuestion',
                 responseData: {answerText: 'x > 3'},
+                answered: true,
                 correct: null,
                 explanation: null,
                 correctChoiceId: null,

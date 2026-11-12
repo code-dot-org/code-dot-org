@@ -47,6 +47,7 @@ export default onClickOutside(
     static propTypes = {
       editing: PropTypes.bool,
       description: PropTypes.string.isRequired,
+      levelTags: PropTypes.node,
       onSave: PropTypes.func.isRequired,
       onEditCancel: PropTypes.func.isRequired,
       onEditClick: PropTypes.func.isRequired,
@@ -98,6 +99,7 @@ export default onClickOutside(
               <div>{this.state.description}</div>
             )}
           </td>
+          <td style={lessonEditorTableStyles.cell}>{this.props.levelTags}</td>
           {this.props.editing ? (
             <td
               style={{

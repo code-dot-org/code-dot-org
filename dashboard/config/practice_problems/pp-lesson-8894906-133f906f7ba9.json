@@ -1,0 +1,19 @@
+{
+  "key": "pp-lesson-8894906-133f906f7ba9",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the term to its definition: 1. Context 2. Contradiction",
+  "solution": [
+    {
+      "option": "Context",
+      "correct": "Additional information that helps generate accurate AI responses."
+    },
+    {
+      "option": "Contradiction",
+      "correct": "Conflicting responses based on similar input."
+    }
+  ],
+  "objective_keys": [
+    "26cc455f-c95a-4ee2-ada0-4ffc24f8b47d"
+  ]
+}

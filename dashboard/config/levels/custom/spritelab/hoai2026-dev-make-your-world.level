@@ -2,11 +2,14 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-10-28T00:00:00.000Z",
+  "created_at": "2026-10-30T09:28:03.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -26,6 +29,16 @@
       "paletteRoles": [
         "treasure",
         "block"
+      ],
+      "extraTabs": [
+        "Images"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "imageKinds": [
+        "sprite"
       ]
     },
     "starter_images": [
@@ -85,21 +98,21 @@
       "title": "**Make your world**",
       "items": [
         {
-          "text": "Click a square to put your treasure somewhere your player can reach.",
+          "text": "Select a square to place your object where your player can reach it.",
           "check": {
             "kind": "world",
             "role": "treasure"
           }
         },
         {
-          "text": "Add some blocks to climb on.",
+          "text": "Add **blocks** to jump onto.",
           "check": {
             "kind": "world",
-            "changed": true
+            "role": "block"
           }
         },
         {
-          "text": "Click **Play** and collect the treasure.",
+          "text": "Select **Run**, then run and jump to your object.",
           "check": {
             "kind": "reach",
             "role": "treasure"
@@ -107,8 +120,36 @@
         }
       ]
     },
-    "long_instructions": "# Make your world\nPut your treasure somewhere your player can reach, and add some blocks to climb on. Then click **Play** and collect the treasure.",
-    "header_label": "Make your world"
+    "long_instructions": "# Make your world\r\n\r\nBuild a world where your player can reach your object.",
+    "header_label": "Make your world",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-01 17:12:19 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:12:43 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:13:42 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-10 22:26:14 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-10 22:26:37 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
+  <blocks/>
 </GamelabJr>

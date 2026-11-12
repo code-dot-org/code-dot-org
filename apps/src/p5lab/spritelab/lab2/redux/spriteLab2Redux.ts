@@ -4,9 +4,7 @@ import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 // In display order: the scene-editing tabs (grouped behind the scene
 // picker), then Images, then Play.
 export const ALL_TABS = ['World', 'Code', 'Images', 'Play'] as const;
-// 'Scenes' is the scene gallery: a full-workspace view reached from the
-// scene picker, with no button of its own in the bar.
-export type Tab = (typeof ALL_TABS)[number] | 'Scenes';
+export type Tab = (typeof ALL_TABS)[number];
 
 // Redux mirror of the scenes (full data lives in project sources), so the
 // scene selector and the go-to-scene dropdown can read it reactively.
@@ -15,14 +13,6 @@ export interface SceneMetadata {
   name: string;
   /** A picture of the scene, when it has one (sceneThumbnails.ts). */
   thumbnail?: string;
-}
-
-// A scene from a section-mate's project, offered by the go-to-external-scene
-// block's dropdown. key = "<channel>:<sceneId>" (the value the block stores);
-// label is what the dropdown shows.
-export interface ExternalSceneOption {
-  key: string;
-  label: string;
 }
 
 // One of the user's Music Lab projects, offered by the play-music block's
@@ -35,20 +25,32 @@ export interface MusicProjectOption {
   unavailable?: boolean;
 }
 
+export interface ActivePrompt {
+  promptText: string;
+  variableName: string;
+  choices?: string[];
+}
+
+export type AskAiStatus =
+  | {state: 'pending'}
+  | {state: 'failed'; message: string};
+
 export interface SpriteLab2State {
   activeTab: Tab;
   hasRun: boolean;
   scenes: SceneMetadata[];
-  externalScenes: ExternalSceneOption[];
   musicProjects: MusicProjectOption[];
+  prompt: ActivePrompt | null;
+  askAi: AskAiStatus | null;
 }
 
 const initialState: SpriteLab2State = {
   activeTab: 'Code',
   hasRun: false,
   scenes: [],
-  externalScenes: [],
   musicProjects: [],
+  prompt: null,
+  askAi: null,
 };
 
 const spriteLab2Slice = createSlice({
@@ -64,14 +66,30 @@ const spriteLab2Slice = createSlice({
     setScenes: (state, action: PayloadAction<SceneMetadata[]>) => {
       state.scenes = action.payload;
     },
-    setExternalScenes: (
-      state,
-      action: PayloadAction<ExternalSceneOption[]>
-    ) => {
-      state.externalScenes = action.payload;
-    },
     setMusicProjects: (state, action: PayloadAction<MusicProjectOption[]>) => {
       state.musicProjects = action.payload;
+    },
+    showPrompt: (state, action: PayloadAction<ActivePrompt>) => {
+      state.prompt = action.payload;
+    },
+    clearPrompt: state => {
+      state.prompt = null;
+    },
+    askAiPending: state => {
+      state.askAi = {state: 'pending'};
+    },
+    askAiFailed: (state, action: PayloadAction<string>) => {
+      state.askAi = {state: 'failed', message: action.payload};
+    },
+    // An answer takes down the spinner, but not a failure message,
+    // as the failure message could be from another request.
+    askAiAnswered: state => {
+      if (state.askAi?.state === 'pending') {
+        state.askAi = null;
+      }
+    },
+    clearAskAi: state => {
+      state.askAi = null;
     },
     resetSpriteLab2: () => initialState,
   },
@@ -81,8 +99,13 @@ export const {
   setActiveTab,
   setHasRun,
   setScenes,
-  setExternalScenes,
   setMusicProjects,
+  showPrompt,
+  clearPrompt,
+  askAiPending,
+  askAiFailed,
+  askAiAnswered,
+  clearAskAi,
   resetSpriteLab2,
 } = spriteLab2Slice.actions;
 

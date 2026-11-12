@@ -10,6 +10,8 @@ export const SELECT_A_SCHOOL = 'selectASchool';
 /** School dropdown stand-in for "type the name myself". */
 export const CLICK_TO_ADD = 'clickToAdd';
 
+export const NO_SCHOOL_SETTING = 'noSchoolSetting';
+
 /** The Rails schoolzipsearch route constrains :zip to five digits. */
 export const ZIP = /^\d{5}$/;
 
@@ -39,6 +41,7 @@ export function schoolInfoInvalid({
   if (country !== US_COUNTRY_CODE) return !schoolName;
 
   if (!ZIP.test(schoolZip)) return true;
+  if (schoolId === NO_SCHOOL_SETTING) return false;
   if (schoolId === SELECT_A_SCHOOL) return true;
   if (schoolId === CLICK_TO_ADD) return !schoolName;
 

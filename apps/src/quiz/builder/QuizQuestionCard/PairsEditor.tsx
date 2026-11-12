@@ -1,11 +1,13 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Typography} from '@mui/material';
+import {IconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useId} from 'react';
+import React from 'react';
 
 import AddItemButton from '../AddItemButton';
 import {MIN_PAIRS, newMatchPair} from '../matchPairs';
 import {MatchDraft, MatchPair} from '../types';
+
+import FieldGroup from './FieldGroup';
 
 import styles from './quiz-question-card.module.scss';
 import builderCommonStyles from '../builder-common.module.scss';
@@ -21,8 +23,6 @@ const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
   onChange,
   disabled,
 }) => {
-  const headingId = useId();
-
   const updateItemText = (pairId: string, index: number, text: string) => {
     onChange({
       ...draft,
@@ -45,10 +45,7 @@ const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
   };
 
   return (
-    <div role="group" aria-labelledby={headingId} className={styles.pairsGroup}>
-      <Typography variant="label3" component="span" id={headingId}>
-        Options
-      </Typography>
+    <FieldGroup label="Options" className={styles.optionsField}>
       <div className={styles.optionsList}>
         {draft.pairs.map((pair, pairIndex) => (
           <div
@@ -78,16 +75,18 @@ const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
             <IconButton
               aria-label={`Delete pair ${pairIndex + 1}`}
               size="small"
+              variant="text"
               color="error"
               type="button"
               disabled={disabled || draft.pairs.length <= MIN_PAIRS}
               onClick={e => {
                 const row = e.currentTarget.parentElement;
-                const adjacentRow =
-                  row?.nextElementSibling ?? row?.previousElementSibling;
-                adjacentRow
-                  ?.querySelector<HTMLTextAreaElement>('textarea')
-                  ?.focus();
+                const next = row?.nextElementSibling;
+                const prev = row?.previousElementSibling;
+                (
+                  next?.querySelector<HTMLTextAreaElement>('textarea') ??
+                  prev?.querySelector<HTMLTextAreaElement>('textarea')
+                )?.focus();
                 removePair(pair.id);
               }}
             >
@@ -95,15 +94,15 @@ const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
             </IconButton>
           </div>
         ))}
+        <AddItemButton
+          label="Add pair"
+          onClick={() =>
+            onChange({...draft, pairs: [...draft.pairs, newMatchPair()]})
+          }
+          disabled={disabled}
+        />
       </div>
-      <AddItemButton
-        label="Add pair"
-        onClick={() =>
-          onChange({...draft, pairs: [...draft.pairs, newMatchPair()]})
-        }
-        disabled={disabled}
-      />
-    </div>
+    </FieldGroup>
   );
 };
 

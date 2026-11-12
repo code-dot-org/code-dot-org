@@ -8,45 +8,32 @@
   "properties": {
     "require_edit_to_continue": "true",
     "start_sources": {
-      "folders": {
-      },
+      "folders": {},
       "files": {
         "1": {
           "id": "1",
-          "name": "style.css",
-          "contents": "/* Colors and type */\n:root {\n  --color-primary: #4C42CF;\n  --color-mid: #ACA8EA;\n  --color-soft: #E4E2F8;\n  --color-dark: #1F1976;\n  --color-accent: #F46800;\n  --color-text: #1F1976;\n  --color-page: #FFFFFF;\n  --font-body: system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;\n}\n\n/* Looks (the button in the hero switches between these) */\n[data-look=\"berry\"] {\n  --color-primary: #E11970;\n  --color-mid: #F07FB0;\n  --color-soft: #FBDAE8;\n  --color-dark: #7D0C3D;\n  --color-text: #7D0C3D;\n}\n\n[data-look=\"ocean\"] {\n  --color-primary: #06338D;\n  --color-mid: #6FCAFF;\n  --color-soft: #D5EFFF;\n  --color-dark: #06338D;\n  --color-text: #06338D;\n}\n\n/* Base */\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\nhtml {\n  -webkit-text-size-adjust: 100%;\n}\n\n@media (prefers-reduced-motion: no-preference) {\n  html {\n    scroll-behavior: smooth;\n  }\n}\n\nbody {\n  margin: 0;\n  font-family: var(--font-body);\n  font-size: 1.125rem;\n  line-height: 1.6;\n  color: var(--color-text);\n  background-color: var(--color-page);\n}\n\nh1,\nh2,\nh3 {\n  margin: 0 0 0.5em;\n  line-height: 1.1;\n  letter-spacing: -0.02em;\n}\n\nh1 {\n  font-size: clamp(2.5rem, 8vw, 4.5rem);\n  font-weight: 800;\n}\n\nh2 {\n  font-size: clamp(1.75rem, 5vw, 2.5rem);\n  font-weight: 800;\n}\n\nh3 {\n  font-size: 1.25rem;\n  font-weight: 700;\n}\n\np {\n  margin: 0 0 1em;\n  max-width: 36em;\n}\n\na {\n  color: inherit;\n}\n\n:focus-visible {\n  outline: 3px solid var(--color-dark);\n  outline-offset: 3px;\n}\n\n.container {\n  width: 100%;\n  max-width: 68rem;\n  margin-inline: auto;\n  padding-inline: 1.25rem;\n}\n\n/* Header */\n.site-header {\n  padding-block: 1rem;\n  border-block-end: 2px solid var(--color-soft);\n}\n\n.header-inner {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: space-between;\n  gap: 0.5rem 1.5rem;\n}\n\n.site-name {\n  margin: 0;\n  font-size: 1.25rem;\n  font-weight: 800;\n  letter-spacing: -0.01em;\n}\n\n.nav-list {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 0.25rem 1.5rem;\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n\n.nav-list a {\n  display: inline-block;\n  padding-block: 0.5rem;\n  font-weight: 600;\n  text-decoration: none;\n}\n\n.nav-list a:hover {\n  text-decoration: underline;\n  text-underline-offset: 0.25em;\n}\n\n/* Hero */\n.hero {\n  padding-block: clamp(3rem, 9vw, 6rem);\n  color: #FFFFFF;\n  background-color: var(--color-primary);\n  overflow: hidden;\n}\n\n.hero :focus-visible {\n  outline-color: #FFFFFF;\n}\n\n.hero-inner {\n  display: grid;\n  grid-template-columns: 1.2fr 0.8fr;\n  align-items: center;\n  gap: 2rem;\n}\n\n.lead {\n  font-size: clamp(1.125rem, 3vw, 1.5rem);\n  line-height: 1.4;\n}\n\n.hero-actions {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 0.75rem 1.5rem;\n  margin-block-start: 1.5rem;\n}\n\n.button {\n  min-height: 48px;\n  padding: 0.75rem 1.5rem;\n  font-family: inherit;\n  font-size: 1.125rem;\n  font-weight: 700;\n  color: var(--color-primary);\n  background-color: #FFFFFF;\n  border: 0;\n  border-radius: 999px;\n  cursor: pointer;\n}\n\n.button:hover {\n  background-color: var(--color-soft);\n}\n\n.button:active {\n  transform: translateY(1px);\n}\n\n.hero-link {\n  display: inline-block;\n  padding-block: 0.75rem;\n  font-weight: 600;\n  text-underline-offset: 0.25em;\n}\n\n.look-status {\n  margin: 1rem 0 0;\n  font-size: 1rem;\n}\n\n.hero-art {\n  width: 100%;\n  max-width: 22rem;\n  height: auto;\n  justify-self: center;\n}\n\n.shape-soft {\n  fill: var(--color-soft);\n}\n\n.shape-mid {\n  fill: var(--color-mid);\n}\n\n.shape-accent {\n  fill: var(--color-accent);\n}\n\n/* Sections */\n.section {\n  padding-block: clamp(3rem, 8vw, 5rem);\n}\n\n.section-tinted {\n  background-color: var(--color-soft);\n}\n\n.about-inner {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  align-items: center;\n  gap: 2rem 3rem;\n}\n\n.about-image {\n  display: block;\n  width: 100%;\n  height: auto;\n  border-radius: 1.5rem;\n}\n\n/* Cards */\n.card-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));\n  gap: 1.5rem;\n  margin: 2rem 0 0;\n  padding: 0;\n  list-style: none;\n}\n\n.card {\n  padding: 1.5rem;\n  background-color: #FFFFFF;\n  border-block-start: 8px solid var(--color-primary);\n  border-radius: 1rem;\n}\n\n.card p {\n  margin-block-end: 0;\n}\n\n/* Say hello */\n.hello-inner p {\n  font-size: 1.375rem;\n}\n\n/* Footer */\n.site-footer {\n  padding-block: 2rem;\n  color: #FFFFFF;\n  background-color: var(--color-dark);\n}\n\n.site-footer p {\n  margin: 0;\n}\n\n/* Small screens */\n@media (max-width: 48rem) {\n  .hero-inner,\n  .about-inner {\n    grid-template-columns: 1fr;\n  }\n\n  .hero-art {\n    max-width: 14rem;\n    justify-self: start;\n  }\n}\n",
-          "folderId": "0",
-          "active": false
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <script src=\"script.js\" defer></script>\n  </head>\n  <body>\n    Your website here!\n  </body>\n</html>\n",
+          "active": true,
+          "folderId": "0"
         },
         "2": {
           "id": "2",
-          "name": "index.html",
-          "contents": "<!DOCTYPE html>\n<html lang=\"en\" data-look=\"violet\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>My Website</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <!-- Header -->\n  <header class=\"site-header\">\n    <div class=\"container header-inner\">\n      <p class=\"site-name\">Your site name</p>\n      <nav aria-label=\"Main\">\n        <ul class=\"nav-list\">\n          <li><a href=\"#about\">About</a></li>\n          <li><a href=\"#inside\">What’s inside</a></li>\n          <li><a href=\"#hello\">Say hello</a></li>\n        </ul>\n      </nav>\n    </div>\n  </header>\n\n  <main>\n\n    <!-- Hero -->\n    <section class=\"hero\" aria-labelledby=\"hero-title\">\n      <div class=\"container hero-inner\">\n        <div class=\"hero-text\">\n          <h1 id=\"hero-title\">Your big idea goes here</h1>\n          <p class=\"lead\">Write one sentence that tells visitors what this site is about and why they should keep scrolling.</p>\n          <div class=\"hero-actions\">\n            <button type=\"button\" id=\"lookButton\" class=\"button\">Change the look</button>\n            <a class=\"hero-link\" href=\"#inside\">See what’s inside</a>\n          </div>\n          <p id=\"lookStatus\" class=\"look-status\" aria-live=\"polite\">Current look: Violet</p>\n        </div>\n        <svg class=\"hero-art\" viewBox=\"0 0 320 320\" aria-hidden=\"true\" focusable=\"false\">\n          <circle class=\"shape-soft\" cx=\"170\" cy=\"150\" r=\"120\"></circle>\n          <rect class=\"shape-accent\" x=\"30\" y=\"180\" width=\"110\" height=\"110\" rx=\"28\"></rect>\n          <circle class=\"shape-mid\" cx=\"250\" cy=\"250\" r=\"48\"></circle>\n          <rect class=\"shape-mid\" x=\"210\" y=\"30\" width=\"70\" height=\"70\" rx=\"20\"></rect>\n          <circle class=\"shape-accent\" cx=\"90\" cy=\"70\" r=\"22\"></circle>\n        </svg>\n      </div>\n    </section>\n\n    <!-- About -->\n    <section class=\"section\" id=\"about\" aria-labelledby=\"about-title\">\n      <div class=\"container about-inner\">\n        <div class=\"about-text\">\n          <h2 id=\"about-title\">About this site</h2>\n          <p>Use this space to tell your story. Who is this site for? What can people find here? What makes it yours?</p>\n          <p>A few short sentences are plenty. Visitors want to know what they’re looking at before they scroll any further.</p>\n        </div>\n        <img class=\"about-image\" src=\"placeholder.png\" alt=\"Placeholder for a picture that shows what your site is about\" width=\"640\" height=\"480\">\n      </div>\n    </section>\n\n    <!-- What's inside -->\n    <section class=\"section section-tinted\" id=\"inside\" aria-labelledby=\"inside-title\">\n      <div class=\"container\">\n        <h2 id=\"inside-title\">What’s inside</h2>\n        <ul class=\"card-grid\">\n          <li class=\"card\">\n            <h3>Something to see</h3>\n            <p>Show off a picture, a project, or a favorite thing you made.</p>\n          </li>\n          <li class=\"card\">\n            <h3>Something to do</h3>\n            <p>Give visitors a button to press, a choice to make, or a question to answer.</p>\n          </li>\n          <li class=\"card\">\n            <h3>Something to learn</h3>\n            <p>Share a fact, a tip, or a story that visitors will remember.</p>\n          </li>\n        </ul>\n      </div>\n    </section>\n\n    <!-- Say hello -->\n    <section class=\"section\" id=\"hello\" aria-labelledby=\"hello-title\">\n      <div class=\"container hello-inner\">\n        <h2 id=\"hello-title\">Say hello</h2>\n        <p>End with a message to your visitors: a question, a thank-you, or what comes next.</p>\n      </div>\n    </section>\n\n  </main>\n\n  <!-- Footer -->\n  <footer class=\"site-footer\">\n    <div class=\"container\">\n      <p>Made by your name</p>\n    </div>\n  </footer>\n\n</body>\n</html>\n",
-          "folderId": "0",
-          "active": false
+          "name": "style.css",
+          "contents": "",
+          "active": false,
+          "folderId": "0"
         },
         "3": {
           "id": "3",
           "name": "script.js",
-          "contents": "const looks = [\n  { id: 'violet', name: 'Violet' },\n  { id: 'berry', name: 'Berry' },\n  { id: 'ocean', name: 'Ocean' }\n];\n\nconst lookButton = document.getElementById('lookButton');\nconst lookStatus = document.getElementById('lookStatus');\nlet currentLookIndex = 0;\n\nfunction showLook(index) {\n  const look = looks[index];\n  document.documentElement.setAttribute('data-look', look.id);\n  lookStatus.textContent = `Current look: ${look.name}`;\n}\n\nfunction showNextLook() {\n  currentLookIndex = (currentLookIndex + 1) % looks.length;\n  showLook(currentLookIndex);\n}\n\nlookButton.addEventListener('click', showNextLook);\n",
-          "folderId": "0",
-          "active": false
-        },
-        "4": {
-          "id": "4",
-          "name": "placeholder.png",
           "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/adaptive-HoAI26-template-main-project/uuid/f0bc47bd-fc41-43fa-9396-57f433f067d3.png",
-          "type": "starter",
-          "active": true
+          "active": false,
+          "folderId": "0"
         }
       },
       "openFiles": [
-        "1",
-        "2",
-        "3",
-        "4"
+        "1"
       ]
     },
     "encrypted": "false",

@@ -34,9 +34,17 @@
   def cronjob(params)
     time = params[:at].to_s
     action = params[:do].to_s
-
     notify = params[:notify].to_s
-    action = "BUNDLE_GEMFILE=#{deploy_dir('Gemfile')} bundle exec #{bin_dir('cronjob')} #{action.shellescape} #{notify}".strip
+
+    environment = {
+      BUNDLE_GEMFILE: deploy_dir('Gemfile'),
+      # Sentry creates the monitor from the schedule on its first check-in.
+      SENTRY_MONITOR_SCHEDULE: time,
+      SENTRY_MONITOR_SLUG: params[:monitor] || File.basename(action.split.first),
+    }
+    environment = environment.map {|name, value| "#{name}=#{value.shellescape}"}.join(' ')
+
+    action = "#{environment} bundle exec #{bin_dir('cronjob')} #{action.shellescape} #{notify}".strip
 
     $crontab << "#{time} #{action}"
   end
@@ -74,8 +82,8 @@
     end
 
     if node.chef_environment == 'levelbuilder'
-      cronjob at:'30 7 * * *', do:deploy_dir('bin', 'cron', 'commit_content')
-      cronjob at:'18 9 * * *', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'30 7 * * *', do:deploy_dir('bin', 'cron', 'commit_content'), monitor: 'commit_content_0730'
+      cronjob at:'18 9 * * *', do:deploy_dir('bin', 'cron', 'commit_content'), monitor: 'commit_content_0918'
     end
 
 
@@ -112,13 +120,13 @@
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
 
       # Scrub PII from expired deleted accounts nightly at 8:00 AM UTC.
-      cronjob at:"0 8 * * *", do:"#{deploy_dir('bin', 'cron', 'perform_job')} User::PiiScrubberJob"
+      cronjob at:"0 8 * * *", do:"#{deploy_dir('bin', 'cron', 'perform_job')} User::PiiScrubberJob", monitor: 'user_pii_scrubber_job'
 
       # Send Warning Emails to Inactive Teacher Accounts before Deletion
-      cronjob at: "0,30 0-11 * * *", do: "#{deploy_dir('bin', 'cron', 'perform_job')} User::InactiveTeacherDeletionWarningJob '{\"limit\": 1000}'"
+      cronjob at: "0,30 0-11 * * *", do: "#{deploy_dir('bin', 'cron', 'perform_job')} User::InactiveTeacherDeletionWarningJob '{\"limit\": 1000}'", monitor: 'user_inactive_teacher_deletion_warning_job'
 
       # Backfills geolocation data for anonymous project storages in batches of 100k every 5 minutes from 02:00 to 11:55 UTC.
-      cronjob at: '*/5 2-11 * * *', do: "#{deploy_dir('bin', 'cron', 'perform_job')} ProjectStorage::AnonymousGeoBackfillingJob '{\"limit\": 100000}'"
+      cronjob at: '*/5 2-11 * * *', do: "#{deploy_dir('bin', 'cron', 'perform_job')} ProjectStorage::AnonymousGeoBackfillingJob '{\"limit\": 100000}'", monitor: 'project_storage_anonymous_geo_backfilling_job'
     end
 
     # 'daemons' in all environments.
@@ -129,7 +137,7 @@
     cronjob at:'30 * * * *', do:deploy_dir('bin', 'cron', 'archive_failed_jobs')
 
     # Refresh the Tutorials cache every hour (runs at the start of each hour, UTC)
-    cronjob at:'0 * * * *', do:"#{deploy_dir('bin', 'cron', 'perform_job')} HocLegacy::RefreshTutorialsJob"
+    cronjob at:'0 * * * *', do:"#{deploy_dir('bin', 'cron', 'perform_job')} HocLegacy::RefreshTutorialsJob", monitor: 'hoc_legacy_refresh_tutorials_job'
 
     # background tasks that adhoc instances don't need to run.
     unless node.chef_environment == 'adhoc'

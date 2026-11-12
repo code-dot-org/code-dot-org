@@ -609,7 +609,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     context 'when there is no current user' do
       before do
         sign_out @user
-        session[:statsig_stable_id] = anon_user_id
+        cookies[Cdo::AnonUserId::KEY] = anon_user_id
       end
 
       def expect_anonymous_level_tracking(new_result:)
@@ -650,16 +650,35 @@ class ActivitiesControllerTest < ActionController::TestCase
         assert_equal_expected_keys expected_response, JSON.parse(@response.body)
       end
 
-      it 'tracks progress using the Statsig cookie instead of a conflicting session ID' do
-        session_stable_id = Cdo::AnonUserId.generate
-        cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = anon_user_id
-        session[:statsig_stable_id] = session_stable_id
+      it 'tracks progress using anon_user_id cookie instead of Statsig stable ID' do
+        stable_id = SecureRandom.uuid
+        cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = stable_id
+        session[:statsig_stable_id] = stable_id
         expect_anonymous_level_tracking(new_result: 100)
 
         post :milestone, params: @milestone_params.merge(user_id: 0)
 
         _(@response).must_be :successful?
-        _(session[:statsig_stable_id]).must_equal session_stable_id
+        _(session[:statsig_stable_id]).must_equal stable_id
+      end
+
+      context 'when there is no anon_user_id cookie' do
+        before do
+          cookies.delete(Cdo::AnonUserId::KEY)
+        end
+
+        it 'tracks progress using new anon_user_id cookie without session' do
+          tracked_anon_user_id = nil
+          Services::AnonymousLevel::ProgressTracker.expects(:call).with {|args| tracked_anon_user_id = args[:anon_user_id]}.once
+          Services::AnonymousLevel::GeoRecording.expects(:call).with {|args| args[:anon_user_id] == tracked_anon_user_id}.once
+
+          post :milestone, params: @milestone_params.merge(user_id: 0)
+
+          _(@response).must_be :successful?
+          _(tracked_anon_user_id).must_match Cdo::AnonUserId::FORMAT
+          _(cookies[Cdo::AnonUserId::KEY]).must_equal tracked_anon_user_id
+          _(session[:statsig_stable_id]).must_be_nil
+        end
       end
 
       it 'adds progress to an existing session' do

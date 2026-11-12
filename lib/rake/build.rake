@@ -67,6 +67,9 @@ namespace :build do
       ChatClient.log 'Installing <b>dashboard</b> python dependencies'
       RakeUtils.python_venv_install
 
+      ChatClient.log 'Provisioning <b>dashboard</b> SQL users...'
+      RakeUtils.rake 'db:provision_sql_users'
+
       if CDO.daemon
         ChatClient.log 'Migrating <b>dashboard</b> database...'
         RakeUtils.rake 'db:setup_or_migrate'
@@ -100,16 +103,10 @@ namespace :build do
           # rubocop:enable Style/SoleNestedConditional
         end
 
-        # Allow developers to skip the time-consuming step of seeding the dashboard DB.
-        # Additionally allow skipping when running in CI, as it will be seeded during `rake install`
-        if (rack_env?(:development) || ENV.fetch('CI', nil)) && CDO.skip_seed_all
-          ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n" \
-              "Until you manually run 'rake seed:default' or disable this flag, you won't\n" \
-              "see changes to: videos, concepts, levels, scripts, prize providers, \n " \
-              "callouts, hints, secret words, or secret pictures."
+        if CDO.skip_seed
+          ChatClient.log "Not seeding <b>dashboard</b> because skip_seed is set. Run 'rake seed:default' to pick up changes to seeded content."
         else
           ChatClient.log 'Seeding <b>dashboard</b>...'
-          ChatClient.log 'consider setting "skip_seed_all" in locals.yml if this is taking too long' if rack_env?(:development)
           RakeUtils.rake_stream_output 'seed:default', (rack_env?(:test) ? '--trace' : nil)
         end
 

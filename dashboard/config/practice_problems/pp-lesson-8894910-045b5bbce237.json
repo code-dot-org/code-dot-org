@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-8894910-045b5bbce237",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following best describes the term 'co-creating' in the context of AI and creativity?",
+  "solution": [
+    {
+      "option": "AI generates all content without human input.",
+      "correct": false
+    },
+    {
+      "option": "Humans and AI work together, combining creativity and data processing.",
+      "correct": true
+    },
+    {
+      "option": "Creativity is solely a human trait and cannot involve AI.",
+      "correct": false
+    },
+    {
+      "option": "AI only provides suggestions without any human guidance.",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "9c315c39-11ae-477d-8b48-2688a1d95f00"
+  ]
+}

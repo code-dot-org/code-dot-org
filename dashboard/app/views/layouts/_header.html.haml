@@ -92,6 +92,9 @@
             = link_to(image_tag(Cdo::Brand.header_logo_filename(request), class: 'img-responsive', alt: Cdo::Brand.logo_alt_text(request)), Cdo::Brand.marketing_url, {id: "logo_home_link"})
         - if current_user && (should_show_progress || level)
           %div#scrapbook-button-mount-point
+        - if level && level_view_options(level.id)[:is_building_quiz_questions]
+          -# The quiz builder portals its Save quiz button here.
+          %div#quiz_builder_header{style: 'display: flex; align-items: center; margin-left: 8px;'}
 
       .header_middle{dir: locale_dir}
         - if should_show_progress || level

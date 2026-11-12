@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-11-03T03:24:18.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "new-adaptive-HoAI26-match-the-look-learn-bede798f-8920-4f3d-b756-351f602a9e94",
+        "text": "Compare your design plan with the AI's generated page.",
+        "imageUrl": "https://images.code.org/8cfbee473370255d90598e47a886702f-new-adaptive-HoAI26-match-the-look-learn-panel-1-9eea26a3-5a17-4273-b35d-29cbbe3eea50.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "new-adaptive-HoAI26-match-the-look-learn-94f295bc-668b-493c-a3da-8969ac5ec63b",
+        "text": "Mark what matches your plan and what does not.",
+        "imageUrl": "https://images.code.org/e5c952c644d4e3cb39b5e08d5577adfa-new-adaptive-HoAI26-match-the-look-learn-panel-2-ec2871cb-3958-497c-a3ae-e859ace55403.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "new-adaptive-HoAI26-match-the-look-learn-f1def7ad-c71e-4a3d-bfd4-c31f226542c1",
+        "text": "Decide: keep, redirect with a new prompt, or edit for small changes.",
+        "imageUrl": "https://images.code.org/5d83daa730c46b95caee81f77733a94c-new-adaptive-HoAI26-match-the-look-learn-panel-3-1fe3de72-4e97-47b3-8bce-2de56ed86be8.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Compare your plan for how the page should look with the AI's result. Mark matches, then keep, redirect, or hand-edit."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 03:24:56 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 03:24:56 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

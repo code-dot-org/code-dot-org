@@ -60,27 +60,57 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     assert_nil cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
   end
 
+  describe 'request#anon_user_id' do
+    it 'persists through sign-in and rotates after sign-out' do
+      get '/v3/channels'
+      anon_user_id = cookies[Cdo::AnonUserId::KEY]
+      _(anon_user_id).must_match Cdo::AnonUserId::FORMAT
+
+      user = create(:user)
+      post '/users/sign_in', params: {user: {login: '', hashed_email: user.hashed_email, password: user.password}}
+
+      _(SignIn.where(user:).last.anon_user_id).must_equal anon_user_id
+      _(response.headers['Set-Cookie'].to_s).wont_include "#{Cdo::AnonUserId::KEY}="
+
+      get '/v3/channels'
+      _(cookies[Cdo::AnonUserId::KEY]).must_equal anon_user_id
+
+      get '/users/sign_out'
+      _(response.headers['Set-Cookie'].to_s).must_include "#{Cdo::AnonUserId::KEY}=; domain=code.org; path=/; max-age=0"
+      _(cookies[Cdo::AnonUserId::KEY]).must_be_empty
+
+      get '/v3/channels'
+      _(cookies[Cdo::AnonUserId::KEY]).must_match Cdo::AnonUserId::FORMAT
+      _(cookies[Cdo::AnonUserId::KEY]).wont_equal anon_user_id
+    end
+  end
+
   describe 'request#statsig_stable_id' do
+    # Logging a backend event saves a new Statsig stable ID in the session.
+    def log_backend_event
+      sign_in create(:student)
+      patch '/users/user_type', as: :json, params: {user: {user_type: 'teacher', email: "#{SecureRandom.hex}@example.com"}}
+    end
+
     it 'is not assigned by page requests' do
       get '/'
       _(session[:statsig_stable_id]).must_be_nil
     end
 
-    it 'persists through sign-in and rotates after sign-out' do
+    it 'is not assigned by anonymous user ID requests' do
       get '/v3/channels'
+
+      _(cookies[Cdo::AnonUserId::KEY]).must_match Cdo::AnonUserId::FORMAT
+      _(session[:statsig_stable_id]).must_be_nil
+    end
+
+    it 'persists while signed in and rotates after sign-out' do
+      log_backend_event
       initial_stable_id = session[:statsig_stable_id]
       _(initial_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
 
       get api_statsig_stable_id_path
       _(body).must_equal initial_stable_id
-
-      sign_in create(:user)
-
-      get api_statsig_stable_id_path
-      _(body).must_equal initial_stable_id
-
-      get '/v3/channels'
-      _(request.statsig_stable_id).must_equal initial_stable_id
 
       get '/users/sign_out'
       _(cookies[:statsig_stable_id]).must_be_empty
@@ -124,7 +154,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
         before do
           cookies.delete('statsig_stable_id')
 
-          get '/v3/channels'
+          log_backend_event
 
           _(session_cookie_written?).must_equal true
           _(session_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io

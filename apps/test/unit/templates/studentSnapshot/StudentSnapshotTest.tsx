@@ -7,6 +7,7 @@ import {MemoryRouter, useLocation} from 'react-router-dom';
 
 import DCDO from '@cdo/apps/dcdo';
 import StudentSnapshot from '@cdo/apps/templates/studentSnapshot/StudentSnapshot';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {createStore} from '../../../util/redux';
 
@@ -34,7 +35,7 @@ jest.mock('@cdo/apps/redux/unitSelectionRedux', () => ({
   asyncLoadCoursesWithProgress: jest.fn(() => () => Promise.resolve()),
 }));
 
-const makeStore = () =>
+const makeStore = (scriptId = 100) =>
   createStore(() => ({
     teacherSections: {
       selectedSectionId: 1,
@@ -52,7 +53,7 @@ const makeStore = () =>
       isLoadingSectionData: false,
     },
     unitSelection: {
-      scriptId: 100,
+      scriptId,
       coursesWithProgress: [],
       isLoadingCoursesWithProgress: false,
       courseVersionId: null,
@@ -70,9 +71,9 @@ const makeStore = () =>
 
 const LocationSearch = () => <>{useLocation().search}</>;
 
-const renderSnapshot = (initialRoute = '/') =>
+const renderSnapshot = (initialRoute = '/', scriptId?: number) =>
   render(
-    <Provider store={makeStore()}>
+    <Provider store={makeStore(scriptId)}>
       <MemoryRouter initialEntries={[initialRoute]}>
         <StudentSnapshot />
         <LocationSearch />
@@ -147,5 +148,49 @@ describe('StudentSnapshot', () => {
     });
 
     screen.getByText('?studentId=1');
+  });
+
+  describe('skill map widget', () => {
+    // The lessons loader is memoized by unit, so each case uses its own unit.
+    const renderWithLesson = async (
+      scriptId: number,
+      hasAdaptiveLevel: boolean
+    ) => {
+      (HttpClient.fetchJson as jest.Mock).mockImplementation((url: string) =>
+        Promise.resolve({
+          value: url.startsWith('/student_snapshots/lessons/')
+            ? {
+                lessons: [
+                  {
+                    id: 5,
+                    name: 'Lesson 5',
+                    hasLessonPlan: false,
+                    isLockable: false,
+                    position: 1,
+                    hasAdaptiveLevel,
+                  },
+                ],
+                hasUnnumberedLessons: false,
+              }
+            : {},
+          response: new Response(),
+        })
+      );
+      await act(async () => {
+        renderSnapshot('/?lessonId=5&studentId=1', scriptId);
+      });
+    };
+
+    it('appears for an adaptive lesson', async () => {
+      await renderWithLesson(201, true);
+
+      screen.getByText('Skill Map');
+    });
+
+    it('does not appear for any other lesson', async () => {
+      await renderWithLesson(202, false);
+
+      expect(screen.queryByText('Skill Map')).not.toBeInTheDocument();
+    });
   });
 });

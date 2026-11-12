@@ -1,3 +1,4 @@
+import {withThemeByDataAttribute} from '@storybook/addon-themes';
 import {default as RtlPreview} from 'storybook-addon-rtl/preview';
 
 import {loadFonts, injectFontAwesome} from '@code-dot-org/fonts';
@@ -8,7 +9,7 @@ import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 import '@code-dot-org/component-library-styles/brandOverrides.css';
-import './preview.module.scss';
+import './preview.scss';
 import BrandDecorator, {DEFAULT_BRAND} from '../decorators/BrandDecorator';
 
 // Import FontAwesome into the `base` layer (declared below `mui`) so MUI's
@@ -86,7 +87,20 @@ export const initialGlobals = {
 };
 
 export const tags = ['autodocs'];
-export const decorators = [...RtlPreview.decorators, BrandDecorator];
+
+// "Theme" toolbar: writes data-theme onto the preview <html>, which selects
+// the Light or Dark block in component-library-styles/colors.css.
+const ThemeDecorator = withThemeByDataAttribute({
+  themes: {Light: 'Light', Dark: 'Dark'},
+  defaultTheme: 'Light',
+  attributeName: 'data-theme',
+});
+
+export const decorators = [
+  ...RtlPreview.decorators,
+  ThemeDecorator,
+  BrandDecorator,
+];
 export const loaders = [
   fontAwesomeLoader,
   ...(document.fonts ? [fontLoader] : []),
