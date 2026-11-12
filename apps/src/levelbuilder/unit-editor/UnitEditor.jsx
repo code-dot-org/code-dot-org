@@ -479,8 +479,9 @@ class UnitEditor extends React.Component {
               <p>
                 For a unit whose levels all share one project. When a student
                 presses Start Over, the project is reset and every level of the
-                unit shows as not done again. Leave this off for a unit taught
-                in classrooms: it lets a student clear their own progress.
+                unit shows as not done again. This lets a student clear their
+                own progress, so leave it off for a unit where a teacher relies
+                on that progress, such as for grading.
               </p>
             </HelpTip>
           </label>

@@ -570,7 +570,8 @@ class ApiController < ApplicationController
   # is reset by the lab, not here.
   #
   # Only a unit that opts in (start_over_resets_progress) can be reset this
-  # way, so this cannot clear a student's progress in a classroom course.
+  # way. For any other unit the request is refused, so a student cannot use
+  # it to clear their progress in a course that has not chosen to allow it.
   def reset_user_progress
     unit = Unit.get_from_cache(params[:script], raise_exceptions: false)
     return head :not_found unless unit
