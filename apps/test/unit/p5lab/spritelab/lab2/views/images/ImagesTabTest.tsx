@@ -976,7 +976,7 @@ describe('ImagesTab', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
     // The eyedropper is among the tools; the colors are the fixed swatches.
     expect(screen.getByText('4 tools')).toBeTruthy();
-    expect(screen.getByText('10 colors')).toBeTruthy();
+    expect(screen.getByText('20 colors')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     saveEdited.mockResolvedValue('k1');
     await act(async () => {
