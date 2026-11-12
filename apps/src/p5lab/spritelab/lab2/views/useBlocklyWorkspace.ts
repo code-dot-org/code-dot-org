@@ -23,7 +23,6 @@ import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
 import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
-import {variablesFlyout} from '../blockly/variablesFlyout';
 import {STACK_ROOM_EVENT_GROUP, watchStackRoom} from '../stackRoom';
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
@@ -168,10 +167,6 @@ export default function useBlocklyWorkspace({
       customSimpleDialog,
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
-    workspaceRef.current.registerToolboxCategoryCallback(
-      'VARIABLE',
-      variablesFlyout
-    );
 
     // Drags onto a placeholder keep the placeholder showing, not a marker.
     workspaceRef.current.options.plugins[
