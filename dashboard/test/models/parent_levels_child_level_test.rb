@@ -114,4 +114,12 @@ class ParentLevelsChildLevelTest < ActiveSupport::TestCase
     ParentLevelsChildLevel.create!(parent_level: project, child_level: subproject)
     ParentLevelsChildLevel.create!(parent_level: prod_level, child_level: create(:level, name: 'PLCL standalone prod child'))
   end
+
+  test 'an exam Quiz cannot be a sublevel' do
+    parent = create(:bubble_choice_level)
+    assert_raises ActiveRecord::RecordInvalid do
+      ParentLevelsChildLevel.create!(parent_level: parent, child_level: create(:quiz, purpose: 'exam'), kind: ParentLevelsChildLevel::SUBLEVEL)
+    end
+    ParentLevelsChildLevel.create!(parent_level: parent, child_level: create(:quiz, purpose: 'practice'), kind: ParentLevelsChildLevel::SUBLEVEL)
+  end
 end
