@@ -68,6 +68,7 @@ import {
   withSceneMenuActive,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
+import {endKeyboardNavigation} from '../blockly/endKeyboardNavigation';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
 import {activeCallout, calloutSelector} from '../callouts';
@@ -2278,7 +2279,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }}
           >
             {animationsSeeded && (
-              <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
+              <div
+                id={BLOCKLY_DIV_ID}
+                className={moduleStyles.blocklyDiv}
+                onPointerDownCapture={endKeyboardNavigation}
+              />
             )}
           </div>
 

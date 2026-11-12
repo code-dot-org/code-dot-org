@@ -24,6 +24,8 @@ import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 
 import {getImageThumbnail} from '../imageTrim';
 
+import {keepFocusOffAfterMousePress} from './blurAfterPointerClick';
+
 import moduleStyles from './sprite-lab2-view.module.scss';
 
 export type PlayspaceMode = 'preview' | 'play' | 'hidden';
@@ -860,6 +862,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           cursor: picking ? 'crosshair' : undefined,
         }}
         onPointerDown={swallowWhilePicking}
+        onMouseDown={mode === 'play' ? keepFocusOffAfterMousePress : undefined}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerLeave={handlePointerLeave}
