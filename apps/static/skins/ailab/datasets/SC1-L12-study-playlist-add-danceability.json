@@ -1,0 +1,62 @@
+{
+  "name": "SC1-L12-study-playlist-add-danceability",
+  "card": {
+    "description": "A study app tries to pick songs for a study playlist. Each record is one real song. The label is Study Song? (Yes or No), based on the genre that playlist makers gave the song. You can also choose Major Key? or Cheerful? as the label.",
+    "source": "Spotify Tracks Dataset (maharshipandya), Hugging Face: https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset. Real song titles and audio measures; the Study Song? label comes from each song's genre tag.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Use the app's predictions to build a first draft of a study playlist.",
+      "potentialMisuses": "It is trained on a small set of songs and on genre tags that other people chose. It may skip songs that are great for studying. Always listen before you add a song."
+    }
+  },
+  "defaultLabelColumn": "Study Song?",
+  "defaultIdColumn": "Song",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Song",
+      "description": "What is the song called?"
+    },
+    {
+      "type": "categorical",
+      "id": "Energy",
+      "description": "How much energy does the song have? Low is calm. High is intense. Low is calm. High is intense."
+    },
+    {
+      "type": "categorical",
+      "id": "Tempo (BPM)",
+      "description": "How fast is the beat in beats per minute? Slow is under 90. Medium is 90 to 120. Fast is over 120."
+    },
+    {
+      "type": "categorical",
+      "id": "Length (min)",
+      "description": "How long is the song in minutes? Short is under 3. Long is over 4."
+    },
+    {
+      "type": "categorical",
+      "id": "Has Lyrics",
+      "description": "Does the song have singing or rapping?"
+    },
+    {
+      "type": "categorical",
+      "id": "Danceability",
+      "description": "How easy is the song to dance to?"
+    },
+    {
+      "type": "categorical",
+      "id": "Major Key?",
+      "description": "Is the song in a major key? A major key is a set of notes that often sounds bright and happy."
+    },
+    {
+      "type": "categorical",
+      "id": "Cheerful?",
+      "description": "Does the song sound cheerful? A song counts as cheerful when its happy score is 0.5 or more (on a scale from 0 to 1)."
+    },
+    {
+      "type": "categorical",
+      "id": "Study Song?",
+      "description": "Is the song on a study playlist? This is what the app predicts for each song."
+    }
+  ]
+}

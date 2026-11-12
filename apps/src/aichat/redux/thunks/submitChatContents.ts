@@ -224,7 +224,8 @@ export const submitChatContents = createAsyncThunk(
         newUserMessage,
         dispatch,
         state.progress.viewAsUserId,
-        metricDimensions
+        metricDimensions,
+        clientType
       );
       return;
     }
@@ -287,7 +288,8 @@ async function handleChatCompletionError(
   newUserMessage: PendingChatMessage & {updateId: string},
   dispatch: AppDispatch,
   viewAsUserId: number | null,
-  dimensions: MetricDimension[] = []
+  dimensions: MetricDimension[] = [],
+  clientType?: AiChatClientType
 ) {
   // A Turnstile failure that got this far already produced a metric and a log
   // in recordTurnstileOutcome, and an error tag on reportGatewayError. Logging
@@ -326,7 +328,12 @@ async function handleChatCompletionError(
       })
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
-    await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
+    await notifyErrorUnauthorized(
+      error,
+      'Chat Completion',
+      dispatch,
+      clientType
+    );
   } else if (turnstileMessage) {
     dispatch(
       addChatEvent({

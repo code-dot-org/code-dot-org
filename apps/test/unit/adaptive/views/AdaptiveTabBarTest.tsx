@@ -3,6 +3,21 @@ import React from 'react';
 
 import AdaptiveTabBar from '@cdo/apps/adaptive/views/AdaptiveTabBar';
 
+jest.mock('@cdo/apps/adaptive/views/MapStats', () => ({
+  __esModule: true,
+  default: ({
+    skills,
+    timeSpentSeconds,
+  }: {
+    skills: unknown[];
+    timeSpentSeconds: number;
+  }) => (
+    <div>
+      stats: {skills.length} skills, {timeSpentSeconds}s
+    </div>
+  ),
+}));
+
 describe('AdaptiveTabBar', () => {
   it('renders both tab labels', () => {
     render(<AdaptiveTabBar activeTab="map" onTabChange={jest.fn()} />);
@@ -67,5 +82,26 @@ describe('AdaptiveTabBar', () => {
   it('falls back to "My project" when projectName is not given', () => {
     render(<AdaptiveTabBar activeTab="map" onTabChange={jest.fn()} />);
     expect(screen.getByRole('tab', {name: /My project/})).toBeTruthy();
+  });
+
+  describe('MapStats', () => {
+    const skills = [{key: 'html', title: 'HTML', done: 1, total: 2}];
+
+    it('renders MapStats when skills and timeSpentSeconds are provided', () => {
+      render(
+        <AdaptiveTabBar
+          activeTab="map"
+          onTabChange={jest.fn()}
+          skills={skills}
+          timeSpentSeconds={300}
+        />
+      );
+      expect(screen.getByText('stats: 1 skills, 300s')).toBeTruthy();
+    });
+
+    it('does not render MapStats when stats props are absent', () => {
+      render(<AdaptiveTabBar activeTab="map" onTabChange={jest.fn()} />);
+      expect(screen.queryByText(/stats:/)).toBeNull();
+    });
   });
 });

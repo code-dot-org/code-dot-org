@@ -1,10 +1,10 @@
 import {AichatContext} from '@cdo/apps/aichat/types';
+import {fetchChallengeToken} from '@cdo/apps/aiGateway/challengeToken';
 import generateTextThroughGateway from '@cdo/apps/aiGateway/generateText';
 import {
   AI_GATEWAY_URL,
   clearAccessTokenCache,
 } from '@cdo/apps/aiGateway/shared';
-import {fetchTurnstileToken} from '@cdo/apps/aiGateway/turnstile';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -19,9 +19,12 @@ jest.mock('@cdo/apps/aiGateway/logHelper', () => ({
 }));
 
 jest.mock('@cdo/apps/aiGateway/turnstile', () => ({
-  fetchTurnstileToken: jest.fn(async () => undefined),
   turnstileErrorTags: jest.fn(() => ({})),
-  turnstileHeaders: jest.fn(() => ({})),
+}));
+
+jest.mock('@cdo/apps/aiGateway/challengeToken', () => ({
+  fetchChallengeToken: jest.fn(async () => null),
+  challengeHeaders: jest.fn(() => ({})),
 }));
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -31,7 +34,7 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 }));
 
 const mockPost = HttpClient.post as jest.Mock;
-const mockFetchTurnstileToken = fetchTurnstileToken as jest.Mock;
+const mockFetchChallengeToken = fetchChallengeToken as jest.Mock;
 
 const aichatContext: AichatContext = {
   clientType: AiChatClientTypes.AI_TUTOR,
@@ -91,7 +94,7 @@ describe('generateTextThroughGateway access tokens', () => {
 
   // Stands in for a challenge that runs past the access token's reuse window.
   const slowTurnstileOnce = () =>
-    mockFetchTurnstileToken.mockImplementationOnce(async () => {
+    mockFetchChallengeToken.mockImplementationOnce(async () => {
       jest.advanceTimersByTime(50_000);
       return undefined;
     });

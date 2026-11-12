@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, buttonClasses, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {MutableRefObject, useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -12,48 +12,50 @@ import {QuizQuestionType} from '../types';
 import {
   EMPTY_PAGE_REASON,
   editedQuestionsReason,
+  INVALID_CONFIG_REASON,
   NO_CHANGES_REASON,
   QUIZ_BUILDER_HEADER_ID,
+  QUIZ_LOAD_FAILED_REASON,
+  QUIZ_LOADING_REASON,
   UNSAVED_QUESTION_REASON,
 } from './constants';
 import CreateQuestionDropdown from './CreateQuestionDropdown';
 import DisabledReason, {ariaDisabledProps} from './DisabledReason';
 import IntroScreenCard from './IntroScreenCard';
-import {QuizConfigurationData} from './QuizConfigurationPanel';
+import {changedConfigFields, configError, timeLimitError} from './quizConfig';
 import QuizPageBlock from './QuizPageBlock';
 import QuizQuestionCard from './QuizQuestionCard';
-import {isPendingQuestionId} from './types';
+import {isPendingQuestionId, QuizConfigurationData} from './types';
 import useQuizBuilderQuestions from './useQuizBuilderQuestions';
 
 import styles from './quiz-builder-workspace.module.scss';
 
 interface QuizBuilderWorkspaceProps {
   levelId: number;
-  quizVersion: MutableRefObject<number | null>;
   quizTitle: string;
-  showIntroScreen: boolean;
-  customIntroText: string;
-  timeLimitMinutes?: number;
-  allowMultipleAttempts: boolean;
-  onSaveQuizConfig: (fields: Partial<QuizConfigurationData>) => Promise<void>;
+  // The configuration as edited so far, and as last saved.
+  config: QuizConfigurationData;
+  savedConfig: QuizConfigurationData;
+  onConfigChange: (fields: Partial<QuizConfigurationData>) => void;
+  // Called after Save quiz with the configuration fields it saved.
+  onConfigSaved: (fields: Partial<QuizConfigurationData>) => void;
 }
 
 const QuizBuilderWorkspace: React.FunctionComponent<
   QuizBuilderWorkspaceProps
 > = ({
   levelId,
-  quizVersion,
   quizTitle,
-  showIntroScreen,
-  customIntroText,
-  timeLimitMinutes,
-  allowMultipleAttempts,
-  onSaveQuizConfig,
+  config,
+  savedConfig,
+  onConfigChange,
+  onConfigSaved,
 }) => {
   const {
     questions,
     pages,
     isLoading,
+    hasLoaded,
     isSavingQuiz,
     error,
     errorQuestionId,
@@ -63,7 +65,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     saveQuestion,
     removeQuestion,
     saveQuiz,
-  } = useQuizBuilderQuestions(levelId, quizVersion);
+  } = useQuizBuilderQuestions(levelId);
   // Only one card is expanded at a time - opening one collapses whichever
   // was open before it. A create opens the just-created question straight
   // into editing.
@@ -96,18 +98,35 @@ const QuizBuilderWorkspace: React.FunctionComponent<
       ? EMPTY_PAGE_REASON
       : undefined);
 
+  const changedConfig = changedConfigFields(savedConfig, config);
+  const hasUnsavedConfig = Object.keys(changedConfig).length > 0;
   const editedCount = [...dirtyIds].filter(
     id => !isPendingQuestionId(id)
   ).length;
-  const saveDisabledReason = hasPendingQuestion
+  const saveDisabledReason = isLoading
+    ? QUIZ_LOADING_REASON
+    : !hasLoaded
+    ? QUIZ_LOAD_FAILED_REASON
+    : hasPendingQuestion
     ? UNSAVED_QUESTION_REASON
     : editedCount > 0
     ? editedQuestionsReason(editedCount)
-    : !hasUnsavedLayout
+    : configError(config)
+    ? INVALID_CONFIG_REASON
+    : !hasUnsavedLayout && !hasUnsavedConfig
     ? NO_CHANGES_REASON
     : undefined;
 
-  const hasUnsavedChanges = hasUnsavedLayout || dirtyIds.size > 0;
+  const handleSaveQuiz = async () => {
+    // Configuration edited during the save stays unsaved.
+    const sentConfig = changedConfig;
+    if (await saveQuiz(sentConfig)) {
+      onConfigSaved(sentConfig);
+    }
+  };
+
+  const hasUnsavedChanges =
+    hasUnsavedLayout || hasUnsavedConfig || dirtyIds.size > 0;
   useEffect(() => {
     if (!hasUnsavedChanges) {
       return;
@@ -128,7 +147,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
         color="secondary"
         size="extraSmall"
         type="button"
-        onClick={() => saveQuiz()}
+        onClick={handleSaveQuiz}
         disabled={isSavingQuiz}
         startIcon={<FontAwesomeV6Icon iconName="floppy-disk" />}
         {...ariaDisabledProps(isSavingQuiz ? undefined : saveDisabledReason)}
@@ -239,8 +258,12 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           </Typography>
           <QuizMetadataList
             questionCount={questions.length}
-            timeLimitMinutes={timeLimitMinutes}
-            allowMultipleAttempts={allowMultipleAttempts}
+            timeLimitMinutes={
+              timeLimitError(config)
+                ? undefined
+                : config.timeLimitMinutes ?? undefined
+            }
+            allowMultipleAttempts={config.allowMultipleAttempts}
             iconClassName={styles.metaIcon}
           />
         </header>
@@ -253,11 +276,12 @@ const QuizBuilderWorkspace: React.FunctionComponent<
         )}
 
         <section className={styles.outline} aria-label="Quiz outline">
-          {showIntroScreen && (
+          {config.showIntroScreen && (
             <IntroScreenCard
-              customIntroText={customIntroText}
-              hasTimeLimit={!!timeLimitMinutes}
-              onSave={onSaveQuizConfig}
+              customIntroText={config.customIntroText ?? ''}
+              savedCustomIntroText={savedConfig.customIntroText ?? ''}
+              hasTimeLimit={!!config.timeLimitMinutes}
+              onChange={onConfigChange}
             />
           )}
           {outline}

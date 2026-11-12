@@ -4,12 +4,14 @@
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import React, {useMemo, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
+import {sendAdaptiveEvent} from '../metricsHelpers';
 import {CheckpointStatusMap} from '../progress';
 import {usePathwayProject} from '../project/usePathwayProject';
 import {PathwayEvidence} from '../routing/evidence';
@@ -34,6 +36,7 @@ import {
   SKILL_MAP_TOUR_STORAGE_KEY,
 } from './skillMapTourHelpers';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
+import DCDO from '@cdo/apps/dcdo';
 /* eslint-enable import/order */
 
 // Percentages of the size at which the whole map fits.
@@ -85,8 +88,12 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     [pathway]
   );
 
+  const tourEnded = useRef(false);
+
   const [tourEnabled, setTourEnabled] = useState(
-    () => !tryGetLocalStorage(SKILL_MAP_TOUR_STORAGE_KEY, '0')
+    () =>
+      !!DCDO.get('adaptive-skill-map-tour-enabled', true) &&
+      !tryGetLocalStorage(SKILL_MAP_TOUR_STORAGE_KEY, '0')
   );
 
   const tourSteps = useMemo(
@@ -98,14 +105,32 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     [hasSkippedCheckpoints]
   );
 
+  useEffect(() => {
+    if (tourEnabled)
+      sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_STARTED, {
+        hasSkippedCheckpoints,
+      });
+    // Once per map visit.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const dismissTour = () => {
-    localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
-    setTourEnabled(false);
-    setTourCheckpointId(undefined);
-    document.body.classList.remove(
-      'adaptive-tour-step-select',
-      'adaptive-tour-no-next'
-    );
+    if (!tourEnded.current) {
+      tourEnded.current = true;
+      if (tourStep >= tourStepIndices.sidebar)
+        sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_COMPLETED);
+      else
+        sendAdaptiveEvent(EVENTS.ADAPTIVE_PRODUCT_TOUR_DISMISSED, {
+          stepIndex: tourStep,
+        });
+      localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
+      setTourEnabled(false);
+      setTourCheckpointId(undefined);
+      document.body.classList.remove(
+        'adaptive-tour-step-select',
+        'adaptive-tour-no-next'
+      );
+    }
   };
 
   // During the "pick" step, zoom to the centroid of all open checkpoints.
@@ -216,16 +241,25 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               focusId={tourEnabled ? undefined : focusId}
               tourFocusIds={tourFocusIds}
               onSelect={id => {
+                const sendSelected = () =>
+                  sendAdaptiveEvent(
+                    EVENTS.ADAPTIVE_SKILL_MAP_CHECKPOINT_SELECTED,
+                    {checkpointId: id, status: statusMap[id]}
+                  );
                 if (
                   tourEnabled &&
                   tourStep === tourStepIndices.pickCheckpoint
                 ) {
                   if (statusMap[id] !== 'locked') {
+                    sendSelected();
                     setTourCheckpointId(id);
                     stepsRef.current?.introJs?.nextStep();
                   }
+                } else if (id === focusId) {
+                  onFocus(undefined);
                 } else {
-                  onFocus(id === focusId ? undefined : id);
+                  sendSelected();
+                  onFocus(id);
                 }
               }}
             />
@@ -233,6 +267,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
         </div>
         <aside
           id="adaptive-tour-side"
+          aria-label="Checkpoint details"
           className={`${styles.side}${
             focused ? '' : ` ${styles.sideNoSelection}`
           }`}

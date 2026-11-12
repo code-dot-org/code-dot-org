@@ -5,7 +5,10 @@ import {
 } from '@cdo/apps/blockly/utils/toolbox';
 
 import {BURST_BLOCK_TYPE} from '../blockDefinitions/burst';
-import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
+import {
+  CLICKED_SPRITE_BLOCK_TYPE,
+  TOUCHED_SPRITE_BLOCK_TYPE,
+} from '../blockDefinitions/eventSprites';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
 import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
@@ -14,6 +17,7 @@ import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
 import {SET_WEATHER_BLOCK_TYPE} from '../blockDefinitions/setWeather';
 import {SHOW_TITLE_BLOCK_TYPE} from '../blockDefinitions/showTitle';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
+import {THE_PLAYER_2_BLOCK_TYPE} from '../blockDefinitions/thePlayer2';
 import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 
 import {AI_BLOCK_TYPES, AI_CATEGORY} from './aiBlocks';
@@ -35,9 +39,15 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_makeSpriteAtGrid',
     'spritelab2_makeSpriteAtPosition',
     'spritelab2_setAsPlatformPlayer',
+    'spritelab2_setAsPlatformPlayer2',
     THE_PLAYER_BLOCK_TYPE,
+    THE_PLAYER_2_BLOCK_TYPE,
   ],
-  Events: [WHEN_PLAYER_BLOCK_TYPE],
+  Events: [
+    WHEN_PLAYER_BLOCK_TYPE,
+    TOUCHED_SPRITE_BLOCK_TYPE,
+    CLICKED_SPRITE_BLOCK_TYPE,
+  ],
   Behaviors: [
     'spritelab2_beginsBehavior',
     'spritelab2_movingLeft',
@@ -46,10 +56,10 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
   ],
   'Game Design': [
     GO_TO_SCENE_BLOCK_TYPE,
-    GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
     RESTART_SCENE_BLOCK_TYPE,
     SHOW_TITLE_BLOCK_TYPE,
-    'spritelab2_setPlatformGravity',
+    'spritelab2_setPlatformJumpHeight',
+    'spritelab2_setPlatformGravityDirection',
     'spritelab2_setCameraZoom',
   ],
   [AI_CATEGORY]: AI_BLOCK_TYPES,

@@ -131,7 +131,7 @@ class Unit < ApplicationRecord
           :resources,
           :vocabularies,
           :programming_expressions,
-          :objectives,
+          {objectives: :objectives_script_levels},
           {rubric: {learning_goals: :learning_goal_evidence_levels}},
           :standards,
           :opportunity_standards,

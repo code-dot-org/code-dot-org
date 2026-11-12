@@ -1,20 +1,17 @@
 import {useMemo} from 'react';
 
-import shouldUseAiGateway from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import {
   AI_SETTINGS_SUPPORT_LINK,
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
-  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
-  AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
-  AI_CHAT_LAB_FAQ_LINK,
-  AI_TUTOR_FAQ_LINK,
+  AI_NOT_AVAILABLE_INTERNATIONAL,
+  REGION_BLOCKED_COPY,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
 import {
   areAiChatToolsEnabled,
+  shouldGatewayFallBack,
   isAiChatModelBlocked,
-  isAiGatewayFallbackEnabled,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
 import type {AiChatClientType} from '@cdo/apps/aichat/types/context';
@@ -22,21 +19,6 @@ import type {ModelParameters} from '@cdo/apps/aichat/types/model';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
-
-// Allows specific FAQ articles for different aichat clients.
-const REGION_BLOCKED_COPY: Partial<
-  Record<AiChatClientType, {message: string; faqLink: string}>
-> = {
-  [AiChatClientTypes.AI_CHAT_LAB]: {
-    message: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
-    faqLink: AI_CHAT_LAB_FAQ_LINK,
-  },
-  [AiChatClientTypes.AI_TUTOR]: {
-    message: AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
-    faqLink: AI_TUTOR_FAQ_LINK,
-  },
-};
 
 interface UseAiChatDisabledStateParams {
   appName?: string;
@@ -102,7 +84,7 @@ export function useAiChatDisabledState({
     if (
       selectedModelId &&
       isAiChatModelBlocked(selectedModelId, blockedAichatProviders) &&
-      !(isAiGatewayFallbackEnabled() && shouldUseAiGateway(selectedModelId))
+      !shouldGatewayFallBack(selectedModelId, clientType)
     ) {
       if (!isTeacher) {
         return {
@@ -113,7 +95,7 @@ export function useAiChatDisabledState({
       const copy = clientType && REGION_BLOCKED_COPY[clientType];
       return {
         disabled: true,
-        disabledMessage: copy?.message ?? AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+        disabledMessage: copy?.message ?? AI_NOT_AVAILABLE_INTERNATIONAL,
         ...(copy && {
           disabledLink: {
             href: copy.faqLink,

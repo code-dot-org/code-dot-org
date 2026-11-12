@@ -1,9 +1,9 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {DestinationColor} from '../../schema/destination';
 import {Pathway} from '../../types';
+import PathwayIcon from '../components/PathwayIcon';
 
 import {checkpointIcon} from './checkpointIcon';
 import {busRoutes} from './layout/busRoutes';
@@ -159,7 +159,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
         >
           <span className={styles.destinationTitle}>
             {box.icon && (
-              <FontAwesomeV6Icon
+              <PathwayIcon
                 iconName={box.icon}
                 className={styles.destinationIcon}
               />

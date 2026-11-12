@@ -45,14 +45,23 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveTabBar', () => ({
     activeTab,
     onTabChange,
     projectName,
+    skills,
+    timeSpentSeconds,
   }: {
     activeTab: string;
     onTabChange: (tab: string) => void;
     projectName?: string;
+    skills?: unknown[];
+    timeSpentSeconds?: number;
   }) => (
     <div>
       tabs: {activeTab}
       {projectName && <span>tab project: {projectName}</span>}
+      {skills !== undefined && (
+        <span>
+          tab stats: {skills.length} skills, {timeSpentSeconds}s
+        </span>
+      )}
       <button type="button" onClick={() => onTabChange('project')}>
         My project tab
       </button>
@@ -150,6 +159,8 @@ jest.mock('@cdo/apps/adaptive/progress/progressStore', () => ({
     saveStep: jest.fn(),
     saveInstructions: jest.fn(),
   },
+  recordProgressOk: jest.fn(),
+  recordProgressFailure: jest.fn(),
 }));
 
 const step = (id: string) => ({
@@ -681,6 +692,20 @@ describe('PathwayApp', () => {
       await renderSettled();
 
       expect(screen.queryByText(/tab project:/)).toBeNull();
+    });
+
+    it('passes skill progress and total time spent to the tab bar on the map view', async () => {
+      // intro-step started (120s) + next-step started (60s) = 180s total.
+      mockLoad.mockResolvedValue({
+        steps: {
+          'intro-step': {status: 'started', timeSpent: 120},
+          'next-step': {status: 'started', timeSpent: 60},
+        },
+      });
+      // Pathway has no skills, so skill count is 0.
+      await renderSettled();
+
+      expect(screen.getByText('tab stats: 0 skills, 180s')).toBeTruthy();
     });
   });
 });

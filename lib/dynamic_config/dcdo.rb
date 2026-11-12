@@ -69,6 +69,9 @@ class DCDO < DynamicConfigBase
       # apps/src/pythonlab/README.md.
       'use-pythonlab-separate-domain': DCDO.get('use-pythonlab-separate-domain', false),
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
+      # Falls back to reCAPTCHA v3 when the Turnstile script cannot load. Leave off
+      # until the gateway worker accepts and verifies X-Recaptcha-Token.
+      'ai-gateway-recaptcha-fallback-enabled': DCDO.get('ai-gateway-recaptcha-fallback-enabled', false),
       # Controls whether the output image goes through the additional LLM-as-judge safety layer.
       # Azure image moderation still runs when this is false.
       'aichat-output-image-llm-safety-judge-enabled': DCDO.get('aichat-output-image-llm-safety-judge-enabled', true),
@@ -83,6 +86,7 @@ class DCDO < DynamicConfigBase
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
       'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false),
       'adaptive-ai-enabled': DCDO.get('adaptive-ai-enabled', false),
+      'adaptive-skill-map-tour-enabled': DCDO.get('adaptive-skill-map-tour-enabled', true),
       # AI descriptions of Python Lab theater output; also gates the access token server-side.
       'theater-ai-descriptions-enabled': DCDO.get('theater-ai-descriptions-enabled', false),
       # Kill switch for Tutor+ (lesson deep dive); also gates its endpoints and chat server-side.

@@ -755,6 +755,36 @@ const EVENTS = {
   PAIRING_STOP_PAIR_PROGRAMMING_BUTTON_CLICKED:
     'Stop pair programming button clicked',
 
+  // Adaptive levels
+  ADAPTIVE_PATHWAY_LOADED: 'Adaptive Pathway Loaded',
+  ADAPTIVE_SKILL_MAP_VIEWED: 'Adaptive Skill Map Viewed',
+  ADAPTIVE_SKILL_MAP_HEADER_BUTTON_CLICKED:
+    'Adaptive Skill Map Header Button Clicked',
+  ADAPTIVE_SKILL_MAP_CHECKPOINT_SELECTED:
+    'Adaptive Skill Map Checkpoint Selected',
+  ADAPTIVE_PRODUCT_TOUR_STARTED: 'Adaptive Product Tour Started',
+  ADAPTIVE_PRODUCT_TOUR_COMPLETED: 'Adaptive Product Tour Completed',
+  ADAPTIVE_PRODUCT_TOUR_DISMISSED: 'Adaptive Product Tour Dismissed',
+  ADAPTIVE_CHECKPOINT_STARTED: 'Adaptive Checkpoint Started',
+  ADAPTIVE_CHECKPOINT_RESUMED: 'Adaptive Checkpoint Resumed',
+  ADAPTIVE_CHECKPOINT_REVIEWED: 'Adaptive Checkpoint Reviewed',
+  ADAPTIVE_SKIPPED_CHECKPOINT_OPENED: 'Adaptive Skipped Checkpoint Opened',
+  ADAPTIVE_CHECKPOINT_COMPLETED: 'Adaptive Checkpoint Completed',
+  ADAPTIVE_ROUTING_SKIPPED_CHECKPOINT: 'Adaptive Routing Skipped Checkpoint',
+  ADAPTIVE_STEP_STARTED: 'Adaptive Step Started',
+  ADAPTIVE_STEP_COMPLETED: 'Adaptive Step Completed',
+  ADAPTIVE_MULTIPLE_CHOICE_QUESTION_ANSWERED:
+    'Adaptive Multiple Choice Question Answered',
+  ADAPTIVE_FREE_RESPONSE_ANSWERED: 'Adaptive Free Response Answered',
+  ADAPTIVE_FINAL_PROJECT_BUTTON_CLICKED:
+    'Adaptive Final Project Button Clicked',
+  ADAPTIVE_FIRST_PROMPT_SUBMITTED: 'Adaptive First Prompt Submitted',
+  ADAPTIVE_PROJECT_GENERATED: 'Adaptive Project Generated',
+  ADAPTIVE_INSTRUCTIONS_GENERATED: 'Adaptive Instructions Generated',
+  ADAPTIVE_WORK_VALIDATION_PASSED: 'Adaptive Work Validation Passed',
+  ADAPTIVE_WORK_VALIDATION_FAILED: 'Adaptive Work Validation Failed',
+  ADAPTIVE_AI_STATIC_FALLBACK_USED: 'Adaptive AI Static Fallback Used',
+
   // Teacher and Permanent promotion events
   PROMOTION_CLICKED: 'Promotion Clicked',
   PROMOTION_DISMISSED: 'Promotion Dismissed',
