@@ -172,13 +172,13 @@
               "id": 202,
               "type": "MultipleChoiceQuestion",
               "questionName": "intro-purpose",
-              "questionTitle": "What should your site do?",
-              "choices": [
-                { "id": "a", "text": "Share a message" },
-                { "id": "b", "text": "Help them decide or plan" },
-                { "id": "c", "text": "Bring people together" },
-                { "id": "d", "text": "Let them play or try something" }
-              ],
+              "questionTitle": "The website will help them…",
+  "choices": [
+    { "id": "a", "text": "Learn something" },
+    { "id": "b", "text": "Decide or plan" },
+    { "id": "c", "text": "Connect with each other" },
+    { "id": "d", "text": "Play or try something" }
+  ],
               "allowOther": {
                 "placeholder": "Or something else"
               },
@@ -214,7 +214,7 @@
           "kind": "level",
           "level": "adaptive-less-checkpoints-plan-your-site-apply",
           "project": true,
-          "instructions": "This is your site. Look it over, then continue. You will be building the skills to make it your own.",
+          "instructions": "Welcome to your website! AI wrote the starter code. Take a look around, then press Continue. You’ll build the skills to make it yours.",
           "projectPrompt": "The first version of the student's website, built from their plan: a hero with a headline that says what the site is for, one or two sections that fit the topic, and a call-to-action. Keep the look and feel simple, but appropriate for their given topic. It should feel clean but not overly polished."
         },
         {
