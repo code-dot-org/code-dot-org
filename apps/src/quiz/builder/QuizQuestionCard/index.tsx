@@ -30,8 +30,8 @@ interface QuizQuestionCardProps {
   ) => Promise<number | undefined>;
   onRemove: (id: number) => Promise<boolean>;
   onDirtyChange?: (id: number, isDirty: boolean) => void;
-  // The question's options menu, shown in the card's header; it's given
-  // whether the card is saving or removing the question.
+  // The question card's options menu. isBusy is true while
+  // the card is saving or removing the question.
   menu?: (isBusy: boolean) => React.ReactNode;
 }
 
