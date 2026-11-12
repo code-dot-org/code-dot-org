@@ -293,6 +293,32 @@ describe('SentenceScene', () => {
     ).toBeTruthy();
   });
 
+  it('keeps showing the making until the host lets a ready picture through, storing it meanwhile', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    let release: () => void = () => {};
+    const onReady = jest.fn(
+      () =>
+        new Promise<void>(resolve => {
+          release = resolve;
+        })
+    );
+    renderScene({onReady});
+    pickCreature();
+    await generate();
+    // The picture is ready and stored, and the host is holding it back.
+    expect(onReady).toHaveBeenCalledTimes(1);
+    expect(onKeep).toHaveBeenCalledTimes(1);
+    expect(screen.getByRole('status').textContent).toBe('Making your picture…');
+    expect(screen.queryByRole('img', {name: 'A cat'})).toBeNull();
+    await act(async () => {
+      release();
+    });
+    expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+    expect(screen.getByRole('img', {name: 'A cat'})).toBeTruthy();
+    // Stored once, not again when it is shown.
+    expect(onKeep).toHaveBeenCalledTimes(1);
+  });
+
   it("hands up the picture's story from Behind the scenes", async () => {
     const onTellStory = jest.fn();
     generateCharacterSet.mockResolvedValue(RESULT);

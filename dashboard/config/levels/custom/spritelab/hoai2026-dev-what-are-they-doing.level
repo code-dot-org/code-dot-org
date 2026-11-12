@@ -73,7 +73,7 @@
           }
         },
         {
-          "text": "Click **Play** and watch them go.",
+          "text": "Select **Run** and watch them go.",
           "check": {
             "kind": "play"
           }

@@ -48,10 +48,16 @@
 button.circle {
   cursor: pointer;
 
-  &:hover,
+  &:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 15%);
+  }
+
   &:focus-visible {
     transform: scale(1.08);
     box-shadow: 0 8px 20px rgb(0 0 0 / 15%);
+    outline: 3px solid var(--borders-brand-purple-primary);
+    outline-offset: 3px;
   }
 }
 
@@ -66,6 +72,12 @@ button.circle {
 
 .available:not(.focused) button.circle {
   animation: pulse 1.8s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .available:not(.focused) button.circle {
+    animation: none;
+  }
 }
 
 .inProgress .circle {
