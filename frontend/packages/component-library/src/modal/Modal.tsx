@@ -6,7 +6,7 @@ import {
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode, useRef} from 'react';
 
-import CustomDialog from '@/dialog/MuiCustomDialog';
+import CustomDialog from '@/dialog/CustomDialog';
 
 import useTabStopWhileOverflowing from './useTabStopWhileOverflowing';
 

@@ -36,6 +36,7 @@ import {
   SKILL_MAP_TOUR_STORAGE_KEY,
 } from './skillMapTourHelpers';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
+import DCDO from '@cdo/apps/dcdo';
 /* eslint-enable import/order */
 
 // Percentages of the size at which the whole map fits.
@@ -46,6 +47,8 @@ interface MapScreenProps {
   /** The adaptive level's own properties, which the resource rail reads. */
   levelProperties: LevelProperties;
   statusMap: CheckpointStatusMap;
+  /** Share of each checkpoint's steps complete, drawn on an in-progress node. */
+  stepShares?: {[checkpointId: string]: number};
   /** What the student has shown, for explaining a skipped checkpoint. */
   evidence: PathwayEvidence;
   /** Checkpoint the map is zoomed onto, if any. */
@@ -59,6 +62,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   pathway,
   levelProperties,
   statusMap,
+  stepShares,
   evidence,
   focusId,
   onFocus,
@@ -90,7 +94,9 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   const tourEnded = useRef(false);
 
   const [tourEnabled, setTourEnabled] = useState(
-    () => !tryGetLocalStorage(SKILL_MAP_TOUR_STORAGE_KEY, '0')
+    () =>
+      !!DCDO.get('adaptive-skill-map-tour-enabled', true) &&
+      !tryGetLocalStorage(SKILL_MAP_TOUR_STORAGE_KEY, '0')
   );
 
   const tourSteps = useMemo(
@@ -234,6 +240,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
             <MapView
               pathway={pathway}
               statusMap={statusMap}
+              stepShares={stepShares}
               settings={mapSettings}
               focusId={tourEnabled ? undefined : focusId}
               tourFocusIds={tourFocusIds}

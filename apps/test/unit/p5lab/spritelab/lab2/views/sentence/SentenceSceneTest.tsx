@@ -3,6 +3,7 @@ import {act, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import SentenceScene, {
+  MIN_CACHED_GENERATING_MS,
   SentenceSceneParts,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
 
@@ -293,6 +294,32 @@ describe('SentenceScene', () => {
     ).toBeTruthy();
   });
 
+  it('keeps showing the making until the host lets a ready picture through, storing it meanwhile', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    let release: () => void = () => {};
+    const onReady = jest.fn(
+      () =>
+        new Promise<void>(resolve => {
+          release = resolve;
+        })
+    );
+    renderScene({onReady});
+    pickCreature();
+    await generate();
+    // The picture is ready and stored, and the host is holding it back.
+    expect(onReady).toHaveBeenCalledTimes(1);
+    expect(onKeep).toHaveBeenCalledTimes(1);
+    expect(screen.getByRole('status').textContent).toBe('Making your picture…');
+    expect(screen.queryByRole('img', {name: 'A cat'})).toBeNull();
+    await act(async () => {
+      release();
+    });
+    expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+    expect(screen.getByRole('img', {name: 'A cat'})).toBeTruthy();
+    // Stored once, not again when it is shown.
+    expect(onKeep).toHaveBeenCalledTimes(1);
+  });
+
   it("hands up the picture's story from Behind the scenes", async () => {
     const onTellStory = jest.fn();
     generateCharacterSet.mockResolvedValue(RESULT);
@@ -376,7 +403,7 @@ describe('SentenceScene', () => {
       });
       expect(onGenerateStart).toHaveBeenCalledTimes(1);
       await act(async () => {
-        jest.advanceTimersByTime(4999);
+        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS - 1);
       });
       expect(screen.getByRole('status').textContent).toBe(
         'Making your picture…'
@@ -400,13 +427,13 @@ describe('SentenceScene', () => {
       pickCreature();
       await generate();
       await act(async () => {
-        jest.advanceTimersByTime(5000);
+        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS);
       });
       await generate();
       expect(findCachedImage.mock.calls[0][0].avoidVariant).toBeUndefined();
       expect(findCachedImage.mock.calls[1][0].avoidVariant).toBe(1);
       await act(async () => {
-        jest.advanceTimersByTime(5000);
+        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS);
       });
       fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
       await generate();

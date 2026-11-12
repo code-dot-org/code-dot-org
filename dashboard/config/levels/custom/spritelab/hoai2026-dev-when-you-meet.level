@@ -7,6 +7,10 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "friend",
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -23,7 +27,20 @@
     "project_template_level_name": "hoai2026-dev-revised-template",
     "lock_earlier_blocks": true,
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "extraTabs": [
+        "Images",
+        "World"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "paletteRoles": [
+        "friend",
+        "treasure",
+        "block"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",
@@ -142,7 +159,7 @@
           }
         },
         {
-          "text": "Click **Play** and go meet them.",
+          "text": "Select **Run** and go meet them.",
           "check": {
             "kind": "reach",
             "role": "friend"

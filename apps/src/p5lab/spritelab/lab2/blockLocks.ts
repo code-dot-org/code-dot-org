@@ -1,14 +1,20 @@
 // On a level that opts in (lock_earlier_blocks), blocks a student built on
 // an earlier level cannot be deleted: a stack deleted by accident would
 // leave the student with no way to continue. They can still be moved. The
-// locks belong to the level, are set as the pinned scene loads and are
+// locks belong to the level, are set as each scene loads and are
 // never saved, so a later level without the property loads the same
 // project with every block deletable again.
+//
+// The blocks a level adds for the student to build on (add_blocks) cannot
+// be deleted on that level either, whether or not the level opts in to the
+// lock above.
 
 import * as BlocklyCore from 'blockly/core';
 
+import {AddBlock, AddBlockEntry, isAttachment, matchesEntry} from './addBlocks';
 import {requiredBlockTypes} from './blockCatalog';
 import {WHEN_RUN_BLOCK_TYPE} from './blockly/blockDefinitions/whenRun';
+import {mapSavedTopBlocks} from './savedBlocks';
 import {SpriteLab2LevelProperties} from './types';
 
 type BlockState = BlocklyCore.serialization.blocks.State;
@@ -64,6 +70,56 @@ export function lockBlocks(
   });
 }
 
+// Locks a block the level added, and the blocks the level added inside or
+// under it. The entry says which those are: the workspace block in the same
+// place, of the same type. A block the student put there is left alone.
+function lockAsAdded(block: BlocklyCore.Block, added: AddBlock): void {
+  block.setDeletable(false);
+  const stillThere = (
+    child: BlocklyCore.Block | null,
+    addedChild: AddBlock | null | undefined
+  ): child is BlocklyCore.Block =>
+    !!child &&
+    !!addedChild &&
+    !child.isShadow() &&
+    child.type === addedChild.type;
+  Object.entries(added.inputs ?? {}).forEach(([name, input]) => {
+    const child = block.getInputTargetBlock(name);
+    if (stillThere(child, input.block)) {
+      lockAsAdded(child, input.block as AddBlock);
+    }
+  });
+  const below = block.getNextBlock();
+  if (stillThere(below, added.next?.block)) {
+    lockAsAdded(below, added.next?.block as AddBlock);
+  }
+}
+
+/** Makes the blocks this level added (add_blocks) undeletable: each added
+    top block, and any block the level added inside or under it. A level
+    adds a block because the level is about it, and one that is not in the
+    toolbox could not be got back. What the student builds under an added
+    block can still be deleted.
+
+    A level adds one block for each entry, so one stack is locked for each
+    entry: the first that stands for it. An entry with no tag is matched by
+    type alone, and a second stack of that type is the student's own. */
+export function lockAddedBlocks(
+  workspace: BlocklyCore.Workspace,
+  entries: AddBlockEntry[]
+): void {
+  const tops = workspace.getTopBlocks(false);
+  entries.forEach(entry => {
+    if (isAttachment(entry)) {
+      return;
+    }
+    const top = tops.find(candidate => matchesEntry(candidate, entry));
+    if (top) {
+      lockAsAdded(top, entry);
+    }
+  });
+}
+
 function stripLocks(block: BlockState): BlockState {
   const {deletable, movable, ...rest} = block;
   // The when-run block's flags come from the project's own sources, not
@@ -91,12 +147,5 @@ function stripLocks(block: BlockState): BlockState {
 export function withoutLocks<
   T extends {blocks?: {languageVersion?: number; blocks?: BlockState[]}}
 >(serialized: T): T {
-  const blocks = serialized.blocks?.blocks;
-  if (!blocks) {
-    return serialized;
-  }
-  return {
-    ...serialized,
-    blocks: {...serialized.blocks, blocks: blocks.map(stripLocks)},
-  };
+  return mapSavedTopBlocks(serialized, stripLocks);
 }

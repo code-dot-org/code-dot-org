@@ -1,4 +1,4 @@
-import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import Tags from '@code-dot-org/component-library/tags';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';

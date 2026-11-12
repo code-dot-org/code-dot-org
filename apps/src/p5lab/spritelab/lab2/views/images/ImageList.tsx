@@ -325,8 +325,8 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
       {deletable && (
         <div className={styles.listFooter}>
           <MuiIconButton
-            variant="text"
-            color="tertiary"
+            variant="contained"
+            color="error"
             size="small"
             aria-label="Delete image"
             disabled={disabled}
