@@ -138,9 +138,11 @@ class UnitOverviewHeader extends Component {
 
     const showVerificationNotices =
       viewAs === ViewType.Instructor && !isVerifiedInstructor && !demoType;
-    const showRequiresVerifiedAccess =
+    const showRequiresVerifiedAccessBanner =
       showVerificationNotices && requiresVerifiedTeacherAccess;
-    const displayVerifiedResourcesWarning =
+    // We only want to show one of these banners, so don't show
+    // the verified resources banner if the above banner will trigger.
+    const showVerifiedResourcesBanner =
       showVerificationNotices &&
       hasVerifiedResources &&
       !requiresVerifiedTeacherAccess;
@@ -176,10 +178,10 @@ class UnitOverviewHeader extends Component {
           />
         )}
         {userId && <ParticipantFeedbackNotification studentId={userId} />}
-        {showRequiresVerifiedAccess && (
+        {showRequiresVerifiedAccessBanner && (
           <RequiresVerifiedTeacherAccessNotification />
         )}
-        {displayVerifiedResourcesWarning && <VerifiedResourcesNotification />}
+        {showVerifiedResourcesBanner && <VerifiedResourcesNotification />}
         {displayVersionWarning && (
           <NotificationBanner
             className={classNames(

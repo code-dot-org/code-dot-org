@@ -422,6 +422,7 @@ class ScriptsController < ApplicationController
       :lesson_extras_available,
       :has_unnumbered_lessons,
       :has_verified_resources,
+      :requires_verified_teacher_access,
       :tts,
       :show_calendar,
       :weekly_instructional_minutes,

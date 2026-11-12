@@ -325,6 +325,26 @@ class CourseEditor extends Component {
 
         <CollapsibleEditorSection title="Basic Settings">
           <label>
+            Requires Verified Teacher Access
+            <HelpTip>
+              <p>
+                Check if this course cannot be used by teachers without verified
+                teacher access. Non-verified teachers will see an alert on the
+                course overview page.
+              </p>
+            </HelpTip>
+            <input
+              type="checkbox"
+              defaultChecked={requiresVerifiedTeacherAccess}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  requiresVerifiedTeacherAccess: !requiresVerifiedTeacherAccess,
+                })
+              }
+            />
+          </label>
+          <label>
             Verified Resources
             <HelpTip>
               <p>
@@ -339,27 +359,6 @@ class CourseEditor extends Component {
               style={styles.checkbox}
               onChange={() =>
                 this.setState({hasVerifiedResources: !hasVerifiedResources})
-              }
-            />
-          </label>
-          <label>
-            Requires Verified Teacher Access
-            <HelpTip>
-              <p>
-                Check if this course cannot be used by teachers without verified
-                teacher access. Non-verified teachers will see an alert on the
-                course overview page, and on the unit overview page if the
-                course has only one unit.
-              </p>
-            </HelpTip>
-            <input
-              type="checkbox"
-              defaultChecked={requiresVerifiedTeacherAccess}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({
-                  requiresVerifiedTeacherAccess: !requiresVerifiedTeacherAccess,
-                })
               }
             />
           </label>

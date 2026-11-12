@@ -158,9 +158,11 @@ class CourseOverview extends Component {
 
     const showVerificationNotices =
       viewAsTeacher && !isVerifiedInstructor && !demoType;
-    const showRequiresVerifiedAccess =
+    const showRequiresVerifiedAccessBanner =
       showVerificationNotices && requiresVerifiedTeacherAccess;
-    const showVerifiedResources =
+    // We only want to show one of these banners, so don't show
+    // the verified resources banner if the above banner will trigger.
+    const showVerifiedResourcesBanner =
       showVerificationNotices &&
       hasVerifiedResources &&
       !requiresVerifiedTeacherAccess;
@@ -221,10 +223,10 @@ class CourseOverview extends Component {
             }}
           />
         )}
-        {showRequiresVerifiedAccess && (
+        {showRequiresVerifiedAccessBanner && (
           <RequiresVerifiedTeacherAccessNotification />
         )}
-        {showVerifiedResources && <VerifiedResourcesNotification />}
+        {showVerifiedResourcesBanner && <VerifiedResourcesNotification />}
         <div className={styles.titleWrapper}>
           <Typography
             variant="h2"

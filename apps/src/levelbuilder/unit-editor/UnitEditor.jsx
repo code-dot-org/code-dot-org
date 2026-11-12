@@ -58,6 +58,7 @@ class UnitEditor extends React.Component {
     initialLessonExtrasAvailable: PropTypes.bool,
     initialHasUnnumberedLessons: PropTypes.bool,
     initialHasVerifiedResources: PropTypes.bool,
+    initialRequiresVerifiedTeacherAccess: PropTypes.bool,
     initialCurriculumPath: PropTypes.string,
     initialEditorExperiment: PropTypes.string,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
@@ -129,6 +130,8 @@ class UnitEditor extends React.Component {
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
       hasUnnumberedLessons: this.props.initialHasUnnumberedLessons,
       hasVerifiedResources: this.props.initialHasVerifiedResources,
+      requiresVerifiedTeacherAccess:
+        !!this.props.initialRequiresVerifiedTeacherAccess,
       curriculumPath: this.props.initialCurriculumPath,
       editorExperiment: this.props.initialEditorExperiment,
       supportedLocales: this.props.initialSupportedLocales,
@@ -241,6 +244,8 @@ class UnitEditor extends React.Component {
       last_updated_at: this.state.lastUpdatedAt,
       has_unnumbered_lessons: this.state.hasUnnumberedLessons,
       has_verified_resources: this.state.hasVerifiedResources,
+      requires_verified_teacher_access:
+        this.state.requiresVerifiedTeacherAccess,
       curriculum_path: this.state.curriculumPath,
       editor_experiment: this.state.editorExperiment,
       supported_locales: this.state.supportedLocales,
@@ -832,6 +837,27 @@ class UnitEditor extends React.Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Resources Dropdowns">
+          <label>
+            Requires Verified Teacher Access
+            <input
+              type="checkbox"
+              checked={this.state.requiresVerifiedTeacherAccess}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  requiresVerifiedTeacherAccess:
+                    !this.state.requiresVerifiedTeacherAccess,
+                })
+              }
+            />
+            <HelpTip>
+              <p>
+                Check if this unit cannot be used by teachers without verified
+                teacher access. Non-verified teachers will see an alert on the
+                unit overview page.
+              </p>
+            </HelpTip>
+          </label>
           <label>
             Has Resources for Verified Instructors
             <input

@@ -754,16 +754,12 @@ class UnitTest < ActiveSupport::TestCase
     refute summary[:has_verified_resources]
   end
 
-  test 'summarize includes requires_verified_teacher_access only for single-unit courses' do
+  test 'summarize includes requires_verified_teacher_access' do
     unit = create(:script, :in_single_unit_course)
-    unit_group = unit.unit_groups.first
     refute unit.summarize[:requires_verified_teacher_access]
 
-    unit_group.update!(requires_verified_teacher_access: true)
-    assert unit.reload.summarize[:requires_verified_teacher_access]
-
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script))
-    refute unit.reload.summarize[:requires_verified_teacher_access]
+    unit.update!(requires_verified_teacher_access: true)
+    assert unit.summarize[:requires_verified_teacher_access]
   end
 
   test 'summarize includes show_course_unit_version_warning' do

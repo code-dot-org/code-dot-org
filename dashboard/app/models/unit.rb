@@ -324,6 +324,7 @@ class Unit < ApplicationRecord
     lesson_extras_available
     has_unnumbered_lessons
     has_verified_resources
+    requires_verified_teacher_access
     curriculum_path
     announcements
     version_year
@@ -1430,11 +1431,6 @@ class Unit < ApplicationRecord
         unit_path = course_unit_path(unit_group_unit.cached_unit_group, unit_group_unit.position)
       end
 
-      # A multi-unit course shows this only on its course overview page.
-      requires_verified_teacher_access =
-        !!unit_group_unit&.cached_unit_group&.requires_verified_teacher_access? &&
-        unit_group_unit.cached_unit_group.single_unit_course?
-
       summary = {
         id: id,
         name: name,
@@ -1466,7 +1462,7 @@ class Unit < ApplicationRecord
         lesson_extras_available: lesson_extras_available,
         hasUnnumberedLessons: has_unnumbered_lessons?,
         has_verified_resources: has_verified_resources?,
-        requires_verified_teacher_access: requires_verified_teacher_access,
+        requires_verified_teacher_access: requires_verified_teacher_access?,
         curriculum_path: curriculum_path,
         announcements: localized_announcements,
         age_13_required: logged_out_age_13_required?,
@@ -1815,6 +1811,7 @@ class Unit < ApplicationRecord
     boolean_keys = [
       :has_unnumbered_lessons,
       :has_verified_resources,
+      :requires_verified_teacher_access,
       :project_sharing,
       :tts,
       :show_calendar,
