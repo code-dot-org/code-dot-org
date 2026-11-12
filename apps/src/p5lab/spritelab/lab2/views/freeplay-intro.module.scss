@@ -30,12 +30,16 @@
   letter-spacing: 0.1em;
 }
 
+// Scrolls when the panel is capped at the viewport height, as at high zoom.
 .content {
+  min-height: 0;
+  overflow-y: auto;
   padding: 24px;
   text-align: center;
 }
 
-.title {
+// Qualified so these beat MUI Typography's styles, which load later.
+.content .title {
   margin: 20px 0 4px;
 }
 
@@ -46,7 +50,7 @@
   image-rendering: pixelated;
 }
 
-.tip {
+.content .tip {
   margin-top: 20px;
   padding: 16px;
   border-radius: 8px;
@@ -54,7 +58,7 @@
   font-weight: 600;
 }
 
-.tip + .tip {
+.content .tip + .tip {
   margin-top: 12px;
 }
 
