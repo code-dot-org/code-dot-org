@@ -264,6 +264,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
         </div>
         <aside
           id="adaptive-tour-side"
+          aria-label="Checkpoint details"
           className={`${styles.side}${
             focused ? '' : ` ${styles.sideNoSelection}`
           }`}
