@@ -63,13 +63,13 @@ export interface ScrollFadeProps
 
 /**
  * ### Production-ready Checklist:
- * * (✘) implementation of component approved by design team;
+ * * (?) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see ./__tests__/ScrollFade.test.tsx)
+ * * (see `./__tests__/ScrollFade.test.tsx`)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: ScrollFade Component.
  * A scrolling area whose edges fade while there is more content past them.
