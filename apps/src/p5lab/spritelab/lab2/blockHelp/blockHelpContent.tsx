@@ -115,6 +115,16 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     summary: 'Big text across the middle of the game for a moment.',
     body: 'Put it under a touch to announce a win.',
   },
+  gamelab_showVariable: {
+    title: 'Show variable',
+    summary: 'Shows a variable and its value in a bubble on the screen.',
+    body: 'The value updates as it changes, so try it for a score or a timer.',
+  },
+  gamelab_hideVariable: {
+    title: 'Hide variable',
+    summary: 'Removes the bubble that show variable put on the screen.',
+    body: 'The variable keeps its value.',
+  },
   gamelab_setProp: {
     title: 'Set a sprite property',
     animation: {
