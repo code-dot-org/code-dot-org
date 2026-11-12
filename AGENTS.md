@@ -15,7 +15,7 @@ IMPORTANT PAY ATTENTION WHEN WRITING ENGLISH: language in comments, specs, plans
 
 ## Comments
 
-Never narrate what the code does. Comment only a fact a reader cannot recover from the code. One line each; never a paragraph.
+Never narrate what the code does. Comment only a fact a reader cannot recover from the code: one fact per comment, said plainly, usually in one line. A why that fits that line stays; mechanism, history and longer rationale go in the PR description. In a long session, notice when you are transcribing the chat into a comment, and don't.
 
 A complex file may open with a short orienting paragraph. A file of independent helpers may not.
 

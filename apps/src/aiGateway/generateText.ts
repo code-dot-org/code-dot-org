@@ -6,6 +6,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import AichatContextManager from '../aichat/aichatContextManager';
 import {AichatContext} from '../aichat/types';
 
+import {challengeHeaders} from './challengeToken';
 import {
   CURRENT_SCHEMA_VERSION,
   CurrentGatewayGenerateTextResponseSchema,
@@ -14,7 +15,7 @@ import {
 import {sendGatewayRequest} from './gatewayRequest';
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, getModelString} from './shared';
-import {turnstileErrorTags, turnstileHeaders} from './turnstile';
+import {turnstileErrorTags} from './turnstile';
 
 export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
 
@@ -123,7 +124,7 @@ const generateTextThroughGateway = async <
 
       const response = await sendGatewayRequest(
         aichatContext,
-        (accessToken, turnstileToken) =>
+        (accessToken, challengeToken) =>
           HttpClient.post(
             AI_GATEWAY_URL,
             JSON.stringify({...payload, token: accessToken}),
@@ -131,7 +132,7 @@ const generateTextThroughGateway = async <
             {
               'Content-Type': 'application/json',
               'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
-              ...turnstileHeaders(turnstileToken),
+              ...challengeHeaders(challengeToken),
               ...(phase && {'x-ai-gateway-phase': phase}),
             }
           )

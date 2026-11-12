@@ -40,7 +40,7 @@ import {pickTip} from '../images/teaching/generationTips';
 import {LearningStory, storyFor} from '../images/teaching/useLearningStory';
 import StripFrame from '../StripFrame';
 
-import {PixelReveal, SparkleBurst} from './PixelReveal';
+import {FirstShowingOnly, PixelReveal, SparkleBurst} from './PixelReveal';
 import SentenceReadOnly from './SentenceReadOnly';
 import {
   Choices,
@@ -66,7 +66,7 @@ const STYLE: ImageStyle = 'pixel';
 const TEMPERATURE = 1;
 // The making shows at least this long on a cached level, where a picture
 // can land in well under a second.
-const MIN_CACHED_GENERATING_MS = 5000;
+export const MIN_CACHED_GENERATING_MS = 6000;
 
 export type Mode = 'edit' | 'generating' | 'result';
 
@@ -162,10 +162,18 @@ interface SentenceSceneProps {
   initialAnimated?: boolean;
   /** The student turned Animated on or off. */
   onAnimatedChange?: (animated: boolean) => void;
-  /** Called with each generated picture as soon as it is shown, and again
-      with the verdict added to its generation metadata when the student
-      rates it. */
+  /** Called with each generated picture as soon as it is ready, to store
+      it. */
   onKeep: (result: GeneratedImageResult) => Promise<void> | void;
+  /** Called with each generated picture before it is shown. The scene
+      keeps showing that the picture is being made until the returned
+      promise resolves, and shows the picture then. */
+  onReady?: (result: GeneratedImageResult) => Promise<void> | void;
+  /** Called when the student rates the kept picture; resolves true once
+      the verdict is on its record. Without it, or when it resolves false,
+      the picture is kept again with the verdict in its generation
+      metadata. */
+  onRate?: (verdict: Verdict) => boolean | Promise<boolean>;
   /** Called when a generation request is sent to the model. */
   onGenerateStart?: () => void;
   /** The scene is making or keeping a picture, or has stopped; a host can
@@ -201,6 +209,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   initialAnimated = true,
   onAnimatedChange,
   onKeep,
+  onReady,
+  onRate,
   onGenerateStart,
   onBusyChange,
   ratingRequired = false,
@@ -242,6 +252,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
   const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
+  // The pictures whose reveal animation has already played.
+  const revealedPictureIds = useRef(new Set<string>());
   // The cached variant shown last for a filling, so Generate again shows
   // another.
   const lastCachedRef = useRef<{path: string; variant: number}>();
@@ -411,10 +423,17 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         sent,
         cached: !!cached,
       };
+      // The picture is stored while the host holds it back, so that
+      // leaving the page during the wait does not lose it.
+      const stored = persist(entry, null);
+      await onReady?.(entry.result);
+      if (run !== runRef.current) {
+        return;
+      }
       setChosenPicture(entry);
       setMode('result');
       playSound('reveal');
-      await persist(entry, null);
+      await stored;
     } catch (e) {
       if (run !== runRef.current) {
         return;
@@ -444,17 +463,15 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     exhausted,
     advanced,
     persist,
+    onReady,
     imageSource,
     findCached,
   ]);
 
   const judge = useCallback(
-    (next: Verdict) => {
+    async (next: Verdict) => {
       setVerdict(next);
       playSound(next === 'up' ? 'cheer' : 'hmm');
-      if (chosenPicture) {
-        persist(chosenPicture, next);
-      }
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT,
         {
@@ -464,8 +481,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         },
         true
       );
+      if (chosenPicture && !(await onRate?.(next))) {
+        persist(chosenPicture, next);
+      }
     },
-    [chosenPicture, imageType, persist]
+    [chosenPicture, imageType, persist, onRate]
   );
 
   // Giving reasons finishes the rating; the rating strip is hidden
@@ -593,27 +613,31 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           )}
         />
       )}
-      {/* Keyed by picture, so each new one remounts and plays the reveal
-          once. */}
-      <PixelReveal
+      {/* The reveal and the sparkles play once for each new picture. */}
+      <FirstShowingOnly
         key={`reveal-${chosenPicture.id}`}
-        src={chosenPicture.dataURI}
-        crop={
-          sheet
-            ? {
-                // A generated set's frames stand in one row.
-                ...stripCellOrigin(
-                  CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
-                  sheet.frameSize,
-                  stillFrame ?? 0
-                ),
-                width: sheet.frameSize.x,
-                height: sheet.frameSize.y,
-              }
-            : undefined
-        }
-      />
-      <SparkleBurst key={`burst-${chosenPicture.id}`} />
+        id={String(chosenPicture.id)}
+        shownIds={revealedPictureIds}
+      >
+        <PixelReveal
+          src={chosenPicture.dataURI}
+          crop={
+            sheet
+              ? {
+                  // A generated set's frames stand in one row.
+                  ...stripCellOrigin(
+                    CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
+                    sheet.frameSize,
+                    stillFrame ?? 0
+                  ),
+                  width: sheet.frameSize.x,
+                  height: sheet.frameSize.y,
+                }
+              : undefined
+          }
+        />
+        <SparkleBurst />
+      </FirstShowingOnly>
     </>
   ) : null;
 

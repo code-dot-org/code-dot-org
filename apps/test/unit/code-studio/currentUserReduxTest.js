@@ -111,5 +111,14 @@ describe('currentUserRedux', () => {
 
       expect(nextState.blockedAichatProviders).toEqual([]);
     });
+
+    it("keeps the server's reason for refusing the Sprite Lab 2 AI blocks", () => {
+      const nextState = currentUser(
+        initialState,
+        setInitialData({...serverUser, spritelab_ask_ai_refusal: 'no_access'})
+      );
+
+      expect(nextState.spritelabAskAiRefusal).toBe('no_access');
+    });
   });
 });

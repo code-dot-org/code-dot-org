@@ -22,7 +22,17 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template",
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "extraTabs": [
+        "Images"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "imageKinds": [
+        "sprite"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",
@@ -31,11 +41,11 @@
     "world_start_pattern": [
       "..........",
       "..........",
+      "..........",
+      "..........",
+      "..........",
+      "..........",
       ".S........",
-      "..........",
-      "..........",
-      "..........",
-      "..........",
       "..........",
       "..........",
       "BBBBBBBBBB"
@@ -77,15 +87,7 @@
           }
         },
         {
-          "text": "Pick your sprite.",
-          "check": {
-            "kind": "block",
-            "type": "spritelab2_setAsPlatformPlayer",
-            "under": "spritelab2_whenRun"
-          }
-        },
-        {
-          "text": "Click **Play**, then use the arrow keys to run and jump.",
+          "text": "Select **Run**, then use the arrow keys to run and jump.",
           "check": {
             "kind": "reach",
             "moved": true

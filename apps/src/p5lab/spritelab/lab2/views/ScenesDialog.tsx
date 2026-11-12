@@ -3,8 +3,8 @@
 // exists: its card appears with the name field open, and cancelling the
 // name drops it.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
@@ -65,6 +65,10 @@ const SceneNameField: React.FunctionComponent<SceneNameFieldProps> = ({
         onChange={e => setDraft(e.target.value)}
         onKeyDown={e => {
           if (e.key === 'Enter') {
+            // Saving the name moves focus to a button. Without this, the
+            // browser carries the same press of Enter on to that button
+            // and clicks it: New scene would open a second new scene.
+            e.preventDefault();
             commit();
           } else if (e.key === 'Escape') {
             // Escape here cancels the name. It is stopped so the dialog's
@@ -305,7 +309,7 @@ const ScenesDialog: React.FunctionComponent<ScenesDialogProps> = ({
     wasNamingRef.current = naming;
   }, [naming]);
   return (
-    <MuiDialog
+    <Modal
       title={TITLE}
       className={styles.dialog}
       onClose={onClose}
