@@ -466,7 +466,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   return (
     <div className={styles.app}>
       <AdaptiveHeader
-        title={`Skill Tree: ${pathway.title}`}
+        title={`Skill Map: ${pathway.title}`}
         onFinish={() => {
           sendFinalProjectClicked('mapHeader', statusMap);
           requestFinish();
