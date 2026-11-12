@@ -111,6 +111,7 @@ import {objectiveChecks, runtimeNeeds, WorkspaceSource} from '../objectives';
 import {packSources} from '../packedWorld';
 import {
   countImagesByType,
+  generatedOnLevel,
   ImageCounts,
   imageCountsDelta,
 } from '../projectCounts';
@@ -835,28 +836,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     imageNames,
     dispatch,
   ]);
-  // From the images made on this level (those not already in the project
-  // when the level opened): how many were generated, by type, and whether
-  // the student has rated any of them.
-  const {generated, rated} = useMemo(() => {
-    const before = new Set(
-      Object.values(initialSources.animations?.propsByKey ?? {}).map(
-        props => props.name
-      )
-    );
-    const made = animationList.orderedKeys.flatMap(key => {
-      const props = animationList.propsByKey[key];
-      return props?.generation && !before.has(props.name) ? [props] : [];
-    });
-    const generated: ImageCounts = {sprite: 0, background: 0, block: 0};
-    made.forEach(props => {
-      generated[imageTypeFromCategories(props.categories)]++;
-    });
-    return {
-      generated,
-      rated: made.some(props => !!props.generation?.verdict),
-    };
-  }, [animationList, initialSources]);
+  // The AI-made images that count as made on this level, and whether one
+  // has been rated (see generatedOnLevel).
+  const {generated, rated} = useMemo(
+    () =>
+      generatedOnLevel(
+        animationList,
+        new Set(
+          Object.values(initialSources.animations?.propsByKey ?? {}).map(
+            props => props.name
+          )
+        ),
+        new Set(
+          levelImageType
+            ? imagesNamedForRole(animationList, levelImageType, levelImageRole)
+            : []
+        )
+      ),
+    [animationList, initialSources, levelImageType, levelImageRole]
+  );
   const sceneSources = useMemo(
     () =>
       Object.fromEntries(
@@ -869,9 +867,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   // The student completed this level on an earlier visit. This is the
   // level's saved status, the same one that colors its bubble in the
-  // header.
+  // header. On the way to another level the store's current level changes
+  // before this view is replaced, so the status is read only while the
+  // current level is still this one.
   const completedBefore = useAppSelector(
-    state => getCurrentLevel(state)?.status === LevelStatus.perfect
+    state =>
+      String(state.progress.currentLevelId) === String(levelProperties.id) &&
+      getCurrentLevel(state)?.status === LevelStatus.perfect
   );
   const objectives = useObjectives({
     objectives: levelProperties.objectives,

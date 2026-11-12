@@ -97,6 +97,10 @@ describe('useObjectives', () => {
       <Checklist everPlayed={false} generated={false} completedBefore />
     );
     expect(view.container.textContent).toBe('play:true all');
+    // The rating step was hidden when the level was completed, so it was
+    // never done. When a picture is generated now it appears un-ticked.
+    view.rerender(<Checklist everPlayed={false} generated completedBefore />);
+    expect(view.container.textContent).toBe('play:true rate:false');
   });
 
   it('keeps both kinds of tick when a completed level opens with work already in the project', () => {

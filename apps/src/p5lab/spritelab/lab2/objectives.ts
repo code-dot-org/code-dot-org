@@ -7,7 +7,8 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE, WorldCell} from './world';
 
 /** One kind of thing a level can ask for. */
 export type ObjectiveCheck =
-  /** An image of the type was made on this level. */
+  /** An image of the type was made on this level, or the level's own image
+      (the one carrying its role) exists from an earlier visit. */
   | {kind: 'image'; imageType: ImageType}
   /** The student generated an image on this level: one of `imageType` if
       it is given, otherwise an image of any type. */
@@ -65,7 +66,8 @@ export interface Objective {
 // For each kind of check, whether it has to pass only once. Every kind is
 // listed, so a new kind has to be given an answer here.
 const CHECKED_ONCE: Record<ObjectiveCheck['kind'], boolean> = {
-  // These read work in the project and are checked the whole time.
+  // These read work that stays in the project, so they can be made again
+  // at any time.
   block: false,
   world: false,
   image: false,
@@ -81,9 +83,9 @@ const CHECKED_ONCE: Record<ObjectiveCheck['kind'], boolean> = {
   rated: true,
 };
 
-/** Whether a check has to pass only once. After that its step counts as
-    done, whatever the check would say later. Any other check is made the
-    whole time, and its step is done only while the check passes. */
+/** Whether a check has to pass only once, because what it reads cannot be
+    read again later. Any other check reads work that stays in the project
+    and can be made again at any time. */
 export function isCheckedOnce(check: ObjectiveCheck): boolean {
   return CHECKED_ONCE[check.kind];
 }
@@ -163,13 +165,14 @@ export interface WorkspaceSource {
 }
 
 export interface ObjectiveInputs {
-  /** Images made on this level, by type. */
+  /** Images made on this level, by type. The level's own image (the one
+      carrying its role) counts whenever it was made. */
   images: ImageCounts;
   grid?: (WorldCell | null)[][];
   /** The grid the level opened with. */
   baselineGrid?: (WorldCell | null)[][];
-  /** Image names by role: a student can make a role's image more than
-      once, and every one counts. */
+  /** Image names by role. A project can hold more than one image for a
+      role, and every one counts. */
   imagesForRole: Record<string, readonly string[] | undefined>;
   /** The open scene's code. */
   source?: WorkspaceSource;

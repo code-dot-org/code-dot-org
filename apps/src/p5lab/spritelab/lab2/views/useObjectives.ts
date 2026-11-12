@@ -251,14 +251,16 @@ export function useObjectives({
   // above. The steps that are checked once (see isCheckedOnce) passed on
   // the earlier visit and cannot be checked again, so they are ticked
   // here. Nothing is recorded for each step: the level could only have
-  // been completed with every one of them done. This runs when the level's
+  // been completed with every one of them done. A step that only appears
+  // once another check passes (shownWhen) is left out, since the level
+  // could have been completed without it. This runs when the level's
   // progress arrives, which can be after the checklist first shows.
   useEffect(() => {
     if (!completedBefore || !items?.length) {
       return;
     }
     const done = items.flatMap((item, index) =>
-      isCheckedOnce(item.check) ? [index] : []
+      isCheckedOnce(item.check) && !item.shownWhen ? [index] : []
     );
     setEarned(current =>
       done.every(index => current.has(index))
