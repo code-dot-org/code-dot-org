@@ -425,9 +425,9 @@ $z-over-blockly: 71;
   }
 }
 
-// The bar pinned to the stage's foot, the editors' scene bar's twin: Run
-// under the preview, Reset while playing. The overlay passes pointer
-// events through; the bar takes its own.
+// The bar along the bottom of the stage, level with the editors' scene
+// bar. It holds the Run buttons under the preview, and Stop while the game
+// plays. The overlay passes pointer events through; the bar takes its own.
 .bottomBar {
   position: absolute;
   bottom: 0;

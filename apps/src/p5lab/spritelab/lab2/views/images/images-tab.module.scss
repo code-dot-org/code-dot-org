@@ -191,7 +191,8 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   height: 64px;
   object-fit: contain;
   border-radius: 8px;
-  background-color: var(--background-neutral-secondary);
+
+  @include checkerboard.light-checkerboard(8px);
 }
 
 .deleteText {
