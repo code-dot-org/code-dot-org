@@ -216,65 +216,54 @@ describe('generate', () => {
   });
 
   it('counts a call that outlives its timeout as a timeout, not an error', async () => {
-    jest.useFakeTimers();
-    try {
-      mockGenerateText.mockReturnValue(new Promise(() => {}));
-      const result = generate(options);
-      await jest.advanceTimersByTimeAsync(45_000);
+    mockGenerateText.mockRejectedValue(
+      new DOMException(
+        'AI gateway call timed out after 45000ms',
+        'TimeoutError'
+      )
+    );
 
-      expect(await result).toEqual({traceId: 'trace-1'});
-      expect(mockIncrementCounter).toHaveBeenCalledWith(
-        'Adaptive.AiGeneration',
-        expect.arrayContaining([{name: 'Outcome', value: 'timeout'}])
-      );
-      expect(mockLogError.mock.calls[0][0]).toBe(
-        'Adaptive AI generation timed out'
-      );
-      expect(mockEnd).toHaveBeenCalledWith({
-        outcome: 'error',
-        errorMessage: 'timed out after 45000ms',
-      });
-    } finally {
-      jest.useRealTimers();
-    }
+    expect(await generate(options)).toEqual({traceId: 'trace-1'});
+    expect(mockIncrementCounter).toHaveBeenCalledWith(
+      'Adaptive.AiGeneration',
+      expect.arrayContaining([{name: 'Outcome', value: 'timeout'}])
+    );
+    expect(mockLogError.mock.calls[0][0]).toBe(
+      'Adaptive AI generation timed out'
+    );
+    expect(mockEnd).toHaveBeenCalledWith({
+      outcome: 'error',
+      errorMessage: 'AI gateway call timed out after 45000ms',
+    });
   });
 
-  it('waits as many seconds as the timeout flag says', async () => {
-    jest.useFakeTimers();
-    try {
-      setDcdo({'adaptive-ai-enabled': true, 'adaptive-ai-timeout-seconds': 5});
-      mockGenerateText.mockReturnValue(new Promise(() => {}));
-      const result = generate(options);
-      await jest.advanceTimersByTimeAsync(5_000);
+  it('gives the request 45 seconds by default, not counting the challenge', async () => {
+    mockGenerateText.mockResolvedValue(gatewayResult);
 
-      expect(await result).toEqual({traceId: 'trace-1'});
-      expect(mockEnd).toHaveBeenCalledWith({
-        outcome: 'error',
-        errorMessage: 'timed out after 5000ms',
-      });
-    } finally {
-      jest.useRealTimers();
-    }
+    await generate(options);
+
+    expect(mockGenerateText.mock.calls[0][0]).toMatchObject({timeout: 45_000});
+    expect(mockGenerateText.mock.calls[0][1]).toMatchObject({
+      excludeChallengeFromTimeout: true,
+    });
+  });
+
+  it('gives the request as many seconds as the timeout flag says', async () => {
+    setDcdo({'adaptive-ai-enabled': true, 'adaptive-ai-timeout-seconds': 5});
+    mockGenerateText.mockResolvedValue(gatewayResult);
+
+    await generate(options);
+
+    expect(mockGenerateText.mock.calls[0][0]).toMatchObject({timeout: 5_000});
   });
 
   it('keeps the default when the timeout flag is not a positive number', async () => {
-    jest.useFakeTimers();
-    try {
-      setDcdo({'adaptive-ai-enabled': true, 'adaptive-ai-timeout-seconds': 0});
-      mockGenerateText.mockReturnValue(new Promise(() => {}));
-      const result = generate(options);
-      await jest.advanceTimersByTimeAsync(44_999);
-      expect(mockEnd).not.toHaveBeenCalled();
-      await jest.advanceTimersByTimeAsync(1);
+    setDcdo({'adaptive-ai-enabled': true, 'adaptive-ai-timeout-seconds': 0});
+    mockGenerateText.mockResolvedValue(gatewayResult);
 
-      expect(await result).toEqual({traceId: 'trace-1'});
-      expect(mockEnd).toHaveBeenCalledWith({
-        outcome: 'error',
-        errorMessage: 'timed out after 45000ms',
-      });
-    } finally {
-      jest.useRealTimers();
-    }
+    await generate(options);
+
+    expect(mockGenerateText.mock.calls[0][0]).toMatchObject({timeout: 45_000});
   });
 });
 
@@ -290,9 +279,11 @@ describe('moderateInput', () => {
     expect(mockGenerateText.mock.calls[0][0].prompt).toContain(
       'a site about dogs'
     );
+    expect(mockGenerateText.mock.calls[0][0]).toMatchObject({timeout: 45_000});
     expect(mockGenerateText.mock.calls[0][1]).toEqual({
       phase: 'input_filter',
       aichatContext: context,
+      excludeChallengeFromTimeout: true,
     });
   });
 
@@ -340,6 +331,7 @@ describe('moderateOutput', () => {
     expect(mockGenerateText.mock.calls[0][1]).toEqual({
       phase: 'output_filter',
       aichatContext: context,
+      excludeChallengeFromTimeout: true,
     });
     expect(mockCount).toHaveBeenCalledWith('adaptive.text_moderation', 1, {
       phase: 'output_filter',

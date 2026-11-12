@@ -108,6 +108,20 @@ describe('safetyHelpers', () => {
       });
     });
 
+    it('passes a caller-provided request timeout to the gateway', async () => {
+      mockClassification('OK');
+
+      await isTextSafe('hello class', 'output_filter', undefined, undefined, {
+        timeoutMs: 45_000,
+        excludeChallengeFromTimeout: true,
+      });
+
+      expect(mockGenerateText).toHaveBeenCalledWith(
+        expect.objectContaining({timeout: 45_000}),
+        {phase: 'output_filter', excludeChallengeFromTimeout: true}
+      );
+    });
+
     it('throws when the classifier returns an invalid value', async () => {
       mockClassification('UNEXPECTED');
 

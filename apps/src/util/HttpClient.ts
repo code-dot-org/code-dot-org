@@ -87,7 +87,8 @@ async function sendRequest(
   endpoint: string,
   body?: BodyInit,
   useAuthenticityToken = false,
-  headers: Record<string, string> = {}
+  headers: Record<string, string> = {},
+  {signal}: Pick<RequestInit, 'signal'> = {}
 ): Promise<Response> {
   if (useAuthenticityToken) {
     const token = await getAuthenticityToken();
@@ -97,6 +98,7 @@ async function sendRequest(
     method,
     body,
     headers,
+    signal,
   });
   if (!response.ok) {
     throw new NetworkError(
@@ -133,9 +135,17 @@ async function post(
   endpoint: string,
   body?: BodyInit,
   useAuthenticityToken = false,
-  headers: Record<string, string> = {}
+  headers: Record<string, string> = {},
+  init: Pick<RequestInit, 'signal'> = {}
 ): Promise<Response> {
-  return sendRequest('POST', endpoint, body, useAuthenticityToken, headers);
+  return sendRequest(
+    'POST',
+    endpoint,
+    body,
+    useAuthenticityToken,
+    headers,
+    init
+  );
 }
 
 async function deleteRequest(

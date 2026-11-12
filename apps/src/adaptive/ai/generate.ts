@@ -11,7 +11,10 @@ import {Output} from 'ai';
 import {z} from 'zod';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
-import {isTextSafe} from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
+import {
+  isTextSafe,
+  type TextSafetyTimeout,
+} from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
@@ -42,9 +45,16 @@ const SAFETY_CONFIG = {modelId: ADAPTIVE_MODELS.FAST};
 export const isAdaptiveAiEnabled = (): boolean =>
   !!DCDO.get(ADAPTIVE_AI_ENABLED_FLAG, false);
 
-// How long one model call may take, generation or moderation alike.
-const timeoutMs = (): number =>
-  timeoutMsFromDcdoSeconds(ADAPTIVE_AI_TIMEOUT_FLAG, DEFAULT_TIMEOUT_SECONDS);
+// How long one model call may take, generation or moderation alike. The
+// challenge before the call is not counted, so a slow one cannot use up the
+// time meant for the model.
+const requestTimeout = (): Required<TextSafetyTimeout> => ({
+  timeoutMs: timeoutMsFromDcdoSeconds(
+    ADAPTIVE_AI_TIMEOUT_FLAG,
+    DEFAULT_TIMEOUT_SECONDS
+  ),
+  excludeChallengeFromTimeout: true,
+});
 
 export interface GenerateOptions<T> {
   schema: z.ZodType<T>;
@@ -116,16 +126,15 @@ export async function generate<T>({
   };
 
   try {
-    const result = await withTimeout(
-      generateText(
-        {
-          model: getModel(model),
-          prompt,
-          output: Output.object({schema}),
-        },
-        {phase: 'generation', aichatContext: context}
-      ),
-      timeoutMs()
+    const {timeoutMs, excludeChallengeFromTimeout} = requestTimeout();
+    const result = await generateText(
+      {
+        model: getModel(model),
+        prompt,
+        output: Output.object({schema}),
+        timeout: timeoutMs,
+      },
+      {phase: 'generation', aichatContext: context, excludeChallengeFromTimeout}
     );
     const parsed = schema.safeParse(result.output);
     if (!parsed.success) {
@@ -167,9 +176,12 @@ async function moderate(
 ): Promise<ModerationResult> {
   let result: ModerationResult;
   try {
-    const safe = await withTimeout(
-      isTextSafe(text, phase, SAFETY_CONFIG, context),
-      timeoutMs()
+    const safe = await isTextSafe(
+      text,
+      phase,
+      SAFETY_CONFIG,
+      context,
+      requestTimeout()
     );
     result = safe ? 'ok' : 'flagged';
   } catch (error) {
@@ -200,31 +212,7 @@ function errorMessage(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
 }
 
-const TIMEOUT_ERROR_NAME = 'AdaptiveTimeoutError';
-
+// The gateway rejects a timeout as the AI SDK does, with a DOMException.
 const isTimeout = (error: unknown) =>
-  error instanceof Error && error.name === TIMEOUT_ERROR_NAME;
-
-function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
-  return new Promise((resolve, reject) => {
-    const timer = setTimeout(
-      () =>
-        reject(
-          Object.assign(new Error(`timed out after ${ms}ms`), {
-            name: TIMEOUT_ERROR_NAME,
-          })
-        ),
-      ms
-    );
-    promise.then(
-      value => {
-        clearTimeout(timer);
-        resolve(value);
-      },
-      error => {
-        clearTimeout(timer);
-        reject(error);
-      }
-    );
-  });
-}
+  error instanceof Object &&
+  (error as {name?: unknown}).name === 'TimeoutError';

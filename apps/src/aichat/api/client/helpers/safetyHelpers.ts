@@ -56,6 +56,11 @@ export function isOutputImageLlmSafetyJudgeEnabled(): boolean {
   );
 }
 
+export interface TextSafetyTimeout {
+  timeoutMs: number;
+  excludeChallengeFromTimeout?: boolean;
+}
+
 /**
  * Invokes an LLM to determine if the given text is safe. A caller outside a
  * chat passes its own context; otherwise the current chat's is used.
@@ -64,7 +69,8 @@ export async function isTextSafe(
   text: string,
   phase?: 'input_filter' | 'output_filter',
   customSafetyConfig?: Partial<SafetyConfig>,
-  aichatContext?: AichatContext
+  aichatContext?: AichatContext,
+  requestTimeout?: TextSafetyTimeout
 ): Promise<boolean> {
   const safetyConfig = {
     ...DEFAULT_SAFETY_CONFIG,
@@ -76,8 +82,15 @@ export async function isTextSafe(
       prompt: `${safetyConfig.safetySystemPrompt}. Here is the text to classify: ${text}`,
       output: outputSchema,
       model: getModel(safetyConfig.modelId),
+      ...(requestTimeout && {timeout: requestTimeout.timeoutMs}),
     },
-    {phase, aichatContext}
+    {
+      phase,
+      aichatContext,
+      ...(requestTimeout?.excludeChallengeFromTimeout && {
+        excludeChallengeFromTimeout: true,
+      }),
+    }
   );
 
   return isValidAndPassingClassification(response.output?.classification);

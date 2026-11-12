@@ -144,3 +144,72 @@ describe('generateTextThroughGateway access tokens', () => {
     expect(accessTokenRequests()).toHaveLength(1);
   });
 });
+
+describe('generateTextThroughGateway timeout', () => {
+  beforeEach(() => {
+    jest.useFakeTimers();
+    clearAccessTokenCache();
+    mockPost.mockImplementation(async (url: string) =>
+      url === '/ai_gateway/access_token'
+        ? {
+            json: async () => ({
+              token: 'token-1',
+              turnstileEnforcementMode: 'monitor',
+              signingKey: 'legacy_shared_key',
+              reusable: false,
+            }),
+          }
+        : new Promise(() => {})
+    );
+  });
+
+  afterEach(() => {
+    mockFetchChallengeToken.mockImplementation(async () => null);
+    jest.useRealTimers();
+  });
+
+  const gatewayRequest = () =>
+    mockPost.mock.calls.find(([url]) => url === AI_GATEWAY_URL);
+
+  it('keeps timeout and abortSignal out of the request body and aborts the request', async () => {
+    const pending = generateTextThroughGateway(
+      {
+        model: 'gemini',
+        prompt: 'hello',
+        timeout: 30_000,
+        abortSignal: new AbortController().signal,
+      },
+      {aichatContext}
+    );
+    const assertion = expect(pending).rejects.toMatchObject({
+      name: 'TimeoutError',
+    });
+    await jest.advanceTimersByTimeAsync(30_000);
+    await assertion;
+
+    const [, body, , , init] = gatewayRequest() ?? [];
+    expect(JSON.parse(body)).not.toHaveProperty('timeout');
+    expect(JSON.parse(body)).not.toHaveProperty('abortSignal');
+    expect(init.signal.aborted).toBe(true);
+  });
+
+  it('does not count the challenge when excludeChallengeFromTimeout is set', async () => {
+    mockFetchChallengeToken.mockImplementationOnce(
+      () => new Promise(resolve => setTimeout(() => resolve(null), 25_000))
+    );
+    const pending = generateTextThroughGateway(
+      {model: 'gemini', prompt: 'hello', timeout: {totalMs: 10_000}},
+      {aichatContext, excludeChallengeFromTimeout: true}
+    );
+    const settled = jest.fn();
+    pending.catch(settled);
+
+    await jest.advanceTimersByTimeAsync(25_000 + 9_000);
+    expect(settled).not.toHaveBeenCalled();
+
+    await jest.advanceTimersByTimeAsync(1_000);
+    expect(settled).toHaveBeenCalledWith(
+      expect.objectContaining({name: 'TimeoutError'})
+    );
+  });
+});
