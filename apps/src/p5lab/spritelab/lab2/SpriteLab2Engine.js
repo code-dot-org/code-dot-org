@@ -57,6 +57,7 @@ import {
   PLATFORM_GRAVITY,
   bodyBox,
   resolvePlatformPhysics,
+  touchesWall,
   usesPlatformPhysics,
   wallBox,
 } from './platformPhysics';
@@ -739,7 +740,30 @@ export default class SpriteLab2Engine extends SpriteLab {
         warnMissing(opts.animation);
         return null;
       }
-      return addSprite(opts);
+      const id = addSprite(opts);
+      const sprite = id === undefined ? null : library.nativeSpriteMap[id];
+      if (sprite) {
+        // "When touches" against a platform block: the stock overlap wants
+        // the shapes to overlap, and a body resting on a block only meets
+        // it, so a touch with a wall is judged with a little slack instead.
+        const overlap = sprite.overlap.bind(sprite);
+        sprite.overlap = (target, callback) => {
+          const wall =
+            target?.group === 'walls' && sprite.group !== 'walls'
+              ? target
+              : sprite.group === 'walls' && target?.group !== 'walls'
+              ? sprite
+              : null;
+          if (wall && touchesWall(wall === target ? sprite : target, wall)) {
+            if (callback) {
+              callback(sprite, target);
+            }
+            return true;
+          }
+          return overlap(target, callback);
+        };
+      }
+      return id;
     };
     const setAnimation = library.commands.setAnimation;
     library.commands.setAnimation = function (spriteArg, animation) {

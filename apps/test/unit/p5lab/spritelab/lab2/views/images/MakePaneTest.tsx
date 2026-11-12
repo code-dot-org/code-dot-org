@@ -34,6 +34,23 @@ const parts = (over: Partial<SentenceSceneParts> = {}): SentenceSceneParts => ({
 });
 
 describe('MakePane', () => {
+  it('shows an error message outside the scrolling box of words', () => {
+    render(
+      <MakePane
+        parts={parts({
+          error: <p role="alert">Couldn't make the picture. Try again.</p>,
+        })}
+        width={280}
+      />
+    );
+    const alert = screen.getByRole('alert');
+    const pane = screen.getByRole('region', {name: 'Make your picture'});
+    // The message is a direct child of the pane, and the words are not:
+    // they are inside the scrolling box.
+    expect(alert.parentElement).toBe(pane);
+    expect(screen.getByText('words').parentElement).not.toBe(pane);
+  });
+
   it('names the kind with its article, and generates on the button', () => {
     const generate = jest.fn();
     render(<MakePane parts={parts({generate})} width={280} />);

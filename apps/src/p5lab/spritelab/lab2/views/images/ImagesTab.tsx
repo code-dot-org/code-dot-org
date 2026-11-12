@@ -435,7 +435,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   return (
     <div className={styles.tab}>
       <div className={styles.panelHeader} style={{width: paneWidth}}>
-        <EditorStrip title="AI" />
+        <EditorStrip title="AI Prompt" />
       </div>
       <ImageList
         disabled={busy}

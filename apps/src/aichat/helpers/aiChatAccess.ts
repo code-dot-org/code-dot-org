@@ -1,12 +1,17 @@
+import shouldUseAiGateway from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import {
   AiChatAccessLevel,
   AiChatToolsDependencyValue,
 } from '@cdo/apps/aichat/types/accessControls';
+import type {AiChatClientType} from '@cdo/apps/aichat/types/context';
+import type {ModelParameters} from '@cdo/apps/aichat/types/model';
 import DCDO from '@cdo/apps/dcdo';
 import {
   AiChatAccessLevels,
+  AiChatGeminiImageModelIds,
   AiChatProviderByModelId,
   AiChatToolsDependency,
+  AiGatewayFallbackClientTypes,
 } from '@cdo/generated-scripts/sharedConstants';
 
 /**
@@ -30,6 +35,24 @@ export const AI_GATEWAY_FALLBACK_DCDO_KEY = 'ai_gateway_fallback_is_enabled';
  */
 export const isAiGatewayFallbackEnabled = (): boolean =>
   !!DCDO.get(AI_GATEWAY_FALLBACK_DCDO_KEY, false);
+
+const FALLBACK_CLIENT_TYPES: ReadonlySet<string> = new Set(
+  AiGatewayFallbackClientTypes
+);
+const GEMINI_IMAGE_MODEL_IDS: ReadonlySet<string> = new Set(
+  AiChatGeminiImageModelIds
+);
+
+// The client's half of User::AiAccessible#should_ai_gateway_fall_back?; Rails cannot see client routing.
+export const shouldGatewayFallBack = (
+  modelId: ModelParameters['selectedModelId'],
+  clientType: AiChatClientType | undefined
+): boolean =>
+  isAiGatewayFallbackEnabled() &&
+  !!clientType &&
+  FALLBACK_CLIENT_TYPES.has(clientType) &&
+  !GEMINI_IMAGE_MODEL_IDS.has(modelId) &&
+  shouldUseAiGateway(modelId);
 
 // A list of app names for which AI Chat tools (tutor or chat in ai chat lab) are considered essential to the app experience.
 // but can still be disabled by teachers through the access controls in the teacher dashboard (see ai_chat_access_level)

@@ -123,6 +123,22 @@ export function bodyBox(sprite: PhysicsBox): CollisionBox {
   return {x: sprite.position.x, y: sprite.position.y + drop, halfW, halfH};
 }
 
+// How close a body and a wall may be, in playfield pixels, and still count
+// as touching: resting contact is exact, so a strict overlap test would
+// miss it.
+export const TOUCH_SLACK = 1;
+
+/** Whether a sprite's body touches a wall, from any side: the boxes meet
+    or overlap, within TOUCH_SLACK. */
+export function touchesWall(sprite: PhysicsBox, wall: PhysicsBox): boolean {
+  const body = bodyBox(sprite);
+  const box = wallBox(wall);
+  return (
+    Math.abs(body.x - box.x) <= body.halfW + box.halfW + TOUCH_SLACK &&
+    Math.abs(body.y - box.y) <= body.halfH + box.halfH + TOUCH_SLACK
+  );
+}
+
 function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {
   return walls.map(wall => ({
     ...wall,
