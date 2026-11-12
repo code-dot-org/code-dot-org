@@ -335,18 +335,21 @@ describe('ImageList', () => {
     expect(screen.queryByRole('menu')).toBeNull();
   });
 
-  it('holds the upload button while a picture is being handled', () => {
+  it('disables every button while a picture is being handled', () => {
     render(
       <ImageList
         images={images}
         draft={null}
         chosenId="a"
         onChoose={jest.fn()}
+        onNew={jest.fn()}
         onUpload={jest.fn()}
-        uploadInProgress
+        disabled
       />
     );
     expect(screen.getByRole('button', {name: 'Upload image'})).toBeDisabled();
+    expect(screen.getByRole('button', {name: 'New image'})).toBeDisabled();
+    expect(screen.getByRole('button', {name: 'Sprite 2'})).toBeDisabled();
   });
 
   it('shows why an upload was refused', () => {

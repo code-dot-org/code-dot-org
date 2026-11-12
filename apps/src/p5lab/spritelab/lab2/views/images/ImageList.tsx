@@ -68,7 +68,6 @@ interface ImageListProps {
       other kind. */
   newKind?: NewImageKind;
   onUpload?: (kind: NewImageKind, trigger: HTMLElement | null) => void;
-  uploadInProgress?: boolean;
   /** Why the last upload was refused, under the header. */
   notice?: string | null;
   /** Delete the chosen image; absent where images cannot be deleted. */
@@ -94,7 +93,6 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   onNew,
   newKind,
   onUpload,
-  uploadInProgress,
   notice,
   onDelete,
   disabled,
@@ -202,7 +200,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               color="primary"
               className={styles.newButton}
               aria-label="Upload image"
-              disabled={disabled || uploadInProgress}
+              disabled={disabled}
               aria-haspopup={newKind ? undefined : 'menu'}
               aria-expanded={newKind ? undefined : !!uploadMenuButton}
               aria-controls={uploadMenuButton ? uploadMenuId : undefined}

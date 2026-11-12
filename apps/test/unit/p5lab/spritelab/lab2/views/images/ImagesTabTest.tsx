@@ -1361,6 +1361,38 @@ describe('ImagesTab', () => {
       });
     });
 
+    it('holds the list still while an upload is in flight', async () => {
+      let finish: (key: string) => void = () => undefined;
+      acceptUploaded.mockImplementation(
+        () =>
+          new Promise<string>(resolve => {
+            finish = resolve;
+          })
+      );
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(
+        screen.getByRole('menuitem', {name: 'Upload a character'})
+      );
+      // eslint-disable-next-line no-restricted-properties
+      const input = container.querySelector('#file-input') as HTMLInputElement;
+      await act(async () => {
+        fireEvent.change(input, {target: {files: [pngFile()]}});
+      });
+      await act(async () => {
+        await new Promise(resolve => setTimeout(resolve, 0));
+      });
+      expect(screen.getByRole('button', {name: 'New image'})).toBeDisabled();
+      await act(async () => {
+        propsByKey.k2 = {name: 'Sprite 2', categories: []};
+        finish('k2');
+      });
+      expect(screen.getByRole('button', {name: 'New image'})).toBeEnabled();
+    });
+
     it('refuses a file too big to upload, and says so', async () => {
       const {container} = renderTab({
         editingOffered: true,

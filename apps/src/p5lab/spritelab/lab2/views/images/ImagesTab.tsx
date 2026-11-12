@@ -535,7 +535,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         <EditorStrip title="AI Prompt" endSlotRef={setHeaderSlot} />
       </div>
       <ImageList
-        disabled={busy}
+        disabled={busy || upload.uploading}
         images={images}
         playing={
           sheet && chosenImage && shownPose
@@ -586,7 +586,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         chooseOffered={chooseOffered}
         newKind={lockedKind}
         onUpload={enableImageUpload && newOffered ? handleUpload : undefined}
-        uploadInProgress={upload.uploading}
         notice={uploadError}
         onDelete={deleteOffered ? writer.deleteImage : undefined}
       />
