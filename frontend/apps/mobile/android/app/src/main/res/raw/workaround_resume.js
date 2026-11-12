@@ -11,8 +11,8 @@ var RESUME_PARAM = 'codeai_resume';
 var MINIMUM_PASS_RESULT = 20;
 var NEXT_PATH = /^\/(?:courses\/([A-Za-z0-9_-]+)\/units\/(\d+)|s\/([A-Za-z0-9_-]+))\/next\/?$/;
 
-// Resolves to the URL of the unit's first level not yet passed, or null
-// when every level is passed or the unit cannot be read.
+// Resolves to {next}, the URL of the unit's first level not yet passed or
+// null when every level is passed, or to null when the unit cannot be read.
 function firstUnpassedLevel(structure) {
   return fetch(structure, {credentials: 'same-origin'})
     .then(function (response) {
@@ -41,7 +41,7 @@ function firstUnpassedLevel(structure) {
           return true;
         });
       });
-      return next;
+      return {next: next};
     })
     .catch(function () {
       return null;
@@ -61,7 +61,8 @@ function resumeCourse() {
   if (!page) {
     return;
   }
-  firstUnpassedLevel(page.structure).then(function (next) {
+  firstUnpassedLevel(page.structure).then(function (unit) {
+    var next = unit && unit.next;
     if (next && new URL(next, window.location.href).pathname !== window.location.pathname) {
       window.location.replace(next);
     }
@@ -87,10 +88,17 @@ document.addEventListener(
     var structure = match[1]
       ? `/api/script_structure/courses/${match[1]}/units/${match[2]}`
       : `/api/script_structure/${match[3]}`;
-    firstUnpassedLevel(structure).then(function (next) {
-      // Every level passed: the server's route knows where a finished
-      // unit goes.
-      window.location.assign(next || url.toString());
+    firstUnpassedLevel(structure).then(function (unit) {
+      if (unit && !unit.next) {
+        // Every level passed. The server's route sends only a signed-in
+        // student to the unit's finish page and anyone else back to the first
+        // level; a certificate page opens the app's congratulations instead
+        // (AppWebViewClient.kt).
+        window.location.assign(`/congrats/${match[1] || match[3]}`);
+        return;
+      }
+      // The unit could not be read: the server's route decides.
+      window.location.assign((unit && unit.next) || url.toString());
     });
   },
   true,

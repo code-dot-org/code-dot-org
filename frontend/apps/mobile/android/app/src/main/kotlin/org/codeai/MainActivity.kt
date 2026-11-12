@@ -244,7 +244,9 @@ class MainActivity : BridgeActivity() {
         val webView = bridge.webView
         val history = webView.copyBackForwardList()
         val index = history.currentIndex
-        if (index > 0 && isBundledPage(history.getItemAtIndex(0).url)) {
+        // The landing page itself, not any bundled page: after a failed load
+        // the offline screen can be the first entry.
+        if (index > 0 && history.getItemAtIndex(0).url == bridge.appUrl) {
             // Traversed from the page: right after a tap, a lab page can drop
             // goBackOrForward() but not its own history.go().
             webView.evaluateJavascript("history.go(-$index)", null)
