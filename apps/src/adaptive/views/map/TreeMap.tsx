@@ -20,6 +20,7 @@ const NODE_WIDTH = 190;
 const TreeMap: React.FunctionComponent<MapProps> = ({
   pathway,
   statusMap,
+  stepShares,
   focusId,
   fit,
   onSelect,
@@ -84,6 +85,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
           position={layout.nodes[checkpoint.id]}
           status={statusMap[checkpoint.id]}
           icon={checkpointIcon(pathway, checkpoint)}
+          share={stepShares?.[checkpoint.id]}
           focusId={focusId}
           circleTop={NODE_RADIUS + LABEL_HEIGHT}
           width={NODE_WIDTH}

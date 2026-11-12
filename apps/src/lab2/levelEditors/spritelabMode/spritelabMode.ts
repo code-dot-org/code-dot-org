@@ -48,7 +48,11 @@ const IMAGE_KEYS: (keyof LevelMode)[] = [
   'imageRole',
 ];
 
-const IMAGE_TAB_KEYS: (keyof LevelMode)[] = ['learning', 'imageSource'];
+const IMAGE_TAB_KEYS: (keyof LevelMode)[] = [
+  'learning',
+  'imageSource',
+  'oneImage',
+];
 
 // Options about which tabs a level shows and what its Images tab and World
 // palette offer. This form has no fields for most of them yet: they are
@@ -69,7 +73,8 @@ const KEYS_BY_KIND: Record<LevelModeKind, (keyof LevelMode)[]> = {
   world: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
   play: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
   image: [...IMAGE_KEYS, ...IMAGE_TAB_KEYS, ...TAB_KEYS],
-  freeplay: [...IMAGE_TAB_KEYS, ...TAB_KEYS],
+  // Free play always allows multiple images.
+  freeplay: [...IMAGE_TAB_KEYS.filter(key => key !== 'oneImage'), ...TAB_KEYS],
 };
 
 /** Whether a value is a list with at least one entry, each passing
@@ -122,6 +127,7 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
     // A false flag reads the same as no flag, so only true is stored.
     case 'imageFirst':
     case 'learning':
+    case 'oneImage':
     case 'noNewImages':
     case 'noDeletingImages':
     case 'limitedPaintTools':
@@ -136,9 +142,9 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
 }
 
 /**
- * Drops unknown keys and invalid values, returning a description of each one
- * dropped. Without a valid kind the whole mode means nothing to the lab, so
- * everything is dropped.
+ * Drops unknown keys, invalid values and keys the kind cannot carry,
+ * returning a description of each one dropped. Without a valid kind the
+ * whole mode means nothing to the lab, so everything is dropped.
  */
 export function cleanLevelMode(mode: LevelModeObject): {
   mode: Partial<LevelMode>;
@@ -152,10 +158,14 @@ export function cleanLevelMode(mode: LevelModeObject): {
       removed: Object.entries(mode).map(([key, value]) => describe(key, value)),
     };
   }
+  const kind = mode.kind as LevelModeKind;
   const cleaned: LevelModeObject = {};
   const removed: string[] = [];
   Object.entries(mode).forEach(([key, value]) => {
-    if (isValidLevelModeValue(key, value)) {
+    const kept =
+      isValidLevelModeValue(key, value) &&
+      (key === 'kind' || KEYS_BY_KIND[kind].includes(key as keyof LevelMode));
+    if (kept) {
       cleaned[key] = value;
     } else {
       removed.push(describe(key, value));
@@ -193,6 +203,9 @@ export function fieldApplies(
       return (
         kind === 'image' || kind === 'freeplay' || mode.imageFirst === true
       );
+    // Free play always allows multiple images, so only 'image' kind supports the 'oneImage' field.
+    case 'oneImage':
+      return kind === 'image' || mode.imageFirst === true;
     default:
       return true;
   }
@@ -248,6 +261,13 @@ export function setImageFirst(
   return withoutInapplicableKeys(
     setJsonObjectValue(mode, 'imageFirst', imageFirst || undefined)
   );
+}
+
+export function setOneImage(
+  mode: Partial<LevelMode>,
+  oneImage: boolean
+): Partial<LevelMode> {
+  return setJsonObjectValue(mode, 'oneImage', oneImage || undefined);
 }
 
 export function setLearning(

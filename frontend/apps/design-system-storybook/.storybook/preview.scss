@@ -5,9 +5,10 @@ html {
 }
 
 // Follow the Theme toolbar. Docs pages paint their own background, so the
-// docs view needs .docs-story as well as body.
+// docs view needs .docs-story as well as body. A plain stylesheet, not a CSS
+// module: the production build drops a module that is imported for effect only.
 body,
-:global(.docs-story) {
+.docs-story {
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
 }

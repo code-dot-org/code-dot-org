@@ -14,6 +14,11 @@ export const checkpointSourceSchema = z.strictObject({
   description: z.string().min(1),
   /** Skills this checkpoint develops, by id in the pathway's `skills` map. */
   skillIds: z.array(z.string().min(1)).optional(),
+  /**
+   * A Font Awesome (solid) or kit icon name for the map node, used when no
+   * skill in `skillIds` has an icon.
+   */
+  icon: z.string().min(1).optional(),
   /** Checkpoint ids that must be complete before this one unlocks. */
   requires: z.array(z.string().min(1)).optional(),
   /**
