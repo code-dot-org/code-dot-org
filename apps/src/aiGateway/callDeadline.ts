@@ -29,8 +29,10 @@ export function createCallDeadline(
 
   let timer: ReturnType<typeof setTimeout> | undefined;
   const clearTimer = () => {
-    clearTimeout(timer);
-    timer = undefined;
+    if (timer !== undefined) {
+      clearTimeout(timer);
+      timer = undefined;
+    }
   };
 
   return {
