@@ -5,11 +5,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import Modal from '@code-dot-org/component-library/modal';
 import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
+import {createPortal} from 'react-dom';
 
-import {
-  imageKindNoun,
-  imageKindPhrase,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import {SentenceSceneParts} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
 
 import styles from './images-tab.module.scss';
@@ -36,6 +33,10 @@ interface MakePaneProps {
   /** Extra controls for the header, placed after the Behind the scenes
       button. */
   extra?: React.ReactNode;
+  /** The element at the right end of the pane's header bar that the
+      Behind the scenes button and `extra` are drawn into. Without it they
+      are not shown. */
+  headerSlot?: HTMLElement | null;
 }
 
 const MakePane: React.FunctionComponent<MakePaneProps> = ({
@@ -48,15 +49,11 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
   regenerate,
   editedByHand,
   extra,
+  headerSlot,
 }) => {
   const [confirming, setConfirming] = useState(false);
   const result = parts.mode === 'result';
   const generating = parts.mode === 'generating';
-  const kindNoun = imageKindNoun(parts.draft.imageType, parts.draft.subject);
-  const kindPhrase = imageKindPhrase(
-    parts.draft.imageType,
-    parts.draft.subject
-  );
   // Generating asks for confirmation only when it would replace the
   // student's own drawing. A picture that only AI made is replaced without
   // asking: the same button makes another one like it.
@@ -77,19 +74,17 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
       aria-label="Make your picture"
     >
       {parts.status}
-      {!generating && (
-        <div className={styles.paneHeader}>
-          <p className={styles.headline}>
-            {result || regenerate
-              ? `Regenerate this ${kindNoun}`
-              : `Generate ${kindPhrase}`}
-          </p>
-          <div className={styles.paneHeaderTools}>
+      {/* The info button and any extra controls are drawn in the pane's
+          header bar, which is outside this component, through a portal. */}
+      {!generating &&
+        headerSlot &&
+        createPortal(
+          <>
             {parts.behindTheScenes}
             {extra}
-          </div>
-        </div>
-      )}
+          </>,
+          headerSlot
+        )}
       <div className={styles.sentencePanel}>{parts.sentence}</div>
       {/* The word menus scroll in a box of their own between the pinned
           sentence and the Animated switch; while a picture is made there

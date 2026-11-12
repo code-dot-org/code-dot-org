@@ -137,6 +137,12 @@ $z-over-blockly: 71;
   gap: 8px;
 }
 
+// Controls a caller draws at the bar's right end, such as an info button.
+.editorStripEndSlot {
+  display: flex;
+  align-items: center;
+}
+
 // Undo and redo.
 .editorStripHistory {
   display: flex;

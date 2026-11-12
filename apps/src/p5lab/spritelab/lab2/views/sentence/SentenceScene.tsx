@@ -64,6 +64,9 @@ import styles from './sentence-scene.module.scss';
 const STYLE: ImageStyle = 'pixel';
 // The service's middle temperature.
 const TEMPERATURE = 1;
+// The verb shown in front of the sentence the student builds, so it reads
+// as an instruction: "Generate a cute cat."
+const SENTENCE_LEAD = 'Generate';
 // The making shows at least this long on a cached level, where a picture
 // can land in well under a second.
 export const MIN_CACHED_GENERATING_MS = 6000;
@@ -517,6 +520,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     onChange: setChoices,
     disabled: busy,
     layout: wordLayout,
+    lead: SENTENCE_LEAD,
   });
   const showingResult = mode === 'result' && !!chosenPicture;
 
