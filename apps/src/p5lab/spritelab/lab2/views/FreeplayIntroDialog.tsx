@@ -4,6 +4,7 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React from 'react';
 
 import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
+import illustration from '@cdo/static/spritelab_lab2/freeplay-intro.png';
 
 import moduleStyles from './freeplay-intro.module.scss';
 
@@ -36,8 +37,11 @@ const FreeplayIntroDialog: React.FunctionComponent<
           </MuiTypography>
         </div>
         <div className={moduleStyles.content}>
-          {/* TODO: swap in the illustration once design sends it. */}
-          <div className={moduleStyles.illustration} aria-hidden />
+          <img
+            src={illustration}
+            alt=""
+            className={moduleStyles.illustration}
+          />
           <MuiTypography
             variant="h5"
             component="h3"
@@ -58,7 +62,7 @@ const FreeplayIntroDialog: React.FunctionComponent<
           <MuiTypography variant="body2" className={moduleStyles.tip}>
             When you're done, click{' '}
             <strong className={moduleStyles.buttonName}>
-              I'm finished!
+              I'm finished
               <FontAwesomeV6Icon iconName="check" />
             </strong>
           </MuiTypography>

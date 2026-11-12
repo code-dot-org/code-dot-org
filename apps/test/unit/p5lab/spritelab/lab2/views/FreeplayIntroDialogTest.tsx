@@ -13,7 +13,7 @@ describe('FreeplayIntroDialog', () => {
 
   it("names Discover blocks and I'm finished as text, not buttons", () => {
     render(<FreeplayIntroDialog onClose={jest.fn()} />);
-    for (const name of ['Discover blocks', "I'm finished!"]) {
+    for (const name of ['Discover blocks', "I'm finished"]) {
       expect(screen.getByText(name)).toBeInTheDocument();
       expect(screen.queryByRole('button', {name})).not.toBeInTheDocument();
     }

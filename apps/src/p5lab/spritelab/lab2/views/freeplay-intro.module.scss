@@ -40,9 +40,10 @@
 }
 
 .illustration {
-  aspect-ratio: 9 / 4;
-  border: 2px dashed var(--borders-neutral-primary);
+  display: block;
+  width: 100%;
   border-radius: 6px;
+  image-rendering: pixelated;
 }
 
 .tip {
