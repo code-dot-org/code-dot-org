@@ -163,6 +163,7 @@ export function useObjectives({
   generated,
   rated,
   runtime,
+  completedBefore = false,
 }: {
   objectives: Objectives | undefined;
   images: ImageCounts;
@@ -176,6 +177,8 @@ export function useObjectives({
   generated: ImageCounts;
   rated: boolean;
   runtime: RuntimeProgress;
+  /** The student has already completed this level, on an earlier visit. */
+  completedBefore?: boolean;
 }): ObjectivesState {
   const [earned, setEarned] = useState<ReadonlySet<number>>(new Set());
   const inputs: ObjectiveInputs = useMemo(
@@ -263,6 +266,31 @@ export function useObjectives({
       setShown(current => new Set([...current, ...newlyVisible]));
     }
   }, [newIndexes, items, inputs]);
+
+  // When a student comes back to a level they already completed, the
+  // steps that are checked once (see isCheckedOnce) are marked as done.
+  // They passed on the earlier visit, and nothing in the project can
+  // check them now. Every other step is checked against the project, as
+  // usual.
+  //
+  // A step that stays hidden until another check passes (shownWhen) is not
+  // marked, because the level could have been completed without it.
+  //
+  // The level's completed status can arrive after the checklist first
+  // shows, so this is an effect.
+  useEffect(() => {
+    if (!completedBefore || !items?.length) {
+      return;
+    }
+    const done = items.flatMap((item, index) =>
+      isCheckedOnce(item.check) && !item.shownWhen ? [index] : []
+    );
+    setEarned(current =>
+      done.every(index => current.has(index))
+        ? current
+        : new Set([...current, ...done])
+    );
+  }, [completedBefore, items]);
 
   // The result is a new object only when something changed, because the
   // panel that receives it re-renders whenever the object is new.

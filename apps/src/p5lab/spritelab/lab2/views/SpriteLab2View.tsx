@@ -10,7 +10,10 @@ import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
-import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getCurrentLevel,
+  getCurrentLevels,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
@@ -44,6 +47,7 @@ import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiChatClientTypes,
+  LevelStatus,
   SpritelabAskAiRefusals,
 } from '@cdo/generated-scripts/sharedConstants';
 
@@ -107,6 +111,7 @@ import {objectiveChecks, runtimeNeeds, WorkspaceSource} from '../objectives';
 import {packSources} from '../packedWorld';
 import {
   countImagesByType,
+  generatedOnLevel,
   ImageCounts,
   imageCountsDelta,
 } from '../projectCounts';
@@ -719,16 +724,38 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const playProgress = usePlayProgress(playing, needs);
   const {onPlayerProgress, onSceneLanded} = playProgress;
-  // Nothing counts until this level's list is seeded: before that the store
-  // still holds the previous level's images, and an item they earned would
-  // stay earned.
-  const objectiveImages = useMemo(
-    () =>
-      animationsSeeded
-        ? imageCountsDelta(countImagesByType(animationList), baselineImages)
-        : NO_IMAGES,
-    [animationsSeeded, animationList, baselineImages]
-  );
+  // The images made on this level, by type. A level that makes one image
+  // for a role also counts that image when it was made on an earlier
+  // visit. A student who comes back changes that image in place, so no new
+  // image would ever be counted, and the level's image steps could not be
+  // ticked.
+  const levelImageType = levelProperties.levelMode?.imageType;
+  const levelImageRole = levelProperties.levelMode?.imageRole;
+  const objectiveImages = useMemo(() => {
+    // No image is counted until this level's image list has loaded. Until
+    // then the store still holds the previous level's images, and a step
+    // they completed would stay completed.
+    if (!animationsSeeded) {
+      return NO_IMAGES;
+    }
+    const made = imageCountsDelta(
+      countImagesByType(animationList),
+      baselineImages
+    );
+    const roleImageExists =
+      !!levelImageType &&
+      imagesNamedForRole(animationList, levelImageType, levelImageRole).length >
+        0;
+    return roleImageExists
+      ? {...made, [levelImageType]: Math.max(made[levelImageType], 1)}
+      : made;
+  }, [
+    animationsSeeded,
+    animationList,
+    baselineImages,
+    levelImageType,
+    levelImageRole,
+  ]);
   // The World grid a "changed" check compares against: the pinned scene's
   // world as the level opened, from the same load-time sources as the image
   // baseline, with the level's premade world painted in.
@@ -809,28 +836,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     imageNames,
     dispatch,
   ]);
-  // From the images made on this level (those not already in the project
-  // when the level opened): how many were generated, by type, and whether
-  // the student has rated any of them.
-  const {generated, rated} = useMemo(() => {
-    const before = new Set(
-      Object.values(initialSources.animations?.propsByKey ?? {}).map(
-        props => props.name
-      )
-    );
-    const made = animationList.orderedKeys.flatMap(key => {
-      const props = animationList.propsByKey[key];
-      return props?.generation && !before.has(props.name) ? [props] : [];
-    });
-    const generated: ImageCounts = {sprite: 0, background: 0, block: 0};
-    made.forEach(props => {
-      generated[imageTypeFromCategories(props.categories)]++;
-    });
-    return {
-      generated,
-      rated: made.some(props => !!props.generation?.verdict),
-    };
-  }, [animationList, initialSources]);
+  // The AI-made images that count as made on this level, and whether one
+  // has been rated (see generatedOnLevel).
+  const {generated, rated} = useMemo(
+    () =>
+      generatedOnLevel(
+        animationList,
+        new Set(
+          Object.values(initialSources.animations?.propsByKey ?? {}).map(
+            props => props.name
+          )
+        ),
+        new Set(
+          levelImageType
+            ? imagesNamedForRole(animationList, levelImageType, levelImageRole)
+            : []
+        )
+      ),
+    [animationList, initialSources, levelImageType, levelImageRole]
+  );
   const sceneSources = useMemo(
     () =>
       Object.fromEntries(
@@ -840,6 +864,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ])
       ),
     [scenes]
+  );
+  // The student completed this level on an earlier visit. This is the
+  // level's saved status, the same one that colors its bubble in the
+  // header. On the way to another level the store's current level changes
+  // before this view is replaced, so the status is read only while the
+  // current level is still this one.
+  const completedBefore = useAppSelector(
+    state =>
+      String(state.progress.currentLevelId) === String(levelProperties.id) &&
+      getCurrentLevel(state)?.status === LevelStatus.perfect
   );
   const objectives = useObjectives({
     objectives: levelProperties.objectives,
@@ -854,6 +888,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     generated,
     rated,
     runtime: playProgress.runtime,
+    completedBefore,
   });
 
   // The callout arrow at a tab, shown while the level's condition holds.
