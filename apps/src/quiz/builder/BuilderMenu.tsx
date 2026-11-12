@@ -13,7 +13,7 @@ export interface BuilderMenuItem {
   label: string;
   onClick: () => void;
   iconName?: string;
-  // For an item whose label needs its group's label to make sense.
+  // Group labels are hidden from screen readers, so name the item fully.
   ariaLabel?: string;
   disabled?: boolean;
   // Turns the item off but keeps it focusable, to show this in a tooltip.
@@ -75,8 +75,8 @@ const MenuItem: React.FunctionComponent<BuilderMenuItem> = ({
   </li>
 );
 
-// A "…" menu for an outline row. ActionDropdown has no separators or group
-// labels, so it's built on CustomDropdown.
+// A "…" menu for a page or question header. Built on CustomDropdown because
+// ActionDropdown has no separators or group labels.
 const BuilderMenu: React.FunctionComponent<BuilderMenuProps> = ({
   name,
   label,
