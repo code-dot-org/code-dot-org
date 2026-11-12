@@ -9,7 +9,8 @@ interface QuestionMenuProps {
   canMoveDown: boolean;
   // The quiz's other pages, which the question can move to.
   otherPages: number[];
-  hasUnsavedChanges: boolean;
+  // Why the question can't move to another page, if it can't.
+  moveToPageDisabledReason?: string;
   // The card is saving or removing the question.
   isBusy: boolean;
   onMove: (offset: -1 | 1) => void;
@@ -22,7 +23,7 @@ const QuestionMenu: React.FunctionComponent<QuestionMenuProps> = ({
   canMoveUp,
   canMoveDown,
   otherPages,
-  hasUnsavedChanges,
+  moveToPageDisabledReason,
   isBusy,
   onMove,
   onMoveToPage,
@@ -36,7 +37,7 @@ const QuestionMenu: React.FunctionComponent<QuestionMenuProps> = ({
           ...otherPages.map(page => ({
             label: `Page ${page}`,
             ariaLabel: `Move to Page ${page}`,
-            disabled: hasUnsavedChanges,
+            disabledReason: moveToPageDisabledReason,
             onClick: () => onMoveToPage(page),
           })),
         ]
