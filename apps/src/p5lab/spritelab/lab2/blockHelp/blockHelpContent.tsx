@@ -28,12 +28,15 @@ export interface BlockHelp {
 export const BLOCK_HELP: Record<string, BlockHelp> = {
   spritelab2_setPlatformJumpHeight: {
     title: 'Set jump height',
-    animation: {src: animSetGravity, alt: 'The set gravity block in action.'},
     summary: 'Changes how many squares the player can jump.',
     body: 'The number is how high the player jumps in squares.',
   },
   spritelab2_setPlatformGravityDirection: {
     title: 'Set gravity direction',
+    animation: {
+      src: animSetGravity,
+      alt: 'The set gravity direction block in action.',
+    },
     summary: 'Changes which way everything falls.',
     body: 'Choose **↓** to fall toward the bottom, **↑** to fall toward the top, or **none** to move in four directions.',
   },

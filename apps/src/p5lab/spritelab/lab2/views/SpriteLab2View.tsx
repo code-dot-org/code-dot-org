@@ -103,7 +103,7 @@ import {
   fetchMusicProjects,
   withUnavailableSongs,
 } from '../musicProjects';
-import {runtimeNeeds, WorkspaceSource} from '../objectives';
+import {objectiveChecks, runtimeNeeds, WorkspaceSource} from '../objectives';
 import {packSources} from '../packedWorld';
 import {
   countImagesByType,
@@ -741,7 +741,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const objectiveRoles = useMemo(() => {
     const roles = new Set<string>();
-    levelProperties.objectives?.items?.forEach(({check}) => {
+    objectiveChecks(levelProperties.objectives).forEach(check => {
       if ('role' in check && check.role) {
         roles.add(check.role);
       }
@@ -809,18 +809,27 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     imageNames,
     dispatch,
   ]);
-  // Whether an image made on this level (not in the sources the level opened
-  // with) carries the student's rating in its generation metadata.
-  const rated = useMemo(() => {
+  // From the images made on this level (those not already in the project
+  // when the level opened): how many were generated, by type, and whether
+  // the student has rated any of them.
+  const {generated, rated} = useMemo(() => {
     const before = new Set(
       Object.values(initialSources.animations?.propsByKey ?? {}).map(
         props => props.name
       )
     );
-    return animationList.orderedKeys.some(key => {
+    const made = animationList.orderedKeys.flatMap(key => {
       const props = animationList.propsByKey[key];
-      return !!props?.generation?.verdict && !before.has(props.name);
+      return props?.generation && !before.has(props.name) ? [props] : [];
     });
+    const generated: ImageCounts = {sprite: 0, background: 0, block: 0};
+    made.forEach(props => {
+      generated[imageTypeFromCategories(props.categories)]++;
+    });
+    return {
+      generated,
+      rated: made.some(props => !!props.generation?.verdict),
+    };
   }, [animationList, initialSources]);
   const sceneSources = useMemo(
     () =>
@@ -842,18 +851,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sceneSources,
     editingSceneId: activeScene.id,
     everPlayed: playProgress.everPlayed,
+    generated,
     rated,
     runtime: playProgress.runtime,
   });
 
   // The callout arrow at a tab, shown while the level's condition holds.
-  const calloutDone = useMemo(
-    () =>
-      new Set(objectives.items.flatMap((item, i) => (item.done ? [i] : []))),
-    [objectives.items]
-  );
   const callout = activeCallout(levelProperties.callouts, {
-    done: calloutDone,
+    done: objectives.earned,
     tab: activeTab,
     scene: activeScene.id,
   });
@@ -1881,8 +1886,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   // A level that checks for a rating keeps the rating strip up until a
   // thumb is given.
-  const ratingRequired = !!levelProperties.objectives?.items?.some(
-    item => item.check.kind === 'rated'
+  const ratingRequired = objectiveChecks(levelProperties.objectives).some(
+    check => check.kind === 'rated'
   );
   const handleEditorChange = useCallback(
     (editor: Editor) => dispatch(setActiveTab(editor)),
@@ -2215,8 +2220,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         }
       />
       <div className={moduleStyles.divider} />
-      <LabShell>
-        {WorkspaceAlert}
+      <LabShell alert={WorkspaceAlert}>
         <div ref={stageRef} className={moduleStyles.stage}>
           {scenesOffered &&
             editorsShown &&

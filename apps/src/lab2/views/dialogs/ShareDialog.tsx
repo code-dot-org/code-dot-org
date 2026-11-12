@@ -24,11 +24,17 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {CopyToClipboardButton} from './CopyToClipboardButton';
+import Hoai2026Congrats from './finishDialogs/Hoai2026Congrats';
 import HoaiCongrats from './finishDialogs/HoaiCongrats';
 
 import moduleStyles from './share-dialog.module.scss';
 
 export const SHARE_FAILURE_TITLE = "This project can't be shared";
+
+// A Sprite Lab in Lab2 remix lands in the classic Sprite Lab until the lab
+// has a standalone project of its own (#75765); the finish dialog's Open
+// Sprite Lab is held until then.
+const REMIX_OFFERED = false;
 
 export const SHARE_FAILURE_FALLBACK_PREFIX =
   "The project can't be shared because it contains flagged content. ";
@@ -165,6 +171,13 @@ const ShareDialog: React.FunctionComponent<{
     dispatch(hideShareDialog());
   }, [dispatch]);
 
+  const remix = useCallback(() => {
+    Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.saveAndRemix()
+      .catch(error => console.error('Remix from the finish dialog:', error));
+  }, []);
+
   const feedbackLink = useAppSelector(state => {
     const {userType, signInState} = state.currentUser;
     if (signInState !== SignInState.SignedIn) return undefined;
@@ -210,6 +223,20 @@ const ShareDialog: React.FunctionComponent<{
         projectType={projectType}
         theme={theme}
       />
+    );
+  }
+
+  if (dialogId === 'hoai2026') {
+    return (
+      <div data-theme={theme}>
+        <Hoai2026Congrats
+          onClose={handleClose}
+          shareUrl={isAbusive || userSharingDisabled ? undefined : shareUrl}
+          projectType={projectType}
+          onRemix={REMIX_OFFERED && !isAbusive ? remix : undefined}
+          certificateUrl={finishUrl}
+        />
+      </div>
     );
   }
 
