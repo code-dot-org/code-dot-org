@@ -296,7 +296,7 @@ describe('MapScreen tour', () => {
         createdTour.next(); // → step 2 (pick checkpoint)
       });
       act(() => {
-        fireEvent.click(screen.getByText('select cp-2')); // cp-2 is locked
+        fireEvent.click(screen.getByText('select cp-2')); // cp-2 is locked, ignored
       });
       expect(screen.queryByText('Second Checkpoint')).toBeNull();
       expect(screen.getByText('Select a checkpoint')).toBeTruthy();

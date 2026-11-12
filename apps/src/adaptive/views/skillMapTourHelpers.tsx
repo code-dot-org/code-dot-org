@@ -55,18 +55,25 @@ export function buildSkillMapTourSteps(
     {
       id: 'available-checkpoints',
       title: 'Available checkpoints',
-      // No button — a map click advances.
-      text: 'Start with any of the unlocked checkpoints. Click one to learn more about it.',
+      text: 'Start with any of the unlocked checkpoints. Select one to continue.',
       attachTo: {element: '#adaptive-tour-map', on: 'right'},
       buttons: [],
     },
     {
       id: 'checkpoint-details',
       title: 'Checkpoint details',
-      // No button — the Start button in CheckpointCard dismisses the tour.
-      text: "<p>See what you'll learn, how long it takes, and what to finish first.</p><p>Ready? Click Start! You can come back to the skill map anytime to pick a different checkpoint.</p>",
+      text: "<p>See what you'll learn, how long it takes, and what to finish first.</p><p>Ready? Select Start to begin, or select Done to explore the map on your own.</p>",
       attachTo: {element: '#adaptive-tour-side', on: 'left'},
-      buttons: [],
+      // Keyboard/accessibility path alongside the Start button in CheckpointCard.
+      buttons: [
+        {
+          text: 'Done',
+          action() {
+            tour.next();
+          },
+          classes: 'custom-shepherd-button-secondary',
+        },
+      ],
     }
   );
 

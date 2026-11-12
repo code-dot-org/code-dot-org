@@ -78,14 +78,12 @@ describe('buildSkillMapTourSteps', () => {
     });
   });
 
-  it('provides a Got-it button on info steps and no button on interactive steps', () => {
+  it('has Got-it buttons on info steps, no button on the pick step, and Done on the sidebar step', () => {
     const steps = buildSkillMapTourSteps(mockTour, false);
-    // Steps 0–1 are info steps with a Got-it button.
-    expect(steps[0].buttons).toHaveLength(1);
-    expect(steps[1].buttons).toHaveLength(1);
-    // Pick-checkpoint and sidebar steps have no buttons.
-    expect(steps[2].buttons).toHaveLength(0);
-    expect(steps[3].buttons).toHaveLength(0);
+    expect(steps[0].buttons).toHaveLength(1); // Got it
+    expect(steps[1].buttons).toHaveLength(1); // Got it
+    expect(steps[2].buttons).toHaveLength(0); // checkpoint click advances
+    expect(steps[3].buttons).toHaveLength(1); // Done
   });
 });
 

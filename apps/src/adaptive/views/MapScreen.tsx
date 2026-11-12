@@ -91,6 +91,9 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
 
   const tourEnded = useRef(false);
   const tourRef = useRef<Tour | null>(null);
+  // Set to true as soon as the user clicks a checkpoint during step 2 so the
+  // step-3 show handler skips the fallback auto-selection.
+  const userSelectedCheckpointRef = useRef(false);
 
   const [tourEnabled, setTourEnabled] = useState(
     () =>
@@ -116,6 +119,12 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
       setTourEnabled(false);
       setTourCheckpointId(undefined);
       document.body.classList.remove('adaptive-tour-step-select');
+      // Shepherd's _done() restores its own focusedElBeforeOpen (usually body)
+      // synchronously after firing the cancel/complete event. Deferring past
+      // that tick puts focus on a meaningful map element instead.
+      setTimeout(() => {
+        document.getElementById('adaptive-tour-first-checkpoint')?.focus();
+      }, 0);
     }
   };
 
@@ -130,7 +139,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     const indices = getSkillMapTourStepIndices(hasSkippedCheckpoints);
     const tour = createTourWithSteps(
       t => buildSkillMapTourSteps(t, hasSkippedCheckpoints),
-      {scrollTo: false}
+      {scrollTo: false, cancelIcon: {enabled: false}}
     );
 
     tour.on('show', () => {
@@ -141,6 +150,19 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
         'adaptive-tour-step-select',
         idx === indices.pickCheckpoint
       );
+      // Shepherd opens <dialog open> without showModal(), so the browser's
+      // native focus trap is inactive. aria-modal tells NVDA/VoiceOver to
+      // treat background content as inert during virtual-cursor navigation.
+      tour.currentStep?.el?.setAttribute('aria-modal', 'true');
+      // If the user advances to the sidebar step without having clicked a
+      // checkpoint (edge case: future keyboard shortcut, test harness, etc.),
+      // auto-select the first available one so the sidebar is not empty.
+      if (idx === indices.sidebar && !userSelectedCheckpointRef.current) {
+        const first = pathway.checkpoints.find(
+          c => statusMap[c.id] === 'available'
+        );
+        if (first) setTourCheckpointId(first.id);
+      }
     });
 
     tour.on('cancel', () => dismissTourRef.current());
@@ -237,6 +259,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
                   if (statusMap[id] !== 'locked') {
                     sendSelected();
                     setTourCheckpointId(id);
+                    userSelectedCheckpointRef.current = true;
                     tourRef.current?.next();
                   }
                 } else if (id === focusId) {
