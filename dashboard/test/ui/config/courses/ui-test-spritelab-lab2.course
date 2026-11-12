@@ -1,0 +1,19 @@
+{
+  "name": "ui-test-spritelab-lab2",
+  "script_names": [
+    "ui-test-spritelab-lab2"
+  ],
+  "original_script_names": [
+    "ui-test-spritelab-lab2"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-spritelab-lab2",
+    "version_year": "unversioned"
+  },
+  "resources": [],
+  "student_resources": []
+}

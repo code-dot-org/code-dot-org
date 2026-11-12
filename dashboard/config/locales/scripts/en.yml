@@ -30001,6 +30001,17 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ui-test-spritelab-lab2:
+          lessons:
+            Sprite Lab in Lab2:
+              name: Sprite Lab in Lab2
+          lesson_groups: {}
+          name: ui-test-spritelab-lab2
+          title: UI Test Sprite Lab in Lab2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         joi-agentic-ai:
           lessons:
             lesson-1:

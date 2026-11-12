@@ -1,0 +1,303 @@
+{
+  "script": {
+    "name": "ui-test-spritelab-lab2",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-11-04 08:04:28 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ui-test-spritelab-lab2"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Sprite Lab in Lab2",
+      "name": "Sprite Lab in Lab2",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "8ed103cb-6c5f-4400-b64f-23a28e01d2aa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8ed103cb-6c5f-4400-b64f-23a28e01d2aa",
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5",
+        "lesson_activity.key": "8ed103cb-6c5f-4400-b64f-23a28e01d2aa"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UI Test Sprite Lab in Lab2 character"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test Sprite Lab in Lab2 character"
+        ],
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2",
+        "activity_section.key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5"
+      },
+      "level_keys": [
+        "UI Test Sprite Lab in Lab2 character"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UI Test Sprite Lab in Lab2 player"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test Sprite Lab in Lab2 player"
+        ],
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2",
+        "activity_section.key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5"
+      },
+      "level_keys": [
+        "UI Test Sprite Lab in Lab2 player"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UI Test Sprite Lab in Lab2 world"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test Sprite Lab in Lab2 world"
+        ],
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2",
+        "activity_section.key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5"
+      },
+      "level_keys": [
+        "UI Test Sprite Lab in Lab2 world"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UI Test Sprite Lab in Lab2 scene"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test Sprite Lab in Lab2 scene"
+        ],
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2",
+        "activity_section.key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5"
+      },
+      "level_keys": [
+        "UI Test Sprite Lab in Lab2 scene"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UI Test Sprite Lab in Lab2 free play"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test Sprite Lab in Lab2 free play"
+        ],
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2",
+        "activity_section.key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5"
+      },
+      "level_keys": [
+        "UI Test Sprite Lab in Lab2 free play"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "UI Test Sprite Lab in Lab2 character",
+        "script_level.level_keys": [
+          "UI Test Sprite Lab in Lab2 character"
+        ],
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2",
+        "activity_section.key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test Sprite Lab in Lab2 player",
+        "script_level.level_keys": [
+          "UI Test Sprite Lab in Lab2 player"
+        ],
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2",
+        "activity_section.key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test Sprite Lab in Lab2 world",
+        "script_level.level_keys": [
+          "UI Test Sprite Lab in Lab2 world"
+        ],
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2",
+        "activity_section.key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test Sprite Lab in Lab2 scene",
+        "script_level.level_keys": [
+          "UI Test Sprite Lab in Lab2 scene"
+        ],
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2",
+        "activity_section.key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test Sprite Lab in Lab2 free play",
+        "script_level.level_keys": [
+          "UI Test Sprite Lab in Lab2 free play"
+        ],
+        "lesson.key": "Sprite Lab in Lab2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-spritelab-lab2",
+        "activity_section.key": "9f2d7d18-9630-4f38-8820-b830f7a8a8a5"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
