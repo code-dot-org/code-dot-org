@@ -14,7 +14,6 @@ export const QUESTION_TYPE_LABELS_ICONS: Record<
 // Why a builder button is off, as its tooltip shows it.
 export const UNSAVED_QUESTION_REASON =
   'Save or remove your new question first.';
-export const EMPTY_PAGE_REASON = 'Create a question on the empty page first.';
 export const NO_CHANGES_REASON = 'No changes to save.';
 export const QUIZ_LOADING_REASON = 'The quiz is still loading.';
 export const QUIZ_LOAD_FAILED_REASON = 'Reload the page to load the quiz.';

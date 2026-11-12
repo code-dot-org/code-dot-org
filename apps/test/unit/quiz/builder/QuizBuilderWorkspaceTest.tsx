@@ -9,7 +9,6 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import {
-  EMPTY_PAGE_REASON,
   editedQuestionsReason,
   INVALID_CONFIG_REASON,
   LAST_PAGE_REASON,
@@ -299,25 +298,21 @@ describe('QuizBuilderWorkspace', () => {
     expect(addPendingQuestion).not.toHaveBeenCalled();
   });
 
-  it('shows an empty page, blocks adding another, and creates questions on it', async () => {
+  it('shows an empty page, allows adding another, and creates questions on it', () => {
+    const addPage = jest.fn();
     const addPendingQuestion = jest.fn();
     const questions = [question({id: 1, page: 1})];
     renderWorkspace({
       questions,
       pages: [...groupByPage(questions), {page: 2, questions: []}],
+      addPage,
       addPendingQuestion,
     });
 
     expect(screen.getByRole('heading', {name: 'Page 2'})).toBeInTheDocument();
     expect(screen.getByText('This page is empty')).toBeInTheDocument();
-    const addPage = screen.getByRole('button', {name: 'Add page'});
-    expect(addPage).toHaveAttribute('aria-disabled', 'true');
-    fireEvent.mouseOver(addPage);
-    expect(
-      await screen.findByRole('tooltip', {
-        name: EMPTY_PAGE_REASON,
-      })
-    ).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
+    expect(addPage).toHaveBeenCalled();
 
     createFromDropdown(1, 'Free response');
     expect(addPendingQuestion).toHaveBeenCalledWith(2, 'FreeResponseQuestion');
@@ -330,16 +325,15 @@ describe('QuizBuilderWorkspace', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('disables the per-page create and add-page buttons while a pending question already exists', async () => {
-    renderWorkspace({questions: [question({id: -1})]});
+  it('disables creating another question, but not adding a page, while a pending question exists', async () => {
+    const addPage = jest.fn();
+    renderWorkspace({questions: [question({id: -1})], addPage});
     const createQuestion = screen.getByRole('button', {
       name: 'Create question',
     });
     expect(createQuestion).toHaveAttribute('aria-disabled', 'true');
-    expect(screen.getByRole('button', {name: 'Add page'})).toHaveAttribute(
-      'aria-disabled',
-      'true'
-    );
+    fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
+    expect(addPage).toHaveBeenCalled();
 
     fireEvent.mouseOver(createQuestion);
     expect(
@@ -639,15 +633,18 @@ describe('QuizBuilderWorkspace', () => {
       expect(addPage).toHaveBeenCalledWith(3);
     });
 
-    it('turns off adding a page while one is empty', () => {
+    it('adds a page while another is already empty', () => {
+      const addPage = jest.fn();
       renderWorkspace({
         questions: TWO_PAGES,
         pages: [...groupByPage(TWO_PAGES), {page: 3, questions: []}],
+        addPage,
       });
 
-      expect(
+      fireEvent.click(
         pageMenuOf(1).getByRole('button', {name: 'Add page above'})
-      ).toBeDisabled();
+      );
+      expect(addPage).toHaveBeenCalledWith(1);
     });
 
     it('deletes only an empty page, and never the last one', () => {

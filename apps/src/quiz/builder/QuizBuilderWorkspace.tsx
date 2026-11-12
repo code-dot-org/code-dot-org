@@ -10,7 +10,6 @@ import QuizMetadataList from '../QuizMetadataList';
 import {QuizQuestionType} from '../types';
 
 import {
-  EMPTY_PAGE_REASON,
   editedQuestionsReason,
   INVALID_CONFIG_REASON,
   LAST_PAGE_REASON,
@@ -101,11 +100,6 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   const createDisabledReason = hasPendingQuestion
     ? UNSAVED_QUESTION_REASON
     : undefined;
-  const addPageDisabledReason =
-    createDisabledReason ??
-    (pages.some(page => page.questions.length === 0)
-      ? EMPTY_PAGE_REASON
-      : undefined);
 
   const changedConfig = changedConfigFields(savedConfig, config);
   const hasUnsavedConfig = Object.keys(changedConfig).length > 0;
@@ -227,7 +221,6 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                 page={page}
                 canMoveUp={page > 1}
                 canMoveDown={page < pages.length}
-                canAddPage={!addPageDisabledReason}
                 deleteDisabledReason={
                   pageQuestions.length > 0
                     ? PAGE_HAS_QUESTIONS_REASON
@@ -290,19 +283,16 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           </QuizPageBlock>
         ))}
         <div className={styles.addPageSlot}>
-          <DisabledReason reason={addPageDisabledReason}>
-            <Button
-              variant="outlined"
-              color="secondary"
-              size="extraSmall"
-              type="button"
-              onClick={() => addPage()}
-              startIcon={<FontAwesomeV6Icon iconName="plus" />}
-              {...ariaDisabledProps(addPageDisabledReason)}
-            >
-              Add page
-            </Button>
-          </DisabledReason>
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="extraSmall"
+            type="button"
+            onClick={() => addPage()}
+            startIcon={<FontAwesomeV6Icon iconName="plus" />}
+          >
+            Add page
+          </Button>
         </div>
       </>
     );
