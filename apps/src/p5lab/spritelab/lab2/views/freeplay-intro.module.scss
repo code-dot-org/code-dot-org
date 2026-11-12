@@ -1,55 +1,59 @@
-@use '@cdo/apps/pixelEditor/dialogChrome' as chrome;
-
+// Overrides on the design-system Modal, scoped under .dialogHost so they
+// outrank its own classes by specificity rather than load order.
 .dialogHost {
   display: contents;
-
-  @include chrome.theme;
 }
 
 .dialogHost .dialog {
-  @include chrome.panel;
-
   width: 450px;
+  min-width: 0;
+  max-width: calc(100vw - 32px);
 }
 
-.header {
+// Modal's title row, the panel's first child: centered, with even padding
+// so the close button does not pull it off center.
+.dialogHost .dialog > div:first-child {
   padding: 16px 48px;
-  border-bottom: 1px solid chrome.$border-subtle;
   text-align: center;
 }
 
-// Lighter and more spaced out than overline1, to match the design.
-.header .headerLabel {
+// The title as a small spaced-out label, to match the design.
+.dialogHost .dialog h3 {
+  font-size: 0.875rem;
   font-weight: 500;
+  line-height: 1.5;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-// Scrolls when the panel is capped at the viewport height, as at high zoom.
+// Modal's close button, its 25px box centered on the 53px title row.
+.dialogHost .dialog > button {
+  inset-block-start: 14px;
+}
+
+.dialogHost .dialog img {
+  image-rendering: pixelated;
+}
+
 .content {
-  min-height: 0;
-  overflow-y: auto;
-  padding: 24px;
+  align-self: stretch;
   text-align: center;
 }
 
-// Qualified so these beat MUI Typography's styles, which load later.
 .content .title {
-  margin: 20px 0 4px;
-}
-
-.illustration {
-  display: block;
-  width: 100%;
-  border-radius: 6px;
-  image-rendering: pixelated;
+  margin: 4px 0;
 }
 
 .content .tip {
   margin-top: 20px;
   padding: 16px;
   border-radius: 8px;
-  background: var(--dialog-inset-bg);
+  background: var(--background-neutral-secondary);
   font-weight: 600;
+
+  [data-theme='Dark'] & {
+    background: var(--background-neutral-tertiary);
+  }
 }
 
 .content .tip + .tip {
@@ -62,11 +66,4 @@
   gap: 0.375em;
   margin-left: 0.125em;
   color: var(--text-brand-primary-fixed);
-}
-
-.footer {
-  display: flex;
-  justify-content: flex-end;
-  padding: 16px 24px;
-  border-top: 1px solid chrome.$border-subtle;
 }
