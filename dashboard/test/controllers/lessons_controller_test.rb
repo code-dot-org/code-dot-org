@@ -630,7 +630,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_nil @lesson.generate_outline
   end
 
-  test 'cannot update lockable if last level is not a levelgroup or exam quiz and an assessment' do
+  test 'cannot update lockable if last level is not a LevelGroup or exam Quiz and an assessment' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -648,7 +648,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
   end
 
-  test 'cannot update lockable if last level is an exam quiz but not an assessment' do
+  test 'cannot update lockable if last level is an exam Quiz but not an assessment' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -672,7 +672,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
   end
 
-  test 'can update lockable if last level is an exam quiz and assessment' do
+  test 'can update lockable if last level is an exam Quiz and assessment' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -694,7 +694,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'cannot update lockable if last level is a quiz that is not an exam' do
+  test 'cannot update lockable if last level is a Quiz that is not an exam' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
