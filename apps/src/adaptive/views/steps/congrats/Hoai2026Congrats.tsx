@@ -22,7 +22,7 @@ const HEADING = 'You just built something with AI!';
 const DESCRIPTION_WITH_CHALLENGE =
   'Want to keep going? Join the Building with AI Challenge, a national competition for high school teams. Build your project over eight weeks and submit by Feb 1, 2027.';
 const DESCRIPTION_WITHOUT_CHALLENGE =
-  'You just created a website with your own vision and design using AI. Keep exploring and building with AI to create even more amazing projects!';
+  'You created a website with your own vision and design using AI. Keep exploring and building with AI to create even more amazing projects!';
 const IMAGE_URL =
   'https://images.code.org/dc6583670c742dbc656e3e805cafee15-ai-makerspace-congrats-image.png';
 
