@@ -20,7 +20,6 @@ describe('BLOCK_HELP', () => {
     'spritelab2_clickedSprite',
     'spritelab2_restartScene',
     'spritelab2_showTitle',
-    'gamelab_atTime',
     'gamelab_everyInterval',
     'spritelab2_whenPlayer',
     'spritelab2_setAsPlatformPlayer2',
