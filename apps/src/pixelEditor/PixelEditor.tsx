@@ -185,9 +185,11 @@ export interface PixelEditorProps {
   // Added to the canvas box, e.g. to drop its border inside a host's frame.
   canvasClassName?: string;
   // The only colors offered: the color square opens these as round
-  // swatches, in place of the spectrum picker. The first is the color the
-  // editor opens on.
+  // swatches, in place of the spectrum picker.
   palette?: readonly PaletteColor[];
+  // The color the editor opens on. Absent, it is the palette's first
+  // color, or the editor's own blue when there is no palette.
+  startColor?: RGBA;
   // The brush sizes to offer, in BRUSH_SIZES order; all four when absent.
   // The editor opens on the first; one alone shows no size buttons.
   brushSizes?: readonly number[];
@@ -223,6 +225,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   onHistoryChange,
   canvasClassName,
   palette,
+  startColor,
   brushSizes,
   toolbarGroups,
   children,
@@ -259,7 +262,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     brushSizes ? shownBrushSizes[0] ?? BRUSH_SIZES[0] : BRUSH_SIZES[1]
   );
   const [color, setColor] = useState<RGBA>(
-    () => palette?.[0]?.rgba ?? DEFAULT_COLOR
+    () => startColor ?? palette?.[0]?.rgba ?? DEFAULT_COLOR
   );
   const [loaded, setLoaded] = useState(false);
   // Bumped as each picture lands, so a new picture given to a mounted

@@ -120,6 +120,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
   const PixelEditorStub = ({
     tools,
     palette,
+    startColor,
     knownPixelGrid,
     brushSizes,
     onEdit,
@@ -129,6 +130,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
   }: {
     tools?: readonly string[];
     palette?: readonly unknown[];
+    startColor?: readonly number[];
     knownPixelGrid?: number;
     brushSizes?: readonly number[];
     onEdit?: () => void;
@@ -153,6 +155,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
         </button>
         <span>{tools ? `${tools.length} tools` : 'all tools'}</span>
         <span>{palette ? `${palette.length} colors` : 'every color'}</span>
+        <span>starts on {startColor?.join(' ') ?? 'its own color'}</span>
         <span>grid {knownPixelGrid ?? 'none'}</span>
         <span>{brushSizes?.length ?? 'all'} brush sizes</span>
         {children({
@@ -976,7 +979,8 @@ describe('ImagesTab', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
     // The eyedropper is among the tools; the colors are the fixed swatches.
     expect(screen.getByText('4 tools')).toBeTruthy();
-    expect(screen.getByText('20 colors')).toBeTruthy();
+    expect(screen.getByText('19 colors')).toBeTruthy();
+    expect(screen.getByText('starts on 41 173 255 255')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     saveEdited.mockResolvedValue('k1');
     await act(async () => {
