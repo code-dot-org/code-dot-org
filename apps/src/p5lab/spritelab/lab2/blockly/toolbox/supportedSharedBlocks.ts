@@ -30,6 +30,7 @@ export const SUPPORTED_SHARED_BLOCK_TYPES: ReadonlySet<string> = new Set([
 
   'gamelab_addBehaviorSimple',
 
+  'gamelab_hideVariable',
   'gamelab_showVariable',
 ]);
 
