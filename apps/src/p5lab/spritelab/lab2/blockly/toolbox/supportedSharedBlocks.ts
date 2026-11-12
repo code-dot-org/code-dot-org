@@ -29,6 +29,8 @@ export const SUPPORTED_SHARED_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'gamelab_whenPromptAnswered',
 
   'gamelab_addBehaviorSimple',
+
+  'gamelab_showVariable',
 ]);
 
 /** The pool's category map filtered to its supported blocks; an empty category
