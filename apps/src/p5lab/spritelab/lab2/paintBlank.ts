@@ -1,6 +1,7 @@
-// The blank canvas "Paint manually" opens on, sized the way an AI generation
-// of the same style would come out — and the stage ground color that
-// background handling everywhere composites onto.
+// The blank canvas a drawing starts on, and the stage ground color that
+// background handling everywhere composites onto. A blank block or
+// background is sized the way an AI generation of the same style would
+// come out. A blank character or object is coarser (DRAWN_SPRITE_GRID).
 
 import {NATIVE_PIXEL_GRID} from '@cdo/apps/pixelEditor/pixelArt';
 

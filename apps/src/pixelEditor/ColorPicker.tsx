@@ -52,6 +52,10 @@ interface ColorPickerProps {
   // A fixed set of colors. The popover then offers these as round swatches
   // and nothing else: no spectrum, no recent colors, no transparent.
   palette?: readonly PaletteColor[];
+  // The popover opened.
+  onOpen?: () => void;
+  // Escape closed the popover: any color tried in it has been put back.
+  onCancel?: () => void;
 }
 
 /**
@@ -70,6 +74,8 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
   onChange,
   recentColors = [],
   palette,
+  onOpen,
+  onCancel,
 }) => {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
@@ -105,9 +111,14 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       colorOnOpenRef.current = color;
       setKbSteering(viaKeyboard);
       setOpen(true);
+      onOpen?.();
     },
-    [color]
+    [color, onOpen]
   );
+  // The color now, for the Escape handler: it is read when the key comes,
+  // so the handler need not be attached again each time the color changes.
+  const colorRef = useRef(color);
+  colorRef.current = color;
 
   // Screen-reader narration; moves are debounced so held arrows don't
   // flood the queue.
@@ -145,6 +156,15 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       if (
         target &&
         (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')
+      ) {
+        return;
+      }
+      // The letter acts only with focus in the editor or on nothing, so a
+      // host's other controls keep their keys.
+      if (
+        target &&
+        target !== document.body &&
+        !target.closest('[data-pixel-editor]')
       ) {
         return;
       }
@@ -186,16 +206,17 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
         // Nothing to put back when no color was tried; saying so would
         // read as a color being chosen.
         const opened = colorOnOpenRef.current;
-        if (opened.some((value, i) => value !== color[i])) {
+        if (opened.some((value, i) => value !== colorRef.current[i])) {
           onChange(opened);
         }
+        onCancel?.();
         setOpen(false);
         focusSwatchSoon();
       }
     };
     document.addEventListener('keydown', onKeyDown, true);
     return () => document.removeEventListener('keydown', onKeyDown, true);
-  }, [open, color, onChange, focusSwatchSoon]);
+  }, [open, onChange, onCancel, focusSwatchSoon]);
 
   // Read the spectrum pixel at (x, y) into the active color.
   const sampleAt = useCallback(
@@ -301,6 +322,8 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       }
       onClick={() => (open ? setOpen(false) : openPicker())}
       aria-label="Choose color (C)"
+      aria-haspopup="true"
+      aria-expanded={open}
     />
   );
 
@@ -311,7 +334,18 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
   };
 
   return (
-    <div ref={rootRef} className={moduleStyles.colorPicker}>
+    <div
+      ref={rootRef}
+      className={moduleStyles.colorPicker}
+      // Tabbing on to another control leaves the popover behind, so it
+      // closes. A press inside it that takes focus nowhere does not.
+      onBlur={e => {
+        const next = e.relatedTarget as Node | null;
+        if (open && next && !rootRef.current?.contains(next)) {
+          setOpen(false);
+        }
+      }}
+    >
       {open ? (
         // No tooltip while the palette is open: the bubble sits on the same
         // alignment line and would cover its colors.

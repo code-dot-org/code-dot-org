@@ -35,12 +35,46 @@ describe('ColorPicker with a palette', () => {
     expect(screen.queryByRole('group', {name: 'Colors'})).toBeNull();
   });
 
-  it('closes on Escape without changing the color', () => {
+  it('closes on Escape without changing the color, and tells the host it was cancelled', () => {
     const onChange = jest.fn();
-    render(<ColorPicker color={BLUE} onChange={onChange} palette={PALETTE} />);
-    fireEvent.click(screen.getByRole('button', {name: 'Choose color (C)'}));
+    const onOpen = jest.fn();
+    const onCancel = jest.fn();
+    render(
+      <ColorPicker
+        color={BLUE}
+        onChange={onChange}
+        palette={PALETTE}
+        onOpen={onOpen}
+        onCancel={onCancel}
+      />
+    );
+    // Looked up each time: the square is a new element once the popover is
+    // open, since it drops its tooltip.
+    const square = () => screen.getByRole('button', {name: 'Choose color (C)'});
+    expect(square().getAttribute('aria-expanded')).toBe('false');
+    fireEvent.click(square());
+    expect(onOpen).toHaveBeenCalledTimes(1);
+    expect(square().getAttribute('aria-expanded')).toBe('true');
     fireEvent.keyDown(document, {key: 'Escape'});
     expect(screen.queryByRole('group', {name: 'Colors'})).toBeNull();
     expect(onChange).not.toHaveBeenCalled();
+    expect(onCancel).toHaveBeenCalledTimes(1);
+  });
+
+  it('opens with the C key only when focus is in the editor or on nothing', () => {
+    render(
+      <div>
+        <button type="button">elsewhere</button>
+        <div data-pixel-editor="">
+          <ColorPicker color={BLUE} onChange={jest.fn()} palette={PALETTE} />
+        </div>
+      </div>
+    );
+    fireEvent.keyDown(screen.getByRole('button', {name: 'elsewhere'}), {
+      key: 'c',
+    });
+    expect(screen.queryByRole('group', {name: 'Colors'})).toBeNull();
+    fireEvent.keyDown(document.body, {key: 'c'});
+    expect(screen.getByRole('group', {name: 'Colors'})).toBeTruthy();
   });
 });

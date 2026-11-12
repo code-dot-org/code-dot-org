@@ -873,6 +873,12 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
         return;
       }
       const [r, g, b, a] = ctx.getImageData(p.x, p.y, 1, 1).data;
+      // A fixed palette offers no transparent color, so the eyedropper
+      // does not pick one up from an empty pixel. The pen would then
+      // paint nothing, with no swatch to show why.
+      if (a === 0 && !opaqueGround && palette) {
+        return;
+      }
       // Over an opaque ground a transparent pixel displays as the ground
       // color, so that's what the eyedropper picks.
       setColor(
@@ -883,7 +889,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
           : [r, g, b, 255]
       );
     },
-    [opaqueGround]
+    [opaqueGround, palette]
   );
 
   const handlePointerDown = useCallback(
@@ -1414,17 +1420,39 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     onHistoryChange?.({canUndo, canRedo, undo, redo});
   }, [onHistoryChange, canUndo, canRedo, undo, redo]);
 
+  // A color chosen with the eyedropper in hand is for the tool the student
+  // was using before it. The eyedropper would only pick another color over
+  // it at the next press.
   const chooseColor = useCallback(
     (chosen: RGBA) => {
       setColor(chosen);
-      setTool(current => toolAfterColorChoice(current, offeredToolIds));
+      setTool(current =>
+        toolAfterColorChoice(
+          current === 'eyedropper' ? lastNonEyedropperToolRef.current : current,
+          offeredToolIds
+        )
+      );
     },
     [offeredToolIds]
+  );
+  // The tool in hand when the color control opened, put back if the student
+  // cancels the choice.
+  const toolRef = useRef(tool);
+  toolRef.current = tool;
+  const toolAtColorOpenRef = useRef<PixelTool>('pen');
+  const rememberTool = useCallback(() => {
+    toolAtColorOpenRef.current = toolRef.current;
+  }, []);
+  const putToolBack = useCallback(
+    () => setTool(toolAtColorOpenRef.current),
+    []
   );
   const colorControl = (
     <ColorPicker
       color={color}
       onChange={chooseColor}
+      onOpen={rememberTool}
+      onCancel={putToolBack}
       recentColors={recentColors}
       palette={palette}
     />

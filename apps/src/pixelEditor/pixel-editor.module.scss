@@ -303,7 +303,9 @@ $palette-columns: 5;
 // Wide enough for one row of swatches; any more wrap onto the next row.
 $palette-row: $palette-columns * $palette-swatch + ($palette-columns - 1) * $palette-gap;
 
-.palettePopover {
+// Two classes, so its padding wins over the spectrum popover's own, which
+// is declared further down.
+.spectrumPopover.palettePopover {
   box-sizing: content-box;
   width: $palette-row;
   padding: $palette-gap;
