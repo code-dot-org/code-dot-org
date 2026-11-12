@@ -186,10 +186,11 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const didInitialCheckForAttemptFail = !attempt && !!error;
   const hasNoAttemptYet = attempt === null;
   const hasTitleCard = currentPageNumber === 1 && !showIntroScreen;
-  const isShowingResults =
+  const canShowBackToTop =
     !isLoading &&
     !!unitId &&
     (isViewingStudent || (!!attempt?.submittedAt && !isIntroOpen));
+  const isTeacherViewingUnsubmitted = isViewingStudent && !attempt?.submittedAt;
 
   // Covers both the very first intro screen and Retake reopening it - either
   // way, the button that led here is gone, so hand focus to the heading.
@@ -586,7 +587,17 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           type={attempt && !attempt.submittedAt ? 'warning' : 'info'}
         />
       )}
-      <div className={styles.attemptBody} ref={attemptBodyRef} tabIndex={-1}>
+      <div
+        className={styles.attemptBody}
+        ref={attemptBodyRef}
+        {...(isTeacherViewingUnsubmitted && {
+          // Nothing inside takes focus, so the region itself must: to stay
+          // keyboard-scrollable, and to receive focus from Back to top.
+          tabIndex: 0,
+          role: 'region',
+          'aria-label': 'Student answers',
+        })}
+      >
         {error && (
           <Typography variant="body3" color="error" role="alert">
             {error}
@@ -682,7 +693,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </div>
         )}
       </div>
-      {isShowingResults && (
+      {canShowBackToTop && (
         <BackToTop
           scrollContainerRef={attemptBodyRef}
           focusTargetRef={resultsHeadingRef}
