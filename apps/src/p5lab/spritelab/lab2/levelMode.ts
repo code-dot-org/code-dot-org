@@ -33,8 +33,8 @@ export interface LevelMode {
       when unset. */
   imageSource?: ImageSource;
   /** The Images tab offers one image, of the level's imageType, with
-      GENERATION_LIMIT generations of it and no adding, drawing or deleting.
-      Unset, the tab is as in free play. */
+      GENERATION_LIMIT generations of it and no adding or deleting. Unset,
+      the tab is as in free play. */
   oneImage?: boolean;
   /** Tabs the level shows in addition to its kind's own, for example
       ["Images", "World"]. A level uses this to keep the editors of earlier
@@ -46,8 +46,8 @@ export interface LevelMode {
       on the images it lists, but cannot add one. */
   noNewImages?: boolean;
   /** The Images tab has no Delete button. A level sets this when a later
-      level depends on an image made earlier. Unset, an image can be deleted
-      wherever images can be added, as in free play. */
+      level depends on an image made earlier. Unset, Delete is offered as
+      in free play, except on a one-image level, which never offers it. */
   noDeletingImages?: boolean;
   /** The paint tools are the limited set: a fixed set of colors and one
       brush. A level sets this when it is not about painting. Unset, they
@@ -87,8 +87,10 @@ export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
     mode.imageFirst && !own.includes('Images') ? ['Images', ...own] : [...own];
   // The level's extra tabs go after its own, so they do not change where
   // the level opens.
+  // The option is edited as JSON, so it may not be a list.
+  const extra = Array.isArray(mode.extraTabs) ? mode.extraTabs : [];
   EXTRA_TABS.forEach(tab => {
-    if (mode.extraTabs?.includes(tab) && !tabs.includes(tab)) {
+    if (extra.includes(tab) && !tabs.includes(tab)) {
       tabs.push(tab);
     }
   });

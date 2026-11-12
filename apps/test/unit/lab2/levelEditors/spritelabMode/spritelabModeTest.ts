@@ -109,13 +109,15 @@ describe('setKind', () => {
 });
 
 describe('setImageType', () => {
-  it('keeps the limited paint tools on an image level', () => {
+  it("keeps the Images tab's options on an image level", () => {
+    const options = {
+      limitedPaintTools: true,
+      noNewImages: true,
+      noDeletingImages: true,
+    };
     expect(
-      setImageType(
-        {kind: 'image', imageType: 'sprite', limitedPaintTools: true},
-        'block'
-      )
-    ).toEqual({kind: 'image', imageType: 'block', limitedPaintTools: true});
+      setImageType({kind: 'image', imageType: 'sprite', ...options}, 'block')
+    ).toEqual({kind: 'image', imageType: 'block', ...options});
   });
 
   it('drops the subject when the type is no longer a sprite', () => {

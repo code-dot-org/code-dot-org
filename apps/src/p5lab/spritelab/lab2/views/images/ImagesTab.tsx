@@ -174,7 +174,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const images = useMemo(
     () =>
       listProjectImages(animationList).filter(
-        image => !imageKinds || imageKinds.includes(image.imageType)
+        // The option is edited as JSON, so it may not be a list.
+        image =>
+          !Array.isArray(imageKinds) || imageKinds.includes(image.imageType)
       ),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [animationList, trimVersion, imageKinds]

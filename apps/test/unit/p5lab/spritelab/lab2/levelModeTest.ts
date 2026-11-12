@@ -2,10 +2,16 @@ import {
   imageSourceForMode,
   isFreeplayMode,
   isOneImageMode,
+  LevelMode,
   tabsForMode,
 } from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
 
 describe('tabsForMode', () => {
+  it('ignores extra tabs that were saved as something other than a list', () => {
+    const saved = {kind: 'code', extraTabs: true} as unknown as LevelMode;
+    expect(tabsForMode(saved)).toEqual(['Code', 'Play']);
+  });
+
   it('opens on the first tab it names', () => {
     expect(tabsForMode({kind: 'code'})).toEqual(['Code', 'Play']);
     expect(tabsForMode({kind: 'world'})).toEqual(['World', 'Play']);

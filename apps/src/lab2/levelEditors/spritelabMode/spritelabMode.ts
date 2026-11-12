@@ -67,20 +67,26 @@ const KEYS_BY_KIND: Record<LevelModeKind, (keyof LevelMode)[]> = {
   code: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
   world: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
   play: [...IMAGE_KEYS, 'imageFirst', ...IMAGE_TAB_KEYS, ...TAB_KEYS],
-  image: [...IMAGE_KEYS, ...IMAGE_TAB_KEYS, 'limitedPaintTools'],
-  freeplay: [...IMAGE_TAB_KEYS],
+  image: [...IMAGE_KEYS, ...IMAGE_TAB_KEYS, ...TAB_KEYS],
+  freeplay: [...IMAGE_TAB_KEYS, ...TAB_KEYS],
 };
 
-/** Whether a value is a list with at least one entry, each from `allowed`
-    and none repeated. */
-function isListOf(value: unknown, allowed: readonly string[]): boolean {
+/** Whether a value is a list with at least one entry, each passing
+    `isEntry` and none repeated. */
+function isListOf(
+  value: unknown,
+  isEntry: (entry: unknown) => boolean
+): boolean {
   return (
     Array.isArray(value) &&
     value.length > 0 &&
-    value.every(entry => allowed.includes(entry)) &&
+    value.every(isEntry) &&
     new Set(value).size === value.length
   );
 }
+
+const isOneOf = (allowed: readonly string[]) => (entry: unknown) =>
+  allowed.includes(entry as string);
 
 export function getPaletteRoles(mode: Partial<LevelMode>): string[] {
   return mode.paletteRoles ?? [];
@@ -107,16 +113,11 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
     case 'imageRole':
       return isNonEmptyString(value);
     case 'paletteRoles':
-      return (
-        Array.isArray(value) &&
-        value.length > 0 &&
-        value.every(isNonEmptyString) &&
-        new Set(value).size === value.length
-      );
+      return isListOf(value, isNonEmptyString);
     case 'extraTabs':
-      return isListOf(value, EXTRA_TABS);
+      return isListOf(value, isOneOf(EXTRA_TABS));
     case 'imageKinds':
-      return isListOf(value, IMAGE_TYPES);
+      return isListOf(value, isOneOf(IMAGE_TYPES));
     // A false flag reads the same as no flag, so only true is stored.
     case 'imageFirst':
     case 'learning':

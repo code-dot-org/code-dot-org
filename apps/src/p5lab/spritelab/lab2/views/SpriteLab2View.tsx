@@ -2354,7 +2354,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 sceneSize={activeSceneSize}
                 onPaintCell={handlePaintWorldCell}
                 emptyMessage={
-                  picturesOffered
+                  picturesOffered && !levelProperties.levelMode?.noNewImages
                     ? 'Make some pictures first.'
                     : 'Go back and make your image first.'
                 }
