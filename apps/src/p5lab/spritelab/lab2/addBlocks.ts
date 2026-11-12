@@ -4,8 +4,11 @@
 
 import * as BlocklyCore from 'blockly/core';
 
-import {PLACEHOLDER_BLOCK_TYPE} from './blockly/blockDefinitions/placeholder';
-import {ObjectiveCheck} from './objectives';
+import {
+  PLACEHOLDER_BLOCK_TYPE,
+  PlaceholderState,
+} from './blockly/blockDefinitions/placeholder';
+import {fieldValue, ObjectiveCheck} from './objectives';
 import {mapSavedTopBlocks} from './savedBlocks';
 import {scrollIntoView} from './scrollIntoView';
 import {
@@ -167,42 +170,83 @@ function entryOn(entry: AddBlockEntry, top: PresentBlock): boolean {
     : matchesEntry(top, entry);
 }
 
+/** A block that fills an outline: its type, and the field values it has
+    to carry when the checklist step asks for some. */
+export interface Filler {
+  type: string;
+  fields?: Record<string, unknown>;
+}
+
 /**
- * The block types that fill an entry's outline. An outline is the hint for
- * a checklist step, so these are the types that step accepts, plus the
- * block the outline is drawn to look like. A level that accepts several
- * blocks under one event lists them in its check, and any of them fills
- * the outline.
+ * The blocks that fill an entry's outline. An outline is the hint for a
+ * checklist step, so these are the blocks that step accepts, with the field
+ * values it asks for. A level that accepts several blocks under one event
+ * lists them in its check, and any of them fills the outline.
  *
  * A check is about this entry's stack when it names the stack: by its top
  * block's type (`under`), by its tag (`data`), or both. A check that names
  * neither is about no stack in particular, so it fills no outline.
+ *
+ * When one of those checks accepts the block the outline is drawn to look
+ * like, that check is the outline's own step, and the stack's other steps
+ * are left out. Otherwise every check about the stack counts, and so does
+ * the block the outline is drawn to look like.
  */
-export function fillingTypes(
+export function fillers(
   entry: AddBlockEntry,
   blockChecks: BlockCheck[]
-): string[] {
+): Filler[] {
   const placeholder = placeholderOf(entry);
   if (!placeholder) {
     return [];
   }
   const topType = isAttachment(entry) ? entry.attachTo : entry.type;
-  const like = (placeholder.extraState as {like?: {type?: string}} | undefined)
-    ?.like?.type;
-  const accepted = blockChecks
-    .filter(
-      check =>
-        (check.under !== undefined || check.data !== undefined) &&
-        (check.under === undefined || check.under === topType) &&
-        (check.data === undefined || check.data === entry.data)
-    )
-    .flatMap(check => check.type);
-  return [...new Set([...(like ? [like] : []), ...accepted])];
+  const like = (placeholder.extraState as PlaceholderState | undefined)?.like
+    ?.type;
+  const typesOf = (check: BlockCheck) =>
+    Array.isArray(check.type) ? check.type : [check.type];
+  const aboutStack = blockChecks.filter(
+    check =>
+      (check.under !== undefined || check.data !== undefined) &&
+      (check.under === undefined || check.under === topType) &&
+      (check.data === undefined || check.data === entry.data)
+  );
+  const ownStep = aboutStack.filter(
+    check => !!like && typesOf(check).includes(like)
+  );
+  const accepted = (ownStep.length ? ownStep : aboutStack).flatMap(check =>
+    typesOf(check).map(type => ({type, fields: check.fields}))
+  );
+  return ownStep.length || !like ? accepted : [{type: like}, ...accepted];
 }
 
-/** Whether a stack holds a real block (not an outline) of one of the
-    types, anywhere under its top block. */
-export function stackHolds(top: BlocklyCore.Block, types: string[]): boolean {
+/** The block types that fill an entry's outline (see fillers). */
+export function fillingTypes(
+  entry: AddBlockEntry,
+  blockChecks: BlockCheck[]
+): string[] {
+  return [...new Set(fillers(entry, blockChecks).map(filler => filler.type))];
+}
+
+function fills(block: BlocklyCore.Block, filler: string | Filler): boolean {
+  const {type, fields} =
+    typeof filler === 'string' ? ({type: filler} as Filler) : filler;
+  return (
+    block.type === type &&
+    Object.entries(fields ?? {}).every(
+      ([name, wanted]) =>
+        fieldValue(block.getFieldValue(name)) === fieldValue(wanted)
+    )
+  );
+}
+
+/** Whether a stack holds a real block (not an outline) that fills the
+    outline, anywhere under its top block. A block the student has disabled
+    does not count, as in the checklist. */
+export function stackHolds(
+  top: BlocklyCore.Block,
+  fillers: readonly (string | Filler)[]
+): boolean {
   return top
     .getDescendants(false)
     .some(
@@ -210,7 +254,7 @@ export function stackHolds(top: BlocklyCore.Block, types: string[]): boolean {
         block !== top &&
         !block.isShadow() &&
         block.isEnabled() &&
-        types.includes(block.type)
+        fillers.some(filler => fills(block, filler))
     );
 }
 
@@ -290,9 +334,9 @@ function removeOutline(top: BlocklyCore.Block, shadow: Shadow): void {
 export function syncStackOutline(
   top: BlocklyCore.Block,
   shadow: Shadow,
-  types: string[]
+  fillers: readonly (string | Filler)[]
 ): boolean {
-  if (stackHolds(top, types)) {
+  if (stackHolds(top, fillers)) {
     removeOutline(top, shadow);
     return false;
   }
@@ -442,8 +486,8 @@ export function syncOutlines(
       if (!placeholder) {
         continue;
       }
-      const types = fillingTypes(entry, blockChecks);
-      if (!types.length && !opening) {
+      const filledBy = fillers(entry, blockChecks);
+      if (!filledBy.length && !opening) {
         continue;
       }
       const stacks = workspace
@@ -453,13 +497,13 @@ export function syncOutlines(
       // is done once any of them holds the block, so then none of them
       // shows the outline. Otherwise filling one stack would move the
       // outline to the next.
-      const done = stacks.some(top => stackHolds(top, types));
+      const done = stacks.some(top => stackHolds(top, filledBy));
       // The outline is drawn on one stack only: the first that can take
       // it. It is removed from every other stack.
       let shown = false;
       for (const top of stacks) {
         try {
-          if (!done && !shown && syncStackOutline(top, placeholder, types)) {
+          if (!done && !shown && syncStackOutline(top, placeholder, filledBy)) {
             showing.add(top);
             shown = true;
           } else {
@@ -509,8 +553,9 @@ export function unfilledOutlines(
  * Add the level's blocks the workspace lacks, each placed below
  * everything already there, and bring the outlines in line with the level
  * (see syncOutlines). `blockChecks` are the level's checklist checks for
- * blocks, which say what fills each outline. Returns how many blocks were
- * added. Fires ordinary create events, so the workspace saves and re-runs
+ * blocks, which say what fills each outline. `stillWanted` is asked after
+ * the wait for the workspace to settle, and a pass that is no longer
+ * wanted does nothing. Returns how many blocks were added. Fires ordinary create events, so the workspace saves and re-runs
  * as after an edit. Then scrolls what was added, and any outline of the
  * level's still waiting for its block, into view, so a pass with nothing
  * to add still shows the student their task.
@@ -518,10 +563,12 @@ export function unfilledOutlines(
 export async function addMissingBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
   entries: AddBlockEntry[],
-  blockChecks: BlockCheck[] = []
+  blockChecks: BlockCheck[] = [],
+  stillWanted: () => boolean = () => true
 ): Promise<number> {
   await heightsSettled();
-  if (!workspace.rendered) {
+  // The wait can outlast the scene these entries were for.
+  if (!workspace.rendered || !stillWanted()) {
     return 0;
   }
   // Reserved rooms belong to a level and the workspace is reused across
@@ -550,8 +597,13 @@ export async function addMissingBlocks(
       console.warn(`add_blocks entry ${entry.type} not added:`, e);
     }
   }
-  if (syncOutlines(workspace, entries, blockChecks, true).length) {
-    ensureRoom(workspace);
+  try {
+    if (syncOutlines(workspace, entries, blockChecks, true).length) {
+      ensureRoom(workspace);
+    }
+  } catch (e) {
+    // The level must still open when its outlines cannot be drawn.
+    console.warn('add_blocks outlines not drawn:', e);
   }
   for (const entry of entries) {
     if (isAttachRoom(entry)) {

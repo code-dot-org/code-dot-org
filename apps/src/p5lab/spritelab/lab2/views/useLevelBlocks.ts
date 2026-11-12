@@ -47,7 +47,10 @@ interface LevelBlocksOptions {
 interface LevelBlocks {
   /** Adds the level's blocks, draws its outlines and locks what it added,
       once for each level, load, sources reset and workspace. The owner
-      calls it after loading a scene's code. */
+      calls it after loading a scene's code, and again whenever it changes,
+      from an effect placed after the one that loads. A level reached
+      without a page load loads nothing, so that second call is what runs
+      the pass on arrival. */
   addLevelBlocks: () => void;
   /** Counts loads of a scene's code into the workspace. The owner adds one
       for each load, before calling addLevelBlocks. */
@@ -95,7 +98,7 @@ export default function useLevelBlocks({
     [addBlocks, pinnedSceneId, activeSceneId]
   );
   // The level's checklist checks for blocks in the open scene. They say
-  // which blocks fill an outline (see fillingTypes).
+  // which blocks fill an outline (see fillers).
   const blockChecks = useMemo(
     () =>
       objectiveChecks(objectives).filter(
@@ -107,10 +110,9 @@ export default function useLevelBlocks({
   );
 
   // The level's added blocks join the pinned scene once it is on screen. A
-  // level reached without a page load loads nothing, so arriving runs the
-  // pass. A load puts the view back wherever the workspace was, so a load
-  // runs it too and brings the level's outline back on screen. It runs
-  // with no entries as well, to remove other levels' outlines.
+  // load puts the view back wherever the workspace was, so a load runs the
+  // pass and brings the level's outline back on screen. It runs with no
+  // entries as well, to remove other levels' outlines.
   const addLevelBlocks = useCallback(() => {
     if (!ready) {
       return;
@@ -136,13 +138,17 @@ export default function useLevelBlocks({
       return;
     }
     const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
-    addMissingBlocks(workspace, entries, blockChecks).then(() => {
-      // Adding waits for the workspace to settle. If another pass has
-      // started meanwhile, these entries may not be the workspace's.
-      if (!editing && addedBlocksForRef.current === key) {
-        lockAddedBlocks(workspace, entries);
-      }
-    });
+    // Adding waits for the workspace to settle. If another pass has started
+    // meanwhile, these entries may not be the workspace's.
+    const stillWanted = () => addedBlocksForRef.current === key;
+    addMissingBlocks(workspace, entries, blockChecks, stillWanted)
+      .then(() => {
+        if (!editing && stillWanted()) {
+          lockAddedBlocks(workspace, entries);
+        }
+      })
+      // The level must still open when its blocks cannot be added.
+      .catch(e => console.warn('add_blocks pass failed:', e));
   }, [
     ready,
     editing,
@@ -152,14 +158,10 @@ export default function useLevelBlocks({
     sourcesReinitializedCount,
     workspaceVersion,
   ]);
-  useEffect(() => {
-    addLevelBlocks();
-  }, [addLevelBlocks]);
-
-  // The outlines follow the blocks. After the student moves, adds or
-  // deletes a block, the outlines are brought in line again: an outline
+  // The outlines follow the blocks. After the student moves, adds, deletes
+  // or changes a block, the outlines are brought in line again: an outline
   // goes when its block is dropped in, and comes back if the block is
-  // taken out.
+  // taken out, disabled, or given a field value the step does not accept.
   useEffect(() => {
     if (!ready) {
       return;
@@ -174,6 +176,7 @@ export default function useLevelBlocks({
       Blockly.Events.BLOCK_MOVE,
       Blockly.Events.BLOCK_CREATE,
       Blockly.Events.BLOCK_DELETE,
+      Blockly.Events.BLOCK_CHANGE,
     ];
     let timer = 0;
     const onChange = (event: BlocklyCore.Events.Abstract) => {
@@ -196,7 +199,11 @@ export default function useLevelBlocks({
         ) {
           return;
         }
-        syncOutlines(workspace, entries, blockChecks);
+        try {
+          syncOutlines(workspace, entries, blockChecks);
+        } catch (e) {
+          console.warn('add_blocks outlines not drawn:', e);
+        }
       }, 0);
     };
     workspace.addChangeListener(onChange);

@@ -1812,6 +1812,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // A re-injected workspace is empty, whatever caused it.
     workspaceVersion,
   ]);
+  // After the effect that loads, so that a commit which loads runs one
+  // pass, for the load.
+  useEffect(() => {
+    addLevelBlocks();
+  }, [addLevelBlocks]);
 
   const sceneEditing = useSceneEditing({
     scenes,

@@ -12,6 +12,7 @@ import {
   syncStackOutline,
   trailingShadow,
   dropStalePlaceholders,
+  fillers,
   unfilledOutlines,
   withoutOutlines,
 } from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
@@ -129,6 +130,7 @@ describe('addBlocks', () => {
       data,
       noBottom = false,
       disabled = [],
+      fields = {},
     }: {
       showing?: Outline;
       covered?: Record<number, Outline>;
@@ -136,6 +138,8 @@ describe('addBlocks', () => {
       noBottom?: boolean;
       /** The indexes of the blocks the student has disabled. */
       disabled?: number[];
+      /** Field values, by the index of the block that carries them. */
+      fields?: Record<number, Record<string, string>>;
     } = {}
   ) => {
     const sets: string[] = [];
@@ -149,6 +153,7 @@ describe('addBlocks', () => {
       data: i === 0 ? data : undefined,
       isShadow: () => false,
       isEnabled: () => !disabled.includes(i),
+      getFieldValue: (name: string) => fields[i]?.[name] ?? null,
       nextConnection:
         noBottom && i === types.length - 1
           ? null
@@ -252,6 +257,53 @@ describe('addBlocks', () => {
       expect(stackHolds(withSay.top, ['spritelab2_whenRun'])).toBe(false);
       const waiting = liveStack(['spritelab2_whenRun'], {showing: SAY});
       expect(stackHolds(waiting.top, ['shadow'])).toBe(false);
+    });
+
+    it('fills only with the field values the step asks for', () => {
+      // Two levels each want a make-sprite block under when run, one at
+      // the left and one at the right. The left one is already there.
+      const right = {
+        attachTo: 'spritelab2_whenRun',
+        shadow: placeholder('spritelab2_makeSpriteAtPosition', {
+          POSITION: 'right',
+        }),
+      };
+      const wanted = fillers(right, [
+        {
+          kind: 'block',
+          type: 'spritelab2_makeSpriteAtPosition',
+          under: 'spritelab2_whenRun',
+          fields: {POSITION: 'right'},
+        },
+      ]);
+      expect(wanted).toEqual([
+        {type: 'spritelab2_makeSpriteAtPosition', fields: {POSITION: 'right'}},
+      ]);
+      const types = ['spritelab2_whenRun', 'spritelab2_makeSpriteAtPosition'];
+      const left = liveStack(types, {fields: {1: {POSITION: 'left'}}});
+      expect(stackHolds(left.top, wanted)).toBe(false);
+      const both = liveStack(types, {fields: {1: {POSITION: '"right"'}}});
+      expect(stackHolds(both.top, wanted)).toBe(true);
+    });
+
+    it("leaves the stack's other steps out when one step accepts the outline's block", () => {
+      const types = fillingTypes(
+        {attachTo: 'spritelab2_whenRun', shadow: SAY},
+        [
+          {
+            kind: 'block',
+            type: 'gamelab_spriteSay',
+            under: 'spritelab2_whenRun',
+          },
+          // Another step under the same top block.
+          {
+            kind: 'block',
+            type: 'spritelab2_setAsPlatformPlayer',
+            under: 'spritelab2_whenRun',
+          },
+        ]
+      );
+      expect(types).toEqual(['gamelab_spriteSay']);
     });
 
     it('does not count a block the student has disabled', () => {
