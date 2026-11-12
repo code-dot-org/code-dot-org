@@ -1389,7 +1389,7 @@ describe('ImagesTab', () => {
         new File(['x'], 'cat.gif', {type: 'image/gif'})
       );
       expect(acceptUploaded).not.toHaveBeenCalled();
-      expect(screen.getByRole('alert').textContent).toMatch(/PNG, JPG or WEBP/);
+      expect(screen.getByRole('alert').textContent).toMatch(/can't be used/);
     });
 
     // A renamed .txt is reported as image/png, so only decoding tells.
@@ -1405,7 +1405,7 @@ describe('ImagesTab', () => {
       );
       await pickFile(container, pngFile('Notes.png'));
       expect(acceptUploaded).not.toHaveBeenCalled();
-      expect(screen.getByRole('alert').textContent).toMatch(/PNG, JPG or WEBP/);
+      expect(screen.getByRole('alert').textContent).toMatch(/can't be used/);
     });
 
     it('moves the paint tools onto the uploaded picture', async () => {

@@ -8,7 +8,7 @@ import {ImageKind, ImageType} from '../../ai/images/types';
 
 import type {UploadedImage} from './useImageWriter';
 
-const ACCEPTED_TYPES = ['image/png', 'image/jpeg', 'image/webp'];
+const ACCEPTED_TYPES = ['image/png', 'image/jpeg'];
 
 // The asset endpoint's per-file ceiling.
 const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
@@ -16,13 +16,11 @@ const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
 const EXTENSIONS: Record<string, string> = {
   'image/png': 'png',
   'image/jpeg': 'jpg',
-  'image/webp': 'webp',
 };
 
 export const UPLOAD_ERRORS = {
   tooBig: 'That picture is too big. Pick one smaller than 5 MB.',
-  wrongType:
-    "That kind of file can't be used. Pick a PNG, JPG or WEBP picture.",
+  wrongType: "That kind of file can't be used. Pick a PNG or JPG picture.",
   failed: "That picture couldn't be added. Try again.",
 };
 
