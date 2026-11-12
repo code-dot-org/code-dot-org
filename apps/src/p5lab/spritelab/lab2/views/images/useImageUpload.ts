@@ -26,6 +26,16 @@ export const UPLOAD_ERRORS = {
   failed: "That picture couldn't be added. Try again.",
 };
 
+/** Whether the bytes really are a picture. */
+async function decodable(blob: Blob): Promise<boolean> {
+  try {
+    (await createImageBitmap(blob)).close();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function assetFilename(name: string, mediaType: string): string {
   const base = (name.replace(/\.[^.]*$/, '') || 'picture')
     .toLowerCase()
@@ -91,6 +101,10 @@ export default function useImageUpload({
       setUploading(true);
       onProgress?.('Adding your picture.');
       try {
+        if (!(await decodable(file))) {
+          onError(UPLOAD_ERRORS.wrongType);
+          return;
+        }
         await store(kind, file);
       } catch {
         onError(UPLOAD_ERRORS.failed);

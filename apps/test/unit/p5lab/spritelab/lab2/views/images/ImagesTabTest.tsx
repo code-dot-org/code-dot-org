@@ -261,6 +261,14 @@ if (!Blob.prototype.arrayBuffer) {
   };
 }
 
+// jsdom decodes nothing, and an upload is checked by decoding it. Each test
+// that wants a file refused makes this reject instead.
+const decodeImage = jest.fn(
+  async () => ({close: () => undefined} as unknown as ImageBitmap)
+);
+globalThis.createImageBitmap =
+  decodeImage as unknown as typeof createImageBitmap;
+
 const pngFile = (name = 'My Cat.png', bytes = 4) =>
   new File([new Uint8Array(bytes)], name, {type: 'image/png'});
 
@@ -1380,6 +1388,22 @@ describe('ImagesTab', () => {
         container,
         new File(['x'], 'cat.gif', {type: 'image/gif'})
       );
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(screen.getByRole('alert').textContent).toMatch(/PNG, JPG or WEBP/);
+    });
+
+    // A renamed .txt is reported as image/png, so only decoding tells.
+    it('refuses a file that holds no picture, uploading nothing', async () => {
+      decodeImage.mockRejectedValueOnce(new Error('not an image'));
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(
+        screen.getByRole('menuitem', {name: 'Upload a character'})
+      );
+      await pickFile(container, pngFile('Notes.png'));
       expect(acceptUploaded).not.toHaveBeenCalled();
       expect(screen.getByRole('alert').textContent).toMatch(/PNG, JPG or WEBP/);
     });
