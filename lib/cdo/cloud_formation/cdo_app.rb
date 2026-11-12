@@ -29,7 +29,7 @@ module Cdo::CloudFormation
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
     # Use AMI for Ubuntu 20 (ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20230517)
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-0261755bbcb8c4a84'
-    ORIGIN = "https://github.com/code-dot-org/code-dot-org.git"
+    REPO = 'code-dot-org/code-dot-org'.freeze
     CHEF_VERSION = '17.6.18'
     DOMAIN = 'cdn-code.org'
     SSH_KEY_NAME = 'server_access_key'.freeze
@@ -45,7 +45,7 @@ module Cdo::CloudFormation
     # @return [OpenStruct]
     attr_reader :options
 
-    delegate :commit, :frontends, :database, :load_balancer, :alarms, :cdn_enabled, :branch, :domain,
+    delegate :commit, :frontends, :database, :load_balancer, :alarms, :cdn_enabled, :branch, :domain, :repo,
       to: :options
 
     def initialize(**options)
@@ -65,8 +65,10 @@ module Cdo::CloudFormation
       options.load_balancer ||= !rack_env?(:adhoc) || options.frontends
       options.alarms        ||= !rack_env?(:adhoc)
       options.cdn_enabled   ||= !rack_env?(:adhoc)
+      options.repo          ||= REPO
+      options.repo            = "code-dot-org/#{repo}" unless repo.include?('/')
       options.branch        ||= (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
-      options.commit        ||= `git ls-remote origin #{branch}`.split.first
+      options.commit        ||= `git ls-remote '#{origin}' #{branch}`.split.first
       options.domain        ||= DOMAIN
       options.console       ||= rack_env?(:production)
 
@@ -91,19 +93,23 @@ module Cdo::CloudFormation
       super
     end
 
+    def origin
+      "https://github.com/#{repo}.git"
+    end
+
     def check_branch!
       return if dry_run
       if rack_env?(:adhoc) && RakeUtils.git_branch == branch
         # Current branch is the one we're deploying to the adhoc server,
         # so check whether it's up-to-date with the remote before we get any further.
-        unless `git remote show '#{ORIGIN}' 2>&1 | grep '(up to date)' | grep '#{branch}' | wc -l`.strip.to_i > 0
+        unless `git remote show '#{origin}' 2>&1 | grep '(up to date)' | grep '#{branch}' | wc -l`.strip.to_i > 0
           raise "Current adhoc branch (#{branch}) needs to be up-to-date with GitHub branch of the same name, otherwise deploy will fail.
 To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
         end
       else
         # Either not adhoc or deploying a different branch than the current local one;
         # simply check that the branch exists on GitHub before deploying.
-        unless system("git ls-remote --exit-code '#{ORIGIN}' #{branch} > /dev/null")
+        unless system("git ls-remote --exit-code '#{origin}' #{branch} > /dev/null")
           raise "Current branch (#{branch}) needs to be pushed to GitHub with the same name, otherwise deploy will fail.
   To specify an alternate branch name, run `rake stack:start branch=BRANCH`."
         end
@@ -242,7 +248,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
         raw_key = t.key.delete_prefix('Op:')
         # Convert 'CdnEnabled' -> 'cdn_enabled', others like 'Database' -> 'database'
         snake = raw_key.gsub(/([a-z])([A-Z])/, '\1_\2').downcase.to_sym
-        memo[snake] = t.value.to_s.match?(/\A(true|1)\z/i)
+        memo[snake] = raw_key == 'Repo' ? t.value : t.value.to_s.match?(/\A(true|1)\z/i)
       end
     rescue Aws::CloudFormation::Errors::ValidationError
       {}
@@ -261,6 +267,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
       tags.push(key: 'Op:Frontends', value: options.frontends.to_s)
       tags.push(key: 'Op:CdnEnabled', value: options.cdn_enabled.to_s)
       tags.push(key: 'Op:Alarms', value: options.alarms.to_s)
+      tags.push(key: 'Op:Repo', value: options.repo) if rack_env?(:adhoc)
     end
   end
 end

@@ -1,0 +1,114 @@
+# Merges public staging and production into the private mirror's branches of
+# the same name. See docs/specs/private-production-deploy.md.
+name: private-production-sync
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: private-production-sync
+  cancel-in-progress: false
+
+env:
+  PUBLIC_URL: https://github.com/code-dot-org/code-dot-org.git
+  BRANCHES: staging production
+  # Merges must not try to download LFS objects the private store lacks yet.
+  GIT_LFS_SKIP_SMUDGE: '1'
+
+jobs:
+  sync:
+    if: github.repository == 'code-dot-org/code-dot-org-production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Find branches behind public
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          behind=
+          for b in $BRANCHES; do
+            pub=$(git ls-remote "$PUBLIC_URL" "refs/heads/$b" | cut -f1)
+            test -n "$pub"
+            # 404 when the public commit is not in the private repo yet.
+            status=$(gh api "repos/$GITHUB_REPOSITORY/compare/$pub...$b" --jq .status 2>/dev/null || echo missing)
+            echo "public $b $pub: $status"
+            case "$status" in
+              identical|ahead) ;;
+              *) behind="$behind $b" ;;
+            esac
+          done
+          echo "behind=$behind" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        if: steps.check.outputs.behind != ''
+        with:
+          fetch-depth: 0
+          lfs: false
+
+      - name: Merge public into private
+        if: steps.check.outputs.behind != ''
+        env:
+          BEHIND: ${{ steps.check.outputs.behind }}
+          SLACK_WEBHOOK_URL: ${{ secrets.PRIVATE_PRODUCTION_SYNC_SLACK_WEBHOOK_URL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git remote add public "$PUBLIC_URL"
+
+          notify() {
+            echo "::error::$1"
+            test -n "$SLACK_WEBHOOK_URL" || return 0
+            jq -n --arg text "private-production-sync: $1. $RUN_URL" '{text: $text}' \
+              | curl -fsS -X POST -H 'Content-Type: application/json' --data @- "$SLACK_WEBHOOK_URL"
+          }
+
+          sync() {
+            b=$1
+            git fetch --no-tags public "+refs/heads/$b:refs/remotes/public/$b"
+            git checkout -q -B "$b" "origin/$b"
+            pub=$(git rev-parse "public/$b")
+            base=$(git merge-base HEAD "$pub")
+
+            if git merge-base --is-ancestor HEAD "$pub"; then
+              git merge -q --ff-only "$pub"
+            elif ! git merge -q --no-ff --no-edit -m "Merge public $b ($pub) into $b" "$pub"; then
+              git merge --abort
+              notify "conflict merging public $b into private $b; private $b not updated"
+              return 2
+            fi
+
+            # Copy LFS objects that public added since the last sync. Objects
+            # present only in intermediate commits are not copied.
+            git -c core.quotePath=false diff --name-only --no-renames --diff-filter=d "$base" "$pub" \
+              | git check-attr --stdin filter \
+              | sed -n 's/: filter: lfs$//p' \
+              > "$RUNNER_TEMP/lfs-paths"
+            if [ -s "$RUNNER_TEMP/lfs-paths" ]; then
+              PUB=$pub xargs -d '\n' -n 500 sh -c 'IFS=,; git lfs fetch public "$PUB" --include="$*"' _ \
+                < "$RUNNER_TEMP/lfs-paths"
+              git -c lfs.allowincompletepush=true lfs push origin "$b"
+            fi
+
+            if ! git push --no-verify origin "$b:refs/heads/$b"; then
+              notify "push of private $b rejected; will retry next run"
+              return 2
+            fi
+          }
+
+          # A child shell, so that -e applies inside sync; 2 means notified.
+          export -f sync notify
+          failed=0
+          for b in $BEHIND; do
+            bash -eo pipefail -c 'sync "$1"' _ "$b" || {
+              test $? -eq 2 || notify "sync of $b failed"
+              failed=1
+            }
+          done
+          exit $failed

@@ -39,6 +39,20 @@ module Cdo
         app.studio_subdomain = 'adhoc.test.code.org'
         assert_equal 'org.code.test.adhoc', app.s3_bucket_namespace
       end
+
+      def test_origin_follows_repo
+        test_class = Class.new(CdoApp) do
+          # rubocop:disable Style/RedundantInitialize
+          def initialize(repo)
+            @options = OpenStruct.new(repo: repo)
+          end
+          # rubocop:enable Style/RedundantInitialize
+        end
+
+        assert_equal 'https://github.com/code-dot-org/code-dot-org.git', test_class.new(CdoApp::REPO).origin
+        assert_equal 'https://github.com/code-dot-org/code-dot-org-production.git',
+          test_class.new('code-dot-org/code-dot-org-production').origin
+      end
     end
   end
 end
