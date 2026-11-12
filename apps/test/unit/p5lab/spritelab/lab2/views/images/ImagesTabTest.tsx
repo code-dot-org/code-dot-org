@@ -367,9 +367,55 @@ describe('ImagesTab', () => {
     expect(screen.queryByRole('button', {name: 'New character'})).toBeNull();
   });
 
-  it('says so where the level has no images and no adding', () => {
-    renderTab();
+  it('says so where the level has no images left to make', () => {
+    renderTab({oneImage: true, ownImageMade: true});
     expect(screen.getByText('This level has no images to make.')).toBeTruthy();
+  });
+
+  it('makes one image of any kind where the level names no type', () => {
+    const view = renderTab({oneImage: true});
+    // No type to narrow the menu, so every kind is offered.
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    expect(
+      screen.getByRole('menuitem', {name: 'Background'})
+    ).not.toHaveAttribute('aria-disabled', 'true');
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Background'}));
+    expect(pressed()).toEqual(['New background']);
+    // The host counts any image as the level's own; the plus then goes.
+    view.rerender(
+      <ImagesTab
+        onDeleteImage={jest.fn()}
+        paneWidth={280}
+        oneImage
+        ownImageMade
+      />
+    );
+    expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
+  });
+
+  it('makes more than one image of the level kind when one image is off', () => {
+    propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
+    propsByKey.k2 = {name: 'Background 1', categories: ['backgrounds']};
+    renderTab({
+      lockedImageType: 'sprite',
+      imageRole: 'hero',
+      editingOffered: true,
+    });
+    expect(pressed()).toEqual(['Sprite 1']);
+    // The plus stays after the level's image exists, but its menu still
+    // offers the level's kind alone.
+    fireEvent.click(screen.getByRole('button', {name: 'New image'}));
+    expect(
+      screen.getByRole('menuitem', {name: 'Character'})
+    ).not.toHaveAttribute('aria-disabled', 'true');
+    expect(screen.getByRole('menuitem', {name: 'Background'})).toHaveAttribute(
+      'aria-disabled',
+      'true'
+    );
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
+    expect(pressed()).toEqual(['New character']);
+    // Other images stay reachable, unlike on a one-image level.
+    expect(screen.getByRole('button', {name: 'Background 1'})).toBeEnabled();
   });
 
   it('keeps the image the student moved to while a new picture was landing', async () => {

@@ -9,9 +9,9 @@ export type LevelModeKind = 'code' | 'world' | 'play' | 'image' | 'freeplay';
 
 export interface LevelMode {
   kind: LevelModeKind;
-  /** The kind of image the level is about. On a world level, the palette
-      offers only the level's image of this kind (image_role_defaults, else
-      the newest); a world level without one offers everything. */
+  /** The only type the Images tab makes. On a world level, the palette offers 
+      only the level's image of this type (image_role_defaults, else the newest); a world level
+      without one offers everything. Unset, the images tab makes any type. */
   imageType?: ImageType;
   /** For a sprite: a character, which can be animated, or an object, which
       is one still picture with its own words. Character when unset. */

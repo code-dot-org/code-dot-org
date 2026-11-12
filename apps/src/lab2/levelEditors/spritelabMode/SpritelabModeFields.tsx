@@ -31,6 +31,7 @@ import {
   setImageSubject,
   setImageType,
   setKind,
+  setOneImage,
   setPaletteRoles,
   tabsForKind,
 } from './spritelabMode';
@@ -61,24 +62,14 @@ const IMAGE_TYPE_ITEMS = IMAGE_TYPES.map(imageType => ({
   text: IMAGE_TYPE_LABELS[imageType],
 }));
 
-function imageTypeItems(
-  kind: LevelModeKind | undefined,
-  chosen: ImageType | undefined
-) {
-  if (kind === 'world') {
-    // World levels can leave the image type unset.
-    return [
-      {value: NO_IMAGE_TYPE, text: 'None: use palette role'},
-      ...IMAGE_TYPE_ITEMS,
-    ];
-  }
-  if (chosen === undefined) {
-    return [
-      {value: NO_IMAGE_TYPE, text: 'Choose a type', disabled: true},
-      ...IMAGE_TYPE_ITEMS,
-    ];
-  }
-  return IMAGE_TYPE_ITEMS;
+function imageTypeItems(kind: LevelModeKind | undefined) {
+  return [
+    {
+      value: NO_IMAGE_TYPE,
+      text: kind === 'world' ? 'None: use palette role' : 'None: any type',
+    },
+    ...IMAGE_TYPE_ITEMS,
+  ];
 }
 
 const IMAGE_SOURCE_ITEMS = [
@@ -131,6 +122,7 @@ const SpritelabModeFields: React.FunctionComponent<
   const showImageRole = fieldApplies(mode, 'imageRole');
   const showPaletteRoles = fieldApplies(mode, 'paletteRoles');
   const showImageFirst = fieldApplies(mode, 'imageFirst');
+  const showOneImage = fieldApplies(mode, 'oneImage');
   const showLearning = fieldApplies(mode, 'learning');
   const showImageSource = fieldApplies(mode, 'imageSource');
 
@@ -146,16 +138,16 @@ const SpritelabModeFields: React.FunctionComponent<
     mode.imageRole !== undefined &&
     !getPaletteRoles(mode).includes(mode.imageRole);
 
-  // A world level can leave the image type unset if it is not imageFirst,
-  // otherwise show an error for a missing type.
-  const showImageTypeMissingError =
-    showImageType &&
-    mode.imageType === undefined &&
-    (kind !== 'world' || mode.imageFirst === true);
-
   const imageTypeHelper = useMemo(() => {
     if (kind !== 'world') {
-      return 'The Images tab offers only this type, and the user can only make one image.';
+      if (mode.imageType === undefined) {
+        return mode.oneImage
+          ? 'With no type students make one image of whichever kind they pick.'
+          : 'With no type students can make images of any kind.';
+      }
+      return mode.oneImage
+        ? 'The Images tab makes only this type, and students make one image of it.'
+        : 'The Images tab makes only this type, and students can make as many as they like.';
     }
     if (mode.imageType === undefined) {
       return getPaletteRoles(mode).length > 0
@@ -209,7 +201,7 @@ const SpritelabModeFields: React.FunctionComponent<
           <SimpleDropdown
             labelText="Image type"
             name="spritelab_mode_image_type"
-            items={imageTypeItems(kind, mode.imageType)}
+            items={imageTypeItems(kind)}
             selectedValue={mode.imageType ?? NO_IMAGE_TYPE}
             onChange={event =>
               onChange(
@@ -225,8 +217,6 @@ const SpritelabModeFields: React.FunctionComponent<
             errorMessage={
               paletteConflict
                 ? 'Image role must be one of the palette roles, or the palette preselects an image it does not offer.'
-                : showImageTypeMissingError
-                ? 'Pick a type. Without one there is no image to make.'
                 : undefined
             }
             size="s"
@@ -288,6 +278,19 @@ const SpritelabModeFields: React.FunctionComponent<
             checked={mode.imageFirst === true}
             onChange={event =>
               onChange(setImageFirst(mode, event.target.checked))
+            }
+            size="s"
+          />
+        </div>
+      )}
+      {showOneImage && (
+        <div className={moduleStyles.booleanField}>
+          <Checkbox
+            name="spritelab_mode_one_image"
+            label="Limit students to one image, with no adding or deleting."
+            checked={mode.oneImage === true}
+            onChange={event =>
+              onChange(setOneImage(mode, event.target.checked))
             }
             size="s"
           />
