@@ -90,7 +90,7 @@ class ParentLevelsChildLevel < ApplicationRecord
     end
     # An exam must be the lock level of a lesson; see Quiz#exam_placement_problems.
     if child_level.is_a?(Quiz) && child_level.exam?
-      add_child_error("exam quiz #{child_level.name.dump} cannot be a child of #{parent_level&.name.inspect}")
+      add_child_error("exam Quiz #{child_level.name.dump} cannot be a child of #{parent_level&.name.inspect}")
     end
     if kind == PROJECT_TEMPLATE
       add_child_error('level cannot be its own project template level') if child_level == parent_level

@@ -1468,7 +1468,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert script_level.assessment
   end
 
-  test 'can add exam quiz as the last level of a lockable lesson' do
+  test 'can add exam Quiz as the last level of a lockable lesson' do
     sign_in @levelbuilder
     @lesson.update!(lockable: true)
     activity, section = create_activity_and_section(@lesson)
@@ -1485,7 +1485,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'cannot add exam quiz to a lesson that is not lockable' do
+  test 'cannot add exam Quiz to a lesson that is not lockable' do
     sign_in @levelbuilder
     activity, section = create_activity_and_section(@lesson)
 
@@ -1496,10 +1496,10 @@ class LessonsControllerTest < ActionController::TestCase
       ]
     )
     error = assert_raises(RuntimeError) {put :update, params: @update_params}
-    assert_includes error.message, 'A lesson containing an exam quiz must be lockable.'
+    assert_includes error.message, 'A lesson containing an exam Quiz must be lockable.'
   end
 
-  test 'cannot add exam quiz before the last level of a lesson' do
+  test 'cannot add exam Quiz before the last level of a lesson' do
     sign_in @levelbuilder
     @lesson.update!(lockable: true)
     activity, section = create_activity_and_section(@lesson)
@@ -1513,10 +1513,10 @@ class LessonsControllerTest < ActionController::TestCase
       ]
     )
     error = assert_raises(RuntimeError) {put :update, params: @update_params}
-    assert_includes error.message, 'An exam quiz must be the last level in its lesson.'
+    assert_includes error.message, 'An exam Quiz must be the last level in its lesson.'
   end
 
-  test 'cannot make a lesson containing an exam quiz unlockable' do
+  test 'cannot make a lesson containing an exam Quiz unlockable' do
     sign_in @levelbuilder
     @lesson.update!(lockable: true)
     _activity, section = create_activity_and_section(@lesson)
@@ -1530,7 +1530,7 @@ class LessonsControllerTest < ActionController::TestCase
     )
 
     error = assert_raises(RuntimeError) {put :update, params: @update_params.merge(lockable: false)}
-    assert_includes error.message, 'A lesson containing an exam quiz must be lockable.'
+    assert_includes error.message, 'A lesson containing an exam Quiz must be lockable.'
     assert @lesson.reload.lockable
   end
 
