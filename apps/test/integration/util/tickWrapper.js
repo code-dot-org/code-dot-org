@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var {flushSync} = require('react-dom');
 
 /**
  * tickWrapper allows us to insert functions that get run at the beginning of
@@ -88,6 +89,9 @@ function wrapOnTick(app) {
   originalOnTick = app.onTick;
 
   app.onTick = _.wrap(app.onTick, function () {
+    // Apply React updates that createRoot queued for a microtask; fake-timer
+    // ticks run back to back without one.
+    flushSync(() => {});
     preTickFunctions.forEach(function (beforeTick) {
       beforeTick();
     });

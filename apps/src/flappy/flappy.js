@@ -18,6 +18,7 @@ import {createReactRoot} from '../util/createReactRoot';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 
 var React = require('react');
+var {flushSync} = require('react-dom');
 var Provider = require('react-redux').Provider;
 
 var commonMsg = require('@cdo/locale');
@@ -669,21 +670,21 @@ Flappy.init = function (config) {
 
   studioApp().setPageConstants(config);
 
-  createReactRoot(
-    <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={
-          <FlappyVisualizationColumn
-            showFinishButton={!config.level.isProjectLevel}
-          />
-        }
-        onMount={onMount}
-      />
-    </Provider>,
-    document.getElementById(config.containerId),
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: onMount initializes the app before init returns.
+  flushSync(() =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <AppView
+          visualizationColumn={
+            <FlappyVisualizationColumn
+              showFinishButton={!config.level.isProjectLevel}
+            />
+          }
+          onMount={onMount}
+        />
+      </Provider>,
+      document.getElementById(config.containerId)
+    )
   );
 };
 

@@ -1,6 +1,7 @@
 import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import $ from 'jquery';
 import React from 'react';
+import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {TestResults} from '@cdo/apps/constants';
@@ -137,14 +138,14 @@ Ailab.prototype.init = function (config) {
     setDynamicInstructionsDefaults(getInstructionsDefaults(aiMsg))
   );
 
-  createReactRoot(
-    <Provider store={getStore()}>
-      <AilabView onMount={onMount} />
-    </Provider>,
-    document.getElementById(config.containerId),
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: onMount initializes the app before init returns.
+  flushSync(() =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <AilabView onMount={onMount} />
+      </Provider>,
+      document.getElementById(config.containerId)
+    )
   );
 };
 

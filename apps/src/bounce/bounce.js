@@ -5,6 +5,7 @@
  *
  */
 var React = require('react');
+var {flushSync} = require('react-dom');
 var Provider = require('react-redux').Provider;
 
 var dom = require('../dom');
@@ -862,17 +863,17 @@ Bounce.init = function (config) {
 
   studioApp().setPageConstants(config);
 
-  createReactRoot(
-    <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={<BounceVisualizationColumn />}
-        onMount={onMount}
-      />
-    </Provider>,
-    document.getElementById(config.containerId),
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: onMount initializes the app before init returns.
+  flushSync(() =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <AppView
+          visualizationColumn={<BounceVisualizationColumn />}
+          onMount={onMount}
+        />
+      </Provider>,
+      document.getElementById(config.containerId)
+    )
   );
 };
 

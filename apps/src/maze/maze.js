@@ -13,6 +13,7 @@ import {
 
 const maze = require('@code-dot-org/maze');
 const React = require('react');
+const {flushSync} = require('react-dom');
 const Provider = require('react-redux').Provider;
 
 const containedLevels = require('../containedLevels');
@@ -224,17 +225,17 @@ module.exports = class Maze {
       />
     );
 
-    createReactRoot(
-      <Provider store={getStore()}>
-        <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={studioApp().init.bind(studioApp(), config)}
-        />
-      </Provider>,
-      document.getElementById(config.containerId),
-      {
-        legacyReactDomRender: true,
-      }
+    // Synchronous: onMount initializes the app before init returns.
+    flushSync(() =>
+      createReactRoot(
+        <Provider store={getStore()}>
+          <AppView
+            visualizationColumn={visualizationColumn}
+            onMount={studioApp().init.bind(studioApp(), config)}
+          />
+        </Provider>,
+        document.getElementById(config.containerId)
+      )
     );
   }
 
