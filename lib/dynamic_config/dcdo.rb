@@ -69,6 +69,9 @@ class DCDO < DynamicConfigBase
       # apps/src/pythonlab/README.md.
       'use-pythonlab-separate-domain': DCDO.get('use-pythonlab-separate-domain', false),
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
+      # Falls back to reCAPTCHA v3 when the Turnstile script cannot load. Leave off
+      # until the gateway worker accepts and verifies X-Recaptcha-Token.
+      'ai-gateway-recaptcha-fallback-enabled': DCDO.get('ai-gateway-recaptcha-fallback-enabled', false),
       # Controls whether the output image goes through the additional LLM-as-judge safety layer.
       # Azure image moderation still runs when this is false.
       'aichat-output-image-llm-safety-judge-enabled': DCDO.get('aichat-output-image-llm-safety-judge-enabled', true),

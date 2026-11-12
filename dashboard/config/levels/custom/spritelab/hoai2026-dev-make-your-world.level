@@ -99,7 +99,7 @@
           }
         },
         {
-          "text": "Click **Play**, then run and jump to your object..",
+          "text": "Click **Play**, then run and jump to your object.",
           "check": {
             "kind": "reach",
             "role": "treasure"
@@ -109,10 +109,6 @@
     },
     "long_instructions": "# Make your world\r\n\r\nBuild a world where your player can reach your object.",
     "header_label": "Make your world",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -132,9 +128,13 @@
     "use_default_sprites": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "enable_big_playspace": "false"
+    "enable_big_playspace": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-01 17:12:19 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:12:43 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:13:42 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-11-01 17:12:19 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:12:43 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:13:42 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-10 22:26:14 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-10 22:26:37 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

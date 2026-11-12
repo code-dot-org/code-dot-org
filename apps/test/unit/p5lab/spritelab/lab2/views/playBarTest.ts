@@ -6,7 +6,7 @@ import {
 describe('arrowSetFor', () => {
   it('offers Jump in a platform scene with gravity, either way up', () => {
     expect(arrowSetFor({platformer: true, gravity: 0.75})).toBe('jump');
-    expect(arrowSetFor({platformer: true, gravity: -0.75})).toBe('jump');
+    expect(arrowSetFor({platformer: true, gravity: -0.75})).toBe('jumpDown');
   });
 
   it('steers up and down when weightless', () => {

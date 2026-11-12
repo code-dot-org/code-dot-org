@@ -20,6 +20,11 @@ export const TERMINAL_FALL_SPEED = 10;
 // strengths behave identically here.
 export const PLATFORM_GRAVITY = 0.75;
 
+// The platform player's jump height, in playfield squares.
+export const MIN_JUMP_HEIGHT = 0;
+export const MAX_JUMP_HEIGHT = 10;
+export const DEFAULT_JUMP_HEIGHT = 3;
+
 // What patrollers feel when the world's gravity is zero and the player is
 // steered about: enough to settle onto blocks, gently.
 export const PATROLLER_WEIGHTLESS_GRAVITY = 0.2;
@@ -116,6 +121,22 @@ export function wallBox(wall: PhysicsBox): CollisionBox {
 export function bodyBox(sprite: PhysicsBox): CollisionBox {
   const {halfW, halfH, drop} = playerBody(sprite);
   return {x: sprite.position.x, y: sprite.position.y + drop, halfW, halfH};
+}
+
+// How close a body and a wall may be, in playfield pixels, and still count
+// as touching: resting contact is exact, so a strict overlap test would
+// miss it.
+export const TOUCH_SLACK = 1;
+
+/** Whether a sprite's body touches a wall, from any side: the boxes meet
+    or overlap, within TOUCH_SLACK. */
+export function touchesWall(sprite: PhysicsBox, wall: PhysicsBox): boolean {
+  const body = bodyBox(sprite);
+  const box = wallBox(wall);
+  return (
+    Math.abs(body.x - box.x) <= body.halfW + box.halfW + TOUCH_SLACK &&
+    Math.abs(body.y - box.y) <= body.halfH + box.halfH + TOUCH_SLACK
+  );
 }
 
 function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {

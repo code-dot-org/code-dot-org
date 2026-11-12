@@ -358,6 +358,11 @@ export const AiChatGeminiModelIds = [
   "gemini-3.5-flash-lite"
 ] as const;
 
+export const AiChatGeminiImageModelIds = [
+  "gemini-2.5-flash-image",
+  "gemini-3.1-flash-image"
+] as const;
+
 export const AiChatProviders = {
   "GOOGLE": "google",
   "OPENAI": "openai"
@@ -411,6 +416,13 @@ export const AiChatAccessLevels = {
   "ESSENTIAL_ONLY": "essential_only"
 } as const;
 
+export const SpritelabAskAiRefusals = {
+  "OFF": "off",
+  "NOT_IN_PILOT": "not_in_pilot",
+  "NO_ACCESS": "no_access",
+  "REGION_BLOCKED": "region_blocked"
+} as const;
+
 export const AiChatToolsDependency = {
   "ESSENTIAL": "essential",
   "AVAILABLE": "available",
@@ -418,6 +430,11 @@ export const AiChatToolsDependency = {
 } as const;
 
 export const AiGatewayAccessTokenLifetimeSeconds = 60 as const;
+
+export const AiGatewayFallbackClientTypes = [
+  "adaptive",
+  "ai-tutor"
+] as const;
 
 export const FeaturedProjectStatus = {
   "active": "active",

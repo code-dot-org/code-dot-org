@@ -1,0 +1,57 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-10T19:22:47.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Predict & Run\r\n\r\nThis program is supposed to greet a student by name and then print a second message. \r\n\r\nBefore you click **Run**, choose what you think will happen.",
+    "teacher_markdown": "This is the defining trait of a syntax error worth naming explicitly: the program never starts. Point students to the traceback’s line number and error type; that reading skill is the actual target here, not the fix.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "The program doesn’t run at all — Python shows an error before any output appears.",
+      "questionType": "multipleChoice",
+      "multipleChoiceOptions": [
+        "It prints “Welcome to the program, Jordan!” then “Let’s get started.”",
+        "It prints only “Welcome to the program, Jordan!”",
+        "The program doesn’t run at all — Python shows an error before any output appears.",
+        "It prints only “Let’s get started.”"
+      ],
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "name = \"Jordan\"\nprint(\"Welcome to the program, \" + name + \"!\"\nprint(\"Let's get started.\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-10 19:24:59 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-10 19:26:21 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

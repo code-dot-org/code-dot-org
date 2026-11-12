@@ -1,6 +1,7 @@
 import {
   imageSourceForMode,
   isFreeplayMode,
+  isOneImageMode,
   tabsForMode,
 } from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
 
@@ -51,6 +52,17 @@ describe('isFreeplayMode', () => {
   it('names one kind', () => {
     expect(isFreeplayMode({kind: 'freeplay'})).toBe(true);
     expect(isFreeplayMode(undefined)).toBe(false);
+  });
+});
+
+describe('isOneImageMode', () => {
+  it('is an opt-in, whatever the kind', () => {
+    expect(isOneImageMode({kind: 'image', imageType: 'sprite'})).toBe(false);
+    expect(
+      isOneImageMode({kind: 'image', imageType: 'sprite', oneImage: true})
+    ).toBe(true);
+    expect(isOneImageMode({kind: 'code', oneImage: true})).toBe(true);
+    expect(isOneImageMode(undefined)).toBe(false);
   });
 });
 

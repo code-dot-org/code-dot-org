@@ -1,7 +1,11 @@
 import {
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
+  AI_NOT_AVAILABLE_INTERNATIONAL,
+  MODEL_REGION_BLOCKED_ERROR,
+  REGION_BLOCKED_COPY,
 } from '@cdo/apps/aichat/constants';
+import type {AiChatClientType} from '@cdo/apps/aichat/types/context';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
@@ -14,12 +18,15 @@ import {sendAnalytics} from '../sendAnalytics';
 export async function notifyErrorUnauthorized(
   error: NetworkError,
   userAction: string,
-  dispatch: AppDispatch
+  dispatch: AppDispatch,
+  clientType?: AiChatClientType
 ) {
   let userType;
+  let regionBlocked = false;
   try {
     const responseBody = await error.response.json();
     userType = responseBody?.user_type;
+    regionBlocked = responseBody?.error === MODEL_REGION_BLOCKED_ERROR;
   } catch (error) {
     // This can happen if the 403 response is not JSON.
     console.warn(error);
@@ -29,9 +36,13 @@ export async function notifyErrorUnauthorized(
     teacher: AI_CHAT_NOT_AUTHORIZED_TEACHER,
     student: AI_CHAT_NOT_AUTHORIZED_STUDENT,
   };
-  const messageText =
-    userTypeToMessageText[userType] ||
-    commonI18n.aiChatNotAuthorizedSignedOut();
+  const regionMessage =
+    (clientType && REGION_BLOCKED_COPY[clientType]?.message) ||
+    AI_NOT_AVAILABLE_INTERNATIONAL;
+  const messageText = regionBlocked
+    ? regionMessage
+    : userTypeToMessageText[userType] ||
+      commonI18n.aiChatNotAuthorizedSignedOut();
 
   dispatch(
     addChatEvent({
@@ -45,6 +56,7 @@ export async function notifyErrorUnauthorized(
     sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED, {
       userType,
       userAction,
+      regionBlocked,
     })
   );
 }
