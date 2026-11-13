@@ -1,5 +1,6 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {ToastAnnouncer} from '@code-dot-org/component-library/toast';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -7,6 +8,7 @@ import React, {
   useEffect,
   useMemo,
   useRef,
+  useState,
 } from 'react';
 
 import {
@@ -310,6 +312,42 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     hasEdited,
   ]);
 
+  // Only a change to enabled is announced; a level that opens with
+  // Continue available says nothing.
+  const [readyMessage, setReadyMessage] = useState<string | null>(null);
+  const baselineRef = useRef({
+    levelId: id,
+    validationIndex,
+    settling: false,
+    wasEnabled: continueEnabled,
+  });
+  useEffect(() => {
+    const baseline = baselineRef.current;
+    // A new level's validation is reset after its ID arrives, which moves
+    // the index; until then the state is the old level's.
+    if (id !== baseline.levelId) {
+      baselineRef.current = {
+        levelId: id,
+        validationIndex,
+        settling: true,
+        wasEnabled: continueEnabled,
+      };
+      setReadyMessage(null);
+      return;
+    }
+    if (baseline.settling) {
+      baseline.settling = validationIndex === baseline.validationIndex;
+    } else if (continueEnabled && !baseline.wasEnabled) {
+      setReadyMessage(`Level complete! The ${buttonText} button is ready.`);
+    } else if (!continueEnabled) {
+      setReadyMessage(null);
+    }
+    baseline.wasEnabled = continueEnabled;
+  }, [id, validationIndex, continueEnabled, buttonText]);
+  // Outside the keyed content and rendered when the rest is not, so the
+  // region stays mounted.
+  const readyAnnouncer = <ToastAnnouncer message={readyMessage} />;
+
   // If we can't show the continue button or the feedback message and the level is not submittable, don't render anything to avoid displaying a blank space.
   if (
     !submittable &&
@@ -317,83 +355,86 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     !continueEnabled &&
     !feedbackMessage
   ) {
-    return null;
+    return readyAnnouncer;
   }
 
   return (
-    <div
-      key={useMessageIndex + ' - ' + feedbackMessage}
-      id="instructions-feedback"
-      className={classNames(
-        className,
-        showSecondaryFinishButton && moduleStyles.feedbackBottom
-      )}
-    >
+    <>
+      {readyAnnouncer}
       <div
-        id="instructions-feedback-message"
-        className={classNames(styleAsBubble && moduleStyles.bubble)}
-        data-theme={overrideTheme || defaultTheme}
-      >
-        {feedbackMessage && (
-          <div ref={feedbackRef} tabIndex={-1}>
-            <EnhancedSafeMarkdown
-              markdown={feedbackMessage}
-              className={classNames(
-                moduleStyles.markdownText,
-                markdownClassName
-              )}
-              handleInstructionsTextClick={handleInstructionsTextClick}
-            />
-          </div>
+        key={useMessageIndex + ' - ' + feedbackMessage}
+        id="instructions-feedback"
+        className={classNames(
+          className,
+          showSecondaryFinishButton && moduleStyles.feedbackBottom
         )}
-        <div id={resourcePanelNavigationButtonElementId}>
-          {submittable ? (
-            <SubmitButton
-              levelId={id}
-              appName={appName}
-              className={moduleStyles.buttonInstruction}
-              enabled={submitEnabled}
-              tooltipMessage={submitTooltip}
-            />
-          ) : externalNavigation?.callout ? (
-            <div className={moduleStyles.externalPromptBox}>
-              <strong>{externalNavigation.callout.heading}</strong>
-              <span>{externalNavigation.callout.body}</span>
+      >
+        <div
+          id="instructions-feedback-message"
+          className={classNames(styleAsBubble && moduleStyles.bubble)}
+          data-theme={overrideTheme || defaultTheme}
+        >
+          {feedbackMessage && (
+            <div ref={feedbackRef} tabIndex={-1}>
+              <EnhancedSafeMarkdown
+                markdown={feedbackMessage}
+                className={classNames(
+                  moduleStyles.markdownText,
+                  markdownClassName
+                )}
+                handleInstructionsTextClick={handleInstructionsTextClick}
+              />
+            </div>
+          )}
+          <div id={resourcePanelNavigationButtonElementId}>
+            {submittable ? (
+              <SubmitButton
+                levelId={id}
+                appName={appName}
+                className={moduleStyles.buttonInstruction}
+                enabled={submitEnabled}
+                tooltipMessage={submitTooltip}
+              />
+            ) : externalNavigation?.callout ? (
+              <div className={moduleStyles.externalPromptBox}>
+                <strong>{externalNavigation.callout.heading}</strong>
+                <span>{externalNavigation.callout.body}</span>
+                <ContinueButton
+                  disabled={!continueEnabled}
+                  variant={variant}
+                  color={color}
+                  buttonColor={buttonColor}
+                  endIcon={externalNavigation.endIcon ?? endIcon}
+                  tooltipMessage={continueTooltip}
+                  hideIfDisabled={hideContinueIfDisabled}
+                  onContinue={handleContinue}
+                >
+                  {buttonText}
+                </ContinueButton>
+              </div>
+            ) : (
               <ContinueButton
                 disabled={!continueEnabled}
                 variant={variant}
                 color={color}
                 buttonColor={buttonColor}
-                endIcon={externalNavigation.endIcon ?? endIcon}
+                endIcon={externalNavigation?.endIcon ?? endIcon}
                 tooltipMessage={continueTooltip}
                 hideIfDisabled={hideContinueIfDisabled}
                 onContinue={handleContinue}
               >
                 {buttonText}
               </ContinueButton>
+            )}
+          </div>
+          {showTts && feedbackMessage && !hideContinueIfDisabled && (
+            <div className={moduleStyles.ttsContainer}>
+              <TextToSpeech text={feedbackMessage} />
             </div>
-          ) : (
-            <ContinueButton
-              disabled={!continueEnabled}
-              variant={variant}
-              color={color}
-              buttonColor={buttonColor}
-              endIcon={externalNavigation?.endIcon ?? endIcon}
-              tooltipMessage={continueTooltip}
-              hideIfDisabled={hideContinueIfDisabled}
-              onContinue={handleContinue}
-            >
-              {buttonText}
-            </ContinueButton>
           )}
         </div>
-        {showTts && feedbackMessage && !hideContinueIfDisabled && (
-          <div className={moduleStyles.ttsContainer}>
-            <TextToSpeech text={feedbackMessage} />
-          </div>
-        )}
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
-import {fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -331,6 +331,76 @@ describe('NavigationArea', () => {
       fireEvent.click(screen.getByRole('button'));
 
       expect(continueOrFinishLesson).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('announcing Continue', () => {
+    const READY = /Level complete! The .+ button is ready\./;
+
+    it('announces Continue once the checklist is done', async () => {
+      const {rerender} = renderDefault({
+        objectivesDone: false,
+        hideContinueIfDisabled: true,
+      });
+      expect(screen.queryByText(READY)).toBeNull();
+      rerender(
+        <ThemeProvider>
+          <Provider store={store}>
+            <NavigationArea
+              levelProperties={makeLevelProperties()}
+              isRunning={false}
+              hasRun={false}
+              hasEdited={false}
+              objectivesDone
+              hideContinueIfDisabled
+            />
+          </Provider>
+        </ThemeProvider>
+      );
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+    });
+
+    it('says nothing on a level that opens with Continue available', async () => {
+      renderDefault({objectivesDone: true});
+      await new Promise(resolve => requestAnimationFrame(resolve));
+      expect(screen.queryByText(READY)).toBeNull();
+    });
+
+    it('says nothing on entering a level without remounting', async () => {
+      const validation = (index: number, hasConditions: boolean) =>
+        act(() => {
+          store.dispatch(
+            setValidationState({
+              hasConditions,
+              satisfied: false,
+              message: null,
+              index,
+            })
+          );
+        });
+      const atLevel = (id: number) => (
+        <ThemeProvider>
+          <Provider store={store}>
+            <NavigationArea
+              levelProperties={makeLevelProperties({id})}
+              isRunning={false}
+              hasRun={false}
+              hasEdited={false}
+            />
+          </Provider>
+        </ThemeProvider>
+      );
+      validation(0, true);
+      const {rerender} = render(atLevel(1));
+      // The new ID arrives with the old level's validation, then the reset.
+      rerender(atLevel(2));
+      validation(1, false);
+      await new Promise(resolve => requestAnimationFrame(resolve));
+      expect(screen.queryByText(READY)).toBeNull();
+
+      validation(2, true);
+      validation(3, false);
+      expect(await screen.findByText(READY)).toBeInTheDocument();
     });
   });
 
