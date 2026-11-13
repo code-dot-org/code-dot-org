@@ -1,5 +1,7 @@
+import {Dialog as MuiDialog} from '@mui/material';
 import classnames from 'classnames';
-import {HTMLAttributes, ReactNode, useEffect, useRef} from 'react';
+import omit from 'lodash/omit';
+import {forwardRef, HTMLAttributes, ReactNode, useEffect, useRef} from 'react';
 
 import CloseButton from '@/closeButton';
 import useBodyScrollLock from '@/common/hooks/useBodyScrollLock';
@@ -8,43 +10,52 @@ import useFocusTrap from '@/common/hooks/useFocusTrap';
 
 import moduleStyles from './customDialog.module.scss';
 
-/**
- * @deprecated Use `MuiCustomDialogProps` from `@code-dot-org/component-library/dialog`.
- * Codemod: `codemods/dialog-to-mui-dialog.ts` in `frontend/packages/component-library`.
- */
 export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
-  /** CustomDialog color mode */
+  /** Close button color: 'light' gives a dark X, 'dark' a light one. The panel does not change. */
   mode?: 'light' | 'dark';
-  /** CustomDialog Custom class name */
+  /** Custom class name, applied to the panel (the role="dialog" element) */
   className?: string;
-  /** CustomDialog onClose handler */
+  /** onClose handler. Without it there is no close button and Escape does nothing. A backdrop click never closes. */
   onClose?: () => void;
-  /** CustomDialog close button aria label */
+  /** Close button aria label; defaults to 'Close dialog' */
   closeLabel?: string;
-  /** CustomDialog z-index for the background overlay. See variables.scss for default. */
+  /** z-index for the overlay, set through --cdo-dialog-z-index; defaults to $zindex-modal-backdrop (1040). 0 is honored. */
   zIndex?: number;
-  /** CustomDialog content */
+  /** Panel content */
   children?: ReactNode;
 }
 
+type PanelProps = HTMLAttributes<HTMLDivElement> & {
+  ownerState?: unknown;
+  elevation?: unknown;
+  as?: unknown;
+};
+
+// MUI passes Paper's props to the paper slot; a plain div keeps Paper's emotion styles off the panel.
+const DialogPanel = forwardRef<HTMLDivElement, PanelProps>(
+  function DialogPanel(props, ref) {
+    return (
+      <div ref={ref} {...omit(props, ['ownerState', 'elevation', 'as'])} />
+    );
+  },
+);
+
+// ModalManager aria-hides its container's other children; this one has none, so the page stays exposed, as with the legacy dialog.
+let detachedContainer: HTMLDivElement | null = null;
+const getDetachedContainer = () => {
+  if (!detachedContainer) {
+    detachedContainer = document.createElement('div');
+  }
+  return detachedContainer;
+};
+
 /**
- * ## Production-ready Checklist:
- *  * (✔) implementation of component approved by design team;
- *  * (✔) has storybook, covered with stories and documentation;
- *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see ./__tests__/CustomDialog.test.tsx)
- *  * (?) passes accessibility checks;
- *
  * ###  Status: ```Ready for dev```
  *
- * Design System: CustomDialog Component.
- * Renders CustomDialog with content passed through props.
- *
- * @deprecated Use `MuiCustomDialog` from `@code-dot-org/component-library/dialog`; it takes the same props.
- * Codemod: `codemods/dialog-to-mui-dialog.ts` in `frontend/packages/component-library`.
- * See `src/dialog/DIALOG_MIGRATION_TO_MUI.md`.
+ * Design System: CustomDialog on MUI `Dialog`, rendered in place (no portal).
+ * Scroll lock, Escape and the focus trap come from the DSCO hooks in
+ * `src/common/hooks`, not from MUI.
  */
-
 const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   mode = 'light',
   className,
@@ -52,18 +63,19 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   closeLabel = 'Close dialog',
   zIndex,
   children,
+  role = 'dialog',
   ['aria-label']: ariaLabel,
   ['aria-labelledby']: ariaLabelledBy,
   ...HTMLAttributes
 }) => {
-  const dialogRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   useBodyScrollLock(true);
-  useFocusTrap(dialogRef);
+  useFocusTrap(panelRef);
   useEscapeKeyHandler(onClose);
 
   useEffect(() => {
-    const hasDescriptionId = dialogRef.current?.querySelector(
+    const hasDescriptionId = panelRef.current?.querySelector(
       '#dsco-dialog-description',
     );
     if (!hasDescriptionId) {
@@ -84,38 +96,45 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   }, [ariaLabel, ariaLabelledBy]);
 
   return (
-    <div
-      role="presentation"
+    <MuiDialog
+      open
+      // Legacy behavior kept on purpose; see Deferred changes in DIALOG_MIGRATION_TO_MUI.md.
+      disablePortal
+      container={getDetachedContainer}
+      disableScrollLock
+      disableEscapeKeyDown
+      disableAutoFocus
+      disableEnforceFocus
+      disableRestoreFocus
+      transitionDuration={0}
       className={moduleStyles.customDialogOverlay}
-      style={zIndex ? {zIndex} : {}}
+      sx={zIndex === undefined ? undefined : {'--cdo-dialog-z-index': zIndex}}
+      slots={{paper: DialogPanel}}
+      slotProps={{
+        paper: {
+          ref: panelRef,
+          role,
+          'aria-label': ariaLabel,
+          // An explicit undefined keeps MUI's generated id, which nothing carries, off the panel.
+          'aria-labelledby': ariaLabelledBy,
+          'aria-describedby': 'dsco-dialog-description',
+          className: classnames(moduleStyles.customDialog, className),
+          ...HTMLAttributes,
+        },
+      }}
     >
-      <div
-        role="dialog"
-        ref={dialogRef}
-        aria-modal
-        aria-label={ariaLabel}
-        aria-labelledby={ariaLabelledBy}
-        aria-describedby="dsco-dialog-description"
-        className={classnames(
-          moduleStyles.customDialog,
-          moduleStyles[`customDialog-${mode}`],
-          className,
-        )}
-        {...HTMLAttributes}
-      >
-        {children}
+      {children}
 
-        {onClose && (
-          <CloseButton
-            aria-label={closeLabel}
-            onClick={onClose}
-            color={mode === 'light' ? 'dark' : 'light'}
-            size="l"
-            className={moduleStyles.customDialogCloseButton}
-          />
-        )}
-      </div>
-    </div>
+      {onClose && (
+        <CloseButton
+          aria-label={closeLabel}
+          onClick={onClose}
+          color={mode === 'light' ? 'dark' : 'light'}
+          size="l"
+          className={moduleStyles.customDialogCloseButton}
+        />
+      )}
+    </MuiDialog>
   );
 };
 

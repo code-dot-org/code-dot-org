@@ -5,6 +5,7 @@ import {
   fieldValue,
   ObjectiveCheck,
   ObjectiveInputs,
+  isCheckedOnce,
   objectiveShown,
   realBlocks,
   runtimeNeeds,
@@ -304,5 +305,22 @@ describe('objectiveShown', () => {
         inputs({generated: {sprite: 1, background: 0, block: 0}})
       )
     ).toBe(true);
+  });
+});
+
+describe('isCheckedOnce', () => {
+  it('is false for the checks that read work kept in the project', () => {
+    expect(isCheckedOnce({kind: 'block', type: 'any'})).toBe(false);
+    expect(isCheckedOnce({kind: 'world'})).toBe(false);
+    expect(isCheckedOnce({kind: 'image', imageType: 'sprite'})).toBe(false);
+  });
+
+  it('is true for things that happened, the open scene and the AI record', () => {
+    expect(isCheckedOnce({kind: 'play'})).toBe(true);
+    expect(isCheckedOnce({kind: 'reach', moved: true})).toBe(true);
+    expect(isCheckedOnce({kind: 'scene', id: 'scene-2'})).toBe(true);
+    expect(isCheckedOnce({kind: 'editing', id: 'scene-2'})).toBe(true);
+    expect(isCheckedOnce({kind: 'rated'})).toBe(true);
+    expect(isCheckedOnce({kind: 'generated'})).toBe(true);
   });
 });

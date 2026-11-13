@@ -1,6 +1,6 @@
 import Drawer from '@mui/material/Drawer';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import {
@@ -61,7 +61,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     state => state.currentUser.aiDifferentiationEnabled
   );
   const showChats = aiDifferentiationEnabled !== false;
-  const [activeNav, setActiveNav] = useState(showChats ? 'Chats' : 'Prepare');
+  const defaultNav = showChats ? 'Chats' : 'Prepare';
+  const [activeNav, setActiveNav] = useState(defaultNav);
   const showLearn = experiments.isEnabled('sidebar-prepare');
   const showTeacherPanel = useMemo(() => {
     if (!experiments.isEnabled('ta-teacher-panel')) return false;
@@ -78,10 +79,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       return false;
     }
   }, []);
-  const showRubrics = useMemo(() => {
-    if (!experiments.isEnabled('rubrics-drawer')) return false;
-    return !!document.querySelector('script[data-rubricdata]');
-  }, []);
+  const hasRubric = useAppSelector(state => !!state.aiDiffChat.drawerRubric);
+  const showRubrics = experiments.isEnabled('rubrics-drawer') && hasRubric;
   const [showChatList, setShowChatList] = useState(false);
   const {personalizationData} = useTeachingProfileData();
   const dispatch = useAppDispatch();
@@ -103,6 +102,16 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       dispatch(clearRequestedNav());
     }
   }, [requestedNav, dispatch]);
+
+  // A Lab2 lab can switch to a level without a rubric while the rubric tab is
+  // open. Only a rubric going away moves the drawer off the rubric tab.
+  const hadRubricRef = useRef(hasRubric);
+  useEffect(() => {
+    if (hadRubricRef.current && !hasRubric && activeNav === 'Rubrics') {
+      setActiveNav(defaultNav);
+    }
+    hadRubricRef.current = hasRubric;
+  }, [hasRubric, activeNav, defaultNav]);
 
   const isWelcomeView =
     !hasCompletedAiDifferentiationWelcome && showWelcomeExperience;

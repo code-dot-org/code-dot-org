@@ -15,7 +15,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -32,7 +32,6 @@
     "extra_scene": {
       "id": "second-scene",
       "name": "Scene 2",
-      "editable": true,
       "source": {
         "blocks": {
           "blocks": [
@@ -44,17 +43,7 @@
               "movable": false,
               "next": {
                 "block": {
-                  "type": "gamelab_spriteSay",
-                  "fields": {
-                    "SPEECH": "We did it!"
-                  },
-                  "inputs": {
-                    "SPRITE": {
-                      "shadow": {
-                        "type": "gamelab_allSpritesWithAnimation"
-                      }
-                    }
-                  }
+                  "type": "spritelab2_setAsPlatformPlayer"
                 }
               }
             },
@@ -100,11 +89,11 @@
       "worldStartPattern": [
         "..........",
         "..........",
+        "..........",
+        "..........",
+        "..........",
+        "..........",
         ".S........",
-        "..........",
-        "..........",
-        "..........",
-        "..........",
         "..........",
         "......F...",
         "BBBBBBBBBB"
@@ -131,10 +120,6 @@
           "fields": {
             "SCENE": "second-scene"
           }
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_setAsPlatformPlayer"
         }
       ]
     },
@@ -153,7 +138,7 @@
       }
     ],
     "objectives": {
-      "title": "**A new scene**\n\nWe made you a second scene.",
+      "title": "**A new scene**",
       "items": [
         {
           "text": "Drag **go to scene** under one of your **when touches** events.",
@@ -167,23 +152,7 @@
           }
         },
         {
-          "text": "Switch to **Scene 2** using the scene menu.",
-          "check": {
-            "kind": "editing",
-            "id": "second-scene"
-          }
-        },
-        {
-          "text": "Drag **set as player** under **when run**, so your hero can be steered in Scene 2.",
-          "check": {
-            "kind": "block",
-            "type": "spritelab2_setAsPlatformPlayer",
-            "under": "spritelab2_whenRun",
-            "scene": "second-scene"
-          }
-        },
-        {
-          "text": "Click **Play** and get to **Scene 2**.",
+          "text": "Select **Run** and get to **Scene 2**.",
           "check": {
             "kind": "scene",
             "id": "second-scene"
@@ -216,44 +185,7 @@
     "use_default_sprites": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "enable_big_playspace": "false",
-    "callouts": [
-      {
-        "target": "scene-option",
-        "scene": "second-scene",
-        "direction": "left",
-        "fallback": {
-          "target": "scene-menu",
-          "direction": "down"
-        },
-        "when": {
-          "done": [
-            0
-          ],
-          "notDone": [
-            1
-          ]
-        }
-      },
-      {
-        "target": "scene-option",
-        "scene": "second-scene",
-        "direction": "left",
-        "fallback": {
-          "target": "scene-menu",
-          "direction": "down"
-        },
-        "when": {
-          "done": [
-            1
-          ],
-          "notDone": [
-            2
-          ],
-          "sceneNot": "second-scene"
-        }
-      }
-    ]
+    "enable_big_playspace": "false"
   },
   "audit_log": "[{\"changed_at\":\"2026-11-01 18:37:41 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {}

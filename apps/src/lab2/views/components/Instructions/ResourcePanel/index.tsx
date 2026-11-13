@@ -401,10 +401,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           <AiTutorChatWithInstructionDrawer
             {...aiTutorProps}
             instructionsContent={instructionsContent}
-            instructionsText={
-              instructionsProps.dynamicInstructions ||
-              levelProperties.longInstructions
-            }
             isPredictLevel={isPredictLevel}
             aiTutorActive={currentTab === Tabs.AiTutor}
             instructionsPinned={instructionsInAiTutor}

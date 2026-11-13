@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-06 04:52:19 UTC",
+    "serialized_at": "2026-11-12 22:08:57 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -10136,6 +10136,27 @@
       "level_keys": [
         "adaptive-less-checkpoints-plan-panel-code"
       ]
+    },
+    {
+      "chapter": 374,
+      "position": 47,
+      "activity_section_position": 47,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-hoai-2026-video-intro"
+        ],
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "a0fb6160-fa38-47c4-984f-9d1ecb5e3b8e"
+      },
+      "level_keys": [
+        "adaptive-hoai-2026-video-intro"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -14614,6 +14635,18 @@
         "script.name": "katies-playground",
         "activity_section.key": "a0fb6160-fa38-47c4-984f-9d1ecb5e3b8e"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-hoai-2026-video-intro",
+        "script_level.level_keys": [
+          "adaptive-hoai-2026-video-intro"
+        ],
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "a0fb6160-fa38-47c4-984f-9d1ecb5e3b8e"
+      }
     }
   ],
   "resources": [
@@ -14735,6 +14768,9 @@
         "objective.key": "1a44e467-6b08-408d-a38e-c1b587e75793"
       }
     }
+  ],
+  "objectives_script_levels": [
+
   ],
   "lessons_standards": [
     {

@@ -76,6 +76,7 @@ class HttpCache
     mc
     music-jam-2024
     mix-move-ai-2025
+    quest-builder-2026
   ).freeze
 
   # Cached units in the UI-test curriculum partition (dashboard/test/ui/config),

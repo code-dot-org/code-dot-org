@@ -226,7 +226,7 @@ export function rawImageToBlob(raw: RawImage): Blob {
  * it already does. High-quality filter: downscaling the model's 1K render is
  * what anti-aliases the stored image.
  */
-async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
+export async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
   try {
     const probe = await createImageBitmap(blob);
     const scale = maxPx / Math.max(probe.width, probe.height);

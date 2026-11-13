@@ -20,7 +20,6 @@ describe('BLOCK_HELP', () => {
     'spritelab2_clickedSprite',
     'spritelab2_restartScene',
     'spritelab2_showTitle',
-    'gamelab_atTime',
     'gamelab_everyInterval',
     'spritelab2_whenPlayer',
     'spritelab2_setAsPlatformPlayer2',
@@ -29,6 +28,8 @@ describe('BLOCK_HELP', () => {
     'spritelab2_askAIWithChoices',
     'spritelab2_setSystemPrompt',
     'spritelab2_setPlatformJumpHeight',
+    'gamelab_showVariable',
+    'gamelab_hideVariable',
   ]);
 
   it('gives every entry an animation, or is known to be waiting for one', () => {

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-20 16:32:21 UTC",
+    "serialized_at": "2026-11-12 15:47:48 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -817,7 +817,7 @@
       "key": "cc61bd77-3f2d-4bdf-b638-36ddd29c6d2f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What details did the AI decide to include beyond what was written in the prompt?\nTurn and Talk — one minute in pairs. \nPopcorn Share: volunteers pop in with one observation each until the ideas thin out.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that the prompt specified only three things and that the AI decided everything else — not only how the page looks, but what the page is. It invented a company name, a navigation bar, a section heading, a layout, and album titles. Students should further notice that both pages share nearly all of those decisions. Both are called StreamTunes. Both say \"Featured Today.\" Both are organized around browsing album art. Changing the year changed the styling. It did not change the AI's idea of what a music homepage is. organized around browsing album art. Changing the year changed the styling. It did not change the AI's idea of what a music homepage is.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What details did the AI decide to include beyond what was written in the prompt?\nTurn and Talk — one minute in pairs. \nPopcorn Share: volunteers pop in with one observation each until the ideas thin out.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that the prompt specified only three things and that the AI decided everything else — not only how the page looks, but what the page is. It invented a company name, a navigation bar, a section heading, a layout, and album titles. Students should further notice that both pages share nearly all of those decisions. Both are called StreamTunes. Both say \"Featured Today.\" Both are organized around browsing album art. Changing the year changed the styling. It did not change the AI's idea of what a music homepage is.\n"
       },
       "seeding_key": {
         "activity_section.key": "cc61bd77-3f2d-4bdf-b638-36ddd29c6d2f",
@@ -4479,7 +4479,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4501,7 +4501,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4523,7 +4523,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4545,7 +4545,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4567,7 +4567,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4589,7 +4589,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4611,7 +4611,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4633,7 +4633,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6598,6 +6598,9 @@
         "objective.key": "f6aff82f-2575-4a6d-ac6a-da1e309bc503"
       }
     }
+  ],
+  "objectives_script_levels": [
+
   ],
   "lessons_standards": [
     {

@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-12T20:33:39.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"datasets\": [\r\n    \"SC1-L12-snacks-cut-sweets\"\r\n  ],\r\n  \"reserveLastRows\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"**Dataset Update**: \\n\\nFewer sweets\\n\\n**Data Source**: \\n\\nReal foods from USDA FoodData Central, SR Legacy (April 2018 release), https://fdc.nal.usda.gov. Source: USDA FoodData Central\",\r\n  \"results\": \"What can you do on the **Testing** screen?\\n* Interact with your decision tree\\n* Examine the test data\\n* Trace a prediction\\n* Save your decision tree to your device or backpack\"\r\n}",
+    "display_name": "After-School Snacks",
+    "bubble_choice_description": "**Dataset Update:** Fewer sweets",
+    "thumbnail_url": "https://images.code.org/acf8f7350b792a02ce55bbb2b71dea8d-snack-chooser.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-12T20:33:39.395+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-project-snack-2\\\"\"],\"cloned_from\":\"data-makes-ai-project-snack-2\"},{\"changed_at\":\"2026-11-12 22:00:19 +0000\",\"changed\":[\"mode\",\"dynamic_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 22:02:55 +0000\",\"changed\":[\"mode\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

@@ -1,7 +1,8 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
-  "created_at": "2026-10-29T19:30:41.000Z",
+  "created_at": "2026-10-31T09:28:00.000Z",
   "level_num": "custom",
   "user_id": 2,
   "properties": {
@@ -42,7 +43,8 @@
     "hide_pause_button": "false",
     "enable_big_playspace": "false",
     "level_mode": {
-      "kind": "freeplay"
+      "kind": "freeplay",
+      "enableImageUpload": true
     },
     "toolbox_definition": {
       "contents": [
@@ -78,11 +80,21 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_setPlatformJumpHeight"
+              "type": "spritelab2_setPlatformJumpHeight",
+              "id": "{Q`{DF`~.lY~E{TT6BkG",
+              "fields": {
+                "HEIGHT": 3
+              },
+              "enabled": true
             },
             {
               "kind": "block",
-              "type": "spritelab2_setPlatformGravityDirection"
+              "type": "spritelab2_setPlatformGravityDirection",
+              "id": "$Wpe`-ttSY}AL)Uxnn27",
+              "fields": {
+                "DIRECTION": "<field name=\"DIRECTION\">down</field>"
+              },
+              "enabled": true
             },
             {
               "kind": "block",
@@ -1648,6 +1660,49 @@
         },
         {
           "kind": "category",
+          "name": "DEFAULT",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_hideVariable",
+              "id": "A=X(f^FX*;%};^O-ar0S",
+              "fields": {
+                "VAR": {
+                  "id": "ZswJ4=Fva5VO5^6B.4zl",
+                  "name": "item",
+                  "type": ""
+                }
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_showVariable",
+              "id": "ez91{LzC@UQg+0Y~9~ra",
+              "fields": {
+                "VAR": {
+                  "id": "ZswJ4=Fva5VO5^6B.4zl",
+                  "name": "item",
+                  "type": ""
+                }
+              },
+              "inputs": {
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": null
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            }
+          ],
+          "id": "DEFAULT"
+        },
+        {
+          "kind": "category",
           "custom": "PROCEDURE",
           "name": "Functions",
           "id": "Functions"
@@ -2108,10 +2163,12 @@
         }
       ]
     },
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-29 12:31:19 -0700\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 14:17:47 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:16 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:24 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-09 11:09:52 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"},{\"changed_at\":\"2026-11-09 11:28:35 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"},{\"changed_at\":\"2026-11-09 12:04:22 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-10-29 12:31:19 -0700\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 14:17:47 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:16 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 13:51:24 -0800\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-09 11:09:52 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"},{\"changed_at\":\"2026-11-09 11:28:35 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"},{\"changed_at\":\"2026-11-09 12:04:22 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 13:30:21 -0500\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 13:46:28 -0800\",\"changed\":[\"level_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 13:06:32 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":22403,\"changed_by_email\":\"alex.brown@code.org\"},{\"changed_at\":\"2026-11-13 13:30:40 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":22403,\"changed_by_email\":\"alex.brown@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
