@@ -430,7 +430,7 @@ $z-over-blockly: 71;
   // Keyboard focus ring for the play-mode game region; an outline so the
   // 400x400 geometry the transform and pointer math rely on is untouched.
   &:focus-visible {
-    outline: 2px solid var(--borders-neutral-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: 2px;
   }
 }
@@ -537,6 +537,11 @@ $arrow-gap: 6px;
   color: var(--text-neutral-primary-inverse);
   font-size: 14px;
 
+  // The theme's ring is too faint on the dark stage.
+  &:focus-visible {
+    outline-color: var(--border-focused-primary);
+  }
+
   &:hover,
   &:active {
     background: color-mix(
@@ -632,7 +637,7 @@ $arrow-gap: 6px;
   }
 
   &:focus-visible {
-    outline: 2px solid var(--borders-neutral-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: -2px;
   }
 }
