@@ -146,7 +146,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
         >
           <div ref={instructionsContentRef}>{instructionsContent}</div>
         </div>
-        {showInstructions && showScrollFade && (
+        {showInstructions && showScrollFade && !instructionsPinned && (
           <div className={styles.scrollFade} aria-hidden />
         )}
       </div>
