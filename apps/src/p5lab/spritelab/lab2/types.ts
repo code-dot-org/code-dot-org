@@ -160,12 +160,17 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** Further pattern characters, each the newest sprite carrying a role:
       {"F": "friend"}. 'S' and 'B' keep their own meaning. */
   worldStartRoles?: WorldStartRoles;
+  /** Image roles the World tab keeps at least one of, in each scene:
+      ["treasure", "friend"]. The last square showing an image with one of
+      these roles can be erased or painted over only after another has been
+      placed. Unset, no role is kept this way. */
+  worldKeepsRoles?: string[];
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
-  /** Blocks built on earlier levels cannot be deleted from the pinned scene
-      here (blockLocks.ts); the stacks this level adds and the toolbox
-      blocks no earlier level required can. */
+  /** Blocks built on earlier levels cannot be deleted here, in any scene
+      the level opens (blockLocks.ts). The blocks under a stack this level adds can,
+      and so can the toolbox blocks no earlier level required. */
   lockEarlierBlocks?: boolean;
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */

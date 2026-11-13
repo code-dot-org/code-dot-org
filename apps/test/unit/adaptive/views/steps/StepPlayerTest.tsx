@@ -56,18 +56,18 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
   __esModule: true,
   default: ({
     title,
-    onViewSkillTree,
+    onViewSkillMap,
     onFinish,
   }: {
     title: string;
-    onViewSkillTree?: () => void;
+    onViewSkillMap?: () => void;
     onFinish?: () => void;
   }) => (
     <div>
       header: {title}
-      {onViewSkillTree && (
-        <button type="button" onClick={onViewSkillTree}>
-          View skill tree
+      {onViewSkillMap && (
+        <button type="button" onClick={onViewSkillMap}>
+          View skill map
         </button>
       )}
       {onFinish && (
@@ -189,7 +189,7 @@ describe('StepPlayer', () => {
     const {calls, onExit} = renderPlayer();
 
     now.mockReturnValue(3500);
-    fireEvent.click(screen.getByRole('button', {name: 'View skill tree'}));
+    fireEvent.click(screen.getByRole('button', {name: 'View skill map'}));
 
     expect(calls).toEqual([
       ['start', checkpoint.steps[0]],
@@ -208,7 +208,7 @@ describe('StepPlayer', () => {
     now.mockReturnValue(8000);
     timer.startIdle();
     now.mockReturnValue(9000);
-    fireEvent.click(screen.getByRole('button', {name: 'View skill tree'}));
+    fireEvent.click(screen.getByRole('button', {name: 'View skill map'}));
 
     expect(calls).toEqual([
       ['start', checkpoint.steps[0]],

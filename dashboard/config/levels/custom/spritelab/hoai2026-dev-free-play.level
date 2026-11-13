@@ -18,7 +18,7 @@
     "standalone_app_name": "spritelab",
     "skin": "gamelab",
     "hide_custom_blocks": true,
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template",
     "level_mode": {
@@ -142,54 +142,6 @@
           "type": "spritelab2_showTitle",
           "fields": {
             "TEXT": "You win!"
-          }
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition"
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_spriteClicked",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_atTime",
-          "inputs": {
-            "N": {
-              "shadow": {
-                "type": "math_number",
-                "fields": {
-                  "NUM": 3
-                }
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_setProp",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            },
-            "VAL": {
-              "shadow": {
-                "type": "math_number",
-                "fields": {
-                  "NUM": 100
-                }
-              }
-            }
           }
         },
         {

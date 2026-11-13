@@ -22,6 +22,8 @@
     "project_template_level_name": "hoai2026-dev-revised-template",
     "level_mode": {
       "kind": "image",
+      "limitedPaintTools": true,
+      "generationLimit": 5,
       "imageType": "sprite",
       "imageRole": "hero",
       "learning": true,
@@ -31,7 +33,7 @@
       "title": "**Make a character**",
       "items": [
         {
-          "text": "Click **New image**.",
+          "text": "Select the **+** button.",
           "check": {
             "kind": "image",
             "imageType": "sprite"

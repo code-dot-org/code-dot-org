@@ -41,6 +41,10 @@
   min-height: 0;
 }
 
+.shellAlert {
+  flex: 0 0 auto;
+}
+
 // One outer height for every tab item — plain tabs and the Code+scene group —
 // so the bar reads as a row of equal boxes (border-box: height includes the
 // 1px outlines).
@@ -133,6 +137,12 @@ $z-over-blockly: 71;
   gap: 8px;
 }
 
+// Controls a caller draws at the bar's right end, such as an info button.
+.editorStripEndSlot {
+  display: flex;
+  align-items: center;
+}
+
 // Undo and redo.
 .editorStripHistory {
   display: flex;
@@ -180,8 +190,9 @@ $z-over-blockly: 71;
   bottom: $editor-strip-height;
 }
 
-// The scene bar at the editors' base, the strip's twin: the scene
-// controls at its start, the project-wide controls at its end.
+// The scene bar along the bottom of the editors. It is the same height as
+// the editor strip along their top. The project-wide controls are at its
+// start and the scene controls are at its end.
 .workspaceSceneBar {
   position: absolute;
   bottom: 0;
@@ -198,7 +209,7 @@ $z-over-blockly: 71;
   border-top: 1px solid var(--borders-neutral-primary);
 }
 
-// Discover blocks at the workspace bar's end, at the bar's control height.
+// Discover blocks at the workspace bar's start, at the bar's control height.
 .barButton.barButton {
   height: $tab-item-height;
   padding: 0 12px;
@@ -424,19 +435,23 @@ $z-over-blockly: 71;
   }
 }
 
-// The bar pinned to the stage's foot, the editors' scene bar's twin: Run
-// under the preview, Reset while playing. The overlay passes pointer
-// events through; the bar takes its own.
+// The bar along the bottom of the stage, level with the editors' scene
+// bar. It holds the Run buttons under the preview, and Stop while the game
+// plays. The overlay passes pointer events through; the bar takes its own.
 .bottomBar {
   position: absolute;
   bottom: 0;
-  height: $editor-strip-height;
+  // The bar is at least as tall as the scene bar, and grows taller when
+  // its buttons stack in two rows. The 4px of padding above and below is
+  // the space left around a single row of buttons, so a bar with one row
+  // is exactly the scene bar's height.
+  min-height: $editor-strip-height;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: 0 8px;
+  padding: 4px 8px;
   background: var(--background-neutral-primary);
   border-top: 1px solid var(--borders-neutral-primary);
   pointer-events: auto;
@@ -453,6 +468,15 @@ $z-over-blockly: 71;
   min-width: 0;
   align-items: center;
   gap: 16px;
+  // In a narrow column the second button moves to a row of its own, and
+  // each row is centered. A button's label never breaks onto two lines.
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 8px;
+
+  button {
+    white-space: nowrap;
+  }
 }
 
 // Placed by the playspace beside or under the game; the cross inside takes
@@ -655,5 +679,3 @@ $arrow-gap: 6px;
 .srOnly {
   @include chrome.sr-only;
 }
-
-
