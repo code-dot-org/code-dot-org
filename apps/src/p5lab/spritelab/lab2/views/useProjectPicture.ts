@@ -11,6 +11,19 @@ import {Scene} from '../types';
     theirs 220 pixels wide. */
 export const PROJECT_PICTURE_PX = 220;
 
+/**
+ * Whether every pixel of the frame is the same color, as the stage of a
+ * scene with nothing on it is. `pixels` holds four bytes for each pixel.
+ */
+export function isOneColor(pixels: ArrayLike<number>): boolean {
+  for (let i = 4; i < pixels.length; i++) {
+    if (pixels[i] !== pixels[i % 4]) {
+      return false;
+    }
+  }
+  return true;
+}
+
 interface ProjectPictureOptions {
   engineRef: React.RefObject<SpriteLab2Engine | null>;
   scenes: Scene[];
@@ -28,7 +41,8 @@ interface ProjectPictureOptions {
  * project's next save, so taking one makes no request of its own. A new
  * picture is taken only when the starting scene differs from the one in the
  * last picture taken on this visit. Only the project's owner takes one, and
- * never from a share link.
+ * never from a share link. A frame of one flat color is not kept, so a
+ * project with nothing in its starting scene keeps the default art.
  */
 export default function useProjectPicture({
   engineRef,
@@ -73,7 +87,14 @@ export default function useProjectPicture({
           return;
         }
         pictureFingerprintRef.current = fingerprint;
-        copyFrame(stage, PROJECT_PICTURE_PX).toBlob(pngBlob => {
+        const picture = copyFrame(stage, PROJECT_PICTURE_PX);
+        const pixels = picture
+          .getContext('2d')
+          ?.getImageData(0, 0, picture.width, picture.height).data;
+        if (!pixels || isOneColor(pixels)) {
+          return;
+        }
+        picture.toBlob(pngBlob => {
           // A later picture may have been taken while this one was encoded.
           if (pngBlob && pictureFingerprintRef.current === fingerprint) {
             projectManager.setThumbnail(pngBlob);

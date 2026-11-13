@@ -4,6 +4,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import SpriteLab2Engine from '@cdo/apps/p5lab/spritelab/lab2/SpriteLab2Engine';
 import {Scene} from '@cdo/apps/p5lab/spritelab/lab2/types';
 import useProjectPicture, {
+  isOneColor,
   PROJECT_PICTURE_PX,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/useProjectPicture';
 
@@ -42,6 +43,8 @@ describe('useProjectPicture', () => {
   let engineRef: React.RefObject<SpriteLab2Engine | null>;
   let setThumbnail: jest.Mock;
   let shouldCapture: boolean;
+  // The pixels of the copied frame, four bytes for each.
+  let framePixels: number[];
 
   // Draws the first frame of a run: everyone waiting on it gets the stage.
   const drawFirstFrame = () => {
@@ -75,7 +78,9 @@ describe('useProjectPicture', () => {
     setThumbnail = jest.fn();
     shouldCapture = true;
     mockCopyFrame.mockReset();
+    framePixels = [255, 255, 255, 255, 0, 0, 0, 255];
     mockCopyFrame.mockReturnValue({
+      getContext: () => ({getImageData: () => ({data: framePixels})}),
       toBlob: (onBlob: (blob: Blob) => void) => onBlob(pngBlob),
     });
     jest
@@ -137,6 +142,15 @@ describe('useProjectPicture', () => {
     expect(setThumbnail).not.toHaveBeenCalled();
   });
 
+  it('keeps no picture of a frame that is one flat color', () => {
+    framePixels = [255, 255, 255, 255, 255, 255, 255, 255];
+    const {result} = renderPictureHook();
+    result.current('first');
+    drawFirstFrame();
+
+    expect(setThumbnail).not.toHaveBeenCalled();
+  });
+
   it('takes no picture when it is not enabled', () => {
     const {result} = renderPictureHook(undefined, false);
     result.current('first');
@@ -150,5 +164,15 @@ describe('useProjectPicture', () => {
     result.current('first');
 
     expect(waiters).toHaveLength(0);
+  });
+});
+
+describe('isOneColor', () => {
+  it('is true when every pixel matches the first', () => {
+    expect(isOneColor([10, 20, 30, 255, 10, 20, 30, 255])).toBe(true);
+  });
+
+  it('is false when any pixel differs', () => {
+    expect(isOneColor([10, 20, 30, 255, 10, 20, 31, 255])).toBe(false);
   });
 });
