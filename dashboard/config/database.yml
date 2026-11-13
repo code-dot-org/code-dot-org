@@ -89,6 +89,11 @@ mysql_defaults: &mysql_defaults
   # number of seconds to wait for a connection to become available before giving up and raising a timeout error (default 5 seconds).
   checkout_timeout: 3
 
+  # Ensure that a database connection in the pool does not stay idle longer than the EC2 Nitro v6 (`m8i` and higher)
+  # 350s idle TCP flow timeout.
+  idle_timeout: 240
+  reaping_frequency: 60
+
   # `mysql_options` client options forwarded through the mysql2 adapter:
   # See: https://dev.mysql.com/doc/c-api/8.0/en/mysql-options.html
 
