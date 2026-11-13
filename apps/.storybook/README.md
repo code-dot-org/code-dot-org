@@ -51,13 +51,15 @@ Read more at ["How to write stories"](https://storybook.js.org/docs/react/writin
 
 ## Running Stories as Unit Tests
 
-We also have a [test harness](../test/storybook-tests.js) that runs Storybook stories as unit tests, making sure every story can be rendered without error.
+We also have a [test harness](../test/storybook/renderStoriesTest.js) that runs Storybook stories as unit tests, making sure every story can be rendered without error.
 
 To run these tests, run
 
 ```bash
 yarn test:storybook
 ```
+
+`yarn test` does not run these tests; run them separately.
 
 ## Static Style Guide
 
