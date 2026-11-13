@@ -78,6 +78,12 @@
       },
       "steps": [
         {
+          "id": "intro-video",
+          "title": "Getting started",
+          "kind": "video",
+          "videoKey": "hoai2026_maker_intro"
+        },
+        {
           "id": "intro-panels",
           "title": "Welcome",
           "kind": "panels",
@@ -90,19 +96,19 @@
             },
             {
               "text": "###Your path to building\n\nYou will begin with a skill check to find your starting point on the skill map.\n\nThen you choose checkpoints to learn and apply new skills to your project.",
-              "imageUrl": "https://images.code.org/3874ea1c9e3392f3e764d9391baa8910-skill-check-starting-point_matched-spacing_1600.png",
+              "imageUrl": "https://images.code.org/2226a74d49293d02f358a2bacdb6a5a1-image (5).png",
               "key": "adaptive-less-checkpoints-skill-check-learn-06348056-e331-4d44-ba0a-c68f83ffa596"
             },
             {
               "key": "adaptive-less-checkpoints-skill-check-learn-60807e67-6964-43c3-ab7e-497261d32117",
               "text": "###Practice and apply\nEach checkpoint has two parts:\n-  First, practice a new skill. \n- Then, use the skill to build your own website.",
-              "imageUrl": "https://images.code.org/6a025fff6fdb74348ca1fcb57b81c350-checkpoint-practice-apply-lower_1600.png",
+              "imageUrl": "https://images.code.org/dea38ae1e57a77608c6d7d86d8df3246-image (4).png",
               "layout": "text-top-right"
             },
             {
               "key": "adaptive-less-checkpoints-skill-check-learn-c0eda26c-9442-4968-a1de-987387c356ab",
               "text": "###Keep learning\n\nReturn to the skill map and choose your next checkpoint.",
-              "imageUrl": "https://images.code.org/c33034d95807d71da7ee70c009b24298-return-to-skill-map-green-paths_1600.png",
+              "imageUrl": "https://images.code.org/a0025fb0ab07cf92986c3d4936c1c4c2-image (3).png",
               "layout": "text-top-right"
             },
             {
@@ -173,12 +179,12 @@
               "type": "MultipleChoiceQuestion",
               "questionName": "intro-purpose",
               "questionTitle": "The website will help them…",
-  "choices": [
-    { "id": "a", "text": "Learn something" },
-    { "id": "b", "text": "Decide or plan" },
-    { "id": "c", "text": "Connect with each other" },
-    { "id": "d", "text": "Play or try something" }
-  ],
+              "choices": [
+                { "id": "a", "text": "Learn something" },
+                { "id": "b", "text": "Decide or plan" },
+                { "id": "c", "text": "Connect with each other" },
+                { "id": "d", "text": "Play or try something" }
+              ],
               "allowOther": {
                 "placeholder": "Or something else"
               },
@@ -230,18 +236,9 @@
               "questionTitle": "Which sentence sounds most like you?",
               "choices": [
                 { "id": "a", "text": "I’m new to using AI to build websites." },
-                {
-                  "id": "b",
-                  "text": "I have a little experience using AI to build websites."
-                },
-                {
-                  "id": "c",
-                  "text": "I have built a full website with AI or a site builder."
-                },
-                {
-                  "id": "d",
-                  "text": "I have built many websites with AI and edited code myself."
-                }
+                { "id": "b", "text": "I have a little experience using AI to build websites." },
+                { "id": "c", "text": "I have built a full website with AI or a site builder." },
+                { "id": "d", "text": "I have built many websites with AI and edited code myself." }
               ]
             },
             {
@@ -251,14 +248,8 @@
               "questionTitle": "Adam wants a big section at the top of his page with a headline and a button. Which message should he send the AI?",
               "choices": [
                 { "id": "a", "text": "Make the top of my page look better." },
-                {
-                  "id": "b",
-                  "text": "Put a big title at the top with a button under it."
-                },
-                {
-                  "id": "c",
-                  "text": "Add a hero section with a headline and a button."
-                },
+                { "id": "b", "text": "Put a big title at the top with a button under it." },
+                { "id": "c", "text": "Add a hero section with a headline and a button." },
                 { "id": "d", "text": "Add an h1 and a button inside a div." },
                 { "id": "e", "text": "I’m not sure yet." }
               ],
@@ -330,18 +321,9 @@
               "questionTitle": "The AI says it fixed your broken button. You reload the page and the button works. Which should you do next?",
               "choices": [
                 { "id": "a", "text": "Move on, since the button works now." },
-                {
-                  "id": "b",
-                  "text": "Click the button 200 times to make sure it continues working."
-                },
-                {
-                  "id": "c",
-                  "text": "Ask the AI to confirm that everything works."
-                },
-                {
-                  "id": "d",
-                  "text": "Click through the rest of the page and look for anything that changed or broke."
-                },
+                { "id": "b", "text": "Click the button 200 times to make sure it continues working." },
+                { "id": "c", "text": "Ask the AI to confirm that everything works." },
+                { "id": "d", "text": "Click through the rest of the page and look for anything that changed or broke." },
                 { "id": "e", "text": "Start over from your first version." }
               ],
               "correctChoiceId": "d"
@@ -405,18 +387,9 @@
               "questionName": "direct-the-action-plan-check",
               "questionTitle": "What advice would you give Maya?",
               "choices": [
-                {
-                  "id": "a",
-                  "text": "“Ask the AI to add a Spin button that picks one place.”"
-                },
-                {
-                  "id": "b",
-                  "text": "“Ask the AI to make the whole page better for your friends.”"
-                },
-                {
-                  "id": "c",
-                  "text": "“Ask the AI to make the colors brighter and the heading bigger.”"
-                }
+                { "id": "a", "text": "“Ask the AI to add a Spin button that picks one place.”" },
+                { "id": "b", "text": "“Ask the AI to make the whole page better for your friends.”" },
+                { "id": "c", "text": "“Ask the AI to make the colors brighter and the heading bigger.”" }
               ],
               "correctChoiceId": "a"
             }
@@ -447,9 +420,9 @@
           "kind": "level",
           "level": "adaptive-less-checkpoints-direct-action-apply",
           "project": true,
-          "instructionsPrompt": "Task: Writes a prompt about what a visitor does, naming one part of their own page, then decides what to do with the AI's change.\nOutline: Prompt: \"Pick one interactive part of your page and name it. Ask for a change about what a visitor does and what happens. When the AI changes something, say whether you keep it, or redirect it.\" The tutor reads the prompt and the decision.\nEvidence: a prompt with 2 or more specific details about what the visitor does and what happens, or a follow-up that changes one thing",
+          "instructionsPrompt": "Task: Writes a prompt about what a visitor does, naming one part of their own page, then decides what to do with the AI's change.\nOutline: Prompt: “Pick one interactive part of your page and use its name in your prompt. Ask for a change to what a visitor does and what happens. Try the result, then tell the AI what to fix or change.”\nEvidence: a prompt with 2 or more specific details about what the visitor does and what happens, or a follow-up that changes one thing",
           "validation": {
-            "condition": "The project changed to match a prompt with two or more specific details about what a visitor does and what happens, or a follow-up that changed one thing.",
+            "condition": "A prompt asked for a change to one part of the page and described what a visitor does or what happens, or a follow-up asked for one change. OR The page changed so a visitor can do something, or something new happens when they do, such as a button, a choice, or a response to a click.",
             "measures": { "skillId": "build" }
           }
         }
@@ -484,10 +457,7 @@
               "choices": [
                 { "id": "a", "text": "Pick the same event every single time." },
                 { "id": "b", "text": "Count each pick and save the totals." },
-                {
-                  "id": "c",
-                  "text": "Add a brand new event after every pick."
-                },
+                { "id": "c", "text": "Add a brand new event after every pick." },
                 { "id": "d", "text": "Hide the whole list from every visitor." }
               ],
               "correctChoiceId": "b"
@@ -500,9 +470,9 @@
           "kind": "level",
           "level": "adaptive-less-checkpoints-make-respond-apply",
           "project": true,
-          "instructionsPrompt": "Task: Picks one idea that fits their page and describes it to the AI.\nOutline: Prompt: \"What should your page choose, count or remember? Tell the AI how. Ask AI to brainstorm ideas with you if you need.\" The student works on the idea that fits their build: a list and a pick, a number and a rule, or something to remember and show. The tutor shows the sentence they wrote.\nEvidence: names at least one: the list and the pick, the number that changes and the rule, or what is remembered and what changes on screen.",
+          "instructionsPrompt": "Task: Picks one idea that fits their page and describes it to the AI.\nOutline: Prompt: \"What should your page choose, count or remember? Tell the AI how. Ask AI to brainstorm ideas with you if you need.\" The student works on the idea that fits their build: a list and a pick, a number and a rule, or something to remember and show. The tutor shows the sentence they wrote.\nEvidence: Names at least one thing the page should choose, count or remember.",
           "validation": {
-            "condition": "The student told the AI one of: what the options are and that the page picks one of them, what number changes and by what rule, or what the page remembers and what changes on screen when it does.",
+            "condition": "The student told the AI at least one thing the page should choose, count or remember, such as the options, a number that changes, or something to save and show. OR The page now picks from a list, changes a number, or saves and shows something a visitor typed or did, and this wasn't in the starter page.",
             "measures": { "skillId": "language" }
           }
         }
@@ -555,18 +525,9 @@
               "questionName": "direct-the-look-plan-check",
               "questionTitle": "What advice would you give Ravi?",
               "choices": [
-                {
-                  "id": "a",
-                  "text": "“Ask the AI to add three more treats to the page.”"
-                },
-                {
-                  "id": "b",
-                  "text": "“Ask the AI to make the hero section warm yellow and brown.”"
-                },
-                {
-                  "id": "c",
-                  "text": "“Ask the AI to make the whole page look nicer for your neighbors.”"
-                }
+                { "id": "a", "text": "“Ask the AI to add three more treats to the page.”" },
+                { "id": "b", "text": "“Ask the AI to make the hero section warm yellow and brown.”" },
+                { "id": "c", "text": "“Ask the AI to make the whole page look nicer for your neighbors.”" }
               ],
               "correctChoiceId": "b"
             }
@@ -597,9 +558,9 @@
           "kind": "level",
           "level": "adaptive-less-checkpoints-direct-look-apply",
           "project": true,
-          "instructionsPrompt": "Task: Writes a prompt about the look of one named section of their own page\nOutline: Prompt: \"Pick one section of your page and use its name in your prompt. Ask the AI to change something small such as its colors, type, layout or something else.\" The tutor reads the prompt and the decision.\nEvidence: a prompt with 1 or more specific style details for one section, or a follow-up that changes one thing; a prompt that names a section and a detail to change in the section",
+          "instructionsPrompt": "Task: Writes a prompt about the look of one named section of their own page\nOutline: Prompt: “Pick one section of your page and use its name in your prompt. Ask the AI to change something small, such as its colors, type or layout. Try the result, then tell the AI what to fix or change.”\nEvidence: A prompt that asks for at least one specific change to the look of the page, ideally naming a section, or a follow-up that changes one thing.",
           "validation": {
-            "condition": "A prompt named one section of the page and asked for at least one specific change to its look, such as its colors, type or layout, or a follow-up changed one thing about it.",
+            "condition": "A prompt asked for at least one specific change to the look of the page, such as colors, type or layout, or a follow-up changed one thing about it. OR At least one part of the page looks different from the starter, such as its colors, fonts, spacing, or layout.",
             "measures": { "skillId": "language" }
           }
         }
@@ -641,9 +602,9 @@
           "kind": "level",
           "level": "adaptive-less-checkpoints-make-look-right-apply",
           "project": true,
-          "instructionsPrompt": "Task: Makes two more changes and fixes a hard-to-read section.\nOutline: Prompt: \"Pick a section and ask the AI to change it to match the style you want for your page. Describe the look in detail, like the colors, fonts, and mood.\"\nEvidence: a prompt that restates the style while changing at least one thing",
+          "instructionsPrompt": "Task: Asks the AI for a change while reminding it of their style, then asks for anything hard to read to be easier to read.\nOutline: Prompt: “Pick a section and use its name in your prompt. Ask for a change, and remind the AI of your style, like colors, fonts or mood. Then ask for anything hard to read to be easier to read.”\nEvidence: A prompt that mentions at least one style detail while asking for a change.",
           "validation": {
-            "condition": "A prompt described the style the student wants for the page, in details such as colors, fonts or mood, and asked for at least one change to a section to match it.",
+            "condition": "A prompt mentioned at least one style detail, such as colors, fonts or mood, and asked for a change to the page. OR At least one part of the page looks different from before, such as its colors, fonts, or layout, and the page still shows the same content.",
             "measures": { "skillId": "build" }
           }
         }
@@ -696,18 +657,9 @@
               "questionName": "direct-the-words-plan-check",
               "questionTitle": "What advice would you give Priya?",
               "choices": [
-                {
-                  "id": "a",
-                  "text": "“Ask the AI to make the whole page more persuasive for your neighbors.”"
-                },
-                {
-                  "id": "b",
-                  "text": "“Ask the AI to make the headline bigger and a brighter green.”"
-                },
-                {
-                  "id": "c",
-                  "text": "“Ask the AI to make the call-to-action say Sign the petition.”"
-                }
+                { "id": "a", "text": "“Ask the AI to make the whole page more persuasive for your neighbors.”" },
+                { "id": "b", "text": "“Ask the AI to make the headline bigger and a brighter green.”" },
+                { "id": "c", "text": "“Ask the AI to make the call-to-action say Sign the petition.”" }
               ],
               "correctChoiceId": "c"
             }
@@ -738,9 +690,9 @@
           "kind": "level",
           "level": "adaptive-less-checkpoints-direct-words-apply",
           "project": true,
-          "instructionsPrompt": "Task: Writes a prompt asking the AI to set the tone and message of their own page so it fits their site’s purpose and intended audience.\nOutline: Prompt: “Who is your site for? Describe how your page should sound to them.” Then: “What should your page say? Ask the AI to rewrite it in a specific voice, like a coach, a friend, or an excited news reporter.”\nEvidence: A prompt that names a specific voice and a message for the page, and ties both to the site’s purpose and audience.",
+          "instructionsPrompt": "Task: Writes a prompt asking the AI to set the tone and message of their own page so it fits their site’s purpose and intended audience.\nOutline: Prompt: “Pick one section of your page and use its name in your prompt. Ask the AI to rewrite its words in a voice that fits who your site is for, like a coach, a friend or an excited news reporter. Try the result, then tell the AI what to fix or change.”\nEvidence: A prompt that names a specific voice and a message for the page, and ties both to the site’s purpose and audience.",
           "validation": {
-            "condition": "A prompt named a specific voice for the page's words and what they should say, and tied both to who the site is for and what it is for.",
+            "condition": "A prompt asked the AI to change the words of the page in a specific voice or to say a specific message. OR The words on at least one part of the page are different from the starter page.",
             "measures": { "skillId": "build" }
           }
         }
@@ -787,9 +739,9 @@
           "kind": "level",
           "level": "adaptive-less-checkpoints-make-point-apply",
           "project": true,
-          "instructionsPrompt": "Task: Rewrites the headline and button on their own page.\nOutline: Prompt: \"What is your site for? Make the headline say it.\" Then: \"What should a visitor do next? Make the button say it.\"\nEvidence: a prompt or edit that states the site's purpose in the headline, and a call-to-action with a clear verb and next step.",
+          "instructionsPrompt": "Task: Rewrites the headline and button on their own page.\nOutline: Prompt: \"What is your site for? Make the headline say it.\" Then: \"What should a visitor do next? Make the button say it.\"\nEvidence: Names at least one thing the page should choose, count or remember.",
           "validation": {
-            "condition": "The headline now says what the site is for and the call-to-action has a clear verb and a next step, whether a prompt asked for them or the student edited them by hand.",
+            "condition": "The student told the AI at least one thing the page should choose, count or remember, such as the options, a number that changes, or something to save and show. OR The headline or the call-to-action text is different from the starter page.",
             "measures": { "skillId": "language" }
           }
         }
@@ -842,18 +794,9 @@
               "questionName": "direct-the-code-plan-check",
               "questionTitle": "What advice would you give Theo?",
               "choices": [
-                {
-                  "id": "a",
-                  "text": "“Ask the AI to make the Check button use the city you type.”"
-                },
-                {
-                  "id": "b",
-                  "text": "“Ask the AI to make the whole code work better and run faster.”"
-                },
-                {
-                  "id": "c",
-                  "text": "“Ask the AI to make the page look simpler with fewer colors.”"
-                }
+                { "id": "a", "text": "“Ask the AI to make the Check button use the city you type.”" },
+                { "id": "b", "text": "“Ask the AI to make the whole code work better and run faster.”" },
+                { "id": "c", "text": "“Ask the AI to make the page look simpler with fewer colors.”" }
               ],
               "correctChoiceId": "a"
             }
@@ -886,7 +829,7 @@
           "project": true,
           "instructionsPrompt": "Task: Asks the AI to make a change to one named section of their own page, then asks the AI to describe the code that made the change.\nOutline: Prompt: “Pick one section of your page and use its name in your prompt. Ask the AI to add a change to it. Try the result, then ask the AI to describe the code that made the change.” The tutor reads your prompts.\nEvidence: A prompt that asks for a change to a named section; a follow-up that asks the AI to describe the code behind that change, such as what it does or which part made it happen.",
           "validation": {
-            "condition": "A prompt asked for a change to a named section of the page, and a follow-up asked the AI to describe the code behind that change, such as what it does or which part made it happen.",
+            "condition": "A prompt asked for a change to a named section of the page, or a follow-up asked the AI to describe the code behind a change. OR At least one named part of the page changed, in how it looks or what it does.",
             "measures": { "skillId": "language" }
           }
         }
@@ -920,14 +863,8 @@
               "questionTitle": "Tess wants the button on her page to do something different, but she does not know which part of the code controls it. What is the best next move?",
               "choices": [
                 { "id": "a", "text": "Delete all the code and start over." },
-                {
-                  "id": "b",
-                  "text": "Change random lines until something happens."
-                },
-                {
-                  "id": "c",
-                  "text": "Ask the AI which part of the code controls the button."
-                },
+                { "id": "b", "text": "Change random lines until something happens." },
+                { "id": "c", "text": "Ask the AI which part of the code controls the button." },
                 { "id": "d", "text": "Ask the AI to rewrite the whole page." }
               ],
               "correctChoiceId": "c"
@@ -940,9 +877,9 @@
           "kind": "level",
           "level": "adaptive-less-checkpoints-look-under-hood-apply",
           "project": true,
-          "instructionsPrompt": "Task: Asks the AI which part of one named section’s code controls its look or behavior, then changes one thing in that part.\nOutline: Prompt: “Pick one section of your page and use its name in your prompt. Ask the AI which part of its code controls how it looks or what it does. Change one thing in that part and see what happens.” The tutor reads your prompt and what changed.\nEvidence: A prompt that asks the AI about the code for a named section, and an attempt to change something, either by asking the AI or by editing the code.",
+          "instructionsPrompt": "Task: Asks the AI which part of one named section’s code controls its look or behavior, then changes one thing in that part.\nOutline: Prompt: “Pick one section of your page and use its name in your prompt. Ask the AI which part of its code controls how it looks or what it does. Change one thing in that part and see what happens.” The tutor reads your prompt and what changed.\nEvidence: A prompt that asks the AI about the code for a named section, or an attempt to change something, by asking the AI or by editing the code.",
           "validation": {
-            "condition": "The student asked the AI which part of a named section's code controls how it looks or what it does, then changed something in it, whether by asking the AI or by editing the code by hand.",
+            "condition": "The student asked the AI which part of a named section’s code controls how it looks or what it does, or tried to change something in it, whether by asking the AI or by editing the code by hand. OR The code for at least one part of the page changed, whether the AI made the change or the student edited it by hand.",
             "measures": { "skillId": "language" }
           }
         }
@@ -966,7 +903,8 @@
           "title": "You’re officially an AI creator!",
           "kind": "stats",
           "heading": "You’re officially an AI creator!",
-          "subheading": "AI isn’t magic, but what you made with it is pretty cool. Here’s what you worked on today:"
+          "subheading": "AI isn’t magic, but what you made with it is pretty cool. Here’s what you worked on today:",
+          "logoUrl": "https://images.code.org/97fd8149cec556cb09b8010aa268e9b1-AI Makerspace Logo FINAL-trimmed.png"
         },
         {
           "id": "wrap-up-showcase",
@@ -977,15 +915,11 @@
           "instructions": "Look what you built! Review your final project."
         },
         {
-          "id": "wrap-up-challenge",
-          "title": "Builder's Challenge",
-          "kind": "markdown",
-          "markdown": "## You just built something with AI!\n\n<img src=\"https://images.code.org/99d7f396c47a604d6ca01825a08c4ab2-Panel 1.png\" alt=\"\" width=\"800\" height=\"340\">\n\n<br>Want to keep going? Join the Building with AI Challenge, a national competition for high school teams. Build your project over eight weeks and submit by Feb 1, 2027.",
-          "link": {
-            "label": "Learn about the Builder's Challenge",
-            "href": "https://code.org"
-          },
-          "continueLabel": "Get my Certificate"
+          "id": "wrap-up-congrats",
+          "title": "You just built something with AI!",
+          "kind": "congrats",
+          "panelId": "hoai2026",
+          "logoUrl": "https://images.code.org/97fd8149cec556cb09b8010aa268e9b1-AI Makerspace Logo FINAL-trimmed.png"
         }
       ]
     }
