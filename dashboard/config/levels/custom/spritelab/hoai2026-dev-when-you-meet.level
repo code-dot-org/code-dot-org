@@ -105,6 +105,13 @@
           "fields": {
             "COUNT": 12,
             "LOOK": "sparks"
+          },
+          "inputs": {
+            "ORIGIN": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
           }
         },
         {

@@ -1,9 +1,9 @@
+import {Order} from 'blockly/javascript';
+
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import {BURST_LOOKS, MAX_BURST_COUNT} from '../../bursts';
-import {noteImageFieldValue} from '../../imageReferences';
-import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 
 export const BURST_BLOCK_TYPE = 'spritelab2_burst';
 
@@ -28,7 +28,7 @@ const definition: BlockJson = {
       precision: 1,
     },
     {type: 'field_dropdown', name: 'LOOK', options: BURST_LOOK_OPTIONS},
-    {type: FIELD_COSTUME_TYPE, name: 'ORIGIN'},
+    {type: 'input_value', name: 'ORIGIN', check: 'Sprite'},
   ],
   inputsInline: true,
   previousStatement: null,
@@ -37,9 +37,10 @@ const definition: BlockJson = {
   tooltip: 'Fling sparks, confetti or dust out from a sprite for a moment.',
 };
 
-const generator: GeneratorFunction = block =>
+// An empty socket selects no sprite, so the burst comes from nowhere.
+const generator: GeneratorFunction = (block, javascript) =>
   `burstParticles(${Number(block.getFieldValue('COUNT'))}, ${JSON.stringify(
     block.getFieldValue('LOOK')
-  )}, {costume: ${noteImageFieldValue(block.getFieldValue('ORIGIN'))}});\n`;
+  )}, ${javascript.valueToCode(block, 'ORIGIN', Order.COMMA) || 'null'});\n`;
 
 export default {definition, generator};

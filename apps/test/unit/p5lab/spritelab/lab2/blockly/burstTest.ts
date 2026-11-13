@@ -11,15 +11,27 @@ describe('spritelab2_burst', () => {
     BURST_LOOK_OPTIONS.forEach(([label, value]) => expect(value).toBe(label));
   });
 
-  it('generates a burstParticles call with the count, look and origin sprite', () => {
-    const fields: Record<string, string> = {
-      COUNT: '20',
-      LOOK: 'confetti',
-      ORIGIN: '"hero"',
-    };
-    const block = {getFieldValue: (name: string) => fields[name]};
-    expect(burst.generator(block as never, {} as never)).toBe(
-      'burstParticles(20, "confetti", {costume: "hero"});\n'
-    );
+  const block = (fields: Record<string, string>) => ({
+    getFieldValue: (name: string) => fields[name],
+  });
+
+  it('bursts from the sprite plugged into its socket', () => {
+    const javascript = {valueToCode: () => "{group: 'players'}"};
+    expect(
+      burst.generator(
+        block({COUNT: '20', LOOK: 'confetti'}) as never,
+        javascript as never
+      )
+    ).toBe('burstParticles(20, "confetti", {group: \'players\'});\n');
+  });
+
+  it('bursts from no sprite when its socket is empty', () => {
+    const javascript = {valueToCode: () => ''};
+    expect(
+      burst.generator(
+        block({COUNT: '5', LOOK: 'dust'}) as never,
+        javascript as never
+      )
+    ).toBe('burstParticles(5, "dust", null);\n');
   });
 });
