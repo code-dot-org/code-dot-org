@@ -1,0 +1,11 @@
+name 'csp-unit2-lesson25-debugging-choice_27_28'
+display_name 'Debugging'
+description '###Choose at least one problem to debug. If time, try another!'
+
+sublevels
+level 'csp-unit2-lesson25-debugging-choice-a_27_28'
+level 'csp-unit2-lesson25-debugging-choice-b_27_28'
+level 'csp-unit2-lesson25-debugging-choice-c_27_28'
+
+
+uses_lab2

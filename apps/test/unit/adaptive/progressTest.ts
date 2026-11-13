@@ -2,10 +2,11 @@ import {act, renderHook} from '@testing-library/react-hooks';
 
 import {
   EMPTY_PROGRESS,
-  Progress,
   isComplete,
   latestValidation,
+  Progress,
   stepIdToResume,
+  stepsCompleteShare,
   totalTimeSpent,
   useProgress,
   validationAllowsContinue,
@@ -609,5 +610,59 @@ describe('usePathwayStatus', () => {
     const {result} = renderHook(() => usePathwayStatus(pathway, progress));
 
     expect(result.current.statusMap).toEqual(statusMapOf(pathway, progress));
+  });
+});
+
+describe('stepsCompleteShare', () => {
+  const checkpoint = {
+    id: 'c',
+    steps: [
+      {id: 'a', kind: 'markdown'},
+      {id: 'b', kind: 'markdown'},
+      {
+        id: 'only-if',
+        kind: 'markdown',
+        showIf: {stepId: 'a', questionId: 1, choiceId: 'x'},
+      },
+      {id: 'd', kind: 'markdown'},
+    ],
+  } as never;
+
+  it('is the complete share of the visible steps', () => {
+    expect(stepsCompleteShare(checkpoint, {steps: {}})).toBe(0);
+    expect(
+      stepsCompleteShare(checkpoint, {
+        steps: {a: {timeSpent: 0, status: 'complete'}},
+      })
+    ).toBeCloseTo(1 / 3);
+    expect(
+      stepsCompleteShare(checkpoint, {
+        steps: {
+          a: {timeSpent: 0, status: 'complete'},
+          b: {timeSpent: 0, status: 'started'},
+          d: {timeSpent: 0, status: 'complete'},
+        },
+      })
+    ).toBeCloseTo(2 / 3);
+  });
+
+  it('counts a conditional step once its choice shows it', () => {
+    expect(
+      stepsCompleteShare(checkpoint, {
+        steps: {
+          a: {
+            timeSpent: 0,
+            status: 'complete',
+            answers: {1: [{answerId: 'x'}]},
+          },
+        },
+      })
+    ).toBeCloseTo(1 / 4);
+  });
+
+  it('is 0 for a checkpoint with no visible steps', () => {
+    expect(stepsCompleteShare({id: 'e', steps: []} as never, {steps: {}})).toBe(
+      0
+    );
   });
 });

@@ -1,4 +1,4 @@
-import {render, screen, waitFor} from '@testing-library/react';
+import {act, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -6,6 +6,7 @@ import AiDiffDrawer from '@cdo/apps/aiTeacherDrawer/AiDiffDrawer';
 import {DRAWER_WIDTH} from '@cdo/apps/aiTeacherDrawer/constants';
 import {
   setChatIsOpen,
+  setDrawerRubric,
   setPendingArtifactMessage,
 } from '@cdo/apps/aiTeacherDrawer/redux';
 import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
@@ -16,6 +17,7 @@ import currentUser, {
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
@@ -64,6 +66,7 @@ describe('AiDiffDrawer', () => {
 
   afterEach(() => {
     sessionStorage.clear();
+    getStore().dispatch(setDrawerRubric(null));
     jest.restoreAllMocks();
   });
 
@@ -182,5 +185,56 @@ describe('AiDiffDrawer', () => {
     // is still rendered but hidden by MUI Drawer's persistent variant.
     // The header should not be visible in the accessible tree when closed.
     expect(screen.queryByRole('presentation')).toBeFalsy();
+  });
+
+  describe('Rubrics tab', () => {
+    const rubricsTab = () => screen.queryByRole('button', {name: /Rubrics/});
+    const drawerRubric = {
+      rubric: {id: 1, learningGoals: [], level: {name: 'level-1'}},
+      levelName: 'level-1',
+    };
+
+    const enableExperiment = enabled =>
+      jest
+        .spyOn(experiments, 'isEnabled')
+        .mockImplementation(name => enabled && name === 'rubrics-drawer');
+
+    it('shows once a rubric is published for the level', async () => {
+      enableExperiment(true);
+      const store = renderDefault();
+      store.dispatch(setChatIsOpen(true));
+      await screen.findByText(/AI Teaching Assistant/);
+      expect(rubricsTab()).toBeNull();
+
+      act(() => {
+        store.dispatch(setDrawerRubric(drawerRubric));
+      });
+
+      expect(rubricsTab()).toBeInTheDocument();
+    });
+
+    it('hides when the level stops having a rubric', async () => {
+      enableExperiment(true);
+      const store = renderDefault();
+      store.dispatch(setDrawerRubric(drawerRubric));
+      store.dispatch(setChatIsOpen(true));
+      await screen.findByRole('button', {name: /Rubrics/});
+
+      act(() => {
+        store.dispatch(setDrawerRubric(null));
+      });
+
+      expect(rubricsTab()).toBeNull();
+    });
+
+    it('stays hidden without the rubrics-drawer experiment', async () => {
+      enableExperiment(false);
+      const store = renderDefault();
+      store.dispatch(setDrawerRubric(drawerRubric));
+      store.dispatch(setChatIsOpen(true));
+      await screen.findByText(/AI Teaching Assistant/);
+
+      expect(rubricsTab()).toBeNull();
+    });
   });
 });

@@ -393,6 +393,28 @@ describe('ImagesTab', () => {
     expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
   });
 
+  it('lets a visitor look through the images and change nothing when view only', () => {
+    propsByKey.k1 = {name: 'Sprite 1', categories: []};
+    propsByKey.k2 = {name: 'Sprite 2', categories: []};
+    renderTab({editingOffered: true, viewOnly: true});
+    expect(screen.getByRole('region', {name: 'Images'})).toBeTruthy();
+    // Any image can be chosen.
+    fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
+    expect(pressed()).toEqual(['Sprite 2']);
+    fireEvent.click(screen.getByRole('button', {name: 'Sprite 1'}));
+    expect(pressed()).toEqual(['Sprite 1']);
+    // Nothing that would change one is offered.
+    for (const name of [
+      'New image',
+      'Delete image',
+      'Edit this image',
+      'Draw my own',
+      'land sprite character',
+    ]) {
+      expect(screen.queryByRole('button', {name})).toBeNull();
+    }
+  });
+
   it('makes more than one image of the level kind when one image is off', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
     propsByKey.k2 = {name: 'Background 1', categories: ['backgrounds']};

@@ -127,11 +127,30 @@
 
 // Review step
 
+// AttemptCard's shell, holding two titled sections instead of one.
+.reviewCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 800px;
+  padding: 24px;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+}
+
+.reviewSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .reviewAnswers {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin: 0 0 24px;
+  margin: 0;
 }
 
 .reviewAnswer {
@@ -140,7 +159,7 @@
   gap: 2px;
 
   dt {
-    color: var(--text-neutral-secondary);
+    color: var(--text-neutral-tertiary);
   }
 
   dd {
@@ -148,10 +167,16 @@
   }
 }
 
+// Brand purple ties the prompt to the Build with AI button.
 .reviewPlan {
   padding: 16px;
-  border-radius: 0.25rem;
-  background: var(--background-neutral-secondary);
+  border: 1px solid var(--border-brand-mid);
+  border-radius: var(--shape-md);
+  background: var(--background-brand-light);
+
+  strong {
+    font-weight: 600;
+  }
 }
 
 // Markdown step: a panel-sized canvas with the text centered vertically,
