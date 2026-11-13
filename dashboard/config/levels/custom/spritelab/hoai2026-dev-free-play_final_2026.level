@@ -32,6 +32,7 @@
       ]
     },
     "block_catalog": true,
+    "freeplay_intro": true,
     "use_secondary_finish_button": "true",
     "finish_dialog": "hoai2026",
     "toolbox_definition": {
