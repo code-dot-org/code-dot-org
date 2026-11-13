@@ -319,7 +319,7 @@ const SpritelabModeFields: React.FunctionComponent<
             onChange={event =>
               onChange(setImageSource(mode, event.target.value as ImageSource))
             }
-            helperMessage="Cached pictures come from the published set, with the model filling gaps. Live asks the model every time."
+            helperMessage="Cached pictures come from the published set. Live asks the model every time, for a levelbuilder only: students always get cached pictures."
             size="s"
           />
         </div>

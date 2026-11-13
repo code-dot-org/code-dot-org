@@ -124,10 +124,10 @@ interface ImagesTabProps {
   /** The level checks that the picture was rated: the rating strip stays
       until a thumb is given. */
   ratingRequired?: boolean;
-  /** Where a sentence's picture comes from (imageCache.ts); the tree first
-      when unset. */
+  /** Where a sentence's picture comes from (imageCache.ts); the cache when
+      unset. */
   imageSource?: ImageSource;
-  /** Another tree to read cached pictures from (QA). */
+  /** Another address to read cached pictures from (QA). */
   imageCacheUrl?: string;
 }
 
