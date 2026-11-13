@@ -14,13 +14,32 @@
   }
 }
 
-// On a share link the page puts its own footer, with the language menu,
-// over the bottom of the window when the window is under 970px wide. This
-// keeps the lab's bottom bar above it.
+// A share link keeps the page's small footer, with the language menu and
+// the copyright link, at every width. The page layout shows it only when
+// the window is under 970px wide; the view puts this class on the body
+// while a share link is open.
+:global(body.spritelab2-share .responsive-content-mobile-footer) {
+  display: block;
+}
+
+// That footer is fixed over the bottom left of the window. From this width
+// up it shares the lab's bottom row with View code and Make my own, well
+// apart from them. Under it, the lab's row moves up and the footer has a
+// row of its own.
+$share-one-row-min-width: 1200px;
+
 .labRowShared {
-  @media screen and (max-width: 969px) {
+  @media screen and (max-width: #{$share-one-row-min-width - 1px}) {
     box-sizing: border-box;
     padding-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: $share-one-row-min-width) {
+  // Centers the footer's controls on the buttons in the lab's row. `html`
+  // so this outranks the page's own rule for the footer on a dark page.
+  :global(html body.spritelab2-share #page-small-footer .small-footer-base) {
+    margin-bottom: 7px;
   }
 }
 

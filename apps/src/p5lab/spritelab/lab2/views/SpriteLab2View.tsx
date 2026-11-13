@@ -192,6 +192,9 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 // A share link shows the game alone, whatever tabs the level has.
 const SHARE_TABS: readonly Tab[] = ['Play'];
+// On the body while a share link is open, for the page footer's style in
+// sprite-lab2-view.module.scss.
+const SHARE_BODY_CLASS = 'spritelab2-share';
 // The Images pane, for the hook that keeps it inert while closed.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // The editor switch's order.
@@ -330,6 +333,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         : tabsForMode(levelProperties.levelMode) ?? ENABLED_TABS,
     [isShareView, levelProperties.levelMode]
   );
+  useEffect(() => {
+    if (!isShareView) {
+      return;
+    }
+    document.body.classList.add(SHARE_BODY_CLASS);
+    return () => document.body.classList.remove(SHARE_BODY_CLASS);
+  }, [isShareView]);
   const worldTabEnabled = tabs.includes('World');
   // Playfield size for a world this level creates. An existing world keeps
   // the size its grid already holds unless it can grow into this one without
