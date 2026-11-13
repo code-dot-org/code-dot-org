@@ -567,7 +567,7 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :family_name, :version_year, :published_state, :instruction_type, :instructor_audience, :participant_audience,
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources,
-                  :student_resources, :is_migrated, :has_verified_resources, :numbered_units, :course_versions, :show_assign_button,
+                  :student_resources, :is_migrated, :has_verified_resources, :requires_verified_teacher_access, :numbered_units, :course_versions, :show_assign_button,
                   :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path,
                   :ai_chat_tools_dependency, :requires_inaccessible_ai_models], summary.keys
     assert_equal 'my-unit-group', summary[:name]
@@ -578,6 +578,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'Version title', summary[:version_title]
     assert_equal 2, summary[:scripts].length
     assert_equal false, summary[:has_verified_resources]
+    assert_equal false, summary[:requires_verified_teacher_access]
     assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE], summary[:ai_chat_tools_dependency]
 
     # spot check that we have fields that show up in Unit.summarize(false)

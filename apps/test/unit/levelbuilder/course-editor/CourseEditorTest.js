@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
@@ -127,6 +127,26 @@ describe('CourseEditor', () => {
       expect(
         screen.getAllByRole('option', {name: 'Unit Not Part of Course'}).length
       ).toEqual(3);
+    });
+
+    it('saves requires_verified_teacher_access when checked', () => {
+      const ajax = sinon
+        .stub($, 'ajax')
+        .returns({done: () => ({fail: () => {}})});
+      try {
+        renderDefault();
+        fireEvent.click(
+          screen.getByRole('checkbox', {
+            name: /Requires Verified Teacher Access/,
+          })
+        );
+        fireEvent.click(screen.getByText('Save and Keep Editing'));
+
+        const saved = JSON.parse(ajax.firstCall.args[0].data);
+        expect(saved.requires_verified_teacher_access).toBe(true);
+      } finally {
+        ajax.restore();
+      }
     });
   });
 

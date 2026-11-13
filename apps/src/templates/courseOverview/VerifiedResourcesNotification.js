@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 
 import styles from './courseScript.module.scss';
 
-const VERIFIED_RESOURCES_URL =
+export const VERIFIED_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115001550131';
 
 const VerifiedResourcesNotification = ({inLesson}) => {

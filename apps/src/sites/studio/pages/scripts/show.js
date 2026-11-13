@@ -124,6 +124,9 @@ function initPage() {
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
         isSingleUnitCourse={scriptData.is_single_unit_course}
+        requiresVerifiedTeacherAccess={
+          scriptData.requires_verified_teacher_access
+        }
         excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={scriptData.teacher_resources}
         studentResources={scriptData.student_resources || []}

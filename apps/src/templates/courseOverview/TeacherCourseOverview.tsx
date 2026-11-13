@@ -79,6 +79,7 @@ interface CourseSummary {
   course_versions: {[id: string]: Version};
   announcements: Announcement[];
   has_verified_resources: boolean;
+  requires_verified_teacher_access: boolean;
   ai_chat_tools_dependency: AiChatToolsDependencyValue;
   requires_inaccessible_ai_models: boolean;
 }
@@ -248,6 +249,9 @@ const TeacherCourseOverview: React.FC = () => {
       aiChatToolsDependency={courseSummary.ai_chat_tools_dependency}
       requiresInaccessibleAiModels={
         courseSummary.requires_inaccessible_ai_models
+      }
+      requiresVerifiedTeacherAccess={
+        courseSummary.requires_verified_teacher_access
       }
       courseOfferingId={courseSummary.course_offering_id}
       courseVersionId={courseSummary.course_version_id}

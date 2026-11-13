@@ -659,6 +659,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal unit_group.version_year, '2019'
     assert_equal unit_group.family_name, 'csb'
     refute unit_group.has_verified_resources
+    refute unit_group.requires_verified_teacher_access
     refute unit_group.launched?
     refute unit_group.stable?
     assert_equal unit_group.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
@@ -670,6 +671,7 @@ class CoursesControllerTest < ActionController::TestCase
       version_year: '2019',
       family_name: 'csb',
       has_verified_resources: true,
+      requires_verified_teacher_access: true,
       published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable,
       instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced,
       instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,
@@ -680,6 +682,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal '2019', unit_group.version_year
     assert_equal 'csb', unit_group.family_name
     assert unit_group.has_verified_resources
+    assert unit_group.requires_verified_teacher_access
     assert unit_group.launched?
     assert unit_group.stable?
     assert_equal unit_group.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced

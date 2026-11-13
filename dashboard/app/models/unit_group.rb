@@ -123,6 +123,7 @@ class UnitGroup < ApplicationRecord
 
   serialized_attrs %w(
     has_verified_resources
+    requires_verified_teacher_access
     numbered_units
     family_name
     version_year
@@ -375,6 +376,7 @@ class UnitGroup < ApplicationRecord
         student_resources: student_resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown),
         is_migrated: has_migrated_unit?,
         has_verified_resources: has_verified_resources?,
+        requires_verified_teacher_access: requires_verified_teacher_access?,
         numbered_units: numbered_units,
         course_versions: summarize_course_versions(user, locale_code),
         show_assign_button: course_assignable?(user),

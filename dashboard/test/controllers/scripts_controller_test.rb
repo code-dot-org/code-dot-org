@@ -925,6 +925,7 @@ class ScriptsControllerTest < ActionController::TestCase
       student_detail_progress_view: 'on',
       lesson_extras_available: 'on',
       has_verified_resources: 'on',
+      requires_verified_teacher_access: 'on',
       tts: 'on',
       project_sharing: 'on',
       peer_reviews_to_complete: 1,
