@@ -16,15 +16,20 @@ export default function useReclaimAsset(): (url?: string) => Promise<boolean> {
       if (!url) {
         return true;
       }
-      if (!channelId || !url.startsWith(`/v3/assets/${channelId}/`)) {
-        return false;
-      }
       // The classic store is untyped; its list has the lab's shape.
       const list: RuntimeAnimationList = getStore().getState().animationList;
       const stillUsed = Object.values(list.propsByKey).some(
         p => p?.sourceUrl === url
       );
       if (stillUsed) {
+        return false;
+      }
+      // Data uris represent embedded images and do not correspond to a file on the server.
+      if (url.startsWith('data:')) {
+        return true;
+      }
+      // File we can't delete.
+      if (!channelId || !url.startsWith(`/v3/assets/${channelId}/`)) {
         return false;
       }
       try {
