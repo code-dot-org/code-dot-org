@@ -7,7 +7,6 @@ import {useCallback, useEffect, useRef} from 'react';
 import {AnyAction} from 'redux';
 
 import {dataURIToSourceSize} from '@cdo/apps/imageUtils';
-import {unflagProjectChannel} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {
   deleteAnimation,
   isNameUnique,
@@ -36,9 +35,10 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/views/imageSave';
 import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
 import useReclaimAsset from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
+import useReleaseRemovedImages from '@cdo/apps/p5lab/spritelab/lab2/views/useReleaseRemovedImages';
 import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
 import {getStore} from '@cdo/apps/redux';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {ImageProps} from './projectImages';
 
@@ -128,8 +128,7 @@ export default function useImageWriter({
 }: WriterOptions): ImageWriter {
   const dispatch = useAppDispatch();
   const reclaimAsset = useReclaimAsset();
-  const channelId = useAppSelector(state => state.lab.channel?.id);
-  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
+  const releaseRemovedImages = useReleaseRemovedImages();
   // Uploads keyed by the result's filename, so choosing an earlier picture
   // of the session again reuses its upload.
   const uploadsRef = useRef(new Map<string, Upload>());
@@ -310,17 +309,12 @@ export default function useImageWriter({
         // deleteAnimation is an untyped JS thunk; cast for dispatch.
         deleteAnimation(key, true /* isSpriteLab */) as unknown as AnyAction
       );
-      reclaimAsset(removed?.sourceUrl);
+      releaseRemovedImages([removed]);
       if (removed?.name) {
         onDeleteImage(removed.name);
       }
-      // Taking the flagged picture out lifts the block it caused. The server
-      // recounts, so a project with another flagged picture stays blocked.
-      if (removed?.flagged && isBlockedAbuse && channelId) {
-        unflagProjectChannel(channelId, dispatch);
-      }
     },
-    [dispatch, reclaimAsset, onDeleteImage, isBlockedAbuse, channelId]
+    [dispatch, releaseRemovedImages, onDeleteImage]
   );
 
   return {
