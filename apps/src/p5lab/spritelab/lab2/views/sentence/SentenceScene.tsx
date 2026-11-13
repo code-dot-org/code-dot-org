@@ -196,8 +196,8 @@ interface SentenceSceneProps {
       from Behind the scenes. */
   onTellStory?: (story: LearningStory) => void;
   advanced?: AdvancedOptions;
-  /** Where a sentence's picture comes from (imageCache.ts); the tree first
-      when unset. A typed prompt always goes to the model. */
+  /** Where a sentence's picture comes from (imageCache.ts); the tree when
+      unset. A typed prompt always goes to the model. */
   imageSource?: ImageSource;
   /** Another tree to read cached pictures from (QA). */
   imageCacheUrl?: string;
@@ -325,13 +325,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     setRatingDismissed(false);
     setError(null);
     playSound('go');
-    // A filling the tree lacks, or a lookup that fails, goes to the model.
     let cached: CachedImage | undefined;
+    let lookupFailed = false;
     if (fromCache) {
       try {
         cached = await findCached();
       } catch (e) {
         console.warn('Image cache lookup failed:', e);
+        lookupFailed = true;
       }
       if (run !== runRef.current) {
         return;
@@ -351,6 +352,17 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       },
       true
     );
+    // The tree is the only source of a sentence's picture: the model does
+    // not draw a filling the tree lacks.
+    if (fromCache && !cached) {
+      setError(
+        lookupFailed
+          ? "Couldn't make the picture. Try again."
+          : "We don't have a picture for those words yet. Try different ones."
+      );
+      setMode('edit');
+      return;
+    }
     onGenerateStart?.();
     try {
       const options: GenerateImageOptions = {

@@ -1,5 +1,6 @@
 import {
   generationLimitForMode,
+  imageSourceFor,
   imageSourceForMode,
   isFreeplayMode,
   isOneImageMode,
@@ -122,6 +123,22 @@ describe('generationLimitForMode', () => {
     expect(generationLimitForMode(saved('5'))).toBeUndefined();
     expect(generationLimitForMode(saved(0))).toBeUndefined();
     expect(generationLimitForMode(saved(2.5))).toBeUndefined();
+  });
+});
+
+describe('imageSourceFor', () => {
+  const liveLevel: LevelMode = {kind: 'image', imageSource: 'live'};
+
+  it('gives anyone but a levelbuilder the tree, whatever is asked for', () => {
+    expect(imageSourceFor(liveLevel, undefined, false)).toBe('cached');
+    expect(imageSourceFor({kind: 'image'}, 'live', false)).toBe('cached');
+  });
+
+  it("gives a levelbuilder the level's source, or the one asked for", () => {
+    expect(imageSourceFor(liveLevel, undefined, true)).toBe('live');
+    expect(imageSourceFor({kind: 'image'}, 'live', true)).toBe('live');
+    expect(imageSourceFor(liveLevel, 'cached', true)).toBe('cached');
+    expect(imageSourceFor({kind: 'image'}, undefined, true)).toBe('cached');
   });
 });
 

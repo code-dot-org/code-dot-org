@@ -93,7 +93,7 @@ import {onTrimsUpdated} from '../imageTrim';
 import {
   editsWorld,
   generationLimitForMode,
-  imageSourceForMode,
+  imageSourceFor,
   isFreeplayMode,
   isOneImageMode,
   tabsForMode,
@@ -200,7 +200,7 @@ const PREVIEW_SHARE = 0.22;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 
-// ?image-source=live|cached overrides the level's, and
+// ?image-source=live|cached overrides the level's for a levelbuilder, and
 // ?image-cache-url= reads another tree (a local one, or a version under
 // review), for internal testing.
 function getImageSourceParam(): ImageSource | undefined {
@@ -310,10 +310,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
   const imageSourceParam = useMemo(getImageSourceParam, []);
   const imageCacheUrlParam = useMemo(getImageCacheUrlParam, []);
-  // The advanced image settings, for authors; level edit modes have them.
+  const isLevelbuilder = !!useAppSelector(
+    state => state.currentUser.isLevelbuilder
+  );
+  // The advanced image settings send their requests to the model, so they
+  // are for a levelbuilder; level edit modes have them.
+  const imagesAdvancedParam = useMemo(
+    () => queryParams('images-advanced') === 'true',
+    []
+  );
   const imagesAdvanced =
-    useMemo(() => queryParams('images-advanced') === 'true', []) ||
-    isLevelEditMode;
+    (isLevelbuilder && imagesAdvancedParam) || isLevelEditMode;
   // The mode decides the tab set, and an image level's is empty: its panel
   // replaces the shell. A level with no mode, or one whose authored kind is
   // not a kind we know, falls back to the lab defaults.
@@ -2344,10 +2351,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 advancedOffered={imagesAdvanced}
                 onDrawingHistory={setDrawingHistory}
                 ratingRequired={ratingRequired}
-                imageSource={
-                  imageSourceParam ||
-                  imageSourceForMode(levelProperties.levelMode)
-                }
+                imageSource={imageSourceFor(
+                  levelProperties.levelMode,
+                  imageSourceParam,
+                  isLevelbuilder
+                )}
                 imageCacheUrl={imageCacheUrlParam}
               />
             </div>

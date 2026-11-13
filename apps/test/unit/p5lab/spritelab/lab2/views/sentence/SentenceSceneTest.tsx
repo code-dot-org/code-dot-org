@@ -93,11 +93,13 @@ const layout = (parts: SentenceSceneParts) => (
 
 const onKeep = jest.fn();
 
+// The model draws unless a test names the tree.
 function renderScene(props = {}) {
   return render(
     <ThemeProvider>
       <SentenceScene
         imageType="sprite"
+        imageSource="live"
         onKeep={onKeep}
         layout={layout}
         {...props}
@@ -440,16 +442,19 @@ describe('SentenceScene', () => {
       expect(findCachedImage.mock.calls[2][0].avoidVariant).toBeUndefined();
     });
 
-    it('draws with the model when the tree lacks the words, at its own pace', async () => {
+    it('asks for different words when the tree lacks them, without the model', async () => {
       findCachedImage.mockResolvedValue(undefined);
-      generateCharacterSet.mockResolvedValue(RESULT);
       renderCached();
       pickCreature();
       await generate();
-      expect(generateCharacterSet.mock.calls[0][1].cached).toBeUndefined();
-      expect(screen.getByText('Your picture is ready.')).toBeTruthy();
-      expect(screen.queryByText('cached')).toBeNull();
-      expect(onGenerateStart).toHaveBeenCalledTimes(1);
+      expect(generateCharacterSet).not.toHaveBeenCalled();
+      expect(generateImage).not.toHaveBeenCalled();
+      expect(
+        screen.getByText(
+          "We don't have a picture for those words yet. Try different ones."
+        )
+      ).toBeTruthy();
+      expect(onGenerateStart).not.toHaveBeenCalled();
       expect(sendEvent).toHaveBeenCalledWith(
         'hoai2026-image-prompt',
         expect.objectContaining({imageSource: 'cached', cached: false}),
@@ -457,15 +462,17 @@ describe('SentenceScene', () => {
       );
     });
 
-    it('draws with the model when the lookup fails', async () => {
+    it('asks to try again when the lookup fails, without the model', async () => {
       findCachedImage.mockRejectedValue(new TypeError('Failed to fetch'));
-      generateCharacterSet.mockResolvedValue(RESULT);
       const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
       renderCached();
       pickCreature();
       await generate();
-      expect(generateCharacterSet).toHaveBeenCalledTimes(1);
-      expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+      expect(generateCharacterSet).not.toHaveBeenCalled();
+      expect(generateImage).not.toHaveBeenCalled();
+      expect(
+        screen.getByText("Couldn't make the picture. Try again.")
+      ).toBeTruthy();
       expect(warn).toHaveBeenCalled();
       warn.mockRestore();
     });
