@@ -168,27 +168,49 @@ describe('platformPhysics', () => {
     expect(feet(player)).toBe(400);
   });
 
-  it('jumps straight up beside a wall, past the block on top of it, at any art size', () => {
-    // A floor, and a wall two blocks tall at its right end.
-    const walls = [wallAt(3, 6), wallAt(4, 6), wallAt(4, 5), wallAt(4, 4)];
+  describe('a body resting against the side of a wall, at fractional art sizes', () => {
     const jumpSpeed = 12;
-    [1, 0.83, 1.19].forEach(scale => {
-      [20, 23.7, 31.3].forEach(width => {
-        const sprite = {
-          ...makeSprite(165, 300 - (40 * scale) / 2, width, 40),
-          scale,
-        };
-        // Walk right until the wall stops the body, then stand.
-        run(sprite, walls, 30, 3);
-        run(sprite, walls, 5);
+    const sizes = [1, 0.83, 1.19].flatMap(scale =>
+      [20, 23.7, 31.3].map(width => ({scale, width}))
+    );
+
+    // Stands a player on the floor at row 6, against the wall in column 4.
+    const standAgainstWall = (
+      walls: PhysicsBox[],
+      {scale, width}: {scale: number; width: number}
+    ) => {
+      const sprite = {
+        ...makeSprite(165, 300 - (40 * scale) / 2, width, 40),
+        scale,
+      };
+      run(sprite, walls, 30, 3);
+      run(sprite, walls, 5);
+      return sprite;
+    };
+
+    it('jumps past a block on top of the wall', () => {
+      const walls = [wallAt(3, 6), wallAt(4, 6), wallAt(4, 5), wallAt(4, 4)];
+      sizes.forEach(size => {
+        const sprite = standAgainstWall(walls, size);
         const restY = sprite.position.y;
         let highestY = restY;
         sprite.velocity.y = -jumpSpeed;
         run(sprite, walls, 40, 0, s => {
           highestY = Math.min(highestY, s.position.y);
         });
-        // Higher than one block: the block on top of the wall did not stop it.
+        // Higher than one block: the upper block did not stop it.
         expect(restY - highestY).toBeGreaterThan(50);
+      });
+    });
+
+    it('comes back down to its footing, not onto the top edge of the wall', () => {
+      const walls = [wallAt(3, 6), wallAt(4, 6), wallAt(4, 5)];
+      sizes.forEach(size => {
+        const sprite = standAgainstWall(walls, size);
+        const restY = sprite.position.y;
+        sprite.velocity.y = -jumpSpeed;
+        run(sprite, walls, 60);
+        expect(sprite.position.y).toBeCloseTo(restY);
       });
     });
   });
