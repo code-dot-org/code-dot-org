@@ -2,8 +2,8 @@ import * as BlocklyCore from 'blockly/core';
 
 type ToolboxItemInfo = BlocklyCore.utils.toolbox.ToolboxItemInfo;
 
-// Blockly ignores a dynamic category's contents. Ours hold the level's own
-// blocks, which getCategoryBlocksJson adds to the generated flyout.
+// Blockly ignores a dynamic category's contents; getCategoryBlocksJson adds
+// them to the generated flyout.
 export type DynamicCategoryInfo =
   BlocklyCore.utils.toolbox.DynamicCategoryInfo & {
     contents?: BlocklyCore.utils.toolbox.FlyoutItemInfoArray;

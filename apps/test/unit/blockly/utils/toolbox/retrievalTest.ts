@@ -26,17 +26,6 @@ describe('getCategoryBlocksJson', () => {
     Blockly.toolboxBlocks = undefined;
   });
 
-  it("reads a JSON toolbox's dynamic category blocks", () => {
-    const toolbox = variablesHolding([{kind: 'block', type: 'math_number'}]);
-    Blockly.toolboxBlocks = toolbox;
-    const workspace = workspaceShowing(toolbox);
-
-    expect(getCategoryBlocksJson(workspace, 'VARIABLE')).toEqual([
-      {kind: 'block', type: 'math_number'},
-    ]);
-    expect(getCategoryBlocksJson(workspace, 'PROCEDURE')).toEqual([]);
-  });
-
   it('reads the toolbox the workspace shows now, not the injected one', () => {
     Blockly.toolboxBlocks = variablesHolding([]);
     const workspace = workspaceShowing(
@@ -46,5 +35,6 @@ describe('getCategoryBlocksJson', () => {
     expect(getCategoryBlocksJson(workspace, 'VARIABLE')).toEqual([
       {kind: 'block', type: 'math_number'},
     ]);
+    expect(getCategoryBlocksJson(workspace, 'PROCEDURE')).toEqual([]);
   });
 });

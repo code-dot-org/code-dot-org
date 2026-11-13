@@ -93,7 +93,6 @@ export default function (
         DYNAMIC_CATEGORY_OPTIONS[name]
       );
       if (dynamicCategoriesHoldBlocks) {
-        // Blocks that follow join the generated flyout, after its own blocks.
         currentCategory = dynamicCategory;
       } else {
         fullToolbox.contents.push(dynamicCategory);

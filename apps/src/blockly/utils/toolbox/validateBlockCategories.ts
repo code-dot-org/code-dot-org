@@ -37,10 +37,8 @@ export function validateBlockCategories(
     } else {
       // All non-category blocks
       if (!currentCategoryBlock) {
-        // No static category block above this block
         block.setWarningText(warningText);
       } else {
-        // Valid placement under a static category block
         block.setWarningText(null);
       }
     }
