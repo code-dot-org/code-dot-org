@@ -4,6 +4,7 @@ import {
   createEmptyWorld,
   DEFAULT_SCENE_GRID_SIZE,
   isLegacyWorld,
+  imagesWithOneLeft,
   paintWorldCell,
   resizeWorld,
   sceneGridSize,
@@ -174,6 +175,51 @@ describe('world', () => {
     expect(second.grid[1][1]).toEqual({image: 'b', kind: 'sprite'});
     expect(first.grid[1][1]).toBeNull();
     expect(paintWorldCell(second, 0, 0, null).grid[0][0]).toBeNull();
+  });
+
+  it('finds the images that are the only one of their kept role', () => {
+    const gem: WorldCell = {image: 'Gem', kind: 'sprite'};
+    const coin: WorldCell = {image: 'Coin', kind: 'sprite'};
+    const pal: WorldCell = {image: 'Pal', kind: 'sprite'};
+    const stone: WorldCell = {image: 'Stone', kind: 'block'};
+    // Two images share the treasure role. Stone has no kept role.
+    const kept = new Map([
+      ['Gem', 'treasure'],
+      ['Coin', 'treasure'],
+      ['Pal', 'friend'],
+    ]);
+    // The treasure role is on two squares, so neither treasure is the
+    // last. The friend is on one.
+    const world = {
+      grid: [
+        [gem, coin, stone],
+        [pal, null, null],
+      ],
+    };
+    expect([...imagesWithOneLeft(world, kept)]).toEqual(['Pal']);
+    expect(imagesWithOneLeft(undefined, kept).size).toBe(0);
+  });
+
+  it('ignores a change that would remove the last copy of a kept image', () => {
+    const gem: WorldCell = {image: 'Gem', kind: 'sprite'};
+    const stone: WorldCell = {image: 'Stone', kind: 'block'};
+    const kept = new Map([
+      ['Gem', 'treasure'],
+      ['Coin', 'treasure'],
+    ]);
+    const one = paintWorldCell(undefined, 0, 0, gem, kept);
+    expect(paintWorldCell(one, 0, 0, null, kept)).toBe(one);
+    expect(paintWorldCell(one, 0, 0, stone, kept)).toBe(one);
+    // With a second copy placed, either one can go, but not both.
+    const two = paintWorldCell(one, 0, 1, gem, kept);
+    const moved = paintWorldCell(two, 0, 0, null, kept);
+    expect(moved.grid[0][0]).toBeNull();
+    expect(paintWorldCell(moved, 0, 1, null, kept)).toBe(moved);
+    // The role's last square can take another image of the same role.
+    const coin: WorldCell = {image: 'Coin', kind: 'sprite'};
+    expect(paintWorldCell(moved, 0, 1, coin, kept).grid[0][1]).toEqual(coin);
+    // An image that is not kept can always be removed.
+    expect(paintWorldCell(one, 0, 0, null).grid[0][0]).toBeNull();
   });
 
   it('keeps the identity of every row a paint does not touch', () => {

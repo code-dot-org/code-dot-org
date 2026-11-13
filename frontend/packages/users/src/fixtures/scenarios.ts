@@ -31,6 +31,7 @@ export const USERS_SCENARIO_TAGS = [
   'teacher-no-dependents',
   'sso-teacher-dependents',
   'teacher-no-school',
+  'non-school-teacher',
   'multi-sso-teacher',
   'lti-teacher',
   'lti-only-teacher',
@@ -446,6 +447,22 @@ const teacherNoSchool: UsersScenario = {
   description: 'Educator with no school and no role — empty state of both.',
 };
 
+const nonSchoolTeacher: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 23},
+  settings: {
+    ...teacher.settings,
+    school_info: {
+      school_name: null,
+      school_type: 'noSchoolSetting',
+      school_id: null,
+      school_zip: '98101',
+      country: 'US',
+    },
+  },
+  description: 'Educator who does not teach in a school setting.',
+};
+
 const multiSsoTeacher: UsersScenario = {
   ...teacher,
   currentUser: {...teacher.currentUser, id: 15},
@@ -607,6 +624,7 @@ export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
   'teacher-no-dependents': teacherNoDependents,
   'sso-teacher-dependents': ssoTeacherDependents,
   'teacher-no-school': teacherNoSchool,
+  'non-school-teacher': nonSchoolTeacher,
   'multi-sso-teacher': multiSsoTeacher,
   'lti-teacher': ltiTeacher,
   'lti-only-teacher': ltiOnlyTeacher,

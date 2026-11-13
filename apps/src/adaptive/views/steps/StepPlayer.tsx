@@ -24,6 +24,7 @@ import {checkpointStepFromUrl, updateUrl} from '../checkpointUrl';
 import {getSkillProgress} from '../map/groupProgress';
 import {usePathwayContext} from '../PathwayContext';
 
+import CongratsStep from './CongratsStep';
 import LevelStep from './LevelStep';
 import MarkdownStep from './MarkdownStep';
 import PanelsStep from './PanelsStep';
@@ -271,6 +272,8 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             onComplete={advance}
           />
         );
+      case 'congrats':
+        return <CongratsStep key={step.id} step={step} onComplete={advance} />;
       case 'stats':
         return (
           <StatsStep
@@ -308,7 +311,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
     <div className={styles.player}>
       <AdaptiveHeader
         title={headerTitle ?? `${checkpoint.title}: ${step.title}`}
-        onViewSkillTree={() => {
+        onViewSkillMap={() => {
           sendAdaptiveEvent(
             EVENTS.ADAPTIVE_SKILL_MAP_HEADER_BUTTON_CLICKED,
             {

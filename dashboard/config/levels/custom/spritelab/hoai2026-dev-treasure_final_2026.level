@@ -1,0 +1,75 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2026-11-13T13:28:25.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
+    "level_mode": {
+      "kind": "image",
+      "limitedPaintTools": true,
+      "generationLimit": 5,
+      "imageType": "sprite",
+      "imageSubject": "object",
+      "imageRole": "treasure",
+      "oneImage": true
+    },
+    "objectives": {
+      "title": "**Treasure**",
+      "items": [
+        {
+          "text": "Select the **+** button and make a new object.",
+          "check": {
+            "kind": "image",
+            "imageType": "sprite"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Treasure or hazard?\r\n\r\nMake an object for your player to seek or avoid.\r\n",
+    "header_label": "Treasure",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "name_suffix": "_final_2026",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-13T13:28:25.946+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-treasure\\\"\"],\"cloned_from\":\"hoai2026-dev-treasure\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>

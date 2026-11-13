@@ -48,9 +48,11 @@ const StudentRubricView: React.FC = () => {
   }
 
   // Sort from highest to lowest understanding level
-  const sortedEvidenceLevels = currentLearningGoal.evidenceLevels?.sort(
-    (a, b) => b!.understanding - a!.understanding
-  );
+  const sortedEvidenceLevels = currentLearningGoal.evidenceLevels
+    ? [...currentLearningGoal.evidenceLevels].sort(
+        (a, b) => b!.understanding - a!.understanding
+      )
+    : undefined;
 
   return (
     <div className={styles.rubricContainer}>

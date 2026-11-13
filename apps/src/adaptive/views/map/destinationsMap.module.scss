@@ -1,51 +1,55 @@
 @use './destinationColors' as colors;
 
-// A destination group's box, its title in the top corner on the outer side.
-// A declared color tints the title's icon; the border stays neutral.
+// A destination group's box: a header strip across the top with the
+// group's icon and title, the circles below. A declared color tints the
+// icon; the box stays neutral.
 .destination {
   --destination-accent: var(--text-neutral-secondary);
 
   position: absolute;
   z-index: 0;
+  overflow: hidden;
   border: 1px solid var(--borders-neutral-primary);
-  border-radius: 16px;
+  border-radius: var(--shape-md);
   background: var(--background-neutral-primary);
 }
 
 @include colors.destination-colors;
 
-.destinationTitle {
-  position: absolute;
-  top: 10px;
-  left: 14px;
+.destinationHeader {
   display: flex;
   align-items: center;
-  gap: 6px;
-  color: var(--text-neutral-primary);
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
+  gap: 8px;
+  padding: 8px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
 }
 
 .destinationIcon {
   color: var(--destination-accent);
+  font-size: 16px;
 }
 
-.destinationRight .destinationTitle {
-  right: 14px;
-  left: auto;
+.destinationTitle {
+  color: var(--text-neutral-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 // A destination member's title sits beside its circle, on the outer side;
-// any other title sits below it, two lines at most.
-// Titles clear the 10px focus ring around the circle.
+// any other title sits below it, two lines at most. A title clears the
+// 10px ring around a focused circle.
 .labelBelow {
   position: relative;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  margin-top: 14px;
+  margin-top: 12px;
   padding: 0 2px;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
@@ -65,12 +69,12 @@
 }
 
 .labelLeft {
-  right: calc(50% + 50px);
+  right: calc(50% + 56px);
   text-align: right;
 }
 
 .labelRight {
-  left: calc(50% + 50px);
+  left: calc(50% + 56px);
   text-align: left;
 }
 

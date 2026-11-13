@@ -1,0 +1,50 @@
+name 'pl-aif-y2-u2-l4-testing-regression-models'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Testing Regression Models
+
+<img src="https://images.code.org/304b487ecbc79fe5221114de0cffba66-image-1794512083855.png" alt="A scatter plot of test data points with two fitted lines: Dani's model (dashed) and Sasha's model (solid), showing Dani's line passing exactly through some points while Sasha's line stays consistently close to all of them" style="width: 320px; border-radius: 10px; float: right; margin: 0 0 10px 20px;">
+
+Lesson 6 opens with a debate: Dani and Sasha each built a regression model for the same test data. 
+
+Dani's model gets more predictions exactly correct. Sasha's model never hits exactly, but every prediction stays close. Whose model is actually better?
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Hold that question:</strong> this isn't resolved yet, students work through it hands-on in the Exploring Loss Activity Guide before this lesson's facilitation content settles it.
+  </div>
+</div>
+
+
+## Lesson Vocabulary 
+
+Four terms carry this lesson, click each card to see its definition:
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/testing-regression-flip-cards.html"
+    width="100%"
+    height="580"
+    frameborder="0"
+    scrolling="no"
+    title="Testing regression models vocabulary flip cards: loss, loss function, absolute error, test data">
+  </iframe>
+</div>
+
+
+## Absolute Error
+
+**Absolute error**, the loss function students implement in this lesson, is simple: the distance between a prediction and an actual value, and distance is never negative.
+
+For example: if the actual value is 2, a prediction of 1 and a prediction of 3 are both off by the same amount, an absolute error of 1 either way.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> test data is kept separate from training data on purpose, testing a model on data it's never seen gives a far better sense of how it performs in the real world. When you introduce the term, point students to the actual dots on the chart in their Activity Guide, that's the test data, made concrete.</div>
+</div>
+
+
+
+
+MARKDOWN

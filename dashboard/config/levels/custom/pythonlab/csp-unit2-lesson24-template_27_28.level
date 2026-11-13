@@ -1,0 +1,66 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-13T05:43:30.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "template level",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from theater import *\n\n# ----- YOUR DATA STORY: change these to match your plan -----\nstory = \"My data story\"\ncount = 7\n\n# AI SLOT 1: ask AI Tutor for drawing code that sets up your picture\n# (background, title, labels). Paste it here. It should only draw.\n\n\n# YOUR CODE: start total at 0\n\n\nfor j in range(count):\n    value = 0    # YOUR CODE: replace 0 so value is the number from input(), turned into an int\n    # YOUR CODE: add value to total\n\n    # AI SLOT 2: ask AI Tutor for drawing code for this one number. It can use j and value.\n    # Paste it here, inside the loop.\n\n\n# YOUR CODE: set average to the total divided by count\n\n# YOUR CODE: set splits_evenly to True when total divides evenly by count (use %), and False if not\n\n# AI SLOT 3: ask AI Tutor for drawing code that shows the average. It can use average and splits_evenly.\n# Paste it here.\n\n\n# YOUR CODE: print the total, the average, and splits_evenly\n\nplay()",
+          "folderId": "0",
+          "active": false
+        },
+        "1": {
+          "id": "1",
+          "name": "story_plan.txt",
+          "contents": "MY STORY\nWhat will you count? (one sentence, for example: \"the minutes I practice each day\")\n\n\n\nMY NUMBERS\nHow many numbers will you enter (3 to 10)?\nWhat do the numbers measure, and what is a normal range (for example, 10 to 60)?\n\n\n\nMY HAND TRACE\nMake up your first three numbers. After each one, write the total so far.\nNumber 1:      Total so far:\nNumber 2:      Total so far:\nNumber 3:      Total so far:\nIf you stopped after three numbers, what would the average be?\nDoes the total split evenly among the three numbers? (Is it divisible by 3?)\n\n\n\nMY PICTURE\nWhat should your picture look like? Finish these sentences.\nEach number will be a ______ (for example: bar, square, circle, dot).\nThe bigger the number, the shape will be ______ (for example: taller, larger, darker, higher).\nThe average will show up as ______ (for example: a line across the picture, one big shape, a label).\n\n\n\nMY AI PROMPT\nWrite what you will ask AI Tutor to draw. Use this pattern, then add your own details.\nDraw one ______ for each number. Use j for ______ and value for ______.\nThe biggest value is ______.\nAfter the loop, use average to draw ______.\nOnly draw. Do not calculate the total or the average.",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "story_review.txt",
+          "contents": "MY TESTING\nRun your program with numbers you choose. Check the total, the average, and whether the total splits evenly by hand.\nNumbers I typed:\nTotal I worked out by hand:\nAverage I worked out by hand:\nDoes the total split evenly by hand? (True or False):\nTotal from my program:\nAverage from my program:\nSplits evenly from my program:\nDid they match? If not, what did you change?\n\n\n\nMY PARTNER CHECK\nYour partner reads your numbers (not your code) and guesses the average. Then run it.\nPartner's guess for the average:\nActual average:\nHow close was the guess?\nIn one sentence, what story does your picture tell?\n\n\n\nMY REFLECTION\nWhat did you ask AI Tutor to do?\nWhich parts of its code did you keep, change, or reject, and why?\nWhich lines did you write yourself?\nOne sentence: what does your data show?",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "1",
+        "0",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoESQt4C4e0qVw7\ntcYjYjTslkFgvY9S1eVKSoufcedXxmCwAazuW+GKAWnM2WeklzSpLWeSgeTP\nT33PsYVVZJ7RGgc7GiaBvRoatQwTRKV/+0AGxnigoQnYar6CVVEiCRXGM8ia\njWODczfbPufZzEhHNm09Vb0KxIhS48WzIMkNeFzkR6LmerIFw5OJMaUcKucA\nb21fSb4lyFPG5XwHe+mgbNd9NLyibxSDafUObfhHv1ADyqevfVjsl5n688F3\n9zu1lQxXIY+RtfGeANNcZDZ6MBbFhci1/wJ8pf1QW6TGyzKOJkAizfFfbE50\nIqxF+YVmk+iSi0Qt18iIQmie3eJpXX1gMAU47hs4mIVkl/m0SZkONFOA3yp+\n5YHSD/XKe1LbT8OxuuJW+s8ySAZy+Xyyuj9ykII/jfzPdcPwwS3gSO0VUFkY\nURm+Nrne5gMrg3PZD2gjr1XMX+CS0Bwi9BAkcBkT4O++Fyi6ToUOB4xOVdDM\n0+02ypEuBBsvBqzi98zH4nMbP6JZYDc3S4qD6GWwaJ5iHAWIVxJFn0JYixcv\nYQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-13T05:43:30.476+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson24-plan-story_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson24-plan-story_27_28\"},{\"changed_at\":\"2026-11-13 05:45:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"ai_tutor_prompt_settings\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 05:47:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 05:52:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 05:53:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 06:10:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 06:11:12 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 07:03:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 07:03:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 07:10:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 08:45:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

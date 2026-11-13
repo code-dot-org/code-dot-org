@@ -42,8 +42,8 @@ module User::AiAccessible
     return SPRITELAB_ASK_AI_REFUSALS[:OFF] unless DCDO.get('spritelab-lab2-ask-ai-enabled', true)
     # Essential-only won't do: it would trust a client-supplied level id.
     return SPRITELAB_ASK_AI_REFUSALS[:NO_ACCESS] unless ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]
-    # AiGatewayAuthController refuses these for every client type.
-    return SPRITELAB_ASK_AI_REFUSALS[:REGION_BLOCKED] if blocked_aichat_providers.any? && !DCDO.get('ai_gateway_fallback_is_enabled', false)
+    # The gateway's fallback serves only adaptive and the tutor.
+    return SPRITELAB_ASK_AI_REFUSALS[:REGION_BLOCKED] if blocked_aichat_providers.any?
     nil
   end
 
@@ -61,9 +61,20 @@ module User::AiAccessible
     international_ai_chat_user? ? AI_CHAT_US_ONLY_PROVIDERS : []
   end
 
-  def can_use_aichat_model?(model_id)
+  def ai_gateway_fallback_allowed?(client_type)
+    DCDO.get('ai_gateway_fallback_is_enabled', false) &&
+      AI_GATEWAY_FALLBACK_CLIENT_TYPES.include?(client_type)
+  end
+
+  def should_ai_gateway_fall_back?(model_id, client_type)
+    ai_gateway_fallback_allowed?(client_type) && AI_CHAT_GEMINI_IMAGE_MODEL_IDS.exclude?(model_id)
+  end
+
+  # Without a client type, as on the Rails chat path, no fallback applies.
+  def can_use_aichat_model?(model_id, client_type: nil)
     provider = AI_CHAT_PROVIDER_BY_MODEL_ID[model_id]
-    provider.nil? || blocked_aichat_providers.exclude?(provider)
+    return true if provider.nil? || blocked_aichat_providers.exclude?(provider)
+    should_ai_gateway_fall_back?(model_id, client_type)
   end
 
   # has essential or higher access to AI chat tools

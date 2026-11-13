@@ -17,8 +17,8 @@ import {shuffle} from 'lodash';
 import {bytesToBase64} from './encoding';
 import {ImageStyle} from './types';
 
-/** Where a level's pictures come from: the tree first, with the model for
-    a picture the tree lacks (the default), or the model alone. */
+/** Where a level's pictures come from: the cache (the default) or the
+    model. */
 export const IMAGE_SOURCES = ['live', 'cached'] as const;
 export type ImageSource = (typeof IMAGE_SOURCES)[number];
 
@@ -41,7 +41,7 @@ export const IMAGE_CACHE_VERSION = 'v1';
 export const EMPTY_WORD_ID = '_';
 
 /** How many variants the generator draws per filling, numbered from 00. */
-export const VARIANT_COUNT = 3;
+export const VARIANT_COUNT = 8;
 
 /** A character set's frames by pose label, 'base' first; a single image is
     'single'. */
@@ -52,7 +52,7 @@ export class ImageCacheMissError extends Error {
   constructor(url: string, readonly status?: number) {
     super(`Cached image missing: ${url}${status ? ` (${status})` : ''}`);
     // The ES5 build target otherwise leaves this with Error's prototype.
-    Object.setPrototypeOf(this, ImageCacheMissError.prototype);
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'ImageCacheMissError';
   }
 }
@@ -87,7 +87,7 @@ export function sentencePath(
   return `${sentenceId}/${wordIds.join('/')}/${style}`;
 }
 
-// A file the tree lacks stays missing for the page: Generate again asks
+// A file the cache lacks stays missing for the page: Generate again asks
 // about the same variants. A fetch that failed is asked again.
 const missing = new Set<string>();
 
@@ -122,7 +122,7 @@ export interface FindCachedImageParams {
   characterSet: boolean;
   /** The variant shown last time; another is preferred when one exists. */
   avoidVariant?: number;
-  /** Override for tests and QA; defaults to the published tree. */
+  /** Override for tests and QA; defaults to the published cache. */
   baseUrl?: string;
   version?: string;
 }
