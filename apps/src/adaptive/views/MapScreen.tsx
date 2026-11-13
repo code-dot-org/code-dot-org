@@ -25,6 +25,7 @@ import MapZoom from './map/MapZoom';
 import styles from './mapScreen.module.scss';
 
 /* eslint-disable import/order */
+import {offset} from '@floating-ui/dom';
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
 import type {Tour} from 'shepherd.js';
 import {createTourWithSteps} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
@@ -139,7 +140,11 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     const indices = getSkillMapTourStepIndices(hasSkippedCheckpoints);
     const tour = createTourWithSteps(
       t => buildSkillMapTourSteps(t, hasSkippedCheckpoints),
-      {scrollTo: false, cancelIcon: {enabled: false}}
+      {
+        scrollTo: false,
+        cancelIcon: {enabled: false},
+        floatingUIOptions: {middleware: [offset(10)]},
+      }
     );
 
     tour.on('show', () => {
