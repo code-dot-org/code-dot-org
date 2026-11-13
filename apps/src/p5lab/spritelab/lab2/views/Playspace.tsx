@@ -33,7 +33,7 @@ export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 // Read by a screen reader when focus reaches the game, which otherwise
 // reports itself only in sound.
 const FULL_HELP =
-  'Left and right arrows move. Space or up arrow jumps. In zero gravity, ' +
+  'Left and right arrows move. Space or up arrow jumps. In altered gravity, ' +
   'arrows steer. Turn on navigation sounds in Settings. ' +
   'Press H to hear this again.';
 // After the first visit, so the full help does not hold up what the game
