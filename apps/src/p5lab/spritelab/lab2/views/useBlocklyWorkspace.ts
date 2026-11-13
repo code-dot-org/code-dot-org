@@ -209,7 +209,9 @@ export default function useBlocklyWorkspace({
       // Toolbox editing: flag blocks that won't serialize into a category.
       if (isToolboxMode && e.type === BlocklyCore.Events.BLOCK_MOVE) {
         if (workspaceRef.current?.rendered) {
-          validateBlockCategories(workspaceRef.current);
+          validateBlockCategories(workspaceRef.current, {
+            dynamicCategoriesHoldBlocks: true,
+          });
         }
       }
       // Emit intermediate change if detected.

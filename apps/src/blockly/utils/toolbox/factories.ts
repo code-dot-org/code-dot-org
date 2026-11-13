@@ -1,12 +1,13 @@
 import * as BlocklyCore from 'blockly/core';
 
+import {DynamicCategoryInfo} from './typeGuards';
+
 type ToolboxItemInfo = BlocklyCore.utils.toolbox.ToolboxItemInfo;
 type StaticCategoryInfo = BlocklyCore.utils.toolbox.StaticCategoryInfo;
 
 // Blockly's DynamicCategoryInfo omits the display name, but the runtime
 // renders one.
-export type NamedDynamicCategoryInfo =
-  BlocklyCore.utils.toolbox.DynamicCategoryInfo & {name: string};
+export type NamedDynamicCategoryInfo = DynamicCategoryInfo & {name: string};
 
 export function makeCategory(
   name: string,

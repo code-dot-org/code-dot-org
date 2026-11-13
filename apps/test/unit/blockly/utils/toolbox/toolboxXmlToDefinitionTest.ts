@@ -67,6 +67,27 @@ describe('toolboxXmlToDefinition', () => {
     expect(behaviors.contents).toHaveLength(1);
   });
 
+  it('keeps the blocks under a dynamic category', () => {
+    const definition = toolboxXmlToDefinition(`<xml>
+      <category name="Variables" custom="VARIABLE">
+        <block type="math_number"><field name="NUM">3</field></block>
+      </category>
+    </xml>`);
+
+    expect(definition?.contents).toEqual([
+      expect.objectContaining({
+        custom: 'VARIABLE',
+        contents: [
+          expect.objectContaining({
+            kind: 'block',
+            type: 'math_number',
+            fields: {NUM: 3},
+          }),
+        ],
+      }),
+    ]);
+  });
+
   it('converts a flyout toolbox', () => {
     const definition = toolboxXmlToDefinition(FLYOUT_XML);
     expect(definition?.kind).toBe('flyoutToolbox');

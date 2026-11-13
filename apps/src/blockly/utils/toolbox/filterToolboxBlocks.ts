@@ -1,7 +1,11 @@
 import * as BlocklyCore from 'blockly/core';
 import {cloneDeep} from 'lodash';
 
-import {isBlockInfo, isStaticCategoryInfo} from './typeGuards';
+import {
+  isBlockInfo,
+  isDynamicCategoryInfo,
+  isStaticCategoryInfo,
+} from './typeGuards';
 
 type ToolboxInfo = BlocklyCore.utils.toolbox.ToolboxInfo;
 type ToolboxItemInfo = BlocklyCore.utils.toolbox.ToolboxItemInfo;
@@ -17,10 +21,14 @@ export function filterToolboxBlocks(
   keep: (block: BlockInfo) => boolean
 ): ToolboxInfo {
   const out = cloneDeep(def);
-  const filterEntries = (entries: ToolboxItemInfo[]): ToolboxItemInfo[] =>
+  const filterEntries = <T extends ToolboxItemInfo>(entries: T[]): T[] =>
     entries.filter(entry => {
       if (isStaticCategoryInfo(entry)) {
         entry.contents = filterEntries(entry.contents || []);
+        return true;
+      }
+      if (isDynamicCategoryInfo(entry) && entry.contents) {
+        entry.contents = filterEntries(entry.contents);
         return true;
       }
       return !isBlockInfo(entry) || keep(entry);

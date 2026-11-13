@@ -17,8 +17,8 @@ export function flyoutCategory(workspace: BlocklyCore.WorkspaceSvg) {
   const categoryBlocks = flyoutCategoryBlocks(workspace);
   blockList.push(...categoryBlocks);
 
-  // Add blocks from the level toolbox XML, if present.
-  blockList.push(...getCategoryBlocksJson('VARIABLE'));
+  // Add blocks from the level toolbox, if present.
+  blockList.push(...getCategoryBlocksJson(workspace, 'VARIABLE'));
 
   // The toolox may include "change [var] by" blocks with custom default values.
   // If any of these blocks are found, we can remove the auto-generated block.

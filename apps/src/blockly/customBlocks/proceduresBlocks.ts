@@ -392,8 +392,8 @@ export function flyoutCategory(
     blockList.push(functionDefinitionBlock);
   }
 
-  // Add blocks from the level toolbox XML, if present.
-  blockList.push(...getCategoryBlocksJson('PROCEDURE'));
+  // Add blocks from the level toolbox, if present.
+  blockList.push(...getCategoryBlocksJson(workspace, 'PROCEDURE'));
 
   // Workspaces to populate functions flyout category from
   const workspaces = [

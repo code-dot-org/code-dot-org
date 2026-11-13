@@ -2,6 +2,8 @@ import type * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES, DYNAMIC_CATEGORY_OPTIONS} from '../../constants';
 
+import {NamedDynamicCategoryInfo} from './factories';
+
 export const DEFAULT_CATEGORY_NAME = 'DEFAULT';
 
 /**
@@ -10,10 +12,12 @@ export const DEFAULT_CATEGORY_NAME = 'DEFAULT';
  * @param category
  */
 export function isValidCategory(
-  category: BlocklyCore.utils.toolbox.StaticCategoryInfo
+  category:
+    | BlocklyCore.utils.toolbox.StaticCategoryInfo
+    | NamedDynamicCategoryInfo
 ): boolean {
   return !!(
-    category.contents.length || category.name !== DEFAULT_CATEGORY_NAME
+    category.contents?.length || category.name !== DEFAULT_CATEGORY_NAME
   );
 }
 
@@ -42,9 +46,7 @@ export function getNewStaticCategory(
  * blocks into a toolbox definition in levelbuilder's toolbox mode.
  * @returns JSON representation of a new dynamic category.
  */
-export function getNewDynamicCategory(
-  name: string
-): BlocklyCore.utils.toolbox.ToolboxItemInfo {
+export function getNewDynamicCategory(name: string): NamedDynamicCategoryInfo {
   return {
     kind: 'category',
     custom: DYNAMIC_CATEGORY_OPTIONS[name],
@@ -77,7 +79,9 @@ export default function (workspace: BlocklyCore.WorkspaceSvg) {
   let flyoutItems: BlocklyCore.utils.toolbox.FlyoutItemInfo[] = [];
 
   // Temporary storage for a category, containing a name, type, list of contents.
-  let currentCategory = getNewStaticCategory();
+  let currentCategory:
+    | BlocklyCore.utils.toolbox.StaticCategoryInfo
+    | NamedDynamicCategoryInfo = getNewStaticCategory();
 
   topBlocks.forEach(block => {
     if (block.type === BLOCK_TYPES.category) {
@@ -96,14 +100,8 @@ export default function (workspace: BlocklyCore.WorkspaceSvg) {
         // Add previous category to toolbox
         fullToolbox.contents.push({...currentCategory});
       }
-      // Create and immediately add a new dynamic category to the toolbox,
-      // because dynamic categories cannot include other static blocks.
-      fullToolbox.contents.push(
-        getNewDynamicCategory(block.getFieldValue('CUSTOM'))
-      );
-
-      // Begin a new "DEFAULT" category in case any non-category block follows.
-      currentCategory = getNewStaticCategory();
+      // Blocks that follow join the generated flyout, after its own blocks.
+      currentCategory = getNewDynamicCategory(block.getFieldValue('CUSTOM'));
       flyoutItems = [];
     } else {
       // Add the current block to the flyout and category.
