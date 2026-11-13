@@ -315,15 +315,35 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   // Only a change to enabled is announced; a level that opens with
   // Continue available says nothing.
   const [readyMessage, setReadyMessage] = useState<string | null>(null);
-  const wasContinueEnabledRef = useRef(continueEnabled);
+  const baselineRef = useRef({
+    levelId: id,
+    validationIndex,
+    settling: false,
+    wasEnabled: continueEnabled,
+  });
   useEffect(() => {
-    if (continueEnabled && !wasContinueEnabledRef.current) {
+    const baseline = baselineRef.current;
+    // A new level's validation is reset after its ID arrives, which moves
+    // the index; until then the state is the old level's.
+    if (id !== baseline.levelId) {
+      baselineRef.current = {
+        levelId: id,
+        validationIndex,
+        settling: true,
+        wasEnabled: continueEnabled,
+      };
+      setReadyMessage(null);
+      return;
+    }
+    if (baseline.settling) {
+      baseline.settling = validationIndex === baseline.validationIndex;
+    } else if (continueEnabled && !baseline.wasEnabled) {
       setReadyMessage(`Level complete! The ${buttonText} button is ready.`);
     } else if (!continueEnabled) {
       setReadyMessage(null);
     }
-    wasContinueEnabledRef.current = continueEnabled;
-  }, [continueEnabled, buttonText]);
+    baseline.wasEnabled = continueEnabled;
+  }, [id, validationIndex, continueEnabled, buttonText]);
   // Outside the keyed content and rendered when the rest is not, so the
   // region stays mounted.
   const readyAnnouncer = <ToastAnnouncer message={readyMessage} />;
