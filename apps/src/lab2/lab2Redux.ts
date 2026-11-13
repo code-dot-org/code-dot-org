@@ -326,10 +326,9 @@ const labSlice = createSlice({
       state.channel = action.payload.channel;
       state.levelProperties = levelProperties;
       state.initialSources = action.payload.initialSources;
-      if (typeof action.payload.abuseScore === 'number') {
-        state.isBlockedAbuse =
-          action.payload.abuseScore >= ABUSE_SCORE_BLOCK_THRESHOLD;
-      }
+      state.isBlockedAbuse =
+        typeof action.payload.abuseScore === 'number' &&
+        action.payload.abuseScore >= ABUSE_SCORE_BLOCK_THRESHOLD;
       state.shareFailure = action.payload.shareFailure ?? null;
       state.projectSharingDisabled =
         action.payload.sharingDisabled &&
