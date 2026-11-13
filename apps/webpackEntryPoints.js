@@ -182,6 +182,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_preload_assets': './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
   'levels/editors/fields/_ai_evaluation': './src/sites/studio/pages/levels/editors/fields/_ai_evaluation.js',
   'levels/editors/fields/_special_level_types': './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
+  'levels/editors/fields/_spritelab_config': './src/sites/studio/pages/levels/editors/fields/_spritelab_config.js',
   'levels/editors/fields/_spritelab_mode': './src/sites/studio/pages/levels/editors/fields/_spritelab_mode.js',
   'levels/editors/fields/_starter_assets': './src/sites/studio/pages/levels/editors/fields/_starter_assets.js',
   'levels/editors/fields/_validation_code': './src/sites/studio/pages/levels/editors/fields/_validation_code.js',

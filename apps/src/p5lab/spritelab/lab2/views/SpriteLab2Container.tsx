@@ -22,6 +22,7 @@ import {
   setupSpriteLab2BlocklyEnvironment,
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
+import {withLevelConfig} from '../levelConfig/applyLevelConfig';
 import {unpackSources} from '../packedWorld';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
@@ -62,8 +63,14 @@ const isStudentEdit = (prev: Sources, next: Sources) =>
 
 const SpriteLab2Container: React.FunctionComponent<
   LabProps<SpriteLab2LevelProperties, Sources>
-> = ({levelProperties}) => {
+> = ({levelProperties: savedLevelProperties}) => {
   const dispatch = useAppDispatch();
+  // A level may be written in the grouped shape; the lab reads the older
+  // properties, so the grouped ones are laid over them here.
+  const levelProperties = useMemo(
+    () => withLevelConfig(savedLevelProperties),
+    [savedLevelProperties]
+  );
 
   useEffect(() => setupSpriteLab2BlocklyEnvironment(), []);
 
