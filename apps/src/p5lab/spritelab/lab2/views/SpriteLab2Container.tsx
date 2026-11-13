@@ -9,13 +9,14 @@ import useSources from '@cdo/apps/lab2/hooks/useSources';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
+  getStandaloneProjectId,
   getAppOptionsEditBlocks,
   getIsLevelEditMode,
 } from '@cdo/apps/lab2/projects/utils';
 import {LabProps} from '@cdo/apps/lab2/types';
 import getInitialSources from '@cdo/apps/lab2/utils/getInitialSources';
 import Loading from '@cdo/apps/lab2/views/Loading';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   installSharedBlocks,
@@ -64,6 +65,10 @@ const SpriteLab2Container: React.FunctionComponent<
   LabProps<SpriteLab2LevelProperties, Sources>
 > = ({levelProperties}) => {
   const dispatch = useAppDispatch();
+  // A shared project is played, not edited, whoever opens the link: its
+  // owner too.
+  const isShareView = !!useAppSelector(state => state.lab.isShareView);
+  const standaloneChannelId = useMemo(getStandaloneProjectId, []);
 
   useEffect(() => setupSpriteLab2BlocklyEnvironment(), []);
 
@@ -88,6 +93,9 @@ const SpriteLab2Container: React.FunctionComponent<
   } = useSources<Sources>({
     levelProperties,
     defaultSources,
+    // On a project page the address names the project. Without this the
+    // lab would load the visitor's own project for the level instead.
+    standaloneChannelId,
     onReinitialize: handleReinitialize,
     getToolboxEditSources,
     computeHasEdited: isStudentEdit,
@@ -126,7 +134,7 @@ const SpriteLab2Container: React.FunctionComponent<
   }, [readOnlyLevel, levelSources, storedForLevel]);
   const updateSources = useCallback<typeof updateStoredSources>(
     (next, forceSave) => {
-      if (readOnlyLevel) {
+      if (readOnlyLevel || isShareView) {
         return;
       }
       updateStoredSources(
@@ -134,7 +142,7 @@ const SpriteLab2Container: React.FunctionComponent<
         forceSave
       );
     },
-    [readOnlyLevel, updateStoredSources]
+    [readOnlyLevel, isShareView, updateStoredSources]
   );
   const patchSources = useCallback<typeof patchStoredSources>(
     (patch, forceSave) =>
@@ -173,6 +181,8 @@ const SpriteLab2Container: React.FunctionComponent<
       channelId={channel?.id}
       sourcesReinitializedCount={sourcesReinitializedCount}
       {...restOutputs}
+      isEditable={restOutputs.isEditable && !isShareView}
+      isShareView={isShareView}
     />
   );
 };

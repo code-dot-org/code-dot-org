@@ -153,6 +153,7 @@ import RunButtons, {ArrowCross} from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
 import {sceneDropdownButtonId} from './components/SceneDropdown';
+import ShareActions from './components/ShareActions';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
 import ImagesTab from './images/ImagesTab';
@@ -189,6 +190,8 @@ registerReducers({
 });
 
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
+// A share link shows the game alone, whatever tabs the level has.
+const SHARE_TABS: readonly Tab[] = ['Play'];
 // The Images pane, for the hook that keeps it inert while closed.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // The editor switch's order.
@@ -289,6 +292,8 @@ interface SpriteLab2ViewProps {
   hasEdited: boolean;
   startOver: () => void;
   isEditable: boolean;
+  /** The page is a share link: the game alone, with no editors. */
+  isShareView?: boolean;
   // Used for keying effects off of sources reinitializing.
   sourcesReinitializedCount: number;
 }
@@ -302,6 +307,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   hasEdited,
   startOver,
   isEditable,
+  isShareView,
   sourcesReinitializedCount,
 }) => {
   const {theme} = useTheme();
@@ -318,8 +324,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // replaces the shell. A level with no mode, or one whose authored kind is
   // not a kind we know, falls back to the lab defaults.
   const tabs = useMemo(
-    () => tabsForMode(levelProperties.levelMode) ?? ENABLED_TABS,
-    [levelProperties.levelMode]
+    () =>
+      isShareView
+        ? SHARE_TABS
+        : tabsForMode(levelProperties.levelMode) ?? ENABLED_TABS,
+    [isShareView, levelProperties.levelMode]
   );
   const worldTabEnabled = tabs.includes('World');
   // Playfield size for a world this level creates. An existing world keeps
@@ -1291,7 +1300,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     uploadImage,
     updateSources,
     getScenes,
-    enabled: !isToolboxMode,
+    // A share link saves nothing to the project it shows.
+    enabled: !isToolboxMode && !isShareView,
   });
 
   // Run the current program as the live preview (cheap: the engine reuses
@@ -2185,7 +2195,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         />
       )}
       {/* The last level's Finish, in the page header as well. */}
-      {levelProperties.useSecondaryFinishButton && (
+      {levelProperties.useSecondaryFinishButton && !isShareView && (
         <HeaderActionButton
           buttonColor="success"
           onClick={() => dispatch(continueOrFinishLesson())}
@@ -2193,39 +2203,44 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           I'm finished
         </HeaderActionButton>
       )}
-      <ResourcePanel
-        levelProperties={panelLevelProperties}
-        isRunning={isRunning}
-        hasRun={hasRun}
-        hasEdited={hasEdited}
-        settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
-        className={classNames(
-          moduleStyles.instructionsColumn,
-          instructionsCollapsed && moduleStyles.instructionsCollapsed
-        )}
-        collapsible={freeplayLevel || undefined}
-        // The objectives checklist, and the Continue button it enables,
-        // render inside the instructions panel.
-        objectives={objectives.active ? objectives : undefined}
-        hideContinueIfDisabled
-        continueButtonColor="success"
-        footerButtons={
-          startOverOffered && (
-            <IconButtonWithTooltip
-              id="start-over"
-              label="Start Over"
-              icon={{iconName: 'refresh', iconStyle: 'solid'}}
-              variant="text"
-              color="tertiary"
-              tooltipDirection="onRight"
-              onClick={() => setShowStartOver(true)}
-              theme={theme}
-              size="small"
-            />
-          )
-        }
-      />
-      <div className={moduleStyles.divider} />
+      {/* A share link has no instructions, settings or Start Over. */}
+      {!isShareView && (
+        <>
+          <ResourcePanel
+            levelProperties={panelLevelProperties}
+            isRunning={isRunning}
+            hasRun={hasRun}
+            hasEdited={hasEdited}
+            settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
+            className={classNames(
+              moduleStyles.instructionsColumn,
+              instructionsCollapsed && moduleStyles.instructionsCollapsed
+            )}
+            collapsible={freeplayLevel || undefined}
+            // The objectives checklist, and the Continue button it enables,
+            // render inside the instructions panel.
+            objectives={objectives.active ? objectives : undefined}
+            hideContinueIfDisabled
+            continueButtonColor="success"
+            footerButtons={
+              startOverOffered && (
+                <IconButtonWithTooltip
+                  id="start-over"
+                  label="Start Over"
+                  icon={{iconName: 'refresh', iconStyle: 'solid'}}
+                  variant="text"
+                  color="tertiary"
+                  tooltipDirection="onRight"
+                  onClick={() => setShowStartOver(true)}
+                  theme={theme}
+                  size="small"
+                />
+              )
+            }
+          />
+          <div className={moduleStyles.divider} />
+        </>
+      )}
       <LabShell alert={WorkspaceAlert}>
         <div ref={stageRef} className={moduleStyles.stage}>
           {scenesOffered &&
@@ -2403,6 +2418,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             bottomBar={
               <>
                 <div className={moduleStyles.playBarButtons}>
+                  {isShareView && <ShareActions />}
                   <RunButtons
                     playing={activeTab === 'Play'}
                     onPlay={handlePlayClick}
