@@ -20,7 +20,7 @@ const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
   const titleId = useId();
   const titleRowRef = useRef<HTMLDivElement>(null);
 
-  // CustomDialog has already focused the first tab, selected or not.
+  // CustomDialog's first focus comes after this and keeps focus already inside the dialog.
   useEffect(() => {
     titleRowRef.current
       ?.closest('[role="dialog"]')

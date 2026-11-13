@@ -123,12 +123,14 @@ describe('NodeModal', () => {
     expect(document.activeElement).toBe(root());
   });
 
-  it('takes focus into the dialog when opened below the root', () => {
+  it('takes focus into the dialog when opened below the root', async () => {
     act(() => answer('snake').focus());
     fireEvent.keyDown(answer('snake'), {key: 'Enter'});
 
-    expect(document.activeElement).toBe(
-      dialog().querySelector('[role="tab"][aria-selected="true"]')
+    await waitFor(() =>
+      expect(document.activeElement).toBe(
+        dialog().querySelector('[role="tab"][aria-selected="true"]')
+      )
     );
   });
 
