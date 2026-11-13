@@ -142,6 +142,12 @@ module.exports = function (grunt) {
           src: ['assets/**'],
           dest: 'build/package/media/skins/fish',
         },
+        {
+          expand: true,
+          cwd: 'node_modules/jquery-ui/themes/base',
+          src: ['images/**'],
+          dest: 'build/package/media/jquery-ui',
+        },
 
         // We have to do some weird stuff to get our fallback video player working.
         // video.js expects some of its own files to be served by the application, so
