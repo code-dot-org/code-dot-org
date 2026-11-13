@@ -128,13 +128,17 @@ const SpriteLab2Container: React.FunctionComponent<
   // Such a level's start sources may write a scene's world in the packed
   // form (packedWorld.ts). It is expanded here, for readers and for the base
   // an updater builds on, so the rest of the lab only sees the grid.
+  // Someone else's standalone project, opened to look at: its code can be
+  // read and its game played, and nothing can be changed.
+  const isViewOnly =
+    !!levelProperties.isProjectLevel && !restOutputs.isEditable && !isShareView;
   const currentSources = useMemo(() => {
     const sources = readOnlyLevel ? levelSources : storedForLevel;
     return sources && unpackSources(sources);
   }, [readOnlyLevel, levelSources, storedForLevel]);
   const updateSources = useCallback<typeof updateStoredSources>(
     (next, forceSave) => {
-      if (readOnlyLevel || isShareView) {
+      if (readOnlyLevel || isShareView || isViewOnly) {
         return;
       }
       updateStoredSources(
@@ -142,7 +146,7 @@ const SpriteLab2Container: React.FunctionComponent<
         forceSave
       );
     },
-    [readOnlyLevel, isShareView, updateStoredSources]
+    [readOnlyLevel, isShareView, isViewOnly, updateStoredSources]
   );
   const patchSources = useCallback<typeof patchStoredSources>(
     (patch, forceSave) =>
@@ -183,6 +187,7 @@ const SpriteLab2Container: React.FunctionComponent<
       {...restOutputs}
       isEditable={restOutputs.isEditable && !isShareView}
       isShareView={isShareView}
+      isViewOnly={isViewOnly}
     />
   );
 };

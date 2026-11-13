@@ -297,6 +297,9 @@ interface SpriteLab2ViewProps {
   isEditable: boolean;
   /** The page is a share link: the game alone, with no editors. */
   isShareView?: boolean;
+  /** Someone else's project, opened to look at: every tab can be opened
+      and the game played, and nothing can be changed. */
+  isViewOnly?: boolean;
   // Used for keying effects off of sources reinitializing.
   sourcesReinitializedCount: number;
 }
@@ -311,6 +314,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   startOver,
   isEditable,
   isShareView,
+  isViewOnly,
   sourcesReinitializedCount,
 }) => {
   const {theme} = useTheme();
@@ -1254,6 +1258,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     hiddenBlockTypes: heldBackBlocks,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
+    readOnly: isViewOnly,
   });
 
   const WorkspaceAlert = useLevelEditMode<SpriteLab2LevelProperties>(
@@ -1498,9 +1503,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       codeWrapperRef.current.inert = activeTab !== 'Code';
     }
     if (worldWrapperRef.current) {
-      worldWrapperRef.current.inert = activeTab !== 'World';
+      // A view-only World shows its grid and takes no input.
+      worldWrapperRef.current.inert = activeTab !== 'World' || !!isViewOnly;
     }
-  }, [stageCovered, activeTab, worldMounted]);
+  }, [stageCovered, activeTab, worldMounted, isViewOnly]);
   // Closing All scenes can leave focus nowhere: its opener in the scene
   // menu unmounted with the menu, or the bar's button let go of focus on
   // its click. The scene menu's trigger takes it. This runs after the
@@ -2072,7 +2078,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Only freeplay adds, renames, reorders or deletes scenes; a level with no
   // mode is unconstrained.
   const scenesEditable =
-    !levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode);
+    !isViewOnly &&
+    (!levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode));
   // The stage: the preview beside Code and World, centered to play; Images
   // takes the whole width.
   const playspaceMode: PlayspaceMode =
@@ -2285,6 +2292,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onChange={handleEditorChange}
                 editors={EDITORS}
                 disabledEditors={disabledEditors}
+                title={
+                  isViewOnly
+                    ? `${
+                        activeTab === 'Code' ? 'Workspace' : activeTab
+                      } (view only)`
+                    : undefined
+                }
                 switchAtStart
                 history={
                   activeTab === 'Code'
@@ -2354,6 +2368,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 noDeletingImages={levelProperties.levelMode?.noDeletingImages}
                 limitedPaintTools={levelProperties.levelMode?.limitedPaintTools}
                 imageKinds={levelProperties.levelMode?.imageKinds}
+                viewOnly={isViewOnly}
                 paneWidth={paneWidthPx}
                 onImageLanded={saveImagesNow}
                 active={activeTab === 'Images'}

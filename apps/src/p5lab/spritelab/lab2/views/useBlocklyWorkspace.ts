@@ -44,6 +44,8 @@ interface UseBlocklyWorkspaceOptions {
   hiddenBlockTypes?: ReadonlySet<string>;
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
+  /** The blocks can be read and not changed, and there is no toolbox. */
+  readOnly?: boolean;
 }
 
 interface UseBlocklyWorkspaceResult {
@@ -96,6 +98,7 @@ export default function useBlocklyWorkspace({
   hiddenBlockTypes,
   sharedBlocks,
   theme,
+  readOnly,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
   const hiddenRef = useRef(hiddenBlockTypes);
@@ -142,7 +145,11 @@ export default function useBlocklyWorkspace({
     let toolbox: BlocklyCore.utils.toolbox.ToolboxDefinition | undefined;
     if (isToolboxMode || isStartMode) {
       toolbox = getCompleteToolboxDefinition(blocksByCategory, isToolboxMode);
-    } else if (toolboxDefinition && toolboxDefinition.contents?.length !== 0) {
+    } else if (
+      !readOnly &&
+      toolboxDefinition &&
+      toolboxDefinition.contents?.length !== 0
+    ) {
       toolbox = prepareToolbox(toolboxDefinition);
     }
 
@@ -165,6 +172,7 @@ export default function useBlocklyWorkspace({
       toolbox,
       theme: themeRef.current === 'Dark' ? cdoDark : cdoTheme,
       trashcan: true,
+      readOnly: !!readOnly,
       customSimpleDialog,
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
@@ -274,7 +282,7 @@ export default function useBlocklyWorkspace({
       workspaceRef.current = null;
       currentBlocksRef.current = null;
     };
-  }, [enabled, sharedBlocks, toolboxDefinition, prepareToolbox]);
+  }, [enabled, sharedBlocks, toolboxDefinition, prepareToolbox, readOnly]);
 
   // Update workspace theme on display-theme change. Resolve through
   // getUserTheme rather than applying cdoDark/cdoTheme directly: a user
