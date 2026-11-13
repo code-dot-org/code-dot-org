@@ -5,6 +5,7 @@ import {
   hasSupportAt,
   isAtEdge,
   isSupported,
+  touchesWall,
   resolvePlatformPhysics,
   PhysicsBox,
   PhysicsSprite,
@@ -167,6 +168,53 @@ describe('platformPhysics', () => {
     expect(feet(player)).toBe(400);
   });
 
+  describe('a body resting against the side of a wall, at fractional art sizes', () => {
+    const jumpSpeed = 12;
+    const sizes = [1, 0.83, 1.19].flatMap(scale =>
+      [20, 23.7, 31.3].map(width => ({scale, width}))
+    );
+
+    // Stands a player on the floor at row 6, against the wall in column 4.
+    const standAgainstWall = (
+      walls: PhysicsBox[],
+      {scale, width}: {scale: number; width: number}
+    ) => {
+      const sprite = {
+        ...makeSprite(165, 300 - (40 * scale) / 2, width, 40),
+        scale,
+      };
+      run(sprite, walls, 30, 3);
+      run(sprite, walls, 5);
+      return sprite;
+    };
+
+    it('jumps past a block on top of the wall', () => {
+      const walls = [wallAt(3, 6), wallAt(4, 6), wallAt(4, 5), wallAt(4, 4)];
+      sizes.forEach(size => {
+        const sprite = standAgainstWall(walls, size);
+        const restY = sprite.position.y;
+        let highestY = restY;
+        sprite.velocity.y = -jumpSpeed;
+        run(sprite, walls, 40, 0, s => {
+          highestY = Math.min(highestY, s.position.y);
+        });
+        // Higher than one block: the upper block did not stop it.
+        expect(restY - highestY).toBeGreaterThan(50);
+      });
+    });
+
+    it('comes back down to its footing, not onto the top edge of the wall', () => {
+      const walls = [wallAt(3, 6), wallAt(4, 6), wallAt(4, 5)];
+      sizes.forEach(size => {
+        const sprite = standAgainstWall(walls, size);
+        const restY = sprite.position.y;
+        sprite.velocity.y = -jumpSpeed;
+        run(sprite, walls, 60);
+        expect(sprite.position.y).toBeCloseTo(restY);
+      });
+    });
+  });
+
   it('keeps footing until the body has fully left an edge', () => {
     const walls = [wallAt(0, 6), wallAt(1, 6), wallAt(2, 6)];
     const player = makeSprite(75, 275);
@@ -324,6 +372,21 @@ describe('platformPhysics with custom gravity', () => {
     // Body top (feet-anchor flipped to a head anchor) on the underside:
     // body center 120, image center 5 below it.
     expect(player.position.y).toBe(125);
+  });
+
+  it('touchesWall meets a block from any side, and not across a gap', () => {
+    // Cell (col 1, row 6): center (75, 325), 25px to each edge. The body
+    // is 20x40, centered 5px below the art's center.
+    const wall = wallAt(1, 6);
+    // Standing on it: body bottom on the top edge.
+    expect(touchesWall(makeSprite(75, 275), wall)).toBe(true);
+    // Pressed against its right side: body edge on the wall's edge.
+    expect(touchesWall(makeSprite(110, 325), wall)).toBe(true);
+    // Head under it: body top on the underside.
+    expect(touchesWall(makeSprite(75, 365), wall)).toBe(true);
+    // Two pixels off is a gap.
+    expect(touchesWall(makeSprite(75, 273), wall)).toBe(false);
+    expect(touchesWall(makeSprite(112, 325), wall)).toBe(false);
   });
 
   it('isSupported sees floor, block tops, and flipped undersides', () => {

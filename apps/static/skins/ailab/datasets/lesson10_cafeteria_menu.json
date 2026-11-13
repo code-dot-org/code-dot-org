@@ -1,0 +1,46 @@
+{
+  "name": "lesson10_cafeteria_menu",
+  "card": {
+    "description": "Survey answers about lunch menu items for the LunchLine app. Each answer says whether a student would buy that item. Paper surveys were handed out to students waiting in the lunch line on one Tuesday.",
+    "source": "Created for AI Discoveries, Lesson 10",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "Code.org AI Discoveries",
+      "potentialUses": "Predict which menu items students would buy, so the school can decide which items to keep and what to recommend."
+    }
+  },
+  "defaultLabelColumn": "Would Buy",
+  "defaultIdColumn": "ID",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "ID",
+      "description": "An ID for each row of data."
+    },
+    {
+      "type": "categorical",
+      "id": "Lunch Source",
+      "description": "Where the student gets lunch."
+    },
+    {
+      "type": "categorical",
+      "id": "Grade",
+      "description": "The student's grade."
+    },
+    {
+      "type": "categorical",
+      "id": "Diet",
+      "description": "Whether the student eats meat or is vegetarian."
+    },
+    {
+      "type": "categorical",
+      "id": "Menu Item",
+      "description": "The menu item the student rated."
+    },
+    {
+      "type": "categorical",
+      "id": "Would Buy",
+      "description": "Whether the student would buy this item (Yes or No)."
+    }
+  ]
+}

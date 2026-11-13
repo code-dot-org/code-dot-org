@@ -1,0 +1,61 @@
+{
+  "name": "Virtual Production",
+  "card": {
+    "description": "Each row is a scene from a past movie. The virtual production team recorded what each scene needed and whether they filmed it in front of the LED wall or at a real location.",
+    "source": "Created for AI Discoveries, Lesson 9",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "Code.org AI Discoveries",
+      "potentialUses": "Predict whether a new scene should be filmed in front of the LED wall or at a real location."
+    }
+  },
+  "defaultLabelColumn": "Filming Location",
+  "defaultIdColumn": "Scene",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Scene",
+      "description": "A short description of the scene."
+    },
+    {
+      "type": "categorical",
+      "id": "Far Away",
+      "description": "Is the location far from where the team works? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Expensive to Travel",
+      "description": "Does it cost a lot to bring the team to this location? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Dangerous to Film",
+      "description": "Would filming this scene for real be dangerous? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Specific Time of Day",
+      "description": "Does the scene need a certain time of day, like sunset or sunrise? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Weather Matters",
+      "description": "Does the scene need certain weather, like snow, rain, or fog? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Night Scene",
+      "description": "Does the scene happen at night? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Big Crowd",
+      "description": "Does the scene need a big crowd? (Yes or No)"
+    },
+    {
+      "type": "categorical",
+      "id": "Filming Location",
+      "description": "Where the team filmed the scene: LED Wall or Real Location."
+    }
+  ]
+}

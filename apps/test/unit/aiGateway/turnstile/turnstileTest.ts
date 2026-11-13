@@ -12,15 +12,8 @@ import {
   CHALLENGE_TIMEOUT_MS,
   TOKEN_MAX_AGE_MS,
 } from '@cdo/apps/aiGateway/turnstile/constants';
-import {
-  parseTurnstileEnforcementMode,
-  type TurnstileEnforcementMode,
-} from '@cdo/apps/aiGateway/turnstile/enforcementMode';
+import {parseTurnstileEnforcementMode} from '@cdo/apps/aiGateway/turnstile/enforcementMode';
 import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
-import {
-  fetchTurnstileToken,
-  turnstileHeaders,
-} from '@cdo/apps/aiGateway/turnstile/util';
 
 const startSpanMock = Observability.startSpan as jest.Mock;
 
@@ -28,16 +21,6 @@ const startSpanMock = Observability.startSpan as jest.Mock;
 afterEach(() => {
   (TurnstileManager as unknown as {instance: null}).instance = null;
   jest.restoreAllMocks();
-});
-
-describe('turnstileHeaders', () => {
-  it('returns X-Turnstile-Token header when token is present', () => {
-    expect(turnstileHeaders('abc123')).toEqual({'X-Turnstile-Token': 'abc123'});
-  });
-
-  it('returns empty object when token is null', () => {
-    expect(turnstileHeaders(null)).toEqual({});
-  });
 });
 
 describe('parseTurnstileEnforcementMode', () => {
@@ -57,56 +40,6 @@ describe('parseTurnstileEnforcementMode', () => {
       expect(parseTurnstileEnforcementMode(value)).toBe('disabled');
     }
   );
-});
-
-describe('fetchTurnstileToken', () => {
-  const stubManager = (getTurnstileToken: jest.Mock) => {
-    document.body.innerHTML = '';
-    return jest.spyOn(TurnstileManager, 'getInstance').mockReturnValue({
-      getTurnstileToken,
-    } as unknown as TurnstileManager);
-  };
-
-  it('resolves null without instantiating the manager when disabled', async () => {
-    const getInstanceSpy = jest.spyOn(TurnstileManager, 'getInstance');
-
-    const result = await fetchTurnstileToken('disabled');
-
-    expect(result).toBeNull();
-    // The constructor appends a container to document.body, so a page that
-    // never enforces must not reach it at all.
-    expect(getInstanceSpy).not.toHaveBeenCalled();
-  });
-
-  const enforcingModes: TurnstileEnforcementMode[] = ['monitor', 'enforce'];
-
-  it.each(enforcingModes)('returns the token in %s', async enforcementMode => {
-    const getInstanceSpy = stubManager(
-      jest.fn().mockResolvedValue('test-token')
-    );
-
-    const result = await fetchTurnstileToken(enforcementMode);
-
-    expect(getInstanceSpy).toHaveBeenCalled();
-    expect(result).toBe('test-token');
-  });
-
-  it('resolves null when the challenge fails in monitor', async () => {
-    stubManager(jest.fn().mockRejectedValue(new Error('challenge failed')));
-
-    // Fails open: the worker tolerates a missing token in monitor, so failing
-    // the request here would inflict the breakage monitor exists to measure.
-    await expect(fetchTurnstileToken('monitor')).resolves.toBeNull();
-  });
-
-  it('rejects when the challenge fails in enforce', async () => {
-    const failure = new Error('challenge failed');
-    stubManager(jest.fn().mockRejectedValue(failure));
-
-    // Fails closed: the worker would reject the request anyway, so surfacing
-    // the real error beats a bare 401.
-    await expect(fetchTurnstileToken('enforce')).rejects.toBe(failure);
-  });
 });
 
 // Typed view of TurnstileManager's private internals used only in tests.

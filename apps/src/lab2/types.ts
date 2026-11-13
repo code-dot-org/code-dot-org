@@ -18,6 +18,7 @@ import type {EdgeMarkerType} from '@xyflow/system';
 import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, CSSProperties, LazyExoticComponent} from 'react';
 
+import type {AiTutorModelParameters} from '@cdo/apps/aichat/types';
 import type {AilabProject} from '@cdo/apps/ailab/engine/types';
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
@@ -344,12 +345,15 @@ export interface LevelProperties {
   validationFile?: ProjectFile;
   enableMicroBit?: boolean;
   miniApp?: string;
+  miniAppVariant?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
   aiTutorMode?: string;
   aiTutorPromptSettings?: AiTutorPromptSettings;
+  /** The model the AI Tutor asks on this level, in place of its default. */
+  aiTutorModelParameters?: AiTutorModelParameters;
   levelSystemPrompt?: string;
   /**
    * Show the instructions in the AI Tutor tab, pinned above the chat as a
@@ -491,6 +495,7 @@ export type AppName = keyof typeof lab2EntryPoints;
 
 export type StandaloneAppName =
   | 'spritelab'
+  | 'quest_builder'
   | 'story'
   | 'science'
   | 'poetry_hoc'
@@ -578,6 +583,6 @@ export interface LabProps<
   channel?: Channel;
 }
 
-export type ShareDialogId = 'hoc2024' | 'hoai2025';
+export type ShareDialogId = 'hoc2024' | 'hoai2025' | 'hoai2026';
 
 export type LevelNavigationConfirmation = () => boolean | Promise<boolean>;

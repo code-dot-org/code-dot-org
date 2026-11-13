@@ -41,7 +41,8 @@ const detailTags = (detail: ChallengeResponseDetail): DetailTag[] => {
 };
 
 // The details footer on the project page: the unit/lesson label, modality
-// tags, the author, the challenge prompt, and the class's reactions.
+// tags, the author, the challenge prompt, the recording's transcript, and the
+// class's reactions.
 const ProjectDetailsCard: FC<ProjectDetailsCardProps> = ({
   detail,
   unitPosition,
@@ -85,6 +86,22 @@ const ProjectDetailsCard: FC<ProjectDetailsCardProps> = ({
         <Typography variant="body3" className={styles.projectPrompt}>
           Project Prompt: {detail.question}
         </Typography>
+      )}
+      {detail.transcript && (
+        <details>
+          <summary className={styles.transcriptSummary}>
+            <Typography
+              variant="overline2"
+              component="span"
+              className={styles.sectionLabel}
+            >
+              Transcript (auto-generated)
+            </Typography>
+          </summary>
+          <Typography variant="body3" className={styles.transcriptText}>
+            {detail.transcript}
+          </Typography>
+        </details>
       )}
       <ReactionChips
         responseId={detail.id}

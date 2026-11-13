@@ -1,22 +1,45 @@
-import {fireEvent, render, screen, within} from '@testing-library/react';
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
+import {
+  EMPTY_PAGE_REASON,
+  editedQuestionsReason,
+  INVALID_CONFIG_REASON,
+  NO_CHANGES_REASON,
+  QUIZ_LOAD_FAILED_REASON,
+  QUIZ_LOADING_REASON,
+  QUIZ_BUILDER_HEADER_ID,
+  UNSAVED_QUESTION_REASON,
+} from '@cdo/apps/quiz/builder/constants';
 import QuizBuilderWorkspace from '@cdo/apps/quiz/builder/QuizBuilderWorkspace';
 import {
   QuizBuilderQuestion,
   QuizBuilderQuestionsState,
+  QuizConfigurationData,
 } from '@cdo/apps/quiz/builder/types';
 import useQuizBuilderQuestions from '@cdo/apps/quiz/builder/useQuizBuilderQuestions';
+import {groupByPage} from '@cdo/apps/quiz/utils';
 
 jest.mock('@cdo/apps/quiz/builder/useQuizBuilderQuestions');
 const mockUseQuizBuilderQuestions = jest.mocked(useQuizBuilderQuestions);
 
+// A question and the page the mocked hook puts it on.
+type PlacedQuestion = QuizBuilderQuestion & {page: number};
+
 const question = (
   overrides: Partial<
-    Extract<QuizBuilderQuestion, {type: 'MultipleChoiceQuestion'}>
+    Extract<QuizBuilderQuestion, {type: 'MultipleChoiceQuestion'}> & {
+      page: number;
+    }
   > = {}
-): QuizBuilderQuestion => ({
+): PlacedQuestion => ({
   id: 1,
   type: 'MultipleChoiceQuestion',
   questionName: 'JavaScript variable fundamentals',
@@ -27,6 +50,7 @@ const question = (
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
+  deletable: true,
   usedInPublishedUnit: false,
   page: 1,
   ...overrides,
@@ -34,12 +58,18 @@ const question = (
 
 const BASE_STATE: QuizBuilderQuestionsState = {
   questions: [],
+  pages: [],
   isLoading: false,
+  hasLoaded: true,
+  isSavingQuiz: false,
   error: null,
   errorQuestionId: null,
+  hasUnsavedLayout: false,
+  addPage: jest.fn(),
   addPendingQuestion: jest.fn(),
   saveQuestion: jest.fn(),
   removeQuestion: jest.fn(),
+  saveQuiz: jest.fn(),
   load: jest.fn(),
 };
 
@@ -53,43 +83,76 @@ function createFromDropdown(index: number, typeLabel: string) {
   fireEvent.click(within(dropdown).getByRole('button', {name: typeLabel}));
 }
 
+const CONFIG: QuizConfigurationData = {
+  showCorrectness: true,
+  revealAnswerExplanation: false,
+  showIntroScreen: false,
+  customIntroText: '',
+  allowMultipleAttempts: false,
+  showQuestionsAfterSubmit: false,
+};
+
+// The same configuration as edited and as saved, so nothing is unsaved.
+const withConfig = (fields: Partial<QuizConfigurationData>) => ({
+  config: {...CONFIG, ...fields},
+  savedConfig: {...CONFIG, ...fields},
+});
+
 function renderWorkspace(
-  stateOverrides: Partial<QuizBuilderQuestionsState> = {},
+  stateOverrides: Omit<Partial<QuizBuilderQuestionsState>, 'questions'> & {
+    questions?: PlacedQuestion[];
+  } = {},
   propOverrides: Partial<React.ComponentProps<typeof QuizBuilderWorkspace>> = {}
 ) {
+  // pages defaults to the questions grouped by their page, as the hook does.
+  const questions = stateOverrides.questions ?? [];
   mockUseQuizBuilderQuestions.mockReturnValue({
     ...BASE_STATE,
+    pages: groupByPage(questions),
     ...stateOverrides,
   });
   return render(
     <QuizBuilderWorkspace
       levelId={42}
       quizTitle="AI Foundations Certification Exam"
-      showIntroScreen={false}
-      customIntroText=""
-      hasTimeLimit={false}
-      onSaveQuizConfig={jest.fn()}
+      config={CONFIG}
+      savedConfig={CONFIG}
+      onConfigChange={jest.fn()}
+      onConfigSaved={jest.fn()}
       {...propOverrides}
     />
   );
 }
 
 describe('QuizBuilderWorkspace', () => {
+  // The page header's slot, which the haml layout renders on the build page.
+  let headerSlot: HTMLElement;
+
   beforeEach(() => {
     jest.resetAllMocks();
+    headerSlot = document.createElement('div');
+    headerSlot.id = QUIZ_BUILDER_HEADER_ID;
+    document.body.appendChild(headerSlot);
+  });
+
+  afterEach(() => {
+    headerSlot.remove();
   });
 
   it('shows the intro screen card, with its content, when the intro screen is on', () => {
     renderWorkspace(
       {},
-      {showIntroScreen: true, customIntroText: 'You have 45 minutes.'}
+      withConfig({
+        showIntroScreen: true,
+        customIntroText: 'You have 45 minutes.',
+      })
     );
     expect(screen.getByText('Intro Screen')).toBeInTheDocument();
     expect(screen.getByText('You have 45 minutes.')).toBeInTheDocument();
   });
 
   it('hides the intro screen card when the intro screen is off', () => {
-    renderWorkspace({}, {showIntroScreen: false});
+    renderWorkspace({}, withConfig({showIntroScreen: false}));
     expect(screen.queryByText('Intro Screen')).not.toBeInTheDocument();
   });
 
@@ -103,12 +166,39 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByText('Loading questions…')).toBeInTheDocument();
   });
 
-  it('shows an empty message when the quiz has no questions', () => {
+  it('shows an empty quiz region when the quiz has no questions', () => {
     renderWorkspace();
     expect(
-      screen.getByText('This quiz has no questions yet.')
+      screen.getByRole('heading', {level: 2, name: 'This quiz is empty'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText('Start by creating a new question.')
     ).toBeInTheDocument();
     expect(screen.getByText('0 questions')).toBeInTheDocument();
+    expect(screen.getByText('1 attempt')).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Add page'})
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows time limit and unlimited attempts in the workspace header', () => {
+    renderWorkspace(
+      {},
+      withConfig({
+        showIntroScreen: true,
+        timeLimitMinutes: 45,
+        allowMultipleAttempts: true,
+      })
+    );
+    expect(screen.getByText('45 minutes')).toBeInTheDocument();
+    expect(screen.getByText('Unlimited attempts')).toBeInTheDocument();
+    expect(screen.queryByText('1 attempt')).not.toBeInTheDocument();
+  });
+
+  it('omits the time limit from the workspace header for an untimed quiz', () => {
+    renderWorkspace();
+    expect(screen.queryByText(/minute/)).not.toBeInTheDocument();
+    expect(screen.getByText('1 attempt')).toBeInTheDocument();
   });
 
   it('lists each placed question with its name and question title', () => {
@@ -123,9 +213,11 @@ describe('QuizBuilderWorkspace', () => {
       ],
     });
 
-    // Once for the workspace-wide total, once for the page 1 header - both
-    // questions default to page 1.
+    // Once in the header, once on the page card.
     expect(screen.getAllByText('2 questions')).toHaveLength(2);
+    expect(
+      screen.getByRole('heading', {level: 2, name: 'Page 1'})
+    ).toBeInTheDocument();
     expect(
       screen.getByText('JavaScript variable fundamentals')
     ).toBeInTheDocument();
@@ -141,9 +233,11 @@ describe('QuizBuilderWorkspace', () => {
     // hook's return value has to change too, so the appended question is
     // actually there for the workspace to expand.
     const addPendingQuestion = jest.fn().mockImplementation(() => {
+      const questions = [question(), question({id: -1})];
       mockUseQuizBuilderQuestions.mockReturnValue({
         ...BASE_STATE,
-        questions: [question(), question({id: -1})],
+        questions,
+        pages: groupByPage(questions),
         addPendingQuestion,
       });
       return -1;
@@ -184,56 +278,68 @@ describe('QuizBuilderWorkspace', () => {
     );
   });
 
-  it('adds an empty page one past the last existing page without creating a question', () => {
+  it('adds a page without creating a question', () => {
+    const addPage = jest.fn();
     const addPendingQuestion = jest.fn();
     renderWorkspace({
-      questions: [
-        question({id: 1, page: 1}),
-        question({id: 2, page: 3, questionName: 'MVC frameworks'}),
-      ],
+      questions: [question({id: 1, page: 1})],
+      addPage,
       addPendingQuestion,
     });
 
     fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
+    expect(addPage).toHaveBeenCalled();
     expect(addPendingQuestion).not.toHaveBeenCalled();
-    expect(screen.getByText('Page 4')).toBeInTheDocument();
-    expect(screen.getByRole('button', {name: 'Add page'})).toBeDisabled();
-
-    createFromDropdown(2, 'Free response');
-    expect(addPendingQuestion).toHaveBeenCalledWith(4, 'FreeResponseQuestion');
   });
 
-  it('disables the create button while questions are still loading', () => {
+  it('shows an empty page, blocks adding another, and creates questions on it', async () => {
+    const addPendingQuestion = jest.fn();
+    const questions = [question({id: 1, page: 1})];
+    renderWorkspace({
+      questions,
+      pages: [...groupByPage(questions), {page: 2, questions: []}],
+      addPendingQuestion,
+    });
+
+    expect(screen.getByText('Page 2')).toBeInTheDocument();
+    expect(screen.getByText('This page is empty')).toBeInTheDocument();
+    const addPage = screen.getByRole('button', {name: 'Add page'});
+    expect(addPage).toHaveAttribute('aria-disabled', 'true');
+    fireEvent.mouseOver(addPage);
+    expect(
+      await screen.findByRole('tooltip', {
+        name: EMPTY_PAGE_REASON,
+      })
+    ).toBeInTheDocument();
+
+    createFromDropdown(1, 'Free response');
+    expect(addPendingQuestion).toHaveBeenCalledWith(2, 'FreeResponseQuestion');
+  });
+
+  it('hides create actions while questions are still loading', () => {
     renderWorkspace({isLoading: true});
     expect(
-      screen.getByRole('button', {name: 'Create question'})
-    ).toBeDisabled();
+      screen.queryByRole('button', {name: 'Create question'})
+    ).not.toBeInTheDocument();
   });
 
-  it('disables the per-page create and add-page buttons while a pending question already exists', () => {
+  it('disables the per-page create and add-page buttons while a pending question already exists', async () => {
     renderWorkspace({questions: [question({id: -1})]});
-    expect(
-      screen.getByRole('button', {name: 'Create question'})
-    ).toBeDisabled();
-    expect(screen.getByRole('button', {name: 'Add page'})).toBeDisabled();
-  });
+    const createQuestion = screen.getByRole('button', {
+      name: 'Create question',
+    });
+    expect(createQuestion).toHaveAttribute('aria-disabled', 'true');
+    expect(screen.getByRole('button', {name: 'Add page'})).toHaveAttribute(
+      'aria-disabled',
+      'true'
+    );
 
-  it('explains why the create button is disabled by a pending question', () => {
-    renderWorkspace({questions: [question({id: -1})]});
+    fireEvent.mouseOver(createQuestion);
     expect(
-      screen.getByText(
-        'Save or remove your new question before creating another.'
-      )
+      await screen.findByRole('tooltip', {
+        name: UNSAVED_QUESTION_REASON,
+      })
     ).toBeInTheDocument();
-  });
-
-  it('does not show the pending-question hint otherwise', () => {
-    renderWorkspace({questions: [question()]});
-    expect(
-      screen.queryByText(
-        'Save or remove your new question before creating another.'
-      )
-    ).toBeNull();
   });
 
   it('renders a server error', () => {
@@ -294,7 +400,7 @@ describe('QuizBuilderWorkspace', () => {
       ],
     });
 
-    const pageLabels = screen.getAllByText(/^Page \d$/);
+    const pageLabels = screen.getAllByRole('heading', {name: /^Page \d$/});
     expect(pageLabels.map(label => label.textContent)).toEqual([
       'Page 1',
       'Page 2',
@@ -315,5 +421,252 @@ describe('QuizBuilderWorkspace', () => {
 
     fireEvent.click(editButtons[1]);
     expect(screen.getAllByRole('tab', {name: 'Question'})).toHaveLength(1);
+  });
+
+  it('collapses a page and expands it again, keeping other pages open', () => {
+    renderWorkspace({
+      questions: [
+        question({id: 1, page: 1}),
+        question({id: 2, page: 2, questionName: 'MVC frameworks'}),
+      ],
+    });
+
+    expect(screen.getByText('JavaScript variable fundamentals')).toBeVisible();
+    expect(screen.getByText('MVC frameworks')).toBeVisible();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
+    expect(
+      screen.getByText('JavaScript variable fundamentals')
+    ).not.toBeVisible();
+    expect(screen.getByText('MVC frameworks')).toBeVisible();
+    expect(
+      screen.getByRole('button', {name: 'Expand Page 1'})
+    ).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Expand Page 1'}));
+    expect(screen.getByText('JavaScript variable fundamentals')).toBeVisible();
+  });
+
+  it('flags a collapsed page whose question has unsaved edits', () => {
+    renderWorkspace({
+      questions: [
+        question({id: 1, page: 1}),
+        question({id: 2, page: 2, questionName: 'MVC frameworks'}),
+      ],
+    });
+    fireEvent.click(screen.getAllByRole('button', {name: 'Edit question'})[0]);
+    fireEvent.change(
+      screen.getByDisplayValue('JavaScript variable fundamentals'),
+      {target: {value: 'Edited name'}}
+    );
+
+    const badge = 'Page contains an unsaved question';
+    expect(screen.queryByRole('img', {name: badge})).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 2'}));
+    const pageOf = (name: string) => screen.getByRole('region', {name});
+    expect(
+      within(pageOf('Page 1')).getByRole('img', {name: badge})
+    ).toBeInTheDocument();
+    expect(
+      within(pageOf('Page 2')).queryByRole('img', {name: badge})
+    ).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Expand Page 1'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Discard changes'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse Page 1'}));
+    expect(screen.queryByRole('img', {name: badge})).not.toBeInTheDocument();
+  });
+
+  describe('Save quiz', () => {
+    const saveButton = () => screen.getByRole('button', {name: 'Save quiz'});
+
+    it('is in the page header', () => {
+      renderWorkspace({questions: [question()]});
+      expect(headerSlot).toContainElement(saveButton());
+    });
+
+    it('is off with nothing to save', async () => {
+      renderWorkspace({questions: [question()]});
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {name: NO_CHANGES_REASON})
+      ).toBeInTheDocument();
+    });
+
+    it('saves the quiz when the layout has changed', () => {
+      const saveQuiz = jest.fn();
+      renderWorkspace({
+        questions: [question()],
+        hasUnsavedLayout: true,
+        saveQuiz,
+      });
+      expect(saveButton()).not.toHaveAttribute('aria-disabled');
+      fireEvent.click(saveButton());
+      expect(saveQuiz).toHaveBeenCalled();
+    });
+
+    it('is off while a new question is unsaved', async () => {
+      renderWorkspace({
+        questions: [question({id: -1})],
+        hasUnsavedLayout: true,
+      });
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {
+          name: UNSAVED_QUESTION_REASON,
+        })
+      ).toBeInTheDocument();
+    });
+
+    it('is off while a question has unsaved edits', async () => {
+      const saveQuiz = jest.fn();
+      renderWorkspace({
+        questions: [question()],
+        hasUnsavedLayout: true,
+        saveQuiz,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
+      fireEvent.change(
+        screen.getByDisplayValue('JavaScript variable fundamentals'),
+        {target: {value: 'Edited name'}}
+      );
+
+      fireEvent.click(saveButton());
+      expect(saveQuiz).not.toHaveBeenCalled();
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {
+          name: editedQuestionsReason(1),
+        })
+      ).toBeInTheDocument();
+    });
+
+    it('saves configuration changes, then reports what it saved', async () => {
+      const saveQuiz = jest.fn().mockResolvedValue(true);
+      const onConfigSaved = jest.fn();
+      renderWorkspace(
+        {questions: [question()], saveQuiz},
+        {
+          config: {...CONFIG, allowMultipleAttempts: true},
+          onConfigSaved,
+        }
+      );
+      expect(saveButton()).not.toHaveAttribute('aria-disabled');
+
+      fireEvent.click(saveButton());
+
+      expect(saveQuiz).toHaveBeenCalledWith({allowMultipleAttempts: true});
+      await waitFor(() =>
+        expect(onConfigSaved).toHaveBeenCalledWith({
+          allowMultipleAttempts: true,
+        })
+      );
+    });
+
+    it('keeps configuration changes unsaved when the save fails', async () => {
+      const saveQuiz = jest.fn().mockResolvedValue(false);
+      const onConfigSaved = jest.fn();
+      renderWorkspace(
+        {questions: [question()], saveQuiz},
+        {
+          config: {...CONFIG, allowMultipleAttempts: true},
+          onConfigSaved,
+        }
+      );
+
+      fireEvent.click(saveButton());
+
+      await waitFor(() => expect(saveQuiz).toHaveBeenCalled());
+      expect(onConfigSaved).not.toHaveBeenCalled();
+    });
+
+    it('is off with a configuration change while the quiz is loading', async () => {
+      renderWorkspace(
+        {isLoading: true, hasLoaded: false},
+        {config: {...CONFIG, allowMultipleAttempts: true}}
+      );
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {name: QUIZ_LOADING_REASON})
+      ).toBeInTheDocument();
+    });
+
+    it('is off with a configuration change after the quiz failed to load', async () => {
+      const saveQuiz = jest.fn();
+      renderWorkspace(
+        {hasLoaded: false, error: 'Something went wrong.', saveQuiz},
+        {config: {...CONFIG, allowMultipleAttempts: true}}
+      );
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.click(saveButton());
+      expect(saveQuiz).not.toHaveBeenCalled();
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {name: QUIZ_LOAD_FAILED_REASON})
+      ).toBeInTheDocument();
+    });
+
+    it('is off while the configuration is invalid', async () => {
+      renderWorkspace(
+        {questions: [question()]},
+        {config: {...CONFIG, showIntroScreen: true, timeLimitMinutes: 0}}
+      );
+      expect(saveButton()).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.mouseOver(saveButton());
+      expect(
+        await screen.findByRole('tooltip', {name: INVALID_CONFIG_REASON})
+      ).toBeInTheDocument();
+    });
+
+    it('asks before leaving with unsaved configuration', () => {
+      renderWorkspace(
+        {questions: [question()]},
+        {config: {...CONFIG, allowMultipleAttempts: true}}
+      );
+      const event = new Event('beforeunload', {cancelable: true});
+      window.dispatchEvent(event);
+      expect(event.defaultPrevented).toBe(true);
+    });
+
+    it('shows that it is saving', () => {
+      renderWorkspace({
+        questions: [question()],
+        hasUnsavedLayout: true,
+        isSavingQuiz: true,
+      });
+      expect(screen.getByRole('button', {name: 'Saving…'})).toBeDisabled();
+    });
+
+    it('asks before leaving with unsaved changes', () => {
+      renderWorkspace({questions: [question()], hasUnsavedLayout: true});
+      const event = new Event('beforeunload', {cancelable: true});
+      window.dispatchEvent(event);
+      expect(event.defaultPrevented).toBe(true);
+    });
+
+    it('asks before leaving with an unsaved question draft', () => {
+      renderWorkspace({questions: [question()]});
+      fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
+      fireEvent.change(
+        screen.getByDisplayValue('JavaScript variable fundamentals'),
+        {target: {value: 'Edited name'}}
+      );
+
+      const event = new Event('beforeunload', {cancelable: true});
+      window.dispatchEvent(event);
+      expect(event.defaultPrevented).toBe(true);
+    });
+
+    it('lets the page close with nothing unsaved', () => {
+      renderWorkspace({questions: [question()]});
+      const event = new Event('beforeunload', {cancelable: true});
+      window.dispatchEvent(event);
+      expect(event.defaultPrevented).toBe(false);
+    });
   });
 });

@@ -2,6 +2,7 @@ import {type ReactFlowInstance} from '@xyflow/react';
 import {toBlob} from 'html-to-image';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {capExportPixelRatio} from '@cdo/apps/util/imageExport/capExportPixelRatio';
 import {getExportStyleProperties} from '@cdo/apps/util/imageExport/getExportStyleProperties';
 import {getFontEmbedCss} from '@cdo/apps/util/imageExport/getFontEmbedCss';
 import {inlineSvgStylesForExport} from '@cdo/apps/util/imageExport/inlineSvgStylesForExport';
@@ -10,6 +11,7 @@ import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
 import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
+import {downscaleImagesForExport} from './downscaleImagesForExport';
 import {getCanvasBounds} from './getCanvasBounds';
 import {SketchCaptureError} from './SketchCaptureError';
 
@@ -79,6 +81,14 @@ const captureSketch = async (
     ? getComputedStyle(canvas).backgroundColor
     : '#ffffff';
 
+  // html-to-image multiplies the output by the device pixel ratio. Keep that
+  // detail, but not past our max canvas size.
+  const pixelRatio = capExportPixelRatio(
+    Math.max(window.devicePixelRatio || 1, 1),
+    imageWidth,
+    imageHeight
+  );
+
   const renderBlob = async () => {
     // Supplying this stops html-to-image from inlining every font the page declares.
     const fontEmbedCSS = await getFontEmbedCss(viewport);
@@ -86,6 +96,7 @@ const captureSketch = async (
       backgroundColor,
       fontEmbedCSS,
       includeStyleProperties: getExportStyleProperties(),
+      pixelRatio,
       width: imageWidth,
       height: imageHeight,
       style: {
@@ -96,6 +107,10 @@ const captureSketch = async (
     });
   };
 
+  const restoreImageSources = downscaleImagesForExport(
+    viewport,
+    scale * pixelRatio
+  );
   const restoreSvgStyles = inlineSvgStylesForExport(viewport);
   let timer: number | undefined;
   let blob: Blob | null;
@@ -118,6 +133,7 @@ const captureSketch = async (
       images: viewport.querySelectorAll('img').length,
       imageWidth,
       imageHeight,
+      pixelRatio,
     });
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -125,6 +141,7 @@ const captureSketch = async (
     return {error: CAPTURE_ERROR};
   } finally {
     window.clearTimeout(timer);
+    restoreImageSources();
     restoreSvgStyles();
   }
 

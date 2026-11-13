@@ -74,22 +74,10 @@ class UnitTest < ActiveSupport::TestCase
       CourseOffering.get_from_cache(name)
     end
 
-    # Rails 7.1 renamed the underlying method from `execute` to
-    # `raw_execute`, so temporarily support both versions.
-    # TODO infra: simplify this once we're fully updated to Rails 7.1
-    execute_method_name =
-      if Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 0
-        :execute
-      elsif Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 1
-        :raw_execute
-      else
-        throw "remove this temporary transitional logic before upgrading beyond Rails 7.1"
-      end
-
     # ActiveRecord collection association still references an active DB
     # connection, even when the data is already eager loaded. Best we can do
     # is ensure that no queries are executed on the active connection.
-    ActiveRecord::Base.connection.stubs(execute_method_name).raises('Database disconnected')
+    ActiveRecord::Base.connection.stubs(:raw_execute).raises('Database disconnected')
   end
 
   test 'can setup migrated unit with new models' do
@@ -2461,11 +2449,11 @@ class UnitTest < ActiveSupport::TestCase
     # The user can reach US only models, so nothing is blocked. The method also
     # returns before querying the unit's levels, but stubbing Unit.where to
     # prove that breaks unrelated teardown, so only the result is asserted.
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    User.any_instance.stubs(:blocked_aichat_providers).returns([])
     refute essential_us_only.requires_inaccessible_ai_models?(teacher)
 
-    User.any_instance.unstub(:us_only_aichat_models_disabled?)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    User.any_instance.unstub(:blocked_aichat_providers)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
     assert essential_us_only.requires_inaccessible_ai_models?(teacher)
     # Reachable models, so the unit is completable.
     refute essential_reachable.requires_inaccessible_ai_models?(teacher)

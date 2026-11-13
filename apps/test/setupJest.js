@@ -33,13 +33,22 @@ enzyme.configure({adapter: new Adapter()});
 window.IN_UNIT_TEST = true;
 window.IN_STORYBOOK = false;
 window.scrollTo = jest.fn();
+Element.prototype.scrollTo = jest.fn();
+window.matchMedia = jest.fn(() => ({
+  matches: false,
+  addEventListener: jest.fn(),
+  removeEventListener: jest.fn(),
+  addListener: jest.fn(),
+  removeListener: jest.fn(),
+}));
 window.fetch = mockFetch;
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
+// A class, not jest.fn: suites that call jest.resetAllMocks() would strip a mock's methods.
+global.ResizeObserver = class {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
 
 global.speechSynthesis = {
   speak: jest.fn(),

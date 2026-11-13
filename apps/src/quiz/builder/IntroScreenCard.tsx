@@ -1,80 +1,41 @@
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
-import React, {useEffect, useState} from 'react';
-
-import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
+import React, {useState} from 'react';
 
 import BuilderCard from './BuilderCard';
-import {QuizConfigurationData} from './QuizConfigurationPanel';
+import {QuizConfigurationData} from './types';
 
 import builderCommonStyles from './builder-common.module.scss';
 
 interface IntroScreenCardProps {
   customIntroText: string;
+  savedCustomIntroText: string;
   // Intro screen must be shown when a time limit is set.
   hasTimeLimit: boolean;
-  onSave: (fields: Partial<QuizConfigurationData>) => Promise<void>;
+  onChange: (fields: Partial<QuizConfigurationData>) => void;
 }
 
 // The intro screen's markdown content, edited in place at the top of the
-// quiz outline. Its title is the quiz display name, set in Configuration.
+// quiz outline and saved with Save quiz. Its title is the quiz display name,
+// set in Configuration.
 const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
   customIntroText,
+  savedCustomIntroText,
   hasTimeLimit,
-  onSave,
+  onChange,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [draft, setDraft] = useState(customIntroText);
-  const [isSaving, setIsSaving] = useState(false);
-  const [isRemoving, setIsRemoving] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const isBusy = isSaving || isRemoving;
-  const isDirty = draft !== customIntroText;
-
-  useEffect(() => {
-    setDraft(customIntroText);
-  }, [customIntroText]);
-
-  const save = async (fields: Partial<QuizConfigurationData>) => {
-    setError(null);
-    try {
-      await onSave(fields);
-      return true;
-    } catch (e) {
-      setError(await networkErrorMessage(e));
-      return false;
-    }
-  };
-
-  const handleSave = async () => {
-    setIsSaving(true);
-    const ok = await save({customIntroText: draft});
-    setIsSaving(false);
-    if (ok) {
-      setIsExpanded(false);
-    }
-  };
-
-  const handleRemove = async () => {
-    setIsRemoving(true);
-    await save({showIntroScreen: false});
-    setIsRemoving(false);
-  };
 
   return (
     <BuilderCard
       iconName="hand-wave"
       name="Intro Screen"
-      preview={draft}
+      preview={customIntroText}
       itemLabel="intro screen"
       isExpanded={isExpanded}
       onExpandedChange={setIsExpanded}
-      isDirty={isDirty}
-      isSaving={isSaving}
-      isRemoving={isRemoving}
-      error={error}
-      onSave={handleSave}
-      onDiscard={() => setDraft(customIntroText)}
-      onRemove={handleRemove}
+      isDirty={customIntroText !== savedCustomIntroText}
+      onDiscard={() => onChange({customIntroText: savedCustomIntroText})}
+      onRemove={() => onChange({showIntroScreen: false})}
       cannotRemoveReason={
         hasTimeLimit
           ? 'Remove the time limit in Configuration before removing the intro screen.'
@@ -82,14 +43,19 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
       }
     >
       <div className={builderCommonStyles.section}>
-        <FormFieldWrapper label="Content" helperMessage="Supports markdown.">
+        <FormFieldWrapper
+          label="Content"
+          size="s"
+          color="gray"
+          helperMessage="Supports markdown."
+          className={builderCommonStyles.fullWidthField}
+        >
           <textarea
             className={builderCommonStyles.textarea}
             name="customIntroText"
             rows={6}
-            value={draft}
-            onChange={e => setDraft(e.target.value)}
-            disabled={isBusy}
+            value={customIntroText}
+            onChange={e => onChange({customIntroText: e.target.value})}
           />
         </FormFieldWrapper>
       </div>

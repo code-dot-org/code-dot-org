@@ -54,6 +54,8 @@ export class TurnstileChallengeError extends Error {
     options?: {cause?: unknown}
   ) {
     super(message, options);
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'TurnstileChallengeError';
     this.reason = reason;
   }
@@ -76,6 +78,8 @@ export class TurnstileDevToolsError extends Error {
       'Turnstile challenge blocked by active DevTools breakpoints. ' +
         'To fix: close DevTools, or press Ctrl+F8 / Cmd+F8 to deactivate breakpoints.'
     );
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'TurnstileDevToolsError';
   }
 }

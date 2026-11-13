@@ -19,8 +19,8 @@ const MULTIPLE_CHOICE_QUESTION: QuizBuilderQuestion = {
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
+  deletable: true,
   usedInPublishedUnit: false,
-  page: 1,
 };
 
 const MULTIPLE_SELECT_QUESTION: QuizBuilderQuestion = {
@@ -38,8 +38,8 @@ const MULTIPLE_SELECT_QUESTION: QuizBuilderQuestion = {
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
+  deletable: true,
   usedInPublishedUnit: false,
-  page: 1,
 };
 
 // QuizQuestionCard doesn't own its expanded state (QuizBuilderWorkspace does,
@@ -55,6 +55,7 @@ function renderCard(
     return (
       <QuizQuestionCard
         question={MULTIPLE_CHOICE_QUESTION}
+        page={1}
         onSave={onSave}
         onRemove={onRemove}
         {...props}
@@ -68,6 +69,12 @@ function renderCard(
 }
 
 describe('QuizQuestionCard', () => {
+  it('shows the page it is given on the Usage tab', () => {
+    renderCard({isExpanded: true, page: 3});
+    fireEvent.click(screen.getByRole('tab', {name: 'Usage'}));
+    expect(screen.getByText('Page 3')).toBeInTheDocument();
+  });
+
   it('shows a collapsed preview by default', () => {
     renderCard();
 
@@ -251,6 +258,25 @@ describe('QuizQuestionCard', () => {
       renderCard({question: PENDING_QUESTION, isExpanded: true});
 
       expect(screen.getByLabelText('Internal name*')).toHaveFocus();
+    });
+
+    it('hides Remove from quiz and uses Discard to drop the unsaved card', async () => {
+      const {onRemove} = renderCard({
+        question: PENDING_QUESTION,
+        isExpanded: true,
+      });
+
+      expect(
+        screen.queryByRole('button', {name: 'Remove from quiz'})
+      ).toBeNull();
+      expect(
+        screen.queryByRole('button', {name: 'Discard changes'})
+      ).toBeNull();
+
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Discard'}));
+      });
+      expect(onRemove).toHaveBeenCalledWith(-1);
     });
   });
 

@@ -9,6 +9,7 @@ import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import React, {useRef} from 'react';
 
+import AiTutorVersionAlert from '@cdo/apps/aiComponentLibrary/aiTutorVersionAlert/AiTutorVersionAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
@@ -69,6 +70,12 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const showFileBrowser = useAppSelector(
     state => state.codebridgeWorkspace.showFileBrowser
   );
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+  const aiTutorVersionFiles = useAppSelector(
+    state => state.lab2Project.aiTutorVersionFiles
+  );
 
   return (
     <div style={style} className={className}>
@@ -86,6 +93,10 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         headerClassName={moduleStyles.workspaceHeader}
       >
         {!hideHeaders && <WorkspaceAlerts inWorkspaceContainer />}
+        {/* Labs that hide headers show this alert themselves. */}
+        {!hideHeaders && isAiTutorVersion && (
+          <AiTutorVersionAlert aiTutorVersionFiles={aiTutorVersionFiles} />
+        )}
         <div
           className={classnames(moduleStyles.workspaceWorkarea, {
             [moduleStyles.withFileBrowser]: showFileBrowser,

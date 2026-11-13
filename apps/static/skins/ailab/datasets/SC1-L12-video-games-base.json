@@ -1,0 +1,57 @@
+{
+  "name": "SC1-L12-video-games-base",
+  "card": {
+    "description": "A family game-night app suggests video games. Each record is one real game. The label says if two or more people can play the game together in one room. You can also choose Kid Friendly (Rated E)? or Online Play? as the label.",
+    "source": "Game titles, years, genres, platforms and couch co-op facts compiled by hand from public game information (Wikipedia game articles and the ESRB public rating search). Best-seller lists such as the Code.org Data Library (curriculum.code.org/docs/concepts/data-library) and the CC0 Global Video Game Sales and Ratings set on Kaggle were used only to help pick well-known titles. Each fact must be checked against the game's Wikipedia article and esrb.org before use.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Use the app's predictions to get ideas for games to try at a family game night.",
+      "potentialMisuses": "The list has only 59 games, picked by one person, so it leaves out many games. Do not use it to decide which games to buy."
+    }
+  },
+  "defaultLabelColumn": "Couch Co-op?",
+  "defaultIdColumn": "Game",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Game",
+      "description": "What is the game called?"
+    },
+    {
+      "type": "categorical",
+      "id": "Genre",
+      "description": "What kind of game is it? A Platformer has jumping levels. RPG means role-playing game."
+    },
+    {
+      "type": "categorical",
+      "id": "Platform Type",
+      "description": "What kind of device was the game first made for?"
+    },
+    {
+      "type": "categorical",
+      "id": "Part of a Series",
+      "description": "Is the game part of a series with other games?"
+    },
+    {
+      "type": "categorical",
+      "id": "Era",
+      "description": "When did the game come out?"
+    },
+    {
+      "type": "categorical",
+      "id": "Kid Friendly (Rated E)?",
+      "description": "Is the game rated E for Everyone?"
+    },
+    {
+      "type": "categorical",
+      "id": "Online Play?",
+      "description": "Can you play this game online with other people?"
+    },
+    {
+      "type": "categorical",
+      "id": "Couch Co-op?",
+      "description": "Can two or more people play this game together (playing together in one room)? They can share one screen or use linked devices. This is what the app predicts."
+    }
+  ]
+}

@@ -141,6 +141,44 @@ class UserPreferencesControllerTest < ActionController::TestCase
     assert_nil preference.attributes['unpermitted_param']
   end
 
+  test 'locks the row without waiting when section_order changes' do
+    UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
+    UserPreference.any_instance.expects(:lock!).with('FOR UPDATE NOWAIT')
+
+    patch :update, params: {section_order: [1, 2, 3]}, as: :json
+
+    assert_response :success
+    assert_equal [1, 2, 3], UserPreference.find_by(user_id: @user.id).section_order
+  end
+
+  test 'returns conflict and keeps the stored section_order when another request holds the row lock' do
+    preference = UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
+    UserPreference.any_instance.stubs(:lock!).raises(lock_nowait_error)
+
+    patch :update, params: {section_order: [1, 2, 3]}, as: :json
+
+    assert_response :conflict
+    assert_equal [3, 2, 1], preference.reload.section_order
+  end
+
+  test 'does not lock the row when section_order is unchanged' do
+    UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
+    UserPreference.any_instance.expects(:lock!).never
+
+    patch :update, params: {section_order: [3, 2, 1]}, as: :json
+
+    assert_response :success
+  end
+
+  test 'does not lock the row for preferences other than section_order' do
+    UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
+    UserPreference.any_instance.expects(:lock!).never
+
+    patch :update, params: {theme: {'global' => 'Dark'}}, as: :json
+
+    assert_response :success
+  end
+
   test 'gets console_font_size for the current user' do
     font_size = {'pythonlab' => 'large'}
     UserPreference.create!(user_id: @user.id, console_font_size: font_size)
@@ -211,5 +249,13 @@ class UserPreferencesControllerTest < ActionController::TestCase
     get :editor_settings
 
     assert_response :not_found
+  end
+
+  # Ruby sets an exception's cause only when raising it.
+  private def lock_nowait_error
+    mysql_error = Mysql2::Error.new('lock held', nil, UserPreferencesController::ER_LOCK_NOWAIT)
+    raise ActiveRecord::StatementInvalid, 'NOWAIT', cause: mysql_error
+  rescue ActiveRecord::StatementInvalid => exception
+    exception
   end
 end

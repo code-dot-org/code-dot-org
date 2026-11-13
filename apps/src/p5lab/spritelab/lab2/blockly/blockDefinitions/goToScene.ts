@@ -19,6 +19,20 @@ export function setSceneMenuActiveId(id: string | null): void {
   activeSceneId = id;
 }
 
+/** Run `fn` with `id` as the scene the menu leaves out, then put the
+    editor's scene back. A scene compiled off screen loads its blocks
+    against the menu, and a jump to the editor's scene would be refused
+    and fall back to the first option. */
+export function withSceneMenuActive<T>(id: string, fn: () => T): T {
+  const previous = activeSceneId;
+  activeSceneId = id;
+  try {
+    return fn();
+  } finally {
+    activeSceneId = previous;
+  }
+}
+
 // Dropdown options: [friendly name, scene id]. The id is the saved value.
 // Reads the redux mirror so the menu stays current as scenes are added.
 function sceneMenuOptions(): [string, string][] {
@@ -40,9 +54,13 @@ function sceneThumbnails(): Map<string, string> {
   );
 }
 
-// The picture on the block face, and its gap before the text.
-const FACE_THUMB_PX = 20;
-const FACE_THUMB_GAP_PX = 4;
+// The picture on the block face, and its gap before the text. The picture
+// is the size of the thumbnails in the image dropdowns, so this block is as
+// tall as the blocks that carry one, such as set as player.
+const FACE_THUMB_PX = 32;
+const FACE_THUMB_GAP_PX = 6;
+// Room above and below the picture, inside the field.
+const FACE_THUMB_PAD_PX = 5;
 
 /**
  * Registered field type (see setup.ts) so the JSON definition gets a dropdown
@@ -82,6 +100,15 @@ export class SceneDropdown extends BlocklyCore.FieldDropdown {
     }
     const url = sceneThumbnails().get(this.getValue() ?? '');
     const dx = url ? FACE_THUMB_PX + FACE_THUMB_GAP_PX : 0;
+    // The field is made tall enough for the picture whether or not this
+    // scene has one yet, so the block does not change height when a
+    // picture arrives. The text and the arrow move down to stay centered.
+    const textHeight = this.size_.height;
+    this.size_.height = Math.max(
+      textHeight,
+      FACE_THUMB_PX + 2 * FACE_THUMB_PAD_PX
+    );
+    const dy = (this.size_.height - textHeight) / 2;
     thumb.style.display = url ? '' : 'none';
     if (url) {
       thumb.setAttributeNS(BlocklyCore.utils.dom.XLINK_NS, 'xlink:href', url);
@@ -97,7 +124,7 @@ export class SceneDropdown extends BlocklyCore.FieldDropdown {
     // runs often.
     Array.from(group.children).forEach(child => {
       if (child !== this.borderRect_ && child !== thumb) {
-        child.setAttribute('transform', `translate(${dx}, 0)`);
+        child.setAttribute('transform', `translate(${dx}, ${dy})`);
       }
     });
     this.size_.width += dx;

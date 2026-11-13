@@ -21,6 +21,7 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
             {'id' => 'why', 'type' => 'freeResponse', 'text' => 'Why?'},
             {'id' => 'how', 'type' => 'scale', 'text' => 'How much?', 'scale' => {'min' => 1, 'max' => 5}},
           ]},
+          {'id' => 'review', 'kind' => 'review', 'questionId' => 4},
           {'id' => 'try', 'kind' => 'level', 'level' => 'adaptive-progress-sandbox', 'project' => true, 'instructionsPrompt' => 'Build on their page.',
            'validation' => {'condition' => 'Adds a heading.', 'measures' => {'skillId' => 'build'}}},
           {'id' => 'retry', 'kind' => 'level', 'level' => 'adaptive-progress-sandbox'},
@@ -123,6 +124,13 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert entry['submitted']
   end
 
+  test "a review step's decision is stored like a picked answer" do
+    put_step 'review', answers: {questionId: 4, list: [{answerId: 'build', text: 'ignored'}]}
+
+    assert_response :success
+    assert_equal [{'answerId' => 'build'}], steps['review']['answers']['4']
+  end
+
   test "a typed answer is stored with its text where the question allows one" do
     put_step 'quiz', answers: {questionId: 3, list: [{answerId: 'other', text: 'Neither, really', isCorrect: true}]}
     put_step 'quiz', answers: {questionId: 2, list: [{answerId: 'a', text: 'dropped'}]}
@@ -150,6 +158,8 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
       ['quiz', {answers: {questionId: 2, list: [{answerId: 'other', text: 'no typing here'}]}}],
       ['quiz', {answers: {questionId: 3, list: [{answerId: 'other'}]}}],
       ['quiz', {answers: {questionId: 3, list: [{answerId: 'other', text: 'x' * 10_001}]}}],
+      ['review', {answers: {questionId: 4, list: [{answerId: 'maybe'}]}}],
+      ['review', {answers: {questionId: 1, list: [{answerId: 'build'}]}}],
       ['quiz', {answers: {questionId: 'why', list: [{text: 'x' * 10_001}]}}],
       ['read', {timeSinceLastSave: 'soon'}],
       ['try', {}],
@@ -255,6 +265,27 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
       end
       assert_response :unprocessable_entity, "#{step_id} #{attempt}"
     end
+  end
+
+  test "a refused save is reported with its reason, step and level" do
+    Observability::Errors.expects(:report).with(
+      error_class: 'AdaptiveProgressRejected',
+      error_message: 'Adaptive progress save rejected: invalid_validation_attempt',
+      fingerprint: 'AdaptiveProgressRejected:invalid_validation_attempt',
+      context: {reason: 'invalid_validation_attempt', step_id: 'try', level_id: @level.id, script_id: @unit.id}
+    )
+
+    put_validation 'try', {'pass' => true, 'evidenceLevel' => 3, 'reason' => 'Fine.'}
+
+    assert_response :unprocessable_entity
+  end
+
+  test "an accepted save reports nothing" do
+    Observability::Errors.expects(:report).never
+
+    put_step 'read', started: true
+
+    assert_response :success
   end
 
   test "level steps take their state from the step level's user level" do

@@ -158,6 +158,13 @@ $border-subtle: chrome.$border-subtle;
     margin-top: 8px;
   }
 
+  // The color control in a host's group, beside the tools.
+  .colorInline {
+    display: flex;
+    align-items: center;
+    margin: 0 2px;
+  }
+
   .colorPicker {
     width: 64px;
   }
@@ -281,17 +288,33 @@ $border-subtle: chrome.$border-subtle;
   @include chrome.primary-button;
 }
 
+$palette-swatch: 24px;
+$palette-gap: 8px;
+// Swatches on each row of the palette popover.
+$palette-columns: 5;
+
 .palette {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: $palette-gap;
+}
+
+// Wide enough for one row of swatches; any more wrap onto the next row.
+$palette-row: $palette-columns * $palette-swatch + ($palette-columns - 1) * $palette-gap;
+
+// Two classes, so its padding wins over the spectrum popover's own, which
+// is declared further down.
+.spectrumPopover.palettePopover {
+  box-sizing: content-box;
+  width: $palette-row;
+  padding: $palette-gap;
 }
 
 .paletteSwatch {
   box-sizing: border-box;
-  width: 24px;
-  height: 24px;
+  width: $palette-swatch;
+  height: $palette-swatch;
   margin: 0;
   padding: 0;
   border: 2px solid var(--dialog-control-border-strong);

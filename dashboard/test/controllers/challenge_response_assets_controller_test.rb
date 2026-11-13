@@ -13,7 +13,7 @@ class ChallengeResponseAssetsControllerTest < ActionController::TestCase
   let(:response_json) {JSON.parse(response.body)}
 
   before do
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
+    User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(true)
     AWS::S3.stubs(:user_content_bucket).returns('test-user-content')
     AWS::S3.stubs(:presigned_download_url).returns('https://s3.example/download')
   end
@@ -26,9 +26,9 @@ class ChallengeResponseAssetsControllerTest < ActionController::TestCase
       end
     end
 
-    context 'when signed in without lesson deep dive access' do
+    context 'when signed in without lesson deep dive challenge access' do
       before do
-        User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
+        User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(false)
         sign_in student
       end
 

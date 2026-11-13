@@ -1,0 +1,1152 @@
+{
+  "script": {
+    "name": "quest-builder-2026",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "hoc",
+      "curriculum_umbrella": "HOAI",
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "simple_progress": true,
+      "simple_progress_image": "/blockly/media/hoai2026/logo.png"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-11-13 13:28:28 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "quest-builder-2026"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "hoai2026-dev-lesson",
+      "name": "hoai2026-dev-lesson",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "background": "dark",
+        "overview": "In this Hour of AI lesson, students create their own quest, a game with a goal, one part at a time. They can use AI to make the art, judging each image against their own vision, and get a glimpse into how AI makes images. Students will use block-based code to decide what happens when the player reaches an object or when the characters meet, practicing decomposition and event-based thinking. Because the image generation is a simulation, students can explore safely.",
+        "preparation": "- Test out Quest Builder to ensure familiarity with the platform.\n- Review the introduction video and practice walking students through the steps to prompt AI and modify code.\n- Prepare discussion prompts that help students connect with the opportunities and risks of using AI.\n- *[Optional]* Find the resources you need to plan, implement, and celebrate the Hour of AI at your school [here](https://csforall.org/en-US/hour-of-ai/how-to/k-12educator)!",
+        "student_overview": "Ready to build your own quest? In Quest Builder, you’ll make a game with a hero, treasure, and a world you design, then use code to decide what happens when the player reachers an important object or when the characters meet. Tell AI what to make, check that each image fits your idea, or draw your own. Then play the quest you built!"
+      },
+      "seeding_key": {
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "9edb5b58-5ea6-4633-a31a-06d28ca47733",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9edb5b58-5ea6-4633-a31a-06d28ca47733",
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026"
+      }
+    },
+    {
+      "key": "b6f56c77-9307-4465-b2bb-16864edd6079",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Quest Builder "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b6f56c77-9307-4465-b2bb-16864edd6079",
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026"
+      }
+    },
+    {
+      "key": "6115d7ac-0e12-4b05-a049-17399cbe496f",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6115d7ac-0e12-4b05-a049-17399cbe496f",
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026"
+      }
+    },
+    {
+      "key": "345b1b58-3cf9-4efe-90f1-a5054bb8a826",
+      "position": 4,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "345b1b58-3cf9-4efe-90f1-a5054bb8a826",
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026"
+      }
+    },
+    {
+      "key": "6bfcff33-c9db-4f87-99ab-3c6fccc42046",
+      "position": 5,
+      "properties": {
+        "name": "Continue Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6bfcff33-c9db-4f87-99ab-3c6fccc42046",
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "78327832-abae-4f96-ac0e-e4d996bdbcd9",
+      "position": 1,
+      "properties": {
+        "description": "Begin with a quick warm up to activate prior knowledge and set a playful tone before students meet the tool."
+      },
+      "seeding_key": {
+        "activity_section.key": "78327832-abae-4f96-ac0e-e4d996bdbcd9",
+        "lesson_activity.key": "9edb5b58-5ea6-4633-a31a-06d28ca47733"
+      }
+    },
+    {
+      "key": "91770c6a-470f-4c47-b48b-a959aa420a12",
+      "position": 2,
+      "properties": {
+        "description": "Today you are joining the Hour of AI, a worldwide event. Students everywhere are taking their first step from watchers to creators. Today, you are not just using technology, you are creating with it.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "91770c6a-470f-4c47-b48b-a959aa420a12",
+        "lesson_activity.key": "9edb5b58-5ea6-4633-a31a-06d28ca47733"
+      }
+    },
+    {
+      "key": "fe40a1d2-ba28-4d43-a126-d7c6528430ab",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair students back to back. Partner A describes thr character using words only: An angry dragon with a crown. Partner B draws what they hear. Give about 2 minutes, then have partners compare.",
+        "name": "Describe and Draw"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe40a1d2-ba28-4d43-a126-d7c6528430ab",
+        "lesson_activity.key": "9edb5b58-5ea6-4633-a31a-06d28ca47733"
+      }
+    },
+    {
+      "key": "1784656b-88fa-496a-9fcf-8766471a831a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Hold up the dragons. What color is yours? Is it wearing or holding the crown? Are there extras that were not in the prompt, like fire, wings, horns, or scales? Then ask: Why did lots of dragons have things in common? Why were there differences?\n- Grades 3-5 follow-up: Which dragon detail did the most people draw?\n- Grades 6-8 follow-up: If most of the pictures AI learned from showed dragons one way, what might be missing?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Link to generative AI. The class drew similar dragons because you have all seen dragons in books, movies, and games. AI learned from lots of pictures, so it makes what it has seen most. The differences are like imagination: every Generate is a new guess. \n\n",
+        "name": "Discuss the Drawings"
+      },
+      "seeding_key": {
+        "activity_section.key": "1784656b-88fa-496a-9fcf-8766471a831a",
+        "lesson_activity.key": "9edb5b58-5ea6-4633-a31a-06d28ca47733"
+      }
+    },
+    {
+      "key": "3f6bb776-682c-44d4-90e3-1375ab9e298a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the objectives, then share the Question of the Day: How do you decide if an AI image is right for your idea? Return to it in the Wrap Up.",
+        "name": "Lesson Objectives"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f6bb776-682c-44d4-90e3-1375ab9e298a",
+        "lesson_activity.key": "9edb5b58-5ea6-4633-a31a-06d28ca47733"
+      }
+    },
+    {
+      "key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+      "position": 1,
+      "properties": {
+        "progression_name": "Quest Builder"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "lesson_activity.key": "b6f56c77-9307-4465-b2bb-16864edd6079"
+      }
+    },
+    {
+      "key": "89995a96-994c-4208-b2d2-d1fc4a473bac",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the intro video as a class (1:15). Part 1 is a story about how games inspired Tina to become a programmer. Part 2 is Tina explaining the activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Preview the vocabulary before students start. \n\n\n\n",
+        "name": "Getting Started"
+      },
+      "seeding_key": {
+        "activity_section.key": "89995a96-994c-4208-b2d2-d1fc4a473bac",
+        "lesson_activity.key": "6115d7ac-0e12-4b05-a049-17399cbe496f"
+      }
+    },
+    {
+      "key": "4035e7f1-a072-41de-b6c5-b57933ef299e",
+      "position": 2,
+      "properties": {
+        "description": "A whole game is too big to design at once. We decompose it into parts: images, the world design, and code, such as when sprites touch events. For each part, we decide, make, and test. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4035e7f1-a072-41de-b6c5-b57933ef299e",
+        "lesson_activity.key": "6115d7ac-0e12-4b05-a049-17399cbe496f"
+      }
+    },
+    {
+      "key": "3c660107-5733-4f45-b37b-506c9835e989",
+      "position": 3,
+      "properties": {
+        "description": "☑️ Do This: Point out the pattern as students move through the levels: every part follows decide, make, test.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Transition students to work through the levels at their own pace. Point out the pattern as students move through the levels: every part follows decide, make, test.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c660107-5733-4f45-b37b-506c9835e989",
+        "lesson_activity.key": "6115d7ac-0e12-4b05-a049-17399cbe496f"
+      }
+    },
+    {
+      "key": "1e45cd15-218b-423c-9b15-811a8801cef3",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1e45cd15-218b-423c-9b15-811a8801cef3",
+        "lesson_activity.key": "6115d7ac-0e12-4b05-a049-17399cbe496f"
+      }
+    },
+    {
+      "key": "2f3fb0d2-29f2-46e5-a96b-b4ae68f54963",
+      "position": 5,
+      "properties": {
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pause after students have made and evaluated a few images. Walk through the four Behind the Scenes panels on the slide. They match the panels students see when they first generate an image. Students can reopen them any time with Behind the scenes. \n\nPick 1-2 questions per grade band.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discussions for Grades 3-5:**\n\n- Did the AI make what you pictured? What did you change?\n- Regenerate with the same choices. What changed?\n- What do you look for to decide if a picture is right for your quest? \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discussions for Grades 6-8:**\n- What did you use to judge the image?\n- The same prompt gives different results. How should that change how you check AI’s work?\n- How did your own idea help you decide? \n- AI learned from lots of pictures. Whose pictures or ideas might be missing?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students judge AI output against their own idea for the quest, moving from 'That looks cool' to 'That fits my idea.' Surprising results can show how AI reads a prompt, and gaps in its training pictures can lead to results that seem unusual or unfair.\n\n\n",
+        "name": "Pause to Discuss Images part 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f3fb0d2-29f2-46e5-a96b-b4ae68f54963",
+        "lesson_activity.key": "6115d7ac-0e12-4b05-a049-17399cbe496f"
+      }
+    },
+    {
+      "key": "dc51051a-58da-4299-b72d-4355aa736eec",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the example of the aquatic fox with a crown on the slide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discussion for Grades 3-5:**\n- Point to one thing that matches the prompt and one that does not. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discussion for Grades 6-8:**\n- What in the prompt might have led to this? What would you change?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** AI can produce unexpected things. Sometimes the surprise is pleasant and worth keeping. Sometimes it is not what you wanted. Either way, look carefully, then decide. The student makes the call.\n",
+        "name": "Pause to Discuss Images part 2",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Image generation in Quest Builder is simulated. Students build prompts from menu choices, so the options are intentionally limited. If a student wants a choice that is not on the menu, ask what they would add and why real AI tools also have limits."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc51051a-58da-4299-b72d-4355aa736eec",
+        "lesson_activity.key": "6115d7ac-0e12-4b05-a049-17399cbe496f"
+      }
+    },
+    {
+      "key": "677efceb-d6ee-46d4-b2b8-7740240468f0",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pause the class when students reach Level 7 Touch Event. \n\nConnect each word to what they did. **Event**: Which event did your quest use? What happened because of it? **Behavior:** What did your second character do on its own?\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discussion for Grades 3-5:**\n- Swap the block under when touches. What changes? \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discussions for Grades 6-8:**\n- How does your rule match your blocks? \n- When something did not happen the way you meant, what did you fix: your plan or your code?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students say what should happen and when, like When the hero reaches the winning object, confetti explodes. That has the same structure as an event block. They decide the behavior first, then build it, test it, and fix it.",
+        "name": "Pause to Discuss Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "677efceb-d6ee-46d4-b2b8-7740240468f0",
+        "lesson_activity.key": "6115d7ac-0e12-4b05-a049-17399cbe496f"
+      }
+    },
+    {
+      "key": "32ba7706-1222-416d-938a-4fe98127d8cc",
+      "position": 1,
+      "properties": {
+        "description": "Today you decomposed a game into parts, used events to control what happens and when, and judged AI images against your own idea.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "32ba7706-1222-416d-938a-4fe98127d8cc",
+        "lesson_activity.key": "345b1b58-3cf9-4efe-90f1-a5054bb8a826"
+      }
+    },
+    {
+      "key": "55b3c992-7b39-4f45-87ac-52d46c57d0ee",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Wrap up the lesson. Celebrate what students made and return to the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Pick 1-2 questions per grade band. More questions. Grades 3-5: Was there an AI picture you decided not to keep? How did you decide? Who is the creator of your quest? Grades 6-8: Where did you use AI, and where did you choose not to? If AI made a choice you did not like, what could you do?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students are the creators and AI is a tool. They decide what to make, whether to use AI, what to keep, and what to change. Changing your mind after seeing what AI made, or after testing, is good judgment, not a mistake."
+      },
+      "seeding_key": {
+        "activity_section.key": "55b3c992-7b39-4f45-87ac-52d46c57d0ee",
+        "lesson_activity.key": "345b1b58-3cf9-4efe-90f1-a5054bb8a826"
+      }
+    },
+    {
+      "key": "98f444ec-6ba0-4d79-a896-880410d39b2a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Return to the Question of the Day. Invite two or three students to answer using today's words: prompt, evaluate, event, behavior, scene.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Celebrate what students made. Encourage them to click Finish to get a link to share their quest, and Finish again for their certificate.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Check the Finish, share link, and certificate steps in Quest Builder"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "98f444ec-6ba0-4d79-a896-880410d39b2a",
+        "lesson_activity.key": "345b1b58-3cf9-4efe-90f1-a5054bb8a826"
+      }
+    },
+    {
+      "key": "da925bad-1da2-4c8d-805d-bea61d50208d",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Consider assigning another course to your class!",
+        "name": "What's next?"
+      },
+      "seeding_key": {
+        "activity_section.key": "da925bad-1da2-4c8d-805d-bea61d50208d",
+        "lesson_activity.key": "345b1b58-3cf9-4efe-90f1-a5054bb8a826"
+      }
+    },
+    {
+      "key": "0608dd64-3bf7-4b7a-b8d2-c2ab247902b9",
+      "position": 1,
+      "properties": {
+        "description": "This activity is a great introduction to AI through the lens of game design.\n\nHere are a few options to continue learning more about the AI concepts introduced in this module. \n\n**Elementary:** \n- [How AI Makes Decisions](https://studio.code.org/courses/k5-ai-data-2024/units/1) Practice with data categorization\n- [AI for Oceans](https://studio.code.org/courses/oceans/units/1) Train and test a machine learning model\n\n**Middle School:**\n- [Thinking Critically about AI](https://studio.code.org/courses/ai-discoveries-2026) Develop the conceptual foundation and habits of mind they'll need to engage with AI thoughtfully.\n- [How AI Works](https://studio.code.org/courses/how-ai-works-2023/units/1) Explore AI technology and impact\n- [AI and Machine Learning](https://studio.code.org/courses/aiml-2025/units/1) Create machine learning with data\n\n**High School:**\n- [Computer Vision](https://studio.code.org/courses/computer-vision/units/1) Explore, design, and evaluate technology\n- [AI Foundations](https://studio.code.org/courses/artificial-intelligence-foundations-2025) Semester-long course discovering Python, data, and AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "0608dd64-3bf7-4b7a-b8d2-c2ab247902b9",
+        "lesson_activity.key": "6bfcff33-c9db-4f87-99ab-3c6fccc42046"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-video-intro_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-video-intro_final_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-try-the-demo_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-try-the-demo_final_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-make-a-character_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-make-a-character_final_2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-set-as-player_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-set-as-player_final_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-treasure_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-treasure_final_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-make-your-world_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-make-your-world_final_2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-what-happens-when-collected_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-what-happens-when-collected_final_2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-set-the-scene_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-set-the-scene_final_2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-friend-or-foe_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-friend-or-foe_final_2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-what-are-they-doing_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-what-are-they-doing_final_2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-when-you-meet_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-when-you-meet_final_2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-a-whole-new-scene_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-a-whole-new-scene_final_2026"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-continue-the-quest_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-continue-the-quest_final_2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+        "progression": "Quest Builder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-free-play_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      },
+      "level_keys": [
+        "hoai2026-dev-free-play_final_2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-video-intro_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-video-intro_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-try-the-demo_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-try-the-demo_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-make-a-character_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-make-a-character_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-set-as-player_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-set-as-player_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-treasure_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-treasure_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-make-your-world_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-make-your-world_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-what-happens-when-collected_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-what-happens-when-collected_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-set-the-scene_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-set-the-scene_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-friend-or-foe_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-friend-or-foe_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-what-are-they-doing_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-what-are-they-doing_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-when-you-meet_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-when-you-meet_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-a-whole-new-scene_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-a-whole-new-scene_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-continue-the-quest_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-continue-the-quest_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-free-play_final_2026",
+        "script_level.level_keys": [
+          "hoai2026-dev-free-play_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Quest Builder Slides",
+      "url": "https://docs.google.com/presentation/d/16z84a2kXJoYyJoeR1m4N5eYToQKOigoJ4-sXCY0hfGM/template/preview",
+      "key": "quest_builder_slides",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/presentation/d/16z84a2kXJoYyJoeR1m4N5eYToQKOigoJ4-sXCY0hfGM/export",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "quest_builder_slides"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "hoai2026-dev-lesson",
+        "resource.key": "quest_builder_slides"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "03db2bd2-a601-4388-a18c-c7846aee9c5f",
+      "properties": {
+        "description": "Use events to tell a program what should happen and when. "
+      },
+      "seeding_key": {
+        "lesson.key": "hoai2026-dev-lesson",
+        "objective.key": "03db2bd2-a601-4388-a18c-c7846aee9c5f"
+      }
+    },
+    {
+      "key": "b7d379b2-7435-4de3-a428-9b26a680c896",
+      "properties": {
+        "description": "Explain why you are the creator and AI is your tool. "
+      },
+      "seeding_key": {
+        "lesson.key": "hoai2026-dev-lesson",
+        "objective.key": "b7d379b2-7435-4de3-a428-9b26a680c896"
+      }
+    },
+    {
+      "key": "baba21d2-d316-4e79-a967-c1e3436934c8",
+      "properties": {
+        "description": "Explain how breaking a big project into parts makes it easier to build. "
+      },
+      "seeding_key": {
+        "lesson.key": "hoai2026-dev-lesson",
+        "objective.key": "baba21d2-d316-4e79-a967-c1e3436934c8"
+      }
+    },
+    {
+      "key": "ff2ad2b1-4d58-4f75-9acf-756685cf89e8",
+      "properties": {
+        "description": "Judge an AI image against your own idea and decide what to do with it. "
+      },
+      "seeding_key": {
+        "lesson.key": "hoai2026-dev-lesson",
+        "objective.key": "ff2ad2b1-4d58-4f75-9acf-756685cf89e8"
+      }
+    }
+  ],
+  "objectives_script_levels": [
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-a-whole-new-scene_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "03db2bd2-a601-4388-a18c-c7846aee9c5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-friend-or-foe_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "b7d379b2-7435-4de3-a428-9b26a680c896"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-friend-or-foe_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "ff2ad2b1-4d58-4f75-9acf-756685cf89e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-make-a-character_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "b7d379b2-7435-4de3-a428-9b26a680c896"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-make-a-character_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "ff2ad2b1-4d58-4f75-9acf-756685cf89e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-make-your-world_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "b7d379b2-7435-4de3-a428-9b26a680c896"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-make-your-world_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "ff2ad2b1-4d58-4f75-9acf-756685cf89e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-set-the-scene_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "03db2bd2-a601-4388-a18c-c7846aee9c5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-set-the-scene_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "b7d379b2-7435-4de3-a428-9b26a680c896"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-set-the-scene_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "ff2ad2b1-4d58-4f75-9acf-756685cf89e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-treasure_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "03db2bd2-a601-4388-a18c-c7846aee9c5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-treasure_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "b7d379b2-7435-4de3-a428-9b26a680c896"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-treasure_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "ff2ad2b1-4d58-4f75-9acf-756685cf89e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-try-the-demo_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "baba21d2-d316-4e79-a967-c1e3436934c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-what-are-they-doing_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "03db2bd2-a601-4388-a18c-c7846aee9c5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-what-happens-when-collected_final_2026"
+        ],
+        "lesson.key": "hoai2026-dev-lesson",
+        "lesson_group.key": "",
+        "script.name": "quest-builder-2026",
+        "activity_section.key": "aa9dee28-5e7b-4ac8-977a-8163c48c2884",
+        "objective.key": "03db2bd2-a601-4388-a18c-c7846aee9c5f"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "hoai2026-dev-lesson",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "E3-PRO-PD-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "hoai2026-dev-lesson",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "E5-SOC-HU-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "hoai2026-dev-lesson",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-PS-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "hoai2026-dev-lesson",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-40"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

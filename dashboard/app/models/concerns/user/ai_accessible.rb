@@ -4,6 +4,7 @@ module User::AiAccessible
   include SharedConstants
 
   TEACHER_PREVERIFICATION_PILOT = 'teacher-preverification'.freeze
+  SPRITELAB2_AI_PILOT = 'ai-in-your-program-pilot'.freeze
 
   # Chat apis trust the client to decide if it can access chat features
   # This allows us the flexibility to do things like experiment with new
@@ -18,8 +19,32 @@ module User::AiAccessible
     ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]
   end
 
+  # Teachers follow their own access; a student needs a visible section with chat enabled and challenges on.
+  def can_use_lesson_deep_dive_challenges?
+    return false unless can_use_lesson_deep_dive?
+    return true if teacher_can_access_aichat? || levelbuilder?
+    sections_as_student.any? {|s| !s.hidden && s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED] && s.ai_challenge_enabled}
+  end
+
   def can_use_ai_iteration_tools?
     levelbuilder?
+  end
+
+  def in_spritelab2_ai_pilot?
+    levelbuilder? ||
+      has_pilot_experiment?(SPRITELAB2_AI_PILOT) ||
+      teachers.any? {|teacher| teacher.has_pilot_experiment?(SPRITELAB2_AI_PILOT)}
+  end
+
+  def spritelab_ask_ai_refusal
+    # First: the client hides the blocks on this reason alone.
+    return SPRITELAB_ASK_AI_REFUSALS[:NOT_IN_PILOT] unless in_spritelab2_ai_pilot?
+    return SPRITELAB_ASK_AI_REFUSALS[:OFF] unless DCDO.get('spritelab-lab2-ask-ai-enabled', true)
+    # Essential-only won't do: it would trust a client-supplied level id.
+    return SPRITELAB_ASK_AI_REFUSALS[:NO_ACCESS] unless ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]
+    # The gateway's fallback serves only adaptive and the tutor.
+    return SPRITELAB_ASK_AI_REFUSALS[:REGION_BLOCKED] if blocked_aichat_providers.any?
+    nil
   end
 
   def teacher_can_access_aichat?
@@ -31,15 +56,25 @@ module User::AiAccessible
     section_enabled_access_level
   end
 
-  # Whether some AI models are unavailable to this user because of where they are.
-  def us_only_aichat_models_disabled?
-    return false if levelbuilder?
-    international_ai_chat_user?
+  def blocked_aichat_providers
+    return [] if levelbuilder?
+    international_ai_chat_user? ? AI_CHAT_US_ONLY_PROVIDERS : []
   end
 
-  def can_use_aichat_model?(model_id)
-    return true unless AI_CHAT_US_ONLY_MODEL_IDS.include?(model_id)
-    !us_only_aichat_models_disabled?
+  def ai_gateway_fallback_allowed?(client_type)
+    DCDO.get('ai_gateway_fallback_is_enabled', false) &&
+      AI_GATEWAY_FALLBACK_CLIENT_TYPES.include?(client_type)
+  end
+
+  def should_ai_gateway_fall_back?(model_id, client_type)
+    ai_gateway_fallback_allowed?(client_type) && AI_CHAT_GEMINI_IMAGE_MODEL_IDS.exclude?(model_id)
+  end
+
+  # Without a client type, as on the Rails chat path, no fallback applies.
+  def can_use_aichat_model?(model_id, client_type: nil)
+    provider = AI_CHAT_PROVIDER_BY_MODEL_ID[model_id]
+    return true if provider.nil? || blocked_aichat_providers.exclude?(provider)
+    should_ai_gateway_fall_back?(model_id, client_type)
   end
 
   # has essential or higher access to AI chat tools
@@ -61,6 +96,7 @@ module User::AiAccessible
     return false if client_type == AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION] && !DCDO.get("theater-ai-descriptions-enabled", false)
     return false if client_type == AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] && !can_use_lesson_deep_dive?
     return false if client_type == AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR] && !levelbuilder?
+    return false if client_type == AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] && spritelab_ask_ai_refusal
 
     has_aichat_access?(level_id) || trust_chat_client?(client_type)
   end

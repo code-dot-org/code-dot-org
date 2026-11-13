@@ -1,11 +1,3 @@
-@use "color.scss";
-
-// The unit image is a square inside the header bar; the gaps are the row's own.
-$image-size: 32px;
-$image-radius: 6px;
-$image-gap: 12px;
-$title-gap: 6px;
-
 // The same fade HeaderMiddle's row has; keyframes are scoped to the module.
 @keyframes fadein {
   from {
@@ -16,79 +8,32 @@ $title-gap: 6px;
   }
 }
 
+// Share and Remix sit at the row's start, as in HeaderMiddle, at their full
+// width. The widget is centred in the row when there is room, and otherwise
+// starts after the buttons; it shrinks before they do.
 .row {
   width: 100%;
   min-width: 0;
   height: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(max-content, 1fr) minmax(0, auto) 1fr;
   align-items: center;
-  justify-content: center;
   animation: fadein 0.4s;
 }
 
-.image {
-  width: $image-size;
-  height: $image-size;
-  box-sizing: border-box;
-  border: 1px solid color.$white;
-  border-radius: $image-radius;
-  background-color: color.$black;
-  flex: none;
-  object-fit: cover;
-  margin-inline-end: $image-gap;
-}
-
-.text {
+// Lets the widget's lesson name shrink before the row overflows the header.
+.widget {
+  grid-column: 2;
   display: flex;
-  flex-direction: column;
-  flex: 0 1 auto;
-}
-
-.title {
-  display: flex;
-  align-items: baseline;
-  gap: $title-gap;
   min-width: 0;
-  color: color.$white;
-  font-size: var(--font-size-body-md);
-  line-height: 1.5;
-  white-space: nowrap;
-}
 
-.unitName,
-.label {
-  flex: 0 1 auto;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.unitName {
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
+  > * {
+    min-width: 0;
   }
 }
 
-.separator {
-  flex: none;
-}
-
-// The names set the column's width, never the saved-at: its text changes
-// length, and would slide the centered row each time. Long text overflows
-// to the right, and a save error's taller message past the slot.
-.saved {
-  contain: inline-size;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-// The project buttons cannot shrink, and their container clips, so the
-// project info keeps its width and the names give way instead.
+// As wide as its buttons, not the whole first column.
 .projectInfo {
-  flex: none;
+  justify-self: start;
   margin-inline-end: 5px;
 }
