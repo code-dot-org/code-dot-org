@@ -1098,6 +1098,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // What's on stage right now — updated by every run, including scene jumps —
   // so "Restart scene" (and the reseed watcher below) can re-run it.
   const currentPlayingRef = useRef<{kind: 'local'; scene: Scene} | null>(null);
+  // The id of the scene on stage, kept as state as well as in the ref, so
+  // that the restart buttons are drawn again when play moves to another scene.
+  const [onStageSceneId, setOnStageSceneId] = useState<string | null>(null);
+  const setCurrentPlaying = useCallback((scene: Scene | null) => {
+    currentPlayingRef.current = scene && {kind: 'local', scene};
+    setOnStageSceneId(scene?.id ?? null);
+  }, []);
 
   // Re-run the stage once a reseeded animation list finishes loading. The
   // reseed-triggered run happens immediately, but reseeded entries carry
@@ -1152,13 +1159,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     seedAnimationList(currentSources.animations);
     // The stage's scene belongs to the pre-reset sources; restart-scene
     // falls back to the first scene.
-    currentPlayingRef.current = null;
+    setCurrentPlaying(null);
     rerunWhenAnimationsLoaded();
   }, [
     sourcesReinitializedCount,
     currentSources.animations,
     seedAnimationList,
     rerunWhenAnimationsLoaded,
+    setCurrentPlaying,
   ]);
 
   // Instantiate the engine once per level. No legacy default-sprite library:
@@ -1309,13 +1317,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       requestThumbnail(activeSceneIdRef.current);
     }
     if (activeSceneRef.current) {
-      currentPlayingRef.current = {
-        kind: 'local',
-        scene: activeSceneRef.current,
-      };
+      setCurrentPlaying(activeSceneRef.current);
     }
     engine.runProgram(program, referencedImages, {holdFirstFrame: true});
-  }, [dispatch, getCode, requestThumbnail]);
+  }, [dispatch, getCode, requestThumbnail, setCurrentPlaying]);
 
   const activePrompt = useAppSelector(state => state.spriteLab2.prompt);
   const askAiStatus = useAppSelector(state => state.spriteLab2.askAi);
@@ -1342,7 +1347,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       if (!engine) {
         return;
       }
-      currentPlayingRef.current = {kind: 'local', scene};
+      setCurrentPlaying(scene);
       const {result: program, referencedImages} = collectImageReferences(() => {
         const prelude = compileWorldPrelude(worldFor(scene));
         let code = '';
@@ -1364,7 +1369,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       requestThumbnail(scene.id);
       engine.runProgram(program, referencedImages);
     },
-    [dispatch, activeSceneId, getCode, worldFor, requestThumbnail]
+    [
+      dispatch,
+      activeSceneId,
+      getCode,
+      worldFor,
+      requestThumbnail,
+      setCurrentPlaying,
+    ]
   );
 
   const runScene = useCallback(
@@ -1938,6 +1950,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [runScene, defaultPlaySceneId]);
   restartSceneRef.current = handleRestartScene;
+  const playHasLeftTheFirstScene =
+    !!onStageSceneId && onStageSceneId !== defaultPlaySceneId;
 
   // A restart from a block rides the scene-jump cover and fades when the new
   // run lands. A button press has no jump to land, so it asks for the same
@@ -2388,8 +2402,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                     ? undefined
                     : event => handleRestartClick(event, handleRestartGame)
                 }
-                onRestartScene={event =>
-                  handleRestartClick(event, handleRestartScene)
+                // On the scene the game starts on, restarting the scene is
+                // restarting the game, so the one button is enough.
+                onRestartScene={
+                  pinnedSceneId || playHasLeftTheFirstScene
+                    ? event => handleRestartClick(event, handleRestartScene)
+                    : undefined
                 }
               />
             }
