@@ -117,13 +117,14 @@ WORKDIR /src
 # job's, so rake tasks start no job workers. The session cookie is otherwise
 # Secure, which a browser never returns over the image's plain HTTP, so every
 # sign-in would fail its CSRF check. Studio links otherwise point at
-# https://test-studio.code.org, the managed test server. S3 goes to the
+# https://test-studio.code.org, the managed test server; the host is an IP
+# because cookie code parses it with PublicSuffix, which rejects "localhost". S3 goes to the
 # emulator start-services.sh runs; project code, files and assets live there.
 RUN cp locals.yml.default locals.yml \
     && printf '%s\n' '' '# oss-scanner: built assets, as in CI UI tests; queue adapter from CI_JOB=unit_tests' \
          'optimize_rails_assets: true' 'optimize_webpack_assets: true' 'active_job_queue_adapter: :test' \
-         '# oss-scanner: plain HTTP on localhost:3000' 'no_https_store: true' \
-         "override_dashboard: 'localhost:3000'" "default_scheme: 'http:'" \
+         '# oss-scanner: plain HTTP on 127.0.0.1:3000' 'no_https_store: true' \
+         "override_dashboard: '127.0.0.1:3000'" "default_scheme: 'http:'" \
          '# oss-scanner: local S3 emulator (moto), as docker/developers does with MinIO' \
          'aws_s3_emulated: true' 'aws_s3_endpoint: http://127.0.0.1:9000' \
          'aws_s3_access_key_id: local-development' 'aws_s3_secret_access_key: allstudents' \

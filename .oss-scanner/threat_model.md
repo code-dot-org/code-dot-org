@@ -197,12 +197,12 @@ cd /src && for d in python/pythonlab/*/; do uv run --no-sync pytest -q "$d"; don
 cd /src/dashboard && TEST_ENV_NUMBER=_app bundle exec rails s -p 3000 -b 127.0.0.1
 ```
 
-Then sign in at `http://localhost:3000/users/sign_in`, password `demo-password-1` for both:
+Then sign in at `http://127.0.0.1:3000/users/sign_in`, password `demo-password-1` for both:
 
 - `demo-teacher@example.com`: a teacher with "Demo Section", assigned the AI Foundations course
 - `demo-student@example.com`: a student in that section; sign-in lands on the course
 
-The Python Lab unit is `/courses/ai-foundations-exploring-ai-and-cs-2026/units/6`; its first Python Lab level is lesson 4, level 1. Verified as the student: open a level, edit and run Python (it runs in the browser), reload and find the code saved, with progress recorded. Projects work too: `/projects/pythonlab/new` creates, runs and saves one. Use `localhost:3000`, which `locals.yml` names as the studio host, so generated links stay on this server.
+The Python Lab unit is `/courses/ai-foundations-exploring-ai-and-cs-2026/units/6`; its first Python Lab level is lesson 4, level 1. Verified as the student: open a level, edit and run Python (it runs in the browser), reload and find the code saved, with progress recorded. Projects work too: `/projects/pythonlab/new` creates, runs and saves one. Use `127.0.0.1:3000`, which `locals.yml` names as the studio host, so generated links and cookies stay on this server; `localhost` is a different origin.
 
 **Writing a reproducer.** A dashboard test is the best form: a controller or integration test under `dashboard/test/` using the factories in `dashboard/test/factories/`. Tests should create the units, lessons and levels they need with factories, as the existing tests do, rather than depend on the seeded curriculum. `rails server` also works: `cd dashboard && bundle exec rails s -p 3000 -b 127.0.0.1` after `start-services.sh`, about 15s to boot. Verified: `/users/sign_in` 200 in under a second, `/` 302. In headless Chrome (Playwright from `frontend/`, launched with `--no-sandbox --disable-dev-shm-usage`), `/users/sign_in`, `/users/sign_up`, `/home` and `/projects/public` load in about 4s with their webpack bundles running and no page errors; only requests to external hosts (fonts, analytics, OneTrust) fail. Pages for curriculum that is not seeded, or that need an external service, will error.
 
