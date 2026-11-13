@@ -17,8 +17,7 @@ class UserPreferencesController < ApplicationController
     end
   rescue ActiveRecord::StatementInvalid => exception
     raise unless exception.cause.is_a?(Mysql2::Error) && exception.cause.error_number == ER_LOCK_NOWAIT
-    # A conflict costs the teacher the reorder they just made.  The client resends
-    # once; this counts how often that happens, which no other signal shows.
+    # A conflict silently costs the teacher the reorder they just made.
     Cdo::Metrics.put('User', 'SectionOrderSaveConflict', 1, {Environment: CDO.rack_env})
     head :conflict
   end

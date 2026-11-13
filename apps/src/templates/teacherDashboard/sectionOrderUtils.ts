@@ -45,8 +45,9 @@ export const getFilteredSectionOrderIds = (
 let isSaving = false;
 let pendingSectionOrder: number[] | undefined;
 
-// A teacher who reorders in two tabs can still collide.  Losing that save
-// silently reverts the drag on the next page load, so resend once.
+// A dropped save reverts the teacher's drag on the next page load.  The server
+// holds the row lock for about the length of one request, so one retry clears
+// the common case of two tabs saving at once.
 const CONFLICT_RETRY_LIMIT = 1;
 export const CONFLICT_RETRY_DELAY_MS = 500;
 
@@ -59,14 +60,14 @@ export const saveSectionOrder = (orderedSectionIds: number[]) => {
   }
 };
 
-// This module's state outlives a test; jest.clearAllMocks does not reach it.
+// Module state outlives a test; jest.clearAllMocks does not reach it.
 export const resetSectionOrderSaveStateForTest = () => {
   isSaving = false;
   pendingSectionOrder = undefined;
 };
 
-// True when the server answered 409: another connection held the row lock on
-// this user's preferences, so it dropped the save rather than wait.
+// True when the server answered 409, meaning another connection held the row
+// lock and the server dropped this save rather than wait for it.
 const putSectionOrder = async (sectionOrder: number[]): Promise<boolean> => {
   try {
     await HttpClient.put(

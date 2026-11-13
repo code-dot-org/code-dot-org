@@ -172,8 +172,8 @@ class UserPreferencesControllerTest < ActionController::TestCase
     assert_response :conflict
   end
 
-  # The other lock tests stub lock!, so none of them hands 'FOR UPDATE NOWAIT'
-  # to MySQL.  A typo in that string would reach production untested.
+  # The lock string is spliced into SQL verbatim, so a typo in it fails at
+  # runtime against MySQL rather than at build time.
   test 'FOR UPDATE NOWAIT is valid SQL on this database' do
     preference = UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
 

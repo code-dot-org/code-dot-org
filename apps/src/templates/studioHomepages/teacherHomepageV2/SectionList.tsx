@@ -136,9 +136,8 @@ export const SectionList: React.FC<SectionListProps> = ({
       Object.values(sections),
       sortableSectionIds
     );
-    // Both states have to reach sectionOrder here.  Leaving sortableSectionIds
-    // behind would hold the guard above open, and the effect would dispatch and
-    // save again on every later store update.
+    // The guard above closes only once both states hold sectionOrder.  While
+    // they disagree, every store update dispatches and saves again.
     if (!_.isEqual(sortableSectionIds, sectionOrder)) {
       setSortableSectionIds(sectionOrder);
     }
