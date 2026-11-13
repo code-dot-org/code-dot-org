@@ -129,6 +129,17 @@ jest.mock('@cdo/apps/lab2/views/Loading', () => ({
   __esModule: true,
   default: () => <div>loading</div>,
 }));
+jest.mock('@cdo/apps/adaptive/views/FinalProjectCallout', () => ({
+  __esModule: true,
+  default: ({onDismiss}: {onDismiss: () => void}) => (
+    <div>
+      final project callout
+      <button type="button" onClick={onDismiss}>
+        dismiss callout
+      </button>
+    </div>
+  ),
+}));
 jest.mock('@cdo/apps/aichat/api/shouldUseAiGateway', () => ({
   setAiGatewayOptIn: jest.fn(),
 }));
@@ -706,6 +717,58 @@ describe('PathwayApp', () => {
       await renderSettled();
 
       expect(screen.getByText('tab stats: 0 skills, 180s')).toBeTruthy();
+    });
+  });
+
+  describe('final project callout', () => {
+    // Progress that marks every checkpoint in `pathway` complete. isComplete
+    // checks the last visible step, so multi only needs multi-b-step done.
+    const allCompleteProgress: Progress = {
+      steps: {
+        'intro-step': {status: 'complete', timeSpent: 0},
+        'next-step': {status: 'complete', timeSpent: 0},
+        'multi-b-step': {status: 'complete', timeSpent: 0},
+      },
+    };
+    const calloutKey = 'adaptive_project_callout_3_2';
+
+    beforeEach(() => {
+      localStorage.removeItem(calloutKey);
+    });
+
+    it('shows the callout on the map when every checkpoint is complete', async () => {
+      mockLoad.mockResolvedValue(allCompleteProgress);
+      await renderSettled();
+
+      expect(screen.getByText('final project callout')).toBeTruthy();
+    });
+
+    it('does not show the callout when some checkpoints are still incomplete', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'complete', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.queryByText('final project callout')).toBeNull();
+    });
+
+    it('hides the callout and stores dismissal in localStorage when dismissed', async () => {
+      mockLoad.mockResolvedValue(allCompleteProgress);
+      await renderSettled();
+      expect(screen.getByText('final project callout')).toBeTruthy();
+
+      act(() => screen.getByRole('button', {name: 'dismiss callout'}).click());
+
+      expect(screen.queryByText('final project callout')).toBeNull();
+      expect(localStorage.getItem(calloutKey)).toBe('1');
+    });
+
+    it('does not show the callout when previously dismissed', async () => {
+      localStorage.setItem(calloutKey, '1');
+      mockLoad.mockResolvedValue(allCompleteProgress);
+      await renderSettled();
+
+      expect(screen.queryByText('final project callout')).toBeNull();
     });
   });
 });
