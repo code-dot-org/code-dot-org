@@ -46,12 +46,11 @@ import {
   Choices,
   chosenBodyPlan,
   isComplete,
-  modelFacingText,
+  promptText,
   restoreChoices,
   SavedChoices,
   sentenceFor,
   sentenceWordIds,
-  studentFacingText,
 } from './sentences';
 import {playSound} from './sentenceSounds';
 import {SentPrompts, sentPromptsFor} from './sentPrompts';
@@ -310,8 +309,10 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     }
     const run = ++runRef.current;
     const startedAt = Date.now();
-    const studentText = typedPrompt || studentFacingText(sentence, choices);
-    const modelText = typedPrompt || modelFacingText(sentence, choices);
+    const prompt = typedPrompt || promptText(sentence, choices);
+    const sentPrompt =
+      typedPrompt ||
+      promptText(sentence, choices, {useModelFacingTextVariant: true});
     const pixelScale = advanced?.pixelScale || 1;
     // The cache holds the sentences' pictures as the level draws them;
     // whatever the advanced settings change goes to the model.
@@ -340,7 +341,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
-        promptText: studentText,
+        promptText: prompt,
         method: typedPrompt ? 'freeText' : method,
         imageType,
         ...(typedPrompt ? {} : {sentenceId: sentence.id, choices}),
@@ -374,21 +375,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       // What the lab would send. A cached picture was made from the same
       // words by the same prompt builders, so this describes it as well.
       const sent: SentPrompts = sentPromptsFor(
-        modelText,
+        sentPrompt,
         options,
         style,
         generatesCharacterSet,
         bodyPlan
       );
       const result = generatesCharacterSet
-        ? await generateCharacterSet(modelText, {
+        ? await generateCharacterSet(sentPrompt, {
             style,
             temperature: TEMPERATURE,
             pixelGrid: options.pixelGrid,
             bodyPlan,
             cached,
           })
-        : await generateImage(modelText, {...options, cached});
+        : await generateImage(sentPrompt, {...options, cached});
       if (run !== runRef.current) {
         return;
       }
@@ -424,7 +425,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
             }
           : result,
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
-        prompt: studentText,
+        prompt,
         sent,
         cached: !!cached,
       };

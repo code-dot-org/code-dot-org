@@ -3,14 +3,13 @@ import {
   chainedSlotIds,
   chosenBodyPlan,
   isComplete,
-  modelFacingText,
+  promptText,
   restoreChoices,
   sentenceFor,
   sentenceSlotIds,
   sentenceWordIds,
   slotsToOffer,
-  studentFacingText,
-  studentFacingTextFor,
+  promptTextFromImage,
   withLead,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
 import manifest from '@cdo/static/spritelab_lab2/sentences.json';
@@ -53,14 +52,12 @@ describe('sentences', () => {
   });
 
   it('reads the simplest sentence without the empty slots', () => {
-    expect(studentFacingText(CHARACTER_SENTENCE, {creature: 'blob'})).toBe(
-      'A blob'
-    );
+    expect(promptText(CHARACTER_SENTENCE, {creature: 'blob'})).toBe('A blob');
   });
 
   it('reads the full sentence with every slot filled', () => {
     expect(
-      studentFacingText(CHARACTER_SENTENCE, {
+      promptText(CHARACTER_SENTENCE, {
         adjective: 'cute',
         creature: 'witch',
         clothing: 'crown',
@@ -68,15 +65,19 @@ describe('sentences', () => {
     ).toBe('A cute witch wearing a crown');
   });
 
-  it("shows a word's own text but sends the model its model-facing text", () => {
+  it("reads a word's modelFacingText only when asked", () => {
     const choices = {adjective: 'cute', creature: 'witch'};
-    expect(studentFacingText(CHARACTER_SENTENCE, choices)).toBe('A cute witch');
-    expect(modelFacingText(CHARACTER_SENTENCE, choices)).toBe(
-      'A cute green-skinned witch'
-    );
-    expect(modelFacingText(CHARACTER_SENTENCE, {creature: 'cat'})).toBe(
-      'A cat'
-    );
+    expect(promptText(CHARACTER_SENTENCE, choices)).toBe('A cute witch');
+    expect(
+      promptText(CHARACTER_SENTENCE, choices, {useModelFacingTextVariant: true})
+    ).toBe('A cute green-skinned witch');
+    expect(
+      promptText(
+        CHARACTER_SENTENCE,
+        {creature: 'cat'},
+        {useModelFacingTextVariant: true}
+      )
+    ).toBe('A cat');
   });
 
   it("rebuilds a generated image's words as the student chose them", () => {
@@ -87,12 +88,12 @@ describe('sentences', () => {
       sentenceId: 'character',
       choices: {adjective: 'cute', creature: 'witch'},
     };
-    expect(studentFacingTextFor(generation)).toBe('A cute witch');
+    expect(promptTextFromImage(generation)).toBe('A cute witch');
     expect(
-      studentFacingTextFor({...generation, prompt: 'A cute witch, smiling'})
+      promptTextFromImage({...generation, prompt: 'A cute witch, smiling'})
     ).toBe('A cute witch, smiling');
     expect(
-      studentFacingTextFor({
+      promptTextFromImage({
         ...generation,
         prompt: 'A typed prompt',
         choices: undefined,
@@ -102,7 +103,7 @@ describe('sentences', () => {
 
   it('leaves out a phrase whose slot is empty, and its words', () => {
     expect(
-      studentFacingText(CHARACTER_SENTENCE, {
+      promptText(CHARACTER_SENTENCE, {
         creature: 'cat',
         adjective: 'grumpy',
       })
@@ -110,9 +111,7 @@ describe('sentences', () => {
   });
 
   it('ignores a word the slot does not offer', () => {
-    expect(studentFacingText(CHARACTER_SENTENCE, {creature: 'wizard'})).toBe(
-      'A'
-    );
+    expect(promptText(CHARACTER_SENTENCE, {creature: 'wizard'})).toBe('A');
     expect(isComplete(CHARACTER_SENTENCE, {creature: 'wizard'})).toBe(false);
   });
 
@@ -143,7 +142,7 @@ describe('sentences', () => {
 
   it('reads each sentence as expected, full and at its least', () => {
     const full = (id: string, choices: Record<string, string>) =>
-      studentFacingText(sentenceFor('sprite', undefined, id), choices);
+      promptText(sentenceFor('sprite', undefined, id), choices);
     expect(full('object', {adjective: 'glowing', thing: 'ice-cream'})).toBe(
       'A glowing ice cream'
     );
@@ -256,9 +255,7 @@ describe('withLead', () => {
   });
 
   it('leaves the prompt as the sentence alone', () => {
-    expect(studentFacingText(CHARACTER_SENTENCE, {creature: 'cat'})).toBe(
-      'A cat'
-    );
+    expect(promptText(CHARACTER_SENTENCE, {creature: 'cat'})).toBe('A cat');
   });
 });
 
@@ -290,7 +287,7 @@ describe('sentences word ids', () => {
       'forest',
       EMPTY_WORD_ID,
     ]);
-    expect(studentFacingText(place, choices)).not.toContain('from');
+    expect(promptText(place, choices)).not.toContain('from');
   });
 
   it('ignores a word that is not in its slot', () => {

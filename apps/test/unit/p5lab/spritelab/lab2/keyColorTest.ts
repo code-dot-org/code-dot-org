@@ -3,9 +3,8 @@ import {
   KEY_COLORS,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
 import {
-  modelFacingText,
+  promptText,
   sentenceFor,
-  studentFacingText,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
 
 describe('SpriteLab2 chooseKeyColor', () => {
@@ -44,8 +43,8 @@ describe('SpriteLab2 chooseKeyColor', () => {
           clothing: worn?.id,
         };
         for (const text of [
-          studentFacingText(sentence, choices),
-          modelFacingText(sentence, choices),
+          promptText(sentence, choices),
+          promptText(sentence, choices, {useModelFacingTextVariant: true}),
         ]) {
           expect([text, chooseKeyColor(text)]).toEqual([
             text,

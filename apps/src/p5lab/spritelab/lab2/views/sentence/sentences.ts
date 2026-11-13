@@ -2,9 +2,7 @@
 // the New image dialog, and the prompt text a filled sentence becomes. A
 // sentence is a row of segments: fixed text, a slot that takes one word,
 // or a phrase whose words show only when its slot is filled. A required
-// slot must be filled before the sentence can generate. A filled sentence
-// reads two ways: as the student's words, and as the text the model gets,
-// which may say more about a word than its chip does.
+// slot must be filled before the sentence can generate.
 
 import {EMPTY_WORD_ID} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
@@ -18,7 +16,8 @@ import manifestJson from '@cdo/static/spritelab_lab2/sentences.json';
 export interface Word {
   id: string;
   text: string;
-  /** Sent to the model in place of `text`; never shown to the student. */
+  /** Sent to the model in place of `text`, for a detail the student did not
+      choose and should not be told they wrote, e.g. the witch's green skin. */
   modelFacingText?: string;
   /** A Font Awesome icon shown beside the text; decoration, not read aloud. */
   icon?: string;
@@ -250,13 +249,17 @@ export function phraseFilled(
 }
 
 /**
- * The sentence as text: empty optional slots and unfilled phrases are left
- * out, and the spaces they leave are closed up.
+ * The sentence as its chips read; with useModelFacingTextVariant, each
+ * word's modelFacingText, if any, in place of its text. Empty optional
+ * slots and unfilled phrases are left out, and the spaces they leave are
+ * closed up.
  */
-function sentenceText(
+export function promptText(
   sentence: Sentence,
   choices: Choices,
-  modelFacing: boolean
+  {
+    useModelFacingTextVariant = false,
+  }: {useModelFacingTextVariant?: boolean} = {}
 ): string {
   const parts: string[] = [];
   const add = (segments: Segment[]) => {
@@ -266,7 +269,9 @@ function sentenceText(
       } else if ('slot' in segment) {
         const word = wordFor(sentence, segment.slot, choices[segment.slot]);
         if (word) {
-          parts.push((modelFacing && word.modelFacingText) || word.text);
+          parts.push(
+            (useModelFacingTextVariant && word.modelFacingText) || word.text
+          );
         }
       } else if (phraseFilled(sentence, segment.phrase, choices)) {
         add(segment.phrase);
@@ -279,19 +284,6 @@ function sentenceText(
     .replace(/\s+/g, ' ')
     .replace(/\s+([,.])/g, '$1')
     .trim();
-}
-
-/** The sentence in the student's own words. */
-export function studentFacingText(
-  sentence: Sentence,
-  choices: Choices
-): string {
-  return sentenceText(sentence, choices, false);
-}
-
-/** The sentence as the model gets it. */
-export function modelFacingText(sentence: Sentence, choices: Choices): string {
-  return sentenceText(sentence, choices, true);
 }
 
 /** Choices saved on an image: the sentence they were made in, and the
@@ -331,12 +323,13 @@ export function restoreChoices(
 }
 
 /**
- * A generated image's words as the student chose them. The image records
- * the text the model got; when its saved choices still rebuild exactly
- * that text, the student's version is rebuilt from them too. Otherwise,
- * as for a typed prompt, the recorded text is all there is.
+ * A generated image's sentence as its chips read. The image records the
+ * text sent to the model, which for the witch says "green-skinned witch";
+ * when the saved choices still rebuild that text, the chips' text is
+ * rebuilt from them. Otherwise, as for a typed prompt, the recorded text
+ * is all there is.
  */
-export function studentFacingTextFor(
+export function promptTextFromImage(
   generation: ImageGenerationMetadata
 ): string {
   const {sentenceId, choices, imageType, subject, prompt} = generation;
@@ -345,9 +338,10 @@ export function studentFacingTextFor(
   }
   const sentence = sentenceFor(imageType, subject, sentenceId);
   const restored = restoreChoices(sentence, {sentenceId, choices});
-  return modelFacingText(sentence, restored) === prompt
-    ? studentFacingText(sentence, restored)
-    : prompt;
+  const sent = promptText(sentence, restored, {
+    useModelFacingTextVariant: true,
+  });
+  return sent === prompt ? promptText(sentence, restored) : prompt;
 }
 
 /** The body plan of the chosen creature, when the sentence has one. */
