@@ -1,15 +1,16 @@
-import React, {FC, useCallback, useRef, useState} from 'react';
+import {type FC, useCallback, useRef, useState} from 'react';
 
 const ANIM_MS = 220;
 
-import {
-  saveUserLessonObjectiveReflection,
-  saveUserLessonReflection,
-} from '@cdo/apps/aiTutor/reflectionsApi';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
+import {useApiClient} from '@code-dot-org/core/api';
+import {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
 
-import {LessonDeepDiveData, ReflectionData} from '../types';
+import {
+  generatePodcast,
+  saveLessonObjectiveReflection,
+  saveLessonReflection,
+} from '../api';
+import {type LessonObjective, type ReflectionData} from '../types';
 
 import LessonObjectiveReflection, {
   ReflectionValue,
@@ -21,7 +22,7 @@ import styles from './reflection.module.scss';
 interface ReflectionBoxProps {
   unitLabel: string | null;
   lessonId: number;
-  objectives: LessonDeepDiveData['objectives'];
+  objectives: LessonObjective[];
   onSubmitComplete: (data: ReflectionData) => void;
   onNext: () => void;
   initialValues?: ReflectionData | null;
@@ -56,6 +57,7 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
   const [success, setSuccess] = useState(initialValues?.success ?? '');
   const [struggle, setStruggle] = useState(initialValues?.struggle ?? '');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const api = useApiClient();
 
   const totalSteps = objectives.length + 1; // objectives + free response
   const [displayStep, setDisplayStep] = useState(0);
@@ -66,7 +68,7 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
     (objectiveId: string, value: ReflectionValue) => {
       setObjectiveReflections(prev => ({...prev, [objectiveId]: value}));
     },
-    []
+    [],
   );
 
   const navigateTo = useCallback(
@@ -81,7 +83,7 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
         setTimeout(() => setAnimPhase('idle'), ANIM_MS);
       }, ANIM_MS);
     },
-    [animPhase, displayStep]
+    [animPhase, displayStep],
   );
 
   const handleSubmit = useCallback(async () => {
@@ -91,16 +93,17 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
         .filter(
           o =>
             objectiveReflections[o.id] !== null &&
-            objectiveReflections[o.id] !== undefined
+            objectiveReflections[o.id] !== undefined,
         )
         .map(o =>
-          saveUserLessonObjectiveReflection(
+          saveLessonObjectiveReflection(
+            api.transport,
             o.id,
-            objectiveReflections[o.id] as ReflectionValue
-          )
+            objectiveReflections[o.id] as ReflectionValue,
+          ),
         );
       await Promise.all([
-        saveUserLessonReflection(lessonId, success, struggle),
+        saveLessonReflection(api.transport, lessonId, success, struggle),
         ...objectiveSaves,
       ]);
 
@@ -123,15 +126,9 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
             })
             .map(o => o.id)
         : objectives.map(o => o.id);
-      HttpClient.post(
-        '/ai_student_podcasts/generate_podcast',
-        JSON.stringify({
-          lesson_id: lessonId,
-          objective_ids: objectiveIdsForGeneration,
-        }),
-        true, // useAuthenticityToken
-        {'Content-Type': 'application/json'}
-      ).catch(() => {});
+      generatePodcast(api.transport, lessonId, objectiveIdsForGeneration).catch(
+        () => {},
+      );
 
       onSubmitComplete({
         objectiveReflections: objectiveReflections as Record<
@@ -146,6 +143,7 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
       setIsSubmitting(false);
     }
   }, [
+    api,
     lessonId,
     success,
     struggle,
@@ -158,7 +156,7 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
   const isObjectiveStep = displayStep < objectives.length;
   const currentObjective = isObjectiveStep ? objectives[displayStep] : null;
   const currentRating = currentObjective
-    ? objectiveReflections[currentObjective.id] ?? null
+    ? (objectiveReflections[currentObjective.id] ?? null)
     : null;
   const canAdvance = !isObjectiveStep || currentRating !== null;
   const isLastStep = displayStep === totalSteps - 1;

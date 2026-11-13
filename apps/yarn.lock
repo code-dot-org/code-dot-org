@@ -11941,6 +11941,7 @@ __metadata:
     "@code-dot-org/piskel": "npm:0.13.0-cdo.14"
     "@code-dot-org/redactable-markdown": "npm:^0.10.0"
     "@code-dot-org/remark-plugins": "npm:^2.0.1"
+    "@code-dot-org/shared-constants": "portal:../frontend/packages/shared-constants/"
     "@codemirror/autocomplete": "npm:^6.18.6"
     "@codemirror/commands": "npm:^6.8.0"
     "@codemirror/lang-css": "npm:^6.3.1"

@@ -1,14 +1,13 @@
 import {fireEvent, render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {vi} from 'vitest';
 
-import LessonReflection from '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/LessonReflection';
+import LessonReflection from '../LessonReflection';
 
 function renderComponent({
   success = '',
   struggle = '',
-  onSuccessChange = jest.fn(),
-  onStruggleChange = jest.fn(),
+  onSuccessChange = vi.fn(),
+  onStruggleChange = vi.fn(),
 } = {}) {
   render(
     <LessonReflection
@@ -16,7 +15,7 @@ function renderComponent({
       struggle={struggle}
       onSuccessChange={onSuccessChange}
       onStruggleChange={onStruggleChange}
-    />
+    />,
   );
   return {onSuccessChange, onStruggleChange};
 }
@@ -25,14 +24,14 @@ describe('LessonReflection', () => {
   it('renders the success textarea with its current value', () => {
     renderComponent({success: 'I solved the problem'});
     expect(
-      screen.getByDisplayValue('I solved the problem')
+      screen.getByDisplayValue('I solved the problem'),
     ).toBeInTheDocument();
   });
 
   it('renders the struggle textarea with its current value', () => {
     renderComponent({struggle: 'Still confused about for loops'});
     expect(
-      screen.getByDisplayValue('Still confused about for loops')
+      screen.getByDisplayValue('Still confused about for loops'),
     ).toBeInTheDocument();
   });
 

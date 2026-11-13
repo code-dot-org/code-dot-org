@@ -1,12 +1,11 @@
 import {
+  type LessonObjective,
   type MatchSolution,
   type MultiSolution,
   type PracticeProblem,
   type ScrambleSolution,
   type VocabularyItem,
 } from '@code-dot-org/lesson-deep-dive';
-
-import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import {ResponseValidator} from '../../../util/HttpClient';
 
@@ -26,15 +25,6 @@ export type LessonProgressCounts = {
   validatedLevelsIncorrectCount: number;
 };
 
-export type ReflectionValue =
-  (typeof LessonObjectiveReflectionValues)[keyof typeof LessonObjectiveReflectionValues];
-
-export type ReflectionData = {
-  objectiveReflections: Record<string, ReflectionValue>;
-  success: string;
-  struggle: string;
-};
-
 export type JsonVideoData = {
   key: string;
   url: string;
@@ -46,7 +36,7 @@ export type LessonDeepDiveData = {
   lessonName: string;
   lessonSummary: string;
   vocabulary: VocabularyItem[];
-  objectives: {id: string; description: string}[];
+  objectives: LessonObjective[];
   assessmentAnalysis: AssessmentQuestionResult[];
   jsonVideos: JsonVideoData[];
   practiceProblems: PracticeProblem[];
