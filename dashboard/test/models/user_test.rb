@@ -2802,6 +2802,21 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test 'soft delete keeps challenge responses and practice problem attempts for undestroy' do
+    student = create(:student)
+    response = create(:challenge_response, user: student)
+    asset = create(:challenge_response_asset, challenge_response: response)
+    attempt = create(:user_practice_problem_attempt, user: student)
+    AWS::S3.expects(:delete_from_bucket).never
+
+    student.destroy!
+    student.undestroy
+
+    assert ChallengeResponse.exists?(response.id)
+    assert ChallengeResponseAsset.exists?(asset.id)
+    assert UserPracticeProblemAttempt.exists?(attempt.id)
+  end
+
   test 'undestroy raises for a purged user' do
     user = create(:user)
     user.clear_user_and_mark_purged

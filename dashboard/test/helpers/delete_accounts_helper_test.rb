@@ -561,6 +561,40 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.user_practice_problem_attempts
+  # Table: dashboard.challenge_responses
+  # Table: dashboard.challenge_response_assets
+  #
+
+  test "deletes practice problem attempts" do
+    user = create(:student)
+    attempt = create(:user_practice_problem_attempt, user: user)
+    other = create(:user_practice_problem_attempt)
+
+    purge_user user
+
+    refute UserPracticeProblemAttempt.exists?(attempt.id)
+    assert UserPracticeProblemAttempt.exists?(other.id)
+    assert_logged "Deleted 1 UserPracticeProblemAttempt"
+  end
+
+  test "deletes challenge responses and their assets, including the S3 objects" do
+    AWS::S3.stubs(:user_content_bucket).returns('test-user-content')
+    user = create(:student)
+    response = create(:challenge_response, user: user)
+    asset = create(:challenge_response_asset, challenge_response: response)
+    other_asset = create(:challenge_response_asset)
+    AWS::S3.expects(:delete_from_bucket).with('test-user-content', asset.s3_key).once
+
+    purge_user user
+
+    refute ChallengeResponse.exists?(response.id)
+    refute ChallengeResponseAsset.exists?(asset.id)
+    assert ChallengeResponseAsset.exists?(other_asset.id)
+    assert_logged "Deleted 1 ChallengeResponse"
+  end
+
+  #
   # Table: dashboard.authentication_options
   # Note: acts_as_paranoid
   #

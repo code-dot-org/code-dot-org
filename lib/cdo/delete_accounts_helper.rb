@@ -387,6 +387,19 @@ class DeleteAccountsHelper
     @log.puts "Deleted #{as_teacher_count} LearningGoalTeacherEvaluation as teacher" if as_teacher_count > 0
   end
 
+  def delete_practice_problem_attempts(user_id)
+    deleted_count = UserPracticeProblemAttempt.where(user_id: user_id).delete_all
+    @log.puts "Deleted #{deleted_count} UserPracticeProblemAttempt" if deleted_count > 0
+  end
+
+  # destroy, not delete_all: each asset removes its S3 object on destroy.
+  def delete_challenge_responses(user_id)
+    responses = ChallengeResponse.where(user_id: user_id)
+    responses_count = responses.count
+    responses.each(&:destroy!)
+    @log.puts "Deleted #{responses_count} ChallengeResponse" if responses_count > 0
+  end
+
   def clean_and_destroy_code_reviews(user_id)
     # anonymize notes the user wrote
     comments_written = CodeReviewComment.where(commenter_id: user_id)
@@ -504,6 +517,8 @@ class DeleteAccountsHelper
     remove_pii_from_projects(user)
     delete_rubric_ai_evaluations(user.id)
     delete_learning_goal_teacher_evaluations(user.id)
+    delete_practice_problem_attempts(user.id)
+    delete_challenge_responses(user.id)
     clean_and_destroy_pd_content(user.id, user_email)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
