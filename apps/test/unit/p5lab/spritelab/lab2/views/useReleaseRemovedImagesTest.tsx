@@ -4,7 +4,7 @@ import React from 'react';
 import type {ImageProps} from '@cdo/apps/p5lab/spritelab/lab2/views/images/projectImages';
 import useReleaseRemovedImages from '@cdo/apps/p5lab/spritelab/lab2/views/useReleaseRemovedImages';
 
-const reclaim = jest.fn();
+const reclaim = jest.fn((...args: unknown[]) => Promise.resolve(true));
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset', () => ({
   __esModule: true,
   default: () => (url?: string) => reclaim(url),
@@ -35,9 +35,12 @@ function releaser() {
 
 const image = (props: Partial<ImageProps>) => props as ImageProps;
 
+const settle = () => new Promise(resolve => setTimeout(resolve, 0));
+
 describe('useReleaseRemovedImages', () => {
   beforeEach(() => {
     reclaim.mockClear();
+    reclaim.mockImplementation(() => Promise.resolve(true));
     unflag.mockClear();
     labState = {channel: {id: 'chan'}, isBlockedAbuse: true};
   });
@@ -61,9 +64,16 @@ describe('useReleaseRemovedImages', () => {
       image({sourceUrl: 'b.png', flagged: true}),
       image({sourceUrl: 'c.png', flagged: true}),
     ]);
-    await Promise.resolve();
+    await settle();
     expect(unflag).toHaveBeenCalledTimes(2);
     expect(unflag).toHaveBeenCalledWith('chan', expect.anything());
+  });
+
+  it('asks for nothing when the file could not be deleted', async () => {
+    reclaim.mockImplementation(() => Promise.resolve(false));
+    releaser()([image({sourceUrl: 'b.png', flagged: true})]);
+    await settle();
+    expect(unflag).not.toHaveBeenCalled();
   });
 
   it('asks for nothing when no flagged image went', () => {

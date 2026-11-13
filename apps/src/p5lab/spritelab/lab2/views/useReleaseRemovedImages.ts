@@ -19,13 +19,15 @@ export default function useReleaseRemovedImages(): (
 
   return useCallback(
     (removed: (ImageProps | undefined)[]) => {
-      removed.forEach(props => reclaimAsset(props?.sourceUrl));
-      const flagged = removed.filter(props => props?.flagged).length;
-      if (!flagged || !isBlockedAbuse || !channelId) {
+      const released = removed.map(props => reclaimAsset(props?.sourceUrl));
+      if (!isBlockedAbuse || !channelId) {
         return;
       }
       void (async () => {
-        for (let i = 0; i < flagged; i++) {
+        for (let i = 0; i < removed.length; i++) {
+          if (!removed[i]?.flagged || !(await released[i])) {
+            continue;
+          }
           await unflagProjectChannel(channelId, dispatch);
         }
       })();

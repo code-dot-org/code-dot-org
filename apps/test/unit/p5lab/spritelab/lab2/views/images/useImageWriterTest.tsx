@@ -403,11 +403,14 @@ describe('useImageWriter', () => {
       expect(patch(1).flagged).toBeUndefined();
     });
 
-    it('unblocks the project when it is deleted', () => {
+    it('unblocks the project when it is deleted', async () => {
       labState = {channel: {id: 'chan'}, isBlockedAbuse: true};
       propsByKey.k1 = {name: 'Sprite 1', flagged: true};
       const {writer} = renderWriter();
       act(() => writer().deleteImage('k1'));
+      await act(async () => {
+        await new Promise(resolve => setTimeout(resolve, 0));
+      });
       expect(unflag).toHaveBeenCalledWith('chan', expect.anything());
     });
 
