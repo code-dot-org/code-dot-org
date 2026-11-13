@@ -343,7 +343,9 @@ export default function useBlocklyWorkspace({
   const getToolboxDefinition = useCallback(
     () =>
       workspaceRef.current
-        ? workspaceToToolboxDefinition(workspaceRef.current)
+        ? workspaceToToolboxDefinition(workspaceRef.current, {
+            dynamicCategoriesHoldBlocks: true,
+          })
         : null,
     []
   );

@@ -14,7 +14,10 @@ BlocklyCore.common.defineBlocksWithJsonArray([
 ]);
 
 // Lays the blocks out top to bottom, in toolbox order.
-function toolboxOf(blocks: BlocklyCore.serialization.blocks.State[]) {
+function toolboxOf(
+  blocks: BlocklyCore.serialization.blocks.State[],
+  options?: {dynamicCategoriesHoldBlocks?: boolean}
+) {
   const workspace = new Blockly.Workspace();
   Blockly.serialization.workspaces.load(
     {
@@ -25,18 +28,23 @@ function toolboxOf(blocks: BlocklyCore.serialization.blocks.State[]) {
     },
     workspace
   );
-  return workspaceToToolboxDefinition(workspace as BlocklyCore.WorkspaceSvg);
+  return workspaceToToolboxDefinition(
+    workspace as BlocklyCore.WorkspaceSvg,
+    options
+  );
 }
+
+const LAYOUT = [
+  {type: BLOCK_TYPES.category, fields: {CATEGORY: 'Math'}},
+  {type: 'math_number', fields: {NUM: 1}},
+  {type: BLOCK_TYPES.categoryDynamic, fields: {CUSTOM: 'Variables'}},
+  {type: 'math_number', fields: {NUM: 2}},
+  {type: BLOCK_TYPES.categoryDynamic, fields: {CUSTOM: 'Functions'}},
+];
 
 describe('workspaceToToolboxDefinition', () => {
   it('saves the blocks under a dynamic category into it', () => {
-    const toolbox = toolboxOf([
-      {type: BLOCK_TYPES.category, fields: {CATEGORY: 'Math'}},
-      {type: 'math_number', fields: {NUM: 1}},
-      {type: BLOCK_TYPES.categoryDynamic, fields: {CUSTOM: 'Variables'}},
-      {type: 'math_number', fields: {NUM: 2}},
-      {type: BLOCK_TYPES.categoryDynamic, fields: {CUSTOM: 'Functions'}},
-    ]);
+    const toolbox = toolboxOf(LAYOUT, {dynamicCategoriesHoldBlocks: true});
 
     expect(toolbox.kind).toBe('categoryToolbox');
     expect(toolbox.contents).toEqual([
@@ -53,5 +61,20 @@ describe('workspaceToToolboxDefinition', () => {
     ]);
     // Levels saved before dynamic categories held blocks keep their JSON.
     expect(toolbox.contents[2]).not.toHaveProperty('contents');
+  });
+
+  it('saves them to a DEFAULT category by default', () => {
+    const toolbox = toolboxOf(LAYOUT);
+
+    expect(toolbox.contents).toEqual([
+      expect.objectContaining({name: 'Math'}),
+      expect.objectContaining({name: 'Variables', custom: 'VARIABLE'}),
+      expect.objectContaining({
+        name: 'DEFAULT',
+        contents: [expect.objectContaining({fields: {NUM: 2}})],
+      }),
+      expect.objectContaining({name: 'Functions', custom: 'PROCEDURE'}),
+    ]);
+    expect(toolbox.contents[1]).not.toHaveProperty('contents');
   });
 });

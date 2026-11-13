@@ -2,7 +2,7 @@ import type * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES, DYNAMIC_CATEGORY_OPTIONS} from '../../constants';
 
-import {NamedDynamicCategoryInfo} from './factories';
+import {makeDynamicCategory, NamedDynamicCategoryInfo} from './factories';
 
 export const DEFAULT_CATEGORY_NAME = 'DEFAULT';
 
@@ -42,31 +42,18 @@ export function getNewStaticCategory(
 }
 
 /**
- * Creates a new dynamic category. Used to convert workspace
- * blocks into a toolbox definition in levelbuilder's toolbox mode.
- * @returns JSON representation of a new dynamic category.
- */
-export function getNewDynamicCategory(name: string): NamedDynamicCategoryInfo {
-  return {
-    kind: 'category',
-    custom: DYNAMIC_CATEGORY_OPTIONS[name],
-    name,
-    cssconfig: undefined,
-    id: name,
-    categorystyle: undefined,
-    colour: undefined,
-    hidden: undefined,
-  };
-}
-
-/**
- * Serialize the top blocks of the workspace as a toolbox.
+ * Serialize the top blocks of the workspace as a toolbox. Pass
+ * `dynamicCategoriesHoldBlocks` to save blocks under an auto-populated
+ * category into it; otherwise they go to a "DEFAULT" category.
  * @returns a toolbox definition that can be handled directly by Blockly.
  *
  * Adapted from {@link @cdo/apps/music/blockly/MusicBlocklyWorkspace} workspaceToToolboxDefinition().
  * TODO: Consolidate
  */
-export default function (workspace: BlocklyCore.WorkspaceSvg) {
+export default function (
+  workspace: BlocklyCore.WorkspaceSvg,
+  {dynamicCategoriesHoldBlocks = false} = {}
+) {
   const topBlocks = workspace.getTopBlocks(true);
 
   // This will be the final toolbox returned by this function, either a
@@ -100,8 +87,18 @@ export default function (workspace: BlocklyCore.WorkspaceSvg) {
         // Add previous category to toolbox
         fullToolbox.contents.push({...currentCategory});
       }
-      // Blocks that follow join the generated flyout, after its own blocks.
-      currentCategory = getNewDynamicCategory(block.getFieldValue('CUSTOM'));
+      const name = block.getFieldValue('CUSTOM');
+      const dynamicCategory = makeDynamicCategory(
+        name,
+        DYNAMIC_CATEGORY_OPTIONS[name]
+      );
+      if (dynamicCategoriesHoldBlocks) {
+        // Blocks that follow join the generated flyout, after its own blocks.
+        currentCategory = dynamicCategory;
+      } else {
+        fullToolbox.contents.push(dynamicCategory);
+        currentCategory = getNewStaticCategory();
+      }
       flyoutItems = [];
     } else {
       // Add the current block to the flyout and category.
