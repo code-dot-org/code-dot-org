@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-12 22:43:58 UTC",
+    "serialized_at": "2026-11-13 16:54:17 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2797,7 +2797,7 @@
       "key": "d03ecb49-1fca-4bc0-b5ea-4a90240f9f02",
       "position": 3,
       "properties": {
-        "progression_name": "Alternative Playlist Datasetss"
+        "progression_name": "Alternate Playlist Datasetss"
       },
       "seeding_key": {
         "activity_section.key": "d03ecb49-1fca-4bc0-b5ea-4a90240f9f02",
@@ -4296,7 +4296,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Alternative Playlist Datasetss"
+        "progression": "Alternate Playlist Datasetss"
       },
       "bonus": false,
       "seeding_key": {
