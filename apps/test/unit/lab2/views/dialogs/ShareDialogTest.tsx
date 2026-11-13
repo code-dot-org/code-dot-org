@@ -76,15 +76,22 @@ describe('Lab2 ShareDialog', () => {
     });
 
     it('withholds the share link and the remix when the project is blocked', () => {
-      renderFinish({isAbusive: true});
+      renderFinish({isAbusive: true, projectType: 'quest_builder'});
       expect(screen.queryByRole('button', {name: 'Copy link'})).toBeNull();
       expect(
         screen.getByRole('button', {name: 'Open Sprite Lab'})
       ).toBeDisabled();
     });
 
-    it('holds Open Sprite Lab until the lab has a standalone project', () => {
-      renderFinish();
+    it('offers Open Sprite Lab for a project saved as the standalone type', () => {
+      renderFinish({projectType: 'quest_builder'});
+      expect(
+        screen.getByRole('button', {name: 'Open Sprite Lab'})
+      ).toBeEnabled();
+    });
+
+    it('holds Open Sprite Lab for a project saved as the classic type', () => {
+      renderFinish({projectType: 'spritelab'});
       expect(
         screen.getByRole('button', {name: 'Open Sprite Lab'})
       ).toBeDisabled();
