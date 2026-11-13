@@ -32,7 +32,17 @@ export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 
 // Read by a screen reader when focus reaches the game, which otherwise
 // reports itself only in sound.
-const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
+const FULL_HELP =
+  'Left and right arrows move. Space or up arrow jumps. In zero gravity, ' +
+  'arrows steer. Turn on navigation sounds in Settings. ' +
+  'Press H to hear this again.';
+// After the first visit, so the full help does not hold up what the game
+// says as play starts.
+const SHORT_HELP = 'Arrow keys move. Press H for help.';
+// Older entries leave the log; screen readers do not read removals.
+const LOG_LENGTH = 5;
+// Focus arriving this soon after play starts is Run handing it to the game.
+const PLAY_FOCUS_MS = 1000;
 
 // The engine's p5 canvas is a fixed 400x400 (p5lab APP_WIDTH/HEIGHT); we scale
 // it with a CSS transform to fit either the corner preview or the centered
@@ -337,6 +347,8 @@ interface PlayspaceProps {
   controls?: React.ReactNode;
   // Over the box's bottom edge, unscaled.
   prompt?: React.ReactNode;
+  // What a sprite last said, read aloud by screen readers.
+  spoken?: string;
   // Pinned to the foot: across the column in preview, across the stage in
   // play. The box is placed to leave it room.
   bottomBar?: React.ReactNode;
@@ -372,6 +384,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   boxRef,
   controls,
   prompt,
+  spoken = '',
   bottomBar,
   arrows,
   columnHeader,
@@ -383,6 +396,33 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
+  // The help and what sprites say share one log, so a screen reader reads
+  // them in turn.
+  const [log, setLog] = useState<{id: number; text: string}[]>([]);
+  const logIdRef = useRef(0);
+  const addToLog = useCallback((text: string) => {
+    const id = ++logIdRef.current;
+    setLog(entries => [...entries.slice(-(LOG_LENGTH - 1)), {id, text}]);
+  }, []);
+  const heardFullHelpRef = useRef(false);
+  const addHelp = useCallback(() => {
+    addToLog(heardFullHelpRef.current ? SHORT_HELP : FULL_HELP);
+    heardFullHelpRef.current = true;
+  }, [addToLog]);
+  useEffect(() => {
+    if (spoken.trim()) {
+      addToLog(spoken.trim());
+    }
+  }, [spoken, addToLog]);
+  // On play starting, not only on focus: VoiceOver's activation reads as a
+  // pointer click, after which focus does not move to the box.
+  const playStartedAtRef = useRef(0);
+  useEffect(() => {
+    if (mode === 'play') {
+      playStartedAtRef.current = Date.now();
+      addHelp();
+    }
+  }, [mode, addHelp]);
   const overlayRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({w: 0, h: 0});
@@ -861,8 +901,34 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         // keystrokes through to the game.
         role={mode === 'play' ? 'application' : undefined}
         aria-label={mode === 'play' ? 'Game playspace' : undefined}
-        aria-describedby={mode === 'play' ? CONTROLS_HELP_ID : undefined}
         tabIndex={mode === 'play' ? 0 : undefined}
+        onFocus={
+          mode === 'play'
+            ? () => {
+                // Run's own hand-off of focus; play starting already
+                // added the help.
+                if (Date.now() - playStartedAtRef.current > PLAY_FOCUS_MS) {
+                  addHelp();
+                }
+              }
+            : undefined
+        }
+        // On the box, not the window, so H is a shortcut only while the game
+        // has focus (WCAG 2.1.4).
+        onKeyDown={
+          mode === 'play'
+            ? e => {
+                if (
+                  e.key.toLowerCase() === 'h' &&
+                  !e.ctrlKey &&
+                  !e.metaKey &&
+                  !e.altKey
+                ) {
+                  addToLog(FULL_HELP);
+                }
+              }
+            : undefined
+        }
         style={{
           transform,
           // Fade in on appearance (first measurement or hidden -> visible);
@@ -960,14 +1026,13 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           {prompt}
         </div>
       )}
-      {mode === 'play' && (
-        <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
-          Left and right arrows move. Space or up arrow jumps. In zero gravity,
-          up and down steer. Navigation sounds can be turned on in Settings:
-          footsteps and bumps, a tone for your height, and tones that grow
-          louder as a wall or an edge comes near.
-        </p>
-      )}
+      {/* Always mounted: a live region added along with its text is often
+          not read. */}
+      <div role="log" aria-live="polite" className={moduleStyles.srOnly}>
+        {log.map(entry => (
+          <p key={entry.id}>{entry.text}</p>
+        ))}
+      </div>
       {mode === 'play' && controls && (
         <div ref={controlsRef} className={moduleStyles.playControls}>
           {controls}
