@@ -13,7 +13,8 @@ module ReadReplicaHelper
       # On by default on development and test environments to exercise read splitting earlier (even when there isn't
       # a separate read replica database). Defaults to disabled on production.
       def read_replica?
-        # A curriculum author's own save re-reads what it just wrote, to compare it against the editor's copy.
+        # `read_from_writer specifies that all ActiveRecord queries should read from the writer database for the current
+        # request/job. One usage is to ensure curriculum authors (levelbuilders) always read the changes they just saved.
         return false if Current.read_from_writer
 
         Gatekeeper.allows('dashboard_read_replica', default: rack_env?(:development, :test))

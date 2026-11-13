@@ -1,7 +1,7 @@
-# Request- and job-scoped state. Rails' executor resets these attributes between units of work, so a value set by one
-# request is never visible to the next one served by the same thread.
+# Current Attributes can be used to store settings used for the duration of an Application Controller request
+# (or Active Worker Job).
 class Current < ActiveSupport::CurrentAttributes
-  # Set for requests that author curriculum. They read back what they have just written, and a read replica has not
-  # necessarily received it yet: see `ReadReplicaHelper`.
+  # Set this to `true` to enforce all ActiveRecord queries read from the writer database for the current request/job.
+  # For example, ensure that curriculum authors (Levelbuilders) always read the changes they just persisted.
   attribute :read_from_writer
 end

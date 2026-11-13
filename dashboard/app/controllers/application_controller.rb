@@ -289,7 +289,7 @@ class ApplicationController < ActionController::Base
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
 
-    Current.read_from_writer = true
+    Current.read_from_writer = true # Ensure curriculum authors always read the changes they just saved.
   end
 
   # Allow us to get some UI test coverage on levelbuilder-only features. This
@@ -307,7 +307,7 @@ class ApplicationController < ActionController::Base
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
 
-    Current.read_from_writer = true
+    Current.read_from_writer = true # Ensure curriculum authors always read the changes they just saved.
   end
 
   protected def authorize_teacher!
