@@ -1098,7 +1098,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // What's on stage right now — updated by every run, including scene jumps —
   // so "Restart scene" (and the reseed watcher below) can re-run it.
   const currentPlayingRef = useRef<{kind: 'local'; scene: Scene} | null>(null);
-  // The same scene's id as state, for what is drawn from it.
+  // The id of the scene on stage, kept as state as well as in the ref, so
+  // that the restart buttons are drawn again when play moves to another scene.
   const [onStageSceneId, setOnStageSceneId] = useState<string | null>(null);
   const setCurrentPlaying = useCallback((scene: Scene | null) => {
     currentPlayingRef.current = scene && {kind: 'local', scene};
@@ -1949,7 +1950,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [runScene, defaultPlaySceneId]);
   restartSceneRef.current = handleRestartScene;
-  const onStageSceneIsNotTheFirst =
+  const playHasLeftTheFirstScene =
     !!onStageSceneId && onStageSceneId !== defaultPlaySceneId;
 
   // A restart from a block rides the scene-jump cover and fades when the new
@@ -2404,7 +2405,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 // On the scene the game starts on, restarting the scene is
                 // restarting the game, so the one button is enough.
                 onRestartScene={
-                  pinnedSceneId || onStageSceneIsNotTheFirst
+                  pinnedSceneId || playHasLeftTheFirstScene
                     ? event => handleRestartClick(event, handleRestartScene)
                     : undefined
                 }
