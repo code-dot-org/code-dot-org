@@ -154,11 +154,32 @@ class UserPreferencesControllerTest < ActionController::TestCase
   test 'returns conflict and keeps the stored section_order when another request holds the row lock' do
     preference = UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
     UserPreference.any_instance.stubs(:lock!).raises(lock_nowait_error)
+    Cdo::Metrics.stubs(:put)
 
     patch :update, params: {section_order: [1, 2, 3]}, as: :json
 
     assert_response :conflict
     assert_equal [3, 2, 1], preference.reload.section_order
+  end
+
+  test 'counts a lock conflict' do
+    UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
+    UserPreference.any_instance.stubs(:lock!).raises(lock_nowait_error)
+    Cdo::Metrics.expects(:put).with('User', 'SectionOrderSaveConflict', 1, {Environment: CDO.rack_env})
+
+    patch :update, params: {section_order: [1, 2, 3]}, as: :json
+
+    assert_response :conflict
+  end
+
+  # The lock string is spliced into SQL verbatim, so a typo in it fails at
+  # runtime against MySQL rather than at build time.
+  test 'FOR UPDATE NOWAIT is valid SQL on this database' do
+    preference = UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
+
+    assert_nothing_raised do
+      preference.with_lock('FOR UPDATE NOWAIT') {}
+    end
   end
 
   test 'does not lock the row when section_order is unchanged' do
