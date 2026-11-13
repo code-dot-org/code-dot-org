@@ -19,6 +19,8 @@ import styles from './quiz-question-card.module.scss';
 
 interface QuizQuestionCardProps {
   question: QuizBuilderQuestion;
+  // The page the question is on in the quiz being built.
+  page: number;
   isExpanded: boolean;
   onExpandedChange: (expanded: boolean) => void;
   error?: string | null;
@@ -27,6 +29,7 @@ interface QuizQuestionCardProps {
     payload: QuizQuestionPayload
   ) => Promise<number | undefined>;
   onRemove: (id: number) => Promise<boolean>;
+  onDirtyChange?: (id: number, isDirty: boolean) => void;
 }
 
 function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
@@ -82,11 +85,13 @@ function toPayload(draft: QuizQuestionDraft): QuizQuestionPayload {
 // state, saved or discarded independently of the rest of the outline.
 const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   question,
+  page,
   isExpanded,
   onExpandedChange,
   error,
   onSave,
   onRemove,
+  onDirtyChange,
 }) => {
   const [draft, setDraft] = useState(() => toDraft(question));
   const [isSaving, setIsSaving] = useState(false);
@@ -116,6 +121,14 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
     setDraft(toDraft(question));
   }, [question]);
 
+  useEffect(() => {
+    if (!isDirty || !onDirtyChange) {
+      return;
+    }
+    onDirtyChange(question.id, true);
+    return () => onDirtyChange(question.id, false);
+  }, [onDirtyChange, question.id, isDirty]);
+
   const handleSave = async () => {
     setIsSaving(true);
     const updatedId = await onSave(question.id, toPayload(draft));
@@ -124,6 +137,8 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
       onExpandedChange(false);
     }
   };
+
+  const neverSaved = isPendingQuestionId(question.id);
 
   const handleDiscard = () => {
     setDraft(toDraft(question));
@@ -150,6 +165,8 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
       onSave={handleSave}
       onDiscard={handleDiscard}
       onRemove={handleRemove}
+      nested
+      neverSaved={neverSaved}
     >
       <Tabs
         name={`question-${question.id}-tabs`}
@@ -180,7 +197,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
           {
             value: 'usage',
             text: 'Usage',
-            tabContent: <UsageTab question={question} />,
+            tabContent: <UsageTab question={question} page={page} />,
           },
         ]}
         onChange={() => {}}

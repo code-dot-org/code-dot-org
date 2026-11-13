@@ -6,6 +6,7 @@
 import {useCallback, useMemo} from 'react';
 
 import useSources from '@cdo/apps/lab2/hooks/useSources';
+import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {Channel, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {Pathway} from '../types';
@@ -16,6 +17,10 @@ const NO_SOURCES: ProjectSources = {source: ''};
 export interface PathwayProjectState {
   /** The project channel once loaded; undefined while loading or without one. */
   channel?: Channel;
+  /** The project's sources; undefined while loading. */
+  sources?: ProjectSources;
+  /** The channel's manager, for what it knows beyond the channel, such as the share URL. */
+  projectManager: ProjectManager | null;
   isLoading: boolean;
   /** False for anyone but the owner, and until the channel has loaded. */
   isEditable: boolean;
@@ -41,8 +46,14 @@ export function usePathwayProject(pathway: Pathway): PathwayProjectState {
       },
     [pathway]
   );
-  const {channel, projectManager, isLoading, isEditable, loadError} =
-    useSources({levelProperties: templateLevel, defaultSources: NO_SOURCES});
+  const {
+    channel,
+    currentSources,
+    projectManager,
+    isLoading,
+    isEditable,
+    loadError,
+  } = useSources({levelProperties: templateLevel, defaultSources: NO_SOURCES});
 
   const editProject = useCallback<PathwayProjectState['editProject']>(
     async ({name, description}) => {
@@ -66,5 +77,13 @@ export function usePathwayProject(pathway: Pathway): PathwayProjectState {
     [projectManager]
   );
 
-  return {channel, isLoading, isEditable, loadError, editProject};
+  return {
+    channel,
+    sources: currentSources,
+    projectManager,
+    isLoading,
+    isEditable,
+    loadError,
+    editProject,
+  };
 }

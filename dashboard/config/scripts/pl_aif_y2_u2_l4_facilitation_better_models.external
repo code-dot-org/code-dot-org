@@ -1,0 +1,70 @@
+name 'pl-aif-y2-u2-l4-facilitation-better-models'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Testing Regression Models
+
+## What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Warm-up:</strong> the Dani/Sasha debate, students take sides before any formal method is introduced</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Exploring Loss:</strong> students invent their own way to calculate loss from the Activity Guide's data, before "absolute error" is ever named</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Comparing Models (Levels 1-2):</strong> students implement a loss function in Python, then complete a Check for Understanding comparing two real models</div>
+  </div>
+</div>
+
+<hr>
+
+## Watch for: The Signed Loss Trap
+
+This is the real, documented mistake, not a guess.
+
+<div style="text-align: center; margin: 20px auto;">
+  <img src="https://images.code.org/4b36e93a18767e2f4f89d61e860f71ef-image-1794513461508.png" alt="A simple comparison showing an overshoot of plus 3 and an undershoot of minus 3 summing to a misleading 0, versus the same two errors as absolute values, 3 and 3, correctly summing to 6" style="width: 60%; border-radius: 10px;">
+</div>
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Signed Loss</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Overshoots and undershoots cancel out, giving Dani's model a total loss of 0, which makes it look perfect.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Absolute Error</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Every error counts as a positive distance, so a model can't cancel out its own mistakes.</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222;">&bull; "That model clearly isn't perfect, so how can its loss be 0? What happened when you added up the errors?"</div>
+</div>
+
+## Resolving the Debate: Fewer Exact Matches, Still Better Overall
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; The real answer:</strong> Sasha's model is better in most scenarios. A model whose predictions all stay close to the trend usually beats one that nails a few points exactly but misses badly elsewhere. Acknowledge the exception: some real situations genuinely need a few exact hits, but that's the less common case.
+  </div>
+</div>
+
+## Assessment: Level 2 Check for Understanding
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; What a strong answer needs, both parts:</strong> correctly identifying the better model, and explaining why using its lower loss, not just a gut preference. If a student gets the right model but can't connect it to loss, have them explain their loss function in their own words first.
+  </div>
+</div>
+
+![]()
+MARKDOWN

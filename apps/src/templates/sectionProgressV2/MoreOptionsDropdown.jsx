@@ -11,7 +11,10 @@ import {
   getSelectedScriptFriendlyName,
   getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
-import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {
+  isDemoSection,
+  studentShape,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
@@ -32,6 +35,7 @@ function MoreOptionsDropdown({
   unitName,
   courseId,
   unitPosition,
+  isDemoSection,
 }) {
   const [showResetProgressDialog, setShowResetProgressDialog] =
     React.useState(false);
@@ -90,12 +94,15 @@ function MoreOptionsDropdown({
             onClick: collapseAll,
           },
           // The dialog names the unit, which comes from course data that loads
-          // separately from the section.
-          ...(offerResetProgress && unitName
+          // separately from the section. Demo students are shared by every
+          // teacher's demo section, so their progress is not one teacher's to
+          // reset.
+          ...(offerResetProgress && unitName && !isDemoSection
             ? [
                 {
                   value: 'reset-progress',
                   label: i18n.resetProgress(),
+                  tag: i18n.betaTag(),
                   icon: {iconName: 'rotate-left', iconStyle: 'solid'},
                   onClick: () => setShowResetProgressDialog(true),
                 },
@@ -126,6 +133,7 @@ MoreOptionsDropdown.propTypes = {
   unitName: PropTypes.string,
   courseId: PropTypes.number,
   unitPosition: PropTypes.number,
+  isDemoSection: PropTypes.bool,
 };
 
 export const UnconnectedMoreOptionsDropdown = MoreOptionsDropdown;
@@ -138,6 +146,10 @@ export default connect(
     unitName: getSelectedScriptFriendlyName(state),
     courseId: getSelectedCourseId(state),
     unitPosition: getSelectedUnitPosition(state),
+    isDemoSection: isDemoSection(
+      state,
+      state.teacherSections.selectedSectionId
+    ),
   }),
   dispatch => ({
     expandMetadataForStudents: studentIds =>

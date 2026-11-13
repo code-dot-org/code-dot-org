@@ -1,0 +1,1423 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-11-05T18:03:46.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#TEMPLATE",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "6d998ffb-f243-46be-baa3-12423c900acf",
+            "type": "shape",
+            "data": {
+              "shapeType": "diamond",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -330,
+              "y": 385
+            },
+            "width": 24,
+            "height": 70,
+            "measured": {
+              "width": 24,
+              "height": 70
+            }
+          },
+          {
+            "id": "be37d034-c200-4bf0-916b-804b709e633e",
+            "type": "shape",
+            "data": {
+              "shapeType": "diamond",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -145.24761599999948,
+              "y": 96.04204799999997
+            },
+            "width": 24,
+            "height": 70,
+            "measured": {
+              "width": 24,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "7bb40524-779e-435f-b9a7-49cac48c2fea",
+            "type": "shape",
+            "data": {
+              "shapeType": "diamond",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -381.2476159999995,
+              "y": 96.04204799999997
+            },
+            "width": 24,
+            "height": 70,
+            "measured": {
+              "width": 24,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "cee41d61-c732-4968-ab90-20635b01e4cb",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "transparent",
+              "locked": true
+            },
+            "position": {
+              "x": 680,
+              "y": -80
+            },
+            "width": 670,
+            "height": 1100,
+            "measured": {
+              "width": 670,
+              "height": 1100
+            },
+            "zIndex": -2
+          },
+          {
+            "id": "4b8d767b-c7e3-4662-ace3-690967882a28",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "transparent",
+              "locked": true
+            },
+            "position": {
+              "x": -30,
+              "y": -80
+            },
+            "width": 690,
+            "height": 590,
+            "measured": {
+              "width": 690,
+              "height": 590
+            },
+            "zIndex": -2
+          },
+          {
+            "id": "554911be-b328-4bfd-9591-e98fb7bcaba6",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "transparent",
+              "locked": true
+            },
+            "position": {
+              "x": -451,
+              "y": 570
+            },
+            "width": 400,
+            "height": 586,
+            "measured": {
+              "width": 400,
+              "height": 586
+            },
+            "zIndex": -2
+          },
+          {
+            "id": "35be845c-93d3-4462-9074-949978bb19a2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "transparent",
+              "locked": true
+            },
+            "position": {
+              "x": -451,
+              "y": -80
+            },
+            "width": 400,
+            "height": 630,
+            "measured": {
+              "width": 400,
+              "height": 630
+            },
+            "zIndex": -2
+          },
+          {
+            "id": "48ae2415-0e3a-492b-9cf1-18575d62bde3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/5d08c36c-b54e-4449-998c-ebce3c51496a.jpg",
+              "altText": "SC1-L11-comic-F01"
+            },
+            "position": {
+              "x": 700,
+              "y": 50
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "f0905b1a-b891-4bd0-a3e2-d44399e2555a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/6d6ad0df-3c49-44dd-a1b5-4dbb467b0f0d.jpg",
+              "altText": "SC1-L11-comic-F02"
+            },
+            "position": {
+              "x": 860,
+              "y": 50
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "b2b4cd53-45d3-4f04-90b7-4ca1863561ce",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/e89d2383-8e02-4d86-8676-16f0be838b0a.jpg",
+              "altText": "SC1-L11-comic-F03"
+            },
+            "position": {
+              "x": 1020,
+              "y": 50
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "896898b0-8341-445c-9b90-f344f7b15c1a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/03ad917f-8eab-4330-8237-ef103fdadb86.jpg",
+              "altText": "SC1-L11-comic-F04"
+            },
+            "position": {
+              "x": 1180,
+              "y": 50
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "ed48688c-bea5-47d5-af86-44adc9e6ef3b",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/ec37b8fb-ac15-4620-a757-95b86c0057b5.jpg",
+              "altText": "SC1-L11-comic-F05"
+            },
+            "position": {
+              "x": 700,
+              "y": 210
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "c389a212-42d2-4439-84e3-057d6f1470dc",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/ccddab41-b5da-441a-a718-35578adbe259.jpg",
+              "altText": "SC1-L11-comic-F06"
+            },
+            "position": {
+              "x": 860,
+              "y": 210
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "611b9e32-3fb8-4736-a02d-8a72803b3db6",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/6fe69956-abf3-481f-90c6-65d32268cd88.jpg",
+              "altText": "SC1-L11-comic-F07"
+            },
+            "position": {
+              "x": 1020,
+              "y": 210
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "01f3014f-1180-4c54-a900-47bf0a5bdcaa",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/f3463678-d766-46ac-924a-ac527a44a0fc.jpg",
+              "altText": "SC1-L11-comic-F08"
+            },
+            "position": {
+              "x": 1180,
+              "y": 210
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "0c4ba709-7ef4-42ca-b246-bf826272a0c4",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/f012757d-19e4-4d76-beb9-2a7084509575.jpg",
+              "altText": "SC1-L11-comic-F09"
+            },
+            "position": {
+              "x": 700,
+              "y": 370
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "ce0e9a98-514a-4fb3-81a4-d2ffd3e57819",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/d0020629-f838-488c-9d3d-e3636119bc6f.jpg",
+              "altText": "SC1-L11-comic-F10"
+            },
+            "position": {
+              "x": 860,
+              "y": 370
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "0a650814-79fc-4ed7-bb36-277653f74a63",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/0e148289-02b4-4b25-bc19-4d3d75c743f7.jpg",
+              "altText": "SC1-L11-comic-F11"
+            },
+            "position": {
+              "x": 1020,
+              "y": 370
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "90439035-3e7f-497c-8678-4c734eafc2db",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/f98a668a-f186-4449-ae6c-7a465e615e27.jpg",
+              "altText": "SC1-L11-comic-F12"
+            },
+            "position": {
+              "x": 1180,
+              "y": 370
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "6ccf0094-1682-472e-a163-dfa549e68498",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/74432e91-fa5a-4096-88dd-3cf91d91cdfb.jpg",
+              "altText": "SC1-L11-comic-F13"
+            },
+            "position": {
+              "x": 700,
+              "y": 530
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "a1e070eb-5a68-43c5-a766-b1aaa6a73494",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/16c20e13-f5d7-4504-8ca9-93113b4fe003.jpg",
+              "altText": "SC1-L11-comic-F14"
+            },
+            "position": {
+              "x": 860,
+              "y": 530
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "de97f6cf-698d-4cd5-9de4-4af476833189",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/095887ad-c81c-41fc-a0d4-69b91abb0c5d.jpg",
+              "altText": "SC1-L11-comic-F15"
+            },
+            "position": {
+              "x": 1020,
+              "y": 530
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "fc1d1029-0680-414f-b7b9-66780eed09b8",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/a88af9f9-2bed-41db-ad8c-7d9f0a93721c.jpg",
+              "altText": "SC1-L11-comic-F16"
+            },
+            "position": {
+              "x": 1180,
+              "y": 530
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "b57b4567-4c1e-4112-b769-2d883cf91b76",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/21c5710b-e4e5-4064-aa41-7d8cb3eb0a4e.jpg",
+              "altText": "SC1-L11-comic-F18"
+            },
+            "position": {
+              "x": 860,
+              "y": 690
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "abbbed02-eda5-4db9-b25f-0e3e127e64cc",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/a9a31221-1d6c-4cc1-9667-08817476535b.jpg",
+              "altText": "SC1-L11-comic-F19"
+            },
+            "position": {
+              "x": 1020,
+              "y": 690
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "d2b5f510-f419-4f81-b6e1-69bb3a7e5566",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/22a76e19-8831-4834-b958-e44fa22fb457.jpg",
+              "altText": "SC1-L11-comic-F20"
+            },
+            "position": {
+              "x": 1180,
+              "y": 690
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "ea4d0819-1351-458e-830f-a377914d26db",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "locked": true,
+              "strokeColor": "#000000"
+            },
+            "position": {
+              "x": 0,
+              "y": 50
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "066b2526-f996-42db-af2b-f76acc59a395",
+            "type": "text",
+            "data": {
+              "text": "1",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 4,
+              "y": 52
+            },
+            "width": 32,
+            "height": 32,
+            "measured": {
+              "width": 32,
+              "height": 32
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "b4e58ca0-3aab-4f00-bb57-5db0ea944b36",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "locked": true,
+              "strokeColor": "#000000"
+            },
+            "position": {
+              "x": 160,
+              "y": 50
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "702b1766-bd04-4d6d-a60a-110a54244d94",
+            "type": "text",
+            "data": {
+              "text": "2",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 164,
+              "y": 52
+            },
+            "width": 32,
+            "height": 32,
+            "measured": {
+              "width": 32,
+              "height": 32
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "6173210c-63a4-47bc-8a84-caf03bbc14f9",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "locked": true,
+              "strokeColor": "#000000"
+            },
+            "position": {
+              "x": 320,
+              "y": 50
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "b4695093-5838-405d-a5b3-7eaf472c745e",
+            "type": "text",
+            "data": {
+              "text": "3",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 324,
+              "y": 52
+            },
+            "width": 32,
+            "height": 32,
+            "measured": {
+              "width": 32,
+              "height": 32
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "92722391-3f19-4a5e-9590-5710470a2b95",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "locked": true,
+              "strokeColor": "#000000"
+            },
+            "position": {
+              "x": 480,
+              "y": 50
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "e4459c97-c428-47f4-920d-4abbea8a698f",
+            "type": "text",
+            "data": {
+              "text": "4",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 484,
+              "y": 52
+            },
+            "width": 32,
+            "height": 32,
+            "measured": {
+              "width": 32,
+              "height": 32
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "ba5541a9-1ef9-43c6-9c31-5f0ad1a5b081",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "locked": true,
+              "strokeColor": "#000000"
+            },
+            "position": {
+              "x": 0,
+              "y": 210
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "bcd6dfd0-1142-4cd7-827a-a8fbac072152",
+            "type": "text",
+            "data": {
+              "text": "5",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 4,
+              "y": 212
+            },
+            "width": 32,
+            "height": 32,
+            "measured": {
+              "width": 32,
+              "height": 32
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "b025b31d-ac24-4707-b5ad-c980c44791a9",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "locked": true,
+              "strokeColor": "#000000"
+            },
+            "position": {
+              "x": 160,
+              "y": 210
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "bee02056-c3a9-41e6-9fe5-fb978909505a",
+            "type": "text",
+            "data": {
+              "text": "6",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 164,
+              "y": 212
+            },
+            "width": 32,
+            "height": 32,
+            "measured": {
+              "width": 32,
+              "height": 32
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "3b8e27b4-3d81-402a-ab56-52fc2c552e35",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "locked": true,
+              "strokeColor": "#000000"
+            },
+            "position": {
+              "x": 320,
+              "y": 210
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "96915ac5-44e1-4819-8577-c3d4de32a284",
+            "type": "text",
+            "data": {
+              "text": "7",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 324,
+              "y": 212
+            },
+            "width": 32,
+            "height": 32,
+            "measured": {
+              "width": 32,
+              "height": 32
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "3faed592-dafb-4073-a5a1-77bc62674a66",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "locked": true,
+              "strokeColor": "#000000"
+            },
+            "position": {
+              "x": 480,
+              "y": 210
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "235d3798-0483-4234-b37f-1c8089c0bd44",
+            "type": "text",
+            "data": {
+              "text": "8",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 484,
+              "y": 212
+            },
+            "width": 32,
+            "height": 32,
+            "measured": {
+              "width": 32,
+              "height": 32
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "c1aa654c-6f14-45b8-ba08-19acd758ad06",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Caption:",
+              "textAlign": "left",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": 0,
+              "y": 370
+            },
+            "width": 630,
+            "height": 110,
+            "measured": {
+              "width": 630,
+              "height": 110
+            }
+          },
+          {
+            "id": "20c2cdfb-41e2-419c-bd48-f3d86f07f77d",
+            "type": "text",
+            "data": {
+              "text": "Frames",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "fontFamily": "sans",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 695,
+              "y": -70
+            },
+            "width": 320,
+            "height": 48,
+            "measured": {
+              "width": 320,
+              "height": 48
+            }
+          },
+          {
+            "id": "1558ffc9-2b14-4d49-8186-a37653154c6d",
+            "type": "text",
+            "data": {
+              "text": "Bubbles",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "fontFamily": "sans",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -436,
+              "y": -70
+            },
+            "width": 320,
+            "height": 48,
+            "measured": {
+              "width": 320,
+              "height": 48
+            },
+            "dragging": false
+          },
+          {
+            "id": "ccb78008-85ab-48bb-9cfc-fcbf1c82006d",
+            "type": "text",
+            "data": {
+              "text": "Story ideas",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "fontFamily": "sans",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -436,
+              "y": 580
+            },
+            "width": 320,
+            "height": 48,
+            "measured": {
+              "width": 320,
+              "height": 48
+            },
+            "dragging": false
+          },
+          {
+            "id": "e39a2125-068e-49bc-870a-fcd9f169c16c",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Fitness app: predicts Rest Day or Active Day from Steps, Walking Minutes, Floors Climbed and Activity Type.",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -431,
+              "y": 691
+            },
+            "width": 360,
+            "height": 80,
+            "measured": {
+              "width": 360,
+              "height": 80
+            }
+          },
+          {
+            "id": "05bf9fcb-2408-4cc0-b343-97a24fe58693",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Playlist Bot (Lesson 6)",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -431,
+              "y": 779
+            },
+            "width": 360,
+            "height": 50,
+            "measured": {
+              "width": 360,
+              "height": 50
+            }
+          },
+          {
+            "id": "78650b04-347e-4b87-90e5-921206637cce",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Case A: Job applications",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -431,
+              "y": 839
+            },
+            "width": 360,
+            "height": 50,
+            "measured": {
+              "width": 360,
+              "height": 50
+            }
+          },
+          {
+            "id": "6ad4c811-037a-423a-acf6-d81158fac96b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Case B: Health care helper",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -431,
+              "y": 899
+            },
+            "width": 360,
+            "height": 50,
+            "measured": {
+              "width": 360,
+              "height": 50
+            }
+          },
+          {
+            "id": "d219e3a7-6b57-473b-b239-27065e1849f7",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Case C: Translations",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -431,
+              "y": 959
+            },
+            "width": 360,
+            "height": 50,
+            "measured": {
+              "width": 360,
+              "height": 50
+            }
+          },
+          {
+            "id": "159525d6-c55a-467d-99f2-c441c5a8b985",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Case D: Flagging online posts",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -431,
+              "y": 1019
+            },
+            "width": 360,
+            "height": 50,
+            "measured": {
+              "width": 360,
+              "height": 50
+            }
+          },
+          {
+            "id": "006ebda0-ce8f-4730-9bfd-a57fdc7bf9e5",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Your own idea",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -431,
+              "y": 1079
+            },
+            "width": 360,
+            "height": 50,
+            "measured": {
+              "width": 360,
+              "height": 50
+            }
+          },
+          {
+            "id": "4d02a862-f0f2-450e-a3ed-b9dc132a14b4",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/035a9527-6e02-43f6-9248-4edc4836e198.jpg",
+              "altText": "SC1-L11-comic-F17"
+            },
+            "position": {
+              "x": 700,
+              "y": 690
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "47dd3060-7c8e-4b7f-8fcd-3bc48fbced24",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -411.2476159999995,
+              "y": 51.042047999999966
+            },
+            "width": 150,
+            "height": 90,
+            "measured": {
+              "width": 150,
+              "height": 90
+            },
+            "dragging": false
+          },
+          {
+            "id": "b641d9c8-45ba-49bb-9378-aef2458a8080",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -241.24761599999948,
+              "y": 51.042047999999966
+            },
+            "width": 150,
+            "height": 90,
+            "measured": {
+              "width": 150,
+              "height": 90
+            },
+            "dragging": false
+          },
+          {
+            "id": "562b6cc5-b048-4650-b52d-cf7c72ecfa3d",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -411.2476159999995,
+              "y": 211.04204799999997
+            },
+            "width": 150,
+            "height": 90,
+            "measured": {
+              "width": 150,
+              "height": 90
+            },
+            "dragging": false
+          },
+          {
+            "id": "903eb644-c9b4-4f30-8ce6-dab2ff0fe284",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -391.2476159999995,
+              "y": 307.04204799999997
+            },
+            "width": 22,
+            "height": 22,
+            "measured": {
+              "width": 22,
+              "height": 22
+            },
+            "dragging": false
+          },
+          {
+            "id": "1a8151de-5b7e-4f9e-bffb-e4e49f50bf3a",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -405.2476159999995,
+              "y": 335.04204799999997
+            },
+            "width": 12,
+            "height": 12,
+            "measured": {
+              "width": 12,
+              "height": 12
+            },
+            "dragging": false
+          },
+          {
+            "id": "36fb8f4e-d2ad-4cbf-847c-09cfa10e5dc3",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -241.24761599999948,
+              "y": 211.04204799999997
+            },
+            "width": 150,
+            "height": 90,
+            "measured": {
+              "width": 150,
+              "height": 90
+            },
+            "dragging": false
+          },
+          {
+            "id": "a0673fb6-6ed9-43cc-b629-d856dda4d19e",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -133.24761599999948,
+              "y": 307.04204799999997
+            },
+            "width": 22,
+            "height": 22,
+            "measured": {
+              "width": 22,
+              "height": 22
+            },
+            "dragging": false
+          },
+          {
+            "id": "1ab09a89-3427-4135-b4a5-0912b3b8a62c",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -109.24761599999948,
+              "y": 335.04204799999997
+            },
+            "width": 12,
+            "height": 12,
+            "measured": {
+              "width": 12,
+              "height": 12
+            },
+            "dragging": false
+          },
+          {
+            "id": "782f5377-c0e5-4e30-b3e3-148f7a9e05d3",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -411,
+              "y": 370
+            },
+            "width": 320,
+            "height": 60,
+            "measured": {
+              "width": 320,
+              "height": 60
+            }
+          },
+          {
+            "id": "1ca01d33-f396-4158-9c43-f66473eda3ef",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -411,
+              "y": 480
+            },
+            "width": 320,
+            "height": 46,
+            "measured": {
+              "width": 320,
+              "height": 46
+            }
+          },
+          {
+            "id": "f6dc34c3-ad45-43e3-9e72-e97c288864cb",
+            "type": "text",
+            "data": {
+              "text": "Comic Strip",
+              "fontSize": "extra-large",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -15,
+              "y": -70
+            },
+            "width": 320,
+            "height": 48,
+            "measured": {
+              "width": 320,
+              "height": 48
+            }
+          },
+          {
+            "id": "8b3e6bf9-99d3-40cf-8c34-d52330a29e29",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/606a7b0e-7efa-4836-b4e2-a105023300e7.png",
+              "altText": "SC1-L11-comic-F22-v2"
+            },
+            "position": {
+              "x": 860,
+              "y": 850
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "20bf5c67-bce7-4802-8a9d-9475dc800598",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson11-sketch-lab-template/uuid/eb14e0d7-52f6-42ca-aaef-f75e513f4a2d.png",
+              "altText": "SC1-L11-comic-F21-v1"
+            },
+            "position": {
+              "x": 700,
+              "y": 850
+            },
+            "width": 150,
+            "height": 150,
+            "measured": {
+              "width": 150,
+              "height": 150
+            }
+          },
+          {
+            "id": "l11-instr-strip",
+            "type": "text",
+            "data": {
+              "text": "Drag four to eight frames into the slots. Then fill in Caption:",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -15,
+              "y": -20
+            },
+            "width": 650,
+            "height": 56,
+            "measured": {
+              "width": 650,
+              "height": 56
+            }
+          },
+          {
+            "id": "l11-instr-bubbles",
+            "type": "text",
+            "data": {
+              "text": "Drag a bubble and its tail onto a frame. Double-click the bubble to type.",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -436,
+              "y": -20
+            },
+            "width": 370,
+            "height": 56,
+            "measured": {
+              "width": 370,
+              "height": 56
+            }
+          },
+          {
+            "id": "l11-instr-frames",
+            "type": "text",
+            "data": {
+              "text": "Pick the frames that tell your story.",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 695,
+              "y": -20
+            },
+            "width": 650,
+            "height": 56,
+            "measured": {
+              "width": 650,
+              "height": 56
+            }
+          },
+          {
+            "id": "l11-instr-ideas",
+            "type": "text",
+            "data": {
+              "text": "Need an idea? Pick one below, or make up your own.",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -436,
+              "y": 630
+            },
+            "width": 370,
+            "height": 56,
+            "measured": {
+              "width": 370,
+              "height": 56
+            }
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 247.43688904835687,
+          "y": 278.16369256688984,
+          "zoom": 0.7578582832551988
+        }
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-05 18:03:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 18:07:19 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 20:40:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 20:43:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 20:52:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 22:24:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-07 00:16:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-07 00:49:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

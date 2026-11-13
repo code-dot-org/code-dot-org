@@ -1,0 +1,34 @@
+// A class per destination color, setting the variables a box or ring reads.
+// The accent families ship background tokens only, so those stand in for
+// borders.
+@mixin destination-colors {
+  .purple {
+    --destination-color: var(--borders-brand-purple-primary);
+    --destination-accent: var(--text-brand-purple-primary);
+  }
+
+  .teal {
+    --destination-color: var(--borders-brand-teal-primary);
+    --destination-accent: var(--text-brand-teal-primary);
+  }
+
+  .green {
+    --destination-color: var(--borders-success-primary);
+    --destination-accent: var(--text-success-primary);
+  }
+
+  .blue {
+    --destination-color: var(--borders-info-primary);
+    --destination-accent: var(--text-info-primary);
+  }
+
+  .orange {
+    --destination-color: var(--background-accent-orange-primary);
+    --destination-accent: var(--background-accent-orange-strong);
+  }
+
+  .strawberry {
+    --destination-color: var(--background-accent-strawberry-primary);
+    --destination-accent: var(--background-accent-strawberry-strong);
+  }
+}

@@ -15,9 +15,21 @@ describe('BLOCK_HELP', () => {
   // Entries still waiting for their picture; the catalog draws an outline.
   const PICTURE_PENDING = new Set([
     'gamelab_spriteSay',
+    'gamelab_destroy',
+    'spritelab2_touchedSprite',
+    'spritelab2_clickedSprite',
     'spritelab2_restartScene',
-    'gamelab_atTime',
+    'spritelab2_showTitle',
+    'gamelab_everyInterval',
     'spritelab2_whenPlayer',
+    'spritelab2_setAsPlatformPlayer2',
+    'spritelab2_thePlayer2',
+    'spritelab2_askAI',
+    'spritelab2_askAIWithChoices',
+    'spritelab2_setSystemPrompt',
+    'spritelab2_setPlatformJumpHeight',
+    'gamelab_showVariable',
+    'gamelab_hideVariable',
   ]);
 
   it('gives every entry an animation, or is known to be waiting for one', () => {

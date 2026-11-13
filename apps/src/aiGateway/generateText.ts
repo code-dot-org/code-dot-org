@@ -6,23 +6,16 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import AichatContextManager from '../aichat/aichatContextManager';
 import {AichatContext} from '../aichat/types';
 
+import {challengeHeaders} from './challengeToken';
 import {
   CURRENT_SCHEMA_VERSION,
   CurrentGatewayGenerateTextResponseSchema,
   type CurrentGatewayGenerateTextResponse,
 } from './contract/gatewaySchemas';
+import {sendGatewayRequest} from './gatewayRequest';
 import {reportGatewayError} from './logHelper';
-import {
-  recordGatewayRequestError,
-  recordGatewayRequestOk,
-  recordTokenNotIssued,
-} from './requestMetric';
-import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {
-  fetchTurnstileToken,
-  turnstileErrorTags,
-  turnstileHeaders,
-} from './turnstile';
+import {AI_GATEWAY_URL, getModelString} from './shared';
+import {turnstileErrorTags} from './turnstile';
 
 export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
 
@@ -129,38 +122,21 @@ const generateTextThroughGateway = async <
         output: serializedOutput,
       };
 
-      // Serialized, not parallel: the access token response carries the
-      // Turnstile mode that decides whether a challenge is needed at all. The
-      // manager pre-fetches a token after every delivery, so only the first
-      // call of a session waits on a challenge here.
-      const access = await fetchAccessToken(aichatContext).catch(
-        (error: unknown) => {
-          recordTokenNotIssued();
-          throw error;
-        }
+      const response = await sendGatewayRequest(
+        aichatContext,
+        (accessToken, challengeToken) =>
+          HttpClient.post(
+            AI_GATEWAY_URL,
+            JSON.stringify({...payload, token: accessToken}),
+            false,
+            {
+              'Content-Type': 'application/json',
+              'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
+              ...challengeHeaders(challengeToken),
+              ...(phase && {'x-ai-gateway-phase': phase}),
+            }
+          )
       );
-      const {token, turnstileEnforcementMode} = access;
-      const turnstileToken = await fetchTurnstileToken(
-        turnstileEnforcementMode
-      );
-
-      const headers = {
-        'Content-Type': 'application/json',
-        'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
-        ...turnstileHeaders(turnstileToken),
-        ...(phase && {'x-ai-gateway-phase': phase}),
-      };
-
-      const response = await HttpClient.post(
-        AI_GATEWAY_URL,
-        JSON.stringify({...payload, token}),
-        false,
-        headers
-      ).catch(async (error: unknown) => {
-        await recordGatewayRequestError(access.signingKey, error);
-        throw error;
-      });
-      recordGatewayRequestOk(access.signingKey);
 
       const rawResponse = await response.json();
       const parseResult =

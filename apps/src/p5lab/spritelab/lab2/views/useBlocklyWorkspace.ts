@@ -17,6 +17,7 @@ import {
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
+import {OUTLINE_EVENT_GROUP, withoutOutlines} from '../addBlocks';
 import {withoutBlockTypes} from '../blockCatalog';
 import {lockBlocks, withoutLocks} from '../blockLocks';
 import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
@@ -43,6 +44,8 @@ interface UseBlocklyWorkspaceOptions {
   hiddenBlockTypes?: ReadonlySet<string>;
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
+  /** The blocks can be read and not changed, and there is no toolbox. */
+  readOnly?: boolean;
 }
 
 interface UseBlocklyWorkspaceResult {
@@ -60,13 +63,13 @@ interface UseBlocklyWorkspaceResult {
   /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
   refreshToolbox: (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => void;
   /** Load code into the workspace. With `lock`, every loaded block is made
-      undeletable except the stacks `isOwnStack` claims as the level's own
+      undeletable except the blocks `isOwn` claims as the level's own
       (blockLocks.ts). */
   loadCode: (
     source: WorkspaceSerialization,
     options?: {
       lock?: boolean;
-      isOwnStack?: (top: BlocklyCore.Block) => boolean;
+      isOwn?: (block: BlocklyCore.Block) => boolean;
     }
   ) => void;
   /**
@@ -95,6 +98,7 @@ export default function useBlocklyWorkspace({
   hiddenBlockTypes,
   sharedBlocks,
   theme,
+  readOnly,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
   const hiddenRef = useRef(hiddenBlockTypes);
@@ -141,7 +145,11 @@ export default function useBlocklyWorkspace({
     let toolbox: BlocklyCore.utils.toolbox.ToolboxDefinition | undefined;
     if (isToolboxMode || isStartMode) {
       toolbox = getCompleteToolboxDefinition(blocksByCategory, isToolboxMode);
-    } else if (toolboxDefinition && toolboxDefinition.contents?.length !== 0) {
+    } else if (
+      !readOnly &&
+      toolboxDefinition &&
+      toolboxDefinition.contents?.length !== 0
+    ) {
       toolbox = prepareToolbox(toolboxDefinition);
     }
 
@@ -164,6 +172,7 @@ export default function useBlocklyWorkspace({
       toolbox,
       theme: themeRef.current === 'Dark' ? cdoDark : cdoTheme,
       trashcan: true,
+      readOnly: !!readOnly,
       customSimpleDialog,
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
@@ -189,9 +198,12 @@ export default function useBlocklyWorkspace({
         }
         return;
       }
-      // The stack-room pass tidies positions; it is not an edit to save or
-      // run.
-      if (e.group === STACK_ROOM_EVENT_GROUP) {
+      // The stack-room pass tidies positions, and the outline pass draws
+      // hints that are not saved. Neither is an edit to save or run.
+      if (
+        e.group === STACK_ROOM_EVENT_GROUP ||
+        e.group === OUTLINE_EVENT_GROUP
+      ) {
         return;
       }
       // Toolbox editing: flag blocks that won't serialize into a category.
@@ -231,10 +243,10 @@ export default function useBlocklyWorkspace({
         workspaceRef.current
       ) as WorkspaceSerialization;
       // A levelbuilder editing the level authors its locks, so they are kept.
-      // For a student the locks come from the level, not from the saved
-      // project, so any saved ones are stripped.
+      // For a student the locks and the outlines come from the level, not
+      // from the saved project, so neither is saved.
       if (!isToolboxMode && !isStartMode) {
-        serialized = withoutLocks(serialized);
+        serialized = withoutOutlines(withoutLocks(serialized));
       }
       currentBlocksRef.current = serialized;
       onWorkspaceChangeRef.current(serialized);
@@ -270,7 +282,7 @@ export default function useBlocklyWorkspace({
       workspaceRef.current = null;
       currentBlocksRef.current = null;
     };
-  }, [enabled, sharedBlocks, toolboxDefinition, prepareToolbox]);
+  }, [enabled, sharedBlocks, toolboxDefinition, prepareToolbox, readOnly]);
 
   // Update workspace theme on display-theme change. Resolve through
   // getUserTheme rather than applying cdoDark/cdoTheme directly: a user
@@ -300,7 +312,7 @@ export default function useBlocklyWorkspace({
       source: WorkspaceSerialization,
       options?: {
         lock?: boolean;
-        isOwnStack?: (top: BlocklyCore.Block) => boolean;
+        isOwn?: (block: BlocklyCore.Block) => boolean;
       }
     ) => {
       const workspace = workspaceRef.current;
@@ -311,7 +323,7 @@ export default function useBlocklyWorkspace({
       try {
         loadBlocksToWorkspace(workspace, JSON.stringify(source));
         if (options?.lock) {
-          lockBlocks(workspace, options.isOwnStack);
+          lockBlocks(workspace, options.isOwn);
         }
         // Update ref here (instead of in change listener) since callers may read this synchronously.
         currentBlocksRef.current = source;

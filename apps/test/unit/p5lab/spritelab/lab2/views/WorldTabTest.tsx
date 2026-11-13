@@ -103,22 +103,6 @@ describe('WorldTab palette', () => {
     );
   });
 
-  it('offers a New square above the palette only when asked to', () => {
-    const onNewPicture = jest.fn();
-    const {unmount} = renderTab({onNewPicture});
-    const newSquare = screen.getByRole('button', {name: 'New'});
-    expect(
-      screen
-        .getByRole('radiogroup', {name: 'Items to place'})
-        .contains(newSquare)
-    ).toBe(false);
-    fireEvent.click(newSquare);
-    expect(onNewPicture).toHaveBeenCalled();
-    unmount();
-    renderTab();
-    expect(screen.queryByRole('button', {name: 'New'})).toBeNull();
-  });
-
   it('drops a dragged item onto the cell under the pointer', () => {
     const {onPaintCell, onSelect} = renderTab();
     const stone = screen.getByRole('radio', {name: /Stone, block/});
@@ -259,6 +243,68 @@ describe('WorldTab palette', () => {
       list.orderedKeys.pop();
       delete list.propsByKey.k3;
     }
+  });
+
+  it('keeps the last copy of a kept image until another copy is placed', () => {
+    const hero = {image: 'Hero', kind: 'sprite' as const};
+    const stone = {image: 'Stone', kind: 'block' as const};
+    const kept = new Map([['Hero', 'hero']]);
+    const {onPaintCell, unmount} = renderTab({
+      kept,
+      world: {grid: [[hero, stone]]},
+      selected: 'erase',
+    });
+    const [heroCell, stoneCell] = screen.getAllByRole('gridcell');
+    expect(heroCell.textContent).toContain('the last one, stays');
+    fireEvent.pointerDown(heroCell, {pointerId: 1});
+    fireEvent.keyDown(heroCell, {key: 'Delete'});
+    expect(onPaintCell).not.toHaveBeenCalled();
+    expect(
+      screen.getByText('The last one stays. Place another one first.')
+    ).toBeTruthy();
+    // A block is not kept, so it can be erased as usual.
+    fireEvent.pointerDown(stoneCell, {pointerId: 1});
+    expect(onPaintCell).toHaveBeenCalledWith(0, 1, null);
+    unmount();
+
+    const second = renderTab({
+      kept,
+      world: {grid: [[hero, hero]]},
+      selected: 'erase',
+    });
+    const firstCopy = screen.getAllByRole('gridcell')[0];
+    expect(firstCopy.textContent).not.toContain('stays');
+    fireEvent.pointerDown(firstCopy, {pointerId: 1});
+    expect(second.onPaintCell).toHaveBeenCalledWith(0, 0, null);
+  });
+
+  it('does not let another image be painted over the last copy', () => {
+    const hero = {image: 'Hero', kind: 'sprite' as const};
+    const stone = {image: 'Stone', kind: 'block' as const};
+    const {onPaintCell} = renderTab({
+      kept: new Map([['Hero', 'hero']]),
+      world: {grid: [[hero]]},
+      selected: stone,
+    });
+    fireEvent.pointerDown(screen.getAllByRole('gridcell')[0], {pointerId: 1});
+    expect(onPaintCell).not.toHaveBeenCalled();
+  });
+
+  it('starts no stroke from a press the last copy refused', () => {
+    // Hero is chosen, and its only copy is pressed and dragged from. A
+    // second click on a placed item starts an erasing stroke, so without
+    // this the drag would erase the stone beside it.
+    const hero = {image: 'Hero', kind: 'sprite' as const};
+    const stone = {image: 'Stone', kind: 'block' as const};
+    const {onPaintCell} = renderTab({
+      kept: new Map([['Hero', 'hero']]),
+      world: {grid: [[hero, stone]]},
+      selected: hero,
+    });
+    const [heroCell, stoneCell] = screen.getAllByRole('gridcell');
+    fireEvent.pointerDown(heroCell, {pointerId: 1, button: 0, buttons: 1});
+    fireEvent.pointerEnter(stoneCell, {pointerId: 1, buttons: 1});
+    expect(onPaintCell).not.toHaveBeenCalled();
   });
 
   it('keeps a cell whose kind the palette cannot place', () => {

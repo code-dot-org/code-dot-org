@@ -1,0 +1,65 @@
+name 'pl-aif-y2-u2-l2-handling-uncertainty'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Probability & Simulation
+
+## What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Warm-up:</strong> students rank three events by likelihood, before any formal definition of probability</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Calculating Probabilities:</strong> students work through the Pizza Party Activity Guide, calculating whether 42 ordered slices will be enough</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Simulating a Party (Levels 1-4):</strong> students write Python using the random module to simulate the same pizza problem many times over, then complete a Check for Understanding</div>
+  </div>
+</div>
+
+<hr>
+
+## Watch for: Miscounting "Enough"
+
+The Pizza Party activity has a specific, documented mistake.
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Counts Only Exact Matches</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Only counts rows where slices needed exactly equals slices ordered.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Counts "Enough or More"</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Counts every row where slices needed is less than or equal to slices ordered, leftovers are fine.</div>
+  </div>
+</div>
+
+## Watch for: Three Coding Mistakes in Simulating a Party
+
+Once students move from calculating probability by hand to simulating it in Python, three specific sticking points show up:
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Language to borrow:</strong></div>
+  <div style="font-size: 12px; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">Forgetting to import random</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "You're calling a function from the random module, did you import it first?"</div>
+
+  <div style="font-size: 12px; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">Unsure how to check success</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "A party succeeds as long as slices needed doesn't exceed the 42 ordered. How would you compare those two numbers?"</div>
+
+  <div style="font-size: 12px; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">Confused what goes inside the loop</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Should this happen once for the whole program, once per person, or once per simulated party? That answer tells you where it belongs."</div>
+</div>
+
+## Assessment: Reasoning About Uncertain Events
+
+Level 4's Check for Understanding asks students how probability and simulation help with decision-making, the real formative assessment for this lesson.
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;"><strong>&#8505; Strong answers:</strong> simulation can predict how uncertain events might play out, probability measures how likely something is to succeed, and decisions can be made that increase the probability of a good outcome. If students are stuck, ask how they'd use the simulation itself to decide how much pizza to order.</div>
+</div>
+MARKDOWN

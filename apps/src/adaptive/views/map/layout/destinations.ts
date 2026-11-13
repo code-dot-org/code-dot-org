@@ -7,14 +7,15 @@ import {depthRows, edgesOf} from './graph';
 import {DestinationGroup, MapLayout, NodePosition} from './types';
 
 const TAU = 2 * Math.PI;
-// A cell holds a circle with two lines of title below it.
-const CELL_WIDTH = 120;
-const CELL_HEIGHT = 110;
+// A cell holds a circle with two lines of title below it, and air around
+// them so the map fills its space.
+const CELL_WIDTH = 150;
+const CELL_HEIGHT = 200;
 // Around the grid: above for the group boxes and their titles, below for a
 // title under the last row, beside for a member's title next to it.
-const TOP_MARGIN = 136;
-const BOTTOM_MARGIN = 84;
-const SIDE_MARGIN = 180;
+const TOP_MARGIN = 150;
+const BOTTOM_MARGIN = 100;
+const SIDE_MARGIN = 190;
 
 type Cell = {col: number; row: number};
 const cellKey = (c: Cell) => `${c.col},${c.row}`;
@@ -179,9 +180,9 @@ function destinationGroups(checkpoints: Checkpoint[]): DestinationGroup[] {
   const groups: DestinationGroup[] = [];
   for (const c of checkpoints) {
     if (!c.destination) continue;
-    const group = groups.find(g => g.title === c.destination);
+    const group = groups.find(g => g.key === c.destination);
     if (group) group.ids.push(c.id);
-    else groups.push({title: c.destination, ids: [c.id]});
+    else groups.push({key: c.destination, ids: [c.id]});
   }
   return groups;
 }

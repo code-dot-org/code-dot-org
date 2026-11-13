@@ -105,7 +105,7 @@ const TraceStepper = ({step, stepCount, onReplay}: TraceStepperProps) => {
       <div role="group" aria-label="Steps" className={styles.controls}>
         <IconButton
           variant="outlined"
-          color="secondary"
+          color="tertiary"
           size="extraSmall"
           aria-label="Previous step"
           aria-disabled={atStart}
@@ -114,20 +114,9 @@ const TraceStepper = ({step, stepCount, onReplay}: TraceStepperProps) => {
         >
           <FontAwesomeV6Icon iconName="chevron-left" aria-hidden="true" />
         </IconButton>
-        <span aria-hidden="true" className={styles.dots}>
-          {Array.from({length: stepCount}, (_, index) => (
-            <span
-              key={index}
-              className={classNames(styles.dot, {
-                [styles.reachedDot]: index < step,
-                [styles.currentDot]: index === step,
-              })}
-            />
-          ))}
-        </span>
         <IconButton
           variant="outlined"
-          color="secondary"
+          color="tertiary"
           size="extraSmall"
           aria-label="Next step"
           aria-disabled={atEnd}

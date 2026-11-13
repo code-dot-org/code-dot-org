@@ -933,6 +933,37 @@ class LessonTest < ActiveSupport::TestCase
     assert_nil classic.get_background_for_user(@student)
   end
 
+  test 'get_background_for_user returns user preference for an AI Lab in Lab2 lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, background: 'dark', script: script)
+    level = create(:ailab, uses_lab2: true)
+    create(:script_level, lesson: lesson, levels: [level], script: script)
+    assert_equal 'light', lesson.get_background_for_user(@student)
+  end
+
+  test 'get_background_for_user returns default for legacy AI Lab lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, background: 'dark', script: script)
+    create(:script_level, lesson: lesson, levels: [create(:ailab)], script: script)
+    assert_equal 'dark', lesson.get_background_for_user(@student)
+    no_background = create(:lesson, script: script)
+    create(:script_level, lesson: no_background, levels: [create(:ailab)], script: script)
+    assert_nil no_background.get_background_for_user(@student)
+  end
+
+  test 'get_background_for_user falls back to the lesson background, then dark, for an AI Lab in Lab2 lesson' do
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, background: 'light', script: script)
+    create(:script_level, lesson: lesson, levels: [create(:ailab, uses_lab2: true)], script: script)
+    assert_equal 'light', lesson.get_background_for_user(@student)
+    no_background = create(:lesson, script: script)
+    create(:script_level, lesson: no_background, levels: [create(:ailab, uses_lab2: true)], script: script)
+    assert_equal 'dark', no_background.get_background_for_user(@student)
+    assert_equal 'dark', no_background.get_background_for_user(nil)
+  end
+
   test 'get_background_for_user returns default for music lesson' do
     UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
     script = create(:script, :in_single_unit_course)
@@ -1052,14 +1083,18 @@ class LessonTest < ActiveSupport::TestCase
       create(:resource, name: 'resource2', course_version: @original_course_version, lessons: [@original_lesson])
       create(:vocabulary, word: 'word one', course_version: @original_course_version, lessons: [@original_lesson])
       create(:vocabulary, word: 'word two', course_version: @original_course_version, lessons: [@original_lesson])
-      create(:objective, lesson: @original_lesson, description: 'objective 1')
+      objective1 = create(:objective, lesson: @original_lesson, description: 'objective 1')
       create(:objective, lesson: @original_lesson, description: 'objective 2')
+      objective1.script_levels = [@original_lesson.script_levels.last]
       @original_lesson.standards = [create(:standard)]
       @original_lesson.opportunity_standards = [create(:standard)]
       @original_lesson.programming_expressions = [create(:programming_expression)]
 
       @destination_script.expects(:write_script_json).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
+      copied_objective1 = copied_lesson.objectives.find {|o| o.description == 'objective 1'}
+      assert_equal [copied_lesson.script_levels.last], copied_objective1.script_levels
+      assert_empty copied_lesson.objectives.find {|o| o.description == 'objective 2'}.script_levels
       assert_equal @destination_script, copied_lesson.script
       assert_equal 2, copied_lesson.script_levels.length
       assert_equal [level1, level2], copied_lesson.script_levels.map(&:level)

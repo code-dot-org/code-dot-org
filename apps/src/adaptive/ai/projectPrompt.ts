@@ -7,14 +7,14 @@ import {z} from 'zod';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 
 import {CheckpointPlan} from '../project/plan';
-import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
+import {Checkpoint, LevelStep, Pathway} from '../types';
 
 import {labEnvironment} from './labEnvironments';
 
 /**
  * Used by Langfuse traces; change when a meaningful update is made.
  */
-export const PROJECT_PROMPT_VERSION = '2026-10-29';
+export const PROJECT_PROMPT_VERSION = '2026-11-09';
 
 export const projectOutputSchema = z.object({
   /** The project's name, a few words. */
@@ -35,8 +35,6 @@ export interface ProjectPromptInput {
   step: LevelStep;
   /** The checkpoint's plan: the answers, and the sentence they fill once complete. */
   plan: CheckpointPlan;
-  /** What the student has already called the project, if anything. */
-  project: PathwayProjectInfo;
   /** The template's editable files, the only ones the model may rewrite. */
   files: ProjectFile[];
 }
@@ -46,17 +44,9 @@ export function buildProjectPrompt({
   checkpoint,
   step,
   plan,
-  project,
   files,
 }: ProjectPromptInput): string {
   const environment = labEnvironment(pathway);
-  const named = project.name
-    ? `The student has already named the project "${project.name}".${
-        project.description
-          ? ` They describe it as: ${project.description}`
-          : ''
-      }`
-    : '';
   return [
     "You build the first version of a student's project in a project-based learning pathway. The student has said what they want to make; turn that into a working starting point they will keep building on, by rewriting the template files below.",
     environment ? `How the student works in this lab:\n${environment}` : '',
@@ -72,7 +62,6 @@ export function buildProjectPrompt({
         ({question, answer}) => `Q: ${question}\nA: ${answer}`
       ),
     ].join('\n\n'),
-    named,
     [
       'TEMPLATE FILES. These are the only files, and the only ones that may be rewritten:',
       ...files.map(
@@ -83,6 +72,7 @@ export function buildProjectPrompt({
       'RULES',
       '',
       '- Return the full contents of every file you change, under its exact filename. Do not add files; a file you leave out stays as it is.',
+      '- Format each file the way the template is: one element, rule or statement per line, indented two spaces. A student reads and edits this code, so never put a whole file on one line.',
       "- Keep the template's structure, ids and classes where they still fit, so later instructions about the template's parts still apply.",
       '- Stay close to the idea the student described: their topic, words and names. Where they left the look or content open, make a reasonable choice that fits the topic, and label any placeholder text plainly.',
       '- Keep it simple. This is a first draft the student will change, not a finished site.',

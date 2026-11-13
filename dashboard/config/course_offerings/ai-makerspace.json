@@ -1,0 +1,23 @@
+{
+  "key": "ai-makerspace",
+  "display_name": "AI Makerspace",
+  "is_featured": true,
+  "assignable": true,
+  "curriculum_type": "Hour of Code",
+  "marketing_initiative": "HOAI",
+  "grade_levels": "9,10,11,12",
+  "header": "favorites",
+  "image": "https://images.code.org/28ec4a1dc71e6c197ae8683629bef1a3-AI Makerspace Curriculum Card FINAL.png",
+  "cs_topic": "artificial_intelligence,web_design",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "Students build a website in Web Lab about something they care about, with AI as a co-creator. Student pathways are unique based on a quick Skill Check that finds their starting point, then they choose which skills to learn, practice and apply next.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
+}

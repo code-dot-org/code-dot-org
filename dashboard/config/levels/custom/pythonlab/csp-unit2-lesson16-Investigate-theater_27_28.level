@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Investigate & Tinker\r\n\r\n**Do This:** \r\n\r\n1. Run this program, then tinker with it: \r\n   * change the pause duration\r\n   * then change the starting value of `x`\r\n2. Discuss with your partner: what does each change affect?",
+    "long_instructions": "# Investigate & Modify\r\n\r\n**Do This:** \r\n\r\n1. Run this program, then tinker with it: \r\n   * change the pause duration\r\n   * then change the starting value of `x`\r\n2. Discuss with your partner: what does each change affect?",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -22,9 +22,13 @@
     },
     "ai_tutor_prompt_settings": {
       "answerTypes": [
-
+        "hint",
+        "explainCode",
+        "example"
       ],
       "answerTypeCustomizations": {
+        "buildJSON": "",
+        "buildPython": ""
       }
     },
     "start_sources": {
@@ -44,6 +48,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-02 20:08:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:08:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-02 20:08:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-02 20:08:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 22:33:26 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 17:46:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

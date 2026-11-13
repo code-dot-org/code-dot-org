@@ -29735,6 +29735,17 @@ en:
             This unit introduces students to problems in the domain of natural language processing, inviting them to explore strategies computers can use to understand and generate natural language.
 
             Students consider the problem of natural language understanding and the challenge of building computer systems that can understand the complexity and the ambiguity of natural language. They explore practical applications of natural language processing from spelling and grammar checkers to search engines to AI chatbots. As students develop comfort with analyzing text in Python, they are also introduced to machine learning techniques for working with language.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Describe the challenges associated with understanding natural language.
+            - Identify applications of natural language processing in software.
+            - Use string manipulation to process text.
+            - Write Python programs to analyze text.
+            - Use machine learning techniques with text as training data.
+            - Interpret the results of text analyses and explain how those results can be useful.
+            - Evaluate the strengths and limits of natural language processing systems.
+            - Reflect on how bias can be introduced into natural language models.
+            :::
           student_description: This unit introduces you to problems in the domain of natural language processing, inviting you to explore strategies computers can use to understand and generate natural language.
         aif-year2-semester1-unit6:
           lessons: {}
@@ -30533,6 +30544,20 @@ en:
               name: 'Lesson 16: While Loops Day 2'
             lesson-17:
               name: 'Lesson 17: While Loops Day 3'
+            lesson-18:
+              name: Lesson 13 Nested Conditionals - Day 1
+            lesson-19:
+              name: 'Lesson 20: For Loops Day 1'
+            lesson-20:
+              name: 'Lesson 21: For Loops Day 2'
+            lesson-21:
+              name: 'Lesson 22: For Loops Day 3'
+            lesson-22:
+              name: 'Lesson 23: Comparing Algorithms'
+            lesson-23:
+              name: 'Lesson 25: Debugging'
+            lesson-24:
+              name: 'Lesson 24: Comparing Algorithms Day 2 (Make)'
           lesson_groups: {}
           name: csp-unit2-dev-27-28
           title: Unit 2 - Building Solutions Using Selection and Iteration
@@ -31258,3 +31283,26 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ai-makerspace1-2026:
+          lessons:
+            lesson-1:
+              name: Hour of AI
+          lesson_groups: {}
+          name: ai-makerspace1-2026
+          title: AI Makerspace
+          description_audience: ''
+          description_short: Learn to make a website with AI in this adaptive Hour of AI tutorial.
+          description: |-
+            In AI Makerspace, students build a website in Web Lab based on their own interests, with AI as a co-creator. They learn to direct AI using the language of web development, check the changes AI makes, and revise their prompts until the site does what they want. A quick Skill Check finds each student’s starting point, then students choose which skill to work on next, so expect your class to be working on different skills at the same time.
+
+            Note: This tutorial uses AI features that require verified teacher permissions. See [this support article](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher) for more information on how to become a verified teacher.
+          student_description: Ready to build a website about something you’re interested in? In AI Makerspace, you’ll create it in Web Lab with AI as your co-creator, choosing which skills to learn as you go, like describing your design in real web terms or checking whether AI’s fix actually worked. You’ll finish with a site that’s all yours to share.
+        quest-builder-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: quest-builder-2026
+          title: Quest Builder
+          description_audience: ''
+          description_short: Create a quest or build a game with this new Hour of AI tutorial, one part at a time.
+          description: In this Hour of AI lesson, students create their own quest, a game with a goal, one part at a time. They can use AI to make the art, judging each image against their own vision, and get a glimpse into how AI makes images. Students will use block-based code to decide what happens when the player reaches an object or when the characters meet, practicing decomposition and event-based thinking. Because the image generation is a simulation, students can explore safely.
+          student_description: Ready to build your own quest? In Quest Builder, you’ll make a game with a hero, treasure, and a world you design, then use code to decide what happens when the player reaches an important object or when the characters meet. Tell AI what to make, check that each image fits your idea, or draw your own. Then play the quest you built!

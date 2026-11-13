@@ -15,14 +15,26 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template",
+    "lock_earlier_blocks": true,
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "extraTabs": [
+        "Images"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "imageKinds": [
+        "sprite",
+        "block"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",
@@ -114,7 +126,7 @@
       ]
     },
     "objectives": {
-      "title": "**Collected?**",
+      "title": "**Touch event**",
       "items": [
         {
           "text": "Choose a block to drag into the dotted outline under **when touches**.",
@@ -130,7 +142,7 @@
           }
         },
         {
-          "text": "Click Play, then run and jump to your object.",
+          "text": "Select **Run**, then run and jump to your object.",
           "check": {
             "kind": "reach",
             "role": "treasure"
@@ -138,8 +150,8 @@
         }
       ]
     },
-    "long_instructions": "# Collected?\r\nWhen your player **touches** your object, something can happen. \r\n\r\nThis is called an **event**.",
-    "header_label": "Collected?",
+    "long_instructions": "# Touch event\r\nWhen your player **touches** your object, something can happen. \r\n\r\nThis is called an **event**.",
+    "header_label": "Touch event",
     "preload_asset_list": null,
     "encrypted_examples": [
 

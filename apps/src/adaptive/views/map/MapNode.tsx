@@ -2,14 +2,15 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React from 'react';
 
-import {CheckpointStatus, STATUS_LABELS} from '../../progress';
+import {CheckpointStatus, STATUS_LABELS} from '../../progress/model';
 import {Checkpoint} from '../../types';
+import PathwayIcon from '../components/PathwayIcon';
 
 import {NodePosition} from './layout/types';
 
 import styles from './mapNode.module.scss';
 
-// Shown in the circle for a checkpoint with no skill icon.
+// Shown in the circle for a checkpoint with no icon of its own.
 const STATUS_ICONS: {[status in CheckpointStatus]: string} = {
   locked: 'lock',
   available: 'play',
@@ -24,6 +25,8 @@ interface MapNodeProps {
   status: CheckpointStatus;
   /** The skill's icon in the circle; the status icon when absent. */
   icon?: string;
+  /** Share of the steps complete, 0 to 1, drawn as the in-progress ring. */
+  share?: number;
   /** Checkpoint the map is zoomed onto, if any. */
   focusId?: string;
   /** How far the node's top sits above the circle's center. */
@@ -33,7 +36,7 @@ interface MapNodeProps {
   above?: React.ReactNode;
   /** Rendered after the circle. */
   children?: React.ReactNode;
-  onSelect: (id: string) => void;
+  onSelect?: (id: string) => void;
   tourId?: string;
 }
 
@@ -43,6 +46,7 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
   position,
   status,
   icon,
+  share = 0,
   focusId,
   circleTop,
   width,
@@ -50,35 +54,72 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
   children,
   onSelect,
   tourId,
-}) => (
-  <div
-    className={classNames(
-      styles.node,
-      styles[status],
-      focusId && focusId !== checkpoint.id && styles.dimmed,
-      focusId === checkpoint.id && styles.focused
-    )}
-    style={{left: position.x, top: position.y - circleTop, width}}
-  >
-    {above}
-    <button
-      type="button"
-      id={tourId}
-      className={styles.circle}
-      data-checkpoint-id={checkpoint.id}
-      onClick={() => onSelect(checkpoint.id)}
-      aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
-      aria-pressed={focusId === checkpoint.id}
-    >
-      <FontAwesomeV6Icon iconName={icon ?? STATUS_ICONS[status]} />
-      {icon && status === 'locked' && (
+}) => {
+  // A badge in the circle's corner: the lock on a locked circle that shows
+  // its own icon, the mark of a complete one, the bulb of one skipped on
+  // evidence. The bulb stands in until the kit has lightbulb-check.
+  const badge =
+    status === 'complete'
+      ? 'check'
+      : status === 'skipped'
+      ? 'lightbulb'
+      : icon && status === 'locked'
+      ? 'lock'
+      : undefined;
+  const inner = (
+    <>
+      <PathwayIcon iconName={icon ?? STATUS_ICONS[status]} />
+      {badge && (
         <span className={styles.badge} aria-hidden="true">
-          <FontAwesomeV6Icon iconName="lock" />
+          <FontAwesomeV6Icon iconName={badge} />
         </span>
       )}
-    </button>
-    {children}
-  </div>
-);
+    </>
+  );
+  return (
+    <div
+      className={classNames(
+        styles.node,
+        styles[status],
+        focusId && focusId !== checkpoint.id && styles.dimmed,
+        focusId === checkpoint.id && styles.focused
+      )}
+      style={
+        {
+          left: position.x,
+          top: position.y - circleTop,
+          width,
+          '--share': share,
+        } as React.CSSProperties
+      }
+    >
+      {above}
+      {onSelect ? (
+        <button
+          type="button"
+          id={tourId}
+          className={styles.circle}
+          data-checkpoint-id={checkpoint.id}
+          onClick={() => onSelect(checkpoint.id)}
+          aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
+          aria-pressed={focusId === checkpoint.id}
+        >
+          {inner}
+        </button>
+      ) : (
+        <div
+          id={tourId}
+          className={styles.circle}
+          data-checkpoint-id={checkpoint.id}
+          role="img"
+          aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
+        >
+          {inner}
+        </div>
+      )}
+      {children}
+    </div>
+  );
+};
 
 export default MapNode;

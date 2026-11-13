@@ -43,8 +43,8 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
     // (interop: 'default') assumes every external is a plain CJS module whose
     // `module.exports` is the default export. That holds for a
     // component-library subpath with a single runtime export (link's index.js
-    // is `module.exports = Link`) but not for one with several (divider's is a
-    // `__esModule` namespace with `Divider` and `default`), where a default
+    // is `module.exports = Link`) but not for one with several (an
+    // `__esModule` namespace with named exports and `default`), where a default
     // import would resolve to the namespace object rather than the component
     // -- React then throws "Element type is invalid ... but got: object".
     // 'auto' emits the `__esModule` check that handles both. Remove once the

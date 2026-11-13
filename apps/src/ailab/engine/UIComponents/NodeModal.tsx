@@ -1,4 +1,4 @@
-import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import Tabs from '@code-dot-org/component-library/tabs';
 import {Button, Typography} from '@mui/material';
 import React, {useId, useMemo, useState} from 'react';
@@ -47,7 +47,7 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
   };
 
   return (
-    <MuiCustomDialog
+    <CustomDialog
       aria-labelledby={titleId}
       closeLabel="Close node details"
       className={styles.dialog}
@@ -115,7 +115,7 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
           Back to Testing
         </Button>
       </div>
-    </MuiCustomDialog>
+    </CustomDialog>
   );
 };
 

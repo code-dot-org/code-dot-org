@@ -5,31 +5,25 @@
 
 import {
   Compressor,
-  Filter,
   FMSynth,
-  Gain,
   getContext,
   LFO,
   MembraneSynth,
   MetalSynth,
   MonoSynth,
-  NoiseSynth,
-  PluckSynth,
   start as startAudio,
 } from 'tone';
 
-// Pure tones first, brightening, then the instruments, then noise.
+// Pure tones first, brightening, then the instruments.
 export const WAVES = [
   'sine',
   'triangle',
   'square',
   'sawtooth',
   'double',
-  'pluck',
   'bell',
   'drum',
   'clang',
-  'noise',
 ] as const;
 export const PITCHES = ['low', 'middle', 'high'] as const;
 export const LENGTHS = ['short', 'medium', 'long'] as const;
@@ -47,8 +41,8 @@ export const PATTERNS = [
 
 export type Wave = (typeof WAVES)[number];
 /** Waves an instrument plays rather than an oscillator: a drum skin, a
-    bell, a struck cymbal, a plucked string. */
-const SYNTH_WAVES = ['drum', 'bell', 'clang', 'pluck'] as const;
+    bell, a struck cymbal. */
+const SYNTH_WAVES = ['drum', 'bell', 'clang'] as const;
 export type SynthWave = (typeof SYNTH_WAVES)[number];
 export type Pitch = (typeof PITCHES)[number];
 export type Length = (typeof LENGTHS)[number];
@@ -66,9 +60,8 @@ export interface Note {
   /** Seconds after the sound starts. */
   at: number;
   seconds: number;
-  /** Noise is white noise through a bandpass filter centered on hz; a
-      synth wave is an instrument pitched at hz. */
-  type: OscillatorType | 'noise' | SynthWave;
+  /** A synth wave is an instrument pitched at hz. */
+  type: OscillatorType | SynthWave;
   /** Peak gain, 0 to 1. */
   volume: number;
   /** The frequency reached as the note ends, for a slide. */
@@ -80,7 +73,7 @@ export interface Note {
       combined with slideTo: both drive the same frequency. */
   arpeggio?: readonly number[];
   /** Oscillators sounding the note, spread a few cents apart; 1 or
-      absent is one. Noise ignores it. The "double" wave is two. */
+      absent is one. The "double" wave is two. */
   unison?: number;
   /** Played at exactly its pitch, without the humanize nudge: a UI cue
       heard many times in a row must not wander. */
@@ -99,27 +92,17 @@ const VOLUME: Record<Wave, number> = {
   square: 0.115,
   sawtooth: 0.2,
   double: 0.39,
-  noise: 0.25,
   drum: 0.13,
   bell: 0.45,
   clang: 0.07,
-  pluck: 0.3,
 };
-// Loudness drifts with pitch on these waves (a bandpass passes more noise
-// the higher it sits; a plucked string dies sooner the shorter it is), so
-// their gain follows (middle hz / note hz) to this power.
+// Loudness drifts with pitch on these waves, so their gain follows
+// (middle hz / note hz) to this power.
 const TILT: Partial<Record<Wave, number>> = {
-  noise: 0.45,
-  pluck: -0.35,
   double: 0.25,
   clang: -0.33,
 };
-// Tone's noise comes out about a quarter as loud as its other instruments;
-// lifted at build so the volume table stays within 0 to 1.
-const NOISE_TRIM_DB = 12;
 const DOUBLE_VOICES = 2;
-// How narrow the band of noise is; higher rings closer to a pitch.
-const NOISE_Q = 1.5;
 // A major arpeggio, the steps of a run. A run up starts at the root, a run
 // down at the octave.
 const RUN_RATIOS = [1, 5 / 4, 3 / 2, 2];
@@ -160,12 +143,6 @@ const INSTRUMENTS_PER_TIMBRE = 4;
 // Tone wants each strike later than the instrument's last; same-frame
 // strikes land this far apart.
 const RESTRIKE_GAP_S = 0.001;
-// A plucked string: a burst of noise into a tuned delay. Its pitch cannot
-// bend, so a slide or wobble plays as a plain pluck and a chord strums
-// its notes together.
-const PLUCK_ATTACK_NOISE = 2;
-const PLUCK_DAMPENING_HZ = 4000;
-const PLUCK_RESONANCE = 0.985;
 
 /** The effect four strings name, or null when any is not an option. */
 export function asSoundEffect(
@@ -303,7 +280,7 @@ export const PRESETS = {
     pattern: 'wobble',
   }),
   boom: notesFor({
-    wave: 'noise',
+    wave: 'drum',
     pitch: 'low',
     length: 'long',
     pattern: 'slide down',
@@ -354,30 +331,20 @@ const FILTER_MIN_HZ = 200;
 interface Voice {
   /** Oscillators sounding, for the voice cap. */
   cost: number;
-  /** The pitch a slide or arpeggio drives: the instrument's frequency, or
-      a noise voice's bandpass center; none for a pluck, whose pitch is set
-      when the string is struck. */
-  frequency: MonoSynth['frequency'] | Filter['frequency'] | undefined;
+  /** The pitch a slide or arpeggio drives. */
+  frequency: MonoSynth['frequency'];
   /** The pitch's offset in cents, which a wobble sways. A signal fed into
       another signal takes it over, so the wobble rides here, where the
       resting value is zero, not on the frequency. */
-  detune: MonoSynth['detune'] | undefined;
+  detune: MonoSynth['detune'];
   /** Hangs up the voice once its sound has rung past the end. */
   end: (at: number) => void;
   /** Cuts the sound now. */
   cut: () => void;
 }
 
-type ToneWave = Exclude<Wave, 'noise' | SynthWave>;
+type ToneWave = Exclude<Wave, SynthWave>;
 type Instrument = MembraneSynth | FMSynth | MetalSynth;
-interface NoiseVoice {
-  synth: NoiseSynth;
-  band: Filter;
-}
-interface Pluck {
-  string: PluckSynth;
-  gain: Gain;
-}
 
 /** What lives as long as the audio context: the bus and the instruments.
     An offline render brings its own context, so these follow it. */
@@ -385,9 +352,7 @@ interface Rig {
   context: ReturnType<typeof getContext>;
   bus: Compressor;
   tones: Record<ToneWave, MonoSynth[]>;
-  noises: NoiseVoice[];
-  instruments: Record<Exclude<SynthWave, 'pluck'>, Instrument[]>;
-  plucks: Pluck[];
+  instruments: Record<SynthWave, Instrument[]>;
 }
 
 // ?quiet on the URL turns the sounds off.
@@ -421,9 +386,7 @@ function currentRig(): Rig {
         release: 0.15,
       }).toDestination(),
       tones: {sine: [], triangle: [], square: [], sawtooth: [], double: []},
-      noises: [],
       instruments: {drum: [], bell: [], clang: []},
-      plucks: [],
     };
   }
   return rig;
@@ -459,24 +422,7 @@ function buildTone(wave: ToneWave): MonoSynth {
   return synth;
 }
 
-/** White noise through a bandpass filter whose center frequency plays the
-    part an oscillator's frequency does. */
-function buildNoise(): NoiseVoice {
-  const synth = new NoiseSynth({
-    volume: NOISE_TRIM_DB,
-    noise: {type: 'white'},
-    envelope,
-  });
-  const band = new Filter({
-    type: 'bandpass',
-    frequency: BASE_HZ.middle,
-    Q: NOISE_Q,
-  });
-  synth.chain(band, outputBus());
-  return {synth, band};
-}
-
-function buildInstrument(type: Exclude<SynthWave, 'pluck'>): Instrument {
+function buildInstrument(type: SynthWave): Instrument {
   const instrument =
     type === 'drum'
       ? new MembraneSynth({
@@ -500,17 +446,6 @@ function buildInstrument(type: Exclude<SynthWave, 'pluck'>): Instrument {
         });
   instrument.connect(outputBus());
   return instrument;
-}
-
-function buildPluck(): Pluck {
-  const string = new PluckSynth({
-    attackNoise: PLUCK_ATTACK_NOISE,
-    dampening: PLUCK_DAMPENING_HZ,
-    resonance: PLUCK_RESONANCE,
-  });
-  const gain = new Gain(1);
-  string.chain(gain, outputBus());
-  return {string, gain};
 }
 
 /** The pool's longest-idle instrument, or a new one while the pool is
@@ -549,11 +484,7 @@ function toneWaveOf(note: Note): ToneWave {
   if (note.type === 'sawtooth' && (note.unison ?? 1) > 1) {
     return 'double';
   }
-  return note.type === 'custom' ||
-    note.type === 'noise' ||
-    isSynthWave(note.type)
-    ? 'sine'
-    : note.type;
+  return note.type === 'custom' || isSynthWave(note.type) ? 'sine' : note.type;
 }
 
 /** Hangs the voice up once its release has rung past the end. */
@@ -572,7 +503,7 @@ function endWobble(detune: object): void {
 /** The voice's frequency and detune, cleared of the last note's slide or
     wobble, which must not carry into this one. */
 function freshPitch(
-  frequency: MonoSynth['frequency'] | Filter['frequency'],
+  frequency: MonoSynth['frequency'],
   detune: MonoSynth['detune'],
   at: number
 ): void {
@@ -583,7 +514,7 @@ function freshPitch(
 
 /** Silences a synth now, a note it has not yet started included: Tone's
     release alone ignores an envelope still at zero. */
-function hush(synth: MonoSynth | NoiseSynth | Instrument): void {
+function hush(synth: MonoSynth | Instrument): void {
   const now = getContext().immediate();
   synth.envelope.cancel(now);
   synth.triggerRelease(now);
@@ -620,59 +551,10 @@ function strikeTone(
   return voice;
 }
 
-function strikeNoise(note: Note, hz: number, start: number): Voice {
-  const noise = takeTurn(currentRig().noises, buildNoise);
-  const {synth, band} = noise;
-  const at = strikeTime(noise, start);
-  synth.envelope.decay = note.seconds;
-  freshPitch(band.frequency, band.detune, at);
-  band.frequency.setValueAtTime(hz, at);
-  synth.triggerAttackRelease(note.seconds, at, note.volume);
-  const voice: Voice = {
-    cost: 1,
-    frequency: band.frequency,
-    detune: band.detune,
-    end: when => endAfterRelease(voice, when),
-    cut: () => {
-      hush(synth);
-      live.delete(voice);
-    },
-  };
-  return voice;
-}
-
-/** Strings plucked together: one for the note, or one per chord note. */
-function strikePluck(note: Note, hz: number, start: number): Voice {
-  const ratios = note.arpeggio ?? [1];
-  const strings = ratios.map(ratio => {
-    const pluck = takeTurn(currentRig().plucks, buildPluck);
-    const at = strikeTime(pluck, start);
-    pluck.string.release = note.seconds;
-    // Summing doubles the energy per doubling of strings.
-    pluck.gain.gain.setValueAtTime(note.volume / Math.sqrt(ratios.length), at);
-    pluck.string.triggerAttack(hz * ratio, at);
-    return pluck;
-  });
-  const voice: Voice = {
-    cost: strings.length,
-    frequency: undefined,
-    detune: undefined,
-    end: when => endAfterRelease(voice, when),
-    cut: () => {
-      const now = getContext().immediate();
-      strings.forEach(pluck =>
-        pluck.gain.gain.cancelScheduledValues(now).setValueAtTime(0, now)
-      );
-      live.delete(voice);
-    },
-  };
-  return voice;
-}
-
 /** A drum, bell or clang struck at the note's volume; its own envelope
     shapes the note. */
 function strikeInstrument(
-  type: Exclude<SynthWave, 'pluck'>,
+  type: SynthWave,
   note: Note,
   hz: number,
   start: number
@@ -701,16 +583,7 @@ function strikeInstrument(
 }
 
 function schedule(notes: Note[]): void {
-  const cost = notes.reduce(
-    (sum, note) =>
-      sum +
-      (note.type === 'noise'
-        ? 1
-        : note.type === 'pluck'
-        ? note.arpeggio?.length ?? 1
-        : note.unison ?? 1),
-    0
-  );
+  const cost = notes.reduce((sum, note) => sum + (note.unison ?? 1), 0);
   if (liveCost() + cost > MAX_LIVE_VOICES) {
     return;
   }
@@ -728,21 +601,16 @@ function schedule(notes: Note[]): void {
       (note.slideTo ?? 0) * nudge,
       hz * Math.max(0, ...(note.arpeggio ?? []))
     );
-    const voice =
-      note.type === 'noise'
-        ? strikeNoise(note, hz, start)
-        : note.type === 'pluck'
-        ? strikePluck(note, hz, start)
-        : isSynthWave(note.type)
-        ? strikeInstrument(note.type, note, hz, start)
-        : strikeTone(toneWaveOf(note), note, hz, top, start);
+    const voice = isSynthWave(note.type)
+      ? strikeInstrument(note.type, note, hz, start)
+      : strikeTone(toneWaveOf(note), note, hz, top, start);
     const {frequency, detune} = voice;
-    if (note.slideTo && frequency) {
+    if (note.slideTo) {
       frequency
         .setValueAtTime(hz, start)
         .exponentialRampToValueAtTime(note.slideTo * nudge, end);
     }
-    if (note.arpeggio?.length && frequency) {
+    if (note.arpeggio?.length) {
       const ratios = note.arpeggio;
       const step = 1 / ARPEGGIO_RATE_HZ;
       for (let i = 0; start + i * step < end; i++) {
@@ -752,7 +620,7 @@ function schedule(notes: Note[]): void {
         );
       }
     }
-    if (note.wobble && detune) {
+    if (note.wobble) {
       const lfo = new LFO({
         frequency: WOBBLE_RATE_HZ,
         min: -WOBBLE_DEPTH_CENTS,

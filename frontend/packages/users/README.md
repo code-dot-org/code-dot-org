@@ -7,7 +7,7 @@ profile, login, school, role, and account actions. Consumed by the Studio app
 Three tabs are implemented: **Account Details** (profile, login, parent/guardian
 email, account actions), **Educator Profile** (school information and educator
 role, educators only), and **Integrations** (linked accounts and LMS roster
-sync). The email opt-in lives in the Update email dialog, as in legacy.
+sync).
 
 Integrations is hidden from accounts that can't manage linked accounts
 (accounts not yet migrated to multiple logins, and accounts in a
@@ -73,6 +73,7 @@ persona:
 - `sso-student`: Google-only student
 - `minimal`: word/picture student with optional fields empty and edits locked
 - `teacher-no-school`: educator with no school and no role
+- `non-school-teacher`: educator who does not teach in a school setting
 - `multi-sso-teacher`: Google, Microsoft and ClassLink logins
 - `lti-teacher`: Canvas login beside a password
 - `lti-only-teacher`: Schoology is the only login

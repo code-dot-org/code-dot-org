@@ -274,6 +274,14 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, response["is_verified_instructor"]
   end
 
+  test 'current reports spritelab_ask_ai_refusal outside the pilot' do
+    sign_in(@user)
+
+    get :current
+
+    assert_equal 'not_in_pilot', JSON.parse(@response.body)['spritelab_ask_ai_refusal']
+  end
+
   test "a get request to get current returns empty grades_teaching when unset" do
     teacher = create(:teacher, grades_teaching: nil)
     sign_in(teacher)

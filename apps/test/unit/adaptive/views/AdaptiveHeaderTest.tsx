@@ -21,7 +21,7 @@ function renderHeader(
   const store = createStore(() => ({project: {projectUpdatedStatus: status}}));
   return render(
     <Provider store={store}>
-      <AdaptiveHeader title="Skill Tree: Build a website" {...props} />
+      <AdaptiveHeader title="Skill Map: Build a website" {...props} />
     </Provider>
   );
 }
@@ -32,13 +32,13 @@ describe('AdaptiveHeader', () => {
   it("draws into the page header's slot when there is one", () => {
     const slot = addSlot();
     const {container} = renderHeader();
-    expect(slot.textContent).toContain('Skill Tree: Build a website');
+    expect(slot.textContent).toContain('Skill Map: Build a website');
     expect(container.textContent).toBe('');
   });
 
   it('draws inline until the slot appears, then moves into it', async () => {
     const {container} = renderHeader();
-    expect(container.textContent).toContain('Skill Tree: Build a website');
+    expect(container.textContent).toContain('Skill Map: Build a website');
 
     let slot!: HTMLElement;
     // The observer reports in a microtask after the mutation.
@@ -46,23 +46,23 @@ describe('AdaptiveHeader', () => {
       slot = addSlot();
       await Promise.resolve();
     });
-    expect(slot.textContent).toContain('Skill Tree: Build a website');
+    expect(slot.textContent).toContain('Skill Map: Build a website');
     expect(container.textContent).toBe('');
   });
 
   it('offers only the buttons it is given handlers for', () => {
     renderHeader();
-    expect(screen.queryByRole('button', {name: /View skill tree/})).toBeNull();
+    expect(screen.queryByRole('button', {name: /View skill map/})).toBeNull();
     expect(screen.queryByRole('button', {name: /I'm finished!/})).toBeNull();
   });
 
   it('calls its handlers from its buttons', () => {
-    const onViewSkillTree = jest.fn();
+    const onViewSkillMap = jest.fn();
     const onFinish = jest.fn();
-    renderHeader({onViewSkillTree, onFinish});
+    renderHeader({onViewSkillMap, onFinish});
 
-    fireEvent.click(screen.getByRole('button', {name: /View skill tree/}));
-    expect(onViewSkillTree).toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', {name: /View skill map/}));
+    expect(onViewSkillMap).toHaveBeenCalled();
     fireEvent.click(screen.getByRole('button', {name: /I'm finished!/}));
     expect(onFinish).toHaveBeenCalled();
   });

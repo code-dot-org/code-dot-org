@@ -34,6 +34,76 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
   end
 
+  describe '#in_spritelab2_ai_pilot?' do
+    subject(:in_spritelab2_ai_pilot?) {user.in_spritelab2_ai_pilot?}
+
+    let(:pilot_teacher) do
+      create(:teacher).tap do |teacher|
+        create(:single_user_experiment, min_user_id: teacher.id, name: User::AiAccessible::SPRITELAB2_AI_PILOT)
+      end
+    end
+
+    it 'returns true for a levelbuilder' do
+      allow(user).to receive(:levelbuilder?).and_return(true)
+      _in_spritelab2_ai_pilot?.must_equal true
+    end
+
+    it 'returns true for a user in the pilot' do
+      create(:single_user_experiment, min_user_id: user.id, name: User::AiAccessible::SPRITELAB2_AI_PILOT)
+      _in_spritelab2_ai_pilot?.must_equal true
+    end
+
+    it "returns true for a student of a teacher in the pilot" do
+      allow(user).to receive(:teachers).and_return([create(:teacher), pilot_teacher])
+      _in_spritelab2_ai_pilot?.must_equal true
+    end
+
+    it 'returns false for a student whose teachers are not in the pilot' do
+      allow(user).to receive(:teachers).and_return([create(:teacher)])
+      _in_spritelab2_ai_pilot?.must_equal false
+    end
+  end
+
+  describe '#spritelab_ask_ai_refusal' do
+    subject(:spritelab_ask_ai_refusal) {user.spritelab_ask_ai_refusal}
+
+    before do
+      allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(true)
+      allow(user).to receive(:ai_chat_access_level).and_return(SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+    end
+
+    it 'returns nil for a pilot user with full AI access' do
+      _(spritelab_ask_ai_refusal).must_be_nil
+    end
+
+    it 'returns NOT_IN_PILOT outside the pilot, even with the kill switch off' do
+      allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(false)
+      allow(DCDO).to receive(:get).with('spritelab-lab2-ask-ai-enabled', true).and_return(false)
+      _(spritelab_ask_ai_refusal).must_equal SharedConstants::SPRITELAB_ASK_AI_REFUSALS[:NOT_IN_PILOT]
+    end
+
+    it 'returns OFF when the kill switch is off' do
+      allow(DCDO).to receive(:get).with('spritelab-lab2-ask-ai-enabled', true).and_return(false)
+      _(spritelab_ask_ai_refusal).must_equal SharedConstants::SPRITELAB_ASK_AI_REFUSALS[:OFF]
+    end
+
+    it 'returns NO_ACCESS for essential-only access' do
+      allow(user).to receive(:ai_chat_access_level).and_return(SharedConstants::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
+      _(spritelab_ask_ai_refusal).must_equal SharedConstants::SPRITELAB_ASK_AI_REFUSALS[:NO_ACCESS]
+    end
+
+    it 'returns REGION_BLOCKED when a provider is blocked' do
+      allow(user).to receive(:blocked_aichat_providers).and_return(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+      _(spritelab_ask_ai_refusal).must_equal SharedConstants::SPRITELAB_ASK_AI_REFUSALS[:REGION_BLOCKED]
+    end
+
+    it 'returns REGION_BLOCKED for a blocked provider even when the gateway falls back' do
+      allow(user).to receive(:blocked_aichat_providers).and_return(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+      allow(DCDO).to receive(:get).with('ai_gateway_fallback_is_enabled', false).and_return(true)
+      _(spritelab_ask_ai_refusal).must_equal SharedConstants::SPRITELAB_ASK_AI_REFUSALS[:REGION_BLOCKED]
+    end
+  end
+
   describe '#teacher_can_access_aichat?' do
     subject(:teacher_can_access_aichat?) {user.teacher_can_access_aichat?}
 
@@ -185,41 +255,41 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
   end
 
-  describe '#us_only_aichat_models_disabled?' do
-    subject(:us_only_aichat_models_disabled?) {user.us_only_aichat_models_disabled?}
+  describe '#blocked_aichat_providers' do
+    subject(:blocked_aichat_providers) {user.blocked_aichat_providers}
 
     context 'when a teacher is in a non-US school' do
-      it 'returns true even for a verified teacher' do
+      it 'blocks US only providers even for a verified teacher' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:verified_instructor?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _us_only_aichat_models_disabled?.must_equal true
+        _blocked_aichat_providers.must_equal SharedConstants::AI_CHAT_US_ONLY_PROVIDERS
       end
     end
 
     context 'when a teacher is in a US school' do
-      it 'returns false' do
+      it 'blocks nothing' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_us))
-        _us_only_aichat_models_disabled?.must_equal false
+        _blocked_aichat_providers.must_be_empty
       end
     end
 
     context 'when a teacher has no school_info but a non-US geolocation' do
-      it 'returns true' do
+      it 'blocks US only providers' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(nil)
         allow(user).to receive(:user_geos).and_return([build(:user_geo, :sydney)])
-        _us_only_aichat_models_disabled?.must_equal true
+        _blocked_aichat_providers.must_equal SharedConstants::AI_CHAT_US_ONLY_PROVIDERS
       end
     end
 
     context 'when a teacher has neither school_info nor geolocation' do
-      it 'returns false (location cannot be confirmed, so we do not block)' do
+      it 'blocks nothing (location cannot be confirmed, so we do not block)' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(nil)
         allow(user).to receive(:user_geos).and_return([])
-        _us_only_aichat_models_disabled?.must_equal false
+        _blocked_aichat_providers.must_be_empty
       end
     end
 
@@ -228,45 +298,45 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_without_country))
         allow(user).to receive(:user_geos).and_return([build(:user_geo, :seattle)])
-        _us_only_aichat_models_disabled?.must_equal false
+        _blocked_aichat_providers.must_be_empty
       end
     end
 
     context 'when all of a student\'s teachers are non-US' do
-      it 'returns true' do
+      it 'blocks US only providers' do
         non_us_teacher = create(:teacher)
         allow(non_us_teacher).to receive(:school_info).and_return(build(:school_info_non_us))
         allow(user).to receive(:teachers).and_return([non_us_teacher])
-        _us_only_aichat_models_disabled?.must_equal true
+        _blocked_aichat_providers.must_equal SharedConstants::AI_CHAT_US_ONLY_PROVIDERS
       end
     end
 
     context 'when a student has a mix of US and non-US teachers' do
-      it 'returns false' do
+      it 'blocks nothing' do
         non_us_teacher = create(:teacher)
         allow(non_us_teacher).to receive(:school_info).and_return(build(:school_info_non_us))
         us_teacher = qualified_teacher
         allow(us_teacher).to receive(:school_info).and_return(build(:school_info_us))
         allow(user).to receive(:teachers).and_return([non_us_teacher, us_teacher])
-        _us_only_aichat_models_disabled?.must_equal false
+        _blocked_aichat_providers.must_be_empty
       end
     end
 
     context 'when international usage is allowed via DCDO' do
-      it 'returns false for a non-US teacher' do
+      it 'blocks nothing for a non-US teacher' do
         allow(DCDO).to receive(:get).with("allow_international_usage_all_models", false).and_return(true)
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _us_only_aichat_models_disabled?.must_equal false
+        _blocked_aichat_providers.must_be_empty
       end
     end
 
     context 'when the user is a levelbuilder' do
-      it 'returns false regardless of location' do
+      it 'blocks nothing regardless of location' do
         allow(user).to receive(:levelbuilder?).and_return(true)
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _us_only_aichat_models_disabled?.must_equal false
+        _blocked_aichat_providers.must_be_empty
       end
     end
   end
@@ -276,10 +346,11 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     let(:image_model) {SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE]}
     let(:mistral_model) {SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL]}
     let(:openai_model) {SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}
+    let(:tutor) {SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]}
 
-    context 'when US only models are blocked' do
+    context 'when US only providers are blocked' do
       before do
-        allow(user).to receive(:us_only_aichat_models_disabled?).and_return(true)
+        allow(user).to receive(:blocked_aichat_providers).and_return(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
       end
 
       it 'blocks every US only model, including image generation' do
@@ -293,11 +364,36 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         _(user.can_use_aichat_model?(openai_model)).must_equal true
         _(user.can_use_aichat_model?(mistral_model)).must_equal true
       end
+
+      it 'blocks a US only model for a fallback client type while the gateway fallback is off' do
+        _(user.can_use_aichat_model?(us_only_model, client_type: tutor)).must_equal false
+      end
     end
 
-    context 'when US only models are not blocked' do
+    context 'when US only providers are blocked and the gateway fallback is on' do
       before do
-        allow(user).to receive(:us_only_aichat_models_disabled?).and_return(false)
+        allow(user).to receive(:blocked_aichat_providers).and_return(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+        allow(DCDO).to receive(:get).with('ai_gateway_fallback_is_enabled', false).and_return(true)
+      end
+
+      it 'allows a US only text model for adaptive and the tutor' do
+        _(user.can_use_aichat_model?(us_only_model, client_type: tutor)).must_equal true
+        _(user.can_use_aichat_model?(us_only_model, client_type: SharedConstants::AI_CHAT_CLIENT_TYPES[:ADAPTIVE])).must_equal true
+      end
+
+      it 'blocks an image model, which has no fallback' do
+        _(user.can_use_aichat_model?(image_model, client_type: tutor)).must_equal false
+      end
+
+      it 'blocks a US only model for other client types and without one' do
+        _(user.can_use_aichat_model?(us_only_model, client_type: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB])).must_equal false
+        _(user.can_use_aichat_model?(us_only_model)).must_equal false
+      end
+    end
+
+    context 'when nothing is blocked' do
+      before do
+        allow(user).to receive(:blocked_aichat_providers).and_return([])
       end
 
       it 'allows all models' do
@@ -314,6 +410,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     let(:theater_description) {SharedConstants::AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION]}
     let(:lesson_deep_dive) {SharedConstants::AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE]}
     let(:curriculum_generator) {SharedConstants::AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR]}
+    let(:spritelab_ask_ai) {SharedConstants::AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI]}
 
     before do
       allow(user).to receive(:has_aichat_access?).and_return(false)
@@ -368,6 +465,28 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       allow(user).to receive(:levelbuilder?).and_return(true)
       allow(user).to receive(:has_aichat_access?).and_return(true)
       _(user.can_access_aichat_chat_completion?(curriculum_generator, nil)).must_equal true
+    end
+
+    it 'returns true for SPRITELAB_ASK_AI in the pilot with access' do
+      allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(true)
+      allow(user).to receive(:ai_chat_access_level).and_return(Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+      allow(user).to receive(:has_aichat_access?).and_call_original
+      _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal true
+    end
+
+    it 'returns false for SPRITELAB_ASK_AI in the pilot with essential-only access on an essential level' do
+      allow(user).to receive(:in_spritelab2_ai_pilot?).and_return(true)
+      allow(user).to receive(:ai_chat_access_level).and_return(Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
+      allow(user).to receive(:has_aichat_access?).and_call_original
+      essential_level = create(:aichat)
+      _(user.has_aichat_access?(essential_level.id)).must_equal true
+      _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, essential_level.id)).must_equal false
+    end
+
+    # Sprite Lab 2's ambient client type is trusted; this one must not inherit that.
+    it 'returns false for SPRITELAB_ASK_AI outside the pilot on a trusted client' do
+      allow(user).to receive(:trust_chat_client?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(spritelab_ask_ai, nil)).must_equal false
     end
 
     it 'does not block CURRICULUM_GENERATOR when the AI_CHAT_LAB DCDO flag is set' do
@@ -459,6 +578,47 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       allow(user).to receive(:teachers).and_return([qualified_teacher])
       allow(user).to receive(:sections_as_student).and_return([enabled_section])
       _can_use_lesson_deep_dive?.must_equal false
+    end
+  end
+
+  describe '#can_use_lesson_deep_dive_challenges?' do
+    subject(:can_use_lesson_deep_dive_challenges?) {user.can_use_lesson_deep_dive_challenges?}
+
+    let(:challenge_section) {create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED], ai_challenge_enabled: true)}
+
+    before do
+      allow(user).to receive(:teachers).and_return([qualified_teacher])
+    end
+
+    it 'returns true for a verified teacher' do
+      allow(user).to receive(:teacher?).and_return(true)
+      allow(user).to receive(:verified_instructor?).and_return(true)
+      _can_use_lesson_deep_dive_challenges?.must_equal true
+    end
+
+    it 'returns true for a student in an enabled section with challenges on' do
+      allow(user).to receive(:sections_as_student).and_return([challenge_section])
+      _can_use_lesson_deep_dive_challenges?.must_equal true
+    end
+
+    it 'returns false for a student in an enabled section with challenges off' do
+      challenge_section.update!(ai_challenge_enabled: false)
+      allow(user).to receive(:sections_as_student).and_return([challenge_section])
+      _can_use_lesson_deep_dive_challenges?.must_equal false
+    end
+
+    it 'returns false when challenges are on only in an essential-only section' do
+      enabled_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+      challenge_section.update!(ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
+      allow(user).to receive(:sections_as_student).and_return([enabled_section, challenge_section])
+      _can_use_lesson_deep_dive_challenges?.must_equal false
+    end
+
+    it 'returns false when challenges are on only in a hidden section' do
+      enabled_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+      challenge_section.update!(hidden: true)
+      allow(user).to receive(:sections_as_student).and_return([enabled_section, challenge_section])
+      _can_use_lesson_deep_dive_challenges?.must_equal false
     end
   end
 end
