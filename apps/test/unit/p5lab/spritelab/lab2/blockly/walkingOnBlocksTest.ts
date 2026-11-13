@@ -100,6 +100,7 @@ function walk({
     'usePlatformBody',
     'platformGrounded',
     'platformSupportAhead',
+    'getWorldWidth',
     'randomNumber',
     `${WALKERS_HELPER_CODE}\nreturn ${behavior}();`
   )(
@@ -109,6 +110,8 @@ function walk({
     commands.usePlatformBody,
     commands.platformGrounded,
     commands.platformSupportAhead,
+    // One screen wide.
+    () => 400,
     commands.randomNumber
   );
   const seen: number[] = [];

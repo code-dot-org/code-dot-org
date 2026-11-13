@@ -5,6 +5,8 @@
 
 import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 
+import {ONE_SCREEN, WorldBounds} from './world';
+
 export const MIN_ZOOM = 1;
 export const MAX_ZOOM = 3;
 
@@ -17,6 +19,11 @@ const BACKGROUND_SCROLL_RATE = 0.5;
 
 // Fraction of the remaining distance covered per frame, and the gap under
 // which the zoom snaps to its target. ~0.3s to settle at 30fps.
+// A world larger than one screen draws its background this much larger for
+// each screen past the first, and pans it across that extra as the camera
+// crosses the world.
+const LARGER_WORLD_BACKGROUND_GROWTH = 0.25;
+
 const ZOOM_EASE = 0.25;
 const ZOOM_SNAP = 0.001;
 
@@ -46,14 +53,21 @@ export function backgroundZoom(zoom: number): number {
  * Where the camera looks: the target (the player), clamped so the view never
  * leaves the world. No target — or no room to scroll — centers the view.
  */
-export function cameraFocus(zoom: number, target: Point | null): Point {
+export function cameraFocus(
+  zoom: number,
+  target: Point | null,
+  world: WorldBounds = ONE_SCREEN
+): Point {
   const half = APP_WIDTH / (2 * zoom);
-  const clamp = (value: number) =>
-    Math.min(APP_WIDTH - half, Math.max(half, value));
+  const clamp = (value: number, min: number, max: number) =>
+    Math.min(max - half, Math.max(min + half, value));
   if (!target) {
     return {x: APP_WIDTH / 2, y: APP_WIDTH / 2};
   }
-  return {x: clamp(target.x), y: clamp(target.y)};
+  return {
+    x: clamp(target.x, world.left, world.right),
+    y: clamp(target.y, world.top, world.bottom),
+  };
 }
 
 /**
@@ -75,8 +89,12 @@ export function worldPoint(screen: Point, zoom: number, focus: Point): Point {
  */
 export function backgroundFrame(
   zoom: number,
-  focus: Point
+  focus: Point,
+  world: WorldBounds = ONE_SCREEN
 ): {x: number; y: number; size: number} {
+  if (world !== ONE_SCREEN) {
+    return largerWorldBackgroundFrame(zoom, focus, world);
+  }
   const scale = backgroundZoom(zoom);
   const half = APP_WIDTH / 2;
   const place = (coord: number) =>
@@ -85,5 +103,35 @@ export function backgroundFrame(
     x: place(focus.x),
     y: place(focus.y),
     size: APP_WIDTH * scale,
+  };
+}
+
+// The background for a world larger than one screen. The one picture is
+// drawn larger than the screen, and slides from one of its edges to the
+// other as the camera crosses the world, so it always covers the screen.
+function largerWorldBackgroundFrame(
+  zoom: number,
+  focus: Point,
+  world: WorldBounds
+): {x: number; y: number; size: number} {
+  const screens = Math.max(
+    (world.right - world.left) / APP_WIDTH,
+    (world.bottom - world.top) / APP_WIDTH
+  );
+  const size =
+    APP_WIDTH *
+    backgroundZoom(zoom) *
+    (1 + LARGER_WORLD_BACKGROUND_GROWTH * (screens - 1));
+  const half = APP_WIDTH / (2 * zoom);
+  // How far the camera is across the world, from 0 to 1; halfway where the
+  // world leaves it no room to move.
+  const across = (value: number, min: number, max: number) =>
+    max - half > min + half
+      ? Math.min(1, Math.max(0, (value - min - half) / (max - min - 2 * half)))
+      : 0.5;
+  return {
+    x: -(size - APP_WIDTH) * across(focus.x, world.left, world.right),
+    y: -(size - APP_WIDTH) * across(focus.y, world.top, world.bottom),
+    size,
   };
 }

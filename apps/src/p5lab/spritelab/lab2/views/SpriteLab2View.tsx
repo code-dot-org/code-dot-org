@@ -110,6 +110,7 @@ import {
 } from '../musicProjects';
 import {objectiveChecks, runtimeNeeds, WorkspaceSource} from '../objectives';
 import {packSources} from '../packedWorld';
+import {usesPlatformPhysics} from '../platformPhysics';
 import {
   countImagesByType,
   generatedOnLevel,
@@ -136,9 +137,11 @@ import {
   DEFAULT_SCENE_GRID_SIZE,
   paintWorldCell,
   resizeWorld,
+  resizeWorldScreens,
   sceneGridSize,
   World,
   WorldCell,
+  WorldScreens,
 } from '../world';
 import {useWorldStartPattern} from '../worldStartPattern';
 
@@ -1802,6 +1805,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ),
     [worldKeepsRoles, animationList]
   );
+  const handleResizeWorld = useCallback(
+    (screens: WorldScreens) =>
+      updateActiveWorld(world => resizeWorldScreens(world, screens)),
+    [updateActiveWorld]
+  );
+  // The camera that follows the player across a larger world is the
+  // platform game's, so only a platform level in free play offers the sizes.
+  const worldSizeOffered =
+    freeplayLevel && usesPlatformPhysics(levelProperties.helperLibraries);
+
   const handlePaintWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell | null) =>
       updateActiveWorld(world =>
@@ -2466,6 +2479,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 kept={worldKeeps}
                 selected={worldPaletteSelection}
                 onSelect={choosePaletteSelection}
+                onResize={worldSizeOffered ? handleResizeWorld : undefined}
               />
             </div>
           )}
