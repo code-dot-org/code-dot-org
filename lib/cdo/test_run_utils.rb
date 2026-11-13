@@ -38,6 +38,7 @@ module TestRunUtils
     # - All fixture files
     # - CSV data (only videos right now, may want to add more; cdo-languages.csv particularly)
     # - Game::GAMES_BY_INDEX
+    # - The standalone project levels, which seed:test loads
     #
     # Config:
     # - schema.rb
@@ -50,6 +51,7 @@ module TestRunUtils
         push("#{fixture_path}/schools.tsv").
         push(dashboard_dir('lib/tasks/seed.rake')).
         push(dashboard_dir('app/models/game.rb')).
+        concat(Dir[dashboard_dir('config/standalone_projects/**/*')]).
         select {|filename| File.file?(filename)}.
         sort.
         map {|filename| Digest::MD5.file(filename)}.
