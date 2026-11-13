@@ -3,6 +3,7 @@ import React from 'react';
 
 import {CongratsStep as CongratsStepContent} from '@cdo/apps/adaptive/types';
 import CongratsStep from '@cdo/apps/adaptive/views/steps/CongratsStep';
+import DCDO from '@cdo/apps/dcdo';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 jest.mock('@cdo/apps/util/copyToClipboard', () => ({
@@ -41,6 +42,7 @@ describe('CongratsStep', () => {
   afterEach(() => {
     mockState = {currentUser: {userType: 'student'}};
     mockShareUrl = 'https://studio.code.org/projects/weblab2/abc123';
+    DCDO.reset();
   });
 
   it("shows the card, copies the project's link, and ends on the certificate", () => {
@@ -49,17 +51,9 @@ describe('CongratsStep', () => {
     expect(
       screen.getByRole('heading', {name: 'You just built something with AI!'})
     ).toBeTruthy();
-    expect(
-      screen.getByText(/Join the Building with AI Challenge/)
-    ).toBeTruthy();
     expect(document.querySelector('img')?.getAttribute('src')).toBe(
       'https://images.code.org/logo.png'
     );
-    expect(
-      screen
-        .getByRole('link', {name: /Learn about the Building with AI Challenge/})
-        .getAttribute('target')
-    ).toBe('_blank');
 
     fireEvent.click(screen.getByRole('button', {name: /Copy link/}));
     expect(copyToClipboard).toHaveBeenCalledWith(
@@ -71,6 +65,33 @@ describe('CongratsStep', () => {
     expect(screen.queryByText('Elevate your Hour of AI')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Certificate'}));
     expect(onComplete).toHaveBeenCalledTimes(1);
+  });
+
+  it('leaves out the challenge when builders_challenge_url is unset', () => {
+    render(<CongratsStep step={step} onComplete={jest.fn()} />);
+    expect(
+      screen.getByText(/Keep exploring and building with AI/)
+    ).toBeTruthy();
+    expect(screen.queryByText(/Challenge/)).toBeNull();
+  });
+
+  it('ignores a builders_challenge_url that is not a string', () => {
+    DCDO.set('builders_challenge_url', true);
+    render(<CongratsStep step={step} onComplete={jest.fn()} />);
+    expect(screen.queryByText(/Challenge/)).toBeNull();
+  });
+
+  it('links to the challenge when builders_challenge_url is set', () => {
+    DCDO.set('builders_challenge_url', 'https://example.com/challenge');
+    render(<CongratsStep step={step} onComplete={jest.fn()} />);
+    expect(
+      screen.getByText(/Join the Building with AI Challenge/)
+    ).toBeTruthy();
+    const link = screen.getByRole('link', {
+      name: /Learn about the Building with AI Challenge/,
+    });
+    expect(link.getAttribute('href')).toBe('https://example.com/challenge');
+    expect(link.getAttribute('target')).toBe('_blank');
   });
 
   it('adds the professional learning cards for a teacher', () => {

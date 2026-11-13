@@ -7,6 +7,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import DCDO from '@cdo/apps/dcdo';
 import CopiedTooltip from '@cdo/apps/sharedComponents/CopiedTooltip';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -18,12 +19,13 @@ import {CongratsPanelProps} from '../CongratsStep';
 import styles from './congrats.module.scss';
 
 const HEADING = 'You just built something with AI!';
-const DESCRIPTION =
+const DESCRIPTION_WITH_CHALLENGE =
   'Want to keep going? Join the Building with AI Challenge, a national competition for high school teams. Build your project over eight weeks and submit by Feb 1, 2027.';
+const DESCRIPTION_WITHOUT_CHALLENGE =
+  'You created a website with your own vision and design using AI. Keep exploring and building with AI to create even more amazing projects!';
 const IMAGE_URL =
   'https://images.code.org/dc6583670c742dbc656e3e805cafee15-ai-makerspace-congrats-image.png';
-// Placeholders until marketing supplies the links.
-const CHALLENGE_URL = 'https://code.org';
+
 const ELEVATE_URL = 'https://code.org/hour-of-ai';
 const AI_FOUNDATIONS_URL =
   'https://code.org/en-US/curriculum/artificial-intelligence-foundations';
@@ -120,6 +122,10 @@ const Hoai2026Congrats: React.FunctionComponent<CongratsPanelProps> = ({
     headingRef.current?.focus();
   }, []);
 
+  const challengeUrl = DCDO.get('builders_challenge_url', undefined);
+  const showChallenge =
+    typeof challengeUrl === 'string' && challengeUrl.length > 0;
+
   return (
     <div className={styles.panel}>
       <div className={styles.hero}>
@@ -135,12 +141,18 @@ const Hoai2026Congrats: React.FunctionComponent<CongratsPanelProps> = ({
           >
             {HEADING}
           </MuiTypography>
-          <MuiTypography variant="body2">{DESCRIPTION}</MuiTypography>
+          <MuiTypography variant="body2">
+            {showChallenge
+              ? DESCRIPTION_WITH_CHALLENGE
+              : DESCRIPTION_WITHOUT_CHALLENGE}
+          </MuiTypography>
         </div>
         <img src={IMAGE_URL} alt="" className={styles.heroImage} />
-        <ExternalLinkButton href={CHALLENGE_URL} size="medium">
-          Learn about the Building with AI Challenge
-        </ExternalLinkButton>
+        {showChallenge && (
+          <ExternalLinkButton href={challengeUrl} size="medium">
+            Learn about the Building with AI Challenge
+          </ExternalLinkButton>
+        )}
       </div>
       <ul className={styles.cards}>
         {shareUrl && (

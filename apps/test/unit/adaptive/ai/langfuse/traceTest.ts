@@ -6,10 +6,16 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {post: jest.fn()},
 }));
 const mockLogError = jest.fn();
+const mockIncrementCounter = jest.fn();
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {
-    getInstance: () => ({getMetricsReporter: () => ({logError: mockLogError})}),
+    getInstance: () => ({
+      getMetricsReporter: () => ({
+        logError: mockLogError,
+        incrementCounter: mockIncrementCounter,
+      }),
+    }),
   },
 }));
 
@@ -81,16 +87,32 @@ describe('startTrace', () => {
     expect(postedBody().errorMessage).toHaveLength(1_000);
   });
 
-  it('reports a failed post without throwing', async () => {
-    mockPost.mockRejectedValue(new Error('503'));
-
-    expect(() => startTrace(start).end({outcome: 'error'})).not.toThrow();
+  it('counts a successful post', async () => {
+    startTrace(start).end({outcome: 'success'});
     await flush();
 
+    expect(mockIncrementCounter).toHaveBeenCalledWith('Adaptive.TracePost', [
+      {name: 'Outcome', value: 'ok'},
+    ]);
+  });
+
+  it('counts and reports a failed post, with its status, without throwing', async () => {
+    mockPost.mockRejectedValue(
+      Object.assign(new Error('503'), {response: {status: 503}})
+    );
+
+    const trace = startTrace(start);
+    expect(() => trace.end({outcome: 'error'})).not.toThrow();
+    await flush();
+
+    expect(mockIncrementCounter).toHaveBeenCalledWith('Adaptive.TracePost', [
+      {name: 'Outcome', value: 'error'},
+      {name: 'Status', value: '503'},
+    ]);
     expect(mockLogError).toHaveBeenCalledWith(
       'Adaptive trace post failed',
       expect.any(Error),
-      {error: 'Error: 503'}
+      expect.objectContaining({traceId: trace.traceId, status: 503})
     );
   });
 });
