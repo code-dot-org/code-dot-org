@@ -8,6 +8,7 @@ import type {
   AuthenticationOptionSummary,
   UserSettings,
 } from '@code-dot-org/core/api';
+import {sendEvent} from '@code-dot-org/core/plugins/analytics';
 import {CapLinks} from '@code-dot-org/shared-constants';
 
 import AccountLinkForm from '../components/AccountLinkForm';
@@ -76,7 +77,14 @@ function ConnectedAccount({
       size="small"
       disabled={!!blockedMessage}
       aria-describedby={blockedMessage ? noteId : undefined}
-      onClick={isLti ? () => setUnlinkOpen(true) : undefined}
+      onClick={
+        isLti
+          ? () => {
+              sendEvent('lti_unlink_modal_shown', {lms_name: name});
+              setUnlinkOpen(true);
+            }
+          : undefined
+      }
     >
       Disconnect
       <Box component="span" sx={visuallyHidden}>
