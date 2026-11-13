@@ -408,8 +408,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const isRunning = useAppSelector(state => state.runState.isRunning);
-  // Keeping a flagged picture blocks the project and, as its dialog says,
-  // stops any more uploads.
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const releaseRemovedImages = useReleaseRemovedImages();
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
@@ -1193,7 +1191,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     cancelRerunWatchRef.current = cancel;
   }, []);
 
-  // The images the incoming sources no longer hold, from the list on screen.
+  // The images the incoming sources no longer contains.
   const droppedImages = useCallback((animations: Sources['animations']) => {
     const kept = new Set(animations?.orderedKeys ?? []);
     const list: RuntimeAnimationList = getStore().getState().animationList;
@@ -1210,8 +1208,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     seededReinitCountRef.current = sourcesReinitializedCount;
-    // Read before the list is replaced; reclaimed after, since an asset is
-    // only freed once no image points at it.
     const dropped = droppedImages(currentSources.animations);
     seedAnimationList(currentSources.animations);
     releaseRemovedImages(dropped);

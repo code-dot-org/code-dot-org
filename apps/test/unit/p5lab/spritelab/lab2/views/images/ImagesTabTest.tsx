@@ -297,7 +297,6 @@ function fileInput(container: HTMLElement) {
   return container.querySelector('#file-input') as HTMLInputElement;
 }
 
-/** Lets the reads behind an upload finish; FileReader needs a macrotask. */
 async function settle() {
   await act(async () => {
     await new Promise(resolve => setTimeout(resolve, 0));
@@ -1628,7 +1627,6 @@ describe('ImagesTab', () => {
       );
     });
 
-    // The channel is flagged only for a picture that actually landed.
     it('leaves the project unflagged when storing an accepted picture fails', async () => {
       moderate.mockResolvedValue('flagged');
       acceptUploaded.mockRejectedValue(new Error('no'));

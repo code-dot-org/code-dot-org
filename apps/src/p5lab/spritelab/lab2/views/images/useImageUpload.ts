@@ -13,7 +13,6 @@ import type {UploadedImage} from './useImageWriter';
 
 const ACCEPTED_TYPES = ['image/png', 'image/jpeg'];
 
-/** The project type moderation and the flagged dialog file this lab under. */
 export const MODERATION_APP_NAME = 'spritelab';
 const UPLOADER_TYPE = 'SpriteLab2';
 
@@ -78,8 +77,6 @@ export default function useImageUpload({
   const [working, setWorking] = useState(false);
   const kindRef = useRef<ImageKind | null>(null);
   const triggerRef = useRef<HTMLElement | null>(null);
-  // Without a project there is nothing to flag, and the uploader is a
-  // levelbuilder making a starter asset.
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const {
     flaggedImageData,
@@ -88,8 +85,6 @@ export default function useImageUpload({
     handleCancelFlaggedImage,
   } = useFlaggedImage(UPLOADER_TYPE);
 
-  // Stays true while a flagged picture waits on the student: a second pick
-  // would overwrite the one pending answer and silently drop it.
   const uploading = working || flaggedImageData !== null;
 
   const store = useCallback(
@@ -119,15 +114,11 @@ export default function useImageUpload({
       setWorking(true);
       onProgress?.('Checking your picture.');
       try {
-        // Moderation goes by the browser's reported type, so bytes it would
-        // reject as a 400 would come back as 'error' and be let through.
         if (!(await decodable(file))) {
           onError(UPLOAD_ERRORS.wrongType);
           return;
         }
         if (channelId) {
-          // The picture as picked, not as stored: a block is downscaled to
-          // 256px, too small to judge, and a refused one never gets there.
           const verdict = await moderateImage(file, MODERATION_APP_NAME, {
             uploaderType: UPLOADER_TYPE,
           });
@@ -139,8 +130,7 @@ export default function useImageUpload({
                 await store(kind, file, true);
               } catch (error) {
                 onError(UPLOAD_ERRORS.failed);
-                // Rethrow so useFlaggedImage leaves the project unflagged
-                // when the picture it would be flagged for never landed.
+                // Rethrow so useFlaggedImage leaves the project unflagged.
                 throw error;
               } finally {
                 setWorking(false);
@@ -175,8 +165,7 @@ export default function useImageUpload({
     [openFileInput]
   );
 
-  // CustomDialog sets disableRestoreFocus, so focus falls to the body when
-  // the dialog goes; put it back on the button that opened all this.
+  // Ensure focus returns to the trigger button after handling a flagged image.
   const acceptFlaggedImage = useCallback(async () => {
     await handleAcceptFlaggedImage(MODERATION_APP_NAME);
     triggerRef.current?.focus();

@@ -55,8 +55,6 @@ describe('useReleaseRemovedImages', () => {
     ]);
   });
 
-  // Start Over drops the images wholesale; without this the block it caused
-  // would outlive the picture, with nothing left for the student to delete.
   it('asks to unblock once for each flagged image removed', async () => {
     releaser()([
       image({sourceUrl: 'a.png'}),

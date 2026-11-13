@@ -403,7 +403,6 @@ describe('useImageWriter', () => {
       expect(patch(1).flagged).toBeUndefined();
     });
 
-    // Taking it out is what lifts the block it caused.
     it('unblocks the project when it is deleted', () => {
       labState = {channel: {id: 'chan'}, isBlockedAbuse: true};
       propsByKey.k1 = {name: 'Sprite 1', flagged: true};

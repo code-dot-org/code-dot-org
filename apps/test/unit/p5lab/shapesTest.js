@@ -69,8 +69,6 @@ describe('GameLab Shapes', function () {
     expect(attributesMultiDupe['orderedKeys'][1]).toBe('456');
   });
 
-  // Sprite Lab 2 unblocks a project by deleting the picture that blocked it,
-  // so this mark has to survive a save.
   it('keeps the flagged mark, and still drops the cached spritesheet', function () {
     const {propsByKey} = getSerializedAnimationList({
       orderedKeys: ['123'],

@@ -75,7 +75,6 @@ export interface UploadedImage {
   filename: string;
   uint8Array: Uint8Array;
   mediaType: string;
-  /** Moderation flagged this picture and the student kept it anyway. */
   flagged?: boolean;
 }
 

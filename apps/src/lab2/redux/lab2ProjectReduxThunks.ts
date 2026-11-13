@@ -345,7 +345,6 @@ export const unflagProjectChannel = async (
     // Get the updated abuse score from the response.
     const responseData = await response.json();
     const abuseScore = responseData.abuse_score;
-    // Another flag may still be holding the project down.
     if (abuseScore < ABUSE_SCORE_BLOCK_THRESHOLD) {
       dispatch(setIsBlockedAbuse(false));
     }

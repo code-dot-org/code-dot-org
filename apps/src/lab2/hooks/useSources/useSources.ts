@@ -234,8 +234,7 @@ export default function useSources<T extends ProjectSources>({
       // so we need to set it here. Prefer to read channel from this hook via the consuming lab within lab components.
       dispatch(setChannelAction(projectAndSources?.channel));
       // A lab that loads its own project skips the branch of setUpWithLevel
-      // that reads the abuse score, so without this a blocked project comes
-      // back unblocked on every reload.
+      // that reads the abuse score, read it here.
       if (typeof projectAndSources?.abuseScore === 'number') {
         dispatch(
           setIsBlockedAbuse(
