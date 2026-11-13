@@ -352,8 +352,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       },
       true
     );
-    // The tree is the only source of a sentence's picture: the model does
-    // not draw a filling the tree lacks.
+    // The model does not draw a filling the tree lacks.
     if (fromCache && !cached) {
       setError(
         lookupFailed

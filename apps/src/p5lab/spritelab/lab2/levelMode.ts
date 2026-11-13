@@ -130,11 +130,8 @@ export function imageSourceForMode(mode: LevelMode | undefined): ImageSource {
   return mode?.imageSource ?? 'cached';
 }
 
-/**
- * The source the pictures come from for this user. Only a levelbuilder gets
- * the model; anyone else gets the tree, whatever the level or the page's
- * address asks for.
- */
+/** Only a levelbuilder gets the model. Anyone else gets the tree, whatever
+    the level or the page's address asks for. */
 export function imageSourceFor(
   mode: LevelMode | undefined,
   requested: ImageSource | undefined,

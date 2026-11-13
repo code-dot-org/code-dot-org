@@ -313,8 +313,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const isLevelbuilder = !!useAppSelector(
     state => state.currentUser.isLevelbuilder
   );
-  // The advanced image settings send their requests to the model, so they
-  // are for a levelbuilder; level edit modes have them.
+  // The advanced image settings ask the model, so they are for a
+  // levelbuilder; level edit modes have them.
   const imagesAdvancedParam = useMemo(
     () => queryParams('images-advanced') === 'true',
     []
