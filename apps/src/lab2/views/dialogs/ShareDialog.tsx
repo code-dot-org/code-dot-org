@@ -31,11 +31,6 @@ import moduleStyles from './share-dialog.module.scss';
 
 export const SHARE_FAILURE_TITLE = "This project can't be shared";
 
-// The finish dialog's Open Sprite Lab remixes the game. A project saved as
-// this type opens in Sprite Lab in Lab2. One saved as the classic Sprite Lab
-// type would open in the classic lab, so the button is held for it.
-const TYPE_REMIXED_IN_LAB2: ProjectType = 'quest_builder';
-
 export const SHARE_FAILURE_FALLBACK_PREFIX =
   "The project can't be shared because it contains flagged content. ";
 
@@ -233,11 +228,7 @@ const ShareDialog: React.FunctionComponent<{
           onClose={handleClose}
           shareUrl={isAbusive || userSharingDisabled ? undefined : shareUrl}
           projectType={projectType}
-          onRemix={
-            projectType === TYPE_REMIXED_IN_LAB2 && !isAbusive
-              ? remix
-              : undefined
-          }
+          onRemix={isAbusive ? undefined : remix}
           certificateUrl={finishUrl}
         />
       </div>

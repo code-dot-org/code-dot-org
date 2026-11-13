@@ -56,7 +56,7 @@ describe('Lab2 ShareDialog', () => {
       renderShareDialog({
         dialogId: 'hoai2026',
         finishUrl: '/done',
-        projectType: 'spritelab',
+        projectType: 'quest_builder',
         ...props,
       });
 
@@ -76,25 +76,18 @@ describe('Lab2 ShareDialog', () => {
     });
 
     it('withholds the share link and the remix when the project is blocked', () => {
-      renderFinish({isAbusive: true, projectType: 'quest_builder'});
+      renderFinish({isAbusive: true});
       expect(screen.queryByRole('button', {name: 'Copy link'})).toBeNull();
       expect(
         screen.getByRole('button', {name: 'Open Sprite Lab'})
       ).toBeDisabled();
     });
 
-    it('offers Open Sprite Lab for a project saved as the standalone type', () => {
-      renderFinish({projectType: 'quest_builder'});
+    it('offers Open Sprite Lab', () => {
+      renderFinish();
       expect(
         screen.getByRole('button', {name: 'Open Sprite Lab'})
       ).toBeEnabled();
-    });
-
-    it('holds Open Sprite Lab for a project saved as the classic type', () => {
-      renderFinish({projectType: 'spritelab'});
-      expect(
-        screen.getByRole('button', {name: 'Open Sprite Lab'})
-      ).toBeDisabled();
     });
 
     it('withholds the share link when the teacher disabled sharing', () => {
