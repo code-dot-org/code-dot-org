@@ -12,6 +12,10 @@ import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
 
 import labBlockDefinitions from './blockDefinitions';
 import {
+  EVENT_SPRITE_EXTENSION,
+  eventSpriteWarning,
+} from './blockDefinitions/eventSprites';
+import {
   FIELD_SCENE_DROPDOWN_TYPE,
   GO_TO_SCENE_BLOCK_TYPE,
   SceneDropdown,
@@ -30,10 +34,6 @@ import {
   FIELD_EFFECT_OPTION_TYPE,
 } from './blockDefinitions/playSoundEffect';
 import {EVENT_HAT_EXTENSION, eventHat} from './blockDefinitions/whenPlayer';
-import {
-  ExternalSceneDropdown,
-  FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
-} from './externalSceneDropdown';
 import {
   FIELD_GRID_SINGLE_TYPE,
   FIELD_GRID_TYPE,
@@ -84,10 +84,6 @@ function installLabBlocks(): void {
   }
   Blockly.fieldRegistry.register(FIELD_SCENE_DROPDOWN_TYPE, SceneDropdown);
   Blockly.fieldRegistry.register(
-    FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
-    ExternalSceneDropdown
-  );
-  Blockly.fieldRegistry.register(
     FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
     MusicProjectDropdown
   );
@@ -105,6 +101,7 @@ function installLabBlocks(): void {
     placeholderOutline
   );
   BlocklyCore.Extensions.register(EVENT_HAT_EXTENSION, eventHat);
+  BlocklyCore.Extensions.register(EVENT_SPRITE_EXTENSION, eventSpriteWarning);
   BlocklyCore.Extensions.registerMutator(
     PLACEHOLDER_MUTATOR,
     placeholderMutator

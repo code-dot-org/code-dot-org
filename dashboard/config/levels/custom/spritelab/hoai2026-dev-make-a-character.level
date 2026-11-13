@@ -1,8 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
-  "created_at": "2026-10-30T09:28:03.000Z",
+  "created_at": "2026-10-28T09:03:39.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -15,7 +14,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -23,15 +22,18 @@
     "project_template_level_name": "hoai2026-dev-revised-template",
     "level_mode": {
       "kind": "image",
+      "limitedPaintTools": true,
+      "generationLimit": 5,
       "imageType": "sprite",
       "imageRole": "hero",
-      "learning": true
+      "learning": true,
+      "oneImage": true
     },
     "objectives": {
       "title": "**Make a character**",
       "items": [
         {
-          "text": "Click **New image**.",
+          "text": "Select the **+** button.",
           "check": {
             "kind": "image",
             "imageType": "sprite"
@@ -48,6 +50,9 @@
           "text": "**Evaluate** the AI’s image with a thumbs up or thumbs down.",
           "check": {
             "kind": "rated"
+          },
+          "shownWhen": {
+            "kind": "generated"
           }
         }
       ]
@@ -74,11 +79,9 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "enable_big_playspace": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2026-11-01 16:55:06 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 16:56:23 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 16:56:26 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }

@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import {useSetupBlockColor} from '@cdo/apps/blockly/utils/useSetupBlockColor';
@@ -12,8 +13,8 @@ import moduleStyles from '../sprite-lab2-view.module.scss';
 interface HoldKeyProps {
   gameKey: GameKey;
   label: string;
-  /** A text button (Jump) rather than an icon button. */
-  text?: string;
+  disabled?: boolean;
+  className?: string;
   children?: React.ReactNode;
 }
 
@@ -40,7 +41,8 @@ const afterFrames = (count: number, fn: () => void): void => {
 const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
   gameKey,
   label,
-  text,
+  disabled,
+  className,
   children,
 }) => {
   const held = useRef(false);
@@ -115,27 +117,11 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
     },
     onBlur: release,
   };
-  if (text) {
-    return (
-      <MuiButton
-        variant="outlined"
-        color="secondary"
-        size="small"
-        aria-label={label}
-        className={moduleStyles.holdKey}
-        {...handlers}
-      >
-        {text}
-      </MuiButton>
-    );
-  }
   return (
     <MuiIconButton
-      variant="outlined"
-      color="secondary"
-      size="small"
       aria-label={label}
-      className={moduleStyles.holdKey}
+      disabled={disabled}
+      className={classNames(moduleStyles.holdKey, className)}
       {...handlers}
     >
       {children}
@@ -143,108 +129,129 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
   );
 };
 
-interface PlayBarProps {
-  playing: boolean;
+interface ArrowCrossProps {
   arrows: ArrowSet;
+  /** Shown but inert, under a preview that is not being played. */
+  disabled?: boolean;
+}
+
+/**
+ * The four arrow buttons in a cross, for a scene with a player. The arrow
+ * that jumps against gravity is labelled Jump: the top one under gravity,
+ * the bottom one when gravity pulls up; weightless, all four steer.
+ */
+export const ArrowCross: React.FunctionComponent<ArrowCrossProps> = ({
+  arrows,
+  disabled = false,
+}) => {
+  if (arrows === 'none') {
+    return null;
+  }
+  const keys: [GameKey, string, string, string][] = [
+    [
+      'up',
+      arrows === 'jump' ? 'Jump' : 'Up',
+      'chevron-up',
+      moduleStyles.arrowUp,
+    ],
+    ['left', 'Left', 'chevron-left', moduleStyles.arrowLeft],
+    ['right', 'Right', 'chevron-right', moduleStyles.arrowRight],
+    [
+      'down',
+      arrows === 'jumpDown' ? 'Jump' : 'Down',
+      'chevron-down',
+      moduleStyles.arrowDown,
+    ],
+  ];
+  return (
+    <div className={moduleStyles.arrowCross}>
+      {keys.map(([gameKey, label, icon, className]) => (
+        <HoldKey
+          key={gameKey}
+          gameKey={gameKey}
+          label={label}
+          disabled={disabled}
+          className={className}
+        >
+          <FontAwesomeV6Icon iconName={icon} />
+        </HoldKey>
+      ))}
+    </div>
+  );
+};
+
+interface RunButtonsProps {
+  playing: boolean;
   onPlay: (event: React.MouseEvent<HTMLElement>) => void;
   /** Absent when there is no editing view to return to. */
   onStop?: (event: React.MouseEvent<HTMLElement>) => void;
-  /** Plays from the start scene, offered beside Play scene; absent on a
-      level that keeps to one scene, whose one Play plays that scene. */
+  /** Runs from the start scene, offered beside Run scene; absent on a level
+      that keeps to one scene, whose one Run runs that scene. */
   onPlayGame?: (event: React.MouseEvent<HTMLElement>) => void;
-  /** On the start scene Play scene and Play game are the same thing: one
-      button, Play, which plays the game. */
+  /** On the start scene Run scene and Run game are the same thing: one
+      button, Run, which runs the game. */
   playSceneHidden?: boolean;
 }
 
 /**
- * The bar under the playspace: Play, or while playing, Stop and the arrow
- * buttons. The Play button follows the legacy lab's Run button, so it
- * takes the when-run block's color under an accessibility theme.
+ * The buttons of the bar under the stage: Run, or while playing, Stop. The
+ * Run button follows the legacy lab's, so it takes the when-run block's
+ * color under an accessibility theme; Stop is the legacy lab's purple.
  */
-const PlayBar: React.FunctionComponent<PlayBarProps> = ({
+export const RunButtons: React.FunctionComponent<RunButtonsProps> = ({
   playing,
-  arrows,
   onPlay,
   onStop,
   onPlayGame,
   playSceneHidden = false,
 }) => {
   const setupBlockColor = useSetupBlockColor();
-  if (!playing) {
-    const playSceneAway = !!onPlayGame && playSceneHidden;
-    return (
-      <>
-        {!playSceneAway && (
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="small"
-            sx={getRunButtonSx(setupBlockColor)}
-            startIcon={<FontAwesomeV6Icon iconName="play" />}
-            onClick={onPlay}
-          >
-            {onPlayGame ? 'Play scene' : 'Play'}
-          </MuiButton>
-        )}
-        {onPlayGame && (
-          <MuiButton
-            variant={playSceneAway ? 'contained' : 'outlined'}
-            color={playSceneAway ? 'primary' : 'secondary'}
-            size="small"
-            sx={playSceneAway ? getRunButtonSx(setupBlockColor) : undefined}
-            startIcon={
-              <FontAwesomeV6Icon
-                iconName={playSceneAway ? 'play' : 'flag-checkered'}
-              />
-            }
-            onClick={onPlayGame}
-          >
-            {playSceneAway ? 'Play' : 'Play game'}
-          </MuiButton>
-        )}
-      </>
-    );
+  if (playing) {
+    return onStop ? (
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="small"
+        startIcon={<FontAwesomeV6Icon iconName="stop" />}
+        onClick={onStop}
+      >
+        Stop
+      </MuiButton>
+    ) : null;
   }
+  const playSceneAway = !!onPlayGame && playSceneHidden;
   return (
     <>
-      {onStop && (
+      {!playSceneAway && (
         <MuiButton
           variant="contained"
           color="primary"
           size="small"
           sx={getRunButtonSx(setupBlockColor)}
-          startIcon={<FontAwesomeV6Icon iconName="stop" />}
-          onClick={onStop}
+          startIcon={<FontAwesomeV6Icon iconName="play" />}
+          onClick={onPlay}
         >
-          Stop
+          {onPlayGame ? 'Run scene' : 'Run'}
         </MuiButton>
       )}
-      {arrows !== 'none' && (
-        <div className={moduleStyles.arrowKeys}>
-          <HoldKey gameKey="left" label="Left">
-            <FontAwesomeV6Icon iconName="caret-left" />
-          </HoldKey>
-          {arrows === 'jump' && (
-            <HoldKey gameKey="up" label="Jump" text="Jump" />
-          )}
-          <HoldKey gameKey="right" label="Right">
-            <FontAwesomeV6Icon iconName="caret-right" />
-          </HoldKey>
-          {arrows === 'steer' && (
-            <>
-              <HoldKey gameKey="up" label="Up">
-                <FontAwesomeV6Icon iconName="caret-up" />
-              </HoldKey>
-              <HoldKey gameKey="down" label="Down">
-                <FontAwesomeV6Icon iconName="caret-down" />
-              </HoldKey>
-            </>
-          )}
-        </div>
+      {onPlayGame && (
+        <MuiButton
+          variant={playSceneAway ? 'contained' : 'outlined'}
+          color={playSceneAway ? 'primary' : 'secondary'}
+          size="small"
+          sx={playSceneAway ? getRunButtonSx(setupBlockColor) : undefined}
+          startIcon={
+            <FontAwesomeV6Icon
+              iconName={playSceneAway ? 'play' : 'flag-checkered'}
+            />
+          }
+          onClick={onPlayGame}
+        >
+          {playSceneAway ? 'Run' : 'Run game'}
+        </MuiButton>
       )}
     </>
   );
 };
 
-export default PlayBar;
+export default RunButtons;

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-06 21:22:34 UTC",
+    "serialized_at": "2026-11-12 22:43:58 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -686,6 +686,58 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026"
       }
+    },
+    {
+      "key": "5d3ab0c6-38f7-41f0-833f-f7d614d92470",
+      "position": 1,
+      "properties": {
+        "name": "Project Day One"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5d3ab0c6-38f7-41f0-833f-f7d614d92470",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "756c8864-73a6-4f4c-b920-8db805d5edd2",
+      "position": 2,
+      "properties": {
+        "name": "Project Day Two"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "0270e4bb-c486-40fd-bdf1-16af147be2c0",
+      "position": 3,
+      "properties": {
+        "name": "Project Day Three"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0270e4bb-c486-40fd-bdf1-16af147be2c0",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "72b62c54-3294-4aa9-a279-3d9f25236dad",
+      "position": 4,
+      "properties": {
+        "name": "Project Day Four"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "72b62c54-3294-4aa9-a279-3d9f25236dad",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
     }
   ],
   "activity_sections": [
@@ -789,6 +841,17 @@
       },
       "seeding_key": {
         "activity_section.key": "04a3e8b0-a521-4369-926a-77dacf6feeba",
+        "lesson_activity.key": "0929c4fc-646a-4812-aadf-609696f9febe"
+      }
+    },
+    {
+      "key": "3a024cd5-a61f-4292-8254-0c1610fdb11f",
+      "position": 3,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a024cd5-a61f-4292-8254-0c1610fdb11f",
         "lesson_activity.key": "0929c4fc-646a-4812-aadf-609696f9febe"
       }
     },
@@ -1040,6 +1103,17 @@
       }
     },
     {
+      "key": "48e0df53-e67c-4c31-8e40-6467775038b6",
+      "position": 3,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "48e0df53-e67c-4c31-8e40-6467775038b6",
+        "lesson_activity.key": "aee70778-6c24-4d28-8f28-1edbfef69918"
+      }
+    },
+    {
       "key": "af491b0b-9ee0-40e2-bce2-e9f962e439a8",
       "position": 1,
       "properties": {
@@ -1219,6 +1293,17 @@
       },
       "seeding_key": {
         "activity_section.key": "84a0d5e0-cb6f-4a46-b4ee-808584b77e03",
+        "lesson_activity.key": "858c93a2-ce86-41fe-a525-814f0f8e136a"
+      }
+    },
+    {
+      "key": "567d2038-c326-42bd-b281-64139acadd1d",
+      "position": 4,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "567d2038-c326-42bd-b281-64139acadd1d",
         "lesson_activity.key": "858c93a2-ce86-41fe-a525-814f0f8e136a"
       }
     },
@@ -1433,6 +1518,17 @@
       }
     },
     {
+      "key": "a211fbaf-020c-4ccd-b20e-8baac14bf5c9",
+      "position": 3,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a211fbaf-020c-4ccd-b20e-8baac14bf5c9",
+        "lesson_activity.key": "51095042-461a-45ca-bf2a-d9aa533e16da"
+      }
+    },
+    {
       "key": "1c84ffc3-e06a-4897-ac61-ae3b2ce0dff0",
       "position": 1,
       "properties": {
@@ -1641,6 +1737,17 @@
       },
       "seeding_key": {
         "activity_section.key": "89579942-95c6-4c29-85ed-0c9a5418d9b5",
+        "lesson_activity.key": "add902a4-7b33-43db-82c8-2fd1780fb8cb"
+      }
+    },
+    {
+      "key": "7ad496c4-2974-4775-b97b-58fb8eb8ff6c",
+      "position": 4,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ad496c4-2974-4775-b97b-58fb8eb8ff6c",
         "lesson_activity.key": "add902a4-7b33-43db-82c8-2fd1780fb8cb"
       }
     },
@@ -1931,6 +2038,17 @@
       }
     },
     {
+      "key": "76fc1002-dc08-47c6-80b9-84f1806aeb95",
+      "position": 4,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "76fc1002-dc08-47c6-80b9-84f1806aeb95",
+        "lesson_activity.key": "b56a2b26-7c68-4077-83ad-318a49ea0890"
+      }
+    },
+    {
       "key": "9779ec7e-9452-4613-a841-bda1378f1c0e",
       "position": 1,
       "properties": {
@@ -2134,6 +2252,17 @@
       }
     },
     {
+      "key": "1b191810-a1a3-4f6f-bf20-c9e50f51c583",
+      "position": 3,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b191810-a1a3-4f6f-bf20-c9e50f51c583",
+        "lesson_activity.key": "f3d413f2-2566-462c-9e8b-5ac25d12866c"
+      }
+    },
+    {
       "key": "3e89a807-4b4b-4519-900e-0f3fcc9fbecd",
       "position": 1,
       "properties": {
@@ -2308,7 +2437,8 @@
       "key": "8e808aa9-88fd-4f43-9454-37224768eaed",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How would you answer the Question of the Day now?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Answers should point to something students traced today: missing examples, or a feature the data never recorded. If someone answers \"the computer messed up,\" ask which step in their trace shows that. Every step in today's traces followed the training data exactly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How would you answer the Question of the Day now?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Answers should point to something students traced today: missing examples, or a feature the data never recorded. If someone answers \"the computer messed up,\" ask which step in their trace shows that. Every step in today's traces followed the training data exactly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n",
+        "progression_name": "End of Lesson Survey"
       },
       "seeding_key": {
         "activity_section.key": "8e808aa9-88fd-4f43-9454-37224768eaed",
@@ -2372,6 +2502,7 @@
       "key": "b0f59274-1a2e-44ac-acc2-48251ac3920d",
       "position": 1,
       "properties": {
+        "progression_name": "End of Lesson Survey"
       },
       "seeding_key": {
         "activity_section.key": "b0f59274-1a2e-44ac-acc2-48251ac3920d",
@@ -2557,6 +2688,17 @@
       }
     },
     {
+      "key": "58735059-e89a-4d29-97af-b7836939f1d0",
+      "position": 3,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "58735059-e89a-4d29-97af-b7836939f1d0",
+        "lesson_activity.key": "98535489-39a2-4c0d-8eab-5b24853bbe43"
+      }
+    },
+    {
       "key": "03fae606-7b44-45e0-9336-cec899ef20cf",
       "position": 1,
       "properties": {
@@ -2585,6 +2727,135 @@
       "seeding_key": {
         "activity_section.key": "11608613-01ab-4deb-b794-72d74c8d7952",
         "lesson_activity.key": "eaa30c09-48a8-4339-9aa3-4711b7a9d18e"
+      }
+    },
+    {
+      "key": "df3fcab1-798a-4a20-86d4-0421bcab57eb",
+      "position": 3,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "df3fcab1-798a-4a20-86d4-0421bcab57eb",
+        "lesson_activity.key": "eaa30c09-48a8-4339-9aa3-4711b7a9d18e"
+      }
+    },
+    {
+      "key": "5b40336e-26a8-4d96-9261-e58a2cb64086",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5b40336e-26a8-4d96-9261-e58a2cb64086",
+        "lesson_activity.key": "5d3ab0c6-38f7-41f0-833f-f7d614d92470"
+      }
+    },
+    {
+      "key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Project Datasets"
+      },
+      "seeding_key": {
+        "activity_section.key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e",
+        "lesson_activity.key": "5d3ab0c6-38f7-41f0-833f-f7d614d92470"
+      }
+    },
+    {
+      "key": "6cc9cc17-2a96-446a-8fce-2093a6d37636",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6cc9cc17-2a96-446a-8fce-2093a6d37636",
+        "lesson_activity.key": "5d3ab0c6-38f7-41f0-833f-f7d614d92470"
+      }
+    },
+    {
+      "key": "33fac1df-07ad-4ad6-ae56-14820e52b37f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Alternate Snacks Datasets"
+      },
+      "seeding_key": {
+        "activity_section.key": "33fac1df-07ad-4ad6-ae56-14820e52b37f",
+        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2"
+      }
+    },
+    {
+      "key": "9f2509f9-c294-4a12-95c9-3982892f8f9b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Alternate Football Datasets"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f2509f9-c294-4a12-95c9-3982892f8f9b",
+        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2"
+      }
+    },
+    {
+      "key": "d03ecb49-1fca-4bc0-b5ea-4a90240f9f02",
+      "position": 3,
+      "properties": {
+        "progression_name": "Alternative Playlist Datasetss"
+      },
+      "seeding_key": {
+        "activity_section.key": "d03ecb49-1fca-4bc0-b5ea-4a90240f9f02",
+        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2"
+      }
+    },
+    {
+      "key": "4957ad74-932a-4028-898e-ff06823ac09e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Alternate Video Game Datasets"
+      },
+      "seeding_key": {
+        "activity_section.key": "4957ad74-932a-4028-898e-ff06823ac09e",
+        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2"
+      }
+    },
+    {
+      "key": "abffc60c-5938-4a47-b3e2-4f1bb14cdf09",
+      "position": 5,
+      "properties": {
+        "progression_name": "Alternate Board Game Datasets"
+      },
+      "seeding_key": {
+        "activity_section.key": "abffc60c-5938-4a47-b3e2-4f1bb14cdf09",
+        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2"
+      }
+    },
+    {
+      "key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803",
+      "position": 1,
+      "properties": {
+        "progression_name": "User Profiles"
+      },
+      "seeding_key": {
+        "activity_section.key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803",
+        "lesson_activity.key": "0270e4bb-c486-40fd-bdf1-16af147be2c0"
+      }
+    },
+    {
+      "key": "64ca4158-a11f-4e2a-b19d-a4af840cb3e4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "64ca4158-a11f-4e2a-b19d-a4af840cb3e4",
+        "lesson_activity.key": "72b62c54-3294-4aa9-a279-3d9f25236dad"
+      }
+    },
+    {
+      "key": "052ac931-7996-4a23-8be4-709e1541d32b",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "052ac931-7996-4a23-8be4-709e1541d32b",
+        "lesson_activity.key": "72b62c54-3294-4aa9-a279-3d9f25236dad"
       }
     }
   ],
@@ -2723,6 +2994,28 @@
     },
     {
       "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "3a024cd5-a61f-4292-8254-0c1610fdb11f"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-survey"
+      ]
+    },
+    {
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2744,7 +3037,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2766,7 +3059,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2788,7 +3081,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2810,7 +3103,29 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-survey"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "48e0df53-e67c-4c31-8e40-6467775038b6"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-survey"
+      ]
+    },
+    {
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2832,7 +3147,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2854,7 +3169,29 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson3-survey"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "567d2038-c326-42bd-b281-64139acadd1d"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson3-survey"
+      ]
+    },
+    {
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2876,7 +3213,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2898,7 +3235,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2920,7 +3257,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2942,7 +3279,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -2964,7 +3301,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -2986,7 +3323,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3008,7 +3345,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
@@ -3030,7 +3367,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3052,7 +3389,29 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-survey"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "a211fbaf-020c-4ccd-b20e-8baac14bf5c9"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson4-survey"
+      ]
+    },
+    {
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3074,7 +3433,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3096,7 +3455,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3118,7 +3477,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3140,7 +3499,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -3162,7 +3521,29 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-survey"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "7ad496c4-2974-4775-b97b-58fb8eb8ff6c"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson5-survey"
+      ]
+    },
+    {
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3184,7 +3565,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3206,7 +3587,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3228,7 +3609,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3250,7 +3631,29 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 36,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson6-survey"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "76fc1002-dc08-47c6-80b9-84f1806aeb95"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson6-survey"
+      ]
+    },
+    {
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3272,7 +3675,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3294,7 +3697,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3316,7 +3719,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3338,7 +3741,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3360,7 +3763,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3382,7 +3785,29 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 43,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-survey"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "1b191810-a1a3-4f6f-bf20-c9e50f51c583"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson7-survey"
+      ]
+    },
+    {
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3404,7 +3829,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3426,7 +3851,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3448,7 +3873,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3470,7 +3895,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3492,7 +3917,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3514,7 +3939,29 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 50,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-survey"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "8e808aa9-88fd-4f43-9454-37224768eaed"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson8-survey"
+      ]
+    },
+    {
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3536,7 +3983,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3558,7 +4005,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3580,7 +4027,29 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 54,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson9-survey"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "b0f59274-1a2e-44ac-acc2-48251ac3920d"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson9-survey"
+      ]
+    },
+    {
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3602,7 +4071,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3624,7 +4093,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3646,7 +4115,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3668,7 +4137,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 59,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3690,7 +4159,29 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 60,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-survey"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "58735059-e89a-4d29-97af-b7836939f1d0"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson10-survey"
+      ]
+    },
+    {
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3709,6 +4200,204 @@
       },
       "level_keys": [
         "data-makes-ai-lesson11-sketch-lab1"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson11-survey"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "df3fcab1-798a-4a20-86d4-0421bcab57eb"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson11-survey"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-1"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Alternate Snacks Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-snacks"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "33fac1df-07ad-4ad6-ae56-14820e52b37f"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-snacks"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Alternate Football Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-football"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "9f2509f9-c294-4a12-95c9-3982892f8f9b"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-football"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Alternative Playlist Datasetss"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-study"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d03ecb49-1fca-4bc0-b5ea-4a90240f9f02"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-study"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Alternate Video Game Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-game"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "4957ad74-932a-4028-898e-ff06823ac09e"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-game"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Alternate Board Game Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-board"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "abffc60c-5938-4a47-b3e2-4f1bb14cdf09"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-board"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "User Profiles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-choice-weblab"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803"
+      },
+      "level_keys": [
+        "data-makes-ai-project-choice-weblab"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson12-survey"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "052ac931-7996-4a23-8be4-709e1541d32b"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson12-survey"
       ]
     }
   ],
@@ -3787,6 +4476,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "3a024cd5-a61f-4292-8254-0c1610fdb11f"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-makes-ai-lesson2-sketch-lab",
         "script_level.level_keys": [
           "data-makes-ai-lesson2-sketch-lab"
@@ -3835,6 +4536,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-survey"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "48e0df53-e67c-4c31-8e40-6467775038b6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-makes-ai-lesson3-pixel-plaza",
         "script_level.level_keys": [
           "data-makes-ai-lesson3-pixel-plaza"
@@ -3855,6 +4568,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "fd206fe8-6de1-4c4d-ba76-b800fe26a89b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson3-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson3-survey"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "567d2038-c326-42bd-b281-64139acadd1d"
       }
     },
     {
@@ -3967,6 +4692,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-makes-ai-lesson4-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-survey"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "a211fbaf-020c-4ccd-b20e-8baac14bf5c9"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-makes-ai-lesson5-smart-room-app",
         "script_level.level_keys": [
           "data-makes-ai-lesson5-smart-room-app"
@@ -4027,6 +4764,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-makes-ai-lesson5-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-survey"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "7ad496c4-2974-4775-b97b-58fb8eb8ff6c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-makes-ai-lesson6-botb-check",
         "script_level.level_keys": [
           "data-makes-ai-lesson6-botb-check"
@@ -4071,6 +4820,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "5b6a320a-90dd-457d-81e2-a7df3ca5e0c4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson6-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson6-survey"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "76fc1002-dc08-47c6-80b9-84f1806aeb95"
       }
     },
     {
@@ -4147,6 +4908,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-makes-ai-lesson7-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-survey"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "1b191810-a1a3-4f6f-bf20-c9e50f51c583"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-makes-ai-lesson8-meet",
         "script_level.level_keys": [
           "data-makes-ai-lesson8-meet"
@@ -4219,6 +4992,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-makes-ai-lesson8-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-survey"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "8e808aa9-88fd-4f43-9454-37224768eaed"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-makes-ai-lesson9-panel",
         "script_level.level_keys": [
           "data-makes-ai-lesson9-panel"
@@ -4251,6 +5036,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "83393fab-ca6c-4092-a833-bda1be92252f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson9-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson9-survey"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "b0f59274-1a2e-44ac-acc2-48251ac3920d"
       }
     },
     {
@@ -4315,6 +5112,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-makes-ai-lesson10-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson10-survey"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "58735059-e89a-4d29-97af-b7836939f1d0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-makes-ai-lesson11-sketch-lab1",
         "script_level.level_keys": [
           "data-makes-ai-lesson11-sketch-lab1"
@@ -4323,6 +5132,114 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "11608613-01ab-4deb-b794-72d74c8d7952"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson11-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson11-survey"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "df3fcab1-798a-4a20-86d4-0421bcab57eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-1",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-snacks",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-snacks"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "33fac1df-07ad-4ad6-ae56-14820e52b37f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-football",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-football"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "9f2509f9-c294-4a12-95c9-3982892f8f9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-study",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-study"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d03ecb49-1fca-4bc0-b5ea-4a90240f9f02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-game",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-game"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "4957ad74-932a-4028-898e-ff06823ac09e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-board",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-board"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "abffc60c-5938-4a47-b3e2-4f1bb14cdf09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-choice-weblab",
+        "script_level.level_keys": [
+          "data-makes-ai-project-choice-weblab"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson12-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson12-survey"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "052ac931-7996-4a23-8be4-709e1541d32b"
       }
     }
   ],
@@ -5693,6 +6610,9 @@
         "objective.key": "fab476fb-afac-49e0-8433-2cd5b6087a87"
       }
     }
+  ],
+  "objectives_script_levels": [
+
   ],
   "lessons_standards": [
     {

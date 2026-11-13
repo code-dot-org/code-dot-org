@@ -1,0 +1,200 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2026-11-13T13:28:26.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "world_keeps_roles": [
+      "friend",
+      "treasure"
+    ],
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
+    "lock_earlier_blocks": true,
+    "level_mode": {
+      "kind": "code",
+      "extraTabs": [
+        "Images",
+        "World"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "paletteRoles": [
+        "friend",
+        "treasure",
+        "block"
+      ]
+    },
+    "pinned_scene": {
+      "id": "scene-1",
+      "name": "Scene 1"
+    },
+    "image_role_defaults": {
+      "sprite": "friend",
+      "gamelab_checkTouching": [
+        "hero",
+        "friend"
+      ],
+      "spritelab2_burst": "friend",
+      "gamelab_spriteSay": "hero"
+    },
+    "add_blocks": [
+      {
+        "type": "gamelab_checkTouching",
+        "data": "friend-touch",
+        "fields": {
+          "CONDITION": "\"when\""
+        },
+        "inputs": {
+          "SPRITE1": {
+            "shadow": {
+              "type": "gamelab_allSpritesWithAnimation"
+            }
+          },
+          "SPRITE2": {
+            "shadow": {
+              "type": "gamelab_allSpritesWithAnimation"
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "gamelab_spriteSay",
+                "fields": {
+                  "SPEECH": "Oh!"
+                },
+                "inputs": {
+                  "SPRITE": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "spritelab2_burst",
+          "fields": {
+            "COUNT": 12,
+            "LOOK": "sparks"
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playSound",
+          "fields": {
+            "SOUND": "sound://category_digital/boing_2.mp3"
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "Oh!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setCameraZoom",
+          "fields": {
+            "ZOOM": 1.5
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_restartScene"
+        }
+      ]
+    },
+    "objectives": {
+      "title": "**When you meet**",
+      "items": [
+        {
+          "text": "Drag a block under the event **when player touches character**.",
+          "check": {
+            "kind": "block",
+            "type": [
+              "spritelab2_burst",
+              "spritelab2_playSound",
+              "gamelab_spriteSay",
+              "spritelab2_setCameraZoom",
+              "spritelab2_restartScene"
+            ],
+            "data": "friend-touch"
+          }
+        },
+        {
+          "text": "Select **Run** and go meet them.",
+          "check": {
+            "kind": "reach",
+            "role": "friend"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# When you meet\r\nAnother **event**: when your player touches the other character, something happens.",
+    "header_label": "When you meet",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "name_suffix": "_final_2026",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-13T13:28:26.986+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-when-you-meet\\\"\"],\"cloned_from\":\"hoai2026-dev-when-you-meet\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>

@@ -40,6 +40,17 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     assert_equal 'https://test-studio.code.org/api/hour/finish/artist', Unit.get_from_cache(Unit::ARTIST_NAME).hoc_finish_url
   end
 
+  test 'hoc urls use the course name when it differs from the unit name' do
+    unit_group = create(:unit_group, name: 'hoc-course-2026')
+    unit = create(:script, name: 'hoc-course1-2026')
+    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
+    unit.reload
+
+    assert_equal 'hoc-course-2026', unit.hoc_tutorial_code
+    assert_equal 'https://test-studio.code.org/api/hour/finish/hoc-course-2026', unit.hoc_finish_url
+    assert_equal 'https://test-studio.code.org/api/hour/begin_hoc-course-2026.png', tracking_pixel_url(unit)
+  end
+
   test 'unit name instead of lesson name in header for single-lesson unit' do
     stubs(:current_user).returns(nil)
     unit = create(:unit, :with_levels)

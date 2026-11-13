@@ -1,0 +1,36 @@
+name 'pl-aif-y2-u2-l4-selecting-data'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Selecting Data
+
+In Lesson 7, students discover that a model can fit its training data perfectly and still make terrible predictions, if that data doesn't match the real world it's being used in.
+
+Anita's ice cream shop wants to predict monthly sales. She finds a model online and uses it.
+
+## Anita's Ice Cream Shop Sales Predictions
+
+<div style="text-align: center; margin: 20px auto;">
+  <img src="https://images.code.org/ba99fbbc4f2797e5462a0419217fc19e-image-1794514220142.png" alt="A chart showing predicted ice cream sales declining from about 400 units in January to about 100 units in July" style="width: 55%; border-radius: 10px;">
+</div>
+
+The model predicts Anita will sell around 400 units in January and only around 100 in July, the opposite of what a US ice cream shop should expect. The model fits its training data well. The problem is where that data came from: an ice cream shop in Australia, where the seasons are flipped, it's hotter in January than July.
+
+
+## Lesson Vocabulary
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Biased data:</strong> data that doesn't accurately represent the real-world situations in which a model will be used.</div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Representative data:</strong> data that accurately represents the real-world situations in which a model will be used.</div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> this is the core idea worth repeating: a model is only as good as the data it's trained on. Good model fit doesn't mean good predictions, if the training context doesn't match the real-world context, the model will confidently get it wrong.</div>
+</div>
+
+
+MARKDOWN

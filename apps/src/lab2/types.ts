@@ -495,6 +495,7 @@ export type AppName = keyof typeof lab2EntryPoints;
 
 export type StandaloneAppName =
   | 'spritelab'
+  | 'quest_builder'
   | 'story'
   | 'science'
   | 'poetry_hoc'
@@ -582,6 +583,6 @@ export interface LabProps<
   channel?: Channel;
 }
 
-export type ShareDialogId = 'hoc2024' | 'hoai2025';
+export type ShareDialogId = 'hoc2024' | 'hoai2025' | 'hoai2026';
 
 export type LevelNavigationConfirmation = () => boolean | Promise<boolean>;

@@ -101,8 +101,8 @@ export interface Sources extends ProjectSources {
   scenes?: Scene[];
   /** Catalog blocks the student added to the toolbox (blockCatalog.ts). */
   chosenBlocks?: string[];
-  /** The catalog has opened itself once on the free play level. */
-  blockCatalogSeen?: boolean;
+  /** The free play intro has been dismissed. */
+  freeplayIntroSeen?: boolean;
 }
 
 /** A single-frame image a level gives the project: a lab asset by URL. */
@@ -117,6 +117,9 @@ export interface StarterImage {
       upscale it with hard edges. */
   pixelGridSize?: number;
 }
+
+/** A world pattern's further characters, each naming a sprite role. */
+export type WorldStartRoles = {[char: string]: string};
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** What kind of level this is; decides the tabs and the image controls. */
@@ -141,6 +144,7 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     name: string;
     source?: WorkspaceSerialization;
     worldStartPattern?: string[];
+    worldStartRoles?: WorldStartRoles;
     /** The student can open this scene in the editor beside the pinned
         one; Play still starts the game from the pinned scene. */
     editable?: boolean;
@@ -153,13 +157,24 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       the student made most recently, 'S' the image_role_defaults sprite,
       else their first character. */
   worldStartPattern?: string[];
+  /** Further pattern characters, each the newest sprite carrying a role:
+      {"F": "friend"}. 'S' and 'B' keep their own meaning. */
+  worldStartRoles?: WorldStartRoles;
+  /** Image roles the World tab keeps at least one of, in each scene:
+      ["treasure", "friend"]. The last square showing an image with one of
+      these roles can be erased or painted over only after another has been
+      placed. Unset, no role is kept this way. */
+  worldKeepsRoles?: string[];
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
-  /** Blocks built on earlier levels cannot be deleted from the pinned scene
-      here (blockLocks.ts); the stacks this level adds and the toolbox
-      blocks no earlier level required can. */
+  /** Blocks built on earlier levels cannot be deleted here, in any scene
+      the level opens (blockLocks.ts). The blocks under a stack this level adds can,
+      and so can the toolbox blocks no earlier level required. */
   lockEarlierBlocks?: boolean;
+  /** The free play intro opens the first time the student arrives
+      (FreeplayIntroDialog.tsx). */
+  freeplayIntro?: boolean;
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;

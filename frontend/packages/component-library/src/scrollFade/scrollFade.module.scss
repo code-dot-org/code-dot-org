@@ -1,0 +1,113 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+// Registered so the fades can transition: a mask gradient cannot.
+@each $edge in top, right, bottom, left {
+  @property --scroll-fade-#{$edge} {
+    syntax: '<length-percentage>';
+    initial-value: 0;
+    inherits: false;
+  }
+}
+
+$inset-left: var(--scroll-fade-inset-left, 0px);
+$inset-right: var(--scroll-fade-inset-right, 0px);
+$inset-bottom: var(--scroll-fade-inset-bottom, 0px);
+$transition: 100ms ease-out;
+
+.scrollFade {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  // Clips the content and fades to the root's rounded corners. Unlike hidden,
+  // clip does not make the root a second scroll container.
+  overflow: clip;
+
+  // The mask would clip an outline on the scroller, so the ring goes here.
+  &:has(> .scroller:focus-visible) {
+    @include mixins.focus-styles;
+  }
+}
+
+.scroller {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  // Only the edges asked for scroll; the other axis is clipped.
+  overflow: hidden;
+}
+
+@supports selector(:has(*)) {
+  .scroller:focus {
+    outline: none;
+  }
+}
+
+// Without :has() the root can't draw the ring, so draw it inside the clip.
+@supports not selector(:has(*)) {
+  .scroller:focus-visible {
+    @include mixins.focus-styles;
+
+    outline-offset: -2px;
+  }
+}
+
+.scrollY {
+  overflow-y: auto;
+}
+
+.scrollX {
+  overflow-x: auto;
+}
+
+// The content fades to transparent, over any background. The two gradients
+// intersect, and solid strips add back the borders and scrollbars.
+.scrollFade > .scroller {
+  mask-image: linear-gradient(#000, #000), linear-gradient(#000, #000),
+    linear-gradient(#000, #000),
+    linear-gradient(
+      to bottom,
+      transparent,
+      #000 var(--scroll-fade-top, 0%),
+      #000 calc(100% - var(--scroll-fade-bottom, 0%)),
+      transparent
+    ),
+    linear-gradient(
+      to right,
+      transparent,
+      #000 var(--scroll-fade-left, 0%),
+      #000 calc(100% - var(--scroll-fade-right, 0%)),
+      transparent
+    );
+  mask-position:
+    0 0,
+    100% 0,
+    0 100%,
+    $inset-left 0,
+    $inset-left 0;
+  mask-size:
+    $inset-left 100%,
+    $inset-right 100%,
+    100% $inset-bottom,
+    calc(100% - #{$inset-left} - #{$inset-right}) calc(100% - #{$inset-bottom}),
+    calc(100% - #{$inset-left} - #{$inset-right}) calc(100% - #{$inset-bottom});
+  mask-repeat: no-repeat;
+  mask-composite: add, add, add, intersect, add;
+  transition:
+    --scroll-fade-top $transition,
+    --scroll-fade-right $transition,
+    --scroll-fade-bottom $transition,
+    --scroll-fade-left $transition;
+}
+
+@each $edge in top, right, bottom, left {
+  .scrollFade[data-fade-#{$edge}] > .scroller {
+    --scroll-fade-#{$edge}: var(--scroll-fade-size);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollFade > .scroller {
+    transition: none;
+  }
+}

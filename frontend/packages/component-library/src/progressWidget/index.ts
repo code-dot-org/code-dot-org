@@ -4,6 +4,8 @@ export type {
   ProgressBubbleStatus,
 } from './ProgressBubble';
 export type {
+  ProgressWidgetActionProps,
+  ProgressWidgetLessonProps,
   ProgressWidgetProps,
   ProgressWidgetSaveProps,
   ProgressWidgetSaveStatus,

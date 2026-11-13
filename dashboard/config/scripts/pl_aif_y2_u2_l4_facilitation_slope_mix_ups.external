@@ -1,0 +1,76 @@
+name 'pl-aif-y2-u2-l4-facilitation-slope-mix-ups'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Building Regression Models
+
+## What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Warm-up:</strong> students discuss real ride-share data and predict a 10-mile ride's cost before any formal method is introduced</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Draw Regression Lines:</strong> in pairs, with a ruler, students construct linear regression models by hand for two ride-share datasets in the Ride Share Activity Guide</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Implement a Regression Model (Levels 1-3):</strong> students write Python that uses slope and y-intercept to predict a number, then complete a Check for Understanding</div>
+  </div>
+</div>
+
+<hr>
+
+## Watch for: Training Data vs. Predicted Points
+
+<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #611D00; line-height: 1.5;">
+    <strong>&#9888; Real documented confusion:</strong> students may not distinguish between the data points used to train the model and the new points the model predicts. Help them see that training data is used to draw a good-fitting line, once drawn, that same line predicts new points it never saw.
+  </div>
+</div>
+
+## Watch for: "The Data Doesn't Fall on One Line"
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; This is intentional, not a bug in the activity:</strong> the second dataset in the Ride Share Activity Guide doesn't fall precisely on one line by design. Reassure students their line just needs to get close to most points, and that estimating the equation's values is expected, real data is rarely clean.
+  </div>
+</div>
+
+## Watch for: Printing Instead of Returning
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Prints Inside the Function</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6; font-family: 'Consolas', 'Courier New', monospace;">def predict_cost(miles):<br>&nbsp;&nbsp;print(4 + 2 * miles)</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Returns the Value</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6; font-family: 'Consolas', 'Courier New', monospace;">def predict_cost(miles):<br>&nbsp;&nbsp;return 4 + 2 * miles</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222; margin-bottom: 8px;">&bull; "A return value is the function's actual output. If you print inside the function, does anything come back out for the rest of your program to use?"</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Python uses * for multiplication, not x, that's an easy one to slip on."</div>
+</div>
+
+## Assessment: Level 3 Check for Understanding
+
+The real example here is a book-pricing model, not ride-share, worth knowing since it introduces a negative slope.
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Strong answer, from the guide:</strong> a new book might cost #Facilitating Building Regression Models
+
+
+
+
+  
+MARKDOWN

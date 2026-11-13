@@ -93,6 +93,7 @@ export default function LoginInformation({settings}: SectionProps) {
                 open={emailOpen}
                 onClose={() => setEmailOpen(false)}
                 isTeacher={!isStudent}
+                requiresPassword={settings.hasPassword}
               />
             </>
           )}

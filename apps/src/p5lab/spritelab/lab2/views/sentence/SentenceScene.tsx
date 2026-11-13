@@ -40,7 +40,7 @@ import {pickTip} from '../images/teaching/generationTips';
 import {LearningStory, storyFor} from '../images/teaching/useLearningStory';
 import StripFrame from '../StripFrame';
 
-import {PixelReveal, SparkleBurst} from './PixelReveal';
+import {FirstShowingOnly, PixelReveal, SparkleBurst} from './PixelReveal';
 import SentenceReadOnly from './SentenceReadOnly';
 import {
   Choices,
@@ -64,9 +64,12 @@ import styles from './sentence-scene.module.scss';
 const STYLE: ImageStyle = 'pixel';
 // The service's middle temperature.
 const TEMPERATURE = 1;
+// The verb shown in front of the sentence the student builds, so it reads
+// as an instruction: "Generate a cute cat."
+const SENTENCE_LEAD = 'Generate';
 // The making shows at least this long on a cached level, where a picture
 // can land in well under a second.
-const MIN_CACHED_GENERATING_MS = 5000;
+export const MIN_CACHED_GENERATING_MS = 6000;
 
 export type Mode = 'edit' | 'generating' | 'result';
 
@@ -109,8 +112,8 @@ export interface SentenceSceneParts {
   frame: React.ReactNode;
   /** A made picture is showing in the frame. */
   frameFilled: boolean;
-  /** A reviewer's mark over a picture served from the tree, while the tree
-      is filled in; comes out before ship. */
+  /** A reviewer's mark over a picture served from the cache, while the
+      cache is filled in; comes out before ship. */
   cachedTag: React.ReactNode;
   /** The Behind the scenes button, once there is a picture. */
   behindTheScenes: React.ReactNode;
@@ -162,10 +165,18 @@ interface SentenceSceneProps {
   initialAnimated?: boolean;
   /** The student turned Animated on or off. */
   onAnimatedChange?: (animated: boolean) => void;
-  /** Called with each generated picture as soon as it is shown, and again
-      with the verdict added to its generation metadata when the student
-      rates it. */
+  /** Called with each generated picture as soon as it is ready, to store
+      it. */
   onKeep: (result: GeneratedImageResult) => Promise<void> | void;
+  /** Called with each generated picture before it is shown. The scene
+      keeps showing that the picture is being made until the returned
+      promise resolves, and shows the picture then. */
+  onReady?: (result: GeneratedImageResult) => Promise<void> | void;
+  /** Called when the student rates the kept picture; resolves true once
+      the verdict is on its record. Without it, or when it resolves false,
+      the picture is kept again with the verdict in its generation
+      metadata. */
+  onRate?: (verdict: Verdict) => boolean | Promise<boolean>;
   /** Called when a generation request is sent to the model. */
   onGenerateStart?: () => void;
   /** The scene is making or keeping a picture, or has stopped; a host can
@@ -185,10 +196,10 @@ interface SentenceSceneProps {
       from Behind the scenes. */
   onTellStory?: (story: LearningStory) => void;
   advanced?: AdvancedOptions;
-  /** Where a sentence's picture comes from (imageCache.ts); the tree first
-      when unset. A typed prompt always goes to the model. */
+  /** Where a sentence's picture comes from (imageCache.ts); the cache when
+      unset. A typed prompt always goes to the model. */
   imageSource?: ImageSource;
-  /** Another tree to read cached pictures from (QA). */
+  /** Another address to read cached pictures from (QA). */
   imageCacheUrl?: string;
 }
 
@@ -201,6 +212,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   initialAnimated = true,
   onAnimatedChange,
   onKeep,
+  onReady,
+  onRate,
   onGenerateStart,
   onBusyChange,
   ratingRequired = false,
@@ -242,11 +255,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
   const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
+  // The pictures whose reveal animation has already played.
+  const revealedPictureIds = useRef(new Set<string>());
   // The cached variant shown last for a filling, so Generate again shows
   // another.
   const lastCachedRef = useRef<{path: string; variant: number}>();
 
-  // The cached picture for the sentence as filled, when the tree has one.
+  // The cached picture for the sentence as filled, when there is one.
   const findCached = useCallback(async (): Promise<CachedImage | undefined> => {
     const wordIds = sentenceWordIds(sentence, choices);
     const path = sentencePath(sentence.id, wordIds, style);
@@ -295,6 +310,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     const run = ++runRef.current;
     const startedAt = Date.now();
     const prompt = typedPrompt || promptText(sentence, choices);
+    const sentPrompt =
+      typedPrompt ||
+      promptText(sentence, choices, {useModelFacingTextVariant: true});
     const pixelScale = advanced?.pixelScale || 1;
     // The cache holds the sentences' pictures as the level draws them;
     // whatever the advanced settings change goes to the model.
@@ -307,13 +325,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     setRatingDismissed(false);
     setError(null);
     playSound('go');
-    // A filling the tree lacks, or a lookup that fails, goes to the model.
     let cached: CachedImage | undefined;
+    let lookupFailed = false;
     if (fromCache) {
       try {
         cached = await findCached();
       } catch (e) {
         console.warn('Image cache lookup failed:', e);
+        lookupFailed = true;
       }
       if (run !== runRef.current) {
         return;
@@ -333,6 +352,16 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       },
       true
     );
+    // The model does not draw a filling the cache lacks.
+    if (fromCache && !cached) {
+      setError(
+        lookupFailed
+          ? "Couldn't make the picture. Try again."
+          : "We don't have a picture for those words yet. Try different ones."
+      );
+      setMode('edit');
+      return;
+    }
     onGenerateStart?.();
     try {
       const options: GenerateImageOptions = {
@@ -357,21 +386,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       // What the lab would send. A cached picture was made from the same
       // words by the same prompt builders, so this describes it as well.
       const sent: SentPrompts = sentPromptsFor(
-        prompt,
+        sentPrompt,
         options,
         style,
         generatesCharacterSet,
         bodyPlan
       );
       const result = generatesCharacterSet
-        ? await generateCharacterSet(prompt, {
+        ? await generateCharacterSet(sentPrompt, {
             style,
             temperature: TEMPERATURE,
             pixelGrid: options.pixelGrid,
             bodyPlan,
             cached,
           })
-        : await generateImage(prompt, {...options, cached});
+        : await generateImage(sentPrompt, {...options, cached});
       if (run !== runRef.current) {
         return;
       }
@@ -411,10 +440,17 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         sent,
         cached: !!cached,
       };
+      // The picture is stored while the host holds it back, so that
+      // leaving the page during the wait does not lose it.
+      const stored = persist(entry, null);
+      await onReady?.(entry.result);
+      if (run !== runRef.current) {
+        return;
+      }
       setChosenPicture(entry);
       setMode('result');
       playSound('reveal');
-      await persist(entry, null);
+      await stored;
     } catch (e) {
       if (run !== runRef.current) {
         return;
@@ -444,17 +480,15 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     exhausted,
     advanced,
     persist,
+    onReady,
     imageSource,
     findCached,
   ]);
 
   const judge = useCallback(
-    (next: Verdict) => {
+    async (next: Verdict) => {
       setVerdict(next);
       playSound(next === 'up' ? 'cheer' : 'hmm');
-      if (chosenPicture) {
-        persist(chosenPicture, next);
-      }
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT,
         {
@@ -464,8 +498,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         },
         true
       );
+      if (chosenPicture && !(await onRate?.(next))) {
+        persist(chosenPicture, next);
+      }
     },
-    [chosenPicture, imageType, persist]
+    [chosenPicture, imageType, persist, onRate]
   );
 
   // Giving reasons finishes the rating; the rating strip is hidden
@@ -497,6 +534,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     onChange: setChoices,
     disabled: busy,
     layout: wordLayout,
+    lead: SENTENCE_LEAD,
   });
   const showingResult = mode === 'result' && !!chosenPicture;
 
@@ -593,27 +631,31 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           )}
         />
       )}
-      {/* Keyed by picture, so each new one remounts and plays the reveal
-          once. */}
-      <PixelReveal
+      {/* The reveal and the sparkles play once for each new picture. */}
+      <FirstShowingOnly
         key={`reveal-${chosenPicture.id}`}
-        src={chosenPicture.dataURI}
-        crop={
-          sheet
-            ? {
-                // A generated set's frames stand in one row.
-                ...stripCellOrigin(
-                  CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
-                  sheet.frameSize,
-                  stillFrame ?? 0
-                ),
-                width: sheet.frameSize.x,
-                height: sheet.frameSize.y,
-              }
-            : undefined
-        }
-      />
-      <SparkleBurst key={`burst-${chosenPicture.id}`} />
+        id={String(chosenPicture.id)}
+        shownIds={revealedPictureIds}
+      >
+        <PixelReveal
+          src={chosenPicture.dataURI}
+          crop={
+            sheet
+              ? {
+                  // A generated set's frames stand in one row.
+                  ...stripCellOrigin(
+                    CHARACTER_STRIP_FRAME_COUNT * sheet.frameSize.x,
+                    sheet.frameSize,
+                    stillFrame ?? 0
+                  ),
+                  width: sheet.frameSize.x,
+                  height: sheet.frameSize.y,
+                }
+              : undefined
+          }
+        />
+        <SparkleBurst />
+      </FirstShowingOnly>
     </>
   ) : null;
 

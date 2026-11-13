@@ -10,7 +10,7 @@ import {
 import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../predefinedPrompts';
 import {AiArtifact, ChatItem, ChatPrompt, ChatTextMessage} from '../types';
 
-import {AiDiffChatState, HostedDrawerConfig} from './state';
+import {AiDiffChatState, DrawerRubric, HostedDrawerConfig} from './state';
 
 const initialState: AiDiffChatState = {
   chatIsOpen: false,
@@ -27,6 +27,7 @@ const initialState: AiDiffChatState = {
   pendingArtifactMessage: undefined,
   requestedNav: null,
   hostedDrawerConfig: null,
+  drawerRubric: null,
 };
 
 const aiDiffChatSlice = createSlice({
@@ -88,6 +89,9 @@ const aiDiffChatSlice = createSlice({
     ) => {
       state.hostedDrawerConfig = action.payload;
     },
+    setDrawerRubric: (state, action: PayloadAction<DrawerRubric | null>) => {
+      state.drawerRubric = action.payload;
+    },
   },
 });
 
@@ -113,4 +117,5 @@ export const {
   openDrawerToNav,
   clearRequestedNav,
   setHostedDrawerConfig,
+  setDrawerRubric,
 } = aiDiffChatSlice.actions;
