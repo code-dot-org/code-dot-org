@@ -15,10 +15,15 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
   * Integration Tests - Used to test level solutions and some block behaviors
 * Dashboard directory
   * Ruby tests - All of the server side business logic testing is through here.
-  * UI tests - Used to test overall functionality. Intended to run across browsers. Runs either on Saucelabs or with a local Chromedriver
+  * UI tests (Cucumber) - Used to test overall functionality. Run locally with chromedriver. In deploy-time runs, Chrome and Firefox run on AWS Device Farm and Safari, iPad and iPhone on SauceLabs; Drone runs Chrome only. [dashboard/test/ui/README.md](dashboard/test/ui/README.md) is canonical.
     * Eyes tests - Subset of UI tests intended to test the precise layout of controls on certain UI pages. Eyes tests are run through Applitools and work by comparing an expected screenshot to an actual screenshot of a certain page. Eyes tests only run on Chrome for now. If you make a change that affects layout, you will likely break eyes tests. Work with whoever is reviewing your PR to figure out if the layout change should be accepted, and the baseline will be adjusted.
  * Shared and Lib directories
    * Ruby tests - Unit tests over Ruby code in the shared and lib directories.
+* Frontend directory
+  * Vitest unit tests - `yarn test` in `frontend/`.
+  * Playwright end-to-end tests - `rake test:playwright_ui`; see [frontend/packages/e2e-tests/README.md](frontend/packages/e2e-tests/README.md).
+* Python directory
+  * pytest - `rake test:python` runs `uv run pytest` in each `python/` project that has a `pyproject.toml`.
 * Pegasus directory
   * Ruby tests - Test server side logic, caching, graphics, etc.
 
@@ -29,7 +34,7 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 |                        | ruby lint                 | scss lint                         | haml lint          | stylelint                | JavaScript eslint (everywhere) | apps test          | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared and lib unit tests  |
 |------------------------|---------------------------|-----------------------------------|--------------------|--------------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
 | pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `apps/**/*.scss` / changed `*.js`                 |
-| CI (via github) |                           |                                   |                    |                          | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
+| CI (Drone, on PRs) |                           |                                   |                    |                          | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
 | staging build          | :white_check_mark:        |                                   | :white_check_mark: |                          |                                | :white_check_mark: |                      |                    |                         |                    |                    |                    |
 | test build             |                           |                                   |                    |                          |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
@@ -43,7 +48,7 @@ Our top-level `lib/rake/test.rake` file contains a handful of tasks that can be 
 Worth noting:
 
 * `bundle exec rake test:all` - runs all tests across all sub-projects
-* `bundle exec rake test:apps`, `bundle exec rake test:pegasus`, `bundle exec rake test:blockly_core` ... etc  - runs tests for specific sub-project
+* `bundle exec rake test:apps`, `bundle exec rake test:pegasus`, `test:frontend`, `test:python`, `test:shared`, `test:lib` ... etc  - runs tests for specific sub-project
 * `bundle exec rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
 * `bundle exec rake test:changed:apps` - runs apps tests if sub-project folder has changed
 * `bundle exec rake test:dashboard` - runs dashboard tests, but see [Dashboard Tests](#dashboard-tests) below for first time setup
@@ -51,7 +56,7 @@ Worth noting:
 
 ### Apps Tests
 
-`yarn test` will lint all of the apps code and run unit and integration tests. Run this from the `apps/` directory. You can expect a full test run to take about 4-8 minutes.
+`yarn test` will lint all of the apps code and run unit and integration tests. Run this from the `apps/` directory. A full run takes about 5 minutes.
 
 It's also possible to run a subset of tests:
 
@@ -130,7 +135,7 @@ To run one test file in pegasus, run `rake test TEST=<path-to-test-file>` (e.g. 
 ### Dealing with test failures (non-Eyes)
 Our tests are pretty reliable, but not entirely reliable. If you see a test failure, you should investigate it and not immediately assume it is spurious.
 
-Take a look at the Saucelabs replay. You can view a list of recently run tests on Saucelabs and find your error - alternatively, you can run tests with the --html or --verbose option and see a URL. Saucelabs should have a video replay of what the test looked like. If you see something like a certificate error (common when testing on localhost) or a complete CSS breakdown (sometimes specific to IE9) then this is probably because of a flakey test and its safe to ignore. Most other failures do need to be addressed.
+Look at the replay on SauceLabs or AWS Device Farm, whichever ran the browser - alternatively, you can run tests with the --html or --verbose option and see a URL. If you see something like a certificate error (common when testing on localhost) then this is probably because of a flakey test and its safe to ignore. Most other failures do need to be addressed.
 
 ### Dealing with test failures (eyes)
 If you've made a change that caused an eyes failiure, log into Applitools and check out the replay. You can see highlighted areas indicating what parts are different. If you've done something that changes the layout, images, or text, that may cause an eyes failure. Confirm with another team member that this is okay, and you can accept the new appearance as the baseline for future tests.
@@ -138,7 +143,6 @@ If you've made a change that caused an eyes failiure, log into Applitools and ch
 ## See Also
 
 * [Testing Production Locally](docs/testing-production-locally.md)
-* [Testing IE9](docs/testing-ie9.md)
 
 # Troubleshooting
 
@@ -156,19 +160,3 @@ If you've made a change that caused an eyes failiure, log into Applitools and ch
 
 2. If you get an error about missing db fields, try migrating your test database:
 `RAILS_ENV=test rake db:migrate`
-
-## Linux
-### SyntheticEvent.augmentClass is not a function
-```
-PhantomJS 2.1.1 (Linux 0.0.0) ERROR
-  TypeError: SyntheticEvent.augmentClass is not a function. (In 'SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface)', 'SyntheticEvent.augmentClass' is undefined)
-  at webpack:///node_modules/react-dom/lib/SyntheticCompositionEvent.js:33:0 <- test/integration-tests.js:322086
-
-```
-There is an issue with PhantomJS and React when running on Linux. The current workaround is to prefix any of your test commands with `BROWSER=Chrome`. For example:
-```
-BROWSER=Chrome bundle exec rake test:all
-```
-This will tell Karma, the testing framework this project uses, to use the Google Chrome browser instead of PhantomJS. *Note* you need to install Google Chrome for this to work. If you would prefer to use Chromium, you can use the prefix `BROWSER=Chrome CHROME_BIN=$(which chromium-browser)` instead.
-
-You can also instead prepend the test command with `BROWSER=ChromeHeadless` to run the tests in a headless chrome browser, rather than having your machine open a google chrome window to run the tests in.
