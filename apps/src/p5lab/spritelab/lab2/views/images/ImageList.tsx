@@ -91,7 +91,6 @@ interface ImageListProps {
   /** Whether the choice may move to another image. A level about one image
       keeps it where it is: the other tiles are listed but disabled. */
   chooseOffered?: boolean;
-  /** The list's name. "Your images" unless the images are someone else's. */
   heading?: string;
   /** Called with the kind picked from the plus menu; absent when the level
       does not let students add images, and the plus is then hidden. */

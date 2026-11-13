@@ -8,8 +8,7 @@ import commonI18n from '@cdo/locale';
 
 type Destination = 'view' | 'new';
 
-/** What a visitor to a shared project can do besides play it: see how it
-    was made, start a project of their own, or report it. */
+/** The buttons under a shared project's game. */
 const ShareActions: React.FunctionComponent = () => {
   // The next page can take a moment to arrive, so the pressed button shows
   // it is working.
@@ -31,8 +30,7 @@ const ShareActions: React.FunctionComponent = () => {
       if (destination === 'view') {
         projectManager.redirectToView();
       } else {
-        // A new, empty project of the same kind, as the older labs' share
-        // pages give; not a copy of this one.
+        // A new, empty project, not a remix of this one.
         navigateToHref(`/projects/${projectManager.getProjectType()}/new`);
       }
     } catch (e) {

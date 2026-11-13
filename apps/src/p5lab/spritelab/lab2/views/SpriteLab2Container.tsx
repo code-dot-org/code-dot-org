@@ -65,8 +65,7 @@ const SpriteLab2Container: React.FunctionComponent<
   LabProps<SpriteLab2LevelProperties, Sources>
 > = ({levelProperties}) => {
   const dispatch = useAppDispatch();
-  // A shared project is played, not edited, whoever opens the link: its
-  // owner too.
+  // A share link is play only, for its owner too.
   const isShareView = !!useAppSelector(state => state.lab.isShareView);
   const standaloneChannelId = useMemo(getStandaloneProjectId, []);
 
@@ -93,8 +92,8 @@ const SpriteLab2Container: React.FunctionComponent<
   } = useSources<Sources>({
     levelProperties,
     defaultSources,
-    // On a project page the address names the project. Without this the
-    // lab would load the visitor's own project for the level instead.
+    // Without this a project page loads the visitor's own project for the
+    // level, not the one in the address.
     standaloneChannelId,
     onReinitialize: handleReinitialize,
     getToolboxEditSources,
@@ -125,9 +124,6 @@ const SpriteLab2Container: React.FunctionComponent<
   }
   const storedForLevel =
     loadedForRef.current === levelProperties.id ? storedSources : undefined;
-  // A standalone project the visitor may not edit, which is usually someone
-  // else's. Every tab can be opened and the game played, and nothing can be
-  // changed.
   const isViewOnly =
     !!levelProperties.isProjectLevel && !restOutputs.isEditable && !isShareView;
   // Such a level's start sources may write a scene's world in the packed

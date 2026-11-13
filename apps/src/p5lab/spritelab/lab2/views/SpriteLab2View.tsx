@@ -190,11 +190,9 @@ registerReducers({
 });
 
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
-// A share link shows the game alone, whatever tabs the level has.
 const SHARE_TABS: readonly Tab[] = ['Play'];
-// The class the view puts on the page's body while a share link is open.
-// The page footer's style in sprite-lab2-view.module.scss is written
-// against it.
+// On the body while a share link is open; scopes the page footer's styles
+// in sprite-lab2-view.module.scss.
 const SHARE_BODY_CLASS = 'spritelab2-share';
 // The Images pane, for the hook that keeps it inert while closed.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
@@ -296,10 +294,8 @@ interface SpriteLab2ViewProps {
   hasEdited: boolean;
   startOver: () => void;
   isEditable: boolean;
-  /** The page is a share link: the game alone, with no editors. */
   isShareView?: boolean;
-  /** Someone else's project, opened to look at: every tab can be opened
-      and the game played, and nothing can be changed. */
+  /** Every tab opens and the game plays; nothing can be changed. */
   isViewOnly?: boolean;
   // Used for keying effects off of sources reinitializing.
   sourcesReinitializedCount: number;
@@ -1316,8 +1312,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     uploadImage,
     updateSources,
     getScenes,
-    // A share link, or a project opened view only, saves nothing to the
-    // project it shows.
     enabled: !isToolboxMode && !isShareView && !isViewOnly,
   });
 
@@ -1505,7 +1499,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       codeWrapperRef.current.inert = activeTab !== 'Code';
     }
     if (worldWrapperRef.current) {
-      // A view-only World shows its grid and takes no input.
       worldWrapperRef.current.inert = activeTab !== 'World' || !!isViewOnly;
     }
   }, [stageCovered, activeTab, worldMounted, isViewOnly]);

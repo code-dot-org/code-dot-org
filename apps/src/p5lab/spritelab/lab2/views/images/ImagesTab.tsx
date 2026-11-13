@@ -106,8 +106,7 @@ interface ImagesTabProps {
   limitedPaintTools?: boolean;
   /** The kinds of image the list shows. Every kind when unset. */
   imageKinds?: ImageType[];
-  /** The images can be looked at and not changed: any image can be chosen
-      from the list, and there is no New, Delete, AI pane or paint tools. */
+  /** Any image can be chosen and looked at; nothing can be changed. */
   viewOnly?: boolean;
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
