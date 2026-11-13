@@ -4,6 +4,7 @@
 import Link from '@code-dot-org/component-library/link';
 import Modal from '@code-dot-org/component-library/modal';
 import $ from 'jquery';
+import 'jquery-mask-plugin';
 import QRCode from 'qrcode.react';
 import React from 'react';
 import ReactDOM from 'react-dom';
