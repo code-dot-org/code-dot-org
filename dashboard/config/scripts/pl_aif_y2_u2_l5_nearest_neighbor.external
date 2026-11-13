@@ -1,0 +1,20 @@
+name 'pl-aif-y2-u2-l5-nearest-neighbor'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Trying Nearest Neighbors Yourself
+
+Click anywhere on the plot to place "Today." Watch which past days it connects to, and see the predicted label change as you move it.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dot.com.github.io/AIF2/unit-2/nearest-neighbors-demo.html"
+    width="100%"
+    height="800"
+    frameborder="0"
+    scrolling="no"
+    title="Interactive nearest neighbors demo: click to place a new point and see its predicted label">
+  </iframe>
+</div>
+MARKDOWN
