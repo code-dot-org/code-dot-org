@@ -454,9 +454,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // fadeTrigger increments on landing to play the fade-from-black.
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
-  // What sprites say, for screen readers. A no-break space alternates onto
-  // a repeated line so it is read again.
-  const [spoken, setSpoken] = useState('');
+  // Set by Playspace; a ref, not state, so a sprite's line redraws only the
+  // play area.
+  const speakRef = useRef<((text: string) => void) | null>(null);
   const [showStartOver, setShowStartOver] = useState(false);
   // The new-block catalog: the unit's new blocks stay out of the toolbox
   // until the student adds them from the dialog. Off in the levelbuilder's
@@ -1681,7 +1681,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // editor.
     engine.onSpeech = (text: string) => {
       if (isPlayingRef.current) {
-        setSpoken(current => (current === text ? `${text}\u00a0` : text));
+        speakRef.current?.(text);
       }
     };
     engine.onPlayerProgress = onPlayerProgress;
@@ -2537,7 +2537,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             arrows={
               <ArrowCross arrows={arrowSet} disabled={activeTab !== 'Play'} />
             }
-            spoken={spoken}
+            speakRef={speakRef}
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
             getDefaultSpriteSize={getDefaultSpriteSize}

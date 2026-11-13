@@ -347,8 +347,8 @@ interface PlayspaceProps {
   controls?: React.ReactNode;
   // Over the box's bottom edge, unscaled.
   prompt?: React.ReactNode;
-  // What a sprite last said, read aloud by screen readers.
-  spoken?: string;
+  // Filled with a function that reads a sprite's line aloud.
+  speakRef?: React.MutableRefObject<((text: string) => void) | null>;
   // Pinned to the foot: across the column in preview, across the stage in
   // play. The box is placed to leave it room.
   bottomBar?: React.ReactNode;
@@ -384,7 +384,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   boxRef,
   controls,
   prompt,
-  spoken = '',
+  speakRef,
   bottomBar,
   arrows,
   columnHeader,
@@ -410,10 +410,18 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     heardFullHelpRef.current = true;
   }, [addToLog]);
   useEffect(() => {
-    if (spoken.trim()) {
-      addToLog(spoken.trim());
+    if (!speakRef) {
+      return;
     }
-  }, [spoken, addToLog]);
+    speakRef.current = text => {
+      if (text.trim()) {
+        addToLog(text.trim());
+      }
+    };
+    return () => {
+      speakRef.current = null;
+    };
+  }, [speakRef, addToLog]);
   // On play starting, not only on focus: VoiceOver's activation reads as a
   // pointer click, after which focus does not move to the box.
   const playStartedAtRef = useRef(0);
