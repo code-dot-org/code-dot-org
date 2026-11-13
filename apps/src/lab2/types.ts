@@ -495,6 +495,7 @@ export type AppName = keyof typeof lab2EntryPoints;
 
 export type StandaloneAppName =
   | 'spritelab'
+  | 'quest_builder'
   | 'story'
   | 'science'
   | 'poetry_hoc'

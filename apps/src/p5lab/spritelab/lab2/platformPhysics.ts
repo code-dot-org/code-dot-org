@@ -230,8 +230,10 @@ export function resolvePlatformPhysics(
     const vertical = Math.abs(dx) <= CONTACT_EPSILON;
     let landed = false;
     boxes.forEach(wall => {
+      // Resting against a wall's side can round to slightly inside it,
+      // which is not being over or under the wall.
       if (
-        Math.abs(x - wall.x) >= halfW + wall.halfW ||
+        halfW + wall.halfW - Math.abs(x - wall.x) <= CONTACT_EPSILON ||
         Math.abs(y - wall.y) >= halfH + wall.halfH
       ) {
         return;

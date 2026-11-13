@@ -11,6 +11,7 @@ import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding'
 import {GeneratedImageResult} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {ImageType} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import {FrameSize} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import {promptTextFromImage} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
 
 import {LearningPicture} from './LearningDialog';
 
@@ -128,7 +129,7 @@ export default function useLearningStory({
       toldRef.current = true;
       const story = storyFor(
         bytesToDataURI(result.uint8Array, result.mediaType),
-        result.generation.prompt,
+        promptTextFromImage(result.generation),
         result.generation.imageType,
         result.frames?.frameSize
       );
