@@ -111,9 +111,10 @@ side implements the prop. `consumer` says what a call site edits.
 | `description`                    | `Typography variant="body2" id="dsco-dialog-description"`                                                                                      | wrapper-logic | none     |
 | `customContent`                  | Text-section child after the description                                                                                                       | wrapper-logic | none     |
 | `customBottomContent`            | Panel child after the actions row                                                                                                              | wrapper-logic | none     |
-| `primaryButtonProps`             | Spread on `Button variant="contained"`, color from `mode` unless overridden                                                                    | wrapper-logic | none     |
+| `primaryButtonProps`             | Spread on `Button variant="contained"`, color from `destructive` or `mode` unless overridden                                                   | wrapper-logic | none     |
 | `secondaryButtonProps`           | Spread on `Button variant="outlined"`; renders only when passed                                                                                | wrapper-logic | none     |
 | `mode`                           | Button color (`primary`/`secondary` or `white`) and `CloseButton` color; nothing else, as today                                                | wrapper-logic | none     |
+| `destructive`                    | New; no legacy twin. Button `color="error"`, red icon badge; `primaryButtonProps.color` wins for the button                                    | wrapper-logic | none     |
 | `className`                      | `slotProps.paper.className`, beside the panel module classes; other `HTMLAttributes` (`id`, `style`, `title`, `data-*`, handlers) go there too | wrapper-logic | none     |
 | `onClose`                        | `CloseButton` `onClick` and legacy `useEscapeKeyHandler`; MUI `onClose` left unset                                                             | wrapper-logic | none     |
 | `closeLabel`                     | `CloseButton` `aria-label`, default `'Close dialog'`                                                                                           | wrapper-logic | none     |
