@@ -87,7 +87,7 @@ def share_failure_from_body(body, locale, project_type)
   # A long stack of blocks nests two levels a block, so a structured source
   # can run deeper than the parser's default of 100.
   begin
-    parsed_json = JSON.parse(body_string, max_nesting: ShareFiltering::JSON_MAX_DEPTH)
+    parsed_json = JSON.parse(body_string, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', ShareFiltering::JSON_MAX_DEPTH))
   rescue JSON::ParserError
     return false
   end
