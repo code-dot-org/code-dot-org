@@ -11,13 +11,14 @@ import {Scene} from '../types';
     theirs 220 pixels wide. */
 export const PROJECT_PICTURE_PX = 220;
 
-/**
- * Whether every pixel of the frame is the same color, as the stage of a
- * scene with nothing on it is. `pixels` holds four bytes for each pixel.
- */
+const BYTES_PER_PIXEL = 4;
+
+/** Whether every pixel is the same color, as the stage of a scene with
+    nothing on it is. */
 export function isOneColor(pixels: ArrayLike<number>): boolean {
-  for (let i = 4; i < pixels.length; i++) {
-    if (pixels[i] !== pixels[i % 4]) {
+  for (let i = BYTES_PER_PIXEL; i < pixels.length; i++) {
+    // Each byte is compared with the same channel of the first pixel.
+    if (pixels[i] !== pixels[i % BYTES_PER_PIXEL]) {
       return false;
     }
   }
@@ -33,16 +34,13 @@ interface ProjectPictureOptions {
 }
 
 /**
- * The project's picture, which the projects list and project cards show: the
- * first frame of the scene a play starts on. Returns the function to call
- * before starting a run.
+ * The project's picture: the first frame of the scene a play starts on.
+ * Returns the function to call before starting a run.
  *
- * The picture is handed to the project manager, which uploads it with the
- * project's next save, so taking one makes no request of its own. A new
- * picture is taken only when the starting scene differs from the one in the
- * last picture taken on this visit. Only the project's owner takes one, and
- * never from a share link. A frame of one flat color is not kept, so a
- * project with nothing in its starting scene keeps the default art.
+ * The project manager uploads the picture with the project's next save. A
+ * new one is taken only when the starting scene differs from the one in the
+ * last picture taken on this visit. A frame of one flat color is not kept,
+ * so a project with an empty starting scene keeps the default art.
  */
 export default function useProjectPicture({
   engineRef,
@@ -50,8 +48,13 @@ export default function useProjectPicture({
   startSceneId,
   enabled,
 }: ProjectPictureOptions): (sceneId: string) => void {
+  // Read through refs, so the returned function stays the same one.
   const scenesRef = useRef(scenes);
   scenesRef.current = scenes;
+  const startSceneIdRef = useRef(startSceneId);
+  startSceneIdRef.current = startSceneId;
+  const enabledRef = useRef(enabled);
+  enabledRef.current = enabled;
   // The scene of the most recent run that was asked for. A wait for a run
   // that never started is answered by the next run's first frame, which may
   // be another scene's.
@@ -64,9 +67,9 @@ export default function useProjectPicture({
       const engine = engineRef.current;
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       if (
-        !enabled ||
+        !enabledRef.current ||
         !engine ||
-        sceneId !== startSceneId ||
+        sceneId !== startSceneIdRef.current ||
         !projectManager?.getShouldCaptureThumbnail()
       ) {
         return;
@@ -102,6 +105,6 @@ export default function useProjectPicture({
         }, 'image/png');
       });
     },
-    [engineRef, enabled, startSceneId]
+    [engineRef]
   );
 }

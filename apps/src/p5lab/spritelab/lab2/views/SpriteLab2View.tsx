@@ -1285,7 +1285,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     activeSceneRef.current = activeScene;
   }, [activeScene, activeWorld]);
 
-  const requestThumbnail = useSceneThumbnails({
+  const requestSceneThumbnail = useSceneThumbnails({
     engineRef,
     scenes,
     channelId,
@@ -1294,15 +1294,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     getScenes,
     enabled: !isToolboxMode,
   });
-
-  // Only a project of its own is listed among the student's projects, so a
-  // level in a unit takes no project picture.
+  // A level's project is not in the student's list of projects, so only a
+  // standalone project takes a picture.
   const requestProjectPicture = useProjectPicture({
     engineRef,
     scenes,
     startSceneId: defaultPlaySceneId,
     enabled: !!levelProperties.isProjectLevel && !isToolboxMode,
   });
+  const requestThumbnail = useCallback(
+    (sceneId: string) => {
+      requestSceneThumbnail(sceneId);
+      requestProjectPicture(sceneId);
+    },
+    [requestSceneThumbnail, requestProjectPicture]
+  );
 
   // Run the current program as the live preview (cheap: the engine reuses
   // p5), held on its first frame.
@@ -1317,7 +1323,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
     if (activeSceneIdRef.current) {
       requestThumbnail(activeSceneIdRef.current);
-      requestProjectPicture(activeSceneIdRef.current);
     }
     if (activeSceneRef.current) {
       currentPlayingRef.current = {
@@ -1326,7 +1331,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       };
     }
     engine.runProgram(program, referencedImages, {holdFirstFrame: true});
-  }, [dispatch, getCode, requestThumbnail, requestProjectPicture]);
+  }, [dispatch, getCode, requestThumbnail]);
 
   const activePrompt = useAppSelector(state => state.spriteLab2.prompt);
   const askAiStatus = useAppSelector(state => state.spriteLab2.askAi);
@@ -1373,17 +1378,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       });
       dispatch(setIsRunning(true));
       requestThumbnail(scene.id);
-      requestProjectPicture(scene.id);
       engine.runProgram(program, referencedImages);
     },
-    [
-      dispatch,
-      activeSceneId,
-      getCode,
-      worldFor,
-      requestThumbnail,
-      requestProjectPicture,
-    ]
+    [dispatch, activeSceneId, getCode, worldFor, requestThumbnail]
   );
 
   const runScene = useCallback(

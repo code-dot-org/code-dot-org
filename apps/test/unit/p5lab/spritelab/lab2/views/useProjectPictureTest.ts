@@ -151,6 +151,14 @@ describe('useProjectPicture', () => {
     expect(setThumbnail).not.toHaveBeenCalled();
   });
 
+  it('returns the same function when the scenes change', () => {
+    const {result, rerender} = renderPictureHook();
+    const first = result.current;
+    rerender({scenes: [scene('first', 'changed')]});
+
+    expect(result.current).toBe(first);
+  });
+
   it('takes no picture when it is not enabled', () => {
     const {result} = renderPictureHook(undefined, false);
     result.current('first');
