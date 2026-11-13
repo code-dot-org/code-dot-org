@@ -107,7 +107,7 @@ It splits a `LabFixture` two ways:
   static routes because GET reflects prior writes.
 
 Labs export their own scenarios; e.g. `packages/labs/music/src/fixtures/`
-exports `simple`, `complex`, `error`. The studio dev wiring registers them
+exports `simple`. The studio dev wiring registers them
 under the lab key and `setActiveScenario` picks the active one from the URL.
 
 Generally, for lab fixtures, the name of the fixture is the `channelId` and
