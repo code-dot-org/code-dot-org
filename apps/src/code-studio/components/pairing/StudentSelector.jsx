@@ -1,4 +1,4 @@
-import Chips from '@code-dot-org/component-library/chips';
+import {MuiChips as Chips} from '@code-dot-org/component-library/chips';
 import PropTypes from 'prop-types';
 import React from 'react';
 

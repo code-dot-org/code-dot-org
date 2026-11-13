@@ -203,6 +203,12 @@ module.exports = {
             message:
               'DSCO Divider is deprecated. Import Divider from @mui/material; CdoTheme colors it. See frontend/packages/component-library/src/divider/README.md for the legacy color and margin props.',
           },
+          {
+            name: '@code-dot-org/component-library/chips',
+            importNames: ['Chips', 'ChipsProps', 'default'],
+            message:
+              'DSCO Chips is deprecated. Import MuiChips (and MuiChipsProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/chips-to-mui-chips.ts; see codemods/README.md there',
+          },
         ],
         patterns: [
           {
