@@ -24,6 +24,8 @@ module Services
         if Gatekeeper.allows('reader_connection_override', where: filter_params, default: false)
           yield
         else
+          # Load the session user on the writer, so a change just saved to it is never read back stale.
+          current_user
           ActiveRecord::Base.connected_to(role: :reading, &block)
         end
       end

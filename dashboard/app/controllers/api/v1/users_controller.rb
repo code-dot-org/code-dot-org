@@ -39,6 +39,8 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     }
   end
 
+  use_reader_connection_for_route(:current)
+
   # GET /api/v1/users/current
   def current
     prevent_caching
