@@ -56,7 +56,7 @@ describe('Lab2 ShareDialog', () => {
       renderShareDialog({
         dialogId: 'hoai2026',
         finishUrl: '/done',
-        projectType: 'spritelab',
+        projectType: 'quest_builder',
         ...props,
       });
 
@@ -83,11 +83,11 @@ describe('Lab2 ShareDialog', () => {
       ).toBeDisabled();
     });
 
-    it('holds Open Sprite Lab until the lab has a standalone project', () => {
+    it('offers Open Sprite Lab', () => {
       renderFinish();
       expect(
         screen.getByRole('button', {name: 'Open Sprite Lab'})
-      ).toBeDisabled();
+      ).toBeEnabled();
     });
 
     it('withholds the share link when the teacher disabled sharing', () => {
