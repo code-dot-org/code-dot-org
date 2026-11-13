@@ -174,8 +174,9 @@ collide. Here both ship from the same entry, and the DSCO stories import
 compare. The finish workflow's step 4 (RE-231) deletes the legacy source and
 renames the wrappers to the legacy names: `Accordion`, `AccordionProps`,
 `AccordionItem`, `FAQAccordion`, `FAQAccordionProps`, `FAQAccordionItem`
-and `default`. Unlike dialog, the `Mui` names do not stay as aliases: the
-same PR moves the one consumer and deletes them, so `MuiAccordion` is left
+and `default`. As in dialog's step 4 (RE-215), the `Mui` names do not stay
+as aliases: the same PR moves the one consumer and deletes them, so
+`MuiAccordion` is left
 to mean MUI's own part, imported as
 `import {Accordion as MuiAccordion} from '@mui/material'` by a caller that
 needs full control. The same PR deletes the two accordion
