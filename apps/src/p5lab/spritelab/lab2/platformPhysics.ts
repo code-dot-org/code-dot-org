@@ -230,8 +230,10 @@ export function resolvePlatformPhysics(
     const vertical = Math.abs(dx) <= CONTACT_EPSILON;
     let landed = false;
     boxes.forEach(wall => {
+      // A body flush against a wall's side can compute as a hair inside it,
+      // and must not land on or bump its head on that wall's column.
       if (
-        Math.abs(x - wall.x) >= halfW + wall.halfW ||
+        halfW + wall.halfW - Math.abs(x - wall.x) <= CONTACT_EPSILON ||
         Math.abs(y - wall.y) >= halfH + wall.halfH
       ) {
         return;
