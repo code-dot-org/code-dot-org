@@ -4,7 +4,7 @@ import {
   setProjectUpdatedSaved,
   setProjectUpdatedSaving,
 } from '@cdo/apps/code-studio/projectRedux';
-import {setChannel} from '@cdo/apps/lab2/lab2Redux';
+import {refreshShareFailure, setChannel} from '@cdo/apps/lab2/lab2Redux';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {setProjectTooLarge} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {Channel} from '@cdo/apps/lab2/types';
@@ -24,6 +24,7 @@ export default function setProjectCallbacks(
     onChannelSaved(channel);
     // If we had a successful save, we know the project is not too large.
     dispatch(setProjectTooLarge(false));
+    refreshShareFailure(channel, dispatch);
   });
   projectManager.addSaveNoopListener(channel => {
     if (channel) {

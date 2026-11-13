@@ -39,11 +39,17 @@ module ShareFiltering
   end
 
   BLOCKLY_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
-  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design sketchlab].freeze
+  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design sketchlab quest_builder].freeze
   SKETCHLAB_TEXT_FIELDS = %w[label text altText].freeze
   # Supported project types for filtering whose `source` is structured JSON
   # rather than a blockly XML/JSON string.
-  STRUCTURED_SOURCE_EXTRACTORS = {'sketchlab' => :extract_text_sketchlab}.freeze
+  STRUCTURED_SOURCE_EXTRACTORS = {
+    'sketchlab' => :extract_text_sketchlab,
+    'quest_builder' => :extract_text_quest_builder,
+  }.freeze
+  # Project types whose user-entered text is spread through main.json, not
+  # held in its `source` alone. Their extractor is given the whole file.
+  WHOLE_PROJECT_TYPES = %w[quest_builder].freeze
   JSON_MAX_DEPTH = 999
 
   # Searches for a sharing failure given a program and locale.
@@ -136,6 +142,48 @@ module ShareFiltering
         value if value.is_a?(String) && !value.strip.empty?
       end
     end.uniq
+  end
+
+  # Whether the project type's extractor reads the whole of main.json.
+  def self.whole_project_type?(project_type)
+    WHOLE_PROJECT_TYPES.include?(project_type)
+  end
+
+  # Extracts user-entered text from a Quest Builder (Sprite Lab in Lab2)
+  # project: the text fields of the blocks in every scene, and the names the
+  # student gave the scenes.
+  # @param project [Hash, String] main.json, parsed or as a JSON string.
+  # @return [Array<String>] unique, non-blank user-entered strings. Returns
+  #   an empty array for malformed input.
+  def self.extract_text_quest_builder(project)
+    if project.is_a?(String)
+      begin
+        project = JSON.parse(project, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
+      rescue JSON::NestingError
+        CDO.log.warn "ShareFiltering.extract_text_quest_builder: JSON too deep after #{JSON_MAX_DEPTH} levels"
+        return []
+      rescue JSON::ParserError
+        CDO.log.warn "ShareFiltering.extract_text_quest_builder: malformed JSON"
+        return []
+      end
+    end
+    return [] unless project.is_a?(Hash)
+
+    scenes = project['scenes'].is_a?(Array) ? project['scenes'].select {|scene| scene.is_a?(Hash)} : []
+    texts = []
+    # The top-level source is the program of a project saved before it had
+    # scenes; each scene carries its own.
+    [project['source'], *scenes.map {|scene| scene['source']}].each do |source|
+      next unless source.is_a?(Hash) && source['blocks'].is_a?(Hash)
+      blocks = source['blocks']['blocks']
+      next unless blocks.is_a?(Array)
+      blocks.each {|block| traverse_block(block, texts)}
+    end
+    scenes.each do |scene|
+      name = scene['name']
+      texts << name if name.is_a?(String) && !name.strip.empty?
+    end
+    texts.compact.uniq
   end
 
   # Clean string values from XML-wrapped field values.

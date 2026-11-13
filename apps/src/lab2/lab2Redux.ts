@@ -468,7 +468,7 @@ let shareFailureRefresh: Promise<void> = Promise.resolve();
 
 // Re-run the share filter after a successful save so the blocked UI and the
 // share dialog both reflect the saved content.
-function refreshShareFailure(
+export function refreshShareFailure(
   channel: Channel,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) {

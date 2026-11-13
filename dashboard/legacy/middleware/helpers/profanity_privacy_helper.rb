@@ -84,13 +84,15 @@ def share_failure_from_body(body, locale, project_type)
   return false unless body
   body_string = body.string
 
+  # A long stack of blocks nests two levels a block, so a structured source
+  # can run deeper than the parser's default of 100.
   begin
-    parsed_json = JSON.parse(body_string)
+    parsed_json = JSON.parse(body_string, max_nesting: ShareFiltering::JSON_MAX_DEPTH)
   rescue JSON::ParserError
     return false
   end
 
-  source = parsed_json['source']
+  source = ShareFiltering.whole_project_type?(project_type) ? parsed_json : parsed_json['source']
   return false unless source
 
   begin
