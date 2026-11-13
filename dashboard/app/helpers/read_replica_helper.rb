@@ -10,13 +10,12 @@ module ReadReplicaHelper
   module GatekeeperReadReplica
     extend ActiveSupport::Concern
     module ClassMethods
-      # On by default on development and test environments to exercise read splitting earlier (even when there isn't
-      # a separate read replica database). Defaults to disabled on production.
       def read_replica?
-        # `read_from_writer specifies that all ActiveRecord queries should read from the writer database for the current
-        # request/job. One usage is to ensure curriculum authors (levelbuilders) always read the changes they just saved.
-        return false if Current.read_from_writer
+        # Levelbuilders need to be able to read back their own curriculum saves data has replicated to the reader.
+        return false if RequestStore.store[:current_user]&.levelbuilder?
 
+        # Enable read splitting by default on `development` and `test` to exercise this functionality more broadly.
+        # Disabled by default on production.
         Gatekeeper.allows('dashboard_read_replica', default: rack_env?(:development, :test))
       end
 
