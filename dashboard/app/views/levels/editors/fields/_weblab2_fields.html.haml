@@ -7,7 +7,7 @@
 
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_ai_tutor, description: "Hide AI Tutor on this level"}
-    %p With AI Tutor hidden, the AI Tutor tab and the editor's ask-AI actions are gone, and instructions show in the Instructions tab whatever "Show instructions in AI Tutor" says.
+    %p Note that if this is enabled, the "showInstructionsInAiTutor" option is ignored, and instructions are always shown in the Instructions tab.
 
   .field
     = f.label :initial_view_mode, 'Initial View Mode'
