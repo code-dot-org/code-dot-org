@@ -8,9 +8,9 @@
   }
 }
 
-// Share and Remix sit at the row's start, as in HeaderMiddle, and the
-// widget is centred. The empty third column balances the first; when room
-// runs short the widget shrinks, not the buttons.
+// Share and Remix sit at the row's start, as in HeaderMiddle, at their full
+// width. The widget is centred in the row when there is room, and otherwise
+// starts after the buttons; it shrinks before they do.
 .row {
   width: 100%;
   min-width: 0;
@@ -32,8 +32,7 @@
   }
 }
 
-// The project buttons cannot shrink, and their container clips, so the
-// project info keeps its width and the names give way instead.
+// As wide as its buttons, not the whole first column.
 .projectInfo {
   justify-self: start;
   margin-inline-end: 5px;
