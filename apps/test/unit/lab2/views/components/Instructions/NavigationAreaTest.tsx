@@ -334,6 +334,39 @@ describe('NavigationArea', () => {
     });
   });
 
+  describe('announcing Continue', () => {
+    const READY = /Level complete! The .+ button is ready\./;
+
+    it('announces Continue once the checklist is done', async () => {
+      const {rerender} = renderDefault({
+        objectivesDone: false,
+        hideContinueIfDisabled: true,
+      });
+      expect(screen.queryByText(READY)).toBeNull();
+      rerender(
+        <ThemeProvider>
+          <Provider store={store}>
+            <NavigationArea
+              levelProperties={makeLevelProperties()}
+              isRunning={false}
+              hasRun={false}
+              hasEdited={false}
+              objectivesDone
+              hideContinueIfDisabled
+            />
+          </Provider>
+        </ThemeProvider>
+      );
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+    });
+
+    it('says nothing on a level that opens with Continue available', async () => {
+      renderDefault({objectivesDone: true});
+      await new Promise(resolve => requestAnimationFrame(resolve));
+      expect(screen.queryByText(READY)).toBeNull();
+    });
+  });
+
   describe('null rendering', () => {
     it('returns null when hideContinueIfDisabled=true, continue disabled, no feedback', () => {
       // requireRun=true and hasRun=false disables the continue button.
