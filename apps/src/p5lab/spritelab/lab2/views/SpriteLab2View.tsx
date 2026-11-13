@@ -155,7 +155,10 @@ import PromptBar from './components/PromptBar';
 import {sceneDropdownButtonId} from './components/SceneDropdown';
 import ShareActions from './components/ShareActions';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
-import DiscoverBlocksButton from './DiscoverBlocksButton';
+import DiscoverBlocksButton, {
+  DISCOVER_BLOCKS_BUTTON_ID,
+} from './DiscoverBlocksButton';
+import FreeplayIntroDialog from './FreeplayIntroDialog';
 import ImagesTab from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
@@ -496,15 +499,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       SpritelabAskAiRefusals.NOT_IN_PILOT
   );
   const [showBlockCatalog, setShowBlockCatalog] = useState(false);
-  // Dismissing the catalog, not opening it, is what counts as seen: an
-  // opening cut short (a Start Over that leaves the level, a reload) comes
-  // back next time.
-  const closeBlockCatalog = useCallback(() => {
-    setShowBlockCatalog(false);
-    if (!currentSources.blockCatalogSeen) {
-      patchSources({blockCatalogSeen: true});
+  const [showFreeplayIntro, setShowFreeplayIntro] = useState(false);
+  // An arrow at Discover blocks, from when the intro closes until the
+  // catalog opens.
+  const [showCatalogArrow, setShowCatalogArrow] = useState(false);
+  // The intro counts as seen only once closed, so a reload while it is open
+  // shows it again.
+  const closeFreeplayIntro = useCallback(() => {
+    setShowFreeplayIntro(false);
+    setShowCatalogArrow(true);
+    if (!currentSources.freeplayIntroSeen) {
+      patchSources({freeplayIntroSeen: true});
     }
-  }, [currentSources.blockCatalogSeen, patchSources]);
+  }, [currentSources.freeplayIntroSeen, patchSources]);
   const addCatalogBlock = useCallback(
     (type: string) => {
       if (!chosenBlockSet.has(type)) {
@@ -1486,23 +1493,30 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     refreshToolbox,
   ]);
 
-  // The catalog opens itself the first time the student lands here, and
-  // closes if the level changes under it.
+  // A level without a catalog closes it and drops its arrow.
   useEffect(() => {
     if (!catalog.length) {
       setShowBlockCatalog(false);
-    } else if (
-      isEditable &&
-      animationsSeeded &&
-      !currentSources.blockCatalogSeen
-    ) {
-      setShowBlockCatalog(true);
+      setShowCatalogArrow(false);
     }
+  }, [catalog.length]);
+
+  // The free play intro opens the first time the student reaches a level that
+  // asks for it. Off in edit modes, whose saves would carry its flag into
+  // start sources.
+  useEffect(() => {
+    setShowFreeplayIntro(
+      !!levelProperties.freeplayIntro &&
+        isEditable &&
+        !isLevelEditMode &&
+        animationsSeeded &&
+        !currentSources.freeplayIntroSeen
+    );
   }, [
-    catalog.length,
+    levelProperties.freeplayIntro,
     isEditable,
     animationsSeeded,
-    currentSources.blockCatalogSeen,
+    currentSources.freeplayIntroSeen,
   ]);
 
   const {playMusic} = useSceneMusic(activeTab === 'Play', musicProjects);
@@ -2171,7 +2185,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     onManageScenes: () => setScenesDialog({creating: false}),
   };
   const catalogOffered = catalog.length > 0 && isEditable;
-  const openBlockCatalog = () => setShowBlockCatalog(true);
+  const openBlockCatalog = () => {
+    setShowBlockCatalog(true);
+    setShowCatalogArrow(false);
+  };
 
   return (
     <div
@@ -2233,13 +2250,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         />
       )}
+      {showCatalogArrow && catalogOffered && (
+        <Callout selector={`#${DISCOVER_BLOCKS_BUTTON_ID}`} direction="down" />
+      )}
       {showBlockCatalog && (
         <BlockCatalogDialog
           entries={catalog}
           chosen={chosenBlockSet}
           onAdd={addCatalogBlock}
-          onClose={closeBlockCatalog}
+          onClose={() => setShowBlockCatalog(false)}
         />
+      )}
+      {showFreeplayIntro && (
+        <FreeplayIntroDialog onClose={closeFreeplayIntro} />
       )}
       {/* The last level's Finish, in the page header as well. */}
       {levelProperties.useSecondaryFinishButton && !isShareView && (
