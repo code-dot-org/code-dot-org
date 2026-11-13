@@ -4,16 +4,10 @@ import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import useSources from '@cdo/apps/lab2/hooks/useSources';
-import {setChannel, setShareFailure} from '@cdo/apps/lab2/lab2Redux';
-import {fetchShareFailure} from '@cdo/apps/lab2/projects/channelsApi';
+import {setChannel} from '@cdo/apps/lab2/lab2Redux';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
-import {
-  Channel,
-  LevelProperties,
-  ProjectSources,
-  ShareFailure,
-} from '@cdo/apps/lab2/types';
+import {Channel, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {
   getStore,
   registerReducers,
@@ -35,14 +29,8 @@ jest.mock('@cdo/apps/lab2/hooks/useSources/configureHeader', () => ({
   default: jest.fn(),
 }));
 
-jest.mock('@cdo/apps/lab2/projects/channelsApi', () => ({
-  ...jest.requireActual('@cdo/apps/lab2/projects/channelsApi'),
-  fetchShareFailure: jest.fn(),
-}));
-
 const mockGetProjectManagerForLevel =
   ProjectManagerFactory.getProjectManagerForLevel as jest.Mock;
-const mockFetchShareFailure = fetchShareFailure as jest.Mock;
 
 interface TestSources extends ProjectSources {
   source: string;
@@ -169,65 +157,6 @@ describe('useSources', () => {
       act(() => listeners.forEach(listener => listener(renamed)));
 
       expect(result.current.channel).toEqual(renamed);
-    });
-
-    it("publishes the load's share check result to redux", async () => {
-      const failure = {type: 'email', content: 'a@b.example'} as ShareFailure;
-      (fakeManager.load as jest.Mock).mockResolvedValue({
-        sources: SAVED_SOURCES,
-        channel: OWNED_CHANNEL,
-        shareFailure: failure,
-      });
-      const dispatchSpy = jest.spyOn(store, 'dispatch');
-      renderUseSources();
-      await flush();
-
-      expect(dispatchSpy).toHaveBeenCalledWith(setShareFailure(failure));
-    });
-
-    it('publishes no share failure for a project the load found none in', async () => {
-      const dispatchSpy = jest.spyOn(store, 'dispatch');
-      renderUseSources();
-      await flush();
-
-      expect(dispatchSpy).toHaveBeenCalledWith(setShareFailure(null));
-    });
-
-    it('checks a filtered project again after each save', async () => {
-      const failure = {type: 'phone', content: '555-0100'} as ShareFailure;
-      mockFetchShareFailure.mockResolvedValue(failure);
-      // Before the render: the hook keeps the dispatch it was given.
-      const dispatchSpy = jest.spyOn(store, 'dispatch');
-      renderUseSources();
-      await flush();
-
-      const saved = {
-        id: 'abc',
-        isOwner: true,
-        projectType: 'quest_builder',
-      } as Channel;
-      const listeners = (
-        fakeManager.addSaveSuccessListener as jest.Mock
-      ).mock.calls.map(([listener]) => listener);
-      act(() => listeners.forEach(listener => listener(saved)));
-      await flush();
-
-      expect(mockFetchShareFailure).toHaveBeenCalledWith('abc');
-      expect(dispatchSpy).toHaveBeenCalledWith(setShareFailure(failure));
-    });
-
-    it('does not ask for a check on a project type the server does not filter', async () => {
-      renderUseSources();
-      await flush();
-
-      const saved = {id: 'abc', isOwner: true, projectType: 'music'} as Channel;
-      const listeners = (
-        fakeManager.addSaveSuccessListener as jest.Mock
-      ).mock.calls.map(([listener]) => listener);
-      act(() => listeners.forEach(listener => listener(saved)));
-      await flush();
-
-      expect(mockFetchShareFailure).not.toHaveBeenCalled();
     });
 
     it('falls back to defaultSources when the project has none', async () => {

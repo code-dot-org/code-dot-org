@@ -26,6 +26,7 @@ import {unpackSources} from '../packedWorld';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
 import SpriteLab2View from './SpriteLab2View';
+import useShareCheck from './useShareCheck';
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 const isLevelEditMode = getIsLevelEditMode();
@@ -141,6 +142,8 @@ const SpriteLab2Container: React.FunctionComponent<
       updateSources(prev => ({...prev, ...patch}), forceSave),
     [updateSources]
   );
+
+  useShareCheck(channel?.id, !!levelProperties.isProjectLevel);
 
   // Set the project manager in the registry for external components that need it (e.g. header).
   useEffect(() => {

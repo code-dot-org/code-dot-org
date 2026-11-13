@@ -3,10 +3,7 @@ import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
-import {
-  setChannel as setChannelAction,
-  setShareFailure,
-} from '@cdo/apps/lab2/lab2Redux';
+import {setChannel as setChannelAction} from '@cdo/apps/lab2/lab2Redux';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {getSourcesStoreForApp} from '@cdo/apps/lab2/projects/sourcesStoreForApp';
@@ -194,7 +191,6 @@ export default function useSources<T extends ProjectSources>({
       if (!usesProjects && !isLevelEditMode) {
         projectManagerRef.current = null;
         dispatch(setChannelAction(undefined));
-        dispatch(setShareFailure(null));
         return;
       }
 
@@ -231,9 +227,6 @@ export default function useSources<T extends ProjectSources>({
       // Some components (including non-Lab2 areas like the header) read state.lab.channel directly
       // so we need to set it here. Prefer to read channel from this hook via the consuming lab within lab components.
       dispatch(setChannelAction(projectAndSources?.channel));
-      // The blocked page and the share dialog read this. The server checks
-      // only some project types; for the rest it is null.
-      dispatch(setShareFailure(projectAndSources?.shareFailure ?? null));
       setSources(
         getInitialSources(
           levelProperties,

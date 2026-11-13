@@ -50,6 +50,8 @@ module ShareFiltering
   # Project types whose user-entered text is spread through main.json, not
   # held in its `source` alone. Their extractor is given the whole file.
   WHOLE_PROJECT_TYPES = %w[quest_builder].freeze
+  # The name Quest Builder gives a scene the student has not named.
+  QUEST_BUILDER_DEFAULT_SCENE_NAME = /\AScene \d+\z/
   JSON_MAX_DEPTH = 999
 
   # Searches for a sharing failure given a program and locale.
@@ -151,7 +153,8 @@ module ShareFiltering
 
   # Extracts user-entered text from a Quest Builder (Sprite Lab in Lab2)
   # project: the text fields of the blocks in every scene, and the names the
-  # student gave the scenes.
+  # student gave the scenes. A scene still on its default name adds nothing,
+  # so a project with no text of the student's own is not sent to be checked.
   # @param project [Hash, String] main.json, parsed or as a JSON string.
   # @return [Array<String>] unique, non-blank user-entered strings. Returns
   #   an empty array for malformed input.
@@ -181,7 +184,8 @@ module ShareFiltering
     end
     scenes.each do |scene|
       name = scene['name']
-      texts << name if name.is_a?(String) && !name.strip.empty?
+      next unless name.is_a?(String) && !name.strip.empty?
+      texts << name unless name.match?(QUEST_BUILDER_DEFAULT_SCENE_NAME)
     end
     texts.compact.uniq
   end

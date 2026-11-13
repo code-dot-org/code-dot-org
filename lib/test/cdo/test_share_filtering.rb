@@ -470,16 +470,31 @@ class ShareFilteringTest < Minitest::Test
     }
   end
 
-  def test_extract_text_quest_builder_reads_every_scene_and_the_scene_names
+  def test_extract_text_quest_builder_reads_every_scene_and_the_names_given_to_scenes
     assert_equal(
-      ['Hello!', 'You win!', 'Scene 1', 'Scene 2'],
+      ['Hello!', 'You win!', 'The cave'],
+      ShareFiltering.extract_text_quest_builder(generate_quest_builder_project(scene_name: 'The cave'))
+    )
+  end
+
+  def test_extract_text_quest_builder_leaves_out_default_scene_names
+    assert_equal(
+      ['Hello!', 'You win!'],
       ShareFiltering.extract_text_quest_builder(generate_quest_builder_project)
     )
   end
 
+  def test_find_share_failure_quest_builder_with_no_text_skips_filters
+    ProfanityFilter.expects(:find_potential_profanity).never
+    RegexpUtils.expects(:find_potential_email).never
+
+    project = {'scenes' => [{'id' => 'scene-1', 'name' => 'Scene 1', 'source' => {'blocks' => {'blocks' => [{'type' => 'spritelab2_whenRun'}]}}}]}
+    assert_nil ShareFiltering.find_share_failure(project, 'en', 'quest_builder')
+  end
+
   def test_extract_text_quest_builder_accepts_json_string
     assert_equal(
-      ['Hello!', 'You win!', 'Scene 1', 'Scene 2'],
+      ['Hello!', 'You win!'],
       ShareFiltering.extract_text_quest_builder(generate_quest_builder_project.to_json)
     )
   end
@@ -489,7 +504,7 @@ class ShareFilteringTest < Minitest::Test
     stack = (1..120).inject(deepest) {|below, _| {'type' => 'some_block', 'next' => {'block' => below}}}
     project = {'scenes' => [{'name' => 'Scene 1', 'source' => {'blocks' => {'blocks' => [stack]}}}]}
     assert_equal(
-      ['at the bottom', 'Scene 1'],
+      ['at the bottom'],
       ShareFiltering.extract_text_quest_builder(project.to_json(max_nesting: false))
     )
   end
