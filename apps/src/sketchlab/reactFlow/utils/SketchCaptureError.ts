@@ -44,7 +44,7 @@ export class SketchCaptureError extends Error {
     const details = {...describeCause(cause), ...context};
     super(`Sketch capture failed: ${details.reason}`);
     // The ES5 build target otherwise leaves this with Error's prototype.
-    Object.setPrototypeOf(this, SketchCaptureError.prototype);
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'SketchCaptureError';
     this.details = details;
   }

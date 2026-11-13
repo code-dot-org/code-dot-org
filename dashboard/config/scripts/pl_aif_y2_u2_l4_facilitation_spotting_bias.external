@@ -1,0 +1,122 @@
+name 'pl-aif-y2-u2-l4-facilitation-spotting-bias'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Selecting Data
+
+## What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Exploring Data Bias:</strong> Anita's chart, then pairs work through the Exploring Data Bias Activity Guide, applying three questions to real datasets</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Working with Lists (Levels 1-3):</strong> students write loops over Python lists to check a dataset's representativeness in code</div>
+  </div>
+</div>
+
+<hr>
+
+## The Three Real Circulate Questions
+
+To decide whether a dataset is representative, students need more than a gut feeling, they need a repeatable way to check. The lesson gives them exactly that: three questions to ask of any dataset, in order.
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;">1. What group are we trying to make predictions about?</div>
+  <div style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;">2. What are the important subgroups within that group?</div>
+  <div style="font-size: 16px; line-height: 1.6;">3. Does the data include each relevant subgroup?</div>
+</div>
+
+Here's the real exercise students apply these to, predicting vocabulary size by age, for all English speakers in the US:
+
+<div style="font-family: Arial, sans-serif; font-size: 14pt; color: #111; line-height: 1.4; max-width: 1000px; margin: 0 auto; border: 2px solid #7050cc; border-radius: 16px; padding: 24px; background-color: #fff;">
+
+  <p style="margin: 0 0 12px;"><strong>Dataset:</strong></p>
+
+  <table style="width: 100%; border-collapse: collapse; font-size: 14pt;">
+    <thead>
+      <tr style="background-color: #7050cc; color: #fff;">
+        <th scope="col" style="border: 1px solid #111; padding: 8px; text-align: center;">Who</th>
+        <th scope="col" style="border: 1px solid #111; padding: 8px; text-align: center;">Age</th>
+        <th scope="col" style="border: 1px solid #111; padding: 8px; text-align: center;">Vocab (number of words)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in Massachusetts</td>
+        <td style="border: 1px solid #111; padding: 8px;">5</td>
+        <td style="border: 1px solid #111; padding: 8px;">7,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in California</td>
+        <td style="border: 1px solid #111; padding: 8px;">15</td>
+        <td style="border: 1px solid #111; padding: 8px;">8,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in Massachusetts</td>
+        <td style="border: 1px solid #111; padding: 8px;">25</td>
+        <td style="border: 1px solid #111; padding: 8px;">15,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in Arizona</td>
+        <td style="border: 1px solid #111; padding: 8px;">35</td>
+        <td style="border: 1px solid #111; padding: 8px;">18,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in New Mexico</td>
+        <td style="border: 1px solid #111; padding: 8px;">45</td>
+        <td style="border: 1px solid #111; padding: 8px;">22,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in Massachusetts</td>
+        <td style="border: 1px solid #111; padding: 8px;">55</td>
+        <td style="border: 1px solid #111; padding: 8px;">27,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in New York</td>
+        <td style="border: 1px solid #111; padding: 8px;">65</td>
+        <td style="border: 1px solid #111; padding: 8px;">28,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in Texas</td>
+        <td style="border: 1px solid #111; padding: 8px;">75</td>
+        <td style="border: 1px solid #111; padding: 8px;">35,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin: 18px 0 12px;">
+    Does the data include each relevant subgroup? Is the data biased or representative?
+  </p>
+
+  <div style="border: 1px solid #111; border-radius: 10px; padding: 12px; min-height: 110px; color: #c00000;">
+    The data includes people of different ages and locations, but only includes native speakers. It leaves out anyone who isn’t a native speaker of English, which is a relevant subgroup. As a result, the data is biased.
+  </div>
+
+</div>
+    
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Think about any groups of people who aren't included in this table. Who might be missing?"</div>
+</div>
+
+<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #611D00; line-height: 1.5;">
+    <strong>&#9888; A known simplification:</strong> this heuristic doesn't account for datasets with insufficient data from a subgroup, that requires sampling and sample size, covered later in Unit 3. If a student raises disproportionate sampling, that's a great instinct, just note it's coming later rather than diving in now.
+  </div>
+</div>
+
+## Real-World Stakes
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Beyond ice cream:</strong> the lesson explicitly raises higher-stakes examples, a college admissions model missing data on non-native English speakers, facial recognition trained disproportionately on white faces. Anita's low-stakes example is the entry point, not the ceiling, don't let the discussion stop at ice cream if students are ready to go further.
+  </div>
+</div>
+MARKDOWN

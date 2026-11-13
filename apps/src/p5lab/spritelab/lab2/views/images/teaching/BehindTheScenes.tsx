@@ -127,19 +127,21 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
             <div className={styles.body}>
               <div className={styles.lead}>
                 {picture && (
-                  <div
-                    className={classNames(
-                      styles.thumb,
-                      picture.pixelated && styles.pixelArt,
-                      // The strip is scaled so its first frame fills the
-                      // box; the later frames fall past the box's right
-                      // edge and are clipped.
-                      picture.sheet && styles.thumbStrip
-                    )}
-                    style={{backgroundImage: `url(${picture.src})`}}
-                    role="img"
-                    aria-label={picture.name ?? 'Your picture'}
-                  />
+                  <div className={styles.thumbBox}>
+                    <div
+                      className={classNames(
+                        styles.thumb,
+                        picture.pixelated && styles.pixelArt,
+                        // The strip is scaled so its first frame fills the
+                        // box; the later frames fall past the box's right
+                        // edge and are clipped.
+                        picture.sheet && styles.thumbStrip
+                      )}
+                      style={{backgroundImage: `url(${picture.src})`}}
+                      role="img"
+                      aria-label={picture.name ?? 'Your picture'}
+                    />
+                  </div>
                 )}
                 <p id="dsco-dialog-description" className={styles.intro}>
                   We sent the AI these words. It made a picture to match them.

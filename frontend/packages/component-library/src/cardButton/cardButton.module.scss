@@ -1,0 +1,213 @@
+// Two classes, so MUI's single-class ButtonBase reset never wins on order.
+.cardButton:global(.MuiButtonBase-root) {
+  --card-button-padding-block: var(--spacing-p-xs);
+  --card-button-padding-inline: var(--spacing-p-xs);
+  --card-button-gap: 0.75rem;
+  --card-button-start-box: 1.25rem;
+  --card-button-start-glyph: var(--font-size-body-lg);
+  --card-button-end-box: 1.25rem;
+  --card-button-end-glyph: var(--font-size-body-md);
+  --card-button-title-size: var(--font-size-body-md);
+  --card-button-title-leading: 1.375rem;
+  --card-button-description-size: var(--font-size-body-sm);
+  --card-button-description-leading: 1.125rem;
+  --card-button-background: var(--background-neutral-primary);
+  --card-button-border: var(--border-neutral-primary);
+  --card-button-title: var(--text-neutral-primary);
+  --card-button-description: var(--text-neutral-secondary);
+  // Selected and disabled set --card-button-start outright, dropping the custom color.
+  --card-button-start: var(
+    --card-button-start-custom,
+    var(--text-brand-primary)
+  );
+  --card-button-end: var(--text-neutral-secondary);
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--card-button-gap);
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: var(--card-button-padding-block) var(--card-button-padding-inline);
+  border: 1px solid var(--card-button-border);
+  border-radius: var(--shape-md);
+  background-color: var(--card-button-background);
+  font-family: var(--font-family-main);
+  text-align: start;
+  text-decoration: none;
+  vertical-align: top;
+
+  @media (hover: hover) {
+    &:hover {
+      --card-button-background: var(--background-neutral-secondary);
+      --card-button-border: var(--border-neutral-secondary);
+    }
+  }
+
+  &:active {
+    --card-button-background: var(--background-neutral-tertiary);
+    --card-button-border: var(--border-neutral-secondary);
+  }
+
+  &:global(.Mui-focusVisible) {
+    outline: 2px solid var(--border-focused-primary);
+    outline-offset: 2px;
+  }
+
+  &.cardButton-small {
+    --card-button-padding-block: 0.625rem;
+    --card-button-padding-inline: 0.75rem;
+    --card-button-gap: 0.625rem;
+    --card-button-start-box: 1.125rem;
+    --card-button-start-glyph: var(--font-size-body-md);
+    --card-button-end-box: 1.125rem;
+    --card-button-end-glyph: var(--font-size-body-sm);
+    --card-button-title-size: var(--font-size-body-sm);
+    --card-button-title-leading: 1.125rem;
+    --card-button-description-size: var(--font-size-body-xs);
+    --card-button-description-leading: 1rem;
+  }
+
+  &.cardButton-vertical {
+    --card-button-padding-block: var(--spacing-p-s);
+    --card-button-padding-inline: var(--spacing-p-s);
+    --card-button-gap: var(--spacing-p-xxs);
+    --card-button-start-box: 2rem;
+    --card-button-start-glyph: 1.5rem;
+
+    // 2px more at the top optically balances the icon against the text.
+    padding-top: calc(var(--card-button-padding-block) + 0.125rem);
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    // Not growing lets justify-content center the stack in a stretched tile.
+    .content {
+      flex: 0 1 auto;
+      align-self: stretch;
+      align-items: center;
+    }
+  }
+
+  &.cardButton-vertical.cardButton-small {
+    --card-button-padding-block: var(--spacing-p-xs);
+    --card-button-padding-inline: var(--spacing-p-xs);
+    --card-button-start-box: 1.5rem;
+    --card-button-start-glyph: 1.25rem;
+  }
+
+  &.cardButton-fullWidth {
+    display: flex;
+    width: 100%;
+  }
+
+  &.cardButton-selected {
+    --card-button-background: var(--background-selected-primary);
+    --card-button-border: var(--border-selected-primary);
+    --card-button-title: var(--text-selected-primary);
+    --card-button-description: var(--text-selected-primary);
+    --card-button-start: var(--text-selected-primary);
+    --card-button-end: var(--text-selected-primary);
+
+    @media (hover: hover) {
+      &:hover {
+        --card-button-background: var(--background-selected-strong);
+        --card-button-border: var(--border-selected-strong);
+      }
+    }
+
+    &:active {
+      --card-button-background: var(--background-selected-strong);
+      --card-button-border: var(--border-selected-strong);
+    }
+  }
+
+  &:global(.Mui-disabled) {
+    --card-button-background: var(--background-neutral-primary);
+    --card-button-border: var(--border-disabled-neutral);
+    --card-button-title: var(--text-disabled-neutral);
+    --card-button-description: var(--text-disabled-neutral);
+    --card-button-start: var(--text-disabled-neutral);
+    --card-button-end: var(--text-disabled-neutral);
+
+    // Arbitrary content cannot be recolored, so fade it instead.
+    .startContent {
+      opacity: 0.3;
+    }
+
+    &.cardButton-selected {
+      --card-button-background: var(--background-disabled-neutral);
+      --card-button-title: var(--text-disabled-neutral-inverse);
+      --card-button-description: var(--text-disabled-neutral-inverse);
+      --card-button-start: var(--text-disabled-neutral-inverse);
+      --card-button-end: var(--text-disabled-neutral-inverse);
+    }
+  }
+}
+
+.startIcon,
+.endIcon,
+.startContent {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.startIcon {
+  width: var(--card-button-start-box);
+  height: var(--card-button-start-box);
+  color: var(--card-button-start);
+  font-size: var(--card-button-start-glyph);
+}
+
+.endIcon {
+  width: var(--card-button-end-box);
+  height: var(--card-button-end-box);
+  color: var(--card-button-end);
+  font-size: var(--card-button-end-glyph);
+}
+
+.startContent {
+  min-width: var(--card-button-start-box);
+  min-height: var(--card-button-start-box);
+}
+
+.startIcon i,
+.endIcon i {
+  line-height: 1;
+}
+
+// Grows when the card is wider than its text so the end icon pins right.
+.content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.title,
+.description {
+  display: block;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.title {
+  color: var(--card-button-title);
+  font-size: var(--card-button-title-size);
+  font-weight: var(--font-weight-semi-bold);
+  line-height: var(--card-button-title-leading);
+}
+
+.description {
+  color: var(--card-button-description);
+  font-size: var(--card-button-description-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--card-button-description-leading);
+}

@@ -91,6 +91,7 @@ interface ImageListProps {
   /** Whether the choice may move to another image. A level about one image
       keeps it where it is: the other tiles are listed but disabled. */
   chooseOffered?: boolean;
+  heading?: string;
   /** Called with the kind picked from the plus menu; absent when the level
       does not let students add images, and the plus is then hidden. */
   onNew?: (kind: NewImageKind) => void;
@@ -117,6 +118,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   chosenId,
   onChoose,
   chooseOffered = true,
+  heading = 'Your images',
   onNew,
   newKind,
   onDelete,
@@ -172,7 +174,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   const chosenImage = images.find(image => image.key === chosenId);
   const deletable = !!onDelete && !!chosenImage;
   return (
-    <section className={styles.list} aria-label="Your images">
+    <section className={styles.list} aria-label={heading}>
       <div className={styles.listHeader}>
         <div className={styles.listTitle}>
           <MuiTypography
@@ -180,7 +182,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
             variant="h6"
             className={styles.listName}
           >
-            Your images
+            {heading}
           </MuiTypography>
           <MuiTypography
             component="p"
@@ -325,8 +327,8 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
       {deletable && (
         <div className={styles.listFooter}>
           <MuiIconButton
-            variant="text"
-            color="tertiary"
+            variant="contained"
+            color="error"
             size="small"
             aria-label="Delete image"
             disabled={disabled}

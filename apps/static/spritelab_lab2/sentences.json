@@ -98,16 +98,6 @@
         "bodyPlan": "quadruped"
       },
       {
-        "id": "fairy",
-        "text": "fairy",
-        "icon": "wand-sparkles"
-      },
-      {
-        "id": "astronaut",
-        "text": "astronaut",
-        "icon": "user-astronaut"
-      },
-      {
         "id": "unicorn",
         "text": "unicorn",
         "icon": "unicorn",
@@ -138,6 +128,7 @@
       {
         "id": "witch",
         "text": "witch",
+        "modelFacingText": "green-skinned witch",
         "icon": "hat-witch"
       }
     ],
@@ -552,15 +543,18 @@
       "slots": {
         "adjective": {
           "label": "adjective",
+          "heading": "Adjective",
           "words": "adjectives"
         },
         "creature": {
           "label": "creature",
+          "heading": "Noun",
           "words": "creatures",
           "required": true
         },
         "clothing": {
           "label": "clothing",
+          "heading": "Noun",
           "words": "clothing"
         }
       }
@@ -583,10 +577,12 @@
       "slots": {
         "adjective": {
           "label": "adjective",
+          "heading": "Adjective",
           "words": "objectLooks"
         },
         "thing": {
           "label": "thing",
+          "heading": "Noun",
           "words": "objects",
           "required": true
         }
@@ -620,15 +616,18 @@
       "slots": {
         "adjective": {
           "label": "adjective",
+          "heading": "Adjective",
           "words": "placeMoods"
         },
         "place": {
           "label": "place",
+          "heading": "Noun",
           "words": "places",
           "required": true
         },
         "from": {
           "label": "from where",
+          "heading": "Adverb",
           "words": "viewpoints"
         }
       }
@@ -651,10 +650,12 @@
       "slots": {
         "adjective": {
           "label": "adjective",
+          "heading": "Adjective",
           "words": "blockLooks"
         },
         "material": {
           "label": "material",
+          "heading": "Noun",
           "words": "blockMaterials",
           "required": true
         }

@@ -1,7 +1,6 @@
 import {Button, IconButton, Tooltip} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 
-import {ThemeProvider} from '@/common/contexts';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 import {keyboardOnlyTooltipProps} from '../index';
@@ -125,45 +124,29 @@ export const KeyboardOnly: StoryFn = () => (
   </>
 );
 
-const panel = {
-  display: 'flex',
-  gap: '2rem',
-  padding: '1.5rem',
-  borderRadius: '0.5rem',
-  background: 'var(--background-neutral-primary)',
-};
-
 /**
- * `ThemeProvider` hands its theme to the portaled bubble, and a pinned
- * provider keeps its section's theme. A bare `data-theme` attribute is not
- * seen; the bubble there needs `slotProps`.
+ * The portal escapes `data-theme`, so a tooltip in a themed subtree needs its
+ * own, passed through `slotProps`.
  */
 export const InsideDarkTheme: StoryFn = () => (
-  <>
-    <ThemeProvider initialTheme="Dark">
-      <div style={panel}>
-        <Tooltip title="Follows ThemeProvider">
-          <Button variant="contained">inside ThemeProvider</Button>
-        </Tooltip>
-        <ThemeProvider theme="Light">
-          <div style={panel}>
-            <Tooltip title="Follows the pinned section">
-              <Button variant="contained">pinned Light</Button>
-            </Tooltip>
-          </div>
-        </ThemeProvider>
-      </div>
-    </ThemeProvider>
-    <div data-theme="Dark" style={{...panel, marginTop: '1rem'}}>
-      <Tooltip
-        title="Themed through slotProps"
-        slotProps={{tooltip: {'data-theme': 'Dark'}}}
-      >
-        <Button variant="contained">bare data-theme, slotProps</Button>
-      </Tooltip>
-      <Tooltip title="Page theme">
-        <Button variant="contained">bare data-theme, nothing set</Button>
-      </Tooltip>
-    </div>
-  </>
+  <div
+    data-theme="Dark"
+    style={{
+      display: 'flex',
+      gap: '2rem',
+      padding: '1.5rem',
+      borderRadius: '0.5rem',
+      background: 'var(--background-neutral-primary)',
+    }}
+  >
+    <Tooltip
+      title="Themed tooltip"
+      slotProps={{tooltip: {'data-theme': 'Dark'}}}
+    >
+      <Button variant="contained">data-theme via slotProps</Button>
+    </Tooltip>
+    <Tooltip title="Unthemed tooltip">
+      <Button variant="contained">data-theme omitted</Button>
+    </Tooltip>
+  </div>
 );

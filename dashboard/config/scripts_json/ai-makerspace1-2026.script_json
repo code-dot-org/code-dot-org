@@ -4,11 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_migrated": true
+      "content_area": "hoc",
+      "curriculum_umbrella": "HOAI",
+      "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-09 21:26:33 UTC",
+    "serialized_at": "2026-11-13 04:08:27 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -40,6 +45,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "In AI Makerspace, students build a website in Web Lab based on their own interests, with AI as a co-creator. They learn to direct AI using the language of web development, check the changes AI makes, and revise their prompts until the site does what they want. A quick Skill Check finds each student’s starting point, then students choose which skill to work on next, so expect your class to be working on different skills at the same time.\n\nNote: This tutorial uses AI features that require verified teacher permissions. See this support article for more information on how to become a verified teacher.",
+        "preparation": "- Test out AI Makerspace to ensure familiarity with the platform.\n- Review the introduction video and practice walking students through the steps to co-create with AI.\n- *[Optional]* Find the resources you need to plan, implement, and celebrate the Hour of AI at your school [here](https://csforall.org/en-US/hour-of-ai/how-to/k-12educator)!",
+        "student_overview": "Ready to build a website about something you’re interested in? In AI Makerspace, you’ll create it in Web Lab with AI as your co-creator, choosing which skills to learn as you go, like describing your design in real web terms or checking whether AI’s fix actually worked. You’ll finish with a site that’s all yours to share."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -50,12 +58,55 @@
   ],
   "lesson_activities": [
     {
-      "key": "39b7cf5a-904c-4fdb-8d58-f806e17b3db5",
+      "key": "f6d4f5f0-e51f-4466-aa23-fc0185964b25",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6d4f5f0-e51f-4466-aa23-fc0185964b25",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-makerspace1-2026"
+      }
+    },
+    {
+      "key": "39b7cf5a-904c-4fdb-8d58-f806e17b3db5",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "AI Maker Space"
       },
       "seeding_key": {
         "lesson_activity.key": "39b7cf5a-904c-4fdb-8d58-f806e17b3db5",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-makerspace1-2026"
+      }
+    },
+    {
+      "key": "3aa15034-3414-418a-96b7-81c65a670320",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3aa15034-3414-418a-96b7-81c65a670320",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-makerspace1-2026"
+      }
+    },
+    {
+      "key": "cdda7d38-1278-4f06-a984-69530baaaf53",
+      "position": 4,
+      "properties": {
+        "name": "Continue Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cdda7d38-1278-4f06-a984-69530baaaf53",
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "ai-makerspace1-2026"
@@ -64,13 +115,207 @@
   ],
   "activity_sections": [
     {
-      "key": "877d0612-ecf5-44e0-814b-00403d34923a",
+      "key": "008928fa-bced-4695-b86e-afaf808d40e1",
       "position": 1,
       "properties": {
+        "description": "Today you are joining the Hour of AI, a worldwide event. Students everywhere are taking their first step from watchers to creators. Today, you are not just using technology, you are creating with it.\n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "008928fa-bced-4695-b86e-afaf808d40e1",
+        "lesson_activity.key": "f6d4f5f0-e51f-4466-aa23-fc0185964b25"
+      }
+    },
+    {
+      "key": "c67d58fe-e247-4711-a7f9-01218bf0c9f2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Give students a quick, playful look at how choices change what AI builds, before they open the tutorial.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Start with a plain page, guide students through three rounds of choices about audience, look, and activity. Read the updated AI prompt aloud together, then click “Compare two very different pages” to explore contrasting versions.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a demo for the whole room, not a task for each student. The activity takes about 30 seconds per round, and there are eight possible pages, so Back and Start over let you replay with different choices."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c67d58fe-e247-4711-a7f9-01218bf0c9f2",
+        "lesson_activity.key": "f6d4f5f0-e51f-4466-aa23-fc0185964b25"
+      }
+    },
+    {
+      "key": "ae4aefcd-725c-4f71-9c70-d34c0beef235",
+      "position": 3,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Take a few answers for each question.\n\n- \"We started with the same prompt. What changed when the audience and the look changed?\"\n\n- \"AI built both pages. Who decided how they turned out?\"\n\n- \"If you were steering AI, what would you decide first?\"\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students seeing that changing the audience and the look changed nearly everything: the words, the colors, the icons, and the menu items (objective 1). Listen for them saying that people made those decisions and AI built what they steered it toward (objective 2). The last question is the hook: students start picturing their own site, which leads straight into planning."
+      },
+      "seeding_key": {
+        "activity_section.key": "ae4aefcd-725c-4f71-9c70-d34c0beef235",
+        "lesson_activity.key": "f6d4f5f0-e51f-4466-aa23-fc0185964b25"
+      }
+    },
+    {
+      "key": "a2781207-a6f9-49d9-9c6a-b4b577f81ef3",
+      "position": 4,
+      "properties": {
+        "description": "AI builds what you steer it toward. Different decisions lead to completely different pages. Today you're the one making those decisions, and AI is your building partner. You say it, it builds with you, and you decide what happens next.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a2781207-a6f9-49d9-9c6a-b4b577f81ef3",
+        "lesson_activity.key": "f6d4f5f0-e51f-4466-aa23-fc0185964b25"
+      }
+    },
+    {
+      "key": "e98248dc-fe10-4153-90e1-3a77a055a4c2",
+      "position": 1,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the four intro steps in order: Intro video, intro panels, student examples, Plan your site, and a brief Skill Check.",
+        "duration": "5",
+        "name": "Getting Started"
+      },
+      "seeding_key": {
+        "activity_section.key": "e98248dc-fe10-4153-90e1-3a77a055a4c2",
+        "lesson_activity.key": "39b7cf5a-904c-4fdb-8d58-f806e17b3db5"
+      }
+    },
+    {
+      "key": "8c5d02b8-d536-4d61-a1fe-c8722bc0019f",
+      "position": 2,
+      "properties": {
+        "description": "\"The tool will use your answers and your first prompt to decide where your path begins. Everyone's map looks a little different.\"",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8c5d02b8-d536-4d61-a1fe-c8722bc0019f",
+        "lesson_activity.key": "39b7cf5a-904c-4fdb-8d58-f806e17b3db5"
+      }
+    },
+    {
+      "key": "877d0612-ecf5-44e0-814b-00403d34923a",
+      "position": 3,
+      "properties": {
+        "progression_name": "AI Maker Space"
       },
       "seeding_key": {
         "activity_section.key": "877d0612-ecf5-44e0-814b-00403d34923a",
         "lesson_activity.key": "39b7cf5a-904c-4fdb-8d58-f806e17b3db5"
+      }
+    },
+    {
+      "key": "d496fcf4-d05a-4a6f-be8f-8045d9d3bf14",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Remind:** Students are working with real AI, so they should not include personal information (PII) in their prompts or on their pages. That includes full names, school names, addresses, phone numbers, email addresses, and photos of themselves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d496fcf4-d05a-4a6f-be8f-8045d9d3bf14",
+        "lesson_activity.key": "39b7cf5a-904c-4fdb-8d58-f806e17b3db5"
+      }
+    },
+    {
+      "key": "d9d8580a-678a-4dc4-b87b-5923b6cba22c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students work through checkpoints at their own pace, applying each skill to their own site.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students work through the checkpoints on their skill map in Web Lab. Each skill checkpoint is a short sequence of levels and ends with students applying the skill to their own project. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the four directions. Each direction has a Direct checkpoint and a second checkpoint.\n\nWhat each direction asks of students:\n\n- **Interactive elements:** Direct the action (what a visitor does and what happens), then Make it respond.\n\n- **Style and design:** Direct the look (colors, type, and layout), then Make it look right.\n\n- **Story and message:** Direct the words (tone and message), then Make the point.\n\n- **Under the hood:** Direct the code (ask for a small piece of code, then ask for an explanation), then Look under the hood.",
+        "duration": "40",
+        "name": "Checkpoints"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9d8580a-678a-4dc4-b87b-5923b6cba22c",
+        "lesson_activity.key": "39b7cf5a-904c-4fdb-8d58-f806e17b3db5"
+      }
+    },
+    {
+      "key": "35e39d7e-aff5-47fe-b6dd-520fb0185475",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Coach by asking, not answering.\n\n- \"What did you ask for, and what did you get?\" \n- \"What would you tell the AI so it knows exactly what you mean?\" \n- \"How do you know it's fixed?\" \n- \"What is that part of the page called?\" \n\n**Common misconceptions:**\n- The AI is always right. Prompt them to compare the output to their plan.\n- A longer prompt is a better prompt. Point out that specific beats long. Ask what the AI would have had to guess.\n- If it looks different, it's fixed. Remind them to check that the original problem is gone.\n- Vocabulary is just memorizing words. Point out that precise words get better results from the AI.\n- The tutor said not yet, so I failed. Explain that the map is a path, not a test.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Look at student sites and conversations, not just completion.\n\n **Prompts:** are they getting more specific over time? (objectives 1 and 3) \n\n**Decisions:** can students explain why they made a choice? (objective 2) \n\n**Debugging:** do students include context when something breaks, and do they test the fix? (objectives 4 and 5) \n\nThe skills panel shows which of the three skills a student worked on. Treat it as a snapshot of exposure, not a grade."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "35e39d7e-aff5-47fe-b6dd-520fb0185475",
+        "lesson_activity.key": "39b7cf5a-904c-4fdb-8d58-f806e17b3db5"
+      }
+    },
+    {
+      "key": "05718a88-0892-40c2-beca-be1f543e9204",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students notice the gaps in their own prompts halfway through the build.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show this slide around minute 20 of the build and pause the room. Take two or three answers, then send students back to building. This also works as the halfway check on pacing.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n\n\"What did the AI have to guess?\"\n\n\"What will you tell it next time so it doesn't?\"\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noticing details they left out of a prompt (objectives 1 and 4).\n\n",
+        "name": "Discussion",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If a student finishes early, point them to the extension checkpoints on the map, such as an added feature or more style and design options, and encourage them to look at the other directions.\n\nIf a student is moving slowly, reassure them that one well-built feature is a success. Not every checkpoint needs to be reached in an hour.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "05718a88-0892-40c2-beca-be1f543e9204",
+        "lesson_activity.key": "39b7cf5a-904c-4fdb-8d58-f806e17b3db5"
+      }
+    },
+    {
+      "key": "f7474ca5-e3d7-402b-9b18-ebf8a4a332b7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Walk students through the wrap up so they know what happens next, and have them share their sites and reflect on how they worked with AI.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Pair share prompts. Have students share their sites in pairs or small groups.\n\n- Show one thing you made and one prompt that made a difference.\n\n- Show a moment when the AI got it wrong. What did you do?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students who point to a specific prompt and who can say what they did when the AI got something wrong."
+      },
+      "seeding_key": {
+        "activity_section.key": "f7474ca5-e3d7-402b-9b18-ebf8a4a332b7",
+        "lesson_activity.key": "3aa15034-3414-418a-96b7-81c65a670320"
+      }
+    },
+    {
+      "key": "e911ed04-31f5-499f-8602-c894f71565ff",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students get into pairs. Each partner shares one thing they made and one prompt that made a difference. Their partner gives **TAG** feedback and then they switch roles. \n\n**TAG** Feedback:\n- **T**ell them something you like\n- **A**sk them something about their site\n- **G**ive a suggestion",
+        "name": "TAG Feedback",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The TAG protocol keeps peer feedback specific and kind. Encourage students to name a specific part of the page, using the page-parts vocabulary in their feedback."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e911ed04-31f5-499f-8602-c894f71565ff",
+        "lesson_activity.key": "3aa15034-3414-418a-96b7-81c65a670320"
+      }
+    },
+    {
+      "key": "2547eaec-a9e4-484a-ba21-e0de032e1588",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** \"If AI built it, it's still my site.\" Listen for students pointing to their own ideas and choices. There is no single right answer.",
+        "name": "Final Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "2547eaec-a9e4-484a-ba21-e0de032e1588",
+        "lesson_activity.key": "3aa15034-3414-418a-96b7-81c65a670320"
+      }
+    },
+    {
+      "key": "b3de7ba5-d468-4770-8f27-14cc18b3f386",
+      "position": 1,
+      "properties": {
+        "description": "This activity is a great introduction to developing websites with AI. Explore other courses for your class:\n\n\n- [Computer Vision](https://studio.code.org/courses/computer-vision/units/1) Explore, design, and evaluate technology\n\n- [AI Foundations: Designing and Building with AI](https://studio.code.org/courses/ai-foundations-designing-and-building-with-ai-2026)  is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.\n\n-  [AI Foundations: Exploring AI and CS](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026?viewAs=Instructor) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models."
+      },
+      "seeding_key": {
+        "activity_section.key": "b3de7ba5-d468-4770-8f27-14cc18b3f386",
+        "lesson_activity.key": "cdda7d38-1278-4f06-a984-69530baaaf53"
       }
     }
   ],
@@ -81,6 +326,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "AI Maker Space"
       },
       "bonus": false,
       "seeding_key": {
@@ -112,10 +358,29 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "AI Maker Space Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1KhTY-ova1UKJiWSVCCFz3_UNMsqtiOO9aedxDCTC_VE/template/preview",
+      "key": "ai_maker_space_lesson_slides",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/presentation/d/1KhTY-ova1UKJiWSVCCFz3_UNMsqtiOO9aedxDCTC_VE/export",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai_maker_space_lesson_slides"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "ai_maker_space_lesson_slides"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -133,10 +398,97 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "2fe53b30-4448-499d-8f89-00e71c48858d",
+      "properties": {
+        "description": "Write specific prompts and evaluate AI’s results to bring a website closer to your idea."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "2fe53b30-4448-499d-8f89-00e71c48858d"
+      }
+    },
+    {
+      "key": "c6e44dcf-813d-4d2d-b3cb-853656406533",
+      "properties": {
+        "description": "Describe problems with enough context for AI to help, and verify that the fixes work."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "c6e44dcf-813d-4d2d-b3cb-853656406533"
+      }
+    },
+    {
+      "key": "da96c356-46b9-4a2f-ac3e-7a917fdc787c",
+      "properties": {
+        "description": "Use web development vocabulary to describe the parts of a page."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "da96c356-46b9-4a2f-ac3e-7a917fdc787c"
+      }
+    }
+  ],
+  "objectives_script_levels": [
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AI Makerspace"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-makerspace1-2026",
+        "activity_section.key": "877d0612-ecf5-44e0-814b-00403d34923a",
+        "objective.key": "2fe53b30-4448-499d-8f89-00e71c48858d"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AI Makerspace"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-makerspace1-2026",
+        "activity_section.key": "877d0612-ecf5-44e0-814b-00403d34923a",
+        "objective.key": "c6e44dcf-813d-4d2d-b3cb-853656406533"
+      }
+    },
+    {
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AI Makerspace"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-makerspace1-2026",
+        "activity_section.key": "877d0612-ecf5-44e0-814b-00403d34923a",
+        "objective.key": "da96c356-46b9-4a2f-ac3e-7a917fdc787c"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

@@ -1,0 +1,10 @@
+name 'data-makes-ai-project-data-choice-study'
+display_name 'Alternative Study Playlist Datasets'
+description 'The following datasets have been curated differently than the original:'
+
+sublevels
+level 'data-makes-ai-project-study-2'
+level 'data-makes-ai-project-study-3'
+level 'data-makes-ai-project-study-4'
+
+uses_lab2

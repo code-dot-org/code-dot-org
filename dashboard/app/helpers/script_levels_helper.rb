@@ -69,7 +69,7 @@ module ScriptLevelsHelper
     if script.name == Unit::HOC_2013_NAME
       CDO.studio_url('/api/hour/begin_codeorg.png')
     else
-      CDO.studio_url("/api/hour/begin_#{script.name}.png")
+      CDO.studio_url("/api/hour/begin_#{script.hoc_tutorial_code}.png")
     end
   end
 

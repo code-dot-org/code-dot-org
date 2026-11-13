@@ -24,10 +24,12 @@ export default function UpdateEmailModal({
   open,
   onClose,
   isTeacher,
+  requiresPassword,
 }: {
   open: boolean;
   onClose: () => void;
   isTeacher: boolean;
+  requiresPassword: boolean;
 }) {
   const mutation = useUpdateEmail(DashboardApiClient);
   const toast = useToast();
@@ -88,15 +90,17 @@ export default function UpdateEmailModal({
         errorMessage={errors.fieldErrors.email?.[0]}
         aria-invalid={errors.fieldErrors.email ? true : undefined}
       />
-      <TextField
-        label="Current password"
-        name="current_password"
-        inputType="password"
-        value={currentPassword}
-        onChange={event => setCurrentPassword(event.target.value)}
-        errorMessage={errors.fieldErrors.current_password?.[0]}
-        aria-invalid={errors.fieldErrors.current_password ? true : undefined}
-      />
+      {requiresPassword && (
+        <TextField
+          label="Current password"
+          name="current_password"
+          inputType="password"
+          value={currentPassword}
+          onChange={event => setCurrentPassword(event.target.value)}
+          errorMessage={errors.fieldErrors.current_password?.[0]}
+          aria-invalid={errors.fieldErrors.current_password ? true : undefined}
+        />
+      )}
       {isTeacher && (
         <EmailOptInField
           value={optIn}

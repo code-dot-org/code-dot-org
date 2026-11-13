@@ -5,6 +5,10 @@ import {
 } from '@cdo/apps/blockly/utils/toolbox';
 
 import {BURST_BLOCK_TYPE} from '../blockDefinitions/burst';
+import {
+  CLICKED_SPRITE_BLOCK_TYPE,
+  TOUCHED_SPRITE_BLOCK_TYPE,
+} from '../blockDefinitions/eventSprites';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
 import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
@@ -39,7 +43,11 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     THE_PLAYER_BLOCK_TYPE,
     THE_PLAYER_2_BLOCK_TYPE,
   ],
-  Events: [WHEN_PLAYER_BLOCK_TYPE],
+  Events: [
+    WHEN_PLAYER_BLOCK_TYPE,
+    TOUCHED_SPRITE_BLOCK_TYPE,
+    CLICKED_SPRITE_BLOCK_TYPE,
+  ],
   Behaviors: [
     'spritelab2_beginsBehavior',
     'spritelab2_movingLeft',
