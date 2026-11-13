@@ -203,6 +203,29 @@ module.exports = {
             message:
               'DSCO Divider is deprecated. Import Divider from @mui/material; CdoTheme colors it. See frontend/packages/component-library/src/divider/README.md for the legacy color and margin props.',
           },
+          {
+            name: '@code-dot-org/component-library/accordion',
+            importNames: [
+              'default',
+              'Accordion',
+              'AccordionProps',
+              'FAQAccordion',
+              'FAQAccordionProps',
+            ],
+            message:
+              'DSCO Accordion and FAQAccordion are deprecated. Import MuiAccordion / MuiFAQAccordion (and MuiAccordionProps / MuiAccordionItem / MuiFAQAccordionProps) from the same path instead.',
+          },
+          {
+            name: '@code-dot-org/component-library/accordion/faqAccordion',
+            importNames: [
+              'default',
+              'FAQAccordion',
+              'FAQAccordionProps',
+              'FAQAccordionItem',
+            ],
+            message:
+              'DSCO FAQAccordion is deprecated. Import MuiFAQAccordion (and MuiFAQAccordionProps / MuiFAQAccordionItem) from the same path instead.',
+          },
         ],
         patterns: [
           {
