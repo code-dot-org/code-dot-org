@@ -1479,17 +1479,16 @@ FactoryBot.define do
 
   factory :challenge do
     association :lesson
+    sequence(:key) {|n| "challenge-#{n}"}
     question {'What is 2 + 2?'}
-
-    trait :with_rubric do
-      rubric do
-        [
-          {'level' => 0, 'description' => 'No answer is present'},
-          {'level' => 1, 'description' => 'Answer is partially correct'},
-          {'level' => 2, 'description' => 'Answer is correct'},
-          {'level' => 3, 'description' => 'Answer is correct and the reasoning is clearly explained'},
-        ]
-      end
+    default_modality {'whiteboard'}
+    rubric do
+      [
+        {'level' => 0, 'description' => 'No answer is present'},
+        {'level' => 1, 'description' => 'Answer is partially correct'},
+        {'level' => 2, 'description' => 'Answer is correct'},
+        {'level' => 3, 'description' => 'Answer is correct and the reasoning is clearly explained'},
+      ]
     end
   end
 

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-132667-d99d724a14e9",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 1: Talking to Machines",
+  "question": "You've got 30 seconds to think like a robot. Then 30 seconds to think like YOU. Same sentence, two totally different brains.\n\nSteps:\n1. Pick a sentence starter from the list below.\n2. Finish it the way you think an AI would, with the most common, predictable answer.\n3. Now finish the SAME sentence with your own weird, specific, personal answer.\n4. Do it again with a new sentence if you've got time.\n\nSentence starters:\n• “The dog barked at the ___.”\n• “I opened the fridge and found ___.”\n• “My teacher is always holding a ___.”\n• “I looked out the window and saw ___.”\n• “The smell coming from the kitchen was ___.”\n• “My phone buzzed with a notification about ___.”\n• “The strangest thing in my backpack right now is ___.”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not attempt a sentence completion, or only says the sentence starter with no ending."
+    },
+    {
+      "level": 1,
+      "description": "Student gives only one type of answer (either the “AI-style” common completion OR their personal completion, not both)."
+    },
+    {
+      "level": 2,
+      "description": "Student gives both a common/predictable completion and a personal/specific completion for at least one sentence."
+    },
+    {
+      "level": 3,
+      "description": "Student gives both completions for two or more sentences, and verbally names a difference between the two answers (e.g., “mine is weirder because...”)."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

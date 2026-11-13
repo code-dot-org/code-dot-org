@@ -1546,7 +1546,7 @@ Dashboard::Application.routes.draw do
     end
     resources :quiz_question_responses, only: [:create]
 
-    resources :challenges, only: [:index, :show] do
+    resources :challenges, only: [:index, :show, :create, :update, :destroy] do
       member do
         get :starter_image
       end
