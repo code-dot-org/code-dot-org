@@ -12112,6 +12112,7 @@ __metadata:
     jest-scss-transform: "npm:^1.0.3"
     jest-transform-stub: "npm:^2.0.0"
     jquery: "npm:1.12.1"
+    jquery-mask-plugin: "npm:^1.14.16"
     jquery-ui: "npm:^1.12.1"
     js-cookie: "npm:^2.1.2"
     js-file-download: "npm:^0.4.12"
@@ -21290,6 +21291,13 @@ canvg@gabelerner/canvg:
   version: 0.16.0
   resolution: "jmespath@npm:0.16.0"
   checksum: 10/cc8b4a5cd2a22a79fc2695d66e5a43bc0020ec1ebdbe648440e796764751af2f495771ce877dea45ee6545530f0a1528450c3c3026bc0e9d976a93447af9fb74
+  languageName: node
+  linkType: hard
+
+"jquery-mask-plugin@npm:^1.14.16":
+  version: 1.14.16
+  resolution: "jquery-mask-plugin@npm:1.14.16"
+  checksum: 10/1145fbca7dc9fff39dcd805a872742dc07e4d33918b7a8502479fa5255330d06030f94638eadc57377e246d9a3cc2b86f6496fb3ac9270d6e1e06fcb38db910b
   languageName: node
   linkType: hard
 

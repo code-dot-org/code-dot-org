@@ -2,6 +2,7 @@ import Link from '@code-dot-org/component-library/link';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import $ from 'jquery';
+import 'jquery-mask-plugin';
 import PropTypes from 'prop-types';
 import React from 'react';
 
