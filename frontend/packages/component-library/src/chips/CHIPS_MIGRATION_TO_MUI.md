@@ -26,10 +26,11 @@ describes a group (`options`/`values`/`setValues`, the `name[]` form array,
 group-level `required` with custom validity, the `fieldset` and its
 heading), which MUI `Chip` does not model. The look is keyed to the
 wrapper's own DOM (`:has(input:checked)`), so a theme variant would style an
-MUI `Chip` that has no checked state without the wrapper. A global `MuiChip`
-override would also restyle the five apps files that use MUI `Chip` today
-(`sentencePieces`, `AiTutorVersionFileChip`, `UploadedFileChip`,
-`BackpackFileChip`, `NetworkRequestChip`). No `styleOverrides/chips.ts` is
+MUI `Chip` that has no checked state without the wrapper. Nothing else
+renders an MUI `Chip` today (the apps files named `*Chip` are hand-built
+pills), so a `MuiChip` theme override would reach only this wrapper. Moving
+the module's rules there waits for the `tags` migration, which maps to `Chip`
+too, so both share one base look. No `styleOverrides/chips.ts` is
 added, and `muiAugmentation.ts` does not change: `size`, `color` and
 `textThickness` stay wrapper props mapped to module classes, not MUI unions.
 
