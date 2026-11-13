@@ -188,8 +188,6 @@ class Pd::ProfessionalLearningController < ApplicationController
     zip_code = params[:zip_code]
 
     partner, _ = RegionalPartner.find_by_zip(zip_code)
-    # Narrow in SQL and eager-load sessions: the filter below otherwise costs a query per workshop, three times over.
-    # `hidden` is nullable, so NULL rows must survive this scope as they survive `!ws.hidden`.
     rp_workshops =
       if partner
         partner.pd_workshops.where(started_at: nil, hidden: [false, nil]).includes(:sessions)
