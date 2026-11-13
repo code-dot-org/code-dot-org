@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2026-11-13T13:28:25.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "hoai2026_intro",
+    "uses_lab2": "true",
+    "video_full_width": true,
+    "encrypted": "false",
+    "header_label": "Getting started",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_final_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-13T13:28:25.161+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-video-intro\\\"\"],\"cloned_from\":\"hoai2026-dev-video-intro\"}]"
+}]]></config>
+</StandaloneVideo>

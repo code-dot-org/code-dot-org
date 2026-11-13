@@ -1,0 +1,137 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2026-11-13T13:28:26.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "world_keeps_roles": [
+      "treasure"
+    ],
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
+    "lock_earlier_blocks": true,
+    "level_mode": {
+      "kind": "code",
+      "limitedPaintTools": true,
+      "generationLimit": 5,
+      "imageType": "background",
+      "imageRole": "platform-background",
+      "imageFirst": true,
+      "learning": true,
+      "oneImage": true,
+      "extraTabs": [
+        "World"
+      ],
+      "paletteRoles": [
+        "treasure",
+        "block"
+      ]
+    },
+    "pinned_scene": {
+      "id": "scene-1",
+      "name": "Scene 1"
+    },
+    "image_role_defaults": {
+      "background": "platform-background"
+    },
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs"
+        }
+      ]
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "room": {
+          "type": "gamelab_setBackgroundImageAs"
+        }
+      }
+    ],
+    "objectives": {
+      "title": "**Set the scene**",
+      "items": [
+        {
+          "text": "In **Images**, select the **+** button.",
+          "check": {
+            "kind": "image",
+            "imageType": "background"
+          }
+        },
+        {
+          "text": "Make a **prompt** that describes your background, or draw it yourself.",
+          "check": {
+            "kind": "image",
+            "imageType": "background"
+          }
+        },
+        {
+          "text": "In **Code**, put **set background** under **when run**.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_setBackgroundImageAs",
+            "under": "spritelab2_whenRun"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Set the scene\r\nA **background** is the picture behind your world.",
+    "header_label": "Set the scene",
+    "callouts": [
+      {
+        "target": "code-tab",
+        "when": {
+          "done": [
+            0
+          ],
+          "tabNot": "Code"
+        }
+      }
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "name_suffix": "_final_2026",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-13T13:28:26.474+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-set-the-scene\\\"\"],\"cloned_from\":\"hoai2026-dev-set-the-scene\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>

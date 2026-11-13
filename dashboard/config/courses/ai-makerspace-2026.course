@@ -6,13 +6,12 @@
   "original_script_names": [
     "ai-makerspace1-2026"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "ai-makerspace",
-    "numbered_units": "auto",
     "version_year": "2026"
   },
   "resources": [

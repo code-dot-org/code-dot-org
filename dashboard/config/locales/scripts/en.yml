@@ -30556,6 +30556,8 @@ en:
               name: 'Lesson 23: Comparing Algorithms'
             lesson-23:
               name: 'Lesson 25: Debugging'
+            lesson-24:
+              name: 'Lesson 24: Comparing Algorithms Day 2 (Make)'
           lesson_groups: {}
           name: csp-unit2-dev-27-28
           title: Unit 2 - Building Solutions Using Selection and Iteration
@@ -31287,8 +31289,20 @@ en:
               name: Hour of AI
           lesson_groups: {}
           name: ai-makerspace1-2026
-          title: ''
+          title: AI Makerspace
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Learn to make a website with AI in this adaptive Hour of AI tutorial.
+          description: |-
+            In AI Makerspace, students build a website in Web Lab based on their own interests, with AI as a co-creator. They learn to direct AI using the language of web development, check the changes AI makes, and revise their prompts until the site does what they want. A quick Skill Check finds each student’s starting point, then students choose which skill to work on next, so expect your class to be working on different skills at the same time.
+
+            Note: This tutorial uses AI features that require verified teacher permissions. See [this support article](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher) for more information on how to become a verified teacher.
+          student_description: Ready to build a website about something you’re interested in? In AI Makerspace, you’ll create it in Web Lab with AI as your co-creator, choosing which skills to learn as you go, like describing your design in real web terms or checking whether AI’s fix actually worked. You’ll finish with a site that’s all yours to share.
+        quest-builder-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: quest-builder-2026
+          title: Quest Builder
+          description_audience: ''
+          description_short: Create a quest or build a game with this new Hour of AI tutorial, one part at a time.
+          description: In this Hour of AI lesson, students create their own quest, a game with a goal, one part at a time. They can use AI to make the art, judging each image against their own vision, and get a glimpse into how AI makes images. Students will use block-based code to decide what happens when the player reaches an object or when the characters meet, practicing decomposition and event-based thinking. Because the image generation is a simulation, students can explore safely.
+          student_description: Ready to build your own quest? In Quest Builder, you’ll make a game with a hero, treasure, and a world you design, then use code to decide what happens when the player reaches an important object or when the characters meet. Tell AI what to make, check that each image fits your idea, or draw your own. Then play the quest you built!

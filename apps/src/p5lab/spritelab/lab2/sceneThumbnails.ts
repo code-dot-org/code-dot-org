@@ -55,15 +55,18 @@ export function thumbnailFileName(sceneId: string, fingerprint: string) {
   return `scene-thumb-${sceneId}-${fingerprint.slice(0, 8)}.png`;
 }
 
-/** A square copy of the stage, THUMBNAIL_PX on a side. Synchronous, so the
+/** A square copy of the stage, `size` pixels on a side. Synchronous, so the
     frame is the one on screen when it is called. */
-export function copyFrame(stage: HTMLCanvasElement): HTMLCanvasElement {
+export function copyFrame(
+  stage: HTMLCanvasElement,
+  size = THUMBNAIL_PX
+): HTMLCanvasElement {
   const copy = document.createElement('canvas');
-  copy.width = THUMBNAIL_PX;
-  copy.height = THUMBNAIL_PX;
+  copy.width = size;
+  copy.height = size;
   const ctx = copy.getContext('2d')!;
   ctx.imageSmoothingQuality = 'high';
-  ctx.drawImage(stage, 0, 0, THUMBNAIL_PX, THUMBNAIL_PX);
+  ctx.drawImage(stage, 0, 0, size, size);
   return copy;
 }
 

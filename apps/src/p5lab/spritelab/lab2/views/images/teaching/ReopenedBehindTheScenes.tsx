@@ -3,6 +3,7 @@
 
 import React from 'react';
 
+import {promptTextFromImage} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
 import {sentPromptsFor} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentPrompts';
 
 import {ProjectImage} from '../projectImages';
@@ -32,7 +33,7 @@ const ReopenedBehindTheScenes: React.FunctionComponent<
         src
           ? storyFor(
               src,
-              generation.prompt,
+              promptTextFromImage(generation),
               generation.imageType,
               sheet?.frameSize
             )
