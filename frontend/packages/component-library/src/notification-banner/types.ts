@@ -1,11 +1,10 @@
-export type NotificationBannerVariant =
-  | 'primary'
+export type NotificationBannerSentiment =
   | 'brand'
-  | 'info'
+  | 'pink'
+  | 'neutral'
   | 'success'
-  | 'warning'
   | 'error'
-  | 'ai'
-  | 'gray';
+  | 'warning'
+  | 'info';
 
-export type NotificationBannerStyle = 'subtle' | 'filled';
+export type NotificationBannerFillStyle = 'none' | 'color';

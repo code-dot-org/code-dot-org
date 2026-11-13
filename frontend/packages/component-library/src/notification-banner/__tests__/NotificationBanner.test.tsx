@@ -3,10 +3,11 @@ import userEvent from '@testing-library/user-event';
 import {vi} from 'vitest';
 
 import NotificationBanner from '../NotificationBanner';
+import {NotificationBannerSentiment} from '../types';
 
 describe('Design System - NotificationBanner', () => {
   const defaultProps = {
-    variant: 'info' as const,
+    sentiment: 'info' as const,
     title: 'Test Title',
     description: 'Test description',
     icon: {iconName: 'circle-info', iconStyle: 'solid' as const},
@@ -100,43 +101,41 @@ describe('Design System - NotificationBanner', () => {
     expect(banner).toHaveAttribute('aria-live', 'assertive');
   });
 
-  it('renders all variants correctly', () => {
-    const variants = [
-      'primary',
+  it('renders every sentiment', () => {
+    const sentiments: NotificationBannerSentiment[] = [
       'brand',
-      'info',
+      'pink',
+      'neutral',
       'success',
-      'warning',
       'error',
-      'ai',
-      'gray',
-    ] as const;
+      'warning',
+      'info',
+    ];
 
-    variants.forEach(variant => {
+    sentiments.forEach(sentiment => {
       const {unmount} = render(
-        <NotificationBanner {...defaultProps} variant={variant} />,
+        <NotificationBanner {...defaultProps} sentiment={sentiment} />,
       );
       expect(screen.getByText('Test Title')).toBeInTheDocument();
       unmount();
     });
   });
 
-  it('renders both styles correctly', () => {
+  it('renders both fill styles', () => {
     const {rerender} = render(
-      <NotificationBanner {...defaultProps} style="subtle" />,
+      <NotificationBanner {...defaultProps} fillStyle="none" />,
     );
     let banner = screen.getByRole('status');
-    expect(banner).toBeInTheDocument();
+    expect(banner.className).toMatch(/none/);
 
-    rerender(<NotificationBanner {...defaultProps} style="filled" />);
+    rerender(<NotificationBanner {...defaultProps} fillStyle="color" />);
     banner = screen.getByRole('status');
-    expect(banner).toBeInTheDocument();
+    expect(banner.className).toMatch(/color/);
   });
 
   it('defaults to fullWidth true', () => {
     render(<NotificationBanner {...defaultProps} />);
     const banner = screen.getByRole('status');
-    // CSS Module class is applied for fullWidth (default: true)
     expect(banner.className).toMatch(/fullWidth/);
   });
 
