@@ -143,6 +143,7 @@ function getSerializedAnimationProps(animation) {
     'generation',
     'edited',
     'poses',
+    'flagged',
   ]);
 }
 

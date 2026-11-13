@@ -64,6 +64,8 @@ export enum FontSize {
 
 export const INITIAL_VERSION_ID = 'initial-version';
 
+export const ABUSE_SCORE_BLOCK_THRESHOLD = 15;
+
 export const IMAGE_MIME_TO_EXTENSIONS = {
   'image/gif': ['gif'],
   'image/jpeg': ['jpeg', 'jpg'],

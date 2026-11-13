@@ -44,6 +44,7 @@ import SentenceScene from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/Sentenc
 import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
 import {readWordLayout} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/wordLayout';
 import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AdvancedPopover, {
@@ -64,7 +65,7 @@ import RatingBar from './teaching/RatingBar';
 import ReopenedBehindTheScenes from './teaching/ReopenedBehindTheScenes';
 import useLearningStory from './teaching/useLearningStory';
 import useDrawing from './useDrawing';
-import useImageUpload from './useImageUpload';
+import useImageUpload, {MODERATION_APP_NAME} from './useImageUpload';
 import useImageWriter, {ImageTarget, UploadedImage} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
@@ -920,6 +921,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         />
       )}
       <upload.FileInput />
+      {upload.flaggedImage && (
+        <FlaggedImageModal
+          appName={MODERATION_APP_NAME}
+          onAccept={upload.acceptFlaggedImage}
+          onCancel={upload.cancelFlaggedImage}
+        />
+      )}
       <p aria-live="polite" className={styles.srOnly}>
         {uploadStatus}
       </p>

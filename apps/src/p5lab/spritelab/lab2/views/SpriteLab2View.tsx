@@ -130,7 +130,12 @@ import spriteLab2Reducer, {
 } from '../redux/spriteLab2Redux';
 import {sceneMetadataFor} from '../sceneThumbnails';
 import SpriteLab2Engine from '../SpriteLab2Engine';
-import {SpriteLab2LevelProperties, Scene, Sources} from '../types';
+import {
+  SpriteLab2LevelProperties,
+  Scene,
+  Sources,
+  RuntimeAnimationList,
+} from '../types';
 import {
   compileWorldPrelude,
   DEFAULT_SCENE_GRID_SIZE,
@@ -171,6 +176,7 @@ import useLevelBlocks from './useLevelBlocks';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
 import useProjectPicture from './useProjectPicture';
+import useReleaseRemovedImages from './useReleaseRemovedImages';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -402,6 +408,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const isRunning = useAppSelector(state => state.runState.isRunning);
+  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
+  const releaseRemovedImages = useReleaseRemovedImages();
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
   const blocklySettings = useBlocklySettings();
   const themeSetting = useThemeSetting('spritelab');
@@ -1183,6 +1191,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     cancelRerunWatchRef.current = cancel;
   }, []);
 
+  // The images the incoming sources no longer contains.
+  const droppedImages = useCallback((animations: Sources['animations']) => {
+    const kept = new Set(animations?.orderedKeys ?? []);
+    const list: RuntimeAnimationList = getStore().getState().animationList;
+    return list.orderedKeys
+      .filter(key => !kept.has(key))
+      .map(key => list.propsByKey[key]);
+  }, []);
+
   // Reseed the animation list on reinitialization. The template carries no
   // animations, so Start Over drops the images.
   const seededReinitCountRef = useRef(0);
@@ -1191,7 +1208,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     seededReinitCountRef.current = sourcesReinitializedCount;
+    const dropped = droppedImages(currentSources.animations);
     seedAnimationList(currentSources.animations);
+    releaseRemovedImages(dropped);
     // The stage's scene belongs to the pre-reset sources; restart-scene
     // falls back to the first scene.
     setCurrentPlaying(null);
@@ -1202,6 +1221,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     seedAnimationList,
     rerunWhenAnimationsLoaded,
     setCurrentPlaying,
+    droppedImages,
+    releaseRemovedImages,
   ]);
 
   // Instantiate the engine once per level. No legacy default-sprite library:
@@ -2417,7 +2438,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 learning={levelProperties.levelMode?.learning}
                 enableImageUpload={
                   !!levelProperties.levelMode?.enableImageUpload &&
-                  !!uploadImage
+                  !!uploadImage &&
+                  !isBlockedAbuse
                 }
                 levelId={levelProperties.id}
                 generationsLeft={generationsLeft}

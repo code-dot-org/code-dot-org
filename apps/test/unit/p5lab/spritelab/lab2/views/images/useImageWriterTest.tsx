@@ -26,10 +26,15 @@ const propsByKey = (
   }
 ).mockPropsByKey;
 const dispatch = jest.fn();
+let labState: Record<string, unknown> = {channel: {id: 'chan'}};
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppDispatch: () => dispatch,
   useAppSelector: (select: (state: unknown) => unknown) =>
-    select({lab: {channel: {id: 'chan'}}}),
+    select({lab: labState}),
+}));
+const unflag = jest.fn();
+jest.mock('@cdo/apps/lab2/redux/lab2ProjectReduxThunks', () => ({
+  unflagProjectChannel: (...args: unknown[]) => unflag(...args),
 }));
 const createNamedAnimation = jest.fn((...args: unknown[]) => 'new-key');
 const repointAnimation = jest.fn(
@@ -88,6 +93,8 @@ describe('useImageWriter', () => {
     repointAnimation.mockClear();
     httpDelete.mockClear();
     dispatch.mockClear();
+    unflag.mockClear();
+    labState = {channel: {id: 'chan'}};
   });
 
   it('creates a new image from a picture, with the level role', async () => {
@@ -368,5 +375,58 @@ describe('useImageWriter', () => {
     });
     expect(dispatch).toHaveBeenCalled();
     expect(onDeleteImage).toHaveBeenCalledWith('Sprite 1');
+  });
+
+  describe('a flagged picture', () => {
+    const uploaded = (flagged?: boolean) => ({
+      filename: 'upload_cat_1.png',
+      uint8Array: PNG,
+      mediaType: 'image/png',
+      flagged,
+    });
+
+    it('is marked as flagged only when it was kept after a warning', async () => {
+      const {writer} = renderWriter();
+      await act(async () => {
+        await writer().acceptUploaded(
+          {key: null, imageType: 'sprite'},
+          uploaded(true)
+        );
+        await writer().acceptUploaded(
+          {key: null, imageType: 'sprite'},
+          uploaded()
+        );
+      });
+      const patch = (call: number) =>
+        createNamedAnimation.mock.calls[call][2] as Record<string, unknown>;
+      expect(patch(0).flagged).toBe(true);
+      expect(patch(1).flagged).toBeUndefined();
+    });
+
+    it('unblocks the project when it is deleted', async () => {
+      labState = {channel: {id: 'chan'}, isBlockedAbuse: true};
+      propsByKey.k1 = {name: 'Sprite 1', flagged: true};
+      const {writer} = renderWriter();
+      act(() => writer().deleteImage('k1'));
+      await act(async () => {
+        await new Promise(resolve => setTimeout(resolve, 0));
+      });
+      expect(unflag).toHaveBeenCalledWith('chan', expect.anything());
+    });
+
+    it('leaves the block alone when an unflagged picture is deleted', () => {
+      labState = {channel: {id: 'chan'}, isBlockedAbuse: true};
+      propsByKey.k1 = {name: 'Sprite 1'};
+      const {writer} = renderWriter();
+      act(() => writer().deleteImage('k1'));
+      expect(unflag).not.toHaveBeenCalled();
+    });
+
+    it('asks for no unblocking when the project is not blocked', () => {
+      propsByKey.k1 = {name: 'Sprite 1', flagged: true};
+      const {writer} = renderWriter();
+      act(() => writer().deleteImage('k1'));
+      expect(unflag).not.toHaveBeenCalled();
+    });
   });
 });
