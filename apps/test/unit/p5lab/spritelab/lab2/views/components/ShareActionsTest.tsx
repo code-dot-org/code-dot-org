@@ -35,6 +35,33 @@ describe('ShareActions', () => {
     expect(redirectToView).not.toHaveBeenCalled();
   });
 
+  it('shows it is working, and stops taking presses, once one is pressed', () => {
+    render(<ShareActions />);
+    fireEvent.click(screen.getByRole('button', {name: 'Make my own'}));
+    expect(screen.getByRole('button', {name: 'Make my own'})).toBeDisabled();
+    expect(screen.getByRole('button', {name: 'View code'})).toBeDisabled();
+    fireEvent.click(screen.getByRole('button', {name: 'Make my own'}));
+    expect(redirectToRemix).toHaveBeenCalledTimes(1);
+  });
+
+  it('takes presses again when the page is shown again', () => {
+    render(<ShareActions />);
+    fireEvent.click(screen.getByRole('button', {name: 'View code'}));
+    expect(screen.getByRole('button', {name: 'View code'})).toBeDisabled();
+    fireEvent(window, new Event('pageshow'));
+    expect(screen.getByRole('button', {name: 'View code'})).toBeEnabled();
+  });
+
+  it('takes presses again when leaving fails', () => {
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+    redirectToRemix.mockImplementationOnce(() => {
+      throw new Error('no channel');
+    });
+    render(<ShareActions />);
+    fireEvent.click(screen.getByRole('button', {name: 'Make my own'}));
+    expect(screen.getByRole('button', {name: 'Make my own'})).toBeEnabled();
+  });
+
   it('does nothing while no project is loaded', () => {
     jest
       .spyOn(Lab2Registry.getInstance(), 'getProjectManager')

@@ -2132,7 +2132,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const openBlockCatalog = () => setShowBlockCatalog(true);
 
   return (
-    <div className={moduleStyles.labRow}>
+    <div
+      className={classNames(
+        moduleStyles.labRow,
+        isShareView && moduleStyles.labRowShared
+      )}
+    >
       {scenesDialog && (
         <ScenesDialog
           scenes={sceneMetadata}
