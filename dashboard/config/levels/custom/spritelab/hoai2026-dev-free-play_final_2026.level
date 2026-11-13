@@ -1,0 +1,187 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2026-11-13T13:28:27.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "false",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
+    "level_mode": {
+      "kind": "freeplay"
+    },
+    "image_role_defaults": {
+      "sprite": "hero",
+      "spritelab2_beginsBehavior": "friend",
+      "gamelab_checkTouching": [
+        "hero",
+        "treasure"
+      ]
+    },
+    "block_catalog": true,
+    "use_secondary_finish_button": "true",
+    "finish_dialog": "hoai2026",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "spritelab2_setPlatformJumpHeight"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setPlatformGravityDirection"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setCameraZoom"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer2"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_thePlayer"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_thePlayer2"
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs"
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_checkTouching",
+          "inputs": {
+            "SPRITE1": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            },
+            "SPRITE2": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playSound"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playSoundEffect",
+          "fields": {
+            "WAVE": "square",
+            "PITCH": "high",
+            "LENGTH": "short",
+            "PATTERN": "slide up"
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setWeather"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_burst"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_beginsBehavior",
+          "fields": {
+            "BEHAVIOR": "patrollingOnBlocks"
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_restartScene"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_whenPlayer"
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "Hello!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_showTitle",
+          "fields": {
+            "TEXT": "You win!"
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_goToScene"
+        }
+      ]
+    },
+    "objectives": {
+      "title": "**Free play!**\n\nEverything is unlocked. Finish your game, and finish the lesson when you're done.",
+      "collapsedText": "Enjoy free play!"
+    },
+    "long_instructions": "# Free play\r\nKeep creating Scene 2, or add something new to your quest. \r\n\r\n**Everything is unlocked! Keep building!**",
+    "header_label": "Free play",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "name_suffix": "_final_2026",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-13T13:28:27.534+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-free-play\\\"\"],\"cloned_from\":\"hoai2026-dev-free-play\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>
