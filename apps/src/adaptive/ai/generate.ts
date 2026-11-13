@@ -16,6 +16,7 @@ import {AichatContext} from '@cdo/apps/aichat/types';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import {ValueOf} from '@cdo/apps/types/utils';
+import {timeoutMsFromDcdoSeconds} from '@cdo/apps/util/dcdoTimeout';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -33,12 +34,17 @@ import {
 import {ADAPTIVE_MODELS} from './models';
 
 export const ADAPTIVE_AI_ENABLED_FLAG = 'adaptive-ai-enabled';
+const ADAPTIVE_AI_TIMEOUT_FLAG = 'adaptive-ai-timeout-seconds';
 
-const TIMEOUT_MS = 30_000;
+const DEFAULT_TIMEOUT_SECONDS = 45;
 const SAFETY_CONFIG = {modelId: ADAPTIVE_MODELS.FAST};
 
 export const isAdaptiveAiEnabled = (): boolean =>
   !!DCDO.get(ADAPTIVE_AI_ENABLED_FLAG, false);
+
+// How long one model call may take, generation or moderation alike.
+const timeoutMs = (): number =>
+  timeoutMsFromDcdoSeconds(ADAPTIVE_AI_TIMEOUT_FLAG, DEFAULT_TIMEOUT_SECONDS);
 
 export interface GenerateOptions<T> {
   schema: z.ZodType<T>;
@@ -119,7 +125,7 @@ export async function generate<T>({
         },
         {phase: 'generation', aichatContext: context}
       ),
-      TIMEOUT_MS
+      timeoutMs()
     );
     const parsed = schema.safeParse(result.output);
     if (!parsed.success) {
@@ -163,7 +169,7 @@ async function moderate(
   try {
     const safe = await withTimeout(
       isTextSafe(text, phase, SAFETY_CONFIG, context),
-      TIMEOUT_MS
+      timeoutMs()
     );
     result = safe ? 'ok' : 'flagged';
   } catch (error) {

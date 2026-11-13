@@ -28,6 +28,14 @@ class DatabaseConfigurationTest < ActiveSupport::TestCase
     end
   end
 
+  test 'closes idle pooled connections before Nitro v6 drops their TCP flows' do
+    # The reaper closes a connection on its first pass after the connection has been idle for `idle_timeout`.
+    CONFIGS.each do |config|
+      assert_operator config.idle_timeout + config.reaping_frequency, :<, 350,
+        "#{config.name} must close idle connections within 350s"
+    end
+  end
+
   RDS_PROXY_WRITER = 'rds-proxy-writer.example.com'.freeze
   DATABASE_WRITER = 'database-writer.example.com'.freeze
   PROXYSQL_HOST = '127.0.0.1'.freeze

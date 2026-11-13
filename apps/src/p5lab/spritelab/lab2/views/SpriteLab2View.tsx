@@ -2415,6 +2415,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 ownImageMade={ownImageMade}
                 oneImage={oneImage}
                 learning={levelProperties.levelMode?.learning}
+                enableImageUpload={
+                  !!levelProperties.levelMode?.enableImageUpload &&
+                  !!uploadImage
+                }
                 levelId={levelProperties.id}
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}

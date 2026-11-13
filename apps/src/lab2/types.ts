@@ -356,8 +356,8 @@ export interface LevelProperties {
   aiTutorModelParameters?: AiTutorModelParameters;
   levelSystemPrompt?: string;
   /**
-   * Show the instructions in the AI Tutor tab, pinned above the chat as a
-   * message from the tutor, and don't show the separate Instructions tab.
+   * Show the instructions in the AI Tutor tab, pinned open above the chat,
+   * and don't show the separate Instructions tab.
    */
   showInstructionsInAiTutor?: boolean;
   /**

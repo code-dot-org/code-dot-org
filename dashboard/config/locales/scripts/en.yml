@@ -31304,5 +31304,8 @@ en:
           title: Quest Builder
           description_audience: ''
           description_short: Create a quest or build a game with this new Hour of AI tutorial, one part at a time.
-          description: In this Hour of AI lesson, students create their own quest, a game with a goal, one part at a time. They can use AI to make the art, judging each image against their own vision, and get a glimpse into how AI makes images. Students will use block-based code to decide what happens when the player reaches an object or when the characters meet, practicing decomposition and event-based thinking. Because the image generation is a simulation, students can explore safely.
+          description: |-
+            In this Hour of AI lesson, students create their own quest, a game with a goal, one part at a time. They use AI to make the art and decide whether each image matches their vision, which gives them a glimpse into how AI makes images. They then use block-based code to decide what happens when the player reaches an object or when characters meet, practicing decomposition and event-based thinking. Because the image generation is a simulation, students can try ideas and revise freely, and they stay in charge of their game the whole way through.
+
+            Students see that AI can help bring their ideas to life, but they are the ones who decide what fits their quest. Because the image generation is a simulation, they can try ideas, revise, and explore without worry.
           student_description: Ready to build your own quest? In Quest Builder, you’ll make a game with a hero, treasure, and a world you design, then use code to decide what happens when the player reaches an important object or when the characters meet. Tell AI what to make, check that each image fits your idea, or draw your own. Then play the quest you built!

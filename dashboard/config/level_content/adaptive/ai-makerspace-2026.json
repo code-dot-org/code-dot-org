@@ -71,6 +71,7 @@
     {
       "id": "intro",
       "title": "Intro",
+      "icon": "location-dot",
       "description": "Read the intro panels, make your plan, and then do a quick skill check.",
       "routeAfterCompletion": true,
       "plan": {
@@ -222,6 +223,14 @@
           "project": true,
           "instructions": "Welcome to your website! AI wrote the starter code. Take a look around, then press Continue. You’ll build the skills to make it yours.",
           "projectPrompt": "The first version of the student's website, built from their plan: a hero with a headline that says what the site is for, one or two sections that fit the topic, and a call-to-action. Keep the look and feel simple, but appropriate for their given topic. It should feel clean but not overly polished."
+        },
+        {
+          "id": "skill-check-welcome",
+          "title": "Welcome to the Skill Check",
+          "kind": "markdown",
+          "logoUrl": "https://images.code.org/97fd8149cec556cb09b8010aa268e9b1-AI Makerspace Logo FINAL-trimmed.png",
+          "markdown": "## Welcome to the Skill Check\n\nYou’ve seen what’s possible. Next, a quick skills check sets up your recommended next step.",
+          "continueLabel": "Start Skill Check"
         },
         {
           "id": "skill-check-web-dev",
@@ -879,7 +888,7 @@
           "project": true,
           "instructionsPrompt": "Task: Asks the AI which part of one named section’s code controls its look or behavior, then changes one thing in that part.\nOutline: Prompt: “Pick one section of your page and use its name in your prompt. Ask the AI which part of its code controls how it looks or what it does. Change one thing in that part and see what happens.” The tutor reads your prompt and what changed.\nEvidence: A prompt that asks the AI about the code for a named section, or an attempt to change something, by asking the AI or by editing the code.",
           "validation": {
-            "condition": "The student asked the AI which part of a named section’s code controls how it looks or what it does, or tried to change something in it, whether by asking the AI or by editing the code by hand. OR The code for at least one part of the page changed, whether the AI made the change or the student edited it by hand.",
+            "condition": "The student asked the AI to change one line of code in a named section of their site, including the line in their prompt, and the AI made that change.",
             "measures": { "skillId": "language" }
           }
         }
