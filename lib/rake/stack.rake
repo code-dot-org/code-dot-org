@@ -15,7 +15,8 @@ namespace :stack do
         frontends: ENV.fetch('FRONTENDS', nil),
         domain: ENV.fetch('DOMAIN', nil),
         cdn_enabled: ENV.fetch('CDN_ENABLED', nil),
-        commit: ENV.fetch('COMMIT', nil)
+        commit: ENV.fetch('COMMIT', nil),
+        repo: ENV.fetch('REPO', nil)
       )),
       log: CDO.log,
       verbose: ENV.fetch('VERBOSE', nil),
