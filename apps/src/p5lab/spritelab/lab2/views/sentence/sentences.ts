@@ -327,11 +327,11 @@ export function restoreChoices(
 }
 
 /**
- * A generated image's sentence as its chips read. The image records the
- * text sent to the model, which for the witch says "green-skinned witch";
- * when the saved choices still rebuild that text, the chips' text is
- * rebuilt from them. Otherwise, as for a typed prompt, the recorded text
- * is all there is.
+ * Every generated image saves the text actually sent to the model, and
+ * since the witch has a modelFacingText, that isn't always the ad lib the
+ * student saw. This recreates the ad lib from the image's saved choices.
+ * If those choices don't rebuild the saved text exactly (a typed prompt,
+ * or a word list that's changed since), we fall back to the saved text.
  */
 export function promptTextFromImage(
   generation: ImageGenerationMetadata
