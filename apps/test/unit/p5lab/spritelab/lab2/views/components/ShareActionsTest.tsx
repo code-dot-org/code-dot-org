@@ -4,10 +4,17 @@ import React from 'react';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ShareActions from '@cdo/apps/p5lab/spritelab/lab2/views/components/ShareActions';
+import {navigateToHref} from '@cdo/apps/utils';
+
+jest.mock('@cdo/apps/utils', () => ({
+  ...jest.requireActual('@cdo/apps/utils'),
+  navigateToHref: jest.fn(),
+}));
+
+const mockNavigateToHref = navigateToHref as jest.Mock;
 
 describe('ShareActions', () => {
   const redirectToView = jest.fn();
-  const redirectToRemix = jest.fn();
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -15,7 +22,7 @@ describe('ShareActions', () => {
       .spyOn(Lab2Registry.getInstance(), 'getProjectManager')
       .mockReturnValue({
         redirectToView,
-        redirectToRemix,
+        getProjectType: () => 'quest_builder',
       } as unknown as ProjectManager);
   });
 
@@ -25,13 +32,15 @@ describe('ShareActions', () => {
     render(<ShareActions />);
     fireEvent.click(screen.getByRole('button', {name: 'View code'}));
     expect(redirectToView).toHaveBeenCalledTimes(1);
-    expect(redirectToRemix).not.toHaveBeenCalled();
+    expect(mockNavigateToHref).not.toHaveBeenCalled();
   });
 
-  it('starts a copy from Make my own', () => {
+  it('starts a new project of the same kind from Make my own', () => {
     render(<ShareActions />);
     fireEvent.click(screen.getByRole('button', {name: 'Make my own'}));
-    expect(redirectToRemix).toHaveBeenCalledTimes(1);
+    expect(mockNavigateToHref).toHaveBeenCalledWith(
+      '/projects/quest_builder/new'
+    );
     expect(redirectToView).not.toHaveBeenCalled();
   });
 
@@ -41,7 +50,7 @@ describe('ShareActions', () => {
     expect(screen.getByRole('button', {name: 'Make my own'})).toBeDisabled();
     expect(screen.getByRole('button', {name: 'View code'})).toBeDisabled();
     fireEvent.click(screen.getByRole('button', {name: 'Make my own'}));
-    expect(redirectToRemix).toHaveBeenCalledTimes(1);
+    expect(mockNavigateToHref).toHaveBeenCalledTimes(1);
   });
 
   it('takes presses again when the page is shown again', () => {
@@ -54,12 +63,12 @@ describe('ShareActions', () => {
 
   it('takes presses again when leaving fails', () => {
     jest.spyOn(console, 'error').mockImplementation(() => {});
-    redirectToRemix.mockImplementationOnce(() => {
+    redirectToView.mockImplementationOnce(() => {
       throw new Error('no channel');
     });
     render(<ShareActions />);
-    fireEvent.click(screen.getByRole('button', {name: 'Make my own'}));
-    expect(screen.getByRole('button', {name: 'Make my own'})).toBeEnabled();
+    fireEvent.click(screen.getByRole('button', {name: 'View code'}));
+    expect(screen.getByRole('button', {name: 'View code'})).toBeEnabled();
   });
 
   it('opens the report form in a new tab from Report abuse', () => {
@@ -67,7 +76,7 @@ describe('ShareActions', () => {
     render(<ShareActions />);
     fireEvent.click(screen.getByRole('button', {name: 'Report abuse'}));
     expect(open).toHaveBeenCalledWith('/report_abuse', '_blank');
-    expect(redirectToRemix).not.toHaveBeenCalled();
+    expect(mockNavigateToHref).not.toHaveBeenCalled();
   });
 
   it('does nothing while no project is loaded', () => {
@@ -77,7 +86,7 @@ describe('ShareActions', () => {
     render(<ShareActions />);
     fireEvent.click(screen.getByRole('button', {name: 'Make my own'}));
     fireEvent.click(screen.getByRole('button', {name: 'View code'}));
-    expect(redirectToRemix).not.toHaveBeenCalled();
+    expect(mockNavigateToHref).not.toHaveBeenCalled();
     expect(redirectToView).not.toHaveBeenCalled();
   });
 });

@@ -1316,8 +1316,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     uploadImage,
     updateSources,
     getScenes,
-    // A share link saves nothing to the project it shows.
-    enabled: !isToolboxMode && !isShareView,
+    // A share link, or a project opened view only, saves nothing to the
+    // project it shows.
+    enabled: !isToolboxMode && !isShareView && !isViewOnly,
   });
 
   // Run the current program as the live preview (cheap: the engine reuses

@@ -3,15 +3,16 @@ import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {navigateToHref} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
-type Destination = 'view' | 'remix';
+type Destination = 'view' | 'new';
 
 /** What a visitor to a shared project can do besides play it: see how it
-    was made, start a copy of their own, or report it. */
+    was made, start a project of their own, or report it. */
 const ShareActions: React.FunctionComponent = () => {
-  // Making the copy can take the server a few seconds before the page
-  // changes, so the pressed button shows it is working.
+  // The next page can take a moment to arrive, so the pressed button shows
+  // it is working.
   const [leavingFor, setLeavingFor] = useState<Destination | null>(null);
   // The browser's Back button can bring this page back as it was left.
   useEffect(() => {
@@ -30,7 +31,9 @@ const ShareActions: React.FunctionComponent = () => {
       if (destination === 'view') {
         projectManager.redirectToView();
       } else {
-        projectManager.redirectToRemix();
+        // A new, empty project of the same kind, as the older labs' share
+        // pages give; not a copy of this one.
+        navigateToHref(`/projects/${projectManager.getProjectType()}/new`);
       }
     } catch (e) {
       console.error('Leaving the share page failed:', e);
@@ -72,10 +75,10 @@ const ShareActions: React.FunctionComponent = () => {
         size="small"
         disabled={!!leavingFor}
         startIcon={iconFor(
-          'remix',
+          'new',
           <FontAwesomeV6Icon iconStyle="regular" iconName="pen-to-square" />
         )}
-        onClick={() => leaveFor('remix')}
+        onClick={() => leaveFor('new')}
       >
         {commonI18n.makeMyOwn()}
       </MuiButton>
