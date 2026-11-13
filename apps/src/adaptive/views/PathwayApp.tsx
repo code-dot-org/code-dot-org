@@ -43,6 +43,7 @@ import {Checkpoint, Pathway, Step} from '../types';
 import AdaptiveHeader from './AdaptiveHeader';
 import AdaptiveTabBar from './AdaptiveTabBar';
 import {checkpointStepFromUrl, clearUrl} from './checkpointUrl';
+import FinalProjectCallout from './FinalProjectCallout';
 import FinishDialog from './FinishDialog';
 import {getSkillProgress} from './map/groupProgress';
 import MapScreen from './MapScreen';
@@ -331,6 +332,12 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     dispatch(sendStartedReportIfNotStarted('adaptive'));
     setView({kind: 'project'});
   };
+  const allCheckpointsComplete = pathway.checkpoints.every(
+    c => statusMap[c.id] === 'complete' || statusMap[c.id] === 'skipped'
+  );
+  const [calloutDismissed, setCalloutDismissed] = useState(false);
+  const dismissCallout = () => setCalloutDismissed(true);
+
   // I'm finished does what the pathway's finish block says: asks through
   // its dialog, plays its checkpoint, then finishes the level the way any
   // Lab2 level does, each part skipped when absent.
@@ -480,18 +487,23 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           requestFinish();
         }}
       />
-      <AdaptiveTabBar
-        activeTab="map"
-        onTabChange={tab => {
-          if (tab === 'project') {
-            sendFinalProjectClicked('mapTab', statusMap);
-            openProject();
-          }
-        }}
-        projectName={projectName}
-        skills={getSkillProgress(pathway, statusMap)}
-        timeSpentSeconds={totalTimeSpent(progress)}
-      />
+      <div style={{position: 'relative'}}>
+        <AdaptiveTabBar
+          activeTab="map"
+          onTabChange={tab => {
+            if (tab === 'project') {
+              sendFinalProjectClicked('mapTab', statusMap);
+              openProject();
+            }
+          }}
+          projectName={projectName}
+          skills={getSkillProgress(pathway, statusMap)}
+          timeSpentSeconds={totalTimeSpent(progress)}
+        />
+        {allCheckpointsComplete && !calloutDismissed && (
+          <FinalProjectCallout onDismiss={dismissCallout} />
+        )}
+      </div>
       <MapScreen
         pathway={pathway}
         levelProperties={levelProperties}
