@@ -1,179 +1,189 @@
-/**
- * NotificationBanner styles
- * Uses CSS Modules for scoped styling of the composite MUI component.
- */
-
-// Base banner styles
-.banner {
-  border-radius: 0.25rem;
-  padding: 1rem;
-  position: relative;
-  box-shadow: none;
+.banner:global(.MuiPaper-root) {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  border-radius: var(--shape-md);
+  border: 0;
+  padding: var(--spacing-p-xs);
+  background-image: none;
+  width: auto;
 
   &.fullWidth {
     width: 100%;
   }
-
-  &:not(.fullWidth) {
-    width: auto;
-  }
 }
 
-// Style variations: subtle and filled
-.subtle {
+.banner:global(.MuiPaper-root).none {
   background-color: var(--background-neutral-primary);
-  border: 1px solid var(--borders-neutral-primary);
+  box-shadow: inset 0 0 0 1px var(--border-neutral-primary);
 }
 
-.filled {
-  // Border color is set per-variant below
-  border-width: 1px;
-  border-style: solid;
+.banner:global(.MuiPaper-root).color.brand {
+  background-color: var(--background-brand-light);
+  box-shadow: inset 0 0 0 1px var(--border-brand-primary);
 }
 
-// Variant backgrounds for filled style
-.filled.primary {
-  background-color: var(--background-brand-purple-extra-light);
-  border-color: var(--borders-brand-purple-primary);
+.banner:global(.MuiPaper-root).color.pink {
+  background-color: var(--background-accent-pink-light);
+  box-shadow: inset 0 0 0 1px var(--border-accent-pink-primary);
 }
 
-.filled.brand {
-  background-color: var(--background-brand-teal-extra-light);
-  border-color: var(--borders-brand-teal-primary);
+.banner:global(.MuiPaper-root).color.success {
+  background-color: var(--background-success-light);
+  box-shadow: inset 0 0 0 1px var(--border-success-primary);
 }
 
-.filled.info {
-  background-color: var(--background-info-extra-light);
-  border-color: var(--borders-info-primary);
+.banner:global(.MuiPaper-root).color.error {
+  background-color: var(--background-error-light);
+  box-shadow: inset 0 0 0 1px var(--border-error-primary);
 }
 
-.filled.success {
-  background-color: var(--background-success-extra-light);
-  border-color: var(--borders-success-primary);
+.banner:global(.MuiPaper-root).color.warning {
+  background-color: var(--background-warning-light);
+  box-shadow: inset 0 0 0 1px var(--border-warning-primary);
 }
 
-.filled.warning {
-  background-color: var(--background-warning-extra-light);
-  border-color: var(--borders-warning-primary);
+.banner:global(.MuiPaper-root).color.info {
+  background-color: var(--background-info-light);
+  box-shadow: inset 0 0 0 1px var(--border-info-primary);
 }
 
-.filled.error {
-  background-color: var(--background-error-extra-light);
-  border-color: var(--borders-error-primary);
+.banner:global(.MuiPaper-root).color.neutral {
+  background-color: var(--background-neutral-secondary);
+  box-shadow: inset 0 0 0 1px var(--border-neutral-secondary);
 }
 
-.filled.ai {
-  background-color: var(--background-brand-aqua-extra-light);
-  border-color: var(--borders-brand-aqua-primary);
+.row {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  gap: 0.875rem;
+  min-width: 0;
 }
 
-.filled.gray {
-  background-color: var(--background-neutral-extra-light);
-  border-color: var(--borders-neutral-primary);
+.iconWrap {
+  flex-shrink: 0;
+  padding-top: 0.125rem;
 }
 
-// Icon container styles
 .iconContainer {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  border-width: 3px;
-  border-style: solid;
-  background-color: var(--background-neutral-primary);
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  width: 2.875rem;
+  height: 2.875rem;
+  border-radius: var(--shape-round);
+  border: 3px solid transparent;
+  background-color: var(--background-neutral-primary);
 
   i {
     font-size: 1.375rem;
-  }
-}
-
-// Icon container border and icon colors per variant
-.iconContainer.primary {
-  border-color: var(--borders-brand-purple-primary);
-
-  i {
-    color: var(--text-brand-purple-primary-fixed);
+    line-height: 1;
   }
 }
 
 .iconContainer.brand {
-  border-color: var(--borders-brand-teal-primary);
-
-  i {
-    color: var(--text-brand-teal-primary-fixed);
-  }
+  border-color: var(--border-brand-primary);
+  color: var(--text-brand-primary-fixed);
 }
 
-.iconContainer.info {
-  border-color: var(--borders-info-primary);
-
-  i {
-    color: var(--text-info-primary-fixed);
-  }
+.iconContainer.pink {
+  border-color: var(--border-accent-pink-primary);
+  color: var(--text-accent-pink-primary-fixed);
 }
 
 .iconContainer.success {
-  border-color: var(--borders-success-primary);
-
-  i {
-    color: var(--text-success-primary-fixed);
-  }
-}
-
-.iconContainer.warning {
-  border-color: var(--borders-warning-primary);
-
-  i {
-    color: var(--text-warning-primary-fixed);
-  }
+  border-color: var(--border-success-primary);
+  color: var(--text-success-primary-fixed);
 }
 
 .iconContainer.error {
-  border-color: var(--borders-error-primary);
-
-  i {
-    color: var(--text-error-primary-fixed);
-  }
+  border-color: var(--border-error-primary);
+  color: var(--text-error-primary-fixed);
 }
 
-.iconContainer.ai {
-  border-color: var(--borders-brand-aqua-primary);
-
-  i {
-    color: var(--text-brand-aqua-primary-fixed);
-  }
+.iconContainer.warning {
+  border-color: var(--border-warning-primary);
+  color: var(--text-warning-primary-fixed);
 }
 
-.iconContainer.gray {
-  border-color: var(--borders-neutral-primary);
-
-  i {
-    color: var(--text-neutral-primary);
-  }
+.iconContainer.info {
+  border-color: var(--border-info-primary);
+  color: var(--text-info-primary-fixed);
 }
 
-// Content area styles
-.content {
+.iconContainer.neutral {
+  border-color: var(--border-neutral-secondary);
+  color: var(--text-neutral-tertiary);
+}
+
+.main {
+  display: flex;
   flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.875rem;
+  row-gap: var(--spacing-p-xs);
   min-width: 0;
 }
 
-// Title styles
-.title {
-  font-weight: 600;
+.text {
+  display: flex;
+  flex: 1 1 9.375rem;
+  flex-direction: column;
+  min-width: 9.375rem;
 }
 
-// Actions container styles
+.banner .title:global(.MuiTypography-root) {
+  margin: 0;
+  font-size: var(--font-size-body-lg);
+
+  /* Theme body1 uses line-height 1.44, which computes to 25.92px. */
+  line-height: 1.625rem;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--text-neutral-primary);
+}
+
+.banner .description:global(.MuiTypography-root) {
+  margin: 0;
+  font-size: var(--font-size-body-sm);
+
+  /* Theme body3 uses line-height 1.57, which computes to 21.98px. */
+  line-height: 1.375rem;
+  color: var(--text-neutral-secondary);
+}
+
 .actions {
-  flex-wrap: wrap;
-  gap: 0.25rem;
+  display: flex;
   flex-shrink: 0;
+  align-items: center;
+  gap: var(--spacing-p-xxs);
 }
 
-// Close button styles
-.closeButton {
+.closeButton.closeButton:global(.MuiIconButton-root) {
   flex-shrink: 0;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  padding: 0;
+  border-radius: 0.25rem;
+  color: var(--text-neutral-quaternary);
+  background-color: transparent;
+  font-size: var(--font-size-body-sm);
+
+  &:hover {
+    background-color: transparent;
+    color: var(--text-neutral-quaternary);
+  }
+
+  i {
+    font-size: var(--font-size-body-sm);
+    line-height: 1.25;
+    width: 1.125rem;
+  }
 }
