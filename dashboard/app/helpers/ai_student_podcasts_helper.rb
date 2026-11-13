@@ -256,7 +256,7 @@ module AiStudentPodcastsHelper
   end
 
   def self.openai_client
-    OpenaiClient.new(CDO.openai_lesson_summaries_api_key, OPENAI_MODEL)
+    OpenaiClient.new(CDO.openai_lesson_deep_dive_api_key, OPENAI_MODEL)
   end
 
   # A podcast's content is determined entirely by its lesson and the set of
