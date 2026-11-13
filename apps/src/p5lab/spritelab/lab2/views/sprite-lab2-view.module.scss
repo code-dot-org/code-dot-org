@@ -26,7 +26,7 @@
 // up it shares the lab's bottom row with View code and Make my own, well
 // apart from them. Under it, the lab's row moves up and the footer has a
 // row of its own.
-$share-one-row-min-width: 1200px;
+$share-one-row-min-width: 1024px;
 
 .labRowShared {
   @media screen and (max-width: #{$share-one-row-min-width - 1px}) {
