@@ -569,8 +569,3 @@ are the legacy ones again (`designsystem-dialog-dialog--*`,
 (`_customDialogOverlay_1gbhd_1` before and after). The tests that opened a
 legacy dialog beside the wrapper now open two wrappers, and
 `DialogInNarrowViewport` moves with its stories to `stories/Dialog.story.tsx`.
-
-The `destructive` prop (row in the props table above) landed after step 4 and
-was ported across the rename: the `Mui` names in that row and in the PR's
-history read `Dialog`, `dialog.module.scss`, `stories/Dialog.story.tsx` and
-`__tests__/Dialog.test.tsx` on staging.
