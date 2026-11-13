@@ -310,6 +310,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     const run = ++runRef.current;
     const startedAt = Date.now();
     const prompt = typedPrompt || promptText(sentence, choices);
+    const sentPrompt =
+      typedPrompt ||
+      promptText(sentence, choices, {useModelFacingTextVariant: true});
     const pixelScale = advanced?.pixelScale || 1;
     // The cache holds the sentences' pictures as the level draws them;
     // whatever the advanced settings change goes to the model.
@@ -372,21 +375,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       // What the lab would send. A cached picture was made from the same
       // words by the same prompt builders, so this describes it as well.
       const sent: SentPrompts = sentPromptsFor(
-        prompt,
+        sentPrompt,
         options,
         style,
         generatesCharacterSet,
         bodyPlan
       );
       const result = generatesCharacterSet
-        ? await generateCharacterSet(prompt, {
+        ? await generateCharacterSet(sentPrompt, {
             style,
             temperature: TEMPERATURE,
             pixelGrid: options.pixelGrid,
             bodyPlan,
             cached,
           })
-        : await generateImage(prompt, {...options, cached});
+        : await generateImage(sentPrompt, {...options, cached});
       if (run !== runRef.current) {
         return;
       }
