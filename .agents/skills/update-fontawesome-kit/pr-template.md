@@ -3,7 +3,7 @@
 <!-- 1-3 bullets: which kit was applied and what changed in the repo. -->
 
 - Applies the Code.org FontAwesome Kit v6 upload at `cdo-dsco/assets/font-awesome-pro/<ts>`.
-- Bumps the timestamp in `component-library-styles/font.scss`, `fonts/src/loader/index.ts` and `shared/css/font.scss`.
+- Bumps the timestamp in `component-library-styles/font.scss`, `fonts/src/fontAwesome/index.ts` and `shared/css/font.scss`.
 - Syncs `kitIcons` (`fontAwesomeV6Icon/constants/index.ts`), which the Custom Icons story renders.
 
 ## Icons

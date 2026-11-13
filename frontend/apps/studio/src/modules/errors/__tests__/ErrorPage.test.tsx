@@ -36,4 +36,23 @@ describe('ErrorPage', () => {
     );
     expect(screen.getByRole('button', {name: 'Retry'})).toBeInTheDocument();
   });
+
+  it('styles title as h5 unless given another variant', () => {
+    const {rerender} = render(
+      <ErrorPage title="Oops" description="Something broke." />,
+    );
+    expect(screen.getByRole('heading', {name: 'Oops'})).toHaveClass(
+      'MuiTypography-h5',
+    );
+    rerender(
+      <ErrorPage
+        title="Oops"
+        description="Something broke."
+        titleVariant="h2"
+      />,
+    );
+    expect(screen.getByRole('heading', {name: 'Oops'})).toHaveClass(
+      'MuiTypography-h2',
+    );
+  });
 });

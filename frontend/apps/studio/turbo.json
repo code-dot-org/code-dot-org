@@ -1,0 +1,12 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build:mobile": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist-mobile/**"]
+    },
+    "release:dryrun": {
+      "dependsOn": ["build", "build:mobile", "lint", "test"]
+    }
+  }
+}

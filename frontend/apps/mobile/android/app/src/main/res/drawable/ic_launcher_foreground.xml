@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The CodeAI mark from dashboard/app/assets/images/favicon-codeai.svg
+     (viewBox 0 0 180, centered at 90,90). Scaled by 0.42 into the 108dp
+     adaptive-icon canvas, so the mark stays inside the 66dp safe zone that
+     every launcher mask shows. The black square is the background layer. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.42"
+        android:scaleY="0.42"
+        android:translateX="16.2"
+        android:translateY="16.2">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M64.51,47.85L22.93,122.87c-1.77,3.2 0.54,7.13 4.19,7.13h83.17c3.66,0 5.97,-3.93 4.19,-7.13l-41.58,-75.01c-1.82,-3.3 -6.56,-3.3 -8.4,0z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M129.99,45.38h19.04a4.65,4.65 0,0 1,4.65 4.65v75.31a4.65,4.65 0,0 1,-4.65 4.65h-19.04a4.65,4.65 0,0 1,-4.65 -4.65v-75.31a4.65,4.65 0,0 1,4.65 -4.65z" />
+    </group>
+</vector>

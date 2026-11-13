@@ -9,6 +9,7 @@ the legacy webpack bundle is in `apps/` at the repo root.
 apps/
   studio/                    # Code Studio — Rails-Vite app (primary architecture);
                              # standalone mode is a supported architectural alternative
+  mobile/                    # Android app: Capacitor packaging of studio's mobile build
 packages/
   core/                      # Core application functionality
   component-library/         # Design System React components
