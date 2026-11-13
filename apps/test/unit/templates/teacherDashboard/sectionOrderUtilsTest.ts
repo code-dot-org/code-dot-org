@@ -1,7 +1,9 @@
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {
+  CONFLICT_RETRY_DELAY_MS,
   getFilteredSectionOrderIds,
   getOrderedSectionIds,
+  resetSectionOrderSaveStateForTest,
   saveSectionOrder,
 } from '@cdo/apps/templates/teacherDashboard/sectionOrderUtils';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -54,12 +56,14 @@ describe('Section Order Utils', () => {
   let httpClientPutSpy: jest.SpyInstance;
 
   beforeEach(() => {
+    resetSectionOrderSaveStateForTest();
     httpClientPutSpy = jest
       .spyOn(HttpClient, 'put')
       .mockResolvedValue(new Response());
   });
 
   afterEach(() => {
+    jest.useRealTimers();
     jest.clearAllMocks();
   });
 
@@ -268,7 +272,8 @@ describe('Section Order Utils', () => {
       );
     });
 
-    it('drops a save the server refused with 409 without logging it', async () => {
+    it('resends a save the server refused with 409, without logging it', async () => {
+      jest.useFakeTimers();
       const consoleErrorSpy = jest
         .spyOn(console, 'error')
         .mockImplementation(() => {});
@@ -277,10 +282,55 @@ describe('Section Order Utils', () => {
       );
 
       saveSectionOrder([1, 2, 3]);
-      await flushPromises();
+      await jest.advanceTimersByTimeAsync(CONFLICT_RETRY_DELAY_MS);
 
+      expect(httpClientPutSpy).toHaveBeenCalledTimes(2);
+      expect(httpClientPutSpy).toHaveBeenLastCalledWith(
+        '/user_preference',
+        JSON.stringify({sectionOrder: [1, 2, 3]}),
+        true,
+        expect.anything()
+      );
       expect(consoleErrorSpy).not.toHaveBeenCalled();
       consoleErrorSpy.mockRestore();
+    });
+
+    it('gives up and logs after a second 409', async () => {
+      jest.useFakeTimers();
+      const consoleErrorSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+      const conflict = () =>
+        new NetworkError('409 Conflict', new Response(null, {status: 409}));
+      httpClientPutSpy
+        .mockRejectedValueOnce(conflict())
+        .mockRejectedValueOnce(conflict());
+
+      saveSectionOrder([1, 2, 3]);
+      await jest.advanceTimersByTimeAsync(CONFLICT_RETRY_DELAY_MS);
+
+      expect(httpClientPutSpy).toHaveBeenCalledTimes(2);
+      expect(consoleErrorSpy).toHaveBeenCalledTimes(1);
+      consoleErrorSpy.mockRestore();
+    });
+
+    it('abandons a conflicted save when a newer order is already queued', async () => {
+      jest.useFakeTimers();
+      httpClientPutSpy.mockRejectedValueOnce(
+        new NetworkError('409 Conflict', new Response(null, {status: 409}))
+      );
+
+      saveSectionOrder([1, 2, 3]);
+      saveSectionOrder([3, 2, 1]);
+      await jest.advanceTimersByTimeAsync(CONFLICT_RETRY_DELAY_MS);
+
+      expect(httpClientPutSpy).toHaveBeenCalledTimes(2);
+      expect(httpClientPutSpy).toHaveBeenLastCalledWith(
+        '/user_preference',
+        JSON.stringify({sectionOrder: [3, 2, 1]}),
+        true,
+        expect.anything()
+      );
     });
 
     it('logs other failed saves', async () => {

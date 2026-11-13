@@ -12,6 +12,7 @@ import '@testing-library/jest-dom';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {SectionList} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionList';
+import {resetSectionOrderSaveStateForTest} from '@cdo/apps/templates/teacherDashboard/sectionOrderUtils';
 import teacherSections, {
   removeSection,
   setSectionOrder,
@@ -81,6 +82,7 @@ const sections = [
 describe('SectionList', () => {
   let store: Store;
   beforeEach(() => {
+    resetSectionOrderSaveStateForTest();
     const serverSections = sections.map(serverSectionFromSection);
 
     store = getStore();

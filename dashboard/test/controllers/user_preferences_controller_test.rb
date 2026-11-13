@@ -154,11 +154,35 @@ class UserPreferencesControllerTest < ActionController::TestCase
   test 'returns conflict and keeps the stored section_order when another request holds the row lock' do
     preference = UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
     UserPreference.any_instance.stubs(:lock!).raises(lock_nowait_error)
+    Cdo::Metrics.stubs(:push)
 
     patch :update, params: {section_order: [1, 2, 3]}, as: :json
 
     assert_response :conflict
     assert_equal [3, 2, 1], preference.reload.section_order
+  end
+
+  test 'counts a lock conflict' do
+    UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
+    UserPreference.any_instance.stubs(:lock!).raises(lock_nowait_error)
+    Cdo::Metrics.expects(:push).with do |namespace, metrics|
+      namespace == UserPreferencesController::METRICS_NAMESPACE &&
+        metrics.one? {|metric| metric[:metric_name] == 'SectionOrder.LockConflict' && metric[:value] == 1}
+    end
+
+    patch :update, params: {section_order: [1, 2, 3]}, as: :json
+
+    assert_response :conflict
+  end
+
+  # The other lock tests stub lock!, so none of them hands 'FOR UPDATE NOWAIT'
+  # to MySQL.  A typo in that string would reach production untested.
+  test 'FOR UPDATE NOWAIT is valid SQL on this database' do
+    preference = UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
+
+    assert_nothing_raised do
+      preference.with_lock('FOR UPDATE NOWAIT') {}
+    end
   end
 
   test 'does not lock the row when section_order is unchanged' do

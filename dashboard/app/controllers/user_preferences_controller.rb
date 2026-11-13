@@ -4,6 +4,8 @@ class UserPreferencesController < ApplicationController
   # MySQL error for a FOR UPDATE NOWAIT that finds the row already locked.
   ER_LOCK_NOWAIT = 3572
 
+  METRICS_NAMESPACE = 'UserPreferences'
+
   def update
     preference = UserPreference.find_or_initialize_by(user_id: current_user.id)
     section_order = update_params[:section_order]
@@ -17,6 +19,7 @@ class UserPreferencesController < ApplicationController
     end
   rescue ActiveRecord::StatementInvalid => exception
     raise unless exception.cause.is_a?(Mysql2::Error) && exception.cause.error_number == ER_LOCK_NOWAIT
+    count_section_order_conflict
     head :conflict
   end
 
@@ -59,6 +62,23 @@ class UserPreferencesController < ApplicationController
     else
       render json: {}, status: :not_found
     end
+  end
+
+  # A conflict costs the teacher the reorder they just made.  The client resends
+  # once; this counts how often that happens, which no other signal shows.
+  private def count_section_order_conflict
+    Cdo::Metrics.push(
+      METRICS_NAMESPACE,
+      [
+        {
+          metric_name: 'SectionOrder.LockConflict',
+          value: 1,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [{name: 'Environment', value: CDO.rack_env}],
+        }
+      ]
+    )
   end
 
   private def apply_update(preference)
