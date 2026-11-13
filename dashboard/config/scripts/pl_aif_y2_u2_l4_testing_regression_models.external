@@ -3,43 +3,48 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<h1>Section 3: Making Predictions</h1>
+# Testing Regression Models
 
-<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; font-size: 13px; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lessons 3-4</div>
+<img src="https://images.code.org/304b487ecbc79fe5221114de0cffba66-image-1794512083855.png" alt="A scatter plot of test data points with two fitted lines: Dani's model (dashed) and Sasha's model (solid), showing Dani's line passing exactly through some points while Sasha's line stays consistently close to all of them" style="width: 320px; border-radius: 10px; float: right; margin: 0 0 10px 20px;">
 
-<p>This section prepares you to teach two curriculum lessons. Students first learn to read and interpret data, categorical and numerical, then use that foundation to make the central conceptual leap of the whole unit: turning data into a prediction, and recognizing whether that prediction is a category or a number.</p>
+Lesson 6 opens with a debate: Dani and Sasha each built a regression model for the same test data. 
 
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
-  <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 3:</b> Describing Data</div>
-  <a href="PASTE_UNIT_2_LESSON_3_URL_HERE" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 3</a>
+Dani's model gets more predictions exactly correct. Sasha's model never hits exactly, but every prediction stays close. Whose model is actually better?
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Hold that question:</strong> this isn't resolved yet, students work through it hands-on in the Exploring Loss Activity Guide before this lesson's facilitation content settles it.
+  </div>
 </div>
 
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
-  <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 4:</b> Prediction Models</div>
-  <a href="PASTE_UNIT_2_LESSON_4_URL_HERE" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 4</a>
+
+## Lesson Vocabulary 
+
+Four terms carry this lesson, click each card to see its definition:
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/testing-regression-flip-cards.html"
+    width="100%"
+    height="580"
+    frameborder="0"
+    scrolling="no"
+    title="Testing regression models vocabulary flip cards: loss, loss function, absolute error, test data">
+  </iframe>
 </div>
 
-<hr>
 
-<p><b>In this section, you'll:</b></p>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Tell categorical and numerical data apart, and recognize correlation and outliers in a real scatter plot</div>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Meet Anita's Parlor, the running example for this whole section, and see why a small business owner needs predictions in the first place</div>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Try the same regression and classification widgets students use themselves</div>
-<div style="font-size: 16px;">&bull; Get ahead of two real misconceptions: mistaking a business decision for a prediction question, and telling regression and classification apart</div>
+## Absolute Error
+
+**Absolute error**, the loss function students implement in this lesson, is simple: the distance between a prediction and an actual value, and distance is never negative.
+
+For example: if the actual value is 2, a prediction of 1 and a prediction of 3 are both off by the same amount, an absolute error of 1 either way.
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Notice as you explore:</b> this section's two lessons share one real test worth repeating to students all year: is the output a category, or a number? That single question is what regression and classification actually come down to.</div>
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> test data is kept separate from training data on purpose, testing a model on data it's never seen gives a far better sense of how it performs in the real world. When you introduce the term, point students to the actual dots on the chart in their Activity Guide, that's the test data, made concrete.</div>
 </div>
 
-<hr>
 
-<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 1</div>
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 2</div>
-  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 3</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 4</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 5</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 6</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 7</div>
-</div>
+
+
 MARKDOWN

@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2026-11-12T22:08:50.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "hoai2026_maker_intro",
+    "uses_lab2": "true",
+    "video_full_width": true,
+    "encrypted": "false",
+    "header_label": "Getting started",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-12T22:08:50.934+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-video-intro\\\"\"],\"cloned_from\":\"hoai2026-dev-video-intro\"},{\"changed_at\":\"2026-11-12 22:12:21 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-12 22:12:27 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
