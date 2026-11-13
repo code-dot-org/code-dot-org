@@ -129,7 +129,7 @@ describe('generationLimitForMode', () => {
 describe('imageSourceFor', () => {
   const liveLevel: LevelMode = {kind: 'image', imageSource: 'live'};
 
-  it('gives anyone but a levelbuilder the tree, whatever is asked for', () => {
+  it('gives anyone but a levelbuilder the cache, whatever is asked for', () => {
     expect(imageSourceFor(liveLevel, undefined, false)).toBe('cached');
     expect(imageSourceFor({kind: 'image'}, 'live', false)).toBe('cached');
   });
@@ -143,7 +143,7 @@ describe('imageSourceFor', () => {
 });
 
 describe('imageSourceForMode', () => {
-  it('is the tree first unless the level names a source', () => {
+  it('is the cache unless the level names a source', () => {
     expect(imageSourceForMode({kind: 'image'})).toBe('cached');
     expect(imageSourceForMode(undefined)).toBe('cached');
     expect(imageSourceForMode({kind: 'image', imageSource: 'live'})).toBe(

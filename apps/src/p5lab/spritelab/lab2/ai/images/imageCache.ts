@@ -17,8 +17,8 @@ import {shuffle} from 'lodash';
 import {bytesToBase64} from './encoding';
 import {ImageStyle} from './types';
 
-/** Where a level's pictures come from: the published tree (the default)
-    or the model. */
+/** Where a level's pictures come from: the cache (the default) or the
+    model. */
 export const IMAGE_SOURCES = ['live', 'cached'] as const;
 export type ImageSource = (typeof IMAGE_SOURCES)[number];
 
@@ -87,7 +87,7 @@ export function sentencePath(
   return `${sentenceId}/${wordIds.join('/')}/${style}`;
 }
 
-// A file the tree lacks stays missing for the page: Generate again asks
+// A file the cache lacks stays missing for the page: Generate again asks
 // about the same variants. A fetch that failed is asked again.
 const missing = new Set<string>();
 
@@ -122,7 +122,7 @@ export interface FindCachedImageParams {
   characterSet: boolean;
   /** The variant shown last time; another is preferred when one exists. */
   avoidVariant?: number;
-  /** Override for tests and QA; defaults to the published tree. */
+  /** Override for tests and QA; defaults to the published cache. */
   baseUrl?: string;
   version?: string;
 }

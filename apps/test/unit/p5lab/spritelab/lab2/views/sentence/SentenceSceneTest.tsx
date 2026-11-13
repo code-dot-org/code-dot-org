@@ -93,7 +93,7 @@ const layout = (parts: SentenceSceneParts) => (
 
 const onKeep = jest.fn();
 
-// The model draws unless a test names the tree.
+// The model draws unless a test names the cache.
 function renderScene(props = {}) {
   return render(
     <ThemeProvider>
@@ -442,7 +442,7 @@ describe('SentenceScene', () => {
       expect(findCachedImage.mock.calls[2][0].avoidVariant).toBeUndefined();
     });
 
-    it('asks for different words when the tree lacks them, without the model', async () => {
+    it('asks for different words when the cache lacks them, without the model', async () => {
       findCachedImage.mockResolvedValue(undefined);
       renderCached();
       pickCreature();

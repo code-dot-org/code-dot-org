@@ -29,7 +29,7 @@ export interface LevelMode {
   /** The level tells how AI made the student's image, after the first
       picture made in a visit. */
   learning?: boolean;
-  /** Where the level's pictures come from (imageCache.ts); the tree when
+  /** Where the level's pictures come from (imageCache.ts); the cache when
       unset. */
   imageSource?: ImageSource;
   /** The Images tab offers one image, of the level's imageType, with no
@@ -125,12 +125,12 @@ export function generationLimitForMode(
     : undefined;
 }
 
-/** The source a mode's pictures come from: the tree unless named. */
+/** The source a mode's pictures come from: the cache unless named. */
 export function imageSourceForMode(mode: LevelMode | undefined): ImageSource {
   return mode?.imageSource ?? 'cached';
 }
 
-/** Only a levelbuilder gets the model. Anyone else gets the tree, whatever
+/** Only a levelbuilder gets the model. Anyone else gets the cache, whatever
     the level or the page's address asks for. */
 export function imageSourceFor(
   mode: LevelMode | undefined,

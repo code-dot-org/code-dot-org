@@ -112,8 +112,8 @@ export interface SentenceSceneParts {
   frame: React.ReactNode;
   /** A made picture is showing in the frame. */
   frameFilled: boolean;
-  /** A reviewer's mark over a picture served from the tree, while the tree
-      is filled in; comes out before ship. */
+  /** A reviewer's mark over a picture served from the cache, while the
+      cache is filled in; comes out before ship. */
   cachedTag: React.ReactNode;
   /** The Behind the scenes button, once there is a picture. */
   behindTheScenes: React.ReactNode;
@@ -196,10 +196,10 @@ interface SentenceSceneProps {
       from Behind the scenes. */
   onTellStory?: (story: LearningStory) => void;
   advanced?: AdvancedOptions;
-  /** Where a sentence's picture comes from (imageCache.ts); the tree when
+  /** Where a sentence's picture comes from (imageCache.ts); the cache when
       unset. A typed prompt always goes to the model. */
   imageSource?: ImageSource;
-  /** Another tree to read cached pictures from (QA). */
+  /** Another address to read cached pictures from (QA). */
   imageCacheUrl?: string;
 }
 
@@ -261,7 +261,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   // another.
   const lastCachedRef = useRef<{path: string; variant: number}>();
 
-  // The cached picture for the sentence as filled, when the tree has one.
+  // The cached picture for the sentence as filled, when there is one.
   const findCached = useCallback(async (): Promise<CachedImage | undefined> => {
     const wordIds = sentenceWordIds(sentence, choices);
     const path = sentencePath(sentence.id, wordIds, style);
@@ -352,7 +352,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       },
       true
     );
-    // The model does not draw a filling the tree lacks.
+    // The model does not draw a filling the cache lacks.
     if (fromCache && !cached) {
       setError(
         lookupFailed
