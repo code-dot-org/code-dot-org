@@ -154,7 +154,7 @@ class UserPreferencesControllerTest < ActionController::TestCase
   test 'returns conflict and keeps the stored section_order when another request holds the row lock' do
     preference = UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
     UserPreference.any_instance.stubs(:lock!).raises(lock_nowait_error)
-    Cdo::Metrics.stubs(:push)
+    Cdo::Metrics.stubs(:put)
 
     patch :update, params: {section_order: [1, 2, 3]}, as: :json
 
@@ -165,10 +165,7 @@ class UserPreferencesControllerTest < ActionController::TestCase
   test 'counts a lock conflict' do
     UserPreference.create!(user_id: @user.id, section_order: [3, 2, 1])
     UserPreference.any_instance.stubs(:lock!).raises(lock_nowait_error)
-    Cdo::Metrics.expects(:push).with do |namespace, metrics|
-      namespace == UserPreferencesController::METRICS_NAMESPACE &&
-        metrics.one? {|metric| metric[:metric_name] == 'SectionOrder.LockConflict' && metric[:value] == 1}
-    end
+    Cdo::Metrics.expects(:put).with('User', 'SectionOrderSaveConflict', 1, {Environment: CDO.rack_env})
 
     patch :update, params: {section_order: [1, 2, 3]}, as: :json
 
