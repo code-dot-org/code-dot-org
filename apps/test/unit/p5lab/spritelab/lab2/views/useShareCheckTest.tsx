@@ -7,7 +7,12 @@ import {setShareFailure} from '@cdo/apps/lab2/lab2Redux';
 import {fetchShareFailure} from '@cdo/apps/lab2/projects/channelsApi';
 import {ShareFailure} from '@cdo/apps/lab2/types';
 import useShareCheck from '@cdo/apps/p5lab/spritelab/lab2/views/useShareCheck';
-import {getStore, restoreRedux, stubRedux} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 
 jest.mock('@cdo/apps/lab2/projects/channelsApi', () => ({
   ...jest.requireActual('@cdo/apps/lab2/projects/channelsApi'),
@@ -23,6 +28,17 @@ describe('useShareCheck', () => {
 
   beforeEach(() => {
     stubRedux();
+    registerReducers({
+      shareDialog: (
+        state: {isOpen: boolean} = {isOpen: false},
+        action: {type: string}
+      ) =>
+        action.type === 'test/openShare'
+          ? {isOpen: true}
+          : action.type === 'test/closeShare'
+          ? {isOpen: false}
+          : state,
+    });
     store = getStore();
     dispatchSpy = jest.spyOn(store, 'dispatch');
     mockFetchShareFailure.mockReset().mockResolvedValue(FAILURE);
@@ -59,6 +75,36 @@ describe('useShareCheck', () => {
     expect(mockFetchShareFailure).toHaveBeenCalledTimes(1);
     expect(mockFetchShareFailure).toHaveBeenCalledWith('abc');
     expect(dispatchSpy).toHaveBeenCalledWith(setShareFailure(FAILURE));
+  });
+
+  it('asks again each time the share dialog opens', async () => {
+    renderCheck('abc', true);
+    await flush();
+    expect(mockFetchShareFailure).toHaveBeenCalledTimes(1);
+
+    mockFetchShareFailure.mockResolvedValue(null);
+    act(() => {
+      store.dispatch({type: 'test/openShare'});
+    });
+    await flush();
+    expect(mockFetchShareFailure).toHaveBeenCalledTimes(2);
+    expect(dispatchSpy).toHaveBeenCalledWith(setShareFailure(null));
+
+    act(() => {
+      store.dispatch({type: 'test/closeShare'});
+    });
+    await flush();
+    expect(mockFetchShareFailure).toHaveBeenCalledTimes(2);
+  });
+
+  it('does not ask on a level in a unit, even when its share dialog opens', async () => {
+    renderCheck('abc', false);
+    act(() => {
+      store.dispatch({type: 'test/openShare'});
+    });
+    await flush();
+
+    expect(mockFetchShareFailure).not.toHaveBeenCalled();
   });
 
   it('does not ask on a level in a unit', async () => {

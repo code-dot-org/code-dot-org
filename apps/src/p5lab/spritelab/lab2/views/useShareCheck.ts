@@ -1,38 +1,64 @@
-import {useEffect} from 'react';
+import {useCallback, useEffect} from 'react';
 
 import {setShareFailure} from '@cdo/apps/lab2/lab2Redux';
 import {fetchShareFailure} from '@cdo/apps/lab2/projects/channelsApi';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 /**
- * Asks the server, once as a project page opens, whether the project's text
- * may be shared, and publishes the answer for the page's blocked notice and
- * the share dialog. The server looks for profanity and personal information.
- * A level in a unit does not ask, and nothing asks again after a save, so
- * the server is not called on every level load and save.
+ * Asks the server whether the project's text may be shared, and publishes
+ * the answer for the page's blocked notice and the share dialog. The server
+ * looks for profanity and personal information.
+ *
+ * It asks as a project page opens, and again each time the share dialog
+ * opens, so an owner who has removed the flagged text can share without
+ * reloading. A level in a unit does not ask, and nothing asks after a save,
+ * so the server is not called on every level load and save.
  */
 export default function useShareCheck(
   channelId: string | undefined,
   isProjectPage: boolean
 ) {
   const dispatch = useAppDispatch();
+  const shareDialogOpen = useAppSelector(
+    state => !!(state as {shareDialog?: {isOpen?: boolean}}).shareDialog?.isOpen
+  );
+  const checkedChannelId = isProjectPage ? channelId : undefined;
+
+  const ask = useCallback(
+    (id: string, isCurrent: () => boolean) => {
+      fetchShareFailure(id)
+        .then(failure => {
+          if (isCurrent()) {
+            dispatch(setShareFailure(failure));
+          }
+        })
+        // A check that cannot be made leaves the project viewable, as the
+        // server does when its own filter is unreachable.
+        .catch(() => {});
+    },
+    [dispatch]
+  );
+
   useEffect(() => {
-    if (!channelId || !isProjectPage) {
+    if (!checkedChannelId) {
       return;
     }
-    let left = false;
-    fetchShareFailure(channelId)
-      .then(failure => {
-        if (!left) {
-          dispatch(setShareFailure(failure));
-        }
-      })
-      // A check that cannot be made leaves the project viewable, as the
-      // server does when its own filter is unreachable.
-      .catch(() => {});
+    let pageOpen = true;
+    ask(checkedChannelId, () => pageOpen);
     return () => {
-      left = true;
+      pageOpen = false;
       dispatch(setShareFailure(null));
     };
-  }, [channelId, isProjectPage, dispatch]);
+  }, [checkedChannelId, ask, dispatch]);
+
+  useEffect(() => {
+    if (!checkedChannelId || !shareDialogOpen) {
+      return;
+    }
+    let dialogOpen = true;
+    ask(checkedChannelId, () => dialogOpen);
+    return () => {
+      dialogOpen = false;
+    };
+  }, [checkedChannelId, shareDialogOpen, ask]);
 }
