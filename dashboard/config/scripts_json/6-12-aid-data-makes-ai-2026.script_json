@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-10 19:03:48 UTC",
+    "serialized_at": "2026-11-12 22:43:58 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2751,8 +2751,19 @@
       }
     },
     {
-      "key": "6cc9cc17-2a96-446a-8fce-2093a6d37636",
+      "key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e",
       "position": 2,
+      "properties": {
+        "progression_name": "Project Datasets"
+      },
+      "seeding_key": {
+        "activity_section.key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e",
+        "lesson_activity.key": "5d3ab0c6-38f7-41f0-833f-f7d614d92470"
+      }
+    },
+    {
+      "key": "6cc9cc17-2a96-446a-8fce-2093a6d37636",
+      "position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -2764,6 +2775,7 @@
       "key": "33fac1df-07ad-4ad6-ae56-14820e52b37f",
       "position": 1,
       "properties": {
+        "progression_name": "Alternate Snacks Datasets"
       },
       "seeding_key": {
         "activity_section.key": "33fac1df-07ad-4ad6-ae56-14820e52b37f",
@@ -2771,9 +2783,54 @@
       }
     },
     {
+      "key": "9f2509f9-c294-4a12-95c9-3982892f8f9b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Alternate Football Datasets"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f2509f9-c294-4a12-95c9-3982892f8f9b",
+        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2"
+      }
+    },
+    {
+      "key": "d03ecb49-1fca-4bc0-b5ea-4a90240f9f02",
+      "position": 3,
+      "properties": {
+        "progression_name": "Alternative Playlist Datasetss"
+      },
+      "seeding_key": {
+        "activity_section.key": "d03ecb49-1fca-4bc0-b5ea-4a90240f9f02",
+        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2"
+      }
+    },
+    {
+      "key": "4957ad74-932a-4028-898e-ff06823ac09e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Alternate Video Game Datasets"
+      },
+      "seeding_key": {
+        "activity_section.key": "4957ad74-932a-4028-898e-ff06823ac09e",
+        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2"
+      }
+    },
+    {
+      "key": "abffc60c-5938-4a47-b3e2-4f1bb14cdf09",
+      "position": 5,
+      "properties": {
+        "progression_name": "Alternate Board Game Datasets"
+      },
+      "seeding_key": {
+        "activity_section.key": "abffc60c-5938-4a47-b3e2-4f1bb14cdf09",
+        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2"
+      }
+    },
+    {
       "key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803",
       "position": 1,
       "properties": {
+        "progression_name": "User Profiles"
       },
       "seeding_key": {
         "activity_section.key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803",
@@ -4173,6 +4230,160 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Project Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-1"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Alternate Snacks Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-snacks"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "33fac1df-07ad-4ad6-ae56-14820e52b37f"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-snacks"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Alternate Football Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-football"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "9f2509f9-c294-4a12-95c9-3982892f8f9b"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-football"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Alternative Playlist Datasetss"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-study"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d03ecb49-1fca-4bc0-b5ea-4a90240f9f02"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-study"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Alternate Video Game Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-game"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "4957ad74-932a-4028-898e-ff06823ac09e"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-game"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Alternate Board Game Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-board"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "abffc60c-5938-4a47-b3e2-4f1bb14cdf09"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-board"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "User Profiles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-choice-weblab"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803"
+      },
+      "level_keys": [
+        "data-makes-ai-project-choice-weblab"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4933,6 +5144,90 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "df3fcab1-798a-4a20-86d4-0421bcab57eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-1",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-snacks",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-snacks"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "33fac1df-07ad-4ad6-ae56-14820e52b37f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-football",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-football"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "9f2509f9-c294-4a12-95c9-3982892f8f9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-study",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-study"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d03ecb49-1fca-4bc0-b5ea-4a90240f9f02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-game",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-game"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "4957ad74-932a-4028-898e-ff06823ac09e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-board",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-board"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "abffc60c-5938-4a47-b3e2-4f1bb14cdf09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-choice-weblab",
+        "script_level.level_keys": [
+          "data-makes-ai-project-choice-weblab"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803"
       }
     },
     {
@@ -6315,6 +6610,9 @@
         "objective.key": "fab476fb-afac-49e0-8433-2cd5b6087a87"
       }
     }
+  ],
+  "objectives_script_levels": [
+
   ],
   "lessons_standards": [
     {

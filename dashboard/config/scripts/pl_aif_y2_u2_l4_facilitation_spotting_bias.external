@@ -3,43 +3,120 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<h1>Section 3: Making Predictions</h1>
+# Facilitating Selecting Data
 
-<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; font-size: 13px; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lessons 3-4</div>
+## What's Actually Happening in This Lesson
 
-<p>This section prepares you to teach two curriculum lessons. Students first learn to read and interpret data, categorical and numerical, then use that foundation to make the central conceptual leap of the whole unit: turning data into a prediction, and recognizing whether that prediction is a category or a number.</p>
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
-  <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 3:</b> Describing Data</div>
-  <a href="PASTE_UNIT_2_LESSON_3_URL_HERE" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 3</a>
-</div>
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
-  <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 4:</b> Prediction Models</div>
-  <a href="PASTE_UNIT_2_LESSON_4_URL_HERE" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 4</a>
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Exploring Data Bias:</strong> Anita's chart, then pairs work through the Exploring Data Bias Activity Guide, applying three questions to real datasets</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Working with Lists (Levels 1-3):</strong> students write loops over Python lists to check a dataset's representativeness in code</div>
+  </div>
 </div>
 
 <hr>
 
-<p><b>In this section, you'll:</b></p>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Tell categorical and numerical data apart, and recognize correlation and outliers in a real scatter plot</div>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Meet Anita's Parlor, the running example for this whole section, and see why a small business owner needs predictions in the first place</div>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Try the same regression and classification widgets students use themselves</div>
-<div style="font-size: 16px;">&bull; Get ahead of two real misconceptions: mistaking a business decision for a prediction question, and telling regression and classification apart</div>
+## The Three Real Circulate Questions
+
+To decide whether a dataset is representative, students need more than a gut feeling, they need a repeatable way to check. The lesson gives them exactly that: three questions to ask of any dataset, in order.
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;">1. What group are we trying to make predictions about?</div>
+  <div style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;">2. What are the important subgroups within that group?</div>
+  <div style="font-size: 16px; line-height: 1.6;">3. Does the data include each relevant subgroup?</div>
+</div>
+
+Here's the real exercise students apply these to, predicting vocabulary size by age, for all English speakers in the US:
+
+<div style="font-family: Arial, sans-serif; font-size: 14pt; color: #111; line-height: 1.4; max-width: 1000px; margin: 0 auto; border: 2px solid #7050cc; border-radius: 16px; padding: 24px; background-color: #fff;">
+
+  <p style="margin: 0 0 12px;"><strong>Dataset:</strong></p>
+
+  <table style="width: 100%; border-collapse: collapse; font-size: 14pt;">
+    <thead>
+      <tr style="background-color: #7050cc; color: #fff;">
+        <th scope="col" style="border: 1px solid #111; padding: 8px; text-align: center;">Who</th>
+        <th scope="col" style="border: 1px solid #111; padding: 8px; text-align: center;">Age</th>
+        <th scope="col" style="border: 1px solid #111; padding: 8px; text-align: center;">Vocab (number of words)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in Massachusetts</td>
+        <td style="border: 1px solid #111; padding: 8px;">5</td>
+        <td style="border: 1px solid #111; padding: 8px;">7,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in California</td>
+        <td style="border: 1px solid #111; padding: 8px;">15</td>
+        <td style="border: 1px solid #111; padding: 8px;">8,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in Massachusetts</td>
+        <td style="border: 1px solid #111; padding: 8px;">25</td>
+        <td style="border: 1px solid #111; padding: 8px;">15,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in Arizona</td>
+        <td style="border: 1px solid #111; padding: 8px;">35</td>
+        <td style="border: 1px solid #111; padding: 8px;">18,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in New Mexico</td>
+        <td style="border: 1px solid #111; padding: 8px;">45</td>
+        <td style="border: 1px solid #111; padding: 8px;">22,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in Massachusetts</td>
+        <td style="border: 1px solid #111; padding: 8px;">55</td>
+        <td style="border: 1px solid #111; padding: 8px;">27,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in New York</td>
+        <td style="border: 1px solid #111; padding: 8px;">65</td>
+        <td style="border: 1px solid #111; padding: 8px;">28,000</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #111; padding: 8px;">Native speaker in Texas</td>
+        <td style="border: 1px solid #111; padding: 8px;">75</td>
+        <td style="border: 1px solid #111; padding: 8px;">35,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin: 18px 0 12px;">
+    Does the data include each relevant subgroup? Is the data biased or representative?
+  </p>
+
+  <div style="border: 1px solid #111; border-radius: 10px; padding: 12px; min-height: 110px; color: #c00000;">
+    The data includes people of different ages and locations, but only includes native speakers. It leaves out anyone who isn’t a native speaker of English, which is a relevant subgroup. As a result, the data is biased.
+  </div>
+
+</div>
+    
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Notice as you explore:</b> this section's two lessons share one real test worth repeating to students all year: is the output a category, or a number? That single question is what regression and classification actually come down to.</div>
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Think about any groups of people who aren't included in this table. Who might be missing?"</div>
 </div>
 
-<hr>
+<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #611D00; line-height: 1.5;">
+    <strong>&#9888; A known simplification:</strong> this heuristic doesn't account for datasets with insufficient data from a subgroup, that requires sampling and sample size, covered later in Unit 3. If a student raises disproportionate sampling, that's a great instinct, just note it's coming later rather than diving in now.
+  </div>
+</div>
 
-<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 1</div>
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 2</div>
-  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 3</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 4</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 5</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 6</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 7</div>
+## Real-World Stakes
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Beyond ice cream:</strong> the lesson explicitly raises higher-stakes examples, a college admissions model missing data on non-native English speakers, facial recognition trained disproportionately on white faces. Anita's low-stakes example is the entry point, not the ceiling, don't let the discussion stop at ice cream if students are ready to go further.
+  </div>
 </div>
 MARKDOWN

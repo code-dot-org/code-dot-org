@@ -8,18 +8,22 @@
   }
 }
 
+// Share and Remix sit at the row's start, as in HeaderMiddle, at their full
+// width. The widget is centred in the row when there is room, and otherwise
+// starts after the buttons; it shrinks before they do.
 .row {
   width: 100%;
   min-width: 0;
   height: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(max-content, 1fr) minmax(0, auto) 1fr;
   align-items: center;
-  justify-content: center;
   animation: fadein 0.4s;
 }
 
 // Lets the widget's lesson name shrink before the row overflows the header.
 .widget {
+  grid-column: 2;
   display: flex;
   min-width: 0;
 
@@ -28,9 +32,8 @@
   }
 }
 
-// The project buttons cannot shrink, and their container clips, so the
-// project info keeps its width and the names give way instead.
+// As wide as its buttons, not the whole first column.
 .projectInfo {
-  flex: none;
+  justify-self: start;
   margin-inline-end: 5px;
 }
