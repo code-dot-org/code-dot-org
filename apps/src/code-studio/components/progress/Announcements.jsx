@@ -13,8 +13,8 @@ import i18n from '@cdo/locale';
 
 import styles from './announcements.module.scss';
 
-const NOTIFICATION_VARIANT_BY_TYPE = {
-  default: 'primary',
+const NOTIFICATION_SENTIMENT_BY_TYPE = {
+  default: 'brand',
   information: 'info',
   success: 'success',
   failure: 'error',
@@ -23,7 +23,7 @@ const NOTIFICATION_VARIANT_BY_TYPE = {
   bullhorn: 'info',
   bullhorn_yellow: 'warning',
   feedback: 'brand',
-  collaborate: 'primary',
+  collaborate: 'brand',
 };
 
 const NOTIFICATION_ICON_BY_TYPE = {
@@ -102,10 +102,10 @@ export default class Announcements extends Component {
                 'announcement-notification'
               )}
               fullWidth={false}
-              variant={
-                NOTIFICATION_VARIANT_BY_TYPE[announcement.type] || 'info'
+              sentiment={
+                NOTIFICATION_SENTIMENT_BY_TYPE[announcement.type] || 'info'
               }
-              style="filled"
+              fillStyle="color"
               title={announcement.notice}
               description={announcement.details}
               icon={{

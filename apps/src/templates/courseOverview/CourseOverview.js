@@ -179,8 +179,8 @@ class CourseOverview extends Component {
         {userId && <ParticipantFeedbackNotification studentId={userId} />}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
           <NotificationBanner
-            variant="warning"
-            style="filled"
+            sentiment="warning"
+            fillStyle="color"
             title=""
             description={i18n.redirectCourseVersionWarningDetails()}
             icon={WARNING_ICON}
@@ -193,8 +193,8 @@ class CourseOverview extends Component {
         )}
         {showVersionWarning && (
           <NotificationBanner
-            variant="warning"
-            style="filled"
+            sentiment="warning"
+            fillStyle="color"
             title={i18n.wrongCourseVersionWarningNotice()}
             description={i18n.wrongCourseVersionWarningDetails()}
             icon={WARNING_ICON}
