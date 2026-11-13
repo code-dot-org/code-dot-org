@@ -15,7 +15,6 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {tryGetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {isAdaptiveAiEnabled} from '../ai/generate';
@@ -336,14 +335,8 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   const allCheckpointsComplete = pathway.checkpoints.every(
     c => statusMap[c.id] === 'complete' || statusMap[c.id] === 'skipped'
   );
-  const calloutKey = `adaptive_project_callout_${progressKey.levelId}_${progressKey.scriptId}`;
-  const [calloutDismissed, setCalloutDismissed] = useState(
-    () => !!tryGetLocalStorage(calloutKey, '')
-  );
-  const dismissCallout = () => {
-    localStorage.setItem(calloutKey, '1');
-    setCalloutDismissed(true);
-  };
+  const [calloutDismissed, setCalloutDismissed] = useState(false);
+  const dismissCallout = () => setCalloutDismissed(true);
 
   // I'm finished does what the pathway's finish block says: asks through
   // its dialog, plays its checkpoint, then finishes the level the way any

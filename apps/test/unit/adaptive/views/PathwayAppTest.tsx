@@ -730,11 +730,6 @@ describe('PathwayApp', () => {
         'multi-b-step': {status: 'complete', timeSpent: 0},
       },
     };
-    const calloutKey = 'adaptive_project_callout_3_2';
-
-    beforeEach(() => {
-      localStorage.removeItem(calloutKey);
-    });
 
     it('shows the callout on the map when every checkpoint is complete', async () => {
       mockLoad.mockResolvedValue(allCompleteProgress);
@@ -752,21 +747,12 @@ describe('PathwayApp', () => {
       expect(screen.queryByText('final project callout')).toBeNull();
     });
 
-    it('hides the callout and stores dismissal in localStorage when dismissed', async () => {
+    it('hides the callout for the session when dismissed', async () => {
       mockLoad.mockResolvedValue(allCompleteProgress);
       await renderSettled();
       expect(screen.getByText('final project callout')).toBeTruthy();
 
       act(() => screen.getByRole('button', {name: 'dismiss callout'}).click());
-
-      expect(screen.queryByText('final project callout')).toBeNull();
-      expect(localStorage.getItem(calloutKey)).toBe('1');
-    });
-
-    it('does not show the callout when previously dismissed', async () => {
-      localStorage.setItem(calloutKey, '1');
-      mockLoad.mockResolvedValue(allCompleteProgress);
-      await renderSettled();
 
       expect(screen.queryByText('final project callout')).toBeNull();
     });
