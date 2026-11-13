@@ -66,9 +66,11 @@ export const resetSectionOrderSaveStateForTest = () => {
   pendingSectionOrder = undefined;
 };
 
-// True when the server answered 409, meaning another connection held the row
-// lock and the server dropped this save rather than wait for it.
-const putSectionOrder = async (sectionOrder: number[]): Promise<boolean> => {
+type SaveOutcome = 'saved' | 'conflict';
+
+const putSectionOrder = async (
+  sectionOrder: number[]
+): Promise<SaveOutcome> => {
   try {
     await HttpClient.put(
       '/user_preference',
@@ -79,12 +81,14 @@ const putSectionOrder = async (sectionOrder: number[]): Promise<boolean> => {
       }
     );
   } catch (error) {
+    // The server answers 409 when another connection holds this user's row
+    // lock, having dropped the save rather than wait for it.
     if (isNetworkError(error) && error.response.status === 409) {
-      return true;
+      return 'conflict';
     }
     console.error('Failed to save section order', error);
   }
-  return false;
+  return 'saved';
 };
 
 const sendPendingSectionOrders = async () => {
@@ -93,7 +97,7 @@ const sendPendingSectionOrders = async () => {
     pendingSectionOrder = undefined;
 
     let conflicts = 0;
-    while (await putSectionOrder(sectionOrder)) {
+    while ((await putSectionOrder(sectionOrder)) === 'conflict') {
       if (pendingSectionOrder) {
         break;
       }
