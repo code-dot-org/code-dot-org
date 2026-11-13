@@ -21,7 +21,8 @@ Please review and adhere to our [Architectural Tenets](ARCHITECTURE.md#architect
 Please make sure your code conforms to our [style guide](STYLEGUIDE.md).  We have implemented linting to help you with this:
 
 * To ensure our precommit linting hook is installed, run `rake install:hooks`. You should only have to do this once.
-* To lint the entire project, run `rake lint` from the repository root.  This will check all Ruby, JavaScript and HAML.
+* To lint only the files you changed, run `./tools/hooks/pre-commit` from the repository root. This is the quick path.
+* To lint the entire project, run `rake lint` from the repository root. It runs rubocop, haml-lint, `yarn lint` in apps (eslint and stylelint), ruff on `python/`, and the Rails zeitwerk loader check.
 * To lint only part of the project, run one of these commands from the repository root:
   * dashboard: `cd dashboard && rubocop && haml-lint`
   * pegasus Ruby: `cd pegasus && rubocop`
@@ -35,15 +36,15 @@ Please test your changes before submitting them to us!
 
 ### Manual testing
 
-We support recent versions of Firefox, Chrome, Edge, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in iOS and Android if it's a risk. [Sauce Labs](https://saucelabs.com/manual) lets you run manual tests in these browsers remotely.
+We support recent versions of Firefox, Chrome, Edge, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in iOS and Android if it's a risk.
 
 ### Unit tests
 
-For dashboard changes, be sure to test your changes using `rake test`. For [apps or blockly](./apps) changes, see our [grunt testing instructions](./apps#running-tests).
+For dashboard changes, be sure to test your changes using `rake test`. For [apps or blockly](./apps) changes, see the [apps testing instructions](./apps#testing).
 
 ### UI tests
 
-Our continuous integration server regularly runs a suite of [UI tests](./dashboard/test/ui) using Selenium / Cucumber which run against many browsers via [Sauce Labs](https://saucelabs.com/), and can also be run locally using `chromedriver`. See the [README](./dashboard/test/ui) in that folder for instructions.
+Our CI runs a suite of [UI tests](./dashboard/test/ui) using Selenium / Cucumber: Drone runs them in Chrome on each pull request, and deploy-time runs cover Chrome and Firefox on AWS Device Farm and Safari, iPad and iPhone on SauceLabs. They can also be run locally using `chromedriver`. See the [README](./dashboard/test/ui) in that folder for instructions.
 
 If your changes might affect level paths, blockly UI, or critical path site logic, be sure to test your changes with a local UI test.
 
@@ -63,7 +64,7 @@ Once you've linted and tested your changes, send us a pull request!  Contributor
     - Click on the "Pull Request" link, look over and confirm your diff
     - Submit a pull request for your branch to be merged into staging
     - For bonus points, include before and after screenshots in the description. Command + Ctrl + Shift + 4 in OS X lets you copy a screen selection to your clipboard, which GitHub will let you paste right into the description
-5. A Code.org [developer will ensure our test suite runs on your changes](https://github.com/code-dot-org/code-dot-org/wiki/How-to-run-Circle--tests-on-a-contributor-PR) and will merge your PR to staging for you.
+5. A Code.org developer will ensure our test suite runs on your changes and will merge your PR to staging for you.
 6. After your pull request is merged into staging, you can review your changes on the following sites:
   * [https://staging.code.org/](https://staging.code.org/)
   * [https://staging-studio.code.org/](https://staging-studio.studio.code.org/)
