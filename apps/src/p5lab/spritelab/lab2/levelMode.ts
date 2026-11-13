@@ -58,6 +58,10 @@ export interface LevelMode {
       level, counted across all its images. Unset, there is no limit, as
       in free play, on a one-image level too. */
   generationLimit?: number;
+  /** The World tab offers a size for the world: one to three screens wide,
+      and the same tall. For a platform level, whose camera follows the
+      player. Unset, a world is one screen. */
+  worldSizes?: boolean;
 }
 
 /** The style the advanced generate form starts on; the student form is

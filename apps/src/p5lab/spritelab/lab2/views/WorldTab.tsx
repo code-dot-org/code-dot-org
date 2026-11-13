@@ -26,8 +26,8 @@ import {
 
 import moduleStyles from './world-tab.module.scss';
 
-// The editor draws the grid at this overall size when there's room; cells
-// shrink as the visible extent grows.
+// The editor draws one screen of the grid at this size when there's room;
+// cells shrink as the world grows.
 const GRID_PIXELS = 528;
 // Short windows shrink the grid to fit, down to this; below it the tab
 // scrolls instead (cells get too small to paint).
@@ -288,8 +288,7 @@ export function cellRefusal(
 
 interface WorldTabProps {
   world?: World;
-  // Cells per side of the playfield. Storage is larger, so placements keep
-  // their coordinates if it ever grows.
+  // Cells per side of one screen.
   sceneSize: number;
   // Cell-level so the owner can apply it atomically against saved sources.
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;

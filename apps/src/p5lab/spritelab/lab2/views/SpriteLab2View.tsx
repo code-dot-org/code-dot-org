@@ -1810,10 +1810,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       updateActiveWorld(world => resizeWorldScreens(world, screens)),
     [updateActiveWorld]
   );
-  // The camera that follows the player across a larger world is the
-  // platform game's, so only a platform level in free play offers the sizes.
+  // A level asks for the sizes (level_mode.worldSizes). The camera that
+  // follows the player across a larger world is the platform game's.
   const worldSizeOffered =
-    freeplayLevel && usesPlatformPhysics(levelProperties.helperLibraries);
+    !!levelProperties.levelMode?.worldSizes &&
+    usesPlatformPhysics(levelProperties.helperLibraries) &&
+    !isViewOnly;
 
   const handlePaintWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell | null) =>

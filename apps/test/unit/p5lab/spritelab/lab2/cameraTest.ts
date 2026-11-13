@@ -108,6 +108,14 @@ describe('camera', () => {
       });
     });
 
+    it('draws the background as ever when the world is one screen', () => {
+      const oneScreen = {left: 0, top: 0, right: 400, bottom: 400};
+      const focus = cameraFocus(2, {x: 300, y: 100}, oneScreen);
+      expect(backgroundFrame(2, focus, oneScreen)).toEqual(
+        backgroundFrame(2, focus)
+      );
+    });
+
     it('starts on the first screen with no player to follow', () => {
       expect(cameraFocus(1, null, world)).toEqual({x: 200, y: 200});
     });

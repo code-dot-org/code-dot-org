@@ -92,7 +92,10 @@ export function backgroundFrame(
   focus: Point,
   world: WorldBounds = ONE_SCREEN
 ): {x: number; y: number; size: number} {
-  if (world !== ONE_SCREEN) {
+  const oneScreen =
+    world.right - world.left === APP_WIDTH &&
+    world.bottom - world.top === APP_WIDTH;
+  if (!oneScreen) {
     return largerWorldBackgroundFrame(zoom, focus, world);
   }
   const scale = backgroundZoom(zoom);
