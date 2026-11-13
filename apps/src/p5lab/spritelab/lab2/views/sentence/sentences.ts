@@ -249,10 +249,14 @@ export function phraseFilled(
 }
 
 /**
- * The sentence as its chips read; with useModelFacingTextVariant, each
- * word's modelFacingText, if any, in place of its text. Empty optional
- * slots and unfilled phrases are left out, and the spaces they leave are
- * closed up.
+ * Returns the plain string prompt for the sentence. When
+ * useModelFacingTextVariant is false (which it normally is), the string is
+ * just the adlibs the student chose, joined by the sentence's fixed text,
+ * e.g. "A cat wearing a crown". When useModelFacingTextVariant is true, we
+ * sub in each chosen word's `modelFacingText` (special text to prompt the
+ * model for something the student didn't ask for, currently only used for
+ * the witch) to get "A green-skinned witch" instead of just "A witch" (the
+ * adlib the student sees).
  */
 export function promptText(
   sentence: Sentence,
