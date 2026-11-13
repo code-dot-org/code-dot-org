@@ -7150,27 +7150,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rrweb/record@npm:2.0.0-alpha.17":
-  version: 2.0.0-alpha.17
-  resolution: "@rrweb/record@npm:2.0.0-alpha.17"
+"@rrweb/record@npm:2.1.7":
+  version: 2.1.7
+  resolution: "@rrweb/record@npm:2.1.7"
   dependencies:
-    "@rrweb/types": "npm:^2.0.0-alpha.17"
-    rrweb: "npm:^2.0.0-alpha.17"
-  checksum: 10/ce2e47af99ab364612bd82f109b4c822161a58dbc124b2b7810e7307038124a22e5aabb4f0401b8c590108b8ca99932b4624ffe0dd7965042df0f9774111cd7f
+    "@rrweb/types": "npm:^2.1.7"
+    "@rrweb/utils": "npm:^2.1.7"
+    rrweb: "npm:^2.1.7"
+  checksum: 10/547018837213a123e87722f500daa2dbd5c8ed53e14ebae36a20091799ed253d402540d093c5d0116dba774c9810cc293bb91b1c13f5e3ae4e11f0614e278dd2
   languageName: node
   linkType: hard
 
-"@rrweb/types@npm:^2.0.0-alpha.17, @rrweb/types@npm:^2.0.0-alpha.18":
-  version: 2.0.0-alpha.18
-  resolution: "@rrweb/types@npm:2.0.0-alpha.18"
-  checksum: 10/ddb632d49490ac6c20d011825b7b44e28a3783bbdabdf72f09649fdf2c5e107f756e7d926e5074b827c2311f28562905e8fa1911bbe8119ca014b3e24fb87f72
+"@rrweb/types@npm:^2.1.7, @rrweb/types@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "@rrweb/types@npm:2.2.2"
+  checksum: 10/1e0c24117757025e3bbf555d235edd4120a5d5e39294ee95350259b78c2ce92187d5c84abcc2c55bd16d7373ee82c19dd585e0d5da11998ac29d14136e6c48fe
   languageName: node
   linkType: hard
 
-"@rrweb/utils@npm:^2.0.0-alpha.17, @rrweb/utils@npm:^2.0.0-alpha.18":
-  version: 2.0.0-alpha.18
-  resolution: "@rrweb/utils@npm:2.0.0-alpha.18"
-  checksum: 10/d0ca790639816b13dcd353b9669059373c1f56585a5ad4a03c7559fd1d6cdae104e63f50f0076053b67ae1635be0f7b0e9bcb42ab9f9e094358952760499133d
+"@rrweb/utils@npm:^2.1.7, @rrweb/utils@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "@rrweb/utils@npm:2.2.2"
+  checksum: 10/d95ad98d239f67e1d60d190293211fee164ca00c1d55dc479fa627ab6ae9d57119812dda7ac7cf70f2296e5b39d79453a5a77348e08456a3d343a50229bfe972
   languageName: node
   linkType: hard
 
@@ -7698,41 +7699,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@statsig/client-core@npm:3.25.5":
-  version: 3.25.5
-  resolution: "@statsig/client-core@npm:3.25.5"
-  checksum: 10/f36251b63c73a4397443d4d48c62f493ee35c74efc4e8e4da98b5dd9338aee4732c7dd3c252180064b690839165aa8d03332cab1cacac0653dc44cad35cfab9d
+"@statsig/client-core@npm:3.33.8":
+  version: 3.33.8
+  resolution: "@statsig/client-core@npm:3.33.8"
+  checksum: 10/cb5690d81410d166d068988f57f2ce88d11bc109106870273324207f7ca7b17dc062eb893ddb6adca3142509e97c529f921155edbbd327c74645bb842e9a75c1
   languageName: node
   linkType: hard
 
-"@statsig/js-client@npm:3.25.5, @statsig/js-client@npm:^3.25.5":
-  version: 3.25.5
-  resolution: "@statsig/js-client@npm:3.25.5"
+"@statsig/js-client@npm:3.33.8, @statsig/js-client@npm:^3.25.5":
+  version: 3.33.8
+  resolution: "@statsig/js-client@npm:3.33.8"
   dependencies:
-    "@statsig/client-core": "npm:3.25.5"
-  checksum: 10/942e2772a45bbf913836b8b41ea7c8a63cfd8c0c9fdddee21baf5db1f9ce3d6eff82a0b9a73c76b7619dcbf08f927a65417542057e8ae451c01cf674ffb8980e
+    "@statsig/client-core": "npm:3.33.8"
+  checksum: 10/73ecf3a7fab52fa1f48f2bf120a9430836d71c45ce9f3730c945d46119b59cbe74c318e761e1fa7928b60b1254eab0ee32e1967fefe20be01bc1e1fdddd773d5
   languageName: node
   linkType: hard
 
 "@statsig/session-replay@npm:^3.25.5":
-  version: 3.25.5
-  resolution: "@statsig/session-replay@npm:3.25.5"
+  version: 3.33.8
+  resolution: "@statsig/session-replay@npm:3.33.8"
   dependencies:
-    "@rrweb/record": "npm:2.0.0-alpha.17"
-    "@statsig/client-core": "npm:3.25.5"
-    rrweb: "npm:2.0.0-alpha.17"
-  checksum: 10/342cd28c83ca14ff7839aab4b96e88daf0a67b7bdbdb8e9f61b78452c943c039256dd4106271f95a90604520797bcd7ac2e85e3ca4195f9337d71d5687eace31
+    "@rrweb/record": "npm:2.1.7"
+    "@statsig/client-core": "npm:3.33.8"
+    rrweb: "npm:2.1.7"
+  checksum: 10/057770f0627f0983d404390c3fe9c2a2246c506d5264e7a70a78a983d18c3426bad66940c1ebdbd0ee388dfb3d0ccf57e0c128f1aec0bf9a52506c7847962de1
   languageName: node
   linkType: hard
 
 "@statsig/web-analytics@npm:^3.25.5":
-  version: 3.25.5
-  resolution: "@statsig/web-analytics@npm:3.25.5"
+  version: 3.33.8
+  resolution: "@statsig/web-analytics@npm:3.33.8"
   dependencies:
-    "@statsig/client-core": "npm:3.25.5"
-    "@statsig/js-client": "npm:3.25.5"
+    "@statsig/client-core": "npm:3.33.8"
+    "@statsig/js-client": "npm:3.33.8"
     web-vitals: "npm:5.0.3"
-  checksum: 10/c13ac3e14bac6f1fcaff7dc33ff3df9931c7a782806be02a37959a946841e4d0630dd157af1b9e1f9934a368261dfdbfb205233de66589c2c5cbf919189b6488
+  checksum: 10/481767399449fc5b34c9f4d7dffa6d38b4ca547c2fb37758f7f22176eb114e92f31df7c5cc2568c2209ea16fec8c744452bb73f3ec59fc28bc233e6677af2e0d
   languageName: node
   linkType: hard
 
@@ -23379,6 +23380,15 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.3.20":
+  version: 3.3.20
+  resolution: "nanoid@npm:3.3.20"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 10/b19641487fc25325189175226a4b9fcc8da39989c6a39fd35921802158d6b1725d59d8454a4e30643d2bb4837382cac11ee129417282678a67f8394b31c228d9
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.4":
   version: 3.3.4
   resolution: "nanoid@npm:3.3.4"
@@ -23403,15 +23413,6 @@ canvg@gabelerner/canvg:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 10/ac1eb60f615b272bccb0e2b9cd933720dad30bf9708424f691b8113826bb91aca7e9d14ef5d9415a6ba15c266b37817256f58d8ce980c82b0ba3185352565679
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:^3.3.8":
-  version: 3.3.8
-  resolution: "nanoid@npm:3.3.8"
-  bin:
-    nanoid: bin/nanoid.cjs
-  checksum: 10/2d1766606cf0d6f47b6f0fdab91761bb81609b2e3d367027aff45e6ee7006f660fb7e7781f4a34799fe6734f1268eeed2e37a5fdee809ade0c2d4eb11b0f9c40
   languageName: node
   linkType: hard
 
@@ -25220,17 +25221,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.38":
-  version: 8.5.1
-  resolution: "postcss@npm:8.5.1"
-  dependencies:
-    nanoid: "npm:^3.3.8"
-    picocolors: "npm:^1.1.1"
-    source-map-js: "npm:^1.2.1"
-  checksum: 10/1fbd28753143f7f03e4604813639918182b15343c7ad0f4e72f3875fc2cc0b8494c887f55dc05008fad5fbf1e1e908ce2edbbce364a91f84dcefb71edf7cd31d
-  languageName: node
-  linkType: hard
-
 "postcss@npm:^8.4.7":
   version: 8.4.16
   resolution: "postcss@npm:8.4.16"
@@ -25239,6 +25229,17 @@ canvg@gabelerner/canvg:
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.0.2"
   checksum: 10/e05f3426bde19889b446fae0e4a70f6d8775f2d9905fb9e25f40ed1b0a26d000f7e92a9f2acacf55118bef376100e4e6b6432f42b3876824bc71fea8e0cd0182
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.5.32":
+  version: 8.5.32
+  resolution: "postcss@npm:8.5.32"
+  dependencies:
+    nanoid: "npm:^3.3.20"
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.2"
+  checksum: 10/c86fd279d9f29d34bbec6482e01f54effe00eaf8f4dadbe17f8345d11eac68439da45d642b04bfb5d704886f665d2c31f9a0904f2a3f1b9f8098ee0894f76cea
   languageName: node
   linkType: hard
 
@@ -28018,53 +28019,53 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"rrdom@npm:^2.0.0-alpha.17, rrdom@npm:^2.0.0-alpha.18":
-  version: 2.0.0-alpha.18
-  resolution: "rrdom@npm:2.0.0-alpha.18"
+"rrdom@npm:^2.1.7, rrdom@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "rrdom@npm:2.2.2"
   dependencies:
-    rrweb-snapshot: "npm:^2.0.0-alpha.18"
-  checksum: 10/4b02e60a6828dd29893b2a003e7611f8db275bb21b24a0b8db97ecbfd75020b6d4be26e90ada0cae4a9b28fdc75fa258dd174d21e33d30c33aded797cc23b9bc
+    rrweb-snapshot: "npm:^2.2.2"
+  checksum: 10/c136003a982f5e2b46b9de09801e921a18028b44aeb2b6943ff363b9f5582ec3159ea690396a17f1c09f3428d583d29341e73f5f1f1ed890f61af6fdec389be2
   languageName: node
   linkType: hard
 
-"rrweb-snapshot@npm:^2.0.0-alpha.17, rrweb-snapshot@npm:^2.0.0-alpha.18":
-  version: 2.0.0-alpha.18
-  resolution: "rrweb-snapshot@npm:2.0.0-alpha.18"
+"rrweb-snapshot@npm:^2.1.7, rrweb-snapshot@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "rrweb-snapshot@npm:2.2.2"
   dependencies:
-    postcss: "npm:^8.4.38"
-  checksum: 10/5dbc717cf80057855d43c7afdbffc117af5074dc627c5b1375234512f1b04c03756836605cf8cb9615639a244fe6d5b2a139955a4ab131a2050dab7808332aa2
+    postcss: "npm:^8.5.32"
+  checksum: 10/248a81482a8703b62bdb68a508f17a560ffeeb400a88a369673aa5faec92d6399b9d52691d2f5392d22caf6868593a829a697f52114af963020043fd3bd93744
   languageName: node
   linkType: hard
 
-"rrweb@npm:2.0.0-alpha.17":
-  version: 2.0.0-alpha.17
-  resolution: "rrweb@npm:2.0.0-alpha.17"
+"rrweb@npm:2.1.7":
+  version: 2.1.7
+  resolution: "rrweb@npm:2.1.7"
   dependencies:
-    "@rrweb/types": "npm:^2.0.0-alpha.17"
-    "@rrweb/utils": "npm:^2.0.0-alpha.17"
+    "@rrweb/types": "npm:^2.1.7"
+    "@rrweb/utils": "npm:^2.1.7"
     "@types/css-font-loading-module": "npm:0.0.7"
     "@xstate/fsm": "npm:^1.4.0"
     base64-arraybuffer: "npm:^1.0.1"
     mitt: "npm:^3.0.0"
-    rrdom: "npm:^2.0.0-alpha.17"
-    rrweb-snapshot: "npm:^2.0.0-alpha.17"
-  checksum: 10/859e2a96a1d24db7f32821381c783e6cfe2061f1f6da2d20256da68ec413e66e712a44fe0c42ad97a631748bcc14a611f948dbd332c91fb8e7287e19ee7c92dd
+    rrdom: "npm:^2.1.7"
+    rrweb-snapshot: "npm:^2.1.7"
+  checksum: 10/e476b387d46148fe61279988917efbee3ecea9adeb8e041b17683128ea0115855a7afcc9a8c383d7672d54f1120868ccfce00f83784193ab6519cde99093a7ed
   languageName: node
   linkType: hard
 
-"rrweb@npm:^2.0.0-alpha.17":
-  version: 2.0.0-alpha.18
-  resolution: "rrweb@npm:2.0.0-alpha.18"
+"rrweb@npm:^2.1.7":
+  version: 2.2.2
+  resolution: "rrweb@npm:2.2.2"
   dependencies:
-    "@rrweb/types": "npm:^2.0.0-alpha.18"
-    "@rrweb/utils": "npm:^2.0.0-alpha.18"
+    "@rrweb/types": "npm:^2.2.2"
+    "@rrweb/utils": "npm:^2.2.2"
     "@types/css-font-loading-module": "npm:0.0.7"
     "@xstate/fsm": "npm:^1.4.0"
     base64-arraybuffer: "npm:^1.0.1"
     mitt: "npm:^3.0.0"
-    rrdom: "npm:^2.0.0-alpha.18"
-    rrweb-snapshot: "npm:^2.0.0-alpha.18"
-  checksum: 10/44efc0475a70c0a53f8eafc08159ccaaab56396c2cf2233a132bccb4d98c801b555d6d1bab7267a51bf5312766f908952bd75659d3d84e31c1a1e51cc76631ee
+    rrdom: "npm:^2.2.2"
+    rrweb-snapshot: "npm:^2.2.2"
+  checksum: 10/d5233e86a5d9f4928a83114c22ccae968e190d325a7c28e0c16f12266dd445a617029a5fb3bc8f35e5bb32c3faea52a298821ab2737f5cf58041ace6fde033a8
   languageName: node
   linkType: hard
 
@@ -29003,10 +29004,10 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "source-map-js@npm:1.2.1"
-  checksum: 10/ff9d8c8bf096d534a5b7707e0382ef827b4dd360a577d3f34d2b9f48e12c9d230b5747974ee7c607f0df65113732711bb701fe9ece3c7edbd43cb2294d707df3
+"source-map-js@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "source-map-js@npm:1.2.2"
+  checksum: 10/4807c894bb6280c8b84886159b96080e3996f42c6e8015e647881edfd4f955f6024ceebb8bb40d33ce8b106e24b2e29c133575e1c60c01c8aae57a05fdf17761
   languageName: node
   linkType: hard
 
