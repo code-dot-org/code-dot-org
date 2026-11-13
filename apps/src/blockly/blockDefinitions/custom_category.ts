@@ -17,8 +17,7 @@ const definition: BlockJson = {
   ],
   inputsInline: true,
   style: BlockStyles.LOOP,
-  tooltip:
-    'Indicates an auto-populated (dynamic) category. Cannot include other static blocks.',
+  tooltip: 'Indicates an auto-populated (dynamic) category.',
 };
 
 const generator: GeneratorFunction = () => '\n';

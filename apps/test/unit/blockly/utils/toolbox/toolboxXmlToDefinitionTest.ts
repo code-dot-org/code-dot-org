@@ -1,5 +1,6 @@
 import type * as BlocklyCore from 'blockly/core';
 
+import * as xmlToJson from '@cdo/apps/blockly/utils/serialization/xmlToJson';
 import type {NamedDynamicCategoryInfo} from '@cdo/apps/blockly/utils/toolbox/factories';
 import {toolboxXmlToDefinition} from '@cdo/apps/blockly/utils/toolbox/toolboxXmlToDefinition';
 
@@ -65,6 +66,44 @@ describe('toolboxXmlToDefinition', () => {
     });
     expect('custom' in behaviors).toBe(false);
     expect(behaviors.contents).toHaveLength(1);
+  });
+
+  it('keeps the blocks under a dynamic category', () => {
+    const definition = toolboxXmlToDefinition(`<xml>
+      <category name="Variables" custom="VARIABLE">
+        <block type="math_number"><field name="NUM">3</field></block>
+      </category>
+    </xml>`);
+
+    expect(definition?.contents).toEqual([
+      expect.objectContaining({
+        custom: 'VARIABLE',
+        contents: [
+          expect.objectContaining({
+            kind: 'block',
+            type: 'math_number',
+            fields: {NUM: 3},
+          }),
+        ],
+      }),
+    ]);
+  });
+
+  it('keeps a dynamic category whose blocks fail to convert', () => {
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+    jest.spyOn(xmlToJson, 'convertXmlToJson').mockImplementationOnce(() => {
+      throw new Error('conversion failed');
+    });
+    const definition = toolboxXmlToDefinition(`<xml>
+      <category name="Variables" custom="VARIABLE">
+        <block type="math_number"/>
+      </category>
+    </xml>`);
+
+    expect(definition?.contents).toEqual([
+      expect.objectContaining({custom: 'VARIABLE'}),
+    ]);
+    expect(definition?.contents[0]).not.toHaveProperty('contents');
   });
 
   it('converts a flyout toolbox', () => {

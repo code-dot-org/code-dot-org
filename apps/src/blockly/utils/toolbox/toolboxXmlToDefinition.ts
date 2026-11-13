@@ -12,8 +12,8 @@ type ToolboxItemInfo = BlocklyCore.utils.toolbox.ToolboxItemInfo;
 /**
  * Convert an XML toolbox — category or flyout — to a JSON toolbox
  * definition. Requires installed blocks (conversion loads blocks onto a
- * headless workspace). A category that fails to convert is dropped with a
- * warning.
+ * headless workspace). A category whose blocks fail to convert is dropped
+ * with a warning, except a dynamic one, which keeps its generated flyout.
  */
 export function toolboxXmlToDefinition(xml: string): ToolboxInfo | undefined {
   const doc = new DOMParser().parseFromString(xml, 'text/xml');
@@ -41,35 +41,38 @@ export function toolboxXmlToDefinition(xml: string): ToolboxInfo | undefined {
   categories.forEach(child => {
     const name = child.getAttribute('name') || '';
     const custom = child.getAttribute('custom');
-    if (custom) {
-      // Dynamic categories are keyed by their DYNAMIC_CATEGORY_OPTIONS entry
-      // (which names the category); a custom flyout with no entry (e.g.
-      // legacy "Behavior") falls through to a static category of the XML
-      // children.
-      const key = Object.keys(DYNAMIC_CATEGORY_OPTIONS).find(
-        k => DYNAMIC_CATEGORY_OPTIONS[k] === custom
-      );
-      if (key) {
-        contents.push(makeDynamicCategory(key, custom));
-        return;
+    // Dynamic categories are keyed by their DYNAMIC_CATEGORY_OPTIONS entry
+    // (which names the category); a custom flyout with no entry (e.g.
+    // legacy "Behavior") falls through to a static category of the XML
+    // children.
+    const dynamicEntry = Object.entries(DYNAMIC_CATEGORY_OPTIONS).find(
+      ([, flyout]) => flyout === custom
+    );
+    const blocks = categoryBlocks(doc, child, name);
+    if (dynamicEntry) {
+      const category = makeDynamicCategory(...dynamicEntry);
+      if (blocks?.length) {
+        category.contents = blocks;
       }
-    }
-    try {
-      // domToBlockSpace only reads <block> children of an <xml> root, so
-      // rewrap the category's blocks in one.
-      const wrapper = doc.createElement('xml');
-      Array.from(child.children).forEach(block =>
-        wrapper.appendChild(block.cloneNode(true))
-      );
-      contents.push(
-        makeCategory(
-          name,
-          getSimplifiedStateForFlyout(convertXmlToJson(wrapper))
-        )
-      );
-    } catch (e) {
-      console.warn(`toolboxXmlToDefinition: dropped category "${name}"`, e);
+      contents.push(category);
+    } else if (blocks) {
+      contents.push(makeCategory(name, blocks));
     }
   });
   return contents.length ? {kind: 'categoryToolbox', contents} : undefined;
+}
+
+function categoryBlocks(doc: Document, category: Element, name: string) {
+  // domToBlockSpace only reads <block> children of an <xml> root, so
+  // rewrap the category's blocks in one.
+  const wrapper = doc.createElement('xml');
+  Array.from(category.children).forEach(block =>
+    wrapper.appendChild(block.cloneNode(true))
+  );
+  try {
+    return getSimplifiedStateForFlyout(convertXmlToJson(wrapper));
+  } catch (e) {
+    console.warn(`toolboxXmlToDefinition: dropped the blocks of "${name}"`, e);
+    return undefined;
+  }
 }
