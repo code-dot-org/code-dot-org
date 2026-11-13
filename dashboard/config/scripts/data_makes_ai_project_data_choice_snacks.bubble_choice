@@ -1,0 +1,10 @@
+name 'data-makes-ai-project-data-choice-snacks'
+display_name 'Alternative Snack Datasets'
+description 'The following datasets have been curated differently than the original:'
+
+sublevels
+level 'data-makes-ai-project-snack-2'
+level 'data-makes-ai-project-snack-3'
+level 'data-makes-ai-project-snack-4'
+
+uses_lab2

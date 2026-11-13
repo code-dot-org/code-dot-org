@@ -1,0 +1,23 @@
+{
+  "name": "quest-builder-2026",
+  "script_names": [
+
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "quest-builder",
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

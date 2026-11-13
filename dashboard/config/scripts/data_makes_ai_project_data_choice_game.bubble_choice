@@ -1,0 +1,10 @@
+name 'data-makes-ai-project-data-choice-game'
+display_name 'Alternative Video Game Datasets'
+description 'The following datasets have been curated differently than the original:'
+
+sublevels
+level 'data-makes-ai-project-game-2'
+level 'data-makes-ai-project-game-3'
+level 'data-makes-ai-project-game-4'
+
+uses_lab2
