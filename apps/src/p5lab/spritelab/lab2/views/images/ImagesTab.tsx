@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {
   ImageKind,
+  imageKindLabel,
   imageKindPhrase,
   ImageSubject,
   ImageType,
@@ -63,7 +64,8 @@ import RatingBar from './teaching/RatingBar';
 import ReopenedBehindTheScenes from './teaching/ReopenedBehindTheScenes';
 import useLearningStory from './teaching/useLearningStory';
 import useDrawing from './useDrawing';
-import useImageWriter, {ImageTarget} from './useImageWriter';
+import useImageUpload from './useImageUpload';
+import useImageWriter, {ImageTarget, UploadedImage} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
 
@@ -106,6 +108,8 @@ interface ImagesTabProps {
   limitedPaintTools?: boolean;
   /** The kinds of image the list shows. Every kind when unset. */
   imageKinds?: ImageType[];
+  /** Enable the user to upload their own images. */
+  enableImageUpload?: boolean;
   /** Any image can be chosen and looked at; nothing can be changed. */
   viewOnly?: boolean;
   /** Width of the right pane in px; it equals the preview column's width
@@ -132,6 +136,8 @@ interface ImagesTabProps {
 }
 
 const DRAFT_ID = 'draft';
+
+const UPLOAD_ERROR_SHOWN_MS = 10_000;
 
 /** How an image the student drew on is shown. Default: it opens in the
     paint tools with the word menus beside them. `?images-edited=pane`
@@ -160,6 +166,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   noDeletingImages,
   limitedPaintTools,
   imageKinds,
+  enableImageUpload,
   viewOnly,
   paneWidth,
   onImageLanded,
@@ -314,6 +321,44 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
+
+  const [uploadError, setUploadError] = useState<{text: string} | null>(null);
+  const [uploadStatus, setUploadStatus] = useState('');
+  useEffect(() => {
+    if (!uploadError) {
+      return;
+    }
+    const timer = setTimeout(() => setUploadError(null), UPLOAD_ERROR_SHOWN_MS);
+    return () => clearTimeout(timer);
+  }, [uploadError]);
+  const handleUploaded = useCallback(
+    async (kind: ImageKind, image: UploadedImage) => {
+      const target: ImageTarget = {
+        key: null,
+        imageType: kind.imageType,
+        subject: kind.subject,
+      };
+      const key = await writer.acceptUploaded(target, image);
+      leaveDrawing();
+      setDraft(null);
+      startSession(key);
+      landedRef.current?.();
+      setUploadStatus(`${imageKindLabel(kind.imageType, kind.subject)} added.`);
+    },
+    [leaveDrawing, startSession, writer]
+  );
+  const upload = useImageUpload({
+    onAccepted: handleUploaded,
+    onError: message => setUploadError({text: message}),
+    onProgress: setUploadStatus,
+  });
+  const handleUpload = useCallback(
+    (kind: ImageKind, trigger: HTMLElement | null) => {
+      setUploadError(null);
+      upload.pickFile(kind, trigger);
+    },
+    [upload]
+  );
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
       const target: ImageTarget = {
@@ -502,7 +547,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         </div>
       )}
       <ImageList
-        disabled={busy}
+        disabled={busy || upload.uploading}
         images={images}
         playing={
           sheet && chosenImage && shownPose
@@ -553,6 +598,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         chooseOffered={chooseOffered}
         heading={viewOnly ? 'Images' : undefined}
         newKind={lockedKind}
+        onUpload={enableImageUpload && newOffered ? handleUpload : undefined}
+        notice={uploadError?.text}
+        onNoticeClose={() => setUploadError(null)}
         onDelete={deleteOffered ? writer.deleteImage : undefined}
       />
       {sceneKind ? (
@@ -871,6 +919,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onClose={story.asked ? endStory : undefined}
         />
       )}
+      <upload.FileInput />
+      <p aria-live="polite" className={styles.srOnly}>
+        {uploadStatus}
+      </p>
     </div>
   );
 };

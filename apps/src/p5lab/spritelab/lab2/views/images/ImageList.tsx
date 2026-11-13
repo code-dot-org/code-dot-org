@@ -2,22 +2,18 @@
 // being worked on marked, plus the button that adds an image and the button
 // that deletes the chosen one.
 
+import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
 import {
   Button as MuiButton,
   IconButton as MuiIconButton,
-  ListItemIcon,
-  ListItemText,
-  Menu as MuiMenu,
-  MenuItem as MuiMenuItem,
   Typography as MuiTypography,
 } from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useId, useRef, useState} from 'react';
 
 import {
-  ImageKind,
   imageKindNoun,
   ImageSubject,
   ImageType,
@@ -25,39 +21,14 @@ import {
 import {PoseKey} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import AnimatedSheetPreview from '@cdo/apps/p5lab/spritelab/lab2/views/AnimatedSheetPreview';
 
+import ImageKindMenu, {NewImageKind} from './ImageKindMenu';
 import {ProjectImage} from './projectImages';
 
 import styles from './images-tab.module.scss';
 
-/** A new image's kind, picked from the plus button's menu. */
-export type NewImageKind = ImageKind;
-
-/** Two kinds match when they would make the same kind of image: the subject
-    matters only for sprites, and a sprite with no subject is a character. */
-const sameKind = (a: NewImageKind, b: NewImageKind) =>
-  a.imageType === b.imageType &&
-  (a.imageType !== 'sprite' ||
-    (a.subject ?? 'character') === (b.subject ?? 'character'));
-
 // Space kept above or below a slot scrolled into view, so its chosen ring,
 // drawn outside the tile, is not clipped.
 const SLOT_SCROLL_MARGIN = 8;
-
-/** The kinds the plus offers, in the menu's order. */
-const NEW_KINDS: {label: string; iconName: string; kind: NewImageKind}[] = [
-  {
-    label: 'Character',
-    iconName: 'face-smile',
-    kind: {imageType: 'sprite', subject: 'character'},
-  },
-  {label: 'Background', iconName: 'image', kind: {imageType: 'background'}},
-  {
-    label: 'Object',
-    iconName: 'key',
-    kind: {imageType: 'sprite', subject: 'object'},
-  },
-  {label: 'Block', iconName: 'cube', kind: {imageType: 'block'}},
-];
 
 /** The list's kinds, in the order they are listed: the plus menu's order. */
 type KindId = 'character' | 'object' | 'background' | 'block';
@@ -98,6 +69,10 @@ interface ImageListProps {
   /** The one kind the level lets students make; the menu disables every
       other kind. */
   newKind?: NewImageKind;
+  onUpload?: (kind: NewImageKind, trigger: HTMLElement | null) => void;
+  /** Why the last upload was refused. */
+  notice?: string;
+  onNoticeClose?: () => void;
   /** Delete the chosen image; absent where images cannot be deleted. */
   onDelete?: (key: string) => void;
   /** Hold the list still, while a picture is being made: choosing another
@@ -121,6 +96,9 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   heading = 'Your images',
   onNew,
   newKind,
+  onUpload,
+  notice,
+  onNoticeClose,
   onDelete,
   disabled,
   playing,
@@ -130,6 +108,10 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   // The kinds menu is open while it has its button to hang from.
   const [menuButton, setMenuButton] = useState<HTMLElement | null>(null);
   const menuId = useId();
+  const [uploadMenuButton, setUploadMenuButton] = useState<HTMLElement | null>(
+    null
+  );
+  const uploadMenuId = useId();
   useEffect(() => setConfirming(false), [chosenId]);
   // Scroll the tiles box so a new draft slot is fully visible, smoothly
   // unless the student asked for less motion. It runs one animation frame
@@ -205,35 +187,43 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               aria-controls={menuButton ? menuId : undefined}
               onClick={event => setMenuButton(event.currentTarget)}
             >
-              <FontAwesomeV6Icon iconName="plus" />
+              <FontAwesomeV6Icon iconName="plus" aria-hidden />
             </MuiButton>
-            {/* The menu is rendered at the document's root, so it draws
-                over the panels beside the tab instead of being clipped by
-                the tab's scroll box. */}
-            <MuiMenu
+            <ImageKindMenu
               id={menuId}
               anchorEl={menuButton}
-              open={!!menuButton}
               onClose={() => setMenuButton(null)}
-              anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
-              transformOrigin={{vertical: 'top', horizontal: 'right'}}
+              onPick={onNew}
+              onlyKind={newKind}
+            />
+          </>
+        )}
+        {onUpload && (
+          <>
+            <MuiButton
+              variant="outlined"
+              color="primary"
+              className={styles.newButton}
+              aria-label="Upload image"
+              disabled={disabled}
+              aria-haspopup={newKind ? undefined : 'menu'}
+              aria-expanded={newKind ? undefined : !!uploadMenuButton}
+              aria-controls={uploadMenuButton ? uploadMenuId : undefined}
+              onClick={event =>
+                newKind
+                  ? onUpload(newKind, event.currentTarget)
+                  : setUploadMenuButton(event.currentTarget)
+              }
             >
-              {NEW_KINDS.map(({label, iconName, kind}) => (
-                <MuiMenuItem
-                  key={label}
-                  disabled={!!newKind && !sameKind(kind, newKind)}
-                  onClick={() => {
-                    setMenuButton(null);
-                    onNew(kind);
-                  }}
-                >
-                  <ListItemIcon>
-                    <FontAwesomeV6Icon iconName={iconName} />
-                  </ListItemIcon>
-                  <ListItemText>{label}</ListItemText>
-                </MuiMenuItem>
-              ))}
-            </MuiMenu>
+              <FontAwesomeV6Icon iconName="arrow-up-from-bracket" aria-hidden />
+            </MuiButton>
+            <ImageKindMenu
+              id={uploadMenuId}
+              anchorEl={uploadMenuButton}
+              onClose={() => setUploadMenuButton(null)}
+              onPick={kind => onUpload(kind, uploadMenuButton)}
+              action="Upload"
+            />
           </>
         )}
       </div>
@@ -324,6 +314,16 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
           );
         })}
       </div>
+      {notice && (
+        <Alert
+          text={notice}
+          type="danger"
+          size="xs"
+          className={styles.listNotice}
+          onClose={onNoticeClose}
+          closeLabel="Dismiss"
+        />
+      )}
       {deletable && (
         <div className={styles.listFooter}>
           <MuiIconButton
@@ -334,7 +334,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
             disabled={disabled}
             onClick={() => setConfirming(true)}
           >
-            <FontAwesomeV6Icon iconName="trash-can" />
+            <FontAwesomeV6Icon iconName="trash-can" aria-hidden />
           </MuiIconButton>
         </div>
       )}
