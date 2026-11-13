@@ -28,7 +28,7 @@
 // row of its own.
 $share-one-row-min-width: 1024px;
 
-.labRowShared {
+.labRowShareView {
   @media screen and (max-width: #{$share-one-row-min-width - 1px}) {
     box-sizing: border-box;
     padding-bottom: 48px;

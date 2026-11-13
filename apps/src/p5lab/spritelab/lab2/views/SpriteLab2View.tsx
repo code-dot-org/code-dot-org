@@ -192,8 +192,9 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 // A share link shows the game alone, whatever tabs the level has.
 const SHARE_TABS: readonly Tab[] = ['Play'];
-// On the body while a share link is open, for the page footer's style in
-// sprite-lab2-view.module.scss.
+// The class the view puts on the page's body while a share link is open.
+// The page footer's style in sprite-lab2-view.module.scss is written
+// against it.
 const SHARE_BODY_CLASS = 'spritelab2-share';
 // The Images pane, for the hook that keeps it inert while closed.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
@@ -2152,7 +2153,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     <div
       className={classNames(
         moduleStyles.labRow,
-        isShareView && moduleStyles.labRowShared
+        isShareView && moduleStyles.labRowShareView
       )}
     >
       {scenesDialog && (

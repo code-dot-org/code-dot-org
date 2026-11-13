@@ -62,6 +62,14 @@ describe('ShareActions', () => {
     expect(screen.getByRole('button', {name: 'Make my own'})).toBeEnabled();
   });
 
+  it('opens the report form in a new tab from Report abuse', () => {
+    const open = jest.spyOn(window, 'open').mockImplementation(() => null);
+    render(<ShareActions />);
+    fireEvent.click(screen.getByRole('button', {name: 'Report abuse'}));
+    expect(open).toHaveBeenCalledWith('/report_abuse', '_blank');
+    expect(redirectToRemix).not.toHaveBeenCalled();
+  });
+
   it('does nothing while no project is loaded', () => {
     jest
       .spyOn(Lab2Registry.getInstance(), 'getProjectManager')

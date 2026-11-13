@@ -125,13 +125,14 @@ const SpriteLab2Container: React.FunctionComponent<
   }
   const storedForLevel =
     loadedForRef.current === levelProperties.id ? storedSources : undefined;
+  // A standalone project the visitor may not edit, which is usually someone
+  // else's. Every tab can be opened and the game played, and nothing can be
+  // changed.
+  const isViewOnly =
+    !!levelProperties.isProjectLevel && !restOutputs.isEditable && !isShareView;
   // Such a level's start sources may write a scene's world in the packed
   // form (packedWorld.ts). It is expanded here, for readers and for the base
   // an updater builds on, so the rest of the lab only sees the grid.
-  // Someone else's standalone project, opened to look at: its code can be
-  // read and its game played, and nothing can be changed.
-  const isViewOnly =
-    !!levelProperties.isProjectLevel && !restOutputs.isEditable && !isShareView;
   const currentSources = useMemo(() => {
     const sources = readOnlyLevel ? levelSources : storedForLevel;
     return sources && unpackSources(sources);

@@ -8,7 +8,7 @@ import commonI18n from '@cdo/locale';
 type Destination = 'view' | 'remix';
 
 /** What a visitor to a shared project can do besides play it: see how it
-    was made, or start a copy of their own. */
+    was made, start a copy of their own, or report it. */
 const ShareActions: React.FunctionComponent = () => {
   // Making the copy can take the server a few seconds before the page
   // changes, so the pressed button shows it is working.
@@ -78,6 +78,20 @@ const ShareActions: React.FunctionComponent = () => {
         onClick={() => leaveFor('remix')}
       >
         {commonI18n.makeMyOwn()}
+      </MuiButton>
+      <MuiButton
+        variant="text"
+        color="secondary"
+        size="small"
+        startIcon={
+          <FontAwesomeV6Icon
+            iconStyle="regular"
+            iconName="message-exclamation"
+          />
+        }
+        onClick={() => window.open('/report_abuse', '_blank')}
+      >
+        Report abuse
       </MuiButton>
     </>
   );
