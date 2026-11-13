@@ -185,7 +185,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
               aria-controls={menuButton ? menuId : undefined}
               onClick={event => setMenuButton(event.currentTarget)}
             >
-              <FontAwesomeV6Icon iconName="plus" />
+              <FontAwesomeV6Icon iconName="plus" aria-hidden />
             </MuiButton>
             <ImageKindMenu
               id={menuId}
@@ -213,7 +213,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                   : setUploadMenuButton(event.currentTarget)
               }
             >
-              <FontAwesomeV6Icon iconName="arrow-up-from-bracket" />
+              <FontAwesomeV6Icon iconName="arrow-up-from-bracket" aria-hidden />
             </MuiButton>
             <ImageKindMenu
               id={uploadMenuId}
@@ -332,7 +332,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
             disabled={disabled}
             onClick={() => setConfirming(true)}
           >
-            <FontAwesomeV6Icon iconName="trash-can" />
+            <FontAwesomeV6Icon iconName="trash-can" aria-hidden />
           </MuiIconButton>
         </div>
       )}
