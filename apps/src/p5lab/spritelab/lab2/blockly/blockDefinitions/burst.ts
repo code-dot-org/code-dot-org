@@ -37,7 +37,7 @@ const definition: BlockJson = {
   tooltip: 'Fling sparks, confetti or dust out from a sprite for a moment.',
 };
 
-// An empty socket selects no sprite, so the burst comes from nowhere.
+// An empty socket, or one naming no sprite, bursts from the play area center.
 const generator: GeneratorFunction = (block, javascript) =>
   `burstParticles(${Number(block.getFieldValue('COUNT'))}, ${JSON.stringify(
     block.getFieldValue('LOOK')
