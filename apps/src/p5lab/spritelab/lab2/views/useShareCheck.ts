@@ -11,7 +11,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
  * It asks as a project page opens, and each time the share dialog opens, on
  * a level in a unit too, since that dialog hands out the project's link. An
  * owner who has removed the flagged text can then share without reloading.
- * Nothing asks as a level in a unit loads or after a save.
+ * No check runs when a unit level loads or after a save.
  *
  * The answer stays until another replaces it or the project changes. The
  * blocked page takes this lab off the screen, so an answer cleared as the
