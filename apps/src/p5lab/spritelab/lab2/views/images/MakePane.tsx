@@ -134,6 +134,7 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
           }}
           primaryButtonProps={{
             children: 'Replace',
+            color: 'error',
             onClick: () => {
               setConfirming(false);
               parts.generate();
