@@ -1,4 +1,4 @@
-import {useCallback, useEffect} from 'react';
+import {useCallback, useEffect, useRef} from 'react';
 
 import {setShareFailure} from '@cdo/apps/lab2/lab2Redux';
 import {fetchShareFailure} from '@cdo/apps/lab2/projects/channelsApi';
@@ -6,13 +6,16 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 /**
  * Asks the server whether the project's text may be shared, and publishes
- * the answer for the page's blocked notice and the share dialog. The server
- * looks for profanity and personal information.
+ * the answer for the blocked notice and the share dialog.
  *
- * It asks as a project page opens, and again each time the share dialog
- * opens, so an owner who has removed the flagged text can share without
- * reloading. A level in a unit does not ask, and nothing asks after a save,
- * so the server is not called on every level load and save.
+ * It asks as a project page opens, and each time the share dialog opens, on
+ * a level in a unit too, since that dialog hands out the project's link. An
+ * owner who has removed the flagged text can then share without reloading.
+ * Nothing asks as a level in a unit loads or after a save.
+ *
+ * The answer stays until another replaces it or the project changes. The
+ * blocked page takes this lab off the screen, so an answer cleared as the
+ * lab leaves would bring the lab straight back to ask again.
  */
 export default function useShareCheck(
   channelId: string | undefined,
@@ -22,7 +25,6 @@ export default function useShareCheck(
   const shareDialogOpen = useAppSelector(
     state => !!(state as {shareDialog?: {isOpen?: boolean}}).shareDialog?.isOpen
   );
-  const checkedChannelId = isProjectPage ? channelId : undefined;
 
   const ask = useCallback(
     (id: string, isCurrent: () => boolean) => {
@@ -39,26 +41,33 @@ export default function useShareCheck(
     [dispatch]
   );
 
+  const answeredForRef = useRef(channelId);
   useEffect(() => {
-    if (!checkedChannelId) {
+    if (answeredForRef.current !== channelId) {
+      answeredForRef.current = channelId;
+      dispatch(setShareFailure(null));
+    }
+  }, [channelId, dispatch]);
+
+  useEffect(() => {
+    if (!channelId || !isProjectPage) {
       return;
     }
     let pageOpen = true;
-    ask(checkedChannelId, () => pageOpen);
+    ask(channelId, () => pageOpen);
     return () => {
       pageOpen = false;
-      dispatch(setShareFailure(null));
     };
-  }, [checkedChannelId, ask, dispatch]);
+  }, [channelId, isProjectPage, ask]);
 
   useEffect(() => {
-    if (!checkedChannelId || !shareDialogOpen) {
+    if (!channelId || !shareDialogOpen) {
       return;
     }
     let dialogOpen = true;
-    ask(checkedChannelId, () => dialogOpen);
+    ask(channelId, () => dialogOpen);
     return () => {
       dialogOpen = false;
     };
-  }, [checkedChannelId, shareDialogOpen, ask]);
+  }, [channelId, shareDialogOpen, ask]);
 }

@@ -440,8 +440,8 @@ class ShareFilteringTest < Minitest::Test
   end
 
   # @return [Hash] a Quest Builder project as main.json holds it: a program
-  #   for each scene, and the top-level one a project had before scenes.
-  def generate_quest_builder_project(say: 'Hello!', title: 'You win!', scene_name: 'Scene 2')
+  #   for each scene, beside a top-level one that holds only starting code.
+  def generate_quest_builder_project(say: 'Hello!', title: 'You win!', scene_name: 'Scene 2', variable: nil)
     program = lambda do |field, text|
       {
         'blocks' => {
@@ -462,12 +462,31 @@ class ShareFilteringTest < Minitest::Test
     end
     {
       'animations' => {'orderedKeys' => [], 'propsByKey' => {}},
-      'source' => program.call('SPEECH', say),
+      'source' => program.call('SPEECH', 'starting code'),
       'scenes' => [
         {'id' => 'scene-1', 'name' => 'Scene 1', 'source' => program.call('SPEECH', say)},
-        {'id' => 'second-scene', 'name' => scene_name, 'source' => program.call('TEXT', title)},
+        {
+          'id' => 'second-scene',
+          'name' => scene_name,
+          'source' => program.call('TEXT', title).merge(variable ? {'variables' => [{'name' => variable, 'id' => 'v1'}]} : {}),
+        },
       ],
     }
+  end
+
+  def test_extract_text_quest_builder_reads_variable_names
+    assert_equal(
+      ['Hello!', 'You win!', 'score'],
+      ShareFiltering.extract_text_quest_builder(generate_quest_builder_project(variable: 'score'))
+    )
+  end
+
+  def test_find_share_failure_quest_builder_phone_in_a_variable_name
+    project = generate_quest_builder_project(variable: 'call 123-456-7890')
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
+      ShareFiltering.find_share_failure(project, 'en', 'quest_builder')
+    )
   end
 
   def test_extract_text_quest_builder_reads_every_scene_and_the_names_given_to_scenes

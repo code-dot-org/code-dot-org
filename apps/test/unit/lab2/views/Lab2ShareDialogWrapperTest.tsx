@@ -103,8 +103,8 @@ describe('Lab2ShareDialogWrapper', () => {
     expect(screen.queryByText(/share dialog/)).not.toBeInTheDocument();
   });
 
-  it('serves the share dialog to Sprite Lab in Lab2', () => {
-    setState('spritelab');
+  it('serves the share dialog to Quest Builder', () => {
+    setState('quest_builder');
 
     render(<Lab2ShareDialogWrapper shareUrl="fakeShareUrl" />);
 

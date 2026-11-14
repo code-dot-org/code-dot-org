@@ -97,17 +97,18 @@ describe('useShareCheck', () => {
     expect(mockFetchShareFailure).toHaveBeenCalledTimes(2);
   });
 
-  it('does not ask on a level in a unit, even when its share dialog opens', async () => {
+  it('asks on a level in a unit when its share dialog opens', async () => {
     renderCheck('abc', false);
     act(() => {
       store.dispatch({type: 'test/openShare'});
     });
     await flush();
 
-    expect(mockFetchShareFailure).not.toHaveBeenCalled();
+    expect(mockFetchShareFailure).toHaveBeenCalledTimes(1);
+    expect(dispatchSpy).toHaveBeenCalledWith(setShareFailure(FAILURE));
   });
 
-  it('does not ask on a level in a unit', async () => {
+  it('does not ask as a level in a unit loads', async () => {
     renderCheck('abc', false);
     await flush();
 
@@ -122,11 +123,20 @@ describe('useShareCheck', () => {
     expect(mockFetchShareFailure).not.toHaveBeenCalled();
   });
 
-  it('clears the answer when the page is left', async () => {
+  it('keeps the answer when the lab leaves the screen', async () => {
     const {unmount} = renderCheck('abc', true);
     await flush();
     dispatchSpy.mockClear();
     unmount();
+
+    expect(dispatchSpy).not.toHaveBeenCalled();
+  });
+
+  it('clears the answer when the project changes', async () => {
+    const {rerender} = renderCheck('abc', false);
+    await flush();
+    dispatchSpy.mockClear();
+    rerender({channelId: 'xyz', isProjectPage: false});
 
     expect(dispatchSpy).toHaveBeenCalledWith(setShareFailure(null));
   });

@@ -27,7 +27,6 @@ export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
   'weblab2',
   'music_dance_ai',
   'sketchlab',
-  'spritelab',
   'quest_builder',
 ];
 

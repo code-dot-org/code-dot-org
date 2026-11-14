@@ -100,5 +100,10 @@ def share_failure_from_body(body, locale, project_type)
   rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable
     # If WebPurify or Geocoder are unavailable, default to viewable
     return false
+  rescue StandardError => exception
+    # A timeout, a refused connection or the service's own error: a project
+    # must still load when the check cannot be made.
+    Observability::Errors.report(exception, error_message: 'Share filter failed; treating the project as viewable', context: {project_type: project_type})
+    return false
   end
 end

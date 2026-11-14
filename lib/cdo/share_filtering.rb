@@ -174,13 +174,17 @@ module ShareFiltering
 
     scenes = project['scenes'].is_a?(Array) ? project['scenes'].select {|scene| scene.is_a?(Hash)} : []
     texts = []
-    # The top-level source is the program of a project saved before it had
-    # scenes; each scene carries its own.
-    [project['source'], *scenes.map {|scene| scene['source']}].each do |source|
-      next unless source.is_a?(Hash) && source['blocks'].is_a?(Hash)
-      blocks = source['blocks']['blocks']
-      next unless blocks.is_a?(Array)
-      blocks.each {|block| traverse_block(block, texts)}
+    scenes.each do |scene|
+      source = scene['source']
+      next unless source.is_a?(Hash)
+      blocks = source['blocks'].is_a?(Hash) ? source['blocks']['blocks'] : nil
+      blocks.each {|block| traverse_block(block, texts)} if blocks.is_a?(Array)
+      # A variable's name shows on the stage through the show variable block.
+      variables = source['variables'].is_a?(Array) ? source['variables'] : []
+      variables.each do |variable|
+        name = variable.is_a?(Hash) ? variable['name'] : nil
+        texts << name if name.is_a?(String) && !name.strip.empty?
+      end
     end
     scenes.each do |scene|
       name = scene['name']

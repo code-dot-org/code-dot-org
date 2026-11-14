@@ -27,7 +27,7 @@ describe('channelsApi fetchShareFailure', () => {
 
     expect(result).to.deep.equal({type: 'profanity', content: 'darn'});
     expect(fetchJsonSpy.mock.calls[0][0]).to.equal(
-      '/v3/channels/abc123/share-failure'
+      '/v3/channels/abc123/share-failure?viewer_language_only=true'
     );
   });
 
