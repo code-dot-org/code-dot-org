@@ -1,0 +1,51 @@
+<Quiz>
+  <config><![CDATA[{
+  "game_id": 76,
+  "created_at": "2026-11-12T21:51:06.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Check Your Understanding",
+    "show_correctness": true,
+    "reveal_answer_explanation": true,
+    "show_intro_screen": true,
+    "purpose": "check_for_understanding",
+    "allow_multiple_attempts": true,
+    "show_questions_after_submit": true
+  },
+  "published": true,
+  "placements": [
+    {
+      "page": 1,
+      "position": 1,
+      "question_key": "c9a1bdc0-6394-4c8e-93ca-92f2344111a8"
+    },
+    {
+      "page": 1,
+      "position": 2,
+      "question_key": "841770e4-bf9f-4c53-9668-45d5e3fe753d"
+    },
+    {
+      "page": 1,
+      "position": 3,
+      "question_key": "e157106f-06e3-47e6-830c-d257be551d20"
+    },
+    {
+      "page": 1,
+      "position": 4,
+      "question_key": "0e3c233e-accf-4be1-8d47-d36830ee1a71"
+    },
+    {
+      "page": 1,
+      "position": 5,
+      "question_key": "5525444b-cac0-4dad-a5ff-59f7a4c27213"
+    },
+    {
+      "page": 1,
+      "position": 6,
+      "question_key": "3e16f020-b980-48dc-b755-6ed2836b308f"
+    }
+  ]
+}]]></config>
+</Quiz>

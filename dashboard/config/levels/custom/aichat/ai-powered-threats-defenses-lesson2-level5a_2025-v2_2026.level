@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-04-01T21:32:48.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Scenario 1",
-    "long_instructions": "*Review the scenario below and use the AI Chat to learn more in-depth about this threat:*\r\n\r\n## Scenario 1\r\n\r\nYou receive an email from a classmate with a link that says, “Click here for 1000 free Fortnite v-bucks!”. \r\n\r\nYou click the link and it downloads a file to your computer — hmmm, that was unexpected. Instead of giving you free v-bucks, the file you downloaded automatically sends the same fake email to everyone in your contacts list, making it look like you sent it! \r\n\r\nThe malicious file spreads to dozens of students, slowing devices and potentially stealing passwords.\r\n\r\n---\r\n\r\n## Chat with an Expert: Malware Analyst\r\n\r\nA **malware analyst** studies malicious software to understand how it works, how it spreads, and how to remove it.\r\n\r\n::: details [**Not sure what to ask about worms?**]\r\nTry asking:\r\n\r\n- *How do worms spread and infect systems?*  \r\n- *What kind of damage can they cause?*  \r\n- *How could AI be used to create smarter or harder-to-detect worms?*  \r\n- *How can AI help stop worms before they spread?*  \r\n- *What’s the best way to prevent this kind of attack?*\r\n:::",
+    "long_instructions": "*Review the scenario below and use the AI Chat to learn more in-depth about this threat:*\r\n\r\n## Scenario 1\r\n\r\nYou receive an email from a classmate with a link that says, “Click here for 1000 free Fortnite v-bucks!”. \r\n\r\nYou click the link and it downloads a file to your computer — hmmm, that was unexpected. Instead of giving you free v-bucks, the file you downloaded automatically sends the same fake email to everyone in your contacts list, making it look like you sent it! \r\n\r\nThe malicious file spreads to dozens of students, slowing devices and potentially stealing passwords.\r\n\r\n---\r\n\r\n## Chat with an Expert: Malware Analyst\r\n\r\nA **malware analyst** studies malicious software to understand how it works, how it spreads, and how to remove it.\r\n\r\n::: details [**Not sure what to ask about worms?**]\r\nTry asking:\r\n\r\n- *How do worms spread and infect systems?*  \r\n- *What kind of damage can they cause?*   \r\n- *How can AI help stop worms before they spread?*  \r\n- *What’s the best way to prevent this kind of attack?*\r\n:::",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -48,7 +49,6 @@
     "offer_browser_tts": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:32:48.749+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson2-level5a_2025-v2\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson2-level5a_2025-v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:32:48.749+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson2-level5a_2025-v2\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson2-level5a_2025-v2\"},{\"changed_at\":\"2026-11-13 17:23:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

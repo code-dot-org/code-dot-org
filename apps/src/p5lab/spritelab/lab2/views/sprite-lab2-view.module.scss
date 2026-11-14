@@ -14,6 +14,30 @@
   }
 }
 
+// The page layout hides its small footer from 970px up. A share link keeps
+// it at every width.
+:global(body.spritelab2-share .responsive-content-mobile-footer) {
+  display: block;
+}
+
+// From this width up the footer shares the lab's bottom row with the share
+// buttons. Under it, the lab's row moves up and the footer has its own row.
+$share-one-row-min-width: 1024px;
+
+.labRowShareView {
+  @media screen and (max-width: #{$share-one-row-min-width - 1px}) {
+    box-sizing: border-box;
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: $share-one-row-min-width) {
+  // `html` so this outranks the page's own footer rule on a dark page.
+  :global(html body.spritelab2-share #page-small-footer .small-footer-base) {
+    margin-bottom: 7px;
+  }
+}
+
 // The panel's column in the default layout: a fixed width, so the
 // workspace keeps the room its blocks need as the window narrows.
 .instructionsColumn {
@@ -430,7 +454,7 @@ $z-over-blockly: 71;
   // Keyboard focus ring for the play-mode game region; an outline so the
   // 400x400 geometry the transform and pointer math rely on is untouched.
   &:focus-visible {
-    outline: 2px solid var(--borders-neutral-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: 2px;
   }
 }
@@ -537,6 +561,11 @@ $arrow-gap: 6px;
   color: var(--text-neutral-primary-inverse);
   font-size: 14px;
 
+  // The theme's ring is too faint on the dark stage.
+  &:focus-visible {
+    outline-color: var(--border-focused-primary);
+  }
+
   &:hover,
   &:active {
     background: color-mix(
@@ -632,7 +661,7 @@ $arrow-gap: 6px;
   }
 
   &:focus-visible {
-    outline: 2px solid var(--borders-neutral-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: -2px;
   }
 }

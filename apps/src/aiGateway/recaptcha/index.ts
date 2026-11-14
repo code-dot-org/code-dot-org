@@ -1,12 +1,15 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
+import {timeoutMsFromDcdoSeconds} from '@cdo/apps/util/dcdoTimeout';
+
 import {type TurnstileEnforcementMode} from '../turnstile/enforcementMode';
 
 import {
+  DEFAULT_RECAPTCHA_TIMEOUT_SECONDS,
   LOG,
   RECAPTCHA_ACTION,
   RECAPTCHA_SITE_KEY,
-  RECAPTCHA_TIMEOUT_MS,
+  RECAPTCHA_TIMEOUT_FLAG,
 } from './constants';
 import {loadRecaptchaScript} from './loadScript';
 import {isRecaptchaError, RecaptchaError} from './types';
@@ -17,16 +20,20 @@ const OUTCOME_METRIC = 'ai-gateway.recaptcha';
 const DURATION_METRIC = 'ai-gateway.recaptcha.duration_ms';
 
 function executeRecaptcha(): Promise<string> {
+  const timeoutMs = timeoutMsFromDcdoSeconds(
+    RECAPTCHA_TIMEOUT_FLAG,
+    DEFAULT_RECAPTCHA_TIMEOUT_SECONDS
+  );
   return new Promise((resolve, reject) => {
     const timeout = setTimeout(
       () =>
         reject(
           new RecaptchaError(
             'timeout',
-            `reCAPTCHA did not answer within ${RECAPTCHA_TIMEOUT_MS}ms`
+            `reCAPTCHA did not answer within ${timeoutMs}ms`
           )
         ),
-      RECAPTCHA_TIMEOUT_MS
+      timeoutMs
     );
     const grecaptcha = window.grecaptcha;
     if (!grecaptcha) {

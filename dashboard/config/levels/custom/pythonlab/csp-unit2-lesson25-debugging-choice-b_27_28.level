@@ -1,0 +1,64 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-12T17:42:13.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Investigate & Debug\r\n\r\n**Do This:**\r\n\r\nRun this program and answer the questions — what happens if you don’t have any pets? \r\n\r\nBefore fixing anything, decide: is this a syntax error, a logic error, or a runtime error — and how do you know? Then fix it.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode",
+        "hint",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "num_pets = int(input(\"How many pets do you have? \"))\nfood_cost = int(input(\"What is the total cost of pet food this month? \"))\n\ncost_per_pet = food_cost / num_pets\nprint(\"Cost per pet:\", cost_per_pet)",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nGi7liHk4bYNghRWKdDAjxrPsM16mkg==\n",
+    "display_name": "No Pets, No Problem?",
+    "bubble_choice_description": "Figure out what kind of error is crashing this program, then fix it.",
+    "teacher_markdown": "The crash only shows up for one specific input — `num_pets = 0` — so a student with at least one pet won’t hit it on a first run and may assume the program works fine. \r\n\r\nPrompt them to try `0` for pets if they haven’t already, framing it as “what if a classmate who doesn’t have any pets ran this?” rather than asking them to search for an edge case abstractly. \r\n\r\nIf students struggle to name the error type, point them back to Level 2's runtime-error crash from earlier in this lesson as a reference point.",
+    "thumbnail_url": "https://images.code.org/c5b8fb188cd27fd150ea616b9bd5591a-pet-food.png",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import contextlib\nimport io\nfrom unittest import TestCase\nfrom unittest.mock import patch\n\n\nclass TestDebugPetFoodCost(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Read the student's source once; each test execs it fresh with\n        mocked input() so the zero-pets case and a normal case run independently.\"\"\"\n        with open(\"main.py\") as f:\n            cls.source = f.read()\n\n    def _run_with_inputs(self, num_pets_input, food_cost_input):\n        namespace = {}\n        stdout = io.StringIO()\n        with patch(\"builtins.input\", side_effect=[num_pets_input, food_cost_input]), contextlib.redirect_stdout(stdout):\n            exec(compile(self.source, \"main.py\", \"exec\"), namespace)\n        return stdout.getvalue()\n\n    def test_handles_zero_pets_without_crashing(self):\n        \"\"\"Doesn't crash when the number of pets is 0\"\"\"\n        try:\n            output = self._run_with_inputs(\"0\", \"30\")\n        except ZeroDivisionError:\n            self.fail(\n                \"Your program crashed with a divide-by-zero error when num_pets is 0. \"\n                \"Add a check before dividing: if num_pets is 0, there's no per-pet cost to calculate.\"\n            )\n        except Exception as e:\n            self.fail(f\"Your program raised an error with 0 pets: {e}\")\n        self.assertNotIn(\n            \"Cost per pet:\",\n            output,\n            \"With 0 pets, your program shouldn't try to print a cost per pet -- there isn't one to calculate. \"\n            \"Make sure that line only runs when num_pets is greater than 0.\"\n        )\n\n    def test_calculates_cost_per_pet_normally(self):\n        \"\"\"Calculates the correct cost per pet when there's at least one pet\"\"\"\n        try:\n            output = self._run_with_inputs(\"3\", \"30\")\n        except Exception as e:\n            self.fail(f\"Your program raised an error with a normal input: {e}\")\n        self.assertIn(\n            \"Cost per pet: 10.0\",\n            output,\n            f\"With 3 pets and $30 total food cost, expected to see 'Cost per pet: 10.0' -- but got: {output.strip()}\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-12T17:42:13.422+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson25-debugging-choice-a_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson25-debugging-choice-a_27_28\"},{\"changed_at\":\"2026-11-12 17:43:42 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 17:43:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 17:44:08 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 17:44:19 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 18:20:27 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 18:26:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 18:27:28 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 18:33:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 17:08:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 17:09:07 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 17:09:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -5,6 +5,7 @@ export const RECAPTCHA_SCRIPT_URL = `https://www.google.com/recaptcha/api.js?ren
 // purpose on our domains is refused.
 export const RECAPTCHA_ACTION = 'ai_gateway';
 // execute() normally answers in well under a second; this bounds a stuck one.
-export const RECAPTCHA_TIMEOUT_MS = 30_000;
+export const RECAPTCHA_TIMEOUT_FLAG = 'ai-gateway-recaptcha-timeout-seconds';
+export const DEFAULT_RECAPTCHA_TIMEOUT_SECONDS = 30;
 
 export const LOG = '🔵 [reCAPTCHA]';

@@ -1,4 +1,6 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  kitIcons,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -56,13 +58,13 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
   tourId,
 }) => {
   // A badge in the circle's corner: the lock on a locked circle that shows
-  // its own icon, the mark of a complete one, the bulb of one skipped on
-  // evidence. The bulb stands in until the kit has lightbulb-check.
+  // its own icon, the mark of a complete one, the checked bulb of one
+  // skipped on evidence.
   const badge =
     status === 'complete'
       ? 'check'
       : status === 'skipped'
-      ? 'lightbulb'
+      ? 'lightbulb-check'
       : icon && status === 'locked'
       ? 'lock'
       : undefined;
@@ -71,7 +73,10 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
       <PathwayIcon iconName={icon ?? STATUS_ICONS[status]} />
       {badge && (
         <span className={styles.badge} aria-hidden="true">
-          <FontAwesomeV6Icon iconName={badge} />
+          <FontAwesomeV6Icon
+            iconName={badge}
+            iconFamily={kitIcons.has(badge) ? 'kit' : undefined}
+          />
         </span>
       )}
     </>

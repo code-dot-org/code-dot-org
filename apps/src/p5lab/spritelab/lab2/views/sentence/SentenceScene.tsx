@@ -112,8 +112,8 @@ export interface SentenceSceneParts {
   frame: React.ReactNode;
   /** A made picture is showing in the frame. */
   frameFilled: boolean;
-  /** A reviewer's mark over a picture served from the tree, while the tree
-      is filled in; comes out before ship. */
+  /** A reviewer's mark over a picture served from the cache, while the
+      cache is filled in; comes out before ship. */
   cachedTag: React.ReactNode;
   /** The Behind the scenes button, once there is a picture. */
   behindTheScenes: React.ReactNode;
@@ -196,10 +196,10 @@ interface SentenceSceneProps {
       from Behind the scenes. */
   onTellStory?: (story: LearningStory) => void;
   advanced?: AdvancedOptions;
-  /** Where a sentence's picture comes from (imageCache.ts); the tree first
-      when unset. A typed prompt always goes to the model. */
+  /** Where a sentence's picture comes from (imageCache.ts); the cache when
+      unset. A typed prompt always goes to the model. */
   imageSource?: ImageSource;
-  /** Another tree to read cached pictures from (QA). */
+  /** Another address to read cached pictures from (QA). */
   imageCacheUrl?: string;
 }
 
@@ -261,7 +261,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   // another.
   const lastCachedRef = useRef<{path: string; variant: number}>();
 
-  // The cached picture for the sentence as filled, when the tree has one.
+  // The cached picture for the sentence as filled, when there is one.
   const findCached = useCallback(async (): Promise<CachedImage | undefined> => {
     const wordIds = sentenceWordIds(sentence, choices);
     const path = sentencePath(sentence.id, wordIds, style);
@@ -310,6 +310,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     const run = ++runRef.current;
     const startedAt = Date.now();
     const prompt = typedPrompt || promptText(sentence, choices);
+    const sentPrompt =
+      typedPrompt ||
+      promptText(sentence, choices, {useModelFacingTextVariant: true});
     const pixelScale = advanced?.pixelScale || 1;
     // The cache holds the sentences' pictures as the level draws them;
     // whatever the advanced settings change goes to the model.
@@ -322,13 +325,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     setRatingDismissed(false);
     setError(null);
     playSound('go');
-    // A filling the tree lacks, or a lookup that fails, goes to the model.
     let cached: CachedImage | undefined;
+    let lookupFailed = false;
     if (fromCache) {
       try {
         cached = await findCached();
       } catch (e) {
         console.warn('Image cache lookup failed:', e);
+        lookupFailed = true;
       }
       if (run !== runRef.current) {
         return;
@@ -348,6 +352,16 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       },
       true
     );
+    // The model does not draw a filling the cache lacks.
+    if (fromCache && !cached) {
+      setError(
+        lookupFailed
+          ? "Couldn't make the picture. Try again."
+          : "We don't have a picture for those words yet. Try different ones."
+      );
+      setMode('edit');
+      return;
+    }
     onGenerateStart?.();
     try {
       const options: GenerateImageOptions = {
@@ -372,21 +386,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       // What the lab would send. A cached picture was made from the same
       // words by the same prompt builders, so this describes it as well.
       const sent: SentPrompts = sentPromptsFor(
-        prompt,
+        sentPrompt,
         options,
         style,
         generatesCharacterSet,
         bodyPlan
       );
       const result = generatesCharacterSet
-        ? await generateCharacterSet(prompt, {
+        ? await generateCharacterSet(sentPrompt, {
             style,
             temperature: TEMPERATURE,
             pixelGrid: options.pixelGrid,
             bodyPlan,
             cached,
           })
-        : await generateImage(prompt, {...options, cached});
+        : await generateImage(sentPrompt, {...options, cached});
       if (run !== runRef.current) {
         return;
       }
