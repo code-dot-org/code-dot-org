@@ -1,6 +1,7 @@
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 @use './editor-strip' as strip;
+@use './scrollbar';
 
 .labRow {
   display: flex;
@@ -76,6 +77,8 @@ $tab-item-height: 34px;
 
 // The Images editor's pane.
 .picturesEditor {
+  @include scrollbar.blockly-scrollbar;
+
   overflow: auto;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
