@@ -72,7 +72,7 @@ class Project < ApplicationRecord
   end
 
   def channel_id
-    get_project_channel_id(storage_id, id)
+    get_project_channel_id(storage_id, id, uuid: uuid)
   end
 
   # Returns the user_id of the owner of this project. Returns nil if the project

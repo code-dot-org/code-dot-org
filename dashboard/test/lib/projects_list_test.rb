@@ -359,6 +359,30 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal [], ProjectsList.fetch_section_projects(mock_section.new([]))
   end
 
+  test 'fetch_personal_projects takes the channel id from the fetched row rather than querying again' do
+    uuid = SecureRandom.uuid
+    stub_projects = [
+      {
+        id: 1, storage_id: @storage_id, state: 'active', uuid: uuid,
+        value: {name: 'First', level: '/projects/applab'}.to_json
+      },
+    ]
+    DCDO.stubs(:get).with('project-uuid-in-url', false).returns(true)
+    # stub_storage_id_for_user_id binds to the test instance; this call runs inside ProjectsList.
+    ProjectsList.stubs(:storage_id_for_user_id).returns(@storage_id)
+
+    projects_table = mock
+    projects_table.expects(:where).
+      with(storage_id: @storage_id, state: 'active').
+      once.
+      returns(stub_projects)
+    Projects.stubs(:table).returns(projects_table)
+
+    response = ProjectsList.fetch_personal_projects(@student.id)
+
+    assert_equal [uuid], (response.map {|row| row['channel']})
+  end
+
   private def user_db_result(result)
     stub(where: stub(select_hash: result))
   end

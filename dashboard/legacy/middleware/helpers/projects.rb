@@ -281,7 +281,7 @@ class Projects
 
   def to_a
     @table.where(storage_id: @storage_id).exclude(state: 'deleted').filter_map do |row|
-      channel_id = get_project_channel_id(row[:storage_id], row[:id])
+      channel_id = get_project_channel_id(row[:storage_id], row[:id], uuid: row[:uuid])
       begin
         Projects.merged_row_value(
           row,
@@ -303,7 +303,7 @@ class Projects
       # Malformed channel, or missing level.
     end
 
-    get_project_channel_id(row[:storage_id], row[:id]) if row
+    get_project_channel_id(row[:storage_id], row[:id], uuid: row[:uuid]) if row
   end
 
   # Find the encrypted channel token for most recent project of the given project_type.
@@ -369,7 +369,7 @@ class Projects
       next_row = Projects.table.where(id: project_id).first
       while next_row&.[](:remix_parent_id)
         next_row = Projects.table.where(id: next_row[:remix_parent_id]).first
-        ancestors.push get_project_channel_id(next_row[:storage_id], next_row[:id]) if next_row
+        ancestors.push get_project_channel_id(next_row[:storage_id], next_row[:id], uuid: next_row[:uuid]) if next_row
         break if ancestors.size >= depth
       end
     end
