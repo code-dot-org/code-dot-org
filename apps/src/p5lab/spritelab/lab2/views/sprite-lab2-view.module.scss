@@ -3,10 +3,13 @@
 @use './editor-strip' as strip;
 
 // A browser draws scrollbars, and its own menus and fields, for a light page
-// unless a surface declares a color scheme. The theme sets colors through
-// the data-theme attribute, which tells the browser nothing, so the lab
-// declares the scheme its theme means. A part inside the lab that carries
-// its own theme declares its own.
+// unless color-scheme tells it the page is dark. The theme sets its colors
+// through the data-theme attribute, which tells the browser nothing, so
+// these rules say which scheme goes with the lab's theme.
+
+// The second selector in each rule is for an element inside the lab that
+// sets a different theme, such as the copyright button, which is always
+// light. It gets the scheme for its own theme, not the lab's.
 :global([data-theme='Dark']) .labRow,
 .labRow :global([data-theme='Dark']) {
   color-scheme: dark;

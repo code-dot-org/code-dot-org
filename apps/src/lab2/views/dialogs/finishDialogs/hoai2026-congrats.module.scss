@@ -14,7 +14,7 @@
 }
 
 // The content scrolls on a small window. A browser draws that scrollbar for
-// a light page unless the surface declares its color scheme.
+// a light page unless color-scheme tells it the dialog is dark.
 :global([data-theme='Dark']) .dialog {
   color-scheme: dark;
 }
