@@ -84,6 +84,7 @@ include_recipe 'cdo-secrets'
 include_recipe 'cdo-mysql'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-otel-collector'
+include_recipe 'cdo-wiz-sensor'
 include_recipe 'cdo-syslog'
 
 # Production analytics utilities.
