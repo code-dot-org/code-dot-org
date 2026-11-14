@@ -15,7 +15,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "false",
@@ -33,6 +33,7 @@
       ]
     },
     "block_catalog": true,
+    "freeplay_intro": true,
     "use_secondary_finish_button": "true",
     "finish_dialog": "hoai2026",
     "toolbox_definition": {
@@ -106,7 +107,14 @@
         },
         {
           "kind": "block",
-          "type": "spritelab2_burst"
+          "type": "spritelab2_burst",
+          "inputs": {
+            "ORIGIN": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
         },
         {
           "kind": "block",

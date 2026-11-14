@@ -272,4 +272,99 @@ describe('ImageList', () => {
     expect(onDelete).toHaveBeenCalledWith('b');
     expect(screen.queryByRole('dialog')).toBeNull();
   });
+
+  it('offers no upload button without an uploader', () => {
+    render(
+      <ImageList
+        images={images}
+        draft={null}
+        chosenId="a"
+        onChoose={jest.fn()}
+        onNew={jest.fn()}
+      />
+    );
+    expect(screen.queryByRole('button', {name: 'Upload image'})).toBeNull();
+  });
+
+  it('asks which kind to upload when the level allows any', () => {
+    const onUpload = jest.fn();
+    render(
+      <ImageList
+        images={images}
+        draft={null}
+        chosenId="a"
+        onChoose={jest.fn()}
+        onUpload={onUpload}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+    expect(
+      screen
+        .getAllByRole('menuitem')
+        .map(item => item.getAttribute('aria-label'))
+    ).toEqual([
+      'Upload a character',
+      'Upload a background',
+      'Upload an object',
+      'Upload a block',
+    ]);
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Upload a block'}));
+    expect(onUpload).toHaveBeenCalledWith(
+      {imageType: 'block'},
+      expect.anything()
+    );
+  });
+
+  it("uploads the level's own kind without asking", () => {
+    const onUpload = jest.fn();
+    render(
+      <ImageList
+        images={images}
+        draft={null}
+        chosenId="a"
+        onChoose={jest.fn()}
+        onUpload={onUpload}
+        newKind={{imageType: 'background'}}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+    expect(onUpload).toHaveBeenCalledWith(
+      {imageType: 'background'},
+      expect.anything()
+    );
+    expect(screen.queryByRole('menu')).toBeNull();
+  });
+
+  it('disables every button while a picture is being handled', () => {
+    render(
+      <ImageList
+        images={images}
+        draft={null}
+        chosenId="a"
+        onChoose={jest.fn()}
+        onNew={jest.fn()}
+        onUpload={jest.fn()}
+        disabled
+      />
+    );
+    expect(screen.getByRole('button', {name: 'Upload image'})).toBeDisabled();
+    expect(screen.getByRole('button', {name: 'New image'})).toBeDisabled();
+    expect(screen.getByRole('button', {name: 'Sprite 2'})).toBeDisabled();
+  });
+
+  it('shows why an upload was refused', () => {
+    render(
+      <ImageList
+        images={images}
+        draft={null}
+        chosenId="a"
+        onChoose={jest.fn()}
+        onUpload={jest.fn()}
+        notice="That picture is too big."
+      />
+    );
+    expect(screen.getByRole('alert').textContent).toBe(
+      'That picture is too big.'
+    );
+  });
 });

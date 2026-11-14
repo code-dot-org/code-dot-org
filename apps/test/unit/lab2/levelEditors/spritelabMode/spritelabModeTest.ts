@@ -72,6 +72,15 @@ describe('cleanLevelMode', () => {
     expect(removed).toEqual(['imageFirst: false']);
   });
 
+  it('keeps image upload, and drops it when it is off', () => {
+    expect(
+      cleanLevelMode({kind: 'freeplay', enableImageUpload: true}).mode
+    ).toEqual({kind: 'freeplay', enableImageUpload: true});
+    expect(
+      cleanLevelMode({kind: 'freeplay', enableImageUpload: false}).mode
+    ).toEqual({kind: 'freeplay'});
+  });
+
   it('keeps the one-image flag', () => {
     expect(cleanLevelMode({kind: 'image', oneImage: true}).mode).toEqual({
       kind: 'image',
@@ -139,6 +148,16 @@ describe('fieldApplies', () => {
   it('offers nothing without a kind', () => {
     expect(fieldApplies({}, 'imageType')).toBe(false);
   });
+
+  it('offers image upload wherever there is an Images tab', () => {
+    expect(fieldApplies({kind: 'image'}, 'enableImageUpload')).toBe(true);
+    expect(fieldApplies({kind: 'freeplay'}, 'enableImageUpload')).toBe(true);
+    expect(
+      fieldApplies({kind: 'code', imageFirst: true}, 'enableImageUpload')
+    ).toBe(true);
+    expect(fieldApplies({kind: 'code'}, 'enableImageUpload')).toBe(false);
+    expect(fieldApplies({kind: 'world'}, 'enableImageUpload')).toBe(false);
+  });
 });
 
 describe('setKind', () => {
@@ -146,6 +165,12 @@ describe('setKind', () => {
     expect(
       setKind({kind: 'world', imageType: 'sprite', imageRole: 'hero'}, 'image')
     ).toEqual({kind: 'image', imageType: 'sprite', imageRole: 'hero'});
+  });
+
+  it('drops image upload when the new kind has no Images tab', () => {
+    expect(setKind({kind: 'image', enableImageUpload: true}, 'world')).toEqual({
+      kind: 'world',
+    });
   });
 });
 

@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {
   ImageKind,
+  imageKindLabel,
   imageKindPhrase,
   ImageSubject,
   ImageType,
@@ -63,7 +64,8 @@ import RatingBar from './teaching/RatingBar';
 import ReopenedBehindTheScenes from './teaching/ReopenedBehindTheScenes';
 import useLearningStory from './teaching/useLearningStory';
 import useDrawing from './useDrawing';
-import useImageWriter, {ImageTarget} from './useImageWriter';
+import useImageUpload from './useImageUpload';
+import useImageWriter, {ImageTarget, UploadedImage} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
 
@@ -106,6 +108,10 @@ interface ImagesTabProps {
   limitedPaintTools?: boolean;
   /** The kinds of image the list shows. Every kind when unset. */
   imageKinds?: ImageType[];
+  /** Enable the user to upload their own images. */
+  enableImageUpload?: boolean;
+  /** Any image can be chosen and looked at; nothing can be changed. */
+  viewOnly?: boolean;
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
   paneWidth: number;
@@ -122,14 +128,16 @@ interface ImagesTabProps {
   /** The level checks that the picture was rated: the rating strip stays
       until a thumb is given. */
   ratingRequired?: boolean;
-  /** Where a sentence's picture comes from (imageCache.ts); the tree first
-      when unset. */
+  /** Where a sentence's picture comes from (imageCache.ts); the cache when
+      unset. */
   imageSource?: ImageSource;
-  /** Another tree to read cached pictures from (QA). */
+  /** Another address to read cached pictures from (QA). */
   imageCacheUrl?: string;
 }
 
 const DRAFT_ID = 'draft';
+
+const UPLOAD_ERROR_SHOWN_MS = 10_000;
 
 /** How an image the student drew on is shown. Default: it opens in the
     paint tools with the word menus beside them. `?images-edited=pane`
@@ -158,6 +166,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   noDeletingImages,
   limitedPaintTools,
   imageKinds,
+  enableImageUpload,
+  viewOnly,
   paneWidth,
   onImageLanded,
   active = true,
@@ -190,7 +200,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const wordLayout = useMemo(() => readWordLayout(), []);
   // Free play paints every image in place, with the word menus beside the
   // tools, so the student can draw on it or make a picture over it.
-  const paintsInPlace = editedMode === 'paint' && !!editingOffered;
+  const paintsInPlace = editedMode === 'paint' && !!editingOffered && !viewOnly;
 
   const [advanced, setAdvanced] = useState<AdvancedSettings>(DEFAULT_ADVANCED);
   const [draft, setDraft] = useState<DraftEntry | null>(null);
@@ -311,6 +321,44 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
+
+  const [uploadError, setUploadError] = useState<{text: string} | null>(null);
+  const [uploadStatus, setUploadStatus] = useState('');
+  useEffect(() => {
+    if (!uploadError) {
+      return;
+    }
+    const timer = setTimeout(() => setUploadError(null), UPLOAD_ERROR_SHOWN_MS);
+    return () => clearTimeout(timer);
+  }, [uploadError]);
+  const handleUploaded = useCallback(
+    async (kind: ImageKind, image: UploadedImage) => {
+      const target: ImageTarget = {
+        key: null,
+        imageType: kind.imageType,
+        subject: kind.subject,
+      };
+      const key = await writer.acceptUploaded(target, image);
+      leaveDrawing();
+      setDraft(null);
+      startSession(key);
+      landedRef.current?.();
+      setUploadStatus(`${imageKindLabel(kind.imageType, kind.subject)} added.`);
+    },
+    [leaveDrawing, startSession, writer]
+  );
+  const upload = useImageUpload({
+    onAccepted: handleUploaded,
+    onError: message => setUploadError({text: message}),
+    onProgress: setUploadStatus,
+  });
+  const handleUpload = useCallback(
+    (kind: ImageKind, trigger: HTMLElement | null) => {
+      setUploadError(null);
+      upload.pickFile(kind, trigger);
+    },
+    [upload]
+  );
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
       const target: ImageTarget = {
@@ -387,7 +435,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   restFrameRef.current = restFrame;
   // In free play the paint tools open by themselves, on an existing image
   // and on a new one, so no button is needed to open them.
-  const drawOffered = !!sceneKind && !drawing && !paintsInPlace;
+  const drawOffered = !!sceneKind && !drawing && !paintsInPlace && !viewOnly;
   // The chosen image has been edited by hand since it was generated. The
   // scene still holds the picture as the AI made it, so the frame must show
   // the stored image instead, and the question about the AI's picture no
@@ -475,7 +523,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       group.frames.includes(shownFrame)
     )?.key;
 
-  const deleteOffered = !!editingOffered && !noDeletingImages;
+  const deleteOffered = !!editingOffered && !noDeletingImages && !viewOnly;
   // The plus menu enables only the level's kind; without one every kind is
   // enabled.
   const lockedKind: ImageKind | undefined = lockedImageType
@@ -487,16 +535,19 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Where a single image is the task, the plus is shown until that image is
   // made on this visit, and the choice stays on it or on the slot it will
   // take; the project's other tiles are listed but disabled.
-  const newOffered = !noNewImages && (!!editingOffered || !ownImageMade);
+  const newOffered =
+    !viewOnly && !noNewImages && (!!editingOffered || !ownImageMade);
   const chooseOffered = !!editingOffered;
 
   return (
     <div className={styles.tab}>
-      <div className={styles.panelHeader} style={{width: paneWidth}}>
-        <EditorStrip title="AI Prompt" endSlotRef={setHeaderSlot} />
-      </div>
+      {!viewOnly && (
+        <div className={styles.panelHeader} style={{width: paneWidth}}>
+          <EditorStrip title="AI Prompt" endSlotRef={setHeaderSlot} />
+        </div>
+      )}
       <ImageList
-        disabled={busy}
+        disabled={busy || upload.uploading}
         images={images}
         playing={
           sheet && chosenImage && shownPose
@@ -545,7 +596,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             : undefined
         }
         chooseOffered={chooseOffered}
+        heading={viewOnly ? 'Images' : undefined}
         newKind={lockedKind}
+        onUpload={enableImageUpload && newOffered ? handleUpload : undefined}
+        notice={uploadError?.text}
+        onNoticeClose={() => setUploadError(null)}
         onDelete={deleteOffered ? writer.deleteImage : undefined}
       />
       {sceneKind ? (
@@ -801,7 +856,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             return (
               <>
                 {frame()}
-                {ownWorkPane && chosenImage ? (
+                {viewOnly ? null : ownWorkPane && chosenImage ? (
                   <OwnWorkPane
                     width={paneWidth}
                     edited={!!chosenImage.props.edited}
@@ -831,24 +886,26 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       ) : (
         <>
           <ImageFrame image={null} />
-          <section
-            className={styles.pane}
-            style={{width: paneWidth}}
-            aria-label="Make your picture"
-          >
-            <p className={styles.headline}>
-              {newOffered
-                ? `Press + to make ${
-                    lockedKind
-                      ? imageKindPhrase(
-                          lockedKind.imageType,
-                          lockedKind.subject
-                        )
-                      : 'an image'
-                  }.`
-                : 'This level has no images to make.'}
-            </p>
-          </section>
+          {!viewOnly && (
+            <section
+              className={styles.pane}
+              style={{width: paneWidth}}
+              aria-label="Make your picture"
+            >
+              <p className={styles.headline}>
+                {newOffered
+                  ? `Press + to make ${
+                      lockedKind
+                        ? imageKindPhrase(
+                            lockedKind.imageType,
+                            lockedKind.subject
+                          )
+                        : 'an image'
+                    }.`
+                  : 'This level has no images to make.'}
+              </p>
+            </section>
+          )}
         </>
       )}
       {story && (
@@ -862,6 +919,10 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onClose={story.asked ? endStory : undefined}
         />
       )}
+      <upload.FileInput />
+      <p aria-live="polite" className={styles.srOnly}>
+        {uploadStatus}
+      </p>
     </div>
   );
 };

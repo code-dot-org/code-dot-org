@@ -1,0 +1,69 @@
+// Overrides on the design-system Modal, scoped under .dialogHost so they
+// outrank its own classes by specificity rather than load order.
+.dialogHost {
+  display: contents;
+}
+
+.dialogHost .dialog {
+  width: 450px;
+  min-width: 0;
+  max-width: calc(100vw - 32px);
+}
+
+// Modal's title row, the panel's first child: centered, with even padding
+// so the close button does not pull it off center.
+.dialogHost .dialog > div:first-child {
+  padding: 16px 48px;
+  text-align: center;
+}
+
+// The title as a small spaced-out label, to match the design.
+.dialogHost .dialog h3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+// Modal's close button, its 25px box centered on the 53px title row.
+.dialogHost .dialog > button {
+  inset-block-start: 14px;
+}
+
+.dialogHost .dialog img {
+  image-rendering: pixelated;
+}
+
+.content {
+  align-self: stretch;
+  text-align: center;
+}
+
+.content .title {
+  margin: 4px 0;
+}
+
+.content .tip {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--background-neutral-secondary);
+  font-weight: 600;
+
+  [data-theme='Dark'] & {
+    background: var(--background-neutral-tertiary);
+  }
+}
+
+.content .tip + .tip {
+  margin-top: 12px;
+}
+
+.buttonName {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375em;
+  margin-left: 0.125em;
+  color: var(--text-brand-primary-fixed);
+}

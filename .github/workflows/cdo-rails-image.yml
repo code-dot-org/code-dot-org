@@ -1,9 +1,10 @@
 # Builds cdo-rails, smoke-tests it on docker and podman on amd64 and arm64,
 # boots Rails from it against MySQL and Redis on both architectures, and
-# publishes it as a multi-platform manifest. Each architecture
-# builds natively on its own runner; a merge job puts the two images under
-# the final tags, the same pattern as cdo-base. Not triggered by source PRs
-# — the slice is validated at publish time. See docker/rails/README.md.
+# publishes it as an OCI image index annotated with the commit it was built
+# from. Each architecture builds natively on its own runner; a merge job puts
+# the two images under the final tags, the same pattern as cdo-base. Not
+# triggered by source PRs — the slice is validated at publish time. See
+# docker/rails/README.md.
 #
 # Publishing is where this workflow stops. The tag contract it publishes under
 # is in docker/rails/README.md.
@@ -282,8 +283,13 @@ jobs:
   # publish is visible as such instead of serving one architecture under
   # the final name.
   # See: https://docs.docker.com/build/ci/github-actions/multi-platform/#distribute-build-across-multiple-runners
+  #
+  # regctl builds the index: an OCI image index over the two per-arch
+  # manifests, annotated with org.opencontainers.image.revision, the commit
+  # the image was built from. The per-arch manifests, the bytes the suites
+  # ran against, enter the index unchanged.
   merge:
-    name: merge per-arch images into one manifest
+    name: merge per-arch images into one index
     if: github.event_name != 'pull_request'
     needs: build-push
     runs-on: ubuntu-24.04
@@ -301,6 +307,20 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Install regctl
+        uses: regclient/actions/regctl-installer@dd58ad94f76adb73d8ac1bf75ed25f01545d5b32 # v0.2.0
+        with:
+          release: v0.11.7
+
+      # regctl keeps its own credential store, separate from docker's.
+      - name: Login regctl to GitHub Container Registry
+        env:
+          REGISTRY_USER: ${{ github.actor }}
+          REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          printf '%s' "$REGISTRY_TOKEN" | regctl registry login ghcr.io -u "$REGISTRY_USER" --pass-stdin
+
       # No checkout: this tag contract has no content key, so
       # metadata-action needs only the event context.
       - name: Compute tags
@@ -313,17 +333,63 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
             type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
 
-      # The source tags are commit-keyed, so no moving tag can enter the
-      # manifest.
-      - name: Merge the per-arch pair under every tag
+      # Build the index once, under the commit-keyed tag (git-<sha> on the
+      # default branch, dev-<sha> elsewhere), and validate it before `latest`
+      # points at it. The inputs are this run's per-arch tags, so the index
+      # is built from the manifests the suites ran against.
+      - name: Build the annotated index under the commit tag
+        id: index
         env:
           TAGS: ${{ steps.meta.outputs.tags }}
+          SHA: ${{ github.sha }}
         run: |
           set -euxo pipefail
           # An empty list would make this step a green no-op.
           test -n "$TAGS"
-          args=()
-          for ref in $TAGS; do args+=(-t "$ref"); done
-          docker buildx imagetools create "${args[@]}" \
-            "$IMAGE:git-${{ github.sha }}-amd64" \
-            "$IMAGE:git-${{ github.sha }}-arm64"
+          primary="$(grep -E ":(git|dev)-${SHA}$" <<<"$TAGS" | head -n1)"
+          test -n "$primary"
+          regctl index create "$primary" \
+            --ref "$IMAGE:git-$SHA-amd64" \
+            --ref "$IMAGE:git-$SHA-arm64" \
+            --annotation "org.opencontainers.image.revision=$SHA"
+          echo "primary=$primary" >> "$GITHUB_OUTPUT"
+
+      # The properties Kargo and the production promotion gate depend on.
+      # Fail here and `latest` never moves.
+      - name: Validate the index
+        env:
+          PRIMARY: ${{ steps.index.outputs.primary }}
+          SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          body="$(regctl manifest get "$PRIMARY" --format raw-body)"
+          jq . <<<"$body"
+          media="$(jq -r '.mediaType // empty' <<<"$body")"
+          revision="$(jq -r '.annotations["org.opencontainers.image.revision"] // empty' <<<"$body")"
+          platforms="$(jq -r '[.manifests[] | select(.platform != null) | "\(.platform.os)/\(.platform.architecture)"] | sort | join(",")' <<<"$body")"
+          test "$media" = application/vnd.oci.image.index.v1+json \
+            || { echo "::error::index media type is '$media', not an OCI image index" >&2; exit 1; }
+          test "$revision" = "$SHA" \
+            || { echo "::error::revision annotation is '$revision', expected $SHA" >&2; exit 1; }
+          test "$platforms" = linux/amd64,linux/arm64 \
+            || { echo "::error::index platforms are '$platforms', expected linux/amd64,linux/arm64" >&2; exit 1; }
+          # The children must be the manifests the suites ran against.
+          for arch in amd64 arm64; do
+            want="$(regctl manifest head "$IMAGE:git-$SHA-$arch")"
+            have="$(jq -r --arg a "$arch" '.manifests[] | select(.platform.architecture == $a) | .digest' <<<"$body")"
+            test "$have" = "$want" \
+              || { echo "::error::$arch child is $have, expected $want" >&2; exit 1; }
+          done
+
+      # Same-repository copies carry the index bytes over unchanged, so every
+      # tag resolves to the same digest and the same annotation.
+      - name: Copy the validated index to the remaining tags
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+          PRIMARY: ${{ steps.index.outputs.primary }}
+        run: |
+          set -euxo pipefail
+          for ref in $TAGS; do
+            [ "$ref" = "$PRIMARY" ] && continue
+            regctl image copy "$PRIMARY" "$ref"
+          done

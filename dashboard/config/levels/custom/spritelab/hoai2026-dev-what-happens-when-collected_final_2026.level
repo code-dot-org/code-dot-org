@@ -76,6 +76,13 @@
                 "fields": {
                   "COUNT": 20,
                   "LOOK": "confetti"
+                },
+                "inputs": {
+                  "ORIGIN": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
                 }
               }
             }
@@ -92,6 +99,13 @@
           "fields": {
             "COUNT": 20,
             "LOOK": "confetti"
+          },
+          "inputs": {
+            "ORIGIN": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
           }
         },
         {

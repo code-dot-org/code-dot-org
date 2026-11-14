@@ -15,7 +15,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -77,6 +77,13 @@
                 "fields": {
                   "COUNT": 20,
                   "LOOK": "confetti"
+                },
+                "inputs": {
+                  "ORIGIN": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
                 }
               }
             }
@@ -93,6 +100,13 @@
           "fields": {
             "COUNT": 20,
             "LOOK": "confetti"
+          },
+          "inputs": {
+            "ORIGIN": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
           }
         },
         {
