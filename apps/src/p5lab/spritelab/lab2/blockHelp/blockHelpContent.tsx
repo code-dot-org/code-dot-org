@@ -1,5 +1,6 @@
 import animBurst from '@cdo/static/spritelab_lab2/block-help/burst.gif';
 import animPlaySound from '@cdo/static/spritelab_lab2/block-help/play-sound.gif';
+import animPlayer2 from '@cdo/static/spritelab_lab2/block-help/player-2.gif';
 import animRestartScene from '@cdo/static/spritelab_lab2/block-help/restart-scene.gif';
 import animSay from '@cdo/static/spritelab_lab2/block-help/say.gif';
 import animSetAsPlayer2 from '@cdo/static/spritelab_lab2/block-help/set-as-player-2.gif';
@@ -76,8 +77,7 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   },
   spritelab2_thePlayer2: {
     title: 'Player 2',
-    // The same picture as set as player 2: it shows both players moving.
-    animation: {src: animSetAsPlayer2, alt: 'Player 2 in action.'},
+    animation: {src: animPlayer2, alt: 'The “player 2” block in action.'},
     summary: 'Whichever sprite is player 2 right now.',
     body: 'Drop it into any block that takes a sprite.',
   },
