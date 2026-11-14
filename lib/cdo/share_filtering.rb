@@ -172,7 +172,13 @@ module ShareFiltering
     end
     return [] unless project.is_a?(Hash)
 
-    scenes = project['scenes'].is_a?(Array) ? project['scenes'].select {|scene| scene.is_a?(Hash)} : []
+    # Scenes are read from beside `source` and from inside it, so the check
+    # does not depend on which of the two a project is saved with.
+    inside_source = project['source'].is_a?(Hash) ? project['source']['scenes'] : nil
+    scenes = [project['scenes'], inside_source].
+      select {|list| list.is_a?(Array)}.
+      flatten(1).
+      select {|scene| scene.is_a?(Hash)}
     texts = []
     scenes.each do |scene|
       source = scene['source']
