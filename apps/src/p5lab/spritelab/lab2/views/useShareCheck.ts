@@ -32,16 +32,18 @@ export default function useShareCheck(
 
   const ask = useCallback(
     (id: string, isCurrent: () => boolean, onSettled?: () => void) => {
-      fetchShareFailure(id)
-        .then(failure => {
+      fetchShareFailure(id).then(
+        failure => {
+          // Together, so the dialog goes from waiting straight to the answer.
           if (isCurrent()) {
             dispatch(setShareFailure(failure));
           }
-        })
+          onSettled?.();
+        },
         // A check that cannot be made leaves the project viewable, as the
         // server does when its own filter is unreachable.
-        .catch(() => {})
-        .then(onSettled);
+        () => onSettled?.()
+      );
     },
     [dispatch]
   );

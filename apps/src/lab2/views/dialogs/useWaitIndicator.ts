@@ -37,5 +37,10 @@ export default function useWaitIndicator(waiting: boolean): WaitIndicator {
     return () => clearTimeout(timer);
   }, [waiting, indicator]);
 
-  return {held: waiting || indicator, indicator};
+  // Judged here as well as by the timer above, so that a wait which ends
+  // after the indicator's minimum time lets go in that same render.
+  const showing =
+    indicator &&
+    (waiting || Date.now() < shownAtRef.current + WAIT_INDICATOR_MIN_MS);
+  return {held: waiting || showing, indicator: showing};
 }

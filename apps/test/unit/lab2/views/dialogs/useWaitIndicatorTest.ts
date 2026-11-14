@@ -54,7 +54,6 @@ describe('useWaitIndicator', () => {
     const {result, rerender} = renderWait(true);
     advance(WAIT_INDICATOR_DELAY_MS + WAIT_INDICATOR_MIN_MS + 200);
     rerender({waiting: false});
-    advance(0);
     expect(result.current).toEqual({held: false, indicator: false});
   });
 
