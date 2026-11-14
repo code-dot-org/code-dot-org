@@ -3,8 +3,15 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
-import {setShareCheckPending, setShareFailure} from '@cdo/apps/lab2/lab2Redux';
-import {fetchShareFailure} from '@cdo/apps/lab2/projects/channelsApi';
+import {
+  setIsTeacherOfProjectOwner,
+  setShareCheckPending,
+  setShareFailure,
+} from '@cdo/apps/lab2/lab2Redux';
+import {
+  fetchIsTeacherOfProjectOwner,
+  fetchShareFailure,
+} from '@cdo/apps/lab2/projects/channelsApi';
 import {ShareFailure} from '@cdo/apps/lab2/types';
 import useShareCheck, {
   SHARE_CHECK_MAX_WAIT_MS,
@@ -19,9 +26,11 @@ import {
 jest.mock('@cdo/apps/lab2/projects/channelsApi', () => ({
   ...jest.requireActual('@cdo/apps/lab2/projects/channelsApi'),
   fetchShareFailure: jest.fn(),
+  fetchIsTeacherOfProjectOwner: jest.fn(),
 }));
 
 const mockFetchShareFailure = fetchShareFailure as jest.Mock;
+const mockFetchIsTeacher = fetchIsTeacherOfProjectOwner as jest.Mock;
 const FAILURE = {type: 'phone', content: '555-0100'} as ShareFailure;
 
 describe('useShareCheck', () => {
@@ -44,6 +53,7 @@ describe('useShareCheck', () => {
     store = getStore();
     dispatchSpy = jest.spyOn(store, 'dispatch');
     mockFetchShareFailure.mockReset().mockResolvedValue(FAILURE);
+    mockFetchIsTeacher.mockReset().mockResolvedValue(false);
   });
 
   afterEach(() => restoreRedux());
@@ -67,6 +77,19 @@ describe('useShareCheck', () => {
     );
   };
   const flush = () => act(async () => {});
+  // A check whose answer the test gives later.
+  const slowCheck = () => {
+    let answer: (failure: ShareFailure | null) => void = () => {};
+    mockFetchShareFailure.mockReturnValueOnce(
+      new Promise(resolve => (answer = resolve))
+    );
+    return (failure: ShareFailure | null) => answer(failure);
+  };
+  const published = () =>
+    dispatchSpy.mock.calls
+      .map(([action]) => action)
+      .filter(action => action.type === setShareFailure(null).type)
+      .map(action => action.payload);
 
   it('asks once as a project page opens, and publishes the answer', async () => {
     const {rerender} = renderCheck('abc', true);
@@ -97,6 +120,85 @@ describe('useShareCheck', () => {
     });
     await flush();
     expect(mockFetchShareFailure).toHaveBeenCalledTimes(2);
+
+    act(() => {
+      store.dispatch({type: 'test/openShare'});
+    });
+    await flush();
+    expect(mockFetchShareFailure).toHaveBeenCalledTimes(3);
+  });
+
+  it('publishes an answer that arrives after the dialog has closed', async () => {
+    renderCheck('abc', false);
+    const answer = slowCheck();
+    act(() => {
+      store.dispatch({type: 'test/openShare'});
+    });
+    act(() => {
+      store.dispatch({type: 'test/closeShare'});
+    });
+    answer(null);
+    await flush();
+
+    expect(published()).toEqual([null]);
+  });
+
+  it('ignores an older answer that arrives after a newer one', async () => {
+    const answerPageOpen = slowCheck();
+    renderCheck('abc', true);
+    const answerDialogOpen = slowCheck();
+    act(() => {
+      store.dispatch({type: 'test/openShare'});
+    });
+    answerDialogOpen(null);
+    await flush();
+    answerPageOpen(FAILURE);
+    await flush();
+
+    expect(published()).toEqual([null]);
+  });
+
+  it('drops an answer for a project the lab has left', async () => {
+    const answer = slowCheck();
+    const {rerender} = renderCheck('abc', true);
+    rerender({channelId: 'xyz', isProjectPage: false});
+    dispatchSpy.mockClear();
+    answer(FAILURE);
+    await flush();
+
+    expect(dispatchSpy).not.toHaveBeenCalled();
+  });
+
+  it("finds out whether the viewer is the owner's teacher before publishing a failure", async () => {
+    mockFetchIsTeacher.mockResolvedValue(true);
+    renderCheck('abc', true);
+    await flush();
+
+    expect(mockFetchIsTeacher).toHaveBeenCalledWith('abc');
+    expect(dispatchSpy.mock.calls.map(([action]) => action)).toEqual([
+      setIsTeacherOfProjectOwner(true),
+      setShareFailure(FAILURE),
+    ]);
+  });
+
+  it('publishes the failure when the teacher lookup cannot be made', async () => {
+    mockFetchIsTeacher.mockRejectedValue(new Error('offline'));
+    renderCheck('abc', true);
+    await flush();
+
+    expect(dispatchSpy.mock.calls.map(([action]) => action)).toEqual([
+      setIsTeacherOfProjectOwner(false),
+      setShareFailure(FAILURE),
+    ]);
+  });
+
+  it('does not ask about the teacher for a project with nothing flagged', async () => {
+    mockFetchShareFailure.mockResolvedValue(null);
+    renderCheck('abc', true);
+    await flush();
+
+    expect(mockFetchIsTeacher).not.toHaveBeenCalled();
+    expect(published()).toEqual([null]);
   });
 
   it('asks on a level in a unit when its share dialog opens', async () => {

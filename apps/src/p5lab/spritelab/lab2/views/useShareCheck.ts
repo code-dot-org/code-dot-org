@@ -1,7 +1,14 @@
 import {useCallback, useEffect, useLayoutEffect, useRef} from 'react';
 
-import {setShareCheckPending, setShareFailure} from '@cdo/apps/lab2/lab2Redux';
-import {fetchShareFailure} from '@cdo/apps/lab2/projects/channelsApi';
+import {
+  setIsTeacherOfProjectOwner,
+  setShareCheckPending,
+  setShareFailure,
+} from '@cdo/apps/lab2/lab2Redux';
+import {
+  fetchIsTeacherOfProjectOwner,
+  fetchShareFailure,
+} from '@cdo/apps/lab2/projects/channelsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 // The share dialog stops holding its link back after this long, whatever
@@ -27,15 +34,39 @@ export default function useShareCheck(
     state => !!(state as {shareDialog?: {isOpen?: boolean}}).shareDialog?.isOpen
   );
 
+  // Only the newest question's answer is published, and only for the project
+  // it was asked about. Closing the dialog does not discard an answer: an
+  // owner who dismisses a failure they have just fixed still gets the news.
+  const newestAskRef = useRef(0);
+  const channelIdRef = useRef(channelId);
+  channelIdRef.current = channelId;
+  useEffect(
+    () => () => {
+      newestAskRef.current++;
+    },
+    []
+  );
+
   const ask = useCallback(
-    (id: string, isCurrent: () => boolean, onSettled?: () => void) => {
+    (id: string, onSettled?: () => void) => {
+      const asked = ++newestAskRef.current;
+      const isNewest = () =>
+        asked === newestAskRef.current && id === channelIdRef.current;
       fetchShareFailure(id).then(
-        failure => {
-          // The answer and the end of the wait are published together, so
-          // the dialog goes from waiting straight to the answer.
-          if (isCurrent()) {
+        async failure => {
+          // The owner's teacher may look at a flagged project, and this lab's
+          // loader does not find out who the viewer is to the owner.
+          const isTeacher = failure
+            ? await fetchIsTeacherOfProjectOwner(id).catch(() => false)
+            : false;
+          if (isNewest()) {
+            if (failure) {
+              dispatch(setIsTeacherOfProjectOwner(isTeacher));
+            }
             dispatch(setShareFailure(failure));
           }
+          // In the same step as the answer, so the dialog goes from waiting
+          // straight to it.
           onSettled?.();
         },
         // A check that cannot be made leaves the project viewable, as the
@@ -55,14 +86,9 @@ export default function useShareCheck(
   }, [channelId, dispatch]);
 
   useEffect(() => {
-    if (!channelId || !isProjectPage) {
-      return;
+    if (channelId && isProjectPage) {
+      ask(channelId);
     }
-    let pageOpen = true;
-    ask(channelId, () => pageOpen);
-    return () => {
-      pageOpen = false;
-    };
   }, [channelId, isProjectPage, ask]);
 
   // A layout effect, so the dialog's first painted frame already holds the
@@ -78,12 +104,10 @@ export default function useShareCheck(
         dispatch(setShareCheckPending(false));
       }
     };
-    let dialogOpen = true;
     dispatch(setShareCheckPending(true));
-    ask(channelId, () => dialogOpen, stopWaiting);
+    ask(channelId, stopWaiting);
     const timer = setTimeout(stopWaiting, SHARE_CHECK_MAX_WAIT_MS);
     return () => {
-      dialogOpen = false;
       clearTimeout(timer);
       stopWaiting();
     };

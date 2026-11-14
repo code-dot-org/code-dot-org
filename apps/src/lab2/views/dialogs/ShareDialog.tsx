@@ -147,7 +147,8 @@ const ShareDialog: React.FunctionComponent<{
   submissionStatus: SubmissionStatusType | undefined;
   userSharingDisabled: boolean | undefined;
   shareFailure?: ShareFailure | null;
-  /** A check for a share failure is under way. */
+  /** A check for a share failure is under way: the link, its QR code and
+      the remix are held back until it answers. */
   shareCheckPending?: boolean;
   isAbusive?: boolean;
 }> = ({
@@ -163,8 +164,6 @@ const ShareDialog: React.FunctionComponent<{
   isAbusive = false,
 }) => {
   const dispatch = useAppDispatch();
-  // The link and the remix are held back while a check for a share failure
-  // is under way.
   const shareWait = useWaitIndicator(shareCheckPending);
   const sharingDisabled = () =>
     userSharingDisabled && ['pythonlab', 'weblab2'].includes(projectType);

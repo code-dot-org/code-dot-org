@@ -79,6 +79,15 @@ def channel_main_json_body(channel_id)
   (result && result[:body]) || false
 end
 
+# Whether the error is the outside profanity service failing: a timeout, a
+# connection that cannot be made or is cut, an answer that is not JSON, or
+# the service's own error, which its client raises as a plain StandardError.
+def profanity_service_failure?(exception)
+  exception.instance_of?(StandardError) || [
+    Timeout::Error, SocketError, SystemCallError, IOError, OpenSSL::SSL::SSLError, Net::ProtocolError, JSON::ParserError
+  ].any? {|kind| exception.is_a?(kind)}
+end
+
 # Effectively private
 def share_failure_from_body(body, locale, project_type)
   return false unless body
@@ -101,9 +110,11 @@ def share_failure_from_body(body, locale, project_type)
     # If WebPurify or Geocoder are unavailable, default to viewable
     return false
   rescue StandardError => exception
-    # A timeout, a refused connection or the service's own error: a project
-    # must still load when the check cannot be made.
-    Observability::Errors.report(exception, error_message: 'Share filter failed; treating the project as viewable', context: {project_type: project_type})
+    # Only a failure of the outside service is forgiven: a project must still
+    # load when the check cannot be made. Any other error is a fault in
+    # reading the project, and a project that cannot be read is not shown.
+    raise unless profanity_service_failure?(exception)
+    Observability::Errors.report(exception, context: {project_type: project_type, outcome: 'share filter unreachable; project treated as viewable'})
     return false
   end
 end

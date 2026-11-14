@@ -487,6 +487,12 @@ class ShareFilteringTest < Minitest::Test
     assert_nil ShareFiltering.find_pii_failure(ShareFiltering.extract_text_quest_builder(project).join(' '))
   end
 
+  def test_extract_text_quest_builder_reads_the_top_level_source_of_a_file_with_no_scenes
+    program = generate_quest_builder_project['source']
+    assert_equal ['starting code'], ShareFiltering.extract_text_quest_builder({'source' => program})
+    assert_equal ['starting code'], ShareFiltering.extract_text_quest_builder({'source' => program, 'scenes' => []})
+  end
+
   def test_extract_text_quest_builder_reads_scenes_saved_inside_source
     project = generate_quest_builder_project
     inside = project.merge('source' => {'scenes' => project['scenes']}).except('scenes')

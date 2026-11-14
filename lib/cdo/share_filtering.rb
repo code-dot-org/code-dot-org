@@ -150,9 +150,10 @@ module ShareFiltering
   end
 
   # Extracts user-entered text from a Quest Builder (Sprite Lab in Lab2)
-  # project: the text fields of the blocks in every scene, which is the text
-  # a project shows as it runs. Names used in the code, of scenes and of
-  # variables, are not read.
+  # project: the text fields of the blocks in every scene. Names used in the
+  # code are not read: a scene's, or a variable's. A variable's name can
+  # reach the stage through the show variable block, which no Quest Builder
+  # level offers.
   # @param project [Hash, String] main.json, parsed or as a JSON string.
   # @return [Array<String>] unique, non-blank user-entered strings. Returns
   #   an empty array for malformed input.
@@ -177,6 +178,8 @@ module ShareFiltering
       select {|list| list.is_a?(Array)}.
       flatten(1).
       select {|scene| scene.is_a?(Hash)}
+    # A file with no scenes runs its top-level `source` as its one scene.
+    scenes = [{'source' => project['source']}] if scenes.empty?
     texts = []
     scenes.each do |scene|
       source = scene['source']
