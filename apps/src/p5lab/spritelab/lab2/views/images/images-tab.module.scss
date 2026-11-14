@@ -3,7 +3,6 @@
 @use '../imageTile' as tile;
 @use '../editor-strip' as strip;
 @use '../sentence/sr-only';
-@use '../scrollbar';
 
 // A frame of a set on a canvas, scaled to its box with its pixels sharp.
 @mixin fills-box {
@@ -202,8 +201,6 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 }
 
 .tiles {
-  @include scrollbar.blockly-scrollbar;
-
   display: grid;
   grid-template-columns: repeat(auto-fill, $tile-px);
   gap: $tile-gap;
@@ -439,8 +436,6 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 // The word list, between the pinned sentence and the pinned buttons: one
 // rounded box whose contents scroll when they run past the space.
 .paneScroll {
-  @include scrollbar.blockly-scrollbar;
-
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
