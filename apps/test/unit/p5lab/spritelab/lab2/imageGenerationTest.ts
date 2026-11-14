@@ -28,8 +28,8 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety', () => ({
   markHandled: jest.fn(promise => promise),
 }));
 
-// The canvas steps cannot run in jsdom; which one a picture is sent to is
-// what is tested.
+// The canvas steps cannot run in jsdom, so these tests check only which
+// step a picture is sent to.
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/removeBackground', () => {
   // jsdom's Blob cannot be read back, so each step hands on a stand-in.
   const pass = async () => ({arrayBuffer: async () => new ArrayBuffer(2)});
