@@ -3,10 +3,12 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
-import {setShareFailure} from '@cdo/apps/lab2/lab2Redux';
+import {setShareCheckPending, setShareFailure} from '@cdo/apps/lab2/lab2Redux';
 import {fetchShareFailure} from '@cdo/apps/lab2/projects/channelsApi';
 import {ShareFailure} from '@cdo/apps/lab2/types';
-import useShareCheck from '@cdo/apps/p5lab/spritelab/lab2/views/useShareCheck';
+import useShareCheck, {
+  SHARE_CHECK_MAX_WAIT_MS,
+} from '@cdo/apps/p5lab/spritelab/lab2/views/useShareCheck';
 import {
   getStore,
   registerReducers,
@@ -147,5 +149,68 @@ describe('useShareCheck', () => {
     await flush();
 
     expect(dispatchSpy).not.toHaveBeenCalled();
+  });
+
+  describe("while the share dialog's check is under way", () => {
+    const pendingCalls = () =>
+      dispatchSpy.mock.calls
+        .map(([action]) => action)
+        .filter(action => action.type === setShareCheckPending(true).type)
+        .map(action => action.payload);
+
+    it('holds the link back from the moment the dialog opens until the answer', async () => {
+      renderCheck('abc', false);
+      act(() => {
+        store.dispatch({type: 'test/openShare'});
+      });
+      expect(pendingCalls()).toEqual([true]);
+
+      await flush();
+      expect(pendingCalls()).toEqual([true, false]);
+      expect(dispatchSpy).toHaveBeenCalledWith(setShareFailure(FAILURE));
+    });
+
+    it('stops holding when the check cannot be made', async () => {
+      mockFetchShareFailure.mockRejectedValue(new Error('offline'));
+      renderCheck('abc', false);
+      act(() => {
+        store.dispatch({type: 'test/openShare'});
+      });
+      await flush();
+
+      expect(pendingCalls()).toEqual([true, false]);
+    });
+
+    it('stops holding after the longest wait when the check is slow', () => {
+      jest.useFakeTimers();
+      mockFetchShareFailure.mockReturnValue(new Promise(() => {}));
+      renderCheck('abc', false);
+      act(() => {
+        store.dispatch({type: 'test/openShare'});
+      });
+      act(() => {
+        jest.advanceTimersByTime(SHARE_CHECK_MAX_WAIT_MS - 1);
+      });
+      expect(pendingCalls()).toEqual([true]);
+
+      act(() => {
+        jest.advanceTimersByTime(1);
+      });
+      expect(pendingCalls()).toEqual([true, false]);
+      jest.useRealTimers();
+    });
+
+    it('stops holding when the dialog closes before the answer', () => {
+      mockFetchShareFailure.mockReturnValue(new Promise(() => {}));
+      renderCheck('abc', false);
+      act(() => {
+        store.dispatch({type: 'test/openShare'});
+      });
+      act(() => {
+        store.dispatch({type: 'test/closeShare'});
+      });
+
+      expect(pendingCalls()).toEqual([true, false]);
+    });
   });
 });

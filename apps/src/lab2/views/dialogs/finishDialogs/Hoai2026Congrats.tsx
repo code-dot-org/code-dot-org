@@ -90,6 +90,10 @@ export interface Hoai2026CongratsProps {
   /** The unit's finish URL, where a certificate is offered; absent when the
       unit has none. */
   certificateUrl?: string;
+  /** The link and the remix wait, while a check on the project runs. */
+  shareHeld?: boolean;
+  /** That check has run long enough to show a spinner. */
+  shareBusy?: boolean;
 }
 
 /**
@@ -103,6 +107,8 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
   projectType,
   onRemix,
   certificateUrl,
+  shareHeld = false,
+  shareBusy = false,
 }) => (
   <Modal
     className={styles.dialog}
@@ -147,7 +153,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                 endIcon={
                   <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
                 }
-                disabled={!onRemix}
+                disabled={!onRemix || shareHeld}
                 onClick={onRemix}
               >
                 Open Sprite Lab
@@ -199,6 +205,8 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                 iconName="link"
                 copiedIconName="check"
                 className={styles.copyLink}
+                disabled={shareHeld}
+                busy={shareBusy}
               />
             ) : (
               <Typography variant="body2" className={styles.offerText}>

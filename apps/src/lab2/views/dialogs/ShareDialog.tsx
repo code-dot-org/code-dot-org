@@ -26,6 +26,7 @@ import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import {CopyToClipboardButton} from './CopyToClipboardButton';
 import Hoai2026Congrats from './finishDialogs/Hoai2026Congrats';
 import HoaiCongrats from './finishDialogs/HoaiCongrats';
+import useWaitIndicator from './useWaitIndicator';
 
 import moduleStyles from './share-dialog.module.scss';
 
@@ -146,6 +147,8 @@ const ShareDialog: React.FunctionComponent<{
   submissionStatus: SubmissionStatusType | undefined;
   userSharingDisabled: boolean | undefined;
   shareFailure?: ShareFailure | null;
+  /** A check for a share failure is under way. */
+  shareCheckPending?: boolean;
   isAbusive?: boolean;
 }> = ({
   dialogId,
@@ -156,9 +159,13 @@ const ShareDialog: React.FunctionComponent<{
   submissionStatus,
   userSharingDisabled,
   shareFailure,
+  shareCheckPending = false,
   isAbusive = false,
 }) => {
   const dispatch = useAppDispatch();
+  // The link and the remix are held back while a check for a share failure
+  // is under way.
+  const shareWait = useWaitIndicator(shareCheckPending);
   const sharingDisabled = () =>
     userSharingDisabled && ['pythonlab', 'weblab2'].includes(projectType);
 
@@ -198,6 +205,8 @@ const ShareDialog: React.FunctionComponent<{
           projectType={projectType}
           onRemix={unshareable ? undefined : remix}
           certificateUrl={finishUrl}
+          shareHeld={shareWait.held}
+          shareBusy={shareWait.indicator}
         />
       </div>
     );
@@ -284,12 +293,17 @@ const ShareDialog: React.FunctionComponent<{
                     id="share-qrcode-container"
                   >
                     <div className={moduleStyles.QRCodeBorder}>
-                      <QRCode value={shareUrl + '?qr=true'} size={117} />
+                      {/* The code is the link too, so it waits as well. */}
+                      {!shareWait.held && (
+                        <QRCode value={shareUrl + '?qr=true'} size={117} />
+                      )}
                     </div>
                   </div>
                   <CopyToClipboardButton
                     shareUrl={shareUrl}
                     projectType={projectType}
+                    disabled={shareWait.held}
+                    busy={shareWait.indicator}
                   />
                   <SubmitButtonInfo
                     submissionStatus={submissionStatus}

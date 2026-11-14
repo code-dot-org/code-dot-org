@@ -11,6 +11,12 @@ import ShareDialog, {
 } from '@cdo/apps/lab2/views/dialogs/ShareDialog';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+// The real code draws on a canvas, which has no name to find it by.
+jest.mock('qrcode.react', () => ({
+  __esModule: true,
+  default: ({value}: {value: string}) => <img alt={`QR code for ${value}`} />,
+}));
+
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: jest.fn(),
   useAppDispatch: jest.fn(),
@@ -92,6 +98,15 @@ describe('Lab2 ShareDialog', () => {
       ).toBeDisabled();
     });
 
+    it('holds the share link and the remix while the check is under way', () => {
+      renderFinish({shareCheckPending: true});
+      expect(screen.getByRole('button', {name: 'Copy link'})).toBeDisabled();
+      expect(
+        screen.getByRole('button', {name: 'Open Sprite Lab'})
+      ).toBeDisabled();
+      expect(screen.queryByText(/can't be shared/)).toBeNull();
+    });
+
     it('offers Open Sprite Lab', () => {
       renderFinish();
       expect(
@@ -112,6 +127,30 @@ describe('Lab2 ShareDialog', () => {
       screen.getByRole('button', {name: 'Keep playing'}).click();
       expect(mockDispatch).toHaveBeenCalledWith(hideShareDialog());
     });
+  });
+
+  it('holds the link and its QR code while the check is under way', () => {
+    renderShareDialog({shareCheckPending: true});
+    expect(
+      screen.getByRole('button', {name: 'Copy link to project'})
+    ).toBeDisabled();
+    expect(screen.queryByRole('img', {name: /QR code/})).toBeNull();
+  });
+
+  it('shows the QR code when no check is under way', () => {
+    renderShareDialog();
+    expect(
+      screen.getByRole('button', {name: 'Copy link to project'})
+    ).toBeEnabled();
+    expect(screen.getByRole('img', {name: /QR code/})).toBeInTheDocument();
+  });
+
+  it('keeps showing an earlier failure while the next check is under way', () => {
+    renderShareDialog({
+      shareCheckPending: true,
+      shareFailure: {type: 'profanity', content: 'darn'},
+    });
+    expect(screen.getByText(SHARE_FAILURE_TITLE)).toBeInTheDocument();
   });
 
   it('renders the share link UI when there is no share failure', () => {

@@ -1,8 +1,12 @@
-import {useCallback, useEffect, useRef} from 'react';
+import {useCallback, useEffect, useLayoutEffect, useRef} from 'react';
 
-import {setShareFailure} from '@cdo/apps/lab2/lab2Redux';
+import {setShareCheckPending, setShareFailure} from '@cdo/apps/lab2/lab2Redux';
 import {fetchShareFailure} from '@cdo/apps/lab2/projects/channelsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+// The share dialog stops holding its link back after this long, whatever
+// the check is doing: a slow check must not leave a student stuck.
+export const SHARE_CHECK_MAX_WAIT_MS = 3000;
 
 /**
  * Asks the server whether the project's text may be shared, and publishes
@@ -27,7 +31,7 @@ export default function useShareCheck(
   );
 
   const ask = useCallback(
-    (id: string, isCurrent: () => boolean) => {
+    (id: string, isCurrent: () => boolean, onSettled?: () => void) => {
       fetchShareFailure(id)
         .then(failure => {
           if (isCurrent()) {
@@ -36,7 +40,8 @@ export default function useShareCheck(
         })
         // A check that cannot be made leaves the project viewable, as the
         // server does when its own filter is unreachable.
-        .catch(() => {});
+        .catch(() => {})
+        .then(onSettled);
     },
     [dispatch]
   );
@@ -60,14 +65,27 @@ export default function useShareCheck(
     };
   }, [channelId, isProjectPage, ask]);
 
-  useEffect(() => {
+  // A layout effect, so the dialog's first painted frame already holds the
+  // link back.
+  useLayoutEffect(() => {
     if (!channelId || !shareDialogOpen) {
       return;
     }
+    let waiting = true;
+    const stopWaiting = () => {
+      if (waiting) {
+        waiting = false;
+        dispatch(setShareCheckPending(false));
+      }
+    };
     let dialogOpen = true;
-    ask(channelId, () => dialogOpen);
+    dispatch(setShareCheckPending(true));
+    ask(channelId, () => dialogOpen, stopWaiting);
+    const timer = setTimeout(stopWaiting, SHARE_CHECK_MAX_WAIT_MS);
     return () => {
       dialogOpen = false;
+      clearTimeout(timer);
+      stopWaiting();
     };
-  }, [channelId, shareDialogOpen, ask]);
+  }, [channelId, shareDialogOpen, ask, dispatch]);
 }
