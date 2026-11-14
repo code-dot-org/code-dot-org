@@ -127,6 +127,39 @@
               }
             }
           }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_burst",
+          "fields": {
+            "COUNT": 20,
+            "LOOK": "confetti"
+          },
+          "inputs": {
+            "ORIGIN": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playSound"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setCameraZoom",
+          "fields": {
+            "ZOOM": 2
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_showTitle",
+          "fields": {
+            "TEXT": "Scene 2"
+          }
         }
       ]
     },
@@ -141,10 +174,16 @@
           }
         },
         {
-          "text": "Drag a **say** block under **when run** and change the message if you like!",
+          "text": "Add one or more of the blocks to **when run**.",
           "check": {
             "kind": "block",
-            "type": "gamelab_spriteSay",
+            "type": [
+              "gamelab_spriteSay",
+              "spritelab2_burst",
+              "spritelab2_playSound",
+              "spritelab2_setCameraZoom",
+              "spritelab2_showTitle"
+            ],
             "under": "spritelab2_whenRun",
             "scene": "second-scene"
           }
