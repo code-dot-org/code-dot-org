@@ -68,7 +68,7 @@ namespace :build do
       RakeUtils.python_venv_install
 
       ChatClient.log 'Provisioning <b>dashboard</b> SQL users...'
-      RakeUtils.rake 'db:provision_sql_users'
+      RakeUtils.system deploy_dir('bin', 'provision-sql-users')
 
       if CDO.daemon
         ChatClient.log 'Migrating <b>dashboard</b> database...'

@@ -4,6 +4,9 @@
   MYSQL_DAEMON_ADMIN_CREDENTIAL = '{"username":"root", "password":""}'.freeze
   MYSQL_DAEMON_HOSTNAME = 'localhost'.freeze
   MYSQL_DAEMON_PORT = '3306'.freeze
+  # Value we set `db_cluster_id` to when the database provisioned by this Stack is NOT an Aurora MySQL cluster.
+  # KEEP THE VALUE OF THIS CONSTANT IN SYNC with Cdo::SqlUserProvisioner::NO_DB_CLUSTER.
+  NO_DB_CLUSTER = 'none'.freeze
   DATABASE_CONFIGURATION = {
     db_cluster_id: '!Ref AuroraCluster',
     db_proxy: 'none',
@@ -24,7 +27,7 @@
       hash[:db_endpoint_writer_port] = '3306'
     end
     if !database
-      hash[:db_cluster_id] = MYSQL_DAEMON_HOSTNAME
+      hash[:db_cluster_id] = NO_DB_CLUSTER
       hash[:db_endpoint_writer] = MYSQL_DAEMON_HOSTNAME
       hash[:db_endpoint_writer_port] = MYSQL_DAEMON_PORT
       hash[:db_endpoint_proxy_writer] = MYSQL_DAEMON_HOSTNAME
