@@ -37,10 +37,12 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
     other_student_project = {id: 44, storage_id: STUDENT_STORAGE_ID, value: other_student_project_value, uuid: SecureRandom.uuid}
 
     ProjectsList.stubs(:get_storage_ids_by_user_ids).returns({@student.id => STUDENT_STORAGE_ID})
-    Projects.any_instance.stubs(:get_active_projects).returns([student_project, hidden_project, other_student_project])
 
     projects_table = mock
     Projects.stubs(:table).returns(projects_table)
+    projects_table.stubs(:where).
+      with(storage_id: [STUDENT_STORAGE_ID], state: 'active').
+      returns([student_project, hidden_project, other_student_project])
     projects_table.stubs(:where).with(id: 22).returns([student_project])
     projects_table.stubs(:where).with(id: 33).returns([hidden_project])
     projects_table.stubs(:where).with(id: 44).returns([other_student_project])
