@@ -1,6 +1,6 @@
 // A saved project keeps its scenes inside `source`, where every lab keeps a
-// student's work. The lab works with them beside it. Only this module knows
-// both shapes.
+// student's work. While it runs, the lab keeps them beside `source`. Only
+// this module knows both shapes.
 
 import {isEqual} from 'lodash';
 
@@ -14,11 +14,13 @@ const holdsScenes = (source: unknown): source is ScenesSource =>
   typeof source === 'object' &&
   Array.isArray((source as ScenesSource).scenes);
 
-// The lab's own `source` once the scenes hold every program.
+// In the lab's shape, `source` is empty once the scenes hold every program.
 const NO_PROGRAM: Sources['source'] = {};
 
-// Keeps a saved `source` the same object while its scenes do not change: a
-// student's edit is told from a saved flag by which top-level keys changed.
+// Remembers the saved `source` object for each list of scenes, so that an
+// update which leaves the scenes alone saves the very same object. The lab
+// counts an update as a student's edit when a top-level key is replaced, so
+// a new `source` object each time would make every update look like one.
 const savedSourceOf = new WeakMap<Scene[], ScenesSource>();
 
 /** A stored project in the shape the lab works with. A level's start
