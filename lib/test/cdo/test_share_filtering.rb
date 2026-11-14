@@ -439,6 +439,143 @@ class ShareFilteringTest < Minitest::Test
     assert_nil ShareFiltering.find_share_failure(generate_sketchlab_source, 'en', 'spritelab')
   end
 
+  # @return [Hash] a Quest Builder project as main.json holds it: a program
+  #   for each scene, beside a top-level one that holds only starting code.
+  def generate_quest_builder_project(say: 'Hello!', title: 'You win!', scene_name: 'Scene 2', variable: nil)
+    program = lambda do |field, text|
+      {
+        'blocks' => {
+          'languageVersion' => 0,
+          'blocks' => [
+            {
+              'type' => 'spritelab2_whenRun',
+              'next' => {
+                'block' => {
+                  'type' => 'some_block',
+                  'fields' => {field => text, 'ANIMATION' => '<field name="ANIMATION">"Sprite 1"</field>'},
+                },
+              },
+            },
+          ],
+        },
+      }
+    end
+    {
+      'animations' => {'orderedKeys' => [], 'propsByKey' => {}},
+      'source' => program.call('SPEECH', 'starting code'),
+      'scenes' => [
+        {'id' => 'scene-1', 'name' => 'Scene 1', 'source' => program.call('SPEECH', say)},
+        {
+          'id' => 'second-scene',
+          'name' => scene_name,
+          'source' => program.call('TEXT', title).merge(variable ? {'variables' => [{'name' => variable, 'id' => 'v1'}]} : {}),
+        },
+      ],
+    }
+  end
+
+  def test_extract_text_quest_builder_reads_variable_names
+    assert_equal(
+      ['Hello!', 'You win!', 'score'],
+      ShareFiltering.extract_text_quest_builder(generate_quest_builder_project(variable: 'score'))
+    )
+  end
+
+  def test_find_share_failure_quest_builder_phone_in_a_variable_name
+    project = generate_quest_builder_project(variable: 'call 123-456-7890')
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
+      ShareFiltering.find_share_failure(project, 'en', 'quest_builder')
+    )
+  end
+
+  def test_extract_text_quest_builder_reads_every_scene_and_the_names_given_to_scenes
+    assert_equal(
+      ['Hello!', 'You win!', 'The cave'],
+      ShareFiltering.extract_text_quest_builder(generate_quest_builder_project(scene_name: 'The cave'))
+    )
+  end
+
+  def test_extract_text_quest_builder_leaves_out_default_scene_names
+    assert_equal(
+      ['Hello!', 'You win!'],
+      ShareFiltering.extract_text_quest_builder(generate_quest_builder_project)
+    )
+  end
+
+  def test_find_share_failure_quest_builder_with_no_text_skips_filters
+    ProfanityFilter.expects(:find_potential_profanity).never
+    RegexpUtils.expects(:find_potential_email).never
+
+    project = {'scenes' => [{'id' => 'scene-1', 'name' => 'Scene 1', 'source' => {'blocks' => {'blocks' => [{'type' => 'spritelab2_whenRun'}]}}}]}
+    assert_nil ShareFiltering.find_share_failure(project, 'en', 'quest_builder')
+  end
+
+  def test_extract_text_quest_builder_accepts_json_string
+    assert_equal(
+      ['Hello!', 'You win!'],
+      ShareFiltering.extract_text_quest_builder(generate_quest_builder_project.to_json)
+    )
+  end
+
+  def test_extract_text_quest_builder_reads_a_stack_deeper_than_the_default_json_limit
+    deepest = {'type' => 'some_block', 'fields' => {'SPEECH' => 'at the bottom'}}
+    stack = (1..120).inject(deepest) {|below, _| {'type' => 'some_block', 'next' => {'block' => below}}}
+    project = {'scenes' => [{'name' => 'Scene 1', 'source' => {'blocks' => {'blocks' => [stack]}}}]}
+    assert_equal(
+      ['at the bottom'],
+      ShareFiltering.extract_text_quest_builder(project.to_json(max_nesting: false))
+    )
+  end
+
+  def test_extract_text_quest_builder_robust_to_malformed_input
+    assert_equal [], ShareFiltering.extract_text_quest_builder(nil)
+    assert_equal [], ShareFiltering.extract_text_quest_builder(42)
+    assert_equal [], ShareFiltering.extract_text_quest_builder([])
+    assert_equal [], ShareFiltering.extract_text_quest_builder('not json {{{')
+    assert_equal [], ShareFiltering.extract_text_quest_builder({})
+    assert_equal [], ShareFiltering.extract_text_quest_builder({'source' => 'oops', 'scenes' => 'oops'})
+    assert_equal [], ShareFiltering.extract_text_quest_builder({'scenes' => [nil, 'oops', {'source' => {'blocks' => 'oops'}}, {'source' => {'blocks' => {'blocks' => 'oops'}}}]})
+  end
+
+  def test_find_share_failure_quest_builder_email_in_a_later_scene
+    project = generate_quest_builder_project(title: 'write to test@example.com')
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'test@example.com'),
+      ShareFiltering.find_share_failure(project, 'en', 'quest_builder')
+    )
+  end
+
+  def test_find_share_failure_quest_builder_phone_in_a_scene_name
+    project = generate_quest_builder_project(scene_name: 'call 123-456-7890')
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
+      ShareFiltering.find_share_failure(project, 'en', 'quest_builder')
+    )
+  end
+
+  def test_find_share_failure_quest_builder_profanity_in_a_say_block
+    WebPurify.stubs(:find_potential_profanities).returns(['damn'])
+
+    project = generate_quest_builder_project(say: 'damn')
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'),
+      ShareFiltering.find_share_failure(project, 'en', 'quest_builder')
+    )
+  end
+
+  def test_find_share_failure_quest_builder_clean_project_returns_nil
+    WebPurify.stubs(:find_potential_profanities).returns(nil)
+
+    assert_nil ShareFiltering.find_share_failure(generate_quest_builder_project, 'en', 'quest_builder')
+  end
+
+  def test_whole_project_type
+    assert_equal true, ShareFiltering.whole_project_type?('quest_builder')
+    assert_equal false, ShareFiltering.whole_project_type?('sketchlab')
+    assert_equal false, ShareFiltering.whole_project_type?(nil)
+  end
+
   # Tests for ShareFiltering.extract_text_from_js
   # These tests cover expected extraction behavior.
 

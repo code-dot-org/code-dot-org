@@ -186,6 +186,23 @@ const ShareDialog: React.FunctionComponent<{
   // in Lab2Wrapper.
   const theme = Lab2Registry.getInstance().getTheme();
 
+  // Ahead of the share failure message: a student whose project cannot be
+  // shared still finishes, without the link or the remix.
+  if (dialogId === 'hoai2026') {
+    const unshareable = isAbusive || !!shareFailure;
+    return (
+      <div data-theme={theme}>
+        <Hoai2026Congrats
+          onClose={handleClose}
+          shareUrl={unshareable || userSharingDisabled ? undefined : shareUrl}
+          projectType={projectType}
+          onRemix={unshareable ? undefined : remix}
+          certificateUrl={finishUrl}
+        />
+      </div>
+    );
+  }
+
   if (shareFailure) {
     const flaggedText = shareFailure.content
       ? ` Flagged text: "${shareFailure.content}"`
@@ -218,20 +235,6 @@ const ShareDialog: React.FunctionComponent<{
         projectType={projectType}
         theme={theme}
       />
-    );
-  }
-
-  if (dialogId === 'hoai2026') {
-    return (
-      <div data-theme={theme}>
-        <Hoai2026Congrats
-          onClose={handleClose}
-          shareUrl={isAbusive || userSharingDisabled ? undefined : shareUrl}
-          projectType={projectType}
-          onRemix={isAbusive ? undefined : remix}
-          certificateUrl={finishUrl}
-        />
-      </div>
     );
   }
 

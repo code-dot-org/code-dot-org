@@ -27,13 +27,13 @@ export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
   'weblab2',
   'music_dance_ai',
   'sketchlab',
-  'spritelab',
   'quest_builder',
 ];
 
-// Project types whose content is share-filtered for profanity/PII on the
-// server. Must stay in sync with FILTERED_PROJECT_TYPES in
-// lib/cdo/share_filtering.rb (for the lab2 project types listed there).
+// Project types the framework asks the server to check for profanity/PII, on
+// every load and after every save. Each must also be in
+// FILTERED_PROJECT_TYPES in lib/cdo/share_filtering.rb. A lab that asks for
+// the check itself is not listed.
 export const PROJECT_TYPES_WITH_SHARE_FILTERING: ProjectType[] = ['sketchlab'];
 
 // Text-based labs that are currently supported by lab2.

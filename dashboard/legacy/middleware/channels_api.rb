@@ -222,7 +222,10 @@ class ChannelsApi < Sinatra::Base
     content_type :json
     language = request.language
 
-    value = explain_share_failure(id)
+    # A client that shows only its viewer's language says so, and is spared
+    # the English check when that language is another.
+    viewer_language_only = request.GET['viewer_language_only'] == 'true'
+    value = viewer_language_only && language != 'en' ? nil : explain_share_failure(id)
     intl_value = language == 'en' ?
       nil : explain_share_failure(id, language)
     {

@@ -83,6 +83,15 @@ describe('Lab2 ShareDialog', () => {
       ).toBeDisabled();
     });
 
+    it('still shows, without the share link or the remix, when the text cannot be shared', () => {
+      renderFinish({shareFailure: {type: 'phone', content: '123-456-7890'}});
+      expect(screen.queryByText(/123-456-7890/)).toBeNull();
+      expect(screen.queryByRole('button', {name: 'Copy link'})).toBeNull();
+      expect(
+        screen.getByRole('button', {name: 'Open Sprite Lab'})
+      ).toBeDisabled();
+    });
+
     it('offers Open Sprite Lab', () => {
       renderFinish();
       expect(
