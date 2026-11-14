@@ -165,7 +165,6 @@ import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
-import useBodyClass from './useBodyClass';
 import useDocumentHidden from './useDocumentHidden';
 import {useFlyoutDots} from './useFlyoutDots';
 import useLevelBlocks from './useLevelBlocks';
@@ -199,9 +198,6 @@ const SHARE_TABS: readonly Tab[] = ['Play'];
 // On the body while a share link is open; scopes the page footer's styles
 // in sprite-lab2-view.module.scss.
 const SHARE_BODY_CLASS = 'spritelab2-share';
-// On the body while the lab is on the page; scopes the color-scheme rules in
-// sprite-lab2-view.module.scss to pages that hold this lab.
-const LAB_BODY_CLASS = 'spritelab2';
 // The Images pane, for the hook that keeps it inert while closed.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // The editor switch's order.
@@ -356,7 +352,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     document.body.classList.add(SHARE_BODY_CLASS);
     return () => document.body.classList.remove(SHARE_BODY_CLASS);
   }, [isShareView]);
-  useBodyClass(LAB_BODY_CLASS);
   const worldTabEnabled = tabs.includes('World');
   // Playfield size for a world this level creates. An existing world keeps
   // the size its grid already holds unless it can grow into this one without

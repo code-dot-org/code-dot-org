@@ -2,6 +2,21 @@
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 @use './editor-strip' as strip;
 
+// A browser draws scrollbars, and its own menus and fields, for a light page
+// unless a surface declares a color scheme. The theme sets colors through
+// the data-theme attribute, which tells the browser nothing, so the lab
+// declares the scheme its theme means. A part inside the lab that carries
+// its own theme declares its own.
+:global([data-theme='Dark']) .labRow,
+.labRow :global([data-theme='Dark']) {
+  color-scheme: dark;
+}
+
+:global([data-theme='Light']) .labRow,
+.labRow :global([data-theme='Light']) {
+  color-scheme: light;
+}
+
 .labRow {
   display: flex;
   width: 100%;
@@ -12,18 +27,6 @@
     flex: 1;
     min-width: 0;
   }
-}
-
-// A browser draws scrollbars, and its own menus and fields, for a light page
-// unless a surface declares a color scheme. The theme sets colors through
-// the data-theme attribute, which tells the browser nothing, so on a page
-// with this lab each themed surface declares the scheme its theme means.
-:global(body.spritelab2 [data-theme='Dark']) {
-  color-scheme: dark;
-}
-
-:global(body.spritelab2 [data-theme='Light']) {
-  color-scheme: light;
 }
 
 // The page layout hides its small footer from 970px up. A share link keeps

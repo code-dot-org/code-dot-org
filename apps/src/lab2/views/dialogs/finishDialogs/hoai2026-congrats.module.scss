@@ -13,6 +13,16 @@
   max-width: none;
 }
 
+// The content scrolls on a small window. A browser draws that scrollbar for
+// a light page unless the surface declares its color scheme.
+:global([data-theme='Dark']) .dialog {
+  color-scheme: dark;
+}
+
+:global([data-theme='Light']) .dialog {
+  color-scheme: light;
+}
+
 // On a short window the modal's own rows give up some of their padding
 // too. Its rows are divs in order: the title, the content, the actions;
 // the close x is its one button.
