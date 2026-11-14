@@ -6,6 +6,9 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -24,7 +27,12 @@
     "level_mode": {
       "kind": "code",
       "extraTabs": [
-        "Images"
+        "Images",
+        "World"
+      ],
+      "paletteRoles": [
+        "treasure",
+        "block"
       ],
       "noNewImages": true,
       "noDeletingImages": true,
