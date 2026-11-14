@@ -50,8 +50,6 @@ module ShareFiltering
   # Project types whose user-entered text is spread through main.json, not
   # held in its `source` alone. Their extractor is given the whole file.
   WHOLE_PROJECT_TYPES = %w[quest_builder].freeze
-  # The name Quest Builder gives a scene the student has not named.
-  QUEST_BUILDER_DEFAULT_SCENE_NAME = /\AScene \d+\z/
   JSON_MAX_DEPTH = 999
 
   # Searches for a sharing failure given a program and locale.
@@ -152,9 +150,9 @@ module ShareFiltering
   end
 
   # Extracts user-entered text from a Quest Builder (Sprite Lab in Lab2)
-  # project: the text fields of the blocks in every scene, and the names the
-  # student gave the scenes. A scene still on its default name adds nothing,
-  # so a project with no text of the student's own is not sent to be checked.
+  # project: the text fields of the blocks in every scene, which is the text
+  # a project shows as it runs. Names used in the code, of scenes and of
+  # variables, are not read.
   # @param project [Hash, String] main.json, parsed or as a JSON string.
   # @return [Array<String>] unique, non-blank user-entered strings. Returns
   #   an empty array for malformed input.
@@ -185,17 +183,6 @@ module ShareFiltering
       next unless source.is_a?(Hash)
       blocks = source['blocks'].is_a?(Hash) ? source['blocks']['blocks'] : nil
       blocks.each {|block| traverse_block(block, texts)} if blocks.is_a?(Array)
-      # A variable's name shows on the stage through the show variable block.
-      variables = source['variables'].is_a?(Array) ? source['variables'] : []
-      variables.each do |variable|
-        name = variable.is_a?(Hash) ? variable['name'] : nil
-        texts << name if name.is_a?(String) && !name.strip.empty?
-      end
-    end
-    scenes.each do |scene|
-      name = scene['name']
-      next unless name.is_a?(String) && !name.strip.empty?
-      texts << name unless name.match?(QUEST_BUILDER_DEFAULT_SCENE_NAME)
     end
     texts.compact.uniq
   end

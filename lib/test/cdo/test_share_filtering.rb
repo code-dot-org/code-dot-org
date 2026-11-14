@@ -474,54 +474,30 @@ class ShareFilteringTest < Minitest::Test
     }
   end
 
-  def test_extract_text_quest_builder_reads_scenes_saved_inside_source
-    project = generate_quest_builder_project(scene_name: 'The cave', variable: 'score')
-    inside = project.merge('source' => {'scenes' => project['scenes']}).except('scenes')
-    assert_equal(
-      ShareFiltering.extract_text_quest_builder(project),
-      ShareFiltering.extract_text_quest_builder(inside)
-    )
-    assert_equal(
-      ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
-      ShareFiltering.find_share_failure(
-        {'source' => {'scenes' => [{'id' => 'scene-1', 'name' => 'call 123-456-7890'}]}}, 'en', 'quest_builder'
-      )
-    )
-  end
-
-  def test_extract_text_quest_builder_reads_both_places_when_a_file_has_both
-    project = generate_quest_builder_project
-    project['source'] = {'scenes' => [{'id' => 'other', 'name' => 'The cave'}]}
-    assert_equal ['Hello!', 'You win!', 'The cave'], ShareFiltering.extract_text_quest_builder(project)
-  end
-
-  def test_extract_text_quest_builder_reads_variable_names
-    assert_equal(
-      ['Hello!', 'You win!', 'score'],
-      ShareFiltering.extract_text_quest_builder(generate_quest_builder_project(variable: 'score'))
-    )
-  end
-
-  def test_find_share_failure_quest_builder_phone_in_a_variable_name
-    project = generate_quest_builder_project(variable: 'call 123-456-7890')
-    assert_equal(
-      ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
-      ShareFiltering.find_share_failure(project, 'en', 'quest_builder')
-    )
-  end
-
-  def test_extract_text_quest_builder_reads_every_scene_and_the_names_given_to_scenes
-    assert_equal(
-      ['Hello!', 'You win!', 'The cave'],
-      ShareFiltering.extract_text_quest_builder(generate_quest_builder_project(scene_name: 'The cave'))
-    )
-  end
-
-  def test_extract_text_quest_builder_leaves_out_default_scene_names
+  def test_extract_text_quest_builder_reads_the_block_text_of_every_scene
     assert_equal(
       ['Hello!', 'You win!'],
       ShareFiltering.extract_text_quest_builder(generate_quest_builder_project)
     )
+  end
+
+  def test_extract_text_quest_builder_leaves_out_scene_names_and_variable_names
+    project = generate_quest_builder_project(scene_name: 'call 123-456-7890', variable: 'test@example.com')
+    assert_equal ['Hello!', 'You win!'], ShareFiltering.extract_text_quest_builder(project)
+    assert_nil ShareFiltering.find_pii_failure(ShareFiltering.extract_text_quest_builder(project).join(' '))
+  end
+
+  def test_extract_text_quest_builder_reads_scenes_saved_inside_source
+    project = generate_quest_builder_project
+    inside = project.merge('source' => {'scenes' => project['scenes']}).except('scenes')
+    assert_equal ['Hello!', 'You win!'], ShareFiltering.extract_text_quest_builder(inside)
+  end
+
+  def test_extract_text_quest_builder_reads_both_places_when_a_file_has_both
+    project = generate_quest_builder_project
+    other = {'blocks' => {'blocks' => [{'type' => 'some_block', 'fields' => {'SPEECH' => 'In the cave'}}]}}
+    project['source'] = {'scenes' => [{'id' => 'other', 'name' => 'Other', 'source' => other}]}
+    assert_equal ['Hello!', 'You win!', 'In the cave'], ShareFiltering.extract_text_quest_builder(project)
   end
 
   def test_find_share_failure_quest_builder_with_no_text_skips_filters
@@ -563,14 +539,6 @@ class ShareFilteringTest < Minitest::Test
     project = generate_quest_builder_project(title: 'write to test@example.com')
     assert_equal(
       ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'test@example.com'),
-      ShareFiltering.find_share_failure(project, 'en', 'quest_builder')
-    )
-  end
-
-  def test_find_share_failure_quest_builder_phone_in_a_scene_name
-    project = generate_quest_builder_project(scene_name: 'call 123-456-7890')
-    assert_equal(
-      ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
       ShareFiltering.find_share_failure(project, 'en', 'quest_builder')
     )
   end
