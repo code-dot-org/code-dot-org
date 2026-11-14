@@ -378,9 +378,8 @@ export async function generateImage(
   if (imageType === 'sprite' || imageType === 'block') {
     const matte = {soft: style === 'smooth'};
     // A cached character set's base frame stands in for a single picture.
-    // A set is drawn on the key color its prompt names, which is removed
-    // wherever it sits. The fill from the corner cannot reach a gap the
-    // character closes off against the picture's edge.
+    // Its backdrop is the key color its prompt names, and the fill from the
+    // corner would miss a gap the character closes off.
     blob = cached?.characterSet
       ? await removeKeyColor(blob, chooseKeyColor(prompt).rgb, matte)
       : await removeBackground(blob, matte);
