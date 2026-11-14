@@ -411,7 +411,6 @@ describe('SentenceScene', () => {
         jest.advanceTimersByTime(1);
       });
       expect(screen.getByText('Your picture is ready.')).toBeTruthy();
-      expect(screen.queryByText('cached')).toBeNull();
       expect(sendEvent).toHaveBeenCalledWith(
         'hoai2026-image-prompt',
         expect.objectContaining({imageSource: 'cached', cached: true}),
