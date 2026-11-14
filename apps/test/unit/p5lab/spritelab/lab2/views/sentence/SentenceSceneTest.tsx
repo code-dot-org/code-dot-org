@@ -49,10 +49,7 @@ const RESULT = {
 // A host that lays every part out, with buttons for the callbacks.
 const layout = (parts: SentenceSceneParts) => (
   <div>
-    <div>
-      {parts.frame}
-      {parts.cachedTag}
-    </div>
+    <div>{parts.frame}</div>
     {parts.behindTheScenes}
     <section ref={parts.panelRef} tabIndex={-1} aria-label="Make your picture">
       {parts.status}
@@ -414,7 +411,7 @@ describe('SentenceScene', () => {
         jest.advanceTimersByTime(1);
       });
       expect(screen.getByText('Your picture is ready.')).toBeTruthy();
-      expect(screen.getByText('cached')).toBeTruthy();
+      expect(screen.queryByText('cached')).toBeNull();
       expect(sendEvent).toHaveBeenCalledWith(
         'hoai2026-image-prompt',
         expect.objectContaining({imageSource: 'cached', cached: true}),
