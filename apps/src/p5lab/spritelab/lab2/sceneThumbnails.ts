@@ -129,12 +129,20 @@ export function sceneMetadataFor(
   });
 }
 
+/** Whether the address is a file this project uploaded. */
+export function isProjectAsset(
+  channelId: string | undefined,
+  url: string | undefined
+): url is string {
+  return !!url && !!channelId && url.startsWith(`/v3/assets/${channelId}/`);
+}
+
 /** Best-effort removal of one of this project's own uploads. */
 export function deleteProjectAsset(
   channelId: string | undefined,
   url: string | undefined
 ): void {
-  if (url && channelId && url.startsWith(`/v3/assets/${channelId}/`)) {
+  if (isProjectAsset(channelId, url)) {
     HttpClient.delete(url, true).catch(() => undefined);
   }
 }

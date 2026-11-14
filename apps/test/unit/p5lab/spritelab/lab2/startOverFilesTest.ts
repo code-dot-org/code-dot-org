@@ -97,10 +97,19 @@ describe('deleteFilesOnceUnused', () => {
     expect(deleted).toEqual([HERO]);
   });
 
-  it('deletes nothing when no save succeeds', () => {
+  it('keeps a file the project names again before the save lands', () => {
     saved = {source: {}};
-    deleteFilesOnceUnused(projectManager, CHANNEL, [HERO]);
-    expect(deleted).toEqual([]);
+    let namedNow = [SCENE_PICTURE];
+    deleteFilesOnceUnused(projectManager, CHANNEL, [HERO, SCENE_PICTURE], url =>
+      namedNow.includes(url)
+    );
+    saveSucceeds();
+    expect(deleted).toEqual([HERO]);
+
+    // Once the project drops it, the next save removes it.
+    namedNow = [];
+    saveSucceeds();
+    expect(deleted).toEqual([HERO, SCENE_PICTURE]);
   });
 
   it('does nothing without a project', () => {

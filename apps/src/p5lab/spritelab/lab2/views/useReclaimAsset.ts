@@ -1,5 +1,6 @@
 import {useCallback} from 'react';
 
+import {isProjectAsset} from '@cdo/apps/p5lab/spritelab/lab2/sceneThumbnails';
 import {RuntimeAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -14,7 +15,7 @@ export default function useReclaimAsset(): (url?: string) => void {
   const channelId = useAppSelector(state => state.lab.channel?.id);
   return useCallback(
     (url?: string) => {
-      if (!channelId || !url || !url.startsWith(`/v3/assets/${channelId}/`)) {
+      if (!isProjectAsset(channelId, url)) {
         return;
       }
       // The classic store is untyped; its list has the lab's shape.

@@ -682,6 +682,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);
+  // The files the project names as of the latest render, for the Start Over
+  // cleanup, which decides after later saves.
+  const uploadedNowRef = useRef<() => string[]>(() => []);
+  uploadedNowRef.current = () =>
+    uploadedFileUrls(channelId, animationList, scenes);
 
   const sceneMetadata = useMemo(
     () => sceneMetadataFor(scenes, animationList),
@@ -2233,7 +2238,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             const projectManager =
               Lab2Registry.getInstance().getProjectManager();
             startOver();
-            deleteFilesOnceUnused(projectManager, channelId, uploaded);
+            deleteFilesOnceUnused(projectManager, channelId, uploaded, url =>
+              uploadedNowRef.current().includes(url)
+            );
             setShowStartOver(false);
             if (leaving) {
               dispatch(navigateToLevelId(firstLevelId));
