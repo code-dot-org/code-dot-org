@@ -14,6 +14,18 @@
   }
 }
 
+// A browser draws scrollbars, and its own menus and fields, for a light page
+// unless a surface declares a color scheme. The theme sets colors through
+// the data-theme attribute, which tells the browser nothing, so on a page
+// with this lab each themed surface declares the scheme its theme means.
+:global(body.spritelab2 [data-theme='Dark']) {
+  color-scheme: dark;
+}
+
+:global(body.spritelab2 [data-theme='Light']) {
+  color-scheme: light;
+}
+
 // The page layout hides its small footer from 970px up. A share link keeps
 // it at every width.
 :global(body.spritelab2-share .responsive-content-mobile-footer) {
