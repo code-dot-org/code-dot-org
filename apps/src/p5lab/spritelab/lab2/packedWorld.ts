@@ -44,11 +44,11 @@ export function unpackWorld(packed: PackedWorld): World {
 
 /** The packed form of a world: one legend character per distinct cell, in
     order of first appearance, with empty cells and rows trimmed from the
-    ends. A grid that is not square, or has more distinct cells than there
-    are characters, stays a grid. */
+    ends. A world of several screens, a grid that is not square, or one with
+    more distinct cells than there are characters, stays a grid. */
 export function packWorld(world: World): PackedWorld | World {
   const size = world.grid.length;
-  if (world.grid.some(row => row.length !== size)) {
+  if (world.screenCells || world.grid.some(row => row.length !== size)) {
     return world;
   }
   const legend: Record<string, WorldCell> = {};

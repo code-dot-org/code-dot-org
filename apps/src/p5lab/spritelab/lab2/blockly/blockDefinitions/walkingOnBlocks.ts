@@ -1,5 +1,3 @@
-import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
-
 import {PLAYER_GROUP} from '../../playerGroups';
 
 // The three walks on blocks, as interpreted source: not blocks themselves,
@@ -78,7 +76,7 @@ export const WALKERS_HELPER_CODE = [
   '    if (x <= half && dir < 0) {',
   "      stopped = 'bound';",
   '    }',
-  `    if (x >= ${APP_WIDTH} - half && dir > 0) {`,
+  '    if (x >= getWorldWidth() - half && dir > 0) {',
   "      stopped = 'bound';",
   '    }',
   '  }',

@@ -6,6 +6,10 @@ import WorldTab, {
   cellSide,
   paletteItemsPerColumn,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/WorldTab';
+import {
+  createEmptyWorld,
+  resizeWorldScreens,
+} from '@cdo/apps/p5lab/spritelab/lab2/world';
 
 const animationList = {
   orderedKeys: ['k1', 'k2'],
@@ -73,13 +77,24 @@ describe('cellAtPoint', () => {
   });
 
   it('maps a point inside the border to its cell, and outside to null', () => {
-    expect(cellAtPoint(GRID_RECT, 10, 101, 101)).toEqual({row: 0, col: 0});
+    expect(cellAtPoint(GRID_RECT, {rows: 10, cols: 10}, 101, 101)).toEqual({
+      row: 0,
+      col: 0,
+    });
     expect(
-      cellAtPoint(GRID_RECT, 10, 100 + 1 + 50 * 4 + 25, 100 + 1 + 50 * 7)
+      cellAtPoint(
+        GRID_RECT,
+        {rows: 10, cols: 10},
+        100 + 1 + 50 * 4 + 25,
+        100 + 1 + 50 * 7
+      )
     ).toEqual({row: 7, col: 4});
-    expect(cellAtPoint(GRID_RECT, 10, 601, 601)).toEqual({row: 9, col: 9});
-    expect(cellAtPoint(GRID_RECT, 10, 99, 300)).toBeNull();
-    expect(cellAtPoint(GRID_RECT, 10, 300, 602)).toBeNull();
+    expect(cellAtPoint(GRID_RECT, {rows: 10, cols: 10}, 601, 601)).toEqual({
+      row: 9,
+      col: 9,
+    });
+    expect(cellAtPoint(GRID_RECT, {rows: 10, cols: 10}, 99, 300)).toBeNull();
+    expect(cellAtPoint(GRID_RECT, {rows: 10, cols: 10}, 300, 602)).toBeNull();
   });
 });
 
@@ -323,5 +338,71 @@ describe('WorldTab palette', () => {
     fireEvent.keyDown(cell, {key: 'Delete'});
     expect(onPaintCell).not.toHaveBeenCalled();
     expect(screen.getByText('That one stays.')).toBeTruthy();
+  });
+});
+
+describe('the world size choices', () => {
+  const stone = {image: 'Stone', kind: 'block' as const};
+  const choose = (label: string, value: string) =>
+    fireEvent.change(screen.getByLabelText(label), {target: {value}});
+
+  it('are offered only when the world can be resized', () => {
+    renderTab();
+    expect(screen.queryByLabelText('Wide')).toBeNull();
+  });
+
+  it('show the size the world is', () => {
+    const world = resizeWorldScreens(createEmptyWorld(), {wide: 3, tall: 2});
+    renderTab({world, onResize: jest.fn()});
+    expect((screen.getByLabelText('Wide') as HTMLSelectElement).value).toBe(
+      '3'
+    );
+    expect((screen.getByLabelText('Tall') as HTMLSelectElement).value).toBe(
+      '2'
+    );
+    expect(screen.getAllByRole('row')).toHaveLength(20);
+    expect(screen.getAllByRole('gridcell')).toHaveLength(600);
+  });
+
+  it('make the world larger at once', () => {
+    const onResize = jest.fn();
+    renderTab({world: createEmptyWorld(), onResize});
+    choose('Wide', '2');
+    expect(onResize).toHaveBeenCalledWith({wide: 2, tall: 1});
+  });
+
+  it('ask before a smaller size erases squares', () => {
+    const onResize = jest.fn();
+    const world = resizeWorldScreens(createEmptyWorld(), {wide: 2, tall: 1});
+    world.grid[9][15] = stone;
+    world.grid[9][16] = stone;
+    renderTab({world, onResize});
+    choose('Wide', '1');
+    expect(onResize).not.toHaveBeenCalled();
+    expect(screen.getByText('Make the world smaller?')).toBeTruthy();
+    expect(
+      screen.getByText('This erases 2 squares you filled in.')
+    ).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Make smaller'}));
+    expect(onResize).toHaveBeenCalledWith({wide: 1, tall: 1});
+  });
+
+  it('leave the world alone when the student cancels', () => {
+    const onResize = jest.fn();
+    const world = resizeWorldScreens(createEmptyWorld(), {wide: 1, tall: 2});
+    world.grid[0][0] = stone;
+    renderTab({world, onResize});
+    choose('Tall', '1');
+    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+    expect(onResize).not.toHaveBeenCalled();
+    expect(screen.queryByText('Make the world smaller?')).toBeNull();
+  });
+
+  it('make an empty part of the world smaller without asking', () => {
+    const onResize = jest.fn();
+    const world = resizeWorldScreens(createEmptyWorld(), {wide: 2, tall: 1});
+    renderTab({world, onResize});
+    choose('Wide', '1');
+    expect(onResize).toHaveBeenCalledWith({wide: 1, tall: 1});
   });
 });

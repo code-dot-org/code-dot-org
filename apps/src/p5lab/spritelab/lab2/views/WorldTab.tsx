@@ -1,29 +1,46 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
+import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getImageThumbnail, onTrimsUpdated} from '../imageTrim';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 import {
   createEmptyWorld,
+  gridShape,
   imagesWithOneLeft,
   KeptRoles,
+  MAX_WORLD_SCREENS,
   NOTHING_KEPT,
+  placementsLostByResize,
   World,
   WorldCell,
+  WorldScreens,
+  worldScreens,
 } from '../world';
 
 import moduleStyles from './world-tab.module.scss';
 
-// The editor draws the grid at this overall size when there's room; cells
-// shrink as the visible extent grows.
+// The editor draws one screen of the grid at this size when there's room;
+// cells shrink as the world grows.
 const GRID_PIXELS = 528;
 // Short windows shrink the grid to fit, down to this; below it the tab
 // scrolls instead (cells get too small to paint).
 const MIN_GRID_PIXELS = 320;
+
+// The choices for how many screens wide or tall a world is.
+const SCREEN_COUNT_ITEMS = Array.from({length: MAX_WORLD_SCREENS}, (_, i) => ({
+  value: String(i + 1),
+  text: i === 0 ? '1 screen' : `${i + 1} screens`,
+}));
+
+// The space between the grid and the size choices beside it.
+const SIZE_CHOICES_GAP_PX = 16;
 
 // Rendered against a scene that has no world yet; never painted through.
 const EMPTY_GRID = createEmptyWorld().grid;
@@ -58,15 +75,15 @@ export interface GridBox {
   border: number;
 }
 
-/** The side of one cell inside the box. */
-export function cellSide(box: GridBox, sceneSize: number): number {
-  return (box.width - 2 * box.border) / sceneSize;
+/** The side of one cell inside the box, which holds this many columns. */
+export function cellSide(box: GridBox, cols: number): number {
+  return (box.width - 2 * box.border) / cols;
 }
 
 /** The grid cell under a viewport point, or null off the grid. */
 export function cellAtPoint(
   box: GridBox,
-  sceneSize: number,
+  shape: {rows: number; cols: number},
   x: number,
   y: number
 ): {row: number; col: number} | null {
@@ -78,11 +95,12 @@ export function cellAtPoint(
   ) {
     return null;
   }
-  const cell = cellSide(box, sceneSize);
-  const clamp = (n: number) => Math.min(Math.max(n, 0), sceneSize - 1);
+  const cell = cellSide(box, shape.cols);
+  const clamp = (n: number, count: number) =>
+    Math.min(Math.max(n, 0), count - 1);
   return {
-    row: clamp(Math.floor((y - box.top - box.border) / cell)),
-    col: clamp(Math.floor((x - box.left - box.border) / cell)),
+    row: clamp(Math.floor((y - box.top - box.border) / cell), shape.rows),
+    col: clamp(Math.floor((x - box.left - box.border) / cell), shape.cols),
   };
 }
 
@@ -96,7 +114,7 @@ const ARROW_STEPS: Record<string, [number, number] | undefined> = {
 
 interface WorldRowProps {
   row: number;
-  sceneSize: number;
+  cols: number;
   /** This row of the grid; identity changes only when a paint lands. */
   cells?: (WorldCell | null)[];
   thumbsByImage: ReadonlyMap<string, string | undefined>;
@@ -131,7 +149,7 @@ interface WorldRowProps {
 const WorldRow = React.memo<WorldRowProps>(
   ({
     row,
-    sceneSize,
+    cols,
     cells,
     thumbsByImage,
     cursorCol,
@@ -143,7 +161,7 @@ const WorldRow = React.memo<WorldRowProps>(
     onCellClick,
   }) => (
     <div role="row" className={moduleStyles.worldRow}>
-      {Array.from({length: sceneSize}, (_, col) => {
+      {Array.from({length: cols}, (_, col) => {
         const cell = cells?.[col];
         const thumb = cell ? thumbsByImage.get(cell.image) : undefined;
         const refusal = cellRefusal(cell, offered, onlyOneLeft);
@@ -270,8 +288,7 @@ export function cellRefusal(
 
 interface WorldTabProps {
   world?: World;
-  // Cells per side of the playfield. Storage is larger, so placements keep
-  // their coordinates if it ever grows.
+  // Cells per side of one screen.
   sceneSize: number;
   // Cell-level so the owner can apply it atomically against saved sources.
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
@@ -287,6 +304,9 @@ interface WorldTabProps {
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
   onSelect: (selection: PaletteSelection) => void;
+  // Called with a new size for the world, in screens. The size choices are
+  // offered only when this is given.
+  onResize?: (screens: WorldScreens) => void;
 }
 
 /**
@@ -312,8 +332,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   kept = NOTHING_KEPT,
   selected,
   onSelect,
+  onResize,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
+  const themeMode = useThemeMode();
   // Thumbnails prefer the engine's trimmed image (a sprite sheet's is its
   // first frame; the raw sheet would show every frame side by side). Trims
   // land as the engine preloads; re-render when they do.
@@ -373,6 +395,28 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       : -1;
 
   const grid = world?.grid ?? EMPTY_GRID;
+  // A world of several screens shows its whole grid.
+  const shape = useMemo(
+    () =>
+      world?.screenCells
+        ? gridShape(world)
+        : {rows: sceneSize, cols: sceneSize},
+    [world, sceneSize]
+  );
+  const screens = worldScreens(world);
+  // A smaller size waiting on the student's say-so, since it erases squares.
+  const [pendingResize, setPendingResize] = useState<{
+    screens: WorldScreens;
+    lost: number;
+  } | null>(null);
+  const requestResize = (next: WorldScreens) => {
+    const lost = placementsLostByResize(world, next);
+    if (lost > 0) {
+      setPendingResize({screens: next, lost});
+    } else {
+      onResize?.(next);
+    }
+  };
   // The same set object until its contents change. The rows are memoized
   // on it, and a new set after every paint would re-render them all.
   const onlyOneLeftNames = JSON.stringify(
@@ -484,12 +528,12 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   const [cursor, setCursor] = useState({row: 0, col: 0});
   // Clamped against the live extent: the playfield can shrink (the corner
   // mode), and the grid must keep exactly one tab stop.
-  const cursorRow = Math.min(cursor.row, sceneSize - 1);
-  const cursorCol = Math.min(cursor.col, sceneSize - 1);
+  const cursorRow = Math.min(cursor.row, shape.rows - 1);
+  const cursorCol = Math.min(cursor.col, shape.cols - 1);
   const cellRefs = useRef(new Map<string, HTMLButtonElement>());
   const moveCursor = (rowDelta: number, colDelta: number) => {
-    const row = Math.min(Math.max(cursorRow + rowDelta, 0), sceneSize - 1);
-    const col = Math.min(Math.max(cursorCol + colDelta, 0), sceneSize - 1);
+    const row = Math.min(Math.max(cursorRow + rowDelta, 0), shape.rows - 1);
+    const col = Math.min(Math.max(cursorCol + colDelta, 0), shape.cols - 1);
     setCursor({row, col});
     cellRefs.current.get(`${row}-${col}`)?.focus();
     return {row, col};
@@ -691,7 +735,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   // rows; CSS auto-fill would size the palette's width before its height
   // and come out a column too wide.
   const gridAreaRef = useRef<HTMLDivElement | null>(null);
-  const [gridPixels, setGridPixels] = useState(GRID_PIXELS);
+  const sizeChoicesRef = useRef<HTMLDivElement | null>(null);
+  const [areaWidth, setAreaWidth] = useState(0);
   const [areaHeight, setAreaHeight] = useState(0);
   useEffect(() => {
     const area = gridAreaRef.current;
@@ -699,11 +744,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       return;
     }
     const observer = new ResizeObserver(() => {
-      setGridPixels(
-        Math.max(
-          MIN_GRID_PIXELS,
-          Math.min(GRID_PIXELS, area.clientHeight, area.clientWidth)
-        )
+      // The size choices sit to the right of the grid, in the same room.
+      const choices = sizeChoicesRef.current;
+      setAreaWidth(
+        area.clientWidth -
+          (choices ? choices.offsetWidth + SIZE_CHOICES_GAP_PX : 0)
       );
       setAreaHeight(area.clientHeight);
     });
@@ -711,7 +756,17 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     return () => observer.disconnect();
   }, []);
 
-  const cellPixels = gridPixels / sceneSize;
+  // One screen is at most GRID_PIXELS on a side, and the whole grid fits
+  // the room, down to MIN_GRID_PIXELS on its longer side.
+  const longerSide = Math.max(shape.rows, shape.cols);
+  const cellPixels = Math.max(
+    MIN_GRID_PIXELS / longerSide,
+    Math.min(
+      GRID_PIXELS / sceneSize,
+      areaWidth ? areaWidth / shape.cols : Infinity,
+      areaHeight ? areaHeight / shape.rows : Infinity
+    )
+  );
   // Unmeasured, the palette is one column; empty, it keeps one cell's shape.
   const paletteRows = Math.max(
     1,
@@ -772,8 +827,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     if (!ghost) {
       return;
     }
-    const side = cellSide(grid, sceneSize);
-    const target = cellAtPoint(grid, sceneSize, x, y);
+    const side = cellSide(grid, shape.cols);
+    const target = cellAtPoint(grid, shape, x, y);
     const left = target
       ? grid.left + grid.border + target.col * side
       : x - side / 2;
@@ -827,7 +882,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
         return;
       }
       const target =
-        drag.grid && cellAtPoint(drag.grid, sceneSize, e.clientX, e.clientY);
+        drag.grid && cellAtPoint(drag.grid, shape, e.clientX, e.clientY);
       endDrag();
       if (!target) {
         return;
@@ -959,7 +1014,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
         {!palette.length && (
           <p className={moduleStyles.worldEmpty}>{emptyMessage}</p>
         )}
-        <div ref={gridAreaRef} className={moduleStyles.worldGridArea}>
+        <div
+          ref={gridAreaRef}
+          className={moduleStyles.worldGridArea}
+          style={{gap: SIZE_CHOICES_GAP_PX}}
+        >
           <div
             ref={gridRef}
             role="grid"
@@ -972,13 +1031,13 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             onKeyDown={handleGridKeyDown}
             onKeyUp={handleGridKeyUp}
           >
-            {Array.from({length: sceneSize}, (_, row) => (
+            {Array.from({length: shape.rows}, (_, row) => (
               <WorldRow
                 offered={offered}
                 onlyOneLeft={onlyOneLeft}
                 key={row}
                 row={row}
-                sceneSize={sceneSize}
+                cols={shape.cols}
                 cells={grid[row]}
                 thumbsByImage={thumbsByImage}
                 cursorCol={row === cursorRow ? cursorCol : -1}
@@ -989,8 +1048,56 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
               />
             ))}
           </div>
+          {onResize && (
+            <div ref={sizeChoicesRef} className={moduleStyles.worldSize}>
+              <SimpleDropdown
+                name="world-size-wide"
+                labelText="Wide"
+                size="s"
+                color={themeMode === 'dark' ? 'white' : 'black'}
+                items={SCREEN_COUNT_ITEMS}
+                selectedValue={String(screens.wide)}
+                onChange={event =>
+                  requestResize({...screens, wide: Number(event.target.value)})
+                }
+              />
+              <SimpleDropdown
+                name="world-size-tall"
+                labelText="Tall"
+                size="s"
+                color={themeMode === 'dark' ? 'white' : 'black'}
+                items={SCREEN_COUNT_ITEMS}
+                selectedValue={String(screens.tall)}
+                onChange={event =>
+                  requestResize({...screens, tall: Number(event.target.value)})
+                }
+              />
+            </div>
+          )}
         </div>
       </div>
+      {pendingResize && (
+        <Modal
+          title="Make the world smaller?"
+          description={
+            pendingResize.lost === 1
+              ? 'This erases 1 square you filled in.'
+              : `This erases ${pendingResize.lost} squares you filled in.`
+          }
+          onClose={() => setPendingResize(null)}
+          secondaryButtonProps={{
+            children: 'Cancel',
+            onClick: () => setPendingResize(null),
+          }}
+          primaryButtonProps={{
+            children: 'Make smaller',
+            onClick: () => {
+              onResize?.(pendingResize.screens);
+              setPendingResize(null);
+            },
+          }}
+        />
+      )}
       {/* Always mounted, so the first move of a drag has it to place; sized
           and placed by moveGhost. */}
       <img

@@ -21,7 +21,8 @@
     "hide_share_and_remix": "false",
     "encrypted": "false",
     "level_mode": {
-      "kind": "freeplay"
+      "kind": "freeplay",
+      "worldSizes": true
     },
     "image_role_defaults": {
       "sprite": "hero",

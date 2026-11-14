@@ -80,7 +80,15 @@ export interface MovedPlayer {
 
 interface View {
   width: number;
+  /** The floor line. */
   height: number;
+  /** The top of the world; zero unless the world is taller than a screen. */
+  top?: number;
+}
+
+// A height mirrored about the middle of the view, top for bottom.
+function flipY(y: number, view: View): number {
+  return (view.top ?? 0) + view.height - y;
 }
 
 // Generated block art is keyed and cropped, so a tile's image can come up
@@ -142,17 +150,17 @@ export function touchesWall(sprite: PhysicsBox, wall: PhysicsBox): boolean {
 function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {
   return walls.map(wall => ({
     ...wall,
-    position: {x: wall.position.x, y: view.height - wall.position.y},
+    position: {x: wall.position.x, y: flipY(wall.position.y, view)},
   }));
 }
 
 // Flip a sprite's vertical state across the view's horizontal midline (see
 // the negative-gravity branch below).
 function flipSpriteY(sprite: PhysicsSprite, view: View): void {
-  sprite.position.y = view.height - sprite.position.y;
+  sprite.position.y = flipY(sprite.position.y, view);
   sprite.velocity.y = -sprite.velocity.y;
   if (sprite.__slab2Prev) {
-    sprite.__slab2Prev.y = view.height - sprite.__slab2Prev.y;
+    sprite.__slab2Prev.y = flipY(sprite.__slab2Prev.y, view);
   }
 }
 
@@ -170,12 +178,12 @@ export function resolvePlatformPhysics(
   if (gravity < 0) {
     moved.forEach(m => {
       flipSpriteY(m.sprite, view);
-      m.y = view.height - m.y;
+      m.y = flipY(m.y, view);
     });
     resolvePlatformPhysics(moved, flipWallsY(walls, view), view, -gravity);
     moved.forEach(m => {
       flipSpriteY(m.sprite, view);
-      m.y = view.height - m.y;
+      m.y = flipY(m.y, view);
     });
     return;
   }
@@ -276,7 +284,7 @@ export function resolvePlatformPhysics(
     // Weightless, nothing brings a player back from above the view, so the
     // top is closed too — at the art box, like the sides, so no head is cut.
     // This is the body-center y that puts the art top at 0.
-    const artBoxTopY = halfH + 2 * drop;
+    const artBoxTopY = (view.top ?? 0) + halfH + 2 * drop;
     if (weightless && y < artBoxTopY) {
       y = artBoxTopY;
     }
@@ -571,7 +579,7 @@ function wallsAtFeet(walls: PhysicsBox[], feet: number): PhysicsBox[] {
 function flippedSprite(sprite: PhysicsSprite, view: View): PhysicsSprite {
   return {
     ...sprite,
-    position: {x: sprite.position.x, y: view.height - sprite.position.y},
+    position: {x: sprite.position.x, y: flipY(sprite.position.y, view)},
     velocity: {x: sprite.velocity.x, y: -sprite.velocity.y},
   };
 }
