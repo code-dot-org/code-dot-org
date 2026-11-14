@@ -11,6 +11,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {CachedImage} from './imageCache';
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
+import {chooseKeyColor} from './keyColor';
 import {
   ASSUMED_BLOCK,
   ImageSize,
@@ -24,6 +25,7 @@ import {
   cropToContent,
   flattenOntoGround,
   removeBackground,
+  removeKeyColor,
 } from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle, ImageType} from './types';
 
@@ -374,7 +376,14 @@ export async function generateImage(
   // opaque; pixel style gets grid-normalized.
   let blob = rawImageToBlob(raw);
   if (imageType === 'sprite' || imageType === 'block') {
-    blob = await removeBackground(blob, {soft: style === 'smooth'});
+    const matte = {soft: style === 'smooth'};
+    // A cached character set's base frame stands in for a single picture.
+    // A set is drawn on the key color its prompt names, which is removed
+    // wherever it sits. The fill from the corner cannot reach a gap the
+    // character closes off against the picture's edge.
+    blob = cached?.characterSet
+      ? await removeKeyColor(blob, chooseKeyColor(prompt).rgb, matte)
+      : await removeBackground(blob, matte);
   }
   // Smooth sprites are cropped like blocks always were, so the stored image
   // is what the runtime trim pass would have made anyway (pixel sprites
