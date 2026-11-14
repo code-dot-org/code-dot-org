@@ -1,26 +1,13 @@
-// The shape a project is saved in, as against the shape the lab
-// works with. Saved, a project's scenes live inside `source`, where every
-// lab keeps a student's work:
-//
-//   {source: {scenes: [...]}, animations, chosenBlocks, ...}
-//
-// In the lab they sit beside it, as they always have:
-//
-//   {source, scenes: [...], animations, chosenBlocks, ...}
-//
-// The two functions here are the only code that knows both shapes. A level's
-// start sources, and a project saved before this, are in the second shape
-// and are read as they are; the next save writes the first.
+// A saved project keeps its scenes inside `source`, where every lab keeps a
+// student's work. The lab works with them beside it. Only this module knows
+// both shapes.
 
-import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {isEqual} from 'lodash';
 
+import {unpackSources} from './packedWorld';
 import type {Scene, Sources} from './types';
 
-/** What `source` holds in a saved project that has scenes. A later `shared`
-    key could hold code every scene runs. */
-interface ScenesSource {
-  scenes: Scene[];
-}
+type ScenesSource = {scenes: Scene[]};
 
 const holdsScenes = (source: unknown): source is ScenesSource =>
   !!source &&
@@ -28,15 +15,14 @@ const holdsScenes = (source: unknown): source is ScenesSource =>
   Array.isArray((source as ScenesSource).scenes);
 
 // The lab's own `source` once the scenes hold every program.
-const NO_PROGRAM = {} as WorkspaceSerialization;
+const NO_PROGRAM: Sources['source'] = {};
 
-// The saved `source` object each list of scenes came from or was last saved
-// in, so that a change which leaves the scenes alone leaves `source` the
-// same object: the lab tells a student's edit from a saved flag by which
-// keys changed.
+// Keeps a saved `source` the same object while its scenes do not change: a
+// student's edit is told from a saved flag by which top-level keys changed.
 const savedSourceOf = new WeakMap<Scene[], ScenesSource>();
 
-/** A saved project in the shape the lab works with. */
+/** A stored project in the shape the lab works with. A level's start
+    sources, and a project with no scenes yet, are in that shape already. */
 export function fromSaved(saved: Sources): Sources {
   const source: unknown = saved.source;
   if (!holdsScenes(source)) {
@@ -47,8 +33,7 @@ export function fromSaved(saved: Sources): Sources {
 }
 
 /** The lab's project in the shape it is saved in. A project with no scenes
-    yet keeps its one program in `source`, where the lab reads it as its
-    first scene. */
+    yet keeps its one program in `source`. */
 export function toSaved(sources: Sources): Sources {
   const {scenes, ...rest} = sources;
   if (!scenes?.length) {
@@ -59,5 +44,18 @@ export function toSaved(sources: Sources): Sources {
     source = {scenes};
     savedSourceOf.set(scenes, source);
   }
-  return {...rest, source: source as unknown as Sources['source']};
+  return {...rest, source};
+}
+
+/** One update of the stored project: `update` runs on the lab's shape and
+    its result is stored in the saved shape. An update that changes nothing
+    returns the stored project itself, so a project in the earlier shape is
+    rewritten only when something in it changes. */
+export function updateSaved(
+  saved: Sources,
+  update: (sources: Sources) => Sources
+): Sources {
+  const sources = unpackSources(fromSaved(saved));
+  const updated = update(sources);
+  return isEqual(updated, sources) ? saved : toSaved(updated);
 }

@@ -1,5 +1,9 @@
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
-import {fromSaved, toSaved} from '@cdo/apps/p5lab/spritelab/lab2/savedProject';
+import {
+  fromSaved,
+  toSaved,
+  updateSaved,
+} from '@cdo/apps/p5lab/spritelab/lab2/savedProject';
 import type {Scene, Sources} from '@cdo/apps/p5lab/spritelab/lab2/types';
 
 const program = (type: string) =>
@@ -9,9 +13,12 @@ const scenesOf = (): Scene[] => [
   {id: 'scene-2', name: 'The cave'},
 ];
 const ANIMATIONS = {orderedKeys: [], propsByKey: {}};
+// A project as it comes off the server: parsed, so no object in it has been
+// seen before.
+const loaded = (saved: unknown): Sources => JSON.parse(JSON.stringify(saved));
 
 describe('a saved project', () => {
-  it('is saved with its scenes inside source', () => {
+  it('is saved with its scenes inside source, and no top-level program', () => {
     const scenes = scenesOf();
     const saved = toSaved({
       source: program('whenRun'),
@@ -27,30 +34,24 @@ describe('a saved project', () => {
     expect('scenes' in saved).toBe(false);
   });
 
-  it('comes back with its scenes beside source', () => {
+  it('comes back with its scenes beside an empty source', () => {
     const scenes = scenesOf();
-    const saved = {
-      source: {scenes},
-      animations: ANIMATIONS,
-    } as unknown as Sources;
-    const loaded = fromSaved(saved);
-    expect(loaded.scenes).toBe(scenes);
-    expect(loaded.source).toEqual({});
-    expect(loaded.animations).toBe(ANIMATIONS);
+    const sources = fromSaved(
+      loaded({source: {scenes}, animations: ANIMATIONS})
+    );
+    expect(sources.scenes).toEqual(scenes);
+    expect(sources.source).toEqual({});
+    expect(sources.animations).toEqual(ANIMATIONS);
   });
 
-  it('survives a save and a load unchanged', () => {
-    const scenes = scenesOf();
-    const once = fromSaved(toSaved({source: {}, scenes, chosenBlocks: []}));
-    expect(once).toEqual({source: {}, scenes, chosenBlocks: []});
-    expect(toSaved(once)).toEqual({source: {scenes}, chosenBlocks: []});
+  it('reads the same project again from what it saved', () => {
+    const sources = fromSaved(loaded({source: {scenes: scenesOf()}}));
+    expect(fromSaved(loaded(toSaved(sources)))).toEqual(sources);
   });
 
-  it('is read as it is when saved in the earlier shape, and saved in the new', () => {
-    const scenes = scenesOf();
-    const earlier: Sources = {source: program('whenRun'), scenes};
+  it('is read as it is when saved in the earlier shape', () => {
+    const earlier: Sources = {source: program('whenRun'), scenes: scenesOf()};
     expect(fromSaved(earlier)).toBe(earlier);
-    expect(toSaved(fromSaved(earlier))).toEqual({source: {scenes}});
   });
 
   it('keeps its one program in source while it has no scenes', () => {
@@ -59,13 +60,73 @@ describe('a saved project', () => {
     expect(toSaved(untouched)).toBe(untouched);
   });
 
-  it('keeps the same source object while its scenes do not change', () => {
-    const scenes = scenesOf();
-    const first = toSaved({source: {}, scenes});
-    const loaded = fromSaved(first);
-    const flagged = toSaved({...loaded, chosenBlocks: ['burst']});
-    expect(flagged.source).toBe(first.source);
-    const edited = toSaved({...loaded, scenes: [...scenes]});
-    expect(edited.source).not.toBe(first.source);
+  it('reads the scenes inside source when a file holds both', () => {
+    const inside = scenesOf();
+    const sources = fromSaved(
+      loaded({source: {scenes: inside}, scenes: [{id: 'other', name: 'Other'}]})
+    );
+    expect(sources.scenes).toEqual(inside);
+  });
+});
+
+describe('an update of the stored project', () => {
+  const earlier = (): Sources => ({
+    source: program('whenRun'),
+    scenes: scenesOf(),
+    animations: ANIMATIONS,
+  });
+
+  it('leaves a project in the earlier shape alone when nothing changes', () => {
+    const stored = earlier();
+    expect(updateSaved(stored, sources => sources)).toBe(stored);
+    expect(
+      updateSaved(stored, sources => ({
+        ...sources,
+        animations: {orderedKeys: [], propsByKey: {}},
+      }))
+    ).toBe(stored);
+  });
+
+  it('writes the new shape when something in the earlier shape changes', () => {
+    const stored = earlier();
+    const next = updateSaved(stored, sources => ({
+      ...sources,
+      scenes: [...(sources.scenes ?? []), {id: 'scene-3', name: 'Scene 3'}],
+    }));
+    expect(Object.keys(next).sort()).toEqual(['animations', 'source']);
+    expect((next.source as {scenes: Scene[]}).scenes.map(s => s.id)).toEqual([
+      'scene-1',
+      'scene-2',
+      'scene-3',
+    ]);
+  });
+
+  it('leaves a project in the new shape alone when nothing changes', () => {
+    const stored = loaded({source: {scenes: scenesOf()}});
+    expect(updateSaved(stored, sources => sources)).toBe(stored);
+  });
+
+  it('keeps the loaded source object when only a flag changes', () => {
+    const stored = loaded({source: {scenes: scenesOf()}});
+    const next = updateSaved(stored, sources => ({
+      ...sources,
+      chosenBlocks: ['burst'],
+    }));
+    expect(next.chosenBlocks).toEqual(['burst']);
+    expect(next.source).toBe(stored.source);
+  });
+
+  it('makes a new source object when a scene changes', () => {
+    const stored = loaded({source: {scenes: scenesOf()}});
+    const next = updateSaved(stored, sources => ({
+      ...sources,
+      scenes: (sources.scenes ?? []).map(scene =>
+        scene.id === 'scene-2' ? {...scene, name: 'The deep cave'} : scene
+      ),
+    }));
+    expect(next.source).not.toBe(stored.source);
+    expect((next.source as {scenes: Scene[]}).scenes[1].name).toBe(
+      'The deep cave'
+    );
   });
 });
