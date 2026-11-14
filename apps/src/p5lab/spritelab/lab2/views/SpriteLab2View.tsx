@@ -682,8 +682,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);
-  // The files the project names as of the latest render, for the Start Over
-  // cleanup, which decides after later saves.
+  // The files the project names right now. The Start Over cleanup asks
+  // after its reset has saved, by which time the lab has rendered again, so
+  // it reads the list through a ref.
   const uploadedNowRef = useRef<() => string[]>(() => []);
   uploadedNowRef.current = () =>
     uploadedFileUrls(channelId, animationList, scenes);
