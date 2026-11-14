@@ -193,8 +193,9 @@ const ShareDialog: React.FunctionComponent<{
   // in Lab2Wrapper.
   const theme = Lab2Registry.getInstance().getTheme();
 
-  // Ahead of the share failure message: a student whose project cannot be
-  // shared still finishes, without the link or the remix.
+  // The finish dialog comes before the share failure message below, so a
+  // student whose project cannot be shared still gets to finish, without the
+  // link or the remix.
   if (dialogId === 'hoai2026') {
     const unshareable = isAbusive || !!shareFailure;
     return (

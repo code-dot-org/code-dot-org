@@ -10,12 +10,9 @@ export const SHARE_CHECK_MAX_WAIT_MS = 3000;
 
 /**
  * Asks the server whether the project's text may be shared, and publishes
- * the answer for the blocked notice and the share dialog.
- *
- * It asks as a project page opens, and each time the share dialog opens, on
- * a level in a unit too, since that dialog hands out the project's link. An
- * owner who has removed the flagged text can then share without reloading.
- * No check runs when a unit level loads or after a save.
+ * the answer for the blocked notice and the share dialog. It asks as a
+ * project page opens and each time the share dialog opens. No check runs
+ * when a unit level loads or after a save.
  *
  * The answer stays until another replaces it or the project changes. The
  * blocked page takes this lab off the screen, so an answer cleared as the
@@ -34,7 +31,8 @@ export default function useShareCheck(
     (id: string, isCurrent: () => boolean, onSettled?: () => void) => {
       fetchShareFailure(id).then(
         failure => {
-          // Together, so the dialog goes from waiting straight to the answer.
+          // The answer and the end of the wait are published together, so
+          // the dialog goes from waiting straight to the answer.
           if (isCurrent()) {
             dispatch(setShareFailure(failure));
           }
