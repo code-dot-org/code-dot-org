@@ -19,7 +19,7 @@ import {MAX_ZOOM, MIN_ZOOM} from '../camera';
  * the `body` in markdown (one more sentence at most), beside an `animation`:
  * a looping GIF of the block in action, or a still picture where one says
  * enough. An entry without one shows an empty outline until its picture is
- * made; every block the unit's free play level can offer has one. The content lives here rather than in the level so it can carry
+ * made. The content lives here rather than in the level so it can carry
  * pictures and the lab's own numbers; a level-authored source can replace
  * this table later.
  */
