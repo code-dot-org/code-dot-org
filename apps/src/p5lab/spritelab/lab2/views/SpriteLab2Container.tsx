@@ -24,6 +24,7 @@ import {
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
 import {unpackSources} from '../packedWorld';
+import {fromSaved, toSaved} from '../savedProject';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
 import SpriteLab2View from './SpriteLab2View';
@@ -131,15 +132,19 @@ const SpriteLab2Container: React.FunctionComponent<
   // an updater builds on, so the rest of the lab only sees the grid.
   const currentSources = useMemo(() => {
     const sources = readOnlyLevel ? levelSources : storedForLevel;
-    return sources && unpackSources(sources);
+    return sources && unpackSources(fromSaved(sources));
   }, [readOnlyLevel, levelSources, storedForLevel]);
   const updateSources = useCallback<typeof updateStoredSources>(
     (next, forceSave) => {
       if (readOnlyLevel || isShareView || isViewOnly) {
         return;
       }
+      // A level being edited keeps its start sources in the lab's shape.
+      const store = isLevelEditMode ? (sources: Sources) => sources : toSaved;
       updateStoredSources(
-        typeof next === 'function' ? prev => next(unpackSources(prev)) : next,
+        typeof next === 'function'
+          ? prev => store(next(unpackSources(fromSaved(prev))))
+          : store(next),
         forceSave
       );
     },
