@@ -7,7 +7,9 @@
   "properties": {
     "uses_lab2": "true",
     "world_keeps_roles": [
-      "friend"
+      "friend",
+      "hero",
+      "treasure"
     ],
     "block_pools": [
       "GamelabJr",
@@ -17,7 +19,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -31,6 +33,8 @@
       "imageRole": "friend",
       "paletteRoles": [
         "friend",
+        "hero",
+        "treasure",
         "block"
       ],
       "imageFirst": true,

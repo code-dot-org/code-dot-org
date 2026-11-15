@@ -369,6 +369,7 @@ export interface LevelProperties {
   disableProductTours?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
+  hideAiTutor?: boolean;
   isAssessment?: boolean;
   type?: string;
   starterAssets?: {[key: string]: string};

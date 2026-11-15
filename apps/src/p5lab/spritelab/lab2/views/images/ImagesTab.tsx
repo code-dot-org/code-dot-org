@@ -697,7 +697,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 under={generating ? undefined : under}
                 overlay={
                   <>
-                    {parts.cachedTag}
                     {parts.rating.offered && !sceneCopyStale && (
                       <RatingBar
                         verdict={parts.rating.verdict}

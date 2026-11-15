@@ -454,6 +454,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // fadeTrigger increments on landing to play the fade-from-black.
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
+  // Set by Playspace; a ref, not state, so a sprite's line redraws only the
+  // play area.
+  const speakRef = useRef<((text: string) => void) | null>(null);
   const [showStartOver, setShowStartOver] = useState(false);
   // The new-block catalog: the unit's new blocks stay out of the toolbox
   // until the student adds them from the dialog. Off in the levelbuilder's
@@ -1674,6 +1677,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
     engine.onPlayMusic = playMusic;
+    // The Code tab's preview runs too, but reading it would talk over the
+    // editor.
+    engine.onSpeech = (text: string) => {
+      if (isPlayingRef.current) {
+        speakRef.current?.(text);
+      }
+    };
     engine.onPlayerProgress = onPlayerProgress;
     engine.onControlsChange = (state: ControlsState) =>
       setArrowSet(arrowSetFor(state));
@@ -2531,6 +2541,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             arrows={
               <ArrowCross arrows={arrowSet} disabled={activeTab !== 'Play'} />
             }
+            speakRef={speakRef}
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
             getDefaultSpriteSize={getDefaultSpriteSize}
