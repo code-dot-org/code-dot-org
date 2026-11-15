@@ -196,7 +196,8 @@ const ShareDialog: React.FunctionComponent<{
   // student whose project cannot be shared still gets to finish, without the
   // link or the remix.
   if (dialogId === 'hoai2026') {
-    const unshareable = isAbusive || !!shareFailure;
+    // A failure from before this check may already be fixed.
+    const unshareable = isAbusive || (!!shareFailure && !shareWait.held);
     return (
       <div data-theme={theme}>
         <Hoai2026Congrats
@@ -210,6 +211,32 @@ const ShareDialog: React.FunctionComponent<{
         />
       </div>
     );
+  }
+
+  // Neither the link nor a failure from before this check is shown until it
+  // answers: the student may have fixed the flagged text since.
+  if (shareWait.held) {
+    return shareWait.indicator ? (
+      <div data-theme={theme}>
+        <Modal
+          title={i18n.shareTitle()}
+          customContent={
+            <div className={moduleStyles.shareCheckWait}>
+              <FontAwesomeV6Icon
+                iconName="spinner"
+                animationType="spin"
+                role="status"
+                aria-label={i18n.loading()}
+              />
+            </div>
+          }
+          primaryButtonProps={{
+            onClick: handleClose,
+            children: i18n.cancel(),
+          }}
+        />
+      </div>
+    ) : null;
   }
 
   if (shareFailure) {
@@ -293,17 +320,12 @@ const ShareDialog: React.FunctionComponent<{
                     id="share-qrcode-container"
                   >
                     <div className={moduleStyles.QRCodeBorder}>
-                      {/* The code is the link too, so it waits as well. */}
-                      {!shareWait.held && (
-                        <QRCode value={shareUrl + '?qr=true'} size={117} />
-                      )}
+                      <QRCode value={shareUrl + '?qr=true'} size={117} />
                     </div>
                   </div>
                   <CopyToClipboardButton
                     shareUrl={shareUrl}
                     projectType={projectType}
-                    disabled={shareWait.held}
-                    busy={shareWait.indicator}
                   />
                   <SubmitButtonInfo
                     submissionStatus={submissionStatus}
