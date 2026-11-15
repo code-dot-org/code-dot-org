@@ -72,7 +72,7 @@ export default function useSceneEditing({
       const scene: Scene = {
         id: createUuid(),
         name,
-        source: defaultSources.source,
+        workspace: defaultSources.source,
       };
       updateSources(prev => ({...prev, scenes: [...getScenes(prev), scene]}));
       // Both state updates land in one commit, so the reconcile effect

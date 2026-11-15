@@ -31,7 +31,7 @@ export function sceneFingerprint(
   scene: Scene,
   animations: RuntimeAnimationList
 ): string {
-  const body = JSON.stringify([scene.source ?? null, scene.world ?? null]);
+  const body = JSON.stringify([scene.workspace ?? null, scene.world ?? null]);
   const images = animations.orderedKeys
     .map(key => animations.propsByKey[key])
     .filter(props => namesImage(body, props.name))
@@ -88,7 +88,7 @@ export function canvasToPngBytes(
     stand-in picture for a scene that has not been run yet. */
 export function sceneBackgroundImage(scene: Scene): string | null {
   let found: string | null = null;
-  forEachSavedBlock(scene.source, block => {
+  forEachSavedBlock(scene.workspace, block => {
     if (found || block.type !== 'gamelab_setBackgroundImageAs') {
       return;
     }

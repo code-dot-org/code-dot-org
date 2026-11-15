@@ -55,7 +55,7 @@ describe('renameImageReferences', () => {
         {
           id: 's1',
           name: 'Scene 1',
-          source: workspaceWith([
+          workspace: workspaceWith([
             {
               type: 'gamelab_allSpritesWithAnimation',
               fields: {ANIMATION: '"cat"'},
@@ -69,7 +69,7 @@ describe('renameImageReferences', () => {
     expect(top.fields).toEqual({ANIMATION: '"tiger"'});
     expect(top.inputs!.SPRITE.block.fields).toEqual({COSTUME: '"tiger"'});
     expect(top.next!.block.fields).toEqual({IMG: '"tiger"'});
-    const scene = blocksOf(out.scenes![0].source)[0];
+    const scene = blocksOf(out.scenes![0].workspace)[0];
     expect(scene.fields).toEqual({ANIMATION: '"tiger"'});
   });
 
@@ -163,7 +163,7 @@ describe('SpriteLab2 removeImageReferences', () => {
       {
         id: 's1',
         name: 'Story',
-        source: {
+        workspace: {
           blocks: {
             blocks: [
               {
@@ -212,7 +212,7 @@ describe('SpriteLab2 removeImageReferences', () => {
       inputs?: Record<string, {shadow?: Loose; block?: Loose}>;
     };
     const blocks = (
-      out.scenes![0].source as unknown as {blocks: {blocks: Loose[]}}
+      out.scenes![0].workspace as unknown as {blocks: {blocks: Loose[]}}
     ).blocks.blocks;
     expect(blocks[0].fields).toEqual({});
     expect(blocks[0].next!.block.fields).toEqual({SPEECH: 'wizard'});
@@ -238,7 +238,7 @@ describe('SpriteLab2 removeImageReferences', () => {
         {
           id: 's1',
           name: 'Story',
-          source: {
+          workspace: {
             blocks: {
               blocks: [
                 {
@@ -257,8 +257,8 @@ describe('SpriteLab2 removeImageReferences', () => {
     } as unknown as Parameters<typeof removeImageReferences>[0];
     type Loose = {fields?: Record<string, string>};
     const blocksOf = (out: typeof src) =>
-      (out.scenes![0].source as unknown as {blocks: {blocks: Loose[]}}).blocks
-        .blocks;
+      (out.scenes![0].workspace as unknown as {blocks: {blocks: Loose[]}})
+        .blocks.blocks;
     expect(blocksOf(removeImageReferences(src, 'wizard'))[0].fields).toEqual(
       {}
     );

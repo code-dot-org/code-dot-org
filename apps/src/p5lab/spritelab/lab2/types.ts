@@ -80,7 +80,7 @@ export interface Scene {
   id: string;
   name: string;
   /** This scene's Blockly workspace serialization. */
-  source?: WorkspaceSerialization;
+  workspace?: WorkspaceSerialization;
   /** Starter sprite and block placements, spawned ahead of the program. */
   world?: World;
   /** The scene's first frame as last captured (sceneThumbnails.ts): a

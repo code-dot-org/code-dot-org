@@ -34,7 +34,7 @@ const source = (blockId: string) => ({
 const scene = (id: string, blockId = 'a'): Scene => ({
   id,
   name: id,
-  source: source(blockId),
+  workspace: source(blockId),
 });
 
 describe('useProjectPicture', () => {

@@ -79,7 +79,7 @@ describe('SpriteLab2 musicProjects', () => {
       {
         id: 'a',
         name: 'A',
-        source: {
+        workspace: {
           blocks: {
             blocks: [
               {

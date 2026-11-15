@@ -199,7 +199,7 @@ export function renameImageReferences(
   const newQuoted = quote(newName);
   renameInWorkspace(out.source as WorkspaceSerialization, oldQuoted, newQuoted);
   (out.scenes || []).forEach(scene => {
-    renameInWorkspace(scene.source, oldQuoted, newQuoted);
+    renameInWorkspace(scene.workspace, oldQuoted, newQuoted);
     (scene.world?.grid || []).forEach(row =>
       row.forEach(cell => {
         if (cell && cell.image === oldName) {
@@ -267,7 +267,7 @@ export function removeImageReferences(sources: Sources, name: string): Sources {
     removeInBlock(block, quoted)
   );
   (out.scenes || []).forEach(scene => {
-    blocksOf(scene.source).forEach(block => removeInBlock(block, quoted));
+    blocksOf(scene.workspace).forEach(block => removeInBlock(block, quoted));
     (scene.world?.grid || []).forEach(row =>
       row.forEach((cell, i) => {
         if (cell && cell.image === name) {

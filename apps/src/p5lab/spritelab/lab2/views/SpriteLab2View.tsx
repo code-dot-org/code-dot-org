@@ -246,7 +246,7 @@ function getScenes(sources: Sources): Scene[] {
     {
       id: DEFAULT_SCENE_ID,
       name: 'Scene 1',
-      source: (sources.source ??
+      workspace: (sources.source ??
         DEFAULT_SCENE_SOURCE) as WorkspaceSerialization,
     },
   ];
@@ -899,7 +899,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       Object.fromEntries(
         scenes.map(scene => [
           scene.id,
-          scene.source as WorkspaceSource | undefined,
+          scene.workspace as WorkspaceSource | undefined,
         ])
       ),
     [scenes]
@@ -920,7 +920,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     grid: activeWorld.grid,
     baselineGrid,
     imagesForRole,
-    source: activeScene.source as WorkspaceSource | undefined,
+    source: activeScene.workspace as WorkspaceSource | undefined,
     sceneSources,
     editingSceneId: activeScene.id,
     everPlayed: playProgress.everPlayed,
@@ -1302,7 +1302,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           // Apply Block ID overrides for top-level sources and all scenes.
           [
             sources.source as WorkspaceSerialization | undefined,
-            ...(sources.scenes ?? []).map(scene => scene.source),
+            ...(sources.scenes ?? []).map(scene => scene.workspace),
           ].forEach(source => {
             if (source) {
               applyBlockIdOverrides(source, Blockly.blockIdOverrides);
@@ -1410,7 +1410,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           code =
             live ??
             withSceneMenuActive(scene.id, () =>
-              codeFromSavedScene(scene.source ?? DEFAULT_SCENE_SOURCE)
+              codeFromSavedScene(scene.workspace ?? DEFAULT_SCENE_SOURCE)
             );
         } catch (e) {
           // A scene that fails to compile shouldn't kill the jump
@@ -1905,7 +1905,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       return;
     }
-    const source = activeScene.source ?? DEFAULT_SCENE_SOURCE;
+    const source = activeScene.workspace ?? DEFAULT_SCENE_SOURCE;
     if (isEqual(getCurrentBlocks(), source)) {
       return;
     }

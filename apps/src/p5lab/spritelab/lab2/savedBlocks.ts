@@ -56,7 +56,7 @@ export function collectSavedFieldValues(
 ): string[] {
   const values = new Set<string>();
   scenes.forEach(scene =>
-    forEachSavedBlock(scene.source, block => {
+    forEachSavedBlock(scene.workspace, block => {
       if (block.type !== blockType) {
         return;
       }

@@ -4,7 +4,7 @@ import {Scene} from '@cdo/apps/p5lab/spritelab/lab2/types';
 const scene = (id: string, blocks: unknown[]): Scene => ({
   id,
   name: id,
-  source: {blocks: {blocks}} as Scene['source'],
+  workspace: {blocks: {blocks}} as Scene['workspace'],
 });
 
 describe('usedBlockTypes', () => {

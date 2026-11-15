@@ -1,9 +1,13 @@
 import {
   migrateAnimationList,
   migrateBlockTypes,
+  migrateSceneKeys,
   migrateScenes,
 } from '@cdo/apps/p5lab/spritelab/lab2/migrateSources';
-import {SerializedAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/types';
+import {
+  SerializedAnimationList,
+  Sources,
+} from '@cdo/apps/p5lab/spritelab/lab2/types';
 
 const listWith = (generation: object | undefined): SerializedAnimationList =>
   ({
@@ -83,11 +87,13 @@ describe('migrateAnimationList', () => {
     expect(migrateBlockTypes(source)).toBe(false);
     expect(migrateBlockTypes(undefined)).toBe(false);
     const scenes = [
-      {id: 'a', name: 'A', source: {blocks: {blocks: [{type: 'when_run'}]}}},
-      {id: 'b', name: 'B', source: {blocks: {blocks: []}}},
+      {id: 'a', name: 'A', workspace: {blocks: {blocks: [{type: 'when_run'}]}}},
+      {id: 'b', name: 'B', workspace: {blocks: {blocks: []}}},
     ];
     expect(migrateScenes(scenes as never)).toBe(true);
-    expect(scenes[0].source.blocks.blocks[0].type).toBe('spritelab2_whenRun');
+    expect(scenes[0].workspace.blocks.blocks[0].type).toBe(
+      'spritelab2_whenRun'
+    );
   });
 });
 
@@ -100,7 +106,7 @@ describe('migrateScenes worlds', () => {
   it('trims a world stored at three times the playfield, in place', () => {
     const grid = oversize();
     grid[9][0] = {image: 'ice', kind: 'block'};
-    const scenes = [{id: 'a', name: 'A', source: {}, world: {grid}}];
+    const scenes = [{id: 'a', name: 'A', workspace: {}, world: {grid}}];
     expect(migrateScenes(scenes as never)).toBe(true);
     expect(scenes[0].world.grid).toHaveLength(10);
     expect(scenes[0].world.grid[9]).toHaveLength(10);
@@ -109,8 +115,42 @@ describe('migrateScenes worlds', () => {
 
   it('leaves a world at its playfield size alone', () => {
     const world = {grid: [[null]]};
-    const scenes = [{id: 'a', name: 'A', source: {}, world}];
+    const scenes = [{id: 'a', name: 'A', workspace: {}, world}];
     expect(migrateScenes(scenes as never)).toBe(false);
     expect(scenes[0].world).toBe(world);
+  });
+});
+
+describe('migrateSceneKeys', () => {
+  const program = {blocks: {blocks: [{type: 'spritelab2_whenRun'}]}};
+
+  it("moves a scene's legacy source to workspace, keeping the project's scenes", () => {
+    const scenes = [{id: 'a', name: 'A', source: program}];
+    const sources = {scenes} as unknown as Sources;
+    migrateSceneKeys(sources);
+    expect(sources.scenes).toBe(scenes);
+    expect(sources.scenes![0]).toEqual({
+      id: 'a',
+      name: 'A',
+      workspace: program,
+    });
+  });
+
+  it('keeps workspace over a stale legacy source', () => {
+    const scenes = [{id: 'a', name: 'A', source: {}, workspace: program}];
+    const sources = {scenes} as unknown as Sources;
+    migrateSceneKeys(sources);
+    expect(sources.scenes![0]).toEqual({
+      id: 'a',
+      name: 'A',
+      workspace: program,
+    });
+  });
+
+  it('leaves the top-level source and a project with no scenes alone', () => {
+    const sources = {source: program} as unknown as Sources;
+    migrateSceneKeys(sources);
+    migrateSceneKeys(undefined);
+    expect(sources).toEqual({source: program});
   });
 });

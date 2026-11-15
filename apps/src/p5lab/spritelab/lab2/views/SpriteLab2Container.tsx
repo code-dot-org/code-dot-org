@@ -23,6 +23,7 @@ import {
   setupSpriteLab2BlocklyEnvironment,
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
+import {migrateSceneKeys} from '../migrateSources';
 import {unpackSources} from '../packedWorld';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
@@ -131,6 +132,7 @@ const SpriteLab2Container: React.FunctionComponent<
   // an updater builds on, so the rest of the lab only sees the grid.
   const currentSources = useMemo(() => {
     const sources = readOnlyLevel ? levelSources : storedForLevel;
+    migrateSceneKeys(sources);
     return sources && unpackSources(sources);
   }, [readOnlyLevel, levelSources, storedForLevel]);
   const updateSources = useCallback<typeof updateStoredSources>(
@@ -139,7 +141,12 @@ const SpriteLab2Container: React.FunctionComponent<
         return;
       }
       updateStoredSources(
-        typeof next === 'function' ? prev => next(unpackSources(prev)) : next,
+        typeof next === 'function'
+          ? prev => {
+              migrateSceneKeys(prev);
+              return next(unpackSources(prev));
+            }
+          : next,
         forceSave
       );
     },

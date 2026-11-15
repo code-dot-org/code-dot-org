@@ -38,7 +38,7 @@ const animations = (entries: [string, string][]): RuntimeAnimationList =>
 
 describe('sceneThumbnails', () => {
   describe('sceneFingerprint', () => {
-    const scene: Scene = {id: 's', name: 'S', source: source('"forest"')};
+    const scene: Scene = {id: 's', name: 'S', workspace: source('"forest"')};
 
     it('is stable for the same scene and images', () => {
       const list = animations([['forest', '/a.png']]);
@@ -50,7 +50,7 @@ describe('sceneThumbnails', () => {
     it('changes when the code changes', () => {
       const list = animations([['forest', '/a.png']]);
       expect(sceneFingerprint(scene, list)).not.toBe(
-        sceneFingerprint({...scene, source: source('"sky"')}, list)
+        sceneFingerprint({...scene, workspace: source('"sky"')}, list)
       );
     });
 
@@ -86,7 +86,11 @@ describe('sceneThumbnails', () => {
   describe('sceneBackgroundImage', () => {
     it('reads the quoted literal the block stores', () => {
       expect(
-        sceneBackgroundImage({id: 's', name: 'S', source: source('"forest"')})
+        sceneBackgroundImage({
+          id: 's',
+          name: 'S',
+          workspace: source('"forest"'),
+        })
       ).toBe('forest');
     });
 
@@ -95,9 +99,9 @@ describe('sceneThumbnails', () => {
         sceneBackgroundImage({
           id: 's',
           name: 'S',
-          source: {
+          workspace: {
             blocks: {languageVersion: 0, blocks: []},
-          } as unknown as Scene['source'],
+          } as unknown as Scene['workspace'],
         })
       ).toBeNull();
     });
@@ -112,7 +116,7 @@ describe('sceneThumbnails', () => {
           {
             id: 's',
             name: 'S',
-            source: source('"forest"'),
+            workspace: source('"forest"'),
             thumbnail: {url: '/thumb.png', fingerprint: 'x'},
           },
         ],
@@ -123,7 +127,7 @@ describe('sceneThumbnails', () => {
 
     it('falls back to the background the scene names', () => {
       const [meta] = sceneMetadataFor(
-        [{id: 's', name: 'S', source: source('"forest"')}],
+        [{id: 's', name: 'S', workspace: source('"forest"')}],
         forest
       );
       expect(meta.thumbnail).toBe('/forest.png');
@@ -131,7 +135,7 @@ describe('sceneThumbnails', () => {
 
     it('has no picture for a scene naming an unknown image', () => {
       const [meta] = sceneMetadataFor(
-        [{id: 's', name: 'S', source: source('"sky"')}],
+        [{id: 's', name: 'S', workspace: source('"sky"')}],
         forest
       );
       expect(meta.thumbnail).toBeUndefined();

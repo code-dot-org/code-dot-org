@@ -23,8 +23,8 @@ export function usedBlockTypes(scenes: Scene[]): Set<string> {
   };
   scenes.forEach(scene => {
     (
-      (scene.source as {blocks?: {blocks?: SavedBlock[]}} | undefined)?.blocks
-        ?.blocks ?? []
+      (scene.workspace as {blocks?: {blocks?: SavedBlock[]}} | undefined)
+        ?.blocks?.blocks ?? []
     ).forEach(walk);
   });
   return used;

@@ -10,7 +10,7 @@ import {
   WHEN_RUN_BLOCK_TYPE,
 } from './blockly/blockDefinitions/whenRun';
 import {forEachSavedBlock} from './savedBlocks';
-import {Scene, SerializedAnimationList} from './types';
+import {Scene, SerializedAnimationList, Sources} from './types';
 import {isLegacyWorld, trimLegacyWorld} from './world';
 
 // when_run -> spritelab2_whenRun (2026-08-29): the lab's own hat block.
@@ -45,9 +45,25 @@ function migrateWorld(scene: Scene): boolean {
 /** Applied to a project's scenes on load, in place. */
 export function migrateScenes(scenes: Scene[]): boolean {
   return scenes
-    .map(scene => [migrateBlockTypes(scene.source), migrateWorld(scene)])
+    .map(scene => [migrateBlockTypes(scene.workspace), migrateWorld(scene)])
     .flat()
     .some(Boolean);
+}
+
+// scene.source -> scene.workspace (2026-11-15).
+interface LegacyScene extends Scene {
+  source?: Scene['workspace'];
+}
+
+/** Renames each scene's legacy key in place, so the project keeps its
+    identity and the rename alone is not taken for a student's edit. */
+export function migrateSceneKeys(sources: Sources | undefined): void {
+  (sources?.scenes as LegacyScene[] | undefined)?.forEach(scene => {
+    if ('source' in scene) {
+      scene.workspace ??= scene.source;
+      delete scene.source;
+    }
+  });
 }
 
 // generation.itemType -> generation.imageType (2026-08-17).
