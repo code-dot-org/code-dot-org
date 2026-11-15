@@ -127,15 +127,29 @@
 }
 
 // Fills what the card has left: the height comes from the card, not from
-// the picture, which is cropped to fit. The modal gives any image in its
-// content a smaller corner, so the card's class is here to outrank it.
-.card .picture {
+// the picture.
+.picture {
+  position: relative;
   flex: 1 1 0;
-  width: 100%;
   min-height: var(--picture-height);
   margin-top: auto;
+  overflow: hidden;
   border-radius: 8px;
-  object-fit: cover;
+}
+
+// The picture spans the box and hangs from its bottom edge, so a short box
+// crops the top. It hangs below the edge far enough to leave 10 pixels of
+// its ground in view. The ground is the bottom 31 rows of a picture 572
+// wide, and a percentage margin is a share of the width, so the first term
+// is the ground's height at any size.
+.picture img {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin-bottom: calc(10px - 100% * 31 / 572);
+  border-radius: 0;
 }
 
 .resources {
