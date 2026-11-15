@@ -213,8 +213,7 @@
                       "type": "spritelab2_burst",
                       "fields": {
                         "COUNT": 20,
-                        "LOOK": "confetti",
-                        "ORIGIN": "\"Crystal\""
+                        "LOOK": "confetti"
                       },
                       "next": {
                         "block": {
@@ -231,6 +230,16 @@
                               "fields": {
                                 "TEXT": "You win!"
                               }
+                            }
+                          }
+                        }
+                      },
+                      "inputs": {
+                        "ORIGIN": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "fields": {
+                              "ANIMATION": "\"Crystal\""
                             }
                           }
                         }
