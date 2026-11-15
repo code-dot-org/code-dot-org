@@ -8,6 +8,7 @@
     "uses_lab2": "true",
     "world_keeps_roles": [
       "friend",
+      "hero",
       "treasure"
     ],
     "block_pools": [
@@ -37,6 +38,7 @@
       "limitedPaintTools": true,
       "paletteRoles": [
         "friend",
+        "hero",
         "treasure",
         "block"
       ]
