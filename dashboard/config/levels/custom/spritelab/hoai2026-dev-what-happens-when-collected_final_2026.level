@@ -6,6 +6,10 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "hero",
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -14,7 +18,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -24,7 +28,13 @@
     "level_mode": {
       "kind": "code",
       "extraTabs": [
-        "Images"
+        "Images",
+        "World"
+      ],
+      "paletteRoles": [
+        "hero",
+        "treasure",
+        "block"
       ],
       "noNewImages": true,
       "noDeletingImages": true,

@@ -40,12 +40,10 @@ describe('ImageList', () => {
     expect(
       screen.getAllByRole('heading', {level: 4}).map(h => h.textContent)
     ).toEqual(['Characters', 'Backgrounds', 'Objects']);
-    expect(screen.getByRole('heading', {level: 3}).textContent).toBe(
-      'Your images'
-    );
+    expect(screen.getByRole('heading', {level: 3}).textContent).toBe('Images');
     // The count leaves the draft out.
     expect(screen.getByText('3 images')).toBeTruthy();
-    const list = screen.getByRole('region', {name: 'Your images'});
+    const list = screen.getByRole('region', {name: 'Images'});
     const tiles = within(list)
       .getAllByRole('button')
       .filter(button => button.hasAttribute('aria-pressed'))
