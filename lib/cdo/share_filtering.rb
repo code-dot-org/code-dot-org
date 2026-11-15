@@ -236,6 +236,8 @@ module ShareFiltering
     # Return false early if filtering is disabled or project type not in filter list.
     return false unless Gatekeeper.allows('webpurify', default: true)
     return false unless FILTERED_PROJECT_TYPES.include?(project_type)
+    # Turns off one lab's filtering, where the webpurify gate turns off all.
+    return false if DCDO.get('share_filtering_disabled_project_types', []).include?(project_type)
 
     # Structured sources have no field-name pre-check; extraction plus the
     # empty-text bail in find_share_failure decide instead.

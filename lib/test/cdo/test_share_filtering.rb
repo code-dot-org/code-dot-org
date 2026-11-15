@@ -549,6 +549,19 @@ class ShareFilteringTest < Minitest::Test
     )
   end
 
+  def test_find_share_failure_skips_a_project_type_turned_off_in_dcdo
+    project = generate_quest_builder_project(title: 'write to test@example.com')
+    DCDO.set('share_filtering_disabled_project_types', ['quest_builder'])
+    assert_nil ShareFiltering.find_share_failure(project, 'en', 'quest_builder')
+    # Other labs are still filtered.
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'test@example.com'),
+      ShareFiltering.find_share_failure(generate_sketchlab_source(text: 'test@example.com'), 'en', 'sketchlab')
+    )
+  ensure
+    DCDO.set('share_filtering_disabled_project_types', nil)
+  end
+
   def test_find_share_failure_quest_builder_profanity_in_a_say_block
     WebPurify.stubs(:find_potential_profanities).returns(['damn'])
 
