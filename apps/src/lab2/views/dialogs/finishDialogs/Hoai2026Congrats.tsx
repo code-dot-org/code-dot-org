@@ -9,6 +9,7 @@ import classNames from 'classnames';
 import React, {useId} from 'react';
 
 import {ProjectType} from '@cdo/apps/lab2/types';
+import studentsPicture from '@cdo/static/hoai2026/finish-dialog-students.png';
 
 import {CopyToClipboardButton} from '../CopyToClipboardButton';
 
@@ -153,8 +154,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                 Open Sprite Lab
               </MuiButton>
             </div>
-            {/* A plain box until the card's picture arrives. */}
-            <div className={styles.picture} aria-hidden="true" />
+            <img className={styles.picture} src={studentsPicture} alt="" />
           </section>
           <section
             className={classNames(styles.card, styles.teachers)}

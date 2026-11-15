@@ -53,6 +53,11 @@ describe('Hoai2026Congrats', () => {
     );
   });
 
+  it('shows a picture on the students card, with no name to read out', () => {
+    renderDialog();
+    expect(screen.getByAltText('')).toHaveAttribute('src');
+  });
+
   it('opens a remix of the game from the student card', () => {
     const onRemix = jest.fn();
     renderDialog({onRemix});

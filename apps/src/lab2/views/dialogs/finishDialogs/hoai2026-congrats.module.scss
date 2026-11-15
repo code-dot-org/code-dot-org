@@ -126,12 +126,16 @@
   line-height: 1.2;
 }
 
-.picture {
-  flex: 1 1 auto;
+// Fills what the card has left: the height comes from the card, not from
+// the picture, which is cropped to fit. The modal gives any image in its
+// content a smaller corner, so the card's class is here to outrank it.
+.card .picture {
+  flex: 1 1 0;
+  width: 100%;
   min-height: var(--picture-height);
   margin-top: auto;
   border-radius: 8px;
-  background: var(--background-neutral-white-fixed);
+  object-fit: cover;
 }
 
 .resources {
