@@ -82,8 +82,6 @@ interface GeneratedPicture {
   prompt: string;
   /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
-  /** Served from the cache rather than drawn by the model. */
-  cached: boolean;
 }
 
 /** Settings from the Advanced popover: a typed prompt that replaces the
@@ -112,9 +110,6 @@ export interface SentenceSceneParts {
   frame: React.ReactNode;
   /** A made picture is showing in the frame. */
   frameFilled: boolean;
-  /** A reviewer's mark over a picture served from the cache, while the
-      cache is filled in; comes out before ship. */
-  cachedTag: React.ReactNode;
   /** The Behind the scenes button, once there is a picture. */
   behindTheScenes: React.ReactNode;
   /** The screen reader's status line. */
@@ -438,7 +433,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
         prompt,
         sent,
-        cached: !!cached,
       };
       // The picture is stored while the host holds it back, so that
       // leaving the page during the wait does not lose it.
@@ -691,12 +685,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         panelRef,
         frame,
         frameFilled: !!chosenPicture && !generating,
-        // Keyed like the reveal, so each picture shows it afresh.
-        cachedTag: chosenPicture?.cached && !generating && (
-          <span key={`cached-${chosenPicture.id}`} className={styles.cachedTag}>
-            cached
-          </span>
-        ),
         behindTheScenes,
         status: statusNode,
         sentence: sentenceNode,
