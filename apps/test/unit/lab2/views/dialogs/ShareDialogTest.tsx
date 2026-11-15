@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {act, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -9,6 +9,7 @@ import ShareDialog, {
   SHARE_FAILURE_MESSAGE_PREFIXES,
   SHARE_FAILURE_TITLE,
 } from '@cdo/apps/lab2/views/dialogs/ShareDialog';
+import {WAIT_INDICATOR_DELAY_MS} from '@cdo/apps/lab2/views/dialogs/useWaitIndicator';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 // The real code draws on a canvas, which has no name to find it by.
@@ -107,6 +108,14 @@ describe('Lab2 ShareDialog', () => {
       expect(screen.queryByText(/can't be shared/)).toBeNull();
     });
 
+    it('holds the share link, rather than dropping it, for an earlier failure while the check is under way', () => {
+      renderFinish({
+        shareCheckPending: true,
+        shareFailure: {type: 'profanity', content: 'darn'},
+      });
+      expect(screen.getByRole('button', {name: 'Copy link'})).toBeDisabled();
+    });
+
     it('offers Open Sprite Lab', () => {
       renderFinish();
       expect(
@@ -129,12 +138,39 @@ describe('Lab2 ShareDialog', () => {
     });
   });
 
-  it('holds the link and its QR code while the check is under way', () => {
-    renderShareDialog({shareCheckPending: true});
-    expect(
-      screen.getByRole('button', {name: 'Copy link to project'})
-    ).toBeDisabled();
-    expect(screen.queryByRole('img', {name: /QR code/})).toBeNull();
+  describe('while the check is under way', () => {
+    beforeEach(() => jest.useFakeTimers());
+    afterEach(() => jest.useRealTimers());
+
+    it('shows nothing during a quick check', () => {
+      const {container} = renderShareDialog({shareCheckPending: true});
+      expect(container).toBeEmptyDOMElement();
+    });
+
+    it('shows only a spinner once the check is slow', () => {
+      renderShareDialog({shareCheckPending: true});
+      act(() => {
+        jest.advanceTimersByTime(WAIT_INDICATOR_DELAY_MS);
+      });
+      expect(screen.getByRole('status', {name: 'Loading...'})).toBeVisible();
+      expect(screen.getByRole('button', {name: 'Cancel'})).toBeEnabled();
+      expect(
+        screen.queryByRole('button', {name: 'Copy link to project'})
+      ).toBeNull();
+      expect(screen.queryByRole('img', {name: /QR code/})).toBeNull();
+    });
+
+    it('does not show an earlier failure', () => {
+      renderShareDialog({
+        shareCheckPending: true,
+        shareFailure: {type: 'profanity', content: 'darn'},
+      });
+      act(() => {
+        jest.advanceTimersByTime(WAIT_INDICATOR_DELAY_MS);
+      });
+      expect(screen.queryByText(SHARE_FAILURE_TITLE)).toBeNull();
+      expect(screen.getByRole('status', {name: 'Loading...'})).toBeVisible();
+    });
   });
 
   it('shows the QR code when no check is under way', () => {
@@ -143,14 +179,6 @@ describe('Lab2 ShareDialog', () => {
       screen.getByRole('button', {name: 'Copy link to project'})
     ).toBeEnabled();
     expect(screen.getByRole('img', {name: /QR code/})).toBeInTheDocument();
-  });
-
-  it('keeps showing an earlier failure while the next check is under way', () => {
-    renderShareDialog({
-      shareCheckPending: true,
-      shareFailure: {type: 'profanity', content: 'darn'},
-    });
-    expect(screen.getByText(SHARE_FAILURE_TITLE)).toBeInTheDocument();
   });
 
   it('renders the share link UI when there is no share failure', () => {
