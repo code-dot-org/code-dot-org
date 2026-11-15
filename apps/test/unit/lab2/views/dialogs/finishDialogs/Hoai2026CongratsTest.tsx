@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -55,7 +55,10 @@ describe('Hoai2026Congrats', () => {
 
   it('shows a picture on the students card, with no name to read out', () => {
     renderDialog();
-    expect(screen.getByAltText('')).toHaveAttribute('src');
+    const students = screen.getByRole('region', {
+      name: 'Discover even more blocks in Sprite Lab',
+    });
+    expect(within(students).getByAltText('')).toBeInTheDocument();
   });
 
   it('opens a remix of the game from the student card', () => {
