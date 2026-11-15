@@ -7,6 +7,7 @@
   "properties": {
     "uses_lab2": "true",
     "world_keeps_roles": [
+      "hero",
       "treasure"
     ],
     "block_pools": [
@@ -26,6 +27,7 @@
     "level_mode": {
       "kind": "world",
       "paletteRoles": [
+        "hero",
         "treasure",
         "block"
       ],

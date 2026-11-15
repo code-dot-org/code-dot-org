@@ -158,7 +158,7 @@
           "kind": "block",
           "type": "spritelab2_showTitle",
           "fields": {
-            "TEXT": "Scene 2"
+            "TEXT": "Welcome to Scene 2"
           }
         }
       ]
@@ -174,7 +174,7 @@
           }
         },
         {
-          "text": "Add one or more of the blocks to **when run**.",
+          "text": "Add one or more blocks under **when run**.",
           "check": {
             "kind": "block",
             "type": [
