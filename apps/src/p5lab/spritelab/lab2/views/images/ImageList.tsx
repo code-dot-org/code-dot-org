@@ -93,7 +93,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
   chosenId,
   onChoose,
   chooseOffered = true,
-  heading = 'Your images',
+  heading = 'Images',
   onNew,
   newKind,
   onUpload,
