@@ -127,16 +127,22 @@ export const SectionList: React.FC<SectionListProps> = ({
   );
 
   React.useEffect(() => {
-    if (!_.isEqual(sortableSectionIds, reduxSectionOrder)) {
-      // sortableSectionIds trails a change to sections by one render, so
-      // reconcile it with them before saving.
-      const sectionOrder = getFilteredSectionOrderIds(
-        Object.values(sections),
-        sortableSectionIds
-      );
-      dispatch(setSectionOrder(sectionOrder));
-      saveSectionOrder(sectionOrder);
+    if (_.isEqual(sortableSectionIds, reduxSectionOrder)) {
+      return;
     }
+    // sortableSectionIds trails a change to sections by one render, so
+    // reconcile it with them before saving.
+    const sectionOrder = getFilteredSectionOrderIds(
+      Object.values(sections),
+      sortableSectionIds
+    );
+    // The guard above closes only once both states hold sectionOrder.  While
+    // they disagree, every store update dispatches and saves again.
+    if (!_.isEqual(sortableSectionIds, sectionOrder)) {
+      setSortableSectionIds(sectionOrder);
+    }
+    dispatch(setSectionOrder(sectionOrder));
+    saveSectionOrder(sectionOrder);
   }, [sortableSectionIds, dispatch, reduxSectionOrder, sections]);
 
   const onDeleteClickCallback = (sectionId: number) => {
