@@ -1,10 +1,10 @@
+import {useDropdownContext} from '@code-dot-org/component-library/common/contexts';
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import closeDropdown from './closeDropdown';
 import DisabledReason, {ariaDisabledProps} from './DisabledReason';
 
 import styles from './builder-menu.module.scss';
@@ -37,6 +37,7 @@ interface BuilderMenuProps {
   disabledReason?: string;
 }
 
+// Must render inside CustomDropdown to reach the context that closes it.
 const MenuItem: React.FunctionComponent<BuilderMenuItem> = ({
   label,
   onClick,
@@ -45,35 +46,38 @@ const MenuItem: React.FunctionComponent<BuilderMenuItem> = ({
   disabled = false,
   disabledReason,
   destructive = false,
-}) => (
-  <li>
-    <Tooltip describeChild title={disabledReason ?? ''} placement="left">
-      <button
-        type="button"
-        className={classNames(styles.item, destructive && styles.destructive)}
-        disabled={disabled}
-        aria-disabled={disabledReason ? true : undefined}
-        aria-label={ariaLabel}
-        onClick={() => {
-          if (disabledReason) {
-            return;
-          }
-          onClick();
-          closeDropdown();
-        }}
-      >
-        {iconName && (
-          <FontAwesomeV6Icon
-            iconName={iconName}
-            iconStyle="solid"
-            className={styles.icon}
-          />
-        )}
-        <span>{label}</span>
-      </button>
-    </Tooltip>
-  </li>
-);
+}) => {
+  const {setActiveDropdownName} = useDropdownContext();
+  return (
+    <li>
+      <Tooltip describeChild title={disabledReason ?? ''} placement="left">
+        <button
+          type="button"
+          className={classNames(styles.item, destructive && styles.destructive)}
+          disabled={disabled}
+          aria-disabled={disabledReason ? true : undefined}
+          aria-label={ariaLabel}
+          onClick={() => {
+            if (disabledReason) {
+              return;
+            }
+            onClick();
+            setActiveDropdownName('');
+          }}
+        >
+          {iconName && (
+            <FontAwesomeV6Icon
+              iconName={iconName}
+              iconStyle="solid"
+              className={styles.icon}
+            />
+          )}
+          <span>{label}</span>
+        </button>
+      </Tooltip>
+    </li>
+  );
+};
 
 // A "…" menu for a page or question header. Built on CustomDropdown because
 // ActionDropdown has no separators or group labels.
