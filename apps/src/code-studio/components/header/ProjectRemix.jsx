@@ -20,12 +20,16 @@ class ProjectRemix extends React.Component {
     inRestrictedShareMode: PropTypes.bool,
     isBlockedAbuse: PropTypes.bool,
     exceedsAbuseThreshold: PropTypes.bool,
+    // The share filter flagged the project's text, and the viewer is not its
+    // owner: a remix would hand them the flagged text.
+    isBlockedShareFailure: PropTypes.bool,
   };
 
   remixBlocked = () =>
     this.props.inRestrictedShareMode ||
     this.props.isBlockedAbuse ||
-    this.props.exceedsAbuseThreshold;
+    this.props.exceedsAbuseThreshold ||
+    this.props.isBlockedShareFailure;
 
   remixProject = () => {
     if (this.remixBlocked()) {
@@ -99,6 +103,11 @@ export default connect(
     isBlockedAbuse: !!(state.lab && state.lab.isBlockedAbuse),
     exceedsAbuseThreshold: !!(
       state.project && state.project.exceedsAbuseThreshold
+    ),
+    isBlockedShareFailure: !!(
+      state.lab &&
+      state.lab.shareFailure &&
+      !(state.lab.channel && state.lab.channel.isOwner)
     ),
   }),
   {refreshProjectName}
