@@ -122,25 +122,17 @@ module TestRunUtils
       end
     end
 
-    cloned_data = `#{mysqldump_opts} #{database}2 | sed '#{auto_inc}'`
-    if seed_data.equal?(cloned_data)
-      CDO.log.info 'Test data not modified'
-    else
-      seed_2_file = Tempfile.new(['db_seed', '.sql'])
-      File.write(seed_2_file, cloned_data)
-
-      # Clone single DB across all databases
-      require 'parallel_tests'
-      procs = ParallelTests.determine_number_of_processes(nil)
-      CDO.log.info "Test data modified, cloning across #{procs} databases..."
-      databases = (2..procs).map {|i| "#{database}#{i}"}
-      databases.each do |db|
-        recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
-        RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql #{opts}"
-      end
-      pipes = databases.map {|db| ">(mysql #{opts} #{db})"}.join(' ')
-      RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
+    # Clone single DB across all databases
+    require 'parallel_tests'
+    procs = ParallelTests.determine_number_of_processes(nil)
+    CDO.log.info "Cloning test data across #{procs} databases..."
+    databases = (2..procs).map {|i| "#{database}#{i}"}
+    databases.each do |db|
+      recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
+      RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql #{opts}"
     end
+    pipes = databases.map {|db| ">(mysql #{opts} #{db})"}.join(' ')
+    RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
   end
 
   def self.run_dashboard_tests(parallel: false, upload_seed_data: false)
