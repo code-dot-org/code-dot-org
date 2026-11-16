@@ -98,8 +98,9 @@ module LevelsHelper
     channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
     return result unless channel_token
 
-    _owner_id, result[:project_id] = get_storage_id_and_project_id(channel_token.channel)
-    source_data = SourceBucket.new.get(channel_token.channel, "main.json")
+    channel = channel_token.channel
+    _owner_id, result[:project_id] = get_storage_id_and_project_id(channel)
+    source_data = SourceBucket.new.get(channel, "main.json")
 
     if source_data[:status] == 'FOUND'
       result[:version_id] = source_data[:version_id]
@@ -1011,24 +1012,34 @@ module LevelsHelper
     end
   end
 
-  # Returns student code for a given level
-  def get_student_code(user_id, level, unit_id, code_version = nil)
-    s3 = AWS::S3.create_client
-    bucket = CDO.sources_s3_bucket
-    base_dir = CDO.sources_s3_directory
-
+  # Where a student's work for a level is stored, or nil when the level has no
+  # channel for that student. Costs three queries, so a caller reading several
+  # versions of the same work should resolve this once and reuse it.
+  def get_student_code_location(user_id, level, unit_id)
     storage_id = storage_id_for_user_id(user_id)
     # For project-template-backed levels, we need to use the channel_token for the associated project template level.
     level_id_for_channel_token = level.project_template_level ? level.project_template_level.id : level.id
     channel_token = ChannelToken.where(storage_id: storage_id, level_id: level_id_for_channel_token, script_id: unit_id).last
-    if channel_token
-      storage_app_id = channel_token.storage_app_id
-      channel_id = get_project_channel_id(storage_id, storage_app_id)
-      s3_filename = "#{base_dir}/#{storage_id}/#{storage_app_id}/main.json"
-      s3_args = {bucket: bucket, key: s3_filename}
+    return nil unless channel_token
+
+    storage_app_id = channel_token.storage_app_id
+    {
+      storage_id: storage_id,
+      storage_app_id: storage_app_id,
+      channel_id: get_project_channel_id(storage_id, storage_app_id),
+    }
+  end
+
+  # Returns student code stored at the given location, at a specific S3 version
+  # when one is given.
+  def get_student_code_at(location, code_version = nil)
+    student_code = nil
+    if location
+      s3_filename = "#{CDO.sources_s3_directory}/#{location[:storage_id]}/#{location[:storage_app_id]}/main.json"
+      s3_args = {bucket: CDO.sources_s3_bucket, key: s3_filename}
       s3_args[:version_id] = code_version if code_version
       begin
-        body = s3.get_object(s3_args)[:body].read
+        body = AWS::S3.create_client.get_object(s3_args)[:body].read
       # Opening a level creates its channel; main.json appears only on first save.
       rescue Aws::S3::Errors::NoSuchKey, Aws::S3::Errors::NoSuchVersion, Aws::S3::Errors::InvalidArgument
         return
@@ -1036,7 +1047,6 @@ module LevelsHelper
         Observability::Errors.report(exception, context: {message: "Failed to read student code from S3 with args: #{s3_args}"})
         return
       end
-      student_code = nil
       if body
         parsed = JSON.parse(body)
         source = parsed['source']
@@ -1052,9 +1062,14 @@ module LevelsHelper
       end
     end
     {
-      project_id: channel_id,
+      project_id: location && location[:channel_id],
       code_version: code_version,
       student_code: student_code,
     }
+  end
+
+  # Returns student code for a given level
+  def get_student_code(user_id, level, unit_id, code_version = nil)
+    get_student_code_at(get_student_code_location(user_id, level, unit_id), code_version)
   end
 end

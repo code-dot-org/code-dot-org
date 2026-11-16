@@ -390,8 +390,10 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
 
     return {} unless user_level_interactions.any?
 
+    location = ApplicationController.helpers.get_student_code_location(student_id, level, unit_id)
+
     return user_level_interactions.map do |interaction|
-      version_code = ApplicationController.helpers.get_student_code(student_id, level, unit_id, interaction.code_version) || {}
+      version_code = ApplicationController.helpers.get_student_code_at(location, interaction.code_version) || {}
       version_code[:student_code] = allowlist_source_files(version_code[:student_code])
 
       "#{interaction.created_at.strftime('%Y-%m-%d %H:%M:%S')} - #{interaction.interaction}: #{version_code.to_json}"

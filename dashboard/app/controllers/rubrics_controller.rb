@@ -116,8 +116,9 @@ class RubricsController < ApplicationController
     project_id = nil
     version_id = nil
     if channel_token
-      _owner_id, project_id = get_storage_id_and_project_id(channel_token.channel)
-      source_data = SourceBucket.new.get(channel_token.channel, "main.json")
+      channel = channel_token.channel
+      _owner_id, project_id = get_storage_id_and_project_id(channel)
+      source_data = SourceBucket.new.get(channel, "main.json")
       if source_data[:status] == 'FOUND'
         version_id = source_data[:version_id]
       end
@@ -238,11 +239,13 @@ class RubricsController < ApplicationController
     return head :bad_request unless is_level_ai_enabled
 
     user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
+    channel_ids = channel_ids_for_users(user_ids, script_level)
+    users_by_id = User.where(id: user_ids).index_by(&:id)
     user_ids.each do |user_id|
-      @user = User.find(user_id)
+      @user = users_by_id[user_id]
       next unless @user&.student_of?(current_user)
 
-      attempted = attempted_at
+      attempted = attempted_at_for(channel_ids[user_id])
       last_eval_time = nil # any evaluation- pending, success, or failure
 
       rubric_ai_evaluation = RubricAiEvaluation.where(
@@ -331,10 +334,12 @@ class RubricsController < ApplicationController
     student_to_ai_status_map = {}
 
     user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
+    channel_ids = channel_ids_for_users(user_ids, script_level)
+    users_by_id = User.where(id: user_ids).index_by(&:id)
     user_ids.each do |user_id|
-      @user = User.find(user_id)
+      @user = users_by_id[user_id]
       next unless @user&.student_of?(current_user)
-      attempted = attempted_at
+      attempted = attempted_at_for(channel_ids[user_id])
       evaluated = ai_evaluated_at # only finished, successful evaluations
       last_attempt_evaluated = attempted && evaluated && evaluated >= attempted
       scope = RubricAiEvaluation.where(
@@ -410,13 +415,39 @@ class RubricsController < ApplicationController
   end
 
   private def attempted_at
-    script_level = @rubric.get_script_level
-    channel_id = get_channel_id(@user, script_level)
+    attempted_at_for(get_channel_id(@user, @rubric.get_script_level))
+  end
+
+  private def attempted_at_for(channel_id)
     return nil unless channel_id
     # fetch the user's code from S3
     source_data = SourceBucket.new.get(channel_id, "main.json")
     return nil unless source_data[:status] == 'FOUND'
     source_data[:last_modified]
+  end
+
+  # Channel id per user id for a script level. Resolves the whole section in two
+  # queries where get_channel_id costs two per student.
+  private def channel_ids_for_users(user_ids, script_level)
+    storage_ids = get_storage_ids_by_user_ids(user_ids)
+    return {} if storage_ids.empty?
+
+    # Mirrors ChannelToken.find_channel_token: a row carrying the script_id wins
+    # over one carrying NULL.
+    tokens_by_storage_id = ChannelToken.
+      where(
+        level: script_level.level.host_level,
+        storage_id: storage_ids.values,
+        script_id: [nil, script_level.script_id]
+      ).
+      order(script_id: :desc).
+      group_by(&:storage_id).
+      transform_values(&:first)
+
+    storage_ids.each_with_object({}) do |(user_id, storage_id), channel_ids|
+      channel_token = tokens_by_storage_id[storage_id]
+      channel_ids[user_id] = channel_token.channel if channel_token
+    end
   end
 
   private def ai_evaluated_at
