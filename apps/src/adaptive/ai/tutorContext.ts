@@ -139,7 +139,7 @@ function checkSection({
     'How this step is checked:',
     `- Goal: ${validation.condition}`,
     instructions ? `- The instructions the student sees:\n${instructions}` : '',
-    '- Only a build the student accepts from you is checked against the goal. Talking never triggers a check, so when the student is ready, offer to build.',
+    '- The step is checked only when the student accepts a build from you; talking alone is never checked. If they are struggling, or unsure why they have not met the goal yet, offer to build.',
     continueUnlocked
       ? `- Continue is already open on this step: ${UNLOCK_REASONS[continueUnlocked]}. The student may move on whenever they like; keep helping if they want to meet the goal.`
       : '- Continue is locked until a build meets the goal.',

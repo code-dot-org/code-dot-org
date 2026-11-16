@@ -102,7 +102,7 @@ describe('buildTutorContext', () => {
       '- The instructions the student sees:\n**Add a heading** to the top of the page.'
     );
     expect(context).toContain(
-      'Only a build the student accepts from you is checked against the goal. Talking never triggers a check'
+      'The step is checked only when the student accepts a build from you; talking alone is never checked. If they are struggling, or unsure why they have not met the goal yet, offer to build.'
     );
     expect(context).toContain(
       '- Continue is locked until a build meets the goal.'
