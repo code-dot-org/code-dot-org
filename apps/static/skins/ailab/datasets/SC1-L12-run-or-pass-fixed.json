@@ -10,7 +10,7 @@
       "potentialMisuses": "It is trained on a small set of plays picked by people, so it can be wrong in game situations that have only a few records. Don't use it to judge a team or a coach."
     }
   },
-  "defaultLabelColumn": "Play",
+  "defaultLabelColumn": "Play ID",
   "fields": [
     {
       "type": "categorical",

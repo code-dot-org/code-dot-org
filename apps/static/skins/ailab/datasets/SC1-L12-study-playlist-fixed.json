@@ -11,6 +11,7 @@
     }
   },
   "defaultLabelColumn": "Study Song?",
+  "defaultIdColumn": "Song",
   "fields": [
     {
       "type": "categorical",

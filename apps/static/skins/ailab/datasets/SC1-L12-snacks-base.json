@@ -11,6 +11,7 @@
     }
   },
   "defaultLabelColumn": "Meets Snack Rules?",
+  "defaultIdColumn": "Snack",
   "fields": [
     {
       "type": "categorical",

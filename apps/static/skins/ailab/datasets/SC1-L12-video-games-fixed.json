@@ -11,6 +11,7 @@
     }
   },
   "defaultLabelColumn": "Couch Co-op?",
+  "defaultIdColumn": "Game",
   "fields": [
     {
       "type": "categorical",
