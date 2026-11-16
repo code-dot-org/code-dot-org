@@ -1131,8 +1131,6 @@ class Unit < ApplicationRecord
   # Update strings and serialize changes to .script file
   def update_text(unit_params, metadata_i18n, general_params)
     unit_name = unit_params[:name]
-    # Check if TTS has been turned on for a unit. If so we will need to generate all the TTS for that unit after updating
-    need_to_update_tts = general_params[:tts] && !tts
 
     begin
       lesson_groups = general_params[:lesson_groups]
@@ -1158,7 +1156,6 @@ class Unit < ApplicationRecord
     end
     update_teacher_resources(general_params[:resourceIds])
     update_student_resources(general_params[:studentResourceIds])
-    tts_update(update_all: true) if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Unit.find_by_name(unit_name)
