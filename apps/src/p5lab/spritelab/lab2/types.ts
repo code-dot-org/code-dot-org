@@ -122,6 +122,9 @@ export interface StarterImage {
 export type WorldStartRoles = {[char: string]: string};
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
+  /** The level's settings as stored (levelConfig/schema.ts). The lab reads
+      them through withLevelConfig, as the properties below. */
+  levelConfig?: unknown;
   /** What kind of level this is; decides the tabs and the image controls. */
   levelMode?: LevelMode;
   /** The one scene this level edits, created on first load if the project

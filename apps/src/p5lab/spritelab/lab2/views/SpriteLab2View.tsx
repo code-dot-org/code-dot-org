@@ -90,6 +90,7 @@ import {
   imagesNamedInRole,
 } from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
+import {withLevelConfig} from '../levelConfig/applyLevelConfig';
 import {
   editsWorld,
   generationLimitForMode,
@@ -484,7 +485,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       : (lessonLevelIds ?? [])
           .slice(0, currentLevelIndex)
           .map(id => levelPropertiesMap[id] as SpriteLab2LevelProperties)
-          .filter(Boolean);
+          .filter(Boolean)
+          .map(withLevelConfig);
   }, [lessonLevelIds, levelPropertiesMap, levelProperties.id]);
   const catalog = useMemo(
     () =>
