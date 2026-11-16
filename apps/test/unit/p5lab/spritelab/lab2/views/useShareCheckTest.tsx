@@ -14,6 +14,7 @@ import {
 } from '@cdo/apps/lab2/projects/channelsApi';
 import {ShareFailure} from '@cdo/apps/lab2/types';
 import useShareCheck, {
+  checksOnLoad,
   SHARE_CHECK_MAX_WAIT_MS,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/useShareCheck';
 import {
@@ -58,22 +59,19 @@ describe('useShareCheck', () => {
 
   afterEach(() => restoreRedux());
 
-  const renderCheck = (
-    channelId: string | undefined,
-    isProjectPage: boolean
-  ) => {
+  const renderCheck = (channelId: string | undefined, checkOnLoad: boolean) => {
     // renderHook passes initialProps to the wrapper too, hence the prop type.
     const wrapper = ({
       children,
     }: {
       children?: React.ReactNode;
       channelId?: string;
-      isProjectPage?: boolean;
+      checkOnLoad?: boolean;
     }) => <Provider store={store}>{children}</Provider>;
     return renderHook(
-      (props: {channelId: string | undefined; isProjectPage: boolean}) =>
-        useShareCheck(props.channelId, props.isProjectPage),
-      {wrapper, initialProps: {channelId, isProjectPage}}
+      (props: {channelId: string | undefined; checkOnLoad: boolean}) =>
+        useShareCheck(props.channelId, props.checkOnLoad),
+      {wrapper, initialProps: {channelId, checkOnLoad}}
     );
   };
   const flush = () => act(async () => {});
@@ -94,7 +92,7 @@ describe('useShareCheck', () => {
   it('asks once as a project page opens, and publishes the answer', async () => {
     const {rerender} = renderCheck('abc', true);
     await flush();
-    rerender({channelId: 'abc', isProjectPage: true});
+    rerender({channelId: 'abc', checkOnLoad: true});
     await flush();
 
     expect(mockFetchShareFailure).toHaveBeenCalledTimes(1);
@@ -161,7 +159,7 @@ describe('useShareCheck', () => {
   it('drops an answer for a project the lab has left', async () => {
     const answer = slowCheck();
     const {rerender} = renderCheck('abc', true);
-    rerender({channelId: 'xyz', isProjectPage: false});
+    rerender({channelId: 'xyz', checkOnLoad: false});
     dispatchSpy.mockClear();
     answer(FAILURE);
     await flush();
@@ -240,7 +238,7 @@ describe('useShareCheck', () => {
     const {rerender} = renderCheck('abc', false);
     await flush();
     dispatchSpy.mockClear();
-    rerender({channelId: 'xyz', isProjectPage: false});
+    rerender({channelId: 'xyz', checkOnLoad: false});
 
     expect(dispatchSpy).toHaveBeenCalledWith(setShareFailure(null));
   });
@@ -314,5 +312,20 @@ describe('useShareCheck', () => {
 
       expect(pendingCalls()).toEqual([true, false]);
     });
+  });
+});
+
+describe('checksOnLoad', () => {
+  it('checks a project page as it loads', () => {
+    expect(checksOnLoad({isProjectLevel: true})).toBe(true);
+  });
+
+  it('checks a level in a unit whose header offers Share and Remix', () => {
+    expect(checksOnLoad({hideShareAndRemix: false})).toBe(true);
+  });
+
+  it('waits for the share dialog on any other level in a unit', () => {
+    expect(checksOnLoad({})).toBe(false);
+    expect(checksOnLoad({hideShareAndRemix: true})).toBe(false);
   });
 });

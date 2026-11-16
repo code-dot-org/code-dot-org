@@ -9,17 +9,29 @@ import {
   fetchIsTeacherOfProjectOwner,
   fetchShareFailure,
 } from '@cdo/apps/lab2/projects/channelsApi';
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 // The share dialog stops holding its link back after this long, whatever
 // the check is doing: a slow check must not leave a student stuck.
 export const SHARE_CHECK_MAX_WAIT_MS = 3000;
 
+/** Whether the project's link can be reached as the level loads: on a
+    project page, or from a header that offers Share and Remix. */
+export function checksOnLoad(
+  levelProperties: Pick<LevelProperties, 'isProjectLevel' | 'hideShareAndRemix'>
+): boolean {
+  return (
+    !!levelProperties.isProjectLevel ||
+    levelProperties.hideShareAndRemix === false
+  );
+}
+
 /**
  * Asks the server whether the project's text may be shared, and publishes
- * the answer for the blocked notice and the share dialog. It asks as a
- * project page opens and each time the share dialog opens. No check runs
- * when a unit level loads or after a save.
+ * the answer for the blocked notice and the share dialog. It asks as the
+ * level loads where checksOnLoad says so, and each time the share dialog
+ * opens. No check runs after a save.
  *
  * The answer stays until another replaces it or the project changes. The
  * blocked page takes this lab off the screen, so an answer cleared as the
@@ -27,7 +39,7 @@ export const SHARE_CHECK_MAX_WAIT_MS = 3000;
  */
 export default function useShareCheck(
   channelId: string | undefined,
-  isProjectPage: boolean
+  checkOnLoad: boolean
 ) {
   const dispatch = useAppDispatch();
   const shareDialogOpen = useAppSelector(
@@ -86,10 +98,10 @@ export default function useShareCheck(
   }, [channelId, dispatch]);
 
   useEffect(() => {
-    if (channelId && isProjectPage) {
+    if (channelId && checkOnLoad) {
       ask(channelId);
     }
-  }, [channelId, isProjectPage, ask]);
+  }, [channelId, checkOnLoad, ask]);
 
   // A layout effect, so the dialog's first painted frame already holds the
   // link back.
