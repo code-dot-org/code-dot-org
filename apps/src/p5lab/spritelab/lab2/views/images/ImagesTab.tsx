@@ -71,12 +71,8 @@ import useImageWriter, {ImageTarget, UploadedImage} from './useImageWriter';
 import styles from './images-tab.module.scss';
 
 export interface UploadWarning {
-  /** The agreement has not been given on this project yet. */
-  required: boolean;
-  /** A teacher is uploading: the dialog is shorter and agreeing to it does
-      not restrict the project. */
+  alreadyAgreed: boolean;
   isTeacher: boolean;
-  /** Record the agreement on the project. */
   onConfirm: () => void;
 }
 
@@ -367,26 +363,29 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     onError: message => setUploadError({text: message}),
     onProgress: setUploadStatus,
   });
-  // The rules stand between the upload button and the file picker.
+
   const [pendingUpload, setPendingUpload] = useState<{
     kind: ImageKind;
     trigger: HTMLElement | null;
   } | null>(null);
+
   const handleUpload = useCallback(
     (kind: ImageKind, trigger: HTMLElement | null) => {
       setUploadError(null);
-      if (uploadWarning?.required) {
+      if (uploadWarning && !uploadWarning.alreadyAgreed) {
         setPendingUpload({kind, trigger});
         return;
       }
       upload.pickFile(kind, trigger);
     },
-    [upload, uploadWarning?.required]
+    [upload, uploadWarning]
   );
+
   const cancelPendingUpload = useCallback(() => {
     setPendingUpload(null);
     pendingUpload?.trigger?.focus();
   }, [pendingUpload]);
+
   const confirmPendingUpload = useCallback(() => {
     if (!pendingUpload) {
       return;
@@ -395,6 +394,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     uploadWarning?.onConfirm();
     upload.pickFile(pendingUpload.kind, pendingUpload.trigger);
   }, [pendingUpload, upload, uploadWarning]);
+
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
       const target: ImageTarget = {

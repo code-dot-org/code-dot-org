@@ -460,7 +460,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       isLevelEditMode
         ? undefined
         : {
-            required: !(isTeacher
+            alreadyAgreed: !!(isTeacher
               ? teacherHasConfirmedUploadWarning
               : inRestrictedShareMode),
             isTeacher,

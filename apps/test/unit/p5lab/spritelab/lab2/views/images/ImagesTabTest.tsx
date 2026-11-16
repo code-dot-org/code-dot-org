@@ -1534,7 +1534,7 @@ describe('ImagesTab', () => {
         const {container} = renderTab({
           editingOffered: true,
           enableImageUpload: true,
-          uploadWarning: {required: true, isTeacher: false, onConfirm},
+          uploadWarning: {alreadyAgreed: false, isTeacher: false, onConfirm},
         });
         const opened = jest.spyOn(fileInput(container), 'click');
         pressUpload();
@@ -1565,7 +1565,7 @@ describe('ImagesTab', () => {
           editingOffered: true,
           enableImageUpload: true,
           uploadWarning: {
-            required: true,
+            alreadyAgreed: false,
             isTeacher: true,
             onConfirm: jest.fn(),
           },
@@ -1582,7 +1582,7 @@ describe('ImagesTab', () => {
         const {container} = renderTab({
           editingOffered: true,
           enableImageUpload: true,
-          uploadWarning: {required: true, isTeacher: false, onConfirm},
+          uploadWarning: {alreadyAgreed: false, isTeacher: false, onConfirm},
         });
         const opened = jest.spyOn(fileInput(container), 'click');
         pressUpload();
@@ -1597,7 +1597,7 @@ describe('ImagesTab', () => {
           editingOffered: true,
           enableImageUpload: true,
           uploadWarning: {
-            required: false,
+            alreadyAgreed: true,
             isTeacher: false,
             onConfirm: jest.fn(),
           },
