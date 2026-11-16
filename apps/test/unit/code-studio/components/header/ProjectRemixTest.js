@@ -48,6 +48,13 @@ describe('ProjectRemix', () => {
     expect(wrapper.isEmptyRender()).to.be.true;
   });
 
+  it('does not render when the project is in restricted share mode', () => {
+    const wrapper = shallow(
+      <ProjectRemix {...defaultProps} inRestrictedShareMode />
+    );
+    expect(wrapper.isEmptyRender()).to.be.true;
+  });
+
   it('does not render when lab2 project is blocked for abuse', () => {
     const wrapper = shallow(<ProjectRemix {...defaultProps} isBlockedAbuse />);
     expect(wrapper.isEmptyRender()).to.be.true;

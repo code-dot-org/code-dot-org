@@ -14,6 +14,7 @@ import {
   getCurrentLevel,
   getCurrentLevels,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {setInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
@@ -476,6 +477,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       patchSources,
     ]
   );
+
+  // The header's Remix button lives outside the lab and reads this; the server
+  // refuses the remix either way.
+  useEffect(() => {
+    dispatch(setInRestrictedShareMode(!!inRestrictedShareMode));
+  }, [dispatch, inRestrictedShareMode]);
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const [engineReady, setEngineReady] = useState(false);
