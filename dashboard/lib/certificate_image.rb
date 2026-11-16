@@ -158,8 +158,11 @@ class CertificateImage
     if prefilled_title_course?(course)
       # only need to fill in student name
       style =
-        if template_file == 'hour_of_ai_certificate.png'
+        case template_file
+        when 'hour_of_ai_certificate.png'
           {y: -109, font: 'Helvetica bold', color: 'rgb(31, 25, 118)'}
+        when 'MC_Hour_Of_AI_Certificate_Field_Agent.png'
+          {y: 165, font: 'Helvetica bold', color: 'rgb(0, 0, 0)'}
         else
           {y: course == '20-hour' ? -125 : -120}
         end
@@ -329,6 +332,8 @@ class CertificateImage
         'MC_Hour_Of_Code_Certificate_Show.png'
       when ScriptConstants::MINECRAFT_NIGHT_NAME
         'MC_Hour_Of_AI_Certificate_First_Night.png'
+      when ScriptConstants::MINECRAFT_FIELD_AGENT_NAME
+        'MC_Hour_Of_AI_Certificate_Field_Agent.png'
       else
         'MC_Hour_Of_Code_Certificate.png'
       end
