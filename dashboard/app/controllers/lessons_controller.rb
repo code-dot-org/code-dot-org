@@ -246,9 +246,8 @@ class LessonsController < ApplicationController
       end
 
       exam_script_levels = @lesson.script_levels.select(&:exam_quiz?)
-      if exam_script_levels.any?
-        raise "A lesson containing an exam Quiz must be lockable." unless @lesson.lockable
-        raise "An exam Quiz must be the last level in its lesson." unless exam_script_levels == [@lesson.script_levels.last]
+      if exam_script_levels.any? && !(@lesson.lockable && exam_script_levels == [@lesson.script_levels.last])
+        raise "An exam Quiz can only be the last level of a lockable lesson."
       end
 
       @lesson.script.prevent_new_duplicate_levels(old_dup_level_keys)

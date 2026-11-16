@@ -1493,7 +1493,7 @@ class LessonsControllerTest < ActionController::TestCase
       ]
     )
     error = assert_raises(RuntimeError) {put :update, params: @update_params}
-    assert_includes error.message, 'A lesson containing an exam Quiz must be lockable.'
+    assert_includes error.message, 'An exam Quiz can only be the last level of a lockable lesson.'
   end
 
   test 'cannot add exam Quiz before the last level of a lesson' do
@@ -1510,7 +1510,7 @@ class LessonsControllerTest < ActionController::TestCase
       ]
     )
     error = assert_raises(RuntimeError) {put :update, params: @update_params}
-    assert_includes error.message, 'An exam Quiz must be the last level in its lesson.'
+    assert_includes error.message, 'An exam Quiz can only be the last level of a lockable lesson.'
   end
 
   test 'cannot make a lesson containing an exam Quiz unlockable' do
@@ -1527,7 +1527,7 @@ class LessonsControllerTest < ActionController::TestCase
     )
 
     error = assert_raises(RuntimeError) {put :update, params: @update_params.merge(lockable: false)}
-    assert_includes error.message, 'A lesson containing an exam Quiz must be lockable.'
+    assert_includes error.message, 'An exam Quiz can only be the last level of a lockable lesson.'
     assert @lesson.reload.lockable
   end
 
