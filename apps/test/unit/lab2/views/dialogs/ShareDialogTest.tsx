@@ -108,12 +108,15 @@ describe('Lab2 ShareDialog', () => {
       expect(screen.queryByText(/can't be shared/)).toBeNull();
     });
 
-    it('holds the share link, rather than dropping it, for an earlier failure while the check is under way', () => {
+    it('keeps showing an earlier failure while the next check is under way', () => {
       renderFinish({
         shareCheckPending: true,
         shareFailure: {type: 'profanity', content: 'darn'},
       });
-      expect(screen.getByRole('button', {name: 'Copy link'})).toBeDisabled();
+      expect(
+        screen.getByText("This game can't be shared right now.")
+      ).toBeInTheDocument();
+      expect(screen.queryByRole('button', {name: 'Copy link'})).toBeNull();
     });
 
     it('offers Open Sprite Lab', () => {

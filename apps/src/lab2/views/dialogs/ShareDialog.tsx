@@ -196,8 +196,7 @@ const ShareDialog: React.FunctionComponent<{
   // student whose project cannot be shared still gets to finish, without the
   // link or the remix.
   if (dialogId === 'hoai2026') {
-    // A failure from before this check may already be fixed.
-    const unshareable = isAbusive || (!!shareFailure && !shareWait.held);
+    const unshareable = isAbusive || !!shareFailure;
     return (
       <div data-theme={theme}>
         <Hoai2026Congrats
