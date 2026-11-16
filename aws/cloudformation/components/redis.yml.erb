@@ -29,9 +29,10 @@
       SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
       CacheSubnetGroupName: !Ref RedisSubnetGroup
       PreferredMaintenanceWindow: sat:05:00-sat:06:00
-  # Publish the primary endpoint so Kubernetes workers can read it from Secrets
-  # Manager (synced as CDO_redis_url by the k8s-gitops standard-envtypes
-  # ExternalSecret). Legacy frontends get the same value from
+  # Publish the primary endpoint to Secrets Manager. Kubernetes workers read it
+  # through the k8s-gitops standard-envtypes ExternalSecret as CDO_redis_url;
+  # production EC2 hosts read it through the !StackSecret declaration in
+  # config/production.yml.erb. Full-stack adhocs still receive it from
   # bootstrap_chef_stack.sh.erb. rediss:// because TransitEncryptionEnabled is
   # true; the group has no auth token.
   RedisUrlConfig:
