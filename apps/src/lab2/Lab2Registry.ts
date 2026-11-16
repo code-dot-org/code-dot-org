@@ -56,7 +56,15 @@ export default class Lab2Registry {
     return this.projectManager;
   }
 
-  public clearProjectManager() {
+  /**
+   * Clear the registered project manager. Passing the manager clears it only
+   * if it is still the registered one: a lab that unmounts after its successor
+   * has registered must not clear the successor's manager.
+   */
+  public clearProjectManager(projectManager?: ProjectManager) {
+    if (projectManager && this.projectManager !== projectManager) {
+      return;
+    }
     this.projectManager = null;
   }
 

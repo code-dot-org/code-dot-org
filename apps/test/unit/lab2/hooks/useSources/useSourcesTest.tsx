@@ -5,6 +5,7 @@ import {Store} from 'redux';
 
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import {setChannel} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {Channel, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
@@ -85,6 +86,9 @@ describe('useSources', () => {
       progress: (state: any = {viewAsUserId: null, scriptId: 11}) => state,
     });
     store = getStore();
+    // The registry is a singleton; a manager left over from an earlier test
+    // would look like a successor to the compare-and-clear check.
+    Lab2Registry.create();
     jest.clearAllMocks();
     fakeManager = createFakeProjectManager();
     mockGetProjectManagerForLevel.mockResolvedValue(fakeManager);
@@ -99,6 +103,7 @@ describe('useSources', () => {
     options: {
       includeVersionHistory?: boolean;
       computeHasEdited?: (prev: TestSources, next: TestSources) => boolean;
+      registerProjectManager?: boolean;
     } = {}
   ) => {
     // renderHook passes initialProps to the wrapper too, hence the prop type.
@@ -392,6 +397,60 @@ describe('useSources', () => {
       unmount();
 
       expect(fakeManager.cleanUp).toHaveBeenCalled();
+    });
+  });
+
+  describe('registry', () => {
+    const registered = () => Lab2Registry.getInstance().getProjectManager();
+
+    it('stays out of the registry when opted out', async () => {
+      renderUseSources(LEVEL_ONE, {registerProjectManager: false});
+      await flush();
+
+      expect(registered()).toBeNull();
+    });
+
+    it('registers the manager once it exists', async () => {
+      renderUseSources();
+      expect(registered()).toBeNull();
+
+      await flush();
+
+      expect(registered()).toBe(fakeManager);
+    });
+
+    it('swaps the registered manager when the level changes', async () => {
+      const levelTwoManager = createFakeProjectManager();
+      const {rerender} = renderUseSources();
+      await flush();
+
+      mockGetProjectManagerForLevel.mockResolvedValue(levelTwoManager);
+      rerender({levelProperties: LEVEL_TWO});
+      await flush();
+
+      expect(registered()).toBe(levelTwoManager);
+    });
+
+    it('clears its own manager on unmount', async () => {
+      const {unmount} = renderUseSources();
+      await flush();
+
+      unmount();
+
+      expect(registered()).toBeNull();
+    });
+
+    it('leaves a successor manager alone when unmounting after it', async () => {
+      // A lab whose view unmounts only once the next level has loaded would
+      // otherwise unregister the manager that level just registered.
+      const {unmount} = renderUseSources();
+      await flush();
+
+      const successor = createFakeProjectManager();
+      Lab2Registry.getInstance().setProjectManager(successor);
+      unmount();
+
+      expect(registered()).toBe(successor);
     });
   });
 

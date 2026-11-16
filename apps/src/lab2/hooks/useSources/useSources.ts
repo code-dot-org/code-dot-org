@@ -4,6 +4,7 @@ import {useCallback, useEffect, useRef, useState} from 'react';
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import {setChannel as setChannelAction} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {getSourcesStoreForApp} from '@cdo/apps/lab2/projects/sourcesStoreForApp';
@@ -43,6 +44,13 @@ export interface UseSourcesInput<T extends ProjectSources> {
   getToolboxEditSources?: (levelProperties: LevelProperties) => T | undefined;
   /** Whether to include version history functionality (previewing, restoring, committing versions) */
   includeVersionHistory?: boolean;
+  /**
+   * Whether to publish this project manager to the Lab2Registry, where components outside the
+   * lab (the header, share dialogs) and labs that save through the registry read it. Defaults
+   * to true. Pass false for a manager that is not the one on screen, which would otherwise
+   * displace the one that is.
+   */
+  registerProjectManager?: boolean;
 }
 
 export interface UseSourcesOutput<T extends ProjectSources> {
@@ -103,6 +111,7 @@ export default function useSources<T extends ProjectSources>({
   computeHasEdited,
   getToolboxEditSources,
   includeVersionHistory = false,
+  registerProjectManager = true,
 }: UseSourcesInput<T>): UseSourcesOutput<T> {
   const dispatch = useAppDispatch();
   const userId = useAppSelector(state => state.progress.viewAsUserId);
@@ -182,6 +191,11 @@ export default function useSources<T extends ProjectSources>({
       setHasEdited(false);
       setLoadError(undefined);
       setChannel(undefined);
+      if (registerProjectManager && projectManagerRef.current) {
+        Lab2Registry.getInstance().clearProjectManager(
+          projectManagerRef.current
+        );
+      }
       await projectManagerRef.current?.cleanUp();
       if (isCancelled()) return;
       // A level that uses no project has nothing to load; the lab supplies
@@ -216,6 +230,11 @@ export default function useSources<T extends ProjectSources>({
         // Return early if cancelled; the new load will own the ref.
         if (isCancelled()) return;
         projectManagerRef.current = projectManager;
+        // Registered here rather than in an effect so that a non-null
+        // projectManager is never one a caller cannot yet reach via the registry.
+        if (registerProjectManager && projectManager) {
+          Lab2Registry.getInstance().setProjectManager(projectManager);
+        }
       }
 
       // Load and set initial project sources (even if we don't have a project).
@@ -256,6 +275,7 @@ export default function useSources<T extends ProjectSources>({
       userId,
       scriptId,
       includeVersionHistory,
+      registerProjectManager,
       dispatch,
       setSources,
     ]
@@ -391,6 +411,11 @@ export default function useSources<T extends ProjectSources>({
   // Clean up on unmount.
   useEffect(
     () => () => {
+      if (projectManagerRef.current) {
+        Lab2Registry.getInstance().clearProjectManager(
+          projectManagerRef.current
+        );
+      }
       projectManagerRef.current?.cleanUp();
     },
     []
