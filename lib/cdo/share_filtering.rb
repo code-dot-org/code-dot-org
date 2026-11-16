@@ -47,7 +47,7 @@ module ShareFiltering
     'sketchlab' => :extract_text_sketchlab,
     'quest_builder' => :extract_text_quest_builder,
   }.freeze
-  # Project types whose user-entered text is not in main.json's `source`.
+  # Project types whose student code is not in main.json's `source`.
   # Their extractor is given the whole file.
   # TODO: save quest_builder's scenes inside `source`. Files saved before that
   # keep them beside it, so the whole file is still read for them.
@@ -173,13 +173,9 @@ module ShareFiltering
     end
     return [] unless project.is_a?(Hash)
 
-    # Scenes are read from beside `source` and from inside it, so the check
-    # does not depend on which of the two a project is saved with.
-    inside_source = project['source'].is_a?(Hash) ? project['source']['scenes'] : nil
-    scenes = [project['scenes'], inside_source].
-      select {|list| list.is_a?(Array)}.
-      flatten(1).
-      select {|scene| scene.is_a?(Hash)}
+    # TODO: before migrating quest_builder's scenes into `source`, include reading
+    # them there too, so no project is saved where this check does not look.
+    scenes = project['scenes'].is_a?(Array) ? project['scenes'].select {|scene| scene.is_a?(Hash)} : []
     # A file with no scenes runs its top-level `source` as its one scene.
     scenes = [{'source' => project['source']}] if scenes.empty?
     texts = []

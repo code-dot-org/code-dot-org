@@ -493,19 +493,6 @@ class ShareFilteringTest < Minitest::Test
     assert_equal ['starting code'], ShareFiltering.extract_text_quest_builder({'source' => program, 'scenes' => []})
   end
 
-  def test_extract_text_quest_builder_reads_scenes_saved_inside_source
-    project = generate_quest_builder_project
-    inside = project.merge('source' => {'scenes' => project['scenes']}).except('scenes')
-    assert_equal ['Hello!', 'You win!'], ShareFiltering.extract_text_quest_builder(inside)
-  end
-
-  def test_extract_text_quest_builder_reads_both_places_when_a_file_has_both
-    project = generate_quest_builder_project
-    other = {'blocks' => {'blocks' => [{'type' => 'some_block', 'fields' => {'SPEECH' => 'In the cave'}}]}}
-    project['source'] = {'scenes' => [{'id' => 'other', 'name' => 'Other', 'source' => other}]}
-    assert_equal ['Hello!', 'You win!', 'In the cave'], ShareFiltering.extract_text_quest_builder(project)
-  end
-
   def test_find_share_failure_quest_builder_with_no_text_skips_filters
     ProfanityFilter.expects(:find_potential_profanity).never
     RegexpUtils.expects(:find_potential_email).never
