@@ -85,7 +85,6 @@ interface DropdownUnit {
   lesson_extras_available: boolean;
   text_to_speech_enabled: boolean;
   position: number;
-  requires_verified_instructor: boolean;
 }
 
 interface Lesson {

@@ -1495,8 +1495,6 @@
   "gdprDialogLogout": "Log out",
   "gdprDialogYes": "Yes",
   "getBlockDocs": "Get help with this block",
-  "getVerifiedTitle": "Get Verified!",
-  "getVerifiedInfo": "To teach {courseName}, you must be a verified teacher. To get verified, [fill out this form](verificationFormUrl). For more details, please read this [article on teacher verification](verificationInfoUrl).",
   "gender": "Gender",
   "genderMale": "Male",
   "genderFemale": "Female",
