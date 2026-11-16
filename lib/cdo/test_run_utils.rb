@@ -26,35 +26,41 @@ module TestRunUtils
     end
   end
 
+  # Files hashed to name the cached dashboard test database on S3. Globs are
+  # relative to dashboard/. A cached database outlives any change to a
+  # db:test:prepare input missing here.
+  DASHBOARD_SEED_INPUTS = %w[
+    db/schema.rb
+    lib/tasks/seed.rake
+    config/videos.csv
+    app/models/game.rb
+    test/fixtures/**/*.yml
+  ].freeze
+
+  # @return [Array<String>] sorted paths, relative to root
+  def self.dashboard_seed_input_files(root = dashboard_dir)
+    DASHBOARD_SEED_INPUTS.
+      flat_map {|pattern| Dir.glob(pattern, base: root)}.
+      select {|path| File.file?(File.join(root, path))}.
+      uniq.
+      sort
+  end
+
+  def self.dashboard_seed_hash(root = dashboard_dir)
+    Digest::MD5.hexdigest(
+      dashboard_seed_input_files(root).
+        map {|path| Digest::MD5.file(File.join(root, path))}.
+        join
+    )
+  end
+
   # Setup method to prepare test databases for parallel dashboard tests,
   # which can be called from the QA pass (on the chef-managed test system) or CI (Drone).
   def self.setup_dashboard_tests_parallel(upload_seed_data: false)
     # Parallel tests don't seem to run more quickly over 16 processes.
     ENV['PARALLEL_TEST_PROCESSORS'] = '16' if RakeUtils.nproc > 16
 
-    # Hash of all seed-data and -config content
-    #
-    # Data:
-    # - All fixture files
-    # - CSV data (only videos right now, may want to add more; cdo-languages.csv particularly)
-    # - Game::GAMES_BY_INDEX
-    #
-    # Config:
-    # - schema.rb
-    # - seed.rake
-    fixture_path = "#{dashboard_dir}/test/fixtures/"
-    fixture_hash = Digest::MD5.hexdigest(
-      Dir["#{fixture_path}/{**,*}/*.yml"].
-        push(dashboard_dir('db/schema.rb')).
-        push(dashboard_dir('config/videos.csv')).
-        push("#{fixture_path}/schools.tsv").
-        push(dashboard_dir('lib/tasks/seed.rake')).
-        push(dashboard_dir('app/models/game.rb')).
-        select {|filename| File.file?(filename)}.
-        sort.
-        map {|filename| Digest::MD5.file(filename)}.
-        join
-    )
+    fixture_hash = dashboard_seed_hash
     CDO.log.info "Fixture hash: #{fixture_hash}"
 
     # Try to fetch seed data from S3
