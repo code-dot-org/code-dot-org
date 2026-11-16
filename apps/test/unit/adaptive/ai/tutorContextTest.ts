@@ -115,7 +115,7 @@ describe('buildTutorContext', () => {
   it.each([
     ['validationPassed', 'a build met the goal'],
     ['failedValidations', 'several builds were checked without passing'],
-    ['replyLimit', 'talked with you long enough'],
+    ['limitReached', 'talked with you long enough'],
   ] as const)(
     'says Continue is open, and why (%s), in place of the thresholds',
     (reason, text) => {

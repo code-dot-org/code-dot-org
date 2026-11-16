@@ -66,7 +66,7 @@ describe('adaptive metrics', () => {
   it('sends an unlock with its reason as the value, the step and the counts', () => {
     setAdaptiveMetricsContext({pathwayId: 'p', levelId: 1, scriptId: 2});
     const step = {id: 's', title: 'S', kind: 'level', level: 'lvl'} as Step;
-    sendContinueUnlocked('replyLimit', {id: 'c'} as Checkpoint, step, {
+    sendContinueUnlocked('limitReached', {id: 'c'} as Checkpoint, step, {
       validationAttempts: 2,
       replies: 10,
     });
@@ -75,12 +75,12 @@ describe('adaptive metrics', () => {
       expect.objectContaining({
         checkpointId: 'c',
         stepId: 's',
-        reason: 'replyLimit',
+        reason: 'limitReached',
         validationAttempts: 2,
         replies: 10,
       }),
       true,
-      'replyLimit'
+      'limitReached'
     );
   });
 

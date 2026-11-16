@@ -56,18 +56,16 @@ export function generateInputsHash(prompt: string): string {
   return hashString(prompt);
 }
 
-/** Where an entry in a step's validation history came from. */
-export type ValidationSource =
-  /** The judge rated a build against the step's condition. */
-  | 'work'
+/** Why the chat alone opened Continue on a checked step. */
+export type ChatUnlockReason =
   /** The chat reached the reply limit, which opens Continue regardless. */
-  | 'limit';
+  'limitReached';
 
 /**
  * One entry in a step's validation history: a check of the student's work,
- * or, by `source`, a look at their chat instead. Only work entries carry
- * evidence; the others have evidence level 0 and carry what the student
- * was told, if anything.
+ * or, when it carries a `passReason`, the chat opening Continue instead.
+ * Only work entries carry evidence; a chat entry has evidence level 0 and
+ * carries what the student was told.
  */
 export interface ValidationAttempt {
   /** When the server recorded it. */
@@ -75,13 +73,13 @@ export interface ValidationAttempt {
   pass: boolean;
   /** On the evidence levels of the skill the step measures; 0 unless from work. */
   evidenceLevel: number;
-  /** Addressed to the student; empty when they were told nothing. */
+  /** Addressed to the student. */
   reason: string;
   /** The Langfuse trace the judge ran under. */
   traceId?: string;
-  /** Absent on an entry written before chat checks existed; read as work. */
-  source?: ValidationSource;
-  /** Replies in the chat when a chat check ran. */
+  /** Set only on a chat entry, which always passes; absent on every check of work. */
+  passReason?: ChatUnlockReason;
+  /** Replies in the chat when a chat entry opened Continue. */
   replies?: number;
 }
 
@@ -89,17 +87,13 @@ export interface ValidationAttempt {
 export const workAttempts = (
   entry: StepProgress | undefined
 ): ValidationAttempt[] =>
-  (entry?.validationHistory ?? []).filter(
-    attempt => (attempt.source ?? 'work') === 'work'
-  );
+  (entry?.validationHistory ?? []).filter(attempt => !attempt.passReason);
 
-/** The looks at a step's chat, oldest first. */
+/** The chat entries on a step, oldest first. */
 export const chatChecks = (
   entry: StepProgress | undefined
 ): ValidationAttempt[] =>
-  (entry?.validationHistory ?? []).filter(
-    attempt => attempt.source !== undefined && attempt.source !== 'work'
-  );
+  (entry?.validationHistory ?? []).filter(attempt => !!attempt.passReason);
 
 /** The verdict on a step's work in force; undefined before its first check. */
 export function latestValidation(
@@ -115,7 +109,7 @@ export const FAILED_VALIDATIONS_TO_CONTINUE = 3;
 export type ContinueUnlockReason =
   | 'validationPassed'
   | 'failedValidations'
-  | 'replyLimit';
+  | ChatUnlockReason;
 
 /** Why a checked step lets the student continue, or undefined while it does not. */
 export function continueUnlockReason(
@@ -124,8 +118,7 @@ export function continueUnlockReason(
   const work = workAttempts(entry);
   if (work.some(attempt => attempt.pass)) return 'validationPassed';
   if (work.length >= FAILED_VALIDATIONS_TO_CONTINUE) return 'failedValidations';
-  if (chatChecks(entry).some(check => check.pass)) return 'replyLimit';
-  return undefined;
+  return chatChecks(entry).find(check => check.pass)?.passReason;
 }
 
 /** Whether a checked step's work or chat lets the student continue past it. */

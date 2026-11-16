@@ -234,10 +234,10 @@ describe('computeEvidence', () => {
     const progress = checked('build-page', [1]);
     progress.steps['build-page'].validationHistory!.push({
       at: '2026-10-22T10:06:00Z',
-      source: 'limit',
       pass: true,
       evidenceLevel: 0,
       reason: 'Go on.',
+      passReason: 'limitReached',
       replies: 8,
     });
     expect(computeEvidence(pathway, progress)).toEqual({

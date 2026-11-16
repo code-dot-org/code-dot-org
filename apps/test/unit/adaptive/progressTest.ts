@@ -206,49 +206,32 @@ describe('validationAllowsContinue', () => {
     expect(validationAllowsContinue(entry(false, false, false))).toBe(true);
   });
 
-  it('opens on a passing chat check', () => {
-    const check = (pass: boolean) => ({
+  it('opens on a chat entry, naming its pass reason', () => {
+    const chat = {
       at: '2026-01-01T00:00:00Z',
-      source: 'limit' as const,
-      pass,
+      pass: true,
       evidenceLevel: 0,
       reason: '',
+      passReason: 'limitReached' as const,
       replies: 8,
-    });
+    };
     expect(
-      validationAllowsContinue({
-        timeSpent: 0,
-        validationHistory: [check(false)],
-      })
-    ).toBe(false);
-    expect(
-      continueUnlockReason({
-        timeSpent: 0,
-        validationHistory: [check(true)],
-      })
-    ).toBe('replyLimit');
+      continueUnlockReason({timeSpent: 0, validationHistory: [chat]})
+    ).toBe('limitReached');
   });
 
   it('counts only work toward the three failures, and names work before chat', () => {
     const chat = {
       at: '',
-      source: 'limit' as const,
       pass: true,
       evidenceLevel: 0,
       reason: '',
+      passReason: 'limitReached' as const,
       replies: 8,
     };
     const failedTwice = entry(false, false);
     expect(continueUnlockReason(undefined)).toBeUndefined();
-    expect(
-      continueUnlockReason({
-        ...failedTwice,
-        validationHistory: [
-          ...failedTwice.validationHistory,
-          {...chat, pass: false},
-        ],
-      })
-    ).toBeUndefined();
+    expect(continueUnlockReason(failedTwice)).toBeUndefined();
     expect(
       continueUnlockReason({
         ...entry(true),
@@ -272,15 +255,15 @@ describe('workAttempts, chatChecks and latestValidation', () => {
   const old = {at: '0', pass: false, evidenceLevel: 0, reason: 'Old.'};
   const chat = {
     at: '2',
-    source: 'limit' as const,
     pass: true,
     evidenceLevel: 0,
     reason: 'Go on.',
+    passReason: 'limitReached' as const,
     replies: 8,
   };
   const entry = {timeSpent: 0, validationHistory: [old, work, chat]};
 
-  it('reads an entry with no source as work, and keeps the kinds apart', () => {
+  it('reads an entry with no pass reason as work, and keeps the kinds apart', () => {
     expect(workAttempts(entry)).toEqual([old, work]);
     expect(chatChecks(entry)).toEqual([chat]);
     expect(workAttempts(undefined)).toEqual([]);

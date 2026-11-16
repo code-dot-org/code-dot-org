@@ -113,7 +113,12 @@ describe('weblab2Adapter', () => {
     );
     weblab2Adapter.reportUnlock?.(
       {},
-      {source: 'limit', pass: true, evidenceLevel: 0, reason: 'Go on.'}
+      {
+        pass: true,
+        evidenceLevel: 0,
+        reason: 'Go on.',
+        passReason: 'limitReached',
+      }
     );
   });
 
@@ -127,7 +132,12 @@ describe('weblab2Adapter', () => {
     };
     weblab2Adapter.reportUnlock?.(
       {chat},
-      {source: 'limit', pass: true, evidenceLevel: 0, reason: 'Go on.'}
+      {
+        pass: true,
+        evidenceLevel: 0,
+        reason: 'Go on.',
+        passReason: 'limitReached',
+      }
     );
     expect(chat.post).toHaveBeenCalledWith({
       notificationType: 'info',

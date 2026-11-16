@@ -34,7 +34,7 @@ const UNLOCK_REASONS: {[reason in ContinueUnlockReason]: string} = {
   validationPassed: 'a build met the goal',
   failedValidations:
     'several builds were checked without passing, and the check can be wrong',
-  replyLimit: 'the student has talked with you long enough',
+  limitReached: 'the student has talked with you long enough',
 };
 
 const STATUS_HEADINGS: {[status in CheckpointStatus]: string} = {

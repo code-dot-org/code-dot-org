@@ -41,10 +41,10 @@ const reply = (count: number): ChatTranscript => ({
   text: `Student: ${count}`,
 });
 const limit: Omit<ValidationAttempt, 'at'> = {
-  source: 'limit',
   pass: true,
   evidenceLevel: 0,
-  reason: UNLOCK_MESSAGES.limit,
+  reason: UNLOCK_MESSAGES.limitReached,
+  passReason: 'limitReached',
   replies: 8,
 };
 const work: ValidationAttempt = {
@@ -111,7 +111,7 @@ describe('useChatUnlock', () => {
 
     expect(options.recordAttempt).toHaveBeenCalledWith(limit);
     expect(mockSendUnlocked).toHaveBeenCalledWith(
-      'replyLimit',
+      'limitReached',
       checkpoint,
       step,
       {validationAttempts: 1, replies: 8}
@@ -120,7 +120,7 @@ describe('useChatUnlock', () => {
       notificationType: 'info',
       includeInChatHistory: true,
       hideTimestamp: true,
-      text: UNLOCK_MESSAGES.limit,
+      text: UNLOCK_MESSAGES.limitReached,
     });
 
     // Still locked in the progress, say the save has not come back: not again.
