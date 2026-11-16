@@ -637,15 +637,14 @@ class LessonsControllerTest < ActionController::TestCase
     unit = create(:script, :in_single_unit_course, :with_levels)
     lesson = unit.lessons.first
 
-    error = assert_raises RuntimeError do
-      post :update, params: {
-        id: lesson.id,
-        name: lesson.name,
-        lockable: true
-      }
-    end
+    post :update, params: {
+      id: lesson.id,
+      name: lesson.name,
+      lockable: true
+    }
 
-    assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
+    assert_response :not_acceptable
+    assert_includes response.body, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
   end
 
   test 'cannot update lockable if last level is an exam Quiz but not an assessment' do
@@ -661,15 +660,14 @@ class LessonsControllerTest < ActionController::TestCase
       levels: [create(:quiz, purpose: 'exam')]
     )
 
-    error = assert_raises RuntimeError do
-      post :update, params: {
-        id: lesson.id,
-        name: lesson.name,
-        lockable: true
-      }
-    end
+    post :update, params: {
+      id: lesson.id,
+      name: lesson.name,
+      lockable: true
+    }
 
-    assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
+    assert_response :not_acceptable
+    assert_includes response.body, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
   end
 
   test 'can update lockable if last level is an exam Quiz and assessment' do
@@ -707,15 +705,14 @@ class LessonsControllerTest < ActionController::TestCase
       levels: [create(:quiz, purpose: 'practice')]
     )
 
-    error = assert_raises RuntimeError do
-      post :update, params: {
-        id: lesson.id,
-        name: lesson.name,
-        lockable: true
-      }
-    end
+    post :update, params: {
+      id: lesson.id,
+      name: lesson.name,
+      lockable: true
+    }
 
-    assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
+    assert_response :not_acceptable
+    assert_includes response.body, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
   end
 
   test 'can update lockable if last level is levelgroup and assessment' do

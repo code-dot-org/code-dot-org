@@ -240,7 +240,8 @@ class LessonsController < ApplicationController
         last_script_level = @lesson.script_levels.last
         last_level = last_script_level.level
         unless last_script_level.assessment && (last_level.type == 'LevelGroup' || (last_level.is_a?(Quiz) && last_level.exam?))
-          raise "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
+          @lesson.errors.add(:base, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked.")
+          raise ActiveRecord::RecordInvalid.new(@lesson)
         end
       end
 
