@@ -143,8 +143,12 @@ export interface QuizBuilderQuestionsState {
   errorQuestionId: number | null;
   // Whether the quiz's questions, pages or order differ from the last save.
   hasUnsavedLayout: boolean;
-  // Adds an empty page at the end.
-  addPage: () => void;
+  // Adds an empty page that becomes page atPage, or at the end.
+  addPage: (atPage?: number) => void;
+  // Moves a page one place up (-1) or down (1).
+  movePage: (page: number, offset: -1 | 1) => void;
+  // Deletes an empty page; a page with questions is left alone.
+  deletePage: (page: number) => void;
   // Moves a question one place up (-1) or down (1) on its page.
   moveQuestion: (id: number, offset: -1 | 1) => void;
   // Moves a question to the bottom of another page.

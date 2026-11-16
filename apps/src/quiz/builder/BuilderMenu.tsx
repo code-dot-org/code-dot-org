@@ -1,8 +1,11 @@
 import {useDropdownContext} from '@code-dot-org/component-library/common/contexts';
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
+
+import DisabledReason, {ariaDisabledProps} from './DisabledReason';
 
 import styles from './builder-menu.module.scss';
 
@@ -13,6 +16,8 @@ export interface BuilderMenuItem {
   // Group labels are hidden from screen readers, so name the item fully.
   ariaLabel?: string;
   disabled?: boolean;
+  // Turns the item off but keeps it focusable, to show this in a tooltip.
+  disabledReason?: string;
   destructive?: boolean;
 }
 
@@ -28,6 +33,8 @@ interface BuilderMenuProps {
   label: string;
   entries: BuilderMenuEntry[];
   disabled?: boolean;
+  // Keeps the menu shut but its trigger focusable, to show this in a tooltip.
+  disabledReason?: string;
 }
 
 // Must render inside CustomDropdown to reach the context that closes it.
@@ -37,30 +44,37 @@ const MenuItem: React.FunctionComponent<BuilderMenuItem> = ({
   iconName,
   ariaLabel,
   disabled = false,
+  disabledReason,
   destructive = false,
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
   return (
     <li>
-      <button
-        type="button"
-        className={classNames(styles.item, destructive && styles.destructive)}
-        disabled={disabled}
-        aria-label={ariaLabel}
-        onClick={() => {
-          onClick();
-          setActiveDropdownName('');
-        }}
-      >
-        {iconName && (
-          <FontAwesomeV6Icon
-            iconName={iconName}
-            iconStyle="solid"
-            className={styles.icon}
-          />
-        )}
-        <span>{label}</span>
-      </button>
+      <Tooltip describeChild title={disabledReason ?? ''} placement="left">
+        <button
+          type="button"
+          className={classNames(styles.item, destructive && styles.destructive)}
+          disabled={disabled}
+          aria-disabled={disabledReason ? true : undefined}
+          aria-label={ariaLabel}
+          onClick={() => {
+            if (disabledReason) {
+              return;
+            }
+            onClick();
+            setActiveDropdownName('');
+          }}
+        >
+          {iconName && (
+            <FontAwesomeV6Icon
+              iconName={iconName}
+              iconStyle="solid"
+              className={styles.icon}
+            />
+          )}
+          <span>{label}</span>
+        </button>
+      </Tooltip>
     </li>
   );
 };
@@ -72,36 +86,40 @@ const BuilderMenu: React.FunctionComponent<BuilderMenuProps> = ({
   label,
   entries,
   disabled = false,
+  disabledReason,
 }) => (
-  <CustomDropdown
-    name={name}
-    labelText={label}
-    disabled={disabled}
-    menuPlacement="right"
-    size="xs"
-    useMuiIconButtonAsTrigger
-    triggerButtonProps={{
-      children: <FontAwesomeV6Icon iconName="ellipsis-vertical" />,
-      color: 'tertiary',
-      variant: 'outlined',
-      size: 'extraSmall',
-      'aria-label': label,
-    }}
-  >
-    <ul className={styles.menu}>
-      {entries.map((entry, index) =>
-        entry === 'separator' ? (
-          <li key={index} role="separator" className={styles.separator} />
-        ) : 'groupLabel' in entry ? (
-          <li key={index} className={styles.groupLabel} aria-hidden>
-            {entry.groupLabel}
-          </li>
-        ) : (
-          <MenuItem key={index} {...entry} />
-        )
-      )}
-    </ul>
-  </CustomDropdown>
+  <DisabledReason reason={disabledReason}>
+    <CustomDropdown
+      name={name}
+      labelText={label}
+      disabled={disabled}
+      menuPlacement="right"
+      size="xs"
+      useMuiIconButtonAsTrigger
+      triggerButtonProps={{
+        children: <FontAwesomeV6Icon iconName="ellipsis-vertical" />,
+        color: 'tertiary',
+        variant: 'outlined',
+        size: 'extraSmall',
+        'aria-label': label,
+        ...ariaDisabledProps(disabledReason),
+      }}
+    >
+      <ul className={styles.menu}>
+        {entries.map((entry, index) =>
+          entry === 'separator' ? (
+            <li key={index} role="separator" className={styles.separator} />
+          ) : 'groupLabel' in entry ? (
+            <li key={index} className={styles.groupLabel} aria-hidden>
+              {entry.groupLabel}
+            </li>
+          ) : (
+            <MenuItem key={index} {...entry} />
+          )
+        )}
+      </ul>
+    </CustomDropdown>
+  </DisabledReason>
 );
 
 export default BuilderMenu;

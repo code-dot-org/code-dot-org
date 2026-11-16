@@ -125,7 +125,40 @@ export default function useQuizBuilderQuestions(
     JSON.stringify(placementsFromLayout(layout)) !==
       JSON.stringify(savedPlacements);
 
-  const addPage = useCallback(() => setLayout(prev => [...prev, []]), []);
+  const addPage = useCallback(
+    (atPage?: number) =>
+      setLayout(prev => {
+        const index = (atPage ?? prev.length + 1) - 1;
+        return [...prev.slice(0, index), [], ...prev.slice(index)];
+      }),
+    []
+  );
+
+  const movePage = useCallback(
+    (page: number, offset: -1 | 1) =>
+      setLayout(prev => {
+        const from = page - 1;
+        const to = from + offset;
+        if (from < 0 || to < 0 || to >= prev.length) {
+          return prev;
+        }
+        const next = [...prev];
+        [next[from], next[to]] = [next[to], next[from]];
+        return next;
+      }),
+    []
+  );
+
+  // Only an empty page can be deleted.
+  const deletePage = useCallback(
+    (page: number) =>
+      setLayout(prev =>
+        prev[page - 1]?.length === 0
+          ? prev.filter((_, index) => index !== page - 1)
+          : prev
+      ),
+    []
+  );
 
   const moveQuestion = useCallback(
     (id: number, offset: -1 | 1) =>
@@ -370,6 +403,8 @@ export default function useQuizBuilderQuestions(
     errorQuestionId,
     hasUnsavedLayout,
     addPage,
+    movePage,
+    deletePage,
     moveQuestion,
     moveQuestionToPage,
     addPendingQuestion,
