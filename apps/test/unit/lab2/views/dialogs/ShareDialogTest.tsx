@@ -1,4 +1,4 @@
-import {act, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -161,6 +161,15 @@ describe('Lab2 ShareDialog', () => {
         screen.queryByRole('button', {name: 'Copy link to project'})
       ).toBeNull();
       expect(screen.queryByRole('img', {name: /QR code/})).toBeNull();
+    });
+
+    it('closes on Escape while the spinner shows', () => {
+      renderShareDialog({shareCheckPending: true});
+      act(() => {
+        jest.advanceTimersByTime(WAIT_INDICATOR_DELAY_MS);
+      });
+      fireEvent.keyDown(document, {key: 'Escape'});
+      expect(mockDispatch).toHaveBeenCalledWith(hideShareDialog());
     });
 
     it('does not show an earlier failure', () => {

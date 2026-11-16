@@ -219,6 +219,7 @@ const ShareDialog: React.FunctionComponent<{
       <div data-theme={theme}>
         <Modal
           title={i18n.shareTitle()}
+          onClose={handleClose}
           customContent={
             <div className={moduleStyles.shareCheckWait}>
               <FontAwesomeV6Icon
