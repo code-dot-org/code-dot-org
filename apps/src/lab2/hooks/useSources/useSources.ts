@@ -47,8 +47,7 @@ export interface UseSourcesInput<T extends ProjectSources> {
   /**
    * Whether to publish this project manager to the Lab2Registry, where components outside the
    * lab (the header, share dialogs) and labs that save through the registry read it. Defaults
-   * to true. Pass false for a manager that is not the one on screen, which would otherwise
-   * displace the one that is.
+   * to true.
    */
   registerProjectManager?: boolean;
 }
@@ -230,8 +229,6 @@ export default function useSources<T extends ProjectSources>({
         // Return early if cancelled; the new load will own the ref.
         if (isCancelled()) return;
         projectManagerRef.current = projectManager;
-        // Registered here rather than in an effect so that a non-null
-        // projectManager is never one a caller cannot yet reach via the registry.
         if (registerProjectManager && projectManager) {
           Lab2Registry.getInstance().setProjectManager(projectManager);
         }
