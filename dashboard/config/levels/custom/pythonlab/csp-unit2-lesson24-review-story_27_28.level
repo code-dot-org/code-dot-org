@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-11-13T06:13:56.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Review Your Data Story\r\n\r\nYour Task: Test your program, check it with a partner, and reflect on how you used AI Tutor.\r\n\r\nDo This:\r\n\r\n1. Run your program with numbers you choose. Work out the total and the average by hand, and fill out MY TESTING in `story_review.txt`.\r\n2. Trade seats with a partner. Your partner reads your numbers, not your code, and guesses the average. Run your program to check, then fill out MY PARTNER CHECK.\r\n3. Fill out MY REFLECTION.",
+    "long_instructions": "## Review Your Data Story\r\n\r\nYour Task: Test your program, check it with a partner, and reflect on how you used AI Tutor.\r\n\r\nDo This:\r\n\r\n1. Run your program with numbers you choose. Work out the total and the average by hand, and fill out MY TESTING in `story_review.txt`.\r\n2. Trade seats with a partner. Your partner reads your numbers, not your code, and guesses the average. Run your program to check, then fill out MY PARTNER CHECK. Change one thing in your picture or your code based on what your partner said, and run your program again.\r\n3. Fill out MY REFLECTION.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -56,7 +57,6 @@
     "project_template_level_name": "csp-unit2-lesson24-template_27_28",
     "teacher_markdown": "- Students edit only `story_review.txt` on this level. If testing shows a bug, they can go back and fix `main.py`.\r\n- MY TESTING: students work out the total and the average by hand before comparing them with the program. A mismatch is the point of the exercise, not a failure. Ask what they changed.\r\n- MY PARTNER CHECK: the partner guesses the average from the numbers alone. A guess within a few units shows they understand what an average is. Ask the partner how they estimated it.\r\n- MY REFLECTION: look for specifics. Good answers name what students asked AI Tutor to do and one thing they kept, changed, or rejected, with a reason. \"It worked\" is not enough, so ask what they checked.\r\n- Students should name which lines they wrote themselves. The sum and the average should be on that list.\r\n- This level has no Validate.\r\n- Use this level to check whether students can test their code against a hand calculation, explain what an average tells them to a partner, and describe what they kept, changed, or rejected from AI-generated code."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-13T06:13:56.031+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson24-make_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson24-make_27_28\"},{\"changed_at\":\"2026-11-13 06:15:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 06:17:15 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 07:22:26 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 08:47:19 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-13T06:13:56.031+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson24-make_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson24-make_27_28\"},{\"changed_at\":\"2026-11-13 06:15:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 06:17:15 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 07:22:26 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-13 08:47:19 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-15 23:10:48 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Pythonlab>

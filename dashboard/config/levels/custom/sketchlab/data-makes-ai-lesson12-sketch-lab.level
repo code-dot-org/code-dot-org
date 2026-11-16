@@ -1,0 +1,17 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-11-14T01:17:47.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "data-makes-ai-lesson12-sketch-lab-template",
+    "long_instructions": "## Choosing a Dataset\r\n- Move your avatar to the step of the project\r\n- Do steps 1–5 on the path.\r\n- Open AI Lab in a new tab to train your model.",
+    "hide_share_and_remix": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-14 01:33:58 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

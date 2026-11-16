@@ -25,6 +25,7 @@ import {
   LEVEL_MODE_KINDS,
   parsePaletteRoles,
   setImageFirst,
+  setEnableImageUpload,
   setImageSource,
   setLearning,
   setImageRole,
@@ -124,6 +125,10 @@ const SpritelabModeFields: React.FunctionComponent<
   const showImageFirst = fieldApplies(mode, 'imageFirst');
   const showOneImage = fieldApplies(mode, 'oneImage');
   const showLearning = fieldApplies(mode, 'learning');
+  const showEnableImageUpload = fieldApplies(mode, 'enableImageUpload');
+  const uploadKindNote = mode.imageType
+    ? `The upload becomes the image type above.`
+    : 'Students choose Character, Background, Object or Block.';
   const showImageSource = fieldApplies(mode, 'imageSource');
 
   // The palette lists images in the palette roles but preselects the level's
@@ -291,6 +296,19 @@ const SpritelabModeFields: React.FunctionComponent<
             checked={mode.oneImage === true}
             onChange={event =>
               onChange(setOneImage(mode, event.target.checked))
+            }
+            size="s"
+          />
+        </div>
+      )}
+      {showEnableImageUpload && (
+        <div className={moduleStyles.booleanField}>
+          <Checkbox
+            name="spritelab_mode_enable_image_upload"
+            label={`Enable image upload. ${uploadKindNote} FOR DEVELOPMENT USE ONLY, NOT FOR USER-FACING LEVELS.`}
+            checked={mode.enableImageUpload === true}
+            onChange={event =>
+              onChange(setEnableImageUpload(mode, event.target.checked))
             }
             size="s"
           />

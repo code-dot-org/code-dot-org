@@ -75,12 +75,20 @@
   color: var(--text-error-primary);
 }
 
-// Video step — Video positions itself against the nearest positioned ancestor.
 .videoHost {
-  position: relative;
+  display: flex;
+  justify-content: center;
   flex: 1;
   min-width: 0;
   min-height: 0;
+}
+
+// Video fills its nearest positioned ancestor. The cap matches the
+// maximum width of a standalone video level.
+.videoFrame {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
 }
 
 // Free response textarea (used by freeResponse questions inside the questions step)

@@ -3,12 +3,23 @@ jest.mock('@code-dot-org/core/plugins/observability', () => ({
   logger: {warn: jest.fn()},
 }));
 
+const mockDcdoGet = jest.fn(
+  (_key: string, defaultValue: unknown): unknown => defaultValue
+);
+jest.mock('@cdo/apps/dcdo', () => ({
+  __esModule: true,
+  default: {
+    get: (key: string, defaultValue: unknown) => mockDcdoGet(key, defaultValue),
+  },
+}));
+
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
 import {
+  DEFAULT_RECAPTCHA_TIMEOUT_SECONDS,
   RECAPTCHA_ACTION,
   RECAPTCHA_SITE_KEY,
-  RECAPTCHA_TIMEOUT_MS,
+  RECAPTCHA_TIMEOUT_FLAG,
 } from '@cdo/apps/aiGateway/recaptcha/constants';
 
 type RecaptchaModule = typeof import('@cdo/apps/aiGateway/recaptcha');
@@ -52,6 +63,7 @@ afterEach(() => {
   jest.restoreAllMocks();
   jest.useRealTimers();
   countMock.mockClear();
+  mockDcdoGet.mockImplementation((_key, defaultValue) => defaultValue);
 });
 
 describe('getRecaptchaToken', () => {
@@ -119,7 +131,25 @@ describe('getRecaptchaToken', () => {
     const assertion = expect(pending).rejects.toMatchObject({
       reason: 'timeout',
     });
-    await jest.advanceTimersByTimeAsync(RECAPTCHA_TIMEOUT_MS);
+    await jest.advanceTimersByTimeAsync(
+      DEFAULT_RECAPTCHA_TIMEOUT_SECONDS * 1000
+    );
+    await assertion;
+  });
+
+  it('times out after the DCDO reCAPTCHA timeout when one is set', async () => {
+    jest.useFakeTimers();
+    mockDcdoGet.mockImplementation((key, defaultValue) =>
+      key === RECAPTCHA_TIMEOUT_FLAG ? 5 : defaultValue
+    );
+    settleScripts('load');
+    stubGrecaptcha(jest.fn().mockReturnValue(new Promise(() => {})));
+
+    const pending = loadModule().getRecaptchaToken('enforce');
+    const assertion = expect(pending).rejects.toMatchObject({
+      reason: 'timeout',
+    });
+    await jest.advanceTimersByTimeAsync(5_000);
     await assertion;
   });
 });

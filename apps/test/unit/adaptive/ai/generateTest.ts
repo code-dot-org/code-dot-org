@@ -52,6 +52,10 @@ const mockGenerateText = generateText as jest.Mock;
 const mockCount = Observability.metrics.count as jest.Mock;
 const mockStartTrace = startTrace as jest.Mock;
 const mockDcdoGet = DCDO.get as jest.Mock;
+const setDcdo = (values: Record<string, unknown>) =>
+  mockDcdoGet.mockImplementation((key, fallback) =>
+    key in values ? values[key] : fallback
+  );
 
 const schema = z.object({instructions: z.string()});
 const context: AichatContext = {
@@ -80,7 +84,7 @@ const gatewayResult = {
 describe('generate', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    mockDcdoGet.mockReturnValue(true);
+    setDcdo({'adaptive-ai-enabled': true});
   });
 
   it('returns the parsed output and sends the shell context', async () => {
@@ -128,7 +132,7 @@ describe('generate', () => {
   });
 
   it('returns nothing and traces nothing until the flag opts in', async () => {
-    mockDcdoGet.mockReturnValue(false);
+    setDcdo({'adaptive-ai-enabled': false});
 
     expect(await generate(options)).toEqual({});
     expect(mockGenerateText).not.toHaveBeenCalled();
@@ -216,7 +220,7 @@ describe('generate', () => {
     try {
       mockGenerateText.mockReturnValue(new Promise(() => {}));
       const result = generate(options);
-      await jest.advanceTimersByTimeAsync(30_000);
+      await jest.advanceTimersByTimeAsync(45_000);
 
       expect(await result).toEqual({traceId: 'trace-1'});
       expect(mockIncrementCounter).toHaveBeenCalledWith(
@@ -228,7 +232,45 @@ describe('generate', () => {
       );
       expect(mockEnd).toHaveBeenCalledWith({
         outcome: 'error',
-        errorMessage: 'timed out after 30000ms',
+        errorMessage: 'timed out after 45000ms',
+      });
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  it('waits as many seconds as the timeout flag says', async () => {
+    jest.useFakeTimers();
+    try {
+      setDcdo({'adaptive-ai-enabled': true, 'adaptive-ai-timeout-seconds': 5});
+      mockGenerateText.mockReturnValue(new Promise(() => {}));
+      const result = generate(options);
+      await jest.advanceTimersByTimeAsync(5_000);
+
+      expect(await result).toEqual({traceId: 'trace-1'});
+      expect(mockEnd).toHaveBeenCalledWith({
+        outcome: 'error',
+        errorMessage: 'timed out after 5000ms',
+      });
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  it('keeps the default when the timeout flag is not a positive number', async () => {
+    jest.useFakeTimers();
+    try {
+      setDcdo({'adaptive-ai-enabled': true, 'adaptive-ai-timeout-seconds': 0});
+      mockGenerateText.mockReturnValue(new Promise(() => {}));
+      const result = generate(options);
+      await jest.advanceTimersByTimeAsync(44_999);
+      expect(mockEnd).not.toHaveBeenCalled();
+      await jest.advanceTimersByTimeAsync(1);
+
+      expect(await result).toEqual({traceId: 'trace-1'});
+      expect(mockEnd).toHaveBeenCalledWith({
+        outcome: 'error',
+        errorMessage: 'timed out after 45000ms',
       });
     } finally {
       jest.useRealTimers();

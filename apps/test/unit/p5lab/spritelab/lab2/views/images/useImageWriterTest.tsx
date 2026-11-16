@@ -116,6 +116,61 @@ describe('useImageWriter', () => {
     });
   });
 
+  it('creates an image from an upload, with no generation behind it', async () => {
+    const {writer, uploadImage} = renderWriter();
+    let key = '';
+    await act(async () => {
+      key = await writer().acceptUploaded(
+        {key: null, imageType: 'sprite', subject: 'object'},
+        {
+          filename: 'upload_cat_1.png',
+          uint8Array: PNG,
+          mediaType: 'image/png',
+        }
+      );
+    });
+    expect(key).toBe('new-key');
+    expect(uploadImage).toHaveBeenCalledWith(
+      'upload_cat_1.png',
+      PNG,
+      'image/png'
+    );
+    const [, , patch] = createNamedAnimation.mock.calls[0] as unknown as [
+      unknown,
+      string,
+      Record<string, unknown>
+    ];
+    expect(patch).toMatchObject({
+      sourceUrl: '/v3/assets/chan/upload_cat_1.png',
+      frameSize: {x: 64, y: 64},
+      sourceSize: {x: 64, y: 64},
+      frameCount: 1,
+      role: 'hero',
+      subject: 'object',
+      categories: [],
+      trimmed: false,
+      edited: false,
+    });
+    expect(patch.generation).toBeUndefined();
+    expect(patch.pixelGridSize).toBeUndefined();
+  });
+
+  it('refuses an upload with nowhere to put the file', async () => {
+    const latest: {current: ImageWriter | null} = {current: null};
+    const Harness = () => {
+      latest.current = useImageWriter({onDeleteImage: jest.fn()});
+      return null;
+    };
+    render(<Harness />);
+    await expect(
+      (latest.current as ImageWriter).acceptUploaded(
+        {key: null, imageType: 'sprite'},
+        {filename: 'a.png', uint8Array: PNG, mediaType: 'image/png'}
+      )
+    ).rejects.toThrow();
+    expect(createNamedAnimation).not.toHaveBeenCalled();
+  });
+
   it('keeps what an image depicts when an edit drops the prompt', async () => {
     propsByKey.k1 = {
       name: 'Sprite 1',

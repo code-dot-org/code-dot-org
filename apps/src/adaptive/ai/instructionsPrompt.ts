@@ -12,7 +12,7 @@ import {labEnvironment} from './labEnvironments';
 /**
  * Used by Langfuse traces; change when a meaningful update is made.
  */
-export const INSTRUCTIONS_PROMPT_VERSION = '2026-10-27';
+export const INSTRUCTIONS_PROMPT_VERSION = '2026-11-12';
 
 export const generatedInstructionsSchema = z.object({
   /** Markdown the student reads, in place of the authored instructions. */
@@ -77,9 +77,7 @@ export function buildInstructionsPrompt({
       validation
         ? '- The steps must ask for exactly what the condition names, in terms of their project, so work that follows them meets it. Do not mention the check or quote the condition.'
         : '',
-      levels
-        ? '- Make the specific example in the contrast pair show work at the highest evidence level listed.'
-        : '',
+      levels ? '- Ask for work at the highest evidence level listed.' : '',
       '- An opening acknowledgement is fine if it is short and part of a sentence that leads into the first step, such as "Your header looks great! Now add...". No separate recap of what the page already has.',
       '- Name their actual project content (title, description, page text) where it shows them what to do.',
       '- Stay within what the step asks for; do not add goals.',
@@ -87,34 +85,31 @@ export function buildInstructionsPrompt({
       '',
       'FORMAT RULES',
       '',
-      '1. One numbered step per prompt the student must write.',
-      '   - If the task involves two separate prompts, write two numbered steps.',
+      '1. One step per prompt the student must write.',
+      '   - If the task involves two separate prompts, write two steps.',
       '   - Each step contains exactly one action. Do not combine actions in a single step or bury a second task in a sub-clause.',
       '   - No more than three steps, ideally one or two.',
+      '   - Number the steps only when there are two or more. A single step goes unnumbered on the line after the heading.',
       '',
       '2. Bold the action verb phrase in each step.',
       '   - Bold only the core task (for example, "change the font" or "add one short sentence"), not the whole sentence.',
       '   - Bold nothing else in the steps, so the bolding stays meaningful on a skim.',
       '   - Start each step with a verb, and keep each step to one short line.',
       '',
-      '3. When reminding them to be specific or detailed, always include a labeled contrast pair that shows the difference, specific to THIS task, with the vague and specific examples each on their own line.',
-      '   - The vague example should be realistic: something a student would plausibly type (for example, "Make the title look better.").',
-      '   - The specific example should name the element, the change, and the desired result (for example, "Change the title font to a thin, elegant serif.").',
-      "   - Both examples must relate to the student's actual task, not a generic one.",
-      '',
-      '4. Keep it short.',
-      '   - The whole box should fit on one screen without scrolling: 40 words at most across the steps, not counting the heading or the contrast pair.',
+      '3. Keep it short.',
+      '   - The whole box, heading included, is 50 words at most; aim for 40.',
       '   - Put the first action at the top. Put rationale or background after the steps, or leave it out.',
       '',
-      'EXAMPLE OUTPUT FORMAT',
+      'EXAMPLE OUTPUT FORMAT, two steps',
       '',
       '**Do This:**',
       '1. [Verb] **[bolded action]** [object and location].',
       '2. [Verb] **[bolded action]** [object and location].',
       '',
-      '**Be specific.**',
-      'Vague: *"[realistic vague prompt]"*',
-      'Specific: *"[specific version for this task]"*',
+      'EXAMPLE OUTPUT FORMAT, one step',
+      '',
+      '**Do This:**',
+      '[Verb] **[bolded action]** [object and location].',
       '',
       'Return only the formatted box, with no preamble or commentary.',
     ].join('\n'),
