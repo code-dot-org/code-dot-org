@@ -1,11 +1,16 @@
 import animBurst from '@cdo/static/spritelab_lab2/block-help/burst.gif';
 import animPlaySound from '@cdo/static/spritelab_lab2/block-help/play-sound.gif';
-import animSetASpriteProperty from '@cdo/static/spritelab_lab2/block-help/set-a-sprite-property.gif';
+import animPlayer2 from '@cdo/static/spritelab_lab2/block-help/player-2.gif';
+import animRestartScene from '@cdo/static/spritelab_lab2/block-help/restart-scene.gif';
+import animSay from '@cdo/static/spritelab_lab2/block-help/say.gif';
+import animSetAsPlayer2 from '@cdo/static/spritelab_lab2/block-help/set-as-player-2.gif';
 import animSetGravity from '@cdo/static/spritelab_lab2/block-help/set-gravity.gif';
+import animSetJumpHeight from '@cdo/static/spritelab_lab2/block-help/set-jump-height.gif';
 import animSetWeather from '@cdo/static/spritelab_lab2/block-help/set-weather.gif';
 import animSetZoom from '@cdo/static/spritelab_lab2/block-help/set-zoom.gif';
+import animShowTitle from '@cdo/static/spritelab_lab2/block-help/show-title.gif';
 import animThePlayer from '@cdo/static/spritelab_lab2/block-help/the-player.gif';
-import animWhenClicked from '@cdo/static/spritelab_lab2/block-help/when-clicked.gif';
+import animWhenPlayer from '@cdo/static/spritelab_lab2/block-help/when-player.gif';
 
 import {MAX_ZOOM, MIN_ZOOM} from '../camera';
 
@@ -28,6 +33,10 @@ export interface BlockHelp {
 export const BLOCK_HELP: Record<string, BlockHelp> = {
   spritelab2_setPlatformJumpHeight: {
     title: 'Set jump height',
+    animation: {
+      src: animSetJumpHeight,
+      alt: 'The set jump height block in action.',
+    },
     summary: 'Changes how many squares the player can jump.',
     body: 'The number is how high the player jumps in squares.',
   },
@@ -57,6 +66,10 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   },
   spritelab2_setAsPlatformPlayer2: {
     title: 'Set as player 2',
+    animation: {
+      src: animSetAsPlayer2,
+      alt: 'The set as player 2 block in action.',
+    },
     summary: 'Makes a sprite a second player, moved with W, A, S and D.',
     body:
       'Lets you and a classmate play your game on one keyboard. The first ' +
@@ -64,6 +77,7 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   },
   spritelab2_thePlayer2: {
     title: 'Player 2',
+    animation: {src: animPlayer2, alt: 'The “player 2” block in action.'},
     summary: 'Whichever sprite is player 2 right now.',
     body: 'Drop it into any block that takes a sprite.',
   },
@@ -112,43 +126,53 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   },
   spritelab2_showTitle: {
     title: 'Show title',
+    animation: {src: animShowTitle, alt: 'The show title block in action.'},
     summary: 'Big text across the middle of the game for a moment.',
     body: 'Put it under a touch to announce a win.',
   },
-  gamelab_setProp: {
-    title: 'Set a sprite property',
-    animation: {
-      src: animSetASpriteProperty,
-      alt: 'The set a sprite property block in action.',
-    },
-    summary:
-      'Changes one thing about a sprite: its size, rotation, position, direction or speed.',
-    body: '**size** is a percent, and **rotation** is in degrees.',
+  gamelab_showVariable: {
+    title: 'Show variable',
+    summary: 'Shows a variable and its value in a bubble on the screen.',
+    body: 'The value updates as it changes, so try it for a score or a timer.',
   },
-  gamelab_spriteClicked: {
-    title: 'When clicked',
-    animation: {src: animWhenClicked, alt: 'The when clicked block in action.'},
-    summary: 'Runs the blocks below when a sprite is clicked or tapped.',
-    body: '**while** keeps them running as long as the button is held down.',
+  gamelab_hideVariable: {
+    title: 'Hide variable',
+    summary: 'Removes the bubble that show variable put on the screen.',
+    body: 'The variable keeps its value.',
   },
   gamelab_spriteSay: {
     title: 'Say',
+    animation: {src: animSay, alt: 'The say block in action.'},
     summary: 'Shows words in a speech bubble over a sprite.',
     body: 'Put it under an event, so the words come at the right moment.',
   },
+  gamelab_destroy: {
+    title: 'Remove',
+    summary: 'Takes sprites out of the scene.',
+    body:
+      'Try it with **the touched sprite** under "when player touches coin", ' +
+      'so only that coin disappears.',
+  },
+  spritelab2_touchedSprite: {
+    title: 'The touched sprite',
+    summary: 'Picks the sprite that was just touched, under "when touching".',
+    body: 'Anywhere else it picks no sprite at all.',
+  },
+  spritelab2_clickedSprite: {
+    title: 'The clicked sprite',
+    summary: 'Picks the sprite that was just clicked, under "when clicked".',
+    body: 'Anywhere else it picks no sprite at all.',
+  },
   spritelab2_restartScene: {
     title: 'Restart scene',
+    animation: {
+      src: animRestartScene,
+      alt: 'The restart scene block in action.',
+    },
     summary: 'Starts the scene over from the beginning.',
     body:
       'Try it under "when touching" a foe, so a touch sends the player back ' +
       'to the start.',
-  },
-  gamelab_atTime: {
-    title: 'At time',
-    summary: 'Runs the blocks below once, when the scene has run this long.',
-    body:
-      '**seconds** counts from when the scene starts; **frames** counts ' +
-      'frames instead.',
   },
   gamelab_everyInterval: {
     title: 'Repeat every',
@@ -157,6 +181,7 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   },
   spritelab2_whenPlayer: {
     title: 'When player',
+    animation: {src: animWhenPlayer, alt: 'The when player block in action.'},
     summary:
       'Runs the blocks below each time the player walks, jumps, lands or ' +
       'bumps into something.',

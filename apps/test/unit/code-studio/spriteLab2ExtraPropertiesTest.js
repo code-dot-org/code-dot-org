@@ -10,6 +10,7 @@ describe('camelize', () => {
     const expected = {
       block_catalog: 'blockCatalog',
       lock_earlier_blocks: 'lockEarlierBlocks',
+      freeplay_intro: 'freeplayIntro',
       objectives: 'objectives',
       hide_custom_blocks: 'hideCustomBlocks',
       image_role_defaults: 'imageRoleDefaults',
@@ -18,6 +19,7 @@ describe('camelize', () => {
       add_blocks: 'addBlocks',
       world_start_pattern: 'worldStartPattern',
       world_start_roles: 'worldStartRoles',
+      world_keeps_roles: 'worldKeepsRoles',
       starter_images: 'starterImages',
       callouts: 'callouts',
       no_project: 'noProject',

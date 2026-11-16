@@ -159,6 +159,24 @@ describe('WordMenus', () => {
     expect(chip().classList.contains('entrancePlayed')).toBe(false);
   });
 
+  it('shows the verb in front of the sentence when given one', () => {
+    render(
+      <WordMenus
+        sentence={CHARACTER_SENTENCE}
+        choices={{creature: 'cat'}}
+        onChange={jest.fn()}
+        lead="Generate"
+      />
+    );
+    expect(sentenceText()).toBe('Generate a cat.');
+  });
+
+  it('heads each set of words with the kind of word it holds', () => {
+    render(<Harness layout="clusters" />);
+    const group = screen.getByRole('group', {name: 'creature (pick one)'});
+    expect(group.querySelector('p')?.textContent).toBe('Noun');
+  });
+
   it('shows a chip as plain text while the creature is missing', () => {
     render(<Harness initial={{creature: 'cat', adjective: 'cute'}} />);
     fireEvent.click(screen.getByRole('button', {name: 'Remove cat'}));

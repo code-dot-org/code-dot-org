@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import PaletteSwatches from './PaletteSwatches';
+import {PaletteColor} from './PixelEditor';
 import PixelTooltip from './PixelTooltip';
 import {RGBA, TRANSPARENT} from './tools';
 
@@ -47,6 +49,13 @@ interface ColorPickerProps {
   // Recently used colors, in first-seen order; shown as one row under the
   // spectrum, after the permanent transparent swatch.
   recentColors?: RGBA[];
+  // A fixed set of colors. The popover then offers these as round swatches
+  // and nothing else: no spectrum, no recent colors, no transparent.
+  palette?: readonly PaletteColor[];
+  // The popover opened.
+  onOpen?: () => void;
+  // Escape closed the popover: any color tried in it has been put back.
+  onCancel?: () => void;
 }
 
 /**
@@ -55,14 +64,22 @@ interface ColorPickerProps {
  * anywhere else to close. Keyboard: the spectrum takes focus on open, arrow
  * keys steer the sample cursor (color updates live), Enter/Space confirms,
  * Escape reverts to the color the popover opened with.
+ *
+ * With a `palette`, the popover holds that palette's swatches instead. The
+ * chosen swatch takes focus on open, Tab moves between swatches, and
+ * choosing one closes the popover.
  */
 const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
   color,
   onChange,
   recentColors = [],
+  palette,
+  onOpen,
+  onCancel,
 }) => {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
+  const paletteRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const swatchRef = useRef<HTMLButtonElement | null>(null);
   // The sample cursor, in spectrum-canvas px. Always shown while open and
@@ -94,9 +111,14 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       colorOnOpenRef.current = color;
       setKbSteering(viaKeyboard);
       setOpen(true);
+      onOpen?.();
     },
-    [color]
+    [color, onOpen]
   );
+  // The color now, for the Escape handler: it is read when the key comes,
+  // so the handler need not be attached again each time the color changes.
+  const colorRef = useRef(color);
+  colorRef.current = color;
 
   // Screen-reader narration; moves are debounced so held arrows don't
   // flood the queue.
@@ -111,6 +133,13 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       // the swatch on Enter/Escape). Programmatic focus after a click isn't
       // :focus-visible, so pointer users see no focus ring.
       canvasRef.current.focus();
+    }
+    if (open && paletteRef.current) {
+      const swatches = paletteRef.current.querySelectorAll('button');
+      const chosen = Array.from(swatches).find(
+        swatch => swatch.getAttribute('aria-pressed') === 'true'
+      );
+      (chosen ?? swatches[0])?.focus();
     }
   }, [open]);
 
@@ -127,6 +156,15 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       if (
         target &&
         (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')
+      ) {
+        return;
+      }
+      // The letter acts only with focus in the editor or on nothing, so a
+      // host's other controls keep their keys.
+      if (
+        target &&
+        target !== document.body &&
+        !target.closest('[data-pixel-editor]')
       ) {
         return;
       }
@@ -165,14 +203,20 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         e.stopPropagation();
-        onChange(colorOnOpenRef.current);
+        // Nothing to put back when no color was tried; saying so would
+        // read as a color being chosen.
+        const opened = colorOnOpenRef.current;
+        if (opened.some((value, i) => value !== colorRef.current[i])) {
+          onChange(opened);
+        }
+        onCancel?.();
         setOpen(false);
         focusSwatchSoon();
       }
     };
     document.addEventListener('keydown', onKeyDown, true);
     return () => document.removeEventListener('keydown', onKeyDown, true);
-  }, [open, onChange, focusSwatchSoon]);
+  }, [open, onChange, onCancel, focusSwatchSoon]);
 
   // Read the spectrum pixel at (x, y) into the active color.
   const sampleAt = useCallback(
@@ -278,6 +322,8 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       }
       onClick={() => (open ? setOpen(false) : openPicker())}
       aria-label="Choose color (C)"
+      aria-haspopup="true"
+      aria-expanded={open}
     />
   );
 
@@ -288,7 +334,18 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
   };
 
   return (
-    <div ref={rootRef} className={moduleStyles.colorPicker}>
+    <div
+      ref={rootRef}
+      className={moduleStyles.colorPicker}
+      // Tabbing on to another control leaves the popover behind, so it
+      // closes. A press inside it that takes focus nowhere does not.
+      onBlur={e => {
+        const next = e.relatedTarget as Node | null;
+        if (open && next && !rootRef.current?.contains(next)) {
+          setOpen(false);
+        }
+      }}
+    >
       {open ? (
         // No tooltip while the palette is open: the bubble sits on the same
         // alignment line and would cover its colors.
@@ -298,7 +355,22 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
           {swatchButton}
         </PixelTooltip>
       )}
-      {open && (
+      {open && palette && (
+        <div
+          ref={paletteRef}
+          className={classNames(
+            moduleStyles.spectrumPopover,
+            moduleStyles.palettePopover
+          )}
+        >
+          <PaletteSwatches
+            palette={palette}
+            color={color}
+            onChange={pickAndClose}
+          />
+        </div>
+      )}
+      {open && !palette && (
         <div className={moduleStyles.spectrumPopover}>
           <div className={moduleStyles.spectrumWrap}>
             {/* role="application" so screen readers hand the arrow keys

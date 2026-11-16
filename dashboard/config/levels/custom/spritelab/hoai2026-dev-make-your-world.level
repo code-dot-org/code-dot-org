@@ -7,6 +7,9 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -15,7 +18,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -26,6 +29,16 @@
       "paletteRoles": [
         "treasure",
         "block"
+      ],
+      "extraTabs": [
+        "Images"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "imageKinds": [
+        "sprite"
       ]
     },
     "starter_images": [
@@ -85,7 +98,7 @@
       "title": "**Make your world**",
       "items": [
         {
-          "text": "Click a square to place your object where your player can reach it.",
+          "text": "Select a square to place your object where your player can reach it.",
           "check": {
             "kind": "world",
             "role": "treasure"
@@ -99,7 +112,7 @@
           }
         },
         {
-          "text": "Click **Play**, then run and jump to your object.",
+          "text": "Select **Run**, then run and jump to your object.",
           "check": {
             "kind": "reach",
             "role": "treasure"

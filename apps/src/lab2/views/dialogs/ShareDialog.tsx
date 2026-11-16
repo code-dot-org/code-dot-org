@@ -31,11 +31,6 @@ import moduleStyles from './share-dialog.module.scss';
 
 export const SHARE_FAILURE_TITLE = "This project can't be shared";
 
-// A Sprite Lab in Lab2 remix lands in the classic Sprite Lab until the lab
-// has a standalone project of its own (#75765); the finish dialog's Open
-// Sprite Lab is held until then.
-const REMIX_OFFERED = false;
-
 export const SHARE_FAILURE_FALLBACK_PREFIX =
   "The project can't be shared because it contains flagged content. ";
 
@@ -233,7 +228,7 @@ const ShareDialog: React.FunctionComponent<{
           onClose={handleClose}
           shareUrl={isAbusive || userSharingDisabled ? undefined : shareUrl}
           projectType={projectType}
-          onRemix={REMIX_OFFERED && !isAbusive ? remix : undefined}
+          onRemix={isAbusive ? undefined : remix}
           certificateUrl={finishUrl}
         />
       </div>

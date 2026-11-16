@@ -1,3 +1,5 @@
+require 'cdo/aws/metrics'
+
 # Relays one adaptive shell generation from the browser into Langfuse. The
 # browser calls the AI gateway directly, so Rails never sees the call; this
 # is where the user is established and the payload is bounded before export.
@@ -20,6 +22,7 @@ class AdaptiveTracesController < ApplicationController
     body = params.to_unsafe_h
     client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:ADAPTIVE]
     unless current_user.can_access_aichat_chat_completion?(client_type, body['levelId'])
+      count_forbidden
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
@@ -43,6 +46,25 @@ class AdaptiveTracesController < ApplicationController
       end_time: Time.at(body['endedAt'] / 1000.0),
     )
     render json: {traceId: body['traceId']}
+  end
+
+  # A refusal means the student got the shell without its AI parts.
+  private def count_forbidden
+    Cdo::Metrics.push(
+      SharedConstants::AICHAT_METRICS_NAMESPACE,
+      [
+        {
+          metric_name: 'AdaptiveTraces.Forbidden',
+          value: 1,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+            {name: 'UserType', value: current_user.user_type.to_s},
+          ],
+        }
+      ]
+    )
   end
 
   private def validation_error(body)

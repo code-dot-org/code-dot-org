@@ -20,6 +20,7 @@ import {
   Word,
   WORD_DRAG_TYPE,
   wordFor,
+  withLead,
 } from './sentences';
 import {playSound} from './sentenceSounds';
 import {WordLayout} from './wordLayout';
@@ -33,6 +34,9 @@ interface WordMenusProps {
   disabled?: boolean;
   /** Defaults to 'carousel': one slot's words at a time, moving sideways. */
   layout?: WordLayout;
+  /** A verb shown in front of the sentence, e.g. "Generate". It is not
+      part of the prompt. */
+  lead?: string;
 }
 
 // An icon or a color dot is about this many letters wide.
@@ -56,7 +60,11 @@ export function useWordMenus({
   onChange,
   disabled,
   layout,
+  lead,
 }: WordMenusProps): WordMenuParts {
+  const shownSegments = lead
+    ? withLead(sentence.segments, lead)
+    : sentence.segments;
   const clusters = layout === 'clusters';
   const vertical = layout === 'vcarousel';
   const slots = slotsToOffer(sentence);
@@ -345,6 +353,16 @@ export function useWordMenus({
       );
     });
 
+  // The kind of word a set holds, above its words. It is hidden from
+  // screen readers because the group around the words is already named for
+  // the set.
+  const wordsHeading = (set: Slot) =>
+    set.heading && (
+      <p className={styles.wordsHeading} aria-hidden>
+        {set.heading}
+      </p>
+    );
+
   const clustersNode = (
     <div className={styles.clusters}>
       {slots.map(
@@ -356,6 +374,7 @@ export function useWordMenus({
               aria-label={`${set.label}${set.required ? ' (pick one)' : ''}`}
               className={styles.cluster}
             >
+              {wordsHeading(set)}
               <div className={styles.words}>{renderWords(set)}</div>
             </div>
           )
@@ -372,13 +391,13 @@ export function useWordMenus({
         </div>
         <div className={styles.sentenceStack}>
           <p className={styles.sentence}>
-            {withPeriod(renderSegments(sentence.segments, choices))}
+            {withPeriod(renderSegments(shownSegments, choices))}
           </p>
           <p
             className={classNames(styles.sentence, styles.sentenceGhost)}
             aria-hidden
           >
-            {withPeriod(renderSegments(sentence.segments, longestChoices))}
+            {withPeriod(renderSegments(shownSegments, longestChoices))}
           </p>
         </div>
       </>
@@ -443,6 +462,7 @@ export function useWordMenus({
                       }`}
                       aria-hidden={!inView}
                     >
+                      {wordsHeading(set)}
                       <div className={styles.words}>
                         {renderWords(set, key)}
                       </div>

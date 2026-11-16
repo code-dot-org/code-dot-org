@@ -159,6 +159,8 @@ jest.mock('@cdo/apps/adaptive/progress/progressStore', () => ({
     saveStep: jest.fn(),
     saveInstructions: jest.fn(),
   },
+  recordProgressOk: jest.fn(),
+  recordProgressFailure: jest.fn(),
 }));
 
 const step = (id: string) => ({
@@ -530,7 +532,7 @@ describe('PathwayApp', () => {
       steps: {'intro-step': {status: 'started', timeSpent: 0}},
     });
     await renderSettled();
-    expect(screen.getByText('header: Skill Tree: Pathway')).toBeTruthy();
+    expect(screen.getByText('header: Skill Map: Pathway')).toBeTruthy();
 
     act(() => screen.getByText("I'm finished!").click());
 

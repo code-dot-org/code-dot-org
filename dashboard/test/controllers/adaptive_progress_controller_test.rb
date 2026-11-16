@@ -267,6 +267,27 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     end
   end
 
+  test "a refused save is reported with its reason, step and level" do
+    Observability::Errors.expects(:report).with(
+      error_class: 'AdaptiveProgressRejected',
+      error_message: 'Adaptive progress save rejected: invalid_validation_attempt',
+      fingerprint: 'AdaptiveProgressRejected:invalid_validation_attempt',
+      context: {reason: 'invalid_validation_attempt', step_id: 'try', level_id: @level.id, script_id: @unit.id}
+    )
+
+    put_validation 'try', {'pass' => true, 'evidenceLevel' => 3, 'reason' => 'Fine.'}
+
+    assert_response :unprocessable_entity
+  end
+
+  test "an accepted save reports nothing" do
+    Observability::Errors.expects(:report).never
+
+    put_step 'read', started: true
+
+    assert_response :success
+  end
+
   test "level steps take their state from the step level's user level" do
     put_instructions 'try', {'instructions' => 'Do this.'}
     user_level = create(:user_level, user: @student, level: @sandbox, script: @unit, best_result: -150, time_spent: 12)

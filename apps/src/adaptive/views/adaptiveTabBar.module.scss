@@ -29,7 +29,6 @@
         }
 
         &[aria-selected='true'] {
-          color: var(--text-neutral-secondary);
           border-bottom-color: var(--border-brand-primary);
         }
       }

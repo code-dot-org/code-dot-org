@@ -93,14 +93,14 @@ describe('LearningDialog', () => {
       />
     );
     expect(readThrough()).toEqual([
+      'A background is a big job',
       'AI learned from examples',
       'Your words guide the image',
       'From noise to picture',
       'Try another picture',
       'Evaluate the picture',
-      'A background is a big job',
     ]);
-    fireEvent.click(screen.getByRole('button', {name: 'Back'}));
+    // The last panel is the one about rating.
     expect(screen.getByRole('img', {name: 'thumbs up'})).toBeTruthy();
     expect(screen.getByRole('img', {name: 'thumbs down'})).toBeTruthy();
   });

@@ -153,6 +153,12 @@ export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
 
   init() {
     super.init();
+    this.takeLevelDefault();
+  }
+
+  /** Starts the field on the level's default image, unless a saved value
+      was loaded into it. */
+  takeLevelDefault() {
     if (!this.valueLoaded) {
       this.applyLevelDefault();
     }
@@ -250,6 +256,28 @@ export class BlockImageField extends Lab2AnimationDropdown {
   static fromJson(_options: BlocklyCore.FieldConfig) {
     return animationDropdown('block', BlockImageField);
   }
+}
+
+const imageDropdownsOn = (
+  workspace: BlocklyCore.Workspace
+): Lab2AnimationDropdown[] =>
+  workspace
+    .getAllBlocks(false)
+    .flatMap(block => block.inputList)
+    .flatMap(input => input.fieldRow)
+    .filter(
+      (field): field is Lab2AnimationDropdown =>
+        field instanceof Lab2AnimationDropdown
+    );
+
+/**
+ * Starts every image dropdown of a workspace that is never shown on the
+ * level's default image. Blockly calls a field's `init` only on a workspace
+ * it draws, so on any other workspace the dropdowns would stay on the
+ * newest image.
+ */
+export function takeLevelDefaults(workspace: BlocklyCore.Workspace): void {
+  imageDropdownsOn(workspace).forEach(field => field.takeLevelDefault());
 }
 
 /**

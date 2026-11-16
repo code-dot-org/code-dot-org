@@ -19,7 +19,7 @@ const BASE = 'https://cache.test/generate/';
 const VERSION = 'v9';
 const FOLDER = `${BASE}${VERSION}/character/brave/dragon/_/pixel`;
 
-// A tiny tree: the named variants' base frames, and one walking frame;
+// A tiny cache: the named variants' base frames, and one walking frame;
 // anything else is a 404.
 function installFetch(variants: string[] = ['00', '02']) {
   const calls: string[] = [];
@@ -115,7 +115,7 @@ describe('imageCache', () => {
     expect(calls).toEqual([`${FOLDER}/00-base.png`, `${FOLDER}/00-base.png`]);
   });
 
-  it('has nothing for words or a style the tree lacks', async () => {
+  it('has nothing for words or a style the cache lacks', async () => {
     installFetch();
     expect(await find({wordIds: ['brave', 'cat', '_']})).toBeUndefined();
     expect(await find({style: 'smooth'})).toBeUndefined();

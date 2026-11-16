@@ -65,6 +65,10 @@ const SceneNameField: React.FunctionComponent<SceneNameFieldProps> = ({
         onChange={e => setDraft(e.target.value)}
         onKeyDown={e => {
           if (e.key === 'Enter') {
+            // Saving the name moves focus to a button. Without this, the
+            // browser carries the same press of Enter on to that button
+            // and clicks it: New scene would open a second new scene.
+            e.preventDefault();
             commit();
           } else if (e.key === 'Escape') {
             // Escape here cancels the name. It is stopped so the dialog's

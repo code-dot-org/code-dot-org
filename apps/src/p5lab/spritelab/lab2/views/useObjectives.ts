@@ -1,5 +1,7 @@
-// The level's checklist as the Guide shows it: which items hold, kept once
-// earned for the rest of the visit, and the game's progress feeding them.
+// The level's checklist as the Guide shows it: which items are done, and
+// the game's progress feeding them. An item that is checked once stays done
+// for the rest of the visit. Any other item is done only while its check
+// passes.
 
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
@@ -8,6 +10,7 @@ import {ObjectiveItem, ObjectivesChecklist} from '@cdo/apps/lab2/types';
 import {
   checkObjective,
   EMPTY_RUNTIME,
+  isCheckedOnce,
   Objective,
   ObjectiveInputs,
   Objectives,
@@ -140,10 +143,12 @@ export function usePlayProgress(
 }
 
 /**
- * The checklist's state. Once an item is completed it stays completed, and
- * once an item has appeared it stays visible, even if its check stops
- * passing. Reloading the page starts the checklist over; the level's saved
- * progress is what lasts.
+ * The checklist's state. An item whose check is checked once (see
+ * isCheckedOnce) stays completed once that check has passed. Any other
+ * item is completed only while its check passes, so it is un-ticked when
+ * the student undoes the work. An item that has appeared stays visible.
+ * Reloading the page starts the checklist over; the level's saved progress
+ * is what lasts.
  */
 export function useObjectives({
   objectives,
@@ -158,6 +163,7 @@ export function useObjectives({
   generated,
   rated,
   runtime,
+  completedBefore = false,
 }: {
   objectives: Objectives | undefined;
   images: ImageCounts;
@@ -171,6 +177,8 @@ export function useObjectives({
   generated: ImageCounts;
   rated: boolean;
   runtime: RuntimeProgress;
+  /** The student has already completed this level, on an earlier visit. */
+  completedBefore?: boolean;
 }): ObjectivesState {
   const [earned, setEarned] = useState<ReadonlySet<number>>(new Set());
   const inputs: ObjectiveInputs = useMemo(
@@ -227,17 +235,62 @@ export function useObjectives({
     const newlyCompleted = newIndexes(completed, (item, inputs) =>
       checkObjective(item.check, inputs)
     );
+    // The completed items that are checked the whole time and whose check
+    // no longer passes. The student has undone that work, so these items
+    // are un-ticked.
+    const undone = [...completed].filter(index => {
+      const item = items?.[index];
+      return (
+        !!item &&
+        !isCheckedOnce(item.check) &&
+        !checkObjective(item.check, inputs)
+      );
+    });
     const visible = shownRef.current;
     const newlyVisible = newIndexes(visible, objectiveShown);
     // State is set only when something changed. The inputs are a new object
     // on most renders, so setting state every time would loop forever.
-    if (newlyCompleted.length) {
-      setEarned(new Set([...completed, ...newlyCompleted]));
+    // Each update is applied to the set as it is at that moment, not to the
+    // copy read above, so it cannot undo another update that is waiting.
+    if (newlyCompleted.length || undone.length) {
+      setEarned(
+        current =>
+          new Set(
+            [...current, ...newlyCompleted].filter(
+              index => !undone.includes(index)
+            )
+          )
+      );
     }
     if (newlyVisible.length) {
-      setShown(new Set([...visible, ...newlyVisible]));
+      setShown(current => new Set([...current, ...newlyVisible]));
     }
-  }, [newIndexes]);
+  }, [newIndexes, items, inputs]);
+
+  // When a student comes back to a level they already completed, the
+  // steps that are checked once (see isCheckedOnce) are marked as done.
+  // They passed on the earlier visit, and nothing in the project can
+  // check them now. Every other step is checked against the project, as
+  // usual.
+  //
+  // A step that stays hidden until another check passes (shownWhen) is not
+  // marked, because the level could have been completed without it.
+  //
+  // The level's completed status can arrive after the checklist first
+  // shows, so this is an effect.
+  useEffect(() => {
+    if (!completedBefore || !items?.length) {
+      return;
+    }
+    const done = items.flatMap((item, index) =>
+      isCheckedOnce(item.check) && !item.shownWhen ? [index] : []
+    );
+    setEarned(current =>
+      done.every(index => current.has(index))
+        ? current
+        : new Set([...current, ...done])
+    );
+  }, [completedBefore, items]);
 
   // The result is a new object only when something changed, because the
   // panel that receives it re-renders whenever the object is new.

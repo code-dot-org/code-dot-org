@@ -1,3 +1,5 @@
+@use "../../checkerboard";
+
 .dialog {
   width: 640px;
   max-width: 100%;
@@ -17,12 +19,21 @@
   align-items: center;
 }
 
-.thumb {
+// The thumbnail's picture is drawn as a CSS background, so the
+// checkerboard behind it has to be on a box of its own around it.
+.thumbBox {
   flex: none;
   width: 64px;
   height: 64px;
   border-radius: 8px;
-  background-color: var(--background-neutral-secondary);
+  overflow: hidden;
+
+  @include checkerboard.light-checkerboard(8px);
+}
+
+.thumb {
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: left center;
   background-size: contain;

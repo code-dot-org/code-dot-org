@@ -1,5 +1,6 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import {createPortal} from 'react-dom';
 
 import ProgressWidget, {ProgressBubble, ProgressWidgetProps} from '../';
 
@@ -40,6 +41,32 @@ describe('ProgressWidget', () => {
     expect(
       screen.getByRole('button', {name: 'Lesson 3: Puzzles'}),
     ).toHaveAttribute('aria-expanded', 'true');
+  });
+
+  it('shows the lesson name as text without a lesson handler', () => {
+    renderWidget({onLessonClick: undefined});
+    expect(screen.getByText('Lesson 3: Puzzles')).toBeInTheDocument();
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
+  });
+
+  it('leaves the lesson area empty for a plain title with no name', () => {
+    const {container} = renderWidget({
+      onLessonClick: undefined,
+      lessonLabel: '',
+    });
+    expect(
+      container.firstElementChild?.firstElementChild,
+    ).toBeEmptyDOMElement();
+  });
+
+  it('keeps the save status when a plain title has no name', () => {
+    renderWidget({
+      onLessonClick: undefined,
+      lessonLabel: '',
+      saveStatus: 'saved',
+      saveStatusLabel: 'Saved',
+    });
+    expect(screen.getByRole('img', {name: 'Saved'})).toBeInTheDocument();
   });
 
   it('names the bubble row', () => {
@@ -102,6 +129,16 @@ describe('ProgressWidget', () => {
   it('renders the action', () => {
     renderWidget({action: <button>Continue</button>});
     expect(screen.getByRole('button', {name: 'Continue'})).toBeInTheDocument();
+  });
+
+  it('leaves an empty slot that a portal fills', () => {
+    renderWidget({actionSlotId: 'header-action'});
+    const slot = document.getElementById('header-action') as HTMLElement;
+    expect(slot).toBeEmptyDOMElement();
+    render(<>{createPortal(<button>I'm finished</button>, slot)}</>);
+    expect(
+      within(slot).getByRole('button', {name: "I'm finished"}),
+    ).toBeInTheDocument();
   });
 
   it('draws nothing for a falsy action', () => {

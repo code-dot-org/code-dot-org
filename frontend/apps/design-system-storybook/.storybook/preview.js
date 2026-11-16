@@ -9,7 +9,7 @@ import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 import '@code-dot-org/component-library-styles/brandOverrides.css';
-import './preview.module.scss';
+import './preview.scss';
 import BrandDecorator, {DEFAULT_BRAND} from '../decorators/BrandDecorator';
 
 // Import FontAwesome into the `base` layer (declared below `mui`) so MUI's

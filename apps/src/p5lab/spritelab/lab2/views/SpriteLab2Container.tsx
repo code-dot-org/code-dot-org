@@ -9,13 +9,14 @@ import useSources from '@cdo/apps/lab2/hooks/useSources';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
+  getStandaloneProjectId,
   getAppOptionsEditBlocks,
   getIsLevelEditMode,
 } from '@cdo/apps/lab2/projects/utils';
 import {LabProps} from '@cdo/apps/lab2/types';
 import getInitialSources from '@cdo/apps/lab2/utils/getInitialSources';
 import Loading from '@cdo/apps/lab2/views/Loading';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   installSharedBlocks,
@@ -49,11 +50,11 @@ function getToolboxEditSources(
   return {source: toolboxToWorkspaceBlocks(definition)};
 }
 
-// The block catalog's bookkeeping is not a student edit: Continue and the
-// Run/Edit prompt read hasEdited.
+// Saved flags for the block catalog and free play intro are not student
+// edits: Continue and the Run/Edit prompt read hasEdited.
 const CATALOG_KEYS: ReadonlySet<keyof Sources> = new Set<keyof Sources>([
   'chosenBlocks',
-  'blockCatalogSeen',
+  'freeplayIntroSeen',
 ]);
 const isStudentEdit = (prev: Sources, next: Sources) =>
   (Object.keys({...prev, ...next}) as (keyof Sources)[]).some(
@@ -64,6 +65,9 @@ const SpriteLab2Container: React.FunctionComponent<
   LabProps<SpriteLab2LevelProperties, Sources>
 > = ({levelProperties}) => {
   const dispatch = useAppDispatch();
+  // A share link is play only, for its owner too.
+  const isShareView = !!useAppSelector(state => state.lab.isShareView);
+  const standaloneChannelId = useMemo(getStandaloneProjectId, []);
 
   useEffect(() => setupSpriteLab2BlocklyEnvironment(), []);
 
@@ -88,6 +92,9 @@ const SpriteLab2Container: React.FunctionComponent<
   } = useSources<Sources>({
     levelProperties,
     defaultSources,
+    // Without this a project page loads the visitor's own project for the
+    // level, not the one in the address.
+    standaloneChannelId,
     onReinitialize: handleReinitialize,
     getToolboxEditSources,
     computeHasEdited: isStudentEdit,
@@ -117,6 +124,8 @@ const SpriteLab2Container: React.FunctionComponent<
   }
   const storedForLevel =
     loadedForRef.current === levelProperties.id ? storedSources : undefined;
+  const isViewOnly =
+    !!levelProperties.isProjectLevel && !restOutputs.isEditable && !isShareView;
   // Such a level's start sources may write a scene's world in the packed
   // form (packedWorld.ts). It is expanded here, for readers and for the base
   // an updater builds on, so the rest of the lab only sees the grid.
@@ -126,7 +135,7 @@ const SpriteLab2Container: React.FunctionComponent<
   }, [readOnlyLevel, levelSources, storedForLevel]);
   const updateSources = useCallback<typeof updateStoredSources>(
     (next, forceSave) => {
-      if (readOnlyLevel) {
+      if (readOnlyLevel || isShareView || isViewOnly) {
         return;
       }
       updateStoredSources(
@@ -134,7 +143,7 @@ const SpriteLab2Container: React.FunctionComponent<
         forceSave
       );
     },
-    [readOnlyLevel, updateStoredSources]
+    [readOnlyLevel, isShareView, isViewOnly, updateStoredSources]
   );
   const patchSources = useCallback<typeof patchStoredSources>(
     (patch, forceSave) =>
@@ -173,6 +182,9 @@ const SpriteLab2Container: React.FunctionComponent<
       channelId={channel?.id}
       sourcesReinitializedCount={sourcesReinitializedCount}
       {...restOutputs}
+      isEditable={restOutputs.isEditable && !isShareView}
+      isShareView={isShareView}
+      isViewOnly={isViewOnly}
     />
   );
 };

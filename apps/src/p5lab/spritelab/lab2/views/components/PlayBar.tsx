@@ -36,7 +36,7 @@ const afterFrames = (count: number, fn: () => void): void => {
  * A button that holds a game key down for as long as it is pressed: from
  * pointer down to pointer up, or from Enter/Space down to up. A click with
  * neither (assistive technology) taps the key. The key is released if the
- * button goes away while held (Reset, or the set changing).
+ * button goes away while held (Stop, or the set changing).
  */
 const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
   gameKey,
@@ -194,9 +194,9 @@ interface RunButtonsProps {
 }
 
 /**
- * The buttons of the bar under the stage: Run, or while playing, Reset. The
+ * The buttons of the bar under the stage: Run, or while playing, Stop. The
  * Run button follows the legacy lab's, so it takes the when-run block's
- * color under an accessibility theme; Reset is the legacy lab's purple.
+ * color under an accessibility theme; Stop is the legacy lab's purple.
  */
 export const RunButtons: React.FunctionComponent<RunButtonsProps> = ({
   playing,
@@ -212,10 +212,10 @@ export const RunButtons: React.FunctionComponent<RunButtonsProps> = ({
         variant="contained"
         color="primary"
         size="small"
-        startIcon={<FontAwesomeV6Icon iconName="rotate-right" />}
+        startIcon={<FontAwesomeV6Icon iconName="stop" />}
         onClick={onStop}
       >
-        Reset
+        Stop
       </MuiButton>
     ) : null;
   }

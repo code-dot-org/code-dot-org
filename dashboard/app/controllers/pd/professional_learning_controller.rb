@@ -188,7 +188,12 @@ class Pd::ProfessionalLearningController < ApplicationController
     zip_code = params[:zip_code]
 
     partner, _ = RegionalPartner.find_by_zip(zip_code)
-    rp_workshops = partner&.pd_workshops || []
+    rp_workshops =
+      if partner
+        partner.pd_workshops.where(started_at: nil, hidden: [false, nil]).includes(:sessions)
+      else
+        []
+      end
     available_regional_workshops = rp_workshops.select do |ws|
       start_of_ws = ws.sessions.first.try(:start)
       start_date = ws.time_zone ? start_of_ws.in_time_zone(ws.time_zone).to_date : start_of_ws.to_date

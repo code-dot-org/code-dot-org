@@ -293,6 +293,17 @@ button.chipWord {
   flex-direction: column;
 }
 
+// The kind of word in a set ("Noun", "Adjective"), above the set's words.
+.wordsHeading {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--text-neutral-quaternary);
+}
+
 .cluster {
   padding: 14px 0;
 
