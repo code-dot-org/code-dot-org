@@ -240,8 +240,7 @@ export function flyoutCategory(
     blockList.push(newBehaviorButton);
   }
 
-  // Add blocks from the level toolbox XML, if present.
-  blockList.push(...getCategoryBlocksJson('Behavior'));
+  blockList.push(...getCategoryBlocksJson(workspace, 'Behavior'));
 
   // Workspaces to populate behaviors flyout category from
   const workspaces = [

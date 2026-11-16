@@ -311,7 +311,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
     <div className={styles.player}>
       <AdaptiveHeader
         title={headerTitle ?? `${checkpoint.title}: ${step.title}`}
-        onViewSkillTree={() => {
+        onViewSkillMap={() => {
           sendAdaptiveEvent(
             EVENTS.ADAPTIVE_SKILL_MAP_HEADER_BUTTON_CLICKED,
             {

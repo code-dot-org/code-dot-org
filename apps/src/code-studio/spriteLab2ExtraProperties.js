@@ -15,6 +15,7 @@ import initializeCodeMirror6 from './initializeCodeMirror6';
 export const RAW_EDITABLE_PROPERTIES = [
   'block_catalog',
   'lock_earlier_blocks',
+  'freeplay_intro',
   'objectives',
   'hide_custom_blocks',
   'image_role_defaults',

@@ -1,4 +1,4 @@
-export type {AiDiffChatState, HostedDrawerConfig} from './state';
+export type {AiDiffChatState, DrawerRubric, HostedDrawerConfig} from './state';
 export * from './thunks';
 export {
   setChatIsOpen,
@@ -18,4 +18,5 @@ export {
   openDrawerToNav,
   clearRequestedNav,
   setHostedDrawerConfig,
+  setDrawerRubric,
 } from './slice';

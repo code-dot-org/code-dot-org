@@ -193,6 +193,9 @@ dashboard_workers: 5
 active_job_backend_n_workers_to_start: 2
 active_job_backend_rolling_restart_in_n_batches: 1
 
+# CI does not run an OpenTelemetry Collector.
+enable_opentelemetry: false
+
 ##
 ## Unit-specific settings for CI
 ##

@@ -3,43 +3,68 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<h1>Section 3: Making Predictions</h1>
+# Facilitating Testing Regression Models
 
-<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; font-size: 13px; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lessons 3-4</div>
+## What's Actually Happening in This Lesson
 
-<p>This section prepares you to teach two curriculum lessons. Students first learn to read and interpret data, categorical and numerical, then use that foundation to make the central conceptual leap of the whole unit: turning data into a prediction, and recognizing whether that prediction is a category or a number.</p>
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
-  <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 3:</b> Describing Data</div>
-  <a href="PASTE_UNIT_2_LESSON_3_URL_HERE" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 3</a>
-</div>
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
-  <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 4:</b> Prediction Models</div>
-  <a href="PASTE_UNIT_2_LESSON_4_URL_HERE" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 4</a>
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Warm-up:</strong> the Dani/Sasha debate, students take sides before any formal method is introduced</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Exploring Loss:</strong> students invent their own way to calculate loss from the Activity Guide's data, before "absolute error" is ever named</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Comparing Models (Levels 1-2):</strong> students implement a loss function in Python, then complete a Check for Understanding comparing two real models</div>
+  </div>
 </div>
 
 <hr>
 
-<p><b>In this section, you'll:</b></p>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Tell categorical and numerical data apart, and recognize correlation and outliers in a real scatter plot</div>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Meet Anita's Parlor, the running example for this whole section, and see why a small business owner needs predictions in the first place</div>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Try the same regression and classification widgets students use themselves</div>
-<div style="font-size: 16px;">&bull; Get ahead of two real misconceptions: mistaking a business decision for a prediction question, and telling regression and classification apart</div>
+## Watch for: The Signed Loss Trap
+
+This is the real, documented mistake, not a guess.
+
+<div style="text-align: center; margin: 20px auto;">
+  <img src="https://images.code.org/4b36e93a18767e2f4f89d61e860f71ef-image-1794513461508.png" alt="A simple comparison showing an overshoot of plus 3 and an undershoot of minus 3 summing to a misleading 0, versus the same two errors as absolute values, 3 and 3, correctly summing to 6" style="width: 60%; border-radius: 10px;">
+</div>
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Signed Loss</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Overshoots and undershoots cancel out, giving Dani's model a total loss of 0, which makes it look perfect.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Absolute Error</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Every error counts as a positive distance, so a model can't cancel out its own mistakes.</div>
+  </div>
+</div>
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Notice as you explore:</b> this section's two lessons share one real test worth repeating to students all year: is the output a category, or a number? That single question is what regression and classification actually come down to.</div>
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222;">&bull; "That model clearly isn't perfect, so how can its loss be 0? What happened when you added up the errors?"</div>
 </div>
 
-<hr>
+## Resolving the Debate: Fewer Exact Matches, Still Better Overall
 
-<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 1</div>
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 2</div>
-  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 3</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 4</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 5</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 6</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 7</div>
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; The real answer:</strong> Sasha's model is better in most scenarios. A model whose predictions all stay close to the trend usually beats one that nails a few points exactly but misses badly elsewhere. Acknowledge the exception: some real situations genuinely need a few exact hits, but that's the less common case.
+  </div>
 </div>
+
+## Assessment: Level 2 Check for Understanding
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; What a strong answer needs, both parts:</strong> correctly identifying the better model, and explaining why using its lower loss, not just a gut preference. If a student gets the right model but can't connect it to loss, have them explain their loss function in their own words first.
+  </div>
+</div>
+
+![]()
 MARKDOWN

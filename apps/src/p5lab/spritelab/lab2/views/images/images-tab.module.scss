@@ -127,7 +127,7 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   min-height: 36px;
 }
 
-// The name over its count, with the plus at the right.
+// The name over its count, with button(s) at the right.
 .listTitle {
   flex: 1 1 auto;
   min-width: 0;
@@ -476,6 +476,16 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   font-size: 14px;
   text-align: center;
   color: var(--text-neutral-primary);
+}
+
+// Sits at the foot of the list, under the tiles.
+.listNotice {
+  flex: none;
+  margin-top: auto;
+}
+
+.listNotice + .listFooter {
+  margin-top: 0;
 }
 
 // Pinned to the pane's foot, however little stands above it.

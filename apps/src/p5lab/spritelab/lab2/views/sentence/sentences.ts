@@ -16,6 +16,9 @@ import manifestJson from '@cdo/static/spritelab_lab2/sentences.json';
 export interface Word {
   id: string;
   text: string;
+  /** Sent to the model in place of `text`, for a detail the student did not
+      choose and should not be told they wrote, e.g. the witch's green skin. */
+  modelFacingText?: string;
   /** A Font Awesome icon shown beside the text; decoration, not read aloud. */
   icon?: string;
   /** A plain color, shown as a dot beside the text in place of an icon. */
@@ -246,10 +249,22 @@ export function phraseFilled(
 }
 
 /**
- * The prompt text for the sentence: empty optional slots and unfilled
- * phrases are left out, and the spaces they leave are closed up.
+ * Returns the plain string prompt for the sentence. When
+ * useModelFacingTextVariant is false (which it normally is), the string is
+ * just the adlibs the student chose, joined by the sentence's fixed text,
+ * e.g. "A cat wearing a crown". When useModelFacingTextVariant is true, we
+ * sub in each chosen word's `modelFacingText` (special text to prompt the
+ * model for something the student didn't ask for, currently only used for
+ * the witch) to get "A green-skinned witch" instead of just "A witch" (the
+ * adlib the student sees).
  */
-export function promptText(sentence: Sentence, choices: Choices): string {
+export function promptText(
+  sentence: Sentence,
+  choices: Choices,
+  {
+    useModelFacingTextVariant = false,
+  }: {useModelFacingTextVariant?: boolean} = {}
+): string {
   const parts: string[] = [];
   const add = (segments: Segment[]) => {
     segments.forEach(segment => {
@@ -258,7 +273,9 @@ export function promptText(sentence: Sentence, choices: Choices): string {
       } else if ('slot' in segment) {
         const word = wordFor(sentence, segment.slot, choices[segment.slot]);
         if (word) {
-          parts.push(word.text);
+          parts.push(
+            (useModelFacingTextVariant && word.modelFacingText) || word.text
+          );
         }
       } else if (phraseFilled(sentence, segment.phrase, choices)) {
         add(segment.phrase);
@@ -307,6 +324,28 @@ export function restoreChoices(
     });
   }
   return restored;
+}
+
+/**
+ * Every generated image saves the text actually sent to the model, and
+ * since the witch has a modelFacingText, that isn't always the ad lib the
+ * student saw. This recreates the ad lib from the image's saved choices.
+ * If those choices don't rebuild the saved text exactly (a typed prompt,
+ * or a word list that's changed since), we fall back to the saved text.
+ */
+export function promptTextFromImage(
+  generation: ImageGenerationMetadata
+): string {
+  const {sentenceId, choices, imageType, subject, prompt} = generation;
+  if (!choices) {
+    return prompt;
+  }
+  const sentence = sentenceFor(imageType, subject, sentenceId);
+  const restored = restoreChoices(sentence, {sentenceId, choices});
+  const sent = promptText(sentence, restored, {
+    useModelFacingTextVariant: true,
+  });
+  return sent === prompt ? promptText(sentence, restored) : prompt;
 }
 
 /** The body plan of the chosen creature, when the sentence has one. */

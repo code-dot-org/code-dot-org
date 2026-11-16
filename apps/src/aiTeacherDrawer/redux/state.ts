@@ -1,3 +1,5 @@
+import {Rubric, StudentLevelInfo} from '@cdo/apps/types/rubricTypes';
+
 import {ThreadTypeFields} from '../constants';
 import {
   AiArtifact,
@@ -21,6 +23,21 @@ export interface HostedDrawerConfig {
   hideButton?: boolean;
   canStartOpen?: boolean;
   canDefaultOpen?: boolean;
+}
+
+/**
+ * The rubric the drawer's Rubrics screen shows for the current level. Most
+ * levels embed it in the page; a Lab2 lab moves between levels without a
+ * reload, so it publishes its own each time the level changes.
+ */
+export interface DrawerRubric {
+  rubric: Rubric;
+  studentLevelInfo?: StudentLevelInfo | null;
+  levelName?: string;
+  parentLevelName?: string;
+  levelType?: string;
+  unitName?: string;
+  courseName?: string;
 }
 
 export interface AiDiffChatState {
@@ -59,4 +76,6 @@ export interface AiDiffChatState {
   // Set when a host other than the page's own mount point should render the
   // drawer; null when the page renders it itself.
   hostedDrawerConfig: HostedDrawerConfig | null;
+  // Null when the current level has no rubric to show.
+  drawerRubric: DrawerRubric | null;
 }
