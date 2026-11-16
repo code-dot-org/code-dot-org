@@ -245,7 +245,7 @@ class LessonsController < ApplicationController
         end
       end
 
-      exam_script_levels = @lesson.script_levels.select(&:exam_quiz?)
+      exam_script_levels = @lesson.script_levels.includes(:levels).select(&:exam_quiz?)
       if exam_script_levels.any?
         problems = []
         problems << "the lesson is not lockable" unless @lesson.lockable
