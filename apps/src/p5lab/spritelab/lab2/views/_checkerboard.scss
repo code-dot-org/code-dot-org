@@ -12,3 +12,10 @@
   background-size: $cell $cell;
   background-position: 0 0, 0 $half, $half (-$half), (-$half) 0;
 }
+
+// The light checkerboard of the paint editor: white and pale gray in both
+// the light and the dark theme. Generated pictures are shown on it
+// everywhere, so a picture looks the same wherever it appears.
+@mixin light-checkerboard($cell) {
+  @include checkerboard($cell, var(--neutral-gray-10), var(--neutral-base-white));
+}

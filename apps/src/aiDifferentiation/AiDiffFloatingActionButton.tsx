@@ -313,9 +313,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   const showRebrandedIcon = experiments.isEnabled('ta-teacher-panel');
   const showPulse =
     canShowPulse && !hasOpened && (showRebrandedIcon || isFabImageLoaded);
-  const classes = showPulse
-    ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
-    : style.floatingActionButtonRight;
+  const classes = classNames(
+    style.floatingActionButtonRight,
+    showPulse && [style.pulse, 'unittest-fab-pulse']
+  );
 
   // Every path that opens the drawer ends in chatIsOpen going true, including
   // the automatic open above and the teacher panel handle, which never touch

@@ -3,7 +3,6 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {type AilabProject} from '@cdo/apps/ailab/engine';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -38,13 +37,6 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     defaultSources: AILAB_DEFAULT_SOURCES,
     onReinitialize: handleReinitialize,
   });
-
-  useEffect(() => {
-    if (projectManager) {
-      Lab2Registry.getInstance().setProjectManager(projectManager);
-    }
-    return () => Lab2Registry.getInstance().clearProjectManager();
-  }, [projectManager]);
 
   useEffect(() => {
     if (loadError) {

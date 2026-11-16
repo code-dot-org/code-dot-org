@@ -9,6 +9,8 @@ import {
   sentenceSlotIds,
   sentenceWordIds,
   slotsToOffer,
+  promptTextFromImage,
+  withLead,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
 import manifest from '@cdo/static/spritelab_lab2/sentences.json';
 
@@ -63,9 +65,48 @@ describe('sentences', () => {
     ).toBe('A cute witch wearing a crown');
   });
 
+  it("reads a word's modelFacingText only when asked", () => {
+    const choices = {adjective: 'cute', creature: 'witch'};
+    expect(promptText(CHARACTER_SENTENCE, choices)).toBe('A cute witch');
+    expect(
+      promptText(CHARACTER_SENTENCE, choices, {useModelFacingTextVariant: true})
+    ).toBe('A cute green-skinned witch');
+    expect(
+      promptText(
+        CHARACTER_SENTENCE,
+        {creature: 'cat'},
+        {useModelFacingTextVariant: true}
+      )
+    ).toBe('A cat');
+  });
+
+  it("rebuilds a generated image's words as the student chose them", () => {
+    const generation = {
+      prompt: 'A cute green-skinned witch',
+      imageType: 'sprite' as const,
+      style: 'pixel' as const,
+      sentenceId: 'character',
+      choices: {adjective: 'cute', creature: 'witch'},
+    };
+    expect(promptTextFromImage(generation)).toBe('A cute witch');
+    expect(
+      promptTextFromImage({...generation, prompt: 'A cute witch, smiling'})
+    ).toBe('A cute witch, smiling');
+    expect(
+      promptTextFromImage({
+        ...generation,
+        prompt: 'A typed prompt',
+        choices: undefined,
+      })
+    ).toBe('A typed prompt');
+  });
+
   it('leaves out a phrase whose slot is empty, and its words', () => {
     expect(
-      promptText(CHARACTER_SENTENCE, {creature: 'cat', adjective: 'grumpy'})
+      promptText(CHARACTER_SENTENCE, {
+        creature: 'cat',
+        adjective: 'grumpy',
+      })
     ).toBe('A grumpy cat');
   });
 
@@ -195,6 +236,29 @@ describe('sentences', () => {
 
 // The manifest's own sentences: an optional slot before the required one,
 // and a phrase whose slot shows only once filled.
+describe('withLead', () => {
+  it('puts the verb in front and lowers the first letter of the sentence', () => {
+    expect(withLead([{text: 'A '}, {slot: 'creature'}], 'Generate')).toEqual([
+      {text: 'Generate a '},
+      {slot: 'creature'},
+    ]);
+    expect(
+      withLead([{text: 'A block of '}, {slot: 'material'}], 'Generate')
+    ).toEqual([{text: 'Generate a block of '}, {slot: 'material'}]);
+  });
+
+  it('adds the verb as its own text when the sentence starts with a slot', () => {
+    expect(withLead([{slot: 'creature'}], 'Generate')).toEqual([
+      {text: 'Generate '},
+      {slot: 'creature'},
+    ]);
+  });
+
+  it('leaves the prompt as the sentence alone', () => {
+    expect(promptText(CHARACTER_SENTENCE, {creature: 'cat'})).toBe('A cat');
+  });
+});
+
 describe('sentences word ids', () => {
   const place = sentenceFor('background', undefined, 'place');
 

@@ -12,8 +12,8 @@ interface PaletteSwatchesProps {
   onChange: (color: RGBA) => void;
 }
 
-/** A fixed palette as a row of round swatches, in place of the spectrum
-    picker. */
+/** A fixed palette as round swatches, which wrap onto more rows when they
+    do not fit on one. */
 const PaletteSwatches: React.FunctionComponent<PaletteSwatchesProps> = ({
   palette,
   color,

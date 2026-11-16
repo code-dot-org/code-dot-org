@@ -1,3 +1,4 @@
+@use "../../checkerboard";
 @use "../../sentence/sr-only";
 
 // The design-system dialog, wider than its default for the three pictures.
@@ -120,7 +121,8 @@
   border-radius: 8px;
   image-rendering: pixelated;
   object-fit: contain;
-  background-color: var(--background-neutral-secondary);
+
+  @include checkerboard.light-checkerboard(14px);
 }
 
 .thumbs {
@@ -161,10 +163,11 @@
   width: 160px;
   height: 160px;
 
+  // No checkerboard here: the box's grid shows through the picture.
   .chunky {
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    background: none;
   }
 }
 

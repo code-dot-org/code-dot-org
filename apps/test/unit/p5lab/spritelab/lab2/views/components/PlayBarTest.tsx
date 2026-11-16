@@ -46,13 +46,13 @@ describe('RunButtons', () => {
     expect(onPlayGame).toHaveBeenCalled();
   });
 
-  it('shows Reset while playing, and nothing with nowhere to go', () => {
+  it('shows Stop while playing, and nothing with nowhere to go', () => {
     const onStop = jest.fn();
     const {rerender} = render(
       <RunButtons playing onPlay={jest.fn()} onStop={onStop} />
     );
-    expect(names()).toEqual(['Reset']);
-    screen.getByRole('button', {name: 'Reset'}).click();
+    expect(names()).toEqual(['Stop']);
+    screen.getByRole('button', {name: 'Stop'}).click();
     expect(onStop).toHaveBeenCalled();
     rerender(<RunButtons playing onPlay={jest.fn()} />);
     expect(screen.queryByRole('button')).toBeNull();

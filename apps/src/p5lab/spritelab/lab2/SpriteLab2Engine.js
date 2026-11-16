@@ -197,6 +197,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
+    // (text) when a sprite starts saying or thinking something new.
+    this.onSpeech = null;
     // ({touching: image names, height: 0 floor to 1 top}) each frame a
     // player exists.
     this.onPlayerProgress = null;
@@ -712,6 +714,19 @@ export default class SpriteLab2Engine extends SpriteLab {
         bubbleType,
         this.bubbleView_ || undefined
       );
+    // A say block in a repeating event re-adds its bubble every frame, so
+    // only a change in what the sprite says is reported.
+    const addSpeechBubble = library.addSpeechBubble;
+    library.addSpeechBubble = function (sprite, text) {
+      const repeated = this.speechBubbles.some(
+        bubble => bubble.sprite === sprite && bubble.text === text
+      );
+      const id = addSpeechBubble.apply(this, arguments);
+      if (!repeated && engine.onSpeech) {
+        engine.onSpeech(String(text));
+      }
+      return id;
+    };
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));

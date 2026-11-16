@@ -2,6 +2,24 @@
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 @use './editor-strip' as strip;
 
+// A browser draws scrollbars, and its own menus and fields, for a light page
+// unless color-scheme tells it the page is dark. The theme sets its colors
+// through the data-theme attribute, which tells the browser nothing, so
+// these rules say which scheme goes with the lab's theme.
+
+// The second selector in each rule is for an element inside the lab that
+// sets a different theme, such as the copyright button, which is always
+// light. It gets the scheme for its own theme, not the lab's.
+:global([data-theme='Dark']) .labRow,
+.labRow :global([data-theme='Dark']) {
+  color-scheme: dark;
+}
+
+:global([data-theme='Light']) .labRow,
+.labRow :global([data-theme='Light']) {
+  color-scheme: light;
+}
+
 .labRow {
   display: flex;
   width: 100%;
@@ -11,6 +29,30 @@
   .tabShell {
     flex: 1;
     min-width: 0;
+  }
+}
+
+// The page layout hides its small footer from 970px up. A share link keeps
+// it at every width.
+:global(body.spritelab2-share .responsive-content-mobile-footer) {
+  display: block;
+}
+
+// From this width up the footer shares the lab's bottom row with the share
+// buttons. Under it, the lab's row moves up and the footer has its own row.
+$share-one-row-min-width: 1024px;
+
+.labRowShareView {
+  @media screen and (max-width: #{$share-one-row-min-width - 1px}) {
+    box-sizing: border-box;
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: $share-one-row-min-width) {
+  // `html` so this outranks the page's own footer rule on a dark page.
+  :global(html body.spritelab2-share #page-small-footer .small-footer-base) {
+    margin-bottom: 7px;
   }
 }
 
@@ -39,6 +81,10 @@
   width: 100%;
   height: 100%;
   min-height: 0;
+}
+
+.shellAlert {
+  flex: 0 0 auto;
 }
 
 // One outer height for every tab item — plain tabs and the Code+scene group —
@@ -133,6 +179,12 @@ $z-over-blockly: 71;
   gap: 8px;
 }
 
+// Controls a caller draws at the bar's right end, such as an info button.
+.editorStripEndSlot {
+  display: flex;
+  align-items: center;
+}
+
 // Undo and redo.
 .editorStripHistory {
   display: flex;
@@ -180,8 +232,9 @@ $z-over-blockly: 71;
   bottom: $editor-strip-height;
 }
 
-// The scene bar at the editors' base, the strip's twin: the scene
-// controls at its start, the project-wide controls at its end.
+// The scene bar along the bottom of the editors. It is the same height as
+// the editor strip along their top. The project-wide controls are at its
+// start and the scene controls are at its end.
 .workspaceSceneBar {
   position: absolute;
   bottom: 0;
@@ -198,7 +251,7 @@ $z-over-blockly: 71;
   border-top: 1px solid var(--borders-neutral-primary);
 }
 
-// Discover blocks at the workspace bar's end, at the bar's control height.
+// Discover blocks at the workspace bar's start, at the bar's control height.
 .barButton.barButton {
   height: $tab-item-height;
   padding: 0 12px;
@@ -419,24 +472,28 @@ $z-over-blockly: 71;
   // Keyboard focus ring for the play-mode game region; an outline so the
   // 400x400 geometry the transform and pointer math rely on is untouched.
   &:focus-visible {
-    outline: 2px solid var(--borders-neutral-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: 2px;
   }
 }
 
-// The bar pinned to the stage's foot, the editors' scene bar's twin: Run
-// under the preview, Reset while playing. The overlay passes pointer
-// events through; the bar takes its own.
+// The bar along the bottom of the stage, level with the editors' scene
+// bar. It holds the Run buttons under the preview, and Stop while the game
+// plays. The overlay passes pointer events through; the bar takes its own.
 .bottomBar {
   position: absolute;
   bottom: 0;
-  height: $editor-strip-height;
+  // The bar is at least as tall as the scene bar, and grows taller when
+  // its buttons stack in two rows. The 4px of padding above and below is
+  // the space left around a single row of buttons, so a bar with one row
+  // is exactly the scene bar's height.
+  min-height: $editor-strip-height;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: 0 8px;
+  padding: 4px 8px;
   background: var(--background-neutral-primary);
   border-top: 1px solid var(--borders-neutral-primary);
   pointer-events: auto;
@@ -453,6 +510,15 @@ $z-over-blockly: 71;
   min-width: 0;
   align-items: center;
   gap: 16px;
+  // In a narrow column the second button moves to a row of its own, and
+  // each row is centered. A button's label never breaks onto two lines.
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 8px;
+
+  button {
+    white-space: nowrap;
+  }
 }
 
 // Placed by the playspace beside or under the game; the cross inside takes
@@ -512,6 +578,11 @@ $arrow-gap: 6px;
   background: var(--background-neutral-primary-inverse);
   color: var(--text-neutral-primary-inverse);
   font-size: 14px;
+
+  // The theme's ring is too faint on the dark stage.
+  &:focus-visible {
+    outline-color: var(--border-focused-primary);
+  }
 
   &:hover,
   &:active {
@@ -608,7 +679,7 @@ $arrow-gap: 6px;
   }
 
   &:focus-visible {
-    outline: 2px solid var(--borders-neutral-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: -2px;
   }
 }
@@ -655,5 +726,3 @@ $arrow-gap: 6px;
 .srOnly {
   @include chrome.sr-only;
 }
-
-

@@ -1,0 +1,22 @@
+name 'pl-aif-y2-u2-l4-prediction-line'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Reading a Prediction Line Yourself
+
+You just saw how to read Miles = 4 off the line to find Cost = $9. Now try it yourself with any input: move the slider, watch the dashed guide lines trace the path, and read the predicted cost.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/prediction-line-reader.html"
+    width="100%"
+    height="1000"
+    frameborder="0"
+    scrolling="no"
+    title="Interactive: read a prediction off a regression line for any input">
+  </iframe>
+</div>
+
+
+MARKDOWN

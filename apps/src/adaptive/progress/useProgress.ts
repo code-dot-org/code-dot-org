@@ -4,7 +4,6 @@
 import {useCallback, useEffect, useState} from 'react';
 
 import {TestResults} from '@cdo/apps/constants';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 import {Pathway, Step} from '../types';
 
@@ -21,6 +20,8 @@ import {
   ProgressKey,
   ProgressStore,
   StepWrite,
+  recordProgressFailure,
+  recordProgressOk,
   serverProgressStore,
 } from './progressStore';
 import {usePathwayStatus} from './usePathwayStatus';
@@ -41,11 +42,6 @@ interface ProgressOptions {
 // The server rounds each save up to whole seconds; match it.
 const toSeconds = (ms: number) => Math.ceil(ms / 1000);
 
-const logFailure = (what: string, error: unknown) =>
-  Lab2Registry.getInstance()
-    .getMetricsReporter()
-    .logError(`Adaptive progress: ${what} failed`, error as Error);
-
 export function useProgress(
   pathway: Pathway,
   key: ProgressKey,
@@ -61,10 +57,11 @@ export function useProgress(
     setProgress(undefined);
     store.load({scriptId, levelId}).then(
       loaded => {
+        recordProgressOk('load');
         if (!cancelled) setProgress(loaded);
       },
       error => {
-        logFailure('load', error);
+        recordProgressFailure('load', error);
         if (!cancelled) setProgress(EMPTY_PROGRESS);
       }
     );
@@ -102,7 +99,10 @@ export function useProgress(
         properties.appName,
         write.completed ? TestResults.ALL_PASS : TestResults.LEVEL_STARTED,
         write.timeSinceLastSave ?? 0
-      ).catch(error => logFailure(`report ${step.id}`, error));
+      ).then(
+        () => recordProgressOk('level_step'),
+        error => recordProgressFailure('level_step', error, step.id)
+      );
     },
     [updateStep, store, scriptId, levelId, reportLevelStep]
   );

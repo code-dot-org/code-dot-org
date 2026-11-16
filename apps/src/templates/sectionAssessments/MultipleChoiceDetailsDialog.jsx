@@ -1,4 +1,4 @@
-import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';

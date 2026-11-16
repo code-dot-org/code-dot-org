@@ -1,6 +1,7 @@
 import {
   countImagesByType,
   countWorldCells,
+  generatedOnLevel,
   imageCountsDelta,
 } from '@cdo/apps/p5lab/spritelab/lab2/projectCounts';
 import {RuntimeAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/types';
@@ -62,5 +63,50 @@ describe('countImagesByType', () => {
       background: 1,
       block: 1,
     });
+  });
+});
+
+describe('generatedOnLevel', () => {
+  const generation = (verdict?: 'up' | 'down') => ({
+    imageType: 'sprite',
+    prompt: 'A gem',
+    ...(verdict && {verdict}),
+  });
+  const list = (propsByKey: Record<string, unknown>) =>
+    ({
+      orderedKeys: Object.keys(propsByKey),
+      propsByKey,
+    } as unknown as RuntimeAnimationList);
+
+  it('counts a new AI-made image, and not one from before or one drawn by hand', () => {
+    const images = list({
+      old: {name: 'Hero', categories: [], generation: generation('up')},
+      made: {name: 'Gem', categories: [], generation: generation()},
+      drawn: {name: 'Doodle', categories: []},
+    });
+    expect(generatedOnLevel(images, new Set(['Hero']), new Set())).toEqual({
+      generated: {sprite: 1, background: 0, block: 0},
+      rated: false,
+    });
+  });
+
+  it("counts the level's own image from an earlier visit, with the rating given since", () => {
+    // Back on the level: the treasure is changed in place, so its name was
+    // already in the project when the level opened.
+    const before = new Set(['Hero', 'Gem']);
+    const own = new Set(['Gem']);
+    const unrated = list({
+      hero: {name: 'Hero', categories: [], generation: generation('up')},
+      gem: {name: 'Gem', categories: [], generation: generation()},
+    });
+    expect(generatedOnLevel(unrated, before, own)).toEqual({
+      generated: {sprite: 1, background: 0, block: 0},
+      rated: false,
+    });
+    const rated = list({
+      hero: {name: 'Hero', categories: [], generation: generation('up')},
+      gem: {name: 'Gem', categories: [], generation: generation('down')},
+    });
+    expect(generatedOnLevel(rated, before, own).rated).toBe(true);
   });
 });

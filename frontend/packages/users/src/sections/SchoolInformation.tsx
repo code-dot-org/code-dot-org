@@ -5,6 +5,7 @@ import {Field} from '@code-dot-org/component-library/form';
 import TextField from '@code-dot-org/component-library/textField';
 
 import UpdateSchoolModal from '../components/UpdateSchoolModal';
+import {NO_SCHOOL_SETTING} from '../util/schoolInfo';
 
 import Section from './Section';
 import type {SectionProps} from './types';
@@ -16,7 +17,10 @@ const EMPTY_HINT_ID = 'school-information-empty-hint';
 
 export default function SchoolInformation({settings}: SectionProps) {
   const [open, setOpen] = useState(false);
-  const schoolName = settings.schoolInfo?.schoolName ?? '';
+  const schoolName =
+    settings.schoolInfo?.schoolType === NO_SCHOOL_SETTING
+      ? 'Non-School Setting'
+      : (settings.schoolInfo?.schoolName ?? '');
 
   return (
     <Section id="school-information" title="School Information">

@@ -192,7 +192,7 @@ const CHARACTER_PANELS: PanelContent[] = [
   },
   {
     heading: 'Try another version',
-    body: 'Click Generate again. The result can be different, even with the same prompt.',
+    body: 'Select Regenerate. The result can be different, even with the same prompt.',
     visual: anotherGuess,
   },
   {
@@ -203,6 +203,11 @@ const CHARACTER_PANELS: PanelContent[] = [
 ];
 
 const BACKGROUND_PANELS: PanelContent[] = [
+  {
+    heading: 'A background is a big job',
+    body: 'Here, backgrounds have many more *pixels*, or tiny squares of color, than characters, objects, or blocks. Together, they form one scene.',
+    visual: sizes,
+  },
   {
     heading: 'AI learned from examples',
     body: 'Before you ever used it, the AI was *trained* on many example pictures. It learned patterns from many pictures and the words describing them.',
@@ -220,18 +225,13 @@ const BACKGROUND_PANELS: PanelContent[] = [
   },
   {
     heading: 'Try another picture',
-    body: 'Click *Generate* again. The picture can be different, even with the same prompt.',
+    body: 'Select *Regenerate*. The picture can be different, even with the same prompt.',
     visual: anotherGuess,
   },
   {
     heading: 'Evaluate the picture',
     body: 'Look closely. Does it match what you asked for? Then use [thumb up] or [thumb down] to rate it.',
     visual: evaluate,
-  },
-  {
-    heading: 'A background is a big job',
-    body: 'Here, backgrounds have four times as many *pixels*, or tiny squares of color, as characters, objects, or blocks. Together, they form one scene.',
-    visual: sizes,
   },
 ];
 

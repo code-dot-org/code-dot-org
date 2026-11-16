@@ -35,7 +35,7 @@ const AdaptiveTabBar: React.FunctionComponent<AdaptiveTabBarProps> = ({
         if (value !== activeTab) onTabChange(value as TabValue);
       }}
       hidePanels
-      tabListAriaLabel="View"
+      tabListAriaLabel="Switch view"
       tabs={[
         {
           value: 'project',

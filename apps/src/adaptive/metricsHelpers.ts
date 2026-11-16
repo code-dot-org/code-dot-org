@@ -16,6 +16,9 @@ export function setAdaptiveMetricsContext(properties: {
   pathwayProperties = properties;
 }
 
+export const adaptivePathwayId = () =>
+  pathwayProperties.pathwayId as string | undefined;
+
 export function sendAdaptiveEvent(
   event: string,
   properties: Properties = {},
@@ -38,6 +41,27 @@ export function stepProperties(checkpoint: Checkpoint, step: Step) {
     levelName: step.kind === 'level' ? step.level : undefined,
   };
 }
+
+export type AiFallbackFeature = 'instructions' | 'project' | 'validation';
+
+/** The student got the shell without an AI part it would have had. */
+export function sendAiStaticFallbackUsed(
+  feature: AiFallbackFeature,
+  reason: string,
+  checkpoint: Checkpoint,
+  step: Step
+) {
+  sendAdaptiveEvent(
+    EVENTS.ADAPTIVE_AI_STATIC_FALLBACK_USED,
+    {...stepProperties(checkpoint, step), feature, reason},
+    feature
+  );
+}
+
+export const moderationFallbackReason = (moderation: 'flagged' | 'error') =>
+  moderation === 'flagged'
+    ? 'outputFlaggedByModeration'
+    : 'moderationCheckFailed';
 
 export function statusCounts(statusMap: CheckpointStatusMap) {
   const count = (status: CheckpointStatus) =>

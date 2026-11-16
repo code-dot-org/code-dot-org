@@ -18,7 +18,7 @@ function renderBar(props = {}) {
       onSelectScene={onSelectScene}
       onNewScene={jest.fn()}
       onManageScenes={onManageScenes}
-      rightExtra={<span>extra</span>}
+      startExtra={<span>extra</span>}
       {...props}
     />
   );

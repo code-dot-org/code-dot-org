@@ -494,9 +494,7 @@ const customInputTypes = {
 
     generateCode(block, arg) {
       const id = block.getFieldValue(arg.name);
-      const label = Blockly.getMainWorkspace()
-        .getVariableMap()
-        .getVariableById(id).name;
+      const label = block.workspace.getVariableMap().getVariableById(id).name;
       const name = Blockly.JavaScript.getVariableName(id);
       return [`"${label}"`, `"${name}"`];
     },
