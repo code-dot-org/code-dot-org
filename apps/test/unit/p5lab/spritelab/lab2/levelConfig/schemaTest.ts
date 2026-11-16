@@ -14,7 +14,7 @@ describe('parseLevelConfig', () => {
       edits: ['images', 'world'],
       images: {makes: {type: 'sprite', role: 'friend'}, makeFirst: true},
       world: {palette: ['friend', 'block'], keepsOneOf: ['friend']},
-      scenes: [{id: 'scene-1', name: 'Scene 1'}],
+      scenes: {starting: [{id: 'scene-1', name: 'Scene 1'}]},
     };
     expect(parseLevelConfig(config)).toEqual({config, problems: []});
   });
@@ -55,9 +55,17 @@ describe('parseLevelConfig', () => {
   it('lets only a later scene be marked editable', () => {
     const scene = {id: 'scene-1', name: 'Scene 1'};
     const second = {id: 'second-scene', name: 'Scene 2', editable: true};
-    expect(problemsOf({scenes: [scene, second]})).toEqual([]);
-    expect(problemsOf({scenes: [{...scene, editable: true}]})).toEqual([
-      'scenes.0.editable',
+    expect(problemsOf({scenes: {starting: [scene, second]}})).toEqual([]);
+    expect(
+      problemsOf({scenes: {starting: [{...scene, editable: true}]}})
+    ).toEqual(['scenes.starting.0.editable']);
+  });
+
+  it('lets a level set up scenes or let the student change them, not both', () => {
+    const starting = [{id: 'scene-1', name: 'Scene 1'}];
+    expect(problemsOf({scenes: {canChange: true}})).toEqual([]);
+    expect(problemsOf({scenes: {starting, canChange: true}})).toEqual([
+      'scenes.canChange',
     ]);
   });
 });

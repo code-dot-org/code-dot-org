@@ -34,6 +34,20 @@ describe('withLevelConfig', () => {
     expect(applied.freeplayIntro).toBe(true);
   });
 
+  it('lets a level say the student can change scenes', () => {
+    const applied = withLevelConfig(
+      level({
+        levelConfig: {
+          focus: 'code',
+          edits: ['code'],
+          scenes: {canChange: true},
+        },
+      })
+    );
+    expect(applied.studentChangesScenes).toBe(true);
+    expect(applied.pinnedScene).toBeUndefined();
+  });
+
   it('treats a config that says nothing about its focus as free play', () => {
     expect(withLevelConfig(level({levelConfig: {}})).levelMode).toEqual({
       kind: 'freeplay',

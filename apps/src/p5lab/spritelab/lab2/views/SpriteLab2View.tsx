@@ -2133,11 +2133,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     getWorkspace: getMainWorkspace,
   });
 
-  // Only freeplay adds, renames, reorders or deletes scenes; a level with no
-  // mode is unconstrained.
+  // Free play adds, renames, reorders or deletes scenes, and so does a
+  // level that says so; a level with no mode is unconstrained.
   const scenesEditable =
     !isViewOnly &&
-    (!levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode));
+    (levelProperties.studentChangesScenes ??
+      (!levelProperties.levelMode ||
+        isFreeplayMode(levelProperties.levelMode)));
   // The stage: the preview beside Code and World, centered to play; Images
   // takes the whole width.
   const playspaceMode: PlayspaceMode =

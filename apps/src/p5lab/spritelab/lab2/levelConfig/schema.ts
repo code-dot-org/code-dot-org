@@ -173,6 +173,37 @@ const sceneSchema = z.strictObject({
   }),
 });
 
+const scenesSchema = z
+  .strictObject({
+    starting: z.array(sceneSchema).max(2).optional().meta({
+      title: 'Starting scenes',
+      description:
+        'Scenes the level makes sure the project has. The first is the one the level opens, and the student is kept to these.',
+    }),
+    canChange: z.boolean().optional().meta({
+      title: 'Student can change scenes',
+      description:
+        'The student can add, rename, reorder and delete scenes. On in free play, off elsewhere, when not set.',
+    }),
+  })
+  .superRefine((scenes, context) => {
+    if (scenes.canChange && scenes.starting?.length) {
+      context.addIssue({
+        code: 'custom',
+        path: ['canChange'],
+        message:
+          'A level with starting scenes keeps the student to them, so it cannot also let them change scenes.',
+      });
+    }
+    if (scenes.starting?.[0]?.editable !== undefined) {
+      context.addIssue({
+        code: 'custom',
+        path: ['starting', 0, 'editable'],
+        message: 'The first scene is always the one the student edits.',
+      });
+    }
+  });
+
 const blocksSchema = z.strictObject({
   addOnArrival: z.array(z.custom<AddBlockEntry>(anObject)).optional().meta({
     title: 'Blocks added on arrival',
@@ -235,11 +266,7 @@ export const levelConfigSchema = z
     }),
     images: imagesSchema.optional().meta({title: 'Images'}),
     world: worldSchema.optional().meta({title: 'World'}),
-    scenes: z.array(sceneSchema).max(2).optional().meta({
-      title: 'Scenes',
-      description:
-        'The scenes the level sets up. The first is the one the level opens.',
-    }),
+    scenes: scenesSchema.optional().meta({title: 'Scenes'}),
     blocks: blocksSchema.optional().meta({title: 'Blocks'}),
     guide: guideSchema.optional().meta({title: 'Guide'}),
   })
@@ -264,13 +291,6 @@ export const levelConfigSchema = z
         code: 'custom',
         path: ['edits'],
         message: `The level's focus, ${focus}, is something the student can change.`,
-      });
-    }
-    if (config.scenes?.[0]?.editable !== undefined) {
-      context.addIssue({
-        code: 'custom',
-        path: ['scenes', 0, 'editable'],
-        message: 'The first scene is always the one the student edits.',
       });
     }
   });

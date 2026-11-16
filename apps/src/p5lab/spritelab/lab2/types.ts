@@ -152,6 +152,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
         one; Play still starts the game from the pinned scene. */
     editable?: boolean;
   };
+  /** Whether the student can add, rename, reorder and delete scenes. Unset,
+      they can in free play and on a level with no mode. */
+  studentChangesScenes?: boolean;
   /** The level's objectives (objectives.ts): the Guide's text, checklist
       and Continue gate. */
   objectives?: Objectives;

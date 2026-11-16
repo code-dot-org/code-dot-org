@@ -24,6 +24,7 @@ export type FlatProperties = Pick<
   | 'addBlocks'
   | 'callouts'
   | 'starterImages'
+  | 'studentChangesScenes'
 >;
 
 const FOCUS_OF_KIND: Partial<Record<LevelModeKind, Focus>> = {
@@ -182,7 +183,7 @@ export function levelConfigFromFlat(properties: FlatProperties): {
       palette: list(mode.paletteRoles),
       keepsOneOf: list(properties.worldKeepsRoles),
     }),
-    scenes: scenes.length ? scenes : undefined,
+    scenes: scenes.length ? {starting: scenes} : undefined,
     blocks: group({
       addOnArrival: list(properties.addBlocks),
       lockEarlier: on(properties.lockEarlierBlocks) || undefined,

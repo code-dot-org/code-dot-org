@@ -60,7 +60,7 @@ export function flatFromLevelConfig(config: LevelConfig): FlatProperties {
   if (levelMode.extraTabs && !levelMode.extraTabs.length) {
     delete levelMode.extraTabs;
   }
-  const [first, second] = scenes ?? [];
+  const [first, second] = scenes?.starting ?? [];
   const hasGuide =
     guide &&
     (guide.title !== undefined ||
@@ -82,6 +82,7 @@ export function flatFromLevelConfig(config: LevelConfig): FlatProperties {
         worldStartRoles: second.world?.roles,
         editable: second.editable,
       }),
+    studentChangesScenes: scenes?.canChange,
     worldKeepsRoles: world?.keepsOneOf,
     starterImages: images?.starters,
     addBlocks: blocks?.addOnArrival,
@@ -115,6 +116,7 @@ const FLAT_KEYS: (keyof FlatProperties)[] = [
   'addBlocks',
   'callouts',
   'starterImages',
+  'studentChangesScenes',
 ];
 
 /**

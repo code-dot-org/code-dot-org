@@ -44,7 +44,7 @@ describe('levelConfigFromFlat', () => {
           palette: ['friend', 'hero', 'treasure', 'block'],
           keepsOneOf: ['friend', 'hero', 'treasure'],
         },
-        scenes: [{id: 'scene-1', name: 'Scene 1'}],
+        scenes: {starting: [{id: 'scene-1', name: 'Scene 1'}]},
         blocks: {dropdownsStartOn: {sprite: 'hero'}},
         guide: {
           title: '**Friend or foe?**',
@@ -94,7 +94,7 @@ describe('levelConfigFromFlat', () => {
         editable: true,
       },
     });
-    expect(config.scenes).toEqual([
+    expect(config.scenes?.starting).toEqual([
       {
         id: 'scene-1',
         name: 'Scene 1',
