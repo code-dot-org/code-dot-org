@@ -1,6 +1,8 @@
+import {sendEvent, setUser} from '@code-dot-org/core/plugins/analytics';
 import {StatsigClient} from '@statsig/js-client';
 import {runStatsigAutoCapture} from '@statsig/web-analytics';
 
+import DCDO from '@cdo/apps/dcdo';
 import logToCloud from '@cdo/apps/logToCloud';
 import experiments from '@cdo/apps/util/experiments';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
@@ -21,6 +23,11 @@ import {
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
 const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
+
+// While on, the core analytics plugin owns transmission and this class only logs.
+function isAnalyticsPluginEnabled() {
+  return DCDO.get('statsig-plugin-enabled', false);
+}
 
 class StatsigReporter {
   constructor() {
@@ -111,6 +118,10 @@ class StatsigReporter {
     enabledExperiments,
     educatorRole,
   }) {
+    if (isAnalyticsPluginEnabled()) {
+      setUser({userId, userType, isVerifiedInstructor, educatorRole});
+      return;
+    }
     await this.readyPromise;
     if (!this.ready || !this.statsigClient) {
       return;
@@ -135,6 +146,10 @@ class StatsigReporter {
   }
 
   sendEvent(eventName, payload, value) {
+    if (isAnalyticsPluginEnabled()) {
+      sendEvent(eventName, payload, value);
+      return;
+    }
     if (!this.ready) {
       this.readyPromise.then(() => this.sendEvent(eventName, payload, value));
       return;
@@ -195,6 +210,9 @@ class StatsigReporter {
    *   Firehose.
    */
   shouldPutRecord(alwaysPut) {
+    if (isAnalyticsPluginEnabled()) {
+      return false;
+    }
     if (alwaysPut) {
       return true;
     }
