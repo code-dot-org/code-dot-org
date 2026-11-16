@@ -5,9 +5,12 @@
 import {
   CheckpointStatus,
   CheckpointStatusMap,
+  ContinueUnlockReason,
   ValidationAttempt,
 } from '../progress/model';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
+
+import {ChatThresholds} from './validation/chatThresholds';
 
 export interface TutorContextInput {
   pathway: Pathway;
@@ -17,9 +20,22 @@ export interface TutorContextInput {
   statusMap: CheckpointStatusMap;
   /** The student's project, when the step edits it. */
   project?: PathwayProjectInfo;
+  /** The instructions the student sees, generated or authored. */
+  instructions?: string;
   /** The latest check of the student's work on this step, when one has run. */
   latestValidationAttempt?: ValidationAttempt;
+  /** Why Continue is open on a checked step, while it is. */
+  continueUnlocked?: ContinueUnlockReason;
+  /** Where the chat alone opens Continue on a checked step. */
+  chatThresholds?: ChatThresholds;
 }
+
+const UNLOCK_REASONS: {[reason in ContinueUnlockReason]: string} = {
+  validationPassed: 'a build met the goal',
+  failedValidations:
+    'several builds were checked without passing, and the check can be wrong',
+  replyLimit: 'the student has talked with you long enough',
+};
 
 const STATUS_HEADINGS: {[status in CheckpointStatus]: string} = {
   complete: 'Completed',
@@ -111,6 +127,31 @@ function projectSection(project: TutorContextInput['project']): string {
     .join('\n');
 }
 
+function checkSection({
+  step,
+  instructions,
+  continueUnlocked,
+  chatThresholds,
+}: TutorContextInput): string {
+  const {validation} = step;
+  if (!validation) return '';
+  const lines = [
+    'How this step is checked:',
+    `- Goal: ${validation.condition}`,
+    instructions ? `- The instructions the student sees:\n${instructions}` : '',
+    '- Only a build the student accepts from you is checked against the goal. Talking never triggers a check, so when the student is ready, offer to build.',
+    continueUnlocked
+      ? `- Continue is already open on this step: ${UNLOCK_REASONS[continueUnlocked]}. The student may move on whenever they like; keep helping if they want to meet the goal.`
+      : '- Continue is locked until a build meets the goal.',
+  ];
+  if (!continueUnlocked && chatThresholds) {
+    lines.push(
+      `- For you alone, never to be told to the student: after ${chatThresholds.replyLimit} of your replies Continue opens regardless. Use the replies before then to keep the student engaged: draw out what they are trying to do, ask for real attempts, and steer each exchange toward a build that meets the goal.`
+    );
+  }
+  return lines.filter(Boolean).join('\n');
+}
+
 function validationSection(
   latestValidationAttempt: TutorContextInput['latestValidationAttempt']
 ): string {
@@ -130,20 +171,22 @@ function validationSection(
 }
 
 /** The tutor's briefing on the pathway around a step, as one system prompt. */
-export function buildTutorContext({
-  pathway,
-  checkpoint,
-  step,
-  statusMap,
-  project,
-  latestValidationAttempt,
-}: TutorContextInput): string {
+export function buildTutorContext(input: TutorContextInput): string {
+  const {
+    pathway,
+    checkpoint,
+    step,
+    statusMap,
+    project,
+    latestValidationAttempt,
+  } = input;
   return [
     'The student is working through an adaptive pathway. Keep help tied to the current checkpoint and the pathway objective.',
     pathwaySection(pathway),
     checkpointSection(pathway, checkpoint, step),
     progressSection(pathway, statusMap),
     projectSection(project),
+    checkSection(input),
     validationSection(latestValidationAttempt),
   ]
     .filter(Boolean)

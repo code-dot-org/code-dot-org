@@ -56,38 +56,82 @@ export function generateInputsHash(prompt: string): string {
   return hashString(prompt);
 }
 
-/** One check of a project step's work, as the judge reported it. */
+/** Where an entry in a step's validation history came from. */
+export type ValidationSource =
+  /** The judge rated a build against the step's condition. */
+  | 'work'
+  /** The chat reached the reply limit, which opens Continue regardless. */
+  | 'limit';
+
+/**
+ * One entry in a step's validation history: a check of the student's work,
+ * or, by `source`, a look at their chat instead. Only work entries carry
+ * evidence; the others have evidence level 0 and carry what the student
+ * was told, if anything.
+ */
 export interface ValidationAttempt {
   /** When the server recorded it. */
   at: string;
   pass: boolean;
-  /** On the evidence levels of the skill the step measures. */
+  /** On the evidence levels of the skill the step measures; 0 unless from work. */
   evidenceLevel: number;
-  /** Addressed to the student. */
+  /** Addressed to the student; empty when they were told nothing. */
   reason: string;
   /** The Langfuse trace the judge ran under. */
   traceId?: string;
+  /** Absent on an entry written before chat checks existed; read as work. */
+  source?: ValidationSource;
+  /** Replies in the chat when a chat check ran. */
+  replies?: number;
 }
 
-/** The verdict in force on a step; undefined before its first check. */
+/** The checks of a step's work, oldest first. */
+export const workAttempts = (
+  entry: StepProgress | undefined
+): ValidationAttempt[] =>
+  (entry?.validationHistory ?? []).filter(
+    attempt => (attempt.source ?? 'work') === 'work'
+  );
+
+/** The looks at a step's chat, oldest first. */
+export const chatChecks = (
+  entry: StepProgress | undefined
+): ValidationAttempt[] =>
+  (entry?.validationHistory ?? []).filter(
+    attempt => attempt.source !== undefined && attempt.source !== 'work'
+  );
+
+/** The verdict on a step's work in force; undefined before its first check. */
 export function latestValidation(
   entry: StepProgress | undefined
 ): ValidationAttempt | undefined {
-  const history = entry?.validationHistory;
-  return history?.[history.length - 1];
+  return workAttempts(entry).at(-1);
 }
 
 /** Failed checks after which Continue opens anyway, since the judge can be wrong. */
 export const FAILED_VALIDATIONS_TO_CONTINUE = 3;
 
-/** Whether a checked step's work lets the student continue past it. */
-export function validationAllowsContinue(
+/** Why Continue is open on a checked step, in the order the reasons are tried. */
+export type ContinueUnlockReason =
+  | 'validationPassed'
+  | 'failedValidations'
+  | 'replyLimit';
+
+/** Why a checked step lets the student continue, or undefined while it does not. */
+export function continueUnlockReason(
   entry: StepProgress | undefined
-): boolean {
-  const history = entry?.validationHistory ?? [];
-  if (history.some(attempt => attempt.pass)) return true;
-  return history.length >= FAILED_VALIDATIONS_TO_CONTINUE;
+): ContinueUnlockReason | undefined {
+  const work = workAttempts(entry);
+  if (work.some(attempt => attempt.pass)) return 'validationPassed';
+  if (work.length >= FAILED_VALIDATIONS_TO_CONTINUE) return 'failedValidations';
+  if (chatChecks(entry).some(check => check.pass)) return 'replyLimit';
+  return undefined;
 }
+
+/** Whether a checked step's work or chat lets the student continue past it. */
+export const validationAllowsContinue = (
+  entry: StepProgress | undefined
+): boolean => continueUnlockReason(entry) !== undefined;
 
 /** Id of the project screen's step, which records no progress. */
 export const PROJECT_STEP_ID = 'project';
@@ -102,7 +146,7 @@ export interface StepProgress {
   submitted?: boolean;
   answers?: StepAnswers;
   generatedInstructions?: GeneratedContent;
-  /** Every check of a project step's work, oldest first. */
+  /** Every check of a project step's work or chat, oldest first. */
   validationHistory?: ValidationAttempt[];
 }
 

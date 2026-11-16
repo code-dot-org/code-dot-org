@@ -18,6 +18,8 @@ class AdaptiveProgressController < ApplicationController
   OTHER_CHOICE_ID = 'other'
   # REVIEW_DECISIONS in apps/src/adaptive/schema/steps/review.ts.
   REVIEW_DECISIONS = %w[build skip].freeze
+  # ValidationSource in apps/src/adaptive/progress/model.ts; absent reads as work.
+  VALIDATION_SOURCES = %w[work limit].freeze
 
   # GET /adaptive_progress?scriptId=&levelId=
   def show
@@ -70,7 +72,7 @@ class AdaptiveProgressController < ApplicationController
   end
 
   # PUT /adaptive_progress/steps/:step_id/validation_history
-  # Appends one check of a project step's work.
+  # Appends one check of a project step's work, or of its chat.
   def update_validation_history
     step = @level.find_step(params[:step_id])
     return reject_save('not_validation_step') unless step && step['kind'] == 'level' && step['project'] == true && step['validation'].is_a?(Hash)
@@ -137,25 +139,34 @@ class AdaptiveProgressController < ApplicationController
 
   # The attempt as stored, dated now, or nil if it does not fit: pass is a
   # boolean, the evidence level is 0 or one the measured skill describes,
-  # the reason fits, and the trace id, if any, is a short string.
+  # the reason fits, the trace id, if any, is a short string, and a chat
+  # check names a known source, carries no evidence, and counts its replies.
   private def validation_attempt(step, attempt)
     return nil unless attempt.is_a?(Hash)
     pass = attempt['pass']
     level = attempt['evidenceLevel']
     reason = attempt['reason']
     trace_id = attempt['traceId']
+    source = attempt['source']
+    replies = attempt['replies']
     return nil unless [true, false].include?(pass)
     return nil unless level.is_a?(Integer) && level >= 0
     skill_evidence_levels = @level.content&.dig('skills', step.dig('validation', 'measures', 'skillId'), 'evidenceLevels')
     return nil unless skill_evidence_levels.is_a?(Hash) && (level.zero? || skill_evidence_levels.key?(level.to_s))
     return nil unless reason.is_a?(String) && reason.length <= MAX_TEXT_LENGTH
     return nil unless trace_id.nil? || (trace_id.is_a?(String) && trace_id.length <= 255)
+    return nil unless source.nil? || VALIDATION_SOURCES.include?(source)
+    return nil unless replies.nil? || (replies.is_a?(Integer) && replies >= 0)
+    chat_check = source.present? && source != 'work'
+    return nil if chat_check && (!level.zero? || replies.nil?)
     {
       'at' => Time.zone.now.utc.iso8601,
       'pass' => pass,
       'evidenceLevel' => level,
       'reason' => reason,
       'traceId' => trace_id,
+      'source' => source,
+      'replies' => replies,
     }.compact
   end
 

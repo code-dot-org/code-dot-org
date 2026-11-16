@@ -91,6 +91,8 @@ class DCDO < DynamicConfigBase
       'adaptive-ai-enabled': DCDO.get('adaptive-ai-enabled', false),
       # Seconds the adaptive shell waits on one model call before giving up.
       'adaptive-ai-timeout-seconds': DCDO.get('adaptive-ai-timeout-seconds', 45),
+      # Tutor replies on a checked step after which Continue opens regardless of the work.
+      'adaptive-reply-limit': DCDO.get('adaptive-reply-limit', 8),
       'adaptive-skill-map-tour-enabled': DCDO.get('adaptive-skill-map-tour-enabled', true),
       # AI descriptions of Python Lab theater output; also gates the access token server-side.
       'theater-ai-descriptions-enabled': DCDO.get('theater-ai-descriptions-enabled', false),

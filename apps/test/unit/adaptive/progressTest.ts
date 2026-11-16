@@ -9,8 +9,11 @@ import {
   stepsCompleteShare,
   totalTimeSpent,
   useProgress,
+  continueUnlockReason,
+  chatChecks,
   validationAllowsContinue,
   visibleSteps,
+  workAttempts,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
 import {usePathwayStatus} from '@cdo/apps/adaptive/progress/usePathwayStatus';
@@ -201,6 +204,93 @@ describe('validationAllowsContinue', () => {
 
   it('opens after three failed checks', () => {
     expect(validationAllowsContinue(entry(false, false, false))).toBe(true);
+  });
+
+  it('opens on a passing chat check', () => {
+    const check = (pass: boolean) => ({
+      at: '2026-01-01T00:00:00Z',
+      source: 'limit' as const,
+      pass,
+      evidenceLevel: 0,
+      reason: '',
+      replies: 8,
+    });
+    expect(
+      validationAllowsContinue({
+        timeSpent: 0,
+        validationHistory: [check(false)],
+      })
+    ).toBe(false);
+    expect(
+      continueUnlockReason({
+        timeSpent: 0,
+        validationHistory: [check(true)],
+      })
+    ).toBe('replyLimit');
+  });
+
+  it('counts only work toward the three failures, and names work before chat', () => {
+    const chat = {
+      at: '',
+      source: 'limit' as const,
+      pass: true,
+      evidenceLevel: 0,
+      reason: '',
+      replies: 8,
+    };
+    const failedTwice = entry(false, false);
+    expect(continueUnlockReason(undefined)).toBeUndefined();
+    expect(
+      continueUnlockReason({
+        ...failedTwice,
+        validationHistory: [
+          ...failedTwice.validationHistory,
+          {...chat, pass: false},
+        ],
+      })
+    ).toBeUndefined();
+    expect(
+      continueUnlockReason({
+        ...entry(true),
+        validationHistory: [chat, ...entry(true).validationHistory],
+      })
+    ).toBe('validationPassed');
+    expect(
+      continueUnlockReason({
+        ...entry(false, false, false),
+        validationHistory: [
+          ...entry(false, false, false).validationHistory,
+          chat,
+        ],
+      })
+    ).toBe('failedValidations');
+  });
+});
+
+describe('workAttempts, chatChecks and latestValidation', () => {
+  const work = {at: '1', pass: false, evidenceLevel: 1, reason: 'Not quite!'};
+  const old = {at: '0', pass: false, evidenceLevel: 0, reason: 'Old.'};
+  const chat = {
+    at: '2',
+    source: 'limit' as const,
+    pass: true,
+    evidenceLevel: 0,
+    reason: 'Go on.',
+    replies: 8,
+  };
+  const entry = {timeSpent: 0, validationHistory: [old, work, chat]};
+
+  it('reads an entry with no source as work, and keeps the kinds apart', () => {
+    expect(workAttempts(entry)).toEqual([old, work]);
+    expect(chatChecks(entry)).toEqual([chat]);
+    expect(workAttempts(undefined)).toEqual([]);
+  });
+
+  it('takes the latest check of work, never a chat check', () => {
+    expect(latestValidation(entry)).toBe(work);
+    expect(
+      latestValidation({timeSpent: 0, validationHistory: [chat]})
+    ).toBeUndefined();
   });
 });
 

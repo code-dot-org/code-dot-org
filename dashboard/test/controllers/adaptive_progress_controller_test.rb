@@ -233,6 +233,39 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert_nil UserAdaptiveStep.find_by(step_id: 'try').progress
   end
 
+  test "chat checks are appended to the validation history with their source and reply count" do
+    travel_to Time.utc(2026, 11, 16, 17) do
+      put_validation 'try', {'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'source' => 'limit', 'replies' => 8, 'traceId' => 'trace-1'}
+    end
+    assert_response :success
+    put_validation 'try', {'pass' => true, 'evidenceLevel' => 2, 'reason' => 'Heading added.', 'source' => 'work'}
+    put_validation 'try', {'pass' => false, 'evidenceLevel' => 1, 'reason' => 'Not quite.'}
+
+    history = steps['try']['validationHistory']
+    assert_equal(
+      {'at' => '2026-11-16T17:00:00Z', 'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'source' => 'limit', 'replies' => 8, 'traceId' => 'trace-1'},
+      history[0]
+    )
+    assert_equal ['limit', 'work', nil], history.pluck('source')
+    assert_equal [8, nil, nil], history.pluck('replies')
+  end
+
+  test "refuses a chat check with an unknown source, with evidence, or without its reply count" do
+    chat = {'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'source' => 'limit', 'replies' => 8}
+    [
+      chat.merge('source' => 'teacher'),
+      chat.merge('evidenceLevel' => 1),
+      chat.except('replies'),
+      chat.merge('replies' => '5'),
+      chat.merge('replies' => -1),
+    ].each do |attempt|
+      assert_no_difference 'UserAdaptiveStep.count' do
+        put_validation 'try', attempt
+      end
+      assert_response :unprocessable_entity, attempt.to_s
+    end
+  end
+
   test "only the last validation attempts are kept" do
     25.times do |i|
       put_validation 'try', {'pass' => false, 'evidenceLevel' => 0, 'reason' => "Try #{i}"}
