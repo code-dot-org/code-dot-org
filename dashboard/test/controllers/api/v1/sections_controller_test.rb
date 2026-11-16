@@ -111,6 +111,18 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal expected, returned_json
   end
 
+  test 'index counts students and loads instructors once, not once per section' do
+    3.times {create(:follower, section: create(:section, user: @teacher, login_type: 'word'))}
+
+    sign_in @teacher
+    queries = capture_queries {get :index}
+    assert_response :success
+
+    assert_equal 1, queries.grep(/COUNT\(DISTINCT `users`\.`id`\)/).size, queries.join("\n")
+    assert_equal 1, queries.grep(/FROM `section_instructors`/).size, queries.join("\n")
+    assert_equal @teacher.sections_instructed.map(&:summarize_without_students).as_json, returned_json
+  end
+
   # It's easy to accidentally grant admins permission to `index` all sections
   # in the database - a huge query that we don't want to permit.  Admin users
   # should therefore only get their own sections when indexing sections,

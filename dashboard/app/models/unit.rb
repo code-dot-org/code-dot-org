@@ -2107,12 +2107,17 @@ class Unit < ApplicationRecord
     user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
+  # Both answers are memoized: the instance usually comes from the process-wide
+  # unit cache, and the levels behind the answer only change with a reseed, which
+  # restarts that process.
   def has_ai_chat_tools?
-    self.class.where(id: id).with_ai_chat_tools.exists?
+    return @has_ai_chat_tools if defined?(@has_ai_chat_tools)
+    @has_ai_chat_tools = self.class.where(id: id).with_ai_chat_tools.exists?
   end
 
   def requires_ai_chat_tools?
-    self.class.where(id: id).with_essential_ai_chat_tools.exists?
+    return @requires_ai_chat_tools if defined?(@requires_ai_chat_tools)
+    @requires_ai_chat_tools = self.class.where(id: id).with_essential_ai_chat_tools.exists?
   end
 
   def requires_inaccessible_ai_models?(user)
