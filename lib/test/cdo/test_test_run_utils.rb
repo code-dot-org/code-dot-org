@@ -16,6 +16,8 @@ class TestRunUtilsTest < Minitest::Test
   end
 
   describe 'dashboard_seed_hash' do
+    LEVEL = 'config/standalone_projects/levels/custom/New Fake Project.level'.freeze
+
     before do
       @root = Dir.mktmpdir
       write 'config/videos.csv', 'Key'
@@ -37,6 +39,13 @@ class TestRunUtilsTest < Minitest::Test
     it 'changes when an input is edited' do
       before_hash = seed_hash
       write 'config/videos.csv', 'Key,Name'
+
+      refute_equal before_hash, seed_hash
+    end
+
+    it 'changes when a standalone project level is added' do
+      before_hash = seed_hash
+      write LEVEL, '{}'
 
       refute_equal before_hash, seed_hash
     end

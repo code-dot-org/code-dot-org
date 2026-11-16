@@ -34,6 +34,7 @@ module TestRunUtils
     lib/tasks/seed.rake
     config/videos.csv
     app/models/game.rb
+    config/standalone_projects/**/*
     test/fixtures/**/*.yml
   ].freeze
 
