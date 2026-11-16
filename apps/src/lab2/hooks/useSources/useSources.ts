@@ -190,12 +190,11 @@ export default function useSources<T extends ProjectSources>({
       setHasEdited(false);
       setLoadError(undefined);
       setChannel(undefined);
-      if (registerProjectManager && projectManagerRef.current) {
-        Lab2Registry.getInstance().clearProjectManager(
-          projectManagerRef.current
-        );
+      const previousManager = projectManagerRef.current;
+      await previousManager?.cleanUp();
+      if (registerProjectManager && previousManager) {
+        Lab2Registry.getInstance().clearProjectManager(previousManager);
       }
-      await projectManagerRef.current?.cleanUp();
       if (isCancelled()) return;
       // A level that uses no project has nothing to load; the lab supplies
       // its sources, and nothing is saved. Level edit mode goes on to load

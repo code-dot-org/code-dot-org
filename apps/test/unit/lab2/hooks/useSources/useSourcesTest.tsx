@@ -431,6 +431,33 @@ describe('useSources', () => {
       expect(registered()).toBe(levelTwoManager);
     });
 
+    it('keeps the outgoing manager registered until its saves have flushed', async () => {
+      // beforeunload reaches unsaved work only through the registry, so
+      // unregistering before the flush lands would strand it.
+      let finishCleanUp = () => {};
+      const levelOneManager = createFakeProjectManager({
+        cleanUp: jest.fn(
+          () => new Promise<void>(resolve => (finishCleanUp = () => resolve()))
+        ),
+      });
+      mockGetProjectManagerForLevel.mockResolvedValue(levelOneManager);
+
+      const {rerender} = renderUseSources();
+      await flush();
+      expect(registered()).toBe(levelOneManager);
+
+      mockGetProjectManagerForLevel.mockResolvedValue(fakeManager);
+      rerender({levelProperties: LEVEL_TWO});
+      await flush(); // level two's load is parked on level one's cleanUp
+
+      expect(levelOneManager.cleanUp).toHaveBeenCalled();
+      expect(registered()).toBe(levelOneManager);
+
+      await act(async () => finishCleanUp());
+
+      expect(registered()).toBe(fakeManager);
+    });
+
     it('clears its own manager on unmount', async () => {
       const {unmount} = renderUseSources();
       await flush();
