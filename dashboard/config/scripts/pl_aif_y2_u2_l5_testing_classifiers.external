@@ -1,0 +1,50 @@
+name 'pl-aif-y2-u2-l5-testing-classifiers'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Testing Classifiers
+
+Lesson 9 opens with two classifiers built to identify toxic berries. A ranger needs to know: which one is actually better?
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Accuracy:</strong> the proportion of all of a classifier's predictions that are correct.</div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Recall:</strong> out of all the data that actually has a certain label, the proportion the model correctly identified.</div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Precision:</strong> out of all the times a classifier predicted a certain label, the proportion that were correct.</div>
+</div>
+
+The real numbers from the Berry Picking Activity Guide:
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color: #4C42CF;">
+        <th style="padding: 10px; color: #fff; font-size: 14px; text-align: left;"></th>
+        <th style="padding: 10px; color: #fff; font-size: 14px; text-align: left;">Model A</th>
+        <th style="padding: 10px; color: #fff; font-size: 14px; text-align: left;">Model B</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color: #fff;"><td style="padding: 10px; font-size: 14px; font-weight: 700; color: #1F1976;">Accuracy</td><td style="padding: 10px; font-size: 14px;">70%</td><td style="padding: 10px; font-size: 14px;">80%</td></tr>
+      <tr style="background-color: #F7F7FB;"><td style="padding: 10px; font-size: 14px; font-weight: 700; color: #1F1976;">Recall</td><td style="padding: 10px; font-size: 14px;">100% (5/5)</td><td style="padding: 10px; font-size: 14px;">60% (3/5)</td></tr>
+      <tr style="background-color: #fff;"><td style="padding: 10px; font-size: 14px; font-weight: 700; color: #1F1976;">Precision</td><td style="padding: 10px; font-size: 14px;">63% (5/8)</td><td style="padding: 10px; font-size: 14px;">100% (3/3)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+Model B looks better on accuracy alone. But for identifying something toxic, recall matters more, missing a toxic berry is far worse than over-flagging a safe one. Model A's lower accuracy is the better choice here.
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Confidence threshold:</strong> the confidence level at which a classifier will predict a given label.</div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> a classifier doesn't just say "toxic" or "not toxic," it outputs a confidence score. The threshold is where you draw the line between the two labels, and where you draw it is a real design choice, not a fixed rule.</div>
+</div>
+MARKDOWN

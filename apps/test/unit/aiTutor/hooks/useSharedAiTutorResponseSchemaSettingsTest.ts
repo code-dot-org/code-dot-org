@@ -1,6 +1,9 @@
 import {renderHook} from '@testing-library/react-hooks';
 
 import {useSharedAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useSharedAiTutorResponseSchemaSettings';
+import {setProjectSourceBeforeAiTutorVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import * as pythonlab from '@cdo/apps/pythonlab/helpers/aiTutorStructuredResponseHelper';
 import * as weblab2 from '@cdo/apps/weblab2/helpers/aiTutorStructuredResponseHelper';
 
 const mockDispatch = jest.fn();
@@ -103,6 +106,38 @@ describe('useSharedAiTutorResponseSchemaSettings', () => {
     expect(mockOnAiTutorVersionLoaded).toHaveBeenCalledTimes(1);
   });
 
+  it('onResponse merges with the project as it is when the answer arrives', () => {
+    const {result, rerender} = renderHook(
+      ({src}) =>
+        useSharedAiTutorResponseSchemaSettings({
+          ...weblab2Options(),
+          source: src as MultiFileSource,
+        }),
+      {initialProps: {src: source}}
+    );
+    const onResponseAtSend = result.current.onResponse!;
+    const editedSource = {
+      ...source,
+      files: {
+        ...source.files,
+        '2': {
+          id: '2',
+          name: 'notes.txt',
+          contents: 'added later',
+          folderId: '0',
+        },
+      },
+    };
+    rerender({src: editedSource});
+
+    onResponseAtSend(acceptRejectResponse);
+
+    const dispatched = mockDispatch.mock.calls.map(([action]) => action);
+    expect(dispatched).toContainEqual(
+      setProjectSourceBeforeAiTutorVersion(editedSource)
+    );
+  });
+
   it('onResponse ignores a response with no code to review', () => {
     const {onResponse} = renderSettings();
 
@@ -130,5 +165,32 @@ describe('useSharedAiTutorResponseSchemaSettings', () => {
 
     expect(mockDispatch).not.toHaveBeenCalled();
     expect(text).toContain('index.html');
+  });
+
+  it('uses the answer and file types the lab passes in', () => {
+    const {formatForDisplay, onResponse} = renderHook(() =>
+      useSharedAiTutorResponseSchemaSettings({
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        source: source as any,
+        jsonSchema: pythonlab.aiTutorResponseJsonSchema,
+        acceptRejectAnswerTypes: pythonlab.acceptRejectAnswerTypes,
+        acceptRejectFileTypes: pythonlab.acceptRejectFileTypes,
+      })
+    ).result.current;
+
+    // An HTML build is copy-paste in Python Lab.
+    expect(formatForDisplay(acceptRejectResponse)).toContain('index.html');
+    onResponse!(acceptRejectResponse);
+    expect(mockDispatch).not.toHaveBeenCalled();
+
+    onResponse!({
+      answer: {
+        answerType: 'buildPython',
+        explanation: 'Added a greeting.',
+        code: [{filename: 'main.py', sourceCode: 'print("hi")'}],
+      },
+    });
+    const dispatched = mockDispatch.mock.calls.map(([action]) => action.type);
+    expect(dispatched).toContain('lab2Project/setViewingAiTutorVersion');
   });
 });

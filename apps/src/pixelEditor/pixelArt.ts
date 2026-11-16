@@ -2,7 +2,7 @@
  * Pixel-art grid utilities: detect the logical pixel grid of an image that
  * DEPICTS pixel art at a higher resolution (e.g. AI output where one art
  * pixel is an ~11px block), downsample to true logical resolution, and
- * upscale nearest-neighbor for crisp storage/display.
+ * upscale nearest-neighbor for crisp display.
  *
  * Detection and resampling are pure raster functions (unit-testable); the
  * blob helpers at the bottom are canvas-based conveniences for callers.
@@ -591,6 +591,15 @@ export function assumePixelGrid(
   };
 }
 
+/** The grid at a block size decided elsewhere, with this raster's own
+    offsets and confidence. */
+export function gridAtPitch(raster: Raster, size: number): PixelGrid {
+  const x = fitOffset(edgeHistogram(raster, 'x'), size);
+  const y = fitOffset(edgeHistogram(raster, 'y'), size);
+  const grid = {sizeX: size, sizeY: size, offsetX: x.offset, offsetY: y.offset};
+  return {...grid, confidence: 1 - gridMismatch(raster, grid)};
+}
+
 /** Cell boundaries along one axis for a grid (offset partial cell included). */
 function cellBounds(length: number, size: number, offset: number): number[] {
   const bounds = [0];
@@ -665,13 +674,24 @@ export function upscaleNearest(raster: Raster, factor: number): Raster {
   return {width: outW, height: outH, data: out};
 }
 
-// Storage upscale: aim for roughly CRISP_TARGET_PX on the long side (sharp
-// at playspace sizes without engine smoothing changes), capped at
-// MAX_CRISP_SCALE so assets stay reasonable.
+/**
+ * The pixelGridSize of pixel art stored at its logical size, one image pixel
+ * per art pixel. It marks the image as pixel art without recording a scale.
+ */
+export const NATIVE_PIXEL_GRID = 1;
+
+// Display upscale: aim for roughly CRISP_TARGET_PX on the long side (sharp
+// at playspace sizes, where the engine draws with smoothing on), capped at
+// MAX_CRISP_SCALE.
 const CRISP_TARGET_PX = 640;
 const MAX_CRISP_SCALE = 8;
 
-/** The integer factor logical pixel art is upscaled by for storage. */
+/**
+ * The integer factor logical pixel art is upscaled by for display. The
+ * engine sizes a sprite relative to the image it is handed, so this factor
+ * sets the on-screen size of every native pixel asset in every saved
+ * project; changing it resizes them all.
+ */
 export function crispScaleFor(logicalW: number, logicalH: number): number {
   return Math.max(
     1,
@@ -692,7 +712,7 @@ function rasterFromCanvas(canvas: HTMLCanvasElement): Raster {
   return ctx.getImageData(0, 0, canvas.width, canvas.height);
 }
 
-function canvasFromRaster(raster: Raster): HTMLCanvasElement {
+export function canvasFromRaster(raster: Raster): HTMLCanvasElement {
   const canvas = document.createElement('canvas');
   canvas.width = raster.width;
   canvas.height = raster.height;
@@ -710,29 +730,14 @@ function canvasFromRaster(raster: Raster): HTMLCanvasElement {
 }
 
 /**
- * The detected physical px per art pixel of an image — its first frame when
- * frameSize is given — or null when no convincing grid exists. May be
- * fractional (see PixelGrid.sizeX), and is harmonized with the cell count
- * downsampling would produce, so rounding a stored dimension divided by
- * this value gives the paint editor's actual grid. Detection only, pixels
- * untouched: reports the grid a non-normalized image (a pixel-style
- * character sheet, or one saved before normalization) would be treated as.
+ * The pixels of the top-left `width` by `height` region of a loaded image,
+ * or null where no canvas context can be had.
  */
-export async function detectImageGridSize(
-  source: string,
-  frameSize?: {x: number; y: number}
-): Promise<number | null> {
-  const img = await new Promise<HTMLImageElement>((resolve, reject) => {
-    const el = new Image();
-    // Same-origin today; without this, a CDN-served source would taint the
-    // canvas and fail silently.
-    el.crossOrigin = 'anonymous';
-    el.onload = () => resolve(el);
-    el.onerror = () => reject(new Error('image failed to load'));
-    el.src = source;
-  });
-  const width = frameSize?.x ?? img.naturalWidth;
-  const height = frameSize?.y ?? img.naturalHeight;
+export function rasterFromImage(
+  img: HTMLImageElement,
+  width = img.naturalWidth,
+  height = img.naturalHeight
+): Raster | null {
   const canvas = document.createElement('canvas');
   canvas.width = width;
   canvas.height = height;
@@ -741,22 +746,30 @@ export async function detectImageGridSize(
     return null;
   }
   ctx.drawImage(img, 0, 0, width, height, 0, 0, width, height);
-  const grid = detectPixelGrid(rasterFromCanvas(canvas));
-  if (!grid) {
-    return null;
-  }
-  const cols = cellBounds(width, grid.sizeX, grid.offsetX).length - 1;
-  const rows = cellBounds(height, grid.sizeY, grid.offsetY).length - 1;
-  return (width / cols + height / rows) / 2;
+  return ctx.getImageData(0, 0, width, height);
+}
+
+/**
+ * Loads a data URI or URL into an image a canvas may read. CORS is enabled,
+ * since a file served from a CDN would otherwise taint the canvas and make
+ * its pixels unreadable.
+ */
+export function loadImage(source: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error('image failed to load'));
+    img.src = source;
+  });
 }
 
 /**
  * Normalize a blob the user declared to be pixel art: find its grid (best
- * attempt — the style choice is the classifier, so this never bails),
- * downsample to logical resolution, and re-upscale nearest-neighbor to a
- * crisp, uniform, edge-aligned image. squareGrid pins the offsets to the
- * frame, so a square input yields a square logical output (an offset grid
- * would add a partial edge cell).
+ * attempt — the style choice is the classifier, so this never bails) and
+ * downsample to logical resolution, one image pixel per art pixel.
+ * squareGrid pins the offsets to the frame, so a square input yields a
+ * square logical output (an offset grid would add a partial edge cell).
  */
 export async function normalizePixelArtBlob(
   blob: Blob,
@@ -778,12 +791,8 @@ export async function normalizePixelArtBlob(
     grid = {...grid, offsetX: 0, offsetY: 0};
   }
   const logical = downsampleToGrid(raster, grid);
-  const crisp = upscaleNearest(
-    logical,
-    crispScaleFor(logical.width, logical.height)
-  );
   const outBlob = await new Promise<Blob | null>(resolve =>
-    canvasFromRaster(crisp).toBlob(resolve, 'image/png')
+    canvasFromRaster(logical).toBlob(resolve, 'image/png')
   );
   return outBlob
     ? {
@@ -792,4 +801,35 @@ export async function normalizePixelArtBlob(
         logicalHeight: logical.height,
       }
     : null;
+}
+
+/**
+ * An image (dataURI or URL) upscaled nearest-neighbor by the integer factor
+ * factorFor picks from its decoded size, as a PNG dataURI. Resolves to the
+ * source at factor 1 when the factor is 1 or the image cannot be drawn.
+ */
+export async function upscaleImageNearest(
+  source: string,
+  factorFor: (width: number, height: number) => number
+): Promise<{dataURI: string; factor: number}> {
+  const unchanged = {dataURI: source, factor: 1};
+  try {
+    const img = await loadImage(source);
+    const factor = Math.floor(factorFor(img.naturalWidth, img.naturalHeight));
+    if (factor <= 1) {
+      return unchanged;
+    }
+    const canvas = document.createElement('canvas');
+    canvas.width = img.naturalWidth * factor;
+    canvas.height = img.naturalHeight * factor;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      return unchanged;
+    }
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    return {dataURI: canvas.toDataURL('image/png'), factor};
+  } catch {
+    return unchanged;
+  }
 }

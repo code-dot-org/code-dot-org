@@ -199,16 +199,9 @@ module.exports = {
               'DSCO Typography is deprecated. Use MUI Typography from @mui/material instead. From the apps directory (cd apps), run: npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src" --parser=tsx --extensions=tsx,ts,jsx,js',
           },
           {
-            name: '@code-dot-org/component-library/dialog',
-            importNames: [
-              'Dialog',
-              'CustomDialog',
-              'default',
-              'DialogProps',
-              'CustomDialogProps',
-            ],
+            name: '@code-dot-org/component-library/divider',
             message:
-              'DSCO Dialog is deprecated. Import MuiDialog / MuiCustomDialog (and MuiDialogProps / MuiCustomDialogProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/dialog-to-mui-dialog.ts; see codemods/README.md there',
+              'DSCO Divider is deprecated. Import Divider from @mui/material; CdoTheme colors it. See frontend/packages/component-library/src/divider/README.md for the legacy color and margin props.',
           },
         ],
         patterns: [
@@ -246,6 +239,9 @@ module.exports = {
       plugins: ['@typescript-eslint'],
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
+        // ts-loader's ES5 output drops the prototype of an Error subclass;
+        // Babel wraps native constructors, so .js and .jsx files are unaffected.
+        'cdo-custom-rules/error-subclass-prototype': 'error',
         // We can rely on typescript types instead of prop types
         'react/prop-types': 'off',
         '@typescript-eslint/no-unused-vars': ['error', {args: 'none'}],

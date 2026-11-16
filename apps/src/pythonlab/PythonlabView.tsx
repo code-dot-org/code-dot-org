@@ -17,6 +17,7 @@ import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {setIsRunning, setIsValidating} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
@@ -24,6 +25,7 @@ import {
   restartPyodideIfProgramIsRunning,
   sendInput,
 } from '@cdo/apps/pythonlab/pyodideManager';
+import {getStore} from '@cdo/apps/redux';
 import {
   AppDispatch,
   useAppDispatch,
@@ -114,6 +116,9 @@ const PythonlabView: React.FunctionComponent<
   );
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
   const aiChatAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
@@ -202,11 +207,23 @@ const PythonlabView: React.FunctionComponent<
     restartPyodideIfProgramIsRunning
   );
 
+  // A run that spans the start or end of an AI Tutor review would save the
+  // wrong code when it finishes, so stop it as the Stop button does.
+  useEffect(() => {
+    const {isRunning, isValidating} = getStore().getState().lab2System;
+    if (isRunning || isValidating) {
+      stopPythonCode();
+      dispatch(setIsRunning(false));
+      dispatch(setIsValidating(false));
+    }
+  }, [dispatch, isAiTutorVersion]);
+
   useEffect(() => {
     if (isAiTutorVisible) {
       aiTutorHelper.setAiTutorContext({
         source,
         miniAppName,
+        miniAppVariant: levelProperties.miniAppVariant,
         validationFile,
         longInstructions: levelProperties.longInstructions,
         hasRun,
@@ -215,6 +232,7 @@ const PythonlabView: React.FunctionComponent<
     }
   }, [
     levelProperties.longInstructions,
+    levelProperties.miniAppVariant,
     source,
     validationFile,
     miniAppName,
@@ -238,7 +256,10 @@ const PythonlabView: React.FunctionComponent<
     );
   }, [levelProperties.aiTutorPromptSettings]);
 
-  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings();
+  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
+    source,
+    levelProperties.widgetView
+  );
 
   const onRun = async (
     runTests: boolean,

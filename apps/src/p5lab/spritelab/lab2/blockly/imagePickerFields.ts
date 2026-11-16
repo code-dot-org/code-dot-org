@@ -13,10 +13,7 @@ import {ImageType} from '../ai/images/types';
 import {noteImageFieldValue} from '../imageReferences';
 import {defaultImageName, ImageSlot} from '../imageRoleDefaults';
 import {getImageThumbnail} from '../imageTrim';
-import {requestPicture} from '../picturePicker';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
-
-import moduleStyles from './image-dropdown.module.scss';
 
 export const FIELD_COSTUME_TYPE = 'field_spritelab2_costume';
 export const FIELD_BLOCK_IMAGE_TYPE = 'field_spritelab2_block_image';
@@ -42,22 +39,6 @@ const EMPTY_IMAGE_OPTION: [string, string][] = [
   ],
 ];
 
-// Asks for a new picture of the field's kind, which lands in the field
-// once made; also the empty state's affordance.
-function makeImageButtons(field: () => Lab2AnimationDropdown) {
-  return [
-    {
-      text: 'Make an image',
-      action: () =>
-        requestPicture({
-          imageType: IMAGE_TYPE_OF[field().kind],
-          onPicked: name => field().setValue(`"${name}"`),
-        }),
-      className: moduleStyles.makeImageButton,
-    },
-  ];
-}
-
 type AnimationKind = 'costume' | 'background' | 'block';
 
 // Thumbnail sizes in the dropdown grid, matching classic blocks.js.
@@ -67,10 +48,18 @@ const THUMBNAIL_SIZE: Record<AnimationKind, number> = {
   block: 32,
 };
 
+/** The pool's "when touches" block: its sprite picker lists sprites, then
+    platform blocks. Touching a block from any side counts. */
+export const TOUCHING_BLOCK_TYPE = 'gamelab_checkTouching';
+
 // Thumbnail options for one kind of animation, filtered by image category.
 // Costumes and blocks prefer the border-trimmed image (imageTrim.ts) so the
 // content fills the field instead of floating in its transparent margins.
-function animationOptions(kind: AnimationKind): [string, string][] {
+// `withBlocks` appends the block images after a costume picker's sprites.
+function animationOptions(
+  kind: AnimationKind,
+  withBlocks = false
+): [string, string][] {
   const state = getStore().getState();
   const animationList = state.animationList;
   if (!animationList) {
@@ -82,18 +71,24 @@ function animationOptions(kind: AnimationKind): [string, string][] {
       : categories.includes(BLOCKS_CATEGORY)
       ? 'block'
       : 'costume';
-  const results: [string, string][] = [];
-  animationList.orderedKeys.forEach((key: string) => {
-    const animation = animationList.propsByKey[key];
-    if (kindOf(animation.categories || []) !== kind) {
-      return;
-    }
-    const url =
-      getImageThumbnail(animation.name) ||
-      animation.sourceUrl ||
-      animationSourceUrl(key, animation, state.pageConstants?.channelId);
-    results.push([url, `"${animation.name}"`]);
-  });
+  const optionsOf = (wanted: AnimationKind): [string, string][] => {
+    const results: [string, string][] = [];
+    animationList.orderedKeys.forEach((key: string) => {
+      const animation = animationList.propsByKey[key];
+      if (kindOf(animation.categories || []) !== wanted) {
+        return;
+      }
+      const url =
+        getImageThumbnail(animation.name) ||
+        animation.sourceUrl ||
+        animationSourceUrl(key, animation, state.pageConstants?.channelId);
+      results.push([url, `"${animation.name}"`]);
+    });
+    return results;
+  };
+  const results = withBlocks
+    ? [...optionsOf(kind), ...optionsOf('block')]
+    : optionsOf(kind);
   return results.length ? results : EMPTY_IMAGE_OPTION;
 }
 
@@ -117,7 +112,7 @@ function slotOf(block: BlocklyCore.Block): ImageSlot {
     block.outputConnection?.targetConnection?.getParentInput();
   const parent = block.getParent();
   if (!parentInput || !parent) {
-    return {blockType: block.type, index: 0};
+    return {blockType: block.type, index: 0, data: block.data ?? undefined};
   }
   const sockets = parent.inputList.filter(input =>
     input.connection?.getCheck()?.includes(SPRITE_CHECK)
@@ -125,6 +120,7 @@ function slotOf(block: BlocklyCore.Block): ImageSlot {
   return {
     blockType: parent.type,
     index: Math.max(0, sockets.indexOf(parentInput)),
+    data: parent.data ?? undefined,
   };
 }
 
@@ -157,6 +153,12 @@ export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
 
   init() {
     super.init();
+    this.takeLevelDefault();
+  }
+
+  /** Starts the field on the level's default image, unless a saved value
+      was loaded into it. */
+  takeLevelDefault() {
     if (!this.valueLoaded) {
       this.applyLevelDefault();
     }
@@ -201,18 +203,27 @@ function animationDropdown(
   kind: AnimationKind,
   Ctor: typeof Lab2AnimationDropdown = Lab2AnimationDropdown
 ): Lab2AnimationDropdown {
+  // The constructor asks for options before the field exists.
+  const made: {field?: Lab2AnimationDropdown} = {};
   const field: Lab2AnimationDropdown = new Ctor(
-    () => animationOptions(kind),
+    () =>
+      animationOptions(
+        kind,
+        kind === 'costume' &&
+          made.field?.getSourceBlock()?.getParent()?.type ===
+            TOUCHING_BLOCK_TYPE
+      ),
     THUMBNAIL_SIZE[kind],
     THUMBNAIL_SIZE[kind],
-    makeImageButtons(() => field)
+    undefined
   );
+  made.field = field;
   field.kind = kind;
   return field;
 }
 
 // The classic costumePicker/backgroundPicker input types, with lab2's empty
-// state and Images-tab button. (The classic animation-mode buttons don't
+// state. (The classic animation-mode buttons don't
 // apply here — this lab has no AnimationTab.)
 export function animationPicker(kind: AnimationKind) {
   return {
@@ -245,6 +256,28 @@ export class BlockImageField extends Lab2AnimationDropdown {
   static fromJson(_options: BlocklyCore.FieldConfig) {
     return animationDropdown('block', BlockImageField);
   }
+}
+
+const imageDropdownsOn = (
+  workspace: BlocklyCore.Workspace
+): Lab2AnimationDropdown[] =>
+  workspace
+    .getAllBlocks(false)
+    .flatMap(block => block.inputList)
+    .flatMap(input => input.fieldRow)
+    .filter(
+      (field): field is Lab2AnimationDropdown =>
+        field instanceof Lab2AnimationDropdown
+    );
+
+/**
+ * Starts every image dropdown of a workspace that is never shown on the
+ * level's default image. Blockly calls a field's `init` only on a workspace
+ * it draws, so on any other workspace the dropdowns would stay on the
+ * newest image.
+ */
+export function takeLevelDefaults(workspace: BlocklyCore.Workspace): void {
+  imageDropdownsOn(workspace).forEach(field => field.takeLevelDefault());
 }
 
 /**

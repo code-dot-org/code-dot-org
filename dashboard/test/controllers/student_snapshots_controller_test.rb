@@ -984,4 +984,104 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     response_data = JSON.parse(response.body)
     assert_includes response_data['error'], "Unauthorized access to student data"
   end
+
+  test "lessons endpoint reports hasAdaptiveLevel only for the lesson holding an adaptive level" do
+    with_adaptive_content do
+      create(:script_level, script: @unit, lesson: @lesson1, levels: [create(:adaptive, adaptive_id: 'snapshot')])
+
+      get :lessons, params: {unit_id: @unit.id}
+
+      assert_response :ok
+      lessons = JSON.parse(response.body)['lessons']
+      assert_equal true, lessons.find {|l| l['id'] == @lesson1.id}['hasAdaptiveLevel']
+      assert_equal false, lessons.find {|l| l['id'] == @lesson2.id}['hasAdaptiveLevel']
+    end
+  end
+
+  test "adaptive endpoint returns the pathway and the student's progress to their teacher" do
+    with_adaptive_content do
+      level = create(:adaptive, adaptive_id: 'snapshot')
+      create(:script_level, script: @unit, lesson: @lesson1, levels: [level])
+      student = create(:student)
+      create(:follower, user: @teacher, student_user: student, section: @section)
+      user_level = create(:user_level, user: student, level: level, script: @unit)
+      UserAdaptiveStep.create!(user_level: user_level, step_id: 'read', progress: {'startedAt' => '2026-10-01T00:00:00Z', 'completedAt' => '2026-10-01T00:01:00Z'})
+
+      get :adaptive, params: {unit_id: @unit.id, lesson_id: @lesson1.id, student_id: student.id}
+
+      assert_response :ok
+      response_data = JSON.parse(response.body)
+      assert_equal 'snapshot', response_data['pathway']['id']
+      assert_equal level.progress_json(user_id: student.id, script_id: @unit.id), response_data['progress']
+      assert_equal 'complete', response_data['progress']['steps']['read']['status']
+    end
+  end
+
+  test "adaptive endpoint returns empty progress for a student who has not started, and creates nothing" do
+    with_adaptive_content do
+      create(:script_level, script: @unit, lesson: @lesson1, levels: [create(:adaptive, adaptive_id: 'snapshot')])
+      student = create(:student)
+      create(:follower, user: @teacher, student_user: student, section: @section)
+
+      assert_no_difference ['UserLevel.count', 'UserAdaptiveStep.count'] do
+        get :adaptive, params: {unit_id: @unit.id, lesson_id: @lesson1.id, student_id: student.id}
+      end
+
+      assert_response :ok
+      response_data = JSON.parse(response.body)
+      assert_equal 'snapshot', response_data['pathway']['id']
+      assert_equal({'steps' => {}}, response_data['progress'])
+    end
+  end
+
+  test "adaptive endpoint returns no pathway or progress for a lesson without an adaptive level" do
+    student = create(:student)
+    create(:follower, user: @teacher, student_user: student, section: @section)
+
+    get :adaptive, params: {unit_id: @unit.id, lesson_id: @lesson1.id, student_id: student.id}
+
+    assert_response :ok
+    assert_equal({'pathway' => nil, 'progress' => nil}, JSON.parse(response.body))
+  end
+
+  test "adaptive endpoint returns forbidden when student does not belong to current teacher" do
+    with_adaptive_content do
+      create(:script_level, script: @unit, lesson: @lesson1, levels: [create(:adaptive, adaptive_id: 'snapshot')])
+      student = create(:student)
+      create(:follower, user: create(:teacher), student_user: student)
+
+      get :adaptive, params: {unit_id: @unit.id, lesson_id: @lesson1.id, student_id: student.id}
+
+      assert_response :forbidden
+      response_data = JSON.parse(response.body)
+      refute response_data.key?('pathway')
+      refute response_data.key?('progress')
+    end
+  end
+
+  test "adaptive endpoint returns bad request for an unknown lesson or student" do
+    student = create(:student)
+    create(:follower, user: @teacher, student_user: student, section: @section)
+
+    get :adaptive, params: {unit_id: @unit.id, lesson_id: 0, student_id: student.id}
+    assert_response :bad_request
+
+    get :adaptive, params: {unit_id: @unit.id, lesson_id: @lesson1.id, student_id: 0}
+    assert_response :bad_request
+  end
+
+  private def with_adaptive_content
+    dir = Pathname.new(Dir.mktmpdir)
+    dir.join('snapshot.json').write({
+      'id' => 'snapshot',
+      'checkpoints' => [{'id' => 'basics', 'steps' => [{'id' => 'read', 'kind' => 'panels', 'panels' => []}]}],
+    }.to_json
+    )
+    AdaptiveContent.stubs(:content_dir).returns(dir)
+    AdaptiveContent.reset_cache!
+    yield
+  ensure
+    AdaptiveContent.reset_cache!
+    FileUtils.remove_entry(dir)
+  end
 end

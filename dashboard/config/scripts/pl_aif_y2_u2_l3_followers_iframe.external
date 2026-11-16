@@ -1,0 +1,24 @@
+name 'pl-aif-y2-u2-l3-followers-iframe'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Spotting Correlation and Outliers
+
+You just saw how categorical and numerical data differ. 
+
+Now plot real-feeling data yourself: **do artists with more followers actually get more streams?**
+
+Add each artist one at a time, then look for the pattern, and the one point that breaks it.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/correlation-scatter-plot.html"
+    width="100%"
+    height="1160"
+    frameborder="0"
+    scrolling="no"
+    title="Plot artist follower and stream data, identify the correlation and the outlier">
+  </iframe>
+</div>
+MARKDOWN

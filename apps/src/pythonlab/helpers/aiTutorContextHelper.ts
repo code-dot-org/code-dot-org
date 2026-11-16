@@ -9,6 +9,7 @@ import {
 } from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {stripAnsiSequences} from '@cdo/apps/codebridge/Console/MessageHelpers';
+import {MiniApps} from '@cdo/apps/codebridge/constants';
 import {ProjectFile} from '@cdo/apps/codebridge/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
@@ -22,9 +23,26 @@ interface AiTutorPythonLabParams {
   validationFile: ProjectFile | undefined;
   longInstructions: string | undefined;
   miniAppName: string | undefined;
+  miniAppVariant: string | undefined;
   hasRun: boolean | undefined;
   hasEdited: boolean | undefined;
 }
+
+// Keys of the classes at /docs/ide/pythonlab/classes/<key>.
+function getDocsClass(
+  miniAppName: string | undefined,
+  miniAppVariant: string | undefined
+): string | undefined {
+  switch (miniAppName) {
+    case MiniApps.Neighborhood:
+      return miniAppVariant === 'functional' ? 'painter_functional' : 'painter';
+    case MiniApps.Theater:
+      return 'theater';
+    default:
+      return undefined;
+  }
+}
+
 export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorPythonLabParams> {
   private documentationPromise?: Promise<string | undefined>;
   private params?: AiTutorPythonLabParams;
@@ -34,13 +52,10 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
 
   override setAiTutorContext(params: AiTutorPythonLabParams): void {
     this.params = params;
-    if (
-      this.params.miniAppName &&
-      this.params.miniAppName === 'neighborhood' &&
-      !this.documentationPromise
-    ) {
-      this.documentationPromise = tryFetchDocsForClass('painter');
-    }
+    const docsClass = getDocsClass(params.miniAppName, params.miniAppVariant);
+    this.documentationPromise = docsClass
+      ? tryFetchDocsForClass(docsClass)
+      : undefined;
   }
 
   protected override async getAiTutorContext(): Promise<AiTutorContext> {

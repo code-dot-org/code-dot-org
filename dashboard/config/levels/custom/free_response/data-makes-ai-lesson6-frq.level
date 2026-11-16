@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-11-05T01:27:37.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "The Auditor's Call",
+    "long_instructions": "Answer the question below in 2–4 complete sentences. Use what you saw or did in today’s lesson as your example.\r\n- Who might Playlist Bot A leave out at the dance?",
+    "stay_on_level_after_submit": "true",
+    "submittable": "true",
+    "allow_multiple_attempts": "true",
+    "height": "200",
+    "placeholder": "Write your answer here",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-05 01:40:30 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 01:53:45 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

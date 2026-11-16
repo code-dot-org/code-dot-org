@@ -1,17 +1,22 @@
 import {useEffect, useRef} from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+
 import {workAdapterFor} from '../../ai/validation/adapters';
 import {LabHandles} from '../../ai/validation/types';
 import {
   ValidateStepOptions,
   validateStep,
 } from '../../ai/validation/validateStep';
+import {sendAdaptiveEvent, stepProperties} from '../../metricsHelpers';
 import {ValidationAttempt} from '../../progress/model';
 
 export interface StepValidationOptions
   extends Omit<ValidateStepOptions, 'work'>,
     LabHandles {
   recordValidation: (attempt: Omit<ValidationAttempt, 'at'>) => void;
+  /** Checks already recorded on the step. */
+  priorAttempts?: number;
 }
 
 /**
@@ -35,15 +40,29 @@ export function useStepValidation(options: StepValidationOptions): void {
     return adapter.observeWork({chat}, work => {
       const current = latest.current;
       let dismissChecking: (() => void) | undefined;
+      let judgingAt = 0;
       validateStep({
         ...current,
         work,
         onJudging: () => {
+          judgingAt = Date.now();
           dismissChecking = adapter.notifyChecking?.({chat: current.chat});
         },
       }).then(attempt => {
         dismissChecking?.();
         if (!attempt) return;
+        sendAdaptiveEvent(
+          attempt.pass
+            ? EVENTS.ADAPTIVE_WORK_VALIDATION_PASSED
+            : EVENTS.ADAPTIVE_WORK_VALIDATION_FAILED,
+          {
+            ...stepProperties(current.checkpoint, current.step),
+            skillId: current.step.validation?.measures.skillId,
+            evidenceLevel: attempt.evidenceLevel,
+            attemptNumber: (current.priorAttempts ?? 0) + 1,
+            latencyMs: Date.now() - judgingAt,
+          }
+        );
         current.recordValidation(attempt);
         adapter.reportAttempt?.({chat: current.chat}, attempt);
       });

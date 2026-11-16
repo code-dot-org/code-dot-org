@@ -8,10 +8,10 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"hideTestingView\": true,\r\n  \"reserveLastRows\": true\r\n}",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"hideTestingView\": true,\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L08-marketing-base\"\r\n  ],\r\n  \"label\": \"Result\",\r\n  \"hideSelectLabel\": true,\r\n  \"defaultCardView\": true\r\n}",
     "uses_lab2": "true",
     "dynamic_instructions": "{\r\n  \"datasetView\": \"- Look through at least five clips in **Cards** view.\\n- Point to the label (**Result**) and the features.\\n- Write one pattern you notice about which clips are Hits in your guide.\"\r\n}"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-30 19:58:44 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-30 23:59:03 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-30 19:58:44 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-30 23:59:03 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-03 17:42:23 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Ailab>

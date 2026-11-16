@@ -7,11 +7,12 @@ import builderCommonStyles from '../builder-common.module.scss';
 
 interface UsageTabProps {
   question: QuizBuilderQuestion;
+  page: number;
 }
 
 // Read-only cross-quiz usage context that QuizQuestionSerialization adds -
 // not part of the editable draft.
-const UsageTab: React.FunctionComponent<UsageTabProps> = ({question}) => (
+const UsageTab: React.FunctionComponent<UsageTabProps> = ({question, page}) => (
   <div className={builderCommonStyles.section}>
     <Typography variant="body3" component="p">
       {question.attachedToOtherQuizzes
@@ -23,11 +24,9 @@ const UsageTab: React.FunctionComponent<UsageTabProps> = ({question}) => (
         ? 'This question is used in a published unit. Saving changes will fork it, so students in that unit keep seeing the current version.'
         : 'This question is not yet used in a published unit.'}
     </Typography>
-    {question.page !== null && (
-      <Typography variant="body3" component="p">
-        Page {question.page}
-      </Typography>
-    )}
+    <Typography variant="body3" component="p">
+      Page {page}
+    </Typography>
   </div>
 );
 

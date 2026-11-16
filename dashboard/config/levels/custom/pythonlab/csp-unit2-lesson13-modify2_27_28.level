@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-04T04:26:39.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "place = input(\"Where are you, school or home? \")\nminutes = int(input(\"How many minutes do you have? \"))\n\n# What changed when I swapped the order: \nif place == \"school\":\n    if minutes >= 30:\n        lunch = \"Cafeteria\"\n    else:\n        lunch = \"Snack bar\"\nelse:\n    if minutes >= 30:\n        lunch = \"Sandwich\"\n    else:\n        lunch = \"Leftovers\"\n\nprint(\"Lunch: \" + lunch)",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMorN0IlxcfqYrd/\nrztM9/RuIprkO4qp/cJ6Nx8GpfjZj7rJuUkQEQY0sd0b6zRpMzoNoft+nfy8\nyod4csVcTkIvS9Bf/ZEOFzRFXuzRc38aFRAa4iyuZ9vp8hlUE0ban2kwfcV2\n74CI38z4CHNz3//Lhc5FHhfLrbSxegv+QmrlvjEyqGQssF9YN8kPuoQA6PVK\nGJTwxeCVRBLOsoSCpU7TCLj1uicU3mBl9O60yHAt0op/Jhu7xJUxQjN6Us0Z\nB1erZ+FFfoT8x9BRzZn0yp4gmiIPZJXxcgy5ZMKoXXdd4gUl5V6dIofASEKq\nm4gC2I6m5G8lZhkAnrq1fFNPips8J8T1+ErcB8PcT/xDwOru7tALPaAiHrWl\ns/nRULg1w5mZiW4zz2bmAZCdiIOiPd0ngXlTAOgwqgWiym5CtdYoxEhaDk+t\njZUVt3mkqpPgooiYyMHEPFrTL0js6pKKTQQSqZ/wibKRNDLIinRQlEw0i4A2\nS7ir7dQOwmm6sAEwbKE8QZr+lwVZbrjsb9RWVeA4EwepwWuIk+teiiAP6NwQ\nfVztRzyEP0dncOYI1T/sfZSmFXTVQRfpvDpEFdRTN9VI6wwde8iAb3vN6kx+\niZr+nfdTLS9yHlIiezHD93+ioWfZjSyqVnHKRONwK6MMOUZ1xqKoedsAfjWe\nAeW8T8+kwSNBmixDME/1AuisYLofuJAlxQUQNRIbgQaMeMZ5Ofp3\n",
+    "teacher_markdown": "Misconceptions and what to test for:\r\n\r\n- Swapping the order means the two questions trade places. Each branch of the new outer decision needs the other question, so the place check now appears twice. Ask: \"How many times do you check the place now? Why?\"\r\n- The four lunches stay the same, so the two trees reach the same four leaves in a different shape. This is the point of the level: the same rules can be built in either order.\r\n- A student who only swaps the condition text, leaving the inner blocks where they were, sends the wrong lunch to some inputs. Validate names the pair of answers that is wrong. Ask: \"Which pair of answers lands on this lunch in your tree?\"\r\n- The program only recognizes the exact word school. Anything else, including School, goes to the home path. Ask: \"What happened when you typed School?\"\r\n- Keep the two input lines in their original order. Validate supplies the place first and then the minutes.\r\n- A flat version with and (if minutes >= 30 and place == \"school\":) gives the right lunches, but it does not nest. Validate asks for a decision inside a decision. Ask: \"What would change if we added a third place?\"\r\n- There is no better order. Ask: \"Which order would you choose if there were five places? Why?\" This connects to the Make lesson, where students choose which question to ask first.\r\n- The comment is for students to think with, and Validate does not check it. A strong answer says that the place is now checked twice, once in each minutes branch. Read a few, and accept any answer that names what moved or what repeated.- Forgetting int() around the minutes causes a TypeError when minutes is compared to a number.\r\n- If a student uses Build Python, they still own the program. Ask them to explain which decision is nested and why.\r\n\r\nValidation runs the program with six input pairs: school with 45, 30, and 10 minutes, and home with 45, 29, and 10 minutes. It checks that each pair recommends the expected lunch, that the first if checks the minutes, and that there is an indented if. It does not check the comment.",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import io\nimport re\nfrom contextlib import redirect_stdout\nfrom unittest import TestCase\n\nLUNCHES = [\"Cafeteria\", \"Snack bar\", \"Sandwich\", \"Leftovers\"]\n\n\ndef read_code():\n    with open('main.py') as main_file:\n        return main_file.read()\n\n\ndef run_with(place, minutes):\n    \"\"\"Run the student's main.py as if the user typed these two answers.\"\"\"\n    code = read_code()\n    answers = iter([place, str(minutes)])\n    output = io.StringIO()\n    error = None\n    fake_globals = {'input': lambda prompt='': next(answers), '__name__': '__main__'}\n    try:\n        with redirect_stdout(output):\n            exec(code, fake_globals)\n    except Exception as e:\n        error = e\n    text = \" \".join(line.strip() for line in output.getvalue().splitlines() if line.strip())\n    return text, error\n\n\nclass TestSwapTheOrder(TestCase):\n    def test_1_same_lunches(self):\n        \"\"\"Every pair of answers still gives the same lunch\"\"\"\n        cases = [(\"school\", 45, \"Cafeteria\"), (\"school\", 30, \"Cafeteria\"), (\"school\", 10, \"Snack bar\"),\n                 (\"home\", 45, \"Sandwich\"), (\"home\", 29, \"Leftovers\"), (\"home\", 10, \"Leftovers\")]\n        for place, minutes, expected in cases:\n            text, error = run_with(place, minutes)\n            if error:\n                self.fail(\n                    f\"Your program stopped with a {type(error).__name__} when the place was {place} and the minutes were {minutes}. \"\n                    \"Check that every if and else line ends with a colon, that each lunch is set on every path, and that you kept both input lines in their original order.\"\n                )\n            if [l for l in LUNCHES if l in text] != [expected]:\n                shown = text if text else \"nothing\"\n                self.fail(\n                    f\"With {place} and {minutes} minutes, your program should recommend {expected}. \"\n                    f\"It printed: {shown}. Check that each lunch is under the right pair of answers.\"\n                )\n\n    def test_2_minutes_first(self):\n        \"\"\"Your program asks about the minutes first\"\"\"\n        first_if = next((line for line in read_code().splitlines() if re.match(r'^if\\b', line)), None)\n        if first_if is None or 'minutes' not in first_if:\n            self.fail(\"The first if in your program should check the minutes. The place question goes inside it.\")\n\n    def test_3_nested_decision(self):\n        \"\"\"Your program has a decision inside a decision\"\"\"\n        if not re.search(r'^[ \\t]+if\\b', read_code(), re.MULTILINE):\n            self.fail(\"Keep the second question inside the first. The place decision should be an if indented inside the minutes decision.\")",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "long_instructions": "# Modify: Swap the Order\r\n\r\nYour Task: This program picks a lunch based on where you are and how much time you have. It asks about the place first, then the minutes. Rewrite it so it asks about the minutes first, then the place. The four lunches stay the same.\r\n\r\nDo This:\r\n\r\n1. Run the program with a few inputs. Type `school` or `home` for the place.\r\n2. Rewrite the decisions so the minutes question comes first and the place question comes second. Keep both input lines as they are.\r\n3. Run your program again. Check that every pair of answers still gives the same lunch as before.\r\n4. Finish the comment above the `if`: what changed when you swapped the order?\r\n5. Use Validate to check your work.\r\n\r\nCoding Tip: If you get stuck, draw the decision tree for the new order first, then turn it into code."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-04T04:26:39.169+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson11-modify1_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson11-modify1_27_28\"},{\"changed_at\":\"2026-11-04 04:28:49 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-04 04:29:43 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-04 04:30:04 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-04 04:45:27 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-04 04:46:35 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

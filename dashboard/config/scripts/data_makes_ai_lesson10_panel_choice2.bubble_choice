@@ -1,0 +1,11 @@
+name 'data-makes-ai-lesson10-panel-choice2'
+display_name 'Sample Apps'
+description 'The apps that the students wrote in to complain about are presented here for you to investigate.'
+
+sublevels
+level 'data-makes-ai-lesson10-weblab-marisol'
+level 'data-makes-ai-lesson10-weblab-andre'
+level 'data-makes-ai-lesson10-weblab-jonah'
+
+uses_lab2
+navigation_type 'next_sublevel'

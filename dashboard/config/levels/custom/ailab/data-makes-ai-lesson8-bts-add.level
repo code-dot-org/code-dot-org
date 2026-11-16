@@ -1,6 +1,5 @@
 <Ailab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 67,
   "created_at": "2026-10-30T20:00:00.000Z",
   "level_num": "custom",
@@ -8,10 +7,14 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true\r\n}",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L08-marketing-remove-old-bts\"\r\n  ],\r\n  \"label\": \"Result\",\r\n  \"hideSelectLabel\": true,\r\n  \"features\": [\r\n    \"Clip Type\",\r\n    \"Length\",\r\n    \"Famous Actor\",\r\n    \"Funny\"\r\n  ],\r\n  \"lockFeatures\": true,\r\n  \"pretrained\": true\r\n}",
     "uses_lab2": "true",
-    "dynamic_instructions": "{\r\n  \"datasetView\": \"- Read the list of added clips at the top of this page.\\n- In your guide, circle Fixed or Not fixed for the silly dance clip.\\n- Click **Train**.\",\r\n  \"results\": \"- Open the **Incorrect** tab. Is the silly dance clip still there?\\n- Write what the tree says now for it: Hit or Meh.\\n- Click **Accuracy**. Write the number.\\n- You're done when your row in the Test a Fix table is filled in.\"\r\n}"
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"- Read the list of added clips at the top of this page.\\n- In your guide, circle Fixed or Not fixed for the silly dance clip.\\n- Click **Train**.\",\r\n  \"results\": \"- Open the **Incorrect** tab. Is the silly dance clip still there?\\n- Write what the tree says now for it: Hit or Meh.\\n- Click **Accuracy**. Write the number.\\n- You're done when your row in the Test a Fix table is filled in.\"\r\n}",
+    "display_name": "Test a Fix: Fresh From the Set",
+    "bubble_choice_description": "Add four behind-the-scenes clips that were Hits. Will the silly dance clip get fixed?",
+    "thumbnail_url": "https://images.code.org/ce84fc4547525a4035253bf1c37f50f2-Fresh From the Set.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-30T20:00:00.572+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson8-trace-pairs\\\"\"],\"cloned_from\":\"data-makes-ai-lesson8-trace-pairs\"},{\"changed_at\":\"2026-10-30 20:00:02 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-30 22:52:53 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-31 00:02:44 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-30T20:00:00.572+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson8-trace-pairs\\\"\"],\"cloned_from\":\"data-makes-ai-lesson8-trace-pairs\"},{\"changed_at\":\"2026-10-30 20:00:02 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-30 22:52:53 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-31 00:02:44 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:55:23 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:55:55 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 19:09:40 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 19:24:38 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 19:43:20 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 20:16:38 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 20:17:01 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Ailab>

@@ -295,4 +295,22 @@ class CourseVersionTest < ActiveSupport::TestCase
       CourseVersion.add_course_version(course_offering, course)
     end
   end
+
+  test "courses_for_unit_selector avoids N+1 queries" do
+    student_unit_ids = [
+      @unit_in_course.id,
+      @unit_teacher_to_students.id,
+      @pilot_unit.id,
+      @partner_unit.id,
+      @pilot_pl_unit.id,
+      @in_development_unit.id,
+      @beta_unit.id,
+      @unit_facilitator_to_teacher.id
+    ]
+
+    # This would take 50 queries without `includes`
+    assert_queries(33) do
+      CourseVersion.courses_for_unit_selector(student_unit_ids, @teacher)
+    end
+  end
 end

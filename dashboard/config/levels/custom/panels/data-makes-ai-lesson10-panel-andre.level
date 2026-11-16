@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-11-04T15:29:20.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false",
+    "display_name": "Andre’s Homework Tracker",
+    "bubble_choice_description": "Andre finishes all his homework, but the app keeps emailing his mom that he needs a check-in. Find out how the app decides who is on track.",
+    "thumbnail_url": "https://images.code.org/de3f140ebe2506f980e1ea074d29ea4a-data-makes-ai-lesson-10-andre-a-friendly-chest-up-portrait-of-andre-in-his-a-c-1.png",
+    "panels": [
+      {
+        "text": "\"My mom works until 9:30 so I watch my little sister after school. I do my homework after she goes to sleep and I turn it in around 10.\"",
+        "imageUrl": "https://images.code.org/a8121366606e34a4f46f8626aab1348f-data-makes-ai-lesson-10-andre-a-small-warm-kitchen-at-night-andre-sits-at-the--1.png",
+        "key": "data-makes-ai-lesson10-panel-andre-c50a73ea-2b4c-4322-8966-886dd143d194",
+        "typing": true
+      },
+      {
+        "text": "\"I have done every single assignment this quarter, you can check with my teachers. But every Monday the app says I 'Need a Check-in' and it emails my mom. Last week she got the email at work and called me thinking I was lying about my grades. That was really embarrassing and kind of messed up.\"",
+        "imageUrl": "https://images.code.org/0ed8d291d3c370fcf71b5e5978d7ff40-data-makes-ai-lesson-10-andre-andre-in-a-school-hallway-near-his-locker-holdin-1.png",
+        "key": "data-makes-ai-lesson10-panel-andre-30340902-1566-4974-abb0-1172525ab3c4",
+        "typing": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "\"I don’t get why it matters what time I turn it in if it’s before the due date. Can you please fix it so it stops emailing her?\"",
+        "imageUrl": "https://images.code.org/c8b8b97258e8cf28786640ea35951d80-data-makes-ai-lesson-10-andre-back-at-the-kitchen-table-in-the-evening-andre-h-1.png",
+        "key": "data-makes-ai-lesson10-panel-andre-f2d988fb-702c-4b5c-878a-6cec47939b67",
+        "typing": true,
+        "layout": "text-bottom-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-04 15:46:52 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

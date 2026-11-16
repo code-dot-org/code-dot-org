@@ -12,8 +12,15 @@ const pathway = {
     plain: {id: 'plain', title: 'Plain', description: 'P.'},
   },
 } as unknown as Pathway;
-const checkpoint = (skillIds?: string[]) =>
-  ({id: 'c', title: 'C', description: 'C.', steps: [], skillIds} as never);
+const checkpoint = (skillIds?: string[], icon?: string) =>
+  ({
+    id: 'c',
+    title: 'C',
+    description: 'C.',
+    steps: [],
+    skillIds,
+    icon,
+  } as never);
 
 describe('checkpointIcon', () => {
   it("is the first skill's icon, skipping skills without one", () => {
@@ -25,7 +32,19 @@ describe('checkpointIcon', () => {
     );
   });
 
-  it('is absent without a skill icon', () => {
+  it("is the checkpoint's own icon when no skill has one", () => {
+    expect(checkpointIcon(pathway, checkpoint(['plain'], 'location-dot'))).toBe(
+      'location-dot'
+    );
+    expect(checkpointIcon(pathway, checkpoint(undefined, 'location-dot'))).toBe(
+      'location-dot'
+    );
+    expect(checkpointIcon(pathway, checkpoint(['build'], 'location-dot'))).toBe(
+      'wand-magic-sparkles'
+    );
+  });
+
+  it('is absent without a skill icon or one of its own', () => {
     expect(checkpointIcon(pathway, checkpoint(['plain']))).toBeUndefined();
     expect(checkpointIcon(pathway, checkpoint())).toBeUndefined();
   });

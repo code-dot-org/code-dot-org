@@ -76,6 +76,7 @@ class Section < ApplicationRecord
     avatar_emoji: :confidential,
     ai_chat_access_level: :confidential,
     demo_type: :confidential,
+    ai_challenge_enabled: :confidential,
   )
 
   include SerializedProperties
@@ -660,6 +661,8 @@ class Section < ApplicationRecord
         assigned_ai_chat_tools_dependency: ai_chat_dependency,
         assigned_required_inaccessible_ai_models: required_inaccessible_ai_models?(ai_chat_dependency),
         ai_chat_access_level: ai_chat_access_level,
+        ai_challenge_enabled: ai_challenge_enabled,
+        lesson_tutor_available: lesson_tutor_available?,
       }
     end
   end
@@ -754,6 +757,8 @@ class Section < ApplicationRecord
           assigned_ai_chat_tools_dependency: ai_chat_dependency,
           assigned_required_inaccessible_ai_models: required_inaccessible_ai_models?(ai_chat_dependency),
           ai_chat_access_level: ai_chat_access_level,
+          ai_challenge_enabled: ai_challenge_enabled,
+          lesson_tutor_available: lesson_tutor_available?,
         }
       )
     end
@@ -895,6 +900,10 @@ class Section < ApplicationRecord
     return false unless dependency == SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL]
     assigned = script || unit_group
     !!assigned&.requires_inaccessible_ai_models?(user)
+  end
+
+  def lesson_tutor_available?
+    !!(script&.lesson_tutor_available? || unit_group&.lesson_tutor_available?)
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

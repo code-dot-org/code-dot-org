@@ -1,4 +1,4 @@
-import {useCallback, useMemo} from 'react';
+import {useCallback, useMemo, useRef} from 'react';
 
 import {JsonObjectSchema, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {
@@ -48,6 +48,10 @@ export const useSharedAiTutorResponseSchemaSettings = ({
   onAiTutorVersionLoaded,
 }: AiTutorResponseSchemaSettingsOptions): ResponseSchemaSettings => {
   const dispatch = useAppDispatch();
+  // The chat keeps the handler from when the message was sent, so read the
+  // project as it is when the answer arrives.
+  const sourceRef = useRef(source);
+  sourceRef.current = source;
 
   const usesAcceptRejectFlow = useCallback(
     (formatted: ReturnType<typeof formatAcceptRejectResponse>) =>
@@ -83,10 +87,11 @@ export const useSharedAiTutorResponseSchemaSettings = ({
       sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_GENERATED_CODE, {
         answerType: formatted.answerType,
       });
+      const currentSource = sourceRef.current;
       const aiTutorVersionFiles: ProjectFile[] = [];
       const mergedSourceVersion = getMergedAiTutorCodeWithSource(
         formatted.code,
-        source as MultiFileSource,
+        currentSource as MultiFileSource,
         aiTutorVersionFiles
       );
       if (aiTutorVersionFiles.length === 0) {
@@ -96,11 +101,11 @@ export const useSharedAiTutorResponseSchemaSettings = ({
       // The editor stays read-only until the student accepts or rejects.
       dispatch(setViewingAiTutorVersion(true));
       dispatch(setAiTutorVersionFiles(aiTutorVersionFiles));
-      dispatch(setProjectSourceBeforeAiTutorVersion(source));
+      dispatch(setProjectSourceBeforeAiTutorVersion(currentSource));
       dispatch(setSource(mergedSourceVersion));
       onAiTutorVersionLoaded?.(mergedSourceVersion, aiTutorVersionFiles);
     },
-    [dispatch, source, usesAcceptRejectFlow, onAiTutorVersionLoaded]
+    [dispatch, usesAcceptRejectFlow, onAiTutorVersionLoaded]
   );
 
   return useMemo(

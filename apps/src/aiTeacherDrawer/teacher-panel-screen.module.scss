@@ -19,11 +19,4 @@
     z-index: auto;
     transition: none;
   }
-
-  // The slide-in/out chevron handles are for the floating panel UX and serve
-  // no purpose inside the drawer.
-  :global(.hide-handle),
-  :global(.show-handle) {
-    display: none;
-  }
 }

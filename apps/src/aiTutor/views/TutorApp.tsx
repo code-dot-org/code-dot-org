@@ -5,7 +5,7 @@ import {
 import React, {FC} from 'react';
 import {Navigate, Route, Routes} from 'react-router-dom';
 
-import experiments from '@cdo/apps/util/experiments';
+import {useLessonDeepDiveChallengesEnabled} from '../hooks/useLessonDeepDiveChallengesEnabled';
 
 import ChallengeRoute from './lessonDeepDive/ChallengeActivities/ChallengeRoute';
 import LessonDeepDiveContainer from './lessonDeepDive/LessonDeepDiveContainer';
@@ -21,6 +21,7 @@ const TutorApp: FC<TutorAppProps> = ({
   tutorGalleryData,
 }) => {
   const defaultRoute = lessonDeepDiveData ? 'welcome' : 'gallery';
+  const challengesEnabled = useLessonDeepDiveChallengesEnabled();
 
   return (
     <Routes>
@@ -41,15 +42,12 @@ const TutorApp: FC<TutorAppProps> = ({
           />
         </>
       )}
-      {tutorGalleryData &&
-        experiments.isEnabledAllowingQueryString(
-          experiments.LESSON_TUTOR_CHALLENGE
-        ) && (
-          <Route
-            path="gallery"
-            element={<ChallengeGallery tutorGalleryData={tutorGalleryData} />}
-          />
-        )}
+      {tutorGalleryData && challengesEnabled && (
+        <Route
+          path="gallery"
+          element={<ChallengeGallery tutorGalleryData={tutorGalleryData} />}
+        />
+      )}
     </Routes>
   );
 };

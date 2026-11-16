@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-09T16:19:08.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Decision Checker\r\n\r\nBuild the decision you planned on page 2 of your activity guide.\r\n\r\n1. Use input() to get the information you need and store it in a variable.\r\n2. Write your Boolean expression and store the answer in its own variable.\r\n3. Reveal the answer on the stage with draw_text().\r\n4. Test it with the three cases in your Test My Decision table.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from theater import *\n\n# Ask for the information you need\n\n\n# Make the decision with a Boolean expression\n\n\n# Reveal it\nset_text_color(\"white\")\nclear(\"navy\")\ndraw_text(\"My decision: \", 20, 150)\ndraw_text(\"Answer: \", 20, 200)\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoESQt4C4e0qVw7\ntcYjYjTslkFgvY9S1eVKSoufcedXxmCwAazuW+GKAWnM2WeklzSpLWeSgeTP\nT33PsYVVZJ7RGgc7GiaBvRoatQwTRKV/+0AGxnigoQnYar6CVVEiCRXGM8ia\njWODczfbPufZzEhHNm09Vb0KxIhS48WzIMkNeFzkR6LmerIFw5OJMaUcKucA\nb21fSb4lyFPG5XwHe+mgbNd9NLyibxSDafUObfhHv1ADyqevfVjsl5n688F3\n9zu1lQxXIY+RtfGeANNcZDZ6MBbFhci1/wJ8pf1QW6TGyzKOJkAizfFfbE50\nIqxF+YVmk+iSi0Qt18iIQmie3eJpXX1gMAU47hs4mIVkl/m0SZkONFOA3yp+\n5YHSD/XKe1LbT8OxuuJW+s8ySAZy+Xyyuj9ykII/jfzPdcPwwS3gSO0VUFkY\nURm+Nrne5gMrg3PZD2gjr1XMX+CS0Bwi9BAkcBkT4O++Fyi6ToUOB4xOVdDM\n0+02ypEuBBsvBqzi98zH4nMbP6JZYDc3S4qD6GWwaJ5iHAWIVxJFn0JYixcv\nYQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-09 16:20:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-09 16:21:03 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-09 16:21:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

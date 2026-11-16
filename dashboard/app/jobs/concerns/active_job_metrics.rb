@@ -197,6 +197,22 @@ module ActiveJobMetrics
         }
       ]
       metrics.concat(overall_metrics)
+
+      jobs = job_class.pending_jobs
+      priorities = {
+        'high' => jobs.where('priority < 10'),
+        'low' => jobs.where('priority >= 10'),
+      }
+      timestamp = Time.now
+      priorities.each do |priority, priority_jobs|
+        metrics << {
+          metric_name: 'PendingJobCount',
+          value: priority_jobs.count,
+          unit: 'Count',
+          timestamp: timestamp,
+          dimensions: dimensions + [{name: 'Priority', value: priority}],
+        }
+      end
     end
 
     Cdo::Metrics.push(METRICS_NAMESPACE, metrics)

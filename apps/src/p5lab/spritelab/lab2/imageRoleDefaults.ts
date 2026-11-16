@@ -10,10 +10,13 @@ import {RuntimeAnimationList} from './types';
  * The image_role_defaults level property: which image, by role, each dropdown
  * starts on. A kind key sets every dropdown of that kind; a block type key
  * sets that block's sprite sockets one by one, in socket order (a single
- * role covers them all). Roles are the strings the unit's image levels
- * record through level_mode.imageRole.
+ * role covers them all); a "data:" key names one block the level placed by
+ * its data tag, ahead of its type, so two say blocks can speak for two
+ * sprites. Roles are the strings the unit's image levels record through
+ * level_mode.imageRole.
  *
- *   {"sprite": "friend", "gamelab_checkTouching": ["hero", "friend"]}
+ *   {"sprite": "friend", "gamelab_checkTouching": ["hero", "friend"],
+ *    "data:friend-says": "friend"}
  */
 export type ImageRoleDefaults = {
   sprite?: string;
@@ -26,7 +29,12 @@ export type ImageRoleDefaults = {
 export interface ImageSlot {
   blockType: string;
   index: number;
+  /** The block's data tag, when the level gave it one. */
+  data?: string;
 }
+
+/** The defaults key that names a block by its data tag. */
+export const dataRoleKey = (data: string): string => `data:${data}`;
 
 export function defaultRole(
   defaults: ImageRoleDefaults | undefined,
@@ -37,7 +45,8 @@ export function defaultRole(
     return undefined;
   }
   if (slot) {
-    const forBlock = defaults[slot.blockType];
+    const forData = slot.data ? defaults[dataRoleKey(slot.data)] : undefined;
+    const forBlock = forData ?? defaults[slot.blockType];
     const role = Array.isArray(forBlock) ? forBlock[slot.index] : forBlock;
     if (typeof role === 'string') {
       return role;
@@ -45,6 +54,13 @@ export function defaultRole(
   }
   const forKind = defaults[kind];
   return typeof forKind === 'string' ? forKind : undefined;
+}
+
+// The keys of the images carrying the role, newest first.
+function keysInRole(list: RuntimeAnimationList, role: string): string[] {
+  return (list.orderedKeys || []).filter(
+    k => list.propsByKey[k]?.role === role
+  );
 }
 
 /** Every image of the kind carrying the role, by name, newest first. */
@@ -56,15 +72,19 @@ export function imagesNamedForRole(
   if (!role) {
     return [];
   }
-  return (list.orderedKeys || [])
-    .filter(k => {
-      const props = list.propsByKey[k];
-      return (
-        props?.role === role &&
-        imageTypeFromCategories(props.categories) === kind
-      );
-    })
+  return keysInRole(list, role)
+    .filter(
+      k => imageTypeFromCategories(list.propsByKey[k].categories) === kind
+    )
     .map(k => list.propsByKey[k].name);
+}
+
+/** Every image carrying the role, of any kind, by name, newest first. */
+export function imagesNamedInRole(
+  list: RuntimeAnimationList,
+  role: string
+): string[] {
+  return keysInRole(list, role).map(k => list.propsByKey[k].name);
 }
 
 /** The newest image of the kind carrying the role, by name. */

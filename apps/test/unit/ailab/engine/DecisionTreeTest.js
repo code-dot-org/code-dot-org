@@ -26,12 +26,12 @@ function predictSnake({store, project, trainedModel}) {
   });
 }
 
-function renderTrainedTree() {
+function renderTrainedTree(props = {}) {
   I18n.initI18n();
   const store = levelStore({trainer: 'decisionTree'});
   const project = levelProject();
   const trainingRun = runTraining(store, project);
-  renderWithProviders(createElement(DecisionTree), {
+  renderWithProviders(createElement(DecisionTree, props), {
     store,
     project,
     trainingRun,
@@ -490,5 +490,16 @@ describe('DecisionTree', () => {
 
       expect(playing()).toBe(false);
     });
+  });
+});
+
+describe('DecisionTree image menu', () => {
+  afterEach(() => I18n.reset());
+
+  it('offers the Backpack when the host can save there', () => {
+    renderTrainedTree({saveImageToBackpack: jest.fn()});
+    expect(
+      screen.queryByRole('button', {name: 'Save to Backpack'})
+    ).not.toBeNull();
   });
 });

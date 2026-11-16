@@ -13,7 +13,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
   let(:response_json) {JSON.parse(response.body)}
 
   before do
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
+    User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(true)
     AWS::S3.stubs(:user_content_bucket).returns('test-user-content')
     AWS::S3.stubs(:presigned_download_url).returns('https://s3.example/download')
   end
@@ -465,7 +465,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
 
       it 'returns the response including the evaluation, feedback, and rubric' do
         challenge_response.update!(
-          challenge: create(:challenge, :with_rubric),
+          challenge: create(:challenge),
           evaluation_result: {'level' => 2},
           student_feedback: 'Nice work!',
           evaluation_status: :success
@@ -585,12 +585,12 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
   end
 
   describe 'POST #evaluate' do
-    let(:challenge) {create(:challenge, :with_rubric)}
+    let(:challenge) {create(:challenge)}
     let(:challenge_response) {create(:challenge_response, challenge:, user: student, is_final: true)}
 
-    context 'when signed in without lesson deep dive access' do
+    context 'when signed in without lesson deep dive challenge access' do
       before do
-        User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
+        User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(false)
         sign_in student
       end
 
@@ -616,7 +616,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it 'rejects a challenge with no rubric' do
-        challenge.update!(rubric: nil)
+        challenge.update_column(:rubric, nil)
 
         assert_no_enqueued_jobs do
           post :evaluate, params: {id: challenge_response.id}

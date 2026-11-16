@@ -1,5 +1,6 @@
 // Markup shared by every rendering of the sentence.
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -24,13 +25,23 @@ export function hueClass(sentence: Sentence, slotId: string): string {
   return styles[`hue_${hueFor(sentence, slotId)}`];
 }
 
-/** A word's emoji in its badge, then the word. */
+/** A word's icon, or its color as a dot, then the word. */
 export const WordText: React.FunctionComponent<{word: Word}> = ({word}) => (
   <>
-    {word.emoji && (
-      <span className={styles.emojiBadge} aria-hidden>
-        {word.emoji}
-      </span>
+    {word.color ? (
+      <span
+        className={styles.colorDot}
+        style={{backgroundColor: word.color}}
+        aria-hidden
+      />
+    ) : (
+      word.icon && (
+        <FontAwesomeV6Icon
+          iconName={word.icon}
+          className={styles.wordIcon}
+          aria-hidden
+        />
+      )
     )}
     {word.text}
   </>

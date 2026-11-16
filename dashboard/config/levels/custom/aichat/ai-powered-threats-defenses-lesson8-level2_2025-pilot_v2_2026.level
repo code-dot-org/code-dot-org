@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-04-01T21:33:17.000Z",
   "level_num": "custom",
@@ -42,17 +43,16 @@
       "multimodalEnabled": true
     },
     "name_suffix": "_2026",
-    "starter_assets": {
-      "Jordan P. Audit Logs.pdf": "de645a8d-7536-4b75-821c-486057f26876.pdf",
-      "Sana R. Audit Logs.pdf": "501a6341-25b4-4300-9d2a-9480b19f349d.pdf",
-      "Amara T. Audit Logs.pdf": "5492e19e-7c29-498f-b366-ca7885ad1dad.pdf",
-      "Omar M. Persona Profile and Audit Logs.pdf": "bc73e961-da3a-4b97-8baf-19c24ba865e8.pdf"
-    },
     "offer_browser_tts": "false",
     "submittable": "false",
-    "disable_edit_run_for_submission": "false"
+    "disable_edit_run_for_submission": "false",
+    "starter_assets": {
+      "Amara T. Persona Profile and Audit Logs.pdf": "71dc38a5-4e0f-4bf3-a5f3-f36cbe4bebee.pdf",
+      "Jordan P. Persona Profile and Audit Logs.pdf": "7f0572eb-8e2e-4bc5-a0bb-1dcb30214d7b.pdf",
+      "Omar M. Persona Profile and Audit Logs.pdf": "27e312b5-6f22-4e3b-9c87-42ab18a6c3e0.pdf",
+      "Sana R. Persona Profile and Audit Logs.pdf": "5d306a5a-b22c-48db-afbb-d3f686ae91ff.pdf"
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:33:17.809+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson8-level2_2025-pilot_v2\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson8-level2_2025-pilot_v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:33:17.809+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson8-level2_2025-pilot_v2\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson8-level2_2025-pilot_v2\"},{\"changed_at\":\"2026-11-05 16:45:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

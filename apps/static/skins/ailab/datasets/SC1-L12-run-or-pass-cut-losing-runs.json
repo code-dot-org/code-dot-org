@@ -1,0 +1,52 @@
+{
+  "name": "SC1-L12-run-or-pass-cut-losing-runs",
+  "card": {
+    "description": "A coaching staff wants to predict the other team's next play. Each record is one real play from the 2023 NFL season. The label is Pass or Run. A pass throws the ball. A run carries it. You can also choose First Down? or Drive Scored? as the label.",
+    "source": "nflverse play-by-play data, 2023 season (https://github.com/nflverse/nflverse-data/releases/tag/pbp). Records hand-picked from real plays.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Help a coach guess if the other team will pass or run",
+      "potentialMisuses": "It is trained on a small set of plays picked by people, so it can be wrong in game situations that have only a few records. Don't use it to judge a team or a coach."
+    }
+  },
+  "defaultLabelColumn": "Play",
+  "defaultIdColumn": "Play ID",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Play ID",
+      "description": "Which play is this?"
+    },
+    {
+      "type": "categorical",
+      "id": "Down",
+      "description": "Which try is this? A team gets four tries (downs) to move the ball 10 yards."
+    },
+    {
+      "type": "categorical",
+      "id": "Yards to Go",
+      "description": "How far does the team need to go for a first down? Short is 1 to 3 yards, Medium is 4 to 6, Long is 7 or more."
+    },
+    {
+      "type": "categorical",
+      "id": "Score",
+      "description": "Is the team with the ball winning, tied or losing?"
+    },
+    {
+      "type": "categorical",
+      "id": "First Down?",
+      "description": "Did the play earn a first down (or a touchdown)?"
+    },
+    {
+      "type": "categorical",
+      "id": "Drive Scored?",
+      "description": "Did the team score (a touchdown or field goal) before the other team got the ball?"
+    },
+    {
+      "type": "categorical",
+      "id": "Play",
+      "description": "Did the team Pass or Run? This is what the model predicts."
+    }
+  ]
+}

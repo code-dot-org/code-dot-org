@@ -1,43 +1,25 @@
-// Writing a made or edited picture into the project's animation list,
-// shared by the image dialog and the sentence scene.
+// Writing a made or edited picture into the project's animation list.
 
 import {AnyAction, Dispatch} from 'redux';
 
 import {
   addAnimation,
   isNameUnique,
+  SET_INITIAL_ANIMATION_LIST,
   setAnimationName,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {
   GeneratedImageResult,
   UploadImageFunction,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
-import {ImageGenerationMetadata} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
-import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
-import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
+import {RuntimeAnimationProps} from '@cdo/apps/p5lab/spritelab/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
 
-// The animation fields the save paths write. An explicit `undefined`
-// clears the field (the spread keeps the key).
-export interface AnimationPatch {
-  sourceUrl?: string;
-  dataURI?: string;
-  frameSize?: {x: number; y: number};
-  sourceSize?: {x: number; y: number};
-  frameCount?: number;
-  frameDelay?: number;
-  looping?: boolean;
-  poses?: AnimationPoses;
-  categories?: string[];
-  role?: string;
-  pixelGridSize?: number;
-  /** Set wherever an animation's pixels are replaced; a stale true would
-      skip a needed trim. */
-  trimmed?: boolean;
-  generation?: ImageGenerationMetadata;
-  recentColors?: PixelEditorSaveMeta['recentColors'];
-}
+// The animation fields a save may write: any of them but the name, which
+// is set by the create path. An explicit `undefined` clears a field, since
+// the spread keeps the key.
+export type AnimationPatch = Partial<Omit<RuntimeAnimationProps, 'name'>>;
 
 // A plain single-frame picture's playback fields; also what a brand-new
 // animation starts as.
@@ -108,4 +90,34 @@ export async function uploadOrEmbed(
   } catch {
     return dataURI;
   }
+}
+
+/**
+ * Point an existing animation at new pixels and refresh its thumbnails.
+ * Uses the raw list-replace action because the classic edit action clears
+ * sourceUrl, which is what Lab2 saves. Returns the file URL the change
+ * replaced.
+ */
+export function repointAnimation(
+  dispatch: Dispatch,
+  key: string,
+  changes: AnimationPatch
+): string | undefined {
+  const current = getStore().getState().animationList;
+  const updated = {
+    orderedKeys: current.orderedKeys,
+    propsByKey: {
+      ...current.propsByKey,
+      [key]: {
+        ...current.propsByKey[key],
+        ...changes,
+        loadedFromSource: true,
+        saved: false,
+      },
+    },
+  };
+  // No trim here: the views that list images trim on every list change,
+  // and a second trim would scan the image again.
+  dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
+  return current.propsByKey[key]?.sourceUrl;
 }

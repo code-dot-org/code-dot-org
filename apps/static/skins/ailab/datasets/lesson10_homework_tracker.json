@@ -1,0 +1,51 @@
+{
+  "name": "Homework Tracker",
+  "card": {
+    "description": "Students using the OnTrack homework app during one school week. Each student is labeled On Track or Needs Check-in. The app records how many assignments each student submitted in the app, what time they submitted, and how long they spent in the app. A student is labeled On Track when all 5 assignments were submitted in the app before 9 PM. The teacher's gradebook, showing whether each student finished all their work, was added for comparison.",
+    "source": "Created for AI Discoveries, Lesson 10",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "Code.org AI Discoveries",
+      "potentialUses": "Predict which students need a check-in, so the app can email a parent."
+    }
+  },
+  "defaultLabelColumn": "Status",
+  "defaultIdColumn": "ID",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "ID",
+      "description": "An ID for each row of data."
+    },
+    {
+      "type": "categorical",
+      "id": "How Work Is Turned In",
+      "description": "How the student turns in homework."
+    },
+    {
+      "type": "categorical",
+      "id": "Finished All Work in Gradebook",
+      "description": "Whether the teacher's gradebook shows all 5 assignments done (Yes or No)."
+    },
+    {
+      "type": "numerical",
+      "id": "Submitted in App",
+      "description": "Assignments submitted in the app (out of 5)."
+    },
+    {
+      "type": "categorical",
+      "id": "Submit Time",
+      "description": "When the student usually submitted in the app."
+    },
+    {
+      "type": "numerical",
+      "id": "Minutes in App",
+      "description": "Minutes spent in the app this week."
+    },
+    {
+      "type": "categorical",
+      "id": "Status",
+      "description": "On Track or Needs Check-in."
+    }
+  ]
+}

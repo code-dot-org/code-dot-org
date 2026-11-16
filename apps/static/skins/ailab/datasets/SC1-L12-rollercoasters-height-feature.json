@@ -1,0 +1,62 @@
+{
+  "name": "SC1-L12-rollercoasters-height-feature",
+  "card": {
+    "description": "A guide to 60 real roller coasters. Each record is one coaster. The label is Yes or No: can a child under 48 inches tall ride it? It comes from the coaster's listed height rule. You can also choose Built Before 1990? or Over 100 Feet Tall? as the label.",
+    "source": "Facts from each coaster's own English Wikipedia article (the Infobox roller coaster box: type, height, speed, length, inversions, launch, height requirement). Pages are listed in the Dataset spec. We picked which 60 coasters to include. Code.org's Rollercoasters library has no height requirement, so it was not used.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Use the tree to guess whether a young child could ride a coaster before checking the park's sign.",
+      "potentialMisuses": "It is trained on only 54 of the 60 coasters on the list, so it may be wrong for other rides. Park rules change, so always check the park's height sign. Always check the park's sign. A tree is not a safety check."
+    }
+  },
+  "defaultLabelColumn": "Under-48 Rider OK?",
+  "defaultIdColumn": "Coaster",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Coaster",
+      "description": "What is the roller coaster called?"
+    },
+    {
+      "type": "categorical",
+      "id": "Type",
+      "description": "Is the track made of steel or wood?"
+    },
+    {
+      "type": "categorical",
+      "id": "Height (ft)",
+      "description": "How tall is the highest point in feet?"
+    },
+    {
+      "type": "categorical",
+      "id": "Top Speed (mph)",
+      "description": "How fast does the coaster go in miles per hour?"
+    },
+    {
+      "type": "categorical",
+      "id": "Inversions",
+      "description": "Does the coaster turn riders upside down?"
+    },
+    {
+      "type": "categorical",
+      "id": "Launched",
+      "description": "Does a fast launch start the ride? No means a chain lifts the cars up the first hill. No means a chain lifts it."
+    },
+    {
+      "type": "categorical",
+      "id": "Built Before 1990?",
+      "description": "Did the coaster open before the year 1990?"
+    },
+    {
+      "type": "categorical",
+      "id": "Over 100 Feet Tall?",
+      "description": "Is the coaster taller than 100 feet?"
+    },
+    {
+      "type": "categorical",
+      "id": "Under-48 Rider OK?",
+      "description": "Can a child under 48 inches tall ride it? This is what the tree predicts for each coaster."
+    }
+  ]
+}

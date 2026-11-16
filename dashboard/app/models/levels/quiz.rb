@@ -84,11 +84,34 @@ class Quiz < Level
     existing = placements.map {|p| {quiz_question_id: p.quiz_question_id, page: p.page, position: p.position}}
     return if existing.sort_by {|h| h[:quiz_question_id]} == desired.sort_by {|h| h[:quiz_question_id]}
 
-    # insert_all!/delete_all bypass QuizQuestionPlacement's callbacks, avoiding
-    # the after commit hook that would otherwise circularly resave the quiz.
-    placements.delete_all
-    QuizQuestionPlacement.insert_all!(desired.map {|d| d.merge(level_id: id)}) if desired.any?
-    placements.reset
+    write_placement_rows!(desired)
+  end
+
+  # Sets this quiz's placements to the given questions, in the order given,
+  # with pages and positions renumbered from 1. Questions in delete_question_ids
+  # are deleted if nothing else uses them, including ones never placed here.
+  def replace_placements!(entries, delete_question_ids: [])
+    new_question_ids = entries.pluck(:quiz_question_id)
+    raise ArgumentError, 'a question is listed more than once' if new_question_ids.uniq.size != new_question_ids.size
+    valid_question_ids = QuizQuestion.where(type: QuizQuestion::TYPES, id: new_question_ids).pluck(:id)
+    raise ArgumentError, "unknown quiz question ids: #{(new_question_ids - valid_question_ids).sort.join(', ')}" if valid_question_ids.size != new_question_ids.size
+    raise ArgumentError, "a question can't be both kept and deleted" if delete_question_ids.intersect?(new_question_ids)
+
+    # Maps each page sent to 1..N in the same order, e.g. pages 4, 9 => {4 => 1, 9 => 2}.
+    page_numbers = entries.pluck(:page).uniq.sort.each_with_index.to_h {|page, i| [page, i + 1]}
+    # Counts positions per page.
+    last_position_by_page = Hash.new(0)
+    rows = entries.sort_by {|e| [e[:page], e[:position]]}.map do |entry|
+      page = page_numbers[entry[:page]]
+      {quiz_question_id: entry[:quiz_question_id], page: page, position: last_position_by_page[page] += 1}
+    end
+
+    transaction do
+      write_placement_rows!(rows)
+      QuizQuestion.where(id: delete_question_ids).find_each do |question|
+        question.destroy! unless question.referenced?
+      end
+    end
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -103,6 +126,22 @@ class Quiz < Level
 
   def uses_lab2?
     true
+  end
+
+  def saved_version
+    updated_at.to_i
+  end
+
+  def advance_saved_version
+    self.updated_at = Time.current.change(usec: 0)
+  end
+
+  # Whether a unit using this quiz is launched or sunsetting.
+  def used_in_published_unit?
+    script_levels.any? do |sl|
+      unit = sl.script
+      unit && (unit.launched? || unit.sunsetting?)
+    end
   end
 
   # Placements are quiz-owned join rows; questions stay shared bank content.
@@ -134,6 +173,15 @@ class Quiz < Level
       }
     end
     properties_camelized
+  end
+
+  # delete_all/insert_all! skip the per-placement after_commit that rewrites the .level file.
+  private def write_placement_rows!(rows)
+    transaction do
+      QuizQuestionPlacement.where(level_id: id).delete_all
+      QuizQuestionPlacement.insert_all!(rows.map {|row| row.merge(level_id: id)}) if rows.any?
+    end
+    placements.reset
   end
 
   private def reveal_answer_explanation_requires_show_correctness

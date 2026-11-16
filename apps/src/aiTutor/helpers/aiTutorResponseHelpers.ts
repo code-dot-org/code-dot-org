@@ -189,6 +189,9 @@ export const getMergedAiTutorCodeWithSource = (
       const aiTutorVersionFile: ProjectFile = {
         ...updatedSource.files[activeFile.id],
         contents: aiFile.contents,
+        // Files with a url run from it, not contents; clear it so AI tutor's
+        // content always 'wins'.
+        url: undefined,
         isAiTutorVersionUpdated: true,
       };
       aiTutorVersionFiles.push(aiTutorVersionFile);
@@ -204,6 +207,7 @@ export const getMergedAiTutorCodeWithSource = (
       updatedSource.files[matchingFiles[0].id] = {
         ...matchingFiles[0],
         contents: aiFile.contents,
+        url: undefined,
         isAiTutorVersionUpdated: true,
       };
       aiTutorVersionFiles.push(updatedSource.files[matchingFiles[0].id]);

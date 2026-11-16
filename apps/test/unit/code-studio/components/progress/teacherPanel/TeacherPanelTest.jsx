@@ -7,6 +7,7 @@ import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSe
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {UnconnectedTeacherPanel as TeacherPanel} from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanel';
+import TeacherPanelContainer from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanelContainer';
 import * as teacherPanelData from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import * as utils from '@cdo/apps/code-studio/utils';
@@ -106,6 +107,13 @@ describe('TeacherPanel', () => {
       expect(wrapper.contains(i18n.teacherPanel())).toBe(true);
       expect(wrapper.find(ViewAsToggle)).toHaveLength(1);
     });
+  });
+
+  it('is collapsible only outside the TA drawer', () => {
+    expect(setUp().find(TeacherPanelContainer).prop('collapsible')).toBe(true);
+    expect(
+      setUp({inTaDrawer: true}).find(TeacherPanelContainer).prop('collapsible')
+    ).toBe(false);
   });
 
   it('shows loading message when sections are not loaded', () => {

@@ -1,23 +1,14 @@
-import {useCallback, useEffect, useRef, useState} from 'react';
-
-import {ImageType} from '../ai/images/types';
-import {PictureRequest, setPictureRequestHandler} from '../picturePicker';
+import {useEffect, useRef, useState} from 'react';
 
 interface PicturesSheetOptions {
-  /** The level offers Pictures; otherwise no picture request is answered. */
-  offered: boolean;
   /** The lab is up, so the sheet can mount in an idle moment. */
   ready: boolean;
 }
 
 /**
- * The Pictures sheet's state: open or closed, mounted once and kept, and the
- * picture a block or the world palette asked for.
+ * The Pictures sheet's state: open or closed, and mounted once and kept.
  */
-export default function usePicturesSheet({
-  offered,
-  ready,
-}: PicturesSheetOptions) {
+export default function usePicturesSheet({ready}: PicturesSheetOptions) {
   const [open, setOpen] = useState(false);
   // Mounted once and kept, so no opening pays the mount cost.
   const [mounted, setMounted] = useState(false);
@@ -40,44 +31,12 @@ export default function usePicturesSheet({
     return () => window.clearTimeout(handle);
   }, [ready, mounted]);
 
-  // A block or the world palette asks for a picture: the new-image dialog
-  // opens on that kind, and the finished picture goes back to the asker.
-  const [pickRequest, setPickRequest] = useState<PictureRequest | null>(null);
-  useEffect(() => {
-    if (!offered) {
-      return;
-    }
-    return setPictureRequestHandler(request => {
-      setPickRequest({...request});
-      setMounted(true);
-    });
-  }, [offered]);
-  const onImageCreated = useCallback(
-    (name: string, imageType: ImageType) => {
-      if (pickRequest) {
-        pickRequest.onPicked(name, imageType);
-        setPickRequest(null);
-      }
-    },
-    [pickRequest]
-  );
-  const onPickCancel = useCallback(() => setPickRequest(null), []);
-
-  // Inert while closed, except while a pick's dialog renders inside it
-  // (React 18's JSX has no inert attribute).
+  // Inert while closed (React 18's JSX has no inert attribute).
   const sheetRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (sheetRef.current) {
-      sheetRef.current.inert = !open && !pickRequest;
+      sheetRef.current.inert = !open;
     }
-  }, [open, pickRequest, mounted]);
-  return {
-    open,
-    setOpen,
-    mounted,
-    pickRequest,
-    sheetRef,
-    onImageCreated,
-    onPickCancel,
-  };
+  }, [open, mounted]);
+  return {open, setOpen, mounted, sheetRef};
 }

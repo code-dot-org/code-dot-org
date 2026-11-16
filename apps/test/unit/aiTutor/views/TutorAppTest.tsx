@@ -6,7 +6,11 @@ import {MemoryRouter} from 'react-router-dom';
 
 import {LessonDeepDiveData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import TutorApp from '@cdo/apps/aiTutor/views/TutorApp';
-import experiments from '@cdo/apps/util/experiments';
+
+let mockChallengesEnabled = true;
+jest.mock('@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled', () => ({
+  useLessonDeepDiveChallengesEnabled: () => mockChallengesEnabled,
+}));
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer',
@@ -72,11 +76,7 @@ function renderAt(
 
 describe('TutorApp routing', () => {
   beforeEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
-  });
-
-  afterEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
+    mockChallengesEnabled = true;
   });
 
   describe('index redirect', () => {
@@ -126,8 +126,8 @@ describe('TutorApp routing', () => {
       expect(screen.queryByText('challenge-gallery')).not.toBeInTheDocument();
     });
 
-    it('does not render the gallery route when lesson-tutor-challenge is off', () => {
-      experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
+    it('does not render the gallery route when challenges are disabled', () => {
+      mockChallengesEnabled = false;
       renderAt('/gallery');
       expect(screen.queryByText('challenge-gallery')).not.toBeInTheDocument();
     });

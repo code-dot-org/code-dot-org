@@ -1,0 +1,23 @@
+// The preview canvas fills its host's box (absolute; the host must be
+// positioned) and inherits the host's img/canvas sizing rules. The current
+// pose's name sits in a small pill at the top left.
+.sheetPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.sheetPreviewCaption {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--neutral-base-true-black) 45%, transparent);
+  color: var(--text-neutral-white-fixed);
+  font-size: 13px;
+  // The page gives every span user-select: text.
+  user-select: none;
+}

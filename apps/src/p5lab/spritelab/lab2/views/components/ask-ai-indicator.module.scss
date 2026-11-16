@@ -1,0 +1,22 @@
+.askAiSlot {
+  display: flex;
+  grid-column: 3;
+  // pin to the top of the footer, so it won't overflow the preview.
+  align-self: start;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-left: 16px;
+  // max-height 0 so the preview doesn't shift when the alert appears.
+  max-height: 0;
+  color: var(--text-neutral-primary);
+}
+
+.pending {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spinner {
+  flex-shrink: 0;
+}

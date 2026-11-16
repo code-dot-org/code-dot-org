@@ -1,0 +1,54 @@
+// One ring per group, filling with the share of its checkpoints the
+// student is past, with the group's icon in the middle, in its color. Each
+// ring is a button that does nothing but take focus, so a keyboard reaches
+// its tooltip and a screen reader reads its label.
+
+import {Tooltip} from '@mui/material';
+import classNames from 'classnames';
+import React from 'react';
+
+import PathwayIcon from './components/PathwayIcon';
+import {GroupProgress} from './map/groupProgress';
+
+import styles from './progressRings.module.scss';
+
+interface ProgressRingsProps {
+  rings: GroupProgress[];
+  /** Large rings for the stats tiles; small is the map's. */
+  size?: 'small' | 'large';
+}
+
+const ProgressRings: React.FunctionComponent<ProgressRingsProps> = ({
+  rings,
+  size = 'small',
+}) => (
+  <ul className={classNames(styles.rings, size === 'large' && styles.large)}>
+    {rings.map(({key, title, icon, color, done, total}) => {
+      const share = total ? done / total : 0;
+      const label = `${title}: ${done} of ${total} checkpoints complete`;
+      return (
+        <li key={key}>
+          <Tooltip title={title} arrow>
+            <button
+              type="button"
+              className={classNames(
+                styles.ring,
+                color && styles[color],
+                done === 0 && styles.untouched,
+                total > 0 && done === total && styles.complete
+              )}
+              style={{'--share': share} as React.CSSProperties}
+              aria-label={label}
+            >
+              <span className={styles.inner}>
+                {icon && <PathwayIcon iconName={icon} />}
+              </span>
+            </button>
+          </Tooltip>
+        </li>
+      );
+    })}
+  </ul>
+);
+
+export default ProgressRings;

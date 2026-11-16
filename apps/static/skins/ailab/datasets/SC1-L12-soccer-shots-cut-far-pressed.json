@@ -1,0 +1,62 @@
+{
+  "name": "SC1-L12-soccer-shots-cut-far-pressed",
+  "card": {
+    "description": "A soccer team's data staff recorded the shots from the 2023 Women's World Cup. Each record is one shot. The label is Goal or No Goal. You can also choose First Half? or First Time? as the label.",
+    "source": "StatsBomb Open Data, FIFA Women's World Cup 2023 (competition 72, season 107): https://github.com/statsbomb/open-data (events files). Real shots; 60 were chosen by hand.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Use the model's predictions to help the staff talk about which kinds of shots are most likely to score.",
+      "potentialMisuses": "It is trained on only 54 shots chosen by people, so it may predict poorly for other shots. In real games, fewer shots score than in this log."
+    }
+  },
+  "defaultLabelColumn": "Goal?",
+  "defaultIdColumn": "Shot",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Shot",
+      "description": "Which shot is it?"
+    },
+    {
+      "type": "categorical",
+      "id": "Distance",
+      "description": "How far from the goal was the shot? Close is under 9 yards, Medium is 9 to 16, Far is over 16."
+    },
+    {
+      "type": "categorical",
+      "id": "Angle",
+      "description": "Was the shot from in front of the goal (Central) or from the side (Wide)?"
+    },
+    {
+      "type": "categorical",
+      "id": "Body Part",
+      "description": "Did the player shoot with a foot or with the head?"
+    },
+    {
+      "type": "categorical",
+      "id": "Under Pressure",
+      "description": "Was a defender close to the player and trying to stop the shot?"
+    },
+    {
+      "type": "categorical",
+      "id": "Play Type",
+      "description": "Did the shot come from open play or a set piece (a corner or free kick)?"
+    },
+    {
+      "type": "categorical",
+      "id": "First Half?",
+      "description": "Was the shot in the first half of the game?"
+    },
+    {
+      "type": "categorical",
+      "id": "First Time?",
+      "description": "Did the player shoot the ball right away without stopping the ball first?"
+    },
+    {
+      "type": "categorical",
+      "id": "Goal?",
+      "description": "Goal or No Goal? This is what the model predicts for each shot."
+    }
+  ]
+}

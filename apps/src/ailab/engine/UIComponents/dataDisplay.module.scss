@@ -55,6 +55,8 @@
 }
 
 .tableContainer {
+  @include mixins.data-table-flush-edges;
+
   flex: 1;
   min-height: 0;
   overflow: auto;

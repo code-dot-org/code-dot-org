@@ -175,7 +175,13 @@ const handlePyodideMessage = (data: PyodideMessage) => {
       break;
     }
     case 'updated_source':
-      getStore().dispatch(setAndSaveSource(message));
+      // Skip stopped runs and AI Tutor changes the student hasn't accepted.
+      if (
+        id in callbacks &&
+        !getStore().getState().lab2Project.viewingAiTutorVersion
+      ) {
+        getStore().dispatch(setAndSaveSource(message));
+      }
       break;
     case 'error':
       getStore().dispatch(setHasError(true));

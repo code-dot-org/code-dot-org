@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T15:30:33.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Sayings",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson13-choice1-2026 + template",
+    "long_instructions": "Remember `model` is a dictionary that records which tokens follow which. Each key is a token. Its value is a list of every token that came right after it in the corpus, including repeats. For example:\r\n\r\n```\r\n{\r\n  \"The\": [\"pen\", \"customer\", \"proof\", …],\r\n  \"pen\": [\"is\"],\r\n  \"is\": [\"mightier\", \"always\", \"in\", \"in\", …],\r\n  …\r\n}\r\n```\r\n\r\nThe `learn` function fills in `model`. It’s called once for each sentence in the corpus. Its argument, `tokens`, is the list of tokens in a sentence.\r\n\r\n**☑️ Do This:**\r\n\r\n- Complete the `learn` function. For each pair of neighboring tokens in `tokens`, add the second token to the first token’s list in `model`. \r\n- If the first token isn’t a key in `model` yet, add it as a key with a new list containing the second token.\r\n- If the first token is already a key, append the second token to its list.\r\n\r\n**💻 Coding Tip**\r\n\r\nA `for` loop can give you each pair of neighboring tokens:\r\n\r\n```\r\nfor i in range(len(tokens) - 1):\r\n  token = tokens[i]\r\n  next_token = tokens[i + 1]\r\n```\r\n\r\n`in` checks whether a dictionary already has a key:\r\n\r\n```\r\nif token not in model:\r\n  ...\r\nelse:\r\n  ...\r\n```",
+    "bubble_choice_description": "A collection of short sayings that express some truth.",
+    "thumbnail_url": "https://images.code.org/78e6d7abca76be9df4234d830f8a6240-sayings.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY6G47pjDUcd8/+C\nqKrh/uxDpmTUfELY/4K/3hqYo9qrPPBefjL8unO39FeuJNfzfnnzcT8xRBdh\nEAgysVVz+Jq62rcmIlBh/pK8YPcmmNeSL14+K0BtK//hvhBpC/YOEdtTb2y6\nQRfcXQHXDpgIz6PUkLdptPtAdZYHezpIelumC2lK99eExacE9j+rzZP7u30o\nam5K0MYuGVIed/2m53v2g3GLA+0AhKi8Iut4KBrojQD6rt+FIVyEni2FKzs8\nHQEJaTJFWe9/WsvKT3z6yOlBvuhC7UyaCK/L/MbAPb6wNtMiQ3tj5HyA7Ald\nKAQh6Z39ctzQJQo3gey8sbF0XXEkRFP89fK7cjsBEyj/aG/5qrttRYrKPx+5\nMfryr/zHa6clw9U/rEWt8SSv+kdAkSPrNsJE3+bGNMJM6MGch5PW6qLQdHTA\nJQAdDwSm5h3Wv85+OslYwbBRYLLXD6H5l8dvT+Un66icsxprW3o/6rSSgAkS\n5XJKK2eHkd/RFNTELzsa6ii4zoJuof86z9VgE8q++NLOIA8a5ZvcIsRrhpiy\n8JJIUNA+3m7D3eBceHXWwo219s+nAxq3w7PP13HOyahigEwoTiJfcDx1c1TG\nMwv7+3sYc3Brw5lLzswNb6NJLg/0jFFSeUGpLfEB0r71GSWh7tX9B95SKqY1\nW3fRPIRj30ad8cOet7B76PIlwYaDwX1ABRIf16I80n7Q21+RP3zi6bMVkwyo\nKuLaUTobb9ANd+QAMuKWlL632gHpyKKG7XTaiFDl5tWzOBBZdX5FllKSuzHI\nJ2pWHMaMuzLBSttb8PkTEzkui9JfoHgnXivWJ9ZDKE9WhxrMlckDkmG5vXdV\nJB68OC1xCqgpEomjYv8ECCWsNg3cEzhE8kqJ1m/fNZjTZuYN1axPRCYtM7t3\nuXJqPl1tNaozMyM+lGCPo3vkL4rWKJtmLs4VcQgD9/knKncyczMMbHwdH1jR\niLjZ9Kl5+CHzJj+ZqNdBDu+AMs/x4t9sIa5ULElzxcLeBhYZMXElw1FLgTG7\nNoWPSBRz2KFjh6IA5egvmv4gayDoHA8w6SrzsmXVFJUu/2s1oX7t6mw3ASgF\nea+/fFubnUbP7KXn/FXZPIg/jzNYnj9FONwxs11++pRLI1s9jxmnVCpVDnfL\nNopdoOKXGS7vo1YmNHZ7TBhB3mqU9LUiLx3nrx8Cs5n+zeMo9W0AVTCywjKx\nNelHIuiluw102LSl2WdWI7Lq/Rq6iPtfXAS7vFehs3fUS1RP1ULjx34aMu1y\nc4eyyJA/VUf1aHFP0OSquPGCQpdIP81yY9RGKJZJvyMG5upk8Z5Zhn0uEOGx\n1elS/L2dsBXqnzvJzLb6gjm9vrzGWy+tvgiw5cYdpArfmX4NBnx311f2XYQQ\nb8DLz+Nsn4yavY4RKS1bd5C65L8XxXPTbj//PSLh9LCljDBvS4BxUm+T0K8Z\netF9F9FrZnukAJmHbNMj2RqT6+OqXWOd7lJc5pwha2vI2KWMNJ5I5OLhFrsH\n7Y5rGzAxcZUUbO9oPninyM2Xd05394auQ6PgU5Um/o1JgLsViD/rMRx16TqH\nQMQIC+RPzcnULkOozmFa3oy/O+1eNE+diU5wDHRtLeGTXH2PuobeW4M0wU33\nl/FPelGd7/0D+1jCLzgCjbTNfFJeeq2e3Ne+fJuo69BIKqXtwG8MCotdgFNz\nHthDXv7P8XB9XmhDnPZ7tyRzxjyI5M1/qMLojkAIp5T2kctOWw0ORJnIUznY\nRuU6v0WbhD7leFCJD8uTjb3f5Wz8qN/20onVmnD8ZI2cTOz8CSRDQOFERoyn\nnI2jbbUuIl5TZgS4lPjpj5q+V/3r9OCfl5Xbl4h9gsqsHyW0wTh3YejaDIqf\nhKgDhLdq0DUJ5+ynNcFijHcTmDNRfvTkSWZlSRQRmGeQyDEyTssmT/qA+9Y1\n1hHal/lQsPvLTKQ431snvj4W7M0LfhmjYUKyITXhrvNYNVWiQxh3YO1esE7k\neEzPcl9/j/+pR8w4J3VyDoHrphTsenyny9kqYuJqBg014i0X8bn9P0ut4CTP\nx0ZErPbobcoF7XQ5Cl/thqluAfTuK73yTjxZQaMF3RT3dsIa0/2eAPgkzb2x\nBCCM2jMFWvqtr5p1QQVI\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 16:00:15 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 16:01:19 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

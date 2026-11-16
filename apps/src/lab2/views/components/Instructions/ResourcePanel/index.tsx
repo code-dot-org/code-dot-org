@@ -19,7 +19,7 @@ import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
-import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
+import {aiTutorModelParametersFor} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import {getLabShortcuts} from '@cdo/apps/lab2/keyboardShortcuts/shortcutsPerLab';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -259,6 +259,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const levelName = instructionsProps.levelProperties.name;
   const levelSystemPrompt = instructionsProps.levelProperties.levelSystemPrompt;
+  const aiTutorModelParameters =
+    instructionsProps.levelProperties.aiTutorModelParameters;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
@@ -284,15 +286,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const hasAiTutorPromptSettings =
     (levelProperties.aiTutorPromptSettings?.answerTypes?.length ?? 0) > 0;
-  const aiTutorVisible = shouldShowAiTutor({
-    appName,
-    isTutorLevel: levelProperties.aiTutorAvailable || hasAiTutorPromptSettings,
-    aiChatAccessLevel: aiChatAccessLevel,
-  });
+  const aiTutorVisible =
+    !levelProperties.hideAiTutor &&
+    shouldShowAiTutor({
+      appName,
+      isTutorLevel:
+        levelProperties.aiTutorAvailable || hasAiTutorPromptSettings,
+      aiChatAccessLevel: aiChatAccessLevel,
+    });
   const aiChatDisabledState = useAiChatDisabledState({
     appName,
     clientType: AiChatClientTypes.AI_TUTOR,
-    selectedModelId: aiTutorModelId,
+    selectedModelId: aiTutorModelParametersFor(aiTutorModelParameters)
+      .selectedModelId,
     isPredictLevel: !!isPredictLevel,
     hasSubmittedPredictResponse,
   });
@@ -383,6 +389,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         channelId,
         aiTutorChatButtonData,
         aiTutorSystemPrompt,
+        aiTutorModelParameters,
         aiTutorResponseSchemaSettings,
         tutorVideos,
         disabledState: aiChatDisabledState,
@@ -397,10 +404,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           <AiTutorChatWithInstructionDrawer
             {...aiTutorProps}
             instructionsContent={instructionsContent}
-            instructionsText={
-              instructionsProps.dynamicInstructions ||
-              levelProperties.longInstructions
-            }
             isPredictLevel={isPredictLevel}
             aiTutorActive={currentTab === Tabs.AiTutor}
             instructionsPinned={instructionsInAiTutor}

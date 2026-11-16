@@ -1381,6 +1381,23 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 1, UserLevel.where(user_id: outside_student.id, script_id: @script.id).count
   end
 
+  test "mass_progress_reset rejects the whole request if any student is a demo student" do
+    demo_student = create(:student, :in_email_section)
+    DemoStudent.create!(user: demo_student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
+    demo_section = create(:section, user: @teacher, login_type: 'email', demo_type: 'high')
+    demo_section.add_student(demo_student)
+    UserLevel.create!(user: @student_1, script: @script, level: @level, best_result: 100)
+    UserLevel.create!(user: demo_student, script: @script, level: @level, best_result: 100)
+
+    post :mass_progress_reset, params: {unit_ids: [@script.id], student_ids: [@student_1.id, demo_student.id]}
+
+    assert_response :forbidden
+    assert_equal 'Cannot reset progress for demo students', JSON.parse(response.body)['error']
+    assert_equal 1, UserLevel.where(user_id: @student_1.id, script_id: @script.id).count
+    assert_equal 1, UserLevel.where(user_id: demo_student.id, script_id: @script.id).count
+  end
+
   test "mass_progress_reset returns forbidden if not signed in" do
     sign_out @teacher
 

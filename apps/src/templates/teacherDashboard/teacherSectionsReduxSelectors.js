@@ -226,6 +226,8 @@ export const sectionFromServerSection = serverSection => ({
   assignedRequiredInaccessibleAiModels:
     serverSection.assigned_required_inaccessible_ai_models,
   aiChatAccessLevel: serverSection.ai_chat_access_level,
+  aiChallengeEnabled: serverSection.ai_challenge_enabled,
+  lessonTutorAvailable: serverSection.lesson_tutor_available,
 });
 
 /**

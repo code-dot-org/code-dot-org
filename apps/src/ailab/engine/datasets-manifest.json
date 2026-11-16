@@ -1,6 +1,46 @@
 {
   "datasets": [
     {
+      "id": "lesson09_virtual_production",
+      "name": "Virtual Production",
+      "path": "datasets/lesson09_virtual_production.csv",
+      "metadataPath": "datasets/lesson09_virtual_production.json",
+      "isToy": true,
+      "rowCount": 84
+    },
+    {
+      "id": "lesson09_virtual_production_mashups",
+      "name": "Virtual Production Combined Features",
+      "path": "datasets/lesson09_virtual_production_mashups.csv",
+      "metadataPath": "datasets/lesson09_virtual_production_mashups.json",
+      "isToy": true,
+      "rowCount": 84
+    },
+    {
+      "id": "lesson10_cafeteria_menu",
+      "name": "Cafeteria Menu",
+      "path": "datasets/lesson10_cafeteria_menu.csv",
+      "metadataPath": "datasets/lesson10_cafeteria_menu.json",
+      "isToy": true,
+      "rowCount": 87
+    },
+    {
+      "id": "lesson10_fitness_app",
+      "name": "Fitness App",
+      "path": "datasets/lesson10_fitness_app.csv",
+      "metadataPath": "datasets/lesson10_fitness_app.json",
+      "isToy": true,
+      "rowCount": 69
+    },
+    {
+      "id": "lesson10_homework_tracker",
+      "name": "Homework Tracker",
+      "path": "datasets/lesson10_homework_tracker.csv",
+      "metadataPath": "datasets/lesson10_homework_tracker.json",
+      "isToy": true,
+      "rowCount": 62
+    },
+    {
       "id": "SC1-L06-playlist-a-base",
       "name": "Playlist Bot A",
       "path": "datasets/SC1-L06-playlist-a-base.csv",
@@ -127,6 +167,270 @@
       "metadataPath": "datasets/SC1-L07-previs-variant-filmed-again.json",
       "isToy": true,
       "rowCount": 79
+    },
+    {
+      "id": "SC1-L12-run-or-pass-base",
+      "name": "Football Plays",
+      "path": "datasets/SC1-L12-run-or-pass-base.csv",
+      "metadataPath": "datasets/SC1-L12-run-or-pass-base.json",
+      "isToy": true,
+      "rowCount": 54
+    },
+    {
+      "id": "SC1-L12-run-or-pass-add-game-clock",
+      "name": "Football Plays with Game Clock",
+      "path": "datasets/SC1-L12-run-or-pass-add-game-clock.csv",
+      "metadataPath": "datasets/SC1-L12-run-or-pass-add-game-clock.json",
+      "isToy": true,
+      "rowCount": 54
+    },
+    {
+      "id": "SC1-L12-run-or-pass-cut-losing-runs",
+      "name": "Football Plays, One Less Run",
+      "path": "datasets/SC1-L12-run-or-pass-cut-losing-runs.csv",
+      "metadataPath": "datasets/SC1-L12-run-or-pass-cut-losing-runs.json",
+      "isToy": true,
+      "rowCount": 53
+    },
+    {
+      "id": "SC1-L12-run-or-pass-add-field-zone",
+      "name": "Football Plays with Field Zone",
+      "path": "datasets/SC1-L12-run-or-pass-add-field-zone.csv",
+      "metadataPath": "datasets/SC1-L12-run-or-pass-add-field-zone.json",
+      "isToy": true,
+      "rowCount": 54
+    },
+    {
+      "id": "SC1-L12-soccer-shots-base",
+      "name": "Soccer Shots",
+      "path": "datasets/SC1-L12-soccer-shots-base.csv",
+      "metadataPath": "datasets/SC1-L12-soccer-shots-base.json",
+      "isToy": true,
+      "rowCount": 60
+    },
+    {
+      "id": "SC1-L12-soccer-shots-keeper-position",
+      "name": "Soccer Shots with Keeper Position",
+      "path": "datasets/SC1-L12-soccer-shots-keeper-position.csv",
+      "metadataPath": "datasets/SC1-L12-soccer-shots-keeper-position.json",
+      "isToy": true,
+      "rowCount": 60
+    },
+    {
+      "id": "SC1-L12-soccer-shots-defender-in-way",
+      "name": "Soccer Shots with Defenders",
+      "path": "datasets/SC1-L12-soccer-shots-defender-in-way.csv",
+      "metadataPath": "datasets/SC1-L12-soccer-shots-defender-in-way.json",
+      "isToy": true,
+      "rowCount": 60
+    },
+    {
+      "id": "SC1-L12-soccer-shots-cut-far-pressed",
+      "name": "Soccer Shots, Fewer Far Shots",
+      "path": "datasets/SC1-L12-soccer-shots-cut-far-pressed.csv",
+      "metadataPath": "datasets/SC1-L12-soccer-shots-cut-far-pressed.json",
+      "isToy": true,
+      "rowCount": 52
+    },
+    {
+      "id": "SC1-L12-study-playlist-base",
+      "name": "Study Songs",
+      "path": "datasets/SC1-L12-study-playlist-base.csv",
+      "metadataPath": "datasets/SC1-L12-study-playlist-base.json",
+      "isToy": true,
+      "rowCount": 56
+    },
+    {
+      "id": "SC1-L12-study-playlist-add-danceability",
+      "name": "Study Songs with Danceability",
+      "path": "datasets/SC1-L12-study-playlist-add-danceability.csv",
+      "metadataPath": "datasets/SC1-L12-study-playlist-add-danceability.json",
+      "isToy": true,
+      "rowCount": 56
+    },
+    {
+      "id": "SC1-L12-study-playlist-cut-some-calm-singing",
+      "name": "Study Songs, Fewer Calm Vocals",
+      "path": "datasets/SC1-L12-study-playlist-cut-some-calm-singing.csv",
+      "metadataPath": "datasets/SC1-L12-study-playlist-cut-some-calm-singing.json",
+      "isToy": true,
+      "rowCount": 54
+    },
+    {
+      "id": "SC1-L12-study-playlist-cut-loud-songs",
+      "name": "Study Songs, Fewer Loud Songs",
+      "path": "datasets/SC1-L12-study-playlist-cut-loud-songs.csv",
+      "metadataPath": "datasets/SC1-L12-study-playlist-cut-loud-songs.json",
+      "isToy": true,
+      "rowCount": 52
+    },
+    {
+      "id": "SC1-L12-snacks-base",
+      "name": "After-School Snacks",
+      "path": "datasets/SC1-L12-snacks-base.csv",
+      "metadataPath": "datasets/SC1-L12-snacks-base.json",
+      "isToy": true,
+      "rowCount": 56
+    },
+    {
+      "id": "SC1-L12-snacks-cut-chips-and-bar",
+      "name": "Snacks without Chips and Bars",
+      "path": "datasets/SC1-L12-snacks-cut-chips-and-bar.csv",
+      "metadataPath": "datasets/SC1-L12-snacks-cut-chips-and-bar.json",
+      "isToy": true,
+      "rowCount": 51
+    },
+    {
+      "id": "SC1-L12-snacks-cut-three",
+      "name": "Snacks, Fewer Chips",
+      "path": "datasets/SC1-L12-snacks-cut-three.csv",
+      "metadataPath": "datasets/SC1-L12-snacks-cut-three.json",
+      "isToy": true,
+      "rowCount": 53
+    },
+    {
+      "id": "SC1-L12-snacks-cut-sweets",
+      "name": "Snacks, Fewer Sweets",
+      "path": "datasets/SC1-L12-snacks-cut-sweets.csv",
+      "metadataPath": "datasets/SC1-L12-snacks-cut-sweets.json",
+      "isToy": true,
+      "rowCount": 52
+    },
+    {
+      "id": "SC1-L12-video-games-base",
+      "name": "Game Night Games",
+      "path": "datasets/SC1-L12-video-games-base.csv",
+      "metadataPath": "datasets/SC1-L12-video-games-base.json",
+      "isToy": true,
+      "rowCount": 59
+    },
+    {
+      "id": "SC1-L12-video-games-cut-recent-handheld",
+      "name": "Games without Newer Solo Handhelds",
+      "path": "datasets/SC1-L12-video-games-cut-recent-handheld.csv",
+      "metadataPath": "datasets/SC1-L12-video-games-cut-recent-handheld.json",
+      "isToy": true,
+      "rowCount": 53
+    },
+    {
+      "id": "SC1-L12-video-games-cut-old-handheld",
+      "name": "Games without Older Solo Handhelds",
+      "path": "datasets/SC1-L12-video-games-cut-old-handheld.csv",
+      "metadataPath": "datasets/SC1-L12-video-games-cut-old-handheld.json",
+      "isToy": true,
+      "rowCount": 54
+    },
+    {
+      "id": "SC1-L12-video-games-cut-pc",
+      "name": "Games, Fewer PC Games",
+      "path": "datasets/SC1-L12-video-games-cut-pc.csv",
+      "metadataPath": "datasets/SC1-L12-video-games-cut-pc.json",
+      "isToy": true,
+      "rowCount": 58
+    },
+    {
+      "id": "SC1-L12-board-games-base",
+      "name": "Board Game Shelf",
+      "path": "datasets/SC1-L12-board-games-base.csv",
+      "metadataPath": "datasets/SC1-L12-board-games-base.json",
+      "isToy": true,
+      "rowCount": 60
+    },
+    {
+      "id": "SC1-L12-board-games-complexity-feature",
+      "name": "Board Games with Complexity",
+      "path": "datasets/SC1-L12-board-games-complexity-feature.csv",
+      "metadataPath": "datasets/SC1-L12-board-games-complexity-feature.json",
+      "isToy": true,
+      "rowCount": 60
+    },
+    {
+      "id": "SC1-L12-board-games-cut-two-player-no",
+      "name": "Board Games, Fewer Two-Player Games",
+      "path": "datasets/SC1-L12-board-games-cut-two-player-no.csv",
+      "metadataPath": "datasets/SC1-L12-board-games-cut-two-player-no.json",
+      "isToy": true,
+      "rowCount": 53
+    },
+    {
+      "id": "SC1-L12-board-games-cut-five-plus-no",
+      "name": "Board Games, Fewer Big-Group Games",
+      "path": "datasets/SC1-L12-board-games-cut-five-plus-no.csv",
+      "metadataPath": "datasets/SC1-L12-board-games-cut-five-plus-no.json",
+      "isToy": true,
+      "rowCount": 57
+    },
+    {
+      "id": "SC1-L12-rollercoasters-base",
+      "name": "Rollercoasters",
+      "path": "datasets/SC1-L12-rollercoasters-base.csv",
+      "metadataPath": "datasets/SC1-L12-rollercoasters-base.json",
+      "isToy": true,
+      "rowCount": 60
+    },
+    {
+      "id": "SC1-L12-rollercoasters-length-feature",
+      "name": "Rollercoasters with Length",
+      "path": "datasets/SC1-L12-rollercoasters-length-feature.csv",
+      "metadataPath": "datasets/SC1-L12-rollercoasters-length-feature.json",
+      "isToy": true,
+      "rowCount": 60
+    },
+    {
+      "id": "SC1-L12-rollercoasters-cut-wood-4",
+      "name": "Rollercoasters, Fewer Wooden Coasters",
+      "path": "datasets/SC1-L12-rollercoasters-cut-wood-4.csv",
+      "metadataPath": "datasets/SC1-L12-rollercoasters-cut-wood-4.json",
+      "isToy": true,
+      "rowCount": 56
+    },
+    {
+      "id": "SC1-L12-rollercoasters-height-feature",
+      "name": "Rollercoasters with Height",
+      "path": "datasets/SC1-L12-rollercoasters-height-feature.csv",
+      "metadataPath": "datasets/SC1-L12-rollercoasters-height-feature.json",
+      "isToy": true,
+      "rowCount": 60
+    },
+    {
+      "id": "SC1-L12-school-events-base",
+      "name": "School Events",
+      "path": "datasets/SC1-L12-school-events-base.csv",
+      "metadataPath": "datasets/SC1-L12-school-events-base.json",
+      "isToy": true,
+      "rowCount": 60
+    },
+    {
+      "id": "SC1-L12-school-events-bus-feature",
+      "name": "School Events with Late Bus",
+      "path": "datasets/SC1-L12-school-events-bus-feature.csv",
+      "metadataPath": "datasets/SC1-L12-school-events-bus-feature.json",
+      "isToy": true,
+      "rowCount": 60
+    },
+    {
+      "id": "SC1-L12-school-events-cut-some-flops",
+      "name": "School Events, Fewer Flops",
+      "path": "datasets/SC1-L12-school-events-cut-some-flops.csv",
+      "metadataPath": "datasets/SC1-L12-school-events-cut-some-flops.json",
+      "isToy": true,
+      "rowCount": 57
+    },
+    {
+      "id": "SC1-L12-school-events-cut-lunch",
+      "name": "School Events, Fewer Lunch Events",
+      "path": "datasets/SC1-L12-school-events-cut-lunch.csv",
+      "metadataPath": "datasets/SC1-L12-school-events-cut-lunch.json",
+      "isToy": true,
+      "rowCount": 56
+    },
+    {
+      "id": "SC1-L12-movies-base",
+      "name": "Movie Box Office",
+      "path": "datasets/SC1-L12-movies-base.csv",
+      "metadataPath": "datasets/SC1-L12-movies-base.json",
+      "isToy": true,
+      "rowCount": 186
     },
     {
       "id": "smart_room_training",

@@ -1,0 +1,806 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-11-05T18:05:23.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#MODEL CARD TEMPLATE",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "9e89ccfb-732f-4f93-81a1-dc2b20673c67",
+            "type": "text",
+            "data": {
+              "text": "Model Card Template",
+              "strokeColor": "transparent",
+              "fontSize": 140,
+              "locked": false
+            },
+            "position": {
+              "x": 683.2174282790259,
+              "y": -200.9155069663811
+            },
+            "width": 1672.50263794911,
+            "height": 189.88400710011896,
+            "measured": {
+              "width": 1673,
+              "height": 190
+            },
+            "dragging": false,
+            "zIndex": 1
+          },
+          {
+            "id": "93252915-0e3e-4478-b57d-1922ce92c07b",
+            "type": "text",
+            "data": {
+              "text": "The Basics",
+              "strokeColor": "transparent",
+              "fontSize": 50,
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -586.48188626758,
+              "y": 187.24613776992456
+            },
+            "width": 292.0000000000002,
+            "height": 72.00000000000009,
+            "measured": {
+              "width": 292,
+              "height": 72
+            },
+            "dragging": false
+          },
+          {
+            "id": "53315d56-da95-4b89-85c5-57dba7c455b1",
+            "type": "text",
+            "data": {
+              "text": "Training Data",
+              "strokeColor": "transparent",
+              "fontSize": 50,
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 244.01669676290248,
+              "y": 191.67135293793052
+            },
+            "width": 367.8717048694415,
+            "height": 72.00000000000009,
+            "measured": {
+              "width": 368,
+              "height": 72
+            },
+            "dragging": false
+          },
+          {
+            "id": "e8a76204-e543-4fe0-87d1-e41b5519d1f6",
+            "type": "text",
+            "data": {
+              "text": "Features",
+              "strokeColor": "transparent",
+              "fontSize": 50,
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1053.9235517412628,
+              "y": 188.37258316099832
+            },
+            "width": 292.0000000000002,
+            "height": 72.00000000000009,
+            "measured": {
+              "width": 292,
+              "height": 72
+            },
+            "dragging": false
+          },
+          {
+            "id": "246c6f97-47f3-4429-ae57-012ee74278ca",
+            "type": "text",
+            "data": {
+              "text": "How It Decides",
+              "strokeColor": "transparent",
+              "fontSize": 50,
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1842.0463515238457,
+              "y": 192.47198577427895
+            },
+            "width": 427.2495608542215,
+            "height": 40,
+            "measured": {
+              "width": 427,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "565d6d90-64fc-40a0-a96c-29117e84db72",
+            "type": "text",
+            "data": {
+              "text": "Strengths & Limits",
+              "strokeColor": "transparent",
+              "fontSize": 50,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2640.2718515515007,
+              "y": 186.62058277881715
+            },
+            "width": 473.4323377312728,
+            "height": 55.50615111533861,
+            "measured": {
+              "width": 473,
+              "height": 56
+            },
+            "dragging": false
+          },
+          {
+            "id": "0710fa51-f91c-4fa9-9441-c07cc7ea890b",
+            "type": "text",
+            "data": {
+              "text": "Who It’s For",
+              "strokeColor": "transparent",
+              "fontSize": 50,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3500.0858308456836,
+              "y": 185.9273667305042
+            },
+            "width": 292.0000000000002,
+            "height": 72.00000000000009,
+            "measured": {
+              "width": 292,
+              "height": 72
+            },
+            "dragging": false
+          },
+          {
+            "id": "4688b741-d885-4751-bbbb-25e433c959a8",
+            "type": "text",
+            "data": {
+              "text": "Model Name:",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -791.8363872586915,
+              "y": 366.13184815098816
+            },
+            "width": 591.2517561330422,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 591,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "01a3d755-7af9-4f1a-9958-32767ae9a643",
+            "type": "text",
+            "data": {
+              "text": "Built by:",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -791.9955527668078,
+              "y": 583.6744622383088
+            },
+            "width": 569.4879920506391,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 569,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "8679eb0a-ddb0-4280-8551-3756eab62cd0",
+            "type": "text",
+            "data": {
+              "text": "This model sorts _____________________________________________ \ninto these labels: ____________________________________________",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -795.9440096912003,
+              "y": 823.7098287194722
+            },
+            "width": 610.0644518814231,
+            "height": 100.5358894109373,
+            "measured": {
+              "width": 610,
+              "height": 101
+            },
+            "dragging": false
+          },
+          {
+            "id": "69bb9509-5010-4ab5-9877-dc6a8433e484",
+            "type": "text",
+            "data": {
+              "text": "What examples are in the training data? Where did they come from?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 13.20247183633694,
+              "y": 371.8647904299549
+            },
+            "width": 618.4361378408561,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 618,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "32656ec6-7274-45fc-b150-3a29f589b4a3",
+            "type": "text",
+            "data": {
+              "text": "What kinds of examples are missing or show up a lot less?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 12.479844928016178,
+              "y": 582.7514829776085
+            },
+            "width": 620.4849076177884,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 620,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "bad38a98-3d26-4e5f-9438-904cff565fe7",
+            "type": "text",
+            "data": {
+              "text": "Because the data has a lot of ________________________________________ \nand not much ____________________________________________________, \nthe model will probably _____________________________________________",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 16.391701536278163,
+              "y": 833.42573539616
+            },
+            "width": 610.9361378408561,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 611,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "38d0e686-9ea4-4292-8990-1526248fd7ac",
+            "type": "text",
+            "data": {
+              "text": "Which features does the model use?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 838.8190660595188,
+              "y": 370.1798230544347
+            },
+            "width": 597.900708654656,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 598,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "926f9075-0605-4ca4-aa11-196ee3e48f09",
+            "type": "text",
+            "data": {
+              "text": "Pick one feature. Why does it belong in this model?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 837.4719691017632,
+              "y": 586.7887702373919
+            },
+            "width": 605.479291487208,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 605,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "63b70cf3-0d10-4956-8aab-c7781723762e",
+            "type": "text",
+            "data": {
+              "text": "I added _________________________________________________________ \nbecause the model needed to tell the difference between _______________________________________________________________\nand ____________________________________________________________",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 831.6991795666665,
+              "y": 843.4579491279146
+            },
+            "width": 611.1632286116219,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 611,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "9f1a254b-8330-4d11-a424-495ff6e2f9dc",
+            "type": "text",
+            "data": {
+              "text": "Paste in your decision tree",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1845.7812658480902,
+              "y": 493.4248056250774
+            },
+            "width": 234.46142713735753,
+            "height": 40,
+            "measured": {
+              "width": 234,
+              "height": 40
+            },
+            "dragging": false,
+            "zIndex": 2
+          },
+          {
+            "id": "8e00f4d0-0fac-449f-8215-da71c4dd725f",
+            "type": "text",
+            "data": {
+              "text": "Pick one prediction and trace its path",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1631.0684363363303,
+              "y": 774.1555605617796
+            },
+            "width": 614.9493975294984,
+            "height": 49.148047713476984,
+            "measured": {
+              "width": 615,
+              "height": 49
+            },
+            "dragging": false
+          },
+          {
+            "id": "e38596b5-e3c2-4bdb-8722-23284e584310",
+            "type": "text",
+            "data": {
+              "text": "Which data choice made that branch exist?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1631.736548386514,
+              "y": 938.278056300648
+            },
+            "width": 645.6443371710711,
+            "height": 49.10291372823528,
+            "measured": {
+              "width": 646,
+              "height": 49
+            },
+            "dragging": false
+          },
+          {
+            "id": "51fb8a2a-e606-4be6-af16-06a9974a3d78",
+            "type": "text",
+            "data": {
+              "text": "What it does well:",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2468.6581650543408,
+              "y": 347.599195566488
+            },
+            "width": 610.6601383988855,
+            "height": 40.44254208051572,
+            "measured": {
+              "width": 611,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "dd5875cd-dd0d-4ce3-b311-83d2232c67d0",
+            "type": "text",
+            "data": {
+              "text": "Where it falls short:",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2472.288290962501,
+              "y": 591.5893803751621
+            },
+            "width": 616.4036301738706,
+            "height": 49.05777974299346,
+            "measured": {
+              "width": 616,
+              "height": 49
+            },
+            "dragging": false
+          },
+          {
+            "id": "e6a4bc27-20a6-48e9-a740-9c6cdb24a90a",
+            "type": "text",
+            "data": {
+              "text": "Who it might fail, and why:",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2476.797227803155,
+              "y": 828.5980769640794
+            },
+            "width": 613.531884286378,
+            "height": 44.75016091175459,
+            "measured": {
+              "width": 614,
+              "height": 45
+            },
+            "dragging": false
+          },
+          {
+            "id": "0546a6c5-d15f-472e-9773-dc7adaa6863d",
+            "type": "text",
+            "data": {
+              "text": "Who would use this model, and what would they do with a prediction?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3298.3190212471363,
+              "y": 339.8645607088059
+            },
+            "width": 606.1871027464908,
+            "height": 40,
+            "measured": {
+              "width": 606,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "e2fc9904-7097-4dfc-9aa9-edc7bd729eae",
+            "type": "text",
+            "data": {
+              "text": "Who would be affected by its predictions, even if they never use it?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3295.2157564230515,
+              "y": 592.5109280280735
+            },
+            "width": 560.7156057511788,
+            "height": 40,
+            "measured": {
+              "width": 561,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "1ca4b70b-6c13-46e8-8603-7b8eaf9f835a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/75cff58f-1279-4b5c-85e5-66b64cc8e05c.png",
+              "altText": "team-work",
+              "locked": true
+            },
+            "position": {
+              "x": -787.9183707900286,
+              "y": 172.41018957272757
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "3fb3596e-202a-45b3-af3d-4d36a2321d55",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/0e45966a-f40e-48d0-8ca1-b537b3587ae3.png",
+              "altText": "table (1)",
+              "locked": true
+            },
+            "position": {
+              "x": 23.707137024028356,
+              "y": 165.87265299666322
+            },
+            "width": 183.0913884385256,
+            "height": 133.19507910772893,
+            "measured": {
+              "width": 183,
+              "height": 133
+            },
+            "dragging": false
+          },
+          {
+            "id": "bdea31a4-519f-4146-8b6c-30c635b402a2",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/30bf2ef5-87f8-44f7-ac52-a2d405438e78.png",
+              "altText": "new-features",
+              "locked": true
+            },
+            "position": {
+              "x": 849.922002329975,
+              "y": 162.57388321973113
+            },
+            "width": 160,
+            "height": 133.19507910772893,
+            "measured": {
+              "width": 160,
+              "height": 133
+            },
+            "dragging": false
+          },
+          {
+            "id": "1d38692b-061d-4d40-9a64-e8e29ff28c43",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/2bbf7300-4951-494c-ae19-3f2e8e077fe1.png",
+              "altText": "decision-tree (5)",
+              "locked": true
+            },
+            "position": {
+              "x": 1625.2442123186302,
+              "y": 139.55090511034894
+            },
+            "width": 192.98769776932227,
+            "height": 129.89630933079667,
+            "measured": {
+              "width": 193,
+              "height": 130
+            },
+            "dragging": false
+          },
+          {
+            "id": "420a5c40-6198-4078-9e25-7bd9bdf4149c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/158dfe40-6e05-47cf-9fd8-42a8fb120c30.png",
+              "altText": "positive-and-negative"
+            },
+            "position": {
+              "x": 2463.5039352612184,
+              "y": 157.09873703455835
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "05d1e654-1cd4-41e7-869f-7b4d61c02b25",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/58a1fc19-0dd8-4785-bd23-3a26b3c32f93.png",
+              "altText": "suspect"
+            },
+            "position": {
+              "x": 3294.5910079143987,
+              "y": 162.7107038780181
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "845834d5-83f2-4f0e-a80d-bfb5f13959c1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/134048b1-4163-4fe2-af5c-0c4807f1075c.png",
+              "altText": "model-card-1",
+              "locked": true
+            },
+            "position": {
+              "x": -1037.6151185260378,
+              "y": -81.50288339122608
+            },
+            "width": 1077.0579979871595,
+            "height": 1363.6362059034502,
+            "measured": {
+              "width": 1077,
+              "height": 1364
+            },
+            "dragging": false,
+            "zIndex": -1
+          },
+          {
+            "id": "04fa0990-5476-4efd-934d-e16425cda832",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/f399c0b9-4a6e-41db-b667-e72f8350fc3f.png",
+              "altText": "model-card-2",
+              "locked": true
+            },
+            "position": {
+              "x": -265.7029907238963,
+              "y": -84.80165316815783
+            },
+            "width": 1166.12478196433,
+            "height": 1366.9349756803826,
+            "measured": {
+              "width": 1166,
+              "height": 1367
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "7dd46fb6-cd2e-452c-b091-b53dcee1ba4b",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/0844fa3a-a04f-4aeb-a920-03514a867d4c.png",
+              "altText": "model-card-3",
+              "locked": true
+            },
+            "position": {
+              "x": 568.8857628399578,
+              "y": -91.39919272202224
+            },
+            "width": 1129.8383144180752,
+            "height": 1373.532515234247,
+            "measured": {
+              "width": 1130,
+              "height": 1374
+            },
+            "dragging": false,
+            "zIndex": -3
+          },
+          {
+            "id": "35340116-c3b0-47ae-b61a-b3f8d30a2d03",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/48daf65f-7fb4-4429-bb5f-e794c676db1d.png",
+              "altText": "model-card-4",
+              "locked": true
+            },
+            "position": {
+              "x": 1439.7609839500656,
+              "y": -104.59427182975128
+            },
+            "width": 1030.8752211101084,
+            "height": 1403.2214432266371,
+            "measured": {
+              "width": 1031,
+              "height": 1403
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "fff7d293-8b59-49d8-aac8-699a5690239e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/134048b1-4163-4fe2-af5c-0c4807f1075c.png",
+              "altText": "model-card-1",
+              "locked": true
+            },
+            "position": {
+              "x": 2235.5940255443593,
+              "y": -94.07581848373502
+            },
+            "width": 1080.3567677640917,
+            "height": 1383.4288245650437,
+            "measured": {
+              "width": 1080,
+              "height": 1383
+            },
+            "dragging": false,
+            "zIndex": -5
+          },
+          {
+            "id": "a6c422d7-3be1-42fa-9b1d-f8bd21c08856",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/f399c0b9-4a6e-41db-b667-e72f8350fc3f.png",
+              "altText": "model-card-2",
+              "locked": true
+            },
+            "position": {
+              "x": 3017.402462677298,
+              "y": -97.37458826066688
+            },
+            "width": 1172.7223215181943,
+            "height": 1373.532515234247,
+            "measured": {
+              "width": 1173,
+              "height": 1374
+            },
+            "dragging": false,
+            "zIndex": -6
+          },
+          {
+            "id": "5ee0558a-f65c-45d7-aa4b-6e59a0a817fa",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "locked": true
+            },
+            "position": {
+              "x": 1642.158612340519,
+              "y": 315.64565815791764
+            },
+            "width": 623.7869608300518,
+            "height": 402.86696991801927,
+            "measured": {
+              "width": 624,
+              "height": 403
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 398.56397801588935,
+          "y": 120.7012756537448,
+          "zoom": 0.34822022531845037
+        }
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-05T18:05:23.611+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson11-sketch-lab-template\\\"\"],\"cloned_from\":\"data-makes-ai-lesson11-sketch-lab-template\"},{\"changed_at\":\"2026-11-05 18:05:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 19:09:26 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 19:13:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

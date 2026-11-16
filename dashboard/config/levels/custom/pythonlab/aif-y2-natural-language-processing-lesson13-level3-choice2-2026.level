@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T15:30:37.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Curiosities",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson13-choice2-2026 + template",
+    "long_instructions": "Remember `model` is a dictionary that records which tokens follow which. Each key is a token. Its value is a list of every token that came right after it in the corpus, including repeats. For example:\r\n\r\n```\r\n{\r\n  \"Why\": [\"does\", \"does\", \"does\", …],\r\n  \"Venus\": [\"spin\", \"rotate\", \"look\"],\r\n  \"does\": [\"our\", \"Mars\", \"Venus\", \"Venus\", …],\r\n  …\r\n}\r\n```\r\n\r\nThe `learn` function fills in `model`. It’s called once for each sentence in the corpus. Its argument, `tokens`, is the list of tokens in a sentence.\r\n\r\n**☑️ Do This:**\r\n\r\n- Complete the `learn` function. For each pair of neighboring tokens in `tokens`, add the second token to the first token’s list in `model`. \r\n- If the first token isn’t a key in `model` yet, add it as a key with a new list containing the second token.\r\n- If the first token is already a key, append the second token to its list.\r\n\r\n**💻 Coding Tip**\r\n\r\nA `for` loop can give you each pair of neighboring tokens:\r\n\r\n```\r\nfor i in range(len(tokens) - 1):\r\n  token = tokens[i]\r\n  next_token = tokens[i + 1]\r\n```\r\n\r\n`in` checks whether a dictionary already has a key:\r\n\r\n```\r\nif token not in model:\r\n  ...\r\nelse:\r\n  ...\r\n```",
+    "bubble_choice_description": "A collection of curious questions about astronomy.",
+    "thumbnail_url": "https://images.code.org/66e12643e21f09882edcfa73d19df1a7-curiosities.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 16:00:17 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 16:01:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

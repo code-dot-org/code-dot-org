@@ -649,6 +649,12 @@ class UnitGroup < ApplicationRecord
     course_version
   end
 
+  # Mirrors Unit#lesson_tutor_available?.
+  def lesson_tutor_available?
+    return false if pl_course?
+    !!get_course_version&.course_offering&.ai_initiative?
+  end
+
   def has_pilot_experiment?(user)
     return false unless pilot_experiment
     SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
@@ -724,7 +730,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def requires_inaccessible_ai_models?(user)
-    return false unless user&.us_only_aichat_models_disabled?
+    return false unless user&.blocked_aichat_providers&.any?
     default_units.with_essential_us_only_ai_models.exists?
   end
 

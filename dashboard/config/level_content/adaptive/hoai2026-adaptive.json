@@ -4,6 +4,12 @@
   "title": "Hour of AI 2026 - Adaptive",
   "objective": "Steer AI toward an intended design by writing specific prompts and refining them based on what comes back. Judge AI output against your own intent, and decide when to accept, redirect, or override it. Use the vocabulary of web design (hero, feature cards, interactive canvas, call-to-action) to analyze what makes a page effective and to describe what you want built. Describe a problem with enough context for AI to give a useful explanation and fix. Verify an AI-proposed fix before trusting it, confirming the problem is resolved and nothing new broke.",
   "map": { "layout": "destinations" },
+  "destinations": {
+    "style-design": { "title": "Style & Design", "icon": "palette", "color": "strawberry" },
+    "interactive-elements": { "title": "Interactive Elements", "icon": "arrow-pointer", "color": "green" },
+    "story-message": { "title": "Story & Message", "icon": "pencil", "color": "blue" },
+    "under-the-hood": { "title": "Under the Hood", "icon": "wrench", "color": "orange" }
+  },
   "project": {
     "templateLevel": "adaptive-HoAI26-template-main-project",
     "description": "Work on your final project here!"
@@ -680,7 +686,7 @@
       "description": "Describes a list of options and a random pick, using list and pick words, so the page chooses one by chance.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Interactive Elements",
+      "destination": "interactive-elements",
       "steps": [
         {
           "id": "a-list-and-a-random-pick-panels",
@@ -733,7 +739,7 @@
       "description": "Describes a number that changes and a rule that uses it.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Interactive Elements",
+      "destination": "interactive-elements",
       "steps": [
         {
           "id": "a-number-and-a-rule-video",
@@ -809,7 +815,7 @@
       "description": "Describes what the page should remember and what should show on screen.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Interactive Elements",
+      "destination": "interactive-elements",
       "steps": [
         {
           "id": "remember-and-show-panels",
@@ -872,7 +878,7 @@
       "description": "Uses layout words and block names to describe space, alignment and order.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Style & Design",
+      "destination": "style-design",
       "steps": [
         {
           "id": "layout-and-spacing-panels",
@@ -945,7 +951,7 @@
       "description": "Names a style in words and restates it across changes so the AI keeps it steady.",
       "skillIds": ["build"],
       "requires": ["steer-it"],
-      "destination": "Style & Design",
+      "destination": "style-design",
       "steps": [
         {
           "id": "style-and-consistency-video",
@@ -1017,7 +1023,7 @@
       "description": "Asks for text size, contrast and wording that make a block easy to read.",
       "skillIds": ["build"],
       "requires": ["keep-or-redirect"],
-      "destination": "Style & Design",
+      "destination": "style-design",
       "steps": [
         {
           "id": "readable-and-clear-panels",
@@ -1073,7 +1079,7 @@
       "description": "Names a tone in words and restates it across changes so the AI keeps it steady.",
       "skillIds": ["build"],
       "requires": ["steer-it"],
-      "destination": "Story & Message",
+      "destination": "story-message",
       "steps": [
         {
           "id": "say-it-in-your-voice-panels",
@@ -1140,7 +1146,7 @@
       "description": "Uses headline words to say what the site is for in the first line.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Story & Message",
+      "destination": "story-message",
       "steps": [
         {
           "id": "lead-with-the-point-video",
@@ -1210,7 +1216,7 @@
       "description": "Writes a call-to-action with a clear verb and next step.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Story & Message",
+      "destination": "story-message",
       "steps": [
         {
           "id": "make-the-ask-clear-panels",
@@ -1272,7 +1278,7 @@
       "description": "Reads an error in the console and says where it points, so a problem report has the context the AI needs.",
       "skillIds": ["debug"],
       "requires": ["give-context"],
-      "destination": "Under the Hood",
+      "destination": "under-the-hood",
       "steps": [
         {
           "id": "read-the-console-video",
@@ -1346,7 +1352,7 @@
       "description": "Finds the line for a named block and uses its name to say where a change belongs.",
       "skillIds": ["language"],
       "requires": ["use-the-lingo"],
-      "destination": "Under the Hood",
+      "destination": "under-the-hood",
       "steps": [
         {
           "id": "find-it-in-the-code-panels",
@@ -1402,7 +1408,7 @@
       "description": "Undoes changes one at a time and checks after each, to verify what caused the problem.",
       "skillIds": ["debug"],
       "requires": ["check-the-fix"],
-      "destination": "Under the Hood",
+      "destination": "under-the-hood",
       "steps": [
         {
           "id": "undo-to-find-the-cause-video",
@@ -1572,5 +1578,46 @@
         }
       ]
     }
-  ]
+  ],
+  "finish": {
+    "dialog": {
+      "title": "Ready to Wrap Up?",
+      "body": "Proceed to see your overall stats and your final project! Or click Keep Working to continue working on your project and skills.",
+      "finishLabel": "Finish",
+      "cancelLabel": "Keep Working"
+    },
+    "checkpoint": {
+      "id": "wrap-up",
+      "title": "Wrap up",
+      "description": "What you did, and what comes next.",
+      "steps": [
+        {
+          "id": "wrap-up-stats",
+          "title": "Great job!",
+          "kind": "stats",
+          "heading": "Great job!",
+          "subheading": "An encouraging subtitle goes here!"
+        },
+        {
+          "id": "wrap-up-showcase",
+          "title": "Your final project",
+          "kind": "level",
+          "level": "adaptive-HoAI26-wrap-up-showcase",
+          "project": true,
+          "instructions": "Look what you built! Review your final project."
+        },
+        {
+          "id": "wrap-up-challenge",
+          "title": "Builder's Challenge",
+          "kind": "markdown",
+          "markdown": "## You just built something with AI!\n\n<img src=\"https://images.code.org/99d7f396c47a604d6ca01825a08c4ab2-Panel 1.png\" alt=\"\" width=\"800\" height=\"340\">\n\n<br>Your project doesn't have to end here. Team up with your classmates and enter the Builder's Challenge, a national AI competition for high school students.",
+          "link": {
+            "label": "Learn about the Builder's Challenge",
+            "href": "https://code.org"
+          },
+          "continueLabel": "Get my Certificate"
+        }
+      ]
+    }
+  }
 }

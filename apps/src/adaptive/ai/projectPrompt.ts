@@ -14,7 +14,7 @@ import {labEnvironment} from './labEnvironments';
 /**
  * Used by Langfuse traces; change when a meaningful update is made.
  */
-export const PROJECT_PROMPT_VERSION = '2026-10-29';
+export const PROJECT_PROMPT_VERSION = '2026-11-09';
 
 export const projectOutputSchema = z.object({
   /** The project's name, a few words. */
@@ -72,6 +72,7 @@ export function buildProjectPrompt({
       'RULES',
       '',
       '- Return the full contents of every file you change, under its exact filename. Do not add files; a file you leave out stays as it is.',
+      '- Format each file the way the template is: one element, rule or statement per line, indented two spaces. A student reads and edits this code, so never put a whole file on one line.',
       "- Keep the template's structure, ids and classes where they still fit, so later instructions about the template's parts still apply.",
       '- Stay close to the idea the student described: their topic, words and names. Where they left the look or content open, make a reasonable choice that fits the topic, and label any placeholder text plainly.',
       '- Keep it simple. This is a first draft the student will change, not a finished site.',

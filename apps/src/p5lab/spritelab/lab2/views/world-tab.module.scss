@@ -52,14 +52,6 @@
 }
 
 // Dashed like the gallery's new-image card.
-.worldPaletteNew {
-  flex-direction: column;
-  gap: 4px;
-  border-style: dashed;
-  color: var(--text-neutral-primary);
-  font-size: 12px;
-}
-
 .worldPaletteItem {
   display: flex;
   align-items: center;
@@ -176,7 +168,7 @@
 .worldCell:focus-visible,
 .worldPaletteItem:focus-visible {
   z-index: 1;
-  outline: 2px solid var(--borders-brand-teal-primary);
+  outline: 2px solid var(--border-focused-primary);
   outline-offset: -2px;
 }
 

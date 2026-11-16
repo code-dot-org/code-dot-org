@@ -1,0 +1,33 @@
+name 'csp-unit2-lesson13-cfu_27_28'
+title 'Check your understanding'
+description ''
+question 'What does the program print?'
+wrong '`Movies`'
+wrong '`Park`'
+right '`Homework`'
+wrong 'Nothing prints'
+allow_multiple_attempts false
+markdown <<MARKDOWN
+A program plans an afternoon. Given `is_weekend = False` and `money = 25`, what does this code print?
+
+```python
+is_weekend = False
+money = 25
+if is_weekend:
+    if money >= 20:
+        print("Movies")
+    else:
+        print("Park")
+else:
+    print("Homework")
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Teacher solution and distractor rationale:
+
+- `Homework` (correct): is_weekend is False, so the outer if fails and the program goes to the outer else. The money question is only asked inside the first branch, so it is never checked.
+- `Movies`: The most likely misconception. A student sees that money >= 25 is True and treats it as its own decision. The inner if only runs when the outer condition is True.
+- `Park`: A student thinks the inner else runs whenever the outer condition fails. That else belongs to the inner if, so it only runs when the weekend branch was taken and money is under 20.
+- Nothing prints: A student thinks that because is_weekend is False nothing happens. The outer else catches every case the outer if does not.
+MARKDOWN

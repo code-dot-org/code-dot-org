@@ -1,6 +1,6 @@
-# cdo-deps: the dependency layer — the production gem set and the python
-# virtualenv, both built in cdo-build and copied onto cdo-base so no
-# toolchain ships. Keyed on the lockfiles. See README.md.
+# cdo-deps: the dependency layer — the production gem set, built in cdo-build
+# and copied onto cdo-base so no toolchain ships. Keyed on the lockfiles. See
+# README.md.
 #
 # Context is the repo root, not this directory:
 #   docker build -f docker/deps/Dockerfile --build-arg BUILD_IMAGE=... .
@@ -48,20 +48,6 @@ RUN --mount=type=cache,id=cdo-deps-bundle-cache,sharing=locked,uid=1000,gid=1000
        "${GEM_HOME:-/usr/local/bundle}"/cache
 
 ################################################################################
-FROM ${BUILD_IMAGE} AS venv
-################################################################################
-
-# Rails boot requires cdo/pycall, which resolves its interpreter through uv.
-# The flags match PythonVenv.install under rack_env :production; the import
-# proves the venv resolves the way the runtime will use it.
-COPY --chown=1000:1000 .python-version pyproject.toml uv.lock ./
-COPY --chown=1000:1000 python/ python/
-
-RUN set -eux \
-  && uv sync --frozen --no-dev \
-  && uv run --no-sync python -c 'import pycdo'
-
-################################################################################
 FROM ${BASE_IMAGE}
 ################################################################################
 
@@ -73,13 +59,11 @@ ARG \
 
 # BUNDLE_WITHOUT is needed at runtime too, or Bundler.setup tries to activate
 # groups that were never installed. PATH is left alone: the ruby base image
-# already has ${BUNDLE_PATH}/bin on it. UV_NO_SYNC because boot runs
-# `uv run`, which would otherwise re-sync dev groups at runtime.
+# already has ${BUNDLE_PATH}/bin on it.
 ENV \
   BUNDLE_DEPLOYMENT=1 \
   BUNDLE_PATH=${BUNDLE_PATH} \
-  BUNDLE_WITHOUT=${BUNDLE_WITHOUT} \
-  UV_NO_SYNC=1
+  BUNDLE_WITHOUT=${BUNDLE_WITHOUT}
 
 COPY --from=builder --chown=1000:1000 ${BUNDLE_PATH} ${BUNDLE_PATH}
 
@@ -87,18 +71,7 @@ COPY --from=builder --chown=1000:1000 ${BUNDLE_PATH} ${BUNDLE_PATH}
 COPY --chown=1000:1000 .ruby-version Gemfile Gemfile.lock ./
 COPY --from=builder --chown=1000:1000 ${SRC}/dashboard/engines ./dashboard/engines
 
-# The venv, its interpreter (uv's managed-python store under $HOME), uv
-# itself, and the project files `uv run` resolves the venv through. python/
-# ships because the workspace members are installed editable — the venv
-# points into it.
-COPY --from=venv /usr/local/bin/uv /usr/local/bin/uv
-COPY --from=venv --chown=1000:1000 /home/cdo/.local/share/uv /home/cdo/.local/share/uv
-COPY --from=venv --chown=1000:1000 ${SRC}/.venv ./.venv
-COPY --from=venv --chown=1000:1000 ${SRC}/python ./python
-COPY --chown=1000:1000 .python-version pyproject.toml uv.lock ./
-
-# Self-verify both halves, whatever built them.
-RUN bundle check \
-  && uv run --no-sync python -c 'import pycdo'
+# Self-verify, whatever built it.
+RUN bundle check
 
 LABEL org.opencontainers.image.source="https://github.com/code-dot-org/code-dot-org"

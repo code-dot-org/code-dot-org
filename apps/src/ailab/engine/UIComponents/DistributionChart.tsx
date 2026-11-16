@@ -1,5 +1,6 @@
 /* Bar chart of how many rows have each value of a categorical column.
 It uses a list behind the scenes to make the data accessible to screen readers. */
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
@@ -31,6 +32,7 @@ interface DistributionChartProps {
 }
 
 const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
+  const {theme} = useTheme(true);
   const maxCount = Math.max(...bars.map(bar => bar.count));
   const step = getNiceAxisStep(maxCount, AXIS_INTERVALS);
   const axisMax = Math.max(step, Math.ceil(maxCount / step) * step);
@@ -65,7 +67,13 @@ const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
               // The open tooltip names the focused bar instead of repeating
               // its hidden label as a description.
               describeChild={false}
-              slotProps={{tooltip: {className: styles.tooltip}}}
+              slotProps={{
+                tooltip: {
+                  className: styles.tooltip,
+                  // The bubble is portaled outside the lab's theme wrapper.
+                  'data-theme': theme,
+                },
+              }}
               title={
                 <>
                   <Typography

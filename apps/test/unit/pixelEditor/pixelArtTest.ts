@@ -3,6 +3,7 @@ import {
   crispScaleFor,
   detectPixelGrid,
   downsampleToGrid,
+  gridAtPitch,
   upscaleNearest,
 } from '@cdo/apps/pixelEditor/pixelArt';
 import {Raster} from '@cdo/apps/pixelEditor/tools';
@@ -237,6 +238,28 @@ describe('pixelArt', () => {
     expect(small.height).toBe(9);
   });
 
+  it('fits a frame its own offset at a pitch shared with another', () => {
+    // Two frames of one set: the same art at the same pitch, the second on
+    // a phase of its own. The first's grid read across the second would
+    // sample off its cell centers; its own offsets keep the pixels.
+    const pattern = samplePattern();
+    const base = detectPixelGrid(blockyRaster(pattern, 12))!;
+    const shifted = blockyRaster(pattern, 12, 5);
+    const grid = gridAtPitch(shifted, base.sizeX);
+    expect(grid.sizeX).toBe(base.sizeX);
+    // Edge tolerance allows the offset to land within a pixel of the truth.
+    expect(Math.abs(grid.offsetX - 5)).toBeLessThanOrEqual(1);
+    expect(Math.abs(grid.offsetY - 5)).toBeLessThanOrEqual(1);
+    expect(grid.confidence).toBeGreaterThan(0.95);
+    const small = downsampleToGrid(shifted, grid);
+    // 8 full blocks + the leading partial cell from the offset.
+    expect(small.width).toBe(9);
+    const i = (1 * 9 + 1) * 4;
+    expect([small.data[i], small.data[i + 1], small.data[i + 2]]).toEqual(
+      pattern[0][0]
+    );
+  });
+
   it('upscales nearest-neighbor with hard edges', () => {
     const raster = blockyRaster(samplePattern(), 1);
     const big = upscaleNearest(raster, 4);
@@ -297,7 +320,7 @@ describe('pixelArt', () => {
     });
   });
 
-  it('caps the crisp storage scale', () => {
+  it('caps the crisp display scale', () => {
     // crispScaleFor = clamp(floor(640 / longSide), 1, 8).
     expect(crispScaleFor(8, 8)).toBe(8);
     expect(crispScaleFor(64, 64)).toBe(8);

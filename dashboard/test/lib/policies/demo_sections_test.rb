@@ -247,4 +247,22 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
 
     assert Policies::DemoSections.demo_student_durable?(student.id.to_s)
   end
+
+  # any_demo_student_durable?
+
+  test 'any_demo_student_durable? returns true if any id is a demo student, without caching' do
+    student = create(:student, :in_email_section)
+    demo_student = create(:student, :in_email_section)
+    DemoStudent.create!(user: demo_student, demo_type: 'high')
+    Policies::DemoSections.instance_variable_set(:@all_demo_student_ids, Set.new)
+
+    assert Policies::DemoSections.any_demo_student_durable?([student.id, demo_student.id])
+  end
+
+  test 'any_demo_student_durable? returns false if no id is a demo student' do
+    student = create(:student, :in_email_section)
+
+    refute Policies::DemoSections.any_demo_student_durable?([student.id])
+    refute Policies::DemoSections.any_demo_student_durable?([])
+  end
 end

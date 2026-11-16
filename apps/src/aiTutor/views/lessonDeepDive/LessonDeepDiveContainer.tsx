@@ -4,6 +4,9 @@ import {
   LevelsAttemptedBox,
   NextStepPicker,
   PreSkillsCheck,
+  ReflectionBox,
+  ReflectionData,
+  ReflectionValue,
   TimeSpentBox,
   TutorSummaryBox,
   ValidatedLevelsBox,
@@ -12,14 +15,14 @@ import {
 import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
+import {useLessonDeepDiveChallengesEnabled} from '@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
-import ReflectionBox from './Reflection/ReflectionBox';
 import InterventionBox from './ReviewModalities/InterventionBox';
 import SkillsCheck from './SkillsCheck/SkillsCheck';
-import {LessonDeepDiveData, ReflectionData, ReflectionValue} from './types';
+import {LessonDeepDiveData} from './types';
 
 import styles from './lesson-deep-dive-container.module.scss';
 
@@ -147,6 +150,13 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const [nextStepChoice, setNextStepChoice] = useState<
     'practice' | 'challenge'
   >('practice');
+  const challengesEnabled = useLessonDeepDiveChallengesEnabled();
+  // The next-step screen only offers a choice between practice and a challenge.
+  const screenIds: readonly BoxId[] = useMemo(
+    () =>
+      challengesEnabled ? BOX_IDS : BOX_IDS.filter(id => id !== 'next-step'),
+    [challengesEnabled]
+  );
 
   // Both values are fixed for the lifetime of this component instance.
   const colorOffset = useMemo(
@@ -160,12 +170,12 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
   // Validate the URL param against the known screen list; fall back to
   // 'welcome' so a stale or hand-typed URL doesn't crash the container.
-  const currentScreenId: BoxId = (BOX_IDS as readonly string[]).includes(
+  const currentScreenId: BoxId = (screenIds as readonly string[]).includes(
     screenParam ?? ''
   )
     ? (screenParam as BoxId)
     : 'welcome';
-  const currentIndex = BOX_IDS.indexOf(currentScreenId);
+  const currentIndex = screenIds.indexOf(currentScreenId);
 
   const getGradient = useCallback(
     (slotOffset: number) =>
@@ -173,14 +183,14 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     [colorOffset]
   );
   const goToNext = useCallback(() => {
-    const next = BOX_IDS[currentIndex + 1];
+    const next = screenIds[currentIndex + 1];
     if (next) navigate(`/${next}`);
-  }, [currentIndex, navigate]);
+  }, [screenIds, currentIndex, navigate]);
 
   const goToPrev = useCallback(() => {
-    const prev = BOX_IDS[currentIndex - 1];
+    const prev = screenIds[currentIndex - 1];
     if (prev) navigate(`/${prev}`);
-  }, [currentIndex, navigate]);
+  }, [screenIds, currentIndex, navigate]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -256,7 +266,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   }
 
   const isStoryScreen = STORY_SCREENS.has(currentScreenId);
-  const isLast = currentIndex === BOX_IDS.length - 1;
+  const isLast = currentIndex === screenIds.length - 1;
 
   // 1-indexed slide position within the story sequence.
   const currentStorySlide =
@@ -392,6 +402,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             initialSelection={
               nextStepChoice === 'challenge' ? 'challenge' : null
             }
+            challengeEnabled={challengesEnabled}
             onDone={goToNext}
           />
         );

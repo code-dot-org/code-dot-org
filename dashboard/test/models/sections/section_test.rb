@@ -16,6 +16,22 @@ class SectionTest < ActiveSupport::TestCase
     @jigsaw_unit.reload
   end
 
+  test 'lesson_tutor_available? is true for a section assigned an AIF course' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'ai-tutor-section', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+    assert create(:section, unit_group: unit_group).lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a section assigned a non-AI course' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'not-ai-section', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'CSD')
+    refute create(:section, unit_group: unit_group).lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a section with nothing assigned' do
+    refute create(:section).lesson_tutor_available?
+  end
+
   test "sections are soft-deleted" do
     assert_no_change("Section.with_deleted.count") do
       @section.destroy
@@ -841,6 +857,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -878,6 +896,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1013,6 +1033,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1076,6 +1098,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1145,6 +1169,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1213,6 +1239,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1273,6 +1301,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -2059,13 +2089,13 @@ class SectionTest < ActiveSupport::TestCase
     # The instructor can use US only models, so nothing is inaccessible. The
     # assigned unit is still asked; it is the one that returns early without
     # scanning levels.
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    User.any_instance.stubs(:blocked_aichat_providers).returns([])
     refute us_only_section.required_inaccessible_ai_models?
     refute openai_section.required_inaccessible_ai_models?
 
     # The instructor has US only models disabled, so it depends on the curriculum.
-    User.any_instance.unstub(:us_only_aichat_models_disabled?)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    User.any_instance.unstub(:blocked_aichat_providers)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
     assert us_only_section.required_inaccessible_ai_models?
     refute openai_section.required_inaccessible_ai_models?
     refute no_course_section.required_inaccessible_ai_models?
@@ -2083,7 +2113,7 @@ class SectionTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, script: reachable_unit, position: 1)
     create(:unit_group_unit, unit_group: unit_group, script: blocked_unit, position: 2)
 
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
 
     # Assigned the whole course, so any blocked unit in it counts.
     course_section = create(:section, teacher: @teacher, unit_group: unit_group)

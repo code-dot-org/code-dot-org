@@ -103,11 +103,13 @@ const PredictionResult = () => {
                     key={index}
                     aria-current={index === currentStep ? 'step' : undefined}
                     className={classNames(styles.step, {
+                      [styles.pastStep]: index < currentStep,
                       [styles.currentStep]: index === currentStep,
                     })}
                   >
                     <Typography
-                      variant="label4"
+                      variant="body4"
+                      component="span"
                       aria-hidden="true"
                       className={styles.stepNumber}
                     >

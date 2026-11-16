@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-06T16:12:42.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Rainy Day",
+    "long_instructions": "## Modify\r\n\r\n1. Run the program as-is.\r\n2. Change one thing at a time: the count, the spacing, the color, the shape, the size.\r\n3. Add a second loop that adds something new.\r\n4. Update the comment at the top with what you changed and your name.",
+    "bubble_choice_description": "A silver cloud dropping a diagonal line of raindrops.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Rainy Day — original by Priya Nair\nfrom theater import *\n\nclear(\"#6B7A8F\")\n\n# Cloud\nset_fill_color(\"silver\")\ndraw_ellipse(100, 60, 120, 70)\ndraw_ellipse(160, 40, 120, 80)\ndraw_ellipse(220, 60, 120, 70)\n\n# Raindrops falling on a diagonal\nset_fill_color(\"aqua\")\nremove_stroke_color()\nfor j in range(9):\n    draw_ellipse(j * 36 + 110, j * 25 + 140, 8, 20)\n    pause(0.1)\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/290eabddbb2d0976635779c37c9cbb44-optionC.gif"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-06T16:12:42.798+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson21-choiceA_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson21-choiceA_27_28\"},{\"changed_at\":\"2026-11-06 16:19:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-06 16:20:33 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

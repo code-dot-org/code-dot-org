@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';

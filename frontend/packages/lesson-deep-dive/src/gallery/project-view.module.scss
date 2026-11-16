@@ -352,6 +352,32 @@
   color: var(--text-neutral-primary);
 }
 
+.transcriptSummary {
+  width: fit-content;
+  min-height: 24px;
+  padding: 3px 0;
+  cursor: pointer;
+  color: var(--text-neutral-primary);
+
+  .sectionLabel {
+    color: var(--text-neutral-primary);
+  }
+
+  &:hover {
+    background: none;
+    text-decoration: underline;
+  }
+}
+
+.transcriptText {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 22px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--text-neutral-primary);
+}
+
 // --- Page frame ---
 
 .projectView {

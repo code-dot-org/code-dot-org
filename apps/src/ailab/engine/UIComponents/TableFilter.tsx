@@ -1,4 +1,5 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Popover, Tooltip, Typography} from '@mui/material';
 import React, {useRef, useState} from 'react';
@@ -29,6 +30,7 @@ const TableFilter = ({view, menuAlign = 'right'}: TableFilterProps) => {
   const [menuColumn, setMenuColumn] = useState<ColumnId>();
   const [returnColumn, setReturnColumn] = useState<ColumnId>();
   const {filter} = view;
+  const {theme} = useTheme(true);
   const menuChecked =
     filter && filter.column === menuColumn ? filter.values : [];
   const canClear = menuColumn === undefined ? !!filter : menuChecked.length > 0;
@@ -132,6 +134,8 @@ const TableFilter = ({view, menuAlign = 'right'}: TableFilterProps) => {
         </Button>
       )}
       <Popover
+        // The popover is portaled outside the lab's theme wrapper.
+        data-theme={theme}
         open={open}
         anchorEl={() => anchorRef.current!}
         onClose={closeMenu}

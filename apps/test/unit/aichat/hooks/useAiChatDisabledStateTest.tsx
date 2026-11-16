@@ -1,29 +1,36 @@
 import {renderHook} from '@testing-library/react-hooks';
 
+import shouldUseAiGateway from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import {
   AI_SETTINGS_SUPPORT_LINK,
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
   AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+  AI_NOT_AVAILABLE_INTERNATIONAL,
   AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
   AI_CHAT_LAB_FAQ_LINK,
   AI_TUTOR_FAQ_LINK,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
-import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {
+  AI_GATEWAY_FALLBACK_DCDO_KEY,
+  areAiChatToolsEnabled,
+} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
+import DCDO from '@cdo/apps/dcdo';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   AiChatClientTypes,
   AiChatModelIds,
+  AiChatProviders,
 } from '@cdo/generated-scripts/sharedConstants';
 
 let mockState = {
   currentUser: {
     isTeacher: false,
     aiChatAccessLevel: 'enabled',
-    usOnlyAichatModelsDisabled: false,
+    blockedAichatProviders: [] as string[],
     isLevelbuilder: false,
   },
 };
@@ -49,6 +56,11 @@ jest.mock('@cdo/apps/aichat/helpers/aiChatAccess', () => ({
   areAiChatToolsEnabled: jest.fn(),
 }));
 
+jest.mock('@cdo/apps/aichat/api/shouldUseAiGateway', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
 jest.mock('@cdo/apps/lab2/projects/utils', () => ({
   ...jest.requireActual('@cdo/apps/lab2/projects/utils'),
   getIsStartMode: jest.fn(),
@@ -61,6 +73,11 @@ const mockAreAiChatToolsEnabled = areAiChatToolsEnabled as jest.MockedFunction<
 const mockGetIsStartMode = getIsStartMode as jest.MockedFunction<
   typeof getIsStartMode
 >;
+const mockShouldUseAiGateway = shouldUseAiGateway as jest.MockedFunction<
+  typeof shouldUseAiGateway
+>;
+
+const BLOCKED_PROVIDERS = [AiChatProviders.GOOGLE];
 
 describe('useAiChatDisabledState', () => {
   beforeEach(() => {
@@ -68,7 +85,7 @@ describe('useAiChatDisabledState', () => {
       currentUser: {
         isTeacher: false,
         aiChatAccessLevel: 'enabled',
-        usOnlyAichatModelsDisabled: false,
+        blockedAichatProviders: [] as string[],
         isLevelbuilder: false,
       },
     };
@@ -80,6 +97,11 @@ describe('useAiChatDisabledState', () => {
     );
     mockAreAiChatToolsEnabled.mockReturnValue(true);
     mockGetIsStartMode.mockReturnValue(false);
+    mockShouldUseAiGateway.mockReturnValue(false);
+  });
+
+  afterEach(() => {
+    DCDO.reset();
   });
 
   it('returns disabled when appName is missing', () => {
@@ -155,7 +177,7 @@ describe('useAiChatDisabledState', () => {
   });
 
   it('returns the standard student message when a US only model is blocked', () => {
-    mockState.currentUser.usOnlyAichatModelsDisabled = true;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -172,7 +194,7 @@ describe('useAiChatDisabledState', () => {
 
   it('returns the tutor-specific region message and FAQ link for blocked teachers in ai tutor', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.usOnlyAichatModelsDisabled = true;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -197,7 +219,7 @@ describe('useAiChatDisabledState', () => {
 
   it('returns the level-scoped region message and FAQ link for blocked teachers in the aichat lab', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.usOnlyAichatModelsDisabled = true;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -220,7 +242,7 @@ describe('useAiChatDisabledState', () => {
 
   it('omits the FAQ link for blocked teachers when clientType is unknown', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.usOnlyAichatModelsDisabled = true;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -231,13 +253,13 @@ describe('useAiChatDisabledState', () => {
 
     expect(result.current).toEqual({
       disabled: true,
-      disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+      disabledMessage: AI_NOT_AVAILABLE_INTERNATIONAL,
     });
   });
 
   it('does not block models available outside the US for blocked users', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.usOnlyAichatModelsDisabled = true;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -261,7 +283,7 @@ describe('useAiChatDisabledState', () => {
   });
 
   it('does not block when no selectedModelId is provided', () => {
-    mockState.currentUser.usOnlyAichatModelsDisabled = true;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({appName: 'pythonlab'})
@@ -272,7 +294,7 @@ describe('useAiChatDisabledState', () => {
 
   it('shows predict gating before the blocked message for teachers on an unsubmitted predict level', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.usOnlyAichatModelsDisabled = true;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -306,6 +328,93 @@ describe('useAiChatDisabledState', () => {
         openInNewTab: true,
         text: 'Learn how to become a verified teacher',
       },
+    });
+  });
+
+  describe('when the gateway fallback is enabled', () => {
+    beforeEach(() => {
+      DCDO.set(AI_GATEWAY_FALLBACK_DCDO_KEY, true);
+      mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
+    });
+
+    it('enables the tutor on a blocked model the gateway serves', () => {
+      mockShouldUseAiGateway.mockReturnValue(true);
+
+      const {result} = renderHook(() =>
+        useAiChatDisabledState({
+          appName: 'pythonlab',
+          clientType: AiChatClientTypes.AI_TUTOR,
+          selectedModelId: AiChatModelIds.GEMINI_3_5_FLASH_LITE,
+        })
+      );
+
+      expect(result.current).toEqual({disabled: false});
+    });
+
+    it('still blocks an image model, which has no fallback', () => {
+      mockShouldUseAiGateway.mockReturnValue(true);
+
+      const {result} = renderHook(() =>
+        useAiChatDisabledState({
+          appName: 'pythonlab',
+          clientType: AiChatClientTypes.AI_TUTOR,
+          selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH_IMAGE,
+        })
+      );
+
+      expect(result.current).toEqual({
+        disabled: true,
+        disabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
+      });
+    });
+
+    it('still blocks a client type the fallback does not serve', () => {
+      mockShouldUseAiGateway.mockReturnValue(true);
+
+      const {result} = renderHook(() =>
+        useAiChatDisabledState({
+          appName: 'aichat',
+          clientType: AiChatClientTypes.AI_CHAT_LAB,
+          selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
+        })
+      );
+
+      expect(result.current).toEqual({
+        disabled: true,
+        disabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
+      });
+    });
+
+    it('still blocks a blocked model that Rails serves', () => {
+      const {result} = renderHook(() =>
+        useAiChatDisabledState({
+          appName: 'pythonlab',
+          clientType: AiChatClientTypes.AI_TUTOR,
+          selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
+        })
+      );
+
+      expect(result.current).toEqual({
+        disabled: true,
+        disabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
+      });
+    });
+  });
+
+  it('blocks a blocked model the gateway serves when the fallback is off', () => {
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
+    mockShouldUseAiGateway.mockReturnValue(true);
+
+    const {result} = renderHook(() =>
+      useAiChatDisabledState({
+        appName: 'pythonlab',
+        selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
+      })
+    );
+
+    expect(result.current).toEqual({
+      disabled: true,
+      disabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
     });
   });
 });

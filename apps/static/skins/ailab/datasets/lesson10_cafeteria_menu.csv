@@ -1,0 +1,88 @@
+ID,Lunch Source,Grade,Diet,Menu Item,Would Buy
+Data 1,Buys school lunch,7,Eats meat,Pepperoni pizza,Yes
+Data 2,Buys school lunch,8,Eats meat,Chicken nuggets,Yes
+Data 3,Buys school lunch,7,Eats meat,Beef tacos,Yes
+Data 4,Buys school lunch,7,Eats meat,Cheeseburger,Yes
+Data 5,Buys school lunch,8,Eats meat,Cheese pizza,Yes
+Data 6,Buys school lunch,8,Eats meat,Veggie wrap,No
+Data 7,Buys school lunch,6,Eats meat,Bean and cheese burrito,No
+Data 8,Buys school lunch,6,Eats meat,Garden salad,No
+Data 9,Buys school lunch,7,Eats meat,Bean and cheese burrito,No
+Data 10,Buys school lunch,7,Eats meat,Garden salad,No
+Data 11,Buys school lunch,8,Eats meat,Bean and cheese burrito,No
+Data 12,Buys school lunch,8,Vegetarian,Cheese pizza,Yes
+Data 13,Buys school lunch,7,Eats meat,Cheese pizza,No
+Data 14,Buys school lunch,7,Eats meat,Cheeseburger,No
+Data 15,Buys school lunch,6,Eats meat,Cheeseburger,Yes
+Data 16,Buys school lunch,8,Eats meat,Cheeseburger,Yes
+Data 17,Buys school lunch,8,Eats meat,Garden salad,No
+Data 18,Buys school lunch,6,Eats meat,Veggie wrap,No
+Data 19,Buys school lunch,8,Eats meat,Chicken nuggets,Yes
+Data 20,Buys school lunch,7,Eats meat,Pepperoni pizza,Yes
+Data 21,Buys school lunch,7,Eats meat,Cheeseburger,Yes
+Data 22,Buys school lunch,6,Eats meat,Veggie wrap,No
+Data 23,Buys school lunch,7,Eats meat,Beef tacos,Yes
+Data 24,Buys school lunch,7,Eats meat,Cheese pizza,Yes
+Data 25,Buys school lunch,6,Eats meat,Cheese pizza,Yes
+Data 26,Buys school lunch,7,Eats meat,Garden salad,No
+Data 27,Buys school lunch,6,Eats meat,Beef tacos,Yes
+Data 28,Buys school lunch,6,Eats meat,Pepperoni pizza,Yes
+Data 29,Buys school lunch,6,Eats meat,Veggie wrap,No
+Data 30,Buys school lunch,8,Eats meat,Cheeseburger,Yes
+Data 31,Buys school lunch,6,Eats meat,Cheeseburger,Yes
+Data 32,Buys school lunch,6,Eats meat,Beef tacos,Yes
+Data 33,Buys school lunch,6,Eats meat,Chicken nuggets,Yes
+Data 34,Buys school lunch,7,Eats meat,Chicken nuggets,Yes
+Data 35,Buys school lunch,7,Eats meat,Cheese pizza,Yes
+Data 36,Buys school lunch,6,Eats meat,Cheese pizza,Yes
+Data 37,Buys school lunch,8,Eats meat,Bean and cheese burrito,No
+Data 38,Buys school lunch,8,Eats meat,Beef tacos,Yes
+Data 39,Buys school lunch,6,Eats meat,Garden salad,No
+Data 40,Buys school lunch,7,Eats meat,Bean and cheese burrito,No
+Data 41,Buys school lunch,8,Eats meat,Beef tacos,Yes
+Data 42,Buys school lunch,6,Eats meat,Chicken nuggets,Yes
+Data 43,Buys school lunch,6,Vegetarian,Cheese pizza,Yes
+Data 44,Buys school lunch,8,Eats meat,Veggie wrap,No
+Data 45,Buys school lunch,6,Eats meat,Garden salad,No
+Data 46,Buys school lunch,7,Eats meat,Beef tacos,Yes
+Data 47,Buys school lunch,8,Eats meat,Cheeseburger,Yes
+Data 48,Buys school lunch,7,Eats meat,Pepperoni pizza,Yes
+Data 49,Buys school lunch,6,Eats meat,Chicken nuggets,Yes
+Data 50,Buys school lunch,7,Eats meat,Garden salad,Yes
+Data 51,Buys school lunch,7,Eats meat,Bean and cheese burrito,No
+Data 52,Buys school lunch,6,Eats meat,Pepperoni pizza,Yes
+Data 53,Buys school lunch,6,Eats meat,Pepperoni pizza,Yes
+Data 54,Buys school lunch,7,Eats meat,Cheese pizza,Yes
+Data 55,Buys school lunch,8,Eats meat,Pepperoni pizza,Yes
+Data 56,Buys school lunch,7,Eats meat,Bean and cheese burrito,No
+Data 57,Buys school lunch,6,Eats meat,Chicken nuggets,Yes
+Data 58,Buys school lunch,6,Eats meat,Bean and cheese burrito,No
+Data 59,Buys school lunch,6,Eats meat,Cheese pizza,Yes
+Data 60,Buys school lunch,7,Eats meat,Veggie wrap,No
+Data 61,Buys school lunch,8,Eats meat,Veggie wrap,No
+Data 62,Buys school lunch,8,Eats meat,Cheeseburger,Yes
+Data 63,Buys school lunch,8,Eats meat,Cheeseburger,Yes
+Data 64,Buys school lunch,6,Eats meat,Cheese pizza,Yes
+Data 65,Buys school lunch,6,Eats meat,Pepperoni pizza,Yes
+Data 66,Buys school lunch,6,Eats meat,Veggie wrap,No
+Data 67,Buys school lunch,6,Eats meat,Veggie wrap,No
+Data 68,Buys school lunch,7,Eats meat,Garden salad,No
+Data 69,Buys school lunch,7,Eats meat,Bean and cheese burrito,No
+Data 70,Buys school lunch,6,Eats meat,Cheese pizza,Yes
+Data 71,Buys school lunch,8,Eats meat,Pepperoni pizza,Yes
+Data 72,Buys school lunch,7,Eats meat,Chicken nuggets,Yes
+Data 73,Buys school lunch,7,Eats meat,Beef tacos,Yes
+Data 74,Buys school lunch,7,Eats meat,Garden salad,No
+Data 75,Buys school lunch,6,Eats meat,Chicken nuggets,Yes
+Data 76,Buys school lunch,6,Eats meat,Beef tacos,Yes
+Data 77,Buys school lunch,6,Eats meat,Garden salad,No
+Data 78,Buys school lunch,6,Eats meat,Veggie wrap,Yes
+Data 79,Buys school lunch,8,Eats meat,Pepperoni pizza,Yes
+Data 80,Buys school lunch,7,Eats meat,Veggie wrap,No
+Data 81,Buys school lunch,6,Eats meat,Chicken nuggets,Yes
+Data 82,Buys school lunch,8,Eats meat,Garden salad,No
+Data 83,Buys school lunch,7,Vegetarian,Bean and cheese burrito,Yes
+Data 84,Buys school lunch,6,Eats meat,Cheese pizza,Yes
+Data 85,Buys school lunch,7,Eats meat,Bean and cheese burrito,No
+Data 86,Buys school lunch,8,Eats meat,Beef tacos,Yes
+Data 87,Buys school lunch,6,Eats meat,Cheeseburger,Yes

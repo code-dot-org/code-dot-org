@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-30 18:07:25 UTC",
+    "serialized_at": "2026-11-13 16:22:15 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6212,6 +6212,36 @@
       }
     },
     {
+      "name": "Unit 3 Unit Guide",
+      "url": "https://docs.google.com/document/d/1KWeeCzrBHDi0MQpaO8zUGiZFTNO3lmgn2rz7i1vCk-k/",
+      "key": "unit_3_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_unit_guide"
+      }
+    },
+    {
+      "name": "Unit 3 Unit Guide Key",
+      "url": "https://docs.google.com/document/d/1JY32yQaFjJ9hj8ZK9HH_PAa3zcvPJkD6asa14j3FgdQ/",
+      "key": "unit_3_unit_guide_key",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_unit_guide_key"
+      }
+    },
+    {
       "name": "Values Explorer Project",
       "url": "https://docs.google.com/presentation/d/1lem8mYVQhTMRA_gn4yeNd7UE0GmmXtRgbvphEf_nHuQ/edit?usp=sharing",
       "key": "values_explorer_project",
@@ -6397,10 +6427,27 @@
         "resource.key": "all_vocabulary_1",
         "script.name": "building-data-driven-systems-with-ai-2026"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_unit_guide",
+        "script.name": "building-data-driven-systems-with-ai-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_unit_guide_key",
+        "script.name": "building-data-driven-systems-with-ai-2026"
+      }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_unit_guide",
+        "script.name": "building-data-driven-systems-with-ai-2026"
+      }
+    }
   ],
   "vocabularies": [
     {
@@ -6866,6 +6913,9 @@
         "objective.key": "fd2a0b63-b25e-48cc-8d73-ad7d49f36c93"
       }
     }
+  ],
+  "objectives_script_levels": [
+
   ],
   "lessons_standards": [
     {
