@@ -108,7 +108,9 @@ $anim-duration: 220ms;
   text-align: left;
   overflow: hidden;
   white-space: nowrap;
-  transition: background-color 0.12s ease, color 0.12s ease;
+  transition:
+    background-color 0.12s ease,
+    color 0.12s ease;
 
   &:hover:not(.ratingOptionActive) {
     background: #e4e5e8;
@@ -195,7 +197,9 @@ $anim-duration: 220ms;
   border-radius: 999px;
   background: rgb(18 18 18 / 0.3);
   flex-shrink: 0;
-  transition: width 0.2s ease, background-color 0.2s ease;
+  transition:
+    width 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .dotActive {
