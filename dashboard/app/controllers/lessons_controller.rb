@@ -246,8 +246,16 @@ class LessonsController < ApplicationController
       end
 
       exam_script_levels = @lesson.script_levels.select(&:exam_quiz?)
-      if exam_script_levels.any? && !(@lesson.lockable && exam_script_levels == [@lesson.script_levels.last])
-        raise "An exam Quiz can only be the last level of a lockable lesson."
+      if exam_script_levels.any?
+        last_script_level = @lesson.script_levels.last
+        problems = []
+        problems << "the lesson is not lockable" unless @lesson.lockable
+        exam_script_levels.each do |script_level|
+          next if script_level == last_script_level
+          exam = script_level.levels.find {|level| level.is_a?(Quiz) && level.exam?}
+          problems << "#{exam.name.dump} is not the last level"
+        end
+        raise "An exam Quiz can only be the last level of a lockable lesson: #{problems.join('; ')}." if problems.any?
       end
 
       @lesson.script.prevent_new_duplicate_levels(old_dup_level_keys)
