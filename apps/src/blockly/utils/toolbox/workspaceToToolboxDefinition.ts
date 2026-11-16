@@ -2,6 +2,8 @@ import type * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES, DYNAMIC_CATEGORY_OPTIONS} from '../../constants';
 
+import {makeDynamicCategory, NamedDynamicCategoryInfo} from './factories';
+
 export const DEFAULT_CATEGORY_NAME = 'DEFAULT';
 
 /**
@@ -10,10 +12,12 @@ export const DEFAULT_CATEGORY_NAME = 'DEFAULT';
  * @param category
  */
 export function isValidCategory(
-  category: BlocklyCore.utils.toolbox.StaticCategoryInfo
+  category:
+    | BlocklyCore.utils.toolbox.StaticCategoryInfo
+    | NamedDynamicCategoryInfo
 ): boolean {
   return !!(
-    category.contents.length || category.name !== DEFAULT_CATEGORY_NAME
+    category.contents?.length || category.name !== DEFAULT_CATEGORY_NAME
   );
 }
 
@@ -38,33 +42,18 @@ export function getNewStaticCategory(
 }
 
 /**
- * Creates a new dynamic category. Used to convert workspace
- * blocks into a toolbox definition in levelbuilder's toolbox mode.
- * @returns JSON representation of a new dynamic category.
- */
-export function getNewDynamicCategory(
-  name: string
-): BlocklyCore.utils.toolbox.ToolboxItemInfo {
-  return {
-    kind: 'category',
-    custom: DYNAMIC_CATEGORY_OPTIONS[name],
-    name,
-    cssconfig: undefined,
-    id: name,
-    categorystyle: undefined,
-    colour: undefined,
-    hidden: undefined,
-  };
-}
-
-/**
- * Serialize the top blocks of the workspace as a toolbox.
+ * Serialize the top blocks of the workspace as a toolbox. Pass
+ * `dynamicCategoriesHoldBlocks` to save blocks under an auto-populated
+ * category into it; otherwise they go to a "DEFAULT" category.
  * @returns a toolbox definition that can be handled directly by Blockly.
  *
  * Adapted from {@link @cdo/apps/music/blockly/MusicBlocklyWorkspace} workspaceToToolboxDefinition().
  * TODO: Consolidate
  */
-export default function (workspace: BlocklyCore.WorkspaceSvg) {
+export default function (
+  workspace: BlocklyCore.WorkspaceSvg,
+  {dynamicCategoriesHoldBlocks = false} = {}
+) {
   const topBlocks = workspace.getTopBlocks(true);
 
   // This will be the final toolbox returned by this function, either a
@@ -77,7 +66,9 @@ export default function (workspace: BlocklyCore.WorkspaceSvg) {
   let flyoutItems: BlocklyCore.utils.toolbox.FlyoutItemInfo[] = [];
 
   // Temporary storage for a category, containing a name, type, list of contents.
-  let currentCategory = getNewStaticCategory();
+  let currentCategory:
+    | BlocklyCore.utils.toolbox.StaticCategoryInfo
+    | NamedDynamicCategoryInfo = getNewStaticCategory();
 
   topBlocks.forEach(block => {
     if (block.type === BLOCK_TYPES.category) {
@@ -96,14 +87,17 @@ export default function (workspace: BlocklyCore.WorkspaceSvg) {
         // Add previous category to toolbox
         fullToolbox.contents.push({...currentCategory});
       }
-      // Create and immediately add a new dynamic category to the toolbox,
-      // because dynamic categories cannot include other static blocks.
-      fullToolbox.contents.push(
-        getNewDynamicCategory(block.getFieldValue('CUSTOM'))
+      const name = block.getFieldValue('CUSTOM');
+      const dynamicCategory = makeDynamicCategory(
+        name,
+        DYNAMIC_CATEGORY_OPTIONS[name]
       );
-
-      // Begin a new "DEFAULT" category in case any non-category block follows.
-      currentCategory = getNewStaticCategory();
+      if (dynamicCategoriesHoldBlocks) {
+        currentCategory = dynamicCategory;
+      } else {
+        fullToolbox.contents.push(dynamicCategory);
+        currentCategory = getNewStaticCategory();
+      }
       flyoutItems = [];
     } else {
       // Add the current block to the flyout and category.
