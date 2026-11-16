@@ -447,9 +447,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     return undefined;
   }, [channelId, levelProperties.name]);
 
-  // The upload rules are agreed to once per project. A student's agreement
-  // restricts the project; a teacher's does not. Level edit modes upload to
-  // the level rather than to a project, so they skip the rules.
   const isTeacher = useAppSelector(
     state => state.currentUser.userType === 'teacher'
   );
