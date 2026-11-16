@@ -254,7 +254,10 @@ class LessonsController < ApplicationController
           exam = script_level.levels.find {|level| level.is_a?(Quiz) && level.exam?}
           problems << "#{exam.name.dump} is not the last level"
         end
-        raise "An exam Quiz can only be the last level of a lockable lesson: #{problems.join('; ')}." if problems.any?
+        if problems.any?
+          @lesson.errors.add(:base, "An exam Quiz can only be the last level of a lockable lesson: #{problems.join('; ')}.")
+          raise ActiveRecord::RecordInvalid.new(@lesson)
+        end
       end
 
       @lesson.script.prevent_new_duplicate_levels(old_dup_level_keys)

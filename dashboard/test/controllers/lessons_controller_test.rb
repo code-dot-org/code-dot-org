@@ -1492,8 +1492,9 @@ class LessonsControllerTest < ActionController::TestCase
         {activitySectionPosition: 1, activeId: exam.id, levels: [{id: exam.id, name: exam.name}]},
       ]
     )
-    error = assert_raises(RuntimeError) {put :update, params: @update_params}
-    assert_includes error.message, 'An exam Quiz can only be the last level of a lockable lesson: the lesson is not lockable.'
+    put :update, params: @update_params
+    assert_response :not_acceptable
+    assert_includes response.body, 'An exam Quiz can only be the last level of a lockable lesson: the lesson is not lockable.'
   end
 
   test 'cannot add exam Quiz before the last level of a lesson' do
@@ -1509,8 +1510,9 @@ class LessonsControllerTest < ActionController::TestCase
         {activitySectionPosition: 2, activeId: level_group.id, assessment: true, levels: [{id: level_group.id, name: level_group.name}]},
       ]
     )
-    error = assert_raises(RuntimeError) {put :update, params: @update_params}
-    assert_includes error.message, "An exam Quiz can only be the last level of a lockable lesson: #{exam.name.dump} is not the last level."
+    put :update, params: @update_params
+    assert_response :not_acceptable
+    assert_includes response.body, "An exam Quiz can only be the last level of a lockable lesson: #{exam.name.dump} is not the last level."
   end
 
   test 'cannot make a lesson containing an exam Quiz unlockable' do
@@ -1526,8 +1528,9 @@ class LessonsControllerTest < ActionController::TestCase
       assessment: true
     )
 
-    error = assert_raises(RuntimeError) {put :update, params: @update_params.merge(lockable: false)}
-    assert_includes error.message, 'An exam Quiz can only be the last level of a lockable lesson: the lesson is not lockable.'
+    put :update, params: @update_params.merge(lockable: false)
+    assert_response :not_acceptable
+    assert_includes response.body, 'An exam Quiz can only be the last level of a lockable lesson: the lesson is not lockable.'
     assert @lesson.reload.lockable
   end
 
