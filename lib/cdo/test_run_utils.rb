@@ -34,7 +34,15 @@ module TestRunUtils
     lib/tasks/seed.rake
     config/videos.csv
     app/models/game.rb
+    app/models/concept.rb
     config/standalone_projects/**/*
+    config/secret_words.csv
+    config/secret_pictures.csv
+    test/fixtures/files/school_districts.tsv
+    test/fixtures/files/schools.tsv
+    config/standards/*.csv
+    config/foorm/library/**/*.json
+    config/foorm/forms/**/*.json
     test/fixtures/**/*.yml
   ].freeze
 
