@@ -18,7 +18,6 @@ import {
   ChatHostContext,
 } from '@cdo/apps/aichat/host/ChatHostContext';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   Lab2EntryPoint,
@@ -304,19 +303,6 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     dispatch(resetProjectMetadata());
   }, [dispatch]);
 
-  // The lab saves through the registry, so the manager must be registered
-  // before the lab mounts and reads it. The hook flushes saves on unmount.
-  const [registered, setRegistered] = useState(false);
-  useEffect(() => {
-    if (!projectManager) return;
-    Lab2Registry.getInstance().setProjectManager(projectManager);
-    setRegistered(true);
-    return () => {
-      Lab2Registry.getInstance().clearProjectManager();
-      setRegistered(false);
-    };
-  }, [projectManager]);
-
   if (loadError) {
     return (
       <div className={styles.stepFallback}>
@@ -333,10 +319,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     currentSources === EMPTY_SOURCES ? undefined : currentSources;
 
   const ready =
-    currentSources !== undefined &&
-    (!projectManager || registered) &&
-    projectReady &&
-    instructionsReady;
+    currentSources !== undefined && projectReady && instructionsReady;
   // The project and the instructions can each take a model call; say so
   // instead of "slow".
   const loadingText =
