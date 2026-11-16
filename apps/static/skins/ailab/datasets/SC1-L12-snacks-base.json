@@ -1,8 +1,8 @@
 {
-  "name": "SC1-L12-snacks-base",
+  "name": "SC1-L12-v2-snacks-base",
   "card": {
-    "description": "An after-school program's Snack Checker predicts which snacks meet the school snack rules. Each record is one food in one typical serving. The label is Yes (meets the rules) or No (does not). You can also choose Vitamin C Source? or Kept Cold? as the label.",
-    "source": "Real foods from USDA FoodData Central, SR Legacy (April 2018 release), https://fdc.nal.usda.gov. Source: USDA FoodData Central. Label made by the project from the USDA Smart Snacks in School limits (7 CFR 210.11), simplified.",
+    "description": "An after-school program's Snack Checker predicts which snacks meet the school snack rules. Each record is one food in one typical serving. The label is Yes (meets the rules) or No (does not). You can also choose Vitamin C Source? or Some Protein? as the label.",
+    "source": "Real foods from USDA FoodData Central (April 2018 release), https://fdc.nal.usda.gov. We made the label from the USDA Smart Snacks in School limits, simplified.",
     "lastUpdated": "2026",
     "context": {
       "createdBy": "CodeAI",
@@ -11,7 +11,6 @@
     }
   },
   "defaultLabelColumn": "Meets Snack Rules?",
-  "defaultIdColumn": "Snack",
   "fields": [
     {
       "type": "categorical",
@@ -45,8 +44,8 @@
     },
     {
       "type": "categorical",
-      "id": "Kept Cold?",
-      "description": "Is the food usually kept cold in a fridge or freezer until it is eaten?"
+      "id": "Some Protein?",
+      "description": "Does one serving have 3 grams of protein or more?"
     },
     {
       "type": "categorical",

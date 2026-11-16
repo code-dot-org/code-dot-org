@@ -1,5 +1,5 @@
 {
-  "name": "SC1-L12-board-games-base",
+  "name": "SC1-L12-v2-board-games-base",
   "card": {
     "description": "A game café has a shelf of 60 real board games. Each record is one game. The label says if BoardGameGeek lists it as a family game (Yes) or not (No). You can also choose Strategy Game? or Highly Rated? as the label.",
     "source": "BoardGameGeek Dataset on Board Games (Kaggle: andrewmvd/board-games, https://www.kaggle.com/datasets/andrewmvd/board-games). Real games and real facts (players, play time, age, complexity, year). Family Game? comes from BoardGameGeek's own Family Games domain tag. We picked which 60 games to include.",
@@ -11,12 +11,11 @@
     }
   },
   "defaultLabelColumn": "Family Game?",
-  "defaultIdColumn": "Game",
   "fields": [
     {
       "type": "categorical",
       "id": "Game",
-      "description": "What is the board game called?"
+      "description": "What is the game called?"
     },
     {
       "type": "categorical",
