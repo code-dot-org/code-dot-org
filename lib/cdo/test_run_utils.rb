@@ -55,10 +55,12 @@ module TestRunUtils
       sort
   end
 
+  # Names the cached database on S3. Paths are hashed along with contents
+  # because some seeders name records after the file.
   def self.dashboard_seed_hash(root = dashboard_dir)
     Digest::MD5.hexdigest(
       dashboard_seed_input_files(root).
-        map {|path| Digest::MD5.file(File.join(root, path))}.
+        map {|path| "#{path}:#{Digest::MD5.file(File.join(root, path))}\n"}.
         join
     )
   end

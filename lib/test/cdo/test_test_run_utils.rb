@@ -49,5 +49,13 @@ class TestRunUtilsTest < Minitest::Test
 
       refute_equal before_hash, seed_hash
     end
+
+    it 'changes when an input is renamed' do
+      write LEVEL, '{}'
+      before_hash = seed_hash
+      FileUtils.mv File.join(@root, LEVEL), File.join(@root, LEVEL.sub('Fake', 'Renamed Fake'))
+
+      refute_equal before_hash, seed_hash
+    end
   end
 end
