@@ -247,11 +247,10 @@ class LessonsController < ApplicationController
 
       exam_script_levels = @lesson.script_levels.select(&:exam_quiz?)
       if exam_script_levels.any?
-        last_script_level = @lesson.script_levels.last
         problems = []
         problems << "the lesson is not lockable" unless @lesson.lockable
-        exam_script_levels.each do |script_level|
-          next if script_level == last_script_level
+        misplaced_exam_script_levels = exam_script_levels - [@lesson.script_levels.last]
+        misplaced_exam_script_levels.each do |script_level|
           exam = script_level.levels.find {|level| level.is_a?(Quiz) && level.exam?}
           problems << "#{exam.name.dump} is not the last level"
         end
