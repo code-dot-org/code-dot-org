@@ -25,6 +25,7 @@ import IntroScreenCard from './IntroScreenCard';
 import {changedConfigFields, configError, timeLimitError} from './quizConfig';
 import QuizPageBlock from './QuizPageBlock';
 import QuizQuestionCard from './QuizQuestionCard';
+import QuestionMenu from './QuizQuestionCard/QuestionMenu';
 import {isPendingQuestionId, QuizConfigurationData} from './types';
 import useQuizBuilderQuestions from './useQuizBuilderQuestions';
 
@@ -61,6 +62,8 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     errorQuestionId,
     hasUnsavedLayout,
     addPage,
+    moveQuestion,
+    moveQuestionToPage,
     addPendingQuestion,
     saveQuestion,
     removeQuestion,
@@ -209,7 +212,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
               dirtyIds.has(question.id)
             )}
           >
-            {pageQuestions.map(question => (
+            {pageQuestions.map((question, index) => (
               <li key={question.id}>
                 <QuizQuestionCard
                   question={question}
@@ -224,6 +227,25 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                   // if unused.
                   onRemove={id => removeQuestion(id, {permanently: true})}
                   onDirtyChange={setQuestionDirty}
+                  menu={isBusy => (
+                    <QuestionMenu
+                      isBusy={isBusy}
+                      name={`question-menu-${question.id}`}
+                      canMoveUp={index > 0}
+                      canMoveDown={index < pageQuestions.length - 1}
+                      otherPages={pages
+                        .map(({page: otherPage}) => otherPage)
+                        .filter(otherPage => otherPage !== page)}
+                      hasUnsavedChanges={dirtyIds.has(question.id)}
+                      onMove={offset => moveQuestion(question.id, offset)}
+                      onMoveToPage={toPage =>
+                        moveQuestionToPage(question.id, toPage)
+                      }
+                      onRemove={() =>
+                        removeQuestion(question.id, {permanently: true})
+                      }
+                    />
+                  )}
                 />
               </li>
             ))}
