@@ -33,7 +33,7 @@ function onlySet<T extends object>(options: T): Partial<T> {
 
 /** A config's settings as the properties the lab reads. */
 export function flatFromLevelConfig(config: LevelConfig): FlatProperties {
-  const {focus, edits, images, world, scenes, blocks, guide} = config;
+  const {focus, edits, images, world, scenes, blocks, objectives} = config;
   const own = focus && focus !== 'play' ? TAB_OF_PART[focus] : undefined;
   const levelMode = onlySet({
     // A level that does not say what it edits is free play.
@@ -61,11 +61,11 @@ export function flatFromLevelConfig(config: LevelConfig): FlatProperties {
     delete levelMode.extraTabs;
   }
   const [first, second] = scenes?.starting ?? [];
-  const hasGuide =
-    guide &&
-    (guide.title !== undefined ||
-      guide.steps !== undefined ||
-      guide.collapsedText !== undefined);
+  const flatObjectives = onlySet({
+    title: objectives?.title,
+    items: objectives?.steps,
+    collapsedText: objectives?.collapsedText,
+  });
   return onlySet({
     levelMode,
     pinnedScene:
@@ -89,15 +89,10 @@ export function flatFromLevelConfig(config: LevelConfig): FlatProperties {
     lockEarlierBlocks: blocks?.lockEarlier,
     blockCatalog: blocks?.catalog,
     imageRoleDefaults: blocks?.dropdownsStartOn,
-    objectives: hasGuide
-      ? onlySet({
-          title: guide.title,
-          items: guide.steps,
-          collapsedText: guide.collapsedText,
-        })
-      : undefined,
-    callouts: guide?.callouts,
-    freeplayIntro: guide?.freePlayIntro,
+    // An objectives group with nothing set in it is the same as none.
+    objectives: Object.keys(flatObjectives).length ? flatObjectives : undefined,
+    callouts: config.callouts,
+    freeplayIntro: config.freePlayIntro,
   }) as FlatProperties;
 }
 

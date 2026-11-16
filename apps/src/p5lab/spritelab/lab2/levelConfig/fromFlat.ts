@@ -194,13 +194,13 @@ export function levelConfigFromFlat(properties: FlatProperties): {
           ? properties.imageRoleDefaults
           : undefined,
     }),
-    guide: group({
+    objectives: group({
       title: objectives?.title,
       steps: list(objectives?.items),
       collapsedText: objectives?.collapsedText,
-      callouts: list(properties.callouts),
-      freePlayIntro: on(properties.freeplayIntro) || undefined,
     }),
+    callouts: list(properties.callouts),
+    freePlayIntro: on(properties.freeplayIntro) || undefined,
   }) as LevelConfig;
   return {config, dropped};
 }

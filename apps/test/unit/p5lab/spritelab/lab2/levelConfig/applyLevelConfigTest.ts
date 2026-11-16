@@ -18,7 +18,8 @@ describe('withLevelConfig', () => {
           edits: ['images', 'code'],
           images: {canAdd: false, explainAi: true},
           blocks: {lockEarlier: true, catalog: true},
-          guide: {title: 'A title', freePlayIntro: true},
+          objectives: {title: 'A title'},
+          freePlayIntro: true,
         },
       })
     );

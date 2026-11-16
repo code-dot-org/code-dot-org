@@ -46,7 +46,7 @@ describe('levelConfigFromFlat', () => {
         },
         scenes: {starting: [{id: 'scene-1', name: 'Scene 1'}]},
         blocks: {dropdownsStartOn: {sprite: 'hero'}},
-        guide: {
+        objectives: {
           title: '**Friend or foe?**',
           steps: [{text: 'Make a friend.', check: {kind: 'rated'}}],
         },
@@ -58,7 +58,7 @@ describe('levelConfigFromFlat', () => {
   it('gives free play no focus', () => {
     expect(
       levelConfigFromFlat({levelMode: {kind: 'freeplay'}, freeplayIntro: true})
-    ).toEqual({config: {guide: {freePlayIntro: true}}, dropped: []});
+    ).toEqual({config: {freePlayIntro: true}, dropped: []});
   });
 
   it('turns the tabs a level added into parts the student edits', () => {

@@ -229,7 +229,7 @@ const blocksSchema = z.strictObject({
     }),
 });
 
-const guideSchema = z.strictObject({
+const objectivesSchema = z.strictObject({
   title: z.string().optional().meta({
     title: 'Title',
     description: 'Markdown, shown above the steps.',
@@ -241,15 +241,8 @@ const guideSchema = z.strictObject({
   }),
   collapsedText: z.string().optional().meta({
     title: 'Collapsed text',
-    description: 'A short line the collapsed guide keeps.',
-  }),
-  callouts: z.array(z.custom<LevelCallout>(anObject)).optional().meta({
-    title: 'Callouts',
-    description: 'Arrows that point the student at the next thing to open.',
-  }),
-  freePlayIntro: z.boolean().optional().meta({
-    title: 'Free play intro',
-    description: 'The intro opens the first time the student arrives.',
+    description:
+      'A short line that stays in view when the steps are collapsed.',
   }),
 });
 
@@ -268,7 +261,18 @@ export const levelConfigSchema = z
     world: worldSchema.optional().meta({title: 'World'}),
     scenes: scenesSchema.optional().meta({title: 'Scenes'}),
     blocks: blocksSchema.optional().meta({title: 'Blocks'}),
-    guide: guideSchema.optional().meta({title: 'Guide'}),
+    objectives: objectivesSchema.optional().meta({
+      title: 'Objectives',
+      description: 'What the level asks the student to do.',
+    }),
+    callouts: z.array(z.custom<LevelCallout>(anObject)).optional().meta({
+      title: 'Callouts',
+      description: 'Arrows that point the student at the next thing to open.',
+    }),
+    freePlayIntro: z.boolean().optional().meta({
+      title: 'Free play intro',
+      description: 'The intro opens the first time the student arrives.',
+    }),
   })
   .superRefine((config, context) => {
     const {focus, edits} = config;
