@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_11_04_120000) do
+ActiveRecord::Schema[7.1].define(version: 2026_11_16_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -712,7 +712,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_11_04_120000) do
     t.string "queue"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
+    t.index ["failed_at", "priority", "run_at"], name: "index_delayed_jobs_on_failed_at_and_priority_and_run_at"
   end
 
   create_table "demo_students", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
