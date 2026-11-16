@@ -209,6 +209,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
   end
 
   test "create rejects a response while the Quiz's lockable lesson is locked" do
+    @quiz.update!(purpose: 'exam')
     unit = create(:unit)
     lesson = create(:lesson, script: unit, lockable: true)
     create(:script_level, script: unit, lesson: lesson, levels: [@quiz], assessment: true)

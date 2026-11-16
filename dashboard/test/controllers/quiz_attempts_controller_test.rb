@@ -510,6 +510,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
   end
 
   private def create_unit_with_lock_quiz(quiz)
+    quiz.update!(purpose: 'exam')
     unit = create(:unit)
     lesson = create(:lesson, script: unit, lockable: true)
     create(:script_level, script: unit, lesson: lesson, levels: [quiz], assessment: true)
