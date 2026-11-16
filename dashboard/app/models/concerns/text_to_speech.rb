@@ -1,7 +1,4 @@
 require 'json'
-require 'acapela'
-require 'net/http'
-require 'uri'
 require 'redcarpet'
 require 'redcarpet/render_strip'
 
@@ -32,7 +29,6 @@ module TextToSpeech
 
   TTS_BUCKET = 'cdo-tts'.freeze
   UPDATED_TTS_PATH_DCDO_KEY = 'updated_tts_path'.freeze
-  ACAPELA_GENERATION_DCDO_KEY = 'acapela_tts_generation'.freeze
 
   # Pull the VOICES out of the SharedConstants (updating the locale keys to
   # match the expectation of the I18n gem since these locale keys are using
@@ -49,7 +45,7 @@ module TextToSpeech
       raise "Module must include SerializedProperties before TextToSpeech"
     end
 
-    before_save :tts_update
+    before_save :refresh_authored_hint_tts_urls
 
     serialized_attrs %w(
       tts_short_instructions_override
@@ -94,41 +90,6 @@ module TextToSpeech
     end
   end
 
-  # Each Acapela request is billed, so generation stays off unless DCDO enables it.
-  def self.acapela_enabled?
-    DCDO.get(ACAPELA_GENERATION_DCDO_KEY, false)
-  end
-
-  def self.tts_upload_to_s3(text, key, name, filename, context = nil, locale: I18n.locale)
-    return unless TextToSpeech.acapela_enabled?
-    return if text.blank?
-    return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
-    return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
-
-    loc_voice = TextToSpeech.localized_voice(locale: locale)
-    url = Acapela.text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE], context)
-    return if url.nil?
-    uri = URI.parse(url)
-    Net::HTTP.start(uri.host) do |http|
-      resp = http.get(uri.path)
-      AWS::S3.upload_to_bucket(TTS_BUCKET, filename, resp.body, no_random: true)
-
-      # Also upload metadata so we know what the text is supposed to be
-      metadata_path = "#{filename.rpartition('.').first}.json"
-      metadata = {}
-      if AWS::S3.exists_in_bucket(TTS_BUCKET, metadata_path)
-        # Pull down the existing metadata
-        metadata = JSON.parse(AWS::S3.download_from_bucket(TTS_BUCKET, metadata_path))
-      end
-      metadata[name] = {
-        key: key,
-        locale: locale,
-        text: text
-      }
-      AWS::S3.upload_to_bucket(TTS_BUCKET, metadata_path, metadata.to_json, no_random: true)
-    end
-  end
-
   def self.sanitize(text)
     # Use both Redcarpet and Loofah for double the cleansing action!
     # Actually, use both Redcarpet and Loofah because Redcarpet doesn't
@@ -142,11 +103,6 @@ module TextToSpeech
     # and only XML blocks before passing the result through Redcarpet
     text = Loofah.fragment(text).scrub!(tts_safe_scrubber).scrub!(:prune).to_s
     tts_safe_renderer.render(text)
-  end
-
-  def tts_upload_to_s3(text, key, metric_context = nil, locale: I18n.locale)
-    filename = tts_path(text, locale: locale)
-    TextToSpeech.tts_upload_to_s3(text, key, name, filename, metric_context, locale: locale)
   end
 
   # Returns the URL where the TTS audio file can be downloaded for the given text and locale
@@ -163,11 +119,6 @@ module TextToSpeech
     TextToSpeech.tts_path(text, name, locale: locale)
   end
 
-  def tts_should_update(property, update_all = false)
-    changed = property_changed?(property)
-    (changed || update_all) && Policies::LevelFiles.write_to_file?(self) && published
-  end
-
   def tts_short_instructions_text(locale: I18n.locale)
     I18n.with_locale(locale) do
       localized_short_instructions = try(:localized_short_instructions) || ''
@@ -176,11 +127,6 @@ module TextToSpeech
       # We still have to try localized instructions here for the levels.js-defined levels
       tts_short_instructions_override || TextToSpeech.sanitize(short_instructions || localized_short_instructions) || ''
     end
-  end
-
-  def tts_should_update_short_instructions?(update_all: false)
-    relevant_property = tts_short_instructions_override ? 'tts_short_instructions_override' : 'short_instructions'
-    return tts_should_update(relevant_property, update_all)
   end
 
   def tts_long_instructions_text(locale: I18n.locale)
@@ -231,42 +177,20 @@ module TextToSpeech
     end
   end
 
-  def tts_should_update_long_instructions?(update_all: false)
-    # Long instruction audio should be updated if the relevant long
-    # instructions property on the level itself was updated, or if the levels
-    # contained by this level were updated (since we treat contained level
-    # content as long instructions for TTS purposes)
-    relevant_property = tts_long_instructions_override ? 'tts_long_instructions_override' : 'long_instructions'
-    return tts_should_update(relevant_property, update_all) || tts_should_update('contained_level_names', update_all)
-  end
-
   def tts_authored_hints_texts
     JSON.parse(authored_hints || '[]').map do |hint|
       TextToSpeech.sanitize(hint["hint_markdown"])
     end
   end
 
-  def tts_update(update_all: false)
-    context = 'update_level'
-    tts_upload_to_s3(tts_short_instructions_text, 'short_instructions', context) if tts_should_update_short_instructions?(update_all: update_all)
+  def refresh_authored_hint_tts_urls
+    return unless authored_hints && property_changed?('authored_hints')
+    return unless Policies::LevelFiles.write_to_file?(self) && published
 
-    tts_upload_to_s3(tts_long_instructions_text, 'long_instructions', context) if tts_should_update_long_instructions?(update_all: update_all)
-
-    if authored_hints && tts_should_update('authored_hints', update_all)
-      hints = JSON.parse(authored_hints)
-      hints.each do |hint|
-        text = TextToSpeech.sanitize(hint["hint_markdown"])
-        tts_upload_to_s3(text, 'hint_markdown', context)
-        hint["tts_url"] = tts_url(text)
-      end
-      self.authored_hints = JSON.dump(hints)
+    hints = JSON.parse(authored_hints)
+    hints.each do |hint|
+      hint["tts_url"] = tts_url(TextToSpeech.sanitize(hint["hint_markdown"]))
     end
-
-    # if this level is contained in another level, updating it should also
-    # trigger updates in its parents, since their content is likely at least
-    # partially based on this
-    parent_levels.contained.each do |containing_level|
-      containing_level.tts_upload_to_s3(containing_level.tts_long_instructions_text, 'long_instructions', context)
-    end
+    self.authored_hints = JSON.dump(hints)
   end
 end

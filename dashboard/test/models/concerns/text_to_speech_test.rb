@@ -232,44 +232,15 @@ class TextToSpeechTest < ActiveSupport::TestCase
     assert_equal "regular instructions in another language\n", translatable_level.tts_short_instructions_text
   end
 
-  test 'updating the long instructions for a level should cause it to create new long instructions audio' do
-    level = create(
-      :level,
-      name: 'level 1',
-      type: 'Blockly',
-      long_instructions: "test long instructions",
-      published: true
-    )
-    level.save
-
+  test 'refresh_authored_hint_tts_urls points edited hints at the audio for their new text' do
+    level = create(:level, name: 'level with hints', type: 'Blockly', published: true)
+    level.authored_hints = JSON.dump([{hint_markdown: 'edited hint', tts_url: 'https://tts.code.org/stale.mp3'}])
     Policies::LevelFiles.stubs(:write_to_file?).returns(true)
 
-    refute level.tts_should_update_long_instructions?
-    level.long_instructions = "test long instructions updated"
-    assert level.tts_should_update_long_instructions?
-  end
+    level.refresh_authored_hint_tts_urls
 
-  test 'updating the contained level for a level should cause it to create new long instructions audio' do
-    contained_level_one = create(
-      :level,
-      name: 'contained level 1',
-      type: 'FreeResponse',
-      properties: {long_instructions: "This is the first contained"}
-    )
-    contained_level_two = create(
-      :level,
-      name: 'contained level 2',
-      type: 'FreeResponse',
-      properties: {long_instructions: "This is the second contained"}
-    )
-    outer_level = create(:level, name: 'level 1', type: 'Blockly', published: true)
-    outer_level.update(contained_level_names: [contained_level_one.name])
-
-    Policies::LevelFiles.stubs(:write_to_file?).returns(true)
-
-    refute outer_level.tts_should_update_long_instructions?
-    outer_level.contained_level_names = [contained_level_two.name]
-    assert outer_level.tts_should_update_long_instructions?
+    hint = JSON.parse(level.authored_hints).first
+    assert_equal level.tts_url(TextToSpeech.sanitize('edited hint')), hint['tts_url']
   end
 
   test 'tts_url should return nil given locale not supported for TTS' do
@@ -288,22 +259,5 @@ class TextToSpeechTest < ActiveSupport::TestCase
     expected_tts_url = 'https://tts.code.org/en-US/71c7e35e3633b5dfce472bcbed146e9f/f79d6e6828e6718bed14558024294018fc4411cd41cee4bac066656f70d8f718/sharon22k-180-100.mp3'
     assert_equal(expected_tts_url, @level_with_instructions.tts_url(@level_with_instructions.tts_short_instructions_text, :'en-US'))
     DCDO.unstub(:get)
-  end
-
-  test 'tts_upload_to_s3 does not call Acapela when the DCDO flag is off' do
-    DCDO.stubs(:get).with(TextToSpeech::ACAPELA_GENERATION_DCDO_KEY, false).returns(false)
-    AWS::S3.expects(:cached_exists_in_bucket?).never
-    Acapela.expects(:text_to_audio_url).never
-
-    TextToSpeech.tts_upload_to_s3('some text', 'short_instructions', 'level-name', 'some/path.mp3')
-  end
-
-  test 'tts_upload_to_s3 calls Acapela when the DCDO flag is on' do
-    DCDO.stubs(:get).with(TextToSpeech::ACAPELA_GENERATION_DCDO_KEY, false).returns(true)
-    CDO.stubs(acapela_login: 'login', acapela_storage_app: 'app', acapela_storage_password: 'password')
-    AWS::S3.stubs(:cached_exists_in_bucket?).returns(false)
-    Acapela.expects(:text_to_audio_url).once.returns(nil)
-
-    TextToSpeech.tts_upload_to_s3('some text', 'short_instructions', 'level-name', 'some/path.mp3')
   end
 end

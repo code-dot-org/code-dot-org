@@ -112,13 +112,6 @@ use_my_studio: true
 #pusher_application_secret: ''
 
 
-# Configuration options for Acapela-Group.com integration
-#acapela_storage_app: ''
-#acapela_storage_password: ''
-#acapela_ephemeral_app: ''
-#acapela_ephemeral_password: ''
-
-
 # Configuration and credentials for the Geocoder gem.  Google Maps provides a
 # street address geocoding service, while freegeoip provides an IP address
 # geocoding service.  (The former is "lookup" in the Geocoder config, while the

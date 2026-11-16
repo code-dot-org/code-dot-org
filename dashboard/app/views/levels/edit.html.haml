@@ -122,9 +122,6 @@
 
       var inputs = $('.edit_level *[id]:visible');
       var form_values = {};
-      var FORM_VALUES_TO_SKIP = [
-        'level_tts_voice',
-      ];
       for (var i = 0; i < inputs.length; i++) {
         form_values[inputs[i].id] = inputs[i].value;
       }
@@ -134,8 +131,7 @@
           return;
         }
         for (var i = 0; i < inputs.length; i++) {
-          if (FORM_VALUES_TO_SKIP.indexOf(inputs[i].id) === -1 &&
-              inputs[i].value !== form_values[inputs[i].id]) {
+          if (inputs[i].value !== form_values[inputs[i].id]) {
             // prompt before navigating away
             return "You have unsaved changes, are you sure you want to leave?";
           }

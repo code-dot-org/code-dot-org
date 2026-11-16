@@ -35,7 +35,6 @@ _.extend(window.levelbuilder, {
   initializeCodeMirror6: initializeCodeMirror6,
   initializeBlockPreview: require('@cdo/apps/code-studio/initializeBlockPreview'),
   jsonEditor: require('@cdo/apps/code-studio/jsonEditor'),
-  acapela: require('@cdo/apps/code-studio/acapela'),
   ajaxSubmit: require('@cdo/apps/code-studio/ajaxSubmit'),
 });
 
