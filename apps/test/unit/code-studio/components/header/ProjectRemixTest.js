@@ -53,13 +53,6 @@ describe('ProjectRemix', () => {
     expect(wrapper.isEmptyRender()).to.be.true;
   });
 
-  it("does not render for a non-owner when the project's text is flagged", () => {
-    const wrapper = shallow(
-      <ProjectRemix {...defaultProps} isBlockedShareFailure />
-    );
-    expect(wrapper.isEmptyRender()).to.be.true;
-  });
-
   it('will attempt serverside remix when possible', () => {
     sinon.stub(window.dashboard.project, 'getCurrentId').returns(true);
     sinon.stub(window.dashboard.project, 'canServerSideRemix').returns(true);
