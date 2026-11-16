@@ -44,6 +44,7 @@ import SentenceScene from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/Sentenc
 import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
 import {readWordLayout} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/wordLayout';
 import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
+import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AdvancedPopover, {
@@ -68,6 +69,16 @@ import useImageUpload from './useImageUpload';
 import useImageWriter, {ImageTarget, UploadedImage} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
+
+export interface UploadWarning {
+  /** The agreement has not been given on this project yet. */
+  required: boolean;
+  /** A teacher is uploading: the dialog is shorter and agreeing to it does
+      not restrict the project. */
+  isTeacher: boolean;
+  /** Record the agreement on the project. */
+  onConfirm: () => void;
+}
 
 interface ImagesTabProps {
   uploadImage?: UploadImageFunction;
@@ -110,6 +121,9 @@ interface ImagesTabProps {
   imageKinds?: ImageType[];
   /** Enable the user to upload their own images. */
   enableImageUpload?: boolean;
+  /** The rules the user agrees to before the first upload. Unset where no
+      agreement is wanted. */
+  uploadWarning?: UploadWarning;
   /** Any image can be chosen and looked at; nothing can be changed. */
   viewOnly?: boolean;
   /** Width of the right pane in px; it equals the preview column's width
@@ -167,6 +181,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   limitedPaintTools,
   imageKinds,
   enableImageUpload,
+  uploadWarning,
   viewOnly,
   paneWidth,
   onImageLanded,
@@ -352,13 +367,34 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     onError: message => setUploadError({text: message}),
     onProgress: setUploadStatus,
   });
+  // The rules stand between the upload button and the file picker.
+  const [pendingUpload, setPendingUpload] = useState<{
+    kind: ImageKind;
+    trigger: HTMLElement | null;
+  } | null>(null);
   const handleUpload = useCallback(
     (kind: ImageKind, trigger: HTMLElement | null) => {
       setUploadError(null);
+      if (uploadWarning?.required) {
+        setPendingUpload({kind, trigger});
+        return;
+      }
       upload.pickFile(kind, trigger);
     },
-    [upload]
+    [upload, uploadWarning?.required]
   );
+  const cancelPendingUpload = useCallback(() => {
+    setPendingUpload(null);
+    pendingUpload?.trigger?.focus();
+  }, [pendingUpload]);
+  const confirmPendingUpload = useCallback(() => {
+    if (!pendingUpload) {
+      return;
+    }
+    setPendingUpload(null);
+    uploadWarning?.onConfirm();
+    upload.pickFile(pendingUpload.kind, pendingUpload.trigger);
+  }, [pendingUpload, upload, uploadWarning]);
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
       const target: ImageTarget = {
@@ -916,6 +952,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           imageType={story.imageType}
           onDone={endStory}
           onClose={story.asked ? endStory : undefined}
+        />
+      )}
+      {pendingUpload && (
+        <ImageUploadModal
+          isOpen
+          isTeacher={!!uploadWarning?.isTeacher}
+          cancelUpload={cancelPendingUpload}
+          confirmUploadWarning={confirmPendingUpload}
         />
       )}
       <upload.FileInput />

@@ -103,6 +103,12 @@ export interface Sources extends ProjectSources {
   chosenBlocks?: string[];
   /** The free play intro has been dismissed. */
   freeplayIntroSeen?: boolean;
+  /** A student agreed to the upload rules here. The server reads this key
+      out of main.json and refuses to remix or publish the project. */
+  inRestrictedShareMode?: boolean;
+  /** A teacher agreed to the upload rules here. Teachers upload without
+      restricting the project. */
+  teacherHasConfirmedUploadWarning?: boolean;
 }
 
 /** A single-frame image a level gives the project: a lab asset by URL. */

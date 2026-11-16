@@ -159,7 +159,7 @@ import DiscoverBlocksButton, {
   DISCOVER_BLOCKS_BUTTON_ID,
 } from './DiscoverBlocksButton';
 import FreeplayIntroDialog from './FreeplayIntroDialog';
-import ImagesTab from './images/ImagesTab';
+import ImagesTab, {UploadWarning} from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
@@ -446,6 +446,39 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     return undefined;
   }, [channelId, levelProperties.name]);
+
+  // The upload rules are agreed to once per project. A student's agreement
+  // restricts the project; a teacher's does not. Level edit modes upload to
+  // the level rather than to a project, so they skip the rules.
+  const isTeacher = useAppSelector(
+    state => state.currentUser.userType === 'teacher'
+  );
+  const {inRestrictedShareMode, teacherHasConfirmedUploadWarning} =
+    currentSources;
+  const uploadWarning: UploadWarning | undefined = useMemo(
+    () =>
+      isLevelEditMode
+        ? undefined
+        : {
+            required: !(isTeacher
+              ? teacherHasConfirmedUploadWarning
+              : inRestrictedShareMode),
+            isTeacher,
+            onConfirm: () =>
+              patchSources(
+                isTeacher
+                  ? {teacherHasConfirmedUploadWarning: true}
+                  : {inRestrictedShareMode: true},
+                true
+              ),
+          },
+    [
+      isTeacher,
+      teacherHasConfirmedUploadWarning,
+      inRestrictedShareMode,
+      patchSources,
+    ]
+  );
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const [engineReady, setEngineReady] = useState(false);
@@ -2429,6 +2462,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   !!levelProperties.levelMode?.enableImageUpload &&
                   !!uploadImage
                 }
+                uploadWarning={uploadWarning}
                 levelId={levelProperties.id}
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}

@@ -1514,5 +1514,103 @@ describe('ImagesTab', () => {
       expect(pressed()).toEqual(['Block 1']);
       expect(await screen.findByText('drawing uploaded.png')).toBeTruthy();
     });
+
+    describe('the upload rules', () => {
+      const RULES_TITLE = 'To upload images, you must agree to these rules:';
+      const NO_PII = 'I will not upload images with personal information.';
+      const NO_REMIX = 'This project can not be remixed.';
+
+      function pressUpload() {
+        fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+        fireEvent.click(screen.getByRole('menuitem', {name: 'Upload a block'}));
+      }
+
+      function tick(name: string) {
+        fireEvent.click(screen.getByRole('checkbox', {name}));
+      }
+
+      it('holds the file picker shut until a student agrees', async () => {
+        const onConfirm = jest.fn();
+        const {container} = renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarning: {required: true, isTeacher: false, onConfirm},
+        });
+        const opened = jest.spyOn(fileInput(container), 'click');
+        pressUpload();
+        expect(screen.getByText(RULES_TITLE)).toBeTruthy();
+        expect(opened).not.toHaveBeenCalled();
+        expect(screen.getByRole('button', {name: 'OK'})).toBeDisabled();
+        tick(NO_PII);
+        tick(NO_REMIX);
+        fireEvent.click(screen.getByRole('button', {name: 'OK'}));
+        expect(onConfirm).toHaveBeenCalledTimes(1);
+        expect(opened).toHaveBeenCalledTimes(1);
+        acceptUploaded.mockImplementation(async () => {
+          propsByKey.k1 = {name: 'Block 1', categories: ['blocks']};
+          return 'k1';
+        });
+        await pickFile(container, pngFile());
+        expect(acceptUploaded.mock.calls[0][0]).toEqual({
+          key: null,
+          imageType: 'block',
+          subject: undefined,
+        });
+      });
+
+      // Only a student's agreement restricts the project, so the teacher's
+      // dialog leaves out the rule that says so.
+      it('asks a teacher for the shorter agreement', () => {
+        renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarning: {
+            required: true,
+            isTeacher: true,
+            onConfirm: jest.fn(),
+          },
+        });
+        pressUpload();
+        expect(screen.getByRole('checkbox', {name: NO_PII})).toBeTruthy();
+        expect(screen.queryByRole('checkbox', {name: NO_REMIX})).toBeNull();
+        tick(NO_PII);
+        expect(screen.getByRole('button', {name: 'OK'})).toBeEnabled();
+      });
+
+      it('records nothing and uploads nothing when the rules are refused', () => {
+        const onConfirm = jest.fn();
+        const {container} = renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarning: {required: true, isTeacher: false, onConfirm},
+        });
+        const opened = jest.spyOn(fileInput(container), 'click');
+        pressUpload();
+        fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+        expect(screen.queryByText(RULES_TITLE)).toBeNull();
+        expect(onConfirm).not.toHaveBeenCalled();
+        expect(opened).not.toHaveBeenCalled();
+      });
+
+      it('stops asking once the project has agreed', async () => {
+        const {container} = renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarning: {
+            required: false,
+            isTeacher: false,
+            onConfirm: jest.fn(),
+          },
+        });
+        acceptUploaded.mockImplementation(async () => {
+          propsByKey.k1 = {name: 'Block 1', categories: ['blocks']};
+          return 'k1';
+        });
+        pressUpload();
+        expect(screen.queryByText(RULES_TITLE)).toBeNull();
+        await pickFile(container, pngFile());
+        expect(acceptUploaded).toHaveBeenCalledTimes(1);
+      });
+    });
   });
 });
