@@ -960,6 +960,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           isTeacher={!!uploadWarning?.isTeacher}
           cancelUpload={cancelPendingUpload}
           confirmUploadWarning={confirmPendingUpload}
+          hasVersionHistory={false}
         />
       )}
       <upload.FileInput />
