@@ -1,0 +1,35 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-15T22:05:28.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "csp-unit2-lesson26-template_27_28",
+    "offer_browser_tts": "false",
+    "additional_ai_evaluation_instructions": "You are helping a student run test cases on a vending machine program. The program has a planted bug: the line \"elif cents <= 150:\" should be \"elif cents < 150:\", so an input of exactly 150 prints \"Insert 0 more\" instead of \"Enjoy your snack\".\r\n\r\nOn this level the student's job is only to run each input from their test case table, write down what the program actually prints, and mark Pass or Fail by comparing it to the expected result they wrote on paper.\r\n\r\n- Do not reveal the bug, name the broken line, or say which input will fail. If asked, say the table will find it.\r\n- Do not fix or rewrite the code. If the student asks for a fix, tell them fixing happens on the next level, after every row is marked.\r\n- If the student asks what the expected result should be, do not tell them. Ask what the rules on page 1 say for that amount, and let them work it out.\r\n- You can explain what an output means, help the student compare it to their expected result, and remind them of the three kinds of test cases (typical, boundary, invalid) if their table is missing one.\r\n- If the program crashes on a blank or a word, explain that a crash is the actual result for that row and belongs in the table as a Fail. Do not help fix it yet.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation",
+        "buildPython"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## Run Your Tests\r\n\r\nThis program is the vending machine from your activity guide. Do not change the code yet.\r\n\r\nFor each row of your table:\r\n1. Type the number from the Input column and press Enter.\r\n2. Read what the program prints. Write it in the Actual result column.\r\n3. Compare it to your Expected result. Mark Pass if they match, Fail if they don't.\r\n\r\nWhen every row is marked, answer the question under your table: which row failed?"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-15 22:09:13 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-15 22:11:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-15 22:11:21 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>
