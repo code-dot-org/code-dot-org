@@ -1,9 +1,8 @@
+import {useDropdownContext} from '@code-dot-org/component-library/common/contexts';
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
-
-import closeDropdown from './closeDropdown';
 
 import styles from './builder-menu.module.scss';
 
@@ -31,6 +30,7 @@ interface BuilderMenuProps {
   disabled?: boolean;
 }
 
+// Must render inside CustomDropdown to reach the context that closes it.
 const MenuItem: React.FunctionComponent<BuilderMenuItem> = ({
   label,
   onClick,
@@ -38,29 +38,32 @@ const MenuItem: React.FunctionComponent<BuilderMenuItem> = ({
   ariaLabel,
   disabled = false,
   destructive = false,
-}) => (
-  <li>
-    <button
-      type="button"
-      className={classNames(styles.item, destructive && styles.destructive)}
-      disabled={disabled}
-      aria-label={ariaLabel}
-      onClick={() => {
-        onClick();
-        closeDropdown();
-      }}
-    >
-      {iconName && (
-        <FontAwesomeV6Icon
-          iconName={iconName}
-          iconStyle="solid"
-          className={styles.icon}
-        />
-      )}
-      <span>{label}</span>
-    </button>
-  </li>
-);
+}) => {
+  const {setActiveDropdownName} = useDropdownContext();
+  return (
+    <li>
+      <button
+        type="button"
+        className={classNames(styles.item, destructive && styles.destructive)}
+        disabled={disabled}
+        aria-label={ariaLabel}
+        onClick={() => {
+          onClick();
+          setActiveDropdownName('');
+        }}
+      >
+        {iconName && (
+          <FontAwesomeV6Icon
+            iconName={iconName}
+            iconStyle="solid"
+            className={styles.icon}
+          />
+        )}
+        <span>{label}</span>
+      </button>
+    </li>
+  );
+};
 
 // A "…" menu for a page or question header. Built on CustomDropdown because
 // ActionDropdown has no separators or group labels.
