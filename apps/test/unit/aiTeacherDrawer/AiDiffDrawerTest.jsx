@@ -146,6 +146,24 @@ describe('AiDiffDrawer', () => {
     expect(drawerInset()).not.toBe(`${DRAWER_WIDTH}px`);
   });
 
+  it('keeps focus out of the inline drawer while it is closed', async () => {
+    // Closed, the inline drawer is a zero-width box that still holds the
+    // panel; only inert keeps Tab and screen readers from reaching into it.
+    const store = renderDefault({inline: true});
+    const drawer = () =>
+      screen.getByText(/AI Teaching Assistant/).closest('[data-theme]');
+
+    store.dispatch(setChatIsOpen(true));
+    await waitFor(() => {
+      expect(drawer().inert).toBe(false);
+    });
+
+    store.dispatch(setChatIsOpen(false));
+    await waitFor(() => {
+      expect(drawer().inert).toBe(true);
+    });
+  });
+
   it('publishes a zero inset when chat closes', async () => {
     const store = renderDefault();
     store.dispatch(setChatIsOpen(true));

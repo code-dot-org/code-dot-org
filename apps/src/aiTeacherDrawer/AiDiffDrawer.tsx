@@ -246,12 +246,20 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     // wrapper rather than portaling to <body> past it. Light is the default
     // theme (see colors_codeAi.css), so this is the appearance the drawer has
     // everywhere else.
+    //
+    // Closed, the drawer is still in the DOM at zero width, so it is made inert
+    // to keep keyboard focus and screen readers out of it. React 18's JSX has
+    // no inert attribute, hence the ref.
     return (
       <div
         data-theme="Light"
         className={style.inlineDrawer}
         style={{width: chatIsOpen ? drawerWidth : 0}}
-        aria-hidden={!chatIsOpen}
+        ref={el => {
+          if (el) {
+            el.inert = !chatIsOpen;
+          }
+        }}
       >
         <div className={style.inlineDrawerPanel} style={{width: drawerWidth}}>
           {panel}
