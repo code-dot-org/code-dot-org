@@ -16,14 +16,19 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 // the check is doing: a slow check must not leave a student stuck.
 export const SHARE_CHECK_MAX_WAIT_MS = 3000;
 
-/** Whether the project's link can be reached as the level loads: on a
-    project page, or from a header that offers Share and Remix. */
+/** Whether to check as the level loads: wherever the project's link can be
+    handed out, on a project page, from a header that offers Share and Remix,
+    or from a finish dialog. */
 export function checksOnLoad(
-  levelProperties: Pick<LevelProperties, 'isProjectLevel' | 'hideShareAndRemix'>
+  levelProperties: Pick<
+    LevelProperties,
+    'isProjectLevel' | 'hideShareAndRemix' | 'finishDialog'
+  >
 ): boolean {
   return (
     !!levelProperties.isProjectLevel ||
-    levelProperties.hideShareAndRemix === false
+    levelProperties.hideShareAndRemix === false ||
+    !!levelProperties.finishDialog
   );
 }
 

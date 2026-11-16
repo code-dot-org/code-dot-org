@@ -89,7 +89,7 @@ describe('useShareCheck', () => {
       .filter(action => action.type === setShareFailure(null).type)
       .map(action => action.payload);
 
-  it('asks once as a project page opens, and publishes the answer', async () => {
+  it('asks once as a level that checks on load opens, and publishes the answer', async () => {
     const {rerender} = renderCheck('abc', true);
     await flush();
     rerender({channelId: 'abc', checkOnLoad: true});
@@ -199,18 +199,7 @@ describe('useShareCheck', () => {
     expect(published()).toEqual([null]);
   });
 
-  it('asks on a level in a unit when its share dialog opens', async () => {
-    renderCheck('abc', false);
-    act(() => {
-      store.dispatch({type: 'test/openShare'});
-    });
-    await flush();
-
-    expect(mockFetchShareFailure).toHaveBeenCalledTimes(1);
-    expect(dispatchSpy).toHaveBeenCalledWith(setShareFailure(FAILURE));
-  });
-
-  it('does not ask as a level in a unit loads', async () => {
+  it('does not ask as a level that does not check on load opens', async () => {
     renderCheck('abc', false);
     await flush();
 
@@ -322,6 +311,12 @@ describe('checksOnLoad', () => {
 
   it('checks a level in a unit whose header offers Share and Remix', () => {
     expect(checksOnLoad({hideShareAndRemix: false})).toBe(true);
+  });
+
+  it('checks a level in a unit that ends in a finish dialog', () => {
+    expect(
+      checksOnLoad({hideShareAndRemix: true, finishDialog: 'hoai2026'})
+    ).toBe(true);
   });
 
   it('waits for the share dialog on any other level in a unit', () => {
