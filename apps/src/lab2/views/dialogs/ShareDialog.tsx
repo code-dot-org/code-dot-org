@@ -26,6 +26,7 @@ import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import {CopyToClipboardButton} from './CopyToClipboardButton';
 import Hoai2026Congrats from './finishDialogs/Hoai2026Congrats';
 import HoaiCongrats from './finishDialogs/HoaiCongrats';
+import useWaitIndicator from './useWaitIndicator';
 
 import moduleStyles from './share-dialog.module.scss';
 
@@ -146,6 +147,9 @@ const ShareDialog: React.FunctionComponent<{
   submissionStatus: SubmissionStatusType | undefined;
   userSharingDisabled: boolean | undefined;
   shareFailure?: ShareFailure | null;
+  /** A check for a share failure is under way: the link, its QR code and
+      the remix are held back until it answers. */
+  shareCheckPending?: boolean;
   isAbusive?: boolean;
 }> = ({
   dialogId,
@@ -156,9 +160,11 @@ const ShareDialog: React.FunctionComponent<{
   submissionStatus,
   userSharingDisabled,
   shareFailure,
+  shareCheckPending = false,
   isAbusive = false,
 }) => {
   const dispatch = useAppDispatch();
+  const shareWait = useWaitIndicator(shareCheckPending);
   const sharingDisabled = () =>
     userSharingDisabled && ['pythonlab', 'weblab2'].includes(projectType);
 
@@ -185,6 +191,52 @@ const ShareDialog: React.FunctionComponent<{
   // ThemeProvider (the header is in its own tree). We copy the lab theme to the registry
   // in Lab2Wrapper.
   const theme = Lab2Registry.getInstance().getTheme();
+
+  // Checked before the share failure message below, so a student whose
+  // project cannot be shared still sees the finish dialog, without the link
+  // or the remix.
+  if (dialogId === 'hoai2026') {
+    const unshareable = isAbusive || !!shareFailure;
+    return (
+      <div data-theme={theme}>
+        <Hoai2026Congrats
+          onClose={handleClose}
+          shareUrl={unshareable || userSharingDisabled ? undefined : shareUrl}
+          projectType={projectType}
+          onRemix={unshareable ? undefined : remix}
+          certificateUrl={finishUrl}
+          shareHeld={shareWait.held}
+          shareBusy={shareWait.showSpinner}
+        />
+      </div>
+    );
+  }
+
+  // Neither the link nor a failure from before this check is shown until it
+  // answers: the student may have fixed the flagged text since.
+  if (shareWait.held) {
+    return shareWait.showSpinner ? (
+      <div data-theme={theme}>
+        <Modal
+          title={i18n.shareTitle()}
+          customContent={
+            <div className={moduleStyles.shareCheckWait}>
+              <FontAwesomeV6Icon
+                iconName="spinner"
+                animationType="spin"
+                role="status"
+                aria-label={i18n.loading()}
+              />
+            </div>
+          }
+          primaryButtonProps={{
+            onClick: handleClose,
+            children: i18n.cancel(),
+          }}
+        />
+      </div>
+    ) : null;
+  }
 
   if (shareFailure) {
     const flaggedText = shareFailure.content
@@ -218,20 +270,6 @@ const ShareDialog: React.FunctionComponent<{
         projectType={projectType}
         theme={theme}
       />
-    );
-  }
-
-  if (dialogId === 'hoai2026') {
-    return (
-      <div data-theme={theme}>
-        <Hoai2026Congrats
-          onClose={handleClose}
-          shareUrl={isAbusive || userSharingDisabled ? undefined : shareUrl}
-          projectType={projectType}
-          onRemix={isAbusive ? undefined : remix}
-          certificateUrl={finishUrl}
-        />
-      </div>
     );
   }
 
