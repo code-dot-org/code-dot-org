@@ -10,6 +10,7 @@ export {default as MultipleChoice} from './SkillsCheck/QuestionTypes/MultipleCho
 export {default as NextStepPicker} from './NextStepPicker';
 export {default as PersonalizedWelcomeBox} from './PersonalizedWelcomeBox';
 export {default as PreSkillsCheck} from './PreSkillsCheck';
+export {default as ReflectionBox} from './Reflection/ReflectionBox';
 export {default as Scramble} from './SkillsCheck/QuestionTypes/Scramble';
 export {default as Sort} from './SkillsCheck/QuestionTypes/Sort';
 export {default as TimeSpentBox} from './StudentLessonStats/TimeSpentBox';
@@ -31,10 +32,13 @@ export type {
   Challenge,
   ChallengeResponse,
   ChallengeResponseAsset,
+  LessonObjective,
   MatchSolution,
   MultiSolution,
   PracticeProblem,
   Reaction,
+  ReflectionData,
+  ReflectionValue,
   ScrambleSolution,
 } from './types';
 export {assetWithUrl} from './gallery/assetUtils';

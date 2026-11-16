@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "01ef8d09-79ea-4320-b88e-13766fbdf961",
+          "notice": "Verified Teacher Permissions Required",
+          "details": "This tutorial requires students to be in a section of a verified teacher in order to access AI tools. If you are not yet a verified teacher, click the link to the right to learn more.",
+          "link": "https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher",
+          "type": "warning",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Become Verified"
+        }
+      ],
       "content_area": "hoc",
       "curriculum_umbrella": "HOAI",
       "is_migrated": true,
@@ -13,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-13 04:08:27 UTC",
+    "serialized_at": "2026-11-13 16:36:01 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,

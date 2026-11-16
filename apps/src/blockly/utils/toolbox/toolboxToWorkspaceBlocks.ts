@@ -3,6 +3,7 @@ import type * as BlocklyCore from 'blockly/core';
 import {BLOCK_TYPES, DYNAMIC_CATEGORY_OPTIONS} from '../../constants';
 import {JsonBlockConfig} from '../../types';
 
+import {isDynamicCategoryInfo} from './typeGuards';
 import {DEFAULT_CATEGORY_NAME} from './workspaceToToolboxDefinition';
 
 /**
@@ -46,11 +47,9 @@ function contentsToBlocks(
       } else {
         blocks.push(blockInfo as JsonBlockConfig);
       }
-    } else if (item.kind === 'category' && 'custom' in item) {
+    } else if (isDynamicCategoryInfo(item)) {
       // For dynamic categories, create a custom category block..
-      const dynamicCategoryName = dynamicCategoryKey(
-        item as BlocklyCore.utils.toolbox.DynamicCategoryInfo
-      );
+      const dynamicCategoryName = dynamicCategoryKey(item);
       if (!dynamicCategoryName) {
         console.warn('Unsupported dynamic category, dropped: ', item);
       } else {
@@ -60,6 +59,7 @@ function contentsToBlocks(
             CUSTOM: dynamicCategoryName,
           },
         });
+        blocks.push(...contentsToBlocks(item.contents || []));
       }
     } else if (item.kind === 'category') {
       const categoryInfo = item as BlocklyCore.utils.toolbox.StaticCategoryInfo;

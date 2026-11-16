@@ -857,7 +857,8 @@
               "strokeColor": "transparent",
               "fontSize": "extra-large",
               "fontFamily": "sans",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": 695,
@@ -878,7 +879,8 @@
               "strokeColor": "transparent",
               "fontSize": "extra-large",
               "fontFamily": "sans",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": -436,
@@ -900,7 +902,8 @@
               "strokeColor": "transparent",
               "fontSize": "extra-large",
               "fontFamily": "sans",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": -436,
@@ -1272,7 +1275,8 @@
               "fontSize": "extra-large",
               "fontFamily": "sans",
               "textAlign": "left",
-              "strokeColor": "transparent"
+              "strokeColor": "transparent",
+              "locked": true
             },
             "position": {
               "x": -15,
@@ -1329,7 +1333,8 @@
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": -15,
@@ -1350,7 +1355,8 @@
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": -436,
@@ -1371,7 +1377,8 @@
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": 695,
@@ -1392,7 +1399,8 @@
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": -436,
@@ -1410,14 +1418,14 @@
 
         ],
         "viewport": {
-          "x": 247.43688904835687,
-          "y": 278.16369256688984,
+          "x": 426.2733351084399,
+          "y": 115.16369256688984,
           "zoom": 0.7578582832551988
         }
       }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-05 18:03:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 18:07:19 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 20:40:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 20:43:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 20:52:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 22:24:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-07 00:16:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-07 00:49:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-05 18:03:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 18:07:19 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 20:40:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 20:43:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 20:52:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 22:24:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-07 00:16:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-07 00:49:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 17:57:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

@@ -127,6 +127,35 @@ export default function useQuizBuilderQuestions(
 
   const addPage = useCallback(() => setLayout(prev => [...prev, []]), []);
 
+  const moveQuestion = useCallback(
+    (id: number, offset: -1 | 1) =>
+      setLayout(prev =>
+        prev.map(questionIds => {
+          const from = questionIds.indexOf(id);
+          const to = from + offset;
+          if (from < 0 || to < 0 || to >= questionIds.length) {
+            return questionIds;
+          }
+          const next = [...questionIds];
+          [next[from], next[to]] = [next[to], next[from]];
+          return next;
+        })
+      ),
+    []
+  );
+
+  const moveQuestionToPage = useCallback(
+    (id: number, page: number) =>
+      setLayout(prev =>
+        prev.map((questionIds, index) =>
+          index === page - 1
+            ? [...questionIds.filter(qid => qid !== id), id]
+            : questionIds.filter(qid => qid !== id)
+        )
+      ),
+    []
+  );
+
   const addPendingQuestion = useCallback(
     (page: number, type: QuizQuestionType) => {
       const id = nextPendingId.current--;
@@ -341,6 +370,8 @@ export default function useQuizBuilderQuestions(
     errorQuestionId,
     hasUnsavedLayout,
     addPage,
+    moveQuestion,
+    moveQuestionToPage,
     addPendingQuestion,
     saveQuestion,
     removeQuestion,

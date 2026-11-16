@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-10 16:06:06 UTC",
+    "serialized_at": "2026-11-13 17:01:46 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -97,7 +97,7 @@
       "name": "Classification, Start to Finish",
       "absolute_position": 5,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -183,6 +183,18 @@
       "seeding_key": {
         "lesson_activity.key": "f549898a-fe28-4559-b04f-c9412cb7e939",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2"
+      }
+    },
+    {
+      "key": "9bb8ddf0-9237-4d80-b82a-40245b4e871d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9bb8ddf0-9237-4d80-b82a-40245b4e871d",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-year2-unit2"
       }
@@ -275,6 +287,28 @@
       "seeding_key": {
         "activity_section.key": "abe562af-98a6-407f-bf74-b0340d967d34",
         "lesson_activity.key": "f549898a-fe28-4559-b04f-c9412cb7e939"
+      }
+    },
+    {
+      "key": "1c7ec3c4-8659-4c81-b15e-d816b912432c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Building Classifiers"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c",
+        "lesson_activity.key": "9bb8ddf0-9237-4d80-b82a-40245b4e871d"
+      }
+    },
+    {
+      "key": "fce83942-2a4e-4e34-a72a-1ccc5b43361b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Testing Classifiers"
+      },
+      "seeding_key": {
+        "activity_section.key": "fce83942-2a4e-4e34-a72a-1ccc5b43361b",
+        "lesson_activity.key": "9bb8ddf0-9237-4d80-b82a-40245b4e871d"
       }
     }
   ],
@@ -999,6 +1033,204 @@
       "level_keys": [
         "pl-aif-y2-u2-l4-close"
       ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-intro"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l5-intro"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-building-classifiers"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l5-building-classifiers"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-nearest-neighbor"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l5-nearest-neighbor"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-python-dictionaries"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l5-python-dictionaries"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-facilitate-feature-label"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l5-facilitate-feature-label"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Testing Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-testing-classifiers"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "fce83942-2a4e-4e34-a72a-1ccc5b43361b"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l5-testing-classifiers"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Testing Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-confidence-threshold"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "fce83942-2a4e-4e34-a72a-1ccc5b43361b"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l5-confidence-threshold"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Testing Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-facilitation-precision-recall"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "fce83942-2a4e-4e34-a72a-1ccc5b43361b"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l5-facilitation-precision-recall"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Testing Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "fce83942-2a4e-4e34-a72a-1ccc5b43361b"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l5-reflection"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1397,6 +1629,114 @@
         "script.name": "pl-sandbox-aif-year2-unit2",
         "activity_section.key": "abe562af-98a6-407f-bf74-b0340d967d34"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l5-intro",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-intro"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l5-building-classifiers",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-building-classifiers"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l5-nearest-neighbor",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-nearest-neighbor"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l5-python-dictionaries",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-python-dictionaries"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l5-facilitate-feature-label",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-facilitate-feature-label"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l5-testing-classifiers",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-testing-classifiers"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "fce83942-2a4e-4e34-a72a-1ccc5b43361b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l5-confidence-threshold",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-confidence-threshold"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "fce83942-2a4e-4e34-a72a-1ccc5b43361b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l5-facilitation-precision-recall",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-facilitation-precision-recall"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "fce83942-2a4e-4e34-a72a-1ccc5b43361b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l5-reflection",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "fce83942-2a4e-4e34-a72a-1ccc5b43361b"
+      }
     }
   ],
   "resources": [
@@ -1421,6 +1761,9 @@
 
   ],
   "objectives": [
+
+  ],
+  "objectives_script_levels": [
 
   ],
   "lessons_standards": [

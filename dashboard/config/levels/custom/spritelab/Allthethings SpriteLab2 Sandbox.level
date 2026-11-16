@@ -129,10 +129,19 @@
               "id": "Nwm4U@IL0^Q(VpadyoS]",
               "fields": {
                 "COUNT": 20,
-                "LOOK": "<field name=\"LOOK\">sparks</field>",
-                "ORIGIN": "<field name=\"ORIGIN\">null</field>"
+                "LOOK": "<field name=\"LOOK\">sparks</field>"
               },
-              "enabled": true
+              "enabled": true,
+              "inputs": {
+                "ORIGIN": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
