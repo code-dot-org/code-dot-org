@@ -30558,6 +30558,8 @@ en:
               name: 'Lesson 25: Debugging'
             lesson-24:
               name: 'Lesson 24: Comparing Algorithms Day 2 (Make)'
+            lesson-25:
+              name: 'Lesson 26: Test Cases'
           lesson_groups: {}
           name: csp-unit2-dev-27-28
           title: Unit 2 - Building Solutions Using Selection and Iteration
