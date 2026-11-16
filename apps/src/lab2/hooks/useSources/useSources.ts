@@ -3,6 +3,7 @@ import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setChannel as setChannelAction} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
@@ -18,6 +19,7 @@ import type {
 import getInitialSources, {
   getStartOverSources,
 } from '@cdo/apps/lab2/utils/getInitialSources';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import configureHeader from './configureHeader';
@@ -122,6 +124,17 @@ export default function useSources<T extends ProjectSources>({
   const getToolboxEditSourcesRef = useRef(getToolboxEditSources);
   getToolboxEditSourcesRef.current = getToolboxEditSources;
 
+  // If another level starts loading, we should not register the project manager
+  // for the previous level.
+  const mayRegisterProjectManager = useRef(true);
+  const revokeProjectManagerRegistration = useCallback(() => {
+    mayRegisterProjectManager.current = false;
+  }, []);
+  useLifecycleNotifier(
+    LifecycleEvent.LevelLoadStarted,
+    revokeProjectManagerRegistration
+  );
+
   const [isLoading, setIsLoading] = useState(false);
   const [currentSources, setCurrentSources] = useState<T>();
   // Synchronous mirror of currentSources: written concurrently with
@@ -183,6 +196,7 @@ export default function useSources<T extends ProjectSources>({
     // resurrect the previous level's sources or double-attach callbacks.
     async (isCancelled: () => boolean = () => false) => {
       const {usesProjects, id, isProjectLevel} = levelProperties;
+      mayRegisterProjectManager.current = true;
       // Clear out existing data.
       setSources(undefined);
       setVersionList([]);
@@ -228,7 +242,11 @@ export default function useSources<T extends ProjectSources>({
         // Return early if cancelled; the new load will own the ref.
         if (isCancelled()) return;
         projectManagerRef.current = projectManager;
-        if (registerProjectManager && projectManager) {
+        if (
+          registerProjectManager &&
+          mayRegisterProjectManager.current &&
+          projectManager
+        ) {
           Lab2Registry.getInstance().setProjectManager(projectManager);
         }
       }

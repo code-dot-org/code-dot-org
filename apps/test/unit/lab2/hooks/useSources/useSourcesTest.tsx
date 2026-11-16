@@ -9,6 +9,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {Channel, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {
   getStore,
   registerReducers,
@@ -456,6 +457,31 @@ describe('useSources', () => {
       await act(async () => finishCleanUp());
 
       expect(registered()).toBe(fakeManager);
+    });
+
+    it('does not register a manager whose level has already been left', async () => {
+      // The outgoing hook's factory lookup can resolve after lab2Redux has
+      // registered the incoming level's manager and before the outgoing view
+      // unmounts, when nothing has yet cancelled the stale load.
+      let finishLookup = (manager: ProjectManager) => {};
+      const outgoingManager = createFakeProjectManager();
+      mockGetProjectManagerForLevel.mockReturnValue(
+        new Promise<ProjectManager>(resolve => (finishLookup = resolve))
+      );
+
+      renderUseSources();
+      await flush(); // the lookup is parked
+
+      // Navigation to a level owned by lab2Redux, which registers its own.
+      const incomingManager = createFakeProjectManager();
+      Lab2Registry.getInstance()
+        .getLifecycleNotifier()
+        .notify(LifecycleEvent.LevelLoadStarted, LEVEL_TWO.id);
+      Lab2Registry.getInstance().setProjectManager(incomingManager);
+
+      await act(async () => finishLookup(outgoingManager));
+
+      expect(registered()).toBe(incomingManager);
     });
 
     it('clears its own manager on unmount', async () => {
