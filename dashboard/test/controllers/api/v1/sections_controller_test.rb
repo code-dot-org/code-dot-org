@@ -120,7 +120,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     assert_equal 1, queries.grep(/COUNT\(DISTINCT `users`\.`id`\)/).size, queries.join("\n")
     assert_equal 1, queries.grep(/FROM `section_instructors`/).size, queries.join("\n")
-    assert_equal @teacher.sections_instructed.map(&:summarize_without_students).as_json, returned_json
+    # @teacher is shared by every test in this class, so do not cache its
+    # sections on it.
+    assert_equal User.find(@teacher.id).sections_instructed.map(&:summarize_without_students).as_json, returned_json
   end
 
   # It's easy to accidentally grant admins permission to `index` all sections
