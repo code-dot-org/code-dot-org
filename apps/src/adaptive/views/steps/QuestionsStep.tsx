@@ -194,6 +194,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
       );
     }
     if (q.type === 'freeResponse') {
+      const descriptionId = `free-response-description-${q.id}`;
       return (
         <AttemptCard
           key={q.id}
@@ -201,18 +202,30 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           label={questionLabel}
           title={q.text}
         >
-          <textarea
-            className={styles.freeResponseTextarea}
-            value={freeResponseText}
-            aria-label={q.text}
-            onChange={e =>
-              setFreeResponseTexts(prev => ({
-                ...prev,
-                [q.id]: e.target.value,
-              }))
-            }
-            placeholder={q.placeholder}
-          />
+          <div className={styles.freeResponseField}>
+            {q.descriptionText && (
+              <MuiTypography
+                variant="body2"
+                fontStyle="italic"
+                id={descriptionId}
+              >
+                {q.descriptionText}
+              </MuiTypography>
+            )}
+            <textarea
+              className={styles.freeResponseTextarea}
+              value={freeResponseText}
+              aria-label={q.text}
+              aria-describedby={q.descriptionText ? descriptionId : undefined}
+              onChange={e =>
+                setFreeResponseTexts(prev => ({
+                  ...prev,
+                  [q.id]: e.target.value,
+                }))
+              }
+              placeholder={q.placeholder}
+            />
+          </div>
         </AttemptCard>
       );
     }

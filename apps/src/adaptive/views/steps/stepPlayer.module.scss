@@ -93,6 +93,12 @@
 
 // Free response textarea (used by freeResponse questions inside the questions step)
 
+.freeResponseField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .freeResponseTextarea {
   width: 100%;
   min-height: 120px;
