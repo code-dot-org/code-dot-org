@@ -39,11 +39,19 @@ module ShareFiltering
   end
 
   BLOCKLY_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
-  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design sketchlab].freeze
+  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design sketchlab quest_builder].freeze
   SKETCHLAB_TEXT_FIELDS = %w[label text altText].freeze
   # Supported project types for filtering whose `source` is structured JSON
   # rather than a blockly XML/JSON string.
-  STRUCTURED_SOURCE_EXTRACTORS = {'sketchlab' => :extract_text_sketchlab}.freeze
+  STRUCTURED_SOURCE_EXTRACTORS = {
+    'sketchlab' => :extract_text_sketchlab,
+    'quest_builder' => :extract_text_quest_builder,
+  }.freeze
+  # Project types whose user-entered text is not in main.json's `source`.
+  # Their extractor is given the whole file.
+  # TODO: save quest_builder's scenes inside `source`. Files saved before that
+  # keep them beside it, so the whole file is still read for them.
+  WHOLE_PROJECT_TYPES = %w[quest_builder].freeze
   JSON_MAX_DEPTH = 999
 
   # Searches for a sharing failure given a program and locale.
@@ -138,6 +146,52 @@ module ShareFiltering
     end.uniq
   end
 
+  # Whether the project type's extractor reads the whole of main.json.
+  def self.whole_project_type?(project_type)
+    WHOLE_PROJECT_TYPES.include?(project_type)
+  end
+
+  # Extracts user-entered text from a Quest Builder (Sprite Lab in Lab2)
+  # project: the text fields of the blocks in every scene. Names used in the
+  # code are not read: a scene's, or a variable's. A variable's name can
+  # reach the stage through the show variable block, which no Quest Builder
+  # level offers.
+  # @param project [Hash, String] main.json, parsed or as a JSON string.
+  # @return [Array<String>] unique, non-blank user-entered strings. Returns
+  #   an empty array for malformed input.
+  def self.extract_text_quest_builder(project)
+    if project.is_a?(String)
+      begin
+        project = JSON.parse(project, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
+      rescue JSON::NestingError
+        CDO.log.warn "ShareFiltering.extract_text_quest_builder: JSON too deep after #{JSON_MAX_DEPTH} levels"
+        return []
+      rescue JSON::ParserError
+        CDO.log.warn "ShareFiltering.extract_text_quest_builder: malformed JSON"
+        return []
+      end
+    end
+    return [] unless project.is_a?(Hash)
+
+    # Scenes are read from beside `source` and from inside it, so the check
+    # does not depend on which of the two a project is saved with.
+    inside_source = project['source'].is_a?(Hash) ? project['source']['scenes'] : nil
+    scenes = [project['scenes'], inside_source].
+      select {|list| list.is_a?(Array)}.
+      flatten(1).
+      select {|scene| scene.is_a?(Hash)}
+    # A file with no scenes runs its top-level `source` as its one scene.
+    scenes = [{'source' => project['source']}] if scenes.empty?
+    texts = []
+    scenes.each do |scene|
+      source = scene['source']
+      next unless source.is_a?(Hash)
+      blocks = source['blocks'].is_a?(Hash) ? source['blocks']['blocks'] : nil
+      blocks.each {|block| traverse_block(block, texts)} if blocks.is_a?(Array)
+    end
+    texts.compact.uniq
+  end
+
   # Clean string values from XML-wrapped field values.
   def self.clean_text_value(value)
     return nil unless value.is_a?(String)
@@ -184,6 +238,8 @@ module ShareFiltering
     # Return false early if filtering is disabled or project type not in filter list.
     return false unless Gatekeeper.allows('webpurify', default: true)
     return false unless FILTERED_PROJECT_TYPES.include?(project_type)
+    # Turns off one lab's filtering, where the webpurify gate turns off all.
+    return false if DCDO.get('share_filtering_disabled_project_types', []).include?(project_type)
 
     # Structured sources have no field-name pre-check; extraction plus the
     # empty-text bail in find_share_failure decide instead.
