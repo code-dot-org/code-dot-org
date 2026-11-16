@@ -65,6 +65,12 @@ module TestRunUtils
     )
   end
 
+  DASHBOARD_SEED_BUCKET = 'cdo-build-package'.freeze
+
+  def self.dashboard_seed_s3_key(seed_hash = dashboard_seed_hash)
+    "test_db/#{seed_hash}.gz"
+  end
+
   # Setup method to prepare test databases for parallel dashboard tests,
   # which can be called from the QA pass (on the chef-managed test system) or CI (Drone).
   def self.setup_dashboard_tests_parallel(upload_seed_data: false)
@@ -75,8 +81,8 @@ module TestRunUtils
     CDO.log.info "Fixture hash: #{fixture_hash}"
 
     # Try to fetch seed data from S3
-    bucket_name = 'cdo-build-package'
-    s3_key = "test_db/#{fixture_hash}.gz"
+    bucket_name = DASHBOARD_SEED_BUCKET
+    s3_key = dashboard_seed_s3_key(fixture_hash)
     s3_client = Aws::S3::Client.new
     require 'zlib'
     require 'stringio'
