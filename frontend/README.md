@@ -17,6 +17,7 @@ This directory uses [Turborepo](https://turbo.build/) to manage the monorepo and
 Open source Code.org applications:
 
 - [@code-dot-org/studio](apps/studio): An experimental Vite-based shell application for the learning platform.
+- [@code-dot-org/mobile](apps/mobile): The CodeAI Android app for Amazon Fire tablets, built with Capacitor.
 - [@code-dot-org/design-system-storybook](apps/design-system-storybook): A [Storybook](https://storybook.js.org/)
   instance for the Code.org design system (`@code-dot-org/component-library`). Publicly available at
   [https://code-dot-org.github.io/code-dot-org/component-library-storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook).

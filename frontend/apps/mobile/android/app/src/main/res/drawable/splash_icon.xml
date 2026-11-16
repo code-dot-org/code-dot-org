@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launch screen icon from Android 12: the system shows a 240dp slot masked
+     to a 160dp circle, so the wordmark is 150dp wide to fit the circle. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="240dp"
+        android:height="240dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item
+        android:width="150dp"
+        android:height="25.37dp"
+        android:drawable="@drawable/logo_codeai"
+        android:gravity="center" />
+</layer-list>
