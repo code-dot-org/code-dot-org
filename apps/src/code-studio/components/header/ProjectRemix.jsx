@@ -20,8 +20,6 @@ class ProjectRemix extends React.Component {
     inRestrictedShareMode: PropTypes.bool,
     isBlockedAbuse: PropTypes.bool,
     exceedsAbuseThreshold: PropTypes.bool,
-    // The share filter flagged the project's text, and the viewer is not its
-    // owner: a remix would hand them the flagged text.
     isBlockedShareFailure: PropTypes.bool,
   };
 

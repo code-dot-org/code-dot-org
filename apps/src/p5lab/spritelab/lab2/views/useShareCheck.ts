@@ -12,13 +12,10 @@ import {
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-// The share dialog stops holding its link back after this long, whatever
-// the check is doing: a slow check must not leave a student stuck.
 export const SHARE_CHECK_MAX_WAIT_MS = 3000;
 
-/** Whether to check as the level loads: wherever the project's link can be
-    handed out, on a project page, from a header that offers Share/Remix,
-    or from a finish dialog. */
+/** Whether the share link can be handed out on this level, so it is
+    checked on load. */
 export function checksOnLoad(
   levelProperties: Pick<
     LevelProperties,
@@ -32,12 +29,8 @@ export function checksOnLoad(
   );
 }
 
-/**
- * Asks the server whether the project can be shared: on load when
- * checksOnLoad says so, and each time the share dialog opens. The answer is
- * kept when the lab unmounts, since the blocked page unmounts it and
- * clearing the answer then would make it ask again.
- */
+/** Asks the server whether the project can be shared, on load and each time
+    the share dialog opens. */
 export default function useShareCheck(
   channelId: string | undefined,
   checkOnLoad: boolean
@@ -47,28 +40,27 @@ export default function useShareCheck(
     state => !!(state as {shareDialog?: {isOpen?: boolean}}).shareDialog?.isOpen
   );
 
-  // Only the newest question's answer is stored, and only for the project
-  // it was asked about. An answer that arrives after the dialog closes is
-  // still stored, so a failure the owner has since fixed is cleared.
-  const newestAskRef = useRef(0);
+  // Only the newest answer for the current project is stored.
+  const newestRequestRef = useRef(0);
   const channelIdRef = useRef(channelId);
   channelIdRef.current = channelId;
+  // The stored answer is not cleared on unmount: the blocked page unmounts
+  // the lab.
   useEffect(
     () => () => {
-      newestAskRef.current++;
+      newestRequestRef.current++;
     },
     []
   );
 
-  const ask = useCallback(
+  const requestShareCheck = useCallback(
     (id: string, onSettled?: () => void) => {
-      const asked = ++newestAskRef.current;
+      const requestId = ++newestRequestRef.current;
       const isNewest = () =>
-        asked === newestAskRef.current && id === channelIdRef.current;
+        requestId === newestRequestRef.current && id === channelIdRef.current;
       fetchShareFailure(id).then(
         async failure => {
-          // The owner's teacher may look at a flagged project, and this lab's
-          // loader does not find out who the viewer is to the owner.
+          // useSources does not look this up, unlike Lab2's own project load.
           const isTeacher = failure
             ? await fetchIsTeacherOfProjectOwner(id).catch(() => false)
             : false;
@@ -78,12 +70,11 @@ export default function useShareCheck(
             }
             dispatch(setShareFailure(failure));
           }
-          // Ends the wait in the same callback that stores the answer, so
-          // the dialog never renders a finished wait without the answer.
+          // In the same callback as the answer, so the dialog renders both
+          // together.
           onSettled?.();
         },
-        // A failed check stores nothing and ends the wait, so sharing is not
-        // blocked. The server likewise serves main.json when WebPurify is down.
+        // A failed check ends the wait without blocking sharing.
         () => onSettled?.()
       );
     },
@@ -100,12 +91,11 @@ export default function useShareCheck(
 
   useEffect(() => {
     if (channelId && checkOnLoad) {
-      ask(channelId);
+      requestShareCheck(channelId);
     }
-  }, [channelId, checkOnLoad, ask]);
+  }, [channelId, checkOnLoad, requestShareCheck]);
 
-  // A layout effect, so the dialog's first painted frame already holds the
-  // link back.
+  // A layout effect, so the dialog's first frame already withholds the link.
   useLayoutEffect(() => {
     if (!channelId || !shareDialogOpen) {
       return;
@@ -118,11 +108,11 @@ export default function useShareCheck(
       }
     };
     dispatch(setShareCheckPending(true));
-    ask(channelId, stopWaiting);
+    requestShareCheck(channelId, stopWaiting);
     const timer = setTimeout(stopWaiting, SHARE_CHECK_MAX_WAIT_MS);
     return () => {
       clearTimeout(timer);
       stopWaiting();
     };
-  }, [channelId, shareDialogOpen, ask, dispatch]);
+  }, [channelId, shareDialogOpen, requestShareCheck, dispatch]);
 }
