@@ -151,7 +151,7 @@
           }
         },
         {
-          "text": "Select **Run**, then move your player to touch the object or character that takes it to Scene 2.",
+          "text": "Select **Run**, then move your player to touch the object or character that takes it to **Scene 2**.",
           "check": {
             "kind": "scene",
             "id": "second-scene"

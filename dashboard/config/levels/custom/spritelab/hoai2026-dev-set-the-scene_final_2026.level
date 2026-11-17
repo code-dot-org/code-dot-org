@@ -71,7 +71,7 @@
       "title": "**Set the scene**",
       "items": [
         {
-          "text": "In Images, select the **+** button.",
+          "text": "In **Images**, select the **+** button.",
           "check": {
             "kind": "image",
             "imageType": "background"
@@ -85,7 +85,7 @@
           }
         },
         {
-          "text": "In Code, drag the **set background** block under **when run**.",
+          "text": "In **Code**, drag the **set background** block under **when run**.",
           "check": {
             "kind": "block",
             "type": "gamelab_setBackgroundImageAs",
