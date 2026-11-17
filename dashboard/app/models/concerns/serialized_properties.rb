@@ -5,7 +5,7 @@ require 'encryption'
 module SerializedProperties
   extend ActiveSupport::Concern
   included do
-    serialize :properties, coder: JSON
+    serialize :properties, JSON
     class_attribute :serialized_properties
     self.serialized_properties ||= {}
 
