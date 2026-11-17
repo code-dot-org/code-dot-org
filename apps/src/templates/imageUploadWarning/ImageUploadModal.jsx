@@ -78,7 +78,9 @@ export default function ImageUploadModal({
           >
             {isTeacher && (
               <>
-                {msg.animationPicker_warnNoRemix()}
+                {includeFeaturedWarning
+                  ? 'Note: projects with images uploaded by students cannot be remixed or submitted to be featured.'
+                  : msg.animationPicker_warnNoRemix()}
                 <br />
               </>
             )}
