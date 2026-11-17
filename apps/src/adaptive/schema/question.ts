@@ -79,6 +79,8 @@ export const freeResponseQuestionSchema = z.strictObject({
   id: z.number().int().positive(),
   type: z.literal('freeResponse'),
   text: z.string().min(1),
+  /** Shown above the text area. */
+  descriptionText: z.string().min(1).optional(),
   placeholder: z.string().optional(),
   plan: planSlotSchema,
 });

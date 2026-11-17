@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import useSources from '@cdo/apps/lab2/hooks/useSources';
-import {setChannel} from '@cdo/apps/lab2/lab2Redux';
+import {setChannel, setIsBlockedAbuse} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
@@ -149,6 +149,38 @@ describe('useSources', () => {
       await flush();
 
       expect(dispatchSpy).toHaveBeenCalledWith(setChannel(OWNED_CHANNEL));
+    });
+
+    it.each([
+      [15, true],
+      [14, false],
+    ])(
+      'publishes an abuse score of %i as blocked=%s',
+      async (score, blocked) => {
+        const dispatchSpy = jest.spyOn(store, 'dispatch');
+        mockGetProjectManagerForLevel.mockResolvedValueOnce(
+          createFakeProjectManager({
+            load: jest.fn().mockResolvedValue({
+              sources: SAVED_SOURCES,
+              channel: OWNED_CHANNEL,
+              abuseScore: score,
+            }),
+          })
+        );
+        renderUseSources();
+        await flush();
+
+        expect(dispatchSpy).toHaveBeenCalledWith(setIsBlockedAbuse(blocked));
+      }
+    );
+
+    it('leaves the block alone when no score came back', async () => {
+      const dispatchSpy = jest.spyOn(store, 'dispatch');
+      renderUseSources();
+      await flush();
+
+      expect(dispatchSpy).not.toHaveBeenCalledWith(setIsBlockedAbuse(false));
+      expect(dispatchSpy).not.toHaveBeenCalledWith(setIsBlockedAbuse(true));
     });
 
     it('refreshes the channel when a save changes it', async () => {
