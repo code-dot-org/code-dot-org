@@ -35,14 +35,8 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-    # Explicitly load appropriate defaults for the previous version of Rails.
-    config.load_defaults 7.0
-
-    # Manually load some config values for the new version of Rails while we are finalizing the update.
-    # TODO infra: start invoking config.load_defaults 7.1 and remove these
-    config.active_record.belongs_to_required_validates_foreign_key = false
-    config.active_support.cache_format_version = 7.1
-    config.add_autoload_paths_to_load_path = false
+    # Explicitly load appropriate defaults for this version of Rails.
+    config.load_defaults 7.1
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
