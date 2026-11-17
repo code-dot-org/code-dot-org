@@ -141,36 +141,6 @@ describe('ReflectionBox submit button', () => {
     );
   });
 
-  it('reports each rating and the submitted reflection on Done', async () => {
-    renderReflectionBox();
-    rateAndAdvance(/got it/i);
-    rateAndAdvance(/new to me/i);
-
-    const textboxes = screen.getAllByRole('textbox');
-    fireEvent.change(textboxes[0], {target: {value: 'I understood loops'}});
-
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /^done$/i}));
-    });
-
-    expect(sendEventMock).toHaveBeenCalledWith(
-      EVENTS.TUTOR_PLUS_OBJECTIVE_RATED,
-      {lesson_id: LESSON_ID, objective_id: '1', rating: 'confident'}
-    );
-    expect(sendEventMock).toHaveBeenCalledWith(
-      EVENTS.TUTOR_PLUS_OBJECTIVE_RATED,
-      {lesson_id: LESSON_ID, objective_id: '2', rating: 'lost'}
-    );
-    expect(sendEventMock).toHaveBeenCalledWith(
-      EVENTS.TUTOR_PLUS_REFLECTION_SUBMITTED,
-      {
-        lesson_id: LESSON_ID,
-        has_success_note: true,
-        has_confusion_note: false,
-      }
-    );
-  });
-
   it('requests podcast generation for objectives rated struggling or getting there', async () => {
     renderReflectionBox();
 

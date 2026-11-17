@@ -59,7 +59,31 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
       </button>
     </div>
   ),
-  ReflectionBox: () => <div>reflection</div>,
+  ReflectionBox: ({
+    onSubmitComplete,
+  }: {
+    onSubmitComplete: (data: {
+      objectiveReflections: Record<string, string>;
+      success: string;
+      struggle: string;
+    }) => void;
+  }) => (
+    <div>
+      reflection
+      <button
+        type="button"
+        onClick={() =>
+          onSubmitComplete({
+            objectiveReflections: {'1': 'confident', '2': 'lost'},
+            success: 'I understood loops',
+            struggle: ' ',
+          })
+        }
+      >
+        submit reflection
+      </button>
+    </div>
+  ),
 }));
 
 jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
@@ -290,6 +314,28 @@ describe('LessonDeepDiveContainer Tutor+ analytics', () => {
       {lesson_id: LESSON_DATA.lessonId, card_index: 1}
     );
     expect(screen.getByText('levels-attempted')).toBeInTheDocument();
+  });
+
+  it('reports each rating and the submitted reflection', () => {
+    renderContainer('reflection');
+    fireEvent.click(screen.getByRole('button', {name: 'submit reflection'}));
+
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_OBJECTIVE_RATED,
+      {lesson_id: LESSON_DATA.lessonId, objective_id: '1', rating: 'confident'}
+    );
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_OBJECTIVE_RATED,
+      {lesson_id: LESSON_DATA.lessonId, objective_id: '2', rating: 'lost'}
+    );
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_REFLECTION_SUBMITTED,
+      {
+        lesson_id: LESSON_DATA.lessonId,
+        has_success_note: true,
+        has_confusion_note: false,
+      }
+    );
   });
 
   it('does not report auto-advance or arrow-key navigation', () => {
