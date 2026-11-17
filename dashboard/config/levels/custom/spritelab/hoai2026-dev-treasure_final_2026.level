@@ -33,7 +33,7 @@
       "title": "**Treasure**",
       "items": [
         {
-          "text": "Select the + button and make an image for a new object.",
+          "text": "Select the **+** button and make an image for a new object.",
           "check": {
             "kind": "image",
             "imageType": "sprite"

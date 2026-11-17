@@ -33,7 +33,7 @@
       "title": "**Make a character**",
       "items": [
         {
-          "text": "Select the + button.",
+          "text": "Select the **+** button.",
           "check": {
             "kind": "image",
             "imageType": "sprite"

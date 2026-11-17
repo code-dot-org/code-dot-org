@@ -51,7 +51,7 @@
       "title": "**Friend or foe?**",
       "items": [
         {
-          "text": "In **Images**, select the + button to make a new character.",
+          "text": "In **Images**, select the **+** button to make a new character.",
           "check": {
             "kind": "image",
             "imageType": "sprite"
