@@ -8,7 +8,6 @@ import React, {
   useEffect,
   useMemo,
   useRef,
-  useState,
 } from 'react';
 
 import {
@@ -312,41 +311,17 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     hasEdited,
   ]);
 
-  // Only a change to enabled is announced; a level that opens with
-  // Continue available says nothing.
-  const [readyMessage, setReadyMessage] = useState<string | null>(null);
-  const baselineRef = useRef({
-    levelId: id,
-    validationIndex,
-    settling: false,
-    wasEnabled: continueEnabled,
-  });
-  useEffect(() => {
-    const baseline = baselineRef.current;
-    // A new level's validation is reset after its ID arrives, which moves
-    // the index; until then the state is the old level's.
-    if (id !== baseline.levelId) {
-      baselineRef.current = {
-        levelId: id,
-        validationIndex,
-        settling: true,
-        wasEnabled: continueEnabled,
-      };
-      setReadyMessage(null);
-      return;
-    }
-    if (baseline.settling) {
-      baseline.settling = validationIndex === baseline.validationIndex;
-    } else if (continueEnabled && !baseline.wasEnabled) {
-      setReadyMessage(`Level complete! The ${buttonText} button is ready.`);
-    } else if (!continueEnabled) {
-      setReadyMessage(null);
-    }
-    baseline.wasEnabled = continueEnabled;
-  }, [id, validationIndex, continueEnabled, buttonText]);
+  // Only a finished checklist is announced, both when it is completed and
+  // when its level is opened.
+  const readyMessage =
+    objectivesDone && continueEnabled
+      ? `Level complete! The ${buttonText} button is ready.`
+      : null;
   // Outside the keyed content and rendered when the rest is not, so the
   // region stays mounted.
-  const readyAnnouncer = <ToastAnnouncer message={readyMessage} />;
+  const readyAnnouncer = (
+    <ToastAnnouncer message={readyMessage} announcementId={id} />
+  );
 
   // If we can't show the continue button or the feedback message and the level is not submittable, don't render anything to avoid displaying a blank space.
   if (

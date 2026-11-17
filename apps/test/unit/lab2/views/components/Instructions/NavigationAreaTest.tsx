@@ -336,71 +336,63 @@ describe('NavigationArea', () => {
 
   describe('announcing Continue', () => {
     const READY = /Level complete! The .+ button is ready\./;
+    const nextFrame = () =>
+      new Promise(resolve => requestAnimationFrame(resolve));
+    const atLevel = (props: Partial<Parameters<typeof NavigationArea>[0]>) => (
+      <ThemeProvider>
+        <Provider store={store}>
+          <NavigationArea
+            levelProperties={makeLevelProperties()}
+            isRunning={false}
+            hasRun={false}
+            hasEdited={false}
+            {...props}
+          />
+        </Provider>
+      </ThemeProvider>
+    );
 
     it('announces Continue once the checklist is done', async () => {
-      const {rerender} = renderDefault({
-        objectivesDone: false,
-        hideContinueIfDisabled: true,
-      });
+      const {rerender} = render(
+        atLevel({objectivesDone: false, hideContinueIfDisabled: true})
+      );
       expect(screen.queryByText(READY)).toBeNull();
+      rerender(atLevel({objectivesDone: true, hideContinueIfDisabled: true}));
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+    });
+
+    it('announces on opening a level whose checklist is done', async () => {
+      render(atLevel({objectivesDone: true}));
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+    });
+
+    it('announces again on entering another finished level', async () => {
+      const {rerender} = render(
+        atLevel({
+          levelProperties: makeLevelProperties({id: 1}),
+          objectivesDone: true,
+        })
+      );
+      expect(await screen.findByText(READY)).toBeInTheDocument();
       rerender(
-        <ThemeProvider>
-          <Provider store={store}>
-            <NavigationArea
-              levelProperties={makeLevelProperties()}
-              isRunning={false}
-              hasRun={false}
-              hasEdited={false}
-              objectivesDone
-              hideContinueIfDisabled
-            />
-          </Provider>
-        </ThemeProvider>
+        atLevel({
+          levelProperties: makeLevelProperties({id: 2}),
+          objectivesDone: true,
+        })
       );
+      expect(screen.queryByText(READY)).toBeNull();
       expect(await screen.findByText(READY)).toBeInTheDocument();
     });
 
-    it('says nothing on a level that opens with Continue available', async () => {
-      renderDefault({objectivesDone: true});
-      await new Promise(resolve => requestAnimationFrame(resolve));
-      expect(screen.queryByText(READY)).toBeNull();
-    });
-
-    it('says nothing on entering a level without remounting', async () => {
-      const validation = (index: number, hasConditions: boolean) =>
-        act(() => {
-          store.dispatch(
-            setValidationState({
-              hasConditions,
-              satisfied: false,
-              message: null,
-              index,
-            })
-          );
-        });
-      const atLevel = (id: number) => (
-        <ThemeProvider>
-          <Provider store={store}>
-            <NavigationArea
-              levelProperties={makeLevelProperties({id})}
-              isRunning={false}
-              hasRun={false}
-              hasEdited={false}
-            />
-          </Provider>
-        </ThemeProvider>
+    it('says nothing when Continue turns on without a checklist', async () => {
+      const {rerender} = render(atLevel({requireRun: true}));
+      rerender(atLevel({requireRun: true, hasRun: true}));
+      await act(nextFrame);
+      expect(screen.getByRole('button')).toHaveAttribute(
+        'data-disabled',
+        'false'
       );
-      validation(0, true);
-      const {rerender} = render(atLevel(1));
-      // The new ID arrives with the old level's validation, then the reset.
-      rerender(atLevel(2));
-      validation(1, false);
-      await new Promise(resolve => requestAnimationFrame(resolve));
       expect(screen.queryByText(READY)).toBeNull();
-
-      validation(2, true);
-      validation(3, false);
-      expect(await screen.findByText(READY)).toBeInTheDocument();
     });
   });
 
