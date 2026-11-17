@@ -7,6 +7,8 @@ import {
   saveUserLessonObjectiveReflection,
 } from '@cdo/apps/aiTutor/reflectionsApi';
 import ReflectionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/ReflectionBox';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/aiTutor/reflectionsApi', () => ({
@@ -19,6 +21,12 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {post: jest.fn()},
 }));
 
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: jest.fn()},
+}));
+
+const sendEventMock = analyticsReporter.sendEvent as jest.Mock;
 const saveReflectionMock = saveUserLessonReflection as jest.Mock;
 const saveObjectiveMock = saveUserLessonObjectiveReflection as jest.Mock;
 const postMock = HttpClient.post as jest.Mock;
@@ -131,6 +139,36 @@ describe('ReflectionBox submit button', () => {
     expect(saveObjectiveMock).toHaveBeenCalledTimes(2);
     expect(saveObjectiveMock).toHaveBeenCalledWith('1', 'confident');
     expect(saveObjectiveMock).toHaveBeenCalledWith('2', 'lost');
+  });
+
+  it('reports each rating and the submitted reflection on Done', async () => {
+    renderReflectionBox();
+    rateAndAdvance(/got it/i);
+    rateAndAdvance(/new to me/i);
+
+    const textboxes = screen.getAllByRole('textbox');
+    fireEvent.change(textboxes[0], {target: {value: 'I understood loops'}});
+
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /^done$/i}));
+    });
+
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_OBJECTIVE_RATED,
+      {lesson_id: LESSON_ID, objective_id: '1', rating: 'confident'}
+    );
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_OBJECTIVE_RATED,
+      {lesson_id: LESSON_ID, objective_id: '2', rating: 'lost'}
+    );
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_REFLECTION_SUBMITTED,
+      {
+        lesson_id: LESSON_ID,
+        has_success_note: true,
+        has_confusion_note: false,
+      }
+    );
   });
 
   it('requests podcast generation for objectives rated struggling or getting there', async () => {
