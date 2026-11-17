@@ -25,12 +25,10 @@ export interface ChatUnlockOptions extends LabHandles {
 }
 
 /**
- * Opens Continue on a checked step from the chat alone, so a student who is
- * trying but cannot get a build to pass is not stuck. The lab reports the
- * chat at each reply the tutor finishes, and at the reply limit Continue
- * opens regardless. The decision is recorded on the step and told in the
- * chat. Does nothing once Continue is open, on a step with no validation
- * block, or in a lab that does not report its chat.
+ * Opens Continue for the step from its chat, when the lab reports one.
+ * Applies only to a step with a validation block while Continue is still
+ * locked. When the student reaches the reply limit, Continue opens and the
+ * reason is recorded on the step and told in the chat.
  */
 export function useChatUnlock(options: ChatUnlockOptions): void {
   // Read at reply time, so a change to the options does not resubscribe.
