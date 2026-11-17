@@ -609,7 +609,8 @@ class Section < ApplicationRecord
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         demo_type: demo_type,
-        # API clients still require these obsolete CAP fields.
+        # These CAP fields are deprecated, but the frontend API clients still expect them.
+        # TODO: Remove these fields once the frontend is updated to no longer require them.
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
       }
@@ -748,7 +749,8 @@ class Section < ApplicationRecord
           post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
           code_review_expires_at: code_review_expires_at,
           sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-          # API clients still require these obsolete CAP fields.
+          # These CAP fields are deprecated, but the frontend API clients still expect them.
+          # TODO: Remove these fields once the frontend is updated to no longer require them.
           at_risk_age_gated_date: nil,
           at_risk_age_gated_us_state: nil,
           avatar_color: avatar_color,
