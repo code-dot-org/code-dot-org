@@ -84,10 +84,12 @@ async function buildStarterImageNode(
 }
 
 // The subset of ChallengeResponse#summarize(assets_for_upload: true) we
-// consume: the asset id to PUT the whiteboard image bytes to.
+// consume: the asset id to PUT the whiteboard image bytes to, and the
+// attempt number create adds.
 interface CreatedChallengeResponse {
   id: number;
   assets: {id: number; asset_type: string}[];
+  attempt_number: number;
 }
 
 const darkTheme = createTheme({
@@ -132,7 +134,7 @@ interface WhiteboardChallengeProps {
   // top-bar "Submit for feedback" / "Start over" buttons this modality's
   // submit and reset handlers.
   onSubmittableChange: (canSubmit: boolean) => void;
-  submitRef: React.MutableRefObject<(() => Promise<boolean>) | null>;
+  submitRef: React.MutableRefObject<(() => Promise<number | null>) | null>;
   resetRef: React.MutableRefObject<(() => void) | null>;
 }
 
@@ -241,9 +243,9 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   // Snapshot the canvas as a PNG, create the challenge response, and PUT
   // the image bytes to the asset upload endpoint (which stores them in S3
   // server-side; the bucket has no CORS rules for direct browser PUTs).
-  const handleSubmit = async (): Promise<boolean> => {
+  const handleSubmit = async (): Promise<number | null> => {
     if (challengeId === null) {
-      return false;
+      return null;
     }
     setSubmitting(true);
     setSubmitError(null);
@@ -307,14 +309,14 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
       setChallengeResponseId(created.id);
       setEvaluationStatus(status);
       submitCallback(true);
-      return true;
+      return created.attempt_number;
     } catch (error) {
       setSubmitError(
         error instanceof Error
           ? error.message
           : 'Something went wrong. Please try again.'
       );
-      return false;
+      return null;
     } finally {
       setSubmitting(false);
     }
