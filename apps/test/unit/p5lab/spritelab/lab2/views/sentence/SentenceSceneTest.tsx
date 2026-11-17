@@ -190,10 +190,12 @@ describe('SentenceScene', () => {
     onKeep.mockRejectedValueOnce(new Error('upload failed'));
     const error = jest.spyOn(console, 'error').mockImplementation(() => {});
     const onReady = jest.fn();
-    renderScene({onReady});
+    const onGenerateFailed = jest.fn();
+    renderScene({onReady, onGenerateFailed});
     pickCreature();
     await generate();
     error.mockRestore();
+    expect(onGenerateFailed).toHaveBeenCalledTimes(1);
     expect(
       screen.getByText("Couldn't save the picture. Try again.")
     ).toBeTruthy();
@@ -208,6 +210,19 @@ describe('SentenceScene', () => {
     ).toBeNull();
     expect(screen.getByRole('button', {name: 'Good'})).toBeTruthy();
     expect(onReady).toHaveBeenCalledTimes(1);
+    expect(onGenerateFailed).toHaveBeenCalledTimes(1);
+  });
+
+  it('reports a picture that could not be made, so it is not counted', async () => {
+    generateCharacterSet.mockRejectedValueOnce(new Error('down'));
+    const error = jest.spyOn(console, 'error').mockImplementation(() => {});
+    const onGenerateFailed = jest.fn();
+    renderScene({onGenerateFailed});
+    pickCreature();
+    await generate();
+    error.mockRestore();
+    expect(screen.getByRole('alert').textContent).toMatch(/Couldn't make/);
+    expect(onGenerateFailed).toHaveBeenCalledTimes(1);
   });
 
   it('keeps the picture as it lands, and again with its rating when no host records it', async () => {
@@ -373,11 +388,14 @@ describe('SentenceScene', () => {
       '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety'
     );
     generateCharacterSet.mockRejectedValue(new ImageSafetyError('prompt'));
-    renderScene();
+    const onGenerateFailed = jest.fn();
+    renderScene({onGenerateFailed});
     pickCreature();
     await generate();
     expect(screen.getByRole('alert').textContent).toMatch(/aren't okay/);
     expect(screen.getByRole('button', {name: 'Generate'})).toBeTruthy();
+    // A refusal still counts against a level's limit.
+    expect(onGenerateFailed).not.toHaveBeenCalled();
   });
 
   it('takes a typed prompt over the words, as one still picture at the chosen grid, from the current image', async () => {

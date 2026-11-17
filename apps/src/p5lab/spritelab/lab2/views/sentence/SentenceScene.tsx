@@ -174,6 +174,9 @@ interface SentenceSceneProps {
   onRate?: (verdict: Verdict) => boolean | Promise<boolean>;
   /** Called when a generation request is sent to the model. */
   onGenerateStart?: () => void;
+  /** Called when a generation onGenerateStart announced ends with no
+      picture, unless it was refused for safety. */
+  onGenerateFailed?: () => void;
   /** The scene is making or keeping a picture, or has stopped; a host can
       hold its other controls still meanwhile. */
   onBusyChange?: (busy: boolean) => void;
@@ -210,6 +213,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   onReady,
   onRate,
   onGenerateStart,
+  onGenerateFailed,
   onBusyChange,
   ratingRequired = false,
   method = 'scene',
@@ -446,6 +450,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       // A picture that was not saved is not an image of the project, so
       // there is nothing to show or rate: the student generates again.
       if (!saved) {
+        onGenerateFailed?.();
         setMode('edit');
         return;
       }
@@ -469,6 +474,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       } else {
         console.error('Image generation failed:', e);
         setError("Couldn't make the picture. Try again.");
+        onGenerateFailed?.();
       }
       setMode('edit');
     }
@@ -482,6 +488,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     generatesCharacterSet,
     method,
     onGenerateStart,
+    onGenerateFailed,
     exhausted,
     advanced,
     persist,

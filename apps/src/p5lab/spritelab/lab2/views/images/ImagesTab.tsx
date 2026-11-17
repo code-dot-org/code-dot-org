@@ -97,6 +97,9 @@ interface ImagesTabProps {
   generationsLeft?: number;
   /** Called when a generation request is sent to the model. */
   onGenerate?: () => void;
+  /** Called when a generation onGenerate announced ends with no picture,
+      unless it was refused for safety. */
+  onGenerateFailed?: () => void;
   /** Students may add images, draw on them and delete them. */
   editingOffered?: boolean;
   /** No New button, even where `editingOffered` would show one: the
@@ -162,6 +165,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   levelId,
   generationsLeft,
   onGenerate,
+  onGenerateFailed,
   editingOffered,
   noNewImages,
   noDeletingImages,
@@ -620,6 +624,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           ratingRequired={ratingRequired}
           generationsLeft={generationsLeft}
           onGenerateStart={onGenerate}
+          onGenerateFailed={onGenerateFailed}
           onBusyChange={setBusy}
           onKeep={handleKeep}
           onReady={offerStory}
