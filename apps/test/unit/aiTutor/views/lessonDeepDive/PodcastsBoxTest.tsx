@@ -1,9 +1,9 @@
+import {ReflectionData} from '@code-dot-org/lesson-deep-dive';
 import {render, screen, waitFor, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import PodcastsBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/PodcastsBox';
-import {ReflectionData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 

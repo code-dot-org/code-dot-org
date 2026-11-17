@@ -133,11 +133,12 @@ export function getCompleteToolboxDefinition(
   sharedBlocksByCategory: {[category: string]: string[]},
   forToolboxEditing: boolean
 ): ToolboxInfo {
+  const supportedShared = filterToSupportedSharedBlocks(sharedBlocksByCategory);
   const merged: {[category: string]: string[]} = {
     ...(forToolboxEditing
       ? {Categories: [BLOCK_TYPES.category, BLOCK_TYPES.categoryDynamic]}
       : {}),
-    ...filterToSupportedSharedBlocks(sharedBlocksByCategory),
+    ...supportedShared,
   };
   [LAB_BLOCKS_BY_CATEGORY, COMMON_BLOCKS_BY_CATEGORY].forEach(byCategory =>
     Object.entries(byCategory).forEach(([name, types]) => {
@@ -148,14 +149,17 @@ export function getCompleteToolboxDefinition(
   if (forToolboxEditing) {
     return withSpriteShadows(getToolboxDefinition(merged, 'categoryToolbox'));
   }
-  // Variable blocks come from the dynamic category's flyout instead.
+  // Variable blocks come from the dynamic category's flyout instead, which
+  // ends with the pool's own, such as show variable.
   delete merged.Variables;
   const def = withSpriteShadows(
     getToolboxDefinition(merged, 'categoryToolbox')
   );
-  def.contents.push(
-    makeDynamicCategory('Variables', 'VARIABLE'),
-    makeDynamicCategory('Functions', 'PROCEDURE')
-  );
+  const variables = makeDynamicCategory('Variables', 'VARIABLE');
+  variables.contents = (supportedShared.Variables || []).map(type => ({
+    kind: 'block',
+    type,
+  }));
+  def.contents.push(variables, makeDynamicCategory('Functions', 'PROCEDURE'));
   return def;
 }

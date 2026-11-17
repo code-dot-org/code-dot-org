@@ -3,11 +3,12 @@
  * a focus area. Note: This is English only.
  */
 
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+
+import moduleStyles from './FocusAreaIndicator.module.scss';
 
 const ARROW_FILL = 'var(--background-info-primary)';
 
@@ -52,9 +53,6 @@ const styles = {
     marginLeft: 5,
     marginRight: 5,
     borderRadius: 4,
-    ':hover': {
-      backgroundColor: 'var(--background-info-secondary)',
-    },
   },
 };
 
@@ -66,7 +64,12 @@ const FocusAreaIndicator = () => (
     <div style={styles.focusArea}>
       <div style={styles.text}>Focus Area</div>
       <a href={window.location.pathname + '/preview-assignments'}>
-        <div style={styles.focusAreaIcon} data-tip data-for="focus-area">
+        <div
+          className={moduleStyles.focusAreaIcon}
+          style={styles.focusAreaIcon}
+          data-tip
+          data-for="focus-area"
+        >
           <FontAwesome icon="pen" />
         </div>
       </a>
@@ -77,4 +80,4 @@ const FocusAreaIndicator = () => (
   </div>
 );
 
-export default Radium(FocusAreaIndicator);
+export default FocusAreaIndicator;

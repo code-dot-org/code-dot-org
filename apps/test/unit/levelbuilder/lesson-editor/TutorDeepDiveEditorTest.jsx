@@ -34,6 +34,27 @@ describe('TutorDeepDiveEditor', () => {
     jest.restoreAllMocks();
   });
 
+  it('renders the challenges panel with the initial challenges', () => {
+    const wrapper = mount(
+      <TutorDeepDiveEditor
+        {...defaultProps}
+        initialChallenges={[
+          {
+            id: 3,
+            key: 'challenge-lesson-42-abc',
+            question: 'Draw a cat.',
+            defaultModality: 'whiteboard',
+            rubric: [{level: 0, description: 'No cat'}],
+            whiteboardStarterImageAltText: null,
+            whiteboardStarterImageUrl: null,
+          },
+        ]}
+      />
+    );
+    expect(wrapper.text()).toContain('Challenges');
+    expect(wrapper.text()).toContain('challenge-lesson-42-abc');
+  });
+
   it('renders a row per video', () => {
     const wrapper = mount(<TutorDeepDiveEditor {...defaultProps} />);
     expect(videosTable(wrapper).find('tbody tr').length).toBe(1);
