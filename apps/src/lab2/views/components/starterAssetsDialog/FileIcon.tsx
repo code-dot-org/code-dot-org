@@ -39,7 +39,7 @@ const FileIcon: React.FC<FileIconProps> = ({
   );
 
   useEffect(() => {
-    if (filename.toLowerCase().endsWith('.pdf')) {
+    if (filename.endsWith('.pdf')) {
       getPageCount(url).then(count => {
         setPageCount(count);
         setLoadingMetadata(false);

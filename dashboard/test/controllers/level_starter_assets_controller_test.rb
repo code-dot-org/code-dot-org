@@ -329,6 +329,19 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     File.delete(filename) if filename && File.exist?(filename)
   end
 
+  test 'upload_by_uuid: rejects an upper-case non-image file extension' do
+    LevelStarterAssetsHelper.expects(:get_object).never
+    sign_in create(:levelbuilder)
+
+    filename = 'report.PDF'
+    FileUtils.touch(filename)
+    file = fixture_file_upload(filename, 'application/pdf')
+    post :upload_by_uuid, params: {level_name: create(:weblab2).name, uuid: @uuid, files: [file]}
+    assert_response :unprocessable_entity
+  ensure
+    File.delete(filename) if filename && File.exist?(filename)
+  end
+
   test 'upload: can successfully upload files with single- and double- quotes in filenames' do
     LevelStarterAssetsHelper.expects(:get_object).twice.returns(@file_obj)
     @file_obj.expects(:upload_file).twice.returns(true)
