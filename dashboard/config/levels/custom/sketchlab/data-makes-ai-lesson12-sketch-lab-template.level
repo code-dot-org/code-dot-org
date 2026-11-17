@@ -1041,7 +1041,7 @@
             "id": "vgn3-n-61",
             "type": "text",
             "data": {
-              "text": "Train your model. Add a picture of Tree 1.",
+              "text": "Train your model. Click Save to put Tree 1 in your Backpack. Then add it here.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -1064,7 +1064,7 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "(Tree 1 picture)",
+              "label": "Add Tree 1 from your Backpack",
               "textAlign": "center",
               "backgroundColor": "#ffffff",
               "fontSize": "medium",
@@ -1119,10 +1119,10 @@
               "y": 1055
             },
             "width": 1030,
-            "height": 510,
+            "height": 1050,
             "measured": {
               "width": 1030,
-              "height": 510
+              "height": 1050
             },
             "zIndex": -1
           },
@@ -1153,7 +1153,7 @@
             "id": "vgn3-n-66",
             "type": "text",
             "data": {
-              "text": "Check Platform Type",
+              "text": "Find the Problem",
               "strokeColor": "transparent",
               "fontSize": "extra-large",
               "fontFamily": "draw",
@@ -1175,7 +1175,7 @@
             "id": "vgn3-n-67",
             "type": "text",
             "data": {
-              "text": "Open Column Analysis. Circle the smallest bar.",
+              "text": "Start on the Testing tab. Then go to the Dataset tab.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -1194,25 +1194,6 @@
             }
           },
           {
-            "id": "vgn3-n-68",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/f087d960-de5e-4642-b992-8e3baa2bfbc5.jpg",
-              "altText": "Column Analysis for one feature: type, number of categories, most and least common, and a bar chart",
-              "locked": true
-            },
-            "position": {
-              "x": 1340,
-              "y": 1200
-            },
-            "width": 930,
-            "height": 85,
-            "measured": {
-              "width": 930,
-              "height": 85
-            }
-          },
-          {
             "id": "vgn3-n-69",
             "type": "shape",
             "data": {
@@ -1225,7 +1206,7 @@
             },
             "position": {
               "x": 1340,
-              "y": 1300
+              "y": 1590
             },
             "width": 295,
             "height": 60,
@@ -1247,7 +1228,7 @@
             },
             "position": {
               "x": 1655,
-              "y": 1300
+              "y": 1590
             },
             "width": 295,
             "height": 60,
@@ -1269,7 +1250,7 @@
             },
             "position": {
               "x": 1970,
-              "y": 1300
+              "y": 1590
             },
             "width": 295,
             "height": 60,
@@ -1290,14 +1271,14 @@
               "strokeColor": "#e03131"
             },
             "position": {
-              "x": 1816.1369621903104,
-              "y": 1081.0190096932433
+              "x": 2120,
+              "y": 1530
             },
-            "width": 315,
-            "height": 85,
+            "width": 200,
+            "height": 70,
             "measured": {
-              "width": 315,
-              "height": 85
+              "width": 200,
+              "height": 70
             },
             "dragging": false
           },
@@ -1306,14 +1287,14 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "Platform: ",
+              "label": "Category: ",
               "textAlign": "left",
               "backgroundColor": "#ffffff",
               "fontSize": "medium"
             },
             "position": {
               "x": 1340,
-              "y": 1475
+              "y": 1665
             },
             "width": 450,
             "height": 75,
@@ -1334,7 +1315,7 @@
             },
             "position": {
               "x": 1820,
-              "y": 1475
+              "y": 1665
             },
             "width": 450,
             "height": 75,
@@ -1350,20 +1331,20 @@
               "shapeType": "rectangle",
               "label": "",
               "textAlign": "left",
-              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "backgroundColor": "var(--sketchlab-bg-green)",
               "fontSize": "medium",
               "strokeColor": "transparent",
               "locked": true
             },
             "position": {
-              "x": 1305,
-              "y": 1605
+              "x": 2565,
+              "y": 2106
             },
             "width": 1030,
-            "height": 760,
+            "height": 440,
             "measured": {
               "width": 1030,
-              "height": 760
+              "height": 440
             },
             "zIndex": -1
           },
@@ -1372,16 +1353,16 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "7",
+              "label": "10",
               "textAlign": "center",
-              "backgroundColor": "#9CC8F7",
+              "backgroundColor": "#9ADBA4",
               "fontSize": "large",
-              "strokeColor": "#2F7FD3",
+              "strokeColor": "#2E9E48",
               "locked": true
             },
             "position": {
-              "x": 1330,
-              "y": 1625
+              "x": 2590,
+              "y": 2126
             },
             "width": 60,
             "height": 60,
@@ -1402,8 +1383,8 @@
               "locked": true
             },
             "position": {
-              "x": 1410,
-              "y": 1628
+              "x": 2670,
+              "y": 2129
             },
             "width": 850,
             "height": 55,
@@ -1416,7 +1397,7 @@
             "id": "vgn3-n-78",
             "type": "text",
             "data": {
-              "text": "Follow the stones, in order.",
+              "text": "You did Spot, Trace and Fix in Stop 6. Now think about the people in your User Profiles. Type in each box.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -1424,336 +1405,14 @@
               "locked": true
             },
             "position": {
-              "x": 1412,
-              "y": 1690
+              "x": 2672,
+              "y": 2191
             },
             "width": 848,
             "height": 42,
             "measured": {
               "width": 848,
               "height": 42
-            }
-          },
-          {
-            "id": "vgn3-n-79",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
-              "label": "Spot\nWho gets wrong answers?\n",
-              "textAlign": "center",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium",
-              "strokeColor": "#2F7FD3"
-            },
-            "position": {
-              "x": 1340,
-              "y": 1750
-            },
-            "width": 270,
-            "height": 270,
-            "measured": {
-              "width": 270,
-              "height": 270
-            }
-          },
-          {
-            "id": "vgn3-a-80",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1615,
-              "y": 1885
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "vgn3-a-81",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1665,
-              "y": 1885
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "vgn3-n-83",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
-              "label": "Trace\nWhat in the records caused it?\n",
-              "textAlign": "center",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium",
-              "strokeColor": "#2F7FD3"
-            },
-            "position": {
-              "x": 1670,
-              "y": 1750
-            },
-            "width": 270,
-            "height": 270,
-            "measured": {
-              "width": 270,
-              "height": 270
-            }
-          },
-          {
-            "id": "vgn3-a-84",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1945,
-              "y": 1885
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "vgn3-a-85",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1995,
-              "y": 1885
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "vgn3-n-87",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
-              "label": "Name\nWhose choice was it?\n",
-              "textAlign": "center",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium",
-              "strokeColor": "#2F7FD3"
-            },
-            "position": {
-              "x": 2000,
-              "y": 1750
-            },
-            "width": 270,
-            "height": 270,
-            "measured": {
-              "width": 270,
-              "height": 270
-            }
-          },
-          {
-            "id": "vgn3-a-88",
-            "type": "lineAnchor",
-            "position": {
-              "x": 2135,
-              "y": 2025
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "vgn3-a-89",
-            "type": "lineAnchor",
-            "position": {
-              "x": 2135,
-              "y": 2075
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "vgn3-n-91",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
-              "label": "Zoom Out\nWho else is affected?\n",
-              "textAlign": "center",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium",
-              "strokeColor": "#2F7FD3"
-            },
-            "position": {
-              "x": 2000,
-              "y": 2080
-            },
-            "width": 270,
-            "height": 270,
-            "measured": {
-              "width": 270,
-              "height": 270
-            }
-          },
-          {
-            "id": "vgn3-a-92",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1995,
-              "y": 2215
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "vgn3-a-93",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1945,
-              "y": 2215
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "vgn3-n-95",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
-              "label": "Fix\nWhat would you change?\n",
-              "textAlign": "center",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium",
-              "strokeColor": "#2F7FD3"
-            },
-            "position": {
-              "x": 1670,
-              "y": 2080
-            },
-            "width": 270,
-            "height": 270,
-            "measured": {
-              "width": 270,
-              "height": 270
-            }
-          },
-          {
-            "id": "vgn3-a-96",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1665,
-              "y": 2215
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "vgn3-a-97",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1615,
-              "y": 2215
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "vgn3-n-99",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
-              "label": "New Problem\nWhat new problem could it cause?\n",
-              "textAlign": "center",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium",
-              "strokeColor": "#2F7FD3"
-            },
-            "position": {
-              "x": 1340,
-              "y": 2080
-            },
-            "width": 270,
-            "height": 270,
-            "measured": {
-              "width": 270,
-              "height": 270
             }
           },
           {
@@ -1770,13 +1429,13 @@
             },
             "position": {
               "x": 1305,
-              "y": 2405
+              "y": 2145
             },
             "width": 1030,
-            "height": 555,
+            "height": 650,
             "measured": {
               "width": 1030,
-              "height": 555
+              "height": 650
             },
             "zIndex": -1
           },
@@ -1785,7 +1444,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "8",
+              "label": "7",
               "textAlign": "center",
               "backgroundColor": "#9CC8F7",
               "fontSize": "large",
@@ -1794,7 +1453,7 @@
             },
             "position": {
               "x": 1330,
-              "y": 2425
+              "y": 2165
             },
             "width": 60,
             "height": 60,
@@ -1816,7 +1475,7 @@
             },
             "position": {
               "x": 1410,
-              "y": 2428
+              "y": 2168
             },
             "width": 850,
             "height": 55,
@@ -1829,7 +1488,7 @@
             "id": "vgn3-n-103",
             "type": "text",
             "data": {
-              "text": "Load the fixed dataset from your teacher. Train again. Add a picture of Tree 2.",
+              "text": "Open the Video Game Night (Fixed) dataset. Keep your two features, or add more. Train Tree 2. Click Save to put it in your Backpack. Then add it here.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -1838,13 +1497,13 @@
             },
             "position": {
               "x": 1412,
-              "y": 2490
+              "y": 2230
             },
             "width": 848,
-            "height": 42,
+            "height": 56,
             "measured": {
               "width": 848,
-              "height": 42
+              "height": 56
             }
           },
           {
@@ -1852,7 +1511,7 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "(Tree 2 picture)",
+              "label": "Add Tree 2 from your Backpack",
               "textAlign": "center",
               "backgroundColor": "#ffffff",
               "fontSize": "medium",
@@ -1860,7 +1519,7 @@
             },
             "position": {
               "x": 1340,
-              "y": 2550
+              "y": 2290
             },
             "width": 930,
             "height": 300,
@@ -1881,7 +1540,7 @@
             },
             "position": {
               "x": 1340,
-              "y": 2865
+              "y": 2605
             },
             "width": 930,
             "height": 80,
@@ -1907,10 +1566,10 @@
               "y": 535
             },
             "width": 1030,
-            "height": 621,
+            "height": 695,
             "measured": {
               "width": 1030,
-              "height": 621
+              "height": 695
             },
             "zIndex": -1
           },
@@ -1919,7 +1578,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "9",
+              "label": "8",
               "textAlign": "center",
               "backgroundColor": "#9ADBA4",
               "fontSize": "large",
@@ -2012,13 +1671,13 @@
               "locked": true
             },
             "position": {
-              "x": 2850,
+              "x": 2947,
               "y": 680
             },
-            "width": 109.33333333333333,
+            "width": 94,
             "height": 60,
             "measured": {
-              "width": 109,
+              "width": 94,
               "height": 60
             }
           },
@@ -2034,13 +1693,13 @@
               "locked": true
             },
             "position": {
-              "x": 2963.3333333333335,
+              "x": 3044,
               "y": 680
             },
-            "width": 109.33333333333333,
+            "width": 94,
             "height": 60,
             "measured": {
-              "width": 109,
+              "width": 94,
               "height": 60
             }
           },
@@ -2056,13 +1715,13 @@
               "locked": true
             },
             "position": {
-              "x": 3076.6666666666665,
+              "x": 3141,
               "y": 680
             },
-            "width": 109.33333333333333,
+            "width": 94,
             "height": 60,
             "measured": {
-              "width": 109,
+              "width": 94,
               "height": 60
             }
           },
@@ -2078,13 +1737,13 @@
               "locked": true
             },
             "position": {
-              "x": 3190,
+              "x": 3238,
               "y": 680
             },
-            "width": 109.33333333333333,
+            "width": 94,
             "height": 60,
             "measured": {
-              "width": 109,
+              "width": 94,
               "height": 60
             }
           },
@@ -2095,18 +1754,18 @@
               "shapeType": "rectangle",
               "label": "Predicted",
               "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
               "fontSize": "small",
               "locked": true
             },
             "position": {
-              "x": 3303.3333333333335,
+              "x": 3335,
               "y": 680
             },
-            "width": 109.33333333333333,
+            "width": 94,
             "height": 60,
             "measured": {
-              "width": 109,
+              "width": 94,
               "height": 60
             }
           },
@@ -2122,13 +1781,13 @@
               "locked": true
             },
             "position": {
-              "x": 3416.6666666666665,
+              "x": 3432,
               "y": 680
             },
-            "width": 109.33333333333333,
+            "width": 94,
             "height": 60,
             "measured": {
-              "width": 109,
+              "width": 94,
               "height": 60
             }
           },
@@ -2137,20 +1796,20 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "Test 1: ",
+              "label": "",
               "textAlign": "left",
               "backgroundColor": "#ffffff",
               "fontSize": "medium"
             },
             "position": {
-              "x": 2850,
+              "x": 2947,
               "y": 746
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2164,14 +1823,14 @@
               "fontSize": "medium"
             },
             "position": {
-              "x": 2963.3333333333335,
+              "x": 3044,
               "y": 746
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2185,14 +1844,14 @@
               "fontSize": "medium"
             },
             "position": {
-              "x": 3076.6666666666665,
+              "x": 3141,
               "y": 746
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2206,14 +1865,14 @@
               "fontSize": "medium"
             },
             "position": {
-              "x": 3190,
+              "x": 3238,
               "y": 746
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2227,14 +1886,14 @@
               "fontSize": "medium"
             },
             "position": {
-              "x": 3303.3333333333335,
+              "x": 3335,
               "y": 746
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2248,14 +1907,14 @@
               "fontSize": "medium"
             },
             "position": {
-              "x": 3416.6666666666665,
+              "x": 3432,
               "y": 746
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2263,20 +1922,20 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "Test 2: ",
+              "label": "",
               "textAlign": "left",
               "backgroundColor": "#ffffff",
               "fontSize": "medium"
             },
             "position": {
-              "x": 2850,
-              "y": 846
+              "x": 2947,
+              "y": 856
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2290,14 +1949,14 @@
               "fontSize": "medium"
             },
             "position": {
-              "x": 2963.3333333333335,
-              "y": 846
+              "x": 3044,
+              "y": 856
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2311,14 +1970,14 @@
               "fontSize": "medium"
             },
             "position": {
-              "x": 3076.6666666666665,
-              "y": 846
+              "x": 3141,
+              "y": 856
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2332,14 +1991,14 @@
               "fontSize": "medium"
             },
             "position": {
-              "x": 3190,
-              "y": 846
+              "x": 3238,
+              "y": 856
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2353,14 +2012,14 @@
               "fontSize": "medium"
             },
             "position": {
-              "x": 3303.3333333333335,
-              "y": 846
+              "x": 3335,
+              "y": 856
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2374,140 +2033,14 @@
               "fontSize": "medium"
             },
             "position": {
-              "x": 3416.6666666666665,
-              "y": 846
+              "x": 3432,
+              "y": 856
             },
-            "width": 109.33333333333333,
-            "height": 94,
+            "width": 94,
+            "height": 104,
             "measured": {
-              "width": 109,
-              "height": 94
-            }
-          },
-          {
-            "id": "vgn3-n-129",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Test 3: ",
-              "textAlign": "left",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium"
-            },
-            "position": {
-              "x": 2850,
-              "y": 946
-            },
-            "width": 109.33333333333333,
-            "height": 94,
-            "measured": {
-              "width": 109,
-              "height": 94
-            }
-          },
-          {
-            "id": "vgn3-n-130",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "textAlign": "left",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium"
-            },
-            "position": {
-              "x": 2963.3333333333335,
-              "y": 946
-            },
-            "width": 109.33333333333333,
-            "height": 94,
-            "measured": {
-              "width": 109,
-              "height": 94
-            }
-          },
-          {
-            "id": "vgn3-n-131",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "textAlign": "left",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium"
-            },
-            "position": {
-              "x": 3076.6666666666665,
-              "y": 946
-            },
-            "width": 109.33333333333333,
-            "height": 94,
-            "measured": {
-              "width": 109,
-              "height": 94
-            }
-          },
-          {
-            "id": "vgn3-n-132",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "textAlign": "left",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium"
-            },
-            "position": {
-              "x": 3190,
-              "y": 946
-            },
-            "width": 109.33333333333333,
-            "height": 94,
-            "measured": {
-              "width": 109,
-              "height": 94
-            }
-          },
-          {
-            "id": "vgn3-n-133",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "textAlign": "left",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium"
-            },
-            "position": {
-              "x": 3303.3333333333335,
-              "y": 946
-            },
-            "width": 109.33333333333333,
-            "height": 94,
-            "measured": {
-              "width": 109,
-              "height": 94
-            }
-          },
-          {
-            "id": "vgn3-n-134",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "textAlign": "left",
-              "backgroundColor": "#ffffff",
-              "fontSize": "medium"
-            },
-            "position": {
-              "x": 3416.6666666666665,
-              "y": 946
-            },
-            "width": 109.33333333333333,
-            "height": 94,
-            "measured": {
-              "width": 109,
-              "height": 94
+              "width": 94,
+              "height": 104
             }
           },
           {
@@ -2524,13 +2057,13 @@
             },
             "position": {
               "x": 2565,
-              "y": 1196
+              "y": 1276
             },
             "width": 1030,
-            "height": 675,
+            "height": 790,
             "measured": {
               "width": 1030,
-              "height": 675
+              "height": 790
             },
             "zIndex": -1
           },
@@ -2539,7 +2072,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "10",
+              "label": "9",
               "textAlign": "center",
               "backgroundColor": "#9ADBA4",
               "fontSize": "large",
@@ -2548,7 +2081,7 @@
             },
             "position": {
               "x": 2590,
-              "y": 1216
+              "y": 1296
             },
             "width": 60,
             "height": 60,
@@ -2570,7 +2103,7 @@
             },
             "position": {
               "x": 2670,
-              "y": 1219
+              "y": 1299
             },
             "width": 850,
             "height": 55,
@@ -2583,7 +2116,7 @@
             "id": "vgn3-n-138",
             "type": "text",
             "data": {
-              "text": "Trace one right prediction in green. Trace one wrong prediction in red.",
+              "text": "Add Tree 2 from your Backpack. Drag each of your two users to the spot on the tree where their prediction ends.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -2592,13 +2125,13 @@
             },
             "position": {
               "x": 2672,
-              "y": 1281
+              "y": 1361
             },
             "width": 848,
-            "height": 42,
+            "height": 56,
             "measured": {
               "width": 848,
-              "height": 42
+              "height": 56
             }
           },
           {
@@ -2606,7 +2139,7 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "(Tree 2 picture)",
+              "label": "Add Tree 2 from your Backpack",
               "textAlign": "center",
               "backgroundColor": "#ffffff",
               "fontSize": "medium",
@@ -2614,7 +2147,7 @@
             },
             "position": {
               "x": 2600,
-              "y": 1341
+              "y": 1515
             },
             "width": 930,
             "height": 420,
@@ -2635,7 +2168,7 @@
             },
             "position": {
               "x": 2600,
-              "y": 1776
+              "y": 1950
             },
             "width": 930,
             "height": 80,
@@ -2658,7 +2191,7 @@
             },
             "position": {
               "x": 2565,
-              "y": 1911
+              "y": 2576
             },
             "width": 1030,
             "height": 475,
@@ -2682,7 +2215,7 @@
             },
             "position": {
               "x": 2590,
-              "y": 1931
+              "y": 2596
             },
             "width": 60,
             "height": 60,
@@ -2704,7 +2237,7 @@
             },
             "position": {
               "x": 2670,
-              "y": 1934
+              "y": 2599
             },
             "width": 850,
             "height": 55,
@@ -2726,7 +2259,7 @@
             },
             "position": {
               "x": 2672,
-              "y": 1996
+              "y": 2661
             },
             "width": 848,
             "height": 42,
@@ -2749,7 +2282,7 @@
             },
             "position": {
               "x": 2600,
-              "y": 2056
+              "y": 2721
             },
             "width": 930,
             "height": 60,
@@ -2770,7 +2303,7 @@
             },
             "position": {
               "x": 2600,
-              "y": 2116
+              "y": 2781
             },
             "width": 930,
             "height": 85,
@@ -2791,7 +2324,7 @@
             },
             "position": {
               "x": 2600,
-              "y": 2201
+              "y": 2866
             },
             "width": 930,
             "height": 85,
@@ -2812,7 +2345,7 @@
             },
             "position": {
               "x": 2600,
-              "y": 2286
+              "y": 2951
             },
             "width": 930,
             "height": 85,
@@ -3587,109 +3120,1007 @@
               "width": 520,
               "height": 45
             }
+          },
+          {
+            "id": "pf-q1",
+            "type": "text",
+            "data": {
+              "text": "1. Spot: On the Testing tab, click Accuracy. Then click Incorrect.",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1340,
+              "y": 1195
+            },
+            "width": 930,
+            "height": 42,
+            "measured": {
+              "width": 930,
+              "height": 42
+            }
+          },
+          {
+            "id": "pf-b1a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Number incorrect: ",
+              "textAlign": "left",
+              "backgroundColor": "#ffffff",
+              "fontSize": "medium"
+            },
+            "position": {
+              "x": 1340,
+              "y": 1240
+            },
+            "width": 450,
+            "height": 75,
+            "measured": {
+              "width": 450,
+              "height": 75
+            }
+          },
+          {
+            "id": "pf-b1b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Number of test records: ",
+              "textAlign": "left",
+              "backgroundColor": "#ffffff",
+              "fontSize": "medium"
+            },
+            "position": {
+              "x": 1820,
+              "y": 1240
+            },
+            "width": 450,
+            "height": 75,
+            "measured": {
+              "width": 450,
+              "height": 75
+            }
+          },
+          {
+            "id": "pf-q2",
+            "type": "text",
+            "data": {
+              "text": "2. Click Expand columns, then Filter. Check each feature. If none are incorrect, skip to 3.",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1340,
+              "y": 1330
+            },
+            "width": 930,
+            "height": 42,
+            "measured": {
+              "width": 930,
+              "height": 42
+            }
+          },
+          {
+            "id": "pf-b2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Most incorrect records have this category: ",
+              "textAlign": "left",
+              "backgroundColor": "#ffffff",
+              "fontSize": "medium"
+            },
+            "position": {
+              "x": 1340,
+              "y": 1375
+            },
+            "width": 930,
+            "height": 75,
+            "measured": {
+              "width": 930,
+              "height": 75
+            }
+          },
+          {
+            "id": "pf-q3",
+            "type": "text",
+            "data": {
+              "text": "3. Trace: Go to the Dataset tab. Click Platform Type to open Column Analysis, even if you didn't pick it.",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1340,
+              "y": 1465
+            },
+            "width": 760,
+            "height": 64,
+            "measured": {
+              "width": 760,
+              "height": 64
+            }
+          },
+          {
+            "id": "pf-q4",
+            "type": "text",
+            "data": {
+              "text": "4. Click Filter. Choose the category you circled. How many records have each label?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1340,
+              "y": 1755
+            },
+            "width": 930,
+            "height": 42,
+            "measured": {
+              "width": 930,
+              "height": 42
+            }
+          },
+          {
+            "id": "pf-b4",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Records with each label: ",
+              "textAlign": "left",
+              "backgroundColor": "#ffffff",
+              "fontSize": "medium"
+            },
+            "position": {
+              "x": 1340,
+              "y": 1800
+            },
+            "width": 930,
+            "height": 75,
+            "measured": {
+              "width": 930,
+              "height": 75
+            }
+          },
+          {
+            "id": "pf-q5",
+            "type": "text",
+            "data": {
+              "text": "5. Fix: Circle ONE move that could help Tree 1.",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1340,
+              "y": 1890
+            },
+            "width": 760,
+            "height": 42,
+            "measured": {
+              "width": 760,
+              "height": 42
+            }
+          },
+          {
+            "id": "pf-m0",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "FEATURE",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": 1340,
+              "y": 1935
+            },
+            "width": 170,
+            "height": 60,
+            "measured": {
+              "width": 170,
+              "height": 60
+            }
+          },
+          {
+            "id": "pf-m1",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "ADD",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": 1530,
+              "y": 1935
+            },
+            "width": 170,
+            "height": 60,
+            "measured": {
+              "width": 170,
+              "height": 60
+            }
+          },
+          {
+            "id": "pf-m2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "CUT",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": 1720,
+              "y": 1935
+            },
+            "width": 170,
+            "height": 60,
+            "measured": {
+              "width": 170,
+              "height": 60
+            }
+          },
+          {
+            "id": "pf-m3",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "BALANCE",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": 1910,
+              "y": 1935
+            },
+            "width": 170,
+            "height": 60,
+            "measured": {
+              "width": 170,
+              "height": 60
+            }
+          },
+          {
+            "id": "pf-m4",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "None",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": 2100,
+              "y": 1935
+            },
+            "width": 170,
+            "height": 60,
+            "measured": {
+              "width": 170,
+              "height": 60
+            }
+          },
+          {
+            "id": "pf-oval2",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "textAlign": "left",
+              "backgroundColor": "transparent",
+              "fontSize": "medium",
+              "strokeColor": "#e03131"
+            },
+            "position": {
+              "x": 2120,
+              "y": 1880
+            },
+            "width": 200,
+            "height": 70,
+            "measured": {
+              "width": 200,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "pf-b5",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "I picked this move because ",
+              "textAlign": "left",
+              "backgroundColor": "#ffffff",
+              "fontSize": "medium"
+            },
+            "position": {
+              "x": 1340,
+              "y": 2010
+            },
+            "width": 930,
+            "height": 75,
+            "measured": {
+              "width": 930,
+              "height": 75
+            }
+          },
+          {
+            "id": "pf-b8",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "New Problem: Did your change cause a new problem? If yes, what? ",
+              "textAlign": "left",
+              "backgroundColor": "#ffffff",
+              "fontSize": "medium"
+            },
+            "position": {
+              "x": 1340,
+              "y": 2700
+            },
+            "width": 930,
+            "height": 80,
+            "measured": {
+              "width": 930,
+              "height": 80
+            }
+          },
+          {
+            "id": "pf-q3b",
+            "type": "text",
+            "data": {
+              "text": "Which category is Least Common? Circle it.",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1340,
+              "y": 1540
+            },
+            "width": 760,
+            "height": 42,
+            "measured": {
+              "width": 760,
+              "height": 42
+            }
+          },
+          {
+            "id": "tu-head",
+            "type": "text",
+            "data": {
+              "text": "Your users: drag two of them into the User column.",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 2850,
+              "y": 1052
+            },
+            "width": 680,
+            "height": 30,
+            "measured": {
+              "width": 680,
+              "height": 30
+            }
+          },
+          {
+            "id": "tu-img-Omar",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/8728d0e6-6152-45d5-9d0a-f4a9ea5eb6ce.jpg",
+              "altText": "User Profile card picture: Omar",
+              "locked": false
+            },
+            "position": {
+              "x": 2850,
+              "y": 1088
+            },
+            "width": 90,
+            "height": 90,
+            "measured": {
+              "width": 90,
+              "height": 90
+            }
+          },
+          {
+            "id": "tu-name-Omar",
+            "type": "text",
+            "data": {
+              "text": "Omar",
+              "strokeColor": "transparent",
+              "fontSize": "small",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 2850,
+              "y": 1182
+            },
+            "width": 160,
+            "height": 28,
+            "measured": {
+              "width": 160,
+              "height": 28
+            }
+          },
+          {
+            "id": "tu-img-Dani",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/66ff4257-4dcf-4ff8-b254-2186330f1ba6.jpg",
+              "altText": "User Profile card picture: Dani",
+              "locked": false
+            },
+            "position": {
+              "x": 3020,
+              "y": 1088
+            },
+            "width": 90,
+            "height": 90,
+            "measured": {
+              "width": 90,
+              "height": 90
+            }
+          },
+          {
+            "id": "tu-name-Dani",
+            "type": "text",
+            "data": {
+              "text": "Dani",
+              "strokeColor": "transparent",
+              "fontSize": "small",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 3020,
+              "y": 1182
+            },
+            "width": 160,
+            "height": 28,
+            "measured": {
+              "width": 160,
+              "height": 28
+            }
+          },
+          {
+            "id": "tu-img-Nguyen",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/581839e2-78f6-4712-9186-cd819a9bcda1.jpg",
+              "altText": "User Profile card picture: Mr. Nguyen",
+              "locked": false
+            },
+            "position": {
+              "x": 3190,
+              "y": 1088
+            },
+            "width": 90,
+            "height": 90,
+            "measured": {
+              "width": 90,
+              "height": 90
+            }
+          },
+          {
+            "id": "tu-name-Nguyen",
+            "type": "text",
+            "data": {
+              "text": "Mr. Nguyen",
+              "strokeColor": "transparent",
+              "fontSize": "small",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 3190,
+              "y": 1182
+            },
+            "width": 160,
+            "height": 28,
+            "measured": {
+              "width": 160,
+              "height": 28
+            }
+          },
+          {
+            "id": "tu-img-Tasha",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/695dd869-db90-446c-9902-6e59dab07677.jpg",
+              "altText": "User Profile card picture: Tasha",
+              "locked": false
+            },
+            "position": {
+              "x": 3360,
+              "y": 1088
+            },
+            "width": 90,
+            "height": 90,
+            "measured": {
+              "width": 90,
+              "height": 90
+            }
+          },
+          {
+            "id": "tu-name-Tasha",
+            "type": "text",
+            "data": {
+              "text": "Tasha",
+              "strokeColor": "transparent",
+              "fontSize": "small",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 3360,
+              "y": 1182
+            },
+            "width": 160,
+            "height": 28,
+            "measured": {
+              "width": 160,
+              "height": 28
+            }
+          },
+          {
+            "id": "t8-h-user",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "fontSize": "small",
+              "locked": true
+            },
+            "position": {
+              "x": 2850,
+              "y": 680
+            },
+            "width": 94,
+            "height": 60,
+            "measured": {
+              "width": 94,
+              "height": 60
+            }
+          },
+          {
+            "id": "t8-u0",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "textAlign": "center",
+              "backgroundColor": "#ffffff",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": 2850,
+              "y": 746
+            },
+            "width": 94,
+            "height": 104,
+            "measured": {
+              "width": 94,
+              "height": 104
+            }
+          },
+          {
+            "id": "t8-u1",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "textAlign": "center",
+              "backgroundColor": "#ffffff",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": 2850,
+              "y": 856
+            },
+            "width": 94,
+            "height": 104,
+            "measured": {
+              "width": 94,
+              "height": 104
+            }
+          },
+          {
+            "id": "t8-ckhint",
+            "type": "text",
+            "data": {
+              "text": "Drag a ✓ or ✗ into Right?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 2850,
+              "y": 983
+            },
+            "width": 370,
+            "height": 30,
+            "measured": {
+              "width": 370,
+              "height": 30
+            }
+          },
+          {
+            "id": "t8-ck1",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✓",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 3250,
+              "y": 968
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            }
+          },
+          {
+            "id": "t8-ck2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✓",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 3320,
+              "y": 968
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            }
+          },
+          {
+            "id": "t8-x1",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✗",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 3390,
+              "y": 968
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            }
+          },
+          {
+            "id": "t8-x2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✗",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 3460,
+              "y": 968
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            }
+          },
+          {
+            "id": "t9-head",
+            "type": "text",
+            "data": {
+              "text": "Your users:",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 2600,
+              "y": 1455
+            },
+            "width": 170,
+            "height": 30,
+            "measured": {
+              "width": 170,
+              "height": 30
+            }
+          },
+          {
+            "id": "t9-img-Omar",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/8728d0e6-6152-45d5-9d0a-f4a9ea5eb6ce.jpg",
+              "altText": "User Profile card picture: Omar",
+              "locked": false
+            },
+            "position": {
+              "x": 2780,
+              "y": 1430
+            },
+            "width": 70,
+            "height": 70,
+            "measured": {
+              "width": 70,
+              "height": 70
+            }
+          },
+          {
+            "id": "t9-img-Dani",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/66ff4257-4dcf-4ff8-b254-2186330f1ba6.jpg",
+              "altText": "User Profile card picture: Dani",
+              "locked": false
+            },
+            "position": {
+              "x": 2870,
+              "y": 1430
+            },
+            "width": 70,
+            "height": 70,
+            "measured": {
+              "width": 70,
+              "height": 70
+            }
+          },
+          {
+            "id": "t9-img-Nguyen",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/581839e2-78f6-4712-9186-cd819a9bcda1.jpg",
+              "altText": "User Profile card picture: Mr. Nguyen",
+              "locked": false
+            },
+            "position": {
+              "x": 2960,
+              "y": 1430
+            },
+            "width": 70,
+            "height": 70,
+            "measured": {
+              "width": 70,
+              "height": 70
+            }
+          },
+          {
+            "id": "t9-img-Tasha",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/695dd869-db90-446c-9902-6e59dab07677.jpg",
+              "altText": "User Profile card picture: Tasha",
+              "locked": false
+            },
+            "position": {
+              "x": 3050,
+              "y": 1430
+            },
+            "width": 70,
+            "height": 70,
+            "measured": {
+              "width": 70,
+              "height": 70
+            }
+          },
+          {
+            "id": "et-name-card",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "textAlign": "center",
+              "label": "",
+              "backgroundColor": "#2e9e48",
+              "strokeColor": "var(--sketchlab-stroke-green)",
+              "fontColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": 2600,
+              "y": 2231
+            },
+            "width": 455,
+            "height": 300,
+            "measured": {
+              "width": 455,
+              "height": 300
+            }
+          },
+          {
+            "id": "et-name-q",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "textAlign": "center",
+              "label": "Name\nWhose choice was it?\nWho could have chosen differently?",
+              "strokeColor": "#2e9e48",
+              "fontColor": "#ffffff",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 2615,
+              "y": 2238
+            },
+            "width": 425,
+            "height": 110,
+            "measured": {
+              "width": 425,
+              "height": 110
+            }
+          },
+          {
+            "id": "et-name-ans",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "textAlign": "center",
+              "label": "Answer here",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontFamily": "draw",
+              "fontSize": "large",
+              "strokeColor": "#d0fae5"
+            },
+            "position": {
+              "x": 2625,
+              "y": 2361
+            },
+            "width": 405,
+            "height": 155,
+            "measured": {
+              "width": 405,
+              "height": 155
+            }
+          },
+          {
+            "id": "et-zoom-card",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "textAlign": "center",
+              "label": "",
+              "backgroundColor": "#2e9e48",
+              "strokeColor": "var(--sketchlab-stroke-green)",
+              "fontColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": 3075,
+              "y": 2231
+            },
+            "width": 455,
+            "height": 300,
+            "measured": {
+              "width": 455,
+              "height": 300
+            }
+          },
+          {
+            "id": "et-zoom-q",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "textAlign": "center",
+              "label": "Zoom Out\nWho else is affected: a person, a group, a community?",
+              "strokeColor": "#2e9e48",
+              "fontColor": "#ffffff",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 3090,
+              "y": 2238
+            },
+            "width": 425,
+            "height": 110,
+            "measured": {
+              "width": 425,
+              "height": 110
+            }
+          },
+          {
+            "id": "et-zoom-ans",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "textAlign": "center",
+              "label": "Answer here",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontFamily": "draw",
+              "fontSize": "large",
+              "strokeColor": "#d0fae5"
+            },
+            "position": {
+              "x": 3100,
+              "y": 2361
+            },
+            "width": 405,
+            "height": 155,
+            "measured": {
+              "width": 405,
+              "height": 155
+            }
           }
         ],
         "edges": [
-          {
-            "id": "vgn3-e-82",
-            "source": "vgn3-a-80",
-            "target": "vgn3-a-81",
-            "type": "straight",
-            "style": {
-              "stroke": "#2F7FD3",
-              "strokeWidth": 3,
-              "strokeDasharray": "8 8"
-            },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "#2F7FD3",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 1
-            }
-          },
-          {
-            "id": "vgn3-e-86",
-            "source": "vgn3-a-84",
-            "target": "vgn3-a-85",
-            "type": "straight",
-            "style": {
-              "stroke": "#2F7FD3",
-              "strokeWidth": 3,
-              "strokeDasharray": "8 8"
-            },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "#2F7FD3",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 1
-            }
-          },
-          {
-            "id": "vgn3-e-90",
-            "source": "vgn3-a-88",
-            "target": "vgn3-a-89",
-            "type": "straight",
-            "style": {
-              "stroke": "#2F7FD3",
-              "strokeWidth": 3,
-              "strokeDasharray": "8 8"
-            },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "#2F7FD3",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 1
-            }
-          },
-          {
-            "id": "vgn3-e-94",
-            "source": "vgn3-a-92",
-            "target": "vgn3-a-93",
-            "type": "straight",
-            "style": {
-              "stroke": "#2F7FD3",
-              "strokeWidth": 3,
-              "strokeDasharray": "8 8"
-            },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "#2F7FD3",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 1
-            }
-          },
-          {
-            "id": "vgn3-e-98",
-            "source": "vgn3-a-96",
-            "target": "vgn3-a-97",
-            "type": "straight",
-            "style": {
-              "stroke": "#2F7FD3",
-              "strokeWidth": 3,
-              "strokeDasharray": "8 8"
-            },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "#2F7FD3",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 1
-            }
-          }
+
         ],
         "viewport": {
-          "x": 315.52901208941694,
-          "y": -299.86676732522415,
-          "zoom": 0.3286258241175577
+          "x": -1292.6468258364775,
+          "y": -797.0602110986654,
+          "zoom": 0.5413065535707483
         }
       }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-13 20:33:08 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 22:57:50 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 23:04:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 23:15:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:26:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:26:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:33:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:44:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:54:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:12:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:25:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:26:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:27:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:33:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-13 20:33:08 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 22:57:50 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 23:04:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 23:15:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:26:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:26:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:33:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:44:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:54:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:12:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:25:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:26:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:27:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:33:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 01:16:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 01:17:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 01:17:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 03:07:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 03:39:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 03:39:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 04:26:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
