@@ -185,6 +185,27 @@ describe('SentenceScene', () => {
     expect(generateImage).toHaveBeenCalledTimes(1);
   });
 
+  it('says so and asks for no rating when a picture cannot be saved', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    onKeep.mockRejectedValueOnce(new Error('upload failed'));
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+    renderScene();
+    pickCreature();
+    await generate();
+    expect(
+      screen.getByText("Couldn't save the picture. Try again.")
+    ).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'Good'})).toBeNull();
+    // Trying again saves the next picture, and it can be rated.
+    await generate();
+    expect(onKeep).toHaveBeenCalledTimes(2);
+    expect(
+      screen.queryByText("Couldn't save the picture. Try again.")
+    ).toBeNull();
+    expect(screen.getByRole('button', {name: 'Good'})).toBeTruthy();
+    jest.mocked(console.error).mockRestore();
+  });
+
   it('keeps the picture as it lands, and again with its rating when no host records it', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();

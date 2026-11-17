@@ -275,6 +275,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     return found;
   }, [sentence, choices, style, canAnimate, imageCacheUrl]);
 
+  // Resolves false when the picture could not be saved.
   const persist = useCallback(
     async (picture: GeneratedPicture, pictureVerdict: Verdict | null) => {
       setSaving(true);
@@ -288,9 +289,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         : picture.result;
       try {
         await onKeep(result);
+        return true;
       } catch (e) {
         console.error('Saving the image failed:', e);
         setError("Couldn't save the picture. Try again.");
+        return false;
       } finally {
         setSaving(false);
       }
@@ -438,13 +441,19 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       // leaving the page during the wait does not lose it.
       const stored = persist(entry, null);
       await onReady?.(entry.result);
+      const saved = await stored;
       if (run !== runRef.current) {
+        return;
+      }
+      // A picture that was not saved is not an image of the project, so
+      // there is nothing to show or rate: the student generates again.
+      if (!saved) {
+        setMode('edit');
         return;
       }
       setChosenPicture(entry);
       setMode('result');
       playSound('reveal');
-      await stored;
     } catch (e) {
       if (run !== runRef.current) {
         return;
