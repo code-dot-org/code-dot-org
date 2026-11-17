@@ -239,9 +239,28 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     goToNext,
   ]);
 
-  const handleReflectionComplete = useCallback((data: ReflectionData) => {
-    setReflectionData(data);
-  }, []);
+  const handleReflectionComplete = useCallback(
+    (data: ReflectionData) => {
+      setReflectionData(data);
+      Object.entries(data.objectiveReflections).forEach(
+        ([objectiveId, rating]) => {
+          if (rating) {
+            analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_OBJECTIVE_RATED, {
+              lesson_id: lessonDeepDiveData.lessonId,
+              objective_id: objectiveId,
+              rating,
+            });
+          }
+        }
+      );
+      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_REFLECTION_SUBMITTED, {
+        lesson_id: lessonDeepDiveData.lessonId,
+        has_success_note: data.success.trim().length > 0,
+        has_confusion_note: data.struggle.trim().length > 0,
+      });
+    },
+    [lessonDeepDiveData.lessonId]
+  );
 
   // Returns the first struggling objective's description, shown as the focus
   // topic on the intervention screen to personalise the "Let's get to work" heading.

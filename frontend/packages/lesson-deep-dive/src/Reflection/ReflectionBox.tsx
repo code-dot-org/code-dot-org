@@ -130,22 +130,6 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
         () => {},
       );
 
-      objectives.forEach(o => {
-        const rating = objectiveReflections[o.id];
-        if (rating) {
-          analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_OBJECTIVE_RATED, {
-            lesson_id: lessonId,
-            objective_id: o.id,
-            rating,
-          });
-        }
-      });
-      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_REFLECTION_SUBMITTED, {
-        lesson_id: lessonId,
-        has_success_note: success.trim().length > 0,
-        has_confusion_note: struggle.trim().length > 0,
-      });
-
       onSubmitComplete({
         objectiveReflections: objectiveReflections as Record<
           string,
