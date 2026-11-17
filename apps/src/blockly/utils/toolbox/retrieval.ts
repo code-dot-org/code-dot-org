@@ -5,6 +5,8 @@ import localization from '@cdo/apps/localization';
 import {getSimplifiedStateForFlyout} from '../serialization/flyouts';
 import {convertXmlToJson} from '../serialization/xmlToJson';
 
+import {isDynamicCategoryInfo} from './typeGuards';
+
 type FlyoutItemInfoArray = BlocklyCore.utils.toolbox.FlyoutItemInfoArray;
 
 /**
@@ -18,7 +20,6 @@ export function getLevelToolboxBlocks(customCategory: string) {
   if (!Blockly.toolboxBlocks || typeof Blockly.toolboxBlocks !== 'string') {
     return;
   }
-  // TODO: Update this to support JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
   const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
 
   // Find the category based on the custom attribute
@@ -51,9 +52,20 @@ export function getLevelToolboxBlocks(customCategory: string) {
 }
 
 // Returns a list of Blockly toolbox blocks in JSON for a given category.
-// This is used in order to merge XML toolbox blocks with the dynamically created
+// This is used in order to merge level toolbox blocks with the dynamically created
 // blocks in auto-populated categories, such as Behaviors, Functions, and Variables.
-export function getCategoryBlocksJson(category: string): FlyoutItemInfoArray {
+export function getCategoryBlocksJson(
+  workspace: BlocklyCore.WorkspaceSvg,
+  category: string
+): FlyoutItemInfoArray {
+  if (typeof Blockly.toolboxBlocks !== 'string') {
+    // Read the workspace's own toolbox: a lab may swap it after injection.
+    return (
+      workspace.options.languageTree?.contents
+        .filter(isDynamicCategoryInfo)
+        .find(item => item.custom === category)?.contents || []
+    );
+  }
   const categoryBlocksJson: FlyoutItemInfoArray = [];
   const levelToolboxBlocks = getLevelToolboxBlocks(category);
   if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {

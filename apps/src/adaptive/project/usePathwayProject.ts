@@ -53,7 +53,13 @@ export function usePathwayProject(pathway: Pathway): PathwayProjectState {
     isLoading,
     isEditable,
     loadError,
-  } = useSources({levelProperties: templateLevel, defaultSources: NO_SOURCES});
+  } = useSources({
+    levelProperties: templateLevel,
+    defaultSources: NO_SOURCES,
+    // The step's manager is the one the embedded lab saves through; this one
+    // must not displace it in the registry.
+    registerProjectManager: false,
+  });
 
   const editProject = useCallback<PathwayProjectState['editProject']>(
     async ({name, description}) => {

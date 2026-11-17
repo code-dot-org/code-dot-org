@@ -11587,9 +11587,10 @@ indexes:
   delayed_jobs:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: delayed_jobs
-    name: delayed_jobs_priority
+    name: index_delayed_jobs_on_failed_at_and_priority_and_run_at
     unique: false
     columns:
+    - failed_at
     - priority
     - run_at
     lengths: {}
@@ -18562,7 +18563,7 @@ indexes:
     nulls_not_distinct: 
     comment: 
     valid: true
-version: 20261104120000
+version: 20261116120000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
