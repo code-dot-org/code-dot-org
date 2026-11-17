@@ -313,6 +313,22 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal 123, summary['size']
   end
 
+  test 'upload_by_uuid: accepts an upper-case file extension' do
+    LevelStarterAssetsHelper.expects(:get_object).with("#{@uuid}.JPG").returns(@file_obj)
+    @file_obj.expects(:upload_file).returns(true)
+    sign_in create(:levelbuilder)
+    level = create(:weblab2)
+
+    filename = 'picture.JPG'
+    FileUtils.touch(filename)
+    file = fixture_file_upload(filename, 'image/jpeg')
+    post :upload_by_uuid, params: {level_name: level.name, uuid: @uuid, files: [file]}
+    assert_response :success
+    assert_equal filename, JSON.parse(response.body)['filename']
+  ensure
+    File.delete(filename) if filename && File.exist?(filename)
+  end
+
   test 'upload: can successfully upload files with single- and double- quotes in filenames' do
     LevelStarterAssetsHelper.expects(:get_object).twice.returns(@file_obj)
     @file_obj.expects(:upload_file).twice.returns(true)

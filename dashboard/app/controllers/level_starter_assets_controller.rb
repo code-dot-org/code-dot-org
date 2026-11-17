@@ -105,7 +105,7 @@ class LevelStarterAssetsController < ApplicationController
     friendly_name = upload.original_filename
     file_ext = File.extname(friendly_name)
 
-    unless VALID_FILE_EXTENSIONS.include?(file_ext)
+    unless VALID_FILE_EXTENSIONS.include?(file_ext.downcase)
       head :unprocessable_entity
       return nil
     end
