@@ -10,7 +10,7 @@ import {
   totalTimeSpent,
   useProgress,
   continueUnlockReason,
-  chatChecks,
+  skippedAttempts,
   validationAllowsContinue,
   visibleSteps,
   workAttempts,
@@ -250,7 +250,7 @@ describe('validationAllowsContinue', () => {
   });
 });
 
-describe('workAttempts, chatChecks and latestValidation', () => {
+describe('workAttempts, skippedAttempts and latestValidation', () => {
   const work = {at: '1', pass: false, evidenceLevel: 1, reason: 'Not quite!'};
   const old = {at: '0', pass: false, evidenceLevel: 0, reason: 'Old.'};
   const chat = {
@@ -265,7 +265,7 @@ describe('workAttempts, chatChecks and latestValidation', () => {
 
   it('reads an entry with no pass reason as work, and keeps the kinds apart', () => {
     expect(workAttempts(entry)).toEqual([old, work]);
-    expect(chatChecks(entry)).toEqual([chat]);
+    expect(skippedAttempts(entry)).toEqual([chat]);
     expect(workAttempts(undefined)).toEqual([]);
   });
 

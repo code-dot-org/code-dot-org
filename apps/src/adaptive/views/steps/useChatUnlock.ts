@@ -8,7 +8,7 @@ import {sendContinueUnlocked} from '../../metricsHelpers';
 import {
   StepProgress,
   ValidationAttempt,
-  chatChecks,
+  skippedAttempts,
   workAttempts,
 } from '../../progress/model';
 import {Checkpoint, LevelStep} from '../../types';
@@ -51,7 +51,7 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
       const {replyLimit} = chatThresholds();
       if (transcript.replies < replyLimit) return;
       // Recorded already, say when the save has not come back yet: not again.
-      const hasPassedLimit = chatChecks(currentOptions.progress).some(
+      const hasPassedLimit = skippedAttempts(currentOptions.progress).some(
         check => check.skipReason === 'limitReached'
       );
       if (hasPassedLimit) return;

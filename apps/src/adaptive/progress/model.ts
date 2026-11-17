@@ -89,8 +89,8 @@ export const workAttempts = (
 ): ValidationAttempt[] =>
   (entry?.validationHistory ?? []).filter(attempt => !attempt.skipReason);
 
-/** The chat entries on a step, oldest first. */
-export const chatChecks = (
+/** The entries where the student skipped a step's check, oldest first. */
+export const skippedAttempts = (
   entry: StepProgress | undefined
 ): ValidationAttempt[] =>
   (entry?.validationHistory ?? []).filter(attempt => !!attempt.skipReason);
@@ -118,7 +118,7 @@ export function continueUnlockReason(
   const work = workAttempts(entry);
   if (work.some(attempt => attempt.pass)) return 'validationPassed';
   if (work.length >= FAILED_VALIDATIONS_TO_CONTINUE) return 'failedValidations';
-  return chatChecks(entry).find(check => check.pass)?.skipReason;
+  return skippedAttempts(entry).find(check => check.pass)?.skipReason;
 }
 
 /** Whether a checked step's work or chat lets the student continue past it. */
