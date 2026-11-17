@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-14 00:54:42 UTC",
+    "serialized_at": "2026-11-17 01:31:17 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -273,7 +273,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**What does it take to keep an AI system trustworthy?**\n\nThis lesson formalizes what students discover firsthand in the Auto-Mod Review Queue warm-up — that an AI system can seem confident and still be wrong once the world it operates in shifts. Direct instruction names model drift and introduces four ways a system can go wrong along with four possible human responses, then \"Keep It Running\" puts pairs in charge of a live system through a year of decisions and consequences. The lesson closes with a class debrief connecting those decisions back to the standard, followed by a check for understanding that assesses transfer to a new scenario.",
-        "purpose": "- (Optional) If you want students to turn in evidence of their Keep It Running results, provide copies of the Keep It Running Activity Guide (one per pair).",
+        "preparation": "- (Optional) If you want students to turn in evidence of their Keep It Running results, provide copies of the Keep It Running Activity Guide (one per pair).",
         "student_overview": "**What does it take to keep an AI system trustworthy?**\n\nYou take charge of an AI system for its first year, deciding how to respond as new problems come up and keeping its transparency statement honest along the way. Every choice you make shapes whether people can still trust the system by the end."
       },
       "seeding_key": {
@@ -1089,12 +1089,41 @@
       }
     },
     {
-      "key": "aa82c15a-e8d3-437d-a528-12952210f240",
+      "key": "4a29dc74-fcf2-49f2-a52c-db1912cdbcef",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4a29dc74-fcf2-49f2-a52c-db1912cdbcef",
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "aa82c15a-e8d3-437d-a528-12952210f240",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240",
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "47a1a4c1-fdb6-47e3-aa31-6f146bbbaf3b",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47a1a4c1-fdb6-47e3-aa31-6f146bbbaf3b",
         "lesson.key": "lesson-27",
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28"
@@ -5283,9 +5312,57 @@
       }
     },
     {
+      "key": "b11c03e4-440c-4593-9edc-0b296ab7ca43",
+      "position": 1,
+      "properties": {
+        "description": "Today we are going to try our own hands at cropping and then closely examine a real-world situation where training a model to crop photos leads to algorithmic bias.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b11c03e4-440c-4593-9edc-0b296ab7ca43",
+        "lesson_activity.key": "4a29dc74-fcf2-49f2-a52c-db1912cdbcef"
+      }
+    },
+    {
+      "key": "410818f6-3b4f-4567-988d-55b88db51465",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- Think about a time when you shared a picture with your friends or on social media.\n- *Have you ever had to crop a photo you shared?*\n- *How did you decide what to crop out of the picture?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to show that users usually have a reason for sharing photos and the focus depends on that reason. Students will most likely bring up a wide range of examples that can be used to highlight how there isn’t a one size fits all approach to sharing photos and cropping them."
+      },
+      "seeding_key": {
+        "activity_section.key": "410818f6-3b4f-4567-988d-55b88db51465",
+        "lesson_activity.key": "4a29dc74-fcf2-49f2-a52c-db1912cdbcef"
+      }
+    },
+    {
+      "key": "1ae6dc01-4804-401a-9d23-abc9dc895b3f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives."
+      },
+      "seeding_key": {
+        "activity_section.key": "1ae6dc01-4804-401a-9d23-abc9dc895b3f",
+        "lesson_activity.key": "4a29dc74-fcf2-49f2-a52c-db1912cdbcef"
+      }
+    },
+    {
+      "key": "6a8e22c7-f3a9-4af3-a5b4-00ef5e27e0cf",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "6a8e22c7-f3a9-4af3-a5b4-00ef5e27e0cf",
+        "lesson_activity.key": "4a29dc74-fcf2-49f2-a52c-db1912cdbcef"
+      }
+    },
+    {
       "key": "9f0e6f9c-9568-47d0-9d30-859154dccd8b",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students crop images as if they were posting to social media, then compare choices with a partner to see that different people make different decisions about what to keep and what to leave out.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 15, Level 1 to crop the images as if they were uploading them to a social media account. Students can also upload their own images and crop them as well.",
+        "duration": "10",
+        "name": "Cropping Widget",
         "progression_name": "Cropping Widget"
       },
       "seeding_key": {
@@ -5294,9 +5371,221 @@
       }
     },
     {
-      "key": "59440aec-4b67-42ca-8a3d-223cf3cdadb2",
+      "key": "765e0bae-60da-4810-92ea-f45f846ce4b5",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Which images were challenging for you to decide how to crop?*\n- *Which images did you and your partner crop the same?*\n- *Which images did you and your partner crop differently?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to highlight the different experiences and perspectives everyone brings to deciding how to crop an image. Direct students to consider not only what they decided to keep in the picture, but also what they decided to crop out of the picture. What happens when we crop something out of a picture? It never gets seen by the audience. Look back at the photos you cropped. What or who got left out? You may choose to guide the class toward describing general characteristics of images that were challenging to crop."
+      },
+      "seeding_key": {
+        "activity_section.key": "765e0bae-60da-4810-92ea-f45f846ce4b5",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "d55f2e1c-47ab-4e56-adcf-a11774390e24",
+      "position": 3,
+      "properties": {
+        "description": "Now imagine we recorded how everyone in this room cropped the images from this widget. We could use that information to train a model, just like we did with the fish earlier in the unit. This model could then be used to crop other photos being uploaded to the social media site.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d55f2e1c-47ab-4e56-adcf-a11774390e24",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "60ced984-c474-4088-83e6-3ebd09f81a2e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How might the cropping data from our classroom be biased?*\n- *What are some ways we could address the biases in our data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that if this were training a model, bias could arise from a few different places.\n- The limited set of pictures included in the app that are most likely not representative of the photos being shared on social media.\n- The choices of the students themselves. Are teenagers more likely to focus on certain things when cropping? Is this representative of the whole population of social media users?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When discussing bias, connect back to the training students did earlier in the unit when deciding what an ‘angry’ or ‘fun’ fish looks like, pushing students to consider how their opinions might lead to problems when training an AI model that would be widely used."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "60ced984-c474-4088-83e6-3ebd09f81a2e",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "96463f00-6336-41b8-ae30-756f03707372",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students watch a real case of a cropping algorithm that favored some people over others, then identify the evidence and the sources of bias.",
+        "duration": "10",
+        "name": "Twitter Cropping Algorithm Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "96463f00-6336-41b8-ae30-756f03707372",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "b3e71e09-4ca9-45a5-ac7a-ef436beb1ad3",
+      "position": 6,
+      "properties": {
+        "description": "It turns out that the issue of how to crop an image is something social media platforms have been working on for some time. We are going to watch a video that shows the issues that arose when Twitter used machine learning to train an algorithm to do this cropping.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b3e71e09-4ca9-45a5-ac7a-ef436beb1ad3",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "e3e46ac5-badd-4737-b25f-100f3724b157",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-video\"></i> **Video:** Show the \"Are We Automating Racism?\" video."
+      },
+      "seeding_key": {
+        "activity_section.key": "e3e46ac5-badd-4737-b25f-100f3724b157",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "9c5927d3-6357-4518-af2f-192c113377c3",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-video\"></i> **Video:** Show the second part of the video “Are We Automating Racism?”  (from 9:30 - 11:01)."
+      },
+      "seeding_key": {
+        "activity_section.key": "9c5927d3-6357-4518-af2f-192c113377c3",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "7f7d5b68-48dd-462e-acd6-cc833680462e",
+      "position": 9,
+      "properties": {
+        "description": "Next, the reporter talks with an engineer who built a similar cropping tool, and then asks what data it was trained on.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7f7d5b68-48dd-462e-acd6-cc833680462e",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "c01cb2ff-0d7a-4103-8292-588984b36249",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-video\"></i> **Video:** Show the the third part of the video “Are We Automating Racism?”  (from 12:52 - 13:46)."
+      },
+      "seeding_key": {
+        "activity_section.key": "c01cb2ff-0d7a-4103-8292-588984b36249",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "57e72533-45f6-47fd-9144-5f6beba66404",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *bias*."
+      },
+      "seeding_key": {
+        "activity_section.key": "57e72533-45f6-47fd-9144-5f6beba66404",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "f5018b5a-702c-4230-8b14-a3b72dbffaf0",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data* *bias*."
+      },
+      "seeding_key": {
+        "activity_section.key": "f5018b5a-702c-4230-8b14-a3b72dbffaf0",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "74eaad59-3856-4724-a3c0-0d3fbba84e91",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts.\n- *Who did the cropping algorithm favor, and what evidence in the video shows this?*\n- *Using our definition, is this bias? Why or why not?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that the reporters' tests and the tweets show the algorithm consistently kept lighter faces over darker faces, which fits the definition of bias. Students should recognize that the harm is about who gets seen, not just whether the crop was accurate.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep students focused on the evidence and on what the algorithm did, rather than on whether the machine itself is racist."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "74eaad59-3856-4724-a3c0-0d3fbba84e91",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "60e83b06-8386-4089-9e27-d47e6b524f02",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts.\n- *How was the Twitter cropping algorithm trained?*\n- *According to the video, where is a potential source of bias when training similar cropping algorithms?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that the machine is not prejudiced. The bias came from design choices and data. Students should recognize that the model learned from saliency datasets built from photo libraries that do not represent the population as a whole (data bias), and that people chose that approach. Push students to explain how the two interact: choices about what data to collect shape how the app behaves for different users."
+      },
+      "seeding_key": {
+        "activity_section.key": "60e83b06-8386-4089-9e27-d47e6b524f02",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "61d309d1-6107-4d54-80d1-7052812df684",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students read and annotate an article to find where bias was identified, what Twitter tested, and what Twitter changed.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Twitter Cropping Algorithm article",
+        "duration": "5",
+        "name": "Twitter Cropping Algorithm Article"
+      },
+      "seeding_key": {
+        "activity_section.key": "61d309d1-6107-4d54-80d1-7052812df684",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "614364d1-1ed0-4aac-9fd2-ef658869fb0b",
+      "position": 16,
+      "properties": {
+        "description": "Now that we've seen how the problem was discovered, we are going to read how it played out and how Twitter responded when presented with evidence of bias in their cropping algorithm.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "614364d1-1ed0-4aac-9fd2-ef658869fb0b",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "8cad8c1e-8796-4336-b796-1e88afad0708",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students read the article \"Twitter says its image-cropping algorithm was biased, so it's ditching it (CNN).\" After they are finished reading, they should mark up the text with the following:\n- Mark: Where Twitter found bias, what Twitter tested, and what Twitter changed\n- At The End: Write a 10-word summary of the article",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To Print or Not To Print? This lesson is written assuming that you have printed out the article and have it physically available for students to write on, even though it is also possible to have students interact with this text digitally. If students read the article digitally, it is most important that they still follow the active reading strategies outlined in this lesson - highlighting the text, writing in the margins, and summarizing. This may require some additional time & instruction to teach students your preferred tools of digital annotation, and may require some additional adjustments to some of the later annotation strategies in this lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8cad8c1e-8796-4336-b796-1e88afad0708",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "59440aec-4b67-42ca-8a3d-223cf3cdadb2",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students show what they understand about how bias enters an app and when to automate or augment, then propose a specific revision to a biased design and describe how to retest it.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 15, Level 2 to complete Levels 2 through 4.\n- **Level 2:** Students identify how a human choice and a data choice can lead to an unfair result.\n- **Level 3:** Students decide how much an algorithm should be trusted with a high-stakes task.\n- **Level 4:** Students propose a revision to the cropping algorithm and describe how to retest it.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you walk around, listen for students tying their Level 4 change to a specific source of bias from the video, and for retests that include the people the algorithm treated unfairly. If students get stuck, ask which part of the algorithm they think caused the problem, and what photos they would run through the new version.",
+        "duration": "10",
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 2 to check whether students can connect a human choice about what data to collect to an unfair result for some users.\n\nUse Level 3 to check whether students can weigh speed and consistency against the stakes of a mistake, recognize when a task needs human judgment, and keep a person responsible for the final decision.\n\nUse Level 4 to check whether students can propose a specific revision tied to a source of bias, describe test photos that include the people affected, and state what result would show improvement."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "59440aec-4b67-42ca-8a3d-223cf3cdadb2",
@@ -5304,9 +5593,107 @@
       }
     },
     {
+      "key": "4d5cc207-e263-4626-8bb4-25cd37dd1485",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives."
+      },
+      "seeding_key": {
+        "activity_section.key": "4d5cc207-e263-4626-8bb4-25cd37dd1485",
+        "lesson_activity.key": "47a1a4c1-fdb6-47e3-aa31-6f146bbbaf3b"
+      }
+    },
+    {
+      "key": "55f4dba6-a116-4fa7-85d1-0b06242ce9d6",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to just think about what they learned today."
+      },
+      "seeding_key": {
+        "activity_section.key": "55f4dba6-a116-4fa7-85d1-0b06242ce9d6",
+        "lesson_activity.key": "47a1a4c1-fdb6-47e3-aa31-6f146bbbaf3b"
+      }
+    },
+    {
+      "key": "cfcd97dc-443d-4ebf-875d-9e168c8a066c",
+      "position": 3,
+      "properties": {
+        "description": "After testing, Twitter's team found bias in the cropping algorithm and largely stopped using it to crop photos. Here is one of the concerns they raised. Notice that they say the concern remains even if the algorithm treated every group equally. Take a moment to read it.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cfcd97dc-443d-4ebf-875d-9e168c8a066c",
+        "lesson_activity.key": "47a1a4c1-fdb6-47e3-aa31-6f146bbbaf3b"
+      }
+    },
+    {
+      "key": "276b5dd6-fe15-4516-a9f7-aeaaa3eb4957",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read aloud, or instruct students to read, the response from Rumman Chowdhury on behalf of Twitter.\n\nSource: https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may not know \"representational harm.\" If they ask, explain that it is harm that comes from how people are shown, or whether they get to show themselves the way they want to be seen."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "276b5dd6-fe15-4516-a9f7-aeaaa3eb4957",
+        "lesson_activity.key": "47a1a4c1-fdb6-47e3-aa31-6f146bbbaf3b"
+      }
+    },
+    {
+      "key": "913578d9-9f88-4433-8276-ace60d21e978",
+      "position": 5,
+      "properties": {
+        "description": "The story of Twitter and its photo cropping algorithm shows how something built with one intention, in this case to better highlight photos, can lead to unintended effects, in this case bias that favored lighter faces. It also shows a company taking action by establishing a machine learning ethics, transparency, and accountability team led by Rumman Chowdhury.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "913578d9-9f88-4433-8276-ace60d21e978",
+        "lesson_activity.key": "47a1a4c1-fdb6-47e3-aa31-6f146bbbaf3b"
+      }
+    },
+    {
+      "key": "761dcea2-f3dd-42c9-8e80-d0058cc78dc1",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- Do you think Twitter's response was appropriate?\n- What are the risks and potential harms of systems, such as social media platforms like Twitter, becoming too dependent on machine learning?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that Twitter weighed the speed and consistency of automated cropping against the risk of representational harm, and concluded that cropping depends on what each person wants to show. Students should recognize that tasks involving personal judgment about how people are represented are poor candidates for automation, even when automation is faster.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students say Twitter should simply have fixed the algorithm, point them back to the quote on the previous slide. Ask what concern would still remain even if the algorithm treated every group equally."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "761dcea2-f3dd-42c9-8e80-d0058cc78dc1",
+        "lesson_activity.key": "47a1a4c1-fdb6-47e3-aa31-6f146bbbaf3b"
+      }
+    },
+    {
+      "key": "7a95534b-0c78-4b90-bb84-7368361e8eee",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "7a95534b-0c78-4b90-bb84-7368361e8eee",
+        "lesson_activity.key": "47a1a4c1-fdb6-47e3-aa31-6f146bbbaf3b"
+      }
+    },
+    {
       "key": "eb8d5630-481e-49ef-909b-7e36d499c11d",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Hook students into today’s scenario and surface that “accurate” isn’t an obvious, fixed standard — it’s something people have to define, and different people might define it differently. This sets up why Step 1 (defining criteria) matters before any testing happens.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What would count as a “good” answer here — and who decides?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should start to notice that “good” isn’t obvious or universal — it might depend on who’s asking (a student wanting a fast answer vs. a librarian needing it to be exact), and that someone has to decide on a standard before anyone can even test whether the chatbot meets it. There’s no right answer expected here — just a couple of volunteer responses to get students thinking about criteria before they define their own later in the lesson.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this to under 2 minutes — it’s a quick hook, not a full discussion. One or two student responses is enough before moving to the lesson objectives."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "eb8d5630-481e-49ef-909b-7e36d499c11d",
@@ -5314,9 +5701,40 @@
       }
     },
     {
+      "key": "e3b05a7d-fefb-4cc1-8bb1-0e213f669b4c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives."
+      },
+      "seeding_key": {
+        "activity_section.key": "e3b05a7d-fefb-4cc1-8bb1-0e213f669b4c",
+        "lesson_activity.key": "a9775704-295d-4438-99a3-aa3c3cc42e5d"
+      }
+    },
+    {
+      "key": "9de879b1-918f-413d-ab0c-18fc2ee418ca",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day. Let students know this question comes back at the end of the lesson, after they test an AI chatbot themselves.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "No need to discuss this now — just pose it and move on. Students don’t have enough information yet to answer it meaningfully; the point is to give them something to hold onto and revisit once they’ve done the testing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9de879b1-918f-413d-ab0c-18fc2ee418ca",
+        "lesson_activity.key": "a9775704-295d-4438-99a3-aa3c3cc42e5d"
+      }
+    },
+    {
       "key": "5a4fe70c-ffa4-46ef-9169-f6c984642e6f",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students define what “accurate” means for a real AI use case, then write test questions that put their own criteria to the test.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the AI Lab activity guide.",
+        "duration": "20",
+        "name": "Design Test Criteria"
       },
       "seeding_key": {
         "activity_section.key": "5a4fe70c-ffa4-46ef-9169-f6c984642e6f",
@@ -5324,10 +5742,53 @@
       }
     },
     {
-      "key": "3a70399b-784c-4254-9bdb-5eee6b30b07f",
+      "key": "d2c061ce-7894-4259-8ee1-e0c440c961cf",
       "position": 2,
       "properties": {
-        "progression_name": "Test the Chatbot"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Step 1 on their activity guide. Have students work with their partner to decide what a correct answer needs to include, what would make an answer unacceptable, and write their team’s accuracy criteria — the standard they use to score the chatbot’s responses later in Step 3.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for criteria that are too vague to actually score against later, like “it should be good” or “it should make sense.” Push pairs toward something specific and checkable — does it need to match a fact exactly? Does it need to admit when it’s not sure? If a pair is stuck, ask: “If the chatbot gave a confident-sounding answer that was wrong, how would you even know?”",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If needed, provide an example or two, but don’t over-scaffold this step — it’s meant to be student-generated. A pair that writes weaker criteria now still gets a valid learning experience in Step 4, when they discover their criteria let an inaccurate answer slip through as a “Meets.”"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d2c061ce-7894-4259-8ee1-e0c440c961cf",
+        "lesson_activity.key": "9f3ec4ce-8d16-4f89-abc5-fef7bcb07241"
+      }
+    },
+    {
+      "key": "b5bf62aa-09d8-4e5e-b028-eda0c3f3d0f6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Step 2 on their activity guide. Have them continue working with their partner and write six required test questions, making sure to cover all four categories listed — not just easy ones — plus up to two optional backup questions they aren’t required to test.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make sure teams are covering all four categories, not just easy ones. Watch for pairs who write six questions that are all variations of the same type (e.g., all easy fact-lookups) — if you spot this, point them back to the four categories and ask which ones they haven’t tried yet."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b5bf62aa-09d8-4e5e-b028-eda0c3f3d0f6",
+        "lesson_activity.key": "9f3ec4ce-8d16-4f89-abc5-fef7bcb07241"
+      }
+    },
+    {
+      "key": "3a70399b-784c-4254-9bdb-5eee6b30b07f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students test their own questions against the chatbot, score each response using their own criteria, then compare results with their partner to find a pattern in what breaks the system.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 16, Level 1, to complete Steps 3 and 4 in their activity guide. Partners split their six questions and each test and score their own three on their own page in Step 3. In Step 4, partners bring their pages back together to compare results and identify a pattern.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for pairs scoring responses based on how confident or polished the answer sounds, rather than checking it against the Quick Reference sheet or their own Step 1 criteria. If a team marks every response “Meets,” ask them to point to the specific line on the reference sheet that confirms it. Also watch for teams rushing past Step 4 without actually comparing both partners’ pages side by side.",
+        "duration": "10",
+        "name": "Test, Score, and Reflect",
+        "progression_name": "Test, Score, and Reflect",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Steps 3–4 on the activity guide can be used as a formative check of the lesson objectives (specifically Skill 1.C / LO 1.3.B). Look for scoring that references specific evidence (the reference sheet or their own criteria) rather than general impressions, and a Step 4 pattern that correctly identifies where the chatbot lacked information rather than where it simply sounded off."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3a70399b-784c-4254-9bdb-5eee6b30b07f",
@@ -5336,9 +5797,18 @@
     },
     {
       "key": "4bc9cd79-3aeb-49ef-8a10-2314bd1ac3e9",
-      "position": 3,
+      "position": 5,
       "properties": {
-        "progression_name": "Check for Understanding"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 16, Levels 2-4.\n- **Level 2:** Students reflect on whether the library chatbot is accurate enough to trust without human review, using evidence from their own testing.\n- **Level 3:** Students think about who would be affected if a patron had relied on the chatbot’s holiday-hours mistake.\n- **Level 4:** Students apply that same judgment to a new scenario — a parks department chatbot — and explain their reasoning.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** On Level 2, watch for students giving a blanket yes/no without citing a specific example from their own testing — prompt them to point to a response they actually scored. On Level 3, watch for vague answers like “people could be confused” — push students toward a specific, plausible person or consequence tied to the actual scenario. On Level 4, watch for students who answer without explaining why this situation differs from the ones that worked fine during testing, or who don’t connect their answer back to anything they noticed with the library chatbot.",
+        "duration": "5",
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Levels 2–4 serve as a formative check of today’s lesson objectives. Level 2 shows whether students can judge accuracy using their own evidence rather than general impressions. Level 3 shows whether students can name a concrete, plausible consequence rather than a vague one. Level 4 shows whether that judgment transfers to a new situation — look for students who recognize the live, individual data problem (the permit application) as the same kind of gap as the library chatbot’s holiday blind spot, rather than giving a disconnected answer."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4bc9cd79-3aeb-49ef-8a10-2314bd1ac3e9",
@@ -5349,9 +5819,21 @@
       "key": "9f463433-9ff6-4cf3-ab88-b99cf6200438",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives."
       },
       "seeding_key": {
         "activity_section.key": "9f463433-9ff6-4cf3-ab88-b99cf6200438",
+        "lesson_activity.key": "d73a1550-97b9-48f1-94ba-98f6b21cb7c7"
+      }
+    },
+    {
+      "key": "499cf3f0-0a17-488a-9707-a3fb51f49937",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to think about what they learned today. Facilitate a whole-class discussion — invite a few students to share the pattern their team found in Step 4, and a few others to share their answer from Level 3 about who would be affected. Tie the discussion back to today’s lesson objectives. Listen for students connecting specific chatbot behavior to real consequences, not just general statements about AI being risky."
+      },
+      "seeding_key": {
+        "activity_section.key": "499cf3f0-0a17-488a-9707-a3fb51f49937",
         "lesson_activity.key": "d73a1550-97b9-48f1-94ba-98f6b21cb7c7"
       }
     },
@@ -6990,6 +7472,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -7011,6 +7494,7 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -7032,6 +7516,7 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -7053,7 +7538,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Test the Chatbot"
+        "progression": "Test, Score, and Reflect"
       },
       "bonus": false,
       "seeding_key": {
@@ -9296,7 +9781,7 @@
       }
     },
     {
-      "name": "AL Lab Day",
+      "name": "AI Lab Day",
       "url": "https://docs.google.com/document/d/13Bn4pgLQy54GzNzQTo10ONf79o5l5wU3Xc5KrSbyWFE/",
       "key": "al_lab_day",
       "properties": {
@@ -9613,6 +10098,19 @@
       },
       "seeding_key": {
         "resource.key": "generative_ai_and_llms"
+      }
+    },
+    {
+      "name": "Guide to Programming Levels",
+      "url": "https://docs.google.com/document/d/1KLhuozNfnRhe66VGafvp4GyREoRZozWs8enH4ni2gBc/edit?tab=t.0",
+      "key": "guide_to_programming_levels",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels"
       }
     },
     {
@@ -10721,7 +11219,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -11401,6 +11904,16 @@
       }
     },
     {
+      "key": "61a98e56-d9b4-472e-ab3a-7506d8a25736",
+      "properties": {
+        "description": "Reason about which types of tasks should not be completed by an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "objective.key": "61a98e56-d9b4-472e-ab3a-7506d8a25736"
+      }
+    },
+    {
       "key": "646f98d4-456e-4a62-8cd5-10de591ef91d",
       "properties": {
         "description": "Explain how bits are grouped to represent abstractions like numbers and text"
@@ -11418,6 +11931,16 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "objective.key": "66ef587e-b3d1-4259-baf9-34454e688303"
+      }
+    },
+    {
+      "key": "6bccce7e-51af-4fed-89e2-91b4830416c8",
+      "properties": {
+        "description": "Propose a revision to a biased design and describe how to retest it"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "objective.key": "6bccce7e-51af-4fed-89e2-91b4830416c8"
       }
     },
     {
@@ -11548,6 +12071,16 @@
       "seeding_key": {
         "lesson.key": "lesson-17",
         "objective.key": "99556a73-cec3-4f51-8fc9-c36c16f4ae24"
+      }
+    },
+    {
+      "key": "b89efc55-e9f7-41cd-9ba9-2cf336a0503b",
+      "properties": {
+        "description": "Define bias and explain how human bias and data bias interact through design choices"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "objective.key": "b89efc55-e9f7-41cd-9ba9-2cf336a0503b"
       }
     },
     {

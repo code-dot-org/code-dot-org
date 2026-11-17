@@ -7,7 +7,9 @@ markdown <<MARKDOWN
 
 <div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; font-size: 13px; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lessons 8-9</div>
 
-<p>This section prepares you to teach two curriculum lessons, the classification half of the unit's build-and-test arc, mirroring Section 4's regression arc. Students build a nearest-neighbors classifier by hand, then in code, before learning that "how good is this model?" has no single answer, it depends on which kind of mistake costs more.</p>
+<p>This section prepares you to teach two curriculum lessons, the classification half of the unit's build-and-test arc, mirroring Section 4's regression arc.</p>
+
+<p> Students build a nearest-neighbors classifier by hand, then in code, before learning that "how good is this model?" has no single answer, it depends on which kind of mistake costs more.</p>
 
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
   <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 8:</b> Building Classifiers</div>

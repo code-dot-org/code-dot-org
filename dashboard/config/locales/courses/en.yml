@@ -7662,3 +7662,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        decision-tree-beta-test:
+          title: decision-tree-beta-test
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
