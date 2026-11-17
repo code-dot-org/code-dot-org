@@ -78,11 +78,12 @@ does not reach the browser. To serve your own build, set
 [docker/dev](../docker/dev/README.md#start-the-environment) from "Build the
 apps files" and browse port 9000.
 
-## The database is scratch space
+## The database outlives the container
 
-The image holds the datadir outside a volume. `docker compose stop` and
-`start` keep your writes. `down`, or rebuilding the container, discards
-them, and the next start replays the migrations newer than the image.
+The first start copies the image's datadir into the `mysql-data` volume.
+`down` and rebuilding the container keep your writes, and each start
+applies the migrations newer than the volume. To start over from the
+latest pre-seed, delete the Codespace or run `docker compose down -v`.
 
 ## Known limitations
 
