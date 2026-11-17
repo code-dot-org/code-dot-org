@@ -129,11 +129,13 @@ jest.mock('@cdo/apps/lab2/views/Loading', () => ({
   __esModule: true,
   default: () => <div>loading</div>,
 }));
+const mockSetAiGatewayOptIn = jest.fn();
 jest.mock('@cdo/apps/aichat/api/shouldUseAiGateway', () => ({
-  setAiGatewayOptIn: jest.fn(),
+  setAiGatewayOptIn: (optIn: boolean) => mockSetAiGatewayOptIn(optIn),
 }));
-jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
-  isAdaptiveAiEnabled: () => false,
+const mockAiAvailable = jest.fn(() => false);
+jest.mock('@cdo/apps/adaptive/ai/access', () => ({
+  isAdaptiveAiAvailable: () => mockAiAvailable(),
 }));
 const mockDispatch = jest.fn();
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -214,6 +216,8 @@ describe('PathwayApp', () => {
 
   beforeEach(() => {
     mockDispatch.mockClear();
+    mockSetAiGatewayOptIn.mockClear();
+    mockAiAvailable.mockReturnValue(false);
     mockLoad.mockResolvedValue(EMPTY_PROGRESS);
     mockUseAppSelector.mockReturnValue(undefined);
     window.history.replaceState({}, '', '/');
@@ -265,6 +269,17 @@ describe('PathwayApp', () => {
     await renderSettled();
 
     expect(screen.getByText(/playing Intro/)).toBeTruthy();
+  });
+
+  it('routes the tutor through the gateway only while the shell makes AI calls', async () => {
+    mockAiAvailable.mockReturnValue(true);
+    await renderSettled();
+    expect(mockSetAiGatewayOptIn).toHaveBeenLastCalledWith(true);
+
+    mockSetAiGatewayOptIn.mockClear();
+    mockAiAvailable.mockReturnValue(false);
+    await renderSettled();
+    expect(mockSetAiGatewayOptIn).toHaveBeenLastCalledWith(false);
   });
 
   it('shows the map once anything has been started', async () => {
