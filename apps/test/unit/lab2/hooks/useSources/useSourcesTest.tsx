@@ -151,8 +151,6 @@ describe('useSources', () => {
       expect(dispatchSpy).toHaveBeenCalledWith(setChannel(OWNED_CHANNEL));
     });
 
-    // A lab that loads its own project never reaches setUpWithLevel's abuse
-    // score, so a blocked project would come back unblocked on reload.
     it.each([
       [15, true],
       [14, false],

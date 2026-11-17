@@ -209,8 +209,7 @@ const animationList = () => ({
   orderedKeys: Object.keys(propsByKey),
   propsByKey,
 });
-// Uploads are moderated only where there is a project to flag, so a channel
-// has to be present or every test takes the levelbuilder path.
+// Uploads are moderated only when there is a channel.
 let labState: Record<string, unknown> = {channel: {id: 'c1'}};
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: (select: (state: unknown) => unknown) =>
