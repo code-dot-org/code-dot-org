@@ -370,6 +370,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       });
     }, [host, dispatch]);
     useEffect(() => {
+      if (buildListeners.current.size === 0) return;
       for (const build of acceptedBuilds(unfilteredVisibleItems)) {
         if (build.at <= lastBuildAt.current) continue;
         lastBuildAt.current = build.at;
@@ -377,6 +378,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       }
     }, [unfilteredVisibleItems]);
     useEffect(() => {
+      if (replyListeners.current.size === 0) return;
       const transcript = chatTranscript(unfilteredVisibleItems);
       if (!transcript || transcript.at <= lastReplyAt.current) return;
       lastReplyAt.current = transcript.at;
