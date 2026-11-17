@@ -23,7 +23,7 @@ on:
       - 'docker/dev/dev.env'
       - 'config/development.yml.erb'
       - '.github/workflows/cdo-devdb-image.yml'
-  # Daily, after merge_lb_to_staging brings levelbuilder's content commit to staging.
+  # 08:00 UTC daily, after merge_lb_to_staging (07:35 UTC) lands levelbuilder content.
   schedule:
     - cron: '0 8 * * *'
   workflow_dispatch:
@@ -44,10 +44,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch the LFS objects the seed reads
+      - name: Fetch LFS objects
         run: git lfs pull --include='dashboard/config/**,dashboard/test/fixtures/**'
 
-      - name: Give the checkout to the container user, keeping this directory
+      - name: Chown checkout to container user
         run: |
           sudo chown -R 1000:1000 .
           sudo chown -R "$(id -u):$(id -g)" .devcontainer
@@ -59,7 +59,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Pre-seed the datadir
+      - name: Pre-seed datadir
         env:
           IMAGE: ghcr.io/code-dot-org/cdo-dev:latest
         run: .devcontainer/preseed-db.sh
@@ -86,7 +86,7 @@ jobs:
 
       # Dockerfile.db runs nothing and an InnoDB datadir is portable across
       # architectures, so arm64 builds here without emulation.
-      - name: Publish for amd64 and arm64
+      - name: Publish
         if: github.event_name != 'pull_request'
         uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6.18.0
         with:
