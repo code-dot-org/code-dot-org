@@ -9,6 +9,15 @@ const step = (id: string, project?: true): LevelStep => ({
   ...(project && {project}),
 });
 
+const checkedStep: LevelStep = {
+  ...step('p2', true),
+  validation: {
+    condition: 'The page has a heading.',
+    measures: {skillId: 'prompting'},
+  },
+};
+const thresholds = {replyLimit: 8};
+
 const checkpoint = (
   id: string,
   title: string,
@@ -75,6 +84,67 @@ describe('buildTutorContext', () => {
     expect(context).toContain(
       'Help them get there without doing the step for them.'
     );
+  });
+
+  it('briefs the tutor on how a checked step is checked and where the chat alone opens Continue', () => {
+    const context = buildTutorContext({
+      pathway,
+      checkpoint: prompting,
+      step: checkedStep,
+      statusMap,
+      instructions: '**Add a heading** to the top of the page.',
+      chatThresholds: thresholds,
+    });
+
+    expect(context).toContain('How this step is checked:');
+    expect(context).toContain('- Goal: The page has a heading.');
+    expect(context).toContain(
+      '- The instructions the student sees:\n**Add a heading** to the top of the page.'
+    );
+    expect(context).toContain(
+      'The step is checked only when the student accepts a build from you; talking alone is never checked. If they are struggling, or unsure why they have not met the goal yet, offer to build.'
+    );
+    expect(context).toContain(
+      '- Continue is locked until a build meets the goal.'
+    );
+    expect(context).toContain(
+      'never to be told to the student: after 8 of your replies Continue opens regardless.'
+    );
+  });
+
+  it.each([
+    ['validationPassed', 'a build met the goal'],
+    ['failedValidations', 'several builds were checked without passing'],
+    ['limitReached', 'talked with you long enough'],
+  ] as const)(
+    'says Continue is open, and why (%s), in place of the thresholds',
+    (reason, text) => {
+      const context = buildTutorContext({
+        pathway,
+        checkpoint: prompting,
+        step: checkedStep,
+        statusMap,
+        continueUnlocked: reason,
+        chatThresholds: thresholds,
+      });
+      expect(context).toContain('Continue is already open on this step:');
+      expect(context).toContain(text);
+      expect(context).not.toContain('Continue is locked');
+      expect(context).not.toContain('never to be told');
+    }
+  );
+
+  it('says nothing about checking on a step with no validation block', () => {
+    const context = buildTutorContext({
+      pathway,
+      checkpoint: prompting,
+      step: step('p2', true),
+      statusMap,
+      instructions: 'Do this.',
+      chatThresholds: thresholds,
+    });
+    expect(context).not.toContain('How this step is checked');
+    expect(context).not.toContain('Do this.');
   });
 
   it('describes the pathway, the checkpoint, the step and progress', () => {

@@ -56,38 +56,75 @@ export function generateInputsHash(prompt: string): string {
   return hashString(prompt);
 }
 
-/** One check of a project step's work, as the judge reported it. */
+/** Why the chat alone opened Continue on a checked step. */
+export type SkipReason =
+  /** The chat reached the reply limit, which opens Continue regardless. */
+  'limitReached';
+
+/**
+ * One entry in a step's validation history: a check of the student's work,
+ * or, when it carries a `skipReason`, the chat opening Continue instead.
+ * Only work entries carry evidence; a chat entry has evidence level 0 and
+ * carries what the student was told.
+ */
 export interface ValidationAttempt {
   /** When the server recorded it. */
   at: string;
   pass: boolean;
-  /** On the evidence levels of the skill the step measures. */
+  /** On the evidence levels of the skill the step measures; 0 unless from work. */
   evidenceLevel: number;
   /** Addressed to the student. */
   reason: string;
   /** The Langfuse trace the judge ran under. */
   traceId?: string;
+  /** Set only on a chat entry, which always passes; absent on every check of work. */
+  skipReason?: SkipReason;
+  /** Replies in the chat when a chat entry opened Continue. */
+  replies?: number;
 }
 
-/** The verdict in force on a step; undefined before its first check. */
+/** The checks of a step's work, oldest first. */
+export const workAttempts = (
+  entry: StepProgress | undefined
+): ValidationAttempt[] =>
+  (entry?.validationHistory ?? []).filter(attempt => !attempt.skipReason);
+
+/** The entries where the student skipped a step's check, oldest first. */
+export const skippedAttempts = (
+  entry: StepProgress | undefined
+): ValidationAttempt[] =>
+  (entry?.validationHistory ?? []).filter(attempt => !!attempt.skipReason);
+
+/** The verdict on a step's work in force; undefined before its first check. */
 export function latestValidation(
   entry: StepProgress | undefined
 ): ValidationAttempt | undefined {
-  const history = entry?.validationHistory;
-  return history?.[history.length - 1];
+  return workAttempts(entry).at(-1);
 }
 
 /** Failed checks after which Continue opens anyway, since the judge can be wrong. */
 export const FAILED_VALIDATIONS_TO_CONTINUE = 3;
 
-/** Whether a checked step's work lets the student continue past it. */
-export function validationAllowsContinue(
+/** Why Continue is open on a checked step, in the order the reasons are tried. */
+export type ContinueUnlockReason =
+  | 'validationPassed'
+  | 'failedValidations'
+  | SkipReason;
+
+/** Why a checked step lets the student continue, or undefined while it does not. */
+export function continueUnlockReason(
   entry: StepProgress | undefined
-): boolean {
-  const history = entry?.validationHistory ?? [];
-  if (history.some(attempt => attempt.pass)) return true;
-  return history.length >= FAILED_VALIDATIONS_TO_CONTINUE;
+): ContinueUnlockReason | undefined {
+  const work = workAttempts(entry);
+  if (work.some(attempt => attempt.pass)) return 'validationPassed';
+  if (work.length >= FAILED_VALIDATIONS_TO_CONTINUE) return 'failedValidations';
+  return skippedAttempts(entry).find(check => check.pass)?.skipReason;
 }
+
+/** Whether a checked step's work or chat lets the student continue past it. */
+export const validationAllowsContinue = (
+  entry: StepProgress | undefined
+): boolean => continueUnlockReason(entry) !== undefined;
 
 /** Id of the project screen's step, which records no progress. */
 export const PROJECT_STEP_ID = 'project';
@@ -102,7 +139,7 @@ export interface StepProgress {
   submitted?: boolean;
   answers?: StepAnswers;
   generatedInstructions?: GeneratedContent;
-  /** Every check of a project step's work, oldest first. */
+  /** Every check of a project step's work or chat, oldest first. */
   validationHistory?: ValidationAttempt[];
 }
 

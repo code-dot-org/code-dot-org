@@ -230,6 +230,25 @@ describe('computeEvidence', () => {
     ).toEqual({});
   });
 
+  it("ignores a look at the step's chat, whatever it says", () => {
+    const progress = checked('build-page', [1]);
+    progress.steps['build-page'].validationHistory!.push({
+      at: '2026-10-22T10:06:00Z',
+      pass: true,
+      evidenceLevel: 0,
+      reason: 'Go on.',
+      skipReason: 'limitReached',
+      replies: 8,
+    });
+    expect(computeEvidence(pathway, progress)).toEqual({
+      build: {
+        skillId: 'build',
+        evidenceLevel: 1,
+        from: [validation('build-page', '2026-10-22T10:00:00Z')],
+      },
+    });
+  });
+
   it("reads each check of a project step's work, keeping the highest evidence level", () => {
     expect(computeEvidence(pathway, checked('build-page', [1, 2]))).toEqual({
       build: {
