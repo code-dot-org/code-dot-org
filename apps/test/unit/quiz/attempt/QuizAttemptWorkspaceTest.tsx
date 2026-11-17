@@ -137,6 +137,7 @@ function renderWorkspace({
   // opt out.
   showQuestionsAfterSubmit = true,
   viewAsUserId,
+  readOnly,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
@@ -148,6 +149,7 @@ function renderWorkspace({
   customIntroText?: string;
   showQuestionsAfterSubmit?: boolean;
   viewAsUserId?: number;
+  readOnly?: boolean;
 } = {}) {
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
@@ -164,6 +166,7 @@ function renderWorkspace({
       customIntroText={customIntroText}
       showQuestionsAfterSubmit={showQuestionsAfterSubmit}
       viewAsUserId={viewAsUserId}
+      readOnly={readOnly}
     />
   );
 }
@@ -1013,6 +1016,106 @@ describe('QuizAttemptWorkspace', () => {
       expect(
         screen.queryByRole('button', {name: 'Try again'})
       ).not.toBeInTheDocument();
+    });
+  });
+
+  describe('when the teacher has released answers read-only', () => {
+    const SUBMITTED: QuizAttemptData = {
+      ...ATTEMPT,
+      submittedAt: '2026-01-01T00:00:00Z',
+      score: 1,
+      maxScore: 1,
+      canRetake: true,
+      questionResults: [
+        {
+          quizQuestionId: 1,
+          questionType: 'MultipleChoiceQuestion',
+          responseData: {selectedChoiceId: 'b'},
+          answered: true,
+          correct: true,
+          explanation: 'Because 3 + 5 = 8.',
+          correctChoiceId: 'b',
+        },
+      ],
+    };
+    const NOTICE =
+      'Your teacher has shared the answers. This quiz is read-only.';
+
+    it('shows score, results and the explanation even when the quiz hides them, without Try again', () => {
+      renderWorkspace({
+        hookState: {attempt: SUBMITTED},
+        quizQuestions: [question({id: 1})],
+        showCorrectness: false,
+        showQuestionsAfterSubmit: false,
+        readOnly: true,
+      });
+
+      expect(screen.getByText(NOTICE)).toBeInTheDocument();
+      expect(screen.getByText('100%')).toBeInTheDocument();
+      expect(screen.getByText('Correct')).toBeInTheDocument();
+      expect(screen.getByText('Because 3 + 5 = 8.')).toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Try again'})
+      ).not.toBeInTheDocument();
+    });
+
+    it("never starts an attempt, and shows the questions unanswered, when the student hasn't started", () => {
+      const beginAttempt = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: null, beginAttempt},
+        quizQuestions: [question({id: 1})],
+        showIntroScreen: false,
+        readOnly: true,
+      });
+
+      expect(beginAttempt).not.toHaveBeenCalled();
+      expect(screen.getByText('What is the value of x?')).toBeInTheDocument();
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: /Next|Submit|Finish|Begin/})
+      ).not.toBeInTheDocument();
+    });
+
+    it('skips the intro screen', () => {
+      renderWorkspace({
+        hookState: {attempt: null},
+        quizQuestions: [question({id: 1})],
+        showIntroScreen: true,
+        readOnly: true,
+      });
+
+      expect(
+        screen.queryByRole('button', {name: /Begin/})
+      ).not.toBeInTheDocument();
+    });
+
+    it('shows saved answers read-only, without Submit, while an attempt is unfinished', () => {
+      renderWorkspace({
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            questionResultsInProgress: [
+              {
+                quizQuestionId: 1,
+                questionType: 'MultipleChoiceQuestion',
+                responseData: {selectedChoiceId: 'b'},
+              },
+            ],
+          },
+        },
+        quizQuestions: [question({id: 1})],
+        readOnly: true,
+      });
+
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: /Next|Submit|Finish/})
+      ).not.toBeInTheDocument();
+    });
+
+    it('does not show the notice otherwise', () => {
+      renderWorkspace({hookState: {attempt: SUBMITTED}});
+      expect(screen.queryByText(NOTICE)).not.toBeInTheDocument();
     });
   });
 

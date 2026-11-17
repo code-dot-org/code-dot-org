@@ -22,6 +22,9 @@ class QuizAttemptsController < ApplicationController
         # Only a verified instructor also sees the correct answer and its explanation.
         reveal_answer_explanation: can?(:reveal_quiz_attempt_answers, :quiz_attempt)
       )
+    elsif attempt&.level&.read_only_for?(current_user, attempt.unit_id)
+      # The teacher has released the lesson read-only ("Show answers"), whatever the Quiz's own settings.
+      render json: quiz_attempt_json(attempt, show_correctness: true, reveal_answer_explanation: true)
     else
       render json: attempt && quiz_attempt_json(attempt)
     end

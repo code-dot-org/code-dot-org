@@ -53,4 +53,6 @@ export interface QuizLevelProperties extends LevelProperties {
   allowMultipleAttempts?: boolean;
   showQuestionsAfterSubmit?: boolean;
   quizQuestions?: QuizQuestionSummary[];
+  // The teacher has released the lesson read-only ("Show answers").
+  readOnly?: boolean;
 }

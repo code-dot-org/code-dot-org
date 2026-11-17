@@ -89,6 +89,21 @@ class QuizTest < ActiveSupport::TestCase
     refute quiz_question.key?(:correctChoiceIds)
   end
 
+  test "summarize_for_lab2_properties reports readOnly only while the lesson is released read-only to the user" do
+    student = create(:student)
+    quiz = create(:quiz, purpose: 'exam')
+    unit = create(:unit)
+    lesson = create(:lesson, script: unit, lockable: true)
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [quiz], assessment: true)
+
+    refute quiz.summarize_for_lab2_properties(unit, script_level, student)[:readOnly], 'locked'
+    UserLevel.update_lockable_state(student.id, quiz.id, unit.id, false, false)
+    refute quiz.summarize_for_lab2_properties(unit, script_level, student)[:readOnly], 'editable'
+    UserLevel.update_lockable_state(student.id, quiz.id, unit.id, false, true)
+    assert quiz.summarize_for_lab2_properties(unit, script_level, student)[:readOnly], 'read-only'
+    refute quiz.summarize_for_lab2_properties(nil, nil, student)[:readOnly], 'outside a unit'
+  end
+
   test "questions come from placements" do
     quiz = create(:quiz)
     question = create(:quiz_question)

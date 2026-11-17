@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -61,6 +62,8 @@ export interface QuizAttemptWorkspaceProps {
   showCorrectness?: boolean;
   revealAnswerExplanation?: boolean;
   showQuestionsAfterSubmit?: boolean;
+  // The teacher has released the lesson read-only ("Show answers").
+  readOnly?: boolean;
 }
 
 const QuizAttemptWorkspace: React.FunctionComponent<
@@ -80,6 +83,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   showCorrectness,
   revealAnswerExplanation,
   showQuestionsAfterSubmit,
+  readOnly,
 }) => {
   const dispatch = useAppDispatch();
   const {
@@ -95,6 +99,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     userId: viewAsUserId,
   });
   const isViewingStudent = viewAsUserId !== undefined;
+  // A teacher viewing a student, or a student whose teacher has released
+  // answers: full results, nothing to answer or retake.
+  const isReadOnly = isViewingStudent || toBool(readOnly);
   const hasNextLevel = useAppSelector(
     state => nextLevelId(state) !== undefined
   );
@@ -189,8 +196,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const canShowBackToTop =
     !isLoading &&
     !!unitId &&
-    (isViewingStudent || (!!attempt?.submittedAt && !isIntroOpen));
-  const isTeacherViewingUnsubmitted = isViewingStudent && !attempt?.submittedAt;
+    (isReadOnly || (!!attempt?.submittedAt && !isIntroOpen));
+  const isReadOnlyUnsubmitted = isReadOnly && !attempt?.submittedAt;
 
   // Covers both the very first intro screen and Retake reopening it - either
   // way, the button that led here is gone, so hand focus to the heading.
@@ -262,12 +269,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   // A quiz with no intro screen has no click-through step - start the
   // attempt automatically once the initial check finds there isn't one yet.
-  // Never for a teacher viewing a student: it would start the teacher's own attempt.
+  // Never for a teacher viewing a student, which would start the teacher's
+  // own attempt, nor while read-only, which the server refuses.
   useEffect(() => {
     if (
       !isLoading &&
       !!unitId &&
-      !isViewingStudent &&
+      !isReadOnly &&
       hasNoAttemptYet &&
       !showIntroScreen
     ) {
@@ -278,7 +286,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   }, [
     isLoading,
     unitId,
-    isViewingStudent,
+    isReadOnly,
     hasNoAttemptYet,
     showIntroScreen,
     beginAttempt,
@@ -563,10 +571,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                   }
                   result={result}
                   revealAnswerExplanation={
-                    isViewingStudent || toBool(revealAnswerExplanation)
+                    isReadOnly || toBool(revealAnswerExplanation)
                   }
                   isSubmitted={isSubmitted}
-                  showCorrectness={isViewingStudent || toBool(showCorrectness)}
+                  showCorrectness={isReadOnly || toBool(showCorrectness)}
                   isViewingStudent={isViewingStudent}
                 />
               )
@@ -590,14 +598,22 @@ const QuizAttemptWorkspace: React.FunctionComponent<
       <div
         className={styles.attemptBody}
         ref={attemptBodyRef}
-        {...(isTeacherViewingUnsubmitted && {
+        {...(isReadOnlyUnsubmitted && {
           // Nothing inside takes focus, so the region itself must: to stay
           // keyboard-scrollable, and to receive focus from Back to top.
           tabIndex: 0,
           role: 'region',
-          'aria-label': 'Student answers',
+          'aria-label': isViewingStudent ? 'Student answers' : 'Your answers',
         })}
       >
+        {toBool(readOnly) && !isViewingStudent && (
+          <Alert
+            type="info"
+            size="s"
+            isImmediateImportance={false}
+            text="Your teacher has shared the answers. This quiz is read-only."
+          />
+        )}
         {error && (
           <Typography variant="body3" color="error" role="alert">
             {error}
@@ -611,9 +627,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           <Typography variant="body2">
             Quiz attempts are not allowed on a standalone level.
           </Typography>
-        ) : isViewingStudent && !attempt?.submittedAt ? (
+        ) : isReadOnly && !attempt?.submittedAt ? (
           <div className={styles.questions}>
-            {/* A student who hasn't started (attempt is null) shows teacher every question unanswered. */}
+            {/* With no attempt (null), every question shows unanswered. */}
             {attempt !== undefined &&
               renderQuestionResults(
                 quizQuestions.map(question => ({
@@ -663,18 +679,18 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             <ResultsCard
               headingRef={resultsHeadingRef}
               title={displayName || levelName}
-              showCorrectness={isViewingStudent || toBool(showCorrectness)}
+              showCorrectness={isReadOnly || toBool(showCorrectness)}
               score={attempt.score}
               maxScore={attempt.maxScore}
               attemptNumber={attempt.attemptNumber}
               allowMultipleAttempts={toBool(allowMultipleAttempts)}
-              canRetake={!isViewingStudent && attempt.canRetake}
+              canRetake={!isReadOnly && attempt.canRetake}
               submittedAt={attempt.submittedAt}
               onTryAgain={handleRetake}
               hasNextLevel={hasNextLevel}
               onNextLevel={handleNextLevel}
             />
-            {(isViewingStudent || toBool(showQuestionsAfterSubmit)) &&
+            {(isReadOnly || toBool(showQuestionsAfterSubmit)) &&
               renderQuestionResults(attempt.questionResults ?? [], true)}
           </div>
         ) : (
@@ -699,7 +715,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           focusTargetRef={resultsHeadingRef}
         />
       )}
-      {isAttemptInProgress && !isViewingStudent && (
+      {isAttemptInProgress && !isReadOnly && (
         <QuizFooter
           currentPageNumber={currentPageNumber}
           totalPages={totalPages}
