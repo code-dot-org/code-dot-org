@@ -23,9 +23,9 @@ on:
       - 'docker/dev/dev.env'
       - 'config/development.yml.erb'
       - '.github/workflows/cdo-devdb-image.yml'
-  # Curriculum is not a trigger, so time bounds how stale the seed gets.
+  # Daily, after merge_lb_to_staging brings levelbuilder's content commit to staging.
   schedule:
-    - cron: '0 8 * * 1'
+    - cron: '0 8 * * *'
   workflow_dispatch:
 
 concurrency:
@@ -44,13 +44,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # checkout leaves LFS pointers. Pulled by pattern, as docker/rails does
-      # for locales: the seed reads nothing else LFS holds.
       - name: Fetch the LFS objects the seed reads
         run: git lfs pull --include='dashboard/config/**,dashboard/test/fixtures/**'
 
-      # The seed writes as uid 1000, the container's user. preseed-db.sh
-      # writes the datadir into .devcontainer as the runner.
       - name: Give the checkout to the container user, keeping this directory
         run: |
           sudo chown -R 1000:1000 .
