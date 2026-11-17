@@ -18,6 +18,8 @@ interface QuizPageBlockProps {
   onCreate: (type: QuizQuestionType) => void;
   createDisabledReason?: string;
   hasUnsavedQuestion: boolean;
+  // The page's options menu, shown in its header.
+  menu?: React.ReactNode;
   // One <li> per question.
   children?: React.ReactNode;
 }
@@ -28,6 +30,7 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
   onCreate,
   createDisabledReason,
   hasUnsavedQuestion,
+  menu,
   children,
 }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -80,6 +83,7 @@ const QuizPageBlock: React.FunctionComponent<QuizPageBlockProps> = ({
             {collapsed && hasUnsavedQuestion && (
               <UnsavedBadge label="Page contains an unsaved question" />
             )}
+            {menu}
             <IconButton
               ref={toggleRef}
               aria-label={
