@@ -363,6 +363,18 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json['transcript']).must_equal 'beep boop'
       end
 
+      it "returns the attempt number among the user's final responses to the challenge" do
+        create(:challenge_response, challenge:, user: student, is_final: true)
+        create(:challenge_response, challenge:, user: student, is_final: false)
+        create(:challenge_response, challenge:, user: other_student, is_final: true)
+        create(:challenge_response, challenge: create(:challenge), user: student, is_final: true)
+
+        post :create, params: {challenge_id: challenge.id, is_final: true}
+
+        assert_response :created
+        _(response_json['attempt_number']).must_equal 2
+      end
+
       it 'creates an asset row per asset_type, without download URLs' do
         assert_difference 'ChallengeResponseAsset.count', 2 do
           post :create, params: {
