@@ -81,5 +81,11 @@
     justify-content: center;
     width: 100%;
     z-index: 80;
+    pointer-events: none;
+
+    // Only the alert component itself should receive pointer events.
+    > * {
+      pointer-events: auto;
+    }
   }
 }
