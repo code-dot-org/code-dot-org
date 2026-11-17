@@ -1,5 +1,6 @@
 <Ailab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 67,
   "created_at": "2026-11-17T07:21:10.000Z",
   "level_num": "custom",
@@ -9,10 +10,9 @@
     "instructions_important": "false",
     "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L07-previs-base\"\r\n  ],\r\n  \"label\": \"Decision\"\r\n}",
     "uses_lab2": "true",
-    "dynamic_instructions": "{\r\n  \"datasetView\": \"#Training a Model\\n\\nStudent moves: the Predict dropdown, the Using checklist, and Train model. Students train with Mood, Indoors or Outdoors, and Mostly Talking, then read the first question in the tree.\\n\\nTrain with different features, then read the first question in the tree.\",\r\n  \"results\": \"#Examine the Model\\n\\nStudent moves: reading the leaf badges. “This many test scenes landed here, and this many were right.”\\n\\nCompare the accuracy results. Click the to see history\"\r\n}",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"#Training a Model\\n\\nTrain your first decision tree!\\n1. Choose \\\"Decision\\\" in the **Predict** dropdown.\\n2. Select the \\\"Mostly Talking\\\", \\\"Mood\\\", and \\\"Indoors or Outdoors\\\" features. \\n3. Click **Train**\\n4. Try a second time, this time using the \\\"Stunt\\\", \\\"Moving Vehicles\\\", and \\\"Something Gets Destroyed\\\" features.\",\r\n  \"results\": \"#Examine the Tree\\n\\nHow accurate is it?\"\r\n}",
     "name_suffix": "_nov-2026-beta-test"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-17T07:21:10.091+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-ai-studio2\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-ai-studio2\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-17T07:21:10.091+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-ai-studio2\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-ai-studio2\"},{\"changed_at\":\"2026-11-17 07:59:19 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-11-17 07:59:46 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
 </Ailab>
