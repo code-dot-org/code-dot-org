@@ -71,7 +71,7 @@ import useImageWriter, {ImageTarget, UploadedImage} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
 
-export interface UploadWarning {
+export interface UploadWarningSettings {
   alreadyAgreed: boolean;
   isTeacher: boolean;
   onConfirm: () => void;
@@ -120,7 +120,7 @@ interface ImagesTabProps {
   enableImageUpload?: boolean;
   /** The rules the user agrees to before the first upload. Unset where no
       agreement is wanted. */
-  uploadWarning?: UploadWarning;
+  uploadWarningSettings?: UploadWarningSettings;
   /** Any image can be chosen and looked at; nothing can be changed. */
   viewOnly?: boolean;
   /** Width of the right pane in px; it equals the preview column's width
@@ -178,7 +178,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   limitedPaintTools,
   imageKinds,
   enableImageUpload,
-  uploadWarning,
+  uploadWarningSettings,
   viewOnly,
   paneWidth,
   onImageLanded,
@@ -373,13 +373,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const handleUpload = useCallback(
     (kind: ImageKind, trigger: HTMLElement | null) => {
       setUploadError(null);
-      if (uploadWarning && !uploadWarning.alreadyAgreed) {
+      if (uploadWarningSettings && !uploadWarningSettings.alreadyAgreed) {
         setPendingUpload({kind, trigger});
         return;
       }
       upload.pickFile(kind, trigger);
     },
-    [upload, uploadWarning]
+    [upload, uploadWarningSettings]
   );
 
   const cancelPendingUpload = useCallback(() => {
@@ -392,9 +392,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       return;
     }
     setPendingUpload(null);
-    uploadWarning?.onConfirm();
+    uploadWarningSettings?.onConfirm();
     upload.pickFile(pendingUpload.kind, pendingUpload.trigger);
-  }, [pendingUpload, upload, uploadWarning]);
+  }, [pendingUpload, upload, uploadWarningSettings]);
 
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
@@ -958,7 +958,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       {pendingUpload && (
         <ImageUploadModal
           isOpen
-          isTeacher={!!uploadWarning?.isTeacher}
+          isTeacher={!!uploadWarningSettings?.isTeacher}
           cancelUpload={cancelPendingUpload}
           confirmUploadWarning={confirmPendingUpload}
           hasVersionHistory={false}

@@ -165,7 +165,7 @@ import DiscoverBlocksButton, {
   DISCOVER_BLOCKS_BUTTON_ID,
 } from './DiscoverBlocksButton';
 import FreeplayIntroDialog from './FreeplayIntroDialog';
-import ImagesTab, {UploadWarning} from './images/ImagesTab';
+import ImagesTab, {UploadWarningSettings} from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
@@ -461,7 +461,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const {inRestrictedShareMode, teacherHasConfirmedUploadWarning} =
     currentSources;
-  const uploadWarning: UploadWarning | undefined = useMemo(
+  const uploadWarningSettings: UploadWarningSettings | undefined = useMemo(
     () =>
       isLevelEditMode
         ? undefined
@@ -2488,7 +2488,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   !!uploadImage &&
                   !isBlockedAbuse
                 }
-                uploadWarning={uploadWarning}
+                uploadWarningSettings={uploadWarningSettings}
                 levelId={levelProperties.id}
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}

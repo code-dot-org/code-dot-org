@@ -49,9 +49,7 @@ function getToolboxEditSources(
   return {source: toolboxToWorkspaceBlocks(definition)};
 }
 
-// Saved flags for the block catalog, the free play intro and the upload
-// rules are not student edits: Continue and the Run/Edit prompt read
-// hasEdited.
+// Keys that are not considered student edits.
 const BOOKKEEPING_KEYS: ReadonlySet<keyof Sources> = new Set<keyof Sources>([
   'chosenBlocks',
   'freeplayIntroSeen',
