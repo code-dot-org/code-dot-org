@@ -26,7 +26,7 @@ import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import {CopyToClipboardButton} from './CopyToClipboardButton';
 import Hoai2026Congrats from './finishDialogs/Hoai2026Congrats';
 import HoaiCongrats from './finishDialogs/HoaiCongrats';
-import useWaitIndicator from './useWaitIndicator';
+import useDelayedSpinner from './useDelayedSpinner';
 
 import moduleStyles from './share-dialog.module.scss';
 
@@ -147,8 +147,6 @@ const ShareDialog: React.FunctionComponent<{
   submissionStatus: SubmissionStatusType | undefined;
   userSharingDisabled: boolean | undefined;
   shareFailure?: ShareFailure | null;
-  /** A check for a share failure is under way: the link, its QR code and
-      the remix are held back until it answers. */
   shareCheckPending?: boolean;
   isAbusive?: boolean;
 }> = ({
@@ -164,7 +162,7 @@ const ShareDialog: React.FunctionComponent<{
   isAbusive = false,
 }) => {
   const dispatch = useAppDispatch();
-  const shareWait = useWaitIndicator(shareCheckPending);
+  const shareWait = useDelayedSpinner(shareCheckPending);
   const sharingDisabled = () =>
     userSharingDisabled && ['pythonlab', 'weblab2'].includes(projectType);
 
@@ -205,8 +203,8 @@ const ShareDialog: React.FunctionComponent<{
           projectType={projectType}
           onRemix={unshareable ? undefined : remix}
           certificateUrl={finishUrl}
-          shareHeld={shareWait.held}
-          shareBusy={shareWait.showSpinner}
+          shareDisabled={shareWait.isWithheld}
+          showShareSpinner={shareWait.showSpinner}
         />
       </div>
     );
@@ -214,7 +212,7 @@ const ShareDialog: React.FunctionComponent<{
 
   // Neither the link nor a failure from before this check is shown until it
   // answers: the student may have fixed the flagged text since.
-  if (shareWait.held) {
+  if (shareWait.isWithheld) {
     return shareWait.showSpinner ? (
       <div data-theme={theme}>
         <Modal

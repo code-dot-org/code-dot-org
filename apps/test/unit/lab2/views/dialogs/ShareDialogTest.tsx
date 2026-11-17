@@ -9,7 +9,7 @@ import ShareDialog, {
   SHARE_FAILURE_MESSAGE_PREFIXES,
   SHARE_FAILURE_TITLE,
 } from '@cdo/apps/lab2/views/dialogs/ShareDialog';
-import {WAIT_INDICATOR_DELAY_MS} from '@cdo/apps/lab2/views/dialogs/useWaitIndicator';
+import {SPINNER_DELAY_MS} from '@cdo/apps/lab2/views/dialogs/useDelayedSpinner';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 // The real code draws on a canvas, which has no name to find it by.
@@ -153,7 +153,7 @@ describe('Lab2 ShareDialog', () => {
     it('shows only a spinner once the check is slow', () => {
       renderShareDialog({shareCheckPending: true});
       act(() => {
-        jest.advanceTimersByTime(WAIT_INDICATOR_DELAY_MS);
+        jest.advanceTimersByTime(SPINNER_DELAY_MS);
       });
       expect(screen.getByRole('status', {name: 'Loading...'})).toBeVisible();
       expect(screen.getByRole('button', {name: 'Cancel'})).toBeEnabled();
@@ -166,7 +166,7 @@ describe('Lab2 ShareDialog', () => {
     it('closes on Escape while the spinner shows', () => {
       renderShareDialog({shareCheckPending: true});
       act(() => {
-        jest.advanceTimersByTime(WAIT_INDICATOR_DELAY_MS);
+        jest.advanceTimersByTime(SPINNER_DELAY_MS);
       });
       fireEvent.keyDown(document, {key: 'Escape'});
       expect(mockDispatch).toHaveBeenCalledWith(hideShareDialog());
@@ -178,7 +178,7 @@ describe('Lab2 ShareDialog', () => {
         shareFailure: {type: 'profanity', content: 'darn'},
       });
       act(() => {
-        jest.advanceTimersByTime(WAIT_INDICATOR_DELAY_MS);
+        jest.advanceTimersByTime(SPINNER_DELAY_MS);
       });
       expect(screen.queryByText(SHARE_FAILURE_TITLE)).toBeNull();
       expect(screen.getByRole('status', {name: 'Loading...'})).toBeVisible();

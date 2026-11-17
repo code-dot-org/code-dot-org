@@ -88,8 +88,6 @@ export interface LabState {
   // (profanity or PII), or null if the project is clean or unfiltered.
   // A non-null value blocks the lab view and the share dialog.
   shareFailure: ShareFailure | null;
-  // A lab's own check for a share failure is under way, so the share dialog
-  // holds the project's link back until it answers.
   shareCheckPending: boolean;
   // If this lab/project is blocked for project non-owners (excluding owner's teacher).
   projectSharingDisabled: boolean | undefined;
