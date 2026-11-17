@@ -6,6 +6,8 @@ import {
   saveUserLessonObjectiveReflection,
   saveUserLessonReflection,
 } from '@cdo/apps/aiTutor/reflectionsApi';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
@@ -132,6 +134,22 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
         true, // useAuthenticityToken
         {'Content-Type': 'application/json'}
       ).catch(() => {});
+
+      objectives.forEach(o => {
+        const rating = objectiveReflections[o.id];
+        if (rating) {
+          analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_OBJECTIVE_RATED, {
+            lesson_id: lessonId,
+            objective_id: o.id,
+            rating,
+          });
+        }
+      });
+      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_REFLECTION_SUBMITTED, {
+        lesson_id: lessonId,
+        has_success_note: success.trim().length > 0,
+        has_confusion_note: struggle.trim().length > 0,
+      });
 
       onSubmitComplete({
         objectiveReflections: objectiveReflections as Record<
