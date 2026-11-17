@@ -235,7 +235,7 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
 
   test "chat entries are appended to the validation history with their pass reason and reply count" do
     travel_to Time.utc(2026, 11, 16, 17) do
-      put_validation 'try', {'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'passReason' => 'limitReached', 'replies' => 8, 'traceId' => 'trace-1'}
+      put_validation 'try', {'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'skipReason' => 'limitReached', 'replies' => 8, 'traceId' => 'trace-1'}
     end
     assert_response :success
     put_validation 'try', {'pass' => true, 'evidenceLevel' => 2, 'reason' => 'Heading added.'}
@@ -243,17 +243,17 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
 
     history = steps['try']['validationHistory']
     assert_equal(
-      {'at' => '2026-11-16T17:00:00Z', 'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'passReason' => 'limitReached', 'replies' => 8, 'traceId' => 'trace-1'},
+      {'at' => '2026-11-16T17:00:00Z', 'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'skipReason' => 'limitReached', 'replies' => 8, 'traceId' => 'trace-1'},
       history[0]
     )
-    assert_equal ['limitReached', nil, nil], history.pluck('passReason')
+    assert_equal ['limitReached', nil, nil], history.pluck('skipReason')
     assert_equal [8, nil, nil], history.pluck('replies')
   end
 
   test "refuses a chat entry with an unknown pass reason, that fails, with evidence, or without its reply count" do
-    chat = {'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'passReason' => 'limitReached', 'replies' => 8}
+    chat = {'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'skipReason' => 'limitReached', 'replies' => 8}
     [
-      chat.merge('passReason' => 'teacher'),
+      chat.merge('skipReason' => 'teacher'),
       chat.merge('pass' => false),
       chat.merge('evidenceLevel' => 1),
       chat.except('replies'),

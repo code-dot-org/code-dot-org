@@ -237,7 +237,7 @@ describe('computeEvidence', () => {
       pass: true,
       evidenceLevel: 0,
       reason: 'Go on.',
-      passReason: 'limitReached',
+      skipReason: 'limitReached',
       replies: 8,
     });
     expect(computeEvidence(pathway, progress)).toEqual({

@@ -18,8 +18,8 @@ class AdaptiveProgressController < ApplicationController
   OTHER_CHOICE_ID = 'other'
   # REVIEW_DECISIONS in apps/src/adaptive/schema/steps/review.ts.
   REVIEW_DECISIONS = %w[build skip].freeze
-  # ChatUnlockReason in apps/src/adaptive/progress/model.ts; absent on a check of work.
-  PASS_REASONS = %w[limitReached].freeze
+  # SkipReason in apps/src/adaptive/progress/model.ts; absent on a check of work.
+  SKIP_REASONS = %w[limitReached].freeze
 
   # GET /adaptive_progress?scriptId=&levelId=
   def show
@@ -140,7 +140,7 @@ class AdaptiveProgressController < ApplicationController
   # The attempt as stored, dated now, or nil if it does not fit: pass is a
   # boolean, the evidence level is 0 or one the measured skill describes,
   # the reason fits, the trace id, if any, is a short string, and a chat
-  # entry names a known pass reason, passes, carries no evidence, and counts
+  # entry names a known skip reason, passes, carries no evidence, and counts
   # its replies.
   private def validation_attempt(step, attempt)
     return nil unless attempt.is_a?(Hash)
@@ -148,7 +148,7 @@ class AdaptiveProgressController < ApplicationController
     level = attempt['evidenceLevel']
     reason = attempt['reason']
     trace_id = attempt['traceId']
-    pass_reason = attempt['passReason']
+    skip_reason = attempt['skipReason']
     replies = attempt['replies']
     return nil unless [true, false].include?(pass)
     return nil unless level.is_a?(Integer) && level >= 0
@@ -156,16 +156,16 @@ class AdaptiveProgressController < ApplicationController
     return nil unless skill_evidence_levels.is_a?(Hash) && (level.zero? || skill_evidence_levels.key?(level.to_s))
     return nil unless reason.is_a?(String) && reason.length <= MAX_TEXT_LENGTH
     return nil unless trace_id.nil? || (trace_id.is_a?(String) && trace_id.length <= 255)
-    return nil unless pass_reason.nil? || PASS_REASONS.include?(pass_reason)
+    return nil unless skip_reason.nil? || SKIP_REASONS.include?(skip_reason)
     return nil unless replies.nil? || (replies.is_a?(Integer) && replies >= 0)
-    return nil if pass_reason && (!pass || !level.zero? || replies.nil?)
+    return nil if skip_reason && (!pass || !level.zero? || replies.nil?)
     {
       'at' => Time.zone.now.utc.iso8601,
       'pass' => pass,
       'evidenceLevel' => level,
       'reason' => reason,
       'traceId' => trace_id,
-      'passReason' => pass_reason,
+      'skipReason' => skip_reason,
       'replies' => replies,
     }.compact
   end

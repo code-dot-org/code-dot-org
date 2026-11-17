@@ -44,7 +44,7 @@ const limit: Omit<ValidationAttempt, 'at'> = {
   pass: true,
   evidenceLevel: 0,
   reason: UNLOCK_MESSAGES.limitReached,
-  passReason: 'limitReached',
+  skipReason: 'limitReached',
   replies: 8,
 };
 const work: ValidationAttempt = {

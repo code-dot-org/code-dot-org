@@ -57,13 +57,13 @@ export function generateInputsHash(prompt: string): string {
 }
 
 /** Why the chat alone opened Continue on a checked step. */
-export type ChatUnlockReason =
+export type SkipReason =
   /** The chat reached the reply limit, which opens Continue regardless. */
   'limitReached';
 
 /**
  * One entry in a step's validation history: a check of the student's work,
- * or, when it carries a `passReason`, the chat opening Continue instead.
+ * or, when it carries a `skipReason`, the chat opening Continue instead.
  * Only work entries carry evidence; a chat entry has evidence level 0 and
  * carries what the student was told.
  */
@@ -78,7 +78,7 @@ export interface ValidationAttempt {
   /** The Langfuse trace the judge ran under. */
   traceId?: string;
   /** Set only on a chat entry, which always passes; absent on every check of work. */
-  passReason?: ChatUnlockReason;
+  skipReason?: SkipReason;
   /** Replies in the chat when a chat entry opened Continue. */
   replies?: number;
 }
@@ -87,13 +87,13 @@ export interface ValidationAttempt {
 export const workAttempts = (
   entry: StepProgress | undefined
 ): ValidationAttempt[] =>
-  (entry?.validationHistory ?? []).filter(attempt => !attempt.passReason);
+  (entry?.validationHistory ?? []).filter(attempt => !attempt.skipReason);
 
 /** The chat entries on a step, oldest first. */
 export const chatChecks = (
   entry: StepProgress | undefined
 ): ValidationAttempt[] =>
-  (entry?.validationHistory ?? []).filter(attempt => !!attempt.passReason);
+  (entry?.validationHistory ?? []).filter(attempt => !!attempt.skipReason);
 
 /** The verdict on a step's work in force; undefined before its first check. */
 export function latestValidation(
@@ -109,7 +109,7 @@ export const FAILED_VALIDATIONS_TO_CONTINUE = 3;
 export type ContinueUnlockReason =
   | 'validationPassed'
   | 'failedValidations'
-  | ChatUnlockReason;
+  | SkipReason;
 
 /** Why a checked step lets the student continue, or undefined while it does not. */
 export function continueUnlockReason(
@@ -118,7 +118,7 @@ export function continueUnlockReason(
   const work = workAttempts(entry);
   if (work.some(attempt => attempt.pass)) return 'validationPassed';
   if (work.length >= FAILED_VALIDATIONS_TO_CONTINUE) return 'failedValidations';
-  return chatChecks(entry).find(check => check.pass)?.passReason;
+  return chatChecks(entry).find(check => check.pass)?.skipReason;
 }
 
 /** Whether a checked step's work or chat lets the student continue past it. */

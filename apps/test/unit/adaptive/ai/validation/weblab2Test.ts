@@ -117,7 +117,7 @@ describe('weblab2Adapter', () => {
         pass: true,
         evidenceLevel: 0,
         reason: 'Go on.',
-        passReason: 'limitReached',
+        skipReason: 'limitReached',
       }
     );
   });
@@ -136,7 +136,7 @@ describe('weblab2Adapter', () => {
         pass: true,
         evidenceLevel: 0,
         reason: 'Go on.',
-        passReason: 'limitReached',
+        skipReason: 'limitReached',
       }
     );
     expect(chat.post).toHaveBeenCalledWith({

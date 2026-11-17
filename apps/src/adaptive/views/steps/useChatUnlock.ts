@@ -52,7 +52,7 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
       if (transcript.replies < replyLimit) return;
       // Recorded already, say when the save has not come back yet: not again.
       const hasPassedLimit = chatChecks(currentOptions.progress).some(
-        check => check.passReason === 'limitReached'
+        check => check.skipReason === 'limitReached'
       );
       if (hasPassedLimit) return;
 
@@ -60,7 +60,7 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
         pass: true,
         evidenceLevel: 0,
         reason: UNLOCK_MESSAGES.limitReached,
-        passReason: 'limitReached',
+        skipReason: 'limitReached',
         replies: transcript.replies,
       };
       currentOptions.recordAttempt(check);

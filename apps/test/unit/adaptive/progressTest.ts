@@ -212,7 +212,7 @@ describe('validationAllowsContinue', () => {
       pass: true,
       evidenceLevel: 0,
       reason: '',
-      passReason: 'limitReached' as const,
+      skipReason: 'limitReached' as const,
       replies: 8,
     };
     expect(
@@ -226,7 +226,7 @@ describe('validationAllowsContinue', () => {
       pass: true,
       evidenceLevel: 0,
       reason: '',
-      passReason: 'limitReached' as const,
+      skipReason: 'limitReached' as const,
       replies: 8,
     };
     const failedTwice = entry(false, false);
@@ -258,7 +258,7 @@ describe('workAttempts, chatChecks and latestValidation', () => {
     pass: true,
     evidenceLevel: 0,
     reason: 'Go on.',
-    passReason: 'limitReached' as const,
+    skipReason: 'limitReached' as const,
     replies: 8,
   };
   const entry = {timeSpent: 0, validationHistory: [old, work, chat]};
