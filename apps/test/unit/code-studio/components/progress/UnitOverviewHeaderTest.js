@@ -87,6 +87,45 @@ describe('UnitOverviewHeader', () => {
     expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(1);
   });
 
+  describe('RequiresVerifiedTeacherAccessNotification', () => {
+    const NOTIFICATION = 'RequiresVerifiedTeacherAccessNotification';
+    const renderHeader = props =>
+      shallow(
+        <UnconnectedUnitOverviewHeader
+          {...defaultProps}
+          isVerifiedInstructor={false}
+          requiresVerifiedTeacherAccess={true}
+          {...props}
+        />,
+        {disableLifecycleMethods: true}
+      );
+
+    it('is shown to unverified instructors when the unit requires it', () => {
+      expect(renderHeader().find(NOTIFICATION).length).toEqual(1);
+    });
+
+    it('replaces the verified resources notification', () => {
+      const wrapper = renderHeader({hasVerifiedResources: true});
+      expect(wrapper.find(NOTIFICATION).length).toEqual(1);
+      expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(0);
+    });
+
+    it('is not shown to verified instructors', () => {
+      const wrapper = renderHeader({isVerifiedInstructor: true});
+      expect(wrapper.find(NOTIFICATION).length).toEqual(0);
+    });
+
+    it('is not shown while viewing as participant', () => {
+      const wrapper = renderHeader({viewAs: ViewType.Participant});
+      expect(wrapper.find(NOTIFICATION).length).toEqual(0);
+    });
+
+    it('is not shown when the unit does not require it', () => {
+      const wrapper = renderHeader({requiresVerifiedTeacherAccess: false});
+      expect(wrapper.find(NOTIFICATION).length).toEqual(0);
+    });
+  });
+
   it('has non-verified and provided instructor announcements if necessary', () => {
     const wrapper = shallow(
       <UnconnectedUnitOverviewHeader

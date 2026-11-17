@@ -354,6 +354,23 @@ describe('UnitEditor', () => {
       expect(navigateToHref).not.toHaveBeenCalled();
     });
 
+    it('saves requires_verified_teacher_access when checked', () => {
+      mockAjax();
+      renderDefault({});
+
+      fireEvent.click(
+        screen.getByRole('checkbox', {
+          name: /Requires Verified Teacher Access/,
+        })
+      );
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Save and Keep Editing'})
+      );
+
+      const saved = JSON.parse(ajaxSpy.mock.calls[0][0].data);
+      expect(saved.requires_verified_teacher_access).toBe(true);
+    });
+
     it('shows error when save and keep editing has error saving', async () => {
       const deferred = mockAjax();
       renderDefault({});

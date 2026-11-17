@@ -109,6 +109,9 @@ function showCourseOverview() {
         requiresInaccessibleAiModels={
           courseSummary.requires_inaccessible_ai_models
         }
+        requiresVerifiedTeacherAccess={
+          courseSummary.requires_verified_teacher_access
+        }
       />
     </Provider>,
     document.getElementById('course_overview')

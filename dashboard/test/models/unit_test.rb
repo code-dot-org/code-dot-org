@@ -754,6 +754,14 @@ class UnitTest < ActiveSupport::TestCase
     refute summary[:has_verified_resources]
   end
 
+  test 'summarize includes requires_verified_teacher_access' do
+    unit = create(:script, :in_single_unit_course)
+    refute unit.summarize[:requires_verified_teacher_access]
+
+    unit.update!(requires_verified_teacher_access: true)
+    assert unit.summarize[:requires_verified_teacher_access]
+  end
+
   test 'summarize includes show_course_unit_version_warning' do
     csp_2017 = create(:unit_group, :with_units, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = csp_2017.first_unit

@@ -63,6 +63,9 @@ export default function initPage(unitEditorData) {
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
         initialHasUnnumberedLessons={scriptData.hasUnnumberedLessons}
         initialHasVerifiedResources={scriptData.has_verified_resources}
+        initialRequiresVerifiedTeacherAccess={
+          scriptData.requires_verified_teacher_access
+        }
         initialCurriculumPath={scriptData.curriculum_path || ''}
         initialEditorExperiment={scriptData.editor_experiment || ''}
         initialAnnouncements={scriptData.announcements || []}

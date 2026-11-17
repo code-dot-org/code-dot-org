@@ -45,6 +45,7 @@ class UnitOverview extends React.Component {
     courseTitle: PropTypes.string,
     courseLink: PropTypes.string,
     isSingleUnitCourse: PropTypes.bool,
+    requiresVerifiedTeacherAccess: PropTypes.bool,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape),
@@ -159,6 +160,7 @@ class UnitOverview extends React.Component {
       courseId,
       isProfessionalLearningCourse,
       isSingleUnitCourse,
+      requiresVerifiedTeacherAccess,
       publishedState,
       participantAudience,
       showAiAssessmentsAnnouncement,
@@ -207,6 +209,7 @@ class UnitOverview extends React.Component {
             courseId={courseId}
             userId={userId}
             isOnTeacherDashboard={isOnTeacherDashboard}
+            requiresVerifiedTeacherAccess={requiresVerifiedTeacherAccess}
           >
             <UnitOverviewActionRow
               courseVersionId={courseVersionId}

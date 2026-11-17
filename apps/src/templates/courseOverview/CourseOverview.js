@@ -32,6 +32,7 @@ import SafeMarkdown from '../SafeMarkdown';
 
 import CourseOverviewActionRow from './CourseOverviewActionRow';
 import CourseScript from './CourseScript';
+import RequiresVerifiedTeacherAccessNotification from './RequiresVerifiedTeacherAccessNotification';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 
 import styles from './course-overview.module.scss';
@@ -54,6 +55,7 @@ class CourseOverview extends Component {
     scripts: PropTypes.array.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
+    requiresVerifiedTeacherAccess: PropTypes.bool,
     versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     showVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
@@ -138,6 +140,7 @@ class CourseOverview extends Component {
       scripts,
       isVerifiedInstructor,
       hasVerifiedResources,
+      requiresVerifiedTeacherAccess,
       versions,
       showVersionWarning,
       showRedirectWarning,
@@ -153,11 +156,16 @@ class CourseOverview extends Component {
 
     const viewAsTeacher = viewAs === ViewType.Instructor;
 
-    const showNotification =
-      viewAsTeacher &&
-      !isVerifiedInstructor &&
+    const showVerificationNotices =
+      viewAsTeacher && !isVerifiedInstructor && !demoType;
+    const showRequiresVerifiedAccessBanner =
+      showVerificationNotices && requiresVerifiedTeacherAccess;
+    // We only want to show one of these banners, so don't show
+    // the verified resources banner if the above banner will trigger.
+    const showVerifiedResourcesBanner =
+      showVerificationNotices &&
       hasVerifiedResources &&
-      !demoType;
+      !requiresVerifiedTeacherAccess;
 
     const determineUnitDescription = script => {
       return viewAs === ViewType.Participant
@@ -215,7 +223,10 @@ class CourseOverview extends Component {
             }}
           />
         )}
-        {showNotification && <VerifiedResourcesNotification />}
+        {showRequiresVerifiedAccessBanner && (
+          <RequiresVerifiedTeacherAccessNotification />
+        )}
+        {showVerifiedResourcesBanner && <VerifiedResourcesNotification />}
         <div className={styles.titleWrapper}>
           <Typography
             variant="h2"

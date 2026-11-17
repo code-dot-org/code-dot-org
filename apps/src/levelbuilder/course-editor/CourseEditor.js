@@ -49,6 +49,7 @@ class CourseEditor extends Component {
     initialUnitPrefixes: PropTypes.arrayOf(PropTypes.string),
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialHasVerifiedResources: PropTypes.bool.isRequired,
+    initialRequiresVerifiedTeacherAccess: PropTypes.bool,
     initialNumberedUnits: PropTypes.oneOf(Object.values(NumberedUnitsType)),
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -87,6 +88,8 @@ class CourseEditor extends Component {
       versionTitle: this.props.initialVersionTitle,
       descriptionShort: this.props.initialDescriptionShort,
       hasVerifiedResources: this.props.initialHasVerifiedResources,
+      requiresVerifiedTeacherAccess:
+        !!this.props.initialRequiresVerifiedTeacherAccess,
       numberedUnits: this.props.initialNumberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
@@ -118,6 +121,8 @@ class CourseEditor extends Component {
       description_student: this.state.descriptionStudent,
       description_teacher: this.state.descriptionTeacher,
       has_verified_resources: this.state.hasVerifiedResources,
+      requires_verified_teacher_access:
+        this.state.requiresVerifiedTeacherAccess,
       family_name: this.state.familyName,
       version_year: this.state.versionYear,
       published_state: this.state.publishedState,
@@ -232,6 +237,7 @@ class CourseEditor extends Component {
       descriptionStudent,
       descriptionTeacher,
       hasVerifiedResources,
+      requiresVerifiedTeacherAccess,
       numberedUnits,
       familyName,
       versionYear,
@@ -318,6 +324,26 @@ class CourseEditor extends Component {
         />
 
         <CollapsibleEditorSection title="Basic Settings">
+          <label>
+            Requires Verified Teacher Access
+            <HelpTip>
+              <p>
+                Check if this course cannot be used by teachers without verified
+                teacher access. Non-verified teachers will see an alert on the
+                course overview page.
+              </p>
+            </HelpTip>
+            <input
+              type="checkbox"
+              defaultChecked={requiresVerifiedTeacherAccess}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  requiresVerifiedTeacherAccess: !requiresVerifiedTeacherAccess,
+                })
+              }
+            />
+          </label>
           <label>
             Verified Resources
             <HelpTip>
