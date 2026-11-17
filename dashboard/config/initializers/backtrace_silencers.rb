@@ -13,8 +13,8 @@ silenced = [
 
 silenced_expr = Regexp.new(silenced.join('|'))
 
-ActiveSupport::Deprecation.behavior = lambda do |message, callstack, deprecation_horizon, gem_name|
-  unless message&.match?(silenced_expr)
-    ActiveSupport::Deprecation::DEFAULT_BEHAVIORS[:stderr].call(message, callstack, deprecation_horizon, gem_name)
+Rails.application.deprecators.behavior = lambda do |message, callstack, deprecator|
+  unless silenced.any? && message&.match?(silenced_expr)
+    ActiveSupport::Deprecation::DEFAULT_BEHAVIORS[:stderr].call(message, callstack, deprecator)
   end
 end
