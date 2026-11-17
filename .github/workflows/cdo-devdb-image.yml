@@ -58,6 +58,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # checkout does not fetch LFS objects. The seed reads
+      # dashboard/config/datablock_storage and the test prepare loads
+      # dashboard/test/fixtures, both LFS tracked, so a pointer file would be
+      # parsed as JSON or YAML. Pulled by pattern, as docker/rails does for
+      # locales: assets and public are not read by the seed.
+      - name: Fetch the LFS objects the seed reads
+        run: git lfs pull --include='dashboard/config/**,dashboard/test/fixtures/**'
+
       # This hands the checkout to uid 1000, the container's user, so the
       # seed can write dashboard/db/schema.rb, log, and tmp. .devcontainer
       # stays at the runner's uid. preseed-db.sh writes mysql-data.tar
