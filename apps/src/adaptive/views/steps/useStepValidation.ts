@@ -51,8 +51,11 @@ export function useStepValidation(options: StepValidationOptions): void {
     : undefined;
 
   useChatUnlock({
+    pathway: options.pathway,
     checkpoint: options.checkpoint,
     step,
+    instructions: options.instructions,
+    aichatContext: options.aichatContext,
     chat,
     progress: options.progress,
     continueAllowed: options.continueAllowed,
