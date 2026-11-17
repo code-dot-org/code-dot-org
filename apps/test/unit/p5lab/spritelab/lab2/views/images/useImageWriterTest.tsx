@@ -230,15 +230,34 @@ describe('useImageWriter', () => {
     const writer = latest.current as ImageWriter;
     await expect(
       writer.acceptGenerated({key: null, imageType: 'sprite'}, result('a.png'))
-    ).rejects.toThrow();
+    ).rejects.toThrow('no uploader for this project');
     await expect(
       writer.saveEdited(
         {key: null, imageType: 'sprite'},
         'data:image/png;base64,AA',
         {}
       )
-    ).rejects.toThrow();
+    ).rejects.toThrow('no uploader for this project');
     expect(createNamedAnimation).not.toHaveBeenCalled();
+  });
+
+  it('shows a pause in drawing on screen with no upload, so it cannot fail', async () => {
+    propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+    const {writer} = renderWriter(
+      jest.fn(async (name: string): Promise<string> => {
+        throw new Error('upload failed');
+      })
+    );
+    await act(async () => {
+      await writer().saveEdited(
+        {key: 'k1', imageType: 'sprite'},
+        'data:image/png;base64,AA',
+        {},
+        {upload: false}
+      );
+    });
+    expect(repointAnimation).toHaveBeenCalledTimes(1);
+    expect(repointAnimation.mock.calls[0][2]).not.toHaveProperty('sourceUrl');
   });
 
   it('keeps what an image depicts when an edit drops the prompt', async () => {

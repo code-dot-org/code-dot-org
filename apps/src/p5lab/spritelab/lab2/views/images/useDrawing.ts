@@ -22,7 +22,7 @@ import {ImageTarget, ImageWriter} from './useImageWriter';
 // the image list's tile, the World tab's palette and the next Run show the
 // picture as it is drawn.
 const STROKE_SAVE_MS = 800;
-// A pause's save stores the pixels in the project; the PNG upload behind the
+// A pause's save updates the picture on screen; the PNG upload behind the
 // image happens at most once per this gap, and once more when the drawing
 // is finished. The project's own save keeps its own throttle.
 const UPLOAD_GAP_MS = 5000;
@@ -380,17 +380,21 @@ export default function useDrawing({
             : d
         );
       } catch {
-        // The picture is still on the canvas. It is marked unsaved, so the
-        // next pause, Done or leaving the tab tries again from the canvas
-        // as it is then; a pending save would only carry older pixels.
-        dirtyRef.current = true;
-        uploadPendingRef.current = true;
-        pendingRef.current = null;
-        leaveAfterSaveRef.current = false;
-        nextFrameRef.current = null;
-        inFlightRef.current = false;
-        setSaveFailed(true);
-        return;
+        if (drawingRef.current?.id === drawingToSave.id) {
+          // The picture is still on the canvas. It is marked unsaved, so the
+          // next pause, Done or leaving the tab tries again from the canvas
+          // as it is then; a pending save would only carry older pixels.
+          dirtyRef.current = true;
+          uploadPendingRef.current = true;
+          pendingRef.current = null;
+          leaveAfterSaveRef.current = false;
+          nextFrameRef.current = null;
+          inFlightRef.current = false;
+          setSaveFailed(true);
+          return;
+        }
+        // The student has left this drawing, so it has no canvas to try
+        // again from. The flags above belong to the drawing open now.
       } finally {
         inFlightRef.current = false;
       }

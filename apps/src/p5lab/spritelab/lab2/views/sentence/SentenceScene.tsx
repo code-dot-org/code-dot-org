@@ -161,11 +161,11 @@ interface SentenceSceneProps {
   /** The student turned Animated on or off. */
   onAnimatedChange?: (animated: boolean) => void;
   /** Called with each generated picture as soon as it is ready, to store
-      it. */
+      it. A picture it rejects is not shown. */
   onKeep: (result: GeneratedImageResult) => Promise<void> | void;
-  /** Called with each generated picture before it is shown. The scene
-      keeps showing that the picture is being made until the returned
-      promise resolves, and shows the picture then. */
+  /** Called with each stored picture before it is shown. The scene keeps
+      showing that the picture is being made until the returned promise
+      resolves, and shows the picture then. */
   onReady?: (result: GeneratedImageResult) => Promise<void> | void;
   /** Called when the student rates the kept picture; resolves true once
       the verdict is on its record. Without it, or when it resolves false,
@@ -437,11 +437,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         prompt,
         sent,
       };
-      // The picture is stored while the host holds it back, so that
+      // The picture is stored before the host holds it back, so that
       // leaving the page during the wait does not lose it.
-      const stored = persist(entry, null);
-      await onReady?.(entry.result);
-      const saved = await stored;
+      const saved = await persist(entry, null);
       if (run !== runRef.current) {
         return;
       }
@@ -449,6 +447,10 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       // there is nothing to show or rate: the student generates again.
       if (!saved) {
         setMode('edit');
+        return;
+      }
+      await onReady?.(entry.result);
+      if (run !== runRef.current) {
         return;
       }
       setChosenPicture(entry);
