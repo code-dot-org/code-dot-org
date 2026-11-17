@@ -172,8 +172,7 @@
               "id": 213,
               "type": "freeResponse",
               "text": "Brainstorm your website",
-              "descriptionText": "What website would you love to have, or what problem could a website help with? Jot down a few ideas. Any idea counts, even a rough one, and nothing here is final.",
-              "placeholder": "\"My website idea is...\"",
+              "placeholder": "What website would you love to have, or what problem could a website help with? Jot down a few ideas. Any idea counts, even a rough one, and nothing here is final.",
               "plan": "ideas"
             },
             {
@@ -246,18 +245,9 @@
               "questionTitle": "Which sentence sounds most like you?",
               "choices": [
                 { "id": "a", "text": "I’m new to using AI to build websites." },
-                {
-                  "id": "b",
-                  "text": "I have a little experience using AI to build websites."
-                },
-                {
-                  "id": "c",
-                  "text": "I have built a full website with AI or a site builder."
-                },
-                {
-                  "id": "d",
-                  "text": "I have built many websites with AI and edited code myself."
-                }
+                { "id": "b", "text": "I have a little experience using AI to build websites." },
+                { "id": "c", "text": "I have built a full website with AI or a site builder." },
+                { "id": "d", "text": "I have built many websites with AI and edited code myself." }
               ]
             },
             {
@@ -267,14 +257,8 @@
               "questionTitle": "Adam wants a big section at the top of his page with a headline and a button. Which message should he send the AI?",
               "choices": [
                 { "id": "a", "text": "Make the top of my page look better." },
-                {
-                  "id": "b",
-                  "text": "Put a big title at the top with a button under it."
-                },
-                {
-                  "id": "c",
-                  "text": "Add a hero section with a headline and a button."
-                },
+                { "id": "b", "text": "Put a big title at the top with a button under it." },
+                { "id": "c", "text": "Add a hero section with a headline and a button." },
                 { "id": "d", "text": "Add an h1 and a button inside a div." },
                 { "id": "e", "text": "I’m not sure yet." }
               ],
@@ -346,18 +330,9 @@
               "questionTitle": "The AI says it fixed your broken button. You reload the page and the button works. Which should you do next?",
               "choices": [
                 { "id": "a", "text": "Move on, since the button works now." },
-                {
-                  "id": "b",
-                  "text": "Click the button 200 times to make sure it continues working."
-                },
-                {
-                  "id": "c",
-                  "text": "Ask the AI to confirm that everything works."
-                },
-                {
-                  "id": "d",
-                  "text": "Click through the rest of the page and look for anything that changed or broke."
-                },
+                { "id": "b", "text": "Click the button 200 times to make sure it continues working." },
+                { "id": "c", "text": "Ask the AI to confirm that everything works." },
+                { "id": "d", "text": "Click through the rest of the page and look for anything that changed or broke." },
                 { "id": "e", "text": "Start over from your first version." }
               ],
               "correctChoiceId": "d"
@@ -421,18 +396,9 @@
               "questionName": "direct-the-action-plan-check",
               "questionTitle": "What advice would you give Maya?",
               "choices": [
-                {
-                  "id": "a",
-                  "text": "“Ask the AI to add a Spin button that picks one place.”"
-                },
-                {
-                  "id": "b",
-                  "text": "“Ask the AI to make the whole page better for your friends.”"
-                },
-                {
-                  "id": "c",
-                  "text": "“Ask the AI to make the colors brighter and the heading bigger.”"
-                }
+                { "id": "a", "text": "“Ask the AI to add a Spin button that picks one place.”" },
+                { "id": "b", "text": "“Ask the AI to make the whole page better for your friends.”" },
+                { "id": "c", "text": "“Ask the AI to make the colors brighter and the heading bigger.”" }
               ],
               "correctChoiceId": "a"
             }
@@ -500,10 +466,7 @@
               "choices": [
                 { "id": "a", "text": "Pick the same event every single time." },
                 { "id": "b", "text": "Count each pick and save the totals." },
-                {
-                  "id": "c",
-                  "text": "Add a brand new event after every pick."
-                },
+                { "id": "c", "text": "Add a brand new event after every pick." },
                 { "id": "d", "text": "Hide the whole list from every visitor." }
               ],
               "correctChoiceId": "b"
@@ -571,18 +534,9 @@
               "questionName": "direct-the-look-plan-check",
               "questionTitle": "What advice would you give Ravi?",
               "choices": [
-                {
-                  "id": "a",
-                  "text": "“Ask the AI to add three more treats to the page.”"
-                },
-                {
-                  "id": "b",
-                  "text": "“Ask the AI to make the hero section warm yellow and brown.”"
-                },
-                {
-                  "id": "c",
-                  "text": "“Ask the AI to make the whole page look nicer for your neighbors.”"
-                }
+                { "id": "a", "text": "“Ask the AI to add three more treats to the page.”" },
+                { "id": "b", "text": "“Ask the AI to make the hero section warm yellow and brown.”" },
+                { "id": "c", "text": "“Ask the AI to make the whole page look nicer for your neighbors.”" }
               ],
               "correctChoiceId": "b"
             }
@@ -712,18 +666,9 @@
               "questionName": "direct-the-words-plan-check",
               "questionTitle": "What advice would you give Priya?",
               "choices": [
-                {
-                  "id": "a",
-                  "text": "“Ask the AI to make the whole page more persuasive for your neighbors.”"
-                },
-                {
-                  "id": "b",
-                  "text": "“Ask the AI to make the headline bigger and a brighter green.”"
-                },
-                {
-                  "id": "c",
-                  "text": "“Ask the AI to make the call-to-action say Sign the petition.”"
-                }
+                { "id": "a", "text": "“Ask the AI to make the whole page more persuasive for your neighbors.”" },
+                { "id": "b", "text": "“Ask the AI to make the headline bigger and a brighter green.”" },
+                { "id": "c", "text": "“Ask the AI to make the call-to-action say Sign the petition.”" }
               ],
               "correctChoiceId": "c"
             }
@@ -858,18 +803,9 @@
               "questionName": "direct-the-code-plan-check",
               "questionTitle": "What advice would you give Theo?",
               "choices": [
-                {
-                  "id": "a",
-                  "text": "“Ask the AI to make the Check button use the city you type.”"
-                },
-                {
-                  "id": "b",
-                  "text": "“Ask the AI to make the whole code work better and run faster.”"
-                },
-                {
-                  "id": "c",
-                  "text": "“Ask the AI to make the page look simpler with fewer colors.”"
-                }
+                { "id": "a", "text": "“Ask the AI to make the Check button use the city you type.”" },
+                { "id": "b", "text": "“Ask the AI to make the whole code work better and run faster.”" },
+                { "id": "c", "text": "“Ask the AI to make the page look simpler with fewer colors.”" }
               ],
               "correctChoiceId": "a"
             }
@@ -936,14 +872,8 @@
               "questionTitle": "Tess wants the button on her page to do something different, but she does not know which part of the code controls it. What is the best next move?",
               "choices": [
                 { "id": "a", "text": "Delete all the code and start over." },
-                {
-                  "id": "b",
-                  "text": "Change random lines until something happens."
-                },
-                {
-                  "id": "c",
-                  "text": "Ask the AI which part of the code controls the button."
-                },
+                { "id": "b", "text": "Change random lines until something happens." },
+                { "id": "c", "text": "Ask the AI which part of the code controls the button." },
                 { "id": "d", "text": "Ask the AI to rewrite the whole page." }
               ],
               "correctChoiceId": "c"
