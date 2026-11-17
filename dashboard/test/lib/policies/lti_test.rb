@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'user'
 require 'policies/lti'
 
 class Policies::LtiTest < ActiveSupport::TestCase
