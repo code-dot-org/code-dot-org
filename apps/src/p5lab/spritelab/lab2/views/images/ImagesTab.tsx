@@ -642,6 +642,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
               : undefined
           }
           method="tab"
+          replacesGenerated={!!chosenImage?.props.generation}
           stillFrame={shownFrame}
           layout={parts => {
             const generating = parts.mode === 'generating';

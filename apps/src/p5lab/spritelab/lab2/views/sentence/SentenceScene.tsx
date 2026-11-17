@@ -82,7 +82,13 @@ interface GeneratedPicture {
   prompt: string;
   /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
+  /** Joins this picture's analytics events to the prompt event. */
+  generationId: string;
 }
+
+// Not crypto.randomUUID: jsdom lacks it.
+const newGenerationId = (): string =>
+  `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
 
 /** Settings from the Advanced popover: a typed prompt that replaces the
     chosen words, a coarser pixel grid, and the current picture as the
@@ -181,6 +187,8 @@ interface SentenceSceneProps {
   ratingRequired?: boolean;
   /** Analytics: which surface generated. */
   method?: string;
+  /** Analytics: the image being replaced is an AI-made picture. */
+  replacesGenerated?: boolean;
   /** Lays the parts out. */
   layout: (parts: SentenceSceneParts) => React.ReactNode;
   /** How the word menus lay their words out; the carousel unless given. */
@@ -213,6 +221,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   onBusyChange,
   ratingRequired = false,
   method = 'scene',
+  replacesGenerated = false,
   layout,
   wordLayout,
   compactBehindTheScenes,
@@ -333,17 +342,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         return;
       }
     }
+    const generationId = newGenerationId();
     // true attaches the project context for per-level breakdowns.
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
+        generationId,
         promptText: prompt,
         method: typedPrompt ? 'freeText' : method,
         imageType,
+        imageSubject,
         ...(typedPrompt ? {} : {sentenceId: sentence.id, choices}),
         style,
         imageSource,
         cached: !!cached,
+        regenerate: !!chosenPicture || replacesGenerated,
       },
       true
     );
@@ -433,6 +446,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
         prompt,
         sent,
+        generationId,
       };
       // The picture is stored while the host holds it back, so that
       // leaving the page during the wait does not lose it.
@@ -470,6 +484,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     style,
     generatesCharacterSet,
     method,
+    replacesGenerated,
+    chosenPicture,
     onGenerateStart,
     exhausted,
     advanced,
@@ -487,6 +503,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         EVENTS.HOAI2026_IMAGE_VERDICT,
         {
           verdict: next,
+          generationId: chosenPicture?.generationId,
           promptText: chosenPicture?.prompt,
           imageType,
         },
@@ -508,6 +525,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         EVENTS.HOAI2026_IMAGE_VERDICT_REASON,
         {
           reasons,
+          generationId: chosenPicture?.generationId,
           promptText: chosenPicture?.prompt,
           imageType,
         },
