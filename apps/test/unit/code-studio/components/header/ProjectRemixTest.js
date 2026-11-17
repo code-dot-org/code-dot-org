@@ -60,6 +60,36 @@ describe('ProjectRemix', () => {
     expect(wrapper.isEmptyRender()).to.be.true;
   });
 
+  it('reports a width change when it stops being blocked', () => {
+    const onChangedWidth = sinon.spy();
+    const wrapper = shallow(
+      <ProjectRemix
+        {...defaultProps}
+        inRestrictedShareMode
+        onChangedWidth={onChangedWidth}
+      />
+    );
+
+    wrapper.setProps({inRestrictedShareMode: false});
+
+    expect(onChangedWidth.calledOnce).to.be.true;
+  });
+
+  it('reports no width change while it stays blocked', () => {
+    const onChangedWidth = sinon.spy();
+    const wrapper = shallow(
+      <ProjectRemix
+        {...defaultProps}
+        inRestrictedShareMode
+        onChangedWidth={onChangedWidth}
+      />
+    );
+
+    wrapper.setProps({isBlockedAbuse: true});
+
+    expect(onChangedWidth.called).to.be.false;
+  });
+
   it('will attempt serverside remix when possible', () => {
     sinon.stub(window.dashboard.project, 'getCurrentId').returns(true);
     sinon.stub(window.dashboard.project, 'canServerSideRemix').returns(true);
