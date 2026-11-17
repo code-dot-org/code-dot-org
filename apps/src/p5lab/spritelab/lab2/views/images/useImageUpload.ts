@@ -88,7 +88,7 @@ export default function useImageUpload({
       if (!file || !kind) {
         return;
       }
-      if (!ACCEPTED_TYPES.includes(file.type)) {
+      if (!ACCEPTED_TYPES.includes(file.type.toLowerCase())) {
         onError(UPLOAD_ERRORS.wrongType);
         return;
       }
@@ -115,7 +115,8 @@ export default function useImageUpload({
 
   const [openFileInput, FileInput] = useHiddenFileInput(
     handleFile,
-    ACCEPTED_TYPES.join(','),
+    // Extensions match case-insensitively, so .PNG and .JPG are pickable too.
+    [...ACCEPTED_TYPES, '.png', '.jpg', '.jpeg'].join(','),
     false
   );
 
