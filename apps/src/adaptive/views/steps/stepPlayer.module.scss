@@ -97,6 +97,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  // Pulls the field closer to the heading than the card's 24px body gap.
+  margin-top: -0.5rem;
 }
 
 .freeResponseTextarea {
@@ -113,7 +115,7 @@
   caret-color: var(--borders-brand-teal-primary);
 
   &::placeholder {
-    color: var(--text-neutral-placeholder);
+    color: var(--text-neutral-tertiary);
   }
 
   &:focus-visible {
