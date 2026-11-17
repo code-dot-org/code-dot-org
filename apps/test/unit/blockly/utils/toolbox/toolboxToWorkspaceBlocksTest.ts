@@ -61,6 +61,27 @@ describe('toolboxToWorkspaceBlocks', () => {
     ]);
   });
 
+  it('follows a dynamic category with the blocks it holds', () => {
+    const blocks = blocksOf({
+      kind: 'categoryToolbox',
+      contents: [
+        {
+          kind: 'category',
+          name: 'Variables',
+          custom: 'VARIABLE',
+          contents: [{kind: 'block', type: 'math_number'}],
+        },
+        {kind: 'category', name: 'Functions', custom: 'PROCEDURE'},
+      ],
+    } as ToolboxInfo);
+
+    expect(blocks).toEqual([
+      {type: BLOCK_TYPES.categoryDynamic, fields: {CUSTOM: 'Variables'}},
+      {kind: 'block', type: 'math_number'},
+      {type: BLOCK_TYPES.categoryDynamic, fields: {CUSTOM: 'Functions'}},
+    ]);
+  });
+
   it('names a dynamic category from its custom flyout alone', () => {
     const blocks = blocksOf({
       kind: 'categoryToolbox',
