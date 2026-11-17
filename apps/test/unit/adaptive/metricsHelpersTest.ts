@@ -1,9 +1,13 @@
 import {
+  adaptivePathwayId,
   firstProjectStepId,
+  moderationFallbackReason,
   sendAdaptiveEvent,
+  sendAiStaticFallbackUsed,
+  sendContinueUnlocked,
   setAdaptiveMetricsContext,
 } from '@cdo/apps/adaptive/metricsHelpers';
-import {Pathway} from '@cdo/apps/adaptive/types';
+import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
@@ -20,6 +24,63 @@ describe('adaptive metrics', () => {
       {pathwayId: 'p', levelId: 1, scriptId: 2, a: 'x'},
       true,
       'x'
+    );
+  });
+
+  it('names the pathway the context was set for', () => {
+    setAdaptiveMetricsContext({pathwayId: 'hoai', levelId: 1, scriptId: 2});
+    expect(adaptivePathwayId()).toBe('hoai');
+  });
+
+  it('sends a fallback with the feature, the reason and the step', () => {
+    setAdaptiveMetricsContext({pathwayId: 'p', levelId: 1, scriptId: 2});
+    const step = {id: 's', title: 'S', kind: 'level', level: 'lvl'} as Step;
+    sendAiStaticFallbackUsed(
+      'instructions',
+      moderationFallbackReason('error'),
+      {id: 'c'} as Checkpoint,
+      step
+    );
+    expect(analyticsReporter.sendEvent).toHaveBeenLastCalledWith(
+      'Adaptive AI Static Fallback Used',
+      {
+        pathwayId: 'p',
+        levelId: 1,
+        scriptId: 2,
+        checkpointId: 'c',
+        stepId: 's',
+        stepKind: 'level',
+        stepName: 'S',
+        levelName: 'lvl',
+        feature: 'instructions',
+        reason: 'moderationCheckFailed',
+      },
+      true,
+      'instructions'
+    );
+    expect(moderationFallbackReason('flagged')).toBe(
+      'outputFlaggedByModeration'
+    );
+  });
+
+  it('sends an unlock with its reason as the value, the step and the counts', () => {
+    setAdaptiveMetricsContext({pathwayId: 'p', levelId: 1, scriptId: 2});
+    const step = {id: 's', title: 'S', kind: 'level', level: 'lvl'} as Step;
+    sendContinueUnlocked('limitReached', {id: 'c'} as Checkpoint, step, {
+      validationAttempts: 2,
+      replies: 10,
+    });
+    expect(analyticsReporter.sendEvent).toHaveBeenLastCalledWith(
+      'Adaptive Continue Unlocked',
+      expect.objectContaining({
+        checkpointId: 'c',
+        stepId: 's',
+        reason: 'limitReached',
+        validationAttempts: 2,
+        replies: 10,
+      }),
+      true,
+      'limitReached'
     );
   });
 

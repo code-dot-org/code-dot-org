@@ -1,4 +1,4 @@
-import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 import {Typography, Button as MuiButton} from '@mui/material';
@@ -56,6 +56,39 @@ interface LessonSummaryInfo {
   misconceptions: string[];
   tips: string[];
 }
+
+// Summaries generated before the schema was strict may hold objects where
+// strings belong; React cannot render those.
+const toText = (value: unknown): string | null => {
+  if (typeof value === 'string') {
+    return value;
+  }
+  if (typeof value === 'number') {
+    return String(value);
+  }
+  if (value && typeof value === 'object' && !Array.isArray(value)) {
+    const parts = Object.values(value).filter(
+      (part): part is string => typeof part === 'string'
+    );
+    return parts.length ? parts.join(': ') : null;
+  }
+  return null;
+};
+
+const toTextList = (value: unknown): string[] =>
+  Array.isArray(value)
+    ? value.map(toText).filter((text): text is string => !!text)
+    : [];
+
+export const parseLessonSummary = (json: string): LessonSummaryInfo => {
+  const summary = JSON.parse(json) ?? {};
+  return {
+    learning_objective: toText(summary.learning_objective) ?? '',
+    lesson_beats: toTextList(summary.lesson_beats),
+    misconceptions: toTextList(summary.misconceptions),
+    tips: toTextList(summary.tips),
+  };
+};
 
 interface LessonSummaryInfoResponse {
   lesson_summary: string;
@@ -208,7 +241,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           if (response.response.ok) {
             if (response.value?.lesson_summary) {
               setAITALessonSummaryInfo(
-                JSON.parse(response.value.lesson_summary)
+                parseLessonSummary(response.value.lesson_summary)
               );
             }
             if (response.value?.script) {

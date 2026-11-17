@@ -105,8 +105,8 @@ const SAFETY_CHECK_FAILURES = {
 export class AskAiError extends Error {
   constructor(public readonly phase: keyof typeof SAFETY_CHECK_FAILURES) {
     super(SAFETY_CHECK_FAILURES[phase]);
-    // The ES5 build target otherwise leaves this with Error's prototype.
-    Object.setPrototypeOf(this, AskAiError.prototype);
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'AskAiError';
   }
 }
@@ -114,7 +114,8 @@ export class AskAiError extends Error {
 class AskAiTimeoutError extends Error {
   constructor() {
     super('The AI took too long to answer.');
-    Object.setPrototypeOf(this, AskAiTimeoutError.prototype);
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'AskAiTimeoutError';
   }
 }

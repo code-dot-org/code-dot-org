@@ -44,9 +44,8 @@ class AiGatewayAuthController < ApplicationController
 
     blocked_providers = current_user.blocked_aichat_providers
 
-    # Until the gateway handles blocked providers and rejects or falls back to another provider,
-    # we keep blocking token minting entirely.
-    if blocked_providers.any? && !DCDO.get('ai_gateway_fallback_is_enabled', false)
+    # A token is not tied to a model, so the gateway itself refuses models with no fallback.
+    if blocked_providers.any? && !current_user.ai_gateway_fallback_allowed?(aichat_context[:clientType])
       return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
     end
 

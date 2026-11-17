@@ -156,14 +156,35 @@ class AichatRequestsControllerTest < ActionController::TestCase
     assert_equal AichatRequestsController::MODEL_REGION_BLOCKED_ERROR, JSON.parse(response.body)['error']
   end
 
-  test 'create records a US only model request when the gateway fallback is enabled' do
+  test 'create records a tutor request for a US only model when the gateway fallback is enabled' do
     sign_in(@authorized_teacher1)
     User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
     DCDO.stubs(:get).with('ai_gateway_fallback_is_enabled', anything).returns(true)
     assert_difference('AichatRequest.count', 1) do
-      post :create, params: us_only_chat_completion_params, as: :json
+      post :create, params: us_only_chat_completion_params(client_type: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]), as: :json
     end
     assert_response :success
+  end
+
+  test 'create refuses an AI Chat Lab request for a US only model even when the gateway fallback is enabled' do
+    sign_in(@authorized_teacher1)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+    DCDO.stubs(:get).with('ai_gateway_fallback_is_enabled', anything).returns(true)
+    post :create, params: us_only_chat_completion_params, as: :json
+    assert_response :forbidden
+    assert_equal AichatRequestsController::MODEL_REGION_BLOCKED_ERROR, JSON.parse(response.body)['error']
+  end
+
+  test 'create refuses a tutor request for an image model even when the gateway fallback is enabled' do
+    sign_in(@authorized_teacher1)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+    DCDO.stubs(:get).with('ai_gateway_fallback_is_enabled', anything).returns(true)
+    params = us_only_chat_completion_params(
+      client_type: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR],
+      model_id: SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE]
+    )
+    post :create, params: params, as: :json
+    assert_response :forbidden
   end
 
   test 'Bad request if required params are not included for start_chat_completion' do
@@ -267,9 +288,10 @@ class AichatRequestsControllerTest < ActionController::TestCase
     assert_equal json_response['response'], response
   end
 
-  private def us_only_chat_completion_params
+  private def us_only_chat_completion_params(client_type: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB], model_id: SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH])
     @valid_params_chat_completion.merge(
-      modelParameters: @default_model_customizations.merge('selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH])
+      modelParameters: @default_model_customizations.merge('selectedModelId' => model_id),
+      aichatContext: @default_aichat_context.merge(clientType: client_type)
     )
   end
 end

@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo} from 'react';
+import React, {useEffect} from 'react';
 
 import {getStudentsForSection} from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -8,40 +8,12 @@ import {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {Rubric, StudentLevelInfo} from '@cdo/apps/types/rubricTypes';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import RubricContainer from './rubrics/RubricContainer';
 
 import styles from './rubrics-screen.module.scss';
 
-interface RubricDataAttr {
-  rubric: Rubric;
-  studentLevelInfo?: StudentLevelInfo | null;
-  parentLevelName?: string;
-  levelType?: string;
-}
-
-interface LevelDataAttr {
-  script_name: string;
-  course_name: string;
-  level_name: string;
-}
-
-function readAttr<T>(selector: string, key: string): T | null {
-  const el = document.querySelector<HTMLScriptElement>(selector);
-  if (!el?.dataset[key]) return null;
-  try {
-    return JSON.parse(el.dataset[key] as string) as T;
-  } catch {
-    return null;
-  }
-}
-
-// Mirrors what apps/src/sites/studio/pages/levels/show.js reads to build
-// RubricFloatingActionButton's props, so this screen can reconstruct the
-// same data from a separate React root (the drawer's) without needing
-// show.js to route anything to us directly.
 const RubricsScreen: React.FC = () => {
   const dispatch = useAppDispatch();
   const sectionId = useAppSelector(state => selectedSectionSelector(state)?.id);
@@ -81,28 +53,25 @@ const RubricsScreen: React.FC = () => {
     }
   }, [dispatch, sectionsAreLoaded]);
 
-  const rubricData = useMemo(
-    () => readAttr<RubricDataAttr>('script[data-rubricdata]', 'rubricdata'),
-    []
-  );
-  const levelData = useMemo(
-    () => readAttr<LevelDataAttr>('script[data-level]', 'level'),
-    []
-  );
+  const drawerRubric = useAppSelector(state => state.aiDiffChat.drawerRubric);
 
-  if (!rubricData?.rubric) return null;
+  if (!drawerRubric) return null;
 
-  const {rubric, studentLevelInfo, parentLevelName, levelType} = rubricData;
+  const {
+    rubric,
+    studentLevelInfo,
+    levelName,
+    parentLevelName,
+    levelType,
+    unitName,
+    courseName,
+  } = drawerRubric;
   const aiEnabled = !!rubric.learningGoals?.some(lg => lg?.aiEnabled);
   const onLevelForEvaluation =
     levelType !== 'BubbleChoice' &&
-    (levelData?.level_name === rubric.level?.name ||
+    (levelName === rubric.level?.name ||
       parentLevelName === rubric.level?.name);
-  const reportingData = {
-    unitName: levelData?.script_name,
-    courseName: levelData?.course_name,
-    levelName: levelData?.level_name,
-  };
+  const reportingData = {unitName, courseName, levelName};
 
   return (
     <div className={styles.wrapper}>

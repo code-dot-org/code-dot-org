@@ -4,11 +4,15 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
 
 describe('blankPaintSpec', () => {
-  it('sizes pixel style on the generation grid, at its logical size', () => {
+  it('gives a hand-drawn pixel sprite a 24 by 24 grid, one canvas pixel each', () => {
     const spec = blankPaintSpec('sprite', 'pixel');
-    // 1024/32 logical pixels, one canvas pixel each.
     expect(spec.pixelGridSize).toBe(1);
-    expect(spec.size).toBe(32);
+    expect(spec.size).toBe(24);
+  });
+
+  it('gives a pixel block the grid the AI is asked for', () => {
+    // 1024/32 logical pixels.
+    expect(blankPaintSpec('block', 'pixel').size).toBe(32);
   });
 
   it('gives pixel backgrounds the finer per-type grid', () => {

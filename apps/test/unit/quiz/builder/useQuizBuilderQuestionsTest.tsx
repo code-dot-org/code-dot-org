@@ -39,11 +39,9 @@ describe('useQuizBuilderQuestions', () => {
   let getSpy: jest.SpyInstance;
   let postSpy: jest.SpyInstance;
   let putSpy: jest.SpyInstance;
-  let version: {current: number | null};
 
   beforeEach(() => {
     jest.resetAllMocks();
-    version = {current: null};
     getSpy = jest.spyOn(HttpClient, 'get').mockResolvedValue({
       json: async () => ({
         displayName: 'A quiz',
@@ -56,25 +54,26 @@ describe('useQuizBuilderQuestions', () => {
   });
 
   const renderLoaded = async () => {
-    const hook = renderHook(() => useQuizBuilderQuestions(42, version));
+    const hook = renderHook(() => useQuizBuilderQuestions(42));
     await hook.waitForNextUpdate();
     return hook;
   };
 
   it("loads the quiz's placed questions on mount", async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42, version)
+      useQuizBuilderQuestions(42)
     );
 
     expect(result.current.isLoading).toBe(true);
+    expect(result.current.hasLoaded).toBe(false);
     await waitForNextUpdate();
 
     expect(getSpy).toHaveBeenCalledWith('/levels/42/quiz_configuration');
     expect(result.current.isLoading).toBe(false);
+    expect(result.current.hasLoaded).toBe(true);
     expect(result.current.questions).toEqual([STORED]);
     expect(result.current.pages).toEqual([{page: 1, questions: [STORED]}]);
     expect(result.current.hasUnsavedLayout).toBe(false);
-    expect(version.current).toBe(5);
   });
 
   it('numbers pages by their order, closing gaps in the saved page numbers', async () => {
@@ -135,7 +134,7 @@ describe('useQuizBuilderQuestions', () => {
 
   it('adds a placeholder question locally, with no network call', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42, version)
+      useQuizBuilderQuestions(42)
     );
     await waitForNextUpdate();
 
@@ -159,7 +158,7 @@ describe('useQuizBuilderQuestions', () => {
 
   it('adds a multiple select placeholder with the first option correct', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42, version)
+      useQuizBuilderQuestions(42)
     );
     await waitForNextUpdate();
 
@@ -179,7 +178,7 @@ describe('useQuizBuilderQuestions', () => {
 
   it('adds a match placeholder with two pairs, each id random and distinct', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42, version)
+      useQuizBuilderQuestions(42)
     );
     await waitForNextUpdate();
 
@@ -210,7 +209,7 @@ describe('useQuizBuilderQuestions', () => {
 
   it('adds the placeholder to the given page', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42, version)
+      useQuizBuilderQuestions(42)
     );
     await waitForNextUpdate();
 
@@ -224,7 +223,7 @@ describe('useQuizBuilderQuestions', () => {
 
   it('returns a negative id, distinct from any real server id', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42, version)
+      useQuizBuilderQuestions(42)
     );
     await waitForNextUpdate();
 
@@ -240,14 +239,31 @@ describe('useQuizBuilderQuestions', () => {
     getSpy.mockRejectedValue(new Error('offline'));
 
     const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42, version)
+      useQuizBuilderQuestions(42)
     );
     await waitForNextUpdate();
 
     expect(result.current.error).toBe('Something went wrong.');
     expect(result.current.questions).toEqual([]);
     expect(result.current.isLoading).toBe(false);
+    expect(result.current.hasLoaded).toBe(false);
     expect(result.current.errorQuestionId).toBeNull();
+  });
+
+  it('sends nothing on Save quiz when the load failed', async () => {
+    getSpy.mockRejectedValue(new Error('offline'));
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    let saved;
+    await act(async () => {
+      saved = await result.current.saveQuiz({showCorrectness: false});
+    });
+
+    expect(saved).toBe(false);
+    expect(putSpy).not.toHaveBeenCalled();
   });
 
   describe('saveQuestion', () => {
@@ -425,6 +441,122 @@ describe('useQuizBuilderQuestions', () => {
     });
   });
 
+  describe('moving questions', () => {
+    // Questions 7 and 8 on page 1, 9 on page 2.
+    const renderTwoPages = async () => {
+      getSpy.mockResolvedValue({
+        json: async () => ({
+          version: 5,
+          questions: [
+            QUESTION,
+            {...QUESTION, id: 8},
+            {...QUESTION, id: 9, page: 2},
+          ],
+        }),
+      } as Response);
+      return renderLoaded();
+    };
+    const layout = (pages: {questions: {id: number}[]}[]) =>
+      pages.map(p => p.questions.map(q => q.id));
+
+    it('moves a question up or down on its page', async () => {
+      const {result} = await renderTwoPages();
+
+      act(() => {
+        result.current.moveQuestion(7, 1);
+      });
+      expect(layout(result.current.pages)).toEqual([[8, 7], [9]]);
+      expect(result.current.hasUnsavedLayout).toBe(true);
+
+      act(() => {
+        result.current.moveQuestion(7, -1);
+      });
+      expect(layout(result.current.pages)).toEqual([[7, 8], [9]]);
+      expect(result.current.hasUnsavedLayout).toBe(false);
+    });
+
+    it('leaves a question at the edge of its page where it is', async () => {
+      const {result} = await renderTwoPages();
+
+      act(() => {
+        result.current.moveQuestion(7, -1);
+        result.current.moveQuestion(9, 1);
+      });
+
+      expect(layout(result.current.pages)).toEqual([[7, 8], [9]]);
+    });
+
+    it('moves a question to the bottom of another page', async () => {
+      const {result} = await renderTwoPages();
+
+      act(() => {
+        result.current.moveQuestionToPage(7, 2);
+      });
+
+      expect(layout(result.current.pages)).toEqual([[8], [9, 7]]);
+      expect(result.current.hasUnsavedLayout).toBe(true);
+    });
+
+    it('keeps a page emptied by a move, for Save quiz to drop', async () => {
+      const {result} = await renderTwoPages();
+
+      act(() => {
+        result.current.moveQuestionToPage(9, 1);
+      });
+
+      expect(layout(result.current.pages)).toEqual([[7, 8, 9], []]);
+    });
+  });
+
+  describe('pages', () => {
+    const sizes = (pages: {questions: unknown[]}[]) =>
+      pages.map(p => p.questions.length);
+
+    it('adds an empty page at a given position', async () => {
+      const {result} = await renderLoaded();
+
+      act(() => {
+        result.current.addPage(1);
+      });
+
+      expect(sizes(result.current.pages)).toEqual([0, 1]);
+    });
+
+    it('moves a page, leaving the first page where it is when moved up', async () => {
+      const {result} = await renderLoaded();
+      act(() => {
+        result.current.addPage();
+      });
+
+      act(() => {
+        result.current.movePage(1, 1);
+      });
+      expect(sizes(result.current.pages)).toEqual([0, 1]);
+
+      act(() => {
+        result.current.movePage(1, -1);
+      });
+      expect(sizes(result.current.pages)).toEqual([0, 1]);
+    });
+
+    it('deletes an empty page but not one with questions', async () => {
+      const {result} = await renderLoaded();
+      act(() => {
+        result.current.addPage();
+      });
+
+      act(() => {
+        result.current.deletePage(1);
+      });
+      expect(sizes(result.current.pages)).toEqual([1, 0]);
+
+      act(() => {
+        result.current.deletePage(2);
+      });
+      expect(sizes(result.current.pages)).toEqual([1]);
+    });
+  });
+
   describe('removeQuestion', () => {
     it('drops a pending question locally, leaving nothing to save', async () => {
       const {result} = await renderLoaded();
@@ -462,7 +594,7 @@ describe('useQuizBuilderQuestions', () => {
     const savedResponse = (placements: object[], newVersion = 6) =>
       ({json: async () => ({version: newVersion, placements})} as Response);
 
-    it('sends the layout, deletions and version, then takes the saved version', async () => {
+    it('sends the layout, deletions and the loaded version', async () => {
       const {result} = await renderLoaded();
       await act(async () => {
         await result.current.removeQuestion(7, {permanently: true});
@@ -481,8 +613,29 @@ describe('useQuizBuilderQuestions', () => {
         {'Content-Type': 'application/json'}
       );
       expect(saved).toBe(true);
-      expect(version.current).toBe(6);
       expect(result.current.hasUnsavedLayout).toBe(false);
+    });
+
+    it('sends configuration fields with the layout, an unset one as null', async () => {
+      const {result} = await renderLoaded();
+      putSpy.mockResolvedValue(
+        savedResponse([{quizQuestionId: 7, page: 1, position: 1}])
+      );
+
+      await act(async () => {
+        await result.current.saveQuiz({
+          showCorrectness: false,
+          timeLimitMinutes: undefined,
+        });
+      });
+
+      expect(JSON.parse(putSpy.mock.calls[0][1] as string)).toEqual({
+        showCorrectness: false,
+        timeLimitMinutes: null,
+        version: 5,
+        placements: [{quizQuestionId: 7, page: 1, position: 1}],
+        deleteQuestionIds: [],
+      });
     });
 
     it('keeps a question removed from the quiz in the bank by leaving it out of deleteQuestionIds', async () => {
@@ -546,22 +699,6 @@ describe('useQuizBuilderQuestions', () => {
       expect(result.current.hasUnsavedLayout).toBe(false);
     });
 
-    it('keeps a newer version when its response arrives late', async () => {
-      const {result} = await renderLoaded();
-      await act(async () => {
-        await result.current.removeQuestion(7, {permanently: false});
-      });
-      // A configuration save from this tab has already recorded version 9.
-      version.current = 9;
-      putSpy.mockResolvedValue(savedResponse([], 6));
-
-      await act(async () => {
-        await result.current.saveQuiz();
-      });
-
-      expect(version.current).toBe(9);
-    });
-
     it('keeps a removal made during the save as unsaved', async () => {
       const {result} = await renderLoaded();
       let resolvePut: (response: Response) => void = () => {};
@@ -620,7 +757,14 @@ describe('useQuizBuilderQuestions', () => {
       );
       expect(result.current.errorQuestionId).toBeNull();
       expect(result.current.hasUnsavedLayout).toBe(true);
-      expect(version.current).toBe(5);
+
+      putSpy.mockResolvedValue(savedResponse([]));
+      await act(async () => {
+        await result.current.saveQuiz();
+      });
+      expect(JSON.parse(putSpy.mock.calls[1][1] as string)).toMatchObject({
+        version: 5,
+      });
     });
 
     it('refuses to save while a question is still unsaved', async () => {

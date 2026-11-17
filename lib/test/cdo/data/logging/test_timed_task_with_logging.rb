@@ -54,32 +54,32 @@ class TimedTaskWithLoggingTest < Minitest::Test
 
   def test_duration_words
     {
-      0.4 => 'less than 1 second',
-      0.9 => 'less than 1 second',
-      22 => '22 seconds',
-      95.4 => '1 minute and 35 seconds',
-      3605 => '1 hour and 5 seconds',
+      0.4 => '<1s',
+      0.9 => '<1s',
+      22 => '22s',
+      95.4 => '1m35s',
+      3605 => '1h5s',
     }.each do |seconds, words|
       assert_equal words, @child.send(:duration_words, seconds)
     end
   end
 
   def test_timing_words
-    assert_equal 'in 4 minutes and 11 seconds total (3 minutes and 11 seconds excluding prerequisites)', @child.send(:timing_words, 251, 191)
-    assert_equal 'in 22 seconds', @child.send(:timing_words, 22.4, 22.1)
-    assert_equal 'in 5 seconds', @child.send(:timing_words, 5, nil)
+    assert_equal 'in 4m11s total (3m11s excluding prerequisites)', @child.send(:timing_words, 251, 191)
+    assert_equal 'in 22s', @child.send(:timing_words, 22.4, 22.1)
+    assert_equal 'in 5s', @child.send(:timing_words, 5, nil)
   end
 
   def test_leaf_prints_one_number_after_it_runs
     out, _err = capture_io {@child.invoke}
-    assert_equal ['Finished child in 1 minute and 1 second'], out.lines(chomp: true)
+    assert_equal ['Finished child in 1m1s'], out.lines(chomp: true)
   end
 
   def test_parent_line_shows_time_spent_in_prerequisites
     out, _err = capture_io {@parent.invoke}
     assert_equal [
-      'Finished child in 1 minute and 1 second',
-      'Finished parent in 1 minute and 1 second total (less than 1 second excluding prerequisites)',
+      'Finished child in 1m1s',
+      'Finished parent in 1m1s total (<1s excluding prerequisites)',
     ], out.lines(chomp: true)
   end
 
@@ -87,20 +87,20 @@ class TimedTaskWithLoggingTest < Minitest::Test
     RakeTaskEventLogger.delay = TRAVEL_TIME
     leaf = CustomRake::TimedTaskWithLogging.define_task(:leaf) {}
     out, _err = capture_io {leaf.invoke}
-    assert_equal ['Finished leaf in 1 minute and 1 second'], out.lines(chomp: true)
+    assert_equal ['Finished leaf in 1m1s'], out.lines(chomp: true)
   end
 
   def test_plain_task_can_invoke_a_timed_prerequisite
     plain = Rake::Task.define_task(plain: :child) {}
     out, _err = capture_io {plain.invoke}
-    assert_equal ['Finished child in 1 minute and 1 second'], out.lines(chomp: true)
+    assert_equal ['Finished child in 1m1s'], out.lines(chomp: true)
   end
 
   def test_timed_task_can_invoke_a_plain_prerequisite
     Rake::Task.define_task(:plain) {Timecop.travel(TRAVEL_TIME)}
     timed = CustomRake::TimedTaskWithLogging.define_task(timed: :plain) {}
     out, _err = capture_io {timed.invoke}
-    assert_equal ['Finished timed in 1 minute and 1 second total (less than 1 second excluding prerequisites)'], out.lines(chomp: true)
+    assert_equal ['Finished timed in 1m1s total (<1s excluding prerequisites)'], out.lines(chomp: true)
   end
 
   def test_second_invoke_prints_nothing

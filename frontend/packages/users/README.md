@@ -73,6 +73,7 @@ persona:
 - `sso-student`: Google-only student
 - `minimal`: word/picture student with optional fields empty and edits locked
 - `teacher-no-school`: educator with no school and no role
+- `non-school-teacher`: educator who does not teach in a school setting
 - `multi-sso-teacher`: Google, Microsoft and ClassLink logins
 - `lti-teacher`: Canvas login beside a password
 - `lti-only-teacher`: Schoology is the only login

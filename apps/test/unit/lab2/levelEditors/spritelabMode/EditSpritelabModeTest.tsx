@@ -11,6 +11,8 @@ const IMAGE_SUBJECT = /^Image subject/;
 const IMAGE_ROLE = /^Image role/;
 const PALETTE_ROLES = /^Palette roles/;
 const IMAGE_FIRST = /^Enable the Images tab/;
+const ONE_IMAGE = /^Limit students to one image/;
+const IMAGE_UPLOAD = /^Enable image upload/;
 
 const dropdown = (name: RegExp) => screen.getByRole('combobox', {name});
 const textbox = (name: RegExp) => screen.getByRole('textbox', {name});
@@ -183,9 +185,63 @@ describe('EditSpritelabMode', () => {
     expect(JSON.parse(submitted(container))).toEqual({kind: 'image'});
   });
 
+  it('writes the one-image flag the author ticks', () => {
+    const {container} = renderEditor({kind: 'image', imageType: 'sprite'});
+    fireEvent.click(screen.getByRole('checkbox', {name: ONE_IMAGE}));
+    expect(JSON.parse(submitted(container))).toEqual({
+      kind: 'image',
+      imageType: 'sprite',
+      oneImage: true,
+    });
+  });
+
+  it('clears the image type, which every kind may leave unset', () => {
+    const {container} = renderEditor({kind: 'image', imageType: 'sprite'});
+    choose(IMAGE_TYPE, '');
+    expect(JSON.parse(submitted(container))).toEqual({kind: 'image'});
+  });
+
+  it('leaves the type optional, one image or not', () => {
+    const {container} = renderEditor({kind: 'image'});
+    fireEvent.click(screen.getByRole('checkbox', {name: ONE_IMAGE}));
+    expect(JSON.parse(submitted(container))).toEqual({
+      kind: 'image',
+      oneImage: true,
+    });
+    expect(
+      screen.getByText(
+        'With no type students make one image of whichever kind they pick.'
+      )
+    ).toBeInTheDocument();
+  });
+
+  it('offers one image only where the level has an Images tab', () => {
+    renderEditor({kind: 'code'});
+    expect(
+      screen.queryByRole('checkbox', {name: ONE_IMAGE})
+    ).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('checkbox', {name: IMAGE_FIRST}));
+    expect(screen.getByRole('checkbox', {name: ONE_IMAGE})).toBeInTheDocument();
+    choose(KIND, 'freeplay');
+    expect(
+      screen.queryByRole('checkbox', {name: ONE_IMAGE})
+    ).not.toBeInTheDocument();
+  });
+
   it('removes the image-first flag rather than submitting false', () => {
     const {container} = renderEditor({kind: 'code', imageFirst: true});
     fireEvent.click(screen.getByRole('checkbox', {name: IMAGE_FIRST}));
     expect(JSON.parse(submitted(container))).toEqual({kind: 'code'});
+  });
+
+  it('turns image upload on and off', () => {
+    const {container} = renderEditor({kind: 'freeplay'});
+    fireEvent.click(screen.getByRole('checkbox', {name: IMAGE_UPLOAD}));
+    expect(JSON.parse(submitted(container))).toEqual({
+      kind: 'freeplay',
+      enableImageUpload: true,
+    });
+    fireEvent.click(screen.getByRole('checkbox', {name: IMAGE_UPLOAD}));
+    expect(JSON.parse(submitted(container))).toEqual({kind: 'freeplay'});
   });
 });

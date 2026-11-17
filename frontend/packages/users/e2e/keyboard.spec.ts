@@ -163,6 +163,25 @@ test('critical flows work at 400% zoom (320px reflow) without horizontal scroll'
   await expect(page.getByRole('dialog')).toBeHidden();
 });
 
+test('the Update email dialog asks for the current password when the account has one', async ({
+  page,
+}) => {
+  await gotoLoaded(page, 'teacher');
+  await page.getByRole('button', {name: 'Update email'}).click();
+  const dialog = page.getByRole('dialog', {name: /update email/i});
+  await expect(dialog.getByLabel('Current password')).toBeVisible();
+});
+
+test('the Update email dialog asks for no password on a provider-only account', async ({
+  page,
+}) => {
+  await gotoLoaded(page, 'sso-teacher');
+  await page.getByRole('button', {name: 'Update email'}).click();
+  const dialog = page.getByRole('dialog', {name: /update email/i});
+  await expect(dialog.getByLabel('New email')).toBeVisible();
+  await expect(dialog.getByLabel('Current password')).toHaveCount(0);
+});
+
 // DSCO Checkbox hides its real input as position:absolute/opacity:0 stretched
 // across the label's first line, so a link sitting there is covered and cannot be
 // clicked. Only real layout exposes this — jsdom has no hit-testing — so the

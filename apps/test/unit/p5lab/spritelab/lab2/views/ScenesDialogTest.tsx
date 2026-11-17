@@ -30,9 +30,9 @@ function renderDialog(
 describe('ScenesDialog', () => {
   it('is a dialog named All scenes that Done, the cross and Escape close', () => {
     const {onClose} = renderDialog();
-    expect(screen.getByRole('alertdialog', {name: 'All scenes'})).toBeTruthy();
+    expect(screen.getByRole('dialog', {name: 'All scenes'})).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Done'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Close dialog'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Close modal'}));
     fireEvent.keyDown(document, {key: 'Escape'});
     expect(onClose).toHaveBeenCalledTimes(3);
   });
@@ -112,8 +112,11 @@ describe('ScenesDialog', () => {
     expect(screen.getByRole('button', {name: 'Rename Cave'})).toBeDisabled();
     expect(screen.getAllByRole('button', {name: 'Delete'})[1]).toBeDisabled();
     fireEvent.change(input, {target: {value: ' Boss room '}});
-    fireEvent.keyDown(input, {key: 'Enter'});
+    // The press is used up by the name, so it cannot also click the button
+    // that takes focus next. fireEvent returns false for a cancelled event.
+    expect(fireEvent.keyDown(input, {key: 'Enter'})).toBe(false);
     expect(onCreateScene).toHaveBeenCalledWith('Boss room');
+    expect(onCreateScene).toHaveBeenCalledTimes(1);
     expect(screen.queryByRole('textbox', {name: 'Scene name'})).toBeNull();
     expect(screen.getByRole('button', {name: 'Done'})).not.toBeDisabled();
   });

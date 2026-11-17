@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
+import ObjectiveLevelTags from './ObjectiveLevelTags';
 import ObjectiveLine from './ObjectiveLine';
 
 export default class ObjectivesEditor extends Component {
   static propTypes = {
     objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     updateObjectives: PropTypes.func.isRequired,
+    scriptLevels: ObjectiveLevelTags.propTypes.scriptLevels,
   };
 
   constructor(props) {
@@ -69,11 +71,19 @@ export default class ObjectivesEditor extends Component {
     });
   };
 
+  handleScriptLevelIdsChange = (idx, scriptLevelIds) => {
+    const newObjectives = [...this.props.objectives];
+    newObjectives[idx] = {...newObjectives[idx], scriptLevelIds};
+    this.props.updateObjectives(newObjectives);
+  };
+
   addObjective = () => {
     let {objectives} = this.props;
     const newObjectiveKey = this.generateNewObjectiveKey();
     this.props.updateObjectives(
-      objectives.concat([{description: '', key: newObjectiveKey}])
+      objectives.concat([
+        {description: '', key: newObjectiveKey, scriptLevelIds: []},
+      ])
     );
     this.setState({
       currentlyEditingIndex: objectives.length,
@@ -94,7 +104,7 @@ export default class ObjectivesEditor extends Component {
               <tr>
                 <th
                   style={{
-                    width: '90%',
+                    width: '55%',
                   }}
                 >
                   Description
@@ -102,6 +112,13 @@ export default class ObjectivesEditor extends Component {
                 <th
                   style={{
                     width: '30%',
+                  }}
+                >
+                  Levels
+                </th>
+                <th
+                  style={{
+                    width: '15%',
                   }}
                 >
                   Actions
@@ -113,6 +130,16 @@ export default class ObjectivesEditor extends Component {
                 <ObjectiveLine
                   key={objective.key}
                   description={objective.description}
+                  levelTags={
+                    <ObjectiveLevelTags
+                      objectiveDescription={objective.description}
+                      scriptLevels={this.props.scriptLevels}
+                      scriptLevelIds={objective.scriptLevelIds || []}
+                      onChange={scriptLevelIds =>
+                        this.handleScriptLevelIdsChange(index, scriptLevelIds)
+                      }
+                    />
+                  }
                   onSave={this.handleSave}
                   onEditCancel={this.handleCancel}
                   onEditClick={() => this.handleEdit(index)}

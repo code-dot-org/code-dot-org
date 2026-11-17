@@ -24,13 +24,25 @@ import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 
 import {getImageThumbnail} from '../imageTrim';
 
+import {keepFocusOffAfterMousePress} from './blurAfterPointerClick';
+
 import moduleStyles from './sprite-lab2-view.module.scss';
 
 export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 
 // Read by a screen reader when focus reaches the game, which otherwise
 // reports itself only in sound.
-const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
+const FULL_HELP =
+  'Left and right arrows move. Space jumps. In altered gravity, arrows ' +
+  'steer. Turn on navigation sounds in Settings. Press H to hear this ' +
+  'again.';
+// After the first visit, so the full help does not hold up what the game
+// says as play starts.
+const SHORT_HELP = 'Arrow keys move. Press H for help.';
+// Older entries leave the log; screen readers do not read removals.
+const LOG_LENGTH = 5;
+// Focus arriving this soon after play starts is Run handing it to the game.
+const PLAY_FOCUS_MS = 1000;
 
 // The engine's p5 canvas is a fixed 400x400 (p5lab APP_WIDTH/HEIGHT); we scale
 // it with a CSS transform to fit either the corner preview or the centered
@@ -323,9 +335,6 @@ interface PlayspaceProps {
   // Hold a solid black cover over the canvas (from a jump trigger until the
   // target scene lands, when the fade takes over).
   covered?: boolean;
-  // Show the loading overlay (delayed fade-in, so quick loads never flash a
-  // spinner). Used while fetching an external project.
-  loading?: boolean;
   // The engine's current default sprite size (canvas units), for sizing the
   // location-picker's hover ghost. Read at hover time — helper libraries can
   // change it per run.
@@ -338,6 +347,8 @@ interface PlayspaceProps {
   controls?: React.ReactNode;
   // Over the box's bottom edge, unscaled.
   prompt?: React.ReactNode;
+  // Filled with a function that reads a sprite's line aloud.
+  speakRef?: React.MutableRefObject<((text: string) => void) | null>;
   // Pinned to the foot: across the column in preview, across the stage in
   // play. The box is placed to leave it room.
   bottomBar?: React.ReactNode;
@@ -370,10 +381,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   mode,
   fadeTrigger = 0,
   covered = false,
-  loading = false,
   boxRef,
   controls,
   prompt,
+  speakRef,
   bottomBar,
   arrows,
   columnHeader,
@@ -385,6 +396,41 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
+  // The help and what sprites say share one log, so a screen reader reads
+  // them in turn.
+  const [log, setLog] = useState<{id: number; text: string}[]>([]);
+  const logIdRef = useRef(0);
+  const addToLog = useCallback((text: string) => {
+    const id = ++logIdRef.current;
+    setLog(entries => [...entries.slice(-(LOG_LENGTH - 1)), {id, text}]);
+  }, []);
+  const heardFullHelpRef = useRef(false);
+  const addHelp = useCallback(() => {
+    addToLog(heardFullHelpRef.current ? SHORT_HELP : FULL_HELP);
+    heardFullHelpRef.current = true;
+  }, [addToLog]);
+  useEffect(() => {
+    if (!speakRef) {
+      return;
+    }
+    speakRef.current = text => {
+      if (text.trim()) {
+        addToLog(text.trim());
+      }
+    };
+    return () => {
+      speakRef.current = null;
+    };
+  }, [speakRef, addToLog]);
+  // On play starting, not only on focus: VoiceOver's activation reads as a
+  // pointer click, after which focus does not move to the box.
+  const playStartedAtRef = useRef(0);
+  useEffect(() => {
+    if (mode === 'play') {
+      playStartedAtRef.current = Date.now();
+      addHelp();
+    }
+  }, [mode, addHelp]);
   const overlayRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({w: 0, h: 0});
@@ -406,6 +452,25 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     belowObserver.current = observer;
   }, []);
   useEffect(() => () => belowObserver.current?.disconnect(), []);
+  // The bar at the stage's foot is measured, because its buttons stack in
+  // a narrow column and the bar grows taller to hold them.
+  const [bottomBarHeight, setBottomBarHeight] = useState(EDITOR_STRIP_PX);
+  const bottomBarObserver = useRef<ResizeObserver | null>(null);
+  const bottomBarRef = useCallback((el: HTMLDivElement | null) => {
+    bottomBarObserver.current?.disconnect();
+    bottomBarObserver.current = null;
+    if (!el || typeof ResizeObserver === 'undefined') {
+      return;
+    }
+    const observer = new ResizeObserver(() => {
+      // offsetHeight is the bar's full height, padding and border
+      // included. That is how much room the bar takes up under the stage.
+      setBottomBarHeight(el.offsetHeight || EDITOR_STRIP_PX);
+    });
+    observer.observe(el);
+    bottomBarObserver.current = observer;
+  }, []);
+  useEffect(() => () => bottomBarObserver.current?.disconnect(), []);
   // The restart buttons' size, so the box keeps clear of their corner. The
   // last size stands while they are away: the box is placed against it as
   // play opens, before they are measured again.
@@ -593,7 +658,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const share = Math.round(browserWidth * columnShare);
   // The room under the box: the cross, the card and its gap, then the bar
   // at the foot.
-  const bottomRoom = bottomBar ? EDITOR_STRIP_PX : 0;
+  const bottomRoom = bottomBar ? bottomBarHeight : 0;
   const cardRoomFor = (card: number) =>
     bottomRoom + (below ? CARD_GAP + card : 0);
   // A taller need shrinks the box, never widens the column, which would
@@ -844,8 +909,34 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         // keystrokes through to the game.
         role={mode === 'play' ? 'application' : undefined}
         aria-label={mode === 'play' ? 'Game playspace' : undefined}
-        aria-describedby={mode === 'play' ? CONTROLS_HELP_ID : undefined}
         tabIndex={mode === 'play' ? 0 : undefined}
+        onFocus={
+          mode === 'play'
+            ? () => {
+                // Run's own hand-off of focus; play starting already
+                // added the help.
+                if (Date.now() - playStartedAtRef.current > PLAY_FOCUS_MS) {
+                  addHelp();
+                }
+              }
+            : undefined
+        }
+        // On the box, not the window, so H is a shortcut only while the game
+        // has focus (WCAG 2.1.4).
+        onKeyDown={
+          mode === 'play'
+            ? e => {
+                if (
+                  e.key.toLowerCase() === 'h' &&
+                  !e.ctrlKey &&
+                  !e.metaKey &&
+                  !e.altKey
+                ) {
+                  addToLog(FULL_HELP);
+                }
+              }
+            : undefined
+        }
         style={{
           transform,
           // Fade in on appearance (first measurement or hidden -> visible);
@@ -864,6 +955,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           cursor: picking ? 'crosshair' : undefined,
         }}
         onPointerDown={swallowWhilePicking}
+        onMouseDown={mode === 'play' ? keepFocusOffAfterMousePress : undefined}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerLeave={handlePointerLeave}
@@ -921,13 +1013,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         {fadeTrigger > 0 && (
           <div key={fadeTrigger} className={moduleStyles.sceneFade} />
         )}
-        {/* Loading overlay: mounted for the whole load, but CSS delays its
-            fade-in so only slow loads ever show it. */}
-        {loading && (
-          <div className={moduleStyles.sceneLoading}>
-            <div className={moduleStyles.sceneLoadingSpinner} />
-          </div>
-        )}
       </div>
       {/* Outside the box: role="application" hides what is inside it from
           screen readers, so anything to be read must sit beside it. */}
@@ -949,14 +1034,13 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           {prompt}
         </div>
       )}
-      {mode === 'play' && (
-        <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
-          Left and right arrows move. Space or up arrow jumps. In zero gravity,
-          up and down steer. Navigation sounds can be turned on in Settings:
-          footsteps and bumps, a tone for your height, and tones that grow
-          louder as a wall or an edge comes near.
-        </p>
-      )}
+      {/* Always mounted: a live region added along with its text is often
+          not read. */}
+      <div role="log" aria-live="polite" className={moduleStyles.srOnly}>
+        {log.map(entry => (
+          <p key={entry.id}>{entry.text}</p>
+        ))}
+      </div>
       {mode === 'play' && controls && (
         <div ref={controlsRef} className={moduleStyles.playControls}>
           {controls}
@@ -987,6 +1071,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       )}
       {bottomBar && measured && (
         <div
+          ref={bottomBarRef}
           className={classNames(
             moduleStyles.bottomBar,
             mode === 'preview' && moduleStyles.bottomBarColumn

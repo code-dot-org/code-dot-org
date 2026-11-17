@@ -7,8 +7,12 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE, WorldCell} from './world';
 
 /** One kind of thing a level can ask for. */
 export type ObjectiveCheck =
-  /** An image of the type was made on this level. */
+  /** An image of the type was made on this level, or the level's own image
+      (the one carrying its role) exists from an earlier visit. */
   | {kind: 'image'; imageType: ImageType}
+  /** The student generated an image on this level: one of `imageType` if
+      it is given, otherwise an image of any type. */
+  | {kind: 'generated'; imageType?: ImageType}
   | {
       kind: 'block';
       /** The block type a real (not shadow) block must have, or any of
@@ -53,6 +57,37 @@ export interface Objective {
   /** Markdown. */
   text: string;
   check: ObjectiveCheck;
+  /** If set, the item is hidden until this check passes. While hidden it
+      does not block Continue. Once it has appeared it stays, and must be
+      completed like any other item. */
+  shownWhen?: ObjectiveCheck;
+}
+
+// For each kind of check, whether it has to pass only once. Every kind is
+// listed, so a new kind has to be given an answer here.
+const CHECKED_ONCE: Record<ObjectiveCheck['kind'], boolean> = {
+  // These read work that stays in the project, so they can be made again
+  // at any time.
+  block: false,
+  world: false,
+  image: false,
+  // These record something that happened, which cannot be checked again.
+  play: true,
+  reach: true,
+  scene: true,
+  // These read something that changes for reasons other than undoing the
+  // step: which scene is open in the editor, and a picture's AI record,
+  // which is removed when the student edits the picture by hand.
+  editing: true,
+  generated: true,
+  rated: true,
+};
+
+/** Whether a check has to pass only once, because what it reads cannot be
+    read again later. Any other check reads work that stays in the project
+    and can be made again at any time. */
+export function isCheckedOnce(check: ObjectiveCheck): boolean {
+  return CHECKED_ONCE[check.kind];
 }
 
 export interface Objectives {
@@ -82,9 +117,19 @@ export interface RuntimeNeeds {
   move: boolean;
 }
 
+/** All the checks a checklist uses: each item's `check`, plus its
+    `shownWhen` if it has one. */
+export function objectiveChecks(
+  objectives: Objectives | undefined
+): ObjectiveCheck[] {
+  return (objectives?.items ?? []).flatMap(item =>
+    item.shownWhen ? [item.check, item.shownWhen] : [item.check]
+  );
+}
+
 export function runtimeNeeds(objectives: Objectives | undefined): RuntimeNeeds {
   const needs = {touch: false, move: false};
-  objectives?.items?.forEach(({check}) => {
+  objectiveChecks(objectives).forEach(check => {
     if (check.kind === 'reach') {
       needs.touch ||= check.role !== undefined;
       needs.move ||= check.moved === true;
@@ -120,13 +165,14 @@ export interface WorkspaceSource {
 }
 
 export interface ObjectiveInputs {
-  /** Images made on this level, by type. */
+  /** Images made on this level, by type. The level's own image (the one
+      carrying its role) counts whenever it was made. */
   images: ImageCounts;
   grid?: (WorldCell | null)[][];
   /** The grid the level opened with. */
   baselineGrid?: (WorldCell | null)[][];
-  /** Image names by role: a student can make a role's image more than
-      once, and every one counts. */
+  /** Image names by role. A project can hold more than one image for a
+      role, and every one counts. */
   imagesForRole: Record<string, readonly string[] | undefined>;
   /** The open scene's code. */
   source?: WorkspaceSource;
@@ -135,8 +181,19 @@ export interface ObjectiveInputs {
   /** The scene open in the editor. */
   editingSceneId?: string;
   everPlayed: boolean;
+  /** How many images the student has generated on this level, by type. */
+  generated: ImageCounts;
   rated: boolean;
   runtime: RuntimeProgress;
+}
+
+/** Whether an item should be visible: true unless it has a `shownWhen`
+    check that has not passed. */
+export function objectiveShown(
+  item: Objective,
+  inputs: ObjectiveInputs
+): boolean {
+  return !item.shownWhen || checkObjective(item.shownWhen, inputs);
 }
 
 // A field saved as "<field name="X">value</field>" or as the bare value;
@@ -248,6 +305,10 @@ export function checkObjective(
   switch (check.kind) {
     case 'image':
       return inputs.images[check.imageType] >= 1;
+    case 'generated':
+      return check.imageType
+        ? inputs.generated[check.imageType] >= 1
+        : Object.values(inputs.generated).some(count => count >= 1);
     case 'block':
       return hasBlock(check, inputs);
     case 'world':

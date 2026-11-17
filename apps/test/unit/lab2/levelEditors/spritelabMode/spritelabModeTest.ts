@@ -6,6 +6,7 @@ import {
   setImageRole,
   setImageType,
   setKind,
+  setOneImage,
   setPaletteRoles,
 } from '@cdo/apps/lab2/levelEditors/spritelabMode/spritelabMode';
 
@@ -24,6 +25,38 @@ describe('cleanLevelMode', () => {
     ]);
   });
 
+  it('keeps the options that have no field on the form, when their values are valid', () => {
+    const mode = {
+      kind: 'code',
+      extraTabs: ['Images', 'World'],
+      paletteRoles: ['treasure', 'block'],
+      noNewImages: true,
+      noDeletingImages: true,
+      limitedPaintTools: true,
+      imageKinds: ['sprite', 'block'],
+      generationLimit: 5,
+    };
+    expect(cleanLevelMode(mode)).toEqual({mode, removed: []});
+  });
+
+  it('drops a generation limit that is not a whole number above zero', () => {
+    [0, -1, 2.5, '5', true].forEach(generationLimit =>
+      expect(cleanLevelMode({kind: 'code', generationLimit}).mode).toEqual({
+        kind: 'code',
+      })
+    );
+  });
+
+  it('drops extra tabs and image kinds the lab does not know', () => {
+    const {mode, removed} = cleanLevelMode({
+      kind: 'code',
+      extraTabs: ['Images', 'Sound'],
+      imageKinds: ['sprite', 'sprite'],
+    });
+    expect(mode).toEqual({kind: 'code'});
+    expect(removed).toHaveLength(2);
+  });
+
   it('drops everything when the kind is not a real kind', () => {
     const {mode, removed} = cleanLevelMode({
       kind: 'build',
@@ -37,6 +70,35 @@ describe('cleanLevelMode', () => {
     const {mode, removed} = cleanLevelMode({kind: 'code', imageFirst: false});
     expect(mode).toEqual({kind: 'code'});
     expect(removed).toEqual(['imageFirst: false']);
+  });
+
+  it('keeps image upload, and drops it when it is off', () => {
+    expect(
+      cleanLevelMode({kind: 'freeplay', enableImageUpload: true}).mode
+    ).toEqual({kind: 'freeplay', enableImageUpload: true});
+    expect(
+      cleanLevelMode({kind: 'freeplay', enableImageUpload: false}).mode
+    ).toEqual({kind: 'freeplay'});
+  });
+
+  it('keeps the one-image flag', () => {
+    expect(cleanLevelMode({kind: 'image', oneImage: true}).mode).toEqual({
+      kind: 'image',
+      oneImage: true,
+    });
+  });
+
+  // The form hides the checkbox on a free play level, so a flag kept here
+  // could never be cleared, and the hidden input would submit it again.
+  it('drops a key the kind cannot carry, rather than round-tripping it', () => {
+    const {mode, removed} = cleanLevelMode({
+      kind: 'freeplay',
+      oneImage: true,
+      imageType: 'sprite',
+      learning: true,
+    });
+    expect(mode).toEqual({kind: 'freeplay', learning: true});
+    expect(removed).toEqual(['oneImage: true', 'imageType: "sprite"']);
   });
 
   it('drops palette roles that are empty or repeated', () => {
@@ -72,8 +134,29 @@ describe('fieldApplies', () => {
     expect(fieldApplies({kind: 'freeplay'}, 'imageSource')).toBe(true);
   });
 
+  it('offers one image wherever there is an Images tab, except free play', () => {
+    expect(fieldApplies({kind: 'image'}, 'oneImage')).toBe(true);
+    expect(fieldApplies({kind: 'code', imageFirst: true}, 'oneImage')).toBe(
+      true
+    );
+    expect(fieldApplies({kind: 'code'}, 'oneImage')).toBe(false);
+    expect(fieldApplies({kind: 'freeplay'}, 'oneImage')).toBe(false);
+    // Free play offers the other Images tab fields.
+    expect(fieldApplies({kind: 'freeplay'}, 'learning')).toBe(true);
+  });
+
   it('offers nothing without a kind', () => {
     expect(fieldApplies({}, 'imageType')).toBe(false);
+  });
+
+  it('offers image upload wherever there is an Images tab', () => {
+    expect(fieldApplies({kind: 'image'}, 'enableImageUpload')).toBe(true);
+    expect(fieldApplies({kind: 'freeplay'}, 'enableImageUpload')).toBe(true);
+    expect(
+      fieldApplies({kind: 'code', imageFirst: true}, 'enableImageUpload')
+    ).toBe(true);
+    expect(fieldApplies({kind: 'code'}, 'enableImageUpload')).toBe(false);
+    expect(fieldApplies({kind: 'world'}, 'enableImageUpload')).toBe(false);
   });
 });
 
@@ -83,9 +166,26 @@ describe('setKind', () => {
       setKind({kind: 'world', imageType: 'sprite', imageRole: 'hero'}, 'image')
     ).toEqual({kind: 'image', imageType: 'sprite', imageRole: 'hero'});
   });
+
+  it('drops image upload when the new kind has no Images tab', () => {
+    expect(setKind({kind: 'image', enableImageUpload: true}, 'world')).toEqual({
+      kind: 'world',
+    });
+  });
 });
 
 describe('setImageType', () => {
+  it("keeps the Images tab's options on an image level", () => {
+    const options = {
+      limitedPaintTools: true,
+      noNewImages: true,
+      noDeletingImages: true,
+    };
+    expect(
+      setImageType({kind: 'image', imageType: 'sprite', ...options}, 'block')
+    ).toEqual({kind: 'image', imageType: 'block', ...options});
+  });
+
   it('drops the subject when the type is no longer a sprite', () => {
     expect(
       setImageType(
@@ -127,6 +227,24 @@ describe('setImageFirst', () => {
         false
       )
     ).toEqual({kind: 'code'});
+  });
+
+  it('drops one image along with the Images tab it needs', () => {
+    expect(
+      setImageFirst({kind: 'play', imageFirst: true, oneImage: true}, false)
+    ).toEqual({kind: 'play'});
+  });
+});
+
+describe('setOneImage', () => {
+  it('removes the key rather than storing false', () => {
+    expect(setOneImage({kind: 'image', oneImage: true}, false)).toEqual({
+      kind: 'image',
+    });
+    expect(setOneImage({kind: 'image'}, true)).toEqual({
+      kind: 'image',
+      oneImage: true,
+    });
   });
 });
 
