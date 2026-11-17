@@ -31311,3 +31311,12 @@ en:
 
             Students see that AI can help bring their ideas to life, but they are the ones who decide what fits their quest. Because the image generation is a simulation, they can try ideas, revise, and explore without worry.
           student_description: Ready to build your own quest? In Quest Builder, you’ll make a game with a hero, treasure, and a world you design, then use code to decide what happens when the player reaches an important object or when the characters meet. Tell AI what to make, check that each image fits your idea, or draw your own. Then play the quest you built!
+        decision-tree-beta-test:
+          lessons: {}
+          lesson_groups: {}
+          name: decision-tree-beta-test
+          title: Decision Tree Beta Test
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
