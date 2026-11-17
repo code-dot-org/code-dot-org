@@ -1470,11 +1470,11 @@ class LessonsControllerTest < ActionController::TestCase
     @lesson.update!(lockable: true)
     activity, section = create_activity_and_section(@lesson)
 
-    practice = create(:quiz, purpose: 'practice')
+    first_level = create(:level)
     exam = create(:quiz, purpose: 'exam')
     @update_params['activities'] = activities_json(
       activity, section, [
-        {activitySectionPosition: 1, activeId: practice.id, levels: [{id: practice.id, name: practice.name}]},
+        {activitySectionPosition: 1, activeId: first_level.id, levels: [{id: first_level.id, name: first_level.name}]},
         {activitySectionPosition: 2, activeId: exam.id, assessment: true, levels: [{id: exam.id, name: exam.name}]},
       ]
     )
@@ -1494,7 +1494,7 @@ class LessonsControllerTest < ActionController::TestCase
     )
     put :update, params: @update_params
     assert_response :not_acceptable
-    assert_includes response.body, 'An exam Quiz can only be the last level of a lockable lesson: the lesson is not lockable.'
+    assert_includes response.body, 'An exam Quiz must be the last level of a lockable lesson, and no other Quiz may be in one: the lesson is not lockable.'
   end
 
   test 'cannot add exam Quiz before the last level of a lesson' do
@@ -1512,7 +1512,38 @@ class LessonsControllerTest < ActionController::TestCase
     )
     put :update, params: @update_params
     assert_response :not_acceptable
-    assert_includes response.body, "An exam Quiz can only be the last level of a lockable lesson: #{exam.name.dump} is not the last level."
+    assert_includes response.body, "An exam Quiz must be the last level of a lockable lesson, and no other Quiz may be in one: #{exam.name.dump} is not the last level."
+  end
+
+  test 'cannot add a Quiz that is not an exam to a lockable lesson' do
+    sign_in @levelbuilder
+    @lesson.update!(lockable: true)
+    activity, section = create_activity_and_section(@lesson)
+
+    practice = create(:quiz, purpose: 'practice')
+    level_group = create(:level_group)
+    @update_params['activities'] = activities_json(
+      activity, section, [
+        {activitySectionPosition: 1, activeId: practice.id, levels: [{id: practice.id, name: practice.name}]},
+        {activitySectionPosition: 2, activeId: level_group.id, assessment: true, levels: [{id: level_group.id, name: level_group.name}]},
+      ]
+    )
+    put :update, params: @update_params
+    assert_response :not_acceptable
+    assert_includes response.body, "An exam Quiz must be the last level of a lockable lesson, and no other Quiz may be in one: #{practice.name.dump} is not an exam."
+  end
+
+  test 'cannot make a lesson lockable while it holds a Quiz that is not an exam' do
+    sign_in @levelbuilder
+    _activity, section = create_activity_and_section(@lesson)
+    practice = create(:quiz, purpose: 'practice')
+    section.script_levels.create(position: 1, activity_section_position: 1, lesson: @lesson, script: @lesson.script, levels: [practice])
+    section.script_levels.create(position: 2, activity_section_position: 2, lesson: @lesson, script: @lesson.script, levels: [create(:level_group)], assessment: true)
+
+    put :update, params: @update_params.merge(lockable: true)
+    assert_response :not_acceptable
+    assert_includes response.body, "#{practice.name.dump} is not an exam."
+    refute @lesson.reload.lockable
   end
 
   test 'cannot make a lesson containing an exam Quiz unlockable' do
@@ -1530,7 +1561,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     put :update, params: @update_params.merge(lockable: false)
     assert_response :not_acceptable
-    assert_includes response.body, 'An exam Quiz can only be the last level of a lockable lesson: the lesson is not lockable.'
+    assert_includes response.body, 'An exam Quiz must be the last level of a lockable lesson, and no other Quiz may be in one: the lesson is not lockable.'
     assert @lesson.reload.lockable
   end
 
