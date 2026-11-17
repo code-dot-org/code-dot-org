@@ -14,7 +14,7 @@
   // no apps or studio build, since downloading the prebuilt apps package
   // beats building. It fails rather than handing over a half-migrated
   // schema.
-  "postStartCommand": "CDO_SKIP_SEED_ALL=true CDO_BUILD_APPS=false CDO_BUILD_STUDIO=false bundle exec rake build",
+  "postStartCommand": "CDO_SKIP_SEED=true CDO_BUILD_APPS=false CDO_BUILD_STUDIO=false bundle exec rake build",
 
   // Memory and storage cover the apps webpack dev server, Rails, MySQL,
   // and a jest worker running at once, plus node_modules and the built
