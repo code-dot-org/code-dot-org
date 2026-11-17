@@ -123,6 +123,18 @@ describe('validateFileName', function () {
       })}`
     );
 
+    // File type matches regardless of case.
+    expect(
+      validateFileName({
+        fileName: 'DATA.CSV',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes,
+      })
+    ).toBeUndefined();
+
     // Name with multiple periods is invalid (ex. test.file.py).
     expect(
       validateFileName({

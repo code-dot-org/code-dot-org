@@ -53,8 +53,8 @@ export const validateFileName = ({
   if (selectedFileType) {
     // Skip extension validation since the extension comes from the dropdown.
   } else {
-    const extension = fileName.split('.').pop();
-    if (!extension || extension === fileName) {
+    const extension = fileName.split('.').pop()?.toLowerCase();
+    if (!extension || !fileName.includes('.')) {
       return codebridgeI18n.noFileExtensionError();
     }
 

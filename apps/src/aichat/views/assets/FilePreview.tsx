@@ -59,7 +59,7 @@ const FilePreview: React.FC<{
   const previewType = type === 'image' ? 'image' : 'file';
 
   const getFileExtension = (filename: string): string => {
-    const extension = filename.split('.').pop();
+    const extension = filename.split('.').pop()?.toLowerCase();
     return filename.includes('.') && extension ? extension : 'TEXT';
   };
   const fileExtension = getFileExtension(filename);
