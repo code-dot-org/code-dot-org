@@ -20,6 +20,7 @@ import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   getAppOptionsEditBlocks,
@@ -130,6 +131,7 @@ import spriteLab2Reducer, {
 } from '../redux/spriteLab2Redux';
 import {sceneMetadataFor} from '../sceneThumbnails';
 import SpriteLab2Engine from '../SpriteLab2Engine';
+import {deleteFilesOnceUnused, uploadedFileUrls} from '../startOverFiles';
 import {SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
@@ -683,6 +685,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);
+  // The files the project names right now. The Start Over cleanup asks
+  // after its reset has saved, by which time the lab has rendered again, so
+  // it reads the list through a ref.
+  const uploadedNowRef = useRef<() => string[]>(() => []);
+  uploadedNowRef.current = () =>
+    uploadedFileUrls(channelId, animationList, scenes);
 
   const sceneMetadata = useMemo(
     () => sceneMetadataFor(scenes, animationList),
@@ -2236,7 +2244,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 reinitBefore: sourcesReinitializedCount,
               };
             }
+            // The reset project names none of its uploaded files.
+            const uploaded = uploadedFileUrls(channelId, animationList, scenes);
+            const projectManager =
+              Lab2Registry.getInstance().getProjectManager();
             startOver();
+            deleteFilesOnceUnused(projectManager, channelId, uploaded, url =>
+              uploadedNowRef.current().includes(url)
+            );
             setShowStartOver(false);
             if (leaving) {
               dispatch(navigateToLevelId(firstLevelId));
