@@ -118,8 +118,6 @@ interface ImagesTabProps {
   imageKinds?: ImageType[];
   /** Enable the user to upload their own images. */
   enableImageUpload?: boolean;
-  /** The rules the user agrees to before the first upload. Unset where no
-      agreement is wanted. */
   uploadWarningSettings?: UploadWarningSettings;
   /** Any image can be chosen and looked at; nothing can be changed. */
   viewOnly?: boolean;

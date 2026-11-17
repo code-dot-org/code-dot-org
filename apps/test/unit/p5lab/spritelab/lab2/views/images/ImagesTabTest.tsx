@@ -1709,8 +1709,6 @@ describe('ImagesTab', () => {
         });
       });
 
-      // Only a student's agreement restricts the project, so the teacher's
-      // dialog leaves out the rule that says so.
       it('asks a teacher for the shorter agreement', () => {
         renderTab({
           editingOffered: true,

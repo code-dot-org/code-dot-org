@@ -486,8 +486,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     ]
   );
 
-  // The header's Remix button lives outside the lab and reads this; the server
-  // refuses the remix either way.
   useEffect(() => {
     dispatch(setInRestrictedShareMode(!!inRestrictedShareMode));
   }, [dispatch, inRestrictedShareMode]);
