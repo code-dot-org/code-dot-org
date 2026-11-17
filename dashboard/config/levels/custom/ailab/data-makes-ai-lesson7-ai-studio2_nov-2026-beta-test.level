@@ -1,0 +1,18 @@
+<Ailab>
+  <config><![CDATA[{
+  "game_id": 67,
+  "created_at": "2026-11-17T07:21:10.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L07-previs-base\"\r\n  ],\r\n  \"label\": \"Decision\"\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"#Training a Model\\n\\nStudent moves: the Predict dropdown, the Using checklist, and Train model. Students train with Mood, Indoors or Outdoors, and Mostly Talking, then read the first question in the tree.\\n\\nTrain with different features, then read the first question in the tree.\",\r\n  \"results\": \"#Examine the Model\\n\\nStudent moves: reading the leaf badges. “This many test scenes landed here, and this many were right.”\\n\\nCompare the accuracy results. Click the to see history\"\r\n}",
+    "name_suffix": "_nov-2026-beta-test"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-17T07:21:10.091+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-ai-studio2\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-ai-studio2\"}]"
+}]]></config>
+</Ailab>

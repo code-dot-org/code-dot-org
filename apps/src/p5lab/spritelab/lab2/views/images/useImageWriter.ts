@@ -35,6 +35,7 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/views/imageSave';
 import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
 import useReclaimAsset from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
+import useReleaseRemovedImages from '@cdo/apps/p5lab/spritelab/lab2/views/useReleaseRemovedImages';
 import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
 import {getStore} from '@cdo/apps/redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -74,6 +75,7 @@ export interface UploadedImage {
   filename: string;
   uint8Array: Uint8Array;
   mediaType: string;
+  flagged?: boolean;
 }
 
 export interface ImageWriter {
@@ -125,6 +127,7 @@ export default function useImageWriter({
 }: WriterOptions): ImageWriter {
   const dispatch = useAppDispatch();
   const reclaimAsset = useReclaimAsset();
+  const releaseRemovedImages = useReleaseRemovedImages();
   // Uploads keyed by the result's filename, so choosing an earlier picture
   // of the session again reuses its upload.
   const uploadsRef = useRef(new Map<string, Upload>());
@@ -229,6 +232,7 @@ export default function useImageWriter({
         trimmed: false,
         generation: undefined,
         edited: false,
+        flagged: file.flagged,
       });
     },
     [uploadImage, write]
@@ -304,12 +308,12 @@ export default function useImageWriter({
         // deleteAnimation is an untyped JS thunk; cast for dispatch.
         deleteAnimation(key, true /* isSpriteLab */) as unknown as AnyAction
       );
-      reclaimAsset(removed?.sourceUrl);
+      releaseRemovedImages([removed]);
       if (removed?.name) {
         onDeleteImage(removed.name);
       }
     },
-    [dispatch, reclaimAsset, onDeleteImage]
+    [dispatch, releaseRemovedImages, onDeleteImage]
   );
 
   return {

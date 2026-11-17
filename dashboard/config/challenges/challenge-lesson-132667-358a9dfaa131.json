@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-132667-358a9dfaa131",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 1: Talking to Machines",
+  "question": "Melanie wanted to make Carlos a poster for his locker to celebrate his recent baseball game, where he hit two home runs. She prompted AI to make an image for the poster — but it looked like this. Something went very wrong.\n\nSteps:\n1. Use the text tool to label what AI got wrong.\n2. Use a shape to mark where the correct object should've gone instead.\n3. Record your voice explaining why AI got confused — what word tripped it up, and why.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No text label or shape is added to the board, or the voice recording is missing/blank."
+    },
+    {
+      "level": 1,
+      "description": "Student adds a text label or shape, but it does not identify the bat/baseball-bat mix-up (labels something unrelated)."
+    },
+    {
+      "level": 2,
+      "description": "Student's text label and/or shape correctly identifies the mix-up (names or points to the bat vs. baseball bat confusion)."
+    },
+    {
+      "level": 3,
+      "description": "Meets level 2, and the voice recording explains why AI likely confused the word (e.g., “bat” has two meanings and AI picked the wrong one based on the words around it)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-132667-358a9dfaa131-a0a11da0",
+  "whiteboard_starter_image_alt_text": "A baseball field at dusk with stadium lights. A baseball glove holding a ball sits next to a purple bat, the flying animal. There is no baseball bat in the picture."
+}

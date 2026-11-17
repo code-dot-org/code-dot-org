@@ -7,7 +7,6 @@ import {
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getStandaloneProjectId,
   getAppOptionsEditBlocks,
@@ -89,7 +88,6 @@ const SpriteLab2Container: React.FunctionComponent<
     updateSources: updateStoredSources,
     patchSources: patchStoredSources,
     channel,
-    projectManager,
     loadError,
     ...restOutputs
   } = useSources<Sources>({
@@ -153,14 +151,6 @@ const SpriteLab2Container: React.FunctionComponent<
       updateSources(prev => ({...prev, ...patch}), forceSave),
     [updateSources]
   );
-
-  // Set the project manager in the registry for external components that need it (e.g. header).
-  useEffect(() => {
-    if (projectManager) {
-      Lab2Registry.getInstance().setProjectManager(projectManager);
-    }
-    return () => Lab2Registry.getInstance().clearProjectManager();
-  }, [projectManager]);
 
   useEffect(() => {
     if (loadError) {
