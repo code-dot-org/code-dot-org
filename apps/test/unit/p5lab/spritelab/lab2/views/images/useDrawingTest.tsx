@@ -12,6 +12,12 @@ jest.mock('@cdo/apps/imageUtils', () => ({
   toImage: async () => ({decode: async () => undefined}),
 }));
 
+const sendEvent = jest.fn();
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: (...args: unknown[]) => sendEvent(...args)},
+}));
+
 const images: ProjectImage[] = [
   {
     key: 'k1',
@@ -19,6 +25,17 @@ const images: ProjectImage[] = [
     name: 'Sprite 1',
     imageType: 'sprite',
     src: 'data:one',
+    pixelated: false,
+  },
+  {
+    key: 'k2',
+    props: {
+      name: 'Sprite 2',
+      generation: {} as NonNullable<ProjectImage['props']['generation']>,
+    },
+    name: 'Sprite 2',
+    imageType: 'sprite',
+    src: 'data:two',
     pixelated: false,
   },
 ];
@@ -58,6 +75,27 @@ const editor = () => ({save: jest.fn(), snapshot: jest.fn(() => null)});
 describe('useDrawing', () => {
   afterEach(() => {
     jest.useRealTimers();
+  });
+
+  it.each([
+    ['blank', {key: null, imageType: 'sprite' as const}],
+    ['existing', target],
+    ['generated', {key: 'k2', imageType: 'sprite' as const}],
+  ])("reports a %s drawing's first edit once", async (origin, drawTarget) => {
+    jest.useFakeTimers();
+    sendEvent.mockClear();
+    const {tools} = setup();
+    await act(() => tools().startDrawing(drawTarget));
+    tools().attachEditor(editor());
+    expect(sendEvent).not.toHaveBeenCalled();
+    act(() => tools().scheduleStrokeSave());
+    act(() => tools().scheduleStrokeSave());
+    expect(sendEvent).toHaveBeenCalledTimes(1);
+    expect(sendEvent).toHaveBeenCalledWith(
+      'hoai2026-image-draw',
+      expect.objectContaining({origin, imageType: 'sprite'}),
+      true
+    );
   });
 
   it('retries a failed pause-save at the next save', async () => {

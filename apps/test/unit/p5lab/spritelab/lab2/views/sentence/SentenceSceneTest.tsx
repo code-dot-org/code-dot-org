@@ -421,6 +421,49 @@ describe('SentenceScene', () => {
     );
   });
 
+  it('marks a generation over a picture as a regenerate, and ties its rating to it', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene();
+    pickCreature();
+    await generate();
+    await generate();
+    const prompts = sendEvent.mock.calls.filter(
+      ([name]) => name === 'hoai2026-image-prompt'
+    );
+    expect(prompts.map(([, payload]) => payload.regenerate)).toEqual([
+      false,
+      true,
+    ]);
+    const {generationId} = prompts[1][1];
+    expect(generationId).not.toBe(prompts[0][1].generationId);
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Explain'}));
+    for (const name of [
+      'hoai2026-image-verdict',
+      'hoai2026-image-verdict-reason',
+    ]) {
+      expect(sendEvent).toHaveBeenCalledWith(
+        name,
+        expect.objectContaining({generationId}),
+        true
+      );
+    }
+  });
+
+  it('marks the first generation as a regenerate when it replaces an AI picture', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene({replacesGenerated: true});
+    pickCreature();
+    await generate();
+    expect(sendEvent).toHaveBeenCalledWith(
+      'hoai2026-image-prompt',
+      expect.objectContaining({regenerate: true}),
+      true
+    );
+  });
+
   describe('on a cached level', () => {
     const CACHED = {variant: 1, characterSet: true, raw: jest.fn()};
     const onGenerateStart = jest.fn();
