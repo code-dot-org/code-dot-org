@@ -162,7 +162,7 @@ class CertificateImage
         when 'hour_of_ai_certificate.png'
           {y: -109, font: 'Helvetica bold', color: 'rgb(31, 25, 118)'}
         when 'MC_Hour_Of_AI_Certificate_Field_Agent.png'
-          {y: 165, font: 'Helvetica bold', color: 'rgb(0, 0, 0)'}
+          {y: 165, font: 'Helvetica bold'}
         else
           {y: course == '20-hour' ? -125 : -120}
         end
