@@ -31,7 +31,7 @@
     "level_mode": {
       "kind": "play"
     },
-    "long_instructions": "#Try a quest\r\nA **quest** is a mission or a game with a goal. See what happens when you reach the crystal!\r\n",
+    "long_instructions": "# Try a quest\r\nA **quest** is a game with a goal. See what happens when you reach the crystal!\r\n",
     "no_project": true,
     "objectives": {
       "title": "**Try the demo**\n\nHere is a game like the one you will make.",
