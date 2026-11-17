@@ -33,6 +33,7 @@ interface ProjectViewProps {
   // gallery can update the matching card while the viewer is on the project
   // page.
   onReactionsChange?: (responseId: number, reactions: Reaction[]) => void;
+  onReactionAdded?: (responseId: number) => void;
 }
 
 // The Tutor+ project page: one submitted challenge project, its media and
@@ -46,6 +47,7 @@ const ProjectView: FC<ProjectViewProps> = ({
   onBack,
   onOpenProject,
   onReactionsChange,
+  onReactionAdded,
 }) => {
   const [detail, setDetail] = useState<ChallengeResponseDetail | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
@@ -277,6 +279,7 @@ const ProjectView: FC<ProjectViewProps> = ({
             onReactionsChange={reactions =>
               onReactionsChange?.(detail.id, reactions)
             }
+            onReactionAdded={() => onReactionAdded?.(detail.id)}
           />
         </div>
       </div>
