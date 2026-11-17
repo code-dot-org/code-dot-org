@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-15 22:15:18 UTC",
+    "serialized_at": "2026-11-17 01:04:54 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -110,7 +110,7 @@
     },
     {
       "key": "lesson-6",
-      "name": "Lesson 6",
+      "name": "Lesson 6: Logical Operators - Day 1",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -125,7 +125,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "Lesson 7",
+      "name": "Lesson 7: Logical Operators - Day 2",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -140,7 +140,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "Lesson 8",
+      "name": "Lesson 8: Logical Operators - Day 3",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -442,6 +442,18 @@
       "seeding_key": {
         "lesson_activity.key": "0fcd243e-254d-49d8-bcb4-724de3becb0c",
         "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28"
+      }
+    },
+    {
+      "key": "24bf6ea4-def3-40d1-9324-a31de6beed29",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24bf6ea4-def3-40d1-9324-a31de6beed29",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "csp-unit2-dev-27-28"
       }
@@ -862,6 +874,16 @@
       "seeding_key": {
         "activity_section.key": "98f1bcab-7425-4de2-b799-99ec26af2c6a",
         "lesson_activity.key": "0fcd243e-254d-49d8-bcb4-724de3becb0c"
+      }
+    },
+    {
+      "key": "acf4b89c-d26b-4158-9526-a19d40842d6e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "acf4b89c-d26b-4158-9526-a19d40842d6e",
+        "lesson_activity.key": "24bf6ea4-def3-40d1-9324-a31de6beed29"
       }
     },
     {
