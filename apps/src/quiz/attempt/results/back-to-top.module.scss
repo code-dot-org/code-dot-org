@@ -1,0 +1,26 @@
+.backToTop {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  display: flex;
+  padding: 3px 2px 2px;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+  border-bottom: none;
+  border-radius: var(--shape-md) var(--shape-md) 0 0;
+  box-shadow: var(--shadow-md);
+  animation: slide-up 120ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backToTop {
+    animation: none;
+  }
+}

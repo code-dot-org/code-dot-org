@@ -430,7 +430,7 @@ class ApiController < ApplicationController
   # Get /api/teacher_panel_section
   def teacher_panel_section
     prevent_caching
-    teacher_sections = current_user&.sections_instructed&.where(hidden: false)
+    teacher_sections = current_user&.sections_instructed
 
     if teacher_sections.blank?
       head :no_content
@@ -440,14 +440,18 @@ class ApiController < ApplicationController
     section_id = params[:section_id].present? ? params[:section_id].to_i : nil
 
     if section_id
+      # An explicitly named section is served even when archived (hidden).
       section = teacher_sections.find_by(id: section_id)
       if section.present?
-        render json: section.summarize if section.present?
+        render json: section.summarize
         return
       end
-    elsif teacher_sections.length == 1
-      render json: teacher_sections[0].summarize
-      return
+    else
+      visible_sections = teacher_sections.where(hidden: false)
+      if visible_sections.length == 1
+        render json: visible_sections[0].summarize
+        return
+      end
     end
 
     head :no_content

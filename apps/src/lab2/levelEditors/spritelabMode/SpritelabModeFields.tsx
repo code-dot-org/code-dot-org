@@ -25,6 +25,7 @@ import {
   LEVEL_MODE_KINDS,
   parsePaletteRoles,
   setImageFirst,
+  setEnableImageUpload,
   setImageSource,
   setLearning,
   setImageRole,
@@ -124,6 +125,10 @@ const SpritelabModeFields: React.FunctionComponent<
   const showImageFirst = fieldApplies(mode, 'imageFirst');
   const showOneImage = fieldApplies(mode, 'oneImage');
   const showLearning = fieldApplies(mode, 'learning');
+  const showEnableImageUpload = fieldApplies(mode, 'enableImageUpload');
+  const uploadKindNote = mode.imageType
+    ? `The upload becomes the image type above.`
+    : 'Students choose Character, Background, Object or Block.';
   const showImageSource = fieldApplies(mode, 'imageSource');
 
   // The palette lists images in the palette roles but preselects the level's
@@ -296,6 +301,19 @@ const SpritelabModeFields: React.FunctionComponent<
           />
         </div>
       )}
+      {showEnableImageUpload && (
+        <div className={moduleStyles.booleanField}>
+          <Checkbox
+            name="spritelab_mode_enable_image_upload"
+            label={`Enable image upload. ${uploadKindNote} FOR DEVELOPMENT USE ONLY, NOT FOR USER-FACING LEVELS.`}
+            checked={mode.enableImageUpload === true}
+            onChange={event =>
+              onChange(setEnableImageUpload(mode, event.target.checked))
+            }
+            size="s"
+          />
+        </div>
+      )}
       {showLearning && (
         <div className={moduleStyles.booleanField}>
           <Checkbox
@@ -319,7 +337,7 @@ const SpritelabModeFields: React.FunctionComponent<
             onChange={event =>
               onChange(setImageSource(mode, event.target.value as ImageSource))
             }
-            helperMessage="Cached pictures come from the published set, with the model filling gaps. Live asks the model every time."
+            helperMessage="Cached pictures come from the published set. Live asks the model every time, for a levelbuilder only: students always get cached pictures."
             size="s"
           />
         </div>

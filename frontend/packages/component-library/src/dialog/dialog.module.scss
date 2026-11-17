@@ -62,14 +62,18 @@
   align-items: center;
   flex-shrink: 0;
   border-radius: 100px;
-  background: var(--background-brand-teal-primary);
+  background: var(--background-brand-primary);
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 0.2);
 
   &::before {
-    color: var(--background-neutral-primary);
+    color: var(--text-neutral-white-fixed);
     text-align: center;
     font-size: 32px;
     width: 40px;
     line-height: 125%;
   }
+}
+
+.dialog.destructive > .dialogIcon {
+  background: var(--background-error-primary);
 }

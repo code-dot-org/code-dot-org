@@ -1,0 +1,10 @@
+name 'data-makes-ai-lesson7-ai-studio5_nov-2026-beta-test'
+display_name 'Add a New Feature'
+description 'Choose the feature that you want to add to your dataset to improve the accuracy of your model'
+
+sublevels
+level 'data-makes-ai-lesson7-ai-studio5a_nov-2026-beta-test'
+level 'data-makes-ai-lesson7-ai-studio5b_nov-2026-beta-test'
+level 'data-makes-ai-lesson7-ai-studio5c_nov-2026-beta-test'
+
+uses_lab2

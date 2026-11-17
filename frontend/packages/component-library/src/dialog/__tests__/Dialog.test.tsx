@@ -102,6 +102,56 @@ describe('Dialog Component', () => {
     );
   });
 
+  it.each(['light', 'dark'] as const)(
+    'should make the primary button red when destructive, with mode %s',
+    mode => {
+      render(<Dialog {...defaultProps} mode={mode} destructive />);
+
+      expect(screen.getByRole('button', {name: 'Primary Button'})).toHaveClass(
+        'MuiButton-contained',
+        'MuiButton-colorError',
+      );
+    },
+  );
+
+  it('should mark the panel destructive only when destructive', () => {
+    const {unmount} = render(<Dialog {...defaultProps} destructive />);
+    expect(getPanel()).toHaveClass('destructive');
+    unmount();
+
+    render(<Dialog {...defaultProps} />);
+    expect(getPanel()).not.toHaveClass('destructive');
+  });
+
+  it('should let primaryButtonProps color override destructive, keeping the panel destructive', () => {
+    render(
+      <Dialog
+        {...defaultProps}
+        destructive
+        primaryButtonProps={{children: 'Keep', color: 'primary'}}
+      />,
+    );
+
+    expect(screen.getByRole('button', {name: 'Keep'})).toHaveClass(
+      'MuiButton-colorPrimary',
+    );
+    expect(getPanel()).toHaveClass('destructive');
+  });
+
+  it.each(['light', 'dark'] as const)(
+    'should not change the secondary button when destructive, with mode %s',
+    mode => {
+      render(<Dialog {...defaultProps} mode={mode} destructive />);
+
+      expect(
+        screen.getByRole('button', {name: 'Secondary Button'}),
+      ).toHaveClass(
+        'MuiButton-outlined',
+        mode === 'light' ? 'MuiButton-colorSecondary' : 'MuiButton-colorWhite',
+      );
+    },
+  );
+
   it('should leave the close button and panel alone in dark mode', () => {
     render(<Dialog {...defaultProps} mode="dark" />);
 

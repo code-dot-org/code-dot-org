@@ -5,6 +5,7 @@ import {
   MultipleChoice,
   MultiSolution,
   PracticeProblem,
+  ReflectionData,
   Scramble,
   ScrambleSolution,
   Sort,
@@ -48,7 +49,6 @@ import {useAiTutorModelParameters} from '../../../hooks/useAiTutorModelParameter
 import {
   LessonDeepDiveData,
   practiceProblemValidator,
-  ReflectionData,
   userPracticeProblemAttemptValidator,
 } from '../types';
 

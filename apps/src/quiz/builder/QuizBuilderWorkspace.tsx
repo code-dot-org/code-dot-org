@@ -10,10 +10,12 @@ import QuizMetadataList from '../QuizMetadataList';
 import {QuizQuestionType} from '../types';
 
 import {
-  EMPTY_PAGE_REASON,
   editedQuestionsReason,
   INVALID_CONFIG_REASON,
+  LAST_PAGE_REASON,
   NO_CHANGES_REASON,
+  PAGE_HAS_QUESTIONS_REASON,
+  QUESTION_HAS_CHANGES_REASON,
   QUIZ_BUILDER_HEADER_ID,
   QUIZ_LOAD_FAILED_REASON,
   QUIZ_LOADING_REASON,
@@ -22,9 +24,11 @@ import {
 import CreateQuestionDropdown from './CreateQuestionDropdown';
 import DisabledReason, {ariaDisabledProps} from './DisabledReason';
 import IntroScreenCard from './IntroScreenCard';
+import PageMenu from './PageMenu';
 import {changedConfigFields, configError, timeLimitError} from './quizConfig';
 import QuizPageBlock from './QuizPageBlock';
 import QuizQuestionCard from './QuizQuestionCard';
+import QuestionMenu from './QuizQuestionCard/QuestionMenu';
 import {isPendingQuestionId, QuizConfigurationData} from './types';
 import useQuizBuilderQuestions from './useQuizBuilderQuestions';
 
@@ -61,6 +65,10 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     errorQuestionId,
     hasUnsavedLayout,
     addPage,
+    movePage,
+    deletePage,
+    moveQuestion,
+    moveQuestionToPage,
     addPendingQuestion,
     saveQuestion,
     removeQuestion,
@@ -92,17 +100,17 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   const createDisabledReason = hasPendingQuestion
     ? UNSAVED_QUESTION_REASON
     : undefined;
-  const addPageDisabledReason =
-    createDisabledReason ??
-    (pages.some(page => page.questions.length === 0)
-      ? EMPTY_PAGE_REASON
-      : undefined);
 
   const changedConfig = changedConfigFields(savedConfig, config);
   const hasUnsavedConfig = Object.keys(changedConfig).length > 0;
   const editedCount = [...dirtyIds].filter(
     id => !isPendingQuestionId(id)
   ).length;
+  const rearrangeDisabledReason = hasPendingQuestion
+    ? UNSAVED_QUESTION_REASON
+    : editedCount > 0
+    ? editedQuestionsReason(editedCount)
+    : undefined;
   const saveDisabledReason = isLoading
     ? QUIZ_LOADING_REASON
     : !hasLoaded
@@ -208,8 +216,26 @@ const QuizBuilderWorkspace: React.FunctionComponent<
             hasUnsavedQuestion={pageQuestions.some(question =>
               dirtyIds.has(question.id)
             )}
+            menu={
+              <PageMenu
+                page={page}
+                canMoveUp={page > 1}
+                canMoveDown={page < pages.length}
+                deleteDisabledReason={
+                  pageQuestions.length > 0
+                    ? PAGE_HAS_QUESTIONS_REASON
+                    : pages.length === 1
+                    ? LAST_PAGE_REASON
+                    : undefined
+                }
+                rearrangeDisabledReason={rearrangeDisabledReason}
+                onMove={offset => movePage(page, offset)}
+                onAddPage={addPage}
+                onDelete={() => deletePage(page)}
+              />
+            }
           >
-            {pageQuestions.map(question => (
+            {pageQuestions.map((question, index) => (
               <li key={question.id}>
                 <QuizQuestionCard
                   question={question}
@@ -224,25 +250,49 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                   // if unused.
                   onRemove={id => removeQuestion(id, {permanently: true})}
                   onDirtyChange={setQuestionDirty}
+                  menu={isBusy => (
+                    <QuestionMenu
+                      isBusy={isBusy}
+                      name={`question-menu-${question.id}`}
+                      canMoveUp={index > 0}
+                      canMoveDown={index < pageQuestions.length - 1}
+                      otherPages={pages
+                        .map(({page: otherPage}) => otherPage)
+                        .filter(otherPage => otherPage !== page)}
+                      // Moving to another page remounts the card, which
+                      // would lose its draft.
+                      moveToPageDisabledReason={
+                        !dirtyIds.has(question.id)
+                          ? undefined
+                          : isPendingQuestionId(question.id)
+                          ? UNSAVED_QUESTION_REASON
+                          : QUESTION_HAS_CHANGES_REASON
+                      }
+                      onMove={offset => moveQuestion(question.id, offset)}
+                      onMoveToPage={toPage =>
+                        moveQuestionToPage(question.id, toPage)
+                      }
+                      onRemove={() =>
+                        removeQuestion(question.id, {permanently: true})
+                      }
+                    />
+                  )}
                 />
               </li>
             ))}
           </QuizPageBlock>
         ))}
         <div className={styles.addPageSlot}>
-          <DisabledReason reason={addPageDisabledReason}>
-            <Button
-              variant="outlined"
-              color="secondary"
-              size="extraSmall"
-              type="button"
-              onClick={addPage}
-              startIcon={<FontAwesomeV6Icon iconName="plus" />}
-              {...ariaDisabledProps(addPageDisabledReason)}
-            >
-              Add page
-            </Button>
-          </DisabledReason>
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="extraSmall"
+            type="button"
+            onClick={() => addPage()}
+            startIcon={<FontAwesomeV6Icon iconName="plus" />}
+          >
+            Add page
+          </Button>
         </div>
       </>
     );

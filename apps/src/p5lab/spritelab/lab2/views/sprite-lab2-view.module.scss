@@ -2,6 +2,24 @@
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 @use './editor-strip' as strip;
 
+// A browser draws scrollbars, and its own menus and fields, for a light page
+// unless color-scheme tells it the page is dark. The theme sets its colors
+// through the data-theme attribute, which tells the browser nothing, so
+// these rules say which scheme goes with the lab's theme.
+
+// The second selector in each rule is for an element inside the lab that
+// sets a different theme, such as the copyright button, which is always
+// light. It gets the scheme for its own theme, not the lab's.
+:global([data-theme='Dark']) .labRow,
+.labRow :global([data-theme='Dark']) {
+  color-scheme: dark;
+}
+
+:global([data-theme='Light']) .labRow,
+.labRow :global([data-theme='Light']) {
+  color-scheme: light;
+}
+
 .labRow {
   display: flex;
   width: 100%;
@@ -11,6 +29,30 @@
   .tabShell {
     flex: 1;
     min-width: 0;
+  }
+}
+
+// The page layout hides its small footer from 970px up. A share link keeps
+// it at every width.
+:global(body.spritelab2-share .responsive-content-mobile-footer) {
+  display: block;
+}
+
+// From this width up the footer shares the lab's bottom row with the share
+// buttons. Under it, the lab's row moves up and the footer has its own row.
+$share-one-row-min-width: 1024px;
+
+.labRowShareView {
+  @media screen and (max-width: #{$share-one-row-min-width - 1px}) {
+    box-sizing: border-box;
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: $share-one-row-min-width) {
+  // `html` so this outranks the page's own footer rule on a dark page.
+  :global(html body.spritelab2-share #page-small-footer .small-footer-base) {
+    margin-bottom: 7px;
   }
 }
 
@@ -430,7 +472,7 @@ $z-over-blockly: 71;
   // Keyboard focus ring for the play-mode game region; an outline so the
   // 400x400 geometry the transform and pointer math rely on is untouched.
   &:focus-visible {
-    outline: 2px solid var(--borders-neutral-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: 2px;
   }
 }
@@ -537,6 +579,11 @@ $arrow-gap: 6px;
   color: var(--text-neutral-primary-inverse);
   font-size: 14px;
 
+  // The theme's ring is too faint on the dark stage.
+  &:focus-visible {
+    outline-color: var(--border-focused-primary);
+  }
+
   &:hover,
   &:active {
     background: color-mix(
@@ -632,7 +679,7 @@ $arrow-gap: 6px;
   }
 
   &:focus-visible {
-    outline: 2px solid var(--borders-neutral-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: -2px;
   }
 }

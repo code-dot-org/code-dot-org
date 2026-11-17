@@ -146,6 +146,19 @@ export function totalTimeSpent(progress: Progress): number {
   );
 }
 
+/** The share of the checkpoint's visible steps that are complete, 0 to 1. */
+export function stepsCompleteShare(
+  checkpoint: Checkpoint,
+  progress: Progress
+): number {
+  const steps = visibleSteps(checkpoint, progress);
+  if (steps.length === 0) return 0;
+  const done = steps.filter(
+    step => progress.steps[step.id]?.status === 'complete'
+  ).length;
+  return done / steps.length;
+}
+
 /** Whether the student finished the checkpoint: its last visible step is complete. */
 export const isComplete = (checkpoint: Checkpoint, progress: Progress) => {
   const last = visibleSteps(checkpoint, progress).at(-1);

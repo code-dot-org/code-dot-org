@@ -80,23 +80,25 @@ describe('QuizConfigurationPanel', () => {
     const {onChange} = renderPanel({purpose: undefined});
     expect(screen.getByText('What is this quiz for?')).toBeInTheDocument();
 
-    fireEvent.click(screen.getByText('Exam', {exact: true}));
+    fireEvent.click(screen.getByText('Check for understanding', {exact: true}));
 
     expect(onChange).toHaveBeenCalledWith({
-      purpose: 'exam',
-      showIntroScreen: true,
+      purpose: 'check_for_understanding',
+      showIntroScreen: false,
       timeLimitMinutes: undefined,
-      allowMultipleAttempts: false,
-      showCorrectness: false,
-      revealAnswerExplanation: false,
-      showQuestionsAfterSubmit: false,
+      allowMultipleAttempts: true,
+      showCorrectness: true,
+      revealAnswerExplanation: true,
+      showQuestionsAfterSubmit: true,
     });
     expect(
       screen.queryByText('What is this quiz for?')
     ).not.toBeInTheDocument();
-    expect(screen.getByLabelText('Purpose')).toHaveValue('exam');
-    expect(isChecked('Allow multiple attempts')).toBe(false);
-    expect(isChecked('Show correctness')).toBe(false);
+    expect(screen.getByLabelText('Purpose')).toHaveValue(
+      'check_for_understanding'
+    );
+    expect(isChecked('Show intro screen')).toBe(false);
+    expect(isChecked('Show questions after submit')).toBe(true);
   });
 
   it('exam_simulation defaults: correctness shown, questions and explanation hidden', () => {
@@ -123,10 +125,10 @@ describe('QuizConfigurationPanel', () => {
     const {onChange} = renderPanel();
 
     fireEvent.change(screen.getByLabelText('Purpose'), {
-      target: {value: 'exam'},
+      target: {value: 'exam_simulation'},
     });
 
-    expect(onChange).toHaveBeenCalledWith({purpose: 'exam'});
+    expect(onChange).toHaveBeenCalledWith({purpose: 'exam_simulation'});
     expect(isChecked('Show intro screen')).toBe(INITIAL_VALUES.showIntroScreen);
   });
 

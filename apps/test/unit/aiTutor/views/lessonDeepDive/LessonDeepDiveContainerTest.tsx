@@ -59,6 +59,7 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
       </button>
     </div>
   ),
+  ReflectionBox: () => <div>reflection</div>,
 }));
 
 jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
@@ -67,11 +68,6 @@ jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
 }));
 
 const sendEventMock = analyticsReporter.sendEvent as jest.Mock;
-
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/ReflectionBox',
-  () => ({__esModule: true, default: () => <div>reflection</div>})
-);
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox',

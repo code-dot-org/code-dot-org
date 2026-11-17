@@ -2,7 +2,7 @@ import {Checkpoint, Pathway} from '../../types';
 
 /**
  * The icon a checkpoint's node shows: its first skill's, when that skill
- * has one. A checkpoint without one shows its status instead.
+ * has one, else the checkpoint's own.
  */
 export function checkpointIcon(
   pathway: Pathway,
@@ -12,5 +12,5 @@ export function checkpointIcon(
     const icon = pathway.skills[skillId]?.icon;
     if (icon) return icon;
   }
-  return undefined;
+  return checkpoint.icon;
 }
