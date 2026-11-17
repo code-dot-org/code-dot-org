@@ -6,6 +6,7 @@ import reducer, {
   sendAdaptiveStepReport,
   initProgress,
   mergeResults,
+  mergeUnitProgress,
   mergePeerReviewProgress,
   disablePostMilestone,
   setIsAge13Required,
@@ -389,6 +390,19 @@ describe('progressReduxTest', () => {
       });
       const nextState = reducer(state, action);
       assert.equal(nextState.levelResults['339'], TestResults.ALL_PASS);
+    });
+
+    it('keeps a level perfect when a started report arrives after an all-pass report', () => {
+      let state = reducer(
+        initialState,
+        mergeUnitProgress({levelId: 341, result: TestResults.ALL_PASS})
+      );
+      state = reducer(
+        state,
+        mergeUnitProgress({levelId: 341, result: TestResults.LEVEL_STARTED})
+      );
+      assert.equal(state.unitProgress[341].result, TestResults.ALL_PASS);
+      assert.equal(state.unitProgress[341].status, LevelStatus.perfect);
     });
 
     it('initially sets postMilestoneDisabled to false', () => {
