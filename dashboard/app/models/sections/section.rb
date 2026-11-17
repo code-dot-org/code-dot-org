@@ -609,8 +609,9 @@ class Section < ApplicationRecord
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         demo_type: demo_type,
-        at_risk_age_gated_date: at_risk_age_gated_student&.at_risk_age_gated_date,
-        at_risk_age_gated_us_state: at_risk_age_gated_student&.us_state,
+        # API clients still require these obsolete CAP fields.
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
     end
   end
@@ -706,8 +707,6 @@ class Section < ApplicationRecord
         ltiRosterSyncEnabled: teacher&.properties&.[]("lti_roster_sync_enabled")
       }
 
-      at_risk_student = at_risk_age_gated_student
-
       login_type_name = I18n.t(login_type, scope: [:section, :type], default: login_type)
       if login_type == LOGIN_TYPE_LTI_V1
         issuer = lti_course.lti_integration.issuer
@@ -749,8 +748,9 @@ class Section < ApplicationRecord
           post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
           code_review_expires_at: code_review_expires_at,
           sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-          at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
-          at_risk_age_gated_us_state: at_risk_student&.us_state,
+          # API clients still require these obsolete CAP fields.
+          at_risk_age_gated_date: nil,
+          at_risk_age_gated_us_state: nil,
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
           demo_type: demo_type,
@@ -1080,14 +1080,6 @@ class Section < ApplicationRecord
 
   def lti?
     lti_section.present?
-  end
-
-  # @return The first student we found which is at risk of being age gated.
-  def at_risk_age_gated_student
-    # Archived sections are not at risk of being age gated.
-    return if hidden
-    # Find any student at risk of being age gated and return the date.
-    students.find(&:at_risk_age_gated_date)
   end
 
   private def soft_delete_lti_section
