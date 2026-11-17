@@ -8,6 +8,7 @@ import {
   type Progress,
   type StepProgress,
   visibleSteps,
+  workAttempts,
 } from '../progress/model';
 import {Measures} from '../schema/question';
 import {Checkpoint, LevelStep, Pathway, QuestionsStep, Step} from '../types';
@@ -109,7 +110,7 @@ function levelStepEvidence(
 ): EvidenceObservation[] {
   const skillId = step.validation?.measures.skillId;
   if (!skillId) return [];
-  return (entry?.validationHistory ?? []).map(attempt => ({
+  return workAttempts(entry).map(attempt => ({
     skillId,
     evidenceLevel: attempt.evidenceLevel,
     from: {kind: 'validation', stepId: step.id, at: attempt.at},

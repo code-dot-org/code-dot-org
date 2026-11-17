@@ -23,7 +23,12 @@ import {
 } from '../constants';
 import {applySchemaDisplayTransform} from '../helpers/applySchemaDisplayTransform';
 import {acceptedBuilds} from '../host/acceptedBuilds';
-import {AcceptedBuild, useChatHost} from '../host/ChatHostContext';
+import {
+  AcceptedBuild,
+  ChatTranscript,
+  useChatHost,
+} from '../host/ChatHostContext';
+import {chatTranscript} from '../host/chatTranscript';
 import {
   addChatEvent,
   clearChatMessages,
@@ -328,11 +333,16 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     }, [dispatch, previousParameters, modelParameters]);
 
     // Sets up the chat host's handle, if there is one. Posts get added as
-    // notifications, each build the student accepts gets emitted through
-    // the listener, and the host can switch sending off and on.
+    // notifications, each build the student accepts and each reply the
+    // tutor finishes get emitted through their listeners, and the host can
+    // switch sending off and on.
     const host = useChatHost();
     const buildListeners = useRef(new Set<(build: AcceptedBuild) => void>());
+    const replyListeners = useRef(
+      new Set<(transcript: ChatTranscript) => void>()
+    );
     const lastBuildAt = useRef(Date.now());
+    const lastReplyAt = useRef(Date.now());
     const [hostDisabledSend, setHostDisabledSend] = useState(false);
     useEffect(() => {
       host?.onChatReady({
@@ -349,16 +359,30 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
             buildListeners.current.delete(listener);
           };
         },
+        onReply: listener => {
+          replyListeners.current.add(listener);
+          return () => {
+            replyListeners.current.delete(listener);
+          };
+        },
         disableSend: () => setHostDisabledSend(true),
         enableSend: () => setHostDisabledSend(false),
       });
     }, [host, dispatch]);
     useEffect(() => {
+      if (buildListeners.current.size === 0) return;
       for (const build of acceptedBuilds(unfilteredVisibleItems)) {
         if (build.at <= lastBuildAt.current) continue;
         lastBuildAt.current = build.at;
         buildListeners.current.forEach(listener => listener(build));
       }
+    }, [unfilteredVisibleItems]);
+    useEffect(() => {
+      if (replyListeners.current.size === 0) return;
+      const transcript = chatTranscript(unfilteredVisibleItems);
+      if (!transcript || transcript.at <= lastReplyAt.current) return;
+      lastReplyAt.current = transcript.at;
+      replyListeners.current.forEach(listener => listener(transcript));
     }, [unfilteredVisibleItems]);
 
     const [liveAnnouncement, setLiveAnnouncement] = useState('');
