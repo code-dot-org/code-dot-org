@@ -296,12 +296,16 @@ module Cdo
         # wait.
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol] e.g., :production, :test
+        # @param only [Array<String>, nil] optional FQN allowlist — when given, rebuilds only this
+        #   model's views named in the list.
         # @return [Hash{String => String}] fqn => Redshift Data API statement_id
-        def create_or_replace_views(client:, environment_type:)
+        def create_or_replace_views(client:, environment_type:, only: nil)
           env = environment_type.to_s
           statements = {}
 
           rendered_ddls(environment_type: env).each do |fqn, info|
+            next unless only.nil? || only.include?(fqn)
+
             drop_sql = "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"
             create_sql = info[:sql]
             comment_sql = "COMMENT ON COLUMN #{fqn}.#{info[:first_column]} IS '#{self.class.ddl_hash(create_sql)}'"
@@ -414,14 +418,17 @@ module Cdo
           models.map {|model| new(model)}.each do |gen|
             table_name = gen.view_name
             gen_fqns = gen.expected_view_fqns(environment_type)
+            changed_fqns = gen_fqns.reject {|fqn| unchanged_fqns.include?(fqn)}
 
-            if gen_fqns.any? && gen_fqns.all? {|fqn| unchanged_fqns.include?(fqn)}
+            if gen_fqns.any? && changed_fqns.empty?
               yield(:skipped, table_name) if block_given?
               next
             end
 
             begin
-              submitted = gen.create_or_replace_views(client: client, environment_type: environment_type)
+              submitted = gen.create_or_replace_views(
+                client: client, environment_type: environment_type, only: changed_fqns
+              )
               result[:statements].merge!(submitted)
               yield(:submitted, table_name, submitted.keys) if block_given?
             rescue StandardError => exception
