@@ -22,7 +22,6 @@ export const CopyToClipboardButton: React.FunctionComponent<{
   iconName?: string;
   /** The icon while the copied tooltip shows. */
   copiedIconName?: string;
-  /** The link is not ready to hand out. */
   disabled?: boolean;
   /** A spinner stands in for the icon. */
   busy?: boolean;
