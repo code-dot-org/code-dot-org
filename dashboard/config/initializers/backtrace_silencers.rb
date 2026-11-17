@@ -9,7 +9,6 @@
 # In addition to backtrace silencing, we also want to silence annoying deprecations:
 silenced = [
   'Calling warn on ActiveSupport::Deprecation is deprecated and will be removed from Rails',
-  'Passing the coder as positional argument is deprecated and will be removed in Rails 7.2',
   'Starting in Rails 7.2, alias_attribute with non-attribute targets will raise.',
   'TestFixtures.fixture_path is deprecated and will be removed in Rails 7.2',
   'The `check_pending!` method is deprecated in favor of `check_all_pending!`',
