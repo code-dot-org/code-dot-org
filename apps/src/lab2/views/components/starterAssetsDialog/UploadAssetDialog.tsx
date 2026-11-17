@@ -60,7 +60,7 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
     // Starter Assets API only supports one file upload at a time.
     const file = files[0];
 
-    if (file.name.endsWith('.pdf')) {
+    if (file.name.toLowerCase().endsWith('.pdf')) {
       const pageCount = (await getPageCount(file)) || 0;
       if (pageCount > PDF_PAGE_LIMIT) {
         updateAlert(
