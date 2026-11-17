@@ -67,6 +67,10 @@ docker run --rm --name "$APP_CONTAINER" --network "$NETWORK" \
     # dashboard/Rakefile.
     echo 'preseed: running dashboard:setup_db...'
     bundle exec rake dashboard:setup_db
+    # In development, seed:default stops at the UI test partition (#76612).
+    # This image exists to carry the slow part, so seed the rest here.
+    echo 'preseed: seeding production curriculum...'
+    bundle exec rake seed:production
     # This runs db:test:prepare, not db:migrate.
     # dashboard/lib/tasks/seed_in_test.rake makes this seed, not just
     # shape, the test database. That saves time on a fresh container's
