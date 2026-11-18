@@ -15,7 +15,6 @@ import {useNavigate} from 'react-router-dom';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
-import aiTutorAvatar from '@cdo/static/tutor/ai-tutor-avatar.png';
 
 import SparklePulse from '../Animations/SparklePulse';
 
@@ -299,7 +298,12 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     <div className={styles.feedbackWidget}>
                       <div className={styles.feedbackHeader}>
                         <div className={styles.feedbackAvatar}>
-                          <img src={aiTutorAvatar} alt="" />
+                          <FontAwesomeV6Icon
+                            iconFamily="kit"
+                            iconStyle="solid"
+                            iconName="tutor"
+                            className={styles.feedbackAvatarIcon}
+                          />
                         </div>
                         <div className={styles.feedbackHeaderContent}>
                           <Typography variant="body3">Tutor</Typography>
