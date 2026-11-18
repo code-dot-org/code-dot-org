@@ -397,11 +397,13 @@ describe('EditAilabMode', () => {
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
-  it('does not save rows to test on outside the range of their unit', () => {
+  it('does not save rows to test on outside the range of their unit, and blocks the form', () => {
     const savedMode = renderEditor('{"testRows": {"count": 5}}');
     const unit = screen.getByRole('combobox', {name: 'Test on'});
     const amount = () =>
-      screen.getByRole('spinbutton', {name: /rows to test on/});
+      screen.getByRole<HTMLInputElement>('spinbutton', {
+        name: /rows to test on/,
+      });
     expect(unit).toHaveValue('count');
     expect(amount()).toHaveValue(5);
 
@@ -411,17 +413,23 @@ describe('EditAilabMode', () => {
     ).toBeInTheDocument();
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
 
+    expect(amount().checkValidity()).toBe(false);
+
     fireEvent.change(unit, {target: {value: 'percent'}});
+    expect(amount().checkValidity()).toBe(true);
     expect(JSON.parse(savedMode())).toEqual({
       trainer: 'knn',
       testRows: {percent: 2.5},
     });
 
-    fireEvent.change(amount(), {target: {value: '100'}});
-    expect(
-      screen.getByText('Enter a number above 0 and below 100.')
-    ).toBeInTheDocument();
-    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+    ['0', '100'].forEach(percent => {
+      fireEvent.change(amount(), {target: {value: percent}});
+      expect(
+        screen.getByText('Enter a number above 0 and below 100.')
+      ).toBeInTheDocument();
+      expect(amount().checkValidity()).toBe(false);
+      expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+    });
   });
 
   it('saves k-nearest neighbors when no trainer is set', () => {

@@ -1,6 +1,6 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {DEFAULT_TEST_ROWS_PERCENT} from '@cdo/apps/ailab/engine';
 
@@ -64,6 +64,16 @@ const TestRowsField: React.FunctionComponent<TestRowsFieldProps> = ({
   const [unit, setUnit] = useState(() => getTestRowsUnit(mode));
   const [text, setText] = useState(() => String(getTestRowsAmount(mode) ?? ''));
   const amountField = AMOUNT_FIELDS[unit];
+  const error =
+    !isBlank(text) && !isValidAmountText(unit, text)
+      ? amountField.error
+      : undefined;
+  const amountRef = useRef<HTMLInputElement>(null);
+
+  // The native limits allow 0 and 100%, which would save as the default.
+  useEffect(() => {
+    amountRef.current!.setCustomValidity(error ?? '');
+  }, [error]);
 
   const update = (newUnit: TestRowsUnit, newText: string) => {
     setUnit(newUnit);
@@ -90,6 +100,7 @@ const TestRowsField: React.FunctionComponent<TestRowsFieldProps> = ({
       />
       <div className={moduleStyles.testRowsAmount}>
         <TextField
+          ref={amountRef}
           label={amountField.label}
           name="ailab_mode_test_rows"
           inputType="number"
@@ -100,11 +111,7 @@ const TestRowsField: React.FunctionComponent<TestRowsFieldProps> = ({
           onChange={e => update(unit, e.target.value)}
           disabled={disabled}
           helperMessage={`Each training run tests the model on these rows and trains on the rest, always keeping at least one row to train on. Leave blank for ${DEFAULT_TEST_ROWS_PERCENT}%.`}
-          errorMessage={
-            !isBlank(text) && !isValidAmountText(unit, text)
-              ? amountField.error
-              : undefined
-          }
+          errorMessage={error}
           size="s"
         />
       </div>
