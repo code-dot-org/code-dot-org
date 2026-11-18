@@ -62,7 +62,7 @@ describe('BehindTheScenes', () => {
     expect(screen.queryByRole('dialog')).toBeNull();
   });
 
-  it('draws the dialog in the nearest themed element, outside what holds its button', () => {
+  it('draws the dialog in the nearest themed element, not beside its button', () => {
     render(
       <ThemeProvider>
         <div data-theme="Dark">

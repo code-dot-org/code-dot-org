@@ -62,8 +62,9 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
 }) => {
   const [view, setView] = useState<View>('picture');
   const triggerRef = useRef<HTMLButtonElement>(null);
-  // The open dialog's host: the nearest themed element, so the backdrop
-  // covers the page header whatever holds the button.
+  // Where the open dialog is drawn: the nearest element that sets a theme.
+  // The button can sit in a bar that is layered under the page header, and
+  // a dialog drawn there could not cover the header with its backdrop.
   const [dialogHost, setDialogHost] = useState<Element | null>(null);
   const setOpen = (open: boolean) =>
     setDialogHost(

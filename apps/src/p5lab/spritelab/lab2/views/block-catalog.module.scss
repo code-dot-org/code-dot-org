@@ -1,5 +1,5 @@
 // The new-block catalog: a list of blocks on the left, the chosen block's
-// help on the right, and the button that opens it, at the scene bar's end.
+// help on the right, and the button that opens it.
 
 @use '@cdo/apps/pixelEditor/dialogChrome' as chrome;
 @use 'catalog-dot' as catalog;
@@ -15,7 +15,8 @@ $list-width: 220px;
 .dialogHost .dialog {
   @include chrome.panel;
 
-  // The panel is the color of the lab's other dialogs in the dark theme.
+  // chrome.panel is a lighter gray in the dark theme. This matches the
+  // lab's other dialogs, and changes nothing in the light theme.
   background-color: var(--background-neutral-primary);
   width: 760px;
   max-width: calc(100vw - 32px);
