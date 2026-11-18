@@ -652,7 +652,6 @@ class UnitGroup < ApplicationRecord
   # Mirrors Unit#lesson_tutor_available?; true if any default unit has the flag.
   def lesson_tutor_available?
     return false if pl_course?
-    return false unless get_course_version&.course_offering&.ai_initiative?
     default_units.any?(&:tutor_plus_available?)
   end
 

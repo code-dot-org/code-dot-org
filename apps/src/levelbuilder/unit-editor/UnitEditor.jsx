@@ -826,10 +826,9 @@ class UnitEditor extends React.Component {
             <HelpTip>
               <p>
                 Lessons with a lesson plan offer Tutor+ only when this is
-                checked and the course offering is AI Foundations or AI
-                Discoveries. Check this if practice problems, videos, and
-                challenges have been added for lessons in this unit and you are
-                ready to release Tutor+ for this unit.
+                checked. PL courses never offer it. Check this if practice
+                problems, videos, and challenges have been added for lessons in
+                this unit and you are ready to release Tutor+ for this unit.
               </p>
             </HelpTip>
           </label>

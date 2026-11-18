@@ -2012,14 +2012,10 @@ class Unit < ApplicationRecord
     unit_group&.pl_course?
   end
 
-  # The lesson tutor deep dive is scoped to units with tutor_plus_available set
-  # in the AI Foundations (AIF) and AI Discovery (AID) student curricula.
-  # PL/facilitator courses are excluded even if they carry an AI marketing
-  # initiative.
+  # PL/facilitator courses never offer the lesson tutor deep dive.
   def lesson_tutor_available?
-    return false unless tutor_plus_available?
     return false if pl_course?
-    !!get_course_version&.course_offering&.ai_initiative?
+    !!tutor_plus_available?
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot
