@@ -5,4 +5,6 @@ export const EVENTS = {
   TUTOR_PLUS_PRACTICE_DONE: 'tutor_plus_practice_done',
   TUTOR_PLUS_CHALLENGE_TYPE_SELECTED: 'tutor_plus_challenge_type_selected',
   TUTOR_PLUS_CHALLENGE_STARTED: 'tutor_plus_challenge_started',
+  TUTOR_PLUS_CHALLENGE_RESTARTED: 'tutor_plus_challenge_restarted',
+  TUTOR_PLUS_CHALLENGE_SUBMITTED: 'tutor_plus_challenge_submitted',
 } as const;

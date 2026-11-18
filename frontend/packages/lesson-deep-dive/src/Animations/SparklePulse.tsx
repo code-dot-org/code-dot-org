@@ -1,5 +1,11 @@
 import classNames from 'classnames';
-import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
+import {
+  type FunctionComponent,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import moduleStyles from './sparkle-pulse.module.scss';
 
@@ -11,7 +17,7 @@ const hasAnimationName = (animation: Animation, names: string[]) =>
   'animationName' in animation &&
   names.includes((animation as CSSAnimation).animationName);
 
-export const SparklePulse: React.FunctionComponent<{
+export const SparklePulse: FunctionComponent<{
   phase?: 'thinking' | 'ready';
   size?: number;
   // Called once the icon comes to rest after 'ready'.
@@ -72,7 +78,7 @@ export const SparklePulse: React.FunctionComponent<{
     }
     const timeoutId = setTimeout(
       () => onStoppedRef.current?.(),
-      stopDelayRef.current
+      stopDelayRef.current,
     );
     return () => clearTimeout(timeoutId);
   }, [stopping]);
@@ -83,7 +89,7 @@ export const SparklePulse: React.FunctionComponent<{
       className={classNames(
         moduleStyles.icon,
         stopping ? moduleStyles.stopping : moduleStyles.thinking,
-        className
+        className,
       )}
       width={size}
       height={(size * 12) / 17}

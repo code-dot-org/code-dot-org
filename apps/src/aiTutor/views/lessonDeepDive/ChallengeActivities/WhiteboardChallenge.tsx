@@ -9,6 +9,7 @@ import {
   ExplanationTypes,
   requestEvaluation,
   uploadChallengeResponseAsset,
+  WhiteboardChallengeProps,
 } from '@code-dot-org/lesson-deep-dive';
 import {createTheme, ThemeProvider as MuiThemeProvider} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
@@ -110,32 +111,6 @@ const ForceDarkTheme: FC = () => {
   }, [theme, setTheme]);
   return null;
 };
-
-interface WhiteboardChallengeProps {
-  // Null while ChallengeBox is still fetching the challenge.
-  challengeId: number | null;
-  // Same-origin path to the challenge's starter image, or null when it has
-  // none. When set, the canvas mounts with the image as a locked node.
-  starterImageUrl: string | null;
-  starterImageAltText: string | null;
-  submitted: boolean;
-  submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  isRecording: boolean;
-  setIsRecording: React.Dispatch<React.SetStateAction<boolean>>;
-  hasRecording: boolean;
-  setHasRecording: React.Dispatch<React.SetStateAction<boolean>>;
-  explanationType: string | null;
-  lessonId: number;
-  textExplanation: string;
-  setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
-  setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
-  // Reports whether the current drawing can be submitted, and hands the
-  // top-bar "Submit for feedback" / "Start over" buttons this modality's
-  // submit and reset handlers.
-  onSubmittableChange: (canSubmit: boolean) => void;
-  submitRef: React.MutableRefObject<(() => Promise<number | null>) | null>;
-  resetRef: React.MutableRefObject<(() => void) | null>;
-}
 
 // Split from the default export so useReactFlow (needed by the snapshot
 // capture on submit) runs inside the ReactFlowProvider.

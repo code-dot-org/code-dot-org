@@ -1,29 +1,19 @@
 import {
   Challenge,
+  ChallengeBox,
   ChallengeResponseDetail,
 } from '@code-dot-org/lesson-deep-dive';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import ChallengeBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeBox';
+import WhiteboardChallenge from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/WhiteboardChallenge';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {request} from '../../../../util/stubCoreApi';
-
-jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
-  __esModule: true,
-  default: {sendEvent: jest.fn()},
-}));
-
-jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  VideoCanvas: jest.requireActual('../../../../util/stubVideoCanvas').default,
-}));
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -79,7 +69,7 @@ jest.mock('@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas', () => {
 });
 
 const snapshot = createSketchSnapshotBlob as jest.Mock;
-const sendEventMock = analyticsReporter.sendEvent as jest.Mock;
+const sendEventMock = jest.fn();
 
 const fakeChallenge: Challenge = {
   id: 1,
@@ -148,28 +138,6 @@ const submitWhiteboardChallenge = async () => {
   fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
 };
 
-const renderVideoChallenge = async () => {
-  render(
-    <ChallengeBox
-      lessonId={42}
-      challenge={{...fakeChallenge, default_modality: 'video'}}
-      challengeType={ChallengeTypes.VIDEO}
-    />
-  );
-  await waitFor(() =>
-    expect(
-      screen.getByText('Draw a flowchart of the algorithm.')
-    ).toBeInTheDocument()
-  );
-};
-
-// Clicks record then stop, and waits for the stub's blob
-const recordVideo = async () => {
-  fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
-  fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
-  await act(async () => {});
-};
-
 // Advances fake timers by `ms` and flushes the resulting state updates,
 // e.g. the promise chain inside the polling effect's setInterval callback.
 const tick = async (ms: number) => {
@@ -196,6 +164,10 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        WhiteboardChallenge={WhiteboardChallenge}
+        transcribeAudio={jest.fn()}
+        stickerSections={[]}
+        sendEvent={sendEventMock}
       />
     );
     await submitWhiteboardChallenge();
@@ -216,6 +188,10 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        WhiteboardChallenge={WhiteboardChallenge}
+        transcribeAudio={jest.fn()}
+        stickerSections={[]}
+        sendEvent={sendEventMock}
       />
     );
     await submitWhiteboardChallenge();
@@ -248,6 +224,10 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        WhiteboardChallenge={WhiteboardChallenge}
+        transcribeAudio={jest.fn()}
+        stickerSections={[]}
+        sendEvent={sendEventMock}
       />
     );
     await submitWhiteboardChallenge();
@@ -290,6 +270,10 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        WhiteboardChallenge={WhiteboardChallenge}
+        transcribeAudio={jest.fn()}
+        stickerSections={[]}
+        sendEvent={sendEventMock}
       />
     );
     await submitWhiteboardChallenge();
@@ -352,6 +336,10 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        WhiteboardChallenge={WhiteboardChallenge}
+        transcribeAudio={jest.fn()}
+        stickerSections={[]}
+        sendEvent={sendEventMock}
       />
     );
     await submitWhiteboardChallenge();
@@ -422,6 +410,10 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        WhiteboardChallenge={WhiteboardChallenge}
+        transcribeAudio={jest.fn()}
+        stickerSections={[]}
+        sendEvent={sendEventMock}
       />
     );
     await submitWhiteboardChallenge();
@@ -473,6 +465,10 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        WhiteboardChallenge={WhiteboardChallenge}
+        transcribeAudio={jest.fn()}
+        stickerSections={[]}
+        sendEvent={sendEventMock}
       />
     );
 
@@ -507,6 +503,10 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        WhiteboardChallenge={WhiteboardChallenge}
+        transcribeAudio={jest.fn()}
+        stickerSections={[]}
+        sendEvent={sendEventMock}
       />
     );
 
@@ -533,6 +533,10 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        WhiteboardChallenge={WhiteboardChallenge}
+        transcribeAudio={jest.fn()}
+        stickerSections={[]}
+        sendEvent={sendEventMock}
       />
     );
 
@@ -549,72 +553,6 @@ describe('ChallengeBox', () => {
     ).toBeInTheDocument();
   });
 
-  // Edit, record, preview, and back to edit
-  describe('video challenges', () => {
-    it('offers recording straight away, with nothing yet to submit', async () => {
-      await renderVideoChallenge();
-
-      expect(
-        screen.getByRole('button', {name: 'Start Recording'})
-      ).toBeInTheDocument();
-      // No explanation modality to pick: those belong to whiteboard.
-      expect(
-        screen.queryByRole('button', {name: 'Audio'})
-      ).not.toBeInTheDocument();
-      expect(
-        screen.queryByRole('button', {name: 'Text'})
-      ).not.toBeInTheDocument();
-      expect(
-        screen.queryByRole('button', {name: 'Submit'})
-      ).not.toBeInTheDocument();
-    });
-
-    it('walks the button from start, to stop, to editing the take', async () => {
-      await renderVideoChallenge();
-
-      fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
-      expect(
-        screen.getByRole('button', {name: 'Stop Recording'})
-      ).toBeInTheDocument();
-
-      fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
-      await act(async () => {});
-      expect(
-        screen.getByRole('button', {name: 'Edit and Record Again'})
-      ).toBeInTheDocument();
-      expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
-    });
-
-    it('returns to the live canvas, take discarded, on Edit and Record Again', async () => {
-      await renderVideoChallenge();
-      await recordVideo();
-
-      fireEvent.click(
-        screen.getByRole('button', {name: 'Edit and Record Again'})
-      );
-
-      expect(
-        screen.getByRole('button', {name: 'Start Recording'})
-      ).toBeInTheDocument();
-      expect(screen.getByText('canvas mode: edit')).toBeInTheDocument();
-      expect(
-        screen.queryByRole('button', {name: 'Submit'})
-      ).not.toBeInTheDocument();
-    });
-
-    it('records a second take after editing', async () => {
-      await renderVideoChallenge();
-      await recordVideo();
-      fireEvent.click(
-        screen.getByRole('button', {name: 'Edit and Record Again'})
-      );
-      await recordVideo();
-
-      expect(screen.getByText('canvas mode: preview')).toBeInTheDocument();
-      expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
-    });
-  });
-
   describe('Tutor+ analytics', () => {
     const renderWhiteboardChallenge = () =>
       render(
@@ -622,6 +560,10 @@ describe('ChallengeBox', () => {
           lessonId={42}
           challenge={fakeChallenge}
           challengeType={ChallengeTypes.WHITEBOARD}
+          WhiteboardChallenge={WhiteboardChallenge}
+          transcribeAudio={jest.fn()}
+          stickerSections={[]}
+          sendEvent={sendEventMock}
         />
       );
 

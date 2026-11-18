@@ -203,7 +203,7 @@
 
   :only-child {
     margin: 0 auto;
-}
+  }
 }
 
 .choice {
@@ -221,7 +221,11 @@
 
   &.choiceSelected {
     border-color: var(--brand-purple-20);
-    background-color: color-mix(in srgb, var(--brand-purple-5) 15%, transparent);
+    background-color: color-mix(
+      in srgb,
+      var(--brand-purple-5) 15%,
+      transparent
+    );
   }
 }
 
@@ -294,9 +298,9 @@
   color: var(--sentiment-information-50);
 }
 
-.feedbackHeaderContent{
- display: flex;
- flex-direction: column;
+.feedbackHeaderContent {
+  display: flex;
+  flex-direction: column;
 }
 
 .feedbackText {

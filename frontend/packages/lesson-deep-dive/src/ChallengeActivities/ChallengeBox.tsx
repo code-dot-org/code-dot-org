@@ -1,27 +1,36 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {useApiClient} from '@code-dot-org/core/api';
-import {
-  Challenge,
-  ChallengeResponse,
-  ChallengeResponseDetail,
-  EvaluationStatus,
-  ExplanationTypes,
-  getChallengeResponse,
-  ProjectDetailsCard,
-} from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+import {
+  type ComponentType,
+  type Dispatch,
+  type FC,
+  type MutableRefObject,
+  type SetStateAction,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import {useNavigate} from 'react-router-dom';
 
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {useApiClient} from '@code-dot-org/core/api';
 
-import SparklePulse from '../Animations/SparklePulse';
+import {EVENTS} from '../analyticsEvents';
+import {SparklePulse} from '../Animations/SparklePulse';
+import {getChallengeResponse} from '../gallery/api';
+import ProjectDetailsCard from '../gallery/ProjectDetailsCard';
+import {type ChallengeResponseDetail} from '../gallery/types';
+import {
+  type Challenge,
+  type ChallengeResponse,
+  EvaluationStatus,
+  ExplanationTypes,
+  type SendEvent,
+  type StickerSection,
+} from '../types';
 
 import VideoChallenge from './VideoChallenge';
-import WhiteboardChallenge from './WhiteboardChallenge';
 
 import styles from './challenge-box.module.scss';
 
@@ -31,10 +40,40 @@ const CompositionStates = {
   ITERATING: 'iterating',
 };
 
+export interface WhiteboardChallengeProps {
+  // Null while ChallengeBox is still fetching the challenge.
+  challengeId: number | null;
+  // Same-origin path to the challenge's starter image, or null when it has
+  // none. When set, the canvas mounts with the image as a locked node.
+  starterImageUrl: string | null;
+  starterImageAltText: string | null;
+  submitted: boolean;
+  submitCallback: Dispatch<SetStateAction<boolean>>;
+  isRecording: boolean;
+  setIsRecording: Dispatch<SetStateAction<boolean>>;
+  hasRecording: boolean;
+  setHasRecording: Dispatch<SetStateAction<boolean>>;
+  explanationType: string | null;
+  lessonId: number;
+  textExplanation: string;
+  setEvaluationStatus: Dispatch<SetStateAction<string>>;
+  setChallengeResponseId: Dispatch<SetStateAction<number>>;
+  // Reports whether the current drawing can be submitted, and hands the
+  // top-bar "Submit for feedback" / "Start over" buttons this modality's
+  // submit and reset handlers.
+  onSubmittableChange: (canSubmit: boolean) => void;
+  submitRef: MutableRefObject<(() => Promise<number | null>) | null>;
+  resetRef: MutableRefObject<(() => void) | null>;
+}
+
 interface ChallengeBoxProps {
   lessonId: number;
   challenge: Challenge;
-  challengeType: string;
+  challengeType: 'video' | 'whiteboard';
+  WhiteboardChallenge: ComponentType<WhiteboardChallengeProps>;
+  transcribeAudio: (audio: Blob) => Promise<string>;
+  stickerSections: StickerSection[];
+  sendEvent: SendEvent;
 }
 
 // Terminal evaluation_status values that map to a student-facing error
@@ -54,6 +93,10 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   lessonId,
   challenge,
   challengeType,
+  WhiteboardChallenge,
+  transcribeAudio,
+  stickerSections,
+  sendEvent,
 }) => {
   const api = useApiClient();
   const [submitted, setSubmitted] = useState(false);
@@ -63,16 +106,16 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   const [isRecording, setIsRecording] = useState(false);
   const [textExplanation, setTextExplanation] = useState('');
   const [evaluationStatus, setEvaluationStatus] = useState(
-    EvaluationStatus.NONE
+    EvaluationStatus.NONE,
   );
   const [polling, setPolling] = useState(false);
   const [challengeResponseId, setChallengeResponseId] = useState(0);
   const [evaluationText, setEvaluationText] = useState<string | null>(null);
   const [evaluationDatetime, setEvaluationDatetime] = useState<string | null>(
-    null
+    null,
   );
   const [compositionState, setCompositionState] = useState(
-    CompositionStates.INITIAL
+    CompositionStates.INITIAL,
   );
   const [challengeResponse, setChallengeResponse] =
     useState<ChallengeResponse | null>(null);
@@ -96,7 +139,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   const startTimeRef = useRef(Date.now());
 
   const logRestart = (action: 'choose_different' | 'start_over') => {
-    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_RESTARTED, {
+    sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_RESTARTED, {
       lesson_id: lessonId,
       challenge_id: challenge.id,
       action,
@@ -108,11 +151,10 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   // always applies; whiteboard challenges only need it for an audio
   // explanation.
   const isRecordable =
-    challengeType === ChallengeTypes.VIDEO ||
-    explanationType === ExplanationTypes.AUDIO;
+    challengeType === 'video' || explanationType === ExplanationTypes.AUDIO;
   // Video previews return to edit first; audio re-records in one click
   const isVideoPreview =
-    challengeType === ChallengeTypes.VIDEO && hasRecording && !isRecording;
+    challengeType === 'video' && hasRecording && !isRecording;
 
   const handleRecordClick = () => {
     if (isVideoPreview) {
@@ -125,7 +167,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   // Both challenge modalities report submission through this callback; the
   // confirmation dialog is shared here rather than duplicated per modality.
   const handleSubmittedChange = useCallback(
-    (value: React.SetStateAction<boolean>) => {
+    (value: SetStateAction<boolean>) => {
       setSubmitted(prev => {
         const next = typeof value === 'function' ? value(prev) : value;
         if (next && !prev) {
@@ -135,7 +177,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
       });
       setPolling(true);
     },
-    []
+    [],
   );
 
   const formatTimestamp = (isoDate: string) => {
@@ -168,11 +210,11 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     text: value.student_feedback,
                   }
                 : status && EVALUATION_ERROR_MESSAGES[status]
-                ? {
-                    status: EvaluationStatus.ERROR,
-                    text: EVALUATION_ERROR_MESSAGES[status],
-                  }
-                : null;
+                  ? {
+                      status: EvaluationStatus.ERROR,
+                      text: EVALUATION_ERROR_MESSAGES[status],
+                    }
+                  : null;
             // Still queued/running (or an unrecognized status): keep polling.
             if (!outcome) {
               return;
@@ -245,7 +287,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
       setShowConfirmation(false);
       return;
     }
-    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_SUBMITTED, {
+    sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_SUBMITTED, {
       lesson_id: lessonId,
       challenge_id: challenge.id,
       type: challengeType,
@@ -271,7 +313,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
       <div
         className={classNames(
           styles.challengeArea,
-          showConfirmation && styles.hidden
+          showConfirmation && styles.hidden,
         )}
         data-theme="Dark"
       >
@@ -345,7 +387,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     </div>
                   </div>
                 )}
-              {challengeType === ChallengeTypes.WHITEBOARD &&
+              {challengeType === 'whiteboard' &&
                 compositionState !== CompositionStates.VIEWING_FEEDBACK && (
                   <div className={styles.whiteboardButtonContainer}>
                     {compositionState !==
@@ -364,8 +406,8 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                           {compositionState === CompositionStates.INITIAL
                             ? 'Use audio or text to explain what you created.'
                             : explanationType === ExplanationTypes.TEXT
-                            ? 'Write a short explanation of the changes you made'
-                            : 'Record yourself explaining the changes you made'}
+                              ? 'Write a short explanation of the changes you made'
+                              : 'Record yourself explaining the changes you made'}
                         </Typography>
                       </div>
                     )}
@@ -512,7 +554,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
           <div className={styles.activityColumn}>
             <div className={styles.activityRow}>
               <div className={styles.activityColumnTwo}>
-                {challengeType === ChallengeTypes.WHITEBOARD ? (
+                {challengeType === 'whiteboard' ? (
                   <WhiteboardChallenge
                     challengeId={challenge?.id ?? null}
                     submitted={submitted}
@@ -545,12 +587,13 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     hasRecording={hasRecording}
                     setHasRecording={setHasRecording}
                     challenge={challenge}
-                    lessonId={lessonId}
                     setEvaluationStatus={setEvaluationStatus}
                     setChallengeResponseId={setChallengeResponseId}
                     onSubmittableChange={setCanSubmit}
                     submitRef={submitRef}
                     resetRef={resetRef}
+                    transcribeAudio={transcribeAudio}
+                    stickerSections={stickerSections}
                   />
                 )}
               </div>
@@ -570,9 +613,9 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                       {compositionState === CompositionStates.INITIAL
                         ? 'Write a short paragraph explaining your work.'
                         : compositionState ===
-                          CompositionStates.VIEWING_FEEDBACK
-                        ? textExplanation
-                        : 'Edit or add to your explanation to describe the changes you made.'}
+                            CompositionStates.VIEWING_FEEDBACK
+                          ? textExplanation
+                          : 'Edit or add to your explanation to describe the changes you made.'}
                     </Typography>
                   </div>
                   {compositionState !== CompositionStates.VIEWING_FEEDBACK && (
@@ -624,10 +667,10 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     {isRecording
                       ? 'Stop Recording'
                       : isVideoPreview
-                      ? 'Edit and Record Again'
-                      : hasRecording
-                      ? 'Record Again'
-                      : 'Start Recording'}
+                        ? 'Edit and Record Again'
+                        : hasRecording
+                          ? 'Record Again'
+                          : 'Start Recording'}
                   </MuiButton>
                 )}
                 {(!isRecordable || hasRecording) && (
