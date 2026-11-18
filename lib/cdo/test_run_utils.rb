@@ -128,11 +128,11 @@ module TestRunUtils
       end
     end
 
-    # Clone single DB across all databases
+    # Load the seed file into every database.
     require 'parallel_tests'
     procs = ParallelTests.determine_number_of_processes(nil)
     CDO.log.info "Cloning test data across #{procs} databases..."
-    databases = (2..procs).map {|i| "#{database}#{i}"}
+    databases = (1..procs).map {|i| "#{database}#{i}"}
     databases.each do |db|
       recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
       RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql #{opts}"
