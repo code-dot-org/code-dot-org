@@ -46,6 +46,17 @@ export async function saveLessonObjectiveReflection(
   });
 }
 
+/** GET /ai_student_podcasts */
+export async function getPodcast(
+  transport: Transport,
+  query: string,
+): Promise<{podcast_script?: string | null}> {
+  return transport.request<{podcast_script?: string | null}>({
+    method: 'GET',
+    url: `/ai_student_podcasts?${query}`,
+  });
+}
+
 /** POST /ai_student_podcasts/generate_podcast */
 export async function generatePodcast(
   transport: Transport,
