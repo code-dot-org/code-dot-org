@@ -1,12 +1,22 @@
 import {useApiClient} from '@code-dot-org/core/api';
-import {Challenge, listChallenges} from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useEffect, useState} from 'react';
+import {
+  Challenge,
+  ChallengeBox,
+  listChallenges,
+} from '@code-dot-org/lesson-deep-dive';
+import React, {FC, useCallback, useEffect, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
+import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
+import {getClientApi} from '@cdo/apps/aichat/api/client';
 import {useLessonDeepDiveChallengesEnabled} from '@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled';
-import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  ChallengeTypes,
+} from '@cdo/generated-scripts/sharedConstants';
 
-import ChallengeBox from './ChallengeBox';
+import {STICKER_SECTIONS} from './stickers';
+import WhiteboardChallenge from './WhiteboardChallenge';
 
 import styles from '../lesson-deep-dive-container.module.scss';
 
@@ -46,6 +56,21 @@ const ChallengeRoute: FC<ChallengeRouteProps> = ({lessonId}) => {
     };
   }, [api, lessonId, challengeId, navigate]);
 
+  const transcribeAudio = useCallback(
+    async (audio: Blob) => {
+      AichatContextManager.setContext({
+        clientType: AiChatClientTypes.LESSON_DEEP_DIVE,
+        currentLevelId: null,
+        scriptId: null,
+        channelId: undefined,
+        lessonId,
+      });
+      const aichatClientApi = await getClientApi();
+      return aichatClientApi.transcribeAudio(audio);
+    },
+    [lessonId]
+  );
+
   if (!challengesEnabled) {
     return null;
   }
@@ -65,6 +90,9 @@ const ChallengeRoute: FC<ChallengeRouteProps> = ({lessonId}) => {
             lessonId={lessonId}
             challenge={challenge}
             challengeType={challengeType}
+            WhiteboardChallenge={WhiteboardChallenge}
+            transcribeAudio={transcribeAudio}
+            stickerSections={STICKER_SECTIONS}
           />
         ) : null}
       </div>

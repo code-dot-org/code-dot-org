@@ -1,26 +1,27 @@
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React, {FC, useRef, useState} from 'react';
-
-import VideoChallenge from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoChallenge';
-
-import {request} from '../../../../util/stubCoreApi';
 import {
-  recordedAudioBlob,
-  recordedVideoBlob,
-} from '../../../../util/stubVideoCanvas';
+  type Dispatch,
+  type FC,
+  type SetStateAction,
+  useRef,
+  useState,
+} from 'react';
+import {vi} from 'vitest';
 
-jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  VideoCanvas: jest.requireActual('../../../../util/stubVideoCanvas').default,
-}));
+import VideoChallenge from '../VideoChallenge';
 
-const mockTranscribeAudio = jest.fn();
+import {recordedAudioBlob, recordedVideoBlob} from './stubVideoCanvas';
 
-jest.mock('@cdo/apps/aichat/api/client', () => ({
-  __esModule: true,
-  getClientApi: jest.fn(async () => ({transcribeAudio: mockTranscribeAudio})),
-}));
+const request = vi.hoisted(() => vi.fn());
+
+vi.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {request}};
+  return {useApiClient: () => client};
+});
+
+vi.mock('../VideoCanvas', async () => await import('./stubVideoCanvas'));
+
+const mockTranscribeAudio = vi.fn();
 
 const createdResponse = {
   id: 7,
@@ -52,7 +53,7 @@ const recordVideo = async () => {
 
 // Stands in for ChallengeBox, which owns the record and "Submit" buttons
 const VideoHarness: FC<{
-  submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
+  submitCallback: Dispatch<SetStateAction<boolean>>;
 }> = ({submitCallback}) => {
   const submitRef = useRef<(() => Promise<boolean>) | null>(null);
   const resetRef = useRef<(() => void) | null>(null);
@@ -70,12 +71,13 @@ const VideoHarness: FC<{
         setIsRecording={setIsRecording}
         hasRecording={hasRecording}
         setHasRecording={setHasRecording}
-        lessonId={1}
-        setEvaluationStatus={jest.fn()}
-        setChallengeResponseId={jest.fn()}
+        setEvaluationStatus={vi.fn()}
+        setChallengeResponseId={vi.fn()}
         onSubmittableChange={setCanSubmit}
         submitRef={submitRef}
         resetRef={resetRef}
+        transcribeAudio={mockTranscribeAudio}
+        stickerSections={[]}
       />
       <button
         type="button"
@@ -86,8 +88,8 @@ const VideoHarness: FC<{
         {isRecording
           ? 'Stop Recording'
           : isVideoPreview
-          ? 'Edit and Record Again'
-          : 'Start Recording'}
+            ? 'Edit and Record Again'
+            : 'Start Recording'}
       </button>
       <button
         type="button"
@@ -108,7 +110,7 @@ describe('VideoChallenge', () => {
   });
 
   it('disables submit until a video is recorded', async () => {
-    render(<VideoHarness submitCallback={jest.fn()} />);
+    render(<VideoHarness submitCallback={vi.fn()} />);
 
     expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
 
@@ -117,7 +119,7 @@ describe('VideoChallenge', () => {
   });
 
   it('disables submit while recording is in progress', async () => {
-    render(<VideoHarness submitCallback={jest.fn()} />);
+    render(<VideoHarness submitCallback={vi.fn()} />);
 
     fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
     expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
@@ -128,7 +130,7 @@ describe('VideoChallenge', () => {
   });
 
   it('cycles the canvas through edit, recording and preview', async () => {
-    render(<VideoHarness submitCallback={jest.fn()} />);
+    render(<VideoHarness submitCallback={vi.fn()} />);
 
     expect(screen.getByText('canvas mode: edit')).toBeInTheDocument();
 
@@ -140,13 +142,13 @@ describe('VideoChallenge', () => {
     expect(screen.getByText('canvas mode: preview')).toBeInTheDocument();
 
     fireEvent.click(
-      screen.getByRole('button', {name: 'Edit and Record Again'})
+      screen.getByRole('button', {name: 'Edit and Record Again'}),
     );
     expect(screen.getByText('canvas mode: edit')).toBeInTheDocument();
   });
 
   it('keeps the take while the recorder is still handing over its blob', async () => {
-    render(<VideoHarness submitCallback={jest.fn()} />);
+    render(<VideoHarness submitCallback={vi.fn()} />);
 
     fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
     fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
@@ -154,40 +156,40 @@ describe('VideoChallenge', () => {
     // The caller already reads 'edit', but the take isn't discarded
     expect(screen.getByText('canvas mode: recording')).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {name: 'Start Recording'})
+      screen.getByRole('button', {name: 'Start Recording'}),
     ).toBeInTheDocument();
 
     await act(async () => {});
 
     expect(screen.getByText('canvas mode: preview')).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {name: 'Edit and Record Again'})
+      screen.getByRole('button', {name: 'Edit and Record Again'}),
     ).toBeInTheDocument();
     expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
   });
 
   it('discards the recorded take when returning to edit', async () => {
-    render(<VideoHarness submitCallback={jest.fn()} />);
+    render(<VideoHarness submitCallback={vi.fn()} />);
 
     await recordVideo();
     expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
 
     fireEvent.click(
-      screen.getByRole('button', {name: 'Edit and Record Again'})
+      screen.getByRole('button', {name: 'Edit and Record Again'}),
     );
 
     expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
     expect(
-      screen.getByRole('button', {name: 'Start Recording'})
+      screen.getByRole('button', {name: 'Start Recording'}),
     ).toBeInTheDocument();
   });
 
   it('records a second take after returning to edit', async () => {
-    render(<VideoHarness submitCallback={jest.fn()} />);
+    render(<VideoHarness submitCallback={vi.fn()} />);
 
     await recordVideo();
     fireEvent.click(
-      screen.getByRole('button', {name: 'Edit and Record Again'})
+      screen.getByRole('button', {name: 'Edit and Record Again'}),
     );
     await recordVideo();
 
@@ -197,7 +199,7 @@ describe('VideoChallenge', () => {
 
   it('transcribes the audio blob, creates a response, and uploads the video blob', async () => {
     request.mockResolvedValue(createdResponse);
-    const submitCallback = jest.fn();
+    const submitCallback = vi.fn();
 
     render(<VideoHarness submitCallback={submitCallback} />);
 
@@ -235,16 +237,16 @@ describe('VideoChallenge', () => {
     request.mockReturnValueOnce(
       new Promise(resolve => {
         resolvePost = resolve;
-      })
+      }),
     );
 
-    render(<VideoHarness submitCallback={jest.fn()} />);
+    render(<VideoHarness submitCallback={vi.fn()} />);
 
     await recordVideo();
     fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
 
     await waitFor(() =>
-      expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled()
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled(),
     );
 
     // Unblock the upload so the component settles cleanly. Wrapping the
@@ -258,7 +260,7 @@ describe('VideoChallenge', () => {
 
   it('re-enables submit after an upload error so the user can retry', async () => {
     request.mockRejectedValue(new Error('Network error'));
-    const submitCallback = jest.fn();
+    const submitCallback = vi.fn();
 
     render(<VideoHarness submitCallback={submitCallback} />);
 
