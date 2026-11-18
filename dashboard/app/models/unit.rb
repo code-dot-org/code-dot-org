@@ -347,6 +347,7 @@ class Unit < ApplicationRecord
     generate_authoring_rules
     simple_progress
     simple_progress_image
+    tutor_plus_available
   )
 
   def self.starwars_unit
@@ -1484,6 +1485,7 @@ class Unit < ApplicationRecord
         tts: tts?,
         simpleProgress: simple_progress?,
         simpleProgressImage: simple_progress_image,
+        tutorPlusAvailable: tutor_plus_available?,
         deprecated: deprecated?,
         is_migrated: is_migrated?,
         scriptPath: unit_path,
@@ -1821,7 +1823,8 @@ class Unit < ApplicationRecord
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
       :enable_blockly_keyboard_navigation,
-      :simple_progress
+      :simple_progress,
+      :tutor_plus_available,
     ]
 
     result = {}
