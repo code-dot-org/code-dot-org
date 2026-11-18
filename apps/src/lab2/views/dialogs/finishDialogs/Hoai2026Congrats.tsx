@@ -135,7 +135,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
               variant="h4"
               className={styles.cardTitle}
             >
-              Discover More
+              Discover more
             </Typography>
             <div>
               {/* A remix of this game, as the header's Remix button makes;

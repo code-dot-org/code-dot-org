@@ -1,5 +1,4 @@
 import {Button as MuiButton} from '@mui/material';
-import classNames from 'classnames';
 import React from 'react';
 
 import moduleStyles from './block-catalog.module.scss';
@@ -22,7 +21,7 @@ const DiscoverBlocksButton: React.FunctionComponent<
     variant="contained"
     color="primary"
     size="small"
-    className={classNames(moduleStyles.catalogButton, className)}
+    className={className}
     aria-label={
       remaining > 0 ? `Discover blocks (${remaining} new)` : 'Discover blocks'
     }
