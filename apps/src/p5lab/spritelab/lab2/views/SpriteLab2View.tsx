@@ -2204,8 +2204,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     generationLimit === undefined
       ? undefined
       : generationLimit - generationCount;
-  // Only what the student did. hasEdited is also true when the lab changed
-  // the project while the level loaded.
+  // hasEdited cannot be used here: it is also true when the lab changed the
+  // project while the level loaded.
   const studentEdited =
     canUndo || !!drawingHistory?.canUndo || generationCount > 0;
   useEffect(() => {
