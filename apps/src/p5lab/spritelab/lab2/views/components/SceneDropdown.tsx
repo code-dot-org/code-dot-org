@@ -3,11 +3,10 @@ import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 
 import {SceneMetadata} from '@cdo/apps/p5lab/spritelab/lab2/redux/spriteLab2Redux';
 
-import NewSceneDialog from '../NewSceneDialog';
 import ScenePicture from '../ScenePicture';
 
 import moduleStyles from '../sprite-lab2-view.module.scss';
@@ -123,9 +122,10 @@ export interface SceneDropdownProps {
   lockedReason?: string;
   allowCreate?: boolean;
   onSelectScene: (sceneId: string) => void;
-  onCreateScene: (name: string) => void;
-  /** Opens the Scenes gallery from the menu; left out, the menu has no
-      such option. */
+  /** Starts a new scene, which the host names. */
+  onNewScene: () => void;
+  /** Opens All scenes from the menu; left out, the menu has no such
+      option. */
   onManageScenes?: () => void;
   /** Where the menu opens. */
   menuPlacement?: 'top' | 'bottom';
@@ -144,11 +144,10 @@ const SceneDropdown: React.FunctionComponent<SceneDropdownProps> = ({
   lockedReason,
   allowCreate = true,
   onSelectScene,
-  onCreateScene,
+  onNewScene,
   onManageScenes,
   menuPlacement = 'bottom',
 }) => {
-  const [naming, setNaming] = useState(false);
   const active = scenes.find(scene => scene.id === activeSceneId);
   const label = (
     <>
@@ -186,50 +185,40 @@ const SceneDropdown: React.FunctionComponent<SceneDropdownProps> = ({
     );
   }
   return (
-    <>
-      <CustomDropdown
-        name={SCENE_DROPDOWN_NAME}
-        className={moduleStyles.sceneDropdown}
-        size="s"
-        labelText="Scene"
-        aria-label={`Scene: ${active?.name ?? ''}`}
-        menuVerticalPlacement={menuPlacement}
-        useMuiButtonAsTrigger
-        triggerButtonProps={{
-          variant: 'outlined',
-          color: 'secondary',
-          size: 'small',
-          className: moduleStyles.sceneTrigger,
-          children: (
-            <>
-              {label}
-              <FontAwesomeV6Icon
-                iconStyle="solid"
-                iconName={
-                  menuPlacement === 'top' ? 'chevron-up' : 'chevron-down'
-                }
-              />
-            </>
-          ),
-        }}
-      >
-        <SceneMenu
-          scenes={scenes}
-          activeSceneId={activeSceneId}
-          onSelectScene={onSelectScene}
-          onNewScene={allowCreate ? () => setNaming(true) : undefined}
-          onManageScenes={onManageScenes}
-          locked={locked}
-          lockedReason={lockedReason}
-        />
-      </CustomDropdown>
-      {naming && (
-        <NewSceneDialog
-          onCreate={onCreateScene}
-          onClose={() => setNaming(false)}
-        />
-      )}
-    </>
+    <CustomDropdown
+      name={SCENE_DROPDOWN_NAME}
+      className={moduleStyles.sceneDropdown}
+      size="s"
+      labelText="Scene"
+      aria-label={`Scene: ${active?.name ?? ''}`}
+      menuVerticalPlacement={menuPlacement}
+      useMuiButtonAsTrigger
+      triggerButtonProps={{
+        variant: 'outlined',
+        color: 'secondary',
+        size: 'small',
+        className: moduleStyles.sceneTrigger,
+        children: (
+          <>
+            {label}
+            <FontAwesomeV6Icon
+              iconStyle="solid"
+              iconName={menuPlacement === 'top' ? 'chevron-up' : 'chevron-down'}
+            />
+          </>
+        ),
+      }}
+    >
+      <SceneMenu
+        scenes={scenes}
+        activeSceneId={activeSceneId}
+        onSelectScene={onSelectScene}
+        onNewScene={allowCreate ? onNewScene : undefined}
+        onManageScenes={onManageScenes}
+        locked={locked}
+        lockedReason={lockedReason}
+      />
+    </CustomDropdown>
   );
 };
 

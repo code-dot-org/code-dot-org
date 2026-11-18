@@ -820,7 +820,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       sign_in @teacher
 
       # Regeneration path: auth + LessonInsight SELECT + authorization + UserLevel MAX + prompt-building + LessonInsight UPDATE + savepoints.
-      assert_queries(39) do
+      assert_queries(38) do
         get :lesson_insight, params: {
           lesson_id:  @lesson1.id,
           unit_id:    @unit.id,

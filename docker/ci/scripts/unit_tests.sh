@@ -13,6 +13,9 @@ bundle exec rake install
 # that we give a clear error message for any zeitwerk issues that would block
 # application load.
 bundle exec rake lint:zeitwerk
+# The restored staging cache fills apps/node_modules; install so the lint
+# loads this PR's dependencies, not staging's.
+(cd apps && COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn --frozen-lockfile)
 bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
 
 bundle exec rake build

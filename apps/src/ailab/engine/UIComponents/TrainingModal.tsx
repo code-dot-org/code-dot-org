@@ -1,5 +1,5 @@
 /* Modal that animates training, then testing, a newly trained model. */
-import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
@@ -48,7 +48,7 @@ const TrainingModal = () => {
   const cancelLabel = isTraining ? 'Cancel Training' : 'Cancel Testing';
 
   return (
-    <MuiCustomDialog
+    <CustomDialog
       className={styles.dialog}
       aria-labelledby={TITLE_ID}
       onClose={closeModal}
@@ -94,7 +94,7 @@ const TrainingModal = () => {
           {!isTraining && testingFinished ? 'Continue' : 'Skip'}
         </Button>
       </div>
-    </MuiCustomDialog>
+    </CustomDialog>
   );
 };
 

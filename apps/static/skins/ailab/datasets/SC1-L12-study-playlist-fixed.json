@@ -1,0 +1,57 @@
+{
+  "name": "SC1-L12-v2-study-playlist-fixed",
+  "card": {
+    "description": "A study app tries to pick songs for a study playlist. Each record is one real song. The label is Study Song? (Yes or No), based on the genre that playlist makers gave the song. You can also choose Danceable? or Acoustic? as the label.",
+    "source": "Real songs and audio facts from the Spotify Tracks Dataset on Hugging Face (https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset). The Study Song? label comes from each song's genre tag.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Use the app's predictions to build a first draft of a study playlist.",
+      "potentialMisuses": "It is trained on a small set of songs and on genre tags that other people chose. It may skip songs that are great for studying. Always listen before you add a song."
+    }
+  },
+  "defaultLabelColumn": "Study Song?",
+  "defaultIdColumn": "Song",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Song",
+      "description": "What is the song called?"
+    },
+    {
+      "type": "categorical",
+      "id": "Energy",
+      "description": "How much energy does the song have? Low is calm. High is intense."
+    },
+    {
+      "type": "categorical",
+      "id": "Tempo (BPM)",
+      "description": "How fast is the beat in beats per minute? Slow is under 90. Medium is 90 to 120. Fast is over 120."
+    },
+    {
+      "type": "categorical",
+      "id": "Length (min)",
+      "description": "How long is the song in minutes? Short is under 3. Long is over 4."
+    },
+    {
+      "type": "categorical",
+      "id": "Has Lyrics",
+      "description": "Does the song have singing or rapping?"
+    },
+    {
+      "type": "categorical",
+      "id": "Danceable?",
+      "description": "Is the song easy to dance to?"
+    },
+    {
+      "type": "categorical",
+      "id": "Acoustic?",
+      "description": "Does the song sound mostly acoustic? That means real instruments like piano or guitar, not electronic ones."
+    },
+    {
+      "type": "categorical",
+      "id": "Study Song?",
+      "description": "Is the song on a study playlist? This is what the app predicts for each song."
+    }
+  ]
+}

@@ -21,6 +21,7 @@ import lab2I18n from '@cdo/apps/lab2/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {ButtonColor} from '@cdo/apps/lab2/views/components/buttonColor';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -44,6 +45,9 @@ interface NavigationAreaProps {
   requireRun?: boolean;
   validationTooltip?: string;
   hideContinueIfDisabled?: boolean;
+  /** Continue's color; the last level's outlined Finish keeps its own
+      look. */
+  continueButtonColor?: ButtonColor;
   /** The level's checklist is all done, or not yet; unset without one. */
   objectivesDone?: boolean;
   className?: string;
@@ -71,6 +75,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   validationTooltip,
   handleInstructionsTextClick,
   hideContinueIfDisabled,
+  continueButtonColor,
   objectivesDone,
   className,
   markdownClassName,
@@ -191,6 +196,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     showSecondaryFinishButton && !hasNextLevel
       ? (['outlined', 'secondary'] as const)
       : (['contained', 'primary'] as const);
+  const buttonColor = variant === 'contained' ? continueButtonColor : undefined;
 
   const endIcon = useMemo(
     () =>
@@ -357,6 +363,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
                 disabled={!continueEnabled}
                 variant={variant}
                 color={color}
+                buttonColor={buttonColor}
                 endIcon={externalNavigation.endIcon ?? endIcon}
                 tooltipMessage={continueTooltip}
                 hideIfDisabled={hideContinueIfDisabled}
@@ -370,6 +377,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               disabled={!continueEnabled}
               variant={variant}
               color={color}
+              buttonColor={buttonColor}
               endIcon={externalNavigation?.endIcon ?? endIcon}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}

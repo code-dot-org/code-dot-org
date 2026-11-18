@@ -1,3 +1,13 @@
-# Allowlist: this build copies only the shared node install script.
+# Allowlist: the shared node install script and the python project files the
+# Python Lab venv is built from.
 *
 !docker/scripts/install-node.sh
+!.python-version
+!pyproject.toml
+!uv.lock
+!python
+
+# Local artifacts that would ride along with python/ from a developer
+# checkout; CI checkouts never contain them.
+**/.venv
+**/__pycache__

@@ -1,15 +1,35 @@
 # `componentLibrary/divider`
 
-## Consuming This Component
+Use `Divider` from `@mui/material`. CdoTheme's `MuiDivider` entry
+([styleOverrides/divider.ts](../themes/code.org/styleOverrides/divider.ts))
+colors it `--background-neutral-quaternary`, the legacy `primary` color, and
+changes nothing else, so vertical and `flexItem` dividers keep MUI's layout.
 
-This package exports one styled React component: [Divider](Divider.tsx).
-You can import it like this:
+```javascript
+import {Divider} from '@mui/material';
+```
+
+The override is global: it colors every MUI `Divider` rendered under
+CdoTheme, labelled ones included. MUI's deprecated `light` prop no longer
+lightens the line.
+
+The deprecated DSCO [Divider](Divider.tsx) took `color` and `margin` props.
+Plain MUI has neither; use `sx` when a call site needs them:
+
+| Legacy prop       | MUI                                                      |
+| ----------------- | -------------------------------------------------------- |
+| `color="strong"`  | `sx={{borderColor: 'var(--background-neutral-senary)'}}` |
+| `margin="xs"`–`l` | `sx={{my: 1}}`, `2`, `4`, `8`                            |
+| `margin="none"`   | MUI's default                                            |
+
+The legacy margins were 0.5rem, 1rem, 2rem and 4rem; MUI's spacing unit is
+8px, which matches them only where the root font size is 16px.
+
+The legacy component still resolves until it is deleted:
 
 ```javascript
 import Divider from '@code-dot-org/component-library/divider';
 ```
 
-For guidelines on how to use this component and the features it
-offers, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-divider--docs).
-Or run storybook locally and go
-to [Design System / Divider](http://localhost:6006/?path=/docs/designsystem-divider--docs).
+See [DIVIDER_MIGRATION_TO_MUI.md](DIVIDER_MIGRATION_TO_MUI.md) for the
+migration, and DesignSystem / Divider in Storybook for examples.

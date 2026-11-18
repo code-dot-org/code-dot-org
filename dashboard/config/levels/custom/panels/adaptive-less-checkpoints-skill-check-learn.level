@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-11-03T04:18:21.000Z",
   "level_num": "custom",
@@ -7,21 +8,39 @@
   "properties": {
     "panels": [
       {
+        "text": "###Welcome to AI Makerspace! \n\nStart with a vision, develop your skills, then bring it to life with AI!",
+        "imageUrl": "https://images.code.org/ab398ff421cc49dda5ad4547c45ea4ce-Panel 2.png",
+        "key": "adaptive-less-checkpoints-skill-check-learn-77154340-dc52-4657-9564-a3af6ae5dbe5",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Your path to building\n\nYou will begin with a skill check to find your starting point on the skill map.\n\nThen you choose checkpoints to learn and apply new skills to your project.",
+        "imageUrl": "https://images.code.org/2226a74d49293d02f358a2bacdb6a5a1-image (5).png",
+        "key": "adaptive-less-checkpoints-skill-check-learn-06348056-e331-4d44-ba0a-c68f83ffa596"
+      },
+      {
         "key": "adaptive-less-checkpoints-skill-check-learn-60807e67-6964-43c3-ab7e-497261d32117",
-        "text": "This map shows the skills you will learn and use.",
-        "imageUrl": "https://images.code.org/88b9c322c7725d9393f6858eaa1ca778-adaptive-less-checkpoints-skill-check-learn-panel-1-8f14b452-9fa1-4cec-a450-2c51755f6aa0.png",
-        "layout": "text-top-center"
+        "text": "###Practice and apply\nEach checkpoint has two parts:\n-  First, practice a new skill. \n- Then, use the skill to build your own website.",
+        "imageUrl": "https://images.code.org/dea38ae1e57a77608c6d7d86d8df3246-image (4).png",
+        "layout": "text-top-right"
       },
       {
         "key": "adaptive-less-checkpoints-skill-check-learn-c0eda26c-9442-4968-a1de-987387c356ab",
-        "text": "The Skill Check finds the right support for you, not to pass or fail.",
-        "imageUrl": "https://images.code.org/dc9f27868dce880da08d4b3540741e2f-adaptive-less-checkpoints-skill-check-learn-panel-2-575f9299-c7c1-4acd-97ab-c3ab9a0f7af4.png",
-        "layout": "text-bottom-center"
+        "text": "###Keep learning\n\nReturn to the skill map and choose your next checkpoint.",
+        "imageUrl": "https://images.code.org/a0025fb0ab07cf92986c3d4936c1c4c2-image (3).png",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "###Build something that’s yours.\nCreate a website that reflects your interests and ideas. \n\nWhat will you make?",
+        "imageUrl": "https://images.code.org/99d7f396c47a604d6ca01825a08c4ab2-Panel 1.png",
+        "key": "adaptive-less-checkpoints-skill-check-learn-9df6877a-dd61-421d-8e89-7f84f768137d"
       }
     ],
-    "generate_outline": "View a skills map outlining the abilities you will develop. This skill check helps tailor support to your needs without judgment."
+    "generate_outline": "View a skills map outlining the abilities you will develop. This skill check helps tailor support to your needs without judgment.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-03 04:18:45 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:18:45 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-03 04:18:45 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-03 04:18:45 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 16:34:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 16:35:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 16:37:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 16:42:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 16:42:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 16:44:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 17:11:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 17:13:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 17:28:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 18:54:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 18:54:13 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 18:56:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 18:57:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 18:57:37 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 18:58:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 20:16:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-06 20:17:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-10 15:36:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

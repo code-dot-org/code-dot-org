@@ -944,6 +944,7 @@ en:
         pl-aif2-u5-try-catch: Try and Catch Blocks
         pl-aif2-filtering-data-movies-U3: Filtering Data
         pl-aif2-building-pipelines-u3: Building Pipelines
+        hoai2026_maker_intro: Hour of AI Makerspace Intro
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

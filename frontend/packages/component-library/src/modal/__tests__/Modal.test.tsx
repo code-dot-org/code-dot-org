@@ -76,6 +76,110 @@ describe('Modal Component', () => {
     expect(screen.getByText('Custom Bottom Content')).toBeInTheDocument();
   });
 
+  const controlNames = () =>
+    Array.from(
+      screen.getByRole('dialog').querySelectorAll('a, button, input'),
+    ).map(el => el.getAttribute('aria-label') || el.textContent);
+
+  it('should put startActions before the buttons, and the close button last', () => {
+    render(
+      <Modal
+        {...defaultProps}
+        secondaryButtonProps={{children: 'Secondary Action'}}
+        startActions={
+          <>
+            <a href="#help">Help</a>
+            <input type="checkbox" aria-label="Remember" />
+          </>
+        }
+      />,
+    );
+    expect(controlNames()).toEqual([
+      'Help',
+      'Remember',
+      'Secondary Action',
+      'Primary Action',
+      'Close modal',
+    ]);
+  });
+
+  it('should keep the button order without startActions', () => {
+    render(
+      <Modal
+        {...defaultProps}
+        secondaryButtonProps={{children: 'Secondary Action'}}
+      />,
+    );
+    expect(controlNames()).toEqual([
+      'Secondary Action',
+      'Primary Action',
+      'Close modal',
+    ]);
+  });
+
+  it('should give startActions first focus on mount', () => {
+    render(<Modal {...defaultProps} startActions={<a href="#help">Help</a>} />);
+    expect(document.activeElement).toBe(
+      screen.getByRole('link', {name: 'Help'}),
+    );
+  });
+
+  it('should render customBottomContent after the action buttons', () => {
+    render(
+      <Modal
+        {...defaultProps}
+        customBottomContent={<button type="button">Bottom</button>}
+      />,
+    );
+    expect(controlNames()).toEqual(['Primary Action', 'Bottom', 'Close modal']);
+  });
+
+  describe('when the content overflows', () => {
+    // jsdom lays nothing out; these shadow Element's zero getters.
+    const proto = HTMLElement.prototype;
+
+    beforeEach(() => {
+      Object.defineProperty(proto, 'scrollHeight', {
+        configurable: true,
+        get() {
+          return this.querySelector('#dsco-dialog-description') ? 500 : 0;
+        },
+      });
+      Object.defineProperty(proto, 'clientHeight', {
+        configurable: true,
+        get: () => 200,
+      });
+    });
+
+    afterEach(() => {
+      Reflect.deleteProperty(proto, 'scrollHeight');
+      Reflect.deleteProperty(proto, 'clientHeight');
+    });
+
+    it('should leave the tab stop to a control in the content', () => {
+      render(
+        <Modal {...defaultProps} customContent={<input aria-label="Name" />} />,
+      );
+      const content = screen.getByText(defaultProps.description!).parentElement;
+      expect(content).toHaveAttribute('tabindex', '-1');
+      expect(screen.getByRole('textbox', {name: 'Name'})).toHaveFocus();
+    });
+
+    it('should make the content a tab stop and focus it first', () => {
+      render(<Modal {...defaultProps} />);
+      const content = screen.getByText(defaultProps.description!).parentElement;
+      expect(content).toHaveAttribute('tabindex', '0');
+      expect(content).toHaveFocus();
+    });
+  });
+
+  it('should keep the content out of the tab order when it fits', () => {
+    render(<Modal {...defaultProps} />);
+    const content = screen.getByText(defaultProps.description!).parentElement;
+    expect(content).toHaveAttribute('tabindex', '-1');
+    expect(screen.getByRole('button', {name: 'Primary Action'})).toHaveFocus();
+  });
+
   it('should apply accessibility attributes', () => {
     render(<Modal {...defaultProps} />);
     const modal = screen.getByRole('dialog');

@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-31T21:52:02.000Z",
   "level_num": "custom",
@@ -57,7 +58,7 @@
     "hide_pause_button": "false",
     "instructions_icon": "purplebunny",
     "short_instructions": "Remove the carrot sprites when the bunny touches them.",
-    "long_instructions": "**Finish this game!** Make the carrot sprites get removed when the bunny touches them.\r\n\r\n<div style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/dd88bcd240491e58f95fcb2127ad181c-image-1641827026540.2022-01-10 10_02_39.gif)\r\n\r\n</div>\r\n\r\n\r\n1.  Use a `when touches` event and a `remove` block to finish the game.\r\n\r\n*Extra Challenge:* Change the size of the bunny sprite each time a carrot is touched.",
+    "long_instructions": "**Finish this game!** Make the carrot sprites get removed when the bunny touches them.\r\n\r\n<div style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/dd88bcd240491e58f95fcb2127ad181c-image-1641827026540.2022-01-10%2010_02_39.gif)\r\n\r\n</div>\r\n\r\n\r\n1.  Use a `when touches` event and a `remove` block to finish the game.\r\n\r\n*Extra Challenge:* Change the size of the bunny sprite each time a carrot is touched.",
     "authored_hints": "[]",
     "hint_prompt_attempts_threshold": "1",
     "display_name": "Carrot Grabber",
@@ -66,11 +67,12 @@
     "validation_code": "if (World.frameCount == 1) {\r\n  setDelayTime(150);\r\n  addCriteria(function(){\r\n    return minimumCostumeCount(2);\r\n  }, 'noSecondCostumeForCollector');\r\n  addCriteria(function(){\r\n    return touchEventFound();\r\n  }, 'addWhenTouchesEvent');\r\n  addCriteria(function(){\r\n    return spriteRemoved()&&touchEventFound();\r\n  }, 'removeSpriteWhenTouch');\r\n  addCriteria(function() {\r\n    return onlyEventSpriteRemoved();\r\n  }, 'removeOnlyTouchedSprite');\r\n}\r\n\r\ncheck();\r\n",
     "encrypted_examples": "cEDSPDCb6HoV8rVNSgxHM8zycdydLV+7AkQBt1Icgy6kkez7+AOsm/Nh/tPs\nRKQZr+Y28NYcWQk94Y13hU10mQ==\n",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "uses_lab2": "false",
+    "enable_big_playspace": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-31T21:52:02.118+00:00\",\"changed\":[\"cloned from \\\"game_design_practice_lots_choice_b_course-e\\\"\"],\"cloned_from\":\"game_design_practice_lots_choice_b_course-e\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-31T21:52:02.118+00:00\",\"changed\":[\"cloned from \\\"game_design_practice_lots_choice_b_course-e\\\"\"],\"cloned_from\":\"game_design_practice_lots_choice_b_course-e\"},{\"changed_at\":\"2026-11-11 18:00:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

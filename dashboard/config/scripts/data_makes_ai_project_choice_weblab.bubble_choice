@@ -1,0 +1,12 @@
+name 'data-makes-ai-project-choice-weblab'
+display_name 'User Profiles'
+description 'Examine different possible users of your model'
+
+sublevels
+level 'data-makes-ai-project-snack-weblab'
+level 'data-makes-ai-project-football-weblab'
+level 'data-makes-ai-project-study-weblab'
+level 'data-makes-ai-project-game-weblab'
+level 'data-makes-ai-project-board-weblab'
+
+uses_lab2

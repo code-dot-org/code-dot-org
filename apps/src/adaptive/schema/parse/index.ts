@@ -13,6 +13,8 @@ type PathwaySource = z.infer<typeof pathwaySourceSchema>;
 export class AdaptiveContentError extends Error {
   constructor(public readonly problems: string[]) {
     super(`Invalid adaptive content:\n  ${problems.join('\n  ')}`);
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'AdaptiveContentError';
   }
 }

@@ -71,6 +71,16 @@ export default function RegionalWorkshopCatalog({
     }
   };
 
+  // Report a failed lookup where the partner name would go. Without this a
+  // server error leaves the page in its initial state, indistinguishable from
+  // a search still in flight.
+  const reportLoadFailure = useCallback(() => {
+    setRegionalPartnerText('Unable to load workshops. Please try again.');
+    setRegionalPartnerName('');
+    setRegionalPartnerInfo('');
+    setAvailableRegionalWorkshops([]);
+  }, []);
+
   const handleSubmitZip = useCallback(
     async (submittedZip, prepopulatingZip) => {
       if (isSubmitting) {
@@ -134,17 +144,24 @@ export default function RegionalWorkshopCatalog({
                 availableNationalWorkshops?.length || 0,
             }
           );
+        } else {
+          console.error(
+            'Error fetching regional partner and available workshops:',
+            response.status
+          );
+          reportLoadFailure();
         }
       } catch (error) {
         console.error(
           'Error fetching regional partner and available workshops:',
           error
         );
+        reportLoadFailure();
       } finally {
         setIsSubmitting(false);
       }
     },
-    [isSubmitting, availableNationalWorkshops]
+    [isSubmitting, availableNationalWorkshops, reportLoadFailure]
   );
 
   const RenderUpcomingLocalWorkshopsHeading = () => {

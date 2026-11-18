@@ -4,8 +4,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 $(document).ready(() => {
-  $('#user_login').placeholder();
-
   $('#new_user').on('submit', function (e) {
     window.dashboard.hashEmail({
       email_selector: '#user_login',

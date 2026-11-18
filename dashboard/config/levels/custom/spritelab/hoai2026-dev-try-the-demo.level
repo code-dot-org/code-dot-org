@@ -12,6 +12,17 @@
     ],
     "encrypted": "false",
     "header_label": "Try a quest",
+    "callouts": [
+      {
+        "target": "continue-button",
+        "direction": "down",
+        "when": {
+          "done": [
+            0
+          ]
+        }
+      }
+    ],
     "helper_libraries": [
       "NativeSpriteLab",
       "zGameDev"
@@ -199,14 +210,16 @@
                       "type": "spritelab2_burst",
                       "fields": {
                         "COUNT": 20,
-                        "LOOK": "confetti",
-                        "ORIGIN": "\"Crystal\""
+                        "LOOK": "confetti"
                       },
                       "next": {
                         "block": {
-                          "type": "spritelab2_playSound",
+                          "type": "spritelab2_playSoundEffect",
                           "fields": {
-                            "SOUND": "sound://category_achievements/melodic_win_1.mp3"
+                            "WAVE": "bell",
+                            "PITCH": "high",
+                            "LENGTH": "long",
+                            "PATTERN": "run up"
                           },
                           "next": {
                             "block": {
@@ -214,6 +227,16 @@
                               "fields": {
                                 "TEXT": "You win!"
                               }
+                            }
+                          }
+                        }
+                      },
+                      "inputs": {
+                        "ORIGIN": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "fields": {
+                              "ANIMATION": "\"Crystal\""
                             }
                           }
                         }
@@ -225,7 +248,7 @@
             }
           },
           "world": {
-            "size": 30,
+            "size": 10,
             "rows": [
               "",
               "",

@@ -18,7 +18,7 @@ export type DestinationColor = (typeof DESTINATION_COLORS)[number];
  */
 export const destinationSchema = z.strictObject({
   title: z.string().min(1),
-  /** A Font Awesome icon name, solid style, shown beside the title. */
+  /** A Font Awesome (solid) or kit icon name, shown beside the title. */
   icon: z.string().min(1).optional(),
   color: z.enum(DESTINATION_COLORS).optional(),
 });

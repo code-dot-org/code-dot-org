@@ -68,6 +68,38 @@ describe('patternCells', () => {
     });
   });
 
+  it('draws a further character for each role the level names', () => {
+    const list = animations([
+      ['k2', 'secondCharacter', []],
+      ['k1', 'firstCharacter', []],
+    ]);
+    list.propsByKey.k2.role = 'friend';
+    list.propsByKey.k1.role = 'hero';
+    const cells = patternCells(list, 'hero', {F: 'friend', T: 'treasure'});
+    expect(cells.S).toEqual({image: 'firstCharacter', kind: 'sprite'});
+    expect(cells.F).toEqual({image: 'secondCharacter', kind: 'sprite'});
+    // No image carries the role yet: nothing to draw for its character.
+    expect(cells.T).toBeUndefined();
+  });
+
+  it("ignores a level's roles for 'S' and 'B', which are built in", () => {
+    const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    const list = animations([
+      ['k2', 'secondCharacter', []],
+      ['k1', 'firstCharacter', []],
+    ]);
+    list.propsByKey.k2.role = 'friend';
+    // The level tries to point both letters at the friend.
+    const cells = patternCells(list, undefined, {S: 'friend', B: 'friend'});
+    // 'S' still draws the default sprite, the oldest one, not the friend.
+    expect(cells.S).toEqual({image: 'firstCharacter', kind: 'sprite'});
+    // 'B' still means the newest block, and there is no block here.
+    expect(cells.B).toBeUndefined();
+    // One warning per letter the level tried to redefine.
+    expect(warn).toHaveBeenCalledTimes(2);
+    warn.mockRestore();
+  });
+
   it('offers only the characters it has images for', () => {
     expect(patternCells(animations([['k1', 'hero', []]]))).toEqual({
       S: {image: 'hero', kind: 'sprite'},

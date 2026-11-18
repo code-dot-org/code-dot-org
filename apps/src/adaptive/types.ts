@@ -4,6 +4,7 @@ import {LevelProperties} from '../lab2/types';
 
 import {
   checkpointSchema,
+  congratsStepSchema,
   finishDialogSchema,
   freeResponseQuestionSchema,
   levelStepSchema,
@@ -28,6 +29,7 @@ export type Step = z.infer<typeof stepSchema>;
 export type PanelsStep = z.infer<typeof panelsStepSchema>;
 export type LevelStep = z.infer<typeof levelStepSchema>;
 export type MarkdownStep = z.infer<typeof markdownStepSchema>;
+export type CongratsStep = z.infer<typeof congratsStepSchema>;
 export type StatsStep = z.infer<typeof statsStepSchema>;
 export type QuestionsStep = z.infer<typeof questionsStepSchema>;
 export type ReviewStep = z.infer<typeof reviewStepSchema>;

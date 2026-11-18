@@ -1,11 +1,44 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-11-06T04:52:05.000Z",
   "level_num": "custom",
   "user_id": 18754,
   "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Ravi’s plan\nRavi is making a page for his bake sale.\n\n- Theme: Bake sale\n- Audience: Neighbors\n- Purpose: Show what we sell\n- Look & Feel: Warm and friendly",
+        "imageUrl": "https://images.code.org/48fefa516c51a17d1eb0c586cf9bbe0a-ravi_style_design_01_1600.png",
+        "key": "adaptive-less-checkpoints-plan-panel-style-1140bdb4-5473-4cbf-8727-f204c894de61"
+      },
+      {
+        "text": "###The AI’s first try\nThe AI built a page. It shows the treats in three cards, and it’s neat and tidy.",
+        "imageUrl": "https://images.code.org/9bf59113b89473668345c25f4d71eda3-ravi_style_design_02_1600.png",
+        "key": "adaptive-less-checkpoints-plan-panel-style-3563d220-3d8f-4b5c-b77b-134f1e17f0ca"
+      },
+      {
+        "text": "###Ravi checks his plan\nRavi checks the page against his plan. The look doesn’t fit. His plan says warm, and the page is cool blue and gray.",
+        "imageUrl": "https://images.code.org/659a899fdc8b514fb783d8aba6c1b149-ravi_style_design_03_1600.png",
+        "key": "adaptive-less-checkpoints-plan-panel-style-af5a19a9-402a-4614-aa9c-db4746e74af0"
+      },
+      {
+        "text": "Ravi’s page is cool blue and gray, but his plan says warm and friendly. \n\n**What advice would you give Ravi?**\n\n- A. “Ask the AI to add three more treats to the page.”\n- B. “Ask the AI to make the hero section warm yellow and brown.”\n- C. “Ask the AI to make the whole page look nicer for your neighbors.”",
+        "imageUrl": "https://images.code.org/c679b19f64838089f9f5f5d8d3c04ca4-blue-background-1600x900 (1).png",
+        "key": "adaptive-less-checkpoints-plan-panel-style-e0ebac1e-d530-406b-8e05-b505a1f1dddb",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "The correct answer is B. Naming the hero section and the warm colors tells the AI exactly what to change. \n\n---\n\n**Tip:** When the look is off, name the section and the colors you want. “Nicer” leaves the AI guessing.\n",
+        "imageUrl": "https://images.code.org/375366e7461d7e5ac6ba8bbf040a1476-Clear prompts spark bright ideas.png",
+        "key": "adaptive-less-checkpoints-plan-panel-style-f9eebca4-2e2d-4380-af9d-7d233bf9dfc5",
+        "layout": "text-top-center"
+      }
+    ],
+    "use_links": "false"
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2026-11-06 23:59:37 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-07 00:04:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

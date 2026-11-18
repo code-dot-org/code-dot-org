@@ -12,6 +12,8 @@ import {
   BlockImageField,
   CostumeField,
   refreshAnimationDropdownThumbnails,
+  takeLevelDefaults,
+  TOUCHING_BLOCK_TYPE,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/imagePickerFields';
 
 // Newest-first, as Sprite Lab keeps it: 'hero' was made first, 'rival'
@@ -43,6 +45,28 @@ describe('image picker fields', () => {
   it('lists costumes newest-first', () => {
     const field = CostumeField.fromJson({});
     expect(field.getOptions(false).map(option => option[1])).toEqual([
+      '"rival"',
+      '"hero"',
+    ]);
+  });
+
+  it('offers the blocks after the sprites under the touches block', () => {
+    // Blockly's setter wants a real block; the field reads only its parent.
+    const onBlock = (field: CostumeField, parentType: string) => {
+      (field as unknown as {sourceBlock_: unknown}).sourceBlock_ = {
+        getParent: () => ({type: parentType}),
+      };
+      return field;
+    };
+    const field = onBlock(CostumeField.fromJson({}), TOUCHING_BLOCK_TYPE);
+    expect(field.getOptions(false).map(option => option[1])).toEqual([
+      '"rival"',
+      '"hero"',
+      '"brick"',
+    ]);
+    // Under any other block, the sprites alone.
+    const other = onBlock(CostumeField.fromJson({}), 'gamelab_spriteSay');
+    expect(other.getOptions(false).map(option => option[1])).toEqual([
       '"rival"',
       '"hero"',
     ]);
@@ -82,6 +106,65 @@ describe('image picker fields', () => {
     };
     refreshAnimationDropdownThumbnails();
     spies.forEach(spy => expect(spy).toHaveBeenCalledTimes(1));
+  });
+
+  describe('takeLevelDefaults', () => {
+    // Blockly's setter wants a real block; the field reads only these, and
+    // the change event it fires reads the two ids.
+    const onBlock = (field: CostumeField, type: string) => {
+      (field as unknown as {sourceBlock_: unknown}).sourceBlock_ = {
+        type,
+        data: null,
+        getParent: () => null,
+        id: 'block',
+        workspace: {id: 'workspace'},
+      };
+      return field;
+    };
+    const workspaceOf = (...fields: CostumeField[]) =>
+      ({
+        getAllBlocks: () =>
+          fields.map(field => ({
+            inputList: [{fieldRow: [field]}],
+          })),
+      } as unknown as Parameters<typeof takeLevelDefaults>[0]);
+
+    beforeEach(() => {
+      animationList = {
+        orderedKeys: ['rival', 'hero'],
+        propsByKey: {
+          rival: {name: 'rival', categories: []},
+          hero: {name: 'hero', categories: [], role: 'hero'},
+        },
+      };
+      imageRoleDefaults = {sprite: 'hero'};
+    });
+
+    afterEach(() => {
+      animationList = fullList;
+      imageRoleDefaults = undefined;
+    });
+
+    it('starts a field with no saved value on the level default', () => {
+      const field = onBlock(CostumeField.fromJson({}), 'gamelab_spriteSay');
+      expect(field.getValue()).toBe('"rival"');
+      takeLevelDefaults(workspaceOf(field));
+      expect(field.getValue()).toBe('"hero"');
+    });
+
+    it('leaves a field whose saved value was loaded', () => {
+      const field = onBlock(CostumeField.fromJson({}), 'gamelab_spriteSay');
+      field.loadState('"rival"');
+      takeLevelDefaults(workspaceOf(field));
+      expect(field.getValue()).toBe('"rival"');
+    });
+
+    it('leaves the newest image when the level names no default', () => {
+      imageRoleDefaults = undefined;
+      const field = onBlock(CostumeField.fromJson({}), 'gamelab_spriteSay');
+      takeLevelDefaults(workspaceOf(field));
+      expect(field.getValue()).toBe('"rival"');
+    });
   });
 
   describe('followList', () => {

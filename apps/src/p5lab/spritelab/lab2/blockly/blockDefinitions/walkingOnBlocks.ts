@@ -1,5 +1,7 @@
 import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 
+import {PLAYER_GROUP} from '../../playerGroups';
+
 // The three walks on blocks, as interpreted source: not blocks themselves,
 // but what the begins block's dropdown names.
 
@@ -133,7 +135,7 @@ export const WALKERS_HELPER_CODE = [
   '        walkOnBlocks(spriteId, 0);',
   '        return;',
   '      }',
-  "      var target = getProp({group: 'players'}, 'x');",
+  `      var target = getProp({group: ${JSON.stringify(PLAYER_GROUP)}}, 'x');`,
   '      var dir = 0;',
   '      if (target !== undefined) {',
   "        var dx = target - getProp(spriteId, 'x');",

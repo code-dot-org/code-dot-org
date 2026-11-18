@@ -1,24 +1,20 @@
 # `componentLibrary/dialog`
 
-[MuiDialog](MuiDialog.tsx) and [MuiCustomDialog](MuiCustomDialog.tsx) are the
-MUI versions of the deprecated DSCO [Dialog](Dialog.tsx) and
-[CustomDialog](CustomDialog.tsx). They take the same props, so moving a call
-site over changes only its import.
+[Dialog](Dialog.tsx) and [CustomDialog](CustomDialog.tsx) are built on MUI's
+`Dialog`. They replaced the DSCO components of the same names and take the same
+props.
 
 ```javascript
-import {
-  MuiDialog,
-  MuiCustomDialog,
-} from '@code-dot-org/component-library/dialog';
+import {Dialog, CustomDialog} from '@code-dot-org/component-library/dialog';
 ```
 
-Use `MuiDialog` in most cases: title, description, buttons, and an optional
-icon or image. Use `MuiCustomDialog`, the bare overlay and panel, only when the
-content needs its own layout.
+Import `Dialog` from this package, not from `@mui/material`. Use `Dialog` in
+most cases: title, description, buttons, and an optional icon or image. Use
+`CustomDialog`, the bare overlay and panel, only when the content needs its
+own layout; `Modal` is built on it.
 
-Both render in place, not in a portal, and keep the legacy scroll lock, Escape
+Both render in place, not in a portal, and keep the DSCO scroll lock, Escape
 handling and focus trap until those move to MUI; see Deferred changes in
-[DIALOG_MIGRATION_TO_MUI.md](DIALOG_MIGRATION_TO_MUI.md). To move a legacy call
-site, use the [codemod](../../codemods/README.md#dialog-to-mui-dialogts).
+[DIALOG_MIGRATION_TO_MUI.md](DIALOG_MIGRATION_TO_MUI.md).
 
 For props and live examples, see DesignSystem / Dialog in Storybook.

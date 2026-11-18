@@ -1,5 +1,5 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
-import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';

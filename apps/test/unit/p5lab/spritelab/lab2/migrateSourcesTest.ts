@@ -90,3 +90,27 @@ describe('migrateAnimationList', () => {
     expect(scenes[0].source.blocks.blocks[0].type).toBe('spritelab2_whenRun');
   });
 });
+
+describe('migrateScenes worlds', () => {
+  const oversize = () =>
+    Array.from({length: 30}, () =>
+      Array.from({length: 30}, (): {image: string; kind: string} | null => null)
+    );
+
+  it('trims a world stored at three times the playfield, in place', () => {
+    const grid = oversize();
+    grid[9][0] = {image: 'ice', kind: 'block'};
+    const scenes = [{id: 'a', name: 'A', source: {}, world: {grid}}];
+    expect(migrateScenes(scenes as never)).toBe(true);
+    expect(scenes[0].world.grid).toHaveLength(10);
+    expect(scenes[0].world.grid[9]).toHaveLength(10);
+    expect(scenes[0].world.grid[9][0]).toEqual({image: 'ice', kind: 'block'});
+  });
+
+  it('leaves a world at its playfield size alone', () => {
+    const world = {grid: [[null]]};
+    const scenes = [{id: 'a', name: 'A', source: {}, world}];
+    expect(migrateScenes(scenes as never)).toBe(false);
+    expect(scenes[0].world).toBe(world);
+  });
+});

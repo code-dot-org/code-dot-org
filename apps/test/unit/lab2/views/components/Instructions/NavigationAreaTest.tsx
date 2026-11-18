@@ -35,6 +35,7 @@ interface ContinueButtonMockProps {
   tooltipMessage?: string;
   hideIfDisabled?: boolean;
   endIcon?: React.ReactNode;
+  buttonColor?: string;
   onContinue: () => void;
 }
 interface SubmitButtonMockProps {
@@ -53,12 +54,14 @@ jest.mock(
       disabled,
       tooltipMessage,
       endIcon,
+      buttonColor,
       onContinue,
     }: ContinueButtonMockProps) => (
       <button
         type="button"
         data-disabled={String(disabled)}
         data-tooltip={tooltipMessage}
+        data-button-color={buttonColor}
         onClick={onContinue}
       >
         {endIcon}
@@ -797,6 +800,26 @@ describe('NavigationArea', () => {
       mockGetLessonCount.mockReturnValue(3);
       renderDefault({textVariant: 'simple'});
       expect(screen.getByRole('button', {name: 'Finish'})).toBeInTheDocument();
+    });
+  });
+
+  describe('continueButtonColor', () => {
+    it('colors Continue in the success green', () => {
+      renderDefault({continueButtonColor: 'success'});
+      expect(
+        screen.getByRole('button', {name: 'Continue to Level 2'})
+      ).toHaveAttribute('data-button-color', 'success');
+    });
+
+    it("leaves the last level's outlined Finish its own look", () => {
+      mockGetNextLevel.mockReturnValue(undefined);
+      renderDefault({
+        continueButtonColor: 'success',
+        levelProperties: makeLevelProperties({useSecondaryFinishButton: true}),
+      });
+      expect(screen.getByRole('button', {name: 'Finish'})).not.toHaveAttribute(
+        'data-button-color'
+      );
     });
   });
 });

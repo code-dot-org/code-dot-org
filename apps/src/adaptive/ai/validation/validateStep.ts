@@ -6,9 +6,14 @@
 import {AichatContext} from '@cdo/apps/aichat/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
+import {
+  moderationFallbackReason,
+  sendAiStaticFallbackUsed,
+} from '../../metricsHelpers';
 import {ValidationAttempt} from '../../progress/model';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../../types';
 import {generate, isAdaptiveAiEnabled, moderateOutput} from '../generate';
+import {ADAPTIVE_MODELS} from '../models';
 
 import {
   OPENERS,
@@ -77,6 +82,7 @@ export async function validateStep({
   });
   const {output, traceId} = await generate({
     schema: verdictSchema,
+    model: ADAPTIVE_MODELS.FAST,
     prompt,
     context: aichatContext,
     trace: {
@@ -91,7 +97,15 @@ export async function validateStep({
       },
     },
   });
-  if (!output) return undefined;
+  if (!output) {
+    sendAiStaticFallbackUsed(
+      'validation',
+      'modelErrorOrInvalidOutput',
+      checkpoint,
+      step
+    );
+    return undefined;
+  }
   const moderation = await moderateOutput(output.reason, aichatContext);
   if (moderation !== 'ok') {
     Lab2Registry.getInstance().getMetricsReporter().logWarning({
@@ -102,6 +116,12 @@ export async function validateStep({
       stepId: step.id,
       traceId,
     });
+    sendAiStaticFallbackUsed(
+      'validation',
+      moderationFallbackReason(moderation),
+      checkpoint,
+      step
+    );
   }
   return {
     pass: output.pass,

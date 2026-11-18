@@ -103,9 +103,8 @@ namespace :build do
           # rubocop:enable Style/SoleNestedConditional
         end
 
-        # CI seeds in its own step; see seed_ui_test in lib/rake/ci.rake.
-        if ENV.fetch('CI', nil)
-          ChatClient.log 'Not seeding <b>dashboard</b> in CI...'
+        if CDO.skip_seed
+          ChatClient.log "Not seeding <b>dashboard</b> because skip_seed is set. Run 'rake seed:default' to pick up changes to seeded content."
         else
           ChatClient.log 'Seeding <b>dashboard</b>...'
           RakeUtils.rake_stream_output 'seed:default', (rack_env?(:test) ? '--trace' : nil)

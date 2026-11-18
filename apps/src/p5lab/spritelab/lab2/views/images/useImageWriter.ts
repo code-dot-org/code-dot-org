@@ -33,7 +33,9 @@ import {
   repointAnimation,
   uploadOrEmbed,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/imageSave';
+import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
 import useReclaimAsset from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
+import useReleaseRemovedImages from '@cdo/apps/p5lab/spritelab/lab2/views/useReleaseRemovedImages';
 import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
 import {getStore} from '@cdo/apps/redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -69,6 +71,13 @@ export interface SaveEditedOptions {
   stillWanted?: () => boolean;
 }
 
+export interface UploadedImage {
+  filename: string;
+  uint8Array: Uint8Array;
+  mediaType: string;
+  flagged?: boolean;
+}
+
 export interface ImageWriter {
   /** Stores a generated picture as the target image's pixels and resolves
       with the image's key, a new key for a new image. */
@@ -76,6 +85,10 @@ export interface ImageWriter {
     target: ImageTarget,
     result: GeneratedImageResult
   ) => Promise<string>;
+  /** Stores an uploaded image already processed for
+      storage, and resolves with its key as acceptGenerated does. Rejects
+      when the file cannot be uploaded. */
+  acceptUploaded: (target: ImageTarget, file: UploadedImage) => Promise<string>;
   /** Stores drawn pixels as the target image's pixels and resolves with
       its key, as acceptGenerated does. */
   saveEdited: (
@@ -84,6 +97,13 @@ export interface ImageWriter {
     meta: PixelEditorSaveMeta,
     options?: SaveEditedOptions
   ) => Promise<string>;
+  /** Writes the student's verdict into an image's generation record, the
+      pixels untouched, and returns the record; undefined for an image with
+      no record. */
+  rateGenerated: (
+    key: string,
+    verdict: Verdict
+  ) => ImageProps['generation'] | undefined;
   deleteImage: (key: string) => void;
   /** Deletes the session's uploaded files that no image points at any
       more, and forgets its uploads. A session is one image's run of
@@ -107,6 +127,7 @@ export default function useImageWriter({
 }: WriterOptions): ImageWriter {
   const dispatch = useAppDispatch();
   const reclaimAsset = useReclaimAsset();
+  const releaseRemovedImages = useReleaseRemovedImages();
   // Uploads keyed by the result's filename, so choosing an earlier picture
   // of the session again reuses its upload.
   const uploadsRef = useRef(new Map<string, Upload>());
@@ -187,6 +208,36 @@ export default function useImageWriter({
     [uploadImage, write]
   );
 
+  const acceptUploaded = useCallback(
+    async (target: ImageTarget, file: UploadedImage) => {
+      if (!uploadImage) {
+        throw new Error('no uploader for this project');
+      }
+      const sourceUrl = await uploadImage(
+        file.filename,
+        file.uint8Array,
+        file.mediaType
+      );
+      recordSessionUrl(sourceUrl);
+      const dataURI = bytesToDataURI(file.uint8Array, file.mediaType);
+      const frameSize = await measuredSize(dataURI);
+      return write(target, {
+        sourceUrl,
+        dataURI,
+        frameSize,
+        sourceSize: frameSize,
+        ...framesPatch(undefined),
+        // Not guaranteed to be pixel art.
+        pixelGridSize: undefined,
+        trimmed: false,
+        generation: undefined,
+        edited: false,
+        flagged: file.flagged,
+      });
+    },
+    [uploadImage, write]
+  );
+
   const saveEdited = useCallback(
     async (
       target: ImageTarget,
@@ -237,6 +288,19 @@ export default function useImageWriter({
     [uploadImage, write]
   );
 
+  const rateGenerated = useCallback(
+    (key: string, verdict: Verdict) => {
+      const current = propsOf(key)?.generation;
+      if (!current) {
+        return undefined;
+      }
+      const generation = {...current, verdict};
+      write({key, imageType: generation.imageType}, {generation});
+      return generation;
+    },
+    [write]
+  );
+
   const deleteImage = useCallback(
     (key: string) => {
       const removed = propsOf(key);
@@ -244,13 +308,20 @@ export default function useImageWriter({
         // deleteAnimation is an untyped JS thunk; cast for dispatch.
         deleteAnimation(key, true /* isSpriteLab */) as unknown as AnyAction
       );
-      reclaimAsset(removed?.sourceUrl);
+      releaseRemovedImages([removed]);
       if (removed?.name) {
         onDeleteImage(removed.name);
       }
     },
-    [dispatch, reclaimAsset, onDeleteImage]
+    [dispatch, releaseRemovedImages, onDeleteImage]
   );
 
-  return {acceptGenerated, saveEdited, deleteImage, endSession};
+  return {
+    acceptGenerated,
+    acceptUploaded,
+    saveEdited,
+    rateGenerated,
+    deleteImage,
+    endSession,
+  };
 }

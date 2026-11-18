@@ -54,8 +54,7 @@ describe('Markdown', () => {
 
   it('renders --- as a design-system divider', () => {
     const html = render('above\n\n---\n\nbelow');
-    // The DSCO Divider renders an <hr> carrying its (hashed) module class.
-    expect(html).toMatch(/<hr[^>]*class="[^"]*divider/);
+    expect(html).toMatch(/<hr[^>]*class="[^"]*MuiDivider-root/);
   });
 
   /*

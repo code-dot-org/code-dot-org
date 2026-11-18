@@ -55,6 +55,23 @@ describe('SchoolInformation', () => {
     expect(field).toHaveAccessibleDescription('No school on record yet.');
   });
 
+  it('shows a non-school record instead of the empty hint', () => {
+    renderSection({
+      schoolInfo: {
+        schoolName: null,
+        schoolType: 'noSchoolSetting',
+        schoolId: null,
+        schoolZip: '98101',
+        country: 'US',
+      },
+    });
+
+    expect(screen.getByRole('textbox', {name: 'My school'})).toHaveValue(
+      'Non-School Setting',
+    );
+    expect(screen.queryByText('No school on record yet.')).toBeNull();
+  });
+
   it('treats an absent schoolInfo as empty', () => {
     renderSection({});
     expect(screen.getByRole('textbox', {name: 'My school'})).toHaveValue('');

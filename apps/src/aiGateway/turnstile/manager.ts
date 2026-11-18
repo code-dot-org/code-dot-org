@@ -1,8 +1,11 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
+import {timeoutMsFromDcdoSeconds} from '@cdo/apps/util/dcdoTimeout';
+
 import {
-  CHALLENGE_TIMEOUT_MS,
+  TURNSTILE_TIMEOUT_FLAG,
   CONTAINER_ID,
+  DEFAULT_TURNSTILE_TIMEOUT_SECONDS,
   LOG,
   TOKEN_MAX_AGE_MS,
   TURNSTILE_SITE_KEY,
@@ -285,7 +288,7 @@ export class TurnstileManager {
     // the previous policy.
     const enforcementMode = this.enforcementMode;
 
-    // Timed from chain release, not enqueue, to match CHALLENGE_TIMEOUT_MS.
+    // Timed from chain release, not enqueue, to match the challenge timeout.
     const startChallenge = () => {
       const start = performance.now();
       return loadTurnstileScript()
@@ -384,6 +387,10 @@ export class TurnstileManager {
       // rather than silent.
       let lastErrorCode: string | undefined;
 
+      const timeoutMs = timeoutMsFromDcdoSeconds(
+        TURNSTILE_TIMEOUT_FLAG,
+        DEFAULT_TURNSTILE_TIMEOUT_SECONDS
+      );
       const timeout = setTimeout(() => {
         if (settled) {
           console.log(
@@ -392,7 +399,7 @@ export class TurnstileManager {
           return;
         }
         console.error(
-          `${LOG} TIMEOUT: challenge timed out after 30s — widgetId=${this.widgetId}, container has ${this.container.children.length} children — removing widget`
+          `${LOG} TIMEOUT: challenge timed out after ${timeoutMs}ms — widgetId=${this.widgetId}, container has ${this.container.children.length} children — removing widget`
         );
         settle(() => {
           if (this.widgetId) {
@@ -418,7 +425,7 @@ export class TurnstileManager {
                 )
           );
         });
-      }, CHALLENGE_TIMEOUT_MS);
+      }, timeoutMs);
 
       // renderTime is initialized to 0 and updated synchronously after render()
       // returns. The callback always fires asynchronously so renderTime is
@@ -433,7 +440,7 @@ export class TurnstileManager {
           callback: (token: string) => {
             if (settled) {
               console.warn(
-                `${LOG} Token callback fired after 30s timeout — token discarded (len=${token.length})`
+                `${LOG} Token callback fired after the timeout — token discarded (len=${token.length})`
               );
               return;
             }

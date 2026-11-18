@@ -7,6 +7,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import * as utils from '@cdo/apps/utils';
 import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {ABUSE_SCORE_BLOCK_THRESHOLD} from '../constants';
 import {
   ExtraLinksLevelData,
   ExtraLinksProjectData,
@@ -379,7 +380,7 @@ const AbuseScoreInfo: React.FunctionComponent<{
   let msg = '';
   if (abuseScore < 0) {
     msg = 'There was an error resetting abuse score to 0. Please try again.';
-  } else if (abuseScore < 15) {
+  } else if (abuseScore < ABUSE_SCORE_BLOCK_THRESHOLD) {
     msg = 'Safe to share project.';
   } else {
     msg = 'This project is blocked from sharing';

@@ -78,8 +78,9 @@ jest.mock('@cdo/apps/lab2/views/components/rubrics/RubricWrapper', () => ({
   useRubric: () => ({showRubric: false}),
 }));
 
+const mockShouldShowAiTutor = jest.fn(() => false);
 jest.mock('@cdo/apps/aichat/helpers/aiChatAccess', () => ({
-  shouldShowAiTutor: () => false,
+  shouldShowAiTutor: () => mockShouldShowAiTutor(),
 }));
 
 jest.mock('@cdo/apps/aichat/hooks/useAiChatDisabledState', () => ({
@@ -191,7 +192,9 @@ jest.mock(
   () => ({__esModule: true, default: () => <div>Teachers Only</div>})
 );
 jest.mock('@cdo/apps/lab2/ai/ai-tutor-model-id', () => ({
-  aiTutorModelId: 'test-model-id',
+  defaultAiTutorModelId: 'test-model-id',
+  aiTutorModelParametersFor: (level?: {selectedModelId: string}) =>
+    level ?? {selectedModelId: 'test-model-id'},
 }));
 
 // ---- Helpers -------------------------------------------------------------
@@ -208,7 +211,7 @@ function makeLevelProperties(
   } as LevelProperties;
 }
 
-describe('ResourcePanel — hideNonInstructionTabs', () => {
+describe('ResourcePanel — tabs', () => {
   let store: Store;
 
   beforeEach(() => {
@@ -235,12 +238,14 @@ describe('ResourcePanel — hideNonInstructionTabs', () => {
   });
 
   function renderPanel(
-    levelPropertiesOverrides: Partial<LevelProperties> = {}
+    levelPropertiesOverrides: Partial<LevelProperties> = {},
+    panelProps: Partial<React.ComponentProps<typeof ResourcePanel>> = {}
   ) {
     const levelProperties = makeLevelProperties(levelPropertiesOverrides);
     return render(
       <Provider store={store}>
         <ResourcePanel
+          {...panelProps}
           levelProperties={levelProperties}
           isRunning={false}
           hasRun={false}
@@ -287,5 +292,47 @@ describe('ResourcePanel — hideNonInstructionTabs', () => {
     expect(
       screen.getByRole('button', {name: 'Instructions'})
     ).toBeInTheDocument();
+  });
+
+  describe('with the AI Tutor on', () => {
+    const tutorProps = {
+      hiddenContextCallback: async () => '',
+      hasInstructionsDrawer: true,
+    };
+    beforeEach(() => mockShouldShowAiTutor.mockReturnValue(true));
+    afterEach(() => mockShouldShowAiTutor.mockReturnValue(false));
+
+    it('shows the AI Tutor tab, in place of Instructions when they show there', () => {
+      renderPanel({showInstructionsInAiTutor: true}, tutorProps);
+      expect(
+        screen.getByRole('button', {name: 'AI Tutor'})
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Instructions'})
+      ).not.toBeInTheDocument();
+    });
+
+    it('drops the AI Tutor tab when the level hides it', () => {
+      renderPanel({hideAiTutor: true}, tutorProps);
+      expect(
+        screen.queryByRole('button', {name: 'AI Tutor'})
+      ).not.toBeInTheDocument();
+      expect(
+        screen.getByRole('button', {name: 'Instructions'})
+      ).toBeInTheDocument();
+    });
+
+    it('keeps instructions in their own tab when the level hides the tutor they would show in', () => {
+      renderPanel(
+        {hideAiTutor: true, showInstructionsInAiTutor: true},
+        tutorProps
+      );
+      expect(
+        screen.queryByRole('button', {name: 'AI Tutor'})
+      ).not.toBeInTheDocument();
+      expect(
+        screen.getByRole('button', {name: 'Instructions'})
+      ).toBeInTheDocument();
+    });
   });
 });

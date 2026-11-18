@@ -4,8 +4,13 @@
 // minted here so the caller has it before the relay answers, and posting
 // never blocks or fails the caller.
 
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {
+  countAdaptive,
+  httpStatus,
+  reportAdaptiveError,
+} from '../../observability';
 
 const TRACE_URL = '/adaptive/traces';
 const MAX_ERROR_MESSAGE_LENGTH = 1_000;
@@ -104,13 +109,13 @@ async function postTrace(payload: TracePayload): Promise<void> {
     await HttpClient.post(TRACE_URL, JSON.stringify(payload), true, {
       'Content-Type': 'application/json',
     });
+    countAdaptive('Adaptive.TracePost', {Outcome: 'ok'});
   } catch (error) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError(
-        'Adaptive trace post failed',
-        error instanceof Error ? error : undefined,
-        {error: String(error)}
-      );
+    const status = httpStatus(error);
+    countAdaptive('Adaptive.TracePost', {Outcome: 'error', Status: status});
+    reportAdaptiveError('Adaptive trace post failed', error, {
+      traceId: payload.traceId,
+      status,
+    });
   }
 }

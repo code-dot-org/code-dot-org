@@ -703,6 +703,7 @@ module Services
       expected_counts['LessonsVocabulary'] -= 4
       expected_counts['LessonsProgrammingExpression'] -= 4
       expected_counts['Objective'] -= 4
+      expected_counts['ObjectivesScriptLevel'] -= 4
       expected_counts['LessonsStandard'] -= 4
       expected_counts['LessonsOpportunityStandard'] -= 4
       expected_counts['Rubric'] -= 2
@@ -741,6 +742,7 @@ module Services
       expected_counts['LessonsVocabulary'] -= 2
       expected_counts['LessonsProgrammingExpression'] -= 2
       expected_counts['Objective'] -= 2
+      expected_counts['ObjectivesScriptLevel'] -= 2
       expected_counts['LessonsStandard'] -= 2
       expected_counts['LessonsOpportunityStandard'] -= 2
       expected_counts['Rubric'] -= 1
@@ -771,6 +773,7 @@ module Services
       expected_counts['ActivitySection'] -= 2
       expected_counts['ScriptLevel'] -= 4
       expected_counts['LevelsScriptLevel'] -= 4
+      expected_counts['ObjectivesScriptLevel'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -795,6 +798,7 @@ module Services
       expected_counts['ActivitySection'] -= 1
       expected_counts['ScriptLevel'] -= 2
       expected_counts['LevelsScriptLevel'] -= 2
+      expected_counts['ObjectivesScriptLevel'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -818,6 +822,7 @@ module Services
       expected_counts = original_counts.clone
       expected_counts['ScriptLevel'] -= 1
       expected_counts['LevelsScriptLevel'] -= 1
+      expected_counts['ObjectivesScriptLevel'] -= 1
       assert_equal expected_counts, get_counts
     end
 
@@ -952,6 +957,7 @@ module Services
       assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
       expected_counts['Objective'] -= 1
+      expected_counts['ObjectivesScriptLevel'] -= 1
       assert_equal expected_counts, get_counts
     end
 
@@ -976,6 +982,67 @@ module Services
         ['Updated Description', 'fake description', 'New Description'],
         lesson.objectives.map(&:description)
       )
+    end
+
+    test 'seed updates objectives script levels' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        first_objective, second_objective = lesson.objectives.to_a
+        first_objective.script_levels << lesson.script_levels.last
+        second_objective.script_levels = [lesson.script_levels[3]]
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      expected_counts = original_counts.clone
+      expected_counts['ObjectivesScriptLevel'] += 1
+      assert_equal expected_counts, get_counts
+    end
+
+    test 'seed deletes objectives script levels' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        script.lessons.first.objectives.first.script_levels = []
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['ObjectivesScriptLevel'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
+    test 'seed leaves objectives script levels alone when json omits them' do
+      script = create_script_tree
+      json = JSON.parse(ScriptSeed.serialize_seeding_json(script))
+      json.delete('objectives_script_levels')
+      counts_before = get_counts
+
+      ScriptSeed.seed_from_hash(json)
+
+      assert_equal counts_before, get_counts
+    end
+
+    test 'seed rejects an objective tagged to a level in another lesson' do
+      script = create_script_tree
+      json = JSON.parse(ScriptSeed.serialize_seeding_json(script))
+      other_lesson_tag = json['objectives_script_levels'].find do |osl|
+        osl['seeding_key']['lesson.key'] == script.lessons.last.key
+      end
+      other_lesson_tag['seeding_key']['objective.key'] = script.lessons.first.objectives.first.key
+      json['objectives_script_levels'] << other_lesson_tag
+
+      error = assert_raises(RuntimeError) {ScriptSeed.seed_from_hash(json)}
+      assert_includes error.message, 'outside its lesson'
     end
 
     # Programming Expressions are shared across all courses. We need to make sure all the
@@ -1261,7 +1328,7 @@ module Services
       [
         Unit, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
         LevelsScriptLevel, Resource, LessonsResource, ScriptsResource, ScriptsStudentResource, Vocabulary, LessonsVocabulary,
-        LessonsProgrammingExpression, Objective, Standard, LessonsStandard, LessonsOpportunityStandard, Rubric, LearningGoal, LearningGoalEvidenceLevel
+        LessonsProgrammingExpression, Objective, ObjectivesScriptLevel, Standard, LessonsStandard, LessonsOpportunityStandard, Rubric, LearningGoal, LearningGoalEvidenceLevel
       ].map {|c| [c.name, c.count]}.to_h
     end
 
@@ -1308,6 +1375,7 @@ module Services
           s1.lessons.map(&:objectives).flatten,
           s2.lessons.map(&:objectives).flatten
         )
+        assert_equal objective_script_level_tags(s1), objective_script_level_tags(s2)
         assert_standards_equal(
           s1.lessons.map(&:standards).flatten,
           s2.lessons.map(&:standards).flatten,
@@ -1388,6 +1456,14 @@ module Services
       end
     end
 
+    # Script level ids can change across a seed, so identify tagged levels by chapter.
+    def objective_script_level_tags(script)
+      chapters_by_script_level_id = script.script_levels.to_h {|sl| [sl.id, sl.chapter]}
+      script.lessons.flat_map(&:objectives).to_h do |objective|
+        [objective.key, objective.objectives_script_levels.map {|osl| chapters_by_script_level_id[osl.script_level_id]}.sort]
+      end
+    end
+
     def assert_standards_equal(standards1, standards2)
       standards1.zip(standards2).each do |s1, s2|
         assert_attributes_equal(s1, s2)
@@ -1426,6 +1502,7 @@ module Services
       num_vocabularies_per_lesson: 2,
       num_programming_expressions_per_lesson: 2,
       num_objectives_per_lesson: 2,
+      num_script_levels_per_objective: 1,
       num_standards_per_lesson: 2,
       num_rubrics_per_lesson: 1,
       num_learning_goals_per_rubric: 1,
@@ -1526,8 +1603,10 @@ module Services
           LessonsProgrammingExpression.find_or_create_by!(programming_expression: programming_expression, lesson: lesson)
         end
 
+        lesson_script_levels = lesson.script_levels.reload.to_a
         (1..num_objectives_per_lesson).each do |o|
-          create(:objective, key: "#{lesson.name}-objective-#{o}", lesson: lesson)
+          objective = create(:objective, key: "#{lesson.name}-objective-#{o}", lesson: lesson)
+          objective.script_levels = lesson_script_levels.drop(o - 1).first(num_script_levels_per_objective)
         end
 
         (1..num_standards_per_lesson).each do |s|
