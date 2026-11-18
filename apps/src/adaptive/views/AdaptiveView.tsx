@@ -63,7 +63,7 @@ const AdaptiveView: React.FunctionComponent<
   const [teacherContinued, setTeacherContinued] = useState(false);
   useEffect(() => {
     if (access === 'pending' || access === 'allowed') return;
-    countAdaptive('Adaptive.AccessBlocked', {Reason: access});
+    countAdaptive('Adaptive.AccessBlocked', {reason: access});
   }, [access]);
   const parsed = useMemo(
     () => parseLevelContent(levelProperties),

@@ -16,7 +16,7 @@ const checkedStep: LevelStep = {
     measures: {skillId: 'prompting'},
   },
 };
-const thresholds = {replyLimit: 8};
+const thresholds = {effortCheckAt: 4, replyLimit: 8};
 
 const checkpoint = (
   id: string,
@@ -108,13 +108,14 @@ describe('buildTutorContext', () => {
       '- Continue is locked until a build meets the goal.'
     );
     expect(context).toContain(
-      'never to be told to the student: after 8 of your replies Continue opens regardless.'
+      'never to be told to the student: after 4 of your replies a judge reads this chat and opens Continue if the student is genuinely trying, and after 8 replies Continue opens regardless.'
     );
   });
 
   it.each([
     ['validationPassed', 'a build met the goal'],
     ['failedValidations', 'several builds were checked without passing'],
+    ['effortDemonstrated', 'shown real effort in this chat'],
     ['limitReached', 'talked with you long enough'],
   ] as const)(
     'says Continue is open, and why (%s), in place of the thresholds',

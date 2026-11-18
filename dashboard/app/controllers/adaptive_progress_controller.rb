@@ -19,7 +19,7 @@ class AdaptiveProgressController < ApplicationController
   # REVIEW_DECISIONS in apps/src/adaptive/schema/steps/review.ts.
   REVIEW_DECISIONS = %w[build skip].freeze
   # SkipReason in apps/src/adaptive/progress/model.ts; absent on a check of work.
-  SKIP_REASONS = %w[limitReached].freeze
+  SKIP_REASONS = %w[effortDemonstrated limitReached].freeze
 
   # GET /adaptive_progress?scriptId=&levelId=
   def show
