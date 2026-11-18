@@ -3469,6 +3469,10 @@ class UserTest < ActiveSupport::TestCase
         teacher_owner_section.id => [@script.id],
         teacher_owner_section2.id => [@script.id, @script2.id]
       }
+      # one query for the section ids and one for every section's hidden units
+      hidden = nil
+      assert_queries(2) {hidden = teacher.get_hidden_unit_ids}
+      assert_equal expected, hidden
       assert_equal expected, teacher.get_hidden_unit_ids(@unit_group)
     end
 
