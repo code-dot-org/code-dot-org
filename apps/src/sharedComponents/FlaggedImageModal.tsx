@@ -3,8 +3,8 @@ import {Typography} from '@mui/material';
 import React from 'react';
 import {createPortal} from 'react-dom';
 
+import {getStore} from '@cdo/apps/code-studio/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './FlaggedImageModal.module.scss';
@@ -23,9 +23,9 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
   appName,
 }) => {
   // We can't flag signed out projects as flagged, so we never allow signed out users to accept a flagged image.
-  const isSignedOut = useAppSelector(
-    state => state.currentUser.signInState === SignInState.SignedOut
-  );
+  // The store is read directly because this component may be mounted without a redux provider.
+  const isSignedOut =
+    getStore().getState().currentUser?.signInState === SignInState.SignedOut;
 
   const acceptanceTerms = (
     <div id="dsco-dialog-description">
@@ -66,7 +66,7 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
         onClose={() => onCancel(appName)}
         title={
           isSignedOut
-            ? 'Inappropriate Image'
+            ? 'Error: Inappropriate Image'
             : i18n.animationPicker_flaggedImageModalTitle()
         }
         description={

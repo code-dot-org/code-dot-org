@@ -211,16 +211,16 @@ const animationList = () => ({
 });
 // Uploads are moderated only when there is a channel.
 let labState: Record<string, unknown> = {channel: {id: 'c1'}};
-// Signed-out students are not offered a flagged picture at all.
-let signInState = 'SignedIn';
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: (select: (state: unknown) => unknown) =>
-    select({
-      animationList: animationList(),
-      lab: labState,
-      currentUser: {signInState},
-    }),
+    select({animationList: animationList(), lab: labState}),
   useAppDispatch: () => jest.fn(),
+}));
+// Signed-out students are not offered a flagged picture at all. The warning
+// reads sign-in state off the store, not through a selector hook.
+let signInState = 'SignedIn';
+jest.mock('@cdo/apps/code-studio/redux', () => ({
+  getStore: () => ({getState: () => ({currentUser: {signInState}})}),
 }));
 const moderate = jest.fn<Promise<string>, unknown[]>();
 jest.mock('@cdo/apps/util/moderateImage', () => ({

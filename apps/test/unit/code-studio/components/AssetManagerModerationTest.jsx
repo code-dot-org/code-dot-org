@@ -8,8 +8,10 @@ import {
   unblockIfFlaggedAssetDeleted,
 } from '@cdo/apps/code-studio/assets/flaggedAssetMetadata';
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
+import {getStore} from '@cdo/apps/code-studio/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {setUserSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 
@@ -150,6 +152,8 @@ describe('AssetManager image moderation', () => {
     user = userEvent.setup();
     jest.clearAllMocks();
     mockSubmit.mockClear();
+    // AssetManager mounts with no Provider; the warning reads the store itself.
+    getStore().dispatch(setUserSignedIn(true));
     abuseScore = 0;
     fetchAbuseScore = jest.fn().mockImplementation(() => {
       // Simulate channels /abuse refetch after flag/unflag.
@@ -235,6 +239,30 @@ describe('AssetManager image moderation', () => {
       screen.getByText(/This image has been flagged as inappropriate/i)
     ).toBeInTheDocument();
     expect(mockSubmit).not.toHaveBeenCalled();
+  });
+
+  it('offers a signed-out user no way to accept a flagged image', async () => {
+    getStore().dispatch(setUserSignedIn(false));
+    moderateImage.mockResolvedValue('flagged');
+    render(<AssetManager {...DEFAULT_PROPS} />);
+    await uploadFile(user, makeImageFile());
+
+    expect(
+      await screen.findByText('Error: Inappropriate Image')
+    ).toBeInTheDocument();
+    expect(screen.queryByRole('button', {name: /^accept$/i})).toBeNull();
+
+    await user.click(screen.getByRole('button', {name: /^ok$/i}));
+
+    await waitFor(() =>
+      expect(
+        screen.queryByText('Error: Inappropriate Image')
+      ).not.toBeInTheDocument()
+    );
+    expect(mockSubmit).not.toHaveBeenCalled();
+    expect(HttpClient.post).not.toHaveBeenCalled();
+    expect(setFlaggedFilename).not.toHaveBeenCalled();
+    expect(screen.getByRole('button', {name: /upload file/i})).toBeEnabled();
   });
 
   it('accepts flagged image: flags channel, writes metadata, disables uploads', async () => {
