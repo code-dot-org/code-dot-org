@@ -33,7 +33,6 @@ import styles from './simple-header.module.scss';
     with this id. */
 export const HEADER_ACTION_ID = 'simple_header_action';
 
-// ?clickable-bubbles=true: each bubble opens its level.
 const CLICKABLE_BUBBLES = queryParams('clickable-bubbles') === 'true';
 
 // The header page's store has no typed root state; these are the slices
