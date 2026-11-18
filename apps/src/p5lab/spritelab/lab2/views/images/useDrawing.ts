@@ -74,9 +74,9 @@ export interface DrawingTools {
       painted: a copy of the previous drawing's canvas, or the picture
       decoded ahead. */
   placeholderPicture: HTMLImageElement | HTMLCanvasElement | undefined;
-  /** A copy of the canvas as Done closed the tools, and the image it is
-      of, for the frame to show until the image's stored picture has been
-      drawn. */
+  /** The paint tools' canvas as it was when Done closed them, with the key
+      of its image. The frame shows it until the image's saved picture has
+      been drawn. */
   closedPicture: {key: string; canvas: HTMLCanvasElement} | null;
   releaseClosedPicture: () => void;
   /** The last pause-save failed; it is tried again at the next pause,
@@ -433,7 +433,7 @@ export default function useDrawing({
           pending.final
         );
       } else if (final && drawingRef.current?.id === saved.id) {
-        // A new image's key is in `saved` before it is in the ref.
+        // A new image's key is in `saved` before it is in `drawingRef`.
         closeAfterDone(saved.target.key);
       } else if (nextFrameRef.current !== null) {
         const next = nextFrameRef.current;

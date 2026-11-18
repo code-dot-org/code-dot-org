@@ -9,7 +9,6 @@ interface PlayControlsProps {
   onRestartScene?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
-/** The buttons that restart the game or the scene. */
 const PlayControls: React.FunctionComponent<PlayControlsProps> = ({
   onRestartGame,
   onRestartScene,

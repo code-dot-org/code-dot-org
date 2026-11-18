@@ -39,12 +39,12 @@
   display: block;
 }
 
-// From this width up the footer shares the lab's bottom row with the
-// bar's buttons: five of them, centered, clear the footer's controls.
-// Under it, the lab's row moves up and the footer has its own row.
+// From this width up, the page footer and the lab's bottom bar share one
+// row: the bar's five centered buttons do not overlap the footer's
+// controls. Below it, the lab's row moves up and the footer has its own
+// row.
 $share-one-row-min-width: 1180px;
-// The height of the footer's controls.
-$share-footer-control: 26px;
+$share-footer-control-height: 26px;
 
 .labRowShareView {
   @media screen and (max-width: #{$share-one-row-min-width - 1px}) {
@@ -58,7 +58,7 @@ $share-footer-control: 26px;
   :global(html body.spritelab2-share #page-small-footer .small-footer-base) {
     // Centers the footer's controls on the bar's row.
     margin-bottom: math.floor(
-      math.div(strip.$foot-height - $share-footer-control, 2)
+      math.div(strip.$foot-height - $share-footer-control-height, 2)
     );
     // The footer's box is wider than its controls and lies over the bar's
     // buttons, so only the controls take clicks.
@@ -510,8 +510,7 @@ $z-over-blockly: 71;
 }
 
 // The bar along the bottom of the stage, level with the editors' scene
-// bar. It holds the buttons that run, stop and restart the game. The
-// overlay passes pointer events through; the bar takes its own.
+// bar. The overlay passes pointer events through; the bar takes its own.
 .bottomBar {
   position: absolute;
   bottom: 0;

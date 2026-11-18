@@ -468,8 +468,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The preview column's width, which the playspace reports whether or not
   // its preview shows.
   const [previewColumnWidth, setPreviewColumnWidth] = useState(0);
-  // The width the editors' bars keep clear of: the column's while the
-  // preview shows.
+  // The width the editors' bars leave free on the right: the preview
+  // column's width while the preview shows, and 0 otherwise.
   const previewWidth = playspaceMode === 'preview' ? previewColumnWidth : 0;
   // Stays true once the width has been reported, so a later 0 cannot
   // dispose of the workspace.
@@ -479,9 +479,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setColumnMeasured(true);
     }
   }, [previewColumnWidth]);
-  // The lab's parts start together, once the project's images are seeded
-  // and the preview column's width is known: the workspace is then laid
-  // out once, at the width it keeps.
+  // The workspace, and everything that starts with it, waits for the
+  // preview column's width as well as the images, so the workspace is laid
+  // out once, at its final width.
   const labReady = animationsSeeded && columnMeasured;
   // Jump transition: the cover blanks the playspace while the target loads;
   // fadeTrigger increments on landing to play the fade-from-black.

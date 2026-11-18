@@ -390,9 +390,10 @@ $list-button-icon: 20px;
   border-style: solid;
 }
 
-// A frame whose checkerboard is not sized for the picture hides it under
-// the tools: the editor's canvas paints its own, and until it has, a plain
-// neutral background shows through transparent pixels.
+// .frameMatched marks a frame whose checkerboard matches the paint tools'
+// own. Any other frame hides its checkerboard while the tools are open:
+// the editor's canvas draws its own, and until it has, a plain background
+// shows through transparent pixels.
 .paintFrame:not(.frameMatched) {
   background-image: none;
   background-color: var(--background-neutral-secondary);

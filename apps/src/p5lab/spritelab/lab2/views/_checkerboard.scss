@@ -20,8 +20,9 @@
   @include checkerboard($cell, var(--neutral-gray-10), var(--neutral-base-white));
 }
 
-// The light checkerboard as the paint editor draws it, its first square
-// tinted. $tile is two squares a side and may be a custom property.
+// The same colors, laid out as the paint editor's canvas lays them out:
+// the top-left square is the gray one. $tile is the side of a block of two
+// by two squares, and may be a custom property.
 @mixin light-checkerboard-tiles($tile) {
   background-color: var(--neutral-base-white);
   background-image: repeating-conic-gradient(

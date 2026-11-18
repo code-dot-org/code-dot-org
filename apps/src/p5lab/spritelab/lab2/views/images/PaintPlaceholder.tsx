@@ -8,7 +8,7 @@ interface PaintPlaceholderProps {
       painted before the first frame; an <img> of the URL would take a
       frame to show, which reads as a flash of the empty frame. */
   picture?: HTMLImageElement | HTMLCanvasElement;
-  /** The picture's address, for when it has not been decoded. */
+  /** The picture's URL, used when `picture` is not given. */
   src?: string;
   pixelated?: boolean;
 }

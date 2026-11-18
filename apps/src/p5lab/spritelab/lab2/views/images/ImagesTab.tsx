@@ -323,7 +323,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
   const {closedPicture, releaseClosedPicture} = tools;
-  // The copy belongs to the image the tools closed on.
+  // The canvas copy kept when Done closed the tools is for one image, so it
+  // is dropped when another image is chosen.
   useEffect(() => {
     if (closedPicture && closedPicture.key !== chosenId) {
       releaseClosedPicture();

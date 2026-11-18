@@ -46,7 +46,6 @@ interface ImageFrameProps {
   /** A copy of the paint tools' canvas, shown over the picture until the
       picture has been drawn. */
   cover?: HTMLCanvasElement;
-  /** The cover is no longer needed. */
   onCoverDone?: () => void;
 }
 
@@ -66,7 +65,8 @@ const COVER_MAX_FRAMES = 30;
 function checkerOf(
   image: ProjectImage | null
 ): React.CSSProperties | undefined {
-  // The tools open one frame of a character set, and all of anything else.
+  // The paint tools open one frame of a character set, and the whole
+  // picture otherwise.
   const size =
     image?.sheet?.frameSize ??
     image?.props.sourceSize ??
