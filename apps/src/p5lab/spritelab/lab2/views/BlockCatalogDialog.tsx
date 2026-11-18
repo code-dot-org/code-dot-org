@@ -140,12 +140,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
           </div>
         </div>
         <div className={moduleStyles.footer}>
-          <MuiButton
-            variant={mode === 'dark' ? 'contained' : 'outlined'}
-            color="secondary"
-            className={classNames(mode === 'dark' && moduleStyles.doneButton)}
-            onClick={onClose}
-          >
+          <MuiButton variant="contained" color="secondary" onClick={onClose}>
             Done
           </MuiButton>
         </div>
