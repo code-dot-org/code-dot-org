@@ -192,7 +192,8 @@ const Weblab2View: React.FC<
 
   const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
     source,
-    levelProperties?.widgetView
+    // Start mode shows the code even in widget view.
+    levelProperties?.widgetView && !getIsStartMode()
   );
 
   return (
@@ -210,7 +211,7 @@ const Weblab2View: React.FC<
           onAssetRemoved={onAssetRemoved}
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-          alwaysShowAiTutor={getIsStartMode()}
+          aiTutorStartMode={getIsStartMode()}
           tutorVideos={weblab2VideoFiles}
           aiTutorInitialWelcomeMessage={WEBLAB2_WELCOME_CHAT_MESSAGE}
           enableUserAddedSelectionContext={true}

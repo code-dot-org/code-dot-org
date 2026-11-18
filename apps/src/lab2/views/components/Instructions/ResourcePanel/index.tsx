@@ -30,7 +30,6 @@ import {
   ToursPerLab,
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
 import useResourcePanelTours from '@cdo/apps/lab2/productTours/useResourcePanelTours';
-import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
@@ -163,7 +162,8 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
-  alwaysShowAiTutor?: boolean;
+  /** Levelbuilder start mode: show the AI Tutor whatever the level sets, and accept its changes without a commit description. */
+  aiTutorStartMode?: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
@@ -205,7 +205,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
-  alwaysShowAiTutor = false,
+  aiTutorStartMode = false,
   tutorVideos,
   documentationUrl,
   sidebarOnly = false,
@@ -290,13 +290,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const hasAiTutorPromptSettings =
     (levelProperties.aiTutorPromptSettings?.answerTypes?.length ?? 0) > 0;
   const aiTutorVisible =
-    (!levelProperties.hideAiTutor || alwaysShowAiTutor) &&
+    (!levelProperties.hideAiTutor || aiTutorStartMode) &&
     shouldShowAiTutor({
       appName,
       isTutorLevel:
         levelProperties.aiTutorAvailable ||
         hasAiTutorPromptSettings ||
-        alwaysShowAiTutor,
+        aiTutorStartMode,
       aiChatAccessLevel: aiChatAccessLevel,
     });
   const aiChatDisabledState = useAiChatDisabledState({
@@ -402,7 +402,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         onAssetRemoved,
         initialWelcomeMessage,
         disableCommitMessages:
-          getIsStartMode() ||
+          aiTutorStartMode ||
           levelProperties.aiTutorPromptSettings?.disableCommitMessages,
       };
       if (usesSharedInstructionsDrawer) {

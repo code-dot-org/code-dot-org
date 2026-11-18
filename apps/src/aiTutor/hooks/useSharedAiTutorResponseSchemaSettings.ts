@@ -7,7 +7,6 @@ import {
   formatCopyPasteResponse,
   getMergedAiTutorCodeWithSource,
 } from '@cdo/apps/aiTutor/helpers/aiTutorResponseHelpers';
-import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {
   setProjectSourceBeforeAiTutorVersion,
   setSource,
@@ -56,7 +55,7 @@ export const useSharedAiTutorResponseSchemaSettings = ({
 
   const usesAcceptRejectFlow = useCallback(
     (formatted: ReturnType<typeof formatAcceptRejectResponse>) =>
-      (!isWidgetView || getIsStartMode()) &&
+      !isWidgetView &&
       acceptRejectAnswerTypes.includes(formatted.answerType) &&
       formatted.code.every(file => {
         const fileType = file.name.split('.').pop();
