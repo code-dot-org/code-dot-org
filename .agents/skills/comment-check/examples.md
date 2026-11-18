@@ -46,8 +46,9 @@ await onReady?.(entry.result);
 Better. It names the call that waits:
 
 ```ts
-// Save before `onReady`, which may not return for a while, so the
-// picture is not lost if the student leaves the page during that wait.
+// Save before `onReady`, which can wait before the picture is shown,
+// so the picture is not lost if the student leaves the page during
+// that wait.
 ```
 
 A pointing phrase. Reviewer: "confusing comment (especially second sentence)".
