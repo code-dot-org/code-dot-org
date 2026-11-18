@@ -1,5 +1,6 @@
 import {
   FizzyButton,
+  InterventionBox,
   LessonSummaryCard,
   LevelsAttemptedBox,
   NextStepPicker,
@@ -7,6 +8,7 @@ import {
   ReflectionBox,
   ReflectionData,
   ReflectionValue,
+  SendEvent,
   TimeSpentBox,
   TutorSummaryBox,
   ValidatedLevelsBox,
@@ -16,13 +18,15 @@ import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
 import {useLessonDeepDiveChallengesEnabled} from '@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled';
+import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
-import InterventionBox from './ReviewModalities/InterventionBox';
+import TutorChat from './ReviewModalities/TutorChat';
 import SkillsCheck from './SkillsCheck/SkillsCheck';
 import {LessonDeepDiveData} from './types';
 
@@ -65,6 +69,9 @@ const STORY_SCREEN_ORDER = [
 const TOTAL_STORY_SLIDES = STORY_SCREEN_ORDER.length;
 
 const STORY_CARD_DURATION_MS = 5_000;
+
+const sendEvent: SendEvent = (name, payload) =>
+  analyticsReporter.sendEvent(name, payload);
 
 // Five gradients that rotate in a fixed order. A random starting index is
 // picked on mount so the sequence begins on a different color each session.
@@ -282,6 +289,21 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     [lessonDeepDiveData.objectives]
   );
 
+  const userId = useAppSelector(state => state.currentUser.userId);
+  const reportModalityClick = useCallback(
+    (modality: string) =>
+      analyticsReporter.sendEvent(
+        EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
+        {
+          modality,
+          lessonId: lessonDeepDiveData.lessonId,
+          lessonName: lessonDeepDiveData.lessonName,
+          userId,
+        }
+      ),
+    [lessonDeepDiveData.lessonId, lessonDeepDiveData.lessonName, userId]
+  );
+
   if (!experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR)) {
     return null;
   }
@@ -454,6 +476,10 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
               nextStepChoice === 'challenge' ? 'challenge' : null
             }
             challengeEnabled={challengesEnabled}
+            VideoPlayer={TutorVideo}
+            TutorChat={TutorChat}
+            sendEvent={sendEvent}
+            onModalitySelected={reportModalityClick}
             onDone={goToNext}
           />
         );

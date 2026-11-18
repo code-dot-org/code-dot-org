@@ -17,6 +17,14 @@ export const EvaluationStatus = {
   SUCCESS: 'success',
 };
 
+export type AssessmentQuestionResult = {
+  level_id: number;
+  script_level_id: number;
+  attempts: number;
+  correct: boolean;
+  evaluation?: string;
+};
+
 export interface Sticker {
   // Unicode name; also the accessible name
   name: string;
@@ -233,3 +241,8 @@ export type ReflectionData = {
   success: string;
   struggle: string;
 };
+
+export type SendEvent = (
+  name: string,
+  payload: Record<string, unknown>,
+) => void;

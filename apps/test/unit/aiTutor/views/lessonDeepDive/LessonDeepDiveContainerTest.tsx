@@ -84,6 +84,21 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
       </button>
     </div>
   ),
+  InterventionBox: ({
+    onModalitySelected,
+  }: {
+    onModalitySelected: (modality: string) => void;
+  }) => (
+    <button type="button" onClick={() => onModalitySelected('challenge')}>
+      intervention
+    </button>
+  ),
+}));
+
+const mockUserId = 7;
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
+  useAppSelector: () => mockUserId,
 }));
 
 jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
@@ -92,11 +107,6 @@ jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
 }));
 
 const sendEventMock = analyticsReporter.sendEvent as jest.Mock;
-
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox',
-  () => ({__esModule: true, default: () => <div>intervention</div>})
-);
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/SkillsCheck/SkillsCheck',
@@ -256,6 +266,20 @@ describe('LessonDeepDiveContainer URL param routing', () => {
   ])('renders the %s screen when :screenId is "%s"', (screenId, label) => {
     renderContainer(screenId);
     expect(screen.getByText(label)).toBeInTheDocument();
+  });
+
+  it('reports the modality a student picks on the intervention screen', () => {
+    renderContainer('intervention');
+    fireEvent.click(screen.getByRole('button', {name: 'intervention'}));
+    expect(analyticsReporter.sendEvent).toHaveBeenCalledWith(
+      EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
+      {
+        modality: 'challenge',
+        lessonId: LESSON_DATA.lessonId,
+        lessonName: LESSON_DATA.lessonName,
+        userId: mockUserId,
+      }
+    );
   });
 
   it('falls back to welcome when :screenId is not a known screen', () => {

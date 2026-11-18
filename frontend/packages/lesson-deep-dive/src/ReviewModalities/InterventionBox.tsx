@@ -1,28 +1,33 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  Challenges,
-  PodcastsBox,
-  ReflectionData,
-  VideosBox,
-  VocabularyFlashcards,
-} from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
-import React, {FC, useCallback, useRef, useState} from 'react';
+import {type FC, useCallback, useRef, useState} from 'react';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
+import {EVENTS} from '../analyticsEvents';
+import Challenges from '../ChallengeActivities/Challenges';
 import {
-  LessonDeepDiveData,
-  AssessmentQuestionResult,
-} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
-import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+  type AssessmentQuestionResult,
+  type JsonVideoData,
+  type LessonObjective,
+  type ReflectionData,
+  type SendEvent,
+} from '../types';
 
-import Chat from './Chat';
+import Chat, {type TutorChatComponent} from './Chat';
+import PodcastsBox from './PodcastsBox';
+import VideosBox, {type VideoPlayerComponent} from './VideosBox';
+import VocabularyFlashcards, {
+  type VocabularyItem,
+} from './VocabularyFlashcards';
 
 import styles from './intervention-box.module.scss';
 
-type CardId = 'flashcards' | 'chat' | 'videos' | 'podcasts' | 'challenge';
+export type CardId =
+  | 'flashcards'
+  | 'chat'
+  | 'videos'
+  | 'podcasts'
+  | 'challenge';
 
 // Modalities that show the bottom nav bar (excludes the choice grid and challenge).
 const REVIEW_MODALITY_IDS = new Set<CardId>([
@@ -84,14 +89,18 @@ interface InterventionBoxProps {
   lessonId: number;
   lessonName: string;
   lessonSummary: string;
-  vocabulary: LessonDeepDiveData['vocabulary'];
+  vocabulary: VocabularyItem[];
   assessmentAnalysis: AssessmentQuestionResult[];
-  objectives: LessonDeepDiveData['objectives'];
-  jsonVideos: LessonDeepDiveData['jsonVideos'];
+  objectives: LessonObjective[];
+  jsonVideos: JsonVideoData[];
   reflectionData: ReflectionData | null;
   focusTopic?: string;
   initialSelection?: CardId | null;
   challengeEnabled: boolean;
+  VideoPlayer: VideoPlayerComponent;
+  TutorChat: TutorChatComponent;
+  sendEvent: SendEvent;
+  onModalitySelected?: (modality: CardId) => void;
   onDone?: () => void;
 }
 
@@ -107,80 +116,76 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   focusTopic,
   initialSelection = null,
   challengeEnabled,
+  VideoPlayer,
+  TutorChat,
+  sendEvent,
+  onModalitySelected,
   onDone,
 }) => {
   const [selected, setSelected] = useState<CardId | null>(initialSelection);
-  const userId = useAppSelector(state => state.currentUser.userId);
   const startTimeRef = useRef(Date.now());
   const modalitiesUsedRef = useRef(new Set<CardId>());
 
   const handleCardSelect = useCallback(
     (cardId: CardId, source: 'picker' | 'tab_switch') => {
       setSelected(cardId);
-      analyticsReporter.sendEvent(
-        EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
-        {
-          modality: cardId,
-          lessonId,
-          lessonName,
-          userId,
-        }
-      );
+      onModalitySelected?.(cardId);
       if (cardId === 'challenge') {
-        analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_NEXT_STEP_CHOSEN, {
+        sendEvent(EVENTS.TUTOR_PLUS_NEXT_STEP_CHOSEN, {
           lesson_id: lessonId,
           choice: 'challenge',
           source: 'practice_screen',
         });
       } else {
         modalitiesUsedRef.current.add(cardId);
-        analyticsReporter.sendEvent(
-          EVENTS.TUTOR_PLUS_PRACTICE_MODALITY_SELECTED,
-          {lesson_id: lessonId, modality: cardId, source}
-        );
+        sendEvent(EVENTS.TUTOR_PLUS_PRACTICE_MODALITY_SELECTED, {
+          lesson_id: lessonId,
+          modality: cardId,
+          source,
+        });
       }
     },
-    [lessonId, lessonName, userId]
+    [lessonId, onModalitySelected, sendEvent],
   );
 
   const handleReviewInstead = useCallback(() => {
-    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_NEXT_STEP_CHOSEN, {
+    sendEvent(EVENTS.TUTOR_PLUS_NEXT_STEP_CHOSEN, {
       lesson_id: lessonId,
       choice: 'practice',
       source: 'challenge_screen',
     });
     setSelected(null);
-  }, [lessonId]);
+  }, [lessonId, sendEvent]);
 
   const handleChallengeModalityChange = useCallback(
     (type: 'video' | 'whiteboard') => {
-      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_TYPE_SELECTED, {
+      sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_TYPE_SELECTED, {
         lesson_id: lessonId,
         type,
       });
     },
-    [lessonId]
+    [lessonId, sendEvent],
   );
 
   const handleChallengeStarted = useCallback(
     (challenge: {id: number}, type: string) => {
-      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_STARTED, {
+      sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_STARTED, {
         lesson_id: lessonId,
         challenge_id: challenge.id,
         type,
       });
     },
-    [lessonId]
+    [lessonId, sendEvent],
   );
 
   const handleDone = useCallback(() => {
-    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_PRACTICE_DONE, {
+    sendEvent(EVENTS.TUTOR_PLUS_PRACTICE_DONE, {
       lesson_id: lessonId,
       modalities_used: Array.from(modalitiesUsedRef.current),
       duration_seconds: Math.round((Date.now() - startTimeRef.current) / 1000),
     });
     onDone?.();
-  }, [lessonId, onDone]);
+  }, [lessonId, onDone, sendEvent]);
 
   const showNavBar = selected !== null && REVIEW_MODALITY_IDS.has(selected);
 
@@ -239,6 +244,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
         )}
         {selected === 'chat' && (
           <Chat
+            TutorChat={TutorChat}
             lessonId={lessonId}
             lessonName={lessonName}
             lessonSummary={lessonSummary}
@@ -257,7 +263,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           />
         )}
         {selected === 'videos' && (
-          <VideosBox jsonVideos={jsonVideos} VideoPlayer={TutorVideo} />
+          <VideosBox jsonVideos={jsonVideos} VideoPlayer={VideoPlayer} />
         )}
         {selected === 'podcasts' && (
           <PodcastsBox
