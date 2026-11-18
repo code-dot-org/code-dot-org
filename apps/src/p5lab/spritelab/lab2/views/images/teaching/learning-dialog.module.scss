@@ -64,6 +64,28 @@
   height: 100%;
 }
 
+// The panels' headings and text share one grid cell, which is as tall as
+// the tallest of them.
+.copyStack {
+  display: grid;
+  width: 100%;
+
+  > * {
+    grid-area: 1 / 1;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.copyHidden {
+  visibility: hidden;
+}
+
 .heading {
   margin: 0;
   text-align: center;

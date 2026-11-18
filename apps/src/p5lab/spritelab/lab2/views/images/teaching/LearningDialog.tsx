@@ -238,20 +238,35 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
           </span>
           <div key={index} className={styles.panel}>
             <div className={styles.visual}>{panel.visual(picture, prompt)}</div>
-            <MuiTypography
-              component="h4"
-              variant="h4"
-              className={styles.heading}
-            >
-              {panel.heading}
-            </MuiTypography>
-            <MuiTypography
-              component="p"
-              variant="body1"
-              className={styles.text}
-            >
-              {richText(panel.body)}
-            </MuiTypography>
+            {/* Every panel's words are laid out, and only this panel's
+                show, so the dialog keeps the height of its tallest panel. */}
+            <div className={styles.copyStack}>
+              {panels.map((each, i) => (
+                <div
+                  key={i}
+                  className={classNames(
+                    styles.copy,
+                    i !== index && styles.copyHidden
+                  )}
+                  aria-hidden={i !== index || undefined}
+                >
+                  <MuiTypography
+                    component="h4"
+                    variant="h4"
+                    className={styles.heading}
+                  >
+                    {each.heading}
+                  </MuiTypography>
+                  <MuiTypography
+                    component="p"
+                    variant="body1"
+                    className={styles.text}
+                  >
+                    {richText(each.body)}
+                  </MuiTypography>
+                </div>
+              ))}
+            </div>
           </div>
           <div className={styles.dots} aria-hidden>
             {panels.map((_, i) => (
