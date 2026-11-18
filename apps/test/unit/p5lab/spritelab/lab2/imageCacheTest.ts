@@ -2,7 +2,7 @@ import {
   findCachedImage,
   frameFileName,
   ImageCacheMissError,
-  resetMissingFrames,
+  resetImageCacheState,
   sentencePath,
   VARIANT_COUNT,
   variantName,
@@ -62,7 +62,7 @@ const find = (overrides = {}) =>
 
 describe('imageCache', () => {
   beforeEach(() => {
-    resetMissingFrames();
+    resetImageCacheState();
   });
 
   it('names a filled sentence by sentence, one folder per word, and style', () => {
@@ -101,24 +101,33 @@ describe('imageCache', () => {
     expect((await find())?.variant).toBe(2);
   });
 
-  it('shows every variant of a full set before any comes back', async () => {
-    installFetch([...Array(VARIANT_COUNT).keys()].map(variantName));
-    const shown: number[] = [];
-    for (let i = 0; i < VARIANT_COUNT - 1; i++) {
-      shown.push((await find())?.variant as number);
+  it('brings back the variant found longest ago when every one is held back', async () => {
+    installFetch(['01', '02', '04']);
+    const found: (number | undefined)[] = [];
+    for (let i = 0; i < 7; i++) {
+      found.push((await find())?.variant);
     }
-    expect(new Set(shown).size).toBe(VARIANT_COUNT - 1);
-    // Two are left to choose between: the one not yet shown and the one
-    // shown longest ago.
-    const next = (await find())?.variant as number;
-    expect(shown.slice(1)).not.toContain(next);
+    expect(found).toEqual([1, 2, 4, 1, 2, 4, 1]);
+  });
+
+  it('holds back all but two of a full set', async () => {
+    installFetch([...Array(VARIANT_COUNT).keys()].map(variantName));
+    const found: number[] = [];
+    for (let i = 0; i < VARIANT_COUNT - 1; i++) {
+      found.push((await find())?.variant as number);
+    }
+    expect(new Set(found).size).toBe(VARIANT_COUNT - 1);
+    // Two are left to choose between: the one not found yet and the one
+    // found first. The pinned shuffle takes the lower-numbered, the first.
+    expect((await find())?.variant).toBe(found[0]);
   });
 
   it('starts again from nothing when the words change', async () => {
-    installFetch(['01', '02'], [FOLDER, OTHER_FOLDER]);
+    installFetch(['01', '02', '04'], [FOLDER, OTHER_FOLDER]);
     expect((await find())?.variant).toBe(1);
+    expect((await find())?.variant).toBe(2);
     expect((await find({wordIds: ['calm', 'dragon', '_']}))?.variant).toBe(1);
-    // Back to the first words: what they showed before is forgotten.
+    // Back to the first words: the two held back for them are forgotten.
     expect((await find())?.variant).toBe(1);
   });
 
