@@ -62,9 +62,10 @@ interface WriterOptions {
 }
 
 export interface SaveEditedOptions {
-  /** False updates the picture on screen and skips the file upload, which
-      a later save makes. A new image is uploaded regardless, since it has
-      no file yet. */
+  /** Whether this save uploads the picture's file. Defaults to true. False
+      is for an image that already has a file: the picture on screen
+      changes, and the file is uploaded by a later save. A new image has no
+      file yet, so false is ignored for it. */
   upload?: boolean;
   /** Called after the upload and before the image is updated; returning
       false abandons the save, for a drawing a picture replaced meanwhile. */
