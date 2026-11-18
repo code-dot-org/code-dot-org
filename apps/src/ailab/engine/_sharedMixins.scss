@@ -42,6 +42,10 @@
 }
 
 $data-table-row-height: 28px;
+
+// The bar that marks a row the model is tested on.
+$test-row-marker-width: 3px;
+$test-row-marker-color: var(--border-accent-orange-primary);
 $table-action-row-height: 33px;
 
 // For a table container that already draws the table's outer border.

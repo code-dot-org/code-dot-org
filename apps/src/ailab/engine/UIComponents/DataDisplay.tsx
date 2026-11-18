@@ -10,6 +10,7 @@ import {useAppDispatch, useAppSelector} from '../hooks';
 import {setDatasetLayout} from '../redux';
 import {getData, getIdColumn} from '../selectors';
 import {useDatasetTableView} from '../useDatasetTableView';
+import {useTestRows} from '../useTestRows';
 
 import DatasetCardDeck from './DatasetCardDeck';
 import DataTable from './DataTable';
@@ -23,6 +24,7 @@ const DataDisplay = () => {
   const datasetName = useAppSelector(state => state.name);
   const datasetLayout = useAppSelector(state => state.datasetLayout);
   const idColumn = useAppSelector(getIdColumn);
+  const testRows = useTestRows();
   const rows = useMemo(() => [...data.keys()], [data]);
   const columns = useMemo(
     () => withIdColumnFirst(Object.keys(data[0] ?? {}), idColumn),
@@ -64,6 +66,21 @@ const DataDisplay = () => {
           >
             {rowCountMessage}
           </Typography>
+          {isTable && testRows.size > 0 && (
+            <>
+              <span className={styles.separator} aria-hidden="true" />
+              {/* Each test row's number says so to screen readers. */}
+              <Typography
+                component="span"
+                variant="body4"
+                className={styles.testRowLegend}
+                aria-hidden="true"
+              >
+                <span className={styles.testRowSwatch} />
+                Test rows
+              </Typography>
+            </>
+          )}
         </div>
         <div className={styles.actions}>
           <TableFilter view={tableView} />

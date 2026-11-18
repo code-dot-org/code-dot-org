@@ -182,6 +182,11 @@
   border-color: var(--border-neutral-primary);
 }
 
+.indexCell.testRow {
+  box-shadow: inset mixins.$test-row-marker-width 0 0
+    mixins.$test-row-marker-color;
+}
+
 .indexHeader {
   position: sticky;
   top: 0;

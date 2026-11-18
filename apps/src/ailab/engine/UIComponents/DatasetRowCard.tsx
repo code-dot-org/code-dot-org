@@ -15,18 +15,30 @@ interface DatasetRowCardProps {
   isCurrent: boolean;
   rowNumber: number;
   row: DataRow;
+  isTestRow: boolean;
 }
 
-const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
+const DatasetRowCard = ({
+  isCurrent,
+  rowNumber,
+  row,
+  isTestRow,
+}: DatasetRowCardProps) => {
   const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const idColumn = useAppSelector(getIdColumn);
   const name =
     idColumn && row[idColumn] !== ''
       ? getLocalizedValue(row[idColumn], datasetId)
       : undefined;
+  const subtitle = [
+    name !== undefined && `Row ${rowNumber}`,
+    isTestRow && 'Test row',
+  ]
+    .filter(Boolean)
+    .join(' · ');
   const {project} = useProject();
   const titleId = useId();
-  const rowNumberId = useId();
+  const subtitleId = useId();
   const detailsRef = useRef<HTMLDListElement>(null);
 
   // Coming back to a row would otherwise keep where its list was scrolled.
@@ -69,9 +81,7 @@ const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
     <div
       className={styles.card}
       role="group"
-      aria-labelledby={
-        name === undefined ? titleId : `${titleId} ${rowNumberId}`
-      }
+      aria-labelledby={subtitle ? `${titleId} ${subtitleId}` : titleId}
       aria-roledescription="slide"
     >
       <div className={styles.heading}>
@@ -83,14 +93,14 @@ const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
         >
           {name ?? `Row ${rowNumber}`}
         </Typography>
-        {name !== undefined && (
+        {subtitle && (
           <Typography
-            id={rowNumberId}
+            id={subtitleId}
             component="p"
             variant="body3"
-            className={styles.rowNumber}
+            className={styles.subtitle}
           >
-            {`Row ${rowNumber}`}
+            {subtitle}
           </Typography>
         )}
       </div>
