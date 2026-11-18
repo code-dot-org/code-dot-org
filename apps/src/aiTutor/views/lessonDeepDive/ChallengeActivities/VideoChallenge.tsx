@@ -2,6 +2,8 @@ import {
   Challenge,
   ChallengeResponse,
   challengeResponseValidator,
+  VideoCanvas,
+  VideoCanvasMode,
 } from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
@@ -12,7 +14,6 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {requestEvaluation} from './requestEvaluation';
 import {STICKER_SECTIONS} from './stickers';
-import VideoCanvas, {VideoCanvasMode} from './VideoCanvas';
 
 import styles from './video-challenge.module.scss';
 

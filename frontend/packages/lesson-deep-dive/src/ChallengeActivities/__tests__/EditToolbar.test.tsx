@@ -1,22 +1,33 @@
 import {fireEvent, render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {type ComponentProps} from 'react';
+import {vi} from 'vitest';
 
-import EditToolbar from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/EditToolbar';
-import {STICKER_SECTIONS} from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/stickers';
+import {type StickerSection} from '../../types';
+import EditToolbar from '../EditToolbar';
+
+const STICKER_SECTIONS: StickerSection[] = [
+  {
+    title: 'Reactions',
+    stickers: [
+      {name: 'Thumbs up', src: 'thumbs-up.svg'},
+      {name: 'Fire', src: 'fire.svg'},
+    ],
+  },
+  {title: 'Just for fun', stickers: [{name: 'Ghost', src: 'ghost.svg'}]},
+];
 
 const renderToolbar = (
-  props: Partial<React.ComponentProps<typeof EditToolbar>> = {}
+  props: Partial<ComponentProps<typeof EditToolbar>> = {},
 ) =>
   render(
     <EditToolbar
       stickerSections={STICKER_SECTIONS}
-      onAddText={jest.fn()}
-      onAddSticker={jest.fn()}
+      onAddText={vi.fn()}
+      onAddSticker={vi.fn()}
       canDelete={false}
-      onDelete={jest.fn()}
+      onDelete={vi.fn()}
       {...props}
-    />
+    />,
   );
 
 const tool = (name: string) => screen.getByRole('button', {name});
@@ -74,7 +85,7 @@ describe('EditToolbar', () => {
   });
 
   it('adds the typed text with the chosen color and style', () => {
-    const onAddText = jest.fn();
+    const onAddText = vi.fn();
     renderToolbar({onAddText});
     fireEvent.click(tool('Text'));
 
@@ -99,18 +110,18 @@ describe('EditToolbar', () => {
   });
 
   it('deletes only when there is a selection', () => {
-    const onDelete = jest.fn();
+    const onDelete = vi.fn();
     const {rerender} = renderToolbar({onDelete});
     expect(tool('Delete')).toBeDisabled();
 
     rerender(
       <EditToolbar
         stickerSections={STICKER_SECTIONS}
-        onAddText={jest.fn()}
-        onAddSticker={jest.fn()}
+        onAddText={vi.fn()}
+        onAddSticker={vi.fn()}
         canDelete
         onDelete={onDelete}
-      />
+      />,
     );
     fireEvent.click(tool('Delete'));
 
@@ -146,33 +157,26 @@ describe('EditToolbar', () => {
     renderToolbar();
     fireEvent.click(tool('Stickers'));
 
-    for (const title of [
-      'Reactions',
-      'Celebrate',
-      'Tech',
-      'Point it out',
-      'Just for fun',
-    ]) {
+    for (const {title} of STICKER_SECTIONS) {
       expect(screen.getByText(title)).toBeInTheDocument();
     }
     const stickers = STICKER_SECTIONS.flatMap(section => section.stickers);
-    expect(stickers).toHaveLength(51);
     for (const {name} of stickers) {
       expect(tool(name)).toBeInTheDocument();
     }
   });
 
   it('adds the clicked sticker and keeps the panel open', () => {
-    const onAddSticker = jest.fn();
+    const onAddSticker = vi.fn();
     renderToolbar({onAddSticker});
     fireEvent.click(tool('Stickers'));
 
-    fireEvent.click(tool('Trophy'));
-    fireEvent.click(tool('Pile of poo'));
+    fireEvent.click(tool('Fire'));
+    fireEvent.click(tool('Ghost'));
 
     expect(onAddSticker.mock.calls.map(([sticker]) => sticker.name)).toEqual([
-      'Trophy',
-      'Pile of poo',
+      'Fire',
+      'Ghost',
     ]);
     expect(panel('Stickers')).toBeInTheDocument();
   });

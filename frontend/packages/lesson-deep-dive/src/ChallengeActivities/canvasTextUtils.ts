@@ -63,7 +63,7 @@ export function contrastColor(color: string): '#000000' | '#ffffff' {
 export function textStyleAttrs(
   style: TextStyle,
   color: string,
-  fontSize: number
+  fontSize: number,
 ): {text: TextAttrs; tag: TagAttrs} {
   const padding = fontSize * 0.25;
   switch (style) {
@@ -111,14 +111,14 @@ export const CORNER_ANCHORS = [
 export function resizeText(
   {width, fontSize}: Pick<CanvasTextItem, 'width' | 'fontSize'>,
   anchor: string | null,
-  scale: number
+  scale: number,
 ): Pick<CanvasTextItem, 'width' | 'fontSize'> {
   if (anchor && CORNER_ANCHORS.includes(anchor)) {
     // One factor for both keeps the box's proportions
     const clamped = Math.max(
       scale,
       MIN_FONT_SIZE / fontSize,
-      MIN_TEXT_WIDTH / width
+      MIN_TEXT_WIDTH / width,
     );
     return {width: width * clamped, fontSize: fontSize * clamped};
   }
