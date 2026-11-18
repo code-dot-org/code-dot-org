@@ -81,6 +81,9 @@ node['cdo-users'].each_pair do |user_name, user_data|
 
   {
     'authorized_keys' => user_data['ssh-key'],
+    # sshd reads authorized_keys2 as well; held empty so authorized_keys is
+    # the only path a key can be installed on.
+    'authorized_keys2' => nil,
     'server_access_key' => node['cdo-servers']['ssh-private-key'],
     'server_access_key.pub' => node['cdo-servers']['ssh-key'],
     'drone_access_key' => node['cdo-servers']['drone-ssh-private-key'],
