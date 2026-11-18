@@ -126,8 +126,6 @@ export const SectionList: React.FC<SectionListProps> = ({
     [setSortableSectionIds]
   );
 
-  // Read through a ref: as a dependency, the order this effect dispatches
-  // would re-run it, looping whenever Redux keeps a different order.
   const reduxSectionOrderRef = React.useRef(reduxSectionOrder);
   reduxSectionOrderRef.current = reduxSectionOrder;
 
