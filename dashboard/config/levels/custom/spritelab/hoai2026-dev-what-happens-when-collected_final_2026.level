@@ -152,7 +152,7 @@
       "title": "**Touch event**",
       "items": [
         {
-          "text": "Choose a block to drag into the dotted outline under **when touches**.",
+          "text": "Choose a block to drag under **when touches**.",
           "check": {
             "kind": "block",
             "type": [
@@ -173,7 +173,7 @@
         }
       ]
     },
-    "long_instructions": "# Touch event\r\nWhen your player **touches** your object, something can happen. \r\n\r\nThis is called an **event**.",
+    "long_instructions": "# Touch event\r\nYour player touching the object is an **event**. You can choose what happens when that event occurs.",
     "header_label": "Touch event",
     "embed": "false",
     "instructions_important": "false",
