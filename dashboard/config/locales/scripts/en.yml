@@ -31243,6 +31243,12 @@ en:
               name: Tracing Bias to Outcome
             lesson-12:
               name: Data Makes AI Unit Project
+            lesson-13:
+              name: Data Makes AI Project (Day Two)
+            lesson-14:
+              name: Data Makes AI Project (Day Three)
+            lesson-15:
+              name: Data Makes AI Project (Day Four)
           lesson_groups: {}
           name: 6-12-aid-data-makes-ai-2026
           title: "[DEV] AI Discoveries SC1: Data Makes AI"

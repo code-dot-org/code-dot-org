@@ -54,6 +54,28 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     assert failures.empty?, failures.join("\n")
   end
 
+  [false, true].each do |archived|
+    test "section membership exempts a child from CAP lockout with archived=#{archived}" do
+      student = create(:non_compliant_child)
+      refute Policies::ChildAccount.compliant?(student, future: true)
+      assert student.at_risk_age_gated_date
+
+      section = create(:section, login_type: Section::LOGIN_TYPE_EMAIL, hidden: archived)
+      follower = create(:follower, section: section, student_user: student)
+      student.reload
+
+      assert Policies::ChildAccount.compliant?(student)
+      assert Policies::ChildAccount.compliant?(student, future: true)
+      assert_nil student.at_risk_age_gated_date
+
+      follower.destroy!
+      student.reload
+
+      refute Policies::ChildAccount.compliant?(student, future: true)
+      assert student.at_risk_age_gated_date
+    end
+  end
+
   test 'user_predates_policy?' do
     # [User traits, Expected result from compliant?]
     test_matrix = [
