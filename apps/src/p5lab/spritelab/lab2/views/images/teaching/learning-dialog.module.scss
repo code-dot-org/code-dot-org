@@ -1,7 +1,12 @@
-@use "sass:math";
 @use "../../sentence/sr-only";
 
-// The design-system dialog, wider than its default for the pictures.
+// The drawings are 500 by 200. The dialog below is the design system's
+// modal at its narrowest, which leaves them that much room, so the picture
+// area is always their size and the boxes in it are in their units.
+$art-width: 500px;
+$art-height: 200px;
+$panel-gap: 20px;
+
 .dialog {
   width: 600px;
   max-width: 100%;
@@ -16,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: $panel-gap;
   padding: 8px 0;
   animation: panel-in 0.3s ease-out;
 }
@@ -32,25 +37,25 @@
   }
 }
 
-// The designer's drawings are 500 by 200, on white with black shadows, so
-// the picture area is that shape and white in both themes.
+// The drawings are on white with black shadows, so the picture area is
+// white in both themes.
 .visual {
   position: relative;
   display: flex;
+  flex: none;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 500px;
-  aspect-ratio: 5 / 2;
+  width: $art-width;
+  max-width: 100%;
+  height: $art-height;
   border-radius: 8px;
-  background-color: var(--neutral-base-white);
+  background-color: var(--background-neutral-white-fixed);
   overflow: hidden;
-  // The prompt's text is sized against this box.
-  container-type: inline-size;
 }
 
-// The modal styles any image in its content as a banner, with a width, a
-// background and rounded corners. These selectors outrank that rule.
+// The modal styles any image in its content as a banner: full width,
+// centered, with a background and rounded corners. These selectors outrank
+// that rule.
 .visual .drawing,
 .visual .sizeSmall {
   border-radius: 0;
@@ -64,8 +69,6 @@
   height: 100%;
 }
 
-// The panels' headings and text share one grid cell, which is as tall as
-// the tallest of them.
 .copyStack {
   display: grid;
   width: 100%;
@@ -79,7 +82,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: $panel-gap;
 }
 
 .copyHidden {
@@ -100,14 +103,14 @@
   margin: 0 2px;
 }
 
-// The prompt, in the drawing's speech bubble: the bubble's box in the
-// drawing's own 500 by 200, less a margin.
+// The prompt, in the drawing's speech bubble. The bubble fills rows 23 to
+// 153 of the drawing; the text keeps clear of its round ends.
 .words {
   position: absolute;
-  left: math.percentage(math.div(60, 500));
-  right: math.percentage(math.div(60, 500));
-  top: math.percentage(math.div(23, 200));
-  height: math.percentage(math.div(130, 200));
+  left: 60px;
+  right: 60px;
+  top: 23px;
+  height: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,24 +118,24 @@
   text-align: center;
 }
 
-// Doubled to outrank the typography's own color and size. The bubble is
-// white in both themes, and holds four lines of this size at any width.
+// Doubled to outrank the typography's own color. The bubble is white in
+// both themes.
 .words.words {
   color: var(--text-neutral-black-fixed);
-  font-size: 4.4cqw;
-  line-height: 1.36;
 }
 
-// A prompt longer than the bubble's four lines ends in an ellipsis.
+// The bubble holds four lines of the prompt's type.
 .wordsText {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   overflow: hidden;
+  overflow-wrap: anywhere;
 }
 
-// A white card with the outline and hard shadow of the drawings' cards,
-// holding one picture.
+// A white card for one picture, with the outline of the drawings' cards
+// and the hard shadow of the frames in the designer's drawing of the
+// stages.
 .frame {
   display: flex;
   flex: none;
@@ -140,8 +143,8 @@
   aspect-ratio: 1;
   border: 2px solid var(--brand-purple-5);
   border-radius: 7px;
-  background-color: var(--neutral-base-white);
-  box-shadow: 4px 8px 0 var(--neutral-base-black);
+  background-color: var(--background-neutral-white-fixed);
+  box-shadow: 4px 8px 0 var(--background-neutral-black-fixed);
   overflow: hidden;
 }
 
@@ -153,39 +156,44 @@
   object-fit: contain;
 }
 
-// The guess from noise through three stages, side by side. The frames
-// sit a little above the middle, which leaves their shadows room.
+// The guess from noise through three stages, side by side: frames of the
+// size and spacing in the designer's drawing of them. The bottom padding
+// centers the frames with their shadows.
 .stages {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 math.percentage(math.div(12, 500)) 2%;
+  padding: 0 12px 4px;
 
   .frame {
-    width: math.percentage(math.div(110, 476));
+    width: 110px;
   }
 }
 
-// A character's card and a background's frame, to scale, standing on one
-// line.
+// A character's card and a background's frame, to scale, with their
+// bottoms level.
 .sizes {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: math.percentage(math.div(20, 500));
+  gap: 20px;
   width: 100%;
 }
 
-// The card's drawing includes its shadow, which the frame's is level with.
 .visual .sizeSmall {
   align-self: flex-end;
-  width: math.percentage(math.div(88, 500));
+  width: 88px;
 }
 
+// The small card's drawing has its shadow inside it. The margin sets this
+// frame's shadow level with that one.
+$large-shadow: 8px;
+
 .sizeLarge {
-  width: math.percentage(math.div(159, 500));
-  box-shadow: 8px 8px 0 var(--neutral-base-black);
-  margin-bottom: 8px;
+  width: 159px;
+  box-shadow: $large-shadow $large-shadow 0
+    var(--background-neutral-black-fixed);
+  margin-bottom: $large-shadow;
 }
 
 // Stretched across the dialog, so the dots are centered in it.

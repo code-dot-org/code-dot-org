@@ -59,6 +59,21 @@ describe('LearningDialog', () => {
     expect(onDone).toHaveBeenCalledTimes(1);
   });
 
+  it("lays out every panel's words and shows one panel's", () => {
+    render(
+      <LearningDialog
+        picture={{src: 'data:one'}}
+        prompt="A cat"
+        imageType="sprite"
+        onDone={jest.fn()}
+      />
+    );
+    expect(
+      screen.getAllByRole('heading', {level: 4, hidden: true})
+    ).toHaveLength(5);
+    expect(screen.getAllByRole('heading', {level: 4})).toHaveLength(1);
+  });
+
   it('closes unread only when asked to', () => {
     const onClose = jest.fn();
     const {rerender} = render(

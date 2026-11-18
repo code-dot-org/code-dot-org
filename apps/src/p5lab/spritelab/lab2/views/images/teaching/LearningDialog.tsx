@@ -108,13 +108,20 @@ interface PanelContent {
   visual: (picture: LearningPicture, prompt: string) => React.ReactNode;
 }
 
-/** One of the designer's drawings, filling the panel's picture area. */
-const drawing = (src: string) => () =>
-  <img src={src} alt="" className={styles.drawing} />;
+// The drawings, loaded as the story opens so that none arrives after its
+// panel.
+const DRAWINGS = [learnedArt, wordsArt, anotherArt, evaluateArt, flowerCardArt];
+
+/** A drawing that fills the panel's picture area. */
+const Drawing: React.FunctionComponent<{src: string}> = ({src}) => (
+  <img src={src} alt="" className={styles.drawing} />
+);
+
+const drawing = (src: string) => () => <Drawing src={src} />;
 
 const words = (_: LearningPicture, prompt: string) => (
   <>
-    <img src={wordsArt} alt="" className={styles.drawing} />
+    <Drawing src={wordsArt} />
     <MuiTypography component="p" variant="h5" className={styles.words}>
       <span className={styles.wordsText}>“{prompt}”</span>
     </MuiTypography>
@@ -222,6 +229,11 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
   onClose,
 }) => {
   const [index, setIndex] = useState(0);
+  useEffect(() => {
+    DRAWINGS.forEach(src => {
+      new Image().src = src;
+    });
+  }, []);
   const panels = panelsFor(imageType);
   const onLastPanel = index === panels.length - 1;
   const panel = panels[index];
