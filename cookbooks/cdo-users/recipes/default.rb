@@ -55,13 +55,6 @@ node['cdo-users'].each_pair do |user_name, user_data|
   end
 
   # Forward email if an address is provided.
-  #
-  # The address is normalized and tested here rather than in a `not_if` guard.
-  # A guard would not have worked: `variables(...)` is evaluated at compile time,
-  # so `user_data['email']` was dereferenced before any guard could run, and a
-  # missing `email` raised NoMethodError and aborted the whole chef-client run.
-  # Passing a Boolean to `not_if` was its own bug -- Chef expects a String or a
-  # block, and `not_if true` raises ArgumentError.
   user_email = user_data['email'].to_s.strip.downcase
   unless user_email.empty?
     template File.join(home_directory, '.forward') do
