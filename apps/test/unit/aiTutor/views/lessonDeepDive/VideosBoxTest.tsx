@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import VideosBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/VideosBox';
+import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
 
 const mockTutorVideo = jest.fn();
 
@@ -36,7 +37,7 @@ describe('VideosBox', () => {
     const ONE_VIDEO = [VIDEOS[0]];
 
     it('renders the video and its description', () => {
-      render(<VideosBox jsonVideos={ONE_VIDEO} />);
+      render(<VideosBox jsonVideos={ONE_VIDEO} VideoPlayer={TutorVideo} />);
       expect(mockTutorVideo).toHaveBeenCalledTimes(1);
       expect(mockTutorVideo).toHaveBeenCalledWith(
         expect.objectContaining({href: '/json_videos/video-1/content'})
@@ -45,7 +46,7 @@ describe('VideosBox', () => {
     });
 
     it('does not render carousel navigation', () => {
-      render(<VideosBox jsonVideos={ONE_VIDEO} />);
+      render(<VideosBox jsonVideos={ONE_VIDEO} VideoPlayer={TutorVideo} />);
       expect(
         screen.queryByRole('button', {name: 'Next video'})
       ).not.toBeInTheDocument();
@@ -54,7 +55,7 @@ describe('VideosBox', () => {
 
   describe('with multiple videos', () => {
     it('shows only the first video initially', () => {
-      render(<VideosBox jsonVideos={VIDEOS} />);
+      render(<VideosBox jsonVideos={VIDEOS} VideoPlayer={TutorVideo} />);
       expect(mockTutorVideo).toHaveBeenCalledTimes(1);
       expect(mockTutorVideo).toHaveBeenCalledWith(
         expect.objectContaining({href: '/json_videos/video-1/content'})
@@ -64,7 +65,7 @@ describe('VideosBox', () => {
     });
 
     it('advances to the next video when clicking the next button', () => {
-      render(<VideosBox jsonVideos={VIDEOS} />);
+      render(<VideosBox jsonVideos={VIDEOS} VideoPlayer={TutorVideo} />);
       fireEvent.click(screen.getByRole('button', {name: 'Next video'}));
 
       expect(mockTutorVideo).toHaveBeenLastCalledWith(
@@ -75,7 +76,7 @@ describe('VideosBox', () => {
     });
 
     it('wraps from the last video back to the first', () => {
-      render(<VideosBox jsonVideos={VIDEOS} />);
+      render(<VideosBox jsonVideos={VIDEOS} VideoPlayer={TutorVideo} />);
       fireEvent.click(screen.getByRole('button', {name: 'Previous video'}));
 
       expect(mockTutorVideo).toHaveBeenLastCalledWith(
@@ -85,7 +86,7 @@ describe('VideosBox', () => {
     });
 
     it('jumps to a video when its dot is clicked', () => {
-      render(<VideosBox jsonVideos={VIDEOS} />);
+      render(<VideosBox jsonVideos={VIDEOS} VideoPlayer={TutorVideo} />);
       fireEvent.click(screen.getByRole('button', {name: 'Video 2 of 2'}));
 
       expect(mockTutorVideo).toHaveBeenLastCalledWith(
@@ -95,7 +96,7 @@ describe('VideosBox', () => {
     });
 
     it('renders one dot per video', () => {
-      render(<VideosBox jsonVideos={VIDEOS} />);
+      render(<VideosBox jsonVideos={VIDEOS} VideoPlayer={TutorVideo} />);
       expect(
         screen.getByRole('button', {name: 'Video 1 of 2'})
       ).toBeInTheDocument();
@@ -106,7 +107,7 @@ describe('VideosBox', () => {
   });
 
   it('renders nothing when jsonVideos is empty', () => {
-    render(<VideosBox jsonVideos={[]} />);
+    render(<VideosBox jsonVideos={[]} VideoPlayer={TutorVideo} />);
     expect(mockTutorVideo).not.toHaveBeenCalled();
   });
 });
