@@ -80,6 +80,7 @@ class UnitEditor extends React.Component {
     initialTts: PropTypes.bool,
     initialSimpleProgress: PropTypes.bool,
     initialSimpleProgressImage: PropTypes.string,
+    initialTutorPlusAvailable: PropTypes.bool,
     hasCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
@@ -140,6 +141,7 @@ class UnitEditor extends React.Component {
       tts: this.props.initialTts,
       simpleProgress: this.props.initialSimpleProgress,
       simpleProgressImage: this.props.initialSimpleProgressImage || '',
+      tutorPlusAvailable: !!this.props.initialTutorPlusAvailable,
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
@@ -252,6 +254,7 @@ class UnitEditor extends React.Component {
       tts: this.state.tts,
       simple_progress: this.state.simpleProgress,
       simple_progress_image: this.state.simpleProgressImage,
+      tutor_plus_available: this.state.tutorPlusAvailable,
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
@@ -810,6 +813,26 @@ class UnitEditor extends React.Component {
               </HelpTip>
             </label>
           )}
+          <label>
+            Tutor+ available
+            <input
+              type="checkbox"
+              checked={this.state.tutorPlusAvailable}
+              style={styles.checkbox}
+              onChange={e =>
+                this.setState({tutorPlusAvailable: e.target.checked})
+              }
+            />
+            <HelpTip>
+              <p>
+                Lessons with a lesson plan offer Tutor+ only when this is
+                checked and the course offering is AI Foundations or AI
+                Discoveries. Check this if practice problems, videos, and
+                challenges have been added for lessons in this unit and you are
+                ready to release Tutor+ for this unit.
+              </p>
+            </HelpTip>
+          </label>
           <label>
             Lesson Numbering
             <HelpTip>
