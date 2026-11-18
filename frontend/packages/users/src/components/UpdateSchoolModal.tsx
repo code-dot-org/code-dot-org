@@ -36,6 +36,8 @@ const COUNTRY_SELECTED_EVENT = 'User Selects Country';
 const ZIP_CODE_ENTERED_EVENT = 'Valid Zip Code Entered';
 const SCHOOL_SELECTED_FROM_LIST_EVENT = 'School Selected from Dropdown';
 const ADD_MANUALLY_CLICKED_EVENT = 'User Elects to Add School Name Manually';
+const DO_NOT_TEACH_AT_SCHOOL_CLICKED_EVENT =
+  'User Clicks I Do Not Teach In A School Setting';
 
 /**
  * Finds and saves a new school affiliation. Only the country carries over from
@@ -207,7 +209,10 @@ export default function UpdateSchoolModal({
             I don’t see my school here. Add manually
           </Button>
           <Button
-            onClick={() => setSchoolId(NO_SCHOOL_SETTING)}
+            onClick={() => {
+              sendEvent(DO_NOT_TEACH_AT_SCHOOL_CLICKED_EVENT, {country});
+              setSchoolId(NO_SCHOOL_SETTING);
+            }}
             disabled={!zipValid}
             sx={{px: 0}}
           >

@@ -105,4 +105,20 @@ describe('UpdateSchoolModal analytics', () => {
       {country: 'US'},
     );
   });
+
+  it('reports the choice of a non-school setting', () => {
+    renderModal();
+    fireEvent.change(zip(), {target: {value: '98101'}});
+    vi.clearAllMocks();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /teach CS in a school setting/i}),
+    );
+
+    expect(sendEvent).toHaveBeenCalledTimes(1);
+    expect(sendEvent).toHaveBeenCalledWith(
+      'User Clicks I Do Not Teach In A School Setting',
+      {country: 'US'},
+    );
+  });
 });
