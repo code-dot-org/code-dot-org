@@ -5,6 +5,8 @@ import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
 import LessonDeepDiveContainer from '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer';
 import {LessonDeepDiveData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -19,12 +21,27 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   TutorSummaryBox: () => <div>tutor-summary</div>,
   NextStepPicker: () => <div>next-step</div>,
   ReflectionBox: () => <div>reflection</div>,
+  InterventionBox: ({
+    onModalitySelected,
+  }: {
+    onModalitySelected: (modality: string) => void;
+  }) => (
+    <button type="button" onClick={() => onModalitySelected('challenge')}>
+      intervention
+    </button>
+  ),
 }));
 
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox',
-  () => ({__esModule: true, default: () => <div>intervention</div>})
-);
+const mockUserId = 7;
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
+  useAppSelector: () => mockUserId,
+}));
+
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: jest.fn()},
+}));
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/SkillsCheck/SkillsCheck',
@@ -184,6 +201,20 @@ describe('LessonDeepDiveContainer URL param routing', () => {
   ])('renders the %s screen when :screenId is "%s"', (screenId, label) => {
     renderContainer(screenId);
     expect(screen.getByText(label)).toBeInTheDocument();
+  });
+
+  it('reports the modality a student picks on the intervention screen', () => {
+    renderContainer('intervention');
+    fireEvent.click(screen.getByRole('button', {name: 'intervention'}));
+    expect(analyticsReporter.sendEvent).toHaveBeenCalledWith(
+      EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
+      {
+        modality: 'challenge',
+        lessonId: LESSON_DATA.lessonId,
+        lessonName: LESSON_DATA.lessonName,
+        userId: mockUserId,
+      }
+    );
   });
 
   it('falls back to welcome when :screenId is not a known screen', () => {

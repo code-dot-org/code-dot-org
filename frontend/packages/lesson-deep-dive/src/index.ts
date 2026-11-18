@@ -3,6 +3,7 @@
 export {default as AudioRecorder} from './ChallengeActivities/AudioRecorder';
 export {default as Challenges} from './ChallengeActivities/Challenges';
 export {default as FizzyButton} from './FizzyButton';
+export {default as InterventionBox} from './ReviewModalities/InterventionBox';
 export {default as LessonSummaryCard} from './LessonSummaryCard';
 export {default as LevelsAttemptedBox} from './StudentLessonStats/LevelsAttemptedBox';
 export {default as Match} from './SkillsCheck/QuestionTypes/Match';
@@ -33,6 +34,7 @@ export {
   parseReactions,
 } from './types';
 export type {
+  AssessmentQuestionResult,
   Challenge,
   ChallengeResponse,
   ChallengeResponseAsset,

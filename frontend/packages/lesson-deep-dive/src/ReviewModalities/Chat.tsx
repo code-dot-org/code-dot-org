@@ -1,24 +1,35 @@
+import {type ComponentType, type FC, useMemo, useState} from 'react';
+
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {ReflectionData} from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useCallback, useMemo, useState} from 'react';
 
-import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
+import {
+  type AssessmentQuestionResult,
+  type LessonObjective,
+  type ReflectionData,
+} from '../types';
 
-import {LessonDeepDiveData, AssessmentQuestionResult} from '../types';
+import {type VocabularyItem} from './VocabularyFlashcards';
 
 import styles from './chat.module.scss';
 
+export type TutorChatComponent = ComponentType<{
+  systemPrompt: string;
+  lessonId: number;
+}>;
+
 interface ChatProps {
+  TutorChat: TutorChatComponent;
   lessonId: number;
   lessonName: string;
   lessonSummary: string;
-  vocabulary: LessonDeepDiveData['vocabulary'];
+  vocabulary: VocabularyItem[];
   assessmentAnalysis: AssessmentQuestionResult[];
-  objectives: LessonDeepDiveData['objectives'];
+  objectives: LessonObjective[];
   reflectionData: ReflectionData | null;
 }
 
 const Chat: FC<ChatProps> = ({
+  TutorChat,
   lessonId,
   lessonName,
   lessonSummary,
@@ -27,14 +38,12 @@ const Chat: FC<ChatProps> = ({
   objectives,
   reflectionData,
 }) => {
-  const hiddenContextCallback = useCallback(async () => '', []);
-
   const contextIntro = useMemo(() => {
     if (!reflectionData) return null;
     const struggling = objectives.find(
       o =>
         reflectionData.objectiveReflections[o.id] === 'lost' ||
-        reflectionData.objectiveReflections[o.id] === 'unsure'
+        reflectionData.objectiveReflections[o.id] === 'unsure',
     );
     if (struggling) {
       return `In your reflection, you said ${struggling.description.toLowerCase()} was giving you trouble. Want to start there, or is there something else on your mind?`;
@@ -71,7 +80,7 @@ const Chat: FC<ChatProps> = ({
       prompt += `\nAssessment question results:\n${JSON.stringify(
         assessmentAnalysis,
         null,
-        2
+        2,
       )}`;
     }
     return prompt;
@@ -102,14 +111,7 @@ const Chat: FC<ChatProps> = ({
       )}
 
       <div className={styles.chatPanel}>
-        <AiTutorChat
-          hiddenContextCallback={hiddenContextCallback}
-          aiTutorSystemPrompt={getSystemPrompt()}
-          aiTutorChatButtonData={[]}
-          isLessonDeepDive={true}
-          levelId={null}
-          lessonId={lessonId}
-        />
+        <TutorChat systemPrompt={getSystemPrompt()} lessonId={lessonId} />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import {
   FizzyButton,
+  InterventionBox,
   LessonSummaryCard,
   LevelsAttemptedBox,
   NextStepPicker,
@@ -16,11 +17,15 @@ import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
 import {useLessonDeepDiveChallengesEnabled} from '@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled';
+import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
-import InterventionBox from './ReviewModalities/InterventionBox';
+import TutorChat from './ReviewModalities/TutorChat';
 import SkillsCheck from './SkillsCheck/SkillsCheck';
 import {LessonDeepDiveData} from './types';
 
@@ -261,6 +266,21 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     [lessonDeepDiveData.objectives]
   );
 
+  const userId = useAppSelector(state => state.currentUser.userId);
+  const reportModalityClick = useCallback(
+    (modality: string) =>
+      analyticsReporter.sendEvent(
+        EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
+        {
+          modality,
+          lessonId: lessonDeepDiveData.lessonId,
+          lessonName: lessonDeepDiveData.lessonName,
+          userId,
+        }
+      ),
+    [lessonDeepDiveData.lessonId, lessonDeepDiveData.lessonName, userId]
+  );
+
   if (!experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR)) {
     return null;
   }
@@ -403,6 +423,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
               nextStepChoice === 'challenge' ? 'challenge' : null
             }
             challengeEnabled={challengesEnabled}
+            VideoPlayer={TutorVideo}
+            TutorChat={TutorChat}
+            onModalitySelected={reportModalityClick}
             onDone={goToNext}
           />
         );

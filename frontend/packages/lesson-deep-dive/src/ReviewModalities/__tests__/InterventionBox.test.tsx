@@ -1,38 +1,22 @@
-import {render, screen, fireEvent} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {fireEvent, render, screen} from '@testing-library/react';
+import {vi} from 'vitest';
 
-import InterventionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import InterventionBox from '../InterventionBox';
 
 // The modality content components pull in heavy dependencies (audio, video,
-// chat, redux) that are irrelevant to the navigation behavior under test, so
+// chat) that are irrelevant to the navigation behavior under test, so
 // each is replaced with a lightweight marker whose text we can assert on.
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/Chat',
-  () => () => <div>chat content</div>
-);
-jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  Challenges: () => <div>challenge content</div>,
-  PodcastsBox: () => <div>podcasts content</div>,
-  VideosBox: () => <div>videos content</div>,
-  VocabularyFlashcards: () => <div>flashcards content</div>,
+vi.mock('../Chat', () => ({default: () => <div>chat content</div>}));
+vi.mock('../../ChallengeActivities/Challenges', () => ({
+  default: () => <div>challenge content</div>,
+}));
+vi.mock('../PodcastsBox', () => ({default: () => <div>podcasts content</div>}));
+vi.mock('../VideosBox', () => ({default: () => <div>videos content</div>}));
+vi.mock('../VocabularyFlashcards', () => ({
+  default: () => <div>flashcards content</div>,
 }));
 
-const mockUserId = 7;
-jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
-  useAppSelector: () => mockUserId,
-}));
-
-jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
-  __esModule: true,
-  default: {sendEvent: jest.fn()},
-}));
-
-const sendEventMock = analyticsReporter.sendEvent as jest.Mock;
+const Empty = () => null;
 
 const LESSON_ID = 42;
 const LESSON_NAME = 'Variables';
@@ -40,12 +24,14 @@ const LESSON_NAME = 'Variables';
 interface RenderOpts {
   focusTopic?: string;
   challengeEnabled?: boolean;
+  onModalitySelected?: (modality: string) => void;
   onDone?: () => void;
 }
 
 function renderInterventionBox({
   focusTopic,
   challengeEnabled = true,
+  onModalitySelected,
   onDone,
 }: RenderOpts = {}) {
   render(
@@ -60,47 +46,39 @@ function renderInterventionBox({
       reflectionData={null}
       focusTopic={focusTopic}
       challengeEnabled={challengeEnabled}
+      VideoPlayer={Empty}
+      TutorChat={Empty}
+      onModalitySelected={onModalitySelected}
       onDone={onDone}
-    />
+    />,
   );
 }
 
 describe('InterventionBox', () => {
-  beforeEach(() => {
-    sendEventMock.mockReset();
-  });
-
   it('Does not list the Challenge option when challenges are disabled', () => {
     renderInterventionBox({challengeEnabled: false});
     expect(
-      screen.queryByRole('button', {name: /I want a challenge instead/i})
+      screen.queryByRole('button', {name: /I want a challenge instead/i}),
     ).not.toBeInTheDocument();
   });
 
   it('lists the Challenge option in the practice menu', () => {
     renderInterventionBox();
     expect(
-      screen.getByRole('button', {name: /I want a challenge instead/i})
+      screen.getByRole('button', {name: /I want a challenge instead/i}),
     ).toBeInTheDocument();
   });
 
   it('renders Challenges and reports the click when the Challenge link is clicked', () => {
-    renderInterventionBox();
+    const onModalitySelected = vi.fn();
+    renderInterventionBox({onModalitySelected});
 
     fireEvent.click(
-      screen.getByRole('button', {name: /I want a challenge instead/i})
+      screen.getByRole('button', {name: /I want a challenge instead/i}),
     );
 
     expect(screen.getByText('challenge content')).toBeInTheDocument();
-    expect(sendEventMock).toHaveBeenCalledWith(
-      EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
-      {
-        modality: 'challenge',
-        lessonId: LESSON_ID,
-        lessonName: LESSON_NAME,
-        userId: mockUserId,
-      }
-    );
+    expect(onModalitySelected).toHaveBeenCalledWith('challenge');
   });
 
   it('shows personalised subtext when focusTopic is provided', () => {
@@ -109,11 +87,11 @@ describe('InterventionBox', () => {
     // both the prefix and the suffix.
     const subtext = screen.getByText(/Based on your reflection/i);
     expect(subtext).toHaveTextContent(
-      'Based on your reflection, we\'ll start with "variables and scope". You can work any way you like from here.'
+      'Based on your reflection, we\'ll start with "variables and scope". You can work any way you like from here.',
     );
     // The topic itself is wrapped in <strong>.
     expect(screen.getByText('variables and scope').tagName.toLowerCase()).toBe(
-      'strong'
+      'strong',
     );
   });
 
@@ -126,10 +104,10 @@ describe('InterventionBox', () => {
   it('shows fallback subtext when focusTopic is not provided', () => {
     renderInterventionBox();
     expect(
-      screen.getByText('You can work any way you like from here.')
+      screen.getByText('You can work any way you like from here.'),
     ).toBeInTheDocument();
     expect(
-      screen.queryByText(/Based on your reflection/)
+      screen.queryByText(/Based on your reflection/),
     ).not.toBeInTheDocument();
   });
 
@@ -153,7 +131,9 @@ describe('InterventionBox', () => {
           reflectionData={null}
           initialSelection="challenge"
           challengeEnabled
-        />
+          VideoPlayer={Empty}
+          TutorChat={Empty}
+        />,
       );
       expect(screen.getByText('challenge content')).toBeInTheDocument();
       expect(screen.queryByText("Let's get to work")).not.toBeInTheDocument();
@@ -164,17 +144,17 @@ describe('InterventionBox', () => {
     it('is absent on the initial choice grid', () => {
       renderInterventionBox();
       expect(
-        screen.queryByRole('navigation', {name: 'Modality navigation'})
+        screen.queryByRole('navigation', {name: 'Modality navigation'}),
       ).not.toBeInTheDocument();
     });
 
     it('does not appear when the challenge modality is selected', () => {
       renderInterventionBox();
       fireEvent.click(
-        screen.getByRole('button', {name: /I want a challenge instead/i})
+        screen.getByRole('button', {name: /I want a challenge instead/i}),
       );
       expect(
-        screen.queryByRole('navigation', {name: 'Modality navigation'})
+        screen.queryByRole('navigation', {name: 'Modality navigation'}),
       ).not.toBeInTheDocument();
     });
 
@@ -188,7 +168,7 @@ describe('InterventionBox', () => {
       fireEvent.click(screen.getByRole('button', {name: cardLabel}));
       expect(screen.getByText(contentMarker)).toBeInTheDocument();
       expect(
-        screen.getByRole('navigation', {name: 'Modality navigation'})
+        screen.getByRole('navigation', {name: 'Modality navigation'}),
       ).toBeInTheDocument();
     });
 
@@ -196,13 +176,13 @@ describe('InterventionBox', () => {
       renderInterventionBox();
       fireEvent.click(screen.getByRole('button', {name: /Watch a video/i}));
       expect(
-        screen.getByRole('navigation', {name: 'Modality navigation'})
+        screen.getByRole('navigation', {name: 'Modality navigation'}),
       ).toBeInTheDocument();
 
       fireEvent.click(screen.getByRole('button', {name: /Home/i}));
 
       expect(
-        screen.queryByRole('navigation', {name: 'Modality navigation'})
+        screen.queryByRole('navigation', {name: 'Modality navigation'}),
       ).not.toBeInTheDocument();
       expect(screen.getByText("Let's get to work")).toBeInTheDocument();
     });
@@ -220,20 +200,20 @@ describe('InterventionBox', () => {
     it('marks the active modality tab with aria-current', () => {
       renderInterventionBox();
       fireEvent.click(
-        screen.getByRole('button', {name: /Listen to a podcast/i})
+        screen.getByRole('button', {name: /Listen to a podcast/i}),
       );
 
       expect(screen.getByRole('button', {name: /^Podcast$/i})).toHaveAttribute(
         'aria-current',
-        'page'
+        'page',
       );
       expect(
-        screen.getByRole('button', {name: /^Video$/i})
+        screen.getByRole('button', {name: /^Video$/i}),
       ).not.toHaveAttribute('aria-current');
     });
 
     it('Done button calls onDone when clicked', () => {
-      const onDone = jest.fn();
+      const onDone = vi.fn();
       renderInterventionBox({onDone});
       fireEvent.click(screen.getByRole('button', {name: /Watch a video/i}));
 
@@ -246,7 +226,7 @@ describe('InterventionBox', () => {
       renderInterventionBox();
       fireEvent.click(screen.getByRole('button', {name: /Watch a video/i}));
       expect(
-        screen.queryByRole('button', {name: /Done/i})
+        screen.queryByRole('button', {name: /Done/i}),
       ).not.toBeInTheDocument();
     });
   });

@@ -1,28 +1,31 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  Challenges,
-  PodcastsBox,
-  ReflectionData,
-  VideosBox,
-  VocabularyFlashcards,
-} from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
-import React, {FC, useCallback, useState} from 'react';
+import {type FC, useCallback, useState} from 'react';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
+import Challenges from '../ChallengeActivities/Challenges';
 import {
-  LessonDeepDiveData,
-  AssessmentQuestionResult,
-} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
-import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+  type AssessmentQuestionResult,
+  type JsonVideoData,
+  type LessonObjective,
+  type ReflectionData,
+} from '../types';
 
-import Chat from './Chat';
+import Chat, {type TutorChatComponent} from './Chat';
+import PodcastsBox from './PodcastsBox';
+import VideosBox, {type VideoPlayerComponent} from './VideosBox';
+import VocabularyFlashcards, {
+  type VocabularyItem,
+} from './VocabularyFlashcards';
 
 import styles from './intervention-box.module.scss';
 
-type CardId = 'flashcards' | 'chat' | 'videos' | 'podcasts' | 'challenge';
+export type CardId =
+  | 'flashcards'
+  | 'chat'
+  | 'videos'
+  | 'podcasts'
+  | 'challenge';
 
 // Modalities that show the bottom nav bar (excludes the choice grid and challenge).
 const REVIEW_MODALITY_IDS = new Set<CardId>([
@@ -84,14 +87,17 @@ interface InterventionBoxProps {
   lessonId: number;
   lessonName: string;
   lessonSummary: string;
-  vocabulary: LessonDeepDiveData['vocabulary'];
+  vocabulary: VocabularyItem[];
   assessmentAnalysis: AssessmentQuestionResult[];
-  objectives: LessonDeepDiveData['objectives'];
-  jsonVideos: LessonDeepDiveData['jsonVideos'];
+  objectives: LessonObjective[];
+  jsonVideos: JsonVideoData[];
   reflectionData: ReflectionData | null;
   focusTopic?: string;
   initialSelection?: CardId | null;
   challengeEnabled: boolean;
+  VideoPlayer: VideoPlayerComponent;
+  TutorChat: TutorChatComponent;
+  onModalitySelected?: (modality: CardId) => void;
   onDone?: () => void;
 }
 
@@ -107,25 +113,19 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   focusTopic,
   initialSelection = null,
   challengeEnabled,
+  VideoPlayer,
+  TutorChat,
+  onModalitySelected,
   onDone,
 }) => {
   const [selected, setSelected] = useState<CardId | null>(initialSelection);
-  const userId = useAppSelector(state => state.currentUser.userId);
 
   const handleCardSelect = useCallback(
     (cardId: CardId) => {
       setSelected(cardId);
-      analyticsReporter.sendEvent(
-        EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
-        {
-          modality: cardId,
-          lessonId,
-          lessonName,
-          userId,
-        }
-      );
+      onModalitySelected?.(cardId);
     },
-    [lessonId, lessonName, userId]
+    [onModalitySelected],
   );
 
   const showNavBar = selected !== null && REVIEW_MODALITY_IDS.has(selected);
@@ -185,6 +185,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
         )}
         {selected === 'chat' && (
           <Chat
+            TutorChat={TutorChat}
             lessonId={lessonId}
             lessonName={lessonName}
             lessonSummary={lessonSummary}
@@ -201,7 +202,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           />
         )}
         {selected === 'videos' && (
-          <VideosBox jsonVideos={jsonVideos} VideoPlayer={TutorVideo} />
+          <VideosBox jsonVideos={jsonVideos} VideoPlayer={VideoPlayer} />
         )}
         {selected === 'podcasts' && (
           <PodcastsBox
