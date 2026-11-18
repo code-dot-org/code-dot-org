@@ -1,20 +1,10 @@
 # Examples
 
-Comments from this repo that a reviewer flagged, or that a cold read caught before review. Each shows the test it failed and what replaced it. The first six are from one review, on #77132.
+Comments from this repo that were flagged, grouped by verdict, with what replaced each. The ones with a "Reviewer:" line come from one review, on #77132. The others were flagged by a reader before review.
 
-## Delete
+## DELETE
 
-A doc on a callback prop that describes the caller. Reviewer: "unnecessary comment".
-
-```ts
-/** Called when a generation onGenerate announced ends with no picture,
-    unless it was refused for safety. */
-onGenerateFailed?: () => void;
-```
-
-Removed. The prop's name says when it is called.
-
-A comment that says what the `if` under it says. Reviewer: "unnecessary comment".
+A comment that says what the lines under it say. Reviewer: "unnecessary comment".
 
 ```ts
 // A picture that was not saved is not an image of the project, so
@@ -26,7 +16,7 @@ if (!saved) {
 }
 ```
 
-Removed.
+Removed. `saved`, `onGenerateFailed` and `setMode('edit')` already say that the picture was not saved and the scene goes back to editing.
 
 A comment that restates the declarations under it.
 
@@ -41,22 +31,23 @@ A comment that restates the declarations under it.
 
 Removed.
 
-## Unclear
+## UNCLEAR
 
-An actor and a verb the reader has never met. Reviewer: "what is 'before the host holds it back'?"
+A name for something the file never introduces, and a figure of speech. Reviewer: "what is 'before the host holds it back'?"
 
 ```ts
 // The picture is stored before the host holds it back, so that
 // leaving the page during the wait does not lose it.
 const saved = await persist(entry, null);
+...
+await onReady?.(entry.result);
 ```
 
-Better, naming the thing in the code that waits:
+Better. It names the call that waits:
 
 ```ts
-// Save before `onReady`, which can wait before the picture is shown,
-// so the picture is not lost if the student leaves the page during
-// that wait.
+// Save before `onReady`, which may not return for a while, so the
+// picture is not lost if the student leaves the page during that wait.
 ```
 
 A pointing phrase. Reviewer: "confusing comment (especially second sentence)".
@@ -66,14 +57,14 @@ A pointing phrase. Reviewer: "confusing comment (especially second sentence)".
 // again from. The flags above belong to the drawing open now.
 ```
 
-Better:
+Better. The second sentence is gone, because nothing under the comment needed it:
 
 ```ts
 // This failed save was for a drawing that is no longer open, so
 // there is nothing to retry.
 ```
 
-Words left out until the sentence does not parse.
+A vague phrase standing in for the thing it means.
 
 ```ts
 // The tools open one frame of a character set, and all of anything else.
@@ -86,33 +77,27 @@ Better:
 // picture otherwise.
 ```
 
-A comment that can be read two ways.
-
-```scss
-// The panel is the color of the lab's other dialogs in the dark theme.
-background-color: var(--background-neutral-primary);
-```
-
-Better, saying what is overridden and where it applies:
-
-```scss
-// chrome.panel is a lighter gray in the dark theme. This matches the
-// lab's other dialogs, and changes nothing in the light theme.
-```
-
-## History
+## HISTORY
 
 Reviewer: "comment that refers to old behavior".
 
 ```ts
 // A picture is saved as a file the project points at, never inside the
 // project itself, so a file that cannot be uploaded is a failed save.
-const upload = useCallback(...
+const upload = useCallback(
+  (filename: string, bytes: Uint8Array, mediaType: string) => {
+    if (!uploadImage) {
+      throw new Error('no uploader for this project');
+    }
+    return uploadImage(filename, bytes, mediaType);
+  },
+  [uploadImage]
+);
 ```
 
-Removed. "Never inside the project itself" is there only because an earlier version did save it inside the project. That belongs in the PR description.
+Removed. "Never inside the project itself" says what the code does not do. It was there because an earlier version did save the picture inside the project, and that belongs in the PR description. The `throw` shows that a failed upload fails the save.
 
-## Rename
+## RENAME
 
 Neither the comment nor the name says what happens. Reviewer: "this comment plus function name are really hard to parse".
 
@@ -131,33 +116,56 @@ Better:
 const subtractFailedGeneration = useCallback(
 ```
 
-The first replacement name was `uncountFailedGeneration`. "Uncount" is not a word, and it was changed again. Use dictionary words.
+The first replacement was `uncountFailedGeneration`. "Uncount" is not a word, and the name was changed a second time.
 
-A name coined in the session, with a comment to explain it.
+A made-up name, with a comment to explain it.
 
 ```ts
-// The variants found most recently in one folder, oldest first.
+// The variants found most recently in one folder, oldest first. A variant
+// found in another folder replaces the whole entry.
 let heldBack: {folder: string; variants: number[]} | undefined;
 ```
 
-Better. The comment already had the right words:
+Better. The name takes its words from the comment, and the comment stays for the two facts the name does not give:
 
 ```ts
+// The variants found most recently in one folder, oldest first. Finding a
+// variant in another folder starts the list again.
 let recentlyFound: {folder: string; variants: number[]} | undefined;
 ```
 
-## A rewording that made it worse
+## RULE
 
-The first fix for a doc the reviewer had questioned:
+"Don't describe callers or call sites" (`apps/src/AGENTS.md`). Reviewer: "unnecessary comment".
+
+```ts
+/** Called when a generation onGenerate announced ends with no picture,
+    unless it was refused for safety. */
+onGenerateFailed?: () => void;
+```
+
+Removed. The name says when it is called. The exception for a safety refusal is visible at the one place that calls it.
+
+## Checking a rewording
+
+A doc that a reviewer had questioned:
+
+```ts
+/** False updates the picture on screen without uploading the file, so
+    the saved project still points at the last file uploaded; a new image
+    is always uploaded, since it has no file yet. */
+upload?: boolean;
+```
+
+The first rewording:
 
 ```ts
 /** False updates the picture on screen and skips the file upload, which
     a later save makes. A new image is uploaded regardless, since it has
     no file yet. */
-upload?: boolean;
 ```
 
-"Which a later save makes" is awkward, and the second sentence seems to contradict the first. Better, with the default first and the exception stated as an exception:
+"Which a later save makes" is awkward, and the second sentence reads as a contradiction of the first. The second rewording puts the default first and states the exception as an exception:
 
 ```ts
 /** Whether this save uploads the picture's file. Defaults to true. False

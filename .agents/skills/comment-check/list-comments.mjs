@@ -1,59 +1,91 @@
 #!/usr/bin/env node
-// Lists the comment lines a branch adds or changes, with file and line, so
-// that each one can be read. Run from anywhere inside the repo:
+// Lists the comment lines that the checked-out branch adds or changes, with
+// file and line, so that each one can be read. Run it inside the repo:
 //
 //   node .agents/skills/comment-check/list-comments.mjs [base]
 //
-// `base` defaults to origin/staging. Changes not yet committed are included,
-// except in a file git does not track yet.
-//
-// The scan is by line, not by parser. It finds whole-line comments and the
-// lines of block comments. It misses a comment that follows code on the
-// same line.
+// Each line is matched against a pattern; the files are not parsed. In a
+// file with "//" comments it finds whole-line comments and block comments.
+// In a file with "#" comments it finds whole-line comments only. It misses
+// a comment that follows code on the same line, and it can list a line of
+// a string that looks like a comment.
 
 import {execFileSync} from 'node:child_process';
 import {existsSync, readFileSync} from 'node:fs';
 import path from 'node:path';
 
-const SLASH_STYLE = /\.(js|jsx|ts|tsx|mjs|cjs|scss|css)$/;
-const HASH_STYLE = /\.(rb|rake|py|sh|yml|yaml)$/;
+const DEFAULT_BASE = 'origin/staging';
+const SLASH_COMMENT_FILES = /\.(js|jsx|ts|tsx|mjs|cjs|scss|css)$/;
+const HASH_COMMENT_FILES = /(\.(rb|rake|py|sh|yml|yaml|feature)|\/?(Rakefile|Gemfile))$/;
+// Documents, data and pictures, which have no code comments to list.
+const NOT_CODE_FILES = /\.(md|json|svg|png|gif|jpg|jpeg|csv|txt|lock|level)$/;
 
 const git = (...args) =>
-  execFileSync('git', args, {encoding: 'utf8', maxBuffer: 1 << 28});
+  execFileSync('git', args, {
+    encoding: 'utf8',
+    maxBuffer: 1 << 28,
+    stdio: ['ignore', 'pipe', 'pipe'],
+  });
 
-const base = process.argv[2] || 'origin/staging';
-const root = git('rev-parse', '--show-toplevel').trim();
-const mergeBase = git('merge-base', base, 'HEAD').trim();
-
-/** Added line numbers by file, from a diff with no context lines. */
-function addedLines() {
-  const diff = git('-C', root, 'diff', '--unified=0', '--no-color', mergeBase);
-  const byFile = new Map();
-  let file = null;
-  for (const line of diff.split('\n')) {
-    if (line.startsWith('+++ ')) {
-      file = line.startsWith('+++ b/') ? line.slice(6) : null;
-      continue;
-    }
-    const hunk = /^@@ -\S+ \+(\d+)(?:,(\d+))? @@/.exec(line);
-    if (hunk && file) {
-      const start = Number(hunk[1]);
-      const count = hunk[2] === undefined ? 1 : Number(hunk[2]);
-      const lines = byFile.get(file) ?? new Set();
-      for (let i = 0; i < count; i++) {
-        lines.add(start + i);
-      }
-      byFile.set(file, lines);
-    }
-  }
-  return byFile;
+const base = process.argv[2] || DEFAULT_BASE;
+let root;
+let mergeBase;
+try {
+  root = git('rev-parse', '--show-toplevel').trim();
+  mergeBase = git('merge-base', base, 'HEAD').trim();
+} catch {
+  console.error(
+    `Cannot compare with "${base}". Run this inside the repo, with a base` +
+      ' that exists (try `git fetch origin`).'
+  );
+  process.exit(1);
 }
 
-/** The numbers of the lines of `text` that are comments. */
-function commentLines(file, text) {
+// Files not yet tracked by git are left out; changes not yet committed to
+// tracked files are included.
+const changedFiles = git(
+  '-C',
+  root,
+  'diff',
+  '--name-only',
+  '--no-renames',
+  '--diff-filter=AM',
+  '-z',
+  mergeBase
+)
+  .split('\0')
+  .filter(Boolean);
+
+function addedLineNumbers(file) {
+  const diff = git(
+    '-C',
+    root,
+    'diff',
+    '--unified=0',
+    '--no-color',
+    '--no-ext-diff',
+    '--no-renames',
+    mergeBase,
+    '--',
+    file
+  );
+  const added = new Set();
+  for (const line of diff.split('\n')) {
+    const hunk = /^@@ -\S+ \+(\d+)(?:,(\d+))? @@/.exec(line);
+    if (hunk) {
+      const start = Number(hunk[1]);
+      const count = hunk[2] === undefined ? 1 : Number(hunk[2]);
+      for (let i = 0; i < count; i++) {
+        added.add(start + i);
+      }
+    }
+  }
+  return added;
+}
+
+function commentLineNumbers(file, lines) {
   const found = new Set();
-  const lines = text.split('\n');
-  if (HASH_STYLE.test(file)) {
+  if (HASH_COMMENT_FILES.test(file)) {
     lines.forEach((line, i) => {
       if (/^\s*#(?!!)/.test(line)) {
         found.add(i + 1);
@@ -72,47 +104,56 @@ function commentLines(file, text) {
       found.add(i + 1);
       return;
     }
-    // A block comment opens at the start of a line or after a space, brace
-    // or parenthesis. A glob such as 'src/**/*.ts' does not open one.
+    // "/*" starts a block comment here only at the start of a line or after
+    // a space, "{" or "(", so that a glob such as 'src/**/*.ts' does not.
     const open = /(^|[\s{(])\/\*/.exec(line);
     if (open) {
-      const rest = line.slice(open.index + open[0].length);
       if (/^\s*(\{\s*)?\/\*/.test(line)) {
         found.add(i + 1);
       }
-      inBlock = !rest.includes('*/');
+      const afterOpen = line.slice(open.index + open[0].length);
+      inBlock = !afterOpen.includes('*/');
     }
   });
   return found;
 }
 
-let addedTotal = 0;
 let commentTotal = 0;
-const report = [];
-for (const [file, added] of addedLines()) {
+let filesWithComments = 0;
+const notScanned = [];
+for (const file of changedFiles) {
   const absolute = path.join(root, file);
-  if (
-    !(SLASH_STYLE.test(file) || HASH_STYLE.test(file)) ||
-    !existsSync(absolute)
-  ) {
+  if (!existsSync(absolute)) {
     continue;
   }
-  const text = readFileSync(absolute, 'utf8');
-  const lines = text.split('\n');
-  const comments = commentLines(file, text);
-  addedTotal += added.size;
-  const hits = [...added].filter(n => comments.has(n)).sort((a, b) => a - b);
-  commentTotal += hits.length;
+  if (NOT_CODE_FILES.test(file)) {
+    continue;
+  }
+  if (!(SLASH_COMMENT_FILES.test(file) || HASH_COMMENT_FILES.test(file))) {
+    notScanned.push(file);
+    continue;
+  }
+  const lines = readFileSync(absolute, 'utf8').split('\n');
+  const comments = commentLineNumbers(file, lines);
+  const hits = [...addedLineNumbers(file)]
+    .filter(n => comments.has(n))
+    .sort((a, b) => a - b);
   if (hits.length) {
-    report.push(
-      `\n${file}`,
-      ...hits.map(n => `  ${String(n).padStart(5)}: ${lines[n - 1].trim()}`)
-    );
+    commentTotal += hits.length;
+    filesWithComments += 1;
+    console.log(`\n${file}`);
+    for (const n of hits) {
+      console.log(`  ${String(n).padStart(5)}: ${lines[n - 1].trim()}`);
+    }
   }
 }
 
-console.log(report.join('\n'));
 console.log(
-  `\n${commentTotal} comment lines in ${addedTotal} added lines` +
-    ` (against ${base}, merge base ${mergeBase.slice(0, 11)}).`
+  `\nComment lines added or changed, against ${base}: ${commentTotal},` +
+    ` in ${filesWithComments} file(s).`
 );
+if (notScanned.length) {
+  console.log(
+    `Changed files of other types, not scanned: ${notScanned.join(', ')}`
+  );
+}

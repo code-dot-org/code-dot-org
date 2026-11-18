@@ -1,52 +1,53 @@
 ---
 name: comment-check
 description: >-
-  Check the code comments and new names a branch adds, by having a reader
-  with no knowledge of the session read them cold. Use before pushing a
-  branch or opening a PR, again after any later commit that adds or changes
-  comments (review fixes included), and when asked to check a change against
+  Check the code comments a branch adds or changes, and the names those
+  comments explain, by having someone who has not seen the change read them.
+  Use before any push that adds or changes a comment, including a push of
+  review fixes, and as the comment part of any review of a change against
   the repo's standards. Not for writing documentation or PR descriptions.
 ---
 
 # Comment check
 
-The comment rules are in the root `AGENTS.md` and `apps/src/AGENTS.md`. This skill does not add rules. It is the check that the rules were followed.
+The comment rules are in the root `AGENTS.md` and in `apps/src/AGENTS.md`. This skill is the check that they were followed.
 
-The check exists because the author cannot do it alone. After a long session you know what "the host", "the copy" and "held back" mean, so a comment that uses them reads fine to you. A reviewer has only the file.
+The author cannot do this check alone. The author knows the names made up along the way, such as "the host", so a comment that uses them reads fine to the author. A reviewer has only the file.
+
+The check needs a **reader**: someone who has not seen the change or the conversation that produced it. For a coding agent, the reader is a subagent started without the agent's conversation. For a person, the reader is a colleague.
 
 ## When to run it
 
-- Before the first push of a branch.
-- After every later commit that adds or changes a comment or a name, including the commit that fixes review feedback. A check covers the commit it ran on and nothing after.
-- When the user asks for a standards check.
+Before any push that adds or changes a comment. That includes a push of review fixes: a check covers the commits it read and nothing after them.
 
 ## Steps
 
-1. **List.** Run `node .agents/skills/comment-check/list-comments.mjs [base]` (base defaults to `origin/staging`). It prints every comment line the branch adds or changes, and how many there are among the added lines. `apps/src/AGENTS.md` says to default to no comment, so a large share means most of the fixes will be deletions.
+1. **Commit, then list.** The reader sees committed work only. Run `node .agents/skills/comment-check/list-comments.mjs [base]` (base defaults to `origin/staging`). It prints the comment lines the branch adds or changes, and their count. If it prints none, stop here.
 
-2. **Cold read.** Start a subagent with fresh context and give it `reader-brief.md` from this directory, with the branch name filled in. It must read the diff from git itself. Do not give it your summary of the change, your explanation of any term, or your own opinion of which comments are fine. If you cannot start a subagent, apply the four tests in `reader-brief.md` yourself, and say in your report that no outside reader was used.
+2. **Hand over.** Give the reader the text below the line in `reader-brief.md`, with `<branch>` and `<base>` filled in. Let the reader run `git diff` itself. Do not paste the diff, a summary of the change, the meaning of any term, or your opinion of which comments are fine. If no reader is available, apply the tests in the brief yourself, and say in your report that the author was the only reader.
 
-3. **Verify each flag.** The reader can be wrong. A term it did not know may be defined at the top of the file (`git grep` for it). A comment it called deletable may carry a reason that the code does not show.
+3. **Compare.** The reader's flags plus its count of FINE comments should cover the comments in the list from step 1. Ask about any it skipped.
 
-4. **Fix, in this order of preference.**
-   - Delete the comment.
-   - Change the name the comment was explaining, and then delete the comment.
-   - Reword it in plain, literal words.
+4. **Fix each flag.** `examples.md` has flagged comments and what replaced them. Read it first.
+   - DELETE: remove the comment.
+   - RENAME: change the name. Then remove the comment, unless it still states a fact the new name does not.
+   - UNCLEAR: reword it in plain, literal words. Do not fix it by shortening it. Clear comes before short: a comment that is needed may take a second sentence, and still states one fact.
+   - HISTORY: remove the part about the past. It belongs in the PR description.
+   - RULE: follow the rule the reader quoted.
 
-   Do not shorten an unclear comment. Shorter and still unclear is worse. Either it goes, or it says the fact in full.
+   Leave a flag unfixed only when you can point to the line in the file that defines the term, or to the fact that the comment states and the code does not.
 
-5. **Read each rewording once more.** Every word in a name or a comment is a dictionary word, or an identifier that exists in the code. Two sentences in one comment do not contradict each other. Nothing in it describes what the code used to do.
+5. **Check each rewording.**
+   - Every word in it is a dictionary word, an identifier that exists in the code, or a term the codebase already uses.
+   - Its sentences do not contradict each other.
+   - Nothing in it describes what the code used to do.
 
-6. **Run step 1 again** after the fixes, then lint and test as for any change.
+6. **Commit the fixes, and check them once.** If you reworded a comment or changed a name, repeat steps 2 to 5 with `<base>` set to the commit before the fixes, so that the reader reads only the fixes. Use a new reader. Lint and test as for any change; a rename also needs a typecheck.
 
-7. **Report.** One line: the commit checked, how many comments were flagged, how many were fixed, and any flag left alone with its reason.
-
-## What gets flagged
-
-`examples.md` has real comments that a reviewer flagged, each with the test it fails and what replaced it. Read it before fixing, not only when a flag is unclear.
+7. **Report** to the person you are working for: the last commit that was read, how many comments were flagged, how many were fixed, each flag left alone with its reason, each rename, and who the reader was.
 
 ## Limits
 
-- `list-comments.mjs` scans by line. It misses a comment that follows code on the same line.
-- A rename is a code change. Typecheck and test it, and name it in the commit message and the report.
-- This is a check on comments and names. It does not review the code's behavior.
+- `list-comments.mjs` matches lines against patterns. Its first lines say what it misses.
+- A name is read only where a comment explains it. A made-up name with no comment is not caught.
+- This is a check on comments and names. It does not review what the code does.

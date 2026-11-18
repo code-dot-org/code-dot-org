@@ -1,27 +1,31 @@
-# Brief for the cold reader
+# Brief for the reader
 
-Give the reader this text, with `<branch>` and `<base>` filled in. Add nothing about what the change does.
+Give the reader the text below the line, with `<branch>` and `<base>` filled in. Add nothing about what the change does.
 
 ---
 
-Read-only task in this git repository. Do not check out branches, edit files, commit or push. Use `git diff`, `git show` and `git grep <pattern> <ref> -- <path>`.
+Read-only task in this git repository. Do not check out branches, edit files, commit or push.
 
-Look at every comment line that `<branch>` adds or changes against `<base>` (`git diff <base>...<branch>`, with enough context to read the code under each comment), in source, tests and stylesheets. Look also at the names of the functions, constants, props and CSS classes the branch adds, where a comment exists mainly to explain the name.
+Use only `git diff <base>...<branch>`, `git show <branch>:<path>` and `git grep <pattern> <branch> -- <path>`. You may read any file at the branch ref. Do not read commit messages or the PR description: they explain the change, and the comments have to work without them.
 
-You are an engineer who knows this codebase in general and has never seen this change, its author or the discussion behind it. Judge each comment by these tests, in order, and stop at the first one it fails:
+Read `.agents/skills/comment-check/examples.md` at the branch ref first, or at `origin/staging` if the branch does not have it. It shows comments that were flagged before.
 
-1. **Delete.** If the comment were removed, would a reader lose a fact that the code and names right there do not already give? If not, the verdict is DELETE. A doc on a callback prop that describes what the caller does, a comment that says what the next line says, and a comment that explains how the framework works all fail here.
+Then look at every comment that `<branch>` adds or changes against `<base>`, in source files, tests and stylesheets, with enough context to read the code under each one. Skip Markdown and other documents. A comment is one block of consecutive comment lines. Where a comment exists mainly to explain a name the branch adds (a function, constant, prop or CSS class), look at the name too.
 
-2. **Cold read.** Can you parse it on the first read? Flag a word the author seems to have coined, a figure of speech, a sentence compressed until words are missing, a pointing phrase ("the flags above", "that one"), and an actor the file never introduces ("the host"). Before flagging a term, check with `git grep` at the branch ref whether the file defines it elsewhere. The verdict is UNCLEAR. Say exactly which words stopped you.
+You have not seen this change, its author or the discussion behind it. Give each comment the first of these verdicts that applies. If two sentences of one comment get different verdicts, report them separately.
 
-3. **History.** Does it describe earlier behavior, the change itself, or the story of a bug, and not what the code does now and why? The verdict is HISTORY.
+1. **DELETE.** Does the comment state a fact that the code and names next to it do not? If it does not, delete it. Examples: a doc on a callback prop that only says when it is called, a comment that says what the next line says, and a comment that explains how the framework works.
 
-4. **Name.** Is the comment there because the name under it is vague, or is not a real word? The verdict is RENAME, with a suggested name.
+2. **UNCLEAR.** Could you parse it on the first read? Flag a made-up word, a figure of speech, a vague phrase standing in for the thing it means, a pointing phrase ("the flags above", "that one"), and a name for something the file never introduces ("the host"). Before flagging a term, check with `git grep` whether the file defines it elsewhere. Say exactly which words stopped you.
 
-A comment that passes all four is FINE. Do not list those; give a count.
+3. **HISTORY.** Does it describe earlier behavior, the change itself, or the story of a bug? A comment that says what the code does not do is usually about an earlier version.
 
-The repo's own rules are in `AGENTS.md` at the root and in `apps/src/AGENTS.md`. Apply what they say about comments too. Comments use American spelling and full, plain sentences.
+4. **RENAME.** Is the comment there because the name under it is vague, or uses a made-up word? Suggest a name.
 
-Be specific, not generous. Fifteen real flags are worth more than sixty marginal ones, but do not hold a flag back because the author would probably understand the comment. A real reason stated plainly is FINE even when it is long.
+5. **RULE.** Does it break another comment rule in `AGENTS.md` at the root or in `apps/src/AGENTS.md`, such as describing callers, or not being true to the code under it? Quote the rule.
+
+A comment that gets none of these is FINE. Do not list those; give a count.
+
+Flag what would stop a reviewer. Do not hold a flag back because the author would probably understand the comment. Do not flag a comment only for being long: a real reason, stated plainly, is FINE.
 
 Report, for each flag: `path:line` in the file at the branch ref, the comment quoted, the verdict, one sentence of reason, and for UNCLEAR and RENAME a suggested plain rewording or name. End with the count of FINE comments. Your final message is all the author receives.
