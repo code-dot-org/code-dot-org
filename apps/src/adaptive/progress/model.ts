@@ -58,8 +58,10 @@ export function generateInputsHash(prompt: string): string {
 
 /** Why the chat alone opened Continue on a checked step. */
 export type SkipReason =
+  /** A judge read the chat and found the student genuinely trying. */
+  | 'effortDemonstrated'
   /** The chat reached the reply limit, which opens Continue regardless. */
-  'limitReached';
+  | 'limitReached';
 
 /**
  * One entry in a step's validation history: a check of the student's work,
