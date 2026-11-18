@@ -7,13 +7,15 @@ import {type JsonVideoData} from '../types';
 
 import styles from './videos-box.module.scss';
 
+type VideoPlayerComponent = ComponentType<{href: string}>;
+
 interface VideosBoxProps {
   jsonVideos: JsonVideoData[];
-  VideoPlayer: ComponentType<{href: string}>;
+  VideoPlayer: VideoPlayerComponent;
 }
 
 const VideoCard: FC<
-  Omit<JsonVideoData, 'key'> & {VideoPlayer: ComponentType<{href: string}>}
+  Omit<JsonVideoData, 'key'> & {VideoPlayer: VideoPlayerComponent}
 > = ({url, description, VideoPlayer}) => (
   <div className={styles.card}>
     <div className={styles.videoEmbed}>
@@ -29,7 +31,7 @@ const VideoCard: FC<
 // load() pauses the previous clip before fetching the next.
 const VideoCarousel: FC<{
   videos: JsonVideoData[];
-  VideoPlayer: ComponentType<{href: string}>;
+  VideoPlayer: VideoPlayerComponent;
 }> = ({videos, VideoPlayer}) => {
   const [index, setIndex] = useState(0);
   const count = videos.length;
