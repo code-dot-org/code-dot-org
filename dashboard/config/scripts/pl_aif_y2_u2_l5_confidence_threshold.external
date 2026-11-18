@@ -3,15 +3,17 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-## Tuning a Confidence Threshold
+# Tuning a Confidence Threshold
 
-Drag the threshold and watch how recall and precision trade off, same framing as the toxic-berry activity, just made visible as you move it.
+A **confidence threshold** is the line a classifier uses to decide: above it, predict toxic; below it, predict not toxic. 
+
+Below is a visual simulation of the same 8 berries from the toxic-berry activity, each with a fixed confidence score. Drag the threshold and watch which berries get flagged, and how recall and precision trade off as you move it.
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
   <iframe
-    src="https://amandadennard-dot.com/github.io/AIFY2/unit-2/confidence-threshold-tuner.html"
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/confidence-threshold-tuner.html"
     width="100%"
-    height="800"
+    height=1000"
     frameborder="0"
     scrolling="no"
     title="Interactive: adjust a confidence threshold and watch recall and precision change">

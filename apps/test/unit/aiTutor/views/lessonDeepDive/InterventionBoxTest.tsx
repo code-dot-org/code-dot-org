@@ -17,10 +17,6 @@ jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/VideosBox',
   () => () => <div>videos content</div>
 );
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/PodcastsBox',
-  () => () => <div>podcasts content</div>
-);
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
   Challenges: ({
@@ -48,6 +44,7 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
       </button>
     </div>
   ),
+  PodcastsBox: () => <div>podcasts content</div>,
   VocabularyFlashcards: () => <div>flashcards content</div>,
 }));
 

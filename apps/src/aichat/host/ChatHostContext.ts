@@ -18,6 +18,16 @@ export interface AcceptedBuild {
   transcript: string;
 }
 
+/** The conversation so far, as of the newest reply the tutor finished. */
+export interface ChatTranscript {
+  /** When that reply arrived, in epoch milliseconds. */
+  at: number;
+  /** Replies the tutor has finished, that one included. */
+  replies: number;
+  /** Everything the student and the tutor have said, one line each. */
+  text: string;
+}
+
 /** A notification as a host may post it; the chat sets its id and time. */
 export type HostNotification = Pick<
   Notification,
@@ -32,6 +42,8 @@ export interface ChatHandle {
   post(notification: HostNotification): () => void;
   /** Calls `listener` for each build the student accepts from now on. Returns a callback to unsubscribe. */
   onBuildAccepted(listener: (build: AcceptedBuild) => void): () => void;
+  /** Calls `listener` with the transcript each time the tutor finishes a reply from now on. Returns a callback to unsubscribe. */
+  onReply(listener: (transcript: ChatTranscript) => void): () => void;
   /** Disables the student from sending messages. */
   disableSend(): void;
   /** Enables the student to send messages. */

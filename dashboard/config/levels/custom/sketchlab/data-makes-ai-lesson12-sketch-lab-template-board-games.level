@@ -13,25 +13,18 @@
       "source": {
         "nodes": [
           {
-            "id": "vgn3-n-1",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "IMAGE: Board Games picture (picker card)",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "fontSize": "medium",
-              "strokeColor": "#868e96"
-            },
+            "id": "banner-img-K4e",
+            "type": "image",
             "position": {
               "x": 60,
               "y": 20
             },
             "width": 300,
-            "height": 220,
-            "measured": {
-              "width": 300,
-              "height": 220
+            "height": 221,
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/f2e19c0f-eff8-412e-8de3-d0194b87a184.jpg",
+              "altText": "Players move pieces on a board game in front of a bookshelf",
+              "locked": true
             }
           },
           {
@@ -103,7 +96,7 @@
             "id": "vgn3-n-7",
             "type": "text",
             "data": {
-              "text": "1. DEFINE",
+              "text": "DEFINE",
               "strokeColor": "transparent",
               "fontSize": "extra-large",
               "fontFamily": "draw",
@@ -170,7 +163,7 @@
             "id": "vgn3-n-14",
             "type": "text",
             "data": {
-              "text": "2. PREPARE",
+              "text": "PREPARE",
               "strokeColor": "transparent",
               "fontSize": "extra-large",
               "fontFamily": "draw",
@@ -236,7 +229,7 @@
             "id": "vgn3-n-21",
             "type": "text",
             "data": {
-              "text": "3. TRY",
+              "text": "TRY",
               "strokeColor": "transparent",
               "fontSize": "extra-large",
               "fontFamily": "draw",
@@ -303,7 +296,7 @@
             "id": "vgn3-n-28",
             "type": "text",
             "data": {
-              "text": "4. REFLECT",
+              "text": "REFLECT",
               "strokeColor": "transparent",
               "fontSize": "extra-large",
               "fontFamily": "draw",
@@ -501,28 +494,6 @@
               "width": 295,
               "height": 60
             }
-          },
-          {
-            "id": "vgn3-n-37",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
-              "label": "★",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "fontSize": 60
-            },
-            "position": {
-              "x": 390.3462228142515,
-              "y": 546.5028437540734
-            },
-            "width": 90,
-            "height": 90,
-            "measured": {
-              "width": 90,
-              "height": 90
-            },
-            "dragging": false
           },
           {
             "id": "vgn3-n-38",
@@ -726,90 +697,6 @@
             "measured": {
               "width": 848,
               "height": 42
-            }
-          },
-          {
-            "id": "vgn3-n-47",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Max Players",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-blue)",
-              "fontSize": "medium"
-            },
-            "position": {
-              "x": 80,
-              "y": 1550
-            },
-            "width": 220,
-            "height": 60,
-            "measured": {
-              "width": 220,
-              "height": 60
-            }
-          },
-          {
-            "id": "vgn3-n-48",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Play Time (min)",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-blue)",
-              "fontSize": "medium"
-            },
-            "position": {
-              "x": 315,
-              "y": 1550
-            },
-            "width": 220,
-            "height": 60,
-            "measured": {
-              "width": 220,
-              "height": 60
-            }
-          },
-          {
-            "id": "vgn3-n-49",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Min Age (years)",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-blue)",
-              "fontSize": "medium"
-            },
-            "position": {
-              "x": 550,
-              "y": 1550
-            },
-            "width": 220,
-            "height": 60,
-            "measured": {
-              "width": 220,
-              "height": 60
-            }
-          },
-          {
-            "id": "vgn3-n-50",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Year Era",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-blue)",
-              "fontSize": "medium"
-            },
-            "position": {
-              "x": 785,
-              "y": 1550
-            },
-            "width": 220,
-            "height": 60,
-            "measured": {
-              "width": 220,
-              "height": 60
             }
           },
           {
@@ -1131,7 +1018,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "6",
+              "label": "1",
               "textAlign": "center",
               "backgroundColor": "#9CC8F7",
               "fontSize": "large",
@@ -1260,29 +1147,6 @@
             }
           },
           {
-            "id": "vgn3-n-72",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
-              "label": "",
-              "textAlign": "left",
-              "backgroundColor": "transparent",
-              "fontSize": "medium",
-              "strokeColor": "#e03131"
-            },
-            "position": {
-              "x": 2120,
-              "y": 1530
-            },
-            "width": 200,
-            "height": 70,
-            "measured": {
-              "width": 200,
-              "height": 70
-            },
-            "dragging": false
-          },
-          {
             "id": "vgn3-n-73",
             "type": "shape",
             "data": {
@@ -1353,7 +1217,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "10",
+              "label": "3",
               "textAlign": "center",
               "backgroundColor": "#9ADBA4",
               "fontSize": "large",
@@ -1397,7 +1261,7 @@
             "id": "vgn3-n-78",
             "type": "text",
             "data": {
-              "text": "You did Spot, Trace and Fix in Stop 6. Now think about the people in your User Profiles. Type in each box.",
+              "text": "You did Spot, Trace and Fix in Prepare Stop 1. Now think about the people in your User Profiles. Type in each box.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -1444,7 +1308,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "7",
+              "label": "2",
               "textAlign": "center",
               "backgroundColor": "#9CC8F7",
               "fontSize": "large",
@@ -1578,7 +1442,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "8",
+              "label": "1",
               "textAlign": "center",
               "backgroundColor": "#9ADBA4",
               "fontSize": "large",
@@ -1644,8 +1508,8 @@
             "id": "vgn3-n-110",
             "type": "image",
             "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/d46ba985-8836-461f-8e75-9a350adc0e5b.jpg",
-              "altText": "The Make a prediction panel: a dropdown for each feature, the Predict button, and the prediction with its path",
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/4d2fa14b-ed36-4e7a-87e0-ab92f13d357e.png",
+              "altText": "The Make a prediction panel: a dropdown for each feature and the Predict button",
               "locked": true
             },
             "position": {
@@ -1653,10 +1517,10 @@
               "y": 680
             },
             "width": 230,
-            "height": 461,
+            "height": 241,
             "measured": {
               "width": 230,
-              "height": 461
+              "height": 241
             }
           },
           {
@@ -2072,7 +1936,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "9",
+              "label": "2",
               "textAlign": "center",
               "backgroundColor": "#9ADBA4",
               "fontSize": "large",
@@ -2206,7 +2070,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "11",
+              "label": "4",
               "textAlign": "center",
               "backgroundColor": "#9ADBA4",
               "fontSize": "large",
@@ -2383,7 +2247,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "12",
+              "label": "1",
               "textAlign": "center",
               "backgroundColor": "#F7D774",
               "fontSize": "large",
@@ -2534,29 +2398,6 @@
             }
           },
           {
-            "id": "vgn3-n-158",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
-              "label": "",
-              "textAlign": "left",
-              "backgroundColor": "transparent",
-              "fontSize": "medium",
-              "strokeColor": "#e03131"
-            },
-            "position": {
-              "x": 4615.562469058875,
-              "y": 1085.0316828220723
-            },
-            "width": 190,
-            "height": 80,
-            "measured": {
-              "width": 190,
-              "height": 80
-            },
-            "dragging": false
-          },
-          {
             "id": "vgn3-n-159",
             "type": "shape",
             "data": {
@@ -2585,7 +2426,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "13",
+              "label": "2",
               "textAlign": "center",
               "backgroundColor": "#F7D774",
               "fontSize": "large",
@@ -2742,7 +2583,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "14",
+              "label": "3",
               "textAlign": "center",
               "backgroundColor": "#F7D774",
               "fontSize": "large",
@@ -2940,7 +2781,7 @@
             "type": "shape",
             "data": {
               "shapeType": "circle",
-              "label": "15",
+              "label": "4",
               "textAlign": "center",
               "backgroundColor": "#F7D774",
               "fontSize": "large",
@@ -3025,71 +2866,15 @@
             }
           },
           {
-            "id": "vgn3-marker-M1",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/88b28043-0d80-45d0-8b0b-9dd3c3abfa0e.png",
-              "altText": "Data Scientist marker: a kid in a purple hoodie holding a tablet with a bar chart"
-            },
-            "position": {
-              "x": 1320,
-              "y": 20
-            },
-            "width": 160,
-            "height": 160,
-            "measured": {
-              "width": 160,
-              "height": 160
-            }
-          },
-          {
-            "id": "vgn3-marker-M2",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/12b4ec89-ad80-41f6-9cea-5815eae201cf.png",
-              "altText": "Data Scientist marker: a kid with glasses holding a magnifying glass over data cards"
-            },
-            "position": {
-              "x": 1454.2857142857142,
-              "y": 22.85714285714286
-            },
-            "width": 160,
-            "height": 160,
-            "measured": {
-              "width": 160,
-              "height": 160
-            },
-            "dragging": false
-          },
-          {
-            "id": "vgn3-marker-M3",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/1fc6c048-5c5d-4c82-a9c1-4c1145fdc104.png",
-              "altText": "Data Scientist marker: a kid in a wheelchair holding a clipboard with a decision tree"
-            },
-            "position": {
-              "x": 1605.7142857142856,
-              "y": 20
-            },
-            "width": 160,
-            "height": 160,
-            "measured": {
-              "width": 160,
-              "height": 160
-            },
-            "dragging": false
-          },
-          {
             "id": "vgn3-marker-text",
             "type": "text",
             "data": {
-              "text": "Pick your Data Scientist. Drag it to your step.",
+              "text": "Pick your Data Scientist. Drag it to your stop.",
               "strokeColor": "transparent",
               "fontSize": "extra-large",
               "fontFamily": "sans",
               "textAlign": "center",
-              "locked": false
+              "locked": true
             },
             "position": {
               "x": 1320,
@@ -3106,7 +2891,7 @@
             "id": "pf-q1",
             "type": "text",
             "data": {
-              "text": "1. Spot: On the Testing tab, click Accuracy. Then click Incorrect.",
+              "text": "a. Spot: On the Testing tab, click Accuracy. Then click Incorrect.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -3170,7 +2955,7 @@
             "id": "pf-q2",
             "type": "text",
             "data": {
-              "text": "2. Click Expand columns, then Filter. Check each feature. If none are incorrect, skip to 3.",
+              "text": "b. Click Expand columns, then Filter. Check each feature. If none are incorrect, skip to c.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -3213,7 +2998,7 @@
             "id": "pf-q3",
             "type": "text",
             "data": {
-              "text": "3. Trace: Go to the Dataset tab. Click Play Time (min) to open Column Analysis, even if you didn't pick it.",
+              "text": "c. Trace: Go to the Dataset tab. Click Play Time (min) to open Column Analysis, even if you didn't pick it.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -3235,7 +3020,7 @@
             "id": "pf-q4",
             "type": "text",
             "data": {
-              "text": "4. Click Filter. Choose the category you circled. How many records have each label?",
+              "text": "d. Click Filter. Choose the category you circled. How many records have each label?",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -3278,7 +3063,7 @@
             "id": "pf-q5",
             "type": "text",
             "data": {
-              "text": "5. Fix: Circle ONE move that could help Tree 1.",
+              "text": "e. Fix: Circle ONE move that could help Tree 1.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -3407,29 +3192,6 @@
             }
           },
           {
-            "id": "pf-oval2",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
-              "label": "",
-              "textAlign": "left",
-              "backgroundColor": "transparent",
-              "fontSize": "medium",
-              "strokeColor": "#e03131"
-            },
-            "position": {
-              "x": 2120,
-              "y": 1880
-            },
-            "width": 200,
-            "height": 70,
-            "measured": {
-              "width": 200,
-              "height": 70
-            },
-            "dragging": false
-          },
-          {
             "id": "pf-b5",
             "type": "shape",
             "data": {
@@ -3516,25 +3278,6 @@
             }
           },
           {
-            "id": "tu-img-Omar",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/883aba27-df6e-4210-817f-c505951d8c9a.jpg",
-              "altText": "User Profile card picture: Lucia",
-              "locked": false
-            },
-            "position": {
-              "x": 2850,
-              "y": 1088
-            },
-            "width": 90,
-            "height": 90,
-            "measured": {
-              "width": 90,
-              "height": 90
-            }
-          },
-          {
             "id": "tu-name-Omar",
             "type": "text",
             "data": {
@@ -3554,25 +3297,6 @@
             "measured": {
               "width": 160,
               "height": 28
-            }
-          },
-          {
-            "id": "tu-img-Dani",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/5754fa24-95c3-4881-9fbf-78c6f64cfc3f.jpg",
-              "altText": "User Profile card picture: Mr. Begay",
-              "locked": false
-            },
-            "position": {
-              "x": 3020,
-              "y": 1088
-            },
-            "width": 90,
-            "height": 90,
-            "measured": {
-              "width": 90,
-              "height": 90
             }
           },
           {
@@ -3598,25 +3322,6 @@
             }
           },
           {
-            "id": "tu-img-Nguyen",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/7bdb1b15-3802-40d3-871f-8f847b6c423a.jpg",
-              "altText": "User Profile card picture: Mr. Kowalski",
-              "locked": false
-            },
-            "position": {
-              "x": 3190,
-              "y": 1088
-            },
-            "width": 90,
-            "height": 90,
-            "measured": {
-              "width": 90,
-              "height": 90
-            }
-          },
-          {
             "id": "tu-name-Nguyen",
             "type": "text",
             "data": {
@@ -3636,25 +3341,6 @@
             "measured": {
               "width": 160,
               "height": 28
-            }
-          },
-          {
-            "id": "tu-img-Tasha",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/53cc3d11-5e54-43f6-b7e6-614b5271d7ec.jpg",
-              "altText": "User Profile card picture: Ms. Haddad",
-              "locked": false
-            },
-            "position": {
-              "x": 3360,
-              "y": 1088
-            },
-            "width": 90,
-            "height": 90,
-            "measured": {
-              "width": 90,
-              "height": 90
             }
           },
           {
@@ -3768,90 +3454,6 @@
             }
           },
           {
-            "id": "t8-ck1",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "✓",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-green)",
-              "fontSize": "large"
-            },
-            "position": {
-              "x": 3250,
-              "y": 968
-            },
-            "width": 60,
-            "height": 60,
-            "measured": {
-              "width": 60,
-              "height": 60
-            }
-          },
-          {
-            "id": "t8-ck2",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "✓",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-green)",
-              "fontSize": "large"
-            },
-            "position": {
-              "x": 3320,
-              "y": 968
-            },
-            "width": 60,
-            "height": 60,
-            "measured": {
-              "width": 60,
-              "height": 60
-            }
-          },
-          {
-            "id": "t8-x1",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "✗",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-red)",
-              "fontSize": "large"
-            },
-            "position": {
-              "x": 3390,
-              "y": 968
-            },
-            "width": 60,
-            "height": 60,
-            "measured": {
-              "width": 60,
-              "height": 60
-            }
-          },
-          {
-            "id": "t8-x2",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "✗",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-red)",
-              "fontSize": "large"
-            },
-            "position": {
-              "x": 3460,
-              "y": 968
-            },
-            "width": 60,
-            "height": 60,
-            "measured": {
-              "width": 60,
-              "height": 60
-            }
-          },
-          {
             "id": "t9-head",
             "type": "text",
             "data": {
@@ -3871,82 +3473,6 @@
             "measured": {
               "width": 170,
               "height": 30
-            }
-          },
-          {
-            "id": "t9-img-Omar",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/883aba27-df6e-4210-817f-c505951d8c9a.jpg",
-              "altText": "User Profile card picture: Lucia",
-              "locked": false
-            },
-            "position": {
-              "x": 2780,
-              "y": 1430
-            },
-            "width": 70,
-            "height": 70,
-            "measured": {
-              "width": 70,
-              "height": 70
-            }
-          },
-          {
-            "id": "t9-img-Dani",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/5754fa24-95c3-4881-9fbf-78c6f64cfc3f.jpg",
-              "altText": "User Profile card picture: Mr. Begay",
-              "locked": false
-            },
-            "position": {
-              "x": 2870,
-              "y": 1430
-            },
-            "width": 70,
-            "height": 70,
-            "measured": {
-              "width": 70,
-              "height": 70
-            }
-          },
-          {
-            "id": "t9-img-Nguyen",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/7bdb1b15-3802-40d3-871f-8f847b6c423a.jpg",
-              "altText": "User Profile card picture: Mr. Kowalski",
-              "locked": false
-            },
-            "position": {
-              "x": 2960,
-              "y": 1430
-            },
-            "width": 70,
-            "height": 70,
-            "measured": {
-              "width": 70,
-              "height": 70
-            }
-          },
-          {
-            "id": "t9-img-Tasha",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/53cc3d11-5e54-43f6-b7e6-614b5271d7ec.jpg",
-              "altText": "User Profile card picture: Ms. Haddad",
-              "locked": false
-            },
-            "position": {
-              "x": 3050,
-              "y": 1430
-            },
-            "width": 70,
-            "height": 70,
-            "measured": {
-              "width": 70,
-              "height": 70
             }
           },
           {
@@ -4090,27 +3616,509 @@
             }
           },
           {
-            "id": "nu-img-ph",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "IMAGE: Ms. Ito's game club picture",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "fontSize": "medium",
-              "strokeColor": "#868e96",
-              "locked": true
-            },
+            "id": "nu-img-U3",
+            "type": "image",
             "position": {
               "x": 3860,
               "y": 1200
             },
             "width": 330,
             "height": 266,
-            "measured": {
-              "width": 330,
-              "height": 266
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/67344aa3-04d0-4ec2-88d6-0a0a2e275689.jpg",
+              "altText": "Ms. Ito's game club gets ready to play a space board game",
+              "locked": true
             }
+          },
+          {
+            "id": "vgn3-n-37",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "★",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "fontSize": 60
+            },
+            "position": {
+              "x": 390.3462228142515,
+              "y": 546.5028437540734
+            },
+            "width": 90,
+            "height": 90,
+            "measured": {
+              "width": 90,
+              "height": 90
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "vgn3-n-72",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "textAlign": "left",
+              "backgroundColor": "transparent",
+              "fontSize": "medium",
+              "strokeColor": "#e03131"
+            },
+            "position": {
+              "x": 2120,
+              "y": 1530
+            },
+            "width": 200,
+            "height": 70,
+            "measured": {
+              "width": 200,
+              "height": 70
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "pf-oval2",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "textAlign": "left",
+              "backgroundColor": "transparent",
+              "fontSize": "medium",
+              "strokeColor": "#e03131"
+            },
+            "position": {
+              "x": 2120,
+              "y": 1880
+            },
+            "width": 200,
+            "height": 70,
+            "measured": {
+              "width": 200,
+              "height": 70
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "vgn3-n-158",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "textAlign": "left",
+              "backgroundColor": "transparent",
+              "fontSize": "medium",
+              "strokeColor": "#e03131"
+            },
+            "position": {
+              "x": 4615.562469058875,
+              "y": 1085.0316828220723
+            },
+            "width": 190,
+            "height": 80,
+            "measured": {
+              "width": 190,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "vgn3-marker-M1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/88b28043-0d80-45d0-8b0b-9dd3c3abfa0e.png",
+              "altText": "Data Scientist marker: a kid in a purple hoodie holding a tablet with a bar chart"
+            },
+            "position": {
+              "x": 1320,
+              "y": 20
+            },
+            "width": 160,
+            "height": 160,
+            "measured": {
+              "width": 160,
+              "height": 160
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "vgn3-marker-M2",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/12b4ec89-ad80-41f6-9cea-5815eae201cf.png",
+              "altText": "Data Scientist marker: a kid with glasses holding a magnifying glass over data cards"
+            },
+            "position": {
+              "x": 1454.2857142857142,
+              "y": 22.85714285714286
+            },
+            "width": 160,
+            "height": 160,
+            "measured": {
+              "width": 160,
+              "height": 160
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "vgn3-marker-M3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template/uuid/1fc6c048-5c5d-4c82-a9c1-4c1145fdc104.png",
+              "altText": "Data Scientist marker: a kid in a wheelchair holding a clipboard with a decision tree"
+            },
+            "position": {
+              "x": 1605.7142857142856,
+              "y": 20
+            },
+            "width": 160,
+            "height": 160,
+            "measured": {
+              "width": 160,
+              "height": 160
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "tu-img-Omar",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/883aba27-df6e-4210-817f-c505951d8c9a.jpg",
+              "altText": "User Profile card picture: Lucia",
+              "locked": false
+            },
+            "position": {
+              "x": 2850,
+              "y": 1088
+            },
+            "width": 90,
+            "height": 90,
+            "measured": {
+              "width": 90,
+              "height": 90
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "tu-img-Dani",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/5754fa24-95c3-4881-9fbf-78c6f64cfc3f.jpg",
+              "altText": "User Profile card picture: Mr. Begay",
+              "locked": false
+            },
+            "position": {
+              "x": 3020,
+              "y": 1088
+            },
+            "width": 90,
+            "height": 90,
+            "measured": {
+              "width": 90,
+              "height": 90
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "tu-img-Nguyen",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/7bdb1b15-3802-40d3-871f-8f847b6c423a.jpg",
+              "altText": "User Profile card picture: Mr. Kowalski",
+              "locked": false
+            },
+            "position": {
+              "x": 3190,
+              "y": 1088
+            },
+            "width": 90,
+            "height": 90,
+            "measured": {
+              "width": 90,
+              "height": 90
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "tu-img-Tasha",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/53cc3d11-5e54-43f6-b7e6-614b5271d7ec.jpg",
+              "altText": "User Profile card picture: Ms. Haddad",
+              "locked": false
+            },
+            "position": {
+              "x": 3360,
+              "y": 1088
+            },
+            "width": 90,
+            "height": 90,
+            "measured": {
+              "width": 90,
+              "height": 90
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "t8-ck1",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✓",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 3250,
+              "y": 968
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "t8-ck2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✓",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 3320,
+              "y": 968
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "t8-x1",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✗",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 3390,
+              "y": 968
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "t8-x2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✗",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 3460,
+              "y": 968
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "t9-img-Omar",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/883aba27-df6e-4210-817f-c505951d8c9a.jpg",
+              "altText": "User Profile card picture: Lucia",
+              "locked": false
+            },
+            "position": {
+              "x": 2780,
+              "y": 1430
+            },
+            "width": 70,
+            "height": 70,
+            "measured": {
+              "width": 70,
+              "height": 70
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "t9-img-Dani",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/5754fa24-95c3-4881-9fbf-78c6f64cfc3f.jpg",
+              "altText": "User Profile card picture: Mr. Begay",
+              "locked": false
+            },
+            "position": {
+              "x": 2870,
+              "y": 1430
+            },
+            "width": 70,
+            "height": 70,
+            "measured": {
+              "width": 70,
+              "height": 70
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "t9-img-Nguyen",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/7bdb1b15-3802-40d3-871f-8f847b6c423a.jpg",
+              "altText": "User Profile card picture: Mr. Kowalski",
+              "locked": false
+            },
+            "position": {
+              "x": 2960,
+              "y": 1430
+            },
+            "width": 70,
+            "height": 70,
+            "measured": {
+              "width": 70,
+              "height": 70
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "t9-img-Tasha",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-board-games/uuid/53cc3d11-5e54-43f6-b7e6-614b5271d7ec.jpg",
+              "altText": "User Profile card picture: Ms. Haddad",
+              "locked": false
+            },
+            "position": {
+              "x": 3050,
+              "y": 1430
+            },
+            "width": 70,
+            "height": 70,
+            "measured": {
+              "width": 70,
+              "height": 70
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "vgn3-n-47",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Max Players",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "fontSize": "medium"
+            },
+            "position": {
+              "x": 80,
+              "y": 1550
+            },
+            "width": 220,
+            "height": 60,
+            "measured": {
+              "width": 220,
+              "height": 60
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "vgn3-n-48",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Play Time (min)",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "fontSize": "medium"
+            },
+            "position": {
+              "x": 315,
+              "y": 1550
+            },
+            "width": 220,
+            "height": 60,
+            "measured": {
+              "width": 220,
+              "height": 60
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "vgn3-n-49",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Min Age (years)",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "fontSize": "medium"
+            },
+            "position": {
+              "x": 550,
+              "y": 1550
+            },
+            "width": 220,
+            "height": 60,
+            "measured": {
+              "width": 220,
+              "height": 60
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "vgn3-n-50",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Year Era",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "fontSize": "medium"
+            },
+            "position": {
+              "x": 785,
+              "y": 1550
+            },
+            "width": 220,
+            "height": 60,
+            "measured": {
+              "width": 220,
+              "height": 60
+            },
+            "zIndex": 10
           }
         ],
         "edges": [
@@ -4125,6 +4133,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-17T04:46:34.477+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-template\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-template\"},{\"changed_at\":\"2026-11-17 04:49:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-17T04:46:34.477+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-template\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-template\"},{\"changed_at\":\"2026-11-17 04:49:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 19:40:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:13:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:35:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:14:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:16:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:17:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:33:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

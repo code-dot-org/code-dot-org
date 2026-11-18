@@ -1,5 +1,6 @@
 <Ailab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 67,
   "created_at": "2026-11-17T07:21:10.000Z",
   "level_num": "custom",
@@ -9,10 +10,9 @@
     "instructions_important": "false",
     "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L07-previs-base\"\r\n  ],\r\n  \"label\": \"Decision\",\r\n  \"pretrained\": true,\r\n  \"hideSelectLabel\": true,\r\n  \"lockFeatures\": true,\r\n  \"hideDatasetView\": true,\r\n  \"features\": [\r\n    \"Stunt\",\r\n    \"Moving Vehicles\",\r\n    \"Something Gets Destroyed\"\r\n  ],\r\n  \"hideSave\": true\r\n}",
     "uses_lab2": "true",
-    "dynamic_instructions": "{\r\n  \"datasetView\": \"#Make a Prediction\\n\\nCreate a pre-trained model here.\",\r\n  \"results\": \"#Make a Prediction\\n\\nStudent moves: entering answers in the prediction panel, pressing Predict, and Replay to watch the path light\\n\\nStudents enter the two warm-up scenes (the subway crash and the kitchen argument), which ties back to their warm-up vote\\n\\nSkip the Random button\"\r\n}",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"#Make a Prediction\\n\\nCreate a pre-trained model here.\",\r\n  \"results\": \"#Make a Prediction\\nThink of a scene in a movie you watched recently.\\n\\n1. Enter the details of the scene into **Make a Prediction**\\n2. Press **Predict**\\n3. Press **Replay** to watch the path in the tree.\"\r\n}",
     "name_suffix": "_nov-2026-beta-test"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-17T07:21:10.364+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-ai-studio3\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-ai-studio3\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-17T07:21:10.364+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-ai-studio3\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-ai-studio3\"},{\"changed_at\":\"2026-11-17 08:03:48 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-11-17 08:05:02 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
 </Ailab>
