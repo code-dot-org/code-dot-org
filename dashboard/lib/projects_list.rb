@@ -45,7 +45,7 @@ module ProjectsList
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
       Projects.new(storage_id).get_active_projects.each do |project|
-        channel_id = get_project_channel_id(storage_id, project[:id])
+        channel_id = get_project_channel_id(storage_id, project[:id], uuid: project[:uuid])
         project_data = get_project_row_data(project, channel_id, with_library: true)
         personal_projects_list << project_data if project_data
       end
@@ -64,7 +64,7 @@ module ProjectsList
       projects_query = Projects.new(storage_id).get_projects_with_state(state: state, order: Sequel.desc(:updated_at))
 
       projects_query.each do |project|
-        channel_id = get_project_channel_id(storage_id, project[:id])
+        channel_id = get_project_channel_id(storage_id, project[:id], uuid: project[:uuid])
         project_data = get_project_row_data(project, channel_id, with_library: true)
         personal_projects_list << project_data if project_data
       end
@@ -170,7 +170,7 @@ module ProjectsList
           each do |project|
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
-            channel_id = get_project_channel_id(project[:storage_id], project[:id])
+            channel_id = get_project_channel_id(project[:storage_id], project[:id], uuid: project[:uuid])
             project_owner = section_users.find {|user| user.id == user_storage_ids[project[:storage_id]]}
             project_data = get_library_row_data(project, channel_id, section.name, project_owner)
             if project_data && (project_owner.id != section.user_id || project_data[:sharedWith].include?(section.id))
