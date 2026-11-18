@@ -154,11 +154,60 @@
   # Kubernetes pods.
   # ---------------------------------------------
 
-  # Pairs with the two OldestWaitingToStartJobAge alarms created by hand outside this stack
-  # ("Urgent Alert if ActiveJob is Down", "Warn if ActiveJob Queue is Backing Up"). Those catch
-  # jobs waiting whatever the cause, but treat missing data as missing, so they go quiet when
-  # nothing publishes. This one says whether the cause is missing workers, and fires when the
-  # daemon stops publishing.
+  # OldestWaitingToStartJobAge is the age of the oldest job that could run now but that no
+  # worker has locked. It reads the database, so it holds wherever the workers run. These two
+  # alarms keep the rules and topics of the hand-made console alarms they replace ("Urgent Alert
+  # if ActiveJob is Down" and "Warn if ActiveJob Queue is Backing Up", December 2024).
+  # TreatMissingData changes from missing to breaching: once the daemon's cron is the only
+  # publisher (#76800), a dead daemon shows up as no data, and missing would hold the alarm in
+  # INSUFFICIENT_DATA.
+  ActiveJobQueueStalledAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-Urgent"
+      AlarmName: <%="#{stack_name}_activejob_queue_stalled" %>
+      AlarmDescription: >-
+        A job that could run now has waited over 5 minutes for a worker, for 5 minutes in a row.
+        Normal is under 5 seconds. Check WorkerCount. 0: the daemon's workers are down
+        (2026-10-29); run bin/restart-active-job-workers on the daemon. Normal: the workers are
+        alive but not picking up work (2026-10-02, 2026-10-13); check which job classes are
+        queued and running. No data on either metric: the metrics cron or the whole daemon is
+        down; start with the report_activejob_metrics cron monitor in Sentry.
+      Namespace: code-dot-org/ActiveJob
+      MetricName: OldestWaitingToStartJobAge
+      Dimensions: [{Name: Environment, Value: <%=environment%>}]
+      Statistic: Maximum
+      Period: 60
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 5
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 300
+      TreatMissingData: breaching
+
+  ActiveJobQueueBackingUpAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-WorkdayUrgent"
+      AlarmName: <%="#{stack_name}_activejob_queue_backing_up" %>
+      AlarmDescription: >-
+        A job that could run now has waited over 60 seconds for a worker, for 5 minutes in a row.
+        Normal is under 5 seconds. This is the early warning for activejob_queue_stalled; if the
+        wait keeps growing, follow that alarm's steps.
+      Namespace: code-dot-org/ActiveJob
+      MetricName: OldestWaitingToStartJobAge
+      Dimensions: [{Name: Environment, Value: <%=environment%>}]
+      Statistic: Maximum
+      Period: 60
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 5
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 60
+      TreatMissingData: breaching
+
+  # Pairs with the two alarms above, which catch jobs waiting whatever the cause. This one says
+  # whether the cause is missing workers.
   #
   # Remove or replace this alarm when the daemon stops running workers, or it will stay in ALARM.
   ActiveJobNoWorkersAlarm:
