@@ -56,6 +56,9 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   >(undefined);
 
   const shareFailure = useAppSelector(state => state.lab.shareFailure);
+  const shareCheckPending = useAppSelector(
+    state => state.lab.shareCheckPending
+  );
 
   const fetchSubmissionStatusHandleError = (
     channelId: string,
@@ -119,6 +122,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
         submissionStatus={submissionStatus}
         userSharingDisabled={userSharingDisabled}
         shareFailure={shareFailure}
+        shareCheckPending={shareCheckPending}
         isAbusive={isAbusive}
       />
     ) : (
