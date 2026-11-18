@@ -505,5 +505,5 @@ namespace :seed do
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed only dashboard data required for unit tests"
-  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :standalone_project_levels, :fake_secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
+  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :fake_secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
 end
