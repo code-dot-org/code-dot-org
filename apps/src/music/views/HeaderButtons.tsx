@@ -167,10 +167,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               moduleStyles.startOverButton,
               allowPackSelection &&
                 packFolder &&
-                moduleStyles.startOverButtonWithPack,
-              allowPackSelection &&
-                packFolder?.removed &&
-                moduleStyles.startOverButtonPackRemoved
+                moduleStyles.startOverButtonWithPack
             )}
           >
             {allowPackSelection && packFolder && (

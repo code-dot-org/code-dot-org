@@ -38,6 +38,7 @@ import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {Trigger} from '../constants';
 import musicI18n from '../locale';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicValidator from '../progress/MusicValidator';
 import {
@@ -166,6 +167,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
   );
+  const packId = useAppSelector(state => state.music.packId);
+  const isPackRemoved =
+    !!packId &&
+    !!MusicLibrary.getInstance()?.getFolderForFolderId(packId)?.removed;
 
   // Pass music validator to Progress Manager
   useEffect(() => {
@@ -444,6 +449,14 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   className={moduleStyles.warningBanner}
                 >
                   {WARNING_BANNER_MESSAGES.VIEWING_VERSION}
+                </div>
+              )}
+              {isPackRemoved && (
+                <div
+                  id="packRemovedBanner"
+                  className={moduleStyles.warningBanner}
+                >
+                  {WARNING_BANNER_MESSAGES.MUSIC_PACK_REMOVED}
                 </div>
               )}
               {isStartMode && (

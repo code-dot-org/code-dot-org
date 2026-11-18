@@ -54,22 +54,6 @@
     padding-inline: 0.125rem 0.5rem;
   }
 
-  // Yellow is the same in both themes, so the text is black in both.
-  &PackRemoved {
-    background-color: var(--background-warning-primary);
-    border-color: var(--background-warning-primary);
-    color: var(--neutral-base-black);
-
-    p,
-    i {
-      color: inherit;
-    }
-
-    &:hover {
-      background-color: var(--background-warning-strong);
-    }
-  }
-
   &:hover {
     background-color: var(--background-neutral-tertiary);
   }
