@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-17T07:21:27.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L08-marketing-base\"\r\n  ],\r\n  \"label\": \"Result\",\r\n  \"features\": [\r\n    \"Clip Type\",\r\n    \"Length\",\r\n    \"Famous Actor\",\r\n    \"Funny\"\r\n  ],\r\n  \"lockFeatures\": true,\r\n  \"pretrained\": true,\r\n  \"hideSelectLabel\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"# See why a tree can be wrong\\n1. Press \\\"Test model\\\"\",\r\n  \"results\": \"# Trace an incorrect prediction\\n1. Follow along and enter the features in **Make a prediction**\\n2. Press **Predict**.\\n3. Open the last step of the path.\\n4. Read its training records.\\n5. Click **Filter** and choose Clip Type: Behind the Scenes.\\n6. Count how many clips are Hits and how many are Meh.\\n7. Write what you found in the Together row of your guide.\"\r\n}",
+    "teacher_markdown": "- Follow along with your teacher.\r\n- Enter the dance clip in **Make a Prediction**: Behind the Scenes, Short, Famous Actor Yes, Funny Yes.\r\n- Press **Predict**.\r\n- Press **Replay**.\r\n- Open the last step of the path.\r\n- Read its training records.",
+    "bubble_choice_description": "- Click **Filter** and choose Clip Type: Behind the Scenes.\r\n- Count how many clips are Hits and how many are Meh.\r\n- Write what you found in the Together row of your guide.",
+    "name_suffix": "_nov-2026-beta-test"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-17T07:21:27.017+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson8-trace\\\"\"],\"cloned_from\":\"data-makes-ai-lesson8-trace\"},{\"changed_at\":\"2026-11-17 08:20:44 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-11-17 08:22:05 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-11-17 08:23:37 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-11-17 08:27:21 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+}]]></config>
+</Ailab>

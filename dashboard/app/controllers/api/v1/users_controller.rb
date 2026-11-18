@@ -76,6 +76,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         ai_chat_access_level: current_user.ai_chat_access_level,
         can_use_lesson_deep_dive_challenges: current_user.can_use_lesson_deep_dive_challenges?,
         blocked_aichat_providers: current_user.blocked_aichat_providers,
+        spritelab_ask_ai_refusal: current_user.spritelab_ask_ai_refusal,
       }
     else
       render json: {

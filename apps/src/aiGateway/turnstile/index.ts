@@ -11,9 +11,4 @@ export {
   parseTurnstileEnforcementMode,
   type TurnstileEnforcementMode,
 } from './enforcementMode';
-export {
-  fetchTurnstileToken,
-  turnstileErrorTags,
-  turnstileHeaders,
-  turnstileUserMessage,
-} from './util';
+export {turnstileErrorTags, turnstileUserMessage} from './util';

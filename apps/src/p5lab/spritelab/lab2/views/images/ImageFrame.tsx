@@ -37,11 +37,6 @@ interface ImageFrameProps {
   under?: React.ReactNode;
 }
 
-// The height the row under the frame keeps while nothing is rendered there
-// (.under's min-height plus its padding), subtracted from the column height
-// before the square side is computed.
-const UNDER_MIN_PX = Number(styles.underMinPx);
-
 const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   image,
   frame,
@@ -55,11 +50,15 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
 }) => {
   // The frame is a square as large as the column allows. CSS alone cannot
   // size it: a flex item's percentage height is undefined until the column
-  // is laid out, so the side is measured.
+  // is laid out, so the side is measured. The rows above and under it take
+  // the column's width, not the frame's, so their heights do not depend on
+  // the side being measured and one measurement settles it.
   const columnRef = useRef<HTMLDivElement>(null);
   const aboveRef = useRef<HTMLDivElement>(null);
   const underRef = useRef<HTMLDivElement>(null);
   const [frameSide, setFrameSide] = useState<number>();
+  const hasAbove = !!above;
+  const hasUnder = !!under;
   useLayoutEffect(() => {
     const column = columnRef.current;
     if (!column) {
@@ -72,7 +71,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
           Math.min(
             column.clientWidth,
             column.clientHeight -
-              Math.max(UNDER_MIN_PX, underRef.current?.offsetHeight ?? 0) -
+              (underRef.current?.offsetHeight ?? 0) -
               (aboveRef.current?.offsetHeight ?? 0)
           )
         )
@@ -87,17 +86,15 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
       observer.observe(underRef.current);
     }
     return () => observer.disconnect();
-  }, []);
+    // The rows come and go (the tools leave while a picture is made); a
+    // row that appears later is watched from then on.
+  }, [hasAbove, hasUnder]);
   const filled = live ? !generating : !!image;
   return (
     <div className={styles.frameWell}>
       <div ref={columnRef} className={styles.frameColumn}>
         {above && (
-          <div
-            ref={aboveRef}
-            className={styles.above}
-            style={{width: frameSide}}
-          >
+          <div ref={aboveRef} className={styles.above}>
             {above}
           </div>
         )}

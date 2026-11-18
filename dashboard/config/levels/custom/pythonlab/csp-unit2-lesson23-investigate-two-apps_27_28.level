@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-11T05:18:34.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## Investigate & Tinker\r\n\r\nTwo playlist apps play the same five songs. App A uses a `for` loop. App B uses a `while` loop.\r\n\r\nDo This:\r\n\r\n1. Trace both apps by hand using the table in your Unit Guide. For each pass, write the value of the counter and the running total.\r\n2. Predict: will the two totals match? Will the two counters match?\r\n3. Run the program and compare it with your trace. What matches? What doesn't?\r\n4. Tinker: change App B's condition from `song < 5` to `song <= 5`. Predict first: do the totals still match?\r\n5. Change one thing in App A so the totals match again. Do the counters match now?",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# App A: for loop\ntotal_a = 0\nfor j in range(5):\n    total_a = total_a + (3 + j)\nprint(\"App A total: \" + str(total_a) + \" min\")\nprint(\"App A counter: \" + str(j))\n\n# App B: while loop\ntotal_b = 0\nsong = 0\nwhile song < 5:\n    total_b = total_b + (3 + song)\n    song = song + 1\nprint(\"App B total: \" + str(total_b) + \" min\")\nprint(\"App B counter: \" + str(song))",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "teacher_markdown": "- Expected output before tinkering:\r\n\r\n```\r\nApp A total: 25 min\r\nApp A counter: 4\r\nApp B total: 25 min\r\nApp B counter: 5\r\n```\r\n\r\n- The totals match but the counters do not. Same output, different side effect: after the `for` loop `j` is `4`, and after the `while` loop `song` is `5`.\r\n- After step 4 (`song <= 5`), App B prints `total: 33 min` and `counter: 6`. App B now plays six songs, so its total no longer matches App A (`25`).\r\n- Step 5: any change that makes the totals match is acceptable. The most common is changing App A to `range(6)`, which gives:\r\n\r\n```\r\nApp A total: 33 min\r\nApp A counter: 5\r\n```\r\n\r\n- Reverting App B also works. Either way the counters still differ by 1, because the `for` loop stops at `n - 1` and the `while` loop's counter ends at `n`.\r\n- Discussion goal: students should recognize that two programs can produce the same output and still leave different values behind, and that matching totals do not mean the programs are the same.\r\n- Watch for: students who say the programs are \"the same\" because the totals match. Ask: what is different about the variable after the loop?\r\n- Students who change the `3 + j` formula to fix the total are changing the songs, not the loop. Ask what the two apps are supposed to play.",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrdJA0DOZw9JQvz\nn6YTFAccjz6i8m85iU5kWiPJFmgV+3/s3HqU7YM5j8OG6M1OODv+R+y3eiwp\nAjMIq31Cz17Fjvyv/v80UTGiCsaJ3uy/RbpNOehMrn1Rew8QmeLlqs68Fe8i\ntkCxQtAK+yyR+jNTD3qDTVHgLfzGST4/Y/2VL4h0xJySPjo3UnvWlP1Rfd0/\nSLjRsukuEkiIg5c5WGI4lMD1yvzwwqIyltmej7DhR6g6NExHF8gA3yM1LvZL\nHjKUgHoTKk8hO/SPfsYpwvOjDdZTZP70qpUBF42uZ8qd7BAyLJ51bA8VIb09\nqqFgV713LlnLj3cuoowJBcLSIXj/jbVDCgbJimhVrhfbKUfKBHA038Vd82PC\nh08S3SMrCcFA/TKemBeB687eAo/jw/vF1CE73BLCAbQlCHAFIeI2PWi/0i/O\n6ScdqFlw7/DbnwKAhbxyISwB/8M0t7yOcvnA8+wEtC3m3fNzK9wNIVZAl5ak\nNJYXSj2JSw1vKdPrUJSq/vzUSEtj9wxrWpimVE/UyoFs2W5rCQw7Y3rB7vq0\ngGnIige+4Vf3h3FKTQEEAtr5qCr5XrqsR2FY7mHhhjvV5dvo7fUQVRmVZfUW\n057szw==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-11T05:18:34.731+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson23-predict-playlist_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson23-predict-playlist_27_28\"},{\"changed_at\":\"2026-11-11 05:20:03 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-11 05:20:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-11 05:20:31 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-11 05:34:22 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-11-11 05:35:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

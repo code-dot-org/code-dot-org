@@ -1,0 +1,87 @@
+{{- $worker := .Values.activeJobWorker -}}
+{{- $scaling := $worker.autoscaling -}}
+{{- if $scaling.enabled -}}
+{{- if not $worker.enabled -}}
+{{- fail "activeJobWorker.autoscaling requires activeJobWorker.enabled" -}}
+{{- end -}}
+{{- if gt (int $scaling.minReplicas) (int $scaling.maxReplicas) -}}
+{{- fail "activeJobWorker.autoscaling.minReplicas must not exceed maxReplicas" -}}
+{{- end -}}
+{{- if or (not (deepEqual $worker.command (list "sh" "-c"))) (not (empty $worker.args)) -}}
+{{- fail "activeJobWorker.autoscaling requires the generated worker command" -}}
+{{- end -}}
+{{- range $limit := list "min" "max" -}}
+{{- $envKey := printf "CDO_ACTIVE_JOB_WORKER_%s_PRIORITY" (upper $limit) -}}
+{{- $localKey := printf "active_job_worker_%s_priority" $limit -}}
+{{- if or (hasKey $worker.extraEnv $envKey) (hasKey (index $.Values "locals.yml" | default dict) $localKey) -}}
+{{- fail "activeJobWorker.autoscaling requires priority limits to be set through priorityMode only" -}}
+{{- end -}}
+{{- end -}}
+{{- $environment := required "activeJobWorker.RAILS_ENV is required for CloudWatch dimensions" $worker.RAILS_ENV -}}
+{{- $name := include "cdo.fullname" (merge (dict "component" "active-job-worker") .) -}}
+apiVersion: keda.sh/v1alpha1
+kind: TriggerAuthentication
+metadata:
+  name: {{ $name }}
+spec:
+  podIdentity:
+    provider: aws
+    identityOwner: keda
+---
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: {{ $name }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ $name }}
+  pollingInterval: {{ $scaling.pollingInterval }}
+  minReplicaCount: {{ $scaling.minReplicas }}
+  maxReplicaCount: {{ $scaling.maxReplicas }}
+  fallback:
+    failureThreshold: 3
+    replicas: {{ $scaling.minReplicas }}
+    behavior: currentReplicasIfHigher
+  advanced:
+    restoreToOriginalReplicaCount: false
+    horizontalPodAutoscalerConfig:
+      behavior:
+        scaleUp:
+          stabilizationWindowSeconds: 0
+          policies:
+            - type: Pods
+              value: 1
+              periodSeconds: 60
+        scaleDown:
+          stabilizationWindowSeconds: 300
+          policies:
+            - type: Pods
+              value: 1
+              periodSeconds: 60
+  triggers:
+    - type: aws-cloudwatch
+      metricType: AverageValue
+      useCachedMetrics: true
+      metadata:
+        namespace: code-dot-org/ActiveJob
+        metricName: PendingJobCount
+        awsRegion: {{ $scaling.awsRegion | quote }}
+        targetMetricValue: {{ $scaling.jobsPerReplica | quote }}
+        minMetricValue: "0"
+        metricStat: Maximum
+        metricStatPeriod: "60"
+        metricCollectionTime: "180"
+        metricUnit: Count
+        ignoreNullValues: "false"
+        {{- if eq $worker.priorityMode "both" }}
+        dimensionName: Environment
+        dimensionValue: {{ $environment | quote }}
+        {{- else }}
+        dimensionName: Environment;Priority
+        dimensionValue: {{ printf "%s;%s" $environment $worker.priorityMode | quote }}
+        {{- end }}
+      authenticationRef:
+        name: {{ $name }}
+{{- end }}

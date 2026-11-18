@@ -131,7 +131,7 @@ class Unit < ApplicationRecord
           :resources,
           :vocabularies,
           :programming_expressions,
-          :objectives,
+          {objectives: :objectives_script_levels},
           {rubric: {learning_goals: :learning_goal_evidence_levels}},
           :standards,
           :opportunity_standards,
@@ -1340,11 +1340,16 @@ class Unit < ApplicationRecord
     existing_i18n.deep_merge(lessons_i18n).deep_merge!(metadata_i18n)
   end
 
+  # Must equal the `tutorialID` of this unit's entry in the Hour of AI Contentful space.
+  def hoc_tutorial_code
+    get_original_unit_group&.name || name
+  end
+
   def hoc_finish_url
     if name == Unit::HOC_2013_NAME
       CDO.studio_url('/api/hour/finish')
     else
-      CDO.studio_url("/api/hour/finish/#{name}")
+      CDO.studio_url("/api/hour/finish/#{hoc_tutorial_code}")
     end
   end
 

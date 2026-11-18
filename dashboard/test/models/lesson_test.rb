@@ -45,6 +45,22 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal level1.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
   end
 
+  test "lockable_state with Quiz as last level" do
+    script = create(:script, :in_single_unit_course)
+    quiz = create(:quiz, purpose: 'exam')
+    lesson = create(:lesson, script: script, lockable: true)
+    create(:script_level, script: script, levels: [quiz], assessment: true, lesson: lesson)
+
+    lockable_state = lesson.lockable_state [@student]
+    assert_equal true, lockable_state[0][:locked], 'Quiz without user_level should be locked'
+    assert_equal quiz.id, lockable_state[0][:user_level_data][:level_id]
+
+    UserLevel.update_lockable_state(@student.id, quiz.id, script.id, false, false)
+
+    lockable_state = lesson.lockable_state [@student]
+    assert_equal false, lockable_state[0][:locked], 'unlocked Quiz should be unlocked'
+  end
+
   test "summary for single page long assessment" do
     script = create(:script, :in_single_unit_course)
     create(:text_match, name: 'level_free_response', type: 'TextMatch')
@@ -1083,14 +1099,18 @@ class LessonTest < ActiveSupport::TestCase
       create(:resource, name: 'resource2', course_version: @original_course_version, lessons: [@original_lesson])
       create(:vocabulary, word: 'word one', course_version: @original_course_version, lessons: [@original_lesson])
       create(:vocabulary, word: 'word two', course_version: @original_course_version, lessons: [@original_lesson])
-      create(:objective, lesson: @original_lesson, description: 'objective 1')
+      objective1 = create(:objective, lesson: @original_lesson, description: 'objective 1')
       create(:objective, lesson: @original_lesson, description: 'objective 2')
+      objective1.script_levels = [@original_lesson.script_levels.last]
       @original_lesson.standards = [create(:standard)]
       @original_lesson.opportunity_standards = [create(:standard)]
       @original_lesson.programming_expressions = [create(:programming_expression)]
 
       @destination_script.expects(:write_script_json).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
+      copied_objective1 = copied_lesson.objectives.find {|o| o.description == 'objective 1'}
+      assert_equal [copied_lesson.script_levels.last], copied_objective1.script_levels
+      assert_empty copied_lesson.objectives.find {|o| o.description == 'objective 2'}.script_levels
       assert_equal @destination_script, copied_lesson.script
       assert_equal 2, copied_lesson.script_levels.length
       assert_equal [level1, level2], copied_lesson.script_levels.map(&:level)

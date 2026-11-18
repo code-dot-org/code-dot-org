@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-06T16:13:15.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Night Sky",
+    "long_instructions": "## Modify\r\n\r\n1. Run the program as-is.\r\n2. Change one thing at a time: the count, the spacing, the color, the shape, the size. Predict before each run.\r\n3. Add a second loop that adds something new.\r\n4. Update the comment at the top with what you changed and your name.",
+    "bubble_choice_description": "Gold stars climbing a diagonal beside the moon.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Night Sky — original by Luis Herrera\nfrom theater import *\n\nclear(\"#0B1030\")\n\n# Moon\nset_fill_color(\"ivory\")\ndraw_ellipse(290, 50, 60, 60)\n\n# Stars climbing on a diagonal\nset_fill_color(\"gold\")\nremove_stroke_color()\nfor j in range(9):\n    draw_regular_polygon(j * 42 + 30, j * 18 + 60, 5, 10)\n    pause(0.1)\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/dd914e6d2ef4f461b92df1d9c559e4a1-79b94ad9-aa88-4f3d-8c67-358af142a7cc.gif"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-06T16:13:15.232+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson21-choiceA_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson21-choiceA_27_28\"},{\"changed_at\":\"2026-11-06 16:52:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-06 16:52:23 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-06 16:52:47 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -21,8 +21,6 @@ jest.mock('tone', () => {
   }
   const made = {
     tones: [] as MonoSynth[],
-    noises: [] as NoiseSynth[],
-    filters: [] as Filter[],
     gains: [] as Gain[],
     lfos: [] as LFO[],
     compressors: [] as Compressor[],
@@ -57,28 +55,6 @@ jest.mock('tone', () => {
     ) {
       super();
       made.tones.push(this);
-    }
-  }
-  class NoiseSynth extends Node {
-    envelope = {decay: 0, cancel: jest.fn()};
-    triggerAttackRelease: Fn = jest.fn(() => this);
-    triggerRelease: Fn = jest.fn(() => this);
-    constructor(public options: object) {
-      super();
-      made.noises.push(this);
-    }
-  }
-  class Filter extends Node {
-    type: string;
-    frequency = param();
-    detune = param();
-    Q = param();
-    constructor(options: {type: string; frequency: number; Q?: number}) {
-      super();
-      this.type = options.type;
-      this.frequency.value = options.frequency;
-      this.Q.value = options.Q ?? 1;
-      made.filters.push(this);
     }
   }
   class Gain extends Node {
@@ -125,8 +101,6 @@ jest.mock('tone', () => {
   );
   return {
     MonoSynth,
-    NoiseSynth,
-    Filter,
     Gain,
     LFO,
     Compressor,
@@ -293,6 +267,10 @@ describe('PRESETS', () => {
   it('builds the game sounds from the block parameters', () => {
     expect(PRESETS.jump).toEqual(notesFor(jump));
   });
+
+  it('makes boom from the drum wave', () => {
+    expect(PRESETS.boom.map(note => note.type)).toEqual(['drum']);
+  });
 });
 
 describe('playNotes', () => {
@@ -328,8 +306,6 @@ describe('playNotes', () => {
   const fake = tone as unknown as {
     __made: {
       tones: FakeTone[];
-      noises: Struck[];
-      filters: {type: string; frequency: Param}[];
       gains: {gain: Param}[];
       lfos: FakeLfo[];
       compressors: object[];
@@ -477,23 +453,6 @@ describe('playNotes', () => {
     expect(lfo.amplitude.setValueAtTime).toHaveBeenCalledWith(0, 10);
     const [, rampEnd] = lfo.amplitude.linearRampToValueAtTime.mock.calls[0];
     expect(rampEnd - 10).toBeCloseTo(0.12, 5);
-  });
-
-  it('plays noise through a bandpass filter at the note pitch', () => {
-    const [note] = notesFor({...jump, wave: 'noise', pattern: 'slide down'});
-    playNotes([note]);
-    expect(made.tones).toHaveLength(0);
-    expect(made.noises).toHaveLength(1);
-    const [seconds, at, volume] =
-      made.noises[0].triggerAttackRelease.mock.calls[0];
-    expect(seconds).toBe(note.seconds);
-    expect(at).toBe(10);
-    expect(volume).toBe(note.volume);
-    const band = made.filters.find(f => f.type === 'bandpass')!;
-    const set = band.frequency.setValueAtTime.mock.calls.at(-1)![0] as number;
-    expect(near(set, note.hz)).toBe(true);
-    expect(near(rampTarget(band.frequency), note.slideTo!)).toBe(true);
-    expect(rampTime(band.frequency)).toBe(10 + note.seconds);
   });
 
   it('plays a UI cue at exactly its pitch, never nudged', () => {

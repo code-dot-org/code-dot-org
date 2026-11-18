@@ -17,7 +17,7 @@ jest.mock(
 function readThrough(): string[] {
   const headings: string[] = [];
   for (;;) {
-    headings.push(screen.getByRole('heading', {level: 3}).textContent ?? '');
+    headings.push(screen.getByRole('heading', {level: 4}).textContent ?? '');
     const next = screen.queryByRole('button', {name: 'Next'});
     if (!next) {
       return headings;
@@ -38,7 +38,7 @@ describe('LearningDialog', () => {
       />
     );
     expect(
-      screen.getByRole('alertdialog', {name: 'How AI made your image'})
+      screen.getByRole('dialog', {name: 'How AI made your image'})
     ).toBeTruthy();
     expect(screen.getByRole('status').textContent).toBe('Step 1 of 5');
     expect(screen.queryByRole('button', {name: 'Back'})).toBeNull();
@@ -59,6 +59,30 @@ describe('LearningDialog', () => {
     expect(onDone).toHaveBeenCalledTimes(1);
   });
 
+  it('closes unread only when asked to', () => {
+    const onClose = jest.fn();
+    const {rerender} = render(
+      <LearningDialog
+        picture={{src: 'data:one'}}
+        prompt="A cat"
+        imageType="sprite"
+        onDone={jest.fn()}
+      />
+    );
+    expect(screen.queryByRole('button', {name: 'Close modal'})).toBeNull();
+    rerender(
+      <LearningDialog
+        picture={{src: 'data:one'}}
+        prompt="A cat"
+        imageType="sprite"
+        onDone={jest.fn()}
+        onClose={onClose}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Close modal'}));
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
   it('tells a background in six panels, with the thumbs as icons', () => {
     render(
       <LearningDialog
@@ -69,14 +93,14 @@ describe('LearningDialog', () => {
       />
     );
     expect(readThrough()).toEqual([
+      'A background is a big job',
       'AI learned from examples',
       'Your words guide the image',
       'From noise to picture',
       'Try another picture',
       'Evaluate the picture',
-      'A background is a big job',
     ]);
-    fireEvent.click(screen.getByRole('button', {name: 'Back'}));
+    // The last panel is the one about rating.
     expect(screen.getByRole('img', {name: 'thumbs up'})).toBeTruthy();
     expect(screen.getByRole('img', {name: 'thumbs down'})).toBeTruthy();
   });

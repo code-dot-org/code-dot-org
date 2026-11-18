@@ -25,6 +25,8 @@ const modelMap: {
     AiChatGeminiModelIds.map(id => [id, googleProvider(id)])
   ),
   [AiChatModelIds.CHATGPT]: openAiProvider(AiChatModelIds.CHATGPT),
+  [AiChatModelIds.GPT_5_6_LUNA]: openAiProvider(AiChatModelIds.GPT_5_6_LUNA),
+  [AiChatModelIds.GPT_6_LUNA]: openAiProvider(AiChatModelIds.GPT_6_LUNA),
 };
 
 export function getModel(modelId: ModelId) {

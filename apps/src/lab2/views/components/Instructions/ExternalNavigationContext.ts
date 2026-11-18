@@ -15,6 +15,12 @@ export interface ExternalNavigation {
   /** Icon after the label; defaults to the lesson's own, an arrow when a level follows. */
   endIcon?: React.ReactNode;
   onContinue: () => void;
+  /**
+   * When set, the continue button is rendered inside a bordered card with
+   * a heading and body line above it (e.g. the adaptive project's skill-map
+   * nudge box).
+   */
+  callout?: {heading: string; body: string};
 }
 
 export const ExternalNavigationContext =

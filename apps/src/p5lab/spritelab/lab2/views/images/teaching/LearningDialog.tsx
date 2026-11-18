@@ -1,9 +1,10 @@
-// How the picture came to be, told once over a few panels after a student's
-// first picture on a level that asks: nothing closes it but reading to the
-// end. The copy differs for a character and for a background.
+// How the picture came to be, told over a few panels after a student's
+// first picture on a level that asks: nothing closes that telling but
+// reading to the end. A telling the student asked for closes like any
+// dialog. The copy differs for a character and for a background.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
@@ -27,6 +28,8 @@ interface LearningDialogProps {
   /** What the picture is of: a background gets its own telling. */
   imageType: ImageType;
   onDone: () => void;
+  /** Closes the story unread; without it, only Got it ends it. */
+  onClose?: () => void;
 }
 
 const TITLE = 'How AI made your image';
@@ -189,7 +192,7 @@ const CHARACTER_PANELS: PanelContent[] = [
   },
   {
     heading: 'Try another version',
-    body: 'Click Generate again. The result can be different, even with the same prompt.',
+    body: 'Select Regenerate. The result can be different, even with the same prompt.',
     visual: anotherGuess,
   },
   {
@@ -200,6 +203,11 @@ const CHARACTER_PANELS: PanelContent[] = [
 ];
 
 const BACKGROUND_PANELS: PanelContent[] = [
+  {
+    heading: 'A background is a big job',
+    body: 'Here, backgrounds have many more *pixels*, or tiny squares of color, than characters, objects, or blocks. Together, they form one scene.',
+    visual: sizes,
+  },
   {
     heading: 'AI learned from examples',
     body: 'Before you ever used it, the AI was *trained* on many example pictures. It learned patterns from many pictures and the words describing them.',
@@ -217,18 +225,13 @@ const BACKGROUND_PANELS: PanelContent[] = [
   },
   {
     heading: 'Try another picture',
-    body: 'Click *Generate* again. The picture can be different, even with the same prompt.',
+    body: 'Select *Regenerate*. The picture can be different, even with the same prompt.',
     visual: anotherGuess,
   },
   {
     heading: 'Evaluate the picture',
     body: 'Look closely. Does it match what you asked for? Then use [thumb up] or [thumb down] to rate it.',
     visual: evaluate,
-  },
-  {
-    heading: 'A background is a big job',
-    body: 'Here, backgrounds have four times as many *pixels*, or tiny squares of color, as characters, objects, or blocks. Together, they form one scene.',
-    visual: sizes,
   },
 ];
 
@@ -242,15 +245,17 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
   prompt,
   imageType,
   onDone,
+  onClose,
 }) => {
   const [index, setIndex] = useState(0);
   const panels = panelsFor(imageType);
   const onLastPanel = index === panels.length - 1;
   const panel = panels[index];
   return (
-    <MuiDialog
+    <Modal
       title={TITLE}
       className={styles.dialog}
+      onClose={onClose}
       customContent={
         <>
           <span id="dsco-dialog-description" className={styles.srOnly}>
@@ -260,7 +265,7 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
           <div key={index} className={styles.panel}>
             <div className={styles.visual}>{panel.visual(picture, prompt)}</div>
             <MuiTypography
-              component="h3"
+              component="h4"
               variant="h4"
               className={styles.heading}
             >

@@ -3,6 +3,16 @@
 // Colors read the dialog chrome's variables where present and fall back
 // to the list's own.
 
+// Subtle checkerboard: enough to signal transparency without competing
+// with the image.
+@mixin tile-checkerboard {
+  @include checkerboard.checkerboard(
+    16px,
+    var(--dialog-checker-tint, rgb(128 128 128 / 16%)),
+    var(--dialog-checker-bg, transparent)
+  );
+}
+
 @mixin image-tile($size) {
   display: flex;
   align-items: center;
@@ -25,13 +35,7 @@
     transform: scale(1.12);
   }
 
-  // Subtle checkerboard: enough to signal transparency without competing
-  // with the image.
-  @include checkerboard.checkerboard(
-    16px,
-    var(--dialog-checker-tint, rgb(128 128 128 / 16%)),
-    var(--dialog-checker-bg, transparent)
-  );
+  @include tile-checkerboard;
 
   img {
     max-width: 100%;

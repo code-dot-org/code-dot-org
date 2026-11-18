@@ -103,6 +103,14 @@ describe('Lab2ShareDialogWrapper', () => {
     expect(screen.queryByText(/share dialog/)).not.toBeInTheDocument();
   });
 
+  it('serves the share dialog to Quest Builder', () => {
+    setState('quest_builder');
+
+    render(<Lab2ShareDialogWrapper shareUrl="fakeShareUrl" />);
+
+    expect(screen.getByText('share dialog: no failure')).toBeInTheDocument();
+  });
+
   it('passes isAbusive when the project is blocked for abuse', () => {
     setState('sketchlab', true, null, true);
 

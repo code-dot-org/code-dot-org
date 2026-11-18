@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-09-13T01:51:22.000Z",
   "level_num": "custom",
@@ -13,7 +12,7 @@
           "name": "main.py",
           "contents": "# Boba Run Splitter\n# Totals a boba order, adds a tip, and splits it among friends.\n\nprint(\"Boba Run Splitter\")\n\nnum_drinks = int(input(\"How many drinks? \"))\ndrink_price = float(input(\"Price per drink: \"))\ncoupon = float(input(\"Coupon amount: \"))\nnum_friends = int(input(\"How many friends are splitting? \"))\n\nsubtotal = num_drinks * drink_price - coupon\ntotal_cents = round(subtotal * 1.18 * 100)\n\nper_person = round(total_cents / num_friends)\nleftover_cents = total_cents % num_friends\n\nprint(\"Each person pays: $\" + str(per_person / 100))\nprint(\"Leftover cents: \" + str(leftover_cents))\nprint(\"Whoever picked the shop covers the leftover!\")",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "folders": {
@@ -42,8 +41,17 @@
       ],
       "answerTypeCustomizations": {
       }
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import contextlib\nimport io\nfrom unittest import TestCase\nfrom unittest.mock import patch\n\n\nclass TestModifyBobaSplitterToppings(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code with fixed, known inputs so we can\n        verify the toppings cost actually changes the total by a\n        predictable amount.\"\"\"\n        with open(\"main.py\") as f:\n            cls.source = f.read()\n\n        # Baseline: no-topping-equivalent run and a with-toppings run,\n        # everything else held constant, so we can isolate toppings' effect.\n        cls.run_error = None\n        cls.stdout_with_toppings = None\n        cls.stdout_zero_toppings = None\n        try:\n            cls.stdout_with_toppings = cls._run(cls.source, [\"4\", \"5.00\", \"0\", \"3.00\", \"2\"])\n            cls.stdout_zero_toppings = cls._run(cls.source, [\"4\", \"5.00\", \"0\", \"0.00\", \"2\"])\n        except Exception as e:\n            cls.run_error = e\n\n    @staticmethod\n    def _run(source, inputs):\n        stdout = io.StringIO()\n        with patch(\"builtins.input\", side_effect=inputs), contextlib.redirect_stdout(stdout):\n            exec(compile(source, \"main.py\", \"exec\"), {})\n        return stdout.getvalue()\n\n    def test_runs_without_error(self):\n        \"\"\"Runs without an error when given a toppings amount\"\"\"\n        self.assertIsNone(\n            self.run_error,\n            f\"Your program raised an error while running: {self.run_error}. \"\n            \"Make sure you added a new input() for toppings cost, in addition to the existing inputs.\"\n        )\n\n    def test_toppings_included_in_subtotal(self):\n        \"\"\"Including a toppings cost changes the resulting total\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the error above first.\")\n        self.assertNotEqual(\n            self.stdout_with_toppings,\n            self.stdout_zero_toppings,\n            \"Running your program with $3.00 in toppings produced the exact same output as running it with $0.00 in toppings. \"\n            \"Make sure toppings is actually included in your subtotal calculation.\"\n        )\n\n    def test_group_total_printed_before_split_amount(self):\n        \"\"\"Prints the group total before the per-person split amount\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the error above first.\")\n        lines = self.stdout_with_toppings.splitlines()\n        total_index = next((i for i, line in enumerate(lines) if \"group total\" in line.lower() or \"total:\" in line.lower()), None)\n        split_index = next((i for i, line in enumerate(lines) if \"each person pays\" in line.lower()), None)\n        self.assertIsNotNone(\n            total_index,\n            \"We didn't find a line printing the group total. Make sure you print the group total before the split amount.\"\n        )\n        self.assertIsNotNone(split_index, \"We didn't find the 'Each person pays' line -- make sure it's still there.\")\n        self.assertLess(\n            total_index,\n            split_index,\n            \"The group total should print BEFORE the split amount, but we found it printed after (or in the wrong order).\"\n        )\n\n    def test_group_total_shown_in_dollars_and_cents(self):\n        \"\"\"The group total is shown as dollars and cents, derived using round() and %\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the error above first.\")\n        lines = self.stdout_with_toppings.splitlines()\n        total_line = next((line for line in lines if \"group total\" in line.lower() or \"total:\" in line.lower()), None)\n        self.assertIsNotNone(total_line, \"We didn't find a line printing the group total.\")\n        # 4 drinks x $5.00 + $3.00 toppings - $0 coupon = $23.00, x 1.18 tip = $27.14 -> 2714 cents -> $27.14\n        self.assertIn(\n            \"27.14\",\n            total_line.replace(\"$\", \"\"),\n            f\"Expected the group total to come out to $27.14 with these inputs, but got: {total_line}. \"\n            \"Check that toppings is added to the subtotal, and that you're using round() and % correctly to split it into dollars and cents.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-13 02:24:57 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:25:20 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:27:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-13 02:24:57 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:25:20 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:27:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-17 20:45:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

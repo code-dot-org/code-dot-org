@@ -11,11 +11,9 @@ jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
   default: ({
     onStart,
     focusId,
-    onWorkOnProject,
   }: {
     onStart: (id: string) => void;
     focusId?: string;
-    onWorkOnProject: () => void;
   }) => (
     <>
       <button type="button" onClick={() => onStart('intro')}>
@@ -24,9 +22,7 @@ jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
       <button type="button" onClick={() => onStart('multi')}>
         start multi
       </button>
-      <button type="button" onClick={onWorkOnProject}>
-        map screen{focusId ? ` focused on ${focusId}` : ''}
-      </button>
+      <span>map screen{focusId ? ` focused on ${focusId}` : ''}</span>
     </>
   ),
 }));
@@ -43,6 +39,38 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
     </div>
   ),
 }));
+jest.mock('@cdo/apps/adaptive/views/AdaptiveTabBar', () => ({
+  __esModule: true,
+  default: ({
+    activeTab,
+    onTabChange,
+    projectName,
+    skills,
+    timeSpentSeconds,
+  }: {
+    activeTab: string;
+    onTabChange: (tab: string) => void;
+    projectName?: string;
+    skills?: unknown[];
+    timeSpentSeconds?: number;
+  }) => (
+    <div>
+      tabs: {activeTab}
+      {projectName && <span>tab project: {projectName}</span>}
+      {skills !== undefined && (
+        <span>
+          tab stats: {skills.length} skills, {timeSpentSeconds}s
+        </span>
+      )}
+      <button type="button" onClick={() => onTabChange('project')}>
+        My project tab
+      </button>
+      <button type="button" onClick={() => onTabChange('map')}>
+        Practice skills tab
+      </button>
+    </div>
+  ),
+}));
 jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   __esModule: true,
   // Finishing completes the last step first, as the real player does.
@@ -53,6 +81,9 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
     onExit,
     onFinish,
     onFinishPathway,
+    activeTab,
+    onTabChange,
+    projectName,
   }: {
     checkpoint: {title: string; steps: unknown[]};
     initialStepId?: string;
@@ -60,10 +91,15 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
     onExit: () => void;
     onFinish: () => void;
     onFinishPathway?: () => void;
+    activeTab?: string;
+    onTabChange?: (tab: string) => void;
+    projectName?: string;
   }) => (
     <div>
       playing {checkpoint.title}
       {initialStepId ? ` at ${initialStepId}` : ''}
+      {activeTab && <span>step-tab: {activeTab}</span>}
+      {projectName && <span>step project: {projectName}</span>}
       <button type="button" onClick={onExit}>
         exit
       </button>
@@ -81,12 +117,28 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
           finish pathway
         </button>
       )}
+      {onTabChange && (
+        <button type="button" onClick={() => onTabChange('map')}>
+          step tab: map
+        </button>
+      )}
     </div>
   ),
 }));
 jest.mock('@cdo/apps/lab2/views/Loading', () => ({
   __esModule: true,
   default: () => <div>loading</div>,
+}));
+jest.mock('@cdo/apps/adaptive/views/FinalProjectCallout', () => ({
+  __esModule: true,
+  default: ({onDismiss}: {onDismiss: () => void}) => (
+    <div>
+      final project callout
+      <button type="button" onClick={onDismiss}>
+        dismiss callout
+      </button>
+    </div>
+  ),
 }));
 jest.mock('@cdo/apps/aichat/api/shouldUseAiGateway', () => ({
   setAiGatewayOptIn: jest.fn(),
@@ -95,9 +147,13 @@ jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
   isAdaptiveAiEnabled: () => false,
 }));
 const mockDispatch = jest.fn();
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const mockUseAppSelector = jest.fn<any, [any]>();
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   ...jest.requireActual('@cdo/apps/util/reduxHooks'),
   useAppDispatch: () => mockDispatch,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  useAppSelector: (sel: any) => mockUseAppSelector(sel),
 }));
 jest.mock('@cdo/apps/lab2/progress/continueOrFinishLesson', () => ({
   __esModule: true,
@@ -114,6 +170,8 @@ jest.mock('@cdo/apps/adaptive/progress/progressStore', () => ({
     saveStep: jest.fn(),
     saveInstructions: jest.fn(),
   },
+  recordProgressOk: jest.fn(),
+  recordProgressFailure: jest.fn(),
 }));
 
 const step = (id: string) => ({
@@ -168,6 +226,7 @@ describe('PathwayApp', () => {
   beforeEach(() => {
     mockDispatch.mockClear();
     mockLoad.mockResolvedValue(EMPTY_PROGRESS);
+    mockUseAppSelector.mockReturnValue(undefined);
     window.history.replaceState({}, '', '/');
   });
 
@@ -227,10 +286,6 @@ describe('PathwayApp', () => {
     await renderSettled();
 
     expect(screen.getByText('map screen')).toBeTruthy();
-    expect(mockDispatch).not.toHaveBeenCalled();
-
-    act(() => screen.getByText('map screen').click());
-    expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
   });
 
   it('resumes at the first incomplete step when opening an in-progress checkpoint', async () => {
@@ -488,7 +543,7 @@ describe('PathwayApp', () => {
       steps: {'intro-step': {status: 'started', timeSpent: 0}},
     });
     await renderSettled();
-    expect(screen.getByText('header: Skill Tree: Pathway')).toBeTruthy();
+    expect(screen.getByText('header: Skill Map: Pathway')).toBeTruthy();
 
     act(() => screen.getByText("I'm finished!").click());
 
@@ -563,5 +618,143 @@ describe('PathwayApp', () => {
     window.history.replaceState({}, '', '/?checkpoint=wrap-up');
     await renderSettled({...pathway, finish});
     expect(screen.getByText(/playing Wrap up/)).toBeTruthy();
+  });
+
+  describe('tab bar', () => {
+    it('shows the tab bar in map view with the map tab active', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.getByText('tabs: map')).toBeTruthy();
+    });
+
+    it('opens the project when the My project tab is clicked in map view', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      mockDispatch.mockClear();
+
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+
+      expect(screen.getByText('playing My Project')).toBeTruthy();
+      expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
+    });
+
+    it('passes the project tab as active to StepPlayer in project view', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+
+      expect(screen.getByText('step-tab: project')).toBeTruthy();
+    });
+
+    it('returns to the map when the Practice skills tab is clicked in project view', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+      expect(screen.getByText('playing My Project')).toBeTruthy();
+
+      act(() => screen.getByRole('button', {name: 'step tab: map'}).click());
+
+      expect(screen.getByText('tabs: map')).toBeTruthy();
+    });
+
+    it('does not show the tab bar while playing a checkpoint step', async () => {
+      await renderSettled();
+
+      // Auto-started into a checkpoint step, not the map.
+      expect(screen.getByText(/playing Intro/)).toBeTruthy();
+      expect(screen.queryByText(/tabs:/)).toBeNull();
+    });
+
+    it('passes the channel name to the tab bar as projectName', async () => {
+      mockUseAppSelector.mockReturnValue('Cool Website');
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.getByText('tab project: Cool Website')).toBeTruthy();
+    });
+
+    it('passes the channel name through StepPlayer to the tab bar in project view', async () => {
+      mockUseAppSelector.mockReturnValue('Cool Website');
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+
+      expect(screen.getByText('step project: Cool Website')).toBeTruthy();
+    });
+
+    it('shows no project name when the channel has no name', async () => {
+      mockUseAppSelector.mockReturnValue(undefined);
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.queryByText(/tab project:/)).toBeNull();
+    });
+
+    it('passes skill progress and total time spent to the tab bar on the map view', async () => {
+      // intro-step started (120s) + next-step started (60s) = 180s total.
+      mockLoad.mockResolvedValue({
+        steps: {
+          'intro-step': {status: 'started', timeSpent: 120},
+          'next-step': {status: 'started', timeSpent: 60},
+        },
+      });
+      // Pathway has no skills, so skill count is 0.
+      await renderSettled();
+
+      expect(screen.getByText('tab stats: 0 skills, 180s')).toBeTruthy();
+    });
+  });
+
+  describe('final project callout', () => {
+    // Progress that marks every checkpoint in `pathway` complete. isComplete
+    // checks the last visible step, so multi only needs multi-b-step done.
+    const allCompleteProgress: Progress = {
+      steps: {
+        'intro-step': {status: 'complete', timeSpent: 0},
+        'next-step': {status: 'complete', timeSpent: 0},
+        'multi-b-step': {status: 'complete', timeSpent: 0},
+      },
+    };
+
+    it('shows the callout on the map when every checkpoint is complete', async () => {
+      mockLoad.mockResolvedValue(allCompleteProgress);
+      await renderSettled();
+
+      expect(screen.getByText('final project callout')).toBeTruthy();
+    });
+
+    it('does not show the callout when some checkpoints are still incomplete', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'complete', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.queryByText('final project callout')).toBeNull();
+    });
+
+    it('hides the callout for the session when dismissed', async () => {
+      mockLoad.mockResolvedValue(allCompleteProgress);
+      await renderSettled();
+      expect(screen.getByText('final project callout')).toBeTruthy();
+
+      act(() => screen.getByRole('button', {name: 'dismiss callout'}).click());
+
+      expect(screen.queryByText('final project callout')).toBeNull();
+    });
   });
 });

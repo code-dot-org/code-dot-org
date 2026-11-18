@@ -10,6 +10,16 @@ class QuizQuestionPlacementTest < ActiveSupport::TestCase
     assert_equal [first, second, third], QuizQuestionPlacement.where(level: quiz).to_a
   end
 
+  test "saving a placement advances its quiz's saved_version" do
+    quiz = create(:quiz)
+    before = quiz.reload.saved_version
+
+    travel 1.minute do
+      create(:quiz_question_placement, level: quiz, page: 1, position: 1)
+      assert_operator quiz.reload.saved_version, :>, before
+    end
+  end
+
   test "a quiz_question cannot be included twice in the same level" do
     quiz = create(:quiz)
     question = create(:quiz_question)

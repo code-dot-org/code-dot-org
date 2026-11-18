@@ -9,13 +9,23 @@
     "show_correctness": true,
     "reveal_answer_explanation": true,
     "show_questions_after_submit": true,
-    "purpose": "exam_simulation",
-    "allow_multiple_attempts": true
+    "purpose": "check_for_understanding",
+    "allow_multiple_attempts": true,
+    "display_name": "Algebra basics"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2026-09-15T21:39:15.857+00:00\",\"changed\":[\"cloned from \\\"Quiz Lab2 Showcase\\\"\"],\"cloned_from\":\"Quiz Lab2 Showcase\"}]",
   "placements": [
-
+    {
+      "page": 1,
+      "position": 1,
+      "question_key": "fb3e066e-f4cd-4678-a163-3d0ade9a1499"
+    },
+    {
+      "page": 1,
+      "position": 2,
+      "question_key": "997bca4b-ee21-4678-8951-22791de48b57"
+    }
   ]
 }]]></config>
 </Quiz>

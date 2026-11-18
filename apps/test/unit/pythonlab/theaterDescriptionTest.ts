@@ -79,10 +79,10 @@ describe('theaterDescription', () => {
       expect(canRequestTheaterDescription()).toBe(false);
     });
 
-    it('allows a blocked user when the gateway fallback is enabled', () => {
+    it('refuses a blocked user even when the gateway fallback is enabled', () => {
       DCDO.set(AI_GATEWAY_FALLBACK_DCDO_KEY, true);
       mockCurrentUser.blockedAichatProviders = [AiChatProviders.GOOGLE];
-      expect(canRequestTheaterDescription()).toBe(true);
+      expect(canRequestTheaterDescription()).toBe(false);
     });
   });
 

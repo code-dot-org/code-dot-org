@@ -40,18 +40,17 @@ run "git-lfs present" "" -- git-lfs version
 run "node is v20" "v20." -- node --version
 run "yarn is pinned" "4.12.0" -- yarn --version
 run "python3 present" "" -- python3 --version
+run "uv present" "" -- uv --version
 
 run "redis-cli present" "" -- redis-cli --version
 run "sudo is passwordless" "root" -- sudo -n id -un
 
-# The bare `uv run` (no --no-sync) proves UV_NO_SYNC=0 parses as false,
-# not an error.
 # shellcheck disable=SC2016
 run "UV_PROJECT_ENVIRONMENT is /opt/venv" "/opt/venv" -- \
   sh -c 'echo "$UV_PROJECT_ENVIRONMENT"'
 run "venv python runs" "Python 3" -- /opt/venv/bin/python --version
-run "uv run imports pycdo" "pycdo-ok" -- \
-  uv run python -c 'import pycdo; print("pycdo-ok")'
+run "uv run imports pythonlab_setup" "pythonlab-setup-ok" -- \
+  uv run python -c 'import pythonlab_setup; print("pythonlab-setup-ok")'
 
 # The shared browsers path must stay writable, or a developer cannot
 # update browsers in place.

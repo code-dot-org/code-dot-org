@@ -8,6 +8,7 @@ import CollapsibleEditorSection from '@cdo/apps/levelbuilder/CollapsibleEditorSe
 import ActivitiesEditor from '@cdo/apps/levelbuilder/lesson-editor/ActivitiesEditor';
 import {
   getSerializedActivities,
+  getTaggableScriptLevels,
   mapActivityDataForEditor,
   initActivities,
 } from '@cdo/apps/levelbuilder/lesson-editor/activitiesEditorRedux';
@@ -138,6 +139,7 @@ class LessonEditor extends Component {
             lastSaved: Date.now(),
             isSaving: false,
             originalLessonData: data,
+            objectives: data.objectives,
           });
         }
       })
@@ -448,6 +450,7 @@ class LessonEditor extends Component {
               <ObjectivesEditor
                 objectives={this.state.objectives}
                 updateObjectives={this.handleUpdateObjectives}
+                scriptLevels={getTaggableScriptLevels(this.props.activities)}
               />
             </CollapsibleEditorSection>
 
@@ -509,6 +512,9 @@ class LessonEditor extends Component {
             initialVideos={this.props.initialLessonData.tutorVideos || []}
             initialPracticeProblems={
               this.props.initialLessonData.tutorPracticeProblems || []
+            }
+            initialChallenges={
+              this.props.initialLessonData.tutorChallenges || []
             }
           />
         </CollapsibleEditorSection>

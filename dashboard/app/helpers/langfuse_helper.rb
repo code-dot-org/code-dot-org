@@ -84,6 +84,7 @@ module LangfuseHelper
     )
   rescue => exception
     Rails.logger.warn("LangfuseHelper.trace_adaptive_generation failed: #{exception.message}")
+    Observability::Errors.report(exception, context: {trace_id: trace_id, trace_name: trace_name, outcome: outcome})
   end
 
   def self.tutor_client

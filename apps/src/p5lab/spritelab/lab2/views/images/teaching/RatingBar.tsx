@@ -1,8 +1,8 @@
 // The two thumbs over the picture, and after one is pressed the question
 // of why, answered by picking from three reasons.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useId, useRef, useState} from 'react';
@@ -134,7 +134,7 @@ const RatingBar: React.FunctionComponent<RatingBarProps> = ({
         )}
       </div>
       {question && asking && (
-        <MuiDialog
+        <Modal
           title={question.question}
           className={styles.ratingDialog}
           customContent={

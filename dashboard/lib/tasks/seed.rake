@@ -1,31 +1,11 @@
 require 'benchmark'
 require 'csv'
-require 'action_view/helpers/date_helper'
 require '../lib/cdo/git_utils'
 require '../lib/cdo/rake_utils'
 require '../lib/cdo/hash_utils'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
-# Enables timed_task to be used in place of task when defining rake tasks, which prints
-# how long the task took to stdout.
-module CustomRake
-  class TimedTask < Rake::Task
-    include ActionView::Helpers::DateHelper
-
-    def execute(args = nil)
-      puts "Finished #{name} (#{distance_of_time_in_words(Benchmark.realtime {super}.to_f)})"
-    end
-  end
-end
-
-module TimedTask
-  def timed_task(...)
-    CustomRake::TimedTask.define_task(...)
-  end
-end
-
 namespace :seed do
-  include TimedTask
   verbose false
 
   timed_task_with_logging check_migrations: :environment do
@@ -50,6 +30,10 @@ namespace :seed do
 
   timed_task_with_logging practice_problems: :environment do
     PracticeProblem.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
+  end
+
+  timed_task_with_logging challenges: :environment do
+    Challenge.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   timed_task_with_logging concepts: :environment do
@@ -504,7 +488,7 @@ namespace :seed do
     AiRubricConfig.validate_ai_config
   end
 
-  PRODUCTION_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
+  PRODUCTION_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :challenges, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :json_videos_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
 
   # Only the environments that serve production curriculum seed it. The rest

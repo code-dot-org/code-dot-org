@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-06T16:12:58.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Highway",
+    "long_instructions": "## Modify\r\n\r\n1. Run the program as-is.\r\n2. Change one thing at a time: the count, the spacing, the color, the shape, the size.\r\n3. Add a second loop that adds something new.\r\n4. Update the comment at the top with what you changed and your name.",
+    "bubble_choice_description": "A gray road with yellow lane dashes and a red car.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Highway — original by Mr. Okafor\nfrom theater import *\n\nclear(\"#7CB342\")\n\n# Road\nset_fill_color(\"gray\")\ndraw_rectangle(0, 150, 400, 120)\n\n# Lane dashes\nset_fill_color(\"yellow\")\nfor j in range(8):\n    draw_rectangle(j * 50 + 10, 206, 30, 8)\n    pause(0.1)\n\n# Car\nset_fill_color(\"red\")\ndraw_rectangle(40, 170, 80, 40)\nset_fill_color(\"black\")\ndraw_ellipse(48, 200, 20, 20)\ndraw_ellipse(92, 200, 20, 20)\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/7d746e413294a1bc2d6d0257fc89a9d1-8ad569ca-f155-4792-b6da-c030bfcedc47.gif"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-06T16:12:58.087+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson21-choiceA_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson21-choiceA_27_28\"},{\"changed_at\":\"2026-11-06 16:49:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-06 16:49:35 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

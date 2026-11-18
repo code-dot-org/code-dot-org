@@ -4,14 +4,6 @@ import React from 'react';
 import {MarkdownStep as MarkdownStepContent} from '@cdo/apps/adaptive/types';
 import MarkdownStep from '@cdo/apps/adaptive/views/steps/MarkdownStep';
 
-// jsdom lays nothing out; give the canvas a host to size against. A test
-// may start it unmeasured, as a real host is on first render.
-let mockHostSize = [1200, 800];
-jest.mock('@cdo/apps/util/hooks/useElementSize', () => ({
-  __esModule: true,
-  default: () => mockHostSize,
-}));
-
 const step: MarkdownStepContent = {
   id: 'card',
   title: 'Welcome',
@@ -21,10 +13,6 @@ const step: MarkdownStepContent = {
 };
 
 describe('MarkdownStep', () => {
-  afterEach(() => {
-    mockHostSize = [1200, 800];
-  });
-
   it('renders the markdown and advances on the button', () => {
     const onComplete = jest.fn();
     render(
@@ -95,24 +83,30 @@ describe('MarkdownStep', () => {
     expect(document.querySelectorAll('p')).toHaveLength(2);
   });
 
-  it('focuses the canvas once the host has been measured', () => {
-    // A fresh element each time: React skips a component handed the same one.
-    const card = () => (
+  it('focuses the card on open', () => {
+    render(
       <MarkdownStep
         step={step}
         continueLabel="Continue"
         onComplete={jest.fn()}
       />
     );
-    mockHostSize = [0, 0];
-    const {rerender} = render(card());
-    expect(document.activeElement).toBe(document.body);
-
-    mockHostSize = [1200, 800];
-    rerender(card());
     expect(document.activeElement?.textContent).toContain(
       'Welcome to the Skill Check'
     );
+  });
+
+  it('shows the logo the step names above the markdown', () => {
+    render(
+      <MarkdownStep
+        step={{...step, logoUrl: 'https://images.code.org/logo.png'}}
+        continueLabel="Continue"
+        onComplete={jest.fn()}
+      />
+    );
+    const logo = document.querySelector('img');
+    expect(logo?.getAttribute('src')).toBe('https://images.code.org/logo.png');
+    expect(logo?.getAttribute('alt')).toBe('');
   });
 
   it("labels the button with the step's own label when it has one", () => {

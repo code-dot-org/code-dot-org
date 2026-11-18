@@ -9,4 +9,4 @@ POSTE_DB = PEGASUS_DB
 Sequel::Model.db = PEGASUS_DB
 # rubocop:enable CustomCops/PegasusDbUsage
 
-DASHBOARD_DB = Cdo::Sequel.database_connection_pool CDO.dashboard_db_writer
+DASHBOARD_DB = Cdo::Sequel.database_connection_pool Cdo::Sequel.dashboard_writer_uri

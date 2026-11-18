@@ -54,12 +54,11 @@ const RubricWrapper: React.FC<{children: React.ReactNode}> = ({children}) => {
     setIsLoading(true);
 
     try {
-      const rubricDataResponse = await HttpClient.fetchJson<RubricData>(
-        `/rubrics/${rubricId}`
-      );
-      const teacherEvaluationsResponse = await getTaRubricFeedbackForStudent(
-        rubricId
-      );
+      const [rubricDataResponse, teacherEvaluationsResponse] =
+        await Promise.all([
+          HttpClient.fetchJson<RubricData>(`/rubrics/${rubricId}`),
+          getTaRubricFeedbackForStudent(rubricId),
+        ]);
       setRubricData(rubricDataResponse.value);
       setTeacherEvaluations(
         teacherEvaluationsResponse.value as TeacherEvaluations[]

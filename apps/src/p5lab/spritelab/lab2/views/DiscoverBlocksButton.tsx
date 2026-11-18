@@ -5,6 +5,8 @@ import React from 'react';
 
 import moduleStyles from './block-catalog.module.scss';
 
+export const DISCOVER_BLOCKS_BUTTON_ID = 'discover-blocks-button';
+
 interface DiscoverBlocksButtonProps {
   /** How many catalog blocks are still out of the toolbox. */
   remaining: number;
@@ -19,6 +21,7 @@ const DiscoverBlocksButton: React.FunctionComponent<
   DiscoverBlocksButtonProps
 > = ({remaining, compact, className, onClick}) => (
   <MuiButton
+    id={DISCOVER_BLOCKS_BUTTON_ID}
     variant="contained"
     color="primary"
     size="small"

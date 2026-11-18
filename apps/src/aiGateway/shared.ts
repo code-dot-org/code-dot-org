@@ -1,3 +1,5 @@
+import {AiGatewayAccessTokenLifetimeSeconds} from '@cdo/generated-scripts/sharedConstants';
+
 import AichatContextManager from '../aichat/aichatContextManager';
 import {AichatContext} from '../aichat/types';
 import HttpClient from '../util/HttpClient';
@@ -19,6 +21,8 @@ export interface GatewayAccessToken {
    * worker's enforcement always come from the same value.
    */
   turnstileEnforcementMode: TurnstileEnforcementMode;
+  /** Whether the server allows this access token to be reused for later requests. */
+  reusable: boolean;
   /** The key Rails signed `token` with, chosen by a DCDO flag during the initial rollout. */
   signingKey: SigningKey | undefined;
 }
@@ -38,6 +42,7 @@ export async function fetchAccessToken(
   const value = (await response.json()) as {
     token?: unknown;
     turnstileEnforcementMode?: unknown;
+    reusable?: unknown;
     signingKey?: unknown;
   };
   if (typeof value.token !== 'string') {
@@ -48,6 +53,7 @@ export async function fetchAccessToken(
     turnstileEnforcementMode: parseTurnstileEnforcementMode(
       value.turnstileEnforcementMode
     ),
+    reusable: value.reusable === true,
     signingKey: parseSigningKey(value.signingKey),
   };
 }
@@ -70,4 +76,90 @@ export function getModelString(model: unknown) {
     }
   }
   return modelString;
+}
+
+interface CachedAccessToken {
+  accessToken: GatewayAccessToken;
+  reusableUntilLocal: number;
+}
+
+// Relies on the worker accepting an access token more than once before it expires
+const cachedAccessTokens = new Map<string, CachedAccessToken>();
+const pendingAccessTokens = new Map<string, Promise<GatewayAccessToken>>();
+// Once Rails refuses reuse, concurrent callers stop sharing a fetch too, so each
+// gateway request carries its own access token exactly as before the cache existed.
+let reuseRefusedByServer = false;
+
+// The worker checks expiry once, when a request arrives, so this covers only the time
+// from cache to worker; callers re-check after anything slow, like a Turnstile challenge.
+export const ACCESS_TOKEN_REUSE_MARGIN_MS = 15_000;
+
+function accessTokenCacheKey(aichatContext: AichatContext): string {
+  return JSON.stringify(aichatContext, Object.keys(aichatContext).sort());
+}
+
+async function fetchAndCacheAccessToken(
+  key: string,
+  aichatContext: AichatContext
+): Promise<GatewayAccessToken> {
+  const requestedAt = Date.now();
+  const accessToken = await fetchAccessToken(aichatContext);
+  reuseRefusedByServer = !accessToken.reusable;
+  if (accessToken.reusable) {
+    cachedAccessTokens.set(key, {
+      accessToken,
+      reusableUntilLocal:
+        requestedAt +
+        AiGatewayAccessTokenLifetimeSeconds * 1000 -
+        ACCESS_TOKEN_REUSE_MARGIN_MS,
+    });
+  }
+  return accessToken;
+}
+
+// Concurrent callers with the same context share one request unless tokens become single-use again;
+// failures are not cached.
+export function getAccessToken(
+  aichatContext: AichatContext = AichatContextManager.getContext()
+): Promise<GatewayAccessToken> {
+  const key = accessTokenCacheKey(aichatContext);
+  const cached = cachedAccessTokens.get(key);
+  if (cached) {
+    if (Date.now() < cached.reusableUntilLocal) {
+      return Promise.resolve(cached.accessToken);
+    }
+    cachedAccessTokens.delete(key);
+  }
+
+  if (reuseRefusedByServer) {
+    return fetchAndCacheAccessToken(key, aichatContext);
+  }
+  const pending = pendingAccessTokens.get(key);
+  if (pending) {
+    return pending;
+  }
+  const fetching = fetchAndCacheAccessToken(key, aichatContext).finally(() => {
+    if (pendingAccessTokens.get(key) === fetching) {
+      pendingAccessTokens.delete(key);
+    }
+  });
+  pendingAccessTokens.set(key, fetching);
+  return fetching;
+}
+
+// Matches on the access token so a rejection of an old one cannot evict a newer one.
+export function invalidateAccessToken(
+  aichatContext: AichatContext,
+  token: string
+) {
+  const key = accessTokenCacheKey(aichatContext);
+  if (cachedAccessTokens.get(key)?.accessToken.token === token) {
+    cachedAccessTokens.delete(key);
+  }
+}
+
+export function clearAccessTokenCache() {
+  cachedAccessTokens.clear();
+  pendingAccessTokens.clear();
+  reuseRefusedByServer = false;
 }

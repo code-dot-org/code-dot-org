@@ -9,13 +9,17 @@ import {
   askAiText,
   AskAiError,
   askAiErrorMessage,
+  askAiRefusal,
   buildSystemPrompt,
   CHOICE_SYSTEM_PROMPT,
   cleanAnswer,
   isAskAiEnabled,
   SYSTEM_PROMPT,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/text/askAi';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  SpritelabAskAiRefusals,
+} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aichat/api/client/helpers/safetyHelpers', () => ({
   isTextSafe: jest.fn(),
@@ -299,6 +303,24 @@ describe('isAskAiEnabled', () => {
     expect(isAskAiEnabled()).toBe(true);
     DCDO.get.mockReturnValue(false);
     expect(isAskAiEnabled()).toBe(false);
+  });
+});
+
+describe('askAiRefusal', () => {
+  const student = {userType: 'student', spritelabAskAiRefusal: null};
+
+  it('allows a user the server does not refuse', () => {
+    expect(askAiRefusal(student)).toBeNull();
+  });
+
+  it('tells a teacher without AI access something other than a student', () => {
+    const noAccess = {
+      ...student,
+      spritelabAskAiRefusal: SpritelabAskAiRefusals.NO_ACCESS,
+    };
+    const teacherMessage = askAiRefusal({...noAccess, userType: 'teacher'});
+    expect(teacherMessage).toEqual(expect.any(String));
+    expect(teacherMessage).not.toBe(askAiRefusal(noAccess));
   });
 });
 

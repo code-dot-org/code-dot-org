@@ -19,14 +19,6 @@ run "bundle check" "dependencies are satisfied" -- bundle check
 run "deployment.rb loads" "deployment-ok" -- \
   bundle exec ruby -e 'require "./deployment"; puts "deployment-ok #{CDO.rack_env}"'
 
-# application.rb requires this on every boot; it embeds libpython via uv.
-run "cdo/pycall initializes libpython" "pycall-ok" -- \
-  bundle exec ruby -e 'require "./deployment"; require "cdo/pycall"; puts "pycall-ok"'
-
-# Offline, exactly as the runtime uses it (UV_NO_SYNC).
-run "venv imports pycdo without syncing" "pycdo-ok" -- \
-  uv run --no-sync python -c 'import pycdo; print("pycdo-ok")'
-
 # The database-free load of the shipped gem set: verify.sh boots adhoc too, but
 # only with MySQL and Redis up. The preamble mirrors application.rb's require
 # order.
@@ -57,7 +49,7 @@ run "ga_client present for admin_reports" "ga-ok" -- \
 run "log and tmp exist for Rails" "dirs-ok" -- \
   sh -c 'test -d dashboard/log -a -d dashboard/tmp && echo dirs-ok'
 
-assert_no_toolchain cc gcc make node yarn pkg-config git
+assert_no_toolchain cc gcc make node yarn pkg-config git uv
 
 run "runs as non-root cdo" "cdo" -- id -un
 

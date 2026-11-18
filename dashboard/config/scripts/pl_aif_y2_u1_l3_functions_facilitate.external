@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-## Facilitating Functions
+# Facilitating Functions
 
 Students move from predicting what functions do to writing their own, then get assessed on reading a buggy one. Three real stuck-points show up along the way, and one of them, return values, is the one the curriculum itself flags as hardest.
 

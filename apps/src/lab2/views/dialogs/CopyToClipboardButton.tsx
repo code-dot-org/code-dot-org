@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -14,7 +15,26 @@ import moduleStyles from './share-dialog.module.scss';
 export const CopyToClipboardButton: React.FunctionComponent<{
   shareUrl: string;
   projectType: ProjectType;
-}> = ({shareUrl, projectType}) => {
+  /** The button's text, "Copy link to project" by default. */
+  label?: string;
+  className?: string;
+  /** The icon before the text until the link is copied. */
+  iconName?: string;
+  /** The icon while the copied tooltip shows. */
+  copiedIconName?: string;
+  disabled?: boolean;
+  /** A spinner stands in for the icon. */
+  busy?: boolean;
+}> = ({
+  shareUrl,
+  projectType,
+  label = i18n.copyLinkToProject(),
+  className,
+  iconName = 'clipboard',
+  copiedIconName = 'clipboard-check',
+  disabled = false,
+  busy = false,
+}) => {
   const [copiedAt, setCopiedAt] = useState<number | null>(null);
 
   const handleCopyToClipboard = useCallback(() => {
@@ -43,17 +63,22 @@ export const CopyToClipboardButton: React.FunctionComponent<{
         variant="outlined"
         color="secondary"
         size="medium"
-        className={moduleStyles.shareDialogButton}
+        className={classNames(moduleStyles.shareDialogButton, className)}
         onClick={handleCopyToClipboard}
-        aria-label={i18n.copyLinkToProject()}
         type="button"
+        disabled={disabled}
+        aria-busy={busy || undefined}
         startIcon={
-          <FontAwesomeV6Icon
-            iconName={copiedAt ? 'clipboard-check' : 'clipboard'}
-          />
+          busy ? (
+            <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
+          ) : (
+            <FontAwesomeV6Icon
+              iconName={copiedAt ? copiedIconName : iconName}
+            />
+          )
         }
       >
-        {i18n.copyLinkToProject()}
+        {label}
       </MuiButton>
     </CopiedTooltip>
   );

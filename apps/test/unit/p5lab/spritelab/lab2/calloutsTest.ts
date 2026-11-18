@@ -61,6 +61,12 @@ describe('callouts', () => {
     ).toBe('#scene-option-second-scene');
   });
 
+  it('names the Continue button', () => {
+    expect(calloutSelector({target: 'continue-button'})).toBe(
+      '#instructions-continue-button'
+    );
+  });
+
   it('warns of a scene entry callout that names no scene', () => {
     const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
     calloutSelector({target: 'scene-option'});

@@ -25,6 +25,8 @@ export const resourcePanelValidationTableElementId =
 
 export const instructionsValidateButtonElementId =
   'instructions-validate-button';
+export const instructionsContinueButtonElementId =
+  'instructions-continue-button';
 
 export const resourcePanelValidationTabButtonElementId =
   'resource-panel-tab-button-validation';

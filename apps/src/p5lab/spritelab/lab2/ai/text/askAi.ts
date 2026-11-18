@@ -14,8 +14,13 @@ import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getStore} from '@cdo/apps/redux';
 import {
+  CurrentUserState,
+  SpritelabAskAiRefusal,
+} from '@cdo/apps/templates/CurrentUserState';
+import {
   AiChatClientTypes,
   AiChatModelIds,
+  SpritelabAskAiRefusals,
 } from '@cdo/generated-scripts/sharedConstants';
 
 const ASK_AI_DCDO_KEY = 'spritelab-lab2-ask-ai-enabled';
@@ -63,6 +68,34 @@ export function isAskAiEnabled(): boolean {
   return DCDO.get(ASK_AI_DCDO_KEY, true) !== false;
 }
 
+const REFUSAL_MESSAGES: Record<SpritelabAskAiRefusal, string> = {
+  [SpritelabAskAiRefusals.NOT_IN_PILOT]: "AI blocks aren't available yet.",
+  [SpritelabAskAiRefusals.OFF]: 'The AI is turned off right now.',
+  [SpritelabAskAiRefusals.NO_ACCESS]:
+    "Your teacher hasn't turned on AI for this class.",
+  [SpritelabAskAiRefusals.REGION_BLOCKED]:
+    "AI blocks aren't available in your region yet.",
+};
+
+// The server's reason (User::AiAccessible) for refusing an answer, in words.
+export function askAiRefusal({
+  userType,
+  spritelabAskAiRefusal,
+}: Pick<CurrentUserState, 'userType' | 'spritelabAskAiRefusal'>):
+  | string
+  | null {
+  if (!spritelabAskAiRefusal) {
+    return null;
+  }
+  if (
+    spritelabAskAiRefusal === SpritelabAskAiRefusals.NO_ACCESS &&
+    userType === 'teacher'
+  ) {
+    return 'AI blocks need a verified teacher account.';
+  }
+  return REFUSAL_MESSAGES[spritelabAskAiRefusal];
+}
+
 const SAFETY_CHECK_FAILURES = {
   prompt: 'The question failed the safety check',
   system_prompt: 'The system prompt failed the safety check',
@@ -72,8 +105,8 @@ const SAFETY_CHECK_FAILURES = {
 export class AskAiError extends Error {
   constructor(public readonly phase: keyof typeof SAFETY_CHECK_FAILURES) {
     super(SAFETY_CHECK_FAILURES[phase]);
-    // The ES5 build target otherwise leaves this with Error's prototype.
-    Object.setPrototypeOf(this, AskAiError.prototype);
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'AskAiError';
   }
 }
@@ -81,7 +114,8 @@ export class AskAiError extends Error {
 class AskAiTimeoutError extends Error {
   constructor() {
     super('The AI took too long to answer.');
-    Object.setPrototypeOf(this, AskAiTimeoutError.prototype);
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'AskAiTimeoutError';
   }
 }

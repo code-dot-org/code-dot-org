@@ -39,6 +39,24 @@ export function editableFiles(
 }
 
 /**
+ * Whether the editable files differ from the template's by name or contents,
+ * as they do once the project has been built or edited.
+ */
+export function differsFromTemplate(
+  sources: ProjectSources | undefined,
+  template: ProjectSources | undefined
+): boolean {
+  const original = new Map(
+    editableFiles(template).map(file => [file.name, file.contents])
+  );
+  const current = editableFiles(sources);
+  return (
+    current.length !== original.size ||
+    current.some(file => original.get(file.name) !== file.contents)
+  );
+}
+
+/**
  * The sources with each generated file's contents in place of the editable
  * file of the same name. Files generation did not name keep their contents,
  * and names the project lacks are dropped. Undefined when nothing matched.

@@ -1,11 +1,15 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Challenges, VocabularyFlashcards} from '@code-dot-org/lesson-deep-dive';
+import {
+  Challenges,
+  PodcastsBox,
+  ReflectionData,
+  VocabularyFlashcards,
+} from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {FC, useCallback, useState} from 'react';
 
 import {
   LessonDeepDiveData,
-  ReflectionData,
   AssessmentQuestionResult,
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -13,7 +17,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Chat from './Chat';
-import PodcastsBox from './PodcastsBox';
 import VideosBox from './VideosBox';
 
 import styles from './intervention-box.module.scss';

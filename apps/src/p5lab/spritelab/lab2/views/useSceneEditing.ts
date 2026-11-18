@@ -25,12 +25,11 @@ export interface SceneEditing {
   selectScene: (sceneId: string) => void;
   createScene: (name: string) => void;
   renameScene: (sceneId: string, name: string) => void;
-  /** Never the last scene (the gallery offers no delete for it). */
+  /** Never the last scene (the dialog offers no delete for it). */
   deleteScene: (sceneId: string) => void;
   /** Move the scene to index 0, where Play and other projects' jumps
       start. */
   makeStartScene: (sceneId: string) => void;
-  openGallery: () => void;
 }
 
 /** The scene list's edits: select, create, rename, delete, reorder. */
@@ -134,16 +133,11 @@ export default function useSceneEditing({
     [updateSources, getScenes]
   );
 
-  const openGallery = useCallback(() => {
-    dispatch(setActiveTab('Scenes'));
-  }, [dispatch]);
-
   return {
     selectScene,
     createScene,
     renameScene,
     deleteScene,
     makeStartScene,
-    openGallery,
   };
 }

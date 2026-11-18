@@ -37,6 +37,8 @@ export class ImageSafetyError extends Error {
         ? 'The prompt failed the safety check'
         : 'A generated image failed the safety check'
     );
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'ImageSafetyError';
   }
 }

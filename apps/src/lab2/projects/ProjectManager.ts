@@ -360,6 +360,28 @@ export default class ProjectManager {
     this.channelsStore.redirectToRemix(this.lastChannel);
   }
 
+  /** Saves what is unsaved, then leaves for a remix of the project. A save
+      that fails is thrown instead, since the remix would miss the student's
+      latest work; the save reports failure only through its listeners. */
+  async saveAndRemix() {
+    let failure: Error | undefined;
+    const noteFailure = (error: Error) => {
+      failure = error;
+    };
+    this.saveFailListeners.push(noteFailure);
+    try {
+      await this.flushSave();
+    } finally {
+      this.saveFailListeners = this.saveFailListeners.filter(
+        listener => listener !== noteFailure
+      );
+    }
+    if (failure) {
+      throw new Error('The save before the remix failed', {cause: failure});
+    }
+    this.redirectToRemix();
+  }
+
   redirectToView() {
     this.throwErrorIfDestroyed('redirectToView');
     if (!this.lastChannel || !this.lastChannel.projectType) {
