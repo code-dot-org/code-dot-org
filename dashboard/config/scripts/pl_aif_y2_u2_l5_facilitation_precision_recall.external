@@ -18,6 +18,10 @@ markdown <<MARKDOWN
   </div>
 </div>
 
+<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #611D00; line-height: 1.5;"><strong>&#9888;&#65039; Say this before students pick a berry:</strong> this scenario is just a classroom exercise, not real advice about berries to eat. Elderberries, the berries labeled "Not Toxic," are still safest when cooked rather than eaten raw. Wild berries are difficult to identify, so as a general rule, it's best not to eat them.</div>
+</div>
+
 <hr>
 
 ## Watch for: "Higher Accuracy Means Better Model"
@@ -38,6 +42,26 @@ markdown <<MARKDOWN
     <strong>&#128161; Language to borrow:</strong>
   </div>
   <div style="font-size: 16px; color: #222222;">&bull; Try arguing, hypothetically, that higher accuracy automatically makes a model better, then ask students to push back on that reasoning themselves.</div>
+</div>
+
+## Watch for: Mixing Up the Denominators
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Counts the Wrong Rows</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">For recall, student counts across all 10 rows instead of just the 5 actually-toxic rows. For precision, student counts across all 10 rows instead of just the rows the model predicted toxic.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Filters First, Then Counts</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Student narrows to the right rows first, "actually toxic" for recall, "predicted toxic" for precision, before counting how many of those the model got right.</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222;">&bull; Recall and precision are harder to grasp than accuracy because each uses a different denominator. For recall, ask: "Looking only at rows that are actually toxic, how many did the model catch?" For precision, ask: "Looking only at rows the model called toxic, how many were actually toxic?"</div>
 </div>
 
 ## The Precision/Recall Trade-Off

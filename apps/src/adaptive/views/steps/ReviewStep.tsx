@@ -9,7 +9,7 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import {asProjectSources} from '@cdo/apps/lab2/utils/getInitialSources';
 
-import {isAdaptiveAiEnabled} from '../../ai/generate';
+import {isAdaptiveAiAvailable} from '../../ai/access';
 import {Answer} from '../../progress';
 import {answersBySlot, checkpointPlan} from '../../project/plan';
 import {differsFromTemplate} from '../../project/projectGeneration';
@@ -48,8 +48,8 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
   const segments = checkpoint.plan
     ? planTemplateSegments(checkpoint.plan.template)
     : [];
-  // With adaptive AI off a build would land on the template; offer only the skip.
-  const canBuild = isAdaptiveAiEnabled();
+  // Without AI a build would land on the template; offer only the skip.
+  const canBuild = isAdaptiveAiAvailable();
 
   const titleRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {

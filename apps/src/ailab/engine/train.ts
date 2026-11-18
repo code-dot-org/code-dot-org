@@ -204,18 +204,18 @@ const prepare = (
   prepareTrainingData(store, project, accuracyCheckRowIndices);
 };
 
-// A run the student started, without a predetermined split.
+// A run the student started, graded on the project's split once it has one.
 const init = (store: Store<RootState>, project: AilabProject): void => {
   const state = store.getState();
+  const rowCount = getData(state).length;
+  const savedSplit = project.accuracyCheckRowIndices;
   trainingState.previousResults = getTrainingResults(state);
   prepare(
     store,
     project,
-    reserveRowIndices(
-      getData(state).length,
-      state.reserveLocation,
-      state.mode?.testRows
-    )
+    savedSplit && describesDataset(savedSplit, rowCount)
+      ? savedSplit
+      : reserveRowIndices(rowCount, state.reserveLocation, state.mode?.testRows)
   );
 };
 

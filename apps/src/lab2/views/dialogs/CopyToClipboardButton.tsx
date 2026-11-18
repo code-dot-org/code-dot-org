@@ -22,6 +22,9 @@ export const CopyToClipboardButton: React.FunctionComponent<{
   iconName?: string;
   /** The icon while the copied tooltip shows. */
   copiedIconName?: string;
+  disabled?: boolean;
+  /** A spinner stands in for the icon. */
+  busy?: boolean;
 }> = ({
   shareUrl,
   projectType,
@@ -29,6 +32,8 @@ export const CopyToClipboardButton: React.FunctionComponent<{
   className,
   iconName = 'clipboard',
   copiedIconName = 'clipboard-check',
+  disabled = false,
+  busy = false,
 }) => {
   const [copiedAt, setCopiedAt] = useState<number | null>(null);
 
@@ -61,8 +66,16 @@ export const CopyToClipboardButton: React.FunctionComponent<{
         className={classNames(moduleStyles.shareDialogButton, className)}
         onClick={handleCopyToClipboard}
         type="button"
+        disabled={disabled}
+        aria-busy={busy || undefined}
         startIcon={
-          <FontAwesomeV6Icon iconName={copiedAt ? copiedIconName : iconName} />
+          busy ? (
+            <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
+          ) : (
+            <FontAwesomeV6Icon
+              iconName={copiedAt ? copiedIconName : iconName}
+            />
+          )
         }
       >
         {label}

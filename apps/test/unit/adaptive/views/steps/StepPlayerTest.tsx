@@ -10,8 +10,8 @@ import {
 import StepPlayer from '@cdo/apps/adaptive/views/steps/StepPlayer';
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 
-jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
-  isAdaptiveAiEnabled: () => true,
+jest.mock('@cdo/apps/adaptive/ai/access', () => ({
+  isAdaptiveAiAvailable: () => true,
 }));
 
 // A loaded project with nothing in it, so a review step builds without asking.

@@ -1,8 +1,8 @@
 {
-  "name": "SC1-L12-study-playlist-base",
+  "name": "SC1-L12-v2-study-playlist-base",
   "card": {
-    "description": "A study app tries to pick songs for a study playlist. Each record is one real song. The label is Study Song? (Yes or No), based on the genre that playlist makers gave the song. You can also choose Major Key? or Cheerful? as the label.",
-    "source": "Spotify Tracks Dataset (maharshipandya), Hugging Face: https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset. Real song titles and audio measures; the Study Song? label comes from each song's genre tag.",
+    "description": "A study app tries to pick songs for a study playlist. Each record is one real song. The label is Study Song? (Yes or No), based on the genre that playlist makers gave the song. You can also choose Danceable? or Acoustic? as the label.",
+    "source": "Real songs and audio facts from the Spotify Tracks Dataset on Hugging Face (https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset). The Study Song? label comes from each song's genre tag.",
     "lastUpdated": "2026",
     "context": {
       "createdBy": "CodeAI",
@@ -21,7 +21,7 @@
     {
       "type": "categorical",
       "id": "Energy",
-      "description": "How much energy does the song have? Low is calm. High is intense. Low is calm. High is intense."
+      "description": "How much energy does the song have? Low is calm. High is intense."
     },
     {
       "type": "categorical",
@@ -40,13 +40,13 @@
     },
     {
       "type": "categorical",
-      "id": "Major Key?",
-      "description": "Is the song in a major key? A major key is a set of notes that often sounds bright and happy."
+      "id": "Danceable?",
+      "description": "Is the song easy to dance to?"
     },
     {
       "type": "categorical",
-      "id": "Cheerful?",
-      "description": "Does the song sound cheerful? A song counts as cheerful when its happy score is 0.5 or more (on a scale from 0 to 1)."
+      "id": "Acoustic?",
+      "description": "Does the song sound mostly acoustic? That means real instruments like piano or guitar, not electronic ones."
     },
     {
       "type": "categorical",
