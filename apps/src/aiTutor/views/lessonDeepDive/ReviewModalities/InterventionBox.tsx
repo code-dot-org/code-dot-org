@@ -3,6 +3,7 @@ import {
   Challenges,
   PodcastsBox,
   ReflectionData,
+  VideosBox,
   VocabularyFlashcards,
 } from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
@@ -18,7 +19,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Chat from './Chat';
-import VideosBox from './VideosBox';
 
 import styles from './intervention-box.module.scss';
 
