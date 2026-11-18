@@ -21,7 +21,7 @@ import {
   TEXT_FONT_STYLE,
 } from './canvasTextUtils';
 import EditToolbar from './EditToolbar';
-import {Sticker} from './stickers';
+import {Sticker, StickerSection} from './stickers';
 
 import styles from './video-canvas.module.scss';
 
@@ -134,6 +134,7 @@ interface VideoCanvasProps {
   setRecordedAudioBlob: Dispatch<SetStateAction<Blob | null>>;
   timeLimitSeconds?: number;
   disabled?: boolean;
+  stickerSections: StickerSection[];
 }
 
 const VideoCanvas: FC<VideoCanvasProps> = ({
@@ -145,6 +146,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   setRecordedAudioBlob,
   timeLimitSeconds = 30,
   disabled = false,
+  stickerSections,
 }) => {
   // Actual mode, set by start/stop recording effects
   const [currentMode, setCurrentMode] = useState<VideoCanvasMode>('edit');
@@ -488,6 +490,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     <div className={styles.container}>
       {currentMode === 'edit' && (
         <EditToolbar
+          stickerSections={stickerSections}
           onAddText={addText}
           onAddSticker={addSticker}
           canDelete={selectedId !== null}

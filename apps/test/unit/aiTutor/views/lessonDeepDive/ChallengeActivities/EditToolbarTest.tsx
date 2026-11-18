@@ -10,6 +10,7 @@ const renderToolbar = (
 ) =>
   render(
     <EditToolbar
+      stickerSections={STICKER_SECTIONS}
       onAddText={jest.fn()}
       onAddSticker={jest.fn()}
       canDelete={false}
@@ -104,6 +105,7 @@ describe('EditToolbar', () => {
 
     rerender(
       <EditToolbar
+        stickerSections={STICKER_SECTIONS}
         onAddText={jest.fn()}
         onAddSticker={jest.fn()}
         canDelete

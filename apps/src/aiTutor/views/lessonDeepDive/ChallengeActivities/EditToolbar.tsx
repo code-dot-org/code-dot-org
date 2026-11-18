@@ -3,7 +3,7 @@ import {Button, IconButton, Tooltip, Typography} from '@mui/material';
 import React, {FC, ReactNode, Ref, useId, useRef, useState} from 'react';
 
 import {NewCanvasText, TEXT_STYLES, TextStyle} from './canvasTextUtils';
-import {Sticker, STICKER_SECTIONS} from './stickers';
+import {Sticker, StickerSection} from './stickers';
 
 import styles from './edit-toolbar.module.scss';
 
@@ -201,13 +201,18 @@ const TextPanel: FC<TextPanelProps> = ({onClose, onAddText}) => {
 };
 
 interface StickersPanelProps {
+  stickerSections: StickerSection[];
   onClose: () => void;
   onAddSticker: (sticker: Sticker) => void;
 }
 
-const StickersPanel: FC<StickersPanelProps> = ({onClose, onAddSticker}) => (
+const StickersPanel: FC<StickersPanelProps> = ({
+  stickerSections,
+  onClose,
+  onAddSticker,
+}) => (
   <Panel title="Stickers" onClose={onClose}>
-    {STICKER_SECTIONS.map(({title, stickers}) => (
+    {stickerSections.map(({title, stickers}) => (
       <div key={title} className={styles.section}>
         <Typography variant="body4" className={styles.sectionLabel}>
           {title}
@@ -239,6 +244,7 @@ const StickersPanel: FC<StickersPanelProps> = ({onClose, onAddSticker}) => (
 );
 
 interface EditToolbarProps {
+  stickerSections: StickerSection[];
   onAddText: (text: NewCanvasText) => void;
   onAddSticker: (sticker: Sticker) => void;
   canDelete: boolean;
@@ -246,6 +252,7 @@ interface EditToolbarProps {
 }
 
 const EditToolbar: FC<EditToolbarProps> = ({
+  stickerSections,
   onAddText,
   onAddSticker,
   canDelete,
@@ -299,7 +306,11 @@ const EditToolbar: FC<EditToolbarProps> = ({
         <TextPanel onClose={close} onAddText={onAddText} />
       )}
       {openPanel === 'stickers' && (
-        <StickersPanel onClose={close} onAddSticker={onAddSticker} />
+        <StickersPanel
+          stickerSections={stickerSections}
+          onClose={close}
+          onAddSticker={onAddSticker}
+        />
       )}
     </div>
   );
