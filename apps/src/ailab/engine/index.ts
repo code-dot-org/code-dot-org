@@ -13,7 +13,7 @@ export {loadLevel} from './levelLoad';
 export {ProjectProvider} from './ProjectContext';
 export {TrainingDataProvider} from './TrainingDataContext';
 
-export {defaultProject} from './types';
+export {defaultProject, describeTestRows} from './types';
 export {DEFAULT_TEST_ROWS_PERCENT} from './constants';
 export {isValidHyperparameter} from './helpers/utils';
 export type {AilabProject, HistoricResult, Hyperparameters} from './types';

@@ -432,6 +432,22 @@ describe('EditAilabMode', () => {
     });
   });
 
+  it('blocks the form when the rows to test on leave none in the dataset to train on', async () => {
+    serveFiles(FILES);
+    renderEditor('{"datasets": ["zoo"], "testRows": {"count": 2}}');
+    await columnsLoaded();
+    const count = screen.getByRole<HTMLInputElement>('spinbutton', {
+      name: /Number of rows to test on/,
+    });
+    expect(
+      screen.getByText('Enter fewer than 2, the number of rows in the dataset.')
+    ).toBeInTheDocument();
+    expect(count.checkValidity()).toBe(false);
+
+    fireEvent.change(count, {target: {value: '1'}});
+    expect(count.checkValidity()).toBe(true);
+  });
+
   it('saves k-nearest neighbors when no trainer is set', () => {
     const savedMode = renderEditor('{"datasets": ["zoo"]}');
     expect(screen.getByRole('combobox', {name: 'Trainer'})).toHaveValue('knn');

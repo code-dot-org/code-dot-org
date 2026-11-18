@@ -21,7 +21,13 @@ import {
 import {getData, getSelectedCategoricalColumns} from './selectors';
 import {buildTrainer} from './trainers';
 import type {Trainer, TrainerOutput, TrainingRun} from './trainers/types';
-import type {AilabProject, DataRow, TestRows, TrainedModel} from './types';
+import {
+  describeTestRows,
+  type AilabProject,
+  type DataRow,
+  type TestRows,
+  type TrainedModel,
+} from './types';
 
 /* Builds a hash that maps selected categorical features to their option-
   number keys and dispatches that hash to the Redux store.
@@ -97,15 +103,15 @@ const extractTrainingLabel = (
   return convertValueForTraining(state, project, value, project.labelColumn!);
 };
 
-const testRowCount = (rowCount: number, testRows?: TestRows): number =>
-  Math.min(
-    testRows && 'count' in testRows
-      ? testRows.count
-      : Math.ceil(
-          (rowCount * (testRows?.percent ?? DEFAULT_TEST_ROWS_PERCENT)) / 100
-        ),
-    rowCount - 1
-  );
+const testRowCount = (
+  rowCount: number,
+  testRows: TestRows = {percent: DEFAULT_TEST_ROWS_PERCENT}
+): number => {
+  const {unit, amount} = describeTestRows(testRows);
+  const requested =
+    unit === 'count' ? amount : Math.ceil((rowCount * amount) / 100);
+  return Math.min(requested, rowCount - 1);
+};
 
 /*
   Which rows a run holds back to grade itself on.
@@ -119,16 +125,16 @@ const reserveRowIndices = (
 
   if (location === TestDataLocations.RANDOM) {
     const reserved = new Set<number>();
-    while (reserved.size < numToReserve && reserved.size < rowCount) {
+    while (reserved.size < numToReserve) {
       reserved.add(getRandomInt(rowCount));
     }
     return [...reserved].sort((a, b) => a - b);
   }
 
   // If the location is not random, reserve the last numToReserve rows.
-  const firstReserved = Math.max(0, rowCount - numToReserve);
+  const firstReserved = rowCount - numToReserve;
   return Array.from(
-    {length: rowCount - firstReserved},
+    {length: numToReserve},
     (_unused, offset) => firstReserved + offset
   );
 };

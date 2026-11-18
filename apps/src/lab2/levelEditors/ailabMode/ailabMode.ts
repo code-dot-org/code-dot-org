@@ -3,7 +3,11 @@
   keeps only the keys and values Lab 2 AI Lab understands; anything else is
   dropped when the level is next saved.
 */
-import {isValidHyperparameter, type TestRows} from '@cdo/apps/ailab/engine';
+import {
+  describeTestRows,
+  isValidHyperparameter,
+  type TestRows,
+} from '@cdo/apps/ailab/engine';
 
 import {setJsonObjectValue} from '../jsonUtils';
 
@@ -85,12 +89,12 @@ const getTestRows = (mode: ModeObject) => mode.testRows as TestRows | undefined;
 
 export function getTestRowsUnit(mode: ModeObject): TestRowsUnit {
   const testRows = getTestRows(mode);
-  return testRows && 'count' in testRows ? 'count' : 'percent';
+  return testRows ? describeTestRows(testRows).unit : 'percent';
 }
 
 export function getTestRowsAmount(mode: ModeObject): number | undefined {
   const testRows = getTestRows(mode);
-  return testRows && ('count' in testRows ? testRows.count : testRows.percent);
+  return testRows && describeTestRows(testRows).amount;
 }
 
 export function setTestRows(

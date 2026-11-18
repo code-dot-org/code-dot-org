@@ -304,6 +304,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
         <TestRowsField
           key={String(testRowsLocked)}
           mode={mode}
+          datasetRowCount={columns?.rowCount}
           disabled={testRowsLocked}
           onChange={changeMode}
         />

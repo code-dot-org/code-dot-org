@@ -158,9 +158,10 @@ describe('train.cancel', () => {
 
 describe('the accuracy-check split', () => {
   // How train.init divides a dataset of this many rows.
-  const splitOf = (rowCount, mode) => {
+  const splitOf = (rowCount, mode, reserveLocation = TestDataLocations.END) => {
     const store = createStore(rootReducer);
     store.dispatch(setMode(mode));
+    store.dispatch(setReserveLocation(reserveLocation));
     const rows = Array.from({length: rowCount}, (_unused, index) => ({
       animal: index % 2 ? 'bird' : 'dog',
       legs: String(index),
@@ -204,6 +205,12 @@ describe('the accuracy-check split', () => {
       heldBack: 5,
       trainedOn: 16,
     });
+  });
+
+  test('holds back the number of rows the level sets from random rows', () => {
+    expect(
+      splitOf(21, {testRows: {count: 20}}, TestDataLocations.RANDOM)
+    ).toEqual({heldBack: 20, trainedOn: 1});
   });
 
   test('leaves a row to train on however many the level asks for', () => {

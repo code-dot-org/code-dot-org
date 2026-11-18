@@ -15,6 +15,15 @@ export interface Dataset {
 
 export type TestRows = {count: number} | {percent: number};
 
+export function describeTestRows(testRows: TestRows): {
+  unit: 'count' | 'percent';
+  amount: number;
+} {
+  return 'count' in testRows
+    ? {unit: 'count', amount: testRows.count}
+    : {unit: 'percent', amount: testRows.percent};
+}
+
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;

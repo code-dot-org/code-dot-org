@@ -50,24 +50,43 @@ const isBlank = (text: string) => text.trim() === '';
 const isValidAmountText = (unit: TestRowsUnit, text: string) =>
   !isBlank(text) && isValidTestRowsAmount(unit, Number(text));
 
+const amountError = (
+  unit: TestRowsUnit,
+  text: string,
+  datasetRowCount: number | undefined
+) => {
+  if (isBlank(text)) {
+    return undefined;
+  }
+  if (!isValidAmountText(unit, text)) {
+    return AMOUNT_FIELDS[unit].error;
+  }
+  if (
+    unit === 'count' &&
+    datasetRowCount !== undefined &&
+    Number(text) >= datasetRowCount
+  ) {
+    return `Enter fewer than ${datasetRowCount}, the number of rows in the dataset.`;
+  }
+};
+
 interface TestRowsFieldProps {
   mode: ModeObject;
+  datasetRowCount: number | undefined;
   disabled: boolean;
   onChange: (mode: ModeObject) => void;
 }
 
 const TestRowsField: React.FunctionComponent<TestRowsFieldProps> = ({
   mode,
+  datasetRowCount,
   disabled,
   onChange,
 }) => {
   const [unit, setUnit] = useState(() => getTestRowsUnit(mode));
   const [text, setText] = useState(() => String(getTestRowsAmount(mode) ?? ''));
   const amountField = AMOUNT_FIELDS[unit];
-  const error =
-    !isBlank(text) && !isValidAmountText(unit, text)
-      ? amountField.error
-      : undefined;
+  const error = amountError(unit, text, datasetRowCount);
   const amountRef = useRef<HTMLInputElement>(null);
 
   // The native limits allow 0 and 100%, which would save as the default.
