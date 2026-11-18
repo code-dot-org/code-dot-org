@@ -1,3 +1,4 @@
+import {requestEvaluation} from '@code-dot-org/lesson-deep-dive';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React, {FC, useRef, useState} from 'react';
@@ -13,6 +14,11 @@ import {
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {post: jest.fn(), put: jest.fn()},
+}));
+
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  requestEvaluation: jest.fn(async () => 'pending'),
 }));
 
 const mockTranscribeAudio = jest.fn();
@@ -235,11 +241,7 @@ describe('VideoChallenge', () => {
       {'Content-Type': 'video/webm'}
     );
     // Kicks off AI evaluation after the upload, fire-and-forget.
-    expect(post).toHaveBeenCalledWith(
-      '/challenge_responses/7/evaluate',
-      '',
-      true
-    );
+    expect(requestEvaluation).toHaveBeenCalledWith(expect.anything(), 7);
   });
 
   it('disables submit while upload is in progress', async () => {

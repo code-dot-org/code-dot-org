@@ -2,7 +2,12 @@ import {
   useTheme,
   ThemeProvider,
 } from '@code-dot-org/component-library/common/contexts';
-import {AudioRecorder, ExplanationTypes} from '@code-dot-org/lesson-deep-dive';
+import {useApiClient} from '@code-dot-org/core/api';
+import {
+  AudioRecorder,
+  ExplanationTypes,
+  requestEvaluation,
+} from '@code-dot-org/lesson-deep-dive';
 import {createTheme, ThemeProvider as MuiThemeProvider} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
@@ -18,8 +23,6 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {requestEvaluation} from './requestEvaluation';
 
 import styles from './whiteboard-challenge.module.scss';
 
@@ -177,6 +180,7 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   const reactFlow = useReactFlow();
+  const api = useApiClient();
 
   const canSubmit =
     !submitted &&
@@ -303,7 +307,7 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
 
       // Fire-and-forget: the evaluation result goes to the teacher, not the
       // student, so the submission flow does not wait on it.
-      const status = await requestEvaluation(created.id);
+      const status = await requestEvaluation(api.transport, created.id);
       setChallengeResponseId(created.id);
       setEvaluationStatus(status);
       submitCallback(true);

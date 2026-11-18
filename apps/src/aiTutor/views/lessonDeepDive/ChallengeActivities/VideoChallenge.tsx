@@ -1,7 +1,9 @@
+import {useApiClient} from '@code-dot-org/core/api';
 import {
   Challenge,
   ChallengeResponse,
   challengeResponseValidator,
+  requestEvaluation,
 } from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
@@ -10,7 +12,6 @@ import {getClientApi} from '@cdo/apps/aichat/api/client';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {requestEvaluation} from './requestEvaluation';
 import VideoCanvas, {VideoCanvasMode} from './VideoCanvas';
 
 import styles from './video-challenge.module.scss';
@@ -46,6 +47,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   submitRef,
   resetRef,
 }) => {
+  const api = useApiClient();
   const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
   const [recordedAudioBlob, setRecordedAudioBlob] = useState<Blob | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
@@ -118,7 +120,10 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
 
       // Fire-and-forget: the evaluation result goes to the teacher, not the
       // student, so the submission flow does not wait on it.
-      const status = await requestEvaluation(challengeResponse.id);
+      const status = await requestEvaluation(
+        api.transport,
+        challengeResponse.id
+      );
       setEvaluationStatus(status);
       setChallengeResponseId(challengeResponse.id);
 

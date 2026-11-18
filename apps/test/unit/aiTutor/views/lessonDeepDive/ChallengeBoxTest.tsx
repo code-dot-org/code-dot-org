@@ -14,6 +14,11 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {fetchJson: jest.fn(), post: jest.fn(), put: jest.fn()},
 }));
 
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  requestEvaluation: jest.fn(async () => 'pending'),
+}));
+
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useNavigate: () => jest.fn(),
@@ -120,7 +125,7 @@ const fakeChallengeResponse = (
 // canSubmit once an explanation modality is chosen), draws on the
 // whiteboard, and submits, past the point where ChallengeBox has created
 // the response and kicked off evaluation (setEvaluationStatus only
-// resolves to PENDING when the /evaluate POST reports response.ok).
+// resolves to PENDING when the mocked requestEvaluation reports it).
 const submitWhiteboardChallenge = async () => {
   await waitFor(() =>
     expect(

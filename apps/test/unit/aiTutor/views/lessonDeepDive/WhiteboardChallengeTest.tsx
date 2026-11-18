@@ -1,4 +1,7 @@
-import {ExplanationTypes} from '@code-dot-org/lesson-deep-dive';
+import {
+  ExplanationTypes,
+  requestEvaluation,
+} from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React, {FC, useRef, useState} from 'react';
@@ -93,6 +96,7 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => {
   const React = require('react');
   return {
     ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+    requestEvaluation: jest.fn(async () => 'pending'),
     AudioRecorder: (props: {
       onRecordingChange: (hasRecording: boolean) => void;
       onIsRecordingChange?: (isRecording: boolean) => void;
@@ -400,11 +404,7 @@ describe('WhiteboardChallenge', () => {
       {'Content-Type': 'image/png'}
     );
     // Kicks off AI evaluation after the upload, fire-and-forget.
-    expect(post).toHaveBeenCalledWith(
-      '/challenge_responses/7/evaluate',
-      '',
-      true
-    );
+    expect(requestEvaluation).toHaveBeenCalledWith(expect.anything(), 7);
   });
 
   it('shows an error and stays submittable when the capture fails', async () => {
