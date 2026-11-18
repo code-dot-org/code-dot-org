@@ -324,7 +324,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     tools;
   const {closedPicture, releaseClosedPicture} = tools;
   // The copy belongs to the image the tools closed on.
-  useEffect(() => releaseClosedPicture, [chosenId, releaseClosedPicture]);
+  useEffect(() => {
+    if (closedPicture && closedPicture.key !== chosenId) {
+      releaseClosedPicture();
+    }
+  }, [chosenId, closedPicture, releaseClosedPicture]);
 
   const [uploadError, setUploadError] = useState<{text: string} | null>(null);
   const [uploadStatus, setUploadStatus] = useState('');

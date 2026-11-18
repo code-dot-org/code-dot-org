@@ -152,10 +152,10 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   color: var(--text-neutral-quaternary);
 }
 
-// The plus: a brand square like a dialog header's icon. The trash can is
-// the same size.
 $list-button-icon: 20px;
 
+// The plus: a brand square like a dialog header's icon. The trash can is
+// the same size.
 .newButton,
 .deleteButton {
   flex: none;

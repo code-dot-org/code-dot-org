@@ -123,14 +123,28 @@ describe('useDrawing', () => {
     await act(async () => tools().finishDrawing());
     expect(tools().drawing).toBeNull();
     expect(tools().closedPicture).toEqual({key: target.key, canvas: copy});
-    act(() => tools().releaseClosedPicture());
-    expect(tools().closedPicture).toBeNull();
-
+    // Opening the tools again drops the copy.
     await act(() => tools().startDrawing(target));
+    expect(tools().closedPicture).toBeNull();
     tools().attachEditor({save: jest.fn(), snapshot: () => copy});
     act(() => tools().abandonDrawing());
     expect(tools().drawing).toBeNull();
     expect(tools().closedPicture).toBeNull();
+  });
+
+  it('hands over a copy for a new drawing whose only save is the one Done makes', async () => {
+    const {tools} = setup();
+    const copy = document.createElement('canvas');
+    await act(() => tools().startDrawing({key: null, imageType: 'sprite'}));
+    tools().attachEditor({
+      save: () => tools().handleSave('data:a', {}),
+      snapshot: () => copy,
+    });
+    act(() => tools().scheduleStrokeSave());
+    await act(async () => tools().finishDrawing());
+    expect(tools().drawing).toBeNull();
+    // The image's key comes from that save.
+    expect(tools().closedPicture).toEqual({key: 'k1', canvas: copy});
   });
 
   it('uploads the file at most every few seconds, and on the last save', async () => {

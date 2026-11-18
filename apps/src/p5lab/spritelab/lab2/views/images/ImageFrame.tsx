@@ -60,16 +60,19 @@ const COVER_MAX_FRAMES = 30;
 /**
  * The frame's checkerboard as the paint tools draw it behind `image`: the
  * tile's side, and where the tiles start so that one starts at the
- * picture's corner. Undefined for a picture of unknown size.
+ * picture's corner. Undefined for a picture of unknown size, or one too
+ * small for a tile.
  */
-function checkerOf(image: ProjectImage | null): React.CSSProperties {
+function checkerOf(
+  image: ProjectImage | null
+): React.CSSProperties | undefined {
   // The tools open one frame of a character set, and all of anything else.
   const size =
     image?.sheet?.frameSize ??
     image?.props.sourceSize ??
     image?.props.frameSize;
   if (!size) {
-    return {};
+    return undefined;
   }
   const grid = pixelGridFor(size.x, size.y, image?.props.pixelGridSize);
   const width = size.x / (grid ?? 1);
@@ -77,6 +80,9 @@ function checkerOf(image: ProjectImage | null): React.CSSProperties {
   const longer = Math.max(width, height);
   // A tile is two squares a side, as a share of the frame's side.
   const tile = 2 * checkerCellFraction(width, height, !!grid);
+  if (tile >= 1) {
+    return undefined;
+  }
   // The picture is centered in the frame. A background position in percent
   // moves the tiles by that share of the frame's side less one tile.
   const start = (side: number) => `${(50 * (1 - side / longer)) / (1 - tile)}%`;
@@ -144,7 +150,6 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   }, [hasAbove, hasUnder]);
   const filled = live ? !generating : !!image;
   const checker = checkerOf(image);
-  const checkerMatched = Object.keys(checker).length > 0;
 
   const pictureRef = useRef<HTMLDivElement>(null);
   const onCoverDoneRef = useRef(onCoverDone);
@@ -192,7 +197,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
             className={classNames(
               styles.frame,
               filled && styles.frameFilled,
-              checkerMatched && styles.frameMatched,
+              checker && styles.frameMatched,
               workspaceClassName
             )}
             style={{width: frameSide, height: frameSide, ...checker}}

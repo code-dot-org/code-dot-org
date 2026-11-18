@@ -57,7 +57,9 @@ $share-footer-control: 26px;
   // `html` so this outranks the page's own footer rule on a dark page.
   :global(html body.spritelab2-share #page-small-footer .small-footer-base) {
     // Centers the footer's controls on the bar's row.
-    margin-bottom: math.div(strip.$foot-height - $share-footer-control, 2);
+    margin-bottom: math.floor(
+      math.div(strip.$foot-height - $share-footer-control, 2)
+    );
     // The footer's box is wider than its controls and lies over the bar's
     // buttons, so only the controls take clicks.
     pointer-events: none;

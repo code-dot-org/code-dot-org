@@ -189,12 +189,14 @@ export default function useDrawing({
     setDrawing(null);
   }, []);
 
-  const closeAfterDone = useCallback(() => {
-    const key = drawingRef.current?.target.key;
-    const canvas = editorRef.current?.snapshot();
-    setClosedPicture(key && canvas ? {key, canvas} : null);
-    stopDrawing();
-  }, [stopDrawing]);
+  const closeAfterDone = useCallback(
+    (key = drawingRef.current?.target.key) => {
+      const canvas = editorRef.current?.snapshot();
+      setClosedPicture(key && canvas ? {key, canvas} : null);
+      stopDrawing();
+    },
+    [stopDrawing]
+  );
 
   const abandonDrawing = useCallback(() => {
     abandonedDrawingIdRef.current = drawingRef.current?.id ?? null;
@@ -431,7 +433,8 @@ export default function useDrawing({
           pending.final
         );
       } else if (final && drawingRef.current?.id === saved.id) {
-        closeAfterDone();
+        // A new image's key is in `saved` before it is in the ref.
+        closeAfterDone(saved.target.key);
       } else if (nextFrameRef.current !== null) {
         const next = nextFrameRef.current;
         nextFrameRef.current = null;

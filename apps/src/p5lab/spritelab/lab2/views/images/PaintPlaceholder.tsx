@@ -13,9 +13,7 @@ interface PaintPlaceholderProps {
   pixelated?: boolean;
 }
 
-/** A picture laid over the frame until what is under it has been drawn:
-    over the tools' canvas while they decode their own copy, and over the
-    stored picture as the tools close. */
+/** A picture laid over the frame until what is under it has been drawn. */
 const PaintPlaceholder: React.FunctionComponent<PaintPlaceholderProps> = ({
   picture,
   src,

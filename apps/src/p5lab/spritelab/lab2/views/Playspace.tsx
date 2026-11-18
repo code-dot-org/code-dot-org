@@ -294,8 +294,6 @@ interface PlayspaceProps {
   /** The column's share of the browser's width; PREVIEW_WIDTH_SHARE
       unless given. */
   columnShare?: number;
-  // The preview column's width, which the code keeps clear of.
-  onPreviewWidth?: (width: number) => void;
   /** The width of the preview column, reported in every mode. */
   onColumnWidth?: (width: number) => void;
 }
@@ -320,7 +318,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   below,
   side = 'right',
   columnShare = PREVIEW_WIDTH_SHARE,
-  onPreviewWidth,
   onColumnWidth,
   getDefaultSpriteSize,
   onPreviewClick,
@@ -689,13 +686,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     : null;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
-  // The room the code gives up.
   const previewWidth = mode === 'preview' && measured ? columnWidth : 0;
-  const reportPreviewWidth = useRef(onPreviewWidth);
-  reportPreviewWidth.current = onPreviewWidth;
-  useEffect(() => {
-    reportPreviewWidth.current?.(previewWidth);
-  }, [previewWidth]);
   const reportColumnWidth = useRef(onColumnWidth);
   reportColumnWidth.current = onColumnWidth;
   const measuredColumnWidth = measured ? columnWidth : 0;

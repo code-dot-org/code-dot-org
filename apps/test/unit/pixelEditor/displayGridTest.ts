@@ -34,5 +34,6 @@ describe('displayGrid', () => {
     expect(pixelGridFor(64, 64, 1)).toBe(1);
     expect(pixelGridFor(645, 640, 10)).toBeNull();
     expect(pixelGridFor(640, 640)).toBeNull();
+    expect(pixelGridFor(640, 640, 0)).toBeNull();
   });
 });
