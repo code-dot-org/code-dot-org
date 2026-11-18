@@ -43,6 +43,8 @@ $tools-row-gap: 8px;
   container-type: inline-size;
 }
 
+$tip-line-height: 24px;
+
 // A tip over the frame's bottom part while a picture is made; the frame
 // clips it to its corners.
 .frameTip {
@@ -52,8 +54,8 @@ $tools-row-gap: 8px;
   bottom: 0;
   z-index: 1;
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-start;
+  gap: 16px;
   margin: 0;
   padding: 12px 14px;
   background-color: color-mix(
@@ -62,15 +64,17 @@ $tools-row-gap: 8px;
     transparent
   );
   color: var(--text-neutral-white-fixed);
-  // The same font size as an h6 heading in the design system.
-  font-size: 1.25rem;
-  line-height: 1.4;
+  // The size of the lab's other running text.
+  font-size: 16px;
+  line-height: $tip-line-height;
   text-align: left;
 }
 
+// The bulb is centered on the tip's first line.
 .frameTipIcon {
   flex: none;
   font-size: 22px;
+  line-height: $tip-line-height;
 }
 
 // The pane's header, the same height as the editors' strip, across the top
