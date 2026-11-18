@@ -1,8 +1,9 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {ComponentType, FC, useState} from 'react';
+import {type ComponentType, type FC, useState} from 'react';
 
-import {JsonVideoData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
+import {type JsonVideoData} from '../types';
 
 import styles from './videos-box.module.scss';
 
