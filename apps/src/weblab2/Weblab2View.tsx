@@ -182,15 +182,8 @@ const Weblab2View: React.FC<
   }, [hasEdited, logLevelActivity, dispatch, levelProperties.appName]);
 
   useEffect(() => {
-    // A showcase has no mode but the preview.
-    dispatch(
-      setViewMode(
-        levelProperties?.showcase
-          ? ViewMode.PREVIEW
-          : levelProperties?.initialViewMode || ViewMode.SPLIT
-      )
-    );
-  }, [dispatch, levelProperties?.showcase, levelProperties?.initialViewMode]);
+    dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
+  }, [dispatch, levelProperties?.initialViewMode]);
 
   const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
     source,

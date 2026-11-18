@@ -37,7 +37,6 @@ class Weblab2 < Level
     submittable
     validation_enabled
     widget_view
-    showcase
     initial_view_mode
     disable_edit_run_for_submission
     predict_settings

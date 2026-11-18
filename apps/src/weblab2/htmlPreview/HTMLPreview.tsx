@@ -37,6 +37,7 @@ import {
 } from '@cdo/apps/weblab2/redux/networkRedux';
 
 import {Weblab2LevelProperties} from '../types';
+import {setDebugPanelOpen, setInspectorEnabled} from '../weblab2Redux';
 
 import {
   IframeMessageType,
@@ -69,7 +70,9 @@ export const HTMLPreview: React.FC = () => {
     codebridgeContext.levelProperties as Weblab2LevelProperties;
   const levelId = levelProperties.id;
   const widget2 = levelProperties.widget2;
-  const hideHeader = !!widget2 || !!levelProperties.showcase;
+  // Hide the header in either widget mode, unless editing a widget in start mode.
+  const hideHeader =
+    !!widget2 || (!!levelProperties.widgetView && !isStartMode);
   // The header holds the only exit control, so no header means no full screen.
   const isFullScreen = !!isFullScreenView && !hideHeader;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -208,6 +211,13 @@ export const HTMLPreview: React.FC = () => {
   }, [aiFilePathToPreview]);
 
   const dispatch = useAppDispatch();
+  // A level without a header has no way to close the debug panel or turn the
+  // inspector off, so neither carries over into one.
+  useEffect(() => {
+    if (!hideHeader) return;
+    dispatch(setDebugPanelOpen(false));
+    dispatch(setInspectorEnabled(false));
+  }, [dispatch, levelId, hideHeader]);
 
   const handleUrlSubmit = (newInputValue: string) => {
     setCurrentFile(newInputValue);
