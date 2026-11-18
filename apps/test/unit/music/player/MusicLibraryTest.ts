@@ -3,11 +3,6 @@ import MusicLibrary, {
   SoundFolder,
 } from '@cdo/apps/music/player/MusicLibrary';
 
-jest.mock('@cdo/apps/music/constants', () => ({
-  ...jest.requireActual('@cdo/apps/music/constants'),
-  REMOVED_PACK_IDS: ['removed_artist', 'built_in'],
-}));
-
 function folder(
   id: string,
   restricted: boolean,
@@ -34,10 +29,9 @@ function createLibrary(): MusicLibrary {
     instruments: [],
     kits: [],
     packs: [
-      folder('built_in', false),
+      folder('built_in', false, true),
       folder('artist', true),
-      folder('removed_artist', true),
-      folder('flagged_in_json', true, true),
+      folder('removed_artist', true, true),
     ],
   };
   return new MusicLibrary('test', libraryJson);
@@ -48,10 +42,7 @@ const ids = (folders: SoundFolder[]) => folders.map(f => f.id);
 describe('MusicLibrary removed packs', () => {
   it('leaves a removed pack out of the pack picker', () => {
     const library = createLibrary();
-    expect(ids(library.getRestrictedPacks())).toEqual([
-      'artist',
-      'flagged_in_json',
-    ]);
+    expect(ids(library.getRestrictedPacks())).toEqual(['artist']);
   });
 
   it('keeps a removed pack for a project that already chose it', () => {
@@ -61,7 +52,6 @@ describe('MusicLibrary removed packs', () => {
     expect(ids(library.getRestrictedPacks())).toEqual([
       'artist',
       'removed_artist',
-      'flagged_in_json',
     ]);
     expect(ids(library.getAvailableSounds())).toEqual([
       'built_in',
