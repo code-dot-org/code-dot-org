@@ -105,17 +105,21 @@ def storage_encrypt_id(id)
   storage_encrypt("#{SecureRandom.random_number(65536)}:#{id}:#{SecureRandom.random_number(65536)}")
 end
 
-def get_project_channel_id(storage_id, project_id)
+# `uuid` lets a caller that already holds the project row skip the lookup.
+def get_project_channel_id(storage_id, project_id, uuid: nil)
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   project_id = project_id.to_i
   raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
-  project = Projects.table.where(id: project_id).first || Project.find_by(id: project_id)
 
-  # return uuid if it exists
-  return project[:uuid] if DCDO.get('project-uuid-in-url', false) && project && project[:uuid]
+  if DCDO.get('project-uuid-in-url', false)
+    unless uuid
+      project = Projects.table.where(id: project_id).first || Project.find_by(id: project_id)
+      uuid = project[:uuid] if project
+    end
+    return uuid if uuid
+  end
 
-  # otherwise, continue to use the old encryption method
   storage_encrypt_channel_id(storage_id, project_id)
 end
 

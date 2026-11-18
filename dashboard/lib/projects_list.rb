@@ -78,14 +78,20 @@ module ProjectsList
     # @return [Array<Hash>] An array with each entry representing a project.
     def fetch_section_projects(section)
       section_students = section.students
+      student_storage_ids = get_storage_ids_by_user_ids(section_students.pluck(:id))
+      return [] if student_storage_ids.empty?
+
+      projects_by_storage_id = Projects.table.
+        where(storage_id: student_storage_ids.values, state: 'active').
+        group_by {|project| project[:storage_id]}
+
       [].tap do |projects_list_data|
-        student_storage_ids = get_storage_ids_by_user_ids(section_students.pluck(:id))
         section_students.each do |student|
           next unless student_storage_id = student_storage_ids[student.id]
-          Projects.new(student_storage_id).get_active_projects.each do |project|
+          projects_by_storage_id.fetch(student_storage_id, []).each do |project|
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
-            channel_id = get_project_channel_id(student_storage_id, project[:id])
+            channel_id = get_project_channel_id(student_storage_id, project[:id], uuid: project[:uuid])
             project_data = get_project_row_data(project, channel_id, student)
             projects_list_data << project_data if project_data
           end
