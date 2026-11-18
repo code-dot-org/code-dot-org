@@ -25,7 +25,7 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
   // We can't flag signed out projects as flagged, so we never allow signed out users to accept a flagged image.
   // The store is read directly because this component may be mounted without a redux provider.
   const isSignedOut =
-    getStore().getState().currentUser?.signInState === SignInState.SignedOut;
+    getStore().getState().currentUser?.signInState !== SignInState.SignedIn;
 
   const acceptanceTerms = (
     <div id="dsco-dialog-description">
