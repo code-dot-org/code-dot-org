@@ -1,5 +1,4 @@
-// On a narrow header the label shortens with an ellipsis instead of
-// wrapping onto a second line.
+// A label too long for a narrow header is cut short with an ellipsis.
 .label {
   min-width: 0;
   overflow: hidden;

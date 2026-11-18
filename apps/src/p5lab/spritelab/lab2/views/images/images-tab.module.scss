@@ -24,7 +24,8 @@ $list-share: 0.2;
 // The frame's rounded corners, and the border inside them.
 $frame-radius: 12px;
 $frame-border: 2px;
-// One row of the paint tools, and the space between it and the frame.
+// One row of the paint tools (the pixel editor's tool buttons are this
+// tall), and the space between it and the frame.
 $tools-row-height: 34px;
 $tools-row-gap: 8px;
 
@@ -162,6 +163,12 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   font-size: 20px;
 }
 
+// Doubled to outrank the theme, which sizes a small icon button's icon.
+.deleteButton.deleteButton i {
+  width: auto;
+  font-size: 20px;
+}
+
 // The trash can, in a row along the pane's foot, the height of the bars
 // at the foot of the other tabs.
 .listFooter {
@@ -171,11 +178,9 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   justify-content: flex-start;
   box-sizing: border-box;
   height: strip.$foot-height;
-  // A hairline separates the delete button's row from the images above.
-  // The row reaches past the list on three sides, through the tab's
-  // padding on the left and below and the gap between the columns on the
-  // right, so the hairline runs the full width of the list's pane. The
-  // padding keeps the button in line with the tiles.
+  // The row and its hairline run the full width of the list's pane and
+  // down to the tab's bottom edge; the padding keeps the button in line
+  // with the tiles.
   margin: auto (-$column-gap) (-$pad) (-$pad);
   padding: 0 $column-gap 0 $pad;
   border-top: 1px solid var(--border-neutral-primary);

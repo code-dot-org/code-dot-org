@@ -38,9 +38,10 @@
   display: block;
 }
 
-// From this width up the footer shares the lab's bottom row with the share
-// buttons. Under it, the lab's row moves up and the footer has its own row.
-$share-one-row-min-width: 1024px;
+// From this width up the footer shares the lab's bottom row with the
+// bar's buttons: five of them, centered, clear the footer's controls.
+// Under it, the lab's row moves up and the footer has its own row.
+$share-one-row-min-width: 1180px;
 
 .labRowShareView {
   @media screen and (max-width: #{$share-one-row-min-width - 1px}) {
@@ -52,7 +53,14 @@ $share-one-row-min-width: 1024px;
 @media screen and (min-width: $share-one-row-min-width) {
   // `html` so this outranks the page's own footer rule on a dark page.
   :global(html body.spritelab2-share #page-small-footer .small-footer-base) {
-    margin-bottom: 7px;
+    margin-bottom: 13px;
+    // The footer's box is wider than its controls and lies over the bar's
+    // buttons, so only the controls take clicks.
+    pointer-events: none;
+
+    > * {
+      pointer-events: auto;
+    }
   }
 }
 
@@ -154,12 +162,21 @@ $z-over-blockly: 71;
   border-top: none;
   // The tabs and the bar's title are controls and a label, not text to
   // copy. code-studio.css sets `p, pre, span` back to selectable, so they
-  // are named too.
+  // are named too. Safari reads only the prefixed property.
+  -webkit-user-select: none;
   user-select: none;
 
   span,
   p {
+    -webkit-user-select: none;
     user-select: none;
+  }
+
+  // A field's text is selected to change it.
+  input,
+  textarea {
+    -webkit-user-select: text;
+    user-select: text;
   }
 }
 
@@ -487,22 +504,20 @@ $z-over-blockly: 71;
 }
 
 // The bar along the bottom of the stage, level with the editors' scene
-// bar. It holds the Run buttons under the preview, and Stop while the game
-// plays. The overlay passes pointer events through; the bar takes its own.
+// bar. It holds the buttons that run, stop and restart the game. The
+// overlay passes pointer events through; the bar takes its own.
 .bottomBar {
   position: absolute;
   bottom: 0;
-  // The bar is at least as tall as the scene bar, and grows taller when
-  // its buttons stack in two rows. The 10px of padding above and below is
-  // the space left around a single row of buttons, so a bar with one row
-  // is exactly the scene bar's height.
+  // The bar is the scene bar's height, and taller when its buttons stack
+  // in two rows.
   min-height: $foot-height;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: 10px 8px;
+  padding: 8px;
   background: var(--background-neutral-primary);
   border-top: 1px solid var(--borders-neutral-primary);
   pointer-events: auto;

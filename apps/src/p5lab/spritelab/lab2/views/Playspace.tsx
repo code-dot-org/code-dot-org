@@ -52,8 +52,8 @@ const MARGIN = 12;
 // The editor strip's height ($editor-strip-height): the header over the
 // preview column.
 const EDITOR_STRIP_PX = 41;
-// The height ($foot-height) of the bar pinned to the overlay's foot, the
-// editors' scene bar's twin, until the bar is measured.
+// The stylesheet's $foot-height: the height of the bar along the overlay's
+// foot, used until the bar has been measured.
 const FOOT_BAR_PX = 53;
 // The arrow cross: three keys and two gaps across, as the stylesheet's
 // .arrowCross has them; the same size in every mode.

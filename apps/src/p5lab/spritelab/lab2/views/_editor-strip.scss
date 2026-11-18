@@ -2,7 +2,6 @@
 // editors' strip and the Images tab that heads its own panel with one.
 $height: 41px;
 
-// The bar along a pane's foot. It is the height of the instructions panel's
-// footer, which holds a 32px button with 10px above and below it under a
-// hairline, so the lines above the footer and above each bar meet.
+// The bar along a pane's foot, the height of the instructions panel's
+// footer, so the line above each meets the line above the other.
 $foot-height: 53px;

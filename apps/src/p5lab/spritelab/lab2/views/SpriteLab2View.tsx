@@ -2538,7 +2538,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                     onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
                     playSceneHidden={activeScene.id === scenes[0].id}
                   />
-                  {playspaceMode === 'play' && (
+                  {activeTab === 'Play' && (
                     <PlayControls
                       // On a pinned-scene level the game is that one scene,
                       // so there is no whole-game restart.
