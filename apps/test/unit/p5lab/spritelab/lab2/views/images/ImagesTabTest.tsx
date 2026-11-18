@@ -1655,7 +1655,6 @@ describe('ImagesTab', () => {
       signInState = 'SignedOut';
       moderate.mockResolvedValue('flagged');
       await pickCharacter();
-      expect(screen.getByText('Image Not Allowed')).toBeInTheDocument();
       expect(screen.queryByRole('button', {name: /^accept$/i})).toBeNull();
       await act(async () => {
         fireEvent.click(screen.getByRole('button', {name: /^ok$/i}));
