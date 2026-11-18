@@ -17,6 +17,17 @@ export const EvaluationStatus = {
   SUCCESS: 'success',
 };
 
+export interface Sticker {
+  // Unicode name; also the accessible name
+  name: string;
+  src: string;
+}
+
+export interface StickerSection {
+  title: string;
+  stickers: Sticker[];
+}
+
 export type JsonVideoData = {
   key: string;
   url: string;

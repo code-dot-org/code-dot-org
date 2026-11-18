@@ -14,6 +14,11 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {fetchJson: jest.fn(), post: jest.fn(), put: jest.fn()},
 }));
 
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  VideoCanvas: jest.requireActual('../../../../util/stubVideoCanvas').default,
+}));
+
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useNavigate: () => jest.fn(),
@@ -37,12 +42,6 @@ jest.mock('@cdo/apps/aichat/api/client', () => ({
 jest.mock('@cdo/apps/util/moderateImage', () => ({
   moderateImage: jest.fn(async () => 'safe'),
 }));
-
-// See the stub for what it reproduces of the real canvas, and why.
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoCanvas',
-  () => jest.requireActual('../../../../util/stubVideoCanvas')
-);
 
 // React Flow does not render in jsdom; the whiteboard canvas is stubbed out.
 // The stub's button reports one node through updateSources, simulating the
