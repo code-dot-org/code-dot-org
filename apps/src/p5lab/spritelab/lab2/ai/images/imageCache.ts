@@ -91,17 +91,18 @@ export function sentencePath(
 // about the same variants. A fetch that failed is asked again.
 const missing = new Set<string>();
 
-// The variants found most recently in one folder, oldest first. A variant
-// found in another folder replaces the whole entry.
-let heldBack: {folder: string; variants: number[]} | undefined;
-// Holding this many back leaves two of a full set to choose between, so
-// the pictures never come round in a fixed order.
-const HELD_BACK_COUNT = VARIANT_COUNT - 2;
+// The variants found most recently in one folder, oldest first. Finding a
+// variant in another folder starts the list again.
+let recentlyFound: {folder: string; variants: number[]} | undefined;
+// The list keeps this many, which leaves two of a full set to choose
+// between at random. With one left, the pictures would repeat in a fixed
+// order.
+const RECENTLY_FOUND_LIMIT = VARIANT_COUNT - 2;
 
 /** For tests. */
 export function resetImageCacheState() {
   missing.clear();
-  heldBack = undefined;
+  recentlyFound = undefined;
 }
 
 async function fetchRaw(url: string): Promise<GeneratedFile> {
@@ -137,8 +138,8 @@ export interface FindCachedImageParams {
  * A variant of the filled sentence the cache holds, chosen at random among
  * the ones whose first frame is there, or undefined when none is: the
  * sentence was not drawn with those words in that style, or review deleted
- * every variant. A variant found recently is held back while another
- * exists, and then the one found longest ago comes back first. The first
+ * every variant. Variants found recently are tried last, oldest first, so
+ * one of them comes back only when no other variant is there. The first
  * frame is fetched to find the variant and kept, so asking for it again
  * costs nothing.
  */
@@ -162,7 +163,7 @@ export async function findCachedImage(
     `${folder}/${frameFileName(variant, frame, characterSet)}`;
   const firstFrame = characterSet ? 'base' : 'single';
   const variants = [...Array(VARIANT_COUNT).keys()];
-  const recent = heldBack?.folder === folder ? heldBack.variants : [];
+  const recent = recentlyFound?.folder === folder ? recentlyFound.variants : [];
   const order = [
     ...shuffle(variants.filter(v => !recent.includes(v))),
     ...recent,
@@ -182,10 +183,10 @@ export async function findCachedImage(
       missing.add(url);
       continue;
     }
-    heldBack = {
+    recentlyFound = {
       folder,
       variants: [...recent.filter(v => v !== variant), variant].slice(
-        -HELD_BACK_COUNT
+        -RECENTLY_FOUND_LIMIT
       ),
     };
     return {

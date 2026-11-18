@@ -101,7 +101,7 @@ describe('imageCache', () => {
     expect((await find())?.variant).toBe(2);
   });
 
-  it('brings back the variant found longest ago when every one is held back', async () => {
+  it('brings back the variant found longest ago when every variant was found recently', async () => {
     installFetch(['01', '02', '04']);
     const found: (number | undefined)[] = [];
     for (let i = 0; i < 7; i++) {
@@ -110,15 +110,16 @@ describe('imageCache', () => {
     expect(found).toEqual([1, 2, 4, 1, 2, 4, 1]);
   });
 
-  it('holds back all but two of a full set', async () => {
+  it('leaves two of a full set to choose between', async () => {
     installFetch([...Array(VARIANT_COUNT).keys()].map(variantName));
     const found: number[] = [];
     for (let i = 0; i < VARIANT_COUNT - 1; i++) {
       found.push((await find())?.variant as number);
     }
     expect(new Set(found).size).toBe(VARIANT_COUNT - 1);
-    // Two are left to choose between: the one not found yet and the one
-    // found first. The pinned shuffle takes the lower-numbered, the first.
+    // The two are the variant not found yet and the variant found first.
+    // The shuffle is pinned to keep its input's order, so the
+    // lower-numbered is chosen, and that is the variant found first.
     expect((await find())?.variant).toBe(found[0]);
   });
 
@@ -127,7 +128,8 @@ describe('imageCache', () => {
     expect((await find())?.variant).toBe(1);
     expect((await find())?.variant).toBe(2);
     expect((await find({wordIds: ['calm', 'dragon', '_']}))?.variant).toBe(1);
-    // Back to the first words: the two held back for them are forgotten.
+    // Back to the first words: the two variants found for them earlier are
+    // forgotten.
     expect((await find())?.variant).toBe(1);
   });
 
