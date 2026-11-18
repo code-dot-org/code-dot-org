@@ -7,10 +7,15 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import {Store} from 'redux';
+import {AnyAction, Store} from 'redux';
 import '@testing-library/jest-dom';
 
-import {getStore, registerReducers} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 import {SectionList} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionList';
 import teacherSections, {
   removeSection,
@@ -78,6 +83,80 @@ const sections = [
   },
 ];
 
+function renderSectionList(store: Store) {
+  return render(
+    <Provider store={store}>
+      <RouterProvider
+        router={createMemoryRouter(
+          createRoutesFromElements([
+            <Route
+              path={TEACHER_NAVIGATION_PATHS.home}
+              element={
+                <SectionList
+                  showHiddenOnly={false}
+                  studioUrlPrefix="https://studio.code.org"
+                />
+              }
+            />,
+          ]),
+          {
+            initialEntries: ['/teacher_dashboard/home'],
+            basename: '/teacher_dashboard',
+          }
+        )}
+      />
+    </Provider>
+  );
+}
+
+describe('SectionList when Redux keeps a different order than the one dispatched', () => {
+  let store: Store;
+
+  // Stands in for whatever production data left the stored order unequal
+  // to the list's own; the list must save and stop rather than loop.
+  const reversingReducer = (
+    state: ReturnType<typeof teacherSections> | undefined,
+    action: AnyAction
+  ) => {
+    const next = teacherSections(state, action);
+    return action.type === setSectionOrder.type
+      ? {...next, sectionOrder: [...next.sectionOrder].reverse()}
+      : next;
+  };
+
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({teacherSections: reversingReducer});
+    store = getStore();
+    store.dispatch(setSections(sections.map(serverSectionFromSection)));
+    store.dispatch(setSectionOrder([11, 12, 13, 14]));
+    store.dispatch(setAsyncLoad(true));
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
+  it('settles after a section is removed', async () => {
+    const originalDispatch = store.dispatch;
+    let orderDispatches = 0;
+    jest.spyOn(store, 'dispatch').mockImplementation(action => {
+      if (action.type === setSectionOrder.type && ++orderDispatches > 20) {
+        throw new Error('setSectionOrder dispatched in a loop');
+      }
+      return originalDispatch(action);
+    });
+    renderSectionList(store);
+
+    await act(async () => {
+      store.dispatch(removeSection(12));
+    });
+
+    expect(orderDispatches).toBeLessThanOrEqual(2);
+    expect(screen.queryByText('Period 2')).toBeNull();
+  });
+});
+
 describe('SectionList', () => {
   let store: Store;
   beforeEach(() => {
@@ -91,27 +170,8 @@ describe('SectionList', () => {
     store.dispatch(setAsyncLoad(true));
   });
 
-  function renderComponent(initialRoute = '/teacher_dashboard/home') {
-    return render(
-      <Provider store={store}>
-        <RouterProvider
-          router={createMemoryRouter(
-            createRoutesFromElements([
-              <Route
-                path={TEACHER_NAVIGATION_PATHS.home}
-                element={
-                  <SectionList
-                    showHiddenOnly={false}
-                    studioUrlPrefix="https://studio.code.org"
-                  />
-                }
-              />,
-            ]),
-            {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
-          )}
-        />
-      </Provider>
-    );
+  function renderComponent() {
+    return renderSectionList(store);
   }
 
   it('renders list of teacher section cards without displaying PL or hidden sections', async () => {
