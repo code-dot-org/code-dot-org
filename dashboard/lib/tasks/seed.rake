@@ -440,6 +440,11 @@ namespace :seed do
     SecretWord.setup
   end
 
+  # Unit tests get the checked-in list in every environment.
+  timed_task_with_logging fake_secret_words: :environment do
+    SecretWord.setup Rails.root.join('config/secret_words.csv')
+  end
+
   timed_task_with_logging secret_pictures: :environment do
     SecretPicture.setup
   end
@@ -500,5 +505,5 @@ namespace :seed do
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed only dashboard data required for unit tests"
-  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :standalone_project_levels, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
+  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :standalone_project_levels, :fake_secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
 end
