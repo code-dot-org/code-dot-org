@@ -1,18 +1,18 @@
+import {useApiClient} from '@code-dot-org/core/api';
 import {
   Challenge,
-  ChallengeResponse,
-  challengeResponseValidator,
+  createChallengeResponse,
+  requestEvaluation,
+  uploadChallengeResponseAsset,
   VideoCanvas,
   VideoCanvasMode,
 } from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+import React, {FC, useEffect, useRef, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {getClientApi} from '@cdo/apps/aichat/api/client';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {requestEvaluation} from './requestEvaluation';
 import {STICKER_SECTIONS} from './stickers';
 
 import styles from './video-challenge.module.scss';
@@ -48,6 +48,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   submitRef,
   resetRef,
 }) => {
+  const api = useApiClient();
   const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
   const [recordedAudioBlob, setRecordedAudioBlob] = useState<Blob | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
@@ -74,53 +75,34 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
     });
   }, [clientType, lessonId]);
 
-  const createChallengeResponse = useCallback(
-    (text: string | null) => {
-      if (!challenge) {
-        return;
-      }
-      const body = JSON.stringify({
+  const handleSubmit = async (): Promise<boolean> => {
+    if (!recordedBlob || !challenge) return false;
+    setIsUploading(true);
+    try {
+      const text = await transcribeAudio();
+      const challengeResponse = await createChallengeResponse(api.transport, {
         transcript: text,
         challenge_id: challenge.id,
         is_final: true,
         assets: [{asset_type: 'video'}],
       });
-      return HttpClient.post('/challenge_responses', body, true, {
-        'Content-Type': 'application/json',
-      })
-        .then(response => response.json())
-        .then((json): ChallengeResponse => challengeResponseValidator(json))
-        .catch(error => {
-          console.log(error);
-          return undefined;
-        });
-    },
-    [challenge]
-  );
-
-  const handleSubmit = async (): Promise<boolean> => {
-    if (!recordedBlob) return false;
-    setIsUploading(true);
-    try {
-      const text = await transcribeAudio();
-      const challengeResponse = await createChallengeResponse(text);
-      if (!challengeResponse) {
-        throw new Error('The server did not create a challenge response.');
-      }
       const assetId = challengeResponse.assets[0]?.id;
       if (!assetId) {
         throw new Error('The server did not return a video asset.');
       }
-      await HttpClient.put(
-        `/challenge_response_assets/${assetId}/upload`,
+      await uploadChallengeResponseAsset(
+        api.transport,
+        assetId,
         recordedBlob,
-        true, // useAuthenticityToken
-        {'Content-Type': 'video/webm'}
+        'video/webm'
       );
 
       // Fire-and-forget: the evaluation result goes to the teacher, not the
       // student, so the submission flow does not wait on it.
-      const status = await requestEvaluation(challengeResponse.id);
+      const status = await requestEvaluation(
+        api.transport,
+        challengeResponse.id
+      );
       setEvaluationStatus(status);
       setChallengeResponseId(challengeResponse.id);
 

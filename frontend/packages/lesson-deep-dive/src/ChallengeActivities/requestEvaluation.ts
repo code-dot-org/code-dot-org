@@ -1,8 +1,10 @@
-import {EvaluationStatus} from '@code-dot-org/lesson-deep-dive';
+import type {Transport} from '@code-dot-org/core/api';
 
-import HttpClient from '@cdo/apps/util/HttpClient';
+import {EvaluationStatus} from '../types';
 
 /**
+ * POST /challenge_responses/:id/evaluate
+ *
  * Kicks off asynchronous AI evaluation of a submitted challenge response.
  *
  * A failure here must not block the submission
@@ -10,17 +12,15 @@ import HttpClient from '@cdo/apps/util/HttpClient';
  * is recoverable.
  */
 export const requestEvaluation = async (
-  challengeResponseId: number
+  transport: Transport,
+  challengeResponseId: number,
 ): Promise<string> => {
   try {
-    const response = await HttpClient.post(
-      `/challenge_responses/${challengeResponseId}/evaluate`,
-      '',
-      true // useAuthenticityToken
-    );
-    return (await response.ok)
-      ? EvaluationStatus.PENDING
-      : EvaluationStatus.ERROR;
+    await transport.request<unknown>({
+      method: 'POST',
+      url: `/challenge_responses/${challengeResponseId}/evaluate`,
+    });
+    return EvaluationStatus.PENDING;
   } catch (error) {
     console.error('Failed to request challenge response evaluation', error);
     return EvaluationStatus.ERROR;

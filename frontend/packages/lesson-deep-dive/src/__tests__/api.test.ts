@@ -1,11 +1,13 @@
 import {type Mock, describe, expect, it, vi} from 'vitest';
 
 import {
+  createChallengeResponse,
   generatePodcast,
   getPodcast,
   listChallenges,
   saveLessonObjectiveReflection,
   saveLessonReflection,
+  uploadChallengeResponseAsset,
 } from '../api';
 
 const makeTransport = () => {
@@ -54,6 +56,53 @@ describe('listChallenges', () => {
         whiteboard_starter_image_url: null,
       },
     ]);
+  });
+});
+
+describe('createChallengeResponse', () => {
+  it('should post the response and return it validated', async () => {
+    const {transport, request} = makeTransport();
+    request.mockResolvedValue({
+      id: 7,
+      challenge_id: 3,
+      user_id: 1,
+      is_final: true,
+      created_at: '2026-10-01T00:00:00Z',
+      assets: [{id: 9, asset_type: 'video'}],
+    });
+    const body = {
+      challenge_id: 3,
+      is_final: true,
+      assets: [{asset_type: 'video' as const}],
+      transcript: 'hello',
+    };
+
+    const created = await createChallengeResponse(transport, body);
+
+    expect(request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/challenge_responses',
+      body,
+    });
+    expect(created.assets).toEqual([
+      {id: 9, asset_type: 'video', download_url: null},
+    ]);
+  });
+});
+
+describe('uploadChallengeResponseAsset', () => {
+  it('should put the bytes with their content type', async () => {
+    const {transport, request} = makeTransport();
+    const data = new Blob(['video'], {type: 'video/webm'});
+
+    await uploadChallengeResponseAsset(transport, 9, data, 'video/webm');
+
+    expect(request).toHaveBeenCalledWith({
+      method: 'PUT',
+      url: '/challenge_response_assets/9/upload',
+      body: data,
+      headers: {'Content-Type': 'video/webm'},
+    });
   });
 });
 

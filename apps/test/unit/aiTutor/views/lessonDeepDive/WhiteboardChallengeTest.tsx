@@ -6,13 +6,9 @@ import React, {FC, useRef, useState} from 'react';
 import WhiteboardChallenge from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/WhiteboardChallenge';
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  __esModule: true,
-  default: {post: jest.fn(), put: jest.fn()},
-}));
+import {request} from '../../../../util/stubCoreApi';
 
 jest.mock('@cdo/apps/util/moderateImage', () => ({
   moderateImage: jest.fn(),
@@ -128,8 +124,6 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => {
   };
 });
 
-const post = HttpClient.post as jest.Mock;
-const put = HttpClient.put as jest.Mock;
 const snapshot = createSketchSnapshotBlob as jest.Mock;
 const moderate = moderateImage as jest.Mock;
 
@@ -212,8 +206,7 @@ describe('WhiteboardChallenge', () => {
   let fetchMock: jest.Mock;
 
   beforeEach(() => {
-    post.mockReset();
-    put.mockReset();
+    request.mockReset();
     snapshot.mockReset();
     moderate.mockReset();
     moderate.mockResolvedValue('safe');
@@ -357,8 +350,7 @@ describe('WhiteboardChallenge', () => {
 
   it('snapshots the canvas, creates a response, and uploads the image', async () => {
     snapshot.mockResolvedValue({blob: fakeBlob});
-    post.mockResolvedValue({json: async () => createdResponse});
-    put.mockResolvedValue({});
+    request.mockResolvedValue(createdResponse);
     const submitCallback = jest.fn();
 
     render(
@@ -381,30 +373,28 @@ describe('WhiteboardChallenge', () => {
       'lesson-deep-dive',
       {}
     );
-    expect(post).toHaveBeenCalledWith(
-      '/challenge_responses',
-      JSON.stringify({
+    expect(request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/challenge_responses',
+      body: {
         challenge_id: 5,
         is_final: true,
         assets: [{asset_type: 'whiteboard_image'}],
         transcript: null,
         student_text: '',
-      }),
-      true,
-      {'Content-Type': 'application/json'}
-    );
-    expect(put).toHaveBeenCalledWith(
-      '/challenge_response_assets/9/upload',
-      fakeBlob,
-      true,
-      {'Content-Type': 'image/png'}
-    );
+      },
+    });
+    expect(request).toHaveBeenCalledWith({
+      method: 'PUT',
+      url: '/challenge_response_assets/9/upload',
+      body: fakeBlob,
+      headers: {'Content-Type': 'image/png'},
+    });
     // Kicks off AI evaluation after the upload, fire-and-forget.
-    expect(post).toHaveBeenCalledWith(
-      '/challenge_responses/7/evaluate',
-      '',
-      true
-    );
+    expect(request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/challenge_responses/7/evaluate',
+    });
   });
 
   it('shows an error and stays submittable when the capture fails', async () => {
@@ -429,7 +419,7 @@ describe('WhiteboardChallenge', () => {
         screen.getByText('Could not capture your drawing.')
       ).toBeInTheDocument()
     );
-    expect(post).not.toHaveBeenCalled();
+    expect(request).not.toHaveBeenCalled();
     expect(submitCallback).not.toHaveBeenCalled();
     expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
   });
@@ -459,8 +449,7 @@ describe('WhiteboardChallenge', () => {
         )
       ).toBeInTheDocument()
     );
-    expect(post).not.toHaveBeenCalled();
-    expect(put).not.toHaveBeenCalled();
+    expect(request).not.toHaveBeenCalled();
     expect(submitCallback).not.toHaveBeenCalled();
     expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
   });
@@ -468,8 +457,7 @@ describe('WhiteboardChallenge', () => {
   it('submits anyway when moderation is unavailable', async () => {
     snapshot.mockResolvedValue({blob: fakeBlob});
     moderate.mockResolvedValue('error');
-    post.mockResolvedValue({json: async () => createdResponse});
-    put.mockResolvedValue({});
+    request.mockResolvedValue(createdResponse);
     const submitCallback = jest.fn();
 
     render(
@@ -490,8 +478,7 @@ describe('WhiteboardChallenge', () => {
 
   it('submits the typed explanation as student_text in text mode', async () => {
     snapshot.mockResolvedValue({blob: fakeBlob});
-    post.mockResolvedValue({json: async () => createdResponse});
-    put.mockResolvedValue({});
+    request.mockResolvedValue(createdResponse);
     const submitCallback = jest.fn();
 
     render(
@@ -509,25 +496,23 @@ describe('WhiteboardChallenge', () => {
 
     await waitFor(() => expect(submitCallback).toHaveBeenCalledWith(true));
 
-    expect(post).toHaveBeenCalledWith(
-      '/challenge_responses',
-      JSON.stringify({
+    expect(request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/challenge_responses',
+      body: {
         challenge_id: 5,
         is_final: true,
         assets: [{asset_type: 'whiteboard_image'}],
         transcript: null,
         student_text: 'My explanation',
-      }),
-      true,
-      {'Content-Type': 'application/json'}
-    );
+      },
+    });
     expect(mockTranscribeAudio).not.toHaveBeenCalled();
   });
 
   it('transcribes the recording and submits it as transcript in audio mode', async () => {
     snapshot.mockResolvedValue({blob: fakeBlob});
-    post.mockResolvedValue({json: async () => createdResponse});
-    put.mockResolvedValue({});
+    request.mockResolvedValue(createdResponse);
     const submitCallback = jest.fn();
 
     render(
@@ -546,17 +531,16 @@ describe('WhiteboardChallenge', () => {
     await waitFor(() => expect(submitCallback).toHaveBeenCalledWith(true));
 
     expect(mockTranscribeAudio).toHaveBeenCalledWith(mockRecordedAudioBlob);
-    expect(post).toHaveBeenCalledWith(
-      '/challenge_responses',
-      JSON.stringify({
+    expect(request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/challenge_responses',
+      body: {
         challenge_id: 5,
         is_final: true,
         assets: [{asset_type: 'whiteboard_image'}],
         transcript: 'Hello this is a recording',
         student_text: null,
-      }),
-      true,
-      {'Content-Type': 'application/json'}
-    );
+      },
+    });
   });
 });
