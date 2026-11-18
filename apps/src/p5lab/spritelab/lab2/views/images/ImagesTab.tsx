@@ -97,8 +97,6 @@ interface ImagesTabProps {
   generationsLeft?: number;
   /** Called when a generation request is sent to the model. */
   onGenerate?: () => void;
-  /** Called when a generation onGenerate announced ends with no picture,
-      unless it was refused for safety. */
   onGenerateFailed?: () => void;
   /** Students may add images, draw on them and delete them. */
   editingOffered?: boolean;

@@ -174,8 +174,6 @@ interface SentenceSceneProps {
   onRate?: (verdict: Verdict) => boolean | Promise<boolean>;
   /** Called when a generation request is sent to the model. */
   onGenerateStart?: () => void;
-  /** Called when a generation onGenerateStart announced ends with no
-      picture, unless it was refused for safety. */
   onGenerateFailed?: () => void;
   /** The scene is making or keeping a picture, or has stopped; a host can
       hold its other controls still meanwhile. */
@@ -279,7 +277,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     return found;
   }, [sentence, choices, style, canAnimate, imageCacheUrl]);
 
-  // Resolves false when the picture could not be saved.
   const persist = useCallback(
     async (picture: GeneratedPicture, pictureVerdict: Verdict | null) => {
       setSaving(true);
@@ -441,14 +438,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         prompt,
         sent,
       };
-      // The picture is stored before the host holds it back, so that
-      // leaving the page during the wait does not lose it.
+      // Save before `onReady`, which can wait before the picture is shown,
+      // so the picture is not lost if the student leaves the page during
+      // that wait.
       const saved = await persist(entry, null);
       if (run !== runRef.current) {
         return;
       }
-      // A picture that was not saved is not an image of the project, so
-      // there is nothing to show or rate: the student generates again.
       if (!saved) {
         onGenerateFailed?.();
         setMode('edit');

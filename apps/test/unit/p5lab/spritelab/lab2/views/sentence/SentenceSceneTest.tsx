@@ -200,7 +200,7 @@ describe('SentenceScene', () => {
       screen.getByText("Couldn't save the picture. Try again.")
     ).toBeTruthy();
     expect(screen.queryByRole('button', {name: 'Good'})).toBeNull();
-    // The host is not handed a picture the project does not have.
+    // A picture that was not saved is not passed to onReady.
     expect(onReady).not.toHaveBeenCalled();
     // Trying again saves the next picture, and it can be rated.
     await generate();

@@ -393,8 +393,8 @@ export default function useDrawing({
           setSaveFailed(true);
           return;
         }
-        // The student has left this drawing, so it has no canvas to try
-        // again from. The flags above belong to the drawing open now.
+        // This failed save was for a drawing that is no longer open, so
+        // there is nothing to retry.
       } finally {
         inFlightRef.current = false;
       }

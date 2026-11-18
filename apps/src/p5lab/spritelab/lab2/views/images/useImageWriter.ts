@@ -62,9 +62,9 @@ interface WriterOptions {
 }
 
 export interface SaveEditedOptions {
-  /** False updates the picture on screen without uploading the file, so
-      the saved project still points at the last file uploaded; a new image
-      is always uploaded, since it has no file yet. */
+  /** False updates the picture on screen and skips the file upload, which
+      a later save makes. A new image is uploaded regardless, since it has
+      no file yet. */
   upload?: boolean;
   /** Called after the upload and before the image is updated; returning
       false abandons the save, for a drawing a picture replaced meanwhile. */
@@ -142,8 +142,6 @@ export default function useImageWriter({
     }
   };
 
-  // A picture is saved as a file the project points at, never inside the
-  // project itself, so a file that cannot be uploaded is a failed save.
   const upload = useCallback(
     (filename: string, bytes: Uint8Array, mediaType: string) => {
       if (!uploadImage) {
