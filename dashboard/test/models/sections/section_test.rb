@@ -1722,61 +1722,36 @@ class SectionTest < ActiveSupport::TestCase
     CodeReviewGroupMember.create(follower_id: @followers[2].id, code_review_group_id: @group2.id)
   end
 
-  describe '.summarize' do
-    let(:section) {create(:section)}
-    let(:student) {create(:student, us_state: at_risk_age_gated_us_state)}
-    let(:summarize) {section.summarize}
-    let(:at_risk_age_gated_date) {DateTime.now}
-    let(:at_risk_age_gated_us_state) {'WA'}
+  %i[summarize_without_students concise_summarize].each do |summary_method|
+    test "#{summary_method} does not load the student roster" do
+      section = create(:section, hidden: false)
+      create_list(:follower, 2, section: section)
+      section.reload
 
-    before do
-      allow(section).to receive(:at_risk_age_gated_student).and_return(student)
-      allow(student).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
-    end
+      summary = nil
+      queries = capture_queries {summary = section.public_send(summary_method)}
 
-    it 'has at_risk_age_gated_date' do
-      _(summarize).must_be_kind_of Hash
-      _(summarize[:at_risk_age_gated_date]).must_equal at_risk_age_gated_date
-    end
-
-    it 'has at_risk_age_gated_us_state' do
-      _(summarize).must_be_kind_of Hash
-      _(summarize[:at_risk_age_gated_us_state]).must_equal at_risk_age_gated_us_state
+      assert_equal 2, summary[:studentCount]
+      assert summary.key?(:at_risk_age_gated_date)
+      assert_nil summary[:at_risk_age_gated_date]
+      assert summary.key?(:at_risk_age_gated_us_state)
+      assert_nil summary[:at_risk_age_gated_us_state]
+      roster_queries = queries.grep(/SELECT .*`users`\.\*.*JOIN `followers`/i).reject {|sql| sql.include?('COUNT(')}
+      assert_empty roster_queries, roster_queries.join("\n")
     end
   end
 
-  describe '.at_risk_age_gated_student' do
-    let(:section) {create(:section, hidden: archived?)}
-    let(:student) {create(:student)}
-    let(:archived?) {false}
-    let(:student_at_risk_age_gated_date) {nil}
-    let(:at_risk_age_gated_student) {section.at_risk_age_gated_student}
-    let(:at_risk_age_gated_date) {at_risk_age_gated_student&.at_risk_age_gated_date}
+  test 'summarize preserves null section age-gate fields when including students' do
+    section = create(:section)
+    create(:follower, section: section)
 
-    before do
-      allow(section).to receive(:students).and_return([student])
-      allow(student).to receive(:at_risk_age_gated_date).and_return(student_at_risk_age_gated_date)
-    end
+    summary = section.summarize
 
-    it 'does not return a student' do
-      _(at_risk_age_gated_student).must_be_nil
-    end
-
-    context 'has an at risk student' do
-      let(:student_at_risk_age_gated_date) {DateTime.now}
-
-      it 'returns the at risk student' do
-        _(at_risk_age_gated_student).must_equal student
-      end
-
-      context 'the section is archived' do
-        let(:archived?) {true}
-
-        it 'does not return a student' do
-          _(at_risk_age_gated_student).must_be_nil
-        end
-      end
-    end
+    assert_equal 1, summary[:students].size
+    assert summary.key?(:at_risk_age_gated_date)
+    assert_nil summary[:at_risk_age_gated_date]
+    assert summary.key?(:at_risk_age_gated_us_state)
+    assert_nil summary[:at_risk_age_gated_us_state]
   end
 
   test 'add_teacher_to_mailjet_course_list is called when matching course is assigned' do
