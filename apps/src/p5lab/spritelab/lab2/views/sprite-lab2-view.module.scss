@@ -26,12 +26,15 @@
   height: 100%;
   min-height: 0;
   // The lab is controls, not text to copy, so a drag across it selects
-  // nothing.
+  // nothing. Safari reads only the prefixed property.
+  -webkit-user-select: none;
   user-select: none;
 
   // code-studio.css sets `p, pre, span` back to selectable, so they are
-  // named too. :where keeps this easy for a part of the lab to undo.
+  // named too. :where adds no weight to the selector, so a rule in a part
+  // of the lab can make its text selectable again.
   :where(p, pre, span) {
+    -webkit-user-select: none;
     user-select: none;
   }
 
@@ -41,12 +44,14 @@
   :global(#instructions) *,
   input,
   textarea {
+    -webkit-user-select: text;
     user-select: text;
   }
 
-  // The panel around the instructions has their id too; its header is a
-  // label.
+  // The panel around the instructions has the same id; its header is a
+  // label, not text to copy.
   :global(#instructions .panelContainerHeader) * {
+    -webkit-user-select: none;
     user-select: none;
   }
 

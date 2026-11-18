@@ -67,11 +67,13 @@
   font-family: monospace;
   font-size: 13px;
   line-height: 1.5;
+  -webkit-user-select: text;
   user-select: text;
 
   // Named so they outrank the lab's rule against selecting its text.
   p,
   span {
+    -webkit-user-select: text;
     user-select: text;
   }
 }
