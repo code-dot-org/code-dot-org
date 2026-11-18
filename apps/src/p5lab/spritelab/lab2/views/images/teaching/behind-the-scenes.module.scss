@@ -70,7 +70,8 @@
   -webkit-user-select: text;
   user-select: text;
 
-  // Named so they outrank the lab's rule against selecting its text.
+  // The lab's root turns selection off for `p` and `span` by name, so
+  // they are set back by name here.
   p,
   span {
     -webkit-user-select: text;

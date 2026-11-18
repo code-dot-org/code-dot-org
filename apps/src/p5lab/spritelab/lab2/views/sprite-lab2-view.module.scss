@@ -31,8 +31,8 @@
   user-select: none;
 
   // code-studio.css sets `p, pre, span` back to selectable, so they are
-  // named too. :where adds no weight to the selector, so a rule in a part
-  // of the lab can make its text selectable again.
+  // named too. `:where` adds no specificity, so an ordinary class in a
+  // part of the lab can make its text selectable again.
   :where(p, pre, span) {
     -webkit-user-select: none;
     user-select: none;
@@ -48,8 +48,9 @@
     user-select: text;
   }
 
-  // The panel around the instructions has the same id; its header is a
-  // label, not text to copy.
+  // The panel around the instructions also has the id `instructions`, so
+  // the rule above matches its header. The header is a label, not text to
+  // copy.
   :global(#instructions .panelContainerHeader) * {
     -webkit-user-select: none;
     user-select: none;
