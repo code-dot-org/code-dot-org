@@ -26,6 +26,21 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
 }) => {
   const library = MusicLibrary.getInstance();
 
+  if (packFolder.removed) {
+    return (
+      <div
+        className={classNames(
+          moduleStyles.currentPack,
+          moduleStyles.currentPackRemoved
+        )}
+        title={musicI18n.packRemovedDescription()}
+      >
+        <FontAwesomeV6Icon iconName="volume-slash" iconStyle="solid" />
+        <Typography variant="body4">{musicI18n.packRemoved()}</Typography>
+      </div>
+    );
+  }
+
   let packImageSrc = null;
 
   if (library && packFolder) {
@@ -152,7 +167,10 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               moduleStyles.startOverButton,
               allowPackSelection &&
                 packFolder &&
-                moduleStyles.startOverButtonWithPack
+                moduleStyles.startOverButtonWithPack,
+              allowPackSelection &&
+                packFolder?.removed &&
+                moduleStyles.startOverButtonPackRemoved
             )}
           >
             {allowPackSelection && packFolder && (
