@@ -12,14 +12,14 @@ interface RowNumberCellProps {
   isTestRow?: boolean;
 }
 
-// Beside an id column, the id heads the row and the number freezes with it.
+// Beside an id column, the id heads the row instead.
 const RowNumberCell = ({
   rowNumber,
   besideIdColumn,
   isTestRow,
 }: RowNumberCellProps) => {
-  const className = classNames(tableStyles.indexCell, {
-    [tableStyles.frozenIndex]: besideIdColumn,
+  const className = classNames(tableStyles.indexCell, tableStyles.frozenIndex, {
+    [tableStyles.besideIdColumn]: besideIdColumn,
     [tableStyles.testRow]: isTestRow,
   });
   return besideIdColumn ? (

@@ -10,6 +10,8 @@ import DataDisplay from '@cdo/apps/ailab/engine/UIComponents/DataDisplay';
 import {ANIMAL_COLUMNS, ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
+import tableStyles from '@cdo/apps/ailab/engine/UIComponents/dataTable.module.scss';
+
 function renderDisplay() {
   const store = levelStore();
   const project = levelProject();
@@ -38,6 +40,17 @@ describe('DataDisplay', () => {
     expect(screen.getByRole('table')).toBeTruthy();
     expect(button('Table').getAttribute('aria-pressed')).toBe('true');
     expect(screen.queryByLabelText('Next card')).toBeNull();
+  });
+
+  test('freezes the row numbers as the table scrolls sideways', () => {
+    renderDisplay();
+    const numberCells = [
+      screen.getByRole('columnheader', {name: 'Row'}),
+      ...screen.getAllByRole('rowheader'),
+    ];
+    numberCells.forEach(cell =>
+      expect(cell.classList.contains(tableStyles.frozenIndex)).toBe(true)
+    );
   });
 
   test('cards shows one dataset row and steps to the next', () => {

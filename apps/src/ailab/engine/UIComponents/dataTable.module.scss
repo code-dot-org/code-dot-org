@@ -206,6 +206,9 @@ $frozen-index-width: 56px;
 
 .frozenIndex {
   left: 0;
+}
+
+.frozenIndex.besideIdColumn {
   width: $frozen-index-width;
   min-width: $frozen-index-width;
 }
@@ -213,6 +216,21 @@ $frozen-index-width: 56px;
 .idHeader,
 .idCell {
   left: $frozen-index-width;
+}
+
+// The last frozen column draws the line beside it, since the next column's
+// left border scrolls away.
+.frozenIndex:not(.besideIdColumn),
+.header.idHeader,
+.indexCell.idCell {
+  border-right-width: 1px;
+}
+
+.frozenIndex:not(.besideIdColumn) + .header,
+.frozenIndex:not(.besideIdColumn) + .bodyCell,
+.header.idHeader + .header,
+.indexCell.idCell + .bodyCell {
+  border-left-width: 0;
 }
 
 // Above the other headers, which scroll under them.

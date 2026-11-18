@@ -141,9 +141,12 @@ const DataTable = ({
         <tr>
           {showRowNumbers && (
             <th
-              className={classNames(styles.indexCell, styles.indexHeader, {
-                [styles.frozenIndex]: idColumn,
-              })}
+              className={classNames(
+                styles.indexCell,
+                styles.indexHeader,
+                styles.frozenIndex,
+                {[styles.besideIdColumn]: idColumn}
+              )}
               aria-label="Row"
             />
           )}
