@@ -1,8 +1,9 @@
 @use "../../sentence/sr-only";
 
-// The drawings are 500 by 200. The dialog below is the design system's
-// modal at its narrowest, which leaves them that much room, so the picture
-// area is always their size and the boxes in it are in their units.
+// The drawings are 500 by 200 pixels. The design system's modal is never
+// narrower than 600 pixels, which fits them, so the picture area shows a
+// drawing at its own size and the positions below are in the drawing's
+// pixels.
 $art-width: 500px;
 $art-height: 200px;
 $panel-gap: 20px;
@@ -124,7 +125,8 @@ $panel-gap: 20px;
   color: var(--text-neutral-black-fixed);
 }
 
-// The bubble holds four lines of the prompt's type.
+// Four lines of the prompt fit in the bubble. A longer prompt ends in an
+// ellipsis.
 .wordsText {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -133,9 +135,8 @@ $panel-gap: 20px;
   overflow-wrap: anywhere;
 }
 
-// A white card for one picture, with the outline of the drawings' cards
-// and the hard shadow of the frames in the designer's drawing of the
-// stages.
+// A white box around one picture. Its border and its offset shadow copy
+// the cards in the drawings.
 .frame {
   display: flex;
   flex: none;
@@ -156,9 +157,9 @@ $panel-gap: 20px;
   object-fit: contain;
 }
 
-// The guess from noise through three stages, side by side: frames of the
-// size and spacing in the designer's drawing of them. The bottom padding
-// centers the frames with their shadows.
+// The picture at each stage from noise to finished, side by side, at the
+// size and spacing of the design. The bottom padding centers the frames
+// together with their shadows.
 .stages {
   display: flex;
   justify-content: space-between;
@@ -185,8 +186,9 @@ $panel-gap: 20px;
   width: 88px;
 }
 
-// The small card's drawing has its shadow inside it. The margin sets this
-// frame's shadow level with that one.
+// flower-card.svg has its shadow inside the image, and .sizeLarge's shadow
+// is outside its box. A bottom margin the size of the shadow puts the two
+// shadows level.
 $large-shadow: 8px;
 
 .sizeLarge {

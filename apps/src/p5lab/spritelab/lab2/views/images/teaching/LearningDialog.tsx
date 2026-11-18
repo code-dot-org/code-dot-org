@@ -112,7 +112,6 @@ interface PanelContent {
 // panel.
 const DRAWINGS = [learnedArt, wordsArt, anotherArt, evaluateArt, flowerCardArt];
 
-/** A drawing that fills the panel's picture area. */
 const Drawing: React.FunctionComponent<{src: string}> = ({src}) => (
   <img src={src} alt="" className={styles.drawing} />
 );
@@ -144,8 +143,8 @@ const noiseToPicture = (picture: LearningPicture) => (
   </div>
 );
 
-// A character's card beside the background's frame: about twice the side,
-// four times the pixels.
+// A drawing of a character's picture beside the student's background. The
+// background is about twice as wide, which is four times the pixels.
 const sizes = (picture: LearningPicture) => (
   <div className={styles.sizes}>
     <img src={flowerCardArt} alt="" className={styles.sizeSmall} />
