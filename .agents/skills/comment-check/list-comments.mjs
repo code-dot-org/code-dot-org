@@ -17,7 +17,6 @@ import path from 'node:path';
 const DEFAULT_BASE = 'origin/staging';
 const SLASH_COMMENT_FILES = /\.(js|jsx|ts|tsx|mjs|cjs|scss|css)$/;
 const HASH_COMMENT_FILES = /(\.(rb|rake|py|sh|yml|yaml|feature)|\/?(Rakefile|Gemfile))$/;
-// Documents, data and pictures, which have no code comments to list.
 const NOT_CODE_FILES = /\.(md|json|svg|png|gif|jpg|jpeg|csv|txt|lock|level)$/;
 
 const git = (...args) =>
@@ -104,8 +103,9 @@ function commentLineNumbers(file, lines) {
       found.add(i + 1);
       return;
     }
-    // "/*" starts a block comment here only at the start of a line or after
-    // a space, "{" or "(", so that a glob such as 'src/**/*.ts' does not.
+    // "/*" is counted as the start of a block comment only at the start of a
+    // line or after a space, "{" or "(". The "/*" inside a glob such as
+    // 'src/**/*.ts' is then not counted.
     const open = /(^|[\s{(])\/\*/.exec(line);
     if (open) {
       if (/^\s*(\{\s*)?\/\*/.test(line)) {
