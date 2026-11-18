@@ -11,6 +11,7 @@ import DCDO from '@cdo/apps/dcdo';
 import CopiedTooltip from '@cdo/apps/sharedComponents/CopiedTooltip';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import heroImage from '@cdo/static/hoai2026/adaptive/ai-makerspace-celebration.png';
 
 import {usePathwayProject} from '../../../project/usePathwayProject';
 import {usePathwayContext} from '../../PathwayContext';
@@ -23,8 +24,6 @@ const DESCRIPTION_WITH_CHALLENGE =
   'Want to keep going? Join the Building with AI Challenge, a national competition for high school teams. Build your project over eight weeks and submit by Feb 1, 2027.';
 const DESCRIPTION_WITHOUT_CHALLENGE =
   'You created a website with your own vision and design using AI. Keep exploring and building with AI to create even more amazing projects!';
-const IMAGE_URL =
-  'https://images.code.org/dc6583670c742dbc656e3e805cafee15-ai-makerspace-congrats-image.png';
 
 const ELEVATE_URL = 'https://code.org/hour-of-ai';
 const AI_FOUNDATIONS_URL =
@@ -147,7 +146,7 @@ const Hoai2026Congrats: React.FunctionComponent<CongratsPanelProps> = ({
               : DESCRIPTION_WITHOUT_CHALLENGE}
           </MuiTypography>
         </div>
-        <img src={IMAGE_URL} alt="" className={styles.heroImage} />
+        <img src={heroImage} alt="" className={styles.heroImage} />
         {showChallenge && (
           <ExternalLinkButton href={challengeUrl} size="medium">
             Learn about the Building with AI Challenge
