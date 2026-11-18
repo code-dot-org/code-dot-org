@@ -166,7 +166,7 @@ import DiscoverBlocksButton, {
 import FreeplayIntroDialog from './FreeplayIntroDialog';
 import ImagesTab from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
-import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
+import {ArrowSet, arrowSetFor, ControlsState, GAME_KEYS} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
@@ -177,6 +177,7 @@ import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
 import useProjectPicture from './useProjectPicture';
 import useReleaseRemovedImages from './useReleaseRemovedImages';
+import useReportLevelActivity from './useReportLevelActivity';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -268,16 +269,6 @@ const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
 // Focused controls own the game keys pressed on them (see the
 // swallowOnControls effect).
 const INTERACTIVE_CONTROLS = 'button, a, input, select, textarea';
-
-// The keys a game typically reads (p5 listens for them on window).
-const GAME_KEYS = new Set([
-  'ArrowLeft',
-  'ArrowRight',
-  'ArrowUp',
-  'ArrowDown',
-  ' ',
-  'Spacebar',
-]);
 
 // Levelbuilder edit modes (start, toolbox, exemplar) run without a project
 // channel; generated images upload to the level's starter assets instead.
@@ -765,6 +756,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   // The level's checklist.
   const playing = activeTab === 'Play' && isRunning;
+  const reportLevelActivity = useReportLevelActivity(levelProperties, playing);
   const needs = useMemo(
     () => runtimeNeeds(levelProperties.objectives),
     [levelProperties.objectives]
@@ -1834,11 +1826,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [worldKeepsRoles, animationList]
   );
   const handlePaintWorldCell = useCallback(
-    (row: number, col: number, cell: WorldCell | null) =>
+    (row: number, col: number, cell: WorldCell | null) => {
+      reportLevelActivity();
       updateActiveWorld(world =>
         paintWorldCell(world, row, col, cell, worldKeeps)
-      ),
-    [updateActiveWorld, worldKeeps]
+      );
+    },
+    [reportLevelActivity, updateActiveWorld, worldKeeps]
   );
 
   // A world level about one kind of image offers the palette only the
@@ -2092,16 +2086,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const handlePlayClick = useCallback(
     (event: React.MouseEvent<HTMLElement>) => {
       handOffPlayFocus(event);
+      reportLevelActivity();
       handlePreviewClick();
     },
-    [handOffPlayFocus, handlePreviewClick]
+    [handOffPlayFocus, reportLevelActivity, handlePreviewClick]
   );
   const handlePlayGame = useCallback(
     (event: React.MouseEvent<HTMLElement>) => {
       handOffPlayFocus(event);
+      reportLevelActivity();
       playFrom(null);
     },
-    [handOffPlayFocus, playFrom]
+    [handOffPlayFocus, reportLevelActivity, playFrom]
   );
   useEffect(() => {
     if (activeTab === 'Play' && focusPlayspaceOnPlayRef.current) {
@@ -2203,6 +2199,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     generationLimit === undefined
       ? undefined
       : generationLimit - generationCount;
+  // hasEdited cannot stand in for these: the lab changes the project itself
+  // as some levels load.
+  const studentEdited =
+    canUndo || !!drawingHistory?.canUndo || generationCount > 0;
+  useEffect(() => {
+    if (studentEdited) {
+      reportLevelActivity();
+    }
+  }, [studentEdited, reportLevelActivity]);
   // Where the level names no image type, any image counts as its own.
   const ownImageMade = levelImageType
     ? objectiveImages[levelImageType] >= 1

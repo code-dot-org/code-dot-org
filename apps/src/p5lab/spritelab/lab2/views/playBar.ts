@@ -28,6 +28,16 @@ export function arrowSetFor(state: ControlsState): ArrowSet {
 
 export type GameKey = 'left' | 'right' | 'up' | 'down';
 
+// The keys a game typically reads (p5 listens for them on window).
+export const GAME_KEYS = new Set([
+  'ArrowLeft',
+  'ArrowRight',
+  'ArrowUp',
+  'ArrowDown',
+  ' ',
+  'Spacebar',
+]);
+
 const KEY_EVENT_INIT: Record<GameKey, KeyboardEventInit> = {
   left: {keyCode: KeyCodes.LEFT, key: 'ArrowLeft', code: 'ArrowLeft'},
   right: {keyCode: KeyCodes.RIGHT, key: 'ArrowRight', code: 'ArrowRight'},
