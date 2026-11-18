@@ -114,10 +114,12 @@ describe('imageCache', () => {
     expect(shown.slice(1)).not.toContain(next);
   });
 
-  it('keeps what one filled sentence showed apart from another', async () => {
+  it('starts again from nothing when the words change', async () => {
     installFetch(['01', '02'], [FOLDER, OTHER_FOLDER]);
     expect((await find())?.variant).toBe(1);
     expect((await find({wordIds: ['calm', 'dragon', '_']}))?.variant).toBe(1);
+    // Back to the first words: what they showed before is forgotten.
+    expect((await find())?.variant).toBe(1);
   });
 
   it('has nothing when no variant is there, and asks each once', async () => {

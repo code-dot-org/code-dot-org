@@ -91,16 +91,17 @@ export function sentencePath(
 // about the same variants. A fetch that failed is asked again.
 const missing = new Set<string>();
 
-// The variants each filled sentence showed last, oldest first, for the
-// page: the next one is drawn from the others.
-const shownLately = new Map<string, number[]>();
+// The variants shown last for the filled sentence asked about last, oldest
+// first: the next one is drawn from the others. Different words start
+// again from nothing.
+let shownLately: {folder: string; variants: number[]} | undefined;
 // Holding this many back leaves two of a full set to choose between.
 const SHOWN_LATELY_COUNT = VARIANT_COUNT - 2;
 
 /** Tests: forget which frames were missing and which variants were shown. */
 export function resetMissingFrames() {
   missing.clear();
-  shownLately.clear();
+  shownLately = undefined;
 }
 
 async function fetchRaw(url: string): Promise<GeneratedFile> {
@@ -163,7 +164,7 @@ export async function findCachedImage(
   const variants = [...Array(VARIANT_COUNT).keys()];
   // Random order, those shown lately at the end with the oldest of them
   // first: the first frame found wins.
-  const shown = shownLately.get(folder) ?? [];
+  const shown = shownLately?.folder === folder ? shownLately.variants : [];
   const order = [
     ...shuffle(variants.filter(v => !shown.includes(v))),
     ...shown,
@@ -183,10 +184,12 @@ export async function findCachedImage(
       missing.add(url);
       continue;
     }
-    shownLately.set(
+    shownLately = {
       folder,
-      [...shown.filter(v => v !== variant), variant].slice(-SHOWN_LATELY_COUNT)
-    );
+      variants: [...shown.filter(v => v !== variant), variant].slice(
+        -SHOWN_LATELY_COUNT
+      ),
+    };
     return {
       variant,
       characterSet,
