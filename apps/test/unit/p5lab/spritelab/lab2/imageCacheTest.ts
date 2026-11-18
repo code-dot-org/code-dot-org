@@ -18,10 +18,14 @@ jest.mock('lodash', () => ({
 const BASE = 'https://cache.test/generate/';
 const VERSION = 'v9';
 const FOLDER = `${BASE}${VERSION}/character/brave/dragon/_/pixel`;
+const OTHER_FOLDER = `${BASE}${VERSION}/character/calm/dragon/_/pixel`;
 
 // A tiny cache: the named variants' base frames, and one walking frame;
 // anything else is a 404.
-function installFetch(variants: string[] = ['00', '02']) {
+function installFetch(
+  variants: string[] = ['00', '02'],
+  folders: string[] = [FOLDER]
+) {
   const calls: string[] = [];
   // The project types fetch as jest-fetch-mock; this stub is plainer.
   (global as unknown as {fetch: unknown}).fetch = jest.fn(
@@ -30,7 +34,9 @@ function installFetch(variants: string[] = ['00', '02']) {
       calls.push(url);
       const ok = (body: BodyInit, type: string) =>
         new Response(body, {status: 200, headers: {'content-type': type}});
-      const variant = variants.find(v => url === `${FOLDER}/${v}-base.png`);
+      const variant = variants.find(v =>
+        folders.some(folder => url === `${folder}/${v}-base.png`)
+      );
       if (variant) {
         return ok(new Uint8Array([Number(variant), 8, 7]), 'image/png');
       }
@@ -86,12 +92,32 @@ describe('imageCache', () => {
   it('passes over a missing variant, and the one shown last', async () => {
     installFetch(['01', '02']);
     expect((await find())?.variant).toBe(1);
-    expect((await find({avoidVariant: 1}))?.variant).toBe(2);
+    expect((await find())?.variant).toBe(2);
   });
 
   it('shows the only variant again rather than nothing', async () => {
     installFetch(['02']);
-    expect((await find({avoidVariant: 2}))?.variant).toBe(2);
+    expect((await find())?.variant).toBe(2);
+    expect((await find())?.variant).toBe(2);
+  });
+
+  it('shows every variant of a full set before any comes back', async () => {
+    installFetch([...Array(VARIANT_COUNT).keys()].map(variantName));
+    const shown: number[] = [];
+    for (let i = 0; i < VARIANT_COUNT - 1; i++) {
+      shown.push((await find())?.variant as number);
+    }
+    expect(new Set(shown).size).toBe(VARIANT_COUNT - 1);
+    // Two are left to choose between: the one not yet shown and the one
+    // shown longest ago.
+    const next = (await find())?.variant as number;
+    expect(shown.slice(1)).not.toContain(next);
+  });
+
+  it('keeps what one filled sentence showed apart from another', async () => {
+    installFetch(['01', '02'], [FOLDER, OTHER_FOLDER]);
+    expect((await find())?.variant).toBe(1);
+    expect((await find({wordIds: ['calm', 'dragon', '_']}))?.variant).toBe(1);
   });
 
   it('has nothing when no variant is there, and asks each once', async () => {

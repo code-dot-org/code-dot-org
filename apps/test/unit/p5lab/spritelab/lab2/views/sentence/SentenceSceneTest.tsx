@@ -418,26 +418,6 @@ describe('SentenceScene', () => {
       );
     });
 
-    it('asks for another variant than the one shown, for the same words', async () => {
-      findCachedImage.mockResolvedValue(CACHED);
-      generateCharacterSet.mockResolvedValue(RESULT);
-      renderCached();
-      pickCreature();
-      await generate();
-      await act(async () => {
-        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS);
-      });
-      await generate();
-      expect(findCachedImage.mock.calls[0][0].avoidVariant).toBeUndefined();
-      expect(findCachedImage.mock.calls[1][0].avoidVariant).toBe(1);
-      await act(async () => {
-        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS);
-      });
-      fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
-      await generate();
-      expect(findCachedImage.mock.calls[2][0].avoidVariant).toBeUndefined();
-    });
-
     it('asks for different words when the cache lacks them, without the model', async () => {
       findCachedImage.mockResolvedValue(undefined);
       renderCached();
