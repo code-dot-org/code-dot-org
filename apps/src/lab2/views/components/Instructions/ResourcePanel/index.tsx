@@ -163,6 +163,7 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  alwaysShowAiTutor?: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
@@ -204,6 +205,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
+  alwaysShowAiTutor = false,
   tutorVideos,
   documentationUrl,
   sidebarOnly = false,
@@ -288,11 +290,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const hasAiTutorPromptSettings =
     (levelProperties.aiTutorPromptSettings?.answerTypes?.length ?? 0) > 0;
   const aiTutorVisible =
-    !levelProperties.hideAiTutor &&
+    (!levelProperties.hideAiTutor || alwaysShowAiTutor) &&
     shouldShowAiTutor({
       appName,
       isTutorLevel:
-        levelProperties.aiTutorAvailable || hasAiTutorPromptSettings,
+        levelProperties.aiTutorAvailable ||
+        hasAiTutorPromptSettings ||
+        alwaysShowAiTutor,
       aiChatAccessLevel: aiChatAccessLevel,
     });
   const aiChatDisabledState = useAiChatDisabledState({

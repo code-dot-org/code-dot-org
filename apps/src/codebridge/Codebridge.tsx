@@ -52,6 +52,7 @@ type CodebridgeProps = {
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  alwaysShowAiTutor?: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
@@ -76,6 +77,7 @@ export const Codebridge = React.memo(
     aiTutorChatButtonData,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
+    alwaysShowAiTutor,
     tutorVideos,
     onAssetUploaded,
     onAssetRemoved,
@@ -218,6 +220,7 @@ export const Codebridge = React.memo(
           aiTutorChatButtonData,
           aiTutorResponseSchemaSettings,
           aiTutorSystemPrompt,
+          alwaysShowAiTutor,
           tutorVideos,
           aiTutorDisabled,
           onAssetUploaded,
