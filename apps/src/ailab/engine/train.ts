@@ -2,7 +2,7 @@
 
 import type {Store} from 'redux';
 
-import {TestDataLocations, PERCENT_OF_DATASET_FOR_TESTING} from './constants';
+import {TestDataLocations, DEFAULT_TEST_ROWS_PERCENT} from './constants';
 import {buildOptionNumberKey} from './helpers/columnDetails';
 import {splitRowIndices} from './helpers/trainingSplit';
 import {getRandomInt} from './helpers/utils';
@@ -21,7 +21,7 @@ import {
 import {getData, getSelectedCategoricalColumns} from './selectors';
 import {buildTrainer} from './trainers';
 import type {Trainer, TrainerOutput, TrainingRun} from './trainers/types';
-import type {AilabProject, DataRow, TrainedModel} from './types';
+import type {AilabProject, DataRow, TestRows, TrainedModel} from './types';
 
 /* Builds a hash that maps selected categorical features to their option-
   number keys and dispatches that hash to the Redux store.
@@ -97,11 +97,25 @@ const extractTrainingLabel = (
   return convertValueForTraining(state, project, value, project.labelColumn!);
 };
 
+const testRowCount = (rowCount: number, testRows?: TestRows): number =>
+  Math.min(
+    testRows && 'count' in testRows
+      ? testRows.count
+      : Math.ceil(
+          (rowCount * (testRows?.percent ?? DEFAULT_TEST_ROWS_PERCENT)) / 100
+        ),
+    rowCount - 1
+  );
+
 /*
   Which rows a run holds back to grade itself on.
 */
-const reserveRowIndices = (rowCount: number, location: string): number[] => {
-  const numToReserve = Math.ceil(rowCount * PERCENT_OF_DATASET_FOR_TESTING);
+const reserveRowIndices = (
+  rowCount: number,
+  location: string,
+  testRows?: TestRows
+): number[] => {
+  const numToReserve = testRowCount(rowCount, testRows);
 
   if (location === TestDataLocations.RANDOM) {
     const reserved = new Set<number>();
@@ -191,7 +205,11 @@ const init = (store: Store<RootState>, project: AilabProject): void => {
   prepare(
     store,
     project,
-    reserveRowIndices(getData(state).length, state.reserveLocation)
+    reserveRowIndices(
+      getData(state).length,
+      state.reserveLocation,
+      state.mode?.testRows
+    )
   );
 };
 

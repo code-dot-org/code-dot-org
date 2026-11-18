@@ -13,6 +13,8 @@ export interface Dataset {
   removedRowsCount: number;
 }
 
+export type TestRows = {count: number} | {percent: number};
+
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;
@@ -34,6 +36,8 @@ export interface Mode {
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;
   reserveLastRows?: boolean;
+  // Capped to leave at least one row to train on.
+  testRows?: TestRows;
   hideColumnClicking?: boolean;
   defaultCardView?: boolean;
 }

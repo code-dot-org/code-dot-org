@@ -158,8 +158,9 @@ describe('train.cancel', () => {
 
 describe('the accuracy-check split', () => {
   // How train.init divides a dataset of this many rows.
-  const splitOf = rowCount => {
+  const splitOf = (rowCount, mode) => {
     const store = createStore(rootReducer);
+    store.dispatch(setMode(mode));
     const rows = Array.from({length: rowCount}, (_unused, index) => ({
       animal: index % 2 ? 'bird' : 'dog',
       legs: String(index),
@@ -189,6 +190,31 @@ describe('the accuracy-check split', () => {
   // Rounding to nearest would leave a small dataset nothing to grade against.
   test('holds a row back even when a tenth of the dataset is under one', () => {
     expect(splitOf(4)).toEqual({heldBack: 1, trainedOn: 3});
+  });
+
+  test('holds back the percentage of rows the level sets', () => {
+    expect(splitOf(21, {testRows: {percent: 25}})).toEqual({
+      heldBack: 6,
+      trainedOn: 15,
+    });
+  });
+
+  test('holds back the number of rows the level sets', () => {
+    expect(splitOf(21, {testRows: {count: 5}})).toEqual({
+      heldBack: 5,
+      trainedOn: 16,
+    });
+  });
+
+  test('leaves a row to train on however many the level asks for', () => {
+    expect(splitOf(4, {testRows: {count: 10}})).toEqual({
+      heldBack: 3,
+      trainedOn: 1,
+    });
+    expect(splitOf(4, {testRows: {percent: 99}})).toEqual({
+      heldBack: 3,
+      trainedOn: 1,
+    });
   });
 });
 

@@ -14,6 +14,7 @@ export {ProjectProvider} from './ProjectContext';
 export {TrainingDataProvider} from './TrainingDataContext';
 
 export {defaultProject} from './types';
+export {DEFAULT_TEST_ROWS_PERCENT} from './constants';
 export {isValidHyperparameter} from './helpers/utils';
 export type {AilabProject, HistoricResult, Hyperparameters} from './types';
 
@@ -23,6 +24,7 @@ export type {
   Mode,
   ModelDataToSave,
   SaveResponse,
+  TestRows,
 } from './types';
 export {INSTRUCTIONS_KEYS} from './types';
 export {selectableColumns} from './helpers/columnDetails';
