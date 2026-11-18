@@ -135,5 +135,7 @@ weblab2:
   name: New Web Lab 2 Project
 music_dance_ai:
   name: New Music Dance AI Project
+quest_builder:
+  name: New Quest Builder Project
 sketchlab:
   name: New Sketch Lab Project

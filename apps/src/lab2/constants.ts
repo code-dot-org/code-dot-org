@@ -28,6 +28,7 @@ export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
   'music_dance_ai',
   'sketchlab',
   'spritelab',
+  'quest_builder',
 ];
 
 // Project types whose content is share-filtered for profanity/PII on the
@@ -62,6 +63,8 @@ export enum FontSize {
 }
 
 export const INITIAL_VERSION_ID = 'initial-version';
+
+export const ABUSE_SCORE_BLOCK_THRESHOLD = 15;
 
 export const IMAGE_MIME_TO_EXTENSIONS = {
   'image/gif': ['gif'],

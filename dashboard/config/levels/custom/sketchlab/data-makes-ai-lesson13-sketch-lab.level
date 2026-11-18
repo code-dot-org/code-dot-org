@@ -1,0 +1,17 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-11-16T22:12:50.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "data-makes-ai-lesson12-sketch-lab-template",
+    "long_instructions": "## Lesson 13 Directions\r\n- ",
+    "hide_share_and_remix": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-16T22:12:50.234+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab\"},{\"changed_at\":\"2026-11-16 22:13:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

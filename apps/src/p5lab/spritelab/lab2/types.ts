@@ -53,6 +53,8 @@ export interface SerializedAnimationProps {
   generation?: ImageGenerationMetadata;
   /** Present on a character set: where each pose lives in the sheet. */
   poses?: AnimationPoses;
+  /** An upload moderation flagged and the student kept anyway. */
+  flagged?: boolean;
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.
@@ -101,8 +103,8 @@ export interface Sources extends ProjectSources {
   scenes?: Scene[];
   /** Catalog blocks the student added to the toolbox (blockCatalog.ts). */
   chosenBlocks?: string[];
-  /** The catalog has opened itself once on the free play level. */
-  blockCatalogSeen?: boolean;
+  /** The free play intro has been dismissed. */
+  freeplayIntroSeen?: boolean;
 }
 
 /** A single-frame image a level gives the project: a lab asset by URL. */
@@ -168,10 +170,13 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
-  /** Blocks built on earlier levels cannot be deleted from the pinned scene
-      here (blockLocks.ts); the stacks this level adds and the toolbox
-      blocks no earlier level required can. */
+  /** Blocks built on earlier levels cannot be deleted here, in any scene
+      the level opens (blockLocks.ts). The blocks under a stack this level adds can,
+      and so can the toolbox blocks no earlier level required. */
   lockEarlierBlocks?: boolean;
+  /** The free play intro opens the first time the student arrives
+      (FreeplayIntroDialog.tsx). */
+  freeplayIntro?: boolean;
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;

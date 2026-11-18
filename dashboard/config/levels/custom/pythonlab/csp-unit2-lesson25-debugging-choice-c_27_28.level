@@ -1,0 +1,403 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-12T17:44:30.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Investigate & Debug\r\n\r\nThis program paints a path around the block wall but the painter should be painting a zig-zag path to get to the food truck.\r\n\r\n**Do This:**\r\n\r\nRun the program to see what the painter is doing. Debug the starter code and then add another loop so that the Painter makes their way down to the food truck like in the image below. \r\n\r\n\r\n<img src=\"https://images.code.org/886099cd59c7dfabbb01aa0743c07978-image-1794519366166.png\" style=\"width: 200px;\">",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode",
+        "hint",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from neighborhood import *\n\nset_paint(16)\n\nfor step in range(7):\n    if can_move():\n        while can_move():\n            move()\n            paint(\"yellow\")\n    else:\n        turn_left()\n        turn_left()\n        turn_left()",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nGLtiZXZwhv0L\n",
+    "display_name": "Reach the Food Truck",
+    "bubble_choice_description": "Debug a path around a wall, then add a loop to reach the food truck.",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 79
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 62
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 64
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 65
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 78
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 70
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 65
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 87
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 79
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 12
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 13
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 62
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 65
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 66
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 64
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 89
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 63
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 14
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 15
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "mini_app_variant": "functional",
+    "thumbnail_url": "https://images.code.org/b2fc06d161794cd2edbc782709369363-Screenshot 2026-11-12 133450.png",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "contents": "import ast\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\ndef _count_calls(node, name):\n    return sum(\n        1 for n in ast.walk(node)\n        if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == name\n    )\n\n\ndef _find_wall_hug_units(tree):\n    \"\"\"Find each `if can_move(): while can_move(): move(); paint()\n    else: turn_left() * k` block, returning the number of turn_left()\n    calls in its else-branch (k).\"\"\"\n    units = []\n    for node in ast.walk(tree):\n        if not isinstance(node, ast.If):\n            continue\n        test_calls_can_move = _count_calls(node.test, \"can_move\") > 0\n        has_inner_while = any(\n            isinstance(s, ast.While) and _count_calls(s.test, \"can_move\") > 0\n            and _count_calls(s, \"move\") > 0 and _count_calls(s, \"paint\") > 0\n            for s in node.body\n        )\n        if test_calls_can_move and has_inner_while:\n            turn_count = sum(_count_calls(stmt, \"turn_left\") for stmt in node.orelse)\n            units.append((node.lineno, turn_count))\n    return units\n\n\nclass TestDebugZigzagPath(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Parse the source's wall-hugging structure, then try running the\n        program to catch any out-of-paint or invalid-move crash.\"\"\"\n        with open(\"main.py\") as f:\n            cls.source = f.read()\n        cls.tree = ast.parse(cls.source)\n        cls.wall_hug_units = _find_wall_hug_units(cls.tree)\n\n        cls.painter = None\n        cls.run_error = None\n        try:\n            log = ValidationProtocol().get_neighborhood_log()\n            cls.painter = log.painter_logs[0] if log.painter_logs else None\n        except Exception as e:\n            cls.run_error = e\n\n    def test_runs_without_running_out_of_paint_or_hitting_a_wall(self):\n        \"\"\"Runs without an out-of-paint or invalid-move error\"\"\"\n        self.assertIsNone(\n            self.run_error,\n            f\"Your program raised an error while running: {self.run_error}. \"\n            \"This usually means either set_paint() wasn't given enough paint for the full path, \"\n            \"or the Painter tried to move/paint somewhere it can't.\"\n        )\n\n    def test_has_two_wall_hugging_loops(self):\n        \"\"\"Has two separate wall-hugging loops: the original path, and a new one for the zig-zag\"\"\"\n        self.assertGreaterEqual(\n            len(self.wall_hug_units),\n            2,\n            f\"Expected to find 2 wall-hugging loops (if can_move(): while can_move(): move(); paint() ...), \"\n            f\"but found {len(self.wall_hug_units)}. Make sure you added a second loop after debugging the first.\"\n        )\n\n    def test_second_loop_turns_once_instead_of_reversing(self):\n        \"\"\"The added loop turns once (90 degrees) instead of reversing, to create the zig-zag\"\"\"\n        if len(self.wall_hug_units) < 2:\n            self.skipTest(\"Add the second wall-hugging loop first.\")\n        turn_counts = [count for _, count in self.wall_hug_units]\n        self.assertIn(\n            1,\n            turn_counts,\n            f\"None of your wall-hugging loops turn just once when blocked (found turn counts: {turn_counts}). \"\n            \"The zig-zag loop should turn_left() a single time when it can't move, not reverse direction with multiple turns.\"\n        )\n\n    def test_moves_and_paints_match(self):\n        \"\"\"Paints a yellow square every time the Painter moves\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the run-time error above first.\")\n        if self.painter is None:\n            self.skipTest(\"No painter actions found yet. Make sure your program runs without errors.\")\n        move_count = self.painter.action_count(\"MOVE\")\n        paint_count = self.painter.action_count(\"PAINT\")\n        self.assertGreater(move_count, 0, \"We didn't see the Painter move at all.\")\n        self.assertEqual(\n            move_count,\n            paint_count,\n            f\"Expected every move() to be paired with a paint() ({move_count} moves vs {paint_count} paints). \"\n            \"If these don't match, the Painter may have run out of paint partway through.\"\n        )\n\n    def test_ends_at_food_truck(self):\n        \"\"\"Ends at the food truck's location (6th column, 7th row down)\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the run-time error above first.\")\n        if self.painter is None:\n            self.skipTest(\"No painter actions found yet. Make sure your program runs without errors.\")\n        ending = self.painter.ending_position\n        self.assertEqual(\n            (ending.x, ending.y),\n            (5, 6),\n            f\"Expected the Painter to end at column 6, row 7 (x=5, y=6) where the food truck is, \"\n            f\"but it ended at x={ending.x}, y={ending.y}. Check your zig-zag loop's range and turn count.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-12T17:44:30.012+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson25-debugging-choice-b_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson25-debugging-choice-b_27_28\"},{\"changed_at\":\"2026-11-12 17:45:08 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 17:45:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 17:45:20 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 17:48:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 18:45:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:00:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:00:33 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:02:52 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:18:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:22:00 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:24:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:34:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:34:52 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:34:59 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:35:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:35:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:35:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 21:41:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 17:23:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 17:23:52 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

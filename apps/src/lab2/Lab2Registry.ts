@@ -56,7 +56,14 @@ export default class Lab2Registry {
     return this.projectManager;
   }
 
-  public clearProjectManager() {
+  /**
+   * Clear the registered project manager. If a manager is provided,
+   * only clear if it matches the current project manager.
+   */
+  public clearProjectManager(projectManager?: ProjectManager) {
+    if (projectManager && this.projectManager !== projectManager) {
+      return;
+    }
     this.projectManager = null;
   }
 

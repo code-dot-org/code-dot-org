@@ -32,7 +32,7 @@
           "name": "main.py",
           "contents": "from random import randint\n\n# randint(1, 6) ...\nroll = randint(1, 6)\n\n# This prints ...\nprint(roll)",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "folders": {
@@ -40,9 +40,17 @@
       "openFiles": [
         "0"
       ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\nclass TestInvestigateRandomRoll(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Read the source for comment checks, and run the program once\n        to confirm roll still falls within the expected 1-6 range.\"\"\"\n        with open(\"main.py\") as f:\n            cls.lines = f.read().splitlines()\n        cls.stdout = ValidationProtocol().get_stdout_logs()\n\n    def _comment_text(self, prefix):\n        for line in self.lines:\n            stripped = line.strip()\n            if stripped.startswith(\"#\") and stripped.lstrip(\"#\").strip().lower().startswith(prefix.lower()):\n                return stripped.lstrip(\"#\").strip()\n        return None\n\n    def test_randint_comment_completed(self):\n        \"\"\"Finishes the comment explaining what randint(1, 6) does\"\"\"\n        comment = self._comment_text(\"randint(1, 6)\")\n        self.assertIsNotNone(\n            comment,\n            \"We couldn't find the 'randint(1, 6) ...' comment. Make sure you haven't removed it.\"\n        )\n        self.assertFalse(\n            comment.rstrip().endswith(\"...\"),\n            \"Finish the comment explaining what randint(1, 6) does -- it still ends with '...'.\"\n        )\n\n    def test_print_comment_completed(self):\n        \"\"\"Finishes the comment explaining why the output can change each time\"\"\"\n        comment = self._comment_text(\"this prints\")\n        self.assertIsNotNone(\n            comment,\n            \"We couldn't find the 'This prints ...' comment. Make sure you haven't removed it.\"\n        )\n        self.assertFalse(\n            comment.rstrip().endswith(\"...\"),\n            \"Finish this comment explaining why the output can change each time you run the program -- it still ends with '...'.\"\n        )\n\n    def test_roll_still_within_expected_range(self):\n        \"\"\"roll is still generated using randint(1, 6)\"\"\"\n        self.assertTrue(\n            self.stdout,\n            \"Nothing printed. Make sure print(roll) is still there.\"\n        )\n        try:\n            value = int(self.stdout[0])\n        except (ValueError, IndexError):\n            self.fail(f\"Expected a single number to be printed, but got: {self.stdout}\")\n        self.assertTrue(\n            1 <= value <= 6,\n            f\"Expected the printed value to be between 1 and 6, but got {value}. Make sure roll is still generated with randint(1, 6).\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-01 15:58:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:01:12 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:01:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:01:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-01 15:58:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:01:12 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:01:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:01:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-17 21:10:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -12,6 +12,8 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
+import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
+
 describe('Gamelab blocks', () => {
   describe('costumeList()', () => {
     let animationList = {
@@ -80,6 +82,25 @@ describe('Custom Input Types', () => {
       expect(customInputTypes['soundPicker'].generateCode(block, arg)).toEqual(
         `"te\'st"`
       );
+    });
+  });
+
+  describe('variableFieldNamePicker.generateCode()', () => {
+    beforeAll(() => setBlocklyGlobal());
+
+    it('names a variable on a headless workspace, not the main one', () => {
+      const workspace = new Blockly.Workspace();
+      const variable = workspace.getVariableMap().createVariable('score');
+      const block = workspace.newBlock('variables_get');
+      block.setFieldValue(variable.getId(), 'VAR');
+      Blockly.JavaScript.init(workspace);
+
+      expect(
+        customInputTypes.variableFieldNamePicker.generateCode(block, {
+          name: 'VAR',
+        })
+      ).toEqual(['"score"', '"score"']);
+      workspace.dispose();
     });
   });
 });

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-132667-19060828bbed",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 1: Talking to Machines",
+  "question": "AI doesn't think — it predicts. Turn that into an 8-second rap, jingle, or rhyme a 5-year-old would remember forever.\n\nSteps:\n1. Pick one idea from today: probability, abstraction, or prediction.\n2. Need a rhyme buddy? Try one of these: probability → ability/capability, abstraction → action/traction, prediction → diction/fiction/friction. Or steal this template: “___ is the name, ___ is the game.”\n3. Freestyle a short rhyme, chant, or song about it.\n4. Perform it like you're on stage.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not perform a rhyme, chant, or song, or only reads the word aloud without any wordplay."
+    },
+    {
+      "level": 1,
+      "description": "Student performs a rhyme/chant/song, but it does not include or reference the chosen vocabulary word (probability, abstraction, or prediction)."
+    },
+    {
+      "level": 2,
+      "description": "Student performs a rhyme/chant/song that clearly includes the chosen vocabulary word and at least one rhyming word."
+    },
+    {
+      "level": 3,
+      "description": "Meets level 2, and the performance includes multiple rhyming lines (not just one couplet) or an added performance element (rhythm, movement, character voice)."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

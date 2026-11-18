@@ -1,0 +1,20 @@
+ext {
+    minSdkVersion = 28
+    compileSdkVersion = 36
+    targetSdkVersion = 36
+    androidxActivityVersion = '1.13.0'
+    androidxAppCompatVersion = '1.8.0'
+    androidxCoordinatorLayoutVersion = '1.3.0'
+    // 1.19 needs compileSdk 37 and Android Gradle plugin 9.1, which Capacitor
+    // does not support yet; Amazon Kids+ asks for compileSdk 36.
+    androidxCoreVersion = '1.18.0'
+    androidxFragmentVersion = '1.9.1'
+    coreSplashScreenVersion = '1.2.0'
+    // 1.18 reads the WebView's user agent metadata through a call the Fire
+    // tablets' WebView lacks, and the app crashes at launch.
+    androidxWebkitVersion = '1.14.0'
+    junitVersion = '4.13.2'
+    androidxJunitVersion = '1.3.0'
+    androidxEspressoCoreVersion = '3.7.0'
+    cordovaAndroidVersion = '10.1.1'
+}
