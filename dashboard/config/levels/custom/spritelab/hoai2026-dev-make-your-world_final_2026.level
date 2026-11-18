@@ -99,14 +99,14 @@
       "title": "**Make your world**",
       "items": [
         {
-          "text": "Select a square to place your object where your player can reach it.",
+          "text": "Select a square to place your object.",
           "check": {
             "kind": "world",
             "role": "treasure"
           }
         },
         {
-          "text": "Add **blocks** to jump onto.",
+          "text": "Add blocks to jump onto.",
           "check": {
             "kind": "world",
             "role": "block"

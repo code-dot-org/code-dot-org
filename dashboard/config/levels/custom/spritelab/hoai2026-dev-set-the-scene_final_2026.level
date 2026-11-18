@@ -78,14 +78,14 @@
           }
         },
         {
-          "text": "Make a **prompt** that describes your background, or draw it yourself.",
+          "text": "Make a prompt that describes your background, or draw it yourself.",
           "check": {
             "kind": "image",
             "imageType": "background"
           }
         },
         {
-          "text": "In **Code**, put **set background** under **when run**.",
+          "text": "In **Code**, drag the **set background** block under **when run**.",
           "check": {
             "kind": "block",
             "type": "gamelab_setBackgroundImageAs",
@@ -94,7 +94,7 @@
         }
       ]
     },
-    "long_instructions": "# Set the scene\r\nA **background** is the picture behind your world.",
+    "long_instructions": "# Set the scene\r\nA background is the picture behind your world.",
     "header_label": "Set the scene",
     "callouts": [
       {

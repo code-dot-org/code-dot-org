@@ -2,9 +2,15 @@ import {isEqual} from 'lodash';
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
-import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
+import {
+  ABUSE_SCORE_BLOCK_THRESHOLD,
+  INITIAL_VERSION_ID,
+} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {setChannel as setChannelAction} from '@cdo/apps/lab2/lab2Redux';
+import {
+  setChannel as setChannelAction,
+  setIsBlockedAbuse,
+} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
@@ -260,6 +266,15 @@ export default function useSources<T extends ProjectSources>({
       // Some components (including non-Lab2 areas like the header) read state.lab.channel directly
       // so we need to set it here. Prefer to read channel from this hook via the consuming lab within lab components.
       dispatch(setChannelAction(projectAndSources?.channel));
+      // A lab that loads its own project skips the branch of setUpWithLevel
+      // that reads the abuse score, read it here.
+      if (typeof projectAndSources?.abuseScore === 'number') {
+        dispatch(
+          setIsBlockedAbuse(
+            projectAndSources.abuseScore >= ABUSE_SCORE_BLOCK_THRESHOLD
+          )
+        );
+      }
       setSources(
         getInitialSources(
           levelProperties,

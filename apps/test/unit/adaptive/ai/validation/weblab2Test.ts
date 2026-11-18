@@ -2,7 +2,11 @@ import {
   weblab2Adapter,
   workFromBuild,
 } from '@cdo/apps/adaptive/ai/validation/weblab2';
-import {AcceptedBuild, ChatHandle} from '@cdo/apps/aichat/host/ChatHostContext';
+import {
+  AcceptedBuild,
+  ChatTranscript,
+  ChatHandle,
+} from '@cdo/apps/aichat/host/ChatHostContext';
 
 jest.mock('@cdo/apps/redux', () => ({
   getStore: () => ({
@@ -46,6 +50,7 @@ describe('weblab2Adapter', () => {
         listener = l;
         return unsubscribe;
       }),
+      onReply: jest.fn(),
       disableSend: jest.fn(),
       enableSend: jest.fn(),
     };
@@ -68,14 +73,78 @@ describe('weblab2Adapter', () => {
     expect(unsubscribe).toHaveBeenCalled();
   });
 
+  it('reports the transcript at each finished reply and unsubscribes with the chat', () => {
+    let listener: ((transcript: ChatTranscript) => void) | undefined;
+    const unsubscribe = jest.fn();
+    const chat: ChatHandle = {
+      post: jest.fn(),
+      onBuildAccepted: jest.fn(),
+      onReply: jest.fn(l => {
+        listener = l;
+        return unsubscribe;
+      }),
+      disableSend: jest.fn(),
+      enableSend: jest.fn(),
+    };
+    const replies = jest.fn();
+
+    const off = weblab2Adapter.observeReplies!({chat}, replies);
+    listener!({at: 3, replies: 1, text: 'Student: hi'});
+    off();
+
+    expect(replies).toHaveBeenCalledWith({
+      at: 3,
+      replies: 1,
+      text: 'Student: hi',
+    });
+    expect(unsubscribe).toHaveBeenCalled();
+  });
+
   it('does nothing without a chat', () => {
     const work = jest.fn();
     expect(weblab2Adapter.observeWork({}, work)).toEqual(expect.any(Function));
+    expect(weblab2Adapter.observeReplies!({}, work)).toEqual(
+      expect.any(Function)
+    );
     expect(work).not.toHaveBeenCalled();
     weblab2Adapter.reportAttempt?.(
       {},
       {pass: true, evidenceLevel: 1, reason: 'Fine.'}
     );
+    weblab2Adapter.reportUnlock?.(
+      {},
+      {
+        pass: true,
+        evidenceLevel: 0,
+        reason: 'Go on.',
+        skipReason: 'limitReached',
+      }
+    );
+  });
+
+  it('tells the student Continue opened, as an info alert kept in the history', () => {
+    const chat: ChatHandle = {
+      post: jest.fn(),
+      onBuildAccepted: jest.fn(),
+      onReply: jest.fn(),
+      disableSend: jest.fn(),
+      enableSend: jest.fn(),
+    };
+    weblab2Adapter.reportUnlock?.(
+      {chat},
+      {
+        pass: true,
+        evidenceLevel: 0,
+        reason: 'Go on.',
+        skipReason: 'limitReached',
+      }
+    );
+    expect(chat.post).toHaveBeenCalledWith({
+      notificationType: 'info',
+      includeInChatHistory: true,
+      hideTimestamp: true,
+      text: 'Go on.',
+    });
   });
 
   it('says a check is running and stops sending, until the caller takes that back', () => {
@@ -83,6 +152,7 @@ describe('weblab2Adapter', () => {
     const chat: ChatHandle = {
       post: jest.fn(() => dismiss),
       onBuildAccepted: jest.fn(),
+      onReply: jest.fn(),
       disableSend: jest.fn(),
       enableSend: jest.fn(),
     };
@@ -107,6 +177,7 @@ describe('weblab2Adapter', () => {
     const chat: ChatHandle = {
       post: jest.fn(),
       onBuildAccepted: jest.fn(),
+      onReply: jest.fn(),
       disableSend: jest.fn(),
       enableSend: jest.fn(),
     };
