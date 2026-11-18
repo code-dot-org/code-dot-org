@@ -211,9 +211,15 @@ const animationList = () => ({
 });
 // Uploads are moderated only when there is a channel.
 let labState: Record<string, unknown> = {channel: {id: 'c1'}};
+// Signed-out students are not offered a flagged picture at all.
+let signInState = 'SignedIn';
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: (select: (state: unknown) => unknown) =>
-    select({animationList: animationList(), lab: labState}),
+    select({
+      animationList: animationList(),
+      lab: labState,
+      currentUser: {signInState},
+    }),
   useAppDispatch: () => jest.fn(),
 }));
 const moderate = jest.fn<Promise<string>, unknown[]>();
@@ -339,6 +345,7 @@ describe('ImagesTab', () => {
     sceneOverrides = {};
     lastRateResult = undefined;
     labState = {channel: {id: 'c1'}};
+    signInState = 'SignedIn';
     moderate.mockReset().mockResolvedValue('safe');
     httpPost.mockClear();
   });
@@ -1642,6 +1649,26 @@ describe('ImagesTab', () => {
         expect.anything(),
         expect.anything()
       );
+    });
+
+    it('offers a signed-out student no way to keep a flagged picture', async () => {
+      signInState = 'SignedOut';
+      moderate.mockResolvedValue('flagged');
+      await pickCharacter();
+      expect(screen.getByText('Image Not Allowed')).toBeInTheDocument();
+      expect(screen.queryByRole('button', {name: /^accept$/i})).toBeNull();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: /^ok$/i}));
+      });
+      await settle();
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(httpPost).not.toHaveBeenCalledWith(
+        '/v3/channels/c1/abuse/image',
+        expect.anything(),
+        expect.anything(),
+        expect.anything()
+      );
+      expect(screen.getByRole('button', {name: 'Upload image'})).toBeEnabled();
     });
 
     it('checks nothing it has already refused for its size', async () => {
