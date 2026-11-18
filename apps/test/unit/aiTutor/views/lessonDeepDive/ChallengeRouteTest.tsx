@@ -1,20 +1,16 @@
-import {Challenge, challengeValidator} from '@code-dot-org/lesson-deep-dive';
+import {Challenge} from '@code-dot-org/lesson-deep-dive';
 import {render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
 import ChallengeRoute from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeRoute';
-import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {request} from '../../../../util/stubCoreApi';
 
 let mockChallengesEnabled = true;
 jest.mock('@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled', () => ({
   useLessonDeepDiveChallengesEnabled: () => mockChallengesEnabled,
-}));
-
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  __esModule: true,
-  default: {fetchJson: jest.fn()},
 }));
 
 jest.mock(
@@ -34,8 +30,6 @@ jest.mock(
     ),
   })
 );
-
-const fetchJson = HttpClient.fetchJson as jest.Mock;
 
 const fakeChallenge: Challenge = {
   id: 7,
@@ -66,13 +60,13 @@ function renderRoute({
 
 describe('ChallengeRoute', () => {
   beforeEach(() => {
-    fetchJson.mockReset();
+    request.mockReset();
     mockChallengesEnabled = true;
   });
 
   it('renders nothing when challenges are disabled', () => {
     mockChallengesEnabled = false;
-    fetchJson.mockResolvedValue({value: [fakeChallenge]});
+    request.mockResolvedValue([fakeChallenge]);
     renderRoute();
     expect(
       screen.queryByRole('button', {name: 'Back to practice'})
@@ -80,17 +74,16 @@ describe('ChallengeRoute', () => {
   });
 
   it('fetches challenges for the lesson on mount', () => {
-    fetchJson.mockResolvedValue({value: [fakeChallenge]});
+    request.mockResolvedValue([fakeChallenge]);
     renderRoute();
-    expect(fetchJson).toHaveBeenCalledWith(
-      '/challenges?lesson_id=42',
-      {},
-      challengeValidator
-    );
+    expect(request).toHaveBeenCalledWith({
+      method: 'GET',
+      url: '/challenges?lesson_id=42',
+    });
   });
 
   it('renders ChallengeBox with the matching challenge', async () => {
-    fetchJson.mockResolvedValue({value: [fakeChallenge]});
+    request.mockResolvedValue([fakeChallenge]);
     renderRoute({challengeId: '7', modality: 'video'});
     await waitFor(() =>
       expect(screen.getByText('challenge-7 type-video')).toBeInTheDocument()
@@ -98,7 +91,7 @@ describe('ChallengeRoute', () => {
   });
 
   it('navigates to /intervention when the challenge ID is not found', async () => {
-    fetchJson.mockResolvedValue({value: [fakeChallenge]});
+    request.mockResolvedValue([fakeChallenge]);
     renderRoute({challengeId: '999'});
     await waitFor(() =>
       expect(screen.getByText('intervention')).toBeInTheDocument()
@@ -106,7 +99,7 @@ describe('ChallengeRoute', () => {
   });
 
   it('shows an error message when the fetch fails', async () => {
-    fetchJson.mockRejectedValue(new Error('network error'));
+    request.mockRejectedValue(new Error('network error'));
     renderRoute();
     await waitFor(() =>
       expect(
@@ -121,7 +114,7 @@ describe('ChallengeRoute', () => {
       id: 8,
       default_modality: 'whiteboard',
     };
-    fetchJson.mockResolvedValue({value: [wbChallenge]});
+    request.mockResolvedValue([wbChallenge]);
     renderRoute({challengeId: '8', modality: 'whiteboard'});
     await waitFor(() =>
       expect(
