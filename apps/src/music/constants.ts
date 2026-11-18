@@ -95,6 +95,21 @@ export const DEFAULT_LIBRARY = 'intro2024';
 
 export const DEFAULT_PACK = 'default';
 
+// Retired artist packs. A removed pack is left out of the pack picker, but
+// projects and levels that already chose it keep it.
+export const REMOVED_PACK_IDS: readonly string[] = [
+  'shakira_wyclef_jean_hips_dont_lie',
+  'shakira_whenever_wherever',
+  'shakira_maluma_chantaje',
+  'shakira_amarillo',
+  'dove_cameron_boyfriend',
+  'chloe_x_halle_do_it',
+  'halle_angel',
+  'chloe_x_halle_the_ungodly_hour',
+  'chloe_treat_me',
+  'henry_moodie_pick_up_the_phone',
+];
+
 export const DEFAULT_BPM = 120;
 export const DEFAULT_BEATS_PER_MEASURE = 4;
 export const DEFAULT_KEY = Key.C;

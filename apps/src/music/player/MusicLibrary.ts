@@ -7,7 +7,11 @@ import HttpClient, {
 } from '@cdo/apps/util/HttpClient';
 
 import AppConfig, {getBaseAssetUrl} from '../appConfig';
-import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
+import {
+  baseAssetUrlRestricted,
+  DEFAULT_PACK,
+  REMOVED_PACK_IDS,
+} from '../constants';
 import {Key} from '../utils/Notes';
 
 // This value can be modifed each time we know that there is an important new version
@@ -121,6 +125,10 @@ export default class MusicLibrary {
         ...sound,
         note: i,
       }));
+    }
+
+    for (const pack of libraryJson.packs) {
+      pack.removed = REMOVED_PACK_IDS.includes(pack.id);
     }
 
     // Combine the JSON-specified folders into one flat list of folders.
@@ -490,9 +498,7 @@ export interface SoundFolder {
   imageSrc: string;
   color?: string;
   restricted?: boolean;
-  // A removed pack is left out of the pack picker, but projects and levels
-  // that already chose it keep it. Only restricted (artist) packs can be
-  // removed.
+  // Set from REMOVED_PACK_IDS when the library loads, not read from the JSON.
   removed?: boolean;
   sounds: SoundData[];
   bpm?: number;
